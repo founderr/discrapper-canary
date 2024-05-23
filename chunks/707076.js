@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   OnboardingPreview: function() {
-    return P
+    return x
   },
   default: function() {
     return M
@@ -16,8 +16,8 @@ var l = n("120356"),
   d = n("367907"),
   o = n("548473"),
   u = n("721012"),
-  N = n("621923"),
-  c = n("869764"),
+  c = n("621923"),
+  N = n("869764"),
   _ = n("150512"),
   I = n("430824"),
   E = n("594174"),
@@ -74,7 +74,7 @@ let R = () => [{
     selected: !0
   }];
 
-function P(e) {
+function x(e) {
   let {
     isTooltip: t = !1
   } = e, n = R();
@@ -131,7 +131,7 @@ function P(e) {
   })
 }
 
-function x() {
+function P() {
   let e = [{
     message: h.default.Messages.GUILD_ONBOARDING_TESTIMONIAL_HARRY_POTTER,
     profilePic: "https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80",
@@ -160,7 +160,7 @@ function M() {
     n = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     {
       homeSettingsEnabled: l
-    } = (0, N.useOnboardingHomeAdminExperiment)(null != e ? e : G.EMPTY_STRING_SNOWFLAKE_ID);
+    } = (0, c.useOnboardingHomeAdminExperiment)(null != e ? e : G.EMPTY_STRING_SNOWFLAKE_ID);
   return null == e || null == t || null == n ? null : (0, a.jsxs)("div", {
     className: L.upsellContainer,
     children: [(0, a.jsxs)("div", {
@@ -197,11 +197,11 @@ function M() {
           children: h.default.Messages.CHECK_IT_OUT
         })
       })]
-    }), (0, a.jsx)(r.FormDivider, {}), (0, a.jsx)(x, {}), (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)("div", {
+    }), (0, a.jsx)(r.FormDivider, {}), (0, a.jsx)(P, {}), (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)("div", {
       className: L.valuesContainer,
       children: [(0, a.jsxs)("div", {
         className: L.valueContainer,
-        children: [(0, a.jsx)(P, {}), (0, a.jsxs)("div", {
+        children: [(0, a.jsx)(x, {}), (0, a.jsxs)("div", {
           className: L.valueText,
           children: [(0, a.jsx)(r.Heading, {
             variant: "heading-md/semibold",
@@ -230,13 +230,13 @@ function M() {
               authorIds: [n.id],
               message: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_WELCOME_MESSAGE
             }
-          }), (0, a.jsx)(c.NewMemberAction, {
+          }), (0, a.jsx)(N.NewMemberAction, {
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
             subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
             completed: !0,
             Icon: O.default,
             variant: "static"
-          }), (0, a.jsx)(c.NewMemberAction, {
+          }), (0, a.jsx)(N.NewMemberAction, {
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
             subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
             completed: !0,

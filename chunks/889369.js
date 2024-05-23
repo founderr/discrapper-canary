@@ -4,8 +4,8 @@ var a, l, s, i, r = n("392711"),
   d = n.n(r),
   o = n("442837"),
   u = n("570140"),
-  N = n("45966"),
-  c = n("999382"),
+  c = n("45966"),
+  N = n("999382"),
   _ = n("981631");
 let I = !1,
   E = null,
@@ -14,15 +14,15 @@ let I = !1,
 function f() {
   (function() {
     I = !1, E = null
-  })(), null != (E = c.default.getGuildId()) && c.default.getSection() === _.GuildSettingsSections.ONBOARDING && (O = new Set(N.default.getDefaultChannelIds(E)))
+  })(), null != (E = N.default.getGuildId()) && N.default.getSection() === _.GuildSettingsSections.ONBOARDING && (O = new Set(c.default.getDefaultChannelIds(E)))
 }
 class S extends(a = o.default.Store) {
   initialize() {
-    this.waitFor(c.default, N.default)
+    this.waitFor(N.default, c.default)
   }
   hasChanges() {
     if (null == E) return !1;
-    let e = N.default.getDefaultChannelIds(E).sort(),
+    let e = c.default.getDefaultChannelIds(E).sort(),
       t = Array.from(O).sort();
     return !d().isEqual(e, t)
   }

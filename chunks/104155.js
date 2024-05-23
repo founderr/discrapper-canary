@@ -1,10 +1,10 @@
 "use strict";
 l.r(t), l.d(t, {
   ChannelBrowserSidebar: function() {
-    return O
+    return A
   },
   default: function() {
-    return A
+    return O
   }
 }), l("47120");
 var n = l("735250"),
@@ -31,7 +31,7 @@ var n = l("735250"),
   T = l("763280"),
   v = l("19340");
 
-function O(e) {
+function A(e) {
   let {
     channelId: t
   } = e;
@@ -45,10 +45,10 @@ function O(e) {
   })
 }
 
-function A(e) {
+function O(e) {
   let {
     guildId: t
-  } = e, [s, o] = a.useState(""), u = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t)), O = (0, r.useStateFromStores)([f.default], () => f.default.getChannels(t)), A = (0, r.useStateFromStores)([h.default], () => h.default.getCategories(t)), R = (0, p.useFilterCategoriesByQuery)(t, A, O, s), j = (0, r.useStateFromStores)([C.default], () => C.default.canWithPartialContext(E.Permissions.MANAGE_CHANNELS, {
+  } = e, [s, o] = a.useState(""), u = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t)), A = (0, r.useStateFromStores)([f.default], () => f.default.getChannels(t)), O = (0, r.useStateFromStores)([h.default], () => h.default.getCategories(t)), R = (0, p.useFilterCategoriesByQuery)(t, O, A, s), j = (0, r.useStateFromStores)([C.default], () => C.default.canWithPartialContext(E.Permissions.MANAGE_CHANNELS, {
     guildId: t
   })), b = (0, r.useStateFromStores)([c.default], () => null != c.default.getCurrentSidebarChannelId(I.StaticChannelRoute.CHANNEL_BROWSER)), L = a.useCallback(() => o(""), [o]), M = a.useCallback(() => {
     (0, d.openModalLazy)(async () => {
@@ -90,7 +90,7 @@ function A(e) {
           }) : null]
         }), (0, n.jsx)(S.default, {
           className: T.browser,
-          channels: O,
+          channels: A,
           categories: R,
           guild: u,
           hasSidebar: b

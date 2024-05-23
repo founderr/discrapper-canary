@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return R
   },
   default: function() {
-    return P
+    return x
   }
 }), n("789020");
 var a = n("735250"),
@@ -15,8 +15,8 @@ var a = n("735250"),
   d = n("471445"),
   o = n("592125"),
   u = n("271383"),
-  N = n("430824"),
-  c = n("496675"),
+  c = n("430824"),
+  N = n("496675"),
   _ = n("93879"),
   I = n("441674"),
   E = n("186523"),
@@ -41,14 +41,14 @@ function R(e) {
     completed: r,
     Icon: d,
     ...o
-  } = e, u = "channel" === o.variant ? o.channelId : null, N = "static" === o.variant ? o.subtitle : o.channelName, c = null != u ? f.default.getNewMemberActionIconURL({
+  } = e, u = "channel" === o.variant ? o.channelId : null, c = "static" === o.variant ? o.subtitle : o.channelName, N = null != u ? f.default.getNewMemberActionIconURL({
     channelId: u,
     icon: s
   }) : null;
   return (0, a.jsxs)("div", {
     className: L.action,
-    children: [null != c ? (0, a.jsx)("img", {
-      src: c,
+    children: [null != N ? (0, a.jsx)("img", {
+      src: N,
       className: L.icon,
       width: 32,
       height: 32,
@@ -70,10 +70,10 @@ function R(e) {
         variant: "text-md/semibold",
         color: "header-primary",
         children: t
-      }), null != N ? (0, a.jsx)(i.Text, {
+      }), null != c ? (0, a.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: N
+        children: c
       }) : null]
     }), r ? (0, a.jsx)(I.default, {
       backgroundColor: "#fff",
@@ -94,14 +94,14 @@ function p(e) {
     action: n,
     completed: u
   } = e, {
-    channelId: N,
+    channelId: c,
     title: I,
     emoji: E,
     icon: O
   } = n, {
     id: f,
     name: S
-  } = null != E ? E : {}, m = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(N)), D = (0, r.default)(m, !0), A = (0, s.useStateFromStores)([c.default], () => c.default.can(g.Permissions.VIEW_CHANNEL, m)), G = l.useCallback(() => {
+  } = null != E ? E : {}, m = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(c)), D = (0, r.default)(m, !0), A = (0, s.useStateFromStores)([N.default], () => N.default.can(g.Permissions.VIEW_CHANNEL, m)), G = l.useCallback(() => {
     if (null == m) return null;
     (0, T.selectNewMemberActionChannel)(m.guild_id, m.id)
   }, [m]);
@@ -112,7 +112,7 @@ function p(e) {
     onClick: G,
     children: (0, a.jsx)(R, {
       variant: "channel",
-      channelId: N,
+      channelId: c,
       title: I,
       channelName: D,
       emojiId: f,
@@ -124,15 +124,15 @@ function p(e) {
   })
 }
 
-function P(e) {
+function x(e) {
   let {
     guildId: t
-  } = e, n = (0, s.useStateFromStores)([m.default], () => m.default.getNewMemberActions(t), [t]), r = (0, s.useStateFromStores)([D.default], () => D.default.getCompletedActions(t)), d = (0, s.useStateFromStores)([u.default], () => u.default.getSelfMember(t)), o = (0, s.useStateFromStores)([N.default], () => N.default.getGuild(t));
+  } = e, n = (0, s.useStateFromStores)([m.default], () => m.default.getNewMemberActions(t), [t]), r = (0, s.useStateFromStores)([D.default], () => D.default.getCompletedActions(t)), d = (0, s.useStateFromStores)([u.default], () => u.default.getSelfMember(t)), o = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t));
   l.useEffect(() => {
     var e;
     null == r && (null == d ? void 0 : d.flags) != null && (0, S.hasFlag)(null !== (e = d.flags) && void 0 !== e ? e : 0, G.GuildMemberFlags.STARTED_HOME_ACTIONS) && (0, T.fetchNewMemberActions)(t)
   }, [r, t, null == d ? void 0 : d.flags]);
-  let c = l.useCallback(() => {
+  let N = l.useCallback(() => {
     null != o && null != o.rulesChannelId && (0, T.selectNewMemberActionChannel)(o.id, o.rulesChannelId)
   }, [o]);
   return null == d || null == n || 0 === n.length ? null : (0, a.jsxs)("div", {
@@ -147,7 +147,7 @@ function P(e) {
       guildId: t
     }, e.channelId)), (null == o ? void 0 : o.rulesChannelId) != null && (0, a.jsxs)(i.Clickable, {
       className: L.action,
-      onClick: c,
+      onClick: N,
       children: [(0, a.jsx)("div", {
         className: L.rulesIconContainer,
         children: (0, a.jsx)(O.default, {

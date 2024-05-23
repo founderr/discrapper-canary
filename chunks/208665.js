@@ -4,8 +4,8 @@ var a, l, s, i, r = n("392711"),
   d = n.n(r),
   o = n("442837"),
   u = n("570140"),
-  N = n("45966"),
-  c = n("999382"),
+  c = n("45966"),
+  N = n("999382"),
   _ = n("981631"),
   I = n("290511");
 let E = !1,
@@ -17,14 +17,14 @@ let E = !1,
 function m() {
   (function() {
     E = !1, O = null, T = [], S = !1
-  })(), null != (O = c.default.getGuildId()) && c.default.getSection() === _.GuildSettingsSections.ONBOARDING && (f = N.default.getOnboardingPrompts(O), S = N.default.isAdvancedMode(O))
+  })(), null != (O = N.default.getGuildId()) && N.default.getSection() === _.GuildSettingsSections.ONBOARDING && (f = c.default.getOnboardingPrompts(O), S = c.default.isAdvancedMode(O))
 }
 class D extends(i = o.default.Store) {
   initialize() {
-    this.waitFor(c.default, N.default)
+    this.waitFor(N.default, c.default)
   }
   hasChanges() {
-    return null != O && !d().isEqual(N.default.getOnboardingPrompts(O), f)
+    return null != O && !d().isEqual(c.default.getOnboardingPrompts(O), f)
   }
   get guildId() {
     return O

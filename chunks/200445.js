@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return h
   }
 }), l("47120");
 var a = l("735250"),
@@ -19,19 +19,19 @@ var a = l("735250"),
   E = l("981631"),
   _ = l("689938"),
   N = l("492626");
-let h = async () => {
+let C = async () => {
   let {
     default: e
   } = await l.e("21812").then(l.t.bind(l, "741855", 19));
   return e
 };
 
-function C(e) {
+function h(e) {
   let {
     selectedGuildId: t,
     selectedChannelId: l,
     glow: s,
-    playIntroTransition: C,
+    playIntroTransition: h,
     onUnlocked: g
   } = e, [p, A] = n.useState(!1), x = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
     hqStreamingState: I
@@ -71,11 +71,11 @@ function C(e) {
     children: (0, a.jsxs)("div", {
       className: N.content,
       children: [(0, a.jsx)(m.default, {
-        importData: h,
+        importData: C,
         shouldAnimate: !x,
         pauseAtFrame: 90,
         className: i()(N.animation, {
-          [N.animationEndState]: p || !C || x
+          [N.animationEndState]: p || !h || x
         }),
         loop: !1
       }), (0, a.jsx)("div", {

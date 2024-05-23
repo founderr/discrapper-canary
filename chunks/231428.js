@@ -28,8 +28,8 @@ var a, n = s("735250"),
   R = s("474936"),
   y = s("231338"),
   M = s("689938"),
-  L = s("961988"),
-  g = s("511700");
+  g = s("961988"),
+  L = s("511700");
 
 function x(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -68,17 +68,17 @@ function D(e) {
           ...i
         } = e;
         return (0, n.jsx)(h.default, {
-          className: r()(L.verticalFit, L.paginator),
+          className: r()(g.verticalFit, g.paginator),
           currentPageIndex: o,
           onChangePage: S,
           numPages: l,
           ref: t,
           ...i,
           children: (0, n.jsx)(p.AdvancedScroller, {
-            className: L.bottomDivider,
+            className: g.bottomDivider,
             ref: u,
             children: _.map((e, t) => (0, n.jsx)(A.default, {
-              className: r()(L.paymentRow, L.bottomDivider),
+              className: r()(g.paymentRow, g.bottomDivider),
               payment: e,
               locale: s,
               compactMode: a
@@ -100,14 +100,14 @@ class b extends(a = i.PureComponent) {
   }
   renderPremiumExternalSubscription(e) {
     return o()(null != e.paymentGateway, "Expected payment gateway when rendering for external subscription"), (0, n.jsxs)(p.Card, {
-      className: L.externalRow,
+      className: g.externalRow,
       children: [(0, n.jsx)("div", {
-        className: L.externalRowHeader,
+        className: g.externalRowHeader,
         children: M.default.Messages.BILLING_EXTERNAL_HEADER.format({
           paymentGatewayName: y.PaymentGatewayToFriendlyName[e.paymentGateway]
         })
       }), (0, n.jsx)("div", {
-        className: L.externalRowBody,
+        className: g.externalRowBody,
         children: M.default.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
           paymentGatewayName: y.PaymentGatewayToFriendlyName[e.paymentGateway],
           billingHistoryLink: (0, T.getExternalSubscriptionMethodUrl)(e.paymentGateway, "BILLING_HISTORY")
@@ -123,21 +123,21 @@ class b extends(a = i.PureComponent) {
       locale: a
     } = this.props, i = null != s && s.isPurchasedExternally;
     return 0 !== t.length || i ? (0, n.jsxs)("div", {
-      className: L.verticalFit,
+      className: g.verticalFit,
       children: [null != s && i ? this.renderPremiumExternalSubscription(s) : null, t.length > 0 ? (0, n.jsxs)("div", {
-        className: r()(L.paymentPane, L.verticalFit),
+        className: r()(g.paymentPane, g.verticalFit),
         children: [e ? null : (0, n.jsx)("div", {
-          className: r()(L.paymentRow, L.bottomDivider),
+          className: r()(g.paymentRow, g.bottomDivider),
           children: (0, n.jsxs)(C.default, {
-            className: L.paymentRowHeader,
+            className: g.paymentRowHeader,
             children: [(0, n.jsx)("div", {
-              className: g.date,
+              className: L.date,
               children: M.default.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
             }), (0, n.jsx)("div", {
-              className: L.paymentRowHeaderDescription,
+              className: g.paymentRowHeaderDescription,
               children: M.default.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
             }), (0, n.jsx)("div", {
-              className: g.amount,
+              className: L.amount,
               children: M.default.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
             })]
           })

@@ -1,8 +1,8 @@
 "use strict";
 s.r(t), s("47120");
 var a = s("735250"),
-  n = s("470079"),
-  i = s("442837"),
+  i = s("470079"),
+  n = s("442837"),
   l = s("481060"),
   o = s("893776"),
   r = s("809206"),
@@ -18,7 +18,7 @@ t.default = e => {
   let {
     transitionState: t,
     onClose: s
-  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getErrors()), I = (0, i.useStateFromStores)([u.default], () => u.default.getFormState()), R = (0, i.useStateFromStores)([m.default], () => m.default.getCurrentUser()), C = (0, i.useStateFromStores)([h.default], () => h.default.getAction()), _ = !f.default.isEmailReverification(C), [v, M] = n.useState(!0), S = I === g.FormStates.SUBMITTING;
+  } = e, p = (0, n.useStateFromStores)([u.default], () => u.default.getErrors()), C = (0, n.useStateFromStores)([u.default], () => u.default.getFormState()), I = (0, n.useStateFromStores)([m.default], () => m.default.getCurrentUser()), _ = (0, n.useStateFromStores)([h.default], () => h.default.getAction()), R = !f.default.isEmailReverification(_), [v, S] = i.useState(!0), M = C === g.FormStates.SUBMITTING;
 
   function T(e) {
     var t, s;
@@ -28,14 +28,14 @@ t.default = e => {
     N = T("password");
   return (0, a.jsx)(c.default, {
     transitionState: t,
-    email: null == R ? void 0 : R.email,
+    email: null == I ? void 0 : I.email,
     emailError: A,
     passwordError: N,
-    submitting: S,
-    canResend: v && !S && (null == R ? void 0 : R.email) != null && 0 === A.length && 0 === N.length,
-    canChange: _,
+    submitting: M,
+    canResend: v && !M && (null == I ? void 0 : I.email) != null && 0 === A.length && 0 === N.length,
+    canChange: R,
     onChangeEmailClick: function() {
-      M(!1)
+      S(!1)
     },
     onVerify: function(e, t) {
       (0, r.saveAccountChanges)({
@@ -46,7 +46,7 @@ t.default = e => {
           var t;
           (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null ? (0, d.showInvalidUsernameToast)() : 0 === N.length && 0 === A.length && (0, l.showToast)((0, l.createToast)(E.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
         }
-      }), M(!0)
+      }), S(!0)
     },
     onResend: function() {
       o.default.verifyResend()

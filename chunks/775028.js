@@ -27,8 +27,8 @@ var n = l("735250"),
   _ = l("26290"),
   T = l("216306"),
   v = l("163"),
-  O = l("753540"),
-  A = l("70297"),
+  A = l("753540"),
+  O = l("70297"),
   R = l("981631"),
   j = l("176505"),
   b = l("689938"),
@@ -41,7 +41,7 @@ function y(e) {
     guild: t,
     channel: a,
     onCategoryClick: s
-  } = e, r = (0, O.useIsChecked)(t.id, a.id, a.id), d = (0, O.useIsDisabled)(t.id, a.id, a.id);
+  } = e, r = (0, A.useIsChecked)(t.id, a.id, a.id), d = (0, A.useIsDisabled)(t.id, a.id, a.id);
   return (0, n.jsxs)("div", {
     className: i()(L.categoryRow, {
       [L.uncategorized]: "null" === a.id
@@ -107,10 +107,10 @@ let B = a.memo(function() {
       isFirstChannel: d,
       isLastChannel: h,
       onChannelClick: v,
-      tooltipDirection: A = "right"
+      tooltipDirection: O = "right"
     } = e, {
       isSubscriptionGated: y
-    } = (0, f.default)(t.id), F = (0, O.useIsChecked)(s.id, t.id, a.id), H = (0, O.useIsDisabled)(s.id, t.id, a.id), U = (0, O.useDisabledTooltip)(s.id, a.id), k = (0, r.useStateFromStores)([E.default], () => E.default.getActiveThreadCount(s.id, t.id)), P = (0, r.useStateFromStores)([x.default], () => x.default.shouldIndicateNewChannel(s.id, t.id)), G = e => {
+    } = (0, f.default)(t.id), F = (0, A.useIsChecked)(s.id, t.id, a.id), H = (0, A.useIsDisabled)(s.id, t.id, a.id), U = (0, A.useDisabledTooltip)(s.id, a.id), k = (0, r.useStateFromStores)([E.default], () => E.default.getActiveThreadCount(s.id, t.id)), P = (0, r.useStateFromStores)([x.default], () => x.default.shouldIndicateNewChannel(s.id, t.id)), G = e => {
       if (!H) return e.stopPropagation(), v(s.id, t.id, a.id), !0
     }, W = e => {
       t.isGuildVocal() ? (0, c.openContextMenuLazy)(e, async () => {
@@ -167,7 +167,7 @@ let B = a.memo(function() {
       children: [(0, n.jsx)(u.Tooltip, {
         text: U,
         delay: 500,
-        position: A,
+        position: O,
         children: e => (0, n.jsxs)(u.Clickable, {
           className: i()(L.channelRow, {
             [L.firstChannel]: d,
@@ -253,7 +253,7 @@ function H(e) {
       section: a,
       row: s
     } = e;
-    if (0 === a && -1 === f) return (0, n.jsx)(A.default, {
+    if (0 === a && -1 === f) return (0, n.jsx)(O.default, {
       guild: l
     });
     let i = t._categories[a + f],
@@ -267,7 +267,7 @@ function H(e) {
       tooltipDirection: o ? "right" : "top",
       onChannelClick: c
     }, r.channel.id)
-  }, [t, l, f, o, c]), N = (0, A.useNuxCardHeight)(l.id), x = (0, T.useChannelBrowserSections)(l.id, t, 64, N);
+  }, [t, l, f, o, c]), N = (0, O.useNuxCardHeight)(l.id), x = (0, T.useChannelBrowserSections)(l.id, t, 64, N);
   return (0, n.jsx)(u.ListAuto, {
     className: s,
     innerClassName: i()(r, L.scrollerInner),

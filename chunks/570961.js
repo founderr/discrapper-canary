@@ -33,8 +33,8 @@ var a = n("544891"),
   d = n("107862"),
   o = n("592125"),
   u = n("430824"),
-  N = n("823379"),
-  c = n("208665"),
+  c = n("823379"),
+  N = n("208665"),
   _ = n("981631"),
   I = n("290511"),
   E = n("689938");
@@ -46,14 +46,14 @@ function O() {
 }
 
 function f(e, t, n) {
-  T(e, c.default.editedOnboardingPrompts.map(e => e.id === t ? {
+  T(e, N.default.editedOnboardingPrompts.map(e => e.id === t ? {
     ...e,
     ...n
   } : e))
 }
 
 function S(e, t) {
-  T(e, c.default.editedOnboardingPrompts.filter(e => e.id !== t))
+  T(e, N.default.editedOnboardingPrompts.filter(e => e.id !== t))
 }
 
 function T(e, t) {
@@ -73,8 +73,8 @@ async function m(e, t) {
   let {
     dropdownsAllowed: n
   } = (0, d.getOnboardingDropdownExperiment)(e.id);
-  if (!c.default.hasChanges()) return;
-  let a = c.default.editedOnboardingPrompts;
+  if (!N.default.hasChanges()) return;
+  let a = N.default.editedOnboardingPrompts;
   null != t && t.ignoreDefaultPrompt && 1 === a.length && (0, I.isDefaultPrompt)(a[0]) && (a = []);
   let _ = a.map(t => {
       let a = t.options.map(t => {
@@ -98,7 +98,7 @@ async function m(e, t) {
     O = _.filter(e => e.inOnboarding),
     f = _.filter(e => !0 !== e.inOnboarding),
     S = _.map(t => g(e, _, t));
-  if (S.filter(N.isNotNullish).length > 0) throw l.default.dispatch({
+  if (S.filter(c.isNotNullish).length > 0) throw l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
     errors: S
   }), Error("failed to locally validate prompts");
@@ -133,7 +133,7 @@ async function m(e, t) {
     } = null !== (m = new i.APIError(n).getAnyErrorMessageAndField()) && void 0 !== m ? m : {};
     throw s.default.show({
       title: E.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-      body: [e, t].filter(N.isNotNullish).join(": ")
+      body: [e, t].filter(c.isNotNullish).join(": ")
     }), l.default.dispatch({
       type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED"
     }), Error("failed to save prompts")
@@ -159,7 +159,7 @@ async function D(e, t) {
     } = null !== (n = new i.APIError(a).getAnyErrorMessageAndField()) && void 0 !== n ? n : {};
     s.default.show({
       title: E.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-      body: [e, t].filter(N.isNotNullish).join(": ")
+      body: [e, t].filter(c.isNotNullish).join(": ")
     })
   }
 }

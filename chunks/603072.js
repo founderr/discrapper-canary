@@ -27,8 +27,8 @@ var n = l("735250"),
   _ = l("514342"),
   T = l("648414"),
   v = l("26290"),
-  O = l("31445"),
-  A = l("59350"),
+  A = l("31445"),
+  O = l("59350"),
   R = l("290511"),
   j = l("176505"),
   b = l("921944"),
@@ -40,7 +40,7 @@ function y(e) {
   let {
     guild: t,
     previousChannel: l
-  } = e, s = (0, O.default)(t);
+  } = e, s = (0, A.default)(t);
   a.useEffect(() => {
     (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX, {
       dismissAction: b.ContentDismissActionType.DISMISS
@@ -102,7 +102,7 @@ function B(e) {
   let {
     guildId: t,
     selectedSection: l
-  } = e, s = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(t)), d = (0, O.default)(s), [c, h] = a.useState(null != l ? l : R.GuildOnboardingTab.CUSTOMIZE);
+  } = e, s = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(t)), d = (0, A.default)(s), [c, h] = a.useState(null != l ? l : R.GuildOnboardingTab.CUSTOMIZE);
   a.useEffect(() => {
     null != l && h(l)
   }, [l]);
@@ -147,7 +147,7 @@ function B(e) {
         }), (() => {
           switch (c) {
             case R.GuildOnboardingTab.CUSTOMIZE:
-              return (0, n.jsx)(A.default, {
+              return (0, n.jsx)(O.default, {
                 guildId: t,
                 onBrowseChannels: () => h(R.GuildOnboardingTab.BROWSE)
               });

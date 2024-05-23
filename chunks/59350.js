@@ -27,8 +27,8 @@ var n = l("735250"),
   _ = l("703656"),
   T = l("484459"),
   v = l("318661"),
-  O = l("252532"),
-  A = l("271383"),
+  A = l("252532"),
+  O = l("271383"),
   R = l("430824"),
   j = l("306680"),
   b = l("594174"),
@@ -66,7 +66,7 @@ function et(e) {
     avatarSrc: r,
     eventHandlers: o,
     isAvatarAnimating: h
-  } = (0, O.useAnimatedAvatarSrc)({
+  } = (0, A.useAnimatedAvatarSrc)({
     user: s,
     guildId: l.id,
     size: 120
@@ -76,7 +76,7 @@ function et(e) {
     user: s,
     size: (0, g.getDecorationSizeForAvatarSize)($),
     animateOnHover: !h
-  }), C = (0, c.useStateFromStores)([A.default], () => A.default.getSelfMember(l.id)), N = (0, c.useStateFromStoresArray)([A.default], () => A.default.getMemberRoleWithPendingUpdates(l.id, s.id)), x = (0, c.useStateFromStores)([R.default], () => R.default.getRoles(l.id)), S = d()(N).filter(e => x.hasOwnProperty(e)).map(e => x[e]).orderBy("position", "desc").value(), E = (0, v.default)(s.id, l.id);
+  }), C = (0, c.useStateFromStores)([O.default], () => O.default.getSelfMember(l.id)), N = (0, c.useStateFromStoresArray)([O.default], () => O.default.getMemberRoleWithPendingUpdates(l.id, s.id)), x = (0, c.useStateFromStores)([R.default], () => R.default.getRoles(l.id)), S = d()(N).filter(e => x.hasOwnProperty(e)).map(e => x[e]).orderBy("position", "desc").value(), E = (0, v.default)(s.id, l.id);
   a.useEffect(() => {
     (0, T.default)(s.id, s.getAvatarURL(l.id, (0, m.getAvatarSize)($)), {
       guildId: l.id
@@ -182,7 +182,7 @@ function el(e) {
   }), v = l.options.map(e => ({
     value: e.id,
     ...e
-  })), O = l.options.filter(e => g.includes(e.id)).map(e => e.id);
+  })), A = l.options.filter(e => g.includes(e.id)).map(e => e.id);
   return (0, n.jsx)(n.Fragment, {
     children: (0, n.jsxs)(o.animated.div, {
       className: K.prompt,
@@ -205,7 +205,7 @@ function el(e) {
         }) : null]
       }), (0, n.jsx)(z.default, {
         options: v,
-        value: O,
+        value: A,
         onChange: e => {
           let t = e.find(e => !g.includes(e.id)),
             n = e.map(e => e.id);
@@ -342,7 +342,7 @@ function ea(e) {
       }
     }
   }, [null == r ? void 0 : r.id]);
-  let O = a.useCallback(e => {
+  let A = a.useCallback(e => {
     if (null == r) return null;
     switch (e.type) {
       case Y.OnboardingPromptType.MULTIPLE_CHOICE:
@@ -403,7 +403,7 @@ function ea(e) {
                 count: p.length + T
               })
             })
-          }), p.map(O), I.map(O), (0, n.jsx)("div", {
+          }), p.map(A), I.map(A), (0, n.jsx)("div", {
             className: K.sectionSeparator
           })]
         }), v.length > 0 && (0, n.jsxs)(n.Fragment, {
@@ -419,7 +419,7 @@ function ea(e) {
               color: "text-muted",
               children: q.default.Messages.ONBOARDING_PROMPT_MEMBER_DESCRIPTION
             })]
-          }), v.map(O)]
+          }), v.map(A)]
         })]
       }), o && (0, n.jsx)(et, {
         guild: r,

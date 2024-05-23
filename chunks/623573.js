@@ -30,8 +30,8 @@ var a, n, i = s("735250"),
   R = s("622999"),
   y = s("462566"),
   M = s("801937"),
-  L = s("282164"),
-  g = s("738342"),
+  g = s("282164"),
+  L = s("738342"),
   x = s("228666"),
   D = s("296214"),
   b = s("981631"),
@@ -251,7 +251,7 @@ class V extends l.PureComponent {
             error: e,
             billingAddressInfo: t
           } = this.props;
-          return (0, i.jsx)(g.P24DetailForm, {
+          return (0, i.jsx)(L.P24DetailForm, {
             billingAddressInfo: t,
             onDetailsChange: this.handlePaymentDetailsChange,
             onP24BankChange: this.handleP24BankChange,
@@ -278,7 +278,7 @@ class V extends l.PureComponent {
             error: e,
             billingAddressInfo: t
           } = this.props;
-          return (0, i.jsx)(g.default, {
+          return (0, i.jsx)(L.default, {
             billingAddressInfo: t,
             onChange: this.handlePaymentDetailsChange,
             error: e
@@ -395,7 +395,7 @@ class V extends l.PureComponent {
         }
       },
       paypal: {
-        renderBody: () => (0, i.jsx)(L.default, {}),
+        renderBody: () => (0, i.jsx)(g.default, {}),
         renderNextButton: () => {
           let {
             submitting: e,

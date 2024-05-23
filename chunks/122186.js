@@ -27,12 +27,12 @@ function _(e) {
     glow: _ = !1
   } = e, {
     enabled: N,
-    variant: h
+    variant: C
   } = r.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: !0
-  }), C = N && r.GradientVariants.includes(h), g = N && [r.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, r.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(h), p = {
+  }), h = N && r.GradientVariants.includes(C), g = N && [r.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, r.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(C), p = {
     section: f.AnalyticsSections.STREAM_SETTINGS,
     object: f.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: f.AnalyticsObjectTypes.BUY
@@ -42,7 +42,7 @@ function _(e) {
     autoTrackExposure: !0
   }).showNewUpsellCopy, x = () => (0, a.jsx)(o.default, {
     className: s()(E.enhancedCTA, {
-      [E.ctaGradientBackground]: C
+      [E.ctaGradientBackground]: h
     }),
     iconClassName: E.premiumIcon,
     subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
@@ -78,7 +78,7 @@ function _(e) {
       children: g ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(i.Button, {
           className: s()(E.enhancedCTA, E.learnMoreCTA),
-          color: C ? i.Button.Colors.CUSTOM : i.Button.Colors.TRANSPARENT,
+          color: h ? i.Button.Colors.CUSTOM : i.Button.Colors.TRANSPARENT,
           onClick: () => n({
             analyticsLocation: p,
             onClose: l

@@ -26,8 +26,8 @@ var a, n, i, l = s("735250"),
   R = s("400916"),
   y = s("916001"),
   M = s("539290"),
-  L = s("336197"),
-  g = s("307643"),
+  g = s("336197"),
+  L = s("307643"),
   x = s("378233"),
   D = s("419922"),
   b = s("46141"),
@@ -149,7 +149,7 @@ function ef(e) {
   } = e, a = (0, h.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
   }), n = (0, A.useProductType)(a), i = (0, _.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? en.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
-    (null == i ? void 0 : i.hasFeature(et.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, L.default)(et.Routes.GUILD_PRODUCT(t, s)) : await (0, L.default)(et.Routes.CHANNEL(t)), (0, S.popLayer)()
+    (null == i ? void 0 : i.hasFeature(et.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, g.default)(et.Routes.GUILD_PRODUCT(t, s)) : await (0, g.default)(et.Routes.CHANNEL(t)), (0, S.popLayer)()
   }, [i, t, s]);
   return (0, l.jsxs)(l.Fragment, {
     children: [null != u && (0, l.jsx)(em, {
@@ -732,7 +732,7 @@ function eI(e) {
     }
   }), I = (0, _.useStateFromStores)([P.default], () => null != c ? P.default.getApplication(c) : null);
   r.useEffect(() => {
-    p && null != c && (0, g.fetchApplication)(c)
+    p && null != c && (0, L.fetchApplication)(c)
   }, [c, p]);
   let S = (0, _.useStateFromStores)([U.default], () => U.default.getGuild(null == f ? void 0 : f.guildId));
   return (0, l.jsx)(e_, {

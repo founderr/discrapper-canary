@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return k
+    return w
   }
 }), l("47120");
 var a = l("735250"),
@@ -19,8 +19,8 @@ var a = l("735250"),
   E = l("736871"),
   _ = l("351742"),
   N = l("386542"),
-  h = l("193878"),
-  C = l("594174"),
+  C = l("193878"),
+  h = l("594174"),
   g = l("746124"),
   p = l("285952"),
   A = l("466111"),
@@ -131,7 +131,7 @@ function G(e) {
   }
 }
 
-function k(e) {
+function w(e) {
   let {
     selectedGuildId: t,
     selectedChannelId: l,
@@ -140,12 +140,12 @@ function k(e) {
     selectedResolution: r,
     selectedFPS: A,
     onResolutionChange: U,
-    onFPSChange: k,
-    onPresetChange: w,
+    onFPSChange: w,
+    onPresetChange: k,
     targetGuildPremiumTier: y,
     captureDeviceSelected: F
-  } = e, V = (0, d.useStateFromStores)([C.default], () => {
-    let e = C.default.getCurrentUser();
+  } = e, V = (0, d.useStateFromStores)([h.default], () => {
+    let e = h.default.getCurrentUser();
     return u()(null != e, "StreamSettings: user cannot be undefined"), e
   }), B = x.default.canStreamQuality(x.StreamQuality.MID, V), {
     location: H
@@ -171,11 +171,11 @@ function k(e) {
   } = (0, N.usePerksDemo)(o.EntitlementFeatureNames.STREAM_HIGH_QUALITY), q = !B && !W && !Y, {
     enabled: Z,
     variant: J
-  } = h.default.useExperiment({
+  } = C.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: q
-  }), X = Z && h.GradientVariants.includes(J), [$, ee] = n.useState(!1), [et, el] = n.useState(!1);
+  }), X = Z && C.GradientVariants.includes(J), [$, ee] = n.useState(!1), [et, el] = n.useState(!1);
   n.useEffect(() => {
     let e = 0;
     return Y && Q.hqStreamingUnlockAnimationPlayed && (e = setTimeout(() => {
@@ -185,8 +185,8 @@ function k(e) {
     }
   }, [Y, Q.hqStreamingUnlockAnimationPlayed]);
   let ea = n.useCallback(() => {
-      U(v.ApplicationStreamResolutions.RESOLUTION_1080), k(v.ApplicationStreamFPS.FPS_60)
-    }, [U, k]),
+      U(v.ApplicationStreamResolutions.RESOLUTION_1080), w(v.ApplicationStreamFPS.FPS_60)
+    }, [U, w]),
     en = F ? v.GoLiveDeviceResolutionButtons : v.ApplicationStreamResolutionButtons,
     es = {
       ...H,
@@ -213,7 +213,7 @@ function k(e) {
         needsDemo: Y && e.value === v.ApplicationStreamFPS.FPS_60,
         analyticsLocation: es,
         useGradient: X,
-        onClick: () => k(e.value),
+        onClick: () => w(e.value),
         onClose: s,
         setIsHovering: ee
       }))
@@ -286,7 +286,7 @@ function k(e) {
           value: i,
           className: b.marginTop8,
           options: eu,
-          onChange: e => w(e)
+          onChange: e => k(e)
         }), eo]
       })
     })
