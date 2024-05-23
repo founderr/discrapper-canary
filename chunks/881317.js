@@ -11,15 +11,15 @@ var s = n("735250"),
   c = n("726521"),
   f = n("185625"),
   E = n("314897"),
-  _ = n("828695"),
-  I = n("819570"),
+  I = n("828695"),
+  _ = n("819570"),
   p = n("63063"),
   h = n("981631"),
   T = n("689938"),
-  N = n("194409"),
-  g = n("611273");
+  g = n("194409"),
+  m = n("611273");
 i.default.initialize();
-let m = e => {
+let N = e => {
   let {
     title: t,
     menuType: a
@@ -61,9 +61,9 @@ let m = e => {
     })
   };
   return (0, s.jsx)("div", {
-    className: N.buttonColumn,
+    className: g.buttonColumn,
     children: (0, s.jsx)(r.Button, {
-      className: g.__invalid_reportButton,
+      className: m.__invalid_reportButton,
       fullWidth: !0,
       color: r.Button.Colors.BRAND,
       onClick: () => i(),
@@ -72,7 +72,7 @@ let m = e => {
   })
 };
 t.default = () => {
-  let [e, t] = a.useState(!0), [n, l] = a.useState(!1), c = (0, i.useStateFromStores)([E.default], () => E.default.isAuthenticated()), A = (0, i.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments), S = () => {
+  let [e, t] = a.useState(!0), [n, l] = a.useState(!1), c = (0, i.useStateFromStores)([E.default], () => E.default.isAuthenticated()), A = (0, i.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), S = () => {
     (0, f.getDsaExperiment)().then(() => {
       t(!1), l(!0)
     }).catch(() => {
@@ -87,23 +87,23 @@ t.default = () => {
     (async () => {
       !A && (await u.default.getLocationMetadata(), u.default.getExperiments())
     })()
-  }, [A]), e || !A ? (0, s.jsx)(I.default, {
+  }, [A]), e || !A ? (0, s.jsx)(_.default, {
     children: (0, s.jsx)(r.Spinner, {})
-  }) : n && (0, s.jsxs)(I.default, {
-    children: [(0, s.jsx)(I.Title, {
-      className: g.marginBottom8,
+  }) : n && (0, s.jsxs)(_.default, {
+    children: [(0, s.jsx)(_.Title, {
+      className: m.marginBottom8,
       children: T.default.Messages.URF_LANDING_PAGE_TITLE
-    }), (0, s.jsx)(I.SubTitle, {
-      className: g.marginBottom8,
+    }), (0, s.jsx)(_.SubTitle, {
+      className: m.marginBottom8,
       children: T.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
         supportURL: p.default.getArticleURL(h.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
       })
     }), (0, s.jsxs)("div", {
-      className: N.container,
-      children: [(0, s.jsx)(m, {
+      className: g.container,
+      children: [(0, s.jsx)(N, {
         title: T.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
         menuType: d.UnauthenticatedReportNames.MESSAGE
-      }), (0, s.jsx)(m, {
+      }), (0, s.jsx)(N, {
         title: T.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
         menuType: d.UnauthenticatedReportNames.USER
       })]

@@ -43,15 +43,15 @@ function R(e) {
 function M() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(p.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), N = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, L = N && null != r && null == g;
+  } = (0, o.default)(), [t, s] = n.useState(p.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), N = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, D = N && null != r && null == g;
   n.useEffect(() => {
-    L && (0, E.trackCustomCallSoundExternallyDeleted)({
+    D && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
     })
-  }, [L, e]), n.useEffect(() => {
+  }, [D, e]), n.useEffect(() => {
     (0, c.maybeFetchSoundboardSounds)()
   }, []);
-  let D = n.useCallback((e, t) => {
+  let L = n.useCallback((e, t) => {
     let {
       inDropdown: s
     } = t;
@@ -85,7 +85,7 @@ function M() {
         value: p.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID
       },
       onChange: e => s(null == e ? p.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : e.id),
-      renderOptionSuffix: D,
+      renderOptionSuffix: L,
       hideDivider: !0
     }), (0, a.jsxs)(u.default, {
       className: x.marginTop20,
@@ -101,7 +101,7 @@ function M() {
         onSelect: s => {
           null == s ? (0, E.removeCustomJoinSound)(t, e) : (0, E.updateCustomJoinSound)(t, s, e)
         }
-      }), L && (0, a.jsx)(f.default, {
+      }), D && (0, a.jsx)(f.default, {
         className: O.notice,
         messageType: f.HelpMessageTypes.WARNING,
         children: A.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED

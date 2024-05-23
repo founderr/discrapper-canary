@@ -17,7 +17,7 @@ var s, a, l, i, r = n("442837"),
 let S = {},
   C = {};
 
-function A(e) {
+function g(e) {
   let {
     searchId: t,
     query: n,
@@ -28,7 +28,7 @@ function A(e) {
   } = e, r = C[t];
   return null == r && (r = {
     results: [],
-    context: d.default.getSearchContext(g.bind(null, t))
+    context: d.default.getSearchContext(A.bind(null, t))
   }, C[t] = r), {
     query: null != n ? n : "",
     mode: null != s ? s : {
@@ -42,7 +42,7 @@ function A(e) {
   }
 }
 
-function g(e, t) {
+function A(e, t) {
   let {
     results: n
   } = t, s = C[e], a = S[e];
@@ -72,7 +72,7 @@ function g(e, t) {
   } = a, {
     autocompletes: f
   } = a;
-  f = v(e, u), S[e] = A({
+  f = v(e, u), S[e] = g({
     searchId: e,
     query: o,
     mode: u,
@@ -182,7 +182,7 @@ function x(e) {
     cursorScope: l,
     autocompletes: i
   } = t;
-  S[e] = A({
+  S[e] = g({
     searchId: e,
     query: n,
     mode: s,
@@ -201,7 +201,7 @@ function L() {
     tokens: s,
     cursorScope: a
   } = S[e];
-  S[e] = A({
+  S[e] = g({
     searchId: e,
     query: t,
     mode: n,
@@ -216,7 +216,7 @@ class D extends(s = r.default.Store) {
   }
   getState(e) {
     var t;
-    return null !== (t = S[e]) && void 0 !== t ? t : A({
+    return null !== (t = S[e]) && void 0 !== t ? t : g({
       searchId: e
     })
   }
@@ -250,7 +250,7 @@ let P = new D(o.default, {
         guild: s
       }), n = o.autocompletes, d = !1) : (u.context.clearQuery(), n = v(s, r))
     }
-    return S[s] = A({
+    return S[s] = g({
       searchId: s,
       query: i,
       mode: r,

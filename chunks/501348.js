@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("153124"),
   M = s("358085"),
   v = s("210887"),
-  L = s("740492"),
-  D = s("695346"),
+  D = s("740492"),
+  L = s("695346"),
   P = s("329013"),
   b = s("333859"),
   j = s("981631"),
@@ -324,7 +324,7 @@ class z extends n.Component {
       let {
         value: t
       } = e;
-      D.MessageDisplayCompact.updateSetting(t === w.COMPACT), (0, T.setMessageGroupSpacing)()
+      L.MessageDisplayCompact.updateSetting(t === w.COMPACT), (0, T.setMessageGroupSpacing)()
     })
   }
 }
@@ -336,10 +336,10 @@ let Q = e => {
 };
 
 function q() {
-  let e = D.MessageDisplayCompact.useSetting(),
-    t = D.InlineEmbedMedia.useSetting(),
-    s = D.RenderEmbeds.useSetting(),
-    l = D.ClientThemeSettings.useSetting(),
+  let e = L.MessageDisplayCompact.useSetting(),
+    t = L.InlineEmbedMedia.useSetting(),
+    s = L.RenderEmbeds.useSetting(),
+    l = L.ClientThemeSettings.useSetting(),
     i = "UserSettingsAppearance",
     {
       enabled: d
@@ -354,17 +354,17 @@ function q() {
   n.useEffect(() => {
     Q(o.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE), Q(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE), Q(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK), d && Q(o.DismissibleContent.BRAND_REFRESH_NEW_BADGE), u && Q(o.DismissibleContent.PRIDE_ICONS_APPEARANCE_BADGE)
   }, []);
-  let c = (0, r.useStateFromStoresObject)([v.default, L.default, _.default, O.default, m.default], () => {
+  let c = (0, r.useStateFromStoresObject)([v.default, D.default, _.default, O.default, m.default], () => {
     var e, t;
     return {
       theme: v.default.theme,
       useForcedColors: _.default.useForcedColors,
-      useSystemTheme: L.default.useSystemTheme,
+      useSystemTheme: D.default.useSystemTheme,
       darkSidebar: v.default.darkSidebar,
       fontSize: _.default.fontSize,
       zoom: _.default.zoom,
       messageGroupSpacing: _.default.messageGroupSpacing,
-      displayCompactAvatars: L.default.displayCompactAvatars,
+      displayCompactAvatars: D.default.displayCompactAvatars,
       isStaff: null !== (t = null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
       gradientPreset: m.default.gradientPreset
     }

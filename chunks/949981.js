@@ -43,9 +43,9 @@ function T(e) {
     let e = u.default.getCurrentUser();
     C && null != e && t.push(e)
   }
-  let A = S.name;
-  (null == A || "" === A) && (A = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : _.default.Messages.UNNAMED);
-  let g = C ? I : p,
+  let g = S.name;
+  (null == g || "" === g) && (g = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : _.default.Messages.UNNAMED);
+  let A = C ? I : p,
     M = _.default.Messages.JOIN_GUILD,
     R = d.default.Button.Colors.GREEN;
   C && (M = _.default.Messages.JOINED_GUILD, R = d.default.Button.Colors.PRIMARY);
@@ -58,16 +58,16 @@ function T(e) {
         className: m.headerLine,
         children: [(0, s.jsx)(d.default.Icon, {
           channel: S,
-          onClick: C ? g : void 0
+          onClick: C ? A : void 0
         }), (0, s.jsx)(d.default.Info, {
-          title: A,
-          onClick: C ? g : void 0,
+          title: g,
+          onClick: C ? A : void 0,
           children: (0, s.jsx)(d.default.Data, {
             members: t.length
           })
         })]
       }), (0, s.jsx)(d.default.Button, {
-        onClick: g,
+        onClick: A,
         submitting: N,
         isDisabled: C,
         color: R,

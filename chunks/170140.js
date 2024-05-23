@@ -31,8 +31,8 @@ function p(e, t) {
     S = t.hasFlag(I.MessageFlags.IS_CROSSPOST),
     {
       rawMediaPostEmbedData: C,
-      guild: A,
-      parentChannel: g,
+      guild: g,
+      parentChannel: A,
       user: M,
       selectedGuildId: R,
       canAccess: v
@@ -56,8 +56,8 @@ function p(e, t) {
     O = s.useMemo(() => {
       let e = (0, T.getMediaPostEmbedCommonData)({
         mediaPostEmbedData: C,
-        guild: A,
-        parentChannel: g,
+        guild: g,
+        parentChannel: A,
         user: M,
         selectedGuildId: R,
         canAccess: v
@@ -66,7 +66,7 @@ function p(e, t) {
         ...e,
         user: M
       }
-    }, [C, A, g, M, R, v]);
+    }, [C, g, A, M, R, v]);
   return s.useEffect(() => {
     if ((null == p ? void 0 : p.threadId) != null) {
       let e = m.default.getEmbedFetchState(p.threadId);

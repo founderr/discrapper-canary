@@ -45,15 +45,15 @@ t.default = function(e) {
     id: n.id,
     icon: n.icon,
     size: 40
-  })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, B = null;
-  if (null != G) B = (0, a.jsx)("img", {
+  })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, y = null;
+  if (null != G) y = (0, a.jsx)("img", {
     src: G,
     alt: "",
     className: S.avatar
   });
   else {
     let e = (0, I.getAcronym)(n.name);
-    B = (0, a.jsx)("div", {
+    y = (0, a.jsx)("div", {
       className: S.defaultIcon,
       children: (0, a.jsx)(o.Text, {
         className: S.acronym,
@@ -93,7 +93,7 @@ t.default = function(e) {
               mask: E.default.Masks.SQUIRCLE,
               width: 40,
               height: 40,
-              children: null != B ? B : null
+              children: null != y ? y : null
             })
           })
         })

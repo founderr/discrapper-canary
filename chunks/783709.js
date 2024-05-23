@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("582404"),
   S = n("768581"),
   C = n("55935"),
-  A = n("671219"),
-  g = n("750858"),
+  g = n("671219"),
+  A = n("750858"),
   M = n("981631"),
   R = n("689938"),
   v = n("822545");
@@ -69,7 +69,7 @@ function x(e) {
     guildId: r.guild_id,
     userId: t.id,
     newAnalyticsLocations: n
-  })), [r, l.id]), L = a.useMemo(() => e => (o()(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(A.default, {
+  })), [r, l.id]), L = a.useMemo(() => e => (o()(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(g.default, {
     ...e,
     channel: r,
     messageId: l.id,
@@ -148,7 +148,7 @@ function x(e) {
           onUserContextMenu: u,
           onPopoutRequestClose: d
         } = e;
-        return (0, s.jsx)(g.default, {
+        return (0, s.jsx)(A.default, {
           compact: !0,
           author: t,
           message: l,

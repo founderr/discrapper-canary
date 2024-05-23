@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("474333"),
   M = s("499150"),
   v = s("709054"),
-  L = s("706454"),
-  D = s("210887"),
+  D = s("706454"),
+  L = s("210887"),
   P = s("418632"),
   b = s("730820"),
   j = s("888256"),
@@ -312,10 +312,10 @@ t.default = () => {
       hasSearchResults: n,
       searchResults: l
     } = (0, G.useSettingSearchResults)(),
-    i = (0, d.useStateFromStores)([D.default], () => D.default.theme),
+    i = (0, d.useStateFromStores)([L.default], () => L.default.theme),
     r = (0, I.useIsEligibleForPomelo)(),
     u = (0, g.useForceMigration)(),
-    c = (0, d.useStateFromStores)([L.default], () => L.default.locale);
+    c = (0, d.useStateFromStores)([D.default], () => D.default.locale);
   return (0, a.jsx)(Y, {
     theme: i,
     currentUser: e,

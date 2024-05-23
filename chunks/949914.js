@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("41542"),
   M = s("26290"),
   v = s("245950"),
-  L = s("404203"),
-  D = s("330181"),
+  D = s("404203"),
+  L = s("330181"),
   P = s("954821"),
   b = s("980864"),
   j = s("981631"),
@@ -187,7 +187,7 @@ t.default = e => {
     }) : null;
   return (0, a.jsxs)("div", {
     className: B.container,
-    children: [(0, a.jsx)(L.default, {
+    children: [(0, a.jsx)(D.default, {
       onClick: g,
       className: B.headerContainer,
       children: e => {
@@ -234,7 +234,7 @@ t.default = e => {
       id: R,
       children: [(0, a.jsx)("div", {
         className: B.divider
-      }), (0, a.jsx)(D.default, {
+      }), (0, a.jsx)(L.default, {
         groupListingId: l.id,
         subscription: t,
         className: B.changePlanNotice

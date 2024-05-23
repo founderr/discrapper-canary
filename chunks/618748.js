@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return B
   }
 });
 var a = s("735250");
@@ -79,7 +79,7 @@ function b(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     application: t
   } = e, {
@@ -103,7 +103,7 @@ function B(e) {
   }) : null
 }
 
-function y(e) {
+function B(e) {
   let t, {
       guild: s,
       application: n
@@ -194,7 +194,7 @@ function F(e) {
         children: U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DESCRIPTION
       }), (0, a.jsx)(R.default, {
         guild: s
-      }), d && (0, a.jsx)(B, {
+      }), d && (0, a.jsx)(y, {
         application: r
       }), (0, a.jsxs)("div", {
         className: P.tabBarContainer,

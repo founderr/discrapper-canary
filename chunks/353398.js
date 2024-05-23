@@ -277,7 +277,7 @@ function b(e) {
     guild: t,
     guildTemplate: s
   } = e;
-  return null == s ? (0, l.jsx)(B, {
+  return null == s ? (0, l.jsx)(y, {
     guild: t
   }) : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(E.FormItem, {
@@ -294,7 +294,7 @@ function b(e) {
       children: x.default.Messages.GUILD_TEMPLATES_UNSYNCED_WARNING
     }), (0, l.jsxs)("div", {
       className: r()(O.marginTop20, L.buttonContainer),
-      children: [s.isDirty && (0, l.jsx)(y, {
+      children: [s.isDirty && (0, l.jsx)(B, {
         guild: t,
         guildTemplate: s
       }), (0, l.jsxs)("div", {
@@ -315,7 +315,7 @@ function b(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   var t;
   let {
     guild: s
@@ -337,7 +337,7 @@ function B(e) {
   })
 }
 
-function y(e) {
+function B(e) {
   let {
     guild: t,
     guildTemplate: s

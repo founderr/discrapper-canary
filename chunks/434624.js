@@ -29,8 +29,8 @@ let T = a.memo(function(e) {
         burst_count: N,
         burst_colors: S,
         readOnly: C,
-        isLurking: A,
-        isGuest: g,
+        isLurking: g,
+        isGuest: A,
         isPendingMember: M,
         type: R
       } = e,
@@ -58,7 +58,7 @@ let T = a.memo(function(e) {
     return (0, s.jsxs)("div", {
       className: i()(L.reaction, L.reactionInner, T, {
         [L.reactionMe]: O,
-        [L.reactionReadOnly]: C && !A && !M && !g
+        [L.reactionReadOnly]: C && !g && !M && !A
       }),
       style: y,
       children: [(0, s.jsx)(o.default, {

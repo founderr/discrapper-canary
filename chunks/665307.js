@@ -173,7 +173,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       })
     }
   }],
-  B = e => {
+  F = e => {
     let {
       item: t,
       activeRowKey: n,
@@ -200,7 +200,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       })
     })
   };
-class F extends(a = l.PureComponent) {
+class B extends(a = l.PureComponent) {
   componentDidMount() {
     let {
       fetched: e
@@ -325,7 +325,7 @@ class F extends(a = l.PureComponent) {
         columns: w,
         data: n,
         sortData: !1,
-        rowComponent: B,
+        rowComponent: F,
         className: D.table,
         headerClassName: i ? D.stickyHeader : D.header,
         headerCellClassName: D.headerCell,
@@ -418,7 +418,7 @@ function H(e) {
       activeRowKey: p.default.activeRowKey,
       isNavigatingByKeyboard: p.default.isNavigatingByKeyboard
     }));
-  return (0, s.jsx)(F, {
+  return (0, s.jsx)(B, {
     ...e,
     analyticsContext: t,
     location: n,
@@ -431,6 +431,6 @@ function H(e) {
     isNavigatingByKeyboard: E
   })
 }
-b(F, "defaultProps", {
+b(B, "defaultProps", {
   stickyHeader: !1
 })

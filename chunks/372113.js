@@ -21,8 +21,8 @@ var a = n("120356"),
   N = n("918701"),
   S = n("566078"),
   C = n("340100"),
-  A = n("644646"),
-  g = n("667105"),
+  g = n("644646"),
+  A = n("667105"),
   M = n("87894"),
   R = n("2660"),
   v = n("46140"),
@@ -68,7 +68,7 @@ t.default = e => {
     isExpanded: G,
     isAnimating: k,
     contentPosition: w
-  } = e, H = (null === (t = U.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, V = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (0, N.hasCollectiblesQuestReward)(U.config), K = (null === (a = U.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, W = G || k, z = (0, I.useQuestInstructionTitle)(U, v.QuestsExperimentLocations.QUESTS_CARD), Q = V && !K && j !== h.QuestContent.QUESTS_EMBED, q = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), X = D(H, V, K, Y), Z = V ? x.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : x.default.Messages.QUESTS_ACCEPT_TOOLTIP, J = (0, g.useHandleClaimQuestsReward)({
+  } = e, H = (null === (t = U.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, V = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (0, N.hasCollectiblesQuestReward)(U.config), K = (null === (a = U.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, W = G || k, z = (0, I.useQuestInstructionTitle)(U, v.QuestsExperimentLocations.QUESTS_CARD), Q = V && !K && j !== h.QuestContent.QUESTS_EMBED, q = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), X = D(H, V, K, Y), Z = V ? x.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : x.default.Messages.QUESTS_ACCEPT_TOOLTIP, J = (0, A.useHandleClaimQuestsReward)({
     quest: U,
     location: j,
     questContentPosition: w
@@ -79,7 +79,7 @@ t.default = e => {
       questContentPosition: w
     });
     J()
-  }, en = (0, i.useStateFromStores)([c.default], () => c.default.locale), es = j === h.QuestContent.QUESTS_EMBED, ea = (0, M.isQuestCardInGiftInventory)(j), el = ea && Y, ei = F && !H, er = (0, s.jsx)(A.default, {
+  }, en = (0, i.useStateFromStores)([c.default], () => c.default.locale), es = j === h.QuestContent.QUESTS_EMBED, ea = (0, M.isQuestCardInGiftInventory)(j), el = ea && Y, ei = F && !H, er = (0, s.jsx)(g.default, {
     autoplay: B,
     className: l()(L.gridImg, {
       [L.questRewardGiftInventory]: ea && "lg" === b,

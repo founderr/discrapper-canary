@@ -220,8 +220,8 @@ t.default = s.memo(function(e) {
         layerKey: P.CLAN_SETUP_MODAL_LAYER_KEY
       }))
     }, [o, u]),
-    B = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
-    F = (0, M.useFakeDiscoveryClanForGuild)({
+    F = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
+    B = (0, M.useFakeDiscoveryClanForGuild)({
       guild: c,
       selectedGame: l
     }),
@@ -240,7 +240,7 @@ t.default = s.memo(function(e) {
       }
     }),
     K = (0, r.useSpring)({
-      from: B ? {
+      from: F ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
         transform: "translate(324px, -56px) rotate(8deg) scale(1.25)"
@@ -252,7 +252,7 @@ t.default = s.memo(function(e) {
       delay: 400
     }),
     z = (0, r.useSpring)({
-      from: B ? {
+      from: F ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
         transform: "translate(176px, -24px) rotate(4deg) scale(1.1111)"
@@ -264,7 +264,7 @@ t.default = s.memo(function(e) {
       delay: 350
     }),
     q = (0, r.useSpring)({
-      from: B ? {
+      from: F ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
         transform: "translate(-176px, -24px) rotate(-4deg) scale(1.1111)"
@@ -276,7 +276,7 @@ t.default = s.memo(function(e) {
       delay: 350
     }),
     Q = (0, r.useSpring)({
-      from: B ? {
+      from: F ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
         transform: "translate(-324px, -56px) rotate(-8deg) scale(1.25)"
@@ -288,7 +288,7 @@ t.default = s.memo(function(e) {
       delay: 400
     }),
     Z = (0, r.useSpring)({
-      from: B ? {
+      from: F ? {
         transform: "scale(1)",
         opacity: 0
       } : {
@@ -303,7 +303,7 @@ t.default = s.memo(function(e) {
       delay: 200
     }),
     X = (0, r.useSpring)({
-      from: B ? {
+      from: F ? {
         transform: "translateY(0px)"
       } : {
         transform: "translateY(240px)"
@@ -354,7 +354,7 @@ t.default = s.memo(function(e) {
           clan: H[1],
           className: D.clanCardInnerLeft
         })
-      }), null != F && (0, a.jsx)(r.animated.div, {
+      }), null != B && (0, a.jsx)(r.animated.div, {
         className: D.clanEnvelope,
         style: Z,
         children: (0, a.jsx)(G, {
@@ -366,7 +366,7 @@ t.default = s.memo(function(e) {
             children: (0, a.jsx)(r.animated.div, {
               style: X,
               children: (0, a.jsx)(R.ClanDiscoveryCardView, {
-                clan: F,
+                clan: B,
                 className: D.clanCardCenter,
                 bannerUrl: (0, T.getClanBannerUrl)(H[4].id, H[4].bannerHash)
               })

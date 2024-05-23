@@ -10,8 +10,8 @@ var s = a("735250"),
   i = a.n(n),
   r = a("481060"),
   c = a("44315"),
-  o = a("441674"),
-  d = a("937615"),
+  d = a("441674"),
+  o = a("937615"),
   u = a("981631"),
   T = a("689938"),
   m = a("886441");
@@ -27,7 +27,7 @@ function _(e) {
       [m.selected]: a
     }),
     onClick: l,
-    children: [a ? (0, s.jsx)(o.default, {
+    children: [a ? (0, s.jsx)(d.default, {
       width: 20,
       height: 20,
       backgroundColor: (0, c.getColor)(u.Color.WHITE_500),
@@ -46,7 +46,7 @@ function _(e) {
       children: [(0, s.jsx)(r.Text, {
         variant: "text-sm/normal",
         tag: "span",
-        children: (0, d.formatPrice)(t, u.CurrencyCodes.USD)
+        children: (0, o.formatPrice)(t, u.CurrencyCodes.USD)
       }), (0, s.jsx)(r.Text, {
         variant: "text-xxs/medium",
         tag: "span",
@@ -75,7 +75,7 @@ function E(e) {
         variant: "text-sm/normal",
         className: m.bodyText,
         children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_PRICE_RESELECTION_BODY.format({
-          price: (0, d.formatPrice)(t.listings[0].price_tier, u.CurrencyCodes.USD)
+          price: (0, o.formatPrice)(t.listings[0].price_tier, u.CurrencyCodes.USD)
         })
       }), n.map((e, t) => (0, s.jsx)(_, {
         price: e,

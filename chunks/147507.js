@@ -20,8 +20,8 @@ var s, a, l, i, r = n("735250"),
   N = n("29270"),
   S = n("903958"),
   C = n("709586"),
-  A = n("482207"),
-  g = n("702346"),
+  g = n("482207"),
+  A = n("702346"),
   M = n("267642"),
   R = n("981631"),
   v = n("689938"),
@@ -148,7 +148,7 @@ function k(e) {
   }()), {
     createMultipleConfettiAt: T,
     confettiCanvas: p
-  } = o.useContext(I.ConfettiCannonContext), [h, N] = o.useState(null), C = (0, c.useConfettiCannon)(p, h), A = function(e, t) {
+  } = o.useContext(I.ConfettiCannonContext), [h, N] = o.useState(null), C = (0, c.useConfettiCannon)(p, h), g = function(e, t) {
     if (null == e) return "enter";
     switch (e) {
       case "enter":
@@ -163,7 +163,7 @@ function k(e) {
       case "exit":
         return "enter"
     }
-  }(u, _), g = L.includes(_), M = g && "exit" === u, R = o.useCallback(e => {
+  }(u, _), A = L.includes(_), M = A && "exit" === u, R = o.useCallback(e => {
     E(e)
   }, []), v = o.useCallback(() => {
     "exit" === u && (null == t || t())
@@ -202,7 +202,7 @@ function k(e) {
       })
     }
   }, [T, _, u, l]), o.useEffect(() => {
-    if (g && "leaf_fall" === u) {
+    if (A && "leaf_fall" === u) {
       let e = y[_].leafRotationDirection;
       C.createConfetti({
         id: "".concat(U, "-").concat((0, f.v4)()),
@@ -252,7 +252,7 @@ function k(e) {
         sprite: "TOP_LEFT" === _ ? b : B
       })
     }
-  }, [g, C, _, u]), (0, r.jsxs)(r.Fragment, {
+  }, [A, C, _, u]), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(c.SpriteCanvas, {
       ref: N,
       sprites: F,
@@ -272,7 +272,7 @@ function k(e) {
         className: d()(O.easterEggAnimation, {
           [O.easterEggAnimationHideLeaf]: M
         }),
-        nextScene: A,
+        nextScene: g,
         sceneSegments: x,
         onScenePlay: R,
         onSceneComplete: v,
@@ -364,7 +364,7 @@ function w(e) {
       onMouseEnter: y
     })
   });
-  return (0, r.jsxs)(g.default, {
+  return (0, r.jsxs)(A.default, {
     iconNode: F,
     timestamp: n.timestamp,
     compact: s,
@@ -372,7 +372,7 @@ function w(e) {
       onClick: i,
       className: O.message,
       children: t
-    }), E ? (0, r.jsx)(A.default, {
+    }), E ? (0, r.jsx)(g.default, {
       children: (0, r.jsx)("div", {
         className: O.cannonWrapper,
         children: (0, r.jsx)(k, {

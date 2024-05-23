@@ -66,9 +66,9 @@ var s = n("735250"),
   N = n("901461"),
   S = n("50284"),
   C = n("981631"),
-  A = n("689938");
+  g = n("689938");
 
-function g(e, t, n) {
+function A(e, t, n) {
   return a.useCallback(() => {
     n({
       [e]: !t
@@ -96,17 +96,17 @@ function M(e, t, n) {
 }
 
 function R(e, t, n, s) {
-  let a = g("usernameProfile", n, s);
+  let a = A("usernameProfile", n, s);
   return M(e.author.id, t.id, a)
 }
 
 function v(e, t, n, s) {
-  let a = g("referencedUsernameProfile", n, s);
+  let a = A("referencedUsernameProfile", n, s);
   return M(null == e ? void 0 : e.author.id, t.id, a)
 }
 
 function O(e, t, n, s) {
-  let a = g("interactionUsernameProfile", n, s);
+  let a = A("interactionUsernameProfile", n, s);
   return M(null == e ? void 0 : e.user.id, t.id, a)
 }
 
@@ -117,15 +117,15 @@ function x(e) {
 }
 
 function L(e, t) {
-  return x(g("avatarProfile", e, t))
+  return x(A("avatarProfile", e, t))
 }
 
 function D(e, t) {
-  return x(g("referencedAvatarProfile", e, t))
+  return x(A("referencedAvatarProfile", e, t))
 }
 
 function P(e, t) {
-  return x(g("interactionAvatarProfile", e, t))
+  return x(A("interactionAvatarProfile", e, t))
 }
 
 function y(e, t, l, r) {
@@ -260,11 +260,11 @@ function k(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return a.useCallback(() => {
     null != t && (n ? l.default.show({
-      title: A.default.Messages.UNBLOCK_TO_JUMP_TITLE,
-      body: A.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
+      title: g.default.Messages.UNBLOCK_TO_JUMP_TITLE,
+      body: g.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
         name: t.author.username
       }),
-      confirmText: A.default.Messages.OKAY
+      confirmText: g.default.Messages.OKAY
     }) : r.default.jumpToMessage({
       channelId: t.channel_id,
       messageId: t.id,
@@ -275,7 +275,7 @@ function k(e, t) {
 }
 
 function w(e, t) {
-  let n = g("interactionData", e, t);
+  let n = A("interactionData", e, t);
   return a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), n()
   }, [n])

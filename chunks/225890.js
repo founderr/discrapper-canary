@@ -27,7 +27,7 @@ function p(e) {
     guildScheduledEvent: N,
     guild: S,
     channel: C,
-    isMember: A
+    isMember: g
   } = (0, l.useStateFromStoresObject)([_.default, c.default, u.default, d.default, f.default], () => {
     var e, t;
     let s = null !== (t = _.default.getGuildScheduledEvent(p)) && void 0 !== t ? t : void 0,
@@ -46,7 +46,7 @@ function p(e) {
     guild: S,
     channel: C,
     guildScheduledEvent: N,
-    isMember: A,
+    isMember: g,
     onAcceptInstantInvite: I.NOOP,
     onTransitionToInviteChannel: function() {
       if ((0, r.shouldShowMembershipVerificationGate)(n)) {

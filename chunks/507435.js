@@ -57,7 +57,7 @@ function C(e) {
   }) : null
 }(s = a || (a = {})).NO_VOTES = "NO_VOTES", s.VICTOR = "VICTOR", s.TIE = "TIE";
 
-function A(e) {
+function g(e) {
   let t, {
     type: n,
     ...s
@@ -122,7 +122,7 @@ function A(e) {
   })
 }
 
-function g(e) {
+function A(e) {
   let {
     className: t,
     data: n,
@@ -147,7 +147,7 @@ function g(e) {
     children: [(0, l.jsx)(C, {
       hasNoVotes: "NO_VOTES" === a.type,
       victorEmoji: n.victorEmoji
-    }), (0, l.jsx)(A, {
+    }), (0, l.jsx)(g, {
       ...a
     }), (0, l.jsx)(c.Button, {
       className: N.button,
@@ -189,7 +189,7 @@ function M(e) {
         title: o,
         titleOnClick: E
       })
-    }), (0, l.jsx)(g, {
+    }), (0, l.jsx)(A, {
       className: N.embed,
       data: r,
       onClickPollLink: E

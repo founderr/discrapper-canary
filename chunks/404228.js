@@ -111,11 +111,11 @@ function j() {
       theme: N.default.theme,
       hide: h.default.enabled
     }
-  }), [B, y] = l.useState({
+  }), [y, B] = l.useState({
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(B), V = (0, T.default)(F), Y = () => {
+  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(y), V = (0, T.default)(F), Y = () => {
     var e;
     return (null === (e = k.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
   };
@@ -139,15 +139,15 @@ function j() {
     K = (0, I.default)(null, () => {
       let {
         expandedId: s
-      } = B;
-      null == s || H ? null != s && (H = !1) : (e = null, t = null, y(e => ({
+      } = y;
+      null == s || H ? null != s && (H = !1) : (e = null, t = null, B(e => ({
         ...e,
         expandedId: null,
         lastExpandedId: null
       })), z = W())
     });
   l.useEffect(() => {
-    B.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
+    y.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
   }, []);
   let Z = () => {
       let e = k.current;
@@ -164,12 +164,12 @@ function j() {
     X = s => {
       let {
         expandedId: a
-      } = B;
-      a !== s.id ? (H = !0, y(e => ({
+      } = y;
+      a !== s.id ? (H = !0, B(e => ({
         ...e,
         expandedId: null == s ? void 0 : s.id,
         lastExpandedId: a
-      })), z = W()) : (e = null, t = null, null != a && (z = W()), y(e => ({
+      })), z = W()) : (e = null, t = null, null != a && (z = W()), B(e => ({
         ...e,
         expandedId: null,
         lastExpandedId: null
@@ -241,7 +241,7 @@ function j() {
             let {
               expandedId: e,
               lastExpandedId: t
-            } = B;
+            } = y;
             return (0, a.jsx)(v, {
               logs: F,
               guildId: s,

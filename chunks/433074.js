@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 }), n("47120");
 var s = n("735250"),
@@ -24,30 +24,30 @@ var s = n("735250"),
   N = n("147890"),
   S = n("981631"),
   C = n("689938"),
-  A = n("585624");
+  g = n("585624");
 
-function g(e) {
+function A(e) {
   var t, n;
   let {
-    code: g,
+    code: A,
     message: M
-  } = e, [R, v, O] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getApplication(g), p.default.isInvalidApplication(g), p.default.getApplicationFetchState(g)], [g]), x = (0, i.useStateFromStores)([u.default], () => u.default.locale), L = (0, i.useStateFromStores)([c.default], () => {
+  } = e, [R, v, O] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getApplication(A), p.default.isInvalidApplication(A), p.default.getApplicationFetchState(A)], [A]), x = (0, i.useStateFromStores)([u.default], () => u.default.locale), L = (0, i.useStateFromStores)([c.default], () => {
     var e;
     return null !== (e = c.default.getGuildId()) && void 0 !== e ? e : void 0
   }), D = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), [P, y] = a.useState(!1), U = a.useCallback(e => {
     e && y(!0)
   }, []), j = (0, o.useIsVisible)(U);
   a.useEffect(() => {
-    (0, I.getEmbedApplication)(g)
-  }, [g]), a.useEffect(() => {
+    (0, I.getEmbedApplication)(A)
+  }, [A]), a.useEffect(() => {
     P && O === p.FetchState.FETCHED && m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
-      application_id: g,
+      application_id: A,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: L,
       channel_id: M.channel_id
     })
-  }, [P, g, null == D ? void 0 : D.id, M.channel_id, L, M.author.id, O]), a.useEffect(() => {
+  }, [P, A, null == D ? void 0 : D.id, M.channel_id, L, M.author.id, O]), a.useEffect(() => {
     P && v && m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
@@ -57,7 +57,7 @@ function g(e) {
   }, [P, L, v, M.author.id, M.channel_id]);
   let b = e => {
     m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
-      application_id: g,
+      application_id: A,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       clicked_section: e,
       guild_id: L,
@@ -65,7 +65,7 @@ function g(e) {
     }), (0, N.goToAppDirectory)({
       view: h.ApplicationDirectoryViews.APPLICATION,
       guildId: L,
-      applicationId: g,
+      applicationId: A,
       entrypoint: {
         name: h.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED
       }
@@ -77,7 +77,7 @@ function g(e) {
       text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
     }), (0, s.jsx)(E.default.Body, {
       children: (0, s.jsxs)("div", {
-        className: A.invalidBody,
+        className: g.invalidBody,
         children: [(0, s.jsx)(E.default.Icon, {
           expired: !0
         }), (0, s.jsx)(E.default.Info, {
@@ -106,10 +106,10 @@ function g(e) {
       text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER
     }), (0, s.jsxs)(E.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: A.applicationInfoContainer,
+        className: g.applicationInfoContainer,
         children: [(0, s.jsx)(E.default.Icon, {
           application: d.default.createFromServer(R),
-          className: A.applicationIcon,
+          className: g.applicationIcon,
           onClick: () => b("application_icon")
         }), (0, s.jsx)(E.default.Info, {
           title: (0, s.jsx)(r.Clickable, {
@@ -117,12 +117,12 @@ function g(e) {
             children: R.name
           }),
           children: (0, s.jsxs)(r.Clickable, {
-            className: A.guildCountContainer,
+            className: g.guildCountContainer,
             onClick: () => b("application_guild_count"),
             children: [(0, s.jsx)(_.default, {
               width: 16,
               height: 16,
-              className: A.guildCountIcon
+              className: g.guildCountIcon
             }), C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({
               guildCount: B
             })]
@@ -131,7 +131,7 @@ function g(e) {
       }), (0, s.jsx)(E.default.Button, {
         onClick: () => {
           null != R && (0, T.installApplication)({
-            applicationId: g,
+            applicationId: A,
             customInstallUrl: R.custom_install_url,
             installParams: R.install_params,
             integrationTypesConfig: R.integration_types_config,

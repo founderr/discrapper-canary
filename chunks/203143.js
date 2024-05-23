@@ -24,8 +24,8 @@ var s = n("512722"),
   N = n("592125"),
   S = n("703558"),
   C = n("607744"),
-  A = n("375954"),
-  g = n("117530"),
+  g = n("375954"),
+  A = n("117530"),
   M = n("553803"),
   R = n("316758"),
   v = n("467531"),
@@ -84,7 +84,7 @@ function U(e) {
     });
     return
   }
-  let l = A.default.getMessage(t, n);
+  let l = g.default.getMessage(t, n);
   if (null == l || null == l.poll || 0 === l.poll.answers.length) return;
   let i = null != s ? s : String(l.poll.answers[0].answer_id);
   M.showVotesForAnswer({
@@ -115,7 +115,7 @@ function b(e) {
   let {
     channelId: t,
     messageId: n
-  } = e, s = A.default.getMessage(t, n);
+  } = e, s = g.default.getMessage(t, n);
   return null == s ? [] : s.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : [])
 }
 async function B(e) {
@@ -278,7 +278,7 @@ async function k(e) {
         (0, O.updatePollState)(t, n, e => {
           var s, a;
           let l = null == e || !e.showResults,
-            i = A.default.getMessage(t, n),
+            i = g.default.getMessage(t, n),
             r = null != i ? i.reactions.reduce((e, t) => {
               var n, s;
               return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
@@ -320,7 +320,7 @@ async function w(e) {
     duration: l,
     layout: i,
     onClose: o
-  } = e, u = g.default.getUploads(t.id, S.DraftType.Poll), d = s.map(e => {
+  } = e, u = A.default.getUploads(t.id, S.DraftType.Poll), d = s.map(e => {
     var t, n;
     let s = null == u ? void 0 : u.findIndex(t => t.id === e.localCreationAnswerId),
       a = {
@@ -394,7 +394,7 @@ t.default = {
       let {
         channelId: t,
         messageId: n
-      } = e, s = A.default.getMessage(t, n);
+      } = e, s = g.default.getMessage(t, n);
       if (null != s) return {
         message: s,
         channelId: t,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   VoiceChannelInviteEmbed: function() {
-    return g
+    return A
   }
 });
 var s = n("735250");
@@ -25,10 +25,10 @@ var a = n("120356"),
   N = n("5192"),
   S = n("981631"),
   C = n("689938"),
-  A = n("737847");
+  g = n("737847");
 
-function g(e) {
-  var t, n, a, g, M, R, v, O, x, L;
+function A(e) {
+  var t, n, a, A, M, R, v, O, x, L;
   let {
     message: D,
     channel: P
@@ -37,12 +37,12 @@ function g(e) {
       rawName: t
     } = e;
     return "guild_id" === t
-  })) || void 0 === t ? void 0 : t.rawValue, U = null === (R = D.embeds[0]) || void 0 === R ? void 0 : null === (M = R.fields) || void 0 === M ? void 0 : null === (g = M.find(e => {
+  })) || void 0 === t ? void 0 : t.rawValue, U = null === (R = D.embeds[0]) || void 0 === R ? void 0 : null === (M = R.fields) || void 0 === M ? void 0 : null === (A = M.find(e => {
     let {
       rawName: t
     } = e;
     return "channel_id" === t
-  })) || void 0 === g ? void 0 : g.rawValue, j = (0, i.useStateFromStores)([m.default], () => m.default.getGuild(y)), b = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), B = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()), F = (0, i.useStateFromStores)([], () => D.author.id === (null == B ? void 0 : B.id)), G = null === (v = P.recipients) || void 0 === v ? void 0 : v.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([T.default], () => null != G ? T.default.getUser(G) : null), w = (0, c.default)(D), H = (0, N.useName)(P.getGuildId(), P.id, k), V = (0, i.useStateFromStoresArray)([I.default], () => null != b ? I.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == B ? void 0 : B.id)), K = null === (L = D.embeds[0]) || void 0 === L ? void 0 : null === (x = L.fields) || void 0 === x ? void 0 : null === (O = x.find(e => {
+  })) || void 0 === A ? void 0 : A.rawValue, j = (0, i.useStateFromStores)([m.default], () => m.default.getGuild(y)), b = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), B = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()), F = (0, i.useStateFromStores)([], () => D.author.id === (null == B ? void 0 : B.id)), G = null === (v = P.recipients) || void 0 === v ? void 0 : v.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([T.default], () => null != G ? T.default.getUser(G) : null), w = (0, c.default)(D), H = (0, N.useName)(P.getGuildId(), P.id, k), V = (0, i.useStateFromStoresArray)([I.default], () => null != b ? I.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == B ? void 0 : B.id)), K = null === (L = D.embeds[0]) || void 0 === L ? void 0 : null === (x = L.fields) || void 0 === x ? void 0 : null === (O = x.find(e => {
     let {
       rawName: t
     } = e;
@@ -64,7 +64,7 @@ function g(e) {
   let Z = F ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
   return (0, s.jsxs)("div", {
     children: [(0, s.jsxs)("div", {
-      className: A.card,
+      className: g.card,
       children: [(0, s.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
@@ -74,7 +74,7 @@ function g(e) {
         color: "header-secondary",
         children: X
       }), V.length > 0 ? (0, s.jsx)("div", {
-        className: A.participants,
+        className: g.participants,
         children: (0, s.jsx)(f.default, {
           guildId: y,
           partySize: {
@@ -86,7 +86,7 @@ function g(e) {
           maxAvatarsShown: 5
         })
       }) : (0, s.jsx)("div", {
-        className: l()(A.participants, A.disabled),
+        className: l()(g.participants, g.disabled),
         children: (0, s.jsx)(f.default, {
           guildId: y,
           partySize: {
@@ -99,14 +99,14 @@ function g(e) {
         })
       })]
     }), (0, s.jsxs)("div", {
-      className: A.actions,
+      className: g.actions,
       children: [(0, s.jsxs)(r.Button, {
         color: r.Button.Colors.BRAND,
         onClick: () => {
           null != U && null != y && ((0, E.transitionTo)(S.Routes.CHANNEL(y, U)), u.default.selectVoiceChannel(U))
         },
-        className: A.button,
-        innerClassName: A.buttonInner,
+        className: g.button,
+        innerClassName: g.buttonInner,
         disabled: Y || !q,
         children: [(0, s.jsx)(p.default, {}), C.default.Messages.JOIN_HANGOUT]
       }), (0, s.jsx)(r.Button, {
@@ -114,7 +114,7 @@ function g(e) {
         onClick: () => {
           o.default.sendMessage(P.id, d.default.parse(P, "\uD83D\uDC4B"))
         },
-        className: A.button,
+        className: g.button,
         children: Z
       })]
     })]

@@ -27,8 +27,8 @@ var s = n("735250"),
   N = n("491428"),
   S = n("401430"),
   C = n("230711"),
-  A = n("726542"),
-  g = n("100527"),
+  g = n("726542"),
+  A = n("100527"),
   M = n("906732"),
   R = n("812206"),
   v = n("391650"),
@@ -109,22 +109,22 @@ function eN(e) {
 let eS = a.memo(function() {
   var e, t, l;
   let _ = (0, o.useStateFromStores)([ee.default], () => ee.default.getCurrentUser()),
-    g = (0, o.useStateFromStores)([$.default], () => $.default.getGuildId()),
+    A = (0, o.useStateFromStores)([$.default], () => $.default.getGuildId()),
     ec = (0, o.useStateFromStores)([es.default], () => es.default.getNotice()),
-    eS = (0, o.useStateFromStores)([X.default], () => X.default.getGuild(g)),
+    eS = (0, o.useStateFromStores)([X.default], () => X.default.getGuild(A)),
     {
       analyticsLocations: eC
     } = (0, M.default)(),
-    eA = null == ec ? void 0 : ec.type,
-    eg = (0, b.useShowMemberVerificationGate)(g);
+    eg = null == ec ? void 0 : ec.type,
+    eA = (0, b.useShowMemberVerificationGate)(A);
   a.useEffect(() => {
-    null != eA && ! function(e, t) {
+    null != eg && ! function(e, t) {
       let n = {
         notice_type: e
       };
       null != t && (n.guild_id = t), er.default.track(ef.AnalyticEvents.APP_NOTICE_VIEWED, n)
-    }(eA, g)
-  }, [eA, g]), a.useEffect(() => {
+    }(eg, A)
+  }, [eg, A]), a.useEffect(() => {
     if (null != ec && ec.type === ef.NoticeTypes.SURVEY && null != ec.metadata) {
       let {
         metadata: e
@@ -140,7 +140,7 @@ let eS = a.memo(function() {
       enabled: t
     } = (0, V.default)(!0, e !== ef.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING);
     return t || null == e ? null : es.typeToDismissibleContent[e]
-  }(eA);
+  }(eg);
   if (null == ec) return null;
   if (null != eM) return (0, s.jsx)(x.DismissibleContentNotices, {
     dismissibleContent: eM,
@@ -259,7 +259,7 @@ let eS = a.memo(function() {
         })]
       });
     case ef.NoticeTypes.SPOTIFY_AUTO_PAUSED:
-      let eD = A.default.get(ef.PlatformTypes.SPOTIFY);
+      let eD = g.default.get(ef.PlatformTypes.SPOTIFY);
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.DANGER,
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
@@ -285,7 +285,7 @@ let eS = a.memo(function() {
         color: ei.NoticeColors.DEFAULT,
         children: [eT.default.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           noticeType: ef.NoticeTypes.UNCLAIMED_ACCOUNT,
-          onClick: () => eg && null != g ? (0, j.openMemberVerificationModal)(g) : v.openClaimAccountModal(),
+          onClick: () => eA && null != A ? (0, j.openMemberVerificationModal)(A) : v.openClaimAccountModal(),
           children: eT.default.Messages.CLAIM_ACCOUNT
         })]
       });
@@ -671,7 +671,7 @@ let eS = a.memo(function() {
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.WARNING,
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
-          noticeType: eA,
+          noticeType: eg,
           onClick: () => {
             eN(eY)
           }
@@ -757,7 +757,7 @@ let eS = a.memo(function() {
         page: ef.AnalyticsPages.IN_APP
       };
       return (0, s.jsx)(U.default, {
-        guildId: g,
+        guildId: A,
         analyticsLocations: eC,
         analyticsLocation: e
       })
@@ -807,17 +807,17 @@ let eS = a.memo(function() {
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
           noticeType: ef.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION,
           onClick: () => {
-            null != g && (0, y.clearMentionRaidDetected)(g), eN(eK)
+            null != A && (0, y.clearMentionRaidDetected)(A), eN(eK)
           }
         }), eT.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, s.jsx)(ei.NoticeButton, {
           onClick: () => {
-            null != g && (0, y.removeMentionRaidRestrictionWithFeedback)(g, eW, () => {
-              eN(eK), (0, y.clearMentionRaidDetected)(g)
+            null != A && (0, y.removeMentionRaidRestrictionWithFeedback)(A, eW, () => {
+              eN(eK), (0, y.clearMentionRaidDetected)(A)
             })
           },
           children: eT.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
-        }), null != g ? (0, s.jsx)(ei.NoticeButton, {
-          onClick: () => G.default.open(g, ef.GuildSettingsSections.GUILD_AUTOMOD, void 0, ef.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM),
+        }), null != A ? (0, s.jsx)(ei.NoticeButton, {
+          onClick: () => G.default.open(A, ef.GuildSettingsSections.GUILD_AUTOMOD, void 0, ef.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM),
           children: eT.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
         }) : null]
       });
@@ -871,7 +871,7 @@ let eS = a.memo(function() {
 function eC() {
   let {
     analyticsLocations: e
-  } = (0, M.default)(g.default.NOTICE);
+  } = (0, M.default)(A.default.NOTICE);
   return (0, s.jsx)(M.AnalyticsLocationProvider, {
     value: e,
     children: (0, s.jsx)(eS, {})

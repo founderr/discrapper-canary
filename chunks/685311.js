@@ -9,7 +9,7 @@ var s, a, l = n("735250"),
   c = n("703656"),
   f = n("819570"),
   E = n("689938"),
-  _ = n("611273");
+  I = n("611273");
 (a = s || (s = {}))[a.INITIAL = 0] = "INITIAL", a[a.RPC_CONNECTED = 1] = "RPC_CONNECTED", a[a.APP_OPENING = 2] = "APP_OPENING", a[a.APP_OPENED = 3] = "APP_OPENED";
 t.default = function(e) {
   let {
@@ -28,7 +28,7 @@ t.default = function(e) {
     let e = setTimeout(() => (0, c.transitionTo)((0, d.getRedirectPath)()), 3e3);
     return () => clearTimeout(e)
   }, [a]);
-  let I = i.useCallback(async (e, t) => {
+  let _ = i.useCallback(async (e, t) => {
     try {
       r(2), await s(e, t), r(3)
     } catch (e) {
@@ -40,16 +40,16 @@ t.default = function(e) {
     case 1:
       return (0, l.jsxs)(f.default, {
         children: [(0, l.jsx)(f.Title, {
-          className: _.marginBottom8,
+          className: I.marginBottom8,
           children: E.default.Messages.DEEPLINK_BROWSER_TITLE
         }), (0, l.jsx)(f.SubTitle, {
           children: E.default.Messages.DEEPLINK_BROWSER_PROMPT
         }), (0, l.jsx)(f.Button, {
-          className: _.marginTop40,
-          onClick: () => I(t, n),
+          className: I.marginTop40,
+          onClick: () => _(t, n),
           children: E.default.Messages.OPEN_IN_APP
         }), (0, l.jsx)(f.Button, {
-          className: u()(_.marginTop8, _.marginCenterHorz),
+          className: u()(I.marginTop8, I.marginCenterHorz),
           color: f.Button.Colors.LINK,
           look: f.Button.Looks.LINK,
           onClick: () => (0, c.transitionTo)((0, d.getRedirectPath)()),
@@ -66,7 +66,7 @@ t.default = function(e) {
     case 3:
       return (0, l.jsxs)(f.default, {
         children: [(0, l.jsx)(f.Title, {
-          className: _.marginBottom8,
+          className: I.marginBottom8,
           children: E.default.Messages.APP_OPENED_TITLE
         }), (0, l.jsx)(f.SubTitle, {
           children: E.default.Messages.DEEPLINK_BROWSER_APP_OPENED

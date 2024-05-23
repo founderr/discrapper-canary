@@ -30,8 +30,8 @@ function f(e) {
     storeListingAnalyticsProperties: N,
     pauseAnimation: S,
     hover: C,
-    innerClassName: A
-  } = e, g = {
+    innerClassName: g
+  } = e, A = {
     fullWidth: n,
     size: f,
     color: E,
@@ -40,20 +40,20 @@ function f(e) {
     onClick: I,
     className: p,
     hover: C,
-    innerClassName: A
+    innerClassName: g
   }, M = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), R = null != M ? M.sku.id : null, v = null != R ? R : t.primarySkuId, O = (0, a.useStateFromStores)([r.default], () => null != v && !r.default.didFetchingSkuFail(v));
   return null != M && (0, o.isUserEntitledToLibraryApplication)(M) ? (0, s.jsx)(c.default, {
-    ...g,
+    ...A,
     libraryApplication: M,
     source: h
   }) : O ? (0, s.jsx)(u.default, {
-    ...g,
+    ...A,
     skuId: null != M ? M.sku.id : null,
     applicationId: t.id,
     pauseAnimation: S,
     storeListingAnalyticsProperties: N
   }) : (0, s.jsx)(d.default, {
-    ...g,
+    ...A,
     hideNotLaunchable: m,
     applicationId: t.id
   })

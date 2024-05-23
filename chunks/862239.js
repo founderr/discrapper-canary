@@ -11,8 +11,8 @@ var l = a("866442"),
   i = a("377171"),
   r = a("535321"),
   c = a("160696"),
-  o = a("74846"),
-  d = a("133429"),
+  d = a("74846"),
+  o = a("133429"),
   u = a("414896"),
   T = a("178695"),
   m = a("937615"),
@@ -88,9 +88,9 @@ function C(e) {
       case E.ChannelTypes.GUILD_FORUM:
         return c.default;
       case E.ChannelTypes.GUILD_MEDIA:
-        return o.default;
-      case E.ChannelTypes.GUILD_ANNOUNCEMENT:
         return d.default;
+      case E.ChannelTypes.GUILD_ANNOUNCEMENT:
+        return o.default;
       default:
         return null
     }

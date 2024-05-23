@@ -22,7 +22,7 @@ t.default = function(e) {
     color: l = o.default.colors.WHITE,
     quest: p,
     isInventory: h
-  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = a.useMemo(() => (0, m.calculatePercentComplete)(p), [p]), A = 100 * C, g = (0, _.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
+  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = a.useMemo(() => (0, m.calculatePercentComplete)(p), [p]), g = 100 * C, A = (0, _.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
     className: I.desktopTooltip,
     style: {
       marginTop: h ? 8 : 0
@@ -39,7 +39,7 @@ t.default = function(e) {
       children: T.default.Messages.QUESTS_PROGRESS_WEB_TIP
     })]
   });
-  return g && !h ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
+  return A && !h ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
     className: i()(I.wrapper, n),
     style: {
       color: l.css
@@ -56,19 +56,19 @@ t.default = function(e) {
       }), (0, s.jsx)("div", {
         className: I.percentCompleteLabelOffset,
         style: {
-          width: "".concat(100 - A, "%")
+          width: "".concat(100 - g, "%")
         }
       })]
     }), (0, s.jsx)("div", {
       className: I.progressBar,
       role: "progressbar",
-      "aria-valuenow": A,
+      "aria-valuenow": g,
       children: (0, s.jsx)("div", {
         className: I.progressBarFill,
         style: {
-          width: "".concat(A, "%")
+          width: "".concat(g, "%")
         }
       })
-    }), g && (0, s.jsx)(M, {})]
+    }), A && (0, s.jsx)(M, {})]
   })
 }

@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("594174"),
   k = n("881201"),
   w = n("26290"),
-  B = n("626135"),
-  F = n("70956"),
+  F = n("626135"),
+  B = n("70956"),
   H = n("51144"),
   V = n("246133"),
   Y = n("474376"),
@@ -52,19 +52,19 @@ var a = n("735250"),
   q = n("689938"),
   Q = n("476002");
 let Z = [{
-  duration: 30 * F.default.Millis.MINUTE,
+  duration: 30 * B.default.Millis.MINUTE,
   label: () => q.default.Messages.MUTE_DURATION_30_MINUTES
 }, {
-  duration: F.default.Millis.HOUR,
+  duration: B.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_1_HOUR
 }, {
-  duration: 3 * F.default.Millis.HOUR,
+  duration: 3 * B.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_3_HOURS
 }, {
-  duration: 8 * F.default.Millis.HOUR,
+  duration: 8 * B.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_8_HOURS
 }, {
-  duration: F.default.Millis.DAY,
+  duration: B.default.Millis.DAY,
   label: () => q.default.Messages.MUTE_DURATION_24_HOURS
 }, {
   duration: void 0,
@@ -157,7 +157,7 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, g.default)(p.default.ACCOUNT_PROFILE_POPOUT), F = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, g.default)(p.default.ACCOUNT_PROFILE_POPOUT), B = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
@@ -250,16 +250,16 @@ function $(e) {
     ref: ea
   } = (0, C.default)(), es = (0, m.default)(ea);
   s.useEffect(() => {
-    B.default.track(K.AnalyticEvents.OPEN_POPOUT, {
+    F.default.track(K.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != n,
       other_user_id: t.id,
       application_id: null != V ? V.application_id : void 0,
       is_streaming: r,
       application_name: null != V ? V.name : void 0,
-      profile_has_nitro_customization: (null == F ? void 0 : F.banner) != null,
+      profile_has_nitro_customization: (null == B ? void 0 : B.banner) != null,
       location: U.location,
-      has_profile_effect: (null == F ? void 0 : F.profileEffectId) != null
+      has_profile_effect: (null == B ? void 0 : B.profileEffectId) != null
     })
   }, []);
   let el = (0, N.useFocusModeEnabled)(),
@@ -284,11 +284,11 @@ function $(e) {
           children: (0, a.jsxs)(M.default, {
             className: Q.themeContainer,
             user: t,
-            displayProfile: F,
+            displayProfile: B,
             profileType: z.UserProfileTypes.POPOUT,
             children: [(0, a.jsx)(x.default, {
               user: t,
-              displayProfile: F,
+              displayProfile: B,
               onClose: () => null == b ? void 0 : b(),
               isMobile: et,
               isStreaming: (0, S.default)(V),
@@ -300,7 +300,7 @@ function $(e) {
               children: [(0, a.jsx)(y.default, {
                 activity: V,
                 customStatusActivity: $,
-                displayProfile: F,
+                displayProfile: B,
                 user: t,
                 onClose: o,
                 setNote: !1,

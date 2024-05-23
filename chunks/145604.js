@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("774343"),
   k = n("974042"),
   w = n("808506"),
-  B = n("626135"),
-  F = n("630388"),
+  F = n("626135"),
+  B = n("630388"),
   H = n("823379"),
   V = n("998502"),
   Y = n("981631"),
@@ -91,7 +91,7 @@ class K extends s.PureComponent {
         n = null != t ? t.name : "",
         a = A.default.getStageInstanceByChannel(e.voiceChannelId),
         s = g.default.getActiveEventByChannel(e.voiceChannelId);
-      B.default.track(Y.AnalyticEvents.LEAVE_VOICE_CHANNEL, {
+      F.default.track(Y.AnalyticEvents.LEAVE_VOICE_CHANNEL, {
         channel_id: e.voiceChannelId,
         channel_type: e.voiceChannelType,
         channel_bitrate: e.voiceChannelBitrate,
@@ -118,7 +118,7 @@ class K extends s.PureComponent {
         ...(0, u.getChannelOpenedMetadata)(s)
       }), (0, c.trackClickstream)(Y.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
         channelId: s
-      }), B.default.track(Y.AnalyticEvents.JOIN_VOICE_CHANNEL, {
+      }), F.default.track(Y.AnalyticEvents.JOIN_VOICE_CHANNEL, {
         channel_id: s,
         channel_type: o,
         channel_bitrate: S,
@@ -150,7 +150,7 @@ class K extends s.PureComponent {
               exe: u,
               distributor: d
             } = (0, C.getRunningGameAnalytics)(O);
-          B.default.track(Y.AnalyticEvents.LAUNCH_GAME, {
+          F.default.track(Y.AnalyticEvents.LAUNCH_GAME, {
             game: a,
             game_id: i,
             verified: null != e && (0, C.isVerifiedGameExecutable)(u, null == e ? void 0 : e.executables),
@@ -179,7 +179,7 @@ class K extends s.PureComponent {
       let e = "none",
         t = [T ? "screen" : null, p ? "camera" : null].filter(H.isNotNullish),
         n = null;
-      T ? (e = "screen", n = (0, E.getDesktopSourceMetadata)()) : p && (e = "camera"), B.default.track(Y.AnalyticEvents.VIDEO_INPUT_TOGGLED, {
+      T ? (e = "screen", n = (0, E.getDesktopSourceMetadata)()) : p && (e = "camera"), F.default.track(Y.AnalyticEvents.VIDEO_INPUT_TOGGLED, {
         video_input_type: e,
         video_toggle_source: __OVERLAY__ ? "overlay" : "app",
         enabled_inputs: t,
@@ -205,7 +205,7 @@ class K extends s.PureComponent {
       })
     } else G && null == j && k === Y.Routes.FRIENDS && (!e.connected || K !== e.friendsTabSection || k !== e.homeLink) ? (0, f.default)({
       tab_opened: K
-    }) : G && null == j && k === Y.Routes.MESSAGE_REQUESTS && (!e.connected || k !== e.homeLink) && !this.isMessageRequestsInitialized && (this.isMessageRequestsInitialized = !0, B.default.track(Y.AnalyticEvents.MESSAGE_REQUESTS_INITIALIZED, {
+    }) : G && null == j && k === Y.Routes.MESSAGE_REQUESTS && (!e.connected || k !== e.homeLink) && !this.isMessageRequestsInitialized && (this.isMessageRequestsInitialized = !0, F.default.track(Y.AnalyticEvents.MESSAGE_REQUESTS_INITIALIZED, {
       num_message_requests: J
     }));
     if (G && null != x && (!e.connected || x !== e.selectedChannelId || j !== e.selectedGuildId)) {
@@ -216,9 +216,9 @@ class K extends s.PureComponent {
         let e = y.default.getMessages(t),
           l = e.toArray().reverse().find(e => {
             var t;
-            return (0, F.hasFlag)(e.flags, Y.MessageFlags.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === "667560445975986187"
+            return (0, B.hasFlag)(e.flags, Y.MessageFlags.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === "667560445975986187"
           });
-        B.default.track(Y.AnalyticEvents.ACK_COMMUNITY_MESSAGES, {
+        F.default.track(Y.AnalyticEvents.ACK_COMMUNITY_MESSAGES, {
           last_message_id: null == l ? void 0 : l.id,
           last_message_reference_message_id: null == l ? void 0 : null === (a = l.messageReference) || void 0 === a ? void 0 : a.message_id,
           messages_loaded: e.hasFetched,

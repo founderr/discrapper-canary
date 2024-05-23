@@ -44,18 +44,18 @@ function M(e) {
 t.default = function() {
   let [e, t] = n.useState(x.PremiumSubscriptionSKUs.TIER_2), [s, f] = n.useState(null), [m] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getGuilds()]), [v] = (0, i.useStateFromStoresArray)([A.default], () => [A.default.getPremiumSubscription()]);
   (0, C.useFetchProfileEffects)();
-  let L = Object.values(m).map(e => ({
+  let D = Object.values(m).map(e => ({
       value: e,
       label: e.name
     })),
-    [D, P] = n.useState(L.length > 0 ? L[0].value : null),
+    [L, P] = n.useState(D.length > 0 ? D[0].value : null),
     [b, j] = n.useState(""),
     [U, y] = n.useState({
       plan_id: x.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
       gift: "true"
     }),
     G = "true" !== U.gift && null != v,
-    [B, F] = n.useState(L.length > 0 ? L[0].value : null),
+    [B, F] = n.useState(D.length > 0 ? D[0].value : null),
     {
       analyticsLocations: k
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
@@ -130,11 +130,11 @@ t.default = function() {
       }), (0, a.jsxs)(r.FormItem, {
         className: R.formItem,
         children: [(0, a.jsx)(r.SingleSelect, {
-          value: D,
-          options: L,
+          value: L,
+          options: D,
           onChange: e => P(e)
-        }), null != D ? (0, a.jsx)(T.default, {
-          guild: D,
+        }), null != L ? (0, a.jsx)(T.default, {
+          guild: L,
           analyticsLocation: {}
         }) : (0, a.jsx)("div", {
           children: "No Guild to boost"
@@ -241,7 +241,7 @@ t.default = function() {
           children: "Premium Server Subscription For"
         }), (0, a.jsx)(r.SingleSelect, {
           value: B,
-          options: L,
+          options: D,
           onChange: e => F(e)
         })]
       }), (0, a.jsx)(_.GroupListingsFetchContextProvider, {

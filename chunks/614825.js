@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("74538"),
   S = n("276444"),
   C = n("790368"),
-  A = n("786397"),
-  g = n("474936"),
+  g = n("786397"),
+  A = n("474936"),
   M = n("981631"),
   R = n("689938"),
   v = n("613057");
@@ -63,7 +63,7 @@ class O extends a.Component {
         this.handleStartTrial(a, i)
       },
       color: c.Button.Colors.BRAND
-    }, o = l.id !== a.user_id || (0, N.isPremium)(l) || !l.verified || (0, A.hasUserTrialOfferExpired)(a), u = this.renderExpirationDate(e, t, n);
+    }, o = l.id !== a.user_id || (0, N.isPremium)(l) || !l.verified || (0, g.hasUserTrialOfferExpired)(a), u = this.renderExpirationDate(e, t, n);
     return r.disabled = o, (0, s.jsxs)("div", {
       className: v.buttonContainer,
       children: [(0, s.jsx)("div", {
@@ -73,7 +73,7 @@ class O extends a.Component {
           onClick: () => {
             (0, m.default)({
               initialPlanId: null,
-              subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: i,
               trialId: a.trial_id,
               referralTrialOfferId: a.id
@@ -129,7 +129,7 @@ class O extends a.Component {
       currentUser: t,
       recipientHasNitro: n,
       shouldShowBirthdayUX: a
-    } = this.props, l = (0, A.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
+    } = this.props, l = (0, g.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
     return (0, s.jsxs)("div", {
       className: i()(v.tile, v.container),
       children: [(0, s.jsx)("div", {
@@ -155,7 +155,7 @@ class O extends a.Component {
     super(...e), t = this, n = "handleStartTrial", s = (e, t) => {
       (0, m.default)({
         initialPlanId: null,
-        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: t,
         trialId: e.trial_id
       })

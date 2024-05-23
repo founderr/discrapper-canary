@@ -29,7 +29,7 @@ function I(e) {
     return null != n.inviter && c.default.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id)
   }), C = a.useCallback(() => {
     null != n.inviter && null != d.default.getDMFromUserId(n.inviter.id) && i.default.openPrivateChannel([n.inviter.id])
-  }, [n.inviter]), A = a.useCallback(() => {
+  }, [n.inviter]), g = a.useCallback(() => {
     let e = I("Invite Button Embed");
     r.default.acceptInviteAndTransitionToInviteChannel({
       inviteKey: n.code,
@@ -37,7 +37,7 @@ function I(e) {
     })
   }, [n.code, I]);
   if (null == n.inviter) return null;
-  let g = S ? C : A,
+  let A = S ? C : g,
     M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND,
     R = f.default.Button.Colors.GREEN;
   S ? (M = m.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = f.default.Button.Colors.PRIMARY) : h && (M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND, R = f.default.Button.Colors.PRIMARY);
@@ -52,14 +52,14 @@ function I(e) {
         className: T.headerLine,
         children: [(0, s.jsx)(f.default.Icon, {
           user: new o.default(n.inviter),
-          onClick: S ? g : void 0
+          onClick: S ? A : void 0
         }), (0, s.jsx)(f.default.Info, {
           title: O,
-          onClick: S ? g : void 0,
+          onClick: S ? A : void 0,
           children: x
         })]
       }), (0, s.jsx)(f.default.Button, {
-        onClick: g,
+        onClick: A,
         submitting: N,
         isDisabled: h,
         color: R,

@@ -111,15 +111,15 @@ async function N(e, t, n) {
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(u.application, D);
-  let B = p.NONE;
+  let F = p.NONE;
   try {
-    B = i.deserialize(null != P ? P : 0)
+    F = i.deserialize(null != P ? P : 0)
   } catch (e) {}
   return null != u.integration_type && Object.values(s.ApplicationIntegrationType).includes(u.integration_type) && (r = new Map).set(u.integration_type, u), t({
     clientId: A,
     authorizations: r,
     scopes: G,
-    parsedPermissions: B,
+    parsedPermissions: F,
     responseType: N,
     redirectUri: v,
     codeChallenge: R,

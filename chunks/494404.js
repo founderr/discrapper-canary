@@ -33,8 +33,8 @@ var s = n("735250"),
   N = n("496675"),
   S = n("933429"),
   C = n("451478"),
-  A = n("387204"),
-  g = n("465670"),
+  g = n("387204"),
+  A = n("465670"),
   M = n("626135"),
   R = n("585483"),
   v = n("981631"),
@@ -117,7 +117,7 @@ class U extends a.PureComponent {
       look: c.Button.Looks.BLANK,
       size: c.Button.Sizes.NONE,
       onClick: this.handleClickClose,
-      children: (0, s.jsx)(g.default, {
+      children: (0, s.jsx)(A.default, {
         className: x.closeIcon
       })
     }) : null
@@ -166,8 +166,8 @@ function b(e) {
     getProTip: p,
     scrollerClassName: h,
     className: N,
-    listName: g
-  } = e, L = a.useRef(null), P = (0, _.default)(g, L), y = (0, d.useStateFromStores)([S.default], () => S.default.hasNotice()), U = (0, d.useStateFromStores)([C.default], () => C.default.windowSize());
+    listName: A
+  } = e, L = a.useRef(null), P = (0, _.default)(A, L), y = (0, d.useStateFromStores)([S.default], () => S.default.hasNotice()), U = (0, d.useStateFromStores)([C.default], () => C.default.windowSize());
   a.useEffect(() => {
     M.default.track(v.AnalyticEvents.OPEN_POPOUT, {
       type: t
@@ -225,7 +225,7 @@ function b(e) {
   let G = null == p ? void 0 : p(),
     k = B && null != G ? (0, s.jsx)("div", {
       className: x.footer,
-      children: (0, s.jsx)(A.default, {
+      children: (0, s.jsx)(g.default, {
         style: {
           width: "100%",
           paddingTop: 10,
@@ -287,8 +287,8 @@ function B(e) {
     renderEmptyState: N,
     renderMessage: S,
     getProTip: C,
-    scrollerClassName: A,
-    className: g,
+    scrollerClassName: g,
+    className: A,
     onCloseMessage: M,
     listName: R
   } = e, L = (0, d.useStateFromStores)([h.default], () => {
@@ -323,8 +323,8 @@ function B(e) {
     channel: l
   })), [i, l]);
   return (0, s.jsx)(b, {
-    className: g,
-    scrollerClassName: A,
+    className: A,
+    scrollerClassName: g,
     items: P,
     loading: o,
     analyticsName: t,

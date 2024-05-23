@@ -16,7 +16,7 @@ var a = n("430824"),
   c = n("689938");
 
 function f(e) {
-  var t, n, f, E, _, m, T, I, p, h, N, S, C, A, g;
+  var t, n, f, E, _, m, T, I, p, h, N, S, C, g, A;
   let M = null !== (f = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== f ? f : d.EMPTY_STRING_SNOWFLAKE_ID,
     R = o.default.getName(i.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
   switch (e.type) {
@@ -45,7 +45,7 @@ function f(e) {
         U = null == y ? void 0 : y.name,
         j = null === (C = a.default.getGuild(null == y ? void 0 : y.guild_id)) || void 0 === C ? void 0 : C.name,
         b = (0, s.isGuildEventEnded)(null != y ? y : void 0);
-      return (0, r.isNullOrEmpty)(j) || (0, r.isNullOrEmpty)(U) || !b ? null !== (A = e.body) && void 0 !== A ? A : "" : c.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
+      return (0, r.isNullOrEmpty)(j) || (0, r.isNullOrEmpty)(U) || !b ? null !== (g = e.body) && void 0 !== g ? g : "" : c.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
         event_name: U,
         guild_name: j
       });
@@ -54,5 +54,5 @@ function f(e) {
         username: "**".concat(R, "**")
       })
   }
-  return null !== (g = e.body) && void 0 !== g ? g : ""
+  return null !== (A = e.body) && void 0 !== A ? A : ""
 }

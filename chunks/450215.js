@@ -40,7 +40,7 @@ function p(e) {
     groupListingId: D,
     onBeforeDispatchNewListing: v,
     onAfterDispatchNewListing: j
-  } = e, [G, U] = l.useState(r), P = (0, d.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(G)), b = null == P, [B, y] = l.useState(b), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, k = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, N.useRoleSubscriptionSettingsDisabled)(), [V] = h.useName(G), [Y] = h.usePriceTier(G), [W] = h.useDescription(G), [z] = h.useImage(G, 1024), K = "" !== V ? V : L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== V && null != z && "" !== W && null != Y && !w, X = h.useHasChanges(G), {
+  } = e, [G, U] = l.useState(r), P = (0, d.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(G)), b = null == P, [y, B] = l.useState(b), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, k = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, N.useRoleSubscriptionSettingsDisabled)(), [V] = h.useName(G), [Y] = h.usePriceTier(G), [W] = h.useDescription(G), [z] = h.useImage(G, 1024), K = "" !== V ? V : L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== V && null != z && "" !== W && null != Y && !w, X = h.useHasChanges(G), {
     loading: Q,
     error: J,
     handleCreateOrUpdateFromEditState: q
@@ -53,7 +53,7 @@ function p(e) {
     className: O.container,
     children: [(0, a.jsxs)("div", {
       className: i()(O.header, {
-        [O.headerExpanded]: B
+        [O.headerExpanded]: y
       }),
       children: [(0, a.jsx)("div", {
         className: O.headerImageContainer,
@@ -93,12 +93,12 @@ function p(e) {
             children: [(0, T.formatPrice)(F.price, F.currency), "/", (0, S.formatPlanInterval)(F)]
           })]
         })]
-      }), B ? (0, a.jsxs)(a.Fragment, {
+      }), y ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Button, {
           look: u.Button.Looks.BLANK,
           className: O.cancel,
           onClick: () => {
-            h.clearEditState(G), b ? null == M || M() : y(!1)
+            h.clearEditState(G), b ? null == M || M() : B(!1)
           },
           children: L.default.Messages.CANCEL
         }), (0, a.jsx)(u.Button, {
@@ -117,13 +117,13 @@ function p(e) {
           children: L.default.Messages.SAVE
         })]
       }) : (0, a.jsx)(u.Clickable, {
-        onClick: () => y(!0),
+        onClick: () => B(!0),
         "aria-label": L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_EDIT_LABEL,
         children: (0, a.jsx)(_.default, {
           className: O.pencilIcon
         })
       })]
-    }), B && (0, a.jsx)(g.EditStateContextProvider, {
+    }), y && (0, a.jsx)(g.EditStateContextProvider, {
       editStateId: G,
       guildId: n,
       groupListingId: D,

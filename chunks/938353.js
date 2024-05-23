@@ -29,8 +29,8 @@ var s, a = n("735250"),
   N = n("960904"),
   S = n("161314"),
   C = n("163268"),
-  A = n("25610"),
-  g = n("703751"),
+  g = n("25610"),
+  A = n("703751"),
   M = n("761538"),
   R = n("674611"),
   v = n("294734"),
@@ -83,8 +83,8 @@ var s, a = n("735250"),
   eN = n("161010"),
   eS = n("901461"),
   eC = n("432376"),
-  eA = n("384203"),
-  eg = n("633957"),
+  eg = n("384203"),
+  eA = n("633957"),
   eM = n("29909"),
   eR = n("782658"),
   ev = n("219797"),
@@ -229,7 +229,7 @@ class eW extends(s = l.Component) {
       if (n === N.CodedLinkType.EVENT) return (0, a.jsx)(D.default, {
         code: s
       }, s);
-      else if (n === N.CodedLinkType.CHANNEL_LINK) return (0, a.jsx)(eA.default, {
+      else if (n === N.CodedLinkType.CHANNEL_LINK) return (0, a.jsx)(eg.default, {
         code: s,
         messageData: e
       }, s);
@@ -562,7 +562,7 @@ class eW extends(s = l.Component) {
       activityInstance: n,
       interaction: s
     } = e;
-    return null == t || null == n || (null == s ? void 0 : s.type) !== T.InteractionTypes.APPLICATION_COMMAND ? null : (0, a.jsx)(eg.default, {
+    return null == t || null == n || (null == s ? void 0 : s.type) !== T.InteractionTypes.APPLICATION_COMMAND ? null : (0, a.jsx)(eA.default, {
       application: t,
       channelId: this.props.channel.id,
       guildId: this.props.channel.guild_id
@@ -622,11 +622,11 @@ class eW extends(s = l.Component) {
     } = this.props, {
       showSuppressModal: l,
       showRemoveAttachmentModal: i
-    } = this.state, o = this.renderCodedLinks(t), u = this.renderGiftCodes(t), d = this.renderReferralTrial(t), c = this.renderAttachments(t), f = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), _ = this.renderEmbeds(t), m = this.renderActivityInvite(t), T = this.renderReactions(t), I = this.renderPublishBump(t), p = this.renderEphemeralAccessories(t, n), h = this.renderStickersAccessories(t), N = this.renderThreadAccessories(t), S = this.renderComponentAccessories(t), C = this.renderThreadRoleMentionWarning(t), A = this.renderEmbeddedApplicationInstanceEmbed(t), g = this.renderInteractionPremiumUpsell(t), M = this.renderMediaPostEmbeds(t), R = this.renderSafetyPolicyNotice(t), v = this.renderSafetySystemNotification(t), O = this.renderVoiceChannelInvite(t, n), x = this.renderMediaObscureNotice(t), L = this.renderPoll(t, s), D = this.renderForwardedMessage(t);
-    return null == o && null == c && null == _ && null == m && null == T && null == u && null == d && null == I && null == p && null == h && null == N && null == S && null == A && null == C && null == M && null == R && null != g && null == L && null == O && null == D ? null : (0, a.jsxs)("div", {
+    } = this.state, o = this.renderCodedLinks(t), u = this.renderGiftCodes(t), d = this.renderReferralTrial(t), c = this.renderAttachments(t), f = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), _ = this.renderEmbeds(t), m = this.renderActivityInvite(t), T = this.renderReactions(t), I = this.renderPublishBump(t), p = this.renderEphemeralAccessories(t, n), h = this.renderStickersAccessories(t), N = this.renderThreadAccessories(t), S = this.renderComponentAccessories(t), C = this.renderThreadRoleMentionWarning(t), g = this.renderEmbeddedApplicationInstanceEmbed(t), A = this.renderInteractionPremiumUpsell(t), M = this.renderMediaPostEmbeds(t), R = this.renderSafetyPolicyNotice(t), v = this.renderSafetySystemNotification(t), O = this.renderVoiceChannelInvite(t, n), x = this.renderMediaObscureNotice(t), L = this.renderPoll(t, s), D = this.renderForwardedMessage(t);
+    return null == o && null == c && null == _ && null == m && null == T && null == u && null == d && null == I && null == p && null == h && null == N && null == S && null == g && null == C && null == M && null == R && null != A && null == L && null == O && null == D ? null : (0, a.jsxs)("div", {
       id: (0, eO.getMessageAccessoriesId)(t),
       className: r()(e, eF.container),
-      children: [D, C, L, o, u, d, M, c, f, _, x, m, h, S, A, g, E, T, I, p, l && this.renderSuppressConfirmModal(), i && this.renderRemoveAttachmentConfirmModal(), N, R, v, O]
+      children: [D, C, L, o, u, d, M, c, f, _, x, m, h, S, g, A, E, T, I, p, l && this.renderSuppressConfirmModal(), i && this.renderRemoveAttachmentConfirmModal(), N, R, v, O]
     })
   }
   constructor(...e) {
@@ -723,7 +723,7 @@ function ez(e) {
     communicationDisabled: N,
     isActiveChannelOrUnarchivableThread: S,
     isAutomodQuarantined: h
-  }), D = (0, b.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), P = (0, G.default)(null == n ? void 0 : n.id), y = (0, w.default)(s), U = (0, A.useShouldRedactExplicitContent)(n.id, s.author.id), B = (0, g.useShouldRenderReportFalsePositiveButton)(s.id);
+  }), D = (0, b.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), P = (0, G.default)(null == n ? void 0 : n.id), y = (0, w.default)(s), U = (0, g.useShouldRedactExplicitContent)(n.id, s.author.id), B = (0, A.useShouldRenderReportFalsePositiveButton)(s.id);
   return (0, a.jsx)(eW, {
     canSuppressEmbeds: C,
     canDeleteAttachments: M,
@@ -762,7 +762,7 @@ let eQ = e => {
     disableReactionCreates: o = !0,
     disableReactionUpdates: u = !0,
     ...d
-  } = e, c = J.InlineAttachmentMedia.useSetting(), f = J.InlineEmbedMedia.useSetting(), E = J.RenderEmbeds.useSetting(), _ = J.GifAutoPlay.useSetting(), m = (0, b.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, G.default)(null == s ? void 0 : s.id), I = (0, A.useShouldRedactExplicitContent)(s.id, n.author.id), p = (0, g.useShouldRenderReportFalsePositiveButton)(n.id), h = (0, w.default)(n);
+  } = e, c = J.InlineAttachmentMedia.useSetting(), f = J.InlineEmbedMedia.useSetting(), E = J.RenderEmbeds.useSetting(), _ = J.GifAutoPlay.useSetting(), m = (0, b.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, G.default)(null == s ? void 0 : s.id), I = (0, g.useShouldRedactExplicitContent)(s.id, n.author.id), p = (0, A.useShouldRenderReportFalsePositiveButton)(n.id), h = (0, w.default)(n);
   return (0, a.jsx)(eW, {
     ...d,
     message: n,

@@ -35,8 +35,8 @@ var a, s, l = n("735250"),
   G = n("619271"),
   k = n("395361"),
   w = n("639351"),
-  B = n("632184"),
-  F = n("368666"),
+  F = n("632184"),
+  B = n("368666"),
   H = n("81063"),
   V = n("823379"),
   Y = n("51144"),
@@ -289,7 +289,7 @@ es.Header = ea, es.Body = e => {
             })
           }), (0, l.jsx)("div", {
             className: q.voiceSectionIconWrapper,
-            children: (0, l.jsx)(B.default, {
+            children: (0, l.jsx)(F.default, {
               className: q.voiceSectionIcon
             })
           })]
@@ -473,8 +473,8 @@ es.Header = ea, es.Body = e => {
         className: q.applicationStreamingAvatar
       }), (0, l.jsxs)("div", {
         children: [X(Y.default.getName(s)), J(_)]
-      }), (0, l.jsx)(F.default, {
-        size: F.default.Sizes.SMALL
+      }), (0, l.jsx)(B.default, {
+        size: B.default.Sizes.SMALL
       })]
     }), h]
   })

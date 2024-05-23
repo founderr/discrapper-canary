@@ -34,8 +34,8 @@ var a = s("735250"),
   U = s("981631"),
   P = s("689938"),
   b = s("949157"),
-  B = s("84885"),
-  y = s("661781");
+  y = s("84885"),
+  B = s("661781");
 
 function F(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -319,11 +319,11 @@ class w extends l.PureComponent {
       isLoading: s
     } = this.props;
     return (0, a.jsx)("div", {
-      className: B.customColumn,
+      className: y.customColumn,
       children: (0, a.jsx)("div", {
-        className: B.customContainer,
+        className: y.customContainer,
         children: (0, a.jsx)(E.AdvancedScrollerAuto, {
-          className: i()(B.customScroller, b.scroller),
+          className: i()(y.customScroller, b.scroller),
           onScroll: this.handleOnScroll,
           ref: this.handleSetScrollerRef,
           children: (0, a.jsx)("div", {
@@ -441,7 +441,7 @@ class w extends l.PureComponent {
       return (0, a.jsxs)("div", {
         className: b.quickSelect,
         children: [(0, a.jsx)(S.default, {
-          popoutClassName: i()(b.selectFilterPopout, y.elevationBorderHigh),
+          popoutClassName: i()(b.selectFilterPopout, B.elevationBorderHigh),
           items: c,
           renderItem: this.renderUserQuickSelectItem,
           renderValue: this.renderUserQuickSelectValue,
@@ -456,7 +456,7 @@ class w extends l.PureComponent {
         }), (0, a.jsx)(S.default, {
           placeholder: P.default.Messages.SEARCH_ACTIONS,
           label: P.default.Messages.GUILD_SETTINGS_FILTER_ACTION,
-          popoutClassName: i()(b.selectFilterPopout, y.elevationBorderLow),
+          popoutClassName: i()(b.selectFilterPopout, B.elevationBorderLow),
           items: o,
           renderItem: this.renderActionQuickSelectItem,
           renderValue: this.renderActionQuickSelectValue,

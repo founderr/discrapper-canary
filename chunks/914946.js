@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return w
   },
   transformRelationship: function() {
-    return F
+    return B
   },
   transformVoiceState: function() {
-    return B
+    return F
   },
   validateActivityInvite: function() {
     return K
@@ -114,7 +114,7 @@ function k(e, t) {
   })), Promise.all(n).then(() => {
     var n;
     let s = (!e.isNSFW() || (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? p.default.getMessages(e.id).toArray().map(w) : [],
-      l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => B(a, e.id, t));
+      l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => F(a, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -158,7 +158,7 @@ function w(e) {
   }
 }
 
-function B(e, t, n) {
+function F(e, t, n) {
   let {
     mute: a,
     deaf: s,
@@ -184,7 +184,7 @@ function B(e, t, n) {
   }
 }
 
-function F(e, t, n) {
+function B(e, t, n) {
   let a = I.default.getUser(t);
   return {
     type: e,

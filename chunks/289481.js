@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("617379"),
   S = n("324081"),
   C = n("305248"),
-  A = n("520116"),
-  g = n("981631"),
+  g = n("520116"),
+  A = n("981631"),
   M = n("689938"),
   R = n("623122");
 let v = a.memo(function(e) {
@@ -80,12 +80,12 @@ let O = a.memo(function(e) {
       })
     }), null == r || !t.hasLoadedAnything) return null;
   let E = (e, s) => {
-    (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
+    (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
       channel_id: t.channelId,
       guild_id: t.guildId
     });
     let a = null != s ? s : t.oldestUnreadMessageId;
-    (0, _.transitionTo)(g.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+    (0, _.transitionTo)(A.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
   };
   return (0, s.jsx)("div", {
     className: R.channel,
@@ -104,7 +104,7 @@ let O = a.memo(function(e) {
           ...e
         })]
       }),
-      children: t.collapsed ? null : "messages" === t.type ? (0, s.jsx)(A.default, {
+      children: t.collapsed ? null : "messages" === t.type ? (0, s.jsx)(g.default, {
         channel: t,
         channelRecord: r,
         gotoChannel: E
@@ -136,7 +136,7 @@ function x(e) {
       height: 16
     }),
     onClick: function() {
-      i && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_ACKED, {
+      i && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_ACKED, {
         channel_id: t.channelId,
         guild_id: t.guildId,
         marked_all_channels_as_read: !1,
@@ -154,7 +154,7 @@ function L(e) {
   } = e;
 
   function l() {
-    n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
+    n(t), (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
       channel_id: t.channelId,
       guild_id: t.guildId,
       num_unread_channels_remaining: a(),

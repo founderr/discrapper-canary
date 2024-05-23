@@ -44,8 +44,8 @@ var a = s("735250"),
   U = s("999382"),
   P = s("2150"),
   b = s("181339"),
-  B = s("193544"),
-  y = s("717251"),
+  y = s("193544"),
+  B = s("717251"),
   F = s("981631"),
   H = s("689938"),
   k = s("55973");
@@ -86,7 +86,7 @@ function w(e) {
           variant: "text-sm/normal",
           children: H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_DESCRIPTION
         })]
-      }), (0, a.jsx)(y.default, {
+      }), (0, a.jsx)(B.default, {
         title: (0, a.jsxs)("div", {
           className: k.settingsRowHeader,
           children: [(0, a.jsx)(p.default, {
@@ -159,7 +159,7 @@ function w(e) {
         children: H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ENABLE_TIP.format({
           onClick: R
         })
-      }) : null, r ? (0, a.jsx)(y.default, {
+      }) : null, r ? (0, a.jsx)(B.default, {
         title: (0, a.jsxs)("div", {
           className: k.settingsRowHeader,
           children: [(0, a.jsx)(A.default, {
@@ -231,7 +231,7 @@ function V(e) {
         variant: "text-sm/normal",
         children: H.default.Messages.FORM_HELP_VERIFICATION_LEVEL.format()
       })]
-    }), (0, a.jsx)(B.default, {
+    }), (0, a.jsx)(y.default, {
       changeTitle: H.default.Messages.FORM_LABEL_VERIFICATION_LEVEL_CHANGE,
       value: null == r ? void 0 : r.value,
       options: i,
@@ -284,7 +284,7 @@ function Y(e) {
             helpdeskArticle: v.default.getArticleURL(F.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
           })
         })]
-      }), (0, a.jsx)(B.default, {
+      }), (0, a.jsx)(y.default, {
         changeTitle: H.default.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER_CHANGE,
         value: null == E ? void 0 : E.value,
         options: c,

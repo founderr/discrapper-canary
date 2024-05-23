@@ -38,8 +38,8 @@ let b = new A.default("CacheStore"),
   G = "initializing",
   k = 0,
   w = !1,
-  B = !1,
-  F = !1;
+  F = !1,
+  B = !1;
 
 function H(e) {
   b.log("Clearing cache store"), k = Date.now(), d.Storage.remove(D.CACHE_STORE_KEY), d.Storage.remove(D.CACHE_STORE_LAZY_KEY), d.Storage.remove(D.CACHE_STORE_CHANNELS_LAZY_KEY), G = "no-cache", "CLEAR_CACHES" === e.type && e.preventWritingCachesAgainThisSession && (j = !0)
@@ -188,7 +188,7 @@ async function q(e, t, n, a) {
       });
       return
     }
-    if (B) {
+    if (F) {
       (0, x.default)("already_connected"), b.log("Skipping lazy cache; already connected."), c.default.dispatch({
         type: "CACHE_LOADED_LAZY_NO_CACHE"
       });
@@ -283,7 +283,7 @@ class Z extends(a = u.default.Store) {
     return k
   }
   canWriteCaches(e) {
-    return (0, M.isAuthenticated)() ? j ? (b.log("Not writing cache because caches cleared"), !1) : !!e || !!F || (b.log("Not writing cache because never connected"), !1) : (b.log("Not writing cache because not authenticated"), !1)
+    return (0, M.isAuthenticated)() ? j ? (b.log("Not writing cache because caches cleared"), !1) : !!e || !!B || (b.log("Not writing cache because never connected"), !1) : (b.log("Not writing cache because not authenticated"), !1)
   }
   async loadCacheAsync(e, t) {
     let n = (0, y.callOnce)(t);
@@ -319,11 +319,11 @@ i = "CacheStore", (l = "displayName") in(s = Z) ? Object.defineProperty(s, l, {
   writable: !0
 }) : s[l] = i, new Z(c.default, U ? {
   CONNECTION_OPEN: function() {
-    return B = !0, F = !0, !1
+    return F = !0, B = !0, !1
   },
   LOGOUT: H,
   CONNECTION_CLOSED: function() {
-    return B = !1, F = !0, !1
+    return F = !1, B = !0, !1
   },
   CACHE_LOADED: function() {
     w = !0

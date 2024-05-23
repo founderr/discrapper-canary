@@ -45,7 +45,7 @@ function N(e) {
     location: I.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: j && !b
-  }), B = s.useMemo(() => (0, g.getQuestBarVariantConfig)(E, k, w), [E, k, w]), F = s.useRef(-1), H = s.useRef(!1), [V, Y] = s.useState(!1), [W, K] = s.useState(!1), [z, q] = s.useState(!1), [Q, Z] = s.useState(!0), [X, J] = s.useState(B.preEnrollmentExpandedHeight), $ = s.useRef(null), ee = s.useCallback(() => {
+  }), F = s.useMemo(() => (0, g.getQuestBarVariantConfig)(E, k, w), [E, k, w]), B = s.useRef(-1), H = s.useRef(!1), [V, Y] = s.useState(!1), [W, K] = s.useState(!1), [z, q] = s.useState(!1), [Q, Z] = s.useState(!0), [X, J] = s.useState(F.preEnrollmentExpandedHeight), $ = s.useRef(null), ee = s.useCallback(() => {
     var e, t;
     J((null !== (t = null === (e = $.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), K(!0)
   }, []), et = s.useCallback(() => {
@@ -59,10 +59,10 @@ function N(e) {
       {
         withDelay: t = !1
       } = e;
-    t ? F.current = window.setTimeout(ee, 75) : ee()
+    t ? B.current = window.setTimeout(ee, 75) : ee()
   }, [ee]), el = s.useCallback(() => {
-    if (window.clearTimeout(F.current), !!B.canCollapseOnBlur && !V) !H.current && K(!1)
-  }, [V, B]), ei = s.useCallback(() => {
+    if (window.clearTimeout(B.current), !!F.canCollapseOnBlur && !V) !H.current && K(!1)
+  }, [V, F]), ei = s.useCallback(() => {
     (0, c.trackQuestEvent)({
       questId: E.id,
       event: T.AnalyticEvents.QUEST_HOVER
@@ -73,8 +73,8 @@ function N(e) {
     H.current = !1, el()
   }, [el]);
   s.useLayoutEffect(() => {
-    y && B.shouldExpandOnQuestComplete && ee()
-  }, [ee, y, B]), s.useLayoutEffect(() => {
+    y && F.shouldExpandOnQuestComplete && ee()
+  }, [ee, y, F]), s.useLayoutEffect(() => {
     L && !M.current && H.current && ee()
   }, [L, ee]), s.useLayoutEffect(() => {
     !y && L && !M.current && !H.current && K(!1)
@@ -129,10 +129,10 @@ function N(e) {
   });
   return v && (j || !Q || U) && !b ? (0, a.jsx)(S.QuestContentImpressionTracker, {
     questOrQuests: E,
-    questContent: B.trackingCtx.content,
+    questContent: F.trackingCtx.content,
     overrideVisibility: !O && j,
     children: () => {
-      let e = B.component;
+      let e = F.component;
       return (0, a.jsx)(r.animated.div, {
         "aria-hidden": !j,
         className: i()(A.wrapper, {
@@ -143,7 +143,7 @@ function N(e) {
           color: E.config.colors.secondary,
           height: eu.to({
             range: [0, 1],
-            output: [0, y && W ? X : B.collapsedHeight]
+            output: [0, y && W ? X : F.collapsedHeight]
           })
         },
         children: (0, a.jsx)(r.animated.div, {
@@ -156,11 +156,11 @@ function N(e) {
             [A.contentWrapperAccepted]: L
           }),
           style: {
-            backgroundColor: B.preEnrollmentBackgroundColor,
-            backgroundImage: L ? B.postEnrollmentBackgroundImage : void 0,
+            backgroundColor: F.preEnrollmentBackgroundColor,
+            backgroundImage: L ? F.postEnrollmentBackgroundImage : void 0,
             height: eo.to({
               range: [0, 1],
-              output: [B.collapsedHeight, L ? X : B.preEnrollmentExpandedHeight]
+              output: [F.collapsedHeight, L ? X : F.preEnrollmentExpandedHeight]
             }),
             transform: eu.to({
               range: [0, 1],

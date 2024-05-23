@@ -16,8 +16,8 @@ let h = null,
   N = null,
   S = {},
   C = {},
-  A = p.TooltipActions.LOADING_INITIAL_PROGRESS,
-  g = new d.Timeout,
+  g = p.TooltipActions.LOADING_INITIAL_PROGRESS,
+  A = new d.Timeout,
   M = {
     completed: !1,
     initialProgressFetched: !1,
@@ -32,22 +32,22 @@ let h = null,
       completed: a,
       gameTitle: l
     } = M;
-    !(null == t || null == l || a || null == s || null == n || g.isStarted()) && (e ? (0, T.sendHeartbeat)(t, n, s.pid) : g.start(1 * m.default.Millis.MINUTE, () => {
+    !(null == t || null == l || a || null == s || null == n || A.isStarted()) && (e ? (0, T.sendHeartbeat)(t, n, s.pid) : A.start(1 * m.default.Millis.MINUTE, () => {
       (0, T.sendHeartbeat)(t, n, s.pid)
     }))
   },
   v = e => {
-    M.retries = 0, M.completed = e.completed, M.initialProgressFetched = !0, M.progress = e.progress, M.lastCheckedAt = o().now(), A = M.completed ? p.TooltipActions.QUEST_COMPLETION : p.TooltipActions.TRACK_PROGRESS
+    M.retries = 0, M.completed = e.completed, M.initialProgressFetched = !0, M.progress = e.progress, M.lastCheckedAt = o().now(), g = M.completed ? p.TooltipActions.QUEST_COMPLETION : p.TooltipActions.TRACK_PROGRESS
   },
   O = (e, t, n) => {
-    (!M.completed || e.dropsQuestId !== M.dropsQuestId) && (M.game = t, M.dropsQuestId = e.dropsQuestId, M.gameTitle = e.title, M.completed = !1, M.interrupted = !1, M.streamKey = n, M.retries = 0, M.lastCheckedAt = o().now(), g.start(5e3, () => R(!0)))
+    (!M.completed || e.dropsQuestId !== M.dropsQuestId) && (M.game = t, M.dropsQuestId = e.dropsQuestId, M.gameTitle = e.title, M.completed = !1, M.interrupted = !1, M.streamKey = n, M.retries = 0, M.lastCheckedAt = o().now(), A.start(5e3, () => R(!0)))
   };
 class x extends(i = u.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
   getActivityPanelTooltipAction() {
-    return A
+    return g
   }
   getIsPartnerGameQuestComplete(e) {
     var t;
@@ -66,7 +66,7 @@ class x extends(i = u.default.Store) {
     return N
   }
   get activityPanelTooltipAction() {
-    return A
+    return g
   }
   get enrolledDropsByQuestId() {
     return C
@@ -117,7 +117,7 @@ l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
   },
   DROPS_FETCH_PROGRESS_SUCCESS: v,
   DROPS_FETCH_PROGRESS_FAILURE: e => {
-    !M.initialProgressFetched && (M.initialProgressFetched = !0, A = p.TooltipActions.STREAM_CTA)
+    !M.initialProgressFetched && (M.initialProgressFetched = !0, g = p.TooltipActions.STREAM_CTA)
   },
   DROPS_HEARTBEAT_SUCCESS: e => {
     v(e), S[e.dropsQuestId] = !0, R()
@@ -131,7 +131,7 @@ l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
       M.retries = M.retries + 1, R();
       return
     }
-    A = p.TooltipActions.STREAM_CTA, 403 === n ? S[t] = !1 : M.interrupted = !0
+    g = p.TooltipActions.STREAM_CTA, 403 === n ? S[t] = !1 : M.interrupted = !0
   },
   DROPS_UNENROLL_USER: e => {
     N = null, S = {
@@ -146,7 +146,7 @@ l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
     })
   },
   STREAM_CLOSE: () => {
-    M.completed && (A = p.TooltipActions.QUEST_COMPLETION), M.interrupted = !1, M.retries = 0, g.stop()
+    M.completed && (g = p.TooltipActions.QUEST_COMPLETION), M.interrupted = !1, M.retries = 0, A.stop()
   },
   STREAM_START: function(e) {
     var t;
@@ -182,6 +182,6 @@ l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
     })
   },
   LOGOUT: function() {
-    S = {}, C = {}, N = {}, g.stop()
+    S = {}, C = {}, N = {}, A.stop()
   }
 })

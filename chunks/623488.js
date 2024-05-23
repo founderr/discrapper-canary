@@ -90,8 +90,8 @@ function p(e) {
     productType: N,
     onTapCard: S,
     actionMenu: C,
-    showOpaqueBackground: A = !1,
-    hideRoleTag: g = !1,
+    showOpaqueBackground: g = !1,
+    hideRoleTag: A = !1,
     lineClamp: M = 1,
     cardWidth: R = 332,
     cardHeight: v,
@@ -130,7 +130,7 @@ function p(e) {
         }), p && (0, s.jsx)(I, {
           onShowFullDescription: h,
           variant: x
-        }), g || null == c || "" === c.name ? null : (0, s.jsxs)(s.Fragment, {
+        }), A || null == c || "" === c.name ? null : (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(u.default, {
             size: 16
           }), (0, s.jsx)(E.default, {
@@ -160,7 +160,7 @@ function p(e) {
     })]
   });
   return null == S ? (0, s.jsx)("article", {
-    className: l()(m.productCard, A ? m.opaqueBackground : m.solidBackground),
+    className: l()(m.productCard, g ? m.opaqueBackground : m.solidBackground),
     "aria-labelledby": D,
     children: P
   }) : (0, s.jsx)("div", {
@@ -173,7 +173,7 @@ function p(e) {
       "aria-label": _.default.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({
         productName: n
       }),
-      className: l()(m.productCard, A ? m.opaqueBackground : m.solidBackground, m.cardClickableContainer),
+      className: l()(m.productCard, g ? m.opaqueBackground : m.solidBackground, m.cardClickableContainer),
       onClick: S,
       children: P
     })

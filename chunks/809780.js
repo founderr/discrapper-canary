@@ -29,8 +29,8 @@ var s, a, l, i, r = n("470079"),
   N = n("601070"),
   S = n("344185"),
   C = n("569471"),
-  A = n("723170"),
-  g = n("675478"),
+  g = n("723170"),
+  A = n("675478"),
   M = n("581883"),
   R = n("131704"),
   v = n("592125"),
@@ -205,9 +205,9 @@ class V extends o.EventEmitter {
         collapsedChannels: a,
         loadState: l
       } = this.state, i = f().findIndex(s, e => e.channelId === t), r = s[i], o = !r.collapsed;
-      a[t] = o, (0, g.updateUserChannelSettings)(n, t, e => {
+      a[t] = o, (0, A.updateUserChannelSettings)(n, t, e => {
         e.collapsedInInbox = o
-      }, g.UserSettingsDelay.FREQUENT_USER_ACTION), this.setState({
+      }, A.UserSettingsDelay.FREQUENT_USER_ACTION), this.setState({
         scrollToChannelIndex: i,
         collapsedChannels: a,
         loadState: "done" !== l || o || r.isFullyLoaded ? l : "loaded",
@@ -344,7 +344,7 @@ function W(e, t, n, s) {
         if (Date.now() - e > z) return 5
       }
       if (s.isThread()) {
-        let e = (0, A.computeThreadNotificationSetting)(s);
+        let e = (0, g.computeThreadNotificationSetting)(s);
         return e === k.ThreadMemberFlags.ALL_MESSAGES ? 3 : e === k.ThreadMemberFlags.NO_MESSAGES ? 6 : 4
       } {
         let n = j.default.getChannelMessageNotifications(e, t),

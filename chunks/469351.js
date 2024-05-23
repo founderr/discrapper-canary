@@ -69,7 +69,7 @@ function D(e) {
         })
       })]
     }),
-    B = (0, n.jsxs)(d.TabBar, {
+    y = (0, n.jsxs)(d.TabBar, {
       type: "top",
       look: "brand",
       className: M.tabBar,
@@ -101,7 +101,7 @@ function D(e) {
         })
       }) : null]
     }),
-    y = (0, r.match)(G).with("basic_info", () => (0, n.jsx)(R.default, {
+    B = (0, r.match)(G).with("basic_info", () => (0, n.jsx)(R.default, {
       guildId: t
     })).with("manage_listings", () => (0, n.jsx)(x.default, {
       guildId: t
@@ -110,7 +110,7 @@ function D(e) {
     })).exhaustive(),
     F = a ? (0, n.jsx)(d.TabBar.Panel, {
       id: G,
-      children: y
+      children: B
     }) : (0, n.jsx)(d.Spinner, {});
   return (0, n.jsxs)(c.CreatorMonetizationSettingsDisabledContextProvider, {
     guildId: t,
@@ -118,7 +118,7 @@ function D(e) {
       guild: l
     }), (0, n.jsx)("div", {
       className: M.tabBarContainer,
-      children: B
+      children: y
     }), F]
   })
 }(l = a || (a = {})).MANAGE_LISTINGS = "manage_listings", l.PAYMENT = "payment", l.BASIC_INFO = "basic_info"

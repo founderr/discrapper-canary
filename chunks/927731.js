@@ -63,7 +63,7 @@ function A(e) {
       ...s,
       [e]: t
     }))
-  }, P = (0, f.useGuildEligibleForTierTemplates)(t), b = (0, f.useUserEligibleForTierTemplates)(), B = l.useCallback(() => {
+  }, P = (0, f.useGuildEligibleForTierTemplates)(t), b = (0, f.useUserEligibleForTierTemplates)(), y = l.useCallback(() => {
     b && S.GuildRoleSubscriptionsTierTemplatesExperiment.trackExposure({
       guildId: t,
       location: "b2d9de_1"
@@ -81,10 +81,10 @@ function A(e) {
     }, {
       modalKey: O
     }) : A()
-  }, [t, M, A, n, b, P]), y = h.useHasChangesForEditStateIds(G), F = l.useCallback(() => G.forEach(h.clearEditState), [G]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
-  return l.useEffect(() => (k === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && B(), () => {
+  }, [t, M, A, n, b, P]), B = h.useHasChangesForEditStateIds(G), F = l.useCallback(() => G.forEach(h.clearEditState), [G]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
+  return l.useEffect(() => (k === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && y(), () => {
     (0, u.closeModal)(O)
-  }), [k, B]), (0, a.jsxs)(a.Fragment, {
+  }), [k, y]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: L.groupListings,
       children: [G.map(e => (0, a.jsx)(C.default, {
@@ -97,7 +97,7 @@ function A(e) {
         onBeforeDispatchNewListing: t => U(t.id, e),
         onAfterDispatchNewListing: () => D(e)
       }, e)), (0, a.jsxs)(u.Clickable, {
-        onClick: H ? void 0 : B,
+        onClick: H ? void 0 : y,
         className: i()(L.createTierButton, {
           [L.disabled]: H
         }),
@@ -113,7 +113,7 @@ function A(e) {
     }), (0, a.jsx)(d.TransitionGroup, {
       component: "div",
       className: L.contentRegion,
-      children: y && (0, a.jsx)(_.default, {
+      children: B && (0, a.jsx)(_.default, {
         children: (0, a.jsx)(c.default, {
           onReset: F
         })

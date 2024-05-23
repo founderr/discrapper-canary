@@ -39,8 +39,8 @@ var a, l, n = s("735250"),
   U = s("629262"),
   P = s("686807"),
   b = s("981631"),
-  B = s("689938"),
-  y = s("364268");
+  y = s("689938"),
+  B = s("364268");
 let F = (0, x.uid)(),
   H = (0, x.uid)(),
   k = (0, v.cssValueToNumber)(I.default.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
@@ -69,32 +69,32 @@ function V(e) {
     onChange: i
   } = e, r = a || l;
   return (0, n.jsxs)("label", {
-    className: o()(y.row, {
-      [y.checked]: r,
-      [y.disabled]: l
+    className: o()(B.row, {
+      [B.checked]: r,
+      [B.disabled]: l
     }),
     children: [(0, n.jsx)("div", {
-      className: y.rowIconWrapper,
+      className: B.rowIconWrapper,
       children: t
     }), (0, n.jsx)("div", {
-      className: y.rowText,
+      className: B.rowText,
       children: s
     }), (0, n.jsxs)("div", {
-      className: y.rowCheckbox,
+      className: B.rowCheckbox,
       children: [(0, n.jsx)(T.FocusRing, {
         children: (0, n.jsx)("input", {
           type: "checkbox",
           checked: r,
           disabled: l,
-          className: y.checkboxInput,
+          className: B.checkboxInput,
           onChange: function(e) {
             i(e.target.checked)
           }
         })
       }), (0, n.jsx)("div", {
-        className: y.checkboxDisplay,
+        className: B.checkboxDisplay,
         children: (0, n.jsx)(p.default, {
-          className: y.checkboxIcon,
+          className: B.checkboxIcon,
           "aria-hidden": !0
         })
       })]
@@ -113,12 +113,12 @@ function Y(e) {
   } = e, o = a.every(e => i.has(e));
   return a.length > 0 ? (0, n.jsxs)(T.FormSection, {
     title: t,
-    className: y.section,
+    className: B.section,
     children: [a.length - l.size > 1 && (0, n.jsx)("div", {
-      className: y.list,
+      className: B.list,
       children: (0, n.jsx)(V, {
         icon: (0, n.jsx)(A.default, {
-          className: y.rowIcon
+          className: B.rowIcon
         }),
         checked: o,
         onChange: function(e) {
@@ -131,12 +131,12 @@ function Y(e) {
         })
       })
     }), (0, n.jsx)("div", {
-      className: y.list,
+      className: B.list,
       children: a.map(e => (0, n.jsxs)(V, {
         icon: (0, n.jsx)(w, {
           emojiId: e.emoji_id,
           emojiName: e.emoji_name,
-          className: y.rowIcon
+          className: B.rowIcon
         }),
         checked: i.has(e),
         disabled: l.has(e),
@@ -185,25 +185,25 @@ function W(e) {
         children: [(0, n.jsx)(T.Heading, {
           id: N,
           variant: "heading-md/semibold",
-          children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_MODAL_HEADER.format({
+          children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_MODAL_HEADER.format({
             tierName: s.name
           })
         }), (0, n.jsx)(T.ModalCloseButton, {
-          className: y.modalCloseButton,
+          className: B.modalCloseButton,
           onClick: o
         })]
       }), (0, n.jsxs)(T.ModalContent, {
-        className: y.modalContent,
+        className: B.modalContent,
         children: [(0, n.jsx)(Y, {
-          title: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
-          selectAllText: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_CHANNEL_BENEFITS,
+          title: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
+          selectAllText: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_CHANNEL_BENEFITS,
           benefits: I,
           dupeBenefits: f,
           selectedBenefits: u,
           onToggleBenefit: g
         }), (0, n.jsx)(Y, {
-          title: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
-          selectAllText: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_INTANGIBLE_BENEFITS,
+          title: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
+          selectAllText: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_INTANGIBLE_BENEFITS,
           benefits: S,
           dupeBenefits: m,
           selectedBenefits: u,
@@ -212,12 +212,12 @@ function W(e) {
       }), (0, n.jsxs)(T.ModalFooter, {
         children: [(0, n.jsx)(T.Button, {
           type: "submit",
-          children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_CONFIRM_BUTTON
+          children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_CONFIRM_BUTTON
         }), (0, n.jsx)(T.Button, {
           look: T.Button.Looks.LINK,
           color: T.Button.Colors.PRIMARY,
           onClick: o,
-          children: B.default.Messages.CANCEL
+          children: y.default.Messages.CANCEL
         })]
       })]
     })
@@ -237,32 +237,32 @@ function z(e) {
     size: k
   });
   return (0, n.jsxs)(T.Clickable, {
-    className: y.roleRow,
+    className: B.roleRow,
     onClick: i,
     children: [(0, n.jsx)("div", {
-      className: y.rowIconWrapper,
+      className: B.rowIconWrapper,
       children: null != r ? (0, n.jsx)(D.default, {
         ...r
       }) : (0, n.jsx)(M.default, {
         color: null !== (t = a.colorString) && void 0 !== t ? t : (0, c.int2hex)(b.DEFAULT_ROLE_COLOR),
-        className: y.roleRowIconDefault
+        className: B.roleRowIconDefault
       })
     }), (0, n.jsxs)("div", {
-      className: y.rowText,
+      className: B.rowText,
       children: [(0, n.jsx)(T.Text, {
         color: "header-primary",
         variant: "text-md/normal",
-        className: y.__invalid_benefitTitle,
+        className: B.__invalid_benefitTitle,
         children: a.name
       }), (0, n.jsx)(T.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: B.default.Messages.NUM_CHANNELS.format({
+        children: y.default.Messages.NUM_CHANNELS.format({
           num: l
         })
       })]
     }), (0, n.jsx)("div", {
-      className: y.rowCheckbox,
+      className: B.rowCheckbox,
       children: (0, n.jsx)(L.default, {
         direction: L.default.Directions.RIGHT
       })
@@ -294,7 +294,7 @@ function K(e) {
     } : []
   }), [t, a, r]);
   return o.length > 0 ? (0, n.jsx)("div", {
-    className: y.list,
+    className: B.list,
     children: o.map(e => (0, n.jsx)(z, {
       guildId: t.id,
       role: e.role,
@@ -303,7 +303,7 @@ function K(e) {
     }, e.role.id))
   }) : (0, n.jsx)(T.Text, {
     variant: "text-md/normal",
-    children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_SELECT_ROLE_EMPTY
+    children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_SELECT_ROLE_EMPTY
   })
 }
 
@@ -318,13 +318,13 @@ function Z(e) {
       children: [(0, n.jsx)(T.Heading, {
         id: F,
         variant: "heading-md/semibold",
-        children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_MODAL_HEADER_1
+        children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_MODAL_HEADER_1
       }), (0, n.jsx)(T.ModalCloseButton, {
-        className: y.modalCloseButton,
+        className: B.modalCloseButton,
         onClick: t
       })]
     }), (0, n.jsx)(T.ModalContent, {
-      className: y.modalContent,
+      className: B.modalContent,
       children: (0, n.jsx)(K, {
         guild: l,
         onSelect: a
@@ -370,22 +370,22 @@ function X(e) {
     onSubmit: function(e) {
       e.preventDefault(), r(E.map(e => e.id).filter(e => _.has(e))), t()
     },
-    className: y.slideForm,
+    className: B.slideForm,
     children: [(0, n.jsxs)(T.ModalHeader, {
       children: [(0, n.jsx)(T.Heading, {
         id: H,
         variant: "heading-md/semibold",
-        children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_MODAL_HEADER_2.format({
+        children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_MODAL_HEADER_2.format({
           roleName: u.name
         })
       }), (0, n.jsx)(T.ModalCloseButton, {
-        className: y.modalCloseButton,
+        className: B.modalCloseButton,
         onClick: t
       })]
     }), (0, n.jsxs)(T.ModalContent, {
-      className: y.modalContent,
+      className: B.modalContent,
       children: [E.length > 1 && (0, n.jsx)("div", {
-        className: y.list,
+        className: B.list,
         children: (0, n.jsx)(V, {
           icon: (0, n.jsx)(A.default, {}),
           checked: _.size === E.length,
@@ -395,17 +395,17 @@ function X(e) {
           children: (0, n.jsx)(T.Text, {
             color: "header-primary",
             variant: "text-md/normal",
-            children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_CHANNEL_BENEFITS
+            children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_CHANNEL_BENEFITS
           })
         })
       }), (0, n.jsx)("div", {
-        className: y.list,
+        className: B.list,
         children: E.map(e => {
           var t;
           let s = null !== (t = (0, f.getSimpleChannelIconComponent)(e.type)) && void 0 !== t ? t : O.default;
           return (0, n.jsx)(V, {
             icon: (0, n.jsx)("div", {
-              className: y.rowIcon,
+              className: B.rowIcon,
               children: (0, n.jsx)(s, {
                 width: "100%",
                 height: "100%"
@@ -416,7 +416,7 @@ function X(e) {
             children: (0, n.jsx)(T.Text, {
               color: "header-primary",
               variant: "text-md/normal",
-              className: y.__invalid_benefitTitle,
+              className: B.__invalid_benefitTitle,
               children: e.name
             })
           }, e.id)
@@ -425,12 +425,12 @@ function X(e) {
     }), (0, n.jsxs)(T.ModalFooter, {
       children: [(0, n.jsx)(T.Button, {
         type: "submit",
-        children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_CONFIRM_BUTTON
+        children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_CONFIRM_BUTTON
       }), (0, n.jsx)(T.Button, {
         look: T.Button.Looks.LINK,
         color: T.Button.Colors.PRIMARY,
         onClick: l,
-        children: B.default.Messages.CANCEL
+        children: y.default.Messages.CANCEL
       })]
     })]
   })

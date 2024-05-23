@@ -40,7 +40,7 @@ let x = s.forwardRef(function(e, t) {
     onCtxMenuSelect: G,
     quest: k,
     useReducedMotion: w
-  } = e, B = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(k.id), [k]), F = (0, C.useQuestFormattedDate)(k.config.expiresAt), H = I.SharedQuestFields.build(k.config), V = (0, C.useQuestFormattedDate)(H.rewardsExpireAt), Y = s.useMemo(() => (0, p.isAssetAnimated)(k.config.assets.questBarHero), [k]), W = (0, O.useHasLaunchedGame)(H.application.id), K = s.useCallback(() => {
+  } = e, F = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(k.id), [k]), B = (0, C.useQuestFormattedDate)(k.config.expiresAt), H = I.SharedQuestFields.build(k.config), V = (0, C.useQuestFormattedDate)(H.rewardsExpireAt), Y = s.useMemo(() => (0, p.isAssetAnimated)(k.config.assets.questBarHero), [k]), W = (0, O.useHasLaunchedGame)(H.application.id), K = s.useCallback(() => {
     (0, _.enrollInQuest)(k.id, {
       questContent: S.QuestContent.QUEST_BAR,
       questContentCTA: h.QuestContentCTA.ACCEPT_QUEST
@@ -96,7 +96,7 @@ let x = s.forwardRef(function(e, t) {
               children: J ? y.default.Messages.QUESTS_CLAIM_BY_DATE.format({
                 expirationDate: V
               }) : y.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
-                expirationDate: F
+                expirationDate: B
               })
             })]
           })]
@@ -188,7 +188,7 @@ let x = s.forwardRef(function(e, t) {
           fullWidth: !0,
           onClick: ee ? K : void 0,
           size: d.Button.Sizes.NONE,
-          submitting: B,
+          submitting: F,
           children: y.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {

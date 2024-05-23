@@ -9,11 +9,11 @@ var n, a, r = s("735250"),
   i = s("481060"),
   u = s("378298"),
   l = s("473092"),
-  E = s("684471"),
-  T = s("745982"),
+  T = s("684471"),
+  E = s("745982"),
   c = s("463439"),
   d = s("689938"),
-  N = s("831409");
+  I = s("831409");
 (a = n || (n = {}))[a.INTRO = 0] = "INTRO", a[a.SAFETY_TIPS = 1] = "SAFETY_TIPS", a[a.TAKE_ACTION = 2] = "TAKE_ACTION";
 t.default = e => {
   let {
@@ -21,14 +21,14 @@ t.default = e => {
     warningType: s,
     senderId: n,
     modalProps: a,
-    channelId: I
+    channelId: N
   } = e, [A, _] = o.useState(0), R = o.useMemo(() => ({
-    channelId: I,
+    channelId: N,
     senderId: n,
     warningId: t,
     warningType: s,
     isNudgeWarning: !1
-  }), [I, n, t, s]);
+  }), [N, n, t, s]);
   o.useEffect(() => {
     (0, l.trackNamedViewEvent)({
       ...R,
@@ -49,7 +49,7 @@ t.default = e => {
   return (0, r.jsxs)(i.ModalRoot, {
     transitionState: a.transitionState,
     children: [(0, r.jsx)("div", {
-      className: N.container,
+      className: I.container,
       children: (0, r.jsxs)(i.Slides, {
         width: 440,
         activeSlide: A,
@@ -58,7 +58,7 @@ t.default = e => {
         contentDisplay: "flex",
         children: [(0, r.jsx)(i.Slide, {
           id: 0,
-          children: (0, r.jsx)(E.default, {
+          children: (0, r.jsx)(T.default, {
             warningId: t,
             senderId: n,
             trackAnalyticsEvent: C,
@@ -66,7 +66,7 @@ t.default = e => {
           })
         }), (0, r.jsx)(i.Slide, {
           id: 1,
-          children: (0, r.jsx)(T.default, {
+          children: (0, r.jsx)(E.default, {
             warningId: t,
             senderId: n,
             trackAnalyticsEvent: C
@@ -77,7 +77,7 @@ t.default = e => {
             warningId: t,
             senderId: n,
             trackAnalyticsEvent: C,
-            channelId: I,
+            channelId: N,
             hasReported: O,
             onReport: function() {
               S(!0)
@@ -86,18 +86,18 @@ t.default = e => {
         })]
       })
     }), (0, r.jsxs)(i.ModalFooter, {
-      className: N.footer,
+      className: I.footer,
       children: [(0, r.jsx)(i.Button, {
-        className: N.footerButton,
+        className: I.footerButton,
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.CUSTOM,
         size: i.Button.Sizes.MIN,
         onClick: function() {
-          a.onClose(), (0, u.dismissChannelSafetyWarnings)(I, [t]), C(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
+          a.onClose(), (0, u.dismissChannelSafetyWarnings)(N, [t]), C(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
         },
         children: d.default.Messages.CLOSE
       }), 0 !== A && (0, r.jsx)(i.Button, {
-        className: N.footerButton,
+        className: I.footerButton,
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.CUSTOM,
         size: i.Button.Sizes.MIN,

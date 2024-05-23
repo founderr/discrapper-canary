@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("594174"),
   S = n("602623"),
   C = n("823379"),
-  A = n("226378"),
-  g = n("701488"),
+  g = n("226378"),
+  A = n("701488"),
   M = n("689938"),
   R = n("975720");
 
@@ -52,12 +52,12 @@ function v(e) {
     return null == t ? null : null === (e = h.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
   }), w = a.useMemo(() => {
     let e = new T.default(n);
-    return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = g.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
+    return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
   }, [n]), H = (0, c.useEmbeddedActivityJoinability)({
     userId: b,
     channelId: v,
     application: w
-  }), V = null == B, Y = (0, A.useJoinOrStartButtonState)({
+  }), V = null == B, Y = (0, g.useJoinOrStartButtonState)({
     embeddedActivity: B,
     joinability: H,
     currentEmbeddedActivity: F,

@@ -44,14 +44,14 @@ class N extends a.PureComponent {
       className: N,
       forceAddReactions: S,
       reactionClassName: C,
-      useChatFontScaling: A,
-      forceHideReactionCreates: g,
+      useChatFontScaling: g,
+      forceHideReactionCreates: A,
       remainingReactions: M,
       combinedReactions: R,
       visibleReactionsCount: v
     } = this.props, {
       disableTransitionAppear: O
-    } = this.state, x = A ? T : m, L = v > 0;
+    } = this.state, x = g ? T : m, L = v > 0;
     return L || S ? (0, s.jsxs)(r.TransitionGroup, {
       component: "div",
       className: i()(x.reactions, N),
@@ -73,7 +73,7 @@ class N extends a.PureComponent {
         isGuest: l,
         isPendingMember: I,
         isForumToolbar: p,
-        useChatFontScaling: A,
+        useChatFontScaling: g,
         className: C
       }), M > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
@@ -86,11 +86,11 @@ class N extends a.PureComponent {
           variant: "text-sm/normal",
           children: ["+", M]
         })
-      }), !t && !g && (0, s.jsx)(d.ButtonAddReaction, {
+      }), !t && !A && (0, s.jsx)(d.ButtonAddReaction, {
         type: u.ReactionTypes.NORMAL,
         message: e,
         channel: h,
-        useChatFontScaling: A,
+        useChatFontScaling: g,
         isHovered: this.state.isHovered,
         className: i()({
           [x.forceShow]: S && !L,

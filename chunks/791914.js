@@ -27,7 +27,7 @@ var a = n("120356"),
 function S(e) {
   return (0, m.useInDesktopNotificationCenterExperiment)() ? (0, s.jsx)(C, {
     ...e
-  }) : (0, s.jsx)(A, {
+  }) : (0, s.jsx)(g, {
     ...e
   })
 }
@@ -46,10 +46,10 @@ function C(e) {
   }, {
     autoTrackExposure: !1
   }), {
-    enabled: A
+    enabled: g
   } = f.default.useExperiment({
     location: "RecentsHeader"
-  }), g = (0, i.useStateFromStores)([c.default], () => c.default.getUnseenInviteCount()), M = (0, i.useStateFromStores)([_.default], () => _.default.getMessageReminders()).length;
+  }), A = (0, i.useStateFromStores)([c.default], () => c.default.getUnseenInviteCount()), M = (0, i.useStateFromStores)([_.default], () => _.default.getMessageReminders()).length;
   return (0, s.jsxs)(u.Header, {
     className: l()(N.header, N.expanded),
     children: [(0, s.jsxs)("div", {
@@ -92,13 +92,13 @@ function C(e) {
             [N.active]: t === r.InboxTab.MENTIONS
           }),
           children: h.default.Messages.MENTIONS
-        }), A ? (0, s.jsxs)(o.TabBar.Item, {
+        }), g ? (0, s.jsxs)(o.TabBar.Item, {
           "aria-label": "game_invites",
           id: r.InboxTab.GAME_INVITES,
           className: l()(N.tab, N.expanded, {
             [N.active]: t === r.InboxTab.GAME_INVITES
           }),
-          children: [h.default.Messages.GAME_INVITES, g > 0 ? (0, s.jsx)(I.CircleBadge, {
+          children: [h.default.Messages.GAME_INVITES, A > 0 ? (0, s.jsx)(I.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: l()(N.iconBadge)
           }) : null]
@@ -121,7 +121,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function g(e) {
   let {
     tab: t,
     setTab: n,

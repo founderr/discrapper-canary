@@ -20,19 +20,19 @@ var s = n("735250"),
   N = n("665692"),
   S = n("689938"),
   C = n("486283");
-let A = {
+let g = {
     tag: "span",
     variant: "text-md/normal",
     color: "header-secondary"
   },
-  g = {
+  A = {
     className: i()("mention", C.mention)
   };
 
 function M(e) {
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsx)(o.Text, {
-      ...A,
+      ...g,
       color: "header-primary",
       children: e
     })
@@ -77,7 +77,7 @@ t.default = a.memo(function(e) {
       if (R.type === u.ApplicationCommandOptionType.SUB_COMMAND || R.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
         let t = [(0, s.jsxs)(a.Fragment, {
             children: [" ", (0, s.jsx)(o.Text, {
-              ...A,
+              ...g,
               children: null !== (l = null == D ? void 0 : D.name_localized) && void 0 !== l ? l : R.name
             })]
           }, y)],
@@ -101,7 +101,7 @@ t.default = a.memo(function(e) {
           if (null != t) {
             let e = (0, E.getUserAuthor)(t, v);
             C = (0, s.jsxs)(p.default, {
-              ...g,
+              ...A,
               onClick: () => (0, _.openUserProfileModal)({
                 userId: t.id,
                 guildId: v.guild_id,
@@ -121,7 +121,7 @@ t.default = a.memo(function(e) {
           let e = R.value.toString(),
             t = m.default.getChannel(e);
           null != t && (C = (0, s.jsxs)(p.default, {
-            ...g,
+            ...A,
             children: [N.CHANNEL_SENTINEL, t.name]
           }));
           break
@@ -130,7 +130,7 @@ t.default = a.memo(function(e) {
           let e = R.value.toString(),
             t = null != O ? T.default.getRole(O.id, e) : void 0;
           null != t && (C = (0, s.jsxs)(p.default, {
-            ...g,
+            ...A,
             children: [N.MENTION_SENTINEL, t.name]
           }));
           break
@@ -146,7 +146,7 @@ t.default = a.memo(function(e) {
             if (null != t) {
               let e = (0, E.getUserAuthor)(t, v);
               C = (0, s.jsxs)(p.default, {
-                ...g,
+                ...A,
                 onClick: () => (0, _.openUserProfileModal)({
                   userId: t.id,
                   guildId: v.guild_id,
@@ -170,7 +170,7 @@ t.default = a.memo(function(e) {
       }
       return null == C && (C = M(null == U ? void 0 : U.toString())), [(0, s.jsxs)(a.Fragment, {
         children: [(0, s.jsxs)(o.Text, {
-          ...A,
+          ...g,
           children: [" ", null !== (f = null == D ? void 0 : D.name_localized) && void 0 !== f ? f : R.name, ": "]
         }), C]
       }, y)]
@@ -185,7 +185,7 @@ t.default = a.memo(function(e) {
     }));
     O = (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsxs)(o.Text, {
-        ...A,
+        ...g,
         children: ["/", null !== (v = null === (l = D.application_command) || void 0 === l ? void 0 : l.name_localized) && void 0 !== v ? v : D.name]
       }), e]
     })

@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("246946"),
   M = s("78839"),
   v = s("586576"),
-  L = s("483444"),
-  D = s("626135"),
+  D = s("483444"),
+  L = s("626135"),
   P = s("74538"),
   b = s("140465"),
   j = s("646476"),
@@ -71,7 +71,7 @@ function X() {
     }),
     children: [(0, a.jsxs)("div", {
       className: z.tierInfo,
-      children: [(0, a.jsx)(L.default, {
+      children: [(0, a.jsx)(D.default, {
         className: i()(z.tierTitle)
       }), g ? (0, a.jsxs)(a.Fragment, {
         children: [(T || !f) && (0, a.jsx)(F.PremiumPillWithSparkles, {
@@ -103,7 +103,7 @@ function X() {
         className: z.tierCardButton,
         color: S.Button.Colors.WHITE,
         onClick: () => {
-          D.default.track(W.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
+          L.default.track(W.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: "to_premium_home_button",
             target: "premium home page"
           }), (0, _.popLayer)(), (0, x.transitionTo)(W.Routes.APPLICATION_STORE)
@@ -118,7 +118,7 @@ function X() {
         look: S.Button.Looks.OUTLINED,
         color: S.Button.Colors.WHITE,
         onClick: () => {
-          D.default.track(W.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
+          L.default.track(W.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: "to_subscriptions_button",
             target: "subscriptions settings"
           }), m.default.open(W.UserSettingsSections.SUBSCRIPTIONS)
@@ -188,7 +188,7 @@ function J() {
         buttonTextClassName: z.giftButtonCTA,
         color: S.Button.Colors.CUSTOM,
         onClick: () => {
-          D.default.track(W.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
+          L.default.track(W.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: "gifting_button",
             target: "payment modal"
           })
@@ -223,7 +223,7 @@ t.default = function() {
       !m && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, f.fetchPremiumSubscriptionPlans)(_, null, W.RevenueSurfaces.DISCOVERY)]), o(!1)
     })
   }, [_, m, e]);
-  let [L, P] = n.useState(!1);
+  let [D, P] = n.useState(!1);
   if (m) return (0, a.jsx)(g.default, {});
   if (e) return (0, a.jsx)(O.BlockedPaymentsContentSettings, {});
   if ((!l || null == s || !i) && !r) return (0, a.jsx)(v.default, {
@@ -249,7 +249,7 @@ t.default = function() {
         })]
       }), (0, a.jsx)(u.VisibilitySensor, {
         onChange: e => {
-          e && !L && (D.default.track(W.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+          e && !D && (L.default.track(W.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
             location_stack: t
           }), P(!0))
         },

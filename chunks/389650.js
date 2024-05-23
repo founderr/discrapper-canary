@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("358085"),
   M = s("13140"),
   v = s("210887"),
-  L = s("659947"),
-  D = s("981631"),
+  D = s("659947"),
+  L = s("981631"),
   P = s("420212"),
   b = s("689938"),
   j = s("996196"),
@@ -77,7 +77,7 @@ class w extends n.PureComponent {
         color: u.default.unsafe_rawColors.RED_400.css
       },
       children: b.default.Messages.KEYBIND_NAVIGATION_CONFLICT.format({
-        keyboardNavArticle: x.default.getArticleURL(D.HelpdeskArticles.KEYBOARD_NAVIGATION)
+        keyboardNavArticle: x.default.getArticleURL(L.HelpdeskArticles.KEYBOARD_NAVIGATION)
       })
     }) : (0, a.jsx)(c.FormText, {
       className: j.keybindMessage,
@@ -148,7 +148,7 @@ class w extends n.PureComponent {
     let {
       action: e
     } = this.props.keybind;
-    if (e === D.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL) return (0, a.jsx)(L.default, {
+    if (e === L.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL) return (0, a.jsx)(D.default, {
       keybind: this.props.keybind
     })
   }
@@ -190,62 +190,62 @@ class H extends n.PureComponent {
       allowSoundboard: s,
       enableClips: a
     } = this.props, n = [{
-      value: D.GlobalKeybindActions.UNASSIGNED,
+      value: L.GlobalKeybindActions.UNASSIGNED,
       label: b.default.Messages.KEYBIND_UNASSIGNED
     }, {
-      value: D.GlobalKeybindActions.PUSH_TO_TALK,
+      value: L.GlobalKeybindActions.PUSH_TO_TALK,
       label: b.default.Messages.KEYBIND_PUSH_TO_TALK
     }, {
-      value: D.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY,
+      value: L.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY,
       label: b.default.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY
     }, {
-      value: D.GlobalKeybindActions.PUSH_TO_MUTE,
+      value: L.GlobalKeybindActions.PUSH_TO_MUTE,
       label: b.default.Messages.KEYBIND_PUSH_TO_MUTE
     }, {
-      value: D.GlobalKeybindActions.TOGGLE_MUTE,
+      value: L.GlobalKeybindActions.TOGGLE_MUTE,
       label: b.default.Messages.KEYBIND_TOGGLE_MUTE
     }, {
-      value: D.GlobalKeybindActions.TOGGLE_DEAFEN,
+      value: L.GlobalKeybindActions.TOGGLE_DEAFEN,
       label: b.default.Messages.KEYBIND_TOGGLE_DEAFEN
     }, {
-      value: D.GlobalKeybindActions.TOGGLE_VOICE_MODE,
+      value: L.GlobalKeybindActions.TOGGLE_VOICE_MODE,
       label: b.default.Messages.KEYBIND_TOGGLE_VOICE_MODE
     }, {
-      value: D.GlobalKeybindActions.TOGGLE_STREAMER_MODE,
+      value: L.GlobalKeybindActions.TOGGLE_STREAMER_MODE,
       label: b.default.Messages.KEYBIND_TOGGLE_STREAM_MODE
     }];
     return e && (n.push({
-      value: D.GlobalKeybindActions.TOGGLE_OVERLAY,
+      value: L.GlobalKeybindActions.TOGGLE_OVERLAY,
       label: b.default.Messages.KEYBIND_TOGGLE_OVERLAY
     }), n.push({
-      value: D.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK,
+      value: L.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK,
       label: b.default.Messages.KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK
     }), n.push({
-      value: D.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
+      value: L.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
       label: b.default.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
     })), t && (0, R.isWindows)() && n.push({
-      value: D.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING,
+      value: L.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING,
       label: b.default.Messages.KEYBIND_TOGGLE_GO_LIVE_STREAMING
     }), (0, R.isDesktop)() && (n.push({
-      value: D.GlobalKeybindActions.NAVIGATE_BACK,
+      value: L.GlobalKeybindActions.NAVIGATE_BACK,
       label: b.default.Messages.KEYBIND_NAVIGATE_BACK
     }, {
-      value: D.GlobalKeybindActions.NAVIGATE_FORWARD,
+      value: L.GlobalKeybindActions.NAVIGATE_FORWARD,
       label: b.default.Messages.KEYBIND_NAVIGATE_FORWARD
     }, {
-      value: D.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL,
+      value: L.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL,
       label: b.default.Messages.USER_SETTINGS_KEYBINDS_SWITCH_TO_VOICE_CHANNEL_LABEL
     }, {
-      value: D.GlobalKeybindActions.DISCONNECT_FROM_VOICE_CHANNEL,
+      value: L.GlobalKeybindActions.DISCONNECT_FROM_VOICE_CHANNEL,
       label: b.default.Messages.USER_SETTINGS_KEYBINDS_VOICE_CHANNEL_DISCONNECT_LABEL
     }), s && n.push({
-      value: D.GlobalKeybindActions.SOUNDBOARD,
+      value: L.GlobalKeybindActions.SOUNDBOARD,
       label: b.default.Messages.KEYBIND_SOUNDBOARD
     }, {
-      value: D.GlobalKeybindActions.SOUNDBOARD_HOLD,
+      value: L.GlobalKeybindActions.SOUNDBOARD_HOLD,
       label: b.default.Messages.KEYBIND_SOUNDBOARD_HOLD
     }), a && n.push({
-      value: D.GlobalKeybindActions.SAVE_CLIP,
+      value: L.GlobalKeybindActions.SAVE_CLIP,
       label: b.default.Messages.CLIPS_SAVE
     })), n
   }
@@ -255,16 +255,16 @@ class H extends n.PureComponent {
       canGoLive: t,
       enableClips: s
     } = this.props, a = {
-      [D.GlobalKeybindActions.UNASSIGNED]: b.default.Messages.KEYBIND_DESCRIPTION_UNASSIGNED,
-      [D.GlobalKeybindActions.PUSH_TO_MUTE]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_MUTE,
-      [D.GlobalKeybindActions.PUSH_TO_TALK]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK,
-      [D.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK_PRIORITY,
-      [D.GlobalKeybindActions.TOGGLE_MUTE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_MUTE,
-      [D.GlobalKeybindActions.TOGGLE_DEAFEN]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_DEAFEN,
-      [D.GlobalKeybindActions.TOGGLE_VOICE_MODE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
-      [D.GlobalKeybindActions.TOGGLE_STREAMER_MODE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
+      [L.GlobalKeybindActions.UNASSIGNED]: b.default.Messages.KEYBIND_DESCRIPTION_UNASSIGNED,
+      [L.GlobalKeybindActions.PUSH_TO_MUTE]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_MUTE,
+      [L.GlobalKeybindActions.PUSH_TO_TALK]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK,
+      [L.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK_PRIORITY,
+      [L.GlobalKeybindActions.TOGGLE_MUTE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_MUTE,
+      [L.GlobalKeybindActions.TOGGLE_DEAFEN]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_DEAFEN,
+      [L.GlobalKeybindActions.TOGGLE_VOICE_MODE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
+      [L.GlobalKeybindActions.TOGGLE_STREAMER_MODE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
     };
-    return e && (a[D.GlobalKeybindActions.TOGGLE_OVERLAY] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY, a[D.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK), t && (0, R.isWindows)() && (a[D.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, R.isDesktop)() && (a[D.GlobalKeybindActions.NAVIGATE_BACK] = b.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK, a[D.GlobalKeybindActions.NAVIGATE_FORWARD] = b.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD, a[D.GlobalKeybindActions.SOUNDBOARD] = (0, R.isWindows)() ? b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD, a[D.GlobalKeybindActions.SOUNDBOARD_HOLD] = (0, R.isWindows)() ? b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD, s && (a[D.GlobalKeybindActions.SAVE_CLIP] = b.default.Messages.CLIPS_KEYBIND_DESCRIPTION)), a
+    return e && (a[L.GlobalKeybindActions.TOGGLE_OVERLAY] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY, a[L.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK), t && (0, R.isWindows)() && (a[L.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, R.isDesktop)() && (a[L.GlobalKeybindActions.NAVIGATE_BACK] = b.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK, a[L.GlobalKeybindActions.NAVIGATE_FORWARD] = b.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD, a[L.GlobalKeybindActions.SOUNDBOARD] = (0, R.isWindows)() ? b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD, a[L.GlobalKeybindActions.SOUNDBOARD_HOLD] = (0, R.isWindows)() ? b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD, s && (a[L.GlobalKeybindActions.SAVE_CLIP] = b.default.Messages.CLIPS_KEYBIND_DESCRIPTION)), a
   }
   renderKeybinds(e) {
     return e.map(e => (0, a.jsx)("div", {
@@ -289,7 +289,7 @@ class H extends n.PureComponent {
   }
   render() {
     let e = this.props.enableClips,
-      t = o()(this.props.keybinds).reject(e => e.managed && ![D.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, D.GlobalKeybindActions.SAVE_CLIP].includes(e.action)).reject(t => !e && t.action === D.GlobalKeybindActions.SAVE_CLIP).reject(e => !this.props.allowSoundboard && (e.action === D.GlobalKeybindActions.SOUNDBOARD || e.action === D.GlobalKeybindActions.SOUNDBOARD_HOLD)).sortBy(e => e.id).sortBy(e => !0 === e.managed ? -1 : 0).value();
+      t = o()(this.props.keybinds).reject(e => e.managed && ![L.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, L.GlobalKeybindActions.SAVE_CLIP].includes(e.action)).reject(t => !e && t.action === L.GlobalKeybindActions.SAVE_CLIP).reject(e => !this.props.allowSoundboard && (e.action === L.GlobalKeybindActions.SOUNDBOARD || e.action === L.GlobalKeybindActions.SOUNDBOARD_HOLD)).sortBy(e => e.id).sortBy(e => !0 === e.managed ? -1 : 0).value();
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.FormSection, {
         tag: c.FormTitleTags.H1,
@@ -321,7 +321,7 @@ class H extends n.PureComponent {
           textVariant: "text-lg/medium",
           className: j.browserNotice,
           children: b.default.Messages.KEYBIND_IN_BROSWER_NOTICE.format({
-            downloadLink: D.MarketingURLs.DOWNLOAD
+            downloadLink: L.MarketingURLs.DOWNLOAD
           })
         })
       }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsxs)(c.FormSection, {

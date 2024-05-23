@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return g
   }
 });
 var s = n("735250"),
@@ -25,10 +25,10 @@ var s = n("735250"),
   S = n("689938"),
   C = n("352370");
 
-function A(e) {
-  var t, A;
+function g(e) {
+  var t, g;
   let {
-    onDismiss: g
+    onDismiss: A
   } = e, M = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), R = (0, l.useStateFromStores)([d.default], () => null != M ? d.default.getChannelId(M) : null, [M]), v = null != M ? M : null, O = (0, l.useStateFromStores)([u.default], () => null != v ? u.default.getGuild(v) : null, [v]), {
     shouldShowIncidentActions: x,
     incidentData: L,
@@ -63,11 +63,11 @@ function A(e) {
       size: f.default.Sizes.MINI
     }),
     b = (0, p.getSecurityActionDetailsString)(L, O.name);
-  if (null != (null !== (A = L.dmsDisabledUntil) && void 0 !== A ? A : L.invitesDisabledUntil) && D) return (0, s.jsxs)(_.default, {
+  if (null != (null !== (g = L.dmsDisabledUntil) && void 0 !== g ? g : L.invitesDisabledUntil) && D) return (0, s.jsxs)(_.default, {
     className: C.notice,
     color: _.NoticeColors.NEUTRAL,
     children: [(0, s.jsx)(_.NoticeCloseButton, {
-      onClick: g,
+      onClick: A,
       noticeType: h.NoticeTypes.GUILD_RAID_NOTIFICATION
     }), j, b, (0, s.jsx)(_.NoticeButton, {
       className: C.actionButton,
@@ -95,7 +95,7 @@ function A(e) {
     className: C.notice,
     color: _.NoticeColors.WARNING,
     children: [(0, s.jsx)(_.NoticeCloseButton, {
-      onClick: g,
+      onClick: A,
       noticeType: h.NoticeTypes.GUILD_RAID_NOTIFICATION
     }), j, B, !F && (0, s.jsx)(_.NoticeButton, {
       className: C.actionButton,

@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("292959"),
   M = s("9156"),
   v = s("632184"),
-  L = s("626135"),
-  D = s("912101"),
+  D = s("626135"),
+  L = s("912101"),
   P = s("358085"),
   b = s("709054"),
   j = s("557177"),
@@ -113,7 +113,7 @@ function W(e) {
     }, []),
     T = n.useCallback((e, s) => {
       let a = t.filter(t => t !== e);
-      !s && a.push(e), e === g.default.ringtone && L.default.track(B.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
+      !s && a.push(e), e === g.default.ringtone && D.default.track(B.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
         toggled_on: s,
         sound_name: e
       }), S.default.setDisabledSounds(a)
@@ -294,7 +294,7 @@ class z extends n.PureComponent {
     let t = e ? B.DesktopNotificationTypes.ALL : B.DesktopNotificationTypes.NEVER;
     if (t !== B.DesktopNotificationTypes.NEVER) {
       var s;
-      s = "UserSettingsModal", D.default.requestPermission(e => {
+      s = "UserSettingsModal", L.default.requestPermission(e => {
         let t = e ? B.NotificationPermissionTypes.ENABLED : B.NotificationPermissionTypes.BLOCKED;
         S.default.setPermissionsState(t, s)
       })

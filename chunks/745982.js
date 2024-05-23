@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return T
   }
 });
 var n = s("735250");
@@ -13,7 +13,7 @@ var a = s("353672"),
   u = s("418586"),
   l = s("190113");
 
-function E(e) {
+function T(e) {
   let {} = e, t = (0, o.getInappropriateConversationsSafetyTips)();
   return (0, n.jsx)(r.default, {
     heroImageSrc: l,

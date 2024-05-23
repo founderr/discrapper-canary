@@ -27,10 +27,10 @@ function N(e) {
     setTab: t,
     badgeState: l,
     closePopout: N
-  } = e, C = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), A = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [g, M] = a.useMemo(() => i().partition(C, e => {
+  } = e, C = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), g = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, M] = a.useMemo(() => i().partition(C, e => {
     var t;
-    return (null === (t = A[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1e3 < e.ttl
-  }), [C, A]);
+    return (null === (t = g[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1e3 < e.ttl
+  }), [C, g]);
   return (a.useEffect(() => {
     (0, E.clearUnseenInvites)()
   }), 0 === C.length) ? (0, s.jsxs)("div", {
@@ -80,11 +80,11 @@ function N(e) {
     }), (0, s.jsx)(c.AdvancedScrollerThin, {
       children: (0, s.jsxs)("div", {
         className: h.invitesContainer,
-        children: [g.length > 0 && (0, s.jsxs)(s.Fragment, {
+        children: [A.length > 0 && (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(S, {
             title: p.default.Messages.GAME_INVITES_RECENT_HEADER
           }), (0, s.jsx)(s.Fragment, {
-            children: g.map(e => (0, s.jsx)(I.default, {
+            children: A.map(e => (0, s.jsx)(I.default, {
               invite: e,
               expired: !1
             }, e.invite_id))

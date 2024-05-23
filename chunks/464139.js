@@ -30,13 +30,13 @@ function I(e) {
   } = e, h = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(p.guild_id)), N = (0, o.default)(n), S = I(N), {
     avatarSrc: C,
     eventHandlers: {
-      onMouseEnter: A,
-      onMouseLeave: g
+      onMouseEnter: g,
+      onMouseLeave: A
     }
   } = (0, E.useAutomodAvatar)(!0);
   return (0, s.jsx)("div", {
-    onMouseEnter: A,
-    onMouseLeave: g,
+    onMouseEnter: g,
+    onMouseLeave: A,
     children: (0, s.jsx)(f.default, {
       className: l()(T.mainContainer, {
         [T.compact]: a

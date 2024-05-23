@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return B
   }
 }), s("47120");
 var a = s("735250"),
@@ -52,7 +52,7 @@ function b() {
   }]
 }
 
-function B(e) {
+function y(e) {
   let {
     value: t,
     "aria-labelledby": s,
@@ -100,7 +100,7 @@ function B(e) {
   })
 }
 
-function y(e) {
+function B(e) {
   var t;
   let {
     guild: s,
@@ -110,7 +110,7 @@ function y(e) {
   } = (0, M.default)(s.id), r = (0, O.useSubscriptionsSettings)(s.id), d = l.useCallback(() => {
     var e;
     return (null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, x.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P)
-  }, [r]), [c, _] = l.useState(i), [S, C] = l.useState(null !== (t = null == r ? void 0 : r.description) && void 0 !== t ? t : ""), [R, L] = l.useState(d), [b, y] = l.useState(null == r ? void 0 : r.store_page_guild_products_default_sort), [F, H] = l.useState(null == r ? void 0 : r.server_shop_tab_order), {
+  }, [r]), [c, _] = l.useState(i), [S, C] = l.useState(null !== (t = null == r ? void 0 : r.description) && void 0 !== t ? t : ""), [R, L] = l.useState(d), [b, B] = l.useState(null == r ? void 0 : r.store_page_guild_products_default_sort), [F, H] = l.useState(null == r ? void 0 : r.server_shop_tab_order), {
     loading: k,
     error: w,
     updateSubscriptionsSettings: V
@@ -162,7 +162,7 @@ function y(e) {
           className: U.formDescription,
           disabled: $,
           children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_DESCRIPTION
-        }), (0, a.jsx)(B, {
+        }), (0, a.jsx)(y, {
           value: c,
           onChange: e => {
             i !== e && e === v.GuildRoleSubscriptionFormat.ALL_CHANNELS && (0, I.openModal)(e => (0, a.jsx)(I.ConfirmModal, {
@@ -245,7 +245,7 @@ function y(e) {
           value: b,
           placeholder: G.default.Messages.SELECT,
           options: ee,
-          onChange: e => y(e)
+          onChange: e => B(e)
         })]
       })]
     }) : null, et.length > 0 && (0, a.jsxs)(a.Fragment, {
@@ -276,7 +276,7 @@ function y(e) {
           disabled: !q,
           onReset: () => {
             var e;
-            _(i), C(null !== (e = null == r ? void 0 : r.description) && void 0 !== e ? e : ""), L(d), y(null == r ? void 0 : r.store_page_guild_products_default_sort), H(null == r ? void 0 : r.server_shop_tab_order)
+            _(i), C(null !== (e = null == r ? void 0 : r.description) && void 0 !== e ? e : ""), L(d), B(null == r ? void 0 : r.store_page_guild_products_default_sort), H(null == r ? void 0 : r.server_shop_tab_order)
           },
           onSave: () => {
             o()(null != r, "Settings must be defined");

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   RecentsPopout: function() {
-    return g
+    return A
   }
 }), n("47120");
 var s = n("735250"),
@@ -24,13 +24,13 @@ var s = n("735250"),
   N = n("946443"),
   S = n("264233"),
   C = n("981631"),
-  A = n("689938");
+  g = n("689938");
 
-function g(e) {
+function A(e) {
   let {
     onOpen: t,
     onClose: n,
-    children: g,
+    children: A,
     badgeState: M,
     popoutPosition: R,
     popoutAlign: v
@@ -100,7 +100,7 @@ function g(e) {
       onRequestClose: j,
       renderPopout: function() {
         return (0, s.jsx)(o.Dialog, {
-          "aria-label": A.default.Messages.INBOX,
+          "aria-label": g.default.Messages.INBOX,
           children: D === r.InboxTab.FOR_YOU && G ? (0, s.jsx)(I.default, {
             setTab: P,
             badgeState: M,
@@ -140,7 +140,7 @@ function g(e) {
         let {
           isShown: n
         } = t;
-        return g(b, n, e)
+        return A(b, n, e)
       }
     })
   })

@@ -29,17 +29,17 @@ var a = s("735250"),
 function A(e) {
   let {
     premiumSubscription: t
-  } = e, s = (0, l.useStateFromStores)([T.default], () => T.default.boostSlots), A = n.useMemo(() => Object.values(s), [s]), O = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()), x = _.default.isPremium(O, C.PremiumTypes.TIER_2), R = (0, l.useStateFromStores)([c.default], () => c.default.affinities), M = (0, l.useStateFromStores)([S.default], () => S.default.getFlattenedGuildIds()), v = R.length > 0 || M.length > 0, L = A.length > 0, D = n.useMemo(() => A.some(e => null != e.premiumGuildSubscription), [A]), P = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUserAppliedBoosts()), b = (null == t ? void 0 : t.isPausedOrPausePending) === !0;
+  } = e, s = (0, l.useStateFromStores)([T.default], () => T.default.boostSlots), A = n.useMemo(() => Object.values(s), [s]), O = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()), x = _.default.isPremium(O, C.PremiumTypes.TIER_2), R = (0, l.useStateFromStores)([c.default], () => c.default.affinities), M = (0, l.useStateFromStores)([S.default], () => S.default.getFlattenedGuildIds()), v = R.length > 0 || M.length > 0, D = A.length > 0, L = n.useMemo(() => A.some(e => null != e.premiumGuildSubscription), [A]), P = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUserAppliedBoosts()), b = (null == t ? void 0 : t.isPausedOrPausePending) === !0;
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(i.BlockedPaymentsWarning, {
       className: p.blockedPaymentsWarning
     }), (0, a.jsx)(m.default, {
-      hasGuildBoostSlots: L,
-      hasAppliedGuildBoosts: D,
+      hasGuildBoostSlots: D,
+      hasAppliedGuildBoosts: L,
       isUserPremiumTier2: x,
       subscriptionIsPausedOrPausePending: b
     }), (0, a.jsx)(N.default, {
-      hasAppliedGuildBoosts: D,
+      hasAppliedGuildBoosts: L,
       isUserPremiumTier2: x,
       hasGuildAffinitiesOrInGuild: v,
       subscriptionIsPausedOrPausePending: b
@@ -52,7 +52,7 @@ function A(e) {
     }), (0, a.jsx)(h.default, {
       guildBoostSlots: A
     }), (0, a.jsx)(I.default, {
-      hasAppliedGuildBoosts: D,
+      hasAppliedGuildBoosts: L,
       subscriptionIsPausedOrPausePending: b
     }), (0, a.jsx)(d.default, {
       className: p.tierComparisonTable,

@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("348238"),
   S = n("38267"),
   C = n("484459"),
-  A = n("103575"),
-  g = n("695346"),
+  g = n("103575"),
+  A = n("695346"),
   M = n("271383"),
   R = n("594174"),
   v = n("976644"),
@@ -49,7 +49,7 @@ function G(e) {
     channel: k
   } = e, w = (0, y.useMediaPostEmbedData)(r, G), {
     setPopout: H
-  } = (0, S.default)(G.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(G, k, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, R.default], () => {
+  } = (0, S.default)(G.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(G, k, H, !0), Y = A.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, R.default], () => {
     var e;
     return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [w]), J = (0, c.useStateFromStores)([M.default], () => (null == w ? void 0 : w.authorId) != null ? M.default.getMember(w.guildId, w.authorId) : null), [$, ee] = a.useMemo(() => {
@@ -75,7 +75,7 @@ function G(e) {
     channelId: k.id
   })), [w, k]);
   if (null == w) return null;
-  let eo = (e, t) => (o()(null != w.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(A.default, {
+  let eo = (e, t) => (o()(null != w.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(g.default, {
       ...e,
       location: "MediaPostEmbed",
       userId: w.authorId,

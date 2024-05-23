@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("949981"),
   S = n("680668"),
   C = n("143708"),
-  A = n("358595"),
-  g = n("563917"),
+  g = n("358595"),
+  A = n("563917"),
   M = n("135845"),
   R = n("981631");
 
@@ -85,7 +85,7 @@ function v(e) {
     });
   switch (L.state) {
     case R.InviteStates.RESOLVING:
-      B = (0, s.jsx)(A.default, {});
+      B = (0, s.jsx)(g.default, {});
       break;
     case R.InviteStates.EXPIRED:
     case R.InviteStates.BANNED:
@@ -141,7 +141,7 @@ function v(e) {
             break
           }
           if ((0, c.isStageInviteEmbed)(L)) {
-            B = (0, s.jsx)(g.default, {
+            B = (0, s.jsx)(A.default, {
               stageInstance: L.stage_instance,
               guild: L.guild,
               isMember: null != P,

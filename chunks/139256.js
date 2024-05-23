@@ -37,8 +37,8 @@ var s, a, l = n("735250"),
   N = n("506071"),
   S = n("203143"),
   C = n("79390"),
-  A = n("839963"),
-  g = n("294608"),
+  g = n("839963"),
+  A = n("294608"),
   M = n("65145"),
   R = n("981631"),
   v = n("689938"),
@@ -145,18 +145,18 @@ function U(e) {
     canTapAnswers: a,
     answersInteraction: n
   }).with({
-    answersInteraction: A.PollChatAnswerInteractionType.RADIO_BUTTONS
+    answersInteraction: g.PollChatAnswerInteractionType.RADIO_BUTTONS
   }, () => ({
     ContainerComponent: D,
     answerElementType: 1
   })).with({
-    answersInteraction: A.PollChatAnswerInteractionType.CHECKBOXES
+    answersInteraction: g.PollChatAnswerInteractionType.CHECKBOXES
   }, () => ({
     ContainerComponent: L,
     answerElementType: 2
   })).with({
     canTapAnswers: !0,
-    answersInteraction: A.PollChatAnswerInteractionType.LIST
+    answersInteraction: g.PollChatAnswerInteractionType.LIST
   }, () => ({
     ContainerComponent: x,
     answerElementType: 3
@@ -189,7 +189,7 @@ function j(e) {
   } = e, {
     channelId: d,
     messageId: c
-  } = (0, g.useMessageIds)(), f = (0, g.useStyleClass)(n.style), E = !0 === n.isSelected, _ = i.useCallback(() => {
+  } = (0, A.useMessageIds)(), f = (0, A.useStyleClass)(n.style), E = !0 === n.isSelected, _ = i.useCallback(() => {
     S.default.handlePollAnswerTapped({
       channelId: d,
       messageId: c,
@@ -274,7 +274,7 @@ function G(e) {
     fallback: i
   } = e, {
     message: r
-  } = (0, g.usePollContext)();
+  } = (0, A.usePollContext)();
   if (null != t.attachmentIds && t.attachmentIds.length > 0) {
     let e = r.attachments.find(e => {
       var n;

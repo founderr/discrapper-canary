@@ -24,17 +24,17 @@ var s = n("735250"),
   N = n("618685"),
   S = n("981631"),
   C = n("689938"),
-  A = n("296854");
+  g = n("296854");
 
-function g() {
+function A() {
   return (0, s.jsxs)("div", {
-    className: A.headerContainer,
+    className: g.headerContainer,
     children: [(0, s.jsx)(l.ArrowAngleRightUpIcon, {
       width: 14,
       height: 16,
       color: o.default.colors.HEADER_MUTED
     }), (0, s.jsx)(i.Text, {
-      className: A.headerText,
+      className: g.headerText,
       variant: "text-sm/semibold",
       color: "header-muted",
       children: C.default.Messages.MESSAGE_FORWARDED
@@ -60,7 +60,7 @@ function M(e) {
     null != l && (0, d.default)(S.Routes.CHANNEL(l, s))
   }, [n]);
   return (0, s.jsxs)("div", {
-    className: A.footerContainer,
+    className: g.footerContainer,
     children: [null != r.originLabel ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(i.Text, {
         variant: "text-sm/medium",
@@ -83,7 +83,7 @@ function M(e) {
       }), (0, s.jsx)(u.Clickable, {
         onClick: c,
         children: (0, s.jsx)(i.Text, {
-          className: A.cta,
+          className: g.cta,
           variant: "text-sm/medium",
           color: "text-link",
           children: C.default.Messages.MESSAGE_FORWARD_ORIGINAL_MESSAGE
@@ -124,12 +124,12 @@ function R(e) {
     previewLinkTarget: !0
   }), C = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(n.channel_id)), R = _.MessageDisplayCompact.useSetting();
   return null == C ? null : (0, s.jsxs)("div", {
-    className: A.container,
+    className: g.container,
     children: [(0, s.jsx)("div", {
-      className: A.quote
+      className: g.quote
     }), (0, s.jsxs)("div", {
-      className: A.content,
-      children: [(0, s.jsx)(g, {}), (0, s.jsx)(I.default, {
+      className: g.content,
+      children: [(0, s.jsx)(A, {}), (0, s.jsx)(I.default, {
         message: o,
         content: N
       }), (0, E.default)({

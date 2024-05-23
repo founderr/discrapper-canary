@@ -34,8 +34,8 @@ var a = s("735250"),
   U = s("899947"),
   P = s("117831"),
   b = s("996737"),
-  B = s("21846"),
-  y = s("280632"),
+  y = s("21846"),
+  B = s("280632"),
   F = s("44234"),
   H = s("117428");
 let k = function(e, t, s) {
@@ -124,7 +124,7 @@ function W(e) {
     }, t)
   }), f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({
     accessRate: 10
-  })) : n >= (i > 1e4 ? .7 : .8) ? (I = y, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
+  })) : n >= (i > 1e4 ? .7 : .8) ? (I = B, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
       className: v.ratingGood,
       children: e
@@ -138,7 +138,7 @@ function W(e) {
     }, t)
   }), f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
     accessRate: E
-  })) : (I = B, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
+  })) : (I = y, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
       className: v.ratingBad,
       children: e

@@ -25,8 +25,8 @@ var a = n("613828"),
   N = n("823379"),
   S = n("624138"),
   C = n("317381"),
-  A = n("638880"),
-  g = n("146936"),
+  g = n("638880"),
+  A = n("146936"),
   M = n("147865"),
   R = n("778569"),
   v = n("513202"),
@@ -50,7 +50,7 @@ function U(e) {
     names: ["embedded_cover"]
   }), Z = E.default.getWindowOpen(L.PopoutWindowKeys.CHANNEL_CALL_POPOUT), J = q.length > 0 ? D.default.Messages.JOIN : D.default.Messages.START, $ = async () => {
     if (w) {
-      if (null != z && q.length > 0) await (0, A.default)({
+      if (null != z && q.length > 0) await (0, g.default)({
         applicationId: z.applicationId,
         currentEmbeddedApplication: K,
         activityChannelId: F,
@@ -60,7 +60,7 @@ function U(e) {
       });
       else {
         let e = G.isPrivate() && !_.default.isCallActive(F),
-          t = () => (0, g.default)({
+          t = () => (0, A.default)({
             targetApplicationId: U,
             currentEmbeddedApplication: K,
             channelId: F,

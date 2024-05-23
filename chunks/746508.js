@@ -37,8 +37,8 @@ var a = n("735250"),
   G = n("446226"),
   k = n("935261"),
   w = n("74299"),
-  B = n("803647"),
-  F = n("142497"),
+  F = n("803647"),
+  B = n("142497"),
   H = n("810788"),
   V = n("160404"),
   Y = n("703656"),
@@ -110,7 +110,7 @@ function ew(e) {
   })
 }
 
-function eB() {
+function eF() {
   let e = s.useRef(null);
   (0, _.useFocusLock)(e), s.useEffect(() => {
     eL.default.track(eD.AnalyticEvents.OPEN_POPOUT, {
@@ -163,7 +163,7 @@ function eB() {
   })
 }
 
-function eF() {
+function eB() {
   let e = (0, d.useStateFromStores)([J.default], () => J.default.isMuted()),
     t = e ? eU.default.Messages.STAGE_MUSIC_UNMUTE : eU.default.Messages.STAGE_MUSIC_MUTE;
   return (0, a.jsx)(eR.default, {
@@ -358,7 +358,7 @@ function eY(e) {
     }, [h, n.id]),
     p = c.find(e => e.ownerId === (null == u ? void 0 : u.id)),
     g = (0, es.useOtherStreams)(n, u, c);
-  t = null == p ? l ? S : ei.default : () => (0, B.default)(p);
+  t = null == p ? l ? S : ei.default : () => (0, F.default)(p);
   let I = null != p || g.length > 0,
     T = E ? eU.default.Messages.SHARE_YOUR_SCREEN : eU.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
     A = C || r || m,
@@ -473,7 +473,7 @@ class eW extends s.PureComponent {
       channel: l,
       voiceStates: i
     } = this.props;
-    return null != s ? null : (null == l ? void 0 : l.isGuildStageVoice()) && !(null != i.find(e => e.user.id === ec.default.getId() && (0, $.getAudienceRequestToSpeakState)(e.voiceState) === $.RequestToSpeakStates.ON_STAGE)) && (0, X.shouldShowStageMusicMuteButton)(l.id) ? (0, a.jsx)(eF, {}) : !n && t ? (0, a.jsx)(_.Tooltip, {
+    return null != s ? null : (null == l ? void 0 : l.isGuildStageVoice()) && !(null != i.find(e => e.user.id === ec.default.getId() && (0, $.getAudienceRequestToSpeakState)(e.voiceState) === $.RequestToSpeakStates.ON_STAGE)) && (0, X.shouldShowStageMusicMuteButton)(l.id) ? (0, a.jsx)(eB, {}) : !n && t ? (0, a.jsx)(_.Tooltip, {
       text: eU.default.Messages.NOISE_CANCELLATION_CPU_OVERUSE,
       tooltipClassName: ej.noiseCancellationTooltip,
       forceOpen: !0,
@@ -491,7 +491,7 @@ class eW extends s.PureComponent {
     }) : (0, a.jsx)(_.Popout, {
       position: "top",
       align: "center",
-      renderPopout: () => (0, a.jsx)(eB, {}),
+      renderPopout: () => (0, a.jsx)(eF, {}),
       children: (t, n) => {
         let {
           isShown: s
@@ -634,7 +634,7 @@ class eW extends s.PureComponent {
         })
       })
     }), ek(this, "handleCloseVoicePanelIntroduction", () => {
-      F.hideHotspot(eb.HotspotLocations.VOICE_PANEL_INTRODUCTION)
+      B.hideHotspot(eb.HotspotLocations.VOICE_PANEL_INTRODUCTION)
     }), ek(this, "renderVoicePanelIntroduction", () => (0, a.jsxs)("div", {
       className: i()(ej.voicePanelIntroductionWrapper, "theme-light"),
       children: [(0, a.jsx)(_.Heading, {

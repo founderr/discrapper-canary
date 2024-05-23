@@ -32,11 +32,11 @@ function S(e) {
   } = e, o = (0, E.useUID)(), {
     channelId: u,
     messageId: d
-  } = (0, p.useMessageIds)(), [T, I] = a.useState(""), [h, S] = a.useState(!1), C = "" !== T && h, A = a.useCallback(() => {
+  } = (0, p.useMessageIds)(), [T, I] = a.useState(""), [h, S] = a.useState(!1), C = "" !== T && h, g = a.useCallback(() => {
     I((0, m.getPollAnswerVotesTooltipText)(d, u, i))
-  }, [d, u, i]), g = a.useCallback(() => {
-    A(), S(!0)
-  }, [A]), M = a.useCallback(() => {
+  }, [d, u, i]), A = a.useCallback(() => {
+    g(), S(!0)
+  }, [g]), M = a.useCallback(() => {
     S(!1)
   }, []), R = a.useCallback(() => {
     (0, _.handleShowVotesForAnswer)({
@@ -46,10 +46,10 @@ function S(e) {
     })
   }, [u, d, i]);
   a.useEffect(() => {
-    if (h) return f.default.addReactChangeListener(A), () => {
-      f.default.removeReactChangeListener(A)
+    if (h) return f.default.addReactChangeListener(g), () => {
+      f.default.removeReactChangeListener(g)
     }
-  }, [h, A]);
+  }, [h, g]);
   let v = (0, s.jsx)(c.Text, {
     variant: "text-xs/semibold",
     color: "none",
@@ -71,9 +71,9 @@ function S(e) {
         "aria-label": !1,
         children: e => (0, s.jsx)(c.Button, {
           ...e,
-          onMouseEnter: g,
+          onMouseEnter: A,
           onMouseLeave: M,
-          onFocus: g,
+          onFocus: A,
           onBlur: M,
           onClick: R,
           className: N.voteCountButton,
@@ -120,7 +120,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function g(e) {
   let {
     answersInteraction: t,
     isSelected: n,
@@ -155,7 +155,7 @@ function A(e) {
   })).otherwise(() => null)
 }
 
-function g(e) {
+function A(e) {
   let {
     answer: t,
     isExpired: n,
@@ -188,7 +188,7 @@ function g(e) {
         label: t.votes,
         canShowVoterDetails: o,
         answerId: t.answerId
-      }), (0, s.jsx)(A, {
+      }), (0, s.jsx)(g, {
         answersInteraction: a,
         isSelected: u,
         didSelfVote: d,
@@ -213,7 +213,7 @@ function M(e) {
     answerClassName: N.answer,
     answersInteraction: n,
     canTapAnswers: l,
-    renderAnswerContent: e => (0, s.jsx)(g, {
+    renderAnswerContent: e => (0, s.jsx)(A, {
       answer: e,
       isExpired: t,
       answersInteraction: n,

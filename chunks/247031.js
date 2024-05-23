@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return B
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -306,7 +306,7 @@ class b extends l.PureComponent {
     })
   }
 }
-let B = o.default.connectStores([L.default, I.default, T.default], () => {
+let y = o.default.connectStores([L.default, I.default, T.default], () => {
   let {
     bans: e,
     guild: t,
@@ -321,7 +321,7 @@ let B = o.default.connectStores([L.default, I.default, T.default], () => {
   }
 })(b);
 
-function y() {
+function B() {
   var e;
   let {
     guild: t
@@ -333,5 +333,5 @@ function y() {
   }, {
     autoTrackExposure: !0
   });
-  return s ? (0, a.jsx)(A.default, {}) : (0, a.jsx)(B, {})
+  return s ? (0, a.jsx)(A.default, {}) : (0, a.jsx)(y, {})
 }

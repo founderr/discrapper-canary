@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("831267"),
   S = n("203965"),
   C = n("570907"),
-  A = n("294218"),
-  g = n("703656"),
+  g = n("294218"),
+  A = n("703656"),
   M = n("695346"),
   R = n("592125"),
   v = n("430824"),
@@ -179,7 +179,7 @@ function w(e) {
       className: i()(F.messageContainer, B.unloadedMessage, {
         [B.disabledMessage]: r
       }),
-      children: [(0, s.jsx)(A.default, {
+      children: [(0, s.jsx)(g.default, {
         message: f,
         channel: N,
         className: F.message,
@@ -210,7 +210,7 @@ function w(e) {
           })
         }) : null, (0, s.jsx)(E.Button, {
           onClick: () => {
-            (0, g.transitionTo)(j.Routes.CHANNEL(null == N ? void 0 : N.getGuildId(), l.channelId, l.messageId))
+            (0, A.transitionTo)(j.Routes.CHANNEL(null == N ? void 0 : N.getGuildId(), l.channelId, l.messageId))
           },
           size: E.Button.Sizes.MIN,
           color: E.Button.Colors.TRANSPARENT,

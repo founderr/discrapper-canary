@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("601964"),
   S = n("592125"),
   C = n("430824"),
-  A = n("496675"),
-  g = n("594174"),
+  g = n("496675"),
+  A = n("594174"),
   M = n("197409"),
   R = n("514342"),
   v = n("602623"),
@@ -165,7 +165,7 @@ function G(e) {
       })
     }),
     X = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    Z = (0, u.useStateFromStores)([A.default], () => null != X && A.default.can(L.Permissions.USE_EMBEDDED_ACTIVITIES, X), [X]),
+    Z = (0, u.useStateFromStores)([g.default], () => null != X && g.default.can(L.Permissions.USE_EMBEDDED_ACTIVITIES, X), [X]),
     {
       analyticsLocations: J
     } = (0, I.default)(T.default.INVITE_EMBED),
@@ -175,7 +175,7 @@ function G(e) {
       names: ["embedded_cover"]
     }),
     ee = (0, u.useStateFromStoresArray)([E.default], () => null != X ? E.default.getEmbeddedActivitiesForChannel(X.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [X, k.id]),
-    et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
+    et = (0, u.useStateFromStoresArray)([A.default], () => ee.map(e => A.default.getUser(e)), [ee]),
     en = d.state === L.InviteStates.ACCEPTING,
     es = null != W;
   if (null == W) {

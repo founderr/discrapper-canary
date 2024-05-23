@@ -28,10 +28,10 @@ function S(e) {
     message: t,
     channel: l,
     compact: S
-  } = e, C = (0, r.useStateFromStoresArray)([d.default], () => Array.from(d.default.getAllGuildStickers().values()).flat()).slice(0, 20), [A, g] = a.useState(null);
+  } = e, C = (0, r.useStateFromStoresArray)([d.default], () => Array.from(d.default.getAllGuildStickers().values()).flat()).slice(0, 20), [g, A] = a.useState(null);
   return (a.useEffect(() => {
     let e = setInterval(() => {
-      C.length > 0 && g(C[Math.floor(Math.random() * C.length)])
+      C.length > 0 && A(C[Math.floor(Math.random() * C.length)])
     }, 500);
     return () => clearInterval(e)
   }, [C]), null == l.guild_id) ? null : (0, s.jsxs)("div", {
@@ -84,9 +84,9 @@ function S(e) {
               action_type: "sticker"
             }), (0, I.sendRandomStickerOrEmoji)(t.id, l)
           },
-          children: null != A ? (0, s.jsx)(c.default, {
+          children: null != g ? (0, s.jsx)(c.default, {
             size: 32,
-            sticker: A
+            sticker: g
           }) : (0, s.jsx)(f.default, {})
         })
       })]

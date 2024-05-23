@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 });
 var s = n("735250");
@@ -25,14 +25,14 @@ var a = n("120356"),
   N = n("153124"),
   S = n("689938"),
   C = n("595497");
-let A = {
+let g = {
   top: 8,
   bottom: 8,
   left: -4,
   right: -4
 };
 
-function g(e) {
+function A(e) {
   let {
     channel: t,
     children: n,
@@ -42,7 +42,7 @@ function g(e) {
     toggleCollapsed: u
   } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, N.useUID)()));
   return (0, s.jsx)(o.FocusRing, {
-    offset: A,
+    offset: g,
     children: (0, s.jsxs)("div", {
       className: C.channelHeader,
       ...d,

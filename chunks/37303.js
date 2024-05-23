@@ -24,8 +24,8 @@ let T = e => {
     initiallyExpanded: T,
     contentPosition: I
   } = e, [p, h] = a.useState(!1), N = a.useCallback(() => h(!0), []), S = a.useCallback(() => h(!1), []), C = (0, r.useIsQuestExpired)(t), {
-    containerRef: A,
-    size: g,
+    containerRef: g,
+    size: A,
     height: M
   } = (0, E.useQuestCardSize)([t]), R = (0, i.useIsEligibleForConcurrentQuests)({
     location: _.QuestsExperimentLocations.QUESTS_CARD
@@ -54,7 +54,7 @@ let T = e => {
           })
         },
         ref: t => {
-          e.current = t, A.current = t
+          e.current = t, g.current = t
         },
         className: m.questsCard,
         onFocus: N,
@@ -66,7 +66,7 @@ let T = e => {
           isQuestExpired: C,
           location: n,
           quest: t,
-          size: g,
+          size: A,
           expansionSpring: v,
           isAnimating: O,
           isExpanded: x,
@@ -77,7 +77,7 @@ let T = e => {
           quest: t,
           isQuestExpired: C,
           location: n,
-          size: g,
+          size: A,
           isFocused: p,
           isExpanded: x,
           isAnimating: O,

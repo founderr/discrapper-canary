@@ -44,8 +44,8 @@ function M() {
       pendingBanner: l,
       pendingBio: M,
       pendingPronouns: v,
-      pendingGlobalName: L,
-      pendingAccentColor: D,
+      pendingGlobalName: D,
+      pendingAccentColor: L,
       pendingAvatarDecoration: P,
       pendingThemeColors: b,
       pendingProfileEffectId: j
@@ -72,7 +72,7 @@ function M() {
       pendingBio: U,
       pendingPronouns: v,
       pendingAvatar: s,
-      pendingGlobalName: L,
+      pendingGlobalName: D,
       pendingAvatarDecoration: P,
       pendingProfileEffectId: j
     };
@@ -91,7 +91,7 @@ function M() {
         profilePreview: (0, a.jsx)(m.default, {
           ...B,
           pendingThemeColors: b,
-          pendingAccentColor: D
+          pendingAccentColor: L
         }),
         children: (0, a.jsx)(R.default, {})
       }), !A.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(I.default, {

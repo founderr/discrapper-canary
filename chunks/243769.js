@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("885442"),
   S = n("981631"),
   C = n("616922"),
-  A = n("689938"),
-  g = n("439868");
+  g = n("689938"),
+  A = n("439868");
 
 function M(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -49,13 +49,13 @@ class R extends a.PureComponent {
         return (0, s.jsx)(o.Tooltip, {
           text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : T.default.getName(e.user),
           children: l => (0, s.jsx)(o.Clickable, {
-            className: e.unknownUser ? g.partyMember : g.partyMemberKnown,
+            className: e.unknownUser ? A.partyMember : A.partyMemberKnown,
             ...l,
             ...a,
             children: (0, s.jsx)(o.Avatar, {
               src: e.user.getAvatarURL(n, 24),
               size: o.AvatarSizes.SIZE_24,
-              className: i()(g.partyAvatar, t),
+              className: i()(A.partyAvatar, t),
               "aria-label": e.user.username
             })
           })
@@ -149,18 +149,18 @@ class v extends a.PureComponent {
     } = this.props;
     switch (e) {
       case S.ActivityActionTypes.LISTEN:
-        return A.default.Messages.INVITE_EMBED_INVITE_TO_LISTEN.format({
+        return g.default.Messages.INVITE_EMBED_INVITE_TO_LISTEN.format({
           name: t
         });
       case S.ActivityActionTypes.WATCH:
-        return A.default.Messages.INVITE_EMBED_INVITE_TO_WATCH.format({
+        return g.default.Messages.INVITE_EMBED_INVITE_TO_WATCH.format({
           name: t
         });
       case S.ActivityActionTypes.JOIN:
-        return A.default.Messages.INVITE_EMBED_INVITE_TO_JOIN_GROUP;
+        return g.default.Messages.INVITE_EMBED_INVITE_TO_JOIN_GROUP;
       case S.ActivityActionTypes.JOIN_REQUEST:
       default:
-        return A.default.Messages.INVITE_EMBED_ASK_TO_JOIN
+        return g.default.Messages.INVITE_EMBED_ASK_TO_JOIN
     }
   }
   renderPartyStatus() {
@@ -175,39 +175,39 @@ class v extends a.PureComponent {
     } = this.props, [u, d] = this.getPartySize();
     if (this.isDeadInvite()) switch (e) {
       case S.ActivityActionTypes.LISTEN:
-        return A.default.Messages.INVITE_EMBED_LISTEN_HAS_ENDED;
+        return g.default.Messages.INVITE_EMBED_LISTEN_HAS_ENDED;
       case S.ActivityActionTypes.WATCH:
-        return A.default.Messages.INVITE_EMBED_WATCH_HAS_ENDED;
+        return g.default.Messages.INVITE_EMBED_WATCH_HAS_ENDED;
       case S.ActivityActionTypes.JOIN:
       case S.ActivityActionTypes.JOIN_REQUEST:
       default:
-        return A.default.Messages.INVITE_EMBED_GAME_HAS_ENDED
+        return g.default.Messages.INVITE_EMBED_GAME_HAS_ENDED
     }
-    if (l && !a && e === S.ActivityActionTypes.JOIN) return A.default.Messages.INVITE_EMBED_JOIN_VIA_DESKTOP_APP;
+    if (l && !a && e === S.ActivityActionTypes.JOIN) return g.default.Messages.INVITE_EMBED_JOIN_VIA_DESKTOP_APP;
     if (this.isActionType(S.ActivityActionTypes.LISTEN) || this.isActionType(S.ActivityActionTypes.WATCH)) return null != r && null != r.details && null != r.state && (0, c.default)(r) ? [(0, s.jsx)("div", {
-      className: g.details,
+      className: A.details,
       children: (0, s.jsx)(o.Anchor, {
-        className: g.textLink,
+        className: A.textLink,
         onClick: this.handleOpenSpotifyTrack,
         children: r.details
       })
     }, "details"), (0, s.jsx)("div", {
-      className: g.state,
-      children: A.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
+      className: A.state,
+      children: g.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: r.state,
         artistsHook: (e, t) => null != r.state ? (0, s.jsx)(p.default, {
           artists: r.state,
-          linkClassName: g.textLink,
+          linkClassName: A.textLink,
           canOpen: null != r.sync_id,
           onOpenSpotifyArtist: this.handleOpenSpotifyArtist
         }, t) : null
       })
-    }, "state")] : this.isActionType(S.ActivityActionTypes.LISTEN) ? A.default.Messages.USER_ACTIVITY_LISTEN_ALONG : A.default.Messages.USER_ACTIVITY_WATCH_ALONG;
-    return this.isActionType(S.ActivityActionTypes.JOIN_REQUEST) ? this.isPartyFull() ? A.default.Messages.INVITE_EMBED_FULL_GROUP : A.default.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
+    }, "state")] : this.isActionType(S.ActivityActionTypes.LISTEN) ? g.default.Messages.USER_ACTIVITY_LISTEN_ALONG : g.default.Messages.USER_ACTIVITY_WATCH_ALONG;
+    return this.isActionType(S.ActivityActionTypes.JOIN_REQUEST) ? this.isPartyFull() ? g.default.Messages.INVITE_EMBED_FULL_GROUP : g.default.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
       number: d - u
-    }) : this.isInParty() ? A.default.Messages.INVITE_EMBED_IN_GROUP : t || n || a ? this.isPartyFull() ? A.default.Messages.INVITE_EMBED_FULL_GROUP : this.hasPartySize() ? A.default.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
+    }) : this.isInParty() ? g.default.Messages.INVITE_EMBED_IN_GROUP : t || n || a ? this.isPartyFull() ? g.default.Messages.INVITE_EMBED_FULL_GROUP : this.hasPartySize() ? g.default.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
       number: d - u
-    }) : A.default.Messages.JOIN : A.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+    }) : g.default.Messages.JOIN : g.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
       name: i
     })
   }
@@ -223,7 +223,7 @@ class v extends a.PureComponent {
       renderSpotifyJoinButton: u,
       renderCustomButton: d
     } = this.props, c = {
-      className: g.actionButton,
+      className: A.actionButton,
       size: o.Button.Sizes.SMALL
     }, f = null != d ? d(c) : null;
     return null != f ? f : !this.isDeadInvite() && this.isActionType(S.ActivityActionTypes.LISTEN) && null != l && null != r && null != i && (0, C.isSpotifyParty)(l) ? u({
@@ -234,24 +234,24 @@ class v extends a.PureComponent {
       ...c,
       ...(() => {
         if (!t && e && !this.isDeadInvite()) return {
-          children: A.default.Messages.USER_ACTIVITY_ACTION_DOWNLOAD_APP,
+          children: g.default.Messages.USER_ACTIVITY_ACTION_DOWNLOAD_APP,
           onClick: this.handleDownloadApp
         };
         if (this.canJoin()) return {
-          children: A.default.Messages.JOIN,
+          children: g.default.Messages.JOIN,
           onClick: this.handleJoin
         };
         if (this.canSync()) return {
-          children: A.default.Messages.JOIN,
+          children: g.default.Messages.JOIN,
           onClick: this.handleSync
         };
         if (this.canSendInvite()) return {
-          children: A.default.Messages.INVITE_EMBED_INVITE_TO_JOIN,
+          children: g.default.Messages.INVITE_EMBED_INVITE_TO_JOIN,
           onClick: this.handleInvite,
           disabled: a
         };
         return {
-          children: this.isActionType(S.ActivityActionTypes.JOIN_REQUEST) ? A.default.Messages.INVITE_EMBED_INVITE_TO_JOIN : A.default.Messages.JOIN,
+          children: this.isActionType(S.ActivityActionTypes.JOIN_REQUEST) ? g.default.Messages.INVITE_EMBED_INVITE_TO_JOIN : g.default.Messages.JOIN,
           disabled: !0
         }
       })(),
@@ -261,7 +261,7 @@ class v extends a.PureComponent {
   }
   renderMoreUsers(e, t, n) {
     return (0, s.jsx)("div", {
-      className: g.moreUsers,
+      className: A.moreUsers,
       children: e
     }, n)
   }
@@ -285,7 +285,7 @@ class v extends a.PureComponent {
     for (; o.length < d;) o.push(null);
     return (0, s.jsx)(h.default, {
       guildId: a,
-      className: g.partyMembers,
+      className: A.partyMembers,
       users: o,
       max: i > 0 ? Math.min(i, 6) : 6,
       renderUser: this.renderUser,
@@ -300,11 +300,11 @@ class v extends a.PureComponent {
       activity: a
     } = this.props, l = this.isActionType(S.ActivityActionTypes.JOIN) || this.isActionType(S.ActivityActionTypes.JOIN_REQUEST), u = this.isDeadInvite(), d = null;
     null == t || null == a || l ? !l && u && (d = (0, s.jsx)("div", {
-      className: g.artworkSpotifySessionEnded
+      className: A.artworkSpotifySessionEnded
     })) : d = (0, s.jsx)("img", {
       alt: "",
       src: t,
-      className: (0, m.getClass)(g, "artwork", this.getActionableMode())
+      className: (0, m.getClass)(A, "artwork", this.getActionableMode())
     });
     let f = null != a && null != d && null != a.assets && null != a.assets.large_text && "" !== a.assets.large_text && !u && (0, c.default)(a) ? a.assets.large_text : null,
       E = null != f ? (0, s.jsx)(o.Tooltip, {
@@ -323,44 +323,44 @@ class v extends a.PureComponent {
         }
       }) : d;
     return (0, s.jsxs)("div", {
-      className: i()(g.invite, e),
+      className: i()(A.invite, e),
       children: [(0, s.jsx)("div", {
-        className: g.coverImageWrapper,
+        className: A.coverImageWrapper,
         children: (0, s.jsx)("div", {
-          className: i()((0, m.getClass)(g, "coverImage", this.getActionableMode()), null != d ? g.blurred : null),
+          className: i()((0, m.getClass)(A, "coverImage", this.getActionableMode()), null != d ? A.blurred : null),
           style: {
             backgroundImage: null != t ? "url('".concat(t, "')") : void 0
           }
         })
       }), (0, s.jsxs)(I.default, {
-        className: g.fullHeight,
+        className: A.fullHeight,
         children: [(0, s.jsxs)(I.default, {
           direction: I.default.Direction.VERTICAL,
           children: [(0, s.jsx)("div", {
-            className: g.header,
+            className: A.header,
             children: this.renderHeaderText()
           }), (0, s.jsx)(I.default.Child, {
-            className: g.partyStatus,
+            className: A.partyStatus,
             children: this.renderPartyStatus()
           }), (0, s.jsxs)(I.default, {
             align: I.default.Align.END,
             children: [(0, s.jsxs)(I.default, {
               align: I.default.Align.CENTER,
-              className: g.actionAndParty,
+              className: A.actionAndParty,
               basis: 0,
               style: {
                 marginRight: 0
               },
               children: [this.renderActionButton(), this.renderParty()]
             }), null == d && l ? (0, s.jsx)("div", {
-              className: g.name,
+              className: A.name,
               children: n
             }) : null]
           })]
         }), E]
       }), (0, s.jsx)(o.Anchor, {
         href: _.default.getArticleURL(this.getHelpdeskArticleURL()),
-        className: g.helpIcon,
+        className: A.helpIcon,
         children: (0, s.jsx)(N.default, {
           color: r.default.unsafe_rawColors.PRIMARY_300.css,
           width: 12,
@@ -421,7 +421,7 @@ class v extends a.PureComponent {
         className: t,
         guildId: l
       }, n) : (0, s.jsx)("div", {
-        className: i()(g.partyMemberEmpty, t)
+        className: i()(A.partyMemberEmpty, t)
       }, n)
     })
   }

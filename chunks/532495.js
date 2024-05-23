@@ -32,15 +32,15 @@ var n = s("512722"),
   R = s("318661"),
   M = s("619914"),
   v = s("25990"),
-  L = s("594174"),
-  D = s("74538"),
+  D = s("594174"),
+  L = s("74538"),
   P = s("689938"),
   b = s("741129");
 
 function j() {
   var e, t, s, n, j, U, y, G;
-  let B = (0, i.useStateFromStores)([L.default], () => {
-      let e = L.default.getCurrentUser();
+  let B = (0, i.useStateFromStores)([D.default], () => {
+      let e = D.default.getCurrentUser();
       return l()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
     }),
     F = (0, i.useStateFromStores)([x.default], () => x.default.getUserProfile(B.id)),
@@ -62,7 +62,7 @@ function j() {
       }
     }),
     Q = (0, S.useGuildAutomodProfileQuarantineErrors)(),
-    q = D.default.canUsePremiumProfileCustomization(B),
+    q = L.default.canUsePremiumProfileCustomization(B),
     Z = (0, E.showRemoveAvatar)(k, B.avatar),
     X = (0, E.showRemoveBanner)(H, null == F ? void 0 : F.banner),
     J = "DefaultCustomizationSections";

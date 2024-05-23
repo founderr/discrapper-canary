@@ -23,8 +23,8 @@ var s, a = n("735250"),
   N = n("55563"),
   S = n("551428"),
   C = n("73346"),
-  A = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  A = n("689938"),
   M = n("422245");
 
 function R(e, t, n) {
@@ -45,8 +45,8 @@ class v extends(s = l.Component) {
     } = this.props;
     return {
       ...e,
-      section: null != t ? t : A.AnalyticsSections.APPLICATION_EMBED,
-      object: A.AnalyticsObjects.CARD
+      section: null != t ? t : g.AnalyticsSections.APPLICATION_EMBED,
+      object: g.AnalyticsObjects.CARD
     }
   }
   componentDidMount() {
@@ -63,7 +63,7 @@ class v extends(s = l.Component) {
       className: M.actionButton,
       color: o.Button.Colors.GREEN,
       size: o.Button.Sizes.SMALL,
-      children: g.default.Messages.GAME_ACTION_BUTTON_VIEW_IN_STORE
+      children: A.default.Messages.GAME_ACTION_BUTTON_VIEW_IN_STORE
     })
   }
   render() {
@@ -77,11 +77,11 @@ class v extends(s = l.Component) {
     if (null == e || null == t) return s ? l() : (0, a.jsx)(_.ResponsiveLoadingEmbedTile, {
       isHorizontal: r
     });
-    return e.productLine === A.SKUProductLines.COLLECTIBLES ? (0, a.jsx)(d.default, {
-      section: A.AnalyticsSections.APPLICATION_EMBED,
+    return e.productLine === g.SKUProductLines.COLLECTIBLES ? (0, a.jsx)(d.default, {
+      section: g.AnalyticsSections.APPLICATION_EMBED,
       children: this.renderApplicationTile(e, t)
     }) : (0, a.jsx)(d.default, {
-      section: A.AnalyticsSections.APPLICATION_EMBED,
+      section: g.AnalyticsSections.APPLICATION_EMBED,
       children: (0, a.jsx)(i.Link, {
         onClick: this.handleLinkClick,
         to: this.getStoreListingLocation(),
@@ -160,7 +160,7 @@ class v extends(s = l.Component) {
       });
       if (null == n) return null;
       let r = null != n && n.primarySkuId === s,
-        u = null != l && l.hasFlag(A.LibraryApplicationFlags.HIDDEN);
+        u = null != l && l.hasFlag(g.LibraryApplicationFlags.HIDDEN);
       return (0, a.jsxs)("div", {
         className: M.tileActions,
         children: [!r || u ? this.renderViewInStoreButton() : (0, a.jsx)(c.default, {
@@ -168,7 +168,7 @@ class v extends(s = l.Component) {
           customDisabledColor: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.SMALL,
           className: M.actionButton,
-          source: A.AnalyticsLocations.MESSAGE_EMBED,
+          source: g.AnalyticsLocations.MESSAGE_EMBED,
           onClick: this.handleActionButtonClick
         }), t && !u || e.premium ? null : (0, a.jsx)(f.default, {
           type: f.default.Types.EMBED,
@@ -180,7 +180,7 @@ class v extends(s = l.Component) {
   }
 }
 R(v, "defaultProps", {
-  renderFallback: A.NOOP
+  renderFallback: g.NOOP
 });
 let O = [N.default, h.default, p.default, S.default];
 

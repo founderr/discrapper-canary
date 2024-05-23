@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   handleDoubleClick: function() {
-    return A
+    return g
   }
 });
 var s = n("735250");
@@ -25,7 +25,7 @@ var a = n("120356"),
   N = n("981631"),
   S = n("176505"),
   C = n("504891");
-async function A() {
+async function g() {
   if ((0, m.isMac)() && m.isPlatformEmbedded) {
     var e, t, n;
     let s = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : "Maximize";
@@ -33,7 +33,7 @@ async function A() {
   }
 }
 
-function g(e) {
+function A(e) {
   let {
     children: t,
     className: n,
@@ -45,7 +45,7 @@ function g(e) {
     mobileToolbar: T,
     "aria-label": N,
     "aria-labelledby": S,
-    scrollable: g,
+    scrollable: A,
     role: M,
     hideSearch: R,
     showDivider: v
@@ -65,11 +65,11 @@ function g(e) {
       })
     }(),
     transparent: u,
-    onDoubleClick: A,
+    onDoubleClick: g,
     "aria-label": N,
     "aria-labelledby": S,
     role: M,
-    scrollable: g,
+    scrollable: A,
     children: t
   })
 }
@@ -84,7 +84,7 @@ function M(e) {
   } = e;
   return (0, s.jsx)(_.default, {
     className: n,
-    onDoubleClick: A,
+    onDoubleClick: g,
     "aria-label": a,
     "aria-labelledby": l,
     role: i,
@@ -103,7 +103,7 @@ function R(e) {
   });
   return (0, s.jsx)(u.AnalyticsLocationProvider, {
     value: a,
-    children: t ? (0, s.jsx)(g, {
+    children: t ? (0, s.jsx)(A, {
       ...n,
       className: i
     }) : (0, s.jsx)(M, {

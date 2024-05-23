@@ -46,8 +46,8 @@ t.default = e => {
     presenceCount: b,
     memberCount: U,
     keywords: j
-  } = l, [G, k] = s.useState(!1), [w, B] = s.useState(!1), {
-    analyticsLocations: F
+  } = l, [G, k] = s.useState(!1), [w, F] = s.useState(!1), {
+    analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
     splash: y,
@@ -77,15 +77,15 @@ t.default = e => {
             page: I.AnalyticsPages.GUILD_DISCOVERY,
             section: I.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
-          analyticsLocations: F
+          analyticsLocations: B
         });
         return
       }
-      B(!0);
+      F(!0);
       try {
         null != O && await O(l.id)
       } finally {
-        B(!1)
+        F(!1)
       }
     }
   };

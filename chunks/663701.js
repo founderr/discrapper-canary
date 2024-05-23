@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("699516"),
   k = n("923834"),
   w = n("55563"),
-  B = n("774343"),
-  F = n("517802"),
+  F = n("774343"),
+  B = n("517802"),
   H = n("436088"),
   V = n("427828"),
   Y = n("916187"),
@@ -126,7 +126,7 @@ let et = e => {
     return (0, a.jsx)(Q.LinkButton, {
       selected: t,
       route: n,
-      icon: F.default,
+      icon: B.default,
       iconClassName: i()(ee.activitiesBirthdayIcon, {
         [ee.activitiesBirthdayIconLight]: "light" === u
       }),
@@ -329,7 +329,7 @@ let eu = e => {
 };
 
 function ed() {
-  let e = (0, d.useStateFromStores)([B.default], () => B.default.getHomeLink()),
+  let e = (0, d.useStateFromStores)([F.default], () => F.default.getHomeLink()),
     t = (0, d.useStateFromStores)([w.default], () => {
       if (e === J.Routes.APPLICATION_STORE) return !0;
       let t = (0, q.getSKUIdFromURL)(e);

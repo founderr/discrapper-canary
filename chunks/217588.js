@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("514342"),
   S = n("605403"),
   C = n("626135"),
-  A = n("74538"),
-  g = n("453070"),
+  g = n("74538"),
+  A = n("453070"),
   M = n("926491"),
   R = n("378233"),
   v = n("419922"),
@@ -88,8 +88,8 @@ let F = e => {
       sticker: n,
       stickerPack: u
     });
-    (0, g.useFetchStickerPack)(n.pack_id);
-    let m = (0, g.useFilteredStickerPackCategories)(l);
+    (0, A.useFetchStickerPack)(n.pack_id);
+    let m = (0, A.useFilteredStickerPackCategories)(l);
     return (a.useEffect(() => {
       i()
     }, [c]), a.useEffect(() => {
@@ -139,10 +139,10 @@ let F = e => {
         closePopout: m,
         refreshPositionKey: N
       } = e,
-      [g, M] = a.useState(null),
+      [A, M] = a.useState(null),
       [R, O] = a.useState(!1),
       U = p.default.getCurrentUser(),
-      j = A.default.canUseCustomStickersEverywhere(U),
+      j = g.default.canUseCustomStickersEverywhere(U),
       F = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(n.guild_id)),
       G = null != F,
       [k, w] = a.useState(!1),
@@ -163,7 +163,7 @@ let F = e => {
       })()
     }, [n.id, G]);
     let W = n.guild_id === l.getGuildId(),
-      z = null != g,
+      z = null != A,
       Q = !1,
       q = "Custom Sticker Popout";
     j ? t = G ? W ? D.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : D.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? D.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : D.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (W ? t = D.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = D.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : z ? (t = D.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : (t = D.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
@@ -174,7 +174,7 @@ let F = e => {
     let X = !Q && !G && z && j;
     return (a.useEffect(() => {
       N()
-    }, [R, g]), a.useEffect(() => {
+    }, [R, A]), a.useEffect(() => {
       C.default.track(x.AnalyticEvents.OPEN_POPOUT, {
         type: q,
         ...K
@@ -183,9 +183,9 @@ let F = e => {
       className: y.popoutContent,
       children: [(() => {
         let e = async () => {
-          if (null == g || G) return;
+          if (null == A || G) return;
           m();
-          let e = g.id;
+          let e = A.id;
           try {
             await u.default.joinGuild(e), u.default.transitionToGuildSync(e)
           } catch {}
@@ -202,7 +202,7 @@ let F = e => {
             fullWidth: !0,
             buttonText: D.default.Messages.EMOJI_POPOUT_PREMIUM_CTA,
             onSubscribeModalClose: t => t ? e() : m(),
-            postSuccessGuild: G || null == g ? void 0 : g,
+            postSuccessGuild: G || null == A ? void 0 : A,
             premiumModalAnalyticsLocation: Y
           }), X && (0, s.jsx)(o.Button, {
             size: o.Button.Sizes.SMALL,
@@ -212,11 +212,11 @@ let F = e => {
             children: D.default.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON
           })]
         })
-      })(), (null != F || null != g) && (() => {
+      })(), (null != F || null != A) && (() => {
         var e;
         if (!z && !G) return;
-        let t = (null !== (e = null == g ? void 0 : g.stickers) && void 0 !== e ? e : []).slice(0, 13).filter(e => e.id !== n.id).slice(0, 12),
-          a = null != g ? c.default.createFromDiscoverableGuild(g) : c.default.createFromGuildRecord(F);
+        let t = (null !== (e = null == A ? void 0 : A.stickers) && void 0 !== e ? e : []).slice(0, 13).filter(e => e.id !== n.id).slice(0, 12),
+          a = null != A ? c.default.createFromDiscoverableGuild(A) : c.default.createFromGuildRecord(F);
         return (0, s.jsxs)("div", {
           className: y.guildSection,
           children: [(0, s.jsx)(o.FormTitle, {
@@ -313,7 +313,7 @@ t.default = e => {
     channel: n,
     closePopout: a,
     refreshPositionKey: l
-  } = e, [i, r] = (0, g.useStickerForRenderableSticker)(t, !0);
+  } = e, [i, r] = (0, A.useStickerForRenderableSticker)(t, !0);
   if (null != i && (0, R.isStandardSticker)(i)) return (0, s.jsx)(F, {
     sticker: i,
     closePopout: a,

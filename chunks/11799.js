@@ -25,8 +25,8 @@ let f = e => {
       loading: N,
       items: S,
       hasMore: C,
-      cursor: A,
-      errored: g
+      cursor: g,
+      errored: A
     } = (0, a.useStateFromStoresObject)([u.default], () => ({
       initialized: u.default.initialized,
       loading: u.default.loading,
@@ -46,8 +46,8 @@ let f = e => {
     }, [t, h]);
     let v = (0, i.default)();
     s.useEffect(() => () => {
-      f ? !v() && (g || S.length > 100) && (0, o.resetNotificationCenter)() : n && S.length > 100 && (0, o.resetNotificationCenter)()
-    }, [n, S, f, v, g]), s.useEffect(() => {
+      f ? !v() && (A || S.length > 100) && (0, o.resetNotificationCenter)() : n && S.length > 100 && (0, o.resetNotificationCenter)()
+    }, [n, S, f, v, A]), s.useEffect(() => {
       let e = m && t;
       (!h || e) && (0, o.fetchNotificationCenterItems)({
         limit: null != _ ? _ : E ? 8 : 20,
@@ -57,8 +57,8 @@ let f = e => {
       })
     }, [h, m, t, E, M, R, _]);
     let O = s.useCallback(async e => {
-      !T.current && h && C && null != A && (e || !g) && (T.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
-        after: A,
+      !T.current && h && C && null != g && (e || !A) && (T.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
+        after: g,
         with_mentions: E,
         roles_filter: M,
         everyone_filter: R,
@@ -66,7 +66,7 @@ let f = e => {
       }, () => {
         T.current = !1
       }), p(!1))
-    }, [h, C, A, g, E, M, R]);
+    }, [h, C, g, A, E, M, R]);
     return {
       initialized: h,
       loading: N,
@@ -77,7 +77,7 @@ let f = e => {
       setReadNotifItemToAcked: e => {
         !e.acked && (e.acked = !0)
       },
-      errored: g
+      errored: A
     }
   },
   E = () => {

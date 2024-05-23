@@ -15,8 +15,8 @@ var s = n("512722"),
   c = n("314897"),
   f = n("896797"),
   E = n("626135"),
-  _ = n("954824"),
-  I = n("981631");
+  I = n("954824"),
+  _ = n("981631");
 
 function p(e) {
   let t = function(e) {
@@ -34,11 +34,11 @@ function p(e) {
       return "discord://"
     }(e),
     n = (0, u.parseDynamicLink)(t);
-  null != n && E.default.track(I.AnalyticEvents.DEEP_LINK_CLICKED, {
+  null != n && E.default.track(_.AnalyticEvents.DEEP_LINK_CLICKED, {
     fingerprint: (0, o.maybeExtractId)(n.fingerprint),
     attempt_id: n.attemptId,
     source: n.utmSource
-  }), _.default.launch(t, e => {
+  }), I.default.launch(t, e => {
     !e && (0, d.replaceWith)(f.default.fallbackRoute)
   })
 }

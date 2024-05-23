@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("76535"),
   S = n("866104"),
   C = n("886176"),
-  A = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  A = n("689938"),
   M = n("98742");
 
 function R(e) {
@@ -40,9 +40,9 @@ function R(e) {
   } = (0, E.useFetchGuildProductListingsForGuild)(n), x = (0, E.useGuildProductsForGuild)(n, {
     publishedOnly: !0
   }), L = a.useCallback(async () => {
-    h.default.track(A.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
+    h.default.track(g.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
       ...(0, c.collectGuildAnalyticsMetadata)(n)
-    }), await (0, _.default)(A.Routes.SERVER_SHOP(n))
+    }), await (0, _.default)(g.Routes.SERVER_SHOP(n))
   }, [n]);
   (0, f.default)({
     type: r.ImpressionTypes.VIEW,
@@ -70,14 +70,14 @@ function R(e) {
         variant: "heading-sm/semibold",
         color: "interactive-normal",
         className: M.serverShopLabelText,
-        children: g.default.Messages.GUILD_SHOP_CHANNEL_LABEL
+        children: A.default.Messages.GUILD_SHOP_CHANNEL_LABEL
       })]
     }), (0, s.jsx)(I.default, {
       size: 16
     }), (0, s.jsx)(d.Heading, {
       variant: "heading-md/semibold",
       color: "text-normal",
-      children: g.default.Messages.GUILD_STORE_HERO_TITLE.format({
+      children: A.default.Messages.GUILD_STORE_HERO_TITLE.format({
         guildName: l.name
       })
     }), (0, s.jsx)(I.default, {
@@ -101,7 +101,7 @@ function R(e) {
           children: (0, s.jsx)(d.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            children: g.default.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({
+            children: A.default.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({
               listingCount: x.length
             })
           })
@@ -109,7 +109,7 @@ function R(e) {
           children: (0, s.jsx)(d.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            children: g.default.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({
+            children: A.default.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({
               createdYear: D.getFullYear()
             })
           })
@@ -125,7 +125,7 @@ function R(e) {
           }), (0, s.jsx)(d.Text, {
             variant: "text-sm/medium",
             color: "always-white",
-            children: g.default.Messages.GUILD_SHOP_EMBED_CTA
+            children: A.default.Messages.GUILD_SHOP_EMBED_CTA
           })]
         })
       })]

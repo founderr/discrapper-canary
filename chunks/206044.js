@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("113434"),
   S = n("497505"),
   C = n("918701"),
-  A = n("566078"),
-  g = n("685613"),
+  g = n("566078"),
+  A = n("685613"),
   M = n("611855"),
   R = n("644646"),
   v = n("670638"),
@@ -92,7 +92,7 @@ t.default = e => {
     year: "numeric",
     month: "long",
     day: "numeric"
-  }), ee = (0, N.useQuestFormattedDate)(A.SharedQuestFields.build(u.config).rewardsExpireAt, {
+  }), ee = (0, N.useQuestFormattedDate)(g.SharedQuestFields.build(u.config).rewardsExpireAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -175,9 +175,9 @@ t.default = e => {
               className: D.headerCollapsedContentCopyWrapper,
               children: [(0, s.jsxs)("div", {
                 className: D.headerCollapsedContentCopyLogos,
-                children: [(0, s.jsx)(g.default, {
+                children: [(0, s.jsx)(A.default, {
                   className: D.partnerBranding,
-                  gameTileSize: g.GameTileSizes.MEDIUM,
+                  gameTileSize: A.GameTileSizes.MEDIUM,
                   quest: u,
                   theme: K
                 }), (0, s.jsx)(M.default, {
@@ -209,9 +209,9 @@ t.default = e => {
             className: D.headerExpandedWrapper,
             children: [(0, s.jsxs)("div", {
               className: D.iconLogotypeContainer,
-              children: [(0, s.jsx)(g.default, {
+              children: [(0, s.jsx)(A.default, {
                 className: D.partnerBranding,
-                gameTileSize: g.GameTileSizes.MEDIUM,
+                gameTileSize: A.GameTileSizes.MEDIUM,
                 quest: u,
                 theme: K
               }), (0, s.jsx)(M.default, {

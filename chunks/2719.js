@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("594174"),
   M = s("808268"),
   v = s("759231"),
-  L = s("572004"),
-  D = s("51144"),
+  D = s("572004"),
+  L = s("51144"),
   P = s("998502"),
   b = s("695346"),
   j = s("461877"),
@@ -138,7 +138,7 @@ function V(e) {
   let {
     user: l,
     className: r
-  } = e, o = (0, m.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, _] = n.useState(!1);
+  } = e, o = (0, m.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = L.default.getGlobalName(l), E = n.useRef(null), [T, _] = n.useState(!1);
   return n.useEffect(() => {
     _(null != E.current && E.current.scrollWidth > E.current.clientWidth)
   }, [S]), (0, a.jsxs)("div", {
@@ -361,7 +361,7 @@ function z(e) {
     id: t.id,
     label: F.default.Messages.COPY_ID_USER
   });
-  return b.DeveloperMode.useSetting() && L.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
+  return b.DeveloperMode.useSetting() && D.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
     renderPopout: e => {
       let {
         closePopout: t

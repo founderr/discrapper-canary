@@ -35,7 +35,7 @@ function v(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class L extends n.PureComponent {
+class D extends n.PureComponent {
   componentWillUnmount() {
     this._copyModeTimeout.stop()
   }
@@ -112,7 +112,7 @@ class L extends n.PureComponent {
     })
   }
 }
-class D extends n.PureComponent {
+class L extends n.PureComponent {
   componentDidMount() {
     this._loadedAt = Date.now()
   }
@@ -209,7 +209,7 @@ class D extends n.PureComponent {
         children: r ? (0, a.jsx)(d.Spinner, {
           className: M.spinner
         }) : (0, a.jsxs)(n.Fragment, {
-          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(L, {
+          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(D, {
             giftCode: e,
             sku: i,
             hideCode: o
@@ -265,4 +265,4 @@ t.default = r.default.connectStores([m.default, _.default, T.default, c.default,
     subscriptionPlan: null != s ? (0, O.getOrFetchSubscriptionPlan)(s) : null,
     giftCodes: l
   }
-})(D)
+})(L)

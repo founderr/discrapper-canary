@@ -48,8 +48,8 @@ function C(e) {
     null != t && G(t.name), D(e)
   }
   let b = (0, _.useRoleSubscriptionSettingsDisabled)(),
-    B = (0, d.useUID)(),
     y = (0, d.useUID)(),
+    B = (0, d.useUID)(),
     F = (0, d.useUID)();
   return (0, a.jsxs)(f.default, {
     title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BASIC_INFO_SECTION_TITLE,
@@ -60,14 +60,14 @@ function C(e) {
         className: h.formSplitHalf,
         children: (0, a.jsx)(i.FormSection, {
           title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_TITLE,
-          titleId: B,
+          titleId: y,
           disabled: b,
           children: (0, a.jsx)(i.TextInput, {
             placeholder: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_PLACEHOLDER,
             value: R,
             inputClassName: g.formInput,
             onChange: x,
-            "aria-labelledby": B,
+            "aria-labelledby": y,
             disabled: b
           })
         })
@@ -75,7 +75,7 @@ function C(e) {
         className: h.formSplitHalf,
         children: (0, a.jsx)(i.FormSection, {
           title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_TITLE,
-          titleId: y,
+          titleId: B,
           disabled: b,
           children: (0, a.jsx)(i.SingleSelect, {
             options: U,
@@ -86,7 +86,7 @@ function C(e) {
             onChange: O,
             maxVisibleItems: 5,
             look: i.SelectLooks.CUSTOM,
-            "aria-labelledby": y
+            "aria-labelledby": B
           })
         })
       })]

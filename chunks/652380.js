@@ -103,9 +103,9 @@ let O = {
 
 function x() {
   var e, t;
-  let [s, l] = n.useState(O), [N, x] = n.useState(g.UserState.UNENROLLED), [R, M] = n.useState(s.config.variants), [v, L] = n.useState(!1);
+  let [s, l] = n.useState(O), [N, x] = n.useState(g.UserState.UNENROLLED), [R, M] = n.useState(s.config.variants), [v, D] = n.useState(!1);
 
-  function D(e, t) {
+  function L(e, t) {
     l({
       ...s,
       config: {
@@ -184,31 +184,31 @@ function x() {
       children: [(0, a.jsx)(_.default, {
         title: "Game Tile Asset",
         assetKey: "gameTile",
-        onFileChange: D,
+        onFileChange: L,
         filters: C,
         initialValue: s.config.assets.gameTile
       }), (0, a.jsx)(_.default, {
         title: "Logotype",
         assetKey: "logotype",
-        onFileChange: D,
+        onFileChange: L,
         filters: h,
         initialValue: s.config.assets.logotype
       }), (0, a.jsx)(_.default, {
         title: "Quest Bar Hero Asset",
         assetKey: "questBarHero",
-        onFileChange: D,
+        onFileChange: L,
         filters: p,
         initialValue: s.config.assets.questBarHero
       }), (0, a.jsx)(_.default, {
         title: "Reward Tile Asset",
         assetKey: "rewardTile",
-        onFileChange: D,
+        onFileChange: L,
         filters: p,
         initialValue: s.config.assets.rewardTile
       }), (0, a.jsx)(_.default, {
         title: "Gift Inventory Hero",
         assetKey: "hero",
-        onFileChange: D,
+        onFileChange: L,
         filters: p,
         initialValue: s.config.assets.hero
       })]
@@ -383,7 +383,7 @@ function x() {
           children: (0, a.jsx)(i.FormSwitch, {
             value: v,
             onChange: function(e) {
-              L(e)
+              D(e)
             },
             hideBorder: !0,
             children: "Is Participating:"

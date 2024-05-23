@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return m
   },
   DEFAULT_MEDIA_MAX_HEIGHT: function() {
-    return g
+    return A
   },
   DEFAULT_MEDIA_MAX_WIDTH: function() {
-    return A
+    return g
   },
   SafetyHubAnalyticsActionSource: function() {
     return E
@@ -70,8 +70,8 @@ p(S, "ICON_TYPE", "icon_type"), p(S, "HEADER", "header"), p(S, "BODY", "body"), 
   SPAM: I.AnalyticsSections.APPEAL_INGESTION_SPAM
 }), (r = _ || (_ = {}))[r.DIDNT_VIOLATE_POLICY = 0] = "DIDNT_VIOLATE_POLICY", r[r.TOO_STRICT_UNFAIR = 1] = "TOO_STRICT_UNFAIR", r[r.DONT_AGREE_PENALTY = 2] = "DONT_AGREE_PENALTY", r[r.SOMETHING_ELSE = 3] = "SOMETHING_ELSE";
 let C = [0, 1, 2, 3],
-  A = 372,
-  g = 279;
+  g = 372,
+  A = 279;
 (o = m || (m = {})).SPEED_BUMP = "speed-bump", o.COLLECT_SIGNAL = "collect-signal", o.CONFIRM_SUBMISSION = "confirm-submission", o.REQUEST_SENT = "request-sent", o.THANKS = "thanks";
 let M = {
     "speed-bump": {

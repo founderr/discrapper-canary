@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("933557"),
   S = n("471445"),
   C = n("592125"),
-  A = n("271383"),
-  g = n("699516"),
+  g = n("271383"),
+  A = n("699516"),
   M = n("250758"),
   R = n("944486"),
   v = n("914010"),
@@ -63,8 +63,8 @@ let H = f()("2015-05-15").local(),
     });
     let u = x.default.getUser(r.id),
       d = C.default.getChannel(e),
-      c = (null == d ? void 0 : d.isPrivate()) ? g.default.getNickname(r.id) : null,
-      f = null !== (l = null !== (a = A.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== l ? l : b.default.getName(r),
+      c = (null == d ? void 0 : d.isPrivate()) ? A.default.getNickname(r.id) : null,
+      f = null !== (l = null !== (a = g.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== l ? l : b.default.getName(r),
       E = null !== (i = null == u ? void 0 : u.getAvatarURL(e, 20)) && void 0 !== i ? i : r.getAvatarURL(null == d ? void 0 : d.guild_id, 20);
     return [(0, s.jsx)("img", {
       alt: "",
@@ -95,10 +95,10 @@ let H = f()("2015-05-15").local(),
       children: [null != r ? (0, s.jsx)(r, {
         className: k.searchResultChannelIcon
       }) : null, (0, s.jsx)("strong", {
-        children: (0, N.computeChannelName)(a, x.default, g.default)
+        children: (0, N.computeChannelName)(a, x.default, A.default)
       }), null != i ? (0, s.jsx)("span", {
         className: k.searchResultChannelCategory,
-        children: (0, N.computeChannelName)(i, x.default, g.default)
+        children: (0, N.computeChannelName)(i, x.default, A.default)
       }) : null]
     })
   },

@@ -184,7 +184,7 @@ function b(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     guildId: t,
     roleId: s,
@@ -236,7 +236,7 @@ function B(e) {
   })
 }
 
-function y(e) {
+function B(e) {
   let {
     query: t,
     setQuery: s,
@@ -309,7 +309,7 @@ function F(e) {
             role: n,
             selectedSection: M.GuildSettingsRoleEditSections.MEMBERS,
             setSelectedSection: u
-          }), (0, a.jsx)(y, {
+          }), (0, a.jsx)(B, {
             query: c,
             setQuery: E,
             locked: m,
@@ -321,7 +321,7 @@ function F(e) {
           }) : null]
         })
       })
-    }), (0, a.jsx)(B, {
+    }), (0, a.jsx)(y, {
       headerHeight: _ + 8,
       query: c,
       guildId: t.id,

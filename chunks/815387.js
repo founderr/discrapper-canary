@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("225890"),
   S = n("434404"),
   C = n("507435"),
-  A = n("504733"),
-  g = n("563959"),
+  g = n("504733"),
+  A = n("563959"),
   M = n("703656"),
   R = n("471253"),
   v = n("565799"),
@@ -74,9 +74,9 @@ var s = n("735250"),
   eN = n("981631"),
   eS = n("70722"),
   eC = n("689938"),
-  eA = n("951619");
+  eg = n("951619");
 
-function eg(e) {
+function eA(e) {
   let {
     message: t,
     channel: n,
@@ -314,10 +314,10 @@ let eR = Object.freeze({
       })]
     })
   },
-  [eN.MessageTypes.GUILD_BOOST]: eg,
-  [eN.MessageTypes.GUILD_BOOST_TIER_1]: eg,
-  [eN.MessageTypes.GUILD_BOOST_TIER_2]: eg,
-  [eN.MessageTypes.GUILD_BOOST_TIER_3]: eg,
+  [eN.MessageTypes.GUILD_BOOST]: eA,
+  [eN.MessageTypes.GUILD_BOOST_TIER_1]: eA,
+  [eN.MessageTypes.GUILD_BOOST_TIER_2]: eA,
+  [eN.MessageTypes.GUILD_BOOST_TIER_3]: eA,
   [eN.MessageTypes.CHANNEL_FOLLOW_ADD]: function(e) {
     let {
       message: t,
@@ -591,8 +591,8 @@ let eR = Object.freeze({
         compact: u,
         usernameHook: d
       }), _ ? (0, s.jsxs)(i.Button, {
-        wrapperClassName: eA.inviteToSpeakButtonWrapper,
-        innerClassName: eA.inviteToSpeakButtonInner,
+        wrapperClassName: eg.inviteToSpeakButtonWrapper,
+        innerClassName: eg.inviteToSpeakButtonInner,
         look: i.Button.Looks.FILLED,
         color: i.Button.Colors.PRIMARY,
         onClick: () => {
@@ -622,9 +622,9 @@ let eR = Object.freeze({
       usernameHook: l
     })
   },
-  [eN.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: A.default,
-  [eN.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED]: g.PrivateChannelIntegrationAddedSystemMessage,
-  [eN.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: g.PrivateChannelIntegrationRemovedSystemMessage,
+  [eN.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: g.default,
+  [eN.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED]: A.PrivateChannelIntegrationAddedSystemMessage,
+  [eN.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: A.PrivateChannelIntegrationRemovedSystemMessage,
   [eN.MessageTypes.PREMIUM_REFERRAL]: void 0,
   [eN.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT]: function(e) {
     let {

@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("533244"),
   S = n("825829"),
   C = n("226192"),
-  A = n("36459"),
-  g = n("434404"),
+  g = n("36459"),
+  A = n("434404"),
   M = n("348238"),
   R = n("103575"),
   v = n("204197"),
@@ -228,14 +228,14 @@ function z(e) {
     raidDatetime: d,
     dmsSent: m,
     raidType: I,
-    resolvedReason: A
-  } = (0, S.extractAutomodNotificationFields)(l), g = (0, f.useStateFromStores)([O.default], () => O.default.getChannel(l.channel_id), [l.channel_id]), R = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
+    resolvedReason: g
+  } = (0, S.extractAutomodNotificationFields)(l), A = (0, f.useStateFromStores)([O.default], () => O.default.getChannel(l.channel_id), [l.channel_id]), R = null !== (t = null == A ? void 0 : A.guild_id) && void 0 !== t ? t : null, {
     incidentData: v,
     shouldShowIncidentActions: x
   } = (0, p.useGuildIncidentsState)(R), L = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
-    let e = null == g ? void 0 : g.guild_id;
+    let e = null == A ? void 0 : A.guild_id;
     null != e && (0, C.openRaidResolveModal)(l.id, e)
-  }, [l.id, g]), j = I === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
+  }, [l.id, A]), j = I === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
   return (0, s.jsx)(q, {
     compact: i,
     header: (0, s.jsxs)(a.Fragment, {
@@ -341,7 +341,7 @@ function z(e) {
           children: (0, s.jsx)(T.Text, {
             variant: "text-xs/medium",
             color: "text-link",
-            children: (0, S.getRaidAlertResolveCTAText)(A)
+            children: (0, S.getRaidAlertResolveCTAText)(g)
           })
         })
       })]
@@ -389,8 +389,8 @@ function Q(e) {
       className: w.dotSeparatedRow,
       children: [(0, s.jsx)(T.Button, {
         onClick: function() {
-          null != i && null != u && (0, A.removeMentionRaidRestrictionWithFeedback)(i, u, () => {
-            (0, I.dismissCurrentNotice)(d), (0, A.clearMentionRaidDetected)(i)
+          null != i && null != u && (0, g.removeMentionRaidRestrictionWithFeedback)(i, u, () => {
+            (0, I.dismissCurrentNotice)(d), (0, g.clearMentionRaidDetected)(i)
           })
         },
         color: T.Button.Colors.LINK,
@@ -407,7 +407,7 @@ function Q(e) {
         })
       }), (0, s.jsx)(H, {}), (0, s.jsx)(T.Button, {
         onClick: function() {
-          null != i && g.default.open(i, F.GuildSettingsSections.GUILD_AUTOMOD, void 0, F.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM)
+          null != i && A.default.open(i, F.GuildSettingsSections.GUILD_AUTOMOD, void 0, F.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM)
         },
         color: T.Button.Colors.LINK,
         look: T.Button.Looks.LINK,

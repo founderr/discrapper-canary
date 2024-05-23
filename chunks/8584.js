@@ -158,7 +158,7 @@ let D = (e, t, s, a) => {
       })]
     })
   },
-  B = () => {
+  y = () => {
     let e = (0, n.jsx)(E.Tooltip, {
       text: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT_DISCLAIMER,
       children: e => (0, n.jsx)(f.default, {
@@ -170,7 +170,7 @@ let D = (e, t, s, a) => {
       children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT, " ", e]
     })
   },
-  y = () => {
+  B = () => {
     let e = (0, n.jsx)(E.Tooltip, {
       text: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_NEXT_PAYMENT_DISCLAIMER,
       children: e => (0, n.jsx)(f.default, {
@@ -220,7 +220,7 @@ let D = (e, t, s, a) => {
   }, {
     key: "amount",
     cellClassName: o()(M.amountColumn, M.cellAlignRight),
-    renderHeader: () => (0, n.jsx)(B, {}),
+    renderHeader: () => (0, n.jsx)(y, {}),
     render(e, t) {
       let {
         expandedRows: s
@@ -239,7 +239,7 @@ let D = (e, t, s, a) => {
   }, {
     key: "status",
     cellClassName: o()(M.statusColumn, M.cellAlignRight),
-    renderHeader: () => (0, n.jsx)(y, {}),
+    renderHeader: () => (0, n.jsx)(B, {}),
     render(e) {
       let {
         ppgStatus: t,

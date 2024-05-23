@@ -46,8 +46,8 @@ function L(e) {
     dropdownsAllowed: G
   } = (0, E.useOnboardingDropdownExperiment)(s.id), U = (0, r.useStateFromStores)([f.default], () => f.default.editedDefaultChannelIds), P = G ? h.DROPDOWN_MAX_NUM_OPTIONS : h.MULTIPLE_CHOICE_MAX_NUM_OPTIONS, {
     drag: b,
-    dragSourcePosition: B,
-    drop: y,
+    dragSourcePosition: y,
+    drop: B,
     setIsDraggable: F
   } = (0, d.default)({
     type: "ONBOARDING_PROMPT_CARD",
@@ -74,11 +74,11 @@ function L(e) {
       onBlur: () => Y(!1),
       onMouseLeave: () => Y(!1),
       className: i()(R.container, {
-        [R.dropIndicatorBefore]: null != B && g < B,
-        [R.dropIndicatorAfter]: null != B && g > B,
+        [R.dropIndicatorBefore]: null != y && g < y,
+        [R.dropIndicatorAfter]: null != y && g > y,
         [R.containerFocused]: V
       }),
-      ref: e => b(y(e)),
+      ref: e => b(B(e)),
       children: [(0, a.jsx)("div", {
         className: R.dragContainer,
         onMouseEnter: () => F(!0),
@@ -124,11 +124,11 @@ function L(e) {
       onFocus: () => Y(!0),
       onBlur: () => Y(!1),
       className: i()(R.container, {
-        [R.dropIndicatorBefore]: null != B && g < B,
-        [R.dropIndicatorAfter]: null != B && g > B,
+        [R.dropIndicatorBefore]: null != y && g < y,
+        [R.dropIndicatorAfter]: null != y && g > y,
         [R.containerFocused]: V
       }),
-      ref: e => b(y(e)),
+      ref: e => b(B(e)),
       children: [(0, a.jsx)("div", {
         className: R.dragContainer,
         onMouseEnter: () => F(!0),

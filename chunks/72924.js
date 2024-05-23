@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   openSKUPaymentModal: function() {
-    return A
+    return g
   }
 });
 var s = n("735250");
@@ -83,7 +83,7 @@ let C = {
   isGift: !1
 };
 
-function A(e, t, a) {
+function g(e, t, a) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
     u = Promise.resolve();
   !I.default.hasFetchedPaymentSources && (u = o.fetchPaymentSources());

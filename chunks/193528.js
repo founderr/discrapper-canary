@@ -32,7 +32,7 @@ function I(e) {
     colorPickerMiddle: C,
     colorPickerFooter: p,
     showEyeDropper: A
-  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, _.isColorDark)(l), v = (0, o.int2hex)(l), L = v === x ? R : v, D = (0, S.getColor)(M ? f.Color.WHITE_500 : f.Color.PRIMARY_530), P = (0, c.default)(C), b = (0, c.default)(p), [j, U] = n.useState((0, r.v4)());
+  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, _.isColorDark)(l), v = (0, o.int2hex)(l), D = v === x ? R : v, L = (0, S.getColor)(M ? f.Color.WHITE_500 : f.Color.PRIMARY_530), P = (0, c.default)(C), b = (0, c.default)(p), [j, U] = n.useState((0, r.v4)());
   return n.useEffect(() => {
     (P !== C || b !== p) && U((0, r.v4)())
   }, [p, C, b, P]), (0, a.jsx)(u.Popout, {
@@ -63,7 +63,7 @@ function I(e) {
           onClick: N ? f.NOOP : t,
           style: {
             backgroundColor: v,
-            borderColor: L
+            borderColor: D
           },
           className: g.swatch,
           "aria-label": m.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
@@ -74,7 +74,7 @@ function I(e) {
             className: g.editPencilIcon,
             width: 14,
             height: 14,
-            color: D
+            color: L
           })
         }), h]
       })

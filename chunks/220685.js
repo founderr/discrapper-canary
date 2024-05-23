@@ -43,14 +43,14 @@ let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
     } = e, d = (0, p.useSubscriptionsSettings)(n.id), {
       loading: c,
       updateSubscriptionsSettings: g
-    } = (0, p.useUpdateSubscriptionsSettings)(), [O, U] = l.useState(n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE)), [P, b] = l.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : G), [B, y] = l.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == B || null != B.match(j), [H, k] = l.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), w = l.useRef(null == d ? void 0 : d.store_page_slug).current, V = O !== n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && P !== G || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color) || B !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
+    } = (0, p.useUpdateSubscriptionsSettings)(), [O, U] = l.useState(n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE)), [P, b] = l.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : G), [y, B] = l.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == y || null != y.match(j), [H, k] = l.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), w = l.useRef(null == d ? void 0 : d.store_page_slug).current, V = O !== n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && P !== G || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color) || y !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
       o()(null != d, "Settings must be defined");
       let e = {};
-      O !== n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = O), ((null == d ? void 0 : d.store_page_primary_color) == null && P !== G || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = P), B !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = B), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u().isEmpty(e) && (await g(n.id, e), "store_page_enabled" in e && L.default.track(A.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
+      O !== n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = O), ((null == d ? void 0 : d.store_page_primary_color) == null && P !== G || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = P), y !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = y), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u().isEmpty(e) && (await g(n.id, e), "store_page_enabled" in e && L.default.track(A.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
         enabled: O,
         ...(0, m.collectGuildAnalyticsMetadata)(n.id)
       }))
-    }, W = A.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(w), z = null != B && B === (null == d ? void 0 : d.store_page_trailer_url), {
+    }, W = A.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(w), z = null != y && y === (null == d ? void 0 : d.store_page_trailer_url), {
       shouldRestrictUpdatingCreatorMonetizationSettings: K
     } = (0, N.useShouldRestrictUpdatingCreatorMonetizationSettings)(n.id), Z = K || !F;
     return (0, a.jsxs)("div", {
@@ -126,8 +126,8 @@ let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
           disabled: K,
           children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_DESCRIPTION
         }), (0, a.jsx)(I.TextInput, {
-          value: null != B ? B : void 0,
-          onChange: e => y("" === e ? null : e),
+          value: null != y ? y : void 0,
+          onChange: e => B("" === e ? null : e),
           error: F ? null : M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_BAD_LINK,
           placeholder: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_PLACEHOLDER,
           className: D.trailerInputWrapper,
@@ -186,7 +186,7 @@ let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             submitting: c,
             onReset: () => {
               var e, t;
-              U(n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE)), b(null !== (e = null == d ? void 0 : d.store_page_primary_color) && void 0 !== e ? e : G), y(null == d ? void 0 : d.store_page_trailer_url), k(null !== (t = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== t && t)
+              U(n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE)), b(null !== (e = null == d ? void 0 : d.store_page_primary_color) && void 0 !== e ? e : G), B(null == d ? void 0 : d.store_page_trailer_url), k(null !== (t = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== t && t)
             },
             onSave: Y,
             disabled: Z

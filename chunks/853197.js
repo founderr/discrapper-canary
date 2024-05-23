@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return C
   },
   getDropByQuestId: function() {
-    return A
+    return g
   },
   getDropExpired: function() {
     return S
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return E
   },
   getDropsPartnerGameNameByQuestId: function() {
-    return g
+    return A
   },
   getEligibilityByRunningGameDetection: function() {
     return I
@@ -133,11 +133,11 @@ function C(e) {
   return d.DROPS_GAMES[e]
 }
 
-function A(e) {
+function g(e) {
   return Object.values(d.DROPS_GAMES).find(t => t.dropsQuestId === e)
 }
 
-function g(e) {
+function A(e) {
   return Object.keys(d.DROPS_GAMES).find(t => d.DROPS_GAMES[t].dropsQuestId === e)
 }
 

@@ -44,14 +44,14 @@ function O(e) {
   } = (0, T.useAutomodRulesList)(j), b = {
     [S.AutomodTriggerCategory.MEMBERS]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
     [S.AutomodTriggerCategory.CONTENT]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
-  }, B = l.useMemo(() => Object.values(null != P ? P : {}).flat().filter(E.isNotNullish), [P]);
+  }, y = l.useMemo(() => Object.values(null != P ? P : {}).flat().filter(E.isNotNullish), [P]);
   l.useEffect(() => {
     G && M(null)
   }, [j]);
-  let y = l.useCallback((e, t) => {
+  let B = l.useCallback((e, t) => {
       if (null != e) {
         var s, a;
-        return null !== (a = null === (s = B.find(t => {
+        return null !== (a = null === (s = y.find(t => {
           let {
             id: s
           } = t;
@@ -59,11 +59,11 @@ function O(e) {
         })) || void 0 === s ? void 0 : s.name) && void 0 !== a ? a : null
       }
       return null != t ? (0, S.triggerConfigs)[t].getDefaultRuleName() : null
-    }, [B]),
+    }, [y]),
     F = l.useMemo(() => {
       var e, t;
-      return y(null !== (e = null == A ? void 0 : A.id) && void 0 !== e ? e : null, null !== (t = null == A ? void 0 : A.triggerType) && void 0 !== t ? t : null)
-    }, [y, A]);
+      return B(null !== (e = null == A ? void 0 : A.id) && void 0 !== e ? e : null, null !== (t = null == A ? void 0 : A.triggerType) && void 0 !== t ? t : null)
+    }, [B, A]);
   l.useEffect(() => {
     p(G, (0, h.createOnPreventNavigation)(F))
   }, [p, G, F]);
@@ -144,7 +144,7 @@ function O(e) {
       className: L.explicitContentFilterSection
     }), (0, a.jsx)(N.default, {
       guildId: j,
-      existingRules: B
+      existingRules: y
     }), G && (0, a.jsx)("div", {
       className: L.endSpacer
     })]

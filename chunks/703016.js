@@ -97,7 +97,7 @@ function w() {
   return null !== y && y.removeEventListener("end", N.stopSpeaking), i.cancelAll(), y = null, !0
 }
 
-function B(e) {
+function F(e) {
   var t, n, a;
   let {
     message: s,
@@ -106,7 +106,7 @@ function B(e) {
   return G(b(s.content, c, d, o), !0, l.id, s.id), !0
 }
 
-function F(e) {
+function B(e) {
   var t, n, a, s, l, i, r;
   let {
     channelId: o,
@@ -148,6 +148,6 @@ function V() {
 }
 t.default = {
   init() {
-    l.default.subscribe("SPEAK_TEXT", k), l.default.subscribe("SPEAK_MESSAGE", B), l.default.subscribe("STOP_SPEAKING", w), l.default.subscribe("MESSAGE_CREATE", F), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
+    l.default.subscribe("SPEAK_TEXT", k), l.default.subscribe("SPEAK_MESSAGE", F), l.default.subscribe("STOP_SPEAKING", w), l.default.subscribe("MESSAGE_CREATE", B), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
   }
 }

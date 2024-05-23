@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("703656"),
   S = n("314897"),
   C = n("82142"),
-  A = n("283595"),
-  g = n("594174"),
+  g = n("283595"),
+  A = n("594174"),
   M = n("509545"),
   R = n("55563"),
   v = n("285952"),
@@ -359,12 +359,12 @@ class Y extends a.Component {
   }
 }
 let K = (0, _.default)((0, E.default)(Y));
-t.default = u.default.connectStores([C.default, R.default, g.default, A.default, M.default, S.default, m.default], e => {
+t.default = u.default.connectStores([C.default, R.default, A.default, g.default, M.default, S.default, m.default], e => {
   let {
     code: t,
     author: n,
     currentUser: s
-  } = e, a = C.default.get(t), l = null != a ? R.default.get(a.skuId) : null, i = null != a && null != a.userId ? g.default.getUser(a.userId) : null, r = m.default.useReducedMotion;
+  } = e, a = C.default.get(t), l = null != a ? R.default.get(a.skuId) : null, i = null != a && null != a.userId ? A.default.getUser(a.userId) : null, r = m.default.useReducedMotion;
   return {
     sku: l,
     giftCode: a,
@@ -373,7 +373,7 @@ t.default = u.default.connectStores([C.default, R.default, g.default, A.default,
     subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, U.getOrFetchSubscriptionPlan)(a.subscriptionPlanId) : null,
     isSelfGift: null != a ? S.default.getId() === a.userId : S.default.getId() === n.id,
     resolved: C.default.getIsResolved(t),
-    libraryApplication: null != l && (null == a ? void 0 : a.entitlementBranches) != null ? P.firstLibraryApplicationForGiftCode(a.entitlementBranches, l, A.default) : null,
+    libraryApplication: null != l && (null == a ? void 0 : a.entitlementBranches) != null ? P.firstLibraryApplicationForGiftCode(a.entitlementBranches, l, g.default) : null,
     useReducedMotion: r
   }
 })(K)

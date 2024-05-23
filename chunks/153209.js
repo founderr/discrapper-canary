@@ -44,8 +44,8 @@ function C(e) {
     initialized: _,
     items: h,
     loading: C,
-    loadMore: A
-  } = (0, d.useDesktopNotificationCenterItemsLoader)(), g = (0, l.useStateFromStores)([r.default], () => r.default.localItems), M = a.useMemo(() => [...[...h, ...g].sort((e, t) => -1 * T.default.compare(e.id, t.id))], [h, g]), R = h.length > 0 ? h[0] : null, v = f.NotificationCenterAckedBeforeId.useSetting(), O = a.useMemo(() => {
+    loadMore: g
+  } = (0, d.useDesktopNotificationCenterItemsLoader)(), A = (0, l.useStateFromStores)([r.default], () => r.default.localItems), M = a.useMemo(() => [...[...h, ...A].sort((e, t) => -1 * T.default.compare(e.id, t.id))], [h, A]), R = h.length > 0 ? h[0] : null, v = f.NotificationCenterAckedBeforeId.useSetting(), O = a.useMemo(() => {
     if (null != R && 0 >= T.default.compare(R.id, v)) return !1;
     for (let e of M) {
       if (0 >= T.default.compare(e.id, v)) break;
@@ -71,7 +71,7 @@ function C(e) {
       initialized: _,
       items: M,
       loading: C,
-      loadMore: A
+      loadMore: g
     })]
   })
 }

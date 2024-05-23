@@ -59,9 +59,9 @@ async function I(e, t) {
     });
     return
   }
-  let A = N.filter(e => e.type === u.MetaStickerType.STANDARD),
-    g = [A[Math.floor(Math.random() * A.length)].id];
-  s.default.sendStickers(t.id, g, "", {
+  let g = N.filter(e => e.type === u.MetaStickerType.STANDARD),
+    A = [g[Math.floor(Math.random() * g.length)].id];
+  s.default.sendStickers(t.id, A, "", {
     messageReference: {
       guild_id: null !== (I = t.getGuildId()) && void 0 !== I ? I : void 0,
       channel_id: t.id,

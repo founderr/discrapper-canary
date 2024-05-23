@@ -34,7 +34,7 @@ var a = s("735250"),
   U = s("689938"),
   P = s("913752");
 let b = "WELCOME_CHANNEL",
-  B = e => {
+  y = e => {
     var t;
     let n, {
         guildId: r,
@@ -48,8 +48,8 @@ let b = "WELCOME_CHANNEL",
       A = l.useRef(null),
       D = (0, u.useStateFromStores)([C.default], () => C.default.getChannel(o.channel_id)),
       v = (0, u.useStateFromStores)([f.default], () => null != o.emoji_id ? f.default.getUsableCustomEmojiById(o.emoji_id) : null),
-      B = null != D && M.canEveryoneRole(j.Permissions.VIEW_CHANNEL, D),
-      y = null !== (t = (0, S.getChannelIconComponent)(D)) && void 0 !== t ? t : O.default,
+      y = null != D && M.canEveryoneRole(j.Permissions.VIEW_CHANNEL, D),
+      B = null !== (t = (0, S.getChannelIconComponent)(D)) && void 0 !== t ? t : O.default,
       F = (0, T.default)(D, !1),
       {
         homeSettingsEnabled: H
@@ -75,11 +75,11 @@ let b = "WELCOME_CHANNEL",
       });
     return l.useLayoutEffect(() => (k(w(A)), () => {
       k(null), w(null)
-    }), [k, w]), n = B ? null != v || null != o.emoji_name ? (0, a.jsx)(_.default, {
+    }), [k, w]), n = y ? null != v || null != o.emoji_name ? (0, a.jsx)(_.default, {
       emojiId: null == v ? void 0 : v.id,
       emojiName: null != v ? v.name : o.emoji_name,
       animated: !!(null == v ? void 0 : v.animated)
-    }) : (0, a.jsx)(y, {
+    }) : (0, a.jsx)(B, {
       width: 24,
       height: 24,
       className: P.channelIcon
@@ -116,15 +116,15 @@ let b = "WELCOME_CHANNEL",
           color: "header-primary",
           children: o.description
         }), (0, a.jsxs)(c.Text, {
-          className: B ? void 0 : P.channelWarning,
+          className: y ? void 0 : P.channelWarning,
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: [(0, a.jsx)(y, {
+          children: [(0, a.jsx)(B, {
             className: P.channelTitleIcon,
             width: 12,
             height: 12
           }), (0, a.jsx)("span", {
-            children: B ? F : U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INVALID_CHANNEL
+            children: y ? F : U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INVALID_CHANNEL
           })]
         })]
       }), (0, a.jsx)(c.Button, {
@@ -165,7 +165,7 @@ t.default = e => {
     channels: M,
     enabled: b
   } = r, {
-    homeSettingsEnabled: y
+    homeSettingsEnabled: B
   } = (0, m.useOnboardingHomeAdminExperiment)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_SNOWFLAKE_ID), F = () => {
     if (null != n) O !== d.description && ((0, N.saveWelcomeScreen)(n.id, {
       description: null == O ? void 0 : O.trim()
@@ -235,7 +235,7 @@ t.default = e => {
   return null == n ? null : (0, a.jsxs)(c.FormSection, {
     title: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
     tag: c.FormTitleTags.H1,
-    children: [y && (0, a.jsx)("div", {
+    children: [B && (0, a.jsx)("div", {
       className: P.notice,
       children: (0, a.jsxs)(c.Text, {
         variant: "text-md/normal",
@@ -315,7 +315,7 @@ t.default = e => {
             },
             value: O,
             maxLength: 140,
-            disabled: y
+            disabled: B
           })
         })]
       }), (0, a.jsx)(c.FormDivider, {
@@ -328,7 +328,7 @@ t.default = e => {
           variant: "text-sm/normal",
           className: P.addChannelSubtext,
           children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_DESCRIPTION
-        }), null == M ? void 0 : M.map((e, t) => (0, a.jsx)(B, {
+        }), null == M ? void 0 : M.map((e, t) => (0, a.jsx)(y, {
           guildId: n.id,
           welcomeChannel: e,
           onEdit: V(t),
@@ -349,7 +349,7 @@ t.default = e => {
             onCloseRequest: () => G.NOOP_NULL
           }),
           className: P.addChannelButton,
-          disabled: y,
+          disabled: B,
           color: c.Button.Colors.PRIMARY,
           children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ADD_RECOMMENDED_CHANNEL
         })]

@@ -84,8 +84,8 @@ t.default = function(e) {
   }, [o]), G = (0, A.useHandleClaimQuestsReward)({
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
-  }), k = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || k || F ? null : (0, a.jsx)(g.QuestContentImpressionTracker, {
+  }), k = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, F = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || k || B ? null : (0, a.jsx)(g.QuestContentImpressionTracker, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
     children: e => {
@@ -134,7 +134,7 @@ t.default = function(e) {
               location: v.QuestsExperimentLocations.ACTIVITY_PANEL
             })
           })]
-        }), w && !B && (0, a.jsx)(N.default, {
+        }), w && !F && (0, a.jsx)(N.default, {
           autoplay: p,
           className: L.rewardTileWithInstructions,
           quest: o,
@@ -159,14 +159,14 @@ t.default = function(e) {
               submitting: c,
               children: O.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), w && !B && (0, a.jsx)(u.Button, {
+          }), w && !F && (0, a.jsx)(u.Button, {
             className: L.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: U,
             size: u.Button.Sizes.SMALL,
             children: O.default.Messages.QUESTS_CHECK_PROGRESS
-          }), B && (0, a.jsx)(u.Button, {
+          }), F && (0, a.jsx)(u.Button, {
             className: L.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,

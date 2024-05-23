@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("739566"),
   S = n("507418"),
   C = n("348238"),
-  A = n("38267"),
-  g = n("496675"),
+  g = n("38267"),
+  A = n("496675"),
   M = n("594174"),
   R = n("467679"),
   v = n("263704"),
@@ -51,7 +51,7 @@ function Y(e, t) {
     popouts: n,
     selected: s,
     setPopout: l
-  } = (0, A.default)(e.id, w.DEFAULT_POPOUTS), {
+  } = (0, g.default)(e.id, w.DEFAULT_POPOUTS), {
     usernameProfile: i,
     avatarProfile: r
   } = n, o = (0, C.useContextMenuUser)(e.author.id, t.id), u = (0, C.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, C.useClickMessageAuthorUsername)(e, t, i, l), c = (0, C.useClickMessageAuthorAvatar)(r, l);
@@ -227,13 +227,13 @@ function Z(e) {
       onMouseLeave: S
     }
   } = (0, B.useAutomodAvatar)(!0), {
-    onFocus: A,
+    onFocus: g,
     ...M
   } = (0, u.useListItem)(null != t ? t : ""), {
     isFocused: v,
     handleFocus: O,
     handleBlur: L
-  } = (0, C.useFocusInside)(A), D = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), j = (0, c.useStateFromStores)([g.default], () => g.default.can(F.Permissions.MANAGE_MESSAGES, r), [r]), {
+  } = (0, C.useFocusInside)(g), D = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), j = (0, c.useStateFromStores)([A.default], () => A.default.can(F.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: b,
     embedChannel: w,
     decisionId: z,

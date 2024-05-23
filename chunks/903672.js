@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("455199"),
   S = n("655354"),
   C = n("999671"),
-  A = n("324081"),
-  g = n("240126"),
+  g = n("324081"),
+  A = n("240126"),
   M = n("791914"),
   R = n("981631"),
   v = n("689938"),
@@ -56,8 +56,8 @@ function D(e) {
     hasMore: p,
     loading: h,
     guildFilter: S,
-    roleFilter: A,
-    everyoneFilter: g
+    roleFilter: g,
+    everyoneFilter: A
   } = (0, l.useStateFromStoresObject)([N.default], () => ({
     messages: N.default.getMentions(),
     hasMore: N.default.hasMore,
@@ -65,13 +65,13 @@ function D(e) {
     guildFilter: N.default.guildFilter,
     roleFilter: N.default.roleFilter,
     everyoneFilter: N.default.everyoneFilter
-  })), x = (0, u.default)(S), D = (0, u.default)(A), P = (0, u.default)(g);
+  })), x = (0, u.default)(S), D = (0, u.default)(g), P = (0, u.default)(A);
   a.useEffect(() => {
     if (!N.default.hasLoadedEver) {
       L(m, !0);
       return
-    }(null != x && S !== x || null != D && A !== D || null != P && g !== P) && L(m, !0)
-  }, [x, S, D, A, P, g, m, !0]);
+    }(null != x && S !== x || null != D && g !== D || null != P && A !== P) && L(m, !0)
+  }, [x, S, D, g, P, A, m, !0]);
   a.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
@@ -141,7 +141,7 @@ function U(e) {
     o = !!l.isNSFW() && !i;
   return (0, s.jsxs)("div", {
     className: O.container,
-    children: [(0, s.jsx)(A.default, {
+    children: [(0, s.jsx)(g.default, {
       channel: l,
       gotoChannel: n,
       children: null != a ? (0, s.jsx)(I.default, {
@@ -174,7 +174,7 @@ function U(e) {
 }
 
 function j(e) {
-  return (0, s.jsx)(g.default, {
+  return (0, s.jsx)(A.default, {
     Icon: p.default,
     header: v.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
     tip: v.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP

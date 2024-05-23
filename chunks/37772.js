@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("630388"),
   S = n("709054"),
   C = n("493892"),
-  A = n("901461"),
-  g = n("739566"),
+  g = n("901461"),
+  A = n("739566"),
   M = n("443877"),
   R = n("938353"),
   v = n("25015"),
@@ -86,7 +86,7 @@ t.default = a.memo(function e(t) {
     allowHeading: Z,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), en = (0, g.default)(I), es = (0, r.useStateFromStores)([m.default], () => I.hasFlag(U.MessageFlags.HAS_THREAD) && m.default.getChannel(S.default.castMessageIdAsChannelId(I.id))), ea = I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED && null != W, el = !ea && void 0 === a, ei = (0, O.default)({
+  }), en = (0, A.default)(I), es = (0, r.useStateFromStores)([m.default], () => I.hasFlag(U.MessageFlags.HAS_THREAD) && m.default.getChannel(S.default.castMessageIdAsChannelId(I.id))), ea = I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED && null != W, el = !ea && void 0 === a, ei = (0, O.default)({
     message: I,
     channel: l,
     enabled: el
@@ -144,7 +144,7 @@ t.default = a.memo(function e(t) {
     onClick: k,
     hasThread: !1 !== H && null != es && I.hasFlag(U.MessageFlags.HAS_THREAD),
     hasReply: I.type === U.MessageTypes.REPLY,
-    isSystemMessage: (0, A.default)(I),
+    isSystemMessage: (0, g.default)(I),
     messageRef: ei
   })
 })

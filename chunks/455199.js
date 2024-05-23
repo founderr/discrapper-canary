@@ -16,8 +16,8 @@ var s, a, l, i, r = n("392711"),
   N = n("375954"),
   S = n("306680"),
   C = n("699516"),
-  A = n("914010"),
-  g = n("9156"),
+  g = n("914010"),
+  A = n("9156"),
   M = n("594174"),
   R = n("981631");
 let v = "recentMentionFilterSettings",
@@ -47,7 +47,7 @@ function F(e) {
   if ((0, m.default)(e) && !R.MessageTypesSets.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
   null == n && (n = e.channel_id);
   let s = h.default.getChannel(n);
-  if (null == s || s.type === R.ChannelTypes.DM || P.guildFilter === R.RecentMentionsFilters.THIS_SERVER && s.getGuildId() !== A.default.getGuildId()) return null;
+  if (null == s || s.type === R.ChannelTypes.DM || P.guildFilter === R.RecentMentionsFilters.THIS_SERVER && s.getGuildId() !== g.default.getGuildId()) return null;
   let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
     l = p.default.getId();
   if (null != a && C.default.isBlocked(a) || (0, T.default)(e, l)) return null;
@@ -62,8 +62,8 @@ function F(e) {
   }) ? (b && S.default.ackMessageId(s.id) !== e.id && (0, _.default)({
     message: e,
     userId: l,
-    suppressEveryone: g.default.isSuppressEveryoneEnabled(s.getGuildId()),
-    suppressRoles: g.default.isSuppressRolesEnabled(s.getGuildId())
+    suppressEveryone: A.default.isSuppressEveryoneEnabled(s.getGuildId()),
+    suppressRoles: A.default.isSuppressRolesEnabled(s.getGuildId())
   }) && (b = !1), e) : null
 }
 

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return B
   }
 }), s("47120"), s("724458");
 var a = s("735250"),
@@ -38,9 +38,9 @@ var a = s("735250"),
   U = s("710111"),
   P = s("689938"),
   b = s("438927");
-let B = D.isPlatformEmbedded || "Safari" !== o().name && "Firefox" !== o().name;
+let y = D.isPlatformEmbedded || "Safari" !== o().name && "Firefox" !== o().name;
 
-function y() {
+function B() {
   let e = (0, d.useStateFromStores)([v.default], () => v.default.getProps().guild);
   return null == e ? null : (0, a.jsx)(c.FormSection, {
     tag: c.FormTitleTags.H1,
@@ -164,7 +164,7 @@ function V(e) {
     null === (e = o.current) || void 0 === e || e.pause()
   }, []);
   if (i) return (0, a.jsx)(c.Spinner, {});
-  let x = B ? (0, a.jsx)(c.Button, {
+  let x = y ? (0, a.jsx)(c.Button, {
     onClick: function() {
       (0, c.openModalLazy)(async () => {
         let {

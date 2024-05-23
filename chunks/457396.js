@@ -44,11 +44,11 @@ let k = e => {
       selected: s,
       route: k,
       locationState: w,
-      ...B
+      ...F
     } = e,
-    F = (0, r.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
+    B = (0, r.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
     H = (0, r.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()),
-    V = (0, C.hasPremiumSubscriptionToDisplay)(F, H),
+    V = (0, C.hasPremiumSubscriptionToDisplay)(B, H),
     Y = (0, i.useListItem)("nitro"),
     W = (0, I.usePremiumTrialOffer)(),
     K = (0, g.usePremiumDiscountOffer)(),
@@ -59,7 +59,7 @@ let k = e => {
     X = (0, A.useTenureRewardBadgeDescription)(),
     J = (0, P.useIsEligibleSenderForReferralProgramTabBadge)(G),
     $ = (0, r.useStateFromStores)([m.default], () => m.default.getCreatedAtOverride()),
-    ee = null != $ ? $ : null == F ? void 0 : F.createdAt,
+    ee = null != $ ? $ : null == B ? void 0 : B.createdAt,
     et = s || null != W || null != K || q || Q || Z || null != X || V,
     {
       enabled: en
@@ -73,7 +73,7 @@ let k = e => {
       location: "NitroTabButton",
       showTabForOtherReasons: et
     });
-  if (!(et = et || null != F && null != ee && Date.now() - ee.getTime() > es)) return null;
+  if (!(et = et || null != B && null != ee && Date.now() - ee.getTime() > es)) return null;
   Z ? (n = (0, l.jsx)(y.PerksDiscoverabilityMarketingMomentWhatsNewBadge, {}), a = 2) : q ? (n = (0, l.jsx)(T.default, {
     isNitroTab: !0
   }), a = 0) : null != X ? (n = (0, l.jsx)(y.default, {
@@ -105,7 +105,7 @@ let k = e => {
         has_premium: V
       })
     },
-    ...B,
+    ...F,
     ...Y,
     className: t,
     children: n

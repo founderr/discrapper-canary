@@ -121,7 +121,7 @@ function b(e) {
     })]
   })
 }
-class B extends l.PureComponent {
+class y extends l.PureComponent {
   render() {
     let {
       user: e,
@@ -180,7 +180,7 @@ class B extends l.PureComponent {
     })
   }
 }
-let y = l.forwardRef(function(e, t) {
+let B = l.forwardRef(function(e, t) {
   let {
     guild: s,
     sortedBans: n,
@@ -199,7 +199,7 @@ let y = l.forwardRef(function(e, t) {
     }, "spinner");
     let l = n[e],
       o = null == i ? void 0 : i.get(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "");
-    if (null != l && null != o) return (0, a.jsx)(B, {
+    if (null != l && null != o) return (0, a.jsx)(y, {
       user: l,
       ban: o,
       hideDiscriminator: r,
@@ -297,35 +297,35 @@ function H() {
       null != e && p(t)(e) && a.push(e)
     }
     return a
-  }, [p]), D = l.useMemo(() => A(N, c, C), [N, A, c, C]), v = null != N, P = D.length % 1e3 == 0 && D.length > 0 && v, b = 0 === D.length, [B, H] = l.useState({
+  }, [p]), D = l.useMemo(() => A(N, c, C), [N, A, c, C]), v = null != N, P = D.length % 1e3 == 0 && D.length > 0 && v, b = 0 === D.length, [y, H] = l.useState({
     currentPage: 1,
     pageSize: 100
   });
   l.useEffect(() => {
-    f && 1 !== B.currentPage && H(e => ({
+    f && 1 !== y.currentPage && H(e => ({
       ...e,
       currentPage: 1
     }))
-  }, [f, B.currentPage]);
+  }, [f, y.currentPage]);
   let k = l.useCallback(e => {
       E.default.fetchGuildBansBatch(x, 1e3, e)
     }, [x]),
-    w = l.useMemo(() => o().chunk(D, B.pageSize), [B.pageSize, D]),
+    w = l.useMemo(() => o().chunk(D, y.pageSize), [y.pageSize, D]),
     V = l.useCallback(e => {
       var t, s, a;
-      null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > D.length && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, k(Y.current)), (null != w[e - 1] || P) && H(t => ({
+      null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * y.pageSize > D.length && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, k(Y.current)), (null != w[e - 1] || P) && H(t => ({
         ...t,
         currentPage: e
       }))
-    }, [B.pageSize, D, P, w, k, _]),
+    }, [y.pageSize, D, P, w, k, _]),
     Y = l.useRef(null);
   l.useEffect(() => {
     k(Y.current)
   }, [k]);
   let W = l.useMemo(() => {
     var e;
-    return null !== (e = w[B.currentPage - 1]) && void 0 !== e ? e : []
-  }, [w, B.currentPage]);
+    return null !== (e = w[y.currentPage - 1]) && void 0 !== e ? e : []
+  }, [w, y.currentPage]);
   return null == n ? null : (0, a.jsxs)("div", {
     className: i()(U.container),
     children: [(0, a.jsx)(F, {
@@ -333,7 +333,7 @@ function H() {
       storedSearchQuery: c
     }), (0, a.jsxs)("div", {
       className: i()(U.scrollerContainer),
-      children: [!b && (0, a.jsx)(y, {
+      children: [!b && (0, a.jsx)(B, {
         guild: n,
         bans: N,
         sortedBans: W,
@@ -358,9 +358,9 @@ function H() {
       className: i()(U.__invalid_paginationContainer),
       children: (0, a.jsx)(u.Paginator, {
         className: i()(U.paginationInput),
-        totalCount: D.length + (P ? B.pageSize : 0),
-        pageSize: B.pageSize,
-        currentPage: B.currentPage,
+        totalCount: D.length + (P ? y.pageSize : 0),
+        pageSize: y.pageSize,
+        currentPage: y.currentPage,
         onPageChange: V,
         maxVisiblePages: 9
       })

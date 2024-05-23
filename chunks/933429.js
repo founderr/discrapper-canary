@@ -20,8 +20,8 @@ var s, a, l, i, r = n("913527"),
   N = n("524347"),
   S = n("853197"),
   C = n("353926"),
-  A = n("594190"),
-  g = n("38618"),
+  g = n("594190"),
+  A = n("38618"),
   M = n("569545"),
   R = n("615365"),
   v = n("528011"),
@@ -74,8 +74,8 @@ var s, a, l, i, r = n("913527"),
   eN = n("695103"),
   eS = n("358085"),
   eC = n("74538"),
-  eA = n("922156"),
-  eg = n("436181"),
+  eg = n("922156"),
+  eA = n("436181"),
   eM = n("941128"),
   eR = n("981631"),
   ev = n("188785"),
@@ -257,14 +257,14 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eR.NoticeTypes.DISPATCH_ERROR]: {
-      predicate: () => null != eA.default.getLastError(),
+      predicate: () => null != eg.default.getLastError(),
       metadata: () => ({
-        error: eA.default.getLastError()
+        error: eg.default.getLastError()
       })
     },
     [eR.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
-      predicate: () => null != eg.default.getLastProgress(),
-      metadata: () => eg.default.getLastProgress()
+      predicate: () => null != eA.default.getLastProgress(),
+      metadata: () => eA.default.getLastProgress()
     },
     [eR.NoticeTypes.SPOTIFY_AUTO_PAUSED]: {
       predicate: () => Y.default.wasAutoPaused()
@@ -377,7 +377,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eR.NoticeTypes.CONNECT_SPOTIFY]: {
-      predicate: () => !Y.default.hasConnectedAccount() && A.default.isObservedAppRunning(m.default.get(eR.PlatformTypes.SPOTIFY).name) && !ew(eR.NoticeTypes.CONNECT_SPOTIFY)
+      predicate: () => !Y.default.hasConnectedAccount() && g.default.isObservedAppRunning(m.default.get(eR.PlatformTypes.SPOTIFY).name) && !ew(eR.NoticeTypes.CONNECT_SPOTIFY)
     },
     [eR.NoticeTypes.WIN32_DEPRECATED_MESSAGE]: {
       predicate: () => (null === _.default || void 0 === _.default ? void 0 : _.default.os.arch) === "ia32" && (null === _.default || void 0 === _.default ? void 0 : _.default.process.platform) === "win32",
@@ -642,7 +642,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
   };
 
 function eK() {
-  if (!g.default.isConnected()) return !1;
+  if (!A.default.isConnected()) return !1;
   eF = null;
   let e = eE.default.getCurrentUser();
   if (null == e) return !1;
@@ -680,7 +680,7 @@ function eW() {
 }
 class ez extends(s = u.default.Store) {
   initialize() {
-    this.syncWith([ec.default, el.default, $.default, eo.default, G.default, ep.default, q.default, J.default, W.default, O.default, H.default, z.default], eK), this.waitFor(eE.default, eu.default, et.default, ee.default, ei.default, en.default, ed.default, C.default, eo.default, ef.default, Y.default, A.default, el.default, eA.default, eg.default, eN.default, es.default, eI.default, eM.default, $.default, eT.default, ea.default, G.default, eh.default, ep.default, J.default, y.default, N.default, p.default, w.default, H.default, z.default)
+    this.syncWith([ec.default, el.default, $.default, eo.default, G.default, ep.default, q.default, J.default, W.default, O.default, H.default, z.default], eK), this.waitFor(eE.default, eu.default, et.default, ee.default, ei.default, en.default, ed.default, C.default, eo.default, ef.default, Y.default, g.default, el.default, eg.default, eA.default, eN.default, es.default, eI.default, eM.default, $.default, eT.default, ea.default, G.default, eh.default, ep.default, J.default, y.default, N.default, p.default, w.default, H.default, z.default)
   }
   hasNotice() {
     return null != eF && null != eF.type

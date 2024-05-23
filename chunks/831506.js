@@ -67,7 +67,7 @@ function C() {
     t = E.default.getActivities();
   return h(_.ME, e, t)
 }
-class A extends(s = u.default.Store) {
+class g extends(s = u.default.Store) {
   initialize() {
     this.syncWith([E.default], C), this.waitFor(E.default, f.default)
   }
@@ -81,12 +81,12 @@ class A extends(s = u.default.Store) {
     return T
   }
 }
-i = "GamePartyStore", (l = "displayName") in(a = A) ? Object.defineProperty(a, l, {
+i = "GamePartyStore", (l = "displayName") in(a = g) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new A(d.default, {
+}) : a[l] = i, t.default = new g(d.default, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       guilds: t,

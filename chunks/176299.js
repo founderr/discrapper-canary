@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("225675"),
   k = n("745052"),
   w = n("285865"),
-  B = n("659971"),
-  F = n("720734"),
+  F = n("659971"),
+  B = n("720734"),
   H = n("840780"),
   V = n("235555"),
   Y = n("746508"),
@@ -261,8 +261,8 @@ let eL = e => (0, a.jsx)(ev, {
   eG = () => (0, a.jsx)(K.default, {}),
   ek = () => (0, a.jsx)(k.default, {}),
   ew = () => (0, a.jsx)(q.default, {}),
-  eB = () => (0, a.jsx)(W.default, {}),
-  eF = e => {
+  eF = () => (0, a.jsx)(W.default, {}),
+  eB = e => {
     let {
       match: t
     } = e;
@@ -336,7 +336,7 @@ function eH(e) {
         children: (0, a.jsx)(Y.default, {})
       }), (0, a.jsx)(ed.default, {
         section: eE.AnalyticsSections.ACCOUNT_PANEL,
-        children: (0, a.jsx)(F.default, {})
+        children: (0, a.jsx)(B.default, {})
       })]
     }), (0, a.jsx)(er.default, {})]
   })
@@ -368,7 +368,7 @@ function eV() {
       let t = (0, o.useLocation)();
       return (null === (e = (0, r.matchPath)(t.pathname, eE.Routes.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0
     }(),
-    h = (0, f.useStateFromStores)([B.default], () => B.default.getIsOpen()),
+    h = (0, f.useStateFromStores)([F.default], () => F.default.getIsOpen()),
     _ = (0, o.useRouteMatch)([eE.Routes.CHANNEL(eE.ME, ":channelId"), eE.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")]),
     m = (null == _ ? void 0 : null === (e = _.params) || void 0 === e ? void 0 : e.channelId) === eh.StaticChannelRoute.GUILD_ONBOARDING,
     S = s.useCallback(() => w.default.openSidebar(), []);
@@ -449,7 +449,7 @@ function eV() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: eE.Routes.FAMILY_CENTER,
-                  render: eB,
+                  render: eF,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: eE.Routes.ME,
@@ -492,7 +492,7 @@ function eV() {
                 }), (0, a.jsx)(p.default, {
                   path: eE.Routes.FEATURE(":feature"),
                   exact: !0,
-                  render: eF,
+                  render: eB,
                   disableTrack: !0
                 })]
               })

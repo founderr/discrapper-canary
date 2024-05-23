@@ -99,7 +99,7 @@ function T(e) {
       selections: G,
       isSelecting: U
     }
-  } = g, [P, b] = l.useState(!1), B = l.useCallback(() => {
+  } = g, [P, b] = l.useState(!1), y = l.useCallback(() => {
     var e;
     b(!1), M(), null === (e = f.current) || void 0 === e || e.focus({
       preventScroll: !0
@@ -110,10 +110,10 @@ function T(e) {
   }, [n, j, P]), l.useEffect(() => {
     !P && o(v)
   }, [o, v, P]);
-  let y = l.useCallback(function() {
+  let B = l.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      e && B(), b(!1)
-    }, [B]),
+      e && y(), b(!1)
+    }, [y]),
     F = l.useCallback(e => t => {
       if (t) {
         var s;
@@ -134,11 +134,11 @@ function T(e) {
     onKeyUp: x,
     children: [(0, a.jsxs)(I, {
       ref: N,
-      onClick: B,
+      onClick: y,
       children: [j.map((e, t) => (0, a.jsx)(d.default, {
         value: e,
         onChange: O(t),
-        onBlur: y,
+        onBlur: B,
         onFocus: F(t),
         onRemove: () => L(t),
         isSelected: G.includes(e),

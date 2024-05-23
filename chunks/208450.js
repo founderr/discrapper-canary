@@ -20,8 +20,8 @@ var s = n("735250"),
   N = n("984933"),
   S = n("768119"),
   C = n("944486"),
-  A = n("153124"),
-  g = n("585483"),
+  g = n("153124"),
+  A = n("585483"),
   M = n("72006"),
   R = n("405656"),
   v = n("181389"),
@@ -40,12 +40,12 @@ function y(e, t, n) {
   }) : e[t] = n, e
 }
 n("436967");
-let U = (0, A.uid)(),
+let U = (0, g.uid)(),
   j = u()(f.search, 500);
 class b extends a.PureComponent {
   componentDidMount() {
     var e, t;
-    g.ComponentDispatch.subscribe(L.ComponentActions.PERFORM_SEARCH, this.search), g.ComponentDispatch.subscribe(L.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), g.ComponentDispatch.subscribe(L.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute("aria-haspopup", "listbox")
+    A.ComponentDispatch.subscribe(L.ComponentActions.PERFORM_SEARCH, this.search), A.ComponentDispatch.subscribe(L.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.ComponentDispatch.subscribe(L.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute("aria-haspopup", "listbox")
   }
   componentDidUpdate(e) {
     let {
@@ -59,7 +59,7 @@ class b extends a.PureComponent {
     }
   }
   componentWillUnmount() {
-    g.ComponentDispatch.unsubscribe(L.ComponentActions.PERFORM_SEARCH, this.search), g.ComponentDispatch.unsubscribe(L.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), g.ComponentDispatch.unsubscribe(L.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch)
+    A.ComponentDispatch.unsubscribe(L.ComponentActions.PERFORM_SEARCH, this.search), A.ComponentDispatch.unsubscribe(L.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.ComponentDispatch.unsubscribe(L.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch)
   }
   tokenize(e) {
     let t = R.tokenizeQuery(M.getFirstTextBlock(e)).filter(e => e.type !== _.default.NON_TOKEN_TYPE);

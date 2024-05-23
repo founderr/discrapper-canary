@@ -176,16 +176,16 @@ t.default = e => {
         U = G.length > 0,
         P = M < d.tier,
         b = x(I.length),
-        B = S && !P && b === d.tier && O !== G.length,
-        y = B || G.length > 0,
+        y = S && !P && b === d.tier && O !== G.length,
+        B = y || G.length > 0,
         F = O - L,
         H = s("872732"),
         k = j - G.length,
-        w = B ? Math.min(5 - (G.length + 0) % 5, k) : 0,
+        w = y ? Math.min(5 - (G.length + 0) % 5, k) : 0,
         V = [];
       for (let e = 0; e < w; e++) V.push((0, a.jsx)(p, {}, "placeholder-".concat(e)));
       let Y = b === E + 1 && b > M,
-        W = B || Y || E > M;
+        W = y || Y || E > M;
       return Y ? l = (0, a.jsx)(c.default, {
         guild: t,
         size: o.Button.Sizes.SMALL,
@@ -198,7 +198,7 @@ t.default = e => {
           object: h.AnalyticsObjects.BOOST_UPSELL_NEXT_LEVEL_HEADER,
           objectType: (0, T.boostedGuildTierToAnalyticsObjectType)(d.tier)
         }
-      }) : B && (l = (0, a.jsx)(A, {
+      }) : y && (l = (0, a.jsx)(A, {
         guild: t
       })), (0, a.jsxs)(N.default, {
         subscriptionCount: D,
@@ -206,18 +206,18 @@ t.default = e => {
         onSetRef: r,
         isAnimatedTo: n,
         hasBottomMargin: E !== u.length - 1,
-        withCardBody: !y,
+        withCardBody: !B,
         headerButton: l,
         showHeaderLockStatus: W,
         guildId: t.id,
-        children: [y && (0, a.jsxs)("div", {
+        children: [B && (0, a.jsxs)("div", {
           className: R.grid,
           children: [G.map(e => (0, a.jsx)(g.default, {
             isDisabled: P,
             sticker: e,
             canManageSticker: f(e)
           }, e.id)), V]
-        }), !P && !B && 0 === G.length && (0, a.jsx)("div", {
+        }), !P && !y && 0 === G.length && (0, a.jsx)("div", {
           className: i()(R.emptyTierWrapper, R.unusedTierWrapper),
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",

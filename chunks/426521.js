@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("418316"),
   S = n("526146"),
   C = n("400565"),
-  A = n("148789"),
-  g = n("11825"),
+  g = n("148789"),
+  A = n("11825"),
   M = n("981631"),
   R = n("689938"),
   v = n("202001"),
@@ -138,7 +138,7 @@ let y = a.memo(function(e) {
         })
       }
     }, [i, E, f]), O = null;
-    i.type === p.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (O = (0, s.jsx)(A.default, {
+    i.type === p.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (O = (0, s.jsx)(g.default, {
       userId: i.other_user.id
     }));
     let x = null != i.local_id,
@@ -174,7 +174,7 @@ let y = a.memo(function(e) {
             children: (0, h.getRelativeTimestamp)(m.default.extractTimestamp(i.id))
           }), O]
         })]
-      }), x ? null : (0, s.jsx)(g.MoreButton, {
+      }), x ? null : (0, s.jsx)(A.MoreButton, {
         item: i
       })]
     })

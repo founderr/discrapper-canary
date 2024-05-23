@@ -31,14 +31,14 @@ function p(e) {
     onClose: i,
     ticket: o,
     challenge: c
-  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [p, A] = n.useState(!0), [O, x] = n.useState(I.WebAuthnScreens.INIT), [R, M] = n.useState(""), [v, L] = n.useState(null), D = async () => {
+  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [p, A] = n.useState(!0), [O, x] = n.useState(I.WebAuthnScreens.INIT), [R, M] = n.useState(""), [v, D] = n.useState(null), L = async () => {
     let e;
     x(I.WebAuthnScreens.REGISTER);
     let t = T.isPlatformEmbedded && f.default.supportsFeature(N.NativeFeatures.WEBAUTHN) ? f.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
     try {
       e = await t
     } catch (e) {
-      _.default.captureException(e), L(h.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(I.WebAuthnScreens.INIT);
+      _.default.captureException(e), D(h.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(I.WebAuthnScreens.INIT);
       return
     }
     M(e), x(I.WebAuthnScreens.NAME)
@@ -84,7 +84,7 @@ function p(e) {
           })]
         }), (0, a.jsx)(r.ModalFooter, {
           children: (0, a.jsx)(r.Button, {
-            onClick: D,
+            onClick: L,
             children: h.default.Messages.TWO_FA_WEBAUTHN_REGISTER_CONFIRM
           })
         })]
@@ -116,7 +116,7 @@ function p(e) {
             e.preventDefault(), (0, m.finishRegisterWebAuthnCredential)(E, o, R).then(async () => {
               await (0, d.showMFASuccessModal)(!1)
             }).then(() => i()).catch(() => {
-              L(h.default.Messages.ERROR_OCCURRED_TRY_AGAIN), x(I.WebAuthnScreens.INIT)
+              D(h.default.Messages.ERROR_OCCURRED_TRY_AGAIN), x(I.WebAuthnScreens.INIT)
             })
           },
           children: [(0, a.jsxs)(r.ModalContent, {

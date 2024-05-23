@@ -43,7 +43,7 @@ let N = e => {
       children: t.getDisplaySalePercentage()
     })
   },
-  A = e => {
+  g = e => {
     let {
       sku: t,
       className: n
@@ -53,7 +53,7 @@ let N = e => {
       children: (0, m.default)(t, !1)
     })
   },
-  g = e => {
+  A = e => {
     let {
       sku: t,
       className: n
@@ -72,9 +72,9 @@ let N = e => {
       className: _()(h.row, n),
       children: [(0, c.jsx)(C, {
         sku: t
-      }), (0, c.jsx)(A, {
-        sku: t
       }), (0, c.jsx)(g, {
+        sku: t
+      }), (0, c.jsx)(A, {
         sku: t
       })]
     })
@@ -128,7 +128,7 @@ class v extends(l = f.PureComponent) {
           className: _()(t, n)
         });
       default:
-        return (0, c.jsx)(g, {
+        return (0, c.jsx)(A, {
           className: _()(t, n),
           sku: s
         })
@@ -155,7 +155,7 @@ class v extends(l = f.PureComponent) {
           className: _()(h.directoryHeroPrice, t)
         });
       default:
-        return (0, c.jsx)(g, {
+        return (0, c.jsx)(A, {
           className: _()(h.directoryHeroPrice, t),
           sku: n
         })
@@ -175,18 +175,18 @@ class v extends(l = f.PureComponent) {
         t = (0, c.jsxs)(f.Fragment, {
           children: [(0, c.jsxs)("div", {
             className: h.row,
-            children: [(0, c.jsx)(g, {
+            children: [(0, c.jsx)(A, {
               sku: s
             }), (0, c.jsx)(C, {
               sku: s
             })]
-          }), (0, c.jsx)(A, {
+          }), (0, c.jsx)(g, {
             sku: s
           })]
         });
         break;
       default:
-        t = (0, c.jsx)(g, {
+        t = (0, c.jsx)(A, {
           sku: s
         })
     }

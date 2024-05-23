@@ -34,7 +34,7 @@ t.default = e => {
     isInteracting: l
   } = e, [o, f] = a.useState(!0), [_, I] = a.useState(String(Date.now())), [p] = (0, E.useStickerForRenderableSticker)(t, l), {
     analyticsLocations: C
-  } = (0, u.default)(r.default.STICKER_MESSAGE), A = (0, s.jsxs)("span", {
+  } = (0, u.default)(r.default.STICKER_MESSAGE), g = (0, s.jsxs)("span", {
     className: h.stickerName,
     children: [(0, s.jsx)(c.default, {
       className: h.stickerIcon
@@ -62,7 +62,7 @@ t.default = e => {
         return (0, s.jsx)(i.Tooltip, {
           ...d.EXPRESSION_TOOLTIP_PROPS,
           shouldShow: o,
-          text: (0, d.renderClickableTooltipNode)(A),
+          text: (0, d.renderClickableTooltipNode)(g),
           "aria-label": !1,
           onTooltipShow: () => {
             S(p)

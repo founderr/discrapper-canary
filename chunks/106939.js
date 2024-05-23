@@ -44,8 +44,8 @@ var a = n("735250"),
   G = n("521450"),
   k = n("292352"),
   w = n("981631"),
-  B = n("723359"),
-  F = n("921944"),
+  F = n("723359"),
+  B = n("921944"),
   H = n("689938"),
   V = n("86662");
 let Y = {
@@ -147,7 +147,7 @@ function q() {
     T = l && null != S && !I;
   return (s.useEffect(() => {
     (0, g.trackAppUIViewed)("family-center"), M.default.initialPageLoad(), !n && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
-      dismissAction: F.ContentDismissActionType.AUTO,
+      dismissAction: B.ContentDismissActionType.AUTO,
       forceTrack: !0
     })
   }, []), s.useEffect(() => {
@@ -160,7 +160,7 @@ function q() {
     }), p.default.increment({
       name: o.MetricEvents.FAMILY_CENTER_VIEW
     }))
-  }, [l, I]), T) ? ((0, E.openAgeGateModal)(B.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
+  }, [l, I]), T) ? ((0, E.openAgeGateModal)(F.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
     className: i()(V.container),
     "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
     children: [(0, a.jsx)(C.AppPageTitle, {
@@ -190,7 +190,7 @@ function Q() {
   } = (0, P.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
       f.setHomeLink(w.Routes.FAMILY_CENTER), (0, g.trackAppUIViewed)("family-center"), !y.default.isLoading() && y.default.canRefetch() && M.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
-        dismissAction: F.ContentDismissActionType.AUTO,
+        dismissAction: B.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
     }, []), s.useEffect(() => {
@@ -206,7 +206,7 @@ function Q() {
     }, [r, G]), s.useEffect(() => {
       let e = T.FamilyCenterEnabled.getSetting();
       r && t && void 0 === e && T.FamilyCenterEnabled.updateSetting(!0)
-    }, [r, t]), Y) return (0, E.openAgeGateModal)(B.AgeGateSource.FAMILY_CENTER), null;
+    }, [r, t]), Y) return (0, E.openAgeGateModal)(F.AgeGateSource.FAMILY_CENTER), null;
   let K = R !== k.FamilyCenterSubPages.SETTINGS ? R : k.FamilyCenterSubPages.ACTIVITY,
     q = W[K];
   return (0, a.jsx)(_.AnalyticsLocationProvider, {

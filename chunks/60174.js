@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("630388"),
   S = n("74538"),
   C = n("566006"),
-  A = n("981631"),
-  g = n("185923"),
+  g = n("981631"),
+  A = n("185923"),
   M = n("474936"),
   R = n("689938"),
   v = n("858313"),
@@ -49,8 +49,8 @@ class L extends a.Component {
       useChatFontScaling: l
     } = this.props, {
       isReactionPickerActive: r
-    } = this.state, o = t.state === A.MessageStates.SENDING, u = e === C.ReactionTypes.BURST;
-    if (o || (0, N.hasFlag)(t.flags, A.MessageFlags.EPHEMERAL)) return null;
+    } = this.state, o = t.state === g.MessageStates.SENDING, u = e === C.ReactionTypes.BURST;
+    if (o || (0, N.hasFlag)(t.flags, g.MessageFlags.EPHEMERAL)) return null;
     let E = I.default.getCurrentUser(),
       _ = (0, S.isPremium)(E),
       m = u ? R.default.Messages.ADD_BURST_REACTION : R.default.Messages.ADD_REACTION;
@@ -77,8 +77,8 @@ class L extends a.Component {
             onClick: e => {
               this.handleAddReactionClick(e)
             },
-            onMouseEnter: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
-            onFocus: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutFocused),
+            onMouseEnter: () => (0, c.initiateEmojiInteraction)(A.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+            onFocus: () => (0, c.initiateEmojiInteraction)(A.EmojiInteractionPoint.AddReactionPopoutFocused),
             className: i()(T.reactionBtn, {
               [T.active]: l
             }, n),
@@ -123,9 +123,9 @@ class L extends a.Component {
       t === C.ReactionTypes.BURST && !(0, S.isPremium)(s) && (0, E.openBurstReactionsUpsellModal)({
         analytics: {
           type: M.PremiumUpsellTypes.BURST_REACTION_UPSELL,
-          page: null != n.getGuildId() ? A.AnalyticsPages.GUILD_CHANNEL : A.AnalyticsPages.DM_CHANNEL,
+          page: null != n.getGuildId() ? g.AnalyticsPages.GUILD_CHANNEL : g.AnalyticsPages.DM_CHANNEL,
           section: (0, m.getBurstAnalyticsSection)(n),
-          object: A.AnalyticsObjects.INLINE_REACTION_PICKER_UPSELL
+          object: g.AnalyticsObjects.INLINE_REACTION_PICKER_UPSELL
         }
       }), this.handleReactionPickerToggle()
     }), x(this, "renderReactionPopout", e => {
@@ -139,9 +139,9 @@ class L extends a.Component {
         openPopoutType: "message_reaction_emoji_picker",
         ...n === C.ReactionTypes.BURST && {
           openPopoutType: "message_super_reaction_emoji_picker",
-          page: null != a.getGuildId() ? A.AnalyticsPages.GUILD_CHANNEL : A.AnalyticsPages.DM_CHANNEL,
+          page: null != a.getGuildId() ? g.AnalyticsPages.GUILD_CHANNEL : g.AnalyticsPages.DM_CHANNEL,
           section: (0, m.getBurstAnalyticsSection)(a),
-          object: A.AnalyticsObjects.REACTION_RAIL
+          object: g.AnalyticsObjects.REACTION_RAIL
         }
       }, r = (0, s.jsx)(T.ReactionPicker, {
         closePopout: t,

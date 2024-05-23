@@ -24,8 +24,8 @@ var s = n("735250"),
   N = n("55935"),
   S = n("655354"),
   C = n("809780"),
-  A = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  A = n("689938"),
   M = n("443039");
 let R = {
   left: 4,
@@ -83,7 +83,7 @@ function O(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), S = m.MessageDisplayCompact.useSetting(), R = (0, o.useStateFromStores)([I.default], () => I.default.can(A.Permissions.CREATE_INSTANT_INVITE, l)), O = (0, E.isSpamSupported)(l), x = !1, L = 0 === a.messages.length || i()(a.messages[0].timestamp).isSame(i()(), "day"), D = null !== (n = null === (t = p.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.UserFlags.SPAMMER)) && void 0 !== n && n, P = [];
+  }), S = m.MessageDisplayCompact.useSetting(), R = (0, o.useStateFromStores)([I.default], () => I.default.can(g.Permissions.CREATE_INSTANT_INVITE, l)), O = (0, E.isSpamSupported)(l), x = !1, L = 0 === a.messages.length || i()(a.messages[0].timestamp).isSame(i()(), "day"), D = null !== (n = null === (t = p.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.UserFlags.SPAMMER)) && void 0 !== n && n, P = [];
   if (!a.collapsed) {
     let e = null,
       t = null,
@@ -111,7 +111,7 @@ function O(e) {
       color: u.Button.Colors.LINK,
       look: u.Button.Looks.LINK,
       onClick: e => r(e, n[n.length - 1].id),
-      children: [g.default.Messages.UNREADS_VIEW_CHANNEL, " ›"]
+      children: [A.default.Messages.UNREADS_VIEW_CHANNEL, " ›"]
     }, "view-all")), 0 === P.length && (P = [(0, s.jsx)(u.Spinner, {}, "spinner")])
   }
   return x && O && d.default.trackExposure({

@@ -41,8 +41,8 @@ var a = s("735250"),
   U = s("352981"),
   P = s("610403"),
   b = s("923726"),
-  B = s("144507"),
-  y = s("303737"),
+  y = s("144507"),
+  B = s("303737"),
   F = s("15030"),
   H = s("220685"),
   k = s("751189"),
@@ -95,8 +95,8 @@ var a = s("735250"),
   eU = s("665324"),
   eP = s("208150"),
   eb = s("353398"),
-  eB = s("365774"),
-  ey = s("803288"),
+  ey = s("365774"),
+  eB = s("803288"),
   eF = s("804153"),
   eH = s("981631"),
   ek = s("308083"),
@@ -134,10 +134,10 @@ function eK(e) {
     guildMetadata: ea,
     section: ei,
     canAccessClanSettings: er
-  } = e, eK = () => (0, B.canSeeGuildRoleSubscriptionSettings)({
+  } = e, eK = () => (0, y.canSeeGuildRoleSubscriptionSettings)({
     guild: l,
     isOwner: k,
-    canManageGuildRoleSubscriptions: (0, B.canManageGuildRoleSubscriptions)(l),
+    canManageGuildRoleSubscriptions: (0, y.canManageGuildRoleSubscriptions)(l),
     isMonetizationWaitlistEnabledForGuild: (0, g.isMonetizationWaitlistEnabledForGuild)(l.id),
     isGuildEligibleForRoleSubscriptions: (0, b.isGuildEligibleForRoleSubscriptions)(l.id),
     isExpeditedMonetizationOnboardingGuild: (0, g.isExpeditedMonetizationOnboardingGuild)(l),
@@ -210,7 +210,7 @@ function eK(e) {
   }, {
     section: eH.GuildSettingsSections.GUILD_TEMPLATES,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-    label: (0, a.jsx)(eB.default, {
+    label: (0, a.jsx)(ey.default, {
       showDirtyIndicator: Y
     }),
     ariaLabel: eY.default.Messages.GUILD_TEMPLATES,
@@ -224,10 +224,10 @@ function eK(e) {
     section: eH.GuildSettingsSections.VANITY_URL,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_VANITY_URL,
     label: eY.default.Messages.VANITY_URL,
-    element: ey.default,
+    element: eB.default,
     notice: {
       stores: [ec.default],
-      element: ey.GuildSettingsVanityURLNotice
+      element: eB.GuildSettingsVanityURLNotice
     },
     predicate: () => i
   }, {
@@ -435,7 +435,7 @@ function eK(e) {
     element: F.default,
     type: c.ContentTypes.CUSTOM,
     predicate: eK,
-    newIndicatorDismissibleContentTypes: (0, y.isEligibleForNewBadge)(l) ? [r.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
+    newIndicatorDismissibleContentTypes: (0, B.isEligibleForNewBadge)(l) ? [r.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
   }, {
     section: eH.GuildSettingsSections.GUILD_PRODUCTS,
     label: eY.default.Messages.GUILD_PRODUCTS_TITLE,
@@ -742,8 +742,8 @@ function eq() {
   }, [f, S.canManageGuild]), l.useEffect(() => {
     !g && en.default.close()
   }, [g]);
-  let B = (0, i.useStateFromStores)([e_.default], () => e_.default.getCurrentPage()),
-    y = (0, i.useStateFromStores)([D.default], () => null != f && D.default.getEnabled(f)),
+  let y = (0, i.useStateFromStores)([e_.default], () => e_.default.getCurrentPage()),
+    B = (0, i.useStateFromStores)([D.default], () => null != f && D.default.getEnabled(f)),
     F = (0, i.useStateFromStores)([Z.default], () => null != f && Z.default.isEmpty(f));
   return (0, a.jsx)(I.AnalyticsLocationProvider, {
     value: u,
@@ -760,8 +760,8 @@ function eq() {
       ...S,
       canViewGuildAnalytics: h,
       showAccessRate: A,
-      onboardingStep: B,
-      onboardingEnabled: y,
+      onboardingStep: y,
+      onboardingEnabled: B,
       welcomeScreenEmpty: F,
       guildMetadata: o,
       canAccessClanSettings: v

@@ -27,8 +27,8 @@ var s = n("735250"),
   N = n("240126"),
   S = n("791914"),
   C = n("147522"),
-  A = n("809780"),
-  g = n("981631"),
+  g = n("809780"),
+  A = n("981631"),
   M = n("689938"),
   R = n("953214");
 
@@ -40,7 +40,7 @@ function v(e) {
     setSeenTutorial: r,
     closePopout: v,
     badgeState: x
-  } = e, L = a.useRef(null), [D, P] = (0, A.default)(L), {
+  } = e, L = a.useRef(null), [D, P] = (0, g.default)(L), {
     loadState: y,
     channels: U
   } = D, {
@@ -77,12 +77,12 @@ function v(e) {
         let n = e.channels.find(e => !e.collapsed);
         null != n && t.markChannelRead(n)
       };
-      return p.ComponentDispatch.subscribe(g.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
-        p.ComponentDispatch.unsubscribe(g.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
+      return p.ComponentDispatch.subscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
+        p.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
       }
     }, [t, e.channels])
   }(D, P), a.useEffect(() => {
-    I.default.track(g.AnalyticEvents.OPEN_POPOUT, {
+    I.default.track(A.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
   }, []), a.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", v), () => {
@@ -132,11 +132,11 @@ function v(e) {
               L.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...a,
-            onScroll: y === A.LoadState.Done ? void 0 : j,
+            onScroll: y === g.LoadState.Done ? void 0 : j,
             className: R.scroller,
             children: [l ? (0, s.jsx)(O, {
               setSeenTutorial: r
-            }) : null, (0, C.default)(U, P, n), y === A.LoadState.Done ? null : (0, s.jsx)(f.Spinner, {
+            }) : null, (0, C.default)(U, P, n), y === g.LoadState.Done ? null : (0, s.jsx)(f.Spinner, {
               className: R.spinner
             })]
           })
