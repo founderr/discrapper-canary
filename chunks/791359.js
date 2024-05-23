@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("801077"),
   S = n("626135"),
   p = n("70956"),
-  g = n("225559"),
-  I = n("910436"),
+  I = n("225559"),
+  g = n("910436"),
   T = n("203028"),
   A = n("358924"),
   N = n("292140"),
@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("674563"),
   L = n("689938"),
   M = n("676563");
-let y = 15 * p.default.Millis.MINUTE,
-  P = (0, v.default)(function(e) {
+let P = 15 * p.default.Millis.MINUTE,
+  x = (0, v.default)(function(e) {
     let {
       party: t,
       onUserContextMenu: n,
@@ -41,7 +41,7 @@ let y = 15 * p.default.Millis.MINUTE,
     } = e, r = (0, a.jsx)(T.default, {
       party: t,
       onUserContextMenu: n
-    }), u = (0, a.jsx)(I.default, {
+    }), u = (0, a.jsx)(g.default, {
       party: t,
       onChannelContextMenu: l,
       quest: i
@@ -50,7 +50,7 @@ let y = 15 * p.default.Millis.MINUTE,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, g = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, I = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
@@ -62,7 +62,7 @@ let y = 15 * p.default.Millis.MINUTE,
         in_voice_channel: p,
         games_detected: e
       })
-    }, [_, C, m, p, E]), v = o()(g, y);
+    }, [_, C, m, p, E]), v = o()(I, P);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -92,7 +92,7 @@ let y = 15 * p.default.Millis.MINUTE,
       }
     }) : null
   }),
-  x = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
+  y = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
 
 function D() {
   let {
@@ -108,8 +108,8 @@ function D() {
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
-  s.useEffect(() => (c.default.wait(() => g.mount()), () => c.default.wait(() => g.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
-    n && !l && x()
+  s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
+    n && !l && y()
   }, [n, l]);
   let o = s.useMemo(() => {
       let t = new Map,
@@ -130,7 +130,7 @@ function D() {
     let {
       party: t
     } = e;
-    return (0, a.jsx)(P, {
+    return (0, a.jsx)(x, {
       party: t,
       quest: o.get(t.id)
     }, t.id)

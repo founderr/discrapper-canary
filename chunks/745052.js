@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("209613"),
   S = n("325708"),
   p = n("320149"),
-  g = n("252618"),
-  I = n("605236"),
+  I = n("252618"),
+  g = n("605236"),
   T = n("243778"),
   A = n("984370"),
   N = n("797614"),
@@ -27,16 +27,16 @@ var a = n("735250"),
   O = n("897473"),
   L = n("108427"),
   M = n("970731"),
-  y = n("210887"),
-  P = n("433355"),
-  x = n("592125"),
+  P = n("210887"),
+  x = n("433355"),
+  y = n("592125"),
   D = n("819640"),
   b = n("916187"),
   U = n("151827"),
   j = n("626135"),
   G = n("792125"),
-  k = n("647090"),
-  w = n("385956"),
+  w = n("647090"),
+  k = n("385956"),
   B = n("610697"),
   F = n("26373"),
   H = n("486622"),
@@ -155,7 +155,7 @@ function es(e) {
   let {
     pageWidth: t,
     onSidebarResize: n
-  } = e, s = (0, u.useStateFromStores)([P.default], () => P.default.getSidebarState(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
+  } = e, s = (0, u.useStateFromStores)([x.default], () => x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(S.default, {
@@ -164,7 +164,7 @@ function es(e) {
     onWidthChange: n,
     children: (0, a.jsx)(p.default, {
       channel: l,
-      baseChannelId: P.MESSAGE_REQUESTS_BASE_CHANNEL_ID
+      baseChannelId: x.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
   })
 }
@@ -188,7 +188,7 @@ let el = function(e) {
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, I.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, g.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(T.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -243,22 +243,22 @@ let eo = (0, h.default)(function(e) {
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let l = (0, u.useStateFromStores)([y.default], () => y.default.theme),
+  let l = (0, u.useStateFromStores)([P.default], () => P.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
-    h = (0, u.useStateFromStores)([P.default], () => {
-      let e = P.default.getSidebarState(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
+    h = (0, u.useStateFromStores)([x.default], () => {
+      let e = x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
       return null != e && e.type === O.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
-    m = (0, w.useIsEitherTypeOfMessageRequest)(_),
-    S = (0, k.useHasUserRepliedInChannel)(_);
+    m = (0, k.useIsEitherTypeOfMessageRequest)(_),
+    S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
-  let [p, I] = s.useState(Z.MessageRequestSections.REQUESTS);
-  return (0, g.usePageTitle)({
+  let [p, g] = s.useState(Z.MessageRequestSections.REQUESTS);
+  return (0, I.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -281,7 +281,7 @@ let eo = (0, h.default)(function(e) {
           selectedItem: p,
           type: "top-pill",
           onItemSelect: e => {
-            I(e)
+            g(e)
           },
           className: et.__invalid_tabBar,
           children: [(0, a.jsx)(c.TabBar.Item, {

@@ -15,8 +15,8 @@ var a, s, l = n("735250"),
   m = n("122810"),
   S = n("833664"),
   p = n("503438"),
-  g = n("420660"),
-  I = n("74433"),
+  I = n("420660"),
+  g = n("74433"),
   T = n("952561"),
   A = n("513202"),
   N = n("906732"),
@@ -25,16 +25,16 @@ var a, s, l = n("735250"),
   O = n("102172"),
   L = n("871118"),
   M = n("849171"),
-  y = n("314897"),
-  P = n("592125"),
-  x = n("594174"),
+  P = n("314897"),
+  x = n("592125"),
+  y = n("594174"),
   D = n("368874"),
   b = n("366695"),
   U = n("366966"),
   j = n("446753"),
   G = n("619271"),
-  k = n("395361"),
-  w = n("639351"),
+  w = n("395361"),
+  k = n("639351"),
   B = n("632184"),
   F = n("368666"),
   H = n("81063"),
@@ -149,13 +149,13 @@ let en = e => {
   } = e;
   switch (n) {
     case "XBOX":
-      t = (0, l.jsx)(w.default, {
+      t = (0, l.jsx)(k.default, {
         className: q.headerIcon,
         color: d.default.unsafe_rawColors.PRIMARY_300.css
       });
       break;
     case "SPOTIFY":
-      t = (0, l.jsx)(k.default, {
+      t = (0, l.jsx)(w.default, {
         className: q.headerIcon,
         color: d.default.unsafe_rawColors.SPOTIFY.css
       });
@@ -341,7 +341,7 @@ es.Header = ea, es.Body = e => {
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.xboxSection,
-      children: [(0, l.jsx)(w.default, {
+      children: [(0, l.jsx)(k.default, {
         className: q.xboxSectionIcon
       }), (0, l.jsxs)("div", {
         className: q.__invalid_xboxSectionDetails,
@@ -374,7 +374,7 @@ es.Header = ea, es.Body = e => {
           className: o()(q.largeImage, q.borderRadius0, {
             [q.largeImageMask]: null != n.small_image
           })
-        }), c ? null : (0, l.jsx)(k.default, {
+        }), c ? null : (0, l.jsx)(w.default, {
           className: q.smallImage,
           color: d.default.unsafe_rawColors.SPOTIFY.css
         })]
@@ -400,7 +400,7 @@ es.Header = ea, es.Body = e => {
       assets: f,
       application_id: E
     } = a;
-  if (null != f && (0, g.default)(a)) {
+  if (null != f && (0, I.default)(a)) {
     var _;
     t = (0, l.jsx)(D.default, {
       className: q.twitchSectionPreviewWrapper,
@@ -449,7 +449,7 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([P.default], () => P.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(L.default, {
@@ -462,7 +462,7 @@ es.Header = ea, es.Body = e => {
         children: (0, O.getStreamCTAString)(E)
       })
     })]
-  }), _ = null !== (n = null === (t = (0, I.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
+  }), _ = null !== (n = null === (t = (0, g.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.applicationStreamingSection,
@@ -491,7 +491,7 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([x.default, y.default], () => Array.from(s).map(e => y.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m
@@ -502,7 +502,7 @@ es.Header = ea, es.Body = e => {
   let p = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    g = (0, H.getAssetImage)(S.id, o, 300);
+    I = (0, H.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
@@ -528,8 +528,8 @@ es.Header = ea, es.Body = e => {
       }) : null]
     }), (0, l.jsxs)("div", {
       className: q.embeddedActivityPlayerContainer,
-      children: [null != g ? (0, l.jsx)("img", {
-        src: g,
+      children: [null != I ? (0, l.jsx)("img", {
+        src: I,
         alt: S.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {

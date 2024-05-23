@@ -31,8 +31,8 @@ function C(e) {
     sidebarWidth: m,
     windowWidth: S,
     transition: p,
-    brandPrimaryColor: g
-  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (S - m) / 2, [m, S]), [N, v, R] = (0, l.useSpring)(() => ({
+    brandPrimaryColor: I
+  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (S - m) / 2, [m, S]), [N, v, R] = (0, l.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
@@ -48,7 +48,7 @@ function C(e) {
     },
     config: _,
     delay: 800,
-    immediate: I
+    immediate: g
   });
   s.useEffect(() => {
     n && (R(), v({
@@ -97,12 +97,12 @@ function C(e) {
       children: (0, a.jsxs)("div", {
         className: h.sidebarRightDecoration,
         children: [(0, a.jsx)(l.animated.div, {
-          style: I ? void 0 : N,
+          style: g ? void 0 : N,
           children: (0, a.jsx)(d.default, {
             className: h.signButton,
             size: r.Button.Sizes.SMALL,
             onClick: L,
-            themeColor: g,
+            themeColor: I,
             children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
           })
         }), (0, a.jsx)(r.Text, {

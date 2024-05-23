@@ -19,8 +19,8 @@ var a, s, l = n("735250"),
   m = n("207796"),
   S = n("777734"),
   p = n("976757"),
-  g = n("981631"),
-  I = n("689938"),
+  I = n("981631"),
+  g = n("689938"),
   T = n("886722");
 
 function A(e) {
@@ -31,7 +31,7 @@ function A(e) {
     clans: a,
     searchResult: s,
     searchCriteria: A
-  } = (0, C.useClanDiscoveryList)(), N = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), v = (0, m.useClanDiscoveryUIStore)(e => e.mode, o.default), R = (0, d.default)(s), O = (0, d.default)(v), L = i.useRef(null), M = i.useRef(0), [y, P] = i.useState({}), [x, D] = (0, r.useSpring)(() => ({
+  } = (0, C.useClanDiscoveryList)(), N = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), v = (0, m.useClanDiscoveryUIStore)(e => e.mode, o.default), R = (0, d.default)(s), O = (0, d.default)(v), L = i.useRef(null), M = i.useRef(0), [P, x] = i.useState({}), [y, D] = (0, r.useSpring)(() => ({
     opacity: 0,
     config: r.config.stiff
   })), b = Math.min(null != t ? t : 1024, 2e3), U = i.useMemo(() => {
@@ -41,23 +41,23 @@ function A(e) {
       a = b / t;
     return a > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
   }, [b]), j = i.useCallback(() => {
-    if (null == k.current) {
-      0 !== M.current && (P({
+    if (null == w.current) {
+      0 !== M.current && (x({
         height: 0
       }), D({
         opacity: 0
       }), M.current = 0);
       return
     }
-    P({
-      height: k.current.getBoundingClientRect().y + 400 + 16 + 40
+    x({
+      height: w.current.getBoundingClientRect().y + 400 + 16 + 40
     }), 0 === M.current && (D({
       opacity: 1
     }), M.current = 1)
   }, []), G = (0, f.useThrottledFunction)(j, 10, [j], {
     leading: !0,
     trailing: !0
-  }), k = (0, c.useResizeObserver)(j);
+  }), w = (0, c.useResizeObserver)(j);
   i.useEffect(() => {
     if (null != s && !!(0, p.isLoadedSearchResult)(s))(!(null != R && (0, p.isLoadedSearchResult)(R)) || !(R.loadedAt >= s.loadedAt)) && (j(), (0, E.trackClanDiscoveryViewed)(s.items.map(e => e.id), "top_picks", A))
   }, [A, s, R, j]), i.useEffect(() => {
@@ -67,12 +67,12 @@ function A(e) {
   }, [O, v]), i.useEffect(() => () => {
     null != L.current && clearTimeout(L.current)
   }, []);
-  let w = i.useMemo(() => null == a ? [] : [{
+  let k = i.useMemo(() => null == a ? [] : [{
       section: "top_picks",
       items: a.slice(0, U),
       sectionHeight: 24,
-      header: I.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-      subtitle: I.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+      header: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+      subtitle: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
     }, {
       section: "other_guilds",
       items: a.slice(U),
@@ -83,45 +83,45 @@ function A(e) {
       var s;
       let {
         items: i
-      } = w[e], r = i[t];
+      } = k[e], r = i[t];
       return (0, l.jsx)(_.default, {
         clan: r,
         affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, h.getClanDiscoveryAffinity)(r, A),
         traitsToHighlight: N,
         className: T.card,
         style: n,
-        source: g.AnalyticsSections.DISCOVER_SEARCH,
+        source: I.AnalyticsSections.DISCOVER_SEARCH,
         prioritizedGameIds: B,
         onlyAnimateIconOnHover: !0
       }, a)
-    }, [A, w, N, B]),
+    }, [A, k, N, B]),
     H = i.useCallback(e => {
       let {
         header: t,
         subtitle: n,
         section: a
-      } = w[e];
+      } = k[e];
       return null == t ? null : "top_picks" === a ? (0, l.jsx)(S.default, {
-        ref: k,
+        ref: w,
         title: t,
         subtitle: n
       }) : (0, l.jsx)(S.default, {
         title: t,
         subtitle: n
       })
-    }, [w, k]);
+    }, [k, w]);
   return 0 !== a.length && n ? (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)("div", {
       className: T.masonryListContainer,
       children: [(0, l.jsx)(r.animated.div, {
         className: T.masonryListGradient,
         style: {
-          ...x,
-          ...y
+          ...y,
+          ...P
         }
       }), (0, l.jsx)(u.MasonryList, {
         className: T.masonryList,
-        sections: w.map(e => {
+        sections: k.map(e => {
           let {
             items: t
           } = e;
@@ -135,8 +135,8 @@ function A(e) {
         removeEdgeItemGutters: !0,
         renderItem: F,
         renderSection: H,
-        getSectionHeight: e => w[e].sectionHeight,
-        getItemKey: (e, t) => w[e].items[t].id,
+        getSectionHeight: e => k[e].sectionHeight,
+        getItemKey: (e, t) => k[e].items[t].id,
         getItemHeight: () => 400,
         chunkSize: 24,
         onScroll: G

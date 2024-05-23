@@ -80,15 +80,15 @@ t.default = {
       S > 0 && (f.flags = S), delete f.instance, null === (t = f.party) || void 0 === t || delete t.privacy;
       let {
         assets: p,
-        party: g,
-        secrets: I,
+        party: I,
+        secrets: g,
         timestamps: T,
         buttons: A,
         type: N
       } = f;
-      if ((null == N || N !== h.ActivityTypes.PLAYING && !m) && (f.type = h.ActivityTypes.PLAYING), null != I) {
-        let e = s().values(I).filter(e => !!e);
-        if (null != g && s().intersection(e, [g.id]).length > 0 && !_.includes(a.application.id)) throw new d.default({
+      if ((null == N || N !== h.ActivityTypes.PLAYING && !m) && (f.type = h.ActivityTypes.PLAYING), null != g) {
+        let e = s().values(g).filter(e => !!e);
+        if (null != I && s().intersection(e, [I.id]).length > 0 && !_.includes(a.application.id)) throw new d.default({
           errorCode: h.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s().uniq(e).length < e.length) throw new d.default({

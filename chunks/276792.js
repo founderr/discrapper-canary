@@ -26,8 +26,8 @@ function S(e) {
   let {
     content: S,
     renderModalProps: p,
-    analyticsLocations: g,
-    analyticsLocation: I,
+    analyticsLocations: I,
+    analyticsLocation: g,
     isLightTheme: T
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
@@ -35,9 +35,9 @@ function S(e) {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: g,
+    analyticsLocations: I,
     analyticsObject: {
-      ...I,
+      ...g,
       object: h.AnalyticsObjects.BUTTON_CTA,
       objectType: h.AnalyticsObjectTypes.TIER_2
     },
@@ -60,16 +60,16 @@ function S(e) {
     type: "image",
     src: T ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
   });
-  let y = T ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-    P = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
+  let P = T ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+    x = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
       text: S.modalTopPill,
       className: C.modalTopPill,
-      colorOptions: y
+      colorOptions: P
     }) : void 0;
   return {
     renderModalProps: p,
     header: S.header,
-    modalTopExtra: P,
+    modalTopExtra: x,
     subHeader: S.subheader,
     subHeaderExtra: L,
     heroArt: M,

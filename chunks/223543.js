@@ -15,7 +15,7 @@ t.default = e => {
     location: t
   } = e, {
     verifyFailed: E,
-    verifySucceeded: _
+    verifySucceeded: I
   } = (0, l.useStateFromStoresObject)([o.default], () => ({
     verifyFailed: o.default.didVerifyFail(),
     verifySucceeded: o.default.didVerifySucceed()
@@ -35,7 +35,7 @@ t.default = e => {
       className: f.marginBottom40,
       children: c.default.Messages.PAYMENT_AUTH_EXPIRED_SUGGESTION
     })]
-  }) : _ ? (0, s.jsxs)(d.default, {
+  }) : I ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)("img", {
       alt: "",
       src: n("73962"),

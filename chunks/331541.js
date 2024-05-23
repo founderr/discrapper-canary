@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("727637"),
   S = n("420660"),
   p = n("100527"),
-  g = n("906732"),
-  I = n("521868"),
+  I = n("906732"),
+  g = n("521868"),
   T = n("299206"),
   A = n("440051"),
   N = n("734934"),
@@ -31,16 +31,16 @@ var a = n("735250"),
   O = n("221292"),
   L = n("318661"),
   M = n("502762"),
-  y = n("192133"),
-  P = n("138394"),
-  x = n("131640"),
+  P = n("192133"),
+  x = n("138394"),
+  y = n("131640"),
   D = n("695346"),
   b = n("199902"),
   U = n("293273"),
   j = n("158776"),
   G = n("594174"),
-  k = n("881201"),
-  w = n("26290"),
+  w = n("881201"),
+  k = n("26290"),
   B = n("626135"),
   F = n("70956"),
   H = n("51144"),
@@ -157,7 +157,7 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, g.default)(p.default.ACCOUNT_PROFILE_POPOUT), F = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, I.default)(p.default.ACCOUNT_PROFILE_POPOUT), F = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
@@ -223,7 +223,7 @@ function $(e) {
             className: Q.icon
           }), (0, a.jsxs)("div", {
             className: Q.focusModeTitle,
-            children: [q.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(w.TextBadge, {
+            children: [q.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(k.TextBadge, {
               text: l ? q.default.Messages.FOCUS_MODE_BADGE_ON : o ? q.default.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : q.default.Messages.FOCUS_MODE_BADGE_OFF,
               color: l ? u.default.BRAND_500 : o ? u.default.RED_400 : u.default.PRIMARY_500
             })]
@@ -265,13 +265,13 @@ function $(e) {
   let el = (0, N.useFocusModeEnabled)(),
     ei = ee === K.StatusTypes.DND,
     er = (0, Y.useMultiAccountMenuItems)(),
-    eo = (0, I.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
+    eo = (0, g.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
     eu = (0, T.default)({
       id: t.id,
       label: q.default.Messages.COPY_ID_USER,
       showIconFirst: !0
     });
-  return (0, a.jsx)(g.AnalyticsLocationProvider, {
+  return (0, a.jsx)(I.AnalyticsLocationProvider, {
     value: G,
     children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
@@ -286,7 +286,7 @@ function $(e) {
             user: t,
             displayProfile: F,
             profileType: z.UserProfileTypes.POPOUT,
-            children: [(0, a.jsx)(x.default, {
+            children: [(0, a.jsx)(y.default, {
               user: t,
               displayProfile: F,
               onClose: () => null == b ? void 0 : b(),
@@ -297,7 +297,7 @@ function $(e) {
               isHovering: es,
               showPremiumBadgeUpsell: !1
             }), (0, a.jsxs)(M.default.Overlay, {
-              children: [(0, a.jsx)(y.default, {
+              children: [(0, a.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: F,
@@ -307,7 +307,7 @@ function $(e) {
                 canDM: !1,
                 hideNote: !0,
                 showCopiableUsername: !0
-              }), (0, a.jsx)(P.default, {
+              }), (0, a.jsx)(x.default, {
                 className: Q.divider
               }), (0, a.jsxs)(E.Menu, {
                 navId: "account",
@@ -379,7 +379,7 @@ function $(e) {
                     focusedClassName: Q.menuItemFocused,
                     subMenuIconClassName: Q.subMenuIcon,
                     label: q.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                    icon: k.default,
+                    icon: w.default,
                     showIconFirst: !0,
                     action: () => {
                       (0, O.trackUserProfileAction)({

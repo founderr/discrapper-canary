@@ -22,7 +22,7 @@ var a = n("735250"),
   S = n("689938"),
   p = n("803844");
 
-function g(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class I extends s.Component {
+class g extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -87,11 +87,11 @@ class I extends s.Component {
     })
   }
   constructor(...e) {
-    super(...e), g(this, "searchBarRef", null), g(this, "state", {
+    super(...e), I(this, "searchBarRef", null), I(this, "state", {
       focused: !1
-    }), g(this, "setRef", e => {
+    }), I(this, "setRef", e => {
       this.searchBarRef = e
-    }), g(this, "handleKeyDown", e => {
+    }), I(this, "handleKeyDown", e => {
       var t;
       let {
         activeRowKey: n,
@@ -138,7 +138,7 @@ class I extends s.Component {
 function T() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, a.jsx)(I, {
+  return (0, a.jsx)(g, {
     activeRowKey: (0, r.useStateFromStores)([E.default], () => E.default.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.useStateFromStores)([f.default], () => f.default.applicationFilterQuery),

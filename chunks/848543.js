@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("459273"),
   S = n("242291"),
   p = n("792165"),
-  g = n("603074"),
-  I = n("981631"),
+  I = n("603074"),
+  g = n("981631"),
   T = n("921944"),
   A = n("689938"),
   N = n("726271");
@@ -37,13 +37,13 @@ function v(e) {
   } = e, {
     mute: L,
     suppress: M
-  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = L || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: P
+  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), x = L || M || P, [y, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: x
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
-    analyticsLocations: k
+    analyticsLocations: w
   } = (0, E.default)(f.default.SOUNDBOARD_BUTTON);
 
-  function w(e) {
+  function k(e) {
     null != b && (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -62,14 +62,14 @@ function v(e) {
       onMouseLeave: V
     }
   } = (0, u.useSoundboardLottie)(), Y = e => (0, a.jsx)(d.Popout, {
-    shouldShow: x,
+    shouldShow: y,
     position: "top",
     onRequestClose: () => D(!1),
     renderPopout: e => {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(I.default, {
         guildId: b,
         channel: t,
         onClose: n,
@@ -85,15 +85,15 @@ function v(e) {
         ...e,
         ...t,
         className: i()(v, {
-          [N.buttonActive]: x,
-          [N.disabled]: P
+          [N.buttonActive]: y,
+          [N.disabled]: x
         }),
         wrapperClassName: v,
         innerClassName: R,
-        disabled: P,
+        disabled: x,
         onClick: () => {
           var t, n;
-          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), F()
+          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!y), F()
         },
         onMouseEnter: t => {
           var n, a;
@@ -103,30 +103,30 @@ function v(e) {
           var n, a;
           null === (n = O.onMouseLeave) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
         },
-        onContextMenu: w,
+        onContextMenu: k,
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
         ...O,
         children: (0, a.jsx)(B, {
           className: l,
           size: "sm",
-          color: x ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
+          color: y ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
         })
       })
     })
   }), W = s.useCallback(() => {
-    !P && D(!x)
-  }, [P, x]);
+    !x && D(!y)
+  }, [x, y]);
   return (0, m.useComponentAction)({
-    event: I.ComponentActions.TOGGLE_SOUNDBOARD,
+    event: g.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, a.jsx)(E.AnalyticsLocationProvider, {
-    value: k,
+    value: w,
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
         if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (y) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)

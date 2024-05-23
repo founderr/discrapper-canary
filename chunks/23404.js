@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("497505"),
   S = n("918701"),
   p = n("566078"),
-  g = n("874137"),
-  I = n("611855"),
+  I = n("874137"),
+  g = n("611855"),
   T = n("670638"),
   A = n("667105"),
   N = n("860151"),
@@ -62,7 +62,7 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [p, y] = s.useState(!1), P = s.useCallback(() => y(!0), []), x = s.useCallback(() => y(!1), []), D = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [p, P] = s.useState(!1), x = s.useCallback(() => P(!0), []), y = s.useCallback(() => P(!1), []), D = s.useCallback(e => {
     e.stopPropagation()
   }, []), b = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -84,8 +84,8 @@ t.default = function(e) {
   }, [o]), G = (0, A.useHandleClaimQuestsReward)({
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
-  }), k = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || k || F ? null : (0, a.jsx)(g.QuestContentImpressionTracker, {
+  }), w = (0, _.useIsQuestExpired)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || w || F ? null : (0, a.jsx)(I.QuestContentImpressionTracker, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
     children: e => {
@@ -95,19 +95,19 @@ t.default = function(e) {
           e.current = t
         },
         className: i()(L.wrapper, {
-          [L.wrapperQuestAccepted]: w
+          [L.wrapperQuestAccepted]: k
         }),
         onClick: D,
         onKeyPress: D,
-        onFocus: P,
-        onMouseEnter: P,
-        onBlur: x,
-        onMouseLeave: x,
+        onFocus: x,
+        onMouseEnter: x,
+        onBlur: y,
+        onMouseLeave: y,
         children: [(0, a.jsxs)("div", {
           className: L.utils,
-          children: [w ? (0, a.jsx)(M, {
+          children: [k ? (0, a.jsx)(M, {
             quest: o
-          }) : (0, a.jsx)(I.default, {
+          }) : (0, a.jsx)(g.default, {
             textOpacity: .5
           }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
             quest: o,
@@ -122,7 +122,7 @@ t.default = function(e) {
               })
             })
           })]
-        }), !w && (0, a.jsxs)(a.Fragment, {
+        }), !k && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(M, {
             quest: o
           }), (0, a.jsx)(u.Text, {
@@ -134,7 +134,7 @@ t.default = function(e) {
               location: v.QuestsExperimentLocations.ACTIVITY_PANEL
             })
           })]
-        }), w && !B && (0, a.jsx)(N.default, {
+        }), k && !B && (0, a.jsx)(N.default, {
           autoplay: p,
           className: L.rewardTileWithInstructions,
           quest: o,
@@ -142,7 +142,7 @@ t.default = function(e) {
           questExperimentLocation: v.QuestsExperimentLocations.ACTIVITY_PANEL
         }), (0, a.jsxs)("div", {
           className: L.ctas,
-          children: [!w && (0, a.jsxs)(a.Fragment, {
+          children: [!k && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(u.Button, {
               className: L.cta,
               color: u.Button.Colors.PRIMARY,
@@ -159,7 +159,7 @@ t.default = function(e) {
               submitting: c,
               children: O.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), w && !B && (0, a.jsx)(u.Button, {
+          }), k && !B && (0, a.jsx)(u.Button, {
             className: L.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,

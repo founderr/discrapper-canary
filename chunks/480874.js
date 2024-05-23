@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("922409"),
   S = n("727813"),
   p = n("355350"),
-  g = n("307947"),
-  I = n("125855"),
+  I = n("307947"),
+  g = n("125855"),
   T = n("687683"),
   A = n("981631"),
   N = n("689938"),
@@ -42,13 +42,13 @@ function R() {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: y
+      rejectAll: P
     } = (0, C.useMessageRequestActions)({
       onError: M
     }),
-    P = s.useCallback(() => {
-      y(t.map(e => e.channel.id))
-    }, [t, y]);
+    x = s.useCallback(() => {
+      P(t.map(e => e.channel.id))
+    }, [t, P]);
   s.useEffect(() => {
     h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
@@ -56,12 +56,12 @@ function R() {
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let x = s.useCallback(e => {
+  let y = s.useCallback(e => {
       var n, s;
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(g.default, {
         index: r,
         className: i()({
           [v.selected]: null != L && L === d,
@@ -84,7 +84,7 @@ function R() {
           tag: "span",
           children: "•"
         }), (0, a.jsx)(u.Button, {
-          onClick: P,
+          onClick: x,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -93,8 +93,8 @@ function R() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, P, R]);
-  return 0 === t.length ? (0, a.jsx)(g.default, {
+    }, "message-requests-spam-title"), [n, x, R]);
+  return 0 === t.length ? (0, a.jsx)(I.default, {
     section: T.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: O,
@@ -118,7 +118,7 @@ function R() {
           sectionHeight: T.LIST_SECTION_HEIGHT,
           rowHeight: T.LIST_ROW_HEIGHT,
           renderSection: D,
-          renderRow: x,
+          renderRow: y,
           sections: [t.length],
           chunkSize: 30,
           fade: !0,

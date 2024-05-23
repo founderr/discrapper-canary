@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("782959"),
   S = n("276645"),
   p = n("970731"),
-  g = n("626135"),
-  I = n("267642"),
+  I = n("626135"),
+  g = n("267642"),
   T = n("981631"),
   A = n("921944"),
   N = n("30513"),
@@ -27,9 +27,9 @@ var a = n("735250"),
   O = n("925058"),
   L = n("835104"),
   M = n("741160"),
-  y = n("829972"),
-  P = n("31932"),
-  x = n("642301");
+  P = n("829972"),
+  x = n("31932"),
+  y = n("642301");
 
 function D(e) {
   null != e && _.default.open(e.id, T.GuildSettingsSections.OVERVIEW, {
@@ -42,7 +42,7 @@ function b(e, t) {
 }
 
 function U(e, t) {
-  null != t && ((0, I.isTierUnlocked)(t, T.BoostedGuildTiers.TIER_1) ? _.default.open(t.id, T.GuildSettingsSections.OVERVIEW, {
+  null != t && ((0, g.isTierUnlocked)(t, T.BoostedGuildTiers.TIER_1) ? _.default.open(t.id, T.GuildSettingsSections.OVERVIEW, {
     section: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
   }, T.GuildSettingsSubsections.INVITE) : (0, f.default)({
     analyticsLocations: e,
@@ -78,24 +78,24 @@ t.default = s.memo(function(e) {
   } = e, {
     analyticsLocations: f
   } = (0, o.default)(), N = () => {
-    g.default.track(T.AnalyticEvents.TOOLTIP_VIEWED, {
+    I.default.track(T.AnalyticEvents.TOOLTIP_VIEWED, {
       type: v.PremiumUpsellTypes.PREMIUM_PROGRESS_BAR,
       location: {
         page: T.AnalyticsPages.GUILD_CHANNEL
       }
     })
   }, G = () => {
-    g.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    I.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: v.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
         page: T.AnalyticsPages.GUILD_CHANNEL
       },
       location_stack: f
     })
-  }, k = (0, i.isThemeDark)(n) ? y : P, [w, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, w = (0, i.isThemeDark)(n) ? P : x, [k, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
-      switch (w) {
+      switch (k) {
         case l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
           return (0, a.jsx)(j, {
             renderPopout: (0, a.jsx)(S.default, {
@@ -111,7 +111,7 @@ t.default = s.memo(function(e) {
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: k,
+                src: w,
                 className: L.fullWidthImage
               }),
               content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
@@ -130,7 +130,7 @@ t.default = s.memo(function(e) {
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: k,
+                src: w,
                 className: L.fullWidthImage
               }),
               content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
@@ -168,10 +168,10 @@ t.default = s.memo(function(e) {
             renderGuildHeaderDropdownButton: r
           });
         case l.DismissibleContent.GUILD_HEADER_INVITE_SPLASH:
-          let e = (0, I.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
-              boostCount: (0, I.getNumberOfAppliedBoostsNeededForTier)(s, T.BoostedGuildTiers.TIER_1)
+          let e = (0, g.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
+              boostCount: (0, g.getNumberOfAppliedBoostsNeededForTier)(s, T.BoostedGuildTiers.TIER_1)
             }),
-            t = (0, I.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
+            t = (0, g.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
           return (0, a.jsx)(j, {
             renderPopout: (0, a.jsx)(p.default, {
               onComponentMount: G,
@@ -218,7 +218,7 @@ t.default = s.memo(function(e) {
               secondaryButtonCTA: R.default.Messages.NO_THANKS,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: x,
+                src: y,
                 className: L.fullWidthImage
               }),
               onClick: () => {

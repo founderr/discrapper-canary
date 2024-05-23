@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("730749"),
   S = n("112724"),
   p = n("812206"),
-  g = n("44315"),
-  I = n("210887"),
+  I = n("44315"),
+  g = n("210887"),
   T = n("283595"),
   A = n("417363"),
   N = n("941128"),
@@ -27,16 +27,16 @@ var a = n("735250"),
   O = n("366695"),
   L = n("366966"),
   M = n("151011"),
-  y = n("774832"),
-  P = n("465670"),
-  x = n("786048"),
+  P = n("774832"),
+  x = n("465670"),
+  y = n("786048"),
   D = n("897353"),
   b = n("424218"),
   U = n("780570"),
   j = n("353042"),
   G = n("86826"),
-  k = n("981631"),
-  w = n("689938"),
+  w = n("981631"),
+  k = n("689938"),
   B = n("31931");
 
 function F(e, t, n) {
@@ -93,10 +93,10 @@ let H = e => {
 
 function W(e, t) {
   switch (t) {
-    case k.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
-    case k.DispatchApplicationStages.PLANNING:
-    case k.DispatchApplicationStages.FINALIZING:
-    case k.DispatchApplicationStages.ALLOCATING_DISK:
+    case w.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
+    case w.DispatchApplicationStages.PLANNING:
+    case w.DispatchApplicationStages.FINALIZING:
+    case w.DispatchApplicationStages.ALLOCATING_DISK:
       return "".concat(e);
     default:
       return (0, b.formatSize)(e, {
@@ -105,75 +105,75 @@ function W(e, t) {
   }
 }
 let K = {
-  [k.LocalDispatchApplicationStates.INSTALLING]: {
-    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+  [w.LocalDispatchApplicationStates.INSTALLING]: {
+    [L.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     })
   },
-  [k.LocalDispatchApplicationStates.UPDATING]: {
-    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
+  [w.LocalDispatchApplicationStates.UPDATING]: {
+    [L.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     })
   },
-  [k.LocalDispatchApplicationStates.REPAIRING]: {
-    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+  [w.LocalDispatchApplicationStates.REPAIRING]: {
+    [L.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -206,48 +206,48 @@ function q(e) {
     secondsRemaining: i
   } = e, r = W(l, n), o = W(s, n);
   switch (n) {
-    case k.DispatchApplicationStages.QUEUED:
-      if (0 === s) return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER_NO_TRANSITION;
-      return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER.format({
+    case w.DispatchApplicationStages.QUEUED:
+      if (0 === s) return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER_NO_TRANSITION;
+      return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER.format({
         percent: a,
         progress: o,
         total: r
       });
-    case k.DispatchApplicationStages.PLANNING:
-      return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PLANNING.format({
+    case w.DispatchApplicationStages.PLANNING:
+      return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PLANNING.format({
         percent: a
       });
-    case k.DispatchApplicationStages.ALLOCATING_DISK:
-      return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_ALLOCATING_DISK.format({
+    case w.DispatchApplicationStages.ALLOCATING_DISK:
+      return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_ALLOCATING_DISK.format({
         percent: a
       });
-    case k.DispatchApplicationStages.PATCHING:
+    case w.DispatchApplicationStages.PATCHING:
       return z(i, t, a, o, r);
-    case k.DispatchApplicationStages.FINALIZING:
-      return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINALIZING.format({
+    case w.DispatchApplicationStages.FINALIZING:
+      return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINALIZING.format({
         percent: a
       });
-    case k.DispatchApplicationStages.PAUSING:
-      return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
+    case w.DispatchApplicationStages.PAUSING:
+      return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
         percent: a,
         progress: o,
         total: r
       });
-    case k.DispatchApplicationStages.VERIFYING:
-      return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_VERIFYING.format({
+    case w.DispatchApplicationStages.VERIFYING:
+      return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_VERIFYING.format({
         percent: a,
         progress: o,
         total: r
       });
-    case k.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
-      return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_POST_INSTALL_SCRIPTS.format({
+    case w.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
+      return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_POST_INSTALL_SCRIPTS.format({
         percent: a,
         progress: o,
         total: r
       });
-    case k.DispatchApplicationStages.REPAIRING:
-      if (t === k.LocalDispatchApplicationStates.REPAIRING) return z(i, t, a, o, r);
-      return w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_REPAIRING.format({
+    case w.DispatchApplicationStages.REPAIRING:
+      if (t === w.LocalDispatchApplicationStates.REPAIRING) return z(i, t, a, o, r);
+      return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_REPAIRING.format({
         percent: a,
         progress: o,
         total: r
@@ -279,8 +279,8 @@ class Z extends s.PureComponent {
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColor: (0, g.getColor)(n),
-        foregroundGradientColor: null != s ? [(0, g.getColor)(s[0]), (0, g.getColor)(s[1])] : void 0,
+        foregroundColor: (0, I.getColor)(n),
+        foregroundGradientColor: null != s ? [(0, I.getColor)(s[0]), (0, I.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
         className: B.progressCellText,
@@ -311,10 +311,10 @@ class Z extends s.PureComponent {
       item: e
     } = this.props;
     return this.renderBody({
-      message: w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
+      message: k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
         remove: () => _.removeFinished(e.applicationId, e.branchId)
       }),
-      foregroundColor: (0, c.isThemeLight)(e.theme) ? k.Color.PRIMARY_300 : k.Color.PRIMARY_500,
+      foregroundColor: (0, c.isThemeLight)(e.theme) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       percent: 100
     })
   }
@@ -336,20 +336,20 @@ class Z extends s.PureComponent {
         let n = W(s, l),
           i = W(a, l),
           r = Math.floor(t = U.calculateProgressPercentage(a, s));
-        e = l === k.DispatchApplicationStages.PAUSING ? w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
+        e = l === w.DispatchApplicationStages.PAUSING ? k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
           percent: r,
           progress: i,
           total: n
-        }) : w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_QUEUED.format({
+        }) : k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_QUEUED.format({
           percent: r,
           progress: i,
           total: n
         })
       }
     }
-    return (null == t || null == e) && (t = 0, e = w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_QUEUED_NO_TRANSITION), this.renderBody({
+    return (null == t || null == e) && (t = 0, e = k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_QUEUED_NO_TRANSITION), this.renderBody({
       percent: t,
-      foregroundColor: (0, c.isThemeLight)(a) ? k.Color.PRIMARY_300 : k.Color.PRIMARY_500,
+      foregroundColor: (0, c.isThemeLight)(a) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       message: e
     })
   }
@@ -367,14 +367,14 @@ class Z extends s.PureComponent {
     } = e;
     if (null == n || null == a) return null;
     let s = U.calculateProgressPercentage(n, a),
-      l = 0 === n && 1 === a ? w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED_NO_TRANSITION : w.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED.format({
+      l = 0 === n && 1 === a ? k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED_NO_TRANSITION : k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED.format({
         percent: Math.floor(s),
         progress: (0, b.formatSize)(n),
         total: (0, b.formatSize)(a)
       });
     return this.renderBody({
       message: l,
-      foregroundColor: (0, c.isThemeLight)(t) ? k.Color.PRIMARY_300 : k.Color.PRIMARY_500,
+      foregroundColor: (0, c.isThemeLight)(t) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       percent: s
     })
   }
@@ -408,7 +408,7 @@ class Z extends s.PureComponent {
         progress: n,
         total: t
       }),
-      foregroundColor: k.Color.BLUE_345
+      foregroundColor: w.Color.BLUE_345
     })
   }
   renderProgress() {
@@ -416,8 +416,8 @@ class Z extends s.PureComponent {
       state: e
     } = this.props.item;
     switch (null != e ? e.stage : null) {
-      case k.DispatchApplicationStages.PATCHING:
-      case k.DispatchApplicationStages.REPAIRING:
+      case w.DispatchApplicationStages.PATCHING:
+      case w.DispatchApplicationStages.REPAIRING:
         return this.renderProgressPatching();
       default:
         return this.renderProgressDefault()
@@ -430,7 +430,7 @@ class Z extends s.PureComponent {
     } = this.props;
     if (e.finished) return this.renderFinished();
     if (e.index > 0) return this.renderQueued();
-    if (null != e.state && (e.state.type === k.LocalDispatchApplicationStates.UPDATING || e.state.type === k.LocalDispatchApplicationStates.REPAIRING || e.state.type === k.LocalDispatchApplicationStates.INSTALLING)) return null != t && t.paused ? this.renderPaused() : this.renderProgress();
+    if (null != e.state && (e.state.type === w.LocalDispatchApplicationStates.UPDATING || e.state.type === w.LocalDispatchApplicationStates.REPAIRING || e.state.type === w.LocalDispatchApplicationStates.INSTALLING)) return null != t && t.paused ? this.renderPaused() : this.renderProgress();
     return null
   }
   constructor(...e) {
@@ -470,12 +470,12 @@ class Z extends s.PureComponent {
 }
 let X = () => (0, a.jsx)(Y, {
     icon: D.default,
-    tooltip: w.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
+    tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
     onClick: () => _.resume()
   }),
   J = () => (0, a.jsx)(Y, {
-    icon: x.default,
-    tooltip: w.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
+    icon: y.default,
+    tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
     onClick: () => _.pause()
   }),
   $ = e => {
@@ -483,8 +483,8 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: y.default,
-      tooltip: w.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
+      icon: P.default,
+      tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
       onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
   },
@@ -493,8 +493,8 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: P.default,
-      tooltip: w.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
+      icon: x.default,
+      tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
       onClick: () => _.cancel(t.applicationId, t.branchId)
     })
   },
@@ -530,8 +530,8 @@ let X = () => (0, a.jsx)(Y, {
         libraryApplication: e.libraryApplication,
         size: f.Button.Sizes.SMALL,
         className: B.gameActionButton,
-        source: k.AnalyticsLocations.APPLICATION_LIBRARY_UPDATES
-      }) : null : null != e.state ? e.state.type !== k.LocalDispatchApplicationStates.UP_TO_DATE && (n = e.index > 0 ? (0, a.jsx)($, {
+        source: w.AnalyticsLocations.APPLICATION_LIBRARY_UPDATES
+      }) : null : null != e.state ? e.state.type !== w.LocalDispatchApplicationStates.UP_TO_DATE && (n = e.index > 0 ? (0, a.jsx)($, {
         item: e
       }) : null != t && t.paused ? (0, a.jsx)(X, {}) : (0, a.jsx)(J, {
         item: e
@@ -576,15 +576,15 @@ class en extends s.PureComponent {
         className: B.headerRow,
         children: [(0, a.jsx)(G.default, {
           className: i()(B.headerCell, B.networkProgress),
-          title: w.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
+          title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
-          color: k.Color.GREEN_360,
+          color: w.Color.GREEN_360,
           animate: s
         }), (0, a.jsx)(G.default, {
           className: i()(B.headerCell, B.diskProgress),
-          title: w.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
+          title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
-          color: k.Color.BLUE_345,
+          color: w.Color.BLUE_345,
           animate: s
         })]
       }), (0, a.jsx)(M.default, {
@@ -649,12 +649,12 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, I.default, v.default], () => {
+t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, g.default, v.default], () => {
   let e = ea(N.default.activeItems, !1, p.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, p.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
-    theme: I.default.theme
+    theme: g.default.theme
   }
 })((0, m.default)(en)))

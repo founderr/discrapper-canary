@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return q
   },
   transformChannel: function() {
-    return k
+    return w
   },
   transformInternalTextMessage: function() {
-    return w
+    return k
   },
   transformRelationship: function() {
     return F
@@ -68,8 +68,8 @@ var a, s = n("729594"),
   m = n("430824"),
   S = n("131951"),
   p = n("375954"),
-  g = n("158776"),
-  I = n("594174"),
+  I = n("158776"),
+  g = n("594174"),
   T = n("979651"),
   A = n("70956"),
   N = n("5192"),
@@ -78,15 +78,15 @@ var a, s = n("729594"),
   O = n("863141"),
   L = n("186901"),
   M = n("981631");
-let y = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
-  P = function() {
-    let e = y.split(":")[0];
+let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
+  x = function() {
+    let e = P.split(":")[0];
     if (!e.includes(".")) return e;
     let t = e.split("."),
       n = t[t.length - 1];
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
-  x = new RegExp("^".concat(v.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(v.default.escape(P), "|discordapp.com|discord.com)$")),
+  y = new RegExp("^".concat(v.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(v.default.escape(x), "|discordapp.com|discord.com)$")),
   D = 1 * A.default.Millis.MINUTE,
   b = {};
 
@@ -103,7 +103,7 @@ function G(e) {
   return t.indexOf(e) > -1
 }
 
-function k(e, t) {
+function w(e, t) {
   let n = [],
     a = e.getGuildId();
   return ![M.ChannelTypes.GUILD_CATEGORY, ...(0, h.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
@@ -113,7 +113,7 @@ function k(e, t) {
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? p.default.getMessages(e.id).toArray().map(w) : [],
+    let s = (!e.isNSFW() || (null === (n = g.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? p.default.getMessages(e.id).toArray().map(k) : [],
       l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => B(a, e.id, t));
     return {
       id: e.id,
@@ -130,7 +130,7 @@ function k(e, t) {
   })
 }
 
-function w(e) {
+function k(e) {
   let t = c.default.parseToAST(e.content, !0, {
       channelId: e.channel_id
     }).map(U),
@@ -166,7 +166,7 @@ function B(e, t, n) {
     selfDeaf: i,
     suppress: r,
     userId: o
-  } = n, u = I.default.getUser(o);
+  } = n, u = g.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: N.default.getName(e, t, u),
@@ -185,13 +185,13 @@ function B(e, t, n) {
 }
 
 function F(e, t, n) {
-  let a = I.default.getUser(t);
+  let a = g.default.getUser(t);
   return {
     type: e,
     user: null != a ? (0, O.default)(a) : null,
     presence: {
-      status: g.default.getStatus(t),
-      activity: null != n ? g.default.getApplicationActivity(t, n) : g.default.getPrimaryActivity(t)
+      status: I.default.getStatus(t),
+      activity: null != n ? I.default.getApplicationActivity(t, n) : I.default.getPrimaryActivity(t)
     }
   }
 }
@@ -206,7 +206,7 @@ function H(e) {
   } catch (e) {
     return !1
   }
-  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(x.test(e) && x.test(n)) || !1)
+  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(y.test(e) && y.test(n)) || !1)
 }
 
 function V(e, t, n) {

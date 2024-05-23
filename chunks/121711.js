@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("678935"),
   S = n("563442"),
   p = n("981631"),
-  g = n("689938"),
-  I = n("233269");
+  I = n("689938"),
+  g = n("233269");
 t.default = function(e) {
   let {} = e, t = (0, C.default)(c.default.QUEST_HOME_PAGE);
   s.useEffect(() => {
@@ -26,11 +26,11 @@ t.default = function(e) {
   }, [t]), s.useEffect(() => {
     d.setHomeLink(p.Routes.QUEST_HOME), (0, h.trackAppUIViewed)("quest-home")
   }, []), (0, f.usePageTitle)({
-    location: g.default.Messages.QUESTS
+    location: I.default.Messages.QUESTS
   });
   let n = (0, _.getThemeClass)("dark");
   return t ? (0, a.jsxs)("div", {
-    className: I.container,
+    className: g.container,
     children: [(0, a.jsxs)(E.default, {
       toolbar: !0,
       transparent: !0,
@@ -39,10 +39,10 @@ t.default = function(e) {
         icon: o.QuestsIcon,
         "aria-hidden": !0
       }), (0, a.jsx)(E.default.Title, {
-        children: g.default.Messages.QUESTS
+        children: I.default.Messages.QUESTS
       }), (0, a.jsx)(E.default.Divider, {})]
     }), (0, a.jsx)(u.ScrollerNone, {
-      className: I.scroller,
+      className: g.scroller,
       fade: !0,
       children: (0, a.jsx)(S.default, {
         children: (0, a.jsx)(m.default, {})

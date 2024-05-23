@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("556017"),
   S = n("879484"),
   p = n("26580"),
-  g = n("206887"),
-  I = n("981631"),
+  I = n("206887"),
+  g = n("981631"),
   T = n("689938"),
   A = n("283434"),
   N = n("129512"),
@@ -39,29 +39,29 @@ t.default = e => {
     onTagClick: L
   } = e, {
     id: M,
-    discoverySplash: y,
-    icon: P,
-    name: x,
+    discoverySplash: P,
+    icon: x,
+    name: y,
     description: D,
     presenceCount: b,
     memberCount: U,
     keywords: j
-  } = l, [G, k] = s.useState(!1), [w, B] = s.useState(!1), {
+  } = l, [G, w] = s.useState(!1), [k, B] = s.useState(!1), {
     analyticsLocations: F
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
-    splash: y,
+    splash: P,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case I.ThemeTypes.DARK:
+      case g.ThemeTypes.DARK:
         return N;
-      case I.ThemeTypes.LIGHT:
+      case g.ThemeTypes.LIGHT:
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
-    icon: P,
+    icon: x,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: I.AnalyticsPages.GUILD_DISCOVERY
+            page: g.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: I.AnalyticsPages.GUILD_DISCOVERY,
-            section: I.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: g.AnalyticsPages.GUILD_DISCOVERY,
+            section: g.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: F
         });
@@ -102,13 +102,13 @@ t.default = e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.card,
-      children: [w ? (0, a.jsx)(r.Spinner, {
+      children: [k ? (0, a.jsx)(r.Spinner, {
         type: r.Spinner.Type.PULSING_ELLIPSIS,
         className: A.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
         className: i()(A.container, {
           [A.hover]: G,
-          [A.submitting]: w
+          [A.submitting]: k
         }),
         onClick: W,
         onContextMenu: e => {
@@ -122,8 +122,8 @@ t.default = e => {
             })
           })
         },
-        onMouseEnter: () => k(!0),
-        onMouseLeave: () => k(!1),
+        onMouseEnter: () => w(!0),
+        onMouseLeave: () => w(!1),
         children: [(0, a.jsx)("div", {
           className: i()(A.splashContainer, {
             [A.splashContainerWithTags]: K
@@ -160,7 +160,7 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: x
+                children: y
               })]
             })]
           }), (0, a.jsx)(r.Text, {
@@ -201,7 +201,7 @@ t.default = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(I.default, {
             guild: l
           })
         }) : null]

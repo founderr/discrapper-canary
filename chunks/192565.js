@@ -22,7 +22,7 @@ var a = n("735250"),
   S = n("308083"),
   p = n("689938");
 
-function g(e) {
+function I(e) {
   let t = (0, o.useDefaultClanProgress)(),
     {
       progress: n,
@@ -41,7 +41,7 @@ function g(e) {
     handleClanUpdate: s.useCallback(t => r.updateClanSetup(e, t), [e])
   }
 }
-let I = {
+let g = {
   [S.ClanSetupSteps.GAMES]: function(e) {
     let {
       guildId: t
@@ -53,7 +53,7 @@ let I = {
       progress: n,
       errors: l,
       handleClanUpdate: r
-    } = g(t);
+    } = I(t);
     return (0, a.jsx)(c.default, {
       title: p.default.Messages.CLAN_SETUP_GAMES_TITLE,
       description: p.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
@@ -72,7 +72,7 @@ let I = {
       progress: n,
       errors: s,
       handleClanUpdate: l
-    } = g(t);
+    } = I(t);
     return (0, a.jsx)(h.default, {
       title: p.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
       description: p.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
@@ -89,7 +89,7 @@ let I = {
     } = e, {
       progress: n,
       handleClanUpdate: s
-    } = g(t);
+    } = I(t);
     return (0, a.jsx)(m.default, {
       guildId: t,
       title: p.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
@@ -108,7 +108,7 @@ let I = {
       progress: n,
       errors: s,
       handleClanUpdate: l
-    } = g(t);
+    } = I(t);
     return (0, a.jsx)(f.default, {
       guildId: t,
       handleUpdate: l,
@@ -123,7 +123,7 @@ let I = {
       progress: n,
       errors: s,
       handleClanUpdate: l
-    } = g(t);
+    } = I(t);
     return (0, a.jsx)(d.default, {
       guildId: t,
       handleUpdate: l,
@@ -138,7 +138,7 @@ let I = {
       progress: n,
       errors: s,
       handleClanUpdate: l
-    } = g(t);
+    } = I(t);
     return (0, a.jsx)(_.default, {
       handleUpdate: l,
       tag: n.tag,
@@ -155,7 +155,7 @@ let I = {
     } = e, {
       progress: n,
       handleClanUpdate: s
-    } = g(t);
+    } = I(t);
     return (0, a.jsx)(u.default, {
       handleUpdate: s,
       progress: n,
@@ -177,7 +177,7 @@ function T(e) {
 }
 
 function A(e) {
-  let t = I[e.currentStep];
+  let t = g[e.currentStep];
   return (0, a.jsx)(t, {
     guildId: e.guildId
   })

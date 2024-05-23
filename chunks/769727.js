@@ -15,8 +15,8 @@ var a, s, l = n("735250"),
   m = n("702646"),
   S = n("207796"),
   p = n("543550"),
-  g = n("895068"),
-  I = n("93118");
+  I = n("895068"),
+  g = n("93118");
 let T = {
   [S.ClanDiscoveryMode.PLAYSTYLE]: C.PlayStyleSelector,
   [S.ClanDiscoveryMode.TRAITS]: C.TraitSelector,
@@ -113,15 +113,15 @@ let A = i.memo(function(e) {
     case S.ClanDiscoveryMode.PLAYSTYLE:
     case S.ClanDiscoveryMode.TRAITS:
       return (0, l.jsxs)("div", {
-        className: I.discoveryContainer,
+        className: g.discoveryContainer,
         children: [h((e, t) => (0, l.jsx)(r.animated.div, {
           style: e,
-          className: I.toolbar,
+          className: g.toolbar,
           children: (0, l.jsx)(m.default, {})
         }, t)), C((e, n) => (0, l.jsx)(r.animated.div, {
-          className: I.content,
+          className: g.content,
           style: e,
-          children: (0, l.jsx)(g.default, {
+          children: (0, l.jsx)(I.default, {
             width: t
           })
         }, n)), (0, l.jsx)("div", {
@@ -140,10 +140,10 @@ t.default = i.memo(function() {
     width: t
   } = (0, d.default)();
   return (0, l.jsxs)("main", {
-    className: I.container,
+    className: g.container,
     ref: e,
     children: [(0, l.jsx)("div", {
-      className: I.dragRegion
+      className: g.dragRegion
     }), (0, l.jsx)(A, {
       width: null != t ? t : 0
     })]

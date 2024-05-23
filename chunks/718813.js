@@ -20,8 +20,8 @@ var a, s = n("735250"),
   m = n("819640"),
   S = n("725568"),
   p = n("585483"),
-  g = n("792125"),
-  I = n("981631"),
+  I = n("792125"),
+  g = n("981631"),
   T = n("529542");
 
 function A(e, t, n) {
@@ -53,19 +53,19 @@ let N = (0, _.makeLazy)({
     name: "GuildSettings"
   }),
   L = {
-    [I.Layers.USER_SETTINGS]: () => (0, s.jsx)(N, {}),
-    [I.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
-    [I.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(O, {}),
-    [I.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
+    [g.Layers.USER_SETTINGS]: () => (0, s.jsx)(N, {}),
+    [g.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
+    [g.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(O, {}),
+    [g.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
   },
   M = "SHOWN",
-  y = "HIDDEN",
-  P = {
+  P = "HIDDEN",
+  x = {
     friction: 10,
     tension: 100
   };
 
-function x() {
+function y() {
   return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
 }
 class D extends(a = l.PureComponent) {
@@ -82,8 +82,8 @@ class D extends(a = l.PureComponent) {
       mode: n
     } = e;
     if (t !== n) {
-      if (t === M && n === y) return this.animateIn();
-      if (t === y && n === M) return this.animateUnder()
+      if (t === M && n === P) return this.animateIn();
+      if (t === P && n === M) return this.animateUnder()
     }
   }
   componentWillEnter(e) {
@@ -108,10 +108,10 @@ class D extends(a = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(t, {
       toValue: 1,
-      ...P
+      ...x
     }), o.default.spring(n, {
       toValue: 1,
-      ...P
+      ...x
     })]).start(() => this.animateComplete(e))
   }
   animateOut(e) {
@@ -120,14 +120,14 @@ class D extends(a = l.PureComponent) {
       opacity: t,
       scale: n
     } = this.state;
-    p.ComponentDispatch.dispatch(I.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
+    p.ComponentDispatch.dispatch(g.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
       toValue: 0,
-      ...P
+      ...x
     }), o.default.spring(n, {
       toValue: 1.1,
-      ...P
+      ...x
     })]).start(() => {
-      e(), p.ComponentDispatch.dispatch(I.ComponentActions.LAYER_POP_COMPLETE)
+      e(), p.ComponentDispatch.dispatch(g.ComponentActions.LAYER_POP_COMPLETE)
     })
   }
   animateUnder() {
@@ -138,10 +138,10 @@ class D extends(a = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(e, {
       toValue: 0,
-      ...P
+      ...x
     }), o.default.spring(t, {
       toValue: .93,
-      ...P
+      ...x
     })]).start(() => this.animateComplete())
   }
   animateComplete(e) {
@@ -157,13 +157,13 @@ class D extends(a = l.PureComponent) {
       children: n,
       baseLayer: a,
       ...l
-    } = this.props, i = e || t === y ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
+    } = this.props, i = e || t === P ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
       ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
-      "aria-hidden": t === y,
+      "aria-hidden": t === P,
       className: r()(T.layer, {
         [T.baseLayer]: a,
         [T.animating]: e,
-        "stop-animations": t === y
+        "stop-animations": t === P
       }),
       style: i,
       ...l,
@@ -194,7 +194,7 @@ class D extends(a = l.PureComponent) {
     super(e), A(this, "containerRef", l.createRef());
     let t = 1,
       n = 1;
-    e.mode === y && (t = .93, n = 0), this.state = {
+    e.mode === P && (t = .93, n = 0), this.state = {
       animating: !1,
       scale: new o.default.Value(t),
       opacity: new o.default.Value(n),
@@ -207,10 +207,10 @@ A(D, "defaultProps", {
 }), A(D, "contextType", c.AccessibilityPreferencesContext);
 class b extends l.PureComponent {
   componentDidMount() {
-    p.ComponentDispatch.subscribe(I.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
+    p.ComponentDispatch.subscribe(g.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
   }
   componentWillUnmount() {
-    p.ComponentDispatch.unsubscribe(I.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
+    p.ComponentDispatch.unsubscribe(g.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
   }
   renderLayers() {
     let {
@@ -221,7 +221,7 @@ class b extends l.PureComponent {
       length: a
     } = t, l = [];
     return l.push((0, s.jsx)(D, {
-      mode: 0 !== a || n ? y : M,
+      mode: 0 !== a || n ? P : M,
       baseLayer: !0,
       children: e
     }, "layer-base")), t.forEach((e, t) => l.push(this.renderComponent(e, t, a))), l
@@ -229,13 +229,13 @@ class b extends l.PureComponent {
   renderComponent(e, t, n) {
     let a;
     return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
-      mode: t === n - 1 ? M : y,
-      children: [(0, s.jsx)(x, {}), a]
+      mode: t === n - 1 ? M : P,
+      children: [(0, s.jsx)(y, {}), a]
     }, "layer-".concat(t))
   }
   renderArtisanalHack() {
     return (0, s.jsx)("div", {
-      className: r()(T.bg, (0, g.getThemeClass)(this.props.sidebarTheme))
+      className: r()(T.bg, (0, I.getThemeClass)(this.props.sidebarTheme))
     })
   }
   render() {
@@ -250,7 +250,7 @@ class b extends l.PureComponent {
 }
 
 function U(e) {
-  let t = (0, u.useStateFromStores)([C.default], () => C.default.darkSidebar) ? I.ThemeTypes.DARK : void 0,
+  let t = (0, u.useStateFromStores)([C.default], () => C.default.darkSidebar) ? g.ThemeTypes.DARK : void 0,
     n = (0, u.useStateFromStores)([m.default], () => m.default.getLayers()),
     a = (0, S.useFullScreenLayerStore)(e => e.fullScreenLayers.length > 0);
   return (0, s.jsx)(b, {

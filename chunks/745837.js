@@ -22,9 +22,9 @@ var s = n("120356"),
   m = n("981631"),
   S = n("332325"),
   p = n("689938"),
-  g = n("668202");
+  I = n("668202");
 
-function I(e) {
+function g(e) {
   (0, o.default)(S.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
@@ -38,7 +38,7 @@ function T() {
     children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
       keybind: t,
       keybindHook: () => (0, a.jsx)("span", {
-        className: g.keyCombo,
+        className: I.keyCombo,
         children: (0, a.jsx)(r.KeyCombo, {
           shortcut: t
         })
@@ -53,14 +53,14 @@ let A = {
     buttonColor: r.Button.Colors.PRIMARY,
     bodyCopy: () => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.default, {
-        className: g.errorWarningIcon
+        className: I.errorWarningIcon
       }), p.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
     }),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
     ctaOnClick: () => {
       window.open(f.default.getArticleURL(m.HelpdeskArticles.CLIPS), "_blank")
     },
-    containerClass: g.container
+    containerClass: I.container
   },
   [C.ClipsUserEducationType.Disabled]: {
     textColor: "text-primary",
@@ -68,8 +68,8 @@ let A = {
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => I(C.ClipsUserEducationType.Disabled),
-    containerClass: g.container
+    ctaOnClick: () => g(C.ClipsUserEducationType.Disabled),
+    containerClass: I.container
   },
   [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
@@ -77,8 +77,8 @@ let A = {
     buttonColor: r.Button.Colors.BRAND_INVERTED,
     bodyCopy: () => (0, a.jsx)(T, {}),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => I(C.ClipsUserEducationType.Enabled),
-    containerClass: l()(g.container, g.containerEnabled)
+    ctaOnClick: () => g(C.ClipsUserEducationType.Enabled),
+    containerClass: l()(I.container, I.containerEnabled)
   }
 };
 
@@ -111,15 +111,15 @@ function N() {
       onClick: () => (0, _.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,
       look: r.Button.Looks.BLANK,
-      className: g.buttonClose,
+      className: I.buttonClose,
       children: (0, a.jsx)(d.default, {
-        className: g.dismissIcon,
+        className: I.dismissIcon,
         width: 16,
         height: 16
       })
     }), (0, a.jsx)(r.Button, {
       onClick: u,
-      className: g.buttonCTA,
+      className: I.buttonCTA,
       color: f,
       look: E,
       fullWidth: !0,

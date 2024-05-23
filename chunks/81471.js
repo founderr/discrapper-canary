@@ -11,15 +11,15 @@ var a = n("735250"),
   c = n("937889"),
   f = n("695346"),
   E = n("496675"),
-  _ = n("699516"),
-  h = n("68588"),
+  h = n("699516"),
+  _ = n("68588"),
   C = n("512665"),
   m = n("868807"),
   S = n("981631"),
   p = n("768760"),
   I = n("689938"),
-  T = n("164602"),
-  g = n("946278");
+  g = n("164602"),
+  T = n("946278");
 let A = s.memo(function(e) {
   let {
     channel: t
@@ -27,7 +27,7 @@ let A = s.memo(function(e) {
     loaded: n,
     error: l,
     message: A
-  } = (0, m.useMessageRequestPreview)(t), N = (0, u.useShouldFilterKeywords)(), v = (0, r.useStateFromStores)([_.default], () => null != A && _.default.isBlocked(A.author.id), [A]), R = (0, r.useStateFromStores)([E.default], () => E.default.can(S.Permissions.MANAGE_MESSAGES, t)), O = f.RenderSpoilers.useSetting(), {
+  } = (0, m.useMessageRequestPreview)(t), N = (0, u.useShouldFilterKeywords)(), v = (0, r.useStateFromStores)([h.default], () => null != A && h.default.isBlocked(A.author.id), [A]), R = (0, r.useStateFromStores)([E.default], () => E.default.can(S.Permissions.MANAGE_MESSAGES, t)), O = f.RenderSpoilers.useSetting(), {
     content: L
   } = s.useMemo(() => (null == A ? void 0 : A.content) != null && "" !== A.content ? (0, c.default)(A, {
     formatInline: !0,
@@ -37,14 +37,14 @@ let A = s.memo(function(e) {
     content: null
   }, [A, N]), M = null;
   if (l) M = (0, a.jsx)(o.Text, {
-    className: T.messageReplacement,
+    className: g.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
     children: I.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
     if (null != A && v) M = (0, a.jsx)(o.Text, {
-      className: T.messageReplacement,
+      className: g.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: I.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
@@ -53,33 +53,33 @@ let A = s.memo(function(e) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, C.renderSingleLineMessage)(A, L, v, i()(T.messageContent, g.inlineFormat, g.__invalid_smallFontSize), {
-        iconClass: T.messageContentIcon,
+      } = (0, C.renderSingleLineMessage)(A, L, v, i()(g.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
+        iconClass: g.messageContentIcon,
         iconSize: p.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
       M = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: T.messageContent,
+        className: g.messageContent,
         children: t
       }) : (0, a.jsx)(o.Text, {
         tag: "span",
         variant: "text-sm/normal",
         color: "text-muted",
-        className: T.messageReplacement,
+        className: g.messageReplacement,
         children: e
       })
     } else M = (0, a.jsx)(o.Text, {
-      className: T.messageReplacement,
+      className: g.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: I.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
   } else M = null;
-  return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
+  return (0, a.jsx)(_.ObscuredDisplayContext.Provider, {
     value: (0, d.default)(O, R),
     children: (0, a.jsx)(o.FocusBlock, {
-      className: T.messageFocusBlock,
+      className: g.messageFocusBlock,
       children: M
     })
   })

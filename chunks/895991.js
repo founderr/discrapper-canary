@@ -21,9 +21,9 @@ var a = n("735250"),
   m = n("530151"),
   S = n("981631"),
   p = n("186901"),
-  g = n("47789");
+  I = n("47789");
 
-function I(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -54,7 +54,7 @@ class T extends s.PureComponent {
         currentRoute: S.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
       }), e ? null : t, (0, a.jsxs)(r.AdvancedScrollerAuto, {
-        className: i()(g.container, g.scroller),
+        className: i()(I.container, I.scroller),
         ref: this._scrollerRef,
         children: [e ? t : null, (0, a.jsx)(f.default, {
           section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,
@@ -67,13 +67,13 @@ class T extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "_scrollerRef", s.createRef()), I(this, "_scrollToOnMount", void 0), I(this, "_scrollToPadding", 0), I(this, "state", {
+    super(...e), g(this, "_scrollerRef", s.createRef()), g(this, "_scrollToOnMount", void 0), g(this, "_scrollToPadding", 0), g(this, "state", {
       includeUpdatesInScroller: !1
-    }), I(this, "handleHeightTallerThanHalfViewportChange", e => {
+    }), g(this, "handleHeightTallerThanHalfViewportChange", e => {
       this.setState({
         includeUpdatesInScroller: e
       })
-    }), I(this, "scrollToRow", (e, t) => {
+    }), g(this, "scrollToRow", (e, t) => {
       let n = this._scrollerRef.current;
       null != n ? (e.focus(), n.scrollIntoViewRect({
         start: t,

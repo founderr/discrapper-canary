@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return w
   }
 });
 var a = n("735250"),
@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("430824"),
   S = n("131951"),
   p = n("292959"),
-  g = n("19780"),
-  I = n("944486"),
+  I = n("19780"),
+  g = n("944486"),
   T = n("606304"),
   A = n("979651"),
   N = n("938475"),
@@ -43,8 +43,8 @@ function L(e, t, n, a) {
 }
 
 function M() {
-  return L([S.default, I.default], () => ({
-    inVoiceChannel: null != I.default.getVoiceChannelId(),
+  return L([S.default, g.default], () => ({
+    inVoiceChannel: null != g.default.getVoiceChannelId(),
     selfMute: S.default.isSelfMute(),
     selfDeaf: S.default.isSelfDeaf(),
     audioPermissionReady: S.default.isNativeAudioPermissionReady(),
@@ -70,13 +70,13 @@ function M() {
   }), null
 }
 
-function y() {
-  return L([C.default, g.default, I.default, u.default], () => {
-    let e = C.default.getChannel(I.default.getVoiceChannelId()),
+function P() {
+  return L([C.default, I.default, g.default, u.default], () => {
+    let e = C.default.getChannel(g.default.getVoiceChannelId()),
       t = null == e ? void 0 : e.type,
       n = null == e ? void 0 : e.getGuildId(),
-      a = g.default.getWasEverRtcConnected(),
-      s = g.default.getState();
+      a = I.default.getWasEverRtcConnected(),
+      s = I.default.getState();
     return {
       channelType: t,
       guildId: n,
@@ -104,7 +104,7 @@ function y() {
   }), null
 }
 
-function P() {
+function x() {
   return L([T.default], () => T.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
@@ -113,7 +113,7 @@ function P() {
   }), null
 }
 
-function x() {
+function y() {
   return L([S.default], () => S.default.isSelfMutedTemporarily(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
@@ -129,8 +129,8 @@ function D() {
 }
 
 function b() {
-  return L([I.default, A.default], () => {
-    let e = I.default.getVoiceChannelId();
+  return L([g.default, A.default], () => {
+    let e = g.default.getVoiceChannelId();
     if (null == e) return f.RequestToSpeakStates.NONE;
     let t = A.default.getVoiceStateForChannel(e);
     return (0, f.getAudienceRequestToSpeakState)(t)
@@ -140,9 +140,9 @@ function b() {
 }
 
 function U() {
-  return L([I.default, h.default, _.default, A.default, C.default], () => {
+  return L([g.default, h.default, _.default, A.default, C.default], () => {
     let e, t;
-    let n = I.default.getVoiceChannelId(),
+    let n = g.default.getVoiceChannelId(),
       a = _.default.getId();
     let s = [],
       l = null,
@@ -195,9 +195,9 @@ function U() {
 }
 
 function j() {
-  return L([I.default, o.default, _.default], () => {
-    let e = I.default.getVoiceChannelId(),
-      t = I.default.getChannelId(),
+  return L([g.default, o.default, _.default], () => {
+    let e = g.default.getVoiceChannelId(),
+      t = g.default.getChannelId(),
       n = o.default.getConnectedActivityChannelId(),
       a = _.default.getId(),
       s = (0, v.isNotNullish)(t) ? o.default.getEmbeddedActivitiesForChannel(t) : o.NO_ACTIVITIES,
@@ -236,10 +236,10 @@ function j() {
 }
 
 function G() {
-  return L([c.default, I.default], () => ({
+  return L([c.default, g.default], () => ({
     hangStatus: c.default.getCurrentHangStatus(),
     customHangStatus: c.default.getCustomHangStatus(),
-    inVoice: null != I.default.getVoiceChannelId()
+    inVoice: null != g.default.getVoiceChannelId()
   }), (e, t) => {
     var n, a;
     let {
@@ -250,8 +250,8 @@ function G() {
   }, .15), null
 }
 
-function k() {
+function w() {
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {}), (0, a.jsx)(D, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
+    children: [(0, a.jsx)(M, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
   })
 }

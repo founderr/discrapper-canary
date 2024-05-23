@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return _
   }
 });
 var s = n("735250");
@@ -16,7 +16,7 @@ var a = n("481060"),
   c = n("981631"),
   f = n("689938"),
   E = n("12178");
-let _ = e => {
+let I = e => {
   let {
     state: t
   } = e;
@@ -29,22 +29,22 @@ let _ = e => {
   }
 };
 
-function I(e) {
+function _(e) {
   let {
     invite: t,
     onAcceptInvite: n,
-    disableUser: I = !1
+    disableUser: _ = !1
   } = e;
   if (null == t) return null;
   let p = null != t.guild ? new r.default(t.guild) : null,
     h = null != t.channel ? (0, i.createChannelRecordFromInvite)(t.channel) : null,
     T = null != t.target_application ? new l.default(t.target_application) : null,
-    N = I || null == t.inviter ? null : new u.default(t.inviter),
-    g = !(null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != p && p.hasFeature(c.GuildFeatures.COMMUNITY)) && null != N && (0, o.isGroupInvite)(t),
-    m = _(t),
+    g = _ || null == t.inviter ? null : new u.default(t.inviter),
+    m = !(null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != p && p.hasFeature(c.GuildFeatures.COMMUNITY)) && null != g && (0, o.isGroupInvite)(t),
+    N = I(t),
     A = {
       invite: t,
-      user: N,
+      user: g,
       guild: p,
       channel: h,
       application: T
@@ -52,25 +52,25 @@ function I(e) {
   return (0, o.isEnhancedCommunityInvite)(t) ? (0, s.jsx)(d.default, {
     invite: t,
     channel: h,
-    isSubmitting: m,
+    isSubmitting: N,
     onAcceptInvite: n
   }) : (0, s.jsxs)("div", {
     className: E.container,
     children: [(0, s.jsx)(o.InviteDestinationIcon, {
       application: T,
       guild: p,
-      user: g || (0, o.isDirectInvite)(t) ? N : null
+      user: m || (0, o.isDirectInvite)(t) ? g : null
     }), (0, o.isDirectInvite)(t) ? null : (0, s.jsx)(o.InviteJoinContext, {
       ...A,
-      showBigUserIcon: g
+      showBigUserIcon: m
     }), (0, s.jsx)(o.InviteHeader, {
       ...A,
-      showBigUserIcon: g
+      showBigUserIcon: m
     }), (0, s.jsx)(o.InviteMemberCounts, {
       ...A
     }), (0, s.jsx)(a.Button, {
       onClick: n,
-      submitting: m,
+      submitting: N,
       className: E.acceptButton,
       children: f.default.Messages.INSTANT_INVITE_ACCEPT
     })]

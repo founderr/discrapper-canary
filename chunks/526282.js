@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryUserUpsellBackgroundRings: function() {
-    return I
+    return g
   }
 }), n("47120");
 var a = n("735250"),
@@ -35,7 +35,7 @@ let S = {
     },
     config: S
   },
-  g = {
+  I = {
     from: {
       opacity: 0
     },
@@ -45,22 +45,22 @@ let S = {
     config: S
   };
 
-function I() {
+function g() {
   let e = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion),
     t = s.useRef(null),
     n = s.useRef(null),
     r = s.useRef(null),
     u = (0, l.useSpring)({
       ref: t,
-      ...g
+      ...I
     }),
     d = (0, l.useSpring)({
       ref: n,
-      ...g
+      ...I
     }),
     c = (0, l.useSpring)({
       ref: r,
-      ...g
+      ...I
     });
   return (0, l.useChain)([t, n, r], [.8, .9, 1]), (0, a.jsx)("div", {
     className: m.backgroundContainer,
@@ -83,18 +83,18 @@ t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     onClick: n
-  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), O = (0, h.useDiscoveryGameApplicationId)({
+  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), O = (0, h.useDiscoveryGameApplicationId)({
     selectedGame: t
   }), L = (0, _.useFakeDiscoveryUpsellClans)(O), M = (0, l.useSpring)({
-    ref: I,
-    ...p
-  }), y = (0, l.useSpring)({
-    ref: T,
+    ref: g,
     ...p
   }), P = (0, l.useSpring)({
-    ref: A,
+    ref: T,
     ...p
   }), x = (0, l.useSpring)({
+    ref: A,
+    ...p
+  }), y = (0, l.useSpring)({
     ref: N,
     ...p
   }), D = (0, l.useSpring)({
@@ -112,7 +112,7 @@ t.default = s.memo(function(e) {
     },
     config: S
   });
-  (0, l.useChain)([I, T, A, N, v, R], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
+  (0, l.useChain)([g, T, A, N, v, R], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
     (0, d.trackClanUserInviteViewed)({
       location: u.default.CLAN_DISCOVERY
     })
@@ -133,35 +133,35 @@ t.default = s.memo(function(e) {
         className: m.cards,
         children: [(0, a.jsx)(l.animated.div, {
           className: m.clanCardOuterContainer,
-          style: g ? void 0 : x,
+          style: I ? void 0 : y,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[0],
             className: m.clanCardOuterLeft
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
-          style: g ? void 0 : y,
+          style: I ? void 0 : P,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[1],
             className: m.clanCardInnerLeft
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardCenterContainer,
-          style: g ? void 0 : M,
+          style: I ? void 0 : M,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[4],
             className: m.clanCardCenter
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
-          style: g ? void 0 : P,
+          style: I ? void 0 : x,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[2],
             className: m.clanCardInnerRight
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardOuterContainer,
-          style: g ? void 0 : D,
+          style: I ? void 0 : D,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[3],
             className: m.clanCardOuterRight
@@ -170,7 +170,7 @@ t.default = s.memo(function(e) {
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: m.upsellDetails,
-      style: g ? void 0 : b,
+      style: I ? void 0 : b,
       children: [(0, a.jsx)(r.Heading, {
         className: m.upsellTitle,
         color: "header-primary",

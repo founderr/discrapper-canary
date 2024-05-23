@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("481060"),
   S = n("355467"),
   p = n("239091"),
-  g = n("230711"),
-  I = n("255952"),
+  I = n("230711"),
+  g = n("255952"),
   T = n("410575"),
   A = n("941129"),
   N = n("83200"),
@@ -31,16 +31,16 @@ var a = n("735250"),
   O = n("515550"),
   L = n("1585"),
   M = n("304761"),
-  y = n("865427"),
-  P = n("571250"),
-  x = n("628581"),
+  P = n("865427"),
+  x = n("571250"),
+  y = n("628581"),
   D = n("55311"),
   b = n("575175"),
   U = n("64220"),
   j = n("377171"),
   G = n("676035"),
-  k = n("427217"),
-  w = n("605236"),
+  w = n("427217"),
+  k = n("605236"),
   B = n("243778"),
   F = n("730417"),
   H = n("524347"),
@@ -75,8 +75,8 @@ var a = n("735250"),
   em = n("131951"),
   eS = n("19780"),
   ep = n("885110"),
-  eg = n("246946"),
-  eI = n("594174"),
+  eI = n("246946"),
+  eg = n("594174"),
   eT = n("78839"),
   eA = n("285952"),
   eN = n("546591"),
@@ -85,16 +85,16 @@ var a = n("735250"),
   eO = n("937482"),
   eL = n("87888"),
   eM = n("976401"),
-  ey = n("333454"),
-  eP = n("864441"),
-  ex = n("26290"),
+  eP = n("333454"),
+  ex = n("864441"),
+  ey = n("26290"),
   eD = n("626135"),
   eb = n("768581"),
   eU = n("572004"),
   ej = n("70956"),
   eG = n("374023"),
-  ek = n("51144"),
-  ew = n("998502"),
+  ew = n("51144"),
+  ek = n("998502"),
   eB = n("981631"),
   eF = n("215023"),
   eH = n("702512"),
@@ -109,7 +109,7 @@ function eW(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let eK = ew.default.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
+let eK = ek.default.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
   ez = 30 * ej.default.Millis.DAY;
 class eq extends s.PureComponent {
   get isCopiedStreakGodlike() {
@@ -151,26 +151,26 @@ class eq extends s.PureComponent {
       status: i
     } = this.props;
     if (null == l) return null;
-    let r = ek.default.getName(l),
+    let r = ew.default.getName(l),
       o = null != i && i !== eB.StatusTypes.UNKNOWN,
       u = null != n;
     return (u || o && l.isPomelo()) && (e = (0, a.jsx)(eN.default, {
       hoverText: s,
       forceHover: t,
-      children: u ? (0, a.jsx)(k.default, {
+      children: u ? (0, a.jsx)(w.default, {
         activity: n,
         emojiClassName: eY.emoji,
         className: eY.customStatus
-      }) : ek.default.humanizeStatus(i)
+      }) : ew.default.humanizeStatus(i)
     })), (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: eY.panelTitleContainer,
-        children: (0, a.jsx)(eP.default, {
+        children: (0, a.jsx)(ex.default, {
           children: r
         })
       }), (0, a.jsx)("div", {
         className: eY.panelSubtextContainer,
-        children: (0, a.jsx)(ey.default, {
+        children: (0, a.jsx)(eP.default, {
           children: null != e ? e : s
         })
       })]
@@ -324,7 +324,7 @@ class eq extends s.PureComponent {
           serverMute: l,
           suppress: r,
           awaitingRemote: s,
-          tooltipText: d ? eV.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(n, l, r, s),
+          tooltipText: d ? eV.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, y.default)(n, l, r, s),
           tooltipColor: d ? m.TooltipColors.GREEN : void 0,
           tooltipForceOpen: d || void 0,
           onMouseEnter: this.handleMouseEnterMute,
@@ -476,7 +476,7 @@ class eq extends s.PureComponent {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eB.UserSettingsSections.ACCOUNT,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0;
-      g.default.open(e, t, n)
+      I.default.open(e, t, n)
     }), eW(this, "handleOpenSettingsContextMenu", e => {
       let {
         currentUser: t
@@ -540,7 +540,7 @@ class eq extends s.PureComponent {
         copiedStreak: n
       } = this.state;
       if (null == e) return;
-      (0, eU.copy)(ek.default.getUserTag(e, {
+      (0, eU.copy)(ew.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
       })), eD.default.track(eB.AnalyticEvents.TEXT_COPIED, {
@@ -607,7 +607,7 @@ class eq extends s.PureComponent {
           })
         })
       }
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(g.default, {
         onClose: () => {
           this.handleMouseLeave(), null == t || t()
         }
@@ -623,7 +623,7 @@ class eq extends s.PureComponent {
 
 function eQ() {
   var e, t;
-  let n = (0, r.useStateFromStores)([eI.default], () => eI.default.getCurrentUser()),
+  let n = (0, r.useStateFromStores)([eg.default], () => eg.default.getCurrentUser()),
     l = (0, F.useShowEligibilityEnrollmentTooltip)(eH.PartnerGame.FORTNITE),
     i = (0, r.useStateFromStores)([eh.default], () => eh.default.getId()),
     u = (0, G.useCustomStatusActivity)(),
@@ -637,10 +637,10 @@ function eQ() {
     f = (0, R.default)({
       userId: i
     }),
-    E = ek.default.useUserTag(n, {
+    E = ew.default.useUserTag(n, {
       decoration: "never"
     }),
-    h = (0, r.useStateFromStores)([eg.default], () => eg.default.hidePersonalInformation),
+    h = (0, r.useStateFromStores)([eI.default], () => eI.default.hidePersonalInformation),
     _ = (0, r.useStateFromStores)([eS.default, e_.default], () => {
       let e = eS.default.getChannelId();
       return null != e ? e_.default.getChannel(e) : null
@@ -648,20 +648,20 @@ function eQ() {
     {
       mute: C,
       selfMute: p,
-      suppress: g
+      suppress: I
     } = (0, eE.default)(_),
     {
-      selfDeaf: I,
+      selfDeaf: g,
       deaf: T
     } = (0, ef.default)(_),
     O = (0, r.useStateFromStores)([M.default], () => {
       var e;
-      return (0, y.probablyHasBuildOverride)() ? null === (e = M.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, P.probablyHasBuildOverride)() ? null === (e = M.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     L = (0, r.useStateFromStores)([eT.default], () => eT.default.getPremiumTypeSubscription()),
-    P = (0, r.useStateFromStores)([em.default], () => em.default.getEverSpeakingWhileMuted()),
-    x = (0, r.useStateFromStores)([eC.default], () => eC.default.hasLayers()),
-    D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || x || eG.ProcessArgs.isDisallowPopupsSet(),
+    x = (0, r.useStateFromStores)([em.default], () => em.default.getEverSpeakingWhileMuted()),
+    y = (0, r.useStateFromStores)([eC.default], () => eC.default.hasLayers()),
+    D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eG.ProcessArgs.isDisallowPopupsSet(),
     b = (0, Z.useIsEligibleForPomelo)();
   s.useEffect(() => {
     q.default.trackExposure({
@@ -671,7 +671,7 @@ function eQ() {
   let U = (0, r.useStateFromStores)([K.default], () => null != K.default.getAwaitingRemoteSessionInfo()),
     {
       isPopupEnabled: j,
-      isJoinedTagButtonEnabled: k,
+      isJoinedTagButtonEnabled: w,
       isTaglessAccountPanelEnabled: B
     } = q.default.useExperiment({
       location: "08bd40_4"
@@ -697,7 +697,7 @@ function eQ() {
   }), (0, et.useSafetyEducationAATriggerPoint)();
   let ec = (0, r.useStateFromStores)([ei.default], () => ei.default.hasHadOtherUserPlaySoundInSession()),
     eA = function() {
-      let e = (0, w.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
+      let e = (0, k.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
         [t, n] = (0, r.useStateFromStoresArray)([X.default], () => [X.default.hasFetchedRelevance, X.default.profileThemesRelevanceExceeded]),
         [a, l] = (0, r.useStateFromStoresArray)([eT.default], () => [eT.default.hasFetchedMostRecentPremiumTypeSubscription(), eT.default.getMostRecentPremiumTypeSubscription()]),
         {
@@ -739,18 +739,18 @@ function eQ() {
     hidePrivateData: h,
     occluded: D,
     premiumSubscription: L,
-    selfDeaf: I,
+    selfDeaf: g,
     selfMute: p,
     serverDeaf: T,
     serverMute: C,
     showRichProfilePopup: j,
-    showTagAsButton: k,
+    showTagAsButton: w,
     showTaglessAccountPanel: B,
     speaking: f,
-    speakingWhileMuted: P,
+    speakingWhileMuted: x,
     status: c,
     streaming: d,
-    suppress: g,
+    suppress: I,
     webBuildOverride: O,
     awaitingRemote: U,
     isEligibleForPomelo: b
@@ -769,7 +769,7 @@ function eZ(e) {
     height: 9,
     className: eY.hasBuildOverride,
     "aria-hidden": !0
-  }) : n && (r = (0, a.jsx)(ex.CircleBadge, {
+  }) : n && (r = (0, a.jsx)(ey.CircleBadge, {
     color: j.default.STATUS_DANGER,
     className: eY.hasBuildOverride,
     "aria-hidden": !0
@@ -802,19 +802,19 @@ function eX(e) {
   } = e, C = t || l || n, {
     Component: S,
     play: p,
-    events: g
-  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), I = n || l ? c.MicrophoneDenyIcon : S;
+    events: I
+  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), g = n || l ? c.MicrophoneDenyIcon : S;
   return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eM.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
     onMouseEnter: () => {
-      d(), g.onMouseEnter()
+      d(), I.onMouseEnter()
     },
     onMouseLeave: () => {
-      f(), g.onMouseLeave()
+      f(), I.onMouseLeave()
     },
-    icon: (0, a.jsx)(I, {
+    icon: (0, a.jsx)(g, {
       size: "custom",
       width: 20,
       height: 20,
@@ -846,7 +846,7 @@ function eJ(e) {
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
   return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eM.default, {
-    tooltipText: (0, P.default)(t, n, l),
+    tooltipText: (0, x.default)(t, n, l),
     onMouseEnter: E,
     onMouseLeave: _,
     icon: (0, a.jsx)(C, {

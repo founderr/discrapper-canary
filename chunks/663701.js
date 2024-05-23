@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("367907"),
   S = n("770471"),
   p = n("158631"),
-  g = n("143614"),
-  I = n("463119"),
+  I = n("143614"),
+  g = n("463119"),
   T = n("377171"),
   A = n("243778"),
   N = n("922409"),
@@ -31,16 +31,16 @@ var a = n("735250"),
   O = n("880257"),
   L = n("631885"),
   M = n("457396"),
-  y = n("630571"),
-  P = n("51596"),
-  x = n("905423"),
+  P = n("630571"),
+  x = n("51596"),
+  y = n("905423"),
   D = n("155409"),
   b = n("210887"),
   U = n("695346"),
   j = n("283595"),
   G = n("699516"),
-  k = n("923834"),
-  w = n("55563"),
+  w = n("923834"),
+  k = n("55563"),
   B = n("774343"),
   F = n("517802"),
   H = n("436088"),
@@ -60,7 +60,7 @@ let et = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([G.default], () => G.default.getPendingCount()), i = (0, g.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([G.default], () => G.default.getPendingCount()), i = (0, I.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
@@ -215,7 +215,7 @@ let et = e => {
       }
     })
   },
-  er = () => (0, P.show)("DM_SEARCH");
+  er = () => (0, x.show)("DM_SEARCH");
 
 function eo(e) {
   switch (e) {
@@ -238,7 +238,7 @@ let eu = e => {
     homeLink: s,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [d, c] = (0, x.default)(e => {
+  } = e, [d, c] = (0, y.default)(e => {
     let {
       channelId: t,
       path: n
@@ -303,7 +303,7 @@ let eu = e => {
         }
       }, "activities") : null, (0, a.jsx)(es, {
         selected: null == c ? null != s && s.startsWith(J.Routes.MESSAGE_REQUESTS) : c === J.Routes.MESSAGE_REQUESTS
-      }, "message-requests"), (0, a.jsx)(I.CollectiblesShopButton, {
+      }, "message-requests"), (0, a.jsx)(g.CollectiblesShopButton, {
         selected: c === J.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(J.Routes.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {
@@ -312,7 +312,7 @@ let eu = e => {
             object: J.AnalyticsObjects.NAVIGATION_LINK
           }
         }
-      }, "discord-shop"), (0, a.jsx)(y.default, {
+      }, "discord-shop"), (0, a.jsx)(P.default, {
         selected: c === J.Routes.QUEST_HOME || (null == s ? void 0 : s.startsWith(J.Routes.QUEST_HOME)),
         locationState: {
           analyticsSource: {
@@ -330,12 +330,12 @@ let eu = e => {
 
 function ed() {
   let e = (0, d.useStateFromStores)([B.default], () => B.default.getHomeLink()),
-    t = (0, d.useStateFromStores)([w.default], () => {
+    t = (0, d.useStateFromStores)([k.default], () => {
       if (e === J.Routes.APPLICATION_STORE) return !0;
       let t = (0, q.getSKUIdFromURL)(e);
       if (null != t) {
         var n, a;
-        return null !== (a = null === (n = w.default.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== a && a
+        return null !== (a = null === (n = k.default.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== a && a
       }
       return !1
     }, [e]),
@@ -346,7 +346,7 @@ function ed() {
       theme: b.default.theme
     })),
     l = (0, d.useStateFromStores)([j.default], () => j.default.hasLibraryApplication()),
-    i = (0, d.useStateFromStores)([k.default], () => k.default.getCurrentPath());
+    i = (0, d.useStateFromStores)([w.default], () => w.default.getCurrentPath());
   return (0, a.jsx)(eu, {
     theme: s,
     showLibrary: n,

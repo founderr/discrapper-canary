@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("627845"),
   S = n("185666"),
   p = n("503737"),
-  g = n("513202"),
-  I = n("318891"),
+  I = n("513202"),
+  g = n("318891"),
   T = n("687751"),
   A = n("912471"),
   N = n("100527"),
@@ -27,16 +27,16 @@ var a = n("735250"),
   O = n("679891"),
   L = n("491575"),
   M = n("561345"),
-  y = n("314533"),
-  P = n("935347"),
-  x = n("560067"),
+  P = n("314533"),
+  x = n("935347"),
+  y = n("560067"),
   D = n("823169"),
   b = n("620360"),
   U = n("96051"),
   j = n("750995"),
   G = n("696287"),
-  k = n("408026"),
-  w = n("763916"),
+  w = n("408026"),
+  k = n("763916"),
   B = n("306721"),
   F = n("531551"),
   H = n("38618"),
@@ -71,8 +71,8 @@ var a = n("735250"),
   em = n("719256"),
   eS = n("6025"),
   ep = n("897473"),
-  eg = n("377368"),
-  eI = n("262702"),
+  eI = n("377368"),
+  eg = n("262702"),
   eT = n("639033"),
   eA = n("479313"),
   eN = n("911560"),
@@ -81,16 +81,16 @@ var a = n("735250"),
   eO = n("429974"),
   eL = n("332754"),
   eM = n("507468"),
-  ey = n("357269"),
-  eP = n("282506"),
-  ex = n("444961"),
+  eP = n("357269"),
+  ex = n("282506"),
+  ey = n("444961"),
   eD = n("314897"),
   eb = n("433355"),
   eU = n("592125"),
   ej = n("896797"),
   eG = n("430824"),
-  ek = n("819640"),
-  ew = n("283595"),
+  ew = n("819640"),
+  ek = n("283595"),
   eB = n("944486"),
   eF = n("914010"),
   eH = n("695103"),
@@ -117,9 +117,9 @@ function e0(e, t, n) {
 n("117240"), n("801077"), n("967368"), n("272053"), n("974180"), n("574254"), n("551428"), n("55563"), n("455173"), n("882029"), n("959457"), n("653255"), n("663389"), n("25990"), n("778825"), n("999382"), n("388610"), n("533947"), n("277053"), n("371398"), n("141233"), n("471073"), n("628566");
 let e1 = !1;
 (0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), eC.default.loadServer(), eq.isPlatformEmbedded && (eQ.default.on("USER_SETTINGS_OPEN", () => {
-  !ek.default.getLayers().includes(eX.Layers.USER_SETTINGS) && _.default.open(eX.UserSettingsSections.ACCOUNT)
+  !ew.default.getLayers().includes(eX.Layers.USER_SETTINGS) && _.default.open(eX.UserSettingsSections.ACCOUNT)
 }), eQ.default.on("LAUNCH_APPLICATION", (e, t) => {
-  let n = ew.default.getActiveLibraryApplication(t);
+  let n = ek.default.getActiveLibraryApplication(t);
   eZ.playApplication(t, n, {
     analyticsParams: {
       location: {
@@ -234,10 +234,10 @@ let e9 = [{
       action: s
     } = t.params;
     return eK.default.whenInitialized(() => {
-      ew.default.whenInitialized(() => {
+      ek.default.whenInitialized(() => {
         switch (s) {
           case "launch": {
-            let e = ew.default.getActiveLibraryApplication(n);
+            let e = ek.default.getActiveLibraryApplication(n);
             if (null == e) return;
             eZ.playApplication(e.id, e, {
               analyticsParams: {
@@ -253,7 +253,7 @@ let e9 = [{
             eH.default.whenInitialized(() => h.authorizeAndSetTestModeApplication(n));
             break;
           case "uninstall": {
-            let e = ew.default.getActiveLibraryApplication(n);
+            let e = ek.default.getActiveLibraryApplication(n);
             if (null == e) return;
             (0, c.uninstallBranchPrompt)(e.id, e.branchId, eX.AnalyticsLocations.URI_SCHEME)
           }
@@ -266,7 +266,7 @@ let e9 = [{
 }, {
   path: [eX.Routes.GUILD_CREATE],
   render: function() {
-    return (0, V.addPostConnectionCallback)(() => x.default.openCreateGuildModal({
+    return (0, V.addPostConnectionCallback)(() => y.default.openCreateGuildModal({
       location: "External link"
     })), (0, a.jsx)(r.Redirect, {
       to: ej.default.defaultRoute
@@ -295,7 +295,7 @@ let e9 = [{
   render: function(e) {
     let {
       location: t
-    } = e, n = (0, ey.default)(t.pathname);
+    } = e, n = (0, eP.default)(t.pathname);
     return null != n && (0, V.addPostConnectionCallback)(() => _.default.open(n.section, n.subsection, {
       openWithoutBackstack: !1,
       impressionSource: n.source
@@ -427,7 +427,7 @@ function e8(e) {
 }
 class te extends s.PureComponent {
   componentDidMount() {
-    M.default.initialize(), eQ.default.setZoomFactor(C.default.zoom), eC.default.init(), O.default.initialize(), eo.default.initialize(), k.default.initialize(), ex.default.initialize(), w.default.initialize(), ed.default.initialize(), J.default.initialize(), m.default.init(), F.default.init(), B.default.init(), ea.default.initialize(), T.default.initialize(), j.default.initialize(), ec.default.initialize(), I.default.initialize(), eP.default.initialize(), er.default.initialize(), g.default.initialize(), Y.default.init(), Z.default.init(), eW.default.init(), ez.default.init(), p.default.initialize(), ev.default.init(), eY.default.init(), eV.default.init(), eL.default.init(), eI.default.initialize(), eT.default.initialize(), eO.default.initialize(), eM.default.init(), U.default.initialize(), S.default.initialize(), em.default.initialize(), eg.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), y.default.initialize(), X.default.init({
+    M.default.initialize(), eQ.default.setZoomFactor(C.default.zoom), eC.default.init(), O.default.initialize(), eo.default.initialize(), w.default.initialize(), ey.default.initialize(), k.default.initialize(), ed.default.initialize(), J.default.initialize(), m.default.init(), F.default.init(), B.default.init(), ea.default.initialize(), T.default.initialize(), j.default.initialize(), ec.default.initialize(), g.default.initialize(), ex.default.initialize(), er.default.initialize(), I.default.initialize(), Y.default.init(), Z.default.init(), eW.default.init(), ez.default.init(), p.default.initialize(), ev.default.init(), eY.default.init(), eV.default.init(), eL.default.init(), eg.default.initialize(), eT.default.initialize(), eO.default.initialize(), eM.default.init(), U.default.initialize(), S.default.initialize(), em.default.initialize(), eI.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), P.default.initialize(), X.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -440,7 +440,7 @@ class te extends s.PureComponent {
     }), b.default.init(), $.default.initialize(), ef.default.initialize(), eu.default.initialize(), D.default.initialize(), this.rewriterUnlisten = eE.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = eE.default.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    M.default.terminate(), ex.default.terminate(), ed.default.terminate(), eo.default.terminate(), O.default.terminate(), I.default.terminate(), eP.default.terminate(), g.default.terminate(), ec.default.terminate(), er.default.terminate(), eO.default.terminate(), p.default.terminate(), U.default.terminate(), $.default.terminate(), S.default.terminate(), ef.default.terminate(), em.default.terminate(), eg.default.terminate(), el.default.terminate(), es.default.terminate(), ei.default.terminate(), y.default.terminate(), eu.default.terminate(), D.default.terminate(), G.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    M.default.terminate(), ey.default.terminate(), ed.default.terminate(), eo.default.terminate(), O.default.terminate(), g.default.terminate(), ex.default.terminate(), I.default.terminate(), ec.default.terminate(), er.default.terminate(), eO.default.terminate(), p.default.terminate(), U.default.terminate(), $.default.terminate(), S.default.terminate(), ef.default.terminate(), em.default.terminate(), eI.default.terminate(), el.default.terminate(), es.default.terminate(), ei.default.terminate(), P.default.terminate(), eu.default.terminate(), D.default.terminate(), G.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {
@@ -578,7 +578,7 @@ class te extends s.PureComponent {
         }), (0, a.jsx)(r.Redirect, {
           to: "/"
         })]
-      }), (0, a.jsx)(P.default, {})]
+      }), (0, a.jsx)(x.default, {})]
     })
   }
   constructor(...e) {

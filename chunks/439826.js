@@ -26,7 +26,7 @@ function m(e) {
     onCtxMenuClose: n,
     onCtxMenuOpen: s,
     onCtxMenuSelect: m
-  } = e, S = (0, c.getQuestBarHeroAssetUrl)(t), p = (0, o.default)(), g = (0, i.isThemeDark)(p) ? h.ThemeTypes.DARK : h.ThemeTypes.LIGHT, I = g === h.ThemeTypes.DARK;
+  } = e, S = (0, c.getQuestBarHeroAssetUrl)(t), p = (0, o.default)(), I = (0, i.isThemeDark)(p) ? h.ThemeTypes.DARK : h.ThemeTypes.LIGHT, g = I === h.ThemeTypes.DARK;
   return (0, a.jsxs)("div", {
     className: C.container,
     children: [(0, a.jsx)("div", {
@@ -42,8 +42,8 @@ function m(e) {
       })
     }), (0, a.jsx)("div", {
       className: l()(C.overlay, {
-        [C.darkThemeGradient]: I,
-        [C.lightThemeGradient]: !I
+        [C.darkThemeGradient]: g,
+        [C.lightThemeGradient]: !g
       })
     }), (0, a.jsx)("div", {
       className: C.positionContentOverBackground,
@@ -72,7 +72,7 @@ function m(e) {
             ref: e,
             className: C.partnerBranding,
             alt: t.config.messages.gameTitle,
-            src: (0, c.getGameLogotypeAssetUrl)(t, g)
+            src: (0, c.getGameLogotypeAssetUrl)(t, I)
           })
         }), (0, a.jsx)("div", {
           className: C.bottomRow,

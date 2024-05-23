@@ -24,14 +24,14 @@ var a = n("735250"),
   m = n("526282"),
   S = n("490610"),
   p = n("981631"),
-  g = n("689938"),
-  I = n("424023");
+  I = n("689938"),
+  g = n("424023");
 let T = (e, t) => {
   switch (e) {
     case h.ClanDiscoveryGame.GENSHIN:
-      return t === p.ThemeTypes.DARK ? I.genshinUpsellBackgroundImageDark : I.genshinUpsellBackgroundImageLight;
+      return t === p.ThemeTypes.DARK ? g.genshinUpsellBackgroundImageDark : g.genshinUpsellBackgroundImageLight;
     case h.ClanDiscoveryGame.VALORANT:
-      return t === p.ThemeTypes.DARK ? I.valorantUpsellBackgroundImageDark : I.valorantUpsellBackgroundImageLight
+      return t === p.ThemeTypes.DARK ? g.valorantUpsellBackgroundImageDark : g.valorantUpsellBackgroundImageLight
   }
 };
 
@@ -49,24 +49,24 @@ function A() {
     _ = s.useMemo(() => {
       switch (e) {
         case h.ClanDiscoveryGame.GENSHIN:
-          return f === p.ThemeTypes.DARK ? I.genshinOnboardingBackgroundImageDark : I.genshinOnboardingBackgroundImageLight;
+          return f === p.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
         case h.ClanDiscoveryGame.VALORANT:
-          return f === p.ThemeTypes.DARK ? I.valorantOnboardingBackgroundImageDark : I.valorantOnboardingBackgroundImageLight
+          return f === p.ThemeTypes.DARK ? g.valorantOnboardingBackgroundImageDark : g.valorantOnboardingBackgroundImageLight
       }
     }, [e, f]);
   switch (t) {
     case h.ClanDiscoveryUserScreens.USER_UPSELL:
       return (0, a.jsx)("div", {
-        className: I.container,
+        className: g.container,
         children: (0, a.jsx)(o.ScrollerThin, {
-          className: I.upsellScroller,
+          className: g.upsellScroller,
           fade: !0,
           children: (0, a.jsxs)("div", {
-            className: i()(E, I.userUpsell),
+            className: i()(E, g.userUpsell),
             children: [(0, a.jsx)("div", {
-              className: I.backgroundImageBlur
+              className: g.backgroundImageBlur
             }), (0, a.jsxs)("div", {
-              className: I.backgroundImageContent,
+              className: g.backgroundImageContent,
               children: [(0, a.jsx)(m.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(m.default, {
                 selectedGame: e,
                 onClick: l
@@ -77,13 +77,13 @@ function A() {
       });
     case h.ClanDiscoveryUserScreens.USER_ONBOARDING:
       return (0, a.jsx)("div", {
-        className: I.container,
+        className: g.container,
         children: (0, a.jsxs)("div", {
-          className: i()(_, I.userOnboarding),
+          className: i()(_, g.userOnboarding),
           children: [(0, a.jsx)("div", {
-            className: I.backgroundImageBlur
+            className: g.backgroundImageBlur
           }), (0, a.jsx)("div", {
-            className: I.backgroundImageContent,
+            className: g.backgroundImageContent,
             children: (0, a.jsx)(C.default, {
               selectedGame: e,
               setScreen: n
@@ -111,16 +111,16 @@ function N() {
     C = s.useMemo(() => T(t, c), [t, c]),
     m = !e && n;
   return 0 === l.length ? null : (0, a.jsx)("div", {
-    className: I.container,
+    className: g.container,
     children: (0, a.jsxs)(o.ScrollerNone, {
-      className: I.upsellScroller,
+      className: g.upsellScroller,
       fade: !0,
       children: [(0, a.jsxs)("div", {
-        className: i()(C, I.adminUpsell),
+        className: i()(C, g.adminUpsell),
         children: [(0, a.jsx)("div", {
-          className: I.backgroundImageBlur
+          className: g.backgroundImageBlur
         }), (0, a.jsx)("div", {
-          className: I.backgroundImageContent,
+          className: g.backgroundImageContent,
           children: (0, a.jsx)(_.default, {
             isBrowseButtonVisible: m,
             selectedGame: t,
@@ -129,8 +129,8 @@ function N() {
           })
         })]
       }), (0, a.jsx)(S.default, {
-        title: g.default.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-        subtitle: m ? g.default.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
+        title: I.default.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
+        subtitle: m ? I.default.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
       })]
     })
   })

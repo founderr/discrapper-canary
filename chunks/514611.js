@@ -16,8 +16,8 @@ var a, s = n("735250"),
   m = n("768581"),
   S = n("900849"),
   p = n("940627"),
-  g = n("806519"),
-  I = n("981631"),
+  I = n("806519"),
+  g = n("981631"),
   T = n("689938"),
   A = n("785518"),
   N = n("129512"),
@@ -36,9 +36,9 @@ class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
-      case I.ThemeTypes.DARK:
+      case g.ThemeTypes.DARK:
         return N;
-      case I.ThemeTypes.LIGHT:
+      case g.ThemeTypes.LIGHT:
         return v
     }
   }
@@ -59,12 +59,12 @@ class L extends(a = l.PureComponent) {
       description: O,
       presenceCount: L,
       memberCount: M,
-      keywords: y
-    } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(I.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
+      keywords: P
+    } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != x ? x : this.getDefaultSplashURL(a, P), b = m.default.getGuildIconURL({
+    }), D = null != y ? y : this.getDefaultSplashURL(a, x), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -120,7 +120,7 @@ class L extends(a = l.PureComponent) {
                   src: D,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !P
+                    [A.splashImageHeight]: !x
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
@@ -133,14 +133,14 @@ class L extends(a = l.PureComponent) {
                 })
               }) : null, (0, s.jsx)("div", {
                 className: A.guildIcon,
-                children: (0, s.jsx)(g.default, {
-                  mask: g.default.Masks.SQUIRCLE,
+                children: (0, s.jsx)(I.default, {
+                  mask: I.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, s.jsx)("div", {
                     className: A.iconMask,
-                    children: (0, s.jsx)(g.default, {
-                      mask: g.default.Masks.SQUIRCLE,
+                    children: (0, s.jsx)(I.default, {
+                      mask: I.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {
@@ -170,8 +170,8 @@ class L extends(a = l.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: O
-              }), U && null != y && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: y,
+              }), U && null != P && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: P,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: S.AnalyticsContexts.POPULAR

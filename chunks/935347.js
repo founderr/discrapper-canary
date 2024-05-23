@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("474873"),
   S = n("706454"),
   p = n("215427"),
-  g = n("820254"),
-  I = n("985806"),
+  I = n("820254"),
+  g = n("985806"),
   T = n("838949"),
   A = n("70956"),
   N = n("358085"),
@@ -28,7 +28,7 @@ var a = n("735250"),
   L = n("689938"),
   M = n("376244");
 
-function y(e, t, n) {
+function P(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -36,7 +36,7 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class P extends s.PureComponent {
+class x extends s.PureComponent {
   createSound() {
     let {
       soundpack: e
@@ -132,14 +132,14 @@ class P extends s.PureComponent {
               className: M.twitterLink,
               href: O.Links.TWITTER_SUPPORT,
               target: "_blank",
-              children: [(0, a.jsx)(I.default, {
+              children: [(0, a.jsx)(g.default, {
                 className: M.icon
               }), L.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
               className: M.statusLink,
               href: O.Links.STATUS,
               target: "_blank",
-              children: [(0, a.jsx)(g.default, {
+              children: [(0, a.jsx)(I.default, {
                 className: M.icon
               }), L.default.Messages.SERVER_STATUS]
             })]
@@ -149,7 +149,7 @@ class P extends s.PureComponent {
     }
   }
   constructor(e) {
-    super(e), y(this, "videoRef", null), y(this, "_noProblemsTimeout", null), y(this, "_problemsTimeout", null), y(this, "_connectedSound", this.createSound()), y(this, "_loadingText", function() {
+    super(e), P(this, "videoRef", null), P(this, "_noProblemsTimeout", null), P(this, "_problemsTimeout", null), P(this, "_connectedSound", this.createSound()), P(this, "_loadingText", function() {
       let e = [L.default.Messages.ACCESSIBILITY_LOADING_TIP_1, L.default.Messages.ACCESSIBILITY_LOADING_TIP_2, L.default.Messages.ACCESSIBILITY_LOADING_TIP_3, L.default.Messages.ACCESSIBILITY_LOADING_TIP_4, L.default.Messages.ACCESSIBILITY_LOADING_TIP_5, L.default.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
         tabHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "tab",
@@ -212,20 +212,20 @@ class P extends s.PureComponent {
         }, t)
       })];
       return S.default.locale.startsWith("en-") && e.push(L.default.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)]
-    }()), y(this, "_eventLoadingText", function() {
+    }()), P(this, "_eventLoadingText", function() {
       let e = C.default.getLoadingTips();
       if (null != e && e.length > 0) return e[o().random(e.length - 1)]
-    }()), y(this, "handleReady", () => {
+    }()), P(this, "handleReady", () => {
       this.setState({
         ready: !0
       }), (0, N.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
-    }), y(this, "setVideoRef", e => {
+    }), P(this, "setVideoRef", e => {
       this.videoRef = e
-    }), y(this, "setProblemsTimeout", () => {
+    }), P(this, "setProblemsTimeout", () => {
       null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({
         problems: !0
       }), 1e4))
-    }), y(this, "clearProblemsTimeout", () => {
+    }), P(this, "clearProblemsTimeout", () => {
       clearTimeout(this._problemsTimeout), this._problemsTimeout = null
     });
     let {
@@ -254,7 +254,7 @@ t.default = d.default.connectStores([_.default, p.default, m.default, h.default]
     soundpack: l,
     reducedMotion: i
   } = e;
-  return t ? (0, a.jsx)(P, {
+  return t ? (0, a.jsx)(x, {
     reducedMotion: i,
     soundpack: l,
     connected: n,

@@ -17,8 +17,8 @@ var a = n("913527"),
   m = n("131951"),
   S = n("292959"),
   p = n("699516"),
-  g = n("944486"),
-  I = n("9156"),
+  I = n("944486"),
+  g = n("9156"),
   T = n("594174"),
   A = n("51144"),
   N = n("196051"),
@@ -27,9 +27,9 @@ var a = n("913527"),
   O = n("981631"),
   L = n("689938");
 let M = [],
-  y = null,
   P = null,
   x = null,
+  y = null,
   D = /\|\|([\s\S]+?)\|\|/g;
 
 function b(e, t, n, a) {
@@ -64,16 +64,16 @@ function b(e, t, n, a) {
 function U() {
   if (!i.supported) return !1;
   let e = d.default.locale;
-  if (null == x) {
+  if (null == y) {
     var t;
-    x = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
+    y = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
   }
-  let n = x.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
-  P = n.length > 0 ? n[0] : null
+  let n = y.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+  x = n.length > 0 ? n[0] : null
 }
 async function j(e, t, n, a, s) {
   let l = i.createUtterance(e, n);
-  null !== l && (null == P && U(), t ? await (0, N.stopSpeaking)() : null == y || y.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), y = l, i.speakUtterance(l, P))
+  null !== l && (null == x && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, x))
 }
 
 function G(e, t, n, a, s) {
@@ -82,7 +82,7 @@ function G(e, t, n, a, s) {
   })
 }
 
-function k(e) {
+function w(e) {
   let {
     text: t,
     interrupt: n,
@@ -93,8 +93,8 @@ function k(e) {
   j(t, n, a, s, l)
 }
 
-function w() {
-  return null !== y && y.removeEventListener("end", N.stopSpeaking), i.cancelAll(), y = null, !0
+function k() {
+  return null !== P && P.removeEventListener("end", N.stopSpeaking), i.cancelAll(), P = null, !0
 }
 
 function B(e) {
@@ -116,17 +116,17 @@ function F(e) {
   if (d || m.default.isSelfDeaf()) return !1;
   let C = h.default.getChannel(o);
   if (null == C) return !1;
-  let T = g.default.getChannelId(),
+  let T = I.default.getChannelId(),
     N = E.default.getCurrentSidebarChannelId(T),
     v = o === T || o === N,
     L = c.EnableTTSCommand.getSetting() && u.tts && v,
-    y = S.default.getTTSType(),
-    P = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (y === O.TTSNotificationTypes.ALL_CHANNELS || y === O.TTSNotificationTypes.SELECTED_CHANNEL && v);
-  if ((L || P) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !p.default.isBlocked(u.author.id))) {
+    P = S.default.getTTSType(),
+    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === O.TTSNotificationTypes.ALL_CHANNELS || P === O.TTSNotificationTypes.SELECTED_CHANNEL && v);
+  if ((L || x) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !p.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
-    if (null != e && I.default.getMutedChannels(e).has(o)) return !1;
+    if (null != e && g.default.getMutedChannels(e).has(o)) return !1;
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
       n = u.type === O.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : A.default.getName(n) : null;
@@ -148,6 +148,6 @@ function V() {
 }
 t.default = {
   init() {
-    l.default.subscribe("SPEAK_TEXT", k), l.default.subscribe("SPEAK_MESSAGE", B), l.default.subscribe("STOP_SPEAKING", w), l.default.subscribe("MESSAGE_CREATE", F), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
+    l.default.subscribe("SPEAK_TEXT", w), l.default.subscribe("SPEAK_MESSAGE", B), l.default.subscribe("STOP_SPEAKING", k), l.default.subscribe("MESSAGE_CREATE", F), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
   }
 }

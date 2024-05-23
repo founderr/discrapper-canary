@@ -25,8 +25,8 @@ t.default = (0, c.default)(e => {
     state: m,
     guildId: S,
     channelId: p,
-    prompt: g,
-    disableGuildSelect: I,
+    prompt: I,
+    disableGuildSelect: g,
     disclosures: T,
     integrationType: A
   } = e, N = "OAuth2Authorize_".concat(n, "_").concat(S, "_").concat(p), v = null != A ? null == o ? void 0 : o.get(A) : void 0, R = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : i.default.getApplication(n);
@@ -54,8 +54,8 @@ t.default = (0, c.default)(e => {
       permissions: c,
       guildId: S,
       channelId: p,
-      prompt: g,
-      disableGuildSelect: "boolean" == typeof I ? I : "true" === I,
+      prompt: I,
+      disableGuildSelect: "boolean" == typeof g ? g : "true" === g,
       integrationType: A
     }), {
       modalKey: N,

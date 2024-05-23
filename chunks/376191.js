@@ -22,20 +22,20 @@ var s = n("442837"),
   m = n("332712"),
   S = n("81471"),
   p = n("689938"),
-  g = n("326486");
-let I = e => {
+  I = n("326486");
+let g = e => {
     let {
       userId: t
     } = e, n = (0, m.useMutualGuilds)(t);
     return null == n || 0 === n.length ? null : (0, a.jsxs)("div", {
-      className: g.mutualGuildsContainer,
+      className: I.mutualGuildsContainer,
       children: [(0, a.jsx)(c.default, {
         guilds: n,
         maxGuilds: 3,
         size: E.GuildIcon.Sizes.SMOL,
         hideOverflowCount: !0
       }), (0, a.jsx)(l.Text, {
-        className: g.mutualGuilds,
+        className: I.mutualGuilds,
         variant: "text-sm/normal",
         children: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
           count: n.length
@@ -60,35 +60,35 @@ function A(e) {
   });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(T, {
-      className: g.avatar,
+      className: I.avatar,
       src: (0, d.getChannelIconURL)(n, 40, !_ && E),
       avatarDecoration: N,
       size: l.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : p.default.Messages.UNKNOWN_USER
     }), (0, a.jsxs)("div", {
-      className: g.userPreview,
+      className: I.userPreview,
       children: [(0, a.jsxs)("div", {
-        className: g.userContainerWithPreview,
+        className: I.userContainerWithPreview,
         children: [(0, a.jsx)(i.default, {
           nick: m,
           user: c,
           showAccountIdentifier: !0,
-          className: g.tagContainer,
-          usernameClass: g.username,
-          discriminatorClass: null != h.default.getGlobalName(c) ? g.globalName : g.discriminator
+          className: I.tagContainer,
+          usernameClass: I.username,
+          discriminatorClass: null != h.default.getGlobalName(c) ? I.globalName : I.discriminator
         }), (0, a.jsx)(l.Text, {
-          className: g.timestampWithPreview,
+          className: I.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",
           children: A
         })]
       }), (0, a.jsx)("div", {
-        className: g.mutualGuilds,
-        children: (0, a.jsx)(I, {
+        className: I.mutualGuilds,
+        children: (0, a.jsx)(g, {
           userId: c.id
         })
       }), (0, a.jsx)("div", {
-        className: g.messagePreview,
+        className: I.messagePreview,
         children: (0, a.jsx)(S.default, {
           channel: n
         })

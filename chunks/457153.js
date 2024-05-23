@@ -21,15 +21,15 @@ t.default = function(e) {
   let {
     className: l,
     expansionSpring: p,
-    isExpanded: g,
-    isExpansionAnimationComplete: I,
+    isExpanded: I,
+    isExpansionAnimationComplete: g,
     quest: T,
     useReducedMotion: A
   } = e, N = s.useRef(null), v = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, R = s.useMemo(() => (0, d.isAssetAnimated)(T.config.assets.questBarHero), [T]), O = (0, d.getQuestBarHeroAssetUrl)(T);
   return (0, a.jsxs)(r.animated.div, {
-    "aria-hidden": g && I,
+    "aria-hidden": I && g,
     className: i()(l, S.contentCollapsed, {
-      [S.contentCollapsedExpanded]: g,
+      [S.contentCollapsedExpanded]: I,
       [S.contentCollapsedAccepted]: v
     }),
     style: {

@@ -18,10 +18,10 @@ t.default = e => {
   } = e, {
     completionSpring: h,
     startCompletionAnimation: _
-  } = (0, u.useQuestBarCompletionAnimation)(), C = s.useRef(!1), m = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [S, p] = s.useState(null), [g, I] = s.useState(null), T = s.useRef(new l.Environment({
+  } = (0, u.useQuestBarCompletionAnimation)(), C = s.useRef(!1), m = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [S, p] = s.useState(null), [I, g] = s.useState(null), T = s.useRef(new l.Environment({
     gravity: 0,
     wind: 0
-  })), A = (0, l.useConfettiCannon)(S, g), N = s.useCallback(() => {
+  })), A = (0, l.useConfettiCannon)(S, I), N = s.useCallback(() => {
     let e = n.current;
     if (null != e && A.isReady) {
       var t, a, s, l;
@@ -77,7 +77,7 @@ t.default = e => {
       className: c.confetti,
       environment: T.current
     }), (0, a.jsx)(l.SpriteCanvas, {
-      ref: I,
+      ref: g,
       sprites: [f],
       colors: E,
       spriteWidth: d.COMMON_CONFETTI_MAX_SPRITE_SIZE,

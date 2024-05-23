@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("351402"),
   S = n("730647"),
   p = n("772021"),
-  g = n("396828"),
-  I = n("475413"),
+  I = n("396828"),
+  g = n("475413"),
   T = n("20967"),
   A = n("504762"),
   N = n("807152"),
@@ -33,15 +33,15 @@ var a = n("735250"),
 function L(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), y = (0, p.default)(t), P = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, S.useGroupListingsFetchContext)(), {
+  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, p.default)(t), x = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: D,
     restrictionsLoading: b
-  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !x || P || b;
+  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !y || x || b;
   (0, d.usePageTitle)({
     subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let j = L && (null == n || !(M || y) || D && !b);
+  let j = L && (null == n || !(M || P) || D && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
@@ -58,7 +58,7 @@ function L(e) {
       toolbar: (0, a.jsx)(s.Fragment, {}),
       className: O.headerBar,
       children: [(0, a.jsx)(_.default.Icon, {
-        icon: g.default,
+        icon: I.default,
         "aria-hidden": !0
       }), (0, a.jsx)(_.default.Title, {
         children: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
@@ -71,7 +71,7 @@ function L(e) {
         className: O.scroller,
         children: (0, a.jsx)("div", {
           className: O.scrollerContent,
-          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(I.default, {
+          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(g.default, {
             guild: n
           })
         })

@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("63063"),
   S = n("976401"),
   p = n("333454"),
-  g = n("864441"),
-  I = n("981631"),
+  I = n("864441"),
+  g = n("981631"),
   T = n("689938"),
   A = n("685054");
 
@@ -44,7 +44,7 @@ class R extends s.PureComponent {
   }
   renderTitle() {
     return (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(I.default, {
         children: this.isHost() ? T.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
         }) : T.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
@@ -67,7 +67,7 @@ class R extends s.PureComponent {
     return this.isHost() ? (0, a.jsx)(S.default, {
       tooltipText: T.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
-        window.open(m.default.getArticleURL(I.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
+        window.open(m.default.getArticleURL(g.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
       icon: C.default
     }) : null

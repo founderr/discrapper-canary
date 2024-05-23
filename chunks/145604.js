@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("594190"),
   S = n("38618"),
   p = n("501640"),
-  g = n("924301"),
-  I = n("734307"),
+  I = n("924301"),
+  g = n("734307"),
   T = n("355298"),
   A = n("427679"),
   N = n("695346"),
@@ -31,16 +31,16 @@ var a = n("735250"),
   O = n("271383"),
   L = n("430824"),
   M = n("131951"),
-  y = n("375954"),
-  P = n("19780"),
-  x = n("944486"),
+  P = n("375954"),
+  x = n("19780"),
+  y = n("944486"),
   D = n("914010"),
   b = n("885110"),
   U = n("9156"),
   j = n("594174"),
   G = n("774343"),
-  k = n("974042"),
-  w = n("808506"),
+  w = n("974042"),
+  k = n("808506"),
   B = n("626135"),
   F = n("630388"),
   H = n("823379"),
@@ -74,10 +74,10 @@ class K extends s.PureComponent {
       isScreenSharing: T,
       runningGame: O,
       runningGamePid: M,
-      selectedChannelId: x,
+      selectedChannelId: y,
       selectedGuildId: j,
       connected: G,
-      homeLink: k,
+      homeLink: w,
       friendsTabSection: K,
       isNSFWChannel: z,
       isMemberPending: q,
@@ -90,22 +90,22 @@ class K extends s.PureComponent {
       let t = m.default.getCurrentGameForAnalytics(),
         n = null != t ? t.name : "",
         a = A.default.getStageInstanceByChannel(e.voiceChannelId),
-        s = g.default.getActiveEventByChannel(e.voiceChannelId);
+        s = I.default.getActiveEventByChannel(e.voiceChannelId);
       B.default.track(Y.AnalyticEvents.LEAVE_VOICE_CHANNEL, {
         channel_id: e.voiceChannelId,
         channel_type: e.voiceChannelType,
         channel_bitrate: e.voiceChannelBitrate,
         guild_id: e.voiceChannelGuildId,
-        rtc_connection_id: P.default.getRTCConnectionId(),
+        rtc_connection_id: x.default.getRTCConnectionId(),
         game_name: n,
-        duration: P.default.getDuration(),
+        duration: x.default.getDuration(),
         game_platform: this.props.gamePlatform,
         game_id: this.props.gameId,
-        media_session_id: P.default.getMediaSessionId(),
+        media_session_id: x.default.getMediaSessionId(),
         stage_instance_id: null == a ? void 0 : a.id,
         guild_scheduled_event_id: null == s ? void 0 : s.id,
         ...(0, u.getVoiceStateMetadata)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
-        ...P.default.getVoiceStateStats(),
+        ...x.default.getVoiceStateStats(),
         ...h.default.getSelectedParticipantStats(e.voiceChannelId)
       })
     }
@@ -113,7 +113,7 @@ class K extends s.PureComponent {
       let e = m.default.getCurrentGameForAnalytics(),
         t = null != e ? e.name : "",
         n = A.default.getStageInstanceByChannel(s),
-        a = g.default.getActiveEventByChannel(s);
+        a = I.default.getActiveEventByChannel(s);
       (0, u.trackWithMetadata)(Y.AnalyticEvents.CHANNEL_OPENED, {
         ...(0, u.getChannelOpenedMetadata)(s)
       }), (0, c.trackClickstream)(Y.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
@@ -159,7 +159,7 @@ class K extends s.PureComponent {
             game_platform: Y.ActivityGamePlatforms.DESKTOP,
             detection_method: l,
             distributor: d,
-            is_overlay_enabled: w.default.enabled,
+            is_overlay_enabled: k.default.enabled,
             is_overlay_game_enabled: o.enabled,
             is_overlay_game_source: o.source,
             fullscreen_type: r.RunningProcessFullscreenType[n],
@@ -198,22 +198,22 @@ class K extends s.PureComponent {
         postable_channels: Z,
         premium_progress_bar_enabled: null !== (n = null === (t = L.default.getGuild(D.default.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) && void 0 !== n && n,
         viewing_all_channels: !U.default.isOptInEnabled(j),
-        num_recent_channels: I.default.recentsChannelCount(j)
+        num_recent_channels: g.default.recentsChannelCount(j)
       };
       (0, u.trackWithMetadata)(Y.AnalyticEvents.GUILD_VIEWED, e), (0, c.trackClickstream)(Y.AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, {
         guildId: j
       })
-    } else G && null == j && k === Y.Routes.FRIENDS && (!e.connected || K !== e.friendsTabSection || k !== e.homeLink) ? (0, f.default)({
+    } else G && null == j && w === Y.Routes.FRIENDS && (!e.connected || K !== e.friendsTabSection || w !== e.homeLink) ? (0, f.default)({
       tab_opened: K
-    }) : G && null == j && k === Y.Routes.MESSAGE_REQUESTS && (!e.connected || k !== e.homeLink) && !this.isMessageRequestsInitialized && (this.isMessageRequestsInitialized = !0, B.default.track(Y.AnalyticEvents.MESSAGE_REQUESTS_INITIALIZED, {
+    }) : G && null == j && w === Y.Routes.MESSAGE_REQUESTS && (!e.connected || w !== e.homeLink) && !this.isMessageRequestsInitialized && (this.isMessageRequestsInitialized = !0, B.default.track(Y.AnalyticEvents.MESSAGE_REQUESTS_INITIALIZED, {
       num_message_requests: J
     }));
-    if (G && null != x && (!e.connected || x !== e.selectedChannelId || j !== e.selectedGuildId)) {
+    if (G && null != y && (!e.connected || y !== e.selectedChannelId || j !== e.selectedGuildId)) {
       let t = e.selectedChannelId,
         n = v.default.getChannel(t),
         s = L.default.getGuild(null == n ? void 0 : n.getGuildId());
       if (null != t && null != n && null != s && s.publicUpdatesChannelId === t) {
-        let e = y.default.getMessages(t),
+        let e = P.default.getMessages(t),
           l = e.toArray().reverse().find(e => {
             var t;
             return (0, F.hasFlag)(e.flags, Y.MessageFlags.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === "667560445975986187"
@@ -226,12 +226,12 @@ class K extends s.PureComponent {
           ...(0, u.collectGuildAnalyticsMetadata)(s.id)
         })
       }
-      let l = (0, d.collectThreadMetadata)(v.default.getChannel(x), !0);
+      let l = (0, d.collectThreadMetadata)(v.default.getChannel(y), !0);
       (0, u.trackWithMetadata)(Y.AnalyticEvents.CHANNEL_OPENED, {
         ...l,
-        ...(0, u.getChannelOpenedMetadata)(x)
+        ...(0, u.getChannelOpenedMetadata)(y)
       }), (0, c.trackClickstream)(Y.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
-        channelId: x
+        channelId: y
       }), X && (0, u.trackWithMetadata)(Y.AnalyticEvents.TEXT_IN_VOICE_OPENED, {
         channel_is_nsfw: z
       })
@@ -260,18 +260,18 @@ class K extends s.PureComponent {
 }
 
 function z() {
-  let [e, t] = (0, l.useStateFromStoresArray)([x.default], () => [x.default.getVoiceChannelId(), x.default.getChannelId()], []), n = (0, l.useStateFromStores)([v.default], () => v.default.getChannel(t), [t]), s = (0, l.useStateFromStores)([h.default], () => (null == n ? void 0 : n.id) != null && h.default.getChatOpen(n.id), [n]), i = null == n ? void 0 : n.nsfw, r = (0, l.useStateFromStores)([v.default], () => v.default.getChannel(e), [e]), u = (0, l.useStateFromStores)([D.default], () => D.default.getGuildId(), []), d = (0, l.useStateFromStores)([L.default], () => L.default.getGuild(u), [u]), c = (0, l.useStateFromStores)([j.default], () => j.default.getCurrentUser(), []), f = (0, l.useStateFromStores)([O.default], () => {
+  let [e, t] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.getVoiceChannelId(), y.default.getChannelId()], []), n = (0, l.useStateFromStores)([v.default], () => v.default.getChannel(t), [t]), s = (0, l.useStateFromStores)([h.default], () => (null == n ? void 0 : n.id) != null && h.default.getChatOpen(n.id), [n]), i = null == n ? void 0 : n.nsfw, r = (0, l.useStateFromStores)([v.default], () => v.default.getChannel(e), [e]), u = (0, l.useStateFromStores)([D.default], () => D.default.getGuildId(), []), d = (0, l.useStateFromStores)([L.default], () => L.default.getGuild(u), [u]), c = (0, l.useStateFromStores)([j.default], () => j.default.getCurrentUser(), []), f = (0, l.useStateFromStores)([O.default], () => {
     var e, t;
     return null != c && null != u && null !== (t = null === (e = O.default.getMember(u, c.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
-  }, [c, u]), E = (0, l.useStateFromStores)([k.default], () => k.default.getState().section, []), _ = (0, l.useStateFromStores)([G.default], () => G.default.getHomeLink(), []), C = (0, l.useStateFromStores)([S.default], () => S.default.isConnected(), []), [g, I] = (0, l.useStateFromStoresArray)([M.default], () => [M.default.isVideoEnabled(), M.default.isScreenSharing()], []), A = (0, l.useStateFromStores)([b.default], () => b.default.getPrimaryActivity(), []), N = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentGameForAnalytics(), []), R = (0, p.default)(u), y = (0, l.useStateFromStores)([T.default], () => T.default.getMessageRequestsCount(), []), P = {
+  }, [c, u]), E = (0, l.useStateFromStores)([w.default], () => w.default.getState().section, []), _ = (0, l.useStateFromStores)([G.default], () => G.default.getHomeLink(), []), C = (0, l.useStateFromStores)([S.default], () => S.default.isConnected(), []), [I, g] = (0, l.useStateFromStoresArray)([M.default], () => [M.default.isVideoEnabled(), M.default.isScreenSharing()], []), A = (0, l.useStateFromStores)([b.default], () => b.default.getPrimaryActivity(), []), N = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentGameForAnalytics(), []), R = (0, p.default)(u), P = (0, l.useStateFromStores)([T.default], () => T.default.getMessageRequestsCount(), []), x = {
     selectedChannelId: t,
     isNSFWChannel: i,
     selectedGuildId: u,
     friendsTabSection: E,
     homeLink: _,
     connected: C,
-    videoEnabled: g,
-    isScreenSharing: I,
+    videoEnabled: I,
+    isScreenSharing: g,
     voiceChannelId: null == r ? void 0 : r.id,
     voiceChannelGuildId: null == r ? void 0 : r.getGuildId(),
     voiceChannelType: null == r ? void 0 : r.type,
@@ -286,9 +286,9 @@ function z() {
     isMemberPending: f,
     postableChannelCount: R,
     isTextInVoice: s,
-    numMessageRequests: y
+    numMessageRequests: P
   };
   return (0, a.jsx)(K, {
-    ...P
+    ...x
   })
 }

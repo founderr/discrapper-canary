@@ -26,7 +26,7 @@ function S(e, t, n) {
   }) : e[t] = n, e
 }
 let p = "PremiumServerDriveAnnouncementModal";
-class g extends i.default {
+class I extends i.default {
   _initialize() {
     l.default.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
@@ -85,4 +85,4 @@ class g extends i.default {
     })
   }
 }
-t.default = new g
+t.default = new I

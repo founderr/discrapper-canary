@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("821982"),
   S = n("377171"),
   p = n("633302"),
-  g = n("126900"),
-  I = n("26290"),
+  I = n("126900"),
+  g = n("26290"),
   T = n("153066"),
   A = n("335131"),
   N = n("141594"),
@@ -34,13 +34,13 @@ let M = e => {
     let {
       color: t
     } = e;
-    return (0, a.jsx)(I.TextBadge, {
+    return (0, a.jsx)(g.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
       text: O.default.Messages.NEW
     })
   },
-  y = e => {
+  P = e => {
     let {
       selected: t,
       locationState: n,
@@ -58,7 +58,7 @@ let M = e => {
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
       route: R.Routes.COLLECTIBLES_SHOP,
-      icon: g.default,
+      icon: I.default,
       text: O.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,
@@ -69,7 +69,7 @@ let M = e => {
       children: o
     })
   },
-  P = s.memo(function(e) {
+  x = s.memo(function(e) {
     let {
       displayOptions: t,
       assetId: n
@@ -98,7 +98,7 @@ let M = e => {
       })]
     })
   }),
-  x = e => {
+  y = e => {
     let {
       selected: t,
       locationState: n,
@@ -109,7 +109,7 @@ let M = e => {
       f(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
-      text: (0, a.jsx)(P, {
+      text: (0, a.jsx)(x, {
         displayOptions: l,
         assetId: l.assetIds[r]
       }),
@@ -119,7 +119,7 @@ let M = e => {
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsxs)(y, {
+      children: e => (0, a.jsxs)(P, {
         className: null != l.entryPointClassName ? (0, T.getClass)(L, l.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
@@ -162,7 +162,7 @@ let M = e => {
       delay: 100,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsx)(y, {
+      children: e => (0, a.jsx)(P, {
         selected: t,
         locationState: n,
         ...e,
@@ -187,13 +187,13 @@ let M = e => {
           displayOptions: s
         });
       case v.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(x, {
+        return (0, a.jsx)(y, {
           selected: t,
           locationState: n,
           displayOptions: s
         })
     }
-    return (0, a.jsx)(y, {
+    return (0, a.jsx)(P, {
       selected: t,
       locationState: n
     })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useMultiAccountMenuItems: function() {
-    return I
+    return g
   }
 }), n("653041");
 var a = n("735250");
@@ -22,15 +22,15 @@ var s = n("442837"),
   m = n("383832"),
   S = n("981631"),
   p = n("689938"),
-  g = n("368110");
+  I = n("368110");
 
-function I() {
+function g() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
     t = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation),
     {
       multiAccountUsers: n
     } = (0, C.useMultiAccountUsers)(),
-    I = t => {
+    g = t => {
       t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
           section: S.AnalyticsSections.PROFILE_POPOUT
@@ -44,28 +44,28 @@ function I() {
         f = t ? null : "#".concat(s.discriminator);
       return (0, a.jsx)(l.MenuItem, {
         id: s.id,
-        focusedClassName: g.focused,
+        focusedClassName: I.focused,
         label: e => {
           let {
             isFocused: r
           } = e;
           return (0, a.jsxs)("div", {
-            className: g.userMenuItem,
+            className: I.userMenuItem,
             children: [(0, a.jsx)(l.Avatar, {
               src: s.getAvatarURL(void 0, 40),
               size: l.AvatarSizes.SIZE_24,
               "aria-label": n.username
             }), (0, a.jsxs)("div", {
-              className: g.userMenuUsername,
+              className: I.userMenuUsername,
               children: [(0, a.jsx)(l.Text, {
-                className: g.userMenuText,
+                className: I.userMenuText,
                 variant: "text-sm/normal",
                 children: E.default.getUserTag(s, {
                   mode: "username",
                   identifiable: t ? "never" : "always"
                 })
               }), !s.isPomelo() && (0, a.jsx)(l.Text, {
-                className: g.userMenuDiscriminator,
+                className: I.userMenuDiscriminator,
                 variant: "text-sm/normal",
                 children: f
               })]
@@ -74,18 +74,18 @@ function I() {
               backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
               width: 18,
               height: 18,
-              className: g.activeIcon
+              className: I.activeIcon
             }), u && (0, a.jsx)(c.default, {
               color: (0, i.getColor)(S.Color.RED_400),
               backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
               width: 15,
               height: 15,
-              className: g.activeIcon
+              className: I.activeIcon
             })]
           })
         },
         action: () => {
-          u ? (0, m.default)() : I(s.id)
+          u ? (0, m.default)() : g(s.id)
         }
       }, s.id)
     });

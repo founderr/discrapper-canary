@@ -36,7 +36,7 @@ function p(e) {
   })
 }
 
-function g() {
+function I() {
   let e = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default),
     t = s.useCallback(e => h.useClanDiscoveryUIStore.getState().setSelectedPlaystyle(e), []);
   return (0, a.jsx)(d.default, {
@@ -47,7 +47,7 @@ function g() {
   })
 }
 
-function I(e) {
+function g(e) {
   let {
     selectedGame: t
   } = e, n = (0, _.useDiscoveryGameApplicationId)({
@@ -74,9 +74,9 @@ t.default = s.memo(function(e) {
     A(e), N < e && v(e)
   }, [N]), M = s.useCallback(() => {
     0 === _ ? (n(h.ClanDiscoveryUserScreens.USER_UPSELL), (0, h.setClanDiscoveryMode)(O)) : L(_ - 1)
-  }, [_, O, n, L]), y = s.useCallback(() => {
+  }, [_, O, n, L]), P = s.useCallback(() => {
     2 === _ ? (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.DISCOVERY) : L(_ + 1)
-  }, [_, L]), P = s.useMemo(() => 1 === _ && null == R, [R, _]), x = s.useMemo(() => [{
+  }, [_, L]), x = s.useMemo(() => 1 === _ && null == R, [R, _]), y = s.useMemo(() => [{
     index: 0,
     name: C.default.Messages.CLAN_SETUP_GAMES_STEP
   }, {
@@ -115,9 +115,9 @@ t.default = s.memo(function(e) {
             selectedGame: t
           });
         case 1:
-          return (0, a.jsx)(g, {});
+          return (0, a.jsx)(I, {});
         case 2:
-          return (0, a.jsx)(I, {
+          return (0, a.jsx)(g, {
             selectedGame: t
           })
       }
@@ -138,14 +138,14 @@ t.default = s.memo(function(e) {
       className: m.footer,
       children: [(0, a.jsx)(c.ClanSetupProgress, {
         currentStepIndex: _,
-        steps: x,
+        steps: y,
         furthestStepIndex: N,
         onStepClick: L
       }), (0, a.jsx)(c.ClanSetupProgressButtons, {
         className: m.footerButtons,
         isBackDisabled: !1,
-        isNextDisabled: P,
-        onNextClick: y,
+        isNextDisabled: x,
+        onNextClick: P,
         onBackClick: M
       })]
     })]
