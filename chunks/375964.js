@@ -15621,6 +15621,8 @@ e.exports = Object.freeze({
   COLLECTIBLES_FEELIN_RETRO_PIRATES_COACHTIP_TITLE: "Feelin' Retro & Pirates",
   COLLECTIBLES_FEELIN_RETRO_PIRATES_COACHTIP_DESCRIPTION: "Give 'em a look-see if yer feelin' curious, matey…",
   COLLECTIBLES_NEW_BADGE: "NEW",
+  NEW_ARRIVALS: "New Arrivals",
+  COLLECTIBLES_SEE_WHATS_NEW: "See what's new in the Shop!",
   INVENTORY_EMOJI_DETAILS_V2: "See emoji details",
   PRIVATE_CHANNEL_INTEGRATION_ADDED: "$[!!{username}!!](usernameHook) added the $[!!{otherUsername}!!](otherUsernameHook) app. See our [help center]({helpCenterLink}) for more info.",
   PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION: "$[!!{username}!!](usernameHook) added a deleted application. See our [help center]({helpCenterLink}) for more info.",
