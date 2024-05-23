@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n("47120");
-var a = n("695346"),
-  s = n("581883"),
-  l = n("412788"),
-  i = n("592204"),
-  r = n("932941"),
-  o = n("363072"),
+var i = n("695346"),
+  r = n("581883"),
+  s = n("412788"),
+  a = n("592204"),
+  o = n("932941"),
+  l = n("363072"),
   u = n("526761");
 
 function d(e, t, n) {
@@ -16,63 +16,63 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = new o.Trie;
+let _ = new l.Trie;
 
-function f() {
+function c() {
   let {
     profanity: e = !1,
     slurs: t = !1,
     sexualContent: n = !1
-  } = a.KeywordFilterSettings.getSetting(), s = [...e ? r.PROFANITY_KEYWORD_LIST : [], ...t ? r.SLURS_KEYWORD_LIST : [], ...n ? r.SEXUAL_CONTENT_KEYWORD_LIST : []];
-  c.addWords(s)
+  } = i.KeywordFilterSettings.getSetting(), r = [...e ? o.PROFANITY_KEYWORD_LIST : [], ...t ? o.SLURS_KEYWORD_LIST : [], ...n ? o.SEXUAL_CONTENT_KEYWORD_LIST : []];
+  _.addWords(r)
 }
 
 function E() {
-  if (!(0, i.isEligibleForKeywordFiltering)({
+  if (!(0, a.isEligibleForKeywordFiltering)({
       location: "connection_open"
     })) return !1;
-  f()
+  c()
 }
 
-function h() {
-  if (!(0, i.isEligibleForKeywordFiltering)({
+function I() {
+  if (!(0, a.isEligibleForKeywordFiltering)({
       location: "overlay_initialize"
     })) return !1;
-  f()
+  c()
 }
 
-function _(e) {
+function T(e) {
   let {
     local: t,
     settings: n
   } = e;
-  if (!t || n.type !== u.UserSettingsTypes.PRELOADED_USER_SETTINGS || !(0, i.isEligibleForKeywordFiltering)({
+  if (!t || n.type !== u.UserSettingsTypes.PRELOADED_USER_SETTINGS || !(0, a.isEligibleForKeywordFiltering)({
       location: "user_settings_proto_update"
     })) return !1;
-  c.clear(), f()
+  _.clear(), c()
 }
-class C extends l.default {
+class f extends s.default {
   initialize() {
-    this.waitFor(s.default)
+    this.waitFor(r.default)
   }
   loadCache() {
-    let e = this.readSnapshot(C.LATEST_SNAPSHOT_VERSION);
-    null != e && (c = o.Trie.fromSnapshot(e))
+    let e = this.readSnapshot(f.LATEST_SNAPSHOT_VERSION);
+    null != e && (_ = l.Trie.fromSnapshot(e))
   }
   takeSnapshot() {
     return {
-      version: C.LATEST_SNAPSHOT_VERSION,
-      data: c
+      version: f.LATEST_SNAPSHOT_VERSION,
+      data: _
     }
   }
   getKeywordTrie() {
-    return c
+    return _
   }
   initializeForKeywordTests() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    c.clear(), ! function() {
+    _.clear(), ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      c.addWords(e)
+      _.addWords(e)
     }(e)
   }
   constructor() {
@@ -80,9 +80,9 @@ class C extends l.default {
       CONNECTION_OPEN: E,
       CONNECTION_OPEN_SUPPLEMENTAL: E,
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      OVERLAY_INITIALIZE: h,
-      USER_SETTINGS_PROTO_UPDATE: _
+      OVERLAY_INITIALIZE: I,
+      USER_SETTINGS_PROTO_UPDATE: T
     })
   }
 }
-d(C, "displayName", "KeywordFilterStore"), d(C, "LATEST_SNAPSHOT_VERSION", 1), new C
+d(f, "displayName", "KeywordFilterStore"), d(f, "LATEST_SNAPSHOT_VERSION", 1), t.default = new f

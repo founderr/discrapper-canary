@@ -1,41 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return _
   }
 });
 var s = n("735250"),
   a = n("470079"),
   l = n("442837"),
-  i = n("869765"),
-  r = n("699516"),
-  o = n("512665"),
-  u = n("937889"),
-  d = n("739566"),
-  c = n("981631");
-let f = a.memo(function(e) {
+  i = n("200120"),
+  r = n("869765"),
+  o = n("699516"),
+  u = n("512665"),
+  d = n("937889"),
+  c = n("739566"),
+  f = n("981631");
+let E = a.memo(function(e) {
   let {
     baseMessage: t,
     channel: n,
-    referencedMessage: c,
-    compact: f = !1
-  } = e, E = c.state === i.ReferencedMessageState.LOADED ? c.message : void 0, _ = a.useMemo(() => (null == E ? void 0 : E.content) != null && "" !== E.content ? (0, u.default)(E, {
-    formatInline: !0
-  }).content : null, [E]), m = (0, l.useStateFromStores)([r.default], () => null != E && r.default.isBlocked(E.author.id), [E]), T = (0, d.useNullableMessageAuthor)(E), I = (0, d.useNullableMessageAuthor)(t);
-  return (0, s.jsx)(o.default, {
-    repliedAuthor: T,
-    baseAuthor: I,
+    referencedMessage: f,
+    compact: E = !1
+  } = e, _ = f.state === r.ReferencedMessageState.LOADED ? f.message : void 0, m = (0, i.useShouldFilterKeywords)(), T = a.useMemo(() => (null == _ ? void 0 : _.content) != null && "" !== _.content ? (0, d.default)(_, {
+    formatInline: !0,
+    shouldFilterKeywords: m
+  }).content : null, [_, m]), I = (0, l.useStateFromStores)([o.default], () => null != _ && o.default.isBlocked(_.author.id), [_]), p = (0, c.useNullableMessageAuthor)(_), h = (0, c.useNullableMessageAuthor)(t);
+  return (0, s.jsx)(u.default, {
+    repliedAuthor: p,
+    baseAuthor: h,
     baseMessage: t,
     channel: n,
-    referencedMessage: c,
-    content: _,
-    compact: f,
-    isReplyAuthorBlocked: m
+    referencedMessage: f,
+    content: T,
+    compact: E,
+    isReplyAuthorBlocked: I
   })
 });
 
-function E(e, t, n, a, l) {
-  return e.type !== c.MessageTypes.REPLY || null == n ? null : (0, s.jsx)(f, {
+function _(e, t, n, a, l) {
+  return e.type !== f.MessageTypes.REPLY || null == n ? null : (0, s.jsx)(E, {
     baseMessage: e,
     channel: t,
     referencedMessage: a,
