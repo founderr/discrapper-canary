@@ -89,9 +89,10 @@ class X extends l.Component {
       guildId: f,
       isTyping: m,
       isMobileOnline: p,
-      premiumSince: E,
-      ...g
-    } = this.props, S = null != E ? new Date(E) : null;
+      lastOnlineTimestamp: E,
+      premiumSince: g,
+      ...S
+    } = this.props, _ = null != g ? new Date(g) : null;
     return (0, a.jsx)(h.Popout, {
       preload: () => (0, L.maybeFetchUserProfileForPopout)(s, {
         channelId: c.id,
@@ -103,7 +104,7 @@ class X extends l.Component {
       onShiftClick: this.handleShiftClick,
       children: (d, h) => {
         let {
-          isShown: E
+          isShown: g
         } = h;
         return (0, a.jsx)(C.default, {
           className: Y.member,
@@ -116,7 +117,7 @@ class X extends l.Component {
           activities: r,
           applicationStream: o,
           isOwner: n,
-          premiumSince: S,
+          premiumSince: _,
           colorString: e,
           colorRoleName: t,
           isTyping: m,
@@ -124,8 +125,9 @@ class X extends l.Component {
           guildId: f,
           isMobile: p,
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
-          selected: E,
-          itemProps: g,
+          selected: g,
+          itemProps: S,
+          lastOnlineTimestamp: E,
           ...d
         })
       }
@@ -383,47 +385,50 @@ class ee extends l.Component {
         row: n,
         rowIndex: l
       } = e, {
-        channel: s
-      } = this.props, i = this.getRowProps(e);
-      if (null != i) {
-        if (i.type === j.MemberListRowTypes.MEMBER && "user" in i) {
+        channel: s,
+        isRecentlyOnlineEnabled: i
+      } = this.props, r = this.getRowProps(e);
+      if (null != r) {
+        if (r.type === j.MemberListRowTypes.MEMBER && "user" in r) {
           let {
             colorString: e,
             colorRoleId: t,
             user: n,
-            status: r,
-            isOwner: o,
-            isMobileOnline: u,
-            nick: d,
-            activities: c,
-            applicationStream: f,
-            premiumSince: h
-          } = i;
+            status: o,
+            isOwner: u,
+            isMobileOnline: d,
+            nick: c,
+            activities: f,
+            applicationStream: h,
+            premiumSince: m,
+            lastOnlineTimestamp: p
+          } = r;
           return (0, a.jsx)(Q, {
             colorString: e,
             colorRoleId: t,
             user: n,
-            status: r,
-            isOwner: o,
-            nick: d,
-            activities: this._areActivitiesExperimentallyHidden ? [] : c,
-            applicationStream: f,
+            status: o,
+            isOwner: u,
+            nick: c,
+            activities: this._areActivitiesExperimentallyHidden ? [] : f,
+            applicationStream: h,
             channel: s,
             guildId: s.guild_id,
-            premiumSince: h,
-            isMobileOnline: u,
-            index: l
-          }, "member-".concat(i.user.id))
+            premiumSince: m,
+            isMobileOnline: d,
+            index: l,
+            lastOnlineTimestamp: i ? p : void 0
+          }, "member-".concat(r.user.id))
         }
-        if (i.type === j.MemberListRowTypes.CONTENT_INVENTORY) {
-          let e = "content-inventory-".concat(i.entry.id);
-          return null != i.entry.original_id && (e += "-".concat(i.entry.original_id)), (0, a.jsx)(v.default, {
-            ...i,
+        if (r.type === j.MemberListRowTypes.CONTENT_INVENTORY) {
+          let e = "content-inventory-".concat(r.entry.id);
+          return null != r.entry.original_id && (e += "-".concat(r.entry.original_id)), (0, a.jsx)(v.default, {
+            ...r,
             channel: this.props.channel,
             index: l
           }, e)
         }
-        if (i.type === j.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(N.default, {}, "content-inventory-hidden-entry")
+        if (r.type === j.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(N.default, {}, "content-inventory-hidden-entry")
       }
       return (0, a.jsx)($, {
         index: l

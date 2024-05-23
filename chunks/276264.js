@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   AVATAR_DECORATION_PADDING: function() {
-    return M
+    return y
   }
 }), n("47120");
 var i = n("735250"),
@@ -16,220 +16,231 @@ var i = n("735250"),
   c = n("736144"),
   E = n("113434"),
   I = n("553393"),
-  T = n("204197"),
-  f = n("594174"),
-  S = n("467679"),
-  h = n("681426"),
-  A = n("551388"),
-  m = n("709586"),
-  N = n("360048"),
-  p = n("624138"),
-  O = n("51144"),
-  C = n("788307"),
-  R = n("981631"),
-  g = n("674563"),
-  L = n("524484"),
-  v = n("689938"),
-  D = n("895294");
-let M = (0, p.cssValueToNumber)(o.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+  T = n("509275"),
+  f = n("204197"),
+  S = n("594174"),
+  h = n("467679"),
+  A = n("681426"),
+  m = n("551388"),
+  N = n("709586"),
+  p = n("360048"),
+  O = n("624138"),
+  C = n("51144"),
+  R = n("788307"),
+  g = n("981631"),
+  L = n("674563"),
+  v = n("524484"),
+  D = n("689938"),
+  M = n("895294");
+let y = (0, O.cssValueToNumber)(o.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.default = function(e) {
   var t;
   let {
     selected: n = !1,
     colorString: s,
     colorRoleName: o,
-    isOwner: p,
-    ownerTooltipText: M,
-    lostPermissionTooltipText: y,
-    isTyping: P = !1,
-    nick: U,
-    user: b,
-    currentUser: G,
-    activities: w,
-    applicationStream: k,
-    status: B,
-    shouldAnimateStatus: V = !1,
-    isMobile: x,
-    premiumSince: F,
-    channel: H,
-    guildId: Y,
-    className: j,
-    onMouseDown: W,
-    onKeyDown: K,
-    onClick: z,
-    onContextMenu: Z,
-    onClickPremiumGuildIcon: X,
-    onFocus: Q,
-    "aria-controls": q,
-    "aria-expanded": J,
-    "aria-posinset": $,
-    "aria-setsize": ee,
-    id: et,
-    tabIndex: en,
-    itemProps: ei
-  } = e, er = null == b ? void 0 : b.id, es = O.default.useName(b), ea = (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === er, eo = r.useRef(null), [el, eu] = r.useState(!1), [ed, e_] = r.useState(null), {
-    avatarDecorationSrc: ec,
-    avatarSrc: eE,
-    eventHandlers: eI
-  } = (0, T.default)({
-    user: b,
+    isOwner: O,
+    ownerTooltipText: y,
+    lostPermissionTooltipText: P,
+    isTyping: U = !1,
+    nick: b,
+    user: G,
+    currentUser: w,
+    activities: k,
+    applicationStream: B,
+    status: V,
+    shouldAnimateStatus: x = !1,
+    isMobile: F,
+    premiumSince: H,
+    channel: Y,
+    guildId: j,
+    lastOnlineTimestamp: W,
+    className: K,
+    onMouseDown: z,
+    onKeyDown: Z,
+    onClick: X,
+    onContextMenu: Q,
+    onClickPremiumGuildIcon: q,
+    onFocus: J,
+    "aria-controls": $,
+    "aria-expanded": ee,
+    "aria-posinset": et,
+    "aria-setsize": en,
+    id: ei,
+    tabIndex: er,
+    itemProps: es
+  } = e, ea = null == G ? void 0 : G.id, eo = C.default.useName(G), el = (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ea, eu = r.useRef(null), [ed, e_] = r.useState(!1), [ec, eE] = r.useState(null), {
+    avatarDecorationSrc: eI,
+    avatarSrc: eT,
+    eventHandlers: ef
+  } = (0, f.default)({
+    user: G,
     size: l.AvatarSizes.SIZE_32,
-    animateOnHover: !(n || el),
-    guildId: Y
-  }), eT = r.useMemo(() => ({
-    source: R.AnalyticsSections.MEMBER_LIST,
-    tagUserId: er
-  }), [er]), [ef, eS] = r.useState(!1);
+    animateOnHover: !(n || ed),
+    guildId: j
+  }), eS = r.useMemo(() => ({
+    source: g.AnalyticsSections.MEMBER_LIST,
+    tagUserId: ea
+  }), [ea]), [eh, eA] = r.useState(!1);
   r.useEffect(() => {
-    n && eS(!1)
+    n && eA(!1)
   }, [n]);
-  let eh = (0, E.useQuestFromActivities)(w),
-    eA = null != eh && !ea && n && !ef,
-    em = () => {
-      eu(!0)
-    },
-    eN = () => {
-      eu(!1)
-    },
-    ep = e => {
-      e_(e)
+  let em = (0, E.useQuestFromActivities)(k),
+    eN = null != em && !el && n && !eh,
+    ep = () => {
+      e_(!0)
     },
     eO = () => {
-      let e = null != w ? w.find(e => e.type === R.ActivityTypes.CUSTOM_STATUS) : null,
-        t = null != e && null != b && (0, _.default)(e, b, H);
-      return (0, i.jsx)(C.default, {
-        className: D.activity,
-        textClassName: D.activityText,
-        emojiClassName: D.activityEmoji,
-        activities: w,
-        applicationStream: k,
-        animate: el,
+      e_(!1)
+    },
+    eC = e => {
+      eE(e)
+    },
+    eR = () => {
+      let e = null != k ? k.find(e => e.type === g.ActivityTypes.CUSTOM_STATUS) : null,
+        t = null != e && null != G && (0, _.default)(e, G, Y);
+      if (null != e) return (0, i.jsx)(R.default, {
+        className: M.activity,
+        textClassName: M.activityText,
+        emojiClassName: M.activityEmoji,
+        activities: k,
+        applicationStream: B,
+        animate: ed,
         hideEmoji: !t,
         hideTooltip: !0,
-        user: b,
-        hasQuest: null != eh
-      })
+        user: G,
+        hasQuest: null != em
+      });
+      if (null != W) {
+        let e = (0, T.formatRecentlyOnlineStatus)(W);
+        return (0, i.jsx)("div", {
+          className: M.subtext,
+          children: e
+        })
+      }
+      return null
     },
-    eC = () => null != p && p && null == y ? (0, i.jsx)(l.Tooltip, {
-      text: null != M ? M : v.default.Messages.GUILD_OWNER,
-      children: e => (0, i.jsx)(A.default, {
+    eg = () => null != O && O && null == P ? (0, i.jsx)(l.Tooltip, {
+      text: null != y ? y : D.default.Messages.GUILD_OWNER,
+      children: e => (0, i.jsx)(m.default, {
         ...e,
-        className: D.ownerIcon
+        className: M.ownerIcon
       })
     }) : null,
-    eR = () => null == F ? null : (0, i.jsx)(l.Tooltip, {
-      text: v.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
-        date: F
+    eL = () => null == H ? null : (0, i.jsx)(l.Tooltip, {
+      text: D.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
+        date: H
       }),
       children: e => (0, i.jsx)(l.Clickable, {
-        onClick: X,
+        onClick: q,
         tabIndex: -1,
-        children: (0, i.jsx)(m.default, {
+        children: (0, i.jsx)(N.default, {
           ...e,
-          className: D.premiumIcon
+          className: M.premiumIcon
         })
       })
     }),
-    eg = () => {
-      let e = (null == b ? void 0 : b.isClyde()) ? g.BotTagTypes.AI : g.BotTagTypes.BOT;
-      return null != b && b.bot ? (0, i.jsx)(S.default, {
-        className: D.botTag,
+    ev = () => {
+      let e = (null == G ? void 0 : G.isClyde()) ? L.BotTagTypes.AI : L.BotTagTypes.BOT;
+      return null != G && G.bot ? (0, i.jsx)(h.default, {
+        className: M.botTag,
         type: e,
-        verified: b.isVerifiedBot()
+        verified: G.isVerifiedBot()
       }) : null
     },
-    eL = () => (0, i.jsxs)(i.Fragment, {
-      children: [eg(), eC(), eR()]
+    eD = () => (0, i.jsxs)(i.Fragment, {
+      children: [ev(), eg(), eL()]
     }),
-    ev = (e, t) => {
-      let n = V ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.default)(w) ? R.StatusTypes.STREAMING : B;
+    eM = (e, t) => {
+      let n = x ? l.AnimatedAvatar : l.Avatar,
+        r = (0, u.default)(k) ? g.StatusTypes.STREAMING : V;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
-          ...eI,
+          ...ef,
           size: l.AvatarSizes.SIZE_32,
-          src: eE,
-          isMobile: x,
-          isTyping: P,
+          src: eT,
+          isMobile: F,
+          isTyping: U,
           status: r,
           "aria-label": e.username,
           statusTooltip: !0,
-          avatarDecoration: ec,
-          typingIndicatorRef: ep
+          avatarDecoration: eI,
+          typingIndicatorRef: eC
         }), (0, i.jsx)(c.default, {
-          confettiSpawnRef: ed,
-          shouldFire: P && null != G && e.id !== G.id,
-          confettiLocation: L.ConfettiLocation.MEMBER_USER
+          confettiSpawnRef: ec,
+          shouldFire: U && null != w && e.id !== w.id,
+          confettiLocation: v.ConfettiLocation.MEMBER_USER
         })]
       })
     },
-    eD = () => (0, i.jsxs)(i.Fragment, {
+    ey = () => (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(l.NameWithRole, {
         roleName: o,
         color: null != s ? s : void 0,
-        name: null != U ? U : es,
-        className: D.name
+        name: null != b ? b : eo,
+        className: M.name
       }), (0, i.jsx)(d.default, {
-        clan: null == b ? void 0 : b.clan,
-        userId: null == b ? void 0 : b.id,
-        contextGuildId: Y,
+        clan: null == G ? void 0 : G.clan,
+        userId: null == G ? void 0 : G.id,
+        contextGuildId: j,
         disableTooltip: !0,
-        className: D.clanTag,
-        profileViewedAnalytics: eT
+        className: M.clanTag,
+        profileViewedAnalytics: eS
       })]
     }),
-    eM = B === R.StatusTypes.OFFLINE;
-  return null == b ? (0, i.jsx)(h.default, {
+    eP = V === g.StatusTypes.OFFLINE,
+    eU = null != W;
+  return null == G ? (0, i.jsx)(A.default, {
     avatarSize: l.AvatarSizes.SIZE_32,
-    className: D.placeholder
+    className: M.placeholder
   }) : (0, i.jsx)(l.Popout, {
     renderPopout: e => (0, i.jsx)(I.default, {
-      quest: eh,
-      memberListItemRef: eo,
-      applicationStream: k,
+      quest: em,
+      memberListItemRef: eu,
+      applicationStream: B,
       ...e,
-      closePopout: () => eS(!0)
+      closePopout: () => eA(!0)
     }),
     position: "bottom",
-    shouldShow: eA,
+    shouldShow: eN,
     nudgeAlignIntoViewport: !1,
     useRawTargetDimensions: !0,
     animation: l.Popout.Animation.NONE,
     spacing: -3,
-    children: () => (0, i.jsx)(N.default, {
-      ref: eo,
+    children: () => (0, i.jsx)(p.default, {
+      ref: eu,
       selected: n,
-      className: a()(D.member, j, {
-        [D.offline]: eM && !n
+      className: a()(M.member, K, {
+        [M.offline]: eP && !eU && !n
       }),
-      innerClassName: D.memberInner,
-      onClick: z,
-      onKeyDown: K,
-      onMouseDown: W,
-      onContextMenu: Z,
-      onMouseEnter: em,
-      onMouseLeave: eN,
-      name: null == y ? (0, i.jsx)("span", {
-        className: D.username,
-        children: eD()
+      innerClassName: M.memberInner,
+      onClick: X,
+      onKeyDown: Z,
+      onMouseDown: z,
+      onContextMenu: Q,
+      onMouseEnter: ep,
+      onMouseLeave: eO,
+      name: null == P ? (0, i.jsx)("span", {
+        className: M.username,
+        children: ey()
       }) : (0, i.jsx)(l.Tooltip, {
-        text: y,
+        text: P,
         children: e => (0, i.jsx)("span", {
           ...e,
-          className: a()(D.username, D.lostPermission),
-          children: eD()
+          className: a()(M.username, M.lostPermission),
+          children: ey()
         })
       }),
-      avatar: ev(b, eM),
-      subText: eO(),
-      decorators: eL(),
-      "aria-controls": q,
-      "aria-expanded": J,
-      "aria-setsize": ee,
-      "aria-posinset": $,
-      id: et,
-      tabIndex: en,
-      onFocus: Q,
+      avatar: eM(G, eP),
+      subText: eR(),
+      decorators: eD(),
+      "aria-controls": $,
+      "aria-expanded": ee,
+      "aria-setsize": en,
+      "aria-posinset": et,
+      id: ei,
+      tabIndex: er,
+      onFocus: J,
       focusProps: {
         offset: {
           top: 4,
@@ -238,7 +249,7 @@ t.default = function(e) {
           right: 4
         }
       },
-      ...ei
+      ...es
     })
   })
 }

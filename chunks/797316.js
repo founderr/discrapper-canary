@@ -6,151 +6,156 @@ var r, s, a, o, l = n("392711"),
   d = n("442837"),
   _ = n("570140"),
   c = n("177523"),
-  E = n("768419"),
-  I = n("314897"),
-  T = n("439170"),
-  f = n("433355"),
-  S = n("592125"),
-  h = n("486472"),
-  A = n("271383"),
-  m = n("430824"),
-  N = n("19780"),
-  p = n("699516"),
-  O = n("944486"),
-  C = n("914010"),
-  R = n("981631");
-let g = new c.default(e => {
-  for (let t in e) null == m.default.getGuild(t) && !h.default.isUnavailable(t) && delete e[t];
+  E = n("353926"),
+  I = n("480384"),
+  T = n("653733"),
+  f = n("768419"),
+  S = n("314897"),
+  h = n("439170"),
+  A = n("433355"),
+  m = n("592125"),
+  N = n("486472"),
+  p = n("271383"),
+  O = n("430824"),
+  C = n("19780"),
+  R = n("699516"),
+  g = n("944486"),
+  L = n("914010"),
+  v = n("981631");
+let D = new c.default(e => {
+  for (let t in e) null == O.default.getGuild(t) && !N.default.isUnavailable(t) && delete e[t];
   _.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: e
   })
 });
 
-function L(e, t) {
+function M(e, t) {
   let n = {};
-  g.forEach(r => {
+  D.forEach(r => {
     var s;
-    r !== C.default.getGuildId() && r !== N.default.getGuildId() && r !== (null === (s = S.default.getChannel(O.default.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && (null == i || i.guildId !== r) && (g.clearWithoutFlushing(r, e), t && (n[r] = g.get(r)))
+    r !== L.default.getGuildId() && r !== C.default.getGuildId() && r !== (null === (s = m.default.getChannel(g.default.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && !(0, T.isGuildEligibleForRecentlyOnlineExperiment)(r) && (null == i || i.guildId !== r) && (D.clearWithoutFlushing(r, e), t && (n[r] = D.get(r)))
   }), !u().isEmpty(n) && _.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: n
   })
 }
 
-function v(e, t) {
-  return g.subscribeToGuild(e), null != t && f.default.getSection(t) === R.ChannelSections.MEMBERS && D(e, t, c.DEFAULT_RANGES)
+function y(e, t) {
+  return D.subscribeToGuild(e), null != t && A.default.getSection(t) === v.ChannelSections.MEMBERS && P(e, t, c.DEFAULT_RANGES)
 }
 
-function D(e, t, n) {
-  if (t === T.EVERYONE_CHANNEL_ID) return g.subscribeChannel(e, t, n);
-  let i = S.default.getChannel(t);
+function P(e, t, n) {
+  if (t === h.EVERYONE_CHANNEL_ID) return D.subscribeChannel(e, t, n);
+  let i = m.default.getChannel(t);
   if (null == i) return !1;
   let r = i.getGuildId();
-  return (r !== e && e === R.FAVORITES && g.subscribeToGuild(r), null != i && i.isThread()) ? i.type === R.ChannelTypes.ANNOUNCEMENT_THREAD ? g.subscribeChannel(r, i.parent_id, n) : !!i.isActiveThread() && g.subscribeThreadMemberList(r, t, O.default.getChannelId()) : g.subscribeChannel(r, t, n)
+  return (r !== e && e === v.FAVORITES && D.subscribeToGuild(r), null != i && i.isThread()) ? i.type === v.ChannelTypes.ANNOUNCEMENT_THREAD ? D.subscribeChannel(r, i.parent_id, n) : !!i.isActiveThread() && D.subscribeThreadMemberList(r, t, g.default.getChannelId()) : D.subscribeChannel(r, t, n)
 }
 
-function M(e) {
+function U(e) {
   let {
     type: t
   } = e;
-  "CONNECTION_OPEN" === t && L(!0, !1);
-  let n = C.default.getGuildId();
-  null != n && v(n, O.default.getChannelId(n));
+  "CONNECTION_OPEN" === t && M(!0, !1), Object.keys(O.default.getGuilds()).forEach(e => {
+    (0, T.isGuildEligibleForRecentlyOnlineExperiment)(e) && P(e, h.EVERYONE_CHANNEL_ID, c.DEFAULT_RANGES)
+  });
+  let n = L.default.getGuildId();
+  null != n && y(n, g.default.getChannelId(n));
   let i = {};
-  g.forEach(e => {
-    null == m.default.getGuild(e) ? g.clearWithoutFlushing(e, !0) : i[e] = g.get(e)
+  D.forEach(e => {
+    null == O.default.getGuild(e) ? D.clearWithoutFlushing(e, !0) : i[e] = D.get(e)
   }), !u().isEmpty(i) && _.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: i
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     guildId: t,
     channelId: n
   } = e;
-  return !h.default.isUnavailable(t) && v(t, n)
+  return !N.default.isUnavailable(t) && y(t, n)
 }
 
-function P() {
-  return v(C.default.getGuildId(), O.default.getChannelId())
+function G() {
+  return y(L.default.getGuildId(), g.default.getChannelId())
 }
 
-function U() {
-  let e = E.default.getSyncingWith();
-  if (null == e) null != i && (g.unsubscribeUser(i.guildId, i.userId), i = null);
+function w() {
+  let e = f.default.getSyncingWith();
+  if (null == e) null != i && (D.unsubscribeUser(i.guildId, i.userId), i = null);
   else {
     let {
       userId: t
     } = e;
-    if (null != i && i.userId === t || p.default.isFriend(t)) return !1;
-    let n = A.default.memberOf(t);
+    if (null != i && i.userId === t || R.default.isFriend(t)) return !1;
+    let n = p.default.memberOf(t);
     if (0 === n.length) return !1;
     let [r] = n;
     i = {
       guildId: r,
       userId: t
-    }, g.subscribeUser(r, t)
+    }, D.subscribeUser(r, t)
   }
   return !1
 }
-class b extends(r = d.default.Store) {
+class k extends(r = d.default.Store) {
   initialize() {
-    this.waitFor(S.default, m.default, C.default, O.default, N.default, I.default, f.default), this.syncWith([E.default], U), this.syncWith([f.default], P)
+    this.waitFor(m.default, O.default, L.default, g.default, C.default, S.default, A.default, E.default, I.default), this.syncWith([f.default], w), this.syncWith([A.default], G)
   }
   getSubscribedThreadIds() {
-    return g.getSubscribedThreadIds()
+    return D.getSubscribedThreadIds()
   }
   isSubscribedToThreads(e) {
-    return g.isSubscribedToThreads(e)
+    return D.isSubscribedToThreads(e)
   }
   isSubscribedToAnyMember(e) {
-    return g.isSubscribedToAnyMember(e)
+    return D.isSubscribedToAnyMember(e)
   }
   isSubscribedToMemberUpdates(e) {
-    return g.isSubscribedToMemberUpdates(e)
+    return D.isSubscribedToMemberUpdates(e)
   }
   isSubscribedToAnyGuildChannel(e) {
-    let t = g.get(e).channels;
+    let t = D.get(e).channels;
     return null != t && Object.keys(t).length > 0
   }
 }
-o = "GuildSubscriptionsStore", (a = "displayName") in(s = b) ? Object.defineProperty(s, a, {
+o = "GuildSubscriptionsStore", (a = "displayName") in(s = k) ? Object.defineProperty(s, a, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new b(_.default, {
-  CONNECTION_OPEN: M,
-  CONNECTION_RESUMED: M,
+}) : s[a] = o, t.default = new k(_.default, {
+  CONNECTION_OPEN: U,
+  CONNECTION_RESUMED: U,
   CONNECTION_CLOSED: function() {
-    L(!1, !1)
+    M(!1, !1)
   },
   IDLE: function(e) {
     let {
       idle: t
     } = e;
     if (!t) return !1;
-    L(!1, !0)
+    M(!1, !0)
   },
   LOGOUT: function() {
-    g.reset()
+    D.reset()
   },
-  VOICE_CHANNEL_SELECT: y,
-  CHANNEL_SELECT: y,
+  VOICE_CHANNEL_SELECT: b,
+  CHANNEL_SELECT: b,
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    t.id === C.default.getGuildId() && P()
+    t.id === L.default.getGuildId() && G()
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    g.clearWithoutFlushing(t.id, !0)
+    D.clearWithoutFlushing(t.id, !0)
   },
   GUILD_SUBSCRIPTIONS_MEMBERS_ADD: function(e) {
     let {
@@ -158,7 +163,7 @@ o = "GuildSubscriptionsStore", (a = "displayName") in(s = b) ? Object.defineProp
       userIds: n
     } = e;
     return n.forEach(e => {
-      e !== I.default.getId() && g.subscribeUser(t, e)
+      e !== S.default.getId() && D.subscribeUser(t, e)
     }), !1
   },
   GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: function(e) {
@@ -167,20 +172,20 @@ o = "GuildSubscriptionsStore", (a = "displayName") in(s = b) ? Object.defineProp
       userIds: n
     } = e;
     return n.forEach(e => {
-      g.unsubscribeUser(t, e)
+      D.unsubscribeUser(t, e)
     }), !1
   },
   GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: function(e) {
     let {
       guildId: t
     } = e;
-    g.subscribeToMemberUpdates(t)
+    D.subscribeToMemberUpdates(t)
   },
   GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: function(e) {
     let {
       guildId: t
     } = e;
-    g.unsubscribeFromMemberUpdates(t)
+    D.unsubscribeFromMemberUpdates(t)
   },
   GUILD_SUBSCRIPTIONS_CHANNEL: function(e) {
     let {
@@ -188,39 +193,39 @@ o = "GuildSubscriptionsStore", (a = "displayName") in(s = b) ? Object.defineProp
       channelId: n,
       ranges: i
     } = e;
-    return D(t, n, i)
+    return P(t, n, i)
   },
   GUILD_SUBSCRIPTIONS: function(e) {
     let {
       guildId: t
     } = e;
-    return g.subscribeToGuild(t)
+    return D.subscribeToGuild(t)
   },
   CHANNEL_PRELOAD: function(e) {
     let {
       guildId: t,
       channelId: n
     } = e;
-    return v(t, n)
+    return y(t, n)
   },
   INBOX_OPEN: function(e) {
     let {
       guildIds: t
     } = e;
-    for (let e of t) null != e && g.subscribeToGuild(e);
+    for (let e of t) null != e && D.subscribeToGuild(e);
     return !1
   },
   THREAD_UPDATE: function(e) {
     let {
       channel: t
     } = e;
-    return t.isArchivedThread() ? g.unsubscribeThreadMemberList(t.guild_id, t.id) : !!t.isActiveThread() && O.default.getChannelId() === t.id && void g.subscribeThreadMemberList(t.guild_id, t.id, O.default.getChannelId())
+    return t.isArchivedThread() ? D.unsubscribeThreadMemberList(t.guild_id, t.id) : !!t.isActiveThread() && g.default.getChannelId() === t.id && void D.subscribeThreadMemberList(t.guild_id, t.id, g.default.getChannelId())
   },
   THREAD_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return g.unsubscribeThreadMemberList(t.guild_id, t.id)
+    return D.unsubscribeThreadMemberList(t.guild_id, t.id)
   },
-  THREAD_LIST_SYNC: P
+  THREAD_LIST_SYNC: G
 })
