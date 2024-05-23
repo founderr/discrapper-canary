@@ -87,21 +87,21 @@ function k(e) {
   let {
     questId: i,
     streamKey: r,
-    applicationId: s
+    applicationId: l
   } = e, {
-    channelId: l
-  } = (0, a.decodeStreamKey)(r), d = w(l), _ = E.default.quests.get(i);
+    channelId: u
+  } = (0, a.decodeStreamKey)(r), d = w(u), _ = E.default.quests.get(i);
   if ((null == _ ? void 0 : null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null) return !1;
   let c = null === (n = U()) || void 0 === n ? void 0 : n.config,
-    T = null != o.default.getRTCStream(r) && null != c && A.SharedQuestFields.build(c).application.id === s && d && null != _ && !(0, I.isQuestExpired)(_),
+    T = null != o.default.getRTCStream(r) && null != c && A.SharedQuestFields.build(c).application.id === l && d && null != _ && !(0, I.isQuestExpired)(_),
     {
       quest: f,
       activity: S
     } = B(),
     h = null == f ? void 0 : f.config,
-    m = null != h && (null == f ? void 0 : f.id) === i && A.SharedQuestFields.build(h).application.id === s && d && (null == S ? void 0 : S.channelId) === l && !(0, I.isQuestExpired)(f),
-    N = u.default.getGameById(s),
-    p = null != _ && G(_) && N.id === s;
+    m = null != h && (null == f ? void 0 : f.id) === i && A.SharedQuestFields.build(h).application.id === l && d && (null == S ? void 0 : S.channelId) === u && !(0, I.isQuestExpired)(f),
+    N = s.default.getRunningGames().map(e => e.id),
+    p = null != _ && G(_) && N.includes(l);
   return T || m || p
 }
 
@@ -181,12 +181,13 @@ class V extends i.default {
         streamKey: t,
         sendTerminalHeartbeat: n
       } = e;
-      y.log("~ terminateHeartbeat -> Terminating heartbeat:", {
-        streamKey: t,
-        sendTerminalHeartbeat: n
-      }), this.terminateOptimisticProgressUpdateInterval(t);
+      this.terminateOptimisticProgressUpdateInterval(t);
       let i = this.streamKeyToHeartbeatState.get(t);
       if (null != i) {
+        y.log("~ terminateHeartbeat -> Terminating heartbeat:", {
+          streamKey: t,
+          sendTerminalHeartbeat: n
+        });
         let {
           questId: e,
           heartbeatTimeoutId: r
