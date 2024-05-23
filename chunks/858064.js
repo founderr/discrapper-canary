@@ -136,7 +136,7 @@ function E(e) {
       children: A
     }), n === f.TooltipActions.QUEST_COMPLETION ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(s.Button, {
-        look: s.Button.Looks.INVERTED,
+        color: s.Button.Colors.BRAND_INVERTED,
         fullWidth: !0,
         onClick: () => {
           t(), i.default.open(h.UserSettingsSections.INVENTORY), x()
@@ -152,7 +152,7 @@ function E(e) {
         children: m.default.Messages.NOT_NOW
       })]
     }) : (0, l.jsx)(s.Button, {
-      look: s.Button.Looks.INVERTED,
+      color: s.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
         t(), i.default.open(h.UserSettingsSections.INVENTORY), x()

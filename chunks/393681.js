@@ -61,9 +61,9 @@ class Y extends n.PureComponent {
           className: H.accountWarningBodyText,
           children: w.default.Messages.UNCLAIMED_ACCOUNT_BODY_2
         }), (0, a.jsx)(c.Button, {
-          look: c.ButtonLooks.INVERTED,
+          look: c.ButtonLooks.OUTLINED,
           size: c.ButtonSizes.SMALL,
-          color: c.Button.Colors.RED,
+          color: c.Button.Colors.WHITE,
           onClick: () => f.default.openClaimAccountModal(),
           children: w.default.Messages.CLAIM_ACCOUNT_LONG
         })]

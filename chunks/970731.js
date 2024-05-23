@@ -34,8 +34,7 @@ function I(e) {
       look: _.Button.Looks.FILLED
     },
     secondaryButtonProps: S = {
-      color: _.Button.Colors.BRAND,
-      look: _.Button.Looks.INVERTED
+      color: _.Button.Colors.BRAND_INVERTED
     },
     onComponentMount: h,
     asset: A,

@@ -73,8 +73,8 @@ let A = {
   },
   [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
-    buttonLook: r.Button.Looks.INVERTED,
-    buttonColor: r.Button.Colors.BRAND,
+    buttonLook: r.Button.Looks.FILLED,
+    buttonColor: r.Button.Colors.BRAND_INVERTED,
     bodyCopy: () => (0, a.jsx)(T, {}),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
     ctaOnClick: () => I(C.ClipsUserEducationType.Enabled),

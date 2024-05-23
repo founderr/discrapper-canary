@@ -63,8 +63,7 @@ t.default = e => {
     subscriptionTrial: C
   });
   return (0, a.jsx)(c.default, {
-    color: i.ButtonColors.BRAND,
-    look: p ? i.ButtonLooks.INVERTED : void 0,
+    color: p ? i.ButtonColors.BRAND_INVERTED : i.ButtonColors.BRAND,
     buttonShineClassName: "buttonShineClassName" in A ? A.buttonShineClassName : p ? T.brandShine : void 0,
     trialId: null == C ? void 0 : C.id,
     buttonText: x,

@@ -60,7 +60,7 @@ function h(e) {
       className: f.subTitle,
       children: _
     }), (0, a.jsx)(l.Button, {
-      look: l.Button.Looks.INVERTED,
+      color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
         i.default.open(u.UserSettingsSections.INVENTORY), t(d.ContentDismissActionType.PRIMARY)

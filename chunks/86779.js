@@ -95,8 +95,7 @@ t.default = () => {
       variant: "text-sm/semibold",
       children: M
     }), (0, i.jsx)(f.Button, {
-      look: f.Button.Looks.INVERTED,
-      color: f.Button.Colors.BRAND,
+      color: f.Button.Colors.BRAND_INVERTED,
       onClick: () => {
         let e = T.default.generateNonce();
         c.Storage.set(S, e), c.Storage.set(N, Date.now() + R);

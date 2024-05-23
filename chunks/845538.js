@@ -63,8 +63,7 @@ function I(e) {
         children: _.default.Messages.GOT_IT
       }), (0, i.jsx)(a.Button, {
         className: c.dmButton,
-        look: a.Button.Looks.INVERTED,
-        color: a.Button.Colors.BRAND,
+        color: a.Button.Colors.BRAND_INVERTED,
         onClick: () => d(),
         children: h
       })]

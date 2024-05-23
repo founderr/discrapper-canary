@@ -97,8 +97,7 @@ t.default = a.forwardRef(function(e, t) {
             onClick: e => {
               null == I || I(e), S(e), w(f.ContentDismissActionType.PRIMARY)
             },
-            color: A || y ? r.Button.Colors.BRAND : r.Button.Colors.WHITE,
-            look: A || y ? r.Button.Looks.INVERTED : r.Button.Looks.FILLED,
+            color: A || y ? r.Button.Colors.BRAND_INVERTED : r.Button.Colors.WHITE,
             children: null != E ? E : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, l.jsx)(r.Button, {
             className: m.button,

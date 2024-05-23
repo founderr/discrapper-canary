@@ -17,7 +17,7 @@ function l(e) {
   return (0, a.jsx)(n.Button, {
     ...s,
     size: n.Button.Sizes.SMALL,
-    look: n.Button.Looks.INVERTED,
+    color: n.Button.Colors.BRAND_INVERTED,
     className: i.button,
     children: t
   })

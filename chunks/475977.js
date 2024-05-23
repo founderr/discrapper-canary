@@ -81,7 +81,7 @@ t.default = () => {
         })
       },
       className: m.ctaButton,
-      look: o.Button.Looks.INVERTED,
+      color: o.Button.Colors.BRAND_INVERTED,
       children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => f.default.Messages.CHECK_IT_OUT).otherwise(() => f.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
     })]
   })

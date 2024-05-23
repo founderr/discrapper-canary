@@ -30,17 +30,17 @@ var n = s("120356"),
   R = s("987997"),
   y = s("833569"),
   M = s("823188"),
-  L = s("474936"),
-  g = s("981631"),
+  g = s("474936"),
+  L = s("981631"),
   x = s("689938"),
   D = s("954282");
 let b = new p.default("SubscriptionHeader.tsx"),
   U = {
-    page: g.AnalyticsPages.USER_SETTINGS,
-    section: g.AnalyticsSections.SETTINGS_PREMIUM,
-    object: g.AnalyticsObjects.CARD
+    page: L.AnalyticsPages.USER_SETTINGS,
+    section: L.AnalyticsSections.SETTINGS_PREMIUM,
+    object: L.AnalyticsObjects.CARD
   },
-  v = [g.SubscriptionStatusTypes.PAUSED, g.SubscriptionStatusTypes.PAUSE_PENDING, g.SubscriptionStatusTypes.BILLING_RETRY];
+  v = [L.SubscriptionStatusTypes.PAUSED, L.SubscriptionStatusTypes.PAUSE_PENDING, L.SubscriptionStatusTypes.BILLING_RETRY];
 
 function B(e) {
   let {
@@ -146,7 +146,7 @@ function G() {
     buttons: (0, a.jsx)(R.default, {
       className: D.toolsButton,
       onClick: () => (0, m.default)({
-        subscriptionTier: L.PremiumSubscriptionSKUs.TIER_1,
+        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_1,
         analyticsLocations: e,
         analyticsObject: U
       }),
@@ -172,16 +172,16 @@ t.default = function(e) {
   } = (0, T.default)({
     location: "subscription_header"
   });
-  (!L.PAUSE_ELIGIBLE_PLANS.has(l.planId) || !g.SubscriptionStatusTypesSets.ALL_PAUSEABLE.has(l.status)) && (F = !1);
+  (!g.PAUSE_ELIGIBLE_PLANS.has(l.planId) || !L.SubscriptionStatusTypesSets.ALL_PAUSEABLE.has(l.status)) && (F = !1);
   let Y = (0, A.usePremiumDiscountOffer)(),
     H = null == Y ? void 0 : null === (t = Y.discount) || void 0 === t ? void 0 : t.amount,
     W = (0, h.useHasDiscountApplied)(),
     V = (0, h.useActiveDiscountInfo)(),
     K = () => {
-      (l.status === g.SubscriptionStatusTypes.ACTIVE || l.status === g.SubscriptionStatusTypes.PAST_DUE || l.status === g.SubscriptionStatusTypes.PAUSED) && q(y.Steps.PAUSE_SELECT)
+      (l.status === L.SubscriptionStatusTypes.ACTIVE || l.status === L.SubscriptionStatusTypes.PAST_DUE || l.status === L.SubscriptionStatusTypes.PAUSED) && q(y.Steps.PAUSE_SELECT)
     },
     z = () => {
-      (l.status === g.SubscriptionStatusTypes.ACTIVE || l.status === g.SubscriptionStatusTypes.PAST_DUE || l.status === g.SubscriptionStatusTypes.PAUSE_PENDING) && q()
+      (l.status === L.SubscriptionStatusTypes.ACTIVE || l.status === L.SubscriptionStatusTypes.PAST_DUE || l.status === L.SubscriptionStatusTypes.PAUSE_PENDING) && q()
     },
     q = e => {
       (0, u.openModalLazy)(async () => {
@@ -227,7 +227,7 @@ t.default = function(e) {
         });
         return
       }
-      l.status === g.SubscriptionStatusTypes.PAUSED ? (0, m.default)({
+      l.status === L.SubscriptionStatusTypes.PAUSED ? (0, m.default)({
         initialPlanId: l.planIdFromItems,
         analyticsLocations: w,
         analyticsLocation: k,
@@ -237,7 +237,7 @@ t.default = function(e) {
       }) : o.resume(l, w)
     },
     J = () => {
-      l.status === g.SubscriptionStatusTypes.PAUSED && q(y.Steps.PAUSE_SELECT)
+      l.status === L.SubscriptionStatusTypes.PAUSED && q(y.Steps.PAUSE_SELECT)
     },
     Q = () => {
       q(y.Steps.WHAT_YOU_LOSE)
@@ -247,17 +247,17 @@ t.default = function(e) {
   let ee = N.default.getStatusFromInvoice(l, p),
     et = N.default.getPremiumType($),
     es = {
-      [D.tier0]: et === L.PremiumTypes.TIER_0,
-      [D.tier1]: et === L.PremiumTypes.TIER_1,
-      [D.tier2]: et === L.PremiumTypes.TIER_2,
-      [D.canceled]: ee === g.SubscriptionStatusTypes.CANCELED,
-      [D.pausePending]: ee === g.SubscriptionStatusTypes.PAUSE_PENDING,
-      [D.paused]: ee === g.SubscriptionStatusTypes.PAUSED,
+      [D.tier0]: et === g.PremiumTypes.TIER_0,
+      [D.tier1]: et === g.PremiumTypes.TIER_1,
+      [D.tier2]: et === g.PremiumTypes.TIER_2,
+      [D.canceled]: ee === L.SubscriptionStatusTypes.CANCELED,
+      [D.pausePending]: ee === L.SubscriptionStatusTypes.PAUSE_PENDING,
+      [D.paused]: ee === L.SubscriptionStatusTypes.PAUSED,
       [D.failedPayment]: (0, N.isSubscriptionStatusFailedPayment)(ee)
     },
     ea = null;
   switch (et) {
-    case L.PremiumTypes.TIER_0:
+    case g.PremiumTypes.TIER_0:
       ea = (0, a.jsxs)("div", {
         className: D.wordMark,
         children: [(0, a.jsx)(I.default, {
@@ -268,10 +268,10 @@ t.default = function(e) {
         })]
       });
       break;
-    case L.PremiumTypes.TIER_1:
+    case g.PremiumTypes.TIER_1:
       ea = (0, a.jsx)(j, {});
       break;
-    case L.PremiumTypes.TIER_2:
+    case g.PremiumTypes.TIER_2:
       ea = (0, a.jsx)(_.default, {
         className: D.planName,
         "aria-label": x.default.Messages.PREMIUM_TITLE
@@ -312,13 +312,12 @@ t.default = function(e) {
       if (N.default.isBaseSubscriptionCanceled(l)) return (0, a.jsx)(u.Button, {
         className: D.toolsButton,
         size: u.Button.Sizes.SMALL,
-        look: u.ButtonLooks.INVERTED,
-        color: u.ButtonColors.BRAND,
+        color: u.ButtonColors.BRAND_INVERTED,
         submitting: G,
         onClick: Z,
         children: x.default.Messages.RESUBSCRIBE
       });
-      if (e === g.SubscriptionStatusTypes.PAUSE_PENDING) return (0, a.jsxs)("div", {
+      if (e === L.SubscriptionStatusTypes.PAUSE_PENDING) return (0, a.jsxs)("div", {
         className: D.toolsButtons,
         children: [(0, a.jsx)(u.Button, {
           className: D.toolsButton,
@@ -331,14 +330,13 @@ t.default = function(e) {
         }), (0, a.jsx)(u.Button, {
           className: D.toolsButton,
           size: u.Button.Sizes.SMALL,
-          look: u.ButtonLooks.INVERTED,
-          color: u.ButtonColors.BRAND,
+          color: u.ButtonColors.BRAND_INVERTED,
           submitting: G,
           onClick: X,
           children: x.default.Messages.CANCEL_PAUSE
         })]
       });
-      if (e === g.SubscriptionStatusTypes.PAUSED) {
+      if (e === L.SubscriptionStatusTypes.PAUSED) {
         let {
           durations: e
         } = (0, C.getSubscriptionPauseDurations)(l);
@@ -363,18 +361,17 @@ t.default = function(e) {
           }), (0, a.jsx)(u.Button, {
             className: D.toolsButton,
             size: u.Button.Sizes.SMALL,
-            look: u.ButtonLooks.INVERTED,
-            color: u.ButtonColors.BRAND,
+            color: u.ButtonColors.BRAND_INVERTED,
             submitting: G,
             onClick: X,
             children: x.default.Messages.RESUME
           })]
         })
       }
-      if (e === g.SubscriptionStatusTypes.ACTIVE || e === g.SubscriptionStatusTypes.PAST_DUE) {
+      if (e === L.SubscriptionStatusTypes.ACTIVE || e === L.SubscriptionStatusTypes.PAST_DUE) {
         let t = !1,
           s = null;
-        return null != l.renewalMutations && (t = !0, s = l.renewalMutations.planId !== l.planId ? x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION), null != l.trialEndsAt && (t = !0, s = x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL), e === g.SubscriptionStatusTypes.PAST_DUE && (t = !0), (0, a.jsxs)("div", {
+        return null != l.renewalMutations && (t = !0, s = l.renewalMutations.planId !== l.planId ? x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION), null != l.trialEndsAt && (t = !0, s = x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL), e === L.SubscriptionStatusTypes.PAST_DUE && (t = !0), (0, a.jsxs)("div", {
           className: D.toolsButtons,
           children: [F ? (0, a.jsx)(u.Button, {
             className: D.toolsButton,

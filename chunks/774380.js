@@ -16,8 +16,7 @@ let _ = e => {
     onOpenPremiumClick: t
   } = e, s = (0, a.jsx)(n.Button, {
     className: E.tier0Button,
-    color: n.Button.Colors.BRAND,
-    look: n.Button.Looks.INVERTED,
+    color: n.Button.Colors.BRAND_INVERTED,
     onClick: () => {
       (0, i.navigateToPremiumMarketingPage)(), null != t && t()
     },

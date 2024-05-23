@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s("47120");
-var a, n = s("735250"),
-  i = s("470079"),
+var a, i = s("735250"),
+  n = s("470079"),
   l = s("120356"),
   o = s.n(l),
   r = s("153832"),
@@ -21,7 +21,7 @@ function E(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class p extends(a = i.PureComponent) {
+class p extends(a = n.PureComponent) {
   async componentDidMount() {
     let [e, {
       default: t
@@ -44,36 +44,36 @@ class p extends(a = i.PureComponent) {
       submitting: s
     } = this.props, {
       email: a,
-      password: i
+      password: n
     } = this.state;
-    return (0, n.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       className: c.container,
-      children: [(0, n.jsx)(h.FormItem, {
+      children: [(0, i.jsx)(h.FormItem, {
         title: m.default.Messages.FORM_LABEL_EMAIL,
         className: g.marginBottom20,
-        children: (0, n.jsx)(h.TextInput, {
+        children: (0, i.jsx)(h.TextInput, {
           value: a,
           error: e,
           onChange: this.handleEmailChange,
           onKeyPress: this.handleKeyPress,
           autoFocus: !0
         })
-      }), (0, n.jsx)(h.FormItem, {
+      }), (0, i.jsx)(h.FormItem, {
         title: m.default.Messages.FORM_LABEL_PASSWORD,
         className: g.marginBottom40,
-        children: (0, n.jsx)(h.TextInput, {
+        children: (0, i.jsx)(h.TextInput, {
           type: "password",
-          value: i,
+          value: n,
           error: t,
           onChange: this.handlePasswordChange,
           onKeyPress: this.handleKeyPress
         })
-      }), (0, n.jsx)(h.Button, {
+      }), (0, i.jsx)(h.Button, {
         fullWidth: !0,
         size: h.Button.Sizes.LARGE,
         onClick: this.handleVerify,
         submitting: s,
-        disabled: 0 === a.length || 0 === i.length,
+        disabled: 0 === a.length || 0 === n.length,
         children: m.default.Messages.VERIFY_ACCOUNT
       })]
     })
@@ -82,22 +82,21 @@ class p extends(a = i.PureComponent) {
     let {
       canChange: e
     } = this.props;
-    return (0, n.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       className: c.container,
-      children: [(0, n.jsx)(h.Button, {
+      children: [(0, i.jsx)(h.Button, {
         className: g.marginTop20,
         fullWidth: !0,
         size: h.Button.Sizes.LARGE,
-        look: h.ButtonLooks.INVERTED,
         color: h.ButtonColors.PRIMARY,
         onClick: this.handleResendEmail,
         children: m.default.Messages.RESEND_EMAIL
-      }), e && (0, n.jsx)(h.Button, {
+      }), e && (0, i.jsx)(h.Button, {
         className: g.marginTop20,
         fullWidth: !0,
         size: h.Button.Sizes.MEDIUM,
         look: h.ButtonLooks.LINK,
-        color: h.ButtonColors.PRIMARY,
+        color: h.ButtonColors.LINK,
         onClick: this.handleChangeEmailClick,
         children: m.default.Messages.CHANGE_EMAIL
       })]
@@ -110,22 +109,22 @@ class p extends(a = i.PureComponent) {
     } = this.state, {
       email: s,
       canResend: a,
-      transitionState: i
+      transitionState: n
     } = this.props;
     return e = t && null != s ? m.default.Messages.VERIFY_EMAIL_BODY_RESENT.format({
       email: s
-    }) : a ? m.default.Messages.VERIFY_EMAIL_BODY : m.default.Messages.ENTER_EMAIL_BODY, (0, n.jsxs)(h.ModalRoot, {
-      transitionState: i,
+    }) : a ? m.default.Messages.VERIFY_EMAIL_BODY : m.default.Messages.ENTER_EMAIL_BODY, (0, i.jsxs)(h.ModalRoot, {
+      transitionState: n,
       "aria-labelledby": this._headerId,
       className: o()(c.emailVerificationModal, f.vertical, f.alignCenter, f.justifyCenter, g.marginTop60),
-      children: [(0, n.jsx)("div", {
+      children: [(0, i.jsx)("div", {
         className: c.animationContainer,
         ref: this.setLottieRef
-      }), (0, n.jsx)("div", {
+      }), (0, i.jsx)("div", {
         id: this._headerId,
         className: o()(c.title, g.marginBottom8),
         children: m.default.Messages.VERIFY_BY_EMAIL
-      }), (0, n.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: o()(c.body, g.marginBottom20),
         children: e
       }), a ? this.renderActions() : this.renderInputs()]

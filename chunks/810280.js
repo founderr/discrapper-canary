@@ -65,7 +65,7 @@ function _(e) {
       className: E.subTitle,
       children: m
     }), _.config.autoEnrollment ? (0, a.jsx)(l.Button, {
-      look: l.Button.Looks.INVERTED,
+      color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
         i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
@@ -73,7 +73,7 @@ function _(e) {
       children: f.default.Messages.LEARN_MORE
     }) : (0, a.jsx)(l.Button, {
       innerClassName: E.button,
-      look: l.Button.Looks.INVERTED,
+      color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
         (0, o.enrollDropsUser)(_.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)

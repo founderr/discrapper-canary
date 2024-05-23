@@ -24,7 +24,7 @@ function o(e) {
       className: r.content,
       children: i.default.Messages.HUB_PRIVACY_SETTINGS_TOOLTIP
     }), (0, a.jsx)(s.Button, {
-      look: s.Button.Looks.INVERTED,
+      color: s.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
         t(l.ContentDismissActionType.AUTO)

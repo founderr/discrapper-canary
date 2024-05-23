@@ -40,7 +40,7 @@ t.default = () => {
           children: f.default.Messages.CLIPS_GO_LIVE_EA_UPSELL_BODY.format()
         })]
       }), (0, a.jsx)(s.Button, {
-        look: s.Button.Looks.INVERTED,
+        color: s.Button.Colors.BRAND_INVERTED,
         onClick: () => {
           (0, u.default)({
             subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,

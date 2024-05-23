@@ -31,13 +31,13 @@ var i = n("735250"),
   c = n("690514");
 let E = {
     FILLED: c.lookFilled,
-    INVERTED: c.lookInverted,
     OUTLINED: c.lookOutlined,
     LINK: c.lookLink,
     BLANK: c.lookBlank
   },
   I = {
     BRAND: c.colorBrand,
+    BRAND_INVERTED: c.colorBrandInverted,
     RED: c.colorRed,
     GREEN: c.colorGreen,
     PRIMARY: c.colorPrimary,

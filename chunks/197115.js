@@ -140,7 +140,7 @@ t.default = function(e) {
     size: g,
     className: L,
     innerClassName: C.premiumSubscribeButton,
-    look: o.Button.Looks.INVERTED,
+    color: o.Button.Colors.BRAND_INVERTED,
     onClick: z,
     ...H,
     children: [w && (0, i.jsx)(A.default, {

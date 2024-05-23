@@ -20,22 +20,19 @@ let E = e => {
     analyticsLocation: s,
     className: l,
     buttonProps: n = {
-      color: void 0,
-      look: i.ButtonLooks.INVERTED,
+      color: i.ButtonColors.BRAND_INVERTED,
       text: u.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_BUTTON
     }
   } = e, {
     color: r,
-    look: o,
-    text: c
-  } = n, E = t.premiumTier + 1;
+    text: o
+  } = n, c = t.premiumTier + 1;
   return (0, a.jsx)(d.default, {
     color: r,
-    look: o,
     analyticsLocation: s,
     guild: t,
-    buttonText: c,
-    targetBoostedGuildTier: E,
+    buttonText: o,
+    targetBoostedGuildTier: c,
     className: l
   })
 };

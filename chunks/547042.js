@@ -120,8 +120,7 @@ let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 },
                 children: v
               }), (0, l.jsx)(o.Button, {
-                color: o.Button.Colors.BRAND,
-                look: o.Button.Looks.INVERTED,
+                color: o.Button.Colors.BRAND_INVERTED,
                 onClick: null != P ? P : () => {
                   n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,

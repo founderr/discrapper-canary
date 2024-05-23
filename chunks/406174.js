@@ -58,7 +58,6 @@ function f(e) {
       }), (0, a.jsx)(o.Button, {
         color: o.Button.Colors.CUSTOM,
         size: o.Button.Sizes.SMALL,
-        look: o.Button.Looks.INVERTED,
         className: E.manageSubscriptionsButton,
         onClick: t,
         children: S.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_SUBSCRIPTIONS_BUTTON

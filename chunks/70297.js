@@ -51,7 +51,7 @@ function p(e) {
             dismissAction: m.ContentDismissActionType.PRIMARY
           })
         },
-        look: r.Button.Looks.INVERTED,
+        color: r.Button.Colors.BRAND_INVERTED,
         children: (0, n.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "none",

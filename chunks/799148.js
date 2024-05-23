@@ -114,8 +114,7 @@ function S(e) {
       children: h.default.Messages.GUILD_FEED_NUX_MEMBER_BODY_2
     }), (0, l.jsx)(d.Button, {
       className: E.cta,
-      look: d.Button.Looks.INVERTED,
-      color: d.Button.Colors.BRAND,
+      color: d.Button.Colors.BRAND_INVERTED,
       onClick: x,
       children: h.default.Messages.GUILD_FEED_NUX_MODERATOR_CTA
     })]
