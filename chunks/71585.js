@@ -34,7 +34,7 @@ function f() {
     else break
   }
   t > 0 && (d.itemImpressions = d.itemImpressions.slice(t));
-  let a = g ? 1e3 : 216e5,
+  let a = g ? 1e3 : 576e5,
     i = new Set,
     l = new Set,
     n = Date.now() - a,

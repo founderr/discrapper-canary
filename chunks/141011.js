@@ -1,9 +1,9 @@
 "use strict";
 r.r(t);
-var o = r("735250"),
-  n = r("470079"),
-  a = r("120356"),
-  l = r.n(a),
+var a = r("735250"),
+  l = r("470079"),
+  o = r("120356"),
+  n = r.n(o),
   s = r("399606"),
   i = r("376345"),
   c = r("607070"),
@@ -15,40 +15,40 @@ t.default = e => {
   let {
     asset: t,
     size: r = f.MAX_CONTENT_WIDTH,
-    addGradient: a = !1,
-    className: g,
-    style: p,
-    children: b,
-    blur: m = !1
-  } = e, y = (0, s.useStateFromStores)([c.default], () => c.default.saturation), v = n.useMemo(() => {
-    if (null == t) return p;
+    addGradient: o = !1,
+    className: p,
+    style: g,
+    children: v,
+    blur: b = !1
+  } = e, m = (0, s.useStateFromStores)([c.default], () => c.default.saturation), h = l.useMemo(() => {
+    if (null == t) return g;
     let e = (0, d.getCollectiblesAssetURL)(t, {
         size: r,
         format: "jpg"
       }),
-      o = m ? {
+      a = b ? {
         filter: "blur(2px)",
         transform: "scale(1.02)"
       } : {};
-    if (1 === y) return {
-      ...p,
-      backgroundImage: a ? "url(".concat(e, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)") : "url(".concat(e, ")"),
+    if (1 === m) return {
+      ...g,
+      backgroundImage: o ? "url(".concat(e, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)") : "url(".concat(e, ")"),
       backgroundBlendMode: "multiply",
       backgroundSize: "cover",
-      ...o
+      ...a
     };
-    let n = (0, u.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - y);
+    let l = (0, u.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - m);
     return {
-      ...p,
-      backgroundImage: "linear-gradient(".concat(n, ", ").concat(n, "), url(").concat(e, ")"),
+      ...g,
+      backgroundImage: "linear-gradient(".concat(l, ", ").concat(l, "), url(").concat(e, ")"),
       backgroundBlendMode: "saturation",
       backgroundSize: "cover",
-      ...o
+      ...a
     }
-  }, [t, r, y, p, m, a]);
-  return (0, o.jsx)("div", {
-    className: l()(C.banner, g),
-    style: v,
-    children: b
+  }, [t, r, m, g, b, o]);
+  return (0, a.jsx)("div", {
+    className: n()(C.banner, p),
+    style: h,
+    children: v
   })
 }

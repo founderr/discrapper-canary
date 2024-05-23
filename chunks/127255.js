@@ -9,8 +9,8 @@ var l = i("470079"),
   a = i("630388"),
   d = i("115130"),
   u = i("844797"),
-  o = i("694312"),
-  r = i("405625"),
+  r = i("694312"),
+  o = i("405625"),
   c = i("664097"),
   s = i("981631");
 
@@ -23,7 +23,7 @@ function f(e) {
     filter: p
   } = (0, n.useStateFromStoresObject)([d.default], () => ({
     filter: d.default.getFilter()
-  })), v = (0, o.useActivityShelfData)(t), E = (0, r.default)(v), A = (0, c.useDeveloperActivityShelfItems)(), m = (0, u.useIsActivityInTextChannel)(f);
+  })), v = (0, r.useActivityShelfData)(t), E = (0, o.default)(v), A = (0, c.useDeveloperActivityShelfItems)(), m = (0, u.useIsActivityInTextChannel)(f);
   return l.useMemo(() => {
     function e(e) {
       return !!(!i || "" === p || e.application.name.toLowerCase().includes(p.toLowerCase())) || !1

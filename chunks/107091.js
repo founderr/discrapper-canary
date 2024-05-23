@@ -1,32 +1,32 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return y
   }
-}), a("47120");
-var l = a("735250"),
-  s = a("470079"),
-  r = a("153832"),
-  n = a("979554"),
-  i = a("399606"),
-  o = a("481060"),
-  c = a("37234"),
-  u = a("607070"),
-  d = a("100527"),
-  f = a("906732"),
-  C = a("1585"),
-  m = a("624377"),
-  p = a("372654"),
-  g = a("715627"),
-  E = a("300284"),
-  h = a("642619"),
-  b = a("598"),
-  x = a("333867"),
-  v = a("329067"),
-  I = a("981631"),
-  S = a("302800"),
-  L = a("689938"),
-  T = a("894775");
+}), l("47120");
+var a = l("735250"),
+  s = l("470079"),
+  r = l("153832"),
+  n = l("979554"),
+  i = l("399606"),
+  o = l("481060"),
+  c = l("37234"),
+  u = l("607070"),
+  d = l("100527"),
+  f = l("906732"),
+  C = l("1585"),
+  m = l("624377"),
+  p = l("372654"),
+  g = l("715627"),
+  E = l("300284"),
+  h = l("642619"),
+  b = l("598"),
+  x = l("333867"),
+  v = l("329067"),
+  S = l("981631"),
+  I = l("302800"),
+  L = l("689938"),
+  T = l("894775");
 let N = {
     xMin: -100,
     xMax: 100,
@@ -36,12 +36,12 @@ let N = {
   _ = e => {
     let {
       children: t,
-      ...a
+      ...l
     } = e;
-    return (0, l.jsx)(o.Button, {
+    return (0, a.jsx)(o.Button, {
       fullWidth: !0,
       look: o.Button.Looks.FILLED,
-      ...a,
+      ...l,
       children: t
     })
   };
@@ -49,7 +49,7 @@ let N = {
 function y(e) {
   let {
     product: t,
-    paymentSource: a,
+    paymentSource: l,
     onPurchaseComplete: y,
     onUse: A,
     onError: j,
@@ -68,7 +68,7 @@ function y(e) {
       buttonColors: F
     } = (0, m.default)(t.styles),
     H = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    w = (0, S.getCustomConfettiDisplayOptions)(t.skuId),
+    w = (0, I.getCustomConfettiDisplayOptions)(t.skuId),
     [U, W] = s.useState(!1),
     [G, V] = s.useState(!1),
     K = null != F ? {
@@ -86,28 +86,28 @@ function y(e) {
         j(e), V(!0)
       },
       onReviewPurchase: O,
-      paymentSource: a,
+      paymentSource: l,
       skuId: t.skuId,
       loadId: k,
       baseAnalyticsData: R
     };
-  return (0, l.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     ref: B,
     className: T.container,
-    children: [G && (0, l.jsxs)("div", {
+    children: [G && (0, a.jsxs)("div", {
       className: T.cardDetails,
-      children: [(0, l.jsx)(o.Text, {
+      children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
         className: T.productName,
         children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
-      }), (0, l.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: T.innerBlur,
-        children: (0, l.jsx)(o.Text, {
+        children: (0, a.jsx)(o.Text, {
           className: T.description,
           variant: "text-md/normal",
           children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
         })
-      }), (0, l.jsx)(o.Button, {
+      }), (0, a.jsx)(o.Button, {
         onClick: () => {
           O(), (0, x.default)({
             skuId: t.skuId,
@@ -117,22 +117,22 @@ function y(e) {
         },
         children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
-    }), !G && (U ? (0, l.jsxs)("div", {
+    }), !G && (U ? (0, a.jsxs)("div", {
       className: T.cardDetails,
-      children: [(0, l.jsx)(o.Text, {
+      children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
         className: T.productName,
         children: L.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
           itemName: t.name
         })
-      }), (0, l.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: T.innerBlur,
-        children: (0, l.jsx)(o.Text, {
+        children: (0, a.jsx)(o.Text, {
           className: T.description,
           variant: "text-xs/normal",
           children: L.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
-      }), (0, l.jsx)(_, {
+      }), (0, a.jsx)(_, {
         style: K,
         onClick: () => {
           if (A(), (0, c.popLayer)(), z(), (null == M ? void 0 : M.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
@@ -148,25 +148,25 @@ function y(e) {
         },
         children: L.default.Messages.COLLECTIBLES_USE_NOW
       })]
-    }) : (0, l.jsxs)("div", {
+    }) : (0, a.jsxs)("div", {
       className: T.cardDetails,
-      children: [(0, l.jsx)(o.Text, {
+      children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
         className: T.productName,
         children: t.name
-      }), (0, l.jsx)(b.PaymentContextProvider, {
+      }), (0, a.jsx)(b.PaymentContextProvider, {
         loadId: k,
         stepConfigs: [],
-        applicationId: I.COLLECTIBLES_APPLICATION_ID,
+        applicationId: S.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: I.PurchaseTypes.ONE_TIME,
-        children: (0, l.jsx)(v.default, {
+        purchaseType: S.PurchaseTypes.ONE_TIME,
+        children: (0, a.jsx)(v.default, {
           ...Y
         })
       })]
-    })), !G && U && !(null != w) && !H && (0, l.jsx)(g.default, {
+    })), !G && U && !(null != w) && !H && (0, a.jsx)(g.default, {
       confettiTarget: B.current,
       customConfettiCanvas: P,
       speedValues: N,

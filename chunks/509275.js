@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   formatRecentlyOnlineStatus: function() {
-    return i
+    return a
   }
 });
-var l = n("913527"),
-  a = n.n(l),
+var i = n("913527"),
+  r = n.n(i),
   s = n("689938");
 
-function i(e) {
+function a(e) {
   let t = function(e) {
-    let t = a().duration(a()().diff(e)),
+    let t = r().duration(r()().diff(e)),
       n = Math.floor(t.asDays()),
-      l = Math.floor(t.asHours()),
+      i = Math.floor(t.asHours()),
       s = Math.floor(t.asMinutes());
     if (n > 0) return "".concat(n, "d");
-    if (l > 0) return "".concat(l, "h");
+    if (i > 0) return "".concat(i, "h");
     if (s > 0) return "".concat(s, "m");
     else return "1m"
   }(new Date(e));

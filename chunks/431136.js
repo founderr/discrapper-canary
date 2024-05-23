@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var s = n("735250");
+var i = n("735250");
 n("470079");
-var i = n("468194"),
+var s = n("468194"),
   u = n("399606"),
   a = n("481060"),
   l = n("430824"),
@@ -25,23 +25,23 @@ function o(e) {
       icon: n.icon,
       size: 40
     });
-    o = (0, s.jsx)(a.Avatar, {
+    o = (0, i.jsx)(a.Avatar, {
       src: e,
       "aria-label": n.name,
       size: a.AvatarSizes.SIZE_24
     })
   } else {
-    let e = (0, i.getAcronym)(n.name).slice(0, 2);
-    o = (0, s.jsx)(a.Text, {
+    let e = (0, s.getAcronym)(n.name).slice(0, 2);
+    o = (0, i.jsx)(a.Text, {
       variant: "text-xs/semibold",
       className: c.acronym,
       "aria-hidden": !0,
       children: e
     })
   }
-  return (0, s.jsxs)("div", {
+  return (0, i.jsxs)("div", {
     className: c.container,
-    children: [o, (0, s.jsx)(a.Text, {
+    children: [o, (0, i.jsx)(a.Text, {
       variant: "text-md/semibold",
       className: c.text,
       children: n.name

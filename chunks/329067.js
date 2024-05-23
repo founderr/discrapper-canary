@@ -1,46 +1,46 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return _
   },
   useLightningCheckoutEligibility: function() {
     return N
   }
-}), a("47120");
-var l = a("735250"),
-  s = a("470079"),
-  r = a("512722"),
-  n = a.n(r),
-  i = a("481060"),
-  o = a("16084"),
-  c = a("244526"),
-  u = a("881052"),
-  d = a("128069"),
-  f = a("906732"),
-  C = a("176919"),
-  m = a("626135"),
-  p = a("63063"),
-  g = a("937615"),
-  E = a("598"),
-  h = a("409813"),
-  b = a("333867"),
-  x = a("74179"),
-  v = a("981631"),
-  I = a("689938"),
-  S = a("834042");
+}), l("47120");
+var a = l("735250"),
+  s = l("470079"),
+  r = l("512722"),
+  n = l.n(r),
+  i = l("481060"),
+  o = l("16084"),
+  c = l("244526"),
+  u = l("881052"),
+  d = l("128069"),
+  f = l("906732"),
+  C = l("176919"),
+  m = l("626135"),
+  p = l("63063"),
+  g = l("937615"),
+  E = l("598"),
+  h = l("409813"),
+  b = l("333867"),
+  x = l("74179"),
+  v = l("981631"),
+  S = l("689938"),
+  I = l("834042");
 let L = e => {
     let {
       children: t,
-      style: a,
+      style: l,
       className: s,
       ...r
     } = e;
-    return (0, l.jsx)(i.Button, {
+    return (0, a.jsx)(i.Button, {
       size: i.ButtonSizes.SMALL,
       fullWidth: !0,
       look: i.Button.Looks.FILLED,
       color: i.ButtonColors.GREEN,
-      style: a,
+      style: l,
       className: s,
       ...r,
       children: t
@@ -49,14 +49,14 @@ let L = e => {
   T = e => {
     let {
       children: t,
-      className: a,
+      className: l,
       ...s
     } = e;
-    return (0, l.jsx)(i.Button, {
+    return (0, a.jsx)(i.Button, {
       size: i.ButtonSizes.SMALL,
       look: i.ButtonLooks.BLANK,
       color: i.ButtonColors.TRANSPARENT,
-      className: a,
+      className: l,
       fullWidth: !0,
       ...s,
       children: t
@@ -78,7 +78,7 @@ function N() {
 function _(e) {
   let {
     onPurchaseComplete: t,
-    onError: a,
+    onError: l,
     onReviewPurchase: r,
     paymentSource: x,
     loadId: N,
@@ -104,8 +104,8 @@ function _(e) {
   s.useEffect(() => {
     j !== h.Step.REVIEW && O(h.Step.REVIEW)
   }), s.useEffect(() => {
-    R === C.PaymentAuthenticationState.ERROR && a(k)
-  }, [a, k, R]);
+    R === C.PaymentAuthenticationState.ERROR && l(k)
+  }, [l, k, R]);
   let V = async () => {
     await m.default.track(v.AnalyticEvents.PAYMENT_FLOW_COMPLETED, G), n()(null != U, "skuPricePreview can't be null"), n()(null != P, "application can't be null");
     try {
@@ -118,7 +118,7 @@ function _(e) {
       }), F(!1), t()
     } catch (t) {
       let e = t instanceof u.BillingError ? t : new u.BillingError(t);
-      e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && a(t)
+      e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && l(t)
     }
   }, K = s.useCallback(e => {
     m.default.track(v.AnalyticEvents.PAYMENT_FLOW_STEP, {
@@ -126,11 +126,11 @@ function _(e) {
       to_step: e
     }), e === h.Step.CONFIRM && (F(!1), t()), O(e)
   }, [G, O, t]);
-  return (0, C.usePaymentStepForAuthentication)(j, R, K), (0, l.jsxs)("div", {
-    className: S.reviewContainer,
-    children: [(0, l.jsx)(i.FormSection, {
-      children: (0, l.jsx)(i.FormItem, {
-        children: (0, l.jsx)(c.default, {
+  return (0, C.usePaymentStepForAuthentication)(j, R, K), (0, a.jsxs)("div", {
+    className: I.reviewContainer,
+    children: [(0, a.jsx)(i.FormSection, {
+      children: (0, a.jsx)(i.FormItem, {
+        children: (0, a.jsx)(c.default, {
           paymentSource: x,
           isDefault: !0,
           showSubtext: !1,
@@ -139,27 +139,27 @@ function _(e) {
           locale: "en-US"
         })
       })
-    }), (0, l.jsx)("div", {
-      className: S.legalTerms,
-      children: (0, l.jsx)("p", {
-        children: I.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
+    }), (0, a.jsx)("div", {
+      className: I.legalTerms,
+      children: (0, a.jsx)("p", {
+        children: S.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
           paidURL: p.default.getArticleURL(v.HelpdeskArticles.PAID_TERMS)
         })
       })
-    }), (0, l.jsx)(L, {
-      className: S.buyButton,
+    }), (0, a.jsx)(L, {
+      className: I.buyButton,
       submitting: D,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
         F(!0), await V()
       },
-      children: null !== W ? I.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
+      children: null !== W ? S.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: W
-      }) : (0, l.jsx)(i.Spinner, {
+      }) : (0, a.jsx)(i.Spinner, {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
-    }), !D && (0, l.jsx)(T, {
-      className: S.reviewButton,
+    }), !D && (0, a.jsx)(T, {
+      className: I.reviewButton,
       onClick: () => {
         r(), (0, b.default)({
           skuId: _,
@@ -167,7 +167,7 @@ function _(e) {
           returnRef: H
         })
       },
-      children: I.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
+      children: S.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
     })]
   })
 }

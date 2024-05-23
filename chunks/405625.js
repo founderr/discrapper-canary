@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return r
+    return o
   }
 }), i("653041"), i("47120");
 var l = i("470079"),
@@ -9,9 +9,9 @@ var l = i("470079"),
   a = i("822245"),
   d = i("675478"),
   u = i("358085"),
-  o = i("761122");
+  r = i("761122");
 
-function r(e) {
+function o(e) {
   return d.FrecencyUserSettingsActionCreators.loadIfNecessary(), l.useMemo(() => {
     let t = [];
     e.forEach(e => t.push(e.application.id));
@@ -34,7 +34,7 @@ let c = (e, t) => {
     }
   }), i.map((e, t) => [e, t]).filter(e => {
     var t, i;
-    let [l] = e, a = null === (i = l.application.embeddedActivityConfig) || void 0 === i ? void 0 : null === (t = i.client_platform_config[(0, o.default)((0, u.getOS)())]) || void 0 === t ? void 0 : t.label_type;
+    let [l] = e, a = null === (i = l.application.embeddedActivityConfig) || void 0 === i ? void 0 : null === (t = i.client_platform_config[(0, r.default)((0, u.getOS)())]) || void 0 === t ? void 0 : t.label_type;
     return !!a && (a === n.EmbeddedActivityLabelTypes.NEW || a === n.EmbeddedActivityLabelTypes.UPDATED)
   }).forEach(e => {
     let [t, l] = e, n = null != t.application.embeddedActivityConfig && null != t.application.embeddedActivityConfig.shelf_rank ? t.application.embeddedActivityConfig.shelf_rank - 1 : l;
