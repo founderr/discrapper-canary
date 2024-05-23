@@ -23,12 +23,11 @@ e.exports = {
   clanTagChiplet: "clanTagChiplet__7f357",
   clanTagChipletWrapper: "clanTagChipletWrapper__734a9",
   clickableCard: "clickableCard__1c1e9",
-  expandedTraitsContainer: "expandedTraitsContainer__95480",
   header: "header__2b527",
-  highlightedTrait: "highlightedTrait__03953",
   overflowTooltip: "overflowTooltip__7c9d4",
   playstyle: "playstyle__9d997",
-  trait: "trait_dfdb34",
+  selectedTrait: "selectedTrait_ee0767",
+  thinTrait: "thinTrait__8a2ec",
   traitsContainer: "traitsContainer__23f4b",
   wildCardText: "wildCardText_ed09a2"
 }

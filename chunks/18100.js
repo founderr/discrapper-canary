@@ -1,94 +1,118 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return h
+    return C
   }
-});
-var n = a("735250");
-a("470079");
-var r = a("120356"),
-  s = a.n(r),
-  i = a("900015"),
-  l = a("442837"),
-  o = a("481060"),
-  c = a("231467"),
-  d = a("430824"),
-  u = a("308083"),
-  f = a("689938"),
-  m = a("455658");
+}), a("47120");
+var n = a("735250"),
+  r = a("470079"),
+  s = a("120356"),
+  i = a.n(s),
+  l = a("900015"),
+  o = a("442837"),
+  c = a("481060"),
+  d = a("231467"),
+  u = a("430824"),
+  f = a("214715"),
+  m = a("308083"),
+  h = a("689938"),
+  E = a("455658");
 
-function h(e) {
+function p(e) {
+  let {
+    trait: t,
+    selected: a,
+    onClick: s
+  } = e, [l, o] = r.useState(!1), c = r.useCallback(() => o(!0), []), d = r.useCallback(() => o(!1), []);
+  return (0, n.jsx)(f.default, {
+    variant: "text-xs/semibold",
+    color: "interactive-active",
+    className: i()(E.trait, {
+      [E.strikethrough]: l
+    }),
+    text: t,
+    selected: a,
+    onMouseEnter: a ? c : void 0,
+    onMouseLeave: a ? d : void 0,
+    onClick: a ? s : void 0
+  }, t)
+}
+
+function C(e) {
   var t;
   let {
     guildId: a,
-    progress: r,
-    traitsToHighlight: h = [],
-    maskDescription: E,
-    maskTraits: p
-  } = e, T = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(a)), {
-    interests: C,
-    description: _,
-    playstyle: x,
-    wildcardDescriptors: g,
-    brandPrimaryColor: N
-  } = r, I = (0, o.useToken)(o.tokens.colors.TEXT_BRAND), v = Array.from(C);
+    progress: s,
+    traitsToHighlight: f,
+    maskDescription: C,
+    maskTraits: T,
+    onTraitClick: _
+  } = e, x = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(a)), {
+    interests: g,
+    description: N,
+    playstyle: I,
+    wildcardDescriptors: v,
+    brandPrimaryColor: A
+  } = s, S = (0, c.useToken)(c.tokens.colors.TEXT_BRAND), L = Array.from(g), R = r.useMemo(() => null != f ? new Set(f) : new Set, [f]);
   return (0, n.jsxs)("div", {
     children: [(0, n.jsxs)("div", {
-      className: s()(m.description, E ? m.descriptionBorderMask : void 0),
+      className: i()(E.description, C ? E.descriptionBorderMask : void 0),
       children: [(0, n.jsx)("div", {
-        className: E ? m.descriptionMask : void 0
-      }), (0, n.jsx)(o.Heading, {
+        className: C ? E.descriptionMask : void 0
+      }), (0, n.jsx)(c.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
         lineClamp: 1,
-        children: null == T ? void 0 : T.name
+        children: null == x ? void 0 : x.name
       }), (0, n.jsxs)("div", {
-        className: m.clanInfoRow,
-        children: [(0, n.jsx)(o.Text, {
+        className: E.clanInfoRow,
+        children: [(0, n.jsx)(c.Text, {
           variant: "text-xxs/normal",
-          className: m.clanInfoItem,
+          className: E.clanInfoItem,
           children: (0, n.jsx)("span", {
             role: "img",
-            "aria-label": f.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+            "aria-label": h.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
             children: "\uD83C\uDFAE"
           })
-        }), (0, n.jsx)(o.Text, {
+        }), (0, n.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "text-secondary",
-          className: m.clanInfoItem,
-          children: null !== (t = (0, u.getPlaystyleTitle)(x)) && void 0 !== t ? t : f.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
-        }), null != T && (0, n.jsx)(c.Wildcards, {
-          wildcardDescriptors: g,
-          primaryColor: null != N ? N : I.hex()
+          className: E.clanInfoItem,
+          children: null !== (t = (0, m.getPlaystyleTitle)(I)) && void 0 !== t ? t : h.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+        }), null != x && (0, n.jsx)(d.Wildcards, {
+          wildcardDescriptors: v,
+          primaryColor: null != A ? A : S.hex()
         })]
-      }), (0, n.jsx)(o.Text, {
+      }), (0, n.jsx)(c.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        className: m.descriptionText,
-        children: (null == _ ? void 0 : _.length) > 0 ? _ : f.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        className: E.descriptionText,
+        children: (null == N ? void 0 : N.length) > 0 ? N : h.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })]
     }), (0, n.jsxs)("div", {
-      className: s()(m.tagsContainer, p ? m.traitsBorderMask : void 0),
+      className: i()(E.tagsContainer, T ? E.traitsBorderMask : void 0),
       children: [(0, n.jsx)("div", {
-        className: p ? m.traitsMask : void 0
+        className: T ? E.traitsMask : void 0
       }), (0, n.jsxs)("div", {
-        className: m.tagsCount,
-        children: [(0, n.jsx)(i.TagsIcon, {
+        className: E.tagsCount,
+        children: [(0, n.jsx)(l.TagsIcon, {
           height: 12,
           width: 12,
-          className: m.tags
-        }), (0, n.jsx)(o.Text, {
+          className: E.tags
+        }), (0, n.jsx)(c.Text, {
           variant: "text-xs/semibold",
           color: "text-muted",
-          children: f.default.Messages.CLAN_SETUP_NUM_TRAITS.format({
-            n: v.length
+          children: h.default.Messages.CLAN_SETUP_NUM_TRAITS.format({
+            n: L.length
           })
         })]
-      }), (0, n.jsx)(c.ClanDiscoveryCardTraits, {
-        traitClassName: m.trait,
-        traits: v,
-        traitsToHighlight: h,
-        expanded: !0
+      }), (0, n.jsx)("div", {
+        className: E.traits,
+        children: L.map(e => (0, n.jsx)(p, {
+          trait: e,
+          selected: R.has(e),
+          onClick: _
+        }, e))
       })]
     })]
   })

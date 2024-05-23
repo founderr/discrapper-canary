@@ -6,10 +6,12 @@ e.exports = {
   descriptionBorderMask: "descriptionBorderMask__08213",
   descriptionMask: "descriptionMask_d8fc7b",
   descriptionText: "descriptionText_bcd405",
+  strikethrough: "strikethrough__29702",
   tags: "tags_ec044d",
   tagsContainer: "tagsContainer__3f5f9",
   tagsCount: "tagsCount__9f3ec",
   trait: "trait_d1186b",
+  traits: "traits__639e7",
   traitsBorderMask: "traitsBorderMask__07042",
   traitsMask: "traitsMask__094bf",
   wildCardText: "wildCardText_c764c9"
