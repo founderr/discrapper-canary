@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryCardTraits: function() {
-    return M
+    return y
   },
   ClanDiscoveryCardView: function() {
-    return y
+    return P
   },
   Wildcards: function() {
     return v
@@ -90,6 +90,30 @@ function D(e) {
 
 function M(e) {
   let {
+    description: t,
+    expanded: n
+  } = e;
+  return null == t ? null : n ? (0, i.jsx)("div", {
+    className: L.cardContentDescriptionSection,
+    children: (0, i.jsx)(o.Text, {
+      variant: "text-xs/normal",
+      color: "text-muted",
+      children: t
+    })
+  }) : (0, i.jsx)("div", {
+    className: L.cardContentDescriptionSection,
+    children: (0, i.jsx)(o.Text, {
+      className: L.cardContentDescriptionCollapsed,
+      variant: "text-xs/normal",
+      color: "text-muted",
+      lineClamp: 4,
+      children: t
+    })
+  })
+}
+
+function y(e) {
+  let {
     traits: t,
     traitsToHighlight: n,
     expanded: s,
@@ -140,7 +164,7 @@ function M(e) {
   })
 }
 
-function y(e) {
+function P(e) {
   var t;
   let {
     clan: n,
@@ -160,28 +184,30 @@ function y(e) {
       primaryColor: C,
       secondaryColor: D
     },
-    bannerHash: y
-  } = n, P = (0, d.default)(n.games), U = (0, T.default)("clan_discovery_card"), [b, G] = r.useState(!1), w = r.useCallback(() => {
-    G(!0)
-  }, []), k = r.useCallback(() => {
-    G(!1)
-  }, []), B = g.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+    bannerHash: P
+  } = n, U = (0, d.default)(n.games), b = (0, T.default)("clan_discovery_card"), [G, w] = r.useState(!1), k = r.useCallback(() => {
+    w(!0)
+  }, []), B = r.useCallback(() => {
+    w(!1)
+  }, []), V = g.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: n.memberCount
-  }), V = null != A ? A : (0, I.getClanBannerUrl)(n.id, y), x = null == s && null == V ? {
+  }), x = null != A ? A : (0, I.getClanBannerUrl)(n.id, P), F = null == s && null == x ? {
     background: "linear-gradient(90deg, ".concat(C, ", ").concat(D, ")")
-  } : void 0, F = null != s ? s : null != V ? (0, i.jsx)("img", {
+  } : void 0, H = null != s ? s : null != x ? (0, i.jsx)("img", {
     alt: g.default.Messages.CLAN_LOOK_BANNER,
-    src: V,
+    src: x,
     className: L.bannerImage
-  }) : null, H = r.useMemo(() => (0, R.getSortedTraits)(n.traits, _), [n.traits, _]);
+  }) : null, Y = r.useMemo(() => (0, R.getSortedTraits)(n.traits, _), [n.traits, _]);
   return (0, i.jsxs)("div", {
-    className: a()(L.card, E),
-    onMouseEnter: w,
-    onMouseLeave: k,
+    className: a()(L.card, E, {
+      [L.cardStaticHeight]: !l
+    }),
+    onMouseEnter: k,
+    onMouseLeave: B,
     children: [(0, i.jsx)("div", {
       className: L.cardBrandingHeader,
-      style: x,
-      children: F
+      style: F,
+      children: H
     }), (0, i.jsxs)("div", {
       className: L.cardContent,
       children: [(0, i.jsxs)("div", {
@@ -194,13 +220,13 @@ function y(e) {
             guildIcon: n.icon,
             iconSize: 64,
             className: L.clanIcon,
-            animate: !m || b
+            animate: !m || G
           }), (0, i.jsx)("div", {
             className: L.clanTagChipletWrapper,
             children: (0, i.jsx)(o.Tooltip, {
               text: g.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
               position: "top",
-              shouldShow: !u && U,
+              shouldShow: !u && b,
               children: e => (0, i.jsxs)("div", {
                 ...e,
                 className: L.clanTagChiplet,
@@ -243,16 +269,11 @@ function y(e) {
             primaryColor: n.branding.primaryColor
           })]
         })]
-      }), (0, i.jsx)("div", {
-        className: L.cardContentDescriptionSection,
-        children: (0, i.jsx)(o.Text, {
-          variant: "text-xs/normal",
-          color: "text-muted",
-          children: n.description
-        })
       }), (0, i.jsx)(M, {
-        traits: H,
-        expanded: l,
+        description: n.description,
+        expanded: l
+      }), (0, i.jsx)(y, {
+        traits: Y,
         traitsToHighlight: _
       })]
     }), (0, i.jsxs)("div", {
@@ -264,13 +285,13 @@ function y(e) {
           children: (0, i.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: B
+            children: V
           })
         })
       }), (0, i.jsx)("div", {
         className: L.cardFooterGames,
         children: (0, i.jsx)(p.default, {
-          games: P,
+          games: U,
           prioritizedGameIds: c
         })
       })]
@@ -327,7 +348,7 @@ t.default = function(e) {
     className: L.clickableCard,
     style: t,
     onContextMenu: O,
-    children: (0, i.jsx)(y, {
+    children: (0, i.jsx)(P, {
       ...a,
       isMember: S,
       prioritizedGameIds: s,

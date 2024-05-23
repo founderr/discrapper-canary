@@ -94,7 +94,8 @@ t.default = function(e) {
         children: [(0, r.jsx)(m.ClanDiscoveryCardView, {
           clan: c,
           className: x.card,
-          prioritizedGameIds: v
+          prioritizedGameIds: v,
+          expanded: !0
         }), (0, r.jsx)(s.Tooltip, {
           text: E.default.Messages.CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP,
           shouldShow: !y,
