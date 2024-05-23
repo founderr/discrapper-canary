@@ -1498,4 +1498,9 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     type: "DM_SETTINGS_UPSELL_SHOW",
     guildId: e.guild_id
   })
+}), k(["CONTENT_INVENTORY_INBOX_STALE"], e => {
+  x({
+    type: "CONTENT_INVENTORY_INBOX_STALE",
+    refreshAfterMs: e.refresh_after_ms
+  })
 })
