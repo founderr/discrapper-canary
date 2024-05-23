@@ -395,6 +395,7 @@ e.exports = Object.freeze({
   CLAN_SUCCESS_USE_TAG_TEXT: "Wear Guild Tag next to username",
   CLAN_SUCCESS_USE_TAG_HELP: "You can always edit this in Profile settings.",
   CLAN_SUCCESS_CTA: "Let's Go",
+  CLAN_SUCCESS_POSTSCRIPT: "It may take up to 2 days for your Guild to appear in the Discovery page.",
   CLAN_JOIN_SUCCESS_TITLE: "Congratulations, you're an official member of **{name}**!",
   CLAN_JOIN_SUCCESS_SUBTITLE: "Rep your Guild, make new friends, and play some games. Get in and say hi to your new guildmates.",
   CLAN_JOIN_SUCCESS_MAIN_CTA: "Let's Go",
