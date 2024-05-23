@@ -5,5 +5,6 @@ e.exports = {
   header: "header_fbecef",
   headerSpan: "headerSpan__051f7",
   questRewardTileAsset: "questRewardTileAsset__33149",
+  rewardDescriptionContainer: "rewardDescriptionContainer__8745e",
   textContainer: "textContainer_fb0d3e"
 }
