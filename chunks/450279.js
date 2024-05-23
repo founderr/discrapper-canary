@@ -119,6 +119,10 @@ function s(e, t, n, s) {
         firCount: e.firCount,
         nackCount: e.nackCount,
         pliCount: e.pliCount,
+        freezeCount: e.freezeCount,
+        pauseCount: e.pauseCount,
+        totalFreezesDuration: e.totalFreezesDuration,
+        totalPausesDuration: e.totalPausesDuration,
         qpSum: e.qpSum,
         decoderImplementationName: "WebRTC"
       })
