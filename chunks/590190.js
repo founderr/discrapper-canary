@@ -24,9 +24,7 @@ e.exports = {
   sidebarRightDecoration: "sidebarRightDecoration__5fc16",
   sidebarRightDecorationContainer: "sidebarRightDecorationContainer__2f92e",
   signButton: "signButton__6f375",
-  step: "step__4b7ad",
   stepsContainer: "stepsContainer__8d5da",
-  stepsTransitionGroup: "stepsTransitionGroup__770f6",
   submit: "submit__9d0ad",
   tooltip: "tooltip__54b01",
   tooltipContents: "tooltipContents__93e3b"
