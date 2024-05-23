@@ -275,78 +275,80 @@ t.default = e => {
             }
           })
         })
-      }), (0, a.jsxs)(o.ScrollerThin, {
+      }), (0, a.jsxs)("div", {
         className: U.mainContent,
-        children: [(() => {
-          switch (I) {
-            case D.ClanSetupSteps.GAMES:
-              var e;
-              return (0, a.jsx)(x.default, {
-                title: G.default.Messages.CLAN_SETUP_GAMES_TITLE,
-                description: G.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-                handleUpdate: z,
-                gameApplicationIds: null !== (e = B.gameApplicationIds) && void 0 !== e ? e : new Set,
-                requiredGameId: null != V ? V : void 0,
-                error: F.gameApplicationIds,
-                inSettings: !0
-              });
-            case D.ClanSetupSteps.PLAYSTYLE:
-              return (0, a.jsx)(p.default, {
-                title: G.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
-                description: G.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-                handleUpdate: K,
-                playstyle: B.playstyle,
-                error: F.playstyle
-              });
-            case D.ClanSetupSteps.UTILITY_TRAITS:
-              return (0, a.jsx)(M.default, {
-                guildId: t,
-                title: G.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
-                description: G.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-                handleUpdate: Z,
-                progress: B,
-                requiredGameId: null != V ? V : void 0
-              });
-            case D.ClanSetupSteps.INTERESTS:
-              return (0, a.jsx)(L.default, {
-                guildId: t,
-                handleUpdate: X,
-                progress: B,
-                error: F.interests
-              });
-            case D.ClanSetupSteps.DESCRIPTION:
-              return (0, a.jsx)(R.default, {
-                guildId: t,
-                handleUpdate: X,
-                progress: B,
-                errors: F
-              });
-            case D.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
-              return (0, a.jsx)(A.default, {
-                handleUpdate: X,
-                tag: B.tag,
-                error: F.tag,
-                badge: B.badgeKind,
-                primaryColor: B.badgePrimaryColor,
-                secondaryColor: B.badgeSecondaryColor,
-                furthestStep: D.ClanSetupSteps.CUSTOMIZE_TAG_BADGE,
-                inSettings: !0
-              });
-            case D.ClanSetupSteps.MEMBER_APPLICATION:
-              return (0, a.jsx)(O.default, {
-                guildId: t,
-                inSettings: !0
-              });
-            case D.ClanSetupSteps.CUSTOMIZE_BANNER:
-              return (0, a.jsx)(C.default, {
-                guildId: t,
-                handleUpdate: X,
-                progress: B
-              });
-            default:
-              return null
-          }
-        })(), (0, a.jsx)(r.TransitionGroup, {
+        children: [(0, a.jsx)(o.ScrollerThin, {
+          children: (() => {
+            switch (I) {
+              case D.ClanSetupSteps.GAMES:
+                var e;
+                return (0, a.jsx)(x.default, {
+                  title: G.default.Messages.CLAN_SETUP_GAMES_TITLE,
+                  description: G.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
+                  handleUpdate: z,
+                  gameApplicationIds: null !== (e = B.gameApplicationIds) && void 0 !== e ? e : new Set,
+                  requiredGameId: null != V ? V : void 0,
+                  error: F.gameApplicationIds,
+                  inSettings: !0
+                });
+              case D.ClanSetupSteps.PLAYSTYLE:
+                return (0, a.jsx)(p.default, {
+                  title: G.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
+                  description: G.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
+                  handleUpdate: K,
+                  playstyle: B.playstyle,
+                  error: F.playstyle
+                });
+              case D.ClanSetupSteps.UTILITY_TRAITS:
+                return (0, a.jsx)(M.default, {
+                  guildId: t,
+                  title: G.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
+                  description: G.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
+                  handleUpdate: Z,
+                  progress: B,
+                  requiredGameId: null != V ? V : void 0
+                });
+              case D.ClanSetupSteps.INTERESTS:
+                return (0, a.jsx)(L.default, {
+                  guildId: t,
+                  handleUpdate: X,
+                  progress: B,
+                  error: F.interests
+                });
+              case D.ClanSetupSteps.DESCRIPTION:
+                return (0, a.jsx)(R.default, {
+                  guildId: t,
+                  handleUpdate: X,
+                  progress: B,
+                  errors: F
+                });
+              case D.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
+                return (0, a.jsx)(A.default, {
+                  handleUpdate: X,
+                  tag: B.tag,
+                  error: F.tag,
+                  badge: B.badgeKind,
+                  primaryColor: B.badgePrimaryColor,
+                  secondaryColor: B.badgeSecondaryColor,
+                  furthestStep: D.ClanSetupSteps.CUSTOMIZE_TAG_BADGE,
+                  inSettings: !0
+                });
+              case D.ClanSetupSteps.MEMBER_APPLICATION:
+                return (0, a.jsx)(O.default, {
+                  guildId: t,
+                  inSettings: !0
+                });
+              case D.ClanSetupSteps.CUSTOMIZE_BANNER:
+                return (0, a.jsx)(C.default, {
+                  guildId: t,
+                  handleUpdate: X,
+                  progress: B
+                });
+              default:
+                return null
+            }
+          })()
+        }), (0, a.jsx)(r.TransitionGroup, {
           component: "div",
           children: k && (0, a.jsx)(_.default, {
             className: U.noticeRegion,
