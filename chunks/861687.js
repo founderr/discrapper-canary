@@ -824,7 +824,7 @@ class eo extends _.default {
     var n;
     this.logger.info("Preparing secure frames epoch: ".concat(e, ", protocol version: ").concat(t));
     let i = e.toString();
-    null === (n = this._connection) || void 0 === n || n.prepareSecureFramesEpoch(i, t, this.channelId), "1" === i && this._sendMLSKeyPackage()
+    null === (n = this._connection) || void 0 === n || n.prepareSecureFramesEpoch(i, t, this.trueChannelId), "1" === i && this._sendMLSKeyPackage()
   }
   _sendMLSKeyPackage() {
     var e;
