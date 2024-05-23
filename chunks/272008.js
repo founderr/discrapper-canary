@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   claimQuestReward: function() {
-    return S
-  },
-  claimQuestRewardCode: function() {
-    return f
-  },
-  completeQuestPreview: function() {
-    return N
-  },
-  dismissProgressTrackingFailureNotice: function() {
-    return m
-  },
-  dismissQuestContent: function() {
     return A
   },
-  enrollInQuest: function() {
-    return T
-  },
-  fetchCurrentQuests: function() {
-    return E
-  },
-  fetchQuestRewardCode: function() {
+  claimQuestRewardCode: function() {
     return h
   },
-  optimisticallyUpdateQuestProgress: function() {
-    return C
-  },
-  overrideQuestDelivery: function() {
-    return R
-  },
-  resetQuestDismissibilityStatus: function() {
+  completeQuestPreview: function() {
     return O
   },
-  resetQuestPreviewStatus: function() {
+  dismissProgressTrackingFailureNotice: function() {
     return p
   },
+  dismissQuestContent: function() {
+    return N
+  },
+  enrollInQuest: function() {
+    return S
+  },
+  fetchCurrentQuests: function() {
+    return T
+  },
+  fetchQuestRewardCode: function() {
+    return m
+  },
+  optimisticallyUpdateQuestProgress: function() {
+    return g
+  },
+  overrideQuestDelivery: function() {
+    return L
+  },
+  resetQuestDismissibilityStatus: function() {
+    return R
+  },
+  resetQuestPreviewStatus: function() {
+    return C
+  },
   sendHeartbeat: function() {
-    return I
+    return f
   }
-});
+}), n("411104");
 var i = n("990547"),
   r = n("544891"),
   s = n("570140"),
@@ -48,19 +48,21 @@ var i = n("990547"),
   l = n("617136"),
   u = n("569984"),
   d = n("918701"),
-  _ = n("566078"),
-  c = n("981631");
-async function E() {
+  _ = n("242755"),
+  c = n("566078"),
+  E = n("46140"),
+  I = n("981631");
+async function T() {
   if (!u.default.isFetchingCurrentQuests) {
     s.default.dispatch({
       type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
     });
     try {
       let e = (await r.HTTP.get({
-        url: c.Endpoints.QUESTS_CURRENT_QUESTS
+        url: I.Endpoints.QUESTS_CURRENT_QUESTS
       })).body.quests.filter(e => (0, d.isQuestWithKnownConfigVersion)(e)).map(e => (0, d.questWithUserStatusFromServer)(e)).filter(e => {
         var t;
-        return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || _.SharedQuestFields.build(e.config).rewardPlatforms.length > 0
+        return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || c.SharedQuestFields.build(e.config).rewardPlatforms.length > 0
       });
       s.default.dispatch({
         type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
@@ -74,15 +76,16 @@ async function E() {
     }
   }
 }
-async function I(e) {
+async function f(e) {
   let {
     questId: t,
     streamKey: n,
     terminal: r = !1
   } = e;
   try {
+    var l;
     let e = await o.default.post({
-      url: c.Endpoints.QUESTS_HEARTBEAT(t),
+      url: I.Endpoints.QUESTS_HEARTBEAT(t),
       body: {
         stream_key: n,
         terminal: r
@@ -92,7 +95,11 @@ async function I(e) {
         properties: {
           quest_id: t,
           terminal: r,
-          is_overlay: __OVERLAY__
+          is_overlay: __OVERLAY__,
+          stack_trace: null !== (l = Error().stack) && void 0 !== l ? l : "",
+          is_playtime_eligible: (0, _.isEligibleForQuestPlaytime)({
+            location: E.QuestsExperimentLocations.QUESTS_MANAGER
+          })
         }
       }
     });
@@ -111,7 +118,7 @@ async function I(e) {
     })
   }
 }
-async function T(e, t) {
+async function S(e, t) {
   if (null != t.questContentCTA && (0, l.trackQuestContentClicked)({
       questId: e,
       questContent: t.questContent,
@@ -124,7 +131,7 @@ async function T(e, t) {
     });
     try {
       let n = await r.HTTP.post({
-        url: c.Endpoints.QUESTS_ENROLL(e),
+        url: I.Endpoints.QUESTS_ENROLL(e),
         body: {
           location: t.questContent
         }
@@ -141,7 +148,7 @@ async function T(e, t) {
     }
   }
 }
-async function f(e, t, n) {
+async function h(e, t, n) {
   if (!u.default.isClaimingRewardCode(e)) {
     s.default.dispatch({
       type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
@@ -149,7 +156,7 @@ async function f(e, t, n) {
     });
     try {
       let i = await r.HTTP.post({
-        url: c.Endpoints.QUESTS_REWARD_CODE(e),
+        url: I.Endpoints.QUESTS_REWARD_CODE(e),
         body: {
           platform: t,
           location: n
@@ -169,7 +176,7 @@ async function f(e, t, n) {
     }
   }
 }
-async function S(e, t, n) {
+async function A(e, t, n) {
   if (!u.default.isClaimingReward(e)) {
     s.default.dispatch({
       type: "QUESTS_CLAIM_REWARD_BEGIN",
@@ -177,7 +184,7 @@ async function S(e, t, n) {
     });
     try {
       let i = await r.HTTP.post({
-          url: c.Endpoints.QUESTS_CLAIM_REWARD(e),
+          url: I.Endpoints.QUESTS_CLAIM_REWARD(e),
           body: {
             platform: t,
             location: n
@@ -202,7 +209,7 @@ async function S(e, t, n) {
     }
   }
 }
-async function h(e) {
+async function m(e) {
   if (!u.default.isFetchingRewardCode(e)) {
     s.default.dispatch({
       type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
@@ -210,7 +217,7 @@ async function h(e) {
     });
     try {
       let t = await r.HTTP.get({
-        url: c.Endpoints.QUESTS_REWARD_CODE(e)
+        url: I.Endpoints.QUESTS_REWARD_CODE(e)
       });
       s.default.dispatch({
         type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
@@ -226,7 +233,7 @@ async function h(e) {
     }
   }
 }
-async function A(e, t) {
+async function N(e, t) {
   let n = u.default.isDismissingContent(e),
     i = (0, d.isDismissible)(t);
   if (!n && i) {
@@ -237,7 +244,7 @@ async function A(e, t) {
     });
     try {
       let n = await r.HTTP.post({
-        url: c.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
+        url: I.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
         body: {}
       });
       s.default.dispatch({
@@ -254,52 +261,52 @@ async function A(e, t) {
   }
 }
 
-function m(e) {
+function p(e) {
   s.default.dispatch({
     type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE",
     streamKey: e
   })
 }
-async function N(e) {
-  try {
-    let t = await r.HTTP.post({
-      url: c.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
-      body: {}
-    });
-    s.default.dispatch({
-      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-      previewQuestUserStatus: (0, d.questUserStatusFromServer)(t.body)
-    })
-  } catch (t) {
-    s.default.dispatch({
-      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
-      error: new a.default(t),
-      questId: e
-    })
-  }
-}
-async function p(e) {
-  try {
-    let t = await r.HTTP.del({
-      url: c.Endpoints.QUESTS_PREVIEW_STATUS(e),
-      body: {}
-    });
-    s.default.dispatch({
-      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-      previewQuestUserStatus: (0, d.questUserStatusFromServer)(t.body)
-    })
-  } catch (t) {
-    s.default.dispatch({
-      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
-      error: new a.default(t),
-      questId: e
-    })
-  }
-}
 async function O(e) {
   try {
+    let t = await r.HTTP.post({
+      url: I.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
+      body: {}
+    });
+    s.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
+      previewQuestUserStatus: (0, d.questUserStatusFromServer)(t.body)
+    })
+  } catch (t) {
+    s.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
+      error: new a.default(t),
+      questId: e
+    })
+  }
+}
+async function C(e) {
+  try {
     let t = await r.HTTP.del({
-      url: c.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),
+      url: I.Endpoints.QUESTS_PREVIEW_STATUS(e),
+      body: {}
+    });
+    s.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
+      previewQuestUserStatus: (0, d.questUserStatusFromServer)(t.body)
+    })
+  } catch (t) {
+    s.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
+      error: new a.default(t),
+      questId: e
+    })
+  }
+}
+async function R(e) {
+  try {
+    let t = await r.HTTP.del({
+      url: I.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),
       body: {}
     });
     s.default.dispatch({
@@ -315,14 +322,14 @@ async function O(e) {
   }
 }
 
-function C(e) {
+function g(e) {
   s.default.dispatch({
     type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
     userStatus: e
   })
 }
 
-function R(e) {
+function L(e) {
   s.default.dispatch({
     type: "QUESTS_DELIVERY_OVERRIDE",
     questId: e
