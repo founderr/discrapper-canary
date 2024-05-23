@@ -136,8 +136,8 @@ function F(e) {
   } = e, c = n.useMemo(() => {
     var e;
     return (null === (e = r.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
-  }, []), E = j.SharedQuestFields.build(r.config).rewardPlatforms, v = E.length > 1, [w, y] = n.useState(v ? null : E[0]), U = n.useRef(new o.Environment), F = n.useRef(null), [W, Z] = n.useState(null), H = (0, i.useStateFromStores)([g.default], () => g.default.useReducedMotion), q = (0, i.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), {
-    rewardCode: V,
+  }, []), E = j.SharedQuestFields.build(r.config).rewardPlatforms, v = E.length > 1, [w, y] = n.useState(v ? null : E[0]), U = n.useRef(new o.Environment), F = n.useRef(null), [W, Z] = n.useState(null), H = (0, i.useStateFromStores)([g.default], () => g.default.useReducedMotion), V = (0, i.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), {
+    rewardCode: q,
     isFetchingRewardCode: G,
     isClaimingRewardCode: z
   } = (0, i.useStateFromStoresObject)([M.default], () => ({
@@ -146,17 +146,17 @@ function F(e) {
     isClaimingRewardCode: M.default.isClaimingRewardCode(r.id) || M.default.isClaimingReward(r.id)
   })), Y = (0, O.isTieredRewardCodeQuest)({
     quest: r
-  }), [X, J] = n.useState(!1), K = v && (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == V, $ = n.useCallback((e, t, s) => {
-    J(!1), Y ? (0, N.claimQuestReward)(e, t, s).catch(() => J(!0)) : (0, N.claimQuestRewardCode)(e, t, s).catch(() => J(!0))
-  }, [Y]), ee = n.useCallback(e => {
+  }), [X, J] = n.useState(!1), K = v && (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == q, $ = n.useCallback((e, t, s) => {
+    J(!1), Y || 2 === r.config.configVersion ? (0, N.claimQuestReward)(e, t, s).catch(() => J(!0)) : (0, N.claimQuestRewardCode)(e, t, s).catch(() => J(!0))
+  }, [Y, r.config.configVersion]), ee = n.useCallback(e => {
     J(!1), (0, N.fetchQuestRewardCode)(e).catch(() => J(!0))
   }, []);
   n.useEffect(() => {
     var e, t;
-    null == V && !X && !z && !G && !K && ((null === (e = r.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != w ? $(r.id, w, u) : (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && ee(r.id))
-  }, [r, V, z, G, X, K, w, u, $, ee]);
+    null == q && !X && !z && !G && !K && ((null === (e = r.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != w ? $(r.id, w, u) : (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && ee(r.id))
+  }, [r, q, z, G, X, K, w, u, $, ee]);
   let et = null;
-  c && null != V ? et = B.default.Messages.QUESTS_REWARD_CODE_HEADER : null != V ? et = B.default.Messages.QUESTS_REWARD_CODE_CONGRATS : K && (et = B.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
+  c && null != q ? et = B.default.Messages.QUESTS_REWARD_CODE_HEADER : null != q ? et = B.default.Messages.QUESTS_REWARD_CODE_CONGRATS : K && (et = B.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
   let es = null != et ? (0, l.jsx)(p.Heading, {
       variant: "heading-xl/semibold",
       color: "header-primary",
@@ -199,7 +199,7 @@ function F(e) {
       quest: r,
       selectedPlatform: w,
       needsToConfirmPlatform: K,
-      rewardCode: V,
+      rewardCode: q,
       hasTieredRewardCodes: Y
     }),
     en = n.useMemo(() => E.map(e => ({
@@ -253,17 +253,17 @@ function F(e) {
       error: B.default.Messages.QUESTS_REWARD_CODE_ERROR
     }) : null]
   }));
-  let er = null == V && (G || z),
+  let er = null == q && (G || z),
     eo = er && !K ? (0, l.jsx)(p.Spinner, {}) : null,
     ei = null;
-  null != V ? ei = (0, l.jsx)(p.FormItem, {
+  null != q ? ei = (0, l.jsx)(p.FormItem, {
     title: B.default.Messages.QUESTS_REWARD_CODE_HEADER,
     children: (0, l.jsx)(S.default, {
-      value: q ? B.default.Messages.QUEST_REWARD_CODE_HIDDEN : V.code,
+      value: V ? B.default.Messages.QUEST_REWARD_CODE_HIDDEN : q.code,
       delay: 1e3,
       buttonColor: p.Button.Colors.BRAND,
       onCopy: () => {
-        q && (0, A.copy)(V.code), (0, I.trackQuestContentClicked)({
+        V && (0, A.copy)(q.code), (0, I.trackQuestContentClicked)({
           questId: r.id,
           questContent: u,
           questContentPosition: d,
@@ -297,7 +297,7 @@ function F(e) {
     ec = !ed && (K && null == w || er),
     ef = B.default.Messages.QUESTS_REWARD_CODE_DONE;
   K ? ef = B.default.Messages.QUESTS_REWARD_CODE_GET_CODE : !K && X && (ef = B.default.Messages.QUESTS_REWARD_CODE_TRY_AGAIN);
-  let eC = !H && null != V && !c && !X,
+  let eC = !H && null != q && !c && !X,
     eh = (0, l.jsx)(p.Button, {
       onClick: () => eu(),
       submitting: ed,
@@ -324,7 +324,7 @@ function F(e) {
             sentrySource: L.QuestsExperimentLocations.REWARD_CODE_MODAL,
             children: (0, l.jsx)(P, {
               quest: r,
-              rewardCode: V,
+              rewardCode: q,
               hasTieredRewardCodes: Y
             })
           }), (0, l.jsxs)("div", {

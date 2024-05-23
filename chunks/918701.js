@@ -285,12 +285,10 @@ function g(e, t) {
 }
 let L = e => {
     var t, n;
-    let i = X({
-        quest: e
-      }) ? q({
+    let i = q({
         quest: e,
         idx: null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedTier
-      }) : null,
+      }),
       r = _.SharedQuestFields.build(e.config).defaultRewardAsset,
       s = null !== (n = null == i ? void 0 : i.asset) && void 0 !== n ? n : r;
     return {
