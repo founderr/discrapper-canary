@@ -26,7 +26,7 @@ function p(e) {
   } = e, [l, o] = r.useState(!1), c = r.useCallback(() => o(!0), []), d = r.useCallback(() => o(!1), []);
   return (0, n.jsx)(f.default, {
     variant: "text-xs/semibold",
-    color: "interactive-active",
+    color: l ? "text-muted" : "interactive-active",
     className: i()(E.trait, {
       [E.strikethrough]: l
     }),
