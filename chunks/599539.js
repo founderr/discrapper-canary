@@ -24,18 +24,19 @@ function h(e) {
   var t;
   let {
     cardData: n,
-    guildId: s
+    guildId: s,
+    cardIndex: h
   } = e, {
-    category: h
-  } = n, [A, m] = r.useState(!1), N = h === f.CardCategory.HANGOUT && n.streamUserIds.length > 0, p = (0, o.useStateFromStores)([d.default], () => N ? d.default.getPreviewURL(s, n.channelId, n.streamUserIds[0]) : null), O = (0, o.useStateFromStores)([d.default], () => h === f.CardCategory.HANGOUT ? d.default.getIsPreviewLoading(s, n.channelId, n.streamUserIds[0]) : null), C = h === f.CardCategory.HANGOUT && n.streamUserIds.length > 0 && null == p && !O, R = (0, o.useStateFromStores)([_.default], () => {
-    let e = h === f.CardCategory.HANGOUT || h === f.CardCategory.GAMING ? n.channelId : h === f.CardCategory.EVENT ? n.event.channel_id : h === f.CardCategory.EMBEDDED_ACTIVITY ? n.embeddedActivities[0].channelId : null;
+    category: A
+  } = n, [m, N] = r.useState(!1), p = A === f.CardCategory.HANGOUT && n.streamUserIds.length > 0, O = (0, o.useStateFromStores)([d.default], () => p ? d.default.getPreviewURL(s, n.channelId, n.streamUserIds[0]) : null), C = (0, o.useStateFromStores)([d.default], () => A === f.CardCategory.HANGOUT ? d.default.getIsPreviewLoading(s, n.channelId, n.streamUserIds[0]) : null), R = A === f.CardCategory.HANGOUT && n.streamUserIds.length > 0 && null == O && !C, g = (0, o.useStateFromStores)([_.default], () => {
+    let e = A === f.CardCategory.HANGOUT || A === f.CardCategory.GAMING ? n.channelId : A === f.CardCategory.EVENT ? n.event.channel_id : A === f.CardCategory.EMBEDDED_ACTIVITY ? n.embeddedActivities[0].channelId : null;
     return _.default.getChannel(e)
-  }), g = (0, o.useStateFromStores)([u.default], () => u.default.getActiveEventByChannel(null == R ? void 0 : R.id)), {
-    usersToShow: L,
-    othersCount: v
-  } = (0, I.useVoiceChannelUsers)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : "", s), {
-    usersToShow: D
-  } = (0, I.useGetEventCardUsers)(R), M = (0, T.useImage)(n, s, p), y = (0, T.useCardTitle)(n, s), P = (0, T.useSubtitle)(n), U = (0, T.useCount)(n), b = (0, T.getClickHandler)(n, s), G = (0, T.getJoinButton)(n, s), w = (null != g || !!(null == R ? void 0 : R.isGuildStageVoice())) && D.length > 0, k = h === f.CardCategory.HANGOUT && (0 === n.streamUserIds.length || C) && !(null == R ? void 0 : R.isGuildStageVoice()), B = h === f.CardCategory.EMBEDDED_ACTIVITY && n.streamersCount > 0 ? (0, i.jsxs)("div", {
+  }), L = (0, o.useStateFromStores)([u.default], () => u.default.getActiveEventByChannel(null == g ? void 0 : g.id)), {
+    usersToShow: v,
+    othersCount: D
+  } = (0, I.useVoiceChannelUsers)(null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : "", s), {
+    usersToShow: M
+  } = (0, I.useGetEventCardUsers)(g), y = (0, T.useImage)(n, s, O), P = (0, T.useCardTitle)(n, s), U = (0, T.useSubtitle)(n), b = (0, T.useCount)(n), G = (0, T.getClickHandler)(n, s, h), w = (0, T.getJoinButton)(n, s, h), k = (null != L || !!(null == g ? void 0 : g.isGuildStageVoice())) && M.length > 0, B = A === f.CardCategory.HANGOUT && (0 === n.streamUserIds.length || R) && !(null == g ? void 0 : g.isGuildStageVoice()), V = A === f.CardCategory.EMBEDDED_ACTIVITY && n.streamersCount > 0 ? (0, i.jsxs)("div", {
     className: S.pill,
     children: [(0, i.jsx)(c.default, {
       className: S.pillIcon
@@ -46,33 +47,33 @@ function h(e) {
     })]
   }) : null;
   return (0, i.jsxs)(l.Clickable, {
-    onClick: () => null == b ? void 0 : b(),
+    onClick: () => null == G ? void 0 : G(),
     tag: "div",
     className: S.container,
-    onMouseEnter: () => m(!0),
-    onMouseLeave: () => m(!1),
+    onMouseEnter: () => N(!0),
+    onMouseLeave: () => N(!1),
     children: [(0, i.jsx)("div", {
       className: a()(S.image, {
-        [S.streamContainer]: N && !C && !(null == R ? void 0 : R.isGuildStageVoice())
+        [S.streamContainer]: p && !R && !(null == g ? void 0 : g.isGuildStageVoice())
       }),
-      children: M
+      children: y
     }), (0, i.jsxs)("div", {
       className: S.content,
-      children: [null != y && (0, i.jsx)(l.Heading, {
+      children: [null != P && (0, i.jsx)(l.Heading, {
         color: "header-primary",
         variant: "heading-sm/semibold",
-        className: 0 === U.length ? S.multiLineTitle : S.singleLineTitle,
-        children: y
-      }), null != P && (0, i.jsx)(l.Text, {
+        className: 0 === b.length ? S.multiLineTitle : S.singleLineTitle,
+        children: P
+      }), null != U && (0, i.jsx)(l.Text, {
         variant: "text-xs/medium",
         color: "text-secondary",
         className: S.subtitle,
-        children: P
-      }), !(w || k) && !(null == R ? void 0 : R.isGuildStageVoice()) && L.length > 0 && (0, i.jsx)(E.CardAvatars, {
-        users: L,
-        othersCount: v,
-        extraPill: B
+        children: U
+      }), !(k || B) && !(null == g ? void 0 : g.isGuildStageVoice()) && v.length > 0 && (0, i.jsx)(E.CardAvatars, {
+        users: v,
+        othersCount: D,
+        extraPill: V
       })]
-    }), A && G]
+    }), m && w]
   })
 }

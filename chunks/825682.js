@@ -1,45 +1,49 @@
 "use strict";
 n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("788307"),
-  l = n("280234"),
-  i = n("509275"),
-  r = n("51144"),
-  o = n("908105");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("788307"),
+  i = n("280234"),
+  r = n("509275"),
+  o = n("51144"),
+  u = n("908105");
 t.default = function(e) {
   let {
     hovered: t,
     activities: n,
-    applicationStream: u,
-    status: d,
-    user: c,
-    lastOnlineTimestamp: f,
-    experimentLocation: E = "status_text"
+    applicationStream: d,
+    status: c,
+    user: f,
+    lastOnlineTimestamp: E,
+    experimentLocation: h = "status_text"
   } = e, {
-    isFriendsAndDMsEnabled: h
-  } = l.default.useExperiment({
-    location: E
+    isFriendsAndDMsEnabled: _
+  } = i.default.useExperiment({
+    location: h
   }, {
-    autoTrackExposure: !0
-  });
-  if (n.length > 0) return (0, a.jsx)(s.default, {
-    className: o.activity,
-    textClassName: o.text,
-    emojiClassName: o.customStatusEmoji,
+    autoTrackExposure: !1
+  }), C = n.length > 0, m = !C && null != E;
+  if (s.useEffect(() => {
+      m && i.default.trackExposure({
+        location: h
+      })
+    }, [m, h]), C) return (0, a.jsx)(l.default, {
+    className: u.activity,
+    textClassName: u.text,
+    emojiClassName: u.customStatusEmoji,
     activities: n,
-    applicationStream: u,
+    applicationStream: d,
     animate: t,
-    user: c
+    user: f
   });
-  if (null == f || !h) return (0, a.jsx)("div", {
-    className: o.text,
-    children: (0, r.humanizeStatus)(d)
+  if (!m || !_) return (0, a.jsx)("div", {
+    className: u.text,
+    children: (0, o.humanizeStatus)(c)
   });
   {
-    let e = (0, i.formatRecentlyOnlineStatus)(f);
+    let e = (0, r.formatRecentlyOnlineStatus)(E);
     return (0, a.jsx)("div", {
-      className: o.text,
+      className: u.text,
       children: e
     })
   }
