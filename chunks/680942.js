@@ -1,17 +1,18 @@
 "use strict";
-l.r(t);
-var a = l("735250"),
-  s = l("470079"),
-  r = l("481060"),
-  n = l("727637"),
-  i = l("906732"),
-  o = l("241553"),
-  c = l("333867"),
-  u = l("559629"),
-  d = l("231338"),
-  f = l("689938"),
-  C = l("46309");
-let m = {
+a.r(t);
+var l = a("735250"),
+  s = a("470079"),
+  r = a("481060"),
+  n = a("727637"),
+  i = a("906732"),
+  o = a("241553"),
+  c = a("333867"),
+  u = a("559629"),
+  d = a("884697"),
+  f = a("231338"),
+  C = a("689938"),
+  m = a("46309");
+let p = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -60,43 +61,43 @@ let m = {
 t.default = e => {
   let {
     product: t,
-    returnRef: l,
-    onSuccess: p,
-    tooltipDelay: g,
-    isGiftEasterEggEnabled: E,
-    disableCustomColor: h = !1
+    returnRef: a,
+    onSuccess: g,
+    tooltipDelay: E,
+    isGiftEasterEggEnabled: h,
+    disableCustomColor: b = !1
   } = e, {
-    analyticsLocations: b
-  } = (0, i.default)(), x = s.useRef(null), v = (0, n.default)(x), S = h ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
-  return (0, a.jsx)(r.Tooltip, {
-    text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: g,
-    children: e => (0, a.jsx)(r.Button, {
+    analyticsLocations: x
+  } = (0, i.default)(), v = s.useRef(null), S = (0, n.default)(v), I = b ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+  return (0, d.isBundleProduct)(t) ? null : (0, l.jsx)(r.Tooltip, {
+    text: C.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
+    delay: E,
+    children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: x,
-      className: C.giftButton,
-      color: h ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      buttonRef: v,
+      className: m.giftButton,
+      color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
-      innerClassName: C.giftButtonInner,
-      "aria-label": f.default.Messages.PREMIUM_GIFTING_BUTTON,
+      innerClassName: m.giftButtonInner,
+      "aria-label": C.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
         e.stopPropagation(), (0, c.default)({
           skuId: t.skuId,
           isGift: !0,
-          analyticsLocations: b,
-          returnRef: l,
-          onClose: null != p ? e => {
-            e && p()
+          analyticsLocations: x,
+          returnRef: a,
+          onClose: null != g ? e => {
+            e && g()
           } : void 0
         })
       },
-      children: E ? (0, a.jsx)(o.SeasonalGiftIcon, {
-        hovered: v,
+      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
+        hovered: S,
         isContentDismissed: !0,
-        themeOverride: S,
-        boxColors: m
-      }) : (0, a.jsx)(u.default, {
+        themeOverride: I,
+        boxColors: p
+      }) : (0, l.jsx)(u.default, {
         width: 24,
         height: 24
       })

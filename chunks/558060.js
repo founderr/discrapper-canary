@@ -1,55 +1,63 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return E
   }
 });
-var a = l("735250");
-l("470079");
-var s = l("120356"),
-  r = l.n(s),
-  n = l("979554"),
-  i = l("399606"),
-  o = l("481060"),
-  c = l("594174"),
-  u = l("466111"),
-  d = l("74538"),
-  f = l("884697"),
-  C = l("409116"),
-  m = l("981631"),
-  p = l("689938"),
-  g = l("577687");
+var l = a("735250");
+a("470079");
+var s = a("120356"),
+  r = a.n(s),
+  n = a("399606"),
+  i = a("481060"),
+  o = a("594174"),
+  c = a("466111"),
+  u = a("74538"),
+  d = a("884697"),
+  f = a("409116"),
+  C = a("200615"),
+  m = a("981631"),
+  p = a("689938"),
+  g = a("577687");
 
 function E(e) {
   let {
     product: t,
-    className: l,
-    renderNitroPrice: s
-  } = e, E = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser()), h = (0, f.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.DEFAULT);
+    className: a,
+    nitroUpsell: s = !1
+  } = e, E = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser()), h = (0, d.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == h) return null;
-  if (h.amount <= 0) return (0, a.jsx)("div", {
-    className: r()(g.priceTagsContainer, l),
-    children: (0, a.jsx)(C.default, {
+  if (h.amount <= 0) return (0, l.jsx)("div", {
+    className: r()(g.priceTagsContainer, a),
+    children: (0, l.jsx)(f.default, {
       price: h
     })
   });
-  let b = (0, f.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    x = d.default.canUseCollectibles(E),
-    v = !x && t.type !== n.CollectiblesItemType.BUNDLE;
-  return (0, a.jsxs)("div", {
-    className: r()(g.priceTagsContainer, l),
-    children: [(0, a.jsx)(C.default, {
+  let b = (0, d.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+    x = u.default.canUseCollectibles(E),
+    v = !x && !(0, d.isBundleProduct)(t);
+  return (0, l.jsxs)("div", {
+    className: r()(g.priceTagsContainer, a),
+    children: [(0, l.jsx)(f.default, {
       price: h,
-      discount: x ? void 0 : (0, f.getProductDiscount)(t, x),
+      discount: x ? void 0 : (0, d.getProductDiscount)(t, x),
       className: r()(g.price, {
         [g.striked]: x,
         [g.dimmed]: x,
         [g.fullPrice]: v
       })
-    }), null != b && (0, a.jsx)(C.default, {
+    }), null != b && (0, l.jsx)(f.default, {
       price: b,
-      discount: x ? (0, f.getProductDiscount)(t, x) : void 0,
-      renderPrice: null != s ? s : v ? e => p.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
+      discount: x ? (0, d.getProductDiscount)(t, x) : void 0,
+      renderPrice: s ? e => (0, l.jsx)(i.Text, {
+        variant: "text-xs/medium",
+        children: p.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW.format({
+          price: e,
+          subscribeNowHook: e => (0, l.jsx)(C.SubscribeNow, {
+            text: e
+          })
+        })
+      }) : v ? e => p.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
       className: r()(g.price, {
@@ -57,14 +65,14 @@ function E(e) {
         [g.fullPrice]: v
       }),
       variant: x ? void 0 : "text-xs/semibold",
-      icon: (0, a.jsx)(o.Tooltip, {
+      icon: (0, l.jsx)(i.Tooltip, {
         text: p.default.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
         "aria-label": p.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
         children: e => {
           let {
             ...t
           } = e;
-          return (0, a.jsx)(u.default, {
+          return (0, l.jsx)(c.default, {
             ...t,
             className: r()(g.premiumIcon, {
               [g.fullPrice]: v

@@ -41,7 +41,6 @@ e.exports = {
   profilePreviewHeader: "profilePreviewHeader__15f94",
   sampleProfileAsset: "sampleProfileAsset__4d996",
   staticPfxPreview: "staticPfxPreview__9aa70",
-  subscribeNow: "subscribeNow__04fcf",
   titleContainer: "titleContainer__9fc26",
   titleImage: "titleImage_d36f3f",
   titleImageContainer: "titleImageContainer__66fa1",

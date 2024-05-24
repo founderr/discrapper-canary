@@ -33,6 +33,9 @@ n.r(t), n.d(t, {
   groupProfileEffects: function() {
     return L
   },
+  isBundleProduct: function() {
+    return P
+  },
   isCollectiblesGiftCode: function() {
     return v
   },
@@ -150,4 +153,5 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
   y = e => {
     let t = u.SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS[e];
     return null != t && new Date().getTime() < t
-  }
+  },
+  P = e => (null == e ? void 0 : e.type) === r.CollectiblesItemType.BUNDLE
