@@ -91,12 +91,12 @@ function L(e) {
       guildName: s.name
     }),
     k = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
-    H = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
+    B = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
       guildName: s.name
     }) : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
       guildName: s.name
     }),
-    B = (0, I.getClanBadgeUrl)(s.id, null === (n = s.clan) || void 0 === n ? void 0 : n.badge);
+    H = (0, I.getClanBadgeUrl)(s.id, null === (n = s.clan) || void 0 === n ? void 0 : n.badge);
   return U((e, t) => {
     var n;
     return t && (0, a.jsx)(r.animated.div, {
@@ -109,7 +109,7 @@ function L(e) {
       },
       ref: _,
       children: (0, a.jsx)(d.ClickableContainer, {
-        "aria-label": H,
+        "aria-label": B,
         onClick: b,
         children: (0, a.jsxs)("div", {
           className: i()(y.toastContainerInner, E ? y.hovered : null),
@@ -123,7 +123,7 @@ function L(e) {
               className: y.guildTagContainer,
               children: (0, a.jsx)(v.BaseClanTagChiplet, {
                 clanTag: null === (n = s.clan) || void 0 === n ? void 0 : n.tag,
-                clanBadge: B,
+                clanBadge: H,
                 className: y.guildClanTag
               })
             })]

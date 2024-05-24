@@ -13,13 +13,13 @@ n.r(t), n.d(t, {
     return k
   },
   ListenTimestampBadge: function() {
-    return H
+    return B
   },
   MarathonBadge: function() {
     return G
   },
   NewGameBadge: function() {
-    return B
+    return H
   },
   NewReleaseBadge: function() {
     return Z
@@ -149,7 +149,7 @@ function k(e) {
   })
 }
 
-function H(e) {
+function B(e) {
   var t;
   let {
     entry: n
@@ -176,7 +176,7 @@ function H(e) {
   })
 }
 
-function B(e) {
+function H(e) {
   let {
     entry: t
   } = e, {

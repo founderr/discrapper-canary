@@ -41,8 +41,8 @@ var a = n("735250"),
   F = n("922482"),
   w = n("431328"),
   k = n("501655"),
-  H = n("427679"),
-  B = n("513449"),
+  B = n("427679"),
+  H = n("513449"),
   G = n("153349"),
   V = n("901434"),
   W = n("302270"),
@@ -107,7 +107,7 @@ function el(e) {
 function es(e) {
   let {
     channel: t
-  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([j.default], () => j.default.can(X.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
+  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([j.default], () => j.default.can(X.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([B.default], () => B.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
   return null != s && r ? (0, a.jsx)(A.default, {
     channel: t,
     appContext: n,
@@ -135,14 +135,14 @@ function ei(e) {
     [A, x] = l.useState(0),
     {
       isOnStartStageScreen: M
-    } = (0, B.default)();
-  (0, B.useUpdateIsOnStartStageScreenEffect)(n);
+    } = (0, H.default)();
+  (0, H.useUpdateIsOnStartStageScreenEffect)(n);
   let R = (0, o.useStateFromStores)([L.default], () => L.default.getToastsEnabled(n.id)),
     y = (0, q.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
   return t = M ? (0, a.jsx)(K.default, {
     channel: n,
     onContinueClick: () => {
-      (0, B.setIsOnStartStageScreen)(!1), !C && (0, F.connectToStage)(n)
+      (0, H.setIsOnStartStageScreen)(!1), !C && (0, F.connectToStage)(n)
     }
   }) : C ? (0, a.jsx)(Y.default, {
     channel: n,

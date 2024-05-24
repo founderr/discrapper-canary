@@ -72,9 +72,9 @@ t.default = i.memo(function(e) {
   }, [y, N, I]), i.useEffect(() => () => {
     null != O.current && clearTimeout(O.current)
   }, []);
-  let H = o()(S.signHintAnimationContainer, M && S.noDisplay, "left" === I ? S.signTextLeft : S.signTextRight),
-    B = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY),
-    G = (0, E.getClanPrimaryButtonStyles)(n, B.hex());
+  let B = o()(S.signHintAnimationContainer, M && S.noDisplay, "left" === I ? S.signTextLeft : S.signTextRight),
+    H = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY),
+    G = (0, E.getClanPrimaryButtonStyles)(n, H.hex());
   return (0, s.jsxs)("div", {
     className: S.container,
     ref: P,
@@ -103,7 +103,7 @@ t.default = i.memo(function(e) {
           ref: A,
           className: S.signHintContainer,
           children: (0, s.jsxs)(u.animated.div, {
-            className: H,
+            className: B,
             style: {
               ...U,
               ...w

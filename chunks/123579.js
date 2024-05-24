@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("162267"),
   w = n("87728"),
   k = n("502762"),
-  H = n("171368"),
-  B = n("944546"),
+  B = n("171368"),
+  H = n("944546"),
   G = n("470900"),
   V = n("421486"),
   W = n("347949"),
@@ -162,7 +162,7 @@ t.default = e => {
       status: eM
     })
   }, [ep, ex, eA, eN, eM, e_]);
-  let eH = null == eD ? void 0 : eD.map(e => {
+  let eB = null == eD ? void 0 : eD.map(e => {
       let {
         guild: t,
         nick: n
@@ -175,16 +175,16 @@ t.default = e => {
         onSelect: () => (0, g.transitionToGuild)(t.id)
       }, t.id)
     }),
-    eB = null == ej ? void 0 : ej.map(e => {
+    eH = null == ej ? void 0 : ej.map(e => {
       let {
         key: t,
         user: l
       } = e;
-      return (0, a.jsx)(B.FriendRow, {
+      return (0, a.jsx)(H.FriendRow, {
         user: l,
         status: null != eM ? eM : es.StatusTypes.UNKNOWN,
         onSelect: () => {
-          (0, H.openUserProfileModal)({
+          (0, B.openUserProfileModal)({
             userId: l.id,
             channelId: n.id,
             sourceAnalyticsLocations: ef,
@@ -302,7 +302,7 @@ t.default = e => {
                     analyticsLocations: ef
                   })
                 },
-                children: eH
+                children: eB
               }) : null, eU ? (0, a.jsx)(en.default, {
                 className: i()(er.mutualFriendsList, {
                   [er.mutualFriendsDivider]: eF
@@ -323,7 +323,7 @@ t.default = e => {
                     analyticsLocations: ef
                   })
                 },
-                children: eB
+                children: eH
               }) : null]
             }), eg && (0, a.jsx)(k.default.Overlay, {
               className: i()(er.profilePanelConnections, er.appListThemedContainer),

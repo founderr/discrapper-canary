@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("316595"),
   w = n("193910"),
   k = n("951211"),
-  H = n("981631"),
-  B = n("356659"),
+  B = n("981631"),
+  H = n("356659"),
   G = n("921944"),
   V = n("689938"),
   W = n("446370");
@@ -67,20 +67,20 @@ t.default = l.memo(function(e) {
       autoTrackExposure: !1
     }),
     ei = (0, r.useStateFromStores)([T.HotspotStore], () => T.HotspotStore.hasHotspot(T.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
-    er = (0, d.useModalsStore)(e => (0, d.hasModalOpenSelector)(e, B.CLIPS_GALLERY_MODAL_KEY)),
+    er = (0, d.useModalsStore)(e => (0, d.hasModalOpenSelector)(e, H.CLIPS_GALLERY_MODAL_KEY)),
     eo = (0, r.useStateFromStores)([M.default], () => M.default.hasLayers()),
     eu = (0, r.useStateFromStores)([g.default], () => g.default.hasClips()),
     [ed, ec] = l.useState(null),
     ef = (0, C.useEnableClips)() && (et || eu),
     eh = K.isPrivate(),
-    em = (0, r.useStateFromStores)([y.default], () => eh || y.default.can(H.Permissions.ATTACH_FILES, K) && y.default.can(H.Permissions.SEND_MESSAGES, K)),
+    em = (0, r.useStateFromStores)([y.default], () => eh || y.default.can(B.Permissions.ATTACH_FILES, K) && y.default.can(B.Permissions.SEND_MESSAGES, K)),
     ep = (0, f.default)(en);
   (null == ep ? void 0 : ep.newClipIds.length) !== (null == en ? void 0 : en.newClipIds.length) && (null !== (t = null == en ? void 0 : en.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ed && ei && el && !er && !es && !eo && ec("recentClips");
   let eE = (e, t, n) => {
       null != t && "ETOOLARGE" === t.code ? (0, U.showUploadFileSizeExceededError)(K, []) : (0, U.promptToUpload)(e, K, Z, {
         requireConfirm: !0,
         showLargeMessageDialog: n
-      }), D.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
+      }), D.ComponentDispatch.dispatchToLastSubscribed(B.ComponentActions.TEXTAREA_FOCUS)
     },
     eC = (0, r.useStateFromStores)([R.default], () => R.default.hasCurrentUserSentMessageSinceAppStart());
 
@@ -94,7 +94,7 @@ t.default = l.memo(function(e) {
         channelId: K.id
       })
     }, {
-      modalKey: B.CLIPS_GALLERY_MODAL_KEY
+      modalKey: H.CLIPS_GALLERY_MODAL_KEY
     }), ec(null)
   }
   l.useEffect(() => {
@@ -102,8 +102,8 @@ t.default = l.memo(function(e) {
       var e;
       return null === (e = $.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
     };
-    return D.ComponentDispatch.subscribe(H.ComponentActions.UPLOAD_FILE, e), () => {
-      D.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
+    return D.ComponentDispatch.subscribe(B.ComponentActions.UPLOAD_FILE, e), () => {
+      D.ComponentDispatch.unsubscribe(B.ComponentActions.UPLOAD_FILE, e)
     }
   });
   let eS = (0, N.useCanStartPublicThread)(K),
@@ -128,8 +128,8 @@ t.default = l.memo(function(e) {
       appContext: J
     });
   if (0 === eM.length) return null;
-  let eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
-    ey = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eR;
+  let eR = ee.some(e => (0, p.default)(e, B.ActivityFlags.SYNC)),
+    ey = ee.some(e => (0, p.default)(e, B.ActivityFlags.JOIN) && !(0, p.default)(e, B.ActivityFlags.EMBEDDED)) || eR;
   Y = eN ? (0, a.jsx)(u.CirclePlusIcon, {
     className: W.__invalid_attachButtonIcon,
     colorClass: W.attachButtonPlus

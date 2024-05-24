@@ -40,15 +40,15 @@ var a = n("735250"),
 t.default = function(e) {
   var t, n, s;
   let {
-    channelId: H,
-    previewQuest: B,
+    channelId: B,
+    previewQuest: H,
     isParticipatingOverride: G
   } = e, [V, W] = l.useState(!1), Y = l.useCallback(() => W(!0), []), z = l.useCallback(() => W(!1), []), K = l.useContext(p.IdleStateContext), Z = (0, r.useStateFromStores)([C.default], () => C.default.getCurrentUser()), q = (0, r.useStateFromStores)([m.default], () => m.default.getState().theme), X = (0, o.isThemeDark)(q) ? U.ThemeTypes.DARK : U.ThemeTypes.LIGHT, {
     isCurrentUserStreamingQuestApplication: Q,
     quest: J
   } = (0, r.useStateFromStoresObject)([E.default, c.default, I.default], () => {
-    let e = c.default.getParticipants(H),
-      t = null != B ? B : function(e, t, n) {
+    let e = c.default.getParticipants(B),
+      t = null != H ? H : function(e, t, n) {
         for (let s of e) {
           var a, l;
           if (s.type === F.ParticipantTypes.STREAM) {
@@ -80,14 +80,14 @@ t.default = function(e) {
       }(e, t, Z, E.default),
       quest: t
     }
-  }, [H, Z, B]), $ = null != J ? M.SharedQuestFields.build(J.config) : null, ee = null == $ ? void 0 : $.application.id, et = (0, r.useStateFromStoresObject)([f.default], () => {
+  }, [B, Z, H]), $ = null != J ? M.SharedQuestFields.build(J.config) : null, ee = null == $ ? void 0 : $.application.id, et = (0, r.useStateFromStoresObject)([f.default], () => {
     let e = f.default.getRunningGames().map(e => e.id);
     return null != J && (0, v.isEligibleForQuestPlaytime)({
       location: b.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
     }) && (0, N.hasPlaytimeTaskVariant)({
       quest: J
     }) && e.includes(ee)
-  }, [J, ee]), en = !0 === G || Q || et, ea = (0, r.useStateFromStores)([I.default], () => null != J && I.default.isEnrolling(J.id), [J]), el = (0, r.useStateFromStores)([c.default], () => ((null == Z ? void 0 : Z.id) == null ? null : c.default.getParticipant(H, Z.id)) != null, [H, Z]), es = (0, T.useQuestFormattedDate)(null == J ? void 0 : J.config.expiresAt), ei = (0, T.useQuestFormattedDate)(null == $ ? void 0 : $.rewardsExpireAt), er = l.useCallback(() => {
+  }, [J, ee]), en = !0 === G || Q || et, ea = (0, r.useStateFromStores)([I.default], () => null != J && I.default.isEnrolling(J.id), [J]), el = (0, r.useStateFromStores)([c.default], () => ((null == Z ? void 0 : Z.id) == null ? null : c.default.getParticipant(B, Z.id)) != null, [B, Z]), es = (0, T.useQuestFormattedDate)(null == J ? void 0 : J.config.expiresAt), ei = (0, T.useQuestFormattedDate)(null == $ ? void 0 : $.rewardsExpireAt), er = l.useCallback(() => {
     null != J && (0, _.enrollInQuest)(J.id, {
       questContent: A.QuestContent.QUEST_LIVE_STREAM,
       questContentCTA: S.QuestContentCTA.ACCEPT_QUEST
@@ -123,7 +123,7 @@ t.default = function(e) {
     isQuestBarShowing: eC,
     isCurrentUserCallParticipant: el
   });
-  let eg = null != B && (null === (s = J.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
+  let eg = null != H && (null === (s = J.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
   if (!eg && (ep || ef || eC) || !eg && !el) return null;
   let eS = (0, a.jsx)(O.default, {
     className: k.rewardTile,

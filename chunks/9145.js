@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("47120");
 var a = n("735250"),
@@ -45,13 +45,13 @@ let w = A.Sizes.SIZE_32,
     [D.FocusedActivityLayouts.RESIZABLE]: F.resizable
   };
 
-function H(e) {
+function B(e) {
   var t, n;
   let {
     maxHeight: s,
-    connectedChannelId: H,
-    renderExternalHeader: B
-  } = e, G = (0, L.default)(), V = (0, r.useStateFromStoresArray)([R.default], () => null != H ? R.default.getEmbeddedActivitiesForChannel(H) : [], [H]), W = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(H)), Y = (0, y.useEmbeddedApps)(V), z = (0, y.useEmbeddedAppsWithPresence)(Y), K = l.useCallback(() => {
+    connectedChannelId: B,
+    renderExternalHeader: H
+  } = e, G = (0, L.default)(), V = (0, r.useStateFromStoresArray)([R.default], () => null != B ? R.default.getEmbeddedActivitiesForChannel(B) : [], [B]), W = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(B)), Y = (0, y.useEmbeddedApps)(V), z = (0, y.useEmbeddedAppsWithPresence)(Y), K = l.useCallback(() => {
     (0, M.updateActivityPanelMode)(D.ActivityPanelModes.PIP)
   }, []), Z = l.useRef(null), q = (0, r.useStateFromStores)([R.default], () => R.default.getFocusedLayout()), X = q !== D.FocusedActivityLayouts.NO_CHAT, [Q, J] = l.useState(null !== (t = p.default.activityPanelHeight) && void 0 !== t ? t : s), $ = l.useCallback(e => {
     d.default.updatedUnsyncedSettings({
@@ -139,7 +139,7 @@ function H(e) {
     className: i()(F.wrapper, k[q], (0, v.getThemeClass)(b.ThemeTypes.DARK)),
     ref: Z,
     style: ec,
-    children: [null == B ? void 0 : B(), (0, a.jsxs)("div", {
+    children: [null == H ? void 0 : H(), (0, a.jsxs)("div", {
       className: F.activityPanelContainer,
       children: [X ? null : (0, a.jsx)("div", {
         className: F.header,
@@ -162,7 +162,7 @@ function H(e) {
         ref: ee,
         children: (0, a.jsx)(O.default, {
           className: F.iframe,
-          embedId: (0, j.default)(H, G.id)
+          embedId: (0, j.default)(B, G.id)
         })
       }), null != eo ? (0, a.jsxs)("div", {
         className: F.footer,
@@ -182,7 +182,7 @@ function H(e) {
             className: F.leaveButtonContainer,
             children: (0, a.jsx)(C.default, {
               applicationId: G.id,
-              channelId: H,
+              channelId: B,
               centerButton: !0,
               color: "red",
               className: F.leaveActivityButton
