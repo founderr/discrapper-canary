@@ -4,90 +4,108 @@ var i = n("735250");
 n("470079");
 var r = n("120356"),
   s = n.n(r),
-  a = n("829968"),
-  o = n("346656"),
-  l = n("438071"),
-  u = n("474936"),
-  d = n("689938"),
-  _ = n("458217");
-let c = {
-    XXSMALL: _.xxsmall,
-    XSMALL: _.xsmall,
-    SMALL: _.small,
-    MEDIUM: _.medium,
-    LARGE: _.large
+  a = n("692547"),
+  o = n("829968"),
+  l = n("346656"),
+  u = n("438071"),
+  d = n("474936"),
+  _ = n("689938"),
+  c = n("458217");
+let E = {
+    XXSMALL: c.xxsmall,
+    XSMALL: c.xsmall,
+    SMALL: c.small,
+    MEDIUM: c.medium,
+    LARGE: c.large
   },
-  E = e => {
+  I = e => {
     let t, {
       game: r,
-      guild: E,
-      skuId: I,
-      pid: T,
-      className: f,
-      guildClassName: S,
-      size: h = c.MEDIUM
+      guild: I,
+      skuId: T,
+      pid: f,
+      className: S,
+      guildClassName: h,
+      size: A = E.MEDIUM
     } = e;
-    if (null != I && (t = function(e) {
+    if (null != T && (t = function(e) {
         if (null == e) return null;
         switch (e) {
-          case u.PremiumSubscriptionSKUs.GUILD:
+          case d.PremiumSubscriptionSKUs.GUILD:
             return n("632342");
-          case u.PremiumSubscriptionSKUs.TIER_0:
+          case d.PremiumSubscriptionSKUs.TIER_0:
             return n("467596");
-          case u.PremiumSubscriptionSKUs.TIER_1:
+          case d.PremiumSubscriptionSKUs.TIER_1:
             return n("670957");
-          case u.PremiumSubscriptionSKUs.TIER_2:
-          case u.PremiumSubscriptionSKUs.LEGACY:
+          case d.PremiumSubscriptionSKUs.TIER_2:
+          case d.PremiumSubscriptionSKUs.LEGACY:
             return n("480768");
           default:
             return null
         }
-      }(I)), null != r && null == t && (t = r.getIconURL(function(e) {
+      }(T)), null != r && null == t && (t = r.getIconURL(function(e) {
         switch (e) {
-          case c.XXSMALL:
+          case E.XXSMALL:
             return 16;
-          case c.XSMALL:
+          case E.XSMALL:
             return 24;
-          case c.SMALL:
+          case E.SMALL:
             return 30;
-          case c.MEDIUM:
+          case E.MEDIUM:
             return 40;
-          case c.LARGE:
+          case E.LARGE:
             return 60;
           default:
             return 80
         }
-      }(h))), null == (t = (0, a.default)(T, t)) && null != E) {
+      }(A))), null == (t = (0, o.default)(f, t)) && null != I) {
       let e = function(e) {
         switch (e) {
-          case c.XSMALL:
-            return o.default.Sizes.SMALLER;
-          case c.SMALL:
-            return o.default.Sizes.SMALL;
-          case c.LARGE:
-            return o.default.Sizes.LARGE;
+          case E.XSMALL:
+            return l.default.Sizes.SMALLER;
+          case E.SMALL:
+            return l.default.Sizes.SMALL;
+          case E.LARGE:
+            return l.default.Sizes.LARGE;
           default:
-          case c.MEDIUM:
-            return o.default.Sizes.MEDIUM
+          case E.MEDIUM:
+            return l.default.Sizes.MEDIUM
         }
-      }(h);
-      return (0, i.jsx)(o.default, {
-        className: s()(_.gameIcon, S, f),
-        guild: E,
+      }(A);
+      return (0, i.jsx)(l.default, {
+        className: s()(c.gameIcon, h, S),
+        guild: I,
         size: e
       })
     }
-    if (null == t) return (0, i.jsx)(l.default, {
-      className: s()(_.gameIcon, h, f)
+    if (null == t) return (0, i.jsx)(u.default, {
+      className: s()(c.gameIcon, A, S)
     });
-    let A = null == r ? void 0 : r.name,
-      m = null != A && "" !== A ? d.default.Messages.APPLICATION_ICON_A11Y_LABEL.format({
-        applicationName: A
-      }) : d.default.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
+    let m = null == r ? void 0 : r.name,
+      N = null != m && "" !== m ? _.default.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+        applicationName: m
+      }) : _.default.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
     return (0, i.jsx)("img", {
-      alt: m,
+      alt: N,
       src: t,
-      className: s()(_.gameIcon, h, f)
+      className: s()(c.gameIcon, A, S),
+      style: {
+        borderRadius: function(e) {
+          switch (e) {
+            case E.XXSMALL:
+              return a.default.radii.xs;
+            case E.XSMALL:
+            case E.SMALL:
+              return a.default.radii.sm;
+            case E.MEDIUM:
+              return a.default.radii.md;
+            case E.LARGE:
+              return a.default.radii.lg;
+            default:
+              return a.default.radii.sm
+          }
+        }(A)
+      }
     })
   };
-E.Sizes = c, t.default = E
+I.Sizes = E, t.default = I
