@@ -190,7 +190,7 @@ function W(e, t, n, i, r, s) {
     _ = S.default.getChannel(e);
   if (s && null !== (l = null == _ ? void 0 : _.isPrivate()) && void 0 !== l && l && d.length <= 1 && null == r && u.default.selectParticipant(e, null), null == r) return;
   let c = h.default.getMediaSessionId(),
-    E = (0, M.default)(t),
+    E = "activity_id" in t ? (0, M.getActivitySessionIdFromServerData)(t) : (0, M.default)(t),
     I = null == c && (null == _ ? void 0 : _.isVocal()) === !0 && (null == _ ? void 0 : _.isPrivate()) === !1;
   null != E && !I && (null === (o = V[n]) || void 0 === o || o.call(V, {
     activitySessionId: E,

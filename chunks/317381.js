@@ -74,10 +74,10 @@ function V(e) {
     N = h.some(e => e === A),
     p = null === (t = _.find(e => e.userId === A)) || void 0 === t ? void 0 : t.sessionId,
     O = _.some(e => (0, f.isActivityParticipantCurrentUserCurrentSession)(e)),
-    v = null == p,
+    v = null == d,
     D = C.get(o),
     M = {
-      analyticsActivitySessionId: null != E ? E : "",
+      analyticsActivitySessionId: null != E ? E : void 0,
       applicationId: o,
       channelId: s,
       guildId: r,
