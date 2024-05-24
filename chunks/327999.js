@@ -50,7 +50,7 @@ function N(e, t) {
   t.forEach(t => (function(e, t, n) {
     f[e + t] = 3
   })(e, t, 3))
-}(o = r || (r = {}))[o.UNSPECIFIED = 0] = "UNSPECIFIED", o[o.BOT = 1] = "BOT", o[o.INTEGRATION = 2] = "INTEGRATION", o[o.DISCOVERY = 3] = "DISCOVERY", o[o.HUB = 4] = "HUB", o[o.INVITE = 5] = "INVITE", o[o.VANITY_URL = 6] = "VANITY_URL";
+}(o = r || (r = {}))[o.UNSPECIFIED = 0] = "UNSPECIFIED", o[o.BOT = 1] = "BOT", o[o.INTEGRATION = 2] = "INTEGRATION", o[o.DISCOVERY = 3] = "DISCOVERY", o[o.HUB = 4] = "HUB", o[o.INVITE = 5] = "INVITE", o[o.VANITY_URL = 6] = "VANITY_URL", o[o.MANUAL_MEMBER_VERIFICATION = 7] = "MANUAL_MEMBER_VERIFICATION";
 let p = function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -70,6 +70,8 @@ let p = function(e) {
         vanityUrl: t
       });
       return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
+    case 7:
+      return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_MANUAL_VERIFICATION;
     default:
       return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
   }
