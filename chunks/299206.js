@@ -20,18 +20,20 @@ function d(e) {
     onSuccess: r,
     shiftId: d,
     showIconFirst: _,
-    showWithoutDeveloperMode: c
-  } = e, E = o.DeveloperMode.useSetting();
-  if (__OVERLAY__ || !(c || E) || !u.SUPPORTS_COPY || null == t) return null;
-  let I = "devmode-copy-id-".concat(t);
+    showWithoutDeveloperMode: c,
+    focusedClassName: E
+  } = e, I = o.DeveloperMode.useSetting();
+  if (__OVERLAY__ || !(c || I) || !u.SUPPORTS_COPY || null == t) return null;
+  let T = "devmode-copy-id-".concat(t);
   return (0, i.jsx)(a.MenuItem, {
-    id: I,
+    id: T,
     label: n,
     action: function(e) {
       let n = null != d && e.shiftKey ? d : t;
       s()(null != n, "cannot copy null text"), (0, u.copy)(n), null == r || r()
     },
     icon: l.default,
-    showIconFirst: _
-  }, I)
+    showIconFirst: _,
+    focusedClassName: E
+  }, T)
 }

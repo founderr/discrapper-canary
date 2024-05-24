@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return ee
+    return el
   }
 }), n("47120");
 var a = n("735250"),
@@ -32,48 +32,53 @@ var a = n("735250"),
   L = n("502762"),
   M = n("530"),
   P = n("894374"),
-  x = n("171368"),
-  y = n("23293"),
-  D = n("695346"),
-  b = n("199902"),
-  U = n("293273"),
-  j = n("158776"),
-  G = n("594174"),
-  w = n("881201"),
-  k = n("26290"),
-  B = n("626135"),
-  F = n("70956"),
-  H = n("51144"),
-  V = n("246133"),
-  Y = n("474376"),
-  W = n("383832"),
-  K = n("981631"),
-  z = n("228168"),
-  q = n("689938"),
-  Q = n("476002");
-let Z = [{
-  duration: 30 * F.default.Millis.MINUTE,
-  label: () => q.default.Messages.MUTE_DURATION_30_MINUTES
+  x = n("544989"),
+  y = n("162159"),
+  D = n("171368"),
+  b = n("580512"),
+  U = n("67152"),
+  j = n("23293"),
+  G = n("695346"),
+  w = n("199902"),
+  k = n("293273"),
+  B = n("158776"),
+  F = n("246946"),
+  H = n("594174"),
+  V = n("881201"),
+  Y = n("26290"),
+  W = n("626135"),
+  K = n("70956"),
+  z = n("51144"),
+  q = n("246133"),
+  Q = n("474376"),
+  Z = n("383832"),
+  X = n("981631"),
+  J = n("228168"),
+  $ = n("689938"),
+  ee = n("476002");
+let et = [{
+  duration: 30 * K.default.Millis.MINUTE,
+  label: () => $.default.Messages.MUTE_DURATION_30_MINUTES
 }, {
-  duration: F.default.Millis.HOUR,
-  label: () => q.default.Messages.MUTE_DURATION_1_HOUR
+  duration: K.default.Millis.HOUR,
+  label: () => $.default.Messages.MUTE_DURATION_1_HOUR
 }, {
-  duration: 3 * F.default.Millis.HOUR,
-  label: () => q.default.Messages.MUTE_DURATION_3_HOURS
+  duration: 3 * K.default.Millis.HOUR,
+  label: () => $.default.Messages.MUTE_DURATION_3_HOURS
 }, {
-  duration: 8 * F.default.Millis.HOUR,
-  label: () => q.default.Messages.MUTE_DURATION_8_HOURS
+  duration: 8 * K.default.Millis.HOUR,
+  label: () => $.default.Messages.MUTE_DURATION_8_HOURS
 }, {
-  duration: F.default.Millis.DAY,
-  label: () => q.default.Messages.MUTE_DURATION_24_HOURS
+  duration: K.default.Millis.DAY,
+  label: () => $.default.Messages.MUTE_DURATION_24_HOURS
 }, {
   duration: void 0,
-  label: () => q.default.Messages.DURATION_FOREVER
+  label: () => $.default.Messages.DURATION_FOREVER
 }];
 
-function X(e, t, n, s) {
+function en(e, t, n, s) {
   let l = (0, a.jsx)(a.Fragment, {
-    children: Z.map(s => {
+    children: et.map(s => {
       let {
         duration: l,
         label: i
@@ -81,14 +86,14 @@ function X(e, t, n, s) {
       return (0, a.jsx)(E.MenuItem, {
         id: "".concat(e, "-").concat(l),
         label: i(),
-        action: () => (0, V.default)(e, t, n, l),
+        action: () => (0, q.default)(e, t, n, l),
         dontCloseOnAction: !0
       }, l)
     })
   });
   return (0, a.jsx)(E.MenuItem, {
     id: e,
-    className: Q.expiringStatusMenuItem,
+    className: ee.expiringStatusMenuItem,
     keepItemStyles: !0,
     hasSubmenu: !0,
     label: t => {
@@ -96,28 +101,28 @@ function X(e, t, n, s) {
         isFocused: n
       } = t;
       return (0, a.jsxs)("div", {
-        className: Q.statusItem,
+        className: ee.statusItem,
         children: [(0, a.jsx)(E.Status, {
           status: e,
-          className: Q.icon,
+          className: ee.icon,
           size: 10,
           color: n ? "currentColor" : void 0
         }), (0, a.jsx)("div", {
-          className: Q.status,
-          children: (0, H.humanizeStatus)(e)
+          className: ee.status,
+          children: (0, z.humanizeStatus)(e)
         }), null != s && (0, a.jsx)("div", {
-          className: Q.description,
+          className: ee.description,
           children: s
         })]
       })
     },
-    action: () => (0, V.default)(e, t, n),
+    action: () => (0, q.default)(e, t, n),
     dontCloseOnAction: !0,
-    children: e !== K.StatusTypes.ONLINE ? l : void 0
+    children: e !== X.StatusTypes.ONLINE ? l : void 0
   })
 }
 
-function J(e, t, n, s) {
+function ea(e, t, n, s) {
   return (0, a.jsx)(E.MenuItem, {
     id: e,
     keepItemStyles: !0,
@@ -126,27 +131,27 @@ function J(e, t, n, s) {
         isFocused: n
       } = t;
       return (0, a.jsxs)("div", {
-        className: Q.statusItem,
+        className: ee.statusItem,
         children: [(0, a.jsx)(E.Status, {
           status: e,
-          className: Q.icon,
+          className: ee.icon,
           size: 10,
           color: n ? "currentColor" : void 0
         }), (0, a.jsx)("div", {
-          className: Q.status,
-          children: (0, H.humanizeStatus)(e)
+          className: ee.status,
+          children: (0, z.humanizeStatus)(e)
         }), null != s && (0, a.jsx)("div", {
-          className: Q.description,
+          className: ee.description,
           children: s
         })]
       })
     },
-    action: () => (0, V.default)(e, t, n),
+    action: () => (0, q.default)(e, t, n),
     dontCloseOnAction: !0
   })
 }
 
-function $(e) {
+function es(e) {
   let {
     user: t,
     customStatus: n,
@@ -154,27 +159,27 @@ function $(e) {
     isApplicationStreaming: r,
     onClose: o,
     onSelect: h,
-    closePopout: b
-  } = e, U = (0, _.useAnalyticsContext)(), {
-    analyticsLocations: G
-  } = (0, S.default)(m.default.ACCOUNT_PROFILE_POPOUT), F = (0, R.default)(t.id, l), V = __OVERLAY__, [$, ee] = (0, c.useStateFromStoresArray)([j.default], () => {
+    closePopout: w
+  } = e, k = (0, _.useAnalyticsContext)(), {
+    analyticsLocations: H
+  } = (0, S.default)(m.default.ACCOUNT_PROFILE_POPOUT), K = (0, R.default)(t.id, l), q = __OVERLAY__, [es, el] = (0, c.useStateFromStoresArray)([B.default], () => {
     var e;
     let n = t.id;
-    return "string" != typeof n ? [void 0, K.StatusTypes.UNKNOWN] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.getStatus(n)]
-  }), et = function(e, t) {
+    return "string" != typeof n ? [void 0, X.StatusTypes.UNKNOWN] : [null !== (e = B.default.findActivity(n, e => e.type !== X.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, B.default.getStatus(n)]
+  }), ei = function(e, t) {
     let n = g.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
       }).expiringStatus,
-      s = D.StatusExpiresAtSetting.useSetting(),
+      s = G.StatusExpiresAtSetting.useSetting(),
       l = (0, T.useFocusModeEnabled)(),
       i = A.QuietModeExperiment.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
-      r = D.FocusModeExpiresAtSetting.useSetting(),
-      o = e === K.StatusTypes.DND,
+      r = G.FocusModeExpiresAtSetting.useSetting(),
+      o = e === X.StatusTypes.DND,
       d = t => {
-        let n = null != s && "0" !== s ? q.default.Messages.STATUS_UNTIL.format({
-          endTime: new Date(Number(s)).toLocaleString(q.default.getLocale(), {
+        let n = null != s && "0" !== s ? $.default.Messages.STATUS_UNTIL.format({
+          endTime: new Date(Number(s)).toLocaleString($.default.getLocale(), {
             month: "numeric",
             day: "numeric",
             hour: "numeric",
@@ -183,16 +188,16 @@ function $(e) {
         }) : void 0;
         if (e === t && null != n) return n;
         switch (t) {
-          case K.StatusTypes.DND:
-            return i ? q.default.Messages.STATUS_DND_HELP_FOCUS_MODE : q.default.Messages.STATUS_DND_HELP;
-          case K.StatusTypes.INVISIBLE:
-            return q.default.Messages.STATUS_INVISIBLE_HELPER;
+          case X.StatusTypes.DND:
+            return i ? $.default.Messages.STATUS_DND_HELP_FOCUS_MODE : $.default.Messages.STATUS_DND_HELP;
+          case X.StatusTypes.INVISIBLE:
+            return $.default.Messages.STATUS_INVISIBLE_HELPER;
           default:
             return
         }
       },
       c = (0, a.jsx)(a.Fragment, {
-        children: Z.map(t => {
+        children: et.map(t => {
           let {
             duration: n,
             label: s
@@ -208,35 +213,35 @@ function $(e) {
         })
       });
     return (0, a.jsxs)(a.Fragment, {
-      children: [J(K.StatusTypes.ONLINE, e, t), (0, a.jsx)(E.MenuSeparator, {}, "menu-separator-statuses"), n ? X(K.StatusTypes.IDLE, e, t, d(K.StatusTypes.IDLE)) : J(K.StatusTypes.IDLE, e, t, d(K.StatusTypes.IDLE)), n ? X(K.StatusTypes.DND, e, t, d(K.StatusTypes.DND)) : J(K.StatusTypes.DND, e, t, d(K.StatusTypes.DND)), n ? X(K.StatusTypes.INVISIBLE, e, t, d(K.StatusTypes.INVISIBLE)) : J(K.StatusTypes.INVISIBLE, e, t, d(K.StatusTypes.INVISIBLE)), (0, a.jsx)(E.MenuSeparator, {}, "menu-separator-statuses"), i || l ? (0, a.jsx)(E.MenuItem, {
+      children: [ea(X.StatusTypes.ONLINE, e, t), (0, a.jsx)(E.MenuSeparator, {}, "menu-separator-statuses"), n ? en(X.StatusTypes.IDLE, e, t, d(X.StatusTypes.IDLE)) : ea(X.StatusTypes.IDLE, e, t, d(X.StatusTypes.IDLE)), n ? en(X.StatusTypes.DND, e, t, d(X.StatusTypes.DND)) : ea(X.StatusTypes.DND, e, t, d(X.StatusTypes.DND)), n ? en(X.StatusTypes.INVISIBLE, e, t, d(X.StatusTypes.INVISIBLE)) : ea(X.StatusTypes.INVISIBLE, e, t, d(X.StatusTypes.INVISIBLE)), (0, a.jsx)(E.MenuSeparator, {}, "menu-separator-statuses"), i || l ? (0, a.jsx)(E.MenuItem, {
         id: "quiet-mode",
         "aria-label": "focus mode",
-        className: Q.expiringStatusMenuItem,
+        className: ee.expiringStatusMenuItem,
         keepItemStyles: !0,
         hasSubmenu: !0,
         showIconFirst: !0,
         label: () => (0, a.jsxs)("div", {
-          className: Q.statusItem,
+          className: ee.statusItem,
           children: [(0, a.jsx)(f.BellSlashIcon, {
             width: 12,
             height: 12,
-            className: Q.icon
+            className: ee.icon
           }), (0, a.jsxs)("div", {
-            className: Q.focusModeTitle,
-            children: [q.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(k.TextBadge, {
-              text: l ? q.default.Messages.FOCUS_MODE_BADGE_ON : o ? q.default.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : q.default.Messages.FOCUS_MODE_BADGE_OFF,
+            className: ee.focusModeTitle,
+            children: [$.default.Messages.FOCUS_MODE_TITLE, (0, a.jsx)(Y.TextBadge, {
+              text: l ? $.default.Messages.FOCUS_MODE_BADGE_ON : o ? $.default.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : $.default.Messages.FOCUS_MODE_BADGE_OFF,
               color: l ? u.default.BRAND_500 : o ? u.default.RED_400 : u.default.PRIMARY_500
             })]
           }), (0, a.jsx)("div", {
-            className: Q.description,
-            children: l && null != r && "0" !== r ? q.default.Messages.STATUS_UNTIL.format({
-              endTime: new Date(Number(r)).toLocaleString(q.default.getLocale(), {
+            className: ee.description,
+            children: l && null != r && "0" !== r ? $.default.Messages.STATUS_UNTIL.format({
+              endTime: new Date(Number(r)).toLocaleString($.default.getLocale(), {
                 month: "numeric",
                 day: "numeric",
                 hour: "numeric",
                 minute: "2-digit"
               })
-            }) : q.default.Messages.FOCUS_MODE_DESCRIPTION
+            }) : $.default.Messages.FOCUS_MODE_DESCRIPTION
           })]
         }),
         action: () => {
@@ -246,78 +251,94 @@ function $(e) {
         children: c
       }, "quiet-mode") : null]
     })
-  }(ee, U), {
-    ref: en
+  }(el, k), {
+    ref: er
   } = (0, C.default)();
   s.useEffect(() => {
-    B.default.track(K.AnalyticEvents.OPEN_POPOUT, {
+    W.default.track(X.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != n,
       other_user_id: t.id,
-      application_id: null != $ ? $.application_id : void 0,
+      application_id: null != es ? es.application_id : void 0,
       is_streaming: r,
-      application_name: null != $ ? $.name : void 0,
-      profile_has_nitro_customization: (null == F ? void 0 : F.banner) != null,
-      location: U.location,
-      has_profile_effect: (null == F ? void 0 : F.profileEffectId) != null
+      application_name: null != es ? es.name : void 0,
+      profile_has_nitro_customization: (null == K ? void 0 : K.banner) != null,
+      location: k.location,
+      has_profile_effect: (null == K ? void 0 : K.profileEffectId) != null
     })
   }, []);
-  let ea = e => {
-      null == b || b(), (0, x.openUserProfileModal)({
-        sourceAnalyticsLocations: G,
+  let eo = e => {
+      null == w || w(), (0, D.openUserProfileModal)({
+        sourceAnalyticsLocations: H,
         userId: t.id,
         guildId: l,
         ...e
       })
     },
-    es = (0, T.useFocusModeEnabled)(),
-    el = ee === K.StatusTypes.DND,
-    ei = (0, Y.useMultiAccountMenuItems)(),
-    er = (0, p.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
-    eo = (0, I.default)({
+    eu = (0, T.useFocusModeEnabled)(),
+    ed = el === X.StatusTypes.DND,
+    ec = (0, Q.useMultiAccountMenuItems)(),
+    ef = (0, p.useCustomStatusMenuItem)(null != n ? n : void 0, ee.menuItemFocused),
+    eE = (0, I.default)({
       id: t.id,
-      label: q.default.Messages.COPY_ID_USER,
-      showIconFirst: !0
-    });
+      label: $.default.Messages.COPY_ID_USER,
+      showIconFirst: !0,
+      focusedClassName: ee.menuItemFocused
+    }),
+    eh = (0, c.useStateFromStores)([F.default], () => F.default.hidePersonalInformation);
   return (0, a.jsx)(S.AnalyticsLocationProvider, {
-    value: G,
+    value: H,
     children: (0, a.jsx)(N.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
       children: (0, a.jsx)("div", {
-        className: Q.popoutContainer,
-        ref: en,
+        className: ee.popoutContainer,
+        ref: er,
         children: (0, a.jsxs)(L.default, {
-          className: Q.themeContainer,
+          className: ee.themeContainer,
           user: t,
-          displayProfile: F,
-          profileType: z.UserProfileTypes.BITE_SIZE,
-          children: [(0, a.jsx)(y.default, {
+          displayProfile: K,
+          profileType: J.UserProfileTypes.BITE_SIZE,
+          children: [(0, a.jsx)(x.default, {
+            profileType: J.UserProfileTypes.BITE_SIZE,
+            children: (0, a.jsx)(y.default, {
+              onClose: o
+            })
+          }), (0, a.jsx)(j.default, {
             user: t,
-            displayProfile: F,
-            onOpenProfile: V ? void 0 : ea
+            displayProfile: K,
+            onOpenProfile: q ? void 0 : eo
           }), (0, a.jsxs)("div", {
-            className: Q.body,
+            className: ee.body,
             children: [(0, a.jsx)(M.default, {
               user: t,
-              profileType: z.UserProfileTypes.BITE_SIZE,
-              onOpenProfile: () => ea({
+              className: ee.username,
+              profileType: J.UserProfileTypes.BITE_SIZE,
+              onOpenProfile: () => eo({
                 autoFocusNote: !1
               }),
-              pronouns: null == F ? void 0 : F.pronouns,
+              pronouns: null == K ? void 0 : K.pronouns,
               tags: (0, a.jsx)(P.UserProfileBadgesTag, {
-                displayProfile: F,
+                displayProfile: K,
                 onClose: o
               }),
               nicknameIcons: (0, a.jsx)(O.default, {
                 userId: t.id
               })
+            }), (0, a.jsx)(U.default, {
+              user: t,
+              bio: null == K ? void 0 : K.bio,
+              hidePersonalInformation: eh,
+              onClose: o
+            }), (0, a.jsx)(b.default, {
+              user: t,
+              onClose: o
             }), (0, a.jsxs)(E.Menu, {
               navId: "account",
-              "aria-label": q.default.Messages.SET_STATUS,
+              "aria-label": $.default.Messages.SET_STATUS,
               hideScroller: !0,
-              className: Q.menu,
+              className: ee.menu,
               onClose: o,
               onSelect: h,
               children: [(0, a.jsxs)(E.MenuGroup, {
@@ -329,35 +350,35 @@ function $(e) {
                       alignItems: "center",
                       justifyContent: "space-between"
                     },
-                    children: [(0, H.humanizeStatus)(ee), es || el ? (0, a.jsx)(f.BellSlashIcon, {
+                    children: [(0, z.humanizeStatus)(el), eu || ed ? (0, a.jsx)(f.BellSlashIcon, {
                       width: 12,
                       height: 12
                     }) : null]
                   }),
-                  focusedClassName: Q.menuItemFocused,
-                  subMenuIconClassName: Q.subMenuIcon,
+                  focusedClassName: ee.menuItemFocused,
+                  subMenuIconClassName: ee.subMenuIcon,
                   action: d.isMobile ? function() {
                     (0, v.trackUserProfileAction)({
                       action: "PRESS_SET_STATUS",
                       layout: "SIMPLIFIED_ACCOUNT_POPOUT",
                       userId: t.id,
                       guildId: l,
-                      analyticsLocations: G
+                      analyticsLocations: H
                     }), (0, E.openModalLazy)(() => new Promise(e => {
                       e(e => (0, a.jsx)(E.ModalRoot, {
                         ...e,
                         size: E.ModalSize.SMALL,
-                        className: Q.modal,
-                        "aria-label": q.default.Messages.SET_STATUS,
+                        className: ee.modal,
+                        "aria-label": $.default.Messages.SET_STATUS,
                         children: (0, a.jsx)(E.Menu, {
                           navId: "account",
                           variant: "fixed",
-                          "aria-label": q.default.Messages.SET_STATUS,
+                          "aria-label": $.default.Messages.SET_STATUS,
                           hideScroller: !0,
-                          className: Q.statusPickerModalMenu,
+                          className: ee.statusPickerModalMenu,
                           onClose: e.onClose,
                           onSelect: e.onClose,
-                          children: et
+                          children: ei
                         })
                       }))
                     }))
@@ -369,21 +390,19 @@ function $(e) {
                       isFocused: n
                     } = e;
                     return (0, a.jsx)(E.Status, {
-                      status: ee,
+                      status: el,
                       size: 12,
-                      className: i()(t, Q.mainStatusIcon),
+                      className: i()(t, ee.mainStatusIcon),
                       color: n ? "currentColor" : void 0
                     })
                   },
-                  children: d.isMobile ? void 0 : et
-                }, "status-picker"), er]
-              }), (0, a.jsx)(E.MenuGroup, {
-                children: (0, a.jsx)(E.MenuItem, {
+                  children: d.isMobile ? void 0 : ei
+                }, "status-picker"), ef, (0, a.jsx)(E.MenuItem, {
                   id: "switch-account",
-                  focusedClassName: Q.menuItemFocused,
-                  subMenuIconClassName: Q.subMenuIcon,
-                  label: q.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                  icon: w.default,
+                  focusedClassName: ee.menuItemFocused,
+                  subMenuIconClassName: ee.subMenuIcon,
+                  label: $.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+                  icon: V.default,
                   showIconFirst: !0,
                   action: () => {
                     (0, v.trackUserProfileAction)({
@@ -391,13 +410,13 @@ function $(e) {
                       layout: "SIMPLIFIED_ACCOUNT_POPOUT",
                       userId: t.id,
                       guildId: l,
-                      analyticsLocations: G
-                    }), (0, W.default)()
+                      analyticsLocations: H
+                    }), (0, Z.default)()
                   },
-                  children: ei
-                }, "switch-account")
+                  children: ec
+                }, "switch-account")]
               }), (0, a.jsx)(E.MenuGroup, {
-                children: eo
+                children: eE
               })]
             })]
           })]
@@ -407,20 +426,20 @@ function $(e) {
   })
 }
 
-function ee(e) {
+function el(e) {
   let {
     userId: t,
     user: n,
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, c.useStateFromStores)([G.default], () => G.default.getUser(t), [t]), d = (0, c.useStateFromStores)([U.default], () => U.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([b.default], () => null != _ && null != b.default.getAnyStreamForUser(_.id));
+  } = e, u = (0, c.useStateFromStores)([H.default], () => H.default.getUser(t), [t]), d = (0, c.useStateFromStores)([k.default], () => k.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([w.default], () => null != _ && null != w.default.getAnyStreamForUser(_.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {
       "string" == typeof t && (await (0, h.getUser)(t), E(!0))
     }
-  }, [u, t]), null == _) ? (f && o()(null != _, "Unexpected missing user"), null) : (0, a.jsx)($, {
+  }, [u, t]), null == _) ? (f && o()(null != _, "Unexpected missing user"), null) : (0, a.jsx)(es, {
     closePopout: i,
     user: _,
     customStatus: d,
