@@ -83,7 +83,7 @@ function B(e) {
   }
   let er = z.get(null !== (n = null == G ? void 0 : G.id) && void 0 !== n ? n : ""),
     eo = (0, r.useStateFromStores)([_.default], () => _.default.getChannelId()),
-    eu = (0, r.useStateFromStores)([S.default], () => {
+    eu = (0, r.useStateFromStoresArray)([S.default], () => {
       var e;
       return null == W ? [] : Array.from(null !== (e = null == er ? void 0 : er.embeddedActivity.userIds) && void 0 !== e ? e : []).map(e => S.default.getMember(W.guild_id, e))
     }, [er, W]),
