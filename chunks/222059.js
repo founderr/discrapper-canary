@@ -82,19 +82,19 @@ function W(e) {
   T && (X = r.Storage.get(B.DISCODO_STORAGE_KEY) ? V.default.Messages.DISCODO_ENABLED : V.default.Messages.DISCODO_DISABLED), W.length > 0 && h.default.trackExposure({
     location: "home_button"
   });
-  let Q = null;
-  !t && C ? Q = (0, l.jsx)(u.default, {
+  let q = null;
+  !t && C ? q = (0, l.jsx)(u.default, {
     className: k.downloadProgress,
     determineOwnVisibility: !1
-  }) : K && (Q = (0, l.jsx)(M.default, {
+  }) : K && (q = (0, l.jsx)(M.default, {
     className: k.broadcastBadge
   }));
-  let J = t || S || _,
-    q = (0, l.jsx)(o.BlobMask, {
+  let Q = t || S || _,
+    J = (0, l.jsx)(o.BlobMask, {
       highlight: K,
-      selected: J,
+      selected: Q,
       lowerBadge: f > 0 ? (0, w.renderMentionBadge)(f) : null,
-      upperBadge: Q,
+      upperBadge: q,
       lowerBadgeWidth: (0, y.getBadgeWidthForValue)(f),
       children: (0, l.jsx)(D.default, {
         onMouseEnter: () => N(!0),
@@ -108,7 +108,7 @@ function W(e) {
             }, 1e3)
           }
         },
-        selected: J,
+        selected: Q,
         ariaLabel: V.default.Messages.DIRECT_MESSAGES,
         ...z,
         to: {
@@ -139,7 +139,7 @@ function W(e) {
       },
       spacing: 8,
       shouldShow: b,
-      children: () => q
+      children: () => J
     }) : null;
   return (0, l.jsx)("div", {
     className: k.tutorialContainer,
@@ -165,7 +165,7 @@ function W(e) {
           hideOnClick: !0,
           text: X,
           selected: t,
-          children: q
+          children: J
         })]
       })
     })
@@ -195,7 +195,7 @@ function K() {
     })),
     c = o + d,
     h = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()),
-    p = (0, _.useMessageRequestsCount)(),
+    p = (0, _.useNewMessageRequestsCount)(),
     g = s + c + p + (0, S.useWhatsNewBadgeCount)(),
     E = g === c && c > 0 && s + p === 0;
   a.useEffect(() => {

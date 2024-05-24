@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return ed
+    return ec
   }
 }), n("47120");
 var a = n("735250"),
@@ -139,27 +139,33 @@ let et = e => {
       }) : null
     })
   },
-  es = e => {
+  es = () => {
+    let e = (0, v.useMessageRequestsCount)(),
+      t = (0, v.useNewMessageRequestsCount)();
+    return e > 0 ? (0, a.jsx)(z.NumberBadge, {
+      count: e,
+      color: 0 === t ? T.default.ICON_MUTED : void 0
+    }) : null
+  },
+  el = e => {
     let {
       selected: t
-    } = e, n = (0, v.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
-      channelId: l
+    } = e, n = (0, o.useListItem)("messageRequests"), {
+      channelId: s
     } = (0, N.useMessageRequestSidebarState)();
     if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
-    let i = null == l ? void 0 : () => h.default.preload(J.ME, l);
+    let l = null == s ? void 0 : () => h.default.preload(J.ME, s);
     return (0, a.jsx)(Q.LinkButton, {
       selected: t,
       route: J.Routes.MESSAGE_REQUESTS,
       icon: Y.default,
       text: $.default.Messages.MESSAGE_REQUESTS,
-      onClick: i,
-      ...s,
-      children: n > 0 ? (0, a.jsx)(z.NumberBadge, {
-        count: n
-      }) : null
+      onClick: l,
+      ...n,
+      children: (0, a.jsx)(es, {})
     })
   },
-  el = e => {
+  ei = e => {
     let {
       selected: t
     } = e, n = $.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = U.FamilyCenterEnabled.useSetting(), r = (0, O.default)(), [u, d] = s.useState(!0);
@@ -176,12 +182,12 @@ let et = e => {
       },
       interactiveClassName: ee.familyCenterLinkButton,
       ...l,
-      children: (0, a.jsx)(ei, {
+      children: (0, a.jsx)(er, {
         isParentHovered: u
       })
     }) : null
   },
-  ei = e => {
+  er = e => {
     let {
       isParentHovered: t
     } = e, s = (0, L.usePendingRequestCount)();
@@ -215,9 +221,9 @@ let et = e => {
       }
     })
   },
-  er = () => (0, x.show)("DM_SEARCH");
+  eo = () => (0, x.show)("DM_SEARCH");
 
-function eo(e) {
+function eu(e) {
   switch (e) {
     case J.Routes.APPLICATION_LIBRARY:
       return J.AnalyticsPages.LIBRARY;
@@ -231,7 +237,7 @@ function eo(e) {
   if (e.startsWith(J.Routes.APPLICATION_STORE)) return e === J.Routes.APPLICATION_STORE ? J.AnalyticsPages.STORE_DIRECTORY_HOME : e.startsWith(J.Routes.APPLICATION_STORE) ? J.AnalyticsPages.STORE_DIRECTORY_BROWSE : J.AnalyticsPages.STORE_LISTING;
   return J.AnalyticsPages.DM_CHANNEL
 }
-let eu = e => {
+let ed = e => {
   let {
     showLibrary: t,
     hasLibraryApplication: n,
@@ -267,7 +273,7 @@ let eu = e => {
           className: i()(ee.searchBarComponent, {
             [ee.themedSearchBarMobile]: u.isMobile
           }),
-          onClick: er,
+          onClick: eo,
           children: $.default.Messages.DM_SEARCH_PLACEHOLDER
         })
       })
@@ -286,7 +292,7 @@ let eu = e => {
         route: null == l || location.pathname.startsWith(J.Routes.ACTIVITIES) || location.pathname.startsWith(J.Routes.APPLICATION_STORE) ? J.Routes.APPLICATION_STORE : l,
         locationState: {
           analyticsSource: {
-            page: eo(s),
+            page: eu(s),
             section: J.AnalyticsSections.NAVIGATION,
             object: J.AnalyticsObjects.NAVIGATION_LINK
           }
@@ -296,18 +302,18 @@ let eu = e => {
         route: J.Routes.ACTIVITIES,
         locationState: {
           analyticsSource: {
-            page: eo(s),
+            page: eu(s),
             section: J.AnalyticsSections.NAVIGATION,
             object: J.AnalyticsObjects.NAVIGATION_LINK
           }
         }
-      }, "activities") : null, (0, a.jsx)(es, {
+      }, "activities") : null, (0, a.jsx)(el, {
         selected: null == c ? null != s && s.startsWith(J.Routes.MESSAGE_REQUESTS) : c === J.Routes.MESSAGE_REQUESTS
       }, "message-requests"), (0, a.jsx)(g.CollectiblesShopButton, {
         selected: c === J.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(J.Routes.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {
-            page: eo(s),
+            page: eu(s),
             section: J.AnalyticsSections.NAVIGATION,
             object: J.AnalyticsObjects.NAVIGATION_LINK
           }
@@ -316,19 +322,19 @@ let eu = e => {
         selected: c === J.Routes.QUEST_HOME || (null == s ? void 0 : s.startsWith(J.Routes.QUEST_HOME)),
         locationState: {
           analyticsSource: {
-            page: eo(s),
+            page: eu(s),
             section: J.AnalyticsSections.NAVIGATION,
             object: J.AnalyticsObjects.NAVIGATION_LINK
           }
         }
-      }, "quest-home"), (0, a.jsx)(el, {
+      }, "quest-home"), (0, a.jsx)(ei, {
         selected: null != s && s.startsWith(J.Routes.FAMILY_CENTER) || null != c && c.startsWith(J.Routes.FAMILY_CENTER)
       }, "family-center")]
     })]
   })
 };
 
-function ed() {
+function ec() {
   let e = (0, d.useStateFromStores)([B.default], () => B.default.getHomeLink()),
     t = (0, d.useStateFromStores)([k.default], () => {
       if (e === J.Routes.APPLICATION_STORE) return !0;
@@ -347,7 +353,7 @@ function ed() {
     })),
     l = (0, d.useStateFromStores)([j.default], () => j.default.hasLibraryApplication()),
     i = (0, d.useStateFromStores)([w.default], () => w.default.getCurrentPath());
-  return (0, a.jsx)(eu, {
+  return (0, a.jsx)(ed, {
     theme: s,
     showLibrary: n,
     hasLibraryApplication: l,

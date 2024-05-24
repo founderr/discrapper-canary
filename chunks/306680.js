@@ -555,6 +555,7 @@ class ey {
           e = en.Endpoints.GUILD_FEATURE_ACK(n, t, i);
           break;
         case ea.ReadStateTypes.NOTIFICATION_CENTER:
+        case ea.ReadStateTypes.MESSAGE_REQUESTS:
           e = en.Endpoints.USER_NON_CHANNEL_ACK(t, i);
           break;
         default:
@@ -949,6 +950,7 @@ class eJ extends(s = _.default.Store) {
           null != z.default.getGuild(n.channelId) && t.push(n.serialize(e));
           break;
         case ea.ReadStateTypes.NOTIFICATION_CENTER:
+        case ea.ReadStateTypes.MESSAGE_REQUESTS:
           var i;
           x.default.cast(null === (i = ee.default.getCurrentUser()) || void 0 === i ? void 0 : i.id) === n.channelId && t.push(n.serialize(e));
           break;
@@ -962,6 +964,11 @@ class eJ extends(s = _.default.Store) {
   }
   getMentionChannelIds() {
     return ey.getMentionChannelIds()
+  }
+  getNonChannelAckId(e) {
+    var t;
+    let n = null === (t = ee.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+    return null == n ? null : ey.get(n, e).ackMessageId
   }
   getSnapshot(e, t) {
     let n = ey.get(e);
@@ -1449,6 +1456,27 @@ let e$ = new eJ(T.default, {
       channelId: t
     } = e;
     return eB(t)
+  },
+  MESSAGE_REQUEST_ACK: function(e) {
+    var t;
+    let {
+      ackedId: n
+    } = e, i = null === (t = ee.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+    if (null == i) return !1;
+    let r = ey.get(i, ea.ReadStateTypes.MESSAGE_REQUESTS);
+    if (n === r.ackMessageId) return !1;
+    r.ackMessageId = n, r.ack({
+      messageId: n,
+      isExplicitUserAction: !0
+    })
+  },
+  MESSAGE_REQUEST_CLEAR_ACK: function(e) {
+    var t;
+    let n = null === (t = ee.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+    if (null == n) return !1;
+    let i = ey.get(n, ea.ReadStateTypes.MESSAGE_REQUESTS);
+    if (null == i.ackMessageId) return !1;
+    i.ackMessageId = void 0
   }
 });
 t.default = e$

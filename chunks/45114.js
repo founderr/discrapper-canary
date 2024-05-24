@@ -9,6 +9,12 @@ n.r(t), n.d(t, {
   ackGuildFeature: function() {
     return S
   },
+  ackMessageRequest: function() {
+    return A
+  },
+  ackMessageRequestClear: function() {
+    return m
+  },
   ackUserFeature: function() {
     return h
   },
@@ -126,5 +132,18 @@ function h(e, t) {
     ackType: e,
     ackedId: t,
     local: !1
+  })
+}
+
+function A(e) {
+  i.default.dispatch({
+    type: "MESSAGE_REQUEST_ACK",
+    ackedId: e
+  })
+}
+
+function m() {
+  i.default.dispatch({
+    type: "MESSAGE_REQUEST_CLEAR_ACK"
   })
 }
