@@ -67,7 +67,8 @@ async function F(e) {
     context: L,
     commandTargetId: D,
     maxSizeCallback: y,
-    commandOrigin: b = P.CommandOrigin.CHAT
+    commandOrigin: b = P.CommandOrigin.CHAT,
+    sectionName: w
   } = e;
   null == L.autocomplete && s.default.dispatch({
     type: "APPLICATION_COMMAND_USED",
@@ -75,9 +76,9 @@ async function F(e) {
     command: R,
     commandOrigin: b
   }), await m.default.unarchiveThreadIfNecessary(L.channel.id);
-  let w = [],
-    k = [],
-    F = (0, U.getCommandAttachmentDraftType)(b);
+  let k = [],
+    F = [],
+    Y = (0, U.getCommandAttachmentDraftType)(b);
   if (null != R.options)
     for (let e of R.options) {
       if (e.type === u.ApplicationCommandOptionType.SUB_COMMAND || e.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP || !(e.name in g)) continue;
@@ -85,7 +86,7 @@ async function F(e) {
         n = null;
       if (e.type === u.ApplicationCommandOptionType.STRING) {
         let i = null !== (l = null === (a = M.getOptionalString(g, e.name)) || void 0 === a ? void 0 : a.trim()) && void 0 !== l ? l : "";
-        n = null != e.choices ? B(e.choices, i) : e.autocomplete ? V(e, i, L) : i, r()(null != L.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && w.push({
+        n = null != e.choices ? B(e.choices, i) : e.autocomplete ? V(e, i, L) : i, r()(null != L.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && k.push({
           type: e.type,
           name: e.name,
           value: n,
@@ -95,10 +96,10 @@ async function F(e) {
       }
       if (e.type === u.ApplicationCommandOptionType.ATTACHMENT) {
         if (null != L.autocomplete) continue;
-        let n = O.default.getUpload(L.channel.id, e.name, F);
+        let n = O.default.getUpload(L.channel.id, e.name, Y);
         if (null == n) continue;
-        let i = k.length;
-        k.push(n), w.push({
+        let i = F.length;
+        F.push(n), k.push({
           type: e.type,
           name: e.name,
           value: i,
@@ -178,7 +179,7 @@ async function F(e) {
           r()(!1, "Unsupported option type: ".concat(e.type));
           continue
       }
-      r()(null != L.autocomplete || null != n, 'Unexpected value for option "'.concat(e.name, '"')), null != n && w.push({
+      r()(null != L.autocomplete || null != n, 'Unexpected value for option "'.concat(e.name, '"')), null != n && k.push({
         type: e.type,
         name: e.name,
         value: n,
@@ -191,10 +192,10 @@ async function F(e) {
         name: t,
         type: n
       } = R.subCommandPath[e];
-      w = [{
+      k = [{
         type: n,
         name: t,
-        options: w
+        options: k
       }]
     }
   if (null != R.execute) return c.default.trackWithMetadata(G.AnalyticEvents.APPLICATION_COMMAND_USED, {
@@ -202,28 +203,29 @@ async function F(e) {
     application_id: R.applicationId,
     command_type: R.type,
     location: b === P.CommandOrigin.APPLICATION_LAUNCHER ? P.ApplicationCommandTriggerLocations.APP_LAUNCHER : P.ApplicationCommandTriggerLocations.SLASH_UI
-  }), R.execute(w, L);
+  }), R.execute(k, L);
   if (R.inputType === P.ApplicationCommandInputType.BUILT_IN || R.inputType === P.ApplicationCommandInputType.BUILT_IN_TEXT || R.inputType === P.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return;
-  let Y = {
+  let W = {
     version: R.version,
     id: null !== (p = null === (t = R.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== p ? p : R.id,
     guild_id: R.guildId,
     name: null !== (C = null === (n = R.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== C ? C : R.name,
     type: R.type,
-    options: w,
+    options: k,
     application_command: R.rootCommand
   };
-  null != D && (Y.target_id = D), null != L.autocomplete ? (0, v.performAutocomplete)(R, L, Y) : (o.default.clearAll(L.channel.id, F), await j({
+  null != D && (W.target_id = D), null != L.autocomplete ? (0, v.performAutocomplete)(R, L, W) : (o.default.clearAll(L.channel.id, Y), await j({
     applicationId: R.applicationId,
-    data: Y,
+    data: W,
     context: L,
-    attachments: k,
+    attachments: F,
     maxSizeCallback: y,
     onMessageSuccess: () => {
       H(g)
     },
     commandDisplayName: R.displayName,
-    analytics_location: b === P.CommandOrigin.APPLICATION_LAUNCHER ? P.ApplicationCommandTriggerLocations.APP_LAUNCHER : P.ApplicationCommandTriggerLocations.SLASH_UI
+    analytics_location: b === P.CommandOrigin.APPLICATION_LAUNCHER ? P.ApplicationCommandTriggerLocations.APP_LAUNCHER : P.ApplicationCommandTriggerLocations.SLASH_UI,
+    sectionName: w
   }))
 }
 let H = e => {
@@ -260,30 +262,31 @@ let H = e => {
       maxSizeCallback: d,
       onMessageSuccess: _,
       commandDisplayName: c,
-      analytics_location: E
+      analytics_location: E,
+      sectionName: I
     } = e, {
-      channel: I,
-      guild: T
-    } = r, f = I.id, h = null == T ? void 0 : T.id, m = y.getCachedApplicationSection(r.channel, i.type, n);
-    if (null == m) return;
-    let N = null === (t = m.application) || void 0 === t ? void 0 : t.bot;
-    if (null == N && null != m.botId) try {
-      await l.getUser(m.botId)
+      channel: T,
+      guild: f
+    } = r, h = T.id, m = null == f ? void 0 : f.id, N = y.getCachedApplicationSection(r.channel, i.type, n);
+    if (null == N) return;
+    let p = null === (t = N.application) || void 0 === t ? void 0 : t.bot;
+    if (null == p && null != N.botId) try {
+      await l.getUser(N.botId)
     } catch {}
-    let p = {
+    let O = {
       ...(0, A.default)({
-        channelId: f,
+        channelId: h,
         content: "",
         type: i.type === u.ApplicationCommandType.CHAT ? G.MessageTypes.CHAT_INPUT_COMMAND : G.MessageTypes.CONTEXT_MENU_COMMAND,
-        author: null != N ? N : {
-          id: m.id,
-          username: m.name,
+        author: null != p ? p : {
+          id: N.id,
+          username: N.name,
           discriminator: G.NON_USER_BOT_DISCRIMINATOR,
           avatar: null,
           bot: !0
         }
       }),
-      application: null == m ? void 0 : m.application,
+      application: null == N ? void 0 : N.application,
       interaction: {
         id: i.id,
         name: i.name,
@@ -293,40 +296,41 @@ let H = e => {
       },
       interaction_data: i
     };
-    a.default.receiveMessage(f, p, !0, {
+    a.default.receiveMessage(h, O, !0, {
       applicationId: n
     });
-    let O = (e, t) => {
-        null == t && null != e && a.default.sendClydeError(f, e), s.default.dispatch({
+    let R = (e, t) => {
+        null == t && null != e && a.default.sendClydeError(h, e), s.default.dispatch({
           type: "MESSAGE_SEND_FAILED",
-          messageId: p.id,
-          channelId: f,
+          messageId: O.id,
+          channelId: h,
           reason: t
         })
       },
-      R = {
+      g = {
         applicationId: n,
-        channelId: f,
-        guildId: h,
+        channelId: h,
+        guildId: m,
         data: i,
-        nonce: p.id,
+        nonce: O.id,
         attachments: o,
         maxSizeCallback: d,
-        analytics_location: E
+        analytics_location: E,
+        sectionName: I
       };
-    S.addQueued(R.nonce, {
-      messageId: p.id,
+    S.addQueued(g.nonce, {
+      messageId: O.id,
       onCreate: e => {
-        null != p.interaction && (p.interaction.id = e)
+        null != O.interaction && (O.interaction.id = e)
       },
-      onFailure: (e, t) => O(e, t),
+      onFailure: (e, t) => R(e, t),
       data: {
         interactionType: u.InteractionTypes.APPLICATION_COMMAND,
-        channelId: f
+        channelId: h
       }
-    }), null != o ? z(o, R.nonce, h, d).then(e => {
-      e && W(R, _)
-    }) : W(R, _)
+    }), null != o ? z(o, g.nonce, m, d).then(e => {
+      e && W(g, _)
+    }) : W(g, _)
   };
 
 function W(e, t) {

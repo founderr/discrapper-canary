@@ -182,9 +182,10 @@ class M extends m.default {
         nonce: o,
         attachments: u,
         maxSizeCallback: c,
-        analytics_location: E
+        analytics_location: E,
+        sectionName: I
       } = e,
-      I = {
+      T = {
         type: _.InteractionTypes.APPLICATION_COMMAND,
         application_id: i,
         guild_id: r,
@@ -192,23 +193,24 @@ class M extends m.default {
         session_id: f.default.getSessionId(),
         data: a,
         nonce: o,
-        analytics_location: E
+        analytics_location: E,
+        section_name: I
       };
     if (null != u) {
-      I.data.attachments = [], n = [];
-      I.data.attachments = u.map((e, t) => (l()(e.status === p.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, N.getAttachmentPayload)(e, t)))
+      T.data.attachments = [], n = [];
+      T.data.attachments = u.map((e, t) => (l()(e.status === p.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, N.getAttachmentPayload)(e, t)))
     }
-    let T = new AbortController;
+    let S = new AbortController;
     d.HTTP.post({
       url: O.Endpoints.INTERACTIONS,
       fields: [{
         name: "payload_json",
-        value: JSON.stringify(I)
+        value: JSON.stringify(T)
       }],
       attachments: n,
-      signal: T.signal,
+      signal: S.signal,
       onRequestCreated: e => {
-        this.requests.set(o, T), e.on("progress", e => {
+        this.requests.set(o, S), e.on("progress", e => {
           let {
             total: t
           } = e, n = (0, A.maxFileSize)(r);
