@@ -76,7 +76,7 @@ function c(e, t) {
     }), L.set(e, s)
   }
 }
-class G extends(E = T.default.PersistedStore) {
+class O extends(E = T.default.PersistedStore) {
   initialize(e) {
     null != e && A.default.keys(e.progressByGuild).forEach(t => {
       var s, E, _, a, n;
@@ -139,7 +139,7 @@ class G extends(E = T.default.PersistedStore) {
     return [...o.keys()]
   }
 }
-r(G, "displayName", "ClanSetupStore"), r(G, "persistKey", "ClanSetupStore"), t.default = new G(i.default, {
+r(O, "displayName", "ClanSetupStore"), r(O, "persistKey", "ClanSetupStore"), t.default = new O(i.default, {
   CLAN_SETUP_RESET: function() {
     o.clear(), L.clear()
   },

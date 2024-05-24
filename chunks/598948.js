@@ -13,8 +13,8 @@ var a = l("735250"),
   m = l("906732"),
   E = l("136015"),
   f = l("506071"),
-  _ = l("910693"),
-  M = l("893966"),
+  M = l("910693"),
+  _ = l("893966"),
   h = l("527379"),
   T = l("827657"),
   S = l("472596"),
@@ -22,12 +22,12 @@ var a = l("735250"),
   A = l("66747"),
   p = l("852479"),
   L = l("420212"),
-  g = l("608673");
-let H = {
+  N = l("608673");
+let g = {
     transform: "translate3d(15%, 0, 0)",
     opacity: .3
   },
-  N = {
+  H = {
     transform: "translate3d(5%, 0, 0)",
     opacity: .5
   },
@@ -51,7 +51,7 @@ let H = {
       compact: r,
       onSelectRow: m,
       onResetForNewMembers: E
-    } = e, _ = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), L = (0, C.useHasAnyModalOpen)(), D = (0, f.useIsWindowFocused)(), [b, O] = s.useState(!1), [B, V] = s.useState(!1), F = !L && b && B;
+    } = e, M = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), L = (0, C.useHasAnyModalOpen)(), D = (0, f.useIsWindowFocused)(), [b, O] = s.useState(!1), [B, V] = s.useState(!1), F = !L && b && B;
     s.useEffect(() => {
       !D && (O(!1), V(!1))
     }, [D]), s.useLayoutEffect(() => {
@@ -71,19 +71,19 @@ let H = {
       U = (0, d.useTransition)(t, {
         key: e => e,
         trail: y ? 5 : 15,
-        immediate: _,
+        immediate: M,
         from(e) {
-          let t = M.default.getEnhancedMember(l.id, e),
-            a = M.default.getLastRefreshTimestamp(l.id),
+          let t = _.default.getEnhancedMember(l.id, e),
+            a = _.default.getLastRefreshTimestamp(l.id),
             s = null != t && t.refreshTimestamp === a;
-          return null != t && 0 !== a && s ? y ? N : H : I
+          return null != t && 0 !== a && s ? y ? H : g : I
         },
         enter: I,
         config: R
       }),
-      w = !_ && i === S.SearchState.LOADING;
+      w = !M && i === S.SearchState.LOADING;
     return (0, a.jsxs)("table", {
-      className: o()(g.table, n),
+      className: o()(N.table, n),
       children: [(0, a.jsx)(x.default, {
         guildId: l.id,
         currentPagedMembers: t
@@ -125,7 +125,7 @@ t.default = function(e) {
     compact: r,
     onSelectRow: d,
     onResetForNewMembers: C
-  } = e, c = (0, u.useStateFromStoresObject)([M.default], () => M.default.getPaginationStateByGuildId(n.id), [n.id]), [f] = (0, u.useStateFromStores)([M.default], () => M.default.getPagedMembersByGuildId(n.id), [n.id], E.isVersionEqual);
+  } = e, c = (0, u.useStateFromStoresObject)([_.default], () => _.default.getPaginationStateByGuildId(n.id), [n.id]), [f] = (0, u.useStateFromStores)([_.default], () => _.default.getPagedMembersByGuildId(n.id), [n.id], E.isVersionEqual);
   s.useEffect(() => {
     (0, h.initializeMemberSafetyStore)(n.id)
   }, [n.id]);
@@ -135,7 +135,7 @@ t.default = function(e) {
     } = (0, m.default)(),
     x = null !== (l = null == S ? void 0 : S[0]) && void 0 !== l ? l : null;
   return s.useEffect(() => {
-    (0, _.trackMembersPageViewed)(n.id, x)
+    (0, M.trackMembersPageViewed)(n.id, x)
   }, [n.id, x]), (0, a.jsx)(D, {
     members: T,
     guild: n,

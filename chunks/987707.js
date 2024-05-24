@@ -15,8 +15,8 @@ let N = [d.Permissions.KICK_MEMBERS, d.Permissions.BAN_MEMBERS, d.Permissions.AD
   g = [],
   D = [],
   c = [],
-  G = [],
   O = [],
+  G = [],
   C = [],
   U = [],
   M = [],
@@ -81,7 +81,7 @@ function B(e) {
   }), t
 }
 
-function K(e) {
+function F(e) {
   let {
     section: t
   } = e;
@@ -97,7 +97,7 @@ function K(e) {
     }
   })).map(e => e.userId).value()
 }
-class F extends(E = A.default.Store) {
+class K extends(E = A.default.Store) {
   get logs() {
     return g
   }
@@ -105,10 +105,10 @@ class F extends(E = A.default.Store) {
     return D
   }
   get webhooks() {
-    return G
+    return O
   }
   get guildScheduledEvents() {
-    return O
+    return G
   }
   get automodRules() {
     return C
@@ -153,18 +153,18 @@ class F extends(E = A.default.Store) {
     return V
   }
 }
-n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineProperty(_, a, {
+n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = K) ? Object.defineProperty(_, a, {
   value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : _[a] = n, t.default = new F(l.default, {
+}) : _[a] = n, t.default = new K(l.default, {
   AUDIT_LOG_FETCH_START: function() {
     R = !0
   },
   AUDIT_LOG_FETCH_SUCCESS: function(e) {
     var t;
-    V = 0, f = !1, R = !1, p = !0, y = !1, g = B(e.logs), D = e.integrations, G = e.webhooks, O = e.guildScheduledEvents, C = null !== (t = e.automodRules) && void 0 !== t ? t : [], U = e.threads, M = e.applicationCommands, e.logs.length < d.AUDIT_LOG_PAGE_LIMIT && (p = !1)
+    V = 0, f = !1, R = !1, p = !0, y = !1, g = B(e.logs), D = e.integrations, O = e.webhooks, G = e.guildScheduledEvents, C = null !== (t = e.automodRules) && void 0 !== t ? t : [], U = e.threads, M = e.applicationCommands, e.logs.length < d.AUDIT_LOG_PAGE_LIMIT && (p = !1)
   },
   AUDIT_LOG_FETCH_FAIL: function() {
     R = !1, y = !0, g = []
@@ -185,7 +185,7 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
       threads: n,
       applicationCommands: T
     } = e;
-    if (h = !1, D = s, G = E, O = _, C = a, U = n, M = T, (0 === t.length || t.length < d.AUDIT_LOG_PAGE_LIMIT) && (p = !1), t.length > 0) {
+    if (h = !1, D = s, O = E, G = _, C = a, U = n, M = T, (0 === t.length || t.length < d.AUDIT_LOG_PAGE_LIMIT) && (p = !1), t.length > 0) {
       let e = B(t);
       g = [...g, ...e]
     }
@@ -211,17 +211,17 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
     } = e;
     v = t
   },
-  GUILD_SETTINGS_SET_SECTION: K,
+  GUILD_SETTINGS_SET_SECTION: F,
   GUILD_SETTINGS_INIT: function(e) {
     let {
       guildId: t,
       section: s
     } = e;
-    return S = t, v = null, K({
+    return S = t, v = null, F({
       section: s
     })
   },
   GUILD_SETTINGS_CLOSE: function() {
-    g = [], c = [], m = d.AuditLogActions.ALL, P = null, v = null, H = {}, V = 0, f = !0, D = [], G = [], O = [], C = [], U = []
+    g = [], c = [], m = d.AuditLogActions.ALL, P = null, v = null, H = {}, V = 0, f = !0, D = [], O = [], G = [], C = [], U = []
   }
 })

@@ -28,7 +28,7 @@ function S(e) {
     theme: S,
     content: g = d.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
     className: D
-  } = e, c = (0, T.useStateFromStores)([I.default], () => I.default.getCurrentUser()), G = r.default.useName(s, null, c), O = (0, i.getRoleIconProps)(a), C = _.useMemo(() => (0, u.createMessageRecord)({
+  } = e, c = (0, T.useStateFromStores)([I.default], () => I.default.getCurrentUser()), O = r.default.useName(s, null, c), G = (0, i.getRoleIconProps)(a), C = _.useMemo(() => (0, u.createMessageRecord)({
     ...(0, A.default)({
       channelId: "0",
       content: g,
@@ -41,7 +41,7 @@ function S(e) {
     state: L.MessageStates.SENT,
     id: "0"
   }), [c, g]), U = {
-    nick: G,
+    nick: O,
     colorString: null !== (t = a.colorString) && void 0 !== t ? t : void 0
   };
   return (0, E.jsx)("div", {
@@ -49,7 +49,7 @@ function S(e) {
     children: (0, E.jsx)(l.default, {
       hideTimestamp: !0,
       author: U,
-      roleIcon: O,
+      roleIcon: G,
       message: C,
       isGroupStart: !0,
       disableInteraction: !0

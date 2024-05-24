@@ -17,8 +17,8 @@ var a = l("735250"),
   m = l("241559"),
   E = l("893966"),
   f = l("527379"),
-  _ = l("689938"),
-  M = l("391649"),
+  M = l("689938"),
+  _ = l("391649"),
   h = l("293749");
 
 function T(e) {
@@ -40,7 +40,7 @@ function T(e) {
         onConfirm: x
       })
     })
-  }, [x, S]), p = new Intl.NumberFormat(_.default.getLocale()).format(i), L = (0, m.useCanAccessInviteCodeFeature)(t.id), g = (0, m.useCanAccessBulkBanningFeature)(t.id), H = s.useMemo(() => 1 + (L ? 1 : 0) + (g ? 1 : 0), [L, g]);
+  }, [x, S]), p = new Intl.NumberFormat(M.default.getLocale()).format(i), L = (0, m.useCanAccessInviteCodeFeature)(t.id), N = (0, m.useCanAccessBulkBanningFeature)(t.id), g = s.useMemo(() => 1 + (L ? 1 : 0) + (N ? 1 : 0), [L, N]);
   return 0 === i ? null : (0, a.jsxs)("tr", {
     className: o()(h.newMembersNotice),
     onClick: A,
@@ -49,17 +49,17 @@ function T(e) {
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         color: "always-white",
-        children: _.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
+        children: M.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
           count: p,
           date: T
         })
       })
     }), (0, a.jsx)("td", {
-      colSpan: H
+      colSpan: g
     }), (0, a.jsx)("td", {
       colSpan: 2,
       children: (0, a.jsx)("div", {
-        className: o()(M.actionCell),
+        className: o()(_.actionCell),
         children: (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           color: u.Button.Colors.TRANSPARENT,
@@ -70,7 +70,7 @@ function T(e) {
             color: "always-white",
             className: o()(h.memberNoticeAction),
             children: [(0, a.jsx)("div", {
-              children: _.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION
+              children: M.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION
             }), (0, a.jsx)(C.default, {
               width: 20,
               height: 20,

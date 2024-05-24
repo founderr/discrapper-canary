@@ -21,12 +21,12 @@ function f(e) {
   let {
     guildId: t,
     onPageChange: l
-  } = e, [n, f] = s.useTransition(), _ = (0, i.useStateFromStores)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), M = (0, i.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), h = (0, u.useIsMakingRequest)(t), T = s.useMemo(() => d.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
+  } = e, [n, f] = s.useTransition(), M = (0, i.useStateFromStores)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), _ = (0, i.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), h = (0, u.useIsMakingRequest)(t), T = s.useMemo(() => d.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
     value: e,
     label: Number(e).toLocaleString()
-  })), []), S = new Intl.NumberFormat(m.default.getLocale()).format(_), x = m.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
+  })), []), S = new Intl.NumberFormat(m.default.getLocale()).format(M), x = m.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
     count: h ? "..." : S
-  }), A = _ > M.pageSize || h, p = _ > d.PAGINATION_PAGE_SIZE_OPTIONS["0"];
+  }), A = M > _.pageSize || h, p = M > d.PAGINATION_PAGE_SIZE_OPTIONS["0"];
   return (0, a.jsxs)("div", {
     className: o()(E.paginationContainer),
     children: [(0, a.jsx)("div", {
@@ -40,11 +40,11 @@ function f(e) {
           "aria-label": x,
           className: E.pageSizeInput,
           options: T,
-          isSelected: e => e === M.pageSize,
+          isSelected: e => e === _.pageSize,
           select: e => {
             f(() => {
               (0, c.updateMemberSafetyTablePagination)(t, {
-                ...M,
+                ..._,
                 pageSize: e
               })
             })
@@ -66,23 +66,23 @@ function f(e) {
         variant: "text-md/normal",
         color: "text-muted",
         children: m.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_NO_PAGE_NUMBERS_LABEL.format({
-          count: _
+          count: M
         })
       })
     }), (0, a.jsx)("div", {
       className: o()(E.pagination),
       children: A && (0, a.jsx)(r.Paginator, {
         className: o()(E.paginationInput),
-        totalCount: _,
-        pageSize: M.pageSize,
+        totalCount: M,
+        pageSize: _.pageSize,
         disablePaginationGap: !0,
         hideMaxPage: !0,
-        currentPage: M.currentPage,
+        currentPage: _.currentPage,
         onPageChange: e => {
           null == l || l(e), requestIdleCallback(() => {
             f(() => {
               (0, c.updateMemberSafetyTablePagination)(t, {
-                ...M,
+                ..._,
                 currentPage: e
               })
             })

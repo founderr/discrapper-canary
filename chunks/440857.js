@@ -17,8 +17,8 @@ var a = l("735250"),
   m = l("864293"),
   E = l("340149"),
   f = l("964309"),
-  _ = l("626135"),
-  M = l("910693"),
+  M = l("626135"),
+  _ = l("910693"),
   h = l("241559"),
   T = l("256003"),
   S = l("981631"),
@@ -30,13 +30,13 @@ function p(e) {
     guildId: t
   } = e, p = (0, h.useCanAccessBulkBanningFeature)(t), {
     selectedUserIds: L,
-    clearSelection: g
-  } = (0, T.default)(t), H = L.size > 0, N = async (e, t, l, a) => {
+    clearSelection: N
+  } = (0, T.default)(t), g = L.size > 0, H = async (e, t, l, a) => {
     try {
       let s = await d.default.banMultipleUsers(e, t, l, a);
-      (0, r.showToast)((0, r.createToast)(x.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, r.ToastType.SUCCESS)), _.default.track(S.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
+      (0, r.showToast)((0, r.createToast)(x.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, r.ToastType.SUCCESS)), M.default.track(S.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
         ...(0, C.collectGuildAnalyticsMetadata)(e),
-        action_type: M.ModerationActionType.BAN,
+        action_type: _.ModerationActionType.BAN,
         target_user_ids: [...L],
         mod_user_id: c.default.getId(),
         successful_user_ids: s.body.banned_users,
@@ -45,10 +45,10 @@ function p(e) {
     } catch (e) {
       (0, r.showToast)((0, r.createToast)(x.default.Messages.BAN_MULTIPLE_FAILED_TOAST, r.ToastType.FAILURE))
     }
-    g()
+    N()
   }, I = s.useCallback(() => {
-    g()
-  }, [g]), R = (0, a.jsxs)("span", {
+    N()
+  }, [N]), R = (0, a.jsxs)("span", {
     className: A.messageContainer,
     children: [(0, a.jsx)(f.default, {
       width: 24,
@@ -80,12 +80,12 @@ function p(e) {
   return p ? (0, a.jsx)(o.TransitionGroup, {
     component: "div",
     className: A.saveNoticeContainer,
-    children: H && (0, a.jsx)(m.default, {
+    children: g && (0, a.jsx)(m.default, {
       children: (0, a.jsx)(u.default, {
         onSave: () => {
-          _.default.track(S.AnalyticEvents.BULK_MODERATION_ACTION_STARTED, {
+          M.default.track(S.AnalyticEvents.BULK_MODERATION_ACTION_STARTED, {
             ...(0, C.collectGuildAnalyticsMetadata)(t),
-            action_type: M.ModerationActionType.BAN,
+            action_type: _.ModerationActionType.BAN,
             target_user_ids: [...L],
             mod_user_id: c.default.getId(),
             location
@@ -98,7 +98,7 @@ function p(e) {
               guildId: t,
               canBulkBan: p,
               userIds: L,
-              onBanMultiple: N
+              onBanMultiple: H
             })
           })
         },

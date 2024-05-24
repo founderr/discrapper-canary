@@ -13,8 +13,8 @@ var a = l("735250"),
   m = l("700582"),
   E = l("745735"),
   f = l("906732"),
-  _ = l("715903"),
-  M = l("69882"),
+  M = l("715903"),
+  _ = l("69882"),
   h = l("189357"),
   T = l("493892"),
   S = l("433355"),
@@ -22,9 +22,9 @@ var a = l("735250"),
   A = l("496675"),
   p = l("594174"),
   L = l("373791"),
-  g = l("725522"),
-  H = l("862443"),
-  N = l("789695"),
+  N = l("725522"),
+  g = l("862443"),
+  H = l("789695"),
   I = l("621113"),
   R = l("964309"),
   v = l("203893"),
@@ -48,7 +48,7 @@ var a = l("735250"),
 let z = s.memo(function(e) {
   let {
     member: t
-  } = e, l = s.useMemo(() => (0, M.isCommunicationDisabled)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), n = s.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
+  } = e, l = s.useMemo(() => (0, _.isCommunicationDisabled)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), n = s.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
   return (0, a.jsxs)("div", {
     className: o()(q.flagContainer),
     children: [t.hasUnusualDmActivity && (0, a.jsx)(c.Tooltip, {
@@ -58,7 +58,7 @@ let z = s.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(g.default, {
+        return (0, a.jsx)(N.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -84,7 +84,7 @@ let z = s.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(N.default, {
+        return (0, a.jsx)(H.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -107,14 +107,14 @@ let z = s.memo(function(e) {
           color: C.default.colors.TEXT_DANGER.css
         })
       }
-    }), (0, _.hasAutomodQuarantinedProfile)(t) && (0, a.jsx)(c.Tooltip, {
+    }), (0, M.hasAutomodQuarantinedProfile)(t) && (0, a.jsx)(c.Tooltip, {
       text: J.default.Messages.MEMBER_SAFETY_QUARANTINED_USER_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(H.default, {
+        return (0, a.jsx)(g.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -148,7 +148,7 @@ let W = s.memo(function(e) {
       highestRole: l
     } = e, n = (0, u.useStateFromStores)([x.default], () => x.default.getGuild(t.guildId), [t.guildId]), [i, r] = s.useState(!1), d = t.roles.length - 1, C = s.useMemo(() => new Intl.NumberFormat(J.default.getLocale()).format(d), [d]), m = (0, Z.useContextMenuModerateRoles)(t), E = (0, u.useStateFromStores)([A.default], () => A.default.can(G.Permissions.MANAGE_ROLES, n), [n]), f = s.useCallback(e => () => {
       r(!0), null == e || e()
-    }, []), _ = s.useCallback(e => () => {
+    }, []), M = s.useCallback(e => () => {
       r(!1), null == e || e()
     }, []);
     return null == n ? null : (0, a.jsxs)("div", {
@@ -175,7 +175,7 @@ let W = s.memo(function(e) {
           return (0, a.jsx)(c.Clickable, {
             className: o()(q.otherRoles),
             onMouseEnter: f(t),
-            onMouseLeave: _(l),
+            onMouseLeave: M(l),
             children: (0, a.jsxs)(c.Text, {
               variant: "text-xs/medium",
               color: "header-primary",
@@ -335,14 +335,14 @@ let ee = s.memo(function(e) {
       compact: m
     } = e, E = (0, u.useStateFromStores)([A.default, x.default], () => A.default.can(G.Permissions.MANAGE_GUILD, x.default.getGuild(t.guildId)), [t.guildId]), {
       selectedUserIds: f,
-      addUsers: _,
-      removeUser: M
+      addUsers: M,
+      removeUser: _
     } = (0, P.default)(t.guildId), T = (0, y.useCanAccessBulkBanningFeature)(t.guildId), S = (0, y.useCanBulkBanUser)(t.guildId, T, t.userId), p = (0, h.useCanAccessGuildMemberModView)(t.guildId), L = (0, u.useStateFromStores)([U.default], () => {
       var e;
       return null !== (e = U.default.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e ? e : F.OrderBy.ORDER_BY_UNSPECIFIED
-    }, [t.guildId], d()), g = s.useCallback(e => {
-      e.stopPropagation(), e.preventDefault(), null != t && S && (f.has(t.userId) ? M(t.userId) : _([t.userId]))
-    }, [_, S, t, M, f]), H = L === F.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, N = L === F.OrderBy.ORDER_BY_USER_ID_ASC || L === F.OrderBy.ORDER_BY_USER_ID_DESC;
+    }, [t.guildId], d()), N = s.useCallback(e => {
+      e.stopPropagation(), e.preventDefault(), null != t && S && (f.has(t.userId) ? _(t.userId) : M([t.userId]))
+    }, [M, S, t, _, f]), g = L === F.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, H = L === F.OrderBy.ORDER_BY_USER_ID_ASC || L === F.OrderBy.ORDER_BY_USER_ID_DESC;
     return (0, a.jsxs)(a.Fragment, {
       children: [T && (0, a.jsx)(c.Tooltip, {
         tooltipClassName: q.disabledActionTooltip,
@@ -353,7 +353,7 @@ let ee = s.memo(function(e) {
           children: (0, a.jsx)("div", {
             className: o()(q.__invalid_checkbox, q.xsmallCol),
             children: (0, a.jsx)(c.Clickable, {
-              onClick: g,
+              onClick: N,
               children: (0, a.jsx)(c.Checkbox, {
                 type: c.Checkbox.Types.INVERTED,
                 value: f.has(t.userId),
@@ -377,7 +377,7 @@ let ee = s.memo(function(e) {
         children: (0, a.jsx)($, {
           showLongDate: i,
           member: t,
-          isSortedBy: H
+          isSortedBy: g
         })
       }), (0, a.jsx)("td", {
         className: o()(q.smallCol, {
@@ -386,7 +386,7 @@ let ee = s.memo(function(e) {
         children: (0, a.jsx)(ee, {
           showLongDate: i,
           member: t,
-          isSortedBy: N
+          isSortedBy: H
         })
       }), E && (0, a.jsx)("td", {
         className: o()(q.smallCol, {
@@ -473,28 +473,28 @@ t.default = s.memo(function(e) {
     isLoading: c = !1,
     isHoldingAdvancedInfoKey: m = !1,
     compact: E = !1
-  } = e, f = (0, u.useStateFromStores)([S.default], () => S.default.getGuildSidebarState(l), [l]), _ = (null == f ? void 0 : f.details.userId) === t, M = (0, u.useStateFromStores)([U.default], () => U.default.getEnhancedMember(l, t), [l, t]), h = (0, Z.useHighestRole)(M), T = (0, u.useStateFromStores)([p.default], () => p.default.getUser(t), [t]), x = (0, Z.useContextMenuModerateUser)(null != M ? M : void 0), A = s.useCallback(e => {
+  } = e, f = (0, u.useStateFromStores)([S.default], () => S.default.getGuildSidebarState(l), [l]), M = (null == f ? void 0 : f.details.userId) === t, _ = (0, u.useStateFromStores)([U.default], () => U.default.getEnhancedMember(l, t), [l, t]), h = (0, Z.useHighestRole)(_), T = (0, u.useStateFromStores)([p.default], () => p.default.getUser(t), [t]), x = (0, Z.useContextMenuModerateUser)(null != _ ? _ : void 0), A = s.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), x(e)
   }, [x]), L = s.useCallback(e => {
-    e.stopPropagation(), e.preventDefault(), null != M && (null == r || r(M))
-  }, [r, M]), g = s.useCallback(e => {
-    e.stopPropagation(), e.preventDefault(), null != M && (null == r || r(M))
-  }, [M, r]), H = s.useCallback((e, t) => d()((0, i.omit)(e, ea), (0, i.omit)(t, ea)), []);
-  return null == M ? null : (0, a.jsx)(w.default, {
+    e.stopPropagation(), e.preventDefault(), null != _ && (null == r || r(_))
+  }, [r, _]), N = s.useCallback(e => {
+    e.stopPropagation(), e.preventDefault(), null != _ && (null == r || r(_))
+  }, [_, r]), g = s.useCallback((e, t) => d()((0, i.omit)(e, ea), (0, i.omit)(t, ea)), []);
+  return null == _ ? null : (0, a.jsx)(w.default, {
     role: "row",
-    value: M,
+    value: _,
     style: n,
-    className: o()(q.roundedRow, q.memberRowContainer, C && q.selected, _ && q.memberSelected, c && q.loading),
-    equalityFn: H,
+    className: o()(q.roundedRow, q.memberRowContainer, C && q.selected, M && q.memberSelected, c && q.loading),
+    equalityFn: g,
     onClick: L,
     onContextMenu: A,
     children: (0, a.jsx)(et, {
-      member: M,
+      member: _,
       user: T,
       highestRole: h,
       isHoldingAdvancedInfoKey: m,
       onOpenModerationMenu: A,
-      onOpenProfileMenu: g,
+      onOpenProfileMenu: N,
       compact: E
     })
   })

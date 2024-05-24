@@ -32,23 +32,23 @@ function E(e) {
     style: r,
     ...E
   } = e, f = (0, C.default)(t), [{
-    spring: _
-  }, M] = (0, i.useSpring)(() => ({
+    spring: M
+  }, _] = (0, i.useSpring)(() => ({
     spring: 0
   })), h = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), T = (0, u.useToken)(d.default.colors.CONTROL_BRAND_FOREGROUND).hex(), S = s.useCallback(() => {
-    M({
+    _({
       spring: 1,
       config: c
-    }), M({
+    }), _({
       spring: 0,
       config: m,
       delay: 300
     })
-  }, [M]);
+  }, [_]);
   s.useEffect(() => {
     if (null != t && null != f) !n(t, f) && S()
   }, [S, t, f, n]);
-  let x = null == _ ? void 0 : _.to({
+  let x = null == M ? void 0 : M.to({
       range: [0, 1],
       output: ["".concat(h, "00"), "".concat(T, "27")]
     }),

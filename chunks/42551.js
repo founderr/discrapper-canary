@@ -17,8 +17,8 @@ var a = l("735250"),
   m = l("399606"),
   E = l("481060"),
   f = l("563115"),
-  _ = l("910693"),
-  M = l("893966"),
+  M = l("910693"),
+  _ = l("893966"),
   h = l("527379"),
   T = l("285173"),
   S = l("689938"),
@@ -30,7 +30,7 @@ function L(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, n = (0, _.useTrackMemberFilterRolesUsed)(t), i = (0, m.useStateFromStores)([M.default], () => M.default.getSearchStateByGuildId(t), [t], c()), [d, C] = s.useState(i.selectedRoleIds), L = (0, f.useRoleRows)(t, p, !0), g = (e, l) => {
+  } = e, n = (0, M.useTrackMemberFilterRolesUsed)(t), i = (0, m.useStateFromStores)([_.default], () => _.default.getSearchStateByGuildId(t), [t], c()), [d, C] = s.useState(i.selectedRoleIds), L = (0, f.useRoleRows)(t, p, !0), N = (e, l) => {
     let {
       record: s
     } = e;
@@ -57,16 +57,16 @@ function L(e) {
         })]
       })
     }, s.id)
-  }, H = (e, t) => L.reduce((l, a) => {
+  }, g = (e, t) => L.reduce((l, a) => {
     let {
       record: s
     } = a, n = e.has(s.id);
-    return r()(t.toLowerCase(), s.name.toLowerCase()) ? l.push(g(a, n)) : n && l.push(g(a, n)), l
-  }, []), N = s.useCallback(e => {
+    return r()(t.toLowerCase(), s.name.toLowerCase()) ? l.push(N(a, n)) : n && l.push(N(a, n)), l
+  }, []), H = s.useCallback(e => {
     (0, h.updateSearchState)(t, {
       selectedRoleIds: e
     }), n(e)
-  }, [t, n]), I = s.useCallback(u()(N, 300), [N]), R = s.useCallback(e => {
+  }, [t, n]), I = s.useCallback(u()(H, 300), [H]), R = s.useCallback(e => {
     let t;
     C(t = d.has(e) ? new Set([...d].filter(t => t !== e)) : new Set([...d, e])), I(t)
   }, [d, I]);
@@ -81,6 +81,6 @@ function L(e) {
     multiSelect: !0,
     showScrollbar: !0,
     autoFocus: !0,
-    children: e => H(d, e)
+    children: e => g(d, e)
   })
 }

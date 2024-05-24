@@ -26,14 +26,14 @@ function m(e) {
     afterDate: m,
     beforeDate: E,
     optionId: f
-  } = o, _ = f === C.DATE_OPTION.CUSTOM, M = _ && null != m ? i()(m).format(C.MENU_DATE_FORMAT) : null, h = _ && null != E ? i()(E).format(C.MENU_DATE_FORMAT) : null;
+  } = o, M = f === C.DATE_OPTION.CUSTOM, _ = M && null != m ? i()(m).format(C.MENU_DATE_FORMAT) : null, h = M && null != E ? i()(E).format(C.MENU_DATE_FORMAT) : null;
   return (0, a.jsx)(C.default, {
-    startDateLabel: M,
+    startDateLabel: _,
     endDateLabel: h,
     afterDate: m,
     beforeDate: E,
     selectedOption: f,
-    isCustomDateRange: _,
+    isCustomDateRange: M,
     menuName: "joined-date",
     accessibilityLabel: c.default.Messages.MEMBER_SAFETY_JOINED_DATE_LABEL,
     onClose: l,
@@ -53,8 +53,8 @@ function m(e) {
         ...s,
         selectedJoinDateOption: {
           optionId: C.DATE_OPTION.CUSTOM,
-          afterDate: _ ? m : null,
-          beforeDate: _ ? E : null
+          afterDate: M ? m : null,
+          beforeDate: M ? E : null
         }
       })
     },

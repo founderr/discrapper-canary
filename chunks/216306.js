@@ -38,8 +38,8 @@ var E = s("470079"),
   g = s("306680"),
   D = s("709054"),
   c = s("981631"),
-  G = s("176505"),
-  O = s("443063"),
+  O = s("176505"),
+  G = s("443063"),
   C = s("490897"),
   U = s("689938");
 
@@ -50,7 +50,7 @@ function M(e, t) {
 function f(e, t, s, _) {
   _ = _.toLowerCase();
   let n = (0, r.useCanSeeOnboardingHome)(e),
-    T = E.useCallback((e, t) => !(n && e.channel.hasFlag(G.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
+    T = E.useCallback((e, t) => !(n && e.channel.hasFlag(O.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
   return E.useMemo(() => {
     let e = {
       null: [],
@@ -68,12 +68,12 @@ function f(e, t, s, _) {
 function R(e) {
   let t = e.getSections();
   if (t[o.SECTION_INDEX_COMMUNITY] > 0) switch (e.getCommunitySection().getRow(0)) {
-    case O.ChannelListCommunityRow.GUILD_HOME:
-      return G.StaticChannelRoute.GUILD_HOME;
-    case O.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
-      return G.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
-    case O.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
-      return G.StaticChannelRoute.MEMBER_APPLICATIONS
+    case G.ChannelListCommunityRow.GUILD_HOME:
+      return O.StaticChannelRoute.GUILD_HOME;
+    case G.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
+      return O.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
+    case G.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
+      return O.StaticChannelRoute.MEMBER_APPLICATIONS
   }
   for (let E = o.SECTION_INDEX_UNCATEGORIZED_CHANNELS; E < e.voiceChannelsSectionNumber; E++)
     if (t[E] > 0) {

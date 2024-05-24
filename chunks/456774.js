@@ -451,14 +451,14 @@ function ei(e) {
     }
   }), L = () => {
     O.default.isFullServerPreview(n.id) && (0, R.transitionTo)(j.Routes.CHANNEL(n.id)), T.default.shouldShowOnboarding(n.id) && (I.default.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, p.stopImpersonating)(n.id), N.default.open(n.id, h), h === j.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, S.announceDeleteTemplateChannels)(n.id)
-  }, D = null === (t = u.current) || void 0 === t ? void 0 : t.clientHeight, M = a + 10;
+  }, D = null === (t = u.current) || void 0 === t ? void 0 : t.clientHeight, M = a + 14;
   return (0, i.jsxs)("div", {
     className: z.container,
     ref: u,
     children: [(0, i.jsx)("div", {
       className: z.tooltipPointer,
       style: {
-        top: Math.min(M, null != D ? D - 18 : M)
+        top: Math.min(M, null != D ? D - 22 : M)
       }
     }), (0, i.jsxs)("div", {
       className: z.header,

@@ -17,8 +17,8 @@ var a, s, n, o, i, r, d = l("735250"),
   m = l("658722"),
   E = l.n(m),
   f = l("442837"),
-  _ = l("481060"),
-  M = l("461745"),
+  M = l("481060"),
+  _ = l("461745"),
   h = l("933557"),
   T = l("471445"),
   S = l("518738"),
@@ -26,13 +26,13 @@ var a, s, n, o, i, r, d = l("735250"),
   A = l("592125"),
   p = l("430824"),
   L = l("699516"),
-  g = l("594174"),
-  H = l("153124"),
-  N = l("176278"),
+  N = l("594174"),
+  g = l("153124"),
+  H = l("176278"),
   I = l("689938"),
   R = l("93459");
-let v = (0, H.uid)(),
-  j = (0, H.uid)(),
+let v = (0, g.uid)(),
+  j = (0, g.uid)(),
   D = "text-sm/medium";
 
 function b(e) {
@@ -47,7 +47,7 @@ function B(e) {
   let t = "".concat(e.name.includes(x.EVERYONE_ID) ? "" : "@").concat(e.name);
   return {
     tag: {
-      type: M.RichTagTypes.ROLE,
+      type: _.RichTagTypes.ROLE,
       label: t
     },
     row: {
@@ -60,10 +60,10 @@ function B(e) {
 }
 
 function V(e) {
-  let t = (0, h.computeChannelName)(e, g.default, L.default);
+  let t = (0, h.computeChannelName)(e, N.default, L.default);
   return {
     tag: {
-      type: M.RichTagTypes.CHANNEL,
+      type: _.RichTagTypes.CHANNEL,
       label: t
     },
     row: {
@@ -87,19 +87,19 @@ let F = u.memo(function(e) {
     guildId: a,
     roleId: n,
     size: 16
-  }), r = (0, f.useStateFromStores)([p.default], () => p.default.getRole(a, n)), u = o.includes(x.EVERYONE_ID) ? "" : "@", C = (0, _.useToken)(_.tokens.unsafe_rawColors.PRIMARY_300).hsl(), m = null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : C;
+  }), r = (0, f.useStateFromStores)([p.default], () => p.default.getRole(a, n)), u = o.includes(x.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), m = null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : C;
   return (0, d.jsxs)("div", {
     className: c()(R.rowLabel, R.roleTagContainer, s),
-    children: [(0, d.jsx)(_.RoleDot, {
+    children: [(0, d.jsx)(M.RoleDot, {
       className: R.__invalid_roleDot,
       color: m,
       background: !1,
       tooltip: !1
-    }), null != i ? (0, d.jsx)(N.default, {
+    }), null != i ? (0, d.jsx)(H.default, {
       className: R.roleTagIcon,
       ...i,
       enableTooltip: !1
-    }) : u, (0, d.jsx)(_.Text, {
+    }) : u, (0, d.jsx)(M.Text, {
       variant: D,
       className: R.roleTagLabel,
       children: o
@@ -121,7 +121,7 @@ function y(e) {
       width: 16,
       height: 16,
       className: R.channelIcon
-    }), (0, d.jsx)(_.Text, {
+    }), (0, d.jsx)(M.Text, {
       variant: t.isCategory() ? "eyebrow" : D,
       children: l.display
     })]
@@ -160,7 +160,7 @@ function w(e) {
     }), t.forEach(e => {
       e in l && (a[e] = B(l[e]))
     }), a
-  })(s, n, m), [s, n, m]), T = u.useMemo(() => Object.keys(h), [h]), [S, x] = u.useState(""), [L, g] = u.useState(!1), [H, N] = u.useState(!1), [D, F] = u.useState(!1), y = u.useRef(null), {
+  })(s, n, m), [s, n, m]), T = u.useMemo(() => Object.keys(h), [h]), [S, x] = u.useState(""), [L, N] = u.useState(!1), [g, H] = u.useState(!1), [D, F] = u.useState(!1), y = u.useRef(null), {
     sections: w,
     sectionCounts: k
   } = u.useMemo(() => {
@@ -188,18 +188,18 @@ function w(e) {
       }).map(e => e.row.record.id);
     o(new Set(l), new Set(a))
   }, [o]), Z = () => {
-    g(!1), N(!1)
+    N(!1), H(!1)
   };
   u.useEffect(() => {
     let e = setTimeout(() => {
-      F(L || H)
+      F(L || g)
     }, 32);
     return () => {
       clearTimeout(e)
     }
-  }, [L, H]);
+  }, [L, g]);
   let Y = (e, t, l) => {
-      l.stopPropagation(), l.preventDefault(), 2 === t ? g(e) : (1 === t || g(e), N(e))
+      l.stopPropagation(), l.preventDefault(), 2 === t ? N(e) : (1 === t || N(e), H(e))
     },
     G = u.useCallback(e => {
       let t = {
@@ -220,7 +220,7 @@ function w(e) {
         section: l,
         row: a
       } = e, s = w[l][a];
-      return (0, d.jsx)(_.Clickable, {
+      return (0, d.jsx)(M.Clickable, {
         className: c()(R.selectableSearchRow, R.rowHeight),
         onClick: e => {
           e.stopPropagation(), G(s)
@@ -242,10 +242,10 @@ function w(e) {
     className: c()(R.searchContainer, C),
     children: [(0, d.jsxs)("div", {
       className: R.searchBox,
-      children: [(0, d.jsx)(M.default, {
+      children: [(0, d.jsx)(_.default, {
         tags: q,
         maxHeight: 98,
-        size: M.default.Sizes.MEDIUM,
+        size: _.default.Sizes.MEDIUM,
         query: S,
         ref: y,
         onRemoveTag: e => {
@@ -273,7 +273,7 @@ function w(e) {
         onFocus: e => Y(!0, 1, e),
         onBlur: e => Y(!1, 1, e),
         tabIndex: -1,
-        children: (0, d.jsx)(_.ListAuto, {
+        children: (0, d.jsx)(M.ListAuto, {
           className: R.resultsListContainer,
           innerClassName: R.resultsList,
           sections: k,
@@ -283,11 +283,11 @@ function w(e) {
             let {
               section: t
             } = e;
-            return 0 === t ? (0, d.jsx)(_.FormTitle, {
+            return 0 === t ? (0, d.jsx)(M.FormTitle, {
               tag: "h5",
               className: c()(R.sectionTitle, R.sectionHeight),
               children: I.default.Messages.CHANNELS
-            }, I.default.Messages.CHANNELS) : 1 === t ? (0, d.jsx)(_.FormTitle, {
+            }, I.default.Messages.CHANNELS) : 1 === t ? (0, d.jsx)(M.FormTitle, {
               tag: "h5",
               className: c()(R.sectionTitle, R.sectionHeight),
               children: I.default.Messages.ROLES
@@ -299,7 +299,7 @@ function w(e) {
             } = e;
             if (0 === t) return 0 === k[1] && k[0] > 0 ? null : (0, d.jsx)("div", {
               className: R.sectionFooter,
-              children: (0, d.jsx)(_.FormDivider, {})
+              children: (0, d.jsx)(M.FormDivider, {})
             });
             return null
           },
@@ -314,7 +314,7 @@ function w(e) {
           innerAriaOrientation: "vertical"
         })
       })]
-    }), null != r && (0, d.jsx)(_.Text, {
+    }), null != r && (0, d.jsx)(M.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
       className: R.helperText,
