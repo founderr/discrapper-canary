@@ -12,11 +12,17 @@ n.r(t), n.d(t, {
   PopoutReactor: function() {
     return em
   },
+  PrimaryActionButton: function() {
+    return eT
+  },
+  PrimaryActionPopoutReactor: function() {
+    return e_
+  },
   StreamingPopoutContent: function() {
     return eS
   },
   VoiceChannelPopoutReactor: function() {
-    return e_
+    return eI
   }
 }), n("47120");
 var a = n("735250"),
@@ -57,8 +63,8 @@ var u = n("194048"),
   F = n("430824"),
   w = n("496675"),
   k = n("699516"),
-  H = n("9156"),
-  B = n("979651"),
+  B = n("9156"),
+  H = n("979651"),
   G = n("938475"),
   V = n("346656"),
   W = n("682864"),
@@ -434,7 +440,7 @@ function eS(e) {
     badges: n,
     stream: s,
     ...i
-  } = e, r = (0, d.useStateFromStores)([U.default], () => U.default.getChannel(null == s ? void 0 : s.channelId)), [o] = l.useMemo(() => (0, j.canWatchStream)(r, B.default, F.default, w.default, O.default), [r]);
+  } = e, r = (0, d.useStateFromStores)([U.default], () => U.default.getChannel(null == s ? void 0 : s.channelId)), [o] = l.useMemo(() => (0, j.canWatchStream)(r, H.default, F.default, w.default, O.default), [r]);
   return null == s ? null : (0, a.jsxs)(ec, {
     className: eo.streamingPopoutHero,
     children: [(0, a.jsx)(eE, {
@@ -480,53 +486,128 @@ function e_(e) {
   let {
     user: t,
     entry: n,
-    voiceChannel: s,
+    channel: s,
+    children: i,
+    header: r,
+    requestId: u,
+    reactionImageAltText: d,
+    generateReactionImage: c
+  } = e, h = q.default.getName(s.guild_id, s.id, t), [p, C] = l.useState(!1), g = async e => {
+    let a = await T.default.openPrivateChannel(t.id, !1, !1),
+      l = U.default.getChannel(a);
+    o()(null != l, "DM channel must be defined");
+    let i = await eu(c)(l.id);
+    o()(null != i, "Reaction image must be defined"), await (0, M.sendReply)({
+      file: i,
+      channel: l,
+      altText: d,
+      reply: e
+    }), (0, ee.trackInteraction)(es.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT, {
+      entry: n,
+      channelId: s.id,
+      guildId: s.guild_id,
+      requestId: u
+    })
+  };
+  return (0, a.jsxs)("div", {
+    children: [r, null != r && (0, a.jsx)("div", {
+      className: eo.primaryActionPopoutDivider
+    }), p ? (0, a.jsx)(x.ReplyInput, {
+      placeholder: er.default.Messages.TEXTAREA_PLACEHOLDER.format({
+        channel: "@".concat(h)
+      }),
+      onEnter: g,
+      showEmojiButton: !0,
+      renderAttachButton: () => (0, a.jsx)(_.Clickable, {
+        onClick: () => C(!1),
+        className: eo.primaryActionPopoutMessageCloseIcon,
+        children: (0, a.jsx)(E.CloseSmallIcon, {
+          width: 20,
+          height: 20,
+          color: f.default.colors.ICON_PRIMARY
+        })
+      })
+    }) : (0, a.jsxs)("div", {
+      className: eo.primaryActionPopoutActionButtons,
+      children: [(0, a.jsxs)(_.Button, {
+        className: eo.secondaryButton,
+        color: _.Button.Colors.CUSTOM,
+        fullWidth: !0,
+        onClick: () => C(!0),
+        innerClassName: eo.iconButton,
+        size: _.Button.Sizes.LARGE,
+        children: [(0, a.jsx)(m.ChatIcon, {
+          width: 20,
+          height: 20,
+          colorClass: eo.secondaryText
+        }), (0, a.jsx)(_.Text, {
+          variant: "text-md/semibold",
+          className: eo.secondaryText,
+          children: er.default.Messages.USER_POPOUT_MESSAGE
+        })]
+      }), i]
+    })]
+  })
+}
+
+function eT(e) {
+  let {
+    IconComponent: t,
+    label: n,
+    ...l
+  } = e;
+  return (0, a.jsxs)(_.Button, {
+    ...l,
+    fullWidth: !0,
+    innerClassName: null != t ? eo.iconButton : void 0,
+    size: _.Button.Sizes.LARGE,
+    children: [null != t ? (0, a.jsx)(t, {
+      width: 20,
+      height: 20,
+      color: f.default.colors.WHITE
+    }) : null, (0, a.jsx)(_.Text, {
+      variant: "text-md/semibold",
+      color: "always-white",
+      children: n
+    })]
+  })
+}
+
+function eI(e) {
+  let {
+    voiceChannel: t,
+    isStreaming: n = !1,
+    ...s
+  } = e, {
     channel: i,
-    requestId: r,
-    reactionImageAltText: c,
-    generateReactionImage: h,
-    isStreaming: g = !1
-  } = e, A = q.default.getName(i.guild_id, i.id, t), [N, v] = l.useState(!1), R = (0, d.useStateFromStores)([F.default], () => F.default.getGuild(s.guild_id)), y = (0, d.useStateFromStoresArray)([G.default], () => G.default.getVoiceStatesForChannel(s), [s]), L = l.useMemo(() => {
-    for (let e of y) {
+    entry: r,
+    requestId: o
+  } = s, c = (0, d.useStateFromStores)([F.default], () => F.default.getGuild(t.guild_id)), h = (0, d.useStateFromStoresArray)([G.default], () => G.default.getVoiceStatesForChannel(t), [t]), m = l.useMemo(() => {
+    for (let e of h) {
       let t = U.default.getDMFromUserId(e.user.id),
-        n = null != t && H.default.isChannelMuted(null, t),
+        n = null != t && B.default.isChannelMuted(null, t),
         a = k.default.isBlocked(e.user.id);
       if (n || a) return !0
     }
     return !1
-  }, [y]), O = async e => {
-    let a = await T.default.openPrivateChannel(t.id, !1, !1),
-      l = U.default.getChannel(a);
-    o()(null != l, "DM channel must be defined");
-    let s = await eu(h)(l.id);
-    o()(null != s, "Reaction image must be defined"), await (0, M.sendReply)({
-      file: s,
-      channel: l,
-      altText: c,
-      reply: e
-    }), (0, ee.trackInteraction)(es.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT, {
-      entry: n,
-      channelId: i.id,
-      guildId: i.guild_id,
-      requestId: r
-    })
-  }, j = () => {
-    I.default.updateChatOpen(s.id, !0), (0, D.transitionToChannel)(s.id), (0, ee.trackInteraction)(es.ContentInventoryInteractionTypes.VOICE_CHANNEL_PREVIEWED, {
-      entry: n,
-      channelId: i.id,
-      guildId: i.guild_id,
-      requestId: r,
-      destinationChannelId: s.id,
-      destinationGuildId: s.guild_id
-    })
-  };
-  return null == R ? null : (0, a.jsxs)("div", {
-    children: [(0, a.jsxs)("div", {
+  }, [h]);
+  if (null == c) return null;
+  let E = () => {
+      I.default.updateChatOpen(t.id, !0), (0, D.transitionToChannel)(t.id), (0, ee.trackInteraction)(es.ContentInventoryInteractionTypes.VOICE_CHANNEL_PREVIEWED, {
+        entry: r,
+        channelId: i.id,
+        guildId: i.guild_id,
+        requestId: o,
+        destinationChannelId: t.id,
+        destinationGuildId: t.guild_id
+      })
+    },
+    g = (0, a.jsxs)("div", {
       className: eo.voiceChannelPopoutReactorHeader,
       children: [(0, a.jsxs)("div", {
         className: eo.voiceChannelPopoutReactorChannel,
         children: [(0, a.jsx)(V.default, {
-          guild: R,
+          guild: c,
           size: V.default.Sizes.SMOL,
           className: eo.voiceChannelGuildIcon,
           active: !0
@@ -541,14 +622,14 @@ function e_(e) {
         }), (0, a.jsx)(_.Text, {
           variant: "text-sm/medium",
           color: "text-normal",
-          children: s.name
+          children: t.name
         })]
       }), (0, a.jsx)(Y.default, {
-        guildId: R.id,
-        users: y,
+        guildId: c.id,
+        users: h,
         max: 3,
         renderUser: (e, t) => (0, a.jsx)(_.Avatar, {
-          src: e.user.getAvatarURL(R.id, 16),
+          src: e.user.getAvatarURL(c.id, 16),
           size: _.AvatarSizes.SIZE_16,
           "aria-label": "avatar",
           className: t
@@ -562,73 +643,27 @@ function e_(e) {
           })
         })
       })]
-    }), (0, a.jsx)("div", {
-      className: eo.voicePopoutDivider
-    }), N ? (0, a.jsx)(x.ReplyInput, {
-      placeholder: er.default.Messages.TEXTAREA_PLACEHOLDER.format({
-        channel: "@".concat(A)
+    });
+  return (0, a.jsx)(e_, {
+    header: g,
+    ...s,
+    children: (0, a.jsx)(_.Tooltip, {
+      "aria-label": er.default.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING,
+      text: (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(u.WarningIcon, {
+          width: 13,
+          height: 13,
+          className: eo.popoutBlockedWarningIcon
+        }), er.default.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING]
       }),
-      onEnter: O,
-      showEmojiButton: !0,
-      renderAttachButton: () => (0, a.jsx)(_.Clickable, {
-        onClick: () => v(!1),
-        className: eo.voicePopoutMessageCloseIcon,
-        children: (0, a.jsx)(E.CloseSmallIcon, {
-          width: 20,
-          height: 20,
-          color: f.default.colors.ICON_PRIMARY
-        })
+      shouldShow: m,
+      children: e => (0, a.jsx)(eT, {
+        ...e,
+        color: _.Button.Colors.GREEN,
+        onClick: E,
+        IconComponent: n ? C.ScreenIcon : S.VoiceNormalIcon,
+        children: er.default.Messages.PREVIEW
       })
-    }) : (0, a.jsxs)("div", {
-      className: eo.voicePopoutActionButtons,
-      children: [(0, a.jsxs)(_.Button, {
-        className: eo.secondaryButton,
-        color: _.Button.Colors.CUSTOM,
-        fullWidth: !0,
-        onClick: () => v(!0),
-        innerClassName: eo.iconButton,
-        size: _.Button.Sizes.LARGE,
-        children: [(0, a.jsx)(m.ChatIcon, {
-          width: 20,
-          height: 20,
-          colorClass: eo.secondaryText
-        }), (0, a.jsx)(_.Text, {
-          variant: "text-md/semibold",
-          className: eo.secondaryText,
-          children: er.default.Messages.USER_POPOUT_MESSAGE
-        })]
-      }), (0, a.jsx)(_.Tooltip, {
-        "aria-label": er.default.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING,
-        text: (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(u.WarningIcon, {
-            width: 13,
-            height: 13,
-            className: eo.popoutBlockedWarningIcon
-          }), er.default.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING]
-        }),
-        shouldShow: L,
-        children: e => (0, a.jsxs)(_.Button, {
-          ...e,
-          color: _.Button.Colors.GREEN,
-          onClick: j,
-          fullWidth: !0,
-          innerClassName: eo.iconButton,
-          size: _.Button.Sizes.LARGE,
-          children: [g ? (0, a.jsx)(C.ScreenIcon, {
-            width: 20,
-            height: 20,
-            color: f.default.colors.WHITE
-          }) : (0, a.jsx)(S.VoiceNormalIcon, {
-            width: 20,
-            height: 20,
-            color: f.default.colors.WHITE
-          }), (0, a.jsx)(_.Text, {
-            variant: "text-md/semibold",
-            color: "always-white",
-            children: er.default.Messages.PREVIEW
-          })]
-        })
-      })]
-    })]
+    })
   })
 }
