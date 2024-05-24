@@ -177,9 +177,12 @@ function m() {
   })
 }
 
-function N() {
+function N(e) {
   return i.HTTP.post({
     url: c.Endpoints.USER_HARVEST,
+    body: {
+      backends: e
+    },
     oldFormErrors: !0
   })
 }
