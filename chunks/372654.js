@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   MAX_CONTENT_WIDTH: function() {
-    return o
+    return l
   },
   getAssetSizeByHeight: function() {
     return n
@@ -14,9 +14,9 @@ r.r(t), r.d(t, {
   }
 });
 var a = r("180650"),
-  l = r("921948");
-let o = 1060,
-  n = e => e * (0, l.default)(),
+  o = r("921948");
+let l = 1060,
+  n = e => e * (0, o.default)(),
   s = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
       {

@@ -6,8 +6,8 @@ r.r(t), r.d(t, {
 });
 var a = r("735250");
 r("470079");
-var l = r("120356"),
-  o = r.n(l),
+var o = r("120356"),
+  l = r.n(o),
   n = r("979554"),
   s = r("481060"),
   i = r("1585"),
@@ -21,7 +21,7 @@ let p = u.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
     let {
       item: t,
       user: r,
-      isHighlighted: l = !1,
+      isHighlighted: o = !1,
       isPurchased: u = !1,
       avatarSize: g = s.AvatarSizes.SIZE_152
     } = e, v = (0, i.getDecorationSizeForAvatarSize)(g), b = (0, d.useCollectiblesHoverPreviewExperiment)("AvatarDecorationPreview"), {
@@ -32,14 +32,14 @@ let p = u.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
       user: r,
       avatarDecorationOverride: (null == t ? void 0 : t.type) === n.CollectiblesItemType.AVATAR_DECORATION ? t : void 0,
       size: v,
-      animateOnHover: !l
+      animateOnHover: !o
     });
     return (0, a.jsx)(p, {
       ...h,
       avatarDecoration: m,
-      src: b && l ? null == r ? void 0 : r.getAvatarURL(void 0, 152, !0) : y,
-      imageClassName: b && l ? C.fadeInAvatarImg : void 0,
-      className: o()(C.avatar, {
+      src: b && o ? null == r ? void 0 : r.getAvatarURL(void 0, 152, !0) : y,
+      imageClassName: b && o ? C.fadeInAvatarImg : void 0,
+      className: l()(C.avatar, {
         [C.avatarPurchased]: u
       }),
       size: g,

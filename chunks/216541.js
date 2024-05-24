@@ -6,8 +6,8 @@ r.r(t), r.d(t, {
 });
 var a = r("735250");
 r("470079");
-var l = r("120356"),
-  o = r.n(l),
+var o = r("120356"),
+  l = r.n(o),
   n = r("481060"),
   s = r("876917"),
   i = r("328456"),
@@ -17,7 +17,7 @@ let d = e => {
   let {
     product: t,
     isPurchased: r,
-    isHighlighted: l,
+    isHighlighted: o,
     user: d,
     forCollectedModal: f,
     profileEffectClassName: C
@@ -28,9 +28,9 @@ let d = e => {
   return (0, a.jsxs)("div", {
     className: u.container,
     children: [null != p ? (0, a.jsx)("div", {
-      className: o()(u.profileEffectShopPreview, C),
+      className: l()(u.profileEffectShopPreview, C),
       children: (0, a.jsx)(s.default, {
-        isHovering: l,
+        isHovering: o,
         profileEffectId: p.id,
         isPurchased: r,
         forCollectedModal: f,
@@ -43,7 +43,7 @@ let d = e => {
         user: d,
         avatarSize: n.AvatarSizes.SIZE_120,
         isPurchased: r,
-        isHighlighted: l
+        isHighlighted: o
       })
     }) : null]
   })

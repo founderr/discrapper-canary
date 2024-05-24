@@ -5,8 +5,8 @@ r.r(t), r.d(t, {
   }
 }), r("47120");
 var a = r("470079"),
-  l = r("809206"),
-  o = r("350327"),
+  o = r("809206"),
+  l = r("350327"),
   n = r("328456");
 let s = e => {
   let {
@@ -21,13 +21,13 @@ let s = e => {
     handleUseNow: a.useCallback(async () => {
       c(!0);
       try {
-        if (null != u && await (0, l.saveAccountChanges)({
+        if (null != u && await (0, o.saveAccountChanges)({
             avatarDecoration: u
           }), null != d) {
           let e = {
             profile_effect_id: d.id
           };
-          await (0, o.saveProfileChanges)(e)
+          await (0, l.saveProfileChanges)(e)
         }
         r()
       } catch (e) {

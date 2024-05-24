@@ -1,26 +1,26 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   COLLECTIBLES_HEADERS: function() {
     return S
   }
 });
-var a = l("180650"),
-  s = l("44315"),
-  r = l("981631"),
-  n = l("689938"),
-  i = l("216299"),
-  o = l("994745"),
-  c = l("341364"),
-  u = l("298132"),
-  d = l("999715"),
-  f = l("194349"),
-  C = l("523569"),
-  m = l("967567"),
-  p = l("696228"),
-  g = l("922140"),
-  E = l("927412"),
-  h = l("199546"),
-  b = l("613540");
+var l = a("180650"),
+  s = a("44315"),
+  r = a("981631"),
+  n = a("689938"),
+  i = a("216299"),
+  o = a("994745"),
+  c = a("341364"),
+  u = a("298132"),
+  d = a("999715"),
+  f = a("194349"),
+  C = a("523569"),
+  m = a("967567"),
+  p = a("696228"),
+  g = a("922140"),
+  E = a("927412"),
+  h = a("199546"),
+  b = a("613540");
 let x = {
     MOST_POPULAR: () => n.default.Messages.MOST_POPULAR,
     NEW_RELEASE: () => n.default.Messages.APPLICATION_STORE_NEW_RELEASE,
@@ -40,7 +40,7 @@ let x = {
     },
     cta: {
       label: v.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.ANIME_V2
+      categorySkuId: l.CollectiblesCategorySkuId.ANIME_V2
     }
   }, {
     staticImageSrc: E,
@@ -53,7 +53,7 @@ let x = {
     },
     cta: {
       label: v.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.GALAXY
+      categorySkuId: l.CollectiblesCategorySkuId.GALAXY
     }
   }, {
     staticImageSrc: m,
@@ -65,7 +65,7 @@ let x = {
     },
     cta: {
       label: v.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.DISXCORE
+      categorySkuId: l.CollectiblesCategorySkuId.DISXCORE
     }
   }, {
     staticImageSrc: d,
@@ -77,6 +77,6 @@ let x = {
     },
     cta: {
       label: v.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
+      categorySkuId: l.CollectiblesCategorySkuId.CYBERPUNK
     }
   }]

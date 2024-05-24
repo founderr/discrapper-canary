@@ -5,13 +5,13 @@ r.r(t), r.d(t, {
   }
 }), r("724458"), r("653041"), r("47120");
 var a = r("470079"),
-  l = r("979554");
-class o {
+  o = r("979554");
+class l {
   get firstAvatarDecoration() {
-    return this.getFirstItemByType(l.CollectiblesItemType.AVATAR_DECORATION)
+    return this.getFirstItemByType(o.CollectiblesItemType.AVATAR_DECORATION)
   }
   get firstProfileEffect() {
-    return this.getFirstItemByType(l.CollectiblesItemType.PROFILE_EFFECT)
+    return this.getFirstItemByType(o.CollectiblesItemType.PROFILE_EFFECT)
   }
   getFirstItemByType(e) {
     var t;
@@ -38,7 +38,7 @@ let n = e => {
   let {
     firstProfileEffect: t,
     firstAvatarDecoration: r
-  } = a.useMemo(() => new o(e), [e]);
+  } = a.useMemo(() => new l(e), [e]);
   return {
     firstProfileEffect: t,
     firstAvatarDecoration: r

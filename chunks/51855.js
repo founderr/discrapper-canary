@@ -1,7 +1,7 @@
 "use strict";
-l.r(t);
-var a = l("818083");
-t.default = (0, a.createExperiment)({
+a.r(t);
+var l = a("818083");
+t.default = (0, l.createExperiment)({
   kind: "user",
   id: "2024-04_lightning_checkout",
   label: "Lightning Checkout Experiment",
