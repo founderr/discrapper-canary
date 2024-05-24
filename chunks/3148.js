@@ -72,6 +72,7 @@ function _(e) {
     state: u.MessageStates.SENDING,
     tts: i,
     message_reference: c,
+    message_snapshots: [],
     flags: T,
     nonce: f,
     poll: S,

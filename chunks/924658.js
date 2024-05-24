@@ -528,8 +528,13 @@ e.exports = Object.freeze({
   CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL: "Join Wumpus Feedback Squad server",
   CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP: "You cannot apply to Guilds right now",
   MESSAGE_ACTION_FORWARD: "Forward",
+  MESSAGE_ACTION_FORWARD_TO: "Forward To",
   MESSAGE_FORWARDED: "Forwarded",
   MESSAGE_FORWARD_ORIGINAL_MESSAGE: "Go to message",
   MESSAGE_ACTION_FORWARD_MEDIA_A11Y: "Forward media from this message",
-  MESSAGE_ACTION_FORWARD_EMBED_A11Y: "Forward embed from this message"
+  MESSAGE_ACTION_FORWARD_EMBED_A11Y: "Forward embed from this message",
+  MESSAGES_SEND_SEPARATELY: "Send Separately ({count, number})",
+  MESSAGES_FORWARD_MAX_DESTINATION_COUNT: "Maximum ({count, number}) places at once",
+  MESSAGE_FORWARD_SUCCESS: "Message forwarded!",
+  SELECTED: "Selected"
 })

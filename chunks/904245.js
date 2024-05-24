@@ -609,91 +609,93 @@ let eA = {
       })
     },
     _sendMessage(e, t, n) {
-      var i, s;
-      let a = (0, k.default)(e);
-      if (null != a) return eT.info("Converting channel to a private channel"), a.then(e => {
+      var i, s, a;
+      let l = (0, k.default)(e);
+      if (null != l) return eT.info("Converting channel to a private channel"), l.then(e => {
         eT.info("Finished converting channel to a private channel"), em._sendMessage(e, t, n)
       });
-      let l = t.content,
+      let _ = t.content,
         {
-          invalidEmojis: _,
-          validNonShortcutEmojis: c,
-          tts: E = !1
+          invalidEmojis: c,
+          validNonShortcutEmojis: E,
+          tts: S = !1
         } = t,
         {
-          activityAction: S,
-          location: h,
-          suggestedInvite: A,
-          stickerIds: m,
-          messageReference: C,
-          allowedMentions: R,
-          poll: g
+          activityAction: h,
+          location: A,
+          suggestedInvite: m,
+          stickerIds: C,
+          messageReference: R,
+          allowedMentions: g,
+          poll: L
         } = n,
-        L = null !== (i = n.flags) && void 0 !== i ? i : 0,
-        [U, V] = (0, F.default)(l);
-      if (U && (l = V, L = (0, er.addFlag)(L, ed.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == S && null == m && null == g) return Promise.resolve();
-      let H = null != C ? ed.MessageTypes.REPLY : ed.MessageTypes.DEFAULT,
-        Y = null !== (s = n.nonce) && void 0 !== s ? s : (0, y.createNonce)();
+        U = null !== (s = n.flags) && void 0 !== s ? s : 0,
+        [V, H] = (0, F.default)(_);
+      V && (_ = H, U = (0, er.addFlag)(U, ed.MessageFlags.SUPPRESS_NOTIFICATIONS));
+      let Y = (null === (i = n.messageReference) || void 0 === i ? void 0 : i.type) === ed.MessageReferenceTypes.FORWARD;
+      if ("" === _ && null == h && null == C && null == L && !Y) return Promise.resolve();
+      let j = null != R ? ed.MessageTypes.REPLY : ed.MessageTypes.DEFAULT,
+        z = null !== (a = n.nonce) && void 0 !== a ? a : (0, y.createNonce)();
       if (!1 !== n.eagerDispatch) {
         let t = (0, M.default)({
           channelId: e,
-          content: l,
-          tts: E,
-          type: H,
-          messageReference: C,
-          allowedMentions: R,
-          flags: 0 !== L ? L : void 0,
-          nonce: Y,
-          poll: (0, w.createPollServerDataFromCreateRequest)(g)
+          content: _,
+          tts: S,
+          type: j,
+          messageReference: R,
+          allowedMentions: g,
+          flags: 0 !== U ? U : void 0,
+          nonce: z,
+          poll: (0, w.createPollServerDataFromCreateRequest)(L)
         });
-        (0, b.updateComboOnMessageSend)(e, t.id), null != m && (t.sticker_items = m.map(e => x.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
+        (0, b.updateComboOnMessageSend)(e, t.id), null != C && (t.sticker_items = C.map(e => x.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
       }
-      if (!ef && null != _ && _.length > 0) {
+      if (!ef && null != c && c.length > 0) {
         let t, n;
         ef = !0;
         let i = et.default.getCurrentUser();
-        _.some(e => e.animated) && !eo.default.canUseAnimatedEmojis(i) ? (t = eE.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : X.default.canWithPartialContext(ed.Permissions.USE_EXTERNAL_EMOJIS, {
+        c.some(e => e.animated) && !eo.default.canUseAnimatedEmojis(i) ? (t = eE.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : X.default.canWithPartialContext(ed.Permissions.USE_EXTERNAL_EMOJIS, {
           channelId: e
         }) ? (t = eE.default.Messages.INVALID_EXTERNAL_EMOJI_BODY_UPGRADE, n = "INVALID_EXTERNAL_EMOJI_BODY_UPGRADE") : (t = eE.default.Messages.INVALID_EXTERNAL_EMOJI_BODY, n = "INVALID_EXTERNAL_EMOJI_BODY"), em.sendBotMessage(e, t, n)
       }
-      let j = {
+      let Z = {
         type: u.MessageDataType.SEND,
         message: {
           channelId: e,
-          content: l,
-          nonce: Y,
-          tts: E,
-          message_reference: C,
-          allowed_mentions: R,
-          flags: L
+          content: _,
+          nonce: z,
+          tts: S,
+          message_reference: R,
+          allowed_mentions: g,
+          flags: U
         }
       };
-      if (null != S) {
-        let e = S.type === ed.ActivityActionTypes.JOIN_REQUEST ? null == S ? void 0 : S.activity.session_id : W.default.getSessionId();
+      if (null != h) {
+        let e = h.type === ed.ActivityActionTypes.JOIN_REQUEST ? null == h ? void 0 : h.activity.session_id : W.default.getSessionId();
         if (null != e) {
           let t = {
-              type: S.type,
+              type: h.type,
               session_id: e
             },
             {
               activity: n
-            } = S;
-          null != n.party && null != n.party.id && (t.party_id = n.party.id), j.message.application_id = n.application_id, j.message.activity = t
+            } = h;
+          null != n.party && null != n.party.id && (t.party_id = n.party.id), Z.message.application_id = n.application_id, Z.message.activity = t
         }
       }
-      return null != g && (j.message.poll = g), null != m && (j.message.sticker_ids = m), G.default.isEnabled() && (j.message.has_poggermode_enabled = !0), new Promise((t, i) => {
+      return null != L && (Z.message.poll = L), null != C && (Z.message.sticker_ids = C), G.default.isEnabled() && (Z.message.has_poggermode_enabled = !0), new Promise((t, i) => {
         let s = Date.now(),
           a = u.default.length,
-          _ = Math.floor(1e4 * Math.random());
-        eT.info("Queueing message to be sent LogId:".concat(_)), u.default.enqueue(j, u => {
-          let _ = Date.now() - s;
-          if (u.ok) {
-            D.default.donateSentMessage(l, e), em.receiveMessage(e, u.body, !0, {
+          l = Math.floor(1e4 * Math.random());
+        eT.info("Queueing message to be sent LogId:".concat(l)), u.default.enqueue(Z, l => {
+          let u = Date.now() - s;
+          if (l.ok) {
+            D.default.donateSentMessage(_, e), em.receiveMessage(e, l.body, !0, {
               sendAnalytics: {
-                duration: _,
+                duration: u,
                 queueSize: a
               },
-              poll: g
+              poll: L
             });
             let i = el.default.cast(e),
               s = p.default.getRequest(i);
@@ -706,21 +708,21 @@ let eA = {
               (0, I.trackClanSendInterviewMessage)({
                 guildId: t,
                 channelId: e,
-                messageId: u.body.id,
+                messageId: l.body.id,
                 joinRequestStatus: i,
                 joinRequestUserId: n
               })
             }
-            v.default.recordMessageSendApiResponse(Y), o.default.dispatch({
+            v.default.recordMessageSendApiResponse(z), o.default.dispatch({
               type: "SLOWMODE_RESET_COOLDOWN",
               slowmodeType: ee.SlowmodeType.SendMessage,
               channelId: e
             }), o.default.dispatch({
               type: "EMOJI_TRACK_USAGE",
-              emojiUsed: c
+              emojiUsed: E
             }), o.default.dispatch({
               type: "STICKER_TRACK_USAGE",
-              stickerIds: m
+              stickerIds: C
             }), o.default.dispatch({
               type: "LOCAL_MESSAGE_CREATE",
               message: {
@@ -780,11 +782,11 @@ let eA = {
                 else throw Error("Unknown coded link type: ".concat(t))
               })
             }({
-              content: l,
+              content: _,
               channelId: e,
-              messageId: u.body.id,
-              location: null != h ? h : "chat_input",
-              suggested: A
+              messageId: l.body.id,
+              location: null != A ? A : "chat_input",
+              suggested: m
             }), ! function(e, t, n, i, r) {
               (0, es.findGiftCodes)(e).forEach(e => {
                 let s = K.default.getChannel(t);
@@ -798,47 +800,47 @@ let eA = {
                   automatic_send: r
                 })
               })
-            }(l, e, u.body.id, null != h ? h : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser), t(u)
+            }(_, e, l.body.id, null != A ? A : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser), t(l)
           } else {
-            var E;
+            var c;
             eI.log("Failed to send message", {
-              hasErr: u.hasErr,
-              status: u.status,
-              code: null === (E = u.body) || void 0 === E ? void 0 : E.code,
-              error: u.err
+              hasErr: l.hasErr,
+              status: l.status,
+              code: null === (c = l.body) || void 0 === c ? void 0 : c.code,
+              error: l.err
             });
             let t = !1;
-            if (u.hasErr) "ABORTED" === u.err.code && (t = !0);
-            else if (u.status >= 400 && u.status < 500 && u.body) {
-              if (u.body.code === ed.AbortCodes.SLOWMODE_RATE_LIMITED) {
-                let t = u.body.retry_after;
+            if (l.hasErr) "ABORTED" === l.err.code && (t = !0);
+            else if (l.status >= 400 && l.status < 500 && l.body) {
+              if (l.body.code === ed.AbortCodes.SLOWMODE_RATE_LIMITED) {
+                let t = l.body.retry_after;
                 null != t && t > 0 && o.default.dispatch({
                   type: "SLOWMODE_SET_COOLDOWN",
                   channelId: e,
                   slowmodeType: ee.SlowmodeType.SendMessage,
                   cooldownMs: t * ei.default.Millis.SECOND
                 })
-              } else N.AUTOMOD_ERROR_CODES.has(u.body.code) ? o.default.dispatch({
+              } else N.AUTOMOD_ERROR_CODES.has(l.body.code) ? o.default.dispatch({
                 type: "MESSAGE_SEND_FAILED_AUTOMOD",
-                messageData: j,
+                messageData: Z,
                 errorResponseBody: {
-                  code: u.body.code,
-                  message: u.body.message
+                  code: l.body.code,
+                  message: l.body.message
                 }
-              }) : u.body.code === ed.AbortCodes.POGGERMODE_TEMPORARILY_DISABLED ? o.default.dispatch({
+              }) : l.body.code === ed.AbortCodes.POGGERMODE_TEMPORARILY_DISABLED ? o.default.dispatch({
                 type: "POGGERMODE_TEMPORARILY_DISABLED"
-              }) : null != g || em.sendClydeError(e, u.body.code)
+              }) : null != L || Y || em.sendClydeError(e, l.body.code)
             }
-            t ? em.deleteMessage(e, Y, !0) : (o.default.dispatch({
+            t ? em.deleteMessage(e, z, !0) : (o.default.dispatch({
               type: "MESSAGE_SEND_FAILED",
-              messageId: Y,
+              messageId: z,
               channelId: e
             }), (0, P.logMessageSendFailure)({
-              failureCode: u.hasErr ? void 0 : u.status,
-              errorMessage: u.hasErr ? u.err.message : void 0
-            })), i(u)
+              failureCode: l.hasErr ? void 0 : l.status,
+              errorMessage: l.hasErr ? l.err.message : void 0
+            })), i(l)
           }
-        }, _)
+        }, l)
       })
     },
     startEditMessage(e, t, n, i) {
