@@ -39,7 +39,7 @@ class o {
       r = null,
       s = {};
     for (let u = 0; u <= e.length; u++)
-      if (n = e.charAt(u), (t = null != (r = t.suffix[n]) ? r : this.trie).isWord) {
+      if (n = e.charAt(u), (t = null != (r = t.suffix[n]) ? r : null != this.trie.suffix[n] ? this.trie.suffix[n] : this.trie).isWord) {
         var a, o, l;
         let n = t.strategy,
           r = u + 1 - (null !== (o = null === (a = t.value) || void 0 === a ? void 0 : a.length) && void 0 !== o ? o : 0),
