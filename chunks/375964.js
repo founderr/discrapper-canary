@@ -4706,6 +4706,7 @@ e.exports = Object.freeze({
   TWO_FA_KEY: "2FA Key (Manual entry)",
   TWO_FA_ACTIVATE: "Activate",
   TWO_FA_REMOVE: "Remove Authenticator App",
+  TWO_FA_REMOVE_CONFIRMATION: "Are you sure you want to remove your Authenticator App?",
   TWO_FA_GENERATE_CODES: "Generate New Backup Codes",
   TWO_FA_VIEW_CODES: "View Codes",
   TWO_FA_VIEW_CODES_SUBMIT: "Submit",

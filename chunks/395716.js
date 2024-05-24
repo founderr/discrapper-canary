@@ -33,11 +33,11 @@ function c(e) {
         c(!1)
       }
     }
-  }, [E, t.joinRequestId, I, s]), f = null == t.interviewChannelId ? d.default.Messages.CLAN_START_INTERVIEW : d.default.Messages.CLAN_JOIN_INTERVIEW;
+  }, [E, t.joinRequestId, I, s]);
   return (0, a.jsx)(n.Button, {
     color: n.Button.Colors.GREEN,
     submitting: s,
     onClick: T,
-    children: f
+    children: d.default.Messages.CLAN_DM_APPLICANT
   })
 }
