@@ -163,7 +163,7 @@ function C() {
           },
           children: l ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping"
         })]
-      })]
+      }), false]
     })
   })
 }
