@@ -47,9 +47,9 @@ var l = n("735250"),
   z = n("751277"),
   Z = n("65721"),
   X = n("843343"),
-  Q = n("654142"),
-  J = n("695301"),
-  q = n("836697"),
+  q = n("654142"),
+  Q = n("695301"),
+  J = n("836697"),
   $ = n("921230"),
   ee = n("981631"),
   et = n("689938"),
@@ -257,14 +257,14 @@ function eu(e) {
             isOnHubVerificationRoute: ej
           }), (0, l.jsx)(B.default, {}), ew, g.map(e => (0, l.jsx)($.default, {
             guildId: e
-          }, e)), (0, l.jsx)(q.default, {
+          }, e)), (0, l.jsx)(J.default, {
             onActivate: eP
           }), (0, l.jsx)(Z.default, {}), (0, l.jsx)("div", {
             "aria-label": et.default.Messages.SERVERS,
             children: eG.map(function e(t) {
               switch (t.type) {
                 case G.GuildsNodeType.FOLDER:
-                  return (0, l.jsx)(Q.default, {
+                  return (0, l.jsx)(q.default, {
                     folderNode: t,
                     setNodeRef: eO.setNodeRef,
                     draggable: !0,
@@ -274,7 +274,7 @@ function eu(e) {
                     renderChildNode: e
                   }, t.id);
                 case G.GuildsNodeType.GUILD:
-                  return (0, l.jsx)(J.default, {
+                  return (0, l.jsx)(Q.default, {
                     guildNode: t,
                     setRef: eO.setNodeRef,
                     draggable: !0,

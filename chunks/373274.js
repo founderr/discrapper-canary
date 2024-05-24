@@ -53,9 +53,9 @@ var l, a = n("735250"),
   z = n("53425"),
   Z = n("424785"),
   X = n("770202"),
-  Q = n("79556"),
-  J = n("428127"),
-  q = n("950969"),
+  q = n("79556"),
+  Q = n("428127"),
+  J = n("950969"),
   $ = n("233657"),
   ee = n("831700"),
   et = n("443063"),
@@ -163,7 +163,7 @@ class eo extends(l = s.PureComponent) {
     } = this.props;
     return (0, a.jsx)("div", {
       className: ei.positionedContainer,
-      children: (0, a.jsx)(q.default, {
+      children: (0, a.jsx)(J.default, {
         ref: this.unreadTopRef,
         textUnread: es.default.Messages.NEW_UNREADS,
         textMention: es.default.Messages.NEW_MENTIONS,
@@ -188,7 +188,7 @@ class eo extends(l = s.PureComponent) {
       bottomMention: l,
       isUnreadVisible: s
     } = this.state;
-    return (0, a.jsx)(q.default, {
+    return (0, a.jsx)(J.default, {
       reverse: !0,
       ref: this.unreadBottomRef,
       textUnread: es.default.Messages.NEW_UNREADS,
@@ -258,14 +258,14 @@ class eo extends(l = s.PureComponent) {
           children: n ? (0, a.jsxs)(s.Fragment, {
             children: [(0, a.jsx)("div", {
               className: ei.positionedContainer,
-              children: (0, a.jsx)(J.default, {
+              children: (0, a.jsx)(Q.default, {
                 position: "top",
                 guildChannels: e,
                 guildChannelsVersion: t,
                 jumpToVoiceChannels: this.jumpToVoiceChannels,
                 jumpToChannel: this.jumpToChannel
               })
-            }), this.renderList(), (0, a.jsx)(J.default, {
+            }), this.renderList(), (0, a.jsx)(Q.default, {
               position: "bottom",
               guildChannels: e,
               guildChannelsVersion: t,
@@ -577,7 +577,7 @@ class eo extends(l = s.PureComponent) {
         case el.ChannelTypes.DM:
         case el.ChannelTypes.GROUP_DM:
           return (0, a.jsxs)(s.Fragment, {
-            children: [(0, a.jsx)(Q.default, {
+            children: [(0, a.jsx)(q.default, {
               channel: T,
               guild: l,
               position: I.position,
@@ -639,7 +639,7 @@ class eo extends(l = s.PureComponent) {
           }, "readonly-".concat(T.id));
         case el.ChannelTypes.PUBLIC_THREAD:
         case el.ChannelTypes.PRIVATE_THREAD:
-          return (0, a.jsx)(Q.default, {
+          return (0, a.jsx)(q.default, {
             channel: T,
             guild: l,
             position: I.position,

@@ -66,15 +66,15 @@ t.default = a.memo(function(e) {
     badge: z = 0,
     contextMenu: Z = j,
     draggable: X = !1,
-    sorting: Q = !1,
-    preloadOnClick: J = !0,
-    guildJoinRequestStatus: q
+    sorting: q = !1,
+    preloadOnClick: Q = !0,
+    guildJoinRequestStatus: J
   } = e, {
     id: $,
     parentId: ee
   } = G, et = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, M.renderUnavailableBadge)() : null != W ? (0, M.renderMediaBadge)(W) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-  null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != q && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
-    guildJoinRequestStatus: q
+  null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
+    guildJoinRequestStatus: J
   })) && void 0 !== h ? h : void 0);
   let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, I.getBadgeWidthForValue)(z),
     [{
@@ -96,7 +96,7 @@ t.default = a.memo(function(e) {
     }),
     ei = (0, o.useTreeItem)(null != $ ? $ : O.EMPTY_STRING_SNOWFLAKE_ID),
     [er, eo] = a.useState(!1),
-    eu = !Q && er,
+    eu = !q && er,
     [ed, ec] = a.useState(!1),
     [ef, eh] = a.useState(!1),
     [em] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
@@ -112,10 +112,10 @@ t.default = a.memo(function(e) {
       })
     }, [$, F]),
     ep = a.useCallback(() => {
-      if (null != F || null == H || K || !J) return;
+      if (null != F || null == H || K || !Q) return;
       let e = (0, C.getChannelIdForGuildTransition)(H.id);
       null != e && f.default.preload(H.id, e)
-    }, [F, H, K, J]),
+    }, [F, H, K, Q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
     eE = a.useCallback(e => {
       null != H && !eg && Z(e, H)
@@ -155,10 +155,10 @@ t.default = a.memo(function(e) {
       name: H.toString(),
       onClick: eC,
       onMouseEnter: function() {
-        Q || eo(!0)
+        q || eo(!0)
       },
       onMouseLeave: function() {
-        Q || eo(!1)
+        q || eo(!1)
       },
       onMouseDown: ep,
       onContextMenu: eE,
@@ -174,7 +174,7 @@ t.default = a.memo(function(e) {
       ref: X ? es : void 0,
       "data-dnd-name": H.toString(),
       className: i()(D.blobContainer, {
-        [D.sorting]: Q,
+        [D.sorting]: q,
         [D.wobble]: ef,
         [D.selected]: ef || k
       }),
@@ -195,7 +195,7 @@ t.default = a.memo(function(e) {
       className: D.pill
     }), (0, l.jsx)(v.default, {
       guild: H,
-      disabled: Q,
+      disabled: q,
       isDragging: ea,
       children: eT
     }), X ? (0, l.jsx)(L.default, {

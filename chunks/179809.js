@@ -72,9 +72,9 @@ function x(e) {
     })
   }), X = a.useCallback(e => {
     W(e)
-  }, []), Q = a.useCallback(e => {
+  }, []), q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
-  }, [P, d]), J = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, q = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = H.length * (L + v), et = (0, o.useTransition)(!z && d, {
+  }, [P, d]), Q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = H.length * (L + v), et = (0, o.useTransition)(!z && d, {
     from: {
       height: 0
     },
@@ -95,7 +95,7 @@ function x(e) {
       unread: R,
       className: T.pill
     }), (0, l.jsx)(S.default, {
-      text: J,
+      text: Q,
       disabled: D,
       selected: s,
       disableWrapper: !0,
@@ -104,7 +104,7 @@ function x(e) {
         className: i()({
           [T.wobble]: !z && Y && !d
         }),
-        "data-dnd-name": J,
+        "data-dnd-name": Q,
         children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(p.default, {
           folderNode: t,
           expanded: d,
@@ -112,18 +112,18 @@ function x(e) {
           sorting: D,
           mediaState: m,
           mentionCount: x,
-          tooltipName: J,
+          tooltipName: Q,
           folderGroupId: $,
           onClick: P,
           onContextMenu: G,
           onHoverChange: k,
-          onKeyDown: Q,
-          treeItemProps: q,
+          onKeyDown: q,
+          treeItemProps: J,
           folderIconContent: w
         })
       })
     }), y ? (0, l.jsx)(g.default, {
-      name: J,
+      name: Q,
       targetNode: t,
       onDragOverChanged: X
     }) : null]
@@ -150,7 +150,7 @@ function x(e) {
         children: H.map(U)
       }, a)
     }), y && d ? (0, l.jsx)(g.FolderEndDropTarget, {
-      name: J,
+      name: Q,
       targetNode: t
     }) : null]
   })

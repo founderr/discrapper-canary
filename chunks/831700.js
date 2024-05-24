@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return q
+    return J
   }
 }), n("47120"), n("411104");
 var l = n("735250");
@@ -60,7 +60,7 @@ function X(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class Q extends B.default {
+class q extends B.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
   }
@@ -375,9 +375,9 @@ class Q extends B.default {
     })
   }
 }
-let J = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(Q));
+let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(q));
 
-function q(e) {
+function J(e) {
   let {
     guild: t,
     channel: n,
@@ -421,7 +421,7 @@ function q(e) {
     enableConnectedUserLimit: !0,
     enableActivities: !0
   }), U = x && null == y;
-  return (0, l.jsx)(J, {
+  return (0, l.jsx)(Q, {
     channelName: p,
     embeddedApps: C,
     embeddedActivityType: W.ActivityTypes.PLAYING,
