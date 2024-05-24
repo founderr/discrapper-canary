@@ -37,7 +37,7 @@ function m(e) {
   } = (0, u.useDeleteSubscriptionListing)(), {
     archiveSubscriptionListing: D,
     submitting: v
-  } = (0, u.useArchiveSubscriptionListing)(), j = () => {
+  } = (0, u.useArchiveSubscriptionListing)(), G = () => {
     let e = async () => {
       if (!!O || (i()(null != g, "group listing doesnt exist"), i()(null != C, "subscription listing doesnt exist"), !!await A(N, g, C))) null == n || n()
     };
@@ -61,17 +61,17 @@ function m(e) {
       })
     })
   }, {
-    allowSelfRemoveMonetization: G
+    allowSelfRemoveMonetization: j
   } = (0, d.useShouldRestrictUpdatingCreatorMonetizationSettings)(N);
   return null == h ? null : (0, a.jsx)(I.default, {
     title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
     children: p ? (0, a.jsxs)(o.FormSection, {
       title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
-      disabled: !G,
+      disabled: !j,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
         className: S.formDescription,
-        disabled: !G,
+        disabled: !j,
         children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
       }), (0, a.jsx)(o.Tooltip, {
         shouldShow: !L,
@@ -82,19 +82,19 @@ function m(e) {
           ...e,
           wrapperClassName: f.deleteListingButton,
           color: o.Button.Colors.RED,
-          onClick: j,
+          onClick: G,
           submitting: M,
-          disabled: !G || !L,
+          disabled: !j || !L,
           children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
         })
       })]
     }) : (0, a.jsxs)(o.FormSection, {
       title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_LABEL,
-      disabled: !G,
+      disabled: !j,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
         className: S.formDescription,
-        disabled: !G,
+        disabled: !j,
         children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
       }), (0, a.jsx)(o.Button, {
         wrapperClassName: f.deleteListingButton,
@@ -121,7 +121,7 @@ function m(e) {
           })
         },
         submitting: v,
-        disabled: !G,
+        disabled: !j,
         children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON
       })]
     })

@@ -29,8 +29,8 @@ var a = s("735250"),
   M = s("51144"),
   D = s("987707"),
   v = s("999382"),
-  j = s("501801"),
-  G = s("603784"),
+  G = s("501801"),
+  j = s("603784"),
   U = s("981631"),
   P = s("689938"),
   b = s("949157"),
@@ -53,7 +53,7 @@ class H extends l.PureComponent {
       guild: s,
       ...l
     } = this.props;
-    return null == t ? null : (0, a.jsx)(G.default, {
+    return null == t ? null : (0, a.jsx)(j.default, {
       ...l,
       guildId: t,
       guild: s,
@@ -352,7 +352,7 @@ class w extends l.PureComponent {
         value: e.value,
         selectedColor: E.ComboboxItem.Colors.BRAND,
         children: [(0, a.jsx)(E.ComboboxItem.Icon, {
-          children: (0, a.jsx)(j.AuditLogIcon, {
+          children: (0, a.jsx)(G.AuditLogIcon, {
             themeOverride: r ? U.ThemeTypes.DARK : null,
             actionType: n,
             targetType: i,

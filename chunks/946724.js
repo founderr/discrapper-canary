@@ -23,8 +23,8 @@ let x = new Set,
   M = [],
   D = C.GuildSettingsRoleEditSections.DISPLAY,
   v = !1,
-  j = new Set,
-  G = new Map,
+  G = new Set,
+  j = new Map,
   U = new Map;
 
 function P() {
@@ -69,7 +69,7 @@ function y() {
       position: t
     } = e;
     return t
-  }).reverse().value() : []], v = !1, e && (U.clear(), G.forEach((e, t) => {
+  }).reverse().value() : []], v = !1, e && (U.clear(), j.forEach((e, t) => {
     U.set(t, [...e])
   }))
 }
@@ -84,7 +84,7 @@ let B = c().debounce(() => {
         return s === e
       })
     }(t)) && (x.delete(t), e = !0)
-  }), 0 === x.size && (O = !1), v && c().isEqual(G, U) && (e = !0, v = !1), e && V.emitChange()
+  }), 0 === x.size && (O = !1), v && c().isEqual(j, U) && (e = !0, v = !1), e && V.emitChange()
 }, 500);
 
 function F(e, t) {
@@ -152,7 +152,7 @@ class w extends(i = I.default.Store) {
     return Array.from(x)
   }
   get editedRoleIdsForConfigurations() {
-    return j
+    return G
   }
   get roles() {
     return A
@@ -296,9 +296,9 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
       roleConnectionConfigurations: s
     } = e, a = H(t);
     if (null == a) return !1;
-    let l = G.get(a.id);
+    let l = j.get(a.id);
     if (c().isEqual(l, s)) return !1;
-    U.set(a.id, s), G.set(a.id, s), B()
+    U.set(a.id, s), j.set(a.id, s), B()
   },
   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function(e) {
     let {
@@ -306,15 +306,15 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
       roleConnectionConfigurations: s
     } = e, a = H(t);
     if (null == a) return !1;
-    v = !0, j.add(a.id), U.set(a.id, s), B()
+    v = !0, G.add(a.id), U.set(a.id, s), B()
   },
   GUILD_SETTINGS_CLOSE: function() {
-    a = null, M = A = [], G.clear(), x.clear(), U.clear(), j = new Set, O = !1, p = !1, v = !1, L = R.FormStates.CLOSED
+    a = null, M = A = [], j.clear(), x.clear(), U.clear(), G = new Set, O = !1, p = !1, v = !1, L = R.FormStates.CLOSED
   },
   GUILD_ROLE_CREATE: k,
   GUILD_ROLE_UPDATE: k,
   GUILD_ROLE_DELETE: function(e) {
-    return j.has(e.roleId) && (j.delete(e.roleId), G.delete(e.roleId), U.delete(e.roleId), v = !1), k(e)
+    return G.has(e.roleId) && (G.delete(e.roleId), j.delete(e.roleId), U.delete(e.roleId), v = !1), k(e)
   },
   GUILD_SETTINGS_ROLES_SUBMITTING: function() {
     L = R.FormStates.SUBMITTING

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildSettingsDiscoveryLandingPageNotice: function() {
-    return G
+    return j
   }
 }), s("47120"), s("315314"), s("610138"), s("216116"), s("78328"), s("815648"), s("627494"), s("757143");
 var a = s("735250"),
@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("731455"),
   D = s("689938"),
   v = s("845978");
-let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
-  G = () => {
+let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
+  j = () => {
     let {
       guild: e,
       guildMetadata: t,
@@ -72,9 +72,9 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
     var e;
     let t = l.useRef(null),
       s = (0, n.useStateFromStores)([L.default], () => L.default.getGuild()),
-      [u, G] = l.useState(!1);
+      [u, j] = l.useState(!1);
     l.useEffect(() => {
-      !u && null != s && (c.maybeFetchGuildDiscoveryCategories(), c.fetchMetadataForGuild(s.id), c.fetchSlugForGuild(s.id), G(!0))
+      !u && null != s && (c.maybeFetchGuildDiscoveryCategories(), c.fetchMetadataForGuild(s.id), c.fetchSlugForGuild(s.id), j(!0))
     }, [s, u]);
     let {
       canManageGuild: U
@@ -259,7 +259,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     })]
                   }), (() => {
                     if (!b.isPublished || null == y) return;
-                    let e = j + y;
+                    let e = G + y;
                     return (0, a.jsx)(a.Fragment, {
                       children: (0, a.jsxs)(r.FormSection, {
                         className: v.noDividerFormSection,

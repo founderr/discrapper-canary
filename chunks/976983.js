@@ -42,7 +42,7 @@ function g(e) {
     drag: M,
     dragSourcePosition: D,
     drop: v,
-    setIsDraggable: j
+    setIsDraggable: G
   } = (0, u.default)({
     type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(T.id),
     index: A,
@@ -51,10 +51,10 @@ function g(e) {
     onDragComplete: L,
     onDragReset: O
   }), {
-    customEmoji: G,
+    customEmoji: j,
     unicodeEmoji: U
   } = (0, E.default)(null === (t = C.emoji) || void 0 === t ? void 0 : t.id, null === (l = C.emoji) || void 0 === l ? void 0 : l.name);
-  return !((0, f.isEmojiEmpty)(C.emoji) || null != G || null != U) && (p = m.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
+  return !((0, f.isEmojiEmpty)(C.emoji) || null != j || null != U) && (p = m.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
     className: n()(N.optionCard, {
       [N.hasError]: R || null != p,
       [N.dropIndicatorBefore]: null != D && A < D,
@@ -83,8 +83,8 @@ function g(e) {
         }
       })
     }),
-    onMouseEnter: () => j(!0),
-    onMouseLeave: () => j(!1),
+    onMouseEnter: () => G(!0),
+    onMouseLeave: () => G(!1),
     innerRef: e => M(v(e)),
     children: [(0, a.jsx)("div", {
       className: N.dragContainer,

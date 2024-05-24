@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return v
   },
   default: function() {
-    return G
+    return j
   }
 }), s("757143"), s("47120");
 var a = s("735250"),
@@ -57,7 +57,7 @@ let v = r.default.connectStores([C.default, x.default], () => {
     }
   }
 })(u.default);
-class j extends l.PureComponent {
+class G extends l.PureComponent {
   componentWillUnmount() {
     (0, R.close)()
   }
@@ -215,7 +215,7 @@ class j extends l.PureComponent {
   }
 }
 
-function G() {
+function j() {
   let e = (0, r.useStateFromStores)([C.default], () => C.default.getGuild()),
     t = (0, r.useStateFromStoresObject)([x.default], () => ({
       vanityURLCode: x.default.vanityURLCode,
@@ -230,7 +230,7 @@ function G() {
     } = (0, _.default)(c.default.VANITY_URL);
   return (0, a.jsx)(_.AnalyticsLocationProvider, {
     value: l,
-    children: (0, a.jsx)(j, {
+    children: (0, a.jsx)(G, {
       guild: e,
       ...t,
       hide: s,

@@ -63,7 +63,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       errorMessage: e
     })
   },
-  j = e => {
+  G = e => {
     let {
       discoveryEnabled: t,
       onboardingEnabled: s,
@@ -154,7 +154,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       })]
     })
   },
-  G = () => {
+  j = () => {
     var e;
     let t = (0, r.useStateFromStores)([R.default], () => R.default.getGuild()),
       {
@@ -208,7 +208,7 @@ let D = "dismissedCommunityFeaturesUpsell",
           safetyAlertsChannelId: e
         })
       },
-      G = e => {
+      j = e => {
         C.default.updateGuild({
           publicUpdatesChannelId: e
         })
@@ -270,7 +270,7 @@ let D = "dismissedCommunityFeaturesUpsell",
     return (0, a.jsxs)(u.FormSection, {
       title: p.default.Messages.GUILD_SETTINGS_COMMUNITY,
       tag: u.FormTitleTags.H1,
-      children: [I ? (0, a.jsx)(j, {
+      children: [I ? (0, a.jsx)(G, {
         discoveryEnabled: t.features.has(L.GuildFeatures.DISCOVERABLE),
         onboardingEnabled: t.features.has(L.GuildFeatures.GUILD_ONBOARDING),
         guild: t
@@ -314,7 +314,7 @@ let D = "dismissedCommunityFeaturesUpsell",
           children: (0, a.jsx)(u.SearchableSelect, {
             value: t.publicUpdatesChannelId,
             options: f,
-            onChange: G,
+            onChange: j,
             isDisabled: !s
           })
         })]
@@ -417,7 +417,7 @@ let D = "dismissedCommunityFeaturesUpsell",
   };
 t.default = () => {
   let e = (0, r.useStateFromStores)([R.default], () => R.default.getGuild());
-  return null == e ? null : e.features.has(L.GuildFeatures.COMMUNITY) ? (0, a.jsx)(G, {}) : (0, a.jsx)(x.default, {
+  return null == e ? null : e.features.has(L.GuildFeatures.COMMUNITY) ? (0, a.jsx)(j, {}) : (0, a.jsx)(x.default, {
     guild: e
   })
 }

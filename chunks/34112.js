@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("480608"),
   D = s("243730"),
   v = s("130341"),
-  j = s("970129"),
-  G = s("712181"),
+  G = s("970129"),
+  j = s("712181"),
   U = s("203377"),
   P = s("981631"),
   b = s("689938"),
@@ -69,7 +69,7 @@ function H(e) {
       handleDragStart: h,
       handleDragReset: C,
       handleDragComplete: R
-    } = (0, G.default)(N),
+    } = (0, j.default)(N),
     x = l.useCallback(e => {
       var l;
       let {
@@ -129,8 +129,8 @@ function w(e) {
     disableHover: M,
     disableDrag: D,
     setEditRoleId: v,
-    setSelectedSection: G
-  } = e, P = (0, j.useLockTooltip)(E, S, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
+    setSelectedSection: j
+  } = e, P = (0, G.useLockTooltip)(E, S, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
     type: F,
     item: () => (O(d.id), {
       id: d.id,
@@ -188,7 +188,7 @@ function w(e) {
   }
 
   function $() {
-    q(), G(U.GuildSettingsRoleEditSections.MEMBERS)
+    q(), j(U.GuildSettingsRoleEditSections.MEMBERS)
   }
   return (0, a.jsxs)(u.Clickable, {
     className: i()(y.roleRow, {
@@ -223,7 +223,7 @@ function w(e) {
         size: 24,
         className: y.roleIcon,
         defaultIconClassName: y.shield
-      }), null != P ? (0, a.jsx)(j.default, {
+      }), null != P ? (0, a.jsx)(G.default, {
         className: y.lock,
         tooltipText: P
       }) : null, (0, a.jsx)(u.Text, {

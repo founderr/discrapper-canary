@@ -39,15 +39,15 @@ function O(e) {
   } = (0, m.useAutomodEditingRuleState)(), {
     guild: D,
     subsection: v
-  } = (0, n.useStateFromStoresObject)([o.default], () => o.default.getProps()), j = null !== (s = null !== (t = null == D ? void 0 : D.id) && void 0 !== t ? t : O) && void 0 !== s ? s : R.EMPTY_STRING_SNOWFLAKE_ID, G = null != A, [U] = (0, T.useSyncAutomodRulesEffect)(j), {
+  } = (0, n.useStateFromStoresObject)([o.default], () => o.default.getProps()), G = null !== (s = null !== (t = null == D ? void 0 : D.id) && void 0 !== t ? t : O) && void 0 !== s ? s : R.EMPTY_STRING_SNOWFLAKE_ID, j = null != A, [U] = (0, T.useSyncAutomodRulesEffect)(G), {
     rulesByTriggerType: P
-  } = (0, T.useAutomodRulesList)(j), b = {
+  } = (0, T.useAutomodRulesList)(G), b = {
     [S.AutomodTriggerCategory.MEMBERS]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
     [S.AutomodTriggerCategory.CONTENT]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
   }, y = l.useMemo(() => Object.values(null != P ? P : {}).flat().filter(E.isNotNullish), [P]);
   l.useEffect(() => {
-    G && M(null)
-  }, [j]);
+    j && M(null)
+  }, [G]);
   let B = l.useCallback((e, t) => {
       if (null != e) {
         var s, a;
@@ -65,14 +65,14 @@ function O(e) {
       return B(null !== (e = null == A ? void 0 : A.id) && void 0 !== e ? e : null, null !== (t = null == A ? void 0 : A.triggerType) && void 0 !== t ? t : null)
     }, [B, A]);
   l.useEffect(() => {
-    p(G, (0, h.createOnPreventNavigation)(F))
-  }, [p, G, F]);
-  let H = (0, S.useAvailableTriggerTypes)(j),
+    p(j, (0, h.createOnPreventNavigation)(F))
+  }, [p, j, F]);
+  let H = (0, S.useAvailableTriggerTypes)(G),
     k = e => (0, a.jsx)(a.Fragment, {
       children: e.map(e => {
         var t;
         return (0, a.jsx)(g.default, {
-          guildId: j,
+          guildId: G,
           triggerType: e,
           rules: null !== (t = P[e]) && void 0 !== t ? t : [],
           initWithEdit: v === R.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM && e === C.AutomodTriggerType.MENTION_SPAM
@@ -143,9 +143,9 @@ function O(e) {
       withDivider: !1,
       className: L.explicitContentFilterSection
     }), (0, a.jsx)(N.default, {
-      guildId: j,
+      guildId: G,
       existingRules: y
-    }), G && (0, a.jsx)("div", {
+    }), j && (0, a.jsx)("div", {
       className: L.endSpacer
     })]
   })

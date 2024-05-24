@@ -102,7 +102,7 @@ let R = l.memo(function() {
       isFirstChannel: _,
       isLastChannel: C,
       tooltipDirection: L = "right"
-    } = e, O = (0, f.useIsChecked)(t.id, l.id), p = (0, f.useIsDisabled)(t.id, l.id), A = (0, f.useDisabledTooltip)(t.id, l.id), M = (0, f.useTooltip)(n.id, l.id), D = null != (0, m.default)(n).find(e => e.id === t.id), v = (0, c.useIsChattableChannel)(t.id), j = e => {
+    } = e, O = (0, f.useIsChecked)(t.id, l.id), p = (0, f.useIsDisabled)(t.id, l.id), A = (0, f.useDisabledTooltip)(t.id, l.id), M = (0, f.useTooltip)(n.id, l.id), D = null != (0, m.default)(n).find(e => e.id === t.id), v = (0, c.useIsChattableChannel)(t.id), G = e => {
       if (!p) return e.stopPropagation(), (0, u.canChannelBeDefault)(n.id, t.id) ? (0, S.toggleDefaultChannel)(t.id) : (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -113,7 +113,7 @@ let R = l.memo(function() {
           startingChannelId: t.id
         })
       }), !0
-    }, G = e => {
+    }, j = e => {
       t.isGuildVocal() ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -146,8 +146,8 @@ let R = l.memo(function() {
             [h.disabled]: p
           }),
           ...e,
-          onClick: j,
-          onContextMenu: G,
+          onClick: G,
+          onContextMenu: j,
           children: [(0, a.jsx)("div", {
             className: h.channelInfo,
             children: (0, a.jsxs)("div", {

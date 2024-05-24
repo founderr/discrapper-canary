@@ -52,14 +52,14 @@ function A(e) {
     removeEditStateId: D
   } = h.useEditStateIds(I, t, {
     includeSoftDeleted: !0
-  }), [v, j] = l.useState({}), G = l.useMemo(() => {
+  }), [v, G] = l.useState({}), j = l.useMemo(() => {
     let e = p.map(e => {
       var t;
       return null !== (t = v[e]) && void 0 !== t ? t : e
     });
     return (0, r.uniq)(e)
   }, [p, v]), U = (e, t) => {
-    j(s => ({
+    G(s => ({
       ...s,
       [e]: t
     }))
@@ -81,13 +81,13 @@ function A(e) {
     }, {
       modalKey: O
     }) : A()
-  }, [t, M, A, n, b, P]), B = h.useHasChangesForEditStateIds(G), F = l.useCallback(() => G.forEach(h.clearEditState), [G]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
+  }, [t, M, A, n, b, P]), B = h.useHasChangesForEditStateIds(j), F = l.useCallback(() => j.forEach(h.clearEditState), [j]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
   return l.useEffect(() => (k === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && y(), () => {
     (0, u.closeModal)(O)
   }), [k, y]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: L.groupListings,
-      children: [G.map(e => (0, a.jsx)(C.default, {
+      children: [j.map(e => (0, a.jsx)(C.default, {
         guildId: t,
         initialEditStateId: e,
         allSubscriptionListings: N,

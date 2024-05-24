@@ -39,8 +39,8 @@ function p(e) {
     onDeleteEditState: M,
     groupListingId: D,
     onBeforeDispatchNewListing: v,
-    onAfterDispatchNewListing: j
-  } = e, [G, U] = l.useState(r), P = (0, d.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(G)), b = null == P, [y, B] = l.useState(b), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, k = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, N.useRoleSubscriptionSettingsDisabled)(), [V] = h.useName(G), [Y] = h.usePriceTier(G), [W] = h.useDescription(G), [z] = h.useImage(G, 1024), K = "" !== V ? V : L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== V && null != z && "" !== W && null != Y && !w, X = h.useHasChanges(G), {
+    onAfterDispatchNewListing: G
+  } = e, [j, U] = l.useState(r), P = (0, d.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(j)), b = null == P, [y, B] = l.useState(b), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, k = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, N.useRoleSubscriptionSettingsDisabled)(), [V] = h.useName(j), [Y] = h.usePriceTier(j), [W] = h.useDescription(j), [z] = h.useImage(j, 1024), K = "" !== V ? V : L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== V && null != z && "" !== W && null != Y && !w, X = h.useHasChanges(j), {
     loading: Q,
     error: J,
     handleCreateOrUpdateFromEditState: q
@@ -98,17 +98,17 @@ function p(e) {
           look: u.Button.Looks.BLANK,
           className: O.cancel,
           onClick: () => {
-            h.clearEditState(G), b ? null == M || M() : B(!1)
+            h.clearEditState(j), b ? null == M || M() : B(!1)
           },
           children: L.default.Messages.CANCEL
         }), (0, a.jsx)(u.Button, {
           onClick: () => q({
             guildId: n,
-            editStateId: G,
+            editStateId: j,
             groupListingId: D,
             onBeforeDispatchNewListing: v,
             onAfterDispatchNewListing: e => {
-              U(e.id), null == j || j(e)
+              U(e.id), null == G || G(e)
             }
           }),
           disabled: !Z || !X,
@@ -124,7 +124,7 @@ function p(e) {
         })
       })]
     }), y && (0, a.jsx)(g.EditStateContextProvider, {
-      editStateId: G,
+      editStateId: j,
       guildId: n,
       groupListingId: D,
       children: (0, a.jsx)(R.default, {

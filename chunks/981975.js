@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return j
+    return G
   }
 }), s("47120"), s("653041"), s("536091");
 var a = s("735250"),
@@ -67,7 +67,7 @@ function v(e) {
   })
 }
 
-function j(e) {
+function G(e) {
   let {
     guild: t,
     role: s,
@@ -76,9 +76,9 @@ function j(e) {
     integrations: o
   } = e, {
     headerHeight: _,
-    headerRef: j
+    headerRef: G
   } = (0, g.default)(0), {
-    scrolledToTop: G,
+    scrolledToTop: j,
     handleScroll: U
   } = (0, C.useScrolledToTop)(), P = (0, d.useStateFromStores)([f.default], () => {
     var e;
@@ -238,9 +238,9 @@ function j(e) {
       className: A.contentWidth,
       children: [(0, a.jsx)("div", {
         className: i()(A.header, A.stickyHeader, {
-          [A.stickyHeaderElevated]: !G
+          [A.stickyHeaderElevated]: !j
         }),
-        ref: j,
+        ref: G,
         children: (0, a.jsx)(C.default, {
           guild: t,
           role: s,

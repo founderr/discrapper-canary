@@ -29,8 +29,8 @@ var a = s("735250"),
   M = s("190378"),
   D = s("689938"),
   v = s("480330"),
-  j = s("287837"),
-  G = s("573189"),
+  G = s("287837"),
+  j = s("573189"),
   U = s("899947"),
   P = s("117831"),
   b = s("996737"),
@@ -221,7 +221,7 @@ function W(e) {
             children: [(0, a.jsx)("img", {
               alt: "",
               className: v.actionIcon,
-              src: G
+              src: j
             }), (0, a.jsx)(c.Text, {
               className: v.actionText,
               variant: "text-sm/normal",
@@ -240,7 +240,7 @@ function W(e) {
             children: [(0, a.jsx)("img", {
               alt: "",
               className: v.actionIcon,
-              src: j
+              src: G
             }), (0, a.jsx)(c.Text, {
               className: v.actionText,
               variant: "text-sm/normal",

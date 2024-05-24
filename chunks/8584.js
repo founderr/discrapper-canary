@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return v
   },
   CurrencyAmountCell: function() {
-    return j
+    return G
   },
   SubscribersCell: function() {
     return b
@@ -110,7 +110,7 @@ let D = (e, t, s, a) => {
       children: t
     })
   },
-  j = e => {
+  G = e => {
     let {
       children: t
     } = e;
@@ -119,7 +119,7 @@ let D = (e, t, s, a) => {
       children: (0, g.formatPrice)(null != t ? t : 0, O.CurrencyCodes.USD)
     })
   },
-  G = e => {
+  j = e => {
     let {
       children: t
     } = e;
@@ -224,13 +224,13 @@ let D = (e, t, s, a) => {
     render(e, t) {
       let {
         expandedRows: s
-      } = t, a = [(0, n.jsx)(j, {
+      } = t, a = [(0, n.jsx)(G, {
         children: e.amount
       }, e.key)];
       if (s.has(e.key))
         for (let t in e.ppgs) {
           let s = e.ppgs[t];
-          a.push((0, n.jsx)(j, {
+          a.push((0, n.jsx)(G, {
             children: null == s ? void 0 : s.amount
           }, t))
         }
@@ -247,7 +247,7 @@ let D = (e, t, s, a) => {
         ppgDeferralReasons: a,
         periodEndDate: l
       } = (0, _.getStatusForPeriod)(e);
-      return (0, n.jsx)(G, {
+      return (0, n.jsx)(j, {
         children: D(t, s, a, l)
       })
     }

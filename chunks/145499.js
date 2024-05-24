@@ -121,7 +121,7 @@ t.default = e => {
         totalNumberOfSlotsToAssign: e
       })
     },
-    j = [{
+    G = [{
       tier: h.BoostedGuildTiers.NONE,
       title: (0, a.jsx)(L, {
         guildStickers: I,
@@ -155,7 +155,7 @@ t.default = e => {
       })
     }];
   return (0, a.jsx)(m.default, {
-    tiers: j,
+    tiers: G,
     renderTier: e => {
       let l, {
           isAnimatedTo: n,
@@ -171,17 +171,17 @@ t.default = e => {
         m = u[E - 1],
         L = null != m ? (0, T.getTotalStickerCountForTier)(m.tier) : 0,
         O = (0, T.getTotalStickerCountForTier)(d.tier),
-        j = (0, T.getIncrementalStickerCountForTier)(d.tier),
-        G = I.slice(L, O),
-        U = G.length > 0,
+        G = (0, T.getIncrementalStickerCountForTier)(d.tier),
+        j = I.slice(L, O),
+        U = j.length > 0,
         P = M < d.tier,
         b = x(I.length),
-        y = S && !P && b === d.tier && O !== G.length,
-        B = y || G.length > 0,
+        y = S && !P && b === d.tier && O !== j.length,
+        B = y || j.length > 0,
         F = O - L,
         H = s("872732"),
-        k = j - G.length,
-        w = y ? Math.min(5 - (G.length + 0) % 5, k) : 0,
+        k = G - j.length,
+        w = y ? Math.min(5 - (j.length + 0) % 5, k) : 0,
         V = [];
       for (let e = 0; e < w; e++) V.push((0, a.jsx)(p, {}, "placeholder-".concat(e)));
       let Y = b === E + 1 && b > M,
@@ -212,12 +212,12 @@ t.default = e => {
         guildId: t.id,
         children: [B && (0, a.jsxs)("div", {
           className: R.grid,
-          children: [G.map(e => (0, a.jsx)(g.default, {
+          children: [j.map(e => (0, a.jsx)(g.default, {
             isDisabled: P,
             sticker: e,
             canManageSticker: f(e)
           }, e.id)), V]
-        }), !P && !y && 0 === G.length && (0, a.jsx)("div", {
+        }), !P && !y && 0 === j.length && (0, a.jsx)("div", {
           className: i()(R.emptyTierWrapper, R.unusedTierWrapper),
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",

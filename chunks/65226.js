@@ -57,7 +57,7 @@ function S(e) {
     if (e = null != e ? e.replace(/\n/g, "") : "", null == f) return;
     let t = f;
     return t = E.updateContent(e, t), t = C(t = E.truncateContent(t, 512)), !m && N(!0), h(t), !0
-  }, j = null != f && E.getFirstTextBlock(f).length > 0;
+  }, G = null != f && E.getFirstTextBlock(f).length > 0;
   return (0, a.jsx)("div", {
     className: t,
     children: (0, a.jsxs)("div", {
@@ -86,7 +86,7 @@ function S(e) {
             let t = f;
             h(t = E.truncateContent(t, 0)), !m && Promise.resolve().then(() => L())
           },
-          hasContent: j,
+          hasContent: G,
           className: T.searchIcon
         }), (0, a.jsxs)(i.Button, {
           look: i.Button.Looks.BLANK,

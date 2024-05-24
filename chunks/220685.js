@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("689938"),
   D = s("117770");
 let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401e3, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
-  j = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
-  G = v[4],
+  G = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
+  j = v[4],
   U = e => {
     var t, s;
     let {
@@ -43,10 +43,10 @@ let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
     } = e, d = (0, p.useSubscriptionsSettings)(n.id), {
       loading: c,
       updateSubscriptionsSettings: g
-    } = (0, p.useUpdateSubscriptionsSettings)(), [O, U] = l.useState(n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE)), [P, b] = l.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : G), [y, B] = l.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == y || null != y.match(j), [H, k] = l.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), w = l.useRef(null == d ? void 0 : d.store_page_slug).current, V = O !== n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && P !== G || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color) || y !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
+    } = (0, p.useUpdateSubscriptionsSettings)(), [O, U] = l.useState(n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE)), [P, b] = l.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : j), [y, B] = l.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == y || null != y.match(G), [H, k] = l.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), w = l.useRef(null == d ? void 0 : d.store_page_slug).current, V = O !== n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && P !== j || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color) || y !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
       o()(null != d, "Settings must be defined");
       let e = {};
-      O !== n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = O), ((null == d ? void 0 : d.store_page_primary_color) == null && P !== G || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = P), y !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = y), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u().isEmpty(e) && (await g(n.id, e), "store_page_enabled" in e && L.default.track(A.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
+      O !== n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = O), ((null == d ? void 0 : d.store_page_primary_color) == null && P !== j || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = P), y !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = y), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u().isEmpty(e) && (await g(n.id, e), "store_page_enabled" in e && L.default.track(A.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
         enabled: O,
         ...(0, m.collectGuildAnalyticsMetadata)(n.id)
       }))
@@ -108,7 +108,7 @@ let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
           }), (0, a.jsx)(h.default, {
             colors: v,
             customColor: null,
-            defaultColor: G,
+            defaultColor: j,
             value: P,
             onChange: e => b(e),
             renderDefaultButton: () => null,
@@ -186,7 +186,7 @@ let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             submitting: c,
             onReset: () => {
               var e, t;
-              U(n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE)), b(null !== (e = null == d ? void 0 : d.store_page_primary_color) && void 0 !== e ? e : G), B(null == d ? void 0 : d.store_page_trailer_url), k(null !== (t = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== t && t)
+              U(n.hasFeature(A.GuildFeatures.CREATOR_STORE_PAGE)), b(null !== (e = null == d ? void 0 : d.store_page_primary_color) && void 0 !== e ? e : j), B(null == d ? void 0 : d.store_page_trailer_url), k(null !== (t = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== t && t)
             },
             onSave: Y,
             disabled: Z

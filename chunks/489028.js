@@ -109,7 +109,7 @@ t.default = e => {
     });
     let e = await (0, u.generateDeveloperPortalLink)(R.RelativeMarketingURLs.DEVELOPER_PORTAL_TEAMS);
     (0, r.default)(e)
-  }, [t, d, f, D]), j = l.useCallback(e => d ? (0, a.jsx)(T.default, {
+  }, [t, d, f, D]), G = l.useCallback(e => d ? (0, a.jsx)(T.default, {
     onClick: v,
     children: e
   }) : e, [v, d]);
@@ -125,7 +125,7 @@ t.default = e => {
         className: p.description,
         disabled: !d,
         children: O.default.Messages.GUILD_MONETIZATION_ENABLE_DESCRIPTION.format({
-          onCreateTeamHook: j
+          onCreateTeamHook: G
         })
       }), D ? (0, a.jsx)(M, {
         guild: t,

@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("75518"),
   D = s("585512"),
   v = s("179517"),
-  j = s("79829");
-let G = (0, E.makeLazy)({
+  G = s("79829");
+let j = (0, E.makeLazy)({
     createPromise: () => s.e("5609").then(s.bind(s, "336231")),
     webpackId: "336231"
   }),
@@ -74,7 +74,7 @@ function b(e) {
     children: [(0, a.jsx)(u.FormText, {
       className: M.colorDescription,
       children: A.default.Messages.ROLE_COLOR_HELP
-    }), (0, a.jsx)(G, {
+    }), (0, a.jsx)(j, {
       defaultColor: p.DEFAULT_ROLE_COLOR,
       colors: p.ROLE_COLORS,
       value: t.color,
@@ -119,7 +119,7 @@ function y(e) {
       name: i.name
     },
     E = {
-      src: j,
+      src: G,
       name: i.name
     },
     m = (0, _.useRoleIconForPreview)(r, i);

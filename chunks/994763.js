@@ -36,8 +36,8 @@ var a = s("735250"),
   M = s("745752"),
   D = s("45966"),
   v = s("637853"),
-  j = s("526120"),
-  G = s("621923"),
+  G = s("526120"),
+  j = s("621923"),
   U = s("352981"),
   P = s("610403"),
   b = s("923726"),
@@ -90,8 +90,8 @@ var a = s("735250"),
   eM = s("495300"),
   eD = s("312397"),
   ev = s("651780"),
-  ej = s("279542"),
-  eG = s("413335"),
+  eG = s("279542"),
+  ej = s("413335"),
   eU = s("665324"),
   eP = s("208150"),
   eb = s("353398"),
@@ -121,7 +121,7 @@ function eK(e) {
     canManageWebhooks: C,
     canManageBans: L,
     canAccessMembersPage: M,
-    canViewGuildAnalytics: j,
+    canViewGuildAnalytics: G,
     isOwner: k,
     isOwnerWithRequiredMfaLevel: w,
     showDirtyGuildTemplateIndicator: Y,
@@ -280,7 +280,7 @@ function eK(e) {
     section: eH.GuildSettingsSections.MODERATION,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_MODERATION,
     label: eY.default.Messages.SAFETY_SETUP,
-    element: ej.default,
+    element: eG.default,
     predicate: () => i && !l.hasFeature(eH.GuildFeatures.COMMUNITY)
   }, {
     section: eH.GuildSettingsSections.GUILD_AUTOMOD,
@@ -314,11 +314,11 @@ function eK(e) {
     predicate: () => L
   }, {
     section: c.SectionTypes.DIVIDER,
-    predicate: () => i || j
+    predicate: () => i || G
   }, {
     section: c.SectionTypes.HEADER,
     label: eY.default.Messages.COMMUNITY,
-    predicate: () => !er && (i || j)
+    predicate: () => !er && (i || G)
   }, {
     section: eH.GuildSettingsSections.CLAN,
     label: eY.default.Messages.CLAN_SETTINGS,
@@ -366,7 +366,7 @@ function eK(e) {
     decoration: function(e, t) {
       let {
         homeSettingsEnabled: s
-      } = (0, G.getOnboardingHomeAdminExperiment)(e);
+      } = (0, j.getOnboardingHomeAdminExperiment)(e);
       if (D.default.getEnabled(e)) return eY.default.Messages.GUILD_ONBOARDING_ON.toUpperCase();
       if ((0, eT.isOnboardingWizardCompleted)(e)) return eY.default.Messages.GUILD_ONBOARDING_OFF.toUpperCase();
       let a = eI.COMPLETABLE_ONBOARDING_STEPS.filter(e => !!s || e !== eI.GuildSettingsOnboardingPage.HOME_SETTINGS || !1),
@@ -384,7 +384,7 @@ function eK(e) {
     element: eN.default,
     newIndicator: V.default.hasHotspot(ew.HotspotLocations.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
     newIndicatorDismissibleContentTypes: Z ? [r.DismissibleContent.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
-    predicate: () => j && l.hasFeature(eH.GuildFeatures.COMMUNITY)
+    predicate: () => G && l.hasFeature(eH.GuildFeatures.COMMUNITY)
   }, {
     section: eH.GuildSettingsSections.DISCOVERY,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
@@ -459,7 +459,7 @@ function eK(e) {
     ariaLabel: eY.default.Messages.GUILD_PREMIUM,
     element: ev.default,
     className: eW.serverBoostTabItem,
-    icon: (0, a.jsx)(eG.default, {
+    icon: (0, a.jsx)(ej.default, {
       className: eW.icon
     })
   }, {
@@ -727,9 +727,9 @@ function eq() {
   }, [f, O]);
   let {
     homeSettingsEnabled: p
-  } = (0, G.useOnboardingHomeAdminExperiment)(null != f ? f : eH.EMPTY_STRING_SNOWFLAKE_ID);
+  } = (0, j.useOnboardingHomeAdminExperiment)(null != f ? f : eH.EMPTY_STRING_SNOWFLAKE_ID);
   l.useEffect(() => {
-    null != f && p && (0, j.fetchGuildHomeSettings)(f)
+    null != f && p && (0, G.fetchGuildHomeSettings)(f)
   }, [p, f]);
   let {
     showAccessRate: A

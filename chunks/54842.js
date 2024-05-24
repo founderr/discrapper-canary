@@ -119,7 +119,7 @@ let M = () => [{
       })]
     })
   },
-  j = e => {
+  G = e => {
     let {
       iconSrc: t,
       name: s,
@@ -167,7 +167,7 @@ t.default = e => {
     children: [(0, a.jsxs)("div", {
       className: g.banner,
       ref: e => I(e),
-      children: [D.map(e => (0, a.jsx)(j, {
+      children: [D.map(e => (0, a.jsx)(G, {
         ...e,
         imageCoordinates: [s, i]
       }, e.name)), (0, a.jsx)("img", {

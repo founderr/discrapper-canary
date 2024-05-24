@@ -48,7 +48,7 @@ function p(e) {
     null === (e = D.current) || void 0 === e || e.resetSearchText()
   }, []);
   if (null == s) return null;
-  let j = (0, N.getSearchState)(!1, !1, A);
+  let G = (0, N.getSearchState)(!1, !1, A);
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
     value: n,
     children: (0, a.jsx)("div", {
@@ -80,11 +80,11 @@ function p(e) {
                     ref: D
                   }), (0, a.jsx)(g.default, {
                     guild: s,
-                    searchState: j,
+                    searchState: G,
                     compact: !0,
                     onSelectRow: M,
                     onResetForNewMembers: v
-                  }), j !== N.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(h.default, {
+                  }), G !== N.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(h.default, {
                     guildId: s.id
                   })]
                 }) : (0, a.jsx)("div", {
