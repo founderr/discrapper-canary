@@ -193,10 +193,6 @@ let N = {
     throttlePeriod: 9e5,
     throttleKeys: e => [e.context, e.guild_id]
   },
-  [E.AnalyticEvents.GUILD_TOOLTIP_SHOWN]: {
-    throttlePeriod: 9e5,
-    throttleKeys: e => [e.guild_id]
-  },
   [E.AnalyticEvents.ACK_COMMUNITY_MESSAGES]: {
     throttlePeriod: 9e5,
     throttleKeys: e => [e.channel_id]

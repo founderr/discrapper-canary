@@ -20,15 +20,13 @@ let i = (0, n("818083").createExperiment)({
   }]
 });
 
-function r(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    {
-      showNewGuildTooltip: n
-    } = i.useExperiment({
-      location: e
-    }, {
-      autoTrackExposure: t
-    });
-  return n
+function r() {
+  let {
+    showNewGuildTooltip: e
+  } = i.useExperiment({
+    location: "useCanShowNewGuildTooltip"
+  }, {
+    autoTrackExposure: !0
+  });
+  return e
 }
-t.default = i
