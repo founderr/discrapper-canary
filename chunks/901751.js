@@ -341,22 +341,24 @@ class V extends i.default {
         runningGames: n,
         removedGames: t
       }), n.forEach(e => {
+        var t;
         if (null == e.id) return;
-        let t = (0, I.getPlaytimeQuestByApplicationId)(E.default.quests, e.id);
-        if (null == t) return;
-        let n = P(t.id);
-        G(t) && !this.streamKeyToHeartbeatState.has(n) && this.initiateHeartbeat({
-          streamKey: n,
-          applicationId: A.SharedQuestFields.build(t.config).application.id,
-          questId: t.id
+        let n = (0, I.getPlaytimeQuestByApplicationId)(E.default.quests, e.id);
+        if (null == n || (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return;
+        let i = P(n.id);
+        G(n) && !this.streamKeyToHeartbeatState.has(i) && this.initiateHeartbeat({
+          streamKey: i,
+          applicationId: A.SharedQuestFields.build(n.config).application.id,
+          questId: n.id
         })
       }), t.forEach(e => {
+        var t;
         if (null == e.id) return;
-        let t = (0, I.getPlaytimeQuestByApplicationId)(E.default.quests, e.id);
-        if (null == t) return;
-        let n = P(t.id);
-        G(t) && this.streamKeyToHeartbeatState.has(n) && this.terminateHeartbeat({
-          streamKey: n,
+        let n = (0, I.getPlaytimeQuestByApplicationId)(E.default.quests, e.id);
+        if (null == n || (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return;
+        let i = P(n.id);
+        G(n) && this.streamKeyToHeartbeatState.has(i) && this.terminateHeartbeat({
+          streamKey: i,
           sendTerminalHeartbeat: !0
         })
       })
