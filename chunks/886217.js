@@ -43,9 +43,9 @@ t.default = e => {
   } = n.extra.media, A = n.extra.artist.name, N = (0, i.useStateFromStores)([r.default], () => r.default.getUser(n.author_id)), {
     primaryColor: v,
     secondaryColor: x
-  } = (0, f.default)(I), M = (0, d.getEntryDuration)(n), R = (0, d.getAggregateRange)(n), y = l.useCallback(() => {
-    if (null == N || null == M || !(0, o.isIn)(R, h.ALLOWED_RANGES)) return;
-    let e = g(n, t, N, R);
+  } = (0, f.default)(I), M = (0, d.getAggregateRange)(n), R = l.useCallback(() => {
+    if (null == N || !(0, o.isIn)(M, h.ALLOWED_RANGES)) return;
+    let e = g(n, t, N, M);
     return (0, c.generateListenContentImage)({
       user: N,
       channel: t,
@@ -55,8 +55,8 @@ t.default = e => {
       colors: [v, x],
       badges: (0, c.getTopArtistImageBadges)(n)
     })
-  }, [I, A, t, M, n, v, R, x, N]);
-  return null != N && null != M && (0, o.isIn)(R, h.ALLOWED_RANGES) ? (0, a.jsxs)(p.Popout, {
+  }, [I, A, t, n, v, M, x, N]);
+  return null != N && (0, o.isIn)(M, h.ALLOWED_RANGES) ? (0, a.jsxs)(p.Popout, {
     children: [(0, a.jsx)(p.PopoutContent, {
       thumbnailSrc: I,
       channel: t,
@@ -78,7 +78,7 @@ t.default = e => {
         closePopout: u,
         user: N,
         channel: t,
-        generateReactionImage: y,
+        generateReactionImage: R,
         reactionImageAltText: S(n, N),
         entry: n,
         requestId: s
