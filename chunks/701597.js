@@ -54,19 +54,20 @@ class l {
 }
 class u {
   getQuality(e) {
-    let t = this.isStreamContext ? this.getGoliveQuality(e) : this.getVideoQuality(this.connection.getLocalWant(e));
+    let t = this.connection.getLocalWant(e),
+      n = this.isStreamContext ? this.getGoliveQuality(t) : this.getVideoQuality(t);
     if (null != this.qualityOverwrite) {
-      var n, i, r;
+      var i, r, s;
       return new o({
-        encode: l.extend(t.encode, this.qualityOverwrite.encode),
-        capture: l.extend(t.capture, this.qualityOverwrite.capture),
-        bitrateMin: null !== (n = this.qualityOverwrite.bitrateMin) && void 0 !== n ? n : t.bitrateMin,
-        bitrateMax: null !== (i = this.qualityOverwrite.bitrateMax) && void 0 !== i ? i : t.bitrateMax,
-        bitrateTarget: null !== (r = this.qualityOverwrite.bitrateTarget) && void 0 !== r ? r : t.bitrateTarget,
-        localWant: t.localWant
+        encode: l.extend(n.encode, this.qualityOverwrite.encode),
+        capture: l.extend(n.capture, this.qualityOverwrite.capture),
+        bitrateMin: null !== (i = this.qualityOverwrite.bitrateMin) && void 0 !== i ? i : n.bitrateMin,
+        bitrateMax: null !== (r = this.qualityOverwrite.bitrateMax) && void 0 !== r ? r : n.bitrateMax,
+        bitrateTarget: null !== (s = this.qualityOverwrite.bitrateTarget) && void 0 !== s ? s : n.bitrateTarget,
+        localWant: n.localWant
       })
     }
-    return t
+    return n
   }
   applyQualityConstraints(e, t) {
     let n = this.getQuality(t);
@@ -113,8 +114,17 @@ class u {
     })
   }
   getGoliveQuality(e) {
-    let t = this.connection.getLocalWant(e);
-    return this.goliveSimulcastEnabled ? this.getVideoQuality(t) : this.goliveMaxQuality
+    if (this.goliveSimulcastEnabled && e < 100) {
+      let e = this.getDefaultGoliveQuality();
+      return new o({
+        capture: e.capture,
+        encode: e.encode,
+        bitrateMin: 15e4,
+        bitrateMax: r.DESKTOP_LOW_QUALITY_STREAM_MAX_BITRATE,
+        bitrateTarget: r.DESKTOP_LOW_QUALITY_STREAM_MAX_BITRATE
+      })
+    }
+    return this.goliveMaxQuality
   }
   getDefaultGoliveQuality() {
     return new o({
