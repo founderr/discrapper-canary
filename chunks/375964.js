@@ -17462,6 +17462,13 @@ e.exports = Object.freeze({
   GUILD_POPOUT_EMPTY_PROMPT_HEADER: "No one's in voice yet",
   GUILD_POPOUT_EMPTY_PROMPT_BODY: "Voice channels are for hanging out. When you're ready to talk, just hop in.",
   GUILD_POPOUT_EMPTY_PROMPT_ARIA: "Hang out in !!{channelName}!!",
+  MULTIPLE_GAMES_IN_CHANNEL: "{numGames} games",
+  MULTIPLE_ACTIVITIES_IN_CHANNEL: "{numActivities} activities",
+  GUILD_POPOUT_USERS_STREAMING: "{username} and {count, plural, one {{count} other are} other {{count} others are}} streaming",
+  GUILD_POPOUT_USER_IN_VOICE: "{username} is in voice",
+  GUILD_POPOUT_USERS_IN_VOICE: "{username} and {count, plural, one {{count} other are} other {{count} others are}} in voice",
+  GUILD_POPOUT_USER_ON_VIDEO: "{username} is on video",
+  GUILD_POPOUT_USERS_ON_VIDEO: "{username} and {count, plural, one {{count} other are} other {{count} others are}} on video",
   RECENTLY_ONLINE: "Recently Online",
   RECENTLY_ONLINE_STATUS: "Online **{time} ago**"
 })
