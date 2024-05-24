@@ -99,7 +99,14 @@ t.default = function(e) {
     eR = () => {
       let e = null != k ? k.find(e => e.type === g.ActivityTypes.CUSTOM_STATUS) : null,
         t = null != e && null != G && (0, _.default)(e, G, Y);
-      if (null != e) return (0, i.jsx)(R.default, {
+      if (null != W && null == e) {
+        let e = (0, T.formatRecentlyOnlineStatus)(W);
+        return (0, i.jsx)("div", {
+          className: M.subtext,
+          children: e
+        })
+      }
+      return (0, i.jsx)(R.default, {
         className: M.activity,
         textClassName: M.activityText,
         emojiClassName: M.activityEmoji,
@@ -110,15 +117,7 @@ t.default = function(e) {
         hideTooltip: !0,
         user: G,
         hasQuest: null != em
-      });
-      if (null != W) {
-        let e = (0, T.formatRecentlyOnlineStatus)(W);
-        return (0, i.jsx)("div", {
-          className: M.subtext,
-          children: e
-        })
-      }
-      return null
+      })
     },
     eg = () => null != O && O && null == P ? (0, i.jsx)(l.Tooltip, {
       text: null != y ? y : D.default.Messages.GUILD_OWNER,
