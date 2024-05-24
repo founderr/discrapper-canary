@@ -24,7 +24,7 @@ function _(e) {
     quest: t,
     location: f.QuestsExperimentLocations.QUEST_HOME_DESKTOP,
     useV2Variants: !0
-  }), C = s.useCallback(() => (0, a.jsx)(r.Text, {
+  }), C = !(0, o.isQuestExpired)(t), m = s.useCallback(() => (0, a.jsx)(r.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
@@ -52,7 +52,7 @@ function _(e) {
             color: "header-primary",
             className: h.header,
             children: E.default.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: C
+              rewardHook: m
             })
           })
         }), null != _ ? (0, a.jsx)(r.Text, {
@@ -62,8 +62,8 @@ function _(e) {
           children: _
         }) : null]
       })]
-    }), (0, a.jsx)(c.default, {
+    }), C ? (0, a.jsx)(c.default, {
       quest: t
-    })]
+    }) : null]
   })
 }

@@ -84,10 +84,10 @@ function C(e) {
     isFetchingCurrentQuests: n
   } = p({
     fetchPolicy: "cache-and-network"
-  }), i = function(e) {
+  }), i = new Map(t.map(e => [e.id, e])), r = function(e) {
     let t = o.useMemo(() => e.filter(e => {
         var t;
-        return !((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null)
+        return !((null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null)
       }), [e]),
       n = o.useRef([]);
     return o.useMemo(() => {
@@ -96,25 +96,23 @@ function C(e) {
       let e = t.sort((e, t) => {
         var n, i, r, s, a, o;
         let l = !(0, T.isQuestExpired)(e),
-          u = !(0, T.isQuestExpired)(t);
-        if (l !== u) return l ? -1 : 1;
-        let d = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
-          _ = (null === (i = t.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
-          c = d && l;
-        if (c !== (_ && u)) return c ? -1 : 1;
-        let E = (0, T.isTargetedForContent)(e, I.QuestContent.QUEST_BAR),
-          f = (0, T.isTargetedForContent)(t, I.QuestContent.QUEST_BAR),
-          S = E && l;
-        if (S !== (f && u)) return S ? -1 : 1;
-        let h = d && !l;
-        return h !== (_ && !u) ? h ? -1 : 1 : l && u ? O(null === (a = e.config) || void 0 === a ? void 0 : a.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : O(null === (r = e.config) || void 0 === r ? void 0 : r.expiresAt, null === (s = t.config) || void 0 === s ? void 0 : s.expiresAt, 0)
-      });
+          u = !(0, T.isQuestExpired)(t),
+          d = (0, T.isTargetedForContent)(e, I.QuestContent.QUEST_BAR) || (0, T.isTargetedForContent)(e, I.QuestContent.QUEST_BAR_V2),
+          _ = (0, T.isTargetedForContent)(t, I.QuestContent.QUEST_BAR) || (0, T.isTargetedForContent)(t, I.QuestContent.QUEST_BAR_V2),
+          c = (0, T.isTargetedForContent)(e, I.QuestContent.GIFT_INVENTORY_FOR_YOU),
+          E = (0, T.isTargetedForContent)(t, I.QuestContent.GIFT_INVENTORY_FOR_YOU),
+          f = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+          S = (null === (i = t.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null;
+        return l !== u ? l ? -1 : 1 : d !== _ && l && u ? d ? -1 : 1 : c !== E ? c ? -1 : 1 : f !== S ? f ? -1 : 1 : l && u ? O(null === (a = e.config) || void 0 === a ? void 0 : a.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : O(null === (r = e.config) || void 0 === r ? void 0 : r.expiresAt, null === (s = t.config) || void 0 === s ? void 0 : s.expiresAt, 0)
+      }).map(e => e.id);
       return n.current = e, e
     }, [t])
-  }(t), r = function(e) {
+  }(t), s = function(e) {
     let t = o.useMemo(() => e.filter(e => {
-        var t;
-        return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null
+        var t, n;
+        let i = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+          r = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null;
+        return i && r
       }), [e]),
       n = o.useRef([]);
     return o.useMemo(() => {
@@ -125,13 +123,17 @@ function C(e) {
         let r = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
         if (r !== ((null === (i = t.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)) return r ? -1 : 1;
         let s = A.SharedQuestFields.build(e.config).rewardsExpireAt;
-        return O(s, A.SharedQuestFields.build(t.config).rewardsExpireAt, 1)
-      });
+        return O(s, A.SharedQuestFields.build(t.config).rewardsExpireAt, 0)
+      }).map(e => e.id);
       return n.current = e, e
     }, [t])
-  }(t), s = [];
+  }(t), a = [], l = [];
+  for (let t of a = "incomplete" === e ? r : s) {
+    let e = i.get(t);
+    null != e && l.push(e)
+  }
   return {
-    quests: s = "incomplete" === e ? i : r,
+    quests: l,
     isFetchingCurrentQuests: n
   }
 }
