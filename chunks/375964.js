@@ -15633,7 +15633,7 @@ e.exports = Object.freeze({
   COLLECTIBLES_FEELIN_RETRO_PIRATES_COACHTIP_TITLE: "Feelin' Retro & Pirates",
   COLLECTIBLES_FEELIN_RETRO_PIRATES_COACHTIP_DESCRIPTION: "Give 'em a look-see if yer feelin' curious, matey…",
   COLLECTIBLES_ARCADE_COACHTIP_TITLE: "New Arcade styles",
-  COLLECTIBLES_ARCADE_COACHTIP_DESCRIPTION: "Ready to score some extra style points? Bundles included.",
+  COLLECTIBLES_ARCADE_COACHTIP_DESCRIPTION: "Ready to score some extra style points?",
   COLLECTIBLES_NEW_BADGE: "NEW",
   NEW_ARRIVALS: "New Arrivals",
   COLLECTIBLES_SEE_WHATS_NEW: "See what's new in the Shop!",
