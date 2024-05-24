@@ -2,6 +2,9 @@
 n.r(t), n.d(t, {
   DISCORD_EPOCH: function() {
     return s.DISCORD_EPOCH
+  },
+  SnowflakeSequence: function() {
+    return s.SnowflakeSequence
   }
 });
 var i = n("392711"),
@@ -26,6 +29,9 @@ t.default = {
   },
   fromTimestamp: function(e) {
     return s.fromTimestamp(e)
+  },
+  fromTimestampWithSequence: function(e, t) {
+    return s.fromTimestampWithSequence(e, t)
   },
   keys: function(e) {
     return Object.keys(e)

@@ -1,16 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   createBotMessage: function() {
-    return E
-  },
-  createNonce: function() {
-    return d
-  },
-  default: function() {
     return c
   },
-  userRecordToServer: function() {
+  default: function() {
     return _
+  },
+  userRecordToServer: function() {
+    return d
   }
 }), n("789020"), n("653041");
 var i = n("512722"),
@@ -18,14 +15,10 @@ var i = n("512722"),
   s = n("869765"),
   a = n("598077"),
   o = n("594174"),
-  l = n("709054"),
+  l = n("48854"),
   u = n("981631");
 
-function d() {
-  return l.default.fromTimestamp(Date.now())
-}
-
-function _(e) {
+function d(e) {
   let {
     id: t,
     username: n,
@@ -44,12 +37,12 @@ function _(e) {
   }
 }
 
-function c(e) {
+function _(e) {
   let {
     channelId: t,
     content: n,
     tts: i = !1,
-    type: l = u.MessageTypes.DEFAULT,
+    type: _ = u.MessageTypes.DEFAULT,
     messageReference: c,
     allowedMentions: E,
     author: I,
@@ -58,13 +51,13 @@ function c(e) {
     poll: S,
     changelogId: h
   } = e, A = [];
-  if (l === u.MessageTypes.REPLY && (r()(null != c, "Replies must have a message reference"), null == E || E.replied_user)) {
+  if (_ === u.MessageTypes.REPLY && (r()(null != c, "Replies must have a message reference"), null == E || E.replied_user)) {
     let e = s.default.getMessageByReference(c);
-    (null == e ? void 0 : e.state) === s.ReferencedMessageState.LOADED && A.push(_(e.message.author))
+    (null == e ? void 0 : e.state) === s.ReferencedMessageState.LOADED && A.push(d(e.message.author))
   }
-  return null == I && (I = o.default.getCurrentUser()), I instanceof a.default && (I = _(I)), r()(null != I, "createMessage: author cannot be undefined"), {
-    id: null != f ? f : d(),
-    type: l,
+  return null == I && (I = o.default.getCurrentUser()), I instanceof a.default && (I = d(I)), r()(null != I, "createMessage: author cannot be undefined"), {
+    id: null != f ? f : (0, l.createNonce)(),
+    type: _,
     content: n,
     channel_id: t,
     author: I,
@@ -86,7 +79,7 @@ function c(e) {
   }
 }
 
-function E(e) {
+function c(e) {
   let {
     messageId: t,
     channelId: n,
@@ -95,7 +88,7 @@ function E(e) {
     loggingName: s
   } = e;
   return {
-    id: null != t ? t : d(),
+    id: null != t ? t : (0, l.createNonce)(),
     type: u.MessageTypes.DEFAULT,
     flags: u.MessageFlags.EPHEMERAL,
     content: i,
