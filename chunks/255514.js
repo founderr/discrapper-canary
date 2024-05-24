@@ -6,7 +6,7 @@ var i = n("735250"),
   a = n("285952"),
   o = n("185625"),
   l = n("273389"),
-  u = n("816342"),
+  u = n("596891"),
   d = n("15667"),
   _ = n("76264"),
   c = n("822686"),
@@ -145,10 +145,12 @@ t.default = e => {
         className: P.remediationElementsHeader,
         variant: "heading-sm/semibold",
         children: y.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
-      }), null != U(t, "block_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, i.jsx)(u.default, {
+      }), (null != U(t, "block_users") || null != U(t, "mute_users")) && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, i.jsx)(u.default, {
         userId: "user" === n.name ? n.record.id : n.record.author.id,
         reportId: x,
-        reportName: n.name
+        reportName: n.name,
+        showBlock: null != U(t, "block_users"),
+        showMute: null != U(t, "mute_users")
       }), null != U(t, "delete_message") && "message" === n.name && (0, i.jsx)(c.default, {
         message: n.record,
         reportId: x

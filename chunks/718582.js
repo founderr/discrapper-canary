@@ -1,22 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
-  useGetCardUsers: function() {
-    return b
+  getVoiceChannelUsers: function() {
+    return D
   },
-  useGetEventCardUsers: function() {
+  useGetCardUsers: function() {
     return G
   },
+  useGetEventCardUsers: function() {
+    return w
+  },
   useGuildPopoutCards: function() {
-    return M
+    return y
   },
   useSortUserIdsByAffinity: function() {
-    return P
-  },
-  useSortUsersByAffinity: function() {
     return U
   },
+  useSortUsersByAffinity: function() {
+    return b
+  },
   useVoiceChannelUsers: function() {
-    return D
+    return M
   }
 }), n("47120"), n("390547"), n("653041"), n("627341");
 var i = n("470079"),
@@ -55,7 +58,22 @@ let v = {
 };
 
 function D(e, t) {
-  return b((0, a.useStateFromStores)([p.default], () => p.default.getVoiceStatesForChannelAlt(e, t), [e, t]).map(e => {
+  let n = p.default.getVoiceStatesForChannelAlt(e, t).map(e => {
+      let {
+        user: t
+      } = e;
+      return t.id
+    }),
+    i = T.default.hasConsented(g.Consents.PERSONALIZATION),
+    s = A.default.getUserAffinities();
+  return (i && s.length > 0 ? (0, r.orderBy)(n, [e => {
+    var t, n;
+    return null !== (n = null === (t = A.default.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
+  }], ["desc"]) : n).map(e => m.default.getUser(e)).filter(O.isNotNullish)
+}
+
+function M(e, t) {
+  return G((0, a.useStateFromStores)([p.default], () => p.default.getVoiceStatesForChannelAlt(e, t), [e, t]).map(e => {
     let {
       user: t
     } = e;
@@ -63,7 +81,7 @@ function D(e, t) {
   }), t, e)
 }
 
-function M(e) {
+function y(e) {
   let t = e.id,
     [n, d] = i.useState([]),
     [_, m] = i.useState(0),
@@ -92,11 +110,11 @@ function M(e) {
     }),
     D = (0, a.useStateFromStores)([h.default], () => h.default.getRelationships()),
     M = i.useMemo(() => Object.keys(D).filter(e => D[e] === g.RelationshipTypes.BLOCKED), [D]),
-    P = (0, a.useStateFromStores)([p.default], () => p.default.getVoiceStates(t), [t]),
+    y = (0, a.useStateFromStores)([p.default], () => p.default.getVoiceStates(t), [t]),
     U = i.useMemo(() => {
-      let t = Object.keys(P);
+      let t = Object.keys(y);
       return 0 === t.length ? [] : t.filter(t => {
-        let n = P[t].filter(O.isNotNullish);
+        let n = y[t].filter(O.isNotNullish);
         return !(0 === n.length || v.includes(t)) && null == n.find(e => {
           let {
             user: t
@@ -104,11 +122,11 @@ function M(e) {
           return M.includes(t.id)
         }) && t !== e.afkChannelId && C.includes(t)
       })
-    }, [P, v, C, M, e.afkChannelId]),
+    }, [y, v, C, M, e.afkChannelId]),
     b = (0, a.useStateFromStores)([o.default, N.default, E.default, S.default, I.default], () => U.map(e => {
       var t;
       let n = E.default.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
-        i = P[e].filter(O.isNotNullish),
+        i = y[e].filter(O.isNotNullish),
         r = o.default.getEmbeddedActivitiesForChannel(e),
         s = R.CardCategory.HANGOUT,
         a = [],
@@ -122,7 +140,7 @@ function M(e) {
         _ = [],
         c = [];
       for (let e of (r.length > 0 && (s = R.CardCategory.EMBEDDED_ACTIVITY), i)) {
-        let t = S.default.findActivity(e.user.id, y(e));
+        let t = S.default.findActivity(e.user.id, P(e));
         null != t && !(0, l.default)(t) && (s = R.CardCategory.GAMING, a.push(t), _.push(e.user.id)), e.voiceState.selfVideo && c.push(e.user.id)
       }
       if (s === R.CardCategory.EMBEDDED_ACTIVITY) return {
@@ -148,7 +166,7 @@ function M(e) {
         videoUserIds: c,
         isStage: !!(null === (t = I.default.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice())
       }
-    }), [P, U], r.isEqual),
+    }), [y, U], r.isEqual),
     G = (0, a.useStateFromStores)([T.default], () => T.default.hasConsented(g.Consents.PERSONALIZATION)),
     w = (0, a.useStateFromStores)([A.default], () => A.default.getUserAffinities());
   if (0 === b.length && 0 === L.length) return 0 === C.length ? [] : C.slice(0, 2).map(e => ({
@@ -209,9 +227,9 @@ function M(e) {
     })(e, t)], ["desc"])
   })(B, k).slice(0, 3)), m(B.length)), n
 }
-let y = e => e => [g.ActivityTypes.PLAYING, g.ActivityTypes.WATCHING].includes(e.type) && (null != e.assets || null != e.state || null != e.details || null != e.party) && !1;
+let P = e => e => [g.ActivityTypes.PLAYING, g.ActivityTypes.WATCHING].includes(e.type) && (null != e.assets || null != e.state || null != e.details || null != e.party) && !1;
 
-function P(e) {
+function U(e) {
   return (0, a.useStateFromStoresArray)([T.default, A.default], () => {
     let t = T.default.hasConsented(g.Consents.PERSONALIZATION),
       n = A.default.getUserAffinities();
@@ -222,7 +240,7 @@ function P(e) {
   }, [e])
 }
 
-function U(e) {
+function b(e) {
   return (0, a.useStateFromStoresArray)([T.default, A.default], () => {
     let t = T.default.hasConsented(g.Consents.PERSONALIZATION),
       n = A.default.getUserAffinities();
@@ -233,9 +251,9 @@ function U(e) {
   }, [e])
 }
 
-function b(e, t, n, r) {
+function G(e, t, n, r) {
   let s;
-  let a = P(e),
+  let a = U(e),
     o = i.useMemo(() => a.map(e => m.default.getUser(e)).filter(O.isNotNullish), [a]),
     l = o.slice(0, 6),
     u = Math.max(0, o.length - l.length);
@@ -264,7 +282,7 @@ function b(e, t, n, r) {
   }
 }
 
-function G(e) {
+function w(e) {
   let t = (0, a.useStateFromStores)([d.default], () => null == e ? null : d.default.getParticipantCount(e.id, _.StageChannelParticipantNamedIndex.AUDIENCE)),
     n = (0, a.useStateFromStoresArray)([d.default], () => null == e ? [] : d.default.getMutableParticipants(e.id, _.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === _.StageChannelParticipantTypes.VOICE).map(e => {
       let {
