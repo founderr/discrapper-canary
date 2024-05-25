@@ -135,7 +135,8 @@ t.default = a.memo(function e(t) {
       showMaskedLinks: Z,
       shouldHideMediaOptions: J,
       shouldRedactExplicitContent: er,
-      shouldRenderCtaButton: eo
+      shouldRenderCtaButton: eo,
+      hasInlineForwardButton: !1
     }),
     childrenExecutedCommand: (0, P.default)(I, l, h),
     childrenMessageContent: (0, x.default)(t, ee),
