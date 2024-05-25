@@ -30690,6 +30690,13 @@ html .progress__00e29 {
     margin-bottom: 6px
 }
 
+.embedContainer__5278d {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px
+}
+
 .mainContainer_e56d5d.compact_ae7561 {
     padding-left: 0;
     margin-left: -3.95rem
