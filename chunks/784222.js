@@ -209,7 +209,7 @@ let G = e => {
           })
         }
       } else if (e === P.EmojiCategories.RECENT) {
-        let n = (0, D.dedupeUnicodeEmojis)(w).filter(e => !g.default.isEmojiFiltered({
+        let n = w.filter(e => !g.default.isEmojiFiltered({
           emoji: e,
           channel: t,
           intention: r
@@ -222,7 +222,7 @@ let G = e => {
           isNitroLocked: !1
         })
       } else if (e === P.EmojiCategories.FAVORITES) {
-        let n = (0, D.dedupeUnicodeEmojis)(G).filter(e => !g.default.isEmojiFiltered({
+        let n = G.filter(e => !g.default.isEmojiFiltered({
           emoji: e,
           channel: t,
           intention: r

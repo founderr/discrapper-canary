@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   Emoji: function() {
     return O
   }
-}), n("411104"), n("47120"), n("757143"), n("653041");
+}), n("411104"), n("47120"), n("757143"), n("653041"), n("724458");
 var i = n("392711"),
   r = n.n(i),
   s = n("946188"),
@@ -145,6 +145,10 @@ for (let e in C) {
 }
 
 function R(e) {
+  return Object.prototype.hasOwnProperty.call(_, e) ? _[e] : null
+}
+
+function g(e) {
   let t = E[e];
   return null != t ? {
     type: "emoji",
@@ -155,11 +159,11 @@ function R(e) {
     text: e
   }
 }
-let g = String.fromCodePoint(917631),
-  L = String.fromCodePoint(127988),
-  v = /^[\u{E0061}-\u{E007A}]$/u;
+let L = String.fromCodePoint(917631),
+  v = String.fromCodePoint(127988),
+  D = /^[\u{E0061}-\u{E007A}]$/u;
 
-function D(e, t) {
+function M(e, t) {
   var n;
   if (!0 !== t && !N.test(e)) return [{
     type: "text",
@@ -171,16 +175,16 @@ function D(e, t) {
   for (let e = 0; e < s.length; e++) {
     let t = s[e];
     if (null != i && "" !== i) {
-      if (t === g) t = i + t, i = "";
-      else if (v.test(t)) {
+      if (t === L) t = i + t, i = "";
+      else if (D.test(t)) {
         i += t;
         continue
-      } else r.push(R(i)), i = ""
-    } else if (t === L) {
+      } else r.push(g(i)), i = ""
+    } else if (t === v) {
       i = t;
       continue
     }
-    let n = R(t);
+    let n = g(t);
     if (r.length > 0) {
       let e = r[r.length - 1];
       if ("text" === n.type && "text" === e.type) {
@@ -190,12 +194,19 @@ function D(e, t) {
     }
     r.push(n)
   }
-  return null != i && "" !== i && r.push(R(i)), r
+  return null != i && "" !== i && r.push(g(i)), r
 }
 
-function M(e) {
+function y(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
   return Object.prototype.hasOwnProperty.call(c, e) ? c[e] : t
+}
+
+function P(e) {
+  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
+    i = n;
+  return Object.prototype.hasOwnProperty.call(E, e) && (i = E[e]), t ? ":".concat(i, ":") : i
 }
 t.default = {
   getDefaultDiversitySurrogate: function() {
@@ -207,36 +218,32 @@ t.default = {
   getCategories: function() {
     return Object.keys(d)
   },
-  getByName: function(e) {
-    return Object.prototype.hasOwnProperty.call(_, e) ? _[e] : null
-  },
+  getByName: R,
   getByCategory: function(e) {
     return d[e]
   },
   translateInlineEmojiToSurrogates: function(e) {
-    return e.replace(A, (e, t) => M(t, e))
+    return e.replace(A, (e, t) => y(t, e))
   },
   maybeTranslateSurrogatesToInlineEmoji: function(e) {
     if (!N.test(e)) return null;
-    let t = D(e, !0).map(e => "text" === e.type ? e.text : e.emojiName).join("");
+    let t = M(e, !0).map(e => "text" === e.type ? e.text : e.emojiName).join("");
     return t === e ? null : t
   },
-  findInlineEmojisFromSurrogates: D,
+  findInlineEmojisFromSurrogates: M,
   translateSurrogatesToInlineEmoji: function(e) {
-    return D(e).map(e => "text" === e.type ? e.text : e.emojiName).join("")
+    return M(e).map(e => "text" === e.type ? e.text : e.emojiName).join("")
   },
-  convertNameToSurrogate: M,
-  convertSurrogateToName: function(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
-      i = n;
-    return Object.prototype.hasOwnProperty.call(E, e) && (i = E[e]), t ? ":".concat(i, ":") : i
-  },
+  convertNameToSurrogate: y,
+  convertSurrogateToName: P,
   convertShortcutToName: function(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
       i = n;
     return Object.prototype.hasOwnProperty.call(m, e) && (i = m[e]), t ? ":".concat(i, ":") : i
+  },
+  convertSurrogateToBase: function(e) {
+    return R(P(h.reduce((e, t) => e.replace(t, ""), e), !1))
   },
   forEach: e => r().each(I, e),
   all: () => I,

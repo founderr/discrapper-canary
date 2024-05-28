@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   deleteEmoji: function() {
-    return N
+    return O
   },
   favoriteEmoji: function() {
-    return C
+    return L
   },
   fetchEmoji: function() {
-    return A
+    return N
   },
   setDiversityColor: function() {
-    return h
+    return m
   },
   unfavoriteEmoji: function() {
-    return R
+    return v
   },
   updateEmoji: function() {
-    return p
+    return C
   },
   uploadEmoji: function() {
-    return m
+    return p
   }
-}), n("653041");
+}), n("47120"), n("653041");
 var i = n("392711"),
   r = n.n(i),
   s = n("544891"),
@@ -30,26 +30,28 @@ var i = n("392711"),
   l = n("479531"),
   u = n("339085"),
   d = n("633302"),
-  _ = n("38618"),
-  c = n("675478"),
-  E = n("486472"),
-  I = n("668781"),
-  T = n("981631"),
-  f = n("526761"),
-  S = n("689938");
+  _ = n("347374"),
+  c = n("38618"),
+  E = n("675478"),
+  I = n("486472"),
+  T = n("823379"),
+  f = n("668781"),
+  S = n("981631"),
+  h = n("526761"),
+  A = n("689938");
 
-function h(e) {
-  c.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
+function m(e) {
+  E.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
     t.diversitySurrogate = a.StringValue.create(), t.diversitySurrogate.value = e
-  }, f.UserSettingsDelay.FREQUENT_USER_ACTION)
+  }, h.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function A(e) {
+function N(e) {
   o.default.dispatch({
     type: "EMOJI_FETCH",
     guildId: e
   }), s.HTTP.get({
-    url: T.Endpoints.GUILD_EMOJIS(e),
+    url: S.Endpoints.GUILD_EMOJIS(e),
     oldFormErrors: !0
   }).then(t => o.default.dispatch({
     type: "EMOJI_FETCH_SUCCESS",
@@ -61,7 +63,7 @@ function A(e) {
   }))
 }
 
-function m(e) {
+function p(e) {
   let {
     guildId: t,
     image: n,
@@ -72,7 +74,7 @@ function m(e) {
     type: "EMOJI_UPLOAD_START",
     guildId: t
   }), s.HTTP.post({
-    url: T.Endpoints.GUILD_EMOJIS(t),
+    url: S.Endpoints.GUILD_EMOJIS(t),
     body: {
       image: n,
       name: i,
@@ -88,17 +90,17 @@ function m(e) {
   }), Promise.reject(e)))
 }
 
-function N(e, t) {
+function O(e, t) {
   return o.default.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,
     emojiId: t
   }), s.HTTP.del({
-    url: T.Endpoints.GUILD_EMOJI(e, t),
+    url: S.Endpoints.GUILD_EMOJI(e, t),
     oldFormErrors: !0
   })
 }
-async function p(e) {
+async function C(e) {
   let {
     guildId: t,
     emojiId: n,
@@ -107,7 +109,7 @@ async function p(e) {
   } = e;
   try {
     return await s.HTTP.patch({
-      url: T.Endpoints.GUILD_EMOJI(t, n),
+      url: S.Endpoints.GUILD_EMOJI(t, n),
       body: {
         name: i,
         roles: r
@@ -119,31 +121,34 @@ async function p(e) {
   }
 }
 
-function O(e) {
-  return E.default.totalUnavailableGuilds > 0 || !_.default.isConnected() ? e : e.filter(e => {
-    var t;
-    return null != (null !== (t = u.default.getCustomEmojiById(e)) && void 0 !== t ? t : d.default.getByName(e))
-  })
-}
-
-function C(e) {
-  var t;
-  (function(e) {
-    null != e && c.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = O(t.emojis), r().size(t.emojis) >= f.MAX_FAVORITES) ? (I.default.show({
-      title: S.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-      body: S.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
-        count: f.MAX_FAVORITES
-      })
-    }), !1) : !t.emojis.includes(e) && void t.emojis.push(e), f.UserSettingsDelay.INFREQUENT_USER_ACTION)
-  })(null !== (t = e.id) && void 0 !== t ? t : e.name)
-}
-
 function R(e) {
-  var t;
-  (function(e) {
-    null != e && c.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => {
-      if (!t.emojis.includes(e)) return !1;
-      t.emojis = t.emojis.filter(t => e !== t), t.emojis = O(t.emojis)
-    }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
-  })(null !== (t = e.id) && void 0 !== t ? t : e.name)
+  if (I.default.totalUnavailableGuilds > 0 || !c.default.isConnected()) return e;
+  let t = e.map(e => {
+    var t;
+    return null !== (t = u.default.getCustomEmojiById(e)) && void 0 !== t ? t : d.default.getByName(e)
+  }).filter(T.isNotNullish);
+  return [...(0, _.default)(t).keys()]
+}
+
+function g(e) {
+  var t, n, i;
+  return null == e ? null : null !== (i = null !== (n = e.id) && void 0 !== n ? n : null === (t = d.default.convertSurrogateToBase(e.surrogates)) || void 0 === t ? void 0 : t.name) && void 0 !== i ? i : e.name
+}
+
+function L(e) {
+  let t = g(e);
+  null != t && E.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", e => (e.emojis = R(e.emojis), r().size(e.emojis) >= h.MAX_FAVORITES) ? (f.default.show({
+    title: A.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+    body: A.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+      count: h.MAX_FAVORITES
+    })
+  }), !1) : !e.emojis.includes(t) && void e.emojis.push(t), h.UserSettingsDelay.INFREQUENT_USER_ACTION)
+}
+
+function v(e) {
+  let t = g(e);
+  null != t && E.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", e => {
+    if (e.emojis = R(e.emojis), !e.emojis.includes(t)) return !1;
+    e.emojis = e.emojis.filter(e => t !== e)
+  }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }

@@ -3,9 +3,6 @@ n.r(t), n.d(t, {
   allowUnicodeEmojiForIntention: function() {
     return B
   },
-  dedupeUnicodeEmojis: function() {
-    return K
-  },
   getAriaIdForEmojiCategory: function() {
     return w
   },
@@ -13,7 +10,7 @@ n.r(t), n.d(t, {
     return W
   },
   getSearchPlaceholder: function() {
-    return z
+    return K
   },
   getStringForEmojiCategory: function() {
     return k
@@ -430,11 +427,6 @@ function W(e, t, n) {
   return i.includes(n) ? N.EmojiSubCategory.TOP_GUILD_EMOJI : r.includes(n) ? N.EmojiSubCategory.NEWLY_ADDED_EMOJI : N.EmojiSubCategory.NONE
 }
 
-function K(e) {
-  let t = new Set;
-  return e.filter(e => null == e.uniqueName || (t.has(e.optionallyDiverseSequence) ? void 0 : (t.add(e.optionallyDiverseSequence), !0)))
-}
-
-function z(e, t) {
+function K(e, t) {
   return e === O.EmojiIntention.REACTION ? t ? g.default.Messages.SEARCH_FOR_SUPER_REACTION : g.default.Messages.SEARCH_FOR_REACTION : g.default.Messages.SEARCH_FOR_EMOJI
 }
