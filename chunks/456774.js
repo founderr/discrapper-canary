@@ -438,7 +438,7 @@ function ea(e) {
         let s = null !== (o = (0, Y.getChannelIdFromCardData)(l)) && void 0 !== o ? o : "",
           u = (0, j.getVoiceChannelUsers)(s, t.id),
           d = e.length;
-        e.push(l.category), i.push(u.length), r.push(u.length > 0 ? u[0].id : "0"), n.push(Math.min(u.length, 6)), a["position_".concat(d, "_affinity_user_ids")] = u.slice(0, 6).map(e => e.id), a["position_".concat(d, "_affinity_user_scores")] = u.slice(0, 6).map(e => {
+        e.push(l.category), i.push(u.length), r.push(u.length > 0 ? u[0].id : "0"), n.push(Math.min(u.length, 6)), a["position_".concat(d + 1, "_affinity_user_ids")] = u.slice(0, 6).map(e => e.id), a["position_".concat(d + 1, "_user_affinity_scores")] = u.slice(0, 6).map(e => {
           var t, n;
           return null !== (n = null === (t = M.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
         })
