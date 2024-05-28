@@ -104,6 +104,9 @@ function A(e) {
   let {
     searchResults: t
   } = (0, g.useSettingSearchResults)(), s = C(), a = s[e], n = Object.fromEntries(Object.entries(s).filter(e => {
+    let [t, s] = e;
+    return s.section === a.section
+  })), l = Object.fromEntries(Object.entries(n).filter(e => {
     let [t, {
       parent: s,
       section: n
@@ -114,27 +117,29 @@ function A(e) {
       parent: s
     }] = e;
     return [t, s]
-  })), l = new Set, i = e => {
-    if (l.has(e)) return;
-    l.add(e);
-    let t = s[e].parent;
-    t && i(t)
-  }, r = e => {
-    if (!l.has(e))
-      for (let t of (l.add(e), Object.entries(n).filter(t => {
+  })), i = new Set, r = e => {
+    if (i.has(e)) return;
+    let t = n[e];
+    if (null == t) return;
+    i.add(e);
+    let s = t.parent;
+    null != s && r(s)
+  }, o = e => {
+    if (!i.has(e))
+      for (let t of (i.add(e), Object.entries(l).filter(t => {
           let [s, a] = t;
           return a === e
         }).map(e => {
           let [t] = e;
           return t
-        }))) r(t)
+        }))) o(t)
   };
-  for (let e of t)
-    if (null != s[e].element && null == s[e].parent) {
-      l.clear();
+  for (let e of t.filter(e => e in n))
+    if (null != n[e].element && null == n[e].parent) {
+      i.clear();
       break
-    } else Object.values(n).includes(e) && r(e), i(e);
-  return l
+    } else Object.values(l).includes(e) && o(e), r(e);
+  return i
 }
 
 function p(e, t, s) {

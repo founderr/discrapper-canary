@@ -18848,10 +18848,7 @@ h3.improved_e02592:after {
     height: 100%;
     max-width: 550px;
     border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center
+    overflow: hidden
 }
 
 .nonVisualMediaItemContainer__81ce5 {
