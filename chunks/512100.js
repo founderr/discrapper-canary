@@ -1,91 +1,77 @@
 "use strict";
 n.r(t), n.d(t, {
   CardDetails: function() {
-    return d
+    return o
   }
 });
 var i = n("735250");
 n("470079");
-var s = n("789978"),
-  l = n("727075"),
-  r = n("777207"),
-  a = n("541822"),
-  o = n("330711"),
-  u = n("878106");
+var r = n("777207"),
+  l = n("541822"),
+  a = n("330711"),
+  s = n("878106");
 
-function d(e) {
+function o(e) {
   let {
     benefits: t,
     description: n,
-    imgSrc: d,
-    title: c,
-    onClose: f,
-    tag: h,
-    FallbackIcon: S
-  } = e, p = null != d ? {
-    "--custom-background-url": "url(".concat(d.toString(), ")")
+    imgSrc: o,
+    title: u,
+    tag: d,
+    FallbackIcon: c
+  } = e, f = null != o ? {
+    "--custom-background-url": "url(".concat(o.toString(), ")")
   } : void 0;
   return (0, i.jsxs)("div", {
-    className: u.container,
+    className: s.container,
     children: [(0, i.jsxs)("div", {
-      className: u.header,
+      className: s.header,
       children: [(0, i.jsx)("div", {
-        className: u.headerBackground,
-        style: p
-      }), (0, i.jsxs)("div", {
-        className: u.headerTop,
-        children: [(0, i.jsx)("div", {
-          children: h
-        }), (0, i.jsx)(s.FocusRing, {
-          children: (0, i.jsx)("button", {
-            onClick: f,
-            className: u.closeBtn,
-            type: "button",
-            children: (0, i.jsx)(l.CloseSmallIcon, {
-              height: 24,
-              width: 24,
-              color: "var(--header-primary)"
-            })
-          })
-        })]
+        className: s.headerBackground,
+        style: f
       }), (0, i.jsx)("div", {
-        className: u.headerImage,
-        children: null != d ? (0, i.jsx)("img", {
-          src: d.toString(),
+        className: s.headerTop,
+        children: (0, i.jsx)("div", {
+          children: d
+        })
+      }), (0, i.jsx)("div", {
+        className: s.headerImage,
+        children: null != o ? (0, i.jsx)("img", {
+          src: o.toString(),
           alt: ""
-        }) : (0, i.jsx)(S, {
+        }) : (0, i.jsx)(c, {
           color: "var(--text-muted)",
           height: 96,
           width: 96
         })
       })]
-    }), (0, i.jsxs)(a.default, {
-      className: u.scroll,
+    }), (0, i.jsxs)(l.default, {
+      className: s.scroll,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
-        className: u.scrollContent,
+        className: s.scrollContent,
         children: [(0, i.jsx)(r.Text, {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
-          children: c
+          children: u
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
-          className: u.details,
+          className: s.details,
           children: [(0, i.jsx)(r.Text, {
             color: "header-primary",
             tag: "div",
             variant: "heading-lg/semibold",
-            children: o.default.Messages.Storefront.PRODUCT_DETAILS
+            children: a.default.Messages.Storefront.PRODUCT_DETAILS
           }), (0, i.jsx)(r.Text, {
             color: "text-muted",
             variant: "text-md/normal",
-            className: u.description,
+            className: s.description,
             children: n
           }), null != t && (0, i.jsxs)("div", {
-            className: u.benefits,
+            className: s.benefits,
             children: [(0, i.jsx)(r.Text, {
               color: "header-secondary",
               variant: "eyebrow",
-              children: o.default.Messages.Storefront.BENEFITS_TITLE
+              children: a.default.Messages.Storefront.BENEFITS_TITLE
             }), t]
           })]
         })]
