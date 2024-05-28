@@ -250,6 +250,8 @@ function er(e) {
   return d && o && S ? (0, i.jsx)("div", {
     onMouseEnter: () => E(!0),
     onMouseLeave: () => E(!1),
+    onFocus: () => E(!0),
+    onBlur: () => E(!1),
     children: (0, i.jsx)(_.Popout, {
       position: "right",
       renderPopout: e => {
