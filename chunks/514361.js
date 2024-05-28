@@ -6,16 +6,21 @@ var s, a = n("442837"),
   l = n("570140"),
   u = n("605236"),
   d = n("238514"),
-  _ = n("210887"),
-  c = n("131704"),
-  E = n("592125"),
-  I = n("594174"),
-  T = n("74538"),
-  f = n("51144"),
-  S = n("47760"),
-  h = n("469115");
+  _ = n("781391"),
+  c = n("210887"),
+  E = n("740492"),
+  I = n("695346"),
+  T = n("581883"),
+  f = n("131704"),
+  S = n("592125"),
+  h = n("594174"),
+  A = n("74538"),
+  m = n("51144"),
+  N = n("47760"),
+  p = n("469115"),
+  O = n("874893");
 
-function A(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,31 +28,47 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let m = !1,
-  N = !0,
-  p = !1;
+let R = !1,
+  g = !0,
+  L = !1;
 
-function O() {
-  m = !0
+function v() {
+  R = !0
 }
 
-function C() {
-  N && (i = void 0), p = !1, m = !1
+function D() {
+  g && (i = void 0), L = !1, R = !1
 }
-let R = () => {
-    N = !T.default.canUseClientThemes(I.default.getCurrentUser())
+let M = () => {
+    g = !A.default.canUseClientThemes(h.default.getCurrentUser())
   },
-  g = () => {
-    var e, t;
-    let n = null === (t = d.default.getAppearanceSettings()) || void 0 === t ? void 0 : null === (e = t.clientThemeSettings) || void 0 === e ? void 0 : e.backgroundGradientPresetId;
-    null != n && (i = h.BACKGROUND_GRADIENT_PRESETS_MAP[n])
+  y = () => {
+    let e = I.ClientThemeSettings.getSetting().backgroundGradientPresetId;
+    if (d.default.shouldSync("appearance")) {
+      if (null == e) {
+        null != i && (i = void 0);
+        return
+      }
+      i = p.BACKGROUND_GRADIENT_PRESETS_MAP[e]
+    }
+  },
+  P = () => {
+    if (!d.default.shouldSync("appearance")) return;
+    let e = I.ClientThemeSettings.getSetting().backgroundGradientPresetId;
+    if (E.default.useSystemTheme === O.SystemThemeState.ON && null != e && (0, _.setUseSystemTheme)(O.SystemThemeState.OFF), null == e) {
+      null != i && (i = void 0);
+      return
+    }
+    let t = p.BACKGROUND_GRADIENT_PRESETS_MAP[e],
+      n = (null == i ? void 0 : i.id) === (null == t ? void 0 : t.id);
+    null != t && !n && (i = t)
   };
-class L extends(s = a.default.PersistedStore) {
+class U extends(s = a.default.PersistedStore) {
   initialize(e) {
-    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? h.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(I.default, _.default, E.default, d.default), this.syncWith([I.default], R), this.syncWith([d.default], g)
+    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? p.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(h.default, c.default, S.default, d.default, T.default), this.syncWith([h.default], M), this.syncWith([d.default], y), this.syncWith([T.default], P)
   }
   getState() {
-    return N ? {} : {
+    return g ? {} : {
       gradientPresetId: null == i ? void 0 : i.id
     }
   }
@@ -55,22 +76,22 @@ class L extends(s = a.default.PersistedStore) {
     return i
   }
   getLinearGradient() {
-    return null == this.gradientPreset ? null : (0, S.getLinearGradientForBackgroundGradient)(this.gradientPreset)
+    return null == this.gradientPreset ? null : (0, N.getLinearGradientForBackgroundGradient)(this.gradientPreset)
   }
   get isEditorOpen() {
-    return m
+    return R
   }
   get isPreview() {
-    return N
+    return g
   }
   get isCoachmark() {
-    return p
+    return L
   }
   get mobilePendingThemeIndex() {
     return r
   }
   constructor(...e) {
-    super(...e), A(this, "migrations", [e => {
+    super(...e), C(this, "migrations", [e => {
       var t;
       return {
         gradientPresetId: null == e ? void 0 : null === (t = e.gradientPreset) || void 0 === t ? void 0 : t.id
@@ -78,7 +99,7 @@ class L extends(s = a.default.PersistedStore) {
     }])
   }
 }
-A(L, "displayName", "ClientThemesBackgroundStore"), A(L, "persistKey", "ClientThemesBackgroundStore"), t.default = new L(l.default, {
+C(U, "displayName", "ClientThemesBackgroundStore"), C(U, "persistKey", "ClientThemesBackgroundStore"), t.default = new U(l.default, {
   UPDATE_BACKGROUND_GRADIENT_PRESET: e => {
     let {
       presetId: t
@@ -87,7 +108,7 @@ A(L, "displayName", "ClientThemesBackgroundStore"), A(L, "persistKey", "ClientTh
       i = void 0;
       return
     }
-    i = h.BACKGROUND_GRADIENT_PRESETS_MAP[t]
+    i = p.BACKGROUND_GRADIENT_PRESETS_MAP[t]
   },
   UPDATE_MOBILE_PENDING_THEME_INDEX: e => {
     let {
@@ -101,11 +122,11 @@ A(L, "displayName", "ClientThemesBackgroundStore"), A(L, "persistKey", "ClientTh
   },
   CLIENT_THEMES_EDITOR_OPEN: e => {
     (function() {
-      m = !0
+      R = !0
     })()
   },
   CLIENT_THEMES_EDITOR_CLOSE: e => {
-    C()
+    D()
   },
   RESET_PREVIEW_CLIENT_THEME: e => {
     i = void 0
@@ -114,14 +135,14 @@ A(L, "displayName", "ClientThemesBackgroundStore"), A(L, "persistKey", "ClientTh
     let {
       channelId: t,
       guildId: n
-    } = e, i = I.default.getCurrentUser();
-    if (null == t || null == n || (0, u.isDismissibleContentDismissed)(o.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, f.ageEligibleForPremiumUpsell)(i)) return;
-    let r = E.default.getChannel(t);
-    null != r && (0, c.isGuildTextChannelType)(r.type) && (p = !0, function() {
-      m = !0
+    } = e, i = h.default.getCurrentUser();
+    if (null == t || null == n || (0, u.isDismissibleContentDismissed)(o.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, m.ageEligibleForPremiumUpsell)(i)) return;
+    let r = S.default.getChannel(t);
+    null != r && (0, f.isGuildTextChannelType)(r.type) && (L = !0, function() {
+      R = !0
     }())
   },
   LOGOUT: e => {
-    C()
+    D()
   }
 })
