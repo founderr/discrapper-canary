@@ -283,7 +283,7 @@ class ek extends l.PureComponent {
         this._wrapperRef.current = e, this.props.wrapperRef.current = e
       },
       style: h && null != c ? {
-        minHeight: 200,
+        minHeight: 230,
         maxHeight: u,
         height: c
       } : void 0,
@@ -299,7 +299,7 @@ class ek extends l.PureComponent {
           children: e => this.renderContent(e)
         })
       }), h && (0, a.jsx)(ey.default, {
-        minHeight: 200,
+        minHeight: 230,
         maxHeight: u,
         resizableNode: this._wrapperRef,
         onResize: this.handleCallResize,

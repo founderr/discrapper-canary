@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 let i = (0, n("818083").createExperiment)({
   kind: "user",
-  id: "2024-05_june_2024_new_app_styles_whats_new_Card",
+  id: "2024-05_june_2024_new_app_styles_whats_new_card",
   label: "June 2024 New App Styles Whats New Card",
   defaultConfig: {
     shouldShowCard: !1,
