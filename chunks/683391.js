@@ -15,6 +15,8 @@ e.exports = {
   gamesTooltip: "gamesTooltip_cdb5ec",
   preferences: "preferences__16c1a",
   toolbar: "toolbar__2fcb0",
+  tooltipContentWrapper: "tooltipContentWrapper_c880ba",
+  tooltipHoverBridge: "tooltipHoverBridge__6cec0",
   trait: "trait__847e0",
   traitsTooltip: "traitsTooltip__02c2a"
 }

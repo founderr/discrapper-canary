@@ -1,5 +1,5 @@
 "use strict";
-n.r(t);
+n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
   l = n("120356"),
@@ -11,11 +11,11 @@ var a = n("735250"),
   c = n("738232"),
   f = n("376644"),
   E = n("481060"),
-  h = n("963202"),
-  _ = n("105671"),
-  C = n("92373"),
-  m = n("207796"),
-  S = n("308083"),
+  C = n("963202"),
+  h = n("105671"),
+  _ = n("92373"),
+  S = n("207796"),
+  m = n("308083"),
   p = n("689938"),
   I = n("683391");
 
@@ -23,30 +23,56 @@ function g(e) {
   let {
     icon: t,
     text: n,
-    ariaLabel: s,
-    tooltip: l,
-    onClick: r,
-    isActive: u,
-    autoWidth: d = !1
-  } = e;
+    ariaLabel: l,
+    tooltip: r,
+    onClick: u,
+    isActive: d,
+    autoWidth: c = !1
+  } = e, [f, C] = s.useState(!1), [h, _] = s.useState(!1), m = S.useClanDiscoveryUIStore.getState().mode, p = m === S.ClanDiscoveryMode.GAMES || m === S.ClanDiscoveryMode.PLAYSTYLE || m === S.ClanDiscoveryMode.TRAITS;
+  s.useEffect(() => {
+    p && (C(!1), _(!1))
+  }, [p]);
+  let g = d && (h || f),
+    T = s.useMemo(() => (0, a.jsxs)(E.Clickable, {
+      className: I.tooltipContentWrapper,
+      onClick: u,
+      onMouseEnter: () => {
+        !p && C(!0)
+      },
+      onMouseLeave: () => {
+        C(!1)
+      },
+      children: [(0, a.jsx)("div", {
+        className: I.tooltipHoverBridge
+      }), r]
+    }), [r, u, p]);
   return (0, a.jsx)(E.Tooltip, {
-    text: l,
+    text: T,
     position: "bottom",
-    "aria-label": s,
-    shouldShow: u,
+    "aria-label": l,
+    shouldShow: g,
+    forceOpen: g,
+    allowOverflow: !0,
+    disableTooltipPointerEvents: !1,
     tooltipClassName: i()(I.filterTooltip, {
-      [I.filterTooltipAutoWidth]: d
+      [I.filterTooltipAutoWidth]: c
     }),
     tooltipContentClassName: I.filterTooltipContent,
     children: e => (0, a.jsxs)(E.Button, {
       ...e,
       className: i()(I.filterPill, {
-        [I.filterPillActive]: u
+        [I.filterPillActive]: d
       }),
       innerClassName: I.filterPillContents,
       look: E.ButtonLooks.OUTLINED,
       color: E.ButtonColors.CUSTOM,
-      onClick: r,
+      onClick: u,
+      onMouseEnter: () => {
+        _(!0)
+      },
+      onMouseLeave: () => {
+        _(!1)
+      },
       children: [t, (0, a.jsxs)("div", {
         className: I.filterPillText,
         children: [(0, a.jsx)(E.Text, {
@@ -64,16 +90,16 @@ function g(e) {
 
 function T() {
   var e;
-  let t = (0, m.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
+  let t = (0, S.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
     n = s.useCallback(() => {
-      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GAMES)
+      (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.GAMES)
     }, []),
-    l = null !== (e = (0, _.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
+    l = null !== (e = (0, h.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
     i = t.slice(0, 3),
     o = t.length - 3,
     d = (0, a.jsx)("div", {
       className: I.gamesTooltip,
-      children: i.map((e, t) => (0, a.jsx)(C.default, {
+      children: i.map((e, t) => (0, a.jsx)(_.default, {
         applicationId: e,
         otherGamesCount: 2 === t && o > 0 ? o + 1 : void 0
       }, e))
@@ -96,12 +122,12 @@ function T() {
 }
 
 function A() {
-  let e = s.useMemo(S.getPlaystyleOptions, []),
-    t = (0, m.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
+  let e = s.useMemo(m.getPlaystyleOptions, []),
+    t = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
     n = null != t ? e[t] : null,
     l = null == n ? void 0 : n.title,
     i = s.useCallback(() => {
-      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.PLAYSTYLE)
+      (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.PLAYSTYLE)
     }, []);
   if (null == n || null == l) return null;
   let o = (0, a.jsxs)(a.Fragment, {
@@ -133,9 +159,9 @@ function A() {
 }
 
 function N() {
-  let e = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
+  let e = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
     t = s.useCallback(() => {
-      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.TRAITS)
+      (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.TRAITS)
     }, []);
   if (null == e) return null;
   let n = (0, a.jsx)("div", {
@@ -159,20 +185,21 @@ function N() {
     tooltip: n,
     onClick: t,
     isActive: e.length > 0,
-    ariaLabel: e.join(", ")
+    ariaLabel: e.join(", "),
+    autoWidth: !0
   })
 }
 
 function v() {
   let {
     enableClanCreation: e
-  } = (0, h.useClanPrepilotExperimentForAllGuilds)({
+  } = (0, C.useClanPrepilotExperimentForAllGuilds)({
     location: "clan_discovery_add_clan",
     includeConverted: !1
   });
   return e ? (0, a.jsxs)(E.Clickable, {
     className: i()(I.buttonPill),
-    onClick: () => (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.ADMIN_UPSELL),
+    onClick: () => (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.ADMIN_UPSELL),
     children: [(0, a.jsx)(d.PlusSmallIcon, {
       className: I.filterPillIcon,
       color: "currentColor"
