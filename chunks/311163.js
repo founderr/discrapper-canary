@@ -1,18 +1,18 @@
-    "use strict";
-    a.r(t), a.d(t, {
-      default: function() {
-        return n
-      }
-    });
-    var d = a("272423");
+"use strict";
+n.r(t), n.d(t, {
+  default: function() {
+    return a
+  }
+});
+var i = n("272423");
 
-    function n(e) {
-      let t = (0, d.coerceChannelRoute)(e);
-      if (null != t) return [t.params.guildId, t.params.channelId];
-      let a = (0, d.coerceGuildsRoute)(e);
-      if (null != a) {
-        var n, c;
-        return [null === (n = a.params) || void 0 === n ? void 0 : n.guildId, null === (c = a.params) || void 0 === c ? void 0 : c.channelId]
-      }
-      return [void 0, void 0]
-    }
+function a(e) {
+  let t = (0, i.coerceChannelRoute)(e);
+  if (null != t) return [t.params.guildId, t.params.channelId];
+  let n = (0, i.coerceGuildsRoute)(e);
+  if (null != n) {
+    var a, o;
+    return [null === (a = n.params) || void 0 === a ? void 0 : a.guildId, null === (o = n.params) || void 0 === o ? void 0 : o.channelId]
+  }
+  return [void 0, void 0]
+}

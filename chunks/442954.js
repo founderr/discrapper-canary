@@ -6,11 +6,11 @@ r.r(t), r.d(t, {
 }), r("47120");
 var a = r("735250"),
   i = r("470079"),
-  l = r("120356"),
-  n = r.n(l),
+  n = r("120356"),
+  l = r.n(n),
   o = r("481060"),
-  s = r("246992"),
-  c = r("277513"),
+  c = r("246992"),
+  s = r("277513"),
   d = r("104837");
 
 function u() {
@@ -18,7 +18,7 @@ function u() {
       BOGOAnnouncementModal: async () => {
         let {
           default: e
-        } = await Promise.all([r.e("49237"), r.e("99387"), r.e("81539"), r.e("34049")]).then(r.bind(r, "868508"));
+        } = await Promise.all([r.e("99387"), r.e("34049")]).then(r.bind(r, "868508"));
         return t => (0, a.jsx)(e, {
           renderModalProps: t
         })
@@ -36,9 +36,9 @@ function u() {
       label: e,
       value: e
     })),
-    [l, u] = i.useState(t[0].value);
+    [n, u] = i.useState(t[0].value);
   return (0, a.jsx)(o.ScrollerThin, {
-    className: n()(c.panel),
+    className: l()(s.panel),
     children: (0, a.jsx)("div", {
       className: d.panelInner,
       children: (0, a.jsxs)("section", {
@@ -51,14 +51,14 @@ function u() {
           children: [(0, a.jsx)(o.Select, {
             className: d.input,
             options: t,
-            isSelected: e => l === e,
+            isSelected: e => n === e,
             placeholder: "Trial ID",
             serialize: e => String(e),
             select: e => u(e),
-            popoutLayerContext: s.devToolsLayerContext
+            popoutLayerContext: c.devToolsLayerContext
           }), (0, a.jsx)(o.Button, {
             onClick: () => {
-              (0, o.openModalLazy)(e[l])
+              (0, o.openModalLazy)(e[n])
             },
             children: "Open"
           })]

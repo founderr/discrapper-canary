@@ -1,134 +1,134 @@
     "use strict";
-    a.r(t), a.d(t, {
+    t.r(a), t.d(a, {
       Overlay: function() {
         return B
       }
-    }), a("47120");
-    var d = a("735250"),
-      n = a("470079"),
-      c = a("664751"),
-      i = a("266067"),
-      o = a("613828"),
-      r = a("990547"),
-      f = a("719711"),
-      l = a("271579"),
-      s = a("756647"),
-      u = a("442837"),
-      b = a("433517"),
-      h = a("799656"),
-      p = a("540117"),
-      m = a("765717"),
-      _ = a("663993"),
-      E = a("329816"),
-      g = a("554608"),
-      I = a("83949"),
-      O = a("137412"),
-      T = a("314897"),
-      v = a("626135"),
-      R = a("361207"),
-      w = a("690032"),
-      S = a("358085"),
-      A = a("998502"),
-      N = a("981631"),
-      C = a("188785"),
-      D = a("436620");
-    a("928518"), a("972830"), a("704806");
-    let P = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("61482")]).then(a.bind(a, "576184")),
+    }), t("47120");
+    var d = t("735250"),
+      c = t("470079"),
+      n = t("664751"),
+      i = t("266067"),
+      f = t("613828"),
+      o = t("990547"),
+      r = t("719711"),
+      l = t("271579"),
+      s = t("756647"),
+      b = t("442837"),
+      u = t("433517"),
+      p = t("799656"),
+      h = t("540117"),
+      m = t("765717"),
+      _ = t("663993"),
+      E = t("329816"),
+      I = t("554608"),
+      g = t("83949"),
+      O = t("137412"),
+      T = t("314897"),
+      S = t("626135"),
+      A = t("361207"),
+      w = t("690032"),
+      v = t("358085"),
+      N = t("998502"),
+      R = t("981631"),
+      D = t("188785"),
+      C = t("436620");
+    t("928518"), t("972830"), t("704806");
+    let L = (0, _.makeLazy)({
+        createPromise: () => Promise.all([t.e("49237"), t.e("61482")]).then(t.bind(t, "576184")),
         webpackId: "576184",
         name: "UnsupportedBrowser"
       }),
-      L = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("99387"), a.e("88571")]).then(a.bind(a, "431583")),
+      P = (0, _.makeLazy)({
+        createPromise: () => Promise.all([t.e("99387"), t.e("88571")]).then(t.bind(t, "431583")),
         webpackId: "431583",
         name: "DownloadApps"
       }),
       y = (0, _.makeLazy)({
-        createPromise: () => a.e("81975").then(a.bind(a, "484097")),
+        createPromise: () => t.e("81975").then(t.bind(t, "484097")),
         webpackId: "484097",
         name: "InviteProxy"
       }),
       M = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("99387"), a.e("20786")]).then(a.bind(a, "417663")),
+        createPromise: () => Promise.all([t.e("99387"), t.e("20786")]).then(t.bind(t, "417663")),
         webpackId: "417663",
         name: "VerifyConnectedAccount"
       }),
       k = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("99387"), a.e("16565")]).then(a.bind(a, "984388")),
+        createPromise: () => Promise.all([t.e("99387"), t.e("16565")]).then(t.bind(t, "984388")),
         webpackId: "984388",
         name: "LinkConnectedAccount"
       }),
       U = (0, _.makeLazy)({
-        createPromise: () => a.e("46882").then(a.bind(a, "924339")),
+        createPromise: () => t.e("46882").then(t.bind(t, "924339")),
         webpackId: "924339",
         name: "LinkAuthorize"
       }),
       x = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("99387"), a.e("19878"), a.e("49277")]).then(a.bind(a, "197528")),
+        createPromise: () => Promise.all([t.e("99387"), t.e("19878"), t.e("49277")]).then(t.bind(t, "197528")),
         webpackId: "197528",
         name: "ActivateDevice"
       }),
       j = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("70716"), a.e("23755"), a.e("30386"), a.e("80301"), a.e("36385"), a.e("56215"), a.e("29549"), a.e("31605"), a.e("56630"), a.e("6380"), a.e("11250"), a.e("57878"), a.e("4970"), a.e("77172"), a.e("95393"), a.e("81539"), a.e("67535"), a.e("39285"), a.e("86977"), a.e("14262"), a.e("18101"), a.e("90687"), a.e("82882"), a.e("58286"), a.e("8739"), a.e("90508"), a.e("7590"), a.e("41947"), a.e("30243"), a.e("3084"), a.e("37766"), a.e("53466"), a.e("62809"), a.e("22036"), a.e("38779"), a.e("59743"), a.e("43643"), a.e("23404"), a.e("92714"), a.e("17220"), a.e("37220"), a.e("58360"), a.e("92557"), a.e("91315"), a.e("80026"), a.e("72588"), a.e("45074"), a.e("36439"), a.e("86557"), a.e("5829"), a.e("66696"), a.e("11256"), a.e("49508"), a.e("91632"), a.e("88396"), a.e("38651"), a.e("95468"), a.e("19976")]).then(a.bind(a, "457094")),
+        createPromise: () => Promise.all([t.e("49237"), t.e("99387"), t.e("70716"), t.e("23755"), t.e("30386"), t.e("80301"), t.e("36385"), t.e("56215"), t.e("29549"), t.e("31605"), t.e("56630"), t.e("6380"), t.e("11250"), t.e("57878"), t.e("4970"), t.e("77172"), t.e("95393"), t.e("67535"), t.e("86977"), t.e("18101"), t.e("81539"), t.e("58286"), t.e("8739"), t.e("39285"), t.e("14262"), t.e("41947"), t.e("30243"), t.e("3084"), t.e("90687"), t.e("82882"), t.e("62809"), t.e("38779"), t.e("29042"), t.e("59743"), t.e("7590"), t.e("23404"), t.e("99365"), t.e("97188"), t.e("37766"), t.e("53466"), t.e("22036"), t.e("43643"), t.e("15357"), t.e("90144"), t.e("37220"), t.e("3682"), t.e("13918"), t.e("92557"), t.e("91315"), t.e("88331"), t.e("80026"), t.e("72588"), t.e("49508"), t.e("9737"), t.e("72922"), t.e("27385"), t.e("63401"), t.e("11256"), t.e("91354"), t.e("61986"), t.e("55981"), t.e("13546"), t.e("95468"), t.e("94864")]).then(t.bind(t, "457094")),
         webpackId: "457094",
         name: "ViewsWithMainInterface",
         memo: !0,
         id: "457094"
       }),
       V = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("96427"), a.e("49368"), a.e("75492"), a.e("11250"), a.e("57878"), a.e("95393"), a.e("67535"), a.e("90687"), a.e("19878"), a.e("10778"), a.e("52030"), a.e("85514"), a.e("76990"), a.e("50960")]).then(a.bind(a, "822699")),
+        createPromise: () => Promise.all([t.e("49237"), t.e("99387"), t.e("96427"), t.e("49368"), t.e("75492"), t.e("11250"), t.e("57878"), t.e("95393"), t.e("67535"), t.e("90687"), t.e("52030"), t.e("19878"), t.e("10778"), t.e("93669"), t.e("76990"), t.e("71635")]).then(t.bind(t, "822699")),
         webpackId: "822699",
         name: "ViewsWithAuth"
       }),
       G = (0, _.makeLazy)({
-        createPromise: () => a.e("32640").then(a.bind(a, "285773")),
+        createPromise: () => t.e("32640").then(t.bind(t, "285773")),
         webpackId: "285773",
         name: "ViewsWithOAuth2"
       }),
-      H = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("10508")]).then(a.bind(a, "549652")),
+      F = (0, _.makeLazy)({
+        createPromise: () => Promise.all([t.e("49237"), t.e("99387"), t.e("10508")]).then(t.bind(t, "549652")),
         webpackId: "549652",
         name: "BrowserHandoff"
       }),
-      F = (0, _.makeLazy)({
-        createPromise: () => a.e("76888").then(a.bind(a, "573276")),
+      H = (0, _.makeLazy)({
+        createPromise: () => t.e("76888").then(t.bind(t, "573276")),
         webpackId: "573276",
         name: "MobileWebHandoffFallback"
       }),
       B = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("23755"), a.e("30386"), a.e("80301"), a.e("36385"), a.e("29549"), a.e("31605"), a.e("56630"), a.e("6380"), a.e("11250"), a.e("57878"), a.e("4970"), a.e("77172"), a.e("95393"), a.e("81539"), a.e("67535"), a.e("39285"), a.e("86977"), a.e("14262"), a.e("18101"), a.e("90687"), a.e("82882"), a.e("58286"), a.e("8739"), a.e("90508"), a.e("7590"), a.e("41947"), a.e("30243"), a.e("3084"), a.e("37766"), a.e("53466"), a.e("62809"), a.e("22036"), a.e("38779"), a.e("59743"), a.e("43643"), a.e("23404"), a.e("17220"), a.e("37220"), a.e("58360"), a.e("92557"), a.e("91315"), a.e("72588"), a.e("45074"), a.e("36439"), a.e("86557"), a.e("5829"), a.e("66696"), a.e("88396"), a.e("69240")]).then(a.bind(a, "290161")),
+        createPromise: () => Promise.all([t.e("49237"), t.e("99387"), t.e("23755"), t.e("30386"), t.e("80301"), t.e("36385"), t.e("29549"), t.e("31605"), t.e("56630"), t.e("6380"), t.e("11250"), t.e("57878"), t.e("4970"), t.e("77172"), t.e("95393"), t.e("67535"), t.e("86977"), t.e("18101"), t.e("81539"), t.e("58286"), t.e("8739"), t.e("39285"), t.e("14262"), t.e("41947"), t.e("30243"), t.e("3084"), t.e("90687"), t.e("82882"), t.e("62809"), t.e("38779"), t.e("29042"), t.e("59743"), t.e("7590"), t.e("23404"), t.e("97188"), t.e("37766"), t.e("53466"), t.e("22036"), t.e("43643"), t.e("15357"), t.e("37220"), t.e("3682"), t.e("13918"), t.e("92557"), t.e("91315"), t.e("72588"), t.e("9737"), t.e("72922"), t.e("63401"), t.e("91354"), t.e("61986"), t.e("84907")]).then(t.bind(t, "290161")),
         webpackId: "290161",
         name: "Overlay"
       }),
       W = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("18824"), a.e("75843")]).then(a.bind(a, "430075")),
+        createPromise: () => Promise.all([t.e("49237"), t.e("99387"), t.e("18824"), t.e("75843")]).then(t.bind(t, "430075")),
         webpackId: "430075",
         name: "SuspendedUserSafetyHubPage"
       }),
-      K = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("19878"), a.e("28296")]).then(a.bind(a, "630107")),
+      z = (0, _.makeLazy)({
+        createPromise: () => Promise.all([t.e("49237"), t.e("99387"), t.e("19878"), t.e("28296")]).then(t.bind(t, "630107")),
         webpackId: "630107",
         name: "QuestsLandingPage"
       }),
-      z = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("99387"), a.e("47228")]).then(a.bind(a, "531338")),
+      K = (0, _.makeLazy)({
+        createPromise: () => Promise.all([t.e("99387"), t.e("47228")]).then(t.bind(t, "531338")),
         webpackId: "531338",
         name: "ConnectionsAuthorizeContinue"
       }),
       Y = (0, _.makeLazy)({
-        createPromise: () => a.e("54918").then(a.bind(a, "838134")),
+        createPromise: () => t.e("54918").then(t.bind(t, "838134")),
         webpackId: "838134",
         name: "ApplicationDirectoryRoutes"
       }),
       q = () => (0, d.jsx)(j, {}),
-      X = new Set([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")]);
+      X = new Set([R.Routes.LOGIN, R.Routes.LOGIN_HANDOFF, R.Routes.INVITE_LOGIN(":inviteCode"), R.Routes.GIFT_CODE_LOGIN(":giftCode"), R.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")]);
 
-    function Z(e, t) {
-      return t ? e.filter(e => !X.has(e)) : e
+    function Z(e, a) {
+      return a ? e.filter(e => !X.has(e)) : e
     }
-    class Q extends n.Component {
+    class Q extends c.Component {
       componentDidMount() {
-        A.default.cleanupDisplaySleep(), O.default.initialize()
+        N.default.cleanupDisplaySleep(), O.default.initialize()
       }
       componentWillUnmount() {
         O.default.terminate()
@@ -136,173 +136,173 @@
       render() {
         let e;
         let {
-          isAuthenticated: t,
-          migrationStatus: a,
-          skipsSettingDefaultPageTitle: n
+          isAuthenticated: a,
+          migrationStatus: t,
+          skipsSettingDefaultPageTitle: c
         } = this.props;
-        return e = a === g.MigrationStatus.IN_PROGRESS ? null : D.IS_APP_COMPATIBLE_BROWSER ? S.isPlatformEmbedded ? (0, d.jsxs)(o.Switch, {
-          children: [(0, d.jsx)(o.Route, {
+        return e = t === I.MigrationStatus.IN_PROGRESS ? null : C.IS_APP_COMPATIBLE_BROWSER ? v.isPlatformEmbedded ? (0, d.jsxs)(f.Switch, {
+          children: [(0, d.jsx)(f.Route, {
             exact: !0,
-            path: N.Routes.INDEX,
-            render: () => (0, d.jsx)(h.default, {})
+            path: R.Routes.INDEX,
+            render: () => (0, d.jsx)(p.default, {})
           }), (0, d.jsx)(m.default, {
             exact: !0,
-            path: N.Routes.APPS,
-            component: L
-          }), (0, d.jsx)(o.Route, {
-            path: Z([N.Routes.LOGIN, N.Routes.REGISTER, N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.RESET], C.CONFERENCE_MODE_ENABLED),
+            path: R.Routes.APPS,
+            component: P
+          }), (0, d.jsx)(f.Route, {
+            path: Z([R.Routes.LOGIN, R.Routes.REGISTER, R.Routes.INVITE(":inviteCode"), R.Routes.INVITE_LOGIN(":inviteCode"), R.Routes.GIFT_CODE(":giftCode"), R.Routes.GIFT_CODE_LOGIN(":giftCode"), R.Routes.RESET], D.CONFERENCE_MODE_ENABLED),
             component: V
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.INVITE_PROXY(":channelId"),
+            path: R.Routes.INVITE_PROXY(":channelId"),
             component: y
-          }), (0, d.jsx)(o.Redirect, {
-            from: N.Routes.INVITE(""),
-            to: N.Routes.LOGIN
-          }), (0, d.jsx)(o.Redirect, {
-            from: N.Routes.GIFT_CODE(""),
-            to: N.Routes.LOGIN
-          }), (0, d.jsx)(o.Route, {
+          }), (0, d.jsx)(f.Redirect, {
+            from: R.Routes.INVITE(""),
+            to: R.Routes.LOGIN
+          }), (0, d.jsx)(f.Redirect, {
+            from: R.Routes.GIFT_CODE(""),
+            to: R.Routes.LOGIN
+          }), (0, d.jsx)(f.Route, {
             render: q
           })]
-        }) : (0, d.jsxs)(o.Switch, {
+        }) : (0, d.jsxs)(f.Switch, {
           children: [(0, d.jsx)(m.default, {
             exact: !0,
-            path: N.Routes.INDEX,
-            render: () => (0, d.jsx)(h.default, {})
-          }), (0, d.jsx)(o.Route, {
-            path: Z([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.REGISTER, N.Routes.BILLING_PREFIX, N.Routes.BILLING_PROMOTION_REDEMPTION(":code"), N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE(":guildTemplateCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), N.Routes.DISABLE_EMAIL_NOTIFICATIONS, N.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, N.Routes.RESET, N.Routes.REPORT, N.Routes.REPORT_SECOND_LOOK], C.CONFERENCE_MODE_ENABLED),
+            path: R.Routes.INDEX,
+            render: () => (0, d.jsx)(p.default, {})
+          }), (0, d.jsx)(f.Route, {
+            path: Z([R.Routes.LOGIN, R.Routes.LOGIN_HANDOFF, R.Routes.REGISTER, R.Routes.BILLING_PREFIX, R.Routes.BILLING_PROMOTION_REDEMPTION(":code"), R.Routes.INVITE(":inviteCode"), R.Routes.INVITE_LOGIN(":inviteCode"), R.Routes.GIFT_CODE(":giftCode"), R.Routes.GIFT_CODE_LOGIN(":giftCode"), R.Routes.GUILD_TEMPLATE(":guildTemplateCode"), R.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), R.Routes.DISABLE_EMAIL_NOTIFICATIONS, R.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, R.Routes.RESET, R.Routes.REPORT, R.Routes.REPORT_SECOND_LOOK], D.CONFERENCE_MODE_ENABLED),
             component: V
-          }), t ? null : (0, d.jsx)(o.Route, {
-            path: N.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
+          }), a ? null : (0, d.jsx)(f.Route, {
+            path: R.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
             component: V
-          }), t ? null : (0, d.jsx)(o.Route, {
-            path: N.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
+          }), a ? null : (0, d.jsx)(f.Route, {
+            path: R.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
             component: V
-          }), (0, d.jsx)(o.Redirect, {
-            from: N.Routes.INVITE(""),
-            to: N.Routes.LOGIN
+          }), (0, d.jsx)(f.Redirect, {
+            from: R.Routes.INVITE(""),
+            to: R.Routes.LOGIN
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.INVITE_PROXY(":channelId"),
+            path: R.Routes.INVITE_PROXY(":channelId"),
             component: y
-          }), (0, d.jsx)(o.Redirect, {
-            from: N.Routes.GIFT_CODE(""),
-            to: N.Routes.LOGIN
+          }), (0, d.jsx)(f.Redirect, {
+            from: R.Routes.GIFT_CODE(""),
+            to: R.Routes.LOGIN
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.QUESTS(":questId"),
-            component: K,
-            impressionName: r.ImpressionNames.QUESTS_LANDING_PAGE,
+            path: R.Routes.QUESTS(":questId"),
+            component: z,
+            impressionName: o.ImpressionNames.QUESTS_LANDING_PAGE,
             impressionProperties: e => {
               let {
-                computedMatch: t
+                computedMatch: a
               } = e;
               return {
-                quest_id: t.params.questId
+                quest_id: a.params.questId
               }
             }
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.HANDOFF,
-            component: H
-          }), (0, d.jsx)(m.default, {
-            path: N.Routes.MOBILE_WEB_HANDOFF,
+            path: R.Routes.HANDOFF,
             component: F
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.CONNECTION_LINK(":type"),
+            path: R.Routes.MOBILE_WEB_HANDOFF,
+            component: H
+          }), (0, d.jsx)(m.default, {
+            path: R.Routes.CONNECTION_LINK(":type"),
             component: k
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.CONNECTION_LINK_AUTHORIZE(":type"),
+            path: R.Routes.CONNECTION_LINK_AUTHORIZE(":type"),
             component: U
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.ACTIVATE,
+            path: R.Routes.ACTIVATE,
             component: x
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
-            component: z
+            path: R.Routes.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
+            component: K
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.CONNECTIONS(":type"),
+            path: R.Routes.CONNECTIONS(":type"),
             component: M
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.DOWNLOAD_QR_CODE_REDIRECT,
+            path: R.Routes.DOWNLOAD_QR_CODE_REDIRECT,
             render: () => {
-              var e, t, a;
-              let d = null === (e = v.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                n = (0, c.parse)((null !== (a = window.location.search) && void 0 !== a ? a : "").substr(1)),
-                i = null === (t = n.referring_location) || void 0 === t ? void 0 : t.toString();
-              return ("iOS" === d || "Android" === d) && v.default.track(N.AnalyticEvents.DOWNLOAD_APP, {
+              var e, a, t;
+              let d = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                c = (0, n.parse)((null !== (t = window.location.search) && void 0 !== t ? t : "").substr(1)),
+                i = null === (a = c.referring_location) || void 0 === a ? void 0 : a.toString();
+              return ("iOS" === d || "Android" === d) && S.default.track(R.AnalyticEvents.DOWNLOAD_APP, {
                 platform: d,
                 ptb: !1,
                 released: !0,
-                has_e_mail: "true" === n.has_e_mail,
+                has_e_mail: "true" === c.has_e_mail,
                 referring_location: i,
                 qr_code: !0
-              }), window.location.href = (0, R.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
+              }), window.location.href = (0, A.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
             }
           }), (0, d.jsx)(m.default, {
-            path: N.Routes.OPEN_APP_FROM_EMAIL,
+            path: R.Routes.OPEN_APP_FROM_EMAIL,
             render: () => {
-              var e, t;
-              let a = null === (e = v.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                n = (0, w.getOpenAppFromEmailDestinations)(null !== (t = window.location.search) && void 0 !== t ? t : "");
-              if ("iOS" !== a && "Android" !== a) return (0, d.jsx)(o.Redirect, {
-                to: null != n.desktop ? "".concat(n.desktop.pathname).concat(n.desktop.search) : N.Routes.APP
+              var e, a;
+              let t = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                c = (0, w.getOpenAppFromEmailDestinations)(null !== (a = window.location.search) && void 0 !== a ? a : "");
+              if ("iOS" !== t && "Android" !== t) return (0, d.jsx)(f.Redirect, {
+                to: null != c.desktop ? "".concat(c.desktop.pathname).concat(c.desktop.search) : R.Routes.APP
               });
               {
-                let e = (0, R.getMobileDownloadLink)("app_open_from_email", a, n.mobile),
-                  t = (0, l.parseDynamicLink)(e);
-                null != t && v.default.track(N.AnalyticEvents.DEEP_LINK_CLICKED, {
-                  fingerprint: (0, s.maybeExtractId)(t.fingerprint),
-                  attempt_id: t.attemptId,
-                  source: t.utmSource,
-                  destination: null != n.mobile ? n.mobile.toString() : null
+                let e = (0, A.getMobileDownloadLink)("app_open_from_email", t, c.mobile),
+                  a = (0, l.parseDynamicLink)(e);
+                null != a && S.default.track(R.AnalyticEvents.DEEP_LINK_CLICKED, {
+                  fingerprint: (0, s.maybeExtractId)(a.fingerprint),
+                  attempt_id: a.attemptId,
+                  source: a.utmSource,
+                  destination: null != c.mobile ? c.mobile.toString() : null
                 }), window.location.href = e
               }
             }
-          }), (0, d.jsx)(o.Redirect, {
-            from: N.Routes.CONNECT_AUTHORIZE,
+          }), (0, d.jsx)(f.Redirect, {
+            from: R.Routes.CONNECT_AUTHORIZE,
             to: {
               ...location,
-              pathname: N.Routes.OAUTH2_AUTHORIZE
+              pathname: R.Routes.OAUTH2_AUTHORIZE
             }
-          }), (0, d.jsx)(o.Route, {
-            path: [N.Routes.OAUTH2_AUTHORIZED, N.Routes.OAUTH2_AUTHORIZE, N.Routes.OAUTH2_ERROR, N.Routes.OAUTH2_WHITELIST_ACCEPT],
+          }), (0, d.jsx)(f.Route, {
+            path: [R.Routes.OAUTH2_AUTHORIZED, R.Routes.OAUTH2_AUTHORIZE, R.Routes.OAUTH2_ERROR, R.Routes.OAUTH2_WHITELIST_ACCEPT],
             component: G
-          }), t ? null : (0, d.jsx)(o.Route, {
-            path: [N.Routes.ACCOUNT_STANDING],
+          }), a ? null : (0, d.jsx)(f.Route, {
+            path: [R.Routes.ACCOUNT_STANDING],
             component: W
-          }), t ? null : (0, d.jsx)(o.Route, {
-            path: N.Routes.APPLICATION_STORE,
-            component: p.default
-          }), t ? null : (0, d.jsx)(o.Route, {
-            path: N.Routes.APPLICATION_DIRECTORY,
+          }), a ? null : (0, d.jsx)(f.Route, {
+            path: R.Routes.APPLICATION_STORE,
+            component: h.default
+          }), a ? null : (0, d.jsx)(f.Route, {
+            path: R.Routes.APPLICATION_DIRECTORY,
             component: Y
-          }), (0, d.jsx)(o.Route, {
+          }), (0, d.jsx)(f.Route, {
             render: q
           })]
-        }) : (0, d.jsx)(o.Switch, {
+        }) : (0, d.jsx)(f.Switch, {
           children: (0, d.jsx)(m.default, {
-            component: P
+            component: L
           })
         }), (0, d.jsxs)(E.default, {
-          skipsSettingDefaultPageTitle: n,
-          children: [e, S.isPlatformEmbedded && (a === g.MigrationStatus.NOT_STARTED || a === g.MigrationStatus.IN_PROGRESS) && !0 !== b.Storage.get(f.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, d.jsx)(I.default, {}) : null]
+          skipsSettingDefaultPageTitle: c,
+          children: [e, v.isPlatformEmbedded && (t === I.MigrationStatus.NOT_STARTED || t === I.MigrationStatus.IN_PROGRESS) && !0 !== u.Storage.get(r.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, d.jsx)(g.default, {}) : null]
         })
       }
     }
-    t.default = u.default.connectStores([T.default, g.default], () => ({
+    a.default = b.default.connectStores([T.default, I.default], () => ({
       isAuthenticated: T.default.isAuthenticated(),
-      migrationStatus: g.default.getMigrationStatus()
+      migrationStatus: I.default.getMigrationStatus()
     }), {
       forwardRef: !0
     })(function(e) {
-      let t = function() {
+      let a = function() {
         let {
           pathname: e
-        } = (0, o.useLocation)();
+        } = (0, f.useLocation)();
         return null != (0, i.matchPath)(e, {
-          path: N.Routes.APPLICATION_DIRECTORY
+          path: R.Routes.APPLICATION_DIRECTORY
         })
       }();
       return (0, d.jsx)(Q, {
         ...e,
-        skipsSettingDefaultPageTitle: t
+        skipsSettingDefaultPageTitle: a
       })
     })
