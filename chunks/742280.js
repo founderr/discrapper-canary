@@ -22,6 +22,7 @@ let i = {
   FIVE_EYES_COUNTRIES: new Set(["AU", "CA", "GB", "NZ", "US"]),
   WITHOUT_POSTAL_CODES: new Set(["AE", "AG", "AN", "AO", "AW", "BF", "BI", "BJ", "BM", "BO", "BQ", "BS", "BW", "BZ", "CD", "CF", "CG", "CI", "CK", "CM", "CW", "DJ", "DM", "ER", "FJ", "GA", "GD", "GH", "GM", "GQ", "GY", "HK", "HM", "IE", "JM", "KE", "KI", "KM", "KN", "KP", "LY", "ML", "MO", "MR", "MW", "NA", "NR", "NU", "QA", "RW", "SB", "SC", "SL", "SR", "ST", "SX", "SY", "TD", "TF", "TG", "TK", "TL", "TO", "TV", "UG", "VU", "YE", "ZA", "ZW"]),
   TAX_EXCLUSIVE: new Set(["CA", "US"]),
+  NITRO_TAX_EXCLUSIVE_COUNTRIES: new Set(["CA", "KR", "US"]),
   TAX_ADDRESS_REQUIRE_POSTAL_CODE: new Set(["CA", "US"]),
   NITRO_TAX_EXCLUSIVE_EXPERIMENT_STATES: new Set(["TN", "WI"]),
   NITRO_TAX_EXCLUSIVE_PHASE_1_STATES: new Set(["IL", "NC", "NY", "OH", "PA", "TX", "VA", "WA"]),
