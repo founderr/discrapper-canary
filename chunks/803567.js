@@ -161,6 +161,7 @@ function M() {
         page: g.AnalyticsPages.USER_SETTINGS,
         section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
+      note: N.default.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
       disabled: m,
       children: N.default.Messages.AUTOMATIC_GAIN_CONTROL
     })]
