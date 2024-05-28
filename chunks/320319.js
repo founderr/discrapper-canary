@@ -210,7 +210,7 @@ let b = r.forwardRef((e, t) => {
     backgroundImage: P,
     pillText: O,
     perkImage: M
-  } = e, h = A === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || A === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || A === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, x = 0 !== u.length || 0 !== o.length && S === p.CardVariants.REWARD, v = (0, f.useShouldShowConfettiAndGlow)(), [b, D] = r.useState(v);
+  } = e, h = A === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || A === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || A === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, x = 0 !== u.length || 0 !== d.length || 0 !== o.length && S === p.CardVariants.REWARD, v = (0, f.useShouldShowConfettiAndGlow)(), [b, D] = r.useState(v);
   r.useEffect(() => {
     v && D(!0)
   }, [v]);
