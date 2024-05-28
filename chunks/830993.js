@@ -20,8 +20,8 @@ var l = n("735250"),
   C = n("823379"),
   g = n("355363"),
   E = n("737592"),
-  _ = n("561788"),
-  S = n("135724"),
+  S = n("561788"),
+  _ = n("135724"),
   I = n("543432"),
   N = n("981631"),
   T = n("689938"),
@@ -34,8 +34,8 @@ function L(e) {
     guild: h,
     onAction: p,
     voiceStates: g,
-    isChannelSelected: _,
-    shouldShowSettingNudge: S
+    isChannelSelected: S,
+    shouldShowSettingNudge: _
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -52,26 +52,10 @@ function L(e) {
     (0, r.useSubscribeGuildMembers)(n)
   }(f, g);
   let I = (0, o.default)(f),
-    L = new Map;
-  I.forEach(e => {
-    L.set(e.application.id, e)
-  });
-  let x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
+    L = Array.from((0, o.useEmbeddedAppsWithPresence)(I).values()),
+    x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
     M = (0, s.useStateFromStores)([m.default], () => {
-      let e = new Map;
-      return x.forEach(t => {
-        let n = m.default.findActivity(t.user.id, R(t));
-        if (null != n && (0, d.default)(n)) {
-          let t = null != n.application_id ? L.get(n.application_id) : null;
-          null != t && null != n.application_id && e.set(n.application_id, {
-            ...t,
-            presenceActivity: n
-          })
-        }
-      }), e
-    }, [x, L], s.statesWillNeverBeEqual),
-    O = (0, s.useStateFromStores)([m.default], () => {
       let e = {};
       return x.forEach(t => {
         let n = m.default.findActivity(t.user.id, R(t));
@@ -85,33 +69,35 @@ function L(e) {
           o.members.push(t), !(0, u.default)(o.activity, N.ActivityFlags.JOIN) && (o.activity = n), e[r] = o
         }
       }), Object.values(e)
-    }, [x], s.statesWillNeverBeEqual),
-    y = Array.from(M.values()).map(e => ({
-      members: x,
-      activity: e.presenceActivity
-    })),
-    D = [...y, ...O];
-  return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
+    }, [x], s.statesWillNeverBeEqual);
+  return M.length + L.length === 0 ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
-      isChannelSelected: _,
+      isChannelSelected: S,
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
-    }), D.map((e, t) => {
+    }), L.map((e, t) => {
+      var n;
+      return (0, l.jsx)(E.default, {
+        embeddedApp: e,
+        presenceActivity: null !== (n = e.presenceActivity) && void 0 !== n ? n : void 0,
+        channel: f,
+        onAction: p
+      }, t)
+    }), M.map((e, t) => {
       let {
         members: n,
         activity: a
-      } = e, s = a.application_id, i = null != s ? M.get(s) : void 0;
+      } = e;
       return (0, l.jsx)(E.default, {
         presenceActivity: a,
-        embeddedApp: i,
         channel: f,
         members: n,
         onAction: p
       }, t)
-    }), S && (0, l.jsxs)(l.Fragment, {
+    }), _ && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -151,9 +137,9 @@ function v(e) {
   }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id));
   return null == (0, c.getChannelIconComponent)(t, u) ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(_.default, {
+    children: [(0, l.jsx)(S.default, {
       channel: t
-    }), o ? (0, l.jsx)(S.default, {
+    }), o ? (0, l.jsx)(_.default, {
       userCount: a,
       video: r,
       channel: t
