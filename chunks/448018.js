@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   getQuestBarVariantConfig: function() {
     return d
   }
 });
-var a = n("497505"),
-  s = n("988303"),
-  l = n("909389"),
-  i = n("941348"),
-  r = n("743294");
-let o = {
+var a = s("497505"),
+  n = s("988303"),
+  l = s("909389"),
+  i = s("941348"),
+  r = s("743294");
+let u = {
     component: l.default,
     getCollapsedHeight: () => 40,
     getPreEnrollmentExpandedHeight: () => 240,
@@ -19,9 +19,10 @@ let o = {
       var t;
       return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) == null
     },
-    shouldExpandOnQuestComplete: e => !0
+    shouldExpandOnQuestComplete: e => !0,
+    getVerticalPadding: () => 8
   },
-  u = {
+  o = {
     component: i.default,
     getCollapsedHeight: e => {
       var t;
@@ -31,13 +32,14 @@ let o = {
     getPostEnrollmentBackgroundImage: () => "linear-gradient(90deg, ".concat(r.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(r.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")"),
     getPreEnrollmentBackgroundColor: e => "var(--background-secondary-alt)",
     canCollapseOnBlur: e => !0,
-    shouldExpandOnQuestComplete: e => !1
+    shouldExpandOnQuestComplete: e => !1,
+    getVerticalPadding: () => 12
   },
-  d = (e, t, n) => {
+  d = (e, t, s) => {
     var l;
     let i = (null === (l = e.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null,
-      r = !i && t === s.QuestBarExperimentVariants.V2 || i && n === s.QuestBarExperimentVariants.V2,
-      d = r ? u : o;
+      r = !i && t === n.QuestBarExperimentVariants.V2 || i && s === n.QuestBarExperimentVariants.V2,
+      d = r ? o : u;
     return {
       component: d.component,
       collapsedHeight: d.getCollapsedHeight(e),
@@ -46,6 +48,7 @@ let o = {
       preEnrollmentBackgroundColor: d.getPreEnrollmentBackgroundColor(e),
       canCollapseOnBlur: d.canCollapseOnBlur(e),
       shouldExpandOnQuestComplete: d.shouldExpandOnQuestComplete(e),
+      paddingVertical: d.getVerticalPadding(),
       trackingCtx: {
         content: r ? a.QuestContent.QUEST_BAR_V2 : a.QuestContent.QUEST_BAR
       }

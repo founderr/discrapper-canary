@@ -1,96 +1,97 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   QuestBar: function() {
-    return v
+    return R
   }
-}), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("920906"),
-  o = n("442837"),
-  u = n("607070"),
-  d = n("819640"),
-  c = n("617136"),
-  f = n("113434"),
-  E = n("569984"),
-  h = n("497505"),
-  _ = n("918701"),
-  C = n("988303"),
-  m = n("977156"),
-  S = n("5881"),
-  p = n("874137"),
-  I = n("78826"),
-  g = n("448018"),
-  T = n("46140"),
-  A = n("981631"),
-  N = n("837955");
+}), s("47120");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("120356"),
+  i = s.n(l),
+  r = s("920906"),
+  u = s("442837"),
+  o = s("110924"),
+  d = s("607070"),
+  c = s("819640"),
+  E = s("617136"),
+  _ = s("113434"),
+  f = s("569984"),
+  h = s("497505"),
+  m = s("918701"),
+  T = s("988303"),
+  C = s("977156"),
+  g = s("5881"),
+  A = s("874137"),
+  N = s("78826"),
+  p = s("448018"),
+  S = s("46140"),
+  I = s("981631"),
+  v = s("837955");
 
-function v(e) {
-  var t, n, l;
+function R(e) {
+  var t, s, l;
   let {
-    quest: E
-  } = e, v = (0, S.getQuestLogger)({
-    quest: E,
-    location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), R = (0, m.useIsEligibleForQuests)({
-    location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), O = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), L = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, P = s.useRef(M), x = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, y = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, D = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), b = (0, f.useIsQuestExpired)(E), {
-    hasError: U,
-    isLoading: j
-  } = (0, I.useQuestsAssetsLoadState)(), G = R && !D && !y && !b && !j, w = s.useRef(G), {
-    primaryVariant: k,
-    progressVariant: B
-  } = C.QuestBarExperiment.useExperiment({
-    location: T.QuestsExperimentLocations.QUESTS_BAR
+    quest: f
+  } = e, R = (0, g.getQuestLogger)({
+    quest: f,
+    location: S.QuestsExperimentLocations.QUESTS_BAR
+  }), x = (0, C.useIsEligibleForQuests)({
+    location: S.QuestsExperimentLocations.QUESTS_BAR
+  }), M = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = (0, u.useStateFromStores)([c.default], () => c.default.hasLayers()), L = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (0, o.default)(L), D = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.completedAt) != null, j = (0, o.default)(D), b = (null === (l = f.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, U = null != f.userStatus && (0, m.isDismissed)(f.userStatus, h.QuestContent.QUEST_BAR), P = (0, _.useIsQuestExpired)(f), {
+    hasError: G,
+    isLoading: V
+  } = (0, N.useQuestsAssetsLoadState)(), F = x && !U && !b && !P && !V, k = n.useRef(F), {
+    primaryVariant: B,
+    progressVariant: w
+  } = T.QuestBarExperiment.useExperiment({
+    location: S.QuestsExperimentLocations.QUESTS_BAR
   }, {
-    autoTrackExposure: G && !U
-  }), F = s.useMemo(() => (0, g.getQuestBarVariantConfig)(E, k, B), [E, k, B]), H = s.useRef(-1), V = s.useRef(!1), [Y, W] = s.useState(!1), [K, z] = s.useState(!1), [q, Q] = s.useState(!1), [Z, X] = s.useState(!0), [J, $] = s.useState(F.preEnrollmentExpandedHeight), ee = s.useRef(null), et = s.useCallback(() => {
+    autoTrackExposure: F && !G
+  }), H = n.useMemo(() => (0, p.getQuestBarVariantConfig)(f, B, w), [f, B, w]), Q = n.useRef(-1), Y = n.useRef(!1), [q, z] = n.useState(!1), [W, Z] = n.useState(!1), [K, X] = n.useState(!1), [J, $] = n.useState(!0), [ee, et] = n.useState(H.preEnrollmentExpandedHeight), es = n.useRef(null), ea = n.useCallback(() => {
     var e, t;
-    $((null !== (t = null === (e = ee.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), z(!0)
-  }, []), en = s.useCallback(() => {
-    W(!0)
-  }, []), ea = s.useCallback(() => {
-    W(!1), !V.current && !x && z(!1)
-  }, [x]), es = s.useCallback(() => {
-    W(!1), !x && z(!1), V.current = !1
-  }, [x]), el = s.useCallback(function() {
+    et((null !== (t = null === (e = es.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 2 * H.paddingVertical)
+  }, [H.paddingVertical]), en = n.useCallback(() => {
+    ea(), Z(!0)
+  }, [ea]), el = n.useCallback(() => {
+    z(!0)
+  }, []), ei = n.useCallback(() => {
+    z(!1), !Y.current && !D && Z(!1)
+  }, [D]), er = n.useCallback(() => {
+    z(!1), !D && Z(!1), Y.current = !1
+  }, [D]), eu = n.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
         withDelay: t = !1
       } = e;
-    t ? H.current = window.setTimeout(et, 75) : et()
-  }, [et]), ei = s.useCallback(() => {
-    if (window.clearTimeout(H.current), !!F.canCollapseOnBlur && !Y) !V.current && z(!1)
-  }, [Y, F]), er = s.useCallback(() => {
-    (0, c.trackQuestEvent)({
-      questId: E.id,
-      event: A.AnalyticEvents.QUEST_HOVER
-    }), V.current = !0, el({
+    t ? Q.current = window.setTimeout(en, 75) : en()
+  }, [en]), eo = n.useCallback(() => {
+    if (window.clearTimeout(Q.current), !!H.canCollapseOnBlur && !q) !Y.current && Z(!1)
+  }, [q, H]), ed = n.useCallback(() => {
+    (0, E.trackQuestEvent)({
+      questId: f.id,
+      event: I.AnalyticEvents.QUEST_HOVER
+    }), Y.current = !0, eu({
       withDelay: !0
     })
-  }, [el, E]), eo = s.useCallback(() => {
-    V.current = !1, ei()
-  }, [ei]);
-  s.useLayoutEffect(() => {
-    x && F.shouldExpandOnQuestComplete && et()
-  }, [et, x, F]), s.useLayoutEffect(() => {
-    M && !P.current && V.current && et()
-  }, [M, et]), s.useLayoutEffect(() => {
-    !x && M && !P.current && !V.current && z(!1)
-  }, [M, x]), s.useLayoutEffect(() => {
-    G !== w.current && X(!1), w.current = G
-  }, [G]), s.useEffect(() => {
-    P.current = M
-  }, [M]);
+  }, [eu, f]), ec = n.useCallback(() => {
+    Y.current = !1, eo()
+  }, [eo]);
+  n.useLayoutEffect(() => {
+    D && H.shouldExpandOnQuestComplete && en()
+  }, [en, D, H.shouldExpandOnQuestComplete]), n.useLayoutEffect(() => {
+    L && !y && Y.current && en()
+  }, [en, L, y]), n.useLayoutEffect(() => {
+    !D && L && !y && !Y.current && Z(!1)
+  }, [L, D, y]), n.useLayoutEffect(() => {
+    F !== k.current && $(!1), k.current = F
+  }, [F]);
   let {
-    expansionSpring: eu
+    expansionSpring: eE
   } = (0, r.useSpring)({
     to: {
-      expansionSpring: K ? 1 : 0
+      expansionSpring: W ? 1 : 0
     },
-    config: M ? {
+    config: L ? {
       tension: 900,
       friction: 45,
       clamp: !0
@@ -99,102 +100,104 @@ function v(e) {
       friction: 30,
       clamp: !0
     },
-    immediate: O,
-    onRest: () => {
-      Q(!0)
-    },
-    onStart: () => {
-      Q(!1)
-    }
-  }), {
-    visibilitySpring: ed
-  } = (0, r.useSpring)({
-    from: {
-      visibilitySpring: 0
-    },
-    to: {
-      visibilitySpring: G ? 1 : 0
-    },
-    config: {
-      tension: 250,
-      friction: 10,
-      clamp: !0
-    },
-    immediate: O,
+    immediate: M,
     onRest: () => {
       X(!0)
     },
     onStart: () => {
       X(!1)
     }
+  }), {
+    visibilitySpring: e_
+  } = (0, r.useSpring)({
+    from: {
+      visibilitySpring: 0
+    },
+    to: {
+      visibilitySpring: F ? 1 : 0
+    },
+    config: {
+      tension: 250,
+      friction: 10,
+      clamp: !0
+    },
+    immediate: M,
+    onRest: () => {
+      $(!0)
+    },
+    onStart: () => {
+      $(!1)
+    }
   });
-  return R && (G || !Z || j) && !U ? (0, a.jsx)(p.QuestContentImpressionTracker, {
-    questOrQuests: E,
-    questContent: F.trackingCtx.content,
-    overrideVisibility: !L && G,
+  return (n.useLayoutEffect(() => {
+    D && !j && H.canCollapseOnBlur && ea()
+  }, [D, en, H.canCollapseOnBlur, ea, j]), x && (F || !J || V) && !G) ? (0, a.jsx)(A.QuestContentImpressionTracker, {
+    questOrQuests: f,
+    questContent: H.trackingCtx.content,
+    overrideVisibility: !O && F,
     children: () => {
-      let e = F.component;
+      let e = H.component;
       return (0, a.jsx)(r.animated.div, {
-        "aria-hidden": !G,
-        className: i()(N.wrapper, {
-          [N.wrapperInvisible]: !G,
-          [N.wrapperVisible]: G && Z
+        "aria-hidden": !F,
+        className: i()(v.wrapper, {
+          [v.wrapperInvisible]: !F,
+          [v.wrapperVisible]: F && J
         }),
         style: {
-          color: E.config.colors.secondary,
-          height: ed.to({
+          color: f.config.colors.secondary,
+          height: e_.to({
             range: [0, 1],
-            output: [0, x && K ? J : F.collapsedHeight]
+            output: [0, D && W ? ee : H.collapsedHeight]
           })
         },
         children: (0, a.jsx)(r.animated.div, {
-          onMouseLeave: eo,
-          onMouseEnter: er,
-          onFocus: () => el(),
-          onBlur: ei,
-          className: i()(N.contentWrapper, {
-            [N.contentWrapperExpanded]: K,
-            [N.contentWrapperAccepted]: M
+          onMouseLeave: ec,
+          onMouseEnter: ed,
+          onFocus: () => eu(),
+          onBlur: eo,
+          className: i()(v.contentWrapper, {
+            [v.contentWrapperExpanded]: W,
+            [v.contentWrapperAccepted]: L
           }),
           style: {
-            backgroundColor: F.preEnrollmentBackgroundColor,
-            backgroundImage: M ? F.postEnrollmentBackgroundImage : void 0,
-            height: eu.to({
+            backgroundColor: H.preEnrollmentBackgroundColor,
+            backgroundImage: L ? H.postEnrollmentBackgroundImage : void 0,
+            height: eE.to({
               range: [0, 1],
-              output: [F.collapsedHeight, M ? J : F.preEnrollmentExpandedHeight]
+              output: [H.collapsedHeight, L ? ee : H.preEnrollmentExpandedHeight]
             }),
-            transform: ed.to({
+            transform: e_.to({
               range: [0, 1],
               output: [100, 0]
             }).to(e => "translateY(".concat(e, "%)"))
           },
           children: (0, a.jsx)(e, {
-            expandedContentRef: ee,
-            expansionSpring: eu,
-            isExpanded: K,
-            isExpansionAnimationComplete: q,
-            onCtxMenuClosed: ea,
-            onCtxMenuOpened: en,
-            onCtxMenuSelection: es,
-            quest: E,
-            useReducedMotion: O
+            expandedContentRef: es,
+            expansionSpring: eE,
+            isExpanded: W,
+            isExpansionAnimationComplete: K,
+            onCtxMenuClosed: ei,
+            onCtxMenuOpened: el,
+            onCtxMenuSelection: er,
+            quest: f,
+            useReducedMotion: M
           })
         })
       })
     }
-  }) : (U ? v.log("Not rendered due to asset error") : !R && v.log("Not rendered due to ineligibility"), null)
+  }) : (G ? R.log("Not rendered due to asset error") : !x && R.log("Not rendered due to ineligibility"), null)
 }
 t.default = function(e) {
   let {
     overrideQuest: t
-  } = e, n = (0, o.useStateFromStores)([E.default], () => {
+  } = e, s = (0, u.useStateFromStores)([f.default], () => {
     var e;
-    return null !== (e = null != t ? t : E.default.questDeliveryOverride) && void 0 !== e ? e : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR)
+    return null !== (e = null != t ? t : f.default.questDeliveryOverride) && void 0 !== e ? e : (0, m.getQuestForTargetedContent)(f.default.quests, h.QuestContent.QUEST_BAR)
   });
-  return null == n ? null : (0, a.jsx)(I.QuestsAssetContextProvider, {
-    sentrySource: T.QuestsExperimentLocations.QUESTS_BAR,
-    children: (0, a.jsx)(v, {
-      quest: n
+  return null == s ? null : (0, a.jsx)(N.QuestsAssetContextProvider, {
+    sentrySource: S.QuestsExperimentLocations.QUESTS_BAR,
+    children: (0, a.jsx)(R, {
+      quest: s
     })
-  }, n.id)
+  }, s.id)
 }
