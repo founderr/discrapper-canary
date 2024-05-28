@@ -26,85 +26,78 @@ var a, s, l = n("735250"),
 
 function N(e) {
   let {
-    width: t
+    width: t,
+    isAnimating: n
   } = e, {
-    loaded: n,
-    clans: a,
-    searchResult: s,
-    searchCriteria: N
-  } = (0, S.useClanDiscoveryList)(), v = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), R = (0, m.useClanDiscoveryUIStore)(e => e.mode, o.default), O = (0, c.default)(s), L = (0, c.default)(R), P = i.useRef(null), y = i.useRef(0), [M, D] = i.useState({}), [x, b] = (0, r.useSpring)(() => ({
-    opacity: 0,
+    loaded: a,
+    clans: s,
+    searchResult: N,
+    searchCriteria: v
+  } = (0, S.useClanDiscoveryList)(), R = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), O = (0, c.default)(N), [L, P] = i.useState(0), y = i.useMemo(() => ({
+    height: L
+  }), [L]), M = (0, r.useSpring)({
+    opacity: L > 0 ? 1 : 0,
     config: r.config.stiff
-  })), U = Math.min(null != t ? t : 1024, 2e3), j = i.useMemo(() => {
-    let e = U / 256,
-      t = U / 376,
-      n = U / e,
-      a = U / t;
+  }), D = Math.min(null != t ? t : 1024, 2e3), x = i.useMemo(() => {
+    let e = D / 256,
+      t = D / 376,
+      n = D / e,
+      a = D / t;
     return a > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
-  }, [U]), G = i.useCallback(() => {
-    if (null == k.current) {
-      0 !== y.current && (D({
-        height: 0
-      }), b({
-        opacity: 0
-      }), y.current = 0);
+  }, [D]), b = i.useCallback(e => {
+    if (null == e) {
+      P(0);
       return
     }
-    D({
-      height: k.current.getBoundingClientRect().y + 16 + 400 + 40 + 4
-    }), 0 === y.current && (b({
-      opacity: 1
-    }), y.current = 1)
-  }, []), w = (0, E.useThrottledFunction)(G, 10, [G], {
+    P(e.getBoundingClientRect().y + 16 + 400 + 40 + 4)
+  }, []), U = (0, f.useResizeObserver)(b), j = i.useCallback(() => {
+    b(U.current)
+  }, [b, U]), G = (0, E.useThrottledFunction)(j, 10, [j], {
     leading: !0,
     trailing: !0
-  }), k = (0, f.useResizeObserver)(G);
+  });
   i.useEffect(() => {
-    if (null != s && !!(0, I.isLoadedSearchResult)(s))(!(null != O && (0, I.isLoadedSearchResult)(O)) || !(O.loadedAt >= s.loadedAt)) && (G(), (0, C.trackClanDiscoveryViewed)(s.items.map(e => e.id), "top_picks", N))
-  }, [N, s, O, G]), i.useEffect(() => {
-    if (L !== R && L !== m.ClanDiscoveryMode.DISCOVERY)(L === m.ClanDiscoveryMode.ADMIN_UPSELL || null == L) && R === m.ClanDiscoveryMode.DISCOVERY && (G(), P.current = setTimeout(() => {
-      G()
-    }, 500))
-  }, [L, R]), i.useEffect(() => () => {
-    null != P.current && clearTimeout(P.current)
-  }, []);
-  let B = i.useMemo(() => null == a ? [] : [{
+    if (null != N && !!(0, I.isLoadedSearchResult)(N))(!(null != O && (0, I.isLoadedSearchResult)(O)) || !(O.loadedAt >= N.loadedAt)) && (0, C.trackClanDiscoveryViewed)(N.items.map(e => e.id), "top_picks", v)
+  }, [v, N, O, j, n]), i.useEffect(() => {
+    !n && (0, I.isLoadedSearchResult)(N) && j()
+  }, [j, n, N]);
+  let w = i.useMemo(() => null == s ? [] : [{
       section: "top_picks",
-      items: a.slice(0, j),
+      items: s.slice(0, x),
       sectionHeight: 24,
       header: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
       subtitle: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
     }, {
       section: "other_guilds",
-      items: a.slice(j),
+      items: s.slice(x),
       sectionHeight: 24,
       header: T.default.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
-    }], [a, j]),
-    F = i.useMemo(() => new Set(N.games), [N.games]),
-    H = i.useCallback((e, t, n, a) => {
+    }], [s, x]),
+    k = i.useMemo(() => new Set(v.games), [v.games]),
+    B = i.useCallback((e, t, n, a) => {
       var s;
       let {
         items: i
-      } = B[e], r = i[t];
+      } = w[e], r = i[t];
       return (0, l.jsx)(_.default, {
         clan: r,
-        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, h.getClanDiscoveryAffinity)(r, N),
-        traitsToHighlight: v,
+        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, h.getClanDiscoveryAffinity)(r, v),
+        traitsToHighlight: R,
         className: A.card,
         style: n,
         source: g.AnalyticsSections.DISCOVER_SEARCH,
-        prioritizedGameIds: F,
+        prioritizedGameIds: k,
         onlyAnimateIconOnHover: !0
       }, a)
-    }, [N, B, v, F]),
-    V = i.useCallback(e => {
+    }, [v, w, R, k]),
+    F = i.useCallback(e => {
       let {
         header: t,
         subtitle: n,
         section: a
-      } = B[e];
+      } = w[e];
       return null == t ? null : "top_picks" === a ? (0, l.jsx)(p.default, {
-        ref: k,
+        ref: U,
         icon: (0, l.jsx)(u.TrophyIcon, {
           color: "currentColor"
         }),
@@ -114,37 +107,37 @@ function N(e) {
         title: t,
         subtitle: n
       })
-    }, [B, k]);
-  return 0 !== a.length && n ? (0, l.jsx)(l.Fragment, {
+    }, [w, U]);
+  return 0 !== s.length && a ? (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)("div", {
       className: A.masonryListContainer,
       children: [(0, l.jsx)(r.animated.div, {
         className: A.masonryListGradient,
         style: {
-          ...x,
-          ...M
+          ...M,
+          ...y
         }
       }), (0, l.jsx)(d.MasonryList, {
         className: A.masonryList,
-        sections: B.map(e => {
+        sections: w.map(e => {
           let {
             items: t
           } = e;
           return t.length
         }),
-        columns: j,
+        columns: x,
         sectionGutter: 80,
         itemGutter: 16,
         paddingHorizontal: 32,
         paddingVertical: 40,
         removeEdgeItemGutters: !0,
-        renderItem: H,
-        renderSection: V,
-        getSectionHeight: e => B[e].sectionHeight,
-        getItemKey: (e, t) => B[e].items[t].id,
+        renderItem: B,
+        renderSection: F,
+        getSectionHeight: e => w[e].sectionHeight,
+        getItemKey: (e, t) => w[e].items[t].id,
         getItemHeight: () => 400,
         chunkSize: 24,
-        onScroll: w
+        onScroll: G
       })]
     })
   }) : null

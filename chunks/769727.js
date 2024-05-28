@@ -1,5 +1,5 @@
 "use strict";
-n.r(t);
+n.r(t), n("47120");
 var a, s, l = n("735250"),
   i = n("470079"),
   r = n("920906"),
@@ -17,7 +17,7 @@ var a, s, l = n("735250"),
   p = n("543550"),
   I = n("895068"),
   g = n("93118");
-(a = s || (s = {})).TOP_PICKS = "top_picks", a.OTHER_GUILDS = "other_guilds";
+(s = a || (a = {})).TOP_PICKS = "top_picks", s.OTHER_GUILDS = "other_guilds";
 let T = {
     mass: 1,
     tension: 600,
@@ -26,7 +26,7 @@ let T = {
   A = i.memo(function(e) {
     let {
       width: t
-    } = e, n = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion), a = (0, m.useClanDiscoveryUIStore)(e => e.mode, o.default), s = (0, r.useSpring)({
+    } = e, n = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion), a = (0, m.useClanDiscoveryUIStore)(e => e.mode, o.default), [s, u] = i.useState(!0), c = (0, r.useSpring)({
       from: {
         opacity: 0
       },
@@ -35,30 +35,31 @@ let T = {
       },
       config: T,
       delay: 500,
-      immediate: n
-    }), u = (0, m.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), c = (0, m.useClanDiscoveryUIStore)(e => e.started, o.default), {
-      guilds: h
+      immediate: n,
+      onRest: () => u(!1)
+    }), h = (0, m.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), A = (0, m.useClanDiscoveryUIStore)(e => e.started, o.default), {
+      guilds: N
     } = (0, E.useClanPrepilotExperimentForAllGuilds)({
       location: "ClanDiscoveryAdminContainer",
       includeConverted: !0
-    }), A = i.useMemo(() => h.filter(e => !(0, C.isGuildAClan)(e)), [h]), {
-      enableApplication: N
+    }), v = i.useMemo(() => N.filter(e => !(0, C.isGuildAClan)(e)), [N]), {
+      enableApplication: R
     } = (0, E.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer");
     switch (i.useEffect(() => {
-        let e = h.length > 0;
-        if (e && !N && u === m.ClanDiscoveryUserScreens.USER_UPSELL) {
+        let e = N.length > 0;
+        if (e && !R && h === m.ClanDiscoveryUserScreens.USER_UPSELL) {
           (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.ADMIN_UPSELL);
           return
         }
-        if (!e && N && !c) {
+        if (!e && R && !A) {
           (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GET_STARTED);
           return
         }
-        if (N && a === m.ClanDiscoveryMode.ADMIN_UPSELL && 0 === A.length) {
+        if (R && a === m.ClanDiscoveryMode.ADMIN_UPSELL && 0 === v.length) {
           (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GET_STARTED), m.useClanDiscoveryUIStore.getState().setUserUpsellScreen(m.ClanDiscoveryUserScreens.USER_UPSELL);
           return
         }
-      }, [A.length, h.length, c, N, a, u]), a) {
+      }, [v.length, N.length, A, R, a, h]), a) {
       case m.ClanDiscoveryMode.ADMIN_UPSELL:
         return (0, l.jsx)(p.ClanDiscoveryAdminContainer, {});
       case m.ClanDiscoveryMode.GET_STARTED:
@@ -72,18 +73,19 @@ let T = {
           children: [(0, l.jsx)(r.animated.div, {
             className: g.toolbar,
             style: {
-              opacity: s.opacity,
-              transform: s.opacity.to([0, 1], [-40, 0]).to(e => "translateY(".concat(e, "px)"))
+              opacity: c.opacity,
+              transform: c.opacity.to([0, 1], [-40, 0]).to(e => "translateY(".concat(e, "px)"))
             },
             children: (0, l.jsx)(S.default, {})
           }), (0, l.jsx)(r.animated.div, {
             className: g.content,
             style: {
-              opacity: s.opacity,
-              transform: s.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
+              opacity: c.opacity,
+              transform: c.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
             },
             children: (0, l.jsx)(I.default, {
-              width: t
+              width: t,
+              isAnimating: s
             })
           }), (0, l.jsx)("div", {
             className: g.selectors,
