@@ -37,14 +37,17 @@ function _() {
       return a.useEffect(() => {
         !e && (0, d.loadStaticClanDiscovery)()
       }, [e]), e
-    }();
-  a.useEffect(() => {
+    }(),
+    S = (0, r.useStateFromStores)([c.default], () => c.default.isLoading());
+  return a.useEffect(() => {
     !(n.length > 0) && (C === h.VALORANT_ID ? (e(f.ClanDiscoveryGame.VALORANT), t([C])) : C === h.GENSHIN_ID && (e(f.ClanDiscoveryGame.GENSHIN), t([C])))
   }, [e, t, C, n]), a.useEffect(() => {
     m && (0, d.searchClanDiscovery)(s)
   }, [s, m]), a.useEffect(() => {
     o.default.getDetectableGames()
-  }, [])
+  }, []), {
+    loading: S
+  }
 }
 
 function C() {

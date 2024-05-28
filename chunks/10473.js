@@ -16,14 +16,15 @@ function u(e, t, n) {
 }
 let d = [],
   c = !1,
-  f = {
+  f = !1,
+  E = {
     status: "unloaded"
   },
-  E = {};
-class h extends(a = i.default.Store) {
+  h = {};
+class _ extends(a = i.default.Store) {
   getSearchResult(e) {
-    let t = E[l().v3(JSON.stringify(e))];
-    return null == t || t.loadedAt < Date.now() - o.default.Millis.HOUR ? f : t
+    let t = h[l().v3(JSON.stringify(e))];
+    return null == t || t.loadedAt < Date.now() - o.default.Millis.HOUR ? E : t
   }
   hasLoadedStaticClanDiscovery() {
     return c
@@ -31,12 +32,21 @@ class h extends(a = i.default.Store) {
   getStaticClans() {
     return d
   }
+  isLoading() {
+    return f
+  }
 }
-u(h, "displayName", "ClanDiscoveryStore"), u(h, "persistKey", "ClanDiscoveryStore"), t.default = new h(r.default, {
+u(_, "displayName", "ClanDiscoveryStore"), u(_, "persistKey", "ClanDiscoveryStore"), t.default = new _(r.default, {
+  FETCH_STATIC_CLAN_LIST_START: function() {
+    f = !0
+  },
   FETCH_STATIC_CLAN_LIST_SUCCESS: function(e) {
-    d = e.clans, c = !0
+    d = e.clans, c = !0, f = !1
+  },
+  FETCH_STATIC_CLAN_LIST_FAILURE: function() {
+    f = !1
   },
   FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function(e) {
-    E[e.criteriaHash] = e.searchResult
+    h[e.criteriaHash] = e.searchResult
   }
 })

@@ -17,7 +17,9 @@ var a = n("108131"),
 let d = new Worker(new URL(n.p + n.u("59546"), n.b));
 
 function c() {
-  return l.HTTP.get({
+  return i.default.dispatch({
+    type: "FETCH_STATIC_CLAN_LIST_START"
+  }), l.HTTP.get({
     url: u.Endpoints.DISCOVERY_ALL_GAMES
   }).then(e => {
     let t = e.body.clans.map(o.buildClanFromServer);
@@ -27,6 +29,11 @@ function c() {
         let t = new Set;
         return e.filter(e => !t.has(e.id) && (t.add(e.id), !0))
       }(t)
+    })
+  }).catch(e => {
+    i.default.dispatch({
+      type: "FETCH_STATIC_CLAN_LIST_FAILURE",
+      error: e
     })
   })
 }

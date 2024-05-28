@@ -4,89 +4,90 @@ var a, s, l = n("735250"),
   i = n("470079"),
   r = n("920906"),
   o = n("143927"),
-  u = n("442837"),
-  d = n("393238"),
-  c = n("607070"),
-  f = n("963202"),
-  E = n("353093"),
-  h = n("931515"),
-  _ = n("807933"),
-  C = n("702646"),
-  m = n("207796"),
-  S = n("543550"),
-  p = n("895068"),
-  I = n("93118");
+  u = n("481060"),
+  d = n("442837"),
+  c = n("393238"),
+  f = n("607070"),
+  E = n("963202"),
+  h = n("353093"),
+  _ = n("931515"),
+  C = n("807933"),
+  m = n("702646"),
+  S = n("207796"),
+  p = n("543550"),
+  I = n("895068"),
+  g = n("93118");
 (a = s || (s = {})).TOP_PICKS = "top_picks", a.OTHER_GUILDS = "other_guilds";
-let g = {
+let T = {
     mass: 1,
     tension: 600,
     friction: 60
   },
-  T = i.memo(function(e) {
+  A = i.memo(function(e) {
     let {
       width: t
-    } = e, n = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), a = (0, m.useClanDiscoveryUIStore)(e => e.mode, o.default), s = (0, r.useSpring)({
+    } = e, n = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion), a = (0, S.useClanDiscoveryUIStore)(e => e.mode, o.default), s = (0, r.useSpring)({
       from: {
         opacity: 0
       },
       to: {
         opacity: 1
       },
-      config: g,
+      config: T,
       delay: 500,
       immediate: n
-    }), d = (0, m.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), h = (0, m.useClanDiscoveryUIStore)(e => e.started, o.default), {
-      guilds: T
-    } = (0, f.useClanPrepilotExperimentForAllGuilds)({
+    }), u = (0, S.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), c = (0, S.useClanDiscoveryUIStore)(e => e.started, o.default), {
+      guilds: _
+    } = (0, E.useClanPrepilotExperimentForAllGuilds)({
       location: "ClanDiscoveryAdminContainer",
       includeConverted: !0
-    }), A = i.useMemo(() => T.filter(e => !(0, E.isGuildAClan)(e)), [T]), {
+    }), A = i.useMemo(() => _.filter(e => !(0, h.isGuildAClan)(e)), [_]), {
       enableApplication: N
-    } = (0, f.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer");
+    } = (0, E.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer");
     switch (i.useEffect(() => {
-        let e = T.length > 0;
-        if (e && !N && d === m.ClanDiscoveryUserScreens.USER_UPSELL) {
-          (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.ADMIN_UPSELL);
+        let e = _.length > 0;
+        if (e && !N && u === S.ClanDiscoveryUserScreens.USER_UPSELL) {
+          (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.ADMIN_UPSELL);
           return
         }
-        if (!e && N && !h) {
-          (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GET_STARTED);
+        if (!e && N && !c) {
+          (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.GET_STARTED);
           return
         }
-        if (N && a === m.ClanDiscoveryMode.ADMIN_UPSELL && 0 === A.length) {
-          (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GET_STARTED), m.useClanDiscoveryUIStore.getState().setUserUpsellScreen(m.ClanDiscoveryUserScreens.USER_UPSELL);
+        if (N && a === S.ClanDiscoveryMode.ADMIN_UPSELL && 0 === A.length) {
+          (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.GET_STARTED), S.useClanDiscoveryUIStore.getState().setUserUpsellScreen(S.ClanDiscoveryUserScreens.USER_UPSELL);
           return
         }
-      }, [A.length, T.length, h, N, a, d]), a) {
-      case m.ClanDiscoveryMode.ADMIN_UPSELL:
-        return (0, l.jsx)(S.ClanDiscoveryAdminContainer, {});
-      case m.ClanDiscoveryMode.GET_STARTED:
-        return (0, l.jsx)(S.ClanDiscoveryUserContainer, {});
-      case m.ClanDiscoveryMode.DISCOVERY:
-      case m.ClanDiscoveryMode.GAMES:
-      case m.ClanDiscoveryMode.PLAYSTYLE:
-      case m.ClanDiscoveryMode.TRAITS:
+      }, [A.length, _.length, c, N, a, u]), a) {
+      case S.ClanDiscoveryMode.ADMIN_UPSELL:
+        return (0, l.jsx)(p.ClanDiscoveryAdminContainer, {});
+      case S.ClanDiscoveryMode.GET_STARTED:
+        return (0, l.jsx)(p.ClanDiscoveryUserContainer, {});
+      case S.ClanDiscoveryMode.DISCOVERY:
+      case S.ClanDiscoveryMode.GAMES:
+      case S.ClanDiscoveryMode.PLAYSTYLE:
+      case S.ClanDiscoveryMode.TRAITS:
         return (0, l.jsxs)("div", {
-          className: I.discoveryContainer,
+          className: g.discoveryContainer,
           children: [(0, l.jsx)(r.animated.div, {
-            className: I.toolbar,
+            className: g.toolbar,
             style: {
               opacity: s.opacity,
               transform: s.opacity.to([0, 1], [-40, 0]).to(e => "translateY(".concat(e, "px)"))
             },
-            children: (0, l.jsx)(C.default, {})
+            children: (0, l.jsx)(m.default, {})
           }), (0, l.jsx)(r.animated.div, {
-            className: I.content,
+            className: g.content,
             style: {
               opacity: s.opacity,
               transform: s.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
             },
-            children: (0, l.jsx)(p.default, {
+            children: (0, l.jsx)(I.default, {
               width: t
             })
           }), (0, l.jsx)("div", {
-            className: I.selectors,
-            children: (0, l.jsx)(_.default, {
+            className: g.selectors,
+            children: (0, l.jsx)(C.default, {
               mode: a
             })
           })]
@@ -94,18 +95,22 @@ let g = {
     }
   });
 t.default = i.memo(function() {
-  (0, h.useAutoFetchClanDiscoveryResults)();
   let {
-    ref: e,
-    width: t
-  } = (0, d.default)();
+    loading: e
+  } = (0, _.useAutoFetchClanDiscoveryResults)(), {
+    ref: t,
+    width: n
+  } = (0, c.default)();
   return (0, l.jsxs)("main", {
-    className: I.container,
-    ref: e,
+    className: g.container,
+    ref: t,
     children: [(0, l.jsx)("div", {
-      className: I.dragRegion
-    }), (0, l.jsx)(T, {
-      width: null != t ? t : 0
+      className: g.dragRegion
+    }), e ? (0, l.jsx)("div", {
+      className: g.loading,
+      children: (0, l.jsx)(u.Spinner, {})
+    }) : (0, l.jsx)(A, {
+      width: null != n ? n : 0
     })]
   })
 })
