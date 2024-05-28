@@ -2,10 +2,10 @@
 let i;
 n.r(t), n.d(t, {
   hidePIPEmbed: function() {
-    return h
+    return A
   },
   showPIPEmbed: function() {
-    return A
+    return m
   }
 });
 var r = n("570140"),
@@ -21,44 +21,46 @@ var r = n("570140"),
   I = n("979651"),
   T = n("317381"),
   f = n("719296"),
-  S = n("981631");
+  S = n("958185"),
+  h = n("981631");
 
-function h(e) {
+function A(e) {
   let t = null != e ? e : i;
   null != t && d.default.isOpen(t) && r.default.wait(() => s.hide(t))
 }
 
-function A(e) {
+function m(e) {
   let t = null != e ? e : i;
   null != t && d.default.isOpen(t) && r.default.wait(() => s.show(t))
 }
 
-function m() {
+function N() {
   let e = T.default.getConnectedActivityChannelId(),
-    t = T.default.getSelfEmbeddedActivityForChannel(null != e ? e : S.EMPTY_STRING_SNOWFLAKE_ID),
+    t = T.default.getSelfEmbeddedActivityForChannel(null != e ? e : h.EMPTY_STRING_SNOWFLAKE_ID),
     n = l.default.getChannel(e);
   return null == e || null == n || null == t ? function() {
     let e = i;
     null != e && d.default.isOpen(e) && (r.default.wait(() => s.close(e)), i = null)
   }() : function(e, t) {
     if (d.default.isOpen(t)) return !1;
-    r.default.wait(() => s.open(t, S.PictureInPictureComponents.EMBED_IFRAME, {
+    r.default.wait(() => s.open(t, h.PictureInPictureComponents.EMBED_IFRAME, {
       channel: e
     })), i = t
   }(n, (0, f.default)(e, t.applicationId))
 }
 
-function N() {
-  let e = u.default.hasLayers(),
-    t = o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  return e && !t ? h() : A()
+function p() {
+  return (0, S.default)({
+    LayerStore: u.default,
+    PopoutWindowStore: o.default
+  }) ? A() : m()
 }
-class p extends a.default {
+class O extends a.default {
   _initialize() {
-    c.default.addChangeListener(m), E.default.addChangeListener(m), _.default.addChangeListener(m), I.default.addChangeListener(m), o.default.addChangeListener(m), T.default.addChangeListener(m), u.default.addChangeListener(N)
+    c.default.addChangeListener(N), E.default.addChangeListener(N), _.default.addChangeListener(N), I.default.addChangeListener(N), o.default.addChangeListener(N), T.default.addChangeListener(N), u.default.addChangeListener(p)
   }
   _terminate() {
-    c.default.removeChangeListener(m), E.default.removeChangeListener(m), _.default.removeChangeListener(m), I.default.removeChangeListener(m), o.default.removeChangeListener(m), T.default.removeChangeListener(m), u.default.removeChangeListener(N)
+    c.default.removeChangeListener(N), E.default.removeChangeListener(N), _.default.removeChangeListener(N), I.default.removeChangeListener(N), o.default.removeChangeListener(N), T.default.removeChangeListener(N), u.default.removeChangeListener(p)
   }
 }
-t.default = new p
+t.default = new O
