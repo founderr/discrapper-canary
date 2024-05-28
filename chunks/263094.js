@@ -15,7 +15,6 @@ e.exports = {
   heroAssetWrapper: "heroAssetWrapper__954c7",
   iconButton: "iconButton_a5db4c",
   interactiveNormal: "interactiveNormal_a449a5",
-  partnerBranding: "partnerBranding__96958",
   promotedBadge: "promotedBadge__73648",
   promotedBadgeIcon: "promotedBadgeIcon__07043",
   promotedBadgeWrapper: "promotedBadgeWrapper__130d9",
