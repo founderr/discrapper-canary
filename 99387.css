@@ -16241,6 +16241,10 @@ html .progress__00e29 {
     align-items: center
 }
 
+.guildSidebar__5583b {
+    flex-shrink: 0
+}
+
 .guildBreadcrumbIcon__7f689 {
     margin-left: 8px;
     margin-right: 8px

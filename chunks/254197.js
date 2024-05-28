@@ -203,7 +203,6 @@ let b = e => {
               className: j.promotedBadge,
               onClick: Q,
               children: (0, a.jsx)(S.default, {
-                className: j.partnerBranding,
                 quest: G,
                 withGameTile: !1
               })
