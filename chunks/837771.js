@@ -374,7 +374,7 @@ function er(e, t, n, i) {
     o = null !== (s = (0, x.getChannelIdFromCardData)(e)) && void 0 !== s ? s : "";
   a.source = i, a.card_type = e.category, a.card_position = n, a.channel_id = o, a.channel_type = null === (r = N.default.getChannel(o)) || void 0 === r ? void 0 : r.type;
   let l = (0, H.getVoiceChannelUsers)(o, t);
-  a.card_affinity_users_count = Math.min(l.length, 6), a.card_total_users_count = l.length, a.card_affinity_user_ids = l.slice(0, 6).map(e => e.id), a.card_max_affinity_user_id = l.length > 0 ? l[0].id : "0", a.card_affinity_user_scores = l.slice(0, 6).map(e => {
+  a.card_affinity_users_count = Math.min(l.length, 6), a.card_total_users_count = l.length, a.card_affinity_user_ids = l.slice(0, 6).map(e => e.id), a.card_max_affinity_user_id = l.length > 0 ? l[0].id : "0", a.card_user_affinity_scores = l.slice(0, 6).map(e => {
     var t, n;
     return null !== (n = null === (t = C.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
   }), B.default.track(X.AnalyticEvents.GUILD_TOOLTIP_CARD_CLICKED, {
