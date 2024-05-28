@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("47120"), n("653041");
 var a = n("470079"),
@@ -14,41 +14,38 @@ var a = n("470079"),
   d = n("700785"),
   c = n("231338");
 let f = [],
-  h = new Set,
-  m = {};
+  h = new Set;
 
-function p(e) {
+function m(e) {
   let {
     entries: t,
     channelId: n
-  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), E = null == p ? void 0 : p.guild_id, C = a.useRef(new Set), g = a.useMemo(() => {
+  } = e, m = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), p = null == m ? void 0 : m.guild_id, E = a.useRef(new Set), C = a.useMemo(() => {
     let e = new Set(null == t ? void 0 : t.map(e => e.author_id));
-    return !(0, i.areArraysShallowEqual)([...C.current], [...e]) && (C.current = e), C.current
-  }, [t]), S = a.useMemo(() => null == E ? m : {
-    [E]: Array.from(g)
-  }, [g, E]);
-  Object.keys(S).forEach(e => {
-    S[e].forEach(t => {
-      o.default.requestMember(e, t)
+    return !(0, i.areArraysShallowEqual)([...E.current], [...e]) && (E.current = e), E.current
+  }, [t]);
+  a.useEffect(() => {
+    null != p && Array.from(C).forEach(e => {
+      o.default.requestMember(p, e)
     })
-  });
-  let _ = (0, s.useStateFromStoresArray)([u.default], () => {
-      if (null == E) return f;
+  }, [C, p]);
+  let g = (0, s.useStateFromStoresArray)([u.default], () => {
+      if (null == p) return f;
       let e = [];
-      for (let t of g) u.default.isMember(E, t) && e.push(t);
+      for (let t of C) u.default.isMember(p, t) && e.push(t);
       return e
-    }, [g, E]),
-    T = a.useMemo(() => {
-      if (null == p || 0 === _.length) return h;
+    }, [C, p]),
+    S = a.useMemo(() => {
+      if (null == m || 0 === g.length) return h;
       let e = new Set;
-      for (let t of _) {
+      for (let t of g) {
         let n = d.computePermissions({
           user: t,
-          context: p
+          context: m
         });
         l.has(n, c.Permissions.VIEW_CHANNEL) && e.add(t)
       }
       return e
-    }, [_, p]);
-  return a.useMemo(() => null == t ? void 0 : t.filter(e => T.has(e.author_id)), [t, T])
+    }, [g, m]);
+  return a.useMemo(() => null == t ? void 0 : t.filter(e => S.has(e.author_id)), [t, S])
 }
