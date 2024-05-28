@@ -11,7 +11,7 @@ var i = n("358085"),
 function a(e) {
   if (!(0, i.isDesktop)()) return !1;
   let {
-    isGuildMemberListEnabled: t
+    isRecentlyOnlineEnabled: t
   } = r.default.getCurrentConfig({
     location: "guild-subscriptions-store"
   }, {

@@ -159,7 +159,7 @@ function $(e) {
     user: c,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(r || J)
-  }), es = (0, f.useStateFromStores)([b.default], () => b.default.isChannelMuted(t.getGuildId(), t.id)), ei = (0, f.useStateFromStores)([O.default], () => O.default.getMentionCount(t.id) > 0), er = (0, _.default)(t), eo = (0, f.useStateFromStores)([N.default], () => N.default.isFavorite(t.id)), eu = null != T && T.length > 0, ed = !eu && null != B && D === K.StatusTypes.OFFLINE;
+  }), es = (0, f.useStateFromStores)([b.default], () => b.default.isChannelMuted(t.getGuildId(), t.id)), ei = (0, f.useStateFromStores)([O.default], () => O.default.getMentionCount(t.id) > 0), er = (0, _.default)(t), eo = (0, f.useStateFromStores)([N.default], () => N.default.isFavorite(t.id)), eu = null != T && T.length > 0, ed = !eu && D === K.StatusTypes.OFFLINE && null != B && (0, L.isRecentlyOnline)(B);
   a.useEffect(() => {
     ed && L.default.trackExposure({
       location: "private_channel"
@@ -384,7 +384,7 @@ t.default = e => {
   }, {
     autoTrackExposure: !0
   }), {
-    isFriendsAndDMsEnabled: u
+    isRecentlyOnlineEnabled: u
   } = L.default.useExperiment({
     location: "private_channel"
   }, {

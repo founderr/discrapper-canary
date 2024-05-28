@@ -17,12 +17,12 @@ t.default = function(e) {
     lastOnlineTimestamp: E,
     experimentLocation: C = "status_text"
   } = e, {
-    isFriendsAndDMsEnabled: h
+    isRecentlyOnlineEnabled: h
   } = i.default.useExperiment({
     location: C
   }, {
     autoTrackExposure: !1
-  }), _ = n.length > 0, S = !_ && null != E;
+  }), _ = n.length > 0, S = !_ && null != E && (0, i.isRecentlyOnline)(E);
   if (s.useEffect(() => {
       S && i.default.trackExposure({
         location: C
