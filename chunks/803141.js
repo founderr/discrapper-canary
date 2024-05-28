@@ -1,14 +1,12 @@
 "use strict";
 n.r(t), n("47120");
 var i = n("695346"),
-  r = n("581883"),
-  s = n("412788"),
-  a = n("592204"),
-  o = n("932941"),
-  l = n("363072"),
-  u = n("526761");
+  r = n("412788"),
+  s = n("932941"),
+  a = n("363072"),
+  o = n("526761");
 
-function d(e, t, n) {
+function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,73 +14,64 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = new l.Trie;
+let u = null;
 
-function c() {
+function d() {
   let {
     profanity: e = !1,
     slurs: t = !1,
     sexualContent: n = !1
-  } = i.KeywordFilterSettings.getSetting(), r = [...e ? o.PROFANITY_KEYWORD_LIST : [], ...t ? o.SLURS_KEYWORD_LIST : [], ...n ? o.SEXUAL_CONTENT_KEYWORD_LIST : []];
-  _.addWords(r)
+  } = i.KeywordFilterSettings.getSetting(), r = [...e ? s.PROFANITY_KEYWORD_LIST : [], ...t ? s.SLURS_KEYWORD_LIST : [], ...n ? s.SEXUAL_CONTENT_KEYWORD_LIST : []];
+  (u = new a.Trie).addWords(r)
 }
 
-function E() {
-  if (!(0, a.isEligibleForKeywordFiltering)({
-      location: "connection_open"
-    })) return !1;
-  c()
+function _() {
+  d()
 }
 
-function I() {
-  if (!(0, a.isEligibleForKeywordFiltering)({
-      location: "overlay_initialize"
-    })) return !1;
-  c()
+function c() {
+  d()
 }
 
-function T(e) {
+function E(e) {
   let {
     local: t,
     settings: n
   } = e;
-  if (!t || n.type !== u.UserSettingsTypes.PRELOADED_USER_SETTINGS || !(0, a.isEligibleForKeywordFiltering)({
-      location: "user_settings_proto_update"
-    })) return !1;
-  _.clear(), c()
+  if (!t || n.type !== o.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+  null != u && u.clear(), d()
 }
-class f extends s.default {
-  initialize() {
-    this.waitFor(r.default)
-  }
+class I extends r.default {
   loadCache() {
-    let e = this.readSnapshot(f.LATEST_SNAPSHOT_VERSION);
-    null != e && (_ = l.Trie.fromSnapshot(e))
+    let e = this.readSnapshot(I.LATEST_SNAPSHOT_VERSION);
+    null != e && (u = null != e.keywordTrie ? a.Trie.fromSnapshot(e.keywordTrie) : null)
   }
   takeSnapshot() {
     return {
-      version: f.LATEST_SNAPSHOT_VERSION,
-      data: _
+      version: I.LATEST_SNAPSHOT_VERSION,
+      data: {
+        keywordTrie: u
+      }
     }
   }
   getKeywordTrie() {
-    return _
+    return u
   }
   initializeForKeywordTests() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    _.clear(), ! function() {
+    ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      _.addWords(e)
+      null == u && (u = new a.Trie), u.addWords(e)
     }(e)
   }
   constructor() {
     super({
-      CONNECTION_OPEN: E,
-      CONNECTION_OPEN_SUPPLEMENTAL: E,
-      CACHE_LOADED_LAZY: () => this.loadCache(),
-      OVERLAY_INITIALIZE: I,
-      USER_SETTINGS_PROTO_UPDATE: T
+      CONNECTION_OPEN: _,
+      CONNECTION_OPEN_SUPPLEMENTAL: _,
+      CACHE_LOADED: () => this.loadCache(),
+      OVERLAY_INITIALIZE: c,
+      USER_SETTINGS_PROTO_UPDATE: E
     })
   }
 }
-d(f, "displayName", "KeywordFilterStore"), d(f, "LATEST_SNAPSHOT_VERSION", 1), t.default = new f
+l(I, "displayName", "KeywordFilterStore"), l(I, "LATEST_SNAPSHOT_VERSION", 2), t.default = new I

@@ -10,15 +10,16 @@ var i = n("960048"),
   a = n("603158");
 
 function o(e, t) {
-  if (!(0, r.isEligibleForKeywordFiltering)({
-      location: "keyword_substituted_content"
-    })) return e;
+  (0, r.isEligibleForKeywordFiltering)({
+    location: "keyword_substituted_content"
+  });
   try {
     let n = function(e) {
-      let t = s.default.getKeywordTrie();
+      var t;
+      let n = s.default.getKeywordTrie();
       if ("" === e) return [];
-      let n = (0, a.normalize)(e).toLowerCase();
-      return Object.entries(t.search(n)).map(e => {
+      let i = (0, a.normalize)(e).toLowerCase();
+      return Object.entries(null !== (t = null == n ? void 0 : n.search(i)) && void 0 !== t ? t : {}).map(e => {
         let [t, n] = e;
         return {
           start: Number(t),
