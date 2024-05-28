@@ -19,11 +19,11 @@ let l = {
     [r.DismissibleContent.SEEN_OLD_DESIGN]: 0,
     [r.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0,
     [r.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0,
-    [r.DismissibleContent.WHATS_NEW_CUSTOM_NOTIFICATION_SOUNDS_FLIP]: 0,
     [r.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0,
     [r.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0,
-    [r.DismissibleContent.WHATS_NEW_CUSTOM_NOTIFICATION_SOUNDS_NITRO_BADGE]: 0,
-    [r.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0
+    [r.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0,
+    [r.DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0,
+    [r.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0
   },
   u = a.default.Millis.DAY;
 

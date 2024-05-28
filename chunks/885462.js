@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
-  ReferralProgramWhatsNewCardExperiment: function() {
+  ServerProfilesExperiment: function() {
     return i
   }
 });
 let i = (0, n("818083").createExperiment)({
   kind: "user",
-  id: "2024-05_referral_program_whats_new_card",
-  label: "Referral Program Whats New Card",
+  id: "2024-05_server_profiles",
+  label: "Server Profiles",
   defaultConfig: {
     shouldShowCard: !1,
     canFlipCard: !1

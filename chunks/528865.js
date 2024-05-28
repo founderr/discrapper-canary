@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
-  ReferralProgramWhatsNewCardExperiment: function() {
+  June2024NewAppStylesWhatsNewCardExperiment: function() {
     return i
   }
 });
 let i = (0, n("818083").createExperiment)({
   kind: "user",
-  id: "2024-05_referral_program_whats_new_card",
-  label: "Referral Program Whats New Card",
+  id: "2024-05_june_2024_new_app_styles_whats_new_Card",
+  label: "June 2024 New App Styles Whats New Card",
   defaultConfig: {
     shouldShowCard: !1,
     canFlipCard: !1
