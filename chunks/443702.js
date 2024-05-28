@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return M
   }
 });
 var a = s("735250"),
@@ -17,23 +17,25 @@ var a = s("735250"),
   E = s("231428"),
   T = s("390954"),
   _ = s("89057"),
-  f = s("246946"),
-  m = s("594174"),
+  f = s("921801"),
+  m = s("246946"),
+  I = s("594174"),
   g = s("351402"),
-  I = s("853872"),
-  N = s("78839"),
-  h = s("706454"),
-  C = s("981631"),
+  N = s("853872"),
+  h = s("78839"),
+  C = s("706454"),
+  O = s("726985"),
+  A = s("981631"),
   p = s("689938"),
-  A = s("499937");
-class O extends n.PureComponent {
+  R = s("499937");
+class x extends n.PureComponent {
   componentDidMount() {
     d.default.wait(() => {
       u.fetchPaymentSources(), u.fetchSubscriptions()
     })
   }
   handleRedemptionRedirect() {
-    c.default.setSection(C.UserSettingsSections.INVENTORY)
+    c.default.setSection(A.UserSettingsSections.INVENTORY)
   }
   render() {
     let {
@@ -47,30 +49,36 @@ class O extends n.PureComponent {
       isUpdatingPaymentSource: d
     } = this.props;
     return t ? (0, a.jsx)(S.default, {}) : (0, a.jsxs)("div", {
-      className: A.__invalid_userSettingsBilling,
+      className: R.__invalid_userSettingsBilling,
       children: [e && 0 === Object.keys(s).length ? (0, a.jsx)("div", {
-        className: A.syncing,
+        className: R.syncing,
         children: (0, a.jsx)(o.Spinner, {})
-      }) : (0, a.jsx)(T.default, {
-        paymentSources: s,
-        defaultPaymentSourceId: n,
-        premiumSubscriptionPaymentSourceId: null != i && i.status !== C.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
-        locale: l,
-        removing: r,
-        submitting: d
-      }), (0, a.jsx)("div", {
-        className: A.paymentHistory,
-        children: (0, a.jsxs)(o.HeadingLevel, {
-          component: (0, a.jsx)(o.FormTitle, {
-            tag: "h1",
-            children: p.default.Messages.BILLING_PAYMENT_HISTORY
-          }),
-          children: [(0, a.jsx)(_.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
-            locale: l
-          })]
+      }) : (0, a.jsx)(f.Subsetting, {
+        setting: O.WebSetting.BILLING_PAYMENT_METHODS,
+        children: (0, a.jsx)(T.default, {
+          paymentSources: s,
+          defaultPaymentSourceId: n,
+          premiumSubscriptionPaymentSourceId: null != i && i.status !== A.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
+          locale: l,
+          removing: r,
+          submitting: d
+        })
+      }), (0, a.jsx)(f.Subsetting, {
+        setting: O.WebSetting.BILLING_TRANSACTION_HISTORY,
+        children: (0, a.jsx)("div", {
+          className: R.paymentHistory,
+          children: (0, a.jsxs)(o.HeadingLevel, {
+            component: (0, a.jsx)(o.FormTitle, {
+              tag: "h1",
+              children: p.default.Messages.BILLING_PAYMENT_HISTORY
+            }),
+            children: [(0, a.jsx)(_.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
+              locale: l
+            })]
+          })
         })
       }), (0, a.jsx)(o.Card, {
-        className: A.codeRedemptionRedirect,
+        className: R.codeRedemptionRedirect,
         type: o.Card.Types.CUSTOM,
         children: p.default.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
           onClick: this.handleRedemptionRedirect
@@ -80,24 +88,24 @@ class O extends n.PureComponent {
   }
 }
 
-function x() {
-  let e = (0, r.useStateFromStoresObject)([h.default, g.default, I.default, m.default, f.default, N.default], () => {
-    let e = N.default.getPremiumTypeSubscription(),
-      t = m.default.getCurrentUser();
+function M() {
+  let e = (0, r.useStateFromStoresObject)([C.default, g.default, N.default, I.default, m.default, h.default], () => {
+    let e = h.default.getPremiumTypeSubscription(),
+      t = I.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
-      locale: h.default.locale,
-      hide: f.default.enabled,
+      locale: C.default.locale,
+      hide: m.default.enabled,
       isClaimed: t.isClaimed(),
       isVerified: t.verified,
       premiumSubscription: e,
-      defaultPaymentSourceId: I.default.defaultPaymentSourceId,
-      paymentSources: I.default.paymentSources,
+      defaultPaymentSourceId: N.default.defaultPaymentSourceId,
+      paymentSources: N.default.paymentSources,
       syncing: g.default.isSyncing,
       isRemovingPaymentSource: g.default.isRemovingPaymentSource,
       isUpdatingPaymentSource: g.default.isUpdatingPaymentSource
     }
   });
-  return (0, a.jsx)(O, {
+  return (0, a.jsx)(x, {
     ...e
   })
 }

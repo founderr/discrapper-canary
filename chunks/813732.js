@@ -15,110 +15,115 @@ var a = s("735250"),
   _ = s("497321"),
   f = s("167354"),
   m = s("15640"),
-  g = s("406174"),
-  I = s("810762"),
+  I = s("406174"),
+  g = s("810762"),
   N = s("681833"),
   h = s("856888"),
-  C = s("246946"),
-  p = s("663389"),
-  A = s("351402"),
-  O = s("853872"),
+  C = s("921801"),
+  O = s("246946"),
+  A = s("663389"),
+  p = s("351402"),
+  R = s("853872"),
   x = s("78839"),
-  R = s("580130"),
-  M = s("285952"),
-  v = s("366695"),
-  D = s("626135"),
-  L = s("74538"),
-  P = s("639056"),
-  b = s("52164"),
-  j = s("91430"),
-  U = s("474936"),
-  y = s("981631"),
-  G = s("526761"),
-  B = s("689938"),
-  F = s("431008");
+  M = s("580130"),
+  L = s("285952"),
+  D = s("366695"),
+  P = s("626135"),
+  v = s("74538"),
+  b = s("639056"),
+  j = s("52164"),
+  U = s("91430"),
+  G = s("474936"),
+  F = s("981631"),
+  B = s("526761"),
+  y = s("726985"),
+  k = s("689938"),
+  V = s("431008");
 
-function k() {
+function H() {
   return (0, a.jsx)(o.Card, {
-    className: F.noItemsCard,
+    className: V.noItemsCard,
     type: o.Card.Types.CUSTOM,
-    children: (0, a.jsxs)(M.default, {
-      align: M.default.Align.CENTER,
-      children: [(0, a.jsx)(v.default, {
+    children: (0, a.jsxs)(L.default, {
+      align: L.default.Align.CENTER,
+      children: [(0, a.jsx)(D.default, {
         game: null,
-        size: v.default.Sizes.SMALL,
-        className: F.noItemsIcon
+        size: D.default.Sizes.SMALL,
+        className: V.noItemsIcon
       }), (0, a.jsx)("span", {
-        className: F.cardText,
-        children: B.default.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
+        className: V.cardText,
+        children: k.default.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
       })]
     })
   })
 }
 
 function w() {
-  let e = (0, r.useStateFromStores)([R.default], () => R.default.getForApplication(U.PREMIUM_SUBSCRIPTION_APPLICATION));
+  let e = (0, r.useStateFromStores)([M.default], () => M.default.getForApplication(G.PREMIUM_SUBSCRIPTION_APPLICATION));
   return n.useEffect(() => {
-    (0, S.fetchUserEntitlementsForApplication)(U.PREMIUM_SUBSCRIPTION_APPLICATION)
+    (0, S.fetchUserEntitlementsForApplication)(G.PREMIUM_SUBSCRIPTION_APPLICATION)
   }, []), (0, a.jsxs)("section", {
-    className: F.sectionAccountCredit,
+    className: V.sectionAccountCredit,
     children: [(0, a.jsx)(o.FormTitle, {
-      className: F.accountCreditTitle,
+      className: V.accountCreditTitle,
       tag: o.FormTitleTags.H1,
-      children: B.default.Messages.BILLING_SUBSCRIPTION_CREDIT
+      children: k.default.Messages.BILLING_SUBSCRIPTION_CREDIT
     }), (0, a.jsx)("p", {
-      className: F.accountCreditDescription,
-      children: B.default.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
-    }), null != e && L.default.hasAccountCredit(e) ? (0, a.jsx)(P.default, {
-      className: F.accountCredit,
+      className: V.accountCreditDescription,
+      children: k.default.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
+    }), null != e && v.default.hasAccountCredit(e) ? (0, a.jsx)(b.default, {
+      className: V.accountCredit,
       entitlements: e
-    }) : (0, a.jsx)(k, {})]
+    }) : (0, a.jsx)(H, {})]
   })
 }
 t.default = function() {
   let e = (0, r.useStateFromStores)([x.default], () => x.default.getPremiumTypeSubscription()),
     t = (0, f.default)({
-      subscriptionFilter: e => j.VIEWABLE_SUBSCRIPTION_STATUSES.has(e.status)
+      subscriptionFilter: e => U.VIEWABLE_SUBSCRIPTION_STATUSES.has(e.status)
     }),
     s = t.length > 1,
-    l = (0, r.useStateFromStores)([O.default], () => null != e && null != e.paymentSourceId ? O.default.getPaymentSource(e.paymentSourceId) : null, [e]),
+    l = (0, r.useStateFromStores)([R.default], () => null != e && null != e.paymentSourceId ? R.default.getPaymentSource(e.paymentSourceId) : null, [e]),
     S = (0, r.useStateFromStores)([x.default], () => x.default.hasFetchedSubscriptions()),
-    R = (0, r.useStateFromStores)([A.default], () => A.default.isBusy),
-    M = (0, m.useSubscriptionPlansLoaded)(),
-    v = (0, r.useStateFromStores)([p.default], () => p.default.getSubsection());
+    M = (0, r.useStateFromStores)([p.default], () => p.default.isBusy),
+    L = (0, m.useSubscriptionPlansLoaded)(),
+    D = (0, r.useStateFromStores)([A.default], () => A.default.getSubsection());
   return (n.useEffect(() => (d.default.wait(() => {
     (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
   }), function() {
     T.default.clearSubsection()
-  }), []), C.default.enabled) ? (0, a.jsx)(_.default, {}) : S && M ? v === G.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
+  }), []), O.default.enabled) ? (0, a.jsx)(_.default, {}) : S && L ? D === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(g.default, {
     onGoBack: () => T.default.clearSubsection()
-  }) : v === G.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(h.default, {
+  }) : D === B.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(h.default, {
     onGoBack: () => T.default.clearSubsection()
   }) : (0, a.jsx)("div", {
-    className: F.container,
+    className: V.container,
     children: (0, a.jsxs)("div", {
-      className: F.content,
-      children: [s ? (0, a.jsx)(j.DuplicateSubscriptionsBanner, {}) : null, null != e ? (0, a.jsx)(j.default, {
-        className: F.subscriptionDetails,
+      className: V.content,
+      children: [s ? (0, a.jsx)(U.DuplicateSubscriptionsBanner, {}) : null, null != e ? (0, a.jsx)(U.default, {
+        className: V.subscriptionDetails,
         subscription: e,
         paymentSource: l,
-        busy: R,
+        busy: M,
         subscriptions: t
-      }) : (0, a.jsx)(j.SubscriptionDetailsEmpty, {
-        className: F.subscriptionDetails
-      }), (0, a.jsx)(g.default, {
-        onClickManageSubscription: () => T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, G.ROLE_SUBSCRIPTION_SUBSECTION)
+      }) : (0, a.jsx)(U.SubscriptionDetailsEmpty, {
+        className: V.subscriptionDetails
+      }), (0, a.jsx)(I.default, {
+        onClickManageSubscription: () => T.default.setSection(F.UserSettingsSections.SUBSCRIPTIONS, B.ROLE_SUBSCRIPTION_SUBSECTION)
       }), (0, a.jsx)(N.default, {
         onClickManageSubscription: () => {
-          T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, G.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(y.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
+          T.default.setSection(F.UserSettingsSections.SUBSCRIPTIONS, B.APPLICATION_SUBSCRIPTION_SUBSECTION), P.default.track(F.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }
-      }), (0, a.jsx)(w, {}), null != e ? (0, a.jsx)(b.default, {
+      }), (0, a.jsx)(C.Subsetting, {
+        setting: y.WebSetting.SUBSCRIPTIONS_CREDITS,
+        children: (0, a.jsx)(w, {})
+      }), null != e ? (0, a.jsx)(j.default, {
         subscription: e,
         withOverheadSeparator: !1
       }) : null]
     })
   }) : (0, a.jsx)("div", {
-    className: i()(F.container, F.loading),
+    className: i()(V.container, V.loading),
     children: (0, a.jsx)(o.Spinner, {})
   })
 }

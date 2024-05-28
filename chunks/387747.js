@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return g
   }
 });
 var a = s("735250");
@@ -14,15 +14,17 @@ var n = s("410575"),
   d = s("347475"),
   u = s("977156"),
   c = s("97926"),
-  S = s("541540"),
-  E = s("206339"),
-  T = s("981631"),
-  _ = s("46140"),
-  f = s("313026");
+  S = s("921801"),
+  E = s("541540"),
+  T = s("206339"),
+  _ = s("726985"),
+  f = s("981631"),
+  m = s("46140"),
+  I = s("313026");
 
-function m() {
+function g() {
   let e = (0, u.useIsEligibleForQuests)({
-      location: _.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+      location: m.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
     {
       enabled: t
@@ -36,26 +38,29 @@ function m() {
     children: [!s && (0, a.jsxs)(a.Fragment, {
       children: [t && (0, a.jsx)(d.default, {
         location: l.default.USER_SETTINGS_GIFT_INVENTORY,
-        className: f.giftNitro,
-        imageClassName: f.giftNitroImage,
+        className: I.giftNitro,
+        imageClassName: I.giftNitroImage,
         textContainerOverrideStyles: {
           padding: "32px",
           width: "360px"
         },
         analyticsLocation: {
-          page: T.AnalyticsPages.GIFTING_SETTINGS,
-          section: T.AnalyticsSections.GIFT_BANNER
+          page: f.AnalyticsPages.GIFTING_SETTINGS,
+          section: f.AnalyticsSections.GIFT_BANNER
         }
       }), (0, a.jsx)(n.default, {
-        section: T.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
-        children: (0, a.jsx)(S.default, {})
+        section: f.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
+        children: (0, a.jsx)(E.default, {})
       })]
-    }), e && (0, a.jsx)(n.default, {
-      section: T.AnalyticsSections.QUESTS,
-      children: (0, a.jsx)(c.default, {})
+    }), e && (0, a.jsx)(S.Subsetting, {
+      setting: _.WebSetting.GIFT_INVENTORY_QUESTS,
+      children: (0, a.jsx)(n.default, {
+        section: f.AnalyticsSections.QUESTS,
+        children: (0, a.jsx)(c.default, {})
+      })
     }), !s && (0, a.jsx)(n.default, {
-      section: T.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
-      children: (0, a.jsx)(E.default, {})
+      section: f.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+      children: (0, a.jsx)(T.default, {})
     }), s && (0, a.jsx)(r.BlockedPaymentsContentSettings, {})]
   })
 }
