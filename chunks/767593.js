@@ -106,7 +106,7 @@ t.default = function(e) {
               type: "submit",
               onClick: M,
               fullWidth: !0,
-              disabled: S || !y,
+              disabled: S || !y || null == R,
               children: E.default.Messages.APPLY
             }), "" !== O && (0, r.jsx)(s.Text, {
               variant: "text-sm/normal",
