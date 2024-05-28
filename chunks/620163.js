@@ -25,26 +25,26 @@ var n = s("990547"),
   N = s("18438"),
   h = s("778825"),
   C = s("351780"),
-  p = s("231765"),
-  A = s("837741"),
+  A = s("231765"),
+  p = s("837741"),
   O = s("804545"),
-  x = s("813732"),
-  R = s("398140"),
+  R = s("813732"),
+  x = s("398140"),
   M = s("564344"),
   v = s("977156"),
-  D = s("652380"),
-  L = s("171156"),
+  L = s("652380"),
+  D = s("171156"),
   P = s("906467"),
   b = s("131951"),
   j = s("25990"),
   U = s("87086"),
   y = s("759231"),
-  G = s("26290"),
-  B = s("626135"),
-  F = s("49012"),
+  F = s("26290"),
+  G = s("626135"),
+  B = s("49012"),
   k = s("358085"),
-  w = s("392735"),
-  H = s("61160"),
+  H = s("392735"),
+  w = s("61160"),
   V = s("604227"),
   Y = s("38915"),
   W = s("498639"),
@@ -79,36 +79,36 @@ var n = s("990547"),
   eN = s("36192"),
   eh = s("338345"),
   eC = s("400287"),
-  ep = s("554042"),
-  eA = s("200645"),
+  eA = s("554042"),
+  ep = s("200645"),
   eO = s("287490"),
-  ex = s("168308"),
-  eR = s("277329"),
+  eR = s("168308"),
+  ex = s("277329"),
   eM = s("674116"),
   ev = s("726985"),
-  eD = s("981631"),
-  eL = s("46140"),
+  eL = s("981631"),
+  eD = s("46140"),
   eP = s("689938"),
   eb = s("442691");
 let ej = () => {
     let e = "Settings list view",
       t = [l.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE, l.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE];
-    return A.BrandRefreshPerksExperiment.getCurrentConfig({
+    return p.BrandRefreshPerksExperiment.getCurrentConfig({
       location: e
     }).enabled && t.push(l.DismissibleContent.BRAND_REFRESH_NEW_BADGE), O.PrideMonthPerksExperiment.getCurrentConfig({
       location: e
     }).enabled && t.push(l.DismissibleContent.PRIDE_ICONS_APPEARANCE_BADGE), t
   },
-  eU = eA.default,
+  eU = ep.default,
   ey = e => {
     let {
       unseenGiftCount: t,
-      showPrepaidPaymentPastDueWarning: A,
+      showPrepaidPaymentPastDueWarning: p,
       impressionSource: O,
       numOfPendingFamilyRequests: ey,
-      isOverlaySupported: eG,
-      isClipsBetaTagShowing: eB = !1,
-      shouldMergeGameSettings: eF,
+      isOverlaySupported: eF,
+      isClipsBetaTagShowing: eG = !1,
+      shouldMergeGameSettings: eB,
       isUserSettingsSearchEnabled: ek
     } = e;
     return Object.freeze({
@@ -123,7 +123,7 @@ let ej = () => {
         predicate: () => ek
       },
       [ev.WebSetting.ACCOUNT]: {
-        section: eD.UserSettingsSections.ACCOUNT,
+        section: eL.UserSettingsSections.ACCOUNT,
         searchableTitle: eP.default.Messages.USER_SETTINGS_MY_ACCOUNT,
         label: eP.default.Messages.USER_SETTINGS_MY_ACCOUNT,
         ariaLabel: eP.default.Messages.USER_SETTINGS_MY_ACCOUNT,
@@ -132,167 +132,217 @@ let ej = () => {
       [ev.WebSetting.ACCOUNT_PROFILE]: {
         searchableTitle: eP.default.Messages.PROFILE,
         parent: ev.WebSetting.ACCOUNT,
-        section: eD.UserSettingsSections.ACCOUNT,
-        element: J.default
+        section: eL.UserSettingsSections.ACCOUNT
       },
-      [ev.WebSetting.DISPLAY_NAME]: {
+      [ev.WebSetting.ACCOUNT_DISPLAY_NAME]: {
         searchableTitle: eP.default.Messages.DISPLAY_NAME,
-        section: eD.UserSettingsSections.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        section: eL.UserSettingsSections.ACCOUNT,
+        parent: ev.WebSetting.ACCOUNT_PROFILE
       },
-      [ev.WebSetting.PHONE_NUMBER]: {
+      [ev.WebSetting.ACCOUNT_PHONE_NUMBER]: {
         searchableTitle: eP.default.Messages.CHANGE_PHONE_NUMBER,
-        section: eD.UserSettingsSections.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        section: eL.UserSettingsSections.ACCOUNT,
+        parent: ev.WebSetting.ACCOUNT_PROFILE
       },
-      [ev.WebSetting.USERNAME]: {
+      [ev.WebSetting.ACCOUNT_USERNAME]: {
         searchableTitle: eP.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_USERNAME_TITLE,
-        section: eD.UserSettingsSections.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        section: eL.UserSettingsSections.ACCOUNT,
+        parent: ev.WebSetting.ACCOUNT_PROFILE
       },
       [ev.WebSetting.ACCOUNT_EMAIL]: {
         searchableTitle: eP.default.Messages.CHANGE_EMAIL,
-        section: eD.UserSettingsSections.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        section: eL.UserSettingsSections.ACCOUNT,
+        parent: ev.WebSetting.ACCOUNT_PROFILE
       },
-      [ev.WebSetting.PASSWORD_AND_AUTHENTICATION]: {
+      [ev.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION]: {
         section: ev.WebSetting.ACCOUNT,
         parent: ev.WebSetting.ACCOUNT,
-        searchableTitle: eP.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
-        element: J.default
+        searchableTitle: eP.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [ev.WebSetting.ACCOUNT_CHANGE_PASSWORD]: {
         searchableTitle: eP.default.Messages.CHANGE_PASSWORD,
         section: ev.WebSetting.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [ev.WebSetting.ACCOUNT_CONFIRM_PASSWORD]: {
         searchableTitle: eP.default.Messages.FORM_LABEL_CONFIRM_PASSWORD,
         section: ev.WebSetting.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
-      [ev.WebSetting.MULTI_FACTOR_AUTHENTICATION]: {
+      [ev.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION]: {
         searchableTitle: eP.default.Messages.SETTINGS_TWO_FA,
         section: ev.WebSetting.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [ev.WebSetting.ACCOUNT_ENABLE_2FA]: {
         searchableTitle: eP.default.Messages.TWO_FA_ENABLE,
         section: ev.WebSetting.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [ev.WebSetting.ACCOUNT_REMOVE_2FA]: {
         searchableTitle: eP.default.Messages.TWO_FA_REMOVE,
         section: ev.WebSetting.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [ev.WebSetting.ACCOUNT_VIEW_BACKUP_CODES]: {
         searchableTitle: eP.default.Messages.TWO_FA_BACKUP_CODE,
         section: ev.WebSetting.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [ev.WebSetting.ACCOUNT_SMS_BACKUP]: {
         searchableTitle: eP.default.Messages.MFA_SMS_AUTH,
         section: ev.WebSetting.ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
+      },
+      [ev.WebSetting.ACCOUNT_SECURITY_KEYS]: {
+        searchableTitle: eP.default.Messages.TWO_FA_WEBAUTHN_REGISTER,
+        section: ev.WebSetting.ACCOUNT,
+        parent: ev.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [ev.WebSetting.ACCOUNT_REMOVAL]: {
-        section: eD.UserSettingsSections.ACCOUNT,
+        section: eL.UserSettingsSections.ACCOUNT,
         searchableTitle: eP.default.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_SECTION,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT
       },
-      [ev.WebSetting.DELETE_ACCOUNT]: {
-        section: eD.UserSettingsSections.ACCOUNT,
-        searchableTitle: eP.default.Messages.DELETE_ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
-      },
-      [ev.WebSetting.DISABLE_ACCOUNT]: {
-        section: eD.UserSettingsSections.ACCOUNT,
+      [ev.WebSetting.ACCOUNT_DISABLE_ACCOUNT]: {
+        section: eL.UserSettingsSections.ACCOUNT,
         searchableTitle: eP.default.Messages.DISABLE_ACCOUNT,
-        parent: ev.WebSetting.ACCOUNT,
-        element: J.default
+        parent: ev.WebSetting.ACCOUNT_REMOVAL
+      },
+      [ev.WebSetting.ACCOUNT_DELETE_ACCOUNT]: {
+        section: eL.UserSettingsSections.ACCOUNT,
+        searchableTitle: eP.default.Messages.DELETE_ACCOUNT,
+        parent: ev.WebSetting.ACCOUNT_DISABLE_ACCOUNT
       },
       [ev.WebSetting.GAMES]: {
-        section: eD.UserSettingsSections.GAMES,
+        section: eL.UserSettingsSections.GAMES,
         searchableTitle: eP.default.Messages.GAMES,
         label: eP.default.Messages.GAMES,
         ariaLabel: eP.default.Messages.GAMES,
-        element: eR.default,
-        predicate: () => eF
+        element: ex.default,
+        predicate: () => eB
       },
       [ev.WebSetting.PROFILE_CUSTOMIZATION]: {
-        section: eD.UserSettingsSections.PROFILE_CUSTOMIZATION,
+        section: eL.UserSettingsSections.PROFILE_CUSTOMIZATION,
         type: S.ContentTypes.WIDE,
         searchableTitle: eP.default.Messages.USER_SETTINGS_PROFILES,
         label: eP.default.Messages.USER_SETTINGS_PROFILES,
         ariaLabel: eP.default.Messages.USER_SETTINGS_PROFILES,
         element: M.default,
-        newIndicator: (0, a.jsx)(G.PremiumBadge, {
+        newIndicator: (0, a.jsx)(F.PremiumBadge, {
           text: eP.default.Messages.NEW
         }),
         notice: {
           stores: [j.default, h.default],
-          element: R.default
+          element: x.default
         },
         onSettingsClose: () => {
           o.default.wait(() => {
-            (0, N.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eD.UserSettingsSections.PROFILE_CUSTOMIZATION)
+            (0, N.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eL.UserSettingsSections.PROFILE_CUSTOMIZATION)
           })
         }
       },
+      [ev.WebSetting.PROFILE_DISPLAY_NAME]: {
+        section: eL.UserSettingsSections.PROFILE_CUSTOMIZATION,
+        searchableTitle: eP.default.Messages.DISPLAY_NAME,
+        parent: ev.WebSetting.PROFILE_CUSTOMIZATION
+      },
+      [ev.WebSetting.PROFILE_SERVER_PROFILES]: {
+        section: eL.UserSettingsSections.PROFILE_CUSTOMIZATION,
+        searchableTitle: eP.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY,
+        parent: ev.WebSetting.PROFILE_CUSTOMIZATION
+      },
       [ev.WebSetting.PRIVACY_AND_SAFETY]: {
-        section: eD.UserSettingsSections.PRIVACY_AND_SAFETY,
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eP.default.Messages.PRIVACY_AND_SAFETY,
         label: eP.default.Messages.PRIVACY_AND_SAFETY,
+        ariaLabel: eP.default.Messages.PRIVACY_AND_SAFETY,
         element: em.default
       },
-      [ev.WebSetting.FAMILY_CENTER]: {
-        section: eD.UserSettingsSections.FAMILY_CENTER,
+      [ev.WebSetting.PRIVACY_SENSITIVE_MEDIA]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
+        parent: ev.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [ev.WebSetting.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.SETTINGS_DM_SPAM_FILTER,
+        parent: ev.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [ev.WebSetting.PRIVACY_SERVER_PRIVACY]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.USER_DM_SETTINGS_TITLE,
+        parent: ev.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [ev.WebSetting.PRIVACY_DATA_PRIVACY]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.SETTINGS_DATA_PRIVACY_CONTROLS,
+        parent: ev.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [ev.WebSetting.PRIVACY_STAFF_ONLY]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER,
+        parent: ev.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [ev.WebSetting.PRIVACY_ACCOUNT_STANDING]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
+        parent: ev.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [ev.WebSetting.PRIVACY_KEYWORD_FILTER]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.USER_KEYWORD_FILTERS_DESCRIPTION,
+        parent: ev.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [ev.WebSetting.PRIVACY_KEYWORD_FILTER_PROFANITY]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE,
+        parent: ev.WebSetting.PRIVACY_KEYWORD_FILTER
+      },
+      [ev.WebSetting.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE,
+        parent: ev.WebSetting.PRIVACY_KEYWORD_FILTER
+      },
+      [ev.WebSetting.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
+        parent: ev.WebSetting.PRIVACY_KEYWORD_FILTER
+      },
+      [ev.WebSetting.PRIVACY_FAMILY_CENTER]: {
+        section: eL.UserSettingsSections.FAMILY_CENTER,
         searchableTitle: eP.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         label: eP.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         ariaLabel: eP.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         element: er.default,
         badgeCount: ey,
-        newIndicator: (0, a.jsx)(G.TextBadge, {
+        newIndicator: (0, a.jsx)(F.TextBadge, {
           text: eP.default.Messages.NEW,
           color: g.default.BG_BRAND
         }),
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.FAMILY_CENTER_NEW_BADGE]
       },
       [ev.WebSetting.AUTHORIZED_APPS]: {
-        section: eD.UserSettingsSections.AUTHORIZED_APPS,
+        section: eL.UserSettingsSections.AUTHORIZED_APPS,
         searchableTitle: eP.default.Messages.AUTHORIZED_APPS,
         label: eP.default.Messages.AUTHORIZED_APPS,
         element: es.default
       },
       [ev.WebSetting.SESSIONS]: {
-        section: eD.UserSettingsSections.SESSIONS,
+        section: eL.UserSettingsSections.SESSIONS,
         searchableTitle: eP.default.Messages.AUTH_SESSIONS,
         label: eP.default.Messages.AUTH_SESSIONS,
         ariaLabel: eP.default.Messages.AUTH_SESSIONS,
         element: eN.default,
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.AUTH_SESSIONS_NEW],
-        predicate: () => w.default.getCurrentConfig({
+        predicate: () => H.default.getCurrentConfig({
           location: "9f7d84_1"
         }, {
           autoTrackExposure: !1
         }).showSettings
       },
       [ev.WebSetting.CONNECTIONS]: {
-        section: eD.UserSettingsSections.CONNECTIONS,
+        section: eL.UserSettingsSections.CONNECTIONS,
         searchableTitle: eP.default.Messages.CONNECTIONS,
         label: eP.default.Messages.CONNECTIONS,
         ariaLabel: eP.default.Messages.CONNECTIONS,
@@ -303,23 +353,29 @@ let ej = () => {
         },
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION]
       },
+      [ev.WebSetting.CONNECTIONS_CONNECTED_ACCOUNTS]: {
+        section: eL.UserSettingsSections.CONNECTIONS,
+        searchableTitle: eP.default.Messages.CONNECTED_ACCOUNTS,
+        parent: ev.WebSetting.CONNECTIONS,
+        element: en.default
+      },
       [ev.WebSetting.CLIPS]: {
-        section: eD.UserSettingsSections.CLIPS,
+        section: eL.UserSettingsSections.CLIPS,
         searchableTitle: eP.default.Messages.CLIPS,
         label: eP.default.Messages.CLIPS,
         ariaLabel: eP.default.Messages.CLIPS,
-        icon: eB ? (0, a.jsx)(_.default, {}) : void 0,
+        icon: eG ? (0, a.jsx)(_.default, {}) : void 0,
         element: f.default,
-        predicate: () => !eF
+        predicate: () => !eB
       },
       [ev.WebSetting.FRIEND_REQUESTS]: {
-        section: eD.UserSettingsSections.FRIEND_REQUESTS,
+        section: eL.UserSettingsSections.FRIEND_REQUESTS,
         searchableTitle: eP.default.Messages.FRIEND_REQUESTS,
         label: eP.default.Messages.FRIEND_REQUESTS,
         element: eo.default
       },
       [ev.WebSetting.PREMIUM]: {
-        section: eD.UserSettingsSections.PREMIUM,
+        section: eL.UserSettingsSections.PREMIUM,
         ariaLabel: eP.default.Messages.PREMIUM,
         searchableTitle: eP.default.Messages.PREMIUM,
         label: eP.default.Messages.PREMIUM,
@@ -327,25 +383,25 @@ let ej = () => {
         className: eb.premiumTab
       },
       [ev.WebSetting.GUILD_BOOSTING]: {
-        section: eD.UserSettingsSections.GUILD_BOOSTING,
+        section: eL.UserSettingsSections.GUILD_BOOSTING,
         searchableTitle: eP.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
         label: eP.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
         element: ef.default
       },
       [ev.WebSetting.SUBSCRIPTIONS]: {
-        section: eD.UserSettingsSections.SUBSCRIPTIONS,
+        section: eL.UserSettingsSections.SUBSCRIPTIONS,
         ariaLabel: eP.default.Messages.SUBSCRIPTIONS_TITLE,
         searchableTitle: eP.default.Messages.SUBSCRIPTIONS_TITLE,
         label: eP.default.Messages.SUBSCRIPTIONS_TITLE,
-        element: x.default,
-        icon: A ? (0, a.jsx)(y.default, {
+        element: R.default,
+        icon: p ? (0, a.jsx)(y.default, {
           width: 16,
           height: 16,
           color: i.default.unsafe_rawColors.YELLOW_300.css
         }) : null
       },
       [ev.WebSetting.GIFT_INVENTORY]: {
-        section: eD.UserSettingsSections.INVENTORY,
+        section: eL.UserSettingsSections.INVENTORY,
         searchableTitle: eP.default.Messages.GIFT_INVENTORY,
         label: eP.default.Messages.GIFT_INVENTORY,
         element: ec.default,
@@ -353,41 +409,41 @@ let ej = () => {
         badgeCount: t
       },
       [ev.WebSetting.BILLING]: {
-        section: eD.UserSettingsSections.BILLING,
+        section: eL.UserSettingsSections.BILLING,
         searchableTitle: eP.default.Messages.BILLING,
         label: eP.default.Messages.BILLING,
         element: ea.default
       },
       [ev.WebSetting.APPEARANCE]: {
-        section: eD.UserSettingsSections.APPEARANCE,
+        section: eL.UserSettingsSections.APPEARANCE,
         searchableTitle: eP.default.Messages.APPEARANCE,
         label: eP.default.Messages.APPEARANCE,
         ariaLabel: eP.default.Messages.APPEARANCE,
         element: et.default,
-        newIndicator: (0, a.jsx)(G.PremiumBadge, {
+        newIndicator: (0, a.jsx)(F.PremiumBadge, {
           text: eP.default.Messages.NEW
         }),
         newIndicatorDismissibleContentTypes: ej()
       },
       [ev.WebSetting.ACCESSIBILITY]: {
-        section: eD.UserSettingsSections.ACCESSIBILITY,
+        section: eL.UserSettingsSections.ACCESSIBILITY,
         searchableTitle: eP.default.Messages.ACCESSIBILITY,
         label: eP.default.Messages.ACCESSIBILITY,
         element: X.default
       },
       [ev.WebSetting.VOICE_AND_VIDEO]: {
-        section: eD.UserSettingsSections.VOICE,
+        section: eL.UserSettingsSections.VOICE,
         searchableTitle: eP.default.Messages.VOICE_AND_VIDEO,
         label: eP.default.Messages.VOICE_AND_VIDEO,
         element: eM.default,
         predicate: () => b.default.isSupported()
       },
       [ev.WebSetting.POGGERMODE]: {
-        section: eD.UserSettingsSections.POGGERMODE,
+        section: eL.UserSettingsSections.POGGERMODE,
         searchableTitle: eP.default.Messages.POGGERMODE,
         label: eP.default.Messages.POGGERMODE,
         ariaLabel: eP.default.Messages.POGGERMODE,
-        element: p.default,
+        element: A.default,
         predicate: () => C.default.settingsVisible,
         icon: (0, a.jsx)("img", {
           alt: "",
@@ -396,84 +452,84 @@ let ej = () => {
         })
       },
       [ev.WebSetting.CHAT]: {
-        section: eD.UserSettingsSections.TEXT,
+        section: eL.UserSettingsSections.TEXT,
         searchableTitle: eP.default.Messages.CHAT,
         label: eP.default.Messages.CHAT,
         element: eC.default
       },
       [ev.WebSetting.NOTIFICATIONS]: {
-        section: eD.UserSettingsSections.NOTIFICATIONS,
+        section: eL.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: eP.default.Messages.NOTIFICATIONS,
         label: eP.default.Messages.NOTIFICATIONS,
         element: eT.default
       },
       [ev.WebSetting.KEYBINDS]: {
-        section: eD.UserSettingsSections.KEYBINDS,
+        section: eL.UserSettingsSections.KEYBINDS,
         searchableTitle: eP.default.Messages.KEYBINDS,
         label: eP.default.Messages.KEYBINDS,
         element: eS.default
       },
       [ev.WebSetting.LANGUAGE]: {
-        section: eD.UserSettingsSections.LOCALE,
+        section: eL.UserSettingsSections.LOCALE,
         searchableTitle: eP.default.Messages.LANGUAGE,
         label: eP.default.Messages.LANGUAGE,
         element: eE.default
       },
       [ev.WebSetting.WINDOW_SETTINGS]: {
-        section: eD.UserSettingsSections.WINDOWS,
+        section: eL.UserSettingsSections.WINDOWS,
         searchableTitle: eP.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
         label: eP.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
-        element: eA.default,
+        element: ep.default,
         predicate: () => k.isPlatformEmbedded && (0, k.isWindows)()
       },
       [ev.WebSetting.LINUX_SETTINGS]: {
-        section: eD.UserSettingsSections.LINUX,
+        section: eL.UserSettingsSections.LINUX,
         searchableTitle: eP.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
         label: eP.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
         element: eU,
         predicate: () => k.isPlatformEmbedded && (0, k.isLinux)()
       },
       [ev.WebSetting.STREAMER_MODE]: {
-        section: eD.UserSettingsSections.STREAMER_MODE,
+        section: eL.UserSettingsSections.STREAMER_MODE,
         searchableTitle: eP.default.Messages.STREAMER_MODE,
         label: eP.default.Messages.STREAMER_MODE,
         element: eh.default
       },
       [ev.WebSetting.SPEED_TEST]: {
-        section: eD.UserSettingsSections.SPEED_TEST,
+        section: eL.UserSettingsSections.SPEED_TEST,
         searchableTitle: "Speed Test",
         label: "Speed Test",
         element: Q.default,
-        predicate: () => L.default.isSupported() && H.default.getCurrentConfig({
+        predicate: () => D.default.isSupported() && w.default.getCurrentConfig({
           location: "9f7d84_2"
         }).showSettings
       },
       [ev.WebSetting.SETTINGS_ADVANCED]: {
-        section: eD.UserSettingsSections.ADVANCED,
+        section: eL.UserSettingsSections.ADVANCED,
         searchableTitle: eP.default.Messages.SETTINGS_ADVANCED,
         label: eP.default.Messages.SETTINGS_ADVANCED,
         element: ee.default
       },
       [ev.WebSetting.ACTIVITY_PRIVACY]: {
-        section: eD.UserSettingsSections.ACTIVITY_PRIVACY,
+        section: eL.UserSettingsSections.ACTIVITY_PRIVACY,
         searchableTitle: eP.default.Messages.ACTIVITY_PRIVACY,
         label: eP.default.Messages.ACTIVITY_PRIVACY,
         element: $.default,
-        predicate: () => !eF
+        predicate: () => !eB
       },
       [ev.WebSetting.REGISTERED_GAMES]: {
-        section: eD.UserSettingsSections.REGISTERED_GAMES,
+        section: eL.UserSettingsSections.REGISTERED_GAMES,
         searchableTitle: eP.default.Messages.REGISTERED_GAMES,
         label: eP.default.Messages.REGISTERED_GAMES,
         element: ed.default,
-        predicate: () => !eF && (0, ex.shouldShowRegisteredGamesSettings)()
+        predicate: () => !eB && (0, eR.shouldShowRegisteredGamesSettings)()
       },
       [ev.WebSetting.OVERLAY]: {
-        section: eD.UserSettingsSections.OVERLAY,
+        section: eL.UserSettingsSections.OVERLAY,
         searchableTitle: eP.default.Messages.OVERLAY,
         label: eP.default.Messages.OVERLAY,
         element: e_.default,
-        predicate: () => !eF && eG
+        predicate: () => !eB && eF
       },
       [ev.WebSetting.CHANGELOG]: {
         section: "changelog",
@@ -485,11 +541,11 @@ let ej = () => {
         section: "merchandise",
         onClick: () => {
           let e = "https://discordmerch.com/Dsktopprm";
-          B.default.track(eD.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, F.handleClick)({
+          G.default.track(eL.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, B.handleClick)({
             href: e,
             shouldConfirm: !0,
             onConfirm: () => {
-              B.default.track(eD.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
+              G.default.track(eL.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
             }
           })
         },
@@ -498,80 +554,80 @@ let ej = () => {
         ariaLabel: eP.default.Messages.MERCHANDISE
       },
       [ev.WebSetting.HYPESQUAD]: {
-        section: eD.UserSettingsSections.HYPESQUAD_ONLINE,
+        section: eL.UserSettingsSections.HYPESQUAD_ONLINE,
         searchableTitle: eP.default.Messages.USER_SETTINGS_HYPESQUAD,
         label: eP.default.Messages.USER_SETTINGS_HYPESQUAD,
         element: eu.default
       },
       [ev.WebSetting.EXPERIMENTS]: {
-        section: eD.UserSettingsSections.EXPERIMENTS,
+        section: eL.UserSettingsSections.EXPERIMENTS,
         searchableTitle: "Experiments",
         label: "Experiments",
         element: eO.default,
         predicate: () => P.default.isDeveloper
       },
       [ev.WebSetting.DEVELOPER_OPTIONS]: {
-        section: eD.UserSettingsSections.DEVELOPER_OPTIONS,
+        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Developer Options",
         label: "Developer Options",
         element: ei.default,
         predicate: () => P.default.isDeveloper
       },
       [ev.WebSetting.HOTSPOT_OPTIONS]: {
-        section: eD.UserSettingsSections.HOTSPOT_OPTIONS,
+        section: eL.UserSettingsSections.HOTSPOT_OPTIONS,
         searchableTitle: "Hotspot Options",
         label: "Hotspot Options",
         element: Y.default,
         predicate: () => P.default.isDeveloper
       },
       [ev.WebSetting.DISMISSIBLE_CONTENT_OPTIONS]: {
-        section: eD.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
+        section: eL.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
         searchableTitle: "Dismissible Contents",
         label: "Dismissible Contents",
         element: I.default,
         predicate: () => P.default.isDeveloper
       },
       [ev.WebSetting.PAYMENT_FLOW_MODALS]: {
-        section: eD.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
+        section: eL.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
         searchableTitle: "Payment Flow Modals",
         label: "Payment Flow Modals",
         element: W.default,
         predicate: () => P.default.isDeveloper
       },
       [ev.WebSetting.TEXT_PLAYGROUND]: {
-        section: eD.UserSettingsSections.TEXT_PLAYGROUND,
+        section: eL.UserSettingsSections.TEXT_PLAYGROUND,
         searchableTitle: "Text Playground",
         label: "Text Playground",
-        element: ep.default,
+        element: eA.default,
         predicate: () => (0, Z.shouldShowTextPlayground)() || P.default.isDeveloper
       },
       [ev.WebSetting.DESIGN_SYSTEMS]: {
-        section: eD.UserSettingsSections.DESIGN_SYSTEMS,
+        section: eL.UserSettingsSections.DESIGN_SYSTEMS,
         label: "Design Systems",
         element: el.default,
         predicate: () => P.default.isDeveloper
       },
       [ev.WebSetting.TEXT_COMPONENTS]: {
-        section: eD.UserSettingsSections.TEXT_COMPONENT,
+        section: eL.UserSettingsSections.TEXT_COMPONENT,
         searchableTitle: "Text Components",
         label: "Text Components",
         element: q.default,
         predicate: () => (0, Z.shouldShowTextPlayground)() || P.default.isDeveloper
       },
       [ev.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL]: {
-        section: eD.UserSettingsSections.PROFILE_EFFECTS_PREVIEW_TOOL,
+        section: eL.UserSettingsSections.PROFILE_EFFECTS_PREVIEW_TOOL,
         searchableTitle: "Profile Effects Preview Tool",
         label: "Profile Effects Preview Tool",
         element: m.default,
         predicate: () => P.default.isDeveloper
       },
       [ev.WebSetting.QUEST_PREVIEW_TOOL]: {
-        section: eD.UserSettingsSections.QUEST_PREVIEW_TOOL,
+        section: eL.UserSettingsSections.QUEST_PREVIEW_TOOL,
         searchableTitle: "Quest Preview Tool",
         label: "Quest Preview Tool",
-        element: D.default,
+        element: L.default,
         predicate: () => (0, v.isQuestPreviewToolEnabled)({
-          location: eL.QuestsExperimentLocations.QUEST_PREVIEW_TOOL
+          location: eD.QuestsExperimentLocations.QUEST_PREVIEW_TOOL
         })
       },
       [ev.WebSetting.LOGOUT]: {

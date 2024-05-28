@@ -1,15 +1,18 @@
 "use strict";
 s.r(t), s.d(t, {
   getSearchableSettingTitles: function() {
-    return O
+    return x
   },
   useDefaultUserSettingsSections: function() {
-    return p
+    return O
   },
   useGenerateUserSettingsSections: function() {
-    return h
+    return C
   },
   useSearchUserSettingsSections: function() {
+    return R
+  },
+  useViewableSettingsFilterFromSearch: function() {
     return A
   }
 }), s("536091"), s("47120"), s("653041");
@@ -28,40 +31,41 @@ var a = s("470079"),
   _ = s("620163"),
   f = s("295545"),
   m = s("168308"),
-  g = s("726985"),
-  I = s("689938");
+  g = s("839469"),
+  I = s("726985"),
+  N = s("689938");
 
-function N() {
+function h() {
   return [{
-    header: I.default.Messages.USER_SETTINGS,
-    settings: [g.WebSetting.SEARCH_BAR, g.WebSetting.ACCOUNT, g.WebSetting.GAMES, g.WebSetting.PROFILE_CUSTOMIZATION, g.WebSetting.PRIVACY_AND_SAFETY, g.WebSetting.FAMILY_CENTER, g.WebSetting.AUTHORIZED_APPS, g.WebSetting.SESSIONS, g.WebSetting.CONNECTIONS, g.WebSetting.CLIPS, g.WebSetting.FRIEND_REQUESTS]
+    header: N.default.Messages.USER_SETTINGS,
+    settings: [I.WebSetting.SEARCH_BAR, I.WebSetting.ACCOUNT, I.WebSetting.GAMES, I.WebSetting.PROFILE_CUSTOMIZATION, I.WebSetting.PRIVACY_AND_SAFETY, I.WebSetting.PRIVACY_FAMILY_CENTER, I.WebSetting.AUTHORIZED_APPS, I.WebSetting.SESSIONS, I.WebSetting.CONNECTIONS, I.WebSetting.CLIPS, I.WebSetting.FRIEND_REQUESTS]
   }, {
-    header: I.default.Messages.BILLING_SETTINGS,
+    header: N.default.Messages.BILLING_SETTINGS,
     divider: !0,
-    settings: [g.WebSetting.PREMIUM, g.WebSetting.GUILD_BOOSTING, g.WebSetting.SUBSCRIPTIONS, g.WebSetting.GIFT_INVENTORY, g.WebSetting.BILLING]
+    settings: [I.WebSetting.PREMIUM, I.WebSetting.GUILD_BOOSTING, I.WebSetting.SUBSCRIPTIONS, I.WebSetting.GIFT_INVENTORY, I.WebSetting.BILLING]
   }, {
-    header: I.default.Messages.APP_SETTINGS,
+    header: N.default.Messages.APP_SETTINGS,
     divider: !0,
-    settings: [g.WebSetting.APPEARANCE, g.WebSetting.ACCESSIBILITY, g.WebSetting.VOICE_AND_VIDEO, g.WebSetting.POGGERMODE, g.WebSetting.CHAT, g.WebSetting.NOTIFICATIONS, g.WebSetting.KEYBINDS, g.WebSetting.LANGUAGE, g.WebSetting.WINDOW_SETTINGS, g.WebSetting.LINUX_SETTINGS, g.WebSetting.STREAMER_MODE, g.WebSetting.SPEED_TEST, g.WebSetting.SETTINGS_ADVANCED]
+    settings: [I.WebSetting.APPEARANCE, I.WebSetting.ACCESSIBILITY, I.WebSetting.VOICE_AND_VIDEO, I.WebSetting.POGGERMODE, I.WebSetting.CHAT, I.WebSetting.NOTIFICATIONS, I.WebSetting.KEYBINDS, I.WebSetting.LANGUAGE, I.WebSetting.WINDOW_SETTINGS, I.WebSetting.LINUX_SETTINGS, I.WebSetting.STREAMER_MODE, I.WebSetting.SPEED_TEST, I.WebSetting.SETTINGS_ADVANCED]
   }, {
-    header: I.default.Messages.ACTIVITY_SETTINGS,
+    header: N.default.Messages.ACTIVITY_SETTINGS,
     divider: !0,
-    settings: [g.WebSetting.ACTIVITY_PRIVACY, g.WebSetting.REGISTERED_GAMES, g.WebSetting.OVERLAY]
-  }, {
-    divider: !0,
-    settings: [g.WebSetting.CHANGELOG, g.WebSetting.MERCHANDISE, g.WebSetting.HYPESQUAD, g.WebSetting.EXPERIMENTS, g.WebSetting.DEVELOPER_OPTIONS, g.WebSetting.HOTSPOT_OPTIONS, g.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, g.WebSetting.PAYMENT_FLOW_MODALS, g.WebSetting.DESIGN_SYSTEMS, g.WebSetting.TEXT_PLAYGROUND, g.WebSetting.TEXT_COMPONENTS, g.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, g.WebSetting.QUEST_PREVIEW_TOOL]
+    settings: [I.WebSetting.ACTIVITY_PRIVACY, I.WebSetting.REGISTERED_GAMES, I.WebSetting.OVERLAY]
   }, {
     divider: !0,
-    settings: [g.WebSetting.LOGOUT]
+    settings: [I.WebSetting.CHANGELOG, I.WebSetting.MERCHANDISE, I.WebSetting.HYPESQUAD, I.WebSetting.EXPERIMENTS, I.WebSetting.DEVELOPER_OPTIONS, I.WebSetting.HOTSPOT_OPTIONS, I.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, I.WebSetting.PAYMENT_FLOW_MODALS, I.WebSetting.DESIGN_SYSTEMS, I.WebSetting.TEXT_PLAYGROUND, I.WebSetting.TEXT_COMPONENTS, I.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, I.WebSetting.QUEST_PREVIEW_TOOL]
   }, {
     divider: !0,
-    settings: [g.WebSetting.SOCIAL_LINKS, g.WebSetting.CLIENT_DEBUG_INFO]
+    settings: [I.WebSetting.LOGOUT]
   }, {
-    settings: [g.WebSetting.SEARCH_NO_RESULTS]
+    divider: !0,
+    settings: [I.WebSetting.SOCIAL_LINKS, I.WebSetting.CLIENT_DEBUG_INFO]
+  }, {
+    settings: [I.WebSetting.SEARCH_NO_RESULTS]
   }]
 }
 
-function h() {
+function C() {
   let e = (0, S.useUnseenOutboundPromotions)().length,
     t = (0, c.useIsPrepaidPaymentPastDue)(),
     s = (0, n.useStateFromStores)([E.default], () => E.default.getProps().impressionSource),
@@ -96,12 +100,50 @@ function h() {
   })
 }
 
-function C(e, t, s) {
+function A(e) {
+  let {
+    searchResults: t
+  } = (0, g.useSettingSearchResults)(), s = C(), a = s[e], n = Object.fromEntries(Object.entries(s).filter(e => {
+    let [t, {
+      parent: s,
+      section: n
+    }] = e;
+    return null != s && n === a.section
+  }).map(e => {
+    let [t, {
+      parent: s
+    }] = e;
+    return [t, s]
+  })), l = new Set, i = e => {
+    if (l.has(e)) return;
+    l.add(e);
+    let t = s[e].parent;
+    t && i(t)
+  }, r = e => {
+    if (!l.has(e))
+      for (let t of (l.add(e), Object.entries(n).filter(t => {
+          let [s, a] = t;
+          return a === e
+        }).map(e => {
+          let [t] = e;
+          return t
+        }))) r(t)
+  };
+  for (let e of t)
+    if (null != s[e].element && null == s[e].parent) {
+      l.clear();
+      break
+    } else Object.values(n).includes(e) && r(e), i(e);
+  return l
+}
+
+function p(e, t, s) {
   let a = [],
     n = function(e, t) {
       let s = new Map;
       return null != t && t.forEach(t => {
         let a = e[t].parent;
+        for (; null != a && null != e[a].parent;) a = e[a].parent;
         if (null != a) {
           var n;
           let e = null !== (n = s.get(a)) && void 0 !== n ? n : 0;
@@ -120,7 +162,7 @@ function C(e, t, s) {
         ...t[e],
         tabPredicate: () => {
           var t, a, l;
-          return null == s || (t = e, a = s, l = n, t === g.WebSetting.SEARCH_BAR || t === g.WebSetting.SEARCH_NO_RESULTS && 0 === a.size || l.has(t) || a.has(t))
+          return null == s || (t = e, a = s, l = n, t === I.WebSetting.SEARCH_BAR || t === I.WebSetting.SEARCH_NO_RESULTS && 0 === a.size || l.has(t) || a.has(t))
         },
         searchFilterCount: (null == s ? void 0 : s.has(e)) ? void 0 : n.get(e)
       })
@@ -128,18 +170,18 @@ function C(e, t, s) {
   }), a
 }
 
-function p() {
-  let e = h(),
-    t = a.useMemo(() => N(), []);
-  return a.useMemo(() => C(t, e), [t, e])
+function O() {
+  let e = C(),
+    t = a.useMemo(() => h(), []);
+  return a.useMemo(() => p(t, e), [t, e])
 }
 
-function A(e) {
-  let t = h(),
+function R(e) {
+  let t = C(),
     s = a.useMemo(() => (function() {
-      let e = N();
+      let e = h();
       return [{
-        header: I.default.Messages.USER_SETTINGS,
+        header: N.default.Messages.USER_SETTINGS,
         settings: e.map(e => {
           let {
             settings: t
@@ -148,10 +190,10 @@ function A(e) {
         }).flat(1)
       }]
     })(), []);
-  return a.useMemo(() => C(s, t, new Set(e)), [s, t, e])
+  return a.useMemo(() => p(s, t, new Set(e)), [s, t, e])
 }
 
-function O(e) {
+function x(e) {
   return Object.entries(e).filter(e => {
     let [t, s] = e;
     return s.section !== i.SectionTypes.CUSTOM && null != s.searchableTitle
