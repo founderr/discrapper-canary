@@ -28,7 +28,7 @@ var i = n("735250"),
   N = n("271383"),
   p = n("594174"),
   O = n("778045"),
-  C = n("524989"),
+  C = n("355932"),
   R = n("981631"),
   g = n("308083"),
   L = n("689938"),
@@ -95,38 +95,19 @@ function y(e) {
   let {
     traits: t,
     traitsToHighlight: n
-  } = e, s = r.useMemo(() => null == n ? new Set : new Set(n), [n]), l = r.useCallback(e => (0, i.jsx)(S.default, {
+  } = e, s = r.useMemo(() => null == n ? new Set : new Set(n), [n]), o = r.useCallback(e => (0, i.jsx)(S.default, {
     className: a()(v.thinTrait, {
       [v.selectedTrait]: s.has(e)
     }),
     text: e,
     selected: s.has(e)
-  }, e), [s]), u = r.useCallback(e => (0, i.jsx)(o.Tooltip, {
-    text: (0, i.jsx)("div", {
-      className: v.overflowTooltip,
-      children: e.map(e => (0, i.jsx)(S.default, {
-        text: e,
-        className: v.thinTrait
-      }, e))
-    }),
-    "aria-label": "overflow",
-    children: t => (0, i.jsx)("div", {
-      ...t,
-      children: (0, i.jsx)(S.default, {
-        text: L.default.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({
-          count: e.length
-        }),
-        className: v.thinTrait
-      })
-    })
-  }), []);
+  }, e), [s]);
   return (0, i.jsx)(C.default, {
-    items: t,
-    renderItem: l,
-    renderOverflow: u,
-    maxLines: 2,
     className: v.traitsContainer,
-    spacing: 4
+    items: t,
+    renderItem: o,
+    maxLines: 2,
+    itemGapPx: 4
   })
 }
 
