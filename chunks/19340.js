@@ -13,6 +13,7 @@ e.exports = {
   forumPostTitle: "forumPostTitle__578d2",
   guildBreadcrumbContainer: "guildBreadcrumbContainer__95b9f",
   guildBreadcrumbIcon: "guildBreadcrumbIcon__7f689",
+  guildSidebar: "guildSidebar__5583b",
   loader: "loader__2854a",
   noChat: "noChat_fed339",
   parentChannelName: "parentChannelName__0cc0b",
