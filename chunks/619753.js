@@ -178,7 +178,7 @@ function b(e) {
     jumpToMessage: D,
     listNavigator: b,
     favoriteSearch: U
-  } = e, F = S.RenderSpoilers.useSetting(), w = (0, m.useShouldFilterKeywords)(), k = l.useCallback(e => {
+  } = e, F = S.RenderSpoilers.useSetting(), w = (0, m.useActiveKeywordFiltersCacheKey)(), k = l.useCallback(e => {
     if (e === v.default.getChannelId()) return;
     let t = _.default.getChannel(e);
     if (null != t) I.default.can(O.Permissions.VIEW_CHANNEL, t) && (0, g.transitionToChannel)(t.id)
@@ -189,7 +189,7 @@ function b(e) {
     embeds: []
   }, {
     postProcessor: o,
-    shouldFilterKeywords: w
+    shouldFilterKeywords: null != w
   }), Z = l.useRef(null), [q, X] = l.useState(!1);
   l.useEffect(() => {
     let e = Z.current;

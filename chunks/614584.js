@@ -33,7 +33,7 @@ let I = l.memo(function(e) {
     referencedUsernameProfile: v,
     referencedAvatarProfile: x,
     setPopout: M
-  } = e, R = I.state === f.ReferencedMessageState.LOADED ? I.message : void 0, y = (0, C.useNullableMessageAuthor)(R), L = (0, o.useShouldFilterKeywords)(), O = (0, u.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), j = l.useMemo(() => {
+  } = e, R = I.state === f.ReferencedMessageState.LOADED ? I.message : void 0, y = (0, C.useNullableMessageAuthor)(R), L = (0, o.useActiveKeywordFiltersCacheKey)(), O = (0, u.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), j = l.useMemo(() => {
     if (null == R) return null;
     if (R.type === _.MessageTypes.USER_JOIN) return (0, i.astToString)(p.default.getSystemMessageUserJoin(R.id).astFormat({
       username: null != y ? y.nick : R.author.username,
@@ -61,7 +61,7 @@ let I = l.memo(function(e) {
       let e = {
           formatInline: !0,
           allowLinks: !0,
-          shouldFilterKeywords: L
+          shouldFilterKeywords: null != L
         },
         t = R.isFirstMessageInForumPost(A) ? {
           ...e,

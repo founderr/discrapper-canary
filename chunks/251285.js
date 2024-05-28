@@ -14,7 +14,7 @@ var a = n("442837"),
   d = n("768119");
 
 function c(e) {
-  let t = (0, i.useShouldFilterKeywords)(),
+  let t = (0, i.useActiveKeywordFiltersCacheKey)(),
     n = (0, a.useStateFromStores)([d.default, s.default], () => {
       var n;
       let a = d.default.getQuery(e),
@@ -31,7 +31,7 @@ function c(e) {
           postProcessor: u,
           allowHeading: !0,
           allowList: !0,
-          shouldFilterKeywords: t
+          shouldFilterKeywords: null != t
         })) : a
       }))
     }, [e, t], a.statesWillNeverBeEqual),

@@ -20,9 +20,9 @@ let E = a.memo(function(e) {
     channel: n,
     referencedMessage: f,
     compact: E = !1
-  } = e, _ = f.state === r.ReferencedMessageState.LOADED ? f.message : void 0, m = (0, i.useShouldFilterKeywords)(), T = a.useMemo(() => (null == _ ? void 0 : _.content) != null && "" !== _.content ? (0, d.default)(_, {
+  } = e, _ = f.state === r.ReferencedMessageState.LOADED ? f.message : void 0, m = (0, i.useActiveKeywordFiltersCacheKey)(), T = a.useMemo(() => (null == _ ? void 0 : _.content) != null && "" !== _.content ? (0, d.default)(_, {
     formatInline: !0,
-    shouldFilterKeywords: m
+    shouldFilterKeywords: null != m
   }).content : null, [_, m]), I = (0, l.useStateFromStores)([o.default], () => null != _ && o.default.isBlocked(_.author.id), [_]), p = (0, c.useNullableMessageAuthor)(_), h = (0, c.useNullableMessageAuthor)(t);
   return (0, s.jsx)(u.default, {
     repliedAuthor: p,

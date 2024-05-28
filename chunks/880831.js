@@ -40,7 +40,7 @@ function O(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), N = (0, p.useShouldFilterKeywords)(), v = l.useCallback(e => {
+  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), N = (0, p.useActiveKeywordFiltersCacheKey)(), v = l.useCallback(e => {
     "A" !== e.target.nodeName && (f.default.updateChatOpen(n.channel_id, !0), h.default.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
@@ -48,7 +48,7 @@ function O(e) {
     }))
   }, [n.channel_id, n.id]), x = null != n.content && "" !== n.content ? (0, E.default)(n, {
     isInteracting: c,
-    shouldFilterKeywords: N
+    shouldFilterKeywords: null != N
   }).content : null, {
     contentPlaceholder: M,
     renderedContent: L,

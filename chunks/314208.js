@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return H
+    return A
   }
 });
 var s = a("735250"),
@@ -28,15 +28,15 @@ var s = a("735250"),
   R = a("689938"),
   M = a("726475");
 
-function H(e) {
-  return e.isActiveThread() ? (0, s.jsx)(A, {
+function A(e) {
+  return e.isActiveThread() ? (0, s.jsx)(H, {
     channel: e
   }) : (0, s.jsx)(I, {
     channel: e
   })
 }
 
-function A(e) {
+function H(e) {
   let {
     channel: t
   } = e, a = (0, r.useStateFromStores)([x.default], () => x.default.getMostRecentMessage(t.id));
@@ -77,11 +77,11 @@ function p(e) {
       colorString: m
     } = (0, f.default)(a),
     C = (0, r.useStateFromStores)([T.default], () => T.default.isBlocked(a.author.id)),
-    v = (0, o.useShouldFilterKeywords)(),
+    v = (0, o.useActiveKeywordFiltersCacheKey)(),
     x = l.useMemo(() => {
       let e = null != a.content && "" !== a.content ? (0, c.default)(a, {
           formatInline: !0,
-          shouldFilterKeywords: v
+          shouldFilterKeywords: null != v
         }).content : null,
         {
           contentPlaceholder: t,

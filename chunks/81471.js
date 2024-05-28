@@ -27,12 +27,12 @@ let A = s.memo(function(e) {
     loaded: n,
     error: l,
     message: A
-  } = (0, m.useMessageRequestPreview)(t), N = (0, u.useShouldFilterKeywords)(), v = (0, r.useStateFromStores)([h.default], () => null != A && h.default.isBlocked(A.author.id), [A]), R = (0, r.useStateFromStores)([E.default], () => E.default.can(S.Permissions.MANAGE_MESSAGES, t)), O = f.RenderSpoilers.useSetting(), {
+  } = (0, m.useMessageRequestPreview)(t), N = (0, u.useActiveKeywordFiltersCacheKey)(), v = (0, r.useStateFromStores)([h.default], () => null != A && h.default.isBlocked(A.author.id), [A]), R = (0, r.useStateFromStores)([E.default], () => E.default.can(S.Permissions.MANAGE_MESSAGES, t)), O = f.RenderSpoilers.useSetting(), {
     content: L
   } = s.useMemo(() => (null == A ? void 0 : A.content) != null && "" !== A.content ? (0, c.default)(A, {
     formatInline: !0,
     noStyleAndInteraction: !0,
-    shouldFilterKeywords: N
+    shouldFilterKeywords: null != N
   }) : {
     content: null
   }, [A, N]), M = null;

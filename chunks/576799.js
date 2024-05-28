@@ -20,13 +20,13 @@ function _(e) {
   let {
     message: t,
     channel: n
-  } = e, _ = (0, l.useStateFromStores)([d.default], () => d.default.isBlocked(t.author.id)), m = (0, r.useShouldFilterKeywords)(), T = a.useMemo(() => ({
+  } = e, _ = (0, l.useStateFromStores)([d.default], () => d.default.isBlocked(t.author.id)), m = (0, r.useActiveKeywordFiltersCacheKey)(), T = a.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
   (0, i.useSubscribeGuildMembers)(T);
   let I = a.useMemo(() => null != t.content && "" !== t.content ? (0, o.default)(t, {
     formatInline: !0,
-    shouldFilterKeywords: m
+    shouldFilterKeywords: null != m
   }).content : null, [t, m]);
   return (0, s.jsxs)("div", {
     className: E.threadMessageAccessory,

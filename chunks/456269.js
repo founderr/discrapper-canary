@@ -16,7 +16,7 @@ u.r(t), u.d(t, {
     return em
   },
   useCanCreateForumChannel: function() {
-    return V
+    return K
   },
   useCanManageChannel: function() {
     return el
@@ -34,7 +34,7 @@ u.r(t), u.d(t, {
     return Z
   },
   useExistingPin: function() {
-    return K
+    return W
   },
   useFacepileUsers: function() {
     return q
@@ -58,7 +58,7 @@ u.r(t), u.d(t, {
     return z
   },
   useLoadForumUnreadCounts: function() {
-    return W
+    return V
   },
   useMessageCount: function() {
     return $
@@ -101,9 +101,9 @@ var n = u("470079"),
   _ = u("91159"),
   v = u("592125"),
   A = u("720202"),
-  M = u("430824"),
-  p = u("496675"),
-  C = u("306680"),
+  C = u("430824"),
+  M = u("496675"),
+  p = u("306680"),
   F = u("699516"),
   I = u("111583"),
   N = u("594174"),
@@ -114,8 +114,8 @@ var n = u("470079"),
   b = u("368844"),
   y = u("660189"),
   D = u("581036"),
-  L = u("208970"),
-  w = u("882252"),
+  w = u("208970"),
+  L = u("882252"),
   G = u("710352"),
   k = u("981631"),
   j = u("176505"),
@@ -143,9 +143,9 @@ function Y(e) {
   }).enabled
 }
 
-function V(e) {
+function K(e) {
   return function(e) {
-    let t = (0, i.useStateFromStores)([M.default], () => M.default.getGuild(e));
+    let t = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(e));
     return x.useExperiment({
       guildId: e,
       location: "553713_1"
@@ -155,14 +155,14 @@ function V(e) {
   }(e)
 }
 
-function W(e, t, u) {
+function V(e, t, u) {
   let l = (0, i.useStateFromStores)([T.default], () => T.default.hasLoaded(e.guild_id));
   n.useEffect(() => {
     if (!l) return;
     let n = U.default.getThreadIds(e.id, t, u),
-      r = D.default.getThreadIdsMissingCounts(e.guild_id, n).filter(e => (0, w.canDisplayPostUnreadMessageCount)(e, [C.default])).slice(0, 180).map(e => ({
+      r = D.default.getThreadIdsMissingCounts(e.guild_id, n).filter(e => (0, L.canDisplayPostUnreadMessageCount)(e, [p.default])).slice(0, 180).map(e => ({
         threadId: e,
-        ackMessageId: C.default.getTrackedAckMessageId(e)
+        ackMessageId: p.default.getTrackedAckMessageId(e)
       }));
     r.length > 0 && o.default.dispatch({
       type: "REQUEST_FORUM_UNREADS",
@@ -173,7 +173,7 @@ function W(e, t, u) {
   }, [e.id, e.guild_id, l, u, t])
 }
 
-function K(e) {
+function W(e) {
   return (0, i.useStateFromStores)([T.default, v.default], () => {
     let t = r()(T.default.getThreadsForParent(e.guild_id, e.parent_id)).keys().filter(e => {
       var t;
@@ -221,7 +221,7 @@ function z(e, t) {
   let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : G.ForumTimestampFormats.DURATION_AGO,
     l = n.useMemo(() => R.default.extractTimestamp(e.id), [e.id]),
     r = (0, _.useLastMessageTimestamp)(e),
-    i = n.useMemo(() => (0, w.getForumTimestampFormatter)(t, u), [t, u]);
+    i = n.useMemo(() => (0, L.getForumTimestampFormatter)(t, u), [t, u]);
   return n.useMemo(() => t === a.ThreadSortOrder.CREATION_DATE ? (0, _.getTimestampString)(l, i) : (0, _.getTimestampString)(r, i), [r, t, l, i])
 }
 
@@ -252,7 +252,7 @@ function $(e) {
       return null !== (t = h.default.getCount(e.id)) && void 0 !== t ? t : 0
     }),
     u = (0, E.getMessageCountText)(t, e.id),
-    n = (0, i.useStateFromStores)([C.default], () => (0, w.canDisplayPostUnreadMessageCount)(e.id, [C.default])),
+    n = (0, i.useStateFromStores)([p.default], () => (0, L.canDisplayPostUnreadMessageCount)(e.id, [p.default])),
     l = (0, i.useStateFromStores)([D.default], () => {
       if (!n) return null;
       let u = D.default.getCount(e.id);
@@ -309,7 +309,7 @@ function en(e) {
     firstMessage: t,
     formatInline: u = !0,
     noStyleAndInteraction: l = !0
-  } = e, r = (0, c.useShouldFilterKeywords)(), {
+  } = e, r = (0, c.useActiveKeywordFiltersCacheKey)(), {
     hasSpoilerEmbeds: a,
     content: i
   } = n.useMemo(() => (null == t ? void 0 : t.content) != null && "" !== t.content ? (0, m.default)(t, {
@@ -317,7 +317,7 @@ function en(e) {
     noStyleAndInteraction: l,
     allowHeading: !0,
     allowList: !0,
-    shouldFilterKeywords: r
+    shouldFilterKeywords: null != r
   }) : {
     hasSpoilerEmbeds: !1,
     content: null
@@ -331,7 +331,7 @@ function en(e) {
 }
 
 function el(e) {
-  return (0, i.useStateFromStores)([p.default], () => p.default.can(k.Permissions.MANAGE_CHANNELS, e))
+  return (0, i.useStateFromStores)([M.default], () => M.default.can(k.Permissions.MANAGE_CHANNELS, e))
 }
 let er = {
   isNew: !1,
@@ -339,10 +339,10 @@ let er = {
 };
 
 function ea(e) {
-  return (0, i.useStateFromStoresObject)([M.default, C.default], () => {
+  return (0, i.useStateFromStoresObject)([C.default, p.default], () => {
     var t;
-    let u = M.default.getGuild(null !== (t = e.getGuildId()) && void 0 !== t ? t : k.EMPTY_STRING_SNOWFLAKE_ID);
-    return null == u ? er : (0, w.getForumPostReadStates)(e, u, [C.default])
+    let u = C.default.getGuild(null !== (t = e.getGuildId()) && void 0 !== t ? t : k.EMPTY_STRING_SNOWFLAKE_ID);
+    return null == u ? er : (0, L.getForumPostReadStates)(e, u, [p.default])
   })
 }
 
@@ -351,7 +351,7 @@ function ei(e) {
 }
 
 function eo(e) {
-  let t = (0, i.useStateFromStores)([p.default], () => p.default.can(k.Permissions.MANAGE_THREADS, e));
+  let t = (0, i.useStateFromStores)([M.default], () => M.default.can(k.Permissions.MANAGE_THREADS, e));
   return n.useMemo(() => {
     var u;
     let n = [...null !== (u = null == e ? void 0 : e.availableTags) && void 0 !== u ? u : []];
@@ -365,21 +365,21 @@ function ed(e, t) {
 }
 
 function es(e) {
-  return (0, i.useStateFromStores)([p.default], () => p.default.can(k.Permissions.READ_MESSAGE_HISTORY, e))
+  return (0, i.useStateFromStores)([M.default], () => M.default.can(k.Permissions.READ_MESSAGE_HISTORY, e))
 }
 
 function ef(e) {
-  return (0, i.useStateFromStores)([p.default], () => p.default.can(k.Permissions.READ_MESSAGE_HISTORY, e))
+  return (0, i.useStateFromStores)([M.default], () => M.default.can(k.Permissions.READ_MESSAGE_HISTORY, e))
 }
 
 function ec(e) {
   let {
     channelId: t
   } = e;
-  return (0, i.useStateFromStoresObject)([L.default], () => ({
-    isSearchLoading: L.default.getSearchLoading(t),
-    searchQuery: L.default.getSearchQuery(t),
-    searchResults: L.default.getSearchResults(t)
+  return (0, i.useStateFromStoresObject)([w.default], () => ({
+    isSearchLoading: w.default.getSearchLoading(t),
+    searchQuery: w.default.getSearchQuery(t),
+    searchResults: w.default.getSearchResults(t)
   }))
 }
 
@@ -416,22 +416,22 @@ function em(e, t) {
 }
 
 function eg(e, t) {
-  return (0, i.useStateFromStores)([S.default, C.default, v.default], () => {
+  return (0, i.useStateFromStores)([S.default, p.default, v.default], () => {
     let u = v.default.getChannel(t);
     if (!(null == u ? void 0 : u.isForumLikeChannel())) return 0;
     let n = S.default.getActiveJoinedUnreadThreadsForParent(e, t),
       l = S.default.getActiveUnjoinedUnreadThreadsForParent(e, t),
-      r = C.default.ackMessageId(t),
+      r = p.default.ackMessageId(t),
       a = 0;
     if (null == r) return a;
     for (let e in n) {
       let t = n[e],
-        u = C.default.lastMessageId(t.channel.id);
+        u = p.default.lastMessageId(t.channel.id);
       null != u && u > r && a++
     }
     for (let e in l) {
       let t = l[e],
-        u = C.default.lastMessageId(t.id);
+        u = p.default.lastMessageId(t.id);
       null != u && u > r && a++
     }
     return a
