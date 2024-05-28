@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 });
 var i = n("735250"),
@@ -9,9 +9,11 @@ var i = n("735250"),
   s = n("120356"),
   a = n.n(s),
   o = n("481060"),
-  l = n("718582"),
-  u = n("411511");
-let d = [
+  l = n("410030"),
+  u = n("718582"),
+  d = n("981631"),
+  _ = n("411511");
+let c = [
   [{
     translateY: 0,
     translateX: 0,
@@ -82,54 +84,54 @@ let d = [
   }]
 ];
 
-function _(e) {
+function E(e) {
   let {
     users: t,
     guildId: n
-  } = e, s = (0, l.useSortUsersByAffinity)(t), o = r.useRef(!1);
+  } = e, s = (0, u.useSortUsersByAffinity)(t), o = (0, l.default)(), E = r.useRef(!1);
   r.useEffect(() => {
-    o.current = !0
+    E.current = !0
   }, []);
-  let _ = Math.min(d.length - 1, s.length - 1),
-    I = d[Math.max(0, _)],
-    T = s.length > 4,
-    f = s.length - 3,
-    S = f >= 10 ? 1 : 2,
-    h = I.map((e, t) => {
+  let f = Math.min(c.length - 1, s.length - 1),
+    S = c[Math.max(0, f)],
+    h = s.length > 4,
+    A = s.length - 3,
+    m = A >= 10 ? 1 : 2,
+    N = S.map((e, t) => {
       let r = s[t];
       if (null == r) return null;
-      let o = T && t === S;
+      let o = h && t === m;
       return (0, i.jsx)("div", {
-        className: a()(u.avatarContainer),
+        className: a()(_.avatarContainer),
         style: {
           opacity: 1,
           transform: "translateX(".concat(e.translateX, "px) translateY(").concat(e.translateY, "px) scale(").concat(e.scale, ")")
         },
-        children: o ? (0, i.jsx)(c, {
-          count: f
-        }) : (0, i.jsx)(E, {
+        children: o ? (0, i.jsx)(I, {
+          count: A
+        }) : (0, i.jsx)(T, {
           guildId: n,
           user: r
         })
       }, r.id)
     });
   return (0, i.jsx)("div", {
-    className: u.gradientContainer,
+    className: o === d.ThemeTypes.DARK ? _.gradientContainerDark : _.gradientContainer,
     children: (0, i.jsx)("div", {
-      className: u.groupContainer,
-      children: h
+      className: _.groupContainer,
+      children: N
     })
   })
 }
 
-function c(e) {
+function I(e) {
   let {
     count: t
   } = e;
   return (0, i.jsx)("div", {
-    className: u.avatarWrapper,
+    className: _.avatarWrapper,
     children: (0, i.jsx)("div", {
-      className: u.overflowCount,
+      className: _.overflowCount,
       children: (0, i.jsxs)(o.Text, {
         variant: "text-sm/semibold",
         children: ["+", t]
@@ -138,15 +140,15 @@ function c(e) {
   })
 }
 
-function E(e) {
+function T(e) {
   let {
     guildId: t,
     user: n
   } = e;
   return null == r.useMemo(() => null == n ? void 0 : n.getAvatarSource(t, !1, 30), [t, n]) ? null : (0, i.jsx)("div", {
-    className: u.avatarWrapper,
+    className: _.avatarWrapper,
     children: (0, i.jsx)("img", {
-      className: u.avatar,
+      className: _.avatar,
       src: null == n ? void 0 : n.getAvatarURL(t, 80),
       alt: ""
     })
