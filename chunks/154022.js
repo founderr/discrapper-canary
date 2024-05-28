@@ -55,7 +55,7 @@ function W(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: y.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, _.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, a.jsx)(X, {}), (0, _.canEnableForcedColors)() ? (0, a.jsx)(J, {}) : null, (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(es, {}), (0, a.jsx)(u.FormDivider, {
       className: B.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
@@ -206,6 +206,19 @@ function q() {
 }
 
 function Z() {
+  let e = (0, d.useStateFromStores)([T.default], () => T.default.hideTags);
+  return (0, a.jsx)(u.FormItem, {
+    title: y.default.Messages.ACCESSIBILITY_SETTINGS_TAGS_TITLE,
+    className: B.marginTop20,
+    children: (0, a.jsx)(u.FormSwitch, {
+      value: !e,
+      onChange: () => (0, E.setHideTags)(!e),
+      children: y.default.Messages.ACCESSIBILITY_SETTINGS_TAGS_LABEL
+    })
+  })
+}
+
+function X() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.syncProfileThemeWithUserTheme),
     t = n.useRef(null);
   return (0, L.default)(t, P.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
@@ -226,7 +239,7 @@ function Z() {
   })
 }
 
-function X() {
+function J() {
   let [e] = (0, d.useStateFromStoresArray)([T.default], () => [T.default.syncForcedColors, T.default.systemForcedColors]), [t, s] = n.useState(e);
   n.useEffect(() => {
     s(e)
@@ -250,7 +263,7 @@ function X() {
   })
 }
 
-function J() {
+function $() {
   let e = v.GifAutoPlay.useSetting(),
     t = v.AnimateEmoji.useSetting(),
     {
@@ -315,7 +328,7 @@ function J() {
   })
 }
 
-function $() {
+function ee() {
   let e = v.AnimateStickers.useSetting(),
     t = (0, d.useStateFromStores)([D.default], () => D.default.getAppliedOverrideReasonKey("animateStickers")),
     s = n.useCallback(e => {
@@ -346,7 +359,7 @@ function $() {
   })
 }
 
-function ee() {
+function et() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.isSubmitButtonEnabled),
     t = v.UseLegacyChatInput.useSetting(),
     s = n.useRef(null);
@@ -377,7 +390,7 @@ function ee() {
   })
 }
 
-function et() {
+function es() {
   let e = v.EnableTTSCommand.useSetting(),
     t = (0, d.useStateFromStores)([C.default], () => C.default.speechRate),
     [s, l] = n.useState(!1);

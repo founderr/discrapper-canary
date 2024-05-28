@@ -39,7 +39,8 @@ let I = {
     alwaysShowLinkDecorations: !1,
     roleStyle: "username",
     submitButtonEnabled: !1,
-    syncProfileThemeWithUserTheme: !1
+    syncProfileThemeWithUserTheme: !1,
+    hideGuildTags: !1
   },
   T = I,
   f = {
@@ -161,6 +162,9 @@ class S extends(i = r.default.DeviceSettingsStore) {
   }
   get roleStyle() {
     return T.roleStyle
+  }
+  get hideTags() {
+    return T.hideGuildTags
   }
   getUserAgnosticState() {
     return T
@@ -368,6 +372,15 @@ let h = new S(o.default, {
     T = {
       ...T,
       contrast: t
+    }
+  },
+  ACCESSIBILITY_SET_HIDE_TAGS: function(e) {
+    let {
+      hideTags: t
+    } = e;
+    T = {
+      ...T,
+      hideGuildTags: t
     }
   }
 });

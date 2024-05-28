@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   CloseButton: function() {
-    return Q
+    return q
   },
   LinkButton: function() {
-    return $
+    return J
   }
 }), n("47120");
 var l = n("735250"),
@@ -19,50 +19,49 @@ var l = n("735250"),
   f = n("442837"),
   h = n("481060"),
   m = n("493683"),
-  C = n("239091"),
-  p = n("420660"),
+  p = n("239091"),
+  C = n("420660"),
   g = n("702321"),
   E = n("201895"),
   _ = n("43267"),
   S = n("933557"),
-  I = n("353093"),
-  N = n("979264"),
-  T = n("853856"),
-  A = n("93687"),
-  L = n("785232"),
-  v = n("280234"),
-  x = n("509275"),
-  R = n("878857"),
-  M = n("204197"),
-  O = n("199902"),
-  y = n("158776"),
-  D = n("306680"),
-  b = n("111583"),
-  j = n("9156"),
-  P = n("594174"),
-  G = n("467679"),
-  U = n("514342"),
-  w = n("28718"),
-  B = n("733880"),
-  F = n("465670"),
-  H = n("887208"),
-  V = n("709054"),
-  k = n("998502"),
-  Y = n("788307"),
-  W = n("960670"),
-  K = n("981631"),
-  z = n("689938"),
-  Z = n("577245");
-let X = k.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
-  q = {
+  I = n("979264"),
+  N = n("853856"),
+  T = n("93687"),
+  A = n("785232"),
+  L = n("280234"),
+  v = n("509275"),
+  x = n("878857"),
+  R = n("204197"),
+  M = n("199902"),
+  O = n("158776"),
+  y = n("306680"),
+  D = n("111583"),
+  b = n("9156"),
+  j = n("594174"),
+  P = n("467679"),
+  G = n("514342"),
+  U = n("28718"),
+  w = n("733880"),
+  B = n("465670"),
+  F = n("887208"),
+  H = n("709054"),
+  V = n("998502"),
+  k = n("788307"),
+  Y = n("960670"),
+  W = n("981631"),
+  K = n("689938"),
+  z = n("577245");
+let Z = V.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
+  X = {
     offset: {
       top: 2,
       bottom: 2,
       right: 4
     }
   },
-  Q = e => (0, l.jsx)(h.Clickable, {
-    className: Z.closeButton,
+  q = e => (0, l.jsx)(h.Clickable, {
+    className: z.closeButton,
     ...e,
     focusProps: {
       offset: {
@@ -72,14 +71,14 @@ let X = k.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
         right: 6
       }
     },
-    children: (0, l.jsx)(F.default, {
-      className: Z.closeIcon
+    children: (0, l.jsx)(B.default, {
+      className: z.closeIcon
     })
   }),
-  J = () => (0, l.jsx)(H.default, {
-    className: Z.favoriteIcon
+  Q = () => (0, l.jsx)(F.default, {
+    className: z.favoriteIcon
   });
-class $ extends a.Component {
+class J extends a.Component {
   render() {
     let {
       route: e,
@@ -92,44 +91,44 @@ class $ extends a.Component {
       locationState: d,
       onClick: f,
       className: m,
-      role: C,
-      "aria-posinset": p,
+      role: p,
+      "aria-posinset": C,
       "aria-setsize": g,
       ...E
     } = this.props;
-    return (0, l.jsx)(B.default, {
-      className: i()(Z.channel, {
-        [Z.fullWidth]: c.isMobile
+    return (0, l.jsx)(w.default, {
+      className: i()(z.channel, {
+        [z.fullWidth]: c.isMobile
       }, m),
       onClick: f,
-      role: C,
+      role: p,
       focusProps: {
         within: !0,
-        ...q
+        ...X
       },
-      "aria-posinset": p,
+      "aria-posinset": C,
       "aria-setsize": g,
       children: (0, l.jsx)(h.Interactive, {
         as: "div",
         selected: t,
-        className: i()(s, Z.interactive, Z.linkButton, {
-          [Z.interactiveSelected]: t
+        className: i()(s, z.interactive, z.linkButton, {
+          [z.interactiveSelected]: t
         }),
         children: (0, l.jsxs)(u.Link, {
           to: {
             pathname: e,
             state: d
           },
-          className: Z.link,
+          className: z.link,
           ...E,
-          children: [(0, l.jsx)(w.default, {
+          children: [(0, l.jsx)(U.default, {
             selected: t,
             muted: !1,
             avatar: (0, l.jsx)(n, {
-              className: i()(Z.linkButtonIcon, a)
+              className: i()(z.linkButtonIcon, a)
             }),
             name: r,
-            innerClassName: Z.avatarWithText
+            innerClassName: z.avatarWithText
           }), o]
         })
       })
@@ -137,59 +136,59 @@ class $ extends a.Component {
   }
 }
 
-function ee(e) {
+function $(e) {
   let {
     channel: t,
     isGDMFacepileEnabled: s,
     selected: r = !1,
     user: c,
-    activities: A,
-    applicationStream: O,
-    isTyping: y,
-    status: b,
-    isMobile: P,
-    lastOnlineTimestamp: F,
-    isRecentlyOnlineEnabled: H = !1,
-    "aria-posinset": V,
-    "aria-setsize": k
-  } = e, [$, ee] = a.useState(!1), et = a.useRef(null), en = a.useRef(null), {
-    avatarSrc: el,
-    avatarDecorationSrc: ea,
-    eventHandlers: es
-  } = (0, M.default)({
+    activities: T,
+    applicationStream: M,
+    isTyping: O,
+    status: D,
+    isMobile: j,
+    lastOnlineTimestamp: B,
+    isRecentlyOnlineEnabled: F = !1,
+    "aria-posinset": H,
+    "aria-setsize": V
+  } = e, [J, $] = a.useState(!1), ee = a.useRef(null), et = a.useRef(null), {
+    avatarSrc: en,
+    avatarDecorationSrc: el,
+    eventHandlers: ea
+  } = (0, R.default)({
     user: c,
     size: h.AvatarSizes.SIZE_32,
-    animateOnHover: !(r || $)
-  }), ei = (0, f.useStateFromStores)([j.default], () => j.default.isChannelMuted(t.getGuildId(), t.id)), er = (0, f.useStateFromStores)([D.default], () => D.default.getMentionCount(t.id) > 0), eo = (0, S.default)(t), eu = (0, f.useStateFromStores)([T.default], () => T.default.isFavorite(t.id)), ed = null != A && A.length > 0, ec = !ed && null != F && b === K.StatusTypes.OFFLINE;
+    animateOnHover: !(r || J)
+  }), es = (0, f.useStateFromStores)([b.default], () => b.default.isChannelMuted(t.getGuildId(), t.id)), ei = (0, f.useStateFromStores)([y.default], () => y.default.getMentionCount(t.id) > 0), er = (0, S.default)(t), eo = (0, f.useStateFromStores)([N.default], () => N.default.isFavorite(t.id)), eu = null != T && T.length > 0, ed = !eu && null != B && D === W.StatusTypes.OFFLINE;
   a.useEffect(() => {
-    ec && v.default.trackExposure({
+    ed && L.default.trackExposure({
       location: "private_channel"
     })
-  }, [ec]);
-  let ef = () => {
-      ee(!0)
+  }, [ed]);
+  let ec = () => {
+      $(!0)
     },
-    eh = () => {
-      ee(!1)
+    ef = () => {
+      $(!1)
     },
-    em = function(e) {
+    eh = function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
       null != e && (e.preventDefault(), e.stopPropagation()), m.default.closePrivateChannel(t.id, r, n)
     },
-    eC = () => {
-      m.default.preload(K.ME, t.id)
+    em = () => {
+      m.default.preload(W.ME, t.id)
     },
     ep = e => {
       e.stopPropagation()
     },
-    eg = e => {
+    eC = e => {
       if (e.target === e.currentTarget) {
         var t;
-        null === (t = et.current) || void 0 === t || t.click()
+        null === (t = ee.current) || void 0 === t || t.click()
       }
     },
-    eE = e => {
-      t.isMultiUserDM() ? (0, C.openContextMenuLazy)(e, async () => {
+    eg = e => {
+      t.isMultiUserDM() ? (0, p.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -200,7 +199,7 @@ function ee(e) {
         })
       }, {
         noBlurEvent: !0
-      }) : (0, C.openContextMenuLazy)(e, async () => {
+      }) : (0, p.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("36441"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -212,103 +211,99 @@ function ee(e) {
         })
       })
     },
-    e_ = e => {
+    eE = e => {
       e.preventDefault(), e.stopPropagation();
-      let n = z.default.Messages.LEAVE_GROUP_DM_TITLE.format({
+      let n = K.default.Messages.LEAVE_GROUP_DM_TITLE.format({
           name
         }),
-        a = z.default.Messages.LEAVE_GROUP_DM_BODY.format({
+        a = K.default.Messages.LEAVE_GROUP_DM_BODY.format({
           name
         });
-      t.isManaged() && (n = z.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
+      t.isManaged() && (n = K.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
         name
-      }), a = z.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
+      }), a = K.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
         name
-      })), (0, h.openModal)(e => (0, l.jsx)(W.default, {
+      })), (0, h.openModal)(e => (0, l.jsx)(Y.default, {
         header: n,
         body: a,
-        onSubmit: em,
+        onSubmit: eh,
         ...e
       }))
     },
-    eS = () => {
+    e_ = () => {
       let e = {
-        className: Z.activity,
-        textClassName: Z.activityText,
-        emojiClassName: Z.activityEmoji
+        className: z.activity,
+        textClassName: z.activityText,
+        emojiClassName: z.activityEmoji
       };
       if (t.isSystemDM()) return (0, l.jsx)("div", {
-        className: Z.subtext,
-        children: (0, g.default)(t.id) ? z.default.Messages.SYSTEM_DM_CHANGELOG_STATUS : z.default.Messages.SYSTEM_DM_ACTIVITY_TEXT
+        className: z.subtext,
+        children: (0, g.default)(t.id) ? K.default.Messages.SYSTEM_DM_CHANGELOG_STATUS : K.default.Messages.SYSTEM_DM_ACTIVITY_TEXT
       });
       if (t.isMultiUserDM()) return (0, l.jsx)("div", {
-        className: Z.subtext,
-        children: z.default.Messages.MEMBERS_HEADER.format({
+        className: z.subtext,
+        children: K.default.Messages.MEMBERS_HEADER.format({
           members: t.recipients.length + 1
         })
       });
-      if (ed) return (0, l.jsx)(Y.default, {
+      if (eu) return (0, l.jsx)(k.default, {
         ...e,
-        activities: A,
-        applicationStream: O,
-        animate: $,
+        activities: T,
+        applicationStream: M,
+        animate: J,
         hideTooltip: !0,
         user: c
       });
-      if (ec && H) {
-        let e = (0, x.formatRecentlyOnlineStatus)(F);
+      if (ed && F) {
+        let e = (0, v.formatRecentlyOnlineStatus)(B);
         return (0, l.jsx)("div", {
-          className: Z.subtext,
+          className: z.subtext,
           children: e
         })
       }
       return null
     },
-    eI = () => {
+    eS = () => {
       let e = h.AvatarSizes.SIZE_32;
-      if (t.isMultiUserDM()) return t.recipients.length >= 2 && s && null == t.icon ? (0, l.jsx)(L.default, {
+      if (t.isMultiUserDM()) return t.recipients.length >= 2 && s && null == t.icon ? (0, l.jsx)(A.default, {
         "aria-hidden": !0,
         recipients: t.recipients,
         size: e,
-        isTyping: y,
-        status: b
-      }) : (0, l.jsx)(X, {
-        ...es,
+        isTyping: O,
+        status: D
+      }) : (0, l.jsx)(Z, {
+        ...ea,
         src: (0, _.getChannelIconURL)(t),
         "aria-hidden": !0,
-        className: Z.__invalid_avatar,
         size: e,
-        status: y ? K.StatusTypes.ONLINE : b,
-        isTyping: y
+        status: O ? W.StatusTypes.ONLINE : D,
+        isTyping: O
       });
       o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
       let n = null;
-      return !c.isSystemUser() && (n = (0, p.default)(A) ? K.StatusTypes.STREAMING : b), (0, l.jsx)(X, {
-        ...es,
+      return !c.isSystemUser() && (n = (0, C.default)(T) ? W.StatusTypes.STREAMING : D), (0, l.jsx)(Z, {
+        ...ea,
         size: h.AvatarSizes.SIZE_32,
-        src: el,
-        avatarDecoration: ea,
+        src: en,
+        avatarDecoration: el,
         status: n,
-        isMobile: P,
-        isTyping: y,
-        className: Z.__invalid_avatar,
+        isMobile: j,
+        isTyping: O,
         "aria-label": c.username,
         statusTooltip: !0
       })
     },
-    eN = t.isMultiUserDM(),
-    eT = t.isSystemDM(),
-    eA = (0, R.systemDMRedesignEnabled)(),
-    eL = !eN && !eT && t.type === K.ChannelTypes.DM,
-    ev = null == c ? void 0 : c.clan,
-    ex = (0, I.getClanBadgeUrlFromClan)(ev),
-    eR = eL && null != ev ? (0, l.jsxs)(l.Fragment, {
-      children: [eo, (0, l.jsx)(N.BaseClanTagChiplet, {
-        clanTag: ev.tag,
-        clanBadge: ex,
-        inline: !0
+    eI = t.isMultiUserDM(),
+    eN = t.isSystemDM(),
+    eT = (0, x.systemDMRedesignEnabled)(),
+    eA = eI || eN || t.type !== W.ChannelTypes.DM || (null == c ? void 0 : c.clan) == null ? er : (0, l.jsxs)(l.Fragment, {
+      children: [er, (0, l.jsx)(I.default, {
+        clan: null == c ? void 0 : c.clan,
+        userId: null == c ? void 0 : c.id,
+        inline: !0,
+        disableTooltip: !0
       })]
-    }) : eo;
+    });
   return (0, l.jsx)(d.ListNavigatorItem, {
     id: t.id,
     children: e => {
@@ -316,58 +311,58 @@ function ee(e) {
         role: n,
         ...a
       } = e;
-      return (0, l.jsx)(B.default, {
-        className: Z.channel,
+      return (0, l.jsx)(w.default, {
+        className: z.channel,
         role: n,
         focusProps: {
-          ...q,
-          focusTarget: et,
-          ringTarget: en
+          ...X,
+          focusTarget: ee,
+          ringTarget: et
         },
-        ref: en,
-        onMouseEnter: ef,
-        onMouseLeave: eh,
-        onMouseDown: eC,
-        onContextMenu: eE,
-        "aria-setsize": k,
-        "aria-posinset": V,
+        ref: et,
+        onMouseEnter: ec,
+        onMouseLeave: ef,
+        onMouseDown: em,
+        onContextMenu: eg,
+        "aria-setsize": V,
+        "aria-posinset": H,
         children: (0, l.jsxs)(h.Interactive, {
-          className: i()(Z.interactive, {
-            [Z.interactiveSystemDM]: eA && eT,
-            [Z.interactiveSelected]: r
+          className: i()(z.interactive, {
+            [z.interactiveSystemDM]: eT && eN,
+            [z.interactiveSelected]: r
           }),
           as: "div",
-          onClick: eg,
-          muted: ei,
+          onClick: eC,
+          muted: es,
           selected: r,
           children: [(0, l.jsx)(u.Link, {
-            innerRef: et,
-            to: K.Routes.CHANNEL(K.ME, t.id),
-            className: Z.link,
+            innerRef: ee,
+            to: W.Routes.CHANNEL(W.ME, t.id),
+            className: z.link,
             "aria-label": (0, E.default)({
               channel: t,
-              unread: er
+              unread: ei
             }),
             ...a,
-            children: (0, l.jsx)(w.default, {
-              avatar: eI(),
+            children: (0, l.jsx)(U.default, {
+              avatar: eS(),
               selected: r,
-              highlighted: er,
-              muted: null != ei && ei,
-              subText: eS(),
-              name: (0, l.jsx)(U.default, {
-                tooltipClassName: Z.overflowTooltip,
-                children: eR
+              highlighted: ei,
+              muted: null != es && es,
+              subText: e_(),
+              name: (0, l.jsx)(G.default, {
+                tooltipClassName: z.overflowTooltip,
+                children: eA
               }),
-              decorators: t.isSystemDM() ? (0, l.jsx)(G.default, {
-                className: Z.decorator,
-                type: G.default.Types.SYSTEM_DM,
+              decorators: t.isSystemDM() ? (0, l.jsx)(P.default, {
+                className: z.decorator,
+                type: P.default.Types.SYSTEM_DM,
                 verified: !0
               }) : null
             })
-          }), eu ? (0, l.jsx)(J, {}) : null, (0, l.jsx)(Q, {
-            "aria-label": eN ? z.default.Messages.LEAVE_GROUP_DM : z.default.Messages.CLOSE_DM,
-            onClick: eN ? e_ : em,
+          }), eo ? (0, l.jsx)(Q, {}) : null, (0, l.jsx)(q, {
+            "aria-label": eI ? K.default.Messages.LEAVE_GROUP_DM : K.default.Messages.CLOSE_DM,
+            onClick: eI ? eE : eh,
             onMouseDown: ep
           })]
         })
@@ -380,52 +375,52 @@ t.default = e => {
     channel: t,
     selected: n,
     ...a
-  } = e, s = (0, f.useStateFromStores)([P.default], () => P.default.getUser(t.getRecipientId())), {
+  } = e, s = (0, f.useStateFromStores)([j.default], () => j.default.getUser(t.getRecipientId())), {
     isStatusIndicatorEnabled: i,
     isTypingIndicatorEnabled: r,
     isFacepileEnabled: o
-  } = A.default.useExperiment({
+  } = T.default.useExperiment({
     location: "private_channel"
   }, {
     autoTrackExposure: !0
   }), {
     isFriendsAndDMsEnabled: u
-  } = v.default.useExperiment({
+  } = L.default.useExperiment({
     location: "private_channel"
   }, {
     autoTrackExposure: !1
-  }), d = null == s ? void 0 : s.id, c = (0, f.useStateFromStoresObject)([y.default, O.default], () => {
+  }), d = null == s ? void 0 : s.id, c = (0, f.useStateFromStoresObject)([O.default, M.default], () => {
     let e, n;
     if (t.isMultiUserDM()) {
       if (i) {
-        let n = y.default.getState().statuses;
-        t.recipients.some(e => n[e] === K.StatusTypes.ONLINE) && (e = K.StatusTypes.ONLINE)
+        let n = O.default.getState().statuses;
+        t.recipients.some(e => n[e] === W.StatusTypes.ONLINE) && (e = W.StatusTypes.ONLINE)
       }
-    } else null != d && (e = y.default.getStatus(d), n = y.default.getLastOnlineTimestamp(d));
+    } else null != d && (e = O.default.getStatus(d), n = O.default.getLastOnlineTimestamp(d));
     return {
       status: e,
       lastOnlineTimestamp: n,
-      activities: null != d ? y.default.getActivities(d) : null,
-      applicationStream: null != d ? O.default.getAnyStreamForUser(d) : null,
-      isMobile: null != d && y.default.isMobileOnline(d),
+      activities: null != d ? O.default.getActivities(d) : null,
+      applicationStream: null != d ? M.default.getAnyStreamForUser(d) : null,
+      isMobile: null != d && O.default.isMobileOnline(d),
       isRecentlyOnlineEnabled: u
     }
-  }, [t, d, i, u]), h = (0, f.useStateFromStores)([P.default, b.default], () => {
-    if (t.isMultiUserDM()) return !!r && V.default.keys(b.default.getTypingUsers(t.id)).some(e => {
+  }, [t, d, i, u]), h = (0, f.useStateFromStores)([j.default, D.default], () => {
+    if (t.isMultiUserDM()) return !!r && H.default.keys(D.default.getTypingUsers(t.id)).some(e => {
       var t;
-      return e !== (null === (t = P.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+      return e !== (null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
-    if (null != s) return b.default.isTyping(t.id, t.getRecipientId());
+    if (null != s) return D.default.isTyping(t.id, t.getRecipientId());
     return !1
   }, [t, s, r]);
-  return t.isMultiUserDM() ? (0, l.jsx)(ee, {
+  return t.isMultiUserDM() ? (0, l.jsx)($, {
     channel: t,
     selected: n,
     isTyping: h,
-    status: c.status === K.StatusTypes.ONLINE ? K.StatusTypes.ONLINE : void 0,
+    status: c.status === W.StatusTypes.ONLINE ? W.StatusTypes.ONLINE : void 0,
     isGDMFacepileEnabled: o,
     ...a
-  }) : (0, l.jsx)(ee, {
+  }) : (0, l.jsx)($, {
     channel: t,
     selected: n,
     user: s,

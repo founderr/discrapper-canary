@@ -15,6 +15,9 @@ n.r(t), n.d(t, {
   setFontSize: function() {
     return d
   },
+  setHideTags: function() {
+    return v
+  },
   setMessageGroupSpacing: function() {
     return _
   },
@@ -203,5 +206,12 @@ function g() {
 function L() {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE"
+  })
+}
+
+function v(e) {
+  i.default.dispatch({
+    type: "ACCESSIBILITY_SET_HIDE_TAGS",
+    hideTags: e
   })
 }
