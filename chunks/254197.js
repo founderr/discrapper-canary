@@ -247,14 +247,12 @@ let b = e => {
               questContent: I.QuestContent.QUEST_BAR
             }), (0, a.jsx)(c.Heading, {
               className: D.title,
-              color: "always-white",
               variant: "heading-md/medium",
               children: y.default.Messages.QUESTS_TITLE.format({
                 questName: G.config.messages.questName
               })
             }), (0, a.jsx)(c.Text, {
               className: D.description,
-              color: "always-white",
               variant: "text-xs/normal",
               children: X
             })]
