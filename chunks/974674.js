@@ -385,14 +385,14 @@ function g(e) {
           isSpeaking: S,
           className: v
         })
-      }), null != D ? (0, i.jsx)(_.Tooltip, {
+      }), null != D && null != O ? p(O, o, M, D) : null, null != D ? (0, i.jsx)(_.Tooltip, {
         text: A ? (0, E.humanizeStatus)(D) : null,
         "aria-label": !1,
         position: "top",
         spacing: 5 + 1.5 * M.stroke,
         delay: m,
         children: e => (0, i.jsxs)(i.Fragment, {
-          children: [null != O && p(O, o, M, D), (0, i.jsx)("rect", {
+          children: [(0, i.jsx)("rect", {
             ...e,
             ...N(M, D, o, l),
             fill: U,
@@ -501,7 +501,7 @@ function L(e) {
           isSpeaking: f,
           className: U
         })
-      }), (0, i.jsx)(_.Tooltip, {
+      }), null != M && p(M, l, z, g), (0, i.jsx)(_.Tooltip, {
         text: v ? (0, E.humanizeStatus)(g) : null,
         "aria-label": !1,
         position: "top",
@@ -511,7 +511,7 @@ function L(e) {
         }(z.status, z.stroke, l, c),
         delay: D,
         children: e => (0, i.jsxs)(i.Fragment, {
-          children: [null != M && p(M, l, z, g), (0, i.jsxs)("svg", {
+          children: [(0, i.jsxs)("svg", {
             x: q,
             y: J,
             width: Z,
