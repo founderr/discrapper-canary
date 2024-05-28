@@ -11,8 +11,8 @@ var _ = s("120356"),
   n = s("596454"),
   T = s("377171"),
   i = s("403910"),
-  u = s("549631"),
-  A = s("623492");
+  A = s("549631"),
+  u = s("623492");
 
 function l(e) {
   var t;
@@ -26,9 +26,9 @@ function l(e) {
     emojiId: null == r ? void 0 : r.id,
     emojiName: null != l ? l : null == r ? void 0 : r.name,
     animated: null !== (t = null == r ? void 0 : r.animated) && void 0 !== t && t,
-    className: a()(A.emojiIcon, I)
-  }) : (0, E.jsx)(u.default, {
-    className: a()(A.emojiIcon, I),
+    className: a()(u.emojiIcon, I)
+  }) : (0, E.jsx)(A.default, {
+    className: a()(u.emojiIcon, I),
     color: T.default.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
   })
 }

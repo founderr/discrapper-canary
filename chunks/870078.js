@@ -20,4 +20,4 @@ let i = "hello",
   r = "version",
   s = "force-resync-version",
   a = 3,
-  o = "stable-52"
+  o = "stable-53"

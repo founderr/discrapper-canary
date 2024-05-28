@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("619915"),
   h = n("201895"),
   m = n("873696"),
-  C = n("66999"),
-  p = n("22082"),
+  p = n("66999"),
+  C = n("22082"),
   g = n("665906"),
   E = n("592125"),
   _ = n("430824"),
@@ -71,8 +71,8 @@ class b extends L.default {
       mentionCount: d,
       connectChannelDropTarget: c,
       connectChannelDragSource: f,
-      connectDragPreview: C,
-      canReorderChannel: p,
+      connectDragPreview: p,
+      canReorderChannel: C,
       isSubscriptionGated: g,
       isFavoriteSuggestion: E,
       subtitle: _,
@@ -108,7 +108,7 @@ class b extends L.default {
           subtitleColor: null == v ? void 0 : v.color,
           onMouseDown: this.handleMouseDown,
           onContextMenu: this.handleContextMenu,
-          connectDragPreview: p ? C : null,
+          connectDragPreview: C ? p : null,
           isFavoriteSuggestion: E,
           channelTypeOverride: S ? M.ChannelTypes.GUILD_TEXT : void 0,
           resolvedUnreadSetting: N,
@@ -123,7 +123,7 @@ class b extends L.default {
         })
       })
     });
-    return p ? c(f(R)) : R
+    return C ? c(f(R)) : R
   }
   constructor(...e) {
     super(...e), D(this, "state", {
@@ -245,10 +245,10 @@ function P(e) {
       canManageChannel: S.default.can(M.Permissions.MANAGE_CHANNELS, t),
       canReorderChannel: !0 !== a && (n.id === O.FAVORITES_RAW_GUILD_ID || (null != e ? S.default.can(M.Permissions.MANAGE_CHANNELS, e) : S.default.can(M.Permissions.MANAGE_CHANNELS, n)))
     }
-  }), A = (0, i.useStateFromStores)([p.default], () => p.default.shouldIndicateNewChannel(n.id, t.id)), {
+  }), A = (0, i.useStateFromStores)([C.default], () => C.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,
     isSubscriptionGated: x
-  } = (0, C.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), y = (0, i.useStateFromStores)([T.default], () => {
+  } = (0, p.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), y = (0, i.useStateFromStores)([T.default], () => {
     let e = T.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
   }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), b = (0, v.default)({

@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("496675"),
   h = n("98597"),
   m = n("473403"),
-  C = n("981631"),
-  p = n("490897"),
+  p = n("981631"),
+  C = n("490897"),
   g = n("513285");
 let E = (0, u.makeChannelSortable)(function(e) {
   let {
@@ -30,7 +30,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
   } = e, L = (0, r.useStateFromStores)([d.default, c.default], () => {
     let e = c.default.getDirectoryChannelIds(t.id);
     return 0 === e.length ? null : d.default.getChannel(e[0])
-  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(C.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(C.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
+  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(p.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(p.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
     null != L && (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -57,7 +57,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
         selected: x,
         onContextMenu: M,
         forceInteractable: !0,
-        resolvedUnreadSetting: p.UnreadSetting.ONLY_MENTIONS,
+        resolvedUnreadSetting: C.UnreadSetting.ONLY_MENTIONS,
         children: [(0, l.jsx)(h.ChannelItemInviteButton, {
           channel: L,
           tabIndex: A

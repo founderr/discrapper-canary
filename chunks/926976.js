@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return I
+    return R
   }
 }), r("47120");
 var a = r("735250"),
@@ -23,13 +23,13 @@ var a = r("735250"),
   x = r("257785"),
   k = r("484036"),
   v = r("681619"),
-  C = r("621060"),
-  j = r("689938"),
-  S = r("457501"),
-  T = r("277513");
-let N = [{
+  j = r("621060"),
+  S = r("689938"),
+  C = r("457501"),
+  w = r("277513");
+let T = [{
   key: "event",
-  cellClassName: S.eventColumn,
+  cellClassName: C.eventColumn,
   render(e) {
     let {
       event: t
@@ -38,7 +38,7 @@ let N = [{
   }
 }, {
   key: "location",
-  cellClassName: S.locationColumn,
+  cellClassName: C.locationColumn,
   render(e) {
     let {
       properties: t
@@ -47,12 +47,12 @@ let N = [{
   }
 }];
 
-function w(e) {
+function N(e) {
   let {
     children: t
   } = e;
   return (0, a.jsx)(d.ScrollerThin, {
-    className: S.customPropertiesContainer,
+    className: C.customPropertiesContainer,
     children: (0, a.jsx)("dl", {
       children: t
     })
@@ -66,15 +66,15 @@ function E(e) {
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
-      className: S.customPropertiesName,
+      className: C.customPropertiesName,
       children: t
     }), (0, a.jsx)("dd", {
-      className: S.customPropertiesValue,
+      className: C.customPropertiesValue,
       children: r
     })]
   })
 }
-let L = [{
+let _ = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -88,7 +88,7 @@ let L = [{
       } = e, o = h.default.getUser(l), c = s()(i);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(g.default, {
-          className: n()(T.headerBar, S.subPanelHeaderBar),
+          className: n()(w.headerBar, C.subPanelHeaderBar),
           children: [(0, a.jsx)(g.default.Icon, {
             icon: m.default,
             tooltip: t
@@ -96,7 +96,7 @@ let L = [{
             children: t
           })]
         }), (0, a.jsxs)(x.Properties, {
-          className: S.commonProperties,
+          className: C.commonProperties,
           children: [(0, a.jsx)(x.Property, {
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
@@ -115,7 +115,7 @@ let L = [{
               children: l
             })
           })]
-        }), (0, a.jsx)(w, {
+        }), (0, a.jsx)(N, {
           children: Object.entries(r).map(e => {
             let [t, r] = e;
             return (0, a.jsx)(E, {
@@ -123,7 +123,7 @@ let L = [{
               children: null != r ? (0, a.jsx)("code", {
                 children: JSON.stringify(r)
               }) : (0, a.jsx)("code", {
-                className: S.emptyProperty,
+                className: C.emptyProperty,
                 children: "null"
               })
             }, t)
@@ -132,10 +132,10 @@ let L = [{
       })
     }
   }],
-  _ = {
+  L = {
     events: {
       label: "Events",
-      filter: e => Object.entries(_).filter(e => {
+      filter: e => Object.entries(L).filter(e => {
         let [t] = e;
         return "events" !== t
       }).map(t => {
@@ -159,13 +159,13 @@ let L = [{
     }
   };
 
-function I() {
+function R() {
   let e = i.useRef(null),
     t = (0, c.useStateFromStores)([y.default], () => y.default.loggedEvents),
-    [r, l] = i.useState(Object.keys(_)),
+    [r, l] = i.useState(Object.keys(L)),
     o = t.filter(e => {
       for (let t of r)
-        if (_[t].filter(e)) return !0;
+        if (L[t].filter(e)) return !0;
       return !1
     }),
     [s, u] = i.useState(void 0),
@@ -173,33 +173,33 @@ function I() {
     {
       TabBar: m,
       renderSelectedTab: g
-    } = (0, C.default)({
-      tabs: L
+    } = (0, j.default)({
+      tabs: _
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: n()(T.panel, S.panel),
+    className: n()(w.panel, C.panel),
     children: [(0, a.jsxs)("div", {
-      className: S.toolbar,
+      className: C.toolbar,
       children: [(0, a.jsx)(d.Button, {
-        className: S.toolbarButton,
+        className: C.toolbarButton,
         look: d.Button.Looks.BLANK,
         size: d.Button.Sizes.ICON,
         onClick: b.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
-          title: j.default.Messages.CLEAR,
+          title: S.default.Messages.CLEAR,
           children: (0, a.jsx)(p.default, {
-            "aria-label": j.default.Messages.CLEAR
+            "aria-label": S.default.Messages.CLEAR
           })
         })
       }), (0, a.jsx)("div", {
-        className: S.toolbarDivider
+        className: C.toolbarDivider
       }), (0, a.jsx)("div", {
-        className: S.filters,
-        children: Object.entries(_).map(e => {
+        className: C.filters,
+        children: Object.entries(L).map(e => {
           let [t, i] = e;
           return (0, a.jsx)(d.Clickable, {
-            className: n()(S.filter, r.includes(t) && S.activeFilter),
+            className: n()(C.filter, r.includes(t) && C.activeFilter),
             onClick: () => {
               var e;
               return e = t, void l(t => t.includes(e) ? t.filter(t => t !== e) : [...t, e])
@@ -209,15 +209,15 @@ function I() {
         })
       })]
     }), (0, a.jsx)(d.ScrollerThin, {
-      className: S.tableContainer,
+      className: C.tableContainer,
       children: (0, a.jsx)(v.default, {
-        columns: N,
+        columns: T,
         data: o,
         selectedRowKey: s,
         onClickRow: u
       })
     }), null != h && (0, a.jsxs)(k.default, {
-      className: S.subPanel,
+      className: C.subPanel,
       minHeight: 100,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
       children: [(0, a.jsx)(m, {}), g({

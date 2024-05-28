@@ -16,8 +16,8 @@ let h = a.forwardRef(function(e, t) {
     onClick: s,
     onContextMenu: h,
     icon: m,
-    selected: C,
-    tooltip: p,
+    selected: p,
+    tooltip: C,
     upperBadge: g,
     lowerBadge: E,
     lowerBadgeWidth: _,
@@ -28,20 +28,20 @@ let h = a.forwardRef(function(e, t) {
     onMouseEnter: A,
     onMouseLeave: L,
     onMouseDown: v
-  } = e, x = (0, r.useTreeItem)(n), [R, M] = a.useState(!1), O = "string" == typeof p && null == N ? p : N;
+  } = e, x = (0, r.useTreeItem)(n), [R, M] = a.useState(!1), O = "string" == typeof C && null == N ? C : N;
   return (0, l.jsxs)(d.ListItem, {
     children: [S ? (0, l.jsx)("div", {
       className: f.pill,
       children: (0, l.jsx)(u.default, {
         hovered: R,
-        selected: C
+        selected: p
       })
     }) : null, (0, l.jsx)(c.default, {
-      text: p,
-      selected: C,
+      text: C,
+      selected: p,
       children: (0, l.jsx)(o.BlobMask, {
         className: f.__invalid_circleButtonMask,
-        selected: C || R,
+        selected: p || R,
         upperBadge: g,
         lowerBadge: E,
         lowerBadgeWidth: _,
@@ -55,7 +55,7 @@ let h = a.forwardRef(function(e, t) {
           },
           onMouseDown: v,
           className: i()(f.circleIconButton, I, {
-            [f.selected]: C || R
+            [f.selected]: p || R
           }),
           onClick: s,
           "aria-label": O,

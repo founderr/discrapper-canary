@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("67212"),
   h = n("770471"),
   m = n("292584"),
-  C = n("835865"),
-  p = n("456541"),
+  p = n("835865"),
+  C = n("456541"),
   g = n("143614"),
   E = n("544803"),
   _ = n("899740"),
@@ -64,7 +64,7 @@ function W(e) {
     user: n,
     badge: f,
     link: m,
-    showProgressBadge: C
+    showProgressBadge: p
   } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [S, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, R] = a.useState(0), [b, P] = a.useState(!1), {
     canViewBroadcasts: F
   } = h.default.useExperiment({
@@ -72,7 +72,7 @@ function W(e) {
   }, {
     autoTrackExposure: !1
   }), W = (0, g.default)(), K = W.length > 0 && F;
-  (0, p.useTrackNewBroadcastDetected)();
+  (0, C.useTrackNewBroadcastDetected)();
   let z = (0, s.useTreeItem)("home"),
     Z = () => {
       v(null), R(0), clearTimeout(L)
@@ -83,7 +83,7 @@ function W(e) {
     location: "home_button"
   });
   let q = null;
-  !t && C ? q = (0, l.jsx)(u.default, {
+  !t && p ? q = (0, l.jsx)(u.default, {
     className: k.downloadProgress,
     determineOwnVisibility: !1
   }) : K && (q = (0, l.jsx)(M.default, {
@@ -195,12 +195,12 @@ function K() {
     })),
     c = o + d,
     h = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()),
-    p = (0, _.useNewMessageRequestsCount)(),
-    g = s + c + p + (0, S.useWhatsNewBadgeCount)(),
-    E = g === c && c > 0 && s + p === 0;
+    C = (0, _.useNewMessageRequestsCount)(),
+    g = s + c + C + (0, S.useWhatsNewBadgeCount)(),
+    E = g === c && c > 0 && s + C === 0;
   a.useEffect(() => {
     n.length > 0 && (0, f.fetchBroadcasterBuckets)()
-  }, [n]), (0, C.default)();
+  }, [n]), (0, p.default)();
   let I = v.default.getHomeLink();
   return E && (I = B.Routes.APPLICATION_STORE), (0, l.jsx)(W, {
     selected: e,

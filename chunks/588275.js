@@ -31,13 +31,13 @@ function h(e, t) {
 function m(e) {
   let {
     guildNode: t
-  } = e, n = t.id, s = (0, a.useStateFromStores)([r.default], () => r.default.getRequest(n)), m = (0, a.useStateFromStores)([r.default], () => r.default.getJoinRequestGuild(n), [n]), C = (0, a.useStateFromStores)([u.default], () => u.default.isFocused()), p = (0, a.useStateFromStores)([o.default], () => o.default.getGuildId());
+  } = e, n = t.id, s = (0, a.useStateFromStores)([r.default], () => r.default.getRequest(n)), m = (0, a.useStateFromStores)([r.default], () => r.default.getJoinRequestGuild(n), [n]), p = (0, a.useStateFromStores)([u.default], () => u.default.isFocused()), C = (0, a.useStateFromStores)([o.default], () => o.default.getGuildId());
   return null == m ? null : (0, l.jsx)(d.default, {
     guildNode: t,
     guild: m,
-    animatable: C,
+    animatable: p,
     draggable: !1,
-    selected: n === p,
+    selected: n === C,
     preloadOnClick: !1,
     contextMenu: h,
     lowerBadge: (null == s ? void 0 : s.applicationStatus) === i.GuildJoinRequestApplicationStatuses.REJECTED ? (0, c.renderGuildJoinRequestBadge)({

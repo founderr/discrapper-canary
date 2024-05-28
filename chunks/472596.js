@@ -23,8 +23,8 @@ var E, _, a = s("470079"),
   n = s("399606"),
   T = s("906732"),
   i = s("171368"),
-  u = s("430824"),
-  A = s("594174"),
+  A = s("430824"),
+  u = s("594174"),
   l = s("91047"),
   I = s("981631");
 let r = (e, t) => {
@@ -51,7 +51,7 @@ function o(e, t, s) {
   } = (0, T.default)();
   return a.useCallback(_ => {
     if (null == e) return;
-    let a = A.default.getUser(e.userId);
+    let a = u.default.getUser(e.userId);
     null != a && (_.stopPropagation(), (0, l.openModerateRoleContextMenu)(_, {
       user: a,
       guildId: e.guildId,
@@ -67,7 +67,7 @@ function L(e, t, s) {
   } = (0, T.default)();
   return a.useCallback(_ => {
     if (null == e) return;
-    let a = A.default.getUser(e.userId);
+    let a = u.default.getUser(e.userId);
     null != a && (_.stopPropagation(), (0, l.openModerateUserContextMenu)(_, {
       user: a,
       guildId: e.guildId,
@@ -79,11 +79,11 @@ function L(e, t, s) {
 }
 
 function d(e) {
-  return (0, n.useStateFromStores)([u.default], () => {
+  return (0, n.useStateFromStores)([A.default], () => {
     var t;
     if (null == e) return null;
-    let s = u.default.getGuild(e.guildId);
-    return null == s || null == e.highestRoleId ? null : null !== (t = u.default.getRole(s.id, e.highestRoleId)) && void 0 !== t ? t : null
+    let s = A.default.getGuild(e.guildId);
+    return null == s || null == e.highestRoleId ? null : null !== (t = A.default.getRole(s.id, e.highestRoleId)) && void 0 !== t ? t : null
   }, [e])
 }
 

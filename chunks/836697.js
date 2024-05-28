@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("289090"),
   h = n("727258"),
   m = n("234383"),
-  C = n("179809"),
-  p = n("773182"),
+  p = n("179809"),
+  C = n("773182"),
   g = n("588275"),
   E = n("689938"),
   _ = n("693353");
@@ -41,9 +41,9 @@ function S(e) {
   let v = null != I && T.includes(I);
   return (a.useEffect(() => {
     !n && v && A !== I && S(!0)
-  }, [n, v, A, I]), 0 === T.length) ? null : (0, l.jsx)(p.GuildsBarClanApplicationCoachmarkPopout, {
+  }, [n, v, A, I]), 0 === T.length) ? null : (0, l.jsx)(C.GuildsBarClanApplicationCoachmarkPopout, {
     onActivate: t,
-    children: (0, l.jsx)(C.default, {
+    children: (0, l.jsx)(p.default, {
       folderNode: L,
       expanded: n,
       useCircleMask: !n && !v,

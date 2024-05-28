@@ -9,8 +9,8 @@ var l, a, s, i = n("735250"),
   f = n("902704"),
   h = n("481060"),
   m = n("925549"),
-  C = n("607070"),
-  p = n("367907"),
+  p = n("607070"),
+  C = n("367907"),
   g = n("453542"),
   E = n("762914"),
   _ = n("702321"),
@@ -283,7 +283,7 @@ class U extends(a = r.Component) {
           num_users_visible: i.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && v.default.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, p.default.trackWithMetadata(D.AnalyticEvents.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, C.default.trackWithMetadata(D.AnalyticEvents.DM_LIST_VIEWED, {
         ...d,
         ...(0, g.getNowPlayingAnalytics)(),
         changelog_dm_visible: u
@@ -371,11 +371,11 @@ t.default = e => {
     let e = x.default.getPrivateChannelIds(),
       t = (0, N.filterOutMessageRequestsAndSpamById)(e, [I.default, T.default]);
     return (0, E.filterBroadcastingGDMs)(t)
-  }, []), h = (0, c.useStateFromStoresObject)([C.default, A.default, L.default], () => ({
+  }, []), h = (0, c.useStateFromStoresObject)([p.default, A.default, L.default], () => ({
     theme: A.default.darkSidebar ? D.ThemeTypes.DARK : n,
-    keyboardModeEnabled: C.default.keyboardModeEnabled,
+    keyboardModeEnabled: p.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(L.default.getPrivateChannelsVersion()) : L.default.getPrivateChannelsVersion()
-  })), m = r.useRef(null), p = r.useCallback(e => {
+  })), m = r.useRef(null), C = r.useCallback(e => {
     let t = m.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
@@ -409,7 +409,7 @@ t.default = e => {
     scrollToStart: g,
     scrollToEnd: _,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
-    setFocus: p
+    setFocus: C
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
     navigator: v,

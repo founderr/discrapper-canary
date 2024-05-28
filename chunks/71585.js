@@ -1,91 +1,91 @@
 "use strict";
-r.r(t), r("47120"), r("653041");
-var a, i, l, n = r("442837"),
-  o = r("570140");
+n.r(t), n("47120"), n("653041");
+var r, o, i, a = n("442837"),
+  u = n("570140");
 
-function s(e, t, r) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: r,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = r, e
-}(l = a || (a = {})).DIRECT_MESSAGE = "direct_message", l.CHANNEL = "channel";
-let c = () => ({
+  }) : e[t] = n, e
+}(i = r || (r = {})).DIRECT_MESSAGE = "direct_message", i.CHANNEL = "channel";
+let E = () => ({
     replyMode: "direct_message",
     itemImpressions: []
   }),
-  d = c(),
-  u = new Set,
-  h = new Set,
-  m = 0,
-  p = !1,
-  g = !1;
+  T = E(),
+  l = new Set,
+  d = new Set,
+  _ = 0,
+  c = !1,
+  L = !1;
 
 function f() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  if (!e && Date.now() < m) return;
-  d.itemImpressions.length > 1e3 && (d.itemImpressions = []);
+  if (!e && Date.now() < _) return;
+  T.itemImpressions.length > 1e3 && (T.itemImpressions = []);
   let t = 0,
-    r = Date.now() - 2592e5;
-  for (let e = 0; e < d.itemImpressions.length; e++) {
-    let [a, i] = d.itemImpressions[e];
-    if (i < r) t = e + 1;
+    n = Date.now() - 2592e5;
+  for (let e = 0; e < T.itemImpressions.length; e++) {
+    let [r, o] = T.itemImpressions[e];
+    if (o < n) t = e + 1;
     else break
   }
-  t > 0 && (d.itemImpressions = d.itemImpressions.slice(t));
-  let a = g ? 1e3 : 576e5,
+  t > 0 && (T.itemImpressions = T.itemImpressions.slice(t));
+  let r = L ? 1e3 : 576e5,
+    o = new Set,
     i = new Set,
-    l = new Set,
-    n = Date.now() - a,
-    o = null;
-  for (let [e, t] of d.itemImpressions) t < n ? i.add(e) : null == o && (o = t + a), l.add(e);
-  u = i, h = l, m = null != o ? o : 1 / 0, p = !0
+    a = Date.now() - r,
+    u = null;
+  for (let [e, t] of T.itemImpressions) t < a ? o.add(e) : null == u && (u = t + r), i.add(e);
+  l = o, d = i, _ = null != u ? u : 1 / 0, c = !0
 }
-class y extends(i = n.default.PersistedStore) {
+class C extends(o = a.default.PersistedStore) {
   initialize(e) {
-    d = {
-      ...d,
+    T = {
+      ...T,
       ...null != e ? e : {}
     }
   }
   getState() {
-    return d
+    return T
   }
   isChannelReplyMode() {
-    return "channel" === d.replyMode
+    return "channel" === T.replyMode
   }
   getImpressionCappedItemIds() {
-    return f(), u
+    return f(), l
   }
   getDebugFastImpressionCappingEnabled() {
-    return g
+    return L
   }
   reset() {
-    d = c()
+    T = E()
   }
 }
-s(y, "displayName", "ContentInventoryPersistedStore"), s(y, "persistKey", "ContentInventoryPersistedStore"), t.default = new y(o.default, {
+s(C, "displayName", "ContentInventoryPersistedStore"), s(C, "persistKey", "ContentInventoryPersistedStore"), t.default = new C(u.default, {
   CONTENT_INVENTORY_TOGGLE_REPLY_MODE: () => {
-    "direct_message" === d.replyMode ? d.replyMode = "channel" : d.replyMode = "direct_message"
+    "direct_message" === T.replyMode ? T.replyMode = "channel" : T.replyMode = "direct_message"
   },
   CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function(e) {
     let {
       itemIds: t
     } = e;
-    !p && f();
-    let r = Date.now(),
-      a = !1;
-    for (let e of t) !h.has(e) && (d.itemImpressions.push([e, r]), a = !0);
-    return f(a), a
+    !c && f();
+    let n = Date.now(),
+      r = !1;
+    for (let e of t) !d.has(e) && (T.itemImpressions.push([e, n]), r = !0);
+    return f(r), r
   },
   CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function() {
-    d.itemImpressions = [], f(!0)
+    T.itemImpressions = [], f(!0)
   },
   CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function() {
-    return console.log("Item impressions:", d.itemImpressions), !1
+    return console.log("Item impressions:", T.itemImpressions), !1
   },
   CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: function() {
-    g = !g
+    L = !L
   }
 })

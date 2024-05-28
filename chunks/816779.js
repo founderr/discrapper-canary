@@ -19,11 +19,11 @@ function m(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = {
+let p = {
   friction: 10,
   tension: 300
 };
-class p extends s.Component {
+class C extends s.Component {
   shouldComponentUpdate(e, t) {
     return !(0, c.default)(this.props, e, ["animate"]) || !(0, c.default)(this.state, t)
   }
@@ -55,7 +55,7 @@ class p extends s.Component {
     this._timeout = setTimeout(() => {
       d.default.spring(e, {
         toValue: 0,
-        ...C
+        ...p
       }).start()
     }, 100)
   }
@@ -69,7 +69,7 @@ class p extends s.Component {
     }
     d.default.spring(e, {
       toValue: 1,
-      ...C
+      ...p
     }).start()
   }
   render() {
@@ -139,7 +139,7 @@ class g extends(l = s.PureComponent) {
     } = this.context;
     return (0, a.jsx)("div", {
       className: null != i ? i : void 0,
-      children: (0, a.jsx)(p, {
+      children: (0, a.jsx)(C, {
         hide: !0 === u || null == e && null == t,
         className: r()(o, null != t ? h.mention : h.unread),
         text: null != t ? n : l,

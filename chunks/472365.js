@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("792766"),
   h = n("451603"),
   m = n("885714"),
-  C = n("973616"),
-  p = n("594174"),
+  p = n("973616"),
+  C = n("594174"),
   g = n("285952"),
   E = n("672752"),
   _ = n("153124"),
@@ -136,9 +136,9 @@ function B(e) {
   let t, n, {
     transitionState: s
   } = e;
-  (0, r.useStateFromStores)([p.default], () => {
+  (0, r.useStateFromStores)([C.default], () => {
     var e;
-    return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
+    return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });
   let {
     invite: m,
@@ -167,7 +167,7 @@ function B(e) {
     inviter: U,
     target_application: B
   } = m, F = null != m.stage_instance, H = null == m.guild && null == m.channel && null != m.inviter;
-  if (null != B) t = null == L ? void 0 : L.name, n = C.default.createFromServer(B).getCoverImageURL(1024);
+  if (null != B) t = null == L ? void 0 : L.name, n = p.default.createFromServer(B).getCoverImageURL(1024);
   else if (null != L) t = L.name, n = v.default.getGuildSplashURL({
     id: L.id,
     splash: L.splash

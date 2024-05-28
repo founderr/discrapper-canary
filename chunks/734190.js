@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("569471"),
   h = n("488131"),
   m = n("592125"),
-  C = n("306680"),
-  p = n("979651"),
+  p = n("306680"),
+  C = n("979651"),
   g = n("938475"),
   E = n("514342"),
   _ = n("714794"),
@@ -55,12 +55,12 @@ t.default = a.memo(function(e) {
     isSelectedVoice: R,
     isLast: O,
     withGuildIcon: y
-  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), {
+  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: P
-  } = (0, o.useStateFromStoresObject)([C.default], () => ({
-    unread: C.default.hasUnread(t.id),
-    mentionCount: C.default.getMentionCount(t.id)
+  } = (0, o.useStateFromStoresObject)([p.default], () => ({
+    unread: p.default.hasUnread(t.id),
+    mentionCount: p.default.getMentionCount(t.id)
   })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {

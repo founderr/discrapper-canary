@@ -6,8 +6,8 @@ var E = s("735250"),
   n = s.n(a),
   T = s("628238"),
   i = s("998951"),
-  u = s("25015"),
-  A = s("963550"),
+  A = s("25015"),
+  u = s("963550"),
   l = s("845080"),
   I = s("373947");
 t.default = _.memo(function(e) {
@@ -22,7 +22,7 @@ t.default = _.memo(function(e) {
     disableInteraction: d
   } = e, N = (0, T.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), {
     content: S
-  } = (0, u.default)(s, {
+  } = (0, A.default)(s, {
     hideSimpleEmbedContent: L,
     allowList: N,
     allowHeading: N,
@@ -41,7 +41,7 @@ t.default = _.memo(function(e) {
       channel: _,
       guildId: void 0
     }),
-    childrenMessageContent: (0, A.default)(e, S),
+    childrenMessageContent: (0, u.default)(e, S),
     disableInteraction: d
   })
 })

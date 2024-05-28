@@ -1,14 +1,14 @@
 "use strict";
 
-function r(e) {
+function n(e) {
   let {
     proxyURL: t,
-    url: n
+    url: l
   } = e;
-  return null != t && "" !== t ? t : n
+  return null != t && "" !== t ? t : l
 }
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   getBestEffortSrcUrl: function() {
-    return r
+    return n
   }
 })

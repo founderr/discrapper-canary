@@ -66,17 +66,17 @@ t.default = a.memo(function(e) {
     voiceStates: d,
     guildId: h,
     selectedChannelId: m,
-    selectedVoiceChannelId: C,
-    optInEnabled: p
+    selectedVoiceChannelId: p,
+    optInEnabled: C
   } = e, {
     hasDivider: g,
     canHaveVoiceSummary: E
-  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, p, t), [n, p, t, u]), _ = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), S = a.useMemo(() => null != _ && _.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
+  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, C, t), [n, C, t, u]), _ = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), S = a.useMemo(() => null != _ && _.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
     channels: _.getChannelRecords(),
     selectedChannelId: m,
-    selectedVoiceChannelId: C,
+    selectedVoiceChannelId: p,
     voiceStates: d
-  }) : [], [_, m, C, d]);
+  }) : [], [_, m, p, d]);
   if (t === n.voiceChannelsSectionNumber) return (0, l.jsx)(f, {
     guildChannels: n,
     guildChannelsVersion: u

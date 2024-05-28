@@ -22,8 +22,8 @@ function d(e) {
     icon: f,
     iconForeground: h,
     innerClassName: m,
-    tooltipClassName: C,
-    onMouseEnter: p,
+    tooltipClassName: p,
+    onMouseEnter: C,
     onMouseLeave: g,
     "aria-label": E,
     "aria-checked": _,
@@ -37,7 +37,7 @@ function d(e) {
     foreground: h
   });
   return (0, l.jsx)(r.Tooltip, {
-    tooltipClassName: C,
+    tooltipClassName: p,
     text: t,
     "aria-label": E,
     color: I,
@@ -64,7 +64,7 @@ function d(e) {
           null != t && t(), null != d && d(e)
         },
         onMouseEnter: () => {
-          null == a || a(), null == p || p()
+          null == a || a(), null == C || C()
         },
         onMouseLeave: () => {
           null == f || f(), null == g || g()

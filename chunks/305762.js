@@ -25,15 +25,15 @@ function i(e) {
     defaultComponent: n,
     size: i = T.MEDIUM
   } = e, {
-    customEmoji: u,
-    unicodeEmoji: A
+    customEmoji: A,
+    unicodeEmoji: u
   } = (0, a.default)(t, s);
-  return null == u && null == A ? (0, E.jsx)(E.Fragment, {
+  return null == A && null == u ? (0, E.jsx)(E.Fragment, {
     children: n
   }) : (0, E.jsx)(_.default, {
-    emojiName: null != u ? null == u ? void 0 : u.name : s,
-    animated: null != u && u.animated,
-    emojiId: null == u ? void 0 : u.id,
+    emojiName: null != A ? null == A ? void 0 : A.name : s,
+    animated: null != A && A.animated,
+    emojiId: null == A ? void 0 : A.id,
     autoplay: !0,
     className: i
   })

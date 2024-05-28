@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return C
+    return j
   }
 });
 var a = r("735250");
@@ -46,17 +46,17 @@ function v(e) {
   })
 }
 
-function C() {
+function j() {
   let e = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId()),
     t = (0, o.useStateFromStores)([p.default], () => p.default.getGuildId()),
     r = (0, o.useStateFromStores)([d.default], () => d.default.getChannel(e)),
     i = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(t)),
     g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
     f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(i)),
-    C = (0, c.default)(r, !0),
-    j = null != r ? (0, b.getChannelPermissionSpecMap)(r, !1, !0) : null,
-    S = null != i ? y.default.getGuildPermissionSpecMap(i) : null,
-    T = Object.values(null != j ? j : {}).map(e => {
+    j = (0, c.default)(r, !0),
+    S = null != r ? (0, b.getChannelPermissionSpecMap)(r, !1, !0) : null,
+    C = null != i ? y.default.getGuildPermissionSpecMap(i) : null,
+    w = Object.values(null != S ? S : {}).map(e => {
       let {
         title: t,
         flag: r
@@ -66,7 +66,7 @@ function C() {
         can: i
       }, t)
     }),
-    N = Object.values(null != S ? S : {}).map(e => {
+    T = Object.values(null != C ? C : {}).map(e => {
       let {
         title: t,
         flag: r
@@ -84,14 +84,14 @@ function C() {
         className: x.section,
         children: [(0, a.jsx)(s.Heading, {
           variant: "heading-md/semibold",
-          children: null != C ? "Permissions in ".concat(C) : "No channel selected"
-        }), T]
+          children: null != j ? "Permissions in ".concat(j) : "No channel selected"
+        }), w]
       }), (0, a.jsxs)("section", {
         className: x.section,
         children: [(0, a.jsx)(s.Heading, {
           variant: "heading-md/semibold",
           children: null != i ? "Permissions in ".concat(i.name) : "No guild selected"
-        }), N]
+        }), T]
       })]
     })
   })

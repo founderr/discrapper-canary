@@ -6,8 +6,8 @@ var E = s("735250"),
   n = s.n(a),
   T = s("481060"),
   i = s("310752"),
-  u = s("531643"),
-  A = s("689938"),
+  A = s("531643"),
+  u = s("689938"),
   l = s("239792"),
   I = s("139661");
 
@@ -106,9 +106,9 @@ class L extends _.Component {
         a = null != E.items && !t.isAllDropFiles(E.items);
       return !_ && !a || (e.stopPropagation(), e.preventDefault(), E.effectAllowed = "none", E.dropEffect = "none", s && (t.setState({
         isDragging: !1
-      }), (0, u.openUploadError)({
-        title: A.default.Messages.UPLOAD_AREA_INVALID_FILE_TYPE_TITLE,
-        help: A.default.Messages.UPLOAD_AREA_INVALID_FILE_TYPE_HELP,
+      }), (0, A.openUploadError)({
+        title: u.default.Messages.UPLOAD_AREA_INVALID_FILE_TYPE_TITLE,
+        help: u.default.Messages.UPLOAD_AREA_INVALID_FILE_TYPE_HELP,
         icons: t.props.icons
       })), !1)
     }), r(this, "handleDragOver", e => {
@@ -116,7 +116,7 @@ class L extends _.Component {
       if (!this.preventUnwantedDrop(e)) return !1;
       let _ = e.dataTransfer;
       if (null != _) {
-        if (_.dropEffect = "copy", (0, T.hasModalOpen)(u.UPLOAD_ERROR_MODAL_KEY) && (0, T.closeModal)(u.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (t = (s = this.props).onDragOver) || void 0 === t || t.call(s, e), !this.state.isDragging) {
+        if (_.dropEffect = "copy", (0, T.hasModalOpen)(A.UPLOAD_ERROR_MODAL_KEY) && (0, T.closeModal)(A.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (t = (s = this.props).onDragOver) || void 0 === t || t.call(s, e), !this.state.isDragging) {
           let e = null === (E = this.elementDOMRef.current) || void 0 === E ? void 0 : E.ownerDocument.defaultView;
           (null != e && _.types instanceof e.DOMStringList && _.types.contains("application/x-moz-file") || -1 !== _.types.indexOf("Files")) && this.setState(e => e.isDragging ? {} : {
             isDragging: !0

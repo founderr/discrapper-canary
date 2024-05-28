@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("493683"),
   h = n("239091"),
   m = n("153867"),
-  C = n("35225"),
-  p = n("703656"),
+  p = n("35225"),
+  C = n("703656"),
   g = n("769654"),
   E = n("271383"),
   _ = n("771845"),
@@ -101,9 +101,9 @@ t.default = a.memo(function(e) {
     [ef, eh] = a.useState(!1),
     [em] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
   a.useEffect(() => () => em.cancel(), [em]);
-  let eC = a.useCallback(() => {
+  let ep = a.useCallback(() => {
       if (null != F) {
-        (0, p.transitionTo)(F, {
+        (0, C.transitionTo)(F, {
           state: b
         });
         return
@@ -111,9 +111,9 @@ t.default = a.memo(function(e) {
         state: b
       })
     }, [$, F]),
-    ep = a.useCallback(() => {
+    eC = a.useCallback(() => {
       if (null != F || null == H || K || !Q) return;
-      let e = (0, C.getChannelIdForGuildTransition)(H.id);
+      let e = (0, p.getChannelIdForGuildTransition)(H.id);
       null != e && f.default.preload(H.id, e)
     }, [F, H, K, Q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
@@ -153,14 +153,14 @@ t.default = a.memo(function(e) {
         mentions: z
       }),
       name: H.toString(),
-      onClick: eC,
+      onClick: ep,
       onMouseEnter: function() {
         q || eo(!0)
       },
       onMouseLeave: function() {
         q || eo(!1)
       },
-      onMouseDown: ep,
+      onMouseDown: eC,
       onContextMenu: eE,
       onKeyDown: e_,
       icon: H.getIconURL(96, eu && V),

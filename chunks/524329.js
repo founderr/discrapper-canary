@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   clearWelcomeScreenSettings: function() {
-    return u
+    return A
   },
   fetchWelcomeScreen: function() {
     return T
@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return l
   },
   updateSettings: function() {
-    return A
+    return u
   },
   welcomeScreenViewed: function() {
     return n
@@ -53,11 +53,11 @@ let n = function(e) {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_RESET"
     })
-  }, u = () => {
+  }, A = () => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_CLEAR"
     })
-  }, A = e => {
+  }, u = e => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_UPDATE",
       settings: e

@@ -37,14 +37,14 @@ let g = e => {
       tooltipColor: x,
       tooltipPosition: k = "bottom",
       tooltipDisabled: v,
-      hideOnClick: C = !0,
-      role: j,
-      "aria-label": S,
-      "aria-hidden": T,
-      "aria-checked": N,
-      "aria-expanded": w,
+      hideOnClick: j = !0,
+      role: S,
+      "aria-label": C,
+      "aria-hidden": w,
+      "aria-checked": T,
+      "aria-expanded": N,
       "aria-haspopup": E
-    } = e, L = (0, a.jsx)(g, {
+    } = e, _ = (0, a.jsx)(g, {
       x: 0,
       y: 0,
       width: 24,
@@ -53,12 +53,12 @@ let g = e => {
       foreground: null != u ? u : void 0,
       background: null != h ? h : void 0,
       color: d
-    }), _ = S;
-    return null == _ && "string" == typeof b && (_ = b), (0, a.jsx)(c.Tooltip, {
+    }), L = C;
+    return null == L && "string" == typeof b && (L = b), (0, a.jsx)(c.Tooltip, {
       text: b,
       color: x,
       position: k,
-      hideOnClick: C,
+      hideOnClick: j,
       shouldShow: !v,
       children: e => {
         let {
@@ -78,7 +78,7 @@ let g = e => {
             foreground: null != u ? u : void 0,
             background: null != h ? h : void 0,
             color: d,
-            "aria-hidden": T,
+            "aria-hidden": w,
             onMouseEnter: b,
             onMouseLeave: x,
             onFocus: k,
@@ -97,17 +97,17 @@ let g = e => {
             [p.clickable]: !o && null != f,
             [p.selected]: l
           }),
-          role: j,
-          "aria-label": _,
-          "aria-hidden": T,
-          "aria-checked": N,
+          role: S,
+          "aria-label": L,
+          "aria-hidden": w,
+          "aria-checked": T,
           "aria-haspopup": E,
-          "aria-expanded": w,
+          "aria-expanded": N,
           tabIndex: o || null == f ? -1 : 0,
           children: [s ? (0, a.jsx)(m.default, {
             mask: m.default.Masks.HEADER_BAR_BADGE,
-            children: L
-          }) : L, s ? (0, a.jsx)("span", {
+            children: _
+          }) : _, s ? (0, a.jsx)("span", {
             className: p.iconBadge
           }) : null, i]
         })

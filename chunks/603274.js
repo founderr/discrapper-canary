@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("501655"),
   h = n("199902"),
   m = n("592125"),
-  C = n("594174"),
-  p = n("938475"),
+  p = n("594174"),
+  C = n("938475"),
   g = n("242315"),
   E = n("944581"),
   _ = n("632184"),
@@ -52,7 +52,7 @@ function y() {
     a = n.map(e => e.id),
     s = n.filter(e => e.type === v.ChannelTypes.GUILD_VOICE),
     i = n.filter(e => e.type === v.ChannelTypes.GUILD_STAGE_VOICE).map(e => e.id),
-    x = (0, o.useStateFromStoresArray)([p.default], () => r().flatMap(s, e => p.default.getVoiceStatesForChannel(e).map(e => {
+    x = (0, o.useStateFromStoresArray)([C.default], () => r().flatMap(s, e => C.default.getVoiceStatesForChannel(e).map(e => {
       let {
         user: t
       } = e;
@@ -79,8 +79,8 @@ function y() {
       }
       return t
     }, [a]),
-    j = (0, o.useStateFromStoresArray)([C.default], () => b.map(e => C.default.getUser(e)), [b]),
-    P = (0, o.useStateFromStoresArray)([C.default], () => D.map(e => C.default.getUser(e)), [D]),
+    j = (0, o.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
+    P = (0, o.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
     G = O(_.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
   let U = (e = M, t = y, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,

@@ -11,15 +11,15 @@ var _ = s("481060"),
   n = s("471445"),
   T = s("908434"),
   i = s("823379"),
-  u = s("303737"),
-  A = s("293810"),
+  A = s("303737"),
+  u = s("293810"),
   l = s("689938"),
   I = s("262129");
 
 function r(e) {
   let {
     channelId: t
-  } = e, s = (0, u.useChannelWithTemplateFallback)(t);
+  } = e, s = (0, A.useChannelWithTemplateFallback)(t);
   if (null == s) return (0, E.jsx)(E.Fragment, {
     children: "[".concat(l.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
   });
@@ -41,11 +41,11 @@ function r(e) {
 
 function o(e) {
   switch (e.ref_type) {
-    case A.GuildRoleSubscriptionBenefitTypes.CHANNEL:
+    case u.GuildRoleSubscriptionBenefitTypes.CHANNEL:
       return (0, E.jsx)(r, {
         channelId: e.ref_id
       });
-    case A.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:
+    case u.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:
       return e.name;
     default:
       (0, i.assertNever)(e)

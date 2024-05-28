@@ -23,7 +23,7 @@ let m = {
     PRIMARY: () => !0,
     SECONDARY: () => !0
   },
-  C = () => (0, l.jsxs)("div", {
+  p = () => (0, l.jsxs)("div", {
     className: f.symbol,
     children: [(0, l.jsx)("div", {
       className: f.symbolBackground
@@ -32,7 +32,7 @@ let m = {
       src: n("977706")
     })]
   }, "symbol");
-class p extends a.PureComponent {
+class C extends a.PureComponent {
   componentDidMount() {
     this.setState({
       animating: !0
@@ -176,7 +176,7 @@ class E extends a.PureComponent {
     }), h(this, "removeExplosion", e => {
       let t = this.children,
         n = t.findIndex(t => {
-          if (t.type !== p) return !1;
+          if (t.type !== C) return !1;
           let n = t.props;
           return null != n.componentId && n.componentId === e
         });
@@ -187,7 +187,7 @@ class E extends a.PureComponent {
         n = window.innerHeight / 2 >> 0;
       if (this.state.explosions < 8) {
         let a = "expl-".concat(this.state.explosions);
-        e.push((0, l.jsx)(p, {
+        e.push((0, l.jsx)(C, {
           componentId: a,
           top: o().random(n - 100, n + 100, !1),
           left: o().random(t - 200, t + 200, !1),
@@ -197,7 +197,7 @@ class E extends a.PureComponent {
         })
       } else this.setTimeout(this.addSymbol, 750)
     }), h(this, "addSymbol", () => {
-      this.children = [(0, l.jsx)(C, {}, "symbol")], this.forceUpdate(), this.setTimeout(this.delayedClose, 3e3)
+      this.children = [(0, l.jsx)(p, {}, "symbol")], this.forceUpdate(), this.setTimeout(this.delayedClose, 3e3)
     }), h(this, "delayedClose", () => {
       this.props.onClose()
     })

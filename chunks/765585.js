@@ -16,8 +16,8 @@ t.default = a.forwardRef(function(e, t) {
   let {
     body: n,
     header: s,
-    artClassName: C,
-    headerClassName: p,
+    artClassName: p,
+    headerClassName: C,
     contentClassName: g,
     tryItText: E,
     dismissText: _,
@@ -55,18 +55,18 @@ t.default = a.forwardRef(function(e, t) {
     ref: t,
     children: (0, l.jsxs)("div", {
       className: i()(m.content, g, {
-        [m.contentNoArt]: null == C || T,
+        [m.contentNoArt]: null == p || T,
         [m.contentPremium]: A || y
       }),
       children: [(0, l.jsxs)("div", {
-        className: i()(C, T ? m.artInline : m.artAbsolute),
+        className: i()(p, T ? m.artInline : m.artAbsolute),
         children: [v && (0, l.jsx)(d.default, {
           className: m.gifTag
         }), O]
       }), (0, l.jsxs)("div", {
         className: m.body,
         children: [(0, l.jsxs)(r.Heading, {
-          className: i()(A ? m.headerWithPremiumIcon : m.header, p),
+          className: i()(A ? m.headerWithPremiumIcon : m.header, C),
           variant: "heading-md/bold",
           color: "always-white",
           children: [A && !y ? (0, l.jsx)(c.default, {

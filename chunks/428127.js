@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("492162"),
   h = n("451478"),
   m = n("409216"),
-  C = n("86813"),
-  p = n("826026"),
+  p = n("86813"),
+  C = n("826026"),
   g = n("632184"),
   E = n("934415"),
   _ = n("968847"),
@@ -35,7 +35,7 @@ function T(e) {
     jumpToVoiceChannels: s
   } = e, r = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, f.default)(n.id), c = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), s()
-  }, [s]), h = null !== (t = null == r ? void 0 : r.getChannelRecords()) && void 0 !== t ? t : [], C = (0, E.computeSummarizedVoiceUsers)({
+  }, [s]), h = null !== (t = null == r ? void 0 : r.getChannelRecords()) && void 0 !== t ? t : [], p = (0, E.computeSummarizedVoiceUsers)({
     channels: h,
     selectedChannelId: null,
     selectedVoiceChannelId: null,
@@ -54,12 +54,12 @@ function T(e) {
       color: "text-positive",
       className: I.barText,
       children: S.default.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
-        count: C.length
+        count: p.length
       })
     }), (0, l.jsx)(m.default, {
       guildId: n.id,
       className: I.voiceChannelsUsers,
-      users: C.slice(0, 4),
+      users: p.slice(0, 4),
       renderMoreUsers: () => null,
       max: 4,
       size: d.AvatarSizes.SIZE_16
@@ -104,11 +104,11 @@ function A(e) {
       }) : L === _.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
         className: I.bar,
         onClick: O,
-        children: ["bottom" === t ? (0, l.jsx)(C.default, {
+        children: ["bottom" === t ? (0, l.jsx)(p.default, {
           className: I.unreadIcon,
           height: 14,
           width: 14
-        }) : (0, l.jsx)(p.default, {
+        }) : (0, l.jsx)(C.default, {
           className: I.unreadIcon,
           height: 14,
           width: 14

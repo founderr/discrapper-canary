@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return P
   },
   getFirstRouteFor: function() {
-    return R
+    return f
   },
   useChannelBrowserChannelCount: function() {
     return y
@@ -16,7 +16,7 @@ s.r(t), s.d(t, {
     return p
   },
   useFilterCategoriesByQuery: function() {
-    return f
+    return R
   }
 }), s("733860");
 var E = s("470079"),
@@ -25,8 +25,8 @@ var E = s("470079"),
   n = s("913527"),
   T = s.n(n),
   i = s("442837"),
-  u = s("524437"),
-  A = s("45114"),
+  A = s("524437"),
+  u = s("45114"),
   l = s("740504"),
   I = s("605236"),
   r = s("931261"),
@@ -38,8 +38,8 @@ var E = s("470079"),
   g = s("306680"),
   D = s("709054"),
   c = s("981631"),
-  O = s("176505"),
-  G = s("443063"),
+  G = s("176505"),
+  O = s("443063"),
   C = s("490897"),
   U = s("689938");
 
@@ -47,10 +47,10 @@ function M(e, t) {
   e.index = t
 }
 
-function f(e, t, s, _) {
+function R(e, t, s, _) {
   _ = _.toLowerCase();
   let n = (0, r.useCanSeeOnboardingHome)(e),
-    T = E.useCallback((e, t) => !(n && e.channel.hasFlag(O.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
+    T = E.useCallback((e, t) => !(n && e.channel.hasFlag(G.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
   return E.useMemo(() => {
     let e = {
       null: [],
@@ -65,15 +65,15 @@ function f(e, t, s, _) {
   }, [t, s, T, _])
 }
 
-function R(e) {
+function f(e) {
   let t = e.getSections();
   if (t[o.SECTION_INDEX_COMMUNITY] > 0) switch (e.getCommunitySection().getRow(0)) {
-    case G.ChannelListCommunityRow.GUILD_HOME:
-      return O.StaticChannelRoute.GUILD_HOME;
-    case G.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
-      return O.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
-    case G.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
-      return O.StaticChannelRoute.MEMBER_APPLICATIONS
+    case O.ChannelListCommunityRow.GUILD_HOME:
+      return G.StaticChannelRoute.GUILD_HOME;
+    case O.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
+      return G.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
+    case O.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
+      return G.StaticChannelRoute.MEMBER_APPLICATIONS
   }
   for (let E = o.SECTION_INDEX_UNCATEGORIZED_CHANNELS; E < e.voiceChannelsSectionNumber; E++)
     if (t[E] > 0) {
@@ -85,7 +85,7 @@ function R(e) {
 
 function h(e, t) {
   let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-  (0, L.bulkClearRecents)(e, t), (0, A.bulkAck)(t.map(e => ({
+  (0, L.bulkClearRecents)(e, t), (0, u.bulkAck)(t.map(e => ({
     channelId: e,
     readStateType: C.ReadStateTypes.CHANNEL,
     messageId: g.default.lastMessageId(e)
@@ -93,7 +93,7 @@ function h(e, t) {
 }
 
 function p(e, t, s, E) {
-  let _ = (0, I.useIsDismissibleContentDismissed)(u.DismissibleContent.CHANNEL_BROWSER_NUX),
+  let _ = (0, I.useIsDismissibleContentDismissed)(A.DismissibleContent.CHANNEL_BROWSER_NUX),
     a = (0, i.useStateFromStoresObject)([N.default], () => {
       let t = {},
         s = N.default.getMutableGuildChannelsForGuild(e);

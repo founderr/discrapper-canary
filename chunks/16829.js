@@ -6,8 +6,8 @@ var E = s("735250"),
   n = s.n(a),
   T = s("442837"),
   i = s("481060"),
-  u = s("749210"),
-  A = s("700582"),
+  A = s("749210"),
+  u = s("700582"),
   l = s("484459"),
   I = s("271383"),
   r = s("246946"),
@@ -19,12 +19,12 @@ var E = s("735250"),
   g = s("912527"),
   D = s("202597"),
   c = s("5192"),
-  O = s("893966"),
-  G = s("527379"),
+  G = s("893966"),
+  O = s("527379"),
   C = s("327999"),
   U = s("689938"),
   M = s("673330");
-let f = _.memo(function() {
+let R = _.memo(function() {
     return (0, E.jsx)(i.Tooltip, {
       text: U.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN_TOOLTIP,
       children: e => (0, E.jsx)(i.Text, {
@@ -36,7 +36,7 @@ let f = _.memo(function() {
       })
     })
   }),
-  R = _.memo(function() {
+  f = _.memo(function() {
     return (0, E.jsx)(i.Tooltip, {
       text: U.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP,
       children: e => (0, E.jsx)(i.Text, {
@@ -128,7 +128,7 @@ function p(e) {
   let {
     guildId: s,
     inviterUser: a,
-    joinSourceType: u,
+    joinSourceType: A,
     className: l,
     onClickInviter: r
   } = e, o = (0, T.useStateFromStores)([I.default], () => null == a ? null : I.default.getMember(s, a.id), [a, s]), L = _.useCallback(e => {
@@ -138,11 +138,11 @@ function p(e) {
     className: n()(M.inviterTooltipContainer, l),
     children: [(0, E.jsx)(i.Text, {
       variant: "text-xs/medium",
-      children: u !== C.JoinSourceType.BOT ? U.default.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : U.default.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP
+      children: A !== C.JoinSourceType.BOT ? U.default.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : U.default.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP
     }), (0, E.jsxs)(i.Clickable, {
       className: n()(M.inviterUserContainer, null != r && M.clickable),
       onClick: L,
-      children: [(0, E.jsx)(A.default, {
+      children: [(0, E.jsx)(u.default, {
         user: a,
         size: i.AvatarSizes.SIZE_16
       }), (0, E.jsx)(i.Text, {
@@ -200,8 +200,8 @@ function m(e) {
     joinSourceType: s,
     integrationType: a,
     showInviterAsFooter: T,
-    guildId: u,
-    inviterUser: A,
+    guildId: A,
+    inviterUser: u,
     onClickInviter: l,
     ...I
   } = e, r = null != s ? h[s] : null, o = s === C.JoinSourceType.INTEGRATION && null != a, L = _.useCallback(e => {
@@ -211,24 +211,24 @@ function m(e) {
         return;
       case s === C.JoinSourceType.INVITE && null != t:
         var E;
-        (0, G.updateSearchState)(u, {
+        (0, O.updateSearchState)(A, {
           selectedSourceInviteCode: null !== (E = null == t ? void 0 : t.trim()) && void 0 !== E ? E : void 0,
           selectedJoinSourceType: s
         });
         return;
       default:
-        (0, G.updateSearchState)(u, {
+        (0, O.updateSearchState)(A, {
           selectedSourceInviteCode: null,
           selectedJoinSourceType: null != s ? s : void 0
         });
         return
     }
-  }, [u, s, t]);
+  }, [A, s, t]);
   switch (!0) {
     case null == r:
     case null == s:
     case s === C.JoinSourceType.UNSPECIFIED:
-      return (0, E.jsx)(f, {
+      return (0, E.jsx)(R, {
         ...I
       });
     case null != a && o:
@@ -261,15 +261,15 @@ function m(e) {
             children: null == r ? void 0 : r.getJoinTypeLabel(null != t ? t : void 0)
           })]
         }), T && (0, E.jsx)(p, {
-          guildId: u,
-          inviterUser: A,
+          guildId: A,
+          inviterUser: u,
           joinSourceType: s,
           className: M.inviterFooter,
           onClickInviter: l
         })]
       });
     default:
-      return (0, E.jsx)(f, {
+      return (0, E.jsx)(R, {
         ...I
       })
   }
@@ -280,22 +280,22 @@ t.default = _.memo(function(e) {
     userId: a,
     guildId: n,
     showInviterAsFooter: i,
-    onClickInviter: A
-  } = e, I = (0, T.useStateFromStores)([O.default], () => O.default.getEnhancedMember(n, a), [n, a]), L = null !== (t = null == I ? void 0 : I.inviterId) && void 0 !== t ? t : null, d = (0, T.useStateFromStores)([o.default], () => o.default.getUser(L), [L]);
+    onClickInviter: u
+  } = e, I = (0, T.useStateFromStores)([G.default], () => G.default.getEnhancedMember(n, a), [n, a]), L = null !== (t = null == I ? void 0 : I.inviterId) && void 0 !== t ? t : null, d = (0, T.useStateFromStores)([o.default], () => o.default.getUser(L), [L]);
   _.useEffect(() => {
-    null != L && (u.default.requestMembersById(n, [L]), (0, l.default)(L, void 0, {
+    null != L && (A.default.requestMembersById(n, [L]), (0, l.default)(L, void 0, {
       guildId: n
     }))
   }, [n, L]);
   let N = (0, T.useStateFromStores)([r.default], () => r.default.hideInstantInvites, []);
-  if (null == I) return (0, E.jsx)(f, {});
+  if (null == I) return (0, E.jsx)(R, {});
   let {
     sourceInviteCode: S,
     joinSourceType: g,
     integrationType: D
-  } = I, c = null != g ? h[g] : null, G = null !== (s = null == c ? void 0 : c.hasTooltip) && void 0 !== s && s;
-  return (g === C.JoinSourceType.INVITE || g === C.JoinSourceType.VANITY_URL || g === C.JoinSourceType.MANUAL_MEMBER_VERIFICATION && null != S) && N ? (0, E.jsx)(R, {}) : (0, E.jsx)(y, {
-    hasTooltip: G && !i,
+  } = I, c = null != g ? h[g] : null, O = null !== (s = null == c ? void 0 : c.hasTooltip) && void 0 !== s && s;
+  return (g === C.JoinSourceType.INVITE || g === C.JoinSourceType.VANITY_URL || g === C.JoinSourceType.MANUAL_MEMBER_VERIFICATION && null != S) && N ? (0, E.jsx)(f, {}) : (0, E.jsx)(y, {
+    hasTooltip: O && !i,
     inviterUser: null != d ? d : null,
     guildId: n,
     joinSourceType: g,
@@ -306,7 +306,7 @@ t.default = _.memo(function(e) {
       showInviterAsFooter: i,
       inviterUser: null != d ? d : null,
       guildId: n,
-      onClickInviter: A,
+      onClickInviter: u,
       ...e
     })
   })

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   NO_WELCOME_SCREEN: function() {
-    return u
+    return A
   }
 });
 var E, _, a, n, T = s("442837"),
   i = s("570140");
-let u = {},
-  A = {},
+let A = {},
+  u = {},
   l = {},
   I = !1,
   r = !1,
@@ -17,7 +17,7 @@ function L(e) {
   let {
     guild: t
   } = e.invite;
-  return (null == t ? void 0 : t.welcome_screen) != null && (A[t.id] = t.welcome_screen, !0)
+  return (null == t ? void 0 : t.welcome_screen) != null && (u[t.id] = t.welcome_screen, !0)
 }
 
 function d(e) {
@@ -25,11 +25,11 @@ function d(e) {
     welcomeScreen: t,
     guildId: s
   } = e;
-  A[s] = null != t ? t : u
+  u[s] = null != t ? t : A
 }
 class N extends(n = T.default.Store) {
   get(e) {
-    if (null != e) return A[e]
+    if (null != e) return u[e]
   }
   isFetching() {
     return r
@@ -43,7 +43,7 @@ class N extends(n = T.default.Store) {
   }
   isEmpty(e) {
     if (null == e) return !0;
-    let t = A[e];
+    let t = u[e];
     return null == t || 0 === t.welcome_channels.length
   }
 }
@@ -84,7 +84,7 @@ a = "WelcomeScreenStore", (_ = "displayName") in(E = N) ? Object.defineProperty(
       welcomeScreen: t,
       guildId: s
     } = e;
-    A[s] = null != t ? t : u
+    u[s] = null != t ? t : A
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
     r = !1, o = !0

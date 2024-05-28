@@ -76,10 +76,10 @@ s.r(t), s.d(t, {
     return ei
   },
   getStringForPermission: function() {
-    return eA
+    return eu
   },
   getStringForRemovedChannelFlag: function() {
-    return eu
+    return eA
   },
   transformLogs: function() {
     return el
@@ -91,8 +91,8 @@ var E = s("654861"),
   n = s.n(a),
   T = s("536402"),
   i = s("533800"),
-  u = s("149765"),
-  A = s("866442"),
+  A = s("149765"),
+  u = s("866442"),
   l = s("911969"),
   I = s("933557"),
   r = s("710845"),
@@ -104,13 +104,13 @@ var E = s("654861"),
   g = s("427679"),
   D = s("926491"),
   c = s("387667"),
-  O = s("592125"),
-  G = s("430824"),
+  G = s("592125"),
+  O = s("430824"),
   C = s("699516"),
   U = s("594174"),
   M = s("55935"),
-  f = s("630388"),
-  R = s("823379"),
+  R = s("630388"),
+  f = s("823379"),
   h = s("971130"),
   p = s("709054"),
   y = s("981631"),
@@ -330,7 +330,7 @@ let V = new r.default("AuditLogUtils"),
         return t.map(e => (function(e) {
           if (e === i.GuildInviteFlags.IS_GUEST_INVITE) return H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
           return null
-        })(e)).filter(R.isNotNullish)
+        })(e)).filter(f.isNotNullish)
       }({
         newValue: t
       })
@@ -913,7 +913,7 @@ function ei(e) {
   return null
 }
 
-function eu(e) {
+function eA(e) {
   switch (e) {
     case P.ChannelFlags.GUILD_FEED_REMOVED:
       return H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
@@ -925,7 +925,7 @@ function eu(e) {
   return null
 }
 
-function eA(e, t) {
+function eu(e, t) {
   switch (e) {
     case y.Permissions.CREATE_INSTANT_INVITE:
       return H.default.Messages.CREATE_INSTANT_INVITE;
@@ -1032,11 +1032,11 @@ function el(e, t) {
             return t;
           case y.AuditLogTargetTypes.CHANNEL:
           case y.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-            return eL(e, y.AuditLogChangeKeys.NAME, e => O.default.getChannel(e), e => (0, I.computeChannelName)(e, U.default, C.default, !0));
+            return eL(e, y.AuditLogChangeKeys.NAME, e => G.default.getChannel(e), e => (0, I.computeChannelName)(e, U.default, C.default, !0));
           case y.AuditLogTargetTypes.USER:
             return eL(e, y.AuditLogChangeKeys.NICK, e => U.default.getUser(e), e => e);
           case y.AuditLogTargetTypes.ROLE:
-            return eL(e, y.AuditLogChangeKeys.NAME, e => G.default.getRole(t.id, e), e => e.name);
+            return eL(e, y.AuditLogChangeKeys.NAME, e => O.default.getRole(t.id, e), e => e.name);
           case y.AuditLogTargetTypes.ONBOARDING_PROMPT:
             let s = eL(e, y.AuditLogChangeKeys.ID, e => d.default.getOnboardingPrompt(e), e => e.title);
             return null != s ? s : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE;
@@ -1079,7 +1079,7 @@ function el(e, t) {
           case y.AuditLogTargetTypes.HOME_SETTINGS:
             return eL(e, y.AuditLogChangeKeys.GUILD_ID, e => N.default.getSettings(e), () => H.default.Messages.SERVER_GUIDE, t.id);
           case y.AuditLogTargetTypes.VOICE_CHANNEL_STATUS:
-            return eL(e, y.AuditLogChangeKeys.STATUS, e => O.default.getChannel(e), e => (0, I.computeChannelName)(e, U.default, C.default, !0));
+            return eL(e, y.AuditLogChangeKeys.STATUS, e => G.default.getChannel(e), e => (0, I.computeChannelName)(e, U.default, C.default, !0));
           default:
             return V.warn("Unknown targetType for log", e), null
         }
@@ -1098,7 +1098,7 @@ function el(e, t) {
               case y.AuditLogSubtargetTypes.ROLE:
                 s.subtarget = ed(e.options.role_name, y.NOOP_NULL)
             }
-            if (null != e.options.channel_id && (s.channel = eL(e, "", e => O.default.getChannel(e), e => e, e.options.channel_id)), null != e.options.members_removed && 0 !== e.options.members_removed && (s.count = e.options.members_removed), null != e.options.event_exception_id) {
+            if (null != e.options.channel_id && (s.channel = eL(e, "", e => G.default.getChannel(e), e => e, e.options.channel_id)), null != e.options.members_removed && 0 !== e.options.members_removed && (s.count = e.options.members_removed), null != e.options.event_exception_id) {
               var t;
               let E = S.default.guildScheduledEvents.find(t => t.id === e.targetId),
                 _ = null == E ? void 0 : E.guild_scheduled_event_exceptions.find(t => t.event_exception_id === e.options.event_exception_id);
@@ -1115,13 +1115,13 @@ function el(e, t) {
               let t = e.newValue || e.oldValue;
               switch (t.type) {
                 case y.ApplicationCommandPermissionTypes.ROLE:
-                  e.subtarget = ed(t.id, e => G.default.getRole(s.id, e), e => e.name);
+                  e.subtarget = ed(t.id, e => O.default.getRole(s.id, e), e => e.name);
                   break;
                 case y.ApplicationCommandPermissionTypes.USER:
                   e.subtarget = ed(t.id, e => U.default.getUser(e), e => e.tag);
                   break;
                 case y.ApplicationCommandPermissionTypes.CHANNEL:
-                  t.id === _()(s.id).subtract(1).toString() ? e.subtarget = H.default.Messages.ALL_CHANNELS : e.subtarget = ed(t.id, e => O.default.getChannel(e), e => (0, I.computeChannelName)(e, U.default, C.default, !0))
+                  t.id === _()(s.id).subtract(1).toString() ? e.subtarget = H.default.Messages.ALL_CHANNELS : e.subtarget = ed(t.id, e => G.default.getChannel(e), e => (0, I.computeChannelName)(e, U.default, C.default, !0))
               }
               return e
             }
@@ -1133,15 +1133,15 @@ function el(e, t) {
               case y.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
               case y.AuditLogChangeKeys.RULES_CHANNEL_ID:
               case y.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
-                return eo(e, e => O.default.getChannel(e), e => (0, I.computeChannelName)(e, U.default, C.default, !0));
+                return eo(e, e => G.default.getChannel(e), e => (0, I.computeChannelName)(e, U.default, C.default, !0));
               case y.AuditLogChangeKeys.AFK_TIMEOUT:
                 return eo(e, e => e / 60);
               case y.AuditLogChangeKeys.BITRATE:
                 return eo(e, e => e / 1e3);
               case y.AuditLogChangeKeys.COLOR:
-                return eo(e, e => (0, A.int2hex)(e).toUpperCase());
+                return eo(e, e => (0, u.int2hex)(e).toUpperCase());
               case y.AuditLogChangeKeys.THEME_COLORS:
-                return eo(e, e => "".concat((0, A.int2hex)(e[0]).toUpperCase(), ", ").concat((0, A.int2hex)(e[1]).toUpperCase()));
+                return eo(e, e => "".concat((0, u.int2hex)(e[0]).toUpperCase(), ", ").concat((0, u.int2hex)(e[1]).toUpperCase()));
               case y.AuditLogChangeKeys.MAX_AGE:
                 return eo(e, e => {
                   let t = h.default.getMaxAgeOptions.find(t => {
@@ -1193,13 +1193,13 @@ function el(e, t) {
                   } = function(e, t) {
                     let s = "number" == typeof e ? e : 0,
                       E = "number" == typeof t ? t : 0,
-                      _ = f.removeFlag(E, s),
-                      a = f.removeFlag(s, E),
+                      _ = R.removeFlag(E, s),
+                      a = R.removeFlag(s, E),
                       n = [],
                       T = [];
                     for (let e in P.ChannelFlags) {
                       let t = P.ChannelFlags[e];
-                      f.hasFlag(_, t) && n.push(t), f.hasFlag(a, t) && T.push(t)
+                      R.hasFlag(_, t) && n.push(t), R.hasFlag(a, t) && T.push(t)
                     }
                     return {
                       added: n,
@@ -1266,10 +1266,10 @@ function el(e, t) {
                 if (t.targetType === y.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => null != e && Array.isArray(e) ? e.map(e => "'".concat(e, "'")).join(", ") : JSON.stringify(e));
                 break;
               case y.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS:
-                if (t.targetType === y.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => e.map(O.default.getChannel).filter(e => null != e).map(e => (0, I.computeChannelName)(e, U.default, C.default, !0)), e => null != e && e.length > 0 ? e.join(", ") : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
+                if (t.targetType === y.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => e.map(G.default.getChannel).filter(e => null != e).map(e => (0, I.computeChannelName)(e, U.default, C.default, !0)), e => null != e && e.length > 0 ? e.join(", ") : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
                 break;
               case y.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES:
-                if (t.targetType === y.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => e.map(e => G.default.getRole(s.id, e)).filter(e => null != e).map(e => e.name), e => null != e && e.length > 0 ? e.join(", ") : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
+                if (t.targetType === y.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eo(e, e => e.map(e => O.default.getRole(s.id, e)).filter(e => null != e).map(e => e.name), e => null != e && e.length > 0 ? e.join(", ") : H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
                 break;
               case y.AuditLogChangeKeys.AVAILABLE_TAGS:
                 return function(e) {
@@ -1314,15 +1314,15 @@ function el(e, t) {
 }
 
 function eI(e, t) {
-  let s = u.deserialize("string" == typeof e ? e : 0),
-    E = u.deserialize("string" == typeof t ? t : 0),
-    _ = u.remove(E, s),
-    a = u.remove(s, E),
+  let s = A.deserialize("string" == typeof e ? e : 0),
+    E = A.deserialize("string" == typeof t ? t : 0),
+    _ = A.remove(E, s),
+    a = A.remove(s, E),
     n = [],
     T = [];
   for (let e in y.Permissions) {
     let t = y.Permissions[e];
-    u.has(_, t) && n.push(t), u.has(a, t) && T.push(t)
+    A.has(_, t) && n.push(t), A.has(a, t) && T.push(t)
   }
   return {
     added: n,

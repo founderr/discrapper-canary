@@ -10,10 +10,10 @@ s.r(t), s.d(t, {
     return n
   },
   isChannelBenefit: function() {
-    return u
+    return A
   },
   isIntangibleBenefit: function() {
-    return A
+    return u
   }
 });
 var E = s("293810"),
@@ -67,10 +67,10 @@ function i(e) {
   }
 }
 
-function u(e) {
+function A(e) {
   return e.ref_type === E.GuildRoleSubscriptionBenefitTypes.CHANNEL
 }
 
-function A(e) {
+function u(e) {
   return e.ref_type === E.GuildRoleSubscriptionBenefitTypes.INTANGIBLE
 }

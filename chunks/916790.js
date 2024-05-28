@@ -24,10 +24,10 @@ var a = r("735250"),
   k = r("585864"),
   v = r("277513");
 
-function C(e) {
+function j(e) {
   return parseFloat(e.toFixed(3))
 }
-let j = [{
+let S = [{
   key: "store",
   cellClassName: k.actionColumn,
   render(e) {
@@ -43,11 +43,11 @@ let j = [{
     let {
       trace: t
     } = e;
-    return "".concat(C(t.time), " ms")
+    return "".concat(j(t.time), " ms")
   }
 }];
 
-function S(e) {
+function C(e) {
   let {
     actionLog: t
   } = e, r = i.useMemo(() => t.traces.map(e => ({
@@ -56,12 +56,12 @@ function S(e) {
   })), [t]);
   return (0, a.jsx)(c.ScrollerThin, {
     children: (0, a.jsx)(b.default, {
-      columns: j,
+      columns: S,
       data: r
     })
   })
 }
-let T = [{
+let w = [{
   id: "action",
   name: "Action",
   render(e) {
@@ -81,7 +81,7 @@ let T = [{
           })
         }), (0, a.jsxs)(f.Property, {
           name: "Total Time",
-          children: [C(r.totalTime), " ms"]
+          children: [j(r.totalTime), " ms"]
         })]
       }), (0, a.jsx)(c.ScrollerThin, {
         className: k.inspectorContainer,
@@ -98,17 +98,17 @@ let T = [{
     let {
       actionLog: t
     } = e;
-    return (0, a.jsx)(S, {
+    return (0, a.jsx)(C, {
       actionLog: t
     })
   }
 }];
 
-function N(e) {
+function T(e) {
   let {
     actionLog: t,
     initialHeight: r
-  } = e, l = i.useMemo(() => t.error ? [...T, {
+  } = e, l = i.useMemo(() => t.error ? [...w, {
     id: "error",
     name: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.default, {
@@ -139,7 +139,7 @@ function N(e) {
         })]
       })
     }
-  }] : T, [t]), {
+  }] : w, [t]), {
     TabBar: o,
     renderSelectedTab: s
   } = (0, x.default)({
@@ -162,7 +162,7 @@ function N(e) {
     })]
   })
 }
-let w = [{
+let N = [{
   key: "action",
   cellClassName: k.actionColumn,
   render(e) {
@@ -182,7 +182,7 @@ let w = [{
     let {
       actionLog: t
     } = e;
-    return "".concat(C(t.totalTime), " ms")
+    return "".concat(j(t.totalTime), " ms")
   }
 }];
 
@@ -206,12 +206,12 @@ function E() {
     children: [(0, a.jsx)(c.ScrollerThin, {
       className: k.tableContainer,
       children: (0, a.jsx)(b.default, {
-        columns: w,
+        columns: N,
         data: r,
         selectedRowKey: null == l ? void 0 : l.toString(),
         onClickRow: e => o(Number.parseInt(e, 10))
       })
-    }), null != s && (0, a.jsx)(N, {
+    }), null != s && (0, a.jsx)(T, {
       actionLog: s,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]

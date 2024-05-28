@@ -10,8 +10,8 @@ var E = s("735250"),
   n = s.n(a),
   T = s("924826"),
   i = s("481060"),
-  u = s("285952"),
-  A = s("153124"),
+  A = s("285952"),
+  u = s("153124"),
   l = s("84546");
 class I extends _.PureComponent {
   render() {
@@ -21,14 +21,14 @@ class I extends _.PureComponent {
       renderValue: s,
       className: _
     } = this.props;
-    return (0, E.jsxs)(u.default, {
+    return (0, E.jsxs)(A.default, {
       className: n()(l.quickSelect, _),
-      align: u.default.Align.CENTER,
+      align: A.default.Align.CENTER,
       children: [(0, E.jsx)("div", {
         className: l.quickSelectLabel,
         children: e
-      }), (0, E.jsxs)(u.default, {
-        align: u.default.Align.CENTER,
+      }), (0, E.jsxs)(A.default, {
+        align: A.default.Align.CENTER,
         className: l.quickSelectClick,
         children: [(0, E.jsx)("div", {
           className: l.quickSelectValue,
@@ -86,13 +86,13 @@ function o(e) {
     value: s,
     scroller: _,
     renderOption: a,
-    onChange: u,
+    onChange: A,
     className: I
   } = e, o = n()(l.quickSelectPopout, I, {
     [l.quickSelectPopoutScroll]: _
   }), L = t.map(e => {
     let t = null != s && e.value === s.value,
-      _ = t ? void 0 : u;
+      _ = t ? void 0 : A;
     return (0, E.jsx)(r, {
       className: l.quickSelectPopoutOption,
       renderOption: a,
@@ -100,7 +100,7 @@ function o(e) {
       onChange: _,
       selected: t
     }, e.key || e.value)
-  }), d = (0, A.useUID)(), N = (0, T.default)({
+  }), d = (0, u.useUID)(), N = (0, T.default)({
     id: d,
     isEnabled: !0,
     wrap: !0,

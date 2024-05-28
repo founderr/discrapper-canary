@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("888651"),
   h = n("619915"),
   m = n("339340"),
-  C = n("201895"),
-  p = n("718589"),
+  p = n("201895"),
+  C = n("718589"),
   g = n("933557"),
   E = n("557135"),
   _ = n("873696"),
@@ -203,7 +203,7 @@ class q extends B.default {
                 },
                 connectDragPreview: g,
                 isFavoriteSuggestion: A,
-                "aria-label": (0, C.default)({
+                "aria-label": (0, p.default)({
                   channel: e,
                   unread: a,
                   mentionCount: r,
@@ -211,7 +211,7 @@ class q extends B.default {
                   embeddedActivitiesCount: N.length,
                   isSubscriptionGated: T
                 }),
-                "aria-describedby": (0, p.default)({
+                "aria-describedby": (0, C.default)({
                   channel: e,
                   embeddedApps: N
                 }),
@@ -400,7 +400,7 @@ function J(e) {
       bypassLimit: b.default.can(W.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), m = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), C = (0, h.default)(n), p = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
+  }), m = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), p = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
     isSubscriptionGated: _,
     needSubscriptionToAccess: I
   } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
@@ -422,8 +422,8 @@ function J(e) {
     enableActivities: !0
   }), U = x && null == y;
   return (0, l.jsx)(Q, {
-    channelName: p,
-    embeddedApps: C,
+    channelName: C,
+    embeddedApps: p,
     embeddedActivityType: W.ActivityTypes.PLAYING,
     video: m,
     hasActiveEvent: null != E,

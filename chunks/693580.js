@@ -7,7 +7,7 @@ var E = s("735250"),
   T = s("748780"),
   i = s("665467");
 
-function u(e, t, s) {
+function A(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -16,7 +16,7 @@ function u(e, t, s) {
   }) : e[t] = s, e
 }
 
-function A(e) {
+function u(e) {
   let t = e => e.interpolate({
     inputRange: [0, 1],
     outputRange: ["0px", "1px"]
@@ -82,7 +82,7 @@ class l extends _.Component {
               id: "search-index-foreground-mask-b",
               fill: "#fff",
               children: (0, E.jsx)(T.default.use, {
-                style: A(this.state),
+                style: u(this.state),
                 className: i.mask,
                 xlinkHref: "#search-index-foreground-mask-a"
               })
@@ -347,7 +347,7 @@ class l extends _.Component {
             })]
           }), (0, E.jsxs)(T.default.g, {
             className: i.magnifyingGlass,
-            style: A(this.state),
+            style: u(this.state),
             children: [(0, E.jsx)("path", {
               fill: "#C9D2F0",
               d: "M89.8311 190.9259c-2.441-2.441-2.441-6.4 0-8.841l36.771-36.771 8.841 8.841-36.771 36.771c-2.441 2.441-6.4 2.441-8.841 0"
@@ -390,10 +390,10 @@ class l extends _.Component {
     })
   }
   constructor(...e) {
-    super(...e), u(this, "state", {
+    super(...e), A(this, "state", {
       x: new T.default.Value(0),
       y: new T.default.Value(0)
-    }), u(this, "_isMounted", !1), u(this, "shouldLoop", () => this._isMounted)
+    }), A(this, "_isMounted", !1), A(this, "shouldLoop", () => this._isMounted)
   }
 }
 t.default = l

@@ -9,8 +9,8 @@ var E, _ = s("470079"),
   n = s.n(a),
   T = s("442837"),
   i = s("570140"),
-  u = s("944163"),
-  A = s("709054"),
+  A = s("944163"),
+  u = s("709054"),
   l = s("116175"),
   I = s("308083");
 
@@ -33,7 +33,7 @@ let o = new Map,
     wildcardDescriptors: [I.EMPTY_WILDCARD, I.EMPTY_WILDCARD, I.EMPTY_WILDCARD],
     tag: "",
     verificationForm: {
-      ...u.NO_MEMBER_VERIFICATION_FORM
+      ...A.NO_MEMBER_VERIFICATION_FORM
     },
     badgeKind: l.ClanBadgeKind.SWORD,
     badgePrimaryColor: void 0,
@@ -76,9 +76,9 @@ function c(e, t) {
     }), L.set(e, s)
   }
 }
-class O extends(E = T.default.PersistedStore) {
+class G extends(E = T.default.PersistedStore) {
   initialize(e) {
-    null != e && A.default.keys(e.progressByGuild).forEach(t => {
+    null != e && u.default.keys(e.progressByGuild).forEach(t => {
       var s, E, _, a, n;
       o.set(t, (s = e.progressByGuild[t], {
         gameApplicationIds: new Set(s.gameApplicationIds),
@@ -88,7 +88,7 @@ class O extends(E = T.default.PersistedStore) {
         wildcardDescriptors: null !== (E = s.wildcardDescriptors) && void 0 !== E ? E : [I.EMPTY_WILDCARD, I.EMPTY_WILDCARD, I.EMPTY_WILDCARD],
         tag: s.tag,
         verificationForm: null !== (_ = s.verificationForm) && void 0 !== _ ? _ : {
-          ...u.NO_MEMBER_VERIFICATION_FORM
+          ...A.NO_MEMBER_VERIFICATION_FORM
         },
         badgeKind: null !== (a = s.badgeKind) && void 0 !== a ? a : l.ClanBadgeKind.SWORD,
         badgePrimaryColor: s.badgePrimaryColor,
@@ -139,7 +139,7 @@ class O extends(E = T.default.PersistedStore) {
     return [...o.keys()]
   }
 }
-r(O, "displayName", "ClanSetupStore"), r(O, "persistKey", "ClanSetupStore"), t.default = new O(i.default, {
+r(G, "displayName", "ClanSetupStore"), r(G, "persistKey", "ClanSetupStore"), t.default = new G(i.default, {
   CLAN_SETUP_RESET: function() {
     o.clear(), L.clear()
   },
@@ -183,7 +183,7 @@ r(O, "displayName", "ClanSetupStore"), r(O, "persistKey", "ClanSetupStore"), t.d
       guildId: E,
       isLocalUpdate: _
     } = e;
-    _ && (t = null == s ? u.NO_MEMBER_VERIFICATION_FORM : {
+    _ && (t = null == s ? A.NO_MEMBER_VERIFICATION_FORM : {
       ...D(E).verificationForm,
       ...s
     }, c(E, {
