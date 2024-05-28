@@ -57,7 +57,7 @@ async function W(e) {
     analyticsLocation: r
   } = e;
   try {
-    if (n(!0), a(!1), [w.SubscriptionStatusTypes.PAST_DUE, w.SubscriptionStatusTypes.PAUSED].includes(t.status)) await (0, m.cancelSubscription)(t.id, i, r);
+    if (n(!0), a(!1), [w.SubscriptionStatusTypes.PAST_DUE, w.SubscriptionStatusTypes.PAUSED, w.SubscriptionStatusTypes.BILLING_RETRY].includes(t.status)) await (0, m.cancelSubscription)(t.id, i, r);
     else {
       var l, u;
       let e = null !== (u = null === (l = t.renewalMutations) || void 0 === l ? void 0 : l.items) && void 0 !== u ? u : t.items;
@@ -86,6 +86,7 @@ function K(e) {
   switch (s.status) {
     case w.SubscriptionStatusTypes.PAST_DUE:
     case w.SubscriptionStatusTypes.PAUSED:
+    case w.SubscriptionStatusTypes.BILLING_RETRY:
       h = Y.default.Messages.PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY;
       break;
     default:

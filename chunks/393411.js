@@ -178,12 +178,15 @@ t.default = function(e) {
     W = (0, T.useHasDiscountApplied)(),
     K = (0, T.useActiveDiscountInfo)(),
     V = () => {
-      (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE || r.status === L.SubscriptionStatusTypes.PAUSED) && Z(M.Steps.PAUSE_SELECT)
+      (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE || r.status === L.SubscriptionStatusTypes.PAUSED) && X(M.Steps.PAUSE_SELECT)
     },
     z = () => {
-      (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE || r.status === L.SubscriptionStatusTypes.PAUSE_PENDING || r.status === L.SubscriptionStatusTypes.BILLING_RETRY) && Z()
+      (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE || r.status === L.SubscriptionStatusTypes.PAUSE_PENDING) && X()
     },
-    Z = e => {
+    Z = () => {
+      r.status === L.SubscriptionStatusTypes.BILLING_RETRY && X(M.Steps.CONFIRM)
+    },
+    X = e => {
       (0, u.openModalLazy)(async () => {
         let {
           default: t
@@ -197,7 +200,7 @@ t.default = function(e) {
         })
       })
     },
-    X = () => {
+    q = () => {
       if (null != r && null != r.planIdFromItems) {
         let e = m.default.get(r.planIdFromItems);
         if (null == e) {
@@ -216,7 +219,7 @@ t.default = function(e) {
         })
       }
     },
-    q = () => {
+    J = () => {
       if (!v.includes(r.status) || null == r.pauseEndsAt) {
         (0, I.captureBillingException)(Error("Invalid subscription to resume"), {
           extra: {
@@ -236,29 +239,29 @@ t.default = function(e) {
         skipConfirm: !0
       }) : o.resume(r, F)
     },
-    J = () => {
-      r.status === L.SubscriptionStatusTypes.PAUSED && Z(M.Steps.PAUSE_SELECT)
-    },
     Q = () => {
-      Z(M.Steps.WHAT_YOU_LOSE)
+      r.status === L.SubscriptionStatusTypes.PAUSED && X(M.Steps.PAUSE_SELECT)
     },
-    $ = N.default.getPlanIdFromInvoice(r, p);
-  if ((0, E.isNoneSubscription)($)) return null;
-  let ee = N.default.getStatusFromInvoice(r, p),
-    et = N.default.getPremiumType($),
-    es = {
-      [D.tier0]: et === g.PremiumTypes.TIER_0,
-      [D.tier1]: et === g.PremiumTypes.TIER_1,
-      [D.tier2]: et === g.PremiumTypes.TIER_2,
-      [D.canceled]: ee === L.SubscriptionStatusTypes.CANCELED,
-      [D.pausePending]: ee === L.SubscriptionStatusTypes.PAUSE_PENDING,
-      [D.paused]: ee === L.SubscriptionStatusTypes.PAUSED,
-      [D.failedPayment]: (0, N.isSubscriptionStatusFailedPayment)(ee)
+    $ = () => {
+      X(M.Steps.WHAT_YOU_LOSE)
     },
-    ea = null;
-  switch (et) {
+    ee = N.default.getPlanIdFromInvoice(r, p);
+  if ((0, E.isNoneSubscription)(ee)) return null;
+  let et = N.default.getStatusFromInvoice(r, p),
+    es = N.default.getPremiumType(ee),
+    ea = {
+      [D.tier0]: es === g.PremiumTypes.TIER_0,
+      [D.tier1]: es === g.PremiumTypes.TIER_1,
+      [D.tier2]: es === g.PremiumTypes.TIER_2,
+      [D.canceled]: et === L.SubscriptionStatusTypes.CANCELED,
+      [D.pausePending]: et === L.SubscriptionStatusTypes.PAUSE_PENDING,
+      [D.paused]: et === L.SubscriptionStatusTypes.PAUSED,
+      [D.failedPayment]: (0, N.isSubscriptionStatusFailedPayment)(et)
+    },
+    en = null;
+  switch (es) {
     case g.PremiumTypes.TIER_0:
-      ea = (0, a.jsxs)("div", {
+      en = (0, a.jsxs)("div", {
         className: D.wordMark,
         children: [(0, a.jsx)(S.default, {
           className: D.discordWordmark,
@@ -269,18 +272,18 @@ t.default = function(e) {
       });
       break;
     case g.PremiumTypes.TIER_1:
-      ea = (0, a.jsx)(j, {});
+      en = (0, a.jsx)(j, {});
       break;
     case g.PremiumTypes.TIER_2:
-      ea = (0, a.jsx)(_.default, {
+      en = (0, a.jsx)(_.default, {
         className: D.planName,
         "aria-label": x.default.Messages.PREMIUM_TITLE
       })
   }
-  let en = v.includes(r.status) ? B : O;
-  return (0, a.jsx)(en, {
-    wordMark: ea,
-    subscriptionInfo: (n = $, l()(null != p, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {
+  let ei = v.includes(r.status) ? B : O;
+  return (0, a.jsx)(ei, {
+    wordMark: en,
+    subscriptionInfo: (n = ee, l()(null != p, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {
       className: D.planInfo,
       children: (0, N.getPlanDescriptionFromInvoice)({
         planId: n,
@@ -314,7 +317,7 @@ t.default = function(e) {
         size: u.Button.Sizes.SMALL,
         color: u.ButtonColors.BRAND_INVERTED,
         submitting: G,
-        onClick: X,
+        onClick: q,
         children: x.default.Messages.RESUBSCRIBE
       });
       switch (e) {
@@ -324,7 +327,7 @@ t.default = function(e) {
             size: u.Button.Sizes.SMALL,
             color: u.ButtonColors.CUSTOM,
             submitting: G,
-            onClick: z,
+            onClick: Z,
             children: x.default.Messages.CANCEL
           });
         case L.SubscriptionStatusTypes.PAUSE_PENDING:
@@ -343,7 +346,7 @@ t.default = function(e) {
               size: u.Button.Sizes.SMALL,
               color: u.ButtonColors.BRAND_INVERTED,
               submitting: G,
-              onClick: q,
+              onClick: J,
               children: x.default.Messages.CANCEL_PAUSE
             })]
           });
@@ -359,7 +362,7 @@ t.default = function(e) {
               look: u.ButtonLooks.LINK,
               color: u.ButtonColors.WHITE,
               submitting: G,
-              onClick: J,
+              onClick: Q,
               children: x.default.Messages.PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION
             }) : (0, a.jsx)(u.Button, {
               className: D.linkButton,
@@ -367,14 +370,14 @@ t.default = function(e) {
               look: u.ButtonLooks.LINK,
               color: u.ButtonColors.WHITE,
               submitting: G,
-              onClick: Q,
+              onClick: $,
               children: x.default.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
             }), (0, a.jsx)(u.Button, {
               className: D.toolsButton,
               size: u.Button.Sizes.SMALL,
               color: u.ButtonColors.BRAND_INVERTED,
               submitting: G,
-              onClick: q,
+              onClick: J,
               children: x.default.Messages.RESUME
             })]
           });
@@ -420,7 +423,7 @@ t.default = function(e) {
           })
       }
     })(),
-    statusClasses: es,
+    statusClasses: ea,
     shouldUseDiscountMarketing: W,
     discountAmount: H
   })
