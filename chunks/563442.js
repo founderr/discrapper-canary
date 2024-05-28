@@ -1,50 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return E
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  l = n.n(s),
-  i = n("481060"),
-  r = n("689938"),
-  o = n("432406");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("257182"),
+  o = n("481060"),
+  u = n("63063"),
+  d = n("981631"),
+  c = n("689938"),
+  f = n("432406");
 
-function u(e) {
+function E(e) {
   let {
     children: t
-  } = e;
+  } = e, n = s.useCallback(() => {
+    window.open(u.default.getArticleURL(d.HelpdeskArticles.QUESTS_LEARN_MORE))
+  }, []);
   return (0, a.jsxs)("div", {
-    className: o.container,
+    className: f.container,
     children: [(0, a.jsx)("div", {
-      className: l()(o.image)
+      className: i()(f.image)
     }), (0, a.jsx)("div", {
-      className: l()(o.gradient)
+      className: i()(f.gradient)
     }), (0, a.jsx)("div", {
-      className: o.contents,
+      className: f.contents,
       children: (0, a.jsxs)("div", {
-        className: o.textContainer,
-        children: [(0, a.jsx)(i.Text, {
+        className: f.textContainer,
+        children: [(0, a.jsx)(o.Text, {
           variant: "eyebrow",
           color: "text-brand",
-          className: o.eyebrow,
-          children: r.default.Messages.QUESTS_HOME_HERO_EYEBROW
-        }), (0, a.jsx)(i.Heading, {
+          className: f.eyebrow,
+          children: c.default.Messages.QUESTS_HOME_HERO_EYEBROW
+        }), (0, a.jsx)(o.Heading, {
           variant: "display-md",
           color: "always-white",
-          className: o.header,
-          children: r.default.Messages.QUESTS_HOME_HERO_TITLE
-        }), (0, a.jsx)(i.Text, {
+          className: f.header,
+          children: c.default.Messages.QUESTS_HOME_HERO_TITLE
+        }), (0, a.jsx)(o.Text, {
           variant: "text-md/medium",
           color: "text-muted",
-          children: r.default.Messages.QUESTS_HOME_HERO_DESCRIPTION
-        }), (0, a.jsx)(i.Button, {
+          children: c.default.Messages.QUESTS_HOME_HERO_DESCRIPTION
+        }), (0, a.jsxs)(o.Button, {
           size: "medium",
-          className: o.button,
-          onClick: () => {},
-          children: r.default.Messages.LEARN_MORE
+          className: f.button,
+          onClick: n,
+          innerClassName: f.innerButton,
+          children: [(0, a.jsx)(o.Text, {
+            variant: "text-md/semibold",
+            color: "always-white",
+            className: f.externalLinkText,
+            children: c.default.Messages.LEARN_MORE
+          }), (0, a.jsx)(r.LinkExternalSmallIcon, {
+            className: f.icon,
+            color: "var(--white-500)"
+          })]
         })]
       })
     }), t]

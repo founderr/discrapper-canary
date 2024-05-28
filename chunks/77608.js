@@ -1,53 +1,71 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return h
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  l = n.n(s),
-  i = n("481060"),
-  r = n("113434"),
-  o = n("689938"),
-  u = n("774473");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("257182"),
+  o = n("481060"),
+  u = n("63063"),
+  d = n("113434"),
+  c = n("981631"),
+  f = n("689938"),
+  E = n("774473");
 
-function d(e) {
+function h(e) {
   let {
     setSelectedFilter: t,
     selectedFilter: n
-  } = e, s = [{
-    id: r.QuestFilters.INCOMPLETE,
-    label: o.default.Messages.QUESTS_ALL
+  } = e, l = [{
+    id: d.QuestFilters.INCOMPLETE,
+    label: f.default.Messages.QUESTS_ALL
   }, {
-    id: r.QuestFilters.COMPLETE,
-    label: o.default.Messages.QUESTS_COMPLETED
-  }], d = e => {
+    id: d.QuestFilters.COMPLETE,
+    label: f.default.Messages.QUESTS_COMPLETED
+  }], h = s.useCallback(() => {
+    window.open(u.default.getArticleURL(c.HelpdeskArticles.QUESTS_LEARN_MORE))
+  }, []), _ = s.useCallback(e => {
     t(e)
-  };
-  return (0, a.jsx)(i.TabBar, {
-    className: l()(u.container),
+  }, [t]);
+  return (0, a.jsxs)(o.TabBar, {
+    className: i()(E.container),
     selectedItem: n,
-    onItemSelect: e => d(e),
+    onItemSelect: e => _(e),
     type: "top",
-    "aria-label": o.default.Messages.QUESTS,
+    "aria-label": f.default.Messages.QUESTS,
     orientation: "horizontal",
-    children: s.map(e => {
+    children: [l.map(e => {
       let t = e.id === n;
-      return (0, a.jsx)(i.TabBar.Item, {
+      return (0, a.jsx)(o.TabBar.Item, {
         id: e.id,
-        className: l()(u.tab, {
-          [u.selected]: t
+        className: i()(E.tab, {
+          [E.selected]: t
         }),
         "aria-label": e.label,
         disableItemStyles: !0,
-        children: (0, a.jsx)(i.Text, {
+        children: (0, a.jsx)(o.Text, {
           variant: "text-md/semibold",
           color: t ? "text-brand" : "text-primary",
           children: e.label
         })
       }, e.id)
-    })
+    }), (0, a.jsxs)(o.Button, {
+      onClick: h,
+      className: E.button,
+      innerClassName: E.innerButton,
+      children: [(0, a.jsx)(o.Text, {
+        variant: "text-md/semibold",
+        color: "text-muted",
+        className: E.externalLinkText,
+        children: f.default.Messages.LEARN_MORE
+      }), (0, a.jsx)(r.LinkExternalSmallIcon, {
+        className: E.icon,
+        color: "var(--text-muted)"
+      })]
+    })]
   })
 }

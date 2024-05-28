@@ -1,24 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return d
   }
 });
 var a = n("735250");
 n("470079");
-var s = n("439826"),
-  l = n("43779"),
-  i = n("286758");
+var s = n("120356"),
+  l = n.n(s),
+  i = n("918701"),
+  r = n("439826"),
+  o = n("43779"),
+  u = n("286758");
 
-function r(e) {
+function d(e) {
   let {
     quest: t
-  } = e;
+  } = e, n = (0, i.isQuestExpired)(t);
   return (0, a.jsxs)("div", {
-    className: i.container,
-    children: [(0, a.jsx)(s.default, {
+    className: l()(u.container, {
+      [u.expired]: n,
+      [u.live]: !n
+    }),
+    children: [(0, a.jsx)(r.default, {
       quest: t
-    }), (0, a.jsx)(l.default, {
+    }), (0, a.jsx)(o.default, {
       quest: t
     })]
   })
