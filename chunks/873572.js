@@ -1,44 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return l
   }
 });
 var i = n("442837"),
   r = n("270144"),
-  s = n("11176"),
-  a = n("171246"),
-  o = n("621853"),
-  l = n("981631");
+  s = n("171246"),
+  a = n("621853"),
+  o = n("981631");
 
-function u(e) {
+function l(e) {
   var t;
   let {
     user: n,
-    guildId: u
-  } = e, d = (0, i.useStateFromStores)([o.default], () => {
+    guildId: l
+  } = e, u = (0, i.useStateFromStores)([a.default], () => {
     var e;
-    return null === (e = o.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
+    return null === (e = a.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
   }, [n]), {
-    applicationSubscriptionListingsShown: _
+    applicationSubscriptionListingsShown: d
   } = (0, r.default)({
-    applicationId: null == d ? void 0 : d.id,
-    groupListingId: null == d ? void 0 : d.primarySkuId,
-    guildId: u
+    applicationId: null == u ? void 0 : u.id,
+    groupListingId: null == u ? void 0 : u.primarySkuId,
+    guildId: l
   }), {
-    activeSubscriptionListing: c,
-    activeEntitlement: E,
-    subscriptionGroupListing: I
-  } = (0, r.useActiveSubscriptionListingForApplication)(null == d ? void 0 : d.id, u), {
-    enabled: T
-  } = s.otpSkusExperiment.useExperiment({
-    location: "useBotApplicationSubscription"
-  }), f = null !== (t = null == I ? void 0 : I.sku_flags) && void 0 !== t ? t : 0, S = (0, a.isApplicationUserSubscription)(f) || null != u && u !== l.ME && (0, a.isApplicationGuildSubscription)(f) || T, h = null != E;
-  return _ ? {
-    botUpgraded: h,
-    botUpgradeable: !h && _ && S,
-    activeSubscriptionListing: c,
-    subscriptionGroupListing: I
+    activeSubscriptionListing: _,
+    activeEntitlement: c,
+    subscriptionGroupListing: E
+  } = (0, r.useActiveSubscriptionListingForApplication)(null == u ? void 0 : u.id, l), I = null !== (t = null == E ? void 0 : E.sku_flags) && void 0 !== t ? t : 0, T = (0, s.isApplicationUserSubscription)(I) || null != l && l !== o.ME && (0, s.isApplicationGuildSubscription)(I), f = null != c;
+  return d ? {
+    botUpgraded: f,
+    botUpgradeable: !f && d && T,
+    activeSubscriptionListing: _,
+    subscriptionGroupListing: E
   } : {
     botUpgraded: !1,
     botUpgradeable: !1,
