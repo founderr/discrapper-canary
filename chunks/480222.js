@@ -2,38 +2,64 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("207796"),
-  r = n("420212"),
-  o = n("689938"),
-  u = n("885107");
+  l = n("920906"),
+  i = n("442837"),
+  r = n("481060"),
+  o = n("607070"),
+  u = n("207796"),
+  d = n("420212"),
+  c = n("689938"),
+  f = n("885107");
+let E = {
+  mass: 1,
+  tension: 600,
+  friction: 60,
+  clamp: !0
+};
 t.default = function(e) {
   let {
     children: t,
     onClose: n
-  } = e, d = s.useCallback(() => {
-    (0, i.setClanDiscoveryMode)(i.ClanDiscoveryMode.DISCOVERY), null == n || n()
+  } = e, h = s.useCallback(() => {
+    (0, u.setClanDiscoveryMode)(u.ClanDiscoveryMode.DISCOVERY), null == n || n()
   }, [n]);
-  return s.useEffect(() => {
+  s.useEffect(() => {
     let e = e => {
-      e.key === r.KeyboardKeysUpdated.ESCAPE && d()
+      e.key === d.KeyboardKeysUpdated.ESCAPE && h()
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
-  }, [d]), (0, a.jsxs)("div", {
-    className: u.container,
+  }, [h]);
+  let _ = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion),
+    C = (0, l.useSpring)({
+      from: {
+        opacity: 0
+      },
+      to: {
+        opacity: 1
+      },
+      config: E,
+      delay: 500,
+      immediate: _
+    });
+  return (0, a.jsxs)("div", {
+    className: f.container,
     children: [(0, a.jsx)("div", {
-      className: u.saveContainer,
-      children: (0, a.jsx)(l.Button, {
-        onClick: d,
-        look: l.ButtonLooks.OUTLINED,
-        color: l.ButtonColors.PRIMARY,
-        children: o.default.Messages.SAVE
+      className: f.saveContainer,
+      children: (0, a.jsx)(r.Button, {
+        onClick: h,
+        look: r.ButtonLooks.OUTLINED,
+        color: r.ButtonColors.PRIMARY,
+        children: c.default.Messages.SAVE
       })
-    }), (0, a.jsx)("div", {
-      className: u.contentWrapper,
-      children: (0, a.jsx)(l.Scroller, {
+    }), (0, a.jsx)(l.animated.div, {
+      style: {
+        opacity: C.opacity,
+        transform: C.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
+      },
+      className: f.contentWrapper,
+      children: (0, a.jsx)(r.Scroller, {
         fade: !0,
-        className: u.content,
+        className: f.content,
         children: t
       })
     })]
