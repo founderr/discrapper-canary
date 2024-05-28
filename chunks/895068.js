@@ -1,145 +1,150 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return N
   }
 }), n("47120");
 var a, s, l = n("735250"),
   i = n("470079"),
   r = n("920906"),
   o = n("143927"),
-  u = n("481060"),
-  d = n("110924"),
-  c = n("393903"),
-  f = n("638730"),
-  E = n("970606"),
-  h = n("945124"),
-  _ = n("231467"),
-  C = n("931515"),
-  m = n("207796"),
-  S = n("777734"),
-  p = n("976757"),
-  I = n("981631"),
-  g = n("689938"),
-  T = n("886722");
+  u = n("964094"),
+  d = n("481060"),
+  c = n("110924"),
+  f = n("393903"),
+  E = n("638730"),
+  h = n("970606"),
+  _ = n("945124"),
+  C = n("231467"),
+  m = n("931515"),
+  S = n("207796"),
+  p = n("777734"),
+  I = n("976757"),
+  g = n("981631"),
+  T = n("689938"),
+  A = n("886722");
 
-function A(e) {
+function N(e) {
   let {
     width: t
   } = e, {
     loaded: n,
     clans: a,
     searchResult: s,
-    searchCriteria: A
-  } = (0, C.useClanDiscoveryList)(), N = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), v = (0, m.useClanDiscoveryUIStore)(e => e.mode, o.default), R = (0, d.default)(s), O = (0, d.default)(v), L = i.useRef(null), M = i.useRef(0), [P, x] = i.useState({}), [y, D] = (0, r.useSpring)(() => ({
+    searchCriteria: N
+  } = (0, m.useClanDiscoveryList)(), v = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), R = (0, S.useClanDiscoveryUIStore)(e => e.mode, o.default), O = (0, c.default)(s), L = (0, c.default)(R), M = i.useRef(null), P = i.useRef(0), [x, y] = i.useState({}), [D, b] = (0, r.useSpring)(() => ({
     opacity: 0,
     config: r.config.stiff
-  })), b = Math.min(null != t ? t : 1024, 2e3), U = i.useMemo(() => {
-    let e = b / 256,
-      t = b / 376,
-      n = b / e,
-      a = b / t;
+  })), U = Math.min(null != t ? t : 1024, 2e3), j = i.useMemo(() => {
+    let e = U / 256,
+      t = U / 376,
+      n = U / e,
+      a = U / t;
     return a > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
-  }, [b]), j = i.useCallback(() => {
-    if (null == w.current) {
-      0 !== M.current && (x({
+  }, [U]), G = i.useCallback(() => {
+    if (null == k.current) {
+      0 !== P.current && (y({
         height: 0
-      }), D({
+      }), b({
         opacity: 0
-      }), M.current = 0);
+      }), P.current = 0);
       return
     }
-    x({
-      height: w.current.getBoundingClientRect().y + 400 + 16 + 40
-    }), 0 === M.current && (D({
+    y({
+      height: k.current.getBoundingClientRect().y + 16 + 400 + 40 + 4
+    }), 0 === P.current && (b({
       opacity: 1
-    }), M.current = 1)
-  }, []), G = (0, f.useThrottledFunction)(j, 10, [j], {
+    }), P.current = 1)
+  }, []), w = (0, E.useThrottledFunction)(G, 10, [G], {
     leading: !0,
     trailing: !0
-  }), w = (0, c.useResizeObserver)(j);
+  }), k = (0, f.useResizeObserver)(G);
   i.useEffect(() => {
-    if (null != s && !!(0, p.isLoadedSearchResult)(s))(!(null != R && (0, p.isLoadedSearchResult)(R)) || !(R.loadedAt >= s.loadedAt)) && (j(), (0, E.trackClanDiscoveryViewed)(s.items.map(e => e.id), "top_picks", A))
-  }, [A, s, R, j]), i.useEffect(() => {
-    if (O !== v && O !== m.ClanDiscoveryMode.DISCOVERY)(O === m.ClanDiscoveryMode.ADMIN_UPSELL || null == O) && v === m.ClanDiscoveryMode.DISCOVERY && (j(), L.current = setTimeout(() => {
-      j()
+    if (null != s && !!(0, I.isLoadedSearchResult)(s))(!(null != O && (0, I.isLoadedSearchResult)(O)) || !(O.loadedAt >= s.loadedAt)) && (G(), (0, h.trackClanDiscoveryViewed)(s.items.map(e => e.id), "top_picks", N))
+  }, [N, s, O, G]), i.useEffect(() => {
+    if (L !== R && L !== S.ClanDiscoveryMode.DISCOVERY)(L === S.ClanDiscoveryMode.ADMIN_UPSELL || null == L) && R === S.ClanDiscoveryMode.DISCOVERY && (G(), M.current = setTimeout(() => {
+      G()
     }, 500))
-  }, [O, v]), i.useEffect(() => () => {
-    null != L.current && clearTimeout(L.current)
+  }, [L, R]), i.useEffect(() => () => {
+    null != M.current && clearTimeout(M.current)
   }, []);
-  let k = i.useMemo(() => null == a ? [] : [{
+  let B = i.useMemo(() => null == a ? [] : [{
       section: "top_picks",
-      items: a.slice(0, U),
+      items: a.slice(0, j),
       sectionHeight: 24,
-      header: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-      subtitle: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+      header: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+      subtitle: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
     }, {
       section: "other_guilds",
-      items: a.slice(U),
-      sectionHeight: 24
-    }], [a, U]),
-    B = i.useMemo(() => new Set(A.games), [A.games]),
-    F = i.useCallback((e, t, n, a) => {
+      items: a.slice(j),
+      sectionHeight: 24,
+      header: T.default.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+    }], [a, j]),
+    F = i.useMemo(() => new Set(N.games), [N.games]),
+    H = i.useCallback((e, t, n, a) => {
       var s;
       let {
         items: i
-      } = k[e], r = i[t];
-      return (0, l.jsx)(_.default, {
+      } = B[e], r = i[t];
+      return (0, l.jsx)(C.default, {
         clan: r,
-        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, h.getClanDiscoveryAffinity)(r, A),
-        traitsToHighlight: N,
-        className: T.card,
+        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, _.getClanDiscoveryAffinity)(r, N),
+        traitsToHighlight: v,
+        className: A.card,
         style: n,
-        source: I.AnalyticsSections.DISCOVER_SEARCH,
-        prioritizedGameIds: B,
+        source: g.AnalyticsSections.DISCOVER_SEARCH,
+        prioritizedGameIds: F,
         onlyAnimateIconOnHover: !0
       }, a)
-    }, [A, k, N, B]),
-    H = i.useCallback(e => {
+    }, [N, B, v, F]),
+    V = i.useCallback(e => {
       let {
         header: t,
         subtitle: n,
         section: a
-      } = k[e];
-      return null == t ? null : "top_picks" === a ? (0, l.jsx)(S.default, {
-        ref: w,
+      } = B[e];
+      return null == t ? null : "top_picks" === a ? (0, l.jsx)(p.default, {
+        ref: k,
+        icon: (0, l.jsx)(u.TrophyIcon, {
+          color: "currentColor"
+        }),
         title: t,
         subtitle: n
-      }) : (0, l.jsx)(S.default, {
+      }) : (0, l.jsx)(p.default, {
         title: t,
         subtitle: n
       })
-    }, [k, w]);
+    }, [B, k]);
   return 0 !== a.length && n ? (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)("div", {
-      className: T.masonryListContainer,
+      className: A.masonryListContainer,
       children: [(0, l.jsx)(r.animated.div, {
-        className: T.masonryListGradient,
+        className: A.masonryListGradient,
         style: {
-          ...y,
-          ...P
+          ...D,
+          ...x
         }
-      }), (0, l.jsx)(u.MasonryList, {
-        className: T.masonryList,
-        sections: k.map(e => {
+      }), (0, l.jsx)(d.MasonryList, {
+        className: A.masonryList,
+        sections: B.map(e => {
           let {
             items: t
           } = e;
           return t.length
         }),
-        columns: U,
-        sectionGutter: 16,
+        columns: j,
+        sectionGutter: 80,
         itemGutter: 16,
         paddingHorizontal: 32,
         paddingVertical: 40,
         removeEdgeItemGutters: !0,
-        renderItem: F,
-        renderSection: H,
-        getSectionHeight: e => k[e].sectionHeight,
-        getItemKey: (e, t) => k[e].items[t].id,
+        renderItem: H,
+        renderSection: V,
+        getSectionHeight: e => B[e].sectionHeight,
+        getItemKey: (e, t) => B[e].items[t].id,
         getItemHeight: () => 400,
         chunkSize: 24,
-        onScroll: G
+        onScroll: w
       })]
     })
   }) : null

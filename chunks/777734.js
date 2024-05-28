@@ -2,30 +2,28 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("71970"),
-  i = n("481060"),
-  r = n("886722");
-let o = s.forwardRef(function(e, t) {
+  l = n("481060"),
+  i = n("886722");
+let r = s.forwardRef(function(e, t) {
   let {
     title: n,
-    subtitle: s
+    subtitle: s,
+    icon: r
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: r.sectionHeader,
+      className: i.sectionHeader,
       children: [(0, a.jsxs)("div", {
-        className: r.sectionHeaderTitle,
-        children: [(0, a.jsx)(l.TrophyIcon, {
-          color: "currentColor"
-        }), (0, a.jsx)(i.Heading, {
+        className: i.sectionHeaderTitle,
+        children: [r, (0, a.jsx)(l.Heading, {
           variant: "heading-md/medium",
           color: "header-primary",
           children: n
         })]
       }), null != s && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: r.sectionHeaderSpacer
-        }), (0, a.jsx)(i.Text, {
+          className: i.sectionHeaderSpacer
+        }), (0, a.jsx)(l.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           children: s
@@ -36,4 +34,4 @@ let o = s.forwardRef(function(e, t) {
     })]
   })
 });
-t.default = s.memo(o)
+t.default = s.memo(r)
