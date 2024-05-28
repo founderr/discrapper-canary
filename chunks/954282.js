@@ -3,6 +3,7 @@ e.exports = {
   banner: "banner__79cec",
   bannerBackgroundImage: "bannerBackgroundImage__32f66",
   basicWordmark: "basicWordmark__8ef98",
+  billingRetryCancel: "billingRetryCancel_dfc8f7",
   buttons: "buttons__42a1d",
   canceled: "canceled__925b5",
   classicWordmark: "classicWordmark_efcd20",

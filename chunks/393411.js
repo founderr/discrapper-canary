@@ -181,7 +181,7 @@ t.default = function(e) {
       (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE || r.status === L.SubscriptionStatusTypes.PAUSED) && Z(M.Steps.PAUSE_SELECT)
     },
     z = () => {
-      (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE || r.status === L.SubscriptionStatusTypes.PAUSE_PENDING) && Z()
+      (r.status === L.SubscriptionStatusTypes.ACTIVE || r.status === L.SubscriptionStatusTypes.PAST_DUE || r.status === L.SubscriptionStatusTypes.PAUSE_PENDING || r.status === L.SubscriptionStatusTypes.BILLING_RETRY) && Z()
     },
     Z = e => {
       (0, u.openModalLazy)(async () => {
@@ -317,96 +317,107 @@ t.default = function(e) {
         onClick: X,
         children: x.default.Messages.RESUBSCRIBE
       });
-      if (e === L.SubscriptionStatusTypes.PAUSE_PENDING) return (0, a.jsxs)("div", {
-        className: D.toolsButtons,
-        children: [(0, a.jsx)(u.Button, {
-          className: D.toolsButton,
-          size: u.Button.Sizes.SMALL,
-          look: u.ButtonLooks.LINK,
-          color: u.ButtonColors.WHITE,
-          submitting: G,
-          onClick: z,
-          children: x.default.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
-        }), (0, a.jsx)(u.Button, {
-          className: D.toolsButton,
-          size: u.Button.Sizes.SMALL,
-          color: u.ButtonColors.BRAND_INVERTED,
-          submitting: G,
-          onClick: q,
-          children: x.default.Messages.CANCEL_PAUSE
-        })]
-      });
-      if (e === L.SubscriptionStatusTypes.PAUSED) {
-        let {
-          durations: e
-        } = (0, C.getSubscriptionPauseDurations)(r);
-        return (0, a.jsxs)("div", {
-          className: D.toolsButtons,
-          children: [e.length > 0 ? (0, a.jsx)(u.Button, {
-            className: D.linkButton,
+      switch (e) {
+        case L.SubscriptionStatusTypes.BILLING_RETRY:
+          return (0, a.jsx)(u.Button, {
+            className: D.billingRetryCancel,
             size: u.Button.Sizes.SMALL,
-            look: u.ButtonLooks.LINK,
-            color: u.ButtonColors.WHITE,
-            submitting: G,
-            onClick: J,
-            children: x.default.Messages.PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION
-          }) : (0, a.jsx)(u.Button, {
-            className: D.linkButton,
-            size: u.Button.Sizes.SMALL,
-            look: u.ButtonLooks.LINK,
-            color: u.ButtonColors.WHITE,
-            submitting: G,
-            onClick: Q,
-            children: x.default.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
-          }), (0, a.jsx)(u.Button, {
-            className: D.toolsButton,
-            size: u.Button.Sizes.SMALL,
-            color: u.ButtonColors.BRAND_INVERTED,
-            submitting: G,
-            onClick: q,
-            children: x.default.Messages.RESUME
-          })]
-        })
-      }
-      if (e === L.SubscriptionStatusTypes.ACTIVE || e === L.SubscriptionStatusTypes.PAST_DUE) {
-        let t = !1,
-          s = null;
-        return null != r.renewalMutations && (t = !0, s = r.renewalMutations.planId !== r.planId ? x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION), null != r.trialEndsAt && (t = !0, s = x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL), e === L.SubscriptionStatusTypes.PAST_DUE && (t = !0), (0, a.jsxs)("div", {
-          className: D.toolsButtons,
-          children: [w ? (0, a.jsx)(u.Button, {
-            className: D.toolsButton,
-            size: u.Button.Sizes.SMALL,
-            look: u.ButtonLooks.LINK,
-            color: u.ButtonColors.WHITE,
-            submitting: G,
-            onClick: V,
-            children: x.default.Messages.PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION
-          }) : (0, a.jsx)(u.Button, {
-            className: D.toolsButton,
-            size: u.Button.Sizes.SMALL,
-            look: u.ButtonLooks.LINK,
-            color: u.ButtonColors.WHITE,
+            color: u.ButtonColors.CUSTOM,
             submitting: G,
             onClick: z,
             children: x.default.Messages.CANCEL
-          }), (0, a.jsx)(u.Tooltip, {
-            text: s,
-            children: e => (0, a.jsx)(R.default, {
-              ...e,
-              disabled: t,
+          });
+        case L.SubscriptionStatusTypes.PAUSE_PENDING:
+          return (0, a.jsxs)("div", {
+            className: D.toolsButtons,
+            children: [(0, a.jsx)(u.Button, {
               className: D.toolsButton,
-              onClick: () => {
-                (0, f.default)({
-                  analyticsLocations: F,
-                  analyticsLocation: k,
-                  analyticsObject: U,
-                  subscription: r
-                })
-              },
-              children: x.default.Messages.PREMIUM_SWITCH_PLANS
-            })
-          })]
-        })
+              size: u.Button.Sizes.SMALL,
+              look: u.ButtonLooks.LINK,
+              color: u.ButtonColors.WHITE,
+              submitting: G,
+              onClick: z,
+              children: x.default.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
+            }), (0, a.jsx)(u.Button, {
+              className: D.toolsButton,
+              size: u.Button.Sizes.SMALL,
+              color: u.ButtonColors.BRAND_INVERTED,
+              submitting: G,
+              onClick: q,
+              children: x.default.Messages.CANCEL_PAUSE
+            })]
+          });
+        case L.SubscriptionStatusTypes.PAUSED:
+          let {
+            durations: t
+          } = (0, C.getSubscriptionPauseDurations)(r);
+          return (0, a.jsxs)("div", {
+            className: D.toolsButtons,
+            children: [t.length > 0 ? (0, a.jsx)(u.Button, {
+              className: D.linkButton,
+              size: u.Button.Sizes.SMALL,
+              look: u.ButtonLooks.LINK,
+              color: u.ButtonColors.WHITE,
+              submitting: G,
+              onClick: J,
+              children: x.default.Messages.PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION
+            }) : (0, a.jsx)(u.Button, {
+              className: D.linkButton,
+              size: u.Button.Sizes.SMALL,
+              look: u.ButtonLooks.LINK,
+              color: u.ButtonColors.WHITE,
+              submitting: G,
+              onClick: Q,
+              children: x.default.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
+            }), (0, a.jsx)(u.Button, {
+              className: D.toolsButton,
+              size: u.Button.Sizes.SMALL,
+              color: u.ButtonColors.BRAND_INVERTED,
+              submitting: G,
+              onClick: q,
+              children: x.default.Messages.RESUME
+            })]
+          });
+        case L.SubscriptionStatusTypes.ACTIVE:
+        case L.SubscriptionStatusTypes.PAST_DUE:
+          let s = !1,
+            n = null;
+          return null != r.renewalMutations && (s = !0, n = r.renewalMutations.planId !== r.planId ? x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION), null != r.trialEndsAt && (s = !0, n = x.default.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL), e === L.SubscriptionStatusTypes.PAST_DUE && (s = !0), (0, a.jsxs)("div", {
+            className: D.toolsButtons,
+            children: [w ? (0, a.jsx)(u.Button, {
+              className: D.toolsButton,
+              size: u.Button.Sizes.SMALL,
+              look: u.ButtonLooks.LINK,
+              color: u.ButtonColors.WHITE,
+              submitting: G,
+              onClick: V,
+              children: x.default.Messages.PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION
+            }) : (0, a.jsx)(u.Button, {
+              className: D.toolsButton,
+              size: u.Button.Sizes.SMALL,
+              look: u.ButtonLooks.LINK,
+              color: u.ButtonColors.WHITE,
+              submitting: G,
+              onClick: z,
+              children: x.default.Messages.CANCEL
+            }), (0, a.jsx)(u.Tooltip, {
+              text: n,
+              children: e => (0, a.jsx)(R.default, {
+                ...e,
+                disabled: s,
+                className: D.toolsButton,
+                onClick: () => {
+                  (0, f.default)({
+                    analyticsLocations: F,
+                    analyticsLocation: k,
+                    analyticsObject: U,
+                    subscription: r
+                  })
+                },
+                children: x.default.Messages.PREMIUM_SWITCH_PLANS
+              })
+            })]
+          })
       }
     })(),
     statusClasses: es,
