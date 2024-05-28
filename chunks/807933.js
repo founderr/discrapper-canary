@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   GameSelector: function() {
-    return h
+    return _
   },
   PlayStyleSelector: function() {
-    return E
+    return h
   },
   TraitSelector: function() {
-    return f
+    return E
   }
 }), n("47120");
 var a = n("735250"),
@@ -16,59 +16,65 @@ var a = n("735250"),
   i = n("950279"),
   r = n("741595"),
   o = n("359380"),
-  u = n("207796"),
-  d = n("316553"),
-  c = n("689938");
-
-function f() {
-  let e = (0, u.useClanDiscoveryUIStore)(e => e.game, l.default),
-    t = (0, d.useDiscoveryGameApplicationId)({
-      selectedGame: e
-    }),
-    n = (0, u.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default),
-    i = (0, u.useClanDiscoveryUIStore)(e => e.setSelectedTraits, l.default),
-    r = s.useMemo(() => new Set(n), [n]),
-    f = s.useCallback(e => i(Array.from(e)), [i]);
-  return (0, a.jsx)(o.default, {
-    title: c.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-    description: c.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
-    handleUpdate: f,
-    interests: r,
-    requiredGameId: t,
-    hidePreview: !0
-  })
-}
+  u = n("480222"),
+  d = n("207796"),
+  c = n("316553"),
+  f = n("689938");
 
 function E() {
-  let e = (0, u.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default),
-    t = (0, u.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, l.default),
-    n = s.useCallback(e => t(e), [t]);
-  return (0, a.jsx)(r.default, {
-    title: c.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-    description: c.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
-    handleUpdate: n,
-    playstyle: e
+  let e = (0, d.useClanDiscoveryUIStore)(e => e.game, l.default),
+    t = (0, c.useDiscoveryGameApplicationId)({
+      selectedGame: e
+    }),
+    [n, i] = s.useState(new Set(d.useClanDiscoveryUIStore.getState().selectedTraits)),
+    r = s.useCallback(() => {
+      d.useClanDiscoveryUIStore.getState().setSelectedTraits(Array.from(n))
+    }, [n]);
+  return (0, a.jsx)(u.default, {
+    onClose: r,
+    children: (0, a.jsx)(o.default, {
+      title: f.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+      description: f.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+      handleUpdate: i,
+      interests: n,
+      requiredGameId: t,
+      hidePreview: !0
+    })
   })
 }
 
 function h() {
-  let e = (0, u.useClanDiscoveryUIStore)(e => e.game, l.default),
-    t = (0, d.useDiscoveryGameApplicationId)({
+  let [e, t] = s.useState(d.useClanDiscoveryUIStore.getState().selectedPlaystyle), n = s.useCallback(() => {
+    null != e && d.useClanDiscoveryUIStore.getState().setSelectedPlaystyle(e)
+  }, [e]);
+  return (0, a.jsx)(u.default, {
+    onClose: n,
+    children: (0, a.jsx)(r.default, {
+      title: f.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+      description: f.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+      handleUpdate: t,
+      playstyle: e
+    })
+  })
+}
+
+function _() {
+  let e = (0, d.useClanDiscoveryUIStore)(e => e.game, l.default),
+    t = (0, c.useDiscoveryGameApplicationId)({
       selectedGame: e
     }),
-    n = (0, u.useClanDiscoveryUIStore)(e => e.selectedGames, l.default),
-    r = s.useMemo(() => new Set(n), [n]),
-    o = (0, u.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default),
-    [f, E] = s.useState(null),
-    h = s.useCallback(e => {
-      E(null), o(Array.from(e))
-    }, [o]);
-  return (0, a.jsx)(i.default, {
-    title: c.default.Messages.CLAN_DISCOVERY_GAME_TITLE,
-    description: c.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
-    requiredGameId: t,
-    handleUpdate: h,
-    gameApplicationIds: r,
-    error: f
+    [n, r] = s.useState(new Set(d.useClanDiscoveryUIStore.getState().selectedGames)),
+    o = s.useCallback(() => {
+      d.useClanDiscoveryUIStore.getState().setSelectedGames(Array.from(n))
+    }, [n]);
+  return (0, a.jsx)(u.default, {
+    onClose: o,
+    children: (0, a.jsx)(i.default, {
+      title: f.default.Messages.CLAN_DISCOVERY_GAME_TITLE,
+      description: f.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+      requiredGameId: t,
+      handleUpdate: r,
+      gameApplicationIds: n
+    })
   })
 }

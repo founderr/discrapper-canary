@@ -9,21 +9,22 @@ var a = n("735250"),
   u = n("885107");
 t.default = function(e) {
   let {
-    children: t
-  } = e, n = s.useCallback(() => {
-    (0, i.setClanDiscoveryMode)(i.ClanDiscoveryMode.DISCOVERY)
-  }, []);
+    children: t,
+    onClose: n
+  } = e, d = s.useCallback(() => {
+    (0, i.setClanDiscoveryMode)(i.ClanDiscoveryMode.DISCOVERY), null == n || n()
+  }, [n]);
   return s.useEffect(() => {
     let e = e => {
-      e.key === r.KeyboardKeysUpdated.ESCAPE && (0, i.setClanDiscoveryMode)(i.ClanDiscoveryMode.DISCOVERY)
+      e.key === r.KeyboardKeysUpdated.ESCAPE && d()
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
-  }, []), (0, a.jsxs)("div", {
+  }, [d]), (0, a.jsxs)("div", {
     className: u.container,
     children: [(0, a.jsx)("div", {
       className: u.saveContainer,
       children: (0, a.jsx)(l.Button, {
-        onClick: n,
+        onClick: d,
         look: l.ButtonLooks.OUTLINED,
         color: l.ButtonColors.PRIMARY,
         children: o.default.Messages.SAVE
