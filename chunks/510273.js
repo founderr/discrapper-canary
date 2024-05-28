@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return E
+    return _
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("481060"),
-  o = n("955204"),
-  u = n("818765"),
-  d = n("674680"),
-  c = n("614777");
-let f = e => {
+var a = s("735250"),
+  n = s("470079"),
+  l = s("120356"),
+  i = s.n(l),
+  r = s("481060"),
+  u = s("955204"),
+  o = s("818765"),
+  d = s("674680"),
+  c = s("614777");
+let E = e => {
   let {
     color: t
   } = e;
@@ -65,40 +65,40 @@ let f = e => {
   })
 };
 
-function E(e) {
+function _(e) {
   let {
     achievement: t,
-    unlocked: n
+    unlocked: s
   } = e, {
     name: l,
-    description: E,
-    rarity: h,
-    hideDescriptionUntilUnlock: _,
-    onAction: C
+    description: _,
+    rarity: f,
+    hideDescriptionUntilUnlock: h,
+    onAction: m
   } = t, {
-    color: m
-  } = (0, o.getAchievementStyles)(h);
-  s.useEffect(() => {
+    color: T
+  } = (0, u.getAchievementStyles)(f);
+  n.useEffect(() => {
     let e = setTimeout(() => {
-      u.default.playAchievementUnlockSound()
+      o.default.playAchievementUnlockSound()
     }, 50);
     return () => {
       clearTimeout(e)
     }
   }, []);
-  let S = null != C && n,
-    p = S ? r.Clickable : "div";
-  return (0, a.jsxs)(p, {
-    className: i()(c.container, S && c.actionable),
+  let C = null != m && s,
+    g = C ? r.Clickable : "div";
+  return (0, a.jsxs)(g, {
+    className: i()(c.container, C && c.actionable),
     onClick: () => {
-      S && C()
+      C && m()
     },
     children: [(0, a.jsx)("div", {
       className: c.iconContainer,
       children: (0, a.jsx)(d.default, {
         achievementId: t.id,
         size: d.default.Sizes.SIZE_40,
-        unlocked: n
+        unlocked: s
       })
     }), (0, a.jsxs)("div", {
       className: c.__invalid_nameContainer,
@@ -109,12 +109,12 @@ function E(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: _ && !n ? "?????" : E()
+        children: h && !s ? "?????" : _()
       })]
     }), (0, a.jsx)("div", {
       className: c.flair,
-      children: (0, a.jsx)(f, {
-        color: m
+      children: (0, a.jsx)(E, {
+        color: T
       })
     })]
   })

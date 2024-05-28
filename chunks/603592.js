@@ -20,17 +20,17 @@ let h = a.forwardRef(function(e, t) {
     tooltip: C,
     upperBadge: g,
     lowerBadge: E,
-    lowerBadgeWidth: _,
-    showPill: S = !0,
+    lowerBadgeWidth: S,
+    showPill: _ = !0,
     className: I,
     "aria-label": N,
     children: T,
     onMouseEnter: A,
     onMouseLeave: L,
     onMouseDown: v
-  } = e, x = (0, r.useTreeItem)(n), [R, M] = a.useState(!1), O = "string" == typeof C && null == N ? C : N;
+  } = e, x = (0, r.useTreeItem)(n), [R, M] = a.useState(!1), y = "string" == typeof C && null == N ? C : N;
   return (0, l.jsxs)(d.ListItem, {
-    children: [S ? (0, l.jsx)("div", {
+    children: [_ ? (0, l.jsx)("div", {
       className: f.pill,
       children: (0, l.jsx)(u.default, {
         hovered: R,
@@ -44,7 +44,7 @@ let h = a.forwardRef(function(e, t) {
         selected: p || R,
         upperBadge: g,
         lowerBadge: E,
-        lowerBadgeWidth: _,
+        lowerBadgeWidth: S,
         children: (0, l.jsx)(o.Clickable, {
           innerRef: t,
           onMouseEnter: () => {
@@ -58,7 +58,7 @@ let h = a.forwardRef(function(e, t) {
             [f.selected]: p || R
           }),
           onClick: s,
-          "aria-label": O,
+          "aria-label": y,
           onContextMenu: h,
           focusProps: {
             enabled: !1

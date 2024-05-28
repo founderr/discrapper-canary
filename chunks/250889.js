@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return i
+    return a
   }
 });
-var l = n("726542"),
-  a = n("973616");
+var r = n("726542"),
+  i = n("973616");
 let s = "xbox:";
-class i extends a.default {
+class a extends i.default {
   getIconURL() {
-    return l.default.get("xbox").icon.lightPNG
+    return r.default.get("xbox").icon.lightPNG
   }
   constructor(e) {
     super(e), this.id = "".concat(s).concat(e.name), this.name = e.name

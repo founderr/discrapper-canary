@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   QrCodeCameraIcon: function() {
     return i
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("692547"),
-  l = n("331595");
+var a = s("735250");
+s("470079");
+var n = s("692547"),
+  l = s("331595");
 let i = e => {
   let {
     width: t = 24,
-    height: n = 24,
-    color: i = s.default.colors.INTERACTIVE_NORMAL,
+    height: s = 24,
+    color: i = n.default.colors.INTERACTIVE_NORMAL,
     colorClass: r = "",
-    ...o
+    ...u
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, l.default)(o),
+    ...(0, l.default)(u),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
-    height: n,
+    height: s,
     fill: "none",
     viewBox: "0 0 24 24",
     children: [(0, a.jsx)("path", {

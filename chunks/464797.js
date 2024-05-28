@@ -1,36 +1,36 @@
 "use strict";
-t.r(n), t.d(n, {
+r.r(t), r.d(t, {
   GuildProductPurchaseContextProvider: function() {
-    return d
+    return o
   },
   useGuildProductPurchaseContext: function() {
-    return c
+    return d
   }
 });
-var a = t("735250"),
-  r = t("470079"),
-  s = t("512722"),
-  o = t.n(s),
-  i = t("442837"),
-  u = t("240864");
-let l = r.createContext(void 0);
+var n = r("735250"),
+  a = r("470079"),
+  s = r("512722"),
+  l = r.n(s),
+  u = r("442837"),
+  i = r("240864");
+let c = a.createContext(void 0);
 
-function c() {
-  let e = r.useContext(l);
-  return o()(null != e, "GuildProductPurchaseContext not found"), e
+function d() {
+  let e = a.useContext(c);
+  return l()(null != e, "GuildProductPurchaseContext not found"), e
 }
 
-function d(e) {
+function o(e) {
   let {
-    children: n,
-    guildProductListingId: t,
-    ...r
-  } = e, s = (0, i.useStateFromStores)([u.default], () => u.default.getGuildProduct(t));
-  return o()(null != s, "guildProductListing cannot be null"), (0, a.jsx)(l.Provider, {
+    children: t,
+    guildProductListingId: r,
+    ...a
+  } = e, s = (0, u.useStateFromStores)([i.default], () => i.default.getGuildProduct(r));
+  return l()(null != s, "guildProductListing cannot be null"), (0, n.jsx)(c.Provider, {
     value: {
       guildProductListing: s,
-      ...r
+      ...a
     },
-    children: n
+    children: t
   })
 }

@@ -15,18 +15,18 @@ var i, a = n("735250"),
   f = n("239091"),
   h = n("765250"),
   p = n("13245"),
-  g = n("872810"),
+  E = n("872810"),
   m = n("586902"),
-  E = n("835473"),
+  g = n("835473"),
   S = n("933557"),
   v = n("594190"),
-  y = n("569545"),
-  O = n("914923"),
-  C = n("165393"),
-  T = n("989941"),
-  N = n("552282"),
-  I = n("565799"),
-  _ = n("501655"),
+  C = n("569545"),
+  y = n("914923"),
+  _ = n("165393"),
+  O = n("989941"),
+  T = n("552282"),
+  N = n("565799"),
+  I = n("501655"),
   A = n("786915"),
   x = n("7188"),
   R = n("199902"),
@@ -34,17 +34,17 @@ var i, a = n("735250"),
   M = n("592125"),
   D = n("77498"),
   b = n("131951"),
-  j = n("944486"),
-  P = n("606304"),
+  P = n("944486"),
+  w = n("606304"),
   k = n("449224"),
-  w = n("938475"),
+  j = n("938475"),
   V = n("237997"),
   U = n("285952"),
-  B = n("366695"),
-  F = n("548343"),
-  G = n("937482"),
-  H = n("823779"),
-  W = n("632184"),
+  F = n("366695"),
+  B = n("548343"),
+  W = n("937482"),
+  G = n("823779"),
+  H = n("632184"),
   z = n("990138"),
   Y = n("118717"),
   K = n("154921"),
@@ -84,61 +84,61 @@ function ed(e) {
     onClick: f,
     onContextMenu: h,
     context: p,
-    guildId: g,
-    voiceState: E
+    guildId: E,
+    voiceState: g
   } = e, {
     showKeybindIndicators: S
   } = ee.default.useExperiment({
     location: "overlay_voice_widget"
-  }), v = (0, r.useStateFromStores)([V.default], () => V.default.showKeybindIndicators), y = (0, r.useStateFromStores)([L.default], () => L.default.getId()), O = (0, r.useStateFromStores)([b.default], () => b.default.isLocalMute(i.id)), C = (0, r.useStateFromStores)([R.default], () => R.default.getCurrentUserActiveStream()), T = (0, r.useStateFromStoresArray)([R.default], () => null != C ? R.default.getViewerIds(C) : []), N = (0, m.default)({
+  }), v = (0, r.useStateFromStores)([V.default], () => V.default.showKeybindIndicators), C = (0, r.useStateFromStores)([L.default], () => L.default.getId()), y = (0, r.useStateFromStores)([b.default], () => b.default.isLocalMute(i.id)), _ = (0, r.useStateFromStores)([R.default], () => R.default.getCurrentUserActiveStream()), O = (0, r.useStateFromStoresArray)([R.default], () => null != _ ? R.default.getViewerIds(_) : []), T = (0, m.default)({
     userId: i.id,
     context: p
-  }), I = (0, r.useStateFromStores)([P.default], () => P.default.isPrioritySpeaker(i.id, p)), _ = (0, r.useStateFromStores)([R.default], () => null != R.default.getStreamForUser(i.id, g)), A = l.useMemo(() => null != C && C.ownerId !== i.id && T.includes(i.id), [C, i.id, T]);
-  if (u === ea.OverlayDisplayUsers.ONLY_WHILE_SPEAKING && n && !N) return null;
-  let x = i.id === y,
+  }), N = (0, r.useStateFromStores)([w.default], () => w.default.isPrioritySpeaker(i.id, p)), I = (0, r.useStateFromStores)([R.default], () => null != R.default.getStreamForUser(i.id, E)), A = l.useMemo(() => null != _ && _.ownerId !== i.id && O.includes(i.id), [_, i.id, O]);
+  if (u === ea.OverlayDisplayUsers.ONLY_WHILE_SPEAKING && n && !T) return null;
+  let x = i.id === C,
     {
       mute: M,
       selfMute: D,
-      suppress: j,
+      suppress: P,
       deaf: k,
-      selfDeaf: w
-    } = E,
+      selfDeaf: j
+    } = g,
     U = S && v,
-    B = D && (!x || !U);
+    F = D && (!x || !U);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(J.default, {
-      guildId: g,
+      guildId: E,
       onClick: n ? void 0 : e => null == f ? void 0 : f(e, i),
       onContextMenu: n ? void 0 : e => null == h ? void 0 : h(e, i),
       className: o()(eo.voiceUserWrapper, {
-        [eo.faded]: !N,
+        [eo.faded]: !T,
         [eo.interactive]: !n
       }),
       user: i,
       nick: s,
       speaking: !1,
       flipped: t,
-      isStreaming: _,
+      isStreaming: I,
       iconClassName: o()(eo.voiceIcon, {
         [eo.locked]: n
       }),
       isWatching: A,
       isOverlay: !0,
       size: c,
-      priority: I,
-      mute: M || B || O,
-      localMute: O,
-      serverMute: M || j,
-      deaf: k || w,
+      priority: N,
+      mute: M || F || y,
+      localMute: y,
+      serverMute: M || P,
+      deaf: k || j,
       serverDeaf: k,
       userNameClassName: o()(eo.username, {
         [eo.locked]: n,
-        [eo.hidden]: n && (d === ea.OverlayDisplayNames.NEVER || !N && d === ea.OverlayDisplayNames.ONLY_WHILE_SPEAKING)
+        [eo.hidden]: n && (d === ea.OverlayDisplayNames.NEVER || !T && d === ea.OverlayDisplayNames.ONLY_WHILE_SPEAKING)
       })
     }), x && U && (0, a.jsx)(en.default, {
       value: D,
       action: ea.GlobalKeybindActions.TOGGLE_MUTE,
-      shouldShow: !M && !j
+      shouldShow: !M && !P
     })]
   })
 }
@@ -204,12 +204,12 @@ class eu extends(i = l.PureComponent) {
         className: o()(eo.content, {
           [eo.hidden]: n
         }),
-        children: [(0, a.jsx)(F.default, {
+        children: [(0, a.jsx)(B.default, {
           color: d.default.unsafe_rawColors.WHITE_500.css,
           width: 20,
           height: 20,
           className: o()(eo.icon, eo.faded, eo.dragIcon)
-        }), (0, a.jsx)(W.default, {
+        }), (0, a.jsx)(H.default, {
           color: d.default.unsafe_rawColors.WHITE_500.css,
           width: 20,
           height: 20,
@@ -220,13 +220,13 @@ class eu extends(i = l.PureComponent) {
           children: t
         })]
       }), n ? null : (0, a.jsx)(Z.default.Icon, {
-        icon: G.default,
+        icon: W.default,
         label: es.default.Messages.VOICE_SETTINGS,
         onClick: this.handleOpenVoiceSettings,
         tooltipPosition: "left",
         size: 18
       }), n ? null : (0, a.jsx)(Z.default.Icon, {
-        icon: e ? Y.default : H.default,
+        icon: e ? Y.default : G.default,
         label: e ? es.default.Messages.OVERLAY_WIDGET_HIDE_IN_GAME : es.default.Messages.OVERLAY_WIDGET_SHOW_IN_GAME,
         onClick: this.handlePin,
         tooltipPosition: "left",
@@ -251,7 +251,7 @@ class eu extends(i = l.PureComponent) {
     let {
       sanitizedTitle: f,
       title: h
-    } = (0, O.default)(r);
+    } = (0, y.default)(r);
     return (0, a.jsx)(Z.default.Bar, {
       className: o()(eo.streamerControls, {
         [eo.hidden]: i,
@@ -262,10 +262,10 @@ class eu extends(i = l.PureComponent) {
         dynamicSize: !0,
         children: [(0, a.jsxs)("div", {
           className: eo.streamerInner,
-          children: [(null == d ? void 0 : d.id) != null && d.id === (null == s ? void 0 : s.id) ? (0, a.jsx)(B.default, {
+          children: [(null == d ? void 0 : d.id) != null && d.id === (null == s ? void 0 : s.id) ? (0, a.jsx)(F.default, {
             className: eo.gameIcon,
             game: s
-          }) : (0, a.jsx)(C.default, {
+          }) : (0, a.jsx)(_.default, {
             title: f
           }), (0, a.jsxs)(U.default, {
             direction: U.default.Direction.VERTICAL,
@@ -407,7 +407,7 @@ class eu extends(i = l.PureComponent) {
       let {
         stream: e
       } = this.props;
-      null != e && g.stopStream((0, y.encodeStreamKey)(e))
+      null != e && E.stopStream((0, C.encodeStreamKey)(e))
     })
   }
 }
@@ -417,14 +417,14 @@ er(eu, "defaultProps", {
 
 function ec(e) {
   var t;
-  let n = (0, r.useStateFromStores)([j.default, M.default], () => M.default.getChannel(j.default.getVoiceChannelId())),
+  let n = (0, r.useStateFromStores)([P.default, M.default], () => M.default.getChannel(P.default.getVoiceChannelId())),
     i = (0, S.default)(n),
     s = function() {
-      let [e] = (0, r.useStateFromStores)([w.default, I.default, j.default, M.default], () => {
-        let e = M.default.getChannel(j.default.getVoiceChannelId());
+      let [e] = (0, r.useStateFromStores)([j.default, N.default, P.default, M.default], () => {
+        let e = M.default.getChannel(P.default.getVoiceChannelId());
         return null == e ? [
           [], -1
-        ] : e.isGuildStageVoice() ? [I.default.getMutableParticipants(e.id, _.StageChannelParticipantNamedIndex.SPEAKER), I.default.getParticipantsVersion(e.id)] : [w.default.getVoiceStatesForChannel(e), w.default.getVoiceStateVersion(e.getGuildId())]
+        ] : e.isGuildStageVoice() ? [N.default.getMutableParticipants(e.id, I.StageChannelParticipantNamedIndex.SPEAKER), N.default.getParticipantsVersion(e.id)] : [j.default.getVoiceStatesForChannel(e), j.default.getVoiceStateVersion(e.getGuildId())]
       }, [], q.isVersionEqual), t = (0, r.useStateFromStores)([L.default], () => L.default.getId()), {
         showKeybindIndicators: n
       } = ee.default.useExperiment({
@@ -435,18 +435,18 @@ function ec(e) {
     o = (0, r.useStateFromStores)([R.default], () => R.default.getStreamerActiveStreamMetadata()),
     d = (0, r.useStateFromStores)([v.default, k.default, D.default], () => {
       var e;
-      let t = (0, T.default)(v.default, k.default);
+      let t = (0, O.default)(v.default, k.default);
       return null != t ? null === (e = D.default.getGameByGameData(t)) || void 0 === e ? void 0 : e.id : null
     }),
-    u = (0, E.useGetOrFetchApplication)(d),
+    u = (0, g.useGetOrFetchApplication)(d),
     c = (0, r.useStateFromStoresObject)([v.default, k.default, R.default, V.default], () => {
-      let e = (0, T.default)(v.default, k.default),
+      let e = (0, O.default)(v.default, k.default),
         t = R.default.getCurrentUserActiveStream();
       return {
         displayUserMode: V.default.getDisplayUserMode(),
         displayNameMode: V.default.getDisplayNameMode(),
         avatarSizeMode: V.default.getAvatarSizeMode(),
-        streamApplication: (null == o ? void 0 : o.pid) === (0, $.getPID)() ? (0, N.default)(e) : null,
+        streamApplication: (null == o ? void 0 : o.pid) === (0, $.getPID)() ? (0, T.default)(e) : null,
         stream: t
       }
     });

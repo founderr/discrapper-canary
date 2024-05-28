@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, l, r, a, s = n("442837"),
+var i, l, r, s, a = n("442837"),
   o = n("570140"),
   u = n("55563"),
   d = n("551428");
@@ -9,7 +9,7 @@ let c = {},
     subscriptions: [],
     otps: []
   };
-class p extends(a = s.default.Store) {
+class p extends(s = a.default.Store) {
   initialize() {
     this.waitFor(u.default, d.default)
   }

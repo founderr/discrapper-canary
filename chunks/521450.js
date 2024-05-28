@@ -1,83 +1,83 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("613828"),
-  o = n("435935"),
-  u = n("442837"),
-  d = n("481060"),
-  c = n("37234"),
-  f = n("960412"),
-  E = n("151662"),
-  h = n("695346"),
-  _ = n("877453"),
-  C = n("26290"),
-  m = n("981631"),
-  S = n("930441"),
-  p = n("689938"),
-  I = n("120762"),
-  g = n("611273");
+s.r(t);
+var a = s("735250"),
+  n = s("470079"),
+  l = s("120356"),
+  i = s.n(l),
+  r = s("613828"),
+  u = s("435935"),
+  o = s("442837"),
+  d = s("481060"),
+  c = s("37234"),
+  E = s("960412"),
+  _ = s("151662"),
+  f = s("695346"),
+  h = s("877453"),
+  m = s("26290"),
+  T = s("981631"),
+  C = s("930441"),
+  g = s("689938"),
+  A = s("120762"),
+  N = s("611273");
 t.default = () => {
-  let e = h.FamilyCenterEnabled.useSetting(),
+  let e = f.FamilyCenterEnabled.useSetting(),
     {
       categories: t,
-      initialized: n
-    } = (0, u.useStateFromStoresObject)([E.default], () => E.default.getEmailSettings());
-  return s.useEffect(() => {
-    null == n && (0, f.fetchEmailSettings)()
-  }, [n]), (0, a.jsxs)("div", {
-    className: I.container,
+      initialized: s
+    } = (0, o.useStateFromStoresObject)([_.default], () => _.default.getEmailSettings());
+  return n.useEffect(() => {
+    null == s && (0, E.fetchEmailSettings)()
+  }, [s]), (0, a.jsxs)("div", {
+    className: A.container,
     children: [(0, a.jsx)(d.Text, {
       variant: "eyebrow",
       color: "text-muted",
-      children: p.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
+      children: g.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
     }), (0, a.jsx)(d.FormSwitch, {
-      className: i()(g.marginTop8, g.marginBottom20),
+      className: i()(N.marginTop8, N.marginBottom20),
       value: e,
-      note: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
+      note: g.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
-      onChange: h.FamilyCenterEnabled.updateSetting,
-      children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
+      onChange: f.FamilyCenterEnabled.updateSetting,
+      children: g.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
     }), e ? (0, a.jsx)(d.Card, {
-      className: I.enableCard,
+      className: A.enableCard,
       type: d.Card.Types.CUSTOM,
       outline: !0,
-      children: (0, a.jsxs)(o.Flex, {
-        justify: o.Flex.Justify.END,
-        children: [(0, a.jsx)(o.Flex.Child, {
+      children: (0, a.jsxs)(u.Flex, {
+        justify: u.Flex.Justify.END,
+        children: [(0, a.jsx)(u.Flex.Child, {
           children: (0, a.jsx)(d.Text, {
             variant: "text-sm/semibold",
             color: "text-normal",
-            children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
+            children: g.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
           })
         }), (0, a.jsx)(d.Clickable, {
           children: (0, a.jsx)(r.Link, {
             onClick: c.popLayer,
             to: {
-              pathname: m.Routes.FAMILY_CENTER,
+              pathname: T.Routes.FAMILY_CENTER,
               state: {
                 scrollRestoration: !1
               }
             },
-            children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
+            children: g.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
           })
-        }), (0, a.jsx)(C.IconBadge, {
-          icon: _.default,
-          className: I.arrow,
+        }), (0, a.jsx)(m.IconBadge, {
+          icon: h.default,
+          className: A.arrow,
           disableColor: !0
         })]
       })
     }) : null, (0, a.jsx)(d.FormSwitch, {
-      className: i()(g.marginTop20, g.marginBottom20),
-      value: !!t[S.EmailCategories.FAMILY_CENTER_DIGEST],
-      note: p.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
+      className: i()(N.marginTop20, N.marginBottom20),
+      value: !!t[C.EmailCategories.FAMILY_CENTER_DIGEST],
+      note: g.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
       onChange: function(e) {
-        (0, f.updateEmailSetting)(S.EmailCategories.FAMILY_CENTER_DIGEST, e)
+        (0, E.updateEmailSetting)(C.EmailCategories.FAMILY_CENTER_DIGEST, e)
       },
-      children: p.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
+      children: g.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
     })]
   })
 }

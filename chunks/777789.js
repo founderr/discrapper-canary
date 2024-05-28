@@ -1,54 +1,54 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return S
+    return I
   }
 });
 var s = l("735250"),
-  n = l("470079"),
-  a = l("120356"),
-  r = l.n(a),
+  a = l("470079"),
+  n = l("120356"),
+  r = l.n(n),
   i = l("797717"),
   o = l("346656"),
   d = l("471885"),
   u = l("424625"),
   c = l("267642"),
-  C = l("502097");
-class m extends n.PureComponent {
+  m = l("502097");
+class C extends a.PureComponent {
   render() {
     let {
       tier: e
     } = this.props;
     return (0, s.jsxs)("div", {
-      className: C.tierPill,
+      className: m.tierPill,
       children: [(0, s.jsx)(i.default, {
-        className: C.tierPillStar,
+        className: m.tierPillStar,
         children: (0, s.jsx)(d.default, {
           tier: e,
-          className: C.tierPillGem
+          className: m.tierPillGem
         })
       }), (0, c.getTierName)(e)]
     })
   }
 }
-let f = e => {
+let S = e => {
   let {
     subscriptionChange: t,
     guild: l
   } = e;
   if (0 === t) return null;
-  let n = Math.max(l.premiumSubscriberCount + t, 0),
-    a = (0, c.getGuildTierFromAppliedBoostCount)(n, l.id),
-    r = a - (0, c.getGuildTierFromAppliedBoostCount)(l.premiumSubscriberCount, l.id);
+  let a = Math.max(l.premiumSubscriberCount + t, 0),
+    n = (0, c.getGuildTierFromAppliedBoostCount)(a, l.id),
+    r = n - (0, c.getGuildTierFromAppliedBoostCount)(l.premiumSubscriberCount, l.id);
   return 0 === r ? null : (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(u.default, {
-      className: r > 0 ? C.levelUpIcon : C.levelDownIcon
-    }), (0, s.jsx)(m, {
-      tier: a
+      className: r > 0 ? m.levelUpIcon : m.levelDownIcon
+    }), (0, s.jsx)(C, {
+      tier: n
     })]
   })
 };
-class S extends n.PureComponent {
+class I extends a.PureComponent {
   render() {
     let {
       guild: e,
@@ -56,20 +56,20 @@ class S extends n.PureComponent {
       subscriptionChange: l
     } = this.props;
     return (0, s.jsxs)("div", {
-      className: r()(C.subscription, t),
+      className: r()(m.subscription, t),
       children: [(0, s.jsx)(o.default, {
         guild: e,
         size: o.default.Sizes.LARGE
       }), (0, s.jsxs)("div", {
-        className: C.subscriptionInfo,
+        className: m.subscriptionInfo,
         children: [(0, s.jsx)("div", {
-          className: C.guildName,
+          className: m.guildName,
           children: e.name
         }), (0, s.jsxs)("div", {
-          className: C.tierInfo,
-          children: [(0, s.jsx)(m, {
+          className: m.tierInfo,
+          children: [(0, s.jsx)(C, {
             tier: e.premiumTier
-          }), (0, s.jsx)(f, {
+          }), (0, s.jsx)(S, {
             guild: e,
             subscriptionChange: null != l ? l : 0
           })]

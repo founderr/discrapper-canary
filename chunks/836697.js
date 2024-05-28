@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return _
   }
 }), n("47120"), n("653041");
 var l = n("735250"),
@@ -20,12 +20,12 @@ var l = n("735250"),
   C = n("773182"),
   g = n("588275"),
   E = n("689938"),
-  _ = n("693353");
+  S = n("693353");
 
-function S(e) {
+function _(e) {
   let {
     onActivate: t
-  } = e, [n, S] = a.useState(!1), I = (0, s.useStateFromStores)([d.default], () => d.default.getGuildId()), N = (0, s.useStateFromStores)([u.default], () => u.default.hasFetchedRequestToJoinGuilds), T = (0, m.default)(), A = (0, i.default)(I), L = a.useMemo(() => {
+  } = e, [n, _] = a.useState(!1), I = (0, s.useStateFromStores)([d.default], () => d.default.getGuildId()), N = (0, s.useStateFromStores)([u.default], () => u.default.hasFetchedRequestToJoinGuilds), T = (0, m.default)(), A = (0, i.default)(I), L = a.useMemo(() => {
     let e = (0, h.createFolderNode)({
       folderId: f.SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: E.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
@@ -40,7 +40,7 @@ function S(e) {
   }, [n, N]);
   let v = null != I && T.includes(I);
   return (a.useEffect(() => {
-    !n && v && A !== I && S(!0)
+    !n && v && A !== I && _(!0)
   }, [n, v, A, I]), 0 === T.length) ? null : (0, l.jsx)(C.GuildsBarClanApplicationCoachmarkPopout, {
     onActivate: t,
     children: (0, l.jsx)(p.default, {
@@ -51,12 +51,12 @@ function S(e) {
       draggable: !1,
       sorting: !1,
       onExpandCollapse: () => {
-        S(!n), o.default.clearCoachmark()
+        _(!n), o.default.clearCoachmark()
       },
       folderIconContent: (0, l.jsx)(c.default, {
         width: 24,
         height: 24,
-        className: _.pendingIcon
+        className: S.pendingIcon
       }),
       renderChildNode: function(e) {
         return e.type !== h.GuildsNodeType.GUILD ? null : (0, l.jsx)(g.default, {

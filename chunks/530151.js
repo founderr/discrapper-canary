@@ -11,11 +11,11 @@ var a = n("735250"),
   c = n("780384"),
   f = n("481060"),
   E = n("570140"),
-  h = n("239091"),
-  _ = n("51025"),
-  C = n("785547"),
-  m = n("730749"),
-  S = n("112724"),
+  C = n("239091"),
+  h = n("51025"),
+  _ = n("785547"),
+  S = n("730749"),
+  m = n("112724"),
   p = n("812206"),
   I = n("44315"),
   g = n("210887"),
@@ -26,11 +26,11 @@ var a = n("735250"),
   R = n("285952"),
   O = n("366695"),
   L = n("366966"),
-  M = n("151011"),
-  P = n("774832"),
-  x = n("465670"),
-  y = n("786048"),
-  D = n("897353"),
+  P = n("151011"),
+  y = n("774832"),
+  M = n("465670"),
+  D = n("786048"),
+  x = n("897353"),
   b = n("424218"),
   U = n("780570"),
   j = n("353042"),
@@ -312,7 +312,7 @@ class Z extends s.PureComponent {
     } = this.props;
     return this.renderBody({
       message: k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-        remove: () => _.removeFinished(e.applicationId, e.branchId)
+        remove: () => h.removeFinished(e.applicationId, e.branchId)
       }),
       foregroundColor: (0, c.isThemeLight)(e.theme) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       percent: 100
@@ -469,23 +469,23 @@ class Z extends s.PureComponent {
   }
 }
 let X = () => (0, a.jsx)(Y, {
-    icon: D.default,
+    icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-    onClick: () => _.resume()
+    onClick: () => h.resume()
   }),
   J = () => (0, a.jsx)(Y, {
-    icon: y.default,
+    icon: D.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-    onClick: () => _.pause()
+    onClick: () => h.pause()
   }),
   $ = e => {
     let {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: P.default,
+      icon: y.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-      onClick: () => _.moveUp(t.applicationId, t.branchId)
+      onClick: () => h.moveUp(t.applicationId, t.branchId)
     })
   },
   ee = e => {
@@ -493,9 +493,9 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: x.default,
+      icon: M.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-      onClick: () => _.cancel(t.applicationId, t.branchId)
+      onClick: () => h.cancel(t.applicationId, t.branchId)
     })
   },
   et = [{
@@ -526,7 +526,7 @@ let X = () => (0, a.jsx)(Y, {
     cellClassName: B.actionsCell,
     render(e, t) {
       let n, s;
-      return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(C.default, {
+      return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(_.default, {
         libraryApplication: e.libraryApplication,
         size: f.Button.Sizes.SMALL,
         className: B.gameActionButton,
@@ -558,7 +558,7 @@ class en extends s.PureComponent {
     } = this.props;
     e.forEach(e => {
       e.finished && E.default.wait(() => {
-        _.removeFinished(e.applicationId, e.branchId)
+        h.removeFinished(e.applicationId, e.branchId)
       })
     }), window.removeEventListener("resize", this.throttledUpdateHeight), this.isUnmounted = !0
   }
@@ -587,7 +587,7 @@ class en extends s.PureComponent {
           color: w.Color.BLUE_345,
           animate: s
         })]
-      }), (0, a.jsx)(M.default, {
+      }), (0, a.jsx)(P.default, {
         hasHeader: !1,
         columns: et,
         data: e,
@@ -602,7 +602,7 @@ class en extends s.PureComponent {
         rowProps: {
           onContextMenu: (e, t) => {
             var s, l, i;
-            return s = e, l = t, i = r, void h.openContextMenuLazy(s, async () => {
+            return s = e, l = t, i = r, void C.openContextMenuLazy(s, async () => {
               let {
                 default: e
               } = await n.e("98335").then(n.bind(n, "485292"));
@@ -649,7 +649,7 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, g.default, v.default], () => {
+t.default = (0, m.default)(u.default.connectStores([p.default, A.default, N.default, g.default, v.default], () => {
   let e = ea(N.default.activeItems, !1, p.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, p.default, A.default)],
@@ -657,4 +657,4 @@ t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.defa
     isFocused: v.default.isFocused(),
     theme: g.default.theme
   }
-})((0, m.default)(en)))
+})((0, S.default)(en)))

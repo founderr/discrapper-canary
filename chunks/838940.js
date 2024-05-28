@@ -4,51 +4,51 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("735250");
+var s = n("735250");
 n("470079");
-var l = n("120356"),
-  s = n.n(l),
-  i = n("481060"),
+var a = n("120356"),
+  i = n.n(a),
+  l = n("481060"),
   r = n("528027"),
-  o = n("686807"),
-  u = n("113318"),
+  u = n("686807"),
+  o = n("113318"),
   d = n("615116");
 
 function c(e) {
   let {
     benefit: t,
     guildId: n
-  } = e, l = (0, u.default)(n, t.ref_id), c = (0, a.jsx)(r.default, {
+  } = e, a = (0, o.default)(n, t.ref_id), c = (0, s.jsx)(r.default, {
     guildId: n,
     emojiId: t.emoji_id,
     emojiName: t.emoji_name
-  }), f = null != l ? (0, a.jsx)(i.Clickable, {
+  }), E = null != a ? (0, s.jsx)(l.Clickable, {
     className: d.__invalid_channelLink,
-    onClick: l.navigateToChannel,
-    "aria-label": l.ariaLabel,
+    onClick: a.navigateToChannel,
+    "aria-label": a.ariaLabel,
     role: "link",
-    children: (0, a.jsx)(i.Text, {
+    children: (0, s.jsx)(l.Text, {
       variant: "text-md/medium",
       color: "header-primary",
-      className: s()(d.name, d.linkedName),
-      children: (0, o.default)(t)
+      className: i()(d.name, d.linkedName),
+      children: (0, u.default)(t)
     })
-  }) : (0, a.jsx)(i.Text, {
+  }) : (0, s.jsx)(l.Text, {
     variant: "text-md/medium",
     color: "header-primary",
     className: d.name,
-    children: (0, o.default)(t)
+    children: (0, u.default)(t)
   });
-  return (0, a.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: d.container,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, s.jsxs)("div", {
       className: d.infoContainer,
-      children: [f, (0, a.jsx)(i.Text, {
+      children: [E, (0, s.jsx)(l.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
         children: t.description
       })]
-    }), (0, a.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: d.emojiContainer,
       children: c
     })]

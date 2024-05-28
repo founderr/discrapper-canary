@@ -19,7 +19,7 @@ var a = s("735250"),
   _ = s("293810"),
   f = s("689938"),
   m = s("504110");
-let g = e => {
+let I = e => {
     let [t, s] = n.useState(!1), [a, l] = n.useState(null);
     return {
       cancelSubscription: async t => {
@@ -35,27 +35,27 @@ let g = e => {
       submitting: t
     }
   },
-  I = e => {
+  g = e => {
     var t;
     let {
       transitionState: s,
       groupListing: n,
       guildId: l,
       listing: o,
-      subscription: I,
+      subscription: g,
       onClose: N
-    } = e, h = (0, c.useUID)(), C = (0, E.useSubscriptionsSettings)(l), p = (null == C ? void 0 : null === (t = C.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, S.getAssetURL)(C.cover_image_asset.application_id, C.cover_image_asset, 440) : void 0, {
+    } = e, h = (0, c.useUID)(), C = (0, E.useSubscriptionsSettings)(l), O = (null == C ? void 0 : null === (t = C.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, S.getAssetURL)(C.cover_image_asset.application_id, C.cover_image_asset, 440) : void 0, {
       analyticsLocations: A
     } = (0, u.default)(d.default.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL), {
-      cancelSubscription: O,
-      error: x,
-      submitting: R
-    } = g(A), M = async () => {
-      await O(I.id) && N()
-    }, v = o.role_benefits.benefits.filter(e => e.ref_type === _.GuildRoleSubscriptionBenefitTypes.CHANNEL), D = o.role_benefits.benefits.filter(e => e.ref_type === _.GuildRoleSubscriptionBenefitTypes.INTANGIBLE), L = i()(I.currentPeriodEnd).format("MMMM Do, YYYY"), P = f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
-      numChannels: v.length,
+      cancelSubscription: p,
+      error: R,
+      submitting: x
+    } = I(A), M = async () => {
+      await p(g.id) && N()
+    }, L = o.role_benefits.benefits.filter(e => e.ref_type === _.GuildRoleSubscriptionBenefitTypes.CHANNEL), D = o.role_benefits.benefits.filter(e => e.ref_type === _.GuildRoleSubscriptionBenefitTypes.INTANGIBLE), P = i()(g.currentPeriodEnd).format("MMMM Do, YYYY"), v = f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
+      numChannels: L.length,
       numAdditionalBenefits: D.length,
-      subscriptionEndDate: L
+      subscriptionEndDate: P
     });
     return (0, a.jsxs)(r.ModalRoot, {
       transitionState: s,
@@ -63,7 +63,7 @@ let g = e => {
       "aria-labelledby": h,
       children: [(0, a.jsxs)("div", {
         children: [(0, a.jsx)("img", {
-          src: p,
+          src: O,
           alt: "",
           className: m.headerImage
         }), (0, a.jsx)(r.ModalCloseButton, {
@@ -71,8 +71,8 @@ let g = e => {
           className: m.closeButton,
           onClick: N
         })]
-      }), null != x ? (0, a.jsx)(r.FormErrorBlock, {
-        children: x.message
+      }), null != R ? (0, a.jsx)(r.FormErrorBlock, {
+        children: R.message
       }) : null, (0, a.jsxs)(r.ModalContent, {
         className: m.content,
         children: [(0, a.jsx)(r.Heading, {
@@ -83,7 +83,7 @@ let g = e => {
         }), (0, a.jsx)(r.Text, {
           className: m.description,
           variant: "text-sm/normal",
-          children: P
+          children: v
         }), (0, a.jsx)(T.GuildRoleSubscriptionBenefits, {
           listingId: o.id,
           guildId: n.guild_id,
@@ -94,7 +94,7 @@ let g = e => {
         children: [(0, a.jsx)(r.Button, {
           color: r.Button.Colors.RED,
           onClick: M,
-          submitting: R,
+          submitting: x,
           children: f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
         }), (0, a.jsx)(r.Button, {
           look: r.Button.Looks.LINK,
@@ -107,7 +107,7 @@ let g = e => {
     })
   },
   N = e => {
-    (0, r.openModal)(t => (0, a.jsx)(I, {
+    (0, r.openModal)(t => (0, a.jsx)(g, {
       ...t,
       ...e
     }))

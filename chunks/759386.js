@@ -9,11 +9,11 @@ n("470079");
 var r = n("409813"),
   s = n("276442"),
   l = n("961830"),
-  i = n("721165"),
-  u = n("519801"),
+  u = n("721165"),
+  i = n("519801"),
   o = n("589771"),
-  d = n("883419"),
-  c = n("689938");
+  c = n("883419"),
+  d = n("689938");
 
 function f(e) {
   let {
@@ -30,11 +30,11 @@ function f(e) {
     })
   }, {
     key: r.Step.BENEFITS,
-    renderStep: e => (0, a.jsx)(i.default, {
+    renderStep: e => (0, a.jsx)(u.default, {
       ...e
     }),
     options: {
-      useBreadcrumbLabel: () => c.default.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS
+      useBreadcrumbLabel: () => d.default.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS
     }
   }, {
     key: r.Step.ADD_PAYMENT_STEPS,
@@ -49,7 +49,7 @@ function f(e) {
     }
   }, ...l.SHARED_STEP_CONFIGS, {
     key: r.Step.REVIEW,
-    renderStep: e => (0, a.jsx)(d.default, {
+    renderStep: e => (0, a.jsx)(c.default, {
       backButtonEligible: !!f || void 0,
       prevStep: f ? r.Step.BENEFITS : void 0,
       showGuildPicker: null == t,
@@ -58,11 +58,11 @@ function f(e) {
     }),
     options: {
       renderHeader: !0,
-      useBreadcrumbLabel: () => c.default.Messages.BILLING_STEP_REVIEW
+      useBreadcrumbLabel: () => d.default.Messages.BILLING_STEP_REVIEW
     }
   }, {
     key: r.Step.CONFIRM,
-    renderStep: e => (0, a.jsx)(u.default, {
+    renderStep: e => (0, a.jsx)(i.default, {
       showBenefits: !f,
       ...e
     })

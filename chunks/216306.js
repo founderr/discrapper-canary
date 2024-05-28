@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s.d(t, {
+E.r(t), E.d(t, {
   clearRecentChannels: function() {
     return h
   },
@@ -18,122 +18,122 @@ s.r(t), s.d(t, {
   useFilterCategoriesByQuery: function() {
     return R
   }
-}), s("733860");
-var E = s("470079"),
-  _ = s("658722"),
-  a = s.n(_),
-  n = s("913527"),
-  T = s.n(n),
-  i = s("442837"),
-  A = s("524437"),
-  u = s("45114"),
-  l = s("740504"),
-  I = s("605236"),
-  r = s("931261"),
-  o = s("540126"),
-  L = s("671098"),
-  d = s("703656"),
-  N = s("592125"),
-  S = s("324067"),
-  g = s("306680"),
-  D = s("709054"),
-  c = s("981631"),
-  G = s("176505"),
-  O = s("443063"),
-  C = s("490897"),
-  U = s("689938");
+}), E("733860");
+var s = E("470079"),
+  _ = E("658722"),
+  a = E.n(_),
+  T = E("913527"),
+  n = E.n(T),
+  A = E("442837"),
+  I = E("524437"),
+  u = E("45114"),
+  i = E("740504"),
+  l = E("605236"),
+  L = E("931261"),
+  o = E("540126"),
+  r = E("671098"),
+  d = E("703656"),
+  N = E("592125"),
+  S = E("324067"),
+  g = E("306680"),
+  D = E("709054"),
+  G = E("981631"),
+  O = E("176505"),
+  c = E("443063"),
+  U = E("490897"),
+  C = E("689938");
 
 function M(e, t) {
   e.index = t
 }
 
-function R(e, t, s, _) {
+function R(e, t, E, _) {
   _ = _.toLowerCase();
-  let n = (0, r.useCanSeeOnboardingHome)(e),
-    T = E.useCallback((e, t) => !(n && e.channel.hasFlag(G.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
-  return E.useMemo(() => {
+  let T = (0, L.useCanSeeOnboardingHome)(e),
+    n = s.useCallback((e, t) => !(T && e.channel.hasFlag(O.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== G.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [T]);
+  return s.useMemo(() => {
     let e = {
       null: [],
       _categories: []
     };
-    return s[c.ChannelTypes.GUILD_CATEGORY].forEach(s => {
+    return E[G.ChannelTypes.GUILD_CATEGORY].forEach(E => {
       let {
-        channel: E
-      } = s;
-      "null" === E.id && (e.null = t.null.filter(e => T(e, _))), e[E.id] = t[E.id].filter(e => T(e, _))
-    }), e._categories = t._categories.filter(t => "null" === t.channel.id || 0 === _.length || e[t.channel.id].length > 0), (0, l.default)(e._categories, e).forEach(M), e
-  }, [t, s, T, _])
+        channel: s
+      } = E;
+      "null" === s.id && (e.null = t.null.filter(e => n(e, _))), e[s.id] = t[s.id].filter(e => n(e, _))
+    }), e._categories = t._categories.filter(t => "null" === t.channel.id || 0 === _.length || e[t.channel.id].length > 0), (0, i.default)(e._categories, e).forEach(M), e
+  }, [t, E, n, _])
 }
 
 function f(e) {
   let t = e.getSections();
   if (t[o.SECTION_INDEX_COMMUNITY] > 0) switch (e.getCommunitySection().getRow(0)) {
-    case O.ChannelListCommunityRow.GUILD_HOME:
-      return G.StaticChannelRoute.GUILD_HOME;
-    case O.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
-      return G.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
-    case O.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
-      return G.StaticChannelRoute.MEMBER_APPLICATIONS
+    case c.ChannelListCommunityRow.GUILD_HOME:
+      return O.StaticChannelRoute.GUILD_HOME;
+    case c.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
+      return O.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
+    case c.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
+      return O.StaticChannelRoute.MEMBER_APPLICATIONS
   }
-  for (let E = o.SECTION_INDEX_UNCATEGORIZED_CHANNELS; E < e.voiceChannelsSectionNumber; E++)
-    if (t[E] > 0) {
-      var s;
-      let t = null === (s = e.getChannelFromSectionRow(E, 0)) || void 0 === s ? void 0 : s.channel;
+  for (let s = o.SECTION_INDEX_UNCATEGORIZED_CHANNELS; s < e.voiceChannelsSectionNumber; s++)
+    if (t[s] > 0) {
+      var E;
+      let t = null === (E = e.getChannelFromSectionRow(s, 0)) || void 0 === E ? void 0 : E.channel;
       if (null != t) return t.id
     } return null
 }
 
 function h(e, t) {
-  let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-  (0, L.bulkClearRecents)(e, t), (0, u.bulkAck)(t.map(e => ({
+  let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+  (0, r.bulkClearRecents)(e, t), (0, u.bulkAck)(t.map(e => ({
     channelId: e,
-    readStateType: C.ReadStateTypes.CHANNEL,
+    readStateType: U.ReadStateTypes.CHANNEL,
     messageId: g.default.lastMessageId(e)
-  }))), null != s && (0, d.transitionTo)(c.Routes.CHANNEL(e, s))
+  }))), null != E && (0, d.transitionTo)(G.Routes.CHANNEL(e, E))
 }
 
-function p(e, t, s, E) {
-  let _ = (0, I.useIsDismissibleContentDismissed)(A.DismissibleContent.CHANNEL_BROWSER_NUX),
-    a = (0, i.useStateFromStoresObject)([N.default], () => {
+function p(e, t, E, s) {
+  let _ = (0, l.useIsDismissibleContentDismissed)(I.DismissibleContent.CHANNEL_BROWSER_NUX),
+    a = (0, A.useStateFromStoresObject)([N.default], () => {
       let t = {},
-        s = N.default.getMutableGuildChannelsForGuild(e);
-      for (let e in s) {
+        E = N.default.getMutableGuildChannelsForGuild(e);
+      for (let e in E) {
         let {
           parent_id: _
-        } = s[e];
+        } = E[e];
         if (null != _) {
-          var E;
-          t[_] = (null !== (E = t[_]) && void 0 !== E ? E : 0) + 1
+          var s;
+          t[_] = (null !== (s = t[_]) && void 0 !== s ? s : 0) + 1
         }
       }
       return t
     }, [e]),
-    n = t._categories.map(e => {
-      let E = t[e.channel.id];
+    T = t._categories.map(e => {
+      let s = t[e.channel.id];
       return {
-        rowCount: "null" !== e.channel.id && 0 === a[e.channel.id] ? 1 : E.length,
-        rowHeight: 0 === E.length ? 0 : s
+        rowCount: "null" !== e.channel.id && 0 === a[e.channel.id] ? 1 : s.length,
+        rowHeight: 0 === s.length ? 0 : E
       }
     });
-  return !_ && null != E && n.unshift({
+  return !_ && null != s && T.unshift({
     rowCount: 1,
-    rowHeight: E
-  }), n
+    rowHeight: s
+  }), T
 }
 
 function y(e) {
-  var t, s;
-  let E = (0, i.useStateFromStores)([S.default], () => S.default.getCategories(e)),
-    _ = E._categories.length,
-    a = E._categories[E._categories.length - 1];
+  var t, E;
+  let s = (0, A.useStateFromStores)([S.default], () => S.default.getCategories(e)),
+    _ = s._categories.length,
+    a = s._categories[s._categories.length - 1];
   if (null == a) return 0;
-  let n = E[null !== (s = null === (t = a.channel) || void 0 === t ? void 0 : t.id) && void 0 !== s ? s : "null"];
-  return null == n ? 0 : 0 === n.length ? a.index + 2 - _ : n[n.length - 1].index + 2 - _
+  let T = s[null !== (E = null === (t = a.channel) || void 0 === t ? void 0 : t.id) && void 0 !== E ? E : "null"];
+  return null == T ? 0 : 0 === T.length ? a.index + 2 - _ : T[T.length - 1].index + 2 - _
 }
 
 function P(e) {
   var t;
-  return U.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
-    timeAgo: T()(D.default.extractTimestamp(null !== (t = g.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()
+  return C.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
+    timeAgo: n()(D.default.extractTimestamp(null !== (t = g.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()
   })
 }

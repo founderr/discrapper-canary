@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   UserProfileClanContainer: function() {
-    return O
+    return p
   },
   UserProfileClanRow: function() {
-    return p
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -23,13 +23,13 @@ var u = s("594174"),
   _ = s("438365"),
   f = s("114487"),
   m = s("219039"),
-  g = s("979264"),
-  I = s("308083"),
+  I = s("979264"),
+  g = s("308083"),
   N = s("981631"),
   h = s("689938"),
   C = s("407020");
 
-function p(e) {
+function O(e) {
   let {
     className: t,
     clanTag: s,
@@ -45,7 +45,7 @@ function p(e) {
     let e = _.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && h(e.offsetWidth < e.scrollWidth)
   }, []);
-  let p = (0, E.getClanBadgeUrl)(d, l, I.ClanTagBadgeSize.SIZE_16);
+  let O = (0, E.getClanBadgeUrl)(d, l, g.ClanTagBadgeSize.SIZE_16);
   return (0, a.jsxs)("div", {
     className: i()(C.container, t),
     children: [(0, a.jsxs)("div", {
@@ -75,12 +75,12 @@ function p(e) {
       })]
     }), (0, a.jsx)("div", {
       className: C.tagContainer,
-      children: (0, a.jsx)(g.BaseClanTagChiplet, {
+      children: (0, a.jsx)(I.BaseClanTagChiplet, {
         className: C.tag,
         clanTag: s,
-        clanBadge: p,
+        clanBadge: O,
         onClick: r,
-        badgeSize: I.ClanTagBadgeSize.SIZE_16,
+        badgeSize: g.ClanTagBadgeSize.SIZE_16,
         textColor: "interactive-normal",
         textVariant: "text-sm/medium",
         badgeClassName: C.badge
@@ -98,12 +98,12 @@ function A(e) {
     guildIcon: _,
     clan: f,
     userId: m
-  } = e, g = (0, T.useCurrentUserAvailableClanIds)(), I = (0, r.useStateFromStores)([u.default], () => {
+  } = e, I = (0, T.useCurrentUserAvailableClanIds)(), g = (0, r.useStateFromStores)([u.default], () => {
     var e;
     return (0, E.getUserClanData)(null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
   }), A = n.useMemo(() => {
-    if (l !== I) {
-      if (g.has(l)) return () => {
+    if (l !== g) {
+      if (I.has(l)) return () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
           ...e,
           header: h.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA,
@@ -129,13 +129,13 @@ function A(e) {
         })
       }
     }
-  }, [g, f, I, l, i, m]);
+  }, [I, f, g, l, i, m]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Heading, {
       className: C.header,
       variant: "eyebrow",
       children: h.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
-    }), (0, a.jsx)(p, {
+    }), (0, a.jsx)(O, {
       className: C.profileContainer,
       clanTag: t,
       clanBadge: s,
@@ -149,7 +149,7 @@ function A(e) {
   })
 }
 
-function O(e) {
+function p(e) {
   let {
     userId: t,
     wrapChildren: s

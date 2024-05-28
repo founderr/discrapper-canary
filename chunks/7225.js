@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, l, r = n("735250"),
-  a = n("470079"),
-  s = n("442837"),
+  s = n("470079"),
+  a = n("442837"),
   o = n("481060"),
   u = n("241159"),
   d = n("496929"),
@@ -26,15 +26,15 @@ function C(e) {
     appId: i,
     guildId: l,
     subscriptionGroupListing: C
-  } = e, x = (0, s.useStateFromStores)([p.default], () => p.default.getApplication(i), [i]), [T, L] = a.useState(() => p.default.isFetchingApplication(i) ? {
+  } = e, x = (0, a.useStateFromStores)([p.default], () => p.default.getApplication(i), [i]), [T, L] = s.useState(() => p.default.isFetchingApplication(i) ? {
     status: 1
   } : {
     status: 0
-  }), R = a.useRef(null), [j, _] = a.useState(!0), b = () => {
+  }), R = s.useRef(null), [j, _] = s.useState(!0), I = () => {
     var e;
     (null === (e = R.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? _(!1) : _(!0)
   };
-  a.useEffect(() => {
+  s.useEffect(() => {
     0 === T.status && (L({
       status: 1
     }), f.default.fetchApplication(i).then(() => {
@@ -48,18 +48,18 @@ function C(e) {
       })
     }))
   }, [i, T.status]);
-  let I = (0, s.useStateFromStores)([g.default], () => g.default.getStoreLayout(i), [i]);
-  if (a.useEffect(() => {
+  let b = (0, a.useStateFromStores)([g.default], () => g.default.getStoreLayout(i), [i]);
+  if (s.useEffect(() => {
       (0, u.fetchStoreDirectoryLayout)(i), (0, c.fetchAllStoreListingsForApplication)(i)
-    }, [i]), a.useEffect(() => {
+    }, [i]), s.useEffect(() => {
       (0, d.fetchUserEntitlementsForApplication)(i, !1)
     }, [i]), null == x) return null;
-  let y = h.default.Messages.STOREFRONT_TITLE.format({
+  let N = h.default.Messages.STOREFRONT_TITLE.format({
     appName: x.name
   });
   return (0, r.jsxs)(o.ModalRoot, {
     transitionState: n,
-    "aria-label": y,
+    "aria-label": N,
     size: o.ModalSize.DYNAMIC,
     className: S.modal,
     children: [(0, r.jsxs)(o.ModalHeader, {
@@ -68,7 +68,7 @@ function C(e) {
         className: S.modalTitle,
         children: [(0, r.jsx)(m.default, {}), (0, r.jsx)(o.Heading, {
           variant: "heading-md/semibold",
-          children: y
+          children: N
         })]
       }), (0, r.jsx)(o.ModalCloseButton, {
         onClick: t,
@@ -76,14 +76,14 @@ function C(e) {
       })]
     }), (0, r.jsx)(o.ModalContent, {
       scrollerRef: e => {
-        null != e && (R.current = e, b())
+        null != e && (R.current = e, I())
       },
-      onScroll: b,
+      onScroll: I,
       children: (0, r.jsx)(v.default, {
         app: x,
         subscriptionGroupListing: C,
         guildId: l,
-        storeLayout: I
+        storeLayout: b
       })
     }), (0, r.jsx)("div", {
       className: S.containerScrollGradient,

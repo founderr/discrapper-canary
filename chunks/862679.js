@@ -29,12 +29,12 @@ t.default = l.memo(function(e) {
   if (null == t) return (0, a.jsx)(a.Fragment, {
     children: l.Children.only(T)
   });
-  let N = null;
-  return null != C ? N = (0, a.jsx)("img", {
+  let v = null;
+  return null != C ? v = (0, a.jsx)("img", {
     alt: "",
     src: C,
     className: c.image
-  }) : null != g && (N = (0, a.jsx)(d.default, {
+  }) : null != g && (v = (0, a.jsx)(d.default, {
     importData: g,
     shouldAnimate: !I,
     className: c.animation
@@ -42,7 +42,7 @@ t.default = l.memo(function(e) {
     className: c.wrapper,
     children: [(0, a.jsxs)("div", {
       className: c.content,
-      children: [N, (0, a.jsxs)("div", {
+      children: [v, (0, a.jsxs)("div", {
         className: c.text,
         children: [(0, a.jsx)(r.Heading, {
           variant: "heading-md/semibold",

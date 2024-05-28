@@ -1,420 +1,420 @@
 "use strict";
-S.r(s), S.d(s, {
+i.r(s), i.d(s, {
   generateChannelEventsSection: function() {
-    return P
-  },
-  generateChannelGeneralSection: function() {
-    return t
-  },
-  generateChannelMembershipSection: function() {
-    return r
-  },
-  generateChannelStageSection: function() {
     return A
   },
-  generateChannelStageVoiceSection: function() {
-    return O
-  },
-  generateChannelTextSection: function() {
-    return N
-  },
-  generateChannelVoiceChatSection: function() {
-    return R
-  },
-  generateChannelVoiceSection: function() {
+  generateChannelGeneralSection: function() {
     return o
   },
-  generateGuildPermissionSpec: function() {
+  generateChannelMembershipSection: function() {
+    return _
+  },
+  generateChannelStageSection: function() {
+    return N
+  },
+  generateChannelStageVoiceSection: function() {
+    return u
+  },
+  generateChannelTextSection: function() {
+    return l
+  },
+  generateChannelVoiceChatSection: function() {
     return I
   },
+  generateChannelVoiceSection: function() {
+    return a
+  },
+  generateGuildPermissionSpec: function() {
+    return S
+  },
   getGuildPermissionSpec: function() {
-    return n
+    return r
   },
   renderDescription: function() {
-    return T
+    return R
   }
-}), S("653041");
-var e = S("231338");
+}), i("653041");
+var t = i("231338");
 
-function i(E) {
+function n(e) {
   let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return !s && (E.permissions = E.permissions.filter(E => {
+  return !s && (e.permissions = e.permissions.filter(e => {
     let {
       isExperimental: s
-    } = E;
+    } = e;
     return !s
-  })), E
+  })), e
 }
 
-function _(E, s) {
-  return E.map(E => s[E.toString()])
+function E(e, s) {
+  return e.map(e => s[e.toString()])
 }
 
-function n(E, s) {
+function r(e, s) {
   return {
-    [e.Permissions.VIEW_CHANNEL.toString()]: {
-      title: E.ROLE_PERMISSIONS_VIEW_CHANNEL,
-      description: E.ROLE_PERMISSIONS_VIEW_CHANNEL_DESCRIPTION,
-      flag: e.Permissions.VIEW_CHANNEL
+    [t.Permissions.VIEW_CHANNEL.toString()]: {
+      title: e.ROLE_PERMISSIONS_VIEW_CHANNEL,
+      description: e.ROLE_PERMISSIONS_VIEW_CHANNEL_DESCRIPTION,
+      flag: t.Permissions.VIEW_CHANNEL
     },
-    [e.Permissions.MANAGE_CHANNELS.toString()]: {
-      title: E.MANAGE_CHANNELS,
-      description: E.ROLE_PERMISSIONS_MANAGE_CHANNELS_DESCRIPTION,
-      flag: e.Permissions.MANAGE_CHANNELS
+    [t.Permissions.MANAGE_CHANNELS.toString()]: {
+      title: e.MANAGE_CHANNELS,
+      description: e.ROLE_PERMISSIONS_MANAGE_CHANNELS_DESCRIPTION,
+      flag: t.Permissions.MANAGE_CHANNELS
     },
-    [e.Permissions.MANAGE_ROLES.toString()]: {
-      title: E.MANAGE_ROLES,
-      description: E.ROLE_PERMISSIONS_MANAGE_ROLES_DESCRIPTION,
-      flag: e.Permissions.MANAGE_ROLES
+    [t.Permissions.MANAGE_ROLES.toString()]: {
+      title: e.MANAGE_ROLES,
+      description: e.ROLE_PERMISSIONS_MANAGE_ROLES_DESCRIPTION,
+      flag: t.Permissions.MANAGE_ROLES
     },
-    [e.Permissions.MANAGE_GUILD_EXPRESSIONS.toString()]: {
-      title: E.MANAGE_EXPRESSIONS,
-      description: E.ROLE_PERMISSIONS_MANAGE_EXPRESSIONS_DESCRIPTION,
-      flag: e.Permissions.MANAGE_GUILD_EXPRESSIONS
+    [t.Permissions.MANAGE_GUILD_EXPRESSIONS.toString()]: {
+      title: e.MANAGE_EXPRESSIONS,
+      description: e.ROLE_PERMISSIONS_MANAGE_EXPRESSIONS_DESCRIPTION,
+      flag: t.Permissions.MANAGE_GUILD_EXPRESSIONS
     },
-    [e.Permissions.CREATE_GUILD_EXPRESSIONS.toString()]: {
-      title: E.CREATE_EXPRESSIONS,
-      description: E.ROLE_PERMISSIONS_CREATE_EXPRESSIONS_DESCRIPTION,
-      flag: e.Permissions.CREATE_GUILD_EXPRESSIONS
+    [t.Permissions.CREATE_GUILD_EXPRESSIONS.toString()]: {
+      title: e.CREATE_EXPRESSIONS,
+      description: e.ROLE_PERMISSIONS_CREATE_EXPRESSIONS_DESCRIPTION,
+      flag: t.Permissions.CREATE_GUILD_EXPRESSIONS
     },
-    [e.Permissions.VIEW_AUDIT_LOG.toString()]: {
-      title: E.VIEW_AUDIT_LOG,
-      description: E.ROLE_PERMISSIONS_VIEW_AUDIT_LOG_DESCRIPTION,
-      flag: e.Permissions.VIEW_AUDIT_LOG
+    [t.Permissions.VIEW_AUDIT_LOG.toString()]: {
+      title: e.VIEW_AUDIT_LOG,
+      description: e.ROLE_PERMISSIONS_VIEW_AUDIT_LOG_DESCRIPTION,
+      flag: t.Permissions.VIEW_AUDIT_LOG
     },
-    [e.Permissions.VIEW_GUILD_ANALYTICS.toString()]: {
-      title: E.VIEW_GUILD_ANALYTICS,
-      description: E.ROLE_PERMISSIONS_VIEW_GUILD_ANALYTICS_DESCRIPTION,
-      flag: e.Permissions.VIEW_GUILD_ANALYTICS
+    [t.Permissions.VIEW_GUILD_ANALYTICS.toString()]: {
+      title: e.VIEW_GUILD_ANALYTICS,
+      description: e.ROLE_PERMISSIONS_VIEW_GUILD_ANALYTICS_DESCRIPTION,
+      flag: t.Permissions.VIEW_GUILD_ANALYTICS
     },
-    [e.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: {
-      title: E.VIEW_CREATOR_MONETIZATION_ANALYTICS,
-      description: E.ROLE_PERMISSIONS_VIEW_CREATOR_MONETIZATION_ANALYTICS_DESCRIPTION,
-      flag: e.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS
+    [t.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: {
+      title: e.VIEW_CREATOR_MONETIZATION_ANALYTICS,
+      description: e.ROLE_PERMISSIONS_VIEW_CREATOR_MONETIZATION_ANALYTICS_DESCRIPTION,
+      flag: t.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS
     },
-    [e.Permissions.MANAGE_WEBHOOKS.toString()]: {
-      title: E.MANAGE_WEBHOOKS,
-      description: E.ROLE_PERMISSIONS_MANAGE_WEBHOOKS_DESCRIPTION,
-      flag: e.Permissions.MANAGE_WEBHOOKS
+    [t.Permissions.MANAGE_WEBHOOKS.toString()]: {
+      title: e.MANAGE_WEBHOOKS,
+      description: e.ROLE_PERMISSIONS_MANAGE_WEBHOOKS_DESCRIPTION,
+      flag: t.Permissions.MANAGE_WEBHOOKS
     },
-    [e.Permissions.MANAGE_GUILD.toString()]: {
-      title: E.MANAGE_SERVER,
-      description: E.ROLE_PERMISSIONS_MANAGE_SERVER_DESCRIPTION,
-      flag: e.Permissions.MANAGE_GUILD
+    [t.Permissions.MANAGE_GUILD.toString()]: {
+      title: e.MANAGE_SERVER,
+      description: e.ROLE_PERMISSIONS_MANAGE_SERVER_DESCRIPTION,
+      flag: t.Permissions.MANAGE_GUILD
     },
-    [e.Permissions.CREATE_INSTANT_INVITE.toString()]: {
-      title: E.CREATE_INSTANT_INVITE,
-      description: E.ROLE_PERMISSIONS_CREATE_INSTANT_INVITE_DESCRIPTION,
-      flag: e.Permissions.CREATE_INSTANT_INVITE
+    [t.Permissions.CREATE_INSTANT_INVITE.toString()]: {
+      title: e.CREATE_INSTANT_INVITE,
+      description: e.ROLE_PERMISSIONS_CREATE_INSTANT_INVITE_DESCRIPTION,
+      flag: t.Permissions.CREATE_INSTANT_INVITE
     },
-    [e.Permissions.CHANGE_NICKNAME.toString()]: {
-      title: E.CHANGE_NICKNAME,
-      description: E.ROLE_PERMISSIONS_CHANGE_NICKNAME_DESCRIPTION,
-      flag: e.Permissions.CHANGE_NICKNAME
+    [t.Permissions.CHANGE_NICKNAME.toString()]: {
+      title: e.CHANGE_NICKNAME,
+      description: e.ROLE_PERMISSIONS_CHANGE_NICKNAME_DESCRIPTION,
+      flag: t.Permissions.CHANGE_NICKNAME
     },
-    [e.Permissions.MANAGE_NICKNAMES.toString()]: {
-      title: E.MANAGE_NICKNAMES,
-      description: E.ROLE_PERMISSIONS_MANAGE_NICKNAMES_DESCRIPTION,
-      flag: e.Permissions.MANAGE_NICKNAMES
+    [t.Permissions.MANAGE_NICKNAMES.toString()]: {
+      title: e.MANAGE_NICKNAMES,
+      description: e.ROLE_PERMISSIONS_MANAGE_NICKNAMES_DESCRIPTION,
+      flag: t.Permissions.MANAGE_NICKNAMES
     },
-    [e.Permissions.KICK_MEMBERS.toString()]: {
-      title: s.showMembershipManualApprovalPermissions ? E.KICK_MEMBERS_AND_REVIEW_APPLICATIONS : E.KICK_MEMBERS,
-      description: s.showMembershipManualApprovalPermissions ? E.ROLE_PERMISSIONS_KICK_MEMBERS_AND_REVIEW_APPLICATION_DESCRIPTION : E.ROLE_PERMISSIONS_KICK_MEMBERS_DESCRIPTION,
-      flag: e.Permissions.KICK_MEMBERS
+    [t.Permissions.KICK_MEMBERS.toString()]: {
+      title: s.showMembershipManualApprovalPermissions ? e.KICK_MEMBERS_AND_REVIEW_APPLICATIONS : e.KICK_MEMBERS,
+      description: s.showMembershipManualApprovalPermissions ? e.ROLE_PERMISSIONS_KICK_MEMBERS_AND_REVIEW_APPLICATION_DESCRIPTION : e.ROLE_PERMISSIONS_KICK_MEMBERS_DESCRIPTION,
+      flag: t.Permissions.KICK_MEMBERS
     },
-    [e.Permissions.BAN_MEMBERS.toString()]: {
-      title: E.BAN_MEMBERS,
-      description: E.ROLE_PERMISSIONS_BAN_MEMBERS_DESCRIPTION,
-      flag: e.Permissions.BAN_MEMBERS
+    [t.Permissions.BAN_MEMBERS.toString()]: {
+      title: e.BAN_MEMBERS,
+      description: e.ROLE_PERMISSIONS_BAN_MEMBERS_DESCRIPTION,
+      flag: t.Permissions.BAN_MEMBERS
     },
-    [e.Permissions.MODERATE_MEMBERS.toString()]: {
-      title: E.MODERATE_MEMBER,
-      description: E.ROLE_PERMISSIONS_MODERATE_MEMBER_DESCRIPTION,
-      flag: e.Permissions.MODERATE_MEMBERS
+    [t.Permissions.MODERATE_MEMBERS.toString()]: {
+      title: e.MODERATE_MEMBER,
+      description: e.ROLE_PERMISSIONS_MODERATE_MEMBER_DESCRIPTION,
+      flag: t.Permissions.MODERATE_MEMBERS
     },
-    [e.Permissions.SEND_MESSAGES.toString()]: {
-      title: s.showForumPermissions ? E.SEND_MESSAGES_AND_CREATE_FORUM_POSTS : E.SEND_MESSAGES,
-      description: s.showForumPermissions ? E.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION : E.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION,
-      flag: e.Permissions.SEND_MESSAGES
+    [t.Permissions.SEND_MESSAGES.toString()]: {
+      title: s.showForumPermissions ? e.SEND_MESSAGES_AND_CREATE_FORUM_POSTS : e.SEND_MESSAGES,
+      description: s.showForumPermissions ? e.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION : e.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION,
+      flag: t.Permissions.SEND_MESSAGES
     },
-    [e.Permissions.EMBED_LINKS.toString()]: {
-      title: E.EMBED_LINKS,
-      description: E.ROLE_PERMISSIONS_EMBED_LINKS_DESCRIPTION,
-      flag: e.Permissions.EMBED_LINKS
+    [t.Permissions.EMBED_LINKS.toString()]: {
+      title: e.EMBED_LINKS,
+      description: e.ROLE_PERMISSIONS_EMBED_LINKS_DESCRIPTION,
+      flag: t.Permissions.EMBED_LINKS
     },
-    [e.Permissions.ATTACH_FILES.toString()]: {
-      title: E.ATTACH_FILES,
-      description: E.ROLE_PERMISSIONS_ATTACH_FILES_DESCRIPTION,
-      flag: e.Permissions.ATTACH_FILES
+    [t.Permissions.ATTACH_FILES.toString()]: {
+      title: e.ATTACH_FILES,
+      description: e.ROLE_PERMISSIONS_ATTACH_FILES_DESCRIPTION,
+      flag: t.Permissions.ATTACH_FILES
     },
-    [e.Permissions.ADD_REACTIONS.toString()]: {
-      title: E.ADD_REACTIONS,
-      description: E.ROLE_PERMISSIONS_ADD_REACTIONS_DESCRIPTION,
-      flag: e.Permissions.ADD_REACTIONS
+    [t.Permissions.ADD_REACTIONS.toString()]: {
+      title: e.ADD_REACTIONS,
+      description: e.ROLE_PERMISSIONS_ADD_REACTIONS_DESCRIPTION,
+      flag: t.Permissions.ADD_REACTIONS
     },
-    [e.Permissions.USE_EXTERNAL_EMOJIS.toString()]: {
-      title: E.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS,
-      description: E.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS_DESCRIPTION,
-      flag: e.Permissions.USE_EXTERNAL_EMOJIS
+    [t.Permissions.USE_EXTERNAL_EMOJIS.toString()]: {
+      title: e.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS,
+      description: e.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS_DESCRIPTION,
+      flag: t.Permissions.USE_EXTERNAL_EMOJIS
     },
-    [e.Permissions.USE_EXTERNAL_STICKERS.toString()]: {
-      title: E.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS,
-      description: E.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS_DESCRIPTION,
-      flag: e.Permissions.USE_EXTERNAL_STICKERS
+    [t.Permissions.USE_EXTERNAL_STICKERS.toString()]: {
+      title: e.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS,
+      description: e.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS_DESCRIPTION,
+      flag: t.Permissions.USE_EXTERNAL_STICKERS
     },
-    [e.Permissions.MENTION_EVERYONE.toString()]: {
-      title: E.MENTION_EVERYONE,
-      description: E.ROLE_PERMISSIONS_MENTION_EVERYONE_DESCRIPTION,
-      flag: e.Permissions.MENTION_EVERYONE
+    [t.Permissions.MENTION_EVERYONE.toString()]: {
+      title: e.MENTION_EVERYONE,
+      description: e.ROLE_PERMISSIONS_MENTION_EVERYONE_DESCRIPTION,
+      flag: t.Permissions.MENTION_EVERYONE
     },
-    [e.Permissions.MANAGE_MESSAGES.toString()]: {
-      title: E.MANAGE_MESSAGES,
-      description: E.ROLE_PERMISSIONS_MANAGE_MESSAGES_DESCRIPTION,
-      flag: e.Permissions.MANAGE_MESSAGES
+    [t.Permissions.MANAGE_MESSAGES.toString()]: {
+      title: e.MANAGE_MESSAGES,
+      description: e.ROLE_PERMISSIONS_MANAGE_MESSAGES_DESCRIPTION,
+      flag: t.Permissions.MANAGE_MESSAGES
     },
-    [e.Permissions.READ_MESSAGE_HISTORY.toString()]: {
-      title: E.READ_MESSAGE_HISTORY,
-      description: E.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION,
-      flag: e.Permissions.READ_MESSAGE_HISTORY
+    [t.Permissions.READ_MESSAGE_HISTORY.toString()]: {
+      title: e.READ_MESSAGE_HISTORY,
+      description: e.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION,
+      flag: t.Permissions.READ_MESSAGE_HISTORY
     },
-    [e.Permissions.SEND_TTS_MESSAGES.toString()]: {
-      title: E.ROLE_PERMISSIONS_SEND_TTS_MESSAGES,
-      description: E.ROLE_PERMISSIONS_SEND_TTS_MESSAGES_DESCRIPTION,
-      flag: e.Permissions.SEND_TTS_MESSAGES
+    [t.Permissions.SEND_TTS_MESSAGES.toString()]: {
+      title: e.ROLE_PERMISSIONS_SEND_TTS_MESSAGES,
+      description: e.ROLE_PERMISSIONS_SEND_TTS_MESSAGES_DESCRIPTION,
+      flag: t.Permissions.SEND_TTS_MESSAGES
     },
-    [e.Permissions.USE_APPLICATION_COMMANDS.toString()]: {
-      title: E.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS,
-      description: E.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS_GUILD_DESCRIPTION,
-      flag: e.Permissions.USE_APPLICATION_COMMANDS
+    [t.Permissions.USE_APPLICATION_COMMANDS.toString()]: {
+      title: e.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS,
+      description: e.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS_GUILD_DESCRIPTION,
+      flag: t.Permissions.USE_APPLICATION_COMMANDS
     },
-    [e.Permissions.SEND_VOICE_MESSAGES.toString()]: {
-      title: E.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE,
-      description: E.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE_GUILD_DESCRIPTION,
-      flag: e.Permissions.SEND_VOICE_MESSAGES
+    [t.Permissions.SEND_VOICE_MESSAGES.toString()]: {
+      title: e.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE,
+      description: e.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE_GUILD_DESCRIPTION,
+      flag: t.Permissions.SEND_VOICE_MESSAGES
     },
-    [e.Permissions.USE_CLYDE_AI.toString()]: {
-      title: E.ROLE_PERMISSIONS_USE_CLYDE_AI,
-      description: E.ROLE_PERMISSIONS_USE_CLYDE_AI_GUILD_DESCRIPTION,
-      flag: e.Permissions.USE_CLYDE_AI
+    [t.Permissions.USE_CLYDE_AI.toString()]: {
+      title: e.ROLE_PERMISSIONS_USE_CLYDE_AI,
+      description: e.ROLE_PERMISSIONS_USE_CLYDE_AI_GUILD_DESCRIPTION,
+      flag: t.Permissions.USE_CLYDE_AI
     },
-    [e.Permissions.SEND_POLLS.toString()]: {
-      title: E.ROLE_PERMISSIONS_SEND_POLLS,
-      description: E.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_GUILD,
-      flag: e.Permissions.SEND_POLLS
+    [t.Permissions.SEND_POLLS.toString()]: {
+      title: e.ROLE_PERMISSIONS_SEND_POLLS,
+      description: e.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_GUILD,
+      flag: t.Permissions.SEND_POLLS
     },
-    [e.Permissions.CONNECT.toString()]: {
-      title: E.CONNECT,
-      description: E.ROLE_PERMISSIONS_CONNECT_DESCRIPTION,
-      flag: e.Permissions.CONNECT
+    [t.Permissions.CONNECT.toString()]: {
+      title: e.CONNECT,
+      description: e.ROLE_PERMISSIONS_CONNECT_DESCRIPTION,
+      flag: t.Permissions.CONNECT
     },
-    [e.Permissions.SPEAK.toString()]: {
-      title: E.SPEAK,
-      description: E.ROLE_PERMISSIONS_SPEAK_DESCRIPTION,
-      flag: e.Permissions.SPEAK
+    [t.Permissions.SPEAK.toString()]: {
+      title: e.SPEAK,
+      description: e.ROLE_PERMISSIONS_SPEAK_DESCRIPTION,
+      flag: t.Permissions.SPEAK
     },
-    [e.Permissions.STREAM.toString()]: {
-      title: E.VIDEO,
-      description: E.ROLE_PERMISSIONS_STREAM_DESCRIPTION,
-      flag: e.Permissions.STREAM
+    [t.Permissions.STREAM.toString()]: {
+      title: e.VIDEO,
+      description: e.ROLE_PERMISSIONS_STREAM_DESCRIPTION,
+      flag: t.Permissions.STREAM
     },
-    [e.Permissions.USE_EMBEDDED_ACTIVITIES.toString()]: {
-      title: E.USE_EMBEDDED_ACTIVITIES,
-      description: E.ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION,
-      flag: e.Permissions.USE_EMBEDDED_ACTIVITIES
+    [t.Permissions.USE_EMBEDDED_ACTIVITIES.toString()]: {
+      title: e.USE_EMBEDDED_ACTIVITIES,
+      description: e.ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION,
+      flag: t.Permissions.USE_EMBEDDED_ACTIVITIES
     },
-    [e.Permissions.USE_SOUNDBOARD.toString()]: {
-      title: E.USE_SOUNDBOARD,
-      description: (null == s ? void 0 : s.SOUNDBOARD_DESCRIPTION) || E.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION,
-      flag: e.Permissions.USE_SOUNDBOARD
+    [t.Permissions.USE_SOUNDBOARD.toString()]: {
+      title: e.USE_SOUNDBOARD,
+      description: (null == s ? void 0 : s.SOUNDBOARD_DESCRIPTION) || e.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION,
+      flag: t.Permissions.USE_SOUNDBOARD
     },
-    [e.Permissions.USE_EXTERNAL_SOUNDS.toString()]: {
-      title: E.USE_EXTERNAL_SOUNDS,
-      description: E.ROLE_PERMISSIONS_USE_EXTERNAL_SOUNDS_DESCRIPTION,
-      flag: e.Permissions.USE_EXTERNAL_SOUNDS
+    [t.Permissions.USE_EXTERNAL_SOUNDS.toString()]: {
+      title: e.USE_EXTERNAL_SOUNDS,
+      description: e.ROLE_PERMISSIONS_USE_EXTERNAL_SOUNDS_DESCRIPTION,
+      flag: t.Permissions.USE_EXTERNAL_SOUNDS
     },
-    [e.Permissions.USE_VAD.toString()]: {
-      title: E.USE_VAD,
-      description: E.ROLE_PERMISSIONS_USE_VAD_DESCRIPTION,
-      flag: e.Permissions.USE_VAD
+    [t.Permissions.USE_VAD.toString()]: {
+      title: e.USE_VAD,
+      description: e.ROLE_PERMISSIONS_USE_VAD_DESCRIPTION,
+      flag: t.Permissions.USE_VAD
     },
-    [e.Permissions.PRIORITY_SPEAKER.toString()]: {
-      title: E.PRIORITY_SPEAKER,
-      description: (null == s ? void 0 : s.PRIORITY_SPEAKER_DESCRIPTION) || E.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION,
-      flag: e.Permissions.PRIORITY_SPEAKER
+    [t.Permissions.PRIORITY_SPEAKER.toString()]: {
+      title: e.PRIORITY_SPEAKER,
+      description: (null == s ? void 0 : s.PRIORITY_SPEAKER_DESCRIPTION) || e.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION,
+      flag: t.Permissions.PRIORITY_SPEAKER
     },
-    [e.Permissions.MUTE_MEMBERS.toString()]: {
-      title: E.MUTE_MEMBERS,
-      description: E.ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION,
-      flag: e.Permissions.MUTE_MEMBERS
+    [t.Permissions.MUTE_MEMBERS.toString()]: {
+      title: e.MUTE_MEMBERS,
+      description: e.ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION,
+      flag: t.Permissions.MUTE_MEMBERS
     },
-    [e.Permissions.DEAFEN_MEMBERS.toString()]: {
-      title: E.DEAFEN_MEMBERS,
-      description: E.ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION,
-      flag: e.Permissions.DEAFEN_MEMBERS
+    [t.Permissions.DEAFEN_MEMBERS.toString()]: {
+      title: e.DEAFEN_MEMBERS,
+      description: e.ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION,
+      flag: t.Permissions.DEAFEN_MEMBERS
     },
-    [e.Permissions.MOVE_MEMBERS.toString()]: {
-      title: E.MOVE_MEMBERS,
-      description: E.ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION,
-      flag: e.Permissions.MOVE_MEMBERS
+    [t.Permissions.MOVE_MEMBERS.toString()]: {
+      title: e.MOVE_MEMBERS,
+      description: e.ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION,
+      flag: t.Permissions.MOVE_MEMBERS
     },
-    [e.Permissions.REQUEST_TO_SPEAK.toString()]: {
-      title: E.REQUEST_TO_SPEAK,
-      description: E.ROLE_PERMISSIONS_REQUEST_TO_SPEAK_DESCRIPTION,
-      flag: e.Permissions.REQUEST_TO_SPEAK,
+    [t.Permissions.REQUEST_TO_SPEAK.toString()]: {
+      title: e.REQUEST_TO_SPEAK,
+      description: e.ROLE_PERMISSIONS_REQUEST_TO_SPEAK_DESCRIPTION,
+      flag: t.Permissions.REQUEST_TO_SPEAK,
       isExperimental: !0
     },
-    [e.Permissions.ADMINISTRATOR.toString()]: {
-      title: E.ADMINISTRATOR,
-      description: "string" == typeof E.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION ? E.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION : E.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION.format(),
-      flag: e.Permissions.ADMINISTRATOR
+    [t.Permissions.ADMINISTRATOR.toString()]: {
+      title: e.ADMINISTRATOR,
+      description: "string" == typeof e.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION ? e.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION : e.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION.format(),
+      flag: t.Permissions.ADMINISTRATOR
     },
-    [e.Permissions.MANAGE_EVENTS.toString()]: {
-      title: E.MANAGE_EVENTS,
-      description: E.ROLE_PERMISSIONS_MANAGE_EVENTS_DESCRIPTION,
-      flag: e.Permissions.MANAGE_EVENTS
+    [t.Permissions.MANAGE_EVENTS.toString()]: {
+      title: e.MANAGE_EVENTS,
+      description: e.ROLE_PERMISSIONS_MANAGE_EVENTS_DESCRIPTION,
+      flag: t.Permissions.MANAGE_EVENTS
     },
-    [e.Permissions.CREATE_EVENTS.toString()]: {
-      title: E.CREATE_EVENTS,
-      description: E.ROLE_PERMISSIONS_CREATE_EVENTS_DESCRIPTION,
-      flag: e.Permissions.CREATE_EVENTS
+    [t.Permissions.CREATE_EVENTS.toString()]: {
+      title: e.CREATE_EVENTS,
+      description: e.ROLE_PERMISSIONS_CREATE_EVENTS_DESCRIPTION,
+      flag: t.Permissions.CREATE_EVENTS
     },
-    [e.Permissions.MANAGE_THREADS.toString()]: {
-      title: s.showForumPermissions ? E.MANAGE_THREADS_AND_FORUM_POSTS : E.MANAGE_THREADS,
-      description: s.showForumPermissions ? E.ROLE_PERMISSIONS_MANAGE_THREADS_AND_FORUMS_DESCRIPTION : E.ROLE_PERMISSIONS_MANAGE_THREADS_DESCRIPTION,
-      flag: e.Permissions.MANAGE_THREADS
+    [t.Permissions.MANAGE_THREADS.toString()]: {
+      title: s.showForumPermissions ? e.MANAGE_THREADS_AND_FORUM_POSTS : e.MANAGE_THREADS,
+      description: s.showForumPermissions ? e.ROLE_PERMISSIONS_MANAGE_THREADS_AND_FORUMS_DESCRIPTION : e.ROLE_PERMISSIONS_MANAGE_THREADS_DESCRIPTION,
+      flag: t.Permissions.MANAGE_THREADS
     },
-    [e.Permissions.CREATE_PUBLIC_THREADS.toString()]: {
-      title: E.CREATE_PUBLIC_THREADS,
-      description: E.ROLE_PERMISSIONS_CREATE_PUBLIC_THREADS_DESCRIPTION,
-      flag: e.Permissions.CREATE_PUBLIC_THREADS
+    [t.Permissions.CREATE_PUBLIC_THREADS.toString()]: {
+      title: e.CREATE_PUBLIC_THREADS,
+      description: e.ROLE_PERMISSIONS_CREATE_PUBLIC_THREADS_DESCRIPTION,
+      flag: t.Permissions.CREATE_PUBLIC_THREADS
     },
-    [e.Permissions.CREATE_PRIVATE_THREADS.toString()]: {
-      title: E.CREATE_PRIVATE_THREADS,
-      description: E.ROLE_PERMISSIONS_CREATE_PRIVATE_THREADS_DESCRIPTION,
-      flag: e.Permissions.CREATE_PRIVATE_THREADS
+    [t.Permissions.CREATE_PRIVATE_THREADS.toString()]: {
+      title: e.CREATE_PRIVATE_THREADS,
+      description: e.ROLE_PERMISSIONS_CREATE_PRIVATE_THREADS_DESCRIPTION,
+      flag: t.Permissions.CREATE_PRIVATE_THREADS
     },
-    [e.Permissions.SEND_MESSAGES_IN_THREADS.toString()]: {
-      title: s.showForumPermissions ? E.SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS : E.SEND_MESSAGES_IN_THREADS,
-      description: s.showForumPermissions ? E.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS_DESCRIPTION : E.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_DESCRIPTION,
-      flag: e.Permissions.SEND_MESSAGES_IN_THREADS
+    [t.Permissions.SEND_MESSAGES_IN_THREADS.toString()]: {
+      title: s.showForumPermissions ? e.SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS : e.SEND_MESSAGES_IN_THREADS,
+      description: s.showForumPermissions ? e.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS_DESCRIPTION : e.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_DESCRIPTION,
+      flag: t.Permissions.SEND_MESSAGES_IN_THREADS
     },
-    [e.Permissions.USE_CLYDE_AI.toString()]: {
-      title: E.ROLE_PERMISSIONS_USE_CLYDE_AI,
-      description: E.ROLE_PERMISSIONS_USE_CLYDE_AI_GUILD_DESCRIPTION,
-      flag: e.Permissions.USE_CLYDE_AI
+    [t.Permissions.USE_CLYDE_AI.toString()]: {
+      title: e.ROLE_PERMISSIONS_USE_CLYDE_AI,
+      description: e.ROLE_PERMISSIONS_USE_CLYDE_AI_GUILD_DESCRIPTION,
+      flag: t.Permissions.USE_CLYDE_AI
     },
-    [e.Permissions.SET_VOICE_CHANNEL_STATUS.toString()]: {
-      title: E.VOICE_CHANNEL_STATUS_PERMISSION_TITLE,
-      description: E.VOICE_CHANNEL_STATUS_PERMISSION_DESCRIPTION,
-      flag: e.Permissions.SET_VOICE_CHANNEL_STATUS
+    [t.Permissions.SET_VOICE_CHANNEL_STATUS.toString()]: {
+      title: e.VOICE_CHANNEL_STATUS_PERMISSION_TITLE,
+      description: e.VOICE_CHANNEL_STATUS_PERMISSION_DESCRIPTION,
+      flag: t.Permissions.SET_VOICE_CHANNEL_STATUS
     }
   }
 }
 
-function I(E, s) {
-  var S, I, t, r, N, o, R, O, A, P;
-  let T, M = n(E, s);
-  let C = [function(E, s, S) {
-    let n = [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES, e.Permissions.CREATE_GUILD_EXPRESSIONS, e.Permissions.MANAGE_GUILD_EXPRESSIONS, e.Permissions.VIEW_AUDIT_LOG, e.Permissions.VIEW_GUILD_ANALYTICS];
-    return S.showCreatorMonetizationAnalyticsPermission && n.push(e.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS), n.push(e.Permissions.MANAGE_WEBHOOKS), n.push(e.Permissions.MANAGE_GUILD), i({
+function S(e, s) {
+  var i, S, o, _, l, a, I, u, N, A;
+  let R, O = r(e, s);
+  let T = [function(e, s, i) {
+    let r = [t.Permissions.VIEW_CHANNEL, t.Permissions.MANAGE_CHANNELS, t.Permissions.MANAGE_ROLES, t.Permissions.CREATE_GUILD_EXPRESSIONS, t.Permissions.MANAGE_GUILD_EXPRESSIONS, t.Permissions.VIEW_AUDIT_LOG, t.Permissions.VIEW_GUILD_ANALYTICS];
+    return i.showCreatorMonetizationAnalyticsPermission && r.push(t.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS), r.push(t.Permissions.MANAGE_WEBHOOKS), r.push(t.Permissions.MANAGE_GUILD), n({
       title: s.ROLE_PERMISSIONS_SECTION_GENERAL_GUILD,
-      permissions: _(n, E)
+      permissions: E(r, e)
     })
-  }(M, E, s), function(E, s) {
-    let S = [e.Permissions.CREATE_INSTANT_INVITE, e.Permissions.CHANGE_NICKNAME, e.Permissions.MANAGE_NICKNAMES, e.Permissions.KICK_MEMBERS, e.Permissions.BAN_MEMBERS, e.Permissions.MODERATE_MEMBERS];
-    return i({
+  }(O, e, s), function(e, s) {
+    let i = [t.Permissions.CREATE_INSTANT_INVITE, t.Permissions.CHANGE_NICKNAME, t.Permissions.MANAGE_NICKNAMES, t.Permissions.KICK_MEMBERS, t.Permissions.BAN_MEMBERS, t.Permissions.MODERATE_MEMBERS];
+    return n({
       title: s.ROLE_PERMISSIONS_SECTION_MEMBERSHIP,
-      permissions: _(S, E)
+      permissions: E(i, e)
     })
-  }(M, E), (S = M, I = E, t = s, T = [e.Permissions.SEND_MESSAGES, e.Permissions.SEND_MESSAGES_IN_THREADS, e.Permissions.CREATE_PUBLIC_THREADS, e.Permissions.CREATE_PRIVATE_THREADS, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.MANAGE_THREADS, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.USE_CLYDE_AI, e.Permissions.SEND_POLLS], !t.showClydeAIPermissions && (T = T.filter(E => E !== e.Permissions.USE_CLYDE_AI)), i({
-    title: I.ROLE_PERMISSIONS_SECTION_TEXT,
-    permissions: _(T, S)
-  })), function(E, s, S) {
-    let n = [e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS, e.Permissions.SET_VOICE_CHANNEL_STATUS];
-    return i({
+  }(O, e), (i = O, S = e, o = s, R = [t.Permissions.SEND_MESSAGES, t.Permissions.SEND_MESSAGES_IN_THREADS, t.Permissions.CREATE_PUBLIC_THREADS, t.Permissions.CREATE_PRIVATE_THREADS, t.Permissions.EMBED_LINKS, t.Permissions.ATTACH_FILES, t.Permissions.ADD_REACTIONS, t.Permissions.USE_EXTERNAL_EMOJIS, t.Permissions.USE_EXTERNAL_STICKERS, t.Permissions.MENTION_EVERYONE, t.Permissions.MANAGE_MESSAGES, t.Permissions.MANAGE_THREADS, t.Permissions.READ_MESSAGE_HISTORY, t.Permissions.SEND_TTS_MESSAGES, t.Permissions.USE_APPLICATION_COMMANDS, t.Permissions.SEND_VOICE_MESSAGES, t.Permissions.USE_CLYDE_AI, t.Permissions.SEND_POLLS], !o.showClydeAIPermissions && (R = R.filter(e => e !== t.Permissions.USE_CLYDE_AI)), n({
+    title: S.ROLE_PERMISSIONS_SECTION_TEXT,
+    permissions: E(R, i)
+  })), function(e, s, i) {
+    let r = [t.Permissions.CONNECT, t.Permissions.SPEAK, t.Permissions.STREAM, t.Permissions.USE_EMBEDDED_ACTIVITIES, t.Permissions.USE_SOUNDBOARD, t.Permissions.USE_EXTERNAL_SOUNDS, t.Permissions.USE_VAD, t.Permissions.PRIORITY_SPEAKER, t.Permissions.MUTE_MEMBERS, t.Permissions.DEAFEN_MEMBERS, t.Permissions.MOVE_MEMBERS, t.Permissions.SET_VOICE_CHANNEL_STATUS];
+    return n({
       title: s.ROLE_PERMISSIONS_SECTION_VOICE,
-      permissions: _(n, E)
+      permissions: E(r, e)
     })
-  }(M, E, 0)];
+  }(O, e, 0)];
   if (s.showStageChannelPermissions) {
     ;
-    C.push((r = M, N = E, o = s, i({
-      title: N.ROLE_PERMISSIONS_SECTION_STAGE,
-      permissions: _([e.Permissions.REQUEST_TO_SPEAK], r)
-    }, o.showExperimental)))
+    T.push((_ = O, l = e, a = s, n({
+      title: l.ROLE_PERMISSIONS_SECTION_STAGE,
+      permissions: E([t.Permissions.REQUEST_TO_SPEAK], _)
+    }, a.showExperimental)))
   }
-  return C.push((R = M, O = E, A = s, i({
-    title: O.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS,
-    permissions: _([e.Permissions.CREATE_EVENTS, e.Permissions.MANAGE_EVENTS], R)
-  }, A.showExperimental))), C.push((P = M, i({
-    title: E.ROLE_PERMISSIONS_SECTION_ADVANCED,
-    permissions: _([e.Permissions.ADMINISTRATOR], P)
-  }))), C
+  return T.push((I = O, u = e, N = s, n({
+    title: u.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS,
+    permissions: E([t.Permissions.CREATE_EVENTS, t.Permissions.MANAGE_EVENTS], I)
+  }, N.showExperimental))), T.push((A = O, n({
+    title: e.ROLE_PERMISSIONS_SECTION_ADVANCED,
+    permissions: E([t.Permissions.ADMINISTRATOR], A)
+  }))), T
 }
 
-function t(E, s) {
-  let S = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+function o(e, s) {
+  let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
     showManageWebhooks: !0
   };
   return {
     title: s,
-    permissions: _((null == S ? void 0 : S.showManageWebhooks) ? [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES, e.Permissions.MANAGE_WEBHOOKS] : [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES], E)
+    permissions: E((null == i ? void 0 : i.showManageWebhooks) ? [t.Permissions.VIEW_CHANNEL, t.Permissions.MANAGE_CHANNELS, t.Permissions.MANAGE_ROLES, t.Permissions.MANAGE_WEBHOOKS] : [t.Permissions.VIEW_CHANNEL, t.Permissions.MANAGE_CHANNELS, t.Permissions.MANAGE_ROLES], e)
   }
 }
 
-function r(E, s) {
+function _(e, s) {
   return {
     title: s,
-    permissions: _([e.Permissions.CREATE_INSTANT_INVITE], E)
+    permissions: E([t.Permissions.CREATE_INSTANT_INVITE], e)
   }
 }
 
-function N(E, s, S) {
-  let i = [e.Permissions.SEND_MESSAGES, e.Permissions.SEND_MESSAGES_IN_THREADS, e.Permissions.CREATE_PUBLIC_THREADS, e.Permissions.CREATE_PRIVATE_THREADS, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.MANAGE_THREADS, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.USE_CLYDE_AI, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.SEND_POLLS];
-  return (!S.showPrivateThreads || !S.showCreateThreads) && (i = i.filter(E => E !== e.Permissions.CREATE_PRIVATE_THREADS)), !S.showCreateThreads && (i = i.filter(E => E !== e.Permissions.CREATE_PUBLIC_THREADS)), !S.showClydeAIPermissions && (i = i.filter(E => E !== e.Permissions.USE_CLYDE_AI)), {
+function l(e, s, i) {
+  let n = [t.Permissions.SEND_MESSAGES, t.Permissions.SEND_MESSAGES_IN_THREADS, t.Permissions.CREATE_PUBLIC_THREADS, t.Permissions.CREATE_PRIVATE_THREADS, t.Permissions.EMBED_LINKS, t.Permissions.ATTACH_FILES, t.Permissions.ADD_REACTIONS, t.Permissions.USE_EXTERNAL_EMOJIS, t.Permissions.USE_EXTERNAL_STICKERS, t.Permissions.MENTION_EVERYONE, t.Permissions.MANAGE_MESSAGES, t.Permissions.MANAGE_THREADS, t.Permissions.READ_MESSAGE_HISTORY, t.Permissions.SEND_TTS_MESSAGES, t.Permissions.USE_APPLICATION_COMMANDS, t.Permissions.SEND_VOICE_MESSAGES, t.Permissions.USE_CLYDE_AI, t.Permissions.USE_EMBEDDED_ACTIVITIES, t.Permissions.SEND_POLLS];
+  return (!i.showPrivateThreads || !i.showCreateThreads) && (n = n.filter(e => e !== t.Permissions.CREATE_PRIVATE_THREADS)), !i.showCreateThreads && (n = n.filter(e => e !== t.Permissions.CREATE_PUBLIC_THREADS)), !i.showClydeAIPermissions && (n = n.filter(e => e !== t.Permissions.USE_CLYDE_AI)), {
     title: s,
-    description: S.sectionDescription,
-    permissions: _(i, E)
+    description: i.sectionDescription,
+    permissions: E(n, e)
   }
 }
 
-function o(E, s) {
+function a(e, s) {
   return {
     title: s,
-    permissions: _([e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS, e.Permissions.SET_VOICE_CHANNEL_STATUS], E)
+    permissions: E([t.Permissions.CONNECT, t.Permissions.SPEAK, t.Permissions.STREAM, t.Permissions.USE_EMBEDDED_ACTIVITIES, t.Permissions.USE_SOUNDBOARD, t.Permissions.USE_EXTERNAL_SOUNDS, t.Permissions.USE_VAD, t.Permissions.PRIORITY_SPEAKER, t.Permissions.MUTE_MEMBERS, t.Permissions.DEAFEN_MEMBERS, t.Permissions.MOVE_MEMBERS, t.Permissions.SET_VOICE_CHANNEL_STATUS], e)
   }
 }
 
-function R(E, s, S) {
-  let i = [e.Permissions.SEND_MESSAGES, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.SEND_POLLS];
+function I(e, s, i) {
+  let n = [t.Permissions.SEND_MESSAGES, t.Permissions.EMBED_LINKS, t.Permissions.ATTACH_FILES, t.Permissions.ADD_REACTIONS, t.Permissions.USE_EXTERNAL_EMOJIS, t.Permissions.USE_EXTERNAL_STICKERS, t.Permissions.MENTION_EVERYONE, t.Permissions.MANAGE_MESSAGES, t.Permissions.READ_MESSAGE_HISTORY, t.Permissions.SEND_TTS_MESSAGES, t.Permissions.USE_APPLICATION_COMMANDS, t.Permissions.SEND_VOICE_MESSAGES, t.Permissions.SEND_POLLS];
   return {
     title: s,
-    description: S.sectionDescription,
-    permissions: _(i, E)
+    description: i.sectionDescription,
+    permissions: E(n, e)
   }
 }
 
-function O(E, s, S) {
+function u(e, s, i) {
   return {
     title: s,
-    permissions: _(S ? [e.Permissions.CONNECT, e.Permissions.STREAM, e.Permissions.MUTE_MEMBERS, e.Permissions.MOVE_MEMBERS] : [e.Permissions.CONNECT, e.Permissions.MUTE_MEMBERS, e.Permissions.MOVE_MEMBERS], E)
+    permissions: E(i ? [t.Permissions.CONNECT, t.Permissions.STREAM, t.Permissions.MUTE_MEMBERS, t.Permissions.MOVE_MEMBERS] : [t.Permissions.CONNECT, t.Permissions.MUTE_MEMBERS, t.Permissions.MOVE_MEMBERS], e)
   }
 }
 
-function A(E, s) {
+function N(e, s) {
   return {
     title: s,
-    permissions: _([e.Permissions.REQUEST_TO_SPEAK, e.Permissions.MENTION_EVERYONE], E)
+    permissions: E([t.Permissions.REQUEST_TO_SPEAK, t.Permissions.MENTION_EVERYONE], e)
   }
 }
 
-function P(E, s) {
+function A(e, s) {
   return {
     title: s,
-    permissions: _([e.Permissions.CREATE_EVENTS, e.Permissions.MANAGE_EVENTS], E)
+    permissions: E([t.Permissions.CREATE_EVENTS, t.Permissions.MANAGE_EVENTS], e)
   }
 }
 
-function T(E) {
-  return null == E ? E : "string" == typeof E ? E.trim() : "function" == typeof E.format ? E.format() : E
+function R(e) {
+  return null == e ? e : "string" == typeof e ? e.trim() : "function" == typeof e.format ? e.format() : e
 }

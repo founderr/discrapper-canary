@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("865427"),
   f = s("358085"),
   m = s("210887"),
-  g = s("981631"),
-  I = s("689938"),
+  I = s("981631"),
+  g = s("689938"),
   N = s("307723");
 let h = [{
   label: "Latin alphabet",
@@ -55,14 +55,14 @@ function C(e, t) {
   }, [e, s]), [s, a]
 }
 
-function p() {
+function O() {
   let [e, t] = n.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
     platformZoom: s,
     theme: l
   } = (0, r.useStateFromStoresObject)([m.default, E.default], () => ({
     theme: m.default.theme,
     platformZoom: E.default.zoom
-  })), [o, p] = n.useState("upright"), A = ["normal", "medium", "semibold", "bold", "extrabold"], O = new Map([
+  })), [o, O] = n.useState("upright"), A = ["normal", "medium", "semibold", "bold", "extrabold"], p = new Map([
     ["normal", 400],
     ["medium", 500],
     ["semibold", 600],
@@ -74,22 +74,22 @@ function p() {
       t(Math.round(window.outerWidth / window.innerWidth * 100))
     })
   }, []);
-  let x = f.isPlatformEmbedded ? s : e,
-    R = (0, r.useStateFromStores)([T.default], () => {
+  let R = f.isPlatformEmbedded ? s : e,
+    x = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
       return (0, _.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    [M, v] = C("playground-overrideText", null),
-    [D, L] = C("playground-defaultText", h[0].value),
-    P = n.useCallback(e => {
+    [M, L] = C("playground-overrideText", null),
+    [D, P] = C("playground-defaultText", h[0].value),
+    v = n.useCallback(e => {
       let t = h.find(t => {
         let {
           value: s
         } = t;
         return s === e
       });
-      "" === e || null == e ? (L(h[0].value), v(null)) : null != t ? L(t.value) : (L("custom"), v(e))
-    }, [v, L]);
+      "" === e || null == e ? (P(h[0].value), L(null)) : null != t ? P(t.value) : (P("custom"), L(e))
+    }, [L, P]);
   return (0, a.jsx)("div", {
     className: N.fullscreen,
     style: {
@@ -107,8 +107,8 @@ function p() {
             style: {
               display: "inline-block"
             },
-            children: ["Zoom: ", x, "%"]
-          }), null != R ? (0, a.jsxs)(d.Text, {
+            children: ["Zoom: ", R, "%"]
+          }), null != x ? (0, a.jsxs)(d.Text, {
             tag: "div",
             variant: "heading-lg/bold",
             style: {
@@ -116,13 +116,13 @@ function p() {
               marginLeft: "1em"
             },
             color: "header-secondary",
-            children: ["(", R.id, ")"]
+            children: ["(", x.id, ")"]
           }) : null]
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.SingleSelect, {
             className: N.select,
             options: h,
-            onChange: e => P(e),
+            onChange: e => v(e),
             value: D
           })
         }), (0, a.jsx)(d.FormItem, {
@@ -131,7 +131,7 @@ function p() {
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
               value: null != M ? M : "",
-              onChange: P
+              onChange: v
             })
           })
         }), (0, a.jsx)(d.FormItem, {
@@ -140,11 +140,11 @@ function p() {
             className: N.theme,
             orientation: "horizontal",
             options: [{
-              name: I.default.Messages.THEME_DARK,
-              value: g.ThemeTypes.DARK
+              name: g.default.Messages.THEME_DARK,
+              value: I.ThemeTypes.DARK
             }, {
-              name: I.default.Messages.THEME_LIGHT,
-              value: g.ThemeTypes.LIGHT
+              name: g.default.Messages.THEME_LIGHT,
+              value: I.ThemeTypes.LIGHT
             }],
             onChange: e => {
               (0, c.saveClientTheme)({
@@ -169,7 +169,7 @@ function p() {
               value: "mono"
             }],
             onChange: e => {
-              p(e.value)
+              O(e.value)
             },
             value: o
           })
@@ -191,10 +191,10 @@ function p() {
             children: [(0, a.jsxs)(d.Heading, {
               variant: "eyebrow",
               children: [e, "px"]
-            }), 100 !== x ? (0, a.jsxs)(d.Heading, {
+            }), 100 !== R ? (0, a.jsxs)(d.Heading, {
               variant: "eyebrow",
               color: "text-muted",
-              children: ["(", e * x / 100, ")"]
+              children: ["(", e * R / 100, ")"]
             }) : null]
           }, e), A.map(t => {
             var s;
@@ -208,7 +208,7 @@ function p() {
                 }),
                 style: {
                   fontSize: e,
-                  fontWeight: O.get(t)
+                  fontWeight: p.get(t)
                 },
                 children: [(0, a.jsx)("p", {
                   children: n

@@ -15,22 +15,22 @@ var a = s("735250"),
   _ = s("960359"),
   f = s("730417"),
   m = s("524347"),
-  g = s("454585"),
-  I = s("178100"),
+  I = s("454585"),
+  g = s("178100"),
   N = s("518638"),
   h = s("725727"),
   C = s("454982"),
-  p = s("580130"),
+  O = s("580130"),
   A = s("669079"),
-  O = s("695346"),
-  x = s("317941"),
-  R = s("622474"),
+  p = s("695346"),
+  R = s("317941"),
+  x = s("622474"),
   M = s("981631"),
-  v = s("474936"),
+  L = s("474936"),
   D = s("689938"),
-  L = s("193225");
+  P = s("193225");
 
-function P(e) {
+function v(e) {
   let t, {
       outboundPromotion: s,
       code: l,
@@ -42,7 +42,7 @@ function P(e) {
     _ = (0, T.default)(),
     f = (0, N.getPromotionImageURL)(s.id, _),
     m = null != l,
-    h = (0, I.default)(s, m);
+    h = (0, g.default)(s, m);
   m && o ? t = D.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
     endDate: h,
     onClickDetails: E
@@ -56,49 +56,49 @@ function P(e) {
     endDate: h,
     onClickDetails: E
   }));
-  let p = m ? D.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : D.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
+  let O = m ? D.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : D.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
     A = n.useCallback(() => S(!1), []),
     {
-      outboundTitle: O,
-      outboundTermsAndConditions: x
+      outboundTitle: p,
+      outboundTermsAndConditions: R
     } = s;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: i()(L.skuCard, L.promotionCard),
+      className: i()(P.skuCard, P.promotionCard),
       children: [(0, a.jsxs)("div", {
-        className: L.mainPromotionCardContainer,
+        className: P.mainPromotionCardContainer,
         children: [(0, a.jsxs)("div", {
-          className: L.promotionCardLeftContainer,
+          className: P.promotionCardLeftContainer,
           children: [(0, a.jsx)("div", {
-            className: L.promotionIcon,
+            className: P.promotionIcon,
             children: (0, a.jsx)("img", {
               alt: "",
               src: f,
-              className: L.promotionIconImage
+              className: P.promotionIconImage
             })
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(u.Heading, {
               variant: "heading-md/semibold",
-              children: O
+              children: p
             }), (0, a.jsx)(u.Text, {
               variant: "text-sm/normal",
               color: "text-normal",
-              className: L.__invalid_promotionText,
+              className: P.__invalid_promotionText,
               children: t
             })]
           })]
         }), (0, a.jsx)(u.Button, {
-          className: L.promotionCardButton,
+          className: P.promotionCardButton,
           color: u.Button.Colors.BRAND,
           size: u.Button.Sizes.SMALL,
           onClick: () => S(!0),
-          children: p
+          children: O
         })]
       }), o && (0, a.jsx)(u.Text, {
-        className: L.promotionLegalese,
+        className: P.promotionLegalese,
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: g.default.parse(x, !1, {
+        children: I.default.parse(R, !1, {
           allowLinks: !0
         })
       })]
@@ -115,7 +115,7 @@ function P(e) {
   })
 }
 t.default = function() {
-  let e = (0, d.useStateFromStoresArray)([p.default], () => p.default.getGiftable()),
+  let e = (0, d.useStateFromStoresArray)([O.default], () => O.default.getGiftable()),
     [t, s] = o().partition(e, e => {
       let {
         giftCodeBatchId: t
@@ -130,38 +130,38 @@ t.default = function() {
       (0, S.fetchGiftableEntitlements)().then(() => r(!0))
     })
   }, []);
-  let g = (0, f.useAnyDropsEnabled)();
+  let I = (0, f.useAnyDropsEnabled)();
   n.useEffect(() => {
-    g && c.default.wait(async () => {
+    I && c.default.wait(async () => {
       await (0, _.fetchDropsUserStatus)()
     })
-  }, [g]);
-  let I = O.DropsOptedOut.useSetting(),
-    N = null != T || !g,
+  }, [I]);
+  let g = p.DropsOptedOut.useSetting(),
+    N = null != T || !I,
     {
       promotionsLoaded: C,
       activeOutboundPromotions: b,
       claimedEndedOutboundPromotions: j,
       claimedOutboundPromotionCodeMap: U,
-      addClaimedOutboundPromotionCode: y
+      addClaimedOutboundPromotionCode: G
     } = (0, h.useOutboundPromotions)();
 
-  function G() {
+  function F() {
     E.default.open(M.UserSettingsSections.PREMIUM)
   }
   return i && C && N ? (0, a.jsxs)(a.Fragment, {
-    children: [g ? (0, a.jsx)(R.default, {
-      dropsOptedOut: I,
+    children: [I ? (0, a.jsx)(x.default, {
+      dropsOptedOut: g,
       dropsStatuses: T
     }) : null, function() {
       var e;
-      let t = s.find(e => e.giftCodeBatchId === v.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID && !e.consumed),
-        n = null !== (e = s.filter(e => e.giftCodeBatchId === v.STICKERS_GIFT_CODE_BATCH_ID && !e.consumed)) && void 0 !== e ? e : [],
+      let t = s.find(e => e.giftCodeBatchId === L.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID && !e.consumed),
+        n = null !== (e = s.filter(e => e.giftCodeBatchId === L.STICKERS_GIFT_CODE_BATCH_ID && !e.consumed)) && void 0 !== e ? e : [],
         [l, i] = o().partition(n, e => {
           let {
             subscriptionPlanId: t
           } = e;
-          return t === v.SubscriptionPlans.PREMIUM_YEAR_TIER_2
+          return t === L.SubscriptionPlans.PREMIUM_YEAR_TIER_2
         }),
         r = b.length + j.length > 0;
       return (0, a.jsx)(u.FormSection, {
@@ -171,39 +171,39 @@ t.default = function() {
             children: r ? D.default.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
           }),
           children: [r ? (0, a.jsx)(u.FormDivider, {
-            className: L.divider
+            className: P.divider
           }) : null, j.map(e => {
             let {
               code: t,
               promotion: s
             } = e;
-            return (0, a.jsx)(P, {
+            return (0, a.jsx)(v, {
               outboundPromotion: s,
               code: t,
-              addClaimedOutboundPromotionCode: y
+              addClaimedOutboundPromotionCode: G
             }, s.id)
-          }), b.map(e => (0, a.jsx)(P, {
+          }), b.map(e => (0, a.jsx)(v, {
             outboundPromotion: e,
             code: U[e.id],
-            addClaimedOutboundPromotionCode: y
-          }, e.id)), null != t ? (0, a.jsx)(x.default, {
-            className: L.skuCard,
+            addClaimedOutboundPromotionCode: G
+          }, e.id)), null != t ? (0, a.jsx)(R.default, {
+            className: P.skuCard,
             skuId: t.skuId,
             subscriptionPlanId: t.subscriptionPlanId,
             entitlements: [t],
-            giftCodeBatchId: v.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID
-          }, (0, A.makeComboId)(t.skuId, t.subscriptionPlanId)) : null, l.length > 0 ? (0, a.jsx)(x.default, {
-            className: L.skuCard,
+            giftCodeBatchId: L.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID
+          }, (0, A.makeComboId)(t.skuId, t.subscriptionPlanId)) : null, l.length > 0 ? (0, a.jsx)(R.default, {
+            className: P.skuCard,
             skuId: l[0].skuId,
             subscriptionPlanId: l[0].subscriptionPlanId,
             entitlements: l,
-            giftCodeBatchId: v.STICKERS_GIFT_CODE_BATCH_ID
-          }, (0, A.makeComboId)(l[0].skuId, l[0].subscriptionPlanId)) : null, i.length > 0 ? (0, a.jsx)(x.default, {
-            className: L.skuCard,
+            giftCodeBatchId: L.STICKERS_GIFT_CODE_BATCH_ID
+          }, (0, A.makeComboId)(l[0].skuId, l[0].subscriptionPlanId)) : null, i.length > 0 ? (0, a.jsx)(R.default, {
+            className: P.skuCard,
             skuId: i[0].skuId,
             subscriptionPlanId: i[0].subscriptionPlanId,
             entitlements: i,
-            giftCodeBatchId: v.STICKERS_GIFT_CODE_BATCH_ID
+            giftCodeBatchId: L.STICKERS_GIFT_CODE_BATCH_ID
           }, (0, A.makeComboId)(i[0].skuId, i[0].subscriptionPlanId)) : null]
         })
       })
@@ -214,18 +214,18 @@ t.default = function() {
           children: D.default.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED
         }),
         children: [(0, a.jsx)(u.FormDivider, {
-          className: L.divider
+          className: P.divider
         }), 0 === Object.keys(l).length ? (0, a.jsxs)("div", {
-          className: L.emptyState,
+          className: P.emptyState,
           children: [(0, a.jsx)("div", {
-            className: L.emptyStateImage
+            className: P.emptyStateImage
           }), (0, a.jsx)(u.H, {
-            className: L.emptyStateHeader,
+            className: P.emptyStateHeader,
             children: D.default.Messages.GIFT_INVENTORY_NO_GIFTS
           }), (0, a.jsx)("p", {
-            className: L.emptyStateSubtext,
+            className: P.emptyStateSubtext,
             children: D.default.Messages.GIFT_INVENTORY_NO_GIFTS_SUBTEXT.format({
-              onClick: G
+              onClick: F
             })
           })]
         }) : o().keys(l).map(e => {
@@ -234,8 +234,8 @@ t.default = function() {
             subscriptionPlanId: s,
             giftStyle: n
           } = (0, A.parseComboId)(e);
-          return (0, a.jsx)(x.default, {
-            className: L.skuCard,
+          return (0, a.jsx)(R.default, {
+            className: P.skuCard,
             skuId: t,
             subscriptionPlanId: s,
             entitlements: l[e],
@@ -245,6 +245,6 @@ t.default = function() {
       })
     })]
   }) : (0, a.jsx)(u.Spinner, {
-    className: L.loading
+    className: P.loading
   })
 }

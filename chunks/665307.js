@@ -14,11 +14,11 @@ var a, s = n("735250"),
   c = n("477690"),
   f = n("481060"),
   E = n("570140"),
-  h = n("239091"),
-  _ = n("287259"),
-  C = n("404133"),
-  m = n("785547"),
-  S = n("490983"),
+  C = n("239091"),
+  h = n("287259"),
+  _ = n("404133"),
+  S = n("785547"),
+  m = n("490983"),
   p = n("799777"),
   I = n("285952"),
   g = n("366695"),
@@ -29,11 +29,11 @@ var a, s = n("735250"),
   R = n("931003"),
   O = n("626135"),
   L = n("780570"),
-  M = n("624138"),
-  P = n("645818"),
-  x = n("981631"),
-  y = n("689938"),
-  D = n("638920");
+  P = n("624138"),
+  y = n("645818"),
+  M = n("981631"),
+  D = n("689938"),
+  x = n("638920");
 
 function b(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -43,12 +43,12 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, M.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
+  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   G = Object.freeze({
-    [x.GameTableListKeys.PLATFORM]: "Platform",
-    [x.GameTableListKeys.LAST_PLAYED]: "Last Played",
-    [x.GameTableListKeys.NAME]: "Name"
+    [M.GameTableListKeys.PLATFORM]: "Platform",
+    [M.GameTableListKeys.LAST_PLAYED]: "Last Played",
+    [M.GameTableListKeys.NAME]: "Name"
   }),
   w = e => {
     let {
@@ -60,115 +60,115 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     return (0, s.jsx)(f.Tooltip, {
       text: l,
       children: e => (0, s.jsx)(n, {
-        className: r()(D.settingIcon, {
-          [D.hidden]: !i
+        className: r()(x.settingIcon, {
+          [x.hidden]: !i
         }),
         ...e
       })
     })
   },
   k = [{
-    key: x.GameTableListKeys.NAME,
-    renderHeader: () => y.default.Messages.GAME_LIBRARY_LIST_HEADER_NAME,
+    key: M.GameTableListKeys.NAME,
+    renderHeader: () => D.default.Messages.GAME_LIBRARY_LIST_HEADER_NAME,
     sort: !0,
-    cellClassName: D.nameCell,
-    bodyCellClassName: D.nameBodyCell,
+    cellClassName: x.nameCell,
+    bodyCellClassName: x.nameBodyCell,
     render: e => (0, s.jsxs)(I.default, {
       align: I.default.Align.CENTER,
       children: [(0, s.jsx)(g.default, {
         game: e.application,
         size: g.default.Sizes.SMALL,
-        className: D.gameIcon
+        className: x.gameIcon
       }), (0, s.jsxs)("div", {
-        className: D.nameCellInfo,
+        className: x.nameCellInfo,
         children: [(0, s.jsx)("div", {
-          className: D.nameCellText,
+          className: x.nameCellText,
           children: e.libraryApplication.getBranchedName(e.application)
-        }), e.libraryApplication.hasFlag(x.LibraryApplicationFlags.PREMIUM) ? (0, s.jsx)(f.Tooltip, {
-          text: y.default.Messages.PREMIUM_GAME,
+        }), e.libraryApplication.hasFlag(M.LibraryApplicationFlags.PREMIUM) ? (0, s.jsx)(f.Tooltip, {
+          text: D.default.Messages.PREMIUM_GAME,
           children: e => (0, s.jsx)(v.default, {
-            className: D.nitroIcon,
+            className: x.nitroIcon,
             ...e
           })
         }) : null]
       })]
     })
   }, {
-    key: x.GameTableListKeys.PLATFORM,
-    renderHeader: () => y.default.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM,
+    key: M.GameTableListKeys.PLATFORM,
+    renderHeader: () => D.default.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM,
     sort: !0,
-    cellClassName: D.platformCell,
-    bodyCellClassName: D.textCell,
+    cellClassName: x.platformCell,
+    bodyCellClassName: x.textCell,
     render(e) {
       let t = e.libraryApplication.getDistributor();
       return (0, s.jsx)(I.default, {
         align: I.default.Align.CENTER,
-        children: null != t ? x.DistributorNames[t] : y.default.Messages.GAME_LIBRARY_NOT_APPLICABLE
+        children: null != t ? M.DistributorNames[t] : D.default.Messages.GAME_LIBRARY_NOT_APPLICABLE
       })
     }
   }, {
-    key: x.GameTableListKeys.LAST_PLAYED,
-    renderHeader: () => y.default.Messages.GAME_LIBRARY_LIST_HEADER_LAST_PLAYED,
+    key: M.GameTableListKeys.LAST_PLAYED,
+    renderHeader: () => D.default.Messages.GAME_LIBRARY_LIST_HEADER_LAST_PLAYED,
     sort: !0,
-    cellClassName: D.lastPlayedCell,
-    bodyCellClassName: D.textCell,
+    cellClassName: x.lastPlayedCell,
+    bodyCellClassName: x.textCell,
     render(e) {
       let t;
-      return t = e.isRunning ? y.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? y.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(T.default, {
+      return t = e.isRunning ? D.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? D.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(T.default, {
         end: e.lastPlayed,
         location: T.default.Locations.GAME_LIBRARY_LAST_PLAYED
-      }) : y.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(I.default, {
+      }) : D.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(I.default, {
         align: I.default.Align.CENTER,
         className: r()({
-          [D.lastPlayedCellNew]: e.isNew
+          [x.lastPlayedCellNew]: e.isNew
         }),
         children: t
       })
     }
   }, {
-    key: x.GameTableListKeys.ACTIONS,
+    key: M.GameTableListKeys.ACTIONS,
     renderHeader: () => null,
-    cellClassName: D.actionsCell,
+    cellClassName: x.actionsCell,
     render(e, t, n) {
       var a, i;
       if (null == t) throw Error("No cell props defined.");
       let o = e.key === t.activeRowKey;
       return (0, s.jsxs)(l.Fragment, {
         children: [(0, s.jsxs)("div", {
-          className: D.settingIcons,
+          className: x.settingIcons,
           children: [(0, s.jsx)(w, {
-            flag: x.LibraryApplicationFlags.PRIVATE,
+            flag: M.LibraryApplicationFlags.PRIVATE,
             item: e,
             icon: N.default,
-            tooltip: y.default.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
+            tooltip: D.default.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
           }), (0, s.jsx)(w, {
-            flag: x.LibraryApplicationFlags.OVERLAY_DISABLED,
+            flag: M.LibraryApplicationFlags.OVERLAY_DISABLED,
             item: e,
             icon: R.default,
-            tooltip: y.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
-          }), (0, s.jsx)(P.default, {
-            className: r()(D.settingIcon, {
-              [D.hidden]: !e.supportsCloudSync
+            tooltip: D.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
+          }), (0, s.jsx)(y.default, {
+            className: r()(x.settingIcon, {
+              [x.hidden]: !e.supportsCloudSync
             }),
             libraryApplication: e.libraryApplication
           })]
-        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
-          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === x.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
+        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(S.default, {
+          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === M.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
-          source: x.AnalyticsLocations.APPLICATION_LIBRARY,
+          source: M.AnalyticsLocations.APPLICATION_LIBRARY,
           libraryApplication: e.libraryApplication,
           color: o ? f.Button.Colors.GREEN : f.Button.Colors.PRIMARY,
-          isPlayShiny: o && e.defaultAction === x.LibraryApplicationActions.PLAY,
-          size: D.actionButtonSize,
+          isPlayShiny: o && e.defaultAction === M.LibraryApplicationActions.PLAY,
+          size: x.actionButtonSize,
           hideProgress: null != e.defaultAction,
           onDropdownOpen: () => null != t && t.setActiveRowKey(e),
           onDropdownClose: () => null != t && t.clearActiveRowKey()
-        }) : (0, s.jsx)(C.default, {
+        }) : (0, s.jsx)(_.default, {
           skuId: e.libraryApplication.sku.id,
           applicationId: e.application.id,
           color: o ? f.Button.Colors.GREEN : f.Button.Colors.PRIMARY,
           customDisabledColor: f.Button.Colors.PRIMARY,
-          size: D.actionButtonSize
+          size: x.actionButtonSize
         })]
       })
     }
@@ -186,10 +186,10 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     } = e, c = t.key === n, f = t.key === a;
     return (0, s.jsx)("div", {
       className: r()({
-        [D.rowWrapperActive]: c && !f,
-        [D.rowWrapperGlow]: f,
-        [D.rowWrapper]: !c && !f,
-        [D.rowWrapperDim]: !c && !t.isLaunchable
+        [x.rowWrapperActive]: c && !f,
+        [x.rowWrapperGlow]: f,
+        [x.rowWrapper]: !c && !f,
+        [x.rowWrapperDim]: !c && !t.isLaunchable
       }),
       ref: e => u(e, t.key),
       onMouseEnter: () => l(t),
@@ -215,7 +215,7 @@ class F extends(a = l.PureComponent) {
     let t = this.props.activeRowKey;
     if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
       let e = this._rowRefs[t];
-      null != e && (E.default.wait(h.closeContextMenu), this.props.scrollToRow(e, U))
+      null != e && (E.default.wait(C.closeContextMenu), this.props.scrollToRow(e, U))
     }
   }
   handleHighlightedApplicationKey() {
@@ -246,39 +246,39 @@ class F extends(a = l.PureComponent) {
       } = this.props;
     for (let t of n) {
       switch (t.libraryApplication.getDistributor()) {
-        case x.Distributors.DISCORD:
+        case M.Distributors.DISCORD:
           e.num_applications_discord++;
           break;
-        case x.Distributors.STEAM:
+        case M.Distributors.STEAM:
           e.num_applications_steam++;
           break;
-        case x.Distributors.BATTLENET:
+        case M.Distributors.BATTLENET:
           e.num_applications_battlenet++;
           break;
-        case x.Distributors.TWITCH:
+        case M.Distributors.TWITCH:
           e.num_applications_twitch++;
           break;
-        case x.Distributors.UPLAY:
+        case M.Distributors.UPLAY:
           e.num_applications_uplay++;
           break;
-        case x.Distributors.ORIGIN:
+        case M.Distributors.ORIGIN:
           e.num_applications_origin++;
           break;
-        case x.Distributors.GOG:
+        case M.Distributors.GOG:
           e.num_applications_gog++;
           break;
-        case x.Distributors.EPIC:
+        case M.Distributors.EPIC:
           e.num_applications_epic++
       }
       e.num_applications_total++
     }
-    O.default.track(x.AnalyticEvents.LIBRARY_VIEWED, {
+    O.default.track(M.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
   }
   handleSort(e, t) {
-    _.sortList(e, t)
+    h.sortList(e, t)
   }
   renderImportHelp() {
     let e;
@@ -286,23 +286,23 @@ class F extends(a = l.PureComponent) {
       applicationViewItems: t,
       filterQuery: n
     } = this.props, a = t.length > 0;
-    return a ? null : (e = "" !== n ? y.default.Messages.APPLICATION_LIBRARY_EMPTY_SEARCH_DESCRIPTION.format({
+    return a ? null : (e = "" !== n ? D.default.Messages.APPLICATION_LIBRARY_EMPTY_SEARCH_DESCRIPTION.format({
       query: n
-    }) : y.default.Messages.APPLICATION_LIBRARY_EMPTY_STATE_DESCRIPTION_NO_IMPORT, (0, s.jsxs)("div", {
-      className: a ? D.emptyStateSmall : D.emptyStateLarge,
+    }) : D.default.Messages.APPLICATION_LIBRARY_EMPTY_STATE_DESCRIPTION_NO_IMPORT, (0, s.jsxs)("div", {
+      className: a ? x.emptyStateSmall : x.emptyStateLarge,
       children: [(0, s.jsx)("div", {
-        className: D.emptyWumpus
+        className: x.emptyWumpus
       }), (0, s.jsx)(I.default, {
         grow: 0,
         shrink: a ? 1 : 0,
         direction: I.default.Direction.VERTICAL,
         children: (0, s.jsxs)("div", {
-          className: D.emptyStateText,
+          className: x.emptyStateText,
           children: [(0, s.jsx)("div", {
-            className: D.emptyStateHeader,
-            children: y.default.Messages.APPLICATION_LIBRARY_EMPTY_STATE_HEADER
+            className: x.emptyStateHeader,
+            children: D.default.Messages.APPLICATION_LIBRARY_EMPTY_STATE_HEADER
           }), (0, s.jsx)("div", {
-            className: D.emptyStateDescription,
+            className: x.emptyStateDescription,
             children: e
           })]
         })
@@ -326,12 +326,12 @@ class F extends(a = l.PureComponent) {
         data: n,
         sortData: !1,
         rowComponent: B,
-        className: D.table,
-        headerClassName: i ? D.stickyHeader : D.header,
-        headerCellClassName: D.headerCell,
-        sortedHeaderCellClassName: D.headerCellSorted,
-        bodyCellClassName: D.bodyCell,
-        rowClassName: D.row,
+        className: x.table,
+        headerClassName: i ? x.stickyHeader : x.header,
+        headerCellClassName: x.headerCell,
+        sortedHeaderCellClassName: x.headerCellSorted,
+        bodyCellClassName: x.bodyCell,
+        rowClassName: x.row,
         sortKey: e,
         sortDirection: t,
         stickyHeader: i,
@@ -368,9 +368,9 @@ class F extends(a = l.PureComponent) {
         overflowMenuRowKey: null
       })
     }), b(this, "handleRowMouseEnter", e => {
-      !this.props.isNavigatingByKeyboard && _.updateActiveRowKey(e.key)
+      !this.props.isNavigatingByKeyboard && h.updateActiveRowKey(e.key)
     }), b(this, "handleRowMouseLeave", () => {
-      !this.props.isNavigatingByKeyboard && _.updateActiveRowKey(null)
+      !this.props.isNavigatingByKeyboard && h.updateActiveRowKey(null)
     }), b(this, "setRowRef", (e, t) => {
       this._rowRefs[t] = e
     }), b(this, "handleApplicationContextMenu", (e, t) => {
@@ -378,7 +378,7 @@ class F extends(a = l.PureComponent) {
       let {
         analyticsContext: a
       } = this.props;
-      (0, h.openContextMenuLazy)(e, async () => {
+      (0, C.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.e("98335").then(n.bind(n, "485292"));
@@ -402,10 +402,10 @@ function H(e) {
       applicationViewItems: a,
       filterQuery: i,
       fetched: r
-    } = (0, u.useStateFromStoresObject)([S.default], () => ({
-      applicationViewItems: S.default.sortedFilteredLibraryApplicationViewItems,
-      filterQuery: S.default.applicationFilterQuery,
-      fetched: S.default.hasFetchedApplications
+    } = (0, u.useStateFromStoresObject)([m.default], () => ({
+      applicationViewItems: m.default.sortedFilteredLibraryApplicationViewItems,
+      filterQuery: m.default.applicationFilterQuery,
+      fetched: m.default.hasFetchedApplications
     })),
     {
       sortKey: d,

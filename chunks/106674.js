@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("835473"),
   f = n("871118"),
   E = n("543882"),
-  h = n("314897"),
-  _ = n("944486"),
-  C = n("594174"),
-  m = n("366695"),
-  S = n("372662"),
+  C = n("314897"),
+  h = n("944486"),
+  _ = n("594174"),
+  S = n("366695"),
+  m = n("372662"),
   p = n("632184"),
   I = n("602623"),
   g = n("51144"),
@@ -31,7 +31,7 @@ var a = n("735250"),
   O = n("689938"),
   L = n("267071");
 
-function M(e) {
+function P(e) {
   let {
     users: t
   } = e;
@@ -51,7 +51,7 @@ function M(e) {
   })
 }
 
-function P(e) {
+function y(e) {
   var t;
   let {
     broadcast: n
@@ -59,17 +59,17 @@ function P(e) {
     userId: i,
     applicationId: p,
     channelId: I,
-    streamKey: P
-  } = n, [x, y] = s.useState(!1), D = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = g.default.getGlobalName(D)) && void 0 !== t ? t : g.default.getUserTag(D), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, I, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), B = (0, T.default)(I);
+    streamKey: y
+  } = n, [M, D] = s.useState(!1), x = (0, l.useStateFromStores)([_.default], () => _.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = g.default.getGlobalName(x)) && void 0 !== t ? t : g.default.getUserTag(x), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, I, i)), w = (0, l.useStateFromStores)([h.default], () => h.default.getVoiceChannelId()), k = (0, A.default)(), B = (0, T.default)(I);
   if (s.useEffect(() => {
-      x && w === I && y(!1)
-    }, [w, x, I]), null == D || null == U) return null;
+      M && w === I && D(!1)
+    }, [w, M, I]), null == x || null == U) return null;
   let {
     buttonColor: F,
     buttonCTA: H,
     disabled: V
   } = function(e, t) {
-    let n = h.default.getId(),
+    let n = C.default.getId(),
       a = t.some(e => e.id === n) || e === n,
       s = t.length >= v.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
@@ -82,7 +82,7 @@ function P(e) {
     className: L.container,
     children: [(0, a.jsx)(r.Avatar, {
       size: r.AvatarSizes.SIZE_32,
-      src: D.getAvatarURL(null, 32),
+      src: x.getAvatarURL(null, 32),
       "aria-label": U
     }), (0, a.jsxs)("div", {
       className: L.details,
@@ -97,7 +97,7 @@ function P(e) {
         }) : O.default.Messages.STREAMING_A_GAME
       }), (0, a.jsxs)("div", {
         className: L.activity,
-        children: [B.length > 0 && (0, a.jsx)(M, {
+        children: [B.length > 0 && (0, a.jsx)(P, {
           users: B
         }), (0, a.jsxs)(r.Button, {
           onClick: () => {
@@ -105,7 +105,7 @@ function P(e) {
               o.default.selectPrivateChannel(I);
               return
             }
-            y(!0), (0, u.joinPrivateChannelAndWatchStream)(I, P), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
+            D(!0), (0, u.joinPrivateChannelAndWatchStream)(I, y), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: j.length,
               broadcast_position: j.findIndex(e => e.userId === i) + 1,
               is_broadcasting: k,
@@ -117,7 +117,7 @@ function P(e) {
           className: L.button,
           disabled: V,
           innerClassName: L.innerButton,
-          children: [(0, a.jsx)(S.default, {
+          children: [(0, a.jsx)(m.default, {
             width: 16,
             height: 16
           }), H]
@@ -130,9 +130,9 @@ function P(e) {
         ownerId: i,
         channelId: I
       }
-    }) : (0, a.jsx)(m.default, {
+    }) : (0, a.jsx)(S.default, {
       game: b,
-      size: m.default.Sizes.LARGE,
+      size: S.default.Sizes.LARGE,
       className: L.gameIcon
     })]
   })

@@ -24,9 +24,9 @@ var a, l = n("735250"),
   T = n("119828"),
   I = n("156338"),
   A = n("794358"),
-  N = n("381238"),
-  v = n("779863"),
-  x = n("374129"),
+  v = n("381238"),
+  x = n("779863"),
+  N = n("374129"),
   M = n("639351"),
   R = n("944581"),
   y = n("368666"),
@@ -79,7 +79,7 @@ let w = e => {
       })
     }, "hang-status")
   };
-class B extends(a = s.Component) {
+class H extends(a = s.Component) {
   renderPrioritySpeaker() {
     let {
       speaking: e,
@@ -176,16 +176,16 @@ class B extends(a = s.Component) {
       voicePlatform: g,
       hangStatusActivity: S,
       showHangStatus: _,
-      isSelf: N,
-      application: v,
+      isSelf: v,
+      application: x,
       guildId: O,
       channelId: F,
       user: w,
-      handleHoverHangStatus: B
+      handleHoverHangStatus: H
     } = this.props;
     if (o || c) return null;
     let V = [],
-      W = (0, l.jsx)(G, {
+      W = (0, l.jsx)(B, {
         iconClassName: m,
         mute: e,
         localMute: t,
@@ -219,7 +219,7 @@ class B extends(a = s.Component) {
       })
     }, "xbox")) : (C === D.GameConsoleTypes.PLAYSTATION || g === P.VoicePlatforms.PLAYSTATION) && V.push((0, l.jsx)("div", {
       className: r()(U.iconSpacing),
-      children: (0, l.jsx)(x.default, {
+      children: (0, l.jsx)(N.default, {
         className: r()(U.icon, m)
       })
     }, "playstation")), d ? V.push((0, l.jsx)("div", {
@@ -234,19 +234,19 @@ class B extends(a = s.Component) {
         className: r()(U.icon, m)
       })
     }, "watch"));
-    let Y = null != v && !(0, L.hasFlag)(v.flags, j.ApplicationFlags.EMBEDDED),
+    let Y = null != x && !(0, L.hasFlag)(x.flags, j.ApplicationFlags.EMBEDDED),
       z = null == S && Y;
     return 0 !== V.length || null != W || _ || z ? (0, l.jsxs)("div", {
       className: U.icons,
       children: [(0, l.jsxs)("div", {
         className: U.iconGroup,
-        onMouseEnter: () => null == B ? void 0 : B(!1),
+        onMouseEnter: () => null == H ? void 0 : H(!1),
         children: [W, V]
       }), _ || z ? (0, l.jsx)("div", {
         className: U.iconGroup,
-        onMouseEnter: () => null == B ? void 0 : B(!0),
-        children: z ? (0, l.jsx)(H, {
-          application: v,
+        onMouseEnter: () => null == H ? void 0 : H(!0),
+        children: z ? (0, l.jsx)(G, {
+          application: x,
           iconClassName: m,
           guildId: O,
           channelId: F,
@@ -254,7 +254,7 @@ class B extends(a = s.Component) {
         }, "".concat(w.id, "-game")) : (0, l.jsx)(k, {
           hangStatusActivity: S,
           iconClassName: m,
-          isSelf: N
+          isSelf: v
         })
       }) : null]
     }) : null
@@ -340,7 +340,7 @@ class B extends(a = s.Component) {
   }
 }
 
-function H(e) {
+function G(e) {
   let {
     application: t,
     iconClassName: n,
@@ -381,7 +381,7 @@ function H(e) {
   })
 }
 
-function G(e) {
+function B(e) {
   let {
     iconClassName: t,
     mute: n,
@@ -400,7 +400,7 @@ function G(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(v.default, {
+    } else e = (0, l.jsx)(x.default, {
       className: r()(U.icon, t, {
         [U.iconServer]: s
       }),
@@ -422,7 +422,7 @@ function G(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(N.default, {
+    } else e = (0, l.jsx)(v.default, {
       className: r()(U.icon, t, {
         [U.iconServer]: f
       })
@@ -437,11 +437,11 @@ function G(e) {
     children: p
   })
 }
-F(B, "defaultProps", {
+F(H, "defaultProps", {
   avatarContainerClass: U.avatarContainer,
   userNameClassName: U.usernameFont,
   size: j.OverlayAvatarSizes.SMALL,
   selected: !1,
   disabled: !1,
   isOverlay: !1
-}), t.default = B
+}), t.default = H

@@ -1,12 +1,12 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(a), t.d(a, {
   showInvalidUsernameToast: function() {
-    return l
+    return o
   }
 });
-var a = s("481060"),
-  n = s("689938");
+var e = t("481060"),
+  n = t("689938");
 
-function l() {
-  (0, a.showToast)((0, a.createToast)(n.default.Messages.USER_SETTINGS_UPDATE_FAILURE, a.ToastType.FAILURE))
+function o() {
+  (0, e.showToast)((0, e.createToast)(n.default.Messages.USER_SETTINGS_UPDATE_FAILURE, e.ToastType.FAILURE))
 }

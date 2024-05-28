@@ -1,49 +1,49 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
 });
-var n = s("735250");
-s("470079");
-var o = s("481060"),
-  l = s("985513"),
-  a = s("285952"),
-  r = s("819570"),
-  i = s("689938"),
-  u = s("233248"),
-  c = s("611273");
+var s = n("735250");
+n("470079");
+var r = n("481060"),
+  a = n("985513"),
+  o = n("285952"),
+  i = n("819570"),
+  l = n("689938"),
+  u = n("233248"),
+  c = n("611273");
 
 function d(e) {
   let {
     title: t,
-    subtitle: s,
+    subtitle: n,
     error: d,
     onSubmit: h,
     onCancel: f
   } = e;
-  return (0, n.jsxs)(a.default, {
-    direction: a.default.Direction.VERTICAL,
-    children: [(0, n.jsx)(r.Title, {
+  return (0, s.jsxs)(o.default, {
+    direction: o.default.Direction.VERTICAL,
+    children: [(0, s.jsx)(i.Title, {
       className: c.marginBottom8,
       children: t
-    }), (0, n.jsx)(r.SubTitle, {
+    }), (0, s.jsx)(i.SubTitle, {
       className: u.subTitle,
-      children: s
-    }), (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(l.default, {
+      children: n
+    }), (0, s.jsxs)("div", {
+      children: [(0, s.jsx)(a.default, {
         inputClassName: u.codeInput,
         onSubmit: h
-      }), null != d ? (0, n.jsx)(o.Text, {
+      }), null != d ? (0, s.jsx)(r.Text, {
         className: u.error,
         variant: "text-sm/normal",
         children: d
       }) : null]
-    }), null != f && (0, n.jsx)(o.Button, {
+    }), null != f && (0, s.jsx)(r.Button, {
       className: u.button,
       onClick: f,
-      color: o.Button.Colors.PRIMARY,
-      children: i.default.Messages.CANCEL
+      color: r.Button.Colors.PRIMARY,
+      children: l.default.Messages.CANCEL
     })]
   })
 }

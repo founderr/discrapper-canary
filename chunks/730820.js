@@ -19,22 +19,22 @@ var a = s("735250"),
   _ = s("921801"),
   f = s("607018"),
   m = s("778764"),
-  g = s("314897"),
-  I = s("325067"),
+  I = s("314897"),
+  g = s("325067"),
   N = s("594174"),
   h = s("285952"),
   C = s("572004"),
-  A = s("287880"),
-  p = s("714565"),
-  O = s("202858"),
+  O = s("287880"),
+  A = s("714565"),
+  p = s("202858"),
   R = s("726985"),
   x = s("981631"),
   M = s("815660"),
-  v = s("689938"),
-  L = s("493087"),
-  D = s("611273");
+  L = s("689938"),
+  D = s("493087"),
+  P = s("611273");
 
-function P(e, t, s) {
+function v(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -56,18 +56,18 @@ function b(e) {
     }
   }, [l]);
   return (0, a.jsx)("li", {
-    className: D.marginBottom20,
+    className: P.marginBottom20,
     children: (0, a.jsx)(o.Clickable, {
       innerRef: i,
-      className: L.backupCode,
+      className: D.backupCode,
       onKeyDown: r,
       children: (0, a.jsx)(o.Checkbox, {
         displayOnly: !0,
         readOnly: !0,
-        className: L.codeCheckbox,
+        className: D.codeCheckbox,
         value: s,
         children: (0, a.jsx)("span", {
-          className: L.code,
+          className: D.code,
           children: l
         })
       })
@@ -90,54 +90,54 @@ class j extends n.PureComponent {
       let e = s ? n.phone : this.maskPhoneNumber(n.phone);
       t = (0, a.jsxs)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: D.marginBottom8,
-        children: [v.default.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
+        className: P.marginBottom8,
+        children: [L.default.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
           phoneNumber: e
         }), (0, a.jsx)(o.Anchor, {
           onClick: this.togglePhoneNumberVisibility,
-          className: L.phoneRevealer,
-          children: s ? v.default.Messages.MFA_SMS_PHONE_NUMBER_HIDE : v.default.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
+          className: D.phoneRevealer,
+          children: s ? L.default.Messages.MFA_SMS_PHONE_NUMBER_HIDE : L.default.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
         })]
       })
     }
     if (r) e = (0, a.jsx)(h.default, {
-      className: i ? "" : D.marginTop8,
+      className: i ? "" : P.marginTop8,
       children: (0, a.jsx)(o.Button, {
         color: o.Button.Colors.RED,
         look: o.Button.Looks.OUTLINED,
         size: o.Button.Sizes.SMALL,
         submitting: l,
         onClick: this.handleDisableSMS,
-        children: v.default.Messages.MFA_SMS_REMOVE
+        children: L.default.Messages.MFA_SMS_REMOVE
       })
     });
     else {
-      let t = (0, p.getSMSBackupDisabledMessage)(n);
+      let t = (0, A.getSMSBackupDisabledMessage)(n);
       e = (0, a.jsxs)(h.default, {
-        className: i ? "" : D.marginTop8,
+        className: i ? "" : P.marginTop8,
         children: [(0, a.jsx)(o.Button, {
           onClick: this.handleEnableSMS,
           size: o.Button.Sizes.SMALL,
           submitting: l,
           disabled: null != t,
-          children: null != t ? t : v.default.Messages.MFA_SMS_ENABLE
+          children: null != t ? t : L.default.Messages.MFA_SMS_ENABLE
         }), i ? (0, a.jsx)(o.Button, {
           onClick: this.handleChangePhoneNumber,
           color: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.SMALL,
           look: o.Button.Looks.LINK,
-          children: v.default.Messages.CHANGE_PHONE_NUMBER
+          children: L.default.Messages.CHANGE_PHONE_NUMBER
         }) : null]
       })
     }
     return (0, a.jsx)(_.Subsetting, {
       setting: R.WebSetting.ACCOUNT_SMS_BACKUP,
       children: (0, a.jsxs)(o.FormSection, {
-        className: D.marginTop40,
-        title: v.default.Messages.MFA_SMS_AUTH,
+        className: P.marginTop40,
+        title: L.default.Messages.MFA_SMS_AUTH,
         children: [(0, a.jsx)(o.FormText, {
           type: o.FormText.Types.DESCRIPTION,
-          children: v.default.Messages.MFA_SMS_AUTH_SALES_PITCH
+          children: L.default.Messages.MFA_SMS_AUTH_SALES_PITCH
         }), t, e]
       })
     })
@@ -151,7 +151,7 @@ class j extends n.PureComponent {
       children: (0, a.jsx)(o.Button, {
         onClick: this.sendMFABackupCodesVerificationKeyEmail,
         size: o.Button.Sizes.SMALL,
-        children: v.default.Messages.TWO_FA_VIEW_BACKUP_CODES
+        children: L.default.Messages.TWO_FA_VIEW_BACKUP_CODES
       })
     });
     if (t.length > 0) {
@@ -161,27 +161,27 @@ class j extends n.PureComponent {
         fileName: "discord_backup_codes.txt",
         children: (0, a.jsx)(o.Button, {
           size: o.Button.Sizes.SMALL,
-          children: v.default.Messages.TWO_FA_DOWNLOAD_CODES
+          children: L.default.Messages.TWO_FA_DOWNLOAD_CODES
         })
       });
       let n = e => e.map(e => (0, a.jsx)(b, {
         code: e
       }, e.code));
       e = (0, a.jsxs)(o.FormSection, {
-        title: v.default.Messages.TWO_FA_BACKUP_CODES_LABEL,
+        title: L.default.Messages.TWO_FA_BACKUP_CODES_LABEL,
         children: [(0, a.jsx)(o.FormText, {
           type: o.FormText.Types.DESCRIPTION,
-          className: D.marginBottom20,
-          children: v.default.Messages.TWO_FA_BACKUP_CODES_BODY.format()
+          className: P.marginBottom20,
+          children: L.default.Messages.TWO_FA_BACKUP_CODES_BODY.format()
         }), (0, a.jsxs)(h.default, {
           children: [(0, a.jsx)(h.default.Child, {
             children: (0, a.jsx)("ul", {
-              className: L.checkboxGroup,
+              className: D.checkboxGroup,
               children: n(t.slice(0, t.length / 2))
             })
           }), (0, a.jsx)(h.default.Child, {
             children: (0, a.jsx)("ul", {
-              className: L.checkboxGroup,
+              className: D.checkboxGroup,
               children: n(t.slice(t.length / 2))
             })
           })]
@@ -190,23 +190,23 @@ class j extends n.PureComponent {
             onClick: this.generateBackupCodes,
             look: o.ButtonLooks.LINK,
             size: o.ButtonSizes.MIN,
-            children: v.default.Messages.TWO_FA_GENERATE_CODES
+            children: L.default.Messages.TWO_FA_GENERATE_CODES
           })
         }), (0, a.jsx)(o.FormDivider, {
-          className: D.marginTop20
+          className: P.marginTop20
         })]
       })
     }
     return (0, a.jsxs)(o.FormSection, {
       children: [(0, a.jsx)(o.FormTitle, {
-        children: v.default.Messages.TWO_FA
+        children: L.default.Messages.TWO_FA
       }), (0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: D.marginBottom20,
-        children: v.default.Messages.TWO_FA_DESCRIPTION
+        className: P.marginBottom20,
+        children: L.default.Messages.TWO_FA_DESCRIPTION
       }), (0, a.jsxs)(h.default, {
         justify: h.default.Justify.START,
-        className: D.marginBottom20,
+        className: P.marginBottom20,
         children: [(0, a.jsx)(h.default.Child, {
           wrap: !0,
           grow: 0,
@@ -220,14 +220,14 @@ class j extends n.PureComponent {
               size: o.Button.Sizes.SMALL,
               color: o.ButtonColors.RED,
               look: o.ButtonLooks.OUTLINED,
-              children: v.default.Messages.TWO_FA_REMOVE
+              children: L.default.Messages.TWO_FA_REMOVE
             })
           }) : (0, a.jsx)(_.Subsetting, {
             setting: R.WebSetting.ACCOUNT_ENABLE_2FA,
             children: (0, a.jsx)(o.Button, {
-              onClick: O.default.enableMFA,
+              onClick: p.default.enableMFA,
               size: o.ButtonSizes.SMALL,
-              children: v.default.Messages.TWO_FA_ENABLE
+              children: L.default.Messages.TWO_FA_ENABLE
             })
           })
         })]
@@ -239,16 +239,16 @@ class j extends n.PureComponent {
   }
   renderDisabled() {
     return (0, a.jsxs)(o.FormSection, {
-      title: v.default.Messages.TWO_FA,
+      title: L.default.Messages.TWO_FA,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: D.marginBottom20,
-        children: v.default.Messages.TWO_FA_SALES_PITCH
+        className: P.marginBottom20,
+        children: L.default.Messages.TWO_FA_SALES_PITCH
       }), (0, a.jsx)(o.FormItem, {
         children: (0, a.jsx)(o.Button, {
-          onClick: O.default.enableMFA,
+          onClick: p.default.enableMFA,
           size: o.ButtonSizes.SMALL,
-          children: v.default.Messages.TWO_FA_ENABLE
+          children: L.default.Messages.TWO_FA_ENABLE
         })
       }), (0, a.jsx)(m.default, {})]
     })
@@ -257,17 +257,17 @@ class j extends n.PureComponent {
     let {
       currentUser: e
     } = this.props;
-    return A.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
-      title: v.default.Messages.TWO_FA,
+    return O.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
+      title: L.default.Messages.TWO_FA,
       children: (0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        children: v.default.Messages.TWO_FA_NOT_VERIFIED
+        children: L.default.Messages.TWO_FA_NOT_VERIFIED
       })
     }) : (0, a.jsx)(o.FormSection, {
-      title: v.default.Messages.TWO_FA,
+      title: L.default.Messages.TWO_FA,
       children: (0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        children: v.default.Messages.TWO_FA_USE_DESKTOP_APP
+        children: L.default.Messages.TWO_FA_USE_DESKTOP_APP
       })
     })
   }
@@ -282,47 +282,47 @@ class j extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), P(this, "state", {
+    super(...e), v(this, "state", {
       revealed: !1,
       password: ""
-    }), P(this, "togglePhoneNumberVisibility", e => {
+    }), v(this, "togglePhoneNumberVisibility", e => {
       e.preventDefault(), this.setState({
         revealed: !this.state.revealed
       })
-    }), P(this, "handleDisableMFA", () => {
+    }), v(this, "handleDisableMFA", () => {
       u.default.show({
-        title: v.default.Messages.TWO_FA_REMOVE,
-        body: v.default.Messages.TWO_FA_REMOVE_CONFIRMATION,
-        cancelText: v.default.Messages.CANCEL,
+        title: L.default.Messages.TWO_FA_REMOVE,
+        body: L.default.Messages.TWO_FA_REMOVE_CONFIRMATION,
+        cancelText: L.default.Messages.CANCEL,
         onConfirm: () => d.default.disable()
       })
-    }), P(this, "generateBackupCodes", async () => {
-      let e = I.default.getVerificationKey();
+    }), v(this, "generateBackupCodes", async () => {
+      let e = g.default.getVerificationKey();
       await d.default.confirmViewBackupCodes(e, !0)
-    }), P(this, "sendMFABackupCodesVerificationKeyEmail", () => {
+    }), v(this, "sendMFABackupCodesVerificationKeyEmail", () => {
       (0, o.openModal)(e => (0, a.jsx)(E.default, {
         ...e,
         handleSubmit: e => d.default.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
           this.viewBackupCodes(e)
         }),
-        title: v.default.Messages.TWO_FA_VIEW_BACKUP_CODES_ENTER_PASSWORD,
-        actionText: v.default.Messages.TWO_FA_BACKUP_CODES_NEXT_ACTION
+        title: L.default.Messages.TWO_FA_VIEW_BACKUP_CODES_ENTER_PASSWORD,
+        actionText: L.default.Messages.TWO_FA_BACKUP_CODES_NEXT_ACTION
       }))
-    }), P(this, "viewBackupCodes", e => {
+    }), v(this, "viewBackupCodes", e => {
       (0, o.openModal)(t => (0, a.jsx)(S.default, {
         ...t,
         handleSubmit: e => d.default.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
         maxLength: 8,
-        title: v.default.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_LABEL,
-        label: v.default.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_INPUT_LABEL,
+        title: L.default.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_LABEL,
+        label: L.default.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_INPUT_LABEL,
         forceNoPlaceholder: !0,
-        retryPrompt: v.default.Messages.TWO_FA_CONFIRM_VIEW_RESEND_EMAIL_PROMPT,
-        retrySuccessMessage: v.default.Messages.TWO_FA_CONFIRM_VIEW_RESEND_EMAIL_SUCCESS,
+        retryPrompt: L.default.Messages.TWO_FA_CONFIRM_VIEW_RESEND_EMAIL_PROMPT,
+        retrySuccessMessage: L.default.Messages.TWO_FA_CONFIRM_VIEW_RESEND_EMAIL_SUCCESS,
         onRetry: () => d.default.sendMFABackupCodesVerificationKeyEmail(e),
-        actionText: v.default.Messages.TWO_FA_VIEW_CODES_SUBMIT,
-        helpMessage: v.default.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_BODY
+        actionText: L.default.Messages.TWO_FA_VIEW_CODES_SUBMIT,
+        helpMessage: L.default.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_BODY
       }))
-    }), P(this, "getDownloadFileContents", () => {
+    }), v(this, "getDownloadFileContents", () => {
       let e = this.props.backupCodes.map(e => {
           let {
             consumed: t,
@@ -330,31 +330,31 @@ class j extends n.PureComponent {
           } = e;
           return "* ".concat(s.substr(0, 4), "-").concat(s.substr(4), " ").concat(t ? "(used)" : "")
         }).join("\r\n"),
-        t = v.default.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
+        t = L.default.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
           email: this.props.currentUser.email
         });
       return "".concat(t, "\r\n\r\n").concat(e)
-    }), P(this, "handleChangePhoneNumber", () => {
+    }), v(this, "handleChangePhoneNumber", () => {
       this.openPhoneVerificationModal()
-    }), P(this, "handleEnableSMS", () => {
+    }), v(this, "handleEnableSMS", () => {
       let {
         currentUser: e
       } = this.props, t = () => {
         (0, o.openModal)(e => (0, a.jsx)(E.default, {
           ...e,
           handleSubmit: d.default.enableSMS,
-          title: v.default.Messages.MFA_SMS_ENABLE
+          title: L.default.Messages.MFA_SMS_ENABLE
         }))
       };
       null == e.phone ? this.openPhoneVerificationModal({
         onAddedPhone: t
       }) : t()
-    }), P(this, "handleDisableSMS", () => {
+    }), v(this, "handleDisableSMS", () => {
       (0, o.openModal)(e => (0, a.jsx)(E.default, {
         ...e,
         handleSubmit: d.default.disableSMS,
-        title: v.default.Messages.MFA_SMS_REMOVE,
-        children: v.default.Messages._MFA_SMS_CONFIRM_REMOVE_BODY
+        title: L.default.Messages.MFA_SMS_REMOVE,
+        children: L.default.Messages._MFA_SMS_CONFIRM_REMOVE_BODY
       }))
     })
   }
@@ -363,9 +363,9 @@ class j extends n.PureComponent {
 function U(e) {
   let t = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser());
   i()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
-  let s = (0, r.useStateFromStoresObject)([I.default, g.default], () => ({
-    togglingSMS: I.default.togglingSMS,
-    hasTOTPEnabled: g.default.hasTOTPEnabled()
+  let s = (0, r.useStateFromStoresObject)([g.default, I.default], () => ({
+    togglingSMS: g.default.togglingSMS,
+    hasTOTPEnabled: I.default.hasTOTPEnabled()
   }));
   return (0, a.jsx)(j, {
     currentUser: t,

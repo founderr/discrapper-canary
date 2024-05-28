@@ -141,14 +141,14 @@ function A(e) {
   return t
 }
 
-function N(e) {
+function v(e) {
   let {
     guildId: t
   } = e, n = !1;
   for (let e in _) _[e].guildId === t && (_[e].rebuild(), n = !0);
   return n
 }
-class v extends(a = i.default.Store) {
+class x extends(a = i.default.Store) {
   initialize() {
     this.waitFor(o.default, u.default, d.default, c.default, f.default, h.default), this.syncWith([d.default], () => {
       let e = d.default.getSubscribedThreadIds(),
@@ -176,7 +176,7 @@ class v extends(a = i.default.Store) {
     return null !== (l = null == i ? void 0 : i.canViewChannel) && void 0 !== l && l
   }
 }
-S(v, "displayName", "ThreadMemberListStore"), t.default = new v(r.default, {
+S(x, "displayName", "ThreadMemberListStore"), t.default = new x(r.default, {
   CONNECTION_OPEN: function() {
     _ = {}
   },
@@ -259,8 +259,8 @@ S(v, "displayName", "ThreadMemberListStore"), t.default = new v(r.default, {
     }
     return n
   },
-  GUILD_ROLE_UPDATE: N,
-  GUILD_ROLE_DELETE: N,
+  GUILD_ROLE_UPDATE: v,
+  GUILD_ROLE_DELETE: v,
   PASSIVE_UPDATE_V2: function(e) {
     return e.members.reduce((e, t) => A(t.user.id) || e, !1)
   }

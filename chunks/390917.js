@@ -1,21 +1,21 @@
 "use strict";
-t.r(n), t.d(n, {
+r.r(t), r.d(t, {
   openGuildProductPurchaseConfirmationModal: function() {
     return s
   }
 });
-var a = t("735250");
-t("470079");
-var r = t("481060");
+var n = r("735250");
+r("470079");
+var a = r("481060");
 
 function s(e) {
-  (0, r.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
-      default: n
-    } = await Promise.all([t.e("99387"), t.e("16359")]).then(t.bind(t, "588091"));
-    return t => (0, a.jsx)(n, {
+      default: t
+    } = await Promise.all([r.e("99387"), r.e("16359")]).then(r.bind(r, "588091"));
+    return r => (0, n.jsx)(t, {
       ...e,
-      ...t
+      ...r
     })
   })
 }

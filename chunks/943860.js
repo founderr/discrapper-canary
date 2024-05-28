@@ -5,7 +5,7 @@ function a(e, t) {
   if (null != r) {
     var a, n, s, o, i = [],
       u = !0,
-      c = !1;
+      l = !1;
     try {
       if (s = (r = r.call(e)).next, 0 === t) {
         if (Object(r) !== r) return;
@@ -13,12 +13,12 @@ function a(e, t) {
       } else
         for (; !(u = (a = s.call(r)).done) && (i.push(a.value), i.length !== t); u = !0);
     } catch (e) {
-      c = !0, n = e
+      l = !0, n = e
     } finally {
       try {
         if (!u && null != r.return && (o = r.return(), Object(o) !== o)) return
       } finally {
-        if (c) throw n
+        if (l) throw n
       }
     }
     return i

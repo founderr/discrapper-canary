@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(s), n.d(s, {
   default: function() {
-    return s
+    return r
   }
 });
-var l = n("735250");
+var t = n("735250");
 n("470079");
 var a = n("325767");
 
-function s(e) {
+function r(e) {
   let {
-    width: t = 32,
+    width: s = 32,
     height: n = 32,
-    color: s = "currentColor",
-    ...i
+    color: r = "currentColor",
+    ...l
   } = e;
-  return (0, l.jsxs)("svg", {
-    ...(0, a.default)(i),
-    width: t,
+  return (0, t.jsxs)("svg", {
+    ...(0, a.default)(l),
+    width: s,
     height: n,
     viewBox: "0 0 12 12",
     fill: "none",
-    children: [(0, l.jsx)("path", {
+    children: [(0, t.jsx)("path", {
       d: "M7.25 1H4.75V7.25H7.25V1Z",
-      fill: s
-    }), (0, l.jsx)("path", {
+      fill: r
+    }), (0, t.jsx)("path", {
       d: "M4.75 9.75C4.75 10.4167 5.33333 11 6 11C6.66667 11 7.25 10.4167 7.25 9.75C7.25 9.08333 6.66667 8.5 6 8.5C5.33333 8.5 4.75 9.08333 4.75 9.75Z",
-      fill: s
+      fill: r
     })]
   })
 }

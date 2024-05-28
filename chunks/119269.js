@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   ProgressCircleVariation: function() {
-    return i
+    return n
   }
 });
-var s, i, n = r("735250");
+var s, n, i = r("735250");
 r("470079");
 var l = r("120356"),
   a = r.n(l),
@@ -13,37 +13,37 @@ var l = r("120356"),
   d = r("967538"),
   c = r("885302"),
   _ = r("914677"),
-  C = r("915510");
-(s = i || (i = {}))[s.NITRO_GEM = 0] = "NITRO_GEM", s[s.NITRO_LOGO = 1] = "NITRO_LOGO";
+  f = r("915510");
+(s = n || (n = {}))[s.NITRO_GEM = 0] = "NITRO_GEM", s[s.NITRO_LOGO = 1] = "NITRO_LOGO";
 t.default = e => {
   let {
     showAnimations: t = !0,
     iconClassName: r,
     staticPercentage: s,
-    innerCircleClassName: i,
+    innerCircleClassName: n,
     progressCircleStrokeSize: l,
-    backgroundCircleSize: f,
+    backgroundCircleSize: C,
     percentage: p,
     initialPercentage: E,
     progressCircleVariation: x = 0
-  } = e, R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), h = t && !R;
-  return (0, n.jsx)("div", {
-    className: a()(C.progressCircle, r, {
-      [C.progressCricleBottomMargin]: 0 === x
+  } = e, m = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), R = t && !m;
+  return (0, i.jsx)("div", {
+    className: a()(f.progressCircle, r, {
+      [f.progressCricleBottomMargin]: 0 === x
     }),
-    children: (0, n.jsx)(_.default, {
-      animationClassName: a()(C.activeProgressCircle, {
-        [C.activeProgressCircleAnimation]: h
+    children: (0, i.jsx)(_.default, {
+      animationClassName: a()(f.activeProgressCircle, {
+        [f.activeProgressCircleAnimation]: R
       }),
       progressCircleStrokeSize: l,
       percentage: null != s ? s : p,
       initialPercentage: null != s ? s : E,
       progressCircleVariation: x,
-      children: 0 === x ? (0, n.jsx)(d.default, {
-        className: h ? C.nitroGemAnimation : void 0,
-        backgroundColor: a()(C.gemBackgroundFill, i),
-        backgroundCircleSize: f
-      }) : (0, n.jsx)(c.default, {
+      children: 0 === x ? (0, i.jsx)(d.default, {
+        className: R ? f.nitroGemAnimation : void 0,
+        backgroundColor: a()(f.gemBackgroundFill, n),
+        backgroundCircleSize: C
+      }) : (0, i.jsx)(c.default, {
         percentage: p
       })
     })

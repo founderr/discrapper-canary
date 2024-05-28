@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("689938"),
   I = n("862903"),
   A = n("946278"),
-  N = n("822545");
-let v = l.memo(function(e) {
+  v = n("822545");
+let x = l.memo(function(e) {
   let {
     message: t,
     notice: n,
@@ -78,16 +78,16 @@ t.default = l.memo(function(e) {
     children: p,
     content: E,
     onUpdate: C
-  } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), x = l.useRef(!1), M = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = l.useCallback(() => {
+  } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), N = l.useRef(!1), M = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = l.useCallback(() => {
     (null == M ? void 0 : M.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
   }, [d, M]);
   return l.useLayoutEffect(() => {
-    x.current ? null != C && C() : x.current = !0
+    N.current ? null != C && C() : N.current = !0
   }, [C, d.content, E, _, p]), (0, a.jsxs)("div", {
     id: (0, m.getMessageContentId)(d),
     className: i()(s, A.markup, {
-      [N.messageContent]: !0,
-      [N.markupRtl]: "rtl" === o()(d.content),
+      [v.messageContent]: !0,
+      [v.markupRtl]: "rtl" === o()(d.content),
       [I.blockedEdit]: null == M ? void 0 : M.isBlockedEdit,
       [I.blockedSend]: !(null == M ? void 0 : M.isBlockedEdit)
     }),
@@ -97,11 +97,11 @@ t.default = l.memo(function(e) {
         isEdited: !0,
         isInline: !1,
         children: (0, a.jsxs)("span", {
-          className: N.edited,
+          className: v.edited,
           children: ["(", T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
         })
       })]
-    }), (0, a.jsx)(v, {
+    }), (0, a.jsx)(x, {
       notice: null !== (n = null == M ? void 0 : M.errorMessage) && void 0 !== n ? n : T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
       message: d,
       compact: r,

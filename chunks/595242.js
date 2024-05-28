@@ -19,14 +19,14 @@ var a = s("735250"),
   _ = s("899667"),
   f = s("853872"),
   m = s("78839"),
-  g = s("783739"),
-  I = s("981631"),
+  I = s("783739"),
+  g = s("981631"),
   N = s("220439");
 
 function h() {
   n.useEffect(() => {
     d.default.wait(() => {
-      u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, I.RevenueSurfaces.DISCOVERY), (0, c.fetchAppliedGuildBoostsForUser)(!0)
+      u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, g.RevenueSurfaces.DISCOVERY), (0, c.fetchAppliedGuildBoostsForUser)(!0)
     })
   }, []);
   let {
@@ -42,7 +42,7 @@ function h() {
       className: N.background
     }), (0, a.jsx)("div", {
       className: N.content,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(I.default, {
         premiumSubscription: t
       })
     })]

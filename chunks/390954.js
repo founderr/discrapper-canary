@@ -14,8 +14,8 @@ var a, n = s("735250"),
   _ = s("156729"),
   f = s("244526"),
   m = s("981631"),
-  g = s("689938"),
-  I = s("788988");
+  I = s("689938"),
+  g = s("788988");
 
 function N(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -52,13 +52,13 @@ class h extends(a = l.PureComponent) {
       onCancel: E,
       onDelete: T
     }) : (0, n.jsxs)("div", {
-      className: I.__invalid_paymentSourceItem,
+      className: g.__invalid_paymentSourceItem,
       children: [a > 0 && !l ? (0, n.jsx)(o.FormDivider, {
-        className: I.__invalid_sourceDivider
+        className: g.__invalid_sourceDivider
       }) : null, (0, n.jsxs)(c.default, {
         align: c.default.Align.CENTER,
         justify: c.default.Justify.BETWEEN,
-        className: I.paymentSourceRow,
+        className: g.paymentSourceRow,
         children: [(0, n.jsx)(f.default, {
           paymentSource: e,
           isDefault: t,
@@ -71,7 +71,7 @@ class h extends(a = l.PureComponent) {
           color: o.Button.Colors.PRIMARY,
           onClick: this.handleEditClick,
           size: o.Button.Sizes.SMALL,
-          children: g.default.Messages.EDIT
+          children: I.default.Messages.EDIT
         })]
       })]
     })
@@ -94,18 +94,18 @@ class C extends l.PureComponent {
     } = this.props;
     return (0, n.jsxs)(c.default, {
       justify: c.default.Justify.END,
-      className: I.footer,
+      className: g.footer,
       children: [0 === Object.keys(e).length ? (0, n.jsxs)(c.default.Child, {
         children: [(0, n.jsx)(o.Text, {
           variant: "text-sm/normal",
-          children: g.default.Messages.BILLING_NO_PAYMENT_METHOD
+          children: I.default.Messages.BILLING_NO_PAYMENT_METHOD
         }), (0, n.jsx)("div", {
-          className: I.subText,
-          children: g.default.Messages.BILLING_NO_PAYMENT_METHOD_DESCRIPTION
+          className: g.subText,
+          children: I.default.Messages.BILLING_NO_PAYMENT_METHOD_DESCRIPTION
         })]
       }) : null, (0, n.jsx)(o.Button, {
         onClick: this.handleAddPaymentMethod,
-        children: g.default.Messages.BILLING_ADD_PAYMENT_METHOD
+        children: I.default.Messages.BILLING_ADD_PAYMENT_METHOD
       })]
     })
   }
@@ -139,15 +139,15 @@ class C extends l.PureComponent {
           align: c.default.Align.CENTER,
           children: [(0, n.jsx)(o.Tooltip, {
             position: "left",
-            text: g.default.Messages.BILLING_SECURE_TOOLTIP,
+            text: I.default.Messages.BILLING_SECURE_TOOLTIP,
             children: e => (0, n.jsx)(S.default, {
-              className: I.lockIcon,
+              className: g.lockIcon,
               ...e
             })
-          }), g.default.Messages.BILLING_PAYMENT_SOURCES]
+          }), I.default.Messages.BILLING_PAYMENT_SOURCES]
         })
       }), _, E !== d.length - 1 ? (0, n.jsx)(o.FormDivider, {
-        className: I.__invalid_sourceDivider
+        className: g.__invalid_sourceDivider
       }) : null, this.renderFooter()]
     })
   }

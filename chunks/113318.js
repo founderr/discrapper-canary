@@ -4,34 +4,34 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("442837"),
-  l = n("201895"),
-  s = n("557135"),
-  i = n("703656"),
+var s = n("442837"),
+  a = n("201895"),
+  i = n("557135"),
+  l = n("703656"),
   r = n("592125"),
-  o = n("979651"),
-  u = n("66999"),
+  u = n("979651"),
+  o = n("66999"),
   d = n("981631");
 
 function c(e, t) {
-  let n = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(t)),
+  let n = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(t)),
     {
       needSubscriptionToAccess: c
-    } = (0, u.default)(null == n ? void 0 : n.id);
+    } = (0, o.default)(null == n ? void 0 : n.id);
   if (null == n || c) return null;
-  let f = n.isGuildVocal(),
-    h = (0, l.default)({
+  let E = n.isGuildVocal(),
+    f = (0, a.default)({
       channel: n
     });
   return {
     navigateToChannel: () => {
-      f ? s.default.handleVoiceConnect({
+      E ? i.default.handleVoiceConnect({
         channel: n,
-        connected: o.default.isInChannel(n.id),
+        connected: u.default.isInChannel(n.id),
         needSubscriptionToAccess: !1,
         routeDirectlyToChannel: !0
-      }) : (0, i.transitionTo)(d.Routes.CHANNEL(e, n.id))
+      }) : (0, l.transitionTo)(d.Routes.CHANNEL(e, n.id))
     },
-    ariaLabel: h
+    ariaLabel: f
   }
 }

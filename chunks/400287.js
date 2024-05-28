@@ -26,8 +26,8 @@ function _() {
     _ = c.UseThreadSidebar.useSetting(),
     f = c.ViewImageDescriptions.useSetting(),
     m = c.ConvertEmoticons.useSetting(),
-    g = c.InlineAttachmentMedia.useSetting(),
-    I = c.InlineEmbedMedia.useSetting(),
+    I = c.InlineAttachmentMedia.useSetting(),
+    g = c.InlineEmbedMedia.useSetting(),
     N = c.RenderEmbeds.useSetting(),
     h = c.RenderReactions.useSetting(),
     {
@@ -41,12 +41,12 @@ function _() {
       children: E.default.Messages.INLINE_MEDIA_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: I,
+      value: g,
       onChange: c.InlineEmbedMedia.updateSetting,
       children: E.default.Messages.INLINE_EMBED_MEDIA
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: g,
+      value: I,
       note: E.default.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
         maxSize: 10
       }),

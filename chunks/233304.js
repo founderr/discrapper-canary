@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   NotchBackground: function() {
-    return _
+    return h
   }
-}), n("47120");
-var a, s = n("735250"),
-  l = n("470079"),
-  i = n("120356"),
-  r = n.n(i),
-  o = n("692547"),
-  u = n("477690"),
-  d = n("624138"),
-  c = n("162168"),
-  f = n("314721");
+}), s("47120");
+var a, n = s("735250"),
+  l = s("470079"),
+  i = s("120356"),
+  r = s.n(i),
+  u = s("692547"),
+  o = s("477690"),
+  d = s("624138"),
+  c = s("162168"),
+  E = s("314721");
 
-function E(e, t, n) {
+function _(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
-let h = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
-  _ = Object.freeze({
-    BLACK: f.black,
-    GRAY: f.gray
+let f = (0, d.cssValueToNumber)(o.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
+  h = Object.freeze({
+    BLACK: E.black,
+    GRAY: E.gray
   });
-class C extends(a = l.Component) {
+class m extends(a = l.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -35,29 +35,29 @@ class C extends(a = l.Component) {
     window.removeEventListener("resize", this.computeBars)
   }
   roundToNearestStep(e) {
-    return Math.round(e / h) * h
+    return Math.round(e / f) * f
   }
   getProgressStyles() {
     let {
       progress: e
     } = this.props, {
       barWidth: t
-    } = this.state, n = this.roundToNearestStep(t * (100 - Math.max(0, Math.min(100, e))) / 100);
+    } = this.state, s = this.roundToNearestStep(t * (100 - Math.max(0, Math.min(100, e))) / 100);
     return {
-      transform: "translateX(".concat(Math.abs(n - t), "px)")
+      transform: "translateX(".concat(Math.abs(s - t), "px)")
     }
   }
   getGradientStyles() {
     let {
       gradientEnd: e,
       gradientStart: t,
-      progress: n
+      progress: s
     } = this.props, {
       barWidth: a
     } = this.state;
     return {
       width: "".concat(a, "px"),
-      background: n <= 0 ? "none" : "linear-gradient(to right, ".concat(t, ", ").concat(e, ")")
+      background: s <= 0 ? "none" : "linear-gradient(to right, ".concat(t, ", ").concat(e, ")")
     }
   }
   render() {
@@ -65,28 +65,28 @@ class C extends(a = l.Component) {
       className: e,
       notchBackground: t
     } = this.props, {
-      barWidth: n
+      barWidth: s
     } = this.state;
-    return (0, s.jsx)("div", {
-      className: f.wrapper,
+    return (0, n.jsx)("div", {
+      className: E.wrapper,
       ref: this.sizerRef,
-      children: (0, s.jsxs)("div", {
-        className: r()(f.container, e),
+      children: (0, n.jsxs)("div", {
+        className: r()(E.container, e),
         style: this.getGradientStyles(),
-        children: [(0, s.jsx)("div", {
-          className: f.progress,
+        children: [(0, n.jsx)("div", {
+          className: E.progress,
           style: this.getProgressStyles()
-        }), 0 !== n && (0, s.jsx)(c.default, {
-          width: n,
-          className: r()(f.notches, t)
+        }), 0 !== s && (0, n.jsx)(c.default, {
+          width: s,
+          className: r()(E.notches, t)
         })]
       })
     })
   }
   constructor(...e) {
-    super(...e), E(this, "state", {
+    super(...e), _(this, "state", {
       barWidth: 0
-    }), E(this, "sizerRef", l.createRef()), E(this, "computeBars", () => {
+    }), _(this, "sizerRef", l.createRef()), _(this, "computeBars", () => {
       let {
         current: e
       } = this.sizerRef;
@@ -96,7 +96,7 @@ class C extends(a = l.Component) {
     })
   }
 }
-E(C, "defaultProps", {
-  gradientStart: o.default.unsafe_rawColors.YELLOW_260.css,
-  gradientEnd: o.default.unsafe_rawColors.GREEN_360.css
-}), t.default = C
+_(m, "defaultProps", {
+  gradientStart: u.default.unsafe_rawColors.YELLOW_260.css,
+  gradientEnd: u.default.unsafe_rawColors.GREEN_360.css
+}), t.default = m

@@ -71,10 +71,10 @@ function E(e) {
     A = l.useCallback(() => {
       g(), T(f.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM)
     }, [g, T]),
-    N = l.useCallback(() => {
+    v = l.useCallback(() => {
       g(), T(f.CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
     }, [g, T]),
-    v = l.useCallback(() => {
+    x = l.useCallback(() => {
       (0, r.openModalLazy)(async () => {
         let {
           default: e
@@ -87,7 +87,7 @@ function E(e) {
           return (0, a.jsx)(e, {
             transitionState: l,
             onBlock: A,
-            onBlockAndReport: N,
+            onBlockAndReport: v,
             onCancel: () => {
               null == s || s(), T(f.CtaEventTypes.USER_BANNER_BLOCK_CANCEL)
             },
@@ -97,7 +97,7 @@ function E(e) {
           })
         }
       })
-    }, [A, N, C, t, T]);
+    }, [A, v, C, t, T]);
   return (0, a.jsx)(h.SafetyWarningBanner, {
     channelId: t,
     warningId: E,
@@ -113,7 +113,7 @@ function E(e) {
     }, ...S ? [] : [{
       text: p.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
       color: r.Button.Colors.PRIMARY,
-      onclick: v
+      onclick: x
     }]]
   })
 }

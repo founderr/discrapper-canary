@@ -26,9 +26,9 @@ var l = n("120356"),
   T = n("340149"),
   I = n("974029"),
   A = n("789695"),
-  N = n("465670"),
-  v = n("754424"),
-  x = n("877410"),
+  v = n("465670"),
+  x = n("754424"),
+  N = n("877410"),
   M = n("572004"),
   R = n("5192"),
   y = n("51144"),
@@ -84,7 +84,7 @@ function D(e) {
         children: (0, a.jsx)(r.Clickable, {
           className: P.closeAction,
           onClick: s,
-          children: (0, a.jsx)(N.default, {})
+          children: (0, a.jsx)(v.default, {})
         })
       })
     })]
@@ -122,7 +122,7 @@ function U(e) {
   } = e, p = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(m)), {
     canKickUser: g,
     canBanUser: S,
-    canModerateMembers: N
+    canModerateMembers: v
   } = (0, i.useStateFromStoresObject)([C.default, _.default, E.default], () => ({
     canKickUser: null != p && C.default.canManageUser(O.Permissions.KICK_MEMBERS, l, p),
     canBanUser: null != p && C.default.canManageUser(O.Permissions.BAN_MEMBERS, l, p),
@@ -172,7 +172,7 @@ function U(e) {
           })
         })
       },
-      children: [(0, a.jsx)(x.default, {
+      children: [(0, a.jsx)(N.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
@@ -210,7 +210,7 @@ function U(e) {
         children: j.default.Messages.BAN
       })]
     }), (0, a.jsxs)(b, {
-      disabled: !N,
+      disabled: !v,
       "aria-label": j.default.Messages.TIMEOUT_USER,
       style: {
         backgroundColor: t
@@ -236,7 +236,7 @@ function U(e) {
         D(h.ModerationActionType.COPY_ID), (0, M.copy)(l.id)
       },
       disabled: !M.SUPPORTS_COPY,
-      children: [(0, a.jsx)(v.default, {
+      children: [(0, a.jsx)(x.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css

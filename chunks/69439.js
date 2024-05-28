@@ -18,34 +18,34 @@ var a = n("735250"),
 function E(e) {
   var t, n, E;
   let {
-    quest: h
-  } = e, _ = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, C = (null === (n = h.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (E = h.userStatus) || void 0 === E ? void 0 : E.claimedAt) == null, m = (0, u.useHandleClaimQuestsReward)({
-    quest: h,
+    quest: C
+  } = e, h = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, _ = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (E = C.userStatus) || void 0 === E ? void 0 : E.claimedAt) == null, S = (0, u.useHandleClaimQuestsReward)({
+    quest: C,
     location: o.QuestContent.QUEST_BAR
-  }), S = s.useCallback(() => {
-    (0, d.openGameLink)(h, {
+  }), m = s.useCallback(() => {
+    (0, d.openGameLink)(C, {
       content: o.QuestContent.QUEST_HOME_DESKTOP,
       ctaContent: i.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [h]), p = s.useCallback(() => {
-    (0, r.enrollInQuest)(h.id, {
+  }, [C]), p = s.useCallback(() => {
+    (0, r.enrollInQuest)(C.id, {
       questContent: o.QuestContent.QUEST_HOME_DESKTOP,
       questContentCTA: i.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [h]);
-  return C ? (0, a.jsx)("div", {
+  }, [C]);
+  return _ ? (0, a.jsx)("div", {
     className: f.container,
     children: (0, a.jsx)(l.Button, {
       color: l.ButtonColors.BRAND,
-      onClick: m,
+      onClick: S,
       className: f.button,
       children: c.default.Messages.QUESTS_CLAIM_REWARD
     })
-  }) : _ ? (0, a.jsx)("div", {
+  }) : h ? (0, a.jsx)("div", {
     className: f.container,
     children: (0, a.jsx)(l.Button, {
       color: l.ButtonColors.PRIMARY,
-      onClick: S,
+      onClick: m,
       className: f.button,
       children: c.default.Messages.QUESTS_PLAY_GAME
     })

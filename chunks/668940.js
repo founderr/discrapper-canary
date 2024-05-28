@@ -12,26 +12,26 @@ var s = n("442837"),
   c = n("150192"),
   f = n("889010"),
   E = n("488905"),
-  h = n("347137"),
-  _ = n("731455"),
-  C = n("689938");
-let m = e => {
+  C = n("347137"),
+  h = n("731455"),
+  _ = n("689938");
+let S = e => {
     switch (e) {
-      case _.CategoryId.Activity:
-        return _.CategoryIcons.Activity;
-      case _.CategoryId.Music:
-        return _.CategoryIcons.Music;
-      case _.CategoryId.Television:
-        return _.CategoryIcons.Television;
-      case _.CategoryId.Science:
-        return _.CategoryIcons.Science;
-      case _.CategoryId.Education:
-        return _.CategoryIcons.Education;
+      case h.CategoryId.Activity:
+        return h.CategoryIcons.Activity;
+      case h.CategoryId.Music:
+        return h.CategoryIcons.Music;
+      case h.CategoryId.Television:
+        return h.CategoryIcons.Television;
+      case h.CategoryId.Science:
+        return h.CategoryIcons.Science;
+      case h.CategoryId.Education:
+        return h.CategoryIcons.Education;
       default:
-        return _.CategoryIcons.Discover
+        return h.CategoryIcons.Discover
     }
   },
-  S = () => {
+  m = () => {
     let {
       currentCategoryId: e,
       isViewingSearchResults: t
@@ -40,20 +40,20 @@ let m = e => {
       isViewingSearchResults: d.default.getMostRecentQuery().length > 0
     })), n = (0, s.useStateFromStores)([c.default], () => c.default.getDiscoveryCategories(), [], c.areDiscoveryCategoriesEqual), r = null == n ? void 0 : n.map(e => ({
       ...e,
-      icon: m(e.categoryId)
-    })), h = e => {
+      icon: S(e.categoryId)
+    })), C = e => {
       (0, i.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, i.clearSearch)()
     };
     return (0, a.jsxs)(l.Scroller, {
       children: [(0, a.jsx)(E.DiscoverySidebarHeader, {
-        text: C.default.Messages.DISCOVER
+        text: _.default.Messages.DISCOVER
       }), (0, a.jsx)(f.default, {
         categories: r,
-        handleCategorySelect: h,
+        handleCategorySelect: C,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), (0, a.jsx)(o.default, {
-        handleCategorySelect: h,
+        handleCategorySelect: C,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       })]
@@ -68,5 +68,5 @@ t.default = function() {
   }), t = e.length > 0, {
     clanDiscoveryEnabled: n
   } = (0, r.useClanPilotExperiment)("guild_discovery_sidebar");
-  return t || n ? (0, a.jsx)(h.default, {}) : (0, a.jsx)(S, {})
+  return t || n ? (0, a.jsx)(C.default, {}) : (0, a.jsx)(m, {})
 }

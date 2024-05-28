@@ -16,18 +16,18 @@ var s = n("442837"),
   c = n("522289"),
   f = n("699516"),
   E = n("546591"),
-  h = n("819570"),
-  _ = n("51144"),
-  C = n("998502"),
-  m = n("620924"),
-  S = n("332712"),
+  C = n("819570"),
+  h = n("51144"),
+  _ = n("998502"),
+  S = n("620924"),
+  m = n("332712"),
   p = n("81471"),
   I = n("689938"),
   g = n("326486");
 let T = e => {
     let {
       userId: t
-    } = e, n = (0, S.useMutualGuilds)(t);
+    } = e, n = (0, m.useMutualGuilds)(t);
     return null == n || 0 === n.length ? (0, a.jsx)(l.Text, {
       className: g.mutualGuilds,
       variant: "text-sm/normal",
@@ -38,7 +38,7 @@ let T = e => {
       children: [(0, a.jsx)(c.default, {
         guilds: n,
         maxGuilds: 3,
-        size: h.GuildIcon.Sizes.SMOL,
+        size: C.GuildIcon.Sizes.SMOL,
         hideOverflowCount: !0
       }), (0, a.jsx)(l.Text, {
         className: g.mutualGuilds,
@@ -50,15 +50,15 @@ let T = e => {
       })]
     })
   },
-  A = C.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+  A = _.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
 function N(e) {
   var t;
   let {
     channel: n,
     otherUser: c,
-    active: h
-  } = e, C = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), S = (0, s.useStateFromStores)([f.default], () => null == c ? null : f.default.getNickname(c.id)), N = !C && h, v = (0, m.useMessageRequestRelativeTimestampText)(n), {
+    active: C
+  } = e, _ = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, s.useStateFromStores)([f.default], () => null == c ? null : f.default.getNickname(c.id)), N = !_ && C, v = (0, S.useMessageRequestRelativeTimestampText)(n), {
     avatarDecorationSrc: R
   } = (0, u.default)({
     user: c,
@@ -77,12 +77,12 @@ function N(e) {
       children: [(0, a.jsxs)("div", {
         className: g.userContainerWithPreview,
         children: [(0, a.jsx)(i.default, {
-          nick: S,
+          nick: m,
           user: c,
           showAccountIdentifier: !0,
           className: g.tagContainer,
           usernameClass: g.username,
-          discriminatorClass: null != _.default.getGlobalName(c) ? g.globalName : g.discriminator
+          discriminatorClass: null != h.default.getGlobalName(c) ? g.globalName : g.discriminator
         }), (0, a.jsx)(l.Text, {
           className: g.timestampWithPreview,
           color: "text-muted",
@@ -93,7 +93,7 @@ function N(e) {
         hoverText: (0, a.jsx)(p.default, {
           channel: n
         }),
-        forceHover: h,
+        forceHover: C,
         children: (0, a.jsx)(T, {
           userId: c.id
         })

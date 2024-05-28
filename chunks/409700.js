@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   fetchConsents: function() {
-    return u
+    return o
   },
   setConsents: function() {
     return d
   }
-}), n("411104");
-var a = n("544891"),
-  s = n("570140"),
-  l = n("981631"),
-  i = n("689938");
+}), s("411104");
+var a = s("544891"),
+  n = s("570140"),
+  l = s("981631"),
+  i = s("689938");
 
 function r(e) {
-  return null != e && null != e.body && s.default.dispatch({
+  return null != e && null != e.body && n.default.dispatch({
     type: "UPDATE_CONSENTS",
     consents: {
       ...e.body
@@ -21,12 +21,12 @@ function r(e) {
   }), e.body
 }
 
-function o(e) {
+function u(e) {
   let t;
   throw Error(t = e.status >= 500 && e.status <= 599 ? i.default.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED : null != e && null != e.body && null != e.body.message ? e.body.message : i.default.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED)
 }
 
-function u() {
+function o() {
   return a.HTTP.get({
     url: l.Endpoints.SETTINGS_CONSENT,
     oldFormErrors: !0
@@ -41,5 +41,5 @@ function d(e, t) {
       revoke: t
     },
     oldFormErrors: !0
-  }).then(r, o)
+  }).then(r, u)
 }

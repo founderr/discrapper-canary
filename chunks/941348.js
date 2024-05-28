@@ -1,39 +1,39 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("457153"),
-  l = n("254197"),
-  i = n("685689");
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("457153"),
+  l = s("254197"),
+  i = s("685689");
 t.default = function(e) {
   let {
     expandedContentRef: t,
-    expansionSpring: n,
+    expansionSpring: s,
     isExpanded: r,
-    isExpansionAnimationComplete: o,
-    onCtxMenuOpened: u,
+    isExpansionAnimationComplete: u,
+    onCtxMenuOpened: o,
     onCtxMenuClosed: d,
     onCtxMenuSelection: c,
-    quest: f,
-    useReducedMotion: E
+    quest: E,
+    useReducedMotion: _
   } = e;
   return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(s.default, {
+    children: [(0, a.jsx)(n.default, {
       className: i.content,
-      expansionSpring: n,
+      expansionSpring: s,
       isExpanded: r,
-      isExpansionAnimationComplete: o,
-      quest: f,
-      useReducedMotion: E
+      isExpansionAnimationComplete: u,
+      quest: E,
+      useReducedMotion: _
     }), (0, a.jsx)(l.default, {
       className: i.content,
-      onCtxMenuOpen: u,
+      onCtxMenuOpen: o,
       onCtxMenuClose: d,
       onCtxMenuSelect: c,
       isExpanded: r,
-      isExpansionAnimationComplete: o,
-      quest: f,
-      useReducedMotion: E,
+      isExpansionAnimationComplete: u,
+      quest: E,
+      useReducedMotion: _,
       ref: t
     })]
   })

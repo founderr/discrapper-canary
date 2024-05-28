@@ -1,80 +1,80 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
-}), s("47120");
-var n = s("735250"),
-  o = s("470079"),
-  l = s("120356"),
-  a = s.n(l),
-  r = s("481060"),
-  i = s("153124"),
-  u = s("742458"),
-  c = s("766650"),
-  d = s("699359"),
-  h = s("12349");
+}), n("47120");
+var s = n("735250"),
+  r = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
+  i = n("481060"),
+  l = n("153124"),
+  u = n("742458"),
+  c = n("766650"),
+  d = n("699359"),
+  h = n("12349");
 
 function f(e) {
   let {
     alpha2: t,
-    countryCode: s,
-    forceMode: l,
+    countryCode: n,
+    forceMode: a,
     label: f,
-    error: C,
-    className: m,
-    required: p,
+    error: p,
+    className: C,
+    required: m,
     value: x,
     setRef: N,
-    placeholder: v,
-    autoFocus: A,
-    maxLength: g,
-    spellCheck: y,
+    placeholder: g,
+    autoFocus: v,
+    maxLength: y,
+    spellCheck: A,
     autoComplete: j,
-    autoCapitalize: T,
+    autoCapitalize: E,
     autoCorrect: S,
-    onChange: E,
+    onChange: T,
     inputClassName: I
-  } = e, _ = (0, i.useUID)(), [M, O] = o.useState(!1), k = (0, u.shouldShowCountryCodeSelector)(l, x);
-  return (0, n.jsx)(r.FormItem, {
+  } = e, w = (0, l.useUID)(), [O, _] = r.useState(!1), R = (0, u.shouldShowCountryCodeSelector)(a, x);
+  return (0, s.jsx)(i.FormItem, {
     title: f,
-    error: C,
-    className: m,
-    required: p,
+    error: p,
+    className: C,
+    required: m,
     tag: "label",
-    htmlFor: _,
-    children: (0, n.jsxs)("div", {
-      className: a()(h.input, d.input, I, {
-        [h.error]: null != C,
-        [h.focused]: M
+    htmlFor: w,
+    children: (0, s.jsxs)("div", {
+      className: o()(h.input, d.input, I, {
+        [h.error]: null != p,
+        [h.focused]: O
       }),
-      children: [(0, n.jsx)(c.default, {
-        show: k,
+      children: [(0, s.jsx)(c.default, {
+        show: R,
         alpha2: t,
-        countryCode: s
-      }), (0, n.jsx)(r.TextInput, {
-        id: _,
+        countryCode: n
+      }), (0, s.jsx)(i.TextInput, {
+        id: w,
         name: "email",
-        type: l === u.PhoneOrEmailSelectorForceMode.EMAIL ? "email" : "text",
+        type: a === u.PhoneOrEmailSelectorForceMode.EMAIL ? "email" : "text",
         value: x,
         inputRef: N,
-        placeholder: v,
+        placeholder: g,
         "aria-label": f,
-        required: p,
+        required: m,
         onChange: function(e) {
-          let t = (0, u.shouldShowCountryCodeSelector)(l, e) ? s : "";
-          E(e, t)
+          let t = (0, u.shouldShowCountryCodeSelector)(a, e) ? n : "";
+          T(e, t)
         },
         autoComplete: j,
-        autoCapitalize: T,
+        autoCapitalize: E,
         autoCorrect: S,
-        autoFocus: A,
-        maxLength: g,
-        spellCheck: y,
+        autoFocus: v,
+        maxLength: y,
+        spellCheck: A,
         className: d.inputWrapper,
         inputClassName: d.inputField,
-        onFocus: () => O(!0),
-        onBlur: () => O(!1)
+        onFocus: () => _(!0),
+        onBlur: () => _(!1)
       })]
     })
   })

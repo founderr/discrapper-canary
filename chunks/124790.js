@@ -1,43 +1,43 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
-var l = i("735250");
-i("470079");
-var a = i("120356"),
-  s = i.n(a),
-  n = i("797717"),
-  o = i("471885"),
-  r = i("981631"),
-  u = i("656682");
-let d = {
-    [r.BoostedGuildTiers.NONE]: u.iconBackgroundTierNone,
-    [r.BoostedGuildTiers.TIER_1]: u.iconBackgroundTierOne,
-    [r.BoostedGuildTiers.TIER_2]: u.iconBackgroundTierTwo,
-    [r.BoostedGuildTiers.TIER_3]: u.iconBackgroundTierThree
+var r = n("735250");
+n("470079");
+var i = n("120356"),
+  l = n.n(i),
+  s = n("797717"),
+  o = n("471885"),
+  u = n("981631"),
+  a = n("656682");
+let c = {
+    [u.BoostedGuildTiers.NONE]: a.iconBackgroundTierNone,
+    [u.BoostedGuildTiers.TIER_1]: a.iconBackgroundTierOne,
+    [u.BoostedGuildTiers.TIER_2]: a.iconBackgroundTierTwo,
+    [u.BoostedGuildTiers.TIER_3]: a.iconBackgroundTierThree
   },
-  c = {
-    [r.BoostedGuildTiers.NONE]: u.iconTierNone,
-    [r.BoostedGuildTiers.TIER_1]: u.iconTierOne,
-    [r.BoostedGuildTiers.TIER_2]: u.iconTierTwo,
-    [r.BoostedGuildTiers.TIER_3]: u.iconTierThree
+  d = {
+    [u.BoostedGuildTiers.NONE]: a.iconTierNone,
+    [u.BoostedGuildTiers.TIER_1]: a.iconTierOne,
+    [u.BoostedGuildTiers.TIER_2]: a.iconTierTwo,
+    [u.BoostedGuildTiers.TIER_3]: a.iconTierThree
   };
 
 function f(e) {
   let {
     premiumTier: t,
-    iconBackgroundClassName: i,
-    iconClassName: a,
-    size: r
+    iconBackgroundClassName: n,
+    iconClassName: i,
+    size: u
   } = e;
-  return (0, l.jsx)(n.default, {
-    className: s()(i, d[t]),
-    size: r,
-    children: (0, l.jsx)(o.default, {
+  return (0, r.jsx)(s.default, {
+    className: l()(n, c[t]),
+    size: u,
+    children: (0, r.jsx)(o.default, {
       tier: t,
-      className: s()(a, u.boostedGuildIconGem, c[t])
+      className: l()(i, a.boostedGuildIconGem, d[t])
     })
   })
 }

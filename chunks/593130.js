@@ -32,9 +32,9 @@ function _(e) {
     onClose: r
   } = e, o = (0, u.useStateFromStores)([i.default], () => i.default.can(v.Permissions.READ_MESSAGE_HISTORY, t)), _ = (0, m.useCanStartThread)(t), M = () => {
     r(), (0, E.openThreadSidebarForCreating)(t, void 0, "Thread Browser Empty State")
-  }, H = l.useCallback((e, t) => {
+  }, A = l.useCallback((e, t) => {
     r(), (0, E.openThreadSidebarForViewing)(e, !t, S.OpenThreadAnalyticsLocations.BROWSER)
-  }, [r]), A = function(e, t) {
+  }, [r]), H = function(e, t) {
     let [a, s] = l.useState(""), [r, n] = l.useState(!1), [u, d] = l.useState(!1), [i, o] = l.useState([]), c = async () => {
       if (null != a && "" !== a) {
         if (!r) {
@@ -76,7 +76,7 @@ function _(e) {
           children: [(0, s.jsx)("div", {
             className: N.divider
           }), (0, s.jsx)(R, {
-            ...A
+            ...H
           })]
         }) : null, (0, s.jsx)("div", {
           className: N.spacer
@@ -94,15 +94,15 @@ function _(e) {
           children: (0, s.jsx)(c.default, {})
         })]
       }),
-      children: A.hasResults ? (0, s.jsx)(g.default, {
+      children: H.hasResults ? (0, s.jsx)(g.default, {
         channel: t,
         startThread: M,
-        goToThread: H,
-        threadIds: A.results
+        goToThread: A,
+        threadIds: H.results
       }) : (0, s.jsx)(C.default, {
         channel: t,
         startThread: M,
-        goToThread: H
+        goToThread: A
       })
     })
   })

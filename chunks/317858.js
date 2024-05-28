@@ -15,20 +15,20 @@ var a = n("470079"),
   c = n("699516"),
   f = n("340895"),
   E = n("358085"),
-  h = n("998502"),
-  _ = n("252618"),
-  C = n("981631"),
-  m = n("689938");
-let S = new Set(["Blink", "Gecko", "WebKit"]),
-  p = C.NOOP;
-if (E.isPlatformEmbedded) p = e => h.default.setBadge(e);
-else if (S.has(r().layout)) {
+  C = n("998502"),
+  h = n("252618"),
+  _ = n("981631"),
+  S = n("689938");
+let m = new Set(["Blink", "Gecko", "WebKit"]),
+  p = _.NOOP;
+if (E.isPlatformEmbedded) p = e => C.default.setBadge(e);
+else if (m.has(r().layout)) {
   let e = new(l())({
     animation: "none"
   });
   p = t => {
     try {
-      (0, _.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
+      (0, h.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
     } catch (e) {}
   }
 }
@@ -45,9 +45,9 @@ function I() {
     });
   a.useEffect(() => {
     if (!e) return;
-    let t = h.default.bounceDock("critical"),
-      n = (0, _.flashPageTitle)({
-        messages: [m.default.Messages.INCOMING_CALL],
+    let t = C.default.bounceDock("critical"),
+      n = (0, h.flashPageTitle)({
+        messages: [S.default.Messages.INCOMING_CALL],
         count: 50
       });
     return () => {

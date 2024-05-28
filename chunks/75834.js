@@ -1,48 +1,48 @@
     "use strict";
-    a.r(t), a.d(t, {
+    t.r(a), t.d(a, {
       getInitialStreamTarget: function() {
-        return n
+        return c
       },
       getStreamTarget: function() {
         return i
       }
-    }), a("47120");
-    var d = a("823379");
+    }), t("47120");
+    var d = t("823379");
 
-    function n(e, t) {
-      let a = e.find(e => e.processId === t);
-      return null == a ? null : i(e, a)
+    function c(e, a) {
+      let t = e.find(e => e.processId === a);
+      return null == t ? null : i(e, t)
     }
-    let c = "356869127241072640";
+    let n = "356869127241072640";
 
-    function i(e, t) {
-      var a;
-      if (null == t) return null;
-      if (t.applicationId === c) return function(e, t) {
-        let a = t.processPath.length > 1 ? t.processPath[t.processPath.length - 2] : 0,
-          d = e.filter(e => e.applicationId === c && e.processPath.includes(a)),
-          n = d.find(e => "league of legends.exe" === e.executableName);
-        return void 0 !== n ? n : d.length > 0 ? d[0] : null
-      }(e, t);
-      let n = new Map(e.map(e => [e.processId, e])),
-        i = t.processPath.map(e => n.get(e)).find(e => null != e);
+    function i(e, a) {
+      var t;
+      if (null == a) return null;
+      if (a.applicationId === n) return function(e, a) {
+        let t = a.processPath.length > 1 ? a.processPath[a.processPath.length - 2] : 0,
+          d = e.filter(e => e.applicationId === n && e.processPath.includes(t)),
+          c = d.find(e => "league of legends.exe" === e.executableName);
+        return void 0 !== c ? c : d.length > 0 ? d[0] : null
+      }(e, a);
+      let c = new Map(e.map(e => [e.processId, e])),
+        i = a.processPath.map(e => c.get(e)).find(e => null != e);
       if (null == i) return null;
-      let r = e.map(e => {
-        let t = e.processPath.findIndex(e => n.has(e));
-        return -1 === t ? null : {
+      let o = e.map(e => {
+        let a = e.processPath.findIndex(e => c.has(e));
+        return -1 === a ? null : {
           application: e,
-          rootedPath: e.processPath.slice(t)
+          rootedPath: e.processPath.slice(a)
         }
       }).filter(d.isNotNullish).filter(e => e.rootedPath[0] === i.processId);
-      r.sort((e, t) => {
-        let a = e.rootedPath.map(e => n.get(e)).filter(e => null != e && null != e.windowHandle),
-          d = o(t.rootedPath.map(e => n.get(e)).filter(e => null != e && null != e.windowHandle), a);
-        return 0 !== d ? d : o(t.rootedPath, e.rootedPath)
+      o.sort((e, a) => {
+        let t = e.rootedPath.map(e => c.get(e)).filter(e => null != e && null != e.windowHandle),
+          d = f(a.rootedPath.map(e => c.get(e)).filter(e => null != e && null != e.windowHandle), t);
+        return 0 !== d ? d : f(a.rootedPath, e.rootedPath)
       });
-      let f = null !== (a = r.find(e => null != e.application.windowHandle)) && void 0 !== a ? a : r[0];
-      return null == f ? null : f.application
+      let r = null !== (t = o.find(e => null != e.application.windowHandle)) && void 0 !== t ? t : o[0];
+      return null == r ? null : r.application
     }
 
-    function o(e, t) {
-      return e.length - t.length
+    function f(e, a) {
+      return e.length - a.length
     }

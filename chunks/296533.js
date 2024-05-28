@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return M
   },
   default: function() {
-    return v
+    return L
   }
 }), s("653041"), s("47120");
 var a = s("735250"),
@@ -22,12 +22,12 @@ var a = s("735250"),
   _ = s("267642"),
   f = s("709054"),
   m = s("357956"),
-  g = s("275909"),
-  I = s("300037"),
+  I = s("275909"),
+  g = s("300037"),
   N = s("981631"),
   h = s("474936"),
   C = s("689938"),
-  p = s("441083");
+  O = s("441083");
 
 function A(e) {
   let {
@@ -79,7 +79,7 @@ function A(e) {
     }
   });
   return o || t === N.BoostedGuildTiers.NONE ? (0, a.jsx)("div", {
-    className: p.boostDescriptionInnerContainer,
+    className: O.boostDescriptionInnerContainer,
     children: (0, a.jsx)(r.Text, {
       variant: "text-sm/medium",
       color: "text-muted",
@@ -87,7 +87,7 @@ function A(e) {
     })
   }) : S((e, t) => (0, a.jsx)(l.animated.div, {
     style: e,
-    className: p.boostDescriptionInnerContainer,
+    className: O.boostDescriptionInnerContainer,
     children: (0, a.jsx)(r.Text, {
       variant: "text-sm/medium",
       color: "text-muted",
@@ -96,7 +96,7 @@ function A(e) {
   }))
 }
 
-function O(e) {
+function p(e) {
   let {
     guildTier: t,
     guildBoostSlot: s,
@@ -104,19 +104,19 @@ function O(e) {
     hasCancelableGuildBoostSlot: d,
     showAltText: c,
     isLastGuildBoostSlot: S
-  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), f = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), I = n.useMemo(() => null != f && f > new Date, [f]), N = (0, _.isGuildBoostSlotCanceled)(s);
+  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), f = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), g = n.useMemo(() => null != f && f > new Date, [f]), N = (0, _.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
-    className: p.boostContainer,
+    className: O.boostContainer,
     children: [(0, a.jsxs)("div", {
-      className: p.boostInnerContainer,
-      children: [(0, a.jsx)(g.default, {
+      className: O.boostInnerContainer,
+      children: [(0, a.jsx)(I.default, {
         isCanceled: N,
-        hasCooldown: I,
+        hasCooldown: g,
         useReducedMotion: E
       }), (0, a.jsx)("div", {
-        className: p.boostDescriptionContainer,
-        children: null != f && I && !N ? (0, a.jsx)(m.default, {
-          className: p.boostDescriptionInnerContainer,
+        className: O.boostDescriptionContainer,
+        children: null != f && g && !N ? (0, a.jsx)(m.default, {
+          className: O.boostDescriptionInnerContainer,
           cooldown: f.getTime()
         }) : (0, a.jsx)(A, {
           guildTier: t,
@@ -142,17 +142,17 @@ function O(e) {
         children: e => (0, a.jsx)(r.Clickable, {
           ...e,
           "aria-label": C.default.Messages.MORE_OPTIONS,
-          className: p.boostSlotMenuIcon,
+          className: O.boostSlotMenuIcon,
           children: (0, a.jsx)(T.default, {})
         })
       })]
     }), !S && (0, a.jsx)("div", {
-      className: p.boostContainerSeparator
+      className: O.boostContainerSeparator
     })]
   })
 }
 
-function x(e) {
+function R(e) {
   let {
     guildId: t,
     guildBoostSlotRecords: s,
@@ -161,11 +161,11 @@ function x(e) {
     showAltText: r
   } = e, o = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
   return (0, a.jsxs)("div", {
-    className: p.appliedBoostContainer,
-    children: [(0, a.jsx)(I.default, {
+    className: O.appliedBoostContainer,
+    children: [(0, a.jsx)(g.default, {
       guildId: t,
       boostingVariant: !1
-    }), s.map((e, t) => (0, a.jsx)(O, {
+    }), s.map((e, t) => (0, a.jsx)(p, {
       guildTier: null == o ? void 0 : o.premiumTier,
       guildBoostSlot: e,
       premiumSubscription: n,
@@ -176,7 +176,7 @@ function x(e) {
   })
 }
 
-function R(e) {
+function x(e) {
   let {
     guildId: t,
     appliedGuildBoosts: s,
@@ -196,11 +196,11 @@ function R(e) {
     cooldown_ends_at: null
   }, n);
   return (0, a.jsxs)("div", {
-    className: p.appliedBoostContainer,
-    children: [(0, a.jsx)(I.default, {
+    className: O.appliedBoostContainer,
+    children: [(0, a.jsx)(g.default, {
       guildId: t,
       boostingVariant: !1
-    }), s.map((e, t) => (0, a.jsx)(O, {
+    }), s.map((e, t) => (0, a.jsx)(p, {
       guildTier: null == l ? void 0 : l.premiumTier,
       guildBoostSlot: o,
       premiumSubscription: n,
@@ -223,21 +223,21 @@ function M(e) {
     }), e
   }, [t]);
   return null == s || 0 === t.length ? null : (0, a.jsxs)("div", {
-    className: p.wrapper,
+    className: O.wrapper,
     children: [(0, a.jsx)("div", {
-      className: p.container,
-      children: f.default.keys(l).map(e => (0, a.jsx)(R, {
+      className: O.container,
+      children: f.default.keys(l).map(e => (0, a.jsx)(x, {
         guildId: e,
         premiumSubscription: s,
         appliedGuildBoosts: l[e]
       }, e))
     }), (0, a.jsx)("div", {
-      className: p.mainSeparator
+      className: O.mainSeparator
     })]
   })
 }
 
-function v(e) {
+function L(e) {
   let {
     guildBoostSlots: t,
     premiumSubscription: s
@@ -270,10 +270,10 @@ function v(e) {
   if (null == s || 0 === Object.keys(o).length) return null;
   let S = u > (0, d.getNumIncludedAndTenureRewardPremiumGuildSubscriptionSlots)(s, r);
   return (0, a.jsxs)("div", {
-    className: p.wrapper,
+    className: O.wrapper,
     children: [(0, a.jsx)("div", {
-      className: p.container,
-      children: f.default.keys(o).map(e => (0, a.jsx)(x, {
+      className: O.container,
+      children: f.default.keys(o).map(e => (0, a.jsx)(R, {
         guildId: e,
         guildBoostSlotRecords: o[e],
         premiumSubscription: s,
@@ -281,7 +281,7 @@ function v(e) {
         showAltText: l
       }, e))
     }), (0, a.jsx)("div", {
-      className: p.mainSeparator
+      className: O.mainSeparator
     })]
   })
 }

@@ -15,52 +15,52 @@ var a = s("735250"),
   _ = s("689773"),
   f = s("481060"),
   m = s("384275"),
-  g = s("230711"),
-  I = s("497321"),
+  I = s("230711"),
+  g = s("497321"),
   N = s("468026"),
   h = s("566620"),
   C = s("317381"),
-  p = s("979200"),
+  O = s("979200"),
   A = s("713938"),
-  O = s("881998"),
-  x = s("246946"),
-  R = s("186095"),
+  p = s("881998"),
+  R = s("246946"),
+  x = s("186095"),
   M = s("285952"),
-  v = s("6048"),
+  L = s("6048"),
   D = s("950463"),
-  L = s("507893"),
-  P = s("768581"),
+  P = s("507893"),
+  v = s("768581"),
   b = s("49012"),
   j = s("210887"),
   U = s("436267"),
-  y = s("494620"),
-  G = s("981631"),
+  G = s("494620"),
+  F = s("981631"),
   B = s("689938"),
-  F = s("338009"),
+  y = s("338009"),
   k = s("611273");
-let w = u.default.connectStores([j.default], () => ({
+let V = u.default.connectStores([j.default], () => ({
   theme: j.default.theme
-}))(R.default);
+}))(x.default);
 
 function H(e) {
   let {
     application: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: F.twoWayWarning,
-    children: [(0, a.jsx)(L.default, {
-      className: F.twoWayWarningIcon
+    className: y.twoWayWarning,
+    children: [(0, a.jsx)(P.default, {
+      className: y.twoWayWarningIcon
     }), (0, a.jsx)(f.Text, {
       color: "text-normal",
       variant: "text-sm/medium",
       children: B.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
         applicationName: t.name,
-        onConnectionPress: () => g.default.setSection(G.AnalyticsSections.SETTINGS_CONNECTIONS)
+        onConnectionPress: () => I.default.setSection(F.AnalyticsSections.SETTINGS_CONNECTIONS)
       })
     })]
   })
 }
-let V = e => {
+let w = e => {
     let {
       disclosure: t
     } = e;
@@ -68,15 +68,15 @@ let V = e => {
       switch (t) {
         case c.ApplicationDisclosureType.IP_LOCATION:
           return (0, a.jsx)(D.default, {
-            className: F.disclosureIcon
+            className: y.disclosureIcon
           });
         case c.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS:
           return (0, a.jsx)(T.EmbedIcon, {
-            className: F.disclosureIcon
+            className: y.disclosureIcon
           });
         default:
           return (0, a.jsx)(E.CircleInformationIcon, {
-            className: F.disclosureIcon
+            className: y.disclosureIcon
           })
       }
     }, [t])
@@ -90,8 +90,8 @@ let V = e => {
     } = e, r = () => {
       let e = B.default.Messages.DELETE_APP_CONFIRM_MSG;
       return (0, U.default)(s.id) && (e = (0, a.jsxs)(a.Fragment, {
-        children: [e, (0, a.jsx)(y.default, {
-          className: F.infoBox,
+        children: [e, (0, a.jsx)(G.default, {
+          className: y.infoBox,
           children: B.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
             applicationName: s.name
           })
@@ -116,16 +116,16 @@ let V = e => {
       })
     }, c = (0, U.useShouldWarnAuthorizedAppTwoWay)(s.id);
     return (0, a.jsx)(f.Card, {
-      className: i()(F.authedApp, k.marginBottom8),
+      className: i()(y.authedApp, k.marginBottom8),
       outline: !0,
       children: (0, a.jsxs)(f.HeadingLevel, {
         component: (() => {
-          let e = P.default.getApplicationIconURL({
+          let e = v.default.getApplicationIconURL({
               id: s.id,
               icon: s.icon
             }),
             t = null != e ? (0, a.jsx)(M.default.Child, {
-              className: F.appAvatar,
+              className: y.appAvatar,
               grow: 0,
               children: (0, a.jsx)("img", {
                 src: e,
@@ -133,9 +133,9 @@ let V = e => {
               })
             }) : null;
           return (0, a.jsxs)(M.default, {
-            className: i()(F.__invalid_header, k.marginBottom20),
+            className: i()(y.__invalid_header, k.marginBottom20),
             children: [(0, a.jsxs)(M.default, {
-              className: F.headerInfo,
+              className: y.headerInfo,
               children: [t, (0, a.jsx)(M.default.Child, {
                 children: (0, a.jsx)(f.Heading, {
                   variant: "text-sm/semibold",
@@ -146,7 +146,7 @@ let V = e => {
               wrap: !0,
               grow: 0,
               children: (0, a.jsx)(f.Button, {
-                className: F.deleteApp,
+                className: y.deleteApp,
                 color: f.ButtonColors.RED,
                 look: f.ButtonLooks.OUTLINED,
                 size: f.ButtonSizes.SMALL,
@@ -166,31 +166,31 @@ let V = e => {
           })
         })(), (() => {
           if (null != s.terms_of_service_url || null != s.privacy_policy_url) return (0, a.jsxs)("div", {
-            className: F.tosPrivacy,
+            className: y.tosPrivacy,
             children: [null != s.terms_of_service_url ? (0, a.jsxs)(S.Clickable, {
               tag: "a",
               onClick: o,
-              className: F.tos,
+              className: y.tos,
               children: [(0, a.jsx)(f.FormText, {
-                className: F.link,
+                className: y.link,
                 children: B.default.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
               }), (0, a.jsx)(_.LinkExternalSmallIcon, {
-                className: F.externalLinkIcon,
+                className: y.externalLinkIcon,
                 color: "var(--text-link)"
               })]
             }) : null, null != s.privacy_policy_url ? (0, a.jsxs)("div", {
-              className: F.privacy,
+              className: y.privacy,
               children: [null != s.terms_of_service_url ? (0, a.jsx)("div", {
-                className: F.divider
+                className: y.divider
               }) : null, (0, a.jsxs)(S.Clickable, {
                 tag: "a",
                 onClick: u,
-                className: F.privacy,
+                className: y.privacy,
                 children: [(0, a.jsx)(f.FormText, {
-                  className: F.link,
+                  className: y.link,
                   children: B.default.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
                 }), (0, a.jsx)(_.LinkExternalSmallIcon, {
-                  className: F.externalLinkIcon,
+                  className: y.externalLinkIcon,
                   color: "var(--text-link)"
                 })]
               })]
@@ -205,17 +205,17 @@ let V = e => {
             className: k.marginTop20,
             children: (0, a.jsxs)("ul", {
               children: [e.map((e, t) => (0, a.jsxs)("li", {
-                className: i()(F.permission, k.marginTop8),
+                className: i()(y.permission, k.marginTop8),
                 children: [(0, a.jsx)("i", {
-                  className: F.permissionCheckmark
+                  className: y.permissionCheckmark
                 }), (0, a.jsx)(f.FormText, {
                   children: e
                 })]
               }, t)), null == l ? void 0 : l.map((t, s) => {
-                let n = (0, p.getTextForDisclosure)(t);
+                let n = (0, O.getTextForDisclosure)(t);
                 return null != n ? (0, a.jsxs)("li", {
-                  className: i()(F.permission, k.marginTop8),
-                  children: [(0, a.jsx)(V, {
+                  className: i()(y.permission, k.marginTop8),
+                  children: [(0, a.jsx)(w, {
                     disclosure: t
                   }), (0, a.jsx)(f.FormText, {
                     children: n
@@ -231,8 +231,8 @@ let V = e => {
     })
   };
 t.default = () => {
-  let e = (0, u.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
-    t = (0, u.useStateFromStores)([O.default], () => O.default.getApps()),
+  let e = (0, u.useStateFromStores)([R.default], () => R.default.hidePersonalInformation),
+    t = (0, u.useStateFromStores)([p.default], () => p.default.getApps()),
     l = (0, u.useStateFromStores)([C.default], () => C.default.getSelfEmbeddedActivities());
   n.useEffect(() => {
     m.default.fetch()
@@ -257,9 +257,9 @@ t.default = () => {
       d("")
     },
     E = () => (0, a.jsx)("div", {
-      className: F.searchContainer,
-      children: (0, a.jsx)(v.default, {
-        size: v.default.Sizes.MEDIUM,
+      className: y.searchContainer,
+      children: (0, a.jsx)(L.default, {
+        size: L.default.Sizes.MEDIUM,
         query: r,
         onChange: c,
         onClear: S,
@@ -267,14 +267,14 @@ t.default = () => {
         "aria-label": B.default.Messages.INTEGRATIONS_SEARCH
       })
     }),
-    T = (e, t) => (0, a.jsxs)(w, {
-      className: F.__invalid_marginTop20,
-      children: [(0, a.jsx)(R.EmptyStateImage, {
+    T = (e, t) => (0, a.jsxs)(V, {
+      className: y.__invalid_marginTop20,
+      children: [(0, a.jsx)(x.EmptyStateImage, {
         darkSrc: s("701972"),
         lightSrc: s("818658"),
         width: 380,
         height: 282
-      }), (0, a.jsx)(R.EmptyStateText, {
+      }), (0, a.jsx)(x.EmptyStateText, {
         note: e,
         children: t
       })]
@@ -283,7 +283,7 @@ t.default = () => {
       let e = r.trim().toLowerCase();
       return "" === e || null == t ? t : t.length < 100 ? t.filter(t => o()(e, t.application.name.toLowerCase())) : t.filter(t => t.application.name.toLowerCase().includes(e))
     }, [t, r]);
-  return e ? (0, a.jsx)(I.default, {}) : (0, a.jsx)(f.FormSection, {
+  return e ? (0, a.jsx)(g.default, {}) : (0, a.jsx)(f.FormSection, {
     tag: f.FormTitleTags.H1,
     title: B.default.Messages.AUTHORIZED_APPS,
     children: (0, a.jsx)(f.HeadingLevel, {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return v
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -154,7 +154,7 @@ class A extends l.PureComponent {
   }
 }
 
-function N(e) {
+function v(e) {
   var t, n;
   let {
     participants: l,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return C
   }
 });
 var a = n("735250");
@@ -17,24 +17,24 @@ var s = n("100527"),
   f = n("689938"),
   E = n("420569");
 
-function h(e) {
+function C(e) {
   let {
     guild: t,
     markAsDismissed: n
-  } = e, h = (0, o.getNumberOfAppliedBoostsNeededForTier)(t, u.BoostedGuildTiers.TIER_2), {
-    analyticsLocations: _
+  } = e, C = (0, o.getNumberOfAppliedBoostsNeededForTier)(t, u.BoostedGuildTiers.TIER_2), {
+    analyticsLocations: h
   } = (0, l.default)(s.default.GUILD_BANNER_NOTICE);
   return (0, a.jsx)(i.default, {
     guild: t,
     onDismissed: () => n(d.ContentDismissActionType.UNKNOWN),
     cta: f.default.Messages.GUILD_BANNER_NOTICE_CTA,
     message: f.default.Messages.GUILD_BANNER_NOTICE.format({
-      boostsNeeded: h
+      boostsNeeded: C
     }),
     type: u.ChannelNoticeTypes.GUILD_BANNER,
     image: E,
     onClick: () => (0, r.default)({
-      analyticsLocations: _,
+      analyticsLocations: h,
       analyticsSourceLocation: {
         section: u.AnalyticsSections.CHANNEL_NOTICE,
         object: u.AnalyticsObjects.SERVER_BANNER_TOOLTIP

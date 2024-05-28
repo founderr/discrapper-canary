@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   JSONTree: function() {
-    return j
+    return x
   }
 });
 var a = r("599295"),
@@ -10,15 +10,15 @@ var a = r("599295"),
   o = r("157680"),
   i = r("337309"),
   u = r("774375"),
-  c = r("748024"),
-  l = r("692378"),
+  l = r("748024"),
+  c = r("692378"),
   f = r("922474"),
   b = r("470079"),
   d = r.n(b),
   h = r("639519"),
   p = r.n(h),
-  y = r("852153"),
-  g = r("140201"),
+  g = r("852153"),
+  y = r("140201"),
   v = r("667929"),
   m = ["data", "keyPath", "postprocessValue", "hideRoot", "theme", "invertTheme"];
 
@@ -33,18 +33,18 @@ function O(e, t) {
   return r
 }
 
-function k(e) {
+function w(e) {
   for (var t = 1; t < arguments.length; t++) {
     var r = null != arguments[t] ? arguments[t] : {};
     t % 2 ? O(Object(r), !0).forEach(function(t) {
-      (0, l.default)(e, t, r[t])
+      (0, c.default)(e, t, r[t])
     }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : O(Object(r)).forEach(function(t) {
       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t))
     })
   }
   return e
 }
-var w = function(e) {
+var k = function(e) {
   return e
 };
 
@@ -59,21 +59,21 @@ function E(e) {
     return r[e]
   })).length > 0 && (t = "string" == typeof t ? {
     extend: t
-  } : k({}, t), n.forEach(function(e) {
+  } : w({}, t), n.forEach(function(e) {
     console.error('Styling method "'.concat(e, '" is deprecated, use "theme" property instead')), t[a[e]] = function(t) {
       for (var a = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++) s[o - 1] = arguments[o];
       return {
-        style: k(k({}, a), r[e].apply(r, s))
+        style: w(w({}, a), r[e].apply(r, s))
       }
     }
   })), t);
   return e.invertTheme && (s = (0, v.invertTheme)(s)), {
-    styling: (0, g.default)(s)
+    styling: (0, y.default)(s)
   }
 }
-var j = function(e) {
+var x = function(e) {
   (0, i.default)(f, e);
-  var t, r, l = (t = f, r = function() {
+  var t, r, c = (t = f, r = function() {
     if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
     try {
@@ -82,9 +82,9 @@ var j = function(e) {
       return !1
     }
   }(), function() {
-    var e, a = (0, c.default)(t);
+    var e, a = (0, l.default)(t);
     if (r) {
-      var n = (0, c.default)(this).constructor;
+      var n = (0, l.default)(this).constructor;
       e = Reflect.construct(a, arguments, n)
     } else e = a.apply(this, arguments);
     return (0, u.default)(this, e)
@@ -92,7 +92,7 @@ var j = function(e) {
 
   function f(e) {
     var t;
-    return (0, s.default)(this, f), (t = l.call(this, e)).state = E(e), t
+    return (0, s.default)(this, f), (t = c.call(this, e)).state = E(e), t
   }
   return (0, o.default)(f, [{
     key: "UNSAFE_componentWillReceiveProps",
@@ -120,7 +120,7 @@ var j = function(e) {
         o = e.hideRoot,
         i = (e.theme, e.invertTheme, (0, n.default)(e, m)),
         u = this.state.styling;
-      return d().createElement("ul", u("tree"), d().createElement(y.default, (0, a.default)({}, k({
+      return d().createElement("ul", u("tree"), d().createElement(g.default, (0, a.default)({}, w({
         postprocessValue: s,
         hideRoot: o,
         styling: u
@@ -131,7 +131,7 @@ var j = function(e) {
     }
   }]), f
 }(d().Component);
-(0, l.default)(j, "propTypes", {
+(0, c.default)(x, "propTypes", {
   data: p().any,
   hideRoot: p().bool,
   theme: p().oneOfType([p().object, p().string]),
@@ -139,7 +139,7 @@ var j = function(e) {
   keyPath: p().arrayOf(p().oneOfType([p().string, p().number])),
   postprocessValue: p().func,
   sortObjectKeys: p().oneOfType([p().func, p().bool])
-}), (0, l.default)(j, "defaultProps", {
+}), (0, c.default)(x, "defaultProps", {
   shouldExpandNode: function(e, t, r) {
     return 0 === r
   },
@@ -152,8 +152,8 @@ var j = function(e) {
     var t = (0, f.default)(e, 1)[0];
     return d().createElement("span", null, t, ":")
   },
-  valueRenderer: w,
-  postprocessValue: w,
+  valueRenderer: k,
+  postprocessValue: k,
   isCustomNode: function() {
     return !1
   },

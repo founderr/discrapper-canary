@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,26 +15,26 @@ var a = n("735250"),
   c = n("153124"),
   f = n("981631"),
   E = n("689938"),
-  h = n("573352");
+  C = n("573352");
 
-function _(e) {
+function h(e) {
   let {
     transitionState: t
-  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [C, m] = s.useState(!1), S = (0, c.useUID)();
+  } = e, h = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [_, S] = s.useState(!1), m = (0, c.useUID)();
   async function p() {
-    return m(!0), _ === f.UserRequiredActions.AGREEMENTS && m(await (0, o.acceptAgreements)()), null
+    return S(!0), h === f.UserRequiredActions.AGREEMENTS && S(await (0, o.acceptAgreements)()), null
   }
   return (0, u.default)({
     type: l.ImpressionTypes.VIEW,
     name: l.ImpressionNames.USER_AGREEMENTS,
     properties: {
-      required_action: _
+      required_action: h
     }
   }, {}, []), (0, a.jsxs)(r.ModalRoot, {
-    "aria-labelledby": S,
+    "aria-labelledby": m,
     transitionState: t,
     children: [(0, a.jsx)("div", {
-      id: S
+      id: m
     }), (0, a.jsx)(r.ModalHeader, {
       separator: !1,
       children: (0, a.jsx)(r.Heading, {
@@ -44,11 +44,11 @@ function _(e) {
     }), (0, a.jsxs)(r.ModalContent, {
       children: [(0, a.jsx)(r.Text, {
         variant: "text-md/normal",
-        children: _ === f.UserRequiredActions.AGREEMENTS ? E.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+        children: h === f.UserRequiredActions.AGREEMENTS ? E.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
       }), (0, a.jsxs)("div", {
-        className: h.container,
+        className: C.container,
         children: [(0, a.jsxs)("ul", {
-          className: h.links,
+          className: C.links,
           children: [(0, a.jsx)("li", {
             children: E.default.Messages.TERMS_OF_SERVICE.format({
               url: f.MarketingURLs.TERMS
@@ -67,18 +67,18 @@ function _(e) {
             })
           })]
         }), (0, a.jsx)("img", {
-          className: h.image,
+          className: C.image,
           alt: "",
           src: n("146714")
         })]
       }), (0, a.jsx)(r.Text, {
         variant: "text-md/normal",
-        className: h.agreementDescription,
+        className: C.agreementDescription,
         children: E.default.Messages.TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION
       })]
     }), (0, a.jsx)(r.ModalFooter, {
       children: (0, a.jsx)(r.Button, {
-        submitting: C,
+        submitting: _,
         onClick: p,
         color: r.Button.Colors.GREEN,
         children: E.default.Messages.AGREE

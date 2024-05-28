@@ -20,17 +20,17 @@ t.default = function(e) {
   let {
     children: t,
     onClose: n
-  } = e, h = s.useCallback(() => {
+  } = e, C = s.useCallback(() => {
     (0, u.setClanDiscoveryMode)(u.ClanDiscoveryMode.DISCOVERY), null == n || n()
   }, [n]);
   s.useEffect(() => {
     let e = e => {
-      e.key === d.KeyboardKeysUpdated.ESCAPE && h()
+      e.key === d.KeyboardKeysUpdated.ESCAPE && C()
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
-  }, [h]);
-  let _ = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion),
-    C = (0, l.useSpring)({
+  }, [C]);
+  let h = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion),
+    _ = (0, l.useSpring)({
       from: {
         opacity: 0
       },
@@ -39,22 +39,22 @@ t.default = function(e) {
       },
       config: E,
       delay: 500,
-      immediate: _
+      immediate: h
     });
   return (0, a.jsxs)("div", {
     className: f.container,
     children: [(0, a.jsx)("div", {
       className: f.saveContainer,
       children: (0, a.jsx)(r.Button, {
-        onClick: h,
+        onClick: C,
         look: r.ButtonLooks.OUTLINED,
         color: r.ButtonColors.PRIMARY,
         children: c.default.Messages.SAVE
       })
     }), (0, a.jsx)(l.animated.div, {
       style: {
-        opacity: C.opacity,
-        transform: C.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
+        opacity: _.opacity,
+        transform: _.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
       },
       className: f.contentWrapper,
       children: (0, a.jsx)(r.Scroller, {

@@ -1,28 +1,28 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   getSecondsSliderLabel: function() {
-    return i
+    return s
   }
 });
-var s = l("913527"),
-  a = l.n(s),
-  n = l("689938");
+var i = n("913527"),
+  a = n.n(i),
+  l = n("689938");
 
-function i(e) {
+function s(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n.default.Messages.FORM_LABEL_OFF,
-    s = a().duration(e, "seconds");
-  if (s.days() > 0) return (t ? n.default.Messages.DURATION_DAYS_SHORT : n.default.Messages.DURATION_DAYS).format({
-    days: s.days()
+    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.default.Messages.FORM_LABEL_OFF,
+    i = a().duration(e, "seconds");
+  if (i.days() > 0) return (t ? l.default.Messages.DURATION_DAYS_SHORT : l.default.Messages.DURATION_DAYS).format({
+    days: i.days()
   });
-  if (s.hours() > 0) return (t ? n.default.Messages.DURATION_HOURS_SHORT : n.default.Messages.DURATION_HOURS).format({
-    hours: s.hours()
+  if (i.hours() > 0) return (t ? l.default.Messages.DURATION_HOURS_SHORT : l.default.Messages.DURATION_HOURS).format({
+    hours: i.hours()
   });
-  if (s.minutes() > 0) return (t ? n.default.Messages.DURATION_MINUTES_SHORT : n.default.Messages.DURATION_MINUTES).format({
-    minutes: s.minutes()
+  if (i.minutes() > 0) return (t ? l.default.Messages.DURATION_MINUTES_SHORT : l.default.Messages.DURATION_MINUTES).format({
+    minutes: i.minutes()
   });
-  else if (e > 0) return (t ? n.default.Messages.DURATION_SECONDS_SHORT : n.default.Messages.DURATION_SECONDS).format({
-    seconds: s.seconds()
+  else if (e > 0) return (t ? l.default.Messages.DURATION_SECONDS_SHORT : l.default.Messages.DURATION_SECONDS).format({
+    seconds: i.seconds()
   });
-  else return t ? n.default.Messages.FORM_LABEL_OFF : l
+  else return t ? l.default.Messages.FORM_LABEL_OFF : n
 }

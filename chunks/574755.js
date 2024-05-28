@@ -19,45 +19,45 @@ var a = s("735250"),
   _ = s("779618"),
   f = s("39604"),
   m = s("703288"),
-  g = s("491758"),
-  I = s("183632"),
+  I = s("491758"),
+  g = s("183632"),
   N = s("689938"),
   h = s("477716"),
   C = s("151501"),
-  p = s("611273");
+  O = s("611273");
 
 function A(e) {
   let {
     className: t,
     showHeader: s = !0
   } = e, A = c.ClipsAllowVoiceRecording.useSetting(), {
-    enableViewerClipping: O
+    enableViewerClipping: p
   } = u.default.useExperiment({
     location: "Clips Settings"
   }, {
     autoTrackExposure: !1
   }), {
-    analyticsLocations: x
-  } = (0, o.default)(), R = (0, E.useEnableClips)(), {
+    analyticsLocations: R
+  } = (0, o.default)(), x = (0, E.useEnableClips)(), {
     viewerClipsEnabled: M
-  } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()), v = (0, _.default)(S.default);
+  } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()), L = (0, _.default)(S.default);
   return n.useEffect(() => {
     (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
   }), (0, a.jsxs)(o.AnalyticsLocationProvider, {
-    value: x,
-    children: [(R || s) && (0, a.jsx)(r.FormSection, {
+    value: R,
+    children: [(x || s) && (0, a.jsx)(r.FormSection, {
       className: t,
       tag: r.FormTitleTags.H1,
       title: s ? (0, a.jsxs)("div", {
         className: h.headerContainer,
         children: [N.default.Messages.CLIPS, (0, a.jsx)(m.default, {})]
       }) : null,
-      children: R && (0, a.jsxs)("form", {
+      children: x && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(I.default, {})]
+        children: [(0, a.jsx)(I.default, {}), (0, a.jsx)(g.default, {})]
       })
-    }), R && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: s || R ? p.marginTop20 : t,
+    }), x && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
+      className: s || x ? O.marginTop20 : t,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: C.formItem,
@@ -67,7 +67,7 @@ function A(e) {
           allowVoiceRecording: e
         }),
         children: N.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
-      }), O && v && (0, a.jsx)(r.FormSwitch, {
+      }), p && L && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: C.formItem,
         value: M,

@@ -24,19 +24,19 @@ function m() {
   var e, t, n;
   let {
     enabled: m,
-    autoToggle: g,
-    hideInstantInvites: I,
+    autoToggle: I,
+    hideInstantInvites: g,
     hidePersonalInformation: N,
     disableSounds: h,
     disableNotifications: C,
-    enableContentProtection: p
+    enableContentProtection: O
   } = (0, i.useStateFromStoresObject)([c.default], () => ({
     ...c.default.getSettings()
   })), A = (e, t) => {
     o.default.update({
       [e]: t
     })
-  }, O = null !== (n = null === u.default || void 0 === u.default ? void 0 : null === (t = u.default.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
+  }, p = null !== (n = null === u.default || void 0 === u.default ? void 0 : null === (t = u.default.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
   return (0, a.jsxs)(r.FormSection, {
     className: _.container,
     tag: r.FormTitleTags.H1,
@@ -66,7 +66,7 @@ function m() {
       children: T.default.Messages.ENABLE_STREAMER_MODE_LABEL
     }), (() => {
       if (S.isPlatformEmbedded) return (0, a.jsx)(r.FormSwitch, {
-        value: g,
+        value: I,
         onChange: e => A("autoToggle", e),
         note: T.default.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
         children: T.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
@@ -80,7 +80,7 @@ function m() {
       note: T.default.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
       children: T.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL
     }), (0, a.jsx)(r.FormSwitch, {
-      value: I,
+      value: g,
       onChange: e => A("hideInstantInvites", e),
       note: T.default.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
       children: T.default.Messages.HIDE_INSTANT_INVITES_LABEL
@@ -94,8 +94,8 @@ function m() {
       onChange: e => A("disableNotifications", e),
       note: T.default.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
       children: T.default.Messages.DISABLE_NOTIFICATIONS_LABEL
-    }), O && (0, a.jsx)(r.FormSwitch, {
-      value: p,
+    }), p && (0, a.jsx)(r.FormSwitch, {
+      value: O,
       onChange: e => A("enableContentProtection", e),
       note: T.default.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
       children: T.default.Messages.HIDE_WINDOW_FROM_STREAM_LABEL

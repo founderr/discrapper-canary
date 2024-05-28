@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("6048"),
   I = n("233608"),
   A = n("370595"),
-  N = n("991570"),
-  v = n("351127"),
-  x = n("981631"),
+  v = n("991570"),
+  x = n("351127"),
+  N = n("981631"),
   M = n("689938"),
   R = n("806338"),
   y = n("718208");
@@ -40,8 +40,8 @@ function L(e) {
     guild: _,
     specMap: T,
     categoryTitle: I
-  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), N = x.Permissions[o], R = null !== (s = null === (t = T[N.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(N), L = null !== (r = null === (n = T[N.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = v.ELEVATED_PERMISSIONS.has(N), j = v.MOD_PERMISSIONS.includes(o), P = C.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(x.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
-    D && (await p.default.open(_.id, x.GuildSettingsSections.ROLES), await p.default.selectRole(e))
+  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), v = N.Permissions[o], R = null !== (s = null === (t = T[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(v), L = null !== (r = null === (n = T[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = x.ELEVATED_PERMISSIONS.has(v), j = x.MOD_PERMISSIONS.includes(o), P = C.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(N.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
+    D && (await p.default.open(_.id, N.GuildSettingsSections.ROLES), await p.default.selectRole(e))
   }, [D, _.id]);
   return (0, a.jsxs)("div", {
     className: i()(y.permissionItemContainer, {
@@ -117,10 +117,10 @@ function L(e) {
       className: y.permissionItemRoleContainer,
       children: C.map(e => (0, a.jsx)(c.Clickable, {
         className: i()(y.roleTooltipItem, {
-          [y.editable]: D && !(0, f.isEveryoneRoleId)(_.id, e) && !(0, v.isOwnerRole)(e, _.id)
+          [y.editable]: D && !(0, f.isEveryoneRoleId)(_.id, e) && !(0, x.isOwnerRole)(e, _.id)
         }),
         onClick: () => b(e),
-        children: (0, v.isOwnerRole)(e, _.id) ? (0, a.jsx)("div", {
+        children: (0, x.isOwnerRole)(e, _.id) ? (0, a.jsx)("div", {
           className: y.roleChiplet,
           children: (0, a.jsx)(c.Text, {
             variant: "text-xs/medium",
@@ -148,11 +148,11 @@ function j(e) {
     location: s,
     className: r,
     onNavigate: d
-  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, N.useProfileThemedPanelBackground)(t, n), S = (0, v.useUserPermissionsAndRoles)(t, n, v.ALL_PERMISSIONS), j = Object.keys(S).length, P = l.useMemo(() => null != h ? I.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? I.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [F, w] = l.useState(""), k = l.useCallback(o()(w, 300), []), B = l.useCallback(e => {
+  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, v.useProfileThemedPanelBackground)(t, n), S = (0, x.useUserPermissionsAndRoles)(t, n, x.ALL_PERMISSIONS), j = Object.keys(S).length, P = l.useMemo(() => null != h ? I.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? I.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [F, w] = l.useState(""), k = l.useCallback(o()(w, 300), []), H = l.useCallback(e => {
     U(e), k(e)
-  }, [k]), H = l.useCallback(() => {
+  }, [k]), G = l.useCallback(() => {
     U(""), w("")
-  }, []), G = l.useMemo(() => {
+  }, []), B = l.useMemo(() => {
     if (null == h || null == P || null == m) return null;
     if (0 === j) return (0, a.jsx)("div", {
       className: i()(y.__invalid_permissionChiplet, y.__invalid_noModPerms),
@@ -166,7 +166,7 @@ function j(e) {
     return null == D || D.forEach(t => {
       t.permissions.forEach(n => {
         let l = n.flag,
-          s = v.ALL_PERMISSIONS.find(e => x.Permissions[e] === l);
+          s = x.ALL_PERMISSIONS.find(e => N.Permissions[e] === l);
         if (null == s) return;
         let i = S[s];
         if (null != i) {
@@ -175,8 +175,8 @@ function j(e) {
             let e = null !== (d = null === (r = P[l.toString()]) || void 0 === r ? void 0 : r.title) && void 0 !== d ? d : (0, E.getPermissionName)(l),
               n = null !== (c = null === (u = P[l.toString()]) || void 0 === u ? void 0 : null === (o = u.description) || void 0 === o ? void 0 : o.toString()) && void 0 !== c ? c : "",
               a = t.title,
-              i = v.ELEVATED_PERMISSIONS.has(l),
-              f = v.MOD_PERMISSIONS.includes(s),
+              i = x.ELEVATED_PERMISSIONS.has(l),
+              f = x.MOD_PERMISSIONS.includes(s),
               h = i ? M.default.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : f ? M.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
               m = O(F, e),
               p = O(F, n),
@@ -215,15 +215,15 @@ function j(e) {
             className: y.searchBar,
             query: b,
             placeholder: M.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
-            onChange: B,
-            onClear: H,
+            onChange: H,
+            onClear: G,
             autoComplete: "off",
             inputProps: {
               autoCapitalize: "none",
               autoCorrect: "off",
               spellCheck: "false"
             }
-          }), G]
+          }), B]
         })
       })
     })]

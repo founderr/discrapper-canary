@@ -1,17 +1,17 @@
 "use strict";
-s.r(t), s.d(t, {
+E.r(t), E.d(t, {
   default: function() {
-    return n
+    return T
   }
 });
-var E = s("399606"),
-  _ = s("339085"),
-  a = s("633302");
+var s = E("399606"),
+  _ = E("339085"),
+  a = E("633302");
 
-function n(e, t) {
-  let s = (0, E.useStateFromStores)([_.default], () => null != e ? _.default.getCustomEmojiById(e) : null, [e]);
+function T(e, t) {
+  let E = (0, s.useStateFromStores)([_.default], () => null != e ? _.default.getCustomEmojiById(e) : null, [e]);
   return {
-    customEmoji: s,
+    customEmoji: E,
     unicodeEmoji: null != t ? a.default.getByName(a.default.convertSurrogateToName(t, !1)) : null
   }
 }

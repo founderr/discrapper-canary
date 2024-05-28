@@ -11,11 +11,11 @@ var a = n("735250"),
   c = n("210887"),
   f = n("808268"),
   E = n("617136"),
-  h = n("272008"),
-  _ = n("113434"),
-  C = n("569984"),
-  m = n("497505"),
-  S = n("918701"),
+  C = n("272008"),
+  h = n("113434"),
+  _ = n("569984"),
+  S = n("497505"),
+  m = n("918701"),
   p = n("566078"),
   I = n("874137"),
   g = n("611855"),
@@ -27,17 +27,17 @@ var a = n("735250"),
   O = n("689938"),
   L = n("758895");
 
-function M(e) {
+function P(e) {
   var t;
   let {
     quest: n
-  } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), l = (0, _.useQuestFormattedDate)(p.SharedQuestFields.build(n.config).rewardsExpireAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? R.ThemeTypes.DARK : R.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  } = e, s = (0, h.useQuestFormattedDate)(n.config.expiresAt), l = (0, h.useQuestFormattedDate)(p.SharedQuestFields.build(n.config).rewardsExpireAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? R.ThemeTypes.DARK : R.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
     className: L.heading,
     children: [(0, a.jsx)("img", {
       className: L.headingGameTile,
       alt: "",
-      src: (0, S.getGameTileAssetUrl)(n, d)
+      src: (0, m.getGameTileAssetUrl)(n, d)
     }), (0, a.jsxs)("div", {
       className: L.headingCopy,
       children: [(0, a.jsx)(u.Heading, {
@@ -62,32 +62,32 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [p, P] = s.useState(!1), x = s.useCallback(() => P(!0), []), y = s.useCallback(() => P(!1), []), D = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(o.id), [o]), [p, y] = s.useState(!1), M = s.useCallback(() => y(!0), []), D = s.useCallback(() => y(!1), []), x = s.useCallback(e => {
     e.stopPropagation()
   }, []), b = s.useCallback(() => {
-    (0, h.enrollInQuest)(o.id, {
-      questContent: m.QuestContent.ACTIVITY_PANEL,
+    (0, C.enrollInQuest)(o.id, {
+      questContent: S.QuestContent.ACTIVITY_PANEL,
       questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
     })
   }, [o]), U = s.useCallback(() => {
     null != o && ((0, E.trackQuestContentClicked)({
       questId: o.id,
-      questContent: m.QuestContent.ACTIVITY_PANEL,
+      questContent: S.QuestContent.ACTIVITY_PANEL,
       questContentCTA: E.QuestContentCTA.TRACK_PROGRESS
     }), d.default.open(R.UserSettingsSections.INVENTORY))
   }, [o]), j = s.useCallback(() => {
     (0, E.trackQuestContentClicked)({
       questId: o.id,
-      questContent: m.QuestContent.ACTIVITY_PANEL,
+      questContent: S.QuestContent.ACTIVITY_PANEL,
       questContentCTA: E.QuestContentCTA.LEARN_MORE
     }), d.default.open(R.UserSettingsSections.INVENTORY)
   }, [o]), G = (0, A.useHandleClaimQuestsReward)({
     quest: o,
-    location: m.QuestContent.ACTIVITY_PANEL
-  }), w = (0, _.useIsQuestExpired)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || w || F ? null : (0, a.jsx)(I.QuestContentImpressionTracker, {
+    location: S.QuestContent.ACTIVITY_PANEL
+  }), w = (0, h.useIsQuestExpired)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == o ? void 0 : o.userStatus) == null || (0, m.isDismissed)(o.userStatus, S.QuestContent.ACTIVITY_PANEL) || w || F ? null : (0, a.jsx)(I.QuestContentImpressionTracker, {
     questOrQuests: o,
-    questContent: m.QuestContent.ACTIVITY_PANEL,
+    questContent: S.QuestContent.ACTIVITY_PANEL,
     children: e => {
       var t;
       return (0, a.jsxs)("div", {
@@ -97,21 +97,21 @@ t.default = function(e) {
         className: i()(L.wrapper, {
           [L.wrapperQuestAccepted]: k
         }),
-        onClick: D,
-        onKeyPress: D,
-        onFocus: x,
-        onMouseEnter: x,
-        onBlur: y,
-        onMouseLeave: y,
+        onClick: x,
+        onKeyPress: x,
+        onFocus: M,
+        onMouseEnter: M,
+        onBlur: D,
+        onMouseLeave: D,
         children: [(0, a.jsxs)("div", {
           className: L.utils,
-          children: [k ? (0, a.jsx)(M, {
+          children: [k ? (0, a.jsx)(P, {
             quest: o
           }) : (0, a.jsx)(g.default, {
             textOpacity: .5
           }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
             quest: o,
-            questContent: m.QuestContent.ACTIVITY_PANEL,
+            questContent: S.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
             showShareLink: !0,
             children: e => (0, a.jsx)(u.Clickable, {
@@ -123,13 +123,13 @@ t.default = function(e) {
             })
           })]
         }), !k && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(M, {
+          children: [(0, a.jsx)(P, {
             quest: o
           }), (0, a.jsx)(u.Text, {
             className: L.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
-            children: (0, S.getQuestsInstructionsToWinReward)({
+            children: (0, m.getQuestsInstructionsToWinReward)({
               quest: o,
               location: v.QuestsExperimentLocations.ACTIVITY_PANEL
             })
@@ -138,7 +138,7 @@ t.default = function(e) {
           autoplay: p,
           className: L.rewardTileWithInstructions,
           quest: o,
-          questContent: m.QuestContent.ACTIVITY_PANEL,
+          questContent: S.QuestContent.ACTIVITY_PANEL,
           questExperimentLocation: v.QuestsExperimentLocations.ACTIVITY_PANEL
         }), (0, a.jsxs)("div", {
           className: L.ctas,

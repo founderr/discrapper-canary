@@ -61,13 +61,13 @@ function c(e) {
       }
     })
   }));
-  let h = s - E.length;
-  return h > 0 && E.push((0, a.jsx)(l.MenuItem, {
+  let C = s - E.length;
+  return C > 0 && E.push((0, a.jsx)(l.MenuItem, {
     id: "unknown-members-".concat(null == i ? void 0 : i.session_id),
     render: e => (0, a.jsx)(o.NowPlayingUnknownMemberMenuItem, {
       ...e,
       label: d.default.Messages.GAME_FEED_UNKNOWN_PLAYERS.format({
-        count: h
+        count: C
       })
     })
   })), E
@@ -86,7 +86,7 @@ function f(e) {
     return t.id
   })), f = n.filter(e => !u.has(e.id)), {
     analyticsLocations: E
-  } = (0, i.default)(), h = s.useMemo(() => {
+  } = (0, i.default)(), C = s.useMemo(() => {
     let e = r.flatMap(e => {
       let {
         playingMembers: t
@@ -95,8 +95,8 @@ function f(e) {
     }).map(e => e.id);
     return n.filter(t => !e.includes(t.id))
   }, [n, r]);
-  if (r.length <= 1 && 0 === h.length) {
-    var _, C;
+  if (r.length <= 1 && 0 === C.length) {
+    var h, _;
     return (0, a.jsx)(l.MenuGroup, {
       label: n.length > 1 ? d.default.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
         memberCount: n.length
@@ -105,13 +105,13 @@ function f(e) {
         priorityMembers: t,
         otherMembers: f,
         totalMembers: n.length,
-        activity: null !== (C = null === (_ = r[0]) || void 0 === _ ? void 0 : _.activity) && void 0 !== C ? C : void 0,
+        activity: null !== (_ = null === (h = r[0]) || void 0 === h ? void 0 : h.activity) && void 0 !== _ ? _ : void 0,
         guildId: null == o ? void 0 : o.id,
         sourceAnalyticsLocations: E
       })
     })
   }
-  let m = r.map((e, n) => {
+  let S = r.map((e, n) => {
       let {
         playingMembers: s,
         game: i,
@@ -134,18 +134,18 @@ function f(e) {
         })
       }, n)
     }),
-    S = h.map(e => e.id);
-  return [...m, (0, a.jsx)(l.MenuGroup, {
-    label: "".concat(d.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(h.length),
+    m = C.map(e => e.id);
+  return [...S, (0, a.jsx)(l.MenuGroup, {
+    label: "".concat(d.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(C.length),
     children: c({
       priorityMembers: t.filter(e => {
         let {
           user: t
         } = e;
-        return S.includes(t.id)
+        return m.includes(t.id)
       }),
-      otherMembers: h.filter(e => !u.has(e.id)),
-      totalMembers: h.length,
+      otherMembers: C.filter(e => !u.has(e.id)),
+      totalMembers: C.length,
       guildId: null == o ? void 0 : o.id,
       sourceAnalyticsLocations: E
     })

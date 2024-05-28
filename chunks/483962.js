@@ -12,7 +12,7 @@ var i = n("735250"),
   f = n("981631"),
   h = n("689938"),
   p = n("77821");
-let g = () => (0, r.show)("DM_SEARCH");
+let E = () => (0, r.show)("DM_SEARCH");
 t.default = a.memo(function() {
   let e = (0, l.useStateFromStores)([u.default], () => u.default.isUILocked((0, c.getPID)()) ? "true" : "false"),
     t = (0, d.default)(e => {
@@ -28,7 +28,7 @@ t.default = a.memo(function() {
       children: (0, i.jsx)("button", {
         type: "button",
         className: p.searchBarComponent,
-        onClick: g,
+        onClick: E,
         children: h.default.Messages.DM_SEARCH_PLACEHOLDER
       })
     }), (0, i.jsx)(s.default, {

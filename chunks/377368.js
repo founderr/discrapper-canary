@@ -12,11 +12,11 @@ var s = n("481060"),
   c = n("556296"),
   f = n("131468"),
   E = n("208049"),
-  h = n("763296"),
-  _ = n("641015"),
-  C = n("22382"),
-  m = n("747071"),
-  S = n("49230"),
+  C = n("763296"),
+  h = n("641015"),
+  _ = n("22382"),
+  S = n("747071"),
+  m = n("49230"),
   p = n("981631"),
   I = n("65154");
 
@@ -48,14 +48,14 @@ class T extends f.default {
         a = arguments.length > 2 ? arguments[2] : void 0,
         s = arguments.length > 3 ? arguments[3] : void 0,
         l = null != s && d.default.getVoiceChannelId() === s;
-      if ((null == s || l) && !u.default.isDeaf() && !h.default.isLocalSoundboardMuted(a)) try {
+      if ((null == s || l) && !u.default.isDeaf() && !C.default.isLocalSoundboardMuted(a)) try {
         let s = {
           soundKey: "".concat(a, "-").concat(e),
-          soundURL: (0, C.default)(e),
-          soundVolume: (0, m.default)(n),
+          soundURL: (0, _.default)(e),
+          soundVolume: (0, S.default)(n),
           reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, a)
         };
-        u.default.supports(I.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
+        u.default.supports(I.Features.SAMPLE_PLAYBACK) ? await (0, m.playDesktopSound)(s) : await (0, m.playWebSound)(s, t.playingSoundsWeb)
       } finally {
         (0, E.reportSoundFinishedPlaying)(e, a)
       }
@@ -65,7 +65,7 @@ class T extends f.default {
       if (null == e) return;
       let l = o.default.getChannel(t),
         u = c.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD);
-      null != l && (0, _.default)(l) && null != u && r.default.hasHotspot(i.HotspotLocations.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
+      null != l && (0, h.default)(l) && null != u && r.default.hasHotspot(i.HotspotLocations.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
         let {
           default: t
         } = await Promise.all([n.e("99387"), n.e("69208")]).then(n.bind(n, "490166"));

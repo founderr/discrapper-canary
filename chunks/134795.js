@@ -26,21 +26,21 @@ function E(e) {
     disabled: _ = !1,
     showPremiumIcon: f = !0,
     isTryItOutFlow: m = !1,
-    forcedDivider: g,
-    withHighlight: I = !1
-  } = e, N = I ? r.default : i.Button;
+    forcedDivider: I,
+    withHighlight: g = !1
+  } = e, N = g ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: T,
     title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
     showPremiumIcon: f,
     errors: s,
     disabled: _,
-    forcedDivider: g,
+    forcedDivider: I,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
       children: [(0, a.jsx)(N, {
         className: l()({
-          [S.buttonHighlighted]: I
+          [S.buttonHighlighted]: g
         }),
         size: i.Button.Sizes.SMALL,
         onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, E, m, void 0),

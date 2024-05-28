@@ -16,20 +16,20 @@ var s = n("120356"),
   c = n("729017"),
   f = n("63063"),
   E = n("13140"),
-  h = n("435064"),
-  _ = n("39604"),
-  C = n("356659"),
-  m = n("981631"),
-  S = n("332325"),
+  C = n("435064"),
+  h = n("39604"),
+  _ = n("356659"),
+  S = n("981631"),
+  m = n("332325"),
   p = n("689938"),
   I = n("668202");
 
 function g(e) {
-  (0, o.default)(S.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)
+  (0, o.default)(m.GameSettingsTab.CLIPS), (0, h.dismissClipsUserEducation)(e)
 }
 
 function T() {
-  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
+  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(S.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, a.jsx)(a.Fragment, {
     children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
   });
@@ -47,7 +47,7 @@ function T() {
   })
 }
 let A = {
-  [C.ClipsUserEducationType.Error]: {
+  [_.ClipsUserEducationType.Error]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.PRIMARY,
@@ -58,26 +58,26 @@ let A = {
     }),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
     ctaOnClick: () => {
-      window.open(f.default.getArticleURL(m.HelpdeskArticles.CLIPS), "_blank")
+      window.open(f.default.getArticleURL(S.HelpdeskArticles.CLIPS), "_blank")
     },
     containerClass: I.container
   },
-  [C.ClipsUserEducationType.Disabled]: {
+  [_.ClipsUserEducationType.Disabled]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => g(C.ClipsUserEducationType.Disabled),
+    ctaOnClick: () => g(_.ClipsUserEducationType.Disabled),
     containerClass: I.container
   },
-  [C.ClipsUserEducationType.Enabled]: {
+  [_.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND_INVERTED,
     bodyCopy: () => (0, a.jsx)(T, {}),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => g(C.ClipsUserEducationType.Enabled),
+    ctaOnClick: () => g(_.ClipsUserEducationType.Enabled),
     containerClass: l()(I.container, I.containerEnabled)
   }
 };
@@ -87,11 +87,11 @@ function N() {
   let {
     decoupledClipsEnabled: t,
     clipsError: n
-  } = (0, i.useStateFromStoresObject)([h.default], () => ({
-    decoupledClipsEnabled: h.default.getSettings().decoupledClipsEnabled,
-    clipsError: h.default.getLastClipsError()
+  } = (0, i.useStateFromStoresObject)([C.default], () => ({
+    decoupledClipsEnabled: C.default.getSettings().decoupledClipsEnabled,
+    clipsError: C.default.getLastClipsError()
   }));
-  let s = (e = t, null != n ? C.ClipsUserEducationType.Error : e ? C.ClipsUserEducationType.Enabled : C.ClipsUserEducationType.Disabled),
+  let s = (e = t, null != n ? _.ClipsUserEducationType.Error : e ? _.ClipsUserEducationType.Enabled : _.ClipsUserEducationType.Disabled),
     {
       bodyCopy: l,
       buttonCopy: o,
@@ -99,16 +99,16 @@ function N() {
       textColor: c,
       buttonColor: f,
       buttonLook: E,
-      containerClass: m
+      containerClass: S
     } = A[s];
   return (0, a.jsxs)("div", {
-    className: m,
+    className: S,
     children: [(0, a.jsx)(r.Text, {
       color: c,
       variant: "text-sm/medium",
       children: l()
     }), (0, a.jsx)(r.Button, {
-      onClick: () => (0, _.dismissClipsUserEducation)(s),
+      onClick: () => (0, h.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,
       look: r.Button.Looks.BLANK,
       className: I.buttonClose,

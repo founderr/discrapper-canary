@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("742280"),
-  s = n("818083"),
-  l = n("474936");
-t.default = (0, s.createExperiment)({
+  l = n("818083"),
+  s = n("474936");
+t.default = (0, l.createExperiment)({
   kind: "user",
   id: "2022-02_multi_month_plans",
   label: "Multi Month Plans",
@@ -18,13 +18,13 @@ t.default = (0, s.createExperiment)({
     id: 1,
     label: "3 and 6 Month Plans",
     config: {
-      newPlans: [l.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2, l.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2]
+      newPlans: [s.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2, s.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2]
     }
   }, {
     id: 2,
     label: "3 Month Plan Only",
     config: {
-      newPlans: [l.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2]
+      newPlans: [s.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2]
     }
   }]
 });

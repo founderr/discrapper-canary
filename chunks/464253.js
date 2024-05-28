@@ -1,47 +1,47 @@
     "use strict";
-    a.r(t), a("411104");
-    var d = a("570140"),
-      n = a("846027"),
-      c = a("872810"),
-      i = a("710845"),
-      o = a("252759"),
-      r = a("361291"),
-      f = a("199902"),
-      l = a("314897"),
-      s = a("569545"),
-      u = a("803647"),
-      b = a("981631"),
-      h = a("65154");
+    t.r(a), t("411104");
+    var d = t("570140"),
+      c = t("846027"),
+      n = t("872810"),
+      i = t("710845"),
+      f = t("252759"),
+      o = t("361291"),
+      r = t("199902"),
+      l = t("314897"),
+      s = t("569545"),
+      b = t("803647"),
+      u = t("981631"),
+      p = t("65154");
 
-    function p(e, t, a) {
-      return t in e ? Object.defineProperty(e, t, {
-        value: a,
+    function h(e, a, t) {
+      return a in e ? Object.defineProperty(e, a, {
+        value: t,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : e[t] = a, e
+      }) : e[a] = t, e
     }
     class m {
       _onGameDetectionUpdate(e) {
         this.applications = e.map(e => {
-          var t, a;
+          var a, t;
           return {
-            applicationId: null !== (t = e.id) && void 0 !== t ? t : null,
+            applicationId: null !== (a = e.id) && void 0 !== a ? a : null,
             processId: e.pid,
             processPath: e.pidPath,
-            windowHandle: null !== (a = e.windowHandle) && void 0 !== a ? a : null,
+            windowHandle: null !== (t = e.windowHandle) && void 0 !== t ? t : null,
             executableName: e.exeName
           }
         }), "verbatim-source" !== this.mode && this.director.onDetectionUpdate(this.applications)
       }
-      _onStreamApplication(e, t) {
-        this.mode = "application", this.streamKey = e, this.director.onStreamBegin(this.applications, t)
+      _onStreamApplication(e, a) {
+        this.mode = "application", this.streamKey = e, this.director.onStreamBegin(this.applications, a)
       }
-      _onStreamDirectSource(e, t, a, d) {
+      _onStreamDirectSource(e, a, t, d) {
         this.mode = "verbatim-source", this.streamKey = e, this._onDirectorAction({
-          type: o.StreamDirectorActionType.STREAM,
-          sourceId: t,
-          audioSourceId: a,
+          type: f.StreamDirectorActionType.STREAM,
+          sourceId: a,
+          audioSourceId: t,
           sound: d
         })
       }
@@ -52,12 +52,12 @@
             break;
           case "verbatim-source":
             this._onDirectorAction({
-              type: o.StreamDirectorActionType.STOP
+              type: f.StreamDirectorActionType.STOP
             });
             break;
           default:
-            var t;
-            throw Error("unknown streaming mode: ".concat(null !== (t = this.mode) && void 0 !== t ? t : "(none)"))
+            var a;
+            throw Error("unknown streaming mode: ".concat(null !== (a = this.mode) && void 0 !== a ? a : "(none)"))
         }
       }
       _onStreamKilled(e) {
@@ -68,58 +68,58 @@
           case "verbatim-source":
             break;
           default:
-            var t;
-            throw Error("unknown streaming mode: ".concat(null !== (t = this.mode) && void 0 !== t ? t : "(none)"))
+            var a;
+            throw Error("unknown streaming mode: ".concat(null !== (a = this.mode) && void 0 !== a ? a : "(none)"))
         }
       }
       _onDirectorAction(e) {
-        let t = f.default.getCurrentUserActiveStream(),
-          a = r.default.getState();
+        let a = r.default.getCurrentUserActiveStream(),
+          t = o.default.getState();
         switch (e.type) {
-          case o.StreamDirectorActionType.STREAM:
-            if (null != t && (0, c.setStreamPaused)(t, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
-              let t = e.sourceId.split(":")[1];
-              n.default.setGoLiveSource({
+          case f.StreamDirectorActionType.STREAM:
+            if (null != a && (0, n.setStreamPaused)(a, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
+              let a = e.sourceId.split(":")[1];
+              c.default.setGoLiveSource({
                 cameraSettings: {
-                  videoDeviceGuid: t,
+                  videoDeviceGuid: a,
                   audioDeviceGuid: e.audioSourceId
                 },
                 qualityOptions: {
-                  preset: a.preset,
-                  resolution: a.resolution,
-                  frameRate: a.fps
+                  preset: t.preset,
+                  resolution: t.resolution,
+                  frameRate: t.fps
                 },
-                context: h.MediaEngineContextTypes.STREAM
+                context: p.MediaEngineContextTypes.STREAM
               })
             } else {
               var d;
-              n.default.setGoLiveSource({
+              c.default.setGoLiveSource({
                 desktopSettings: {
                   sourceId: e.sourceId,
                   sound: null === (d = e.sound) || void 0 === d || d
                 },
                 qualityOptions: {
-                  preset: a.preset,
-                  resolution: a.resolution,
-                  frameRate: a.fps
+                  preset: t.preset,
+                  resolution: t.resolution,
+                  frameRate: t.fps
                 },
-                context: h.MediaEngineContextTypes.STREAM
+                context: p.MediaEngineContextTypes.STREAM
               })
             }
             break;
-          case o.StreamDirectorActionType.PAUSE:
-            null != t && (0, c.setStreamPaused)(t, !0);
+          case f.StreamDirectorActionType.PAUSE:
+            null != a && (0, n.setStreamPaused)(a, !0);
             break;
-          case o.StreamDirectorActionType.STOP:
-            null != t && (0, u.default)(t);
+          case f.StreamDirectorActionType.STOP:
+            null != a && (0, b.default)(a);
             break;
           default:
             throw Error("unhandled stream action: ".concat(e.type))
         }
       }
       _onCapturePaused(e) {
-        let t = f.default.getCurrentUserActiveStream();
-        null != t && (0, c.setStreamPaused)(t, e)
+        let a = r.default.getCurrentUserActiveStream();
+        null != a && (0, n.setStreamPaused)(a, e)
       }
       _onCaptureEnded() {
         switch (this.mode) {
@@ -135,52 +135,52 @@
         }
       }
       constructor() {
-        p(this, "director", void 0), p(this, "applications", void 0), p(this, "streamKey", void 0), p(this, "mode", void 0), this.mode = null, this.applications = [], this.director = new o.StreamDirector(e => this._onDirectorAction(e)), d.default.subscribe("STREAM_START", e => {
+        h(this, "director", void 0), h(this, "applications", void 0), h(this, "streamKey", void 0), h(this, "mode", void 0), this.mode = null, this.applications = [], this.director = new f.StreamDirector(e => this._onDirectorAction(e)), d.default.subscribe("STREAM_START", e => {
           let {
-            streamType: t,
-            guildId: a,
+            streamType: a,
+            guildId: t,
             channelId: d,
-            pid: n,
-            sourceId: c,
-            audioSourceId: o,
-            sound: r
-          } = e, f = l.default.getId(), u = (0, s.encodeStreamKey)({
-            streamType: t,
-            guildId: a,
+            pid: c,
+            sourceId: n,
+            audioSourceId: f,
+            sound: o
+          } = e, r = l.default.getId(), b = (0, s.encodeStreamKey)({
+            streamType: a,
+            guildId: t,
             channelId: d,
-            ownerId: f
+            ownerId: r
           });
-          null == n != (null == c) ? (null != n && this._onStreamApplication(u, n), null != c && this._onStreamDirectSource(u, c, o, r)) : new i.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(n, ", source-id: ").concat(c, ")"))
+          null == c != (null == n) ? (null != c && this._onStreamApplication(b, c), null != n && this._onStreamDirectSource(b, n, f, o)) : new i.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(c, ", source-id: ").concat(n, ")"))
         }), d.default.subscribe("STREAM_DELETE", e => {
           let {
-            streamKey: t
+            streamKey: a
           } = e;
-          this._onStreamKilled(t)
+          this._onStreamKilled(a)
         }), d.default.subscribe("STREAM_STOP", e => {
           let {
-            streamKey: t
+            streamKey: a
           } = e;
-          this._onStreamEnd(t)
+          this._onStreamEnd(a)
         }), d.default.subscribe("RUNNING_GAMES_CHANGE", e => {
           let {
-            games: t
+            games: a
           } = e;
-          this._onGameDetectionUpdate(t)
+          this._onGameDetectionUpdate(a)
         }), d.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
           let {
-            videoState: t,
-            context: a
+            videoState: a,
+            context: t
           } = e;
-          a === h.MediaEngineContextTypes.STREAM && this._onCapturePaused(t === b.MediaEngineVideoStates.PAUSED)
+          t === p.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === u.MediaEngineVideoStates.PAUSED)
         }), d.default.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", e => {
           let {
-            settings: t
+            settings: a
           } = e;
-          (null == t ? void 0 : t.context) === h.MediaEngineContextTypes.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded()
+          (null == a ? void 0 : a.context) === p.MediaEngineContextTypes.STREAM && (null == a ? void 0 : a.desktopSettings) == null && (null == a ? void 0 : a.cameraSettings) == null && this._onCaptureEnded()
         })
       }
     }
-    t.default = {
+    a.default = {
       instance: null,
       init() {
         null == this.instance && (this.instance = new m)

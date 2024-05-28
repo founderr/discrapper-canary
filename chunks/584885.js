@@ -11,13 +11,13 @@ var a = n("735250"),
   c = n("127541"),
   f = n("981631"),
   E = n("363472");
-let h = [
+let C = [
     [1696, 20],
     [1432, 16],
     [1168, 12],
     [0, 8]
   ],
-  _ = [
+  h = [
     [1696, 30],
     [1432, 24],
     [1168, 18],
@@ -26,9 +26,9 @@ let h = [
 t.default = e => {
   let t, {
     title: n,
-    subtitle: C,
-    guildsData: m,
-    analyticsContext: S,
+    subtitle: _,
+    guildsData: S,
+    analyticsContext: m,
     theme: p,
     onViewGuild: I,
     fetchGuilds: g,
@@ -41,17 +41,17 @@ t.default = e => {
   s.useEffect(() => {
     i.default.wait(() => g())
   }, [A]);
-  let O = (0, c.default)(R ? _ : h),
+  let O = (0, c.default)(R ? h : C),
     {
       analyticsLocations: L
     } = (0, r.default)();
-  if (null == m) return null;
+  if (null == S) return null;
   let {
-    guilds: M,
-    loading: P
-  } = m, x = null == M || 0 === M.length;
-  if (!P && x) return null;
-  let y = async e => {
+    guilds: P,
+    loading: y
+  } = S, M = null == P || 0 === P.length;
+  if (!y && M) return null;
+  let D = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
         page: f.AnalyticsPages.GUILD_DISCOVERY
@@ -63,18 +63,18 @@ t.default = e => {
       analyticsLocations: L
     });
     else {
-      let t = M.findIndex(t => t.id === e);
-      await I(e, t, S, N)
+      let t = P.findIndex(t => t.id === e);
+      await I(e, t, m, N)
     }
   };
-  if (P || null == M) {
+  if (y || null == P) {
     let e = [];
     for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
+  } else t = P.slice(0, O).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
-    onView: y,
+    onView: D,
     theme: p,
     onGuildCardSeen: T,
     onTagClick: v
@@ -87,11 +87,11 @@ t.default = e => {
         variant: "heading-lg/semibold",
         children: n
       }),
-      children: [null != C && (0, a.jsx)(l.Text, {
+      children: [null != _ && (0, a.jsx)(l.Text, {
         className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: C
+        children: _
       }), (0, a.jsx)("div", {
         className: E.guildList,
         children: t

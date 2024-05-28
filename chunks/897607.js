@@ -19,13 +19,13 @@ function E() {
     s = u.default.getOutputDeviceId();
   if (o.default.getState().neverShowModal || l().isEmpty(o.default.lastDeviceConnected)) return;
   let E = (0, o.extractDisplayName)(u.default.getInputDevices()[t]),
-    h = (0, o.extractDisplayName)(u.default.getOutputDevices()[s]);
-  if (l().some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === E || e.displayName === h)) return;
-  let _ = l().some(o.default.lastDeviceConnected, e => r.default.isCertified(o.default.inputDevices[e.displayName]) || r.default.isCertified(o.default.outputDevices[e.displayName]));
-  if ((t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged) && !_) return;
-  let C = l().first(Object.keys(o.default.lastDeviceConnected)),
-    m = null != C && "" !== C ? o.default.lastDeviceConnected[C] : null;
-  null != m && (o.default.initialized && null != C && (r.default.isCertified(o.default.inputDevices[C]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[C]) : r.default.isCertified(o.default.outputDevices[C]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[C]))), f = !0, (0, i.openModalLazy)(async () => {
+    C = (0, o.extractDisplayName)(u.default.getOutputDevices()[s]);
+  if (l().some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === E || e.displayName === C)) return;
+  let h = l().some(o.default.lastDeviceConnected, e => r.default.isCertified(o.default.inputDevices[e.displayName]) || r.default.isCertified(o.default.outputDevices[e.displayName]));
+  if ((t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged) && !h) return;
+  let _ = l().first(Object.keys(o.default.lastDeviceConnected)),
+    S = null != _ && "" !== _ ? o.default.lastDeviceConnected[_] : null;
+  null != S && (o.default.initialized && null != _ && (r.default.isCertified(o.default.inputDevices[_]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[_]) : r.default.isCertified(o.default.outputDevices[_]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[_]))), f = !0, (0, i.openModalLazy)(async () => {
     let {
       default: t
     } = await Promise.all([n.e("99387"), n.e("83536")]).then(n.bind(n, "43991"));
@@ -35,7 +35,7 @@ function E() {
         onClose: l
       } = n;
       return (0, a.jsx)(t, {
-        device: m,
+        device: S,
         certifiedDeviceMetadata: e,
         transitionState: s,
         onClose: () => (f = !1, l())

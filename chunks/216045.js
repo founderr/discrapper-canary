@@ -19,20 +19,20 @@ var a = s("735250"),
   _ = s("475977"),
   f = s("957730"),
   m = s("962746"),
-  g = s("296810"),
-  I = s("935147"),
+  I = s("296810"),
+  g = s("935147"),
   N = s("350327"),
   h = s("246946"),
   C = s("25990"),
-  p = s("594174"),
+  O = s("594174"),
   A = s("74538"),
-  O = s("695346"),
-  x = s("265159"),
-  R = s("532495");
+  p = s("695346"),
+  R = s("265159"),
+  x = s("532495");
 
 function M() {
-  let e = (0, r.useStateFromStores)([p.default], () => {
-    let e = p.default.getCurrentUser();
+  let e = (0, r.useStateFromStores)([O.default], () => {
+    let e = O.default.getCurrentUser();
     return i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
   });
   n.useEffect(() => {
@@ -43,10 +43,10 @@ function M() {
       pendingAvatar: s,
       pendingBanner: l,
       pendingBio: M,
-      pendingPronouns: v,
+      pendingPronouns: L,
       pendingGlobalName: D,
-      pendingAccentColor: L,
-      pendingAvatarDecoration: P,
+      pendingAccentColor: P,
+      pendingAvatarDecoration: v,
       pendingThemeColors: b,
       pendingProfileEffectId: j
     } = (0, r.useStateFromStoresObject)([C.default], () => {
@@ -57,44 +57,44 @@ function M() {
         errors: t
       }
     }),
-    U = O.UseLegacyChatInput.useSetting() && null != M ? f.default.parse(void 0, M).content : M,
-    y = A.default.canUsePremiumProfileCustomization(e),
+    U = p.UseLegacyChatInput.useSetting() && null != M ? f.default.parse(void 0, M).content : M,
+    G = A.default.canUsePremiumProfileCustomization(e),
     {
-      analyticsLocations: G
+      analyticsLocations: F
     } = (0, T.default)(E.default.PROFILE),
     B = {
       user: e,
-      canUsePremiumCustomization: y,
-      onUpsellClick: x.default,
+      canUsePremiumCustomization: G,
+      onUpsellClick: R.default,
       onAvatarChange: u.setPendingAvatar,
       onBannerChange: N.setPendingBanner,
       pendingBanner: l,
       pendingBio: U,
-      pendingPronouns: v,
+      pendingPronouns: L,
       pendingAvatar: s,
       pendingGlobalName: D,
-      pendingAvatarDecoration: P,
+      pendingAvatarDecoration: v,
       pendingProfileEffectId: j
     };
   n.useEffect(() => () => o.default.wait(u.resetAllPending), []);
-  let F = "UserSettingsProfileCustomization";
+  let y = "UserSettingsProfileCustomization";
   return ((0, S.useTriggerDebuggingAA)({
-    location: F + " auto on",
+    location: y + " auto on",
     autoTrackExposure: !0
   }), (0, S.useTriggerDebuggingAA)({
-    location: F + " auto off",
+    location: y + " auto off",
     autoTrackExposure: !1
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
-    value: G,
+    value: F,
     children: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(I.default, {
         profilePreview: (0, a.jsx)(m.default, {
           ...B,
           pendingThemeColors: b,
-          pendingAccentColor: L
+          pendingAccentColor: P
         }),
-        children: (0, a.jsx)(R.default, {})
-      }), !A.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(I.default, {
+        children: (0, a.jsx)(x.default, {})
+      }), !A.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(g.default, {
         user: e
       })]
     })

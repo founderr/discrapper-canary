@@ -16,7 +16,7 @@ var s, a = n("735250"),
   h = n("689938"),
   T = n("611273");
 
-function g(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -25,7 +25,7 @@ function g(e, t, n) {
   }) : e[t] = n, e
 }
 r.default.initialize();
-class m extends(s = l.PureComponent) {
+class g extends(s = l.PureComponent) {
   componentDidMount() {
     let e = (0, d.default)(this.props.location),
       t = (0, i.parse)(this.props.location.search);
@@ -144,7 +144,7 @@ class m extends(s = l.PureComponent) {
     return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError()
   }
   constructor(...e) {
-    super(...e), g(this, "state", {
+    super(...e), N(this, "state", {
       busy: !0,
       success: !1,
       user: null,
@@ -152,8 +152,8 @@ class m extends(s = l.PureComponent) {
     })
   }
 }
-g(m, "defaultProps", {
+N(g, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
 }), t.default = r.default.connectStores([E.default], () => ({
   defaultRoute: E.default.defaultRoute
-}))(m)
+}))(g)

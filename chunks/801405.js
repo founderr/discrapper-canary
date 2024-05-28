@@ -33,7 +33,7 @@ function _(e) {
     currentWindow: _
   } = e, T = n === C.AppContext.POPOUT, I = l.useRef(null), {
     currentLayout: A,
-    mode: N
+    mode: v
   } = (0, s.useStateFromStoresObject)([u.default], () => {
     let e = u.default.getMode(t.id),
       a = n === C.AppContext.POPOUT;
@@ -43,11 +43,11 @@ function _(e) {
       currentLayout: l,
       mode: e
     }
-  }, [t, n]), v = (0, s.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === t.id, [t.id]);
+  }, [t, n]), x = (0, s.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === t.id, [t.id]);
   l.useEffect(() => {
-    I.current = N
+    I.current = v
   });
-  let x = l.useRef(A),
+  let N = l.useRef(A),
     {
       currentDocument: M,
       rootNode: R
@@ -61,17 +61,17 @@ function _(e) {
       }
     }, [d, T, _]),
     y = i && !T,
-    L = N === C.ChannelModes.VIDEO && v && !y,
+    L = v === C.ChannelModes.VIDEO && x && !y,
     O = l.useCallback((e, a) => {
       a !== e && (r.default.updateLayout(t.id, a, n), a === C.ChannelLayouts.FULL_SCREEN && t.isPrivate() && m.ComponentDispatch.dispatch(C.ComponentActions.TEXTAREA_BLUR))
     }, [n, t]),
     j = l.useCallback(e => {
-      if (null != R) e === C.ChannelLayouts.FULL_SCREEN && (O(e, x.current), (0, E.exitFullScreen)(e => {
-        x.current = e
+      if (null != R) e === C.ChannelLayouts.FULL_SCREEN && (O(e, N.current), (0, E.exitFullScreen)(e => {
+        N.current = e
       }, M))
     }, [M, O, R]),
     P = l.useCallback(e => () => {
-      null != R && (e !== C.ChannelLayouts.FULL_SCREEN ? (x.current = e, O(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : j(e))
+      null != R && (e !== C.ChannelLayouts.FULL_SCREEN ? (N.current = e, O(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : j(e))
     }, [O, j, R]);
   return (l.useEffect(() => {
     let e = () => {
@@ -86,10 +86,10 @@ function _(e) {
   }), () => {
     !(T && (0, p.isMac)()) && j(A)
   }), [A, T]), l.useEffect(() => {
-    null != R && I.current === C.ChannelModes.VIDEO && N === C.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
-  }, [M, N, I, R]), l.useEffect(() => {
-    !v && T && S()
-  }, [v, T]), L) ? (0, a.jsx)(c.default, {
+    null != R && I.current === C.ChannelModes.VIDEO && v === C.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
+  }, [M, v, I, R]), l.useEffect(() => {
+    !x && T && S()
+  }, [x, T]), L) ? (0, a.jsx)(c.default, {
     themeable: !1,
     node: R,
     guestWindow: d,

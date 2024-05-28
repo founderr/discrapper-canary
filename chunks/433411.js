@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
 var a = s("735250"),
@@ -20,38 +20,38 @@ var a = s("735250"),
   f = s("689938"),
   m = s("35071");
 
-function g(e) {
+function I(e) {
   let {
     user: t,
     guild: s,
     className: l,
     sectionTitle: E,
-    forcedDivider: g = !1,
+    forcedDivider: I = !1,
     withTutorial: N = !1,
     isTryItOutFlow: h = !1
   } = e, {
     analyticsLocations: C
-  } = (0, o.default)(), p = null != s, {
+  } = (0, o.default)(), O = null != s, {
     userAvatarDecoration: A,
-    guildAvatarDecoration: O,
-    pendingAvatarDecoration: x,
-    pendingErrors: R
-  } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), M = (0, c.default)("enable_avatar_decoration_uploads"), v = n.useCallback(() => (0, u.openAvatarDecorationModal)({
+    guildAvatarDecoration: p,
+    pendingAvatarDecoration: R,
+    pendingErrors: x
+  } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), M = (0, c.default)("enable_avatar_decoration_uploads"), L = n.useCallback(() => (0, u.openAvatarDecorationModal)({
     analyticsLocations: C,
     isTryItOutFlow: h,
     guild: s
-  }), [C, h, s]), D = h || void 0 !== x ? null != x : (p ? O : A) != null, L = N ? S.default : r.Button;
+  }), [C, h, s]), D = h || void 0 !== R ? null != R : (O ? p : A) != null, P = N ? S.default : r.Button;
   return (0, a.jsxs)(_.default, {
     className: l,
-    forcedDivider: g,
+    forcedDivider: I,
     hasBackground: !0,
     title: E,
-    errors: R,
+    errors: x,
     children: [(0, a.jsxs)("div", {
       className: m.buttonsContainer,
-      children: [(0, a.jsx)(L, {
+      children: [(0, a.jsx)(P, {
         size: r.Button.Sizes.SMALL,
-        onClick: v,
+        onClick: L,
         className: i()({
           [m.buttonHighlighted]: N
         }),
@@ -66,12 +66,12 @@ function g(e) {
         },
         children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? f.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : f.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
-    }), t.isStaff() && M && (0, a.jsx)(I, {
+    }), t.isStaff() && M && (0, a.jsx)(g, {
       user: t
     })]
   })
 }
-let I = e => {
+let g = e => {
   let {
     user: t
   } = e;

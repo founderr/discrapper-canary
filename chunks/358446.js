@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return g
   },
   useGetKeybindNotification: function() {
     return m
@@ -20,7 +20,7 @@ var a = n("524437"),
   f = n("987650"),
   h = n("921944"),
   p = n("689938"),
-  g = n("398644");
+  E = n("398644");
 
 function m() {
   let [e, t] = (0, r.useGetDismissibleContent)([a.DismissibleContent.OVERLAY_KEYBIND_NOTIFICATION]), {
@@ -36,7 +36,7 @@ function m() {
   }
 }
 
-function E(e) {
+function g(e) {
   let {
     markAsDismissed: t
   } = e, {
@@ -48,9 +48,9 @@ function E(e) {
   return {
     icon: null,
     body: (0, i.jsxs)("div", {
-      className: g.notificationBody,
+      className: E.notificationBody,
       children: [(0, i.jsx)("div", {
-        className: g.iconContainer,
+        className: E.iconContainer,
         children: (0, i.jsx)(u.default, {
           height: 28,
           width: 28

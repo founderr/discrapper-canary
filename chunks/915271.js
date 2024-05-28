@@ -1,8 +1,8 @@
 "use strict";
 a.r(t);
 var n = a("735250"),
-  l = a("470079"),
-  s = a("442837"),
+  s = a("470079"),
+  l = a("442837"),
   r = a("481060"),
   o = a("873115"),
   i = a("618541"),
@@ -10,7 +10,7 @@ var n = a("735250"),
   d = a("912454"),
   c = a("689938"),
   E = a("376943");
-class p extends l.PureComponent {
+class m extends s.PureComponent {
   componentDidMount() {
     null != this.props.venmoClient && o.tokenizeVenmo()
   }
@@ -22,14 +22,14 @@ class p extends l.PureComponent {
       venmoUsername: e,
       className: t,
       venmoClient: a
-    } = this.props, l = null != e && "" !== e;
+    } = this.props, s = null != e && "" !== e;
     return (0, n.jsxs)("div", {
       className: t,
       children: [(0, n.jsx)(d.default, {
         type: d.default.Types.VENMO,
         size: d.IconSizes.MEDIUM,
         className: E.venmoIcon
-      }), l ? (0, n.jsxs)(n.Fragment, {
+      }), s ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(r.Heading, {
           variant: e.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
           className: E.connectionInstructions,
@@ -49,7 +49,7 @@ class p extends l.PureComponent {
     })
   }
 }
-t.default = s.default.connectStores([i.default, u.default], () => ({
+t.default = l.default.connectStores([i.default, u.default], () => ({
   venmoUsername: u.default.venmoUsername,
   venmoClient: i.default.getVenmoClient()
-}))(p)
+}))(m)

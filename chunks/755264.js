@@ -35,7 +35,7 @@ function E(e) {
     }
   })
 }
-let h = [{
+let C = [{
   version: 2,
   run(e) {
     let t = E(1);
@@ -155,4 +155,4 @@ let h = [{
     r.Storage.remove(f)
   }
 }];
-t.default = h
+t.default = C

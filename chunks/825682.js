@@ -15,19 +15,19 @@ t.default = function(e) {
     status: c,
     user: f,
     lastOnlineTimestamp: E,
-    experimentLocation: h = "status_text"
+    experimentLocation: C = "status_text"
   } = e, {
-    isFriendsAndDMsEnabled: _
+    isFriendsAndDMsEnabled: h
   } = i.default.useExperiment({
-    location: h
+    location: C
   }, {
     autoTrackExposure: !1
-  }), C = n.length > 0, m = !C && null != E;
+  }), _ = n.length > 0, S = !_ && null != E;
   if (s.useEffect(() => {
-      m && i.default.trackExposure({
-        location: h
+      S && i.default.trackExposure({
+        location: C
       })
-    }, [m, h]), C) return (0, a.jsx)(l.default, {
+    }, [S, C]), _) return (0, a.jsx)(l.default, {
     className: u.activity,
     textClassName: u.text,
     emojiClassName: u.customStatusEmoji,
@@ -36,7 +36,7 @@ t.default = function(e) {
     animate: t,
     user: f
   });
-  if (!m || !_) return (0, a.jsx)("div", {
+  if (!S || !h) return (0, a.jsx)("div", {
     className: u.text,
     children: (0, o.humanizeStatus)(c)
   });

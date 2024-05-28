@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   activityInviteKey: function() {
-    return x
+    return N
   }
 }), n("47120");
 var a = n("735250"),
@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("838440"),
   I = n("981631"),
   A = n("689938"),
-  N = n("38208");
+  v = n("38208");
 
-function v(e, t, n) {
+function x(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,7 +35,7 @@ function v(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let x = "ActivityInvite";
+let N = "ActivityInvite";
 class M extends l.PureComponent {
   componentDidMount() {
     this.fetchApplication()
@@ -96,18 +96,18 @@ class M extends l.PureComponent {
         })
       }), (0, a.jsxs)(o.ModalContent, {
         children: [(0, a.jsx)("div", {
-          className: N.subHeader,
+          className: v.subHeader,
           children: A.default.Messages.MESSAGE_PREVIEW
         }), (0, a.jsx)(d.default, {
           activityActionType: f,
           activity: s,
-          className: N.preview,
+          className: v.preview,
           application: m,
           partyId: null != s.party ? s.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }), (0, a.jsx)("div", {
-          className: N.subHeader,
+          className: v.subHeader,
           children: A.default.Messages.ADD_A_COMMENT_OPTIONAL
         }), (0, a.jsx)(o.Popout, {
           position: "top",
@@ -128,7 +128,7 @@ class M extends l.PureComponent {
             })
           },
           children: () => (0, a.jsx)(C.default, {
-            className: N.textArea,
+            className: v.textArea,
             textValue: e,
             richValue: t,
             focused: n,
@@ -136,7 +136,7 @@ class M extends l.PureComponent {
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
             type: p.ChatInputTypes.FORM,
-            parentModalKey: x,
+            parentModalKey: N,
             disableThemedBackground: !0
           })
         })]
@@ -161,11 +161,11 @@ class M extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), v(this, "state", {
+    super(...e), x(this, "state", {
       ...(0, E.createEmptyState)(),
       textFocused: !0,
       contentWarningProps: null
-    }), v(this, "trackInvite", e => {
+    }), x(this, "trackInvite", e => {
       if (null != e && e.ok) {
         let {
           activity: t,
@@ -191,12 +191,12 @@ class M extends l.PureComponent {
           message_id: null != e ? e.body.id : null
         }), Promise.resolve()
       }
-    }), v(this, "handleTextChange", (e, t, n) => {
+    }), x(this, "handleTextChange", (e, t, n) => {
       this.setState({
         textValue: t,
         richValue: n
       })
-    }), v(this, "handleShare", () => {
+    }), x(this, "handleShare", () => {
       let {
         channel: e,
         activity: t,

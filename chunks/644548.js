@@ -40,7 +40,7 @@ t.default = e => {
   } = (0, m.useGamingContentData)(n), {
     primaryColor: _,
     secondaryColor: T
-  } = (0, d.default)(g), I = (0, o.getEntryDuration)(n), A = (0, o.getAggregateRange)(n), N = l.useCallback(e => {
+  } = (0, d.default)(g), I = (0, o.getEntryDuration)(n), A = (0, o.getAggregateRange)(n), v = l.useCallback(e => {
     if (null != S && null != I && null != A && (0, c.isAllowedRange)(A)) return (0, u.generateGamingContentImage)({
       entry: n,
       applicationImageSrc: g,
@@ -71,7 +71,7 @@ t.default = e => {
         closePopout: r,
         user: S,
         channel: t,
-        generateReactionImage: N,
+        generateReactionImage: v,
         reactionImageAltText: C(n, S),
         entry: n,
         requestId: s

@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   semanticColorTokens: function() {
-    return l
+    return n
   }
 });
 let a = {
@@ -14,7 +14,7 @@ let a = {
       ignore: !0
     }
   },
-  l = {
+  n = {
     "background-accent": {
       dark: "primary.530",
       light: "primary.430"

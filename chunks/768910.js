@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("392711"),
-  s = n.n(a),
-  l = n("710845"),
-  i = n("592125"),
-  r = n("306680"),
-  o = n("709054"),
-  u = n("287328");
+s.r(t), s("47120");
+var a = s("392711"),
+  n = s.n(a),
+  l = s("710845"),
+  i = s("592125"),
+  r = s("306680"),
+  u = s("709054"),
+  o = s("287328");
 
-function d(e, t, n) {
+function d(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
 let c = new l.default("ReadStates");
 t.default = new class e {
   async getAll(e) {
     let t = performance.now(),
-      n = await u.default.readStates(e).getMany(),
+      s = await o.default.readStates(e).getMany(),
       a = performance.now();
-    return c.log("asynchronously loaded in ".concat(a - t, "ms (readStates: ").concat(n.length, ")")), n
+    return c.log("asynchronously loaded in ".concat(a - t, "ms (readStates: ").concat(s.length, ")")), s
   }
   resetInMemoryState() {
     this.readStateVersion = null
@@ -34,7 +34,7 @@ t.default = new class e {
     null != this.readStateVersion && (null != e.version ? this.readStateVersion = e.version : c.log("Received null read states version", e))
   }
   handleWriteCaches(e, t) {
-    let n = r.default.getAllReadStates(!1);
+    let s = r.default.getAllReadStates(!1);
     if (t) {
       var a;
       if (null == this.readStateVersion) return;
@@ -42,8 +42,8 @@ t.default = new class e {
         l = "0",
         r = Object.keys(i.default.getMutablePrivateChannels()),
         d = new Set(r);
-      for (let e of (l = null !== (a = s()(r).sort(o.default.compare).reverse().value()[0]) && void 0 !== a ? a : "0", n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, l) && (l = e._lastMessageId));
-      u.default.nonGuildVersionsTransaction(e).putAll([{
+      for (let e of (l = null !== (a = n()(r).sort(u.default.compare).reverse().value()[0]) && void 0 !== a ? a : "0", s)) null != e._lastMessageId && (1 === u.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === u.default.compare(e._lastMessageId, l) && (l = e._lastMessageId));
+      o.default.nonGuildVersionsTransaction(e).putAll([{
         id: "highest_last_message_id",
         versionString: t
       }, {
@@ -54,8 +54,8 @@ t.default = new class e {
         version: this.readStateVersion
       }])
     }
-    let l = u.default.readStatesTransaction(e);
-    l.delete(), n.forEach(e => l.put("".concat(e.type, "-").concat(e.channelId), e))
+    let l = o.default.readStatesTransaction(e);
+    l.delete(), s.forEach(e => l.put("".concat(e.type, "-").concat(e.channelId), e))
   }
   constructor() {
     d(this, "readStateVersion", null), d(this, "actions", {

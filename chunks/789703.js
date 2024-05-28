@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 }), n("789020");
 var i = n("442837"),
-  s = n("509545"),
+  r = n("509545"),
   l = n("55563"),
-  r = n("551428"),
-  a = n("73346");
+  a = n("551428"),
+  s = n("73346");
 
 function o(e) {
   let t;
   let n = (0, i.useStateFromStores)([l.default], () => l.default.get(e), [e]),
-    o = (0, i.useStateFromStores)([r.default], () => r.default.getForSKU(e), [e]),
-    u = (0, i.useStateFromStores)([s.default], () => s.default.getForSKU(e), [e]);
+    o = (0, i.useStateFromStores)([a.default], () => a.default.getForSKU(e), [e]),
+    u = (0, i.useStateFromStores)([r.default], () => r.default.getForSKU(e), [e]);
   if (null != n && null != o && null != u) {
     if (null != o.thumbnail) {
       var d, c;
@@ -22,7 +22,7 @@ function o(e) {
         id: o.thumbnail.id,
         filename: o.thumbnail.filename,
         size: o.thumbnail.size,
-        url: (0, a.getAssetURL)(n.applicationId, o.thumbnail, 256),
+        url: (0, s.getAssetURL)(n.applicationId, o.thumbnail, 256),
         mime_type: o.thumbnail.mimeType,
         width: null !== (d = o.thumbnail.width) && void 0 !== d ? d : void 0,
         height: null !== (c = o.thumbnail.height) && void 0 !== c ? c : void 0

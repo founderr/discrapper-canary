@@ -12,18 +12,18 @@ var i = n("735250"),
   f = n("481060"),
   h = n("13245"),
   p = n("490029"),
-  g = n("797614"),
+  E = n("797614"),
   m = n("703656"),
-  E = n("454902"),
+  g = n("454902"),
   S = n("254761"),
   v = n("547881"),
-  y = n("70956"),
-  O = n("960048"),
-  C = n("792125"),
-  T = n("145597"),
-  N = n("692546"),
-  I = n("987650"),
-  _ = n("981631"),
+  C = n("70956"),
+  y = n("960048"),
+  _ = n("792125"),
+  O = n("145597"),
+  T = n("692546"),
+  N = n("987650"),
+  I = n("981631"),
   A = n("689938"),
   x = n("833947");
 
@@ -35,13 +35,13 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let L = 10 * y.default.Millis.SECOND;
+let L = 10 * C.default.Millis.SECOND;
 
 function M() {
-  let e = (0, T.getPID)(),
-    t = (0, T.getRPCAuthToken)();
+  let e = (0, O.getPID)(),
+    t = (0, O.getRPCAuthToken)();
   (0, p.send)({
-    type: _.OverlayEventTypes.DISPATCH,
+    type: I.OverlayEventTypes.DISPATCH,
     pid: e,
     token: t,
     payloads: [{
@@ -53,8 +53,8 @@ function M() {
 }
 class D extends a.PureComponent {
   componentDidMount() {
-    this.notificationTimer = setTimeout(this.hideNotification, L), h.default.track(_.AnalyticEvents.NOTIFICATION_VIEWED, {
-      notif_type: I.OverlayNotificationType.OverlayCrashed
+    this.notificationTimer = setTimeout(this.hideNotification, L), h.default.track(I.AnalyticEvents.NOTIFICATION_VIEWED, {
+      notif_type: N.OverlayNotificationType.OverlayCrashed
     })
   }
   componentWillUnmount() {
@@ -72,14 +72,14 @@ class D extends a.PureComponent {
     } = this.state, {
       notificationTimer: a
     } = this;
-    return null == a ? null : (0, i.jsx)(N.default, {
+    return null == a ? null : (0, i.jsx)(T.default, {
       observe: !1,
       children: (0, i.jsxs)(f.Clickable, {
-        className: s()((0, C.getThemeClass)(_.ThemeTypes.DARK), x.container),
+        className: s()((0, _.getThemeClass)(I.ThemeTypes.DARK), x.container),
         onClick: e => e.stopPropagation(),
-        children: [(0, i.jsx)(E.default, {
+        children: [(0, i.jsx)(g.default, {
           expand: !0,
-          colorScheme: E.ColorSchemes.DANGER,
+          colorScheme: g.ColorSchemes.DANGER,
           icon: (0, i.jsx)(S.default, {
             width: 40,
             height: 40,
@@ -120,8 +120,8 @@ class D extends a.PureComponent {
     }), R(this, "handleReload", e => {
       this.setState({
         busy: !0
-      }), M(), h.default.track(_.AnalyticEvents.NOTIFICATION_CLICKED, {
-        notif_type: I.OverlayNotificationType.OverlayCrashed,
+      }), M(), h.default.track(I.AnalyticEvents.NOTIFICATION_CLICKED, {
+        notif_type: N.OverlayNotificationType.OverlayCrashed,
         action_type: "reload"
       }, !0), e.stopPropagation(), setTimeout(() => location.reload(!0), 200)
     }), R(this, "handleNotificationClick", e => {
@@ -136,25 +136,25 @@ class D extends a.PureComponent {
   }
 }
 let b = r().throttle(() => {
-  g.default.increment({
+  E.default.increment({
     name: c.MetricEvents.APP_CRASHED,
     tags: ["reason:".concat(d.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
   }, !0)
 }, 100, {
   trailing: !1
 });
-class j extends a.PureComponent {
+class P extends a.PureComponent {
   componentDidCatch(e, t) {
     let n = (0, m.getHistory)().location;
     this.setState({
       error: e,
       info: t
     });
-    let i = (0, T.getPID)(),
-      a = (0, T.getRPCAuthToken)();
+    let i = (0, O.getPID)(),
+      a = (0, O.getRPCAuthToken)();
     (0, p.send)({
-      type: _.OverlayEventTypes.DISPATCH,
-      pid: (0, T.getPID)(),
+      type: I.OverlayEventTypes.DISPATCH,
+      pid: (0, O.getPID)(),
       token: a,
       payloads: [{
         type: "OVERLAY_CRASHED",
@@ -165,10 +165,10 @@ class j extends a.PureComponent {
         pid: i
       }]
     }), setImmediate(() => window.addEventListener("click", M));
-    let l = O.default.captureCrash(e, {
+    let l = y.default.captureCrash(e, {
       extra: t
     });
-    h.default.track(_.AnalyticEvents.APP_CRASHED, {
+    h.default.track(I.AnalyticEvents.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
@@ -199,4 +199,4 @@ class j extends a.PureComponent {
     })
   }
 }
-t.default = j
+t.default = P

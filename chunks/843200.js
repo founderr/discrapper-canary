@@ -59,7 +59,7 @@ class f extends n.Component {
     (0, u.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("31093")]).then(s.bind(s, "324239"));
+      } = await Promise.all([s.e("99387"), s.e("69495")]).then(s.bind(s, "324239"));
       return t => (0, a.jsx)(e, {
         ...t
       })

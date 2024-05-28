@@ -16,14 +16,14 @@ var s = n("735250"),
   p = n("961047"),
   h = n("611273");
 t.default = () => {
-  let [e, t] = a.useState(""), [l, T] = a.useState(""), [g, m] = a.useState(!1), [N, A] = a.useState(!1), [S, v] = a.useState(null), [C, O] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), x = R.code.split(" ")[0], L = async () => {
+  let [e, t] = a.useState(""), [l, T] = a.useState(""), [N, g] = a.useState(!1), [m, A] = a.useState(!1), [S, v] = a.useState(null), [C, O] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), x = R.code.split(" ")[0], L = async () => {
     try {
       await u.default.resendCode(e)
     } catch (e) {
       O(e.body.message)
     }
   }, D = async () => {
-    m(!0);
+    g(!0);
     try {
       let {
         token: t
@@ -32,7 +32,7 @@ t.default = () => {
     } catch (e) {
       e.body.message ? (v(null), O(e.body.message)) : (v(e.body.phone), O(e.body.code))
     } finally {
-      m(!1)
+      g(!1)
     }
   }, P = (0, s.jsxs)(f.default, {
     children: [(0, s.jsx)(f.Image, {
@@ -44,7 +44,7 @@ t.default = () => {
       })]
     })]
   });
-  return N ? P : (0, s.jsxs)(f.default, {
+  return m ? P : (0, s.jsxs)(f.default, {
     children: [(0, s.jsx)(f.Title, {
       children: _.default.Messages.ENTER_CODE
     }), (0, s.jsx)(f.SubTitle, {
@@ -77,7 +77,7 @@ t.default = () => {
       }), (0, s.jsx)(f.Button, {
         className: h.marginTop20,
         onClick: D,
-        submitting: g,
+        submitting: N,
         children: _.default.Messages.DONE
       })]
     })]

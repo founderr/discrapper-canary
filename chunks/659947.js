@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return p
   }
 }), s("653041"), s("47120");
 var a = s("735250"),
@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("689938"),
   m = s("158200");
 
-function g() {}
-let I = [_.AutocompleterResultTypes.VOICE_CHANNEL];
+function I() {}
+let g = [_.AutocompleterResultTypes.VOICE_CHANNEL];
 
 function N(e) {
   e.setOptions({
@@ -46,7 +46,7 @@ function C() {
   }, "footer")
 }
 
-function p() {
+function O() {
   return (0, a.jsx)(h, {
     height: 8
   }, "header")
@@ -64,14 +64,14 @@ function A() {
   })
 }
 
-function O(e) {
+function p(e) {
   var t, s;
   let {
     keybind: l
   } = e, o = n.useRef(l);
   n.useEffect(() => void(o.current = l));
   let [d, u] = n.useState(null !== (s = null === (t = l.params) || void 0 === t ? void 0 : t.channelId) && void 0 !== s ? s : void 0), c = n.useCallback(() => {
-    (0, i.openModalLazy)(async () => e => (0, a.jsx)(x, {
+    (0, i.openModalLazy)(async () => e => (0, a.jsx)(R, {
       ...e,
       onSelect: e => {
         u(e), r.default.setKeybind({
@@ -90,7 +90,7 @@ function O(e) {
       align: E.default.Align.STRETCH,
       children: [(0, a.jsx)("div", {
         className: m.selectedVoiceChannel,
-        children: (0, a.jsx)(R, {
+        children: (0, a.jsx)(x, {
           channelId: d
         })
       }), (0, a.jsx)(E.default.Child, {
@@ -105,15 +105,15 @@ function O(e) {
   })
 }
 
-function x(e) {
+function R(e) {
   let {
     transitionState: t,
     onClose: s,
     onSelect: r
-  } = e, E = n.useId(), g = n.useRef(null), {
+  } = e, E = n.useId(), I = n.useRef(null), {
     mouseFocusEnabled: h,
-    enableMouseFocus: O,
-    disableMouseFocus: x
+    enableMouseFocus: p,
+    disableMouseFocus: R
   } = function() {
     let e = n.useRef(!1),
       t = n.useCallback(() => {
@@ -128,12 +128,12 @@ function x(e) {
       disableMouseFocus: s
     }
   }(), {
-    query: R,
+    query: x,
     updateQuery: M,
-    queryResults: v
+    queryResults: L
   } = (0, o.default)({
     visible: !0,
-    autocompleterResultTypes: I,
+    autocompleterResultTypes: g,
     autocompleterBeforeCreateSearchContext: N
   }), D = function(e) {
     let t = "" !== e,
@@ -148,37 +148,37 @@ function x(e) {
         return s
       }, [t]);
     return t ? null : s
-  }(R), {
-    focusedIndex: L,
-    setFocusedIndex: P
+  }(x), {
+    focusedIndex: P,
+    setFocusedIndex: v
   } = function(e) {
     let [t, s] = n.useState(0), a = n.useRef(e);
     return e !== a.current && 0 !== t && s(0), n.useEffect(() => void(a.current = e)), {
       focusedIndex: t,
       setFocusedIndex: s
     }
-  }(R);
+  }(x);
   n.useEffect(() => {
     let {
       current: e
-    } = g;
-    !(null == e || e.isItemVisible(0, L, !0)) && e.scrollToIndex({
+    } = I;
+    !(null == e || e.isItemVisible(0, P, !0)) && e.scrollToIndex({
       section: 0,
-      row: L
+      row: P
     })
-  }, [L]);
-  let b = null != D ? D.length : v.length,
+  }, [P]);
+  let b = null != D ? D.length : L.length,
     j = (() => {
       if (null != D) {
         var e;
-        return null === (e = D[L]) || void 0 === e ? void 0 : e.id
+        return null === (e = D[P]) || void 0 === e ? void 0 : e.id
       }
-      let t = v[L];
+      let t = L[P];
       if ((null == t ? void 0 : t.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
     className: m.voiceModalContainer,
-    onMouseMove: O,
+    onMouseMove: p,
     children: (0, a.jsxs)(i.ModalRoot, {
       transitionState: t,
       size: i.ModalSize.MEDIUM,
@@ -186,10 +186,10 @@ function x(e) {
       children: [(0, a.jsx)("div", {
         className: m.inputWrapper,
         children: (0, a.jsx)(i.TextInput, {
-          value: R,
+          value: x,
           onChange: M,
           onKeyDown: function(e) {
-            x();
+            R();
             let t = e.key.toLowerCase();
             if ("arrowdown" === t || "arrowup" === t || "enter" === t || "escape" === t) switch (e.preventDefault(), t) {
               case "escape":
@@ -197,18 +197,18 @@ function x(e) {
                 break;
               case "enter": {
                 let e = (() => {
-                  if (null != D) return D[L];
-                  let e = v[L];
+                  if (null != D) return D[P];
+                  let e = L[P];
                   if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                 })();
                 null == e ? r(void 0) : r(e.id), s();
                 break
               }
               case "arrowup":
-                0 === L ? P(b - 1) : P(L - 1);
+                0 === P ? v(b - 1) : v(P - 1);
                 break;
               case "arrowdown":
-                L >= b - 1 ? P(0) : P(L + 1)
+                P >= b - 1 ? v(0) : v(P + 1)
             }
           },
           placeholder: f.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
@@ -219,18 +219,18 @@ function x(e) {
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === b && "" !== R && (0, a.jsx)(A, {}), (b > 0 || "" === R) && (0, a.jsx)(i.ListThin, {
+      }), 0 === b && "" !== x && (0, a.jsx)(A, {}), (b > 0 || "" === x) && (0, a.jsx)(i.ListThin, {
         innerId: E,
         innerRole: "listbox",
         "aria-label": f.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
-        ref: g,
+        ref: I,
         sections: [b],
         renderRow: function(e) {
           let {
             row: t
           } = e, n = (() => {
             if (null != D) return D[t];
-            let e = v[t];
+            let e = L[t];
             if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
           })();
           if (null == n) return null;
@@ -240,19 +240,19 @@ function x(e) {
             id: n.id,
             channel: n,
             category: l,
-            focused: L === t,
-            onMouseEnter: () => h.current && P(t),
+            focused: P === t,
+            onMouseEnter: () => h.current && v(t),
             onClick: () => {
               r(n.id), s()
             },
-            onFocus: () => P(t),
+            onFocus: () => v(t),
             children: null != i ? (0, a.jsx)("div", {
               className: m.guildName,
               children: i.name
             }) : null
           }, n.id)
         },
-        renderListHeader: p,
+        renderListHeader: O,
         renderFooter: C,
         sectionHeight: 0,
         rowHeight: 34,
@@ -264,7 +264,7 @@ function x(e) {
   })
 }
 
-function R(e) {
+function x(e) {
   let {
     channelId: t
   } = e, {
@@ -292,9 +292,9 @@ function R(e) {
     channel: s,
     id: s.id,
     category: n,
-    onClick: g,
-    onFocus: g,
-    onMouseEnter: g,
+    onClick: I,
+    onFocus: I,
+    onMouseEnter: I,
     focused: !1,
     children: null != r ? (0, a.jsx)("div", {
       className: m.guildName,

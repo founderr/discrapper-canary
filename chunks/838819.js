@@ -1,101 +1,101 @@
 "use strict";
 a.r(t), a("47120");
-var l = a("735250"),
-  s = a("470079"),
-  r = a("120356"),
-  n = a.n(r),
-  i = a("392711"),
-  o = a("979554"),
+var s = a("735250"),
+  r = a("470079"),
+  n = a("120356"),
+  l = a.n(n),
+  o = a("392711"),
+  i = a("979554"),
   c = a("399606"),
   u = a("524437"),
   d = a("952265"),
   f = a("481060"),
   C = a("150063"),
-  m = a("425493"),
-  p = a("434650"),
+  p = a("425493"),
+  m = a("434650"),
   g = a("410030"),
   E = a("100527"),
-  h = a("906732"),
-  b = a("702486"),
-  x = a("580747"),
-  v = a("605236"),
-  S = a("984370"),
-  I = a("329067"),
-  L = a("51855"),
-  T = a("479446"),
-  N = a("981632"),
-  _ = a("290026"),
-  y = a("819640"),
-  j = a("594174"),
-  A = a("292665"),
-  O = a("682864"),
-  k = a("471731"),
-  R = a("486620"),
-  P = a("626135"),
-  B = a("74538"),
-  M = a("792125"),
+  b = a("906732"),
+  h = a("702486"),
+  S = a("580747"),
+  T = a("605236"),
+  v = a("984370"),
+  y = a("329067"),
+  x = a("51855"),
+  _ = a("479446"),
+  I = a("981632"),
+  L = a("290026"),
+  A = a("819640"),
+  N = a("594174"),
+  P = a("292665"),
+  R = a("682864"),
+  O = a("471731"),
+  k = a("486620"),
+  M = a("626135"),
+  j = a("74538"),
+  B = a("792125"),
   D = a("335131"),
   F = a("328347"),
   w = a("280773"),
   H = a("617452"),
   U = a("223143"),
-  W = a("298228"),
-  G = a("937510"),
-  V = a("853748"),
-  K = a("426171"),
-  z = a("823941"),
-  Y = a("752053"),
+  G = a("298228"),
+  W = a("937510"),
+  Y = a("853748"),
+  V = a("426171"),
+  K = a("823941"),
+  z = a("752053"),
   Z = a("128185"),
   X = a("861746"),
   q = a("508498"),
   Q = a("38900"),
-  $ = a("709999"),
-  J = a("373113"),
+  J = a("709999"),
+  $ = a("373113"),
   ee = a("994896"),
   et = a("141594"),
   ea = a("302800"),
-  el = a("981631"),
-  es = a("921944"),
-  er = a("420212"),
-  en = a("474936"),
-  ei = a("689938"),
-  eo = a("425734");
+  es = a("981631"),
+  er = a("921944"),
+  en = a("420212"),
+  el = a("474936"),
+  eo = a("689938"),
+  ei = a("425734");
 
 function ec(e) {
   var t, a;
   let {
-    category: r,
-    initialItemCardRef: n,
+    category: n,
+    initialItemCardRef: l,
     lightningCheckoutEnabled: u,
     isPremiumUser: d,
     isGiftEasterEggEnabled: C
-  } = e, m = (0, G.usePurchasedProductsSort)(r.products), p = (0, i.groupBy)(m, "type"), g = (0, c.useStateFromStores)([F.default], () => F.default.initialProductSkuId), {
+  } = e, p = (0, W.usePurchasedProductsSort)(n.products), m = (0, o.groupBy)(p, "type"), g = (0, c.useStateFromStores)([F.default], () => F.default.initialProductSkuId), {
     unifiedProductCatalogEnabled: E
   } = (0, w.useCollectiblesUnifiedProductCatalogExperiment)({
     location: "CollectiblesShop"
-  }), h = u ? X.default : $.default, b = s.useCallback(e => t => {
-    e.skuId === g && (n.current = t.current)
-  }, [g, n]), x = (e, t) => 0 === e.length ? null : (0, l.jsxs)("div", {
-    children: [null != t ? (0, l.jsx)(f.Text, {
-      className: eo.itemTypeTitle,
+  }), b = u ? X.default : J.default, h = r.useCallback(e => t => {
+    e.skuId === g && (l.current = t.current)
+  }, [g, l]), S = (e, t) => 0 === e.length ? null : (0, s.jsxs)("div", {
+    children: [null != t ? (0, s.jsx)(f.Text, {
+      className: ei.itemTypeTitle,
       color: "header-secondary",
       variant: "text-sm/bold",
       children: t
-    }) : (0, l.jsx)(O.default, {
+    }) : (0, s.jsx)(R.default, {
       size: 24
-    }), (0, l.jsx)("div", {
-      className: eo.cardsContainer,
-      children: e.map(e => (0, l.jsx)(h, {
-        onMount: b(e),
+    }), (0, s.jsx)("div", {
+      className: ei.cardsContainer,
+      children: e.map(e => (0, s.jsx)(b, {
+        onMount: h(e),
         isPremiumUser: d,
-        category: r,
+        category: n,
         product: e,
         isGiftEasterEggEnabled: C
       }, e.skuId))
     })]
   });
-  return E ? x(m) : (0, l.jsxs)(l.Fragment, {
-    children: [x(null !== (t = p[o.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], ei.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), x(null !== (a = p[o.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== a ? a : [], ei.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
+  return E ? S(p) : (0, s.jsxs)(s.Fragment, {
+    children: [S(null !== (t = m[i.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], eo.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), S(null !== (a = m[i.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== a ? a : [], eo.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
   })
 }
 
@@ -103,45 +103,45 @@ function eu(e) {
   let {
     category: t,
     isPremiumUser: a,
-    initialItemCardRef: r,
-    isGiftEasterEggEnabled: i,
-    setIsGiftEasterEggEnabled: o,
+    initialItemCardRef: n,
+    isGiftEasterEggEnabled: o,
+    setIsGiftEasterEggEnabled: i,
     showEasterEggToggle: c,
     isFullScreen: u,
     lightningCheckoutEnabled: d,
     index: C
-  } = e, m = s.useRef(10 + 70 * Math.random()), [g, E] = s.useState(!1), h = (0, ea.getCountdownDisplayOptions)(t.skuId), b = (0, p.useIsVisible)(e => {
-    E(e && null != h)
+  } = e, p = r.useRef(10 + 70 * Math.random()), [g, E] = r.useState(!1), b = (0, ea.getCountdownDisplayOptions)(t.skuId), h = (0, m.useIsVisible)(e => {
+    E(e && null != b)
   }, u ? .13 : .15);
-  return (0, l.jsxs)("div", {
-    className: eo.categoryWrapper,
-    ref: b,
-    children: [c && (0, l.jsx)(f.Clickable, {
-      className: n()(eo.hiddenWumpus, {
-        [eo.hiddenWumpusEnabled]: i
+  return (0, s.jsxs)("div", {
+    className: ei.categoryWrapper,
+    ref: h,
+    children: [c && (0, s.jsx)(f.Clickable, {
+      className: l()(ei.hiddenWumpus, {
+        [ei.hiddenWumpusEnabled]: o
       }),
-      onClick: () => o(!0),
+      onClick: () => i(!0),
       style: {
-        left: "".concat(m.current, "%")
+        left: "".concat(p.current, "%")
       },
-      children: (0, l.jsx)(N.default, {
-        idleAnimationState: T.AnimationState.IDLE,
-        giftStyle: en.PremiumGiftStyles.BOX
+      children: (0, s.jsx)(I.default, {
+        idleAnimationState: _.AnimationState.IDLE,
+        giftStyle: el.PremiumGiftStyles.BOX
       })
-    }), (0, l.jsx)(z.default, {
+    }), (0, s.jsx)(K.default, {
       category: t,
-      hideLimitedTimeBadge: null != h,
+      hideLimitedTimeBadge: null != b,
       index: C
-    }), (0, l.jsx)(ec, {
+    }), (0, s.jsx)(ec, {
       category: t,
-      initialItemCardRef: r,
+      initialItemCardRef: n,
       isPremiumUser: a,
-      isGiftEasterEggEnabled: i,
+      isGiftEasterEggEnabled: o,
       lightningCheckoutEnabled: d
-    }), null != h && null != t.unpublishedAt && (0, l.jsx)(V.CollectiblesCountdown, {
+    }), null != b && null != t.unpublishedAt && (0, s.jsx)(Y.CollectiblesCountdown, {
       unpublishedAt: t.unpublishedAt,
       isVisible: g,
-      displayOptions: h,
+      displayOptions: b,
       isFullScreen: u
     })]
   })
@@ -151,34 +151,34 @@ function ed(e) {
   let {
     isFullScreen: t,
     isLayer: a,
-    onClose: s
+    onClose: r
   } = e, {
-    condensedBannersEnabled: r
+    condensedBannersEnabled: n
   } = (0, ee.useCollectiblesCondensedBannersExperiment)({
     location: "CollectiblesShop"
-  }), i = (0, g.default)();
-  return t ? (0, l.jsx)("div", {
-    className: eo.closeWrapper,
-    children: (0, l.jsx)(m.default, {
-      className: eo.close,
-      closeAction: a ? D.closeCollectiblesShop : s,
+  }), o = (0, g.default)();
+  return t ? (0, s.jsx)("div", {
+    className: ei.closeWrapper,
+    children: (0, s.jsx)(p.default, {
+      className: ei.close,
+      closeAction: a ? D.closeCollectiblesShop : r,
       keybind: "ESC"
     })
-  }) : r ? (0, l.jsx)(S.default, {
-    className: n()((0, M.getThemeClass)(i), eo.headerBar),
-    innerClassname: eo.shopLogoContainer,
+  }) : n ? (0, s.jsx)(v.default, {
+    className: l()((0, B.getThemeClass)(o), ei.headerBar),
+    innerClassname: ei.shopLogoContainer,
     toolbar: !0,
-    children: (0, l.jsx)(R.default, {
-      className: eo.shopLogo
+    children: (0, s.jsx)(k.default, {
+      className: ei.shopLogo
     })
-  }) : (0, l.jsxs)(S.default, {
-    className: n()((0, M.getThemeClass)(i)),
+  }) : (0, s.jsxs)(v.default, {
+    className: l()((0, B.getThemeClass)(o)),
     toolbar: !0,
-    children: [(0, l.jsx)(k.default, {
-      className: eo.logo
-    }), (0, l.jsx)(S.default.Title, {
-      className: eo.title,
-      children: ei.default.Messages.COLLECTIBLES_SHOP
+    children: [(0, s.jsx)(O.default, {
+      className: ei.logo
+    }), (0, s.jsx)(v.default.Title, {
+      className: ei.title,
+      children: eo.default.Messages.COLLECTIBLES_SHOP
     })]
   })
 }
@@ -187,93 +187,93 @@ t.default = function(e) {
     isFullScreen: t = !0
   } = e, {
     analyticsSource: a,
-    analyticsLocations: r
+    analyticsLocations: n
   } = (0, c.useStateFromStoresObject)([F.default], () => F.default.getAnalytics()), {
-    analyticsLocations: i
-  } = (0, h.default)([...r, E.default.COLLECTIBLES_SHOP]), m = (0, c.useStateFromStores)([y.default], () => y.default.getLayers().includes(el.Layers.COLLECTIBLES_SHOP)), p = (0, d.useHasAnyModalOpen)(), {
+    analyticsLocations: o
+  } = (0, b.default)([...n, E.default.COLLECTIBLES_SHOP]), p = (0, c.useStateFromStores)([A.default], () => A.default.getLayers().includes(es.Layers.COLLECTIBLES_SHOP)), m = (0, d.useHasAnyModalOpen)(), {
     onClose: g
-  } = (0, q.useCollectiblesShopRouting)(), S = (0, c.useStateFromStores)([j.default], () => j.default.getCurrentUser()), T = B.default.canUseCollectibles(S), N = (0, x.default)("shop_disable_cache"), O = (0, x.default)("shop_include_unpublished"), {
-    categories: k,
-    isFetchingCategories: R,
-    error: M
+  } = (0, q.useCollectiblesShopRouting)(), v = (0, c.useStateFromStores)([N.default], () => N.default.getCurrentUser()), _ = j.default.canUseCollectibles(v), I = (0, S.default)("shop_disable_cache"), R = (0, S.default)("shop_include_unpublished"), {
+    categories: O,
+    isFetchingCategories: k,
+    error: B
   } = (0, U.default)({
-    noCache: N,
-    includeUnpublished: O
+    noCache: I,
+    includeUnpublished: R
   });
-  (0, _.useReloadProfileEffectWhenConfigsAreMissing)();
-  let w = (0, W.usePurchasedCategoriesSort)(k),
-    G = L.default.useExperiment({
+  (0, L.useReloadProfileEffectWhenConfigsAreMissing)();
+  let w = (0, G.usePurchasedCategoriesSort)(O),
+    W = x.default.useExperiment({
       location: E.default.COLLECTIBLES_SHOP
     }, {
       autoTrackExposure: !1
     }),
     {
-      userIsEligible: V
-    } = (0, I.useLightningCheckoutEligibility)(),
-    z = G.enabled && V,
+      userIsEligible: Y
+    } = (0, y.useLightningCheckoutEligibility)(),
+    K = W.enabled && Y,
     X = (0, H.useShopBundleEnabled)("CollectiblesShop"),
-    $ = s.useRef(null),
-    [ea, ec] = s.useState(!1);
-  (0, K.useProductDetailsDeepLinking)({
-    categories: k,
-    isFetchingCategories: R,
-    isLayer: m,
-    initialItemCardRef: $
+    J = r.useRef(null),
+    [ea, ec] = r.useState(!1);
+  (0, V.useProductDetailsDeepLinking)({
+    categories: O,
+    isFetchingCategories: k,
+    isLayer: p,
+    initialItemCardRef: J
   });
   let {
     sessionId: ef,
     scrollerRef: eC,
-    scrollHandler: em
-  } = (0, b.usePageScrollPosition)(el.AnalyticEvents.COLLECTIBLES_SHOP_SCROLLED, a);
-  s.useEffect(() => {
-    P.default.track(el.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
-      location_stack: i,
+    scrollHandler: ep
+  } = (0, h.usePageScrollPosition)(es.AnalyticEvents.COLLECTIBLES_SHOP_SCROLLED, a);
+  r.useEffect(() => {
+    M.default.track(es.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
+      location_stack: o,
       source: a,
       page_session_id: ef
-    }), !T && P.default.track(el.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: en.PremiumUpsellTypes.COLLECTIBLES_SHOP,
-      location_stack: i
+    }), !_ && M.default.track(es.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: el.PremiumUpsellTypes.COLLECTIBLES_SHOP,
+      location_stack: o
     })
-  }, [T, i, a, ef]);
+  }, [_, o, a, ef]);
   let {
-    dismissCollectiblesShopTabNewBadge: ep
+    dismissCollectiblesShopTabNewBadge: em
   } = (0, et.default)();
-  s.useEffect(() => {
-    ep(), !(0, v.isDismissibleContentDismissed)(u.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, v.markDismissibleContentAsDismissed)(u.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
-      dismissAction: es.ContentDismissActionType.AUTO_DISMISS,
+  r.useEffect(() => {
+    em(), !(0, T.isDismissibleContentDismissed)(u.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, T.markDismissibleContentAsDismissed)(u.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
+      dismissAction: er.ContentDismissActionType.AUTO_DISMISS,
       forceTrack: !0
     })
-  }, [ep]), s.useEffect(() => {
-    !t && (0, C.setHomeLink)(el.Routes.COLLECTIBLES_SHOP)
-  }, [t]), s.useEffect(() => () => {
+  }, [em]), r.useEffect(() => {
+    !t && (0, C.setHomeLink)(es.Routes.COLLECTIBLES_SHOP)
+  }, [t]), r.useEffect(() => () => {
     (0, D.setCollectiblesCategoryItemsViewed)({
-      categories: [...k.values()],
-      itemTypes: [o.CollectiblesItemType.AVATAR_DECORATION, o.CollectiblesItemType.PROFILE_EFFECT]
+      categories: [...O.values()],
+      itemTypes: [i.CollectiblesItemType.AVATAR_DECORATION, i.CollectiblesItemType.PROFILE_EFFECT]
     })
-  }, [k]), s.useEffect(() => {
-    if (!t || m || p) return;
+  }, [O]), r.useEffect(() => {
+    if (!t || p || m) return;
     let e = e => {
-      e.key === er.KeyboardEventKey.Escape && g()
+      e.key === en.KeyboardEventKey.Escape && g()
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
-  }, [t, m, p, g]), s.useEffect(() => {
-    V && L.default.trackExposure({
+  }, [t, p, m, g]), r.useEffect(() => {
+    Y && x.default.trackExposure({
       location: E.default.COLLECTIBLES_SHOP
     })
-  }, [V]);
-  let eg = s.useCallback(() => {
+  }, [Y]);
+  let eg = r.useCallback(() => {
       (0, D.fetchCollectiblesCategories)({
-        noCache: N,
-        includeUnpublished: O,
+        noCache: I,
+        includeUnpublished: R,
         includeBundles: X
       })
-    }, [N, O, X]),
+    }, [I, R, X]),
     {
       containerRef: eE,
-      returnRef: eh
+      returnRef: eb
     } = function() {
-      let e = s.useRef(null),
-        t = s.useRef(null);
+      let e = r.useRef(null),
+        t = r.useRef(null);
       return (0, f.useFocusLock)(e, {
         returnRef: t
       }), {
@@ -282,60 +282,60 @@ t.default = function(e) {
       }
     }(),
     {
-      setCategoryRef: eb,
-      handleScrollToCategory: ex
-    } = (0, K.useCategoryDeepLinking)(),
+      setCategoryRef: eh,
+      handleScrollToCategory: eS
+    } = (0, V.useCategoryDeepLinking)(),
     {
-      condensedBannersAndDynamicHeadersEnabled: ev
+      condensedBannersAndDynamicHeadersEnabled: eT
     } = (0, ee.useCollectiblesCondensedBannersExperiment)({
       location: "CollectiblesShop"
     });
-  return (0, l.jsxs)(h.AnalyticsLocationProvider, {
-    value: i,
-    children: [(0, l.jsxs)("div", {
-      className: eo.shop,
+  return (0, s.jsxs)(b.AnalyticsLocationProvider, {
+    value: o,
+    children: [(0, s.jsxs)("div", {
+      className: ei.shop,
       ref: t ? eE : void 0,
-      children: [(0, l.jsx)(ed, {
+      children: [(0, s.jsx)(ed, {
         isFullScreen: t,
-        isLayer: m,
+        isLayer: p,
         onClose: g
-      }), (0, l.jsx)(f.AdvancedScroller, {
-        className: eo.shopScroll,
+      }), (0, s.jsx)(f.AdvancedScroller, {
+        className: ei.shopScroll,
         ref: eC,
-        onScroll: em,
-        children: (0, l.jsx)("div", {
-          className: n()(eo.pageWrapper, {
-            [eo.pageWrapperFullscreen]: t
+        onScroll: ep,
+        children: (0, s.jsx)("div", {
+          className: l()(ei.pageWrapper, {
+            [ei.pageWrapperFullscreen]: t
           }),
-          children: (0, l.jsxs)("main", {
-            className: n()(eo.page, {
-              [eo.pageWithShopBannerHidden]: !t
+          children: (0, s.jsxs)("main", {
+            className: l()(ei.page, {
+              [ei.pageWithShopBannerHidden]: !t
             }),
-            children: [ev && (0, l.jsx)(Z.CollectiblesShopHeaderCarousel, {
+            children: [eT && (0, s.jsx)(Z.CollectiblesShopHeaderCarousel, {
               categories: w,
-              handleScrollToCategory: ex
-            }), t ? (0, l.jsx)(A.default, {
-              title: ei.default.Messages.COLLECTIBLES_SHOP,
-              ref: t ? eh : void 0
-            }) : null, R ? (0, l.jsx)(Q.default, {}) : M ? (0, l.jsx)(Y.default, {
+              handleScrollToCategory: eS
+            }), t ? (0, s.jsx)(P.default, {
+              title: eo.default.Messages.COLLECTIBLES_SHOP,
+              ref: t ? eb : void 0
+            }) : null, k ? (0, s.jsx)(Q.default, {}) : B ? (0, s.jsx)(z.default, {
               onRetry: eg
-            }) : (0, l.jsx)("div", {
-              className: eo.categories,
+            }) : (0, s.jsx)("div", {
+              className: ei.categories,
               children: w.filter(e => null == e.unpublishedAt || e.unpublishedAt > new Date).filter(e => {
                 let {
                   products: t
                 } = e;
                 return t.length > 0
-              }).map((e, a) => (0, l.jsx)("div", {
-                ref: t => eb(e.skuId, t),
-                children: (0, l.jsx)(eu, {
-                  isPremiumUser: T,
+              }).map((e, a) => (0, s.jsx)("div", {
+                ref: t => eh(e.skuId, t),
+                children: (0, s.jsx)(eu, {
+                  isPremiumUser: _,
                   category: e,
-                  initialItemCardRef: $,
+                  initialItemCardRef: J,
                   setIsGiftEasterEggEnabled: ec,
                   isGiftEasterEggEnabled: ea,
                   isFullScreen: t,
-                  lightningCheckoutEnabled: z,
+                  lightningCheckoutEnabled: K,
                   index: a
                 })
               }, e.skuId))
@@ -343,6 +343,6 @@ t.default = function(e) {
           })
         })
       })]
-    }), ea && (0, l.jsx)(J.default, {})]
+    }), ea && (0, s.jsx)($.default, {})]
   })
 }

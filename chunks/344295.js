@@ -16,9 +16,9 @@ var s = n("735250"),
   p = n("792766"),
   h = n("362762"),
   T = n("978684"),
-  g = n("264229"),
-  m = n("929809"),
-  N = n("703656"),
+  N = n("264229"),
+  g = n("929809"),
+  m = n("703656"),
   A = n("108427"),
   S = n("314897"),
   v = n("896797"),
@@ -34,8 +34,8 @@ var s = n("735250"),
   U = n("423527"),
   b = n("981631"),
   B = n("188785"),
-  G = n("701476"),
-  y = n("436620"),
+  y = n("701476"),
+  G = n("436620"),
   F = n("689938"),
   V = n("611273");
 
@@ -59,7 +59,7 @@ async function Y(e) {
   } = await c.default.resolveInvite(e, w);
   null != t && (0, I.updateAuthInvite)(t)
 }
-class K extends a.PureComponent {
+class W extends a.PureComponent {
   componentDidMount() {
     let {
       isUnderage: e,
@@ -70,7 +70,7 @@ class K extends a.PureComponent {
         invite_code: n
       }, {
         flush: !0
-      }), (0, A.trackAppUIViewed)("invite"), !y.IS_APP_COMPATIBLE_BROWSER) {
+      }), (0, A.trackAppUIViewed)("invite"), !G.IS_APP_COMPATIBLE_BROWSER) {
       let e = this.getInviteKey();
       P.default.launch("discord://" + b.Routes.INVITE(e), () => void 0)
     }
@@ -78,8 +78,8 @@ class K extends a.PureComponent {
       let e = this.getInviteKey(),
         {
           baseCode: t
-        } = (0, g.parseExtraDataFromInviteKey)(e);
-      (0, N.replaceWith)(b.Routes.INVITE_LOGIN(t))
+        } = (0, N.parseExtraDataFromInviteKey)(e);
+      (0, m.replaceWith)(b.Routes.INVITE_LOGIN(t))
     }
   }
   componentDidUpdate(e) {
@@ -110,7 +110,7 @@ class K extends a.PureComponent {
       let {
         channel: e
       } = t;
-      null != e && ((0, m.setNewUser)(G.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(b.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
+      null != e && ((0, g.setNewUser)(y.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(b.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
     }
   }
   getInviteKey() {
@@ -127,7 +127,7 @@ class K extends a.PureComponent {
         invite: s
       } = this.props,
       a = this.getInviteKey(),
-      l = (0, g.parseInviteCodeFromInviteKey)(a),
+      l = (0, N.parseInviteCodeFromInviteKey)(a),
       i = t ? {
         guild_id: null != s.guild ? s.guild.id : null,
         channel_id: null != s.channel ? s.channel.id : null,
@@ -258,7 +258,7 @@ class K extends a.PureComponent {
       case b.InviteStates.RESOLVED:
         var i;
         if (n && (0, x.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.SessionStorage.set(T.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(b.Routes.APP));
-        if (n || !y.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
+        if (n || !G.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
         else if (this.getMode() === H.LOGIN) return (0, s.jsx)(j.default, {
           invite: e,
           transitionTo: a,
@@ -336,7 +336,7 @@ class K extends a.PureComponent {
           invite: a
         } = t.props,
         l = null != a.stage_instance || null != a.guild_scheduled_event;
-      return y.IS_APP_COMPATIBLE_BROWSER ? (0, s.jsx)(O.Button, {
+      return G.IS_APP_COMPATIBLE_BROWSER ? (0, s.jsx)(O.Button, {
         className: l ? V.marginTop20 : V.marginTop40,
         onClick: n,
         color: l ? O.Button.Colors.GREEN : O.Button.Colors.BRAND,
@@ -359,4 +359,4 @@ t.default = o.default.connectStores([C.default, v.default, S.default, h.default,
     defaultRoute: v.default.defaultRoute,
     isUnderage: E.default.isUnderageAnonymous()
   }
-})(K)
+})(W)

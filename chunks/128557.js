@@ -28,9 +28,9 @@ var a = n("735250"),
   T = n("259580"),
   I = n("263704"),
   A = n("585483"),
-  N = n("63063"),
-  v = n("358085"),
-  x = n("709054"),
+  v = n("63063"),
+  x = n("358085"),
+  N = n("709054"),
   M = n("967128"),
   R = n("981631"),
   y = n("231873"),
@@ -77,7 +77,7 @@ function j(e) {
 function P(e) {
   let {
     channel: t
-  } = e, s = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != s && x.default.extractTimestamp(s.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]), {
+  } = e, s = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != s && N.default.extractTimestamp(s.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]), {
     canInvite: I,
     canManageGuild: P,
     canMessage: D
@@ -90,9 +90,9 @@ function P(e) {
     guildPersonalized: w
   } = (0, p.useCompletedStates)(s), {
     handleInvite: k,
-    handleMessage: B,
-    handlePersonalize: H,
-    handleDownload: G,
+    handleMessage: H,
+    handlePersonalize: G,
+    handleDownload: B,
     handleAddApplication: V
   } = function(e) {
     let t = l.useCallback(() => {
@@ -233,7 +233,7 @@ function P(e) {
       iconUrl: n("753033"),
       header: L.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: w,
-      onClick: H
+      onClick: G
     })
   }, "customize")), D && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
@@ -244,9 +244,9 @@ function P(e) {
       iconUrl: n("15717"),
       header: L.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
       completed: F,
-      onClick: B
+      onClick: H
     })
-  }, "message")), (0, v.isWeb)() && Z.push((0, a.jsx)(o.default.div, {
+  }, "message")), (0, x.isWeb)() && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
       opacity: z[Z.length]
@@ -255,7 +255,7 @@ function P(e) {
       iconUrl: n("435921"),
       header: L.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
       completed: b,
-      onClick: G
+      onClick: B
     })
   }, "download")), Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
@@ -269,9 +269,9 @@ function P(e) {
       onClick: V
     })
   }, "addapp")));
-  let q = T ? L.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : L.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
-  f && (q = L.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-  let X = "".concat(N.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+  let X = T ? L.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : L.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+  f && (X = L.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
+  let q = "".concat(v.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, a.jsx)(M.default, {
     channelId: t.id,
     children: (0, a.jsx)("div", {
@@ -293,8 +293,8 @@ function P(e) {
               [O.noChildren]: 0 === Z.length
             }),
             variant: "text-sm/normal",
-            children: [q, " ", Z.length > 0 ? L.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
-              guideURL: X
+            children: [X, " ", Z.length > 0 ? L.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+              guideURL: q
             }) : null]
           })]
         }), Z]

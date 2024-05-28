@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   purchaseProduct: function() {
-    return S
+    return I
   }
 }), n("47120");
 var i = n("512722"),
-  s = n.n(i),
-  l = n("570140"),
+  l = n.n(i),
+  s = n("570140"),
   a = n("355467"),
   r = n("976255"),
   u = n("366939"),
@@ -14,106 +14,106 @@ var i = n("512722"),
   c = n("255078"),
   d = n("626135"),
   m = n("74538"),
-  f = n("45572"),
-  p = n("981631"),
-  _ = n("474936");
-async function S(e) {
+  p = n("45572"),
+  f = n("981631"),
+  S = n("474936");
+async function I(e) {
   let {
     setPurchaseState: t,
     setHasAcceptedTerms: n,
     setIsSubmitting: i,
-    setPurchaseError: S,
-    hasRedirectURL: I,
+    setPurchaseError: I,
+    hasRedirectURL: _,
     setHasRedirectURL: P,
     isGift: E,
     baseAnalyticsData: T,
-    analyticsLocation: N,
-    analyticsLocations: v,
-    flowStartTime: h,
+    analyticsLocation: v,
+    analyticsLocations: h,
+    flowStartTime: N,
     subscriptionPlan: x,
     planGroup: A,
-    trialId: C,
-    priceOptions: y,
-    paymentSource: g,
-    isPrepaidPaymentPastDue: M,
-    openInvoiceId: R,
-    premiumSubscription: b,
-    onNext: L,
-    metadata: O,
+    trialId: y,
+    priceOptions: C,
+    paymentSource: R,
+    isPrepaidPaymentPastDue: b,
+    openInvoiceId: g,
+    premiumSubscription: O,
+    onNext: M,
+    metadata: L,
     sku: j,
     skuPricePreview: G,
-    purchaseType: D,
-    referralCode: U,
-    loadId: F,
-    giftInfoOptions: w,
+    purchaseType: U,
+    referralCode: D,
+    loadId: w,
+    giftInfoOptions: F,
     invoicePreview: B
   } = e;
-  t(f.PurchaseState.PURCHASING), n(!0), i(!0), l.default.wait(r.clearError), S(null);
+  t(p.PurchaseState.PURCHASING), n(!0), i(!0), s.default.wait(r.clearError), I(null);
   try {
     let e, n, i;
-    if (d.default.track(p.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
+    if (d.default.track(f.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
         ...T,
         subtotal: null == B ? void 0 : B.subtotal,
         tax: null == B ? void 0 : B.tax,
         expected_amount: null == B ? void 0 : B.total,
         expected_currency: null == B ? void 0 : B.currency,
-        duration_ms: Date.now() - h
-      }), I) return;
-    if (D === p.PurchaseTypes.ONE_TIME) s()(null != j, "SKU must exist and be fetched."), s()(null != G, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(j.applicationId, j.id, {
+        duration_ms: Date.now() - N
+      }), _) return;
+    if (U === f.PurchaseTypes.ONE_TIME) l()(null != j, "SKU must exist and be fetched."), l()(null != G, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(j.applicationId, j.id, {
       expectedAmount: G.amount,
       expectedCurrency: G.currency,
       isGift: E,
-      paymentSource: g,
-      loadId: F,
-      giftInfoOptions: w
+      paymentSource: R,
+      loadId: w,
+      giftInfoOptions: F
     });
-    else if (s()(null != x, "Missing subscriptionPlan"), E) {
-      s()(null != B, "Missing invoicePreview");
+    else if (l()(null != x, "Missing subscriptionPlan"), E) {
+      l()(null != B, "Missing invoicePreview");
       let t = B.total,
         n = B.currency;
-      e = await (0, o.purchaseSKU)(_.PREMIUM_SUBSCRIPTION_APPLICATION, x.skuId, {
+      e = await (0, o.purchaseSKU)(S.PREMIUM_SUBSCRIPTION_APPLICATION, x.skuId, {
         expectedAmount: t,
         expectedCurrency: n,
-        paymentSource: g,
+        paymentSource: R,
         subscriptionPlanId: x.id,
         isGift: !0,
-        loadId: F,
-        giftInfoOptions: w
+        loadId: w,
+        giftInfoOptions: F
       })
-    } else if (M && null != R && null != g && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(g.type) ? await (0, a.payInvoiceManually)(b, R, g, y.currency) : await (0, a.updateSubscription)(b, {
-      paymentSource: g,
-      currency: y.currency
-    }, v, N, F);
-    else if (null != b) {
-      let t = (0, m.getItemsWithUpsertedPlanIdForGroup)(b, x.id, 1, new Set(A)),
+    } else if (b && null != g && null != R && null != O) e = f.PREPAID_PAYMENT_SOURCES.has(R.type) ? await (0, a.payInvoiceManually)(O, g, R, C.currency) : await (0, a.updateSubscription)(O, {
+      paymentSource: R,
+      currency: C.currency
+    }, h, v, w);
+    else if (null != O) {
+      let t = (0, m.getItemsWithUpsertedPlanIdForGroup)(O, x.id, 1, new Set(A)),
         n = {
-          paymentSource: g,
-          currency: y.currency
+          paymentSource: R,
+          currency: C.currency
         };
-      b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, a.updateSubscription)(b, n, v, N, F)
+      O.status === f.SubscriptionStatusTypes.PAUSED ? n.status = f.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, a.updateSubscription)(O, n, h, v, w)
     } else e = await (0, u.subscribe)({
       planId: x.id,
-      currency: y.currency,
-      paymentSource: g,
-      trialId: C,
-      metadata: O,
-      referralCode: U,
-      loadId: F
+      currency: C.currency,
+      paymentSource: R,
+      trialId: y,
+      metadata: L,
+      referralCode: D,
+      loadId: w
     });
     if (e.redirectConfirmation) {
       P(null != e.redirectURL);
       return
     }
-    t(f.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? c.default.createFromServer(e.subscription) : null : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0), L(n, i)
+    t(p.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? c.default.createFromServer(e.subscription) : null : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0), M(n, i)
   } catch (e) {
-    t(f.PurchaseState.FAIL), S(e), d.default.track(p.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+    t(p.PurchaseState.FAIL), I(e), d.default.track(f.AnalyticEvents.PAYMENT_FLOW_FAILED, {
       ...T,
       payment_error_code: null == e ? void 0 : e.code,
-      payment_source_id: null == g ? void 0 : g.id,
-      payment_source_type: null == g ? void 0 : g.type,
-      duration_ms: Date.now() - h
+      payment_source_id: null == R ? void 0 : R.id,
+      payment_source_type: null == R ? void 0 : R.type,
+      duration_ms: Date.now() - N
     })
   } finally {
-    !I && i(!1)
+    !_ && i(!1)
   }
 }

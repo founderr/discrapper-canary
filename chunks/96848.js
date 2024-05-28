@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return f
   }
 }), n("47120"), n("757143");
 var i = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
+  l = n("470079"),
+  s = n("481060"),
   a = n("907040"),
   r = n("642113"),
   u = n("981631"),
@@ -17,28 +17,28 @@ let m = {
     section: u.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "gift_effect_emoji_picker"
   },
-  f = o.EmojiIntention.GIFT;
+  p = o.EmojiIntention.GIFT;
 
-function p(e) {
+function f(e) {
   let {
     setEmojiConfetti: t,
     emojiConfetti: n
-  } = e, [u, o] = s.useState(!1), p = e => (0, i.jsxs)("div", {
+  } = e, [u, o] = l.useState(!1), f = e => (0, i.jsxs)("div", {
     className: d.customGiftContent,
     children: [(0, i.jsxs)("div", {
       className: d.customGiftHeader,
-      children: [(0, i.jsx)(l.Text, {
+      children: [(0, i.jsx)(s.Text, {
         variant: "text-md/bold",
         children: c.default.Messages.GIFT_SELECT_EMOJI
-      }), (0, i.jsx)(l.Text, {
+      }), (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
         children: c.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })]
     }), e]
-  }), _ = e => {
+  }), S = e => {
     null != t && (t(e), o(!1))
   };
-  return (0, i.jsx)(l.Popout, {
+  return (0, i.jsx)(s.Popout, {
     shouldShow: u,
     position: "bottom",
     align: "left",
@@ -48,14 +48,14 @@ function p(e) {
       let {
         closePopout: t
       } = e;
-      return (0, i.jsx)(l.Dialog, {
+      return (0, i.jsx)(s.Dialog, {
         children: (0, i.jsx)(a.default, {
           analyticsOverride: m,
           closePopout: t,
-          onSelectEmoji: _,
+          onSelectEmoji: S,
           wrapper: "div",
-          pickerIntention: f,
-          renderHeader: p,
+          pickerIntention: p,
+          renderHeader: f,
           headerClassName: d.emojiHeader,
           className: d.emojiList,
           listHeaderClassName: d.emojiList,
@@ -67,7 +67,7 @@ function p(e) {
     },
     children: () => (0, i.jsx)("div", {
       className: d.container,
-      children: (0, i.jsx)(l.Clickable, {
+      children: (0, i.jsx)(s.Clickable, {
         className: d.emoji,
         onClick: () => o(!0),
         children: (null == n ? void 0 : n.name) == null ? (0, i.jsxs)(i.Fragment, {
@@ -75,17 +75,17 @@ function p(e) {
             className: d.emojiIcon,
             width: 14,
             height: 14
-          }), (0, i.jsx)(l.Text, {
+          }), (0, i.jsx)(s.Text, {
             className: d.text,
             variant: "text-sm/semibold",
             children: c.default.Messages.GIFT_SELECT_EMOJI
           })]
         }) : (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(l.Text, {
+          children: [(0, i.jsx)(s.Text, {
             className: d.textSelected,
             variant: "text-sm/semibold",
             children: null == n.guildId ? n.optionallyDiverseSequence : null
-          }), (0, i.jsx)(l.Text, {
+          }), (0, i.jsx)(s.Text, {
             className: d.text,
             variant: "text-sm/semibold",
             children: n.name.replace(/_/g, " ")

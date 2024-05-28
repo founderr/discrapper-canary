@@ -10,11 +10,11 @@ var a = s("735250"),
 t.default = e => {
   let {
     entrypoint: t
-  } = e, s = (0, l.usePremiumTrialOffer)(), d = (0, n.usePremiumDiscountOffer)(), c = t === u.PremiumMarketingEntrypoints.ApplicationStoreHome;
+  } = e, s = (0, l.usePremiumTrialOffer)(), c = (0, n.usePremiumDiscountOffer)(), d = t === u.PremiumMarketingEntrypoints.ApplicationStoreHome;
   return r.useEffect(() => {
-    (null != s || null != d) && (0, i.acknowledgeUserOffer)(s, d)
-  }, [s, d]), (0, a.jsx)(o.default, {
-    isFullscreen: c,
+    (null != s || null != c) && (0, i.acknowledgeUserOffer)(s, c)
+  }, [s, c]), (0, a.jsx)(o.default, {
+    isFullscreen: d,
     entrypoint: t
   })
 }

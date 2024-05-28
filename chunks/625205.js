@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return g
   }
 }), s("47120");
 var a = s("735250");
@@ -20,13 +20,13 @@ var n = s("392711"),
   _ = s("65154"),
   f = s("689938"),
   m = s("623378"),
-  g = s("611273");
+  I = s("611273");
 
-function I() {
+function g() {
   let e, t;
   let n = (0, i.useStateFromStores)([E.default], () => E.default.theme),
     {
-      canSetInputDevice: I,
+      canSetInputDevice: g,
       canSetOutputDevice: N,
       inputDeviceId: h,
       outputDeviceId: C
@@ -36,27 +36,27 @@ function I() {
       inputDeviceId: c.default.getInputDeviceId(),
       outputDeviceId: c.default.getOutputDeviceId()
     })),
-    p = (0, i.useStateFromStores)([c.default], () => c.default.getInputDevices()),
+    O = (0, i.useStateFromStores)([c.default], () => c.default.getInputDevices()),
     A = (0, i.useStateFromStores)([c.default], () => c.default.getOutputDevices());
-  !I && (e = (0, a.jsx)(o.FormText, {
+  !g && (e = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
-    className: g.marginTop8,
+    className: I.marginTop8,
     children: f.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Input Devices")
     })
   })), !N && (t = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
-    className: g.marginTop8,
+    className: I.marginTop8,
     children: f.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Output Devices")
     })
   }));
-  let O = l()(p).values().first(),
-    x = null != O ? O.disabled : null != e,
-    R = l()(A).values().first(),
-    M = null != R ? R.disabled : null != t;
+  let p = l()(O).values().first(),
+    R = null != p ? p.disabled : null != e,
+    x = l()(A).values().first(),
+    M = null != x ? x.disabled : null != t;
 
-  function v(e) {
+  function L(e) {
     let t, {
       label: l,
       value: i
@@ -79,20 +79,20 @@ function I() {
   }
 
   function D(e) {
-    return v(e[0])
+    return L(e[0])
   }
   return (0, a.jsxs)(S.default, {
-    className: g.marginBottom20,
+    className: I.marginBottom20,
     children: [(0, a.jsxs)(S.default.Child, {
       basis: "50%",
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
-        className: g.marginBottom8,
+        className: I.marginBottom8,
         children: f.default.Messages.FORM_LABEL_INPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: h,
         onChange: e => d.default.setInputDevice(e, "Settings"),
-        options: l().map(p, e => {
+        options: l().map(O, e => {
           let {
             id: t,
             name: s
@@ -102,15 +102,15 @@ function I() {
             label: s
           }
         }),
-        isDisabled: x,
+        isDisabled: R,
         renderOptionValue: D,
-        renderOptionLabel: v
+        renderOptionLabel: L
       }), e]
     }), (0, a.jsxs)(S.default.Child, {
       basis: "50%",
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
-        className: g.marginBottom8,
+        className: I.marginBottom8,
         children: f.default.Messages.FORM_LABEL_OUTPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: C,
@@ -127,7 +127,7 @@ function I() {
         }),
         isDisabled: M,
         renderOptionValue: D,
-        renderOptionLabel: v
+        renderOptionLabel: L
       }), t]
     })]
   })

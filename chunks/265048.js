@@ -35,16 +35,16 @@ let m = (0, s.default)(h),
       T = (null == _ ? void 0 : _.assets) != null && null != _.assets.large_image ? (0, u.getAssetImage)(E, _.assets.large_image, [f.ImageSizes.LARGE, f.ImageSizes.LARGE]) : null !== (n = null == S ? void 0 : S.getIconURL(f.ImageSizes.LARGE)) && void 0 !== n ? n : void 0,
       I = null !== (s = null == _ ? void 0 : null === (t = _.assets) || void 0 === t ? void 0 : t.large_text) && void 0 !== s ? s : void 0,
       A = null !== (p = null == _ ? void 0 : _.name) && void 0 !== p ? p : e.extra.game_name,
-      N = null == _ ? void 0 : _.details,
-      v = null == _ ? void 0 : _.state,
-      x = null == _ ? void 0 : _.party;
+      v = null == _ ? void 0 : _.details,
+      x = null == _ ? void 0 : _.state,
+      N = null == _ ? void 0 : _.party;
     return {
       iconUrl: T,
       iconTitle: I,
       user: g,
-      state: v,
-      details: N,
-      party: x,
+      state: x,
+      details: v,
+      party: N,
       gameTitle: A,
       gameTime: (null == _ ? void 0 : _.timestamps) != null ? (0, a.jsx)(m, {
         timestamps: _.timestamps

@@ -6,18 +6,18 @@ s.r(t), s.d(t, {
 });
 var n = s("735250");
 s("470079");
-var a = s("692547"),
-  r = s("331595");
+var r = s("692547"),
+  a = s("331595");
 let l = e => {
   let {
     width: t = 24,
     height: s = 24,
-    color: l = a.default.colors.INTERACTIVE_NORMAL,
+    color: l = r.default.colors.INTERACTIVE_NORMAL,
     colorClass: i = "",
     ...o
   } = e;
   return (0, n.jsx)("svg", {
-    ...(0, r.default)(o),
+    ...(0, a.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: s,

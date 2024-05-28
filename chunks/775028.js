@@ -125,7 +125,7 @@ let B = a.memo(function() {
       }) : (0, c.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([l.e("99387"), l.e("8137"), l.e("54310")]).then(l.bind(l, "373651"));
+        } = await Promise.all([l.e("99387"), l.e("8137"), l.e("40272")]).then(l.bind(l, "373651"));
         return l => (0, n.jsx)(e, {
           ...l,
           channel: t,

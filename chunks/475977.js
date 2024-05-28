@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("474936"),
   f = s("689938"),
   m = s("449221"),
-  g = s("786792");
-let I = e => {
+  I = s("786792");
+let g = e => {
     let {
       artSrc: t
     } = e;
@@ -50,9 +50,9 @@ let I = e => {
     let {
       variation: t
     } = e;
-    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(I, {
+    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(g, {
       artSrc: s("161594")
-    })).otherwise(() => (0, a.jsx)(I, {
+    })).otherwise(() => (0, a.jsx)(g, {
       artSrc: s("353437")
     }))
   };
@@ -69,7 +69,7 @@ t.default = () => {
     ref: t,
     className: i()(m.container),
     style: {
-      backgroundImage: "url(".concat(g, ")")
+      backgroundImage: "url(".concat(I, ")")
     },
     children: [(0, a.jsx)(N, {
       variation: s

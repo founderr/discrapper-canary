@@ -1,28 +1,28 @@
 "use strict";
-s.r(t), s.d(t, {
+E.r(t), E.d(t, {
   clearWelcomeScreenSettings: function() {
-    return A
+    return I
   },
   fetchWelcomeScreen: function() {
-    return T
+    return n
   },
   resetWelcomeScreen: function() {
-    return i
+    return A
   },
   saveWelcomeScreen: function() {
-    return l
+    return i
   },
   updateSettings: function() {
     return u
   },
   welcomeScreenViewed: function() {
-    return n
+    return T
   }
 });
-var E = s("544891"),
-  _ = s("570140"),
-  a = s("981631");
-let n = function(e) {
+var s = E("544891"),
+  _ = E("570140"),
+  a = E("981631");
+let T = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     _.default.dispatch({
       type: "WELCOME_SCREEN_VIEW",
@@ -30,12 +30,12 @@ let n = function(e) {
       isLurking: t
     })
   },
-  T = async e => {
+  n = async e => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_FETCH_START"
     });
     try {
-      let t = await E.HTTP.get({
+      let t = await s.HTTP.get({
         url: a.Endpoints.GUILD_WELCOME_SCREEN(e),
         oldFormErrors: !0
       });
@@ -49,11 +49,11 @@ let n = function(e) {
         type: "WELCOME_SCREEN_FETCH_FAIL"
       })
     }
-  }, i = () => {
+  }, A = () => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_RESET"
     })
-  }, A = () => {
+  }, I = () => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_CLEAR"
     })
@@ -62,12 +62,12 @@ let n = function(e) {
       type: "WELCOME_SCREEN_SETTINGS_UPDATE",
       settings: e
     })
-  }, l = async (e, t) => {
+  }, i = async (e, t) => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SUBMIT"
     });
     try {
-      let s = await E.HTTP.patch({
+      let E = await s.HTTP.patch({
         url: a.Endpoints.GUILD_WELCOME_SCREEN(e),
         body: {
           description: t.description,
@@ -79,7 +79,7 @@ let n = function(e) {
       _.default.dispatch({
         type: "WELCOME_SCREEN_SUBMIT_SUCCESS",
         guildId: e,
-        welcomeScreen: s.body
+        welcomeScreen: E.body
       })
     } catch (e) {
       _.default.dispatch({

@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("392711"),
-  s = n.n(a),
-  l = n("710845"),
-  i = n("581883"),
-  r = n("314897"),
-  o = n("287328"),
-  u = n("261875");
+s.r(t), s("47120");
+var a = s("392711"),
+  n = s.n(a),
+  l = s("710845"),
+  i = s("581883"),
+  r = s("314897"),
+  u = s("287328"),
+  o = s("261875");
 
-function d(e, t, n) {
+function d(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
 let c = new l.default("UserSettingsProto");
 t.default = new class e {
   async getAll(e) {
     let t = performance.now(),
-      n = await o.default.userSettings(e).getMany(),
+      s = await u.default.userSettings(e).getMany(),
       a = performance.now();
-    c.verbose("loaded in ".concat(a - t, "ms (settings: ").concat(n.length, ")"));
-    let s = {};
-    for (let e of n) s[e.id] = e.value;
-    return s
+    c.verbose("loaded in ".concat(a - t, "ms (settings: ").concat(s.length, ")"));
+    let n = {};
+    for (let e of s) n[e.id] = e.value;
+    return n
   }
   resetInMemoryState() {}
   constructor() {
@@ -36,21 +36,21 @@ t.default = new class e {
       USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: () => this.throttledOnChange()
     }), d(this, "handleUserSettingsProtoChange", () => {
       let e = r.default.getId(),
-        t = u.default.database(e);
+        t = o.default.database(e);
       null == t || t.transaction(e => {
-        var t, n;
+        var t, s;
         let a = i.default.computeState(),
-          s = o.default.userSettingsTransaction(e);
-        for (let e in a) s.put({
+          n = u.default.userSettingsTransaction(e);
+        for (let e in a) n.put({
           id: Number(e),
           value: a[e]
         });
-        let l = null !== (n = null === (t = i.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
-        o.default.nonGuildVersionsTransaction(e).put({
+        let l = null !== (s = null === (t = i.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== s ? s : -1;
+        u.default.nonGuildVersionsTransaction(e).put({
           id: "user_settings_version",
           version: l
         })
       }, "handleUserSettingsProtoChange")
-    }), d(this, "throttledOnChange", s().debounce(this.handleUserSettingsProtoChange, 0))
+    }), d(this, "throttledOnChange", n().debounce(this.handleUserSettingsProtoChange, 0))
   }
 }

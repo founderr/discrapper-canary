@@ -1,51 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return c
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("204197"),
-  i = n("998502"),
-  r = n("631885"),
-  o = n("329242"),
-  u = n("110627");
-let d = i.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+var a = s("735250");
+s("470079");
+var n = s("481060"),
+  l = s("204197"),
+  i = s("998502"),
+  r = s("631885"),
+  u = s("329242"),
+  o = s("110627");
+let d = i.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
 
 function c(e) {
   let {
     otherUser: t,
-    status: n
-  } = e, i = (0, r.useLinkTimestampText)(t.id, n), {
+    status: s
+  } = e, i = (0, r.useLinkTimestampText)(t.id, s), {
     avatarSrc: c,
-    avatarDecorationSrc: f,
-    eventHandlers: E
+    avatarDecorationSrc: E,
+    eventHandlers: _
   } = (0, l.default)({
     user: t,
-    size: s.AvatarSizes.SIZE_40,
+    size: n.AvatarSizes.SIZE_40,
     animateOnHover: !0
   });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      ...E,
+      ..._,
       children: (0, a.jsx)(d, {
-        className: u.avatar,
+        className: o.avatar,
         src: c,
-        avatarDecoration: f,
-        size: s.AvatarSizes.SIZE_40,
+        avatarDecoration: E,
+        size: n.AvatarSizes.SIZE_40,
         "aria-label": t.username
       })
     }), (0, a.jsxs)("div", {
-      className: u.userPreview,
+      className: o.userPreview,
       children: [(0, a.jsx)("div", {
-        className: u.userContainerWithTimestamp,
-        children: (0, a.jsx)(o.default, {
+        className: o.userContainerWithTimestamp,
+        children: (0, a.jsx)(u.default, {
           user: t
         })
-      }), (0, a.jsx)(s.Text, {
-        className: u.__invalid_timestamp,
+      }), (0, a.jsx)(n.Text, {
+        className: o.__invalid_timestamp,
         color: "text-muted",
         variant: "text-xs/normal",
         children: i

@@ -4,78 +4,78 @@ a.r(t), a.d(t, {
     return E
   }
 });
-var l = a("735250");
+var s = a("735250");
 a("470079");
-var s = a("120356"),
-  r = a.n(s),
-  n = a("399606"),
-  i = a("481060"),
-  o = a("594174"),
+var r = a("120356"),
+  n = a.n(r),
+  l = a("399606"),
+  o = a("481060"),
+  i = a("594174"),
   c = a("466111"),
   u = a("74538"),
   d = a("884697"),
   f = a("409116"),
   C = a("200615"),
-  m = a("981631"),
-  p = a("689938"),
+  p = a("981631"),
+  m = a("689938"),
   g = a("577687");
 
 function E(e) {
   let {
     product: t,
     className: a,
-    nitroUpsell: s = !1
-  } = e, E = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser()), h = (0, d.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.DEFAULT);
-  if (null == h) return null;
-  if (h.amount <= 0) return (0, l.jsx)("div", {
-    className: r()(g.priceTagsContainer, a),
-    children: (0, l.jsx)(f.default, {
-      price: h
+    nitroUpsell: r = !1
+  } = e, E = (0, l.useStateFromStores)([i.default], () => i.default.getCurrentUser()), b = (0, d.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  if (null == b) return null;
+  if (b.amount <= 0) return (0, s.jsx)("div", {
+    className: n()(g.priceTagsContainer, a),
+    children: (0, s.jsx)(f.default, {
+      price: b
     })
   });
-  let b = (0, d.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    x = u.default.canUseCollectibles(E),
-    v = !x && !(0, d.isBundleProduct)(t);
-  return (0, l.jsxs)("div", {
-    className: r()(g.priceTagsContainer, a),
-    children: [(0, l.jsx)(f.default, {
-      price: h,
-      discount: x ? void 0 : (0, d.getProductDiscount)(t, x),
-      className: r()(g.price, {
-        [g.striked]: x,
-        [g.dimmed]: x,
-        [g.fullPrice]: v
-      })
-    }), null != b && (0, l.jsx)(f.default, {
+  let h = (0, d.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+    S = u.default.canUseCollectibles(E),
+    T = !S && !(0, d.isBundleProduct)(t);
+  return (0, s.jsxs)("div", {
+    className: n()(g.priceTagsContainer, a),
+    children: [(0, s.jsx)(f.default, {
       price: b,
-      discount: x ? (0, d.getProductDiscount)(t, x) : void 0,
-      renderPrice: s ? e => (0, l.jsx)(i.Text, {
+      discount: S ? void 0 : (0, d.getProductDiscount)(t, S),
+      className: n()(g.price, {
+        [g.striked]: S,
+        [g.dimmed]: S,
+        [g.fullPrice]: T
+      })
+    }), null != h && (0, s.jsx)(f.default, {
+      price: h,
+      discount: S ? (0, d.getProductDiscount)(t, S) : void 0,
+      renderPrice: r ? e => (0, s.jsx)(o.Text, {
         variant: "text-xs/medium",
-        children: p.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW.format({
+        children: m.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW.format({
           price: e,
-          subscribeNowHook: e => (0, l.jsx)(C.SubscribeNow, {
+          subscribeNowHook: e => (0, s.jsx)(C.SubscribeNow, {
             text: e
           })
         })
-      }) : v ? e => p.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
+      }) : T ? e => m.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
-      className: r()(g.price, {
-        [g.dimmed]: !x,
-        [g.fullPrice]: v
+      className: n()(g.price, {
+        [g.dimmed]: !S,
+        [g.fullPrice]: T
       }),
-      variant: x ? void 0 : "text-xs/semibold",
-      icon: (0, l.jsx)(i.Tooltip, {
-        text: p.default.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
-        "aria-label": p.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
+      variant: S ? void 0 : "text-xs/semibold",
+      icon: (0, s.jsx)(o.Tooltip, {
+        text: m.default.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
+        "aria-label": m.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
         children: e => {
           let {
             ...t
           } = e;
-          return (0, l.jsx)(c.default, {
+          return (0, s.jsx)(c.default, {
             ...t,
-            className: r()(g.premiumIcon, {
-              [g.fullPrice]: v
+            className: n()(g.premiumIcon, {
+              [g.fullPrice]: T
             })
           })
         }

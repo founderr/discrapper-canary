@@ -9,10 +9,10 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var s = n("628028"),
+var r = n("628028"),
   l = n("220427"),
-  r = n("777207"),
-  a = n("330711"),
+  a = n("777207"),
+  s = n("330711"),
   o = n("305967");
 let u = {
   width: 12,
@@ -27,11 +27,11 @@ function d(e) {
     icon: "user" === t ? (0, i.jsx)(l.UserIcon, {
       ...u,
       color: "var(--text-positive)"
-    }) : (0, i.jsx)(s.ServerIcon, {
+    }) : (0, i.jsx)(r.ServerIcon, {
       ...u,
       color: "var(--text-brand)"
     }),
-    text: "user" === t ? a.default.Messages.Storefront.USER_SUBSCRIPTION : a.default.Messages.Storefront.SERVER_SUBSCRIPTION
+    text: "user" === t ? s.default.Messages.Storefront.USER_SUBSCRIPTION : s.default.Messages.Storefront.SERVER_SUBSCRIPTION
   })
 }
 
@@ -42,7 +42,7 @@ function c(e) {
   } = e;
   return (0, i.jsxs)("div", {
     className: o.container,
-    children: [t, (0, i.jsx)(r.Text, {
+    children: [t, (0, i.jsx)(a.Text, {
       color: "header-secondary",
       variant: "text-sm/medium",
       children: n

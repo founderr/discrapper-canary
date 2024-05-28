@@ -12,16 +12,16 @@ var i, a, l, s, o = n("735250"),
   f = n.n(c),
   h = n("481060"),
   p = n("981631"),
-  g = n("744537"),
+  E = n("744537"),
   m = n("961047");
-let E = p.OverlayWidgetTypes.DEFAULT,
+let g = p.OverlayWidgetTypes.DEFAULT,
   S = 1,
   v = r.createContext({
-    type: E,
+    type: g,
     opacity: S
   }),
-  y = r.createContext(void 0),
-  O = e => {
+  C = r.createContext(void 0),
+  y = e => {
     let {
       children: t,
       className: n,
@@ -32,9 +32,9 @@ let E = p.OverlayWidgetTypes.DEFAULT,
         let {
           type: a
         } = e;
-        return (0, o.jsx)(y.Consumer, {
+        return (0, o.jsx)(C.Consumer, {
           children: e => (0, o.jsx)("div", {
-            className: u()(n, g.bar, g[f()(a)]),
+            className: u()(n, E.bar, E[f()(a)]),
             style: e,
             ...i,
             children: t
@@ -43,17 +43,17 @@ let E = p.OverlayWidgetTypes.DEFAULT,
       }
     })
   };
-class C extends(i = r.PureComponent) {
+class _ extends(i = r.PureComponent) {
   render() {
     let {
       disableScroll: e,
       children: t,
       className: n
     } = this.props;
-    return (0, o.jsx)(y.Consumer, {
+    return (0, o.jsx)(C.Consumer, {
       children: i => (0, o.jsx)(v.Consumer, {
         children: a => {
-          let l = u()(g.body, g[f()(a.type)], n);
+          let l = u()(E.body, E[f()(a.type)], n);
           return e ? (0, o.jsx)("div", {
             className: l,
             style: i,
@@ -70,15 +70,15 @@ class C extends(i = r.PureComponent) {
 }
 s = {
   disableScroll: !1
-}, (l = "defaultProps") in(a = C) ? Object.defineProperty(a, l, {
+}, (l = "defaultProps") in(a = _) ? Object.defineProperty(a, l, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : a[l] = s;
-let T = e => {
+let O = e => {
     let {
-      type: t = E,
+      type: t = g,
       width: n,
       height: i,
       children: a,
@@ -92,7 +92,7 @@ let T = e => {
         opacity: s
       },
       children: (0, o.jsx)("div", {
-        className: u()(g.widget, g[f()(t)], l),
+        className: u()(E.widget, E[f()(t)], l),
         style: {
           width: n,
           height: i
@@ -102,29 +102,29 @@ let T = e => {
       })
     })
   },
-  N = e => {
+  T = e => {
     let {
       children: t,
       className: n,
       dynamicSize: i = !1
     } = e;
-    return (0, o.jsx)(y.Consumer, {
+    return (0, o.jsx)(C.Consumer, {
       children: e => (0, o.jsx)("div", {
-        className: u()(g.content, n, {
-          [g.staticSize]: !i
+        className: u()(E.content, n, {
+          [E.staticSize]: !i
         }),
         style: e,
         children: t
       })
     })
   };
-T.Background = e => {
+O.Background = e => {
   let {
     children: t,
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let i = [O, C, N];
+  let i = [y, _, T];
   return (0, o.jsx)(v.Consumer, {
     children: e => {
       let {
@@ -136,7 +136,7 @@ T.Background = e => {
         style: l
       });
       {
-        if (i.includes(t.type)) return (0, o.jsx)(y.Provider, {
+        if (i.includes(t.type)) return (0, o.jsx)(C.Provider, {
           value: l,
           children: t
         });
@@ -145,7 +145,7 @@ T.Background = e => {
       }
     }
   })
-}, T.Body = C, T.Content = N, T.Icon = e => {
+}, O.Body = _, O.Content = T, O.Icon = e => {
   let {
     icon: t,
     label: n,
@@ -157,7 +157,7 @@ T.Background = e => {
   } = e;
   return (0, o.jsx)(h.Tooltip, {
     text: r ? (0, o.jsx)("div", {
-      className: g.tutorialTip,
+      className: E.tutorialTip,
       children: n
     }) : n,
     "aria-label": n,
@@ -175,8 +175,8 @@ T.Background = e => {
         onClick: i,
         onMouseEnter: l,
         onMouseLeave: r,
-        className: u()(g.icon, {
-          [g.toggledIconOn]: a
+        className: u()(E.icon, {
+          [E.toggledIconOn]: a
         }),
         innerClassName: m.flexCenter,
         "aria-label": n,
@@ -188,4 +188,4 @@ T.Background = e => {
       })
     }
   })
-}, T.Bar = O, t.default = T
+}, O.Bar = y, t.default = O

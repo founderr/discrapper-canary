@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var a = s("735250");
@@ -13,13 +13,13 @@ var r = s("481060"),
   o = s("319769"),
   u = s("144343");
 
-function d(e) {
+function c(e) {
   var t;
   let {
     referrer: s
   } = e, {
-    avatarSrc: d,
-    eventHandlers: c
+    avatarSrc: c,
+    eventHandlers: d
   } = (0, i.default)({
     user: s,
     size: n.AvatarSizes.SIZE_32,
@@ -33,10 +33,10 @@ function d(e) {
         className: o.iconContainer,
         children: (0, a.jsx)(r.Avatar, {
           className: o.icon,
-          src: d,
+          src: c,
           "aria-label": s.username,
           size: n.AvatarSizes.SIZE_32,
-          ...c
+          ...d
         })
       }), (0, a.jsx)(r.Heading, {
         variant: "heading-lg/medium",

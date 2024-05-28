@@ -12,26 +12,26 @@ var s = n("243814"),
   c = n("199902"),
   f = n("131951"),
   E = n("449224"),
-  h = n("358085"),
-  _ = n("452426"),
-  C = n("736045"),
-  m = n("186901"),
-  S = n("981631");
+  C = n("358085"),
+  h = n("452426"),
+  _ = n("736045"),
+  S = n("186901"),
+  m = n("981631");
 t.default = {
-  [S.RPCCommands.TOGGLE_VIDEO]: {
+  [m.RPCCommands.TOGGLE_VIDEO]: {
     scope: {
-      [m.RPC_SCOPE_CONFIG.ALL]: [s.OAuth2Scopes.RPC, s.OAuth2Scopes.RPC_VIDEO_WRITE]
+      [S.RPC_SCOPE_CONFIG.ALL]: [s.OAuth2Scopes.RPC, s.OAuth2Scopes.RPC_VIDEO_WRITE]
     },
     handler() {
       let e = f.default.isVideoEnabled();
-      null != (0, C.default)() && (e ? i.default.setVideoEnabled(!1) : (0, d.default)(() => i.default.setVideoEnabled(!0), S.AppContext.APP))
+      null != (0, _.default)() && (e ? i.default.setVideoEnabled(!1) : (0, d.default)(() => i.default.setVideoEnabled(!0), m.AppContext.APP))
     }
   },
-  [S.RPCCommands.TOGGLE_SCREENSHARE]: {
+  [m.RPCCommands.TOGGLE_SCREENSHARE]: {
     scope: {
-      [m.RPC_SCOPE_CONFIG.ALL]: [s.OAuth2Scopes.RPC, s.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
+      [S.RPC_SCOPE_CONFIG.ALL]: [s.OAuth2Scopes.RPC, s.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
     },
-    validation: e => (0, _.default)(e).optional().keys({
+    validation: e => (0, h.default)(e).optional().keys({
       pid: e.number().optional().min(0)
     }),
     handler(e) {
@@ -39,10 +39,10 @@ t.default = {
         args: {
           pid: t
         }
-      } = e, s = c.default.getCurrentUserActiveStream(), i = c.default.getStreamerActiveStreamMetadata(), d = (0, u.default)(o.default, E.default), f = (0, C.default)();
-      null != f && (null != t && null != i && i.pid !== t && (0, h.isWindows)() ? (0, r.startStream)(f.guild_id, f.id, {
+      } = e, s = c.default.getCurrentUserActiveStream(), i = c.default.getStreamerActiveStreamMetadata(), d = (0, u.default)(o.default, E.default), f = (0, _.default)();
+      null != f && (null != t && null != i && i.pid !== t && (0, C.isWindows)() ? (0, r.startStream)(f.guild_id, f.id, {
         pid: t
-      }) : null != s ? (0, r.stopOwnStream)(!1) : null != t && (0, h.isWindows)() ? (0, r.startStream)(f.guild_id, f.id, {
+      }) : null != s ? (0, r.stopOwnStream)(!1) : null != t && (0, C.isWindows)() ? (0, r.startStream)(f.guild_id, f.id, {
         pid: t
       }) : null != d ? (0, r.startStream)(f.guild_id, f.id, {
         pid: d.pid
@@ -53,7 +53,7 @@ t.default = {
         return t => (0, a.jsx)(e, {
           ...t,
           guildId: f.guild_id,
-          analyticsLocation: S.AnalyticsLocations.ACTIVITY_RPC
+          analyticsLocation: m.AnalyticsLocations.ACTIVITY_RPC
         })
       }))
     }

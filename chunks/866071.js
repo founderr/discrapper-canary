@@ -10,10 +10,10 @@ s.r(t), s.d(t, {
     return Y
   },
   ADD_PAYMENT_STEPS: function() {
-    return j
+    return U
   },
   ADD_PAYPAL_STEPS: function() {
-    return U
+    return k
   },
   ADD_PAYSAFECARD_STEPS: function() {
     return H
@@ -22,11 +22,11 @@ s.r(t), s.d(t, {
     return V
   },
   REVIEW_PAYMENT_STEPS: function() {
-    return F
+    return j
   }
 }), s("47120");
-var n, a = s("735250"),
-  r = s("470079"),
+var n, r = s("735250"),
+  a = s("470079"),
   l = s("160612"),
   i = s("442837"),
   o = s("481060"),
@@ -35,30 +35,30 @@ var n, a = s("735250"),
   c = s("873115"),
   p = s("976255"),
   h = s("246946"),
-  f = s("351402"),
-  S = s("618541"),
-  P = s("975060"),
-  A = s("853872"),
-  _ = s("285952"),
-  m = s("603421"),
-  E = s("358085"),
+  S = s("351402"),
+  f = s("618541"),
+  E = s("975060"),
+  P = s("853872"),
+  A = s("285952"),
+  _ = s("603421"),
+  m = s("358085"),
   T = s("624138"),
-  C = s("622999"),
-  y = s("801937"),
-  g = s("282164"),
-  I = s("915271"),
-  R = s("228666"),
-  N = s("122192"),
-  b = s("296214"),
-  O = s("640789"),
-  M = s("31820"),
-  L = s("693313"),
+  I = s("622999"),
+  C = s("801937"),
+  R = s("282164"),
+  N = s("915271"),
+  g = s("228666"),
+  y = s("122192"),
+  O = s("296214"),
+  M = s("640789"),
+  L = s("31820"),
+  x = s("693313"),
   B = s("981631"),
-  x = s("689938"),
-  v = s("868312"),
-  k = s("414497");
+  D = s("689938"),
+  b = s("868312"),
+  F = s("414497");
 
-function D(e, t, s) {
+function v(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -66,16 +66,16 @@ function D(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let F = [m.Steps.PAYMENT_TYPE, m.Steps.CREDIT_CARD_INFORMATION, m.Steps.REVIEW],
-  j = [m.Steps.PAYMENT_TYPE, m.Steps.CREDIT_CARD_INFORMATION, m.Steps.REVIEW],
-  G = [m.Steps.PAYMENT_TYPE, m.Steps.CREDIT_CARD_INFORMATION, m.Steps.ADDRESS, m.Steps.REVIEW],
-  U = [m.Steps.PAYMENT_TYPE, m.Steps.PAYPAL, m.Steps.PAYPAL_ADDRESS, m.Steps.REVIEW],
-  Y = [m.Steps.PAYMENT_TYPE, m.Steps.PAYMENT_REQUEST_INFO, m.Steps.REVIEW],
-  w = [m.Steps.PAYMENT_TYPE, m.Steps.ADDRESS, m.Steps.REVIEW],
-  H = [m.Steps.PAYMENT_TYPE, m.Steps.ADDRESS, m.Steps.REVIEW],
-  V = [m.Steps.PAYMENT_TYPE, m.Steps.VENMO, m.Steps.VENMO_ADDRESS, m.Steps.REVIEW],
-  W = (0, T.cssValueToNumber)(k.__invalid_innerPadding);
-class z extends(n = r.PureComponent) {
+let j = [_.Steps.PAYMENT_TYPE, _.Steps.CREDIT_CARD_INFORMATION, _.Steps.REVIEW],
+  U = [_.Steps.PAYMENT_TYPE, _.Steps.CREDIT_CARD_INFORMATION, _.Steps.REVIEW],
+  G = [_.Steps.PAYMENT_TYPE, _.Steps.CREDIT_CARD_INFORMATION, _.Steps.ADDRESS, _.Steps.REVIEW],
+  k = [_.Steps.PAYMENT_TYPE, _.Steps.PAYPAL, _.Steps.PAYPAL_ADDRESS, _.Steps.REVIEW],
+  Y = [_.Steps.PAYMENT_TYPE, _.Steps.PAYMENT_REQUEST_INFO, _.Steps.REVIEW],
+  w = [_.Steps.PAYMENT_TYPE, _.Steps.ADDRESS, _.Steps.REVIEW],
+  H = [_.Steps.PAYMENT_TYPE, _.Steps.ADDRESS, _.Steps.REVIEW],
+  V = [_.Steps.PAYMENT_TYPE, _.Steps.VENMO, _.Steps.VENMO_ADDRESS, _.Steps.REVIEW],
+  W = (0, T.cssValueToNumber)(F.__invalid_innerPadding);
+class z extends(n = a.PureComponent) {
   async componentDidMount() {
     c.createClient();
     let {
@@ -85,9 +85,9 @@ class z extends(n = r.PureComponent) {
       paymentSourceId: n
     } = this.props;
     null != e && e(null != n && n !== s && null != t[n] ? t[n] : null != s && null != t[s] ? t[s] : null);
-    let a = await (0, C.getStripe)();
+    let r = await (0, I.getStripe)();
     this.setState({
-      stripe: a
+      stripe: r
     })
   }
   componentDidUpdate(e) {
@@ -114,8 +114,8 @@ class z extends(n = r.PureComponent) {
       isGift: t,
       isGiftable: s
     } = this.props;
-    if (!this.state.hasAcceptedNeccessaryTerms) return x.default.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP;
-    if (e && !t) return s ? x.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_ONLY : x.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_ONLY_UNGIFTABLE;
+    if (!this.state.hasAcceptedNeccessaryTerms) return D.default.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP;
+    if (e && !t) return s ? D.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_ONLY : D.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_ONLY_UNGIFTABLE;
     return null
   }
   renderHeader() {
@@ -127,8 +127,8 @@ class z extends(n = r.PureComponent) {
     } = this.props;
     return e(s, n.map(e => ({
       id: e,
-      label: (0, m.getCrumbLabels)(e)
-    })), null == (0, m.errorToStep)(t) ? t : null)
+      label: (0, _.getCrumbLabels)(e)
+    })), null == (0, _.errorToStep)(t) ? t : null)
   }
   render() {
     let {
@@ -136,27 +136,27 @@ class z extends(n = r.PureComponent) {
       step: t,
       steps: s,
       className: n,
-      transitionState: r
+      transitionState: a
     } = this.props, i = this.stepRenderer[t], d = i.renderBody();
-    return (0, a.jsx)(l.Elements, {
+    return (0, r.jsx)(l.Elements, {
       options: B.StripeElementsOptions,
       stripe: this.state.stripe,
-      children: (0, a.jsx)(o.ModalRoot, {
+      children: (0, r.jsx)(o.ModalRoot, {
         size: e,
         className: n,
-        "aria-label": x.default.Messages.SKU_PAYMENT_STEPS_LABEL,
-        transitionState: r,
-        children: (0, a.jsx)(o.Scroller, {
-          children: (0, a.jsxs)("form", {
-            className: v.form,
+        "aria-label": D.default.Messages.SKU_PAYMENT_STEPS_LABEL,
+        transitionState: a,
+        children: (0, r.jsx)(o.Scroller, {
+          children: (0, r.jsxs)("form", {
+            className: b.form,
             onSubmit: this.preventDefault,
-            children: [this.renderHeader(), t !== m.Steps.CONFIRM ? (0, a.jsx)("div", {
-              className: v.divider
-            }) : null, null != d && (0, a.jsx)(o.ModalContent, {
-              className: v.modalContent,
-              children: (0, a.jsx)("div", {
-                className: v.content,
-                children: (0, a.jsx)(o.Sequencer, {
+            children: [this.renderHeader(), t !== _.Steps.CONFIRM ? (0, r.jsx)("div", {
+              className: b.divider
+            }) : null, null != d && (0, r.jsx)(o.ModalContent, {
+              className: b.modalContent,
+              children: (0, r.jsx)("div", {
+                className: b.content,
+                children: (0, r.jsx)(o.Sequencer, {
                   step: t,
                   steps: s,
                   sideMargin: W,
@@ -170,29 +170,29 @@ class z extends(n = r.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), D(this, "state", {
+    super(...e), v(this, "state", {
       hasAcceptedNeccessaryTerms: !1,
       token: null,
       confirmingCard: !1,
       stripe: null
-    }), D(this, "handleToggleIsGift", (e, t) => {
+    }), v(this, "handleToggleIsGift", (e, t) => {
       let {
         onIsGiftUpdate: s
       } = this.props;
       null == s || s(t)
-    }), D(this, "handlePurchaseTermsChange", e => {
+    }), v(this, "handlePurchaseTermsChange", e => {
       this.setState({
         hasAcceptedNeccessaryTerms: e
       })
-    }), D(this, "handleReopenPaypal", () => {
+    }), v(this, "handleReopenPaypal", () => {
       c.reopenPayPalWindow()
-    }), D(this, "handleReopenVenmo", () => {
+    }), v(this, "handleReopenVenmo", () => {
       c.reopenVenmoWindow()
-    }), D(this, "handleCardInfoChange", (e, t) => {
+    }), v(this, "handleCardInfoChange", (e, t) => {
       d.default.wait(() => p.updateCardInfo(e, t))
-    }), D(this, "handleBillingAddressChange", (e, t) => {
+    }), v(this, "handleBillingAddressChange", (e, t) => {
       d.default.wait(() => p.updateAddressInfo(e, t))
-    }), D(this, "handleCreditCardAdd", async () => {
+    }), v(this, "handleCreditCardAdd", async () => {
       let {
         billingAddressInfo: e
       } = this.props, {
@@ -203,7 +203,7 @@ class z extends(n = r.PureComponent) {
         let n = await u.confirmCardPaymentSource(t, s, e);
         this.props.onPaymentSourceAdd(n.id)
       } catch (e) {}
-    }), D(this, "handleStripePaymentRequestAdd", async e => {
+    }), v(this, "handleStripePaymentRequestAdd", async e => {
       if (p.updateStripePaymentRequest(e), null == e) {
         this.props.onBack();
         return
@@ -212,7 +212,7 @@ class z extends(n = r.PureComponent) {
         let t = await u.createPaymentRequestPaymentSource(e);
         this.props.onPaymentSourceAdd(t.id)
       } catch (e) {}
-    }), D(this, "handlePaypalAdd", async () => {
+    }), v(this, "handlePaypalAdd", async () => {
       let {
         braintreeEmail: e,
         braintreeNonce: t,
@@ -222,7 +222,7 @@ class z extends(n = r.PureComponent) {
         let e = await u.createBraintreePaymentSource(t, s);
         this.props.onPaymentSourceAdd(e.id)
       } catch (e) {}
-    }), D(this, "handleVenmoAdd", async () => {
+    }), v(this, "handleVenmoAdd", async () => {
       let {
         venmoUsername: e,
         braintreeNonce: t,
@@ -232,23 +232,23 @@ class z extends(n = r.PureComponent) {
         let e = await u.createBraintreePaymentSource(t, s);
         this.props.onPaymentSourceAdd(e.id)
       } catch (e) {}
-    }), D(this, "renderBackButton", () => {
+    }), v(this, "renderBackButton", () => {
       let {
         step: e,
         steps: t,
         paymentSources: s,
         onBack: n
-      } = this.props, r = (0, m.getStepIndex)(e, t), l = (0, m.canGoBack)(r, s) ? x.default.Messages.BACK : x.default.Messages.CANCEL;
-      return (0, a.jsx)(o.Button, {
+      } = this.props, a = (0, _.getStepIndex)(e, t), l = (0, _.canGoBack)(a, s) ? D.default.Messages.BACK : D.default.Messages.CANCEL;
+      return (0, r.jsx)(o.Button, {
         look: o.Button.Looks.LINK,
-        className: v.backButton,
-        color: v.backButtonColor,
-        size: v.backButtonSize,
+        className: b.backButton,
+        color: b.backButtonColor,
+        size: b.backButtonSize,
         onClick: n,
         children: l
       })
-    }), D(this, "stepRenderer", {
-      [m.Steps.PAYMENT_TYPE]: {
+    }), v(this, "stepRenderer", {
+      [_.Steps.PAYMENT_TYPE]: {
         renderBody: () => {
           let {
             hidePersonalInformation: e,
@@ -257,47 +257,47 @@ class z extends(n = r.PureComponent) {
             needsToBeGift: n,
             isGift: l
           } = this.props;
-          return e ? (0, a.jsx)(o.FormErrorBlock, {
-            className: v.errorBlock,
-            children: x.default.Messages.BILLING_ERROR_ADD_PAYMENT_SOURCE_STREAMER_MODE
-          }) : (0, a.jsxs)(r.Fragment, {
-            children: [(0, a.jsx)(y.default, {
-              className: v.choosePaymentSourceType,
+          return e ? (0, r.jsx)(o.FormErrorBlock, {
+            className: b.errorBlock,
+            children: D.default.Messages.BILLING_ERROR_ADD_PAYMENT_SOURCE_STREAMER_MODE
+          }) : (0, r.jsxs)(a.Fragment, {
+            children: [(0, r.jsx)(C.default, {
+              className: b.choosePaymentSourceType,
               onChooseType: t,
-              allowStripeRequestPayments: !E.isPlatformEmbedded,
+              allowStripeRequestPayments: !m.isPlatformEmbedded,
               onStripePaymentMethodReceived: this.handleStripePaymentRequestAdd
-            }), s && (0, a.jsx)(o.Checkbox, {
+            }), s && (0, r.jsx)(o.Checkbox, {
               disabled: n,
-              className: v.giftToggle,
+              className: b.giftToggle,
               type: o.Checkbox.Types.INVERTED,
               value: l,
               onChange: this.handleToggleIsGift,
-              children: (0, a.jsx)("div", {
-                className: v.checkboxLabel,
-                children: x.default.Messages.BILLING_IS_GIFT_PURCHASE
+              children: (0, r.jsx)("div", {
+                className: b.checkboxLabel,
+                children: D.default.Messages.BILLING_IS_GIFT_PURCHASE
               })
             })]
           })
         },
-        renderFooter: () => (0, a.jsx)(o.ModalFooter, {
-          direction: _.default.Direction.HORIZONTAL,
+        renderFooter: () => (0, r.jsx)(o.ModalFooter, {
+          direction: A.default.Direction.HORIZONTAL,
           children: this.renderBackButton()
         })
       },
-      [m.Steps.PAYMENT_REQUEST_INFO]: {
-        renderBody: () => (0, a.jsx)(b.PaymentRequestStepBody, {
-          className: v.__invalid_formItem,
+      [_.Steps.PAYMENT_REQUEST_INFO]: {
+        renderBody: () => (0, r.jsx)(O.PaymentRequestStepBody, {
+          className: b.__invalid_formItem,
           stripePaymentMethod: this.props.stripePaymentMethod,
           submitting: this.props.submitting
         }),
-        renderFooter: () => (0, a.jsx)(o.ModalFooter, {
-          direction: _.default.Direction.HORIZONTAL,
+        renderFooter: () => (0, r.jsx)(o.ModalFooter, {
+          direction: A.default.Direction.HORIZONTAL,
           children: this.renderBackButton()
         })
       },
-      [m.Steps.PAYPAL]: {
-        renderBody: () => (0, a.jsx)(g.default, {
-          className: v.__invalid_formItem
+      [_.Steps.PAYPAL]: {
+        renderBody: () => (0, r.jsx)(R.default, {
+          className: b.__invalid_formItem
         }),
         renderFooter: () => {
           let {
@@ -305,10 +305,10 @@ class z extends(n = r.PureComponent) {
             braintreeNonce: t,
             braintreeEmail: s,
             onPaypalContinue: n,
-            paypalClient: r
+            paypalClient: a
           } = this.props;
-          return (0, a.jsx)(O.PaypalStepFooter, {
-            submitting: e || null == r,
+          return (0, r.jsx)(M.PaypalStepFooter, {
+            submitting: e || null == a,
             braintreeNonce: t,
             braintreeEmail: s,
             onPaypalContinue: n,
@@ -317,9 +317,9 @@ class z extends(n = r.PureComponent) {
           })
         }
       },
-      [m.Steps.VENMO]: {
-        renderBody: () => (0, a.jsx)(I.default, {
-          className: v.__invalid_formItem
+      [_.Steps.VENMO]: {
+        renderBody: () => (0, r.jsx)(N.default, {
+          className: b.__invalid_formItem
         }),
         renderFooter: () => {
           let {
@@ -327,10 +327,10 @@ class z extends(n = r.PureComponent) {
             braintreeNonce: t,
             venmoUsername: s,
             onVenmoContinue: n,
-            venmoClient: r
+            venmoClient: a
           } = this.props;
-          return (0, a.jsx)(L.VenmoStepFooter, {
-            submitting: e || null == r,
+          return (0, r.jsx)(x.VenmoStepFooter, {
+            submitting: e || null == a,
             braintreeNonce: t,
             venmoUsername: s,
             onVenmoContinue: n,
@@ -339,12 +339,12 @@ class z extends(n = r.PureComponent) {
           })
         }
       },
-      [m.Steps.CREDIT_CARD_INFORMATION]: {
+      [_.Steps.CREDIT_CARD_INFORMATION]: {
         renderBody: () => {
           let {
             billingError: e
           } = this.props;
-          return (0, a.jsx)(N.CreditCardInformationBody, {
+          return (0, r.jsx)(y.CreditCardInformationBody, {
             billingError: e,
             onCardInfoChange: this.handleCardInfoChange
           })
@@ -356,7 +356,7 @@ class z extends(n = r.PureComponent) {
           } = this.props, {
             stripe: s,
             confirmingCard: n
-          } = this.state, r = async e => {
+          } = this.state, a = async e => {
             this.setState({
               confirmingCard: !0
             });
@@ -371,28 +371,28 @@ class z extends(n = r.PureComponent) {
               })
             }
           };
-          return (0, a.jsx)(l.ElementsConsumer, {
+          return (0, r.jsx)(l.ElementsConsumer, {
             children: t => {
               let {
                 elements: s
               } = t;
-              return (0, a.jsx)(N.CreditCardInformationFooter, {
+              return (0, r.jsx)(y.CreditCardInformationFooter, {
                 isCardInfoValid: e,
                 submitting: n,
                 renderBackButton: this.renderBackButton,
-                onCreditCardContinue: () => r(s)
+                onCreditCardContinue: () => a(s)
               })
             }
           })
         }
       },
-      [m.Steps.PAYPAL_ADDRESS]: {
+      [_.Steps.PAYPAL_ADDRESS]: {
         renderBody: () => {
           let {
             billingAddressInfo: e,
             billingError: t
           } = this.props;
-          return (0, a.jsx)(R.AddressStepBody, {
+          return (0, r.jsx)(g.AddressStepBody, {
             billingAddressInfo: e,
             billingError: t,
             onBillingAddressChange: this.handleBillingAddressChange,
@@ -404,7 +404,7 @@ class z extends(n = r.PureComponent) {
             isBillingAddressInfoValid: e,
             submitting: t
           } = this.props;
-          return (0, a.jsx)(R.AddressStepFooter, {
+          return (0, r.jsx)(g.AddressStepFooter, {
             isBillingAddressInfoValid: e,
             submitting: t,
             onContinue: this.handlePaypalAdd,
@@ -412,13 +412,13 @@ class z extends(n = r.PureComponent) {
           })
         }
       },
-      [m.Steps.VENMO_ADDRESS]: {
+      [_.Steps.VENMO_ADDRESS]: {
         renderBody: () => {
           let {
             billingAddressInfo: e,
             billingError: t
           } = this.props;
-          return (0, a.jsx)(R.AddressStepBody, {
+          return (0, r.jsx)(g.AddressStepBody, {
             billingAddressInfo: e,
             billingError: t,
             onBillingAddressChange: this.handleBillingAddressChange,
@@ -430,7 +430,7 @@ class z extends(n = r.PureComponent) {
             isBillingAddressInfoValid: e,
             submitting: t
           } = this.props;
-          return (0, a.jsx)(R.AddressStepFooter, {
+          return (0, r.jsx)(g.AddressStepFooter, {
             isBillingAddressInfoValid: e,
             submitting: t,
             onContinue: this.handleVenmoAdd,
@@ -438,14 +438,14 @@ class z extends(n = r.PureComponent) {
           })
         }
       },
-      [m.Steps.ADDRESS]: {
+      [_.Steps.ADDRESS]: {
         renderBody: () => {
           let {
             billingAddressInfo: e,
             billingError: t,
             steps: s
           } = this.props;
-          return (0, a.jsx)(R.AddressStepBody, {
+          return (0, r.jsx)(g.AddressStepBody, {
             billingAddressInfo: e,
             billingError: t,
             onBillingAddressChange: this.handleBillingAddressChange,
@@ -457,7 +457,7 @@ class z extends(n = r.PureComponent) {
             isBillingAddressInfoValid: e,
             submitting: t
           } = this.props;
-          return (0, a.jsx)(R.AddressStepFooter, {
+          return (0, r.jsx)(g.AddressStepFooter, {
             isBillingAddressInfoValid: e,
             submitting: t,
             onContinue: this.handleCreditCardAdd,
@@ -465,26 +465,26 @@ class z extends(n = r.PureComponent) {
           })
         }
       },
-      [m.Steps.REVIEW]: {
+      [_.Steps.REVIEW]: {
         renderBody: () => {
           let {
             legalNotice: e,
             paymentSources: t,
             price: s,
             hidePersonalInformation: n,
-            paymentSourceId: r,
+            paymentSourceId: a,
             onReviewPaymentSourceChange: l,
             onReviewPaymentSourceAdd: i,
             isGiftable: o,
             isGift: d,
             needsToBeGift: u
           } = this.props;
-          return (0, a.jsx)(M.ReviewStepBody, {
+          return (0, r.jsx)(L.ReviewStepBody, {
             legalNotice: e,
             paymentSources: t,
             price: s,
             hidePersonalInformation: n,
-            paymentSourceId: r,
+            paymentSourceId: a,
             onPaymentSourceChange: l,
             onPaymentSourceAdd: i,
             onPurchaseTermsChange: this.handlePurchaseTermsChange,
@@ -500,19 +500,19 @@ class z extends(n = r.PureComponent) {
             submitButtonText: t,
             useShinySubmitButton: s,
             isPurchasing: n,
-            paymentSourceId: r,
+            paymentSourceId: a,
             onPurchase: l,
             needsToBeGift: i,
             isGift: o,
             paymentSources: d
           } = this.props;
-          return (0, a.jsx)(M.ReviewStepFooter, {
+          return (0, r.jsx)(L.ReviewStepFooter, {
             canSubmit: e,
             submitButtonText: t,
             useShinySubmitButton: s,
             isPurchasing: n,
             hasAcceptedTerms: this.state.hasAcceptedNeccessaryTerms,
-            paymentSource: null != r ? d[r] : null,
+            paymentSource: null != a ? d[a] : null,
             onPurchase: l,
             tooltipText: this.disabledTooltip,
             needsToBeGift: i,
@@ -520,14 +520,14 @@ class z extends(n = r.PureComponent) {
           })
         }
       },
-      [m.Steps.CONFIRM]: {
+      [_.Steps.CONFIRM]: {
         renderBody: B.NOOP_NULL,
         renderFooter: B.NOOP_NULL
       },
-      [m.Steps.AWAITING_AUTHENTICATION]: {
-        renderBody: () => (0, a.jsx)(o.FormTitle, {
-          className: v.formTitle,
-          children: x.default.Messages.PAYMENT_WAITING_FOR_AUTHENTICATION
+      [_.Steps.AWAITING_AUTHENTICATION]: {
+        renderBody: () => (0, r.jsx)(o.FormTitle, {
+          className: b.formTitle,
+          children: D.default.Messages.PAYMENT_WAITING_FOR_AUTHENTICATION
         }),
         renderFooter: B.NOOP_NULL
       },
@@ -535,27 +535,27 @@ class z extends(n = r.PureComponent) {
     })
   }
 }
-D(z, "defaultProps", {
+v(z, "defaultProps", {
   canSubmit: !0,
   useShinySubmitButton: !1,
   size: o.ModalSize.SMALL,
   billingError: null,
   extraRenderers: {},
-  className: v.modal
-}), t.default = i.default.connectStores([A.default, P.default, f.default, h.default, S.default], () => ({
-  submitting: f.default.isBusy,
-  paymentSources: A.default.paymentSources,
-  defaultPaymentSourceId: A.default.defaultPaymentSourceId,
-  stripePaymentMethod: P.default.stripePaymentMethod,
-  creditCardInfo: P.default.getCreditCardInfo(),
-  isCardInfoValid: P.default.isCardInfoValid,
-  billingAddressInfo: P.default.getBillingAddressInfo(),
-  isBillingAddressInfoValid: P.default.isBillingAddressInfoValid,
-  braintreeEmail: P.default.braintreeEmail,
-  braintreeNonce: P.default.braintreeNonce,
-  venmoUsername: P.default.venmoUsername,
-  billingError: P.default.error,
-  paypalClient: S.default.getPayPalClient(),
-  venmoClient: S.default.getVenmoClient(),
+  className: b.modal
+}), t.default = i.default.connectStores([P.default, E.default, S.default, h.default, f.default], () => ({
+  submitting: S.default.isBusy,
+  paymentSources: P.default.paymentSources,
+  defaultPaymentSourceId: P.default.defaultPaymentSourceId,
+  stripePaymentMethod: E.default.stripePaymentMethod,
+  creditCardInfo: E.default.getCreditCardInfo(),
+  isCardInfoValid: E.default.isCardInfoValid,
+  billingAddressInfo: E.default.getBillingAddressInfo(),
+  isBillingAddressInfoValid: E.default.isBillingAddressInfoValid,
+  braintreeEmail: E.default.braintreeEmail,
+  braintreeNonce: E.default.braintreeNonce,
+  venmoUsername: E.default.venmoUsername,
+  billingError: E.default.error,
+  paypalClient: f.default.getPayPalClient(),
+  venmoClient: f.default.getVenmoClient(),
   hidePersonalInformation: h.default.hidePersonalInformation
 }))(z)

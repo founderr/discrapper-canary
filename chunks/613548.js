@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return G
   }
 }), n("653041");
 var a = n("735250"),
@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("390322"),
   I = n("616286"),
   A = n("961048"),
-  N = n("179424"),
-  v = n("786915"),
-  x = n("975146"),
+  v = n("179424"),
+  x = n("786915"),
+  N = n("975146"),
   M = n("991617"),
   R = n("606304"),
   y = n("502568"),
@@ -42,7 +42,7 @@ var a = n("735250"),
   w = n("689938"),
   k = n("122993");
 
-function B(e) {
+function H(e) {
   let {
     channelId: t,
     guildId: n
@@ -68,7 +68,7 @@ function B(e) {
   })
 }
 
-function H(e) {
+function G(e) {
   let {
     inPopout: t,
     channel: n,
@@ -84,18 +84,18 @@ function H(e) {
     selectedParticipant: j.default.getSelectedParticipant(g),
     voiceParticipantsHidden: j.default.getVoiceParticipantsHidden(g),
     userParticipantCount: j.default.getUserParticipantCount(g)
-  }), [g]), H = (0, P.default)(n), {
-    available: G,
+  }), [g]), G = (0, P.default)(n), {
+    available: B,
     activated: V,
     hqStreamingState: W
-  } = (0, E.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), Y = G && V && W.hqStreamingIsEnabled, {
+  } = (0, E.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), Y = B && V && W.hqStreamingIsEnabled, {
     preventIdle: z,
     allowIdle: K
   } = (0, _.usePreventIdle)("popup"), Z = [];
-  if (H) {
+  if (G) {
     let e = (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(L.id) : void 0,
       t = (null == L ? void 0 : L.type) === U.ParticipantTypes.ACTIVITY ? L.id : void 0;
-    Z.push((0, a.jsx)(v.default, {
+    Z.push((0, a.jsx)(x.default, {
       className: k.button,
       channel: n,
       applicationId: t,
@@ -104,7 +104,7 @@ function H(e) {
       analyticsLocation: n.type === F.ChannelTypes.GUILD_VOICE ? F.AnalyticsPages.GUILD_CHANNEL : F.AnalyticsPages.DM_CHANNEL
     }, "invite-button"))
   }
-  return R && Z.push((0, a.jsx)(B, {
+  return R && Z.push((0, a.jsx)(H, {
     channelId: g,
     guildId: n.guild_id
   }, "current-speaker")), Z.push((0, a.jsx)(h.default, {
@@ -130,7 +130,7 @@ function H(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.createElement)(x.default, {
+      return (0, l.createElement)(N.default, {
         ...e,
         isActive: n,
         count: w,
@@ -138,7 +138,7 @@ function H(e) {
         className: k.button
       })
     }
-  }, "call-members-popout")), i && Z.push(null != L ? (0, a.jsx)(N.default, {
+  }, "call-members-popout")), i && Z.push(null != L ? (0, a.jsx)(v.default, {
     className: k.button,
     channelId: g
   }, "deselect-participant") : (0, a.jsx)(M.default, {

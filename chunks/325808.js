@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return p
   }
 });
 var a = s("735250");
@@ -20,8 +20,8 @@ var n = s("120356"),
   _ = s("962100"),
   f = s("981631"),
   m = s("689938"),
-  g = s("917439"),
-  I = s("611273");
+  I = s("917439"),
+  g = s("611273");
 let N = !T.isPlatformEmbedded,
   h = (0, E.uid)();
 
@@ -44,7 +44,7 @@ function C(e) {
   }), o.default.setMode(t)
 }
 
-function p(e) {
+function O(e) {
   return e >= 1e3 ? (e /= 1e3, "".concat(e.toFixed(2), "s")) : "".concat(e.toFixed(0), " ms")
 }
 
@@ -58,18 +58,18 @@ function A(e) {
     } = (0, i.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
   return t = T.isPlatformEmbedded || s !== f.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    className: l()(g.pttToolsMessage, I.marginBottom8),
+    className: l()(I.pttToolsMessage, g.marginBottom8),
     children: m.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
       onClick: () => d.default.setSection(f.UserSettingsSections.KEYBINDS)
     })
   }) : (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    className: l()(g.pttToolsMessage, g.pttToolsWarning, I.marginBottom8),
+    className: l()(I.pttToolsMessage, I.pttToolsWarning, g.marginBottom8),
     children: m.default.Messages.PTT_LIMITED_WARNING.format({
       onDownloadClick: () => (0, _.openDownloadAppsModal)("Help Text PTT")
     })
   }), (0, a.jsxs)("div", {
-    className: g.pttTools,
+    className: I.pttTools,
     children: [(0, a.jsxs)(S.default, {
       children: [(0, a.jsx)(S.default.Child, {
         basis: "50%",
@@ -88,14 +88,14 @@ function A(e) {
           children: [(0, a.jsx)(r.FormTitle, {
             id: h,
             tag: r.FormTitleTags.H5,
-            className: I.marginBottom8,
+            className: g.marginBottom8,
             children: m.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
           }), (0, a.jsx)(r.Slider, {
             initialValue: E,
             onValueChange: e => o.default.setMode(s, {
               delay: e
             }),
-            onValueRender: p,
+            onValueRender: O,
             maxValue: f.MAX_PTT_RELEASE_DELAY,
             "aria-labelledby": h
           })]
@@ -105,7 +105,7 @@ function A(e) {
   })
 }
 
-function O() {
+function p() {
   let e = (0, i.useStateFromStores)([c.default], () => c.default.getMode()),
     t = [{
       value: f.InputModes.VOICE_ACTIVITY,
@@ -117,7 +117,7 @@ function O() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormItem, {
       title: m.default.Messages.FORM_LABEL_INPUT_MODE,
-      className: I.marginBottom20,
+      className: g.marginBottom20,
       children: (0, a.jsx)(r.RadioGroup, {
         onChange: C,
         options: t,

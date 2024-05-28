@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   },
   isInTrialRedemption: function() {
-    return i
+    return l
   }
 });
 var u = n("639119"),
-  l = n("474936");
+  i = n("474936");
 
-function i(e) {
+function l(e) {
   let {
     userTrialOffer: t,
     isGift: n,
     skuId: u
   } = e;
-  return !n && null != t && null != u && (0, l.SubscriptionTrials)[t.trial_id].skus.includes(u)
+  return !n && null != t && null != u && (0, i.SubscriptionTrials)[t.trial_id].skus.includes(u)
 }
 
-function a(e) {
+function s(e) {
   let {
     isGift: t,
     skuId: n,
-    referralTrialOfferId: i
-  } = e, a = (0, u.usePremiumTrialOffer)(i);
-  return !t && null != a && null != n && (0, l.SubscriptionTrials)[a.trial_id].skus.includes(n)
+    referralTrialOfferId: l
+  } = e, s = (0, u.usePremiumTrialOffer)(l);
+  return !t && null != s && null != n && (0, i.SubscriptionTrials)[s.trial_id].skus.includes(n)
 }

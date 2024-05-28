@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("906732"),
   I = n("493324"),
   A = n("611064"),
-  N = n("677432"),
-  v = n("178762"),
-  x = n("868671"),
+  v = n("677432"),
+  x = n("178762"),
+  N = n("868671"),
   M = n("623624"),
   R = n("518738"),
   y = n("280234"),
@@ -41,9 +41,9 @@ var a = n("735250"),
   F = n("594174"),
   w = n("153124"),
   k = n("151827"),
-  B = n("176278"),
-  H = n("585483"),
-  G = n("823379"),
+  H = n("176278"),
+  G = n("585483"),
+  B = n("823379"),
   V = n("51144"),
   W = n("998502"),
   Y = n("981631"),
@@ -58,9 +58,9 @@ function Z(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let q = W.default.getEnableHardwareAcceleration(),
-  X = 44 + C.AVATAR_DECORATION_PADDING,
-  Q = {
+let X = W.default.getEnableHardwareAcceleration(),
+  q = 44 + C.AVATAR_DECORATION_PADDING,
+  J = {
     origin: {
       x: 38,
       y: 11
@@ -72,7 +72,7 @@ let q = W.default.getEnableHardwareAcceleration(),
       y: 0
     }
   };
-class J extends l.Component {
+class Q extends l.Component {
   shouldComponentUpdate(e) {
     return !(0, f.default)(this.props, e, ["channelId"])
   }
@@ -111,7 +111,7 @@ class J extends l.Component {
         return (0, a.jsx)(C.default, {
           className: K.member,
           onContextMenu: this.renderUserContextMenu,
-          shouldAnimateStatus: q,
+          shouldAnimateStatus: X,
           user: s,
           currentUser: i,
           nick: l,
@@ -156,7 +156,7 @@ class J extends l.Component {
       } = this.props, n = "@".concat(V.default.getUserTag(e, {
         decoration: "never"
       })), a = "<@".concat(e.id, ">");
-      H.ComponentDispatch.dispatchToLastSubscribed(Y.ComponentActions.INSERT_TEXT, {
+      G.ComponentDispatch.dispatchToLastSubscribed(Y.ComponentActions.INSERT_TEXT, {
         plainText: n,
         rawText: a
       }), E.default.startTyping(t.id)
@@ -205,7 +205,7 @@ let $ = l.memo(e => {
       r === Y.StatusTypes.OFFLINE && o && y.default.trackExposure({
         location: "guild_member_list"
       })
-    }, [o, r]), (0, a.jsx)(J, {
+    }, [o, r]), (0, a.jsx)(Q, {
       ...n,
       ...f,
       isTyping: h,
@@ -238,7 +238,7 @@ let $ = l.memo(e => {
         })
       }), (0, a.jsxs)("span", {
         "aria-hidden": !0,
-        children: [null != i ? (0, a.jsx)(B.default, {
+        children: [null != i ? (0, a.jsx)(H.default, {
           className: K.roleIcon,
           ...i
         }) : null, n, " — ", l]
@@ -287,10 +287,10 @@ class en extends l.Component {
     let {
       offsetHeight: t,
       scrollTop: n
-    } = e.getScrollerState(), a = Math.floor(t / X);
+    } = e.getScrollerState(), a = Math.floor(t / q);
     return this.getContentFeedAdjustedDimensions({
       height: t,
-      rowHeight: X,
+      rowHeight: q,
       rowsVisible: a,
       y: n
     })
@@ -367,7 +367,7 @@ class en extends l.Component {
       }) : 0 === t ? (0, a.jsx)(O.default, {
         tutorialId: "whos-online",
         position: "left",
-        inlineSpecs: Q,
+        inlineSpecs: J,
         children: (0, a.jsx)(ee, {
           ...i,
           guildId: s.guild_id
@@ -431,13 +431,13 @@ class en extends l.Component {
         }
         if (r.type === D.MemberListRowTypes.CONTENT_INVENTORY) {
           let e = "content-inventory-".concat(r.entry.id);
-          return null != r.entry.original_id && (e += "-".concat(r.entry.original_id)), (0, a.jsx)(v.default, {
+          return null != r.entry.original_id && (e += "-".concat(r.entry.original_id)), (0, a.jsx)(x.default, {
             ...r,
             channel: this.props.channel,
             index: l
           }, e)
         }
-        if (r.type === D.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(N.default, {}, "content-inventory-hidden-entry")
+        if (r.type === D.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(v.default, {}, "content-inventory-hidden-entry")
       }
       return (0, a.jsx)(et, {
         index: l
@@ -453,7 +453,7 @@ class en extends l.Component {
       } = e.getScrollerState();
       this.props.updateMaxContentFeedRowSeen(n + t - 40)
     }, 50)), Z(this, "getContentFeedGroup", () => {
-      let e = this.props.groups[x.CONTENT_FEED_SECTION];
+      let e = this.props.groups[N.CONTENT_FEED_SECTION];
       if ((0, A.isContentGroup)(e)) return e
     }), Z(this, "hasContentFeed", () => null != this.getContentFeedGroup()), Z(this, "getRowHeightComputer", () => {
       let e = this.getContentFeedGroup();
@@ -462,14 +462,14 @@ class en extends l.Component {
           rows: t
         } = this.props, n = e.index;
         return function(e, a) {
-          if (e === x.CONTENT_FEED_SECTION) {
+          if (e === N.CONTENT_FEED_SECTION) {
             let e = t[n + 1 + a];
-            return (0, v.getContentRowHeight)(e)
+            return (0, x.getContentRowHeight)(e)
           }
-          return X
+          return q
         }
       }
-      return X
+      return q
     }), Z(this, "getContentFeedHeight", () => {
       let e = this.getContentFeedGroup();
       return null != e ? e.feedHeight + 40 : 0
@@ -497,8 +497,8 @@ class en extends l.Component {
           rowsVisible: n
         } = this.getDimensions();
       if (void 0 === n || 0 === n || null == t) return;
-      this.hasContentFeed() && (t = t.filter(e => e.section !== x.CONTENT_FEED_SECTION));
-      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(G.isNotNullish);
+      this.hasContentFeed() && (t = t.filter(e => e.section !== N.CONTENT_FEED_SECTION));
+      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(B.isNotNullish);
       if (0 === a.length) return;
       let l = a.reduce((e, t) => t.type !== D.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === Y.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,
@@ -525,7 +525,7 @@ function ea(e) {
     groups: f,
     version: h,
     updateMaxRowSeen: m
-  } = (0, x.useInjectContentInventoryFeed)({
+  } = (0, N.useInjectContentInventoryFeed)({
     memberStoreProps: o,
     channelId: t.id,
     guildId: t.guild_id
@@ -534,7 +534,7 @@ function ea(e) {
     if (null == n) return;
     let a = parseInt(t, 10),
       [l, s] = n.getSectionRowFromIndex(a),
-      i = 0 === l && 0 === s ? X : 0;
+      i = 0 === l && 0 === s ? q : 0;
     n.scrollToIndex({
       section: l,
       row: s,

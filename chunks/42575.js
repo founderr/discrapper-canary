@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var a = n("735250"),
@@ -15,16 +15,16 @@ var a = n("735250"),
   c = n("626135"),
   f = n("321488"),
   E = n("417183"),
-  h = n("170245"),
-  _ = n("981631"),
-  C = n("689938"),
-  m = n("860030");
+  C = n("170245"),
+  h = n("981631"),
+  _ = n("689938"),
+  S = n("860030");
 
-function S(e) {
+function m(e) {
   let {
     user: t,
     nickname: n,
-    status: S,
+    status: m,
     isFocused: p
   } = e, I = s.useContext(c.AnalyticsContext), {
     analyticsLocations: g
@@ -40,7 +40,7 @@ function S(e) {
     })
   }, A = e => {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
-  }, N = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
+  }, N = m === h.StatusTypes.OFFLINE ? h.StatusTypes.UNKNOWN : m;
   return (0, a.jsx)(E.default, {
     isFocused: p,
     user: t,
@@ -54,27 +54,27 @@ function S(e) {
         children: [(0, a.jsx)(f.default, {
           icon: u.default,
           actionType: f.default.ActionTypes.ACCEPT,
-          tooltip: C.default.Messages.FRIEND_REQUEST_ACCEPT,
+          tooltip: _.default.Messages.FRIEND_REQUEST_ACCEPT,
           onClick: T,
           shouldHighlight: e
         }), (0, a.jsx)(f.default, {
           icon: d.default,
           actionType: f.default.ActionTypes.DENY,
-          tooltip: C.default.Messages.FRIEND_REQUEST_IGNORE,
+          tooltip: _.default.Messages.FRIEND_REQUEST_IGNORE,
           onClick: A,
           shouldHighlight: e
         })]
       });
       return (0, a.jsxs)("div", {
-        className: m.listItemContents,
-        children: [(0, a.jsx)(h.default, {
+        className: S.listItemContents,
+        children: [(0, a.jsx)(C.default, {
           user: t,
           hovered: e,
           status: N,
           subText: n,
-          className: m.__invalid_userInfo
+          className: S.__invalid_userInfo
         }), (0, a.jsx)("div", {
-          className: m.actions,
+          className: S.actions,
           children: s
         })]
       })

@@ -21,8 +21,8 @@ var a = n("120356"),
   C = n("938475"),
   g = n("242315"),
   E = n("944581"),
-  _ = n("632184"),
-  S = n("170039"),
+  S = n("632184"),
+  _ = n("170039"),
   I = n("761374"),
   N = n("602623"),
   T = n("823379"),
@@ -33,7 +33,7 @@ var a = n("120356"),
   R = n("952972"),
   M = n("81311");
 
-function O(e, t) {
+function y(e, t) {
   return 0 === t.length ? null : (0, l.jsxs)("div", {
     className: R.row,
     children: [(0, l.jsx)(e, {
@@ -46,7 +46,7 @@ function O(e, t) {
   })
 }
 
-function y() {
+function O() {
   var e, t;
   let n = (0, o.useStateFromStoresArray)([L.default, m.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => m.default.getChannel(e)).filter(T.isNotNullish)),
     a = n.map(e => e.id),
@@ -64,7 +64,7 @@ function y() {
       } = e;
       return t
     }))),
-    y = (0, o.useStateFromStores)([c.default], () => {
+    O = (0, o.useStateFromStores)([c.default], () => {
       let e = 0;
       for (let t of i) e += c.default.getParticipantCount(t, f.StageChannelParticipantNamedIndex.AUDIENCE);
       return e
@@ -81,10 +81,10 @@ function y() {
     }, [a]),
     j = (0, o.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
     P = (0, o.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
-    G = O(_.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
-  let U = (e = M, t = y, 0 === e.length ? null : (0, l.jsxs)("div", {
+    G = y(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
+  let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(S.default, {
+      children: [(0, l.jsx)(_.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,
@@ -103,8 +103,8 @@ function y() {
         })]
       })]
     })),
-    w = O(I.default, P.filter(e => null != e && !b.includes(e.id))),
-    B = O(E.default, j);
+    w = y(I.default, P.filter(e => null != e && !b.includes(e.id))),
+    B = y(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
     children: [U, G, w, B]
   })
@@ -118,7 +118,7 @@ function D() {
         className: s()(R.guildNameText, R.guildNameTextLimitedSize),
         children: x.default.Messages.FAVORITES_GUILD_NAME
       })
-    }), (0, l.jsx)(y, {})]
+    }), (0, l.jsx)(O, {})]
   })
 }
 

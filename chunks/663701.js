@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("524437"),
   f = n("952265"),
   E = n("481060"),
-  h = n("493683"),
-  _ = n("348600"),
-  C = n("257968"),
-  m = n("367907"),
-  S = n("770471"),
+  C = n("493683"),
+  h = n("348600"),
+  _ = n("257968"),
+  S = n("367907"),
+  m = n("770471"),
   p = n("158631"),
   I = n("143614"),
   g = n("463119"),
@@ -30,11 +30,11 @@ var a = n("735250"),
   R = n("28476"),
   O = n("880257"),
   L = n("631885"),
-  M = n("457396"),
-  P = n("630571"),
-  x = n("51596"),
-  y = n("905423"),
-  D = n("155409"),
+  P = n("457396"),
+  y = n("630571"),
+  M = n("51596"),
+  D = n("905423"),
+  x = n("155409"),
   b = n("210887"),
   U = n("695346"),
   j = n("283595"),
@@ -62,7 +62,7 @@ let et = e => {
       ...n
     } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([G.default], () => G.default.getPendingCount()), i = (0, I.default)(), {
       canViewBroadcasts: r
-    } = S.default.useExperiment({
+    } = m.default.useExperiment({
       location: "friends_tab_no_track"
     }), u = (0, p.default)();
     return (0, a.jsxs)(Q.LinkButton, {
@@ -71,7 +71,7 @@ let et = e => {
       icon: K.default,
       text: $.default.Messages.FRIENDS,
       onClick: () => {
-        m.default.trackWithMetadata(J.AnalyticEvents.BROADCAST_LIST_VISITED, {
+        S.default.trackWithMetadata(J.AnalyticEvents.BROADCAST_LIST_VISITED, {
           num_active_broadcasts: i.length,
           friends_tab_clicked: !0,
           is_broadcasting: u
@@ -122,7 +122,7 @@ let et = e => {
       route: n,
       locationState: s,
       ...l
-    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([b.default], () => b.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
+    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([b.default], () => b.default.getState().theme), c = (0, _.useActivitiesWhatsNewCount)();
     return (0, a.jsx)(Q.LinkButton, {
       selected: t,
       route: n,
@@ -154,7 +154,7 @@ let et = e => {
       channelId: s
     } = (0, N.useMessageRequestSidebarState)();
     if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
-    let l = null == s ? void 0 : () => h.default.preload(J.ME, s);
+    let l = null == s ? void 0 : () => C.default.preload(J.ME, s);
     return (0, a.jsx)(Q.LinkButton, {
       selected: t,
       route: J.Routes.MESSAGE_REQUESTS,
@@ -221,7 +221,7 @@ let et = e => {
       }
     })
   },
-  eo = () => (0, x.show)("DM_SEARCH");
+  eo = () => (0, M.show)("DM_SEARCH");
 
 function eu(e) {
   switch (e) {
@@ -244,7 +244,7 @@ let ed = e => {
     homeLink: s,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [d, c] = (0, y.default)(e => {
+  } = e, [d, c] = (0, D.default)(e => {
     let {
       channelId: t,
       path: n
@@ -252,7 +252,7 @@ let ed = e => {
     return [t, n]
   }, r.default), {
     enabled: f
-  } = _.BirthdayActivitiesExperiment.useExperiment({
+  } = h.BirthdayActivitiesExperiment.useExperiment({
     location: "a718d6_2"
   }, {
     autoTrackExposure: !0
@@ -260,7 +260,7 @@ let ed = e => {
   return (0, a.jsxs)("nav", {
     className: ee.privateChannels,
     "aria-label": $.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, a.jsx)(D.default, {
+    children: [(0, a.jsx)(x.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,
@@ -287,7 +287,7 @@ let ed = e => {
       }, "friends"), n && t ? (0, a.jsx)(en, {
         selected: null == c ? null != s && s.startsWith(J.Routes.APPLICATION_LIBRARY) : c.startsWith(J.Routes.APPLICATION_LIBRARY),
         hideGameUpdateProgressIndicator: s === J.Routes.APPLICATION_LIBRARY
-      }, "library") : null, (0, a.jsx)(M.NitroTabButton, {
+      }, "library") : null, (0, a.jsx)(P.NitroTabButton, {
         selected: null == c ? o : c.startsWith(J.Routes.APPLICATION_STORE),
         route: null == l || location.pathname.startsWith(J.Routes.ACTIVITIES) || location.pathname.startsWith(J.Routes.APPLICATION_STORE) ? J.Routes.APPLICATION_STORE : l,
         locationState: {
@@ -318,7 +318,7 @@ let ed = e => {
             object: J.AnalyticsObjects.NAVIGATION_LINK
           }
         }
-      }, "discord-shop"), (0, a.jsx)(P.default, {
+      }, "discord-shop"), (0, a.jsx)(y.default, {
         selected: c === J.Routes.QUEST_HOME || (null == s ? void 0 : s.startsWith(J.Routes.QUEST_HOME)),
         locationState: {
           analyticsSource: {

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getDeprecatedVoiceSettings: function() {
-    return h
+    return C
   },
   getVoiceSettings: function() {
-    return _
+    return h
   },
   unlockOverlay: function() {
     return f
@@ -43,7 +43,7 @@ let E = async (e, t, n) => {
   }, "No Client ID Specified"));
   let a = l.default.releaseChannel !== d.PublicReleaseChannels.CANARY && !c.includes(n) && e.transport !== u.TransportTypes.POST_MESSAGE;
   return await (0, o.processSocketThrottlers)(n, a), (0, o.fetchApplicationsRPC)(e, n, t)
-}, h = () => (0, o.getDeprecatedVoiceSettingsWithShortcut)(e => {
+}, C = () => (0, o.getDeprecatedVoiceSettingsWithShortcut)(e => {
   let t = [];
   if (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut)) t = e.modeOptions.shortcut.map(e => {
     var t;
@@ -54,7 +54,7 @@ let E = async (e, t, n) => {
     }
   });
   return t
-}), _ = e => (0, o.getVoiceSettingsWithShortcut)(e, e => {
+}), h = e => (0, o.getVoiceSettingsWithShortcut)(e, e => {
   let t = "";
   return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, i.toString)(e.modeOptions.shortcut)), t
 })

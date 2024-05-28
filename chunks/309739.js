@@ -65,7 +65,7 @@ function m() {
   })
 }
 
-function g() {
+function I() {
   let e = S.AllowActivityPartyPrivacyFriends.useSetting(),
     t = S.AllowActivityPartyPrivacyVoiceChannel.useSetting();
   return (0, a.jsxs)(n.FormSection, {
@@ -88,7 +88,7 @@ function g() {
   })
 }
 
-function I() {
+function g() {
   return (0, a.jsxs)(n.FormSection, {
     className: f.marginBottom40,
     children: [(0, a.jsxs)(n.FormTitle, {
@@ -139,6 +139,6 @@ function h(e) {
     className: t,
     tag: n.FormTitleTags.H1,
     title: s ? T.default.Messages.ACTIVITY_PRIVACY : null,
-    children: [(0, a.jsx)(m, {}), (0, a.jsx)(g, {}), i && (0, a.jsx)(I, {}), (0, a.jsx)(N, {})]
+    children: [(0, a.jsx)(m, {}), (0, a.jsx)(I, {}), i && (0, a.jsx)(g, {}), (0, a.jsx)(N, {})]
   })
 }

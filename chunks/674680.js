@@ -1,92 +1,92 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return C
+    return m
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("780384"),
-  l = n("481060"),
-  i = n("410030"),
-  r = n("44315"),
-  o = n("889901"),
-  u = n("630641"),
-  d = n("783539"),
-  c = n("955204"),
-  f = n("231338"),
-  E = n("140160");
-let h = {
-    trophy: f.Color.PRIMARY_400,
-    locked: f.Color.PRIMARY_400,
-    unlocked: f.Color.GREEN_330
+var a = s("735250");
+s("470079");
+var n = s("780384"),
+  l = s("481060"),
+  i = s("410030"),
+  r = s("44315"),
+  u = s("889901"),
+  o = s("630641"),
+  d = s("783539"),
+  c = s("955204"),
+  E = s("231338"),
+  _ = s("140160");
+let f = {
+    trophy: E.Color.PRIMARY_400,
+    locked: E.Color.PRIMARY_400,
+    unlocked: E.Color.GREEN_330
   },
-  _ = {
-    trophy: f.Color.PRIMARY_400,
-    locked: f.Color.PRIMARY_400,
-    unlocked: f.Color.GREEN_330
+  h = {
+    trophy: E.Color.PRIMARY_400,
+    locked: E.Color.PRIMARY_400,
+    unlocked: E.Color.GREEN_330
   };
 
-function C(e) {
+function m(e) {
   var t;
   let {
-    achievementId: n,
-    unlocked: f,
-    size: C = l.AvatarSizes.SIZE_40
-  } = e, m = (0, i.default)(), S = (0, c.getPoggermodeAchievementData)(n);
-  if (null == S) return null;
-  let p = (0, l.getAvatarSpecs)(C),
+    achievementId: s,
+    unlocked: E,
+    size: m = l.AvatarSizes.SIZE_40
+  } = e, T = (0, i.default)(), C = (0, c.getPoggermodeAchievementData)(s);
+  if (null == C) return null;
+  let g = (0, l.getAvatarSpecs)(m),
     {
-      name: I,
-      rarity: g
-    } = S,
+      name: A,
+      rarity: N
+    } = C,
     {
-      color: T
-    } = (0, c.getAchievementStyles)(g),
-    A = (0, s.isThemeDark)(m) ? h : _,
-    N = (p.size - p.offset - 2 * p.stroke) * .8,
-    v = p.size - p.stroke,
+      color: p
+    } = (0, c.getAchievementStyles)(N),
+    S = (0, n.isThemeDark)(T) ? f : h,
+    I = (g.size - g.offset - 2 * g.stroke) * .8,
+    v = g.size - g.stroke,
     R = {
-      width: .4 * N,
-      height: .4 * N
+      width: .4 * I,
+      height: .4 * I
     },
-    O = {
+    x = {
       width: R.width + 1,
       height: R.height + 1,
-      right: p.stroke + 1,
-      bottom: p.stroke + 1,
+      right: g.stroke + 1,
+      bottom: g.stroke + 1,
       padding: 0
     };
   return (0, a.jsxs)("div", {
-    className: E.container,
+    className: _.container,
     style: {
       width: v,
       height: v,
-      padding: p.stroke
+      padding: g.stroke
     },
-    "aria-label": "".concat(null !== (t = I()) && void 0 !== t ? t : ""),
+    "aria-label": "".concat(null !== (t = A()) && void 0 !== t ? t : ""),
     children: [(0, a.jsx)("div", {
-      className: E.trophyIconContainer,
+      className: _.trophyIconContainer,
       children: (0, a.jsx)(d.default, {
-        color: f ? T : (0, r.getColor)(A.trophy),
-        width: N,
-        height: N
+        color: E ? p : (0, r.getColor)(S.trophy),
+        width: I,
+        height: I
       })
-    }), !f && (0, a.jsx)("div", {
-      className: E.lockContainer,
-      style: O,
-      children: (0, a.jsx)(u.default, {
-        color: (0, r.getColor)(A.locked),
+    }), !E && (0, a.jsx)("div", {
+      className: _.lockContainer,
+      style: x,
+      children: (0, a.jsx)(o.default, {
+        color: (0, r.getColor)(S.locked),
         ...R
       })
-    }), f && g === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
-      className: E.lockContainer,
-      style: O,
-      children: (0, a.jsx)(o.default, {
-        className: E.confettiIcon,
+    }), E && N === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
+      className: _.lockContainer,
+      style: x,
+      children: (0, a.jsx)(u.default, {
+        className: _.confettiIcon,
         ...R
       })
     })]
   })
 }
-C.Sizes = l.AvatarSizes
+m.Sizes = l.AvatarSizes

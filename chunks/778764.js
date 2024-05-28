@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return p
   }
 }), s("47120"), s("773603");
 var a = s("735250"),
@@ -19,29 +19,29 @@ var a = s("735250"),
   _ = s("960048"),
   f = s("998502"),
   m = s("365007"),
-  g = s("15980"),
-  I = s("755733"),
+  I = s("15980"),
+  g = s("755733"),
   N = s("981631"),
   h = s("689938"),
   C = s("865156");
 
-function p(e) {
+function O(e) {
   let {
     transitionState: t,
     onClose: i,
     ticket: o,
     challenge: c
-  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [p, A] = n.useState(!0), [O, x] = n.useState(I.WebAuthnScreens.INIT), [R, M] = n.useState(""), [v, D] = n.useState(null), L = async () => {
+  } = e, S = (0, u.useUID)(), [E, I] = n.useState(""), [O, A] = n.useState(!0), [p, R] = n.useState(g.WebAuthnScreens.INIT), [x, M] = n.useState(""), [L, D] = n.useState(null), P = async () => {
     let e;
-    x(I.WebAuthnScreens.REGISTER);
+    R(g.WebAuthnScreens.REGISTER);
     let t = T.isPlatformEmbedded && f.default.supportsFeature(N.NativeFeatures.WEBAUTHN) ? f.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
     try {
       e = await t
     } catch (e) {
-      _.default.captureException(e), D(h.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(I.WebAuthnScreens.INIT);
+      _.default.captureException(e), D(h.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), R(g.WebAuthnScreens.INIT);
       return
     }
-    M(e), x(I.WebAuthnScreens.NAME)
+    M(e), R(g.WebAuthnScreens.NAME)
   };
   return (0, a.jsxs)(r.ModalRoot, {
     transitionState: t,
@@ -52,16 +52,16 @@ function p(e) {
       children: [(0, a.jsxs)(r.Heading, {
         id: S,
         variant: "heading-lg/semibold",
-        children: [O === I.WebAuthnScreens.INIT && h.default.Messages.TWO_FA_WEBAUTHN_REGISTER, O === I.WebAuthnScreens.REGISTER && h.default.Messages.TWO_FA_WEBAUTHN_INTERACT, O === I.WebAuthnScreens.NAME && h.default.Messages.TWO_FA_WEBAUTHN_NAME]
+        children: [p === g.WebAuthnScreens.INIT && h.default.Messages.TWO_FA_WEBAUTHN_REGISTER, p === g.WebAuthnScreens.REGISTER && h.default.Messages.TWO_FA_WEBAUTHN_INTERACT, p === g.WebAuthnScreens.NAME && h.default.Messages.TWO_FA_WEBAUTHN_NAME]
       }), (0, a.jsx)(r.ModalCloseButton, {
         onClick: i,
         className: C.modalCloseButton
       })]
     }), (0, a.jsxs)(r.Slides, {
-      activeSlide: O,
+      activeSlide: p,
       width: 440,
       children: [(0, a.jsxs)(r.Slide, {
-        id: I.WebAuthnScreens.INIT,
+        id: g.WebAuthnScreens.INIT,
         children: [(0, a.jsxs)(r.ModalContent, {
           className: C.content,
           children: [(0, a.jsx)("div", {
@@ -71,10 +71,10 @@ function p(e) {
               src: s("773072")
             })
           }), (0, a.jsx)("div", {
-            children: null != v && (0, a.jsx)(r.Text, {
+            children: null != L && (0, a.jsx)(r.Text, {
               variant: "text-md/normal",
               color: "status-danger",
-              children: v
+              children: L
             })
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(r.Text, {
@@ -84,12 +84,12 @@ function p(e) {
           })]
         }), (0, a.jsx)(r.ModalFooter, {
           children: (0, a.jsx)(r.Button, {
-            onClick: L,
+            onClick: P,
             children: h.default.Messages.TWO_FA_WEBAUTHN_REGISTER_CONFIRM
           })
         })]
       }), (0, a.jsxs)(r.Slide, {
-        id: I.WebAuthnScreens.REGISTER,
+        id: g.WebAuthnScreens.REGISTER,
         children: [(0, a.jsxs)(r.ModalContent, {
           className: C.content,
           children: [(0, a.jsx)("div", {
@@ -110,13 +110,13 @@ function p(e) {
           })
         })]
       }), (0, a.jsx)(r.Slide, {
-        id: I.WebAuthnScreens.NAME,
+        id: g.WebAuthnScreens.NAME,
         children: (0, a.jsxs)("form", {
           onSubmit: e => {
-            e.preventDefault(), (0, m.finishRegisterWebAuthnCredential)(E, o, R).then(async () => {
+            e.preventDefault(), (0, m.finishRegisterWebAuthnCredential)(E, o, x).then(async () => {
               await (0, d.showMFASuccessModal)(!1)
             }).then(() => i()).catch(() => {
-              D(h.default.Messages.ERROR_OCCURRED_TRY_AGAIN), x(I.WebAuthnScreens.INIT)
+              D(h.default.Messages.ERROR_OCCURRED_TRY_AGAIN), R(g.WebAuthnScreens.INIT)
             })
           },
           children: [(0, a.jsxs)(r.ModalContent, {
@@ -135,7 +135,7 @@ function p(e) {
                 className: C.input,
                 value: E,
                 onChange: e => {
-                  g(e), A(0 === e.length)
+                  I(e), A(0 === e.length)
                 },
                 autoFocus: !0,
                 minLength: 1
@@ -145,13 +145,13 @@ function p(e) {
             className: C.footer,
             children: [(0, a.jsx)(r.Button, {
               type: "submit",
-              disabled: p,
+              disabled: O,
               children: h.default.Messages.TWO_FA_WEBAUTHN_REGISTER_FINISH
             }), (0, a.jsx)(r.Button, {
               look: r.Button.Looks.LINK,
               color: r.Button.Colors.PRIMARY,
               onClick: () => {
-                x(I.WebAuthnScreens.INIT)
+                R(g.WebAuthnScreens.INIT)
               },
               children: h.default.Messages.BACK
             })]
@@ -197,13 +197,13 @@ function A(e) {
   })
 }
 
-function O() {
+function p() {
   let {
     credentials: e,
     hasFetchedCredentials: t
-  } = (0, i.useStateFromStoresObject)([g.default], () => ({
-    hasFetchedCredentials: g.default.hasFetchedCredentials(),
-    credentials: g.default.getCredentials()
+  } = (0, i.useStateFromStoresObject)([I.default], () => ({
+    hasFetchedCredentials: I.default.hasFetchedCredentials(),
+    credentials: I.default.getCredentials()
   }));
   n.useEffect(() => {
     !t && (0, m.fetchWebAuthnCredentials)()
@@ -255,7 +255,7 @@ function O() {
               ticket: t,
               challenge: s
             } = e;
-            (0, r.openModal)(e => (0, a.jsx)(p, {
+            (0, r.openModal)(e => (0, a.jsx)(O, {
               ...e,
               ticket: t,
               challenge: s

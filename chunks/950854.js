@@ -22,8 +22,8 @@ function c(e) {
     headerClassName: u,
     subheaderVariant: p = "text-sm/normal",
     subheader: m,
-    children: _,
-    animatesOnHover: f,
+    children: f,
+    animatesOnHover: _,
     ...h
   } = e, I = null != a, g = (0, l.jsxs)(l.Fragment, {
     children: [I && (0, l.jsx)("div", {
@@ -57,7 +57,7 @@ function c(e) {
             children: m
           })]
         })]
-      }), _]
+      }), f]
     })]
   }), v = n()(t, o.container, {
     [o.hasImage]: I
@@ -69,7 +69,7 @@ function c(e) {
     }),
     onClick: i,
     className: n()(v, o.clickable, {
-      [o.animatesOnHoverContainer]: f
+      [o.animatesOnHoverContainer]: _
     }),
     focusProps: {
       offset: 4

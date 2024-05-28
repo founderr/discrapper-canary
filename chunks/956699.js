@@ -26,17 +26,17 @@ var a = s("735250"),
   R = s("906467"),
   x = s("857192"),
   M = s("558724"),
-  D = s("594174"),
-  L = s("808506"),
+  L = s("594174"),
+  D = s("808506"),
   P = s("186095"),
   v = s("285952"),
   b = s("154921"),
   j = s("998502"),
   U = s("210887"),
-  F = s("601948"),
-  G = s("726985"),
-  y = s("981631"),
-  B = s("908442"),
+  G = s("601948"),
+  F = s("726985"),
+  B = s("981631"),
+  y = s("908442"),
   k = s("724510"),
   V = s("164149"),
   H = s("611273"),
@@ -276,7 +276,7 @@ class q extends n.Component {
         children: "Mobile build overrides must be generated using the desktop/web stable client for now!"
       }) : null;
     return (0, a.jsx)(p.Subsetting, {
-      setting: G.WebSetting.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
+      setting: F.WebSetting.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
       children: (0, a.jsxs)(S.FormSection, {
         className: H.marginTop60,
         children: [(0, a.jsxs)(v.default, {
@@ -445,7 +445,7 @@ class Z extends n.Component {
       allowLoggedOut: o,
       experiments: d,
       experimentsError: u
-    } = this.state, c = B.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = l.map(e => ({
+    } = this.state, c = y.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = l.map(e => ({
       label: e,
       value: e
     }));
@@ -456,7 +456,7 @@ class Z extends n.Component {
         className: H.marginBottom20,
         children: (0, a.jsx)(S.SingleSelect, {
           value: null != c ? c.value : null,
-          options: B.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
+          options: y.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
           onChange: this.handleExpirationChange
         })
       }), this.isMobile() ? null : (0, a.jsx)(S.FormItem, {
@@ -464,7 +464,7 @@ class Z extends n.Component {
         className: H.marginBottom20,
         children: (0, a.jsx)(S.SingleSelect, {
           value: t,
-          options: B.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
+          options: y.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
           onChange: this.handleReleaseChannelChange
         })
       }), this.isMobile() ? (0, a.jsxs)(a.Fragment, {
@@ -667,7 +667,7 @@ class Z extends n.Component {
         allowedVersionEntry: e
       })
     }), Y(this, "handleAllowedVersionEnter", e => {
-      e.charCode === y.KeyboardKeys.ENTER && this.handleAddAllowedVersion()
+      e.charCode === B.KeyboardKeys.ENTER && this.handleAddAllowedVersion()
     }), Y(this, "handleAddAllowedVersion", () => {
       let {
         allowedVersions: e,
@@ -763,20 +763,20 @@ function J() {
   let [e, t] = n.useState(!1), [s, l] = n.useState("");
   return (n.useEffect(() => {
     (async () => {
-      l(await (0, L.getOverlayURL)())
+      l(await (0, D.getOverlayURL)())
     })()
   }, []), e) ? {} : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: [k.buttonsContainer, H.marginBottom20].join(" "),
       children: [(0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
         children: (0, a.jsx)(S.Button, {
           onClick: () => window.open(s, "_blank"),
           disabled: "" === s,
           children: "Open Overlay"
         })
       }), (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_RESET_SOCKET,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_RESET_SOCKET,
         children: (0, a.jsx)(S.Button, {
           onClick: () => {
             A.default.getSocket().close(), A.default.getSocket().connect()
@@ -784,7 +784,7 @@ function J() {
           children: "Reset Socket"
         })
       }), h.ENABLE_CACHE_STORE && (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_CLEAR_CACHES,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_CLEAR_CACHES,
         children: (0, a.jsx)(S.Button, {
           onClick: () => {
             E.default.dispatch({
@@ -798,7 +798,7 @@ function J() {
         })
       })]
     }), (0, a.jsx)(p.Subsetting, {
-      setting: G.WebSetting.DEVELOPER_OPTIONS_CRASHES,
+      setting: F.WebSetting.DEVELOPER_OPTIONS_CRASHES,
       children: (0, a.jsx)(S.FormSection, {
         title: "Crashes",
         tag: S.FormTitleTags.H1,
@@ -880,14 +880,14 @@ let $ = u.default.connectStores([x.default], () => ({
     isAnalyticsDebuggerEnabled: d,
     isIdleStatusIndicatorEnabled: c,
     appDirectoryIncludesInactiveCollections: E
-  } = e, T = (0, u.useStateFromStores)([D.default], () => D.default.getCurrentUser());
+  } = e, T = (0, u.useStateFromStores)([L.default], () => L.default.getCurrentUser());
   return (0, a.jsx)(p.Subsetting, {
-    setting: G.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+    setting: F.WebSetting.DEVELOPER_OPTIONS_FLAGS,
     children: (0, a.jsxs)(S.FormSection, {
       title: "Developer Flags",
       tag: S.FormTitleTags.H1,
       children: [(0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_TRACING_REQUESTS,
         children: (0, a.jsx)(S.FormSwitch, {
           value: t,
           note: "Force trace all client requests with APM",
@@ -897,7 +897,7 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Enable Tracing Requests"
         })
       }), (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_FORCED_CANARY,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_FORCED_CANARY,
         children: (0, a.jsx)(S.FormSwitch, {
           value: s,
           note: "Force all API requests to canary instances",
@@ -907,7 +907,7 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Enable Forced Canary"
         })
       }), (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
         children: (0, a.jsx)(S.FormSwitch, {
           value: n,
           note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
@@ -917,7 +917,7 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Enable Logging of Gateway Events to Console"
         })
       }), (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
         children: (0, a.jsx)(S.FormSwitch, {
           value: l,
           note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
@@ -927,7 +927,7 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Enable Logging of Overlay RPC Events & Commands"
         })
       }), (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
         children: (0, a.jsx)(S.FormSwitch, {
           value: i,
           note: "Logs all analytics events to the developer console",
@@ -937,7 +937,7 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Enable Logging of Analytics Events"
         })
       }), (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_SOURCE_MAPS,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_SOURCE_MAPS,
         children: (0, a.jsx)(S.FormSwitch, {
           value: o,
           note: "Only enable on devices you trust.",
@@ -947,7 +947,7 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Enable source maps to be loaded on this client"
         })
       }), (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
         children: (0, a.jsx)(S.FormSwitch, {
           value: d,
           note: "Displays a floating debugger with viewed impressions",
@@ -957,7 +957,7 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Enable standard analytics debugger view"
         })
       }), (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
         children: (0, a.jsx)(S.FormSwitch, {
           value: c,
           note: "Displays a floating idle status indicator",
@@ -967,7 +967,7 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Enable idle status indicator"
         })
       }) : null, null, (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
         children: (0, a.jsx)(S.FormSwitch, {
           value: E,
           note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
@@ -977,10 +977,10 @@ let $ = u.default.connectStores([x.default], () => ({
           children: "Preview Unpublished Collections on App Directory Homepage"
         })
       }) : null, R.default.isDeveloper ? (0, a.jsxs)(p.Subsetting, {
-        setting: G.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        setting: F.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
         children: [(0, a.jsx)("div", {
           className: [k.buttonsContainer, H.marginBottom20].join(" "),
-          children: (0, a.jsx)(F.OverridePremiumTypeDropDown, {})
+          children: (0, a.jsx)(G.OverridePremiumTypeDropDown, {})
         }), (0, a.jsx)(S.FormDivider, {
           className: k.divider
         })]
@@ -993,7 +993,7 @@ function ee() {
   let e = (0, u.useStateFromStores)([M.default], () => M.default.getSurveyOverride()),
     [t, s] = n.useState(null != e ? e : "");
   return (0, a.jsx)(p.Subsetting, {
-    setting: G.WebSetting.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
+    setting: F.WebSetting.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
     children: (0, a.jsxs)(S.FormSection, {
       tag: S.FormTitleTags.H1,
       title: "Survey Override",
@@ -1023,7 +1023,7 @@ function et() {
   let t = (0, u.useStateFromStores)([C.default], () => C.default.overrideId()),
     [s, l] = n.useState(null !== (e = C.default.overrideId()) && void 0 !== e ? e : "");
   return (0, a.jsx)(p.Subsetting, {
-    setting: G.WebSetting.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
+    setting: F.WebSetting.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
     children: (0, a.jsxs)(S.FormSection, {
       tag: S.FormTitleTags.H1,
       title: "Changelog Override",

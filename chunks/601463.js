@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return _
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,24 +15,24 @@ var a = n("735250"),
   c = n("620929"),
   f = n("981631"),
   E = n("689938"),
-  h = n("590190");
-let _ = {
+  C = n("590190");
+let h = {
   mass: 1,
   tension: 600,
   friction: 60,
   clamp: !0
 };
 
-function C(e) {
+function _(e) {
   let {
     guildId: t,
     signed: n,
-    setSigned: C,
-    sidebarWidth: m,
-    windowWidth: S,
+    setSigned: _,
+    sidebarWidth: S,
+    windowWidth: m,
     transition: p,
     brandPrimaryColor: I
-  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (S - m) / 2, [m, S]), [N, v, R] = (0, l.useSpring)(() => ({
+  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (m - S) / 2, [S, m]), [N, v, R] = (0, l.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
@@ -46,7 +46,7 @@ function C(e) {
     to: {
       opacity: 1
     },
-    config: _,
+    config: h,
     delay: 800,
     immediate: g
   });
@@ -61,20 +61,20 @@ function C(e) {
       var e;
       null === (e = T.current) || void 0 === e || e.scrollIntoView({
         behavior: "smooth"
-      }), null == C || C(!0)
-    }, [C]),
-    M = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
+      }), null == _ || _(!0)
+    }, [_]),
+    P = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
   return (0, a.jsxs)("div", {
-    className: h.sidebarContent,
+    className: C.sidebarContent,
     children: [p((e, t) => t && (0, a.jsx)(l.animated.div, {
-      className: h.sidebarLeftDecorationContainer,
+      className: C.sidebarLeftDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)")),
         width: A
       },
       children: (0, a.jsxs)("div", {
-        className: h.sidebarLeftDecoration,
+        className: C.sidebarLeftDecoration,
         style: {
           width: A
         },
@@ -88,18 +88,18 @@ function C(e) {
         })]
       })
     })), p((e, t) => t && (0, a.jsx)(l.animated.div, {
-      className: h.sidebarRightDecorationContainer,
+      className: C.sidebarRightDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [-40, 0]).to(e => "translateX(".concat(e, "px)")),
         width: A
       },
       children: (0, a.jsxs)("div", {
-        className: h.sidebarRightDecoration,
+        className: C.sidebarRightDecoration,
         children: [(0, a.jsx)(l.animated.div, {
           style: g ? void 0 : N,
           children: (0, a.jsx)(d.default, {
-            className: h.signButton,
+            className: C.signButton,
             size: r.Button.Sizes.SMALL,
             onClick: L,
             themeColor: I,
@@ -109,14 +109,14 @@ function C(e) {
           variant: "text-xs/normal",
           color: "text-muted",
           children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_AGREEMENT.format({
-            onGuidelinesClick: M
+            onGuidelinesClick: P
           })
         })]
       })
     })), (0, a.jsx)(c.default, {
       guildId: t,
       signed: n,
-      setSigned: C,
+      setSigned: _,
       signRef: T,
       animatedTextStyle: O
     })]

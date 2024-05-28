@@ -18,44 +18,44 @@ var a = n("735250"),
   c = n("970606"),
   f = n("963202"),
   E = n("353093"),
-  h = n("207796"),
-  _ = n("497189"),
-  C = n("304231"),
-  m = n("526282"),
-  S = n("490610"),
+  C = n("207796"),
+  h = n("497189"),
+  _ = n("304231"),
+  S = n("526282"),
+  m = n("490610"),
   p = n("981631"),
   I = n("689938"),
   g = n("424023");
 let T = (e, t) => {
   switch (e) {
-    case h.ClanDiscoveryGame.GENSHIN:
+    case C.ClanDiscoveryGame.GENSHIN:
       return t === p.ThemeTypes.DARK ? g.genshinUpsellBackgroundImageDark : g.genshinUpsellBackgroundImageLight;
-    case h.ClanDiscoveryGame.VALORANT:
+    case C.ClanDiscoveryGame.VALORANT:
       return t === p.ThemeTypes.DARK ? g.valorantUpsellBackgroundImageDark : g.valorantUpsellBackgroundImageLight
   }
 };
 
 function A() {
-  let e = (0, h.useClanDiscoveryUIStore)(e => e.game, r.default),
-    t = (0, h.useClanDiscoveryUIStore)(e => e.userUpsellScreen, r.default),
-    n = (0, h.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, r.default),
+  let e = (0, C.useClanDiscoveryUIStore)(e => e.game, r.default),
+    t = (0, C.useClanDiscoveryUIStore)(e => e.userUpsellScreen, r.default),
+    n = (0, C.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, r.default),
     l = s.useCallback(() => {
       (0, c.trackClanUserInviteClicked)({
         location: d.default.CLAN_DISCOVERY
-      }), n(h.ClanDiscoveryUserScreens.USER_ONBOARDING)
+      }), n(C.ClanDiscoveryUserScreens.USER_ONBOARDING)
     }, [n]),
     f = (0, u.default)(),
     E = s.useMemo(() => T(e, f), [e, f]),
-    _ = s.useMemo(() => {
+    h = s.useMemo(() => {
       switch (e) {
-        case h.ClanDiscoveryGame.GENSHIN:
+        case C.ClanDiscoveryGame.GENSHIN:
           return f === p.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
-        case h.ClanDiscoveryGame.VALORANT:
+        case C.ClanDiscoveryGame.VALORANT:
           return f === p.ThemeTypes.DARK ? g.valorantOnboardingBackgroundImageDark : g.valorantOnboardingBackgroundImageLight
       }
     }, [e, f]);
   switch (t) {
-    case h.ClanDiscoveryUserScreens.USER_UPSELL:
+    case C.ClanDiscoveryUserScreens.USER_UPSELL:
       return (0, a.jsx)("div", {
         className: g.container,
         children: (0, a.jsx)(o.ScrollerThin, {
@@ -67,7 +67,7 @@ function A() {
               className: g.backgroundImageBlur
             }), (0, a.jsxs)("div", {
               className: g.backgroundImageContent,
-              children: [(0, a.jsx)(m.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(m.default, {
+              children: [(0, a.jsx)(S.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(S.default, {
                 selectedGame: e,
                 onClick: l
               })]
@@ -75,16 +75,16 @@ function A() {
           })
         })
       });
-    case h.ClanDiscoveryUserScreens.USER_ONBOARDING:
+    case C.ClanDiscoveryUserScreens.USER_ONBOARDING:
       return (0, a.jsx)("div", {
         className: g.container,
         children: (0, a.jsxs)("div", {
-          className: i()(_, g.userOnboarding),
+          className: i()(h, g.userOnboarding),
           children: [(0, a.jsx)("div", {
             className: g.backgroundImageBlur
           }), (0, a.jsx)("div", {
             className: g.backgroundImageContent,
-            children: (0, a.jsx)(C.default, {
+            children: (0, a.jsx)(_.default, {
               selectedGame: e,
               setScreen: n
             })
@@ -95,8 +95,8 @@ function A() {
 }
 
 function N() {
-  let e = (0, h.useClanDiscoveryUIStore)(e => e.started, r.default),
-    t = (0, h.useClanDiscoveryUIStore)(e => e.game, r.default),
+  let e = (0, C.useClanDiscoveryUIStore)(e => e.started, r.default),
+    t = (0, C.useClanDiscoveryUIStore)(e => e.game, r.default),
     {
       enableApplication: n
     } = (0, f.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer"),
@@ -108,29 +108,29 @@ function N() {
     }),
     d = s.useMemo(() => l.filter(e => !(0, E.isGuildAClan)(e)), [l]),
     c = (0, u.default)(),
-    C = s.useMemo(() => T(t, c), [t, c]),
-    m = !e && n;
+    _ = s.useMemo(() => T(t, c), [t, c]),
+    S = !e && n;
   return 0 === l.length ? null : (0, a.jsx)("div", {
     className: g.container,
     children: (0, a.jsxs)(o.ScrollerNone, {
       className: g.upsellScroller,
       fade: !0,
       children: [(0, a.jsxs)("div", {
-        className: i()(C, g.adminUpsell),
+        className: i()(_, g.adminUpsell),
         children: [(0, a.jsx)("div", {
           className: g.backgroundImageBlur
         }), (0, a.jsx)("div", {
           className: g.backgroundImageContent,
-          children: (0, a.jsx)(_.default, {
-            isBrowseButtonVisible: m,
+          children: (0, a.jsx)(h.default, {
+            isBrowseButtonVisible: S,
             selectedGame: t,
             eligibleGuilds: d,
             eligibleGuildsIncludingConverted: l
           })
         })]
-      }), (0, a.jsx)(S.default, {
+      }), (0, a.jsx)(m.default, {
         title: I.default.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-        subtitle: m ? I.default.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
+        subtitle: S ? I.default.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
       })]
     })
   })

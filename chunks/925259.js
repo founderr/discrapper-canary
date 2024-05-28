@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   ScreenSlashIcon: function() {
-    return i
+    return l
   }
 });
-var a = n("735250");
+var s = n("735250");
 n("470079");
-var l = n("692547"),
-  s = n("331595");
-let i = e => {
+var a = n("692547"),
+  i = n("331595");
+let l = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: i = l.default.colors.INTERACTIVE_NORMAL,
+    color: l = a.default.colors.INTERACTIVE_NORMAL,
     colorClass: r = "",
-    ...o
+    ...u
   } = e;
-  return (0, a.jsx)("svg", {
-    ...(0, s.default)(o),
+  return (0, s.jsx)("svg", {
+    ...(0, i.default)(u),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: (0, a.jsx)("path", {
-      fill: "string" == typeof i ? i : i.css,
+    children: (0, s.jsx)("path", {
+      fill: "string" == typeof l ? l : l.css,
       d: "m2.7 22.7 20-20a1 1 0 0 0-1.4-1.4l-20 20a1 1 0 1 0 1.4 1.4ZM13.2 16a.5.5 0 0 1-.35-.85l8.3-8.3a.5.5 0 0 1 .85.36V13a3 3 0 0 1-3 3h-5.8ZM17.15 2.85a.5.5 0 0 0-.36-.85H5a3 3 0 0 0-3 3v8a3 3 0 0 0 1.85 2.77c.17.07.36.02.49-.11l12.8-12.8ZM13.5 20a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-.5.5H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-1.5Z",
       className: r
     })

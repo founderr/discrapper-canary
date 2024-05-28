@@ -16,8 +16,8 @@ var l = n("735250"),
   C = n("481060"),
   g = n("925549"),
   E = n("209613"),
-  _ = n("100527"),
-  S = n("906732"),
+  S = n("100527"),
+  _ = n("906732"),
   I = n("358221"),
   N = n("963202"),
   T = n("353093"),
@@ -27,8 +27,8 @@ var l = n("735250"),
   x = n("905423"),
   R = n("802718"),
   M = n("796974"),
-  O = n("271383"),
-  y = n("430824"),
+  y = n("271383"),
+  O = n("430824"),
   D = n("771845"),
   b = n("358085"),
   j = n("709054"),
@@ -38,12 +38,12 @@ var l = n("735250"),
   w = n("474109"),
   B = n("741616"),
   F = n("187835"),
-  H = n("162050"),
-  V = n("118122"),
+  V = n("162050"),
+  H = n("118122"),
   k = n("193154"),
   Y = n("602147"),
-  W = n("773182"),
-  K = n("222059"),
+  K = n("773182"),
+  W = n("222059"),
   z = n("751277"),
   Z = n("65721"),
   X = n("843343"),
@@ -159,19 +159,19 @@ function eu(e) {
   } = e, [o] = (0, h.useStateFromStoresArray)([D.default], () => {
     let e = D.default.getGuildsTree();
     return [e, e.version]
-  }), u = (0, h.useStateFromStores)([v.default], () => v.default.lurkingGuildIds()), f = a.useMemo(() => n ? [] : u, [u, n]), m = (0, h.useStateFromStoresArray)([y.default, O.default], () => j.default.keys(y.default.getGuilds()).filter(e => O.default.isCurrentUserGuest(e))), g = f.concat(m), E = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), el = (0, h.useStateFromStores)([y.default], () => y.default.getGeoRestrictedGuilds()), [ea, es] = a.useState(!1), ei = a.useCallback(() => es(!0), []), er = a.useCallback(() => es(!1), []), eu = a.useRef(!1), [ed] = a.useState(() => new p.Timeout), ec = a.useRef(null), ef = a.useRef(null), [eh, em] = a.useState(!1), {
+  }), u = (0, h.useStateFromStores)([v.default], () => v.default.lurkingGuildIds()), f = a.useMemo(() => n ? [] : u, [u, n]), m = (0, h.useStateFromStoresArray)([O.default, y.default], () => j.default.keys(O.default.getGuilds()).filter(e => y.default.isCurrentUserGuest(e))), g = f.concat(m), E = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), el = (0, h.useStateFromStores)([O.default], () => O.default.getGeoRestrictedGuilds()), [ea, es] = a.useState(!1), ei = a.useCallback(() => es(!0), []), er = a.useCallback(() => es(!1), []), eu = a.useRef(!1), [ed] = a.useState(() => new p.Timeout), ec = a.useRef(null), ef = a.useRef(null), [eh, em] = a.useState(!1), {
     guilds: ep,
     defaultGameId: eC
   } = (0, N.useClanPrepilotExperimentForAllGuilds)({
     location: "guilds_bar",
     includeConverted: !0
   }), eg = ep.length > 0, eE = a.useMemo(() => ep.filter(e => !(0, T.isGuildAClan)(e)), [ep]).length > 0, {
-    clanDiscoveryEnabled: e_,
-    defaultGameId: eS
-  } = (0, N.useClanPilotExperiment)("guilds_bar"), eI = a.useMemo(() => eE ? W.GuildsBarClanAdminUpsellPopout : e_ ? W.GuildsBarClanUserUpsellPopout : void 0, [e_, eE]), eN = a.useMemo(() => eE ? eC : e_ ? eS : void 0, [eC, e_, eE, eS]), eT = null != eI, eA = !eT, {
+    clanDiscoveryEnabled: eS,
+    defaultGameId: e_
+  } = (0, N.useClanPilotExperiment)("guilds_bar"), eI = a.useMemo(() => eE ? K.GuildsBarClanAdminUpsellPopout : eS ? K.GuildsBarClanUserUpsellPopout : void 0, [eS, eE]), eN = a.useMemo(() => eE ? eC : eS ? e_ : void 0, [eC, eS, eE, e_]), eT = null != eI, eA = !eT, {
     ref: eL,
     ...ev
-  } = (0, c.useListContainerProps)(), ex = (0, C.useFocusJumpSection)(), [eR, eM] = a.useState(!1), eO = a.useMemo(() => new eo(o, eM, () => {
+  } = (0, c.useListContainerProps)(), ex = (0, C.useFocusJumpSection)(), [eR, eM] = a.useState(!1), ey = a.useMemo(() => new eo(o, eM, () => {
     var e, t;
     null === (e = ec.current) || void 0 === e || e.calculateState(), null === (t = ef.current) || void 0 === t || t.calculateState()
   }, e => {
@@ -180,19 +180,19 @@ function eu(e) {
     } = e;
     em(t)
   }, eA), [o, eA]), {
-    analyticsLocations: ey
-  } = (0, S.default)(_.default.GUILDS_LIST), {
+    analyticsLocations: eO
+  } = (0, _.default)(S.default.GUILDS_LIST), {
     pathname: eD
   } = (0, d.useLocation)(), eb = eD.startsWith(ee.Routes.GUILD_DISCOVERY), ej = eD.startsWith(ee.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
   a.useLayoutEffect(() => {
     if (!eu.current) {
       if (0 !== o.size) {
-        if (eb) eO.scrollToGuild(null, !1);
+        if (eb) ey.scrollToGuild(null, !1);
         else {
           let {
             scrollTop: e
           } = M.default.getGuildListDimensions();
-          eO.scrollTo({
+          ey.scrollTo({
             to: e,
             animate: !1
           })
@@ -201,24 +201,24 @@ function eu(e) {
       }
     }
   }, []), a.useEffect(() => {
-    if (eO.setGuildsTree(o), eu.current || 0 === o.size) return;
+    if (ey.setGuildsTree(o), eu.current || 0 === o.size) return;
     let e = x.default.getState().guildId;
-    eO.scrollToGuild(e, !1);
+    ey.scrollToGuild(e, !1);
     let t = null;
     return x.default.subscribe(e => {
       let {
         guildId: n
       } = e;
-      n !== t && (t = n, eO.scrollToGuild(t, !1))
+      n !== t && (t = n, ey.scrollToGuild(t, !1))
     })
-  }, [o, eO]);
+  }, [o, ey]);
   let eP = a.useCallback(() => {
-    eO.scrollTo({
+    ey.scrollTo({
       to: 0,
       animate: !1
     })
-  }, [eO]);
-  (0, U.default)(eO.scrollToGuild);
+  }, [ey]);
+  (0, U.default)(ey.scrollToGuild);
   let eG = o.getRoots(),
     eU = (0, A.default)(),
     ew = (0, R.useSignUpButton)(),
@@ -227,8 +227,8 @@ function eu(e) {
       name: e.name,
       icon: e.icon
     }, e.id));
-  return (0, l.jsx)(S.AnalyticsLocationProvider, {
-    value: ey,
+  return (0, l.jsx)(_.AnalyticsLocationProvider, {
+    value: eO,
     children: (0, l.jsx)("nav", {
       className: i()(en.wrapper, s, (0, P.getThemeClass)(r), {
         [en.hidden]: E
@@ -242,8 +242,8 @@ function eu(e) {
         className: en.tree,
         children: [(0, l.jsx)(w.default, {
           ref: ec,
-          isVisible: eO.isItemVisible,
-          onJumpTo: eO.handleJumpToGuild,
+          isVisible: ey.isItemVisible,
+          onJumpTo: ey.handleJumpToGuild,
           className: en.unreadMentionsIndicatorTop,
           barClassName: en.unreadMentionsBar
         }), (0, l.jsxs)(C.AdvancedScrollerNone, {
@@ -251,9 +251,9 @@ function eu(e) {
             [en.scroller]: !0,
             [en.scrolling]: eR
           }),
-          ref: eO.scrollerRef,
-          onScroll: eO.handleScroll,
-          children: [(0, l.jsx)(K.HomeButton, {}), eU ? (0, l.jsx)(L.default, {}) : null, (0, l.jsx)(H.default, {}), (0, l.jsx)(z.default, {
+          ref: ey.scrollerRef,
+          onScroll: ey.handleScroll,
+          children: [(0, l.jsx)(W.HomeButton, {}), eU ? (0, l.jsx)(L.default, {}) : null, (0, l.jsx)(V.default, {}), (0, l.jsx)(z.default, {
             isOnHubVerificationRoute: ej
           }), (0, l.jsx)(B.default, {}), ew, g.map(e => (0, l.jsx)($.default, {
             guildId: e
@@ -266,7 +266,7 @@ function eu(e) {
                 case G.GuildsNodeType.FOLDER:
                   return (0, l.jsx)(q.default, {
                     folderNode: t,
-                    setNodeRef: eO.setNodeRef,
+                    setNodeRef: ey.setNodeRef,
                     draggable: !0,
                     sorting: ea,
                     onDragStart: ei,
@@ -276,7 +276,7 @@ function eu(e) {
                 case G.GuildsNodeType.GUILD:
                   return (0, l.jsx)(Q.default, {
                     guildNode: t,
-                    setRef: eO.setNodeRef,
+                    setRef: ey.setNodeRef,
                     draggable: !0,
                     sorting: ea,
                     onDragStart: ei,
@@ -286,23 +286,23 @@ function eu(e) {
                   return null
               }
             })
-          }), eB, n ? null : (0, l.jsx)(V.default, {
+          }), eB, n ? null : (0, l.jsx)(H.default, {
             disableTooltip: f.length > 0,
             lastTargetNode: eG[eG.length - 1]
-          }), n || eg || e_ ? null : (0, l.jsx)(Y.default, {
-            ref: eO.guildDiscoveryRef,
+          }), n || eg || eS ? null : (0, l.jsx)(Y.default, {
+            ref: ey.guildDiscoveryRef,
             selected: eb
           }), (0, l.jsx)(X.default, {}), t ? null : (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(Z.default, {}), (0, l.jsx)(F.default, {})]
           })]
-        }), n || null == eI || null == eN ? !n && eg ? (0, l.jsx)(W.GuildsBarFixedFooter, {
+        }), n || null == eI || null == eN ? !n && eg ? (0, l.jsx)(K.GuildsBarFixedFooter, {
           hideGradient: eh,
           children: (0, l.jsx)(Y.default, {
-            ref: eO.guildDiscoveryRef,
+            ref: ey.guildDiscoveryRef,
             selected: eb,
             className: en.fixedDiscoveryIcon
           })
-        }) : null : (0, l.jsx)(W.GuildsBarFixedFooter, {
+        }) : null : (0, l.jsx)(K.GuildsBarFixedFooter, {
           hideGradient: eh,
           children: (0, l.jsx)(eI, {
             defaultGameId: eN,
@@ -311,7 +311,7 @@ function eu(e) {
                 onClick: t
               } = e;
               return (0, l.jsx)(Y.default, {
-                ref: eO.guildDiscoveryRef,
+                ref: ey.guildDiscoveryRef,
                 selected: eb,
                 className: en.fixedDiscoveryIcon,
                 onClick: t
@@ -321,8 +321,8 @@ function eu(e) {
         }), (0, l.jsx)(w.default, {
           reverse: !0,
           ref: ef,
-          isVisible: eO.isItemVisible,
-          onJumpTo: eO.handleJumpToGuild,
+          isVisible: ey.isItemVisible,
+          onJumpTo: ey.handleJumpToGuild,
           className: i()(en.unreadMentionsIndicatorBottom, {
             [en.unreadMentionsFixedFooter]: !n && eT
           }),

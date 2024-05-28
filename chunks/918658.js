@@ -31,21 +31,21 @@ var i = n("120356"),
   v = n("160404"),
   R = n("889695"),
   N = n("981631"),
-  M = n("176505"),
+  O = n("176505"),
   b = n("302463"),
-  O = n("293810"),
+  M = n("293810"),
   A = n("689938"),
-  x = n("794491");
+  L = n("794491");
 
-function L(e) {
+function x(e) {
   let {
     className: t,
     onClick: n,
     children: i
   } = e;
   return (0, r.jsx)(u.Button, {
-    className: l()(x.button, t),
-    innerClassName: x.buttonInner,
+    className: l()(L.button, t),
+    innerClassName: L.buttonInner,
     look: u.Button.Looks.OUTLINED,
     color: u.Button.Colors.WHITE,
     size: u.Button.Sizes.NONE,
@@ -58,7 +58,7 @@ function P(e) {
   let {
     onClick: t
   } = e;
-  return (0, r.jsx)(L, {
+  return (0, r.jsx)(x, {
     onClick: t,
     children: A.default.Messages.DISABLE
   })
@@ -92,8 +92,8 @@ function w() {
       }
     }(i),
     D = i === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? A.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : A.default.Messages.VIEWING_AS_ROLES_SELECT,
-    y = t === M.StaticChannelRoute.GUILD_ONBOARDING,
-    j = t => {
+    G = t === O.StaticChannelRoute.GUILD_ONBOARDING,
+    y = t => {
       let {
         backToSettings: n
       } = t;
@@ -101,28 +101,28 @@ function w() {
     };
   return (0, r.jsxs)(I.default, {
     color: I.NoticeColors.BRAND,
-    className: x.notice,
-    children: [(0, r.jsxs)(L, {
-      onClick: () => j({
+    className: L.notice,
+    children: [(0, r.jsxs)(x, {
+      onClick: () => y({
         backToSettings: !0
       }),
-      className: x.backButton,
+      className: L.backButton,
       children: [(0, r.jsx)(E.default, {
         width: 16,
         height: 16,
         direction: E.default.Directions.LEFT,
-        className: x.backArrow
+        className: L.backArrow
       }), w]
-    }), y && l ? (0, r.jsx)("div", {
-      className: x.noticeContents,
+    }), G && l ? (0, r.jsx)("div", {
+      className: L.noticeContents,
       children: (0, r.jsx)("div", {
-        className: x.noticeText,
+        className: L.noticeText,
         children: A.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
       })
     }) : (0, r.jsxs)("div", {
-      className: x.noticeContents,
+      className: L.noticeContents,
       children: [(0, r.jsx)("div", {
-        className: x.noticeText,
+        className: L.noticeText,
         children: l ? A.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
           numRoles: Object.keys(n).length
         }) : A.default.Messages.VIEWING_AS_ROLES.format({
@@ -137,18 +137,18 @@ function w() {
           let {
             onClick: t
           } = e;
-          return (0, r.jsxs)(L, {
+          return (0, r.jsxs)(x, {
             onClick: t,
             children: [D, (0, r.jsx)(_.default, {
               width: 16,
               height: 16,
               direction: _.default.Directions.DOWN,
-              className: x.selectCaret
+              className: L.selectCaret
             })]
           })
         }
       }), l && (0, r.jsx)(u.TooltipContainer, {
-        className: x.previewWarning,
+        className: L.previewWarning,
         text: A.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
         children: (0, r.jsx)(C.default, {
           width: 16,
@@ -156,9 +156,9 @@ function w() {
           color: o.default.unsafe_rawColors.YELLOW_300.css
         })
       }), m && (0, r.jsx)(u.TooltipContainer, {
-        className: x.previewWarning,
+        className: L.previewWarning,
         text: A.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-          maxTiers: O.MAX_SUBSCRIPTION_TIERS,
+          maxTiers: M.MAX_SUBSCRIPTION_TIERS,
           maxProducts: b.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
         }),
         children: (0, r.jsx)(C.default, {
@@ -168,7 +168,7 @@ function w() {
         })
       })]
     }), l || i === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(P, {
-      onClick: () => j({
+      onClick: () => y({
         backToSettings: !1
       })
     })]
@@ -180,9 +180,9 @@ function D(e) {
     guildId: t
   } = e;
   return (0, s.useStateFromStores)([v.default], () => v.default.isViewingRoles(t)) ? (0, r.jsx)("div", {
-    className: l()(x.settingsWrapper, {
-      [x.windows]: (0, m.isWindows)(),
-      [x.osx]: (0, m.isMac)()
+    className: l()(L.settingsWrapper, {
+      [L.windows]: (0, m.isWindows)(),
+      [L.osx]: (0, m.isMac)()
     }),
     children: (0, r.jsx)(w, {})
   }) : null

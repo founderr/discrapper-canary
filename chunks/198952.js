@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   FamilyCenterAvatar: function() {
     return d
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("204197"),
-  i = n("998502"),
-  r = n("689938"),
-  o = n("135473");
-let u = i.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
+var a = s("735250");
+s("470079");
+var n = s("481060"),
+  l = s("204197"),
+  i = s("998502"),
+  r = s("689938"),
+  u = s("135473");
+let o = i.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar,
   d = e => {
     let {
       user: t,
-      avatarSize: n = s.AvatarSizes.SIZE_48
+      avatarSize: s = n.AvatarSizes.SIZE_48
     } = e, {
       avatarSrc: i,
       avatarDecorationSrc: d,
       eventHandlers: c
     } = (0, l.default)({
       user: t,
-      size: n
+      size: s
     });
     return (0, a.jsx)("div", {
       ...c,
-      children: (0, a.jsx)(u, {
-        className: o.__invalid_avatar,
+      children: (0, a.jsx)(o, {
+        className: u.__invalid_avatar,
         src: i,
         avatarDecoration: d,
-        size: n,
+        size: s,
         "aria-label": r.default.Messages.FAMILY_CENTER_AVATAR_ARIA.format({
           name: t.username
         })
@@ -40,17 +40,17 @@ let u = i.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
 t.default = e => {
   let {
     currentUser: t,
-    otherUser: n,
-    children: s
+    otherUser: s,
+    children: n
   } = e;
   return (0, a.jsx)("div", {
-    className: o.avatarPairContainer,
+    className: u.avatarPairContainer,
     children: (0, a.jsxs)("div", {
-      className: o.avatarPair,
+      className: u.avatarPair,
       children: [(0, a.jsx)(d, {
         user: t
-      }), s, (0, a.jsx)(d, {
-        user: n
+      }), n, (0, a.jsx)(d, {
+        user: s
       })]
     })
   })

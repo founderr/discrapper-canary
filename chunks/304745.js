@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CenterControlTrayActivityButton: function() {
-    return v
+    return x
   }
 }), n("653041");
 var a = n("735250"),
@@ -25,12 +25,12 @@ var a = n("735250"),
   T = n("301076"),
   I = n("981631"),
   A = n("921944"),
-  N = n("979942");
+  v = n("979942");
 
-function v(e) {
+function x(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), v = (0, h.useEmbeddedActivityLaunchability)(t.id), x = (0, h.getEmbeddedActivityLaunchabilityLabel)(v), M = v !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
+  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), x = (0, h.useEmbeddedActivityLaunchability)(t.id), N = (0, h.getEmbeddedActivityLaunchabilityLabel)(x), M = x !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
     isHovered: R,
     setIsHovered: y,
     onMouseEnter: L,
@@ -49,9 +49,9 @@ function v(e) {
       openInPopout: F,
       analyticsLocations: w
     })
-  }, [U.location, w, t, F]), B = [];
-  return !M && B.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.default)(t.id) && !M && B.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(S.default, {
-    contentTypes: B,
+  }, [U.location, w, t, F]), H = [];
+  return !M && H.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.default)(t.id) && !M && H.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(S.default, {
+    contentTypes: H,
     children: e => {
       let {
         visibleContent: n,
@@ -85,10 +85,10 @@ function v(e) {
         children: () => (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(T.default, {
             disabled: M,
-            "aria-label": x,
-            label: D ? void 0 : x,
+            "aria-label": N,
+            label: D ? void 0 : N,
             isActivityActive: P || R,
-            className: N.controlButton,
+            className: v.controlButton,
             onClick: () => {
               k(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(A.ContentDismissActionType.UNKNOWN)
             },

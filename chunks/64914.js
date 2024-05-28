@@ -19,73 +19,73 @@ var a = s("735250"),
   _ = s("998502"),
   f = s("695346"),
   m = s("399970"),
-  g = s("981631"),
-  I = s("689938"),
+  I = s("981631"),
+  g = s("689938"),
   N = s("485767");
 
 function h() {
   let [e] = n.useState(() => _.default.getEnableHardwareAcceleration()), t = f.DisableGamesTab.useSetting(), s = f.DeveloperMode.useSetting(), h = f.DisableHomeAutoNav.useSetting(), {
     hasLibraryApplication: C,
-    testModeApplicationId: p
+    testModeApplicationId: O
   } = (0, l.useStateFromStoresObject)([u.default, d.default], () => ({
     hasLibraryApplication: d.default.hasLibraryApplication(),
     testModeApplicationId: u.default.testModeApplicationId
   })), A = n.useCallback(e => {
     f.DisableGamesTab.updateSetting(!e)
-  }, []), O = n.useCallback(e => {
+  }, []), p = n.useCallback(e => {
     e ? (0, r.openModal)(e => (0, a.jsx)(m.default, {
       ...e
     })) : o.reset()
-  }, []), x = n.useCallback(e => {
+  }, []), R = n.useCallback(e => {
     (0, r.openModal)(t => (0, a.jsx)(r.ConfirmModal, {
-      header: I.default.Messages.SWITCH_HARDWARE_ACCELERATION,
-      confirmText: I.default.Messages.OKAY,
-      cancelText: I.default.Messages.CANCEL,
+      header: g.default.Messages.SWITCH_HARDWARE_ACCELERATION,
+      confirmText: g.default.Messages.OKAY,
+      cancelText: g.default.Messages.CANCEL,
       onConfirm: () => _.default.setEnableHardwareAcceleration(e),
       ...t,
       children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
-        children: I.default.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
+        children: g.default.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
       })
     }))
-  }, []), R = n.useCallback(e => {
+  }, []), x = n.useCallback(e => {
     f.DisableHomeAutoNav.updateSetting(!e)
   }, []);
   return (0, a.jsxs)(r.FormSection, {
     tag: r.FormTitleTags.H1,
-    title: I.default.Messages.SETTINGS_ADVANCED,
+    title: g.default.Messages.SETTINGS_ADVANCED,
     children: [S.SUPPORTS_COPY && (0, a.jsx)(r.FormSwitch, {
       value: s,
       onChange: f.DeveloperMode.updateSetting,
-      note: I.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
-        apiDocsUrl: g.MarketingURLs.API_DOCS
+      note: g.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
+        apiDocsUrl: I.MarketingURLs.API_DOCS
       }),
-      children: I.default.Messages.DEVELOPER_MODE
+      children: g.default.Messages.DEVELOPER_MODE
     }), T.isPlatformEmbedded && (0, a.jsx)(r.FormSwitch, {
       value: e,
-      onChange: x,
-      note: I.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
-      children: I.default.Messages.HARDWARE_ACCELERATION
+      onChange: R,
+      note: g.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
+      children: g.default.Messages.HARDWARE_ACCELERATION
     }), C && (0, a.jsx)(r.FormSwitch, {
       value: !t,
       onChange: A,
-      note: I.default.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
-      children: I.default.Messages.USER_SETTINGS_SHOW_LIBRARY
+      note: g.default.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
+      children: g.default.Messages.USER_SETTINGS_SHOW_LIBRARY
     }), s && (0, a.jsx)(r.FormSwitch, {
-      value: null != p,
-      note: I.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
-      onChange: O,
-      children: I.default.Messages.DEVELOPER_APPLICATION_TEST_MODE
+      value: null != O,
+      note: g.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
+      onChange: p,
+      children: g.default.Messages.DEVELOPER_APPLICATION_TEST_MODE
     }), (0, a.jsx)(r.FormSwitch, {
       value: !h,
-      note: I.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
-        helpCenterLink: E.default.getArticleURL(g.HelpdeskArticles.GUILD_HOME)
+      note: g.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
+        helpCenterLink: E.default.getArticleURL(I.HelpdeskArticles.GUILD_HOME)
       }),
-      onChange: R,
+      onChange: x,
       children: (0, a.jsxs)("div", {
         className: N.badgedItem,
-        children: [I.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(c.TextBadge, {
-          text: I.default.Messages.BETA,
+        children: [g.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(c.TextBadge, {
+          text: g.default.Messages.BETA,
           color: i.default.unsafe_rawColors.BRAND_500.css,
           className: N.__invalid_betaTag
         })]

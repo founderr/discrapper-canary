@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var u = n("598");
 
-function l() {
+function i() {
   let {
     step: e,
     stepConfigs: t

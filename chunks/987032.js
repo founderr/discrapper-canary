@@ -1,15 +1,15 @@
 "use strict";
 n.r(a), n.d(a, {
   getEPSBankDisplayNameFromBankName: function() {
-    return u
+    return d
   },
   getIdealBankDisplayNameFromBankName: function() {
-    return c
+    return l
   }
 }), n("47120");
 var r = n("818083"),
   t = n("981631"),
-  o = n("689938");
+  s = n("689938");
 a.default = (0, r.createExperiment)({
   kind: "user",
   id: "2021-08_regional_payment_methods",
@@ -149,7 +149,7 @@ a.default = (0, r.createExperiment)({
     }
   }]
 });
-let s = new Map([
+let o = new Map([
   ["abn_amro", "ABN AMRO"],
   ["asn_bank", "ASN Bank"],
   ["bunq", "Bunq"],
@@ -164,10 +164,10 @@ let s = new Map([
   ["van_lanschot", "Van Lanschot"]
 ]);
 
-function c(e) {
-  return void 0 !== e && s.has(e) ? s.get(e) : o.default.Messages.PAYMENT_SOURCE_UNKNOWN
+function l(e) {
+  return void 0 !== e && o.has(e) ? o.get(e) : s.default.Messages.PAYMENT_SOURCE_UNKNOWN
 }
-let i = new Map([
+let u = new Map([
   ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],
   ["austrian_anadi_bank_ag", "Austrian Anadi Bank AG"],
   ["bank_austria", "Bank Austria"],
@@ -197,6 +197,6 @@ let i = new Map([
   ["vr_bank_braunau", "VR-Bank Braunau"]
 ]);
 
-function u(e) {
-  return void 0 !== e && i.has(e) ? i.get(e) : o.default.Messages.PAYMENT_SOURCE_UNKNOWN
+function d(e) {
+  return void 0 !== e && u.has(e) ? u.get(e) : s.default.Messages.PAYMENT_SOURCE_UNKNOWN
 }

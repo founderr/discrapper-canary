@@ -14,7 +14,7 @@ let l = e => {
     children: s
   } = e, [l] = (0, r.useState)(new i.default.Value(t ? 1 : 0)), [o] = (0, r.useState)(new i.default.Value(t ? 1 : .99));
   (0, r.useEffect)(() => {
-    t ? u() : d()
+    t ? u() : c()
   }, [t]);
   let u = () => {
       i.default.parallel([i.default.timing(l, {
@@ -25,7 +25,7 @@ let l = e => {
         duration: 700
       })]).start()
     },
-    d = () => {
+    c = () => {
       i.default.parallel([i.default.timing(l, {
         toValue: 0,
         duration: 700

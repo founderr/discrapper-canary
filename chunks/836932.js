@@ -19,10 +19,10 @@ function u(e, t, n, u, c) {
   if (null == h) return null;
   let {
     icon: p,
-    title: g,
+    title: E,
     body: m
   } = (0, s.makeTextChatNotification)(e, t, n), {
-    trackView: E,
+    trackView: g,
     trackClick: S
   } = (0, o.makeAnalyticsTrackers)(r.OverlayNotificationType.ActivityInvite, {
     notif_type: r.OverlayNotificationType.ActivityInvite,
@@ -38,11 +38,11 @@ function u(e, t, n, u, c) {
   return {
     colorScheme: l.default.ColorSchemes.PRIMARY,
     icon: p,
-    title: g,
+    title: E,
     body: m,
     hint: e => (0, l.renderKeybindHint)(e, (0, o.getOverlayKeybind)(), d.default.Messages.OVERLAY_UNLOCK_TO_JOIN),
     onNotificationShow: () => {
-      E()
+      g()
     },
     confirmText: d.default.Messages.JOIN,
     onConfirmClick: (l, s) => {

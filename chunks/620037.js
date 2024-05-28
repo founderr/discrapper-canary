@@ -19,12 +19,12 @@ t.default = e => {
   let {
     location: t,
     autoTrackExposure: n = !0,
-    trackExposureOptions: s = {}
+    trackExposureOptions: l = {}
   } = e;
   return i.useExperiment({
     location: t
   }, {
     autoTrackExposure: n,
-    trackExposureOptions: s
+    trackExposureOptions: l
   })
 }

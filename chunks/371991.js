@@ -1,62 +1,62 @@
 "use strict";
 n.r(t), n.d(t, {
   ActiveTimestamp: function() {
-    return _
+    return f
   },
   useTimestampTickedNow: function() {
-    return d
+    return E
   }
 }), n("47120");
-var r = n("735250"),
-  o = n("470079"),
+var s = n("735250"),
+  a = n("470079"),
   i = n("442837"),
-  a = n("846519"),
-  u = n("481060"),
-  s = n("706454"),
-  E = n("506071"),
-  T = n("561308"),
-  l = n("592567");
+  l = n("846519"),
+  r = n("481060"),
+  u = n("706454"),
+  o = n("506071"),
+  d = n("561308"),
+  c = n("592567");
 
-function d(e) {
-  let [t, n] = o.useState(Date.now()), r = (0, E.useIsWindowFocused)(), i = o.useMemo(() => {
+function E(e) {
+  let [t, n] = a.useState(Date.now()), s = (0, o.useIsWindowFocused)(), i = a.useMemo(() => {
     let {
       hours: n
-    } = (0, T.calculateActiveTimestampDurations)(e, t);
+    } = (0, d.calculateActiveTimestampDurations)(e, t);
     return n > 0 ? 3e5 : 1e3
   }, [e, t]);
-  return o.useEffect(() => {
-    let e = new a.Interval;
+  return a.useEffect(() => {
+    let e = new l.Interval;
     return e.start(i, () => {
       n(Date.now())
-    }), !r && e.stop(), () => e.stop()
-  }, [i, r]), t
+    }), !s && e.stop(), () => e.stop()
+  }, [i, s]), t
 }
-let _ = e => {
+let f = e => {
   let {
     entry: t,
     inline: n = !1,
     textColor: i
-  } = e, a = d(t), s = o.useMemo(() => (0, T.formatActiveTimestamp)(t, a), [t, a]);
-  return (0, r.jsx)(u.Text, {
-    className: n ? l.inlineTimestamp : void 0,
+  } = e, l = E(t), u = a.useMemo(() => (0, d.formatActiveTimestamp)(t, l), [t, l]);
+  return (0, s.jsx)(r.Text, {
+    className: n ? c.inlineTimestamp : void 0,
     variant: "text-xs/normal",
     tabularNumbers: !0,
     color: i,
-    children: s
+    children: u
   })
 };
 t.default = e => {
   let {
     entry: t,
     textColor: n
-  } = e, o = (0, T.isEntryActive)(t), a = (0, i.useStateFromStores)([s.default], () => s.default.locale);
-  return o ? (0, r.jsx)(_, {
+  } = e, a = (0, d.isEntryActive)(t), l = (0, i.useStateFromStores)([u.default], () => u.default.locale);
+  return a ? (0, s.jsx)(f, {
     entry: t,
     textColor: n
-  }) : (0, r.jsx)(u.Text, {
+  }) : (0, s.jsx)(r.Text, {
     variant: "text-xs/normal",
     color: n,
     lineClamp: 1,
-    children: (0, T.formatEndedTimestamp)(t, a)
+    children: (0, d.formatEndedTimestamp)(t, l)
   })
 }

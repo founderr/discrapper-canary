@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildDiscoveryMenuPopout: function() {
-    return C
+    return _
   },
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("735250");
@@ -19,20 +19,20 @@ var s = n("442837"),
   c = n("795295"),
   f = n("556017"),
   E = n("981631"),
-  h = n("689938");
+  C = n("689938");
 
-function _(e) {
+function h(e) {
   let {
     guild: t,
     shiftId: n,
-    onSelect: _,
-    closePopout: C,
-    "aria-label": m
-  } = e, S = (0, r.default)({
+    onSelect: h,
+    closePopout: _,
+    "aria-label": S
+  } = e, m = (0, r.default)({
     id: t.id,
-    label: h.default.Messages.COPY_ID_GUILD,
+    label: C.default.Messages.COPY_ID_GUILD,
     shiftId: n,
-    onSuccess: C
+    onSuccess: _
   }), p = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), I = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, p)), {
     canSeeInAppReportingButtons: g
   } = f.DiscoveryInAppReportingExperiment.useExperiment({
@@ -40,17 +40,17 @@ function _(e) {
   }, {
     autoTrackExposure: !1
   }), T = () => {
-    (0, i.closeContextMenu)(), null == C || C()
+    (0, i.closeContextMenu)(), null == _ || _()
   };
   return (0, a.jsxs)(l.Menu, {
-    onSelect: _,
+    onSelect: h,
     navId: "guild-discovery-context-menu",
-    "aria-label": null != m ? m : h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    "aria-label": null != S ? S : C.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: i.closeContextMenu,
     children: [(0, a.jsx)(l.MenuGroup, {
       children: !I && g ? (0, a.jsx)(l.MenuItem, {
         id: "report-guild-discovery-listing",
-        label: h.default.Messages.REPORT_SERVER_NO_NAME,
+        label: C.default.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
           (0, o.showReportModalForDiscoverableGuild)(t), T()
         },
@@ -58,11 +58,11 @@ function _(e) {
         color: "danger"
       }) : null
     }), (0, a.jsx)(l.MenuGroup, {
-      children: S
+      children: m
     })]
   })
 }
-let C = e => {
+let _ = e => {
   let {
     guild: t,
     children: n,
@@ -80,7 +80,7 @@ let C = e => {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(_, {
+      return (0, a.jsx)(h, {
         guild: t,
         closePopout: n
       })

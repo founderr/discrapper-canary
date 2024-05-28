@@ -1,30 +1,30 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  l = n.n(s),
-  i = n("481060"),
-  r = n("51144"),
-  o = n("757024");
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("120356"),
+  l = s.n(n),
+  i = s("481060"),
+  r = s("51144"),
+  u = s("757024");
 t.default = e => {
   let {
     user: t,
-    fill: n
-  } = e, s = "\xa0(@".concat(r.default.getUserTag(t, {
+    fill: s
+  } = e, n = "\xa0(@".concat(r.default.getUserTag(t, {
     decoration: "never"
   }), ")");
   return (0, a.jsxs)(i.Text, {
-    className: l()([o.text, {
-      [o.fill]: n
+    className: l()([u.text, {
+      [u.fill]: s
     }]),
     variant: "text-md/medium",
     children: [(0, a.jsx)("span", {
-      className: o.username,
+      className: u.username,
       children: r.default.getName(t)
     }), (0, a.jsx)("span", {
-      className: o.discriminator,
-      children: s
+      className: u.discriminator,
+      children: n
     })]
   })
 }

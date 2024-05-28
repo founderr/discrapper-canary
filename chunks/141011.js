@@ -1,54 +1,54 @@
 "use strict";
-r.r(t);
-var a = r("735250"),
-  o = r("470079"),
-  l = r("120356"),
-  n = r.n(l),
-  s = r("399606"),
-  i = r("376345"),
-  c = r("607070"),
-  u = r("302221"),
-  d = r("884697"),
-  f = r("372654"),
-  C = r("447883");
+a.r(t);
+var r = a("735250"),
+  s = a("470079"),
+  n = a("120356"),
+  o = a.n(n),
+  l = a("399606"),
+  i = a("376345"),
+  c = a("607070"),
+  u = a("302221"),
+  d = a("884697"),
+  f = a("372654"),
+  C = a("447883");
 t.default = e => {
   let {
     asset: t,
-    size: r = f.MAX_CONTENT_WIDTH,
-    addGradient: l = !1,
+    size: a = f.MAX_CONTENT_WIDTH,
+    addGradient: n = !1,
     className: p,
-    style: g,
-    children: v,
-    blur: b = !1
-  } = e, m = (0, s.useStateFromStores)([c.default], () => c.default.saturation), h = o.useMemo(() => {
-    if (null == t) return g;
+    style: b,
+    children: g,
+    blur: E = !1
+  } = e, I = (0, l.useStateFromStores)([c.default], () => c.default.saturation), T = s.useMemo(() => {
+    if (null == t) return b;
     let e = (0, d.getCollectiblesAssetURL)(t, {
-        size: r,
+        size: a,
         format: "jpg"
       }),
-      a = b ? {
+      r = E ? {
         filter: "blur(2px)",
         transform: "scale(1.02)"
       } : {};
-    if (1 === m) return {
-      ...g,
-      backgroundImage: l ? "url(".concat(e, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)") : "url(".concat(e, ")"),
+    if (1 === I) return {
+      ...b,
+      backgroundImage: n ? "url(".concat(e, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)") : "url(".concat(e, ")"),
       backgroundBlendMode: "multiply",
       backgroundSize: "cover",
-      ...a
+      ...r
     };
-    let o = (0, u.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - m);
+    let s = (0, u.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - I);
     return {
-      ...g,
-      backgroundImage: "linear-gradient(".concat(o, ", ").concat(o, "), url(").concat(e, ")"),
+      ...b,
+      backgroundImage: "linear-gradient(".concat(s, ", ").concat(s, "), url(").concat(e, ")"),
       backgroundBlendMode: "saturation",
       backgroundSize: "cover",
-      ...a
+      ...r
     }
-  }, [t, r, m, g, b, l]);
-  return (0, a.jsx)("div", {
-    className: n()(C.banner, p),
-    style: h,
-    children: v
+  }, [t, a, I, b, E, n]);
+  return (0, r.jsx)("div", {
+    className: o()(C.banner, p),
+    style: T,
+    children: g
   })
 }

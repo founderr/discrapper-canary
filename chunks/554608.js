@@ -1,24 +1,24 @@
     "use strict";
-    a.r(t), a.d(t, {
+    t.r(a), t.d(a, {
       MigrationStatus: function() {
-        return o
+        return f
       }
     });
-    var d, n, c, i, o, r, f = a("442837"),
-      l = a("570140");
-    (d = o || (o = {}))[d.NOT_STARTED = 0] = "NOT_STARTED", d[d.IN_PROGRESS = 1] = "IN_PROGRESS", d[d.FAILED = 2] = "FAILED", d[d.SKIPPED = 3] = "SKIPPED";
+    var d, c, n, i, f, o, r = t("442837"),
+      l = t("570140");
+    (d = f || (f = {}))[d.NOT_STARTED = 0] = "NOT_STARTED", d[d.IN_PROGRESS = 1] = "IN_PROGRESS", d[d.FAILED = 2] = "FAILED", d[d.SKIPPED = 3] = "SKIPPED";
     let s = 0;
-    class u extends(r = f.default.Store) {
+    class b extends(o = r.default.Store) {
       getMigrationStatus() {
         return s
       }
     }
-    i = "DomainMigrationStore", (c = "displayName") in(n = u) ? Object.defineProperty(n, c, {
+    i = "DomainMigrationStore", (n = "displayName") in(c = b) ? Object.defineProperty(c, n, {
       value: i,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : n[c] = i, t.default = new u(l.default, {
+    }) : c[n] = i, a.default = new b(l.default, {
       DOMAIN_MIGRATION_START: function() {
         s = 1
       },

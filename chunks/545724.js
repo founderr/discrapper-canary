@@ -15,14 +15,14 @@ t.default = function(e) {
     index: t,
     children: l,
     user: E,
-    channel: h,
-    onClick: _,
-    isFocused: C,
-    isActive: m,
-    onOtherHover: S,
+    channel: C,
+    onClick: h,
+    isFocused: _,
+    isActive: S,
+    onOtherHover: m,
     className: p
   } = e, [I, g] = s.useState(!1), [T, A] = s.useState(!1), N = () => {
-    g(!0), C && !m && !T && (null == S || S())
+    g(!0), _ && !S && !T && (null == m || m())
   }, v = () => {
     g(!1)
   }, R = (e, t) => {
@@ -41,7 +41,7 @@ t.default = function(e) {
     }))
   };
   return (0, a.jsx)(o.ListNavigatorItem, {
-    id: h.id,
+    id: C.id,
     children: e => (0, a.jsx)(u.FocusRing, {
       offset: {
         left: -8,
@@ -49,19 +49,19 @@ t.default = function(e) {
       },
       children: (0, a.jsx)(r.default.div, {
         className: i()(f.messageRequestItem, p, {
-          [f.active]: m || T,
+          [f.active]: S || T,
           [f.firstItem]: 0 === t
         }),
         onContextMenu: e => R(e, E),
         onMouseEnter: N,
         onMouseLeave: v,
-        onClick: null != _ ? _ : void 0,
+        onClick: null != h ? h : void 0,
         style: {
           LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,
           opacity: 1
         },
         ...e,
-        children: l(I || m || T)
+        children: l(I || S || T)
       })
     })
   })

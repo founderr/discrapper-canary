@@ -1,17 +1,17 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("689938"),
-  a = n("905194");
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("481060"),
+  r = s("689938"),
+  l = s("905194");
 t.default = e => {
   let {
     onClick: t
   } = e;
-  return (0, i.jsx)(s.Anchor, {
+  return (0, a.jsx)(n.Anchor, {
     onClick: t,
-    className: a.link,
-    children: l.default.Messages.BACK
+    className: l.link,
+    children: r.default.Messages.BACK
   })
 }

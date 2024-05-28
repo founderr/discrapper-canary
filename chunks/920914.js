@@ -15,32 +15,32 @@ var a = s("735250"),
   _ = s("23551"),
   f = s("468026"),
   m = s("410030"),
-  g = s("726542"),
-  I = s("122021"),
+  I = s("726542"),
+  g = s("122021"),
   N = s("275759"),
   h = s("231757"),
   C = s("323588"),
-  p = s("605236"),
+  O = s("605236"),
   A = s("553795"),
-  O = s("430824"),
-  x = s("771845"),
-  R = s("246946"),
+  p = s("430824"),
+  R = s("771845"),
+  x = s("246946"),
   M = s("186095"),
-  v = s("797717"),
+  L = s("797717"),
   D = s("346656"),
-  L = s("465670"),
-  P = s("692437"),
+  P = s("465670"),
+  v = s("692437"),
   b = s("507957"),
   j = s("26290"),
   U = s("626135"),
-  y = s("63063"),
-  G = s("706454"),
+  G = s("63063"),
+  F = s("706454"),
   B = s("349728"),
-  F = s("494620"),
+  y = s("494620"),
   k = s("205266"),
-  w = s("216153"),
+  V = s("216153"),
   H = s("981631"),
-  V = s("856651"),
+  w = s("856651"),
   Y = s("921944"),
   W = s("689938"),
   K = s("220301"),
@@ -59,7 +59,7 @@ let Q = e => {
       joinErrorMessage: "" === A.default.joinErrorMessage(l.id) ? W.default.Messages.ERROR : A.default.joinErrorMessage(l.id),
       showJoinErrorMessage: void 0 !== A.default.joinErrorMessage(l.id)
     }), [l.id]),
-    u = null != (0, r.useStateFromStores)([O.default], () => O.default.getGuild(l.guild.id), [l.guild.id]);
+    u = null != (0, r.useStateFromStores)([p.default], () => p.default.getGuild(l.guild.id), [l.guild.id]);
   return !u && (n = (0, a.jsx)(c.Button, {
     size: c.ButtonSizes.SMALL,
     onClick: function() {
@@ -84,7 +84,7 @@ let Q = e => {
           color: "header-primary",
           children: l.guild.toString()
         }), (0, a.jsx)(c.Anchor, {
-          href: null === (s = g.default.get(l.type)) || void 0 === s ? void 0 : null === (t = s.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(s, l.account),
+          href: null === (s = I.default.get(l.type)) || void 0 === s ? void 0 : null === (t = s.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(s, l.account),
           children: (0, a.jsx)(c.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
@@ -109,20 +109,20 @@ function q(e) {
       theme: _,
       locale: m
     } = e,
-    [p, A] = n.useState(T.friendSync),
-    [O, x] = n.useState(T.visibility),
-    [R, M] = n.useState(T.metadataVisibility),
-    [D, P] = n.useState(T.showActivity),
-    [U, G] = n.useState(null),
+    [O, A] = n.useState(T.friendSync),
+    [p, R] = n.useState(T.visibility),
+    [x, M] = n.useState(T.metadataVisibility),
+    [D, v] = n.useState(T.showActivity),
+    [U, F] = n.useState(null),
     [Y, z] = n.useState(null),
     [q, Z] = n.useState(!1),
     [X, J] = n.useState([]),
-    $ = (0, I.useLegacyPlatformType)(T.type),
-    ee = g.default.get($);
+    $ = (0, g.useLegacyPlatformType)(T.type),
+    ee = I.default.get($);
   n.useEffect(() => {
-    A(T.friendSync), x(T.visibility), M(T.metadataVisibility), P(T.showActivity)
+    A(T.friendSync), R(T.visibility), M(T.metadataVisibility), v(T.showActivity)
   }, [T]), n.useEffect(() => {
-    !1 !== T.verified && (null != U && (x(U), E.default.setVisibility(T.type, T.id, U), G(null)), null != Y && (M(Y), E.default.setMetadataVisibility(T.type, T.id, Y), z(null)))
+    !1 !== T.verified && (null != U && (R(U), E.default.setVisibility(T.type, T.id, U), F(null)), null != Y && (M(Y), E.default.setMetadataVisibility(T.type, T.id, Y), z(null)))
   }, [T]);
 
   function et() {
@@ -133,10 +133,10 @@ function q(e) {
   }
 
   function es() {
-    let e = g.default.get(T.type),
+    let e = I.default.get(T.type),
       t = W.default.Messages.DISCONNECT_ACCOUNT_BODY;
     (0, B.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
-      children: [t, (0, a.jsx)(F.default, {
+      children: [t, (0, a.jsx)(y.default, {
         className: K.infoBox,
         children: W.default.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({
           platformName: e.name
@@ -159,13 +159,13 @@ function q(e) {
       verified: t
     } = T, s = e ? 1 : 0;
     if (e && !t) {
-      G(s), (0, h.default)({
+      F(s), (0, h.default)({
         platformType: T.type,
         location: "User Settings"
       });
       return
     }
-    x(s), E.default.setVisibility(T.type, T.id, s)
+    R(s), E.default.setVisibility(T.type, T.id, s)
   }
 
   function en(e) {
@@ -187,19 +187,19 @@ function q(e) {
   }
 
   function ei(e) {
-    P(e), E.default.setShowActivity(T.type, T.id, e)
+    v(e), E.default.setShowActivity(T.type, T.id, e)
   }
   return (0, a.jsxs)("div", {
     className: K.connection,
     children: [function(e) {
       var t;
-      let s = g.default.get(e.type),
-        n = g.default.get($),
-        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[V.MetadataFields.TWITTER_VERIFIED],
+      let s = I.default.get(e.type),
+        n = I.default.get($),
+        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[w.MetadataFields.TWITTER_VERIFIED],
         i = null;
       return s.type === H.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
         text: W.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
-        children: e => (0, a.jsx)(v.default, {
+        children: e => (0, a.jsx)(L.default, {
           ...e,
           className: K.connectionAccountLabelVerified,
           color: d.default.unsafe_rawColors.TWITTER.css,
@@ -239,7 +239,7 @@ function q(e) {
               right: -4
             }
           },
-          children: (0, a.jsx)(L.default, {
+          children: (0, a.jsx)(P.default, {
             width: 16,
             height: 16
           })
@@ -247,7 +247,7 @@ function q(e) {
       })
     }(T), (t = T).twoWayLink ? null : t.type === H.PlatformTypes.XBOX ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
-      children: (0, a.jsx)(w.XboxTwoWayLinkUpsell, {})
+      children: (0, a.jsx)(V.XboxTwoWayLinkUpsell, {})
     }) : t.type === H.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
       children: (0, a.jsx)(k.PlayStationTwoWayLinkUpsell, {})
@@ -255,7 +255,7 @@ function q(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, N.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], m);
+        l = (0, N.getCreatedAtDate)(s[w.MetadataFields.CREATED_AT], m);
       switch (e.type) {
         case H.PlatformTypes.REDDIT:
           n = (0, C.generateRedditMetadataItems)(s, K.metadataItem);
@@ -286,7 +286,7 @@ function q(e) {
       let i = X.includes(e.id),
         r = W.default.Messages.REFRESH;
       if (null == n || 0 === n.length) {
-        if (!0 !== g.default.get(e.type).hasMetadata) return null;
+        if (!0 !== I.default.get(e.type).hasMetadata) return null;
         n = [(0, a.jsx)(j.TextBadge, {
           className: K.connectionMetadataUpsellTag,
           text: W.default.Messages.NEW
@@ -294,7 +294,7 @@ function q(e) {
           variant: "text-xs/normal",
           className: K.connectionMetadataUpsellDescription,
           children: W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-            helpdeskUrl: y.default.getArticleURL(H.HelpdeskArticles.CONNECTION_DETAILS)
+            helpdeskUrl: G.default.getArticleURL(H.HelpdeskArticles.CONNECTION_DETAILS)
           })
         }, "label")], r = W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS
       }
@@ -319,7 +319,7 @@ function q(e) {
     }(T), (s = ee, H.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: p,
+      value: O,
       onChange: el,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
@@ -336,12 +336,12 @@ function q(e) {
           platform: s.name
         })
       })
-    })), (null === (l = g.default.get(T.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
+    })), (null === (l = I.default.get(T.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: 1 === R,
+      value: 1 === x,
       onChange: en,
-      disabled: 1 !== O || null == T.metadata,
+      disabled: 1 !== p || null == T.metadata,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
         children: W.default.Messages.DISPLAY_DETAILS_ON_PROFILE
@@ -353,7 +353,7 @@ function q(e) {
         children: [(0, a.jsx)(c.FormSwitch, {
           className: K.connectionOptionSwitch,
           hideBorder: !0,
-          value: 1 === O,
+          value: 1 === p,
           onChange: ea,
           children: (0, a.jsx)(c.Text, {
             variant: "text-sm/semibold",
@@ -392,7 +392,7 @@ function q(e) {
 
 function Z() {
   return n.useEffect(() => () => {
-    (0, p.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
+    (0, O.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
       dismissAction: Y.ContentDismissActionType.AUTO
     })
   }, []), (0, a.jsxs)("div", {
@@ -414,7 +414,7 @@ function Z() {
 
 function X() {
   function e(e) {
-    let t = g.default.get(e);
+    let t = I.default.get(e);
     (0, h.default)({
       platformType: t.type
     }), U.default.track(H.AnalyticEvents.ACCOUNT_LINK_STEP, {
@@ -430,7 +430,7 @@ function X() {
       onComplete: e
     })
   }
-  let s = (0, I.usePlatforms)(),
+  let s = (0, g.usePlatforms)(),
     n = (0, c.useRedesignIconContext)().enabled ? 24 : 18;
   return (0, a.jsxs)("div", {
     className: K.connectionsContainer,
@@ -455,7 +455,7 @@ function X() {
               type: "button",
               onClick: t,
               "aria-label": W.default.Messages.ADD_NEW_CONNECTION,
-              children: (0, a.jsx)(P.default, {
+              children: (0, a.jsx)(v.default, {
                 height: n,
                 width: n,
                 "aria-label": W.default.Messages.CONNECTIONS_VIEW_MORE
@@ -490,7 +490,7 @@ function J(e) {
       note: W.default.Messages.CONNECTED_ACCOUNTS_NONE,
       children: W.default.Messages.CONNECTED_ACCOUNTS_NONE_TITLE
     })]
-  }) : l.filter(e => g.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(q, {
+  }) : l.filter(e => I.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(q, {
     theme: i,
     account: e,
     locale: r,
@@ -507,12 +507,12 @@ function J(e) {
   })
 }
 t.default = () => {
-  let e = (0, r.useStateFromStores)([R.default], () => R.default.hidePersonalInformation),
+  let e = (0, r.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
     t = (0, r.useStateFromStores)([A.default], () => A.default.isFetching()),
     s = (0, r.useStateFromStores)([A.default], () => A.default.getAccounts()),
     l = (0, m.default)();
-  (0, r.useStateFromStores)([x.default], () => x.default.getFlattenedGuildIds());
-  let i = (0, r.useStateFromStores)([G.default], () => G.default.locale);
+  (0, r.useStateFromStores)([R.default], () => R.default.getFlattenedGuildIds());
+  let i = (0, r.useStateFromStores)([F.default], () => F.default.locale);
   return (n.useEffect(() => {
     E.default.fetch()
   }, []), e) ? (0, a.jsx)(T.default, {}) : (0, a.jsxs)(c.FormSection, {

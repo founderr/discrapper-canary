@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GoLiveButton: function() {
-    return eN
+    return ev
   },
   handleToggleVideo: function() {
     return eA
@@ -26,9 +26,9 @@ var a, l, s = n("735250"),
   T = n("596040"),
   I = n("100527"),
   A = n("906732"),
-  N = n("67212"),
-  v = n("757454"),
-  x = n("158631"),
+  v = n("67212"),
+  x = n("757454"),
+  N = n("158631"),
   M = n("709369"),
   R = n("552740"),
   y = n("358221"),
@@ -42,19 +42,19 @@ var a, l, s = n("735250"),
   F = n("569545"),
   w = n("74299"),
   k = n("989941"),
-  B = n("803647"),
-  H = n("554747"),
-  G = n("95764"),
+  H = n("803647"),
+  G = n("554747"),
+  B = n("95764"),
   V = n("459502"),
   W = n("386542"),
   Y = n("485731"),
   z = n("611845"),
   K = n("618158"),
   Z = n("390322"),
-  q = n("791592"),
-  X = n("136995"),
-  Q = n("402113"),
-  J = n("197016"),
+  X = n("791592"),
+  q = n("136995"),
+  J = n("402113"),
+  Q = n("197016"),
   $ = n("386000"),
   ee = n("698877"),
   et = n("25827"),
@@ -86,7 +86,7 @@ function eA(e, t) {
   e ? (0, eS.default)(n, t) : n()
 }
 
-function eN(e) {
+function ev(e) {
   let {
     channel: t,
     currentUser: n,
@@ -101,11 +101,11 @@ function eN(e) {
   } = (0, W.usePerksDemo)(f.EntitlementFeatureNames.STREAM_HIGH_QUALITY), g = null != d && c && p, _ = i.useRef(null), T = t.getGuildId(), I = i.useCallback(() => {
     if (null == a || a(), !l) return (0, eC.default)();
     (0, eg.default)(T, t.id, e_.AnalyticsPages.GUILD_CHANNEL)
-  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, x.default)(), y = (0, v.default)() && null != A, L = () => {
+  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, N.default)(), y = (0, x.default)() && null != A, L = () => {
     y && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
       channelId: t.id,
       pid: null == A ? void 0 : A.pid
-    }) : (0, N.startBroadcastForStream)((0, F.encodeStreamKey)(d), null == A ? void 0 : A.pid))
+    }) : (0, v.startBroadcastForStream)((0, F.encodeStreamKey)(d), null == A ? void 0 : A.pid))
   }, O = () => {
     if (y) {
       (0, R.openStartBroadcastConfirmModal)(L);
@@ -117,9 +117,9 @@ function eN(e) {
     }(0, eC.default)()
   }, j = () => {
     if (M) {
-      (0, R.openStopBroadcastConfirmModal)(() => (0, B.default)(d));
+      (0, R.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
       return
-    }(0, B.default)(d)
+    }(0, H.default)(d)
   }, P = (e, t) => {
     let {
       onClick: n,
@@ -187,7 +187,7 @@ function eN(e) {
   })
 }
 
-function ev(e) {
+function ex(e) {
   let {
     channel: t
   } = e, n = t.getGuildId();
@@ -198,7 +198,7 @@ function ev(e) {
     })
   }) : null
 }(l = a || (a = {})).ACTIVITY = "ACTIVITY", l.STREAM = "STREAM", l.CALL = "CALL", l.EVENT = "EVENT", l.BROADCAST = "BROADCAST";
-let ex = i.memo(function(e) {
+let eN = i.memo(function(e) {
   let {
     connectedActivityApplicationId: t,
     currentUser: n,
@@ -211,12 +211,12 @@ let ex = i.memo(function(e) {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, H.useActiveEvent)(l.id), T = (0, x.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
+  })), _ = (0, G.useActiveEvent)(l.id), T = (0, N.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eT.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (g) return "STREAM";
     if (null != _) return "EVENT";
     return "CALL"
-  }, [r, t, g, _]), [A, N] = i.useState(I()), v = (0, c.useSpring)({
+  }, [r, t, g, _]), [A, v] = i.useState(I()), x = (0, c.useSpring)({
     opacity: u ? .2 : 1,
     transform: u && !o.enabled ? "scale(0.7)" : "scale(1)",
     config: {
@@ -227,7 +227,7 @@ let ex = i.memo(function(e) {
       clamp: u
     },
     onRest: () => {
-      N(I()), d(!1)
+      v(I()), d(!1)
     }
   });
   i.useEffect(() => {
@@ -247,7 +247,7 @@ let ex = i.memo(function(e) {
       switch (A) {
         case "ACTIVITY":
           if (null == r || null == n) return;
-          return (0, s.jsx)(Q.default, {
+          return (0, s.jsx)(J.default, {
             ...i,
             applicationId: r.id,
             color: "red",
@@ -265,7 +265,7 @@ let ex = i.memo(function(e) {
             isSelfStream: !1
           });
         case "CALL":
-          return (0, s.jsx)(J.default, {
+          return (0, s.jsx)(Q.default, {
             ...i,
             color: "red",
             onClick: () => null == a ? void 0 : a(),
@@ -273,7 +273,7 @@ let ex = i.memo(function(e) {
             channel: l
           });
         case "EVENT":
-          return (0, s.jsx)(G.default, {
+          return (0, s.jsx)(B.default, {
             channelId: l.id,
             onClick: () => {
               E.default.disconnect(), null == a || a()
@@ -307,7 +307,7 @@ let ex = i.memo(function(e) {
         isShown: a
       } = t;
       return (0, s.jsx)(c.animated.div, {
-        style: v,
+        style: x,
         children: L(a, n)
       })
     }
@@ -346,12 +346,12 @@ function eM(e) {
       className: eI.controlButton,
       iconClassName: eI.__invalid_joinIcon,
       onChange: c
-    }), (0, s.jsx)(X.default, {
+    }), (0, s.jsx)(q.default, {
       centerButton: !0,
       color: "green",
       channel: t,
       className: o()(eI.controlButton, eI.__invalid_lastButton)
-    }), m ? (0, s.jsx)(q.default, {
+    }), m ? (0, s.jsx)(X.default, {
       color: "red",
       channel: t,
       className: eI.controlButton
@@ -378,10 +378,10 @@ t.default = function(e) {
     canGoLive: C
   } = (0, h.useStateFromStoresObject)([el.default], () => ({
     canGoLive: (0, w.default)(el.default)
-  })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), N = null != S, v = (0, h.useStateFromStores)([es.default], () => {
+  })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), v = null != S, x = (0, h.useStateFromStores)([es.default], () => {
     var e;
     return (null !== (e = null == S ? void 0 : S.channelId) && void 0 !== e ? e : es.default.getVoiceChannelId()) === t.id
-  }), x = (0, L.default)(t, !0), M = (0, h.useStateFromStores)([_.default], () => {
+  }), N = (0, L.default)(t, !0), M = (0, h.useStateFromStores)([_.default], () => {
     let e = _.default.getSelfEmbeddedActivityForChannel(t.id);
     return null != e ? e.applicationId : null
   }), {
@@ -390,7 +390,7 @@ t.default = function(e) {
   } = (0, ed.default)(t), {
     analyticsLocations: U
   } = (0, A.default)(I.default.VOICE_CONTROL_TRAY);
-  if (!v) return (0, s.jsx)(A.AnalyticsLocationProvider, {
+  if (!x) return (0, s.jsx)(A.AnalyticsLocationProvider, {
     value: U,
     children: (0, s.jsx)(eM, {
       channel: t,
@@ -403,7 +403,7 @@ t.default = function(e) {
     permission: e_.Permissions.ADD_REACTIONS,
     user: i,
     context: t
-  }) && !t.isPrivate() && !x;
+  }) && !t.isPrivate() && !N;
   return (0, s.jsx)(A.AnalyticsLocationProvider, {
     value: U,
     children: (0, s.jsxs)(g.default, {
@@ -415,7 +415,7 @@ t.default = function(e) {
         })
       }), (0, s.jsxs)("div", {
         className: o()(eI.wrapper, n),
-        children: [!N && (0, s.jsx)(m.Popout, {
+        children: [!v && (0, s.jsx)(m.Popout, {
           renderPopout: e => {
             let {
               closePopout: t
@@ -449,9 +449,9 @@ t.default = function(e) {
               onPopoutClick: n
             })
           }
-        }), !N && (0, s.jsx)(ev, {
+        }), !v && (0, s.jsx)(ex, {
           channel: t
-        }), !N && (0, s.jsx)(eN, {
+        }), !v && (0, s.jsx)(ev, {
           channel: t,
           currentUser: i,
           exitFullScreen: l,
@@ -482,7 +482,7 @@ t.default = function(e) {
             } = t;
             return (0, s.jsx)($.default, {
               centerButton: !0,
-              onPopoutClick: N ? null : n,
+              onPopoutClick: v ? null : n,
               className: eI.controlButton,
               selfMute: p,
               serverMute: E,
@@ -492,12 +492,12 @@ t.default = function(e) {
               onClick: () => (0, P.default)(E, f)
             })
           }
-        }), F && !N ? (0, s.jsx)("div", {
+        }), F && !v ? (0, s.jsx)("div", {
           className: eI.buttonContainer,
           children: (0, s.jsx)(em.default, {
             channel: t
           })
-        }) : null, (0, s.jsx)(ex, {
+        }) : null, (0, s.jsx)(eN, {
           connectedActivityApplicationId: M,
           currentUser: i,
           channel: t,

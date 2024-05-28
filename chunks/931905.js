@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   BenefitsConfirmationLite: function() {
-    return u
+    return i
   },
   PurchaseConfirmationLite: function() {
     return o
@@ -12,30 +12,30 @@ n("470079");
 var r = n("481060"),
   s = n("17894"),
   l = n("689938"),
-  i = n("149688");
-let u = e => {
+  u = n("149688");
+let i = e => {
   let {
     onConfirm: t,
     onCancel: n,
-    title: u,
+    title: i,
     subtitle: o,
-    confirmCta: d,
-    showOpenDiscord: c = !0
+    confirmCta: c,
+    showOpenDiscord: d = !0
   } = e;
   return (0, a.jsxs)("div", {
-    className: i.confirmationContainer,
+    className: u.confirmationContainer,
     children: [(0, a.jsx)(r.Heading, {
-      className: i.confirmationHeader,
+      className: u.confirmationHeader,
       variant: "heading-lg/extrabold",
-      children: u
+      children: i
     }), null != o ? (0, a.jsx)(r.Text, {
-      className: i.confirmationSubtitle,
+      className: u.confirmationSubtitle,
       variant: "text-sm/normal",
       color: "header-secondary",
       children: o
     }) : null, (0, a.jsxs)("div", {
-      className: i.buttonContainer,
-      children: [c && (0, a.jsx)(r.Button, {
+      className: u.buttonContainer,
+      children: [d && (0, a.jsx)(r.Button, {
         fullWidth: !0,
         onClick: () => (0, s.default)("application_sub_mweb_success_modal"),
         children: l.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
@@ -43,7 +43,7 @@ let u = e => {
         fullWidth: !0,
         color: r.Button.Colors.PRIMARY,
         onClick: t,
-        children: d
+        children: c
       }), null != n && (0, a.jsx)(r.Button, {
         fullWidth: !0,
         color: r.Button.Colors.PRIMARY,
@@ -59,31 +59,31 @@ function o(e) {
   let {
     onConfirm: t,
     tierName: n,
-    subscription: u
+    subscription: i
   } = e;
   return (0, a.jsxs)("div", {
-    className: i.confirmationContainer,
+    className: u.confirmationContainer,
     children: [(0, a.jsx)(r.Heading, {
-      className: i.confirmationHeader,
+      className: u.confirmationHeader,
       variant: "heading-lg/extrabold",
       children: l.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
         tier: n
       })
     }), (0, a.jsx)(r.Text, {
-      className: i.confirmationSubtitle,
+      className: u.confirmationSubtitle,
       variant: "text-sm/normal",
       color: "header-secondary",
       children: l.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
-        timestamp: null == u ? void 0 : u.currentPeriodEnd
+        timestamp: null == i ? void 0 : i.currentPeriodEnd
       })
     }), (0, a.jsxs)("div", {
-      className: i.buttonContainer,
+      className: u.buttonContainer,
       children: [(0, a.jsx)(r.Button, {
-        className: i.__invalid_openDiscordButton,
+        className: u.__invalid_openDiscordButton,
         onClick: () => (0, s.default)("application_sub_mweb_success_modal"),
         children: l.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
       }), (0, a.jsx)(r.Button, {
-        className: i.__invalid_doneButton,
+        className: u.__invalid_doneButton,
         look: r.Button.Looks.BLANK,
         onClick: t,
         children: l.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON

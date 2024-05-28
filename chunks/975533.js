@@ -11,11 +11,11 @@ var a = n("570140"),
   c = n("39604"),
   f = n("569545"),
   E = n("722835"),
-  h = n("703656"),
-  _ = n("641015"),
-  C = n("183584"),
-  m = n("199902"),
-  S = n("131951"),
+  C = n("703656"),
+  h = n("641015"),
+  _ = n("183584"),
+  S = n("199902"),
+  m = n("131951"),
   p = n("246946"),
   I = n("808506"),
   g = n("237997"),
@@ -34,7 +34,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK]: {
     onTrigger(e, t) {
-      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
+      m.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, m.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
     },
     keyEvents: {
       keyup: !0,
@@ -44,7 +44,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
     onTrigger(e) {
-      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
+      m.default.getMode() === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, m.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
     },
     keyEvents: {
       keyup: !0,
@@ -54,7 +54,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_MUTE]: {
     onTrigger(e) {
-      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (R[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
+      if (m.default.getMode() === N.InputModes.VOICE_ACTIVITY) !m.default.isSelfDeaf() && (R[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
     },
     keyEvents: {
       keyup: !0,
@@ -82,7 +82,7 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_VOICE_MODE]: {
     onTrigger() {
-      let e = S.default.getMode() === N.InputModes.PUSH_TO_TALK ? N.InputModes.VOICE_ACTIVITY : N.InputModes.PUSH_TO_TALK;
+      let e = m.default.getMode() === N.InputModes.PUSH_TO_TALK ? N.InputModes.VOICE_ACTIVITY : N.InputModes.PUSH_TO_TALK;
       s.default.setMode(e)
     },
     keyEvents: {
@@ -123,7 +123,7 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING]: {
     onTrigger() {
-      let e = m.default.getCurrentUserActiveStream();
+      let e = S.default.getCurrentUserActiveStream();
       if (null != e) return (0, r.stopStream)((0, f.encodeStreamKey)(e));
       (0, E.default)()
     },
@@ -142,7 +142,7 @@ let R = {
     }
   },
   [N.GlobalKeybindActions.NAVIGATE_BACK]: {
-    onTrigger: () => (0, h.back)(),
+    onTrigger: () => (0, C.back)(),
     keyEvents: {
       keyup: !0,
       keydown: !1,
@@ -151,7 +151,7 @@ let R = {
     }
   },
   [N.GlobalKeybindActions.NAVIGATE_FORWARD]: {
-    onTrigger: () => (0, h.forward)(),
+    onTrigger: () => (0, C.forward)(),
     keyEvents: {
       keyup: !0,
       keydown: !1,
@@ -161,9 +161,9 @@ let R = {
   },
   [N.GlobalKeybindActions.SOUNDBOARD]: {
     onTrigger: () => {
-      if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
+      if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
       let e = (0, A.default)();
-      null != e && (g.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
+      null != e && (g.default.isUILocked(e) ? (0, _.openSoundboardInOverlay)(!0, e) : (0, _.closeSoundboardInOverlay)(e))
     },
     keyEvents: {
       keyup: !0,
@@ -172,10 +172,10 @@ let R = {
   },
   [N.GlobalKeybindActions.SOUNDBOARD_HOLD]: {
     onTrigger: e => {
-      if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
+      if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
       let t = (0, A.default)();
       if (null != t) {
-        e ? (0, C.openSoundboardInOverlay)(!1, t) : (0, C.closeSoundboardInOverlay)(t);
+        e ? (0, _.openSoundboardInOverlay)(!1, t) : (0, _.closeSoundboardInOverlay)(t);
         return
       }
     },

@@ -16,8 +16,8 @@ var l = n("735250"),
   C = n("979651"),
   g = n("938475"),
   E = n("514342"),
-  _ = n("714794"),
-  S = n("135724"),
+  S = n("714794"),
+  _ = n("135724"),
   I = n("25601"),
   N = n("207055"),
   T = n("981631"),
@@ -53,8 +53,8 @@ t.default = a.memo(function(e) {
     thread: t,
     isSelectedChannel: s,
     isSelectedVoice: R,
-    isLast: O,
-    withGuildIcon: y
+    isLast: y,
+    withGuildIcon: O
   } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: P
@@ -77,8 +77,8 @@ t.default = a.memo(function(e) {
       })
     })
   }, [t.id]), F = null == D ? 0 : D.length, {
-    role: H,
-    ...V
+    role: V,
+    ...H
   } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
     channelName: t.name,
     mentionCount: P
@@ -88,14 +88,14 @@ t.default = a.memo(function(e) {
     channelName: t.name
   });
   return (0, l.jsxs)("li", {
-    role: H,
+    role: V,
     className: i()(v.containerDefault, {
       [v.selected]: s
     }),
     children: [(0, l.jsx)(M, {
-      withGuildIcon: y
-    }), O ? null : (0, l.jsx)(M, {
-      withGuildIcon: y,
+      withGuildIcon: O
+    }), y ? null : (0, l.jsx)(M, {
+      withGuildIcon: O,
       style: {
         transform: "rotateX(180deg) translateY(-9px)"
       }
@@ -112,14 +112,14 @@ t.default = a.memo(function(e) {
           [x.modeSelected]: s,
           [x.modeMuted]: !s && G,
           [x.modeUnreadImportant]: !G && !s && j,
-          [x.withGuildIcon]: y
+          [x.withGuildIcon]: O
         }),
         onMouseDown: w,
         onContextMenu: B,
         children: [!j || G || s ? null : (0, l.jsx)("div", {
           className: i()(x.unread, x.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
-          ...V,
+          ...H,
           innerRef: k,
           className: x.link,
           onClick: U,
@@ -135,11 +135,11 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
+              children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
                 userCount: F,
                 video: b,
                 channel: t
-              }) : null, (0, _.default)(P) ? (0, l.jsx)(I.default, {
+              }) : null, (0, S.default)(P) ? (0, l.jsx)(I.default, {
                 mentionsCount: P
               }) : null]
             })]

@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("626135"),
   I = n("348600"),
   A = n("566620"),
-  N = n("480906"),
-  v = n("127255"),
-  x = n("5200"),
+  v = n("480906"),
+  x = n("127255"),
+  N = n("5200"),
   M = n("558317"),
   R = n("403404"),
   y = n("701488"),
@@ -46,14 +46,14 @@ let U = "vc-activities-".concat((0, o.v4)()),
       onMouseEnter: F,
       onMouseLeave: w,
       onClick: k,
-      className: B
+      className: H
     } = e, {
-      enabled: H
+      enabled: G
     } = I.BirthdayActivitiesExperiment.useExperiment({
       location: "8009ca_3"
     }), {
-      enableDeathByAiMiniShelfBanner: G
-    } = N.ExperimentDeathByAiMiniShelfBanner.useExperiment({
+      enableDeathByAiMiniShelfBanner: B
+    } = v.ExperimentDeathByAiMiniShelfBanner.useExperiment({
       location: "ActivitiesMiniShelf"
     }, {
       autoTrackExposure: !0
@@ -74,12 +74,12 @@ let U = "vc-activities-".concat((0, o.v4)()),
         analyticsLocations: Z
       } = (0, p.default)(m.default.ACTIVITIES_MINI_SHELF),
       {
-        analyticsLocations: q
+        analyticsLocations: X
       } = (0, p.default)([...Z, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      X = K === L.AppContext.POPOUT,
-      Q = (0, c.useAnalyticsContext)(),
-      J = function(e, t) {
-        return (0, v.default)({
+      q = K === L.AppContext.POPOUT,
+      J = (0, c.useAnalyticsContext)(),
+      Q = function(e, t) {
+        return (0, x.default)({
           guildId: e,
           channel: t
         }).slice(0, 5)
@@ -93,18 +93,18 @@ let U = "vc-activities-".concat((0, o.v4)()),
         (0, R.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-          locationObject: Q.location,
-          openInPopout: X,
+          locationObject: J.location,
+          openInPopout: q,
           analyticsLocations: Z
         }), w(), k()
-      }, [Q, Z, n, k, w, X]),
+      }, [J, Z, n, k, w, q]),
       ee = l.useCallback(e => {
         F(), T.default.track(L.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
       }, [F, n]),
-      et = H ? (0, a.jsxs)(r.Link, {
+      et = G ? (0, a.jsxs)(r.Link, {
         to: L.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
           alt: O.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
@@ -113,12 +113,12 @@ let U = "vc-activities-".concat((0, o.v4)()),
         }), (0, a.jsx)("div", {
           className: j.posterDivider
         })]
-      }) : G ? (0, a.jsxs)(d.Clickable, {
+      }) : B ? (0, a.jsxs)(d.Clickable, {
         className: i()(j.clickableBanner, {
           [j.clickableBannerReducedMotion]: W
         }),
         onClick: () => {
-          k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(y.DEATH_BY_AI_APPLICATION_ID), void 0, void 0, q)
+          k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(y.DEATH_BY_AI_APPLICATION_ID), void 0, void 0, X)
         },
         children: [(0, a.jsx)("img", {
           alt: O.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_DEATH_BY_AI_POSTER,
@@ -134,7 +134,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,
           "aria-labelledby": U,
-          className: B,
+          className: H,
           children: [(0, a.jsx)(d.HeadingLevel, {
             forceLevel: 2,
             children: (0, a.jsx)(d.HiddenVisually, {
@@ -172,17 +172,17 @@ let U = "vc-activities-".concat((0, o.v4)()),
                 })]
               })]
             }), (0, a.jsx)(p.AnalyticsLocationProvider, {
-              value: q,
+              value: X,
               children: et
             }), (0, a.jsxs)("div", {
               className: j.activityContainer,
-              children: [J.map(e => (0, a.jsx)(x.ActivitySuggestion, {
+              children: [Q.map(e => (0, a.jsx)(N.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
                 onClick: () => {
                   o(), k()
                 },
-                aspectRatio: x.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
+                aspectRatio: N.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
                 animatedDivClass: j.activitySuggestion
               }, e.application.id)), (0, a.jsx)("div", {
                 className: i()(j.wumpusRocketOuterContainer, {

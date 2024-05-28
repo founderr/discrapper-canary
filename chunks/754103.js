@@ -1,9 +1,9 @@
 "use strict";
 a.r(t), a("47120");
 var n = a("735250"),
-  l = a("470079"),
-  s = a("120356"),
-  r = a.n(s),
+  s = a("470079"),
+  l = a("120356"),
+  r = a.n(l),
   o = a("481060"),
   i = a("285952"),
   u = a("282605");
@@ -16,7 +16,7 @@ function d(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class c extends l.PureComponent {
+class c extends s.PureComponent {
   componentDidUpdate(e) {
     if (this.props.formError !== e.formError) this.setState({
       changedSinceError: new Set
@@ -62,36 +62,36 @@ class c extends l.PureComponent {
       let {
         values: t,
         onFieldChange: a,
-        onFieldFocus: l,
-        onFieldBlur: s,
+        onFieldFocus: s,
+        onFieldBlur: l,
         layout: i,
         ...u
       } = this.props, {
         getClassNameForLayout: d,
         renderInput: c,
         title: E,
-        name: p,
-        id: m,
-        placeholder: f,
+        name: m,
+        id: p,
+        placeholder: _,
         ...S
-      } = e, _ = {
+      } = e, f = {
         ...S,
-        placeholder: null == f ? void 0 : f(),
+        placeholder: null == _ ? void 0 : _(),
         layout: i,
-        error: this.getError(p),
-        value: t[p],
-        name: p,
-        "aria-labelledby": m,
+        error: this.getError(m),
+        value: t[m],
+        name: m,
+        "aria-labelledby": p,
         onChange: a,
-        onFocus: l,
-        onBlur: s
+        onFocus: s,
+        onBlur: l
       };
       return (0, n.jsx)(o.FormSection, {
         className: r()(null == d ? void 0 : d(i)),
         title: E(),
-        titleId: m,
-        children: c(_, u)
-      }, p)
+        titleId: p,
+        children: c(f, u)
+      }, m)
     }), d(this, "renderFormRow", e => {
       let t = e.fields.map(this.renderFormSection);
       return (0, n.jsx)(i.default, {

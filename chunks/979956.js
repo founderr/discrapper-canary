@@ -1,5 +1,5 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   filesExceedUploadLimits: function() {
     return u
   },
@@ -9,26 +9,26 @@ l.r(t), l.d(t, {
   getWebUploadFiles: function() {
     return d
   }
-}), l("724458"), l("653041");
-var a = l("476326"),
-  n = l("403182"),
-  i = l("74538"),
-  s = l("474936"),
-  r = l("689938");
+}), n("724458"), n("653041");
+var a = n("476326"),
+  l = n("403182"),
+  s = n("74538"),
+  i = n("474936"),
+  r = n("689938");
 
 function o(e, t) {
-  let l = n.sizeString(n.maxFileSize(t));
-  return i.default.isPremium(e, s.PremiumTypes.TIER_2) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-    maxSize: l
-  }) : i.default.isPremium(e, s.PremiumTypes.TIER_1) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({
-    maxSize: l
+  let n = l.sizeString(l.maxFileSize(t));
+  return s.default.isPremium(e, i.PremiumTypes.TIER_2) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+    maxSize: n
+  }) : s.default.isPremium(e, i.PremiumTypes.TIER_1) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({
+    maxSize: n
   }) : r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-    maxSize: l
+    maxSize: n
   })
 }
 
 function u(e, t) {
-  return n.anyFileTooLarge(e, t) || n.uploadSumTooLarge(e)
+  return l.anyFileTooLarge(e, t) || l.uploadSumTooLarge(e)
 }
 
 function d(e) {

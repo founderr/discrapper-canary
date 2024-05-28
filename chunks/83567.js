@@ -11,11 +11,11 @@ var a = n("570140"),
   c = n("452426"),
   f = n("186901"),
   E = n("981631"),
-  h = n("701488"),
-  _ = n("231338");
-let C = new Set([h.AM_HARMONY_PRD_APPLICATION_ID, h.AM_HARMONY_STG_APPLICATION_ID]);
+  C = n("701488"),
+  h = n("231338");
+let _ = new Set([C.AM_HARMONY_PRD_APPLICATION_ID, C.AM_HARMONY_STG_APPLICATION_ID]);
 t.default = {
-  [_.RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: {
+  [h.RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: {
     scope: {
       [f.RPC_SCOPE_CONFIG.ANY]: [f.RPC_AUTHENTICATED_SCOPE]
     },
@@ -33,47 +33,47 @@ t.default = {
       } = e;
       (0, d.validatePostMessageTransport)(t.transport);
       let f = (0, d.validateApplication)(t.application),
-        h = l.default.get(n);
-      if (null == h) throw new u.default({
-        errorCode: _.RPCErrors.INVALID_PROVIDER
+        C = l.default.get(n);
+      if (null == C) throw new u.default({
+        errorCode: h.RPCErrors.INVALID_PROVIDER
       }, 'Platform not found for provider "'.concat(n, '"'));
       if (n === E.PlatformTypes.AMAZON_MUSIC) {
-        if (!C.has(f)) throw new u.default({
-          errorCode: _.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
+        if (!_.has(f)) throw new u.default({
+          errorCode: h.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
         }, "Command not available for this application")
       } else throw new u.default({
-        errorCode: _.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
+        errorCode: h.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
       }, "Command not available for this application");
       return new Promise(async (e, t) => {
         let l = r.default.getAccount(null, n);
         if (null == l) {
           function d(t) {
             var n;
-            if (null == h) return;
-            let a = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === h.type);
+            if (null == C) return;
+            let a = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === C.type);
             null != a && (e({
               access_token: a.access_token
-            }), C())
+            }), _())
           }
 
           function f() {
             t(new u.default({
-              errorCode: _.RPCErrors.OAUTH2_ERROR
-            }, 'OAuth2 setup for "'.concat(n, '" failed'))), C()
+              errorCode: h.RPCErrors.OAUTH2_ERROR
+            }, 'OAuth2 setup for "'.concat(n, '" failed'))), _()
           }
 
-          function C() {
+          function _() {
             a.default.unsubscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.unsubscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, f)
           }
           a.default.subscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.subscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, f), (0, i.default)({
-            platformType: h.type,
+            platformType: C.type,
             location: E.AnalyticsLocations.ACTIVITY_RPC,
             successRedirect: c
           })
         } else try {
-          let t = await s.default.refreshAccessToken(h.type, l.id);
+          let t = await s.default.refreshAccessToken(C.type, l.id);
           if (null == t) throw new u.default({
-            errorCode: _.RPCErrors.OAUTH2_ERROR
+            errorCode: h.RPCErrors.OAUTH2_ERROR
           }, "Refreshing access token did not return a new access token");
           e({
             access_token: t

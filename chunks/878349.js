@@ -31,9 +31,9 @@ function g(e) {
     tooltipColor: T,
     className: I,
     id: A = "fancybutton-toggle",
-    collapseWhenChecked: N = !0,
-    onClick: v,
-    disabled: x
+    collapseWhenChecked: v = !0,
+    onClick: x,
+    disabled: N
   } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, y] = l.useState(!1), L = (0, c.default)(), O = (0, o.isThemeDark)(L) || t ? C : E, {
     width: j = 0,
     ref: P
@@ -47,7 +47,7 @@ function g(e) {
       tooltipText: s
     }),
     position: "top",
-    color: null != T ? T : x ? u.Tooltip.Colors.BLACK : u.Tooltip.Colors.BRAND,
+    color: null != T ? T : N ? u.Tooltip.Colors.BLACK : u.Tooltip.Colors.BRAND,
     "aria-label": s,
     tooltipClassName: p.tooltip,
     className: p.tooltipContainer,
@@ -59,11 +59,11 @@ function g(e) {
           let e = !t;
           y(!0), null == _ || _(e)
         }
-        "function" == typeof v && v()
+        "function" == typeof x && x()
       },
       id: A,
       type: "checkbox",
-      disabled: x
+      disabled: N
     }), (0, a.jsxs)("label", {
       htmlFor: A,
       className: i()(p.label, I, {
@@ -71,7 +71,7 @@ function g(e) {
         [p.labelChecked]: t,
         [p.labelUnchecked]: !t && !g
       }),
-      style: N ? {
+      style: v ? {
         width: t ? j : j + D
       } : void 0,
       children: [t ? (0, a.jsx)(m.Shine, {
@@ -85,7 +85,7 @@ function g(e) {
         ref: b,
         children: (0, a.jsx)(u.Text, {
           className: i()(p.burstText, {
-            [p.visuallyHidden]: t && N,
+            [p.visuallyHidden]: t && v,
             [p.burstTextChecked]: t
           }),
           variant: "text-sm/semibold",

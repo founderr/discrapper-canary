@@ -1,26 +1,26 @@
     "use strict";
-    a.r(t), a("47120");
-    var d = a("213919"),
-      n = a("570140"),
-      c = a("317770"),
-      i = a("358085");
-    class o extends c.default {
+    t.r(a), t("47120");
+    var d = t("213919"),
+      c = t("570140"),
+      n = t("317770"),
+      i = t("358085");
+    class f extends n.default {
       _initialize() {
-        n.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
+        c.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
       }
       _terminate() {
-        n.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen)
+        c.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen)
       }
       constructor(...e) {
-        var t, a, n;
-        super(...e), t = this, a = "handleConnectionOpen", n = e => {
+        var a, t, c;
+        super(...e), a = this, t = "handleConnectionOpen", c = e => {
           ((0, i.isWindows)() || (0, i.isMac)()) && d.encryptAndStoreTokens()
-        }, a in t ? Object.defineProperty(t, a, {
-          value: n,
+        }, t in a ? Object.defineProperty(a, t, {
+          value: c,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : t[a] = n
+        }) : a[t] = c
       }
     }
-    t.default = new o
+    a.default = new f

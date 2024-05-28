@@ -8,8 +8,8 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("735250"),
-  l = a("470079"),
-  s = a("481060"),
+  s = a("470079"),
+  l = a("481060"),
   r = a("462566"),
   o = a("285952"),
   i = a("603421"),
@@ -20,8 +20,8 @@ let c = e => {
       billingError: t,
       onCardInfoChange: a
     } = e, o = null != t && (null == t.code || (0, i.errorToStep)(t) === i.Steps.CREDIT_CARD_INFORMATION);
-    return (0, n.jsxs)(l.Fragment, {
-      children: [o ? (0, n.jsx)(s.FormErrorBlock, {
+    return (0, n.jsxs)(s.Fragment, {
+      children: [o ? (0, n.jsx)(l.FormErrorBlock, {
         className: d.errorBlock,
         children: u.default.Messages.BILLING_ERROR_SECTION_CARD
       }) : null, (0, n.jsx)(r.default, {
@@ -34,13 +34,13 @@ let c = e => {
     let {
       isCardInfoValid: t,
       submitting: a,
-      renderBackButton: l,
+      renderBackButton: s,
       onCreditCardContinue: r
     } = e;
-    return (0, n.jsxs)(s.ModalFooter, {
+    return (0, n.jsxs)(l.ModalFooter, {
       justify: o.default.Justify.BETWEEN,
       direction: o.default.Direction.HORIZONTAL,
-      children: [l(), (0, n.jsx)(s.Button, {
+      children: [s(), (0, n.jsx)(l.Button, {
         type: "submit",
         disabled: !t,
         submitting: a,

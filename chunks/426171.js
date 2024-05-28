@@ -7,41 +7,41 @@ a.r(t), a.d(t, {
     return g
   },
   useProductDetailsLinkableRoute: function() {
-    return m
+    return p
   }
 }), a("757143"), a("47120"), a("653041");
-var l = a("470079"),
-  s = a("266067"),
-  r = a("442837"),
-  n = a("100527"),
-  i = a("906732"),
-  o = a("328347"),
+var s = a("470079"),
+  r = a("266067"),
+  n = a("442837"),
+  l = a("100527"),
+  o = a("906732"),
+  i = a("328347"),
   c = a("237031"),
   u = a("981631");
 let d = "".concat("#").concat("itemSkuId", "="),
   f = new RegExp("^".concat(d, "(\\d+)$")),
   C = [u.Routes.COLLECTIBLES_SHOP, u.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
-  m = e => {
-    let t = (0, s.useLocation)();
-    l.useEffect(() => {
+  p = e => {
+    let t = (0, r.useLocation)();
+    s.useEffect(() => {
       if (null != e && C.includes(t.pathname)) return window.location.replace("".concat(d).concat(e.skuId)), () => {
         window.location.hash.startsWith(d) && window.location.replace("#")
       }
     }, [])
   },
-  p = e => {
+  m = e => {
     let {
       categories: t,
       productSkuId: a,
-      analyticsLocations: l,
-      analyticsSource: s,
-      initialItemCardRef: r
+      analyticsLocations: s,
+      analyticsSource: r,
+      initialItemCardRef: n
     } = e;
     for (let e of t.values()) {
       let t = e.products.find(e => e.skuId === a);
       if (null != t) {
-        var n;
-        null === (n = r.current) || void 0 === n || n.scrollIntoView({
+        var l;
+        null === (l = n.current) || void 0 === l || l.scrollIntoView({
           behavior: "smooth",
           block: "center",
           inline: "center"
@@ -51,9 +51,9 @@ let d = "".concat("#").concat("itemSkuId", "="),
           a !== document.activeElement && (null == a || a.focus()), (0, c.openCollectiblesShopProductDetailsModal)({
             product: t,
             category: e,
-            analyticsSource: s,
-            analyticsLocations: l,
-            returnRef: r
+            analyticsSource: r,
+            analyticsLocations: s,
+            returnRef: n
           })
         }, 750);
         return () => clearTimeout(a)
@@ -67,47 +67,47 @@ let d = "".concat("#").concat("itemSkuId", "="),
       isFetchingCategories: a,
       isLayer: c,
       initialItemCardRef: d
-    } = e, C = l.useRef(null), m = (0, s.useLocation)(), g = m.pathname === u.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : m.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+    } = e, C = s.useRef(null), p = (0, r.useLocation)(), g = p.pathname === u.Routes.COLLECTIBLES_SHOP ? l.default.HOME_PAGE_SHOP_TAB : p.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? l.default.COLLECTIBLES_SHOP_FULLSCREEN : l.default.COLLECTIBLES_SHOP, {
       analyticsLocations: E
-    } = (0, i.default)(g);
-    l.useEffect(() => {
+    } = (0, o.default)(g);
+    s.useEffect(() => {
       if (c) return;
-      let e = f.exec(m.hash);
+      let e = f.exec(p.hash);
       if (null != e) {
         let t = e[1];
         C.current = t
       }
     }, []);
-    let h = (0, r.useStateFromStores)([o.default], () => o.default.initialProductSkuId);
-    l.useEffect(() => {
+    let b = (0, n.useStateFromStores)([i.default], () => i.default.initialProductSkuId);
+    s.useEffect(() => {
       if (a) return;
       let e = null;
-      if (c && null != h && (e = h), !c && null != C.current && (e = C.current), null != e) {
+      if (c && null != b && (e = b), !c && null != C.current && (e = C.current), null != e) {
         let a = [],
-          l = setTimeout(() => {
-            let l = p({
+          s = setTimeout(() => {
+            let s = m({
               categories: t,
               productSkuId: e,
               analyticsLocations: E,
               analyticsSource: g,
               initialItemCardRef: d
             });
-            a.push(l)
+            a.push(s)
           }, 250);
-        return a.push(() => clearTimeout(l)), () => {
+        return a.push(() => clearTimeout(s)), () => {
           a.forEach(e => e())
         }
       }
-    }, [c, E, g, t, a, h, d])
+    }, [c, E, g, t, a, b, d])
   },
   E = () => {
-    let e = l.useRef({}),
-      t = l.useCallback((t, a) => {
+    let e = s.useRef({}),
+      t = s.useCallback((t, a) => {
         e.current[t] = a
       }, []);
     return {
       setCategoryRef: t,
-      handleScrollToCategory: l.useCallback(t => {
+      handleScrollToCategory: s.useCallback(t => {
         var a;
         null === (a = e.current[t]) || void 0 === a || a.scrollIntoView({
           behavior: "smooth",

@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return c
   },
   getDefaultTriggerMetadataForTriggerType: function() {
-    return g
+    return N
   },
   triggerConfigs: function() {
     return E
@@ -28,78 +28,78 @@ n.r(t), n.d(t, {
 var r, o, i, u, a = n("470079"),
   l = n("467319"),
   s = n("676317"),
-  d = n("273504"),
-  T = n("689938");
+  T = n("273504"),
+  d = n("689938");
 (i = r || (r = {})).NEW = "new", i.RECOMMENDED = "recommended", i.BETA = "beta", i.ALPHA = "alpha";
 let E = {
-  [d.AutomodTriggerType.SPAM_LINK]: {
-    getDefaultRuleName: () => T.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME,
-    type: d.AutomodTriggerType.SPAM_LINK,
-    eventType: d.AutomodEventType.MESSAGE_SEND,
+  [T.AutomodTriggerType.SPAM_LINK]: {
+    getDefaultRuleName: () => d.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME,
+    type: T.AutomodTriggerType.SPAM_LINK,
+    eventType: T.AutomodEventType.MESSAGE_SEND,
     perGuildMaxCount: 0,
     availableActionTypes: new Set,
     flags: new Set,
     defaultActionTypes: new Set
   },
-  [d.AutomodTriggerType.KEYWORD]: {
-    getDefaultRuleName: () => T.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME,
-    type: d.AutomodTriggerType.KEYWORD,
-    eventType: d.AutomodEventType.MESSAGE_SEND,
+  [T.AutomodTriggerType.KEYWORD]: {
+    getDefaultRuleName: () => d.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME,
+    type: T.AutomodTriggerType.KEYWORD,
+    eventType: T.AutomodEventType.MESSAGE_SEND,
     perGuildMaxCount: 6,
-    availableActionTypes: new Set([d.AutomodActionType.BLOCK_MESSAGE, d.AutomodActionType.FLAG_TO_CHANNEL, d.AutomodActionType.USER_COMMUNICATION_DISABLED]),
+    availableActionTypes: new Set([T.AutomodActionType.BLOCK_MESSAGE, T.AutomodActionType.FLAG_TO_CHANNEL, T.AutomodActionType.USER_COMMUNICATION_DISABLED]),
     flags: new Set,
-    defaultActionTypes: new Set([d.AutomodActionType.BLOCK_MESSAGE])
+    defaultActionTypes: new Set([T.AutomodActionType.BLOCK_MESSAGE])
   },
-  [d.AutomodTriggerType.ML_SPAM]: {
-    getDefaultRuleName: () => T.default.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME,
-    type: d.AutomodTriggerType.ML_SPAM,
-    eventType: d.AutomodEventType.MESSAGE_SEND,
+  [T.AutomodTriggerType.ML_SPAM]: {
+    getDefaultRuleName: () => d.default.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME,
+    type: T.AutomodTriggerType.ML_SPAM,
+    eventType: T.AutomodEventType.MESSAGE_SEND,
     perGuildMaxCount: 1,
-    availableActionTypes: new Set([d.AutomodActionType.BLOCK_MESSAGE, d.AutomodActionType.FLAG_TO_CHANNEL]),
+    availableActionTypes: new Set([T.AutomodActionType.BLOCK_MESSAGE, T.AutomodActionType.FLAG_TO_CHANNEL]),
     flags: new Set([]),
-    defaultActionTypes: new Set([d.AutomodActionType.BLOCK_MESSAGE])
+    defaultActionTypes: new Set([T.AutomodActionType.BLOCK_MESSAGE])
   },
-  [d.AutomodTriggerType.DEFAULT_KEYWORD_LIST]: {
-    getDefaultRuleName: () => T.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME,
-    type: d.AutomodTriggerType.DEFAULT_KEYWORD_LIST,
-    eventType: d.AutomodEventType.MESSAGE_SEND,
+  [T.AutomodTriggerType.DEFAULT_KEYWORD_LIST]: {
+    getDefaultRuleName: () => d.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME,
+    type: T.AutomodTriggerType.DEFAULT_KEYWORD_LIST,
+    eventType: T.AutomodEventType.MESSAGE_SEND,
     perGuildMaxCount: 1,
-    availableActionTypes: new Set([d.AutomodActionType.BLOCK_MESSAGE, d.AutomodActionType.FLAG_TO_CHANNEL]),
+    availableActionTypes: new Set([T.AutomodActionType.BLOCK_MESSAGE, T.AutomodActionType.FLAG_TO_CHANNEL]),
     flags: new Set([]),
-    defaultActionTypes: new Set([d.AutomodActionType.BLOCK_MESSAGE])
+    defaultActionTypes: new Set([T.AutomodActionType.BLOCK_MESSAGE])
   },
-  [d.AutomodTriggerType.MENTION_SPAM]: {
-    getDefaultRuleName: () => T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME,
-    type: d.AutomodTriggerType.MENTION_SPAM,
-    eventType: d.AutomodEventType.MESSAGE_SEND,
+  [T.AutomodTriggerType.MENTION_SPAM]: {
+    getDefaultRuleName: () => d.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME,
+    type: T.AutomodTriggerType.MENTION_SPAM,
+    eventType: T.AutomodEventType.MESSAGE_SEND,
     perGuildMaxCount: 1,
-    availableActionTypes: new Set([d.AutomodActionType.BLOCK_MESSAGE, d.AutomodActionType.FLAG_TO_CHANNEL, d.AutomodActionType.USER_COMMUNICATION_DISABLED]),
+    availableActionTypes: new Set([T.AutomodActionType.BLOCK_MESSAGE, T.AutomodActionType.FLAG_TO_CHANNEL, T.AutomodActionType.USER_COMMUNICATION_DISABLED]),
     flags: new Set([]),
-    defaultActionTypes: new Set([d.AutomodActionType.BLOCK_MESSAGE])
+    defaultActionTypes: new Set([T.AutomodActionType.BLOCK_MESSAGE])
   },
-  [d.AutomodTriggerType.USER_PROFILE]: {
-    getDefaultRuleName: () => T.default.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_NAME,
-    type: d.AutomodTriggerType.USER_PROFILE,
-    eventType: d.AutomodEventType.GUILD_MEMBER_JOIN_OR_UPDATE,
+  [T.AutomodTriggerType.USER_PROFILE]: {
+    getDefaultRuleName: () => d.default.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_NAME,
+    type: T.AutomodTriggerType.USER_PROFILE,
+    eventType: T.AutomodEventType.GUILD_MEMBER_JOIN_OR_UPDATE,
     perGuildMaxCount: 1,
-    availableActionTypes: new Set([d.AutomodActionType.QUARANTINE_USER, d.AutomodActionType.FLAG_TO_CHANNEL]),
+    availableActionTypes: new Set([T.AutomodActionType.QUARANTINE_USER, T.AutomodActionType.FLAG_TO_CHANNEL]),
     flags: new Set([]),
-    defaultActionTypes: new Set([d.AutomodActionType.QUARANTINE_USER])
+    defaultActionTypes: new Set([T.AutomodActionType.QUARANTINE_USER])
   },
-  [d.AutomodTriggerType.SERVER_POLICY]: {
-    getDefaultRuleName: () => T.default.Messages.GUILD_AUTOMOD_SERVER_POLICY_FILTER_NAME,
-    type: d.AutomodTriggerType.SERVER_POLICY,
-    eventType: d.AutomodEventType.MESSAGE_SEND,
+  [T.AutomodTriggerType.SERVER_POLICY]: {
+    getDefaultRuleName: () => d.default.Messages.GUILD_AUTOMOD_SERVER_POLICY_FILTER_NAME,
+    type: T.AutomodTriggerType.SERVER_POLICY,
+    eventType: T.AutomodEventType.MESSAGE_SEND,
     perGuildMaxCount: 1,
-    availableActionTypes: new Set([d.AutomodActionType.FLAG_TO_CHANNEL]),
+    availableActionTypes: new Set([T.AutomodActionType.FLAG_TO_CHANNEL]),
     flags: new Set(["alpha"]),
     defaultActionTypes: new Set
   }
 };
 (u = o || (o = {})).MEMBERS = "members", u.CONTENT = "content";
 let A = {
-    members: [E[d.AutomodTriggerType.USER_PROFILE]],
-    content: [E[d.AutomodTriggerType.SERVER_POLICY], E[d.AutomodTriggerType.MENTION_SPAM], E[d.AutomodTriggerType.ML_SPAM], E[d.AutomodTriggerType.DEFAULT_KEYWORD_LIST], E[d.AutomodTriggerType.KEYWORD]]
+    members: [E[T.AutomodTriggerType.USER_PROFILE]],
+    content: [E[T.AutomodTriggerType.SERVER_POLICY], E[T.AutomodTriggerType.MENTION_SPAM], E[T.AutomodTriggerType.ML_SPAM], E[T.AutomodTriggerType.DEFAULT_KEYWORD_LIST], E[T.AutomodTriggerType.KEYWORD]]
   },
   _ = (e, t) => E[e].flags.has(t);
 
@@ -122,7 +122,7 @@ function I(e, t) {
 function O(e) {
   let t = (0, s.useIsUserProfileRuleEnabled)(e);
   return a.useMemo(() => Object.keys(A).reduce((e, n) => {
-    let r = A[n].filter(e => e.type !== d.AutomodTriggerType.SERVER_POLICY && (e.type !== d.AutomodTriggerType.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map(e => e.type);
+    let r = A[n].filter(e => e.type !== T.AutomodTriggerType.SERVER_POLICY && (e.type !== T.AutomodTriggerType.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map(e => e.type);
     return e[n] = r, e
   }, {
     members: [],
@@ -130,24 +130,24 @@ function O(e) {
   }), [t])
 }
 
-function g(e, t) {
+function N(e, t) {
   let n = (0, l.isInMentionRaidExperiment)(t);
   switch (e) {
-    case d.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
+    case T.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
       return {
         allowList: [], presets: []
       };
-    case d.AutomodTriggerType.USER_PROFILE:
-    case d.AutomodTriggerType.KEYWORD:
+    case T.AutomodTriggerType.USER_PROFILE:
+    case T.AutomodTriggerType.KEYWORD:
       return {
         keywordFilter: [], regexPatterns: [], allowList: []
       };
-    case d.AutomodTriggerType.MENTION_SPAM:
+    case T.AutomodTriggerType.MENTION_SPAM:
       return {
-        mentionTotalLimit: d.MENTION_SPAM_LIMIT_DEFAULT, mentionRaidProtectionEnabled: n
+        mentionTotalLimit: T.MENTION_SPAM_LIMIT_DEFAULT, mentionRaidProtectionEnabled: n
       };
-    case d.AutomodTriggerType.ML_SPAM:
-    case d.AutomodTriggerType.SERVER_POLICY:
+    case T.AutomodTriggerType.ML_SPAM:
+    case T.AutomodTriggerType.SERVER_POLICY:
     default:
       return
   }

@@ -26,7 +26,7 @@ t.default = n.memo(function(e) {
       label: t.name,
       value: t.id
     }), e
-  }, []), [t]), g = n.useCallback(e => {
+  }, []), [t]), I = n.useCallback(e => {
     var t, n;
     if (null == e) return null;
     let l = s.get(e.value);
@@ -40,12 +40,12 @@ t.default = n.memo(function(e) {
       guildIcon: l.icon,
       guildIconSize: 32
     })
-  }, [s]), I = n.useCallback(e => {
+  }, [s]), g = n.useCallback(e => {
     let t = e[0];
     return null == t ? null : (0, a.jsx)(a.Fragment, {
-      children: g(t)
+      children: I(t)
     })
-  }, [g]), N = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), h = n.useCallback(e => e === d, [d]), C = n.useCallback(e => e, []), p = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
+  }, [I]), N = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), h = n.useCallback(e => e === d, [d]), C = n.useCallback(e => e, []), O = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
   return (0, a.jsxs)(r.default, {
     title: T.default.Messages.CLANS,
     titleId: f,
@@ -59,10 +59,10 @@ t.default = n.memo(function(e) {
       isSelected: h,
       options: m,
       select: N,
-      renderOptionValue: I,
-      renderOptionLabel: g,
+      renderOptionValue: g,
+      renderOptionLabel: I,
       serialize: C,
-      clear: p,
+      clear: O,
       clearable: null != d
     })]
   })

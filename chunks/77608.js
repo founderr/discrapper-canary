@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return C
   }
 });
 var a = n("735250"),
@@ -16,7 +16,7 @@ var a = n("735250"),
   f = n("689938"),
   E = n("774473");
 
-function h(e) {
+function C(e) {
   let {
     setSelectedFilter: t,
     selectedFilter: n
@@ -26,15 +26,15 @@ function h(e) {
   }, {
     id: d.QuestFilters.COMPLETE,
     label: f.default.Messages.QUESTS_COMPLETED
-  }], h = s.useCallback(() => {
+  }], C = s.useCallback(() => {
     window.open(u.default.getArticleURL(c.HelpdeskArticles.QUESTS_LEARN_MORE))
-  }, []), _ = s.useCallback(e => {
+  }, []), h = s.useCallback(e => {
     t(e)
   }, [t]);
   return (0, a.jsxs)(o.TabBar, {
     className: i()(E.container),
     selectedItem: n,
-    onItemSelect: e => _(e),
+    onItemSelect: e => h(e),
     type: "top",
     "aria-label": f.default.Messages.QUESTS,
     orientation: "horizontal",
@@ -54,7 +54,7 @@ function h(e) {
         })
       }, e.id)
     }), (0, a.jsxs)(o.Button, {
-      onClick: h,
+      onClick: C,
       className: E.button,
       innerClassName: E.innerButton,
       children: [(0, a.jsx)(o.Text, {

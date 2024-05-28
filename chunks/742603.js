@@ -26,9 +26,9 @@ var l = n("120356"),
   T = n("134483"),
   I = n("809244"),
   A = n("618158"),
-  N = n("366695"),
-  v = n("586791"),
-  x = n("502568"),
+  v = n("366695"),
+  x = n("586791"),
+  N = n("502568"),
   M = n("792125"),
   R = n("358221"),
   y = n("362721"),
@@ -43,7 +43,7 @@ var l = n("120356"),
   w = n("32825"),
   k = n("946278");
 
-function B(e) {
+function H(e) {
   let {
     focusedParticipant: t,
     channel: n
@@ -60,7 +60,7 @@ function B(e) {
   })
 }
 
-function H(e) {
+function G(e) {
   let {
     user: t,
     channel: n,
@@ -82,7 +82,7 @@ function H(e) {
   })
 }
 
-function G(e) {
+function B(e) {
   let t, {
       focusedApplication: n,
       focusedParticipant: l,
@@ -93,9 +93,9 @@ function G(e) {
     u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
     c = null != o;
   if ((null == l ? void 0 : l.type) === D.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(x.default.Divider, {
+    children: [(0, a.jsx)(N.default.Divider, {
       className: w.divider
-    }), (0, a.jsx)(N.default, {
+    }), (0, a.jsx)(v.default, {
       game: n,
       className: w.activityIcon
     }), (0, a.jsx)(r.Text, {
@@ -103,7 +103,7 @@ function G(e) {
       variant: "text-md/normal",
       color: "none",
       children: (0, d.default)(n.name)
-    }), i && (0, a.jsx)(B, {
+    }), i && (0, a.jsx)(H, {
       channel: s,
       focusedParticipant: l
     })]
@@ -112,14 +112,14 @@ function G(e) {
     let e = l.user,
       n = l.stream;
     t = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(x.default.Divider, {
+      children: [(0, a.jsx)(N.default.Divider, {
         className: w.divider
-      }), (0, a.jsx)(H, {
+      }), (0, a.jsx)(G, {
         user: e,
         channel: s,
         stream: n,
         color: i ? "header-primary" : "none"
-      }), i && (0, a.jsx)(B, {
+      }), i && (0, a.jsx)(H, {
         channel: s,
         focusedParticipant: l
       })]
@@ -147,31 +147,31 @@ function V(e) {
   } = (0, i.useStateFromStoresObject)([R.default], () => ({
     focusedParticipant: R.default.getSelectedParticipant(t.id),
     participantsOpen: R.default.getParticipantsOpen(t.id)
-  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), N = F.default.Messages.VOICE_CHANNEL;
-  t.isDM() ? N = F.default.Messages.DM : t.isGroupDM() && (N = F.default.Messages.GROUP_DM);
+  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), v = F.default.Messages.VOICE_CHANNEL;
+  t.isDM() ? v = F.default.Messages.DM : t.isGroupDM() && (v = F.default.Messages.GROUP_DM);
   let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     j = t.isGuildVoice() && u && null != L && L.length > 0,
-    B = (0, y.default)(t),
-    H = j ? (0, a.jsx)(r.Tooltip, {
+    H = (0, y.default)(t),
+    G = j ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
-      shouldShow: B,
+      shouldShow: H,
       children: e => (0, a.jsxs)(r.Clickable, {
         ...e,
         className: s()(w.channelStatusClickable, {
-          [w.hoverable]: B
+          [w.hoverable]: H
         }),
-        onClick: B ? V : void 0,
+        onClick: H ? V : void 0,
         children: [(0, a.jsx)(r.Text, {
           variant: "text-xs/normal",
           className: s()(w.channelStatus, k.markup, {
-            [w.hoverable]: B
+            [w.hoverable]: H
           }),
           children: _.default.parseVoiceChannelStatus(L, !0, {
             channelId: t.id
           })
-        }), B && (0, a.jsx)(v.default, {
+        }), H && (0, a.jsx)(x.default, {
           className: s()(w.pencilIcon, w.hoverable),
           width: 14,
           height: 14
@@ -194,11 +194,11 @@ function V(e) {
   }
   return (0, a.jsxs)("div", {
     className: w.subtitleContainer,
-    children: [(0, a.jsxs)(x.default, {
+    children: [(0, a.jsxs)(N.default, {
       onDoubleClick: g.handleDoubleClick,
       transparent: !0,
       className: (0, M.getThemeClass)(U.ThemeTypes.DARK),
-      childrenBottom: H,
+      childrenBottom: G,
       toolbar: (0, a.jsx)(O.default, {
         inPopout: o === b.AppContext.POPOUT,
         channel: t,
@@ -207,16 +207,16 @@ function V(e) {
         isChatOpen: d,
         exitFullScreen: p
       }),
-      children: [null != I ? (0, a.jsx)(x.default.Icon, {
+      children: [null != I ? (0, a.jsx)(N.default.Icon, {
         icon: I,
         disabled: !0,
-        "aria-label": N
-      }) : null, (0, a.jsx)(x.default.Title, {
+        "aria-label": v
+      }) : null, (0, a.jsx)(N.default.Title, {
         children: C
       }), (0, a.jsx)(S.HeaderGuildBreadcrumb, {
         channel: t,
         guild: l
-      }), (0, a.jsx)(G, {
+      }), (0, a.jsx)(B, {
         focusedApplication: A,
         focusedParticipant: E,
         channel: t

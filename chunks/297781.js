@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return l
   },
   BadgesContainer: function() {
-    return Q
+    return J
   },
   EpisodeBadge: function() {
-    return X
+    return q
   },
   GameTimestampBadge: function() {
     return k
   },
   ListenTimestampBadge: function() {
-    return B
+    return H
   },
   MarathonBadge: function() {
-    return G
+    return B
   },
   NewGameBadge: function() {
-    return H
+    return G
   },
   NewReleaseBadge: function() {
     return Z
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return w
   },
   WatchTimestampBadge: function() {
-    return q
+    return X
   }
 });
 var a, l, s = n("735250"),
@@ -65,9 +65,9 @@ var a, l, s = n("735250"),
   T = n("137443"),
   I = n("700287"),
   A = n("71970"),
-  N = n("277758"),
-  v = n("690172"),
-  x = n("481060"),
+  v = n("277758"),
+  x = n("690172"),
+  N = n("481060"),
   M = n("70956"),
   R = n("709054"),
   y = n("719247"),
@@ -94,7 +94,7 @@ function F(e) {
     defaultTextColor: r,
     defaultIconColor: o
   } = U();
-  return (0, s.jsx)(x.Tooltip, {
+  return (0, s.jsx)(N.Tooltip, {
     text: l,
     shouldShow: i,
     children: e => (0, s.jsxs)("div", {
@@ -104,7 +104,7 @@ function F(e) {
         width: 12,
         height: 12,
         color: null != a ? a : o
-      }), (0, s.jsx)(x.Text, {
+      }), (0, s.jsx)(N.Text, {
         variant: "text-xs/normal",
         color: r,
         className: D.badgeLabel,
@@ -123,7 +123,7 @@ function w(e) {
     location: a
   } = U();
   return null == n || 1 === a ? null : (0, s.jsx)(F, {
-    Icon: v.VoiceNormalIcon,
+    Icon: x.VoiceNormalIcon,
     text: n.name
   })
 }
@@ -135,7 +135,7 @@ function k(e) {
     defaultTextColor: n,
     defaultIconColor: a,
     location: l
-  } = U(), i = 0 === l, r = (0, O.isEntryActive)(t), o = i && r ? x.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
+  } = U(), i = 0 === l, r = (0, O.isEntryActive)(t), o = i && r ? N.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
     className: D.badgeContainer,
     children: [(0, s.jsx)(E.GameControllerIcon, {
@@ -149,7 +149,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function H(e) {
   var t;
   let {
     entry: n
@@ -159,7 +159,7 @@ function B(e) {
     location: i
   } = U(), r = 0 === i, o = (0, m.useStateFromStores)([y.default], () => y.default.getMatchingActivity(n));
   if ((null == o ? void 0 : o.timestamps) == null) return null;
-  let u = r ? x.tokens.colors.STATUS_POSITIVE : l,
+  let u = r ? N.tokens.colors.STATUS_POSITIVE : l,
     d = null === (t = o.timestamps) || void 0 === t ? void 0 : t.start;
   return (0, s.jsxs)("div", {
     className: D.badgeContainer,
@@ -176,12 +176,12 @@ function B(e) {
   })
 }
 
-function H(e) {
+function G(e) {
   let {
     entry: t
   } = e, {
     location: n
-  } = U(), a = 0 === n ? x.tokens.colors.STATUS_POSITIVE : void 0;
+  } = U(), a = 0 === n ? N.tokens.colors.STATUS_POSITIVE : void 0;
   return (0, O.isEntryNew)(t) ? (0, s.jsx)(F, {
     Icon: g.NewUserLargeIcon,
     text: P.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
@@ -189,7 +189,7 @@ function H(e) {
   }) : null
 }
 
-function G(e) {
+function B(e) {
   let {
     entry: t
   } = e, {
@@ -299,7 +299,7 @@ function Z(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   let {
     entry: t
   } = e, {
@@ -308,7 +308,7 @@ function q(e) {
   } = U();
   return (0, s.jsxs)("div", {
     className: D.badgeContainer,
-    children: [(0, s.jsx)(N.TvIcon, {
+    children: [(0, s.jsx)(v.TvIcon, {
       width: 12,
       height: 12,
       color: a
@@ -319,7 +319,7 @@ function q(e) {
   })
 }
 
-function X(e) {
+function q(e) {
   var t;
   let {
     entry: n
@@ -333,7 +333,7 @@ function X(e) {
   })
 }
 
-function Q(e) {
+function J(e) {
   let {
     location: t,
     children: n
@@ -342,7 +342,7 @@ function Q(e) {
     defaultTextColor: "text-secondary"
   } : {
     defaultTextColor: "content-inventory-overlay-text-secondary",
-    defaultIconColor: x.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
+    defaultIconColor: N.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
   }, (0, s.jsx)(b.Provider, {
     value: {
       location: t,

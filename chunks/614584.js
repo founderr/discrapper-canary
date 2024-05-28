@@ -29,9 +29,9 @@ let I = l.memo(function(e) {
     baseMessage: n,
     referencedMessage: I,
     channel: A,
-    compact: N = !1,
-    referencedUsernameProfile: v,
-    referencedAvatarProfile: x,
+    compact: v = !1,
+    referencedUsernameProfile: x,
+    referencedAvatarProfile: N,
     setPopout: M
   } = e, R = I.state === f.ReferencedMessageState.LOADED ? I.message : void 0, y = (0, C.useNullableMessageAuthor)(R), L = (0, o.useActiveKeywordFiltersCacheKey)(), O = (0, u.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), j = l.useMemo(() => {
     if (null == R) return null;
@@ -77,7 +77,7 @@ let I = l.memo(function(e) {
       return (0, E.default)(R, t).content
     }
     return null
-  }, [R, y, A, O, L]), P = (0, s.useStateFromStores)([h.default], () => null != R && h.default.isBlocked(R.author.id), [R]), D = (0, S.useContextMenuUser)(null == R ? void 0 : R.author.id, A.id), b = (0, S.useClickReply)(n, R, P), U = (0, S.useClickReferencedMessageAuthorUsername)(R, A, v, M), F = (0, S.useClickReferencedMessageAuthorAvatar)(x, M), w = l.useCallback(() => M({
+  }, [R, y, A, O, L]), P = (0, s.useStateFromStores)([h.default], () => null != R && h.default.isBlocked(R.author.id), [R]), D = (0, S.useContextMenuUser)(null == R ? void 0 : R.author.id, A.id), b = (0, S.useClickReply)(n, R, P), U = (0, S.useClickReferencedMessageAuthorUsername)(R, A, x, M), F = (0, S.useClickReferencedMessageAuthorAvatar)(N, M), w = l.useCallback(() => M({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
   }), [M]), k = (0, C.useNullableMessageAuthor)(n);
@@ -88,10 +88,10 @@ let I = l.memo(function(e) {
     baseAuthor: k,
     referencedMessage: I,
     content: j,
-    compact: N,
+    compact: v,
     isReplyAuthorBlocked: P,
-    showAvatarPopout: x,
-    showUsernamePopout: v,
+    showAvatarPopout: N,
+    showUsernamePopout: x,
     renderPopout: g.default,
     onClickAvatar: F,
     onClickUsername: U,

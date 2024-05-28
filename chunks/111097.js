@@ -11,9 +11,9 @@ var a = n("72924"),
   c = n("186901"),
   f = n("981631"),
   E = n("474936");
-let h = [s.default.RPC];
+let C = [s.default.RPC];
 
-function _(e) {
+function h(e) {
   if (null == e) return {
     lock: f.NOOP_NULL,
     context: f.AppContext.APP
@@ -25,10 +25,10 @@ function _(e) {
   }
 }
 
-function C(e, t) {
+function _(e, t) {
   let n = {
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: h,
+    analyticsLocations: C,
     analyticsObject: t
   };
   switch (e) {
@@ -63,7 +63,7 @@ t.default = {
       let {
         lock: r,
         context: d
-      } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null);
+      } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null);
       if (null == (0, o.default)()) throw new i.default({
         errorCode: f.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel");
@@ -75,8 +75,8 @@ t.default = {
           let e = await (0, a.openIAPPurchaseModal)({
             applicationId: l,
             skuId: n,
-            openPremiumPaymentModal: () => C(d, E),
-            analyticsLocations: h,
+            openPremiumPaymentModal: () => _(d, E),
+            analyticsLocations: C,
             analyticsLocationObject: E,
             context: d
           });
@@ -113,8 +113,8 @@ t.default = {
       let {
         lock: a,
         context: s
-      } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null);
-      return C(s, {
+      } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null);
+      return _(s, {
         page: f.AnalyticsPages.IN_APP
       }).then(() => {
         a()

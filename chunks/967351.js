@@ -11,8 +11,8 @@ var a = n("413135"),
   c = n("852926"),
   f = n("981631");
 let E = o.default.requireModule("discord_rpc").RPCIPC,
-  h = new r.default("RPCServer:IPC"),
-  _ = {
+  C = new r.default("RPCServer:IPC"),
+  h = {
     HANDSHAKE: 0,
     FRAME: 1,
     CLOSE: 2,
@@ -20,21 +20,21 @@ let E = o.default.requireModule("discord_rpc").RPCIPC,
     PONG: 4
   };
 
-function C(e, t) {
+function _(e, t) {
   null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : e._didHandshake = t
 }
 
-function m(e) {
+function S(e) {
   return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake
 }
 
-function S(e) {
+function m(e) {
   return new Promise((t, n) => {
     "string" == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
         I(e)
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(p(h.CLOSE, {
           code: 1003,
           message: t.message
         })), e.destroy()
@@ -54,7 +54,7 @@ function S(e) {
       }, e => {
         throw a(), e
       });
-    return e.write(p(_.PING, i().uniqueId())), s.then(t, n)
+    return e.write(p(h.PING, i().uniqueId())), s.then(t, n)
   })
 }
 
@@ -72,35 +72,35 @@ function I(e) {
   let n = a.Buffer.from(t),
     s = n.readInt32LE(0),
     l = n.readInt32LE(4);
-  if (!Object.values(_).includes(s) || l < 0) throw Error("protocol error");
+  if (!Object.values(h).includes(s) || l < 0) throw Error("protocol error");
   if (null == (t = e.read(l))) throw Error("data size does not match what was received");
   let i = JSON.parse((n = a.Buffer.from(t)).toString());
   switch (s) {
-    case _.PING:
-      e.emit("ping", i), e.write(p(_.PONG, i));
+    case h.PING:
+      e.emit("ping", i), e.write(p(h.PONG, i));
       break;
-    case _.PONG:
+    case h.PONG:
       e.emit("pong", i);
       break;
-    case _.HANDSHAKE:
-      if (m(e)) throw Error("already did handshake");
-      C(e, !0), e.emit("handshake", i);
+    case h.HANDSHAKE:
+      if (S(e)) throw Error("already did handshake");
+      _(e, !0), e.emit("handshake", i);
       break;
-    case _.FRAME:
-      if (!m(e)) throw Error("did not handshake");
+    case h.FRAME:
+      if (!S(e)) throw Error("did not handshake");
       e.emit("request", i);
       break;
-    case _.CLOSE:
+    case h.CLOSE:
       e.end(), e.destroy()
   }
   I(e)
 }
 class g extends d.default {
   send(e) {
-    h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(_.FRAME, e))
+    C.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(h.FRAME, e))
   }
   close(e, t) {
-    this.socket.end(p(_.CLOSE, {
+    this.socket.end(p(h.CLOSE, {
       code: e,
       message: t
     })), this.socket.destroy()
@@ -117,11 +117,11 @@ class g extends d.default {
 }
 class T extends s.EventEmitter {
   handleConnection(e) {
-    C(e, !1), e.pause(), e.on("readable", () => {
+    _(e, !1), e.pause(), e.on("readable", () => {
       try {
         I(e)
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(p(h.CLOSE, {
           code: f.RPCCloseCodes.CLOSE_UNSUPPORTED,
           message: t.message
         })), e.destroy()
@@ -133,17 +133,17 @@ class T extends s.EventEmitter {
       try {
         n = new g(e, s, "json")
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(p(h.CLOSE, {
           code: t.code,
           message: t.message
         })), e.destroy();
         return
       }
-      h.info("Socket Opened: ".concat(n.id)), e.on("error", e => h.error("Socket Error: ".concat(e.message))), e.on("close", () => {
-        h.info("Socket Close: ".concat(n.id)), this.emit("disconnect", n)
+      C.info("Socket Opened: ".concat(n.id)), e.on("error", e => C.error("Socket Error: ".concat(e.message))), e.on("close", () => {
+        C.info("Socket Close: ".concat(n.id)), this.emit("disconnect", n)
       }), (0, c.validateSocketClient)(n, null, a).then(() => {
         e.on("request", e => {
-          h.info("Socket Message: ".concat(n.id), (0, u.default)(e)), this.emit("request", n, e)
+          C.info("Socket Message: ".concat(n.id), (0, u.default)(e)), this.emit("request", n, e)
         }), this.emit("connect", n)
       }).catch(e => {
         let {
@@ -157,9 +157,9 @@ class T extends s.EventEmitter {
   constructor() {
     super();
     let e = E.net.createServer(e => this.handleConnection(e));
-    e.on("error", e => h.error("Error: ".concat(e.message))), E.getAvailableSocket(S).then(t => {
+    e.on("error", e => C.error("Error: ".concat(e.message))), E.getAvailableSocket(m).then(t => {
       e.listen(t, () => {
-        ("function" == typeof e.listening ? e.listening() : e.listening) && h.info("Starting on ".concat(e.address()))
+        ("function" == typeof e.listening ? e.listening() : e.listening) && C.info("Starting on ".concat(e.address()))
       })
     })
   }

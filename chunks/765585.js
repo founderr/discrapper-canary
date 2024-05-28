@@ -20,8 +20,8 @@ t.default = a.forwardRef(function(e, t) {
     headerClassName: C,
     contentClassName: g,
     tryItText: E,
-    dismissText: _,
-    onTryFeature: S,
+    dismissText: S,
+    onTryFeature: _,
     onClose: I,
     className: N,
     inlineArt: T = !1,
@@ -31,8 +31,8 @@ t.default = a.forwardRef(function(e, t) {
     dismissibleContent: x,
     position: R = "top",
     align: M = "center",
-    art: O,
-    isPremiumEarlyAccess: y = !1,
+    art: y,
+    isPremiumEarlyAccess: O = !1,
     maxWidth: D = 280
   } = e, b = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
     ref: G,
@@ -56,22 +56,22 @@ t.default = a.forwardRef(function(e, t) {
     children: (0, l.jsxs)("div", {
       className: i()(m.content, g, {
         [m.contentNoArt]: null == p || T,
-        [m.contentPremium]: A || y
+        [m.contentPremium]: A || O
       }),
       children: [(0, l.jsxs)("div", {
         className: i()(p, T ? m.artInline : m.artAbsolute),
         children: [v && (0, l.jsx)(d.default, {
           className: m.gifTag
-        }), O]
+        }), y]
       }), (0, l.jsxs)("div", {
         className: m.body,
         children: [(0, l.jsxs)(r.Heading, {
           className: i()(A ? m.headerWithPremiumIcon : m.header, C),
           variant: "heading-md/bold",
           color: "always-white",
-          children: [A && !y ? (0, l.jsx)(c.default, {
+          children: [A && !O ? (0, l.jsx)(c.default, {
             className: m.premiumIcon
-          }) : null, y ? (0, l.jsxs)(r.Text, {
+          }) : null, O ? (0, l.jsxs)(r.Text, {
             color: "always-white",
             variant: "eyebrow",
             className: m.earlyAccessBadgeContainer,
@@ -90,14 +90,14 @@ t.default = a.forwardRef(function(e, t) {
       }), (0, l.jsx)("div", {
         ref: G,
         className: j || !L ? m.buttonContainerVertical : m.buttonContainerHorizontal,
-        children: null != S ? (0, l.jsxs)(l.Fragment, {
+        children: null != _ ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {
             className: m.button,
             size: b,
             onClick: e => {
-              null == I || I(e), S(e), w(f.ContentDismissActionType.PRIMARY)
+              null == I || I(e), _(e), w(f.ContentDismissActionType.PRIMARY)
             },
-            color: A || y ? r.Button.Colors.BRAND_INVERTED : r.Button.Colors.WHITE,
+            color: A || O ? r.Button.Colors.BRAND_INVERTED : r.Button.Colors.WHITE,
             children: null != E ? E : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, l.jsx)(r.Button, {
             className: m.button,
@@ -105,9 +105,9 @@ t.default = a.forwardRef(function(e, t) {
             onClick: e => {
               null == I || I(e), w(f.ContentDismissActionType.DISMISS)
             },
-            color: A || y ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
-            look: A || y ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
-            children: null != _ ? _ : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
+            color: A || O ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
+            look: A || O ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
+            children: null != S ? S : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })]
         }) : (0, l.jsx)(r.Button, {
           className: m.button,

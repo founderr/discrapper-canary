@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("735250");
@@ -16,13 +16,13 @@ var s = n("990547"),
   c = n("981631"),
   f = n("689938"),
   E = n("842265"),
-  h = n("217110");
+  C = n("217110");
 
-function _(e) {
+function h(e) {
   let {
     guildId: t,
     markAsDismissed: n
-  } = e, _ = (0, l.useStateFromStores)([u.default, d.default], () => {
+  } = e, h = (0, l.useStateFromStores)([u.default, d.default], () => {
     let e = d.default.getCurrentUser(),
       n = u.default.getGuild(t);
     return (null == n ? void 0 : n.isOwner(e)) === !0
@@ -32,7 +32,7 @@ function _(e) {
     name: s.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
     properties: {
       guild_id: t,
-      is_owner: _
+      is_owner: h
     }
   }), (0, a.jsx)("div", {
     className: E.container,
@@ -43,7 +43,7 @@ function _(e) {
         className: E.image,
         children: (0, a.jsx)("img", {
           alt: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_IMG_ALT,
-          src: h,
+          src: C,
           className: E.image
         })
       }),

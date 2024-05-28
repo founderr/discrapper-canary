@@ -1,55 +1,55 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("91192"),
-  o = n("481060"),
-  u = n("209613"),
-  d = n("151827"),
-  c = n("785681"),
-  f = n("485664"),
-  E = n("880257"),
-  h = n("631885"),
-  _ = n("895328"),
-  C = n("568671"),
-  m = n("419821"),
-  S = n("367515"),
-  p = n("250285"),
-  I = n("292352"),
-  g = n("689938"),
-  T = n("280590"),
-  A = n("611273"),
-  N = n("926895");
+s.r(t);
+var a = s("735250"),
+  n = s("470079"),
+  l = s("120356"),
+  i = s.n(l),
+  r = s("91192"),
+  u = s("481060"),
+  o = s("209613"),
+  d = s("151827"),
+  c = s("785681"),
+  E = s("485664"),
+  _ = s("880257"),
+  f = s("631885"),
+  h = s("895328"),
+  m = s("568671"),
+  T = s("419821"),
+  C = s("367515"),
+  g = s("250285"),
+  A = s("292352"),
+  N = s("689938"),
+  p = s("280590"),
+  S = s("611273"),
+  I = s("926895");
 
 function v(e) {
   let {
     header: t,
-    description: n,
-    stepNumber: s
+    description: s,
+    stepNumber: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: T.step,
+    className: p.step,
     children: [(0, a.jsx)("div", {
-      className: T.stepNumber,
-      children: (0, a.jsx)(o.Heading, {
+      className: p.stepNumber,
+      children: (0, a.jsx)(u.Heading, {
         variant: "heading-md/semibold",
         color: "text-brand",
-        children: (0, a.jsx)(o.HeadingLevel, {
-          children: s
+        children: (0, a.jsx)(u.HeadingLevel, {
+          children: n
         })
       })
     }), (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(o.Heading, {
+      children: [(0, a.jsx)(u.Heading, {
         variant: "heading-sm/bold",
-        children: (0, a.jsx)(o.HeadingLevel, {
+        children: (0, a.jsx)(u.HeadingLevel, {
           children: t
         })
-      }), (0, a.jsx)(o.Text, {
+      }), (0, a.jsx)(u.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
-        children: n
+        children: s
       })]
     })]
   })
@@ -57,125 +57,125 @@ function v(e) {
 
 function R() {
   return (0, a.jsxs)("div", {
-    className: i()(T.box, T.linkingBanner, T.linkingBannerParent),
+    className: i()(p.box, p.linkingBanner, p.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
-      className: i()(T.linkingBannerUpper),
+      className: i()(p.linkingBannerUpper),
       children: [(0, a.jsxs)("div", {
-        className: T.__invalid_header,
-        children: [(0, a.jsx)(o.Heading, {
-          className: A.marginBottom8,
+        className: p.__invalid_header,
+        children: [(0, a.jsx)(u.Heading, {
+          className: S.marginBottom8,
           variant: "heading-xl/medium",
-          children: (0, a.jsx)(o.HeadingLevel, {
-            children: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT
+          children: (0, a.jsx)(u.HeadingLevel, {
+            children: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT
           })
-        }), (0, a.jsx)(o.Text, {
+        }), (0, a.jsx)(u.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
-          className: A.marginBottom20,
-          children: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_PARENT
+          className: S.marginBottom20,
+          children: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_PARENT
         })]
       }), (0, a.jsx)("img", {
-        className: T.bannerArt,
-        src: N,
-        alt: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
+        className: p.bannerArt,
+        src: I,
+        alt: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
       })]
     }), (0, a.jsxs)("div", {
-      className: T.steps,
+      className: p.steps,
       children: [(0, a.jsx)(v, {
-        header: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
-        description: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
+        header: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
+        description: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
         stepNumber: 1
       }), (0, a.jsx)(v, {
-        header: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
-        description: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
+        header: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
+        description: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
         stepNumber: 2
       }), (0, a.jsx)(v, {
-        header: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
-        description: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
+        header: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
+        description: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
         stepNumber: 3
       })]
     })]
   })
 }
 
-function O() {
-  let e = (0, h.useHasMaxConnections)();
+function x() {
+  let e = (0, f.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
-    className: i()(T.box, T.linkingBanner),
+    className: i()(p.box, p.linkingBanner),
     children: [(0, a.jsxs)("div", {
-      children: [(0, a.jsx)(o.Heading, {
-        className: A.marginBottom8,
+      children: [(0, a.jsx)(u.Heading, {
+        className: S.marginBottom8,
         variant: "heading-xl/medium",
-        children: (0, a.jsx)(o.HeadingLevel, {
-          children: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN
+        children: (0, a.jsx)(u.HeadingLevel, {
+          children: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN
         })
-      }), (0, a.jsx)(o.Text, {
+      }), (0, a.jsx)(u.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
-        className: A.marginBottom20,
-        children: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
+        className: S.marginBottom20,
+        children: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
           link: "https://support.discord.com/hc/articles/14155060633623"
         })
-      }), e ? null : (0, a.jsx)(C.default, {})]
+      }), e ? null : (0, a.jsx)(m.default, {})]
     }), (0, a.jsx)("img", {
-      className: T.bannerArt,
-      src: N,
-      alt: g.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
+      className: p.bannerArt,
+      src: I,
+      alt: N.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
     })]
   })
 }
 
-function L(e) {
+function M(e) {
   let {
     sectionType: t,
-    sectionTitle: n,
+    sectionTitle: s,
     requests: l
-  } = e, i = s.useRef(null), c = "".concat(t, "-list"), f = (0, u.default)(c), E = s.useCallback(e => {
+  } = e, i = n.useRef(null), c = "".concat(t, "-list"), E = (0, o.default)(c), _ = n.useCallback(e => {
     let {
-      row: n,
-      listIndex: s
-    } = e, i = l[n], r = s === l.length;
-    return null == i ? null : (0, a.jsx)(p.default, {
+      row: s,
+      listIndex: n
+    } = e, i = l[s], r = n === l.length;
+    return null == i ? null : (0, a.jsx)(g.default, {
       userId: i.id,
       isLast: r,
-      children: () => t === I.UserLinkStatus.ACTIVE ? (0, a.jsx)(m.UserLinkAcceptedRequestRow, {
+      children: () => t === A.UserLinkStatus.ACTIVE ? (0, a.jsx)(T.UserLinkAcceptedRequestRow, {
         user: i
-      }) : (0, a.jsx)(S.UserLinkPendingRequestRow, {
+      }) : (0, a.jsx)(C.UserLinkPendingRequestRow, {
         user: i
       })
     }, i.id)
-  }, [l, t]), h = s.useCallback(() => (0, a.jsx)(d.default, {
-    className: T.__invalid_sectionTitle,
-    children: (0, a.jsx)(o.Text, {
-      className: A.marginBottom8,
+  }, [l, t]), f = n.useCallback(() => (0, a.jsx)(d.default, {
+    className: p.__invalid_sectionTitle,
+    children: (0, a.jsx)(u.Text, {
+      className: S.marginBottom8,
       variant: "eyebrow",
       color: "header-secondary",
-      children: n
+      children: s
     })
-  }, "title"), [n]);
+  }, "title"), [s]);
   return (0, a.jsx)("div", {
-    className: T.section,
+    className: p.section,
     children: (0, a.jsx)(r.ListNavigatorProvider, {
-      navigator: f,
+      navigator: E,
       children: (0, a.jsx)(r.ListNavigatorContainer, {
         children: e => {
           let {
             ref: t,
-            role: s,
+            role: n,
             ...r
           } = e;
-          return (0, a.jsx)(o.List, {
-            className: T.__invalid_list,
-            innerRole: s,
-            innerAriaLabel: n,
+          return (0, a.jsx)(u.List, {
+            className: p.__invalid_list,
+            innerRole: n,
+            innerAriaLabel: s,
             ref: e => {
-              var n;
-              i.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
+              var s;
+              i.current = e, t.current = null !== (s = null == e ? void 0 : e.getScrollerNode()) && void 0 !== s ? s : null
             },
-            sectionHeight: I.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
-            rowHeight: I.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
-            renderSection: h,
-            renderRow: E,
+            sectionHeight: A.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
+            rowHeight: A.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
+            renderSection: f,
+            renderRow: _,
             sections: [l.length],
             chunkSize: 30,
             fade: !0,
@@ -186,86 +186,86 @@ function L(e) {
     })
   })
 }
-let M = () => {
-    let e = (0, E.default)(),
-      t = (0, h.useUserForLinkStatus)(I.UserLinkStatus.ACTIVE),
-      n = e ? I.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : I.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
-      s = {
+let O = () => {
+    let e = (0, _.default)(),
+      t = (0, f.useUserForLinkStatus)(A.UserLinkStatus.ACTIVE),
+      s = e ? A.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : A.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+      n = {
         count: t.length,
-        max: n
+        max: s
       },
-      l = (0, c.useAgeSpecificText)(g.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), g.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
+      l = (0, c.useAgeSpecificText)(N.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(n), N.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(n));
     return (0, a.jsx)(a.Fragment, {
-      children: t.length > 0 ? (0, a.jsx)(L, {
-        sectionType: I.UserLinkStatus.ACTIVE,
+      children: t.length > 0 ? (0, a.jsx)(M, {
+        sectionType: A.UserLinkStatus.ACTIVE,
         sectionTitle: l,
         requests: t
       }) : (0, a.jsxs)("div", {
-        className: T.section,
-        children: [(0, a.jsx)(o.Text, {
-          className: A.marginBottom8,
+        className: p.section,
+        children: [(0, a.jsx)(u.Text, {
+          className: S.marginBottom8,
           variant: "eyebrow",
           color: "header-secondary",
           children: l
         }), (0, a.jsx)("div", {
-          className: T.box,
-          children: (0, a.jsx)(_.default, {
-            text: g.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION
+          className: p.box,
+          children: (0, a.jsx)(h.default, {
+            text: N.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION
           })
         })]
       })
     })
   },
-  P = () => {
-    let e = (0, h.useHasMaxConnections)(),
-      t = (0, E.default)() ? I.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : I.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
-      n = (0, c.useAgeSpecificText)(g.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
+  L = () => {
+    let e = (0, f.useHasMaxConnections)(),
+      t = (0, _.default)() ? A.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : A.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+      s = (0, c.useAgeSpecificText)(N.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
         maxConnections: t
-      }), g.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({
+      }), N.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({
         maxConnections: t
       }));
     return e ? (0, a.jsx)("div", {
-      className: T.maxConnectionInfo,
-      children: (0, a.jsx)(o.Text, {
+      className: p.maxConnectionInfo,
+      children: (0, a.jsx)(u.Text, {
         variant: "text-xxs/medium",
         color: "text-muted",
-        children: n
+        children: s
       })
     }) : null
   },
-  x = () => (0, f.useShouldShowHelplineLink)() ? (0, a.jsxs)("div", {
-    className: i()(T.__invalid_helpLineInfo, A.marginTop20),
-    children: [(0, a.jsx)(o.Heading, {
-      className: T.supportHeader,
+  y = () => (0, E.useShouldShowHelplineLink)() ? (0, a.jsxs)("div", {
+    className: i()(p.__invalid_helpLineInfo, S.marginTop20),
+    children: [(0, a.jsx)(u.Heading, {
+      className: p.supportHeader,
       variant: "heading-sm/semibold",
-      children: (0, a.jsx)(o.HeadingLevel, {
-        children: g.default.Messages.FAMILY_CENTER_HELP_LINE_HEADER
+      children: (0, a.jsx)(u.HeadingLevel, {
+        children: N.default.Messages.FAMILY_CENTER_HELP_LINE_HEADER
       })
-    }), (0, a.jsx)(o.Text, {
+    }), (0, a.jsx)(u.Text, {
       variant: "text-xs/medium",
       color: "text-muted",
-      children: g.default.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({
+      children: N.default.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({
         helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line"
       })
     })]
   }) : null,
-  y = () => {
-    let e = (0, h.useUserForLinkStatus)(I.UserLinkStatus.PENDING),
-      t = (0, c.useAgeSpecificText)(g.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
+  D = () => {
+    let e = (0, f.useUserForLinkStatus)(A.UserLinkStatus.PENDING),
+      t = (0, c.useAgeSpecificText)(N.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
-      }), g.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
+      }), N.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
         count: e.length
       }));
-    return 0 === e.length ? null : (0, a.jsx)(L, {
-      sectionType: I.UserLinkStatus.PENDING,
+    return 0 === e.length ? null : (0, a.jsx)(M, {
+      sectionType: A.UserLinkStatus.PENDING,
       sectionTitle: t,
       requests: e
     })
   };
 t.default = () => {
-  let e = (0, E.default)();
+  let e = (0, _.default)();
   return (0, a.jsxs)("div", {
-    className: T.container,
-    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {})]
+    className: p.container,
+    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(x, {}), (0, a.jsx)(O, {}), (0, a.jsx)(D, {}), (0, a.jsx)(L, {}), (0, a.jsx)(y, {})]
   })
 }

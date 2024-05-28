@@ -11,26 +11,26 @@ var a = n("735250"),
   c = n("683301"),
   f = n("360048"),
   E = n("296386"),
-  h = n("150192"),
-  _ = n("889010"),
-  C = n("488905"),
-  m = n("731455"),
-  S = n("689938"),
+  C = n("150192"),
+  h = n("889010"),
+  _ = n("488905"),
+  S = n("731455"),
+  m = n("689938"),
   p = n("157552");
 let I = e => {
   switch (e) {
-    case m.CategoryId.Activity:
-      return m.CategoryIcons.Activity;
-    case m.CategoryId.Music:
-      return m.CategoryIcons.Music;
-    case m.CategoryId.Television:
-      return m.CategoryIcons.Television;
-    case m.CategoryId.Science:
-      return m.CategoryIcons.Science;
-    case m.CategoryId.Education:
-      return m.CategoryIcons.Education;
+    case S.CategoryId.Activity:
+      return S.CategoryIcons.Activity;
+    case S.CategoryId.Music:
+      return S.CategoryIcons.Music;
+    case S.CategoryId.Television:
+      return S.CategoryIcons.Television;
+    case S.CategoryId.Science:
+      return S.CategoryIcons.Science;
+    case S.CategoryId.Education:
+      return S.CategoryIcons.Education;
     default:
-      return m.CategoryIcons.Server
+      return S.CategoryIcons.Server
   }
 };
 t.default = function() {
@@ -40,7 +40,7 @@ t.default = function() {
   } = (0, i.useStateFromStoresObject)([c.default], () => ({
     currentCategoryId: c.default.getCurrentCategoryId(),
     isViewingSearchResults: c.default.getMostRecentQuery().length > 0
-  })), n = (0, i.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), g = null == n ? void 0 : n.map(e => ({
+  })), n = (0, i.useStateFromStores)([C.default], () => C.default.getClanDiscoveryCategories(), [], C.areDiscoveryCategoriesEqual), g = null == n ? void 0 : n.map(e => ({
     ...e,
     icon: I(e.categoryId)
   })), T = e => {
@@ -49,11 +49,11 @@ t.default = function() {
   return s.useEffect(() => {
     (0, E.maybeFetchGuildDiscoveryCategories)(!1, !0)
   }, [e]), (0, a.jsxs)(l.Scroller, {
-    children: [(0, a.jsx)(C.DiscoverySidebarHeader, {
-      text: S.default.Messages.DISCOVER
+    children: [(0, a.jsx)(_.DiscoverySidebarHeader, {
+      text: m.default.Messages.DISCOVER
     }), (0, a.jsx)(f.default, {
       avatar: (0, a.jsx)(o.default, {}),
-      name: S.default.Messages.CLANS,
+      name: m.default.Messages.CLANS,
       focusProps: {
         offset: {
           right: 4,
@@ -61,13 +61,13 @@ t.default = function() {
           bottom: 1
         }
       },
-      onClick: () => T(m.CategoryId.Clans),
+      onClick: () => T(S.CategoryId.Clans),
       wrapContent: !0,
-      selected: e === m.CategoryId.Clans,
+      selected: e === S.CategoryId.Clans,
       className: p.categoryItem,
       selectedClassName: p.selectedCategoryItem,
       innerClassName: p.itemInner
-    }, "clan-discovery-home"), (0, a.jsx)(_.default, {
+    }, "clan-discovery-home"), (0, a.jsx)(h.default, {
       categories: g,
       handleCategorySelect: T,
       currentCategoryId: e,

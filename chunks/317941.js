@@ -15,19 +15,19 @@ var a = s("735250"),
   _ = s("246946"),
   f = s("509545"),
   m = s("55563"),
-  g = s("15887"),
-  I = s("581874"),
+  I = s("15887"),
+  g = s("581874"),
   N = s("285952"),
   h = s("366695"),
   C = s("259580"),
-  p = s("572004"),
+  O = s("572004"),
   A = s("669079"),
-  O = s("296848"),
-  x = s("474936"),
-  R = s("689938"),
+  p = s("296848"),
+  R = s("474936"),
+  x = s("689938"),
   M = s("449256");
 
-function v(e, t, s) {
+function L(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -41,12 +41,12 @@ class D extends n.PureComponent {
   }
   get copyButtonText() {
     switch (this.state.copyMode) {
-      case I.CopyInputModes.SUCCESS:
-        return R.default.Messages.BILLING_GIFT_COPIED;
-      case I.CopyInputModes.ERROR:
-        return R.default.Messages.FAILED;
+      case g.CopyInputModes.SUCCESS:
+        return x.default.Messages.BILLING_GIFT_COPIED;
+      case g.CopyInputModes.ERROR:
+        return x.default.Messages.FAILED;
       default:
-        return R.default.Messages.COPY
+        return x.default.Messages.COPY
     }
   }
   handleRevoke(e) {
@@ -62,57 +62,57 @@ class D extends n.PureComponent {
     return (0, a.jsxs)(N.default, {
       direction: N.default.Direction.VERTICAL,
       className: M.giftCodeRow,
-      children: [(0, a.jsx)(I.default, {
+      children: [(0, a.jsx)(g.default, {
         className: M.codeText,
         value: (0, A.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
         mode: s,
-        supportsCopy: p.SUPPORTS_COPY,
-        hideMessage: e ? R.default.Messages.GIFT_INVENTORY_HIDDEN : null,
+        supportsCopy: O.SUPPORTS_COPY,
+        hideMessage: e ? x.default.Messages.GIFT_INVENTORY_HIDDEN : null,
         onCopy: this.handleCopy,
-        buttonColor: I.default.ButtonColors.BRAND,
-        buttonLook: I.default.ButtonLooks.FILLED
+        buttonColor: g.default.ButtonColors.BRAND,
+        buttonLook: g.default.ButtonLooks.FILLED
       }), (0, a.jsxs)("div", {
         className: M.subTextRow,
         children: [null != t.expiresAt ? (0, a.jsxs)(n.Fragment, {
-          children: [R.default.Messages.GIFT_INVENTORY_EXPIRES_IN.format({
+          children: [x.default.Messages.GIFT_INVENTORY_EXPIRES_IN.format({
             hours: t.expiresAt.diff(i()(), "h")
           }), " ", "—\xa0"]
         }) : null, (0, a.jsx)(d.Clickable, {
           tag: "a",
           onClick: () => this.handleRevoke(t.code),
-          children: R.default.Messages.REVOKE
+          children: x.default.Messages.REVOKE
         })]
       })]
     })
   }
   constructor(...e) {
-    super(...e), v(this, "_copyModeTimeout", new o.Timeout), v(this, "state", {
-      copyMode: I.CopyInputModes.DEFAULT
-    }), v(this, "handleCopy", e => {
+    super(...e), L(this, "_copyModeTimeout", new o.Timeout), L(this, "state", {
+      copyMode: g.CopyInputModes.DEFAULT
+    }), L(this, "handleCopy", e => {
       let {
         giftCode: t,
         sku: s
       } = this.props;
       (0, A.trackGiftCodeCopy)(t, s);
       try {
-        (0, p.copy)(e), this.setState({
-          copyMode: I.CopyInputModes.SUCCESS
+        (0, O.copy)(e), this.setState({
+          copyMode: g.CopyInputModes.SUCCESS
         })
       } catch (e) {
         this.setState({
-          copyMode: I.CopyInputModes.ERROR
+          copyMode: g.CopyInputModes.ERROR
         })
       }
       this._copyModeTimeout.start(1e3, () => {
         this.setState({
-          copyMode: I.CopyInputModes.DEFAULT
+          copyMode: g.CopyInputModes.DEFAULT
         })
       })
     })
   }
 }
-class L extends n.PureComponent {
+class P extends n.PureComponent {
   componentDidMount() {
     this._loadedAt = Date.now()
   }
@@ -123,10 +123,10 @@ class L extends n.PureComponent {
       subscriptionPlan: s,
       giftCodeBatchId: n
     } = this.props;
-    return e = n === x.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID ? R.default.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE : n === x.STICKERS_GIFT_CODE_BATCH_ID && null != s ? (s.interval === x.SubscriptionIntervalTypes.MONTH ? R.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : R.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
+    return e = n === R.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID ? x.default.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE : n === R.STICKERS_GIFT_CODE_BATCH_ID && null != s ? (s.interval === R.SubscriptionIntervalTypes.MONTH ? x.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : x.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
       skuName: t.name,
       intervalCount: s.intervalCount
-    }) : null == s ? t.name : (s.interval === x.SubscriptionIntervalTypes.MONTH ? R.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : R.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
+    }) : null == s ? t.name : (s.interval === R.SubscriptionIntervalTypes.MONTH ? x.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : x.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
       skuName: t.name,
       intervalCount: s.intervalCount
     }), (0, a.jsx)("div", {
@@ -141,13 +141,13 @@ class L extends n.PureComponent {
       className: M.generateCodeRow,
       children: [(0, a.jsx)("div", {
         className: M.codeText,
-        children: R.default.Messages.GIFT_INVENTORY_GENERATE_HELP
+        children: x.default.Messages.GIFT_INVENTORY_GENERATE_HELP
       }), (0, a.jsx)(d.Button, {
         submitting: this.state.isCreating,
         size: d.Button.Sizes.SMALL,
         color: d.Button.Colors.BRAND,
         onClick: this.handleGenerateGiftCode,
-        children: R.default.Messages.GIFT_INVENTORY_GENERATE_LINK
+        children: x.default.Messages.GIFT_INVENTORY_GENERATE_LINK
       })]
     })
   }
@@ -169,14 +169,14 @@ class L extends n.PureComponent {
     } = this.props, {
       isOpen: c
     } = this.state;
-    return (0, a.jsxs)(g.default, {
+    return (0, a.jsxs)(I.default, {
       className: l,
       children: [(0, a.jsx)(d.Clickable, {
         onClick: this.handleToggleOpen,
         className: M.card,
         onMouseEnter: () => this.setIsHovered(!0),
         onMouseLeave: () => this.setIsHovered(!1),
-        children: (0, a.jsx)(g.default.Header, {
+        children: (0, a.jsx)(I.default.Header, {
           splashArtURL: t.getSplashURL(512),
           children: (0, a.jsxs)("div", {
             className: M.cardHeader,
@@ -194,7 +194,7 @@ class L extends n.PureComponent {
                 className: M.headerText,
                 children: [this.renderTitle(), (0, a.jsx)("div", {
                   className: M.subTextHeader,
-                  children: R.default.Messages.GIFT_INVENTORY_COPIES.format({
+                  children: x.default.Messages.GIFT_INVENTORY_COPIES.format({
                     copies: e.length
                   })
                 })]
@@ -205,7 +205,7 @@ class L extends n.PureComponent {
             })]
           })
         })
-      }), c ? (0, a.jsx)(g.default.Body, {
+      }), c ? (0, a.jsx)(I.default.Body, {
         children: r ? (0, a.jsx)(d.Spinner, {
           className: M.spinner
         }) : (0, a.jsxs)(n.Fragment, {
@@ -219,11 +219,11 @@ class L extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), v(this, "_loadedAt", null), v(this, "state", {
+    super(...e), L(this, "_loadedAt", null), L(this, "state", {
       isOpen: !1,
       isCreating: !1,
       isHovered: !1
-    }), v(this, "handleGenerateGiftCode", async e => {
+    }), L(this, "handleGenerateGiftCode", async e => {
       e.stopPropagation();
       let {
         skuId: t,
@@ -236,7 +236,7 @@ class L extends n.PureComponent {
         isCreating: !1,
         isOpen: !0
       })
-    }), v(this, "handleToggleOpen", () => {
+    }), L(this, "handleToggleOpen", () => {
       let {
         skuId: e,
         subscriptionPlanId: t,
@@ -262,7 +262,7 @@ t.default = r.default.connectStores([m.default, _.default, T.default, c.default,
     isFetching: T.default.getUserGiftCodesFetchingForSKUAndPlan(t, s),
     loadedAt: T.default.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
     application: c.default.getApplication(n.applicationId),
-    subscriptionPlan: null != s ? (0, O.getOrFetchSubscriptionPlan)(s) : null,
+    subscriptionPlan: null != s ? (0, p.getOrFetchSubscriptionPlan)(s) : null,
     giftCodes: l
   }
-})(L)
+})(P)

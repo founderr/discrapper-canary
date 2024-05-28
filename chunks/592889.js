@@ -7,24 +7,24 @@ s.r(t), s.d(t, {
 var a = s("735250"),
   n = s("470079"),
   i = s("120356"),
-  l = s.n(i),
-  r = s("512722"),
-  u = s.n(r),
+  r = s.n(i),
+  l = s("512722"),
+  u = s.n(l),
   o = s("442837"),
   d = s("780384"),
   c = s("481060"),
   p = s("355467"),
-  m = s("100527"),
-  f = s("906732"),
-  E = s("210887"),
+  f = s("100527"),
+  E = s("906732"),
+  m = s("210887"),
   _ = s("301766"),
-  I = s("509545"),
-  S = s("285952"),
+  S = s("509545"),
+  I = s("285952"),
   N = s("759231"),
   P = s("74538"),
   C = s("937615"),
-  h = s("689938"),
-  T = s("765094");
+  T = s("689938"),
+  h = s("765094");
 
 function A(e) {
   let {
@@ -32,51 +32,51 @@ function A(e) {
     renewalMutations: s,
     transitionState: n,
     onClose: i,
-    analyticsLocation: l
-  } = e, r = (0, o.useStateFromStores)([E.default], () => E.default.theme), {
+    analyticsLocation: r
+  } = e, l = (0, o.useStateFromStores)([m.default], () => m.default.theme), {
     analyticsLocations: N
-  } = (0, f.default)(m.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
+  } = (0, E.default)(f.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
   async function A() {
-    await (0, p.upgradeSubscription)(t, t.planId, N, l), i()
+    await (0, p.upgradeSubscription)(t, t.planId, N, r), i()
   }
-  let R = I.default.get(t.planId);
+  let R = S.default.get(t.planId);
   u()(null != R, "Missing subscriptionPlan");
-  let y = (0, P.getPrice)(t.planId, !1, !1, {
+  let M = (0, P.getPrice)(t.planId, !1, !1, {
       paymentSourceId: t.paymentSourceId,
       currency: t.currency
     }),
-    M = (0, C.formatRate)((0, C.formatPrice)(y.amount, y.currency), R.interval, R.intervalCount);
+    y = (0, C.formatRate)((0, C.formatPrice)(M.amount, M.currency), R.interval, R.intervalCount);
   return (0, a.jsxs)(c.ModalRoot, {
     transitionState: n,
-    "aria-label": h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
+    "aria-label": T.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
     children: [(0, a.jsxs)(c.ModalHeader, {
-      justify: S.default.Justify.BETWEEN,
+      justify: I.default.Justify.BETWEEN,
       separator: !1,
       children: [(0, a.jsx)(c.FormTitle, {
         tag: c.FormTitleTags.H4,
-        children: h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
+        children: T.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
       }), (0, a.jsx)(c.ModalCloseButton, {
         onClick: i
       })]
     }), (0, a.jsx)(c.ModalContent, {
-      className: T.modalBody,
-      children: (0, _.isNoneSubscription)(t.planId) ? h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
+      className: h.modalBody,
+      children: (0, _.isNoneSubscription)(t.planId) ? T.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
         downgradedPlan: P.default.getDisplayName(s.planId),
-        existingRate: M
-      }) : h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
+        existingRate: y
+      }) : T.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
         existingPlan: P.default.getDisplayName(t.planId),
         downgradedPlan: P.default.getDisplayName(s.planId),
-        existingRate: M
+        existingRate: y
       })
     }), (0, a.jsxs)(c.ModalFooter, {
       children: [(0, a.jsx)(c.Button, {
         onClick: A,
-        children: h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
+        children: T.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
       }), (0, a.jsx)(c.Button, {
         look: c.Button.Looks.LINK,
-        color: (0, d.isThemeLight)(r) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
+        color: (0, d.isThemeLight)(l) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
         onClick: i,
-        children: h.default.Messages.NEVERMIND
+        children: T.default.Messages.NEVERMIND
       })]
     })]
   })
@@ -87,15 +87,15 @@ function R(e) {
     subscription: t,
     renewalMutations: s,
     className: i,
-    analyticsLocation: r
+    analyticsLocation: l
   } = e, [u, o] = n.useState(!1);
   return (0, a.jsxs)("div", {
-    className: l()(T.root, i),
+    className: r()(h.root, i),
     children: [(0, a.jsx)(N.default, {
-      className: T.infoIcon
+      className: h.infoIcon
     }), (0, a.jsx)("div", {
-      className: T.text,
-      children: h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
+      className: h.text,
+      children: T.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
         planName: t.hasExternalPlanChange ? (0, P.getExternalPlanDisplayName)(s) : P.default.getDisplayName(s.planId),
         date: t.currentPeriodEnd
       })
@@ -103,8 +103,8 @@ function R(e) {
       onClick: e => {
         o(!0), e.preventDefault()
       },
-      className: T.cancelLink,
-      children: h.default.Messages.CANCEL
+      className: h.cancelLink,
+      children: T.default.Messages.CANCEL
     }), u ? (0, a.jsx)(c.Modal, {
       renderModal: e => {
         let {
@@ -115,7 +115,7 @@ function R(e) {
           renewalMutations: s,
           transitionState: n,
           onClose: () => o(!1),
-          analyticsLocation: r
+          analyticsLocation: l
         })
       },
       onCloseRequest: () => o(!1)

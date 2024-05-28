@@ -12,8 +12,8 @@ var l, a, s, i, r = n("392711"),
   C = n("420660"),
   g = n("728345"),
   E = n("812206"),
-  _ = n("710845"),
-  S = n("38618"),
+  S = n("710845"),
+  _ = n("38618"),
   I = n("656063"),
   N = n("761282"),
   T = n("789407"),
@@ -23,8 +23,8 @@ var l, a, s, i, r = n("392711"),
   x = n("592125"),
   R = n("480294"),
   M = n("831506"),
-  O = n("731290"),
-  y = n("430824"),
+  y = n("731290"),
+  O = n("430824"),
   D = n("496675"),
   b = n("158776"),
   j = n("699516"),
@@ -34,12 +34,12 @@ var l, a, s, i, r = n("392711"),
   w = n("823379"),
   B = n("981631");
 let F = !1,
-  H = !1,
-  V = [],
+  V = !1,
+  H = [],
   k = [],
   Y = {},
-  W = {},
-  K = new Set,
+  K = {},
+  W = new Set,
   z = new Set;
 
 function Z() {
@@ -61,16 +61,16 @@ function q(e) {
 }
 
 function Q(e) {
-  return null == W[e] && (W = {
-    ...W,
+  return null == K[e] && (K = {
+    ...K,
     [e]: new A.default({
       url: e
     })
-  }), W[e]
+  }), K[e]
 }
 
 function J(e) {
-  !z.has(e) && K.add(e)
+  !z.has(e) && W.add(e)
 }
 
 function $(e) {
@@ -97,7 +97,7 @@ function en(e, t, n) {
     p = null !== (l = null == m ? void 0 : m.nsfwAllowed) && void 0 !== l && l,
     C = t.map(e => e.id),
     g = t.filter(t => e.has(t.id)),
-    S = !1,
+    _ = !1,
     R = [],
     j = new Set,
     P = !1,
@@ -105,7 +105,7 @@ function en(e, t, n) {
   for (let e of t) {
     let n = v.default.getAnyStreamForUser(e.id),
       l = x.default.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!p || !O.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
+    if ((null == l ? void 0 : l.isNSFW()) && (!p || !y.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
     let r = X(e.id);
     if (null != n && B.push({
         stream: n,
@@ -117,7 +117,7 @@ function en(e, t, n) {
     P = u === T.SPOTIFY_APPLICATION_ID;
     let d = function(e) {
         let t = E.default.getApplication(e);
-        return null != t ? t : "string" != typeof e ? (new _.default("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
+        return null != t ? t : "string" != typeof e ? (new S.default("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
           tags: {
             source: "ACTIVITIES"
           }
@@ -136,7 +136,7 @@ function en(e, t, n) {
           ChannelStore: x.default,
           VoiceStateStore: U.default,
           PermissionStore: D.default,
-          GuildStore: y.default
+          GuildStore: O.default
         }) !== f.EmbeddedActivityJoinability.CAN_JOIN) continue
     } else if (null == C) continue;
     if (!N.shouldShowActivity(r) || null == d || j.has(d.id)) continue;
@@ -150,7 +150,7 @@ function en(e, t, n) {
       let t = X(e.id),
         n = null != t ? $(t) : null;
       return null != n && n.id === d.id
-    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (S = !0), j.add(d.id), R.push({
+    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (_ = !0), j.add(d.id), R.push({
       game: d,
       activity: r,
       activityUser: e,
@@ -159,15 +159,15 @@ function en(e, t, n) {
     })
   }
   let F = 1 === g.length,
-    H = [],
-    V = new Set,
+    V = [],
+    H = new Set,
     k = new Set;
   for (let e of t) {
     let n = ee(e.id),
       l = x.default.getChannel(n),
       a = null != l ? l.getGuildId() : null,
-      s = y.default.getGuild(a);
-    if (k.has(a) && V.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, F = !0);
+      s = O.default.getGuild(a);
+    if (k.has(a) && H.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, F = !0);
     else {
       let e = o()(U.default.getVoiceStatesForChannel(l.id)).map(e => {
         let {
@@ -175,7 +175,7 @@ function en(e, t, n) {
         } = e;
         return G.default.getUser(t)
       }).filter(w.isNotNullish).orderBy([et], ["desc"]).value();
-      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), F ? !k.has(a) && (d = null) : (d = s, F = !0), k.add(a), V.add(n), H.push({
+      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), F ? !k.has(a) && (d = null) : (d = s, F = !0), k.add(a), H.add(n), V.push({
         channel: l,
         guild: s,
         members: e
@@ -184,14 +184,14 @@ function en(e, t, n) {
   }
   return {
     id: n,
-    voiceChannels: H,
+    voiceChannels: V,
     isSpotifyActivity: P,
     priorityMembers: g.map(e => ({
       user: e,
       status: b.default.getStatus(e.id)
     })),
     partiedMembers: t,
-    showPlayingMembers: S,
+    showPlayingMembers: _,
     guildContext: d,
     currentActivities: (r = R, u = e => {
       var t;
@@ -202,13 +202,13 @@ function en(e, t, n) {
 }
 
 function el() {
-  return F && S.default.isConnected()
+  return F && _.default.isConnected()
 }
 let ea = o().throttle(() => {
   ! function() {
     var e;
     if (!el()) return;
-    K.clear(), k = (V = (function(e) {
+    W.clear(), k = (H = (function(e) {
       let t = Z(),
         n = en.bind(null, t);
       return o()(e).mapValues(n)
@@ -224,11 +224,11 @@ let ea = o().throttle(() => {
       type: B.ActivityCardTypes.USER,
       party: e
     })), ! function() {
-      if (K.size > 0) {
-        let e = Array.from(K);
-        g.default.fetchApplications(e), e.forEach(e => z.add(e)), K.clear()
+      if (W.size > 0) {
+        let e = Array.from(W);
+        g.default.fetchApplications(e), e.forEach(e => z.add(e)), W.clear()
       }
-    }(), H = !0
+    }(), V = !0
   }(), er.emitChange()
 }, 1e3);
 
@@ -237,10 +237,10 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(S.default, y.default, E.default, G.default, P.default)
+    this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(_.default, O.default, E.default, G.default, P.default)
   }
   get currentActivityParties() {
-    return V
+    return H
   }
   get nowPlayingCards() {
     return k
@@ -249,7 +249,7 @@ class ei extends(l = u.default.Store) {
     return F
   }
   get loaded() {
-    return H
+    return V
   }
 }
 i = "NowPlayingViewStore", (s = "displayName") in(a = ei) ? Object.defineProperty(a, s, {
@@ -260,7 +260,7 @@ i = "NowPlayingViewStore", (s = "displayName") in(a = ei) ? Object.definePropert
 }) : a[s] = i;
 let er = new ei(d.default, {
   LOGOUT: function() {
-    F = !1, V = [], k = [], K.clear()
+    F = !1, H = [], k = [], W.clear()
   },
   NOW_PLAYING_MOUNTED: function() {
     F = !0, ea()

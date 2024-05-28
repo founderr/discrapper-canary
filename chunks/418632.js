@@ -1,17 +1,17 @@
 "use strict";
 s.r(t), s("47120");
-var a, n = s("735250"),
+var n, o = s("735250"),
   i = s("470079"),
   l = s("512722"),
-  r = s.n(l),
-  u = s("442837"),
-  o = s("481060"),
-  d = s("893776"),
+  a = s.n(l),
+  r = s("442837"),
+  d = s("481060"),
+  u = s("893776"),
   c = s("468026"),
-  p = s("594174"),
-  m = s("689938");
+  f = s("594174"),
+  I = s("689938");
 
-function f(e, t, s) {
+function h(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -19,26 +19,26 @@ function f(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class E extends(a = i.Component) {
+class E extends(n = i.Component) {
   render() {
     let {
       color: e,
       look: t,
       size: s
     } = this.props;
-    return (0, n.jsx)(o.Button, {
+    return (0, o.jsx)(d.Button, {
       look: t,
       size: s,
       color: e,
       disabled: this.state.isSendingVerificationEmail,
       onClick: this.handleResendVerification,
-      children: m.default.Messages.RESEND_VERIFICATION_EMAIL
+      children: I.default.Messages.RESEND_VERIFICATION_EMAIL
     })
   }
   constructor(...e) {
-    super(...e), f(this, "state", {
+    super(...e), h(this, "state", {
       isSendingVerificationEmail: !1
-    }), f(this, "handleResendVerification", () => {
+    }), h(this, "handleResendVerification", () => {
       let {
         currentUser: e,
         onClick: t
@@ -46,23 +46,23 @@ class E extends(a = i.Component) {
       null == t || t(), this.setState({
         isSendingVerificationEmail: !0
       }, () => {
-        d.default.verifyResend().then(() => (0, o.openModal)(t => (0, n.jsx)(o.ConfirmModal, {
-          header: m.default.Messages.VERIFICATION_EMAIL_TITLE,
-          confirmText: m.default.Messages.OKAY,
-          confirmButtonColor: o.Button.Colors.BRAND,
+        u.default.verifyResend().then(() => (0, d.openModal)(t => (0, o.jsx)(d.ConfirmModal, {
+          header: I.default.Messages.VERIFICATION_EMAIL_TITLE,
+          confirmText: I.default.Messages.OKAY,
+          confirmButtonColor: d.Button.Colors.BRAND,
           ...t,
-          children: (0, n.jsx)(o.Text, {
+          children: (0, o.jsx)(d.Text, {
             variant: "text-md/normal",
-            children: m.default.Messages.VERIFICATION_EMAIL_BODY.format({
+            children: I.default.Messages.VERIFICATION_EMAIL_BODY.format({
               email: e.email
             })
           })
         }))).catch(e => {
           let {
             body: t
-          } = e, s = m.default.Messages.VERIFICATION_EMAIL_ERROR_BODY;
-          null != t && t.email && (s = t.email), (0, o.openModal)(e => (0, n.jsx)(c.default, {
-            title: m.default.Messages.VERIFICATION_EMAIL_ERROR_TITLE,
+          } = e, s = I.default.Messages.VERIFICATION_EMAIL_ERROR_BODY;
+          null != t && t.email && (s = t.email), (0, d.openModal)(e => (0, o.jsx)(c.default, {
+            title: I.default.Messages.VERIFICATION_EMAIL_ERROR_TITLE,
             body: s,
             ...e
           }))
@@ -73,12 +73,12 @@ class E extends(a = i.Component) {
     })
   }
 }
-f(E, "defaultProps", {
-  size: o.Button.Sizes.MEDIUM,
-  color: o.Button.Colors.BRAND
-}), t.default = u.default.connectStores([p.default], () => {
-  let e = p.default.getCurrentUser();
-  return r()(null != e, "ResendEmailVerificationButton: currentUser cannot be undefined"), {
+h(E, "defaultProps", {
+  size: d.Button.Sizes.MEDIUM,
+  color: d.Button.Colors.BRAND
+}), t.default = r.default.connectStores([f.default], () => {
+  let e = f.default.getCurrentUser();
+  return a()(null != e, "ResendEmailVerificationButton: currentUser cannot be undefined"), {
     currentUser: e
   }
 })(E)

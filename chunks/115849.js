@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("153124"),
   f = n("657682"),
   E = n("981631"),
-  h = n("420212"),
-  _ = n("689938"),
-  C = n("909759"),
-  m = n("611273");
-let S = {
+  C = n("420212"),
+  h = n("689938"),
+  _ = n("909759"),
+  S = n("611273");
+let m = {
     canSend: !1,
     hint: null,
     success: null,
@@ -32,14 +32,14 @@ let S = {
 function T(e, t) {
   switch (t.type) {
     case "RESET":
-      return S;
+      return m;
     case "SUCCESS":
       return {
-        ...S, success: t.text
+        ...m, success: t.text
       };
     case "HINT":
       return {
-        ...S, canSend: !0, hint: t.text
+        ...m, canSend: !0, hint: t.text
       };
     case "ERROR":
       return {
@@ -51,7 +51,7 @@ function T(e, t) {
 function A() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, l] = s.useReducer(T, S),
+    [n, l] = s.useReducer(T, m),
     {
       canSend: r,
       hint: c,
@@ -80,7 +80,7 @@ function A() {
         }
       }).then(() => l({
         type: "SUCCESS",
-        text: _.default.Messages.ADD_FRIEND_SUCCESS.format({
+        text: h.default.Messages.ADD_FRIEND_SUCCESS.format({
           discordTag: n
         })
       }), e => {
@@ -95,29 +95,29 @@ function A() {
     children: [(0, a.jsx)(u.FormText, {
       id: I,
       type: u.FormText.Types.DESCRIPTION,
-      children: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
+      children: h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
     }), (0, a.jsx)(u.FocusRing, {
       focusTarget: e,
       ringTarget: t,
-      ringClassName: C.ring,
+      ringClassName: _.ring,
       children: (0, a.jsxs)("div", {
         ref: t,
-        className: i()(C.addFriendInputWrapper, {
-          [C.success]: A,
-          [C.error]: N
+        className: i()(_.addFriendInputWrapper, {
+          [_.success]: A,
+          [_.error]: N
         }),
         children: [(0, a.jsx)(u.TextInput, {
           id: p,
           inputRef: e,
-          className: C.addFriendInput,
-          inputClassName: C.input,
+          className: _.addFriendInput,
+          inputClassName: _.input,
           onKeyPress: t => {
             let n = t.currentTarget.value;
-            if (t.key !== h.KeyboardEventKey.Enter && n.includes("#")) {
+            if (t.key !== C.KeyboardEventKey.Enter && n.includes("#")) {
               o()(null != e.current, "Input is handling keypress when not mounted");
               let a = n.indexOf("#"),
                 s = e.current.selectionStart,
-                l = t.key === h.KeyboardEventKey.Backspace || t.key === h.KeyboardEventKey.ArrowRight || t.key === h.KeyboardEventKey.ArrowLeft,
+                l = t.key === C.KeyboardEventKey.Backspace || t.key === C.KeyboardEventKey.ArrowRight || t.key === C.KeyboardEventKey.ArrowLeft,
                 i = t.which >= 48 && t.which <= 57;
               null != s && s > a && /^(.+?#\d{4})$/.test(n) && !l ? t.preventDefault() : null != s && s > a && !i && !l && t.preventDefault()
             }
@@ -141,31 +141,31 @@ function A() {
           autoComplete: "off",
           name: "add-friend",
           "data-lpignore": !0,
-          placeholder: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-          "aria-label": _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
+          placeholder: h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
+          "aria-label": h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-invalid": null != N || void 0,
           "aria-describedby": null != N ? g : I
         }), null != c && (0, a.jsx)("div", {
-          className: C.addFriendHint,
+          className: _.addFriendHint,
           "aria-hidden": !0,
           children: c
         }), (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           disabled: !r,
           type: "submit",
-          children: _.default.Messages.ADD_FRIEND_BUTTON
+          children: h.default.Messages.ADD_FRIEND_BUTTON
         })]
       })
     }), null != N && (0, a.jsx)(u.FormText, {
       role: "alert",
       id: g,
       type: u.FormText.Types.ERROR,
-      className: m.marginTop8,
+      className: S.marginTop8,
       children: N
     }), null != A && (0, a.jsx)(u.FormText, {
       role: "status",
       type: u.FormText.Types.SUCCESS,
-      className: m.marginTop8,
+      className: S.marginTop8,
       children: A
     })]
   })

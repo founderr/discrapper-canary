@@ -1,82 +1,82 @@
 "use strict";
 a.r(t), a.d(t, {
   COLLECTIBLES_HEADERS: function() {
-    return S
+    return v
   }
 });
-var l = a("180650"),
-  s = a("44315"),
-  r = a("981631"),
-  n = a("689938"),
-  i = a("216299"),
-  o = a("994745"),
+var s = a("180650"),
+  r = a("44315"),
+  n = a("981631"),
+  l = a("689938"),
+  o = a("216299"),
+  i = a("994745"),
   c = a("341364"),
   u = a("298132"),
   d = a("999715"),
   f = a("194349"),
   C = a("523569"),
-  m = a("967567"),
-  p = a("696228"),
+  p = a("967567"),
+  m = a("696228"),
   g = a("922140"),
   E = a("927412"),
-  h = a("199546"),
-  b = a("613540");
-let x = {
-    MOST_POPULAR: () => n.default.Messages.MOST_POPULAR,
-    NEW_RELEASE: () => n.default.Messages.APPLICATION_STORE_NEW_RELEASE,
-    NITRO_EXCLUSIVE: () => n.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE
+  b = a("199546"),
+  h = a("613540");
+let S = {
+    MOST_POPULAR: () => l.default.Messages.MOST_POPULAR,
+    NEW_RELEASE: () => l.default.Messages.APPLICATION_STORE_NEW_RELEASE,
+    NITRO_EXCLUSIVE: () => l.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE
   },
-  v = {
-    TAKE_ME_THERE: () => n.default.Messages.TAKE_ME_THERE
+  T = {
+    TAKE_ME_THERE: () => l.default.Messages.TAKE_ME_THERE
   },
-  S = [{
-    staticImageSrc: i,
-    videoSrc: o,
+  v = [{
+    staticImageSrc: o,
+    videoSrc: i,
     staticOverflowImageSrc: u,
     logoSrc: c,
-    textColor: (0, s.getColor)(r.Color.BLACK_500),
+    textColor: (0, r.getColor)(n.Color.BLACK_500),
     badge: {
-      label: x.MOST_POPULAR
+      label: S.MOST_POPULAR
     },
     cta: {
-      label: v.TAKE_ME_THERE,
-      categorySkuId: l.CollectiblesCategorySkuId.ANIME_V2
+      label: T.TAKE_ME_THERE,
+      categorySkuId: s.CollectiblesCategorySkuId.ANIME_V2
     }
   }, {
     staticImageSrc: E,
-    videoSrc: h,
-    logoSrc: b,
-    textColor: (0, s.getColor)(r.Color.WHITE_100),
+    videoSrc: b,
+    logoSrc: h,
+    textColor: (0, r.getColor)(n.Color.WHITE_100),
     badge: {
-      label: x.NEW_RELEASE,
+      label: S.NEW_RELEASE,
       date: new Date
     },
     cta: {
-      label: v.TAKE_ME_THERE,
-      categorySkuId: l.CollectiblesCategorySkuId.GALAXY
+      label: T.TAKE_ME_THERE,
+      categorySkuId: s.CollectiblesCategorySkuId.GALAXY
     }
   }, {
-    staticImageSrc: m,
+    staticImageSrc: p,
     staticOverflowImageSrc: g,
-    logoSrc: p,
-    textColor: (0, s.getColor)(r.Color.WHITE_100),
+    logoSrc: m,
+    textColor: (0, r.getColor)(n.Color.WHITE_100),
     badge: {
-      label: x.NITRO_EXCLUSIVE
+      label: S.NITRO_EXCLUSIVE
     },
     cta: {
-      label: v.TAKE_ME_THERE,
-      categorySkuId: l.CollectiblesCategorySkuId.DISXCORE
+      label: T.TAKE_ME_THERE,
+      categorySkuId: s.CollectiblesCategorySkuId.DISXCORE
     }
   }, {
     staticImageSrc: d,
     videoSrc: f,
     logoSrc: C,
-    textColor: (0, s.getColor)(r.Color.WHITE_100),
+    textColor: (0, r.getColor)(n.Color.WHITE_100),
     badge: {
-      label: x.MOST_POPULAR
+      label: S.MOST_POPULAR
     },
     cta: {
-      label: v.TAKE_ME_THERE,
-      categorySkuId: l.CollectiblesCategorySkuId.CYBERPUNK
+      label: T.TAKE_ME_THERE,
+      categorySkuId: s.CollectiblesCategorySkuId.CYBERPUNK
     }
   }]

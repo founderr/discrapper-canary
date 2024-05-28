@@ -22,8 +22,8 @@ t.default = function(e) {
     type: C,
     imageStyles: g,
     imageMarginX: E,
-    imageMarginTop: _,
-    trackingSource: S,
+    imageMarginTop: S,
+    trackingSource: _,
     undismissable: I,
     onDismissed: N,
     onClick: T,
@@ -44,7 +44,7 @@ t.default = function(e) {
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: S,
+        source: _,
         guild_id: t.id,
         notice_type: C
       }), null == T || T()
@@ -64,8 +64,8 @@ t.default = function(e) {
     }),
     children: n
   }));
-  let O = null;
-  "function" == typeof s ? O = s() : null != s && (O = (0, l.jsx)(o.Text, {
+  let y = null;
+  "function" == typeof s ? y = s() : null != s && (y = (0, l.jsx)(o.Text, {
     className: i()({
       [m.center]: v
     }),
@@ -73,7 +73,7 @@ t.default = function(e) {
     color: "text-muted",
     children: s
   }));
-  let y = null != E ? "".concat(E, "px") : "16px";
+  let O = null != E ? "".concat(E, "px") : "16px";
   return (0, l.jsxs)("div", {
     className: i()(m.container, x),
     children: [!0 === I ? null : (0, l.jsx)(o.Clickable, {
@@ -90,9 +90,9 @@ t.default = function(e) {
     }), null != r && (0, l.jsx)("div", {
       className: m.imageContainer,
       style: {
-        marginTop: "".concat(_, "px"),
-        marginLeft: y,
-        marginRight: y
+        marginTop: "".concat(S, "px"),
+        marginLeft: O,
+        marginRight: O
       },
       children: (0, l.jsx)("img", {
         className: m.image,
@@ -102,7 +102,7 @@ t.default = function(e) {
       })
     }), (0, l.jsxs)("div", {
       className: m.message,
-      children: [M, O, R]
+      children: [M, y, R]
     })]
   })
 }

@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("735250"),
-  s = n("470079"),
+  r = n("470079"),
   l = n("512100"),
-  r = n("906732"),
-  a = n("626135"),
+  a = n("906732"),
+  s = n("626135"),
   o = n("981631");
 
 function u(e) {
@@ -18,9 +18,9 @@ function u(e) {
     ...u
   } = e, {
     analyticsLocations: d
-  } = (0, r.default)();
-  return s.useEffect(() => {
-    a.default.track(o.AnalyticEvents.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
+  } = (0, a.default)();
+  return r.useEffect(() => {
+    s.default.track(o.AnalyticEvents.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
       application_id: t,
       sku_id: n,
       location_stack: d

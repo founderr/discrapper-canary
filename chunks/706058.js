@@ -1,32 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   endStageInstance: function() {
-    return r
+    return l
   },
   startStageInstance: function() {
-    return i
+    return s
   },
   updateStageInstance: function() {
-    return l
+    return a
   }
 });
-var a = n("544891"),
-  s = n("981631");
-async function i(e, t, n, i, l) {
-  return (await a.HTTP.post({
-    url: s.Endpoints.STAGE_INSTANCES,
+var r = n("544891"),
+  i = n("981631");
+async function s(e, t, n, s, a) {
+  return (await r.HTTP.post({
+    url: i.Endpoints.STAGE_INSTANCES,
     body: {
       channel_id: e,
       topic: t,
       privacy_level: n,
-      guild_scheduled_event_id: l,
-      send_start_notification: i
+      guild_scheduled_event_id: a,
+      send_start_notification: s
     }
   })).body
 }
-async function l(e, t, n) {
-  return (await a.HTTP.patch({
-    url: s.Endpoints.STAGE_INSTANCE(e),
+async function a(e, t, n) {
+  return (await r.HTTP.patch({
+    url: i.Endpoints.STAGE_INSTANCE(e),
     body: {
       topic: t,
       privacy_level: n
@@ -34,6 +34,6 @@ async function l(e, t, n) {
   })).body
 }
 
-function r(e) {
-  return a.HTTP.del(s.Endpoints.STAGE_INSTANCE(e))
+function l(e) {
+  return r.HTTP.del(i.Endpoints.STAGE_INSTANCE(e))
 }

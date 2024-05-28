@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return C
   }
 });
 var a = n("735250");
@@ -21,31 +21,31 @@ let E = (e, t) => ({
   imgStyle: f.defaultDropImage
 });
 
-function h(e) {
+function C(e) {
   let {
     markAsDismissed: t,
     partnerGame: n
   } = e;
   (0, o.useTrackDropsImpression)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_COMPLETION);
-  let h = (0, o.useDropsExperiment)(n);
-  if (null == h) return null;
+  let C = (0, o.useDropsExperiment)(n);
+  if (null == C) return null;
   let {
-    body: _,
-    imgSrc: C,
-    imgStyle: m
-  } = E(h.drop, h.config.streamLengthRequirement), S = () => {
+    body: h,
+    imgSrc: _,
+    imgStyle: S
+  } = E(C.drop, C.config.streamLengthRequirement), m = () => {
     t(d.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
     className: f.container,
     children: [(0, a.jsx)("img", {
-      src: C,
+      src: _,
       alt: "",
-      className: m
+      className: S
     }), (0, a.jsx)(l.Clickable, {
       className: f.__invalid_buttonClose,
       "aria-label": c.default.Messages.CLOSE,
-      onClick: S,
+      onClick: m,
       children: (0, a.jsx)(r.default, {
         width: 16,
         height: 16,
@@ -58,7 +58,7 @@ function h(e) {
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
       className: f.subTitle,
-      children: _
+      children: h
     }), (0, a.jsx)(l.Button, {
       color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
@@ -69,7 +69,7 @@ function h(e) {
     }), (0, a.jsx)(l.Button, {
       className: f.linkButtonContainer,
       innerClassName: f.linkButton,
-      onClick: S,
+      onClick: m,
       look: l.Button.Looks.LINK,
       fullWidth: !0,
       color: l.Button.Colors.WHITE,

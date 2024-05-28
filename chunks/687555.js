@@ -2,12 +2,12 @@
 t.r(s), t("47120"), t("653041");
 var a = t("735250"),
   r = t("470079"),
-  i = t("120356"),
-  l = t.n(i),
+  l = t("120356"),
+  i = t.n(l),
   n = t("512722"),
   C = t.n(n),
-  d = t("597312"),
-  o = t("442837"),
+  o = t("597312"),
+  d = t("442837"),
   c = t("481060"),
   u = t("232567"),
   f = t("461745"),
@@ -17,8 +17,8 @@ var a = t("735250"),
   _ = t("51144"),
   R = t("281494"),
   j = t("276444"),
-  E = t("529840"),
-  L = t("689938"),
+  L = t("529840"),
+  E = t("689938"),
   m = t("114480"),
   g = t("724531"),
   S = t("99713"),
@@ -28,15 +28,15 @@ var a = t("735250"),
 function F(e) {
   let {
     numOfSelectedUsers: s
-  } = e, t = (0, o.useStateFromStores)([j.default], () => j.default.getReferralsRemaining());
+  } = e, t = (0, d.useStateFromStores)([j.default], () => j.default.getReferralsRemaining());
   C()(null != t, "Referrals remaining should not be null");
   let r = t - s,
-    i = L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_HEADER.format({
+    l = E.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_HEADER.format({
       numReferrals: t
     });
-  return r < t && (i = L.default.Messages.REFERRAL_PROGRAM_SELECT_MORE_FRIEND.format({
+  return r < t && (l = E.default.Messages.REFERRAL_PROGRAM_SELECT_MORE_FRIEND.format({
     numFriends: r
-  }), 1 === r && (i = L.default.Messages.REFERRAL_PROGRAM_SELECT_ONE_MORE_FRIEND), 0 === r && (i = L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECTION_HIT_LIMIT.format({
+  }), 1 === r && (l = E.default.Messages.REFERRAL_PROGRAM_SELECT_ONE_MORE_FRIEND), 0 === r && (l = E.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECTION_HIT_LIMIT.format({
     numReferrals: t
   }))), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -45,35 +45,35 @@ function F(e) {
         className: m.titleImage
       }), (0, a.jsx)(c.Heading, {
         variant: "heading-xl/bold",
-        children: L.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
+        children: E.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
       })]
     }), (0, a.jsx)(c.Text, {
       className: m.description,
       variant: "text-md/medium",
       color: "header-secondary",
-      children: i
-    })]
-  })
-}
-
-function N() {
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: m.title,
-      children: (0, a.jsx)(c.Heading, {
-        variant: "heading-xl/bold",
-        children: L.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS_NO_RESULTS_HEADER
-      })
-    }), (0, a.jsx)(c.Text, {
-      className: m.description,
-      variant: "text-md/medium",
-      color: "header-secondary",
-      children: L.default.Messages.REFERRAL_PROGRAM_SELCT_FRIENDS_NO_RESULTS_SUBHEADER
+      children: l
     })]
   })
 }
 
 function v() {
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)("div", {
+      className: m.title,
+      children: (0, a.jsx)(c.Heading, {
+        variant: "heading-xl/bold",
+        children: E.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS_NO_RESULTS_HEADER
+      })
+    }), (0, a.jsx)(c.Text, {
+      className: m.description,
+      variant: "text-md/medium",
+      color: "header-secondary",
+      children: E.default.Messages.REFERRAL_PROGRAM_SELCT_FRIENDS_NO_RESULTS_SUBHEADER
+    })]
+  })
+}
+
+function N() {
   return (0, a.jsx)("div", {
     className: m.erroredContent,
     children: (0, a.jsx)(h.default, {
@@ -91,18 +91,18 @@ function y(e) {
   return (0, a.jsxs)("div", {
     className: m.erroredContainer,
     children: [(0, a.jsxs)("div", {
-      className: l()(m.erroredHeader, m.headerSeparator),
+      className: i()(m.erroredHeader, m.headerSeparator),
       children: [(0, a.jsx)("div", {
         className: m.title,
         children: (0, a.jsx)(c.Heading, {
           variant: "heading-xl/bold",
-          children: L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_ERROR_HEADER
+          children: E.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_ERROR_HEADER
         })
       }), (0, a.jsx)(c.Text, {
         className: m.description,
         variant: "text-md/medium",
         color: "header-secondary",
-        children: L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_ERROR_SUBHEADER
+        children: E.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_ERROR_SUBHEADER
       })]
     }), (0, a.jsx)("div", {
       className: m.erroredContent,
@@ -112,11 +112,11 @@ function y(e) {
         height: 190
       })
     }), (0, a.jsx)("div", {
-      className: l()(m.footer, m.footerSeparator),
+      className: i()(m.footer, m.footerSeparator),
       children: (0, a.jsx)(c.Button, {
         className: m.submit,
         onClick: () => s(),
-        children: L.default.Messages.REFERRAL_PROGRAM_CLOSE
+        children: E.default.Messages.REFERRAL_PROGRAM_CLOSE
       })
     })]
   })
@@ -125,7 +125,7 @@ function y(e) {
 function O(e) {
   let {
     onShare: s
-  } = e, t = (0, o.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [i, n] = r.useState([]), [C, d] = r.useState(new Set);
+  } = e, t = (0, d.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [l, n] = r.useState([]), [C, o] = r.useState(new Set);
   return r.useEffect(() => {
     (async () => {
       let e = [];
@@ -138,39 +138,39 @@ function O(e) {
   }, [t]), (0, a.jsxs)("div", {
     className: m.remindContainer,
     children: [(0, a.jsxs)("div", {
-      className: l()(m.remindHeader, m.headerSeparator),
+      className: i()(m.remindHeader, m.headerSeparator),
       children: [(0, a.jsxs)("div", {
         className: m.title,
         children: [(0, a.jsx)(w, {
           className: m.titleImage
         }), (0, a.jsx)(c.Heading, {
           variant: "heading-xl/bold",
-          children: L.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS
+          children: E.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS
         })]
       }), (0, a.jsx)(c.Text, {
         className: m.description,
         variant: "text-md/medium",
         color: "header-secondary",
-        children: L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_RESENT_HEADER
+        children: E.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_RESENT_HEADER
       })]
     }), (0, a.jsx)("div", {
       className: m.list,
-      children: i.map(e => (0, a.jsx)(E.default, {
+      children: l.map(e => (0, a.jsx)(L.default, {
         user: e,
         checked: C.has(e),
         onChange: (e, s) => {
-          d(t => {
+          o(t => {
             let a = new Set(t);
             return s ? a.add(e) : a.delete(e), a
           })
         }
       }, e.id))
     }), (0, a.jsx)("div", {
-      className: l()(m.footer, m.footerSeparator),
+      className: i()(m.footer, m.footerSeparator),
       children: (0, a.jsx)(c.Button, {
         className: m.submit,
         onClick: () => s([...C.values()]),
-        children: L.default.Messages.REFERRAL_PROGRAM_SHARE_TRIAL
+        children: E.default.Messages.REFERRAL_PROGRAM_SHARE_TRIAL
       })
     })]
   })
@@ -180,7 +180,7 @@ function w(e) {
   let {
     className: s
   } = e;
-  return "light" === (0, o.useStateFromStores)([p.default], () => p.default.theme) ? (0, a.jsx)(h.default, {
+  return "light" === (0, d.useStateFromStores)([p.default], () => p.default.theme) ? (0, a.jsx)(h.default, {
     className: s,
     src: g,
     width: 55,
@@ -196,7 +196,7 @@ s.default = function(e) {
   let {
     onClose: s,
     onShare: t
-  } = e, i = (0, o.useStateFromStores)([j.default], () => j.default.getReferralsRemaining()), n = (0, o.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [p, h] = r.useState(0), [g, S] = r.useState(""), [A, M] = r.useState([]), [w, I] = r.useState(!1), [U, G] = r.useState(!1), T = function(e, s) {
+  } = e, l = (0, d.useStateFromStores)([j.default], () => j.default.getReferralsRemaining()), n = (0, d.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [p, h] = r.useState(0), [g, S] = r.useState(""), [A, M] = r.useState([]), [w, I] = r.useState(!1), [U, G] = r.useState(!1), T = function(e, s) {
     let [t, a] = r.useState(e);
     return r.useEffect(() => {
       let t = setTimeout(() => {
@@ -209,7 +209,7 @@ s.default = function(e) {
   }(g, 400), [B, D] = r.useState(new Map), [k, H] = r.useState(new Map);
   r.useEffect(() => {
     P(0)
-  }, [T]), C()(null != i, "Referrals remaining should not be null");
+  }, [T]), C()(null != l, "Referrals remaining should not be null");
   let P = async e => {
     try {
       if (null == e) return;
@@ -239,21 +239,21 @@ s.default = function(e) {
   if (U) return (0, a.jsx)(y, {
     onClose: s
   });
-  if (0 === i) return (0, a.jsx)(O, {
+  if (0 === l) return (0, a.jsx)(O, {
     onShare: t
   });
   let Z = T.length > 0 && 0 === A.length;
   return (0, a.jsxs)("div", {
     className: m.container,
     children: [(0, a.jsxs)("div", {
-      className: l()(m.header, m.headerSeparator),
-      children: [Z ? (0, a.jsx)(N, {}) : (0, a.jsx)(F, {
+      className: i()(m.header, m.headerSeparator),
+      children: [Z ? (0, a.jsx)(v, {}) : (0, a.jsx)(F, {
         numOfSelectedUsers: B.size
       }), (0, a.jsx)(f.default, {
         className: m.searchbar,
         size: f.default.Sizes.MEDIUM,
         tags: [...B.values()].map(e => _.default.getName(e)),
-        placeholder: L.default.Messages.REFERRAL_PROGRAM_SEARCH_FRIENDS,
+        placeholder: E.default.Messages.REFERRAL_PROGRAM_SEARCH_FRIENDS,
         query: g,
         onRemoveTag: e => {
           D(s => {
@@ -265,10 +265,10 @@ s.default = function(e) {
         onQueryChange: S,
         onClear: () => S("")
       })]
-    }), Z ? (0, a.jsx)(v, {}) : (0, a.jsxs)(d.ScrollerAuto, {
+    }), Z ? (0, a.jsx)(N, {}) : (0, a.jsxs)(o.ScrollerAuto, {
       className: m.list,
-      children: [A.map(e => (0, a.jsx)(E.default, {
-        disabled: [...B.values()].filter(e => !k.has(e.id)).length >= i && !B.has(e.id) && !k.has(e.id),
+      children: [A.map(e => (0, a.jsx)(L.default, {
+        disabled: [...B.values()].filter(e => !k.has(e.id)).length >= l && !B.has(e.id) && !k.has(e.id),
         checked: B.has(e.id),
         user: e,
         onChange: (e, s) => {
@@ -281,7 +281,7 @@ s.default = function(e) {
         ref: b
       })]
     }), (0, a.jsx)("div", {
-      className: l()(m.footer, m.footerSeparator),
+      className: i()(m.footer, m.footerSeparator),
       children: (0, a.jsx)(c.Button, {
         className: m.submit,
         disabled: 0 === B.size && !Z,
@@ -292,7 +292,7 @@ s.default = function(e) {
           }
           t([...B.values()])
         },
-        children: Z ? L.default.Messages.REFERRAL_PROGRAM_CLOSE : L.default.Messages.REFERRAL_PROGRAM_SHARE_TRIAL
+        children: Z ? E.default.Messages.REFERRAL_PROGRAM_CLOSE : E.default.Messages.REFERRAL_PROGRAM_SHARE_TRIAL
       })
     })]
   })

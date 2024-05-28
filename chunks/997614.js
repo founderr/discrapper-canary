@@ -29,9 +29,9 @@ function T(e) {
     themeable: T
   } = e, I = t.getGuildId(), {
     mute: A,
-    suppress: N
-  } = (0, f.default)(t), v = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), x = A || N || v, M = (0, u.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: x
+    suppress: v
+  } = (0, f.default)(t), x = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), N = A || v || x, M = (0, u.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: N
   }), [R, y] = (0, o.useGetDismissibleContent)(M);
 
   function L(e) {
@@ -76,11 +76,11 @@ function T(e) {
       themeable: T,
       label: function() {
         if (A) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (N) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (v) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
+        if (v) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (x) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
       }(),
       iconComponent: E.default,
-      disabled: x,
+      disabled: N,
       onContextMenu: L,
       ...e
     })

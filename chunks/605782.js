@@ -3,14 +3,14 @@ n.r(t);
 var s = n("735250"),
   a = n("470079"),
   i = n("613828"),
-  r = n("215569");
-class l extends a.Component {
+  l = n("215569");
+class r extends a.Component {
   render() {
     let {
       children: e,
       location: t,
       history: n,
-      staticContext: l,
+      staticContext: r,
       match: o,
       ...u
     } = this.props, d = null, c = null;
@@ -18,7 +18,7 @@ class l extends a.Component {
       if (null == d && a.isValidElement(e)) {
         let {
           component: s,
-          render: r,
+          render: l,
           ...o
         } = e.props, u = o.path || o.from;
         null != (d = null != u ? (0, i.matchPath)(t.pathname, {
@@ -30,13 +30,13 @@ class l extends a.Component {
           location: t,
           match: d,
           history: n,
-          staticContext: l
-        }, null != s ? c = a.createElement(s, o) : null != r && (c = r(o)))
+          staticContext: r
+        }, null != s ? c = a.createElement(s, o) : null != l && (c = l(o)))
       }
-    }), (0, s.jsx)(r.TransitionGroup, {
+    }), (0, s.jsx)(l.TransitionGroup, {
       ...u,
       children: c
     })
   }
 }
-t.default = (0, i.withRouter)(l)
+t.default = (0, i.withRouter)(r)

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("735250"),
@@ -15,12 +15,12 @@ var a = n("735250"),
   c = n("205129"),
   f = n("626135"),
   E = n("981631"),
-  h = n("689938");
+  C = n("689938");
 
-function _(e) {
+function h(e) {
   let t = s.useContext(f.AnalyticsContext),
     n = e.voiceChannels[0],
-    _ = (0, l.useStateFromStores)([d.default], () => null != n && d.default.can(E.Permissions.CONNECT, n.channel));
+    h = (0, l.useStateFromStores)([d.default], () => null != n && d.default.can(E.Permissions.CONNECT, n.channel));
   return null == n ? null : [(0, a.jsx)(i.MenuItem, {
     id: "join-voice",
     action: function() {
@@ -34,8 +34,8 @@ function _(e) {
         ...(0, c.getPartyMetadata)(e)
       })
     },
-    label: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_JOIN_CHANNEL,
-    disabled: !_
+    label: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_JOIN_CHANNEL,
+    disabled: !h
   }, "join-voice"), (0, a.jsx)(i.MenuItem, {
     id: "goto-server",
     action: function() {
@@ -49,6 +49,6 @@ function _(e) {
         ...(0, c.getPartyMetadata)(e)
       })
     },
-    label: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_GO_TO_SERVER
+    label: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_GO_TO_SERVER
   }, "goto-server")]
 }

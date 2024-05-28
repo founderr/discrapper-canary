@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("451603"),
   f = n("885714"),
   E = n("940627"),
-  h = n("806519"),
-  _ = n("768581"),
-  C = n("900849"),
-  m = n("556017"),
-  S = n("879484"),
+  C = n("806519"),
+  h = n("768581"),
+  _ = n("900849"),
+  S = n("556017"),
+  m = n("879484"),
   p = n("26580"),
   I = n("206887"),
   g = n("981631"),
@@ -38,19 +38,19 @@ t.default = e => {
     onView: O,
     onTagClick: L
   } = e, {
-    id: M,
-    discoverySplash: P,
-    icon: x,
-    name: y,
-    description: D,
+    id: P,
+    discoverySplash: y,
+    icon: M,
+    name: D,
+    description: x,
     presenceCount: b,
     memberCount: U,
     keywords: j
   } = l, [G, w] = s.useState(!1), [k, B] = s.useState(!1), {
     analyticsLocations: F
-  } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
-    id: M,
-    splash: P,
+  } = (0, u.default)(), H = h.default.getGuildDiscoverySplashURL({
+    id: P,
+    splash: y,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
@@ -59,9 +59,9 @@ t.default = e => {
       case g.ThemeTypes.LIGHT:
         return v
     }
-  }(R), Y = null !== (t = _.default.getGuildIconURL({
-    id: M,
-    icon: x,
+  }(R), Y = null !== (t = h.default.getGuildIconURL({
+    id: P,
+    icon: M,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -89,16 +89,16 @@ t.default = e => {
       }
     }
   };
-  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => m.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = S.DiscoveryTagsExperiment.useExperiment({
+  } = m.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
-  }), z = (0, m.useCanSeeDiscoveryContextMenu)();
+  }), z = (0, S.useCanSeeDiscoveryContextMenu)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.card,
@@ -140,8 +140,8 @@ t.default = e => {
           }),
           children: [(0, a.jsxs)("div", {
             className: A.header,
-            children: [(0, a.jsx)(h.default, {
-              mask: h.default.Masks.SQUIRCLE,
+            children: [(0, a.jsx)(C.default, {
+              mask: C.default.Masks.SQUIRCLE,
               width: 32,
               height: 32,
               children: (0, a.jsx)("img", {
@@ -160,19 +160,19 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: y
+                children: D
               })]
             })]
           }), (0, a.jsx)(r.Text, {
             className: A.description,
             variant: "text-sm/normal",
-            children: D
+            children: x
           }), K && null != j && null != L && (0, a.jsx)(p.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: p.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
             tags: j,
-            section: C.AnalyticsContexts.SEARCH
+            section: _.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
             className: A.memberInfo,
             children: [null != b && (0, a.jsx)("div", {

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   updateLocation: function() {
-    return r
+    return a
   }
 });
-var a = s("570140");
+var n = s("570140");
 
-function r(e) {
-  a.default.wait(() => a.default.dispatch({
+function a(e) {
+  n.default.wait(() => n.default.dispatch({
     type: "APPLICATION_STORE_LOCATION_CHANGE",
     location: e
   }))

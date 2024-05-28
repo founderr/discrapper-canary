@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("247636"),
   f = n("128951"),
   E = n("952826"),
-  h = n("400354"),
-  C = n("652844"),
+  C = n("400354"),
+  h = n("652844"),
   _ = n("789639"),
   S = n("481060"),
   m = n("355467"),
@@ -69,8 +69,8 @@ var a = n("735250"),
   ec = n("331187"),
   ef = n("879815"),
   eE = n("294629"),
-  eh = n("314897"),
-  eC = n("592125"),
+  eC = n("314897"),
+  eh = n("592125"),
   e_ = n("819640"),
   eS = n("131951"),
   em = n("19780"),
@@ -484,7 +484,7 @@ class eq extends s.PureComponent {
       null != t && (0, p.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("28020"), n.e("15972"), n.e("58625"), n.e("61247"), n.e("6416"), n.e("63438"), n.e("58600"), n.e("33053"), n.e("49146"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("10655"), n.e("18824"), n.e("5528"), n.e("89333"), n.e("2535")]).then(n.bind(n, "923422"));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("28020"), n.e("15972"), n.e("58625"), n.e("61247"), n.e("6416"), n.e("63438"), n.e("58600"), n.e("33053"), n.e("49146"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("10655"), n.e("18824"), n.e("5528"), n.e("34446"), n.e("2535")]).then(n.bind(n, "923422"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: t,
@@ -625,7 +625,7 @@ function eQ() {
   var e, t;
   let n = (0, r.useStateFromStores)([eg.default], () => eg.default.getCurrentUser()),
     l = (0, F.useShowEligibilityEnrollmentTooltip)(eH.PartnerGame.FORTNITE),
-    i = (0, r.useStateFromStores)([eh.default], () => eh.default.getId()),
+    i = (0, r.useStateFromStores)([eC.default], () => eC.default.getId()),
     u = (0, G.useCustomStatusActivity)(),
     {
       streaming: d,
@@ -640,20 +640,20 @@ function eQ() {
     E = ew.default.useUserTag(n, {
       decoration: "never"
     }),
-    h = (0, r.useStateFromStores)([eI.default], () => eI.default.hidePersonalInformation),
-    C = (0, r.useStateFromStores)([em.default, eC.default], () => {
+    C = (0, r.useStateFromStores)([eI.default], () => eI.default.hidePersonalInformation),
+    h = (0, r.useStateFromStores)([em.default, eh.default], () => {
       let e = em.default.getChannelId();
-      return null != e ? eC.default.getChannel(e) : null
+      return null != e ? eh.default.getChannel(e) : null
     }),
     {
       mute: _,
       selfMute: p,
       suppress: I
-    } = (0, eE.default)(C),
+    } = (0, eE.default)(h),
     {
       selfDeaf: g,
       deaf: T
-    } = (0, ef.default)(C),
+    } = (0, ef.default)(h),
     O = (0, r.useStateFromStores)([P.default], () => {
       var e;
       return (0, y.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
@@ -736,7 +736,7 @@ function eQ() {
     customStatusActivity: u,
     dismissibleContents: ev,
     userTag: E,
-    hidePrivateData: h,
+    hidePrivateData: C,
     occluded: x,
     premiumSubscription: L,
     selfDeaf: g,
@@ -798,12 +798,12 @@ function eX(e) {
     onMouseEnter: d,
     onMouseLeave: f,
     onClick: E,
-    onContextMenu: h
+    onContextMenu: C
   } = e, _ = t || l || n, {
     Component: m,
     play: p,
     events: I
-  } = (0, C.useMicrophoneLottie)(_ ? "unmute" : "mute"), g = n || l ? c.MicrophoneDenyIcon : m;
+  } = (0, h.useMicrophoneLottie)(_ ? "unmute" : "mute"), g = n || l ? c.MicrophoneDenyIcon : m;
   return s.useEffect(() => () => p(), [_, p]), (0, a.jsx)(eP.default, {
     tooltipText: r,
     tooltipColor: o,
@@ -822,7 +822,7 @@ function eX(e) {
     }),
     iconForeground: _ ? eY.strikethrough : null,
     onClick: E,
-    onContextMenu: h,
+    onContextMenu: C,
     role: "switch",
     "aria-label": eV.default.Messages.MUTE,
     "aria-checked": _,
@@ -842,13 +842,13 @@ function eJ(e) {
     play: f,
     events: {
       onMouseEnter: E,
-      onMouseLeave: C
+      onMouseLeave: h
     }
-  } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), _ = n ? d.HeadphonesDenyIcon : c;
+  } = (0, C.useHeadphonesLottie)(u ? "undeafen" : "deafen"), _ = n ? d.HeadphonesDenyIcon : c;
   return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eP.default, {
     tooltipText: (0, M.default)(t, n, l),
     onMouseEnter: E,
-    onMouseLeave: C,
+    onMouseLeave: h,
     icon: (0, a.jsx)(_, {
       size: "custom",
       width: 20,

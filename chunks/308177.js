@@ -31,9 +31,9 @@ let I = (e, t) => {
     }
   },
   A = (e, t) => e < T.singleSpeaker ? 1 : e < T.twoSpeakers ? 2 : e < T.threeSpeakers ? 3 : t ? 3 : 4,
-  N = e => Math.floor((e - 32) / 102);
+  v = e => Math.floor((e - 32) / 102);
 
-function v(e) {
+function x(e) {
   return e.type === f.StageChannelParticipantTypes.VOICE
 }
 t.default = (0, o.default)(e => {
@@ -44,22 +44,22 @@ t.default = (0, o.default)(e => {
     onScroll: o
   } = e, {
     selectedParticipantId: T,
-    largeStream: x,
+    largeStream: N,
     chatOpen: M
   } = (0, r.useStateFromStoresObject)([u.default], () => ({
     selectedParticipantId: u.default.getSelectedParticipantId(a.id),
     largeStream: u.default.getStageStreamSize(a.id),
     chatOpen: u.default.getChatOpen(a.id)
-  }), [a.id]), R = (0, c.useActualStageSpeakerCount)(a.id), y = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), L = (0, r.useStateFromStores)([d.default], () => null != T ? d.default.getParticipant(a.id, T) : null), O = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), j = O.filter(v), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), D = N(l), b = A(l, M), U = {
+  }), [a.id]), R = (0, c.useActualStageSpeakerCount)(a.id), y = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), L = (0, r.useStateFromStores)([d.default], () => null != T ? d.default.getParticipant(a.id, T) : null), O = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), j = O.filter(x), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), D = v(l), b = A(l, M), U = {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: D,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
-  }, F = (0, h.useThrottleDurationForChannel)(a.id), [w, k] = (0, h.useStageChannelParticipantsListThrottled)(a.id, U, F), B = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
-    speakerTileWidth: H,
-    speakerTileHeight: G
-  } = I(l, b), V = x ? l - 32 : Math.min(l - 64, 3 * H + 8), W = e => e === w.length - 1 || 0 === y && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
+  }, F = (0, h.useThrottleDurationForChannel)(a.id), [w, k] = (0, h.useStageChannelParticipantsListThrottled)(a.id, U, F), H = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
+    speakerTileWidth: G,
+    speakerTileHeight: B
+  } = I(l, b), V = N ? l - 32 : Math.min(l - 64, 3 * G + 8), W = e => e === w.length - 1 || 0 === y && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
   return (0, s.jsx)(p.default, {
-    sections: B,
+    sections: H,
     renderSection: e => {
       let {
         section: t
@@ -106,7 +106,7 @@ t.default = (0, o.default)(e => {
           if (Y) return null;
           return (0, s.jsx)(i.Fragment, {
             children: (0, s.jsx)(E.default, {
-              tileWidth: H,
+              tileWidth: G,
               channel: a,
               participants: l,
               selectedParticipant: L
@@ -123,7 +123,7 @@ t.default = (0, o.default)(e => {
           return null
       }
     },
-    rowHeight: e => null == k[e][0] ? 0 : 0 === e ? V / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : G : K ? 0 : 98,
+    rowHeight: e => null == k[e][0] ? 0 : 0 === e ? V / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : B : K ? 0 : 98,
     renderFooter: e => {
       let {
         section: t

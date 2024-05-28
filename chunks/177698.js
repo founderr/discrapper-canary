@@ -19,17 +19,17 @@ t.default = (0, c.default)(e => {
     scopes: u,
     parsedPermissions: c,
     responseType: E,
-    redirectUri: h,
-    codeChallenge: _,
-    codeChallengeMethod: C,
-    state: m,
-    guildId: S,
+    redirectUri: C,
+    codeChallenge: h,
+    codeChallengeMethod: _,
+    state: S,
+    guildId: m,
     channelId: p,
     prompt: I,
     disableGuildSelect: g,
     disclosures: T,
     integrationType: A
-  } = e, N = "OAuth2Authorize_".concat(n, "_").concat(S, "_").concat(p), v = null != A ? null == o ? void 0 : o.get(A) : void 0, R = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : i.default.getApplication(n);
+  } = e, N = "OAuth2Authorize_".concat(n, "_").concat(m, "_").concat(p), v = null != A ? null == o ? void 0 : o.get(A) : void 0, R = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : i.default.getApplication(n);
   return new Promise((e, t) => {
     let i = n => {
       let {
@@ -47,12 +47,12 @@ t.default = (0, c.default)(e => {
       disclosures: null != T ? T : [],
       callback: i,
       responseType: E,
-      redirectUri: h,
-      codeChallenge: _,
-      codeChallengeMethod: C,
-      state: m,
+      redirectUri: C,
+      codeChallenge: h,
+      codeChallengeMethod: _,
+      state: S,
       permissions: c,
-      guildId: S,
+      guildId: m,
       channelId: p,
       prompt: I,
       disableGuildSelect: "boolean" == typeof g ? g : "true" === g,

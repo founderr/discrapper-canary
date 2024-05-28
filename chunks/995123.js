@@ -27,8 +27,8 @@ var s = a("762914"),
   _ = a("663949"),
   R = a("632184"),
   M = a("414896"),
-  H = a("170039"),
-  A = a("934458"),
+  A = a("170039"),
+  H = a("934458"),
   j = a("447003"),
   p = a("981631");
 
@@ -57,7 +57,7 @@ function I(e, t) {
       if ((0, j.default)(e)) return g.default;
       else return T.default;
     case p.ChannelTypes.GUILD_STAGE_VOICE:
-      return H.default;
+      return A.default;
     case p.ChannelTypes.GUILD_VOICE:
       if ((0, j.default)(e)) return M.default;
       return R.default;
@@ -65,7 +65,7 @@ function I(e, t) {
     case p.ChannelTypes.PUBLIC_THREAD:
       if (e.isNSFW()) return x.default;
       if (e.isForumPost()) return m.default;
-      else return A.default;
+      else return H.default;
     case p.ChannelTypes.PRIVATE_THREAD:
       if (e.isNSFW()) return x.default;
       return _.default;

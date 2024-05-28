@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return I
   }
 }), s("47120");
 var a = s("735250"),
@@ -23,22 +23,22 @@ let _ = (0, u.uid)(),
   }),
   m = (0, u.uid)();
 
-function g(e) {
+function I(e) {
   let {
     sectionTitle: t,
     errors: s,
     onBioChange: d,
     pendingBio: u,
-    placeholder: g,
-    currentBio: I,
+    placeholder: I,
+    currentBio: g,
     disabled: N = !1
-  } = e, [h, C] = n.useState(null != u ? u : I), [p, A] = n.useState((0, r.toRichValue)(h)), O = n.useRef(!1);
+  } = e, [h, C] = n.useState(null != u ? u : g), [O, A] = n.useState((0, r.toRichValue)(h)), p = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
-      let e = (0, r.toRichValue)(I);
-      C(I), A(e)
+      let e = (0, r.toRichValue)(g);
+      C(g), A(e)
     }
-  }, [u, I]), (0, a.jsxs)(c.default, {
+  }, [u, g]), (0, a.jsxs)(c.default, {
     title: t,
     titleId: _,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
@@ -52,18 +52,18 @@ function g(e) {
       onChange: function(e, t, s) {
         t !== h && (C(t), A(s), d(t))
       },
-      placeholder: g,
+      placeholder: I,
       channel: f,
       textValue: h,
-      richValue: p,
+      richValue: O,
       type: i.ChatInputTypes.PROFILE_BIO_INPUT,
       onBlur: () => {
-        O.current = !1
+        p.current = !1
       },
       onFocus: () => {
-        O.current = !0
+        p.current = !0
       },
-      focused: O.current,
+      focused: p.current,
       onSubmit: function() {
         return new Promise(e => {
           e({

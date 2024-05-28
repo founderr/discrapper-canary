@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CharterScrollGameSection: function() {
-    return v
+    return x
   }
 });
 var a = n("735250"),
@@ -26,7 +26,7 @@ var a = n("735250"),
   I = n("689938"),
   A = n("695062");
 
-function N(e) {
+function v(e) {
   let {
     tag: t,
     badge: n,
@@ -56,7 +56,7 @@ function N(e) {
   })
 }
 
-function v(e) {
+function x(e) {
   let {
     applicationIds: t,
     playstyle: n,
@@ -90,7 +90,7 @@ t.default = e => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
-    gameApplicationIds: x,
+    gameApplicationIds: N,
     playstyle: M,
     interests: R,
     tag: y,
@@ -115,7 +115,7 @@ t.default = e => {
       children: (0, a.jsxs)(c.ScrollerNone, {
         fade: !0,
         className: A.overviewSidebarContent,
-        children: [(0, a.jsx)(N, {
+        children: [(0, a.jsx)(v, {
           tag: y,
           badge: L,
           primaryColor: null != O ? O : _.CLAN_BADGE_PRIMARY_DEFAULT,
@@ -137,8 +137,8 @@ t.default = e => {
           children: I.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
             date: o()().format("MMMM YYYY")
           })
-        }), (0, a.jsx)(v, {
-          applicationIds: x,
+        }), (0, a.jsx)(x, {
+          applicationIds: N,
           playstyle: M
         }), null != P ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",

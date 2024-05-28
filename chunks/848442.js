@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return O
   }
 });
 var l = n("735250");
@@ -21,8 +21,8 @@ var a = n("120356"),
   C = n("886176"),
   g = n("605236"),
   E = n("703656"),
-  _ = n("984933"),
-  S = n("430824"),
+  S = n("984933"),
+  _ = n("430824"),
   I = n("696202"),
   N = n("26290"),
   T = n("626135"),
@@ -33,17 +33,17 @@ var a = n("120356"),
   R = n("689938"),
   M = n("119059");
 
-function O(e) {
+function y(e) {
   let {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, m.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), p = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), v = (null == p ? void 0 : p.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, O = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
+  } = e, d = (0, m.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), p = (0, i.useStateFromStores)([_.default], () => _.default.getGuild(t)), v = (null == p ? void 0 : p.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, y = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
   return (0, l.jsx)(A.BasicChannelRow, {
     id: "shop-".concat(t),
     className: s()(M.previewChannelRow, {
       [M.selected]: n,
-      [M.phantomPreview]: O
+      [M.phantomPreview]: y
     }),
     innerClassName: M.previewChannelRowContent,
     renderIcon: e => (0, l.jsx)(C.default, {
@@ -56,7 +56,7 @@ function O(e) {
     onClick: a,
     trailing: (0, l.jsxs)("div", {
       className: M.gifSection,
-      children: [y ? (0, l.jsx)(N.TextBadge, {
+      children: [O ? (0, l.jsx)(N.TextBadge, {
         color: u.tokens.unsafe_rawColors.BRAND_260.css,
         text: R.default.Messages.NEW,
         className: M.newBadge
@@ -72,7 +72,7 @@ function O(e) {
               action_taken: x.GuildShopPreviewClickActions.DISMISS_CHANNEL_ROW
             }), !d || !v) {
             var n;
-            (0, E.replaceWith)(L.Routes.CHANNEL(t, null === (n = _.default.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id))
+            (0, E.replaceWith)(L.Routes.CHANNEL(t, null === (n = S.default.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id))
           }
         },
         "aria-label": R.default.Messages.CLOSE,
@@ -85,14 +85,14 @@ function O(e) {
   })
 }
 
-function y(e) {
+function O(e) {
   let {
     guild: t,
     selected: a
   } = e, s = (0, p.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"), i = () => {
     o.Storage.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"), (0, E.transitionTo)(L.Routes.CHANNEL(t.id, v.StaticChannelRoute.GUILD_SHOP))
   };
-  return s ? (0, l.jsx)(O, {
+  return s ? (0, l.jsx)(y, {
     guildId: t.id,
     selected: a,
     handleClick: i

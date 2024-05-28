@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   BadgeIcon: function() {
-    return r
+    return a
   }
 });
 var i = n("735250");
 n("470079");
-var s = n("692547"),
+var r = n("692547"),
   l = n("331595");
-let r = e => {
+let a = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: r = s.default.colors.INTERACTIVE_NORMAL,
-    colorClass: a = "",
+    color: a = r.default.colors.INTERACTIVE_NORMAL,
+    colorClass: s = "",
     ...o
   } = e;
   return (0, i.jsx)("svg", {
@@ -24,11 +24,11 @@ let r = e => {
     fill: "none",
     viewBox: "0 0 24 24",
     children: (0, i.jsx)("path", {
-      fill: "string" == typeof r ? r : r.css,
+      fill: "string" == typeof a ? a : a.css,
       fillRule: "evenodd",
       d: "M4.6 4.52A3 3 0 0 1 7.54 2H19.9a2 2 0 0 1 1.97 2.32l-2.46 15.16A3 3 0 0 1 16.45 22H4.1a2 2 0 0 1-1.97-2.32L4.59 4.52ZM9 5a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1Zm3.91 5.63a.97.97 0 0 0-1.82 0l-.35.93a2 2 0 0 1-1.18 1.19l-.93.34a.97.97 0 0 0 0 1.82l.93.34a2 2 0 0 1 1.18 1.19l.35.93a.97.97 0 0 0 1.82 0l.34-.93a2 2 0 0 1 1.19-1.19l.93-.34a.97.97 0 0 0 0-1.82l-.93-.34a2 2 0 0 1-1.19-1.19l-.34-.93Z",
       clipRule: "evenodd",
-      className: a
+      className: s
     })
   })
 }

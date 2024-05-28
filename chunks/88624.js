@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("843200"),
   f = s("981631"),
   m = s("689938"),
-  g = s("459056");
-class I extends n.PureComponent {
+  I = s("459056");
+class g extends n.PureComponent {
   renderIntroHeader() {
     let {
       houseMembership: e
@@ -31,10 +31,10 @@ class I extends n.PureComponent {
     } = this.props;
     return (0, a.jsxs)(o.HeadingLevel, {
       component: (0, a.jsxs)("div", {
-        className: g.intro,
+        className: I.intro,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xxl/semibold",
-          className: g.introHeader,
+          className: I.introHeader,
           children: this.renderIntroHeader()
         }), (0, a.jsx)(o.Text, {
           variant: "text-lg/normal",
@@ -42,7 +42,7 @@ class I extends n.PureComponent {
         })]
       }),
       children: [(0, a.jsx)(_.default, {
-        className: g.verificationNotice,
+        className: I.verificationNotice,
         unclaimedNotice: m.default.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
         unverifiedNotice: m.default.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
       }), (0, a.jsx)(u.default, {
@@ -52,7 +52,7 @@ class I extends n.PureComponent {
       }), (0, a.jsx)(d.default, {}), (0, a.jsx)(c.default, {
         isHypeSquadOnlineMember: null != e
       }), (0, a.jsx)(o.Card, {
-        className: g.attendeeCTA,
+        className: I.attendeeCTA,
         children: m.default.Messages.HYPESQUAD_ATTENDEE_CTA.format({
           url: T.default.getArticleURL(f.HelpdeskArticles.PROFILE_BADGES)
         })
@@ -67,4 +67,4 @@ t.default = r.default.connectStores([E.default, S.default], () => {
     isClaimed: e.isClaimed(),
     isVerified: e.verified
   }
-})(I)
+})(g)

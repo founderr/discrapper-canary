@@ -1,41 +1,41 @@
 "use strict";
-r.r(t), r.d(t, {
+a.r(t), a.d(t, {
   useHandleUseNow: function() {
-    return s
+    return l
   }
-}), r("47120");
-var a = r("470079"),
-  o = r("809206"),
-  l = r("350327"),
-  n = r("328456");
-let s = e => {
+}), a("47120");
+var r = a("470079"),
+  s = a("809206"),
+  n = a("350327"),
+  o = a("328456");
+let l = e => {
   let {
     product: t,
-    onSuccess: r,
-    onError: s
-  } = e, [i, c] = a.useState(!1), {
+    onSuccess: a,
+    onError: l
+  } = e, [i, c] = r.useState(!1), {
     firstAvatarDecoration: u,
     firstProfileEffect: d
-  } = (0, n.useShopProductItems)(t);
+  } = (0, o.useShopProductItems)(t);
   return {
-    handleUseNow: a.useCallback(async () => {
+    handleUseNow: r.useCallback(async () => {
       c(!0);
       try {
-        if (null != u && await (0, o.saveAccountChanges)({
+        if (null != u && await (0, s.saveAccountChanges)({
             avatarDecoration: u
           }), null != d) {
           let e = {
             profile_effect_id: d.id
           };
-          await (0, l.saveProfileChanges)(e)
+          await (0, n.saveProfileChanges)(e)
         }
-        r()
+        a()
       } catch (e) {
-        s(e)
+        l(e)
       } finally {
         c(!1)
       }
-    }, [u, d, r, s]),
+    }, [u, d, a, l]),
     isApplying: i
   }
 }

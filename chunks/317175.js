@@ -1,92 +1,92 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return v
+    return g
   }
-}), s("390547");
-var n = s("735250"),
-  o = s("470079"),
-  l = s("120356"),
-  a = s.n(l),
-  r = s("658722"),
-  i = s.n(r),
-  u = s("392711"),
-  c = s.n(u),
-  d = s("217986"),
-  h = s("481060"),
-  f = s("133080"),
-  C = s("285952"),
-  m = s("689938"),
-  p = s("375958"),
-  x = s("661781");
+}), n("390547");
+var s = n("735250"),
+  r = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
+  i = n("658722"),
+  l = n.n(i),
+  u = n("392711"),
+  c = n.n(u),
+  d = n("217986"),
+  h = n("481060"),
+  f = n("133080"),
+  p = n("285952"),
+  C = n("689938"),
+  m = n("375958"),
+  x = n("661781");
 
-function N(e, t, s) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: s,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[t] = n, e
 }
-class v extends o.PureComponent {
+class g extends r.PureComponent {
   renderItems() {
     let {
       query: e
     } = this.state, t = d.default.flatMap((e, t) => {
       let {
-        alpha2: s,
-        phoneCountryCodes: o,
-        name: l
-      } = e, a = (0, f.getI18NCountryName)(s);
-      return o.map(e => ({
+        alpha2: n,
+        phoneCountryCodes: r,
+        name: a
+      } = e, o = (0, f.getI18NCountryName)(n);
+      return r.map(e => ({
         key: "".concat(t, "-").concat(e),
-        name: l,
-        translatedName: a,
+        name: a,
+        translatedName: o,
         countryData: {
-          name: l,
-          alpha2: s,
+          name: a,
+          alpha2: n,
           code: e
         },
-        children: (0, n.jsxs)(C.default, {
-          className: p.countryItem,
-          justify: C.default.Justify.CENTER,
-          align: C.default.Align.CENTER,
-          children: [(0, n.jsx)(C.default.Child, {
-            className: p.countryName,
-            children: a
-          }), (0, n.jsx)(C.default.Child, {
-            className: p.countryCode,
+        children: (0, s.jsxs)(p.default, {
+          className: m.countryItem,
+          justify: p.default.Justify.CENTER,
+          align: p.default.Align.CENTER,
+          children: [(0, s.jsx)(p.default.Child, {
+            className: m.countryName,
+            children: o
+          }), (0, s.jsx)(p.default.Child, {
+            className: m.countryCode,
             grow: 0,
             shrink: 0,
             children: e
           })]
         })
       }))
-    }), s = c()(t).filter(t => 0 === e.length || i()(e.toLowerCase(), t.name.toLowerCase()) || i()(e.toLowerCase(), t.translatedName.toLowerCase())).map(e => (0, o.createElement)(h.PopoutList.Item, {
+    }), n = c()(t).filter(t => 0 === e.length || l()(e.toLowerCase(), t.name.toLowerCase()) || l()(e.toLowerCase(), t.translatedName.toLowerCase())).map(e => (0, r.createElement)(h.PopoutList.Item, {
       ...e,
       key: e.key,
       onClick: () => this.onClick(e.countryData)
     })).value();
-    return 0 === s.length ? (0, n.jsx)(h.PopoutList.Empty, {
-      children: m.default.Messages.NONE
-    }) : (0, n.jsx)(h.ScrollerAuto, {
-      className: p.phoneFieldScroller,
-      children: s
+    return 0 === n.length ? (0, s.jsx)(h.PopoutList.Empty, {
+      children: C.default.Messages.NONE
+    }) : (0, s.jsx)(h.ScrollerAuto, {
+      className: m.phoneFieldScroller,
+      children: n
     })
   }
   render() {
     let {
       className: e
     } = this.props;
-    return (0, n.jsxs)(h.PopoutList, {
-      className: a()(p.phoneFieldPopout, x.elevationBorderLow, e),
-      children: [(0, n.jsx)(h.PopoutList.SearchBar, {
+    return (0, s.jsxs)(h.PopoutList, {
+      className: o()(m.phoneFieldPopout, x.elevationBorderLow, e),
+      children: [(0, s.jsx)(h.PopoutList.SearchBar, {
         query: this.state.query,
-        placeholder: m.default.Messages.SEARCH_COUNTRY,
+        placeholder: C.default.Messages.SEARCH_COUNTRY,
         onChange: this.onChangeQuery,
         onClear: this.onClearQuery,
         autoComplete: "off"
-      }), (0, n.jsx)(h.PopoutList.Divider, {}), this.renderItems()]
+      }), (0, s.jsx)(h.PopoutList.Divider, {}), this.renderItems()]
     })
   }
   constructor(e) {
@@ -99,8 +99,8 @@ class v extends o.PureComponent {
         query: ""
       })
     }), N(this, "onClick", e => {
-      var t, s;
-      null === (t = (s = this.props).onClick) || void 0 === t || t.call(s, e)
+      var t, n;
+      null === (t = (n = this.props).onClick) || void 0 === t || t.call(n, e)
     }), this.state = {
       query: ""
     }

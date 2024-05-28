@@ -27,9 +27,9 @@ t.default = e => {
   } = (0, E.useGamingContentData)(n), {
     primaryColor: I,
     secondaryColor: A
-  } = (0, f.default)(_), N = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
-    streamPreviewUrl: v,
-    stream: x,
+  } = (0, f.default)(_), v = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
+    streamPreviewUrl: x,
+    stream: N,
     channel: M
   } = (0, o.default)(n), {
     displayParticipants: R,
@@ -49,11 +49,11 @@ t.default = e => {
       applicationImageSrc: _,
       avatarSrcs: R.map(e => e.getAvatarURL(t.guild_id, 128)),
       description: a,
-      timestamp: (0, u.formatEntryTimestamp)(n, N),
+      timestamp: (0, u.formatEntryTimestamp)(n, v),
       colors: [I, A],
       channelId: e
     })
-  }, [_, t, R, n, N, O, y, L, I, A, T]);
+  }, [_, t, R, n, v, O, y, L, I, A, T]);
   if (null == T) return null;
   let P = (0, a.jsx)(m.BadgesContainer, {
       location: m.BadgeLocation.POPOUT,
@@ -61,7 +61,7 @@ t.default = e => {
         entry: n
       }, t))
     }),
-    D = null == v ? (0, a.jsx)(p.PopoutContent, {
+    D = null == x ? (0, a.jsx)(p.PopoutContent, {
       thumbnailSrc: _,
       channel: t,
       userDescription: (0, u.isEntryActive)(n) ? C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
@@ -70,12 +70,12 @@ t.default = e => {
       entry: n
     }) : (0, a.jsx)(p.StreamingPopoutContent, {
       channel: t,
-      streamPreviewSrc: v,
+      streamPreviewSrc: x,
       title: n.extra.game_name,
       badges: P,
       userDescription: C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
       entry: n,
-      stream: x
+      stream: N
     });
   return (0, a.jsxs)(p.Popout, {
     children: [D, (0, a.jsx)(p.PopoutInteractionsContainer, {
@@ -88,7 +88,7 @@ t.default = e => {
         entry: n,
         requestId: g,
         voiceChannel: M,
-        isStreaming: null != v
+        isStreaming: null != x
       }) : (0, a.jsx)(p.PopoutReactor, {
         closePopout: S,
         user: T,

@@ -3,7 +3,7 @@
 function r(t) {
   return !!(t && t.then && "function" == typeof t.then)
 }
-e.r(n), e.d(n, {
+n.r(e), n.d(e, {
   isThenable: function() {
     return r
   }

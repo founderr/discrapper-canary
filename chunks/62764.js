@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("346479"),
   I = n("592125"),
   A = n("808602"),
-  N = n("263704"),
-  v = n("757698"),
-  x = n("934415"),
+  v = n("263704"),
+  x = n("757698"),
+  N = n("934415"),
   M = n("456269"),
   R = n("109590"),
   y = n("228392"),
@@ -45,20 +45,20 @@ function D(e) {
   } = e, {
     ref: b,
     width: U
-  } = (0, d.default)(), [F, w] = l.useState(3), [k, B] = l.useState(!n), [H, G] = (0, c.default)(!1, 2e3), V = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(t), [t]), {
+  } = (0, d.default)(), [F, w] = l.useState(3), [k, H] = l.useState(!n), [G, B] = (0, c.default)(!1, 2e3), V = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(t), [t]), {
     firstMessage: W
   } = (0, R.useFirstForumPostMessage)(V), Y = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
     disableReactionUpdates: z,
     disableReactionCreates: K,
     isLurking: Z,
-    isGuest: q,
-    isPendingMember: X
-  } = (0, p.default)(V), Q = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(D)), J = (0, M.useDefaultReactionEmoji)(Q), $ = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), ee = l.useCallback(e => {
+    isGuest: X,
+    isPendingMember: q
+  } = (0, p.default)(V), J = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(D)), Q = (0, M.useDefaultReactionEmoji)(J), $ = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), ee = l.useCallback(e => {
     let t = e[0];
     if (null != t && n) {
       let e = t.intersectionRect,
         n = t.boundingClientRect;
-      B((e.bottom - e.top) / (n.bottom - n.top) < 1)
+      H((e.bottom - e.top) / (n.bottom - n.top) < 1)
     }
   }, [n]);
   l.useLayoutEffect(() => {
@@ -85,9 +85,9 @@ function D(e) {
         location: {
           section: L.AnalyticsSections.CHANNEL_HEADER
         }
-      }), (0, r.copy)((0, x.getChannelLinkToCopy)(V, Q)), G(!0)
+      }), (0, r.copy)((0, N.getChannelLinkToCopy)(V, J)), B(!0)
     },
-    ei = Y ? N.default : A.default;
+    ei = Y ? v.default : A.default;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i()(j.container, {
@@ -98,16 +98,16 @@ function D(e) {
         className: i()(j.reactButtons, {
           [j.loading]: et
         }),
-        children: [!ea && !K && null != J && (0, a.jsx)("div", {
+        children: [!ea && !K && null != Q && (0, a.jsx)("div", {
           className: P.reactions,
           children: (0, a.jsx)(S.Reaction, {
             message: W,
             readOnly: !1,
             useChatFontScaling: !1,
             isLurking: Z,
-            isGuest: q,
-            isPendingMember: X,
-            emoji: J,
+            isGuest: X,
+            isPendingMember: q,
+            emoji: Q,
             type: m.ReactionTypes.NORMAL,
             hideCount: !0,
             count: 0,
@@ -121,8 +121,8 @@ function D(e) {
           disableReactionCreates: !0,
           disableReactionUpdates: z,
           isLurking: Z,
-          isGuest: q,
-          isPendingMember: X,
+          isGuest: X,
+          isPendingMember: q,
           maxReactions: F,
           className: j.reactions,
           useChatFontScaling: !1,
@@ -164,13 +164,13 @@ function D(e) {
             onClick: es,
             className: j.button,
             innerClassName: j.buttonInner,
-            children: [H ? (0, a.jsx)(N.default, {
+            children: [G ? (0, a.jsx)(v.default, {
               width: 16,
               height: 16
-            }) : (0, a.jsx)(v.default, {
+            }) : (0, a.jsx)(x.default, {
               width: 16,
               height: 16
-            }), H ? O.default.Messages.COPIED : null]
+            }), G ? O.default.Messages.COPIED : null]
           })
         })]
       })]

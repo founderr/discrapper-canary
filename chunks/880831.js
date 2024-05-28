@@ -28,32 +28,32 @@ var a = n("735250"),
   T = n("699516"),
   I = n("512665"),
   A = n("768581"),
-  N = n("70956"),
-  v = n("823379"),
-  x = n("792125"),
+  v = n("70956"),
+  x = n("823379"),
+  N = n("792125"),
   M = n("981631"),
   R = n("768760"),
   y = n("588233");
-let L = 10 * N.default.Millis.SECOND;
+let L = 10 * v.default.Millis.SECOND;
 
 function O(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), N = (0, p.useActiveKeywordFiltersCacheKey)(), v = l.useCallback(e => {
+  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), v = (0, p.useActiveKeywordFiltersCacheKey)(), x = l.useCallback(e => {
     "A" !== e.target.nodeName && (f.default.updateChatOpen(n.channel_id, !0), h.default.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
       flash: !0
     }))
-  }, [n.channel_id, n.id]), x = null != n.content && "" !== n.content ? (0, E.default)(n, {
+  }, [n.channel_id, n.id]), N = null != n.content && "" !== n.content ? (0, E.default)(n, {
     isInteracting: c,
-    shouldFilterKeywords: null != N
+    shouldFilterKeywords: null != v
   }).content : null, {
     contentPlaceholder: M,
     renderedContent: L,
     icon: O
-  } = (0, I.renderSingleLineMessage)(n, x, s, y.messageContent, {
+  } = (0, I.renderSingleLineMessage)(n, N, s, y.messageContent, {
     iconClass: y.messageContentIcon,
     iconSize: R.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
   }), j = (0, g.getMessageStickers)(n), P = j.length > 0 ? j.map(e => (0, a.jsx)(S.default, {
@@ -70,7 +70,7 @@ function O(e) {
     onMouseLeave: () => {
       _(!1)
     },
-    onClick: v,
+    onClick: x,
     children: [(0, a.jsxs)("div", {
       className: i()(y.messageContentWrapper, {
         [y.mentioned]: n.mentioned
@@ -129,7 +129,7 @@ function j(e) {
     let E = null !== (t = h.current) && void 0 !== t ? t : r;
     return {
       toastsHidden: d,
-      toastMessages: (0, u.useStateFromStoresArray)([_.default], () => E.map(e => _.default.getMessage(n, e)), [n, E]).filter(v.isNotNullish)
+      toastMessages: (0, u.useStateFromStoresArray)([_.default], () => E.map(e => _.default.getMessage(n, e)), [n, E]).filter(x.isNotNullish)
     }
   }({
     channelId: t,
@@ -188,7 +188,7 @@ function j(e) {
       }
     });
   return (0, a.jsx)("div", {
-    className: i()(n, (0, x.getThemeClass)(M.ThemeTypes.DARK)),
+    className: i()(n, (0, N.getThemeClass)(M.ThemeTypes.DARK)),
     onMouseEnter: () => {
       d(!0)
     },

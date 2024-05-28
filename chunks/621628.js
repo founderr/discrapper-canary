@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("154921"),
   f = s("915486"),
   m = s("883904"),
-  g = s("68985"),
-  I = s("211644"),
+  I = s("68985"),
+  g = s("211644"),
   N = s("312244"),
   h = s("611273");
 
@@ -45,7 +45,7 @@ function C(e) {
   })
 }
 
-function p(e) {
+function O(e) {
   let {
     items: t,
     dismissedContents: s,
@@ -62,20 +62,20 @@ function p(e) {
 
 function A() {
   var e;
-  let t = (0, I.default)(e => e.recentlyShown),
+  let t = (0, g.default)(e => e.recentlyShown),
     {
       dailyCapReached: s,
       dailyCapOverridden: l
-    } = (0, r.useStateFromStoresObject)([g.default], () => ({
-      dailyCapReached: g.default.hasUserHitDCCap(),
-      dailyCapOverridden: g.default.dailyCapOverridden
+    } = (0, r.useStateFromStoresObject)([I.default], () => ({
+      dailyCapReached: I.default.hasUserHitDCCap(),
+      dailyCapOverridden: I.default.dailyCapOverridden
     })),
     [_, f] = n.useState(""),
     C = null !== (e = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     })) && void 0 !== e ? e : new Uint8Array,
-    [A, O] = function(e, t) {
+    [A, p] = function(e, t) {
       let [s, a] = n.useState(() => {
         let s = d.Storage.get(e);
         return null != s ? s : t
@@ -84,17 +84,17 @@ function A() {
         d.Storage.set(e, s)
       }, [e, s]), [s, a]
     }("RecentDismissibleOverrides", []),
-    x = e => {
-      O(t => {
+    R = e => {
+      p(t => {
         let s = new Set(t);
         s.delete(e);
         let a = Array.from(s).slice(0, 4);
         return a.unshift(e), a
       })
     },
-    R = t.map(e => o.DismissibleContent[e]),
-    M = A.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !R.includes(e)),
-    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    x = t.map(e => o.DismissibleContent[e]),
+    M = A.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !x.includes(e)),
+    L = Object.keys(o.DismissibleContent).filter(e => !x.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
@@ -143,10 +143,10 @@ function A() {
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recently Shown"
           })
-        }), (0, a.jsx)(p, {
-          items: R,
+        }), (0, a.jsx)(O, {
+          items: x,
           dismissedContents: C,
-          handleChange: x
+          handleChange: R
         })]
       }) : null, M.length > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
@@ -154,20 +154,20 @@ function A() {
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recent Overrides"
           })
-        }), (0, a.jsx)(p, {
+        }), (0, a.jsx)(O, {
           items: M,
           dismissedContents: C,
-          handleChange: x
+          handleChange: R
         })]
       }) : null, (0, a.jsx)(E.default, {
         className: i()(h.marginBottom20, h.marginTop20),
         children: (0, a.jsx)(u.FormTitle, {
           children: "Available Dismissible Contents"
         })
-      }), (0, a.jsx)(p, {
-        items: v,
+      }), (0, a.jsx)(O, {
+        items: L,
         dismissedContents: C,
-        handleChange: x
+        handleChange: R
       })]
     })]
   })

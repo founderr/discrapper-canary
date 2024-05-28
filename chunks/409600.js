@@ -4,62 +4,62 @@ n.r(t), n.d(t, {
     return f
   },
   default: function() {
-    return p
+    return E
   }
 }), n("47120");
 var a = n("735250");
 n("470079");
 var r = n("100527"),
   s = n("906732"),
-  i = n("987209"),
-  o = n("598"),
-  u = n("791785"),
-  l = n("961830"),
-  c = n("231338");
+  l = n("987209"),
+  u = n("598"),
+  i = n("791785"),
+  c = n("961830"),
+  o = n("231338");
 
 function d(e) {
   let {
     onClose: t,
     onComplete: n,
     transitionState: r,
-    applicationId: i,
-    analyticsLocationObject: l,
-    skuId: c
-  } = e, {} = (0, o.usePaymentContext)(), {
+    applicationId: l,
+    analyticsLocationObject: c,
+    skuId: o
+  } = e, {} = (0, u.usePaymentContext)(), {
     analyticsLocations: d
   } = (0, s.default)();
-  return (0, a.jsx)(u.PaymentModal, {
+  return (0, a.jsx)(i.PaymentModal, {
     onClose: t,
     onComplete: n,
-    applicationId: i,
-    skuId: c,
+    applicationId: l,
+    skuId: o,
     initialPlanId: null,
-    analyticsObject: l,
+    analyticsObject: c,
     analyticsLocations: d,
     transitionState: r
   })
 }
-let f = [l.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, l.ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG, ...l.SHARED_STEP_CONFIGS, l.REVIEW_STEP_CONFIG, l.ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG];
+let f = [c.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, c.ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG, ...c.SHARED_STEP_CONFIGS, c.REVIEW_STEP_CONFIG, c.ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG];
 
-function p(e) {
+function E(e) {
   let {
     loadId: t,
     applicationId: n,
-    skuId: u,
-    analyticsLocations: l
+    skuId: i,
+    analyticsLocations: c
   } = e, {
-    analyticsLocations: p
-  } = (0, s.default)(l, r.default.PREMIUM_PAYMENT_MODAL);
+    analyticsLocations: E
+  } = (0, s.default)(c, r.default.PREMIUM_PAYMENT_MODAL);
   return (0, a.jsx)(s.AnalyticsLocationProvider, {
-    value: p,
-    children: (0, a.jsx)(o.PaymentContextProvider, {
+    value: E,
+    children: (0, a.jsx)(u.PaymentContextProvider, {
       loadId: t,
       stepConfigs: f,
       applicationId: n,
-      skuIDs: [u],
+      skuIDs: [i],
       activeSubscription: null,
-      purchaseType: c.PurchaseTypes.ONE_TIME,
-      children: (0, a.jsx)(i.GiftContextProvider, {
+      purchaseType: o.PurchaseTypes.ONE_TIME,
+      children: (0, a.jsx)(l.GiftContextProvider, {
         children: (0, a.jsx)(d, {
           ...e
         })

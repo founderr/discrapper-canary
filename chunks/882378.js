@@ -19,7 +19,7 @@ var a = n("735250"),
 t.default = l.memo(function(e) {
   let {
     channel: t
-  } = e, S = (0, u.useInappropriateConversationSafetyToolsWarningForChannel)(t.id), _ = (0, d.useShouldShowInitialSafetyToolsButtonTooltip)(t.id), T = (0, c.useSafetyToolsButtonTooltipForChannel)(t.id), I = (0, i.useHasAnyModalOpen)(), A = (0, s.useStateFromStores)([h.default], () => h.default.hasLayers()), N = l.useCallback(() => _ ? C.default.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != T ? C.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [_, T]), v = l.useMemo(() => (_ || null != T) && !I && !A, [_, T, I, A]), [x, M] = l.useState(N());
+  } = e, S = (0, u.useInappropriateConversationSafetyToolsWarningForChannel)(t.id), _ = (0, d.useShouldShowInitialSafetyToolsButtonTooltip)(t.id), T = (0, c.useSafetyToolsButtonTooltipForChannel)(t.id), I = (0, i.useHasAnyModalOpen)(), A = (0, s.useStateFromStores)([h.default], () => h.default.hasLayers()), v = l.useCallback(() => _ ? C.default.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != T ? C.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [_, T]), x = l.useMemo(() => (_ || null != T) && !I && !A, [_, T, I, A]), [N, M] = l.useState(v());
   l.useEffect(() => {
     null != T && null != S && (r.AccessibilityAnnouncer.announce(C.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
       (0, o.dismissChannelSafetyWarnings)(t.id, [T.id])
@@ -43,9 +43,9 @@ t.default = l.memo(function(e) {
       viewName: f.ViewNameTypes.SAFETY_TOOLS_BUTTON
     })
   }, []), l.useEffect(() => {
-    let e = N();
+    let e = v();
     null != e && M(e)
-  }, [_, T, N]);
+  }, [_, T, v]);
   let R = l.useCallback(() => {
     null != T && (0, o.dismissChannelSafetyWarnings)(t.id, [T.id]), null != S && ((0, r.openModalLazy)(async () => {
       let {
@@ -77,8 +77,8 @@ t.default = l.memo(function(e) {
     }))
   }, [T, S, t]);
   return null == S ? null : (0, a.jsx)(r.Tooltip, {
-    forceOpen: v,
-    text: x,
+    forceOpen: x,
+    text: N,
     color: r.TooltipColors.BRAND,
     position: "bottom",
     tooltipClassName: g.tooltip,

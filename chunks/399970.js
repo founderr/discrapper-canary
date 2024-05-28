@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return g
   }
 }), s("47120");
 var a, n, l = s("735250"),
@@ -17,22 +17,22 @@ var a, n, l = s("735250"),
   _ = s("689938"),
   f = s("737646"),
   m = s("611273");
-let g = /^\d+$|^$/;
+let I = /^\d+$|^$/;
 (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
 
-function I(e) {
+function g(e) {
   let {
     onClose: t,
     transitionState: s
   } = e, {
     authorizedApplicationId: a,
     authorizationError: n,
-    authorizing: I
+    authorizing: g
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     authorizedApplicationId: S.default.testModeApplicationId,
     authorizationError: S.default.error,
     authorizing: S.default.isFetchingAuthorization
-  })), [N, h] = i.useState(null != a ? a : ""), [C, p] = i.useState("8080"), [A, O] = i.useState("localhost"), x = (0, T.useUID)(), R = g.test(N);
+  })), [N, h] = i.useState(null != a ? a : ""), [C, O] = i.useState("8080"), [A, p] = i.useState("localhost"), R = (0, T.useUID)(), x = I.test(N);
   async function M() {
     u.resetError();
     let e = function(e, t, s) {
@@ -47,18 +47,18 @@ function I(e) {
     null != await u.authorizeAndSetTestModeApplication(N, e) && t()
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
-  let v = null != a && a === N,
-    D = v ? function() {
-      u.reset(), h(""), O(null)
+  let L = null != a && a === N,
+    D = L ? function() {
+      u.reset(), h(""), p(null)
     } : M;
   return (0, l.jsxs)(o.ModalRoot, {
-    "aria-labelledby": x,
+    "aria-labelledby": R,
     transitionState: s,
     children: [(0, l.jsxs)(o.ModalHeader, {
       justify: E.default.Justify.BETWEEN,
       separator: !1,
       children: [(0, l.jsx)(o.FormTitle, {
-        id: x,
+        id: R,
         tag: "h1",
         className: m.marginReset,
         children: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
@@ -88,17 +88,17 @@ function I(e) {
             children: (0, l.jsx)(o.TextInput, {
               value: N,
               maxLength: 19,
-              error: R ? null : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+              error: x ? null : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
               onChange: function(e) {
                 h(e)
               },
-              disabled: I
+              disabled: g
             })
           }), (0, l.jsx)(o.FormItem, {
             className: f.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
-              isDisabled: !R || "" === N,
+              isDisabled: !x || "" === N,
               value: A,
               options: [{
                 value: "localhost",
@@ -110,7 +110,7 @@ function I(e) {
                 key: "proxy"
               }],
               onChange: function(e) {
-                O(e)
+                p(e)
               },
               placeholder: "URL Origin Type"
             })
@@ -121,15 +121,15 @@ function I(e) {
             children: (0, l.jsx)(o.TextInput, {
               value: C,
               maxLength: 5,
-              onChange: e => p(e),
-              disabled: I
+              onChange: e => O(e),
+              disabled: g
             })
           }), (0, l.jsx)(o.Button, {
-            submitting: I,
+            submitting: g,
             type: "submit",
-            disabled: !R || 0 === N.length || "localhost" === A && 0 === C.length,
-            color: v ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-            children: v ? _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+            disabled: !x || 0 === N.length || "localhost" === A && 0 === C.length,
+            color: L ? o.Button.Colors.RED : o.Button.Colors.GREEN,
+            children: L ? _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]
         })
       })]

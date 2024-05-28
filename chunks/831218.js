@@ -13,8 +13,8 @@ var l, a, s, i = n("735250"),
   C = n("367907"),
   g = n("453542"),
   E = n("762914"),
-  _ = n("702321"),
-  S = n("518311"),
+  S = n("702321"),
+  _ = n("518311"),
   I = n("355298"),
   N = n("869404"),
   T = n("333984"),
@@ -24,8 +24,8 @@ var l, a, s, i = n("735250"),
   x = n("55589"),
   R = n("153124"),
   M = n("908773"),
-  O = n("151827"),
-  y = n("515753"),
+  y = n("151827"),
+  O = n("515753"),
   D = n("981631"),
   b = n("689938"),
   j = n("181235");
@@ -278,7 +278,7 @@ class U extends(a = r.Component) {
       let s = Math.round((t.offsetHeight - 44 * a) / 44),
         i = s > n.length ? n.slice(0, s + 1) : n,
         o = i.map(e => null != l[e] ? l[e].getRecipientId() : null),
-        u = n.some(e => (0, _.default)(e)),
+        u = n.some(e => (0, S.default)(e)),
         d = {
           num_users_visible: i.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && v.default.isMobileOnline(e)).length
@@ -307,7 +307,7 @@ class U extends(a = r.Component) {
         totalRowCount: s,
         preRenderedChildren: r
       } = this.state, o = l[n[t]];
-      return null == o ? null : (0, i.jsx)(y.default, {
+      return null == o ? null : (0, i.jsx)(O.default, {
         channel: o,
         selected: o.id === a,
         "aria-posinset": r + t + 1,
@@ -336,12 +336,12 @@ class U extends(a = r.Component) {
       } = e, {
         showDMHeader: n
       } = this.props;
-      return 0 !== t && n ? (0, i.jsxs)(O.default, {
+      return 0 !== t && n ? (0, i.jsxs)(y.default, {
         className: j.privateChannelsHeaderContainer,
         children: [(0, i.jsx)("span", {
           className: j.headerText,
           children: b.default.Messages.DIRECT_MESSAGES
-        }), (0, i.jsx)(S.default, {
+        }), (0, i.jsx)(_.default, {
           tooltip: b.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
@@ -395,7 +395,7 @@ t.default = e => {
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), _ = r.useCallback(() => new Promise(e => {
+  }), []), S = r.useCallback(() => new Promise(e => {
     let t = m.current;
     if (null == t) return e();
     t.scrollToBottom({
@@ -403,11 +403,11 @@ t.default = e => {
         requestAnimationFrame(() => setTimeout(e, 100))
       }
     })
-  }), []), S = (0, R.useUID)(), v = (0, d.default)({
-    id: "private-channels-".concat(S),
+  }), []), _ = (0, R.useUID)(), v = (0, d.default)({
+    id: "private-channels-".concat(_),
     isEnabled: h.keyboardModeEnabled,
     scrollToStart: g,
-    scrollToEnd: _,
+    scrollToEnd: S,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
     setFocus: C
   });

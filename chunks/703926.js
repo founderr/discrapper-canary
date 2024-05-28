@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   GiftStaticOption: function() {
-    return I
+    return _
   }
 });
 var i = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
+  l = n("470079"),
+  s = n("481060"),
   a = n("474936"),
   r = n("42603"),
   u = n("426831"),
@@ -14,14 +14,14 @@ var i = n("735250"),
   c = n("74838"),
   d = n("720834"),
   m = n("385925"),
-  f = n("588921"),
-  p = n("718720"),
-  _ = n("721513");
-let S = {
+  p = n("588921"),
+  f = n("718720"),
+  S = n("721513");
+let I = {
     [a.PremiumGiftStyles.STANDARD_BOX]: m,
-    [a.PremiumGiftStyles.CAKE]: f,
-    [a.PremiumGiftStyles.CHEST]: p,
-    [a.PremiumGiftStyles.COFFEE]: _,
+    [a.PremiumGiftStyles.CAKE]: p,
+    [a.PremiumGiftStyles.CHEST]: f,
+    [a.PremiumGiftStyles.COFFEE]: S,
     [a.PremiumGiftStyles.SNOWGLOBE]: "",
     [a.PremiumGiftStyles.BOX]: "",
     [a.PremiumGiftStyles.CUP]: "",
@@ -30,17 +30,17 @@ let S = {
     [a.PremiumGiftStyles.SEASONAL_COFFEE]: d,
     [a.PremiumGiftStyles.SEASONAL_STANDARD_BOX]: u
   },
-  I = s.forwardRef(function(e, t) {
+  _ = l.forwardRef(function(e, t) {
     let {
       isSelected: n,
-      giftStyle: s,
+      giftStyle: l,
       setSelectedGiftStyle: a,
       onFocus: u,
       onBlur: o
     } = e;
-    return (0, i.jsx)(l.Clickable, {
+    return (0, i.jsx)(s.Clickable, {
       innerRef: t,
-      onClick: () => a(s),
+      onClick: () => a(l),
       onFocus: u,
       onBlur: o,
       children: (0, i.jsx)("img", {
@@ -49,7 +49,7 @@ let S = {
           height: "100%"
         },
         alt: "",
-        src: S[s],
+        src: I[l],
         className: n ? r.customGiftBoxHighlighted : r.customGiftBox
       })
     })

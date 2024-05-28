@@ -25,9 +25,9 @@ function E() {
   var e;
   let t = (0, f.useUID)(),
     [n, E] = (0, a.useStateFromStoresArray)([d.default, o.default], () => [o.default.getChannel(d.default.getVoiceChannelId()), d.default.getCurrentlySelectedChannelId(null)]),
-    _ = (0, a.useStateFromStores)([u.default], () => null != n ? u.default.getMentionCount(n.id) : 0),
-    S = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
-    I = null !== (e = m.default.getGlobalName(S)) && void 0 !== e ? e : m.default.getUserTag(S),
+    S = (0, a.useStateFromStores)([u.default], () => null != n ? u.default.getMentionCount(n.id) : 0),
+    _ = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
+    I = null !== (e = m.default.getGlobalName(_)) && void 0 !== e ? e : m.default.getUserTag(_),
     {
       canViewBroadcasts: N
     } = r.default.useExperiment({
@@ -49,9 +49,9 @@ function E() {
     selected: A,
     upperBadge: (0, l.jsx)(s.Avatar, {
       size: s.AvatarSizes.SIZE_16,
-      src: null == S ? void 0 : S.getAvatarURL(null, 16),
+      src: null == _ ? void 0 : _.getAvatarURL(null, 16),
       "aria-label": I
     }),
-    lowerBadge: _ > 0 ? (0, C.renderMentionBadge)(_) : null
+    lowerBadge: S > 0 ? (0, C.renderMentionBadge)(S) : null
   }) : null
 }

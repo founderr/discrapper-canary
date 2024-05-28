@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var l = n("557533"),
   r = n.n(l),
-  a = n("789978"),
-  s = n("790472"),
+  s = n("789978"),
+  a = n("790472"),
   o = n("777207"),
   u = n("145626"),
   d = n("863885");
@@ -24,7 +24,7 @@ function c(e) {
     PurchaseButton: p,
     availabilityLabel: m
   } = e;
-  return (0, i.jsx)(a.FocusRing, {
+  return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
       className: r()(u.wrapper, d.hoverCard),
       tabIndex: 0,
@@ -36,7 +36,7 @@ function c(e) {
         style: null != l ? {
           backgroundImage: null != l ? "url(".concat(l.toString(), ")") : void 0
         } : void 0,
-        children: null == l && (0, i.jsx)(s.TicketIcon, {
+        children: null == l && (0, i.jsx)(a.TicketIcon, {
           color: "white",
           height: 80,
           width: 80

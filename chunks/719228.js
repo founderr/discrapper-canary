@@ -11,19 +11,19 @@ l.r(t), l.d(t, {
   }
 }), l("724458"), l("653041"), l("47120");
 var s = l("735250"),
-  n = l("470079"),
-  a = l("658722"),
-  r = l.n(a),
+  a = l("470079"),
+  n = l("658722"),
+  r = l.n(n),
   i = l("442837"),
   o = l("481060"),
   d = l("37234"),
   u = l("703656"),
   c = l("430824"),
-  C = l("771845"),
-  m = l("346656"),
-  f = l("6048"),
-  S = l("267642"),
-  I = l("981631"),
+  m = l("771845"),
+  C = l("346656"),
+  S = l("6048"),
+  I = l("267642"),
+  f = l("981631"),
   _ = l("689938"),
   M = l("581048");
 
@@ -31,7 +31,7 @@ function E(e) {
   let {
     isTransfer: t = !1,
     setQuery: l,
-    query: n
+    query: a
   } = e;
   return (0, s.jsxs)(o.ModalHeader, {
     className: M.selectHeaderContainer,
@@ -39,12 +39,12 @@ function E(e) {
       className: M.selectHeader,
       variant: "heading-md/semibold",
       children: t ? _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
-    }), (0, s.jsx)(f.default, {
-      size: f.default.Sizes.MEDIUM,
+    }), (0, s.jsx)(S.default, {
+      size: S.default.Sizes.MEDIUM,
       placeholder: _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
       "aria-label": _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
       className: M.selectSearch,
-      query: n,
+      query: a,
       onChange: l,
       onClear: () => l("")
     })]
@@ -55,16 +55,16 @@ function x(e) {
   let {
     isTransfer: t = !1,
     selectedSlotGuilds: l,
-    onClose: n,
-    onSelectGuild: a,
-    query: f
-  } = e, E = (0, i.useStateFromStores)([C.default], () => C.default.getFlattenedGuildIds()), x = (0, i.useStateFromStoresArray)([c.default], () => E.reduce((e, t) => {
+    onClose: a,
+    onSelectGuild: n,
+    query: S
+  } = e, E = (0, i.useStateFromStores)([m.default], () => m.default.getFlattenedGuildIds()), x = (0, i.useStateFromStoresArray)([c.default], () => E.reduce((e, t) => {
     let s = c.default.getGuild(t);
-    return null == s || null != l && l.some(e => e.id === t) ? e : ((f.length <= 0 || r()(f.toLowerCase(), null == s ? void 0 : s.name.toLowerCase())) && e.push(s), e)
+    return null == s || null != l && l.some(e => e.id === t) ? e : ((S.length <= 0 || r()(S.toLowerCase(), null == s ? void 0 : s.name.toLowerCase())) && e.push(s), e)
   }, []));
 
   function N() {
-    n(), (0, d.popLayer)(), (0, u.transitionTo)(I.Routes.GUILD_DISCOVERY)
+    a(), (0, d.popLayer)(), (0, u.transitionTo)(f.Routes.GUILD_DISCOVERY)
   }
   return (0, s.jsxs)(s.Fragment, {
     children: [0 === x.length && (0, s.jsx)("div", {
@@ -82,12 +82,12 @@ function x(e) {
     }), x.map(e => (0, s.jsxs)(o.Clickable, {
       className: M.selectGuild,
       onClick: () => {
-        a(e)
+        n(e)
       },
-      children: [(0, s.jsx)(m.default, {
+      children: [(0, s.jsx)(C.default, {
         className: M.selectGuildIcon,
         guild: e,
-        size: m.default.Sizes.SMALL
+        size: C.default.Sizes.SMALL
       }), (0, s.jsxs)("div", {
         className: M.selectGuildCopy,
         children: [(0, s.jsx)(o.Text, {
@@ -98,7 +98,7 @@ function x(e) {
           className: M.selectGuildLevel,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: (0, S.getTierName)(e.premiumTier)
+          children: (0, I.getTierName)(e.premiumTier)
         })]
       }), (0, s.jsx)(o.Text, {
         className: M.selectGuildPseudoCta,
@@ -114,10 +114,10 @@ function N(e) {
   let {
     onClose: t,
     onSelectGuild: l,
-    transitionState: a
-  } = e, [r, i] = n.useState("");
+    transitionState: n
+  } = e, [r, i] = a.useState("");
   return (0, s.jsxs)(o.ModalRoot, {
-    transitionState: a,
+    transitionState: n,
     className: M.modal,
     size: o.ModalSize.SMALL,
     children: [(0, s.jsx)(E, {

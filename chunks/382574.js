@@ -3,38 +3,38 @@ a.r(t);
 var n = a("735250");
 a("470079");
 var r = a("73880"),
-  s = a("137158"),
-  i = a("689938"),
+  i = a("137158"),
+  s = a("689938"),
   l = a("17359");
 t.default = function(e) {
   let {
     formField: t,
     index: a,
     isDragEnabled: o,
-    isDropHovered: c,
-    onDrop: d,
+    isDropHovered: d,
+    onDrop: c,
     onEdit: u,
     onRemove: f,
     canRemove: m,
-    actionsLocation: h
+    actionsLocation: E
   } = e, {
-    label: E,
-    placeholder: p
+    label: h,
+    placeholder: T
   } = t;
-  return (0, n.jsx)(s.default, {
+  return (0, n.jsx)(i.default, {
     field: t,
     index: a,
     isDragEnabled: o,
-    isDropHovered: c,
-    onDrop: d,
+    isDropHovered: d,
+    onDrop: c,
     onEdit: u,
     onRemove: f,
-    title: E,
+    title: h,
     canRemove: m,
-    actionsLocation: h,
+    actionsLocation: E,
     children: (0, n.jsx)(r.ParagraphFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != p ? p : i.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != T ? T : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

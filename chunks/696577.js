@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("465670"),
   f = n("26290"),
   E = n("626135"),
-  h = n("321488"),
-  _ = n("417183"),
-  C = n("170245"),
-  m = n("981631"),
-  S = n("689938"),
+  C = n("321488"),
+  h = n("417183"),
+  _ = n("170245"),
+  S = n("981631"),
+  m = n("689938"),
   p = n("615808");
 
 function I(e) {
@@ -41,8 +41,8 @@ function I(e) {
         location: "Friends"
       }
     })
-  }, R = I === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : I, O = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
-  return (0, a.jsx)(_.default, {
+  }, R = I === S.StatusTypes.OFFLINE ? S.StatusTypes.UNKNOWN : I, O = n === S.RelationshipTypes.PENDING_INCOMING ? m.default.Messages.INCOMING_FRIEND_REQUEST : m.default.Messages.OUTGOING_FRIEND_REQUEST;
+  return (0, a.jsx)(h.default, {
     isFocused: g,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
@@ -52,36 +52,36 @@ function I(e) {
     }),
     children: e => {
       var s;
-      let i = n === m.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
+      let i = n === S.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
         children: [(null === (s = u.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, a.jsx)("div", {
           className: p.staffIndicator,
           children: (0, a.jsx)(f.TextBadge, {
             color: l.default.unsafe_rawColors.BRAND_500.css,
-            text: S.default.Messages.STAFF_BADGE_TOOLTIP
+            text: m.default.Messages.STAFF_BADGE_TOOLTIP
           })
-        }), (0, a.jsx)(h.default, {
+        }), (0, a.jsx)(C.default, {
           icon: d.default,
-          actionType: h.default.ActionTypes.ACCEPT,
-          tooltip: S.default.Messages.FRIEND_REQUEST_ACCEPT,
+          actionType: C.default.ActionTypes.ACCEPT,
+          tooltip: m.default.Messages.FRIEND_REQUEST_ACCEPT,
           onClick: v,
           shouldHighlight: e
-        }), (0, a.jsx)(h.default, {
+        }), (0, a.jsx)(C.default, {
           icon: c.default,
-          actionType: h.default.ActionTypes.DENY,
-          tooltip: S.default.Messages.FRIEND_REQUEST_IGNORE,
+          actionType: C.default.ActionTypes.DENY,
+          tooltip: m.default.Messages.FRIEND_REQUEST_IGNORE,
           onClick: N,
           shouldHighlight: e
         })]
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(C.default, {
         icon: c.default,
-        actionType: h.default.ActionTypes.DENY,
-        tooltip: S.default.Messages.FRIEND_REQUEST_CANCEL,
+        actionType: C.default.ActionTypes.DENY,
+        tooltip: m.default.Messages.FRIEND_REQUEST_CANCEL,
         onClick: N,
         shouldHighlight: e
       });
       return (0, a.jsxs)("div", {
         className: p.listItemContents,
-        children: [(0, a.jsx)(C.default, {
+        children: [(0, a.jsx)(_.default, {
           user: t,
           hovered: e,
           showAccountIdentifier: !0,

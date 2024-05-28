@@ -11,24 +11,24 @@ var a = n("735250"),
   c = n("100527"),
   f = n("252618"),
   E = n("984370"),
-  h = n("108427"),
-  _ = n("792125"),
-  C = n("709158"),
-  m = n("678935"),
-  S = n("563442"),
+  C = n("108427"),
+  h = n("792125"),
+  _ = n("709158"),
+  S = n("678935"),
+  m = n("563442"),
   p = n("981631"),
   I = n("689938"),
   g = n("233269");
 t.default = function(e) {
-  let {} = e, t = (0, C.default)(c.default.QUEST_HOME_PAGE);
+  let {} = e, t = (0, _.default)(c.default.QUEST_HOME_PAGE);
   s.useEffect(() => {
     !t && (0, r.transitionTo)(p.Routes.FRIENDS)
   }, [t]), s.useEffect(() => {
-    d.setHomeLink(p.Routes.QUEST_HOME), (0, h.trackAppUIViewed)("quest-home")
+    d.setHomeLink(p.Routes.QUEST_HOME), (0, C.trackAppUIViewed)("quest-home")
   }, []), (0, f.usePageTitle)({
     location: I.default.Messages.QUESTS
   });
-  let n = (0, _.getThemeClass)("dark");
+  let n = (0, h.getThemeClass)("dark");
   return t ? (0, a.jsxs)("div", {
     className: g.container,
     children: [(0, a.jsxs)(E.default, {
@@ -44,8 +44,8 @@ t.default = function(e) {
     }), (0, a.jsx)(u.ScrollerNone, {
       className: g.scroller,
       fade: !0,
-      children: (0, a.jsx)(S.default, {
-        children: (0, a.jsx)(m.default, {})
+      children: (0, a.jsx)(m.default, {
+        children: (0, a.jsx)(S.default, {})
       })
     })]
   }) : null

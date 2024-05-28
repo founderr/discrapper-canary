@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("827837"),
   f = n("410575"),
   E = n("3570"),
-  h = n("237919"),
-  _ = n("957657"),
-  C = n("665307"),
-  m = n("530151"),
-  S = n("981631"),
+  C = n("237919"),
+  h = n("957657"),
+  _ = n("665307"),
+  S = n("530151"),
+  m = n("981631"),
   p = n("186901"),
   I = n("47789");
 
@@ -33,32 +33,32 @@ function g(e, t, n) {
 }
 class T extends s.PureComponent {
   componentDidMount() {
-    u.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, E.deepLinkRouteIfLanded)(p.RPCDeepLinks.LIBRARY), o.default.wait(() => (0, d.fetchBranches)()), (0, c.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
+    u.setHomeLink(m.Routes.APPLICATION_LIBRARY), (0, E.deepLinkRouteIfLanded)(p.RPCDeepLinks.LIBRARY), o.default.wait(() => (0, d.fetchBranches)()), (0, c.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
   renderToolbar() {
-    return (0, a.jsx)(h.default, {})
+    return (0, a.jsx)(C.default, {})
   }
   render() {
     let {
       includeUpdatesInScroller: e
     } = this.state, t = (0, a.jsx)("div", {
       children: (0, a.jsx)(f.default, {
-        section: S.AnalyticsSections.LIBRARY_INSTALL_MODULE,
-        children: (0, a.jsx)(m.default, {
+        section: m.AnalyticsSections.LIBRARY_INSTALL_MODULE,
+        children: (0, a.jsx)(S.default, {
           onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange
         })
       })
     });
     return (0, a.jsxs)(s.Fragment, {
-      children: [(0, a.jsx)(_.default, {
-        currentRoute: S.Routes.APPLICATION_LIBRARY,
+      children: [(0, a.jsx)(h.default, {
+        currentRoute: m.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
       }), e ? null : t, (0, a.jsxs)(r.AdvancedScrollerAuto, {
         className: i()(I.container, I.scroller),
         ref: this._scrollerRef,
         children: [e ? t : null, (0, a.jsx)(f.default, {
-          section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,
-          children: (0, a.jsx)(C.default, {
+          section: m.AnalyticsSections.LIBRARY_APPLICATION_LIST,
+          children: (0, a.jsx)(_.default, {
             stickyHeader: !e,
             scrollToRow: this.scrollToRow
           })

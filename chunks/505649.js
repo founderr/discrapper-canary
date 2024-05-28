@@ -5,16 +5,16 @@ var r, u, i, a, l = n("442837"),
   s = n("366939"),
   E = n("16084"),
   S = n("128069"),
-  d = n("122289"),
-  _ = n("622999"),
+  _ = n("122289"),
+  d = n("622999"),
   c = n("981631"),
   A = n("689938");
-let f = !1,
-  T = null,
+let T = !1,
+  f = null,
   I = null;
 
 function C() {
-  f = !1, I = null
+  T = !1, I = null
 }
 
 function P(e) {
@@ -24,21 +24,21 @@ function P(e) {
     code: n,
     paymentId: r
   } = t;
-  if (n !== S.default.ErrorCodes.AUTHENTICATION_REQUIRED) return f = !1, !1;
-  !f && (f = !0, T = r, R(r))
+  if (n !== S.default.ErrorCodes.AUTHENTICATION_REQUIRED) return T = !1, !1;
+  !T && (T = !0, f = r, R(r))
 }
 async function R(e) {
   if (null == e) return;
   let {
     error: t
-  } = await (0, _.authenticatePaymentIntentForPaymentId)(e);
+  } = await (0, d.authenticatePaymentIntentForPaymentId)(e);
   if (null != t) {
     o.default.dispatch({
       type: "PAYMENT_AUTHENTICATION_ERROR",
       error: new S.default(A.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
     });
     let e = Error(t);
-    (0, d.captureBillingException)(e, {
+    (0, _.captureBillingException)(e, {
       extra: {
         authenticationError: t
       }
@@ -50,18 +50,18 @@ function N(e) {
   let {
     payment: t
   } = e;
-  if (!f || t.id !== T || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(t.status)) return !1;
-  f = !1, I = null, T = null, o.default.wait(s.clearError), o.default.wait(E.clearPurchaseError)
+  if (!T || t.id !== f || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(t.status)) return !1;
+  T = !1, I = null, f = null, o.default.wait(s.clearError), o.default.wait(E.clearPurchaseError)
 }
 class U extends(r = l.default.Store) {
   get isAwaitingAuthentication() {
-    return f
+    return T
   }
   get error() {
     return I
   }
   get awaitingPaymentId() {
-    return T
+    return f
   }
 }
 a = "PaymentAuthenticationStore", (i = "displayName") in(u = U) ? Object.defineProperty(u, i, {
@@ -91,7 +91,7 @@ a = "PaymentAuthenticationStore", (i = "displayName") in(u = U) ? Object.defineP
     let {
       error: t
     } = e;
-    I = t, f = !1
+    I = t, T = !1
   },
   PAYMENT_UPDATE: N,
   BILLING_PAYMENT_FETCH_SUCCESS: N,

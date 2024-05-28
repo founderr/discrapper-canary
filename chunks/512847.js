@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("106301"),
   f = n("590415"),
   E = n("131704"),
-  h = n("199902"),
-  _ = n("314897"),
-  C = n("592125"),
-  m = n("430824"),
-  S = n("131951"),
+  C = n("199902"),
+  h = n("314897"),
+  _ = n("592125"),
+  S = n("430824"),
+  m = n("131951"),
   p = n("292959"),
   I = n("19780"),
   g = n("944486"),
@@ -42,13 +42,13 @@ function L(e, t, n, a) {
   })
 }
 
-function M() {
-  return L([S.default, g.default], () => ({
+function P() {
+  return L([m.default, g.default], () => ({
     inVoiceChannel: null != g.default.getVoiceChannelId(),
-    selfMute: S.default.isSelfMute(),
-    selfDeaf: S.default.isSelfDeaf(),
-    audioPermissionReady: S.default.isNativeAudioPermissionReady(),
-    shouldSkipMuteUnmuteSound: S.default.shouldSkipMuteUnmuteSound()
+    selfMute: m.default.isSelfMute(),
+    selfDeaf: m.default.isSelfDeaf(),
+    audioPermissionReady: m.default.isNativeAudioPermissionReady(),
+    shouldSkipMuteUnmuteSound: m.default.shouldSkipMuteUnmuteSound()
   }), (e, t) => {
     let {
       inVoiceChannel: n,
@@ -61,7 +61,7 @@ function M() {
     if (!!l) {
       if ((n || e.audioPermissionReady) && e.selfMute !== a) {
         if (i) {
-          S.default.notifyMuteUnmuteSoundWasSkipped();
+          m.default.notifyMuteUnmuteSoundWasSkipped();
           return
         }
         return a ? "mute" : "unmute"
@@ -70,9 +70,9 @@ function M() {
   }), null
 }
 
-function P() {
-  return L([C.default, I.default, g.default, u.default], () => {
-    let e = C.default.getChannel(g.default.getVoiceChannelId()),
+function y() {
+  return L([_.default, I.default, g.default, u.default], () => {
+    let e = _.default.getChannel(g.default.getVoiceChannelId()),
       t = null == e ? void 0 : e.type,
       n = null == e ? void 0 : e.getGuildId(),
       a = I.default.getWasEverRtcConnected(),
@@ -104,25 +104,25 @@ function P() {
   }), null
 }
 
-function x() {
+function M() {
   return L([T.default], () => T.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
-      let e = S.default.isSelfMute();
-      if (S.default.getMode() === O.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
-    }
-  }), null
-}
-
-function y() {
-  return L([S.default], () => S.default.isSelfMutedTemporarily(), (e, t) => {
-    if (e !== t) {
-      let e = S.default.isSelfMute();
-      if (S.default.getMode() === O.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
+      let e = m.default.isSelfMute();
+      if (m.default.getMode() === O.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
     }
   }), null
 }
 
 function D() {
+  return L([m.default], () => m.default.isSelfMutedTemporarily(), (e, t) => {
+    if (e !== t) {
+      let e = m.default.isSelfMute();
+      if (m.default.getMode() === O.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
+    }
+  }), null
+}
+
+function x() {
   return L([A.default], () => A.default.userHasBeenMovedVersion, (e, t) => {
     if (e !== t) return "user_moved"
   }), null
@@ -140,20 +140,20 @@ function b() {
 }
 
 function U() {
-  return L([g.default, h.default, _.default, A.default, C.default], () => {
+  return L([g.default, C.default, h.default, A.default, _.default], () => {
     let e, t;
     let n = g.default.getVoiceChannelId(),
-      a = _.default.getId();
+      a = h.default.getId();
     let s = [],
       l = null,
       i = 0,
-      r = h.default.getAllActiveStreams();
+      r = C.default.getAllActiveStreams();
     if (null != n) {
-      let a = C.default.getChannel(n);
-      null != a && (e = a.type, t = N.default.countVoiceStatesForChannel(a.id) - (A.default.isInChannel(a.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
+      let a = _.default.getChannel(n);
+      null != a && (e = a.type, t = N.default.countVoiceStatesForChannel(a.id) - (A.default.isInChannel(a.id) ? 1 : 0), s = C.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
     }
     let o = null;
-    return (null == (o = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : o.state) === O.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, d.encodeStreamKey)(o), i = h.default.getViewerIds(l).filter(e => e !== a).length), {
+    return (null == (o = 1 === r.length ? r[0] : C.default.getCurrentUserActiveStream()) ? void 0 : o.state) === O.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, d.encodeStreamKey)(o), i = C.default.getViewerIds(l).filter(e => e !== a).length), {
       channelType: e,
       voiceChannelId: n,
       voiceChannelUserCount: t,
@@ -174,11 +174,11 @@ function U() {
       currentUserId: o
     } = t;
     if (e.voiceChannelId !== a || null == a || function(e) {
-        let t = C.default.getChannel(e);
+        let t = _.default.getChannel(e);
         if (null == t) return !1;
         let n = t.getGuildId();
         if (null == n) return !1;
-        let a = m.default.getGuild(n);
+        let a = S.default.getGuild(n);
         return null != a && a.afkChannelId === t.id
       }(a) || null != n && E.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
     let u = null != i && e.singleActiveStreamKey === i,
@@ -195,11 +195,11 @@ function U() {
 }
 
 function j() {
-  return L([g.default, o.default, _.default], () => {
+  return L([g.default, o.default, h.default], () => {
     let e = g.default.getVoiceChannelId(),
       t = g.default.getChannelId(),
       n = o.default.getConnectedActivityChannelId(),
-      a = _.default.getId(),
+      a = h.default.getId(),
       s = (0, v.isNotNullish)(t) ? o.default.getEmbeddedActivitiesForChannel(t) : o.NO_ACTIVITIES,
       l = (0, v.isNotNullish)(e) ? o.default.getEmbeddedActivitiesForChannel(e) : o.NO_ACTIVITIES,
       i = (0, v.isNotNullish)(n) ? o.default.getEmbeddedActivitiesForChannel(n) : o.NO_ACTIVITIES;
@@ -252,6 +252,6 @@ function G() {
 
 function w() {
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(M, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
+    children: [(0, a.jsx)(P, {}), (0, a.jsx)(y, {}), (0, a.jsx)(M, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
   })
 }

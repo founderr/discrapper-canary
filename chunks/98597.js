@@ -28,8 +28,8 @@ var l, a, s, i, r = n("735250"),
   C = n("159300"),
   g = n("152376"),
   E = n("427679"),
-  _ = n("155409"),
-  S = n("131704"),
+  S = n("155409"),
+  _ = n("131704"),
   I = n("199902"),
   N = n("430824"),
   T = n("496675"),
@@ -39,15 +39,15 @@ var l, a, s, i, r = n("735250"),
   x = n("937482"),
   R = n("281029"),
   M = n("981631"),
-  O = n("689938"),
-  y = n("513285");
+  y = n("689938"),
+  O = n("513285");
 
 function D(e, t, n) {
   return null != t && !!t && !(0, R.areTypesInSameSection)(n, e.type)
 }
 
 function b(e, t) {
-  return null == t ? y.containerDefault : e > t ? y.containerDragAfter : y.containerDragBefore
+  return null == t ? O.containerDefault : e > t ? O.containerDragAfter : O.containerDragBefore
 }
 
 function j(e) {
@@ -58,13 +58,13 @@ function j(e) {
     forceShowButtons: a,
     hasChannelInfo: s = !1
   } = e;
-  if ((0, c.useStateFromStores)([T.default, A.default], () => n || A.default.getGuildId() === M.FAVORITES || !T.default.can(M.Permissions.MANAGE_CHANNELS, t) && !T.default.can(M.Permissions.MANAGE_ROLES, t) && !T.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, S.isGuildSelectableChannelType)(t.type) && !T.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !T.default.can(M.Permissions.CONNECT, t) || !S.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
+  if ((0, c.useStateFromStores)([T.default, A.default], () => n || A.default.getGuildId() === M.FAVORITES || !T.default.can(M.Permissions.MANAGE_CHANNELS, t) && !T.default.can(M.Permissions.MANAGE_ROLES, t) && !T.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, _.isGuildSelectableChannelType)(t.type) && !T.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !T.default.can(M.Permissions.CONNECT, t) || !_.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
 
   function i() {
     m.default.open(t.id)
   }
   return (0, r.jsx)(h.Tooltip, {
-    text: O.default.Messages.EDIT_CHANNEL,
+    text: y.default.Messages.EDIT_CHANNEL,
     children: e => {
       let {
         onMouseEnter: t,
@@ -73,10 +73,10 @@ function j(e) {
         onBlur: u
       } = e;
       return (0, r.jsx)(h.Clickable, {
-        className: d()(y.iconItem, a ? y.alwaysShown : void 0, s ? y.iconWithChannelInfo : y.iconNoChannelInfo),
+        className: d()(O.iconItem, a ? O.alwaysShown : void 0, s ? O.iconWithChannelInfo : O.iconNoChannelInfo),
         onClick: i,
         tabIndex: l,
-        "aria-label": O.default.Messages.EDIT_CHANNEL,
+        "aria-label": y.default.Messages.EDIT_CHANNEL,
         onMouseEnter: t,
         onMouseLeave: n,
         onFocus: o,
@@ -84,7 +84,7 @@ function j(e) {
         children: (0, r.jsx)(x.default, {
           width: 16,
           height: 16,
-          className: y.actionIcon
+          className: O.actionIcon
         })
       })
     }
@@ -99,8 +99,8 @@ function P(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), m = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([T.default], () => (0, C.canViewInviteModal)(T.default, u, t, m)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? O.default.Messages.CREATE_INSTANT_INVITE : O.default.Messages.INVITE_TO_SERVER);
-  if (a || !S) return null;
+  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), m = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), _ = (0, c.useStateFromStores)([T.default], () => (0, C.canViewInviteModal)(T.default, u, t, m)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
+  if (a || !_) return null;
 
   function L() {
     if (null != u) {
@@ -123,10 +123,10 @@ function P(e) {
   let v = (0, r.jsx)(f.GroupPlusIcon, {
     width: 16,
     height: 16,
-    className: y.actionIcon,
+    className: O.actionIcon,
     "aria-hidden": !0
   });
-  return l && (v = (0, r.jsx)(_.default, {
+  return l && (v = (0, r.jsx)(S.default, {
     tutorialId: "instant-invite",
     position: "left",
     children: (0, r.jsx)("div", {
@@ -135,7 +135,7 @@ function P(e) {
   })), (0, r.jsx)(h.Tooltip, {
     text: A,
     children: e => (0, r.jsx)(h.Clickable, {
-      className: d()(y.iconItem, i ? y.alwaysShown : void 0, o ? y.iconWithChannelInfo : y.iconNoChannelInfo),
+      className: d()(O.iconItem, i ? O.alwaysShown : void 0, o ? O.iconWithChannelInfo : O.iconNoChannelInfo),
       ...e,
       onClick: L,
       tabIndex: s,
@@ -152,16 +152,16 @@ function G(e) {
     (0, g.dimissFavoriteSuggestion)(t.guild_id, t.id)
   };
   return (0, r.jsx)(h.Tooltip, {
-    text: O.default.Messages.REMOVE_FAVORITE_SUGGESTION,
+    text: y.default.Messages.REMOVE_FAVORITE_SUGGESTION,
     children: e => (0, r.jsx)(h.Clickable, {
-      className: y.iconItem,
+      className: O.iconItem,
       ...e,
       onClick: n,
-      "aria-label": O.default.Messages.REMOVE_FAVORITE_SUGGESTION,
+      "aria-label": y.default.Messages.REMOVE_FAVORITE_SUGGESTION,
       children: (0, r.jsx)(v.default, {
         width: 16,
         height: 16,
-        className: y.actionIcon
+        className: O.actionIcon
       })
     })
   })
@@ -176,16 +176,16 @@ function U(e) {
     })
   };
   return (0, r.jsx)(h.Tooltip, {
-    text: O.default.Messages.ADD_FAVORITE,
+    text: y.default.Messages.ADD_FAVORITE,
     children: e => (0, r.jsx)(h.Clickable, {
-      className: y.iconItem,
+      className: O.iconItem,
       ...e,
       onClick: n,
-      "aria-label": O.default.Messages.ADD_FAVORITE,
+      "aria-label": y.default.Messages.ADD_FAVORITE,
       children: (0, r.jsx)(L.default, {
         width: 16,
         height: 16,
-        className: y.actionIcon
+        className: O.actionIcon
       })
     })
   })

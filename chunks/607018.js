@@ -17,12 +17,12 @@ t.default = a.forwardRef(function(e, t) {
     onClose: f,
     transitionState: m,
     reason: C
-  } = e, g = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), y = (0, l.useStateFromStores)([u.default], () => u.default.getAction()), [N, x] = a.useState(null), [R, E] = a.useState(null), [S, P] = a.useState(null), [v, b] = a.useState(!1), j = a.useCallback(async e => {
+  } = e, g = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), y = (0, l.useStateFromStores)([u.default], () => u.default.getAction()), [N, x] = a.useState(null), [R, E] = a.useState(null), [P, S] = a.useState(null), [v, b] = a.useState(!1), j = a.useCallback(async e => {
     b(!0);
     try {
-      c.default.isPhoneReverification(g, y) ? await r.default.beginReverifyPhone(e, C) : await r.default.beginAddPhone(e, C), P(null), x(e)
+      c.default.isPhoneReverification(g, y) ? await r.default.beginReverifyPhone(e, C) : await r.default.beginAddPhone(e, C), S(null), x(e)
     } catch (e) {
-      P(new o.default(e))
+      S(new o.default(e))
     }
     b(!1)
   }, [g, C, y]), I = a.useCallback(async e => {
@@ -32,9 +32,9 @@ t.default = a.forwardRef(function(e, t) {
         let {
           token: t
         } = await r.default.verifyPhone(N, e);
-        P(null), E(t)
+        S(null), E(t)
       } catch (e) {
-        P(new o.default(e))
+        S(new o.default(e))
       }
       b(!1)
     }
@@ -49,7 +49,7 @@ t.default = a.forwardRef(function(e, t) {
   }) : (0, n.jsx)(h.default, {
     onClose: f,
     transitionState: m,
-    error: null == S ? void 0 : S.getAnyErrorMessage(),
+    error: null == P ? void 0 : P.getAnyErrorMessage(),
     working: v,
     validPhone: null != N,
     onAddPhone: j,

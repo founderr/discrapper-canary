@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("65154"),
   f = s("689938"),
   m = s("689641"),
-  g = s("961047"),
-  I = s("611273");
+  I = s("961047"),
+  g = s("611273");
 let N = (0, T.uid)();
 
 function h() {
@@ -28,21 +28,21 @@ function h() {
     threshold: h,
     autoThreshold: C
   } = (0, r.useStateFromStoresObject)([E.default], () => E.default.getModeOptions()), {
-    inputMode: p,
+    inputMode: O,
     automaticVADSupported: A,
-    isEnabled: O
+    isEnabled: p
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
     automaticVADSupported: E.default.supports(_.Features.AUTOMATIC_VAD),
     isEnabled: E.default.isEnabled()
   }));
 
-  function x(e, s) {
+  function R(e, s) {
     t(e), l((s & _.SpeakingFlags.VOICE) === _.SpeakingFlags.VOICE)
   }
 
-  function R(e, t) {
-    S.default.setMode(p, {
+  function x(e, t) {
+    S.default.setMode(O, {
       threshold: e,
       autoThreshold: t
     })
@@ -50,9 +50,9 @@ function h() {
   n.useEffect(() => {
     let e = new d.Timeout;
     return e.start(1e3, () => {
-      E.default.getMediaEngine().on(o.MediaEngineEvent.VoiceActivity, x), e.stop()
+      E.default.getMediaEngine().on(o.MediaEngineEvent.VoiceActivity, R), e.stop()
     }), () => {
-      E.default.getMediaEngine().removeListener(o.MediaEngineEvent.VoiceActivity, x), e.stop()
+      E.default.getMediaEngine().removeListener(o.MediaEngineEvent.VoiceActivity, R), e.stop()
     }
   }, []);
   let M = (0, a.jsx)("section", {
@@ -60,7 +60,7 @@ function h() {
     children: (0, a.jsx)(c.Slider, {
       initialValue: h + 100,
       onValueRender: e => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-      onValueChange: e => R(-((100 - e) * 1), C),
+      onValueChange: e => x(-((100 - e) * 1), C),
       barStyles: {
         background: u.default.unsafe_rawColors.GREEN_360.css
       },
@@ -92,7 +92,7 @@ function h() {
       })
     }), (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: I.marginBottom8,
+      className: g.marginBottom8,
       children: f.default.Messages.FORM_HELP_AUTOMATIC_VAD
     })]
   })), (0, a.jsxs)(c.FormItem, {
@@ -100,15 +100,15 @@ function h() {
     children: [(0, a.jsx)(c.FormTitle, {
       id: N,
       tag: c.FormTitleTags.H5,
-      className: I.marginBottom8,
+      className: g.marginBottom8,
       children: f.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
       children: [A && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
-          className: i()(g.horizontal, I.marginBottom4),
+          className: i()(I.horizontal, g.marginBottom4),
           children: [(0, a.jsx)(c.FormTitle, {
             tag: c.FormTitleTags.H3,
-            className: I.marginReset,
+            className: g.marginReset,
             children: (0, a.jsx)("label", {
               htmlFor: e,
               children: f.default.Messages.FORM_LABEL_AUTOMATIC_VAD
@@ -116,13 +116,13 @@ function h() {
           }), (0, a.jsx)(c.Switch, {
             id: e,
             checked: C,
-            onChange: e => R(h, e)
+            onChange: e => x(h, e)
           })]
         })
       }), M]
-    }), !O && (0, a.jsx)(c.FormText, {
+    }), !p && (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: i()(m.inputDisabledWarning, I.marginBottom8),
+      className: i()(m.inputDisabledWarning, g.marginBottom8),
       children: f.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
         onEnableClick: S.default.enable
       })

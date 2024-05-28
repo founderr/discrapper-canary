@@ -1,233 +1,233 @@
 "use strict";
 n.r(t), n.d(t, {
   calculateActiveTimestampDurations: function() {
-    return d
+    return E
   },
   formatActiveTimestamp: function() {
-    return _
+    return f
   },
   formatEndedTimestamp: function() {
-    return c
+    return _
   },
   formatEntryTimestamp: function() {
-    return L
+    return T
   },
   getAggregateRange: function() {
-    return M
+    return R
   },
   getEntryDuration: function() {
     return N
   },
   getFullMarathonDescription: function() {
-    return g
+    return x
   },
   getFullResurrectedBadgeText: function() {
-    return R
+    return L
   },
   getMarathonDurationStr: function() {
-    return v
+    return O
   },
   getMarathonName: function() {
-    return y
+    return A
   },
   getResurrectedEntryLastPlayTime: function() {
-    return A
+    return v
   },
   getStreakCount: function() {
     return p
   },
   getTrait: function() {
-    return f
-  },
-  getTrendingType: function() {
-    return h
-  },
-  isEntryActive: function() {
-    return C
-  },
-  isEntryExpired: function() {
     return I
   },
-  isEntryMarathon: function() {
-    return m
+  getTrendingType: function() {
+    return U
   },
-  isEntryNew: function() {
+  isEntryActive: function() {
     return S
   },
+  isEntryExpired: function() {
+    return C
+  },
+  isEntryMarathon: function() {
+    return g
+  },
+  isEntryNew: function() {
+    return m
+  },
   isEntryTopGame: function() {
-    return O
+    return h
   },
   isValidStreak: function() {
-    return D
+    return M
   }
 });
-var r = n("283398"),
-  o = n("913527"),
-  i = n.n(o),
-  a = n("884439"),
-  u = n("876215"),
-  s = n("70956"),
-  E = n("709054"),
-  T = n("689938");
-let l = e => {
+var s = n("283398"),
+  a = n("913527"),
+  i = n.n(a),
+  l = n("884439"),
+  r = n("876215"),
+  u = n("70956"),
+  o = n("709054"),
+  d = n("689938");
+let c = e => {
     let {
       start: t,
       now: n
-    } = e, r = Math.abs((n - t) / s.default.Millis.SECOND), o = Math.floor(r) % s.default.Seconds.MINUTE, i = Math.floor(r / s.default.Seconds.MINUTE) % s.default.Seconds.MINUTE, a = Math.floor(r / s.default.Seconds.HOUR);
+    } = e, s = Math.abs((n - t) / u.default.Millis.SECOND), a = Math.floor(s) % u.default.Seconds.MINUTE, i = Math.floor(s / u.default.Seconds.MINUTE) % u.default.Seconds.MINUTE, l = Math.floor(s / u.default.Seconds.HOUR);
     return {
-      seconds: o,
+      seconds: a,
       minutes: i,
-      hours: a,
-      days: Math.floor(r / s.default.Seconds.DAY)
+      hours: l,
+      days: Math.floor(s / u.default.Seconds.DAY)
     }
   },
-  d = (e, t) => {
-    let n = "id" in e ? E.default.extractTimestamp(e.id) : e.start;
-    return l({
+  E = (e, t) => {
+    let n = "id" in e ? o.default.extractTimestamp(e.id) : e.start;
+    return c({
       start: n,
       now: "end" in e && null != e.end ? Math.min(e.end, t) : t
     })
   },
-  _ = (e, t) => {
+  f = (e, t) => {
     let {
       seconds: n,
-      minutes: r,
-      hours: o
-    } = d(e, t);
+      minutes: s,
+      hours: a
+    } = E(e, t);
 
     function i(e) {
       return String(e).padStart(2, "0")
     }
-    return T.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE.format({
-      hours: o,
-      minutes: o > 0 ? i(r) : r,
+    return d.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE.format({
+      hours: a,
+      minutes: a > 0 ? i(s) : s,
       seconds: i(n)
     })
   },
-  c = (e, t) => {
-    let n = i()(E.default.extractTimestamp(e.id)),
-      r = n.isSame(i()(), "day"),
-      o = i()().diff(n, "s");
-    if (o < s.default.Seconds.MINUTE) return T.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({
-      count: o
+  _ = (e, t) => {
+    let n = i()(o.default.extractTimestamp(e.id)),
+      s = n.isSame(i()(), "day"),
+      a = i()().diff(n, "s");
+    if (a < u.default.Seconds.MINUTE) return d.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({
+      count: a
     });
-    if (o < s.default.Seconds.HOUR) {
-      let e = Math.round(o / s.default.Seconds.MINUTE);
-      return T.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
+    if (a < u.default.Seconds.HOUR) {
+      let e = Math.round(a / u.default.Seconds.MINUTE);
+      return d.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
         count: e
       })
     }
-    if (o < 6 * s.default.Seconds.HOUR) {
-      let e = Math.round(o / s.default.Seconds.HOUR);
-      return T.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({
+    if (a < 6 * u.default.Seconds.HOUR) {
+      let e = Math.round(a / u.default.Seconds.HOUR);
+      return d.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({
         count: e
       })
-    } else if (o < s.default.Seconds.WEEK && r) return n.toDate().toLocaleTimeString(t, {
+    } else if (a < u.default.Seconds.WEEK && s) return n.toDate().toLocaleTimeString(t, {
       hour: "numeric"
     });
-    else if (o < s.default.Seconds.WEEK && !r) return n.toDate().toLocaleTimeString(t, {
+    else if (a < u.default.Seconds.WEEK && !s) return n.toDate().toLocaleTimeString(t, {
       weekday: "short",
       hour: "numeric"
     });
-    let a = Math.round(o / (7 * s.default.Seconds.DAY));
-    return T.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
-      count: a
+    let l = Math.round(a / (7 * u.default.Seconds.DAY));
+    return d.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
+      count: l
     })
   },
-  L = (e, t) => C(e) ? _(e, Date.now()) : c(e, t);
+  T = (e, t) => S(e) ? f(e, Date.now()) : _(e, t);
 
-function f(e, t) {
+function I(e, t) {
   return e.traits.find(e => e.type === t)
-}
-
-function C(e) {
-  var t, n;
-  return null !== (n = null === (t = f(e, a.ContentInventoryTraitType.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n
 }
 
 function S(e) {
   var t, n;
-  return null !== (n = null === (t = f(e, a.ContentInventoryTraitType.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n
+  return null !== (n = null === (t = I(e, l.ContentInventoryTraitType.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n
 }
 
-function I(e) {
+function m(e) {
+  var t, n;
+  return null !== (n = null === (t = I(e, l.ContentInventoryTraitType.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n
+}
+
+function C(e) {
   return null != e.expires_at && new Date(e.expires_at) < new Date
 }
 
 function N(e) {
   var t;
-  return null === (t = f(e, a.ContentInventoryTraitType.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds
-}
-
-function M(e) {
-  var t;
-  return null === (t = f(e, a.ContentInventoryTraitType.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range
-}
-
-function m(e) {
-  var t;
-  return null === (t = f(e, a.ContentInventoryTraitType.MARATHON)) || void 0 === t ? void 0 : t.marathon
-}
-
-function A(e) {
-  let t = f(e, a.ContentInventoryTraitType.RESURRECTED);
-  return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0
+  return null === (t = I(e, l.ContentInventoryTraitType.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds
 }
 
 function R(e) {
+  var t;
+  return null === (t = I(e, l.ContentInventoryTraitType.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range
+}
+
+function g(e) {
+  var t;
+  return null === (t = I(e, l.ContentInventoryTraitType.MARATHON)) || void 0 === t ? void 0 : t.marathon
+}
+
+function v(e) {
+  let t = I(e, l.ContentInventoryTraitType.RESURRECTED);
+  return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0
+}
+
+function L(e) {
   let {
     months: t = 0,
     weeks: n = 0,
-    days: o = 0
-  } = (0, r.intervalToDuration)({
+    days: a = 0
+  } = (0, s.intervalToDuration)({
     start: e,
     end: new Date
   });
-  return T.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED_AFTER.format({
+  return d.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED_AFTER.format({
     months: t,
     weeks: t > 0 ? 0 : n,
-    days: t > 0 || n > 0 ? 0 : o
+    days: t > 0 || n > 0 ? 0 : a
   })
 }
 
-function O(e) {
-  return e.content_type === u.ContentInventoryEntryType.TOP_GAME
+function h(e) {
+  return e.content_type === r.ContentInventoryEntryType.TOP_GAME
 }
 
 function p(e) {
   var t;
-  return null === (t = f(e, a.ContentInventoryTraitType.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days
+  return null === (t = I(e, l.ContentInventoryTraitType.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days
 }
 
-function D(e) {
+function M(e) {
   let t = p(e);
   if (null == t || t < 3) return !1;
-  let n = E.default.extractTimestamp(e.id);
-  return !(Date.now() - n > 48 * s.default.Millis.HOUR) && !0
+  let n = o.default.extractTimestamp(e.id);
+  return !(Date.now() - n > 48 * u.default.Millis.HOUR) && !0
 }
 
-function v(e) {
+function O(e) {
   let t = N(e);
   if (null == t) return null;
-  let n = Math.round(t / s.default.Seconds.HOUR);
-  return T.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
+  let n = Math.round(t / u.default.Seconds.HOUR);
+  return d.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
     hours: n
   })
 }
 
-function y(e) {
+function A(e) {
   var t;
   let n = null !== (t = N(e)) && void 0 !== t ? t : 0;
-  return n > 10 * s.default.Seconds.HOUR ? T.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * s.default.Seconds.HOUR ? T.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : T.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
+  return n > 10 * u.default.Seconds.HOUR ? d.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * u.default.Seconds.HOUR ? d.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : d.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
 }
 
-function g(e) {
-  let t = v(e),
-    n = y(e);
+function x(e) {
+  let t = O(e),
+    n = A(e);
   return null == t ? n : "".concat(n, " — ").concat(t)
 }
 
-function h(e) {
+function U(e) {
   var t;
-  return null === (t = f(e, a.ContentInventoryTraitType.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending
+  return null === (t = I(e, l.ContentInventoryTraitType.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending
 }

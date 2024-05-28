@@ -16,11 +16,11 @@ var s = n("442837"),
   c = n("759231"),
   f = n("626135"),
   E = n("51144"),
-  h = n("480387"),
-  _ = n("726745"),
-  C = n("251423"),
-  m = n("383832"),
-  S = n("981631"),
+  C = n("480387"),
+  h = n("726745"),
+  _ = n("251423"),
+  S = n("383832"),
+  m = n("981631"),
   p = n("689938"),
   I = n("368110");
 
@@ -29,18 +29,18 @@ function g() {
     t = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation),
     {
       multiAccountUsers: n
-    } = (0, C.useMultiAccountUsers)(),
+    } = (0, _.useMultiAccountUsers)(),
     g = t => {
-      t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+      t !== (null == e ? void 0 : e.id) && (f.default.track(m.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
-          section: S.AnalyticsSections.PROFILE_POPOUT
+          section: m.AnalyticsSections.PROFILE_POPOUT
         }
-      }), h.switchAccount(t))
+      }), C.switchAccount(t))
     },
     T = n.map(n => {
       let s = new r.default(n),
         o = s.id === (null == e ? void 0 : e.id),
-        u = n.tokenStatus === _.MultiAccountTokenStatus.INVALID,
+        u = n.tokenStatus === h.MultiAccountTokenStatus.INVALID,
         f = t ? null : "#".concat(s.discriminator);
       return (0, a.jsx)(l.MenuItem, {
         id: s.id,
@@ -70,14 +70,14 @@ function g() {
                 children: f
               })]
             }), o && (0, a.jsx)(d.default, {
-              color: (0, i.getColor)(r ? S.Color.WHITE_500 : S.Color.BRAND_500),
-              backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
+              color: (0, i.getColor)(r ? m.Color.WHITE_500 : m.Color.BRAND_500),
+              backgroundColor: (0, i.getColor)(r ? m.Color.BRAND_500 : m.Color.WHITE_500),
               width: 18,
               height: 18,
               className: I.activeIcon
             }), u && (0, a.jsx)(c.default, {
-              color: (0, i.getColor)(S.Color.RED_400),
-              backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
+              color: (0, i.getColor)(m.Color.RED_400),
+              backgroundColor: (0, i.getColor)(m.Color.WHITE_500),
               width: 15,
               height: 15,
               className: I.activeIcon
@@ -85,7 +85,7 @@ function g() {
           })
         },
         action: () => {
-          u ? (0, m.default)() : g(s.id)
+          u ? (0, S.default)() : g(s.id)
         }
       }, s.id)
     });
@@ -93,7 +93,7 @@ function g() {
     children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
       id: "manage-accounts",
       label: p.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
-      action: m.default
+      action: S.default
     })]
   })), T
 }

@@ -23,9 +23,9 @@ var a, l, s = n("735250"),
   T = n("465670"),
   I = n("372662"),
   A = n("740624"),
-  N = n("502568"),
-  v = n("471253"),
-  x = n("431328"),
+  v = n("502568"),
+  x = n("471253"),
+  N = n("431328"),
   M = n("145834"),
   R = n("590415"),
   y = n("614173"),
@@ -37,21 +37,21 @@ let D = i.memo(function(e) {
     let {
       toggleRequestToSpeakSidebar: t,
       chatOpen: n
-    } = e, a = (0, s.jsx)(N.default.Icon, {
+    } = e, a = (0, s.jsx)(v.default.Icon, {
       icon: T.default,
       tooltip: j.default.Messages.CLOSE,
       onClick: t
     });
-    return (0, s.jsxs)(N.default, {
+    return (0, s.jsxs)(v.default, {
       toolbar: a,
       className: o()(P.headerContainer, {
         [P.chatOpen]: n
       }),
-      children: [(0, s.jsx)(N.default.Icon, {
+      children: [(0, s.jsx)(v.default.Icon, {
         icon: A.default,
         disabled: !0,
         "aria-label": j.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
-      }), (0, s.jsx)(N.default.Title, {
+      }), (0, s.jsx)(v.default.Title, {
         children: j.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
       })]
     })
@@ -71,22 +71,22 @@ let D = i.memo(function(e) {
     d()(null != S, "Channel cannot be guildless");
     let {
       isMobile: A,
-      status: N
+      status: v
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
       isMobile: _.default.isMobileOnline(a.user.id),
       status: _.default.getStatus(a.user.id, S)
-    })), x = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), y = i.useMemo(() => ({
+    })), N = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), y = i.useMemo(() => ({
       [S]: [a.user.id]
     }), [S, a.user.id]);
     (0, p.useSubscribeGuildMembers)(y);
     let L = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
     function O() {
-      (0, v.setUserSuppress)(t, a.user.id, !1)
+      (0, x.setUserSuppress)(t, a.user.id, !1)
     }
 
     function D() {
-      (0, v.setUserSuppress)(t, a.user.id, !0)
+      (0, x.setUserSuppress)(t, a.user.id, !0)
     }
     let b = e => {
       (0, h.openContextMenuLazy)(e, async () => {
@@ -129,12 +129,12 @@ let D = i.memo(function(e) {
               className: P.participantAvatar,
               user: a.user,
               isMobile: A,
-              status: N
+              status: v
             }), (0, s.jsxs)("div", {
               className: P.participantTextContainer,
               children: [(0, s.jsx)(f.NameWithRole, {
                 name: a.userNick,
-                color: null !== (t = null == x ? void 0 : x.colorString) && void 0 !== t ? t : void 0,
+                color: null !== (t = null == N ? void 0 : N.colorString) && void 0 !== t ? t : void 0,
                 className: P.participantName
               }), (0, s.jsx)(f.Text, {
                 variant: "text-xs/normal",
@@ -207,7 +207,7 @@ function w(e) {
     channel: t,
     toggleRequestToSpeakSidebar: n,
     chatOpen: a
-  } = e, l = (0, x.useSortedRequestToSpeakParticipants)(t.id), i = [(0, c.useStateFromStores)([S.default], () => S.default.can(O.Permissions.MANAGE_CHANNELS, t) || S.default.can(O.Permissions.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
+  } = e, l = (0, N.useSortedRequestToSpeakParticipants)(t.id), i = [(0, c.useStateFromStores)([S.default], () => S.default.can(O.Permissions.MANAGE_CHANNELS, t) || S.default.can(O.Permissions.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
   return (0, s.jsxs)("div", {
     className: o()(P.container, {
       [P.chatOpen]: a

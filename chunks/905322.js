@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   Banner: function() {
-    return s
+    return a
   }
 });
 var i = n("735250"),
   l = n("470079"),
   r = n("777207"),
-  a = n("156440");
+  s = n("156440");
 
-function s(e) {
+function a(e) {
   let {
     title: t,
     subtitle: n,
-    iconSrc: s,
+    iconSrc: a,
     backgroundSrc: o,
     animatedBackgroundSrc: u,
     prefersReducedMotion: d = !0
   } = e, c = l.useMemo(() => {
-    let e = null != o ? o : s;
+    let e = null != o ? o : a;
     if (null != e) return {
       "--custom-background-url": "url(".concat(e.toString(), ")")
     }
-  }, [o, s]), f = l.useMemo(() => {
+  }, [o, a]), f = l.useMemo(() => {
     if (null == o) return;
     let e = {
       "--custom-background-static": "url(".concat(o.toString())
@@ -30,16 +30,16 @@ function s(e) {
     return !d && null != u && (e["--custom-background-animated"] = "url(".concat(u.toString(), ")")), e
   }, [u, o, d]);
   return (0, i.jsxs)("div", {
-    className: a.wrapper,
+    className: s.wrapper,
     children: [(0, i.jsx)("div", {
-      className: a.background,
+      className: s.background,
       style: c
     }), (0, i.jsxs)("div", {
-      className: a.content,
-      children: [null != s && (0, i.jsx)("div", {
-        className: a.icon,
+      className: s.content,
+      children: [null != a && (0, i.jsx)("div", {
+        className: s.icon,
         children: (0, i.jsx)("img", {
-          src: s.toString(),
+          src: a.toString(),
           alt: ""
         })
       }), (0, i.jsxs)("div", {
@@ -53,7 +53,7 @@ function s(e) {
         })]
       })]
     }), null != o ? (0, i.jsx)("div", {
-      className: a.image,
+      className: s.image,
       style: f
     }) : null]
   })

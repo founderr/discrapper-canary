@@ -10,11 +10,11 @@ var i = n("756647"),
   c = n("457330"),
   f = n("533307"),
   E = n("447543"),
-  h = n("962220"),
-  _ = n("703656"),
-  C = n("314897"),
-  m = n("594174"),
-  S = n("626135"),
+  C = n("962220"),
+  h = n("703656"),
+  _ = n("314897"),
+  S = n("594174"),
+  m = n("626135"),
   p = n("585483"),
   I = n("591759"),
   g = n("998502"),
@@ -23,7 +23,7 @@ var i = n("756647"),
   N = n("981631");
 
 function v(e, t) {
-  null != e && S.default.track(N.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+  null != e && m.default.track(N.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
     invite_code: null,
     has_auth_token: null,
     is_backgrounded: null,
@@ -44,12 +44,12 @@ function v(e, t) {
       if (null == n) throw new T.default({
         errorCode: N.RPCErrors.INVALID_INVITE
       }, "Invalid invite id: ".concat(t));
-      return C.default.isAuthenticated() ? o.default.dispatch({
+      return _.default.isAuthenticated() ? o.default.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: n,
         code: t,
         context: N.AppContext.APP
-      }) : (0, _.replaceWith)(N.Routes.INVITE(t)), {
+      }) : (0, h.replaceWith)(N.Routes.INVITE(t)), {
         invite: n,
         code: t
       }
@@ -63,10 +63,10 @@ function v(e, t) {
           code: t
         }
       } = e;
-      if (null == m.default.getCurrentUser()) return;
+      if (null == S.default.getCurrentUser()) return;
       let {
         guildTemplate: a
-      } = await h.default.resolveGuildTemplate(t);
+      } = await C.default.resolveGuildTemplate(t);
       if (null == a) throw new T.default({
         errorCode: N.RPCErrors.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
@@ -98,7 +98,7 @@ function v(e, t) {
             let {
               giftCode: s
             } = a;
-            g.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
+            g.default.focus(), m.default.track(N.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
               location: N.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {
@@ -130,28 +130,28 @@ function v(e, t) {
       } = e;
       switch (g.default.focus(), t) {
         case A.RPCDeepLinks.USER_SETTINGS:
-          null != n && ((0, _.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), v(n.fingerprint, "settings"));
+          null != n && ((0, h.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), v(n.fingerprint, "settings"));
           break;
         case A.RPCDeepLinks.CHANGELOG:
-          null != n && ((0, _.replaceWith)(I.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
+          null != n && ((0, h.replaceWith)(I.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
           break;
         case A.RPCDeepLinks.LIBRARY:
-          (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && v(n.fingerprint, "library");
+          (0, h.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && v(n.fingerprint, "library");
           break;
         case A.RPCDeepLinks.STORE_HOME:
-          (0, _.replaceWith)(N.Routes.APPLICATION_STORE), null != n && v(n.fingerprint, "store");
+          (0, h.replaceWith)(N.Routes.APPLICATION_STORE), null != n && v(n.fingerprint, "store");
           break;
         case A.RPCDeepLinks.STORE_LISTING:
-          null != n && ((0, _.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, "store"));
+          null != n && ((0, h.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, "store"));
           break;
         case A.RPCDeepLinks.PICK_GUILD_SETTINGS:
-          null != n && ((0, _.replaceWith)({
+          null != n && ((0, h.replaceWith)({
             pathname: N.Routes.PICK_GUILD_SETTINGS(n.section, n.subsection),
             search: n.search
           }), v(n.fingerprint, "guild_settings"));
           break;
         case A.RPCDeepLinks.CHANNEL:
-          null != n && ((0, _.replaceWith)({
+          null != n && ((0, h.replaceWith)({
             pathname: N.Routes.CHANNEL(n.guildId, n.channelId, n.messageId),
             search: n.search
           }), v(n.fingerprint, "channel"))

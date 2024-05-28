@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var s = n("735250"),
   a = n("470079"),
   i = n("920906"),
-  r = n("849146");
-let l = () => {
+  l = n("849146");
+let r = () => {
   let e = a.useRef(null),
     [t, n] = a.useState(0),
-    s = a.useMemo(() => new r.default(e => {
+    s = a.useMemo(() => new l.default(e => {
       let [t] = e;
       return n(t.contentRect.height)
     }), []);
@@ -26,11 +26,11 @@ function o(e) {
     show: t,
     children: n,
     top: a = 0,
-    bottom: r = 0
+    bottom: l = 0
   } = e, {
     ref: o,
     height: u
-  } = l(), d = (0, i.useSpring)({
+  } = r(), d = (0, i.useSpring)({
     from: {
       height: 0,
       paddingBottom: "0px",
@@ -38,7 +38,7 @@ function o(e) {
     },
     to: {
       height: t ? u : 0,
-      paddingBottom: t ? "".concat(r, "px") : "0px",
+      paddingBottom: t ? "".concat(l, "px") : "0px",
       marginTop: t ? "".concat(a, "px") : "0px"
     },
     config: {

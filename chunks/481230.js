@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return g
   },
   registerFull: function() {
-    return _
+    return m
   }
 });
 var s = n("913527"),
   a = n.n(s),
   i = n("990547"),
-  r = n("570140"),
-  l = n("479531"),
+  l = n("570140"),
+  r = n("479531"),
   o = n("771308"),
   u = n("314897"),
   d = n("626135"),
@@ -26,32 +26,32 @@ function g(e) {
     giftCodeSKUId: n = null,
     ...s
   } = e;
-  return _({
+  return m({
     ...s,
     invite: t,
     giftCodeSKUId: n
   })
 }
 
-function _(e) {
+function m(e) {
   let {
     email: t,
     phoneToken: n,
     username: s,
     globalName: g,
-    consent: _,
-    password: m,
+    consent: m,
+    password: _,
     guildTemplateCode: p,
     birthday: T,
-    invite: A = null,
-    giftCodeSKUId: I = null,
-    multiStep: S = !1,
+    invite: I = null,
+    giftCodeSKUId: S = null,
+    multiStep: A = !1,
     promoEmailConsent: N = null,
     usedUsernameSuggestion: R = null
   } = e;
-  return r.default.dispatch({
+  return l.default.dispatch({
     type: "REGISTER",
-    birthday: S ? T : null
+    birthday: A ? T : null
   }), null != T && ((0, f.default)(T, h.AnalyticsSections.REGISTER), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
     source: E.AgeGateSource.REGISTER,
     action: E.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
@@ -68,19 +68,19 @@ function _(e) {
       email: t,
       username: s,
       global_name: g,
-      password: m,
-      invite: A,
-      consent: _,
+      password: _,
+      invite: I,
+      consent: m,
       phone_token: n,
       date_of_birth: null == T ? void 0 : T.format("YYYY-MM-DD"),
-      gift_code_sku_id: I,
+      gift_code_sku_id: S,
       guild_template_code: p,
       promotional_email_opt_in: null == N ? void 0 : N.checked
     },
     trackedActionData: {
       event: i.NetworkActionNames.USER_REGISTER,
       properties: {
-        invite_code: A,
+        invite_code: I,
         used_username_suggestion: R,
         promotional_email_opt_in: null == N ? void 0 : N.checked,
         promotional_email_pre_checked: null == N ? void 0 : N.preChecked,
@@ -88,7 +88,7 @@ function _(e) {
       }
     }
   }).then(e => {
-    r.default.dispatch({
+    l.default.dispatch({
       type: "REGISTER_SUCCESS",
       token: e.body.token
     }), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
@@ -96,8 +96,8 @@ function _(e) {
       action: E.AgeGateAnalyticAction.AGE_GATE_SUCCESS
     })
   }, e => {
-    let t = new l.default(e);
-    throw r.default.dispatch({
+    let t = new r.default(e);
+    throw l.default.dispatch({
       type: "REGISTER_FAILURE",
       error: t
     }), null != t.getFieldErrors("date_of_birth") && o.preventUnderageRegistration(E.AgeGateSource.REGISTER), d.default.track(h.AnalyticEvents.REGISTER_SUBMIT_ERRORED, {

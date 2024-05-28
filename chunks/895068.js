@@ -13,11 +13,11 @@ var a, s, l = n("735250"),
   c = n("110924"),
   f = n("393903"),
   E = n("638730"),
-  h = n("970606"),
-  _ = n("945124"),
-  C = n("231467"),
-  m = n("931515"),
-  S = n("207796"),
+  C = n("970606"),
+  h = n("945124"),
+  _ = n("231467"),
+  S = n("931515"),
+  m = n("207796"),
   p = n("777734"),
   I = n("976757"),
   g = n("981631"),
@@ -32,7 +32,7 @@ function N(e) {
     clans: a,
     searchResult: s,
     searchCriteria: N
-  } = (0, m.useClanDiscoveryList)(), v = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), R = (0, S.useClanDiscoveryUIStore)(e => e.mode, o.default), O = (0, c.default)(s), L = (0, c.default)(R), M = i.useRef(null), P = i.useRef(0), [x, y] = i.useState({}), [D, b] = (0, r.useSpring)(() => ({
+  } = (0, S.useClanDiscoveryList)(), v = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), R = (0, m.useClanDiscoveryUIStore)(e => e.mode, o.default), O = (0, c.default)(s), L = (0, c.default)(R), P = i.useRef(null), y = i.useRef(0), [M, D] = i.useState({}), [x, b] = (0, r.useSpring)(() => ({
     opacity: 0,
     config: r.config.stiff
   })), U = Math.min(null != t ? t : 1024, 2e3), j = i.useMemo(() => {
@@ -43,30 +43,30 @@ function N(e) {
     return a > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
   }, [U]), G = i.useCallback(() => {
     if (null == k.current) {
-      0 !== P.current && (y({
+      0 !== y.current && (D({
         height: 0
       }), b({
         opacity: 0
-      }), P.current = 0);
+      }), y.current = 0);
       return
     }
-    y({
+    D({
       height: k.current.getBoundingClientRect().y + 16 + 400 + 40 + 4
-    }), 0 === P.current && (b({
+    }), 0 === y.current && (b({
       opacity: 1
-    }), P.current = 1)
+    }), y.current = 1)
   }, []), w = (0, E.useThrottledFunction)(G, 10, [G], {
     leading: !0,
     trailing: !0
   }), k = (0, f.useResizeObserver)(G);
   i.useEffect(() => {
-    if (null != s && !!(0, I.isLoadedSearchResult)(s))(!(null != O && (0, I.isLoadedSearchResult)(O)) || !(O.loadedAt >= s.loadedAt)) && (G(), (0, h.trackClanDiscoveryViewed)(s.items.map(e => e.id), "top_picks", N))
+    if (null != s && !!(0, I.isLoadedSearchResult)(s))(!(null != O && (0, I.isLoadedSearchResult)(O)) || !(O.loadedAt >= s.loadedAt)) && (G(), (0, C.trackClanDiscoveryViewed)(s.items.map(e => e.id), "top_picks", N))
   }, [N, s, O, G]), i.useEffect(() => {
-    if (L !== R && L !== S.ClanDiscoveryMode.DISCOVERY)(L === S.ClanDiscoveryMode.ADMIN_UPSELL || null == L) && R === S.ClanDiscoveryMode.DISCOVERY && (G(), M.current = setTimeout(() => {
+    if (L !== R && L !== m.ClanDiscoveryMode.DISCOVERY)(L === m.ClanDiscoveryMode.ADMIN_UPSELL || null == L) && R === m.ClanDiscoveryMode.DISCOVERY && (G(), P.current = setTimeout(() => {
       G()
     }, 500))
   }, [L, R]), i.useEffect(() => () => {
-    null != M.current && clearTimeout(M.current)
+    null != P.current && clearTimeout(P.current)
   }, []);
   let B = i.useMemo(() => null == a ? [] : [{
       section: "top_picks",
@@ -86,9 +86,9 @@ function N(e) {
       let {
         items: i
       } = B[e], r = i[t];
-      return (0, l.jsx)(C.default, {
+      return (0, l.jsx)(_.default, {
         clan: r,
-        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, _.getClanDiscoveryAffinity)(r, N),
+        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, h.getClanDiscoveryAffinity)(r, N),
         traitsToHighlight: v,
         className: A.card,
         style: n,
@@ -121,8 +121,8 @@ function N(e) {
       children: [(0, l.jsx)(r.animated.div, {
         className: A.masonryListGradient,
         style: {
-          ...D,
-          ...x
+          ...x,
+          ...M
         }
       }), (0, l.jsx)(d.MasonryList, {
         className: A.masonryList,

@@ -1,19 +1,19 @@
 "use strict";
 s.r(t), s("653041"), s("47120");
-var a = s("735250"),
-  r = s("470079"),
-  i = s("442837"),
-  n = s("16084"),
-  l = s("730749"),
-  o = s("812206"),
-  u = s("984370"),
+var n = s("735250"),
+  a = s("470079"),
+  r = s("442837"),
+  l = s("16084"),
+  i = s("730749"),
+  u = s("812206"),
+  o = s("984370"),
   d = s("703656"),
   c = s("55563"),
-  _ = s("66579"),
-  E = s("981631"),
-  T = s("62039");
+  I = s("66579"),
+  T = s("981631"),
+  E = s("62039");
 
-function I(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -21,65 +21,65 @@ function I(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class R extends r.PureComponent {
+class _ extends a.PureComponent {
   componentDidMount() {
     let {
       sku: e,
       primarySkuId: t,
       isFetchingPrimarySku: s
     } = this.props;
-    null != t && !s && null != e && (0, n.fetchPublishedSKU)(e.applicationId, t)
+    null != t && !s && null != e && (0, l.fetchPublishedSKU)(e.applicationId, t)
   }
   render() {
     let {
       sku: e,
       primarySku: t
-    } = this.props, s = [], r = null;
+    } = this.props, s = [], a = null;
     if (null != e) {
-      let a = E.Routes.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
-      r = a, null != t && s.push({
-        id: E.Routes.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
+      let n = T.Routes.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
+      a = n, null != t && s.push({
+        id: T.Routes.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
         label: t.name
       }), s.push({
-        id: a,
+        id: n,
         label: e.name
       })
     }
-    return (0, a.jsx)(_.default, {
+    return (0, n.jsx)(I.default, {
       renderCustomBreadcrumb: this.renderCustomBreadcrumb,
       onBreadcrumbClick: this.handleClick,
       breadcrumbs: s,
-      activeId: r
+      activeId: a
     })
   }
   constructor(...e) {
-    super(...e), I(this, "handleClick", e => {
+    super(...e), f(this, "handleClick", e => {
       let {
         sku: t
       } = this.props;
       (0, d.transitionTo)(e.id, {
         state: {
           analyticsSource: {
-            object: E.AnalyticsObjects.NAVIGATION_LINK,
-            section: E.AnalyticsSections.NAVIGATION,
-            page: null == t ? E.AnalyticsPages.STORE_DIRECTORY_BROWSE : E.AnalyticsPages.STORE_LISTING
+            object: T.AnalyticsObjects.NAVIGATION_LINK,
+            section: T.AnalyticsSections.NAVIGATION,
+            page: null == t ? T.AnalyticsPages.STORE_DIRECTORY_BROWSE : T.AnalyticsPages.STORE_LISTING
           }
         }
       })
-    }), I(this, "renderCustomBreadcrumb", (e, t) => (0, a.jsx)(u.default.Title, {
-      className: t ? null : T.breadcrumb,
+    }), f(this, "renderCustomBreadcrumb", (e, t) => (0, n.jsx)(o.default.Title, {
+      className: t ? null : E.breadcrumb,
       muted: !t,
       children: e.label
     }))
   }
 }
-t.default = (0, l.default)(i.default.connectStores([o.default, c.default], e => {
+t.default = (0, i.default)(r.default.connectStores([u.default, c.default], e => {
   let {
     sku: t
-  } = e, s = null != t ? o.default.getApplication(t.applicationId) : null, a = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;
+  } = e, s = null != t ? u.default.getApplication(t.applicationId) : null, n = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;
   return {
-    primarySkuId: a,
-    isFetchingPrimarySku: null != a && c.default.isFetching(a),
-    primarySku: null != a ? c.default.get(a) : null
+    primarySkuId: n,
+    isFetchingPrimarySku: null != n && c.default.isFetching(n),
+    primarySku: null != n ? c.default.get(n) : null
   }
-})(R))
+})(_))

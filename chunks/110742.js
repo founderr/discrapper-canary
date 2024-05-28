@@ -5,11 +5,11 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("442837"),
-  s = n("580130");
+  r = n("580130");
 
 function l(e) {
-  return (0, i.useStateFromStores)([s.default], () => {
-    let t = s.default.getForSku(e);
+  return (0, i.useStateFromStores)([r.default], () => {
+    let t = r.default.getForSku(e);
     if (null == t) return !1;
     let n = 0;
     for (let e of t) {
