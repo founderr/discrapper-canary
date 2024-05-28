@@ -1,23 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
-  QuestBarExperiment: function() {
-    return _
-  },
-  QuestBarExperimentVariants: function() {
-    return r
-  },
   getIsEligibleForQuests: function() {
-    return o
+    return s
   },
   isQuestPreviewToolEnabled: function() {
-    return d
+    return l
   },
   useIsEligibleForQuests: function() {
-    return l
+    return a
   }
 });
-var i, r, s = n("818083");
-let a = (0, s.createExperiment)({
+var i = n("818083");
+let r = (0, i.createExperiment)({
     id: "2023-12_quests",
     kind: "user",
     label: "Quests",
@@ -38,27 +32,27 @@ let a = (0, s.createExperiment)({
       }
     }]
   }),
-  o = e => {
+  s = e => {
     let {
       location: t
     } = e;
-    return a.getCurrentConfig({
+    return r.getCurrentConfig({
       location: t
     }, {
       autoTrackExposure: !1
     }).enabled
   },
-  l = e => {
+  a = e => {
     let {
       location: t
     } = e;
-    return a.useExperiment({
+    return r.useExperiment({
       location: t
     }, {
       autoTrackExposure: !1
     }).enabled
   },
-  u = (0, s.createExperiment)({
+  o = (0, i.createExperiment)({
     id: "2024-04_quest_preview_tool",
     kind: "user",
     label: "Quest Preview Tool",
@@ -74,37 +68,13 @@ let a = (0, s.createExperiment)({
     }]
   });
 
-function d(e) {
+function l(e) {
   let {
     location: t
   } = e;
-  return u.getCurrentConfig({
+  return o.getCurrentConfig({
     location: t
   }, {
     autoTrackExposure: !1
   }).enabled
-}(i = r || (r = {}))[i.V1 = 0] = "V1", i[i.V2 = 1] = "V2";
-let _ = (0, s.createExperiment)({
-  id: "2024-05_quest_bar",
-  kind: "user",
-  label: "Quest Bar",
-  defaultConfig: {
-    primaryVariant: 0,
-    progressVariant: 0
-  },
-  treatments: [{
-    id: 1,
-    label: "Quest Bar V2 with V1 Progress",
-    config: {
-      primaryVariant: 1,
-      progressVariant: 0
-    }
-  }, {
-    id: 2,
-    label: "Quest Bar V2",
-    config: {
-      primaryVariant: 1,
-      progressVariant: 1
-    }
-  }]
-})
+}
