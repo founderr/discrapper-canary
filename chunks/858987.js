@@ -64,8 +64,9 @@ function A(e) {
   } = e, {
     selectedPlan: S,
     hasAcceptedTerms: P,
-    purchaseType: h
-  } = (0, n.usePaymentContext)(), m = L({
+    purchaseType: h,
+    purchasePreviewError: m
+  } = (0, n.usePaymentContext)(), C = L({
     purchaseType: h,
     plan: S,
     premiumSubscription: d,
@@ -73,10 +74,10 @@ function A(e) {
     planGroup: p,
     isPrepaidPaymentSource: N
   });
-  if (null != s || null != r || l) return (0, a.jsx)(i.Button, {
+  if (null != s || null != r || null != m || l) return (0, a.jsx)(i.Button, {
     color: i.Button.Colors.GREEN,
     disabled: !0,
-    children: m
+    children: C
   });
   if (R) return (0, a.jsx)(i.Tooltip, {
     text: E.default.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
@@ -86,7 +87,7 @@ function A(e) {
       type: "submit",
       "data-testid": "submitButton",
       disabled: !0,
-      children: m
+      children: C
     })
   });
   if (M) return (0, a.jsxs)(c.default, {
@@ -99,7 +100,7 @@ function A(e) {
       alt: "",
       className: _.nitroIcon,
       src: I
-    }), m]
+    }), C]
   });
   else if (!P) return (0, a.jsx)(i.Tooltip, {
     text: E.default.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
@@ -109,7 +110,7 @@ function A(e) {
       type: "submit",
       onClick: () => T(t, u),
       "data-testid": "submitButton",
-      children: m
+      children: C
     })
   });
   else return (0, a.jsx)(i.Button, {
@@ -117,6 +118,6 @@ function A(e) {
     onClick: f,
     color: i.Button.Colors.GREEN,
     submitting: o,
-    children: m
+    children: C
   })
 }

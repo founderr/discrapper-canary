@@ -1,48 +1,66 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return E
   }
 }), n("47120");
 var r = n("470079"),
   u = n("399606"),
   i = n("16084"),
+  l = n("881052"),
   a = n("855775"),
-  l = n("55563"),
-  o = n("474936");
+  o = n("55563"),
+  s = n("474936");
 
-function s(e) {
+function E(e) {
   let {
     applicationId: t,
     skuIDs: n,
-    currentPaymentSourceId: s,
-    isGift: E
-  } = e, S = r.useMemo(() => n.filter(e => !o.ACTIVE_PREMIUM_SKUS.includes(e)), [JSON.stringify(n)]), _ = (0, u.useStateFromStores)([l.default], () => S.every(e => !l.default.isFetching(e) && null != l.default.get(e))), d = (0, u.useStateFromStoresObject)([l.default], () => {
+    currentPaymentSourceId: E,
+    isGift: S
+  } = e, _ = r.useMemo(() => n.filter(e => !s.ACTIVE_PREMIUM_SKUS.includes(e)), [JSON.stringify(n)]), d = (0, u.useStateFromStores)([o.default], () => _.every(e => !o.default.isFetching(e) && null != o.default.get(e))), {
+    previewErrorsById: c,
+    setErrorById: A
+  } = function() {
+    let [e, t] = r.useState({});
+    return {
+      previewErrorsById: e,
+      setErrorById: r.useCallback((e, n) => {
+        t(t => ({
+          ...t,
+          [e]: n
+        }))
+      }, [t])
+    }
+  }(), f = (0, u.useStateFromStoresObject)([o.default], () => {
     let e = {};
-    for (let n of S) {
+    for (let n of _) {
       var t;
-      e[n] = null !== (t = l.default.get(n)) && void 0 !== t ? t : void 0
+      e[n] = null !== (t = o.default.get(n)) && void 0 !== t ? t : void 0
     }
     return e
-  }, [S]);
+  }, [_]);
   r.useEffect(() => {
-    for (let e of S) !l.default.isFetching(e) && null == l.default.get(e) && (0, i.fetchPublishedSKU)(t, e)
-  }, [t, S]);
-  let c = (0, u.useStateFromStoresObject)([a.default], () => {
+    for (let e of _) !o.default.isFetching(e) && null == o.default.get(e) && (0, i.fetchPublishedSKU)(t, e)
+  }, [t, _]);
+  let T = (0, u.useStateFromStoresObject)([a.default], () => {
     let e = {};
-    for (let n of S) {
+    for (let n of _) {
       var t;
       e[n] = null !== (t = a.default.getPricesForSku(n)) && void 0 !== t ? t : void 0
     }
     return e
-  }, [S]);
+  }, [_]);
   return r.useEffect(() => {
-    for (let e of S) !a.default.isFetchingSKU(e) && (0, i.fetchPurchasePreview)(t, e, s, {
-      isGift: E
+    for (let e of _) !a.default.isFetchingSKU(e) && (0, i.fetchPurchasePreview)(t, e, E, {
+      isGift: S
+    }).catch(t => {
+      t instanceof l.BillingError && A(e, t)
     })
-  }, [t, S, s, E]), {
-    hasFetchedSkus: _,
-    skusById: d,
-    skuPricePreviewsById: c
+  }, [t, _, E, S, A]), {
+    hasFetchedSkus: d,
+    skusById: f,
+    skuPricePreviewsById: T,
+    previewErrorsById: c
   }
 }

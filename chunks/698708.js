@@ -1,40 +1,38 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return m
+    return d
   }
 });
 var n = a("735250");
 a("470079");
-var s = a("120356"),
-  l = a.n(s),
-  r = a("481060"),
-  o = a("881052"),
-  i = a("128069"),
-  u = a("598"),
-  c = a("409813"),
-  d = a("981631"),
-  p = a("689938"),
-  E = a("222107");
+var s = a("481060"),
+  l = a("881052"),
+  r = a("128069"),
+  o = a("598"),
+  i = a("409813"),
+  u = a("981631"),
+  c = a("689938");
 
-function m(e) {
+function d(e) {
   let {
     planError: t,
     purchaseErrorBlockRef: a,
-    className: s
+    className: d
   } = e, {
-    currencies: m,
-    paymentError: S,
-    purchaseError: A
-  } = (0, u.usePaymentContext)(), f = null;
-  null != S && null == (0, c.errorToStep)(S) ? f = S : null != A ? f = A : null != t && (f = t);
-  let T = m.length > 1,
-    _ = null != f ? f.message : "";
-  return (null != f && f instanceof o.BillingError && (f.code === i.ErrorCodes.CARD_DECLINED && T && (_ += " ".concat(p.default.Messages.BILLING_ERROR_TRY_ANOTHER)), f.code === i.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (_ = p.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), f.code === d.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (_ = p.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID)), null == f) ? null : (0, n.jsx)("div", {
-    className: l()(E.errorBlockWrapper, s),
-    children: (0, n.jsx)(r.FormErrorBlock, {
+    currencies: p,
+    paymentError: E,
+    purchaseError: m,
+    purchasePreviewError: S
+  } = (0, o.usePaymentContext)(), A = null;
+  null != S ? A = S : null != E && null == (0, i.errorToStep)(E) ? A = E : null != m ? A = m : null != t && (A = t);
+  let f = p.length > 1,
+    T = null != A ? A.message : "";
+  return (null != A && A instanceof l.BillingError && (A.code === r.ErrorCodes.CARD_DECLINED && f && (T += " ".concat(c.default.Messages.BILLING_ERROR_TRY_ANOTHER)), A.code === r.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (T = c.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), A.code === u.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (T = c.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID)), null == A) ? null : (0, n.jsx)("div", {
+    className: d,
+    children: (0, n.jsx)(s.FormErrorBlock, {
       ref: a,
-      children: _
+      children: T
     })
   })
 }
