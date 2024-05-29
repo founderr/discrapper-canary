@@ -1,88 +1,92 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryCardView: function() {
-    return P
+    return k
   },
   Wildcards: function() {
-    return D
+    return U
   }
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
   s = n("120356"),
   a = n.n(s),
-  o = n("481060"),
-  l = n("442837"),
-  u = n("239091"),
-  d = n("835473"),
-  _ = n("970606"),
-  c = n("905362"),
-  E = n("603368"),
-  I = n("353093"),
-  T = n("169559"),
-  f = n("114487"),
-  S = n("214715"),
-  h = n("550271"),
-  A = n("937111"),
-  m = n("703656"),
-  N = n("271383"),
-  p = n("594174"),
-  O = n("778045"),
-  C = n("355932"),
-  R = n("981631"),
-  g = n("308083"),
-  L = n("689938"),
-  v = n("449729");
+  o = n("903788"),
+  l = n("310665"),
+  u = n("194565"),
+  d = n("481060"),
+  _ = n("442837"),
+  c = n("239091"),
+  E = n("835473"),
+  I = n("970606"),
+  T = n("905362"),
+  f = n("603368"),
+  S = n("353093"),
+  h = n("169559"),
+  A = n("114487"),
+  m = n("214715"),
+  N = n("550271"),
+  p = n("246364"),
+  O = n("937111"),
+  C = n("703656"),
+  R = n("271383"),
+  g = n("594174"),
+  L = n("778045"),
+  v = n("355932"),
+  D = n("981631"),
+  M = n("308083"),
+  y = n("689938"),
+  P = n("449729");
 
-function D(e) {
+function U(e) {
   let {
     wildcardDescriptors: t,
     primaryColor: n
-  } = e, s = t.filter(e => e !== g.EMPTY_WILDCARD).join(", "), a = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, E.getAccessibleClanColor)(n, a.hex()), u = r.useRef(null), [d, _] = r.useState(!1);
+  } = e, s = t.filter(e => e !== M.EMPTY_WILDCARD).join(", "), a = (0, d.useToken)(d.tokens.colors.BACKGROUND_FLOATING), o = (0, f.getAccessibleClanColor)(n, a.hex()), l = r.useRef(null), [u, _] = r.useState(!1);
   if (r.useEffect(() => {
-      let e = u.current;
+      let e = l.current;
       null != e && null != e.offsetWidth && null != e.scrollWidth && _(e.offsetWidth < e.scrollWidth)
     }, []), 0 === s.length) return null;
-  let c = null != l ? {
-    color: l.css()
+  let c = null != o ? {
+    color: o.css()
   } : void 0;
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(o.Text, {
+    children: [(0, i.jsx)(d.Text, {
       variant: "text-xs/normal",
       color: "text-secondary",
-      className: v.clanInfoItem,
+      className: P.clanInfoItem,
       children: "\xb7"
-    }), (0, i.jsx)(o.Tooltip, {
+    }), (0, i.jsx)(d.Tooltip, {
       text: s,
-      color: o.Tooltip.Colors.PRIMARY,
-      shouldShow: d,
+      color: d.Tooltip.Colors.PRIMARY,
+      shouldShow: u,
       children: e => (0, i.jsx)("span", {
         ...e,
         style: c,
-        className: v.wildCardText,
-        ref: u,
+        className: P.wildCardText,
+        ref: l,
         children: s
       })
     })]
   })
 }
 
-function M(e) {
+function b(e) {
   let {
     description: t,
     expanded: n
   } = e;
   return null == t ? null : n ? (0, i.jsx)("div", {
-    className: v.cardContentDescriptionSection,
-    children: (0, i.jsx)(o.Text, {
+    className: P.cardContentDescriptionSection,
+    children: (0, i.jsx)(d.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
       children: t
     })
   }) : (0, i.jsx)("div", {
-    className: v.cardContentDescriptionSection,
-    children: (0, i.jsx)(o.Text, {
-      className: v.cardContentDescriptionCollapsed,
+    className: P.cardContentDescriptionSection,
+    children: (0, i.jsx)(d.Text, {
+      className: P.cardContentDescriptionCollapsed,
       variant: "text-xs/normal",
       color: "text-muted",
       lineClamp: 4,
@@ -91,19 +95,19 @@ function M(e) {
   })
 }
 
-function y(e) {
+function G(e) {
   let {
     traits: t,
     traitsToHighlight: n
-  } = e, s = r.useMemo(() => null == n ? new Set : new Set(n), [n]), o = r.useCallback(e => (0, i.jsx)(S.default, {
-    className: a()(v.thinTrait, {
-      [v.selectedTrait]: s.has(e)
+  } = e, s = r.useMemo(() => null == n ? new Set : new Set(n), [n]), o = r.useCallback(e => (0, i.jsx)(m.default, {
+    className: a()(P.thinTrait, {
+      [P.selectedTrait]: s.has(e)
     }),
     text: e,
     selected: s.has(e)
   }, e), [s]);
-  return (0, i.jsx)(C.default, {
-    className: v.traitsContainer,
+  return (0, i.jsx)(v.default, {
+    className: P.traitsContainer,
     items: t,
     renderItem: o,
     maxLines: 2,
@@ -111,141 +115,190 @@ function y(e) {
   })
 }
 
-function P(e) {
+function w(e) {
+  let {
+    hasPendingJoinRequest: t,
+    atMaxMemberCapacity: n,
+    isGuildMember: r
+  } = e;
+  if (t) return (0, i.jsxs)("div", {
+    className: P.headerBadge,
+    children: [(0, i.jsx)(l.HourglassIcon, {
+      width: 12,
+      height: 12
+    }), (0, i.jsx)(d.Text, {
+      variant: "text-xs/medium",
+      color: "text-normal",
+      children: y.default.Messages.CLAN_CARD_BADGE_APPLIED
+    })]
+  });
+  if (r) return (0, i.jsxs)("div", {
+    className: P.headerBadge,
+    children: [(0, i.jsx)(o.CircleCheckIcon, {
+      width: 12,
+      height: 12,
+      color: d.tokens.colors.STATUS_POSITIVE
+    }), (0, i.jsx)(d.Text, {
+      variant: "text-xs/medium",
+      color: "text-normal",
+      children: y.default.Messages.JOINED_GUILD
+    })]
+  });
+  if (n) return (0, i.jsxs)("div", {
+    className: P.headerBadge,
+    children: [(0, i.jsx)(u.LockIcon, {
+      width: 12,
+      height: 12
+    }), (0, i.jsx)(d.Text, {
+      variant: "text-xs/medium",
+      color: "text-normal",
+      children: y.default.Messages.FULL
+    })]
+  });
+  return null
+}
+
+function k(e) {
   var t;
   let {
     clan: n,
     bannerComponent: s,
-    expanded: l,
-    isMember: u,
-    traitsToHighlight: _,
-    prioritizedGameIds: c,
-    className: E,
-    showBrandingFooter: S = !1,
-    bannerUrl: A,
-    onlyAnimateIconOnHover: m = !1
+    expanded: o,
+    isMember: l = !1,
+    traitsToHighlight: u,
+    prioritizedGameIds: _,
+    className: c,
+    showBrandingFooter: I = !1,
+    bannerUrl: T,
+    onlyAnimateIconOnHover: f = !1,
+    hasPendingJoinRequest: m = !1,
+    atMaxMemberCapacity: p = !1
   } = e, {
-    tag: N,
-    badge: p,
+    tag: O,
+    badge: C,
     branding: {
-      primaryColor: C,
-      secondaryColor: R
+      primaryColor: R,
+      secondaryColor: g
     },
-    bannerHash: P
-  } = n, U = (0, d.default)(n.games), b = (0, T.default)("clan_discovery_card"), [G, w] = r.useState(!1), k = r.useCallback(() => {
-    w(!0)
-  }, []), B = r.useCallback(() => {
-    w(!1)
-  }, []), V = L.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+    bannerHash: v
+  } = n, D = (0, E.default)(n.games), k = (0, h.default)("clan_discovery_card"), [B, V] = r.useState(!1), x = r.useCallback(() => {
+    V(!0)
+  }, []), F = r.useCallback(() => {
+    V(!1)
+  }, []), H = y.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: n.memberCount
-  }), x = null != A ? A : (0, I.getClanBannerUrl)(n.id, P), F = null == s && null == x ? {
-    background: "linear-gradient(90deg, ".concat(C, ", ").concat(R, ")")
-  } : void 0, H = null != s ? s : null != x ? (0, i.jsx)("img", {
-    alt: L.default.Messages.CLAN_LOOK_BANNER,
-    src: x,
-    className: v.bannerImage
-  }) : null, Y = r.useMemo(() => (0, g.getSortedTraits)(n.traits, _), [n.traits, _]);
+  }), Y = null != T ? T : (0, S.getClanBannerUrl)(n.id, v), j = null == s && null == Y ? {
+    background: "linear-gradient(90deg, ".concat(R, ", ").concat(g, ")")
+  } : void 0, W = null != s ? s : null != Y ? (0, i.jsx)("img", {
+    alt: y.default.Messages.CLAN_LOOK_BANNER,
+    src: Y,
+    className: P.bannerImage
+  }) : null, K = r.useMemo(() => (0, M.getSortedTraits)(n.traits, u), [n.traits, u]);
   return (0, i.jsxs)("div", {
-    className: a()(v.card, E, {
-      [v.cardStaticHeight]: !l
+    className: a()(P.card, c, {
+      [P.cardStaticHeight]: !o
     }),
-    onMouseEnter: k,
-    onMouseLeave: B,
-    children: [(0, i.jsx)("div", {
-      className: v.cardBrandingHeader,
-      style: F,
-      children: H
+    onMouseEnter: x,
+    onMouseLeave: F,
+    children: [(0, i.jsxs)("div", {
+      className: P.cardBrandingHeader,
+      style: j,
+      children: [W, (0, i.jsx)(w, {
+        hasPendingJoinRequest: m,
+        atMaxMemberCapacity: p,
+        isGuildMember: l
+      })]
     }), (0, i.jsxs)("div", {
-      className: v.cardContent,
+      className: P.cardContent,
       children: [(0, i.jsxs)("div", {
-        className: v.cardContentTitleSection,
+        className: P.cardContentTitleSection,
         children: [(0, i.jsxs)("div", {
-          className: v.cardNameAndTagWrapper,
-          children: [(0, i.jsx)(f.ClanGuildIconSimple, {
+          className: P.cardNameAndTagWrapper,
+          children: [(0, i.jsx)(A.ClanGuildIconSimple, {
             guildId: n.id,
             guildName: n.name,
             guildIcon: n.icon,
             iconSize: 64,
-            className: v.clanIcon,
-            animate: !m || G
+            className: P.clanIcon,
+            animate: !f || B
           }), (0, i.jsx)("div", {
-            className: v.clanTagChipletWrapper,
-            children: (0, i.jsx)(o.Tooltip, {
-              text: L.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
+            className: P.clanTagChipletWrapper,
+            children: (0, i.jsx)(d.Tooltip, {
+              text: y.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
               position: "top",
-              shouldShow: !u && b,
+              shouldShow: !l && k,
               children: e => (0, i.jsxs)("div", {
                 ...e,
-                className: v.clanTagChiplet,
-                children: [(0, i.jsx)(h.ClanBadge, {
+                className: P.clanTagChiplet,
+                children: [(0, i.jsx)(N.ClanBadge, {
                   width: 16,
                   height: 16,
-                  badge: p.badgeKind,
-                  primaryTintColor: p.primaryColor,
-                  secondaryTintColor: p.secondaryColor
-                }), (0, i.jsx)(o.Text, {
+                  badge: C.badgeKind,
+                  primaryTintColor: C.primaryColor,
+                  secondaryTintColor: C.secondaryColor
+                }), (0, i.jsx)(d.Text, {
                   variant: "text-xs/medium",
                   color: "text-primary",
-                  children: N
+                  children: O
                 })]
               })
             })
           })]
-        }), (0, i.jsx)(o.Heading, {
+        }), (0, i.jsx)(d.Heading, {
           variant: "heading-md/medium",
           color: "header-primary",
           lineClamp: 1,
           children: n.name
         }), (0, i.jsxs)("div", {
-          className: v.clanInfoRow,
-          children: [(0, i.jsx)(o.Text, {
+          className: P.clanInfoRow,
+          children: [(0, i.jsx)(d.Text, {
             variant: "text-xxs/normal",
-            className: v.clanInfoItem,
+            className: P.clanInfoItem,
             children: (0, i.jsx)("span", {
               role: "img",
-              "aria-label": L.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+              "aria-label": y.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
               children: "\uD83C\uDFAE"
             })
-          }), (0, i.jsx)(o.Text, {
+          }), (0, i.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "text-secondary",
-            className: v.clanInfoItem,
-            children: null !== (t = (0, g.getPlaystyleTitle)(n.playstyle)) && void 0 !== t ? t : L.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
-          }), (0, i.jsx)(D, {
+            className: P.clanInfoItem,
+            children: null !== (t = (0, M.getPlaystyleTitle)(n.playstyle)) && void 0 !== t ? t : y.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+          }), (0, i.jsx)(U, {
             wildcardDescriptors: n.wildcardDescriptors,
             primaryColor: n.branding.primaryColor
           })]
         })]
-      }), (0, i.jsx)(M, {
+      }), (0, i.jsx)(b, {
         description: n.description,
-        expanded: l
-      }), (0, i.jsx)(y, {
-        traits: Y,
-        traitsToHighlight: _
+        expanded: o
+      }), (0, i.jsx)(G, {
+        traits: K,
+        traitsToHighlight: u
       })]
     }), (0, i.jsxs)("div", {
-      className: v.cardFooter,
+      className: P.cardFooter,
       children: [(0, i.jsx)("div", {
-        className: v.cardFooterInfo,
+        className: P.cardFooterInfo,
         children: (0, i.jsx)("div", {
-          className: v.cardFooterMembers,
-          children: (0, i.jsx)(o.Text, {
+          className: P.cardFooterMembers,
+          children: (0, i.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: V
+            children: H
           })
         })
       }), (0, i.jsx)("div", {
-        className: v.cardFooterGames,
-        children: (0, i.jsx)(O.default, {
-          games: U,
-          prioritizedGameIds: c
+        className: P.cardFooterGames,
+        children: (0, i.jsx)(L.default, {
+          games: D,
+          prioritizedGameIds: _
         })
       })]
-    }), S && (0, i.jsx)("div", {
-      className: v.cardBrandingFooter,
+    }), I && (0, i.jsx)("div", {
+      className: P.cardBrandingFooter,
       style: {
-        background: "linear-gradient(90deg, ".concat(C, ", ").concat(R, ")")
+        background: "linear-gradient(90deg, ".concat(R, ", ").concat(g, ")")
       }
     })]
   })
@@ -256,50 +309,55 @@ t.default = function(e) {
     prioritizedGameIds: s,
     ...a
   } = e, {
-    clan: d,
-    affinity: E,
-    index: I,
-    source: T
-  } = a, f = (0, l.useStateFromStores)([p.default], () => p.default.getCurrentUser()), S = (0, l.useStateFromStores)([N.default], () => N.default.isMember(d.id, null == f ? void 0 : f.id), [d, f]), h = r.useCallback(() => {
-    let e = null != A.default.getRequest(d.id);
-    if ((0, _.trackClanDiscoveryCardClicked)({
-        guildId: d.id,
+    clan: o,
+    affinity: l,
+    index: u,
+    source: E
+  } = a, f = (0, _.useStateFromStores)([g.default], () => g.default.getCurrentUser()), S = (0, _.useStateFromStores)([R.default], () => R.default.isMember(o.id, null == f ? void 0 : f.id), [o, f]), h = (0, _.useStateFromStores)([O.default], () => {
+    var e;
+    return (null === (e = O.default.getRequest(o.id)) || void 0 === e ? void 0 : e.applicationStatus) === p.GuildJoinRequestApplicationStatuses.SUBMITTED
+  }), A = o.memberCount >= M.MAX_CLAN_MEMBERS, m = r.useCallback(() => {
+    let e = null != O.default.getRequest(o.id);
+    if ((0, I.trackClanDiscoveryCardClicked)({
+        guildId: o.id,
         isMember: S,
         hasJoinRequest: e,
-        affinity: E,
-        index: I
+        affinity: l,
+        index: u
       }), S) {
-      (0, m.transitionToGuild)(d.id);
+      (0, C.transitionToGuild)(o.id);
       return
     }
     if (e) {
-      (0, m.transitionTo)(R.Routes.GUILD_MEMBER_VERIFICATION(d.id));
+      (0, C.transitionTo)(D.Routes.GUILD_MEMBER_VERIFICATION(o.id));
       return
-    }(0, c.openClanApplyFlow)(d.id, d, {
-      source: T,
-      location: R.AnalyticsLocations.CLAN_DISCOVERY_CARD
+    }(0, T.openClanApplyFlow)(o.id, o, {
+      source: E,
+      location: D.AnalyticsLocations.CLAN_DISCOVERY_CARD
     }, s)
-  }, [d, S, E, I, T, s]), O = r.useCallback(e => {
-    (0, u.openContextMenuLazy)(e, async () => {
+  }, [o, S, l, u, E, s]), N = r.useCallback(e => {
+    (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.e("5577").then(n.bind(n, "955120"));
       return t => (0, i.jsx)(e, {
         ...t,
-        guildId: d.id
+        guildId: o.id
       })
     })
-  }, [d.id]);
-  return (0, i.jsx)(o.Clickable, {
-    onClick: h,
-    className: v.clickableCard,
+  }, [o.id]);
+  return (0, i.jsx)(d.Clickable, {
+    onClick: m,
+    className: P.clickableCard,
     style: t,
-    onContextMenu: O,
-    children: (0, i.jsx)(P, {
+    onContextMenu: N,
+    children: (0, i.jsx)(k, {
       ...a,
       isMember: S,
       prioritizedGameIds: s,
-      showBrandingFooter: !0
+      showBrandingFooter: !0,
+      hasPendingJoinRequest: h,
+      atMaxMemberCapacity: A
     })
   })
 }

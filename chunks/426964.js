@@ -8,147 +8,155 @@ var i = n("735250"),
   l = n("100527"),
   u = n("231467"),
   d = n("605236"),
-  _ = n("741606"),
-  c = n("703656"),
-  E = n("314897"),
-  I = n("271383"),
-  T = n("594174"),
-  f = n("87888"),
-  S = n("63063"),
-  h = n("970606"),
-  A = n("645896"),
-  m = n("905362"),
-  N = n("353093"),
-  p = n("954138"),
-  O = n("169559"),
-  C = n("284019"),
-  R = n("981631"),
-  g = n("689938"),
-  L = n("534856");
+  _ = n("246364"),
+  c = n("937111"),
+  E = n("741606"),
+  I = n("703656"),
+  T = n("314897"),
+  f = n("271383"),
+  S = n("594174"),
+  h = n("87888"),
+  A = n("63063"),
+  m = n("970606"),
+  N = n("645896"),
+  p = n("905362"),
+  O = n("353093"),
+  C = n("954138"),
+  R = n("169559"),
+  g = n("284019"),
+  L = n("308083"),
+  v = n("981631"),
+  D = n("689938"),
+  M = n("534856");
 
-function v(e) {
+function y(e) {
   e.stopPropagation()
 }
 t.default = r.memo(function(e) {
   var t;
   let {
     clan: n,
-    isLoading: D,
-    onClose: M,
-    profileViewedAnalytics: y
-  } = e, P = null == n ? void 0 : n.identityGuildId, U = (0, A.useClanInfo)(null != P ? P : null), b = null == n ? void 0 : n.tag, G = (0, O.default)("clan_guild_profile"), w = (0, p.default)("base_clan_tag_chiplet"), k = (0, o.useStateFromStores)([E.default], () => E.default.getId()), B = (0, o.useStateFromStores)([I.default], () => null != P ? I.default.getMember(P, k) : null, [P, k]), V = (0, d.useIsDismissibleContentDismissed)(s.DismissibleContent.CLAN_TAG_WAITLIST), x = (0, o.useStateFromStores)([T.default], () => T.default.getUser(k), [k]), F = (null == B ? void 0 : B.joinedAt) != null, H = (0, N.isGuildAdoptedUserClanIdentity)(P, null == x ? void 0 : x.clan), Y = null != (0, _.default)(P);
+    isLoading: P,
+    onClose: U,
+    profileViewedAnalytics: b
+  } = e, G = null == n ? void 0 : n.identityGuildId, w = (0, N.useClanInfo)(null != G ? G : null), k = null == n ? void 0 : n.tag, B = (0, R.default)("clan_guild_profile"), V = (0, C.default)("base_clan_tag_chiplet"), x = (0, o.useStateFromStores)([T.default], () => T.default.getId()), F = (0, o.useStateFromStores)([f.default], () => null != G ? f.default.getMember(G, x) : null, [G, x]), H = (0, o.useStateFromStores)([c.default], () => {
+    var e;
+    return (null == w ? void 0 : w.id) != null && (null === (e = c.default.getRequest(w.id)) || void 0 === e ? void 0 : e.applicationStatus) === _.GuildJoinRequestApplicationStatuses.SUBMITTED
+  }), Y = null != w && w.memberCount >= L.MAX_CLAN_MEMBERS, j = (0, d.useIsDismissibleContentDismissed)(s.DismissibleContent.CLAN_TAG_WAITLIST), W = (0, o.useStateFromStores)([S.default], () => S.default.getUser(x), [x]), K = (null == F ? void 0 : F.joinedAt) != null, z = (0, O.isGuildAdoptedUserClanIdentity)(G, null == W ? void 0 : W.clan), Z = null != (0, E.default)(G);
   r.useEffect(() => {
-    null != P && (0, h.trackClanProfileViewed)({
-      guildId: P,
-      hasJoinRequest: Y,
-      ...y,
+    null != G && (0, m.trackClanProfileViewed)({
+      guildId: G,
+      hasJoinRequest: Z,
+      ...b,
       location: l.default.CLAN_GUILD_PROFILE
     })
-  }, [P, Y, y]);
-  let j = r.useCallback(() => {
-      !V && ((0, h.trackClanApplyWaitlist)({
-        originGuildId: null == y ? void 0 : y.guildId,
-        tagGuildId: P,
-        messageId: null == y ? void 0 : y.messageId,
-        tagUserId: null == y ? void 0 : y.tagUserId,
+  }, [G, Z, b]);
+  let X = r.useCallback(() => {
+      !j && ((0, m.trackClanApplyWaitlist)({
+        originGuildId: null == b ? void 0 : b.guildId,
+        tagGuildId: G,
+        messageId: null == b ? void 0 : b.messageId,
+        tagUserId: null == b ? void 0 : b.tagUserId,
         location: l.default.CLAN_GUILD_PROFILE
-      }), (0, a.showToast)((0, a.createToast)(g.default.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, a.ToastType.SUCCESS)))
-    }, [P, V, y]),
-    W = r.useCallback(e => {
-      null != P && (e.stopPropagation(), e.preventDefault(), null == M || M(), (0, m.openAdoptClanIdentityModal)(P))
-    }, [P, M]),
-    K = r.useCallback(e => {
-      if (null != U && null != P) e.stopPropagation(), e.preventDefault(), null == M || M(), !Y && (0, m.openClanApplyFlow)(P, U, {
-        source: null == y ? void 0 : y.source,
-        messageId: null == y ? void 0 : y.messageId,
-        tagUserId: null == y ? void 0 : y.tagUserId,
+      }), (0, a.showToast)((0, a.createToast)(D.default.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, a.ToastType.SUCCESS)))
+    }, [G, j, b]),
+    Q = r.useCallback(e => {
+      null != G && (e.stopPropagation(), e.preventDefault(), null == U || U(), (0, p.openAdoptClanIdentityModal)(G))
+    }, [G, U]),
+    q = r.useCallback(e => {
+      if (null != w && null != G) e.stopPropagation(), e.preventDefault(), null == U || U(), !Z && (0, p.openClanApplyFlow)(G, w, {
+        source: null == b ? void 0 : b.source,
+        messageId: null == b ? void 0 : b.messageId,
+        tagUserId: null == b ? void 0 : b.tagUserId,
         location: l.default.CLAN_GUILD_PROFILE
       })
-    }, [U, P, Y, M, y]),
-    z = r.useCallback(() => {
-      open(S.default.getArticleURL(R.HelpdeskArticles.CLANS_FAQ))
+    }, [w, G, Z, U, b]),
+    J = r.useCallback(() => {
+      open(A.default.getArticleURL(v.HelpdeskArticles.CLANS_FAQ))
     }, []),
-    Z = r.useCallback(() => {
-      null != P && (0, c.transitionTo)(R.Routes.GUILD_MEMBER_VERIFICATION(P))
-    }, [P]),
-    X = r.useCallback(() => {
-      null != P && (0, c.transitionToGuild)(P)
-    }, [P]),
-    Q = r.useMemo(() => {
+    $ = r.useCallback(() => {
+      null != G && (0, I.transitionTo)(v.Routes.GUILD_MEMBER_VERIFICATION(G))
+    }, [G]),
+    ee = r.useCallback(() => {
+      null != G && (0, I.transitionToGuild)(G)
+    }, [G]),
+    et = r.useMemo(() => {
       var e, t;
       return {
         color: a.Button.Colors.BRAND,
         size: a.Button.Sizes.SMALL,
         fullWidth: !0,
-        className: L.button,
-        themeColor: null !== (t = null == U ? void 0 : null === (e = U.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
+        className: M.button,
+        themeColor: null !== (t = null == w ? void 0 : null === (e = w.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
       }
-    }, [null == U ? void 0 : null === (t = U.branding) || void 0 === t ? void 0 : t.primaryColor]),
-    q = r.useMemo(() => {
+    }, [null == w ? void 0 : null === (t = w.branding) || void 0 === t ? void 0 : t.primaryColor]),
+    en = r.useMemo(() => {
       switch (!0) {
-        case !w:
+        case !V:
           return null;
-        case !F && !G && !V:
+        case !K && !B && !j:
           return (0, i.jsx)(a.Button, {
-            onClick: j,
-            color: a.Button.Colors.PRIMARY,
-            size: a.Button.Sizes.SMALL,
-            fullWidth: !0,
-            children: g.default.Messages.CLAN_USER_WAITLIST_CTA
-          });
-        case !F && !G && V:
-          return (0, i.jsxs)(a.Button, {
-            innerClassName: L.waitlistedButton,
-            onClick: z,
-            color: a.Button.Colors.PRIMARY,
-            size: a.Button.Sizes.SMALL,
-            fullWidth: !0,
-            children: [g.default.Messages.CLAN_USER_WAITLISTED, (0, i.jsx)(f.default, {})]
-          });
-        case !F && Y:
-          return (0, i.jsx)(C.default, {
-            onClick: Z,
-            ...Q,
-            children: g.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
-          });
-        case !F:
-          return (0, i.jsx)(C.default, {
-            onClick: K,
-            ...Q,
-            children: g.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
-          });
-        case F && !H:
-          return (0, i.jsx)(C.default, {
-            onClick: W,
-            ...Q,
-            children: g.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
-          });
-        case F && H:
-          return (0, i.jsx)(C.default, {
             onClick: X,
-            ...Q,
-            children: g.default.Messages.CLAN_USER_GO_TO_CLAN_CTA
+            color: a.Button.Colors.PRIMARY,
+            size: a.Button.Sizes.SMALL,
+            fullWidth: !0,
+            children: D.default.Messages.CLAN_USER_WAITLIST_CTA
+          });
+        case !K && !B && j:
+          return (0, i.jsxs)(a.Button, {
+            innerClassName: M.waitlistedButton,
+            onClick: J,
+            color: a.Button.Colors.PRIMARY,
+            size: a.Button.Sizes.SMALL,
+            fullWidth: !0,
+            children: [D.default.Messages.CLAN_USER_WAITLISTED, (0, i.jsx)(h.default, {})]
+          });
+        case !K && Z:
+          return (0, i.jsx)(g.default, {
+            onClick: $,
+            ...et,
+            children: D.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
+          });
+        case !K:
+          return (0, i.jsx)(g.default, {
+            onClick: q,
+            ...et,
+            children: D.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
+          });
+        case K && !z:
+          return (0, i.jsx)(g.default, {
+            onClick: Q,
+            ...et,
+            children: D.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
+          });
+        case K && z:
+          return (0, i.jsx)(g.default, {
+            onClick: ee,
+            ...et,
+            children: D.default.Messages.CLAN_USER_GO_TO_CLAN_CTA
           });
         default:
           return null
       }
-    }, [Q, W, K, Z, X, Y, H, G, V, j, z, w, F]),
-    J = r.useMemo(() => ({
-      className: L.container,
-      onClick: v
+    }, [et, Q, q, $, ee, Z, z, B, j, X, J, V, K]),
+    ei = r.useMemo(() => ({
+      className: M.container,
+      onClick: y
     }), []);
-  return null == b || null == U || null == P || D ? (0, i.jsx)("div", {
-    ...J,
+  return null == k || null == w || null == G || P ? (0, i.jsx)("div", {
+    ...ei,
     children: (0, i.jsx)(a.Spinner, {})
   }) : (0, i.jsxs)("div", {
-    ...J,
+    ...ei,
     children: [(0, i.jsx)(u.ClanDiscoveryCardView, {
-      clan: U,
-      className: L.cardContainer,
-      isMember: F
-    }), null != q && (0, i.jsx)("div", {
-      className: L.buttonContainer,
-      children: q
+      clan: w,
+      className: M.cardContainer,
+      isMember: K,
+      hasPendingJoinRequest: H,
+      atMaxMemberCapacity: Y
+    }), null != en && (0, i.jsx)("div", {
+      className: M.buttonContainer,
+      children: en
     })]
   })
 })

@@ -2,37 +2,42 @@
 n.r(t), n("47120");
 var r = n("735250"),
   i = n("470079"),
-  s = n("481060"),
-  a = n("442837"),
+  s = n("194048"),
+  a = n("481060"),
+  l = n("442837"),
   o = n("963202"),
-  l = n("863249"),
-  d = n("944163"),
-  u = n("983736"),
-  c = n("200305"),
-  h = n("594174"),
-  f = n("153124"),
-  m = n("231467"),
-  p = n("981631"),
-  E = n("689938"),
-  x = n("209423");
+  d = n("863249"),
+  u = n("944163"),
+  c = n("246364"),
+  h = n("983736"),
+  f = n("937111"),
+  m = n("200305"),
+  p = n("271383"),
+  x = n("594174"),
+  E = n("153124"),
+  v = n("231467"),
+  _ = n("981631"),
+  N = n("308083"),
+  I = n("689938"),
+  T = n("209423");
 
-function _(e) {
+function R(e) {
   let {
     guildId: t,
     formState: n,
     updateFormState: i
   } = e;
   return (0, r.jsxs)("div", {
-    className: x.verificationForm,
-    children: [(0, r.jsx)(s.Heading, {
+    className: T.verificationForm,
+    children: [(0, r.jsx)(a.Heading, {
       variant: "heading-xxl/normal",
       color: "header-primary",
-      children: E.default.Messages.CLAN_DISCOVERY_PROFILE_TITLE
-    }), (0, r.jsx)(s.Text, {
+      children: I.default.Messages.CLAN_DISCOVERY_PROFILE_TITLE
+    }), (0, r.jsx)(a.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: E.default.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
-    }), (0, r.jsx)(c.MemberVerificationFormRenderer, {
+      children: I.default.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
+    }), (0, r.jsx)(m.MemberVerificationFormRenderer, {
       guildId: t,
       formState: n,
       updateFormState: i
@@ -40,89 +45,120 @@ function _(e) {
   })
 }
 t.default = function(e) {
-  var t, n;
+  var t, n, m, C;
   let {
-    clan: c,
-    prioritizedGameIds: v,
-    transitionState: N,
-    onClose: T
-  } = e, I = (0, f.useUID)(), R = (0, a.useStateFromStores)([d.default], () => d.default.get(c.id)), [C, F] = i.useState(null !== (n = null == R ? void 0 : R.formFields) && void 0 !== n ? n : []), g = (0, a.useStateFromStores)([h.default], () => h.default.getCurrentUser()), P = null == g ? void 0 : g.verified, j = null == g ? void 0 : g.isPhoneVerified(), [O, A] = i.useState(""), {
-    enableApplication: y
+    clan: g,
+    prioritizedGameIds: F,
+    transitionState: A,
+    onClose: j
+  } = e, P = (0, E.useUID)(), M = (0, l.useStateFromStores)([u.default], () => u.default.get(g.id)), [O, y] = i.useState(null !== (m = null == M ? void 0 : M.formFields) && void 0 !== m ? m : []), S = (0, l.useStateFromStores)([x.default], () => x.default.getCurrentUser()), b = (0, l.useStateFromStores)([p.default], () => p.default.isMember(g.id, null == S ? void 0 : S.id), [g, S]), V = (0, l.useStateFromStores)([f.default], () => {
+    var e;
+    return (null === (e = f.default.getRequest(g.id)) || void 0 === e ? void 0 : e.applicationStatus) === c.GuildJoinRequestApplicationStatuses.SUBMITTED
+  }), w = null == S ? void 0 : S.verified, L = null == S ? void 0 : S.isPhoneVerified(), [H, B] = i.useState(""), {
+    enableApplication: D
   } = (0, o.useClanPrePilotApplicationExperiment)("discovery");
   i.useEffect(() => {
-    l.default.fetchVerificationForm(c.id)
-  }, [c.id]), i.useEffect(() => {
-    null != R && F(R.formFields)
-  }, [R]);
-  let b = i.useCallback(async e => {
-      await l.default.submitVerificationForm(c.id, e)
-    }, [c.id]),
-    M = i.useCallback(async () => {
+    d.default.fetchVerificationForm(g.id)
+  }, [g.id]), i.useEffect(() => {
+    null != M && y(M.formFields)
+  }, [M]);
+  let k = i.useCallback(async e => {
+      await d.default.submitVerificationForm(g.id, e)
+    }, [g.id]),
+    U = i.useCallback(async () => {
       try {
-        await b({
-          ...null != R ? R : d.NO_MEMBER_VERIFICATION_FORM,
-          formFields: C
-        }), T()
+        await k({
+          ...null != M ? M : u.NO_MEMBER_VERIFICATION_FORM,
+          formFields: O
+        }), j()
       } catch (e) {
-        A(null == e ? void 0 : e.message)
+        B(null == e ? void 0 : e.message)
       }
-    }, [b, T, R, C]),
-    S = !((null == R ? void 0 : null === (t = R.guild) || void 0 === t ? void 0 : t.verification_level) === p.VerificationLevels.VERY_HIGH ? j : P || j) || C.some(e => !(0, u.isValidFormResponse)(e));
-  return (0, r.jsxs)(s.ModalRoot, {
-    transitionState: N,
-    "aria-labelledby": I,
-    size: s.ModalSize.DYNAMIC,
-    className: x.container,
+    }, [k, j, M, O]),
+    q = !((null == M ? void 0 : null === (t = M.guild) || void 0 === t ? void 0 : t.verification_level) === _.VerificationLevels.VERY_HIGH ? L : w || L) || O.some(e => !(0, h.isValidFormResponse)(e)),
+    Y = (null !== (C = null == M ? void 0 : null === (n = M.guild) || void 0 === n ? void 0 : n.approximate_member_count) && void 0 !== C ? C : 0) >= N.MAX_CLAN_MEMBERS;
+  return (0, r.jsxs)(a.ModalRoot, {
+    transitionState: A,
+    "aria-labelledby": P,
+    size: a.ModalSize.DYNAMIC,
+    className: T.container,
     hideShadow: !0,
     children: [(0, r.jsxs)("div", {
-      className: x.body,
+      className: T.body,
       children: [(0, r.jsx)("div", {
-        className: x.applicationContainer,
-        children: (0, r.jsx)(s.ScrollerNone, {
+        className: T.applicationContainer,
+        children: (0, r.jsx)(a.ScrollerNone, {
           fade: !0,
-          className: x.scroller,
-          children: (0, r.jsx)(_, {
-            guildId: c.id,
-            formState: C,
-            updateFormState: F
+          className: T.scroller,
+          children: (0, r.jsx)(R, {
+            guildId: g.id,
+            formState: O,
+            updateFormState: y
           })
         })
       }), (0, r.jsx)("div", {
-        className: x.verticalRule
+        className: T.verticalRule
       }), (0, r.jsxs)("div", {
-        className: x.clanContainer,
-        children: [(0, r.jsx)(m.ClanDiscoveryCardView, {
-          clan: c,
-          className: x.card,
-          prioritizedGameIds: v,
-          expanded: !0
-        }), (0, r.jsx)(s.Tooltip, {
-          text: E.default.Messages.CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP,
-          shouldShow: !y,
+        className: T.clanContainer,
+        children: [(0, r.jsx)(v.ClanDiscoveryCardView, {
+          clan: g,
+          className: T.profileCard,
+          prioritizedGameIds: F,
+          expanded: !0,
+          isMember: b,
+          hasPendingJoinRequest: V,
+          atMaxMemberCapacity: Y
+        }), (0, r.jsx)(a.Tooltip, {
+          text: I.default.Messages.CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP,
+          shouldShow: !D,
           children: e => (0, r.jsxs)("div", {
-            className: x.applyButtonContainer,
-            children: [(0, r.jsx)(s.Button, {
+            className: T.applyButtonContainer,
+            children: [(0, r.jsxs)(a.Button, {
               ...e,
               type: "submit",
-              onClick: M,
+              onClick: U,
               fullWidth: !0,
-              disabled: S || !y || null == R,
-              children: E.default.Messages.APPLY
-            }), "" !== O && (0, r.jsx)(s.Text, {
+              disabled: q || !D || null == M,
+              innerClassName: T.applyButtonInner,
+              children: [Y && (0, r.jsx)(s.WarningIcon, {
+                color: "white",
+                width: 20,
+                height: 20
+              }), I.default.Messages.APPLY]
+            }), "" !== H && (0, r.jsx)(a.Text, {
               variant: "text-sm/normal",
               color: "text-danger",
-              children: O
+              children: H
             })]
           })
+        }), Y && (0, r.jsxs)(r.Fragment, {
+          children: [(0, r.jsx)(a.Text, {
+            variant: "text-xs/medium",
+            color: "text-warning",
+            className: T.maxCapacityText,
+            children: I.default.Messages.CLAN_DISCOVERY_APPLICATION_MAX_MEMBERS
+          }), (0, r.jsx)("hr", {
+            className: T.separator
+          })]
+        }), (0, r.jsx)(a.Text, {
+          variant: "text-xs/medium",
+          color: "text-muted",
+          className: T.noticeText,
+          children: I.default.Messages.CLAN_APPLICATION_GDM_CONSENT
+        }), (0, r.jsx)(a.Text, {
+          variant: "text-xs/medium",
+          color: "text-muted",
+          className: T.noticeText,
+          children: I.default.Messages.MEMBER_VERIFICATION_WARNING
         })]
       })]
     }), (0, r.jsx)("div", {
-      className: x.closeButtonContainer,
-      children: (0, r.jsx)(s.Button, {
-        onClick: T,
-        look: s.ButtonLooks.OUTLINED,
-        color: s.ButtonColors.PRIMARY,
-        children: E.default.Messages.CLOSE
+      className: T.closeButtonContainer,
+      children: (0, r.jsx)(a.Button, {
+        onClick: j,
+        look: a.ButtonLooks.OUTLINED,
+        color: a.ButtonColors.PRIMARY,
+        children: I.default.Messages.CLOSE
       })
     })]
   })
