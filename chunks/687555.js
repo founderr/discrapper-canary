@@ -6,8 +6,8 @@ var a = t("735250"),
   i = t.n(l),
   n = t("512722"),
   C = t.n(n),
-  o = t("597312"),
-  d = t("442837"),
+  d = t("597312"),
+  o = t("442837"),
   c = t("481060"),
   u = t("232567"),
   f = t("461745"),
@@ -28,7 +28,7 @@ var a = t("735250"),
 function F(e) {
   let {
     numOfSelectedUsers: s
-  } = e, t = (0, d.useStateFromStores)([j.default], () => j.default.getReferralsRemaining());
+  } = e, t = (0, o.useStateFromStores)([j.default], () => j.default.getReferralsRemaining());
   C()(null != t, "Referrals remaining should not be null");
   let r = t - s,
     l = E.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_HEADER.format({
@@ -125,7 +125,7 @@ function y(e) {
 function O(e) {
   let {
     onShare: s
-  } = e, t = (0, d.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [l, n] = r.useState([]), [C, o] = r.useState(new Set);
+  } = e, t = (0, o.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [l, n] = r.useState([]), [C, d] = r.useState(new Set);
   return r.useEffect(() => {
     (async () => {
       let e = [];
@@ -159,7 +159,7 @@ function O(e) {
         user: e,
         checked: C.has(e),
         onChange: (e, s) => {
-          o(t => {
+          d(t => {
             let a = new Set(t);
             return s ? a.add(e) : a.delete(e), a
           })
@@ -180,7 +180,7 @@ function w(e) {
   let {
     className: s
   } = e;
-  return "light" === (0, d.useStateFromStores)([p.default], () => p.default.theme) ? (0, a.jsx)(h.default, {
+  return "light" === (0, o.useStateFromStores)([p.default], () => p.default.theme) ? (0, a.jsx)(h.default, {
     className: s,
     src: g,
     width: 55,
@@ -196,7 +196,7 @@ s.default = function(e) {
   let {
     onClose: s,
     onShare: t
-  } = e, l = (0, d.useStateFromStores)([j.default], () => j.default.getReferralsRemaining()), n = (0, d.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [p, h] = r.useState(0), [g, S] = r.useState(""), [A, M] = r.useState([]), [w, I] = r.useState(!1), [U, G] = r.useState(!1), T = function(e, s) {
+  } = e, l = (0, o.useStateFromStores)([j.default], () => j.default.getReferralsRemaining()), n = (0, o.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [p, h] = r.useState(0), [g, S] = r.useState(""), [A, M] = r.useState([]), [w, I] = r.useState(!1), [U, G] = r.useState(!1), T = function(e, s) {
     let [t, a] = r.useState(e);
     return r.useEffect(() => {
       let t = setTimeout(() => {
@@ -244,7 +244,6 @@ s.default = function(e) {
   });
   let Z = T.length > 0 && 0 === A.length;
   return (0, a.jsxs)("div", {
-    className: m.container,
     children: [(0, a.jsxs)("div", {
       className: i()(m.header, m.headerSeparator),
       children: [Z ? (0, a.jsx)(v, {}) : (0, a.jsx)(F, {
@@ -265,7 +264,7 @@ s.default = function(e) {
         onQueryChange: S,
         onClear: () => S("")
       })]
-    }), Z ? (0, a.jsx)(N, {}) : (0, a.jsxs)(o.ScrollerAuto, {
+    }), Z ? (0, a.jsx)(N, {}) : (0, a.jsxs)(d.ScrollerAuto, {
       className: m.list,
       children: [A.map(e => (0, a.jsx)(L.default, {
         disabled: [...B.values()].filter(e => !k.has(e.id)).length >= l && !B.has(e.id) && !k.has(e.id),
