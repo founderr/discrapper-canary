@@ -92,7 +92,7 @@ function V(e) {
     ...D,
     ...M
   });
-  null != D && s === D.channelId && o === (null == D ? void 0 : D.applicationId) && (!N && Array.from(D.userIds).some(e => e === A) || !v && !O) ? L.get(s) === o ? L.delete(s) : C.delete(o) : N && (null == D || D.applicationId !== o || D.channelId !== s) && (p === l.default.getSessionId() && !v || (0, I.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
+  null != D && s === D.channelId && o === (null == D ? void 0 : D.applicationId) && (!N && Array.from(D.userIds).some(e => e === A) || !v && !O) ? L.get(s) === o ? L.delete(s) : (C.delete(o), c.ComponentDispatch.dispatch(m.ComponentActions.RELEASE_ACTIVITY_WEB_VIEW)) : N && (null == D || D.applicationId !== o || D.channelId !== s) && (p === l.default.getSessionId() && !v || (0, I.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
     channelId: s,
     applicationId: o,
     launchId: u,

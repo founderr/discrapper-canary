@@ -50,6 +50,7 @@ class c extends l.default {
     } = e, i = (0, d.default)(t, n);
     (0, u.hidePIPEmbed)(i)
   }
+  releaseWebView() {}
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "handleRPCDisconnect", i = e => {
