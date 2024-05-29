@@ -221,7 +221,7 @@ function p(e) {
         },
         {
           default: s
-        } = await Promise.all([l.e("99387"), l.e("61536")]).then(l.bind(l, "664452"));
+        } = await Promise.all([l.e("99387"), l.e("77122")]).then(l.bind(l, "664452"));
       return l => (0, n.jsx)(s, {
         ...l,
         guildId: t.id,

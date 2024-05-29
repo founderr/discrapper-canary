@@ -31,7 +31,7 @@ function M(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class R extends a.PureComponent {
+class v extends a.PureComponent {
   render() {
     let {
       member: e,
@@ -73,7 +73,7 @@ class R extends a.PureComponent {
     })
   }
 }
-class v extends a.PureComponent {
+class R extends a.PureComponent {
   isDeadInvite() {
     let {
       isPreview: e,
@@ -415,7 +415,7 @@ class v extends a.PureComponent {
         renderUserPopout: a,
         guildId: l
       } = this.props;
-      return null != e ? (0, s.jsx)(R, {
+      return null != e ? (0, s.jsx)(v, {
         member: e,
         renderUserPopout: a,
         className: t,
@@ -426,4 +426,4 @@ class v extends a.PureComponent {
     })
   }
 }
-t.default = v
+t.default = R

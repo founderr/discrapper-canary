@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("148789"),
   A = n("11825"),
   M = n("981631"),
-  R = n("689938"),
-  v = n("202001"),
+  v = n("689938"),
+  R = n("202001"),
   O = n("756688"),
   x = n("886765");
 
@@ -41,12 +41,12 @@ function L(e) {
   let d = null !== (a = E.default.getUser(null === (n = r.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : new f.default(r.other_user),
     c = u.default.parse(o);
   return (0, s.jsxs)("div", {
-    className: v.messagePreviewContainer,
+    className: R.messagePreviewContainer,
     children: [(0, s.jsx)(i.default, {
       user: d,
       size: l.AvatarSizes.SIZE_24
     }), (0, s.jsx)(l.Text, {
-      className: v.messagePreviewText,
+      className: R.messagePreviewText,
       variant: "text-sm/normal",
       lineClamp: 2,
       children: c
@@ -63,7 +63,7 @@ function D(e) {
   if (null == t) return null;
   let n = u.default.parse(t);
   return (0, s.jsx)("div", {
-    className: v.calloutContainer,
+    className: R.calloutContainer,
     children: (0, s.jsx)(l.Text, {
       variant: "text-sm/normal",
       lineClamp: 2,
@@ -75,15 +75,15 @@ function D(e) {
 function P(e) {
   let {
     item: t
-  } = e, n = x, a = R.default.Messages.NOTIFICATION_CENTER_TODO;
-  return t.completed && (n = O, a = R.default.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
-    className: v.lifecycleContainer,
+  } = e, n = x, a = v.default.Messages.NOTIFICATION_CENTER_TODO;
+  return t.completed && (n = O, a = v.default.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
+    className: R.lifecycleContainer,
     children: [(0, s.jsx)("img", {
-      className: v.checkbox,
+      className: R.checkbox,
       alt: "",
       src: n
     }), (0, s.jsx)(l.Text, {
-      className: v.lifecycleText,
+      className: R.lifecycleText,
       variant: "text-xs/bold",
       color: "header-secondary",
       children: a
@@ -97,7 +97,7 @@ let y = a.memo(function(e) {
       ackedBeforeId: c
     } = e, {
       analyticsLocations: f
-    } = (0, r.default)(), E = (0, S.useNotificationCenterItemAcked)(i, c), R = a.useCallback(async () => {
+    } = (0, r.default)(), E = (0, S.useNotificationCenterItemAcked)(i, c), v = a.useCallback(async () => {
       if (!E && (0, I.markNotificationCenterItemAcked)(i), null != i.item_enum && i.item_enum === p.ItemEnum.FIND_FRIENDS) {
         (0, l.openModalLazy)(async () => {
           let {
@@ -144,20 +144,20 @@ let y = a.memo(function(e) {
     let x = null != i.local_id,
       y = (0, N.default)(i);
     return (0, s.jsxs)("div", {
-      className: v.row,
+      className: R.row,
       children: [(0, s.jsxs)(l.ClickableContainer, {
-        className: v.rowContent,
+        className: R.rowContent,
         focusProps: {
           offset: 4
         },
         "aria-label": y,
-        onClick: R,
+        onClick: v,
         children: [E ? null : (0, s.jsx)("div", {
-          className: v.unread
+          className: R.unread
         }), (0, s.jsx)(C.ForYouItemImage, {
           item: i
         }), (0, s.jsxs)("div", {
-          className: v.body,
+          className: R.body,
           children: ["lifecycle_item" === i.type && null != i.item_enum && (0, s.jsx)(P, {
             item: i
           }), (0, s.jsx)(l.Text, {

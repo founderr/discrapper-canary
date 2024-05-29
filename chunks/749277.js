@@ -28,8 +28,8 @@ var a = n("442837"),
   g = n("644766"),
   A = n("626135"),
   M = n("243778"),
-  R = n("921944"),
-  v = n("981631"),
+  v = n("921944"),
+  R = n("981631"),
   O = n("801461"),
   x = n("474936"),
   L = n("689938"),
@@ -41,7 +41,7 @@ let P = e => {
   } = e, y = (0, a.useStateFromStores)([S.default], () => S.default.getNotice()), U = (0, a.useStateFromStores)([N.default], () => N.default.locale);
   return (0, s.jsx)(M.default, {
     contentTypes: [t],
-    groupName: R.DismissibleContentGroupName.NOTICE_BAR,
+    groupName: v.DismissibleContentGroupName.NOTICE_BAR,
     bypassAutoDismiss: !0,
     children: e => {
       var t, a;
@@ -52,13 +52,13 @@ let P = e => {
       switch (N) {
         case l.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR:
           return (0, s.jsx)(_.default, {
-            dismissCurrentNotice: () => S(R.ContentDismissActionType.UNKNOWN)
+            dismissCurrentNotice: () => S(v.ContentDismissActionType.UNKNOWN)
           });
         case l.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD:
           return (0, s.jsxs)(g.default, {
             color: g.NoticeColors.DEFAULT,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN),
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), L.default.Messages.NOTICE_NATIVE_APPS_2020_06, (0, s.jsx)("i", {
               className: D.iconApple
@@ -86,13 +86,13 @@ let P = e => {
           return (0, s.jsxs)(g.default, {
             color: g.NoticeColors.SPOTIFY,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN),
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), (0, s.jsx)(C.default, {
               className: D.platformIcon
             }), L.default.Messages.NOTICE_CONNECT_SPOTIFY, (0, s.jsx)(g.PrimaryCTANoticeButton, {
               onClick: () => (0, d.default)({
-                platformType: v.PlatformTypes.SPOTIFY,
+                platformType: R.PlatformTypes.SPOTIFY,
                 location: "Notice Bar"
               }),
               noticeType: P,
@@ -103,14 +103,14 @@ let P = e => {
           return (0, s.jsxs)(g.default, {
             color: g.NoticeColors.PLAYSTATION,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN)
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN)
             }), (0, s.jsx)("img", {
               alt: "",
               className: D.platformIcon,
-              src: u.default.get(v.PlatformTypes.PLAYSTATION).icon.whiteSVG
+              src: u.default.get(R.PlatformTypes.PLAYSTATION).icon.whiteSVG
             }), L.default.Messages.NOTICE_CONNECT_PLAYSTATION, (0, s.jsx)(g.NoticeButton, {
               onClick: () => (0, d.default)({
-                platformType: v.PlatformTypes.PLAYSTATION,
+                platformType: R.PlatformTypes.PLAYSTATION,
                 location: "Notice Bar"
               }),
               children: L.default.Messages.CONNECT
@@ -120,10 +120,10 @@ let P = e => {
           return (0, s.jsxs)(g.default, {
             color: g.NoticeColors.DEFAULT,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN),
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), L.default.Messages.NOTICE_MFA_SMS_BACKUP, (0, s.jsx)(g.PrimaryCTANoticeButton, {
-              onClick: () => o.default.open(v.UserSettingsSections.ACCOUNT),
+              onClick: () => o.default.open(R.UserSettingsSections.ACCOUNT),
               noticeType: P,
               children: L.default.Messages.NOTICE_MFA_SMS_BACKUP_BUTTON
             })]
@@ -140,27 +140,27 @@ let P = e => {
               className: D.premiumAction,
               noticeType: P,
               onClick: () => {
-                A.default.track(v.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-                  location_section: v.AnalyticsSections.NOTIFICATION_BAR,
-                  location_object: v.AnalyticsObjects.BUTTON_CTA
-                }), o.default.open(v.UserSettingsSections.PREMIUM)
+                A.default.track(R.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                  location_section: R.AnalyticsSections.NOTIFICATION_BAR,
+                  location_object: R.AnalyticsObjects.BUTTON_CTA
+                }), o.default.open(R.UserSettingsSections.PREMIUM)
               },
               children: L.default.Messages.NOTICE_PREMIUM_PROMO_ACTION
             }), (0, s.jsx)(g.NoticeCloseButton, {
               onClick: () => {
-                S(R.ContentDismissActionType.UNKNOWN), (0, r.setFlag)(v.UserFlags.PREMIUM_PROMO_DISMISSED, !0)
+                S(v.ContentDismissActionType.UNKNOWN), (0, r.setFlag)(R.UserFlags.PREMIUM_PROMO_DISMISSED, !0)
               },
               noticeType: P
             })]
           });
         case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
           return (0, s.jsx)(p.default, {
-            dismissCurrentNotice: () => S(R.ContentDismissActionType.UNKNOWN),
+            dismissCurrentNotice: () => S(v.ContentDismissActionType.UNKNOWN),
             subscriptionTier: x.PremiumSubscriptionSKUs.TIER_2
           });
         case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
           return (0, s.jsx)(p.default, {
-            dismissCurrentNotice: () => S(R.ContentDismissActionType.UNKNOWN),
+            dismissCurrentNotice: () => S(v.ContentDismissActionType.UNKNOWN),
             subscriptionTier: x.PremiumSubscriptionSKUs.TIER_0
           });
         case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
@@ -168,11 +168,11 @@ let P = e => {
             color: g.NoticeColors.PREMIUM_TIER_2,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
               noticeType: P,
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN)
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN)
             }), L.default.Messages.PREMIUM_SUBSCRIPTION_REACTIVATION_NOTICE_TEXT, (0, s.jsx)(g.PrimaryCTANoticeButton, {
               noticeType: P,
               onClick: () => {
-                S(R.ContentDismissActionType.UNKNOWN), o.default.open(v.UserSettingsSections.PREMIUM)
+                S(v.ContentDismissActionType.UNKNOWN), o.default.open(R.UserSettingsSections.PREMIUM)
               },
               children: L.default.Messages.PREMIUM_SUBSCRIPTION_REACTIVATION_NOTICE_BUTTON_TEXT
             })]
@@ -181,32 +181,32 @@ let P = e => {
           return (0, s.jsx)(I.default, {
             notice: y,
             noticeType: P,
-            dismissCurrentNotice: () => S(R.ContentDismissActionType.UNKNOWN)
+            dismissCurrentNotice: () => S(v.ContentDismissActionType.UNKNOWN)
           });
         case l.DismissibleContent.QUEST_1_GO_LIVE_BANNER:
           let M = null == y ? void 0 : null === (t = y.metadata) || void 0 === t ? void 0 : t.partnerGame;
           return (0, s.jsx)(E.default, {
             noticeType: P,
-            markAsDismissed: () => S(R.ContentDismissActionType.UNKNOWN),
+            markAsDismissed: () => S(v.ContentDismissActionType.UNKNOWN),
             partnerGame: M
           });
         case l.DismissibleContent.QUEST_1_ENDED_INCOMPLETE:
           let j = null == y ? void 0 : null === (a = y.metadata) || void 0 === a ? void 0 : a.partnerGame;
           return (0, s.jsx)(f.default, {
             noticeType: P,
-            markAsDismissed: () => S(R.ContentDismissActionType.UNKNOWN),
+            markAsDismissed: () => S(v.ContentDismissActionType.UNKNOWN),
             partnerGame: j
           });
         case l.DismissibleContent.NAGBAR_BOUNCED_EMAIL_NOTICE:
           return (0, s.jsxs)(g.default, {
             color: g.NoticeColors.DANGER,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN),
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), L.default.Messages.BOUNCED_EMAIL_DETECTED_NOTICE, (0, s.jsx)(g.PrimaryCTANoticeButton, {
               noticeType: P,
               onClick: () => {
-                (0, h.transitionTo)(v.Routes.SETTINGS("account"))
+                (0, h.transitionTo)(R.Routes.SETTINGS("account"))
               },
               children: L.default.Messages.CHANGE_EMAIL_SHORT
             })]
@@ -216,12 +216,12 @@ let P = e => {
           return (0, s.jsxs)(g.default, {
             color: g.NoticeColors.DEFAULT,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN),
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), L.default.Messages.GUILD_ROLE_SUBSCRIPTION_NAGBAR_TEXT, (0, s.jsx)(g.PrimaryCTANoticeButton, {
               noticeType: P,
               onClick: () => {
-                S(R.ContentDismissActionType.PRIMARY), (0, h.transitionTo)(1 === b.length ? v.Routes.GUILD_SETTINGS(b[0], "role-subscriptions") : v.Routes.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-finish-setting-up"))
+                S(v.ContentDismissActionType.PRIMARY), (0, h.transitionTo)(1 === b.length ? R.Routes.GUILD_SETTINGS(b[0], "role-subscriptions") : R.Routes.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-finish-setting-up"))
               },
               children: L.default.Messages.LETS_GO
             })]
@@ -230,7 +230,7 @@ let P = e => {
           return (0, s.jsxs)(g.default, {
             color: g.NoticeColors.WARNING,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN),
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), L.default.Messages.POMELO_ACTION_NEEDED.format(), (0, s.jsx)(g.PrimaryCTANoticeButton, {
               onClick: () => (0, T.default)(O.PomeloEntrypoints.NOTICE),
@@ -242,7 +242,7 @@ let P = e => {
           return (0, s.jsxs)(g.default, {
             color: g.NoticeColors.WARNING,
             children: [(0, s.jsx)(g.NoticeCloseButton, {
-              onClick: () => S(R.ContentDismissActionType.UNKNOWN),
+              onClick: () => S(v.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), L.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
               date: (0, m.getLocalizedForcedUUDate)(U)

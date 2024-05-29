@@ -38,7 +38,7 @@ function S(e) {
     g(), S(!0)
   }, [g]), M = a.useCallback(() => {
     S(!1)
-  }, []), R = a.useCallback(() => {
+  }, []), v = a.useCallback(() => {
     (0, _.handleShowVotesForAnswer)({
       channelId: u,
       messageId: d,
@@ -50,7 +50,7 @@ function S(e) {
       f.default.removeReactChangeListener(g)
     }
   }, [h, g]);
-  let v = (0, s.jsx)(c.Text, {
+  let R = (0, s.jsx)(c.Text, {
     variant: "text-xs/semibold",
     color: "none",
     className: N.voteCount,
@@ -75,19 +75,19 @@ function S(e) {
           onMouseLeave: M,
           onFocus: A,
           onBlur: M,
-          onClick: R,
+          onClick: v,
           className: N.voteCountButton,
           "aria-describedby": C ? o : void 0,
           look: c.Button.Looks.BLANK,
           size: c.Button.Sizes.NONE,
-          children: v
+          children: R
         })
       }), C && (0, s.jsx)(r.VisuallyHidden, {
         id: o,
         children: T
       })]
     }) : (0, s.jsx)(s.Fragment, {
-      children: v
+      children: R
     }), (0, s.jsxs)(c.Text, {
       variant: "text-md/bold",
       color: "none",

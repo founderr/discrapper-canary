@@ -47,19 +47,19 @@ function A(e) {
     "aria-labelledby": S,
     scrollable: A,
     role: M,
-    hideSearch: R,
-    showDivider: v
+    hideSearch: v,
+    showDivider: R
   } = e, O = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), x = (null == O ? void 0 : O.isStaff()) || (null == O ? void 0 : O.isStaffPersonal()) || !1;
   return (0, s.jsx)(_.default, {
     className: n,
     innerClassName: o,
     toolbar: function() {
       if (null == m) return null;
-      let e = null != a && !R;
+      let e = null != a && !v;
       return i.isMobile ? T : (0, s.jsxs)(s.Fragment, {
         children: [m, e ? (0, s.jsx)(f.default, {
           className: C.search
-        }, null != l ? l : a) : null, v && (0, s.jsx)(_.default.Divider, {}), (0, s.jsx)(h.default, {}), (0, s.jsx)(d.default, {
+        }, null != l ? l : a) : null, R && (0, s.jsx)(_.default.Divider, {}), (0, s.jsx)(h.default, {}), (0, s.jsx)(d.default, {
           canShowReminder: !0
         }), (0, s.jsx)(c.default, {}), x ? (0, s.jsx)(p.default, {}) : (0, s.jsx)(I.default, {})]
       })
@@ -92,7 +92,7 @@ function M(e) {
   })
 }
 
-function R(e) {
+function v(e) {
   let {
     isAuthenticated: t = !0,
     ...n
@@ -112,4 +112,4 @@ function R(e) {
     })
   })
 }
-R.Title = _.default.Title, R.Icon = _.default.Icon, R.Divider = _.default.Divider, R.Caret = _.default.Caret, t.default = R
+v.Title = _.default.Title, v.Icon = _.default.Icon, v.Divider = _.default.Divider, v.Caret = _.default.Caret, t.default = v

@@ -28,10 +28,10 @@ function p(e) {
       onAcceptInstantInvite: g,
       guild: A,
       invite: M,
-      author: R,
-      currentUserId: v
+      author: v,
+      currentUserId: R
     } = e,
-    O = v === R.id,
+    O = R === v.id,
     {
       channel: x,
       approximate_member_count: L,
@@ -42,8 +42,8 @@ function p(e) {
     U = null != A,
     j = null != y,
     b = null != y && y.isGuildVocal(),
-    B = null != y && y.isGuildStageVoice(),
-    F = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
+    F = null != y && y.isGuildStageVoice(),
+    B = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
     G = null !== (p = null == A ? void 0 : A.hasFeature(m.GuildFeatures.HUB)) && void 0 !== p && p;
   if (null == A) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
@@ -55,9 +55,9 @@ function p(e) {
     w = (0, E.getHeaderTextForInvite)({
       isVoiceChannel: b,
       isOwnInvite: O,
-      isGuest: F,
+      isGuest: B,
       isHubGuild: G,
-      isStage: B,
+      isStage: F,
       isStream: !1
     });
   return N = (0, s.jsxs)("span", {
@@ -72,7 +72,7 @@ function p(e) {
         disableBoostClick: !0
       })
     })]
-  }), F && (S = (0, s.jsx)(l.TooltipContainer, {
+  }), B && (S = (0, s.jsx)(l.TooltipContainer, {
     className: I.tooltipContainer,
     text: T.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {
@@ -117,7 +117,7 @@ function p(e) {
         onClick: k,
         submitting: P,
         color: o.default.Button.Colors.GREEN,
-        children: b ? B ? T.default.Messages.STAGE_CHANNEL_JOIN : T.default.Messages.INVITE_VOICE_CHANNEL_JOIN : U ? T.default.Messages.JOINED_GUILD : T.default.Messages.JOIN_GUILD
+        children: b ? F ? T.default.Messages.STAGE_CHANNEL_JOIN : T.default.Messages.INVITE_VOICE_CHANNEL_JOIN : U ? T.default.Messages.JOINED_GUILD : T.default.Messages.JOIN_GUILD
       })]
     }), A.hasFeature(m.GuildFeatures.HUB) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {

@@ -27,8 +27,8 @@ var s = n("512722"),
   g = n("375954"),
   A = n("117530"),
   M = n("553803"),
-  R = n("316758"),
-  v = n("467531"),
+  v = n("316758"),
+  R = n("467531"),
   O = n("798628"),
   x = n("918088"),
   L = n("981631"),
@@ -118,7 +118,7 @@ function b(e) {
   } = e, s = g.default.getMessage(t, n);
   return null == s ? [] : s.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : [])
 }
-async function B(e) {
+async function F(e) {
   let {
     channelId: t,
     messageId: n,
@@ -154,7 +154,7 @@ async function B(e) {
   });
   null != f && await f
 }
-async function F(e) {
+async function B(e) {
   let {
     channelId: t,
     messageId: n
@@ -187,11 +187,11 @@ async function F(e) {
       ...e,
       submitting: !0,
       editing: !1
-    })), await B({
+    })), await F({
       channelId: t,
       messageId: n,
       answerIds: e
-    }), await v.submitPollVote({
+    }), await R.submitPollVote({
       channelId: t,
       messageId: n,
       answerIds: e
@@ -201,7 +201,7 @@ async function F(e) {
     d.default.show({
       title: D.default.Messages.GENERIC_ERROR_TITLE,
       body: null !== (u = null !== (o = null === (r = e.getAnyErrorMessage) || void 0 === r ? void 0 : r.call(e)) && void 0 !== o ? o : e.message) && void 0 !== u ? u : D.default.Messages.GENERIC_ERROR_BODY
-    }), await B({
+    }), await F({
       channelId: t,
       messageId: n,
       answerIds: i
@@ -237,7 +237,7 @@ async function G(e) {
         editing: !1,
         showResults: null !== (n = null == e ? void 0 : e.showResults) && void 0 !== n && n
       }
-    }), await F({
+    }), await B({
       channelId: t,
       messageId: n
     })
@@ -251,7 +251,7 @@ async function k(e) {
   } = e;
   switch (s) {
     case "submit":
-      await F({
+      await B({
         channelId: t,
         messageId: n
       });
@@ -349,7 +349,7 @@ async function w(e) {
     if (null != u && u.length > 0) {
       var _;
       let e = null !== (_ = h.default.getToken()) && void 0 !== _ ? _ : "";
-      await R.sendPollMessageWithAttachments({
+      await v.sendPollMessageWithAttachments({
         channel: t,
         items: u,
         token: e,
@@ -375,7 +375,7 @@ async function H(e) {
   await d.default.confirm({
     title: D.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
     body: D.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
-  }) && await v.endPollEarly({
+  }) && await R.endPollEarly({
     channelId: t,
     messageId: n
   })
@@ -466,7 +466,7 @@ t.default = {
       }), a
     })
   },
-  handlePollSubmitVote: F,
+  handlePollSubmitVote: B,
   handleUpdateVoteEditingState: j,
   handlePollActionTapped: k,
   createPoll: w,

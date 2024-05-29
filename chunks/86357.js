@@ -79,7 +79,7 @@ let N = e => {
       })]
     })
   },
-  R = e => {
+  v = e => {
     let {
       className: t
     } = e;
@@ -88,7 +88,7 @@ let N = e => {
       children: p.default.Messages.APPLICATION_STORE_FREE
     })
   };
-class v extends(l = f.PureComponent) {
+class R extends(l = f.PureComponent) {
   getState() {
     let {
       inLibrary: e,
@@ -110,7 +110,7 @@ class v extends(l = f.PureComponent) {
     } = this.props;
     switch (e) {
       case 5:
-        return (0, c.jsx)(R, {
+        return (0, c.jsx)(v, {
           className: _()(t, n)
         });
       case 1:
@@ -141,7 +141,7 @@ class v extends(l = f.PureComponent) {
     } = this.props;
     switch (e) {
       case 5:
-        return (0, c.jsx)(R, {
+        return (0, c.jsx)(v, {
           className: _()(t)
         });
       case 3:
@@ -169,7 +169,7 @@ class v extends(l = f.PureComponent) {
     } = this.props;
     switch (e) {
       case 5:
-        t = (0, c.jsx)(R, {});
+        t = (0, c.jsx)(v, {});
         break;
       case 2:
         t = (0, c.jsxs)(f.Fragment, {
@@ -214,9 +214,9 @@ class v extends(l = f.PureComponent) {
     }
   }
 }
-o = v, u = "Types", d = s, u in o ? Object.defineProperty(o, u, {
+o = R, u = "Types", d = s, u in o ? Object.defineProperty(o, u, {
   value: d,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[u] = d, t.default = v
+}) : o[u] = d, t.default = R

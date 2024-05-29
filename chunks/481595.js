@@ -17,8 +17,8 @@ var s = n("512722"),
   m = n("672971"),
   f = n("115130"),
   p = n("653798"),
-  _ = n("314182"),
-  S = n("251660"),
+  S = n("314182"),
+  _ = n("251660"),
   I = n("246946"),
   P = n("351402"),
   E = n("855775"),
@@ -28,8 +28,8 @@ var s = n("512722"),
   h = n("669079"),
   x = n("937615"),
   A = n("987209"),
-  C = n("598"),
-  y = n("45572"),
+  y = n("598"),
+  C = n("45572"),
   g = n("916616"),
   M = n("981631"),
   R = n("689938"),
@@ -102,7 +102,7 @@ function j(e) {
     selectedSkuId: w,
     isEmbeddedIAP: B,
     purchaseType: k
-  } = (0, C.usePaymentContext)(), {
+  } = (0, y.usePaymentContext)(), {
     isGift: H,
     giftRecipient: W
   } = (0, A.useGiftContext)(), Y = H && (0, h.shouldShowCustomGiftExperience)(W);
@@ -112,14 +112,14 @@ function j(e) {
     Z = null != G ? G : E.NO_PAYMENT_SOURCE,
     z = null != V ? V[Z] : null;
   l()(null != K, "SKU must exist and be fetched."), l()(null != N, "Application must exist.");
-  let X = (0, r.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
-    J = (0, r.useStateFromStores)([I.default], () => I.default.enabled),
+  let J = (0, r.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
+    X = (0, r.useStateFromStores)([I.default], () => I.default.enabled),
     q = a.CountryCodesSets.EEA_COUNTRIES.has(P.default.ipCountryCodeWithFallback),
-    Q = x === y.PurchaseState.PURCHASING || x === y.PurchaseState.COMPLETED,
+    Q = x === C.PurchaseState.PURCHASING || x === C.PurchaseState.COMPLETED,
     $ = null != G ? j[G].type : null;
   return (0, i.jsxs)("div", {
     className: b.stepBody,
-    children: [X && (0, i.jsx)(c.default, {
+    children: [J && (0, i.jsx)(c.default, {
       icon: v.default,
       iconSize: c.default.Sizes.SMALL,
       color: c.default.Colors.WARNING,
@@ -131,7 +131,7 @@ function j(e) {
       isEmbeddedIAP: B
     }), Y && (0, i.jsx)(g.default, {
       sku: K
-    }), null != W ? (0, i.jsx)(S.SendGiftToUser, {
+    }), null != W ? (0, i.jsx)(_.SendGiftToUser, {
       giftRecipient: W
     }) : null, (0, i.jsx)(u.FormTitle, {
       tag: u.FormTitleTags.H5,
@@ -152,9 +152,9 @@ function j(e) {
         selectedPaymentSourceId: G,
         onChange: s,
         onPaymentSourceAdd: p,
-        hidePersonalInformation: J
+        hidePersonalInformation: X
       })]
-    }), (0, i.jsx)(_.default, {
+    }), (0, i.jsx)(S.default, {
       isActive: t,
       ref: n,
       children: (0, i.jsx)(m.default, {

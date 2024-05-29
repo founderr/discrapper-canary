@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("496675"),
   A = n("594174"),
   M = n("197409"),
-  R = n("514342"),
-  v = n("602623"),
+  v = n("514342"),
+  R = n("602623"),
   O = n("624138"),
   x = n("358595"),
   L = n("981631"),
@@ -39,7 +39,7 @@ let U = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDT
   j = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
   b = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
-function B(e) {
+function F(e) {
   let {
     members: t,
     membersOnline: n,
@@ -77,7 +77,7 @@ function B(e) {
   })
 }
 
-function F(e) {
+function B(e) {
   let {
     channel: t,
     guild: n,
@@ -95,7 +95,7 @@ function F(e) {
         className: y.channelIcon,
         width: 16,
         height: 16
-      }) : null, (0, s.jsx)(R.default, {
+      }) : null, (0, s.jsx)(v.default, {
         children: (0, s.jsx)(c.Text, {
           variant: "text-xs/normal",
           children: P.default.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -111,7 +111,7 @@ function F(e) {
       [y.stacked]: a,
       [y.ended]: l
     }),
-    children: (0, s.jsx)(R.default, {
+    children: (0, s.jsx)(v.default, {
       children: (0, s.jsx)(c.Text, {
         variant: "text-xs/normal",
         children: P.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
@@ -129,7 +129,7 @@ function G(e) {
       getAcceptInviteContext: h
     } = e,
     {
-      approximate_member_count: R,
+      approximate_member_count: v,
       approximate_presence_count: O,
       target_type: G,
       target_application: k
@@ -223,7 +223,7 @@ function G(e) {
           className: y.heading,
           variant: "heading-xl/semibold",
           children: null == z ? void 0 : z.name
-        }), (0, s.jsx)(F, {
+        }), (0, s.jsx)(B, {
           channel: X,
           guild: W,
           isStacked: Y,
@@ -245,8 +245,8 @@ function G(e) {
             variant: "text-xs/medium",
             children: P.default.Messages.EMBEDDED_ACTIVITIES_EMBED_START
           })]
-        }) : null, es ? null : (0, s.jsx)(B, {
-          members: R,
+        }) : null, es ? null : (0, s.jsx)(F, {
+          members: v,
           membersOnline: O,
           isLarge: H,
           isStacked: Y
@@ -254,7 +254,7 @@ function G(e) {
           className: y.cta,
           children: [null != W && q ? (0, s.jsx)("div", {
             className: y.avatars,
-            children: (0, s.jsx)(v.default, {
+            children: (0, s.jsx)(R.default, {
               guildId: W.id,
               users: et,
               max: 4

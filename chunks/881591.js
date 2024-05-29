@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("294218"),
   A = n("703656"),
   M = n("695346"),
-  R = n("592125"),
-  v = n("430824"),
+  v = n("592125"),
+  R = n("430824"),
   O = n("375954"),
   x = n("346656"),
   L = n("855693"),
@@ -38,8 +38,8 @@ var s = n("735250"),
   U = n("791914"),
   j = n("981631"),
   b = n("689938"),
-  B = n("488234"),
-  F = n("705332");
+  F = n("488234"),
+  B = n("705332");
 let G = {
   offset: {
     left: 4,
@@ -57,13 +57,13 @@ function k(e) {
   }, []);
   let [i, r] = a.useState(!1), o = a.useMemo(() => l.filter(e => null == e.dueAt || e.dueAt < new Date), [l]), u = i ? l : o, d = u.filter(e => !(0, N.savedMessageHasMetadata)(e));
   return (0, S.useMessageRemindersLoader)(d), (0, s.jsxs)("div", {
-    className: B.container,
+    className: F.container,
     children: [(0, s.jsx)(U.default, {
       tab: f.InboxTab.TODOS,
       setTab: t,
       closePopout: n
     }), (0, s.jsxs)("div", {
-      className: B.headerText,
+      className: F.headerText,
       children: [(0, s.jsx)(E.Heading, {
         variant: "heading-lg/bold",
         children: i ? b.default.Messages.MESSAGE_REMINDERS_HEADER_ALL : b.default.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
@@ -101,10 +101,10 @@ function w(e) {
       message: f,
       channel: N
     } = (0, C.getSavedMessageAndChannel)(l),
-    S = R.default.getChannel(N.id),
+    S = v.default.getChannel(N.id),
     D = (0, I.default)(S, !0),
     y = null != D ? D : N.name,
-    U = (0, c.useStateFromStores)([v.default], () => v.default.getGuild(null == N ? void 0 : N.guild_id)),
+    U = (0, c.useStateFromStores)([R.default], () => R.default.getGuild(null == N ? void 0 : N.guild_id)),
     k = null != N ? (0, T.getChannelIconURL)(N) : null,
     w = null;
   return null != l.dueAt && (l.dueAt > new Date ? (t = "text-muted", w = b.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
@@ -112,14 +112,14 @@ function w(e) {
   })) : (t = "text-danger", w = b.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
     duration: d().duration(Date.now() - l.dueAt.getTime(), "millisecond").humanize()
   }))), (0, s.jsxs)("div", {
-    className: F.container,
+    className: B.container,
     children: [(0, s.jsxs)("div", {
-      className: B.messageHeader,
+      className: F.messageHeader,
       children: [(0, s.jsxs)("div", {
         children: [(0, s.jsxs)("div", {
-          className: B.messageInfo,
+          className: F.messageInfo,
           children: [null != U ? (0, s.jsx)(x.default, {
-            className: B.guildIcon,
+            className: F.guildIcon,
             guild: U,
             size: x.default.Sizes.SMALL,
             active: !0
@@ -136,7 +136,7 @@ function w(e) {
         }), null != l.notes && l.notes.length > 0 ? (0, s.jsxs)(E.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: B.notes,
+          className: F.notes,
           selectable: !0,
           children: [(0, s.jsx)(P.default, {
             width: 12,
@@ -151,7 +151,7 @@ function w(e) {
           children: w
         }) : null]
       }), (0, s.jsxs)("div", {
-        className: B.reminderActions,
+        className: F.reminderActions,
         children: [(0, s.jsx)(E.TooltipContainer, {
           text: b.default.Messages.MESSAGE_REMINDERS_SNOOZE,
           children: (0, s.jsx)(E.Clickable, {
@@ -164,7 +164,7 @@ function w(e) {
                 message: f
               })
             }),
-            className: B.clock,
+            className: F.clock,
             children: (0, s.jsx)(L.default, {})
           })
         }), (0, s.jsx)(E.Checkbox, {
@@ -176,19 +176,19 @@ function w(e) {
         })]
       })]
     }), (0, s.jsxs)("div", {
-      className: i()(F.messageContainer, B.unloadedMessage, {
-        [B.disabledMessage]: r
+      className: i()(B.messageContainer, F.unloadedMessage, {
+        [F.disabledMessage]: r
       }),
       children: [(0, s.jsx)(g.default, {
         message: f,
         channel: N,
-        className: F.message,
+        className: B.message,
         compact: M.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
         focusProps: G,
         trackAnnouncementViews: !0
       }, f.id), (0, s.jsxs)("div", {
-        className: B.actions,
+        className: F.actions,
         children: [null == u ? (0, s.jsx)(E.Button, {
           onClick: () => {
             m.default.fetchMessages({
@@ -203,7 +203,7 @@ function w(e) {
           },
           size: E.Button.Sizes.MIN,
           color: E.Button.Colors.TRANSPARENT,
-          className: B.loadButton,
+          className: F.loadButton,
           children: (0, s.jsx)(E.Text, {
             variant: "text-xs/normal",
             children: "Load"
@@ -214,7 +214,7 @@ function w(e) {
           },
           size: E.Button.Sizes.MIN,
           color: E.Button.Colors.TRANSPARENT,
-          className: B.loadButton,
+          className: F.loadButton,
           children: (0, s.jsx)(E.Text, {
             variant: "text-xs/normal",
             children: b.default.Messages.JUMP

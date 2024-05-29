@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("74538"),
   A = n("453070"),
   M = n("926491"),
-  R = n("378233"),
-  v = n("419922"),
+  v = n("378233"),
+  R = n("419922"),
   O = n("688179"),
   x = n("981631"),
   L = n("474936"),
@@ -51,13 +51,13 @@ function b(e) {
   }), (0, m.navigateToPremiumMarketingPage)()
 }
 
-function B(e) {
+function F(e) {
   let {
     sticker: t,
     description: n
   } = e;
   return (0, s.jsxs)(h.default, {
-    children: [(0, s.jsx)(v.default, {
+    children: [(0, s.jsx)(R.default, {
       sticker: t,
       size: 48,
       isInteracting: !0
@@ -78,7 +78,7 @@ function B(e) {
     })]
   })
 }
-let F = e => {
+let B = e => {
     let {
       closePopout: t,
       sticker: n,
@@ -111,7 +111,7 @@ let F = e => {
         children: U(u, f)
       }), (0, s.jsx)("ul", {
         className: P.stickersList,
-        children: E.map(e => (0, s.jsx)(v.default, {
+        children: E.map(e => (0, s.jsx)(R.default, {
           isInteracting: !0,
           size: 80,
           sticker: e
@@ -140,11 +140,11 @@ let F = e => {
         refreshPositionKey: N
       } = e,
       [A, M] = a.useState(null),
-      [R, O] = a.useState(!1),
+      [v, O] = a.useState(!1),
       U = p.default.getCurrentUser(),
       j = g.default.canUseCustomStickersEverywhere(U),
-      F = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(n.guild_id)),
-      G = null != F,
+      B = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(n.guild_id)),
+      G = null != B,
       [k, w] = a.useState(!1),
       [H, V] = a.useState(null),
       Y = a.useMemo(() => ({
@@ -159,7 +159,7 @@ let F = e => {
       });
     a.useEffect(() => {
       (async () => {
-        (null == F || F.hasFeature(x.GuildFeatures.DISCOVERABLE)) && M(await (0, f.default)(n.id)), O(!0)
+        (null == B || B.hasFeature(x.GuildFeatures.DISCOVERABLE)) && M(await (0, f.default)(n.id)), O(!0)
       })()
     }, [n.id, G]);
     let W = n.guild_id === l.getGuildId(),
@@ -174,12 +174,12 @@ let F = e => {
     let X = !Q && !G && z && j;
     return (a.useEffect(() => {
       N()
-    }, [R, A]), a.useEffect(() => {
+    }, [v, A]), a.useEffect(() => {
       C.default.track(x.AnalyticEvents.OPEN_POPOUT, {
         type: q,
         ...K
       })
-    }, []), R) ? (0, s.jsxs)(_.MessagePopoutContent, {
+    }, []), v) ? (0, s.jsxs)(_.MessagePopoutContent, {
       className: y.popoutContent,
       children: [(() => {
         let e = async () => {
@@ -192,7 +192,7 @@ let F = e => {
         };
         return (0, s.jsxs)("div", {
           className: y.emojiSection,
-          children: [(0, s.jsx)(B, {
+          children: [(0, s.jsx)(F, {
             description: t,
             sticker: n
           }), Q && (0, s.jsx)(T.default, {
@@ -212,11 +212,11 @@ let F = e => {
             children: D.default.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON
           })]
         })
-      })(), (null != F || null != A) && (() => {
+      })(), (null != B || null != A) && (() => {
         var e;
         if (!z && !G) return;
         let t = (null !== (e = null == A ? void 0 : A.stickers) && void 0 !== e ? e : []).slice(0, 13).filter(e => e.id !== n.id).slice(0, 12),
-          a = null != A ? c.default.createFromDiscoverableGuild(A) : c.default.createFromGuildRecord(F);
+          a = null != A ? c.default.createFromDiscoverableGuild(A) : c.default.createFromGuildRecord(B);
         return (0, s.jsxs)("div", {
           className: y.guildSection,
           children: [(0, s.jsx)(o.FormTitle, {
@@ -269,7 +269,7 @@ let F = e => {
                       null == a || a(), V(null)
                     },
                     ...l,
-                    children: (0, s.jsx)(v.default, {
+                    children: (0, s.jsx)(R.default, {
                       size: 32,
                       enlargeOnInteraction: !0,
                       enlargeWithName: !1,
@@ -297,7 +297,7 @@ function k(e) {
   } = e;
   return (0, s.jsx)(_.MessagePopoutContent, {
     className: P.popoutContent,
-    children: (0, s.jsx)(B, {
+    children: (0, s.jsx)(F, {
       sticker: a,
       description: D.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
         openPremiumSettings: () => {
@@ -314,13 +314,13 @@ t.default = e => {
     closePopout: a,
     refreshPositionKey: l
   } = e, [i, r] = (0, A.useStickerForRenderableSticker)(t, !0);
-  if (null != i && (0, R.isStandardSticker)(i)) return (0, s.jsx)(F, {
+  if (null != i && (0, v.isStandardSticker)(i)) return (0, s.jsx)(B, {
     sticker: i,
     closePopout: a,
     channel: n,
     refreshPositionKey: l
   });
-  if (null != i && (0, R.isGuildSticker)(i)) return (0, s.jsx)(G, {
+  if (null != i && (0, v.isGuildSticker)(i)) return (0, s.jsx)(G, {
     sticker: i,
     channel: n,
     closePopout: a,

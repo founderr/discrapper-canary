@@ -30,15 +30,15 @@ var s = n("735250"),
   g = n("544978"),
   A = n("893182"),
   M = n("689938"),
-  R = n("22657");
+  v = n("22657");
 
-function v(e) {
+function R(e) {
   let {
     onClick: t
   } = e;
   return (0, s.jsxs)(o.Clickable, {
     onClick: t,
-    className: R.showMoreButton,
+    className: v.showMoreButton,
     children: [(0, s.jsx)(o.Text, {
       variant: "text-sm/medium",
       color: "header-primary",
@@ -48,7 +48,7 @@ function v(e) {
       horizontal: !0
     }), (0, s.jsx)(I.default, {
       direction: I.default.Directions.RIGHT,
-      className: R.showMoreArrow
+      className: v.showMoreArrow
     })]
   })
 }
@@ -60,22 +60,22 @@ function O(e) {
   } = e, a = f.GifAutoPlay.useSetting(), l = (0, N.useIsWindowFocused)() && a, [i, r] = (0, c.default)(t, l), o = l ? (0, s.jsx)(p.default, {
     autoPlay: !0,
     loop: !0,
-    className: R.coverImage,
+    className: v.coverImage,
     width: 655,
     poster: (0, d.getAssetCDNUrl)("server_products/storefront/default-header.png"),
     src: (0, d.getAssetCDNUrl)("server_products/storefront/default-header.mov")
   }) : (0, s.jsx)("img", {
     src: (0, d.getAssetCDNUrl)("server_products/storefront/default-header.png"),
     alt: "",
-    className: R.coverImage
+    className: v.coverImage
   });
   return (0, s.jsx)("div", {
     ref: i,
-    className: R.coverImageContainer,
+    className: v.coverImageContainer,
     children: null == r || n ? o : (0, s.jsx)("img", {
       src: r,
       alt: "",
-      className: R.coverImage
+      className: v.coverImage
     })
   })
 }
@@ -101,10 +101,10 @@ function x(e) {
   }, [l])), {
     isTruncated: x,
     ExpandableTextContainer: L
-  } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [P, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(R.twoColumnWidth, ")")), {
+  } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [P, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(v.twoColumnWidth, ")")), {
     selectedTab: j,
     isPhantomPreview: b
-  } = (0, C.useGuildShopDisplayContext)(), B = j === g.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, F = D ? (0, s.jsxs)(s.Fragment, {
+  } = (0, C.useGuildShopDisplayContext)(), F = j === g.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = D ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(L, {
       lineClamp: U || 2 === P ? 2 : 3,
       children: (0, s.jsx)(o.Text, {
@@ -115,7 +115,7 @@ function x(e) {
     }), x && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(T.default, {
         size: 4
-      }), (0, s.jsx)(v, {
+      }), (0, s.jsx)(R, {
         onClick: () => (0, A.default)({
           guildId: I
         })
@@ -124,12 +124,12 @@ function x(e) {
   }) : (0, s.jsx)(o.Text, {
     variant: "text-sm/normal",
     color: "text-normal",
-    children: b ? B : M.default.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
+    children: b ? F : M.default.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
   });
   return (0, s.jsxs)("div", {
-    className: R.container,
+    className: v.container,
     children: [(0, s.jsxs)("div", {
-      className: R.infoContainer,
+      className: v.infoContainer,
       children: [(0, s.jsx)("div", {
         children: (0, s.jsx)(m.default, {
           guild: c,
@@ -171,7 +171,7 @@ function x(e) {
             })
           }), (0, s.jsx)(T.default, {
             size: 9
-          }), F]
+          }), B]
         })]
       })]
     }), (0, s.jsx)(O, {

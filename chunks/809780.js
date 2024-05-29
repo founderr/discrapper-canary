@@ -32,8 +32,8 @@ var s, a, l, i, r = n("470079"),
   g = n("723170"),
   A = n("675478"),
   M = n("581883"),
-  R = n("131704"),
-  v = n("592125"),
+  v = n("131704"),
+  R = n("592125"),
   O = n("984933"),
   x = n("731290"),
   L = n("430824"),
@@ -43,8 +43,8 @@ var s, a, l, i, r = n("470079"),
   U = n("771845"),
   j = n("9156"),
   b = n("70956"),
-  B = n("823379"),
-  F = n("709054"),
+  F = n("823379"),
+  B = n("709054"),
   G = n("981631"),
   k = n("124368");
 
@@ -92,7 +92,7 @@ class V extends o.EventEmitter {
         isFullyLoaded: t,
         hasLoadedAnything: t
       }
-    } else(0, B.assertNever)(e)
+    } else(0, F.assertNever)(e)
   }
   clearScrollToChannelIndex() {
     this.setState({
@@ -249,11 +249,11 @@ function Y(e, t) {
   var n;
   let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     a = D.default.getMessages(e.channelId),
-    l = a.toArray().filter(t => F.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= F.default.compare(t.id, e.newestUnreadMessageId));
+    l = a.toArray().filter(t => B.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= B.default.compare(t.id, e.newestUnreadMessageId));
   if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && s) return e;
   let i = null != a.getAfter(e.oldestReadMessageId) || (null === (n = l[0]) || void 0 === n ? void 0 : n.id) === e.oldestUnreadMessageId,
     r = l[l.length - 1],
-    o = F.default.compare(null == r ? void 0 : r.id, e.newestUnreadMessageId) >= 0 || l.length >= H;
+    o = B.default.compare(null == r ? void 0 : r.id, e.newestUnreadMessageId) >= 0 || l.length >= H;
   return {
     ...e,
     messages: l,
@@ -270,14 +270,14 @@ function K() {
         s = null !== (t = null === (e = M.default.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
       for (let e in s)
         for (let t in s[e].channels) {
-          let a = v.default.getChannel(t);
+          let a = R.default.getChannel(t);
           (!(t in n) || (null == a ? void 0 : a.guild_id) === e) && (n[t] = s[e].channels[t].collapsedInInbox)
         }
       return n
     }(),
     t = function(e) {
       let t = [];
-      return v.default.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), U.default.getFlattenedGuildIds().forEach(n => {
+      return R.default.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), U.default.getFlattenedGuildIds().forEach(n => {
         if (null == n) return;
         let s = O.default.getSelectableChannelIds(n),
           a = N.default.getActiveJoinedUnreadThreadsForGuild(n);
@@ -289,7 +289,7 @@ function K() {
         })
       }), f().sortBy(t, e => e.sortOrder)
     }(e),
-    n = f().uniq(t.map(e => e.guildId)).filter(B.isNotNullish);
+    n = f().uniq(t.map(e => e.guildId)).filter(F.isNotNullish);
   return E.default.dispatch({
     type: "INBOX_OPEN",
     guildIds: n
@@ -303,8 +303,8 @@ function K() {
 
 function W(e, t, n, s) {
   if (null == s) return;
-  let a = v.default.getChannel(s);
-  if (null == a || !R.THREAD_CHANNEL_TYPES.has(a.type) && j.default.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
+  let a = R.default.getChannel(s);
+  if (null == a || !v.THREAD_CHANNEL_TYPES.has(a.type) && j.default.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
   if (a.isPrivate()) {
     if (0 === y.default.getMentionCount(s)) return
   } else if (!(0, h.getHasImportantUnread)(a) && 0 === y.default.getMentionCount(s)) return;
@@ -313,13 +313,13 @@ function W(e, t, n, s) {
   if (null == l) {
     let e = L.default.getGuild(a.guild_id);
     if (null == e || null == e.joinedAt) return;
-    l = F.default.fromTimestamp(e.joinedAt.getTime())
+    l = B.default.fromTimestamp(e.joinedAt.getTime())
   }
   let i = y.default.getOldestUnreadMessageId(s),
     r = y.default.lastMessageId(s),
     o = y.default.getMentionCount(s),
     u = o > 0 || a.isPrivate();
-  if (null == r || F.default.compare(l, r) >= 0) return;
+  if (null == r || B.default.compare(l, r) >= 0) return;
   let d = {
     guildId: n,
     channelId: s,
@@ -334,12 +334,12 @@ function W(e, t, n, s) {
     hasMentionsOrUnreads: u,
     mentionCount: o,
     sortOrder: function(e, t, n) {
-      let s = v.default.getChannel(t);
+      let s = R.default.getChannel(t);
       if (I.default.isFavorite(t)) return 0;
       if (s.isPrivate()) return 1;
       if (y.default.getMentionCount(t) > 0) return 2;
       if (null != n) {
-        let e = F.default.extractTimestamp(n);
+        let e = B.default.extractTimestamp(n);
         if (Date.now() - e > Q) return 7;
         if (Date.now() - e > z) return 5
       }

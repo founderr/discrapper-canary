@@ -33,8 +33,8 @@ function h(e) {
     cardWidth: g,
     cardHeight: A,
     thumbnailHeight: M,
-    descriptionTextVariant: R = "text-sm/normal",
-    showOpaqueBackground: v = !1
+    descriptionTextVariant: v = "text-sm/normal",
+    showOpaqueBackground: R = !1
   } = e, O = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), x = (0, a.useStateFromStores)([o.default], () => {
     var e;
     return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : p.EMPTY_STRING_SNOWFLAKE_ID)
@@ -87,13 +87,13 @@ function h(e) {
     onShowFullDescription: j,
     onTapCard: j,
     actionMenu: b,
-    showOpaqueBackground: v,
+    showOpaqueBackground: R,
     hideRoleTag: S,
     lineClamp: C,
     cardWidth: g,
     cardHeight: A,
     thumbnailHeight: M,
-    descriptionTextVariant: R,
+    descriptionTextVariant: v,
     isDraft: !t.published
   }, t.id)
 }

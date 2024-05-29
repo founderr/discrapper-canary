@@ -16,8 +16,8 @@ var i = n("735250"),
   m = n("311821"),
   f = n("459965"),
   p = n("858987"),
-  _ = n("975060"),
-  S = n("882712"),
+  S = n("975060"),
+  _ = n("882712"),
   I = n("855775"),
   P = n("285952"),
   E = n("626135"),
@@ -27,8 +27,8 @@ var i = n("735250"),
   h = n("598"),
   x = n("632580"),
   A = n("45572"),
-  C = n("919778"),
-  y = n("612853"),
+  y = n("919778"),
+  C = n("612853"),
   g = n("981631"),
   M = n("723663");
 
@@ -57,8 +57,8 @@ function R(e) {
   } = e, {
     selectedPlan: Z,
     priceOptions: z,
-    setHasAcceptedTerms: X,
-    setPurchaseError: J,
+    setHasAcceptedTerms: J,
+    setPurchaseError: X,
     purchaseType: q,
     paymentSourceId: Q,
     paymentSources: $,
@@ -78,25 +78,25 @@ function R(e) {
   } = (0, v.useGiftContext)(), em = (0, T.getGiftExperience)(ed), ef = {};
   ef.gift_style = er, em === T.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (a()(null != ed, "Gift recipient must be set at purchase review step for these gift options."), ef.recipient_id = ed.id, ef.custom_message = eu, ef.emoji_id = null == eo ? void 0 : eo.id, ef.emoji_name = (null == eo ? void 0 : eo.id) == null ? null == eo ? void 0 : eo.surrogates : void 0, ef.sound_id = null == ec ? void 0 : ec.soundId);
   let ep = null == Z ? void 0 : Z.id,
-    e_ = (0, C.checkNoPaymentTrialEnabled)(F, z.paymentSourceId, ep),
-    eS = (0, r.useStateFromStores)([_.default], () => _.default.popupCallbackCalled),
+    eS = (0, y.checkNoPaymentTrialEnabled)(F, z.paymentSourceId, ep),
+    e_ = (0, r.useStateFromStores)([S.default], () => S.default.popupCallbackCalled),
     {
       analyticsLocations: eI
     } = (0, c.default)(),
     eP = null != Q ? $[Q] : null,
-    [eE, eT] = s.useState(e_),
+    [eE, eT] = s.useState(eS),
     [eN, ev] = s.useState(!1),
     {
       hasEntitlements: eh
     } = (0, f.useSubscriptionEntitlements)(ep, ea),
     ex = (0, N.isPrepaidPaymentSource)(z.paymentSourceId),
-    eA = eh || e_,
-    eC = (0, d.useIsPrepaidPaymentPastDue)(),
-    ey = null,
+    eA = eh || eS,
+    ey = (0, d.useIsPrepaidPaymentPastDue)(),
+    eC = null,
     eg = null;
   if (q === g.PurchaseTypes.ONE_TIME) {
     var eM;
-    a()(null != ee, "SKU must be selected for one-time purchases"), ey = null !== (eM = et[ee]) && void 0 !== eM ? eM : null, a()(null != ey, "SKU must exist and be fetched.");
+    a()(null != ee, "SKU must be selected for one-time purchases"), eC = null !== (eM = et[ee]) && void 0 !== eM ? eM : null, a()(null != eC, "SKU must exist and be fetched.");
     let e = en[ee],
       t = null != Q ? Q : I.NO_PAYMENT_SOURCE;
     eg = null != e ? e[t] : null
@@ -104,9 +104,9 @@ function R(e) {
   let eR = async () => {
     await (0, x.purchaseProduct)({
       setPurchaseState: n,
-      setHasAcceptedTerms: X,
+      setHasAcceptedTerms: J,
       setIsSubmitting: eT,
-      setPurchaseError: J,
+      setPurchaseError: X,
       hasRedirectURL: eN,
       setHasRedirectURL: ev,
       isGift: ea,
@@ -119,12 +119,12 @@ function R(e) {
       trialId: F,
       priceOptions: z,
       paymentSource: eP,
-      isPrepaidPaymentPastDue: eC,
+      isPrepaidPaymentPastDue: ey,
       openInvoiceId: H,
       premiumSubscription: t,
       onNext: R,
       metadata: W,
-      sku: ey,
+      sku: eC,
       skuPricePreview: eg,
       purchaseType: q,
       referralCode: ei,
@@ -135,9 +135,9 @@ function R(e) {
   };
   s.useEffect(() => {
     (async () => {
-      if (!0 === eS) try {
-        if (null == _.default.redirectedPaymentId) return;
-        await (0, o.redirectedPaymentSucceeded)(_.default.redirectedPaymentId), n(A.PurchaseState.COMPLETED), R()
+      if (!0 === e_) try {
+        if (null == S.default.redirectedPaymentId) return;
+        await (0, o.redirectedPaymentSucceeded)(S.default.redirectedPaymentId), n(A.PurchaseState.COMPLETED), R()
       } catch (e) {
         n(A.PurchaseState.FAIL), G(e), E.default.track(g.AnalyticEvents.PAYMENT_FLOW_FAILED, {
           ...D,
@@ -148,13 +148,13 @@ function R(e) {
         })
       } finally {
         eT(!1), (0, o.resetPaymentIntentId)()
-      } else k === S.PurchaseTokenAuthState.SUCCESS && await eR()
+      } else k === _.PurchaseTokenAuthState.SUCCESS && await eR()
     })()
-  }, [eS]), s.useEffect(() => {
-    e_ && !ea && null == t && eR()
-  }, [e_, ea, t]);
+  }, [e_]), s.useEffect(() => {
+    eS && !ea && null == t && eR()
+  }, [eS, ea, t]);
   let eb = null != H || q === g.PurchaseTypes.ONE_TIME && !ea;
-  return e_ ? null : (0, i.jsxs)(u.ModalFooter, {
+  return eS ? null : (0, i.jsxs)(u.ModalFooter, {
     align: P.default.Align.CENTER,
     children: [(0, i.jsx)(p.default, {
       legalTermsNodeRef: b,
@@ -170,7 +170,7 @@ function R(e) {
       isTrial: V,
       makePurchase: eR,
       needsPaymentSource: null == eP && !eA
-    }), (0, i.jsx)(y.default, {}), Y && !eb ? (0, i.jsx)("div", {
+    }), (0, i.jsx)(C.default, {}), Y && !eb ? (0, i.jsx)("div", {
       className: M.back,
       children: (0, i.jsx)(m.default, {
         onClick: l

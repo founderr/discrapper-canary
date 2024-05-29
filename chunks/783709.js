@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("671219"),
   A = n("750858"),
   M = n("981631"),
-  R = n("689938"),
-  v = n("822545");
+  v = n("689938"),
+  R = n("822545");
 
 function O(e) {
   let {
@@ -89,9 +89,9 @@ function x(e) {
           onPopoutRequestClose: E
         } = e;
         if (l && null == a.activityInstance || o) return (0, s.jsx)("div", {
-          className: v.replyBadge,
+          className: R.replyBadge,
           children: (0, s.jsx)(O, {
-            className: v.commandIcon
+            className: R.commandIcon
           })
         });
         if (null != a.interaction) {
@@ -119,8 +119,8 @@ function x(e) {
             onContextMenu: r,
             onMouseDown: o,
             className: i()({
-              [v.executedCommandAvatar]: !0,
-              [v.clickable]: null != l
+              [R.executedCommandAvatar]: !0,
+              [R.clickable]: null != l
             })
           })
         }({
@@ -183,20 +183,20 @@ function x(e) {
         guildId: r.guild_id
       })
     };
-    n = y ? R.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+    n = y ? v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
       userHook: j,
       activityHook: () => (0, s.jsx)(c.Clickable, {
         tag: "span",
         onClick: e,
         children: (0, s.jsx)("div", {
-          className: i()(v.commandName, v.clickable),
-          children: R.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
+          className: i()(R.commandName, R.clickable),
+          children: v.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
         })
       })
-    }) : R.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
+    }) : v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
       userHook: j
     })
-  } else n = R.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+  } else n = v.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
     userHook: j,
     commandHook: () => {
       let t = function(e, t) {
@@ -224,15 +224,15 @@ function x(e) {
               tag: "span",
               onClick: l,
               children: (0, s.jsxs)("div", {
-                className: i()(v.appLauncherOnboardingCommandName, v.clickable),
+                className: i()(R.appLauncherOnboardingCommandName, R.clickable),
                 children: [(0, s.jsx)(N.default, {
                   height: 10,
                   width: 10,
-                  className: v.appsIcon
+                  className: R.appsIcon
                 }), o]
               })
             }) : (0, s.jsx)("div", {
-              className: v.commandName,
+              className: R.commandName,
               children: o
             })
           }
@@ -246,7 +246,7 @@ function x(e) {
   return (0, s.jsx)(T.AnalyticsLocationProvider, {
     value: u,
     children: (0, s.jsx)("div", {
-      className: i()(v.repliedMessage, v.executedCommand, P),
+      className: i()(R.repliedMessage, R.executedCommand, P),
       "aria-hidden": !e.compact,
       children: n
     })

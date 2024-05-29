@@ -39,8 +39,8 @@ function m(e) {
     showBenefitsFirst: !1,
     analyticsLocation: f.AnalyticsLocations.APP_STOREFRONT,
     skuId: u
-  }), g = (0, c.useHasActiveEntitlement)(u);
-  return "guild" !== l && ("user" !== l || g) ? (0, i.jsx)(v, {
+  }), I = (0, c.useHasActiveEntitlement)(u);
+  return "guild" !== l && ("user" !== l || I) ? (0, i.jsx)(v, {
     className: n,
     children: p.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
   }) : (0, i.jsx)(T, {

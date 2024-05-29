@@ -1,9 +1,9 @@
 "use strict";
 s.r(t), s("411104"), s("47120");
 var a = s("735250"),
-  l = s("470079"),
-  r = s("120356"),
-  i = s.n(r),
+  r = s("470079"),
+  l = s("120356"),
+  i = s.n(l),
   n = s("512722"),
   c = s.n(n),
   u = s("442837"),
@@ -24,7 +24,7 @@ function p(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class M extends l.Component {
+class N extends r.Component {
   componentDidMount() {
     this.props.onChange(this.hasAcceptedNeccessaryTerms(this.props, this.state))
   }
@@ -45,29 +45,29 @@ class M extends l.Component {
     let {
       eulaId: e,
       applicationName: t,
-      hasPreviouslyAcceptedEULA: l,
-      forceShow: r,
+      hasPreviouslyAcceptedEULA: r,
+      forceShow: l,
       disabled: n,
       className: u,
       checkboxClassname: d,
       checkboxLabelClassname: L,
       finePrint: p,
-      showPricingLink: M,
-      showWithdrawalWaiver: N,
+      showPricingLink: N,
+      showWithdrawalWaiver: M,
       isTrial: f,
-      isDiscount: S,
-      subscriptionPlan: R,
+      isDiscount: R,
+      subscriptionPlan: S,
       finePrintClassname: P
     } = this.props, {
       hasAcceptedEULA: h,
-      hasAcceptedWithdrawalWaiver: C
+      hasAcceptedWithdrawalWaiver: m
     } = this.state;
-    return (c()(!f || null != R, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"), r || null != e && !l || N) ? (0, a.jsxs)("div", {
+    return (c()(!f || null != S, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"), l || null != e && !r || M) ? (0, a.jsxs)("div", {
       className: u,
-      children: [N && (0, a.jsx)(o.FormTitle, {
+      children: [M && (0, a.jsx)(o.FormTitle, {
         className: A.formTitle,
         children: T.default.Messages.BILLING_ONLINE_PURCHASE_WAIVER
-      }), null != e && (r || !l) ? (0, a.jsx)(o.Checkbox, {
+      }), null != e && (l || !r) ? (0, a.jsx)(o.Checkbox, {
         type: o.Checkbox.Types.INVERTED,
         value: h,
         onChange: this.handleToggleEULAAcceptance,
@@ -93,11 +93,11 @@ class M extends l.Component {
       }) : null, null == p ? null : (0, a.jsx)("div", {
         className: i()(A.finePrint, P),
         children: p
-      }), N ? (0, a.jsxs)("div", {
+      }), M ? (0, a.jsxs)("div", {
         className: u,
         children: [(0, a.jsx)(o.Checkbox, {
           type: o.Checkbox.Types.INVERTED,
-          value: C,
+          value: m,
           onChange: this.handleToggleEUWithdralWaiverAcceptance,
           disabled: n,
           className: i()(A.checkbox, d),
@@ -109,26 +109,26 @@ class M extends l.Component {
           className: A.finePrint,
           children: T.default.Messages.BILLING_ONLINE_PURCHASE_WAIVER_DISCLAIMER
         })]
-      }) : null, M && (0, a.jsxs)("div", {
+      }) : null, N && (0, a.jsxs)("div", {
         className: A.finePrint,
         children: ["*", T.default.Messages.BILLING_HOW_PRICING_WORKS.format({
           documentationLink: E.default.getArticleURL(I.HelpdeskArticles.LOCALIZED_PRICING)
         })]
-      }), f && null != R && (0, a.jsx)(o.Text, {
+      }), f && null != S && (0, a.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "interactive-normal",
         children: T.default.Messages.BILLING_TRIAL_LEGAL_COPY_V2.format({
-          buttonText: (0, _.getBillingReviewSubheader)(null, R),
-          interval: this.formatInterval(null == R ? void 0 : R.interval),
+          buttonText: (0, _.getBillingReviewSubheader)(null, S),
+          interval: this.formatInterval(null == S ? void 0 : S.interval),
           cancelSubscriptionArticle: E.default.getArticleURL(I.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
           paidServiceTermsArticle: E.default.getArticleURL(I.HelpdeskArticles.PAID_TERMS)
         })
-      }), S && null != R && (0, a.jsx)(o.Text, {
+      }), R && null != S && (0, a.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "interactive-normal",
         children: T.default.Messages.BILLING_DISCOUNT_LEGAL_COPY.format({
-          buttonText: (0, _.getBillingReviewSubheader)(null, R),
-          interval: this.formatInterval(null == R ? void 0 : R.interval),
+          buttonText: (0, _.getBillingReviewSubheader)(null, S),
+          interval: this.formatInterval(null == S ? void 0 : S.interval),
           cancelSubscriptionArticle: E.default.getArticleURL(I.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
           paidServiceTermsArticle: E.default.getArticleURL(I.HelpdeskArticles.PAID_TERMS)
         })
@@ -157,4 +157,4 @@ t.default = u.default.connectStores([d.default], e => {
   return {
     hasPreviouslyAcceptedEULA: null != t && d.default.hasAcceptedEULA(t)
   }
-})(M)
+})(N)

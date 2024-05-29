@@ -44,7 +44,7 @@ function M() {
   }
   return e
 }
-class R extends(s = u.default.Store) {
+class v extends(s = u.default.Store) {
   initialize() {
     var e;
     this.waitFor(T.default, h.default, p.default), A = null !== (e = d.Storage.get(S)) && void 0 !== e ? e : A
@@ -53,12 +53,12 @@ class R extends(s = u.default.Store) {
     return o().values(C)
   }
 }
-i = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(a = R) ? Object.defineProperty(a, l, {
+i = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(a = v) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new R(c.default, {
+}) : a[l] = i, t.default = new v(c.default, {
   LOGOUT: function() {
     C = {}, g = {}
   },

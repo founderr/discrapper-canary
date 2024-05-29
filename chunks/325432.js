@@ -1,56 +1,56 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   addInstallLocation: function() {
-    return n
+    return l
   },
   fetchMetadata: function() {
-    return u
+    return o
   },
   removeInstallLocation: function() {
-    return r
+    return i
   },
   updateInstallLocation: function() {
-    return i
+    return r
   }
-}), a("47120");
-var s = a("570140"),
-  l = a("830168");
+}), n("47120");
+var a = n("570140"),
+  s = n("830168");
 
-function n(e) {
-  l.default.queryDirectory(e, (t, a) => {
-    null == t && null != a && s.default.dispatch({
+function l(e) {
+  s.default.queryDirectory(e, (t, n) => {
+    null == t && null != n && a.default.dispatch({
       type: "INSTALLATION_LOCATION_ADD",
       path: e,
-      metadata: a
+      metadata: n
     })
   })
 }
 
-function r(e) {
-  s.default.dispatch({
+function i(e) {
+  a.default.dispatch({
     type: "INSTALLATION_LOCATION_REMOVE",
     path: e
   })
 }
 
-function i(e, t) {
+function r(e, t) {
   let {
-    label: a,
-    isDefault: l
+    label: n,
+    isDefault: s
   } = t;
-  s.default.dispatch({
+  a.default.dispatch({
     type: "INSTALLATION_LOCATION_UPDATE",
     path: e,
-    label: a,
-    isDefault: l
+    label: n,
+    isDefault: s
   })
 }
 
-function u(e) {
+function o(e) {
   let t = {},
-    a = 0;
-  for (let n of e) null != n && "string" == typeof n && l.default.queryDirectory(n, (l, r) => {
-    ++a, null == l && null != r && (t[n] = r), a === e.length && s.default.dispatch({
+    n = 0;
+  for (let l of e) null != l && "string" == typeof l && s.default.queryDirectory(l, (s, i) => {
+    ++n, null == s && null != i && (t[l] = i), n === e.length && a.default.dispatch({
       type: "INSTALLATION_LOCATION_FETCH_METADATA",
       metadataPayload: t
     })

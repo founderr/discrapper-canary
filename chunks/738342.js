@@ -1,11 +1,11 @@
 "use strict";
 a.r(t), a.d(t, {
   P24DetailForm: function() {
-    return m
+    return S
   }
 }), a("47120");
-var n, r, s = a("735250"),
-  l = a("470079"),
+var n, s, l = a("735250"),
+  r = a("470079"),
   o = a("481060"),
   i = a("987134"),
   u = a("754103"),
@@ -13,19 +13,19 @@ var n, r, s = a("735250"),
   d = a("282605"),
   p = a("267382");
 
-function S(e) {
+function E(e) {
   let {
     onChange: t,
     billingAddressInfo: a,
     error: n
-  } = e, [r, i] = l.useState({}), [p, S] = l.useState({}), E = {
+  } = e, [s, i] = r.useState({}), [p, E] = r.useState({}), m = {
     email: {
       name: "email",
       title: () => c.default.Messages.EMAIL,
       autoComplete: "cc-name",
       placeholder: () => c.default.Messages.EMAIL,
       getClassNameForLayout: () => d.width100,
-      renderInput: e => (0, s.jsx)(o.TextInput, {
+      renderInput: e => (0, l.jsx)(o.TextInput, {
         ...e
       })
     },
@@ -35,17 +35,17 @@ function S(e) {
       autoComplete: "cc-name",
       placeholder: () => c.default.Messages.CREDIT_CARD_NAME,
       getClassNameForLayout: () => d.width100,
-      renderInput: e => (0, s.jsx)(o.TextInput, {
+      renderInput: e => (0, l.jsx)(o.TextInput, {
         ...e
       })
     }
-  }, m = [{
-    fields: [E.email]
+  }, S = [{
+    fields: [m.email]
   }, {
-    fields: [E.name]
+    fields: [m.name]
   }];
-  return (0, s.jsx)(u.default, {
-    form: m,
+  return (0, l.jsx)(u.default, {
+    form: S,
     errors: p,
     formError: n,
     values: {
@@ -53,15 +53,15 @@ function S(e) {
       email: a.email
     },
     onFieldChange: function(e, n) {
-      if (null != n) !r[n] && "" !== e && i(e => (e[n] = !0, e)), r[n] && "" === e ? S(e => ("email" === n && (e[n] = c.default.Messages.PAYMENT_SOURCE_EMAIL_ERROR_REQUIRED), "name" === n && (e[n] = c.default.Messages.PAYMENT_SOURCE_NAME_ERROR_REQUIRED), e)) : S(e => (delete e[n], e)), t({
+      if (null != n) !s[n] && "" !== e && i(e => (e[n] = !0, e)), s[n] && "" === e ? E(e => ("email" === n && (e[n] = c.default.Messages.PAYMENT_SOURCE_EMAIL_ERROR_REQUIRED), "name" === n && (e[n] = c.default.Messages.PAYMENT_SOURCE_NAME_ERROR_REQUIRED), e)) : E(e => (delete e[n], e)), t({
         name: a.name,
         email: a.email,
         [n]: e
       })
     }
   })
-}(r = n || (n = {})).EMAIL = "email", r.NAME = "name";
-let E = [{
+}(s = n || (n = {})).EMAIL = "email", s.NAME = "name";
+let m = [{
   label: "Alior Bank",
   value: "alior_bank"
 }, {
@@ -138,23 +138,23 @@ let E = [{
   value: "volkswagen_bank"
 }];
 
-function m(e) {
+function S(e) {
   let {
     onDetailsChange: t,
     onP24BankChange: a,
     error: n,
-    billingAddressInfo: r,
+    billingAddressInfo: s,
     p24BankValue: o
-  } = e, [m, A] = l.useState(o), T = "p24Bank", y = [{
+  } = e, [S, A] = r.useState(o), f = "p24Bank", T = [{
     fields: [{
-      name: T,
+      name: f,
       title: () => c.default.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
       getClassNameForLayout: () => d.width100,
-      renderInput: e => (0, s.jsx)(i.default, {
+      renderInput: e => (0, l.jsx)(i.default, {
         maxMenuHeight: 190,
         menuPlacement: i.default.MenuPlacements.TOP,
         clearable: !1,
-        options: E,
+        options: m,
         value: e.value,
         onChange: e => {
           let {
@@ -165,20 +165,20 @@ function m(e) {
       })
     }]
   }];
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(S, {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)(E, {
       error: n,
-      billingAddressInfo: r,
+      billingAddressInfo: s,
       onChange: t
-    }), (0, s.jsx)(u.default, {
+    }), (0, l.jsx)(u.default, {
       className: p.p24Form,
-      form: y,
+      form: T,
       errors: {},
       formError: n,
       values: {
-        [T]: m
+        [f]: S
       }
     })]
   })
 }
-t.default = S
+t.default = E

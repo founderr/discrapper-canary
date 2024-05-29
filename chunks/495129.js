@@ -28,7 +28,7 @@ var a = n("120356"),
   g = n("737847");
 
 function A(e) {
-  var t, n, a, A, M, R, v, O, x, L;
+  var t, n, a, A, M, v, R, O, x, L;
   let {
     message: D,
     channel: P
@@ -37,22 +37,22 @@ function A(e) {
       rawName: t
     } = e;
     return "guild_id" === t
-  })) || void 0 === t ? void 0 : t.rawValue, U = null === (R = D.embeds[0]) || void 0 === R ? void 0 : null === (M = R.fields) || void 0 === M ? void 0 : null === (A = M.find(e => {
+  })) || void 0 === t ? void 0 : t.rawValue, U = null === (v = D.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (A = M.find(e => {
     let {
       rawName: t
     } = e;
     return "channel_id" === t
-  })) || void 0 === A ? void 0 : A.rawValue, j = (0, i.useStateFromStores)([m.default], () => m.default.getGuild(y)), b = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), B = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()), F = (0, i.useStateFromStores)([], () => D.author.id === (null == B ? void 0 : B.id)), G = null === (v = P.recipients) || void 0 === v ? void 0 : v.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([T.default], () => null != G ? T.default.getUser(G) : null), w = (0, c.default)(D), H = (0, N.useName)(P.getGuildId(), P.id, k), V = (0, i.useStateFromStoresArray)([I.default], () => null != b ? I.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == B ? void 0 : B.id)), K = null === (L = D.embeds[0]) || void 0 === L ? void 0 : null === (x = L.fields) || void 0 === x ? void 0 : null === (O = x.find(e => {
+  })) || void 0 === A ? void 0 : A.rawValue, j = (0, i.useStateFromStores)([m.default], () => m.default.getGuild(y)), b = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), F = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => D.author.id === (null == F ? void 0 : F.id)), G = null === (R = P.recipients) || void 0 === R ? void 0 : R.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([T.default], () => null != G ? T.default.getUser(G) : null), w = (0, c.default)(D), H = (0, N.useName)(P.getGuildId(), P.id, k), V = (0, i.useStateFromStoresArray)([I.default], () => null != b ? I.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == F ? void 0 : F.id)), K = null === (L = D.embeds[0]) || void 0 === L ? void 0 : null === (x = L.fields) || void 0 === x ? void 0 : null === (O = x.find(e => {
     let {
       rawName: t
     } = e;
     return "voice_user_ids" === t
-  })) || void 0 === O ? void 0 : O.rawValue, W = null != K ? K.split(",") : [], z = (0, i.useStateFromStoresArray)([T.default], () => W.map(e => T.default.getUser(e)).filter(Boolean)), Q = F && null != k ? C.default.Messages.WAVED_AT_USER.format({
+  })) || void 0 === O ? void 0 : O.rawValue, W = null != K ? K.split(",") : [], z = (0, i.useStateFromStoresArray)([T.default], () => W.map(e => T.default.getUser(e)).filter(Boolean)), Q = B && null != k ? C.default.Messages.WAVED_AT_USER.format({
     username: H
   }) : C.default.Messages.WAVED_AT_YOU.format({
     username: w.nick
   }), q = null != j && null != b, X = null;
-  X = q ? F || Y ? C.default.Messages.YOU_ARE_IN_CHANNEL.format({
+  X = q ? B || Y ? C.default.Messages.YOU_ARE_IN_CHANNEL.format({
     channelHook: (e, t) => (0, s.jsx)(h.default, {
       channel: null != b ? b : void 0
     }, t)
@@ -60,8 +60,8 @@ function A(e) {
     channelHook: (e, t) => (0, s.jsx)(h.default, {
       channel: null != b ? b : void 0
     }, t)
-  }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (X = F ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
-  let Z = F ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
+  }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (X = B ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
+  let Z = B ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
   return (0, s.jsxs)("div", {
     children: [(0, s.jsxs)("div", {
       className: g.card,

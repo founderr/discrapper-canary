@@ -27,7 +27,7 @@ var s, a = n("735250"),
   A = n("689938"),
   M = n("422245");
 
-function R(e, t, n) {
+function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,7 +35,7 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class v extends(s = l.Component) {
+class R extends(s = l.Component) {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -92,22 +92,22 @@ class v extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), R(this, "state", {
+    super(...e), v(this, "state", {
       playing: !1,
       muted: !0
-    }), R(this, "handleToggleMute", () => {
+    }), v(this, "handleToggleMute", () => {
       this.setState({
         muted: !this.state.muted
       })
-    }), R(this, "handleMouseEnter", () => {
+    }), v(this, "handleMouseEnter", () => {
       this.setState({
         playing: !0
       })
-    }), R(this, "handleMouseLeave", () => {
+    }), v(this, "handleMouseLeave", () => {
       this.setState({
         playing: !1
       })
-    }), R(this, "getStoreListingLocation", () => {
+    }), v(this, "getStoreListingLocation", () => {
       let {
         sku: e
       } = this.props;
@@ -116,12 +116,12 @@ class v extends(s = l.Component) {
         slug: e.slug,
         analyticsSource: this.analyticsLocation
       })
-    }), R(this, "handleActionButtonClick", e => e.preventDefault()), R(this, "handleBuyButtonClick", e => e.preventDefault()), R(this, "handleLinkClick", e => {
+    }), v(this, "handleActionButtonClick", e => e.preventDefault()), v(this, "handleBuyButtonClick", e => e.preventDefault()), v(this, "handleLinkClick", e => {
       let {
         onEmbedClick: t
       } = this.props;
       null != t && t(e)
-    }), R(this, "renderApplicationTile", (e, t) => {
+    }), v(this, "renderApplicationTile", (e, t) => {
       let {
         inLibrary: n,
         width: s,
@@ -146,7 +146,7 @@ class v extends(s = l.Component) {
         isHorizontal: d,
         isEmbed: !0
       })
-    }), R(this, "renderActions", e => {
+    }), v(this, "renderActions", e => {
       let {
         inLibrary: t,
         application: n,
@@ -179,7 +179,7 @@ class v extends(s = l.Component) {
     })
   }
 }
-R(v, "defaultProps", {
+v(R, "defaultProps", {
   renderFallback: g.NOOP
 });
 let O = [N.default, h.default, p.default, S.default];
@@ -197,6 +197,6 @@ function x(e) {
     libraryApplication: null != n ? p.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let L = (0, T.default)((0, m.default)(v));
+let L = (0, T.default)((0, m.default)(R));
 t.default = r.default.connectStores(O, x)(L);
-let D = (0, m.default)(r.default.connectStores(O, x)(v))
+let D = (0, m.default)(r.default.connectStores(O, x)(R))

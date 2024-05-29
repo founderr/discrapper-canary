@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return O
   },
   reactionForId: function() {
-    return R
+    return v
   }
 }), n("47120"), n("627341");
 var s = n("278074"),
@@ -43,11 +43,11 @@ let M = {
   showResults: !1
 };
 
-function R(e, t) {
+function v(e, t) {
   for (let n of e)
     if (("number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id) === t) return n
 }
-let v = e => (0, s.match)(e).with({
+let R = e => (0, s.match)(e).with({
   isExpired: !0,
   isLeader: !0,
   didSelfVote: !0
@@ -100,11 +100,11 @@ function x(e, t) {
     let t = f.default.getMessage(e.channel_id, e.id);
     A = !e.isSearchHit && null != t, S = null !== (l = null == t ? void 0 : t.reactions) && void 0 !== l ? l : S
   }
-  let R = T.size > 0,
-    v = S.some(e => !0 === e.me_vote),
-    x = !h && v,
+  let v = T.size > 0,
+    R = S.some(e => !0 === e.me_vote),
+    x = !h && R,
     L = x || m || N,
-    D = E && A && (!v || h || L),
+    D = E && A && (!R || h || L),
     P = null === (s = d.default.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
     y = null != P ? c.default.getSelfMember(P) : null,
     U = (0, o.hasAutomodQuarantinedProfile)(y),
@@ -114,11 +114,11 @@ function x(e, t) {
     canTapAnswers: D,
     canRemoveVote: x && E && !m,
     canShowVoteCounts: L,
-    canSubmitVote: !p && R && !x && E && !U && !j,
+    canSubmitVote: !p && v && !x && E && !U && !j,
     expirationLabel: _,
-    hasSelectedAnswer: R,
+    hasSelectedAnswer: v,
     hasVoted: x,
-    hasVoteRecorded: v,
+    hasVoteRecorded: R,
     isEditingVote: h,
     isExpired: m,
     isInteractive: A,
@@ -157,8 +157,8 @@ function L(e, t) {
     canRemoveVote: U,
     canShowVoteCounts: j,
     canSubmitVote: b,
-    expirationLabel: B = A.default.Messages.POLL_EXPIRED,
-    hasSelectedAnswer: F,
+    expirationLabel: F = A.default.Messages.POLL_EXPIRED,
+    hasSelectedAnswer: B,
     hasVoted: G,
     isEditingVote: k,
     isExpired: w,
@@ -172,17 +172,17 @@ function L(e, t) {
     count: Q.toLocaleString()
   }), X = Math.max(...L.map(e => {
     var t, n;
-    let s = R(V, "".concat(e.answer_id));
+    let s = v(V, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
   })), Z = L.map(e => {
     var t, n, l;
     let o = "".concat(e.answer_id),
-      d = R(V, o),
+      d = v(V, o),
       c = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       f = Y.has(o),
       E = c >= X && 0 !== c,
       T = G && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
-      I = v({
+      I = R({
         didSelfVote: T,
         hasVoted: G,
         isExpired: w,
@@ -250,7 +250,7 @@ function L(e, t) {
   }, () => ({
     label: A.default.Messages.POLL_SUBMIT_VOTE,
     presentation: "button",
-    enabled: F,
+    enabled: B,
     type: "submit"
   })).with({
     canRemoveVote: !0
@@ -292,7 +292,7 @@ function L(e, t) {
     type: "cancel"
   })).otherwise(() => ({
     label: q,
-    secondaryLabel: B,
+    secondaryLabel: F,
     accessibilityHint: $,
     presentation: "text",
     enabled: !0,
@@ -341,7 +341,7 @@ function L(e, t) {
     isInteractive: H,
     canTapAnswers: y,
     canSelectMultipleAnswers: en,
-    hasSelectedAnswer: F,
+    hasSelectedAnswer: B,
     canShowVoteCounts: j,
     hasVoted: G,
     isExpired: w,

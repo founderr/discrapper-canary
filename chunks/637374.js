@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("283595"),
   A = n("594174"),
   M = n("509545"),
-  R = n("55563"),
-  v = n("285952"),
+  v = n("55563"),
+  R = n("285952"),
   O = n("427828"),
   x = n("199480"),
   L = n("70613"),
@@ -34,8 +34,8 @@ var s = n("735250"),
   U = n("296848"),
   j = n("51144"),
   b = n("626799"),
-  B = n("981631"),
-  F = n("474936"),
+  F = n("981631"),
+  B = n("474936"),
   G = n("689938"),
   k = n("129326");
 
@@ -71,7 +71,7 @@ class V extends a.PureComponent {
     return e >= f.HORIZONTAL_EMBED_BREAKPOINT
   }
   handleViewInventory() {
-    c.default.open(B.UserSettingsSections.INVENTORY)
+    c.default.open(F.UserSettingsSections.INVENTORY)
   }
   render() {
     return (0, s.jsx)(f.ResponsiveEmbedTile, {
@@ -107,25 +107,25 @@ class Y extends a.Component {
     } = this.props;
     return {
       ...e,
-      section: B.AnalyticsSections.GIFT_CODE_EMBED
+      section: F.AnalyticsSections.GIFT_CODE_EMBED
     }
   }
   renderActions(e) {
     let {
       libraryApplication: t
     } = this.props;
-    return (0, s.jsxs)(v.default, {
-      justify: v.default.Justify.BETWEEN,
-      children: [(0, s.jsxs)(v.default, {
+    return (0, s.jsxs)(R.default, {
+      justify: R.default.Justify.BETWEEN,
+      children: [(0, s.jsxs)(R.default, {
         children: [this.renderButton(e), null == t || e.isSubscription ? null : (0, s.jsx)(H, {
           onClick: this.handleViewLibrary,
           libraryApplication: t
         })]
-      }), (0, s.jsxs)(v.default, {
-        align: v.default.Align.END,
-        justify: v.default.Justify.END,
+      }), (0, s.jsxs)(R.default, {
+        align: R.default.Align.END,
+        justify: R.default.Justify.END,
         className: k.metadata,
-        direction: v.default.Direction.VERTICAL,
+        direction: R.default.Direction.VERTICAL,
         children: [e.hasMultipleCopies ? (0, s.jsx)("div", {
           children: this.renderGiftCodeCopiesLeft(e)
         }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, s.jsx)("div", {
@@ -162,7 +162,7 @@ class Y extends a.Component {
     let {
       type: e
     } = this.props;
-    return e === B.MessageTypes.CUSTOM_GIFT
+    return e === F.MessageTypes.CUSTOM_GIFT
   }
   renderTitle(e) {
     let {
@@ -219,11 +219,11 @@ class Y extends a.Component {
       totalCopies: e.maxUses,
       skuName: r
     });
-    if (e.isSubscription) return null == l ? G.default.Messages.LOADING : null != a ? (l.interval === F.SubscriptionIntervalTypes.MONTH ? G.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : G.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
+    if (e.isSubscription) return null == l ? G.default.Messages.LOADING : null != a ? (l.interval === B.SubscriptionIntervalTypes.MONTH ? G.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : G.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
       username: j.default.getUserTag(a),
       skuName: r,
       intervalCount: l.intervalCount
-    }) : (l.interval === F.SubscriptionIntervalTypes.MONTH ? G.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : G.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
+    }) : (l.interval === B.SubscriptionIntervalTypes.MONTH ? G.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : G.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
       skuName: r,
       intervalCount: l.intervalCount
     });
@@ -246,7 +246,7 @@ class Y extends a.Component {
     return null == e ? null : (0, s.jsx)(b.StoreEmbedWithoutDimensions, {
       skuId: e.skuId,
       onEmbedClick: this.handleEmbedClick,
-      analyticsSection: B.AnalyticsSections.GIFT_CODE_EMBED,
+      analyticsSection: F.AnalyticsSections.GIFT_CODE_EMBED,
       renderCustomActions: () => this.renderActions(e),
       renderCustomTitle: () => this.renderTitle(e),
       renderCustomTagline: () => this.renderBody(e),
@@ -264,7 +264,7 @@ class Y extends a.Component {
     if (null != e && null != e.promotion) return (0, s.jsx)(b.StoreEmbedWithoutDimensions, {
       skuId: e.skuId,
       onEmbedClick: this.handleClaimPromotion,
-      analyticsSection: B.AnalyticsSections.GIFT_CODE_EMBED,
+      analyticsSection: F.AnalyticsSections.GIFT_CODE_EMBED,
       renderCustomActions: () => this.renderPromotionActions(),
       renderCustomTitle: () => G.default.Messages.GIFT_EMBED_TITLE_PROMOTION,
       renderCustomTagline: () => G.default.Messages.GIFT_EMBED_TAGLINE_PROMOTION,
@@ -286,13 +286,13 @@ class Y extends a.Component {
       let {
         libraryApplication: t
       } = this.props;
-      e.preventDefault(), null != t && t.isHidden() ? (0, N.transitionTo)(B.Routes.APPLICATION_LIBRARY_SETTINGS) : (0, N.transitionTo)(B.Routes.APPLICATION_LIBRARY, {
+      e.preventDefault(), null != t && t.isHidden() ? (0, N.transitionTo)(F.Routes.APPLICATION_LIBRARY_SETTINGS) : (0, N.transitionTo)(F.Routes.APPLICATION_LIBRARY, {
         state: {
           applicationId: null != t ? t.id : null
         }
       })
     }), w(this, "handleVerificationClick", e => {
-      e.stopPropagation(), e.preventDefault(), c.default.open(B.UserSettingsSections.ACCOUNT)
+      e.stopPropagation(), e.preventDefault(), c.default.open(F.UserSettingsSections.ACCOUNT)
     }), w(this, "handleAccept", e => {
       let {
         channelId: t,
@@ -301,14 +301,14 @@ class Y extends a.Component {
         type: a,
         giftInfo: l
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), D.default.track(B.AnalyticEvents.OPEN_MODAL, {
+      e.preventDefault(), e.stopPropagation(), D.default.track(F.AnalyticEvents.OPEN_MODAL, {
         type: "gift_accept",
         location: {
           ...this.analyticsLocation,
-          object: B.AnalyticsObjects.BUTTON_CTA
+          object: F.AnalyticsObjects.BUTTON_CTA
         }
       });
-      let i = a !== B.MessageTypes.CUSTOM_GIFT ? void 0 : s;
+      let i = a !== F.MessageTypes.CUSTOM_GIFT ? void 0 : s;
       (0, p.openGiftCodeAcceptModal)({
         processedCode: n,
         channelContext: t,
@@ -319,19 +319,19 @@ class Y extends a.Component {
       let {
         giftCode: t
       } = this.props;
-      null != t && t.isSubscription && (e.preventDefault(), c.default.open(B.UserSettingsSections.PREMIUM))
+      null != t && t.isSubscription && (e.preventDefault(), c.default.open(F.UserSettingsSections.PREMIUM))
     }), w(this, "handleClaimPromotion", e => {
       var t;
       e.stopPropagation(), e.preventDefault();
       let n = null === (t = this.props.giftCode) || void 0 === t ? void 0 : t.code;
-      null != n && window.open(B.Routes.BILLING_PROMOTION_REDEMPTION(n))
+      null != n && window.open(F.Routes.BILLING_PROMOTION_REDEMPTION(n))
     }), w(this, "renderCustomGiftBox", e => {
       let {
         useReducedMotion: t,
         width: n
       } = this.props;
       if (null == e || null == e.giftStyle) return null;
-      let a = F.LegacySeasonalGiftStyles.includes(e.giftStyle),
+      let a = B.LegacySeasonalGiftStyles.includes(e.giftStyle),
         l = i()(k.customGiftEmbedWrapper, {
           [k.legacySeasonalGiftEmbedWrapper]: a,
           [k.giftEmbedWrapperHorizontal]: n >= f.HORIZONTAL_EMBED_BREAKPOINT
@@ -344,7 +344,7 @@ class Y extends a.Component {
         });
       return (0, s.jsxs)("div", {
         className: l,
-        children: [!t && F.AllSeasonalGiftStyles.includes(e.giftStyle) && (0, s.jsx)(L.default, {
+        children: [!t && B.AllSeasonalGiftStyles.includes(e.giftStyle) && (0, s.jsx)(L.default, {
           className: k.snow,
           wind: 5
         }), a && (0, s.jsx)(x.default, {
@@ -359,12 +359,12 @@ class Y extends a.Component {
   }
 }
 let K = (0, _.default)((0, E.default)(Y));
-t.default = u.default.connectStores([C.default, R.default, A.default, g.default, M.default, S.default, m.default], e => {
+t.default = u.default.connectStores([C.default, v.default, A.default, g.default, M.default, S.default, m.default], e => {
   let {
     code: t,
     author: n,
     currentUser: s
-  } = e, a = C.default.get(t), l = null != a ? R.default.get(a.skuId) : null, i = null != a && null != a.userId ? A.default.getUser(a.userId) : null, r = m.default.useReducedMotion;
+  } = e, a = C.default.get(t), l = null != a ? v.default.get(a.skuId) : null, i = null != a && null != a.userId ? A.default.getUser(a.userId) : null, r = m.default.useReducedMotion;
   return {
     sku: l,
     giftCode: a,

@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("36459"),
   A = n("434404"),
   M = n("348238"),
-  R = n("103575"),
-  v = n("204197"),
+  v = n("103575"),
+  R = n("204197"),
   O = n("592125"),
   x = n("271383"),
   L = n("594174"),
@@ -38,8 +38,8 @@ var s = n("735250"),
   U = n("759231"),
   j = n("778947"),
   b = n("702346"),
-  B = n("787374"),
-  F = n("981631"),
+  F = n("787374"),
+  B = n("981631"),
   G = n("674563"),
   k = n("689938"),
   w = n("807850");
@@ -144,7 +144,7 @@ function W(e) {
     avatarSrc: d,
     avatarDecorationSrc: c,
     eventHandlers: f
-  } = (0, v.default)({
+  } = (0, R.default)({
     user: i,
     guildId: r,
     size: 12
@@ -173,7 +173,7 @@ function W(e) {
             children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
           }), (0, s.jsx)(T.Popout, {
             renderPopout: function(e) {
-              return null == i ? (0, s.jsx)(s.Fragment, {}) : (0, s.jsx)(R.default, {
+              return null == i ? (0, s.jsx)(s.Fragment, {}) : (0, s.jsx)(v.default, {
                 ...e,
                 location: "AutomodNotification",
                 userId: i.id,
@@ -229,10 +229,10 @@ function z(e) {
     dmsSent: m,
     raidType: I,
     resolvedReason: g
-  } = (0, S.extractAutomodNotificationFields)(l), A = (0, f.useStateFromStores)([O.default], () => O.default.getChannel(l.channel_id), [l.channel_id]), R = null !== (t = null == A ? void 0 : A.guild_id) && void 0 !== t ? t : null, {
-    incidentData: v,
+  } = (0, S.extractAutomodNotificationFields)(l), A = (0, f.useStateFromStores)([O.default], () => O.default.getChannel(l.channel_id), [l.channel_id]), v = null !== (t = null == A ? void 0 : A.guild_id) && void 0 !== t ? t : null, {
+    incidentData: R,
     shouldShowIncidentActions: x
-  } = (0, p.useGuildIncidentsState)(R), L = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
+  } = (0, p.useGuildIncidentsState)(v), L = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
     let e = null == A ? void 0 : A.guild_id;
     null != e && (0, C.openRaidResolveModal)(l.id, e)
   }, [l.id, A]), j = I === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
@@ -282,19 +282,19 @@ function z(e) {
       className: w.dotSeparatedRow,
       children: [(0, s.jsx)(T.Button, {
         onClick: e => {
-          if (null != R && x) {
+          if (null != v && x) {
             let e = {
               source: h.GuildIncidentActionSources.MESSAGE,
               messageId: l.id,
-              alertType: (0, N.getIncidentAlertType)(v)
+              alertType: (0, N.getIncidentAlertType)(R)
             };
             (0, T.openModalLazy)(async () => {
               let {
                 default: t
-              } = await Promise.all([n.e("99387"), n.e("89582")]).then(n.bind(n, "664452"));
+              } = await Promise.all([n.e("99387"), n.e("61536")]).then(n.bind(n, "664452"));
               return n => (0, s.jsx)(t, {
                 ...n,
-                guildId: R,
+                guildId: v,
                 analyticsData: e
               })
             })
@@ -407,7 +407,7 @@ function Q(e) {
         })
       }), (0, s.jsx)(H, {}), (0, s.jsx)(T.Button, {
         onClick: function() {
-          null != i && A.default.open(i, F.GuildSettingsSections.GUILD_AUTOMOD, void 0, F.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM)
+          null != i && A.default.open(i, B.GuildSettingsSections.GUILD_AUTOMOD, void 0, B.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM)
         },
         color: T.Button.Colors.LINK,
         look: T.Button.Looks.LINK,
@@ -473,7 +473,7 @@ function X(e) {
       onMouseEnter: o,
       onMouseLeave: u
     }
-  } = (0, B.useAutomodAvatar)(!0), {
+  } = (0, F.useAutomodAvatar)(!0), {
     notificationType: c
   } = (0, S.extractAutomodNotificationFields)(a), f = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
   return (0, s.jsx)("div", {
@@ -483,7 +483,7 @@ function X(e) {
       className: i()(w.mainContainer, {
         [w.compact]: n
       }),
-      iconNode: n ? null : (0, s.jsx)(B.AutomodAvatar, {
+      iconNode: n ? null : (0, s.jsx)(F.AutomodAvatar, {
         src: r
       }),
       iconContainerClassName: w.iconContainer,

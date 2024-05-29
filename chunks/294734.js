@@ -98,7 +98,7 @@ function A(e) {
     allowLinks: !0,
     allowDevLinks: p,
     previewLinkTarget: !0
-  }), M = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(n.channel_id)), R = _.MessageDisplayCompact.useSetting();
+  }), M = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(n.channel_id)), v = _.MessageDisplayCompact.useSetting();
   return null == M ? null : (0, s.jsxs)("div", {
     className: S.container,
     children: [(0, s.jsx)("div", {
@@ -112,7 +112,7 @@ function A(e) {
         channelMessageProps: {
           message: o,
           channel: M,
-          compact: R
+          compact: v
         },
         hasSpoilerEmbeds: A,
         isInteracting: !1

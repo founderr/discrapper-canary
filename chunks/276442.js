@@ -22,8 +22,8 @@ function p(e) {
     initialPlanId: n,
     breadcrumbSteps: i,
     handleStepChange: p,
-    referralTrialOfferId: _,
-    onReturn: S
+    referralTrialOfferId: S,
+    onReturn: _
   } = e, {
     contextMetadata: I,
     step: P,
@@ -34,9 +34,9 @@ function p(e) {
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A,
-    selectedSkuId: C
+    selectedSkuId: y
   } = (0, c.usePaymentContext)(), {
-    isGift: y
+    isGift: C
   } = (0, o.useGiftContext)(), g = {
     ...(0, r.useSharedPaymentModal)(),
     paymentSources: E,
@@ -46,7 +46,7 @@ function p(e) {
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A
-  }, M = (0, a.usePremiumTrialOffer)(_), R = !y && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), b = null != S ? S : () => {
+  }, M = (0, a.usePremiumTrialOffer)(S), R = !C && null != M && null != y && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(y), b = null != _ ? _ : () => {
     p(Object.values(E).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })

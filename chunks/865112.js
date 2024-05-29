@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return M
   },
   getIconByName: function() {
-    return R
+    return v
   },
   getMask: function() {
-    return v
+    return R
   }
 });
 var s, a, l, i, r = n("692547"),
@@ -80,11 +80,11 @@ let g = {
         return "NOTIFICATION_CENTER"
     }
   },
-  R = e => {
+  v = e => {
     if ("icHighlight" === e) return "TOP_MESSAGES";
     return "NOTIFICATION_CENTER"
   },
-  v = e => {
+  R = e => {
     switch (e) {
       case o.NotificationCenterItems.GO_LIVE_PUSH:
         return {

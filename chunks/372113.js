@@ -24,8 +24,8 @@ var a = n("120356"),
   g = n("644646"),
   A = n("667105"),
   M = n("87894"),
-  R = n("2660"),
-  v = n("46140"),
+  v = n("2660"),
+  R = n("46140"),
   O = n("981631"),
   x = n("689938"),
   L = n("526123");
@@ -63,12 +63,12 @@ t.default = e => {
     quest: U,
     location: j,
     size: b,
-    isFocused: B,
-    isQuestExpired: F,
+    isFocused: F,
+    isQuestExpired: B,
     isExpanded: G,
     isAnimating: k,
     contentPosition: w
-  } = e, H = (null === (t = U.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, V = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (0, N.hasCollectiblesQuestReward)(U.config), K = (null === (a = U.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, W = G || k, z = (0, I.useQuestInstructionTitle)(U, v.QuestsExperimentLocations.QUESTS_CARD), Q = V && !K && j !== h.QuestContent.QUESTS_EMBED, q = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), X = D(H, V, K, Y), Z = V ? x.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : x.default.Messages.QUESTS_ACCEPT_TOOLTIP, J = (0, A.useHandleClaimQuestsReward)({
+  } = e, H = (null === (t = U.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, V = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (0, N.hasCollectiblesQuestReward)(U.config), K = (null === (a = U.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, W = G || k, z = (0, I.useQuestInstructionTitle)(U, R.QuestsExperimentLocations.QUESTS_CARD), Q = V && !K && j !== h.QuestContent.QUESTS_EMBED, q = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), X = D(H, V, K, Y), Z = V ? x.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : x.default.Messages.QUESTS_ACCEPT_TOOLTIP, J = (0, A.useHandleClaimQuestsReward)({
     quest: U,
     location: j,
     questContentPosition: w
@@ -79,8 +79,8 @@ t.default = e => {
       questContentPosition: w
     });
     J()
-  }, en = (0, i.useStateFromStores)([c.default], () => c.default.locale), es = j === h.QuestContent.QUESTS_EMBED, ea = (0, M.isQuestCardInGiftInventory)(j), el = ea && Y, ei = F && !H, er = (0, s.jsx)(g.default, {
-    autoplay: B,
+  }, en = (0, i.useStateFromStores)([c.default], () => c.default.locale), es = j === h.QuestContent.QUESTS_EMBED, ea = (0, M.isQuestCardInGiftInventory)(j), el = ea && Y, ei = B && !H, er = (0, s.jsx)(g.default, {
+    autoplay: F,
     className: l()(L.gridImg, {
       [L.questRewardGiftInventory]: ea && "lg" === b,
       [L.questRewardEmbed]: es && "lg" === b,
@@ -109,15 +109,15 @@ t.default = e => {
       children: e => (0, s.jsxs)("div", {
         className: L.rewardTileWrapper,
         ...e,
-        children: [F && (0, s.jsx)("div", {
+        children: [B && (0, s.jsx)("div", {
           className: L.rewardTileExpired,
           children: (0, s.jsx)(r.CircleExclamationPointIcon, {
             color: o.tokens.colors.WHITE
           })
-        }), el ? (0, s.jsx)(R.default, {
+        }), el ? (0, s.jsx)(v.default, {
           questConfig: U.config,
           fallback: er,
-          isFocused: B
+          isFocused: F
         }) : er]
       })
     }), (0, s.jsxs)("div", {
@@ -125,7 +125,7 @@ t.default = e => {
       children: [(0, s.jsx)(o.Text, {
         variant: P(j, b, V),
         className: L.taskInstructions,
-        children: F ? x.default.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
+        children: B ? x.default.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
           questName: U.config.messages.questName
         }) : z
       }), (0, s.jsx)(o.Text, {
@@ -180,7 +180,7 @@ t.default = e => {
         }({
           quest: U,
           locale: en,
-          isQuestExpired: F
+          isQuestExpired: B
         })
       })]
     }), (0, s.jsxs)("div", {
@@ -196,7 +196,7 @@ t.default = e => {
           })
         },
         children: x.default.Messages.QUESTS_LEARN_MORE_V2
-      }), (!F || H) && (0, s.jsx)(o.Tooltip, {
+      }), (!B || H) && (0, s.jsx)(o.Tooltip, {
         text: Z,
         tooltipContentClassName: L.ctaTooltipCopy,
         shouldShow: !K && !H,

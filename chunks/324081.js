@@ -68,16 +68,16 @@ function M(e) {
     channel: t,
     gotoChannel: n
   } = e;
-  return t.isPrivate() ? (0, s.jsx)(R, {
+  return t.isPrivate() ? (0, s.jsx)(v, {
     channel: t,
     gotoChannel: n
-  }) : (0, s.jsx)(v, {
+  }) : (0, s.jsx)(R, {
     channel: t,
     gotoChannel: n
   })
 }
 
-function R(e) {
+function v(e) {
   let {
     channel: t,
     gotoChannel: n
@@ -94,7 +94,7 @@ function R(e) {
   })
 }
 
-function v(e) {
+function R(e) {
   let {
     channel: t,
     gotoChannel: n

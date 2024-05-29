@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return x
   },
   default: function() {
-    return v
+    return R
   }
 }), n("47120");
 var s = n("735250"),
@@ -30,15 +30,15 @@ var s = n("735250"),
   g = n("809780"),
   A = n("981631"),
   M = n("689938"),
-  R = n("953214");
+  v = n("953214");
 
-function v(e) {
+function R(e) {
   let {
     setTab: t,
     onJump: n,
     showTutorial: l,
     setSeenTutorial: r,
-    closePopout: v,
+    closePopout: R,
     badgeState: x
   } = e, L = a.useRef(null), [D, P] = (0, g.default)(L), {
     loadState: y,
@@ -85,20 +85,20 @@ function v(e) {
     I.default.track(A.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
-  }, []), a.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", v), () => {
-    E.default.unsubscribe("CONNECTION_OPEN", v)
-  }), [v]);
-  let B = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
-    F = (0, m.default)("unreads", L);
+  }, []), a.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", R), () => {
+    E.default.unsubscribe("CONNECTION_OPEN", R)
+  }), [R]);
+  let F = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
+    B = (0, m.default)("unreads", L);
   if (0 === U.length) {
     var G;
     return (0, s.jsxs)("div", {
-      className: R.container,
+      className: v.container,
       children: [(0, s.jsx)(S.default, {
         tab: c.InboxTab.UNREADS,
         setTab: t,
         badgeState: x,
-        closePopout: v
+        closePopout: R
       }), (0, s.jsx)(N.default, {
         Icon: T.default,
         header: M.default.Messages.UNREADS_EMPTY_STATE_HEADER,
@@ -107,19 +107,19 @@ function v(e) {
     })
   }
   return (0, s.jsxs)("div", {
-    className: i()(R.container, "group-spacing-".concat(B)),
+    className: i()(v.container, "group-spacing-".concat(F)),
     "aria-label": M.default.Messages.UNREADS_TAB_LABEL,
     children: [(0, s.jsx)(S.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: x,
-      closePopout: v,
+      closePopout: R,
       children: (0, s.jsx)(h.default, {
         type: "top-header",
         onClick: b
       })
     }), (0, s.jsx)(u.ListNavigatorProvider, {
-      navigator: F,
+      navigator: B,
       children: (0, s.jsx)(u.ListNavigatorContainer, {
         children: e => {
           let {
@@ -133,11 +133,11 @@ function v(e) {
             },
             ...a,
             onScroll: y === g.LoadState.Done ? void 0 : j,
-            className: R.scroller,
+            className: v.scroller,
             children: [l ? (0, s.jsx)(O, {
               setSeenTutorial: r
             }) : null, (0, C.default)(U, P, n), y === g.LoadState.Done ? null : (0, s.jsx)(f.Spinner, {
-              className: R.spinner
+              className: v.spinner
             })]
           })
         }
@@ -151,16 +151,16 @@ function O(e) {
     setSeenTutorial: t
   } = e;
   return (0, s.jsxs)("div", {
-    className: R.tutorial,
+    className: v.tutorial,
     children: [(0, s.jsx)("div", {
-      className: R.tutorialIcon,
+      className: v.tutorialIcon,
       children: (0, s.jsx)(T.default, {
         width: 24,
         height: 24
       })
     }), (0, s.jsxs)("div", {
       children: [(0, s.jsx)(f.Heading, {
-        className: R.__invalid_tutorialHeader,
+        className: v.__invalid_tutorialHeader,
         variant: "heading-md/semibold",
         children: M.default.Messages.UNREADS_TUTORIAL_HEADER
       }), (0, s.jsx)(f.Text, {
@@ -168,7 +168,7 @@ function O(e) {
         variant: "text-sm/normal",
         children: M.default.Messages.UNREADS_TUTORIAL_BODY
       }), (0, s.jsx)(f.Button, {
-        className: R.tutorialButton,
+        className: v.tutorialButton,
         onClick: t,
         size: f.Button.Sizes.SMALL,
         children: M.default.Messages.TUTORIAL_CLOSE
@@ -184,7 +184,7 @@ function x(e) {
     closePopout: a
   } = e;
   return (0, s.jsxs)("div", {
-    className: R.container,
+    className: v.container,
     children: [(0, s.jsx)(S.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,

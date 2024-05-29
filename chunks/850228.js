@@ -1,16 +1,16 @@
 "use strict";
 a.r(t);
 var n = a("735250"),
-  r = a("470079"),
-  s = a("442837"),
-  l = a("481060"),
+  s = a("470079"),
+  l = a("442837"),
+  r = a("481060"),
   o = a("975060"),
   i = a("912454"),
   u = a("559725"),
   c = a("439041"),
   d = a("689938"),
   p = a("142520");
-class S extends r.PureComponent {
+class E extends s.PureComponent {
   componentDidMount() {
     null == this.props.adyenPaymentData && u.reopenCashAppPayWindow()
   }
@@ -18,8 +18,8 @@ class S extends r.PureComponent {
     var e, t;
     let {
       className: a,
-      cashAppPayComponent: r
-    } = this.props, s = this.props.adyenPaymentData, o = null !== (t = null == s ? void 0 : null === (e = s.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== t ? t : "", u = null != s && "" !== o;
+      cashAppPayComponent: s
+    } = this.props, l = this.props.adyenPaymentData, o = null !== (t = null == l ? void 0 : null === (e = l.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== t ? t : "", u = null != l && "" !== o;
     return (0, n.jsxs)("div", {
       className: a,
       children: [(0, n.jsx)(i.default, {
@@ -27,26 +27,26 @@ class S extends r.PureComponent {
         size: i.IconSizes.MEDIUM,
         className: p.icon
       }), u ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(l.Heading, {
+        children: [(0, n.jsx)(r.Heading, {
           variant: o.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
           className: p.connectionInstructions,
           children: d.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS.format({
             cashtag: o
           })
-        }), (0, n.jsx)(l.Text, {
+        }), (0, n.jsx)(r.Text, {
           variant: "text-md/medium",
           className: p.connectionInstructions,
           children: d.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS_INSTRUCTIONS
         })]
-      }) : (0, n.jsx)(l.Text, {
+      }) : (0, n.jsx)(r.Text, {
         variant: "text-md/medium",
         className: p.connectionInstructions,
-        children: null == r ? d.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING : d.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
+        children: null == s ? d.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING : d.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
       })]
     })
   }
 }
-t.default = s.default.connectStores([c.default, o.default], () => ({
+t.default = l.default.connectStores([c.default, o.default], () => ({
   cashAppPayComponent: c.default.cashAppPayComponent,
   adyenPaymentData: o.default.adyenPaymentData
-}))(S)
+}))(E)

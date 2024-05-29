@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("981631"),
   A = n("185923"),
   M = n("474936"),
-  R = n("689938"),
-  v = n("858313"),
+  v = n("689938"),
+  R = n("858313"),
   O = n("601064");
 
 function x(e, t, n) {
@@ -53,11 +53,11 @@ class L extends a.Component {
     if (o || (0, N.hasFlag)(t.flags, g.MessageFlags.EPHEMERAL)) return null;
     let E = I.default.getCurrentUser(),
       _ = (0, S.isPremium)(E),
-      m = u ? R.default.Messages.ADD_BURST_REACTION : R.default.Messages.ADD_REACTION;
+      m = u ? v.default.Messages.ADD_BURST_REACTION : v.default.Messages.ADD_REACTION;
     !_ && u && (m = (0, s.jsx)(f.NitroTooltipLabel, {
-      tooltipText: R.default.Messages.ADD_BURST_REACTION
+      tooltipText: v.default.Messages.ADD_BURST_REACTION
     }));
-    let T = l ? O : v;
+    let T = l ? O : R;
     return (0, s.jsx)(d.Popout, {
       shouldShow: r,
       onRequestClose: this.handleReactionPickerToggle,
@@ -70,7 +70,7 @@ class L extends a.Component {
         return (0, s.jsx)(d.TooltipContainer, {
           text: m,
           color: d.TooltipColors.PRIMARY,
-          "aria-label": u ? R.default.Messages.ADD_BURST_REACTION : R.default.Messages.ADD_REACTION,
+          "aria-label": u ? v.default.Messages.ADD_BURST_REACTION : v.default.Messages.ADD_REACTION,
           tooltipClassName: T.__invalid_addReactionTooltip,
           children: (0, s.jsxs)(d.Clickable, {
             ...e,
@@ -154,7 +154,7 @@ class L extends a.Component {
       });
       return (0, s.jsx)(u.DialogContext.Consumer, {
         children: e => e ? (0, s.jsx)(d.Dialog, {
-          "aria-label": R.default.Messages.REACTION_PICKER,
+          "aria-label": v.default.Messages.REACTION_PICKER,
           children: r
         }) : r
       })

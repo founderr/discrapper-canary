@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var a = n("735250");
+var i = n("735250");
 n("470079");
-var r = n("120356"),
-  s = n.n(r),
-  o = n("481060"),
-  l = n("242411"),
-  i = n("689938"),
+var l = n("120356"),
+  r = n.n(l),
+  a = n("481060"),
+  s = n("242411"),
+  o = n("689938"),
   u = n("616807"),
-  c = n("961047");
+  d = n("961047");
 
-function d() {
-  return (0, a.jsxs)("div", {
-    className: s()(u.paymentModalLockIcon, c.flex, c.alignCenter),
-    children: [(0, a.jsx)(l.default, {
+function c() {
+  return (0, i.jsxs)("div", {
+    className: r()(u.paymentModalLockIcon, d.flex, d.alignCenter),
+    children: [(0, i.jsx)(s.default, {
       className: u.lockIcon,
       width: 18,
       height: 18
-    }), (0, a.jsx)(o.Text, {
+    }), (0, i.jsx)(a.Text, {
       variant: "text-sm/medium",
-      children: i.default.Messages.BILLING_SECURE
+      children: o.default.Messages.BILLING_SECURE
     })]
   })
 }

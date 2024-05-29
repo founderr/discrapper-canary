@@ -4,19 +4,19 @@ a.r(t), a.d(t, {
     return n
   },
   acceptPurchaseTerms: function() {
-    return l
+    return s
   }
 });
-var s = a("570140");
+var l = a("570140");
 
-function l() {
-  s.default.dispatch({
+function s() {
+  l.default.dispatch({
     type: "APPLICATION_STORE_ACCEPT_STORE_TERMS"
   })
 }
 
 function n(e) {
-  s.default.dispatch({
+  l.default.dispatch({
     type: "APPLICATION_STORE_ACCEPT_EULA",
     eulaId: e
   })

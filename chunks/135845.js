@@ -32,8 +32,8 @@ function I(e) {
     g = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
     A = (0, i.useStateFromStores)([u.default], () => null != I && null != I.target_user ? u.default.getActiveStreamForUser(I.target_user.id, C) : null, [I, C]),
     M = (0, i.useStateFromStores)([u.default], () => null != I && null != I.target_user ? u.default.getStreamForUser(I.target_user.id, C) : null, [I, C]),
-    R = null != I && I.target_type === _.InviteTargetTypes.STREAM && null != I.target_user && null != A,
-    v = null != I && null != M && null != I.channel && null != I.guild && M.channelId === I.channel.id && M.guildId === I.guild.id;
+    v = null != I && I.target_type === _.InviteTargetTypes.STREAM && null != I.target_user && null != A,
+    R = null != I && null != M && null != I.channel && null != I.guild && M.channelId === I.channel.id && M.guildId === I.guild.id;
   l()(null != I, "Invite cannot be null");
   let {
     target_type: O,
@@ -48,10 +48,10 @@ function I(e) {
     h = new o.default(I.guild)
   }
   let y = null != I.channel ? (0, r.createChannelRecordFromInvite)(I.channel) : null,
-    U = R ? N : S;
-  P && !v ? a = L ? m.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+    U = v ? N : S;
+  P && !R ? a = L ? m.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
     name: x.username
-  }) : (t = m.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, R && (t = m.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = L ? m.default.Messages.INVITE_BUTTON_STREAMER : m.default.Messages.INVITE_BUTTON_STREAMING.format({
+  }) : (t = m.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, v && (t = m.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = L ? m.default.Messages.INVITE_BUTTON_STREAMER : m.default.Messages.INVITE_BUTTON_STREAMING.format({
     name: x.username
   }));
   let j = g === h.id && null != y ? (0, s.jsx)(c.default.Channel, {
@@ -67,17 +67,17 @@ function I(e) {
         className: T.headerLine,
         children: [(0, s.jsx)(c.default.Icon, {
           guild: h,
-          onClick: P && v ? U : void 0
+          onClick: P && R ? U : void 0
         }), (0, s.jsx)(c.default.Info, {
           title: a,
-          onClick: P && v ? U : void 0,
+          onClick: P && R ? U : void 0,
           children: j
         })]
-      }), v ? (0, s.jsx)(c.default.Button, {
-        disabled: P && !v,
+      }), R ? (0, s.jsx)(c.default.Button, {
+        disabled: P && !R,
         onClick: U,
         submitting: D,
-        isDisabled: R && v,
+        isDisabled: v && R,
         color: n,
         children: t
       }) : null]

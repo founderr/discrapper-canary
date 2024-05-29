@@ -39,14 +39,14 @@ function I(e) {
   if (null == n.inviter) return null;
   let A = S ? C : g,
     M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND,
-    R = f.default.Button.Colors.GREEN;
-  S ? (M = m.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = f.default.Button.Colors.PRIMARY) : h && (M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND, R = f.default.Button.Colors.PRIMARY);
-  let v = h ? m.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
+    v = f.default.Button.Colors.GREEN;
+  S ? (M = m.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, v = f.default.Button.Colors.PRIMARY) : h && (M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND, v = f.default.Button.Colors.PRIMARY);
+  let R = h ? m.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
     O = null != n.inviter ? "".concat(n.inviter.username) : "",
     x = null != n.inviter ? E.default.getUserTag(n.inviter) : "";
   return (0, s.jsxs)(f.default, {
     children: [(0, s.jsx)(f.default.Header, {
-      text: v
+      text: R
     }), (0, s.jsxs)(f.default.Body, {
       children: [(0, s.jsxs)("div", {
         className: T.headerLine,
@@ -62,7 +62,7 @@ function I(e) {
         onClick: A,
         submitting: N,
         isDisabled: h,
-        color: R,
+        color: v,
         children: M
       })]
     })]

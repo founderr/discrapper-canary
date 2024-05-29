@@ -159,7 +159,7 @@ function k(e) {
       (0, m.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([l.e("99387"), l.e("7654"), l.e("92893")]).then(l.bind(l, "560114"));
+        } = await Promise.all([l.e("99387"), l.e("7654"), l.e("61939")]).then(l.bind(l, "560114"));
         return t => (0, n.jsx)(e, {
           ...t,
           channel: r,
@@ -185,7 +185,7 @@ function k(e) {
         (0, m.openModalLazy)(async () => {
           let {
             default: t
-          } = await Promise.all([l.e("99387"), l.e("58448")]).then(l.bind(l, "664452"));
+          } = await Promise.all([l.e("99387"), l.e("77122")]).then(l.bind(l, "664452"));
           return l => (0, n.jsx)(t, {
             ...l,
             guildId: s.id,

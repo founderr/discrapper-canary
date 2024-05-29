@@ -27,12 +27,12 @@ var s = n("735250"),
   g = n("981631"),
   A = n("689938"),
   M = n("443039");
-let R = {
+let v = {
   left: 4,
   right: -12
 };
 
-function v(e) {
+function R(e) {
   var t;
   let {
     channel: n,
@@ -48,7 +48,7 @@ function v(e) {
     }
   }, [n.id]);
   return (0, s.jsx)(u.FocusRing, {
-    offset: R,
+    offset: v,
     children: (0, s.jsxs)("div", {
       className: M.messageContainer,
       onKeyDown: E,
@@ -83,13 +83,13 @@ function O(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), S = m.MessageDisplayCompact.useSetting(), R = (0, o.useStateFromStores)([I.default], () => I.default.can(g.Permissions.CREATE_INSTANT_INVITE, l)), O = (0, E.isSpamSupported)(l), x = !1, L = 0 === a.messages.length || i()(a.messages[0].timestamp).isSame(i()(), "day"), D = null !== (n = null === (t = p.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.UserFlags.SPAMMER)) && void 0 !== n && n, P = [];
+  }), S = m.MessageDisplayCompact.useSetting(), v = (0, o.useStateFromStores)([I.default], () => I.default.can(g.Permissions.CREATE_INSTANT_INVITE, l)), O = (0, E.isSpamSupported)(l), x = !1, L = 0 === a.messages.length || i()(a.messages[0].timestamp).isSame(i()(), "day"), D = null !== (n = null === (t = p.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.UserFlags.SPAMMER)) && void 0 !== n && n, P = [];
   if (!a.collapsed) {
     let e = null,
       t = null,
       n = a.messages.slice(0, C.MAX_SHOWN_MESSAGES);
     n.forEach(n => {
-      if (!(0, c.default)(n, R)) {
+      if (!(0, c.default)(n, v)) {
         if (!L && (null == e || !e.isSame(n.timestamp, "day"))) {
           let t = (0, N.dateFormat)(n.timestamp, "LL");
           P.push((0, s.jsx)(h.default, {
@@ -98,7 +98,7 @@ function O(e) {
           }, t)), e = i()(n.timestamp)
         }
         let a = null == t || (0, f.default)(l, t, n);
-        t = n, x = x || (0, E.isSpam)(n), P.push((0, s.jsx)(v, {
+        t = n, x = x || (0, E.isSpam)(n), P.push((0, s.jsx)(R, {
           channel: l,
           message: n,
           compact: S,

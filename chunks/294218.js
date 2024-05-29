@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("963550"),
   A = n("845080"),
   M = n("295790"),
-  R = n("145807"),
-  v = n("56744"),
+  v = n("145807"),
+  R = n("56744"),
   O = n("981631"),
   x = n("373947");
 t.default = a.memo(function(e) {
@@ -40,8 +40,8 @@ t.default = a.memo(function(e) {
     channel: U,
     isGroupStart: j,
     animateAvatar: b,
-    subscribeToComponentDispatch: B,
-    renderThreadAccessory: F,
+    subscribeToComponentDispatch: F,
+    renderThreadAccessory: B,
     trackAnnouncementViews: G = !1,
     ...k
   } = e, w = n.isFirstMessageInForumPost(U), H = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), {
@@ -71,8 +71,8 @@ t.default = a.memo(function(e) {
       [x.disableInteraction]: P
     }),
     disableInteraction: P,
-    childrenRepliedMessage: (0, v.default)(n, U, K, W, a),
-    childrenExecutedCommand: (0, R.default)(n, U, a),
+    childrenRepliedMessage: (0, R.default)(n, U, K, W, a),
+    childrenExecutedCommand: (0, v.default)(n, U, a),
     childrenHeader: (0, A.default)({
       ...e,
       guildId: U.guild_id,
@@ -84,7 +84,7 @@ t.default = a.memo(function(e) {
     childrenSystemMessage: (0, M.default)(e),
     onContextMenu: L,
     onClick: D,
-    hasThread: F && null != q && n.hasFlag(O.MessageFlags.HAS_THREAD),
+    hasThread: B && null != q && n.hasFlag(O.MessageFlags.HAS_THREAD),
     hasReply: n.type === O.MessageTypes.REPLY,
     "aria-labelledby": $,
     "aria-describedby": ee,

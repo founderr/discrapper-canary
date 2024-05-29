@@ -1,14 +1,14 @@
 "use strict";
 a.r(t), a("47120");
 var n = a("735250"),
-  l = a("470079"),
-  s = a("120356"),
-  r = a.n(s),
+  s = a("470079"),
+  l = a("120356"),
+  r = a.n(l),
   o = a("481060"),
   i = a("285952"),
   u = a("282605");
 
-function d(e, t, a) {
+function c(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -16,7 +16,7 @@ function d(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class c extends l.PureComponent {
+class d extends s.PureComponent {
   componentDidUpdate(e) {
     if (this.props.formError !== e.formError) this.setState({
       changedSinceError: new Set
@@ -56,43 +56,43 @@ class c extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), d(this, "state", {
+    super(...e), c(this, "state", {
       changedSinceError: new Set
-    }), d(this, "renderFormSection", e => {
+    }), c(this, "renderFormSection", e => {
       let {
         values: t,
         onFieldChange: a,
-        onFieldFocus: l,
-        onFieldBlur: s,
+        onFieldFocus: s,
+        onFieldBlur: l,
         layout: i,
         ...u
       } = this.props, {
-        getClassNameForLayout: d,
-        renderInput: c,
-        title: E,
-        name: p,
+        getClassNameForLayout: c,
+        renderInput: d,
+        title: p,
+        name: E,
         id: m,
-        placeholder: f,
-        ...S
-      } = e, _ = {
-        ...S,
-        placeholder: null == f ? void 0 : f(),
+        placeholder: S,
+        ...A
+      } = e, f = {
+        ...A,
+        placeholder: null == S ? void 0 : S(),
         layout: i,
-        error: this.getError(p),
-        value: t[p],
-        name: p,
+        error: this.getError(E),
+        value: t[E],
+        name: E,
         "aria-labelledby": m,
         onChange: a,
-        onFocus: l,
-        onBlur: s
+        onFocus: s,
+        onBlur: l
       };
       return (0, n.jsx)(o.FormSection, {
-        className: r()(null == d ? void 0 : d(i)),
-        title: E(),
+        className: r()(null == c ? void 0 : c(i)),
+        title: p(),
         titleId: m,
-        children: c(_, u)
-      }, p)
-    }), d(this, "renderFormRow", e => {
+        children: d(f, u)
+      }, E)
+    }), c(this, "renderFormRow", e => {
       let t = e.fields.map(this.renderFormSection);
       return (0, n.jsx)(i.default, {
         className: r()(u.row, e.className),
@@ -101,4 +101,4 @@ class c extends l.PureComponent {
     })
   }
 }
-t.default = c
+t.default = d

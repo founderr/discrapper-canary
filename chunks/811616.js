@@ -17,8 +17,8 @@ var s = n("120356"),
   m = n("706454"),
   f = n("509545"),
   p = n("669079"),
-  _ = n("930153"),
-  S = n("74538"),
+  S = n("930153"),
+  _ = n("74538"),
   I = n("937615"),
   P = n("104494"),
   E = n("474936"),
@@ -35,8 +35,8 @@ function v(e) {
     shouldShowUpdatedPaymentModal: h,
     isEligibleForDiscount: x,
     discountAmountOff: A,
-    isEligibleForAnnualDiscount: C,
-    annualDiscountAmountOff: y,
+    isEligibleForAnnualDiscount: y,
+    annualDiscountAmountOff: C,
     isEligibleForTrial: g
   } = e, M = (0, u.useStateFromStores)([m.default], () => m.default.locale), R = (0, u.useStateFromStores)([f.default], () => f.default.get(n)), {
     isGift: b,
@@ -46,12 +46,12 @@ function v(e) {
   let j = null != t && t.planId === n,
     G = j || n === E.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != t && [E.SubscriptionPlans.PREMIUM_YEAR_TIER_0, E.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(t.planId),
     D = E.DISCOUNTS[n],
-    U = (0, S.getPrice)(n, !1, b, v),
-    F = (0, S.isPrepaidPaymentSource)(v.paymentSourceId),
+    U = (0, _.getPrice)(n, !1, b, v),
+    F = (0, _.isPrepaidPaymentSource)(v.paymentSourceId),
     w = null != D && !h,
     B = (0, P.usePremiumDiscountOffer)(),
     k = (0, P.usePremiumAnnualDiscountOffer)(),
-    H = C && null != y && R.interval === E.SubscriptionIntervalTypes.YEAR,
+    H = y && null != C && R.interval === E.SubscriptionIntervalTypes.YEAR,
     W = R.interval === E.SubscriptionIntervalTypes.YEAR ? T.default.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : T.default.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
     Y = () => null != D && (0, i.jsx)(c.Text, {
       tag: "span",
@@ -59,7 +59,7 @@ function v(e) {
       color: "always-white",
       className: N.planOptionDiscount,
       children: T.default.Messages.BILLING_PLAN_SELECTION_DISCOUNT.format({
-        discount: (0, _.formatPercent)(M, D / 100)
+        discount: (0, S.formatPercent)(M, D / 100)
       })
     }),
     K = () => R.interval === E.SubscriptionIntervalTypes.YEAR && null != t || w && !j ? R.interval !== E.SubscriptionIntervalTypes.YEAR || null == t || H ? w && !j ? Y() : void 0 : (0, i.jsxs)("span", {
@@ -103,7 +103,7 @@ function v(e) {
               [N.optionSelected]: a || O,
               [N.updatedOptionSelected]: h && (a || O)
             }),
-            children: [(0, S.getIntervalString)(R.interval, b, F, R.intervalCount, O, (0, S.getPremiumType)(R.id)), O && K()]
+            children: [(0, _.getIntervalString)(R.interval, b, F, R.intervalCount, O, (0, _.getPremiumType)(R.id)), O && K()]
           }), O && (0, i.jsx)("div", {
             className: N.planOneTimeCost,
             children: T.default.Messages.ONE_TIME_CHARGE.format({
@@ -121,7 +121,7 @@ function v(e) {
         children: H ? (() => {
           if (H) {
             var e;
-            let t = (0, _.formatPercent)(M, E.ANNUAL_DISCOUNT_IDS_TO_PERCENTAGES[null !== (e = null == k ? void 0 : k.discount_id) && void 0 !== e ? e : "DEFAULT"]);
+            let t = (0, S.formatPercent)(M, E.ANNUAL_DISCOUNT_IDS_TO_PERCENTAGES[null !== (e = null == k ? void 0 : k.discount_id) && void 0 !== e ? e : "DEFAULT"]);
             return (0, i.jsxs)("div", {
               style: {
                 display: "flex",
@@ -136,7 +136,7 @@ function v(e) {
                   discount: t
                 })
               }), T.default.Messages.BILLING_TRIAL_PRICE_NOW.format({
-                price: (0, I.formatPrice)(U.amount - y, U.currency)
+                price: (0, I.formatPrice)(U.amount - C, U.currency)
               })]
             })
           }
@@ -158,7 +158,7 @@ function v(e) {
         variant: "text-md/normal",
         color: a ? "text-normal" : "interactive-normal",
         className: l()(N.planOptionSubtext, {
-          [N.discountPlanOptionSubtext]: x || C
+          [N.discountPlanOptionSubtext]: x || y
         }),
         children: (() => {
           if (x && null != A && R.interval === E.SubscriptionIntervalTypes.MONTH) {
@@ -169,7 +169,7 @@ function v(e) {
               regularPrice: (0, I.formatPrice)(U.amount, U.currency)
             })
           }
-          if (C && null != y && R.interval === E.SubscriptionIntervalTypes.YEAR) return T.default.Messages.BILLING_ANNUAL_DISCOUNT_YEARLY_PRICE_SUBTEXT.format({
+          if (y && null != C && R.interval === E.SubscriptionIntervalTypes.YEAR) return T.default.Messages.BILLING_ANNUAL_DISCOUNT_YEARLY_PRICE_SUBTEXT.format({
             regularPrice: (0, I.formatPrice)(U.amount, U.currency)
           });
           if (g) return W.format({

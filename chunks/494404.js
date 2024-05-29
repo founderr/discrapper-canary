@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return b
   },
   default: function() {
-    return B
+    return F
   }
 }), n("47120"), n("653041");
 var s = n("735250"),
@@ -36,8 +36,8 @@ var s = n("735250"),
   g = n("387204"),
   A = n("465670"),
   M = n("626135"),
-  R = n("585483"),
-  v = n("981631"),
+  v = n("585483"),
+  R = n("981631"),
   O = n("689938"),
   x = n("114267");
 
@@ -149,7 +149,7 @@ let j = d.default.connectStores([N.default], e => {
     channel: t
   } = e;
   return {
-    canManageMessages: null != t && N.default.can(v.Permissions.MANAGE_MESSAGES, t)
+    canManageMessages: null != t && N.default.can(R.Permissions.MANAGE_MESSAGES, t)
   }
 })(U);
 
@@ -169,7 +169,7 @@ function b(e) {
     listName: A
   } = e, L = a.useRef(null), P = (0, _.default)(A, L), y = (0, d.useStateFromStores)([S.default], () => S.default.hasNotice()), U = (0, d.useStateFromStores)([C.default], () => C.default.windowSize());
   a.useEffect(() => {
-    M.default.track(v.AnalyticEvents.OPEN_POPOUT, {
+    M.default.track(R.AnalyticEvents.OPEN_POPOUT, {
       type: t
     })
   }, [t]), a.useEffect(() => {
@@ -186,8 +186,8 @@ function b(e) {
         animate: !0
       })
     }
-    return R.ComponentDispatch.subscribe(v.ComponentActions.SCROLL_PAGE_DOWN, t), R.ComponentDispatch.subscribe(v.ComponentActions.SCROLL_PAGE_UP, e), () => {
-      R.ComponentDispatch.unsubscribe(v.ComponentActions.SCROLL_PAGE_DOWN, t), R.ComponentDispatch.unsubscribe(v.ComponentActions.SCROLL_PAGE_UP, e)
+    return v.ComponentDispatch.subscribe(R.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.subscribe(R.ComponentActions.SCROLL_PAGE_UP, e), () => {
+      v.ComponentDispatch.unsubscribe(R.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(R.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
   let j = a.useCallback(() => {
@@ -196,17 +196,17 @@ function b(e) {
       null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && l && !r && (null == f || f())
     }, [l, f, r]),
     b = [],
-    B = !0;
+    F = !0;
   null == n ? b = [(0, s.jsx)("div", {
     className: i()(x.emptyPlaceholder, x.loadingPlaceholder),
     children: (0, s.jsx)(c.Spinner, {})
   }, "spinner")] : 0 === n.length ? b.push((0, s.jsx)(a.Fragment, {
     children: m(I.default.theme)
-  }, "empty-state")) : (B = !1, b = [], o().each(n, e => {
+  }, "empty-state")) : (F = !1, b = [], o().each(n, e => {
     b.push(...T(e))
   }));
-  let F = null;
-  null != n && n.length > 0 && null != f && (F = r ? (0, s.jsx)("div", {
+  let B = null;
+  null != n && n.length > 0 && null != f && (B = r ? (0, s.jsx)("div", {
     className: x.loadingMore,
     children: (0, s.jsx)(c.Spinner, {})
   }, "loading-more-after") : l ? (0, s.jsx)("div", {
@@ -223,7 +223,7 @@ function b(e) {
     children: m(I.default.theme)
   }));
   let G = null == p ? void 0 : p(),
-    k = B && null != G ? (0, s.jsx)("div", {
+    k = F && null != G ? (0, s.jsx)("div", {
       className: x.footer,
       children: (0, s.jsx)(g.default, {
         style: {
@@ -266,13 +266,13 @@ function b(e) {
               })
             }
           })
-        }), F]
+        }), B]
       }), k]
     })
   })
 }
 
-function B(e) {
+function F(e) {
   let {
     analyticsName: t,
     onFetch: n,
@@ -290,7 +290,7 @@ function B(e) {
     scrollerClassName: g,
     className: A,
     onCloseMessage: M,
-    listName: R
+    listName: v
   } = e, L = (0, d.useStateFromStores)([h.default], () => {
     let e = null != l ? h.default.getMessages(l.id) : null;
     return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId)
@@ -312,7 +312,7 @@ function B(e) {
     });
     else if (!L) {
       let e = p.default.getChannel(i);
-      null != e && (E.default.trackJump(i, s, t), (0, T.transitionTo)(v.Routes.CHANNEL(e.getGuildId(), i, s))), null == c || c(n)
+      null != e && (E.default.trackJump(i, s, t), (0, T.transitionTo)(R.Routes.CHANNEL(e.getGuildId(), i, s))), null == c || c(n)
     }
   }
   a.useEffect(() => {
@@ -357,7 +357,7 @@ function B(e) {
         })]
       }, t.id)), a)
     },
-    listName: R,
+    listName: v,
     "aria-label": e["aria-label"]
   })
 }

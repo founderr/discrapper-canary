@@ -1,21 +1,21 @@
 "use strict";
-i.r(n), i.d(n, {
+t.r(n), t.d(n, {
   default: function() {
     return s
   }
 });
-var t = i("735250");
-i("470079");
-var a = i("937615"),
-  l = i("653798"),
-  r = i("689938");
+var a = t("735250");
+t("470079");
+var i = t("937615"),
+  l = t("653798"),
+  r = t("689938");
 
 function s(e) {
   let {
     invoice: n
   } = e;
-  return n.taxInclusive || n.tax <= 0 ? null : (0, t.jsx)(l.PremiumInvoiceTableRow, {
+  return n.taxInclusive || n.tax <= 0 ? null : (0, a.jsx)(l.PremiumInvoiceTableRow, {
     label: r.default.Messages.TAX_LABEL,
-    value: (0, a.formatPrice)(n.tax, n.currency)
+    value: (0, i.formatPrice)(n.tax, n.currency)
   })
 }

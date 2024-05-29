@@ -23,8 +23,8 @@ var s, a, l, i, r = n("735250"),
   g = n("482207"),
   A = n("702346"),
   M = n("267642"),
-  R = n("981631"),
-  v = n("689938"),
+  v = n("981631"),
+  R = n("689938"),
   O = n("603277");
 (l = s || (s = {})).ENTER = "enter", l.CONFETTI = "confetti", l.LEAF_PEEL = "leaf_peel", l.LEAF_FALL = "leaf_fall", l.EXIT = "exit";
 let x = {
@@ -116,8 +116,8 @@ let L = ["TOP_LEFT", "TOP_RIGHT"],
   U = "falling-leaf",
   j = ["#61D5B2"],
   b = n("303893"),
-  B = n("808392"),
-  F = [b, B];
+  F = n("808392"),
+  B = [b, F];
 
 function G() {
   return n.e("60005").then(n.t.bind(n, "931152", 19)).then(e => {
@@ -163,9 +163,9 @@ function k(e) {
       case "exit":
         return "enter"
     }
-  }(u, _), A = L.includes(_), M = A && "exit" === u, R = o.useCallback(e => {
+  }(u, _), A = L.includes(_), M = A && "exit" === u, v = o.useCallback(e => {
     E(e)
-  }, []), v = o.useCallback(() => {
+  }, []), R = o.useCallback(() => {
     "exit" === u && (null == t || t())
   }, [t, u]), P = o.useCallback(e => {
     i.current = e
@@ -249,13 +249,13 @@ function k(e) {
           }
         }
       }, {
-        sprite: "TOP_LEFT" === _ ? b : B
+        sprite: "TOP_LEFT" === _ ? b : F
       })
     }
   }, [A, C, _, u]), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(c.SpriteCanvas, {
       ref: N,
-      sprites: F,
+      sprites: B,
       colors: j,
       spriteWidth: 45,
       spriteHeight: 45
@@ -274,8 +274,8 @@ function k(e) {
         }),
         nextScene: g,
         sceneSegments: x,
-        onScenePlay: R,
-        onSceneComplete: v,
+        onScenePlay: v,
+        onSceneComplete: R,
         importData: G,
         pauseWhileUnfocused: !1
       })
@@ -293,12 +293,12 @@ function w(e) {
     } = e,
     u = function(e) {
       switch (e.type) {
-        case R.MessageTypes.GUILD_BOOST_TIER_1:
-          return R.BoostedGuildTiers.TIER_1;
-        case R.MessageTypes.GUILD_BOOST_TIER_2:
-          return R.BoostedGuildTiers.TIER_2;
-        case R.MessageTypes.GUILD_BOOST_TIER_3:
-          return R.BoostedGuildTiers.TIER_3
+        case v.MessageTypes.GUILD_BOOST_TIER_1:
+          return v.BoostedGuildTiers.TIER_1;
+        case v.MessageTypes.GUILD_BOOST_TIER_2:
+          return v.BoostedGuildTiers.TIER_2;
+        case v.MessageTypes.GUILD_BOOST_TIER_3:
+          return v.BoostedGuildTiers.TIER_3
       }
       return null
     }(n),
@@ -315,20 +315,20 @@ function w(e) {
     L = (0, p.getMessageAuthor)(n),
     D = L.nick,
     P = l(L);
-  t = null == u || null == a ? d > 1 ? v.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
+  t = null == u || null == a ? d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
     username: D,
     usernameHook: P,
     numSubscriptions: d
-  }) : v.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_HOOK.format({
+  }) : R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_HOOK.format({
     username: D,
     usernameHook: P
-  }) : d > 1 ? v.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_ACHIEVED_TIER_HOOK.format({
+  }) : d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_ACHIEVED_TIER_HOOK.format({
     username: D,
     usernameHook: P,
     numSubscriptions: d,
     guildName: a.name,
     newTierName: (0, M.getTierName)(u)
-  }) : v.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
+  }) : R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
     username: D,
     usernameHook: P,
     guildName: a.name,
@@ -349,13 +349,13 @@ function w(e) {
     b = o.useCallback(() => {
       (0, h.updatePoggermodeSettings)({
         settingsVisible: !0
-      }), T.default.open(R.UserSettingsSections.POGGERMODE), _(!1)
+      }), T.default.open(v.UserSettingsSections.POGGERMODE), _(!1)
     }, []),
-    B = o.useCallback((e, t) => {
+    F = o.useCallback((e, t) => {
       (null == t ? void 0 : t.id.startsWith(U)) && b()
     }, [b]);
-  o.useEffect(() => f(B));
-  let F = (0, r.jsx)(m.Clickable, {
+  o.useEffect(() => f(F));
+  let B = (0, r.jsx)(m.Clickable, {
     className: O.iconWrapper,
     innerRef: S,
     onClick: i,
@@ -365,7 +365,7 @@ function w(e) {
     })
   });
   return (0, r.jsxs)(A.default, {
-    iconNode: F,
+    iconNode: B,
     timestamp: n.timestamp,
     compact: s,
     children: [(0, r.jsx)("div", {

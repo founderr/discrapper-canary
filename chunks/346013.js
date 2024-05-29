@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("103575"),
   A = n("695346"),
   M = n("271383"),
-  R = n("594174"),
-  v = n("976644"),
+  v = n("594174"),
+  R = n("976644"),
   O = n("806361"),
   x = n("768581"),
   L = n("900849"),
@@ -38,8 +38,8 @@ var s = n("735250"),
   U = n("981631"),
   j = n("959517"),
   b = n("689938"),
-  B = n("902168"),
-  F = n("527455");
+  F = n("902168"),
+  B = n("527455");
 
 function G(e) {
   var t, n, l;
@@ -49,9 +49,9 @@ function G(e) {
     channel: k
   } = e, w = (0, y.useMediaPostEmbedData)(r, G), {
     setPopout: H
-  } = (0, S.default)(G.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(G, k, H, !0), Y = A.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, R.default], () => {
+  } = (0, S.default)(G.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(G, k, H, !0), Y = A.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, v.default], () => {
     var e;
-    return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+    return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [w]), J = (0, c.useStateFromStores)([M.default], () => (null == w ? void 0 : w.authorId) != null ? M.default.getMember(w.guildId, w.authorId) : null), [$, ee] = a.useMemo(() => {
     var e;
     return [null !== (e = null == J ? void 0 : J.colorString) && void 0 !== e ? e : "inherit", null == J ? void 0 : J.colorRoleId]
@@ -97,16 +97,16 @@ function G(e) {
     ef = w.coverImage,
     eE = null != ef && (0, h.isAnimatedImageUrl)(ef);
   return (0, s.jsxs)("div", {
-    className: B.postPreviewContainer,
+    className: F.postPreviewContainer,
     children: [(0, s.jsxs)("div", {
-      className: B.thumbnailContainer,
+      className: F.thumbnailContainer,
       onMouseEnter: ea,
       onMouseLeave: el,
       children: [!Q && (!0 === w.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
-        src: F,
+        src: B,
         alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
-        className: i()(B.thumbnail, {
-          [B.spoiler]: w.shouldSpoiler
+        className: i()(F.thumbnail, {
+          [F.spoiler]: w.shouldSpoiler
         }),
         onContextMenu: V,
         onError: () => q(!0)
@@ -115,18 +115,18 @@ function G(e) {
         backgroundSrc: "".concat(ef, "?format=png"),
         alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
-        className: i()(B.thumbnail, {
-          [B.spoiler]: w.shouldSpoiler
+        className: i()(F.thumbnail, {
+          [F.spoiler]: w.shouldSpoiler
         }),
-        imageChildClassName: B.thumbnailImage,
+        imageChildClassName: F.thumbnailImage,
         onContextMenu: V,
         onError: () => q(!0)
       })), null != w.coverImageOverlayText && (0, s.jsx)(f.Clickable, {
         onClick: ei,
         children: (0, s.jsx)("div", {
-          className: B.thumbnailOverlay,
+          className: F.thumbnailOverlay,
           children: (0, s.jsxs)("div", {
-            className: B.thumbnailOverlayCta,
+            className: F.thumbnailOverlayCta,
             children: [(0, s.jsx)(P.default, {
               color: d.default.WHITE
             }), (0, s.jsx)(f.Text, {
@@ -138,22 +138,22 @@ function G(e) {
         })
       })]
     }), (0, s.jsxs)("div", {
-      className: B.descriptionContainer,
+      className: F.descriptionContainer,
       children: [(0, s.jsxs)("div", {
-        className: B.descriptionHeader,
+        className: F.descriptionHeader,
         children: [(0, s.jsx)(f.Text, {
           variant: "text-md/semibold",
           color: "text-normal",
-          className: B.descriptionHeaderText,
+          className: F.descriptionHeaderText,
           children: w.title
         }), (0, s.jsx)(f.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: i()(B.descriptionHeaderText, B.descriptionSubtitle),
+          className: i()(F.descriptionHeaderText, F.descriptionSubtitle),
           children: w.subtitle
         })]
       }), (0, s.jsxs)("div", {
-        className: B.descriptionFooter,
+        className: F.descriptionFooter,
         children: [null != ed && (0, s.jsx)(f.Popout, {
           renderPopout: e => eo(e, [_.default.AVATAR]),
           position: "right",
@@ -171,14 +171,14 @@ function G(e) {
             })
           })
         }), (0, s.jsxs)("div", {
-          className: B.descriptionFooterContainer,
+          className: F.descriptionFooterContainer,
           children: [(0, s.jsxs)("div", {
-            className: B.descriptionFooterChannelName,
+            className: F.descriptionFooterChannelName,
             children: [null != w.channelName && (0, s.jsx)(O.default, {
-              className: B.mediaChannelIcon
+              className: F.mediaChannelIcon
             }), (0, s.jsx)(f.Clickable, {
               onClick: ei,
-              className: B.channelName,
+              className: F.channelName,
               children: (0, s.jsx)(f.Heading, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
@@ -188,7 +188,7 @@ function G(e) {
           }), null != w.authorName && (0, s.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
-            className: B.descriptionFooterAuthorContainer,
+            className: F.descriptionFooterAuthorContainer,
             children: b.default.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
               authorName: w.authorName,
               authorNameHook: () => (0, s.jsx)(f.Popout, {
@@ -199,7 +199,7 @@ function G(e) {
                   ...e,
                   name: w.authorName,
                   color: $,
-                  className: B.authorName
+                  className: F.authorName
                 })
               }, (0, u.v4)())
             })
@@ -212,10 +212,10 @@ function G(e) {
             color: "always-white",
             children: w.ctaText
           })
-        }) : (0, s.jsx)(v.default, {
+        }) : (0, s.jsx)(R.default, {
           pauseAnimation: X,
           onClick: ei,
-          className: i()(B.__invalid_ctaButtonContent, B.subscribeButton),
+          className: i()(F.__invalid_ctaButtonContent, F.subscribeButton),
           color: f.Button.Colors.CUSTOM,
           children: (0, s.jsx)(f.Text, {
             variant: "text-sm/medium",

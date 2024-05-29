@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("38267"),
   A = n("103575"),
   M = n("496675"),
-  R = n("594174"),
-  v = n("467679"),
+  v = n("594174"),
+  R = n("467679"),
   O = n("263704"),
   x = n("795295"),
   L = n("288176"),
@@ -38,8 +38,8 @@ var s = n("735250"),
   U = n("778947"),
   j = n("702346"),
   b = n("5192"),
-  B = n("51144"),
-  F = n("787374"),
+  F = n("51144"),
+  B = n("787374"),
   G = n("981631"),
   k = n("674563"),
   w = n("590433"),
@@ -143,13 +143,13 @@ function X(e) {
   let {
     alertAction: t,
     guildId: n
-  } = e, a = (0, c.useStateFromStores)([R.default], () => R.default.getUser(t.actor), [t.actor]);
+  } = e, a = (0, c.useStateFromStores)([v.default], () => v.default.getUser(t.actor), [t.actor]);
   try {
     let e = parseInt(t.actionType);
     if (null == a) return q(e, {});
     let l = function(e, t, n) {
       var s;
-      let a = null !== (s = b.default.getNickname(n, null, t)) && void 0 !== s ? s : B.default.getUserTag(t),
+      let a = null !== (s = b.default.getNickname(n, null, t)) && void 0 !== s ? s : F.default.getUserTag(t),
         l = o()(e.ts),
         i = "".concat(a, " ").concat(l.fromNow());
       try {
@@ -217,7 +217,7 @@ let J = a.memo(function(e) {
       compact: i,
       ...o
     }, u),
-    E = R.default.getUser(r),
+    E = v.default.getUser(r),
     _ = K(n, a),
     T = W(a, E);
   if (null != E) {
@@ -260,16 +260,16 @@ function $(e) {
       onMouseEnter: N,
       onMouseLeave: S
     }
-  } = (0, F.useAutomodAvatar)(!0), {
+  } = (0, B.useAutomodAvatar)(!0), {
     onFocus: g,
     ...A
   } = (0, u.useListItem)(null != t ? t : ""), {
-    isFocused: R,
+    isFocused: v,
     handleFocus: O,
     handleBlur: x
   } = (0, C.useFocusInside)(g), D = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), P = (0, c.useStateFromStores)([M.default], () => M.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: b,
-    embedChannel: B,
+    embedChannel: F,
     decisionId: H,
     keywordMatchedContent: W,
     keyword: q,
@@ -286,8 +286,8 @@ function $(e) {
   } = K(l, r), eo = a.useCallback(() => {
     (0, T.openSubmitFeedback)(l.id, X, H, r)
   }, [l.id, X, H, r]), eu = a.useCallback(e => {
-    null != $ && null != B && (e.stopPropagation(), e.preventDefault(), (0, p.default)(G.Routes.CHANNEL(null == B ? void 0 : B.guild_id, null == B ? void 0 : B.id, $)))
-  }, [B, $]), ed = a.useCallback(() => {
+    null != $ && null != F && (e.stopPropagation(), e.preventDefault(), (0, p.default)(G.Routes.CHANNEL(null == F ? void 0 : F.guild_id, null == F ? void 0 : F.id, $)))
+  }, [F, $]), ed = a.useCallback(() => {
     (0, I.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
   }, [r, l.id]), ec = (0, w.getFriendlyDurationString)(Number(ee)), ef = null != et, eE = P && null != $ && (null == en || !en.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
@@ -297,7 +297,7 @@ function $(e) {
       className: i()(Y.mainContainer, {
         [Y.compact]: n
       }),
-      iconNode: n ? null : (0, s.jsx)(F.AutomodAvatar, {
+      iconNode: n ? null : (0, s.jsx)(B.AutomodAvatar, {
         src: o
       }),
       iconContainerClassName: Y.iconContainer,
@@ -320,13 +320,13 @@ function $(e) {
               tag: "span",
               className: Y.username,
               children: V.default.Messages.GUILD_AUTOMOD_USERNAME
-            }), (0, s.jsx)(v.default, {
+            }), (0, s.jsx)(R.default, {
               type: k.BotTagTypes.SYSTEM_DM,
               className: Y.systemTag
             }), (0, s.jsx)(J, {
               message: l,
               channel: r,
-              embedChannel: B,
+              embedChannel: F,
               compact: n,
               interactionUserId: ea
             })]
@@ -340,15 +340,15 @@ function $(e) {
           children: (0, s.jsx)(y.default, {
             ...A,
             message: l,
-            channel: B,
+            channel: F,
             content: el,
             compact: n,
             withFooter: !0,
             hideTimestamp: !0,
             className: i()(Y.embedCard, {
               [Y.compact]: n,
-              [Y.selected]: ei || D && R,
-              [Y.isClickable]: null != $ && null != B
+              [Y.selected]: ei || D && v,
+              [Y.isClickable]: null != $ && null != F
             }),
             childrenAccessories: (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsxs)("div", {

@@ -1,28 +1,28 @@
 "use strict";
 a.r(t), a.d(t, {
   createClient: function() {
-    return S
+    return E
   },
   reopenCashAppPayWindow: function() {
-    return E
+    return m
   }
 }), a("411104");
 var n = a("175145"),
-  r = a("544891"),
-  s = a("570140"),
-  l = a("355467"),
+  s = a("544891"),
+  l = a("570140"),
+  r = a("355467"),
   o = a("987032"),
   i = a("559407"),
   u = a("122289"),
   c = a("439041"),
   d = a("981631");
 async function p() {
-  return await r.HTTP.get({
+  return await s.HTTP.get({
     url: d.Endpoints.BILLING_ADYEN_PAYMENT_METHODS,
     oldFormErrors: !0
   })
 }
-async function S() {
+async function E() {
   try {
     let {
       enabledPaymentTypes: e
@@ -41,7 +41,7 @@ async function S() {
         },
         paymentMethodsResponse: t.body
       });
-    s.default.dispatch({
+    l.default.dispatch({
         type: "ADYEN_CREATE_CLIENT_SUCCESS",
         client: a
       }),
@@ -68,32 +68,32 @@ async function S() {
               data: t,
               isValid: a
             } = e;
-            if (a) s.default.dispatch({
+            if (a) l.default.dispatch({
               type: "ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS",
               data: t
             });
-            else throw (0, l.dispatchConfirmationError)("Cash App Pay setup attempt is not valid.")
+            else throw (0, r.dispatchConfirmationError)("Cash App Pay setup attempt is not valid.")
           },
           onError: e => {
             if ("CANCEL" !== e.name) {
               let t = "Payment declined by CashAppPay" !== e.message;
-              throw (0, l.dispatchConfirmationError)(e.message, t)
+              throw (0, r.dispatchConfirmationError)(e.message, t)
             }
           }
         }).mount("#".concat(i.CASH_APP_PAY_CONTAINER));
-        s.default.dispatch({
+        l.default.dispatch({
           type: "ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS",
           component: t
         })
       }(a)
   } catch (e) {
-    (0, u.captureBillingException)(e), s.default.dispatch({
+    (0, u.captureBillingException)(e), l.default.dispatch({
       type: "ADYEN_CREATE_CLIENT_FAIL"
     })
   }
 }
 
-function E() {
+function m() {
   let e = c.default.cashAppPayComponent;
   if (null == e) throw Error("Adyen CashAppPay component must be created before submitting.");
   e.submit()

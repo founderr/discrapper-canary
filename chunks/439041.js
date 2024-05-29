@@ -1,10 +1,10 @@
 "use strict";
 a.r(t);
-var n, r, s, l, o = a("442837"),
+var n, s, l, r, o = a("442837"),
   i = a("570140");
 let u = null,
   c = null;
-class d extends(l = o.default.Store) {
+class d extends(r = o.default.Store) {
   get client() {
     return u
   }
@@ -12,12 +12,12 @@ class d extends(l = o.default.Store) {
     return c
   }
 }
-s = "AdyenStore", (r = "displayName") in(n = d) ? Object.defineProperty(n, r, {
-  value: s,
+l = "AdyenStore", (s = "displayName") in(n = d) ? Object.defineProperty(n, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[r] = s;
+}) : n[s] = l;
 let p = new d(i.default, {
   ADYEN_CREATE_CLIENT_SUCCESS: function(e) {
     let {

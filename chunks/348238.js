@@ -10,19 +10,19 @@ n.r(t), n.d(t, {
     return O
   },
   useClickMessage: function() {
-    return B
+    return F
   },
   useClickMessageAuthorAvatar: function() {
     return L
   },
   useClickMessageAuthorUsername: function() {
-    return R
+    return v
   },
   useClickReferencedMessageAuthorAvatar: function() {
     return D
   },
   useClickReferencedMessageAuthorUsername: function() {
-    return v
+    return R
   },
   useClickReply: function() {
     return k
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return G
   },
   useHoveredMessage: function() {
-    return F
+    return B
   }
 }), n("789020"), n("47120");
 var s = n("735250"),
@@ -95,12 +95,12 @@ function M(e, t, n) {
   }, [e, t, n])
 }
 
-function R(e, t, n, s) {
+function v(e, t, n, s) {
   let a = A("usernameProfile", n, s);
   return M(e.author.id, t.id, a)
 }
 
-function v(e, t, n, s) {
+function R(e, t, n, s) {
   let a = A("referencedUsernameProfile", n, s);
   return M(null == e ? void 0 : e.author.id, t.id, a)
 }
@@ -208,7 +208,7 @@ function b(e, t) {
   }, [e, t])
 }
 
-function B(e, t) {
+function F(e, t) {
   let {
     id: n
   } = e, {
@@ -219,7 +219,7 @@ function B(e, t) {
   }, [s, n])
 }
 
-function F(e, t, n) {
+function B(e, t, n) {
   let s = "".concat(e, ":").concat(t),
     l = a.useRef(n),
     [i, r] = a.useState(n);

@@ -17,8 +17,8 @@ var s = n("278074"),
   m = n("731896"),
   f = n("680295"),
   p = n("998502"),
-  _ = n("987209"),
-  S = n("689938"),
+  S = n("987209"),
+  _ = n("689938"),
   I = n("170189"),
   P = n("241822");
 let E = p.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
@@ -42,7 +42,7 @@ function T(e) {
       src: l,
       className: I.avatar,
       size: a.AvatarSizes.SIZE_152,
-      "aria-label": S.default.Messages.USER_SETTINGS_AVATAR
+      "aria-label": _.default.Messages.USER_SETTINGS_AVATAR
     })
   })
 }
@@ -69,7 +69,7 @@ function v(e) {
     sku: t
   } = e, {
     selectedGiftStyle: n
-  } = (0, _.useGiftContext)(), {
+  } = (0, S.useGiftContext)(), {
     product: a
   } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), r = null == a ? void 0 : a.items[0], u = (0, s.match)(r).with({
     type: l.CollectiblesItemType.AVATAR_DECORATION

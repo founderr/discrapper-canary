@@ -32,8 +32,8 @@ function A(e) {
     onClose: n,
     children: A,
     badgeState: M,
-    popoutPosition: R,
-    popoutAlign: v
+    popoutPosition: v,
+    popoutAlign: R
   } = e, {
     analyticsLocations: O
   } = (0, d.default)(u.default.NOTIFICATION_CENTER), [x, L] = a.useState(!1), [D, P] = function() {
@@ -68,12 +68,12 @@ function A(e) {
     L(!1), x && (null == n || n())
   }, [n, x]), b = a.useCallback(() => {
     L(!x), x ? null == n || n() : null == t || t()
-  }, [n, t, x]), B = a.useCallback(() => {
+  }, [n, t, x]), F = a.useCallback(() => {
     b(), P(r.InboxTab.UNREADS)
   }, [P, b]);
-  a.useEffect(() => (T.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
+  a.useEffect(() => (T.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F), () => void T.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F)), [F]);
   let {
-    showReminders: F
+    showReminders: B
   } = f.default.useExperiment({
     location: "RecentsPopout"
   }, {
@@ -84,7 +84,7 @@ function A(e) {
     location: "RecentsPopout"
   });
   a.useEffect(() => {
-    !F && D === r.InboxTab.TODOS && P(r.InboxTab.MENTIONS)
+    !B && D === r.InboxTab.TODOS && P(r.InboxTab.MENTIONS)
   });
   let w = a.useCallback(e => {
     !e.shiftKey && j()
@@ -93,8 +93,8 @@ function A(e) {
     value: O,
     children: (0, s.jsx)(o.Popout, {
       animation: o.Popout.Animation.NONE,
-      position: R,
-      align: v,
+      position: v,
+      align: R,
       autoInvert: !1,
       shouldShow: x,
       onRequestClose: j,
@@ -114,7 +114,7 @@ function A(e) {
             setTab: P,
             badgeState: M,
             closePopout: j
-          }) : F && D === r.InboxTab.TODOS ? (0, s.jsx)(p.default, {
+          }) : B && D === r.InboxTab.TODOS ? (0, s.jsx)(p.default, {
             setTab: P,
             onJump: w,
             closePopout: j

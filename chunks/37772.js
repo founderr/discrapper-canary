@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("901461"),
   A = n("739566"),
   M = n("443877"),
-  R = n("938353"),
-  v = n("25015"),
+  v = n("938353"),
+  R = n("25015"),
   O = n("689674"),
   x = n("963550"),
   L = n("845080"),
@@ -34,9 +34,9 @@ var s = n("735250"),
   U = n("981631"),
   j = n("689938"),
   b = n("268283"),
-  B = n("373947");
+  F = n("373947");
 
-function F(e) {
+function B(e) {
   let {
     className: t,
     count: n,
@@ -80,7 +80,7 @@ t.default = a.memo(function e(t) {
   } = (0, M.default)(l), {
     content: ee,
     hasSpoilerEmbeds: et
-  } = (0, v.default)(I, {
+  } = (0, R.default)(I, {
     hideSimpleEmbedContent: Q && q,
     allowList: Z,
     allowHeading: Z,
@@ -96,7 +96,7 @@ t.default = a.memo(function e(t) {
     message: K.message,
     channel: W,
     hasThread: !1
-  }) : (T.default.isBlocked(I.author.id) ? a = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(F, {
+  }) : (T.default.isBlocked(I.author.id) ? a = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(B, {
     className: b,
     compact: h,
     count: 1,
@@ -104,9 +104,9 @@ t.default = a.memo(function e(t) {
   }) : (0, s.jsx)(p.default, {
     compact: h,
     className: i()(b, {
-      [B.ephemeral]: (0, N.hasFlag)(I.flags, U.MessageFlags.EPHEMERAL),
-      [B.disableInteraction]: w,
-      [B.groupStart]: t.isGroupStart
+      [F.ephemeral]: (0, N.hasFlag)(I.flags, U.MessageFlags.EPHEMERAL),
+      [F.disableInteraction]: w,
+      [F.groupStart]: t.isGroupStart
     }),
     childrenRepliedMessage: (0, y.default)(I, l, Y, K, h),
     childrenHeader: (0, L.default)({
@@ -114,7 +114,7 @@ t.default = a.memo(function e(t) {
       author: en,
       guildId: l.guild_id
     }),
-    childrenAccessories: (0, s.jsx)(R.MessageAccessories, {
+    childrenAccessories: (0, s.jsx)(v.MessageAccessories, {
       channel: l,
       message: I,
       hasSpoilerEmbeds: et,

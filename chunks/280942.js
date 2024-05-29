@@ -60,7 +60,7 @@ function c(e) {
         (0, l.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([s.e("49237"), s.e("99387"), s.e("62511"), s.e("8016"), s.e("22646"), s.e("68451")]).then(s.bind(s, "760558"));
+          } = await Promise.all([s.e("49237"), s.e("99387"), s.e("54167"), s.e("8016"), s.e("22646"), s.e("30419")]).then(s.bind(s, "760558"));
           return s => (0, a.jsx)(e, {
             ...s,
             guildBoostSlots: [t],

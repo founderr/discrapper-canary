@@ -31,7 +31,7 @@ function A(e) {
   let {
     code: A,
     message: M
-  } = e, [R, v, O] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getApplication(A), p.default.isInvalidApplication(A), p.default.getApplicationFetchState(A)], [A]), x = (0, i.useStateFromStores)([u.default], () => u.default.locale), L = (0, i.useStateFromStores)([c.default], () => {
+  } = e, [v, R, O] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getApplication(A), p.default.isInvalidApplication(A), p.default.getApplicationFetchState(A)], [A]), x = (0, i.useStateFromStores)([u.default], () => u.default.locale), L = (0, i.useStateFromStores)([c.default], () => {
     var e;
     return null !== (e = c.default.getGuildId()) && void 0 !== e ? e : void 0
   }), D = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), [P, y] = a.useState(!1), U = a.useCallback(e => {
@@ -48,13 +48,13 @@ function A(e) {
       channel_id: M.channel_id
     })
   }, [P, A, null == D ? void 0 : D.id, M.channel_id, L, M.author.id, O]), a.useEffect(() => {
-    P && v && m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+    P && R && m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: L,
       channel_id: M.channel_id
     })
-  }, [P, L, v, M.author.id, M.channel_id]);
+  }, [P, L, R, M.author.id, M.channel_id]);
   let b = e => {
     m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
       application_id: A,
@@ -71,7 +71,7 @@ function A(e) {
       }
     })
   };
-  if (v) return (0, s.jsxs)(E.default, {
+  if (R) return (0, s.jsxs)(E.default, {
     containerRef: j,
     children: [(0, s.jsx)(E.default.Header, {
       text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
@@ -88,7 +88,7 @@ function A(e) {
       })
     })]
   });
-  if (null == R || O === p.FetchState.FETCHING) return (0, s.jsxs)(E.default, {
+  if (null == v || O === p.FetchState.FETCHING) return (0, s.jsxs)(E.default, {
     containerRef: j,
     children: [(0, s.jsx)(E.default.Header, {
       text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
@@ -96,10 +96,10 @@ function A(e) {
       resolving: !0
     })]
   });
-  let B = new Intl.NumberFormat(x, {
+  let F = new Intl.NumberFormat(x, {
     notation: "compact",
     compactDisplay: "short"
-  }).format(null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
+  }).format(null !== (n = null === (t = v.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
   return (0, s.jsxs)(E.default, {
     containerRef: j,
     children: [(0, s.jsx)(E.default.Header, {
@@ -108,13 +108,13 @@ function A(e) {
       children: [(0, s.jsxs)("div", {
         className: g.applicationInfoContainer,
         children: [(0, s.jsx)(E.default.Icon, {
-          application: d.default.createFromServer(R),
+          application: d.default.createFromServer(v),
           className: g.applicationIcon,
           onClick: () => b("application_icon")
         }), (0, s.jsx)(E.default.Info, {
           title: (0, s.jsx)(r.Clickable, {
             onClick: () => b("application_name"),
-            children: R.name
+            children: v.name
           }),
           children: (0, s.jsxs)(r.Clickable, {
             className: g.guildCountContainer,
@@ -124,17 +124,17 @@ function A(e) {
               height: 16,
               className: g.guildCountIcon
             }), C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({
-              guildCount: B
+              guildCount: F
             })]
           })
         })]
       }), (0, s.jsx)(E.default.Button, {
         onClick: () => {
-          null != R && (0, T.installApplication)({
+          null != v && (0, T.installApplication)({
             applicationId: A,
-            customInstallUrl: R.custom_install_url,
-            installParams: R.install_params,
-            integrationTypesConfig: R.integration_types_config,
+            customInstallUrl: v.custom_install_url,
+            installParams: v.install_params,
+            integrationTypesConfig: v.integration_types_config,
             guildId: L,
             source: "app_directory_profile_embed"
           })

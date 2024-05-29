@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return R
   }
 });
 var s = n("735250"),
@@ -27,13 +27,13 @@ var s = n("735250"),
   g = n("358595"),
   A = n("563917"),
   M = n("135845"),
-  R = n("981631");
+  v = n("981631");
 
-function v(e) {
+function R(e) {
   let {
     code: t,
     author: n,
-    getAcceptInviteContext: v
+    getAcceptInviteContext: R
   } = e, {
     invite: O,
     inviteError: x
@@ -45,7 +45,7 @@ function v(e) {
     null == O && i.default.resolveInvite(t)
   }, [t]);
   let L = null != O ? O : {
-      state: R.InviteStates.RESOLVING,
+      state: v.InviteStates.RESOLVING,
       code: ""
     },
     {
@@ -63,19 +63,19 @@ function v(e) {
     b = () => {
       (0, f.isAtGuildCapAndNonPremium)() ? (0, E.default)({
         analyticsSource: {
-          page: R.AnalyticsPages.INVITE_EMBED
+          page: v.AnalyticsPages.INVITE_EMBED
         },
         analyticsLocation: {
-          page: R.AnalyticsPages.INVITE_EMBED,
-          section: R.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+          page: v.AnalyticsPages.INVITE_EMBED,
+          section: v.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
         },
         analyticsLocations: D
       }) : i.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: t,
-        context: v("Invite Button Embed")
+        context: R("Invite Button Embed")
       })
     },
-    B = (0, s.jsx)(S.default, {
+    F = (0, s.jsx)(S.default, {
       onTransitionToInviteChannel: j,
       onAcceptInstantInvite: b,
       currentUserId: y,
@@ -84,18 +84,18 @@ function v(e) {
       author: n
     });
   switch (L.state) {
-    case R.InviteStates.RESOLVING:
-      B = (0, s.jsx)(g.default, {});
+    case v.InviteStates.RESOLVING:
+      F = (0, s.jsx)(g.default, {});
       break;
-    case R.InviteStates.EXPIRED:
-    case R.InviteStates.BANNED:
-      B = (0, s.jsx)(C.default, {
-        banned: L.state === R.InviteStates.BANNED,
+    case v.InviteStates.EXPIRED:
+    case v.InviteStates.BANNED:
+      F = (0, s.jsx)(C.default, {
+        banned: L.state === v.InviteStates.BANNED,
         author: n
       });
       break;
-    case R.InviteStates.ERROR:
-      B = (0, s.jsx)(p.default, {
+    case v.InviteStates.ERROR:
+      F = (0, s.jsx)(p.default, {
         author: n,
         inviteError: x
       });
@@ -103,7 +103,7 @@ function v(e) {
     default:
       switch ((0, c.getInviteType)(L)) {
         case c.InviteTypes.GROUP_DM:
-          B = (0, s.jsx)(N.default, {
+          F = (0, s.jsx)(N.default, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: b,
             currentUserId: y,
@@ -112,15 +112,15 @@ function v(e) {
           });
           break;
         case c.InviteTypes.FRIEND:
-          B = (0, s.jsx)(h.default, {
+          F = (0, s.jsx)(h.default, {
             invite: L,
             author: n,
-            getAcceptInviteContext: v
+            getAcceptInviteContext: R
           });
           break;
         default:
           if ((0, c.isStreamInvite)(L)) {
-            B = (0, s.jsx)(M.default, {
+            F = (0, s.jsx)(M.default, {
               onTransitionToInviteChannel: j,
               onAcceptInstantInvite: b,
               currentUserId: y,
@@ -130,7 +130,7 @@ function v(e) {
             break
           }
           if ((0, c.isGuildScheduledEventInviteEmbed)(L)) {
-            B = (0, s.jsx)(d.default, {
+            F = (0, s.jsx)(d.default, {
               guildScheduledEvent: U,
               guild: L.guild,
               channel: L.channel,
@@ -141,7 +141,7 @@ function v(e) {
             break
           }
           if ((0, c.isStageInviteEmbed)(L)) {
-            B = (0, s.jsx)(A.default, {
+            F = (0, s.jsx)(A.default, {
               stageInstance: L.stage_instance,
               guild: L.guild,
               isMember: null != P,
@@ -149,14 +149,14 @@ function v(e) {
               onAcceptInstantInvite: b
             });
             break
-          }(0, c.isEmbeddedApplicationInvite)(L) && (B = (0, s.jsx)(I.default, {
+          }(0, c.isEmbeddedApplicationInvite)(L) && (F = (0, s.jsx)(I.default, {
             invite: L,
-            getAcceptInviteContext: v
+            getAcceptInviteContext: R
           }))
       }
   }
   return (0, s.jsx)(r.default, {
-    section: R.AnalyticsSections.INVITE_LINK,
-    children: B
+    section: v.AnalyticsSections.INVITE_LINK,
+    children: F
   })
 }
