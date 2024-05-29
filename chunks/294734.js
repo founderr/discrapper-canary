@@ -61,7 +61,6 @@ function g(e) {
       color: "none",
       children: "".concat(r.originLabel, "  •  ").concat(r.timestampLabel)
     }), (0, s.jsx)(u.ChevronSmallRightIcon, {
-      className: S.footerArrow,
       width: 12,
       height: 12,
       color: o.default.colors.TEXT_LOW_CONTRAST
@@ -82,7 +81,7 @@ function A(e) {
     embeds: l.message.embeds,
     flags: l.message.flags,
     components: l.message.components,
-    editedTimestamp: l.message.editedTimestamp,
+    editedTimestamp: null,
     timestamp: l.message.timestamp,
     reactions: [],
     messageSnapshots: []
