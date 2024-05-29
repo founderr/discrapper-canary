@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return D
   }
 }), n("47120");
 var i = n("735250"),
@@ -15,126 +15,132 @@ var i = n("735250"),
   _ = n("271383"),
   c = n("430824"),
   E = n("594174"),
-  I = n("785717"),
-  T = n("318661"),
-  f = n("502762"),
-  S = n("544989"),
-  h = n("301984"),
-  A = n("94918"),
-  m = n("664794"),
-  N = n("171368"),
-  p = n("958120"),
-  O = n("215633"),
-  C = n("23293"),
-  R = n("228168"),
-  g = n("689938");
+  I = n("877485"),
+  T = n("785717"),
+  f = n("318661"),
+  S = n("502762"),
+  h = n("544989"),
+  A = n("301984"),
+  m = n("94918"),
+  N = n("664794"),
+  p = n("171368"),
+  O = n("958120"),
+  C = n("215633"),
+  R = n("23293"),
+  g = n("228168"),
+  L = n("689938");
 
-function L(e) {
+function v(e) {
   e.stopPropagation()
 }
 
-function v(e) {
+function D(e) {
   let {
     user: t,
     guildId: n,
-    channelId: v,
-    messageId: D,
-    roleId: M,
-    closePopout: y,
-    setPopoutRef: P,
-    disableUserProfileLink: U = __OVERLAY__,
-    newAnalyticsLocations: b = []
+    channelId: D,
+    messageId: M,
+    roleId: y,
+    closePopout: P,
+    setPopoutRef: U,
+    disableUserProfileLink: b = __OVERLAY__,
+    newAnalyticsLocations: G = []
   } = e, {
-    analyticsLocations: G
-  } = (0, u.default)([...b, l.default.BITE_SIZE_PROFILE_POPOUT]), w = (0, I.useTrackUserProfileAction)({
+    originalFriendingEnabled: w
+  } = (0, I.useSimplifiedProfileFriendingExperiment)({
+    location: "BiteSizeProfilePopout"
+  }), {
+    analyticsLocations: k
+  } = (0, u.default)([...G, l.default.BITE_SIZE_PROFILE_POPOUT]), B = (0, T.useTrackUserProfileAction)({
     layout: "BITE_SIZE_POPOUT",
     userId: t.id,
     guildId: n,
-    channelId: v,
-    messageId: D,
-    roleId: M
-  }), k = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), V = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), x = r.useRef(null), F = (0, T.default)(t.id, n), H = (0, o.default)(x);
+    channelId: D,
+    messageId: M,
+    roleId: y
+  }), V = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), x = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), F = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), H = r.useRef(null), Y = (0, f.default)(t.id, n), j = (0, o.default)(H);
   r.useEffect(() => {
-    null == P || P(null == x ? void 0 : x.current)
-  }, [x, P]);
-  let Y = e => {
-    null == y || y(), (0, N.openUserProfileModal)({
-      sourceAnalyticsLocations: G,
+    null == U || U(null == H ? void 0 : H.current)
+  }, [H, U]);
+  let W = e => {
+    null == P || P(), (0, p.openUserProfileModal)({
+      sourceAnalyticsLocations: k,
       userId: t.id,
       guildId: n,
-      channelId: v,
-      messageId: D,
-      roleId: M,
+      channelId: D,
+      messageId: M,
+      roleId: y,
       ...e
     })
   };
-  return null == k ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
-    value: G,
-    children: (0, i.jsx)(I.UserProfileAnalyticsProvider, {
+  return null == V ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
+    value: k,
+    children: (0, i.jsx)(T.UserProfileAnalyticsProvider, {
       layout: "BITE_SIZE_POPOUT",
       userId: t.id,
       guildId: n,
-      channelId: v,
-      messageId: D,
-      roleId: M,
-      shouldTrackViewOnMount: null == V || null != V.fullProfileLoadedTimestamp,
+      channelId: D,
+      messageId: M,
+      roleId: y,
+      shouldTrackViewOnMount: null == F || null != F.fullProfileLoadedTimestamp,
       children: (0, i.jsxs)(a.Dialog, {
-        ref: x,
+        ref: H,
         "aria-label": t.username,
-        onClick: L,
-        onContextMenu: L,
-        children: [(0, i.jsxs)(f.default, {
+        onClick: v,
+        onContextMenu: v,
+        children: [(0, i.jsxs)(S.default, {
           user: t,
-          displayProfile: F,
-          profileType: R.UserProfileTypes.BITE_SIZE,
-          children: [(0, i.jsxs)(S.default, {
-            profileType: R.UserProfileTypes.BITE_SIZE,
-            children: [(0, i.jsx)(A.default, {
+          displayProfile: Y,
+          profileType: g.UserProfileTypes.BITE_SIZE,
+          children: [(0, i.jsxs)(h.default, {
+            profileType: g.UserProfileTypes.BITE_SIZE,
+            children: [(0, i.jsx)(m.default, {
               user: t,
               guildId: n,
-              channelId: v,
-              onClose: y
-            }), (0, i.jsx)(h.default, {
-              user: t
-            }), (0, i.jsx)(m.default, {
+              channelId: D,
+              onClose: P
+            }), (0, i.jsx)(A.default, {
               user: t,
-              profileType: R.UserProfileTypes.BITE_SIZE,
+              acceptFriendRequestColor: w ? a.tokens.colors.BUTTON_OUTLINE_POSITIVE_BORDER : null
+            }), (0, i.jsx)(N.default, {
+              user: t,
+              profileType: g.UserProfileTypes.BITE_SIZE,
               guildId: n,
               viewProfileItem: (0, i.jsx)(a.MenuItem, {
                 id: "view-profile",
-                label: g.default.Messages.VIEW_FULL_PROFILE,
+                label: L.default.Messages.VIEW_FULL_PROFILE,
                 action: () => {
-                  w({
+                  B({
                     action: "PRESS_VIEW_PROFILE",
-                    analyticsLocations: G
-                  }), Y()
+                    analyticsLocations: k
+                  }), W()
                 }
               })
             })]
-          }), (0, i.jsx)(C.default, {
+          }), (0, i.jsx)(R.default, {
             user: t,
-            displayProfile: F,
+            displayProfile: Y,
             guildId: n,
-            channelId: v,
-            onOpenProfile: U ? void 0 : Y
-          }), (0, i.jsx)(p.default, {
-            user: t,
-            currentUser: k,
-            displayProfile: F,
-            guild: B,
-            isHovering: H,
-            onOpenProfile: Y,
-            channelId: v,
-            onClose: y
+            channelId: D,
+            onOpenProfile: b ? void 0 : W
           }), (0, i.jsx)(O.default, {
             user: t,
+            currentUser: V,
+            displayProfile: Y,
+            guild: x,
+            isHovering: j,
+            onOpenProfile: W,
+            channelId: D,
+            onClose: P
+          }), (0, i.jsx)(C.default, {
+            user: t,
             guildId: n,
-            channelId: v,
-            onClose: y
+            channelId: D,
+            onClose: P
           })]
-        }), (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(d.default, {
-          profileEffectId: null == F ? void 0 : F.profileEffectId,
-          isHovering: H
+        }), (null == Y ? void 0 : Y.profileEffectId) != null && (0, i.jsx)(d.default, {
+          profileEffectId: null == Y ? void 0 : Y.profileEffectId,
+          isHovering: j
         })]
       })
     })
