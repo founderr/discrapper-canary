@@ -59,7 +59,7 @@ function N(e) {
   i.useEffect(() => {
     if (null != N && !!(0, I.isLoadedSearchResult)(N))(!(null != O && (0, I.isLoadedSearchResult)(O)) || !(O.loadedAt >= N.loadedAt)) && (0, C.trackClanDiscoveryViewed)(N.items.map(e => e.id), "top_picks", v)
   }, [v, N, O, j, n]), i.useEffect(() => {
-    !n && (0, I.isLoadedSearchResult)(N) && j()
+    !n && (0, I.isLoadedSearchResult)(N) && setTimeout(() => j())
   }, [j, n, N]);
   let w = i.useMemo(() => null == s ? [] : [{
       section: "top_picks",
