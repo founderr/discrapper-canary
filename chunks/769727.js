@@ -31,7 +31,7 @@ let T = {
         opacity: 0
       },
       to: {
-        opacity: 1
+        opacity: a === S.ClanDiscoveryMode.GET_STARTED ? 0 : 1
       },
       config: T,
       delay: 500,
