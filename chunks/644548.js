@@ -36,35 +36,30 @@ t.default = e => {
     closePopout: r
   } = e, {
     iconUrl: g,
-    iconTitle: S,
-    user: _,
-    details: T,
-    gameTitle: I
+    user: S
   } = (0, m.useGamingContentData)(n), {
-    primaryColor: A,
-    secondaryColor: v
-  } = (0, d.default)(g), N = (0, o.getEntryDuration)(n), x = (0, o.getAggregateRange)(n), M = l.useCallback(e => {
-    if (null != _ && null != N && null != x && (0, c.isAllowedRange)(x)) return (0, u.generateGamingContentImage)({
+    primaryColor: _,
+    secondaryColor: T
+  } = (0, d.default)(g), I = (0, o.getEntryDuration)(n), A = (0, o.getAggregateRange)(n), v = l.useCallback(e => {
+    if (null != S && null != I && null != A && (0, c.isAllowedRange)(A)) return (0, u.generateGamingContentImage)({
       entry: n,
       applicationImageSrc: g,
-      avatarSrcs: [_.getAvatarURL(t.guild_id, 128)],
-      description: E(n, t, _, x),
+      avatarSrcs: [S.getAvatarURL(t.guild_id, 128)],
+      description: E(n, t, S, A),
       timestamp: p.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
-        hours: Math.round(N / i.default.Seconds.HOUR)
+        hours: Math.round(I / i.default.Seconds.HOUR)
       }),
-      colors: [A, v],
+      colors: [_, T],
       channelId: e
     })
-  }, [g, t, N, n, A, x, v, _]);
-  return null != _ && null != N && null != x && (0, c.isAllowedRange)(x) ? (0, a.jsxs)(h.Popout, {
+  }, [g, t, I, n, _, A, T, S]);
+  return null != S && null != I && null != A && (0, c.isAllowedRange)(A) ? (0, a.jsxs)(h.Popout, {
     children: [(0, a.jsx)(h.PopoutContent, {
       thumbnailSrc: g,
-      thumbnailTitle: S,
       channel: t,
       entry: n,
       userDescription: p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-      title: I,
-      subtitle: T,
+      title: n.extra.game_name,
       badges: (0, a.jsx)(f.BadgesContainer, {
         location: f.BadgeLocation.POPOUT,
         children: c.TOP_GAME_BADGES.map((e, t) => (0, a.jsx)(e, {
@@ -74,10 +69,10 @@ t.default = e => {
     }), (0, a.jsx)(h.PopoutInteractionsContainer, {
       children: (0, a.jsx)(h.PopoutReactor, {
         closePopout: r,
-        user: _,
+        user: S,
         channel: t,
-        generateReactionImage: M,
-        reactionImageAltText: C(n, _),
+        generateReactionImage: v,
+        reactionImageAltText: C(n, S),
         entry: n,
         requestId: s
       })

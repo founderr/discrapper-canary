@@ -13,15 +13,14 @@ var a = n("735250"),
   u = n("265048"),
   d = n("689938"),
   c = n("571425");
-let f = [i.GameTimestampBadge, i.RichGameStateBadge, i.VoiceChannelBadge, i.NewReleaseBadge, i.NewGameBadge, i.StreakBadge, i.TrendingBadge, i.ResurrectedBadge, i.MarathonBadge];
+let f = [i.GameTimestampBadge, i.VoiceChannelBadge, i.NewReleaseBadge, i.NewGameBadge, i.StreakBadge, i.TrendingBadge, i.ResurrectedBadge, i.MarathonBadge];
 t.default = l.memo(e => {
   let {
     entry: t,
     channel: n,
     selected: l
   } = e, {
-    iconUrl: h,
-    iconTitle: m
+    iconUrl: h
   } = (0, u.useGamingContentData)(t);
   return (0, a.jsxs)(r.Card, {
     selected: l,
@@ -45,7 +44,6 @@ t.default = l.memo(e => {
         }, n))
       })]
     }), (0, a.jsx)(o.ContentImage, {
-      alt: m,
       src: h,
       size: 48,
       className: c.thumbnail
