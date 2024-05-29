@@ -40,6 +40,12 @@ let r = (0, i.createExperiment)({
         enabled: !0,
         impressionCappingEnabled: !0
       }
+    }, {
+      id: 4,
+      label: "Another Heuristic treatment for comparison ranking",
+      config: {
+        enabled: !0
+      }
     }]
   }),
   s = (0, i.createExperiment)({
