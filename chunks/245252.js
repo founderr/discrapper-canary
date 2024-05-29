@@ -1,5 +1,5 @@
 "use strict";
-var r = n("972910"),
+var r = n("690244"),
   i = n("160171"),
   a = r("%Promise.resolve%", !0),
   o = a && i(a);
