@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return P
   },
   fetchSKU: function() {
-    return T
+    return f
   },
   fetchTestSKUsForApplication: function() {
     return C
@@ -25,8 +25,8 @@ n.r(t), n.d(t, {
 var r = n("544891"),
   u = n("570140"),
   i = n("881052"),
-  l = n("128069"),
-  a = n("34756"),
+  a = n("128069"),
+  l = n("34756"),
   o = n("115130"),
   s = n("55563"),
   E = n("695103"),
@@ -35,15 +35,15 @@ var r = n("544891"),
   d = n("936101"),
   c = n("73346"),
   A = n("355467"),
-  f = n("981631");
-async function T(e) {
+  T = n("981631");
+async function f(e) {
   if (null == s.default.get(e)) {
     u.default.dispatch({
       type: "SKU_FETCH_START",
       skuId: e
     });
     try {
-      let t = await (0, c.httpGetWithCountryCodeQuery)(f.Endpoints.STORE_SKU(e));
+      let t = await (0, c.httpGetWithCountryCodeQuery)(T.Endpoints.STORE_SKU(e));
       u.default.dispatch({
         type: "SKU_FETCH_SUCCESS",
         sku: t.body
@@ -52,7 +52,7 @@ async function T(e) {
       throw u.default.dispatch({
         type: "SKU_FETCH_FAIL",
         skuId: e
-      }), new a.default("Failed to fetch SKU ".concat(e))
+      }), new l.default("Failed to fetch SKU ".concat(e))
     }
   }
 }
@@ -64,7 +64,7 @@ async function I(e, t) {
     });
     try {
       let n = E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e),
-        r = await (0, c.httpGetWithCountryCodeQuery)(n ? f.Endpoints.STORE_SKU(t) : f.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(t));
+        r = await (0, c.httpGetWithCountryCodeQuery)(n ? T.Endpoints.STORE_SKU(t) : T.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(t));
       u.default.dispatch({
         type: "SKU_FETCH_SUCCESS",
         sku: n ? r.body : r.body.sku
@@ -76,21 +76,21 @@ async function I(e, t) {
       throw u.default.dispatch({
         type: "SKU_FETCH_FAIL",
         skuId: t
-      }), new a.default("Failed to fetch SKU ".concat(t))
+      }), new l.default("Failed to fetch SKU ".concat(t))
     }
   }
 }
 async function C(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   if (!(E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e)) && t) throw Error("this should only be used in test mode");
-  let n = (await (0, c.httpGetWithCountryCodeQuery)(f.Endpoints.APPLICATION_SKUS(e))).body;
+  let n = (await (0, c.httpGetWithCountryCodeQuery)(T.Endpoints.APPLICATION_SKUS(e))).body;
   return u.default.dispatch({
     type: "SKUS_FETCH_SUCCESS",
     skus: n
   }), n
 }
 async function P(e, t, n, r) {
-  let l;
+  let i;
   let a = {
     payment_source_id: n,
     gift: null == r ? void 0 : r.isGift
@@ -100,34 +100,33 @@ async function P(e, t, n, r) {
     skuId: t
   });
   try {
-    l = await (0, c.httpGetWithCountryCodeQuery)({
-      url: f.Endpoints.STORE_SKU_PURCHASE(t),
+    i = await (0, c.httpGetWithCountryCodeQuery)({
+      url: T.Endpoints.STORE_SKU_PURCHASE(t),
       query: a,
       oldFormErrors: !0
     }), u.default.dispatch({
       type: "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS",
       skuId: t,
       paymentSourceId: n,
-      price: l.body
+      price: i.body
     })
-  } catch (n) {
-    let e = n instanceof i.BillingError ? n : new i.BillingError(n);
-    throw u.default.dispatch({
+  } catch (e) {
+    u.default.dispatch({
       type: "SKU_PURCHASE_PREVIEW_FETCH_FAILURE",
       skuId: t
-    }), e
+    })
   }
-  return l
+  return i
 }
 let R = {
   isGift: !1
 };
 async function N(e, t, n) {
   let {
-    paymentSource: a,
+    paymentSource: l,
     expectedAmount: s,
     expectedCurrency: c,
-    analyticsLoadId: T,
+    analyticsLoadId: f,
     isGift: I,
     giftInfoOptions: C,
     subscriptionPlanId: P,
@@ -149,22 +148,22 @@ async function N(e, t, n) {
     let e = {
       gift: I,
       sku_subscription_plan_id: P,
-      gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(a),
+      gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(l),
       load_id: N
     };
     if (U) e.test_mode = !0;
     else {
-      if (null != a && (e.payment_source_id = a.id, e.payment_source_token = await (0, A.createPaymentSourceToken)(a), f.ADYEN_PAYMENT_SOURCES.has(a.type))) {
-        let t = await (0, A.popupBridgeState)(a.type);
-        e.return_url = (0, r.getAPIBaseURL)() + f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(a.type, null != t ? t : "", "success")
+      if (null != l && (e.payment_source_id = l.id, e.payment_source_token = await (0, A.createPaymentSourceToken)(l), T.ADYEN_PAYMENT_SOURCES.has(l.type))) {
+        let t = await (0, A.popupBridgeState)(l.type);
+        e.return_url = (0, r.getAPIBaseURL)() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(l.type, null != t ? t : "", "success")
       }
       null != s && (e.expected_amount = s), null != c && (e.expected_currency = c), e.gift_info_options = C, null != M && (e.country_code = M), e.purchase_token = (0, d.getPurchaseToken)()
     }
     let n = await r.HTTP.post({
-      url: f.Endpoints.STORE_SKU_PURCHASE(t),
+      url: T.Endpoints.STORE_SKU_PURCHASE(t),
       body: e,
       context: {
-        load_id: T
+        load_id: f
       },
       oldFormErrors: !0
     });
@@ -180,18 +179,18 @@ async function N(e, t, n) {
     }
   } catch (r) {
     let n = r instanceof i.BillingError ? r : new i.BillingError(r);
-    if ((n.code === l.ErrorCodes.CONFIRMATION_REQUIRED || n.code === l.ErrorCodes.AUTHENTICATION_REQUIRED) && u.default.dispatch({
+    if ((n.code === a.ErrorCodes.CONFIRMATION_REQUIRED || n.code === a.ErrorCodes.AUTHENTICATION_REQUIRED) && u.default.dispatch({
         type: "SKU_PURCHASE_AWAIT_CONFIRMATION",
         skuId: t,
         isGift: I
-      }), n.code !== l.ErrorCodes.CONFIRMATION_REQUIRED) throw u.default.dispatch({
+      }), n.code !== a.ErrorCodes.CONFIRMATION_REQUIRED) throw u.default.dispatch({
       type: "SKU_PURCHASE_FAIL",
       applicationId: e,
       skuId: t,
       error: n
     }), n;
     if (!r.body.payment_id) throw (0, A.dispatchConfirmationError)("payment id cannot be null on redirected confirmations.");
-    return (0, A.handleConfirmation)(r.body, a)
+    return (0, A.handleConfirmation)(r.body, l)
   }
 }
 async function M() {
@@ -201,7 +200,7 @@ async function M() {
     };
     return {
       ...(await r.HTTP.post({
-        url: f.Endpoints.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION,
+        url: T.Endpoints.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION,
         body: e,
         oldFormErrors: !0
       })).body
