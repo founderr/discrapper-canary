@@ -234,7 +234,7 @@ let G = e => {
           count: n.length,
           isNitroLocked: !1
         })
-      } else if ((0, D.allowUnicodeEmojiForIntention)(r)) {
+      } else {
         let t = S.default.getByCategory(e);
         null != t && m(t, {
           categoryId: e,

@@ -43,14 +43,13 @@ function m(e) {
     intention: u,
     forceIncludeExternalGuilds: d
   } = e;
-  if (u === I.EmojiIntention.COMMUNITY_CONTENT_ONLY && null == n.guildId) return I.EmojiDisabledReasons.ONLY_GUILD_EMOJIS_ALLOWED;
   if (!h(n)) return null;
   let _ = null !== (t = e.guildId) && void 0 !== t ? t : null == r ? void 0 : r.getGuildId(),
     T = null != r && (0, a.isGuildTextChannelType)(r.type),
     f = null != r && (0, a.isGuildVocalChannelType)(r.type),
     S = A(n, _),
     m = o.default.can(E.Permissions.USE_EXTERNAL_EMOJIS, r);
-  if (u === I.EmojiIntention.COMMUNITY_CONTENT || u === I.EmojiIntention.COMMUNITY_CONTENT_ONLY) return S && null != n.guildId && n.available ? null : I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
+  if (u === I.EmojiIntention.COMMUNITY_CONTENT) return S && null != n.guildId && n.available ? null : I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
   if (!(0, I.isExternalEmojiAllowedForIntention)(u) && !A(n, _) && !d || (T || f) && !S && !m) return I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
   if (null != n.id && !n.available) return I.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
   let N = l.default.getCurrentUser();

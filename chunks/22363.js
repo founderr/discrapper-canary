@@ -33,7 +33,7 @@ t.default = e => {
       onKeyDown: I,
       className: c.searchBar,
       ref: S,
-      isFullRow: n === _.EmojiIntention.COMMUNITY_CONTENT_ONLY,
+      isFullRow: !1,
       onFocus: T,
       autoFocus: f,
       defaultSearchPlaceholder: (0, o.getSearchPlaceholder)(n, m)
@@ -43,7 +43,7 @@ t.default = e => {
         checked: m,
         onClick: N
       })
-    }) : null, n === _.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, i.jsx)(l.default, {
+    }) : null, null != t ? t : (0, i.jsx)(l.default, {
       searchBarRef: S,
       className: c.diversitySelector,
       hasTabWrapper: h,
