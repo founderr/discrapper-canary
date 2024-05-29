@@ -506,6 +506,7 @@ e.exports = Object.freeze({
   APP_LAUNCHER_COMMAND_LIST_SORT_HEADER: "Sort By",
   APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Popular",
   APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL: "Alphabetical",
+  APP_LAUNCHER_COMMAND_LIST_NO_COMMANDS_HERE: "No commands available here",
   APP_LAUNCHER_ALL_COMMANDS_HEADER: "All Commands",
   APP_LAUNCHER_MONETIZATION_DISCLOSURE: "This App has In-App Purchases",
   APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT: "Nothing required. You can send the command or add an option below",
