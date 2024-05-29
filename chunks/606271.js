@@ -180,11 +180,8 @@ class M {
     let {
       screenOrientation: t
     } = e;
-    if (0 === this.rpcServer.subscriptions.length) return;
-    let n = t === R.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
-    this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ORIENTATION_UPDATE, {}, {
-      screen_orientation: t,
-      orientation: n
+    if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ORIENTATION_UPDATE, {}, {
+      screen_orientation: t
     })
   }
   handleActivityMessage(e) {

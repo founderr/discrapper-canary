@@ -37,15 +37,10 @@ async function d(e, t, n) {
     }
     case o.RPCEvents.ORIENTATION_UPDATE: {
       let e = i.default.isScreenLandscape();
-      if (null == e) return null;
-      {
-        let t = e ? u.ActivityScreenOrientation.LANDSCAPE : u.ActivityScreenOrientation.PORTRAIT,
-          n = t === u.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
-        return {
-          screen_orientation: t,
-          orientation: n
-        }
-      }
+      if (null != e) return {
+        screen_orientation: e ? u.ActivityScreenOrientation.LANDSCAPE : u.ActivityScreenOrientation.PORTRAIT
+      };
+      return null
     }
     case o.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
       return (0, r.activityInstanceConnectedParticipants)();
