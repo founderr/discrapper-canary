@@ -15,7 +15,7 @@ t.default = e => {
     cards: t,
     className: s,
     cardType: i
-  } = e, E = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [T, I] = r.useState(0), [R, f] = r.useState(E()), [S, m] = r.useState(!1), A = t.length;
+  } = e, E = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [T, I] = r.useState(0), [R, f] = r.useState(E()), [S, A] = r.useState(!1), m = t.length;
   r.useEffect(() => {
     let e = () => {
       f(E())
@@ -24,21 +24,21 @@ t.default = e => {
       window.removeEventListener("resize", e)
     }
   }, []), r.useEffect(() => {
-    A > R && T > A - R ? I(A - R) : A <= R && I(0)
-  }, [A, R]);
-  let p = r.useCallback(e => ({
+    m > R && T > m - R ? I(m - R) : m <= R && I(0)
+  }, [m, R]);
+  let N = r.useCallback(e => ({
       x: (e - T) * 100
     }), [T]),
-    [N, g] = (0, l.useSprings)(t.length, p);
+    [p, g] = (0, l.useSprings)(t.length, N);
   return r.useEffect(() => {
-    g(p)
-  }, [g, p]), (0, a.jsx)("div", {
+    g(N)
+  }, [g, N]), (0, a.jsx)("div", {
     className: s,
     children: (0, a.jsxs)("div", {
       className: _.cardContainer,
-      children: [A > R && (0, a.jsx)(d.Clickable, {
+      children: [m > R && (0, a.jsx)(d.Clickable, {
         onClick: S ? () => {
-          I(e => 0 === e ? A - R : e - 1)
+          I(e => 0 === e ? m - R : e - 1)
         } : void 0,
         className: n()({
           [_.leftArrow]: S,
@@ -50,7 +50,7 @@ t.default = e => {
         })
       }), (0, a.jsx)("div", {
         className: _.cardInnerContainer,
-        children: N.map((e, s) => {
+        children: p.map((e, s) => {
           let {
             x: r
           } = e;
@@ -65,19 +65,19 @@ t.default = e => {
             }, "".concat(t[s].name, "_").concat(s, "_perks_card"))
           }, "".concat(t[s].name, "_").concat(s, "_animated_div"))
         })
-      }), A > R && (0, a.jsx)(d.Clickable, {
+      }), m > R && (0, a.jsx)(d.Clickable, {
         onClick: () => {
-          I(e => e >= A - R ? (m(!0), 0) : e + 1)
+          I(e => e >= m - R ? (A(!0), 0) : e + 1)
         },
         className: _.rightArrow,
         children: (0, a.jsx)(u.ArrowSmallRightIcon, {
           className: _.arrowIcon,
           colorClass: _.arrowIcon
         })
-      }), A > R && (0, a.jsx)("div", {
+      }), m > R && (0, a.jsx)("div", {
         className: _.cardProgressBar,
         children: t.map((e, t) => {
-          if (!(t > A - R)) return (0, a.jsx)("div", {
+          if (!(t > m - R)) return (0, a.jsx)("div", {
             className: t === T ? _.selectedDot : _.dot
           }, "progress_bar_dot_".concat(t))
         })

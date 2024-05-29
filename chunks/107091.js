@@ -51,14 +51,14 @@ function y(e) {
     product: t,
     paymentSource: a,
     onPurchaseComplete: y,
-    onUse: j,
-    onError: A,
+    onUse: A,
+    onError: j,
     onReviewPurchase: O,
-    loadId: k,
+    loadId: P,
     baseAnalyticsData: R,
-    confettiCanvas: P = null
+    confettiCanvas: k = null
   } = e;
-  k = null != k ? k : (0, r.v4)();
+  P = null != P ? P : (0, r.v4)();
   let B = s.useRef(null),
     [M] = t.items,
     {
@@ -67,8 +67,8 @@ function y(e) {
     {
       buttonColors: F
     } = (0, m.default)(t.styles),
-    w = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    H = (0, I.getCustomConfettiDisplayOptions)(t.skuId),
+    H = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion),
+    w = (0, I.getCustomConfettiDisplayOptions)(t.skuId),
     [U, W] = s.useState(!1),
     [G, V] = s.useState(!1),
     K = null != F ? {
@@ -83,12 +83,12 @@ function y(e) {
         W(!0), y()
       },
       onError: e => {
-        A(e), V(!0)
+        j(e), V(!0)
       },
       onReviewPurchase: O,
       paymentSource: a,
       skuId: t.skuId,
-      loadId: k,
+      loadId: P,
       baseAnalyticsData: R
     };
   return (0, l.jsxs)("div", {
@@ -135,7 +135,7 @@ function y(e) {
       }), (0, l.jsx)(_, {
         style: K,
         onClick: () => {
-          if (j(), (0, c.popLayer)(), z(), (null == M ? void 0 : M.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
+          if (A(), (0, c.popLayer)(), z(), (null == M ? void 0 : M.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
             (0, C.openAvatarDecorationModal)({
               initialSelectedDecoration: M,
               analyticsLocations: D
@@ -155,7 +155,7 @@ function y(e) {
         className: T.productName,
         children: t.name
       }), (0, l.jsx)(b.PaymentContextProvider, {
-        loadId: k,
+        loadId: P,
         stepConfigs: [],
         applicationId: S.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
@@ -166,9 +166,9 @@ function y(e) {
           ...Y
         })
       })]
-    })), !G && U && !(null != H) && !w && (0, l.jsx)(g.default, {
+    })), !G && U && !(null != w) && !H && (0, l.jsx)(g.default, {
       confettiTarget: B.current,
-      customConfettiCanvas: P,
+      customConfettiCanvas: k,
       speedValues: N,
       numBursts: 4,
       particlesPerBurst: 100,

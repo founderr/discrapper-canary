@@ -17,7 +17,7 @@ var r = s("120356"),
   R = s("948541"),
   f = s("872905"),
   S = s("578478");
-let m = e => {
+let A = e => {
     let {
       className: t,
       inTrial: s
@@ -55,7 +55,7 @@ let m = e => {
       })
     })
   },
-  A = e => {
+  m = e => {
     let {
       inTrial: t,
       location: s
@@ -105,10 +105,10 @@ t.default = e => {
     location: s
   } = e, {
     analyticsLocations: r
-  } = (0, o.default)(l.default.PREMIUM_MARKETING_HERO_CTA), i = (0, u.useHasActiveTrial)(), n = (0, T.useIsEligibleSenderForReferralProgram)(s) ? (0, a.jsx)(A, {
+  } = (0, o.default)(l.default.PREMIUM_MARKETING_HERO_CTA), i = (0, u.useHasActiveTrial)(), n = (0, T.useIsEligibleSenderForReferralProgram)(s) ? (0, a.jsx)(m, {
     inTrial: i,
     location: s
-  }) : (0, a.jsx)(m, {
+  }) : (0, a.jsx)(A, {
     className: t,
     inTrial: i
   });

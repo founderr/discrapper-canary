@@ -16,10 +16,10 @@ var a = s("735250"),
   R = s("626135"),
   f = s("63063"),
   S = s("276444"),
-  m = s("520540"),
-  A = s("197115"),
-  p = s("119269"),
-  N = s("981631"),
+  A = s("520540"),
+  m = s("197115"),
+  N = s("119269"),
+  p = s("981631"),
   g = s("689938"),
   C = s("847548"),
   P = s("691766");
@@ -110,40 +110,40 @@ t.default = e => {
     isInSettings: t = !1
   } = e, i = (0, l.useStateFromStoresArray)([S.default], () => S.default.getSentUserIds()), _ = (0, l.useStateFromStoresArray)([T.default], () => i.map(e => T.default.getUser(e)).filter(e => null != e)), O = r.useMemo(() => _.map(e => new E.default(e)), [_]), {
     subscriberHomeVariant: M
-  } = m.ReferralProgramSender.useExperiment({
+  } = A.ReferralProgramSender.useExperiment({
     location: "ReferralProgramProgressBar"
   }, {
     autoTrackExposure: !1
-  }), x = M === m.SubscriberHomeVariant.VARIANT_2;
+  }), x = M === A.SubscriberHomeVariant.VARIANT_2;
   r.useEffect(() => {
     i.forEach(e => {
       (0, u.getUser)(e)
     })
   }, [i]);
   let v = i.length,
-    b = 3 === v,
-    D = f.default.getArticleURL(N.HelpdeskArticles.REFERRAL_PROGRAM),
-    U = b ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+    D = 3 === v,
+    b = f.default.getArticleURL(p.HelpdeskArticles.REFERRAL_PROGRAM),
+    U = D ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     {
       analyticsLocations: j
     } = (0, c.default)(d.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
     G = r.useRef(null),
-    [y, B] = r.useState(!1),
+    [B, y] = r.useState(!1),
     k = () => {
       if (null != G.current) {
         let {
           clientWidth: e
         } = G.current;
-        B(e <= 568)
+        y(e <= 568)
       }
     };
   r.useEffect(() => (k(), window.addEventListener("resize", k), () => {
     window.removeEventListener("resize", k)
   }), []);
   let H = (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(N.default, {
       percentage: v / 3 * 100,
-      progressCircleVariation: p.ProgressCircleVariation.NITRO_LOGO,
+      progressCircleVariation: N.ProgressCircleVariation.NITRO_LOGO,
       iconClassName: n()({
         [C.referralProgressBarIcon]: !t,
         [C.referralProgressBarIconSettings]: t
@@ -158,18 +158,18 @@ t.default = e => {
         userRecords: O
       }), (0, a.jsx)(o.Text, {
         variant: t ? "text-sm/normal" : "text-lg/medium",
-        children: L(b, v > 0, i.length, D)
+        children: L(D, v > 0, i.length, b)
       }), (0, a.jsxs)("div", {
         className: n()(C.expandedProgressBarButtonContainer, {
-          [C.expandedProgressBarButtonContainerMinLayout]: y && !t,
-          [C.expandedProgressBarButtonContainerLayout]: !y && !t
+          [C.expandedProgressBarButtonContainerMinLayout]: B && !t,
+          [C.expandedProgressBarButtonContainerLayout]: !B && !t
         }),
-        children: [!t && !x && (0, a.jsx)(A.default, {
+        children: [!t && !x && (0, a.jsx)(m.default, {
           color: o.ButtonColors.CUSTOM,
           buttonText: g.default.Messages.GIFT_NITRO,
           className: n()(C.expandedProgressBarGiftingCTA, {
-            [C.expandedProgressBarGiftingCTAMinLayout]: y && !t,
-            [C.expandedProgressBarGiftingCTALayout]: !y && !t
+            [C.expandedProgressBarGiftingCTAMinLayout]: B && !t,
+            [C.expandedProgressBarGiftingCTALayout]: !B && !t
           }),
           look: o.ButtonLooks.OUTLINED,
           isGift: !0
@@ -177,7 +177,7 @@ t.default = e => {
           className: C.expandedProgressBarSelectFriendsCTA,
           color: o.ButtonColors.CUSTOM,
           onClick: () => {
-            R.default.track(N.AnalyticEvents.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+            R.default.track(p.AnalyticEvents.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
               location_stack: j
             }), (0, o.openModalLazy)(async () => {
               let {
@@ -196,7 +196,7 @@ t.default = e => {
               src: P,
               alt: "",
               className: C.expandedProgressBarSelectFriendsIcon
-            }), b ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
+            }), D ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
           })
         })]
       })]

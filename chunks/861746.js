@@ -26,18 +26,18 @@ var l = a("735250"),
   N = a("107091"),
   _ = a("197115"),
   y = a("300284"),
-  j = a("876917"),
-  A = a("642619"),
+  A = a("876917"),
+  j = a("642619"),
   O = a("210887"),
-  k = a("594174"),
+  P = a("594174"),
   R = a("725808"),
-  P = a("465670"),
+  k = a("465670"),
   B = a("794358"),
   M = a("466111"),
   D = a("26290"),
   F = a("626135"),
-  w = a("998502"),
-  H = a("335131"),
+  H = a("998502"),
+  w = a("335131"),
   U = a("1870"),
   W = a("884697"),
   G = a("266386"),
@@ -54,7 +54,7 @@ var l = a("735250"),
   ee = a("689938"),
   et = a("638075"),
   ea = a("42615");
-let el = w.default.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let el = H.default.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   es = p.AvatarSizes.SIZE_152,
   er = p.AvatarSizes.SIZE_120,
   en = (0, S.getDecorationSizeForAvatarSize)(es),
@@ -100,14 +100,14 @@ t.default = function(e) {
     onMount: r,
     isPremiumUser: o = !1,
     isGiftEasterEggEnabled: B
-  } = e, w = s.useRef(null), {
+  } = e, H = s.useRef(null), {
     analyticsLocations: ec
   } = (0, v.default)(x.default.COLLECTIBLES_SHOP_CARD), eu = s.useRef(null), ed = s.useRef(null), ef = (0, h.default)(eu), {
     defaultPaymentSource: eC
   } = (0, T.default)({
     isGift: !1,
     activeSubscription: null
-  }), [em, ep] = s.useState(!1), eg = ef || em, eE = (0, f.useStateFromStores)([k.default], () => k.default.getCurrentUser()), [eh] = t.items, {
+  }), [em, ep] = s.useState(!1), eg = ef || em, eE = (0, f.useStateFromStores)([P.default], () => P.default.getCurrentUser()), [eh] = t.items, {
     avatarDecorationSrc: eb,
     eventHandlers: ex,
     avatarPlaceholderSrc: ev
@@ -121,7 +121,7 @@ t.default = function(e) {
     buttonColors: eI
   } = (0, K.default)(t.styles), eL = (0, W.getFormattedPriceForCollectiblesProduct)(t, o, !1), eT = (0, W.isPremiumCollectiblesProduct)(t), eN = (0, W.isFreeCollectiblesProduct)(t), {
     isPurchased: e_
-  } = (0, V.useProductPurchaseState)(t), [ey, ej] = (0, f.useStateFromStoresArray)([U.default], () => [U.default.isClaiming === t.skuId, null != U.default.isClaiming && U.default.isClaiming !== t.skuId]), eA = (0, f.useStateFromStores)([O.default], () => (0, m.isThemeDark)(O.default.theme)), eO = (0, W.isProductNew)(t.skuId), ek = (0, G.useCollectiblesHoverPreviewExperiment)("CollectiblesShopTallCard"), [eR, eP] = s.useState(!1), eB = s.useRef(null), eM = s.useRef(new i.Environment), [eD, eF] = s.useState(!1), [ew, eH] = s.useState(null), eU = e_ || eD, eW = (0, y.default)({
+  } = (0, V.useProductPurchaseState)(t), [ey, eA] = (0, f.useStateFromStoresArray)([U.default], () => [U.default.isClaiming === t.skuId, null != U.default.isClaiming && U.default.isClaiming !== t.skuId]), ej = (0, f.useStateFromStores)([O.default], () => (0, m.isThemeDark)(O.default.theme)), eO = (0, W.isProductNew)(t.skuId), eP = (0, G.useCollectiblesHoverPreviewExperiment)("CollectiblesShopTallCard"), [eR, ek] = s.useState(!1), eB = s.useRef(null), eM = s.useRef(new i.Environment), [eD, eF] = s.useState(!1), [eH, ew] = s.useState(null), eU = e_ || eD, eW = (0, y.default)({
     analyticsLocations: ec
   }), eG = s.useRef(null), eV = s.useMemo(() => ({
     sku_id: t.skuId,
@@ -133,7 +133,7 @@ t.default = function(e) {
         analyticsLocations: ec
       });
       return
-    }(null == eh ? void 0 : eh.type) === d.CollectiblesItemType.PROFILE_EFFECT && (0, A.openProfileEffectModal)({
+    }(null == eh ? void 0 : eh.type) === d.CollectiblesItemType.PROFILE_EFFECT && (0, j.openProfileEffectModal)({
       initialSelectedEffectId: eh.id,
       analyticsLocations: ec
     })
@@ -152,7 +152,7 @@ t.default = function(e) {
     children: (0, l.jsx)(_.default, {
       fullWidth: !0,
       className: et.__invalid_premiumSubscribeButton,
-      disabled: ej,
+      disabled: eA,
       onClick: e => e.stopPropagation(),
       buttonText: ee.default.Messages.UNLOCK_WITH_NITRO,
       subscriptionTier: J.PremiumSubscriptionSKUs.TIER_2
@@ -161,13 +161,13 @@ t.default = function(e) {
   s.useEffect(() => {
     null == r || r(eu)
   }, [r]), s.useEffect(() => {
-    if (!b.default.useReducedMotion && null !== ew) {
+    if (!b.default.useReducedMotion && null !== eH) {
       let {
         current: e
       } = ed;
       c()(null != e, "Shakeable is shaken when not mounted"), e.shake(300, 2)
     }
-  }, [ew]);
+  }, [eH]);
   let eq = () => eU ? (0, l.jsx)(z.AlreadyOwned, {
       className: et.priceTag,
       isPartiallyPurchased: !1
@@ -195,7 +195,7 @@ t.default = function(e) {
         submittingStartedLabel: ee.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: ee.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, H.claimPremiumCollectiblesProduct)(t.skuId), (0, Q.default)({
+          await (0, w.claimPremiumCollectiblesProduct)(t.skuId), (0, Q.default)({
             product: t,
             analyticsLocations: ec
           })
@@ -206,11 +206,11 @@ t.default = function(e) {
       return (0, l.jsxs)("div", {
         className: et.buttonsContainer,
         children: [eU ? (0, l.jsx)(ei, {
-          disabled: ej,
+          disabled: eA,
           onClick: eK,
           children: ee.default.Messages.COLLECTIBLES_USE_NOW
         }) : (0, l.jsx)(ei, {
-          disabled: ej,
+          disabled: eA,
           className: et.purchaseButton,
           ...e,
           children: eT ? ee.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : ee.default.Messages.COLLECTIBLES_PURCHASE.format({
@@ -219,7 +219,7 @@ t.default = function(e) {
         }), eQ()]
       })
     },
-    eJ = () => eR && null !== ew ? (0, l.jsx)("div", {
+    eJ = () => eR && null !== eH ? (0, l.jsx)("div", {
       className: et.avatarContainer,
       children: (0, l.jsx)("img", {
         src: ea,
@@ -240,7 +240,7 @@ t.default = function(e) {
         })
       }), (null == eh ? void 0 : eh.type) === d.CollectiblesItemType.PROFILE_EFFECT && (0, l.jsx)("div", {
         className: et.profileEffectShopPreview,
-        children: (0, l.jsx)(j.default, {
+        children: (0, l.jsx)(A.default, {
           isHovering: eg,
           profileEffectId: eh.id,
           isPurchased: eU,
@@ -251,8 +251,8 @@ t.default = function(e) {
         children: (0, l.jsx)(el, {
           ...ex,
           avatarDecoration: eb,
-          src: ek && eg ? null == eE ? void 0 : eE.getAvatarURL(void 0, 152, !0) : ev,
-          imageClassName: ek && eg ? et.fadeInAvatarImg : void 0,
+          src: eP && eg ? null == eE ? void 0 : eE.getAvatarURL(void 0, 152, !0) : ev,
+          imageClassName: eP && eg ? et.fadeInAvatarImg : void 0,
           className: n()(et.avatar, {
             [et.avatarPurchased]: eU && !eR
           }),
@@ -266,7 +266,7 @@ t.default = function(e) {
         [et.cardTextBlur]: (null == eh ? void 0 : eh.type) === d.CollectiblesItemType.PROFILE_EFFECT
       }),
       children: [(0, l.jsx)("div", {
-        className: n()(et.cardBackground, eA ? et.darkCardBackground : et.lightCardBackground, (null == eh ? void 0 : eh.type) === d.CollectiblesItemType.PROFILE_EFFECT ? et.cardLowOpacity : null)
+        className: n()(et.cardBackground, ej ? et.darkCardBackground : et.lightCardBackground, (null == eh ? void 0 : eh.type) === d.CollectiblesItemType.PROFILE_EFFECT ? et.cardLowOpacity : null)
       }), eR ? (0, l.jsx)(N.default, {
         product: t,
         paymentSource: eC,
@@ -274,19 +274,19 @@ t.default = function(e) {
         onPurchaseComplete: () => {
           eF(!0), F.default.track($.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
             ...eV,
-            load_id: w.current
+            load_id: H.current
           })
         },
         onUse: e4,
         onError: e => {
-          eH(e), F.default.track($.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+          ew(e), F.default.track($.AnalyticEvents.PAYMENT_FLOW_FAILED, {
             ...eV,
-            load_id: w.current
+            load_id: H.current
           })
         },
         onReviewPurchase: e4,
         confettiCanvas: eB.current,
-        loadId: w.current,
+        loadId: H.current,
         baseAnalyticsData: eV
       }) : (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(p.Text, {
@@ -306,32 +306,32 @@ t.default = function(e) {
       })]
     })),
     e0 = () => {
-      w.current = (0, u.v4)(), eH(null), eP(!0), ep(!0), g.default.dispatch({
+      H.current = (0, u.v4)(), ew(null), ek(!0), ep(!0), g.default.dispatch({
         type: "LIGHTNING_CHECKOUT_OPEN"
       }), F.default.track($.AnalyticEvents.PAYMENT_FLOW_STARTED, {
         ...eV,
-        load_id: w.current
+        load_id: H.current
       })
     },
     e4 = s.useCallback(() => {
-      eP(!1), ep(!1), g.default.dispatch({
+      ek(!1), ep(!1), g.default.dispatch({
         type: "LIGHTNING_CHECKOUT_CLOSE"
       }), F.default.track($.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         ...eV,
-        load_id: w.current
+        load_id: H.current
       })
-    }, [eP, eV]),
-    e7 = eA ? "0 0 15px 1px ".concat(C.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)",
+    }, [ek, eV]),
+    e7 = ej ? "0 0 15px 1px ".concat(C.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)",
     e2 = null != eS ? {
-      backgroundColor: eA ? "var(--background-floating)" : "var(--background-secondary)",
+      backgroundColor: ej ? "var(--background-floating)" : "var(--background-secondary)",
       borderColor: "var(--chat-border)",
       boxShadow: eg ? e7 : "none"
     } : void 0,
     e3 = null != eI && eR ? {
       boxShadow: "0px 4px 50px 0px " + eI.primary.toHexString()
     } : {},
-    e8 = eR && ew ? {
-      boxShadow: "0px 4px 50px 0px " + (eA ? L.default.WHITE : L.default.BLACK)
+    e8 = eR && eH ? {
+      boxShadow: "0px 4px 50px 0px " + (ej ? L.default.WHITE : L.default.BLACK)
     } : e3;
   return s.useEffect(() => {
     if (eR) {
@@ -387,10 +387,10 @@ t.default = function(e) {
               look: p.Button.Looks.BLANK,
               size: p.Button.Sizes.NONE,
               onClick: e4,
-              children: (0, l.jsx)(P.default, {
+              children: (0, l.jsx)(k.default, {
                 width: 16,
                 height: 16,
-                color: eA ? L.default.WHITE : L.default.BLACK
+                color: ej ? L.default.WHITE : L.default.BLACK
               })
             }), eU && !eR && (0, l.jsx)("div", {
               className: et.checkmarkWrapper,

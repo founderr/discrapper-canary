@@ -4,7 +4,7 @@ l.r(t), l.d(t, {
     return V
   },
   default: function() {
-    return L
+    return M
   }
 }), l("47120");
 var i = l("735250"),
@@ -34,9 +34,9 @@ var i = l("735250"),
   j = l("497263");
 let D = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
   y = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-  M = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+  L = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 
-function L(e) {
+function M(e) {
   let {
     channel: t,
     guildId: l,
@@ -44,13 +44,13 @@ function L(e) {
     onClose: r,
     onActivityItemVisible: c,
     scrollerRef: A
-  } = e, [L, V] = a.useState(0), b = (0, x.default)({
+  } = e, [M, V] = a.useState(0), b = (0, x.default)({
     guildId: l,
     enableFilter: !0,
     channel: t
   }), R = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), O = (0, d.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
     analyticsLocations: F
-  } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), H = (0, S.default)(null == t ? void 0 : t.id), B = (0, m.useIsActivitiesInTextShelfPosterEnabled)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
+  } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), B = (0, S.default)(null == t ? void 0 : t.id), H = (0, m.useIsActivitiesInTextShelfPosterEnabled)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
     isDeveloperActivityShelfEnabled: Y,
     filter: k
   } = (0, d.useStateFromStoresObject)([E.default], () => ({
@@ -68,11 +68,11 @@ function L(e) {
         V(null !== (t = null === (e = A.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
       }
     }, [A]), a.useEffect(() => {
-      (H || null != l) && (0, T.fetchShelf)({
+      (B || null != l) && (0, T.fetchShelf)({
         guildId: l,
         force: !0
       })
-    }, [l, H]), (0, C.useFetchDeveloperActivityShelfItems)(), null == O && !H || null == R) return null;
+    }, [l, B]), (0, C.useFetchDeveloperActivityShelfItems)(), null == O && !B || null == R) return null;
   let w = b.length > 0;
   return (0, i.jsx)(v.AnalyticsLocationProvider, {
     value: F,
@@ -81,14 +81,14 @@ function L(e) {
       children: [w ? (0, i.jsx)("div", {
         className: N.scrollBackgroundContainer,
         style: {
-          top: -L
+          top: -M
         },
         children: (0, i.jsx)("div", {
           className: s()(N.scrollTierBackground),
           style: {
             height: (e => {
               let t = 1 === e.length;
-              return D + Math.ceil(e.length / 2) * (t ? M : y)
+              return D + Math.ceil(e.length / 2) * (t ? L : y)
             })(b)
           }
         })
@@ -96,7 +96,7 @@ function L(e) {
         ref: A,
         className: N.scroller,
         children: [function() {
-          if (B) {
+          if (H) {
             let e = g.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITIES_AVAILABLE_IN_TEXT,
               t = Math.min(Math.max(Math.ceil(1660 / e.length), 32), 48);
             return (0, i.jsxs)(i.Fragment, {

@@ -25,17 +25,17 @@ var a = r("735250"),
   E = r("594174"),
   I = r("884697"),
   S = r("318028"),
-  A = r("635552"),
-  T = r("328456"),
+  T = r("635552"),
+  A = r("328456"),
   x = r("624377"),
   N = r("530618"),
   L = r("141011"),
   _ = r("372654"),
   O = r("216541"),
   k = r("302800"),
-  R = r("215023"),
-  B = r("689938"),
-  P = r("167052"),
+  P = r("215023"),
+  R = r("689938"),
+  B = r("167052"),
   w = r("660097");
 let F = e => {
   var t, r;
@@ -75,32 +75,32 @@ let F = e => {
     })
   }, [n, Y, l.type, U, G]), {
     handleUseNow: K
-  } = (0, A.useHandleUseNow)({
+  } = (0, T.useHandleUseNow)({
     product: l,
     onSuccess: n,
     onError: n
   }), {
     firstAvatarDecoration: X,
     firstProfileEffect: q
-  } = (0, T.useShopProductItems)(l), J = null != X && null != q, {
+  } = (0, A.useShopProductItems)(l), J = null != X && null != q, {
     category: Q,
     isFetching: $
   } = (0, S.useFetchCollectiblesProductCategory)(l.skuId), ee = null !== (r = null == Q ? void 0 : Q.successModalBg) && void 0 !== r ? r : l.banner;
   return (0, a.jsxs)(g.AnalyticsLocationProvider, {
     value: G,
     children: [(0, a.jsxs)("div", {
-      className: P.modalInner,
+      className: B.modalInner,
       ref: W,
       children: [(0, a.jsxs)("div", {
-        className: P.bannerContainer,
+        className: B.bannerContainer,
         children: [(0, a.jsx)(L.default, {
           asset: $ ? void 0 : ee,
-          addGradient: null === (t = R.categoryBannerOverrides[l.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
+          addGradient: null === (t = P.categoryBannerOverrides[l.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
           size: (0, _.getAssetSizeByHeight)(880),
-          className: P.decorationBanner,
+          className: B.decorationBanner,
           blur: !0
         }), (0, i.match)(l.type).with(c.CollectiblesItemType.PROFILE_EFFECT, () => (0, a.jsx)("div", {
-          className: P.profileEffectShopPreview,
+          className: B.profileEffectShopPreview,
           children: (0, a.jsx)(h.default, {
             forCollectedModal: !0,
             profileEffectId: U.id
@@ -109,48 +109,48 @@ let F = e => {
           size: d.AvatarSizes.SIZE_120,
           src: w,
           avatarDecoration: V,
-          className: P.avatarDecoration,
+          className: B.avatarDecoration,
           "aria-label": l.name
         }))).with(c.CollectiblesItemType.BUNDLE, () => (0, a.jsx)("div", {
-          className: P.bundlePreview,
+          className: B.bundlePreview,
           children: (0, a.jsx)(O.BundlePreview, {
             product: l,
             user: H,
             isPurchased: !1,
             isHighlighted: !0,
-            profileEffectClassName: P.bundleProfileEffectCard
+            profileEffectClassName: B.bundleProfileEffectCard
           })
         })).otherwise(() => null)]
       }), (0, a.jsxs)("div", {
-        className: P.collectedInfoContainer,
+        className: B.collectedInfoContainer,
         children: [(0, a.jsxs)("div", {
-          className: P.collectedTextContainer,
+          className: B.collectedTextContainer,
           children: [(0, a.jsx)(d.Heading, {
             variant: "heading-lg/bold",
-            children: B.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
+            children: R.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
               itemName: l.name
             })
           }), (0, a.jsx)(d.Text, {
             variant: "text-sm/normal",
-            children: (0, i.match)(null == l ? void 0 : l.type).with(c.CollectiblesItemType.BUNDLE, () => B.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE).with(c.CollectiblesItemType.PROFILE_EFFECT, () => B.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION).otherwise(() => B.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION)
+            children: (0, i.match)(null == l ? void 0 : l.type).with(c.CollectiblesItemType.BUNDLE, () => R.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE).with(c.CollectiblesItemType.PROFILE_EFFECT, () => R.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION).otherwise(() => R.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION)
           })]
         }), (0, I.isBundleProduct)(l) ? (0, a.jsxs)("div", {
-          className: P.buttons,
+          className: B.buttons,
           children: [(0, a.jsx)(d.Button, {
             color: J ? d.ButtonColors.PRIMARY : d.ButtonColors.BRAND,
             onClick: Z,
-            children: B.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
+            children: R.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
           }), J ? (0, a.jsx)(d.Button, {
             onClick: K,
-            children: B.default.Messages.COLLECTIBLES_USE_NOW
+            children: R.default.Messages.COLLECTIBLES_USE_NOW
           }) : null]
         }) : (0, a.jsx)(d.Button, {
           onClick: Z,
-          children: B.default.Messages.COLLECTIBLES_USE_NOW
+          children: R.default.Messages.COLLECTIBLES_USE_NOW
         })]
       }), (0, a.jsx)(d.ModalCloseButton, {
         onClick: n,
-        className: P.modalCloseButton,
+        className: B.modalCloseButton,
         withCircleBackground: !0
       })]
     }), !M && !z && (0, a.jsx)(N.default, {
@@ -171,21 +171,21 @@ t.default = e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.ConfettiCanvas, {
       ref: u,
-      className: P.confettiCanvas,
+      className: B.confettiCanvas,
       environment: i.current
     }), (0, a.jsxs)(d.ModalRoot, {
       hideShadow: !0,
       transitionState: t,
       size: d.ModalSize.DYNAMIC,
-      className: P.modalRoot,
+      className: B.modalRoot,
       children: [null != f && (0, a.jsx)("img", {
         src: f.confettiAssetSrc,
-        className: P.customConfetti,
+        className: B.customConfetti,
         style: f.style,
         alt: "",
         "aria-hidden": "true"
       }), (0, a.jsx)(d.ModalContent, {
-        className: P.modalContent,
+        className: B.modalContent,
         children: (0, a.jsx)(F, {
           product: r,
           onClose: n,

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return M
+    return L
   }
 }), l("47120");
 var i = l("735250"),
@@ -32,7 +32,7 @@ var i = l("735250"),
   D = l("689938"),
   y = l("6863");
 
-function M(e) {
+function L(e) {
   var t;
   let {
     applicationId: l,
@@ -56,7 +56,7 @@ function M(e) {
   if (null == _) return null;
   let g = null != _.activity.activity_preview_video_asset_id ? (0, C.default)(l, _.activity.activity_preview_video_asset_id) : null,
     N = j.ACTIVITIES_EXTRA_DETAILS[l],
-    M = (null == N ? void 0 : N.playersSuggestionMin) != null && (null == N ? void 0 : N.playersSuggestionMax) != null ? "".concat(N.playersSuggestionMin, " - ").concat(N.playersSuggestionMax) : void 0;
+    L = (null == N ? void 0 : N.playersSuggestionMin) != null && (null == N ? void 0 : N.playersSuggestionMax) != null ? "".concat(N.playersSuggestionMin, " - ").concat(N.playersSuggestionMax) : void 0;
   return (0, i.jsx)(d.AnalyticsLocationProvider, {
     value: x,
     children: (0, i.jsx)("div", {
@@ -65,7 +65,7 @@ function M(e) {
         className: y.scroller,
         children: [(0, i.jsx)("div", {
           className: y.launcherOuterContainer,
-          children: (0, i.jsx)(L, {
+          children: (0, i.jsx)(M, {
             activityItem: _,
             onLaunch: T,
             channelId: m
@@ -91,7 +91,7 @@ function M(e) {
               })
             }), (0, i.jsxs)("div", {
               className: y.detailsDetails,
-              children: [null != M ? (0, i.jsxs)("div", {
+              children: [null != L ? (0, i.jsxs)("div", {
                 className: y.detailItem,
                 children: [(0, i.jsx)(u.default, {
                   width: 16,
@@ -100,7 +100,7 @@ function M(e) {
                   variant: "text-xs/semibold",
                   className: y.detailItemText,
                   children: D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({
-                    nPlayers: M
+                    nPlayers: L
                   })
                 })]
               }) : null, (null == N ? void 0 : N.timeSuggestionMinutes) != null ? (0, i.jsxs)("div", {
@@ -149,7 +149,7 @@ function M(e) {
   })
 }
 
-function L(e) {
+function M(e) {
   var t, r;
   let {
     activityItem: o,
@@ -162,20 +162,20 @@ function L(e) {
     analyticsLocations: I
   } = (0, d.default)(), E = (0, S.default)(), [C, j] = a.useState(null !== (t = (0, T.getActivityGuildSuggestion)({
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== t ? t : void 0), [M, L] = a.useState(null !== (r = (0, x.getActivityVoiceChannelSuggestion)({
+  })) && void 0 !== t ? t : void 0), [L, M] = a.useState(null !== (r = (0, x.getActivityVoiceChannelSuggestion)({
     guildId: C,
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== r ? r : void 0), V = (0, n.useStateFromStores)([c.default], () => c.default.getChannel(M), [M]), b = (0, T.useSelectGuildOptions)(), R = (0, x.useSelectVoiceChannelOptions)(C), O = a.useCallback(() => {
+  })) && void 0 !== r ? r : void 0), V = (0, n.useStateFromStores)([c.default], () => c.default.getChannel(L), [L]), b = (0, T.useSelectGuildOptions)(), R = (0, x.useSelectVoiceChannelOptions)(C), O = a.useCallback(() => {
     var e;
-    null != M && (0, m.default)({
+    null != L && (0, m.default)({
       targetApplicationId: null == o ? void 0 : null === (e = o.application) || void 0 === e ? void 0 : e.id,
       currentEmbeddedApplication: E,
-      channelId: M,
+      channelId: L,
       guildId: C,
       embeddedActivitiesManager: _.default,
       analyticsLocations: I
     }).then(u)
-  }, [o, I, E, u, M, C]), F = a.useCallback(() => {
+  }, [o, I, E, u, L, C]), F = a.useCallback(() => {
     (0, s.openModalLazy)(async () => {
       let {
         default: e
@@ -186,7 +186,7 @@ function L(e) {
         analyticsLocations: I
       })
     })
-  }, [o, I]), H = null == V || null != V.guild_id && !(null != C && null != M && b.some(e => e.value === C) && R.some(e => e.value.channel.id === M)) && !0;
+  }, [o, I]), B = null == V || null != V.guild_id && !(null != C && null != L && b.some(e => e.value === C) && R.some(e => e.value.channel.id === L)) && !0;
   return (0, i.jsxs)("div", {
     className: y.launcherInnerContainer,
     children: [(0, i.jsx)(A.default, {
@@ -219,7 +219,7 @@ function L(e) {
         isSelected: e => e === C,
         select: e => {
           var t;
-          j(e), L(null !== (t = (0, x.getActivityVoiceChannelSuggestion)({
+          j(e), M(null !== (t = (0, x.getActivityVoiceChannelSuggestion)({
             guildId: e
           })) && void 0 !== t ? t : void 0)
         },
@@ -232,13 +232,13 @@ function L(e) {
           let {
             channel: t
           } = e;
-          return t.id === M
+          return t.id === L
         },
         select: e => {
           let {
             channel: t
           } = e;
-          return L(t.id)
+          return M(t.id)
         },
         serialize: e => {
           let {
@@ -247,7 +247,7 @@ function L(e) {
           return t.id
         },
         renderOptionValue: () => {
-          let e = R.find(e => e.value.channel.id === M);
+          let e = R.find(e => e.value.channel.id === L);
           return null == e ? null : (0, i.jsx)(g.SelectChannelOption, {
             channel: e.value.channel,
             users: e.value.users
@@ -267,7 +267,7 @@ function L(e) {
         }
       }), (0, i.jsx)(s.Button, {
         fullWidth: !0,
-        disabled: H,
+        disabled: B,
         onClick: O,
         children: D.default.Messages.START
       }), (0, i.jsx)("div", {
@@ -282,7 +282,7 @@ function L(e) {
       className: y.singleRowShareContainer,
       children: [(0, i.jsx)(s.Button, {
         fullWidth: !0,
-        disabled: H,
+        disabled: B,
         onClick: O,
         children: D.default.Messages.START
       }), (0, i.jsx)(s.Button, {

@@ -48,10 +48,10 @@ function S(e) {
   return I("Offer", e)
 }
 
-function m(e) {
+function A(e) {
   return I("QuantitativeValue", e)
-}(u = r || (r = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (d = i || (i = {})).DISCONTINUED = "http://schema.org/Discontinued", d.IN_STOCK = "http://schema.org/InStock", d.IN_STORE_ONLY = "http://schema.org/InStoreOnly", d.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", d.ONLINE_ONLY = "http://schema.org/OnlineOnly", d.OUT_OF_STOCK = "http://schema.org/OutOfStock", d.PREORDER = "http://schema.org/PreOrder", d.PRESALE = "http://schema.org/PreSale", d.SOLD_OUT = "http://schema.org/SoldOut", S.ItemConditions = r, S.ItemAvailability = i, (c = n || (n = {})).YEARLY = "ANN", c.MONTHLY = "MON", m.UnitCodes = n;
-class A extends(l = E.Component) {
+}(u = r || (r = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (d = i || (i = {})).DISCONTINUED = "http://schema.org/Discontinued", d.IN_STOCK = "http://schema.org/InStock", d.IN_STORE_ONLY = "http://schema.org/InStoreOnly", d.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", d.ONLINE_ONLY = "http://schema.org/OnlineOnly", d.OUT_OF_STOCK = "http://schema.org/OutOfStock", d.PREORDER = "http://schema.org/PreOrder", d.PRESALE = "http://schema.org/PreSale", d.SOLD_OUT = "http://schema.org/SoldOut", S.ItemConditions = r, S.ItemAvailability = i, (c = n || (n = {})).YEARLY = "ANN", c.MONTHLY = "MON", A.UnitCodes = n;
+class m extends(l = E.Component) {
   render() {
     let {
       debug: e,
@@ -66,18 +66,18 @@ class A extends(l = E.Component) {
     })
   }
 }
-T(A, "Thing", R), T(A, "Brand", R), T(A, "Person", function(e) {
+T(m, "Thing", R), T(m, "Brand", R), T(m, "Person", function(e) {
   return I("Person", e)
-}), T(A, "Organization", function(e) {
+}), T(m, "Organization", function(e) {
   return I("Organization", e)
-}), T(A, "ItemPage", function(e) {
+}), T(m, "ItemPage", function(e) {
   return I("ItemPage", e)
-}), T(A, "Product", f), T(A, "Offer", S), T(A, "Rating", function(e) {
+}), T(m, "Product", f), T(m, "Offer", S), T(m, "Rating", function(e) {
   return I("Rating", e)
-}), T(A, "AggregateRating", function(e) {
+}), T(m, "AggregateRating", function(e) {
   return I("AggregateRating", e)
-}), T(A, "AggregateOffer", function(e) {
+}), T(m, "AggregateOffer", function(e) {
   return I("AggregateOffer", e)
-}), T(A, "QuantitativeValue", m), T(A, "UnitPriceSpecification", function(e) {
+}), T(m, "QuantitativeValue", A), T(m, "UnitPriceSpecification", function(e) {
   return I("UnitPriceSpecification", e)
-}), t.default = A
+}), t.default = m

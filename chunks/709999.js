@@ -26,18 +26,18 @@ var l = a("735250"),
   N = a("594174"),
   _ = a("725808"),
   y = a("794358"),
-  j = a("466111"),
-  A = a("26290"),
+  A = a("466111"),
+  j = a("26290"),
   O = a("335131"),
-  k = a("1870"),
+  P = a("1870"),
   R = a("884697"),
-  P = a("724994"),
+  k = a("724994"),
   B = a("624377"),
   M = a("390698"),
   D = a("813083"),
   F = a("680942"),
-  w = a("558060"),
-  H = a("237031"),
+  H = a("558060"),
+  w = a("237031"),
   U = a("616066"),
   W = a("216541"),
   G = a("832149"),
@@ -93,7 +93,7 @@ t.default = function(e) {
   } = (0, B.default)(t.styles), es = (0, R.getFormattedPriceForCollectiblesProduct)(t, i, !1), er = (0, R.isPremiumCollectiblesProduct)(t), en = (0, R.isFreeCollectiblesProduct)(t), {
     isPurchased: ei,
     isPartiallyPurchased: eo
-  } = (0, P.useProductPurchaseState)(t), [ec, eu] = (0, d.useStateFromStoresArray)([k.default], () => [k.default.isClaiming === t.skuId, null != k.default.isClaiming && k.default.isClaiming !== t.skuId]), ed = (0, d.useStateFromStores)([T.default], () => (0, C.isThemeDark)(T.default.theme)), ef = (0, R.isProductNew)(t.skuId);
+  } = (0, k.useProductPurchaseState)(t), [ec, eu] = (0, d.useStateFromStoresArray)([P.default], () => [P.default.isClaiming === t.skuId, null != P.default.isClaiming && P.default.isClaiming !== t.skuId]), ed = (0, d.useStateFromStores)([T.default], () => (0, C.isThemeDark)(T.default.theme)), ef = (0, R.isProductNew)(t.skuId);
   s.useEffect(() => {
     let {
       current: e
@@ -124,7 +124,7 @@ t.default = function(e) {
       })
     },
     eg = e => l => {
-      em.current = l.currentTarget, (0, H.openCollectiblesShopProductDetailsModal)({
+      em.current = l.currentTarget, (0, w.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: a,
         analyticsLocations: X,
@@ -152,7 +152,7 @@ t.default = function(e) {
       variant: "text-md/semibold",
       className: z.priceTag,
       children: K.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
-    }) : (0, l.jsx)(w.default, {
+    }) : (0, l.jsx)(H.default, {
       product: t,
       className: z.priceTag
     }),
@@ -217,10 +217,10 @@ t.default = function(e) {
         tooltipContentClassName: z.premiumWheelTooltipContent,
         color: m.Tooltip.Colors.PRIMARY,
         text: K.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
-        children: e => (0, l.jsx)(A.TextBadge, {
+        children: e => (0, l.jsx)(j.TextBadge, {
           ...e,
           className: z.premiumWheelBadge,
-          text: (0, l.jsx)(j.default, {
+          text: (0, l.jsx)(A.default, {
             className: z.premiumWheel
           })
         })
@@ -276,7 +276,7 @@ t.default = function(e) {
         category: a,
         className: z.limitedTimeBadge,
         display: "card"
-      }), ef && (0, l.jsx)(A.TextBadge, {
+      }), ef && (0, l.jsx)(j.TextBadge, {
         text: K.default.Messages.NEW,
         disableColor: !0,
         className: z.newBadge

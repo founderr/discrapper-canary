@@ -14,7 +14,7 @@ let T = !1,
 function f(e) {
   let t = !1;
   return e.forEach(e => {
-    t = !1 !== m(e) || t
+    t = !1 !== A(e) || t
   }), t
 }
 
@@ -29,7 +29,7 @@ function S(e) {
   }, delete R[e], !0
 }
 
-function m(e) {
+function A(e) {
   let {
     user: t,
     activities: s
@@ -68,13 +68,13 @@ function m(e) {
   }), r
 }
 
-function A() {
+function m() {
   let e = !1;
   if (!c.default.needsRefresh() && !T) {
     let t;
     I = {}, R = {}, t = !1, d.default.getUserIds().forEach(e => {
       let s = _.default.getUser(e);
-      null != s && (t = m({
+      null != s && (t = A({
         user: s,
         activities: d.default.getActivities(e)
       }) || t)
@@ -82,9 +82,9 @@ function A() {
   }
   return T = !c.default.needsRefresh(), e
 }
-class p extends(n = l.default.Store) {
+class N extends(n = l.default.Store) {
   initialize() {
-    this.waitFor(c.default), this.syncWith([c.default], A)
+    this.waitFor(c.default), this.syncWith([c.default], m)
   }
   get games() {
     return I
@@ -102,12 +102,12 @@ class p extends(n = l.default.Store) {
     return R[e]
   }
 }
-i = "NowPlayingStore", (r = "displayName") in(a = p) ? Object.defineProperty(a, r, {
+i = "NowPlayingStore", (r = "displayName") in(a = N) ? Object.defineProperty(a, r, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[r] = i, t.default = new p(o.default, {
+}) : a[r] = i, t.default = new N(o.default, {
   CONNECTION_OPEN: function() {
     I = {}, R = {}
   },
@@ -127,7 +127,7 @@ i = "NowPlayingStore", (r = "displayName") in(a = p) ? Object.defineProperty(a, 
     let {
       updates: t
     } = e;
-    return t.map(e => m(e)).some(e => e)
+    return t.map(e => A(e)).some(e => e)
   },
   PRESENCES_REPLACE: function(e) {
     let {

@@ -5,15 +5,15 @@ n.r(t), n.d(t, {
     return _
   }
 }), n("47120");
-var i, a, l, o, s = n("442837"),
+var i, l, a, o, s = n("442837"),
   E = n("570140"),
   S = n("981631");
 let _ = "no_payment_source",
   d = null,
   c = null,
   A = null,
-  T = null,
   f = null,
+  T = null,
   I = {},
   C = null,
   P = !1,
@@ -21,8 +21,8 @@ let _ = "no_payment_source",
   N = !1,
   M = !1,
   U = !1,
-  p = !1,
-  h = null,
+  h = !1,
+  p = null,
   O = new Set;
 
 function L(e) {
@@ -34,7 +34,7 @@ class m extends(i = s.default.Store) {
   }
   isOpen() {
     let e = __OVERLAY__ ? S.AppContext.OVERLAY : S.AppContext.APP;
-    return h === e && U
+    return p === e && U
   }
   get isPurchasingSKU() {
     return P
@@ -52,10 +52,10 @@ class m extends(i = s.default.Store) {
     return A
   }
   get analyticsLocation() {
-    return T
+    return f
   }
   get promotionId() {
-    return f
+    return T
   }
   get isIAP() {
     return M
@@ -64,26 +64,26 @@ class m extends(i = s.default.Store) {
     return c
   }
   get isGift() {
-    return p
+    return h
   }
   isFetchingSKU(e) {
     return O.has(e)
   }
 }
-o = "SKUPaymentModalStore", (l = "displayName") in(a = m) ? Object.defineProperty(a, l, {
+o = "SKUPaymentModalStore", (a = "displayName") in(l = m) ? Object.defineProperty(l, a, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = o, t.default = new m(E.default, {
+}) : l[a] = o, t.default = new m(E.default, {
   SKU_PURCHASE_MODAL_OPEN: function(e) {
-    L(), d = e.skuId, A = e.applicationId, M = e.isIAP, T = e.analyticsLocation, h = e.context, p = e.isGift, U = !0, N = !1, r = e.resolve, u = e.reject, R = null, C = null, f = e.promotionId
+    L(), d = e.skuId, A = e.applicationId, M = e.isIAP, f = e.analyticsLocation, p = e.context, h = e.isGift, U = !0, N = !1, r = e.resolve, u = e.reject, R = null, C = null, T = e.promotionId
   },
   SKU_PURCHASE_MODAL_CLOSE: function(e) {
     let {
       error: t
     } = e;
-    U = !1, h = null, L(t)
+    U = !1, p = null, L(t)
   },
   SKU_PURCHASE_PREVIEW_FETCH: function(e) {
     let {
@@ -134,14 +134,14 @@ o = "SKUPaymentModalStore", (l = "displayName") in(a = m) ? Object.definePropert
     R = null
   },
   SKU_PURCHASE_UPDATE_IS_GIFT: function(e) {
-    p = e.isGift
+    h = e.isGift
   },
   OVERLAY_SET_INPUT_LOCKED: function(e) {
     let {
       locked: t
     } = e;
-    if (!t || null == h) return !1;
-    U = !1, h = null, L()
+    if (!t || null == p) return !1;
+    U = !1, p = null, L()
   },
   GIFT_CODE_CREATE: function(e) {
     let {

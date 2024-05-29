@@ -16,10 +16,10 @@ var a = s("735250"),
   R = s("601964"),
   f = s("430824"),
   S = s("378720"),
-  m = s("285952"),
-  A = s("346656"),
-  p = s("263704"),
-  N = s("843445"),
+  A = s("285952"),
+  m = s("346656"),
+  N = s("263704"),
+  p = s("843445"),
   g = s("981631"),
   C = s("689938"),
   P = s("141551");
@@ -38,9 +38,9 @@ class M extends r.PureComponent {
       approximateMemberCount: e,
       approximatePresenceCount: t
     } = this.props.guild;
-    return null == e || null == t ? null : (0, a.jsxs)(m.default, {
+    return null == e || null == t ? null : (0, a.jsxs)(A.default, {
       className: P.memberInfo,
-      align: m.default.Align.CENTER,
+      align: A.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
         className: P.dotOnline
       }), (0, a.jsx)("span", {
@@ -74,25 +74,25 @@ class M extends r.PureComponent {
       _ = this.handleJoinOrView,
       E = u.Button.Looks.FILLED,
       T = u.Button.Colors.PRIMARY;
-    return i ? s ? (E = u.Button.Looks.OUTLINED, T = P.buttonColorInGuild, c = (0, a.jsxs)(m.default, {
-      align: m.default.Align.CENTER,
+    return i ? s ? (E = u.Button.Looks.OUTLINED, T = P.buttonColorInGuild, c = (0, a.jsxs)(A.default, {
+      align: A.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
         children: C.default.Messages.JOINED_GUILD
-      }), (0, a.jsx)(p.default, {
+      }), (0, a.jsx)(N.default, {
         className: P.joinedCheckmark
       })]
     })) : r && t && (c = C.default.Messages.JOIN_GUILD) : (c = C.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
-      className: n()(l, o === N.PageSizes.SMALL ? P.inviteSmall : P.inviteLarge),
+      className: n()(l, o === p.PageSizes.SMALL ? P.inviteSmall : P.inviteLarge),
       children: [(0, a.jsx)(S.default, {
         children: C.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
       }), (0, a.jsxs)("div", {
         className: P.content,
         children: [(0, a.jsxs)("div", {
           className: P.info,
-          children: [(0, a.jsx)(A.default, {
+          children: [(0, a.jsx)(m.default, {
             guild: d,
             active: !0,
-            size: A.default.Sizes.LARGE,
+            size: m.default.Sizes.LARGE,
             className: P.guildIcon
           }), (0, a.jsxs)("div", {
             className: P.infoText,

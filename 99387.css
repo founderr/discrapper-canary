@@ -126336,18 +126336,14 @@ html .invoiceCancelRow__6ff3e {
     height: 100%
 }
 
-.container__24d2d {
-    height: 514px
-}
-
 .erroredContainer__67277 {
     height: 467px
 }
 
 .header__0eb6b {
     box-sizing: border-box;
-    height: 174px;
-    padding-top: 24px
+    padding-top: 24px;
+    padding-bottom: 1px
 }
 
 .erroredHeader__8c33b {

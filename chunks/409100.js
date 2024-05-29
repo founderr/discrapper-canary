@@ -42,9 +42,9 @@ t.default = e => {
     subscriptionTier: s,
     isEligibleForBogoPromotion: f = !1,
     isPersistentCTA: S = !1,
-    useShorterCTA: m = !1,
-    ...A
-  } = e, p = (0, n.default)(), N = (0, r.isThemeDark)(p) || t, g = (0, d.usePremiumTrialOffer)(), C = null == g ? void 0 : g.subscription_trial, P = (0, l.formatTrialOfferIntervalDuration)({
+    useShorterCTA: A = !1,
+    ...m
+  } = e, N = (0, n.default)(), p = (0, r.isThemeDark)(N) || t, g = (0, d.usePremiumTrialOffer)(), C = null == g ? void 0 : g.subscription_trial, P = (0, l.formatTrialOfferIntervalDuration)({
     intervalType: null == C ? void 0 : C.interval,
     intervalCount: null == C ? void 0 : C.interval_count
   }), O = (0, u.usePremiumDiscountOffer)(), M = null != C && s === C.sku_id, {
@@ -53,7 +53,7 @@ t.default = e => {
     location: "SubscribeButton"
   }, {
     autoTrackExposure: !1
-  }), L = h && (null == g ? void 0 : g.trial_id) === _.PREMIUM_TIER_2_REFERRAL_TRIAL_ID, x = f ? E.default.Messages.BOGO_CLAIM_OFFER : null != O ? R(s, m, S, O.discount.amount) : I({
+  }), L = h && (null == g ? void 0 : g.trial_id) === _.PREMIUM_TIER_2_REFERRAL_TRIAL_ID, x = f ? E.default.Messages.BOGO_CLAIM_OFFER : null != O ? R(s, A, S, O.discount.amount) : I({
     showTrialCTA: M,
     subscriptionTier: s,
     shouldShowUpsells: !1,
@@ -63,13 +63,13 @@ t.default = e => {
     subscriptionTrial: C
   });
   return (0, a.jsx)(c.default, {
-    color: N ? i.ButtonColors.BRAND_INVERTED : i.ButtonColors.BRAND,
-    buttonShineClassName: "buttonShineClassName" in A ? A.buttonShineClassName : N ? T.brandShine : void 0,
+    color: p ? i.ButtonColors.BRAND_INVERTED : i.ButtonColors.BRAND,
+    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : p ? T.brandShine : void 0,
     trialId: null == C ? void 0 : C.id,
     buttonText: x,
     buttonTextClassName: M ? T.freeTrialText : void 0,
     onlyShineOnHover: !0,
     subscriptionTier: s,
-    ...A
+    ...m
   })
 }

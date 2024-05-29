@@ -21,31 +21,31 @@ t.default = e => {
       isFullscreen: f = !1,
       textColor: S
     } = e,
-    m = (0, c.useIsInPremiumOfferExperience)();
+    A = (0, c.useIsInPremiumOfferExperience)();
   if (null == r) return null;
-  let A = null != r ? d.default.getPremiumPlanItem(r) : null;
-  if (d.default.isBoostOnlySubscription(r) ? t = T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != A && (t = d.default.getDisplayPremiumType(A.planId)), null == t) return null;
-  let p = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
-    N = (null != A ? d.default.getSkuIdForPlan(A.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
-  return s = null != S ? S : m || f ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
+  let m = null != r ? d.default.getPremiumPlanItem(r) : null;
+  if (d.default.isBoostOnlySubscription(r) ? t = T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != m && (t = d.default.getDisplayPremiumType(m.planId)), null == t) return null;
+  let N = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
+    p = (null != m ? d.default.getSkuIdForPlan(m.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
+  return s = null != S ? S : A || f ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
     className: i()(I.container, R, {
       [I.lightTextLink]: f,
-      [I.centerText]: m
+      [I.centerText]: A
     }),
     type: n.Card.Types.CUSTOM,
     children: [(0, a.jsx)(o.default, {
       className: i()(I.icon, {
-        [I.lightThemeColorOnly]: m || f
+        [I.lightThemeColorOnly]: A || f
       })
     }), (0, a.jsx)(n.Text, {
       variant: "text-sm/medium",
       color: s,
-      children: N ? T.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+      children: p ? T.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
         helpdeskArticle: u.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
-        onSubscriptionsClick: p
+        onSubscriptionsClick: N
       }) : T.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
         subscriptionName: t,
-        onSubscriptionsClick: p
+        onSubscriptionsClick: N
       })
     })]
   })

@@ -31,8 +31,8 @@ var i = l("735250"),
   j = l("513202"),
   D = l("823531"),
   y = l("689938"),
-  M = l("640608"),
-  L = l("969728");
+  L = l("640608"),
+  M = l("969728");
 
 function V(e) {
   let {
@@ -40,11 +40,11 @@ function V(e) {
     icon: l
   } = e;
   return (0, i.jsxs)(d.Text, {
-    className: M.activityTag,
+    className: L.activityTag,
     color: "interactive-normal",
     variant: "text-xs/semibold",
     children: [(0, T.isNotNullish)(l) ? (0, i.jsx)(l, {
-      className: M.icon,
+      className: L.icon,
       backgroundColor: "interactive-normal"
     }) : null, t]
   })
@@ -68,16 +68,16 @@ function b(e) {
     var u, v;
     let e = "".concat((0, p.default)(null !== (u = l.maxParticipants) && void 0 !== u ? u : 0));
     return s && (e = null !== (v = l.description) && void 0 !== v ? v : ""), (0, i.jsx)(d.Text, {
-      className: M.activitySubtitleText,
+      className: L.activitySubtitleText,
       variant: "text-xs/normal",
       color: "interactive-normal",
       children: e
     })
   }
   return (0, i.jsxs)("div", {
-    className: M.activitySubtitleText,
+    className: L.activitySubtitleText,
     children: [(0, i.jsx)(d.Text, {
-      className: M.usersArePlayingText,
+      className: L.usersArePlayingText,
       variant: "text-xs/normal",
       children: c.length > 1 ? y.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
         username: o,
@@ -108,8 +108,8 @@ function R(e) {
     imageBackground: R,
     videoUrl: O,
     activityAction: F,
-    joinableEmbeddedApp: H,
-    onActivityItemSelected: B,
+    joinableEmbeddedApp: B,
+    onActivityItemSelected: H,
     labelType: Y,
     staffReleasePhase: k
   } = (0, A.default)({
@@ -132,8 +132,8 @@ function R(e) {
     K = () => z(!1),
     X = v.DeveloperMode.useSetting(),
     Q = a.useCallback(() => {
-      null == B || B(), u.default.maybeQueryForInstallLessApps(P.id, null == n ? void 0 : n.id)
-    }, [P.id, null == n ? void 0 : n.id, B]);
+      null == H || H(), u.default.maybeQueryForInstallLessApps(P.id, null == n ? void 0 : n.id)
+    }, [P.id, null == n ? void 0 : n.id, H]);
   return (0, i.jsxs)(d.Clickable, {
     onClick: F === A.ActivityAction.START ? Q : void 0,
     onContextMenu: X ? e => {
@@ -142,14 +142,14 @@ function R(e) {
         ...e
       }))
     } : void 0,
-    className: s()(M.activityItem, {
-      [M.large]: !0 === C,
-      [M.disabled]: F !== A.ActivityAction.START
+    className: s()(L.activityItem, {
+      [L.large]: !0 === C,
+      [L.disabled]: F !== A.ActivityAction.START
     }),
     children: [(0, i.jsxs)("div", {
       ref: U,
-      className: s()(M.activityImageContainer, {
-        [M.large]: !0 === C
+      className: s()(L.activityImageContainer, {
+        [L.large]: !0 === C
       }),
       onMouseEnter: J,
       onFocus: J,
@@ -158,17 +158,17 @@ function R(e) {
       children: [(0, i.jsx)(g.default, {
         imageBackground: R,
         applicationName: P.name,
-        imageClassName: s()(M.activityImage, {
-          [M.large]: !0 === C
+        imageClassName: s()(L.activityImage, {
+          [L.large]: !0 === C
         }),
-        imageNotFoundClassName: M.brokenImageIconWrapper
+        imageNotFoundClassName: L.brokenImageIconWrapper
       }), null != O && Z && F === A.ActivityAction.START ? (0, i.jsx)("div", {
-        className: s()(M.activityVideo, {
-          [M.videoFadeOut]: !W
+        className: s()(L.activityVideo, {
+          [L.videoFadeOut]: !W
         }),
         onAnimationEnd: () => W ? null : q(!1),
         children: (0, i.jsx)(E.default, {
-          className: M.activityVideo,
+          className: L.activityVideo,
           src: O,
           loop: !0,
           autoPlay: !0,
@@ -178,9 +178,9 @@ function R(e) {
         action: F,
         onClick: Q
       }) : null, (0, i.jsx)("div", {
-        className: M.overlayBadge,
+        className: L.overlayBadge,
         children: (0, i.jsx)("div", {
-          className: M.badgeContainer,
+          className: L.badgeContainer,
           children: (0, i.jsx)(N.default, {
             name: P.name,
             labelType: Y
@@ -189,46 +189,46 @@ function R(e) {
       }), w ? (0, i.jsx)(d.Tooltip, {
         text: y.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
         children: e => (0, i.jsx)("div", {
-          className: M.devShelfBadge,
+          className: L.devShelfBadge,
           ...e,
           children: (0, i.jsx)(I.default, {
-            className: M.devShelfIcon
+            className: L.devShelfIcon
           })
         })
       }) : null]
     }), (0, i.jsxs)("div", {
-      className: s()(M.activityTextContainer, {
-        [M.large]: C
+      className: s()(L.activityTextContainer, {
+        [L.large]: C
       }),
       children: [C ? (0, i.jsx)(d.Text, {
-        className: M.activityMaxParticipantsLarge,
+        className: L.activityMaxParticipantsLarge,
         variant: "text-xs/normal",
         color: "interactive-normal",
         children: (0, p.default)(null !== (t = P.maxParticipants) && void 0 !== t ? t : 0)
       }) : null, (0, i.jsxs)("div", {
-        className: M.activityName,
+        className: L.activityName,
         children: [(0, i.jsx)(d.Heading, {
-          className: M.activityTitleText,
+          className: L.activityTitleText,
           variant: "heading-md/semibold",
           color: "interactive-active",
           children: P.name
         }), null != k ? (0, i.jsx)(d.Tooltip, {
           text: k,
           children: e => (0, i.jsx)("img", {
-            className: M.staffBadge,
+            className: L.staffBadge,
             alt: k,
-            src: L,
+            src: M,
             ...e
           })
         }) : null]
       }), (0, i.jsx)(b, {
-        activity: null == H ? void 0 : H.embeddedActivity,
+        activity: null == B ? void 0 : B.embeddedActivity,
         application: P,
         channel: n,
         guildId: f,
         large: C
       }), (0, i.jsx)("div", {
-        className: M.activityTagsContainer,
+        className: L.activityTagsContainer,
         children: P.tags.slice(0, 3).map(e => (0, i.jsx)(V, {
           value: e
         }, "activity-tag-".concat(P.id, "-").concat(e)))

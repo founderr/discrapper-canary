@@ -22,10 +22,10 @@ t.default = e => {
     title: r,
     titleClassName: f = "",
     subtitle: S = "",
-    description: m = "",
-    descriptionCta: A = "",
-    isPremiumGetCta: p,
-    onCtaClick: N,
+    description: A = "",
+    descriptionCta: m = "",
+    isPremiumGetCta: N,
+    onCtaClick: p,
     cardVariant: g
   } = e, C = (0, d.usePremiumTrialOffer)(), P = null == C ? void 0 : C.subscription_trial, O = (0, u.usePremiumDiscountOffer)(), M = (0, l.formatTrialCtaIntervalDuration)({
     intervalType: null == P ? void 0 : P.interval,
@@ -46,15 +46,15 @@ t.default = e => {
       cardVariantStyleInfo: L,
       titleClassName: f,
       subtitle: S,
-      description: m
-    }), p && (0, a.jsx)(E.default, {
+      description: A
+    }), N && (0, a.jsx)(E.default, {
       subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
       buttonText: h,
       color: n.Button.Colors.GREEN,
       look: n.Button.Looks.FILLED
-    }), 0 !== A.length && (null == (s = null == L ? void 0 : L.descriptionCta) ? void 0 : s.hideOnHoverComponent) !== !0 && null != N && (0, a.jsx)(n.Button, {
-      onClick: N,
-      children: A
+    }), 0 !== m.length && (null == (s = null == L ? void 0 : L.descriptionCta) ? void 0 : s.hideOnHoverComponent) !== !0 && null != p && (0, a.jsx)(n.Button, {
+      onClick: p,
+      children: m
     })]
   })
 }

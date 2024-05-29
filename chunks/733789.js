@@ -70,7 +70,7 @@ let S = {
     })
   }
 };
-class m extends r.PureComponent {
+class A extends r.PureComponent {
   renderDescription(e, t) {
     let s = S[e];
     return 1 === t.length ? s.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? s.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : s.other(t.length)
@@ -165,4 +165,4 @@ class m extends r.PureComponent {
     }, s))
   }
 }
-t.default = m
+t.default = A

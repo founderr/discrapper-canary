@@ -34,9 +34,9 @@ function p(e) {
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A,
-    selectedSkuId: y
+    selectedSkuId: C
   } = (0, c.usePaymentContext)(), {
-    isGift: C
+    isGift: y
   } = (0, o.useGiftContext)(), g = {
     ...(0, r.useSharedPaymentModal)(),
     paymentSources: E,
@@ -46,7 +46,7 @@ function p(e) {
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A
-  }, M = (0, a.usePremiumTrialOffer)(S), R = !C && null != M && null != y && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(y), b = null != _ ? _ : () => {
+  }, M = (0, a.usePremiumTrialOffer)(S), b = !y && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), R = null != _ ? _ : () => {
     p(Object.values(E).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
@@ -61,7 +61,7 @@ function p(e) {
     breadcrumpSteps: i,
     currentBreadcrumpStep: P,
     usePaymentModalStep: !0,
-    onReturn: b,
+    onReturn: R,
     onComplete: e => {
       p(d.Step.REVIEW, {
         trackedFromStep: e
@@ -80,6 +80,6 @@ function p(e) {
         flow_duration_ms: s - I.startTime
       })
     },
-    isEligibleForTrial: R
+    isEligibleForTrial: b
   })
 }

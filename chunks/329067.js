@@ -84,32 +84,32 @@ function _(e) {
     loadId: N,
     skuId: _,
     isGift: y = !1,
-    baseAnalyticsData: j
+    baseAnalyticsData: A
   } = e, {
-    step: A,
+    step: j,
     setStep: O,
-    paymentError: k,
+    paymentError: P,
     paymentAuthenticationState: R,
-    application: P,
+    application: k,
     skuPricePreviewsById: B
   } = (0, E.usePaymentContext)(), {
     analyticsLocations: M
-  } = (0, f.default)(), [D, F] = s.useState(!1), w = s.useRef(null), H = B[_], U = null != H ? H[x.id] : null, W = null != U ? (0, g.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, G = s.useMemo(() => ({
-    ...j,
+  } = (0, f.default)(), [D, F] = s.useState(!1), H = s.useRef(null), w = B[_], U = null != w ? w[x.id] : null, W = null != U ? (0, g.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, G = s.useMemo(() => ({
+    ...A,
     load_id: N,
     payment_type: v.PurchaseTypeToAnalyticsPaymentType[v.PurchaseTypes.ONE_TIME],
     price: null == U ? void 0 : U.amount,
     currency: null == U ? void 0 : U.currency
-  }), [j, U, N]);
+  }), [A, U, N]);
   s.useEffect(() => {
-    A !== h.Step.REVIEW && O(h.Step.REVIEW)
+    j !== h.Step.REVIEW && O(h.Step.REVIEW)
   }), s.useEffect(() => {
-    R === C.PaymentAuthenticationState.ERROR && a(k)
-  }, [a, k, R]);
+    R === C.PaymentAuthenticationState.ERROR && a(P)
+  }, [a, P, R]);
   let V = async () => {
-    await m.default.track(v.AnalyticEvents.PAYMENT_FLOW_COMPLETED, G), n()(null != U, "skuPricePreview can't be null"), n()(null != P, "application can't be null");
+    await m.default.track(v.AnalyticEvents.PAYMENT_FLOW_COMPLETED, G), n()(null != U, "skuPricePreview can't be null"), n()(null != k, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(P.id, _, {
+      await (0, o.purchaseSKU)(k.id, _, {
         expectedAmount: U.amount,
         expectedCurrency: U.currency,
         isGift: y,
@@ -126,7 +126,7 @@ function _(e) {
       to_step: e
     }), e === h.Step.CONFIRM && (F(!1), t()), O(e)
   }, [G, O, t]);
-  return (0, C.usePaymentStepForAuthentication)(A, R, K), (0, l.jsxs)("div", {
+  return (0, C.usePaymentStepForAuthentication)(j, R, K), (0, l.jsxs)("div", {
     className: I.reviewContainer,
     children: [(0, l.jsx)(i.FormSection, {
       children: (0, l.jsx)(i.FormItem, {
@@ -164,7 +164,7 @@ function _(e) {
         r(), (0, b.default)({
           skuId: _,
           analyticsLocations: M,
-          returnRef: w
+          returnRef: H
         })
       },
       children: S.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE

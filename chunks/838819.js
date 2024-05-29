@@ -26,18 +26,18 @@ var l = a("735250"),
   N = a("981632"),
   _ = a("290026"),
   y = a("819640"),
-  j = a("594174"),
-  A = a("292665"),
+  A = a("594174"),
+  j = a("292665"),
   O = a("682864"),
-  k = a("471731"),
+  P = a("471731"),
   R = a("486620"),
-  P = a("626135"),
+  k = a("626135"),
   B = a("74538"),
   M = a("792125"),
   D = a("335131"),
   F = a("328347"),
-  w = a("280773"),
-  H = a("617452"),
+  H = a("280773"),
+  w = a("617452"),
   U = a("223143"),
   W = a("298228"),
   G = a("937510"),
@@ -71,7 +71,7 @@ function ec(e) {
     isGiftEasterEggEnabled: C
   } = e, m = (0, G.usePurchasedProductsSort)(r.products), p = (0, i.groupBy)(m, "type"), g = (0, c.useStateFromStores)([F.default], () => F.default.initialProductSkuId), {
     unifiedProductCatalogEnabled: E
-  } = (0, w.useCollectiblesUnifiedProductCatalogExperiment)({
+  } = (0, H.useCollectiblesUnifiedProductCatalogExperiment)({
     location: "CollectiblesShop"
   }), h = u ? X.default : $.default, b = s.useCallback(e => t => {
     e.skuId === g && (n.current = t.current)
@@ -174,7 +174,7 @@ function ed(e) {
   }) : (0, l.jsxs)(S.default, {
     className: n()((0, M.getThemeClass)(i)),
     toolbar: !0,
-    children: [(0, l.jsx)(k.default, {
+    children: [(0, l.jsx)(P.default, {
       className: eo.logo
     }), (0, l.jsx)(S.default.Title, {
       className: eo.title,
@@ -192,8 +192,8 @@ t.default = function(e) {
     analyticsLocations: i
   } = (0, h.default)([...r, E.default.COLLECTIBLES_SHOP]), m = (0, c.useStateFromStores)([y.default], () => y.default.getLayers().includes(el.Layers.COLLECTIBLES_SHOP)), p = (0, d.useHasAnyModalOpen)(), {
     onClose: g
-  } = (0, q.useCollectiblesShopRouting)(), S = (0, c.useStateFromStores)([j.default], () => j.default.getCurrentUser()), T = B.default.canUseCollectibles(S), N = (0, x.default)("shop_disable_cache"), O = (0, x.default)("shop_include_unpublished"), {
-    categories: k,
+  } = (0, q.useCollectiblesShopRouting)(), S = (0, c.useStateFromStores)([A.default], () => A.default.getCurrentUser()), T = B.default.canUseCollectibles(S), N = (0, x.default)("shop_disable_cache"), O = (0, x.default)("shop_include_unpublished"), {
+    categories: P,
     isFetchingCategories: R,
     error: M
   } = (0, U.default)({
@@ -201,7 +201,7 @@ t.default = function(e) {
     includeUnpublished: O
   });
   (0, _.useReloadProfileEffectWhenConfigsAreMissing)();
-  let w = (0, W.usePurchasedCategoriesSort)(k),
+  let H = (0, W.usePurchasedCategoriesSort)(P),
     G = L.default.useExperiment({
       location: E.default.COLLECTIBLES_SHOP
     }, {
@@ -211,11 +211,11 @@ t.default = function(e) {
       userIsEligible: V
     } = (0, I.useLightningCheckoutEligibility)(),
     z = G.enabled && V,
-    X = (0, H.useShopBundleEnabled)("CollectiblesShop"),
+    X = (0, w.useShopBundleEnabled)("CollectiblesShop"),
     $ = s.useRef(null),
     [ea, ec] = s.useState(!1);
   (0, K.useProductDetailsDeepLinking)({
-    categories: k,
+    categories: P,
     isFetchingCategories: R,
     isLayer: m,
     initialItemCardRef: $
@@ -226,11 +226,11 @@ t.default = function(e) {
     scrollHandler: em
   } = (0, b.usePageScrollPosition)(el.AnalyticEvents.COLLECTIBLES_SHOP_SCROLLED, a);
   s.useEffect(() => {
-    P.default.track(el.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
+    k.default.track(el.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
       location_stack: i,
       source: a,
       page_session_id: ef
-    }), !T && P.default.track(el.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    }), !T && k.default.track(el.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: en.PremiumUpsellTypes.COLLECTIBLES_SHOP,
       location_stack: i
     })
@@ -247,10 +247,10 @@ t.default = function(e) {
     !t && (0, C.setHomeLink)(el.Routes.COLLECTIBLES_SHOP)
   }, [t]), s.useEffect(() => () => {
     (0, D.setCollectiblesCategoryItemsViewed)({
-      categories: [...k.values()],
+      categories: [...P.values()],
       itemTypes: [o.CollectiblesItemType.AVATAR_DECORATION, o.CollectiblesItemType.PROFILE_EFFECT]
     })
-  }, [k]), s.useEffect(() => {
+  }, [P]), s.useEffect(() => {
     if (!t || m || p) return;
     let e = e => {
       e.key === er.KeyboardEventKey.Escape && g()
@@ -312,16 +312,16 @@ t.default = function(e) {
               [eo.pageWithShopBannerHidden]: !t
             }),
             children: [ev && (0, l.jsx)(Z.CollectiblesShopHeaderCarousel, {
-              categories: w,
+              categories: H,
               handleScrollToCategory: ex
-            }), t ? (0, l.jsx)(A.default, {
+            }), t ? (0, l.jsx)(j.default, {
               title: ei.default.Messages.COLLECTIBLES_SHOP,
               ref: t ? eh : void 0
             }) : null, R ? (0, l.jsx)(Q.default, {}) : M ? (0, l.jsx)(Y.default, {
               onRetry: eg
             }) : (0, l.jsx)("div", {
               className: eo.categories,
-              children: w.filter(e => null == e.unpublishedAt || e.unpublishedAt > new Date).filter(e => {
+              children: H.filter(e => null == e.unpublishedAt || e.unpublishedAt > new Date).filter(e => {
                 let {
                   products: t
                 } = e;
