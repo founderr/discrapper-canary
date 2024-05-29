@@ -28,7 +28,7 @@ var u = function() {
     }
   }() : u,
   l = n("322499")(),
-  d = n("429804")(),
+  d = n("79536")(),
   f = Object.getPrototypeOf || (d ? function(e) {
     return e.__proto__
   } : null),
