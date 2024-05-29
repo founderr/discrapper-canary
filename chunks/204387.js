@@ -8,8 +8,8 @@ var a, r, l = t("735250"),
   i = t("470079"),
   n = t("481060"),
   C = t("100527"),
-  o = t("906732"),
-  d = t("626135"),
+  d = t("906732"),
+  o = t("626135"),
   c = t("281494"),
   u = t("687555"),
   f = t("596583"),
@@ -25,13 +25,13 @@ s.default = e => {
     [_, R] = i.useState(new Set),
     {
       analyticsLocations: j
-    } = (0, o.default)([...r, C.default.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+    } = (0, d.default)([...r, C.default.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
   switch (p) {
     case 1:
       s = (0, l.jsx)(u.default, {
         onShare: async e => {
           try {
-            d.default.track(x.AnalyticEvents.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, {
+            o.default.track(x.AnalyticEvents.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, {
               location_stack: j
             }), await (0, c.createReferralTrials)(e.map(e => e.id)), h(2), R(new Set(e))
           } catch {}

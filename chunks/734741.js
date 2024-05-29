@@ -155,11 +155,11 @@ let C = "getWhatsNewBadgeCount",
     let e = R(),
       t = T(),
       n = S();
-    return e ? f.ServerProfilesExperiment.trackExposure({
+    return e ? d.June2024NewAppStylesWhatsNewCardExperiment.trackExposure({
       location: p
     }) : (t && _.ReferralProgramWhatsNewCardExperiment.trackExposure({
       location: p
-    }), n && d.June2024NewAppStylesWhatsNewCardExperiment.trackExposure({
+    }), n && f.ServerProfilesExperiment.trackExposure({
       location: p
     })), e || t || n
   },

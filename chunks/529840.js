@@ -1,7 +1,7 @@
 "use strict";
 t.r(s), t.d(s, {
   default: function() {
-    return o
+    return d
   }
 });
 var a = t("735250");
@@ -12,13 +12,13 @@ var r = t("120356"),
   n = t("204197"),
   C = t("293494");
 
-function o(e) {
+function d(e) {
   var s;
   let {
     user: t,
     checked: r,
-    onChange: o,
-    disabled: d
+    onChange: d,
+    disabled: o
   } = e, {
     avatarSrc: c,
     eventHandlers: u
@@ -32,23 +32,23 @@ function o(e) {
       className: C.user,
       children: [(0, a.jsx)(i.Avatar, {
         className: l()({
-          [C.muted]: d
+          [C.muted]: o
         }),
         src: c,
         "aria-label": f,
         size: i.AvatarSizes.SIZE_32,
         ...u
       }), (0, a.jsx)(i.Text, {
-        color: d ? "text-muted" : "text-normal",
+        color: o ? "text-muted" : "text-normal",
         variant: "text-md/semibold",
         children: f
       })]
     }), (0, a.jsx)("div", {
       className: C.checkbox,
       children: (0, a.jsx)(i.Checkbox, {
-        disabled: d,
+        disabled: o,
         value: r,
-        onChange: (e, s) => o(t, s)
+        onChange: (e, s) => d(t, s)
       })
     })]
   })

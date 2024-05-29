@@ -1,20 +1,20 @@
 "use strict";
-s.r(t), s.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return n
   }
 });
-var l = s("735250");
-s("470079");
-var a = s("689938"),
-  i = s("305944");
+var s = l("735250");
+l("470079");
+var a = l("689938"),
+  i = l("305944");
 
 function n() {
-  return (0, l.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: i.empty,
-    children: [(0, l.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: i.emptyIconStreamerMode
-    }), (0, l.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: i.emptyText,
       children: a.default.Messages.STREAMER_MODE_ENABLED
     })]

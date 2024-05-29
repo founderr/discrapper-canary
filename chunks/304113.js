@@ -1,30 +1,30 @@
 "use strict";
-s.r(t), s.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return r
   }
 });
-var l = s("735250");
-s("470079");
-var a = s("447452"),
-  i = s("910364"),
-  n = s("107889");
+var s = l("735250");
+l("470079");
+var a = l("447452"),
+  i = l("910364"),
+  n = l("107889");
 
 function r(e) {
   let {
     location: t,
-    user: s,
+    user: l,
     ...r
   } = e, {
     basicsEnabled: o
   } = (0, a.useSimplifiedProfileExperiment)({
     location: t
   });
-  return !o || s.bot || s.isNonUserBot() || s.isClyde() ? (0, l.jsx)(i.default, {
+  return !o || l.bot || l.isNonUserBot() || l.isClyde() ? (0, s.jsx)(i.default, {
     ...r,
-    user: s
-  }) : (0, l.jsx)(n.default, {
+    user: l
+  }) : (0, s.jsx)(n.default, {
     ...r,
-    user: s
+    user: l
   })
 }
