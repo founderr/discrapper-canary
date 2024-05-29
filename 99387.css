@@ -99380,12 +99380,12 @@ div.content_aac020 {
     padding-bottom: 12px
 }
 
-.priceTag__1abdb {
+.priceTag__1abdb,
+.priceTagContainer__84ab9 {
     margin-top: 24px
 }
 
-.priceTagContainer__84ab9 {
-    margin-top: 24px;
+.collectibleInfoContainer_a9bb77 .priceTagContainer__84ab9 {
     display: flex;
     flex-direction: column;
     gap: 4px;
