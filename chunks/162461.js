@@ -167,4 +167,18 @@ function E(e) {
     autoTrackExposure: !0
   });
   return t
-}
+}(0, i.createExperiment)({
+  kind: "user",
+  id: "2024-05_content_inventory_games_rich_presence",
+  label: "Content Inventory: Rich Presence for Games",
+  defaultConfig: {
+    enabled: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "Enabled",
+    config: {
+      enabled: !0
+    }
+  }]
+})
