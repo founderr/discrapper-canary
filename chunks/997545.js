@@ -483,6 +483,7 @@ class L extends E.default {
       s = this.videoQualityManager.getQuality();
     (!T.VideoQuality.equals(r, s.capture) || s.bitrateMax !== i) && (this.videoQualityManager.setGoliveQuality({
       capture: r,
+      encode: r,
       bitrateMax: i
     }), this.videoStreamParameters.length > 0 && (this.videoStreamParameters[0].maxResolution = {
       type: 0 === e && 0 === t ? O.ResolutionTypes.SOURCE : O.ResolutionTypes.FIXED,
