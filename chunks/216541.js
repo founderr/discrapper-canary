@@ -1,49 +1,54 @@
 "use strict";
 r.r(t), r.d(t, {
   BundlePreview: function() {
-    return d
+    return g
   }
 });
 var a = r("735250");
 r("470079");
 var o = r("120356"),
   l = r.n(o),
-  n = r("481060"),
-  s = r("876917"),
-  i = r("328456"),
-  c = r("616066"),
-  u = r("141169");
-let d = e => {
+  n = r("780384"),
+  s = r("481060"),
+  i = r("410030"),
+  c = r("876917"),
+  u = r("328456"),
+  d = r("616066"),
+  f = r("141169"),
+  C = r("63243"),
+  p = r("244488");
+let g = e => {
   let {
     product: t,
     isPurchased: r,
     isHighlighted: o,
-    user: d,
-    forCollectedModal: f,
-    profileEffectClassName: C
+    user: g,
+    forCollectedModal: v,
+    profileEffectClassName: b
   } = e, {
-    firstProfileEffect: p,
-    firstAvatarDecoration: g
-  } = (0, i.useShopProductItems)(t);
+    firstProfileEffect: m,
+    firstAvatarDecoration: h
+  } = (0, u.useShopProductItems)(t), y = (0, i.default)(), E = (0, n.isThemeLight)(y);
   return (0, a.jsxs)("div", {
-    className: u.container,
-    children: [null != p ? (0, a.jsx)("div", {
-      className: l()(u.profileEffectShopPreview, C),
-      children: (0, a.jsx)(s.default, {
+    className: f.container,
+    children: [null != m ? (0, a.jsx)("div", {
+      className: l()(f.profileEffectShopPreview, b),
+      children: (0, a.jsx)(c.default, {
         isHovering: o,
-        profileEffectId: p.id,
+        profileEffectId: m.id,
         isPurchased: r,
-        forCollectedModal: f,
+        forCollectedModal: v,
         removeSetHeight: !0
       })
-    }) : null, null != g ? (0, a.jsx)("div", {
-      className: u.avatarDecorationPreview,
-      children: (0, a.jsx)(c.AvatarDecorationPreview, {
-        item: g,
-        user: d,
-        avatarSize: n.AvatarSizes.SIZE_120,
+    }) : null, null != h ? (0, a.jsx)("div", {
+      className: f.avatarDecorationPreview,
+      children: (0, a.jsx)(d.AvatarDecorationPreview, {
+        item: h,
+        user: g,
+        avatarSize: s.AvatarSizes.SIZE_120,
         isPurchased: r,
-        isHighlighted: o
+        isHighlighted: o,
+        avatarPlaceholderSrc: E ? p : C
       })
     }) : null]
   })
