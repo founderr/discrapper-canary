@@ -58,7 +58,7 @@ function S(e) {
     guildId: a,
     handleRenderPopout: v,
     className: x.avatar
-  }), j = (0, g.useUsername)(e, v), M = (0, u.getMessageUsernameId)(t), D = (0, u.getMessageTimestampId)(t), F = "".concat(M, " ").concat(D), L = (0, u.getMessageReplyId)(t);
+  }), j = (0, g.renderUsername)(e, v), M = (0, u.getMessageUsernameId)(t), D = (0, u.getMessageTimestampId)(t), F = "".concat(M, " ").concat(D), L = (0, u.getMessageReplyId)(t);
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)(d.H, {
       className: x.__invalid_header,

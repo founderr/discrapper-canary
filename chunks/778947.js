@@ -6,11 +6,11 @@ n.r(t), n.d(t, {
   default: function() {
     return z
   },
+  renderUsername: function() {
+    return H
+  },
   useAvatar: function() {
     return Y
-  },
-  useUsername: function() {
-    return H
   }
 }), n("47120"), n("653041"), n("789020");
 var i = n("735250"),
