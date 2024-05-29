@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   AutomodActionType: function() {
-    return u.AutomodActionType
+    return a.AutomodActionType
   },
   AutomodEventType: function() {
-    return a.AutomodEventType
+    return u.AutomodEventType
   },
   AutomodTriggerType: function() {
-    return E.AutomodTriggerType
+    return r.AutomodTriggerType
   },
   KeywordPreset: function() {
     return _
   },
   MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH: function() {
-    return R
+    return D
   },
   MAX_CHARACTERS_PER_KEYWORD: function() {
     return d
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return i
   },
   MAX_KEYWORDS_PER_KEYWORD_FILTER: function() {
-    return r
+    return E
   },
   MAX_MENTION_SPAM_LIMIT: function() {
     return c
@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return s
   },
   MAX_REGEX_PATTERN_LENGTH: function() {
-    return N
+    return O
   },
   MAX_RULE_NAME_LENGTH: function() {
-    return O
+    return N
   },
   MENTION_SPAM_LIMIT_DEFAULT: function() {
     return M
@@ -52,24 +52,24 @@ n.r(t), n.d(t, {
     return l
   },
   QUARANTINE_USER_ALERT_KEY: function() {
-    return D
+    return R
   }
 });
-var o, _, u = n("401653"),
-  a = n("95930"),
-  E = n("41381");
-(o = _ || (_ = {}))[o.PROFANITY = 1] = "PROFANITY", o[o.SEXUAL_CONTENT = 2] = "SEXUAL_CONTENT", o[o.SLURS = 3] = "SLURS", E.AutomodTriggerType.USER_PROFILE, E.AutomodTriggerType.SERVER_POLICY, E.AutomodTriggerType.MENTION_SPAM, E.AutomodTriggerType.ML_SPAM, E.AutomodTriggerType.DEFAULT_KEYWORD_LIST, E.AutomodTriggerType.KEYWORD;
-let r = 1e3,
+var o, _, a = n("401653"),
+  u = n("95930"),
+  r = n("41381");
+(o = _ || (_ = {}))[o.PROFANITY = 1] = "PROFANITY", o[o.SEXUAL_CONTENT = 2] = "SEXUAL_CONTENT", o[o.SLURS = 3] = "SLURS", r.AutomodTriggerType.USER_PROFILE, r.AutomodTriggerType.SERVER_POLICY, r.AutomodTriggerType.MENTION_SPAM, r.AutomodTriggerType.ML_SPAM, r.AutomodTriggerType.DEFAULT_KEYWORD_LIST, r.AutomodTriggerType.KEYWORD;
+let E = 1e3,
   i = 100,
   A = 1e3,
   s = 10,
   d = 60,
   T = 1,
   l = 1,
-  N = 260,
-  O = 100,
+  O = 260,
+  N = 100,
   I = 1,
   c = 50,
   M = 20,
-  R = 150,
-  D = "automod-profile-quarantine-alert"
+  D = 150,
+  R = "automod-profile-quarantine-alert"

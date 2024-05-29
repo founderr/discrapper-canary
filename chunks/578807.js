@@ -58,8 +58,8 @@ r = this, i = function(e, t, r, i, a, o, s, u, c, l, d, f, p, h, m, g, _, b, v, 
     e6 = el(en),
     e5 = el(er),
     e8 = el(ei),
-    e9 = el(ea),
-    e7 = el(eo),
+    e7 = el(ea),
+    e9 = el(eo),
     te = el(es),
     tt = el(ec);
 
@@ -257,7 +257,7 @@ r = this, i = function(e, t, r, i, a, o, s, u, c, l, d, f, p, h, m, g, _, b, v, 
     tv = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
 
   function ty(e) {
-    var t = e ? "string" == typeof e || e instanceof String ? e7.default(e) : e8.default(e) : new Date;
+    var t = e ? "string" == typeof e || e instanceof String ? e9.default(e) : e8.default(e) : new Date;
     return tE(t) ? t : null
   }
 
@@ -930,7 +930,7 @@ r = this, i = function(e, t, r, i, a, o, s, u, c, l, d, f, p, h, m, g, _, b, v, 
         }
       }]), n
     }(ed.default.Component),
-    t9 = function(e) {
+    t7 = function(e) {
       tl(n, e);
       var t = th(n);
 
@@ -1070,7 +1070,7 @@ r = this, i = function(e, t, r, i, a, o, s, u, c, l, d, f, p, h, m, g, _, b, v, 
         }
       }]), n
     }(ed.default.Component),
-    t7 = function(e) {
+    t9 = function(e) {
       tl(n, e);
       var t = th(n);
 
@@ -1125,7 +1125,7 @@ r = this, i = function(e, t, r, i, a, o, s, u, c, l, d, f, p, h, m, g, _, b, v, 
             r = e.formatWeekNumber(t);
           if (e.props.showWeekNumber) {
             var i = e.props.onWeekSelect ? e.handleWeekClick.bind(tp(e), t, r) : void 0;
-            n.push(ed.default.createElement(t7, {
+            n.push(ed.default.createElement(t9, {
               key: "W",
               weekNumber: r,
               onClick: i,
@@ -1134,7 +1134,7 @@ r = this, i = function(e, t, r, i, a, o, s, u, c, l, d, f, p, h, m, g, _, b, v, 
           }
           return n.concat([0, 1, 2, 3, 4, 5, 6].map(function(n) {
             var r = eb.default(t, n);
-            return ed.default.createElement(t9, {
+            return ed.default.createElement(t7, {
               ariaLabelPrefixWhenEnabled: e.props.chooseDayAriaLabelPrefix,
               ariaLabelPrefixWhenDisabled: e.props.disabledDayAriaLabelPrefix,
               key: r.valueOf(),
@@ -2411,20 +2411,20 @@ r = this, i = function(e, t, r, i, a, o, s, u, c, l, d, f, p, h, m, g, _, b, v, 
               lastPreSelectChange: ng
             });
             var a, o, s, u, c, l, d, f, p = (a = i.target.value, o = r.props.dateFormat, s = r.props.locale, u = r.props.strictParsing, c = r.props.minDate, l = null, d = tL(s) || tL(tI()), f = !0, Array.isArray(o) ? (o.forEach(function(e) {
-              var t = e9.default(a, e, new Date, {
+              var t = e7.default(a, e, new Date, {
                 locale: d
               });
               u && (f = tE(t, c) && a === em.default(t, e, {
                 awareOfUnicodeTokens: !0
               })), tE(t, c) && f && (l = t)
-            }), l) : (l = e9.default(a, o, new Date, {
+            }), l) : (l = e7.default(a, o, new Date, {
               locale: d
             }), u ? f = tE(l) && a === em.default(l, o, {
               awareOfUnicodeTokens: !0
             }) : tE(l) || (o = o.match(tv).map(function(e) {
               var t = e[0];
               return "p" === t || "P" === t ? d ? (0, tb[t])(e, d.formatLong) : t : e
-            }).join(""), a.length > 0 && (l = e9.default(a, o.slice(0, a.length), new Date)), tE(l) || (l = new Date(a))), tE(l) && f ? l : null));
+            }).join(""), a.length > 0 && (l = e7.default(a, o.slice(0, a.length), new Date)), tE(l) || (l = new Date(a))), tE(l) && f ? l : null));
             !p && i.target.value || r.setSelected(p, i, !0)
           }
         }), tu(tp(r), "handleSelect", function(e, t, n) {
