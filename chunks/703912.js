@@ -15,11 +15,11 @@ var a = n("664751"),
   c = n("812206"),
   f = n("979200"),
   E = n("489863"),
-  C = n("166148"),
-  h = n("307643"),
-  _ = n("973616"),
-  S = n("594174"),
-  m = n("630388"),
+  h = n("166148"),
+  _ = n("307643"),
+  C = n("973616"),
+  m = n("594174"),
+  S = n("630388"),
   p = n("700785"),
   I = n("996106"),
   g = n("186901"),
@@ -35,11 +35,11 @@ async function N(e, t, n) {
     code_challenge: R,
     code_challenge_method: O,
     state: L,
-    nonce: P,
-    scope: y,
-    permissions: M,
-    guild_id: D,
-    channel_id: x,
+    nonce: M,
+    scope: x,
+    permissions: P,
+    guild_id: y,
+    channel_id: D,
     prompt: b,
     disable_guild_select: U,
     integration_type: j
@@ -51,11 +51,11 @@ async function N(e, t, n) {
     errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
   let G = [];
-  if ("string" == typeof y ? G = y.split(" ").filter(e => e.length > 0) : Array.isArray(y) && (G = y), null == S.default.getCurrentUser()) throw new I.default({
+  if ("string" == typeof x ? G = x.split(" ").filter(e => e.length > 0) : Array.isArray(x) && (G = x), null == m.default.getCurrentUser()) throw new I.default({
     errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
-  let w = null !== (l = c.default.getApplication(A)) && void 0 !== l ? l : _.default.createFromServer(await (0, h.fetchApplication)(A)),
-    k = null != w && (0, m.hasFlag)(w.flags, T.ApplicationFlags.EMBEDDED) && (null === (a = w.integrationTypesConfig) || void 0 === a ? void 0 : a[s.ApplicationIntegrationType.USER_INSTALL]) != null;
+  let w = null !== (l = c.default.getApplication(A)) && void 0 !== l ? l : C.default.createFromServer(await (0, _.fetchApplication)(A)),
+    k = null != w && (0, S.hasFlag)(w.flags, T.ApplicationFlags.EMBEDDED) && (null === (a = w.integrationTypesConfig) || void 0 === a ? void 0 : a[s.ApplicationIntegrationType.USER_INSTALL]) != null;
   o = null == j ? k ? s.ApplicationIntegrationType.USER_INSTALL : s.ApplicationIntegrationType.GUILD_INSTALL : Number(j);
   try {
     u = await (0, E.fetchAuthorization)({
@@ -89,7 +89,7 @@ async function N(e, t, n) {
       errorCode: T.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorization Error: ".concat(e.message || "Unknown Error"))
   }
-  if (b === C.OAuth2Prompts.NONE && null != u && u.authorized && g) try {
+  if (b === h.OAuth2Prompts.NONE && null != u && u.authorized && g) try {
     return (await (0, E.authorize)({
       authorize: !0,
       clientId: A,
@@ -99,7 +99,7 @@ async function N(e, t, n) {
       codeChallenge: R,
       codeChallengeMethod: O,
       state: L,
-      nonce: P,
+      nonce: M,
       integrationType: o
     })).location
   } catch (t) {
@@ -110,10 +110,10 @@ async function N(e, t, n) {
       errorCode: T.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
-  null == n || n(u.application, x);
+  null == n || n(u.application, D);
   let B = p.NONE;
   try {
-    B = i.deserialize(null != M ? M : 0)
+    B = i.deserialize(null != P ? P : 0)
   } catch (e) {}
   return null != u.integration_type && Object.values(s.ApplicationIntegrationType).includes(u.integration_type) && (r = new Map).set(u.integration_type, u), t({
     clientId: A,
@@ -125,8 +125,8 @@ async function N(e, t, n) {
     codeChallenge: R,
     codeChallengeMethod: O,
     state: L,
-    guildId: D,
-    channelId: x,
+    guildId: y,
+    channelId: D,
     prompt: b,
     disableGuildSelect: U,
     disclosures: d,
@@ -158,7 +158,7 @@ function v(e, t) {
     if (e.application.id !== a.id) throw new I.default({
       errorCode: T.RPCErrors.INVALID_CLIENTID
     }, "Application does not match the connection's");
-    let r = S.default.getCurrentUser();
+    let r = m.default.getCurrentUser();
     if (null == r || !s || r.id !== s.id) throw new I.default({
       errorCode: T.RPCErrors.INVALID_TOKEN
     }, "Token does not match current user");

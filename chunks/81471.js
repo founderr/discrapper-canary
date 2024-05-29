@@ -11,11 +11,11 @@ var a = n("735250"),
   c = n("937889"),
   f = n("695346"),
   E = n("496675"),
-  C = n("699516"),
-  h = n("68588"),
-  _ = n("512665"),
-  S = n("868807"),
-  m = n("981631"),
+  h = n("699516"),
+  _ = n("68588"),
+  C = n("512665"),
+  m = n("868807"),
+  S = n("981631"),
   p = n("768760"),
   I = n("689938"),
   g = n("164602"),
@@ -27,7 +27,7 @@ let A = s.memo(function(e) {
     loaded: n,
     error: l,
     message: A
-  } = (0, S.useMessageRequestPreview)(t), N = (0, u.useActiveKeywordFiltersCacheKey)(), v = (0, r.useStateFromStores)([C.default], () => null != A && C.default.isBlocked(A.author.id), [A]), R = (0, r.useStateFromStores)([E.default], () => E.default.can(m.Permissions.MANAGE_MESSAGES, t)), O = f.RenderSpoilers.useSetting(), {
+  } = (0, m.useMessageRequestPreview)(t), N = (0, u.useActiveKeywordFiltersCacheKey)(), v = (0, r.useStateFromStores)([h.default], () => null != A && h.default.isBlocked(A.author.id), [A]), R = (0, r.useStateFromStores)([E.default], () => E.default.can(S.Permissions.MANAGE_MESSAGES, t)), O = f.RenderSpoilers.useSetting(), {
     content: L
   } = s.useMemo(() => (null == A ? void 0 : A.content) != null && "" !== A.content ? (0, c.default)(A, {
     formatInline: !0,
@@ -35,15 +35,15 @@ let A = s.memo(function(e) {
     shouldFilterKeywords: null != N
   }) : {
     content: null
-  }, [A, N]), P = null;
-  if (l) P = (0, a.jsx)(o.Text, {
+  }, [A, N]), M = null;
+  if (l) M = (0, a.jsx)(o.Text, {
     className: g.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
     children: I.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
-    if (null != A && v) P = (0, a.jsx)(o.Text, {
+    if (null != A && v) M = (0, a.jsx)(o.Text, {
       className: g.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
@@ -53,11 +53,11 @@ let A = s.memo(function(e) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, _.renderSingleLineMessage)(A, L, v, i()(g.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
+      } = (0, C.renderSingleLineMessage)(A, L, v, i()(g.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
         iconClass: g.messageContentIcon,
         iconSize: p.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
-      P = null != t ? (0, a.jsx)(o.Text, {
+      M = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: g.messageContent,
@@ -69,18 +69,18 @@ let A = s.memo(function(e) {
         className: g.messageReplacement,
         children: e
       })
-    } else P = (0, a.jsx)(o.Text, {
+    } else M = (0, a.jsx)(o.Text, {
       className: g.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: I.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
-  } else P = null;
-  return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
+  } else M = null;
+  return (0, a.jsx)(_.ObscuredDisplayContext.Provider, {
     value: (0, d.default)(O, R),
     children: (0, a.jsx)(o.FocusBlock, {
       className: g.messageFocusBlock,
-      children: P
+      children: M
     })
   })
 });

@@ -11,11 +11,11 @@ var a = n("392711"),
   c = n("430824"),
   f = n("131951"),
   E = n("19780"),
-  C = n("594174"),
-  h = n("979651"),
-  _ = n("996106"),
-  S = n("914946"),
-  m = n("238679"),
+  h = n("594174"),
+  _ = n("979651"),
+  C = n("996106"),
+  m = n("914946"),
+  S = n("238679"),
   p = n("452426"),
   I = n("295424"),
   g = n("863141"),
@@ -33,10 +33,10 @@ function v(e) {
     },
     socket: a
   } = e, s = d.default.getChannel(n);
-  if (null == s || !(0, S.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new _.default({
+  if (null == s || !(0, m.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(n));
-  if (s.isNSFW() && (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new _.default({
+  if (s.isNSFW() && (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
 }
@@ -50,7 +50,7 @@ function O(e) {
       channel_id: t
     }
   } = e;
-  if (null != t && null == d.default.getChannel(t)) throw new _.default({
+  if (null != t && null == d.default.getChannel(t)) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(t))
 }
@@ -66,7 +66,7 @@ let L = {
           guild_id: t
         }
       } = e;
-      if (null == c.default.getGuild(t)) throw new _.default({
+      if (null == c.default.getGuild(t)) throw new C.default({
         errorCode: A.RPCErrors.INVALID_GUILD
       }, "Invalid guild id: ".concat(t));
       return e => {
@@ -101,7 +101,7 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == d.default.getChannel(t)) throw new _.default({
+      if (null == d.default.getChannel(t)) throw new C.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
@@ -111,13 +111,13 @@ let L = {
         } = e, l = d.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(l.id));
+          r = Object.values(_.default.getVoiceStatesForChannel(l.id));
         return n && s().differenceBy(r, n, e => {
           let {
             userId: t
           } = e;
           return t
-        }).forEach(e => a((0, S.transformVoiceState)(i, l.id, e))), r
+        }).forEach(e => a((0, m.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -134,7 +134,7 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == d.default.getChannel(t)) throw new _.default({
+      if (null == d.default.getChannel(t)) throw new C.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
@@ -144,13 +144,13 @@ let L = {
         } = e, l = d.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(l.id));
+          r = Object.values(_.default.getVoiceStatesForChannel(l.id));
         return s().differenceBy(n, r, e => {
           let {
             userId: t
           } = e;
           return t
-        }).forEach(e => a((0, S.transformVoiceState)(i, l.id, e))), r
+        }).forEach(e => a((0, m.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -167,7 +167,7 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == d.default.getChannel(t)) throw new _.default({
+      if (null == d.default.getChannel(t)) throw new C.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
@@ -177,7 +177,7 @@ let L = {
         } = e, l = d.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(l.id)).map(e => (0, S.transformVoiceState)(i, l.id, e));
+          r = Object.values(_.default.getVoiceStatesForChannel(l.id)).map(e => (0, m.transformVoiceState)(i, l.id, e));
         return s().differenceWith(r, n, s().isEqual).forEach(e => a(e)), r
       }
     }
@@ -191,7 +191,7 @@ let L = {
         prevState: t,
         dispatch: n
       } = e, a = {
-        state: (0, S.getVoiceConnectionState)(E.default.getState()),
+        state: (0, m.getVoiceConnectionState)(E.default.getState()),
         hostname: E.default.getHostname(),
         pings: E.default.getPings(),
         average_ping: E.default.getAveragePing(),
@@ -285,7 +285,7 @@ let L = {
     },
     handler() {}
   },
-  [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: m.activityInstanceConnectedParticipantsUpdateEvent,
+  [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: S.activityInstanceConnectedParticipantsUpdateEvent,
   [A.RPCEvents.THERMAL_STATE_UPDATE]: {
     scope: {
       [T.RPC_SCOPE_CONFIG.ANY]: [T.RPC_AUTHENTICATED_SCOPE]
@@ -321,7 +321,7 @@ let L = {
         prevState: t,
         dispatch: n
       } = e, a = {
-        currentUser: C.default.getCurrentUser()
+        currentUser: h.default.getCurrentUser()
       };
       return null != a.currentUser && (null == t || !(0, i.default)(a, t)) && n((0, g.default)(a.currentUser)), a
     }
@@ -351,14 +351,14 @@ let L = {
       let {
         prevState: a,
         dispatch: l
-      } = e, i = u.default.getStreamerActiveStreamMetadata(), d = (null == i ? void 0 : i.pid) != null ? o.default.getGameForPID(i.pid) : null, c = (null == d ? void 0 : d.id) != null ? r.default.getApplication(d.id) : null, f = null != c ? (0, I.default)(c) : null, E = null == i ? void 0 : i.sourceName, C = {
+      } = e, i = u.default.getStreamerActiveStreamMetadata(), d = (null == i ? void 0 : i.pid) != null ? o.default.getGameForPID(i.pid) : null, c = (null == d ? void 0 : d.id) != null ? r.default.getApplication(d.id) : null, f = null != c ? (0, I.default)(c) : null, E = null == i ? void 0 : i.sourceName, h = {
         active: null != i,
         pid: null !== (t = null == i ? void 0 : i.pid) && void 0 !== t ? t : null,
         application: (n = null != f, n) ? {
           name: E
         } : null
       };
-      return !s().isEqual(C, a) && l(C), C
+      return !s().isEqual(h, a) && l(h), h
     }
   },
   [A.RPCEvents.VIDEO_STATE_UPDATE]: {

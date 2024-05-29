@@ -29,16 +29,16 @@ t.default = () => {
     isFetchingCurrentQuests: t
   } = (0, d.useQuests)({
     fetchPolicy: "cache-and-network"
-  }), s = (0, d.useExpiredQuestsMap)(), I = (0, o.useIsEligibleForConcurrentQuests)({
+  }), s = (0, d.useExpiredQuestsMap)(), g = (0, o.useIsEligibleForConcurrentQuests)({
     location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
-  }), g = n.useMemo(() => e.filter(e => {
+  }), I = n.useMemo(() => e.filter(e => {
     var t, a;
     let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
-  }), [e, s]), N = n.useMemo(() => new Map(g.map(e => [e.id, e])), [g]), h = n.useRef(!1), C = n.useRef([]), O = n.useMemo(() => {
-    if (0 === g.length) return [];
+  }), [e, s]), N = n.useMemo(() => new Map(I.map(e => [e.id, e])), [I]), h = n.useRef(!1), C = n.useRef([]), A = n.useMemo(() => {
+    if (0 === I.length) return [];
     if (h.current) return C.current;
-    let e = g.sort((e, t) => {
+    let e = I.sort((e, t) => {
       var s, a, n, l, i, r;
       let o = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
         d = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
@@ -60,36 +60,36 @@ t.default = () => {
       if (f && m) return 0;
       if (f) return -1;
       if (m) return 1;
-      let I = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
-        g = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-      if (I && !T && !o && g && !_ && !S) return 0;
-      if (I && !T && !o) return -1;
-      if (g && !_ && !S) return 1;
+      let g = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
+        I = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
+      if (g && !T && !o && I && !_ && !S) return 0;
+      if (g && !T && !o) return -1;
+      if (I && !_ && !S) return 1;
       let N = o && d,
         h = S && E;
       return N && !h ? 1 : !N && h ? -1 : 0
     }).map(e => e.id);
     return h.current = !0, C.current = e, e
-  }, [g]), A = n.useRef(null), p = n.useMemo(() => {
-    if (null != A.current) return A.current;
-    let e = I ? [{
+  }, [I]), p = n.useRef(null), O = n.useMemo(() => {
+    if (null != p.current) return p.current;
+    let e = g ? [{
       location: u.QuestContent.GIFT_INVENTORY_FOR_YOU,
       title: _.default.Messages.QUESTS_FOR_YOU,
-      questIds: O.filter(e => m(N.get(e)))
+      questIds: A.filter(e => m(N.get(e)))
     }, {
       location: u.QuestContent.GIFT_INVENTORY_OTHER,
       title: _.default.Messages.QUESTS_OTHER,
-      questIds: O.filter(e => !m(N.get(e)))
+      questIds: A.filter(e => !m(N.get(e)))
     }] : [];
-    return A.current = e, e
-  }, [I, O, N]), R = p.every(e => {
+    return p.current = e, e
+  }, [g, A, N]), R = O.every(e => {
     let {
       questIds: t
     } = e;
     return t.length > 0
   });
   n.useEffect(() => {
-    t && (A.current = null, h.current = !1)
+    t && (p.current = null, h.current = !1)
   }, [t]);
   let x = n.useCallback(e => {
     let {
@@ -111,12 +111,12 @@ t.default = () => {
   }, [R, N]);
   return t ? (0, a.jsx)(i.Spinner, {
     className: f.spinner
-  }) : 0 === O.length ? null : (0, a.jsx)(i.FormSection, {
+  }) : 0 === A.length ? null : (0, a.jsx)(i.FormSection, {
     className: f.questsContainer,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsxs)("div", {
         className: f.questsHeading,
-        children: [I && (0, a.jsx)(l.QuestsIcon, {
+        children: [g && (0, a.jsx)(l.QuestsIcon, {
           className: f.questsIcon
         }), (0, a.jsx)(i.Heading, {
           variant: "heading-md/semibold",
@@ -132,7 +132,7 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: f.divider
-      }), I ? p.map((e, t, s) => {
+      }), g ? O.map((e, t, s) => {
         let {
           location: n,
           questIds: l,
@@ -159,7 +159,7 @@ t.default = () => {
           })]
         }, n)
       }) : (0, a.jsx)(x, {
-        questIds: O,
+        questIds: A,
         location: u.QuestContent.GIFT_INVENTORY_FOR_YOU
       })]
     })

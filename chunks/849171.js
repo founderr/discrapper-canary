@@ -27,8 +27,8 @@ var a, l, s = n("735250"),
   I = n("719296"),
   A = n("958185"),
   v = n("100527"),
-  x = n("906732"),
-  N = n("835473"),
+  N = n("906732"),
+  x = n("835473"),
   M = n("522474"),
   R = n("314897"),
   y = n("819640"),
@@ -81,7 +81,7 @@ function w(e) {
   let S = (a = g) > 400 ? 2 : a > 300 ? 1 : 0;
   let [T] = (l = g) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([L.default, R.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, R.default) ? null : L.default.getUser(e.userId)).filter(j.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === r.id)), {
     analyticsLocations: v
-  } = (0, x.default)(), N = (0, c.useAnalyticsContext)(), M = P.default.getName(C.getGuildId(), C.id, null == I ? void 0 : I[0]), y = (0, p.useEmbeddedActivityJoinability)({
+  } = (0, N.default)(), x = (0, c.useAnalyticsContext)(), M = P.default.getName(C.getGuildId(), C.id, null == I ? void 0 : I[0]), y = (0, p.useEmbeddedActivityJoinability)({
     userId: null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: C.id,
     application: r
@@ -120,7 +120,7 @@ function w(e) {
             applicationId: A.applicationId,
             currentEmbeddedApplication: E,
             activityChannelId: C.id,
-            locationObject: N.location,
+            locationObject: x.location,
             embeddedActivitiesManager: _.default,
             analyticsLocations: v
           })
@@ -152,9 +152,9 @@ function k(e) {
     channel: r
   } = e, {
     analyticsLocations: o
-  } = (0, x.default)(v.default.ACTIVITY_TILE), {
+  } = (0, N.default)(v.default.ACTIVITY_TILE), {
     id: d
-  } = t, c = (0, E.default)(), f = (null == c ? void 0 : c.channelId) === r.id && c.applicationId === d, h = (0, C.default)(), [m] = (0, N.default)([d]), {
+  } = t, c = (0, E.default)(), f = (null == c ? void 0 : c.channelId) === r.id && c.applicationId === d, h = (0, C.default)(), [m] = (0, x.default)([d]), {
     url: p
   } = (0, g.default)({
     applicationId: d,
@@ -169,7 +169,7 @@ function k(e) {
       let e = (0, I.default)(c.channelId, c.applicationId);
       (0, T.showPIPEmbed)(e)
     }
-  }, [_, c, O]), (0, s.jsx)(x.AnalyticsLocationProvider, {
+  }, [_, c, O]), (0, s.jsx)(N.AnalyticsLocationProvider, {
     value: o,
     children: (0, s.jsx)("div", {
       className: b.container,

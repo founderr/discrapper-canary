@@ -20,10 +20,10 @@ let d = [],
   E = {
     status: "unloaded"
   },
-  C = {};
-class h extends(a = i.default.Store) {
+  h = {};
+class _ extends(a = i.default.Store) {
   getSearchResult(e) {
-    let t = C[l().v3(JSON.stringify(e))];
+    let t = h[l().v3(JSON.stringify(e))];
     return null == t || t.loadedAt < Date.now() - o.default.Millis.HOUR ? E : t
   }
   hasLoadedStaticClanDiscovery() {
@@ -36,7 +36,7 @@ class h extends(a = i.default.Store) {
     return f
   }
 }
-u(h, "displayName", "ClanDiscoveryStore"), u(h, "persistKey", "ClanDiscoveryStore"), t.default = new h(r.default, {
+u(_, "displayName", "ClanDiscoveryStore"), u(_, "persistKey", "ClanDiscoveryStore"), t.default = new _(r.default, {
   FETCH_STATIC_CLAN_LIST_START: function() {
     f = !0
   },
@@ -47,6 +47,6 @@ u(h, "displayName", "ClanDiscoveryStore"), u(h, "persistKey", "ClanDiscoveryStor
     f = !1
   },
   FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function(e) {
-    C[e.criteriaHash] = e.searchResult
+    h[e.criteriaHash] = e.searchResult
   }
 })

@@ -74,25 +74,25 @@ function c(e, t, s) {
     let r = l - (n - E);
     null == m && (m = r), r < m && (m = r)
   }
-  let I = new n.Histogram,
-    g = null;
+  let g = new n.Histogram,
+    I = null;
   for (let e = 0; e < i.byteLength / r; e++) {
     let t = i.getUint32(4 * (4 * e + 2)),
       s = (i.getUint32(4 * (4 * e + 3)) - (t - E) - m) / 1e3;
-    I.addSample(s), null == g && (g = s), s > g && (g = s)
+    g.addSample(s), null == I && (I = s), s > I && (I = s)
   }
   let N = null != T && null != _ ? (_ - T) / 1e3 : 0,
     h = 1 - u / d,
     C = 8 * c / N,
-    O = 8 * S / N,
-    A = I.getReport([50, 95, 99]);
+    A = 8 * S / N,
+    p = g.getReport([50, 95, 99]);
   return {
     payloadBandwidth: C,
-    networkBandwidth: O,
+    networkBandwidth: A,
     loss: h,
-    iatP50: A.percentiles[50],
-    iatP95: A.percentiles[95],
-    iatP99: A.percentiles[99],
-    iatMax: null != g ? g : 0
+    iatP50: p.percentiles[50],
+    iatP95: p.percentiles[95],
+    iatP99: p.percentiles[99],
+    iatMax: null != I ? I : 0
   }
 }

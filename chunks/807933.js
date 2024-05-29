@@ -11,44 +11,44 @@ var a = n("735250"),
   c = n("741595"),
   f = n("359380"),
   E = n("480222"),
-  C = n("207796"),
-  h = n("316553"),
-  _ = n("689938");
-let S = {
+  h = n("207796"),
+  _ = n("316553"),
+  C = n("689938");
+let m = {
     mass: 1,
     tension: 280,
     friction: 20,
     clamp: !0
   },
-  m = {
-    [C.ClanDiscoveryMode.PLAYSTYLE]: function() {
-      let [e, t] = s.useState(C.useClanDiscoveryUIStore.getState().selectedPlaystyle), n = s.useCallback(() => {
-        null != e && C.useClanDiscoveryUIStore.getState().setSelectedPlaystyle(e)
+  S = {
+    [h.ClanDiscoveryMode.PLAYSTYLE]: function() {
+      let [e, t] = s.useState(h.useClanDiscoveryUIStore.getState().selectedPlaystyle), n = s.useCallback(() => {
+        null != e && h.useClanDiscoveryUIStore.getState().setSelectedPlaystyle(e)
       }, [e]);
       return (0, a.jsx)(E.default, {
         onClose: n,
         children: (0, a.jsx)(c.default, {
-          title: _.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-          description: _.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+          title: C.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+          description: C.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
           handleUpdate: t,
           playstyle: e
         })
       })
     },
-    [C.ClanDiscoveryMode.TRAITS]: function() {
-      let e = (0, C.useClanDiscoveryUIStore)(e => e.game, i.default),
-        t = (0, h.useDiscoveryGameApplicationId)({
+    [h.ClanDiscoveryMode.TRAITS]: function() {
+      let e = (0, h.useClanDiscoveryUIStore)(e => e.game, i.default),
+        t = (0, _.useDiscoveryGameApplicationId)({
           selectedGame: e
         }),
-        [n, l] = s.useState(new Set(C.useClanDiscoveryUIStore.getState().selectedTraits)),
+        [n, l] = s.useState(new Set(h.useClanDiscoveryUIStore.getState().selectedTraits)),
         r = s.useCallback(() => {
-          C.useClanDiscoveryUIStore.getState().setSelectedTraits(Array.from(n))
+          h.useClanDiscoveryUIStore.getState().setSelectedTraits(Array.from(n))
         }, [n]);
       return (0, a.jsx)(E.default, {
         onClose: r,
         children: (0, a.jsx)(f.default, {
-          title: _.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-          description: _.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+          title: C.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+          description: C.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
           handleUpdate: l,
           interests: n,
           requiredGameId: t,
@@ -56,20 +56,20 @@ let S = {
         })
       })
     },
-    [C.ClanDiscoveryMode.GAMES]: function() {
-      let e = (0, C.useClanDiscoveryUIStore)(e => e.game, i.default),
-        t = (0, h.useDiscoveryGameApplicationId)({
+    [h.ClanDiscoveryMode.GAMES]: function() {
+      let e = (0, h.useClanDiscoveryUIStore)(e => e.game, i.default),
+        t = (0, _.useDiscoveryGameApplicationId)({
           selectedGame: e
         }),
-        [n, l] = s.useState(new Set(C.useClanDiscoveryUIStore.getState().selectedGames)),
+        [n, l] = s.useState(new Set(h.useClanDiscoveryUIStore.getState().selectedGames)),
         r = s.useCallback(() => {
-          C.useClanDiscoveryUIStore.getState().setSelectedGames(Array.from(n))
+          h.useClanDiscoveryUIStore.getState().setSelectedGames(Array.from(n))
         }, [n]);
       return (0, a.jsx)(E.default, {
         onClose: r,
         children: (0, a.jsx)(d.default, {
-          title: _.default.Messages.CLAN_DISCOVERY_GAME_TITLE,
-          description: _.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+          title: C.default.Messages.CLAN_DISCOVERY_GAME_TITLE,
+          description: C.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
           requiredGameId: t,
           handleUpdate: l,
           gameApplicationIds: n
@@ -84,7 +84,7 @@ function p(e) {
     state: n,
     cleanUp: i
   } = e, d = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), c = s.useMemo(() => {
-    let e = m[t];
+    let e = S[t];
     return null == e ? null : (0, a.jsx)(e, {})
   }, [t]), f = (0, l.useSpring)({
     from: {
@@ -93,7 +93,7 @@ function p(e) {
     to: {
       opacity: n === o.TransitionStates.YEETED ? 0 : 1
     },
-    config: S,
+    config: m,
     immediate: d,
     onRest: () => {
       n === o.TransitionStates.YEETED && i()
@@ -119,7 +119,7 @@ function g(e, t, n, s) {
 t.default = s.memo(function(e) {
   let {
     mode: t
-  } = e, n = s.useMemo(() => null != m[t] ? [t] : [], [t]);
+  } = e, n = s.useMemo(() => null != S[t] ? [t] : [], [t]);
   return (0, a.jsx)(o.TransitionGroup, {
     items: n,
     renderItem: g,

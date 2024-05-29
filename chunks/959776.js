@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
 var s = n("913527"),
   a = n.n(s),
   i = n("626135"),
-  l = n("981631");
+  r = n("981631");
 
-function r(e, t) {
-  i.default.track(l.AnalyticEvents.AGE_GATE_SUBMITTED, {
+function l(e, t) {
+  i.default.track(r.AnalyticEvents.AGE_GATE_SUBMITTED, {
     dob: 18 > a()().diff(e, "years") ? e.format("YYYY-MM-DD") : null,
     dob_day: e.date(),
     dob_month: e.month() + 1,

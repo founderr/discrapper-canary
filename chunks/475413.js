@@ -12,50 +12,50 @@ var s = n("481060"),
   c = n("36246"),
   f = n("305342"),
   E = n("726324"),
-  C = n("981631"),
-  h = n("689938"),
-  _ = n("82205");
+  h = n("981631"),
+  _ = n("689938"),
+  C = n("82205");
 t.default = e => {
   var t, n;
   let {
-    guild: S
-  } = e, m = (0, l.useGroupListingsForGuild)(S.id)[0];
+    guild: m
+  } = e, S = (0, l.useGroupListingsForGuild)(m.id)[0];
   (0, o.default)({
-    guildId: S.id,
-    groupListingId: null == m ? void 0 : m.id,
-    location: C.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB,
-    relevantSubscriptionListingIds: null == m ? void 0 : m.subscription_listings_ids
+    guildId: m.id,
+    groupListingId: null == S ? void 0 : S.id,
+    location: h.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB,
+    relevantSubscriptionListingIds: null == S ? void 0 : S.subscription_listings_ids
   });
   let {
     activeSubscription: p
-  } = (0, r.default)(null == m ? void 0 : m.id), I = (0, l.useSubscriptionsSettings)(S.id), g = null == I ? void 0 : I.description, {
+  } = (0, r.default)(null == S ? void 0 : S.id), I = (0, l.useSubscriptionsSettings)(m.id), g = null == I ? void 0 : I.description, {
     editStateIds: T
-  } = i.useEditStateIds(null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : null, S.id);
+  } = i.useEditStateIds(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : null, m.id);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(E.default, {
-      title: h.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
-        serverName: S.toString()
+      title: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
+        serverName: m.toString()
       }),
       description: null != g ? g : null,
       coverImageAsset: null !== (n = null == I ? void 0 : I.cover_image_asset) && void 0 !== n ? n : null,
-      guild: S,
-      children: [null != m ? (0, a.jsx)(u.default, {
-        className: _.pendingPlanChangeNotice,
-        groupListingId: m.id,
+      guild: m,
+      children: [null != S ? (0, a.jsx)(u.default, {
+        className: C.pendingPlanChangeNotice,
+        groupListingId: S.id,
         subscription: p
       }) : null, (0, a.jsx)(d.default, {
         subscription: p
       })]
     }), (0, a.jsx)(s.HeadingLevel, {
       children: (0, a.jsx)(c.default, {
-        guildId: S.id,
+        guildId: m.id,
         children: T.map(e => {
           var t;
           return (0, a.jsx)(f.default, {
-            guildId: S.id,
-            groupListingId: null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : "",
+            guildId: m.id,
+            groupListingId: null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : "",
             listingId: e,
-            analyticsLocation: C.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB
+            analyticsLocation: h.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB
           }, e)
         })
       })

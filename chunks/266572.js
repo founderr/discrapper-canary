@@ -12,44 +12,44 @@ var s = n("544891"),
   c = n("580130"),
   f = n("695103"),
   E = n("70956"),
-  C = n("998502"),
-  h = n("996106"),
-  _ = n("186901"),
-  S = n("981631");
-let m = 10 * E.default.Millis.SECOND;
+  h = n("998502"),
+  _ = n("996106"),
+  C = n("186901"),
+  m = n("981631");
+let S = 10 * E.default.Millis.SECOND;
 t.default = {
-  [S.RPCCommands.VALIDATE_APPLICATION]: {
-    scope: _.RPC_LOCAL_SCOPE,
+  [m.RPCCommands.VALIDATE_APPLICATION]: {
+    scope: C.RPC_LOCAL_SCOPE,
     handler(e) {
       let {
         socket: t
       } = e, s = t.application.id;
       try {
-        if (null == s) throw new h.default({
-          errorCode: S.RPCErrors.INVALID_COMMAND
+        if (null == s) throw new _.default({
+          errorCode: m.RPCErrors.INVALID_COMMAND
         }, "No application.");
         let e = u.default.getApplication(s);
-        if (null == e) throw new h.default({
-          errorCode: S.RPCErrors.INVALID_ENTITLEMENT
+        if (null == e) throw new _.default({
+          errorCode: m.RPCErrors.INVALID_ENTITLEMENT
         }, "SKU does not exist.");
         let t = e.primarySkuId;
-        if (null == t) throw new h.default({
-          errorCode: S.RPCErrors.INVALID_ENTITLEMENT
+        if (null == t) throw new _.default({
+          errorCode: m.RPCErrors.INVALID_ENTITLEMENT
         }, "SKU does not exist.");
         return Promise.race([(function(e, t) {
           let n = c.default.isEntitledToSku(d.default.getCurrentUser(), e, t);
           return null != n ? Promise.resolve(n) : (0, r.fetchUserEntitlementsForApplication)(t).then(() => !0 === c.default.isEntitledToSku(d.default.getCurrentUser(), e, t))
         })(t, e.id).then(e => {
-          if (!e) throw new h.default({
-            errorCode: S.RPCErrors.INVALID_ENTITLEMENT
+          if (!e) throw new _.default({
+            errorCode: m.RPCErrors.INVALID_ENTITLEMENT
           }, "User does not have entitlement.")
-        }), (0, l.timeoutPromise)(m).then(() => {
-          throw new h.default({
-            errorCode: S.RPCErrors.INVALID_ENTITLEMENT
+        }), (0, l.timeoutPromise)(S).then(() => {
+          throw new _.default({
+            errorCode: m.RPCErrors.INVALID_ENTITLEMENT
           }, "Timed out fetching entitlement.")
         })])
       } catch (e) {
-        throw e.code === S.RPCErrors.INVALID_ENTITLEMENT && (C.default.focus(null, !0), (0, i.openModalLazy)(async () => {
+        throw e.code === m.RPCErrors.INVALID_ENTITLEMENT && (h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, "52004"));
@@ -61,17 +61,17 @@ t.default = {
       }
     }
   },
-  [S.RPCCommands.GET_ENTITLEMENT_TICKET]: {
-    scope: _.RPC_LOCAL_SCOPE,
+  [m.RPCCommands.GET_ENTITLEMENT_TICKET]: {
+    scope: C.RPC_LOCAL_SCOPE,
     handler(e) {
       let {
         socket: t
       } = e, l = t.application.id;
-      if (null == l) throw new h.default({
-        errorCode: S.RPCErrors.INVALID_COMMAND
+      if (null == l) throw new _.default({
+        errorCode: m.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return s.HTTP.post({
-        url: S.Endpoints.ENTITLEMENT_TICKET(l),
+        url: m.Endpoints.ENTITLEMENT_TICKET(l),
         body: {
           test_mode: f.default.inTestModeForApplication(l) || o.default.inDevModeForApplication(l)
         },
@@ -83,7 +83,7 @@ t.default = {
         } = e;
         return t
       }).catch(e => {
-        throw C.default.focus(null, !0), (0, i.openModalLazy)(async () => {
+        throw h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, "52004"));

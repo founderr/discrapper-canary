@@ -14,7 +14,7 @@ let S = !1,
     viewNonce: "",
     regenerateNonce: ""
   };
-class I extends(i = u.default.Store) {
+class g extends(i = u.default.Store) {
   getVerificationKey() {
     return T
   }
@@ -34,12 +34,12 @@ class I extends(i = u.default.Store) {
     return f
   }
 }
-l = "MFAStore", (n = "displayName") in(a = I) ? Object.defineProperty(a, n, {
+l = "MFAStore", (n = "displayName") in(a = g) ? Object.defineProperty(a, n, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[n] = l, t.default = new I(c.default, {
+}) : a[n] = l, t.default = new g(c.default, {
   MFA_ENABLE_SUCCESS: function(e) {
     let {
       token: t,

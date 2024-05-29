@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CenterControlTrayActivityButton: function() {
-    return x
+    return N
   }
 }), n("653041");
 var a = n("735250"),
@@ -27,10 +27,10 @@ var a = n("735250"),
   A = n("921944"),
   v = n("979942");
 
-function x(e) {
+function N(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), x = (0, h.useEmbeddedActivityLaunchability)(t.id), N = (0, h.getEmbeddedActivityLaunchabilityLabel)(x), M = x !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
+  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), N = (0, h.useEmbeddedActivityLaunchability)(t.id), x = (0, h.getEmbeddedActivityLaunchabilityLabel)(N), M = N !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
     isHovered: R,
     setIsHovered: y,
     onMouseEnter: L,
@@ -49,9 +49,9 @@ function x(e) {
       openInPopout: F,
       analyticsLocations: w
     })
-  }, [U.location, w, t, F]), H = [];
-  return !M && H.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.default)(t.id) && !M && H.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(S.default, {
-    contentTypes: H,
+  }, [U.location, w, t, F]), B = [];
+  return !M && B.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.default)(t.id) && !M && B.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(S.default, {
+    contentTypes: B,
     children: e => {
       let {
         visibleContent: n,
@@ -85,8 +85,8 @@ function x(e) {
         children: () => (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(T.default, {
             disabled: M,
-            "aria-label": N,
-            label: D ? void 0 : N,
+            "aria-label": x,
+            label: D ? void 0 : x,
             isActivityActive: P || R,
             className: v.controlButton,
             onClick: () => {

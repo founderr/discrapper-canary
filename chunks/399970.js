@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return I
   }
 }), s("47120");
 var a, n, l = s("735250"),
@@ -17,22 +17,22 @@ var a, n, l = s("735250"),
   _ = s("689938"),
   f = s("737646"),
   m = s("611273");
-let I = /^\d+$|^$/;
+let g = /^\d+$|^$/;
 (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
 
-function g(e) {
+function I(e) {
   let {
     onClose: t,
     transitionState: s
   } = e, {
     authorizedApplicationId: a,
     authorizationError: n,
-    authorizing: g
+    authorizing: I
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     authorizedApplicationId: S.default.testModeApplicationId,
     authorizationError: S.default.error,
     authorizing: S.default.isFetchingAuthorization
-  })), [N, h] = i.useState(null != a ? a : ""), [C, O] = i.useState("8080"), [A, p] = i.useState("localhost"), R = (0, T.useUID)(), x = I.test(N);
+  })), [N, h] = i.useState(null != a ? a : ""), [C, A] = i.useState("8080"), [p, O] = i.useState("localhost"), R = (0, T.useUID)(), x = g.test(N);
   async function M() {
     u.resetError();
     let e = function(e, t, s) {
@@ -43,13 +43,13 @@ function g(e) {
         case "proxy":
           return (0, c.default)(s)
       }
-    }(A, C, N);
+    }(p, C, N);
     null != await u.authorizeAndSetTestModeApplication(N, e) && t()
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
-  let L = null != a && a === N,
-    D = L ? function() {
-      u.reset(), h(""), p(null)
+  let v = null != a && a === N,
+    L = v ? function() {
+      u.reset(), h(""), O(null)
     } : M;
   return (0, l.jsxs)(o.ModalRoot, {
     "aria-labelledby": R,
@@ -76,7 +76,7 @@ function g(e) {
         children: n
       }), (0, l.jsx)("form", {
         onSubmit: e => {
-          e.preventDefault(), D()
+          e.preventDefault(), L()
         },
         children: (0, l.jsxs)(E.default, {
           direction: E.default.Direction.VERTICAL,
@@ -92,14 +92,14 @@ function g(e) {
               onChange: function(e) {
                 h(e)
               },
-              disabled: g
+              disabled: I
             })
           }), (0, l.jsx)(o.FormItem, {
             className: f.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
               isDisabled: !x || "" === N,
-              value: A,
+              value: p,
               options: [{
                 value: "localhost",
                 label: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
@@ -110,26 +110,26 @@ function g(e) {
                 key: "proxy"
               }],
               onChange: function(e) {
-                p(e)
+                O(e)
               },
               placeholder: "URL Origin Type"
             })
-          }), "localhost" !== A ? null : (0, l.jsx)(o.FormItem, {
+          }), "localhost" !== p ? null : (0, l.jsx)(o.FormItem, {
             className: f.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
               value: C,
               maxLength: 5,
-              onChange: e => O(e),
-              disabled: g
+              onChange: e => A(e),
+              disabled: I
             })
           }), (0, l.jsx)(o.Button, {
-            submitting: g,
+            submitting: I,
             type: "submit",
-            disabled: !x || 0 === N.length || "localhost" === A && 0 === C.length,
-            color: L ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-            children: L ? _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+            disabled: !x || 0 === N.length || "localhost" === p && 0 === C.length,
+            color: v ? o.Button.Colors.RED : o.Button.Colors.GREEN,
+            children: v ? _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]
         })
       })]

@@ -1,39 +1,39 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var n = s("35148"),
-  l = s("266685"),
-  i = s("213595");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("35148"),
+  l = n("266685"),
+  i = n("213595");
 t.default = function(e) {
   let {
     expandedContentRef: t,
-    expansionSpring: s,
+    expansionSpring: n,
     isExpanded: r,
-    isExpansionAnimationComplete: u,
-    onCtxMenuOpened: o,
+    isExpansionAnimationComplete: o,
+    onCtxMenuOpened: u,
     onCtxMenuClosed: d,
     onCtxMenuSelection: c,
-    quest: E,
-    useReducedMotion: _
+    quest: f,
+    useReducedMotion: E
   } = e;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(n.default, {
+    children: [(0, a.jsx)(s.default, {
       className: i.content,
-      expansionSpring: s,
+      expansionSpring: n,
       isExpanded: r,
-      isExpansionAnimationComplete: u,
-      quest: E,
-      useReducedMotion: _
+      isExpansionAnimationComplete: o,
+      quest: f,
+      useReducedMotion: E
     }), (0, a.jsx)(l.default, {
       className: i.content,
-      onCtxMenuOpen: o,
+      onCtxMenuOpen: u,
       onCtxMenuClose: d,
       onCtxMenuSelect: c,
       isExpanded: r,
-      isExpansionAnimationComplete: u,
-      quest: E,
-      useReducedMotion: _,
+      isExpansionAnimationComplete: o,
+      quest: f,
+      useReducedMotion: E,
       ref: t
     })]
   })

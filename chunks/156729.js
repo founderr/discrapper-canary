@@ -14,8 +14,8 @@ var a, n = s("735250"),
   _ = s("351402"),
   f = s("823379"),
   m = s("464179"),
-  I = s("211667"),
-  g = s("244526"),
+  g = s("211667"),
+  I = s("244526"),
   N = s("689938"),
   h = s("374728");
 
@@ -27,10 +27,10 @@ function C(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let O = {
+let A = {
   IS_DEFAULT: "isDefault"
 };
-class A extends(a = l.PureComponent) {
+class p extends(a = l.PureComponent) {
   componentWillUnmount() {
     c.default.wait(() => {
       (0, S.clearUpdatePaymentSourceError)(), (0, S.clearRemovePaymentSourceError)()
@@ -84,7 +84,7 @@ class A extends(a = l.PureComponent) {
         className: h.sectionHeader,
         variant: "text-sm/normal",
         children: N.default.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
-      }), (0, n.jsx)(I.default, {
+      }), (0, n.jsx)(g.default, {
         expirationDate: s,
         onCardInfoChange: this.handleExpirationDateUpdate,
         error: this.props.updateError
@@ -163,7 +163,7 @@ class A extends(a = l.PureComponent) {
         noValidate: !0,
         children: [this.renderError(), (0, n.jsxs)("div", {
           className: h.__invalid_paymentSection,
-          children: [(0, n.jsx)(g.default, {
+          children: [(0, n.jsx)(I.default, {
             paymentSource: e,
             isDefault: t,
             isForSubscription: l,
@@ -180,9 +180,9 @@ class A extends(a = l.PureComponent) {
             }) : N.default.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
           })]
         }), this.renderCardExpirationSection(), this.renderBillingAddressSection(), (0, n.jsx)(u.Checkbox, {
-          name: O.IS_DEFAULT,
+          name: A.IS_DEFAULT,
           value: i,
-          onChange: (e, t) => this.handleFieldChange(t, O.IS_DEFAULT),
+          onChange: (e, t) => this.handleFieldChange(t, A.IS_DEFAULT),
           type: u.Checkbox.Types.INVERTED,
           className: h.defaultSection,
           children: (0, n.jsx)(u.Text, {
@@ -270,11 +270,11 @@ class A extends(a = l.PureComponent) {
     }
   }
 }
-C(A, "defaultProps", {
+C(p, "defaultProps", {
   onDelete: () => {},
   onSubmit: () => {},
   onCancel: () => {}
 }), t.default = d.default.connectStores([_.default], () => ({
   updateError: _.default.editSourceError,
   removeError: _.default.removeSourceError
-}))(A)
+}))(p)

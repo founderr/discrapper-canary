@@ -1,29 +1,29 @@
     "use strict";
-    t.r(a), t.d(a, {
+    a.r(t), a.d(t, {
       default: function() {
-        return c
+        return n
       }
     });
-    var d = t("69580");
+    var d = a("69580");
 
-    function c(e) {
-      var a, t, c, n;
+    function n(e) {
+      var t, a, n, c;
       let i = null == e ? void 0 : e.get("client_id"),
-        f = null == e ? void 0 : null === (a = e.get("scope")) || void 0 === a ? void 0 : a.split(" "),
-        o = null == e ? void 0 : e.get("state"),
-        r = null == e ? void 0 : e.get("redirect_uri"),
+        o = null == e ? void 0 : null === (t = e.get("scope")) || void 0 === t ? void 0 : t.split(" "),
+        r = null == e ? void 0 : e.get("state"),
+        f = null == e ? void 0 : e.get("redirect_uri"),
         l = null == e ? void 0 : e.get("response_type"),
-        s = null !== (t = null == e ? void 0 : e.get("nonce")) && void 0 !== t ? t : void 0,
-        b = null !== (c = null == e ? void 0 : e.get("code_challenge")) && void 0 !== c ? c : void 0,
-        u = null !== (n = null == e ? void 0 : e.get("code_challenge_method")) && void 0 !== n ? n : void 0;
-      return null == i || null == f || null == o || null == r || null == l || ((0, d.openOAuth2Modal)({
+        s = null !== (a = null == e ? void 0 : e.get("nonce")) && void 0 !== a ? a : void 0,
+        u = null !== (n = null == e ? void 0 : e.get("code_challenge")) && void 0 !== n ? n : void 0,
+        b = null !== (c = null == e ? void 0 : e.get("code_challenge_method")) && void 0 !== c ? c : void 0;
+      return null == i || null == o || null == r || null == f || null == l || ((0, d.openOAuth2Modal)({
         clientId: i,
-        scopes: f,
-        redirectUri: r,
-        state: o,
+        scopes: o,
+        redirectUri: f,
+        state: r,
         responseType: l,
         nonce: s,
-        codeChallenge: b,
-        codeChallengeMethod: u
+        codeChallenge: u,
+        codeChallengeMethod: b
       }), !0)
     }

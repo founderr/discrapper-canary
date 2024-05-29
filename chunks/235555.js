@@ -11,12 +11,12 @@ var a = n("735250"),
   c = n("768419"),
   f = n("831506"),
   E = n("699516"),
-  C = n("594174"),
-  h = n("643126"),
-  _ = n("823379"),
-  S = n("689938");
+  h = n("594174"),
+  _ = n("643126"),
+  C = n("823379"),
+  m = n("689938");
 
-function m(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -37,7 +37,7 @@ class p extends s.PureComponent {
       host: t,
       party: n
     } = this.props;
-    return this.hasParty(n) && null != e ? (0, a.jsx)(h.default, {
+    return this.hasParty(n) && null != e ? (0, a.jsx)(_.default, {
       currentUser: e,
       host: t,
       party: n,
@@ -47,7 +47,7 @@ class p extends s.PureComponent {
     }) : null
   }
   constructor(...e) {
-    super(...e), m(this, "handleUserContextMenu", (e, t) => {
+    super(...e), S(this, "handleUserContextMenu", (e, t) => {
       (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -57,28 +57,28 @@ class p extends s.PureComponent {
           user: t
         })
       })
-    }), m(this, "renderOverflowPopout", () => {
+    }), S(this, "renderOverflowPopout", () => {
       let {
         party: e
       } = this.props;
       return (0, a.jsx)(u.default, {
         party: e,
-        header: S.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
+        header: m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
           count: e.length
         })
       })
     })
   }
 }
-t.default = r.default.connectStores([c.default, C.default, E.default, f.default], () => {
+t.default = r.default.connectStores([c.default, h.default, E.default, f.default], () => {
   let e, t;
   let n = c.default.getSyncingWith(),
     a = c.default.getActivity(),
-    s = C.default.getCurrentUser(),
+    s = h.default.getCurrentUser(),
     l = [];
-  if (null != n ? (e = C.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
+  if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
     var r;
-    l = i()(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => C.default.getUser(e)).filter(_.isNotNullish).orderBy([t => null == e || e.id === t.id, e => E.default.isFriend(e.id)], ["desc", "desc"]).value()
+    l = i()(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(C.isNotNullish).orderBy([t => null == e || e.id === t.id, e => E.default.isFriend(e.id)], ["desc", "desc"]).value()
   }
   return {
     currentUser: s,

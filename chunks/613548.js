@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return H
   }
 }), n("653041");
 var a = n("735250"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("616286"),
   A = n("961048"),
   v = n("179424"),
-  x = n("786915"),
-  N = n("975146"),
+  N = n("786915"),
+  x = n("975146"),
   M = n("991617"),
   R = n("606304"),
   y = n("502568"),
@@ -42,7 +42,7 @@ var a = n("735250"),
   w = n("689938"),
   k = n("122993");
 
-function H(e) {
+function B(e) {
   let {
     channelId: t,
     guildId: n
@@ -68,7 +68,7 @@ function H(e) {
   })
 }
 
-function G(e) {
+function H(e) {
   let {
     inPopout: t,
     channel: n,
@@ -84,18 +84,18 @@ function G(e) {
     selectedParticipant: j.default.getSelectedParticipant(g),
     voiceParticipantsHidden: j.default.getVoiceParticipantsHidden(g),
     userParticipantCount: j.default.getUserParticipantCount(g)
-  }), [g]), G = (0, P.default)(n), {
-    available: B,
+  }), [g]), H = (0, P.default)(n), {
+    available: G,
     activated: V,
     hqStreamingState: W
-  } = (0, E.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), Y = B && V && W.hqStreamingIsEnabled, {
+  } = (0, E.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), Y = G && V && W.hqStreamingIsEnabled, {
     preventIdle: z,
     allowIdle: K
   } = (0, _.usePreventIdle)("popup"), Z = [];
-  if (G) {
+  if (H) {
     let e = (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(L.id) : void 0,
       t = (null == L ? void 0 : L.type) === U.ParticipantTypes.ACTIVITY ? L.id : void 0;
-    Z.push((0, a.jsx)(x.default, {
+    Z.push((0, a.jsx)(N.default, {
       className: k.button,
       channel: n,
       applicationId: t,
@@ -104,7 +104,7 @@ function G(e) {
       analyticsLocation: n.type === F.ChannelTypes.GUILD_VOICE ? F.AnalyticsPages.GUILD_CHANNEL : F.AnalyticsPages.DM_CHANNEL
     }, "invite-button"))
   }
-  return R && Z.push((0, a.jsx)(H, {
+  return R && Z.push((0, a.jsx)(B, {
     channelId: g,
     guildId: n.guild_id
   }, "current-speaker")), Z.push((0, a.jsx)(h.default, {
@@ -130,7 +130,7 @@ function G(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.createElement)(N.default, {
+      return (0, l.createElement)(x.default, {
         ...e,
         isActive: n,
         count: w,

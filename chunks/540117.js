@@ -1,18 +1,18 @@
     "use strict";
-    t.r(a);
-    var d = t("735250"),
-      c = t("470079"),
-      n = t("120356"),
-      i = t.n(n),
-      f = t("715702"),
-      o = t("796163"),
-      r = t("961047");
-    class l extends c.Component {
+    a.r(t);
+    var d = a("735250"),
+      n = a("470079"),
+      c = a("120356"),
+      i = a.n(c),
+      o = a("715702"),
+      r = a("796163"),
+      f = a("961047");
+    class l extends n.Component {
       render() {
         return (0, d.jsx)("div", {
-          className: i()(o.app, r.vertical),
-          children: (0, d.jsx)(f.default, {})
+          className: i()(r.app, f.vertical),
+          children: (0, d.jsx)(o.default, {})
         })
       }
     }
-    a.default = l
+    t.default = l

@@ -7,7 +7,7 @@ var s, l, i, r, o = n("442837"),
 let c = null,
   f = !1,
   E = !1;
-class C extends(r = o.default.Store) {
+class h extends(r = o.default.Store) {
   getRecommendedGuilds() {
     return c
   }
@@ -21,12 +21,12 @@ class C extends(r = o.default.Store) {
     return E
   }
 }
-i = "GuildRecommendationsStore", (l = "displayName") in(s = C) ? Object.defineProperty(s, l, {
+i = "GuildRecommendationsStore", (l = "displayName") in(s = h) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new C(u.default, {
+}) : s[l] = i, t.default = new h(u.default, {
   GUILD_RECOMMENDATION_FETCH: function() {
     f = !0
   },

@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("127654"),
   A = n("752305"),
   v = n("951211"),
-  x = n("981631"),
-  N = n("921944"),
+  N = n("981631"),
+  x = n("921944"),
   M = n("489887"),
   R = n("689938"),
   y = n("525187");
@@ -57,7 +57,7 @@ function j() {
   let [n] = (0, m.useGetDismissibleContent)(t);
   return l.useEffect(() => () => {
     n === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
-      dismissAction: N.ContentDismissActionType.TAKE_ACTION
+      dismissAction: x.ContentDismissActionType.TAKE_ACTION
     })
   }, [n]), (0, a.jsx)(p.default, {
     contentTypes: t,
@@ -88,7 +88,7 @@ function P(e) {
     analyticsLocations: U
   } = (0, f.default)();
   l.useEffect(() => {
-    S.default.track(x.AnalyticEvents.OPEN_POPOUT, {
+    S.default.track(N.AnalyticEvents.OPEN_POPOUT, {
       type: "Send Attachment",
       channel_id: t.id,
       guild_id: t.guild_id
@@ -100,16 +100,16 @@ function P(e) {
   }
 
   function w() {
-    S.default.track(x.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, A.toRichValue)("/"))
+    S.default.track(N.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, A.toRichValue)("/"))
   }
 
   function k() {
     b()
   }
 
-  function H() {
+  function B() {
     (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK, {
-      dismissAction: N.ContentDismissActionType.TAKE_ACTION
+      dismissAction: x.ContentDismissActionType.TAKE_ACTION
     }), (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -123,8 +123,8 @@ function P(e) {
     })
   }
 
-  function G() {
-    S.default.track(x.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+  function H() {
+    S.default.track(N.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
       channel_type: t.type,
       channel_id: t.id,
       guild_id: t.guild_id
@@ -132,10 +132,10 @@ function P(e) {
       channel: t,
       guildId: t.guild_id,
       locationObject: {
-        page: t.isPrivate() ? x.AnalyticsPages.DM_CHANNEL : x.AnalyticsPages.GUILD_CHANNEL,
-        section: x.AnalyticsSections.CHANNEL_TEXT_AREA,
-        object: x.AnalyticsObjects.CONTEXT_MENU_ITEM,
-        objectType: x.AnalyticsObjectTypes.ACTIVITY
+        page: t.isPrivate() ? N.AnalyticsPages.DM_CHANNEL : N.AnalyticsPages.GUILD_CHANNEL,
+        section: N.AnalyticsSections.CHANNEL_TEXT_AREA,
+        object: N.AnalyticsObjects.CONTEXT_MENU_ITEM,
+        objectType: N.AnalyticsObjectTypes.ACTIVITY
       },
       openInPopout: !1,
       enableSelectedTextChannelInvite: !0,
@@ -145,14 +145,14 @@ function P(e) {
     })
   }
 
-  function B() {
+  function G() {
     let e = P,
       n = "txt",
       a = "",
       l = P.match(O);
     null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, I.promptToUpload)([(0, T.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, C), _.ComponentDispatch.dispatchToLastSubscribed(x.ComponentActions.CLEAR_TEXT), "" !== a && _.ComponentDispatch.dispatchToLastSubscribed(x.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, C), _.ComponentDispatch.dispatchToLastSubscribed(N.ComponentActions.CLEAR_TEXT), "" !== a && _.ComponentDispatch.dispatchToLastSubscribed(N.ComponentActions.INSERT_TEXT, {
       plainText: a
     })
   }
@@ -189,7 +189,7 @@ function P(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "upload-text-as-file",
             label: l,
-            action: B
+            action: G
           }, "upload-text-as-file");
         case v.AttachmentTypes.CLIPS:
           return (0, a.jsx)(o.MenuItem, {
@@ -201,7 +201,7 @@ function P(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "poll",
             label: l,
-            action: H
+            action: B
           }, "poll");
         case v.AttachmentTypes.INVITE_TO_PLAY_GAME:
           return (0, a.jsx)(o.MenuItem, {
@@ -209,11 +209,11 @@ function P(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(S.default.track(x.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(S.default.track(N.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Join Invite",
                 application_id: n.application_id,
-                location: x.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, x.ActivityActionTypes.JOIN, U))
+                location: N.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), L(n, t, N.ActivityActionTypes.JOIN, U))
             }
           }, "play");
         case v.AttachmentTypes.INVITE_TO_LISTEN:
@@ -222,10 +222,10 @@ function P(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(S.default.track(x.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(S.default.track(N.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
-                location: x.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, x.ActivityActionTypes.LISTEN, U))
+                location: N.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), L(n, t, N.ActivityActionTypes.LISTEN, U))
             }
           }, "listen");
         case v.AttachmentTypes.INVITE_TO_WATCH:
@@ -234,10 +234,10 @@ function P(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(S.default.track(x.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(S.default.track(N.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
-                location: x.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, x.ActivityActionTypes.WATCH, U))
+                location: N.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), L(n, t, N.ActivityActionTypes.WATCH, U))
             }
           }, "watch");
         case v.AttachmentTypes.CREATE_THREAD:
@@ -256,7 +256,7 @@ function P(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "activity",
             label: l,
-            action: G,
+            action: H,
             hint: (0, a.jsx)(j, {})
           }, "activity");
         default:

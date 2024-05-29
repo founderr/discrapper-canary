@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("524437"),
   f = n("952265"),
   E = n("481060"),
-  C = n("493683"),
-  h = n("348600"),
-  _ = n("257968"),
-  S = n("367907"),
-  m = n("770471"),
+  h = n("493683"),
+  _ = n("348600"),
+  C = n("257968"),
+  m = n("367907"),
+  S = n("770471"),
   p = n("158631"),
   I = n("143614"),
   g = n("463119"),
@@ -30,11 +30,11 @@ var a = n("735250"),
   R = n("28476"),
   O = n("880257"),
   L = n("631885"),
-  P = n("457396"),
-  y = n("630571"),
-  M = n("51596"),
-  D = n("905423"),
-  x = n("155409"),
+  M = n("457396"),
+  x = n("630571"),
+  P = n("51596"),
+  y = n("905423"),
+  D = n("155409"),
   b = n("210887"),
   U = n("695346"),
   j = n("283595"),
@@ -49,8 +49,8 @@ var a = n("735250"),
   W = n("158010"),
   K = n("988951"),
   z = n("26290"),
-  q = n("814225"),
-  Q = n("515753"),
+  Q = n("814225"),
+  q = n("515753"),
   Z = n("831218"),
   X = n("339149"),
   J = n("981631"),
@@ -62,16 +62,16 @@ let et = e => {
       ...n
     } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([G.default], () => G.default.getPendingCount()), i = (0, I.default)(), {
       canViewBroadcasts: r
-    } = m.default.useExperiment({
+    } = S.default.useExperiment({
       location: "friends_tab_no_track"
     }), u = (0, p.default)();
-    return (0, a.jsxs)(Q.LinkButton, {
+    return (0, a.jsxs)(q.LinkButton, {
       selected: t,
       route: J.Routes.FRIENDS,
       icon: K.default,
       text: $.default.Messages.FRIENDS,
       onClick: () => {
-        S.default.trackWithMetadata(J.AnalyticEvents.BROADCAST_LIST_VISITED, {
+        m.default.trackWithMetadata(J.AnalyticEvents.BROADCAST_LIST_VISITED, {
           num_active_broadcasts: i.length,
           friends_tab_clicked: !0,
           is_broadcasting: u
@@ -102,7 +102,7 @@ let et = e => {
       hideGameUpdateProgressIndicator: n,
       ...s
     } = e, l = (0, o.useListItem)("library");
-    return (0, a.jsx)(Q.LinkButton, {
+    return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: J.Routes.APPLICATION_LIBRARY,
       icon: V.default,
@@ -122,8 +122,8 @@ let et = e => {
       route: n,
       locationState: s,
       ...l
-    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([b.default], () => b.default.getState().theme), c = (0, _.useActivitiesWhatsNewCount)();
-    return (0, a.jsx)(Q.LinkButton, {
+    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([b.default], () => b.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
+    return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: n,
       icon: F.default,
@@ -154,8 +154,8 @@ let et = e => {
       channelId: s
     } = (0, N.useMessageRequestSidebarState)();
     if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
-    let l = null == s ? void 0 : () => C.default.preload(J.ME, s);
-    return (0, a.jsx)(Q.LinkButton, {
+    let l = null == s ? void 0 : () => h.default.preload(J.ME, s);
+    return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: J.Routes.MESSAGE_REQUESTS,
       icon: Y.default,
@@ -169,7 +169,7 @@ let et = e => {
     let {
       selected: t
     } = e, n = $.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = U.FamilyCenterEnabled.useSetting(), r = (0, O.default)(), [u, d] = s.useState(!0);
-    return i && r ? (0, a.jsx)(Q.LinkButton, {
+    return i && r ? (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: J.Routes.FAMILY_CENTER,
       icon: W.default,
@@ -191,7 +191,7 @@ let et = e => {
     let {
       isParentHovered: t
     } = e, s = (0, L.usePendingRequestCount)();
-    return t ? (0, a.jsx)(Q.CloseButton, {
+    return t ? (0, a.jsx)(q.CloseButton, {
       onClick: () => {
         (0, f.openModalLazy)(async () => {
           let {
@@ -221,7 +221,7 @@ let et = e => {
       }
     })
   },
-  eo = () => (0, M.show)("DM_SEARCH");
+  eo = () => (0, P.show)("DM_SEARCH");
 
 function eu(e) {
   switch (e) {
@@ -244,7 +244,7 @@ let ed = e => {
     homeLink: s,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [d, c] = (0, D.default)(e => {
+  } = e, [d, c] = (0, y.default)(e => {
     let {
       channelId: t,
       path: n
@@ -252,7 +252,7 @@ let ed = e => {
     return [t, n]
   }, r.default), {
     enabled: f
-  } = h.BirthdayActivitiesExperiment.useExperiment({
+  } = _.BirthdayActivitiesExperiment.useExperiment({
     location: "a718d6_2"
   }, {
     autoTrackExposure: !0
@@ -260,7 +260,7 @@ let ed = e => {
   return (0, a.jsxs)("nav", {
     className: ee.privateChannels,
     "aria-label": $.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, a.jsx)(x.default, {
+    children: [(0, a.jsx)(D.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,
@@ -287,7 +287,7 @@ let ed = e => {
       }, "friends"), n && t ? (0, a.jsx)(en, {
         selected: null == c ? null != s && s.startsWith(J.Routes.APPLICATION_LIBRARY) : c.startsWith(J.Routes.APPLICATION_LIBRARY),
         hideGameUpdateProgressIndicator: s === J.Routes.APPLICATION_LIBRARY
-      }, "library") : null, (0, a.jsx)(P.NitroTabButton, {
+      }, "library") : null, (0, a.jsx)(M.NitroTabButton, {
         selected: null == c ? o : c.startsWith(J.Routes.APPLICATION_STORE),
         route: null == l || location.pathname.startsWith(J.Routes.ACTIVITIES) || location.pathname.startsWith(J.Routes.APPLICATION_STORE) ? J.Routes.APPLICATION_STORE : l,
         locationState: {
@@ -318,7 +318,7 @@ let ed = e => {
             object: J.AnalyticsObjects.NAVIGATION_LINK
           }
         }
-      }, "discord-shop"), (0, a.jsx)(y.default, {
+      }, "discord-shop"), (0, a.jsx)(x.default, {
         selected: c === J.Routes.QUEST_HOME || (null == s ? void 0 : s.startsWith(J.Routes.QUEST_HOME)),
         locationState: {
           analyticsSource: {
@@ -338,7 +338,7 @@ function ec() {
   let e = (0, d.useStateFromStores)([B.default], () => B.default.getHomeLink()),
     t = (0, d.useStateFromStores)([k.default], () => {
       if (e === J.Routes.APPLICATION_STORE) return !0;
-      let t = (0, q.getSKUIdFromURL)(e);
+      let t = (0, Q.getSKUIdFromURL)(e);
       if (null != t) {
         var n, a;
         return null !== (a = null === (n = k.default.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== a && a

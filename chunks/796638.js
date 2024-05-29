@@ -89,9 +89,9 @@ function C(e, t) {
       let A = I.filter(u.isNotNullish),
         v = (0, s.keyBy)((0, s.range)(A.length), e => A[e].id);
       r.current = v;
-      let x = [..._, ...A];
-      return null != f && x.push(f), {
-        visibleParticipants: x,
+      let N = [..._, ...A];
+      return null != f && N.push(f), {
+        visibleParticipants: N,
         participantTileWidth: g
       }
     }, [e, t, n]);

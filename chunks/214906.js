@@ -1,61 +1,61 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return M
+    return E
   }
-}), a("47120");
-var n = a("735250");
-a("470079");
-var u = a("913527"),
-  l = a.n(u),
-  s = a("442837"),
-  d = a("481060"),
-  i = a("777861"),
-  r = a("569471"),
-  o = a("346479"),
-  f = a("776568"),
-  c = a("689938");
+}), n("47120");
+var s = n("735250");
+n("470079");
+var a = n("913527"),
+  l = n.n(a),
+  i = n("442837"),
+  r = n("481060"),
+  o = n("777861"),
+  u = n("569471"),
+  d = n("346479"),
+  c = n("776568"),
+  f = n("689938");
 
-function M(e) {
-  let [t, a, u] = (0, s.useStateFromStoresArray)([r.default], () => [r.default.isMuted(e.id), r.default.getMuteConfig(e.id), r.default.hasJoined(e.id)]), M = (0, i.useMutedUntilText)(a);
+function E(e) {
+  let [t, n, a] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.isMuted(e.id), u.default.getMuteConfig(e.id), u.default.hasJoined(e.id)]), E = (0, o.useMutedUntilText)(n);
 
   function _(t) {
-    o.default.setNotificationSettings(e, {
+    d.default.setNotificationSettings(e, {
       muted: t
     })
   }
-  return u ? t ? (0, n.jsx)(d.MenuItem, {
+  return a ? t ? (0, s.jsx)(r.MenuItem, {
     id: "unmute-channel",
-    label: e.isForumPost() ? c.default.Messages.UNMUTE_FORUM_POST : c.default.Messages.UNMUTE_THREAD,
-    subtext: M,
+    label: e.isForumPost() ? f.default.Messages.UNMUTE_FORUM_POST : f.default.Messages.UNMUTE_THREAD,
+    subtext: E,
     action: () => _(!1)
-  }) : (0, n.jsx)(d.MenuItem, {
+  }) : (0, s.jsx)(r.MenuItem, {
     id: "mute-channel",
-    label: e.isForumPost() ? c.default.Messages.MUTE_FORUM_POST : c.default.Messages.MUTE_THREAD,
+    label: e.isForumPost() ? f.default.Messages.MUTE_FORUM_POST : f.default.Messages.MUTE_THREAD,
     action: () => _(!0),
-    children: (0, f.getMuteTimes)().map(t => {
+    children: (0, c.getMuteTimes)().map(t => {
       let {
-        value: a,
-        label: u
+        value: n,
+        label: a
       } = t;
-      return (0, n.jsx)(d.MenuItem, {
-        id: "".concat(a),
-        label: u,
+      return (0, s.jsx)(r.MenuItem, {
+        id: "".concat(n),
+        label: a,
         action: () => (function(t) {
-          let a = t > 0 ? l()().add(t, "second").toISOString() : null;
-          o.default.setNotificationSettings(e, {
+          let n = t > 0 ? l()().add(t, "second").toISOString() : null;
+          d.default.setNotificationSettings(e, {
             muted: !0,
             mute_config: {
               selected_time_window: t,
-              end_time: a
+              end_time: n
             }
           })
-        })(a)
-      }, a)
+        })(n)
+      }, n)
     })
-  }) : (0, n.jsx)(d.MenuItem, {
+  }) : (0, s.jsx)(r.MenuItem, {
     id: "mute-disabled",
-    label: e.isForumPost() ? c.default.Messages.MUTE_FORUM_POST : c.default.Messages.MUTE_THREAD,
+    label: e.isForumPost() ? f.default.Messages.MUTE_FORUM_POST : f.default.Messages.MUTE_THREAD,
     disabled: !0
   })
 }

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   activityInstanceConnectedParticipantsUpdateEvent: function() {
-    return C
+    return h
   },
   subscribeToActivityInstanceConnectedParticipants: function() {
-    return h
+    return _
   }
 });
 var a = n("392711"),
@@ -47,7 +47,7 @@ function f() {
 let E = {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE]
   },
-  C = {
+  h = {
     scope: E,
     handler: () => e => {
       let {
@@ -58,7 +58,7 @@ let E = {
     }
   };
 
-function h(e) {
+function _(e) {
   let t = "EMBEDDED_ACTIVITY_UPDATE",
     n = () => {
       e(f())

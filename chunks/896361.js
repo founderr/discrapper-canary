@@ -1,24 +1,24 @@
     "use strict";
-    t.r(a), t.d(a, {
+    a.r(t), a.d(t, {
       default: function() {
-        return r
+        return f
       }
     });
-    var d = t("735250"),
-      c = t("470079"),
-      n = t("470716"),
-      i = t("613828"),
-      f = t("304445"),
-      o = t("703656");
+    var d = a("735250"),
+      n = a("470079"),
+      c = a("470716"),
+      i = a("613828"),
+      o = a("304445"),
+      r = a("703656");
 
-    function r(e) {
+    function f(e) {
       let {
-        children: a
+        children: t
       } = e;
-      return c.useEffect(() => (f.default.initialize(), () => f.default.cleanup()), []), (0, d.jsx)(n.HelmetProvider, {
+      return n.useEffect(() => (o.default.initialize(), () => o.default.cleanup()), []), (0, d.jsx)(c.HelmetProvider, {
         children: (0, d.jsx)(i.Router, {
-          history: (0, o.getHistory)(),
-          children: a
+          history: (0, r.getHistory)(),
+          children: t
         })
       })
     }

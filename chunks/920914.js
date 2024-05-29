@@ -15,33 +15,33 @@ var a = s("735250"),
   _ = s("23551"),
   f = s("468026"),
   m = s("410030"),
-  I = s("726542"),
-  g = s("122021"),
+  g = s("726542"),
+  I = s("122021"),
   N = s("275759"),
   h = s("231757"),
   C = s("323588"),
-  O = s("605236"),
-  A = s("553795"),
-  p = s("430824"),
+  A = s("605236"),
+  p = s("553795"),
+  O = s("430824"),
   R = s("771845"),
   x = s("246946"),
   M = s("186095"),
-  L = s("797717"),
-  D = s("346656"),
-  P = s("465670"),
-  v = s("692437"),
+  v = s("797717"),
+  L = s("346656"),
+  D = s("465670"),
+  P = s("692437"),
   b = s("507957"),
   j = s("26290"),
   U = s("626135"),
-  G = s("63063"),
+  y = s("63063"),
   F = s("706454"),
-  B = s("349728"),
-  y = s("494620"),
+  G = s("349728"),
+  B = s("494620"),
   k = s("205266"),
-  V = s("216153"),
-  H = s("981631"),
-  w = s("856651"),
-  Y = s("921944"),
+  H = s("216153"),
+  w = s("981631"),
+  Y = s("856651"),
+  V = s("921944"),
   W = s("689938"),
   K = s("220301"),
   z = s("611273");
@@ -54,12 +54,12 @@ let Q = e => {
       isJoining: i,
       joinErrorMessage: o,
       showJoinErrorMessage: d
-    } = (0, r.useStateFromStoresObject)([A.default], () => ({
-      isJoining: A.default.isJoining(l.id),
-      joinErrorMessage: "" === A.default.joinErrorMessage(l.id) ? W.default.Messages.ERROR : A.default.joinErrorMessage(l.id),
-      showJoinErrorMessage: void 0 !== A.default.joinErrorMessage(l.id)
+    } = (0, r.useStateFromStoresObject)([p.default], () => ({
+      isJoining: p.default.isJoining(l.id),
+      joinErrorMessage: "" === p.default.joinErrorMessage(l.id) ? W.default.Messages.ERROR : p.default.joinErrorMessage(l.id),
+      showJoinErrorMessage: void 0 !== p.default.joinErrorMessage(l.id)
     }), [l.id]),
-    u = null != (0, r.useStateFromStores)([p.default], () => p.default.getGuild(l.guild.id), [l.guild.id]);
+    u = null != (0, r.useStateFromStores)([O.default], () => O.default.getGuild(l.guild.id), [l.guild.id]);
   return !u && (n = (0, a.jsx)(c.Button, {
     size: c.ButtonSizes.SMALL,
     onClick: function() {
@@ -73,8 +73,8 @@ let Q = e => {
     className: K.integrationWrapper,
     children: [(0, a.jsxs)("div", {
       className: K.integration,
-      children: [(0, a.jsx)(D.default, {
-        size: D.default.Sizes.SMALL,
+      children: [(0, a.jsx)(L.default, {
+        size: L.default.Sizes.SMALL,
         guild: l.guild,
         className: K.guildIcon
       }), (0, a.jsxs)("div", {
@@ -84,7 +84,7 @@ let Q = e => {
           color: "header-primary",
           children: l.guild.toString()
         }), (0, a.jsx)(c.Anchor, {
-          href: null === (s = I.default.get(l.type)) || void 0 === s ? void 0 : null === (t = s.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(s, l.account),
+          href: null === (s = g.default.get(l.type)) || void 0 === s ? void 0 : null === (t = s.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(s, l.account),
           children: (0, a.jsx)(c.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
@@ -109,20 +109,20 @@ function q(e) {
       theme: _,
       locale: m
     } = e,
-    [O, A] = n.useState(T.friendSync),
-    [p, R] = n.useState(T.visibility),
+    [A, p] = n.useState(T.friendSync),
+    [O, R] = n.useState(T.visibility),
     [x, M] = n.useState(T.metadataVisibility),
-    [D, v] = n.useState(T.showActivity),
+    [L, P] = n.useState(T.showActivity),
     [U, F] = n.useState(null),
-    [Y, z] = n.useState(null),
+    [V, z] = n.useState(null),
     [q, Z] = n.useState(!1),
     [X, J] = n.useState([]),
-    $ = (0, g.useLegacyPlatformType)(T.type),
-    ee = I.default.get($);
+    $ = (0, I.useLegacyPlatformType)(T.type),
+    ee = g.default.get($);
   n.useEffect(() => {
-    A(T.friendSync), R(T.visibility), M(T.metadataVisibility), v(T.showActivity)
+    p(T.friendSync), R(T.visibility), M(T.metadataVisibility), P(T.showActivity)
   }, [T]), n.useEffect(() => {
-    !1 !== T.verified && (null != U && (R(U), E.default.setVisibility(T.type, T.id, U), F(null)), null != Y && (M(Y), E.default.setMetadataVisibility(T.type, T.id, Y), z(null)))
+    !1 !== T.verified && (null != U && (R(U), E.default.setVisibility(T.type, T.id, U), F(null)), null != V && (M(V), E.default.setMetadataVisibility(T.type, T.id, V), z(null)))
   }, [T]);
 
   function et() {
@@ -133,10 +133,10 @@ function q(e) {
   }
 
   function es() {
-    let e = I.default.get(T.type),
+    let e = g.default.get(T.type),
       t = W.default.Messages.DISCONNECT_ACCOUNT_BODY;
-    (0, B.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
-      children: [t, (0, a.jsx)(y.default, {
+    (0, G.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
+      children: [t, (0, a.jsx)(B.default, {
         className: K.infoBox,
         children: W.default.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({
           platformName: e.name
@@ -183,23 +183,23 @@ function q(e) {
   }
 
   function el(e) {
-    A(e), E.default.setFriendSync(T.type, T.id, e)
+    p(e), E.default.setFriendSync(T.type, T.id, e)
   }
 
   function ei(e) {
-    v(e), E.default.setShowActivity(T.type, T.id, e)
+    P(e), E.default.setShowActivity(T.type, T.id, e)
   }
   return (0, a.jsxs)("div", {
     className: K.connection,
     children: [function(e) {
       var t;
-      let s = I.default.get(e.type),
-        n = I.default.get($),
-        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[w.MetadataFields.TWITTER_VERIFIED],
+      let s = g.default.get(e.type),
+        n = g.default.get($),
+        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[Y.MetadataFields.TWITTER_VERIFIED],
         i = null;
-      return s.type === H.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
+      return s.type === w.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
         text: W.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
-        children: e => (0, a.jsx)(L.default, {
+        children: e => (0, a.jsx)(v.default, {
           ...e,
           className: K.connectionAccountLabelVerified,
           color: d.default.unsafe_rawColors.TWITTER.css,
@@ -239,40 +239,40 @@ function q(e) {
               right: -4
             }
           },
-          children: (0, a.jsx)(P.default, {
+          children: (0, a.jsx)(D.default, {
             width: 16,
             height: 16
           })
         })]
       })
-    }(T), (t = T).twoWayLink ? null : t.type === H.PlatformTypes.XBOX ? (0, a.jsx)("div", {
+    }(T), (t = T).twoWayLink ? null : t.type === w.PlatformTypes.XBOX ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
-      children: (0, a.jsx)(V.XboxTwoWayLinkUpsell, {})
-    }) : t.type === H.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
+      children: (0, a.jsx)(H.XboxTwoWayLinkUpsell, {})
+    }) : t.type === w.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
       children: (0, a.jsx)(k.PlayStationTwoWayLinkUpsell, {})
     }) : null, function(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, N.getCreatedAtDate)(s[w.MetadataFields.CREATED_AT], m);
+        l = (0, N.getCreatedAtDate)(s[Y.MetadataFields.CREATED_AT], m);
       switch (e.type) {
-        case H.PlatformTypes.REDDIT:
+        case w.PlatformTypes.REDDIT:
           n = (0, C.generateRedditMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.STEAM:
+        case w.PlatformTypes.STEAM:
           n = (0, C.generateSteamMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.TWITTER:
+        case w.PlatformTypes.TWITTER:
           n = (0, C.generateTwitterMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.EBAY:
+        case w.PlatformTypes.EBAY:
           n = (0, C.generateEbayMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.PAYPAL:
+        case w.PlatformTypes.PAYPAL:
           n = (0, C.generatePaypalMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.TIKTOK:
+        case w.PlatformTypes.TIKTOK:
           n = (0, C.generateTikTokMetadataItems)(s, K.metadataItem)
       }
       null !== l && (null == n && (n = []), null == n || n.push((0, a.jsx)(c.Text, {
@@ -286,7 +286,7 @@ function q(e) {
       let i = X.includes(e.id),
         r = W.default.Messages.REFRESH;
       if (null == n || 0 === n.length) {
-        if (!0 !== I.default.get(e.type).hasMetadata) return null;
+        if (!0 !== g.default.get(e.type).hasMetadata) return null;
         n = [(0, a.jsx)(j.TextBadge, {
           className: K.connectionMetadataUpsellTag,
           text: W.default.Messages.NEW
@@ -294,7 +294,7 @@ function q(e) {
           variant: "text-xs/normal",
           className: K.connectionMetadataUpsellDescription,
           children: W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-            helpdeskUrl: G.default.getArticleURL(H.HelpdeskArticles.CONNECTION_DETAILS)
+            helpdeskUrl: y.default.getArticleURL(w.HelpdeskArticles.CONNECTION_DETAILS)
           })
         }, "label")], r = W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS
       }
@@ -316,19 +316,19 @@ function q(e) {
         className: K.metadataContainer,
         children: n
       })
-    }(T), (s = ee, H.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
+    }(T), (s = ee, w.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: O,
+      value: A,
       onChange: el,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
         children: W.default.Messages.SYNC_FRIENDS
       })
-    })), H.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
+    })), w.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: D,
+      value: L,
       onChange: ei,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
@@ -336,12 +336,12 @@ function q(e) {
           platform: s.name
         })
       })
-    })), (null === (l = I.default.get(T.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
+    })), (null === (l = g.default.get(T.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: 1 === x,
       onChange: en,
-      disabled: 1 !== p || null == T.metadata,
+      disabled: 1 !== O || null == T.metadata,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
         children: W.default.Messages.DISPLAY_DETAILS_ON_PROFILE
@@ -353,7 +353,7 @@ function q(e) {
         children: [(0, a.jsx)(c.FormSwitch, {
           className: K.connectionOptionSwitch,
           hideBorder: !0,
-          value: 1 === p,
+          value: 1 === O,
           onChange: ea,
           children: (0, a.jsx)(c.Text, {
             variant: "text-sm/semibold",
@@ -392,8 +392,8 @@ function q(e) {
 
 function Z() {
   return n.useEffect(() => () => {
-    (0, O.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
-      dismissAction: Y.ContentDismissActionType.AUTO
+    (0, A.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
+      dismissAction: V.ContentDismissActionType.AUTO
     })
   }, []), (0, a.jsxs)("div", {
     className: K.connectContainer,
@@ -406,7 +406,7 @@ function Z() {
       variant: "text-xs/normal",
       color: "header-secondary",
       children: W.default.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
-        privacyPolicyUrl: H.MarketingURLs.PRIVACY
+        privacyPolicyUrl: w.MarketingURLs.PRIVACY
       })
     }), (0, a.jsx)(X, {})]
   })
@@ -414,10 +414,10 @@ function Z() {
 
 function X() {
   function e(e) {
-    let t = I.default.get(e);
+    let t = g.default.get(e);
     (0, h.default)({
       platformType: t.type
-    }), U.default.track(H.AnalyticEvents.ACCOUNT_LINK_STEP, {
+    }), U.default.track(w.AnalyticEvents.ACCOUNT_LINK_STEP, {
       previous_step: "desktop connections",
       current_step: "desktop oauth",
       platform_type: t.type
@@ -430,7 +430,7 @@ function X() {
       onComplete: e
     })
   }
-  let s = (0, g.usePlatforms)(),
+  let s = (0, I.usePlatforms)(),
     n = (0, c.useRedesignIconContext)().enabled ? 24 : 18;
   return (0, a.jsxs)("div", {
     className: K.connectionsContainer,
@@ -455,7 +455,7 @@ function X() {
               type: "button",
               onClick: t,
               "aria-label": W.default.Messages.ADD_NEW_CONNECTION,
-              children: (0, a.jsx)(v.default, {
+              children: (0, a.jsx)(P.default, {
                 height: n,
                 width: n,
                 "aria-label": W.default.Messages.CONNECTIONS_VIEW_MORE
@@ -490,7 +490,7 @@ function J(e) {
       note: W.default.Messages.CONNECTED_ACCOUNTS_NONE,
       children: W.default.Messages.CONNECTED_ACCOUNTS_NONE_TITLE
     })]
-  }) : l.filter(e => I.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(q, {
+  }) : l.filter(e => g.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(q, {
     theme: i,
     account: e,
     locale: r,
@@ -508,8 +508,8 @@ function J(e) {
 }
 t.default = () => {
   let e = (0, r.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
-    t = (0, r.useStateFromStores)([A.default], () => A.default.isFetching()),
-    s = (0, r.useStateFromStores)([A.default], () => A.default.getAccounts()),
+    t = (0, r.useStateFromStores)([p.default], () => p.default.isFetching()),
+    s = (0, r.useStateFromStores)([p.default], () => p.default.getAccounts()),
     l = (0, m.default)();
   (0, r.useStateFromStores)([R.default], () => R.default.getFlattenedGuildIds());
   let i = (0, r.useStateFromStores)([F.default], () => F.default.locale);

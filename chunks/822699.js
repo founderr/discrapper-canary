@@ -16,9 +16,9 @@ var s = n("735250"),
   p = n("761305"),
   h = n("698177"),
   T = n("409059"),
-  N = n("962220"),
-  g = n("637776"),
-  m = n("264229"),
+  g = n("962220"),
+  m = n("637776"),
+  N = n("264229"),
   A = n("677760"),
   S = n("314897"),
   v = n("828695"),
@@ -34,16 +34,16 @@ var s = n("735250"),
   U = n("721751"),
   b = n("718182"),
   B = n("223543"),
-  y = n("73906"),
-  G = n("299852"),
+  G = n("73906"),
+  y = n("299852"),
   F = n("39514"),
   V = n("236446"),
   k = n("9325"),
   w = n("344295"),
   H = n("781428"),
   Y = n("209411"),
-  W = n("649156"),
-  K = n("423527"),
+  K = n("649156"),
+  W = n("423527"),
   z = n("424044"),
   J = n("479495"),
   X = n("881317"),
@@ -58,17 +58,17 @@ let $ = (0, j.default)(H.default),
   en = (0, j.default)(V.default),
   es = (0, j.default)(F.default),
   ea = (0, j.default)(A.default),
-  el = (0, j.default)(K.default),
+  el = (0, j.default)(W.default),
   ei = (0, j.default)(b.default),
   er = (0, j.default)(B.default),
   eu = (0, j.default)(Z.default),
   eo = (0, j.default)(h.default),
   ed = (0, j.default)(J.default),
-  ec = (0, j.default)(G.default),
+  ec = (0, j.default)(y.default),
   ef = (0, j.default)(p.default),
-  eE = (0, j.default)(g.default),
-  eI = (0, j.default)(y.default),
-  e_ = (0, j.default)(W.default),
+  eE = (0, j.default)(m.default),
+  eI = (0, j.default)(G.default),
+  e_ = (0, j.default)(K.default),
   ep = (0, j.default)(X.default),
   eh = (0, j.default)(z.default);
 class eT extends a.PureComponent {
@@ -105,7 +105,7 @@ class eT extends a.PureComponent {
       isAuthenticated: n
     } = this.props;
     null != e && (!t && n && d.default.getExperiments(!0), R.default.track(q.AnalyticEvents.INVITE_OPENED, {
-      invite_code: (0, m.parseInviteCodeFromInviteKey)(e),
+      invite_code: (0, N.parseInviteCodeFromInviteKey)(e),
       load_time: P.default.getTimeSinceNavigationStart()
     }, {
       flush: !0
@@ -154,7 +154,7 @@ class eT extends a.PureComponent {
       load_time: P.default.getTimeSinceNavigationStart()
     }, {
       flush: !0
-    }), N.default.resolveGuildTemplate(e), N.default.openNativeAppModal(e))
+    }), g.default.resolveGuildTemplate(e), g.default.openNativeAppModal(e))
   }
   resolveGiftCode() {
     let {
@@ -220,7 +220,7 @@ class eT extends a.PureComponent {
             },
             location: a,
             transitionTo: l
-          } = e, i = (0, m.generateInviteKeyFromUrlParams)(t, a.search);
+          } = e, i = (0, N.generateInviteKeyFromUrlParams)(t, a.search);
           return r.isMobile || r.isTablet ? (0, s.jsx)(ea, {
             inviteKey: i,
             transitionTo: l
@@ -348,7 +348,7 @@ t.default = u.default.connectStores([S.default, O.default, C.default, v.default,
   let {
     match: a,
     location: l
-  } = e, i = null == a ? void 0 : null === (t = a.params) || void 0 === t ? void 0 : t.inviteCode, r = Q.CONFERENCE_MODE_ENABLED ? Q.DEFAULT_INVITE_CODE : void 0, u = null != i ? (0, m.generateInviteKeyFromUrlParams)(i, l.search) : r, o = null == a ? void 0 : null === (n = a.params) || void 0 === n ? void 0 : n.giftCode, d = null == a ? void 0 : null === (s = a.params) || void 0 === s ? void 0 : s.guildTemplateCode;
+  } = e, i = null == a ? void 0 : null === (t = a.params) || void 0 === t ? void 0 : t.inviteCode, r = Q.CONFERENCE_MODE_ENABLED ? Q.DEFAULT_INVITE_CODE : void 0, u = null != i ? (0, N.generateInviteKeyFromUrlParams)(i, l.search) : r, o = null == a ? void 0 : null === (n = a.params) || void 0 === n ? void 0 : n.giftCode, d = null == a ? void 0 : null === (s = a.params) || void 0 === s ? void 0 : s.guildTemplateCode;
   return {
     inviteKey: u,
     isAuthenticated: S.default.isAuthenticated(),

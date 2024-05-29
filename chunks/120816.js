@@ -1,35 +1,35 @@
 "use strict";
 r.r(t), r("47120");
-var a, i, n, l, o = r("153832"),
-  c = r("756647"),
-  s = r("442837"),
+var a, i, l, n, o = r("153832"),
+  s = r("756647"),
+  c = r("442837"),
   d = r("570140"),
   u = r("314897"),
   h = r("906467");
-let p = 0,
+let m = 0,
+  p = [],
   g = [],
-  m = [],
   f = !1;
-class y extends(a = s.default.Store) {
+class y extends(a = c.default.Store) {
   initialize() {
     this.waitFor(h.default)
   }
   get loggedEvents() {
-    return g
+    return p
   }
   get loggedTriggers() {
-    return m
+    return g
   }
   get trackTriggers() {
     return f
   }
 }
-l = "AnalyticsLogStore", (n = "displayName") in(i = y) ? Object.defineProperty(i, n, {
-  value: l,
+n = "AnalyticsLogStore", (l = "displayName") in(i = y) ? Object.defineProperty(i, l, {
+  value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[n] = l, t.default = new y(d.default, {
+}) : i[l] = n, t.default = new y(d.default, {
   TRACK: function(e) {
     let {
       event: t,
@@ -38,13 +38,13 @@ l = "AnalyticsLogStore", (n = "displayName") in(i = y) ? Object.defineProperty(i
     } = e;
     if (h.default.isDeveloper) {
       var i;
-      (g = [...g, {
-        key: (p++).toString(),
+      (p = [...p, {
+        key: (m++).toString(),
         event: t,
         properties: r,
-        fingerprint: null != (i = a) ? (0, c.extractId)(i) : u.default.getId(),
+        fingerprint: null != (i = a) ? (0, s.extractId)(i) : u.default.getId(),
         timestamp: new Date
-      }]).length > 500 && g.shift()
+      }]).length > 500 && p.shift()
     }
   },
   TRACK_TRIGGER: function(e) {
@@ -53,19 +53,19 @@ l = "AnalyticsLogStore", (n = "displayName") in(i = y) ? Object.defineProperty(i
       descriptor: r,
       exposureType: a,
       excluded: i,
-      location: n,
-      previouslyTracked: l
+      location: l,
+      previouslyTracked: n
     } = e;
-    if (!!h.default.isDeveloper) f && (m = [...m, {
+    if (!!h.default.isDeveloper) f && (g = [...g, {
       key: (0, o.v4)(),
       experimentId: t,
       descriptor: r,
       exposureType: a,
       excluded: i,
-      location: n,
-      previouslyTracked: l,
+      location: l,
+      previouslyTracked: n,
       timestamp: new Date
-    }]).length > 500 && m.shift()
+    }]).length > 500 && g.shift()
   },
   SET_TRACK_TRIGGERS: function(e) {
     let {
@@ -74,6 +74,6 @@ l = "AnalyticsLogStore", (n = "displayName") in(i = y) ? Object.defineProperty(i
     f = t
   },
   ANALYTICS_LOG_CLEAR: function() {
-    g = [], m = []
+    p = [], g = []
   }
 })

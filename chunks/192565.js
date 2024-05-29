@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("950279"),
   f = n("796918"),
   E = n("513532"),
-  C = n("741595"),
-  h = n("974842"),
-  _ = n("363915"),
-  S = n("359380"),
-  m = n("308083"),
+  h = n("741595"),
+  _ = n("974842"),
+  C = n("363915"),
+  m = n("359380"),
+  S = n("308083"),
   p = n("689938");
 
 function I(e) {
@@ -42,7 +42,7 @@ function I(e) {
   }
 }
 let g = {
-  [m.ClanSetupSteps.GAMES]: function(e) {
+  [S.ClanSetupSteps.GAMES]: function(e) {
     let {
       guildId: t
     } = e;
@@ -65,7 +65,7 @@ let g = {
       error: null == l ? void 0 : l.gameApplicationIds
     })
   },
-  [m.ClanSetupSteps.PLAYSTYLE]: function(e) {
+  [S.ClanSetupSteps.PLAYSTYLE]: function(e) {
     let {
       guildId: t
     } = e, {
@@ -73,7 +73,7 @@ let g = {
       errors: s,
       handleClanUpdate: l
     } = I(t);
-    return (0, a.jsx)(C.default, {
+    return (0, a.jsx)(h.default, {
       title: p.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
       description: p.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
       handleUpdate: e => l({
@@ -83,14 +83,14 @@ let g = {
       error: null == s ? void 0 : s.playstyle
     })
   },
-  [m.ClanSetupSteps.UTILITY_TRAITS]: function(e) {
+  [S.ClanSetupSteps.UTILITY_TRAITS]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
       handleClanUpdate: s
     } = I(t);
-    return (0, a.jsx)(S.default, {
+    return (0, a.jsx)(m.default, {
       guildId: t,
       title: p.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
       description: p.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
@@ -101,7 +101,7 @@ let g = {
       progress: n
     })
   },
-  [m.ClanSetupSteps.INTERESTS]: function(e) {
+  [S.ClanSetupSteps.INTERESTS]: function(e) {
     let {
       guildId: t
     } = e, {
@@ -116,7 +116,7 @@ let g = {
       error: null == s ? void 0 : s.interests
     })
   },
-  [m.ClanSetupSteps.DESCRIPTION]: function(e) {
+  [S.ClanSetupSteps.DESCRIPTION]: function(e) {
     let {
       guildId: t
     } = e, {
@@ -131,7 +131,7 @@ let g = {
       errors: s
     })
   },
-  [m.ClanSetupSteps.CUSTOMIZE_TAG_BADGE]: function(e) {
+  [S.ClanSetupSteps.CUSTOMIZE_TAG_BADGE]: function(e) {
     let {
       guildId: t
     } = e, {
@@ -139,7 +139,7 @@ let g = {
       errors: s,
       handleClanUpdate: l
     } = I(t);
-    return (0, a.jsx)(h.default, {
+    return (0, a.jsx)(_.default, {
       handleUpdate: l,
       tag: n.tag,
       error: null == s ? void 0 : s.tag,
@@ -149,7 +149,7 @@ let g = {
       furthestStep: n.furthestStep
     })
   },
-  [m.ClanSetupSteps.CUSTOMIZE_BANNER]: function(e) {
+  [S.ClanSetupSteps.CUSTOMIZE_BANNER]: function(e) {
     let {
       guildId: t
     } = e, {
@@ -162,7 +162,7 @@ let g = {
       guildId: t
     })
   },
-  [m.ClanSetupSteps.MEMBER_APPLICATION]: function(e) {
+  [S.ClanSetupSteps.MEMBER_APPLICATION]: function(e) {
     let {
       guildId: t
     } = e;
@@ -193,7 +193,7 @@ function N(e) {
     currentStep: i,
     guildId: t
   }], [i, t]);
-  return (0, a.jsx)(_.default, {
+  return (0, a.jsx)(C.default, {
     currentStep: i,
     items: r,
     renderItem: A,

@@ -1,15 +1,15 @@
     "use strict";
-    t.r(a), t("47120");
-    var d = t("317770"),
-      c = t("626135"),
-      n = t("358085"),
-      i = t("998502"),
-      f = t("801814"),
-      o = t("981631");
-    class r extends d.default {
+    a.r(t), a("47120");
+    var d = a("317770"),
+      n = a("626135"),
+      c = a("358085"),
+      i = a("998502"),
+      o = a("801814"),
+      r = a("981631");
+    class f extends d.default {
       _initialize() {
-        n.isPlatformEmbedded && (i.default.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()), i.default.on("MODULE_INSTALLED", (e, a, t) => this.processModuleEvents()), i.default.on("UPDATER_HISTORY_RESPONSE", (e, a) => {
-          this._handleHistoryResponse(a)
+        c.isPlatformEmbedded && (i.default.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()), i.default.on("MODULE_INSTALLED", (e, t, a) => this.processModuleEvents()), i.default.on("UPDATER_HISTORY_RESPONSE", (e, t) => {
+          this._handleHistoryResponse(t)
         }), this.processModuleEvents())
       }
       _terminate() {}
@@ -18,19 +18,19 @@
       }
       _handleHistoryResponse(e) {
         if (null == e) return;
-        let a = 0 === Math.floor(1e3 * Math.random());
+        let t = 0 === Math.floor(1e3 * Math.random());
         e.forEach(e => {
-          "analytics" === e.type ? e.name === o.AnalyticEvents.UPDATER_METRICS_DOWNLOAD || e.name === o.AnalyticEvents.UPDATER_METRICS_INSTALL || e.name === o.AnalyticEvents.UPDATER_METRICS_COMBINED || e.name === o.AnalyticEvents.UPDATER_METRICS_TRANSITION_STATUS ? a && c.default.track(e.name, e.data) : console.warn("Unknown updater analytic event ".concat(e.name)) : this._tracker.trackEvent(e)
-        }), this._tracker.submissionReady() && (c.default.track(o.AnalyticEvents.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset())
+          "analytics" === e.type ? e.name === r.AnalyticEvents.UPDATER_METRICS_DOWNLOAD || e.name === r.AnalyticEvents.UPDATER_METRICS_INSTALL || e.name === r.AnalyticEvents.UPDATER_METRICS_COMBINED || e.name === r.AnalyticEvents.UPDATER_METRICS_TRANSITION_STATUS ? t && n.default.track(e.name, e.data) : console.warn("Unknown updater analytic event ".concat(e.name)) : this._tracker.trackEvent(e)
+        }), this._tracker.submissionReady() && (n.default.track(r.AnalyticEvents.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset())
       }
       constructor(...e) {
-        var a, t, d;
-        super(...e), a = this, t = "_tracker", d = new f.default, t in a ? Object.defineProperty(a, t, {
+        var t, a, d;
+        super(...e), t = this, a = "_tracker", d = new o.default, a in t ? Object.defineProperty(t, a, {
           value: d,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : a[t] = d
+        }) : t[a] = d
       }
     }
-    a.default = new r
+    t.default = new f

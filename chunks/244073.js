@@ -16,18 +16,18 @@ var i = n("735250"),
   f = n("287734"),
   h = n("324315"),
   p = n("236756"),
-  E = n("933557"),
+  g = n("933557"),
   m = n("430824"),
-  g = n("131951"),
+  E = n("131951"),
   S = n("699516"),
   v = n("594174"),
-  C = n("979651"),
-  y = n("362446"),
-  _ = n("285952"),
-  O = n("389320"),
-  T = n("242315"),
-  N = n("381238"),
-  I = n("357727"),
+  y = n("979651"),
+  O = n("362446"),
+  C = n("285952"),
+  T = n("389320"),
+  N = n("242315"),
+  I = n("381238"),
+  _ = n("357727"),
   A = n("779863"),
   x = n("547881"),
   R = n("976401"),
@@ -35,9 +35,9 @@ var i = n("735250"),
   M = n("981631"),
   D = n("689938"),
   b = n("405572"),
-  P = n("726271");
+  j = n("726271");
 
-function w(e, t, n) {
+function P(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -49,33 +49,33 @@ function w(e, t, n) {
 function k(e) {
   let {
     lobbyId: t
-  } = e, n = (0, r.useStateFromStoresObject)([y.default], () => ({
-    connectionState: y.default.getConnectionState(t),
-    hostname: y.default.getHostname(t),
-    averagePing: y.default.getAveragePing(t),
-    lastPing: y.default.getLastPing(t),
-    pings: y.default.getPings(),
-    outboundLossRate: y.default.getOutboundLossRate(t)
+  } = e, n = (0, r.useStateFromStoresObject)([O.default], () => ({
+    connectionState: O.default.getConnectionState(t),
+    hostname: O.default.getHostname(t),
+    averagePing: O.default.getAveragePing(t),
+    lastPing: O.default.getLastPing(t),
+    pings: O.default.getPings(),
+    outboundLossRate: O.default.getOutboundLossRate(t)
   }));
   return (0, i.jsx)(p.default, {
     ...n
   })
 }
-class j extends a.PureComponent {
+class w extends a.PureComponent {
   handleDisconnect() {
     f.default.selectVoiceChannel(null)
   }
   renderChannelLink(e) {
     let {
       guild: t
-    } = this.props, n = (0, E.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : M.ME;
+    } = this.props, n = (0, g.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : M.ME;
     return (0, i.jsx)(o.Link, {
       to: M.Routes.CHANNEL(l),
       onClick: t => {
         t.stopPropagation(), c.default.channelListScrollTo(l, e.id)
       },
       children: (0, i.jsx)(L.default, {
-        className: P.channel,
+        className: j.channel,
         children: a
       })
     })
@@ -102,14 +102,14 @@ class j extends a.PureComponent {
         className: s()(t, b.content),
         dynamicSize: !0,
         children: [(0, i.jsx)("div", {
-          className: P.inner,
+          className: j.inner,
           children: (0, i.jsx)(d.Popout, {
             renderPopout: this.renderPopout,
             position: "top",
             children: e => (0, i.jsx)(d.Clickable, {
               ...e,
               children: (0, i.jsx)(h.default, {
-                statusTextClassName: P.statusWithPopout,
+                statusTextClassName: j.statusWithPopout,
                 quality: o,
                 lastPing: r,
                 hasVideo: u,
@@ -118,43 +118,43 @@ class j extends a.PureComponent {
               })
             })
           })
-        }), (0, i.jsxs)(_.default, {
+        }), (0, i.jsxs)(C.default, {
           grow: 0,
           children: [(0, i.jsx)(R.default, {
             tooltipText: p ? D.default.Messages.UNMUTE : D.default.Messages.MUTE,
-            icon: p ? A.default : I.default,
+            icon: p ? A.default : _.default,
             iconForeground: p ? b.strikethrough : null,
             onClick: this.handleToggleSelfMute
           }), (0, i.jsx)(R.default, {
             tooltipText: f ? D.default.Messages.UNDEAFEN : D.default.Messages.DEAFEN,
-            icon: f ? N.default : T.default,
+            icon: f ? I.default : N.default,
             onClick: this.handleToggleSelfDeaf,
             iconForeground: f ? b.strikethrough : null
           }), null == a && (0, i.jsx)(R.default, {
             tooltipText: D.default.Messages.DISCONNECT_SELF,
             onClick: this.handleDisconnect,
-            icon: O.default
+            icon: T.default
           })]
         })]
       })
     })
   }
   constructor(...e) {
-    super(...e), w(this, "handleToggleSelfMute", () => {
+    super(...e), P(this, "handleToggleSelfMute", () => {
       let {
         context: e
       } = this.props;
       u.default.toggleSelfMute({
         context: e
       })
-    }), w(this, "handleToggleSelfDeaf", () => {
+    }), P(this, "handleToggleSelfDeaf", () => {
       let {
         context: e
       } = this.props;
       u.default.toggleSelfDeaf({
         context: e
       })
-    }), w(this, "renderPopout", () => {
+    }), P(this, "renderPopout", () => {
       let {
         lobbyId: e
       } = this.props;
@@ -171,8 +171,8 @@ function V(e) {
     lobbyId: n,
     channel: a,
     ...l
-  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([C.default], () => null != a && C.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([g.default], () => [g.default.isSelfMute(t) || g.default.isSelfMutedTemporarily(t), g.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([y.default], () => [y.default.getConnectionState(n), y.default.getLastPing(n), y.default.getQuality(n)]);
-  return (0, i.jsx)(j, {
+  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([y.default], () => null != a && y.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([O.default], () => [O.default.getConnectionState(n), O.default.getLastPing(n), O.default.getQuality(n)]);
+  return (0, i.jsx)(w, {
     ...l,
     context: t,
     lobbyId: n,

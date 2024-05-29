@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ACTIVITY_ENCOURAGES_HW_ACCELERATION: function() {
-    return C
+    return h
   },
   default: function() {
-    return h
+    return _
   }
 }), n("47120");
 var a = n("735250"),
@@ -18,32 +18,32 @@ var a = n("735250"),
   c = n("981631"),
   f = n("689938"),
   E = n("132417");
-let C = "Activity Encourages Hardware Acceleration";
+let h = "Activity Encourages Hardware Acceleration";
 
-function h(e) {
+function _(e) {
   var t;
   let {
     applicationId: n,
-    ...h
-  } = e, [_, S] = s.useState(!1), [m] = (0, r.default)([n]), p = null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : "This Activity";
+    ..._
+  } = e, [C, m] = s.useState(!1), [S] = (0, r.default)([n]), p = null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : "This Activity";
   s.useEffect(() => {
     u.default.track(c.AnalyticEvents.OPEN_MODAL, {
-      type: C
+      type: h
     })
   }, []);
   let I = () => {
     let e = "temporary";
-    _ && (e = "permanent", i.default.updatedUnsyncedSettings({
+    C && (e = "permanent", i.default.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
     })), u.default.track(c.AnalyticEvents.MODAL_DISMISSED, {
-      type: C,
+      type: h,
       dismiss_type: e
-    }), h.onClose()
+    }), _.onClose()
   };
   return (0, a.jsxs)(l.ModalRoot, {
     className: E.root,
     "aria-label": f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
-    ...h,
+    ..._,
     children: [(0, a.jsxs)(l.ModalHeader, {
       separator: !1,
       children: [(0, a.jsx)(l.Text, {
@@ -69,8 +69,8 @@ function h(e) {
       children: [(0, a.jsx)(l.Checkbox, {
         type: l.Checkbox.Types.INVERTED,
         size: 18,
-        value: _,
-        onChange: () => S(!_),
+        value: C,
+        onChange: () => m(!C),
         children: (0, a.jsx)(l.Text, {
           variant: "text-sm/normal",
           children: f.default.Messages.DONT_SHOW_AGAIN

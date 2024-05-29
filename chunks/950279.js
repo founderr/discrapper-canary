@@ -2,107 +2,107 @@
 a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  s = a("120356"),
+  i = a.n(s),
   l = a("442837"),
   o = a("481060"),
-  d = a("32966"),
-  c = a("314897"),
+  c = a("32966"),
+  d = a("314897"),
   u = a("77498"),
   f = a("364083"),
   m = a("92373"),
-  E = a("308083"),
-  h = a("689938"),
-  T = a("706351"),
-  _ = a("661926");
+  h = a("308083"),
+  E = a("689938"),
+  p = a("706351"),
+  C = a("661926");
 t.default = e => {
   let {
     title: t,
     description: a,
-    handleUpdate: i,
-    gameApplicationIds: C,
-    error: x,
-    requiredGameId: p,
-    inSettings: I
-  } = e, g = (0, l.useStateFromStores)([c.default], () => c.default.getId()), {
-    recentGames: N
-  } = (0, d.useUserRecentGames)(g), {
-    options: A,
-    matchSorterOptions: v
+    handleUpdate: s,
+    gameApplicationIds: T,
+    error: _,
+    requiredGameId: x,
+    inSettings: g
+  } = e, N = (0, l.useStateFromStores)([d.default], () => d.default.getId()), {
+    recentGames: I
+  } = (0, c.useUserRecentGames)(N), {
+    options: v,
+    matchSorterOptions: A
   } = (0, f.useClanSetupGameSelectableSearch)();
   r.useEffect(() => {
-    !I && null != p && !C.has(p) && A.length > 0 && R(p)
-  }, [A.length, p, I]);
+    !g && null != x && !T.has(x) && v.length > 0 && L(x)
+  }, [v.length, x, g]);
   let S = e => {
-      if (!C.has(e) || e === p) return;
-      let t = new Set(C);
-      t.delete(e), i(t)
+      if (!T.has(e) || e === x) return;
+      let t = new Set(T);
+      t.delete(e), s(t)
     },
-    R = e => {
-      if (C.size === E.MAX_NUM_SELECTED_GAMES || C.has(e) || null == u.default.getGameById(e)) return;
-      let t = new Set(C);
-      t.add(e), i(t)
+    L = e => {
+      if (T.size === h.MAX_NUM_SELECTED_GAMES || T.has(e) || null == u.default.getGameById(e)) return;
+      let t = new Set(T);
+      t.add(e), s(t)
     };
   return (0, n.jsxs)("div", {
-    className: s()(_.slideContent, T.container),
+    className: i()(C.slideContent, p.container),
     children: [(0, n.jsx)(o.Heading, {
       variant: "heading-xxl/medium",
-      className: _.title,
+      className: C.title,
       children: t
     }), (0, n.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: _.subtitle,
+      className: C.subtitle,
       children: a
     }), (0, n.jsx)("div", {
-      className: _.inputContainer,
+      className: C.inputContainer,
       children: (0, n.jsx)(o.SearchableSelect, {
-        wrapperClassName: _.input,
-        options: A,
+        wrapperClassName: C.input,
+        options: v,
         value: "",
-        placeholder: h.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: R,
-        isDisabled: C.size === E.MAX_NUM_SELECTED_GAMES,
-        matchSorterOptions: v,
+        placeholder: E.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
+        onChange: L,
+        isDisabled: T.size === h.MAX_NUM_SELECTED_GAMES,
+        matchSorterOptions: A,
         clearQueryOnSelect: !0
       })
     }), (0, n.jsxs)("div", {
-      className: T.errorWrapper,
-      children: [null != x && (0, n.jsx)(o.Text, {
+      className: p.errorWrapper,
+      children: [null != _ && (0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
-        className: _.errorText,
-        children: x
-      }), C.size > 0 && (0, n.jsxs)(n.Fragment, {
+        className: C.errorText,
+        children: _
+      }), T.size > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(o.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: _.contentLabel,
-          children: h.default.Messages.CLAN_SETUP_SELECTED_GAMES
+          className: C.contentLabel,
+          children: E.default.Messages.CLAN_SETUP_SELECTED_GAMES
         }), (0, n.jsx)("div", {
-          className: T.selectedSection,
-          children: Array.from(C).map(e => (0, n.jsx)(m.default, {
+          className: p.selectedSection,
+          children: Array.from(T).map(e => (0, n.jsx)(m.default, {
             applicationId: e,
-            onClick: e !== p ? S : void 0,
-            imageContainerClassName: e !== p ? T.clickableGame : T.defaultGame,
+            onClick: e !== x ? S : void 0,
+            imageContainerClassName: e !== x ? p.clickableGame : p.defaultGame,
             selected: !0,
-            locked: e === p
+            locked: e === x
           }, e))
         })]
-      }), null != N && N.length > 0 && (0, n.jsxs)(n.Fragment, {
+      }), null != I && I.length > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)("div", {
-          className: T.recentGamesDivider
+          className: p.recentGamesDivider
         }), (0, n.jsx)(o.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: _.contentLabel,
-          children: h.default.Messages.RECENT_GAMES
+          className: C.contentLabel,
+          children: E.default.Messages.RECENT_GAMES
         }), (0, n.jsx)("div", {
-          className: T.selectedSection,
-          children: N.map(e => (0, n.jsx)(m.default, {
+          className: p.selectedSection,
+          children: I.map(e => (0, n.jsx)(m.default, {
             applicationId: e.applicationId,
-            onClick: R,
-            imageContainerClassName: T.clickableGame
+            onClick: L,
+            imageContainerClassName: p.clickableGame
           }, e.applicationId))
         })]
       })]

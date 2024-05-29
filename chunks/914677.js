@@ -1,8 +1,8 @@
 "use strict";
 r.r(t), r("47120");
 var s = r("735250"),
-  n = r("470079"),
-  i = r("780384"),
+  i = r("470079"),
+  n = r("780384"),
   l = r("410030"),
   a = r("119269"),
   o = r("615984");
@@ -41,21 +41,21 @@ t.default = e => {
     percentage: t = 0,
     children: r,
     animationClassName: u,
-    initialPercentage: f = 0,
-    progressCircleStrokeSize: C = 2,
+    initialPercentage: C = 0,
+    progressCircleStrokeSize: f = 2,
     progressCircleVariation: p
-  } = e, E = 43 + C / 2, x = 2 * Math.PI * E, [m, R] = n.useState(f);
-  n.useEffect(() => {
+  } = e, E = 43 + f / 2, x = 2 * Math.PI * E, [R, h] = i.useState(C);
+  i.useEffect(() => {
     let e = setTimeout(() => {
-      R(t)
+      h(t)
     }, 200);
     return () => clearTimeout(e)
   }, [t]);
-  let h = (0, l.default)(),
-    T = (0, i.isThemeLight)(h),
+  let T = (0, l.default)(),
+    m = (0, n.isThemeLight)(T),
     S = c(p),
-    N = d(p, T),
-    O = _(T, p);
+    O = d(p, m),
+    w = _(m, p);
   return (0, s.jsxs)("div", {
     className: o.circleContainer,
     children: [(0, s.jsxs)("svg", {
@@ -64,20 +64,20 @@ t.default = e => {
       children: [(0, s.jsx)("circle", {
         className: p === a.ProgressCircleVariation.NITRO_GEM ? o.baseProgressCircle : void 0,
         fill: "transparent",
-        strokeWidth: C,
+        strokeWidth: f,
         r: "".concat(E),
         cx: "50%",
         cy: "50%",
         stroke: S,
-        strokeOpacity: N
+        strokeOpacity: O
       }), (0, s.jsx)("circle", {
-        stroke: O,
-        strokeWidth: C,
+        stroke: w,
+        strokeWidth: f,
         strokeLinecap: "round",
         strokeDasharray: "".concat(x, " ").concat(x),
         className: u,
         style: {
-          strokeDashoffset: (1 - m / 100) * x
+          strokeDashoffset: (1 - R / 100) * x
         },
         r: "".concat(E),
         cx: "50%",

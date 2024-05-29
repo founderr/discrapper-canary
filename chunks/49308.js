@@ -1,81 +1,81 @@
 "use strict";
 s.r(t), s.d(t, {
   CollectiblesPaymentModalConfirmStep: function() {
-    return A
+    return m
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("512722"),
-  i = s.n(n),
+var l = s("735250"),
+  n = s("470079"),
+  a = s("512722"),
+  i = s.n(a),
   r = s("399606"),
-  d = s("607070"),
-  u = s("597688"),
+  u = s("607070"),
+  d = s("597688"),
   o = s("624377"),
   c = s("530618"),
-  S = s("331042"),
-  E = s("372654"),
-  f = s("987209"),
+  f = s("331042"),
+  S = s("372654"),
+  E = s("987209"),
   I = s("598"),
-  _ = s("179118"),
-  T = s("614277"),
-  C = s("698708");
+  C = s("179118"),
+  _ = s("614277"),
+  T = s("698708");
 
-function N(e) {
+function p(e) {
   let {
     handleClose: t,
     confettiCanvas: s,
-    hideConfetti: l = !1,
-    analyticsLocations: n
+    hideConfetti: n = !1,
+    analyticsLocations: a
   } = e, {
-    skusById: d,
+    skusById: u,
     selectedSkuId: o,
     application: c
-  } = (0, I.usePaymentContext)(), E = (0, r.useStateFromStores)([u.default], () => u.default.getProduct(o));
+  } = (0, I.usePaymentContext)(), S = (0, r.useStateFromStores)([d.default], () => d.default.getProduct(o));
   i()(null != o, "Expected selectedSkuId"), i()(null != c, "Expected application");
-  let f = d[o];
-  return (i()(null != f, "Expected sku"), null == E) ? null : (0, a.jsxs)(T.PaymentPortalBody, {
-    children: [(0, a.jsx)(C.default, {}), (0, a.jsx)(S.CollectiblesCollectedModalInner, {
-      product: E,
+  let E = u[o];
+  return (i()(null != E, "Expected sku"), null == S) ? null : (0, l.jsxs)(_.PaymentPortalBody, {
+    children: [(0, l.jsx)(T.default, {}), (0, l.jsx)(f.CollectiblesCollectedModalInner, {
+      product: S,
       onClose: t,
       confettiCanvas: s,
-      analyticsLocations: n,
-      hideConfetti: l
+      analyticsLocations: a,
+      hideConfetti: n
     })]
   })
 }
 
-function A(e) {
+function m(e) {
   let {
     isGift: t,
     giftCode: s,
-    selectedGiftStyle: n,
+    selectedGiftStyle: a,
     hasSentMessage: i,
-    giftRecipient: S,
-    giftMessageError: T,
-    isSendingMessage: C
-  } = (0, f.useGiftContext)(), A = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), p = l.useRef(null), {
-    selectedSkuId: m
-  } = (0, I.usePaymentContext)(), P = (0, r.useStateFromStores)([u.default], () => u.default.getProduct(m)), {
-    confettiColors: O
-  } = (0, o.default)(null == P ? void 0 : P.styles);
-  return t ? (0, a.jsxs)("div", {
-    ref: p,
-    children: [(0, a.jsx)(_.default, {
+    giftRecipient: f,
+    giftMessageError: _,
+    isSendingMessage: T
+  } = (0, E.useGiftContext)(), m = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), N = n.useRef(null), {
+    selectedSkuId: A
+  } = (0, I.usePaymentContext)(), h = (0, r.useStateFromStores)([d.default], () => d.default.getProduct(A)), {
+    confettiColors: g
+  } = (0, o.default)(null == h ? void 0 : h.styles);
+  return t ? (0, l.jsxs)("div", {
+    ref: N,
+    children: [(0, l.jsx)(C.default, {
       giftCode: s,
       onClose: e.handleClose,
-      selectedGiftStyle: n,
+      selectedGiftStyle: a,
       hasSentMessage: i,
-      giftRecipient: S,
-      giftMessageError: T,
-      isSendingMessage: C
-    }), !e.hideConfetti && !A && (0, a.jsx)(c.default, {
-      confettiTarget: p.current,
+      giftRecipient: f,
+      giftMessageError: _,
+      isSendingMessage: T
+    }), !e.hideConfetti && !m && (0, l.jsx)(c.default, {
+      confettiTarget: N.current,
       confettiCanvas: e.confettiCanvas,
-      sprites: (0, E.getConfettiSprites)(null == P ? void 0 : P.categorySkuId),
-      colors: null == O ? void 0 : O.map(e => e.toHexString())
+      sprites: (0, S.getConfettiSprites)(null == h ? void 0 : h.categorySkuId),
+      colors: null == g ? void 0 : g.map(e => e.toHexString())
     })]
-  }) : (0, a.jsx)(N, {
+  }) : (0, l.jsx)(p, {
     ...e
   })
 }

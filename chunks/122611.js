@@ -11,11 +11,11 @@ var a = n("735250"),
   c = n("243778"),
   f = n("360453"),
   E = n("377743"),
-  C = n("834743"),
-  h = n("862099"),
-  _ = n("704631"),
-  S = n("819792"),
-  m = n("919285"),
+  h = n("834743"),
+  _ = n("862099"),
+  C = n("704631"),
+  m = n("819792"),
+  S = n("919285"),
   p = n("118470"),
   I = n("413307"),
   g = n("849688"),
@@ -26,48 +26,48 @@ var a = n("735250"),
   R = n("8521"),
   O = n("760326"),
   L = n("536687"),
-  P = n("652785"),
-  y = n("981631"),
-  M = n("921944");
+  M = n("652785"),
+  x = n("981631"),
+  P = n("921944");
 
-function D(e) {
+function y(e) {
   e.stopPropagation()
 }
 
-function x(e) {
+function D(e) {
   var t;
   let {
     guild: n
-  } = e, [f, h] = s.useState(null !== (t = r.Storage.get(P.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), S = e => {
-    r.Storage.set(P.LAST_HIDDEN_CHANNEL_NOTICE, e), h(e)
+  } = e, [f, _] = s.useState(null !== (t = r.Storage.get(M.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), m = e => {
+    r.Storage.set(M.LAST_HIDDEN_CHANNEL_NOTICE, e), _(e)
   }, {
-    defaultGameId: m,
+    defaultGameId: S,
     enableClanCreation: p
   } = (0, o.useClanPrepilotExperimentForGuild)({
     guild: n,
     location: "ChannelNoticesGuard",
     includeConverted: !1
-  }), I = (0, l.useStateFromStoresArray)(P.CHANNEL_NOTICE_STORES, () => P.CHANNEL_NOTICES.filter(e => {
+  }), I = (0, l.useStateFromStoresArray)(M.CHANNEL_NOTICE_STORES, () => M.CHANNEL_NOTICES.filter(e => {
     let {
       type: t,
       store: a
     } = e;
-    if (t === y.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
+    if (t === x.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
     return null == a ? void 0 : a.channelNoticePredicate(n, f)
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(c.default, {
     contentTypes: I,
-    groupName: M.DismissibleContentGroupName.CHANNEL_NOTICES,
+    groupName: P.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        S(Date.now()), s(M.ContentDismissActionType.UNKNOWN)
+        m(Date.now()), s(P.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
-            return (0, a.jsx)(_.default, {
+            return (0, a.jsx)(C.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -77,7 +77,7 @@ function x(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-            return (0, a.jsx)(C.default, {
+            return (0, a.jsx)(h.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -99,20 +99,20 @@ function x(e) {
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, a.jsx)(d.default, {
               guild: n,
-              markAsDismissed: () => s(M.ContentDismissActionType.UNKNOWN)
+              markAsDismissed: () => s(P.ContentDismissActionType.UNKNOWN)
             });
           case i.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
             return (0, a.jsx)(u.default, {
               guild: n,
               markAsDismissed: l,
-              defaultGameId: m
+              defaultGameId: S
             });
           default:
             return null
         }
       })();
       return null == r ? null : (0, a.jsx)("div", {
-        onContextMenu: D,
+        onContextMenu: y,
         children: r
       })
     }
@@ -136,7 +136,7 @@ t.default = e => {
         guild: t
       });
     case L.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
-      return (0, a.jsx)(h.default, {
+      return (0, a.jsx)(_.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.GUILD_MFA_WARNING:
@@ -144,7 +144,7 @@ t.default = e => {
         guild: t
       });
     case L.ConnectedChannelNotices.COMMANDS_MIGRATION:
-      return (0, a.jsx)(m.default, {
+      return (0, a.jsx)(S.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
@@ -152,7 +152,7 @@ t.default = e => {
         guild: t
       });
     case L.ConnectedChannelNotices.HUB_STUDY_ROOM:
-      return (0, a.jsx)(S.default, {
+      return (0, a.jsx)(m.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.SIGNUP:
@@ -160,7 +160,7 @@ t.default = e => {
         guild: t
       })
   }
-  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(x, {
+  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(D, {
     guild: e.guild
   })
 }

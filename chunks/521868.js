@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useCustomStatusMenuItem: function() {
-    return C
+    return h
   }
 });
 var a = n("735250");
@@ -17,18 +17,18 @@ var s = n("120356"),
   f = n("689938"),
   E = n("119645");
 
-function C(e, t) {
+function h(e, t) {
   let s = (0, o.useAnalyticsContext)(),
     {
-      trackUserProfileAction: C
+      trackUserProfileAction: h
     } = (0, u.useUserProfileAnalyticsContext)();
 
-  function h(e) {
+  function _(e) {
     e.stopPropagation(), d.CustomStatusSetting.updateSetting(void 0)
   }
 
-  function _() {
-    C({
+  function C() {
+    h({
       action: "PRESS_SET_CUSTOM_STATUS"
     }), (0, i.openModalLazy)(async () => {
       let {
@@ -60,14 +60,14 @@ function C(e, t) {
       showIconFirst: !0,
       hint: e => (0, a.jsx)(i.Clickable, {
         ...e,
-        onClick: h,
+        onClick: _,
         tabIndex: -1,
         children: (0, a.jsx)(c.default, {
           width: 18,
           height: 18
         })
       }),
-      action: _
+      action: C
     })
   }
   return (0, a.jsx)(i.MenuItem, {
@@ -77,7 +77,7 @@ function C(e, t) {
     icon: e => (0, a.jsx)("div", {
       className: l()(E.customEmojiPlaceholder, e)
     }),
-    action: _,
+    action: C,
     showIconFirst: !0
   })
 }

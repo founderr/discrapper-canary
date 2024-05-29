@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   useClearNewBadge: function() {
-    return T
+    return I
   },
   useShouldScrollToWhatsNew: function() {
-    return R
+    return T
   }
 }), s("47120");
 var a = s("470079"),
@@ -14,14 +14,14 @@ var a = s("470079"),
   l = s("605236"),
   o = s("706140"),
   u = s("581883"),
-  c = s("494127"),
-  d = s("687362"),
+  d = s("494127"),
+  c = s("687362"),
   _ = s("526761");
 let E = [
-    [i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, c.WhatsNewAvatarDecoRollout, i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
-    [i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, c.WhatsNewProfileFXRollout, i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
+    [i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.WhatsNewAvatarDecoRollout, i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
+    [i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.WhatsNewProfileFXRollout, i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
   ],
-  R = e => {
+  T = e => {
     let t = E.some(e => {
         let [t, s, a] = e, {
           flipped: r
@@ -30,10 +30,10 @@ let E = [
         });
         return !!r && !(0, l.isDismissibleContentDismissed)(t)
       }),
-      s = (0, d.useShouldScrollToTenureRewardContent)(e);
+      s = (0, c.useShouldScrollToTenureRewardContent)(e);
     return t || !0 === s
   },
-  T = () => {
+  I = () => {
     let e = (0, n.useBlockedPaymentsConfig)(),
       t = E.map(e => {
         let [t, s] = e, {

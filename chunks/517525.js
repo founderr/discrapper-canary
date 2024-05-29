@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("557457"),
   A = n("475674"),
   v = n("981631"),
-  x = n("474936"),
-  N = n("689938"),
+  N = n("474936"),
+  x = n("689938"),
   M = n("909143");
 let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   y = {
@@ -83,7 +83,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         location: U
       } = (0, h.useAnalyticsContext)(),
       F = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      w = o && !T.default.isPremium(F, x.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
+      w = o && !T.default.isPremium(F, N.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
       k = l.useCallback(() => {
         w && b && (0, f.openModalLazy)(async () => {
           let {
@@ -97,14 +97,14 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       }, [w, b, U]);
     if (l.useEffect(() => {
         !R && b && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-          type: x.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
+          type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: P
         }), y(!0))
       }, [t, s, b, R, y, P]), null == j) return null;
-    let H = (0, a.jsx)(f.Tooltip, {
-      text: D ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+    let B = (0, a.jsx)(f.Tooltip, {
+      text: D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
       color: f.Tooltip.Colors.GREY,
       children: e => (0, a.jsxs)(f.Clickable, {
@@ -124,7 +124,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       })
     });
     return (0, a.jsx)(g.TextBadge, {
-      text: H,
+      text: B,
       className: i()(L, M.qualityIndicatorBadge, {
         [M.qualityIndicatorBadgePremium]: O
       }),

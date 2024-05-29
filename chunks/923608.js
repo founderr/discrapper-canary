@@ -19,7 +19,7 @@ t.default = e => {
   s.useEffect(() => {
     (0, i.requestMarkDismissibleContentAsShown)(l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
   }, []);
-  let C = s.useCallback(() => {
+  let h = s.useCallback(() => {
       o.default.open(t.id, c.GuildSettingsSections.ONBOARDING), u.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
         type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
         action: "primary"
@@ -27,7 +27,7 @@ t.default = e => {
         dismissAction: f.ContentDismissActionType.PRIMARY
       }), (0, r.dismissedGuildOnboardingUpsell)(t.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
     }, [t.id]),
-    h = s.useCallback(() => {
+    _ = s.useCallback(() => {
       u.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
         type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
         action: "dismiss"
@@ -35,8 +35,8 @@ t.default = e => {
     }, [t.id, n]);
   return (0, a.jsx)(d.default, {
     guild: t,
-    onDismissed: h,
-    onClick: C,
+    onDismissed: _,
+    onClick: h,
     title: E.default.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_TITLE,
     message: E.default.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_MESSAGE,
     cta: E.default.Messages.CHECK_IT_OUT,

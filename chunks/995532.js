@@ -1,19 +1,19 @@
 "use strict";
-E.r(t), E.d(t, {
+s.r(t), s.d(t, {
   NO_WELCOME_SCREEN: function() {
-    return I
+    return A
   }
 });
-var s, _, a, T, n = E("442837"),
-  A = E("570140");
-let I = {},
+var E, _, a, n, T = s("442837"),
+  i = s("570140");
+let A = {},
   u = {},
-  i = {},
-  l = !1,
-  L = !1,
+  l = {},
+  I = !1,
+  r = !1,
   o = !1;
 
-function r(e) {
+function L(e) {
   let {
     guild: t
   } = e.invite;
@@ -23,23 +23,23 @@ function r(e) {
 function d(e) {
   let {
     welcomeScreen: t,
-    guildId: E
+    guildId: s
   } = e;
-  u[E] = null != t ? t : I
+  u[s] = null != t ? t : A
 }
-class N extends(T = n.default.Store) {
+class N extends(n = T.default.Store) {
   get(e) {
     if (null != e) return u[e]
   }
   isFetching() {
-    return L
+    return r
   }
   hasError() {
     return o
   }
   hasSeen(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e && (t ? l : i[e] || !1)
+    return null != e && (t ? I : l[e] || !1)
   }
   isEmpty(e) {
     if (null == e) return !0;
@@ -47,25 +47,25 @@ class N extends(T = n.default.Store) {
     return null == t || 0 === t.welcome_channels.length
   }
 }
-a = "WelcomeScreenStore", (_ = "displayName") in(s = N) ? Object.defineProperty(s, _, {
+a = "WelcomeScreenStore", (_ = "displayName") in(E = N) ? Object.defineProperty(E, _, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[_] = a, t.default = new N(A.default, {
-  INVITE_RESOLVE_SUCCESS: r,
-  INVITE_ACCEPT_SUCCESS: r,
+}) : E[_] = a, t.default = new N(i.default, {
+  INVITE_RESOLVE_SUCCESS: L,
+  INVITE_ACCEPT_SUCCESS: L,
   WELCOME_SCREEN_SUBMIT_SUCCESS: d,
   WELCOME_SCREEN_UPDATE: d,
   WELCOME_SCREEN_VIEW: function(e) {
     let {
       guildId: t,
-      isLurking: E
+      isLurking: s
     } = e;
-    i[t] = !0, E && (l = !0)
+    l[t] = !0, s && (I = !0)
   },
   GUILD_STOP_LURKING: function() {
-    l = !1
+    I = !1
   },
   GUILD_DELETE: function(e) {
     let {
@@ -73,20 +73,20 @@ a = "WelcomeScreenStore", (_ = "displayName") in(s = N) ? Object.defineProperty(
         id: t
       }
     } = e;
-    i[t] = !1
+    l[t] = !1
   },
   WELCOME_SCREEN_FETCH_START: function() {
-    L = !0, o = !1
+    r = !0, o = !1
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-    L = !1, o = !1;
+    r = !1, o = !1;
     let {
       welcomeScreen: t,
-      guildId: E
+      guildId: s
     } = e;
-    u[E] = null != t ? t : I
+    u[s] = null != t ? t : A
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
-    L = !1, o = !0
+    r = !1, o = !0
   }
 })

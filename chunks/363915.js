@@ -28,11 +28,11 @@ function f(e) {
   var t, n, s, f;
   let {
     state: E,
-    direction: C,
-    cleanUp: h,
-    children: _
-  } = e, S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
-  let m = (0, l.useSpring)((t = E, n = C, s = h, f = S, t === r.TransitionStates.MOUNTED ? {
+    direction: h,
+    cleanUp: _,
+    children: C
+  } = e, m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+  let S = (0, l.useSpring)((t = E, n = h, s = _, f = m, t === r.TransitionStates.MOUNTED ? {
     from: {
       opacity: 0,
       transform: "translateY(40px) translateX(0px)"
@@ -72,11 +72,11 @@ function f(e) {
     }
   }));
   return (0, a.jsx)(l.animated.div, {
-    style: m,
+    style: S,
     className: u.step,
     children: (0, a.jsx)(r.ScrollerThin, {
       className: u.scroller,
-      children: _
+      children: C
     })
   })
 }

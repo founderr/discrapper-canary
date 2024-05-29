@@ -1,18 +1,18 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
 var n = a("735250");
 a("470079");
 var r = a("249849"),
-  i = a("907561"),
-  s = a("689938"),
+  s = a("907561"),
+  i = a("689938"),
   l = a("136050");
 let o = ["#7185f6", "#7799f3", "#7eb2eb", "#85d5e0", "#89e6dd", "#8cefda", "#68eacb"],
-  d = ["#ffffff", "#f0f0f0"],
-  c = [.15, .23, .32, .45, .57, .62, .7],
+  c = ["#ffffff", "#f0f0f0"],
+  d = [.15, .23, .32, .45, .57, .62, .7],
   u = [{
     base: 14,
     tint: 1
@@ -44,35 +44,35 @@ let o = ["#7185f6", "#7799f3", "#7eb2eb", "#85d5e0", "#89e6dd", "#8cefda", "#68e
     tint: 1
   }];
 
-function E(e) {
+function h(e) {
   let {
     width: t,
     height: a,
-    primaryTintColor: E,
-    secondaryTintColor: h,
-    ...T
+    primaryTintColor: h,
+    secondaryTintColor: E,
+    ...p
   } = e, {
-    primaryColorsTransformed: _,
-    secondaryColorsTransformed: C
+    primaryColorsTransformed: C,
+    secondaryColorsTransformed: T
   } = (0, r.getTransformedBadgeColors)({
     primaryBaseColors: o,
-    primaryTintColor: E,
-    primaryTintLuminances: c,
+    primaryTintColor: h,
+    primaryTintLuminances: d,
     primaryLuminanceWeights: u,
-    secondaryBaseColors: d,
-    secondaryTintColor: h,
+    secondaryBaseColors: c,
+    secondaryTintColor: E,
     secondaryTintLuminances: f,
     secondaryLuminanceWeights: m
   }), {
-    styleContent: x,
-    containerId: p
-  } = (0, i.useClanBannerStyleInjection)(_, C);
+    styleContent: _,
+    containerId: x
+  } = (0, s.useClanBannerStyleInjection)(C, T);
   return (0, n.jsxs)("svg", {
-    ...T,
-    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
+    ...p,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
     height: a,
-    viewBox: "0 0 ".concat(i.CLAN_BANNER_WIDTH, " ").concat(i.CLAN_BANNER_HEIGHT),
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
     children: [(0, n.jsxs)("defs", {
       children: [(0, n.jsx)("defs", {
         children: (0, n.jsxs)("radialGradient", {
@@ -83,19 +83,19 @@ function E(e) {
           fx: "0.5",
           fy: "0.8",
           children: [(0, n.jsx)("stop", {
-            stopColor: C[1],
+            stopColor: T[1],
             offset: "60%"
           }), (0, n.jsx)("stop", {
-            stopColor: C[0],
+            stopColor: T[0],
             offset: "100%"
           })]
         })
       }), (0, n.jsx)("style", {
-        children: x
+        children: _
       })]
     }), (0, n.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
-      id: p
+      id: x
     }), (0, n.jsx)("use", {
       href: "".concat(l, "#foam"),
       style: {

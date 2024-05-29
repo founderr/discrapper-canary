@@ -1,48 +1,48 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   AvatarDecorationPreview: function() {
-    return b
+    return g
   }
 });
-var r = a("735250");
-a("470079");
-var s = a("120356"),
-  n = a.n(s),
-  o = a("979554"),
-  l = a("481060"),
-  i = a("1585"),
-  c = a("125988"),
-  u = a("998502"),
-  d = a("266386"),
-  f = a("689938"),
-  C = a("956308");
-let p = u.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar,
-  b = e => {
+var a = r("735250");
+r("470079");
+var o = r("120356"),
+  l = r.n(o),
+  n = r("979554"),
+  s = r("481060"),
+  i = r("1585"),
+  c = r("125988"),
+  u = r("998502"),
+  d = r("266386"),
+  f = r("689938"),
+  C = r("956308");
+let p = u.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
+  g = e => {
     let {
       item: t,
-      user: a,
-      isHighlighted: s = !1,
+      user: r,
+      isHighlighted: o = !1,
       isPurchased: u = !1,
-      avatarSize: b = l.AvatarSizes.SIZE_152
-    } = e, g = (0, i.getDecorationSizeForAvatarSize)(b), E = (0, d.useCollectiblesHoverPreviewExperiment)("AvatarDecorationPreview"), {
-      avatarDecorationSrc: I,
-      eventHandlers: T,
-      avatarPlaceholderSrc: S
+      avatarSize: g = s.AvatarSizes.SIZE_152
+    } = e, v = (0, i.getDecorationSizeForAvatarSize)(g), b = (0, d.useCollectiblesHoverPreviewExperiment)("AvatarDecorationPreview"), {
+      avatarDecorationSrc: m,
+      eventHandlers: h,
+      avatarPlaceholderSrc: y
     } = (0, c.default)({
-      user: a,
-      avatarDecorationOverride: (null == t ? void 0 : t.type) === o.CollectiblesItemType.AVATAR_DECORATION ? t : void 0,
-      size: g,
-      animateOnHover: !s
+      user: r,
+      avatarDecorationOverride: (null == t ? void 0 : t.type) === n.CollectiblesItemType.AVATAR_DECORATION ? t : void 0,
+      size: v,
+      animateOnHover: !o
     });
-    return (0, r.jsx)(p, {
-      ...T,
-      avatarDecoration: I,
-      src: E && s ? null == a ? void 0 : a.getAvatarURL(void 0, 152, !0) : S,
-      imageClassName: E && s ? C.fadeInAvatarImg : void 0,
-      className: n()(C.avatar, {
+    return (0, a.jsx)(p, {
+      ...h,
+      avatarDecoration: m,
+      src: b && o ? null == r ? void 0 : r.getAvatarURL(void 0, 152, !0) : y,
+      imageClassName: b && o ? C.fadeInAvatarImg : void 0,
+      className: l()(C.avatar, {
         [C.avatarPurchased]: u
       }),
-      size: b,
+      size: g,
       "aria-label": f.default.Messages.USER_SETTINGS_AVATAR
     })
   }

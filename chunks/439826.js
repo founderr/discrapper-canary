@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var a = n("735250");
@@ -16,54 +16,54 @@ var s = n("120356"),
   c = n("918701"),
   f = n("78826"),
   E = n("670638"),
-  C = n("981631"),
-  h = n("689938"),
-  _ = n("430783");
+  h = n("981631"),
+  _ = n("689938"),
+  C = n("430783");
 
-function S(e) {
+function m(e) {
   let {
     quest: t,
     onCtxMenuClose: n,
     onCtxMenuOpen: s,
-    onCtxMenuSelect: S
-  } = e, m = (0, c.getQuestBarHeroAssetUrl)(t), p = (0, o.default)(), I = (0, i.isThemeDark)(p) ? C.ThemeTypes.DARK : C.ThemeTypes.LIGHT, g = I === C.ThemeTypes.DARK, T = (0, c.isTargetedForContent)(t, d.QuestContent.QUEST_BAR);
+    onCtxMenuSelect: m
+  } = e, S = (0, c.getQuestBarHeroAssetUrl)(t), p = (0, o.default)(), I = (0, i.isThemeDark)(p) ? h.ThemeTypes.DARK : h.ThemeTypes.LIGHT, g = I === h.ThemeTypes.DARK, T = (0, c.isTargetedForContent)(t, d.QuestContent.QUEST_BAR);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: _.container,
+      className: C.container,
       children: [(0, a.jsx)("div", {
-        className: _.heroAssetWrapper,
+        className: C.heroAssetWrapper,
         children: (0, a.jsx)(f.QuestsAsset, {
           id: "QuestTileBanner",
           children: e => (0, a.jsx)("img", {
             ref: e,
             alt: "",
-            className: _.heroAsset,
-            src: m
+            className: C.heroAsset,
+            src: S
           })
         })
       }), (0, a.jsx)("div", {
-        className: l()(_.overlay, {
-          [_.darkThemeGradient]: g,
-          [_.lightThemeGradient]: !g
+        className: l()(C.overlay, {
+          [C.darkThemeGradient]: g,
+          [C.lightThemeGradient]: !g
         })
       }), (0, a.jsx)("div", {
-        className: _.positionContentOverBackground,
+        className: C.positionContentOverBackground,
         children: (0, a.jsxs)("div", {
-          className: _.contents,
+          className: C.contents,
           children: [(0, a.jsxs)("div", {
-            className: _.topRow,
+            className: C.topRow,
             children: [T && (0, a.jsx)("div", {
-              className: _.pill,
+              className: C.pill,
               children: (0, a.jsx)(r.Text, {
                 variant: "eyebrow",
                 color: "always-white",
-                className: _.eyebrowText,
-                children: h.default.Messages.RECOMMENDED
+                className: C.eyebrowText,
+                children: _.default.Messages.RECOMMENDED
               })
             }), (0, a.jsx)(E.QuestsEntryContextMenuPopout, {
               onOpen: s,
               onClose: n,
-              onSelect: S,
+              onSelect: m,
               questContent: d.QuestContent.QUEST_HOME_DESKTOP,
               quest: t,
               hideLearnMore: !0,
@@ -71,10 +71,10 @@ function S(e) {
               showShareLink: !0,
               children: e => (0, a.jsx)(r.Clickable, {
                 ...e,
-                className: _.submenuWrapper,
-                "aria-label": h.default.Messages.ACTIONS,
+                className: C.submenuWrapper,
+                "aria-label": _.default.Messages.ACTIONS,
                 children: (0, a.jsx)(u.default, {
-                  className: l()(_.submenuIcon)
+                  className: l()(C.submenuIcon)
                 })
               })
             })]
@@ -82,16 +82,16 @@ function S(e) {
             id: "QuestPartnerBranding_gameLogotype",
             children: e => (0, a.jsx)("img", {
               ref: e,
-              className: _.partnerBranding,
+              className: C.partnerBranding,
               alt: t.config.messages.gameTitle,
               src: (0, c.getGameLogotypeAssetUrl)(t, I)
             })
           }), (0, a.jsx)("div", {
-            className: _.bottomRow,
+            className: C.bottomRow,
             children: (0, a.jsx)(r.Text, {
               variant: "text-sm/medium",
               color: "text-muted",
-              children: h.default.Messages.QUESTS_PROMOTED_BY_BRAND.format({
+              children: _.default.Messages.QUESTS_PROMOTED_BY_BRAND.format({
                 brandName: t.config.messages.gamePublisher
               })
             })
@@ -99,7 +99,7 @@ function S(e) {
         })
       })]
     }), (0, a.jsx)("div", {
-      className: _.spacer
+      className: C.spacer
     })]
   })
 }

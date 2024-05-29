@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return I
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,33 +19,33 @@ var a = s("735250"),
   _ = s("981631"),
   f = s("689938"),
   m = s("688725");
-let I = {
+let g = {
   width: 387,
   height: 218
 };
 
-function g(e) {
+function I(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, g = E.default.getCameraComponent(), [N, h] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), C = n.useRef(!1), O = n.useRef(N), A = (0, o.useAnalyticsContext)(), p = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, I = E.default.getCameraComponent(), [N, h] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), C = n.useRef(!1), A = n.useRef(N), p = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
-    C.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(O.current))
+    C.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(A.current))
   }, []), (0, a.jsx)(S.default, {
     selectedBackgroundOption: N,
     onSelectBackgroundOption: e => {
-      C.current = !0, O.current = e, h(e), (0, c.applyBackgroundOptionLive)(e, {
-        location: A.location
+      C.current = !0, A.current = e, h(e), (0, c.applyBackgroundOptionLive)(e, {
+        location: p.location
       }).catch(_.NOOP)
     },
     renderCamera: e => t ? (0, a.jsx)("div", {
       className: m.cameraWrapper,
       children: (0, a.jsxs)("div", {
         className: m.camera,
-        children: [(0, a.jsx)(g, {
+        children: [(0, a.jsx)(I, {
           deviceId: e,
-          width: I.width,
-          height: I.height,
+          width: g.width,
+          height: g.height,
           disabled: !t
         }), (0, a.jsx)(S.FilterLoadingIndicator, {})]
       })
@@ -54,11 +54,11 @@ function g(e) {
       children: [(0, a.jsx)("div", {
         className: m.previewImage
       }), (0, a.jsx)(i.Tooltip, {
-        text: p ? null : f.default.Messages.CAMERA_UNAVAILABLE,
+        text: O ? null : f.default.Messages.CAMERA_UNAVAILABLE,
         children: e => (0, a.jsx)(i.Button, {
           ...e,
           onClick: s,
-          disabled: !p,
+          disabled: !O,
           children: f.default.Messages.TEST_VIDEO
         })
       })]

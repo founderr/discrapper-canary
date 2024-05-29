@@ -1,54 +1,54 @@
 "use strict";
-s.r(t);
-var a, n = s("442837"),
-  l = s("570140"),
-  i = s("314897"),
-  r = s("57562"),
-  u = s("351780"),
-  o = s("843693");
+n.r(t);
+var a, s = n("442837"),
+  l = n("570140"),
+  i = n("314897"),
+  r = n("57562"),
+  o = n("351780"),
+  u = n("843693");
 
-function d(e, t, s) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: s,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[t] = n, e
 }
 let c = {
     unlockedAchievements: {}
   },
-  E = {
+  f = {
     ...c
   };
-class _ extends(a = n.default.PersistedStore) {
+class E extends(a = s.default.PersistedStore) {
   initialize(e) {
-    this.waitFor(i.default, o.default);
+    this.waitFor(i.default, u.default);
     let t = null != e ? e : {
       ...c
     };
-    for (let e in t) E[e] = t[e]
+    for (let e in t) f[e] = t[e]
   }
   getState() {
-    return E
+    return f
   }
   getAllUnlockedAchievements() {
-    return E.unlockedAchievements
+    return f.unlockedAchievements
   }
   getUnlocked(e) {
     var t;
-    return null !== (t = E.unlockedAchievements[e]) && void 0 !== t ? t : null
+    return null !== (t = f.unlockedAchievements[e]) && void 0 !== t ? t : null
   }
 }
-d(_, "displayName", "PoggermodeAchievementStore"), d(_, "persistKey", "PoggermodeAchievementStore"), t.default = new _(l.default, {
+d(E, "displayName", "PoggermodeAchievementStore"), d(E, "persistKey", "PoggermodeAchievementStore"), t.default = new E(l.default, {
   POGGERMODE_ACHIEVEMENT_UNLOCK: function(e) {
     var t;
     let {
-      achievementId: s
+      achievementId: n
     } = e;
-    if (!u.default.isEnabled()) return !1;
-    t = s, null != E.unlockedAchievements[t] || (E.unlockedAchievements = {
-      ...E.unlockedAchievements,
+    if (!o.default.isEnabled()) return !1;
+    t = n, null != f.unlockedAchievements[t] || (f.unlockedAchievements = {
+      ...f.unlockedAchievements,
       [t]: {
         achievementId: t,
         dateUnlocked: Date.now()

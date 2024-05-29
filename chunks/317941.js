@@ -15,19 +15,19 @@ var a = s("735250"),
   _ = s("246946"),
   f = s("509545"),
   m = s("55563"),
-  I = s("15887"),
-  g = s("581874"),
+  g = s("15887"),
+  I = s("581874"),
   N = s("285952"),
   h = s("366695"),
   C = s("259580"),
-  O = s("572004"),
-  A = s("669079"),
-  p = s("296848"),
+  A = s("572004"),
+  p = s("669079"),
+  O = s("296848"),
   R = s("474936"),
   x = s("689938"),
   M = s("449256");
 
-function L(e, t, s) {
+function v(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -35,15 +35,15 @@ function L(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class D extends n.PureComponent {
+class L extends n.PureComponent {
   componentWillUnmount() {
     this._copyModeTimeout.stop()
   }
   get copyButtonText() {
     switch (this.state.copyMode) {
-      case g.CopyInputModes.SUCCESS:
+      case I.CopyInputModes.SUCCESS:
         return x.default.Messages.BILLING_GIFT_COPIED;
-      case g.CopyInputModes.ERROR:
+      case I.CopyInputModes.ERROR:
         return x.default.Messages.FAILED;
       default:
         return x.default.Messages.COPY
@@ -62,16 +62,16 @@ class D extends n.PureComponent {
     return (0, a.jsxs)(N.default, {
       direction: N.default.Direction.VERTICAL,
       className: M.giftCodeRow,
-      children: [(0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(I.default, {
         className: M.codeText,
-        value: (0, A.getGiftCodeURL)(t.code),
+        value: (0, p.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
         mode: s,
-        supportsCopy: O.SUPPORTS_COPY,
+        supportsCopy: A.SUPPORTS_COPY,
         hideMessage: e ? x.default.Messages.GIFT_INVENTORY_HIDDEN : null,
         onCopy: this.handleCopy,
-        buttonColor: g.default.ButtonColors.BRAND,
-        buttonLook: g.default.ButtonLooks.FILLED
+        buttonColor: I.default.ButtonColors.BRAND,
+        buttonLook: I.default.ButtonLooks.FILLED
       }), (0, a.jsxs)("div", {
         className: M.subTextRow,
         children: [null != t.expiresAt ? (0, a.jsxs)(n.Fragment, {
@@ -87,32 +87,32 @@ class D extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), L(this, "_copyModeTimeout", new o.Timeout), L(this, "state", {
-      copyMode: g.CopyInputModes.DEFAULT
-    }), L(this, "handleCopy", e => {
+    super(...e), v(this, "_copyModeTimeout", new o.Timeout), v(this, "state", {
+      copyMode: I.CopyInputModes.DEFAULT
+    }), v(this, "handleCopy", e => {
       let {
         giftCode: t,
         sku: s
       } = this.props;
-      (0, A.trackGiftCodeCopy)(t, s);
+      (0, p.trackGiftCodeCopy)(t, s);
       try {
-        (0, O.copy)(e), this.setState({
-          copyMode: g.CopyInputModes.SUCCESS
+        (0, A.copy)(e), this.setState({
+          copyMode: I.CopyInputModes.SUCCESS
         })
       } catch (e) {
         this.setState({
-          copyMode: g.CopyInputModes.ERROR
+          copyMode: I.CopyInputModes.ERROR
         })
       }
       this._copyModeTimeout.start(1e3, () => {
         this.setState({
-          copyMode: g.CopyInputModes.DEFAULT
+          copyMode: I.CopyInputModes.DEFAULT
         })
       })
     })
   }
 }
-class P extends n.PureComponent {
+class D extends n.PureComponent {
   componentDidMount() {
     this._loadedAt = Date.now()
   }
@@ -169,14 +169,14 @@ class P extends n.PureComponent {
     } = this.props, {
       isOpen: c
     } = this.state;
-    return (0, a.jsxs)(I.default, {
+    return (0, a.jsxs)(g.default, {
       className: l,
       children: [(0, a.jsx)(d.Clickable, {
         onClick: this.handleToggleOpen,
         className: M.card,
         onMouseEnter: () => this.setIsHovered(!0),
         onMouseLeave: () => this.setIsHovered(!1),
-        children: (0, a.jsx)(I.default.Header, {
+        children: (0, a.jsx)(g.default.Header, {
           splashArtURL: t.getSplashURL(512),
           children: (0, a.jsxs)("div", {
             className: M.cardHeader,
@@ -205,11 +205,11 @@ class P extends n.PureComponent {
             })]
           })
         })
-      }), c ? (0, a.jsx)(I.default.Body, {
+      }), c ? (0, a.jsx)(g.default.Body, {
         children: r ? (0, a.jsx)(d.Spinner, {
           className: M.spinner
         }) : (0, a.jsxs)(n.Fragment, {
-          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(D, {
+          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(L, {
             giftCode: e,
             sku: i,
             hideCode: o
@@ -219,11 +219,11 @@ class P extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), L(this, "_loadedAt", null), L(this, "state", {
+    super(...e), v(this, "_loadedAt", null), v(this, "state", {
       isOpen: !1,
       isCreating: !1,
       isHovered: !1
-    }), L(this, "handleGenerateGiftCode", async e => {
+    }), v(this, "handleGenerateGiftCode", async e => {
       e.stopPropagation();
       let {
         skuId: t,
@@ -236,7 +236,7 @@ class P extends n.PureComponent {
         isCreating: !1,
         isOpen: !0
       })
-    }), L(this, "handleToggleOpen", () => {
+    }), v(this, "handleToggleOpen", () => {
       let {
         skuId: e,
         subscriptionPlanId: t,
@@ -262,7 +262,7 @@ t.default = r.default.connectStores([m.default, _.default, T.default, c.default,
     isFetching: T.default.getUserGiftCodesFetchingForSKUAndPlan(t, s),
     loadedAt: T.default.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
     application: c.default.getApplication(n.applicationId),
-    subscriptionPlan: null != s ? (0, p.getOrFetchSubscriptionPlan)(s) : null,
+    subscriptionPlan: null != s ? (0, O.getOrFetchSubscriptionPlan)(s) : null,
     giftCodes: l
   }
-})(P)
+})(D)

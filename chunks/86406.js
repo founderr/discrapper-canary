@@ -1,18 +1,18 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
 var n = a("735250");
 a("470079");
 var r = a("249849"),
-  i = a("907561"),
-  s = a("689938"),
+  s = a("907561"),
+  i = a("689938"),
   l = a("408263");
 let o = ["#00ff00"],
-  d = ["#000000", "#ed1c24"],
-  c = [.7],
+  c = ["#000000", "#ed1c24"],
+  d = [.7],
   u = [{
     base: 1,
     tint: 2
@@ -26,35 +26,35 @@ let o = ["#00ff00"],
     tint: 4
   }];
 
-function E(e) {
+function h(e) {
   let {
     width: t,
     height: a,
-    primaryTintColor: E,
-    secondaryTintColor: h,
-    ...T
+    primaryTintColor: h,
+    secondaryTintColor: E,
+    ...p
   } = e, {
-    primaryColorsTransformed: _,
-    secondaryColorsTransformed: C
+    primaryColorsTransformed: C,
+    secondaryColorsTransformed: T
   } = (0, r.getTransformedBadgeColors)({
     primaryBaseColors: o,
-    primaryTintColor: E,
-    primaryTintLuminances: c,
+    primaryTintColor: h,
+    primaryTintLuminances: d,
     primaryLuminanceWeights: u,
-    secondaryBaseColors: d,
-    secondaryTintColor: h,
+    secondaryBaseColors: c,
+    secondaryTintColor: E,
     secondaryTintLuminances: f,
     secondaryLuminanceWeights: m
   }), {
-    styleContent: x,
-    containerId: p
-  } = (0, i.useClanBannerStyleInjection)(_, C);
+    styleContent: _,
+    containerId: x
+  } = (0, s.useClanBannerStyleInjection)(C, T);
   return (0, n.jsxs)("svg", {
-    ...T,
-    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
+    ...p,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
     height: a,
-    viewBox: "0 0 ".concat(i.CLAN_BANNER_WIDTH, " ").concat(i.CLAN_BANNER_HEIGHT),
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
     children: [(0, n.jsxs)("defs", {
       children: [(0, n.jsx)("defs", {
         children: (0, n.jsxs)("linearGradient", {
@@ -64,25 +64,25 @@ function E(e) {
           y1: "0",
           y2: "1",
           children: [(0, n.jsx)("stop", {
-            stopColor: C[1],
+            stopColor: T[1],
             offset: "0%"
           }), (0, n.jsx)("stop", {
-            stopColor: _[0],
+            stopColor: C[0],
             offset: "50%"
           }), (0, n.jsx)("stop", {
-            stopColor: _[0],
+            stopColor: C[0],
             offset: "80%"
           }), (0, n.jsx)("stop", {
-            stopColor: C[1],
+            stopColor: T[1],
             offset: "100%"
           })]
         })
       }), (0, n.jsx)("style", {
-        children: x
+        children: _
       })]
     }), (0, n.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
-      id: p
+      id: x
     }), (0, n.jsx)("use", {
       href: "".concat(l, "#heightmap-lines-0"),
       style: {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("735250"),
@@ -15,40 +15,40 @@ var a = n("735250"),
   c = n("417183"),
   f = n("170245"),
   E = n("981631"),
-  C = n("689938"),
-  h = n("621982");
+  h = n("689938"),
+  _ = n("621982");
 
-function _(e) {
+function C(e) {
   let {
     user: t,
     key: n,
-    isFocused: _
-  } = e, S = s.useContext(u.AnalyticsContext), {
-    analyticsLocations: m
+    isFocused: C
+  } = e, m = s.useContext(u.AnalyticsContext), {
+    analyticsLocations: S
   } = (0, i.default)(), p = e => {
     e.stopPropagation(), l.default.unblockUser(t.id, {
       location: "Friends"
     })
   };
   return (0, a.jsx)(c.default, {
-    isFocused: _,
+    isFocused: C,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: m,
-      analyticsLocation: S.location
+      sourceAnalyticsLocations: S,
+      analyticsLocation: m.location
     }),
     user: t,
     children: e => (0, a.jsxs)("div", {
-      className: h.listItemContents,
+      className: _.listItemContents,
       children: [(0, a.jsx)(f.default, {
         user: t,
         hovered: e,
         status: E.StatusTypes.UNKNOWN,
-        subText: C.default.Messages.BLOCKED
+        subText: h.default.Messages.BLOCKED
       }), (0, a.jsx)(d.default, {
         icon: o.default,
         actionType: d.default.ActionTypes.DENY,
-        tooltip: C.default.Messages.UNBLOCK,
+        tooltip: h.default.Messages.UNBLOCK,
         onClick: p,
         shouldHighlight: e
       })]

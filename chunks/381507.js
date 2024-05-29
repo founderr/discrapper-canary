@@ -1,49 +1,49 @@
 "use strict";
-n.r(t);
-var s = n("735250");
-n("470079");
-var i = n("780384"),
-  r = n("481060"),
-  l = n("410030"),
-  a = n("204197"),
-  C = n("51144"),
-  o = n("105759"),
-  u = n("898969"),
-  d = n("703614"),
-  p = n("182294"),
-  c = n("689938"),
-  f = n("866127");
+s.r(t);
+var n = s("735250");
+s("470079");
+var i = s("780384"),
+  r = s("481060"),
+  l = s("410030"),
+  a = s("204197"),
+  o = s("51144"),
+  C = s("105759"),
+  u = s("898969"),
+  d = s("703614"),
+  c = s("182294"),
+  p = s("689938"),
+  f = s("866127");
 t.default = () => {
-  let e = (0, o.default)(),
+  let e = (0, C.default)(),
     {
       avatarSrc: t,
-      eventHandlers: n
+      eventHandlers: s
     } = (0, a.default)({
       user: e,
-      size: p.AvatarSizes.SIZE_32,
+      size: c.AvatarSizes.SIZE_32,
       animateOnHover: !0
     }),
     x = (0, l.useTheme)(),
     _ = (0, i.isThemeLight)(x),
-    L = C.default.getName(e),
-    m = _ ? u.default : d.default;
-  return null == e ? null : (0, s.jsxs)("div", {
+    m = o.default.getName(e),
+    L = _ ? u.default : d.default;
+  return null == e ? null : (0, n.jsxs)("div", {
     className: f.attributionBannerContainer,
-    children: [(0, s.jsx)("div", {
+    children: [(0, n.jsx)("div", {
       className: f.avatarContainer,
-      children: (0, s.jsx)(r.Avatar, {
+      children: (0, n.jsx)(r.Avatar, {
         src: t,
         "aria-label": e.username,
-        size: p.AvatarSizes.SIZE_32,
-        ...n
+        size: c.AvatarSizes.SIZE_32,
+        ...s
       })
-    }), (0, s.jsx)(r.Text, {
+    }), (0, n.jsx)(r.Text, {
       variant: "text-xs/bold",
       className: f.bannerHeader,
-      children: c.default.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({
-        userName: L
+      children: p.default.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({
+        userName: m
       })
-    }), (0, s.jsx)(m, {
+    }), (0, n.jsx)(L, {
       className: f.bannerIcon
     })]
   })

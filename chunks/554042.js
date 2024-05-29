@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return A
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("865427"),
   f = s("358085"),
   m = s("210887"),
-  I = s("981631"),
-  g = s("689938"),
+  g = s("981631"),
+  I = s("689938"),
   N = s("307723");
 let h = [{
   label: "Latin alphabet",
@@ -55,14 +55,14 @@ function C(e, t) {
   }, [e, s]), [s, a]
 }
 
-function O() {
+function A() {
   let [e, t] = n.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
     platformZoom: s,
     theme: l
   } = (0, r.useStateFromStoresObject)([m.default, E.default], () => ({
     theme: m.default.theme,
     platformZoom: E.default.zoom
-  })), [o, O] = n.useState("upright"), A = ["normal", "medium", "semibold", "bold", "extrabold"], p = new Map([
+  })), [o, A] = n.useState("upright"), p = ["normal", "medium", "semibold", "bold", "extrabold"], O = new Map([
     ["normal", 400],
     ["medium", 500],
     ["semibold", 600],
@@ -79,17 +79,17 @@ function O() {
       var e, t;
       return (0, _.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    [M, L] = C("playground-overrideText", null),
-    [D, P] = C("playground-defaultText", h[0].value),
-    v = n.useCallback(e => {
+    [M, v] = C("playground-overrideText", null),
+    [L, D] = C("playground-defaultText", h[0].value),
+    P = n.useCallback(e => {
       let t = h.find(t => {
         let {
           value: s
         } = t;
         return s === e
       });
-      "" === e || null == e ? (P(h[0].value), L(null)) : null != t ? P(t.value) : (P("custom"), L(e))
-    }, [L, P]);
+      "" === e || null == e ? (D(h[0].value), v(null)) : null != t ? D(t.value) : (D("custom"), v(e))
+    }, [v, D]);
   return (0, a.jsx)("div", {
     className: N.fullscreen,
     style: {
@@ -122,8 +122,8 @@ function O() {
           children: (0, a.jsx)(d.SingleSelect, {
             className: N.select,
             options: h,
-            onChange: e => v(e),
-            value: D
+            onChange: e => P(e),
+            value: L
           })
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)("div", {
@@ -131,7 +131,7 @@ function O() {
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
               value: null != M ? M : "",
-              onChange: v
+              onChange: P
             })
           })
         }), (0, a.jsx)(d.FormItem, {
@@ -140,11 +140,11 @@ function O() {
             className: N.theme,
             orientation: "horizontal",
             options: [{
-              name: g.default.Messages.THEME_DARK,
-              value: I.ThemeTypes.DARK
+              name: I.default.Messages.THEME_DARK,
+              value: g.ThemeTypes.DARK
             }, {
-              name: g.default.Messages.THEME_LIGHT,
-              value: I.ThemeTypes.LIGHT
+              name: I.default.Messages.THEME_LIGHT,
+              value: g.ThemeTypes.LIGHT
             }],
             onChange: e => {
               (0, c.saveClientTheme)({
@@ -169,7 +169,7 @@ function O() {
               value: "mono"
             }],
             onChange: e => {
-              O(e.value)
+              A(e.value)
             },
             value: o
           })
@@ -179,7 +179,7 @@ function O() {
         })]
       }), (0, a.jsxs)("div", {
         className: N.textGrid,
-        children: [(0, a.jsx)("div", {}), A.map(e => (0, a.jsx)("div", {
+        children: [(0, a.jsx)("div", {}), p.map(e => (0, a.jsx)("div", {
           className: N.columnHeading,
           children: (0, a.jsx)(d.Heading, {
             variant: "eyebrow",
@@ -196,9 +196,9 @@ function O() {
               color: "text-muted",
               children: ["(", e * R / 100, ")"]
             }) : null]
-          }, e), A.map(t => {
+          }, e), p.map(t => {
             var s;
-            let n = null !== (s = "custom" === D ? M : D) && void 0 !== s ? s : "";
+            let n = null !== (s = "custom" === L ? M : L) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {
               className: N.textSample,
               children: (0, a.jsxs)("div", {
@@ -208,7 +208,7 @@ function O() {
                 }),
                 style: {
                   fontSize: e,
-                  fontWeight: p.get(t)
+                  fontWeight: O.get(t)
                 },
                 children: [(0, a.jsx)("p", {
                   children: n

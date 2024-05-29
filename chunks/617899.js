@@ -19,7 +19,7 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class C extends s.PureComponent {
+class h extends s.PureComponent {
   render() {
     let e = "".concat(c.default.Messages.INVITE_NOTICE_MESSAGE, "\n").concat(c.default.Messages.INVITE_NOTICE_MESSAGE_PART_2);
     return (0, a.jsx)(o.default, {
@@ -57,4 +57,4 @@ class C extends s.PureComponent {
     })
   }
 }
-t.default = C
+t.default = h

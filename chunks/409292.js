@@ -11,10 +11,10 @@ var a = n("735250"),
   c = n("410575"),
   f = n("613311"),
   E = n("601564"),
-  C = n("981631"),
-  h = n("597589");
+  h = n("981631"),
+  _ = n("597589");
 
-function _(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -22,16 +22,16 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class S extends s.Component {
+class m extends s.Component {
   componentDidMount() {
     this.fetchStoreListing(), (0, u.trackAppUIViewed)("channel_store_listing")
   }
   render() {
     return null != this.props.skuId ? (0, a.jsx)(c.default, {
-      page: C.AnalyticsPages.CHANNEL_STORE_LISTING,
+      page: h.AnalyticsPages.CHANNEL_STORE_LISTING,
       root: !0,
       children: (0, a.jsx)("div", {
-        className: h.applicationStore,
+        className: _.applicationStore,
         children: (0, a.jsx)(l.Route, {
           path: "*",
           render: this.renderApplicationListing
@@ -40,13 +40,13 @@ class S extends s.Component {
     }) : null
   }
   constructor(...e) {
-    super(...e), _(this, "fetchStoreListing", e => {
+    super(...e), C(this, "fetchStoreListing", e => {
       let {
         channel: t,
         inputSkuId: n
       } = this.props;
       return null != e ? r.default.fetchChannelStoreListing(t.id, e) : null != n ? r.default.fetchChannelStoreListing(t.id, n) : r.default.fetchChannelStoreListing(t.id)
-    }), _(this, "renderApplicationListing", e => {
+    }), C(this, "renderApplicationListing", e => {
       let {
         location: t
       } = e, {
@@ -72,4 +72,4 @@ t.default = (0, o.default)(i.default.connectStores([d.default], e => {
   return {
     skuId: null != n ? n : d.default.getSkuIdForChannel(t.id)
   }
-})(S))
+})(m))

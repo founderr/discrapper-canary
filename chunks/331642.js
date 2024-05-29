@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return A
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("706667"),
   f = s("792165"),
   m = s("409673"),
-  I = s("603074"),
-  g = s("689938"),
+  g = s("603074"),
+  I = s("689938"),
   N = s("152951");
 
 function h(e) {
@@ -40,7 +40,7 @@ function h(e) {
         closePopout: t
       } = e;
       return (0, a.jsx)(r.Dialog, {
-        children: (0, a.jsx)(I.default, {
+        children: (0, a.jsx)(g.default, {
           suppressPlaySound: !0,
           shouldShowUpsell: !1,
           guildId: null,
@@ -57,7 +57,7 @@ function h(e) {
       onClick: () => {
         i(!s)
       },
-      text: g.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
+      text: I.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
       children: (0, a.jsx)(u.default, {
         className: N.secondaryIcon
       })
@@ -70,7 +70,7 @@ function C(e) {
     sound: t
   } = e, {
     previewSound: s
-  } = (0, _.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? g.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : g.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+  } = (0, _.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? I.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : I.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
     emojiName: t.emojiName,
     soundName: t.name
   });
@@ -83,7 +83,7 @@ function C(e) {
   })
 }
 
-function O(e) {
+function A(e) {
   let {
     sound: t,
     isGlobal: s,
@@ -106,7 +106,7 @@ function O(e) {
         variant: "text-xs/medium",
         color: "header-primary",
         className: N.soundText,
-        children: null == t ? g.default.Messages.NONE : s ? g.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
+        children: null == t ? I.default.Messages.NONE : s ? I.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
           soundName: t.name,
           subtextHook: T
         }) : t.name
@@ -121,7 +121,7 @@ function O(e) {
         onSelect: n
       }), l && !s && (0, a.jsx)(m.SecondaryActionButton, {
         onClick: () => n(null),
-        text: g.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
+        text: I.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
         children: (0, a.jsx)(S.default, {
           color: i.default.unsafe_rawColors.RED_400.css,
           className: N.secondaryIcon

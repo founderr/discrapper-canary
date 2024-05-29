@@ -1,46 +1,46 @@
 "use strict";
-let n, a, r;
+let a, r, i;
 s.r(t), s("47120");
-var l, i, u, o, d = s("442837"),
+var n, l, o, u, d = s("442837"),
   c = s("570140");
 
-function I() {
-  a = {}, n = {}, r = new Set
+function _() {
+  r = {}, a = {}, i = new Set
 }
-I();
-class T extends(l = d.default.Store) {
+_();
+class E extends(n = d.default.Store) {
   getStatisticsForApplication(e) {
-    return n[e]
+    return a[e]
   }
   shouldFetchStatisticsForApplication(e) {
-    let t = a[e];
-    return !r.has(e) && (null == t || Date.now() - t > 36e5)
+    let t = r[e];
+    return !i.has(e) && (null == t || Date.now() - t > 36e5)
   }
 }
-o = "ApplicationStatisticsStore", (u = "displayName") in(i = T) ? Object.defineProperty(i, u, {
-  value: o,
+u = "ApplicationStatisticsStore", (o = "displayName") in(l = E) ? Object.defineProperty(l, o, {
+  value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[u] = o, t.default = new T(c.default, {
+}) : l[o] = u, t.default = new E(c.default, {
   APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function(e) {
     let {
       applicationId: t
     } = e;
-    r.add(t)
+    i.add(t)
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL: function(e) {
     let {
       applicationId: t
     } = e;
-    r.delete(t)
+    i.delete(t)
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS: function(e) {
     let {
       statistics: t,
       applicationId: s
     } = e;
-    a[s] = Date.now(), r.delete(s), n[s] = t
+    r[s] = Date.now(), i.delete(s), a[s] = t
   },
-  LOGOUT: I
+  LOGOUT: _
 })

@@ -12,11 +12,11 @@ var l = n("481060"),
   c = n("341298"),
   f = n("390885"),
   E = n("524329"),
-  C = n("995532"),
-  h = n("486472"),
-  _ = n("430824"),
-  S = n("914010"),
-  m = n("594174"),
+  h = n("995532"),
+  _ = n("486472"),
+  C = n("430824"),
+  m = n("914010"),
+  S = n("594174"),
   p = n("823379"),
   I = n("358085"),
   g = n("929809"),
@@ -30,7 +30,7 @@ var l = n("481060"),
 function L() {
   null != a && (0, l.closeModal)(a)
 }
-class P extends r.default {
+class M extends r.default {
   _initialize() {
     i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", L)
   }
@@ -52,13 +52,13 @@ class P extends r.default {
         f.default.flowStart(O.FlowType.ORGANIC_MARKETING, O.RegistrationSteps.NUF_STARTED)
     }
     let r = !1,
-      L = S.default.getGuildId();
+      L = m.default.getGuildId();
     if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
-      let e = _.default.getGuild(L);
+      let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let P = () => 0 === h.default.totalGuilds && !I.isPlatformEmbedded,
-      y = o.userNeedsAgeGate();
+    let M = () => 0 === _.default.totalGuilds && !I.isPlatformEmbedded,
+      x = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
       open: async function e(e) {
@@ -105,24 +105,24 @@ class P extends r.default {
           modalKey: a
         })
       },
-      predicate: () => P() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => y && !P() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => x && !M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
       open: e => u.openClaimAccountModal(I.isPlatformEmbedded, e),
       predicate: () => {
         var e;
-        return !r && null != m.default.getCurrentUser() && !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
+        return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
       }
     }, {
       key: "Verification Gate with Claim Account",
       open: e => (0, d.openMemberVerificationModal)(L, null != e ? e : void 0),
       predicate: () => {
         var e;
-        return r && !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
+        return r && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
       }
     }, {
       key: "Guild Welcome Modal",
@@ -137,7 +137,7 @@ class P extends r.default {
       }, {
         onCloseCallback: e
       }),
-      predicate: () => null != L && null != C.default.get(L) && C.default.get(L) !== C.NO_WELCOME_SCREEN
+      predicate: () => null != L && null != h.default.get(L) && h.default.get(L) !== h.NO_WELCOME_SCREEN
     }], t = () => {
       g.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
@@ -148,4 +148,4 @@ class P extends r.default {
     }), t()
   }
 }
-t.default = new P
+t.default = new M

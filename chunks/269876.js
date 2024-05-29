@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("65154"),
   f = s("689938"),
   m = s("689641"),
-  I = s("961047"),
-  g = s("611273");
+  g = s("961047"),
+  I = s("611273");
 let N = (0, T.uid)();
 
 function h() {
@@ -28,9 +28,9 @@ function h() {
     threshold: h,
     autoThreshold: C
   } = (0, r.useStateFromStoresObject)([E.default], () => E.default.getModeOptions()), {
-    inputMode: O,
-    automaticVADSupported: A,
-    isEnabled: p
+    inputMode: A,
+    automaticVADSupported: p,
+    isEnabled: O
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
     automaticVADSupported: E.default.supports(_.Features.AUTOMATIC_VAD),
@@ -42,7 +42,7 @@ function h() {
   }
 
   function x(e, t) {
-    S.default.setMode(O, {
+    S.default.setMode(A, {
       threshold: e,
       autoThreshold: t
     })
@@ -92,7 +92,7 @@ function h() {
       })
     }), (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: g.marginBottom8,
+      className: I.marginBottom8,
       children: f.default.Messages.FORM_HELP_AUTOMATIC_VAD
     })]
   })), (0, a.jsxs)(c.FormItem, {
@@ -100,15 +100,15 @@ function h() {
     children: [(0, a.jsx)(c.FormTitle, {
       id: N,
       tag: c.FormTitleTags.H5,
-      className: g.marginBottom8,
+      className: I.marginBottom8,
       children: f.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
-      children: [A && (0, a.jsx)(T.UID, {
+      children: [p && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
-          className: i()(I.horizontal, g.marginBottom4),
+          className: i()(g.horizontal, I.marginBottom4),
           children: [(0, a.jsx)(c.FormTitle, {
             tag: c.FormTitleTags.H3,
-            className: g.marginReset,
+            className: I.marginReset,
             children: (0, a.jsx)("label", {
               htmlFor: e,
               children: f.default.Messages.FORM_LABEL_AUTOMATIC_VAD
@@ -120,9 +120,9 @@ function h() {
           })]
         })
       }), M]
-    }), !p && (0, a.jsx)(c.FormText, {
+    }), !O && (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: i()(m.inputDisabledWarning, g.marginBottom8),
+      className: i()(m.inputDisabledWarning, I.marginBottom8),
       children: f.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
         onEnableClick: S.default.enable
       })

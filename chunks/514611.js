@@ -10,11 +10,11 @@ var a, s = n("735250"),
   c = n("556017"),
   f = n("879484"),
   E = n("26580"),
-  C = n("206887"),
-  h = n("134432"),
-  _ = n("695346"),
-  S = n("768581"),
-  m = n("900849"),
+  h = n("206887"),
+  _ = n("134432"),
+  C = n("695346"),
+  m = n("768581"),
+  S = n("900849"),
   p = n("940627"),
   I = n("806519"),
   g = n("981631"),
@@ -58,13 +58,13 @@ class L extends(a = l.PureComponent) {
       name: R,
       description: O,
       presenceCount: L,
-      memberCount: P,
-      keywords: y
-    } = t, M = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), D = S.default.getGuildDiscoverySplashURL({
+      memberCount: M,
+      keywords: x
+    } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
-      size: 300 * (0, h.getDevicePixelRatio)()
-    }), x = null != D ? D : this.getDefaultSplashURL(a, M), b = S.default.getGuildIconURL({
+      size: 300 * (0, _.getDevicePixelRatio)()
+    }), D = null != y ? y : this.getDefaultSplashURL(a, P), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -88,7 +88,7 @@ class L extends(a = l.PureComponent) {
     c.DiscoveryInAppReportingExperiment.trackExposure({
       location: "de1ef6_4"
     });
-    let G = _.DeveloperMode.getSetting();
+    let G = C.DeveloperMode.getSetting();
     return (0, s.jsx)(o.VisibilitySensor, {
       active: !N,
       onChange: this.setIsVisible,
@@ -117,10 +117,10 @@ class L extends(a = l.PureComponent) {
               children: [(0, s.jsx)("div", {
                 className: A.splash,
                 children: (0, s.jsx)("img", {
-                  src: x,
+                  src: D,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !M
+                    [A.splashImageHeight]: !P
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
@@ -128,7 +128,7 @@ class L extends(a = l.PureComponent) {
                 })
               }), G || j ? (0, s.jsx)("div", {
                 className: A.actionButtons,
-                children: (0, s.jsx)(C.default, {
+                children: (0, s.jsx)(h.default, {
                   guild: t
                 })
               }) : null, (0, s.jsx)("div", {
@@ -170,11 +170,11 @@ class L extends(a = l.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: O
-              }), U && null != y && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: y,
+              }), U && null != x && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: x,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
-                section: m.AnalyticsContexts.POPULAR
+                section: S.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {
                 className: A.memberInfo,
                 children: [null != L && (0, s.jsxs)("div", {
@@ -188,7 +188,7 @@ class L extends(a = l.PureComponent) {
                       membersOnline: L
                     })
                   })]
-                }), null != P && (0, s.jsxs)("div", {
+                }), null != M && (0, s.jsxs)("div", {
                   className: A.memberCount,
                   children: [(0, s.jsx)("div", {
                     className: A.dotOffline
@@ -196,7 +196,7 @@ class L extends(a = l.PureComponent) {
                     variant: "text-xs/normal",
                     color: "header-secondary",
                     children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-                      count: P
+                      count: M
                     })
                   })]
                 })]

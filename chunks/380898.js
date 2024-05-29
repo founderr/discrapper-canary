@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("735250"),
-  l = n("470079"),
-  s = n("16084"),
+  s = n("470079"),
+  l = n("16084"),
   a = n("86040"),
   r = n("51499"),
   u = n("614277"),
   o = n("369890");
 
 function c() {
-  let [e, t] = l.useState(!1), n = async () => {
-    t(!0), await (0, s.resendPaymentVerificationEmail)()
+  let [e, t] = s.useState(!1), n = async () => {
+    t(!0), await (0, l.resendPaymentVerificationEmail)()
   };
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(r.default, {}), (0, i.jsx)(u.PaymentPortalBody, {

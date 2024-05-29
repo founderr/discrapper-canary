@@ -11,10 +11,10 @@ var a = n("392711"),
   c = n("914946"),
   f = n("452426"),
   E = n("186901"),
-  C = n("981631");
-let h = ["349134787773988865"];
+  h = n("981631");
+let _ = ["349134787773988865"];
 t.default = {
-  [C.RPCCommands.SET_ACTIVITY]: {
+  [h.RPCCommands.SET_ACTIVITY]: {
     scope: {
       [E.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_ACTIVITIES_WRITE, E.RPC_LOCAL_SCOPE]
     },
@@ -36,7 +36,7 @@ t.default = {
         party: (0, f.default)(e).keys({
           id: e.string().min(2).max(128),
           size: e.array().items(e.number().min(1)).length(2),
-          privacy: e.number().default(C.ActivityPartyPrivacy.PRIVATE).valid([C.ActivityPartyPrivacy.PRIVATE, C.ActivityPartyPrivacy.PUBLIC])
+          privacy: e.number().default(h.ActivityPartyPrivacy.PRIVATE).valid([h.ActivityPartyPrivacy.PRIVATE, h.ActivityPartyPrivacy.PUBLIC])
         }),
         secrets: (0, f.default)(e).keys({
           match: e.string().min(2).max(128),
@@ -49,7 +49,7 @@ t.default = {
         })).min(1).max(2),
         instance: e.boolean(),
         supported_platforms: e.array().items(e.string().min(1).max(32)).min(1).max(3),
-        type: e.number().default(C.ActivityTypes.PLAYING).valid(C.ActivityTypes.PLAYING, C.ActivityTypes.LISTENING, C.ActivityTypes.WATCHING)
+        type: e.number().default(h.ActivityTypes.PLAYING).valid(h.ActivityTypes.PLAYING, h.ActivityTypes.LISTENING, h.ActivityTypes.WATCHING)
       }).allow(null)
     }),
     handler(e) {
@@ -60,13 +60,13 @@ t.default = {
           pid: l,
           activity: f
         },
-        isSocketConnected: _
+        isSocketConnected: C
       } = e;
       if (![E.TransportTypes.IPC, E.TransportTypes.WEBSOCKET, E.TransportTypes.POST_MESSAGE].includes(a.transport)) throw new d.default({
-        errorCode: C.RPCErrors.INVALID_COMMAND
+        errorCode: h.RPCErrors.INVALID_COMMAND
       }, 'command not available from "'.concat(a.transport, '" transport'));
       if (null == l && E.TransportTypes.IPC === a.transport) throw new d.default({
-        errorCode: C.RPCErrors.INVALID_COMMAND
+        errorCode: h.RPCErrors.INVALID_COMMAND
       }, "nonzero pid required");
       if (null == f) return i.default.dispatch({
         type: "LOCAL_ACTIVITY_UPDATE",
@@ -75,9 +75,9 @@ t.default = {
         activity: f
       }), Promise.resolve(f);
       f.name = a.application.name, f.application_id = a.application.id;
-      let S = a.transport === E.TransportTypes.POST_MESSAGE,
-        m = (0, c.computeActivityFlags)(f, S);
-      m > 0 && (f.flags = m), delete f.instance, null === (t = f.party) || void 0 === t || delete t.privacy;
+      let m = a.transport === E.TransportTypes.POST_MESSAGE,
+        S = (0, c.computeActivityFlags)(f, m);
+      S > 0 && (f.flags = S), delete f.instance, null === (t = f.party) || void 0 === t || delete t.privacy;
       let {
         assets: p,
         party: I,
@@ -86,16 +86,16 @@ t.default = {
         buttons: A,
         type: N
       } = f;
-      if ((null == N || N !== C.ActivityTypes.PLAYING && !S) && (f.type = C.ActivityTypes.PLAYING), null != g) {
+      if ((null == N || N !== h.ActivityTypes.PLAYING && !m) && (f.type = h.ActivityTypes.PLAYING), null != g) {
         let e = s().values(g).filter(e => !!e);
-        if (null != I && s().intersection(e, [I.id]).length > 0 && !h.includes(a.application.id)) throw new d.default({
-          errorCode: C.RPCErrors.INVALID_ACTIVITY_SECRET
+        if (null != I && s().intersection(e, [I.id]).length > 0 && !_.includes(a.application.id)) throw new d.default({
+          errorCode: h.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s().uniq(e).length < e.length) throw new d.default({
-          errorCode: C.RPCErrors.INVALID_ACTIVITY_SECRET
+          errorCode: h.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets must be unique");
         if (null != A) throw new d.default({
-          errorCode: C.RPCErrors.INVALID_ACTIVITY_SECRET
+          errorCode: h.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot currently be sent with buttons")
       }
       if (null != A && (f.metadata = {
@@ -110,7 +110,7 @@ t.default = {
       return n.then(e => {
         var t, n;
         let [s, o] = e;
-        if (null != p && (null != s ? p.large_image = s : delete p.large_image, null != o ? p.small_image = o : delete p.small_image), !_()) return;
+        if (null != p && (null != s ? p.large_image = s : delete p.large_image, null != o ? p.small_image = o : delete p.small_image), !C()) return;
         i.default.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: a.id,
@@ -127,7 +127,7 @@ t.default = {
           details: null !== (t = f.details) && void 0 !== t ? t : "",
           state: null !== (n = f.state) && void 0 !== n ? n : ""
         };
-        return null != u && (c.has_match_secret = !!u.match, c.has_join_secret = !!u.join), null != p && (c.has_images = !!(p.large_image || p.small_image)), null != d && (c.party_max = null != d.size ? d.size[1] : void 0, c.party_id = d.id), r.default.track(C.AnalyticEvents.ACTIVITY_UPDATED, c), f
+        return null != u && (c.has_match_secret = !!u.match, c.has_join_secret = !!u.join), null != p && (c.has_images = !!(p.large_image || p.small_image)), null != d && (c.party_max = null != d.size ? d.size[1] : void 0, c.party_id = d.id), r.default.track(h.AnalyticEvents.ACTIVITY_UPDATED, c), f
       })
     }
   }

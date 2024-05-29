@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("110924"),
   A = n("40851"),
   v = n("115130"),
-  x = n("317381"),
-  N = n("596040"),
+  N = n("317381"),
+  x = n("596040"),
   M = n("296797"),
   R = n("349619"),
   y = n("100527"),
@@ -37,19 +37,19 @@ var a = n("735250"),
   F = n("102172"),
   w = n("788983"),
   k = n("928518"),
-  H = n("703656"),
-  G = n("740492"),
-  B = n("793319"),
+  B = n("703656"),
+  H = n("740492"),
+  G = n("793319"),
   V = n("3861"),
   W = n("493754"),
   Y = n("937995"),
   z = n("618158"),
   K = n("880831"),
   Z = n("73563"),
-  X = n("751843"),
-  q = n("616286"),
-  J = n("268353"),
-  Q = n("786915"),
+  q = n("751843"),
+  X = n("616286"),
+  Q = n("268353"),
+  J = n("786915"),
   $ = n("800965"),
   ee = n("107169"),
   et = n("891551"),
@@ -76,8 +76,8 @@ var a = n("735250"),
   eI = n("358221"),
   eA = n("414910"),
   ev = n("887012"),
-  ex = n("909820"),
-  eN = n("493010"),
+  eN = n("909820"),
+  ex = n("493010"),
   eM = n("742603"),
   eR = n("221888"),
   ey = n("900211"),
@@ -309,7 +309,7 @@ class ek extends l.PureComponent {
         ref: e => {
           this._channelChatRef.current = e, this.props.channelChatRef.current = e
         },
-        children: s && (!d || !this.popoutOpen || this.inPopout) && (0, a.jsx)(eN.default, {
+        children: s && (!d || !this.popoutOpen || this.inPopout) && (0, a.jsx)(ex.default, {
           channel: t,
           guild: n,
           maxWidth: o
@@ -319,7 +319,7 @@ class ek extends l.PureComponent {
   }
   constructor(...e) {
     super(...e), eU(this, "_prevLayout", eP.ChannelLayouts.MINIMUM), eU(this, "_wrapperRef", l.createRef()), eU(this, "_callContainerRef", l.createRef()), eU(this, "_channelChatRef", l.createRef()), eU(this, "_contentRef", l.createRef()), eU(this, "_videoBackgroundTooltipTimeout", new c.Timeout), eU(this, "_lastIdleProps", null), eU(this, "state", {
-      resizedHeight: G.default.callHeaderHeight
+      resizedHeight: H.default.callHeaderHeight
     }), eU(this, "handleFullScreenChange", () => {
       let e = this.getRootNode();
       null != e && !(0, eT.isFullScreen)(e, this.currentDocument) && this.props.layout === eP.ChannelLayouts.FULL_SCREEN && this.handleFullScreen()
@@ -440,7 +440,7 @@ class ek extends l.PureComponent {
         connectedToEmbeddedActivity: t
       } = this.props, n = () => {
         let t = e.getGuildId();
-        null != t && (0, H.transitionTo)((0, eE.previousTextChannelRouteForGuild)(t)), w.openChannelCallPopout(e)
+        null != t && (0, B.transitionTo)((0, eE.previousTextChannelRouteForGuild)(t)), w.openChannelCallPopout(e)
       };
       t ? (0, R.default)(n) : n()
     }), eU(this, "handleStayOnTop", e => {
@@ -472,7 +472,7 @@ class ek extends l.PureComponent {
         inCall: t,
         layout: n
       } = this.props;
-      return t || n === eP.ChannelLayouts.MINIMUM || n === eP.ChannelLayouts.NORMAL ? (0, a.jsx)(B.default, {
+      return t || n === eP.ChannelLayouts.MINIMUM || n === eP.ChannelLayouts.NORMAL ? (0, a.jsx)(G.default, {
         exitFullScreen: this.maybeLeaveFullScreen,
         channel: e,
         onDisconnectCall: this.handleDisconnect,
@@ -491,7 +491,7 @@ class ek extends l.PureComponent {
         participants: d
       } = this.props;
       if (!u) return null;
-      let c = e === eP.ChannelLayouts.NO_CHAT ? X.default.Directions.UP : X.default.Directions.DOWN,
+      let c = e === eP.ChannelLayouts.NO_CHAT ? q.default.Directions.UP : q.default.Directions.DOWN,
         f = [eP.ChannelLayouts.FULL_SCREEN, eP.ChannelLayouts.NO_CHAT].includes(e),
         h = d.some(e => e.type === ej.ParticipantTypes.STREAM),
         m = e === eP.ChannelLayouts.FULL_SCREEN ? () => {
@@ -509,7 +509,7 @@ class ek extends l.PureComponent {
           className: eb.leftTrayIcon,
           exitFullScreen: this.maybeLeaveFullScreen,
           analyticsLocation: n.type === eP.ChannelTypes.GUILD_VOICE ? eP.AnalyticsPages.GUILD_CHANNEL : eP.AnalyticsPages.DM_CHANNEL
-        }) : (0, a.jsx)(Q.default, {
+        }) : (0, a.jsx)(J.default, {
           channel: n,
           stream: (null == r ? void 0 : r.type) === ej.ParticipantTypes.STREAM ? (0, U.decodeStreamKey)(r.id) : void 0,
           className: eb.leftTrayIcon,
@@ -521,7 +521,7 @@ class ek extends l.PureComponent {
           className: eb.iconWrapper,
           align: eh.default.Align.CENTER,
           grow: 0,
-          children: [(0, a.jsx)(X.default, {
+          children: [(0, a.jsx)(q.default, {
             label: f ? eD.default.Messages.SHOW_CHAT : eD.default.Messages.HIDE_CHAT,
             direction: c,
             className: eb.leftTrayIcon,
@@ -579,7 +579,7 @@ class ek extends l.PureComponent {
           className: eb.rightTrayIcon,
           onOpenPopout: this.handleOpenPopout,
           onClosePopout: this.handleClosePopout
-        }) : null, s ? (0, a.jsx)(J.default, {
+        }) : null, s ? (0, a.jsx)(Q.default, {
           themeable: o,
           node: this.getRootNode(),
           guestWindow: e,
@@ -596,7 +596,7 @@ class ek extends l.PureComponent {
         chatOpen: s,
         inCall: i
       } = this.props;
-      return s || this.popoutOpen && !this.inPopout && i ? null : (0, a.jsx)(q.ChatButton, {
+      return s || this.popoutOpen && !this.inPopout && i ? null : (0, a.jsx)(X.ChatButton, {
         channelId: l.id,
         className: t,
         showingClassName: n
@@ -608,7 +608,7 @@ class ek extends l.PureComponent {
         channel: n,
         inCall: l
       } = this.props;
-      return !e || t || this.popoutOpen && !this.inPopout && l ? null : (0, a.jsx)(ex.default, {
+      return !e || t || this.popoutOpen && !this.inPopout && l ? null : (0, a.jsx)(eN.default, {
         children: (0, a.jsx)(K.default, {
           className: eb.chatToasts,
           channelId: n.id
@@ -677,8 +677,8 @@ t.default = function(e) {
     filteredParticipants: U,
     participantsVersion: F,
     mode: w,
-    layout: H,
-    participantsOpen: B,
+    layout: B,
+    participantsOpen: G,
     chatOpen: V,
     selectedParticipant: W
   } = (0, u.useStateFromStoresObject)([eI.default], () => {
@@ -700,21 +700,21 @@ t.default = function(e) {
     selectedStream: z
   } = (0, u.useStateFromStoresObject)([ea.default], () => ({
     selectedStream: null != W ? ea.default.getActiveStreamForStreamKey(W.id) : null
-  }), [W]), K = (0, u.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), Z = (0, u.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), X = (0, u.useStateFromStores)([eu.default], () => eu.default.getMentionCount(n.id), [n.id]), q = (0, u.useStateFromStores)([el.default], () => el.default.getId()), {
-    popoutWindow: J,
-    popoutWindowAlwaysOnTop: Q
+  }), [W]), K = (0, u.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), Z = (0, u.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), q = (0, u.useStateFromStores)([eu.default], () => eu.default.getMentionCount(n.id), [n.id]), X = (0, u.useStateFromStores)([el.default], () => el.default.getId()), {
+    popoutWindow: Q,
+    popoutWindowAlwaysOnTop: J
   } = (0, u.useStateFromStoresObject)([k.default], () => ({
     popoutWindow: k.default.getWindow(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     popoutWindowAlwaysOnTop: k.default.getIsAlwaysOnTop(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
-  })), $ = (0, u.useStateFromStores)([eo.default], () => eo.default.can(eP.Permissions.CONNECT, n)), ee = (0, u.useStateFromStores)([es.default], () => es.default.getToastsEnabled(n.id)), et = (0, u.useStateFromStores)([P.default], () => P.default.getAwaitingRemoteSessionInfo()), en = (0, u.useStateFromStores)([G.default], () => G.default.callHeaderHeight), ec = l.useCallback(e => {
+  })), $ = (0, u.useStateFromStores)([eo.default], () => eo.default.can(eP.Permissions.CONNECT, n)), ee = (0, u.useStateFromStores)([es.default], () => es.default.getToastsEnabled(n.id)), et = (0, u.useStateFromStores)([P.default], () => P.default.getAwaitingRemoteSessionInfo()), en = (0, u.useStateFromStores)([H.default], () => H.default.callHeaderHeight), ec = l.useCallback(e => {
     g.default.updatedUnsyncedSettings({
       callHeaderHeight: e
     })
-  }, []), ef = null !== (t = null == K ? void 0 : K.id) && void 0 !== t ? t : null, eh = (0, N.default)(ef, n.id), em = (0, u.useStateFromStores)([v.default], () => v.default.getFetchState(), []), ep = (0, I.default)(em);
+  }, []), ef = null !== (t = null == K ? void 0 : K.id) && void 0 !== t ? t : null, eh = (0, x.default)(ef, n.id), em = (0, u.useStateFromStores)([v.default], () => v.default.getFetchState(), []), ep = (0, I.default)(em);
   l.useEffect(() => {
     "errored" === em && "errored" !== ep && (0, f.showToast)((0, f.createToast)(eD.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, f.ToastType.FAILURE))
   }, [em, ep]);
-  let eE = (0, u.useStateFromStores)([x.default], () => x.default.getSelfEmbeddedActivityForChannel(n.id), [n]);
+  let eE = (0, u.useStateFromStores)([N.default], () => N.default.getSelfEmbeddedActivityForChannel(n.id), [n]);
   l.useEffect(() => {
     R && !L && null != eE && m.default.selectParticipant(n.id, eE.applicationId)
   }, [R, L, eE, n.id]), l.useEffect(() => {
@@ -733,35 +733,35 @@ t.default = function(e) {
     {
       analyticsLocations: eS
     } = (0, O.default)(y.default.CHANNEL_CALL),
-    eT = x.default.getEmbeddedActivitiesForChannel(n.id);
+    eT = N.default.getEmbeddedActivitiesForChannel(n.id);
   return (0, a.jsx)(O.AnalyticsLocationProvider, {
     value: eS,
     children: (0, a.jsx)(_.default, {
       page: eP.AnalyticsPages.CHANNEL_CALL,
-      children: (0, a.jsx)(ex.ChannelCallChatLayerProvider, {
+      children: (0, a.jsx)(eN.ChannelCallChatLayerProvider, {
         children: (0, a.jsxs)(eL.VoiceChannelEffectsLayerProvider, {
           children: [(0, a.jsx)(ek, {
             channel: n,
             guild: K,
             hasConnectPermission: $,
-            participantsOpen: B,
+            participantsOpen: G,
             renderExternalHeader: s,
             appContext: C,
             call: Z,
-            popoutWindow: J,
-            popoutWindowAlwaysOnTop: Q,
-            mentionCount: X,
+            popoutWindow: Q,
+            popoutWindowAlwaysOnTop: J,
+            mentionCount: q,
             selectedStream: z,
             mode: w,
             inCall: R,
             participants: b,
             filteredParticipants: U,
             participantsVersion: F,
-            layout: H,
+            layout: B,
             chatOpen: V,
             maxSidebarWidth: r - 550,
             shouldUseVoiceEffectsActionBar: eC,
-            currentUserId: q,
+            currentUserId: X,
             selectedParticipant: W,
             allActiveStreams: Y,
             useNewInviteButton: eh,
@@ -781,7 +781,7 @@ t.default = function(e) {
             forceShowControls: eg,
             awaitingRemoteSessionInfo: et,
             currentChannelActivities: eT
-          }), !n.isPrivate() && (0, a.jsx)(eL.VoiceChannelEffectsLayerContainer, {}), (0, a.jsx)(ex.ChannelCallChatLayerContainer, {})]
+          }), !n.isPrivate() && (0, a.jsx)(eL.VoiceChannelEffectsLayerContainer, {}), (0, a.jsx)(eN.ChannelCallChatLayerContainer, {})]
         })
       })
     })

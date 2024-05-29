@@ -1,24 +1,24 @@
 "use strict";
-n.r(s), n.d(s, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
-var t = n("735250");
+var l = n("735250");
 n("470079");
 var a = n("481060"),
-  r = n("688465"),
-  l = n("689938");
+  s = n("688465"),
+  i = n("689938");
 
-function i(e) {
+function r(e) {
   let {
-    className: s
+    className: t
   } = e;
-  return (0, t.jsx)(a.Tooltip, {
-    text: l.default.Messages.BROADCASTING_BETA_TOOLTIP_TEXT,
-    children: e => (0, t.jsx)(r.default, {
+  return (0, l.jsx)(a.Tooltip, {
+    text: i.default.Messages.BROADCASTING_BETA_TOOLTIP_TEXT,
+    children: e => (0, l.jsx)(s.default, {
       ...e,
-      className: s
+      className: t
     })
   })
 }

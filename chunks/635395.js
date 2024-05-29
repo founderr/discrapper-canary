@@ -9,21 +9,21 @@ var a, s, l = n("470079"),
   c = n("292959"),
   f = n("19780"),
   E = n("699516"),
-  C = n("606304"),
-  h = n("358085"),
-  _ = n("998502"),
-  S = n("981631");
+  h = n("606304"),
+  _ = n("358085"),
+  C = n("998502"),
+  m = n("981631");
 (s = a || (a = {})).DEFAULT = "DEFAULT", s.UNREAD = "UNREAD", s.CONNECTED = "CONNECTED", s.SPEAKING = "SPEAKING", s.MUTED = "MUTED", s.DEAFENED = "DEAFENED";
-let m = (0, h.isMac)() ? null : "DEFAULT";
+let S = (0, _.isMac)() ? null : "DEFAULT";
 class p extends l.PureComponent {
   componentDidMount() {
-    _.default.setSystemTrayIcon(this.getIcon())
+    C.default.setSystemTrayIcon(this.getIcon())
   }
   componentDidUpdate() {
-    _.default.setSystemTrayIcon(this.getIcon())
+    C.default.setSystemTrayIcon(this.getIcon())
   }
   componentWillUnmount() {
-    _.default.setSystemTrayIcon(m)
+    C.default.setSystemTrayIcon(S)
   }
   render() {
     return null
@@ -37,8 +37,8 @@ class p extends l.PureComponent {
         speaking: n,
         connected: a,
         unread: s
-      } = this.props, l = m;
-      return (0, h.isMac)() && !a ? l : (0, h.isLinux)() || !a ? (s && (l = "UNREAD"), l) : l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
+      } = this.props, l = S;
+      return (0, _.isMac)() && !a ? l : (0, _.isLinux)() || !a ? (s && (l = "UNREAD"), l) : l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
     }, n in t ? Object.defineProperty(t, n, {
       value: a,
       enumerable: !0,
@@ -48,16 +48,16 @@ class p extends l.PureComponent {
   }
 }
 let I = () => null;
-h.isPlatformEmbedded && (_.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), _.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), _.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
-  o.default.open(S.UserSettingsSections.VOICE)
-}), I = i.default.connectStores([f.default, d.default, C.default, u.default, E.default, c.default], () => {
+_.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
+  o.default.open(m.UserSettingsSections.VOICE)
+}), I = i.default.connectStores([f.default, d.default, h.default, u.default, E.default, c.default], () => {
   let e = u.default.getTotalMentionCount(),
     t = u.default.hasAnyUnread(),
     n = E.default.getPendingCount(),
     a = c.default.getDisableUnreadBadge();
   return {
     connected: f.default.isConnected(),
-    speaking: C.default.isCurrentUserSpeaking(),
+    speaking: h.default.isCurrentUserSpeaking(),
     muted: d.default.isSelfMute() || d.default.isSelfMutedTemporarily(),
     deafened: d.default.isSelfDeaf(),
     unread: !a && !!(t || e + n > 0)

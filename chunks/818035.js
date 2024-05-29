@@ -1,6 +1,6 @@
 "use strict";
 s.r(t), s("653041"), s("47120");
-var a, n, i, r, l = s("442837"),
+var a, n, i, l, r = s("442837"),
   u = s("570140"),
   o = s("461655");
 let d = [];
@@ -10,7 +10,7 @@ function c(e) {
     payment: t
   } = e, s = o.default.createFromServer(t), a = d.findIndex(e => e.id === t.id); - 1 === a ? (d.push(s), d.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : d[a] = s, d = [...d]
 }
-class p extends(a = l.default.Store) {
+class p extends(a = r.default.Store) {
   getPayment(e) {
     return d.find(t => t.id === e)
   }
@@ -18,12 +18,12 @@ class p extends(a = l.default.Store) {
     return d
   }
 }
-r = "PaymentStore", (i = "displayName") in(n = p) ? Object.defineProperty(n, i, {
-  value: r,
+l = "PaymentStore", (i = "displayName") in(n = p) ? Object.defineProperty(n, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = r, t.default = new p(u.default, {
+}) : n[i] = l, t.default = new p(u.default, {
   BILLING_PAYMENTS_FETCH_SUCCESS: function(e) {
     let {
       payments: t

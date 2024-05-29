@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var n = a("735250");
 a("470079");
-var s = a("120356"),
-  l = a.n(s),
+var l = a("120356"),
+  s = a.n(l),
   r = a("481060"),
   o = a("912454"),
   i = a("689938"),
@@ -16,17 +16,17 @@ let d = e => {
   let {
     className: t,
     submitting: a,
-    stripePaymentMethod: s
+    stripePaymentMethod: l
   } = e, {
     card: d
-  } = null != s ? s : {}, c = null != d ? o.default.getType(d.brand) : o.default.Types.UNKNOWN;
+  } = null != l ? l : {}, c = null != d ? o.default.getType(d.brand) : o.default.Types.UNKNOWN;
   return (0, n.jsx)(r.FormSection, {
     className: t,
     title: i.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE,
     children: (0, n.jsxs)("div", {
       className: u.cardNumberWrapper,
       children: [(0, n.jsx)(o.default, {
-        className: l()(u.cardIcon, {
+        className: s()(u.cardIcon, {
           [u.submitting]: a
         }),
         type: c

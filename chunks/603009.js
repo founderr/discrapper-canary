@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("353093"),
   A = n("940725"),
   v = n("114487"),
-  x = n("979264"),
-  N = n("981631"),
+  N = n("979264"),
+  x = n("981631"),
   M = n("921944"),
   R = n("689938"),
   y = n("838373");
@@ -39,8 +39,8 @@ function L(e) {
     showToast: o,
     onConfirm: m,
     onDismiss: p
-  } = e, [E, g] = l.useState(!1), _ = l.useRef(null), A = (0, S.useClanInfo)(s.id), N = (0, f.default)(), M = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), L = (0, T.useBrandColor)(null == A ? void 0 : null === (t = A.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), O = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-    theme: N,
+  } = e, [E, g] = l.useState(!1), _ = l.useRef(null), A = (0, S.useClanInfo)(s.id), x = (0, f.default)(), M = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), L = (0, T.useBrandColor)(null == A ? void 0 : null === (t = A.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), O = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+    theme: x,
     saturation: 1
   }).hex(), j = (0, T.getClanRadialBackgroundStyle)(L, O, "top left", .3, "30%"), P = (0, c.useStateFromStores)([C.default], () => {
     var e;
@@ -91,12 +91,12 @@ function L(e) {
       guildName: s.name
     }),
     k = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
-    H = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
+    B = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
       guildName: s.name
     }) : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
       guildName: s.name
     }),
-    G = (0, I.getClanBadgeUrl)(s.id, null === (n = s.clan) || void 0 === n ? void 0 : n.badge);
+    H = (0, I.getClanBadgeUrl)(s.id, null === (n = s.clan) || void 0 === n ? void 0 : n.badge);
   return U((e, t) => {
     var n;
     return t && (0, a.jsx)(r.animated.div, {
@@ -109,7 +109,7 @@ function L(e) {
       },
       ref: _,
       children: (0, a.jsx)(d.ClickableContainer, {
-        "aria-label": H,
+        "aria-label": B,
         onClick: b,
         children: (0, a.jsxs)("div", {
           className: i()(y.toastContainerInner, E ? y.hovered : null),
@@ -121,9 +121,9 @@ function L(e) {
               className: y.icon
             }), (0, a.jsx)("div", {
               className: y.guildTagContainer,
-              children: (0, a.jsx)(x.BaseClanTagChiplet, {
+              children: (0, a.jsx)(N.BaseClanTagChiplet, {
                 clanTag: null === (n = s.clan) || void 0 === n ? void 0 : n.tag,
-                clanBadge: G,
+                clanBadge: H,
                 className: y.guildClanTag
               })
             })]
@@ -160,9 +160,9 @@ function L(e) {
 function O(e) {
   let {} = e, t = (0, c.useStateFromStores)([E.default], () => E.default.getGuildId()), n = (0, A.useShouldShowUserClanTagUpsell)(t, "clan_tag_upsell_toast"), s = (0, c.useStateFromStores)([p.default], () => p.default.getGuild(t), [t]), [i, r] = l.useState(!1), u = l.useRef(null);
   l.useEffect(() => (n && (u.current = window.setTimeout(() => {
-    r(!0), g.default.track(N.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
+    r(!0), g.default.track(x.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
       type: o.DismissibleGuildContent[o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE],
-      guild_id: null != t ? t : N.EMPTY_STRING_SNOWFLAKE_ID
+      guild_id: null != t ? t : x.EMPTY_STRING_SNOWFLAKE_ID
     })
   }, 2500)), () => {
     null != u.current && window.clearTimeout(u.current)
@@ -171,7 +171,7 @@ function O(e) {
       r(!1), null != t && (0, _.openAdoptClanIdentityModal)(t)
     }, [, t]),
     f = l.useCallback(() => {
-      r(!1), null != t && (0, m.markContentAsDismissed)(o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.EMPTY_STRING_SNOWFLAKE_ID, !0, M.ContentDismissActionType.DISMISS)
+      r(!1), null != t && (0, m.markContentAsDismissed)(o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : x.EMPTY_STRING_SNOWFLAKE_ID, !0, M.ContentDismissActionType.DISMISS)
     }, [t]);
   return n && null != t && null != s ? (0, a.jsx)(L, {
     guild: s,

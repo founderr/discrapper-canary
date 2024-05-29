@@ -34,8 +34,8 @@ function A(e) {
     (0, d.fetchStickerPack)("847199849233514549", !0)
   }, []);
   let v = (0, r.useStateFromStores)([m.default, h.default], () => !!i()(m.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
-    x = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-    N = null !== (t = C.default.useName(x)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
+    N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+    x = null !== (t = C.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
     M = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(I)),
     R = l.useCallback(async () => {
       if (null == s || "" === s) try {
@@ -50,7 +50,7 @@ function A(e) {
       }
     }, [n.id, n.type, s]),
     y = _.default.Messages.WAVE_TO.format({
-      username: N
+      username: x
     }),
     L = null != s && "" !== s ? (0, a.jsx)(o.Text, {
       className: T.error,

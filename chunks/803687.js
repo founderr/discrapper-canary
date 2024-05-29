@@ -8,11 +8,11 @@ var r = s("120356"),
   l = s("626135"),
   o = s("391110"),
   u = s("474936"),
-  c = s("981631"),
-  d = s("689938"),
+  d = s("981631"),
+  c = s("689938"),
   _ = s("85428");
 let E = (e, t, s) => {
-  l.default.track(c.AnalyticEvents.NITRO_HOME_NAVIGATION, {
+  l.default.track(d.AnalyticEvents.NITRO_HOME_NAVIGATION, {
     current_component: "".concat(o.NitroLandingPages.MARKETING, "-").concat(t),
     next_component: "".concat(o.NitroLandingPages.MARKETING, "-").concat(e),
     interaction_component: "Nitro Toggle"
@@ -24,10 +24,10 @@ t.default = e => {
     setSelectedPremiumType: s
   } = e, r = [{
     type: u.PremiumTypes.TIER_2,
-    label: d.default.Messages.PREMIUM
+    label: c.default.Messages.PREMIUM
   }, {
     type: u.PremiumTypes.TIER_0,
-    label: d.default.Messages.BASIC
+    label: c.default.Messages.BASIC
   }];
   return (0, a.jsxs)("div", {
     className: i()(_.toggleSwitch, {

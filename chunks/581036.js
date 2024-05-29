@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n("47120");
-var u, l, r, a, i = n("512722"),
-  o = n.n(i),
-  s = n("442837"),
-  d = n("570140"),
-  f = n("344185"),
-  c = n("592125"),
-  m = n("306680");
+u.r(t), u("47120");
+var n, l, r, a, i = u("512722"),
+  o = u.n(i),
+  d = u("442837"),
+  s = u("570140"),
+  f = u("344185"),
+  c = u("592125"),
+  m = u("306680");
 let g = {},
   S = new Set;
-class h extends(u = s.default.Store) {
+class T extends(n = d.default.Store) {
   initialize() {
     this.waitFor(f.default, c.default, m.default)
   }
@@ -20,30 +20,30 @@ class h extends(u = s.default.Store) {
     return o()(f.default.hasLoaded(e), "must wait for THREAD_LIST_SYNC before calling this"), t.filter(e => !(e in g) && !S.has(e))
   }
 }
-a = "ForumPostUnreadCountStore", (r = "displayName") in(l = h) ? Object.defineProperty(l, r, {
+a = "ForumPostUnreadCountStore", (r = "displayName") in(l = T) ? Object.defineProperty(l, r, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[r] = a, t.default = new h(d.default, {
+}) : l[r] = a, t.default = new T(s.default, {
   CONNECTION_OPEN: function() {
     g = {}, S = new Set
   },
   THREAD_CREATE: function(e) {
     let {
       channel: t,
-      isNewlyCreated: n
+      isNewlyCreated: u
     } = e;
-    if (!n || !f.default.hasLoaded(t.guild_id)) return !1;
+    if (!u || !f.default.hasLoaded(t.guild_id)) return !1;
     g[t.id] = 0
   },
   MESSAGE_CREATE: function(e) {
     let {
       channelId: t,
-      optimistic: n,
-      isPushNotification: u
+      optimistic: u,
+      isPushNotification: n
     } = e;
-    if (n || u || !(t in g)) return !1;
+    if (u || n || !(t in g)) return !1;
     g[t]++
   },
   FORUM_UNREADS: function(e) {
@@ -60,8 +60,8 @@ a = "ForumPostUnreadCountStore", (r = "displayName") in(l = h) ? Object.definePr
     } = e;
     if (!(t in g)) {
       let e = c.default.getChannel(t),
-        n = c.default.getChannel(null == e ? void 0 : e.parent_id);
-      if (!(null == n ? void 0 : n.isForumLikeChannel())) return !1
+        u = c.default.getChannel(null == e ? void 0 : e.parent_id);
+      if (!(null == u ? void 0 : u.isForumLikeChannel())) return !1
     }
     g[t] = m.default.getUnreadCount(t)
   },

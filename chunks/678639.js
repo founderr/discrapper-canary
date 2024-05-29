@@ -6,17 +6,17 @@ r.r(t), r.d(t, {
 }), r("47120");
 var a = r("735250"),
   i = r("470079"),
-  n = r("120356"),
-  l = r.n(n),
+  l = r("120356"),
+  n = r.n(l),
   o = r("442837"),
-  c = r("481060"),
-  s = r("6048"),
+  s = r("481060"),
+  c = r("6048"),
   d = r("548420"),
   u = r("502568"),
   h = r("428530"),
-  p = r("484036"),
-  g = r("681619"),
-  m = r("621060"),
+  m = r("484036"),
+  p = r("681619"),
+  g = r("621060"),
   f = r("277513"),
   y = r("672822");
 
@@ -28,16 +28,16 @@ function x(e) {
   let {
     store: t,
     dataGetter: r
-  } = e, [n, l] = i.useState(r(t));
+  } = e, [l, n] = i.useState(r(t));
   return i.useEffect(() => {
-    let e = () => l(r(t));
+    let e = () => n(r(t));
     return e(), t.addChangeListener(e), () => {
       t.removeChangeListener(e)
     }
-  }, [t, r]), (0, a.jsx)(c.ScrollerThin, {
+  }, [t, r]), (0, a.jsx)(s.ScrollerThin, {
     className: y.inspectorContainer,
     children: (0, a.jsx)(h.default, {
-      data: n
+      data: l
     })
   })
 }
@@ -82,29 +82,29 @@ let k = [{
     }
   }];
 
-function T(e) {
+function j(e) {
   let {
     store: t,
     initialHeight: r
   } = e, {
     TabBar: i,
-    renderSelectedTab: n
-  } = (0, m.default)({
+    renderSelectedTab: l
+  } = (0, g.default)({
     tabs: v
   }, []);
-  return (0, a.jsxs)(p.default, {
+  return (0, a.jsxs)(m.default, {
     className: y.subPanel,
     minHeight: 100,
     initialHeight: r,
     children: [(0, a.jsx)(i, {}), (0, a.jsxs)(u.default, {
-      className: l()(f.headerBar, y.subPanelHeaderBar),
+      className: n()(f.headerBar, y.subPanelHeaderBar),
       children: [(0, a.jsx)(u.default.Icon, {
         icon: d.default,
         tooltip: t.getName()
       }), (0, a.jsx)(u.default.Title, {
         children: t.getName()
       })]
-    }), n({
+    }), l({
       store: t
     })]
   })
@@ -113,42 +113,42 @@ function T(e) {
 function S() {
   let e = i.useRef(null),
     [t, r] = i.useState(""),
-    n = o.Store.getAll(),
-    d = i.useMemo(() => n.map(e => ({
+    l = o.Store.getAll(),
+    d = i.useMemo(() => l.map(e => ({
       key: e._dispatchToken,
       store: e
-    })).sort(b), [n]).filter(e => (function(e, t) {
+    })).sort(b), [l]).filter(e => (function(e, t) {
       let {
         store: r
       } = e;
       return r.getName().toLowerCase().includes(t.toLowerCase())
     })(e, t)),
     [u, h] = i.useState(),
-    p = n.find(e => e._dispatchToken === u);
+    m = l.find(e => e._dispatchToken === u);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l()(f.panel, y.panel),
+    className: n()(f.panel, y.panel),
     children: [(0, a.jsx)("div", {
       className: y.toolbar,
-      children: (0, a.jsx)(s.default, {
+      children: (0, a.jsx)(c.default, {
         className: y.searchBar,
-        size: s.default.Sizes.SMALL,
+        size: c.default.Sizes.SMALL,
         query: t,
         onChange: r,
         onClear: () => r(""),
         placeholder: "Search stores",
         "aria-label": "Search stores"
       })
-    }), (0, a.jsx)(c.ScrollerThin, {
+    }), (0, a.jsx)(s.ScrollerThin, {
       className: y.tableContainer,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(p.default, {
         columns: k,
         data: d,
         selectedRowKey: u,
         onClickRow: h
       })
-    }), null != p && (0, a.jsx)(T, {
-      store: p,
+    }), null != m && (0, a.jsx)(j, {
+      store: m,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]
   })

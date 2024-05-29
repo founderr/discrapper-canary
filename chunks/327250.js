@@ -27,8 +27,8 @@ var l = n("120356"),
   I = n("974029"),
   A = n("789695"),
   v = n("465670"),
-  x = n("754424"),
-  N = n("877410"),
+  N = n("754424"),
+  x = n("877410"),
   M = n("572004"),
   R = n("5192"),
   y = n("51144"),
@@ -172,7 +172,7 @@ function U(e) {
           })
         })
       },
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, a.jsx)(x.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
@@ -236,7 +236,7 @@ function U(e) {
         D(h.ModerationActionType.COPY_ID), (0, M.copy)(l.id)
       },
       disabled: !M.SUPPORTS_COPY,
-      children: [(0, a.jsx)(x.default, {
+      children: [(0, a.jsx)(N.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css

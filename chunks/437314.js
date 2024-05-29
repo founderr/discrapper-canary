@@ -15,7 +15,7 @@ var a, s = n("735250"),
   f = n("689938"),
   E = n("22988");
 
-function C(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a || (a = {})).SECTION_NO_RESULTS = "SECTION_NO_RESULTS";
-let h = Object.freeze({
+let _ = Object.freeze({
     SECTION_ALL: {
       lightSrc: n("900933"),
       darkSrc: n("67764"),
@@ -85,10 +85,10 @@ let h = Object.freeze({
       })
     }
   }),
-  _ = e => {
+  C = e => {
     let {
       theme: t
-    } = e, n = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = h.SECTION_ALL;
+    } = e, n = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = _.SECTION_ALL;
     return (0, s.jsx)(l.Fragment, {
       children: (0, s.jsxs)(d.default, {
         theme: t,
@@ -103,7 +103,7 @@ let h = Object.freeze({
       })
     })
   };
-class S extends l.PureComponent {
+class m extends l.PureComponent {
   render() {
     let {
       type: e,
@@ -115,17 +115,17 @@ class S extends l.PureComponent {
       switch (e) {
         case c.FriendsSections.ADD_FRIEND:
         case c.FriendsSections.ALL:
-          return h.SECTION_ALL;
+          return _.SECTION_ALL;
         case c.FriendsSections.ONLINE:
-          return h.SECTION_ONLINE;
+          return _.SECTION_ONLINE;
         case c.FriendsSections.PENDING:
-          return h.SECTION_PENDING;
+          return _.SECTION_PENDING;
         case c.FriendsSections.SUGGESTIONS:
-          return h.SECTION_SUGGESTIONS;
+          return _.SECTION_SUGGESTIONS;
         case c.FriendsSections.BLOCKED:
-          return h.SECTION_BLOCKED;
+          return _.SECTION_BLOCKED;
         case "SECTION_NO_RESULTS":
-          return h.SECTION_NO_RESULTS;
+          return _.SECTION_NO_RESULTS;
         default:
           throw Error("FriendsEmptyState: Invalid empty state")
       }
@@ -133,7 +133,7 @@ class S extends l.PureComponent {
     return e === c.FriendsSections.ADD_FRIEND ? (0, s.jsx)(i.default.div, {
       className: E.friendsEmpty,
       style: a,
-      children: (0, s.jsx)(_, {
+      children: (0, s.jsx)(C, {
         theme: n
       })
     }) : (0, s.jsx)(i.default.div, {
@@ -151,14 +151,14 @@ class S extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), C(this, "state", {
+    super(...e), h(this, "state", {
       opacity: new i.default.Value(1)
-    }), C(this, "componentWillEnter", e => {
+    }), h(this, "componentWillEnter", e => {
       this.state.opacity.setValue(0), i.default.timing(this.state.opacity, {
         toValue: 1,
         duration: 250
       }).start(e)
-    }), C(this, "componentWillLeave", e => {
+    }), h(this, "componentWillLeave", e => {
       i.default.timing(this.state.opacity, {
         toValue: 0,
         duration: 250
@@ -170,4 +170,4 @@ t.default = r.default.connectStores([u.default], () => ({
   theme: u.default.theme
 }), {
   forwardRef: !0
-})(S)
+})(m)

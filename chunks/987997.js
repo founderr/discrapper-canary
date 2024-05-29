@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
 var a = s("735250");
@@ -9,7 +9,7 @@ s("470079");
 var n = s("481060"),
   i = s("32118");
 
-function r(e) {
+function l(e) {
   let {
     children: t,
     ...s

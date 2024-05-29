@@ -19,11 +19,11 @@ var a, s, l = n("735250"),
   c = n("662842"),
   f = n("703656"),
   E = n("922482"),
-  C = n("565799"),
-  h = n("501655"),
-  _ = n("192079"),
-  S = n("427679"),
-  m = n("448206"),
+  h = n("565799"),
+  _ = n("501655"),
+  C = n("192079"),
+  m = n("427679"),
+  S = n("448206"),
   p = n("496675"),
   I = n("938475"),
   g = n("808602"),
@@ -34,11 +34,11 @@ var a, s, l = n("735250"),
   R = n("393112"),
   O = n("170039"),
   L = n("602623"),
-  P = n("626135"),
-  y = n("823379"),
-  M = n("15274"),
-  D = n("924301"),
-  x = n("504160"),
+  M = n("626135"),
+  x = n("823379"),
+  P = n("15274"),
+  y = n("924301"),
+  D = n("504160"),
   b = n("151864"),
   U = n("835184"),
   j = n("725436"),
@@ -118,7 +118,7 @@ let z = i.memo(function(e) {
   })
 });
 
-function q(e) {
+function Q(e) {
   let {
     guildEvent: t,
     channel: n
@@ -129,7 +129,7 @@ function q(e) {
     return t
   }), [n]), s = (0, u.getChannelIconComponent)(n);
   return (0, l.jsx)(z, {
-    onClickCloseIcon: () => (0, x.hideLiveChannelNotice)({
+    onClickCloseIcon: () => (0, D.hideLiveChannelNotice)({
       eventId: null == t ? void 0 : t.id
     }),
     heading: W.default.Messages.STAGE_CHANNEL_LIVE_NOW,
@@ -148,17 +148,17 @@ function q(e) {
   })
 }
 
-function Q(e) {
+function q(e) {
   let {
     guildEvent: t,
     noticeType: n
-  } = e, a = (0, F.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([D.default], () => D.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
-  return !s && null == i && (0, x.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
+  } = e, a = (0, F.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([y.default], () => y.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
+  return !s && null == i && (0, D.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
     fullWidth: !0,
     className: K.joinButton,
     innerClassName: K.rsvpButton,
     onClick: function() {
-      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, x.hideUpcomingEventNotice)(t.id), 1e3)), P.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         guild_id: t.guild_id,
         notice_type: n
       })
@@ -187,16 +187,16 @@ function Z(e) {
     startTime: f,
     endTime: E
   } = (0, w.default)(n.id), {
-    startDateTimeString: C,
-    upcomingEvent: h,
-    diffMinutes: _
-  } = (0, F.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), S = h ? _ > 0 ? W.default.Messages.STARTING_IN_MINUTES.format({
-    minutes: _
+    startDateTimeString: h,
+    upcomingEvent: _,
+    diffMinutes: C
+  } = (0, F.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), m = _ ? C > 0 ? W.default.Messages.STARTING_IN_MINUTES.format({
+    minutes: C
   }) : W.default.Messages.STARTING_SOON : W.default.Messages.STARTING_ON_DATE.format({
-    date: C
+    date: h
   });
   return i.useEffect(() => {
-    P.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+    M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
       notice_type: a,
       guild_id: n.guild_id
     })
@@ -205,7 +205,7 @@ function Z(e) {
     children: [(0, l.jsxs)("div", {
       className: K.textBlock,
       children: [(0, l.jsx)(o.Clickable, {
-        onClick: () => (0, M.openGuildEventDetails)({
+        onClick: () => (0, P.openGuildEventDetails)({
           eventId: n.id
         }),
         className: K.eventNameClickable,
@@ -217,10 +217,10 @@ function Z(e) {
         })
       }), (0, l.jsx)(o.Clickable, {
         onClick: () => {
-          P.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
+          M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: a,
             guild_id: n.guild_id
-          }), (0, x.hideUpcomingEventNotice)(n.id)
+          }), (0, D.hideUpcomingEventNotice)(n.id)
         },
         className: K.closeIcon,
         "aria-label": W.default.Messages.CLOSE,
@@ -239,7 +239,7 @@ function Z(e) {
         color: "header-secondary",
         variant: "text-xs/normal",
         className: K.startTime,
-        children: S
+        children: m
       })]
     }), (0, l.jsxs)("div", {
       className: K.textBlock,
@@ -257,7 +257,7 @@ function Z(e) {
         className: K.channelName,
         children: null !== (t = null == d ? void 0 : d.name) && void 0 !== t ? t : r
       })]
-    }), (0, l.jsx)(Q, {
+    }), (0, l.jsx)(q, {
       guildEvent: n,
       noticeType: a
     })]
@@ -269,7 +269,7 @@ function X(e) {
     guildEvent: t
   } = e, n = (0, B.getLocationFromEvent)(t);
   return null == n ? null : (0, l.jsx)(z, {
-    onClickCloseIcon: () => (0, x.hideLiveChannelNotice)({
+    onClickCloseIcon: () => (0, D.hideLiveChannelNotice)({
       eventId: null == t ? void 0 : t.id
     }),
     heading: W.default.Messages.HAPPENING_NOW,
@@ -290,7 +290,7 @@ function J(e) {
   let {
     guildEvent: t
   } = e, n = i.useCallback(() => {
-    (0, M.openGuildEventDetails)({
+    (0, P.openGuildEventDetails)({
       eventId: t.id
     })
   }, [t]);
@@ -325,11 +325,11 @@ function ee(e) {
   let {
     stageInstance: t,
     channel: n
-  } = e, a = (0, r.useStateFromStoresArray)([C.default], () => [...new Set(C.default.getMutableParticipants(n.id, h.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [n.id]), s = (0, r.useStateFromStores)([C.default], () => C.default.getParticipantCount(n.id, h.StageChannelParticipantNamedIndex.AUDIENCE), [n.id]), i = W.default.Messages.LISTENING_COUNT.format({
+  } = e, a = (0, r.useStateFromStoresArray)([h.default], () => [...new Set(h.default.getMutableParticipants(n.id, _.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [n.id]), s = (0, r.useStateFromStores)([h.default], () => h.default.getParticipantCount(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), [n.id]), i = W.default.Messages.LISTENING_COUNT.format({
     count: "".concat(s)
   });
   return (0, l.jsx)(z, {
-    onClickCloseIcon: () => (0, x.hideLiveChannelNotice)({
+    onClickCloseIcon: () => (0, D.hideLiveChannelNotice)({
       stageId: null == t ? void 0 : t.id
     }),
     heading: W.default.Messages.STAGE_CHANNEL_LIVE_NOW,
@@ -359,7 +359,7 @@ function et(e) {
     channel: t,
     speakers: n,
     voiceType: a
-  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([p.default], () => p.default.can(Y.Permissions.CONNECT, t)), c = (0, m.default)(t.id), f = W.default.Messages.JOIN;
+  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([p.default], () => p.default.can(Y.Permissions.CONNECT, t)), c = (0, S.default)(t.id), f = W.default.Messages.JOIN;
   switch (a) {
     case 1:
       f = W.default.Messages.JOIN;
@@ -371,7 +371,7 @@ function et(e) {
       f = W.default.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
       break;
     default:
-      (0, y.assertNever)(a)
+      (0, x.assertNever)(a)
   }
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [u.length > 0 ? (0, l.jsxs)("div", {
@@ -385,7 +385,7 @@ function et(e) {
         color: "header-secondary",
         variant: "text-xs/normal",
         className: K.userNames,
-        children: (0, _.summarizeUsernamesParticipating)(s, u, null == t ? void 0 : t.id, n.length)
+        children: (0, C.summarizeUsernamesParticipating)(s, u, null == t ? void 0 : t.id, n.length)
       })]
     }) : null, d && null == c && (0, l.jsx)($, {
       channel: t,
@@ -397,7 +397,7 @@ function et(e) {
     guild: t
   } = e, {
     showRedesignedLiveChannelNotice: n
-  } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, G.useActiveEventOrStageInstanceChannel)(t.id), s = (0, k.useGuildActiveEvent)(t.id), i = (0, k.useGuildUpcomingEventsNotice)(t.id), o = (0, r.useStateFromStores)([S.default], () => S.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, G.useActiveEventOrStageInstanceChannel)(t.id), s = (0, k.useGuildActiveEvent)(t.id), i = (0, k.useGuildUpcomingEventsNotice)(t.id), o = (0, r.useStateFromStores)([m.default], () => m.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: u,
     isEventNoticeHidden: f
   } = (0, r.useStateFromStoresObject)([b.default], () => ({
@@ -407,24 +407,24 @@ function et(e) {
     isEventNoticeHidden: b.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [o, s]), E = null, C = null != o && null != a && !u;
+  }), [o, s]), E = null, h = null != o && null != a && !u;
   if (n) return (0, l.jsx)(c.default, {
     guild: t
   });
-  null == s || f ? C && (E = (0, l.jsx)(ee, {
+  null == s || f ? h && (E = (0, l.jsx)(ee, {
     stageInstance: o,
     channel: a
-  })) : s.entity_type === V.GuildScheduledEventEntityTypes.STAGE_INSTANCE && C ? E = (0, l.jsx)(ee, {
+  })) : s.entity_type === V.GuildScheduledEventEntityTypes.STAGE_INSTANCE && h ? E = (0, l.jsx)(ee, {
     stageInstance: o,
     channel: a
   }) : s.entity_type === V.GuildScheduledEventEntityTypes.EXTERNAL ? E = (0, l.jsx)(X, {
     guildEvent: s
-  }) : s.entity_type === V.GuildScheduledEventEntityTypes.VOICE && null != a && (E = (0, l.jsx)(q, {
+  }) : s.entity_type === V.GuildScheduledEventEntityTypes.VOICE && null != a && (E = (0, l.jsx)(Q, {
     guildEvent: s,
     channel: a
   }));
-  let h = t.hasFeature(Y.GuildFeatures.COMMUNITY) || t.hasFeature(Y.GuildFeatures.HUB);
-  if (null == E && null != i && !h) {
+  let _ = t.hasFeature(Y.GuildFeatures.COMMUNITY) || t.hasFeature(Y.GuildFeatures.HUB);
+  if (null == E && null != i && !_) {
     let {
       upcomingEvent: e,
       noticeType: t

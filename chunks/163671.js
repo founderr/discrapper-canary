@@ -8,8 +8,8 @@ var s = n("735250");
 n("470079");
 var a = n("120356"),
   i = n.n(a),
-  l = n("819570"),
-  r = n("136324");
+  r = n("819570"),
+  l = n("136324");
 
 function o(e) {
   let {
@@ -17,12 +17,12 @@ function o(e) {
     className: n,
     ...a
   } = e, o = t();
-  return (0, s.jsx)(l.default, {
+  return (0, s.jsx)(r.default, {
     ...a,
-    className: i()(n, r.container),
-    contentClassName: r.content,
+    className: i()(n, l.container),
+    contentClassName: l.content,
     children: o.map((e, t) => (0, s.jsx)("div", {
-      className: r.column,
+      className: l.column,
       style: {
         flexBasis: "".concat(100 / o.length, "%")
       },

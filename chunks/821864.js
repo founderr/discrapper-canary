@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return s
   },
   getApplicationCommandPermissions: function() {
-    return d
+    return T
   },
   getApplicationCommands: function() {
-    return T
+    return d
   },
   initIntegrationPermissions: function() {
     return E
@@ -43,7 +43,7 @@ function s(e, t, n) {
   })
 }
 
-function T(e, t) {
+function d(e, t) {
   r.HTTP.get(a.Endpoints.GUILD_COMMANDS_FOR_APPLICATION(e, t)).then(n => {
     o.default.dispatch({
       type: "INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS",
@@ -59,7 +59,7 @@ function T(e, t) {
     })
   })
 }
-async function d(e, t, n) {
+async function T(e, t, n) {
   let i = [];
   try {
     let o = await r.HTTP.get(a.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n));
@@ -105,7 +105,7 @@ async function _(e) {
     defaultEverywhereValue: a,
     guildId: l,
     permissions: s
-  } = e, T = n === t ? function(e, t, n, r) {
+  } = e, d = n === t ? function(e, t, n, r) {
     if (!n || !r) return t;
     let o = {
       [e]: n,
@@ -115,12 +115,12 @@ async function _(e) {
       let t = o[e.id];
       return null == t || e.permission !== t
     })
-  }(l, s, r, a) : s, d = await i.updateApplicationGuildCommandPermissions(t, l, n, T);
-  d.ok && o.default.dispatch({
+  }(l, s, r, a) : s, T = await i.updateApplicationGuildCommandPermissions(t, l, n, d);
+  T.ok && o.default.dispatch({
     type: "INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE",
     applicationId: t,
     commandId: n,
     guildId: l,
-    permissions: d.body.permissions
+    permissions: T.body.permissions
   })
 }

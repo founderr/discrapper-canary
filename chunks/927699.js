@@ -5,69 +5,69 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("735250"),
-  l = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  s = n("470079"),
+  l = n("120356"),
+  a = n.n(l),
   r = n("481060"),
   u = n("541716"),
   o = n("752305"),
   c = n("893718"),
   d = n("993413"),
   m = n("131704"),
-  p = n("474936"),
-  f = n("981631"),
-  S = n("689938"),
-  I = n("905179");
-let _ = (0, m.createChannelRecord)({
+  f = n("474936"),
+  p = n("981631"),
+  _ = n("689938"),
+  S = n("905179");
+let I = (0, m.createChannelRecord)({
   id: "1",
-  type: f.ChannelTypes.DM
+  type: p.ChannelTypes.DM
 });
 
 function P(e) {
   let {
     sectionTitle: t,
     errors: n,
-    onTextChange: s,
+    onTextChange: l,
     pendingText: m,
-    placeholder: f,
+    placeholder: p,
     currentText: P,
     className: E,
     innerClassName: T,
-    disabled: v = !1,
-    disableThemedBackground: h = !1
-  } = e, [N, x] = l.useState(null != m ? m : P), [A, y] = l.useState((0, o.toRichValue)(N)), C = l.useRef(!1);
-  return l.useEffect(() => {
-    C.current = !0
-  }, []), l.useEffect(() => {
+    disabled: N = !1,
+    disableThemedBackground: v = !1
+  } = e, [h, x] = s.useState(null != m ? m : P), [A, C] = s.useState((0, o.toRichValue)(h)), y = s.useRef(!1);
+  return s.useEffect(() => {
+    y.current = !0
+  }, []), s.useEffect(() => {
     if (void 0 === m) {
       let e = (0, o.toRichValue)(P);
-      x(P), y(e)
+      x(P), C(e)
     }
   }, [m, P]), (0, i.jsx)("div", {
-    className: a()(I.body, E),
+    className: a()(S.body, E),
     children: (0, i.jsxs)(d.default, {
       title: t,
       errors: n,
-      disabled: v,
+      disabled: N,
       children: [(0, i.jsx)(c.default, {
-        innerClassName: a()(I.textArea, T),
-        editorClassName: I.editorTextArea,
-        maxCharacterCount: p.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
+        innerClassName: a()(S.textArea, T),
+        editorClassName: S.editorTextArea,
+        maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
         onChange: function(e, t, n) {
-          t !== N && (x(t), y(n), s(t))
+          t !== h && (x(t), C(n), l(t))
         },
-        placeholder: f,
-        channel: _,
-        textValue: N,
+        placeholder: p,
+        channel: I,
+        textValue: h,
         richValue: A,
         type: u.ChatInputTypes.CUSTOM_GIFT,
         onBlur: () => {
-          C.current = !1
+          y.current = !1
         },
         onFocus: () => {
-          C.current = !0
+          y.current = !0
         },
-        focused: C.current,
+        focused: y.current,
         onSubmit: function() {
           return new Promise(e => {
             e({
@@ -76,10 +76,10 @@ function P(e) {
             })
           })
         },
-        disableThemedBackground: h
+        disableThemedBackground: v
       }), (0, i.jsx)(r.HiddenVisually, {
-        children: S.default.Messages.MAXIMUM_LENGTH.format({
-          maxLength: p.CUSTOM_GIFT_MESSAGE_MAX_LENGTH
+        children: _.default.Messages.MAXIMUM_LENGTH.format({
+          maxLength: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH
         })
       })]
     })

@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return s
   }
 });
 var r = n("735250"),
   i = n("470079"),
-  l = n("778947"),
-  s = n("901461");
-let o = i.memo(l.default);
+  a = n("778947"),
+  l = n("901461");
+let o = i.memo(a.default);
 
-function u(e) {
+function s(e) {
   let {
     message: t,
     channel: n,
     author: i,
-    compact: l,
-    animateAvatar: u,
-    guildId: a,
+    compact: a,
+    animateAvatar: s,
+    guildId: u,
     isGroupStart: c = !0,
     roleIcon: d,
     hideTimestamp: f
   } = e;
-  return !(0, s.default)(t) && (c || l) ? (0, r.jsx)(o, {
+  return !(0, l.default)(t) && (c || a) ? (0, r.jsx)(o, {
     message: t,
     channel: n,
     author: i,
-    guildId: a,
-    compact: l,
-    animate: u,
+    guildId: u,
+    compact: a,
+    animate: s,
     roleIcon: d,
     hideTimestamp: f
   }) : void 0

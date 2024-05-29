@@ -64,7 +64,7 @@ n.r(t), n.d(t, {
     return h
   },
   spaceBetweenBadgeIconAndText: function() {
-    return x
+    return N
   },
   spaceBetweenBadges: function() {
     return v
@@ -92,4 +92,4 @@ let a = "M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
   I = 88,
   A = 99,
   v = 12,
-  x = 18
+  N = 18

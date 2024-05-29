@@ -109,7 +109,7 @@ let E = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
         "X-Captcha-Key": n
       };
       null != i && (r["X-Captcha-Rqtoken"] = i), t(r)
-    }).catch(i), !0) : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === c.AbortCodes.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa) ? (Promise.all([n.e("99387"), n.e("52030"), n.e("62344")]).then(n.bind(n, "24031")).then(n => {
+    }).catch(i), !0) : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === c.AbortCodes.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa) ? (Promise.all([n.e("99387"), n.e("52030"), n.e("85281")]).then(n.bind(n, "24031")).then(n => {
       let {
         openMFAModal: r
       } = n;

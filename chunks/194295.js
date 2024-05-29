@@ -20,10 +20,10 @@ function f(e, t, n, f) {
       username: "",
       game: n.name
     }),
-    E = t.getAvatarURL(e.guild_id, 80),
+    g = t.getAvatarURL(e.guild_id, 80),
     {
       trackView: m,
-      trackClick: g
+      trackClick: E
     } = (0, r.makeAnalyticsTrackers)(u.OverlayNotificationType.ActivityInvite, {
       notif_type: u.OverlayNotificationType.ActivityInvite,
       notif_user_id: t.id,
@@ -32,7 +32,7 @@ function f(e, t, n, f) {
     });
   return {
     colorScheme: o.default.ColorSchemes.PRIMARY,
-    icon: E,
+    icon: g,
     title: h,
     body: p,
     hint: e => (0, o.renderKeybindHint)(e, (0, r.getOverlayKeybind)(), c.default.Messages.OVERLAY_UNLOCK_TO_ANSWER),
@@ -47,13 +47,13 @@ function f(e, t, n, f) {
         type: d.ActivityActionTypes.JOIN,
         activity: f,
         location: s.default.isInstanceUILocked() ? d.AnalyticsLocations.LOCKED_OVERLAY : d.AnalyticsLocations.UNLOCKED_OVERLAY
-      }), g("join"), a.default.updateNotificationStatus(n)
+      }), E("join"), a.default.updateNotificationStatus(n)
     },
     onCancelClick: (t, n) => {
-      (0, l.ack)(e.id, !0, !0), a.default.updateNotificationStatus(n), g("decline")
+      (0, l.ack)(e.id, !0, !0), a.default.updateNotificationStatus(n), E("decline")
     },
     onDismissClick: () => {
-      g("dismiss")
+      E("dismiss")
     }
   }
 }

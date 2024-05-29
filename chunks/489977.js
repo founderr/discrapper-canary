@@ -22,26 +22,26 @@ let E = e => {
       (0, u.setTryItOutAvatar)(t);
       return
     }
-    let C = d.default.getCurrentUser(),
-      h = null != r ? o.setPendingAvatar : i.setPendingAvatar;
-    if (c.default.canUseAnimatedAvatar(C) || "image/gif" !== l.type) {
-      h(t);
+    let h = d.default.getCurrentUser(),
+      _ = null != r ? o.setPendingAvatar : i.setPendingAvatar;
+    if (c.default.canUseAnimatedAvatar(h) || "image/gif" !== l.type) {
+      _(t);
       return
     }
-    if (null != C) return (0, s.openModalLazy)(async () => {
+    if (null != h) return (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("65866"), n.e("49838")]).then(n.bind(n, "844594"));
       return n => (0, a.jsx)(e, {
-        user: C,
+        user: h,
         imageSrc: t,
         uploadType: f.UploadTypes.AVATAR,
-        onSubscribe: () => h(t),
+        onSubscribe: () => _(t),
         ...n
       })
     })
   },
-  C = e => {
+  h = e => {
     let {
       imageSrc: t,
       guildId: l,
@@ -70,7 +70,7 @@ let E = e => {
       })
     })
   };
-class h extends r.default {
+class _ extends r.default {
   _initialize() {
     l.default.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
@@ -78,7 +78,7 @@ class h extends r.default {
     l.default.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
   maybeOpenProfilePreviewModal(e) {
-    return e.uploadType === f.UploadTypes.AVATAR ? E(e) : e.uploadType === f.UploadTypes.BANNER ? C(e) : void 0
+    return e.uploadType === f.UploadTypes.AVATAR ? E(e) : e.uploadType === f.UploadTypes.BANNER ? h(e) : void 0
   }
 }
-t.default = new h
+t.default = new _

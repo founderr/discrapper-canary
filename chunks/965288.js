@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   AudienceEmptyTile: function() {
-    return x
+    return N
   }
 });
 var a = n("735250"),
@@ -84,7 +84,7 @@ let A = l.memo(function(e) {
       })]
     })
   }),
-  x = () => (0, a.jsx)("div", {
+  N = () => (0, a.jsx)("div", {
     className: I.tileBaseContainer
   });
 t.default = l.memo(function(e) {

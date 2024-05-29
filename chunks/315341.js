@@ -12,7 +12,7 @@ var a = n("442837"),
   f = n("981631"),
   E = n("798077");
 
-function C(e, t) {
+function h(e, t) {
   let n = !1;
   return null == e.userContent && (e.userContent = {
     dismissedContents: new Uint8Array,
@@ -20,10 +20,10 @@ function C(e, t) {
   }), null == e.userContent.dismissedContents && (e.userContent.dismissedContents = new Uint8Array), !(0, d.hasBit)(e.userContent.dismissedContents, t) && (e.userContent.dismissedContents = (0, d.addBit)(e.userContent.dismissedContents, t), n = !0), n
 }
 
-function h(e, t, n) {
-  return !!o.HotspotStore.hasHiddenHotspot(t) && C(e, n)
+function _(e, t, n) {
+  return !!o.HotspotStore.hasHiddenHotspot(t) && h(e, n)
 }
-let _ = [{
+let C = [{
   version: 2,
   run(e) {
     var t, n, a;
@@ -64,7 +64,7 @@ let _ = [{
   version: 4,
   run(e) {
     let t = !1;
-    return (!0 === i.Storage.get("HAS_SEEN_HUB_UPSELL") || o.HotspotStore.hasHiddenHotspot(o.HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = C(e, s.DismissibleContent.HUB_WAITLIST_UPSELL)), t
+    return (!0 === i.Storage.get("HAS_SEEN_HUB_UPSELL") || o.HotspotStore.hasHiddenHotspot(o.HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = h(e, s.DismissibleContent.HUB_WAITLIST_UPSELL)), t
   },
   cleanup() {
     i.Storage.remove("HAS_SEEN_HUB_UPSELL")
@@ -107,23 +107,23 @@ let _ = [{
   cleanup() {}
 }, {
   version: 7,
-  run: e => h(e, o.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, s.DismissibleContent.APPLICATION_COMMAND_TOOLTIP),
+  run: e => _(e, o.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, s.DismissibleContent.APPLICATION_COMMAND_TOOLTIP),
   cleanup() {}
 }, {
   version: 8,
-  run: e => h(e, o.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, s.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE),
+  run: e => _(e, o.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, s.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE),
   cleanup() {}
 }, {
   version: 9,
-  run: e => (o.HotspotStore.hasHiddenHotspot(o.HotspotLocations.MULTI_ACCOUNT_TOOLTIP) && i.Storage.set(E.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"), h(e, o.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, s.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+  run: e => (o.HotspotStore.hasHiddenHotspot(o.HotspotLocations.MULTI_ACCOUNT_TOOLTIP) && i.Storage.set(E.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"), _(e, o.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, s.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
   cleanup() {}
 }, {
   version: 10,
   run(e) {
     var t;
-    let n = h(e, o.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, s.DismissibleContent.CHANNEL_NOTICE_HUBLINK),
+    let n = _(e, o.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, s.DismissibleContent.CHANNEL_NOTICE_HUBLINK),
       a = null !== (t = i.Storage.get("channelNotices")) && void 0 !== t ? t : {};
-    return !1 === a[f.ChannelNoticeTypes.INVITE] && C(e, s.DismissibleContent.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === a[f.ChannelNoticeTypes.QUICKSWITCHER] && C(e, s.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === a[f.ChannelNoticeTypes.GUILD_BOOSTING] && C(e, s.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n
+    return !1 === a[f.ChannelNoticeTypes.INVITE] && h(e, s.DismissibleContent.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === a[f.ChannelNoticeTypes.QUICKSWITCHER] && h(e, s.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === a[f.ChannelNoticeTypes.GUILD_BOOSTING] && h(e, s.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n
   },
   cleanup() {
     i.Storage.remove("channelNotices")
@@ -132,14 +132,14 @@ let _ = [{
   version: 11,
   run(e) {
     let t = !1;
-    return h(e, o.HotspotLocations.GUILD_EVENT_UPSELL, s.DismissibleContent.GUILD_HEADER_EVENT_UPSELL) && (t = !0), h(e, o.HotspotLocations.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), h(e, o.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t
+    return _(e, o.HotspotLocations.GUILD_EVENT_UPSELL, s.DismissibleContent.GUILD_HEADER_EVENT_UPSELL) && (t = !0), _(e, o.HotspotLocations.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), _(e, o.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t
   },
   cleanup() {}
 }, {
   version: 12,
   run(e) {
     let t = !1;
-    return i.Storage.get("hideNag") && C(e, s.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), i.Storage.get("hideConnectSpotify") && C(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), i.Storage.get("hideConnectPlayStation") && C(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), i.Storage.get("hideMFASMSNotice") && C(e, s.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t
+    return i.Storage.get("hideNag") && h(e, s.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), i.Storage.get("hideConnectSpotify") && h(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), i.Storage.get("hideConnectPlayStation") && h(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), i.Storage.get("hideMFASMSNotice") && h(e, s.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t
   },
   cleanup() {
     i.Storage.remove("hideNag"), i.Storage.remove("hideConnectSpotify"), i.Storage.remove("hideConnectPlayStation"), i.Storage.remove("hideMFASMSNotice")
@@ -148,18 +148,18 @@ let _ = [{
   version: 13,
   run(e) {
     let t = !1;
-    return i.Storage.get("hidePremiumPromo") && C(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), i.Storage.get("hidePremiumTier2TrialEnding") && C(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), i.Storage.get("hidePremiumReactivateNotice") && C(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), h(e, o.HotspotLocations.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t
+    return i.Storage.get("hidePremiumPromo") && h(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), i.Storage.get("hidePremiumTier2TrialEnding") && h(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), i.Storage.get("hidePremiumReactivateNotice") && h(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), _(e, o.HotspotLocations.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t
   },
   cleanup() {
     i.Storage.remove("hidePremiumPromo"), i.Storage.remove("hidePremiumTier2TrialEnding"), i.Storage.remove("hidePremiumReactivateNotice")
   }
 }, {
   version: 14,
-  run: e => h(e, o.HotspotLocations.ACTIVITY_BEB_TUTORIAL, s.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK),
+  run: e => _(e, o.HotspotLocations.ACTIVITY_BEB_TUTORIAL, s.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK),
   cleanup() {}
 }, {
   version: 15,
-  run: e => h(e, o.HotspotLocations.NOW_PLAYING_CONSENT_CARD, s.DismissibleContent.NOW_PLAYING_CONSENT_CARD),
+  run: e => _(e, o.HotspotLocations.NOW_PLAYING_CONSENT_CARD, s.DismissibleContent.NOW_PLAYING_CONSENT_CARD),
   cleanup() {}
 }, {
   version: 16,
@@ -191,7 +191,7 @@ let _ = [{
   version: 18,
   run(e) {
     let t = !1;
-    return h(e, o.HotspotLocations.GUILD_DELETE_FEEDBACK, s.DismissibleContent.GUILD_DELETE_FEEDBACK) && (t = !0), h(e, o.HotspotLocations.GUILD_LEAVE_FEEDBACK, s.DismissibleContent.GUILD_LEAVE_FEEDBACK) && (t = !0), t
+    return _(e, o.HotspotLocations.GUILD_DELETE_FEEDBACK, s.DismissibleContent.GUILD_DELETE_FEEDBACK) && (t = !0), _(e, o.HotspotLocations.GUILD_LEAVE_FEEDBACK, s.DismissibleContent.GUILD_LEAVE_FEEDBACK) && (t = !0), t
   },
   cleanup() {}
 }, {
@@ -199,7 +199,7 @@ let _ = [{
   run(e) {
     var t;
     let n = !1;
-    return null !== (t = i.Storage.get("forumHelperCardStorageKey")) && void 0 !== t && t && (n = C(e, s.DismissibleContent.FORUM_CHANNEL_HELPER_CARD)), n
+    return null !== (t = i.Storage.get("forumHelperCardStorageKey")) && void 0 !== t && t && (n = h(e, s.DismissibleContent.FORUM_CHANNEL_HELPER_CARD)), n
   },
   cleanup() {
     i.Storage.remove("forumHelperCardStorageKey")
@@ -214,4 +214,4 @@ let _ = [{
     i.Storage.remove("lastChangeLogId")
   }
 }];
-t.default = _
+t.default = C

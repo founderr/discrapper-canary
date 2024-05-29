@@ -12,34 +12,34 @@ var s = n("40146"),
   c = n("199202"),
   f = n("360048"),
   E = n("823379"),
-  C = n("731455"),
-  h = n("84051");
-let _ = e => {
+  h = n("731455"),
+  _ = n("84051");
+let C = e => {
     switch (e) {
-      case C.CategoryIcons.Activity:
+      case h.CategoryIcons.Activity:
         return (0, a.jsx)(l.default, {});
-      case C.CategoryIcons.Discover:
+      case h.CategoryIcons.Discover:
         return (0, a.jsx)(i.default, {});
-      case C.CategoryIcons.Education:
+      case h.CategoryIcons.Education:
         return (0, a.jsx)(r.default, {});
-      case C.CategoryIcons.Music:
+      case h.CategoryIcons.Music:
         return (0, a.jsx)(o.default, {});
-      case C.CategoryIcons.Science:
+      case h.CategoryIcons.Science:
         return (0, a.jsx)(u.default, {});
-      case C.CategoryIcons.Stage:
+      case h.CategoryIcons.Stage:
         return (0, a.jsx)(d.default, {
           height: 22,
           width: 22
         });
-      case C.CategoryIcons.Television:
+      case h.CategoryIcons.Television:
         return (0, a.jsx)(c.default, {});
-      case C.CategoryIcons.Server:
+      case h.CategoryIcons.Server:
         return (0, a.jsx)(s.ServerIcon, {});
       default:
         (0, E.assertNever)(e)
     }
   },
-  S = e => {
+  m = e => {
     let {
       categories: t,
       currentCategoryId: n,
@@ -48,7 +48,7 @@ let _ = e => {
     } = e;
     return (0, a.jsx)(a.Fragment, {
       children: t.map(e => (0, a.jsx)(f.default, {
-        avatar: _(e.icon),
+        avatar: C(e.icon),
         name: e.name,
         focusProps: {
           offset: {
@@ -60,10 +60,10 @@ let _ = e => {
         onClick: () => s(e.categoryId),
         wrapContent: !0,
         selected: l && e.categoryId === n,
-        className: h.categoryItem,
-        selectedClassName: h.selectedCategoryItem,
-        innerClassName: h.itemInner
+        className: _.categoryItem,
+        selectedClassName: _.selectedCategoryItem,
+        innerClassName: _.itemInner
       }, e.categoryId))
     })
   };
-S.Icons = C.CategoryIcons, t.default = S
+m.Icons = h.CategoryIcons, t.default = m

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CharterScrollGameSection: function() {
-    return x
+    return N
   }
 });
 var a = n("735250"),
@@ -56,7 +56,7 @@ function v(e) {
   })
 }
 
-function x(e) {
+function N(e) {
   let {
     applicationIds: t,
     playstyle: n,
@@ -90,7 +90,7 @@ t.default = e => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
-    gameApplicationIds: N,
+    gameApplicationIds: x,
     playstyle: M,
     interests: R,
     tag: y,
@@ -137,8 +137,8 @@ t.default = e => {
           children: I.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
             date: o()().format("MMMM YYYY")
           })
-        }), (0, a.jsx)(x, {
-          applicationIds: N,
+        }), (0, a.jsx)(N, {
+          applicationIds: x,
           playstyle: M
         }), null != P ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",

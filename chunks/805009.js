@@ -25,8 +25,8 @@ var a, l = n("735250"),
   I = n("156338"),
   A = n("794358"),
   v = n("381238"),
-  x = n("779863"),
-  N = n("374129"),
+  N = n("779863"),
+  x = n("374129"),
   M = n("639351"),
   R = n("944581"),
   y = n("368666"),
@@ -79,7 +79,7 @@ let w = e => {
       })
     }, "hang-status")
   };
-class H extends(a = s.Component) {
+class B extends(a = s.Component) {
   renderPrioritySpeaker() {
     let {
       speaking: e,
@@ -177,15 +177,15 @@ class H extends(a = s.Component) {
       hangStatusActivity: S,
       showHangStatus: _,
       isSelf: v,
-      application: x,
+      application: N,
       guildId: O,
       channelId: F,
       user: w,
-      handleHoverHangStatus: H
+      handleHoverHangStatus: B
     } = this.props;
     if (o || c) return null;
     let V = [],
-      W = (0, l.jsx)(B, {
+      W = (0, l.jsx)(G, {
         iconClassName: m,
         mute: e,
         localMute: t,
@@ -219,7 +219,7 @@ class H extends(a = s.Component) {
       })
     }, "xbox")) : (C === D.GameConsoleTypes.PLAYSTATION || g === P.VoicePlatforms.PLAYSTATION) && V.push((0, l.jsx)("div", {
       className: r()(U.iconSpacing),
-      children: (0, l.jsx)(N.default, {
+      children: (0, l.jsx)(x.default, {
         className: r()(U.icon, m)
       })
     }, "playstation")), d ? V.push((0, l.jsx)("div", {
@@ -234,19 +234,19 @@ class H extends(a = s.Component) {
         className: r()(U.icon, m)
       })
     }, "watch"));
-    let Y = null != x && !(0, L.hasFlag)(x.flags, j.ApplicationFlags.EMBEDDED),
+    let Y = null != N && !(0, L.hasFlag)(N.flags, j.ApplicationFlags.EMBEDDED),
       z = null == S && Y;
     return 0 !== V.length || null != W || _ || z ? (0, l.jsxs)("div", {
       className: U.icons,
       children: [(0, l.jsxs)("div", {
         className: U.iconGroup,
-        onMouseEnter: () => null == H ? void 0 : H(!1),
+        onMouseEnter: () => null == B ? void 0 : B(!1),
         children: [W, V]
       }), _ || z ? (0, l.jsx)("div", {
         className: U.iconGroup,
-        onMouseEnter: () => null == H ? void 0 : H(!0),
-        children: z ? (0, l.jsx)(G, {
-          application: x,
+        onMouseEnter: () => null == B ? void 0 : B(!0),
+        children: z ? (0, l.jsx)(H, {
+          application: N,
           iconClassName: m,
           guildId: O,
           channelId: F,
@@ -340,7 +340,7 @@ class H extends(a = s.Component) {
   }
 }
 
-function G(e) {
+function H(e) {
   let {
     application: t,
     iconClassName: n,
@@ -381,7 +381,7 @@ function G(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   let {
     iconClassName: t,
     mute: n,
@@ -400,7 +400,7 @@ function B(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(x.default, {
+    } else e = (0, l.jsx)(N.default, {
       className: r()(U.icon, t, {
         [U.iconServer]: s
       }),
@@ -437,11 +437,11 @@ function B(e) {
     children: p
   })
 }
-F(H, "defaultProps", {
+F(B, "defaultProps", {
   avatarContainerClass: U.avatarContainer,
   userNameClassName: U.usernameFont,
   size: j.OverlayAvatarSizes.SMALL,
   selected: !1,
   disabled: !1,
   isOverlay: !1
-}), t.default = H
+}), t.default = B

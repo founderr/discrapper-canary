@@ -3,7 +3,7 @@ n.r(t), n("411104");
 var s = n("153832"),
   a = n("544891"),
   i = n("981631");
-async function l(e) {
+async function r(e) {
   let {
     body: {
       handoff_token: t
@@ -23,5 +23,5 @@ t.default = {
   generateNonce: function() {
     return (0, s.v4)()
   },
-  createHandoffToken: l
+  createHandoffToken: r
 }

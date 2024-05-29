@@ -1,7 +1,7 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   HAS_PROGRESS_COLORS: function() {
-    return n
+    return s
   },
   NO_PROGRESS_COLORS: function() {
     return a
@@ -19,7 +19,7 @@ let a = {
     foreground: "var(--text-positive)",
     glow: "#C4C1D66E"
   },
-  n = {
+  s = {
     backgroundTop: "var(--background-tertiary)",
     backgroundBottom: "var(--background-tertiary)",
     foreground: "var(--text-positive)",

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return d
+    return c
   },
   useShouldScrollToTenureRewardContent: function() {
     return _
@@ -14,9 +14,9 @@ var a = s("524437"),
   l = s("595878"),
   o = s("314684"),
   u = s("735825"),
-  c = s("689938");
+  d = s("689938");
 
-function d() {
+function c() {
   let e = (0, o.useFreeBoostUserTenureReward)(),
     t = (0, l.useUserEligibleForNitroTenureRewardCard)({
       location: i.NitroLandingPages.HOME
@@ -26,7 +26,7 @@ function d() {
     subtitle: (0, n.getRewardingTenureSubtitle)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId),
     description: (0, n.getRewardingTenureDescription)(e.nitroTenureStatus),
     ctaDescription: (0, n.getRewardingTenureCtaDescription)(e.nitroTenureStatus, e.redeemableInDays),
-    pillText: e.nitroTenureStatus === u.NitroRewardStatus.PENDING ? c.default.Messages.REWARD.toLocaleUpperCase() : void 0,
+    pillText: e.nitroTenureStatus === u.NitroRewardStatus.PENDING ? d.default.Messages.REWARD.toLocaleUpperCase() : void 0,
     dismissibleContentType: e.nitroTenureStatus === u.NitroRewardStatus.REDEEMABLE ? a.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
   }
 }

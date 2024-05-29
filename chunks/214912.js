@@ -16,8 +16,8 @@ var a = i("120356"),
   u = i("346656"),
   p = i("964309"),
   m = i("806519"),
-  f = i("768581"),
-  _ = i("981631"),
+  _ = i("768581"),
+  f = i("981631"),
   h = i("689938"),
   I = i("713710"),
   g = i("129512"),
@@ -31,18 +31,18 @@ function A(e) {
   } = e, A = (0, r.default)(), E = new c.default({
     name: t.name,
     icon: t.icon
-  }), R = f.default.getGuildDiscoverySplashURL({
+  }), C = _.default.getGuildDiscoverySplashURL({
     id: t.id,
     splash: t.discovery_splash,
     size: 192 * (0, o.getDevicePixelRatio)()
-  }), C = null != R ? R : function(e) {
+  }), R = null != C ? C : function(e) {
     switch (e) {
-      case _.ThemeTypes.DARK:
+      case f.ThemeTypes.DARK:
         return g;
-      case _.ThemeTypes.LIGHT:
+      case f.ThemeTypes.LIGHT:
         return v
     }
-  }(A), N = f.default.getGuildIconURL({
+  }(A), N = _.default.getGuildIconURL({
     id: t.id,
     icon: t.icon,
     size: 50
@@ -54,7 +54,7 @@ function A(e) {
     children: [(0, l.jsxs)("div", {
       className: I.cardHeader,
       children: [(0, l.jsx)("img", {
-        src: C,
+        src: R,
         alt: "",
         className: I.splashImage
       }), (0, l.jsx)("div", {

@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return l
   },
   BadgesContainer: function() {
-    return J
+    return Q
   },
   EpisodeBadge: function() {
-    return q
+    return X
   },
   GameTimestampBadge: function() {
     return k
   },
   ListenTimestampBadge: function() {
-    return H
-  },
-  MarathonBadge: function() {
     return B
   },
-  NewGameBadge: function() {
+  MarathonBadge: function() {
     return G
+  },
+  NewGameBadge: function() {
+    return H
   },
   NewReleaseBadge: function() {
     return Z
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return w
   },
   WatchTimestampBadge: function() {
-    return X
+    return q
   }
 });
 var a, l, s = n("735250"),
@@ -66,8 +66,8 @@ var a, l, s = n("735250"),
   I = n("700287"),
   A = n("71970"),
   v = n("277758"),
-  x = n("690172"),
-  N = n("481060"),
+  N = n("690172"),
+  x = n("481060"),
   M = n("70956"),
   R = n("709054"),
   y = n("719247"),
@@ -94,7 +94,7 @@ function F(e) {
     defaultTextColor: r,
     defaultIconColor: o
   } = U();
-  return (0, s.jsx)(N.Tooltip, {
+  return (0, s.jsx)(x.Tooltip, {
     text: l,
     shouldShow: i,
     children: e => (0, s.jsxs)("div", {
@@ -104,7 +104,7 @@ function F(e) {
         width: 12,
         height: 12,
         color: null != a ? a : o
-      }), (0, s.jsx)(N.Text, {
+      }), (0, s.jsx)(x.Text, {
         variant: "text-xs/normal",
         color: r,
         className: D.badgeLabel,
@@ -123,7 +123,7 @@ function w(e) {
     location: a
   } = U();
   return null == n || 1 === a ? null : (0, s.jsx)(F, {
-    Icon: x.VoiceNormalIcon,
+    Icon: N.VoiceNormalIcon,
     text: n.name
   })
 }
@@ -135,7 +135,7 @@ function k(e) {
     defaultTextColor: n,
     defaultIconColor: a,
     location: l
-  } = U(), i = 0 === l, r = (0, O.isEntryActive)(t), o = i && r ? N.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
+  } = U(), i = 0 === l, r = (0, O.isEntryActive)(t), o = i && r ? x.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
     className: D.badgeContainer,
     children: [(0, s.jsx)(E.GameControllerIcon, {
@@ -149,7 +149,7 @@ function k(e) {
   })
 }
 
-function H(e) {
+function B(e) {
   var t;
   let {
     entry: n
@@ -159,7 +159,7 @@ function H(e) {
     location: i
   } = U(), r = 0 === i, o = (0, m.useStateFromStores)([y.default], () => y.default.getMatchingActivity(n));
   if ((null == o ? void 0 : o.timestamps) == null) return null;
-  let u = r ? N.tokens.colors.STATUS_POSITIVE : l,
+  let u = r ? x.tokens.colors.STATUS_POSITIVE : l,
     d = null === (t = o.timestamps) || void 0 === t ? void 0 : t.start;
   return (0, s.jsxs)("div", {
     className: D.badgeContainer,
@@ -176,12 +176,12 @@ function H(e) {
   })
 }
 
-function G(e) {
+function H(e) {
   let {
     entry: t
   } = e, {
     location: n
-  } = U(), a = 0 === n ? N.tokens.colors.STATUS_POSITIVE : void 0;
+  } = U(), a = 0 === n ? x.tokens.colors.STATUS_POSITIVE : void 0;
   return (0, O.isEntryNew)(t) ? (0, s.jsx)(F, {
     Icon: g.NewUserLargeIcon,
     text: P.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
@@ -189,7 +189,7 @@ function G(e) {
   }) : null
 }
 
-function B(e) {
+function G(e) {
   let {
     entry: t
   } = e, {
@@ -299,7 +299,7 @@ function Z(e) {
   })
 }
 
-function X(e) {
+function q(e) {
   let {
     entry: t
   } = e, {
@@ -319,7 +319,7 @@ function X(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   var t;
   let {
     entry: n
@@ -333,7 +333,7 @@ function q(e) {
   })
 }
 
-function J(e) {
+function Q(e) {
   let {
     location: t,
     children: n
@@ -342,7 +342,7 @@ function J(e) {
     defaultTextColor: "text-secondary"
   } : {
     defaultTextColor: "content-inventory-overlay-text-secondary",
-    defaultIconColor: N.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
+    defaultIconColor: x.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
   }, (0, s.jsx)(b.Provider, {
     value: {
       location: t,

@@ -28,8 +28,8 @@ t.default = e => {
     primaryColor: I,
     secondaryColor: A
   } = (0, f.default)(_), v = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
-    streamPreviewUrl: x,
-    stream: N,
+    streamPreviewUrl: N,
+    stream: x,
     channel: M
   } = (0, o.default)(n), {
     displayParticipants: R,
@@ -61,7 +61,7 @@ t.default = e => {
         entry: n
       }, t))
     }),
-    D = null == x ? (0, a.jsx)(p.PopoutContent, {
+    D = null == N ? (0, a.jsx)(p.PopoutContent, {
       thumbnailSrc: _,
       channel: t,
       userDescription: (0, u.isEntryActive)(n) ? C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
@@ -70,12 +70,12 @@ t.default = e => {
       entry: n
     }) : (0, a.jsx)(p.StreamingPopoutContent, {
       channel: t,
-      streamPreviewSrc: x,
+      streamPreviewSrc: N,
       title: n.extra.game_name,
       badges: P,
       userDescription: C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
       entry: n,
-      stream: N
+      stream: x
     });
   return (0, a.jsxs)(p.Popout, {
     children: [D, (0, a.jsx)(p.PopoutInteractionsContainer, {
@@ -88,7 +88,7 @@ t.default = e => {
         entry: n,
         requestId: g,
         voiceChannel: M,
-        isStreaming: null != x
+        isStreaming: null != N
       }) : (0, a.jsx)(p.PopoutReactor, {
         closePopout: S,
         user: T,

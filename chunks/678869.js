@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("591853"),
   A = n("371991"),
   v = n("410441"),
-  x = n("981631"),
-  N = n("616922"),
+  N = n("981631"),
+  x = n("616922"),
   M = n("689938"),
   R = n("417094"),
   y = n("936183");
@@ -106,64 +106,64 @@ function P(e) {
       activity: F,
       currentEntry: w,
       artist: k,
-      imageUrl: H,
-      title: G,
-      user: B
+      imageUrl: B,
+      title: H,
+      user: G
     } = (0, T.useListenedSessionData)(D),
     {
       primaryColor: V,
       secondaryColor: W
-    } = (0, _.default)(H),
+    } = (0, _.default)(B),
     {
       streamPreviewUrl: Y,
       channel: z
     } = (0, C.default)(D),
-    K = (0, r.useStateFromStores)([d.default, m.default], () => (null == F ? void 0 : F.type) === x.ActivityTypes.LISTENING && null != B ? (0, f.default)(d.default, m.default, B, F) : void 0, [F, B]),
+    K = (0, r.useStateFromStores)([d.default, m.default], () => (null == F ? void 0 : F.type) === N.ActivityTypes.LISTENING && null != G ? (0, f.default)(d.default, m.default, G, F) : void 0, [F, G]),
     Z = l.useCallback(() => {
       var e;
-      if (null == P || null == B) return;
+      if (null == P || null == G) return;
       let t = null === (e = F.timestamps) || void 0 === e ? void 0 : e.start,
         n = (0, g.formatActiveTimestamp)(null != t ? {
           start: t
         } : D, Date.now());
       return (0, S.generateListenContentImage)({
-        user: B,
+        user: G,
         channel: P,
-        mediaImageSrc: H,
+        mediaImageSrc: B,
         artist: k,
         description: O({
           artist: k,
-          media: G
-        }, P, B),
+          media: H
+        }, P, G),
         colors: [V, W],
         badges: (0, S.getListenSessionImageBadges)({
           timestamp: n
         })
       })
-    }, [F, k, P, D, H, V, W, G, B]);
+    }, [F, k, P, D, B, V, W, H, G]);
   if (null == F || null == w) return null;
-  let X = k;
+  let q = k;
   if (w.media.provider === s.ContentInventoryListenedMediaProvider.SPOTIFY && (null == K ? void 0 : K.syncDisabled) === !1) {
     R = {
       handleClick: n = () => {
-        (0, h.default)(K, N.SpotifyActionTypes.USER_ACTIVITY_SYNC), U()
+        (0, h.default)(K, x.SpotifyActionTypes.USER_ACTIVITY_SYNC), U()
       },
       label: M.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
       icon: i.UserPlayIcon
     };
-    X = (0, a.jsx)(p.default, {
+    q = (0, a.jsx)(p.default, {
       artists: k,
       canOpen: null != F.sync_id,
       linkClassName: y.popoutTextSecondary,
       onOpenSpotifyArtist: e => {
-        (0, u.openArtist)(F, B.id, e)
+        (0, u.openArtist)(F, G.id, e)
       }
     }), o = () => {
       (0, u.openTrack)(F)
-    }, A = (0, c.default)(K, N.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != P ? E.default.getNickname(P.guild_id, P.id, B) : void 0)
+    }, A = (0, c.default)(K, x.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != P ? E.default.getNickname(P.guild_id, P.id, G) : void 0)
   }
-  let q = (0, a.jsx)(I.PopoutContent, {
-    thumbnailSrc: H,
+  let X = (0, a.jsx)(I.PopoutContent, {
+    thumbnailSrc: B,
     channel: P,
     entry: D,
     headerIcons: (0, a.jsx)(v.default, {
@@ -172,33 +172,33 @@ function P(e) {
       provider: w.media.provider
     }),
     userDescription: (0, g.isEntryActive)(D) ? M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
-    title: G,
+    title: H,
     onClickTitle: o,
-    subtitle: X,
+    subtitle: q,
     badges: null,
     children: (null === (t = F.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, a.jsx)(j, {
       activity: F
     })
   });
   return (0, a.jsxs)(I.Popout, {
-    children: [q, (0, a.jsx)(I.PopoutInteractionsContainer, {
+    children: [X, (0, a.jsx)(I.PopoutInteractionsContainer, {
       children: null != z ? (0, a.jsx)(I.VoiceChannelPopoutReactor, {
         closePopout: U,
-        user: B,
+        user: G,
         channel: P,
         generateReactionImage: Z,
-        reactionImageAltText: L(k, B),
+        reactionImageAltText: L(k, G),
         entry: D,
         requestId: b,
         voiceChannel: z,
         isStreaming: null != Y
       }) : null != R ? (0, a.jsx)(I.PrimaryActionPopoutReactor, {
         closePopout: U,
-        user: B,
+        user: G,
         channel: P,
         header: null,
         generateReactionImage: Z,
-        reactionImageAltText: L(k, B),
+        reactionImageAltText: L(k, G),
         entry: D,
         requestId: b,
         children: (0, a.jsx)(I.PrimaryActionButton, {
@@ -208,10 +208,10 @@ function P(e) {
         })
       }) : (0, a.jsx)(I.PopoutReactor, {
         closePopout: U,
-        user: B,
+        user: G,
         channel: P,
         generateReactionImage: Z,
-        reactionImageAltText: L(k, B),
+        reactionImageAltText: L(k, G),
         entry: D,
         requestId: b
       })

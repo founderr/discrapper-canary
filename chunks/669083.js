@@ -14,15 +14,15 @@ var i, a, l = n("735250"),
   f = n("237997"),
   h = n("285952"),
   p = n("739563"),
-  E = n("998502"),
+  g = n("998502"),
   m = n("13140"),
-  g = n("658785"),
+  E = n("658785"),
   S = n("981631"),
   v = n("689938"),
-  C = n("836394"),
-  y = n("611273");
+  y = n("836394"),
+  O = n("611273");
 
-function _(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,14 +30,14 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
-let O = () => [{
+let T = () => [{
     value: S.OverlayAvatarSizes.LARGE,
     name: v.default.Messages.AVATAR_SIZE_OPTION_LARGE
   }, {
     value: S.OverlayAvatarSizes.SMALL,
     name: v.default.Messages.AVATAR_SIZE_OPTION_SMALL
   }],
-  T = () => [{
+  N = () => [{
     value: S.OverlayDisplayNames.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -47,7 +47,7 @@ let O = () => [{
     value: S.OverlayDisplayNames.NEVER,
     name: v.default.Messages.DISPLAY_OPTION_NEVER
   }],
-  N = () => [{
+  I = () => [{
     value: S.OverlayDisplayUsers.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -55,7 +55,7 @@ let O = () => [{
     name: v.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
   }];
 
-function I() {
+function _() {
   let e = f.default.getNotificationPositionMode(),
     t = e !== S.OverlayNotificationPositions.DISABLED,
     n = c.default.getOverlayKeybind(),
@@ -79,7 +79,7 @@ class A extends s.PureComponent {
     })
   }
   handleChangeNotificationPositionMode(e, t) {
-    d.default.setNotificationPositionMode(t), I()
+    d.default.setNotificationPositionMode(t), _()
   }
   handleChangeAvatarSizeMode(e) {
     let {
@@ -104,14 +104,14 @@ class A extends s.PureComponent {
       direction: h.default.Direction.VERTICAL,
       grow: 0,
       shrink: 0,
-      className: C.header,
+      className: y.header,
       children: [(0, l.jsxs)(h.default, {
         children: [(0, l.jsx)(r.FormTitle, {
-          className: C.headerTitle,
+          className: y.headerTitle,
           tag: "h1",
           children: v.default.Messages.OVERLAY_SETTINGS_TITLE
         }), (0, l.jsx)(r.ModalCloseButton, {
-          className: C.headerClose,
+          className: y.headerClose,
           onClick: this.props.onClose
         })]
       }), this.renderTabBar()]
@@ -122,21 +122,21 @@ class A extends s.PureComponent {
       selectedSection: e
     } = this.state, t = u.default.isDeveloper ? (0, l.jsx)(r.TabBar.Item, {
       id: "DEVELOPER",
-      className: C.tabBarItem,
+      className: y.tabBarItem,
       children: "Developer"
     }) : null;
     return (0, l.jsxs)(r.TabBar, {
       selectedItem: e,
       type: "top",
-      className: C.__invalid_tabBar,
+      className: y.__invalid_tabBar,
       onItemSelect: this.handleSelectSection,
       children: [(0, l.jsx)(r.TabBar.Item, {
         id: "GENERAL",
-        className: C.tabBarItem,
+        className: y.tabBarItem,
         children: v.default.Messages.OVERLAY_SETTINGS_GENERAL_TAB
       }), (0, l.jsx)(r.TabBar.Item, {
         id: "VOICE",
-        className: C.tabBarItem,
+        className: y.tabBarItem,
         children: v.default.Messages.OVERLAY_SETTINGS_VOICE_TAB
       }), t]
     })
@@ -157,7 +157,7 @@ class A extends s.PureComponent {
         e = this.renderGeneralSettings()
     }
     return (0, l.jsx)(r.ModalContent, {
-      className: C.content,
+      className: y.content,
       children: e
     }, t)
   }
@@ -171,7 +171,7 @@ class A extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(p.default, {
           position: t,
           onChange: this.handleChangeNotificationPositionMode
@@ -199,28 +199,28 @@ class A extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_AVATAR_SIZE,
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeAvatarSizeMode,
-          options: O(),
+          options: T(),
           value: e,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_NAMES,
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayNameMode,
-          options: T(),
+          options: N(),
           value: t,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_USERS,
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayUserMode,
-          options: N(),
+          options: I(),
           value: n,
           size: r.RadioGroup.Sizes.SMALL
         })
@@ -231,7 +231,7 @@ class A extends s.PureComponent {
     return (0, l.jsx)(s.Fragment, {
       children: (0, l.jsx)(r.FormItem, {
         title: "Crashes",
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.SingleSelect, {
           value: void 0,
           options: [{
@@ -253,7 +253,7 @@ class A extends s.PureComponent {
             value: 4,
             label: "Out of Memory"
           }],
-          onChange: e => null != e && E.default.crash(e)
+          onChange: e => null != e && g.default.crash(e)
         })
       })
     })
@@ -266,18 +266,18 @@ class A extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), _(this, "state", {
+    super(...e), C(this, "state", {
       selectedSection: "GENERAL"
-    }), _(this, "handleSelectSection", e => {
+    }), C(this, "handleSelectSection", e => {
       this.setState({
         selectedSection: e
       })
-    }), _(this, "handleToggleTextChatNotifications", () => {
+    }), C(this, "handleToggleTextChatNotifications", () => {
       let {
         ENABLED: e,
         DISABLED: t
       } = S.OverlayNotificationTextChatTypes, n = this.props.textChatNotificationMode === e ? t : e;
-      d.default.setTextChatNotificationMode(n), I()
+      d.default.setTextChatNotificationMode(n), _()
     })
   }
 }
@@ -301,7 +301,7 @@ function x(e) {
     shouldShowKeybindIndicators: f.default.showKeybindIndicators
   })), {
     showKeybindIndicators: u
-  } = g.default.useExperiment({
+  } = E.default.useExperiment({
     location: "Overlay Settings"
   });
   return (0, l.jsx)(A, {

@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("532490"),
   A = n("380365"),
   v = n("979264"),
-  x = n("620929"),
-  N = n("284019"),
+  N = n("620929"),
+  x = n("284019"),
   M = n("308083"),
   R = n("981631"),
   y = n("689938"),
@@ -75,7 +75,7 @@ function O(e) {
             date: u
           })
         })]
-      }), (0, a.jsx)(x.CharterScrollGameSection, {
+      }), (0, a.jsx)(N.CharterScrollGameSection, {
         applicationIds: d,
         playstyle: s.playstyle,
         className: i()(L.charterBodyText, L.gameSection)
@@ -96,7 +96,7 @@ function j(e) {
     onClose: s,
     onAccept: r,
     ...o
-  } = e, C = (0, E.useUID)(), T = (0, S.useClanInfo)(n), I = (0, S.useIsFetchingClanInfo)(), [v, x] = l.useState(!0), [M, j] = l.useState(!1), P = l.useCallback(() => {
+  } = e, C = (0, E.useUID)(), T = (0, S.useClanInfo)(n), I = (0, S.useIsFetchingClanInfo)(), [v, N] = l.useState(!0), [M, j] = l.useState(!1), P = l.useCallback(() => {
     r(), s()
   }, [r, s]);
   l.useEffect(() => {
@@ -112,12 +112,12 @@ function j(e) {
     F = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()),
     w = (0, d.useStateFromStores)([h.default], () => null != F ? h.default.getMember(n, F.id) : null),
     k = (0, f.default)(),
-    H = (0, _.useBrandColor)(null == T ? void 0 : null === (t = T.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .7]),
-    G = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+    B = (0, _.useBrandColor)(null == T ? void 0 : null === (t = T.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .7]),
+    H = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
       theme: k,
       saturation: 1
     }).hex(),
-    B = (0, _.getClanRadialBackgroundStyle)(H, G, "top center");
+    G = (0, _.getClanRadialBackgroundStyle)(B, H, "top center");
   return null == U || null == F || null == w || null == T ? null : (0, a.jsx)(c.ModalRoot, {
     ...o,
     transitionState: o.transitionState,
@@ -126,7 +126,7 @@ function j(e) {
     size: c.ModalSize.DYNAMIC,
     children: (0, a.jsxs)(c.ModalContent, {
       className: L.content,
-      style: B,
+      style: G,
       children: [(0, a.jsxs)("div", {
         className: L.infoSide,
         children: [(0, a.jsxs)("div", {
@@ -147,7 +147,7 @@ function j(e) {
         }), (0, a.jsx)(A.default, {
           guildId: n,
           isTagAdopted: v,
-          onChangeUseTag: x
+          onChangeUseTag: N
         })]
       }), (0, a.jsx)("div", {
         className: L.scrollMainContainer,
@@ -156,10 +156,10 @@ function j(e) {
           clanInfo: T,
           onSignCharter: b
         })
-      }), (0, a.jsx)(N.default, {
+      }), (0, a.jsx)(x.default, {
         onClick: D,
         color: c.Button.Colors.BRAND,
-        themeColor: H,
+        themeColor: B,
         fullWidth: !1,
         className: i()(L.ctaButton, M ? L.ctaButtonSigned : null),
         children: (0, a.jsxs)("div", {
@@ -171,7 +171,7 @@ function j(e) {
           }), (0, a.jsx)(u.ArrowLargeRightIcon, {
             width: 20,
             height: 20,
-            color: null == H ? void 0 : (0, _.getAccessibleTextColor)(H).hex()
+            color: null == B ? void 0 : (0, _.getAccessibleTextColor)(B).hex()
           })]
         })
       })]

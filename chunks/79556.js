@@ -212,7 +212,7 @@ class b extends L.default {
       null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("8137"), n.e("40272")]).then(n.bind(n, "373651"));
+        } = await Promise.all([n.e("99387"), n.e("8137"), n.e("54310")]).then(n.bind(n, "373651"));
         return n => (0, l.jsx)(e, {
           ...n,
           channel: t,

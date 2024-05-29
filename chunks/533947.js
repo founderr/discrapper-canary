@@ -5,11 +5,11 @@ var i, r, o, u, d = n("392711"),
   c = n.n(d),
   f = n("442837"),
   E = n("570140"),
-  C = n("308063"),
-  h = n("388610"),
-  _ = n("430824"),
-  S = n("496675"),
-  m = n("855674"),
+  h = n("308063"),
+  _ = n("388610"),
+  C = n("430824"),
+  m = n("496675"),
+  S = n("855674"),
   p = n("981631");
 let I = [],
   g = null,
@@ -20,17 +20,17 @@ let I = [],
   R = null;
 
 function O() {
-  if (a = null != (s = h.default.getChannel()) ? _.default.getGuild(s.guild_id) : null, I = null != s && null != a && S.default.can(p.Permissions.MANAGE_WEBHOOKS, s) ? m.default.getWebhooksForChannel(a.id, s.id) : [], null != g) {
-    let e = P(g.id);
+  if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, I = null != s && null != a && m.default.can(p.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(a.id, s.id) : [], null != g) {
+    let e = M(g.id);
     null != e && (g = e)
   }
   A = p.FormStates.OPEN, N = {}, v = !1
 }
 let L = c().debounce(() => {
-  v && ((null == g || c().isEqual(g, P(g.id))) && (v = !1), !v && M.emitChange())
+  v && ((null == g || c().isEqual(g, M(g.id))) && (v = !1), !v && P.emitChange())
 }, 500);
 
-function P(e) {
+function M(e) {
   return I.find(t => {
     let {
       id: n
@@ -38,9 +38,9 @@ function P(e) {
     return n === e
   })
 }
-class y extends(i = f.default.Store) {
+class x extends(i = f.default.Store) {
   initialize() {
-    this.waitFor(h.default, _.default, m.default, S.default)
+    this.waitFor(_.default, C.default, S.default, m.default)
   }
   hasChanges() {
     return v
@@ -55,7 +55,7 @@ class y extends(i = f.default.Store) {
     return A
   }
   getWebhook(e) {
-    return P(e)
+    return M(e)
   }
   showNotice() {
     return this.hasChanges()
@@ -73,13 +73,13 @@ class y extends(i = f.default.Store) {
     }
   }
 }
-u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = y) ? Object.defineProperty(r, o, {
+u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = x) ? Object.defineProperty(r, o, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[o] = u;
-let M = new y(E.default, __OVERLAY__ ? {} : {
+let P = new x(E.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: O,
   INTEGRATION_SETTINGS_SAVE_SUCCESS: O,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
@@ -88,9 +88,9 @@ let M = new y(E.default, __OVERLAY__ ? {} : {
     } = e;
     if (t !== p.ChannelSettingsSections.INTEGRATIONS) return !1;
     if (l = p.IntegrationSettingsSections.OVERVIEW, null == a) {
-      let e = h.default.getChannel(),
+      let e = _.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
-      null != e && null != t && (C.default.fetchForChannel(t, e.id), T = !0), O()
+      null != e && null != t && (h.default.fetchForChannel(t, e.id), T = !0), O()
     }
   },
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {
@@ -103,7 +103,7 @@ let M = new y(E.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
       webhookId: t
-    } = e, n = P(t);
+    } = e, n = M(t);
     if (null == n) return !1;
     g = n, N = {}, v = !1
   },
@@ -164,4 +164,4 @@ let M = new y(E.default, __OVERLAY__ ? {} : {
     A = p.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
-t.default = M
+t.default = P

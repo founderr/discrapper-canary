@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n("47120"), n("653041");
-var s, r, a = n("735250"),
-  o = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
-  u = n("285952"),
-  c = n("868838");
+s.r(t), s("47120"), s("653041");
+var n, o, l = s("735250"),
+  a = s("470079"),
+  r = s("120356"),
+  i = s.n(r),
+  u = s("285952"),
+  c = s("868838");
 
-function d(e, t, n) {
+function d(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
-class h extends(s = o.PureComponent) {
+class h extends(n = a.PureComponent) {
   render() {
     let {
       className: e
     } = this.props;
-    return (0, a.jsx)("input", {
+    return (0, l.jsx)("input", {
       ref: this.setCodeBlockRef,
-      className: l()(c.input, e),
+      className: i()(c.input, e),
       maxLength: 1,
       value: null != this.props.code ? this.props.code : void 0,
       autoFocus: this.props.autoFocus,
@@ -43,12 +43,12 @@ class h extends(s = o.PureComponent) {
       this._codeBlockRef = e
     }), d(this, "handleKeyDown", e => {
       let t = 8 === e.which || 37 === e.which || 39 === e.which,
-        n = e.which >= 48 && e.which <= 57 || e.keyCode >= 96 && e.keyCode <= 105;
-      !t && !n && e.preventDefault();
+        s = e.which >= 48 && e.which <= 57 || e.keyCode >= 96 && e.keyCode <= 105;
+      !t && !s && e.preventDefault();
       let {
-        onKeyDown: s
+        onKeyDown: n
       } = this.props;
-      null == s || s(e)
+      null == n || n(e)
     }), d(this, "handleChange", e => {
       let {
         onChange: t
@@ -60,29 +60,29 @@ class h extends(s = o.PureComponent) {
 d(h, "defaultProps", {
   autoFocus: !1
 });
-class f extends(r = o.PureComponent) {
+class f extends(o = a.PureComponent) {
   render() {
     let {
       className: e,
       inputClassName: t
     } = this.props, {
-      codes: n
-    } = this.state, s = [];
-    for (let e = 0; e < n.length; e++) e === n.length / 2 && s.push((0, a.jsx)("div", {
+      codes: s
+    } = this.state, n = [];
+    for (let e = 0; e < s.length; e++) e === s.length / 2 && n.push((0, l.jsx)("div", {
       className: c.spacer
-    }, "spacer")), s.push((0, a.jsx)(h, {
+    }, "spacer")), n.push((0, l.jsx)(h, {
       ref: t => this.setCodeBlockRef(e, t),
-      code: n[e],
+      code: s[e],
       autoFocus: 0 === e,
       onChange: t => this.handleChange(e, t),
       onKeyDown: t => this.handleKeyDown(e, t),
       className: t
     }, e));
-    return (0, a.jsx)(u.default, {
+    return (0, l.jsx)(u.default, {
       align: u.default.Align.CENTER,
       justify: u.default.Justify.CENTER,
       className: e,
-      children: s
+      children: n
     })
   }
   setCodeBlockRef(e, t) {
@@ -90,31 +90,31 @@ class f extends(r = o.PureComponent) {
   }
   handleChange(e, t) {
     this.state.codes[e] = t;
-    let n = this.getCodeOrFirstEmptyIndex();
-    if ("string" == typeof n) this.submit(n);
+    let s = this.getCodeOrFirstEmptyIndex();
+    if ("string" == typeof s) this.submit(s);
     else {
-      let e = this._codeBlockRefs[n];
+      let e = this._codeBlockRefs[s];
       null == e || e.focus()
     }
   }
   handleKeyDown(e, t) {
     let {
-      codes: n
+      codes: s
     } = this.state;
-    if (8 === t.which && e > 0 && (null == n[e] || 0 === n[e].length)) {
+    if (8 === t.which && e > 0 && (null == s[e] || 0 === s[e].length)) {
       let t = e - 1;
-      n[t] = "";
-      let s = this._codeBlockRefs[t];
-      null == s || s.focus()
+      s[t] = "";
+      let n = this._codeBlockRefs[t];
+      null == n || n.focus()
     }
   }
   getCodeOrFirstEmptyIndex() {
     let {
       codes: e
     } = this.state, t = "";
-    for (let n = 0; n < e.length; n++) {
-      if (isNaN(parseInt(e[n]))) return n;
-      t += e[n]
+    for (let s = 0; s < e.length; s++) {
+      if (isNaN(parseInt(e[s]))) return s;
+      t += e[s]
     }
     return t
   }

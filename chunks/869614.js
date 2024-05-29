@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return s
+    return i
   }
-}), n("47120");
-let a = new Set(["nvidia"]);
+}), r("47120");
+let n = new Set(["nvidia"]);
 
-function s(e) {
+function i(e) {
   for (let t of Object.keys(e)) {
-    let n = e[t];
-    if (null != n && null == n.error && a.has(t)) return !0
+    let r = e[t];
+    if (null != r && null == r.error && n.has(t)) return !0
   }
   return !1
 }

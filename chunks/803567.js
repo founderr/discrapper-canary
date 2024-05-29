@@ -18,33 +18,33 @@ var i = s("120356"),
   _ = s("153124"),
   f = s("626135"),
   m = s("63063"),
-  I = s("210887"),
-  g = s("981631"),
+  g = s("210887"),
+  I = s("981631"),
   N = s("689938"),
   h = s("611273");
 let C = s("775322"),
-  O = s("853453"),
-  A = (0, _.uid)();
+  A = s("853453"),
+  p = (0, _.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
-let p = {
-  page: g.AnalyticsPages.USER_SETTINGS,
-  section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+let O = {
+  page: I.AnalyticsPages.USER_SETTINGS,
+  section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
 };
 
 function R(e) {
   let t = e.currentTarget;
-  f.default.track(g.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  f.default.track(I.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
-      page: g.AnalyticsPages.USER_SETTINGS,
-      section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+      page: I.AnalyticsPages.USER_SETTINGS,
+      section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
     }
   })
 }
 
 function x() {
-  let e = (0, o.useStateFromStores)([I.default], () => I.default.theme),
+  let e = (0, o.useStateFromStores)([g.default], () => g.default.theme),
     {
       noiseCancellation: t,
       noiseSuppression: s,
@@ -70,7 +70,7 @@ function x() {
   }), (0, l.jsxs)(u.FormSection, {
     className: h.marginBottom20,
     children: [(0, l.jsx)(u.FormTitle, {
-      id: A,
+      id: p,
       tag: u.FormTitleTags.H3,
       className: h.marginBottom8,
       children: N.default.Messages.NOISE_SUPPRESSION
@@ -81,20 +81,20 @@ function x() {
     }), (0, l.jsx)(u.RadioGroup, {
       options: i,
       onChange: e => {
-        c.default.setNoiseCancellation(2 === e.value, p), c.default.setNoiseSuppression(1 === e.value, p)
+        c.default.setNoiseCancellation(2 === e.value, O), c.default.setNoiseSuppression(1 === e.value, O)
       },
       value: t ? 2 : s ? 1 : 0
     }), n && (0, l.jsx)(u.FormNotice, {
       className: h.marginBottom8,
       type: u.FormNoticeTypes.PRIMARY,
       imageData: {
-        src: (0, d.isThemeLight)(e) ? C : O,
+        src: (0, d.isThemeLight)(e) ? C : A,
         width: 70,
         height: 40
       },
       align: T.default.Align.CENTER,
       body: (0, l.jsx)(u.Anchor, {
-        href: m.default.getArticleURL(g.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: m.default.getArticleURL(I.HelpdeskArticles.NOISE_SUPPRESSION),
         onClick: R,
         children: N.default.Messages.LEARN_MORE
       })
@@ -129,11 +129,11 @@ function M() {
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), I = _ || f || m, C = e === g.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), g = _ || f || m, C = e === I.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
     className: h.marginBottom20,
     title: N.default.Messages.FORM_LABEL_VOICE_PROCESSING,
-    children: [I && (0, l.jsx)(u.FormText, {
+    children: [g && (0, l.jsx)(u.FormText, {
       className: h.marginBottom20,
       type: u.FormText.Types.DESCRIPTION,
       children: N.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
@@ -141,8 +141,8 @@ function M() {
       className: r()(h.marginTop8, h.marginBottom20),
       value: s,
       onChange: e => c.default.setEchoCancellation(e, {
-        page: g.AnalyticsPages.USER_SETTINGS,
-        section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: I.AnalyticsPages.USER_SETTINGS,
+        section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       disabled: _,
       children: N.default.Messages.ECHO_CANCELLATION
@@ -158,8 +158,8 @@ function M() {
       className: "",
       value: a,
       onChange: e => c.default.setAutomaticGainControl(e, {
-        page: g.AnalyticsPages.USER_SETTINGS,
-        section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: I.AnalyticsPages.USER_SETTINGS,
+        section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       note: N.default.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
       disabled: m,

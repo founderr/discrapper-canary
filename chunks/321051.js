@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return p
   }
 }), n("47120");
 var i = n("735250"),
-  l = n("470079"),
-  s = n("692547"),
+  s = n("470079"),
+  l = n("692547"),
   a = n("467949"),
   r = n("481060"),
   u = n("697426"),
@@ -15,16 +15,16 @@ var i = n("735250"),
   d = n("945067");
 let m = [54, 8, 8, 8];
 
-function p(e) {
+function f(e) {
   let {
     onSelect: t,
     sound: n
-  } = e, [p, f] = l.useState(!1);
+  } = e, [f, p] = s.useState(!1);
 
-  function S(e) {
-    f(!1), null == t || t(e)
+  function _(e) {
+    p(!1), null == t || t(e)
   }
-  let I = e => (0, i.jsxs)("div", {
+  let S = e => (0, i.jsxs)("div", {
     className: d.customGiftHeader,
     children: [(0, i.jsxs)("div", {
       className: d.__invalid_customGiftHeaderText,
@@ -41,10 +41,10 @@ function p(e) {
     })]
   });
   return (0, i.jsx)(r.Popout, {
-    shouldShow: p,
+    shouldShow: f,
     position: "bottom",
     align: "left",
-    onRequestClose: () => f(!1),
+    onRequestClose: () => p(!1),
     renderPopout: e => {
       let {
         closePopout: t
@@ -56,21 +56,21 @@ function p(e) {
           guildId: null,
           channel: null,
           onClose: t,
-          onSelect: S,
+          onSelect: _,
           analyticsSource: "gift soundboard",
           soundButtonOverlay: u.SoundButtonOverlay.ADD,
           listPadding: m,
-          renderHeader: I,
+          renderHeader: S,
           defaultSoundsOnly: !0
         })
       })
     },
     children: () => (0, i.jsx)(r.Clickable, {
       className: d.sound,
-      onClick: () => f(!0),
+      onClick: () => p(!0),
       children: null == n ? (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(a.SoundboardIcon, {
-          color: s.default.colors.WHITE,
+          color: l.default.colors.WHITE,
           className: d.soundIcon,
           width: 14,
           height: 14
@@ -94,14 +94,14 @@ function p(e) {
   })
 }
 
-function f(e) {
+function p(e) {
   let {
     sound: t,
     onSelect: n
   } = e;
   return (0, i.jsx)("div", {
     className: d.container,
-    children: (0, i.jsx)(p, {
+    children: (0, i.jsx)(f, {
       onSelect: n,
       sound: t
     })

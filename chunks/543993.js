@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("442837"),
   f = n("116061"),
   E = n("481060"),
-  C = n("232567"),
-  h = n("2052"),
-  _ = n("393238"),
-  S = n("100527"),
-  m = n("906732"),
+  h = n("232567"),
+  _ = n("2052"),
+  C = n("393238"),
+  m = n("100527"),
+  S = n("906732"),
   p = n("521868"),
   I = n("299206"),
   g = n("440051"),
@@ -30,11 +30,11 @@ var a = n("735250"),
   R = n("318661"),
   O = n("681837"),
   L = n("502762"),
-  P = n("530"),
-  y = n("894374"),
-  M = n("544989"),
-  D = n("162159"),
-  x = n("171368"),
+  M = n("530"),
+  x = n("894374"),
+  P = n("544989"),
+  y = n("162159"),
+  D = n("171368"),
   b = n("580512"),
   U = n("67152"),
   j = n("23293"),
@@ -49,8 +49,8 @@ var a = n("735250"),
   W = n("626135"),
   K = n("70956"),
   z = n("51144"),
-  q = n("246133"),
-  Q = n("474376"),
+  Q = n("246133"),
+  q = n("474376"),
   Z = n("383832"),
   X = n("981631"),
   J = n("228168"),
@@ -86,7 +86,7 @@ function en(e, t, n, s) {
       return (0, a.jsx)(E.MenuItem, {
         id: "".concat(e, "-").concat(l),
         label: i(),
-        action: () => (0, q.default)(e, t, n, l),
+        action: () => (0, Q.default)(e, t, n, l),
         dontCloseOnAction: !0
       }, l)
     })
@@ -116,7 +116,7 @@ function en(e, t, n, s) {
         })]
       })
     },
-    action: () => (0, q.default)(e, t, n),
+    action: () => (0, Q.default)(e, t, n),
     dontCloseOnAction: !0,
     children: e !== X.StatusTypes.ONLINE ? l : void 0
   })
@@ -146,7 +146,7 @@ function ea(e, t, n, s) {
         })]
       })
     },
-    action: () => (0, q.default)(e, t, n),
+    action: () => (0, Q.default)(e, t, n),
     dontCloseOnAction: !0
   })
 }
@@ -158,11 +158,11 @@ function es(e) {
     guildId: l,
     isApplicationStreaming: r,
     onClose: o,
-    onSelect: C,
+    onSelect: h,
     closePopout: w
-  } = e, k = (0, h.useAnalyticsContext)(), {
+  } = e, k = (0, _.useAnalyticsContext)(), {
     analyticsLocations: H
-  } = (0, m.default)(S.default.ACCOUNT_PROFILE_POPOUT), K = (0, R.default)(t.id, l), q = __OVERLAY__, [es, el] = (0, c.useStateFromStoresArray)([B.default], () => {
+  } = (0, S.default)(m.default.ACCOUNT_PROFILE_POPOUT), K = (0, R.default)(t.id, l), Q = __OVERLAY__, [es, el] = (0, c.useStateFromStoresArray)([B.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, X.StatusTypes.UNKNOWN] : [null !== (e = B.default.findActivity(n, e => e.type !== X.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, B.default.getStatus(n)]
@@ -253,7 +253,7 @@ function es(e) {
     })
   }(el, k), {
     ref: er
-  } = (0, _.default)();
+  } = (0, C.default)();
   s.useEffect(() => {
     W.default.track(X.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
@@ -268,7 +268,7 @@ function es(e) {
     })
   }, []);
   let eo = e => {
-      null == w || w(), (0, x.openUserProfileModal)({
+      null == w || w(), (0, D.openUserProfileModal)({
         sourceAnalyticsLocations: H,
         userId: t.id,
         guildId: l,
@@ -277,7 +277,7 @@ function es(e) {
     },
     eu = (0, T.useFocusModeEnabled)(),
     ed = el === X.StatusTypes.DND,
-    ec = (0, Q.useMultiAccountMenuItems)(),
+    ec = (0, q.useMultiAccountMenuItems)(),
     ef = (0, p.useCustomStatusMenuItem)(null != n ? n : void 0, ee.menuItemFocused),
     eE = (0, I.default)({
       id: t.id,
@@ -285,8 +285,8 @@ function es(e) {
       showIconFirst: !0,
       focusedClassName: ee.menuItemFocused
     }),
-    eC = (0, c.useStateFromStores)([F.default], () => F.default.hidePersonalInformation);
-  return (0, a.jsx)(m.AnalyticsLocationProvider, {
+    eh = (0, c.useStateFromStores)([F.default], () => F.default.hidePersonalInformation);
+  return (0, a.jsx)(S.AnalyticsLocationProvider, {
     value: H,
     children: (0, a.jsx)(N.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_ACCOUNT_POPOUT",
@@ -300,18 +300,18 @@ function es(e) {
           user: t,
           displayProfile: K,
           profileType: J.UserProfileTypes.BITE_SIZE,
-          children: [(0, a.jsx)(M.default, {
+          children: [(0, a.jsx)(P.default, {
             profileType: J.UserProfileTypes.BITE_SIZE,
-            children: (0, a.jsx)(D.default, {
+            children: (0, a.jsx)(y.default, {
               onClose: o
             })
           }), (0, a.jsx)(j.default, {
             user: t,
             displayProfile: K,
-            onOpenProfile: q ? void 0 : eo
+            onOpenProfile: Q ? void 0 : eo
           }), (0, a.jsxs)("div", {
             className: ee.body,
-            children: [(0, a.jsx)(P.default, {
+            children: [(0, a.jsx)(M.default, {
               user: t,
               className: ee.username,
               profileType: J.UserProfileTypes.BITE_SIZE,
@@ -319,7 +319,7 @@ function es(e) {
                 autoFocusNote: !1
               }),
               pronouns: null == K ? void 0 : K.pronouns,
-              tags: (0, a.jsx)(y.UserProfileBadgesTag, {
+              tags: (0, a.jsx)(x.UserProfileBadgesTag, {
                 displayProfile: K,
                 onClose: o
               }),
@@ -329,7 +329,7 @@ function es(e) {
             }), (0, a.jsx)(U.default, {
               user: t,
               bio: null == K ? void 0 : K.bio,
-              hidePersonalInformation: eC,
+              hidePersonalInformation: eh,
               onClose: o
             }), (0, a.jsx)(b.default, {
               user: t,
@@ -340,7 +340,7 @@ function es(e) {
               hideScroller: !0,
               className: ee.menu,
               onClose: o,
-              onSelect: C,
+              onSelect: h,
               children: [(0, a.jsxs)(E.MenuGroup, {
                 children: [(0, a.jsx)(E.MenuItem, {
                   id: "status-picker",
@@ -433,18 +433,18 @@ function el(e) {
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, c.useStateFromStores)([H.default], () => H.default.getUser(t), [t]), d = (0, c.useStateFromStores)([k.default], () => k.default.getCustomStatusActivity()), [f, E] = s.useState(!1), h = null != u ? u : n, _ = (0, c.useStateFromStores)([w.default], () => null != h && null != w.default.getAnyStreamForUser(h.id));
+  } = e, u = (0, c.useStateFromStores)([H.default], () => H.default.getUser(t), [t]), d = (0, c.useStateFromStores)([k.default], () => k.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([w.default], () => null != _ && null != w.default.getAnyStreamForUser(_.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {
-      "string" == typeof t && (await (0, C.getUser)(t), E(!0))
+      "string" == typeof t && (await (0, h.getUser)(t), E(!0))
     }
-  }, [u, t]), null == h) ? (f && o()(null != h, "Unexpected missing user"), null) : (0, a.jsx)(es, {
+  }, [u, t]), null == _) ? (f && o()(null != _, "Unexpected missing user"), null) : (0, a.jsx)(es, {
     closePopout: i,
-    user: h,
+    user: _,
     customStatus: d,
     guildId: l,
-    isApplicationStreaming: _,
+    isApplicationStreaming: C,
     onClose: i,
     onSelect: r
   })

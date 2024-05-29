@@ -1,40 +1,40 @@
 "use strict";
-E.r(t), E.d(t, {
+s.r(t), s.d(t, {
   CTAEmojiSize: function() {
-    return n
+    return T
   },
   default: function() {
-    return A
+    return i
   }
 });
-var s = E("735250");
-E("470079");
-var _ = E("596454"),
-  a = E("307707"),
-  T = E("945566");
-let n = {
-  SMALL: T.small,
-  MEDIUM: T.medium,
-  LARGE: T.large
+var E = s("735250");
+s("470079");
+var _ = s("596454"),
+  a = s("307707"),
+  n = s("945566");
+let T = {
+  SMALL: n.small,
+  MEDIUM: n.medium,
+  LARGE: n.large
 };
 
-function A(e) {
+function i(e) {
   let {
     emojiId: t,
-    emojiName: E,
-    defaultComponent: T,
-    size: A = n.MEDIUM
+    emojiName: s,
+    defaultComponent: n,
+    size: i = T.MEDIUM
   } = e, {
-    customEmoji: I,
+    customEmoji: A,
     unicodeEmoji: u
-  } = (0, a.default)(t, E);
-  return null == I && null == u ? (0, s.jsx)(s.Fragment, {
-    children: T
-  }) : (0, s.jsx)(_.default, {
-    emojiName: null != I ? null == I ? void 0 : I.name : E,
-    animated: null != I && I.animated,
-    emojiId: null == I ? void 0 : I.id,
+  } = (0, a.default)(t, s);
+  return null == A && null == u ? (0, E.jsx)(E.Fragment, {
+    children: n
+  }) : (0, E.jsx)(_.default, {
+    emojiName: null != A ? null == A ? void 0 : A.name : s,
+    animated: null != A && A.animated,
+    emojiId: null == A ? void 0 : A.id,
     autoplay: !0,
-    className: A
+    className: i
   })
 }

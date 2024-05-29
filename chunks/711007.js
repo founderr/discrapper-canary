@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   usePurchaseTokenAuthStep: function() {
-    return s
+    return a
   }
 });
 var u = n("470079"),
-  i = n("409813"),
-  l = n("882712");
+  l = n("409813"),
+  i = n("882712");
 
-function s(e, t, n) {
+function a(e, t, n) {
   u.useEffect(() => {
-    null != e && e !== i.Step.AWAITING_PURCHASE_TOKEN_AUTH && t === l.PurchaseTokenAuthState.PENDING ? n(i.Step.AWAITING_PURCHASE_TOKEN_AUTH) : e === i.Step.AWAITING_PURCHASE_TOKEN_AUTH && t === l.PurchaseTokenAuthState.SUCCESS && n(i.Step.REVIEW)
+    null != e && e !== l.Step.AWAITING_PURCHASE_TOKEN_AUTH && t === i.PurchaseTokenAuthState.PENDING ? n(l.Step.AWAITING_PURCHASE_TOKEN_AUTH) : e === l.Step.AWAITING_PURCHASE_TOKEN_AUTH && t === i.PurchaseTokenAuthState.SUCCESS && n(l.Step.REVIEW)
   }, [e, t, n])
 }

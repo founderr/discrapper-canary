@@ -17,12 +17,12 @@ var n = s("525654"),
 function c() {
   var e, t, s, n, c;
   let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    E = "296912",
-    T = (e = "07ac6bf7e652909fe46f317e7413a33b99652283", e.substring(0, 7)),
+    E = "296969",
+    T = (e = "525c577793c63f71fb3899b711754fdd9a85f7cd", e.substring(0, 7)),
     _ = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (c = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(c),
-    I = function() {
+    g = function() {
       var e;
       let t = null === l() || void 0 === l() ? void 0 : null === (e = l().os) || void 0 === e ? void 0 : e.toString();
       if (null == t || null == r.default) return null;
@@ -30,9 +30,9 @@ function c() {
         [a, n, i] = s.split(".").map(e => parseInt(e, 10));
       return t.includes("Windows 10") && void 0 !== i && i >= 22e3 && (t = t.replace("Windows 10", "Windows 11")), t.includes("OS X 10.15.7") && void 0 !== a && a >= 20 && (t = "macOS ".concat(a - 9)), "".concat(t, " (").concat(s, ")")
     }(),
-    g = [S, E, "(".concat(T, ")")];
-  return null != _ && (g.push("Host ".concat(_)), null != m && g.push(m.toLowerCase()), null != f && g.push("(".concat(f, ")"))), null != I && g.push(I), (0, a.jsx)(o.CopiableField, {
-    copyValue: g.join(" "),
+    I = [S, E, "(".concat(T, ")")];
+  return null != _ && (I.push("Host ".concat(_)), null != m && I.push(m.toLowerCase()), null != f && I.push("(".concat(f, ")"))), null != g && I.push(g), (0, a.jsx)(o.CopiableField, {
+    copyValue: I.join(" "),
     disableCopy: !1,
     copyTooltip: d.default.Messages.COPY_VERSION,
     showCopyIcon: !1,
@@ -60,12 +60,12 @@ function c() {
             children: ["(", f, ")"]
           }) : null]
         }), " "]
-      }) : null, null != I ? (0, a.jsx)(i.Text, {
+      }) : null, null != g ? (0, a.jsx)(i.Text, {
         tag: "span",
         className: u.line,
         variant: "text-xs/normal",
         color: "text-muted",
-        children: I
+        children: g
       }) : null]
     })
   })

@@ -16,10 +16,10 @@ var s = n("735250"),
   p = n("63063"),
   h = n("981631"),
   T = n("689938"),
-  N = n("194409"),
-  g = n("611273");
+  g = n("194409"),
+  m = n("611273");
 i.default.initialize();
-let m = e => {
+let N = e => {
   let {
     title: t,
     menuType: a
@@ -61,9 +61,9 @@ let m = e => {
     })
   };
   return (0, s.jsx)("div", {
-    className: N.buttonColumn,
+    className: g.buttonColumn,
     children: (0, s.jsx)(r.Button, {
-      className: g.__invalid_reportButton,
+      className: m.__invalid_reportButton,
       fullWidth: !0,
       color: r.Button.Colors.BRAND,
       onClick: () => i(),
@@ -91,19 +91,19 @@ t.default = () => {
     children: (0, s.jsx)(r.Spinner, {})
   }) : n && (0, s.jsxs)(_.default, {
     children: [(0, s.jsx)(_.Title, {
-      className: g.marginBottom8,
+      className: m.marginBottom8,
       children: T.default.Messages.URF_LANDING_PAGE_TITLE
     }), (0, s.jsx)(_.SubTitle, {
-      className: g.marginBottom8,
+      className: m.marginBottom8,
       children: T.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
         supportURL: p.default.getArticleURL(h.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
       })
     }), (0, s.jsxs)("div", {
-      className: N.container,
-      children: [(0, s.jsx)(m, {
+      className: g.container,
+      children: [(0, s.jsx)(N, {
         title: T.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
         menuType: d.UnauthenticatedReportNames.MESSAGE
-      }), (0, s.jsx)(m, {
+      }), (0, s.jsx)(N, {
         title: T.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
         menuType: d.UnauthenticatedReportNames.USER
       })]

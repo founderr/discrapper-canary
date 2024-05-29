@@ -21,8 +21,8 @@ var a, l = n("735250"),
   I = n("597952"),
   A = n("628123"),
   v = n("151851"),
-  x = n("587061"),
-  N = n("392358"),
+  N = n("587061"),
+  x = n("392358"),
   M = n("892254"),
   R = n("706454"),
   y = n("210887"),
@@ -36,10 +36,10 @@ var a, l = n("735250"),
   F = n("473159"),
   w = n("928518"),
   k = n("981631"),
-  H = n("689938"),
-  G = n("622209");
+  B = n("689938"),
+  H = n("622209");
 
-function B(e, t, n) {
+function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -139,7 +139,7 @@ class V extends(a = s.Component) {
       guestWindow: S,
       clientThemesClassName: _,
       contentClassName: T
-    } = this.props, x = (0, D.getPlatform)(), N = r()(p, {
+    } = this.props, N = (0, D.getPlatform)(), x = r()(p, {
       "mouse-mode": o,
       "reduce-motion": c,
       "full-motion": !c,
@@ -155,7 +155,7 @@ class V extends(a = s.Component) {
             children: (0, l.jsx)("div", {
               "data-popout-root": !0,
               ref: this.rootRef,
-              className: r()((0, b.getThemeClass)(e), (0, I.default)(), N, _),
+              className: r()((0, b.getThemeClass)(e), (0, I.default)(), x, _),
               children: (0, l.jsx)(f.FocusRingScope, {
                 containerRef: this.rootRef,
                 children: (0, l.jsx)(E.default, {
@@ -165,14 +165,14 @@ class V extends(a = s.Component) {
                       renderWindow: S,
                       children: (0, l.jsxs)(j.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
-                          className: G.popout,
-                          children: [g && null != x ? (0, l.jsx)(v.default, {
+                          className: H.popout,
+                          children: [g && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
-                            type: x,
+                            type: N,
                             windowKey: i,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
-                            className: r()(G.content, T),
+                            className: r()(H.content, T),
                             children: s
                           })]
                         }), (0, l.jsx)(f.Modals, {}), (0, l.jsx)(h.default, {}), (0, l.jsx)(j.AppLayerContainer, {})]
@@ -188,19 +188,19 @@ class V extends(a = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), B(this, "rootRef", s.createRef()), B(this, "_cleanupWindowActionCreators", void 0), B(this, "warnPopoutClose", e => {
-      this.props.connectedToEmbeddedActivity && !L.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = H.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, D.isPlatformEmbedded && (0, g.default)(() => {
+    super(...e), G(this, "rootRef", s.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
+      this.props.connectedToEmbeddedActivity && !L.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = B.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, D.isPlatformEmbedded && (0, g.default)(() => {
         w.default.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && U.default.close(this.props.windowKey)
       }))
-    }), B(this, "handleBlur", () => {
+    }), G(this, "handleBlur", () => {
       var e, t;
       null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t)
-    }), B(this, "handleContextMenu", e => {
+    }), G(this, "handleContextMenu", e => {
       e.preventDefault()
     })
   }
 }
-B(V, "defaultProps", {
+G(V, "defaultProps", {
   withTitleBar: !0
 });
 let W = s.forwardRef(function(e, t) {
@@ -239,8 +239,8 @@ let W = s.forwardRef(function(e, t) {
       useForcedColors: p.default.useForcedColors
     })),
     v = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
-  (0, x.default)(n, !1);
-  let M = (0, N.default)(n, a),
+  (0, N.default)(n, !1);
+  let M = (0, x.default)(n, a),
     {
       analyticsLocations: L
     } = (0, _.default)(S.default.POPOUT_WINDOW),

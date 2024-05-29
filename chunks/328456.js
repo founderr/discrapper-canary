@@ -1,49 +1,49 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   ItemsSortingHat: function() {
-    return n
+    return l
   },
   useShopProductItems: function() {
-    return o
+    return n
   }
-}), a("724458"), a("653041"), a("47120");
-var r = a("470079"),
-  s = a("979554");
-class n {
+}), r("724458"), r("653041"), r("47120");
+var a = r("470079"),
+  o = r("979554");
+class l {
   get firstAvatarDecoration() {
-    return this.getFirstItemByType(s.CollectiblesItemType.AVATAR_DECORATION)
+    return this.getFirstItemByType(o.CollectiblesItemType.AVATAR_DECORATION)
   }
   get firstProfileEffect() {
-    return this.getFirstItemByType(s.CollectiblesItemType.PROFILE_EFFECT)
+    return this.getFirstItemByType(o.CollectiblesItemType.PROFILE_EFFECT)
   }
   getFirstItemByType(e) {
     var t;
-    let a = (null !== (t = this.itemsByTypes.get(e)) && void 0 !== t ? t : [])[0];
-    if (null != a) return a
+    let r = (null !== (t = this.itemsByTypes.get(e)) && void 0 !== t ? t : [])[0];
+    if (null != r) return r
   }
   sortByTypes(e) {
     return e.reduce((e, t) => {
-      let a = e.get(t.type);
-      return null != a ? a.push(t) : e.set(t.type, [t]), e
+      let r = e.get(t.type);
+      return null != r ? r.push(t) : e.set(t.type, [t]), e
     }, new Map)
   }
   constructor(e) {
-    var t, a, r;
-    t = this, r = void 0, (a = "itemsByTypes") in t ? Object.defineProperty(t, a, {
-      value: r,
+    var t, r, a;
+    t = this, a = void 0, (r = "itemsByTypes") in t ? Object.defineProperty(t, r, {
+      value: a,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[a] = r, this.itemsByTypes = this.sortByTypes(e)
+    }) : t[r] = a, this.itemsByTypes = this.sortByTypes(e)
   }
 }
-let o = e => {
+let n = e => {
   let {
     firstProfileEffect: t,
-    firstAvatarDecoration: a
-  } = r.useMemo(() => new n(e.items), [e]);
+    firstAvatarDecoration: r
+  } = a.useMemo(() => new l(e.items), [e]);
   return {
     firstProfileEffect: t,
-    firstAvatarDecoration: a
+    firstAvatarDecoration: r
   }
 }

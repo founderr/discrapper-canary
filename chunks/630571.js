@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return S
   }
 }), n("47120");
 var a = n("735250");
@@ -16,35 +16,35 @@ var s = n("924826"),
   c = n("26290"),
   f = n("709158"),
   E = n("981631"),
-  C = n("921944"),
-  h = n("689938"),
-  _ = n("981079");
-let S = e => {
+  h = n("921944"),
+  _ = n("689938"),
+  C = n("981079");
+let m = e => {
   let {
     color: t
   } = e;
   return (0, a.jsx)(c.TextBadge, {
-    className: _.newBadge,
+    className: C.newBadge,
     color: null != t ? t : u.default.BG_BRAND,
-    text: h.default.Messages.NEW
+    text: _.default.Messages.NEW
   })
 };
 
-function m(e) {
+function S(e) {
   let {
     selected: t,
     locationState: n
-  } = e, u = (0, s.useListItem)("quest-home"), c = o.default.HOME_PAGE_QUEST_HOME_TAB, [_, m] = (0, d.useSelectedDismissibleContent)([i.DismissibleContent.QUEST_HOME_FRIENDS_LIST_NEW_BADGE]), p = (0, f.default)(c);
+  } = e, u = (0, s.useListItem)("quest-home"), c = o.default.HOME_PAGE_QUEST_HOME_TAB, [C, S] = (0, d.useSelectedDismissibleContent)([i.DismissibleContent.QUEST_HOME_FRIENDS_LIST_NEW_BADGE]), p = (0, f.default)(c);
   return p ? (0, a.jsx)(r.LinkButton, {
     icon: l.QuestsIcon,
     locationState: n,
     route: E.Routes.QUEST_HOME,
     selected: t,
-    text: h.default.Messages.QUESTS,
+    text: _.default.Messages.QUESTS,
     onClick: () => {
-      m(C.ContentDismissActionType.TAKE_ACTION)
+      S(h.ContentDismissActionType.TAKE_ACTION)
     },
     ...u,
-    children: _ === i.DismissibleContent.QUEST_HOME_FRIENDS_LIST_NEW_BADGE && (0, a.jsx)(S, {})
+    children: C === i.DismissibleContent.QUEST_HOME_FRIENDS_LIST_NEW_BADGE && (0, a.jsx)(m, {})
   }) : null
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return A
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("12647"),
   f = s("998502"),
   m = s("981631"),
-  I = s("65154"),
-  g = s("689938"),
+  g = s("65154"),
+  I = s("689938"),
   N = s("611273");
 async function h() {
   let e = await d.default.fileManager.getModulePath(),
@@ -30,34 +30,34 @@ async function h() {
 
 function C(e) {
   (0, i.openModal)(t => (0, a.jsx)(i.ConfirmModal, {
-    header: g.default.Messages.SET_DEBUG_LOGGING,
-    confirmText: g.default.Messages.OKAY,
-    cancelText: g.default.Messages.CANCEL,
+    header: I.default.Messages.SET_DEBUG_LOGGING,
+    confirmText: I.default.Messages.OKAY,
+    cancelText: I.default.Messages.CANCEL,
     onCancel: t.onClose,
     onConfirm: () => r.default.setDebugLogging(e),
     ...t,
     children: (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
-      children: g.default.Messages.SET_DEBUG_LOGGING_BODY
+      children: I.default.Messages.SET_DEBUG_LOGGING_BODY
     })
   }))
 }
 
-function O() {
+function A() {
   let [e, t] = n.useState(!1), {
     aecDumpSupported: s,
     debugLogging: d,
-    aecDumpEnabled: O,
-    supportsConnectionReplay: A
+    aecDumpEnabled: A,
+    supportsConnectionReplay: p
   } = (0, l.useStateFromStoresObject)([c.default], () => ({
     aecDumpSupported: c.default.isAecDumpSupported(),
     debugLogging: c.default.getDebugLogging(),
     aecDumpEnabled: c.default.getAecDump(),
-    supportsConnectionReplay: c.default.supports(I.Features.CONNECTION_REPLAY)
-  })), p = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), R = (0, l.useStateFromStores)([E.default], () => {
+    supportsConnectionReplay: c.default.supports(g.Features.CONNECTION_REPLAY)
+  })), O = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), R = (0, l.useStateFromStores)([E.default], () => {
     var e, t;
     return null !== (t = null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
-  }), x = ("canary" === f.default.releaseChannel || "development" === f.default.releaseChannel) && R && A;
+  }), x = ("canary" === f.default.releaseChannel || "development" === f.default.releaseChannel) && R && p;
   async function M() {
     t(!0);
     try {
@@ -66,12 +66,12 @@ function O() {
           message: "User Live Dump"
         }
       }), await (0, u.uploadDebugLogFiles)(m.DebugLogCategory.RTC), ! function() {
-        let e = g.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
-          t = g.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
+        let e = I.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
+          t = I.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
         (0, i.openModal)(s => (0, a.jsx)(i.ConfirmModal, {
           header: e,
           confirmButtonColor: i.Button.Colors.BRAND,
-          confirmText: g.default.Messages.OKAY,
+          confirmText: I.default.Messages.OKAY,
           ...s,
           children: (0, a.jsx)(i.Text, {
             variant: "text-md/normal",
@@ -81,12 +81,12 @@ function O() {
       }()
     } catch (e) {
       ! function(e) {
-        let t = g.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
-          s = null != e ? e : g.default.Messages.UPLOAD_DEBUG_LOG_FAILURE;
+        let t = I.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
+          s = null != e ? e : I.default.Messages.UPLOAD_DEBUG_LOG_FAILURE;
         (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
           header: t,
           confirmButtonColor: i.Button.Colors.BRAND,
-          confirmText: g.default.Messages.OKAY,
+          confirmText: I.default.Messages.OKAY,
           ...e,
           children: (0, a.jsx)(i.Text, {
             variant: "text-md/normal",
@@ -98,19 +98,19 @@ function O() {
   }
   return (0, a.jsxs)(i.FormSection, {
     className: N.marginBottom40,
-    title: g.default.Messages.FORM_LABEL_DEBUG,
+    title: I.default.Messages.FORM_LABEL_DEBUG,
     children: [s && (0, a.jsx)(i.FormSwitch, {
-      value: O,
+      value: A,
       onChange: e => r.default.setAecDump(e),
-      note: g.default.Messages.FORM_HELP_AEC_DUMP,
-      children: g.default.Messages.FORM_CHECKBOX_AEC_DUMP
+      note: I.default.Messages.FORM_HELP_AEC_DUMP,
+      children: I.default.Messages.FORM_CHECKBOX_AEC_DUMP
     }), x && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(i.FormSwitch, {
         hideBorder: !0,
-        value: p,
+        value: O,
         onChange: e => o.setShouldRecordNextConnection(e),
-        note: g.default.Messages.FORM_HELP_CONNECTION_LOG,
-        children: g.default.Messages.FORM_CHECKBOX_CONNECTION_LOG
+        note: I.default.Messages.FORM_HELP_CONNECTION_LOG,
+        children: I.default.Messages.FORM_CHECKBOX_CONNECTION_LOG
       }), (0, a.jsx)(i.FormItem, {
         children: (0, a.jsx)(T.default, {
           className: N.marginBottom20,
@@ -120,7 +120,7 @@ function O() {
             children: (0, a.jsx)(i.Button, {
               size: i.Button.Sizes.SMALL,
               onClick: () => o.openReplay(),
-              children: g.default.Messages.OPEN_CONNECTION_REPLAY
+              children: I.default.Messages.OPEN_CONNECTION_REPLAY
             })
           })
         })
@@ -129,8 +129,8 @@ function O() {
       hideBorder: !0,
       value: d,
       onChange: C,
-      note: g.default.Messages.FORM_HELP_DEBUG_LOGGING,
-      children: g.default.Messages.FORM_CHECKBOX_DEBUG_LOGGING
+      note: I.default.Messages.FORM_HELP_DEBUG_LOGGING,
+      children: I.default.Messages.FORM_CHECKBOX_DEBUG_LOGGING
     }), (0, a.jsx)(i.FormItem, {
       children: (0, a.jsxs)(T.default, {
         children: [(0, a.jsx)(T.default.Child, {
@@ -140,7 +140,7 @@ function O() {
             disabled: e,
             size: i.Button.Sizes.SMALL,
             onClick: M,
-            children: g.default.Messages.UPLOAD
+            children: I.default.Messages.UPLOAD
           })
         }), (0, a.jsx)(T.default.Child, {
           grow: 0,
@@ -148,7 +148,7 @@ function O() {
           children: (0, a.jsx)(i.Button, {
             size: i.Button.Sizes.SMALL,
             onClick: h,
-            children: g.default.Messages.SHOW_FOLDER
+            children: I.default.Messages.SHOW_FOLDER
           })
         })]
       })

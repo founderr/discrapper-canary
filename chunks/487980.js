@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   useIsEligibleSenderForReferralProgram: function() {
-    return c
+    return d
   },
   useIsEligibleSenderForReferralProgramTabBadge: function() {
     return u
@@ -14,11 +14,11 @@ var a = s("442837"),
   l = s("520540"),
   o = s("898997");
 let u = e => {
-    let t = c(e),
+    let t = d(e),
       s = (0, i.useIsDismissibleContentDismissed)(r.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
     return t && !s
   },
-  c = e => {
+  d = e => {
     let {
       enabled: t,
       eligibleToFetch: s

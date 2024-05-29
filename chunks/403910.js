@@ -1,12 +1,12 @@
 "use strict";
-i.r(s);
-var t = i("442837"),
-  n = i("339085");
-s.default = function(e, s) {
-  return (0, t.useStateFromStores)([n.default], () => {
-    var i;
-    if (null == s) return null;
-    let t = n.default.getDisambiguatedEmojiContext(e);
-    return null !== (i = t.getById(s)) && void 0 !== i ? i : t.getByName(s)
-  }, [e, s])
+s.r(t);
+var E = s("442837"),
+  _ = s("339085");
+t.default = function(e, t) {
+  return (0, E.useStateFromStores)([_.default], () => {
+    var s;
+    if (null == t) return null;
+    let E = _.default.getDisambiguatedEmojiContext(e);
+    return null !== (s = E.getById(t)) && void 0 !== s ? s : E.getByName(t)
+  }, [e, t])
 }

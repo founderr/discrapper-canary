@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("735250"),
@@ -15,19 +15,19 @@ var a = n("735250"),
   c = n("247530"),
   f = n("260889"),
   E = n("981631"),
-  C = n("674563"),
-  h = n("689938");
+  h = n("674563"),
+  _ = n("689938");
 
-function _(e) {
+function C(e) {
   let {
     party: t,
     close: n,
-    onSelect: _
-  } = e, S = (0, u.default)(t), m = (0, f.default)(t), p = (0, c.default)(t), I = (0, d.default)(t), g = (0, r.default)(t), T = (0, o.default)(t);
+    onSelect: C
+  } = e, m = (0, u.default)(t), S = (0, f.default)(t), p = (0, c.default)(t), I = (0, d.default)(t), g = (0, r.default)(t), T = (0, o.default)(t);
   return s.useEffect(() => {
     let e = t.currentActivities.filter(e => {
       var t, n;
-      return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === C.ApplicationTypes.GAME
+      return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === h.ApplicationTypes.GAME
     }).map(e => e.game.name);
     i.default.track(E.AnalyticEvents.OPEN_POPOUT, {
       type: "Now Playing Card Popout",
@@ -36,10 +36,10 @@ function _(e) {
   }, []), (0, a.jsxs)(l.Menu, {
     navId: "now-playing-menu",
     onClose: n,
-    "aria-label": h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
-    onSelect: _,
-    children: [S, (0, a.jsxs)(l.MenuGroup, {
-      children: [m, p]
+    "aria-label": _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    onSelect: C,
+    children: [m, (0, a.jsxs)(l.MenuGroup, {
+      children: [S, p]
     }), (0, a.jsx)(l.MenuGroup, {
       children: I
     }), (0, a.jsx)(l.MenuGroup, {

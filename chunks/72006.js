@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return A
   },
   clearContent: function() {
-    return x
-  },
-  createEmptyEditorState: function() {
     return L
   },
+  createEmptyEditorState: function() {
+    return x
+  },
   deleteContent: function() {
-    return O
+    return M
   },
   getDefaultKeyBinding: function() {
     return l()
   },
   getFirstTextBlock: function() {
-    return M
+    return O
   },
   isEmpty: function() {
     return B
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return P
   },
   scrollCursorIntoView: function() {
-    return j
+    return U
   },
   setCollapsedEndSelection: function() {
     return D
@@ -37,16 +37,16 @@ n.r(t), n.d(t, {
     return w
   },
   setCollapsedStartSelection: function() {
-    return G
-  },
-  setToEndSelection: function() {
-    return F
-  },
-  setToStartSelection: function() {
     return y
   },
+  setToEndSelection: function() {
+    return G
+  },
+  setToStartSelection: function() {
+    return j
+  },
   truncateContent: function() {
-    return U
+    return F
   },
   updateContent: function() {
     return N
@@ -106,7 +106,7 @@ function N(e, t, n, i) {
   return l.isCollapsed() ? (u = r.Modifier.insertText(u, l, e, d, f), s = "insert-characters") : (u = r.Modifier.replaceText(u, l, e, d, f), s = "replace-characters"), r.EditorState.push(t, u, s)
 }
 
-function O(e, t) {
+function M(e, t) {
   switch (e) {
     case "delete":
       return m()(t);
@@ -136,7 +136,7 @@ function b(e, t) {
   }
 }
 
-function M(e) {
+function O(e) {
   return e.getCurrentContent().getFirstBlock().getText()
 }
 
@@ -175,18 +175,18 @@ function A(e, t) {
   }), t
 }
 
-function L(e) {
+function x(e) {
   return r.EditorState.createEmpty(new r.CompositeDecorator(e))
 }
 
-function x(e) {
+function L(e) {
   let t = r.EditorState.push(e, r.ContentState.createFromText("")),
     n = e.getSelection();
   return null != n && n.hasFocus && (t = r.EditorState.moveFocusToEnd(t)), t
 }
 
 function P(e, t) {
-  let n = M(t);
+  let n = O(t);
   return N(e, t, 0, n.length)
 }
 
@@ -199,24 +199,24 @@ function D(e) {
   return w(e.getCurrentContent().getFirstBlock().getText().length, e)
 }
 
-function G(e) {
+function y(e) {
   return w(0, e)
 }
 
-function y(e) {
+function j(e) {
   let t = e.getSelection();
   return t = (t = t.set("focusOffset", 0)).set("isBackward", !0), r.EditorState.forceSelection(e, t)
 }
 
-function F(e) {
-  let t = M(e),
+function G(e) {
+  let t = O(e),
     n = e.getSelection();
   return n = (n = n.set("focusOffset", t.length)).set("isBackward", !1), r.EditorState.forceSelection(e, n)
 }
 
-function U(e) {
+function F(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-    n = M(e);
+    n = O(e);
   if (n.length > t) {
     let i = e.getSelection();
     e = N("", e, t, n.length), i.getAnchorOffset() > t && (i = i.set("anchorOffset", t)), i.getFocusOffset() > t && (i = i.set("focusOffset", t)), e = r.EditorState.forceSelection(e, i)
@@ -224,7 +224,7 @@ function U(e) {
   return e
 }
 
-function j(e) {
+function U(e) {
   let t = window.getSelection();
   if (null == t || "Caret" !== t.type || null == e) return;
   let n = t.getRangeAt(0);
@@ -243,5 +243,5 @@ function j(e) {
 }
 
 function B(e) {
-  return 0 === M(e).length
+  return 0 === O(e).length
 }

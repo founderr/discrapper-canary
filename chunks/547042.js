@@ -16,11 +16,11 @@ var a, s, l = n("735250"),
   c = n("403404"),
   f = n("100527"),
   E = n("906732"),
-  C = n("592125"),
-  h = n("810090"),
-  _ = n("626135"),
-  S = n("981631"),
-  m = n("921944"),
+  h = n("592125"),
+  _ = n("810090"),
+  C = n("626135"),
+  m = n("981631"),
+  S = n("921944"),
   p = n("689938"),
   I = n("336141");
 (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GAME_NIGHT = "GAME_NIGHT";
@@ -39,9 +39,9 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       description: R,
       learnMore: O,
       title: L,
-      videoPosterUrl: P,
-      videoUrl: y,
-      ctaOnClick: M
+      videoPosterUrl: M,
+      videoUrl: x,
+      ctaOnClick: P
     } = function(e) {
       switch (e) {
         case "BOOSTING":
@@ -66,27 +66,27 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
           }
       }
     }(a), {
-      analyticsLocations: D
+      analyticsLocations: y
     } = (0, E.default)(s);
     i.useEffect(() => {
-      _.default.track(S.AnalyticEvents.TOOLTIP_VIEWED, {
+      C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
         type: A
       })
     }, [A]);
-    let x = (0, u.useAppContext)() === S.AppContext.POPOUT,
-      b = (0, r.useStateFromStores)([C.default], () => C.default.getChannel(t), [t]);
+    let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
+      b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
-      value: D,
+      value: y,
       children: (0, l.jsx)("div", {
         className: I.wrapper,
         children: (0, l.jsx)("div", {
           className: I.container,
           children: (0, l.jsxs)("div", {
             className: I.content,
-            children: [(0, l.jsx)(h.default, {
+            children: [(0, l.jsx)(_.default, {
               className: I.video,
-              src: y,
-              poster: P,
+              src: x,
+              poster: M,
               width: 224,
               height: 126,
               loop: !0,
@@ -116,23 +116,23 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               children: [(0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
-                  n(m.ContentDismissActionType.UNKNOWN)
+                  n(S.ContentDismissActionType.UNKNOWN)
                 },
                 children: v
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND_INVERTED,
-                onClick: null != M ? M : () => {
-                  n(m.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
+                onClick: null != P ? P : () => {
+                  n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,
                     guildId: b.guild_id,
                     locationObject: {
-                      page: S.AnalyticsPages.GUILD_CHANNEL,
-                      section: S.AnalyticsSections.GUILD_CHANNEL_LIST,
-                      object: S.AnalyticsObjects.ACTIVITIES_COACH_MARK,
-                      objectType: S.AnalyticsObjectTypes.ACTIVITY
+                      page: m.AnalyticsPages.GUILD_CHANNEL,
+                      section: m.AnalyticsSections.GUILD_CHANNEL_LIST,
+                      object: m.AnalyticsObjects.ACTIVITIES_COACH_MARK,
+                      objectType: m.AnalyticsObjectTypes.ACTIVITY
                     },
-                    openInPopout: x,
-                    analyticsLocations: D
+                    openInPopout: D,
+                    analyticsLocations: y
                   }), (0, d.fetchShelf)({
                     guildId: b.guild_id
                   }))

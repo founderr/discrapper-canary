@@ -29,8 +29,8 @@ var a = n("735250"),
   I = n("185923"),
   A = n("420212"),
   v = n("888863");
-let x = I.EmojiIntention.CHAT,
-  N = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(_.isNotNullish);
+let N = I.EmojiIntention.CHAT,
+  x = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(_.isNotNullish);
 
 function M(e) {
   let {
@@ -113,10 +113,10 @@ function y(e) {
     emojiSearchProps: E,
     recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, y = (0, C.useUID)(), [L, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, y = (0, C.useUID)(), [L, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...x], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
-    intention: x
+    intention: N
   })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
   null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
   let D = e => {
@@ -155,7 +155,7 @@ function y(e) {
         onSelectEmoji: L ? b : () => {},
         shouldHidePickerActions: !L,
         wrapper: "div",
-        pickerIntention: x,
+        pickerIntention: N,
         searchProps: {
           ...E,
           accessory: (0, a.jsx)(R, {

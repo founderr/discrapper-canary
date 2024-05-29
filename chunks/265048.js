@@ -36,15 +36,15 @@ let m = (0, s.default)(h),
       I = null !== (s = null == _ ? void 0 : null === (t = _.assets) || void 0 === t ? void 0 : t.large_text) && void 0 !== s ? s : void 0,
       A = null !== (p = null == _ ? void 0 : _.name) && void 0 !== p ? p : e.extra.game_name,
       v = null == _ ? void 0 : _.details,
-      x = null == _ ? void 0 : _.state,
-      N = null == _ ? void 0 : _.party;
+      N = null == _ ? void 0 : _.state,
+      x = null == _ ? void 0 : _.party;
     return {
       iconUrl: T,
       iconTitle: I,
       user: g,
-      state: x,
+      state: N,
       details: v,
-      party: N,
+      party: x,
       gameTitle: A,
       gameTime: (null == _ ? void 0 : _.timestamps) != null ? (0, a.jsx)(m, {
         timestamps: _.timestamps

@@ -30,10 +30,10 @@ function E(e) {
     analyticsLocation: T,
     guildScheduledEvent: I,
     ...A
-  } = e, v = (0, u.useAppContext)(), x = null == g ? void 0 : g.getGuildId(), N = (0, i.useStateFromStores)([d.default], () => null != x ? d.default.getGuild(x) : null, [x]);
-  return (t = N, l = g, null != t && null != l && c.default.can(m.Permissions.CREATE_INSTANT_INVITE, l)) ? (0, a.jsx)(h.default, {
+  } = e, v = (0, u.useAppContext)(), N = null == g ? void 0 : g.getGuildId(), x = (0, i.useStateFromStores)([d.default], () => null != N ? d.default.getGuild(N) : null, [N]);
+  return (t = x, l = g, null != t && null != l && c.default.can(m.Permissions.CREATE_INSTANT_INVITE, l)) ? (0, a.jsx)(h.default, {
     onClick: () => {
-      s()(null != N, "guild cannot be null"), s()(null != g, "channel cannot be null"), ! function(e) {
+      s()(null != x, "guild cannot be null"), s()(null != g, "channel cannot be null"), ! function(e) {
         let {
           guild: t,
           channel: l,
@@ -63,7 +63,7 @@ function E(e) {
           contextKey: r === m.AppContext.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
         })
       }({
-        guild: N,
+        guild: x,
         channel: g,
         streamUserId: null == C ? void 0 : C.ownerId,
         applicationId: E,

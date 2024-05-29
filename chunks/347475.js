@@ -8,8 +8,8 @@ var r = s("120356"),
   l = s("906732"),
   o = s("646476"),
   u = s("197115"),
-  c = s("689938"),
-  d = s("805229"),
+  d = s("689938"),
+  c = s("805229"),
   _ = s("568147"),
   E = s("332796");
 t.default = e => {
@@ -17,43 +17,43 @@ t.default = e => {
     className: t,
     imageClassName: s,
     textContainerOverrideStyles: r,
-    location: R,
-    analyticsLocation: T
+    location: T,
+    analyticsLocation: I
   } = e, {
-    analyticsLocations: f
-  } = (0, l.default)(R), m = (0, o.useIsSeasonalGiftingActive)(), {
-    enabled: I
+    analyticsLocations: R
+  } = (0, l.default)(T), f = (0, o.useIsSeasonalGiftingActive)(), {
+    enabled: S
   } = o.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "GiftNitro"
   }, {
-    autoTrackExposure: m
-  }), S = I && m;
+    autoTrackExposure: f
+  }), m = S && f;
   return (0, a.jsx)(l.AnalyticsLocationProvider, {
-    value: f,
+    value: R,
     children: (0, a.jsxs)("div", {
-      className: i()(d.container, t),
+      className: i()(c.container, t),
       children: [(0, a.jsxs)("div", {
-        className: d.textContainer,
+        className: c.textContainer,
         style: r,
         children: [(0, a.jsx)(n.Heading, {
           variant: "heading-lg/extrabold",
-          className: d.heading,
-          children: S ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.default.Messages.GIFT_NITRO
+          className: c.heading,
+          children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.default.Messages.GIFT_NITRO
         }), (0, a.jsx)(n.Text, {
           variant: "text-sm/medium",
-          children: S ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+          children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
         }), (0, a.jsx)(u.default, {
           isGift: !0,
-          className: d.giftCardButton,
+          className: c.giftCardButton,
           look: n.Button.Looks.OUTLINED,
-          buttonText: c.default.Messages.GIFT_NITRO,
-          buttonTextClassName: d.giftButtonCTA,
+          buttonText: d.default.Messages.GIFT_NITRO,
+          buttonTextClassName: c.giftButtonCTA,
           color: n.Button.Colors.CUSTOM,
-          premiumModalAnalyticsLocation: T
+          premiumModalAnalyticsLocation: I
         })]
       }), (0, a.jsx)("img", {
-        src: S ? E : _,
-        className: i()(d.bannerImage, s),
+        src: m ? E : _,
+        className: i()(c.bannerImage, s),
         alt: "gift nitro banner"
       })]
     })

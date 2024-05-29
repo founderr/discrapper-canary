@@ -19,7 +19,7 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class C extends i.default {
+class h extends i.default {
   _initialize() {
     a.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
@@ -43,4 +43,4 @@ class C extends i.default {
     })
   }
 }
-t.default = new C
+t.default = new h

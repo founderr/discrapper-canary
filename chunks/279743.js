@@ -26,9 +26,9 @@ function T(e) {
     opacity: 0
   }), m = (0, d.useToken)(T).spring({
     opacity: .1
-  }), I = (0, d.useToken)(T).spring({
-    opacity: 0
   }), g = (0, d.useToken)(T).spring({
+    opacity: 0
+  }), I = (0, d.useToken)(T).spring({
     opacity: 1
   }), N = e => {
     e.finished && (null == l || l())
@@ -38,7 +38,7 @@ function T(e) {
       backgroundColor: f,
       borderColor: f
     }
-  })), O = S + 200 + 200, A = _ ? 0 : 200;
+  })), A = S + 200 + 200, p = _ ? 0 : 200;
   return n.useEffect(() => {
     C({
       reset: !0,
@@ -48,7 +48,7 @@ function T(e) {
         borderColor: f
       },
       config: {
-        duration: A,
+        duration: p,
         easing: o.default.Easing.ease
       }
     }), C({
@@ -56,21 +56,21 @@ function T(e) {
       immediate: _,
       to: [{
         backgroundColor: m,
-        borderColor: g
-      }],
-      config: {
-        duration: A,
-        easing: o.default.Easing.ease
-      }
-    }), C({
-      delay: O,
-      immediate: _,
-      to: [{
-        backgroundColor: I,
         borderColor: I
       }],
       config: {
-        duration: A,
+        duration: p,
+        easing: o.default.Easing.ease
+      }
+    }), C({
+      delay: A,
+      immediate: _,
+      to: [{
+        backgroundColor: g,
+        borderColor: g
+      }],
+      config: {
+        duration: p,
         easing: o.default.Easing.ease
       },
       onRest: N

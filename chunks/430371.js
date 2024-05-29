@@ -31,8 +31,8 @@ function A(e) {
       onContextMenuParticipant: s,
       onFullscreenParticipant: A,
       participants: v,
-      filteredParticipants: x,
-      popoutWindow: N,
+      filteredParticipants: N,
+      popoutWindow: x,
       inCall: M,
       channel: R,
       selectedParticipant: y,
@@ -45,25 +45,25 @@ function A(e) {
       idle: U,
       forceShowToggleParticipants: F
     } = e,
-    w = null != N,
+    w = null != x,
     k = c.default.getVideoComponent(),
-    H = d.default.getId(),
-    [G, B] = l.useState(null),
+    B = d.default.getId(),
+    [H, G] = l.useState(null),
     [V, W] = l.useState(!0),
     [Y, z] = l.useState(!1),
     K = y.type === g.ParticipantTypes.ACTIVITY,
     Z = !K && null != y.streamId,
-    X = Z && null != G && G.width > 0 && G.height > 0 ? G.width / G.height : T,
-    q = D <= 2 * I + 144,
-    J = L && !q,
-    Q = (0, o.default)(J),
+    q = Z && null != H && H.width > 0 && H.height > 0 ? H.width / H.height : T,
+    X = D <= 2 * I + 144,
+    Q = L && !X,
+    J = (0, o.default)(Q),
     $ = 0;
-  (K || J) && ($ += 72), K && !J && ($ += 48), J && ($ += .5 * I + 8);
+  (K || Q) && ($ += 72), K && !Q && ($ += 48), Q && ($ += .5 * I + 8);
   let ee = D - 2 * $,
-    et = ee * X,
-    en = Math.floor(Math.min(P, et) / X),
-    ea = D > P / X + 72 + I + 8;
-  t = J || K ? J ? -16 : -8 : 40 + Math.max(0, 72 - (D - en) / 2), l.useEffect(() => {
+    et = ee * q,
+    en = Math.floor(Math.min(P, et) / q),
+    ea = D > P / q + 72 + I + 8;
+  t = Q || K ? Q ? -16 : -8 : 40 + Math.max(0, 72 - (D - en) / 2), l.useEffect(() => {
     let e = setTimeout(() => {
       W(!1)
     }, 250);
@@ -72,8 +72,8 @@ function A(e) {
     }
   }, []);
   let el = (0, r.useSpring)({
-      value: J ? 1 : 0,
-      delay: ea || !J ? 0 : 100,
+      value: Q ? 1 : 0,
+      delay: ea || !Q ? 0 : 100,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -85,7 +85,7 @@ function A(e) {
       }
     }),
     es = (0, r.useSpring)({
-      value: J ? 1 : 0,
+      value: Q ? 1 : 0,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -97,7 +97,7 @@ function A(e) {
         ...r.config.stiff,
         clamp: !0
       },
-      immediate: Q === J && es.value.idle
+      immediate: J === Q && es.value.idle
     }),
     er = (0, r.useSpring)({
       value: t,
@@ -124,13 +124,13 @@ function A(e) {
       }
     }),
     eu = l.useCallback(e => {
-      B(e), W(!1)
+      G(e), W(!1)
     }, []),
-    ed = J || j ? [] : (0, p.getPipParticipants)(v, y, H),
+    ed = Q || j ? [] : (0, p.getPipParticipants)(v, y, B),
     {
       visibleParticipants: ec,
       participantTileWidth: ef
-    } = (0, E.useVisibleParticipants)(P, x);
+    } = (0, E.useVisibleParticipants)(P, N);
   return (0, a.jsxs)("div", {
     className: i()(_.root, S.flexCenter, O),
     children: [(0, a.jsxs)("div", {
@@ -151,7 +151,7 @@ function A(e) {
           children: (0, a.jsx)("div", {
             className: i()(S.videoSizer),
             style: {
-              aspectRatio: X
+              aspectRatio: q
             },
             children: eo((e, t, l) => {
               let {
@@ -179,7 +179,7 @@ function A(e) {
               }, i) : null
             })
           })
-        }), F || !q && b !== C.ChannelLayouts.MINIMUM && b !== C.ChannelLayouts.NORMAL ? (0, a.jsx)(r.animated.div, {
+        }), F || !X && b !== C.ChannelLayouts.MINIMUM && b !== C.ChannelLayouts.NORMAL ? (0, a.jsx)(r.animated.div, {
           className: i()(_.actionRow, {
             [_.idle]: U
           }),
@@ -209,7 +209,7 @@ function A(e) {
           selectedParticipantId: y.id,
           inCall: M,
           paused: j || Y || !L,
-          popoutWindow: N
+          popoutWindow: x
         })
       })]
     }), ed.length > 0 ? (0, a.jsx)(m.default, {

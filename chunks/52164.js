@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return g
   }
 }), s("47120");
 var a = s("735250");
@@ -33,25 +33,25 @@ function m(e) {
     analyticsLocation: r.default.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
   });
   if (null == m) return null;
-  let I = s ? f.finePrintWithOverheadSeparator : f.finePrint,
-    g = m.invoiceItems.find(e => {
+  let g = s ? f.finePrintWithOverheadSeparator : f.finePrint,
+    I = m.invoiceItems.find(e => {
       let {
         subscriptionPlanId: t
       } = e;
       return (0, u.isPremiumBaseSubscriptionPlan)(t)
     });
-  if (null == g) return null;
-  let N = g.subscriptionPlanId,
+  if (null == I) return null;
+  let N = I.subscriptionPlanId,
     h = d.default.get(N);
   l()(null != h, "Missing plan");
   let C = (0, c.formatPrice)(m.total, m.currency),
-    O = "";
-  return h.interval === E.SubscriptionIntervalTypes.YEAR ? O = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+    A = "";
+  return h.interval === E.SubscriptionIntervalTypes.YEAR ? A = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
     price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : h.interval === E.SubscriptionIntervalTypes.MONTH && (O = 1 === h.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+  }) : h.interval === E.SubscriptionIntervalTypes.MONTH && (A = 1 === h.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
     price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
@@ -64,13 +64,13 @@ function m(e) {
     intervalCount: h.intervalCount
   })), (0, a.jsx)(i.Text, {
     color: "text-muted",
-    className: I,
+    className: g,
     variant: "text-xs/normal",
-    children: O
+    children: A
   })
 }
 
-function I(e) {
+function g(e) {
   let {
     subscription: t,
     withOverheadSeparator: s

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return M
   }
 }), n("47120");
 var a, s = n("735250"),
@@ -14,11 +14,11 @@ var a, s = n("735250"),
   c = n("481060"),
   f = n("212093"),
   E = n("683301"),
-  C = n("408814"),
-  h = n("626135"),
-  _ = n("585483"),
-  S = n("900849"),
-  m = n("878727"),
+  h = n("408814"),
+  _ = n("626135"),
+  C = n("585483"),
+  m = n("900849"),
+  S = n("878727"),
   p = n("117496"),
   I = n("150192"),
   g = n("731455"),
@@ -34,7 +34,7 @@ function v(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = u().throttle(S.trackSearchResultsViewed, 1e3, {
+let R = u().throttle(m.trackSearchResultsViewed, 1e3, {
     leading: !1,
     trailing: !0
   }),
@@ -69,7 +69,7 @@ class L extends(a = l.PureComponent) {
       query: s,
       isHandlingTagSearch: l
     } = this.state, i = this.context;
-    if (null == E.default.getSearchIndex() && f.createAlgoliaIndex(), _.ComponentDispatch.subscribe(T.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), _.ComponentDispatch.subscribe(T.ComponentActions.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
+    if (null == E.default.getSearchIndex() && f.createAlgoliaIndex(), C.ComponentDispatch.subscribe(T.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.subscribe(T.ComponentActions.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
       let r = n !== g.DISCOVERY_ALL_CATEGORIES_ID ? n : null;
       R({
         loadId: e,
@@ -105,14 +105,14 @@ class L extends(a = l.PureComponent) {
       isTagSearch: d
     }), this.setState({
       isHandlingTagSearch: !1
-    })), !t.isSearching && r && S.trackSearchStarted(n, E, c), e.mostRecentQuery !== i && this.setState({
+    })), !t.isSearching && r && m.trackSearchStarted(n, E, c), e.mostRecentQuery !== i && this.setState({
       query: i,
       searchId: (0, p.makeAnalyticsID)(),
       isHandlingTagSearch: !0
     })
   }
   componentWillUnmount() {
-    _.ComponentDispatch.unsubscribe(T.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), _.ComponentDispatch.unsubscribe(T.ComponentActions.TEXTAREA_FOCUS, this.focusInput)
+    C.ComponentDispatch.unsubscribe(T.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.unsubscribe(T.ComponentActions.TEXTAREA_FOCUS, this.focusInput)
   }
   renderSearchOptions() {
     var e;
@@ -173,7 +173,7 @@ class L extends(a = l.PureComponent) {
         }),
         children: [(0, s.jsx)("div", {
           className: N.search,
-          children: (0, s.jsx)(C.default, {
+          children: (0, s.jsx)(h.default, {
             ref: this._searchRef,
             searchTerm: e,
             className: a ? void 0 : N.searchBox,
@@ -195,7 +195,7 @@ class L extends(a = l.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), v(this, "_searchRef", l.createRef()), v(this, "canSearch", e => e.trim().length >= 2 && !(0, m.searchQueryContainsBannedWord)(e)), v(this, "doSearch", (e, t, n, a) => {
+    super(e), v(this, "_searchRef", l.createRef()), v(this, "canSearch", e => e.trim().length >= 2 && !(0, S.searchQueryContainsBannedWord)(e)), v(this, "doSearch", (e, t, n, a) => {
       var s;
       let {
         defaultLanguage: l,
@@ -204,7 +204,7 @@ class L extends(a = l.PureComponent) {
         query: r,
         selectedLanguage: o
       } = this.state, u = {
-        approximate_member_count: S.MINIMUM_MEMBER_COUNT
+        approximate_member_count: m.MINIMUM_MEMBER_COUNT
       };
       a && f.getSearchResultsCount(r, u), this.setState({
         searchId: (0, p.makeAnalyticsID)(),
@@ -232,7 +232,7 @@ class L extends(a = l.PureComponent) {
         loadId: a,
         currentCategoryId: s
       } = this.props, l = s !== g.DISCOVERY_ALL_CATEGORIES_ID ? s : null;
-      this.canSearch(t) && n && e.charCode === T.KeyboardKeys.ENTER ? (S.trackSearchStarted(a, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === T.KeyboardKeys.ENTER && this.setState({
+      this.canSearch(t) && n && e.charCode === T.KeyboardKeys.ENTER ? (m.trackSearchStarted(a, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === T.KeyboardKeys.ENTER && this.setState({
         isSearching: !1
       })
     }), v(this, "handleQueryChanged", e => {
@@ -283,7 +283,7 @@ class L extends(a = l.PureComponent) {
   }
 }
 
-function P(e) {
+function M(e) {
   let t = (0, d.useStateFromStores)([I.default], () => I.default.getDiscoveryCategories(), [], I.areDiscoveryCategoriesEqual),
     n = (0, d.useStateFromStores)([E.default], () => E.default.getTopCategoryCounts(e.mostRecentQuery));
   return (0, s.jsx)(L, {
@@ -292,4 +292,4 @@ function P(e) {
     countsByCategory: n
   })
 }
-v(L, "contextType", void 0), L.contextType = h.AnalyticsContext
+v(L, "contextType", void 0), L.contextType = _.AnalyticsContext

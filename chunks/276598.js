@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return N
   }
 }), n("47120"), n("653041");
 var a = n("735250"),
@@ -40,16 +40,16 @@ function v(e) {
   })
 }
 
-function x(e) {
+function N(e) {
   let {
     channel: t,
     showLeftDivider: n = !1,
     ...g
-  } = e, x = (0, m.default)(), N = (0, s.useStateFromStores)([h.default], () => {
+  } = e, N = (0, m.default)(), x = (0, s.useStateFromStores)([h.default], () => {
     var e, t;
-    return null === (e = h.default.getSessionById(null !== (t = null == x ? void 0 : x.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
+    return null === (e = h.default.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
   }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, y] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), j = O.filter(e => e.twoWayLink), [P, D] = l.useState(!1);
-  if (null == x && 0 === O.length || t.isBroadcastChannel()) return null;
+  if (null == N && 0 === O.length || t.isBroadcastChannel()) return null;
   let b = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(y) ? "top" : "bottom",
     U = [];
   return j.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, a.jsx)(u.default, {
@@ -94,8 +94,8 @@ function x(e) {
               ...e,
               ...g,
               onClick: () => D(!0),
-              label: null != (t = N) ? t === S.GameConsoleTypes.XBOX ? I.default.Messages.XBOX_REMOTE_CONNECTED_RAW : I.default.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW : I.default.Messages.CONSOLE_TRANSFER,
-              iconComponent: (0, C.default)(N)
+              label: null != (t = x) ? t === S.GameConsoleTypes.XBOX ? I.default.Messages.XBOX_REMOTE_CONNECTED_RAW : I.default.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW : I.default.Messages.CONSOLE_TRANSFER,
+              iconComponent: (0, C.default)(x)
             })
           }
         })]

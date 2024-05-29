@@ -16,17 +16,17 @@ function u(e) {
     defaultResponse: t,
     onDiscountOffer: s,
     onNonSubscriber: u,
-    onTier0TrialOffer: c,
-    onTier2TrialOffer: d,
+    onTier0TrialOffer: d,
+    onTier2TrialOffer: c,
     onTier0TrialPeriod: _,
     onTier2TrialPeriod: E,
-    onNonTier2Subscriber: R,
-    onTier2Subscriber: T,
-    onCustomCriteria: f
-  } = e, m = (0, l.usePremiumTrialOffer)(), I = (0, n.usePremiumDiscountOffer)(), S = (0, a.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription()), p = i.default.getPremiumTypeFromSubscription(S);
-  if (null != f) {
-    let e = f();
+    onNonTier2Subscriber: T,
+    onTier2Subscriber: I,
+    onCustomCriteria: R
+  } = e, f = (0, l.usePremiumTrialOffer)(), S = (0, n.usePremiumDiscountOffer)(), m = (0, a.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription()), A = i.default.getPremiumTypeFromSubscription(m);
+  if (null != R) {
+    let e = R();
     if (null != e) return e
   }
-  return null != m && (0, o.SubscriptionTrials)[m.trial_id].skus.includes(o.PremiumSubscriptionSKUs.TIER_0) ? null != c ? c : t : null != m && (0, o.SubscriptionTrials)[m.trial_id].skus.includes(o.PremiumSubscriptionSKUs.TIER_2) ? null != d ? d : t : null != S && null != S.trialId && p === o.PremiumTypes.TIER_0 ? null != _ ? _ : t : null != S && null != S.trialId && p === o.PremiumTypes.TIER_2 ? null != E ? E : t : null != I ? null != s ? s : t : null == p ? null != u ? u : t : p === o.PremiumTypes.TIER_0 || p === o.PremiumTypes.TIER_1 ? null != R ? R : t : p === o.PremiumTypes.TIER_2 ? null != T ? T : t : t
+  return null != f && (0, o.SubscriptionTrials)[f.trial_id].skus.includes(o.PremiumSubscriptionSKUs.TIER_0) ? null != d ? d : t : null != f && (0, o.SubscriptionTrials)[f.trial_id].skus.includes(o.PremiumSubscriptionSKUs.TIER_2) ? null != c ? c : t : null != m && null != m.trialId && A === o.PremiumTypes.TIER_0 ? null != _ ? _ : t : null != m && null != m.trialId && A === o.PremiumTypes.TIER_2 ? null != E ? E : t : null != S ? null != s ? s : t : null == A ? null != u ? u : t : A === o.PremiumTypes.TIER_0 || A === o.PremiumTypes.TIER_1 ? null != T ? T : t : A === o.PremiumTypes.TIER_2 ? null != I ? I : t : t
 }

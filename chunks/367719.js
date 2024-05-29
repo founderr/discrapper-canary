@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
-var s = n("468194"),
-  a = n("477690"),
-  i = n("131388"),
-  l = n("293810");
-let r = (0, s.cssValueToNumber)(a.default.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
-  u = (0, s.cssValueToNumber)(a.default.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
+var a = n("468194"),
+  l = n("477690"),
+  s = n("131388"),
+  i = n("293810");
+let r = (0, a.cssValueToNumber)(l.default.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
+  o = (0, a.cssValueToNumber)(l.default.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
 
-function o() {
-  let e = (0, i.default)(l.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
-  return e ? u : r
+function u() {
+  let e = (0, s.default)(i.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
+  return e ? o : r
 }

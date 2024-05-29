@@ -11,13 +11,13 @@ var a = n("735250"),
   c = n("449934"),
   f = n("650233"),
   E = n("981631"),
-  C = n("756286"),
-  h = n("84854");
+  h = n("756286"),
+  _ = n("84854");
 t.default = e => {
   let {
     guildId: t,
     inviteCode: n
-  } = e, [_, S] = s.useState(C.WaveStates.INITIAL), [m, p] = s.useState(null != n);
+  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, p] = s.useState(null != n);
   s.useEffect(() => {
     null != n && i.default.resolveInvite(n, "Hub").finally(() => p(!1))
   }, [n]);
@@ -27,22 +27,22 @@ t.default = e => {
     null != g && (0, r.transitionTo)(E.Routes.CHANNEL(t))
   }, [g, t]);
   let T = s.useCallback(e => {
-      S(t => Math.max(t, e))
+      m(t => Math.max(t, e))
     }, []),
     A = (0, c.getArtForPath)();
   return (0, a.jsx)("div", {
-    className: h.page,
+    className: _.page,
     children: (0, a.jsxs)(d.default, {
       embedded: !0,
       splash: A,
-      waveState: _,
+      waveState: C,
       showLogo: !1,
       updateWaveState: T,
       children: [(0, a.jsx)("div", {
-        className: h.dragRegion
+        className: _.dragRegion
       }), (0, a.jsx)("div", {
-        className: h.contentWrapper,
-        children: !m && (0, a.jsx)(f.HubEmailConnectionModalView, {
+        className: _.contentWrapper,
+        children: !S && (0, a.jsx)(f.HubEmailConnectionModalView, {
           invite: I
         })
       })]

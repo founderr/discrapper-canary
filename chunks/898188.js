@@ -27,7 +27,7 @@ var a = n("735250"),
   A = n("689938"),
   v = n("486754");
 
-function x(e) {
+function N(e) {
   let {
     action: t
   } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(t.channelId)), l = (0, c.default)(n, !0);
@@ -46,7 +46,7 @@ function x(e) {
   })
 }
 
-function N(e) {
+function x(e) {
   var t;
   let {
     channelId: n,
@@ -110,7 +110,7 @@ function M(e) {
       children: (0, a.jsxs)(u.Clickable, {
         className: i()(v.banner, v.clickable),
         onClick: D,
-        children: [(0, a.jsx)(N, {
+        children: [(0, a.jsx)(x, {
           channelId: I.channelId,
           emojiId: null === (t = I.emoji) || void 0 === t ? void 0 : t.id,
           emojiName: null == I ? void 0 : null === (n = I.emoji) || void 0 === n ? void 0 : n.name
@@ -122,7 +122,7 @@ function M(e) {
             children: A.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
               step: I.title
             })
-          }), (0, a.jsx)(x, {
+          }), (0, a.jsx)(N, {
             action: I
           })]
         }), (0, a.jsx)("div", {
@@ -143,7 +143,7 @@ function M(e) {
           outputRange: [-60, 0]
         })
       },
-      children: [(0, a.jsx)(N, {
+      children: [(0, a.jsx)(x, {
         channelId: E.channelId,
         emojiId: null === (s = E.emoji) || void 0 === s ? void 0 : s.id,
         emojiName: null == E ? void 0 : null === (c = E.emoji) || void 0 === c ? void 0 : c.name

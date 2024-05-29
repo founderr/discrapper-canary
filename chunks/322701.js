@@ -16,12 +16,12 @@ t.default = function(e) {
     searchQuery: c,
     sectionFilter: f,
     useReducedMotion: E
-  } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), h = (0, s.default)({
+  } = e, h = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = (0, s.default)({
     id: "people",
-    isEnabled: C,
+    isEnabled: h,
     async scrollToStart() {},
     async scrollToEnd() {}
-  }), _ = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, S = E || "" !== c || _, m = t.map((e, t) => S ? (0, a.jsx)("div", {
+  }), C = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, m = E || "" !== c || C, S = t.map((e, t) => m ? (0, a.jsx)("div", {
     children: e.map(n)
   }, t) : (0, a.jsx)(i.TransitionGroup, {
     transitionAppear: !1,
@@ -29,7 +29,7 @@ t.default = function(e) {
     children: e.map(n)
   }, t));
   return (0, a.jsx)(s.ListNavigatorProvider, {
-    navigator: h,
+    navigator: _,
     children: (0, a.jsx)(s.ListNavigatorContainer, {
       children: e => {
         let {
@@ -40,7 +40,7 @@ t.default = function(e) {
           ref: t,
           className: d.peopleList,
           ...n,
-          children: m
+          children: S
         })
       }
     })

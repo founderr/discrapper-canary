@@ -2,8 +2,8 @@
 r.r(t);
 var s = r("735250");
 r("470079");
-var n = r("780384"),
-  i = r("410030"),
+var i = r("780384"),
+  n = r("410030"),
   l = r("325767");
 let a = e => {
     let {
@@ -49,7 +49,7 @@ t.default = e => {
   let {
     percentage: t,
     ...r
-  } = e, u = (0, i.default)(), d = (0, n.isThemeLight)(u);
+  } = e, u = (0, n.default)(), d = (0, i.isThemeLight)(u);
   return (0, s.jsxs)("svg", {
     style: {
       overflow: "visible"

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return g
   }
 });
 var a = s("735250"),
@@ -20,12 +20,12 @@ var a = s("735250"),
   f = s("699623"),
   m = s("820350");
 
-function I(e) {
+function g(e) {
   let {
     user: t,
     showOverlay: s,
-    children: I
-  } = e, g = (0, i.default)(), {
+    children: g
+  } = e, I = (0, i.default)(), {
     analyticsLocations: N
   } = (0, o.default)(r.default.PREMIUM_UPSELL_OVERLAY);
   return (n.useEffect(() => {
@@ -36,7 +36,7 @@ function I(e) {
   }, [s, N]), s) ? (0, a.jsxs)("div", {
     className: _.upsellOverlayContainer,
     children: [(0, a.jsx)("div", {
-      children: I
+      children: g
     }), (0, a.jsxs)("div", {
       className: _.upsellOverlay,
       children: [(0, a.jsx)("img", {
@@ -49,7 +49,7 @@ function I(e) {
             case S.ThemeTypes.LIGHT:
               return m
           }
-        }(g)
+        }(I)
       }), (0, a.jsxs)("div", {
         className: _.upsellTextContainer,
         children: [(0, a.jsx)(l.Text, {
@@ -69,6 +69,6 @@ function I(e) {
       })]
     })]
   }) : (0, a.jsx)(a.Fragment, {
-    children: I
+    children: g
   })
 }

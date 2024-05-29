@@ -20,7 +20,7 @@ function E(e) {
   let {
     guildId: t,
     markAsDismissed: E
-  } = e, C = (0, a.jsxs)(a.Fragment, {
+  } = e, h = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(s.Text, {
       color: "always-white",
       variant: "text-sm/normal",
@@ -36,7 +36,7 @@ function E(e) {
   });
   return (0, a.jsx)(i.default, {
     header: c.default.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
-    content: C,
+    content: h,
     asset: (0, a.jsx)(r.default, {
       className: f.video,
       src: "https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4",

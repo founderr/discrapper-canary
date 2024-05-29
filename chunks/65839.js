@@ -133,13 +133,13 @@ t.default = e => {
     handleSelectCategory: _,
     categoryCounts: T,
     allEntriesCount: v,
-    isLoading: x
-  } = e, N = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(t.getGuildId()));
-  return null != N && N.hasFeature(E.GuildFeatures.SHARD) ? (0, a.jsx)(A, {
-    guild: N,
+    isLoading: N
+  } = e, x = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(t.getGuildId()));
+  return null != x && x.hasFeature(E.GuildFeatures.SHARD) ? (0, a.jsx)(A, {
+    guild: x,
     directoryEntries: n,
     handleCreateOrAddGuild: s,
-    isLoading: x
+    isLoading: N
   }) : (0, a.jsx)("div", {
     className: g.pageContainer,
     children: (0, a.jsxs)(o.AdvancedScrollerAuto, {
@@ -175,7 +175,7 @@ t.default = e => {
             }, t)
           })]
         })
-      }), x && null == n ? (0, a.jsx)(o.Spinner, {
+      }), N && null == n ? (0, a.jsx)(o.Spinner, {
         className: g.spinner
       }) : null == n ? void 0 : n.map((e, t) => (0, a.jsxs)(l.Fragment, {
         children: [void 0 !== e.header ? (0, a.jsx)(o.Text, {

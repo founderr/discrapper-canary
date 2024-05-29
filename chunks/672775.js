@@ -22,14 +22,14 @@ function r(e) {
     onNextClick: c,
     onBackClick: f,
     isNextDisabled: E,
-    isBackDisabled: C
+    isBackDisabled: h
   } = (0, s.useClanSetupModalNavigation)({
     progress: n,
     updateCurrentStep: r
   }), {
-    currentStep: h,
-    furthestStep: _,
-    brandPrimaryColor: S
+    currentStep: _,
+    furthestStep: C,
+    brandPrimaryColor: m
   } = n;
   return (0, a.jsxs)("div", {
     className: i.navigation,
@@ -37,16 +37,16 @@ function r(e) {
       animationStyle: o,
       className: u,
       steps: t,
-      currentStepIndex: h,
-      furthestStepIndex: _,
+      currentStepIndex: _,
+      furthestStepIndex: C,
       onStepClick: d,
-      stepFillColor: S
+      stepFillColor: m
     }), (0, a.jsx)(l.ClanSetupProgressButtons, {
-      isBackDisabled: C,
+      isBackDisabled: h,
       isNextDisabled: E,
       onNextClick: c,
       onBackClick: f,
-      nextButtonBackgroundColor: S,
+      nextButtonBackgroundColor: m,
       nextButtonClassName: u,
       nextButtonAnimationStyle: o
     })]

@@ -10,20 +10,20 @@ n.r(t), n.d(t, {
     return E
   },
   generateRsaKeyPair: function() {
-    return l
+    return r
   },
   publicKeyFingerprint: function() {
     return o
   },
   serializePublicKey: function() {
-    return r
+    return l
   }
 }), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817"), n("642549"), n("47120"), n("757143"), n("863942"), n("411104");
 var s = n("512722"),
   a = n.n(s),
   i = n("598077");
 
-function l() {
+function r() {
   return window.crypto.subtle.generateKey({
     name: "RSA-OAEP",
     modulusLength: 2048,
@@ -31,7 +31,7 @@ function l() {
     hash: "SHA-256"
   }, !0, ["decrypt"])
 }
-async function r(e) {
+async function l(e) {
   a()(null != e.publicKey, "public key cannot be null");
   let t = await window.crypto.subtle.exportKey("spki", e.publicKey);
   return btoa(String.fromCharCode(...new Uint8Array(t)))
@@ -71,11 +71,11 @@ async function g(e, t) {
   t = await h(e, t);
   let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
   if (null == n) throw Error("Invalid encoded user record.");
-  let [, s, a, l, r] = n;
+  let [, s, a, r, l] = n;
   return new i.default({
     id: s,
     discriminator: a,
-    avatar: "0" === l ? null : l,
-    username: r
+    avatar: "0" === r ? null : r,
+    username: l
   })
 }

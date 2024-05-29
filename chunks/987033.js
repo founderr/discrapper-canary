@@ -1,7 +1,7 @@
 "use strict";
-r.r(t);
-var n = r("818083");
-t.default = (0, n.createExperiment)({
+n.r(t);
+var i = n("818083");
+t.default = (0, i.createExperiment)({
   kind: "user",
   id: "2023-05_localized_pricing_turkey_notice",
   label: "Localized Pricing Turkey Notice",

@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("979651"),
   A = n("502568"),
   v = n("664342"),
-  x = n("124368"),
-  N = n("981631"),
+  N = n("124368"),
+  x = n("981631"),
   M = n("689938"),
   R = n("899091");
 
@@ -43,7 +43,7 @@ function y(e) {
       t && null != e && (o.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, g.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
+      }), (0, g.transitionToThread)(e, N.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(L);
   let P = l.useRef(!1);
@@ -51,11 +51,11 @@ function y(e) {
       if (null == L || P.current) return;
       P.current = !0;
       let e = (0, f.collectThreadMetadata)(S.default.getChannel(L.id), !0);
-      (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
+      (0, c.trackWithMetadata)(x.AnalyticEvents.CHANNEL_OPENED, {
         ...e,
         ...(0, c.getChannelOpenedMetadata)(L.id),
         channel_view: y
-      }), (0, h.trackClickstream)(N.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
+      }), (0, h.trackClickstream)(x.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
         channelId: L.id
       })
     }, [L, y]), null == L || null == O) return null;

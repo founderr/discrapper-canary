@@ -15,8 +15,8 @@ var s = n("442837"),
 t.default = e => {
   let {
     guild: t
-  } = e, n = t.id, C = (0, s.useStateFromStores)([u.default], () => u.default.getAppliedGuildBoostsForGuild(t.id));
-  return null == C || 0 >= (0, d.appliedGuildBoostsRequiredForPerks)(C, n) ? null : (0, a.jsx)(r.default, {
+  } = e, n = t.id, h = (0, s.useStateFromStores)([u.default], () => u.default.getAppliedGuildBoostsForGuild(t.id));
+  return null == h || 0 >= (0, d.appliedGuildBoostsRequiredForPerks)(h, n) ? null : (0, a.jsx)(r.default, {
     guild: t,
     onDismissed: () => {
       (0, i.hidePremiumGuildGracePeriodNotice)(n)

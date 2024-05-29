@@ -8,8 +8,8 @@ var r = s("120356"),
   l = s("481060"),
   o = s("410030"),
   u = s("197115"),
-  c = s("474936"),
-  d = s("689938"),
+  d = s("474936"),
+  c = s("689938"),
   _ = s("674417");
 t.default = e => {
   let {
@@ -17,16 +17,16 @@ t.default = e => {
     forceWhite: s,
     giftMessage: r,
     subscriptionTier: E,
-    ...R
-  } = e, T = (0, o.default)(), f = (0, n.isThemeDark)(T) || s, m = f ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, I = E === c.PremiumSubscriptionSKUs.TIER_0 ? d.default.Messages.GIFT_NITRO_TIER_0 : d.default.Messages.GIFT_NITRO;
+    ...T
+  } = e, I = (0, o.default)(), R = (0, n.isThemeDark)(I) || s, f = R ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, S = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
   return (0, a.jsx)(u.default, {
     isGift: !0,
-    color: m,
+    color: f,
     look: l.ButtonLooks.OUTLINED,
-    buttonText: I,
+    buttonText: S,
     giftMessage: r,
-    className: i()(t, _.giftButton, f ? _.buttonWhite : _.buttonBrand),
+    className: i()(t, _.giftButton, R ? _.buttonWhite : _.buttonBrand),
     subscriptionTier: E,
-    ...R
+    ...T
   })
 }

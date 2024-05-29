@@ -1,85 +1,85 @@
 "use strict";
 a.r(t), a.d(t, {
   CollectiblesShopHeaderCarousel: function() {
-    return b
+    return h
   }
 }), a("47120");
-var s = a("735250"),
-  r = a("470079"),
-  n = a("442837"),
-  l = a("481060"),
-  o = a("607070"),
-  i = a("44315"),
+var l = a("735250"),
+  s = a("470079"),
+  r = a("442837"),
+  n = a("481060"),
+  i = a("607070"),
+  o = a("44315"),
   c = a("731081"),
   u = a("206895"),
   d = a("810090"),
   f = a("948625"),
   C = a("981631"),
-  p = a("139557");
-let m = {
+  m = a("139557");
+let p = {
   tension: 20,
   friction: 30,
   clamp: !0
 };
 
 function g(e) {
-  var t, a, n;
+  var t, a, r;
   let {
-    config: o,
+    config: i,
     handleScrollToCategory: c,
     text: u,
     reducedMotion: f = !1
-  } = e, m = r.useCallback(() => {
+  } = e, p = s.useCallback(() => {
     var e;
-    (null === (e = o.cta) || void 0 === e ? void 0 : e.categorySkuId) != null && c(o.cta.categorySkuId)
-  }, [null === (t = o.cta) || void 0 === t ? void 0 : t.categorySkuId, c]);
-  return (0, s.jsxs)("div", {
-    className: p.headerContainer,
-    children: [null == o.videoSrc || f ? (0, s.jsx)("img", {
-      src: o.staticImageSrc,
+    (null === (e = i.cta) || void 0 === e ? void 0 : e.categorySkuId) != null && c(i.cta.categorySkuId)
+  }, [null === (t = i.cta) || void 0 === t ? void 0 : t.categorySkuId, c]);
+  return (0, l.jsxs)("div", {
+    className: m.headerContainer,
+    children: [null == i.videoSrc || f ? (0, l.jsx)("img", {
+      src: i.staticImageSrc,
       alt: "",
-      className: p.headerAsset
-    }) : (0, s.jsx)(d.default, {
+      className: m.headerAsset
+    }) : (0, l.jsx)(d.default, {
       autoPlay: !0,
       muted: !0,
       loop: !0,
       playsInline: !0,
       responsive: !0,
-      className: p.headerAsset,
-      children: (0, s.jsx)("source", {
-        src: o.videoSrc,
+      className: m.headerAsset,
+      children: (0, l.jsx)("source", {
+        src: i.videoSrc,
         type: "video/mp4"
       })
-    }), (0, s.jsxs)("div", {
-      className: p.headerContent,
+    }), (0, l.jsxs)("div", {
+      className: m.headerContent,
       style: {
-        color: null !== (a = o.textColor) && void 0 !== a ? a : (0, i.getColor)(C.Color.WHITE_100)
+        color: null !== (a = i.textColor) && void 0 !== a ? a : (0, o.getColor)(C.Color.WHITE_100)
       },
-      children: [(0, s.jsx)("div", {
-        className: p.badgeContainer,
+      children: [(0, l.jsx)("div", {
+        className: m.badgeContainer,
         style: {
-          visibility: null != o.badge ? "visible" : "hidden"
+          visibility: null != i.badge ? "visible" : "hidden"
         },
-        children: null != o.badge && (0, s.jsx)(l.Text, {
+        children: null != i.badge && (0, l.jsx)(n.Text, {
           variant: "text-xs/bold",
-          className: p.badge,
-          children: o.badge.label()
+          className: m.badge,
+          children: i.badge.label()
         })
-      }), (0, s.jsxs)("div", {
-        className: p.logoAndDescriptionContainer,
-        children: [null != o.logoSrc && (0, s.jsx)("img", {
-          src: o.logoSrc,
+      }), (0, l.jsxs)("div", {
+        className: m.logoAndDescriptionContainer,
+        children: [null != i.logoSrc && (0, l.jsx)("img", {
+          src: i.logoSrc,
           alt: "",
-          className: p.logo
-        }), (null != o.description || null != u) && (0, s.jsx)(l.Text, {
+          className: m.logo
+        }), (null != i.description || null != u) && (0, l.jsx)(n.Text, {
           variant: "text-md/medium",
           color: "currentColor",
-          children: null !== (n = o.description) && void 0 !== n ? n : u
+          children: null !== (r = i.description) && void 0 !== r ? r : u
         })]
-      }), (0, s.jsx)("div", {
-        children: null != o.cta && (0, s.jsx)(l.Button, {
-          onClick: m,
-          children: o.cta.label()
+      }), (0, l.jsx)("div", {
+        children: null != i.cta && (0, l.jsx)(n.Button, {
+          onClick: p,
+          children: i.cta.label()
         })
       })]
     })]
@@ -90,67 +90,67 @@ function E(e) {
   let {
     step: t,
     direction: a,
-    reducedMotion: n = !1
-  } = e, l = f.COLLECTIBLES_HEADERS[t], o = r.useMemo(() => {
+    reducedMotion: r = !1
+  } = e, n = f.COLLECTIBLES_HEADERS[t], i = s.useMemo(() => {
     var e;
-    return null == l ? null : n ? l.staticOverflowImageSrc : null !== (e = l.animatedOverflowImageSrc) && void 0 !== e ? e : l.staticOverflowImageSrc
-  }, [l, n]);
-  return (0, s.jsx)("div", {
-    className: p.overflowSlideAnimatorContainer,
-    children: (0, s.jsx)(u.default, {
+    return null == n ? null : r ? n.staticOverflowImageSrc : null !== (e = n.animatedOverflowImageSrc) && void 0 !== e ? e : n.staticOverflowImageSrc
+  }, [n, r]);
+  return (0, l.jsx)("div", {
+    className: m.overflowSlideAnimatorContainer,
+    children: (0, l.jsx)(u.default, {
       step: t,
       direction: a,
-      className: p.overflowSlideAnimator,
-      springSettings: m,
+      className: m.overflowSlideAnimator,
+      springSettings: p,
       fadeInOut: !0,
-      children: null != o && (0, s.jsx)("img", {
-        src: o,
+      children: null != i && (0, l.jsx)("img", {
+        src: i,
         alt: "",
-        className: p.overflowImage
+        className: m.overflowImage
       })
     })
   })
 }
 
-function b(e) {
+function h(e) {
   let {
     categories: t,
     handleScrollToCategory: a
-  } = e, l = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion), i = r.useMemo(() => {
+  } = e, n = (0, r.useStateFromStores)([i.default], () => i.default.useReducedMotion), o = s.useMemo(() => {
     let e = {};
     for (let a of t) e[a.skuId] = a.summary;
     return e
-  }, [t]), u = r.useCallback(e => {
+  }, [t]), u = s.useCallback(e => {
     var t;
-    let r = null === (t = e.cta) || void 0 === t ? void 0 : t.categorySkuId,
-      n = null != r ? i[r] : void 0;
-    return (0, s.jsx)(g, {
+    let s = null === (t = e.cta) || void 0 === t ? void 0 : t.categorySkuId,
+      r = null != s ? o[s] : void 0;
+    return (0, l.jsx)(g, {
       config: e,
-      text: n,
+      text: r,
       handleScrollToCategory: a,
-      reducedMotion: l
+      reducedMotion: n
     })
-  }, [i, a, l]);
-  return (0, s.jsx)("div", {
-    className: p.carouselContainer,
-    children: (0, s.jsx)(c.default, {
+  }, [o, a, n]);
+  return (0, l.jsx)("div", {
+    className: m.carouselContainer,
+    children: (0, l.jsx)(c.default, {
       delay: 5e3,
       items: f.COLLECTIBLES_HEADERS,
-      className: p.carousel,
+      className: m.carousel,
       aspectRatio: 1060 / 292,
-      slideAnimatorClassName: p.slideAnimator,
-      slideAnimatorSpringSettings: m,
+      slideAnimatorClassName: m.slideAnimator,
+      slideAnimatorSpringSettings: p,
       slideAnimatorFadeInOut: !0,
-      paginationClassName: p.paginationControls,
-      paginationArrowClassName: p.paginationArrow,
+      paginationClassName: m.paginationControls,
+      paginationArrowClassName: m.paginationArrow,
       paginationArrowIconType: c.PaginationArrowIconType.CARET,
-      paginationDotClassName: p.paginationDot,
-      paginationDotSelectedClassName: p.paginationDotSelected,
+      paginationDotClassName: m.paginationDot,
+      paginationDotSelectedClassName: m.paginationDotSelected,
       renderItem: u,
-      children: e => (0, s.jsx)(E, {
+      children: e => (0, l.jsx)(E, {
         step: e.step,
         direction: e.direction,
-        reducedMotion: l
+        reducedMotion: n
       })
     })
   })

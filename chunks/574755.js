@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return p
   }
 });
 var a = s("735250"),
@@ -19,19 +19,19 @@ var a = s("735250"),
   _ = s("779618"),
   f = s("39604"),
   m = s("703288"),
-  I = s("491758"),
-  g = s("183632"),
+  g = s("491758"),
+  I = s("183632"),
   N = s("689938"),
   h = s("477716"),
   C = s("151501"),
-  O = s("611273");
+  A = s("611273");
 
-function A(e) {
+function p(e) {
   let {
     className: t,
     showHeader: s = !0
-  } = e, A = c.ClipsAllowVoiceRecording.useSetting(), {
-    enableViewerClipping: p
+  } = e, p = c.ClipsAllowVoiceRecording.useSetting(), {
+    enableViewerClipping: O
   } = u.default.useExperiment({
     location: "Clips Settings"
   }, {
@@ -40,7 +40,7 @@ function A(e) {
     analyticsLocations: R
   } = (0, o.default)(), x = (0, E.useEnableClips)(), {
     viewerClipsEnabled: M
-  } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()), L = (0, _.default)(S.default);
+  } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()), v = (0, _.default)(S.default);
   return n.useEffect(() => {
     (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
   }), (0, a.jsxs)(o.AnalyticsLocationProvider, {
@@ -54,20 +54,20 @@ function A(e) {
       }) : null,
       children: x && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, a.jsx)(I.default, {}), (0, a.jsx)(g.default, {})]
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(I.default, {})]
       })
     }), x && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: s || x ? O.marginTop20 : t,
+      className: s || x ? A.marginTop20 : t,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: C.formItem,
-        value: A,
+        value: p,
         note: N.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => f.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
         children: N.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
-      }), p && L && (0, a.jsx)(r.FormSwitch, {
+      }), O && v && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: C.formItem,
         value: M,

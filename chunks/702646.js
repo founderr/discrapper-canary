@@ -11,11 +11,11 @@ var a = n("735250"),
   c = n("738232"),
   f = n("376644"),
   E = n("481060"),
-  C = n("963202"),
-  h = n("105671"),
-  _ = n("92373"),
-  S = n("207796"),
-  m = n("308083"),
+  h = n("963202"),
+  _ = n("105671"),
+  C = n("92373"),
+  m = n("207796"),
+  S = n("308083"),
   p = n("689938"),
   I = n("683391");
 
@@ -28,19 +28,19 @@ function g(e) {
     onClick: u,
     isActive: d,
     autoWidth: c = !1
-  } = e, [f, C] = s.useState(!1), [h, _] = s.useState(!1), m = S.useClanDiscoveryUIStore.getState().mode, p = m === S.ClanDiscoveryMode.GAMES || m === S.ClanDiscoveryMode.PLAYSTYLE || m === S.ClanDiscoveryMode.TRAITS;
+  } = e, [f, h] = s.useState(!1), [_, C] = s.useState(!1), S = m.useClanDiscoveryUIStore.getState().mode, p = S === m.ClanDiscoveryMode.GAMES || S === m.ClanDiscoveryMode.PLAYSTYLE || S === m.ClanDiscoveryMode.TRAITS;
   s.useEffect(() => {
-    p && (C(!1), _(!1))
+    p && (h(!1), C(!1))
   }, [p]);
-  let g = d && (h || f),
+  let g = d && (_ || f),
     T = s.useMemo(() => (0, a.jsxs)(E.Clickable, {
       className: I.tooltipContentWrapper,
       onClick: u,
       onMouseEnter: () => {
-        !p && C(!0)
+        !p && h(!0)
       },
       onMouseLeave: () => {
-        C(!1)
+        h(!1)
       },
       children: [(0, a.jsx)("div", {
         className: I.tooltipHoverBridge
@@ -68,10 +68,10 @@ function g(e) {
       color: E.ButtonColors.CUSTOM,
       onClick: u,
       onMouseEnter: () => {
-        _(!0)
+        C(!0)
       },
       onMouseLeave: () => {
-        _(!1)
+        C(!1)
       },
       children: [t, (0, a.jsxs)("div", {
         className: I.filterPillText,
@@ -90,16 +90,16 @@ function g(e) {
 
 function T() {
   var e;
-  let t = (0, S.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
+  let t = (0, m.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
     n = s.useCallback(() => {
-      (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.GAMES)
+      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GAMES)
     }, []),
-    l = null !== (e = (0, h.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
+    l = null !== (e = (0, _.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
     i = t.slice(0, 3),
     o = t.length - 3,
     d = (0, a.jsx)("div", {
       className: I.gamesTooltip,
-      children: i.map((e, t) => (0, a.jsx)(_.default, {
+      children: i.map((e, t) => (0, a.jsx)(C.default, {
         applicationId: e,
         otherGamesCount: 2 === t && o > 0 ? o + 1 : void 0
       }, e))
@@ -122,12 +122,12 @@ function T() {
 }
 
 function A() {
-  let e = s.useMemo(m.getPlaystyleOptions, []),
-    t = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
+  let e = s.useMemo(S.getPlaystyleOptions, []),
+    t = (0, m.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
     n = null != t ? e[t] : null,
     l = null == n ? void 0 : n.title,
     i = s.useCallback(() => {
-      (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.PLAYSTYLE)
+      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.PLAYSTYLE)
     }, []);
   if (null == n || null == l) return null;
   let o = (0, a.jsxs)(a.Fragment, {
@@ -159,9 +159,9 @@ function A() {
 }
 
 function N() {
-  let e = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
+  let e = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
     t = s.useCallback(() => {
-      (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.TRAITS)
+      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.TRAITS)
     }, []);
   if (null == e) return null;
   let n = (0, a.jsx)("div", {
@@ -193,13 +193,13 @@ function N() {
 function v() {
   let {
     enableClanCreation: e
-  } = (0, C.useClanPrepilotExperimentForAllGuilds)({
+  } = (0, h.useClanPrepilotExperimentForAllGuilds)({
     location: "clan_discovery_add_clan",
     includeConverted: !1
   });
   return e ? (0, a.jsxs)(E.Clickable, {
     className: i()(I.buttonPill),
-    onClick: () => (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.ADMIN_UPSELL),
+    onClick: () => (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.ADMIN_UPSELL),
     children: [(0, a.jsx)(d.PlusSmallIcon, {
       className: I.filterPillIcon,
       color: "currentColor"

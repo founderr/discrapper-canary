@@ -19,14 +19,14 @@ var a = s("735250"),
   _ = s("89057"),
   f = s("921801"),
   m = s("246946"),
-  I = s("594174"),
-  g = s("351402"),
+  g = s("594174"),
+  I = s("351402"),
   N = s("853872"),
   h = s("78839"),
   C = s("706454"),
-  O = s("726985"),
-  A = s("981631"),
-  p = s("689938"),
+  A = s("726985"),
+  p = s("981631"),
+  O = s("689938"),
   R = s("499937");
 class x extends n.PureComponent {
   componentDidMount() {
@@ -35,7 +35,7 @@ class x extends n.PureComponent {
     })
   }
   handleRedemptionRedirect() {
-    c.default.setSection(A.UserSettingsSections.INVENTORY)
+    c.default.setSection(p.UserSettingsSections.INVENTORY)
   }
   render() {
     let {
@@ -54,23 +54,23 @@ class x extends n.PureComponent {
         className: R.syncing,
         children: (0, a.jsx)(o.Spinner, {})
       }) : (0, a.jsx)(f.Subsetting, {
-        setting: O.WebSetting.BILLING_PAYMENT_METHODS,
+        setting: A.WebSetting.BILLING_PAYMENT_METHODS,
         children: (0, a.jsx)(T.default, {
           paymentSources: s,
           defaultPaymentSourceId: n,
-          premiumSubscriptionPaymentSourceId: null != i && i.status !== A.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
+          premiumSubscriptionPaymentSourceId: null != i && i.status !== p.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
           locale: l,
           removing: r,
           submitting: d
         })
       }), (0, a.jsx)(f.Subsetting, {
-        setting: O.WebSetting.BILLING_TRANSACTION_HISTORY,
+        setting: A.WebSetting.BILLING_TRANSACTION_HISTORY,
         children: (0, a.jsx)("div", {
           className: R.paymentHistory,
           children: (0, a.jsxs)(o.HeadingLevel, {
             component: (0, a.jsx)(o.FormTitle, {
               tag: "h1",
-              children: p.default.Messages.BILLING_PAYMENT_HISTORY
+              children: O.default.Messages.BILLING_PAYMENT_HISTORY
             }),
             children: [(0, a.jsx)(_.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
               locale: l
@@ -80,7 +80,7 @@ class x extends n.PureComponent {
       }), (0, a.jsx)(o.Card, {
         className: R.codeRedemptionRedirect,
         type: o.Card.Types.CUSTOM,
-        children: p.default.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
+        children: O.default.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
           onClick: this.handleRedemptionRedirect
         })
       })]
@@ -89,9 +89,9 @@ class x extends n.PureComponent {
 }
 
 function M() {
-  let e = (0, r.useStateFromStoresObject)([C.default, g.default, N.default, I.default, m.default, h.default], () => {
+  let e = (0, r.useStateFromStoresObject)([C.default, I.default, N.default, g.default, m.default, h.default], () => {
     let e = h.default.getPremiumTypeSubscription(),
-      t = I.default.getCurrentUser();
+      t = g.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
       locale: C.default.locale,
       hide: m.default.enabled,
@@ -100,9 +100,9 @@ function M() {
       premiumSubscription: e,
       defaultPaymentSourceId: N.default.defaultPaymentSourceId,
       paymentSources: N.default.paymentSources,
-      syncing: g.default.isSyncing,
-      isRemovingPaymentSource: g.default.isRemovingPaymentSource,
-      isUpdatingPaymentSource: g.default.isUpdatingPaymentSource
+      syncing: I.default.isSyncing,
+      isRemovingPaymentSource: I.default.isRemovingPaymentSource,
+      isUpdatingPaymentSource: I.default.isUpdatingPaymentSource
     }
   });
   return (0, a.jsx)(x, {

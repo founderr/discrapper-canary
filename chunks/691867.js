@@ -6,18 +6,18 @@ r.r(t), r.d(t, {
 }), r("47120");
 var a = r("735250"),
   i = r("470079"),
-  n = r("442837"),
-  l = r("481060"),
+  l = r("442837"),
+  n = r("481060"),
   o = r("581612"),
-  c = r("91311"),
-  s = r("987113");
+  s = r("91311"),
+  c = r("987113");
 
 function d() {
-  let e = (0, n.useStateFromStores)([c.default], () => c.default.allWithDescriptions(), [], n.statesWillNeverBeEqual),
+  let e = (0, l.useStateFromStores)([s.default], () => s.default.allWithDescriptions(), [], l.statesWillNeverBeEqual),
     t = i.useMemo(() => e.map(e => {
       let [t, r, i] = e;
-      return (0, a.jsx)(l.FormItem, {
-        children: (0, a.jsx)(l.FormSwitch, {
+      return (0, a.jsx)(n.FormItem, {
+        children: (0, a.jsx)(n.FormSwitch, {
           value: r,
           note: t,
           onChange: e => (0, o.toggle)(t, e),
@@ -27,14 +27,14 @@ function d() {
       }, t)
     }), [e]);
   return (0, a.jsxs)("div", {
-    className: s.container,
-    children: [(0, a.jsx)(l.Button, {
+    className: c.container,
+    children: [(0, a.jsx)(n.Button, {
       onClick: o.clearAll,
-      className: s.button,
+      className: c.button,
       fullWidth: !0,
       children: "Clear all"
     }), (0, a.jsx)("div", {
-      className: s.rowsContainer,
+      className: c.rowsContainer,
       children: t
     })]
   })

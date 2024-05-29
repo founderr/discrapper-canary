@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("735250");
@@ -16,7 +16,7 @@ var s = n("990547"),
   c = n("921944"),
   f = n("689938"),
   E = n("667609");
-let C = (e, t) => ({
+let h = (e, t) => ({
   header: f.default.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
     gameName: e.title
   }),
@@ -25,26 +25,26 @@ let C = (e, t) => ({
   imgStyle: E.defaultDropImage
 });
 
-function h(e) {
+function _(e) {
   let {
     markAsDismissed: t,
     partnerGame: n
   } = e;
   (0, u.useTrackDropsImpression)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_ENROLLMENT);
-  let h = (0, u.useDropsExperiment)(n);
-  if (null == h) return null;
+  let _ = (0, u.useDropsExperiment)(n);
+  if (null == _) return null;
   let {
-    header: _,
-    body: S,
-    imgSrc: m,
+    header: C,
+    body: m,
+    imgSrc: S,
     imgStyle: p
-  } = C(h.drop, h.config.streamLengthRequirement), I = () => {
+  } = h(_.drop, _.config.streamLengthRequirement), I = () => {
     t(c.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("img", {
-      src: m,
+      src: S,
       alt: "",
       className: p
     }), (0, a.jsx)(l.Clickable, {
@@ -59,12 +59,12 @@ function h(e) {
     }), (0, a.jsx)(l.Heading, {
       className: E.title,
       variant: "heading-md/extrabold",
-      children: _
+      children: C
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
       className: E.subTitle,
-      children: S
-    }), h.config.autoEnrollment ? (0, a.jsx)(l.Button, {
+      children: m
+    }), _.config.autoEnrollment ? (0, a.jsx)(l.Button, {
       color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
@@ -76,7 +76,7 @@ function h(e) {
       color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
-        (0, o.enrollDropsUser)(h.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
+        (0, o.enrollDropsUser)(_.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
       children: f.default.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
     }), (0, a.jsx)(l.Button, {

@@ -11,10 +11,10 @@ var a = n("735250"),
   c = n("986332"),
   f = n("428695"),
   E = n("981631"),
-  C = n("689938"),
-  h = n("361114");
-let _ = i().debounce(o.default.trackWithMetadata, 500),
-  S = e => {
+  h = n("689938"),
+  _ = n("361114");
+let C = i().debounce(o.default.trackWithMetadata, 500),
+  m = e => {
     let {
       guild: t,
       title: n,
@@ -22,8 +22,8 @@ let _ = i().debounce(o.default.trackWithMetadata, 500),
       image: i,
       type: c,
       imageMarginX: f,
-      imageMarginTop: S,
-      trackingSource: m,
+      imageMarginTop: m,
+      trackingSource: S,
       undismissable: p,
       onDismissed: I,
       onClick: g,
@@ -31,18 +31,18 @@ let _ = i().debounce(o.default.trackWithMetadata, 500),
       ctaColor: A
     } = e;
     s.useEffect(() => {
-      _(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+      C(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
         notice_type: c,
         guild_id: t.id
       })
     }, [t.id, c]);
     let N = null;
     "function" == typeof T ? N = T() : null != T && (N = (0, a.jsx)(r.Button, {
-      className: h.btn,
+      className: _.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
         null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: m,
+          source: S,
           guild_id: t.id,
           notice_type: c
         }), null == g || g()
@@ -53,35 +53,35 @@ let _ = i().debounce(o.default.trackWithMetadata, 500),
     }));
     let v = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
-      className: h.channelNotice,
+      className: _.channelNotice,
       children: [!0 === p ? null : (0, a.jsx)(r.Clickable, {
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
           }), null == I || I()
         },
-        className: h.close,
-        "aria-label": C.default.Messages.DISMISS,
+        className: _.close,
+        "aria-label": h.default.Messages.DISMISS,
         children: (0, a.jsx)(u.default, {
-          className: h.closeIcon
+          className: _.closeIcon
         })
       }), (0, a.jsx)("div", {
-        className: h.imageContainer,
+        className: _.imageContainer,
         style: {
-          marginTop: "".concat(S, "px"),
+          marginTop: "".concat(m, "px"),
           marginLeft: v,
           marginRight: v
         },
         children: (0, a.jsx)("img", {
-          className: h.image,
+          className: _.image,
           src: i,
           alt: ""
         })
       }), (0, a.jsxs)("div", {
-        className: h.message,
+        className: _.message,
         children: [null != n ? (0, a.jsx)(r.Heading, {
           variant: "heading-md/semibold",
-          className: h.title,
+          className: _.title,
           children: n
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
@@ -96,7 +96,7 @@ t.default = function(e) {
   } = (0, c.useChannelNoticeRedesignExperiment)(!0);
   return t ? (0, a.jsx)(f.default, {
     ...e
-  }) : (0, a.jsx)(S, {
+  }) : (0, a.jsx)(m, {
     ...e
   })
 }

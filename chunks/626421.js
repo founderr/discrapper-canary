@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return h
   }
 }), n("47120");
 var a = n("735250"),
@@ -38,7 +38,7 @@ let E = s.memo(function(e) {
   })
 });
 
-function C() {
+function h() {
   let e = (0, r.useStateFromStores)([u.default], () => u.default.getGuildId()),
     t = (0, d.useChannelListUpsells)(e),
     [n, s] = (0, o.useSelectedDismissibleContent)(Object.values(t).filter(e => {

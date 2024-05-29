@@ -1,28 +1,28 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(n), t.d(n, {
   renderGuildProductPurchaseHeader: function() {
-    return c
+    return l
   }
 });
-var n = r("735250");
-r("470079");
-var a = r("409813"),
-  s = r("443650"),
-  l = r("464797"),
-  u = r("285540");
+var a = t("735250");
+t("470079");
+var r = t("409813"),
+  s = t("443650"),
+  o = t("464797"),
+  i = t("285540");
 
-function i(e) {
+function u(e) {
   let {
-    onClose: t
+    onClose: n
   } = e, {
-    guildProductListing: r
-  } = (0, l.useGuildProductPurchaseContext)();
-  return (0, n.jsx)(s.default, {
-    guildProductListing: r,
-    className: u.header,
-    onClose: t
+    guildProductListing: t
+  } = (0, o.useGuildProductPurchaseContext)();
+  return (0, a.jsx)(s.default, {
+    guildProductListing: t,
+    className: i.header,
+    onClose: n
   })
 }
-let c = (e, t, r) => r === a.Step.CONFIRM ? null : (0, n.jsx)(i, {
-  onClose: () => t(!1)
+let l = (e, n, t) => t === r.Step.CONFIRM ? null : (0, a.jsx)(u, {
+  onClose: () => n(!1)
 })

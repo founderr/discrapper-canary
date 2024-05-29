@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return g
   }
 });
 var a = s("735250");
@@ -21,45 +21,45 @@ var n = s("120356"),
   f = s("689938"),
   m = s("452240");
 
-function I(e) {
+function g(e) {
   let {
     user: t,
     pendingAvatar: s,
     pendingColors: n,
     onThemeColorsChange: i,
-    preventDisabled: I,
-    guildId: g,
+    preventDisabled: g,
+    guildId: I,
     className: N,
     showPremiumIcon: h = !0,
     showResetThemeButton: C = !1,
-    forcedDivider: O
-  } = e, A = (0, c.default)(t.id, g), {
-    primaryColor: p,
+    forcedDivider: A
+  } = e, p = (0, c.default)(t.id, I), {
+    primaryColor: O,
     secondaryColor: R
   } = (0, S.default)({
     user: t,
-    displayProfile: A,
+    displayProfile: p,
     pendingThemeColors: n,
     isPreview: !0
-  }), x = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(g, 80), L = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), D = (0, u.useAvatarColors)(M, L, !1);
-  if (null == p || null == R) return null;
-  let P = e => {
-    i(r()(e, null == A ? void 0 : A.themeColors) ? void 0 : e)
+  }), x = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(I, 80), v = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), L = (0, u.useAvatarColors)(M, v, !1);
+  if (null == O || null == R) return null;
+  let D = e => {
+    i(r()(e, null == p ? void 0 : p.themeColors) ? void 0 : e)
   };
   return (0, a.jsx)(_.default, {
     title: f.default.Messages.USER_SETTINGS_PROFILE_THEME,
-    disabled: !x && !I,
+    disabled: !x && !g,
     className: l()(m.__invalid_profileThemesSection, N),
     showPremiumIcon: h,
-    forcedDivider: O,
+    forcedDivider: A,
     children: (0, a.jsxs)("div", {
       className: m.sectionContainer,
       children: [(0, a.jsx)("div", {
         className: m.sparkleContainer,
         children: (0, a.jsx)(T.default, {
-          onChange: e => P([e, R]),
-          color: p,
-          suggestedColors: D,
+          onChange: e => D([e, R]),
+          color: O,
+          suggestedColors: L,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
             className: m.colorSwatchLabel,
@@ -72,9 +72,9 @@ function I(e) {
       }), (0, a.jsx)("div", {
         className: m.sparkleContainer,
         children: (0, a.jsx)(T.default, {
-          onChange: e => P([p, e]),
+          onChange: e => D([O, e]),
           color: R,
-          suggestedColors: D,
+          suggestedColors: L,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
             className: m.colorSwatchLabel,
@@ -84,12 +84,12 @@ function I(e) {
             children: f.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
-      }), C && null != g && (0, a.jsx)(d.Button, {
+      }), C && null != I && (0, a.jsx)(d.Button, {
         className: m.resetButton,
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,
         size: d.Button.Sizes.SMALL,
-        onClick: () => P([null, null]),
+        onClick: () => D([null, null]),
         children: f.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
       })]
     })

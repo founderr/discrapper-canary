@@ -1,197 +1,197 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   CollectiblesCollectedModalInner: function() {
-    return k
+    return F
   }
-}), a("47120"), a("627341");
-var r = a("735250"),
-  s = a("470079"),
-  n = a("887024"),
-  o = a("512722"),
-  l = a.n(o),
-  i = a("278074"),
-  c = a("979554"),
-  u = a("399606"),
-  d = a("481060"),
-  f = a("37234"),
-  C = a("607070"),
-  p = a("100527"),
-  b = a("906732"),
-  g = a("1585"),
-  E = a("125988"),
-  I = a("300284"),
-  T = a("876917"),
-  S = a("642619"),
-  _ = a("594174"),
-  m = a("884697"),
-  v = a("318028"),
-  L = a("635552"),
-  h = a("328456"),
-  A = a("624377"),
-  y = a("530618"),
-  O = a("141011"),
-  N = a("372654"),
-  x = a("216541"),
-  P = a("302800"),
-  R = a("215023"),
-  B = a("689938"),
-  D = a("167052"),
-  H = a("660097");
-let k = e => {
-  var t, a;
+}), r("47120"), r("627341");
+var a = r("735250"),
+  o = r("470079"),
+  l = r("887024"),
+  n = r("512722"),
+  s = r.n(n),
+  i = r("278074"),
+  c = r("979554"),
+  u = r("399606"),
+  d = r("481060"),
+  f = r("37234"),
+  C = r("607070"),
+  p = r("100527"),
+  g = r("906732"),
+  v = r("1585"),
+  b = r("125988"),
+  m = r("300284"),
+  h = r("876917"),
+  y = r("642619"),
+  E = r("594174"),
+  I = r("884697"),
+  S = r("318028"),
+  A = r("635552"),
+  T = r("328456"),
+  x = r("624377"),
+  N = r("530618"),
+  L = r("141011"),
+  _ = r("372654"),
+  O = r("216541"),
+  k = r("302800"),
+  R = r("215023"),
+  B = r("689938"),
+  P = r("167052"),
+  w = r("660097");
+let F = e => {
+  var t, r;
   let {
-    product: n,
-    onClose: o,
-    confettiTarget: P,
-    confettiCanvas: k,
-    hideConfetti: w = !1,
-    analyticsLocations: M
+    product: l,
+    onClose: n,
+    confettiTarget: k,
+    confettiCanvas: F,
+    hideConfetti: M = !1,
+    analyticsLocations: j
   } = e, {
-    confettiColors: F
-  } = (0, A.default)(n.styles), j = (0, u.useStateFromStores)([_.default], () => {
-    let e = _.default.getCurrentUser();
-    return l()(null != e, "User cannot be undefined"), e
-  }), z = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion), [Y] = n.items, {
-    avatarDecorationSrc: U
-  } = (0, E.default)({
-    user: j,
-    avatarDecorationOverride: (null == Y ? void 0 : Y.type) === c.CollectiblesItemType.AVATAR_DECORATION ? Y : null,
-    size: (0, g.getDecorationSizeForAvatarSize)(d.AvatarSizes.SIZE_120)
-  }), V = s.useRef(null), {
+    confettiColors: D
+  } = (0, x.default)(l.styles), H = (0, u.useStateFromStores)([E.default], () => {
+    let e = E.default.getCurrentUser();
+    return s()(null != e, "User cannot be undefined"), e
+  }), z = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion), [U] = l.items, {
+    avatarDecorationSrc: V
+  } = (0, b.default)({
+    user: H,
+    avatarDecorationOverride: (null == U ? void 0 : U.type) === c.CollectiblesItemType.AVATAR_DECORATION ? U : null,
+    size: (0, v.getDecorationSizeForAvatarSize)(d.AvatarSizes.SIZE_120)
+  }), W = o.useRef(null), {
     analyticsLocations: G
-  } = (0, b.default)([...M, p.default.COLLECTIBLES_COLLECTED_MODAL]), W = (0, I.default)({
+  } = (0, g.default)([...j, p.default.COLLECTIBLES_COLLECTED_MODAL]), Y = (0, m.default)({
     analyticsLocations: G
-  }), X = s.useCallback(() => {
-    if (o(), (0, f.popLayer)(), W(), n.type === c.CollectiblesItemType.AVATAR_DECORATION) {
-      l()(Y.type === c.CollectiblesItemType.AVATAR_DECORATION, "product type and item type are the same"), (0, g.openAvatarDecorationModal)({
-        initialSelectedDecoration: Y,
+  }), Z = o.useCallback(() => {
+    if (n(), (0, f.popLayer)(), Y(), l.type === c.CollectiblesItemType.AVATAR_DECORATION) {
+      s()(U.type === c.CollectiblesItemType.AVATAR_DECORATION, "product type and item type are the same"), (0, v.openAvatarDecorationModal)({
+        initialSelectedDecoration: U,
         analyticsLocations: G
       });
       return
     }
-    n.type === c.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
-      initialSelectedEffectId: Y.id,
+    l.type === c.CollectiblesItemType.PROFILE_EFFECT && (0, y.openProfileEffectModal)({
+      initialSelectedEffectId: U.id,
       analyticsLocations: G
     })
-  }, [o, W, n.type, Y, G]), {
-    handleUseNow: Z
-  } = (0, L.useHandleUseNow)({
-    product: n,
-    onSuccess: o,
-    onError: o
+  }, [n, Y, l.type, U, G]), {
+    handleUseNow: K
+  } = (0, A.useHandleUseNow)({
+    product: l,
+    onSuccess: n,
+    onError: n
   }), {
-    firstAvatarDecoration: K,
+    firstAvatarDecoration: X,
     firstProfileEffect: q
-  } = (0, h.useShopProductItems)(n), J = null != K && null != q, {
+  } = (0, T.useShopProductItems)(l), J = null != X && null != q, {
     category: Q,
     isFetching: $
-  } = (0, v.useFetchCollectiblesProductCategory)(n.skuId), ee = null !== (a = null == Q ? void 0 : Q.successModalBg) && void 0 !== a ? a : n.banner;
-  return (0, r.jsxs)(b.AnalyticsLocationProvider, {
+  } = (0, S.useFetchCollectiblesProductCategory)(l.skuId), ee = null !== (r = null == Q ? void 0 : Q.successModalBg) && void 0 !== r ? r : l.banner;
+  return (0, a.jsxs)(g.AnalyticsLocationProvider, {
     value: G,
-    children: [(0, r.jsxs)("div", {
-      className: D.modalInner,
-      ref: V,
-      children: [(0, r.jsxs)("div", {
-        className: D.bannerContainer,
-        children: [(0, r.jsx)(O.default, {
+    children: [(0, a.jsxs)("div", {
+      className: P.modalInner,
+      ref: W,
+      children: [(0, a.jsxs)("div", {
+        className: P.bannerContainer,
+        children: [(0, a.jsx)(L.default, {
           asset: $ ? void 0 : ee,
-          addGradient: null === (t = R.categoryBannerOverrides[n.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
-          size: (0, N.getAssetSizeByHeight)(880),
-          className: D.decorationBanner,
+          addGradient: null === (t = R.categoryBannerOverrides[l.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
+          size: (0, _.getAssetSizeByHeight)(880),
+          className: P.decorationBanner,
           blur: !0
-        }), (0, i.match)(n.type).with(c.CollectiblesItemType.PROFILE_EFFECT, () => (0, r.jsx)("div", {
-          className: D.profileEffectShopPreview,
-          children: (0, r.jsx)(T.default, {
+        }), (0, i.match)(l.type).with(c.CollectiblesItemType.PROFILE_EFFECT, () => (0, a.jsx)("div", {
+          className: P.profileEffectShopPreview,
+          children: (0, a.jsx)(h.default, {
             forCollectedModal: !0,
-            profileEffectId: Y.id
+            profileEffectId: U.id
           })
-        })).with(c.CollectiblesItemType.AVATAR_DECORATION, () => (l()(Y.type === c.CollectiblesItemType.AVATAR_DECORATION, "ts-match already checked the type"), (0, r.jsx)(d.Avatar, {
+        })).with(c.CollectiblesItemType.AVATAR_DECORATION, () => (s()(U.type === c.CollectiblesItemType.AVATAR_DECORATION, "ts-match already checked the type"), (0, a.jsx)(d.Avatar, {
           size: d.AvatarSizes.SIZE_120,
-          src: H,
-          avatarDecoration: U,
-          className: D.avatarDecoration,
-          "aria-label": n.name
-        }))).with(c.CollectiblesItemType.BUNDLE, () => (0, r.jsx)("div", {
-          className: D.bundlePreview,
-          children: (0, r.jsx)(x.BundlePreview, {
-            product: n,
-            user: j,
+          src: w,
+          avatarDecoration: V,
+          className: P.avatarDecoration,
+          "aria-label": l.name
+        }))).with(c.CollectiblesItemType.BUNDLE, () => (0, a.jsx)("div", {
+          className: P.bundlePreview,
+          children: (0, a.jsx)(O.BundlePreview, {
+            product: l,
+            user: H,
             isPurchased: !1,
             isHighlighted: !0,
-            profileEffectClassName: D.bundleProfileEffectCard
+            profileEffectClassName: P.bundleProfileEffectCard
           })
         })).otherwise(() => null)]
-      }), (0, r.jsxs)("div", {
-        className: D.collectedInfoContainer,
-        children: [(0, r.jsxs)("div", {
-          className: D.collectedTextContainer,
-          children: [(0, r.jsx)(d.Heading, {
+      }), (0, a.jsxs)("div", {
+        className: P.collectedInfoContainer,
+        children: [(0, a.jsxs)("div", {
+          className: P.collectedTextContainer,
+          children: [(0, a.jsx)(d.Heading, {
             variant: "heading-lg/bold",
             children: B.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
-              itemName: n.name
+              itemName: l.name
             })
-          }), (0, r.jsx)(d.Text, {
+          }), (0, a.jsx)(d.Text, {
             variant: "text-sm/normal",
-            children: (0, i.match)(null == n ? void 0 : n.type).with(c.CollectiblesItemType.BUNDLE, () => B.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE).with(c.CollectiblesItemType.PROFILE_EFFECT, () => B.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION).otherwise(() => B.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION)
+            children: (0, i.match)(null == l ? void 0 : l.type).with(c.CollectiblesItemType.BUNDLE, () => B.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE).with(c.CollectiblesItemType.PROFILE_EFFECT, () => B.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION).otherwise(() => B.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION)
           })]
-        }), (0, m.isBundleProduct)(n) ? (0, r.jsxs)("div", {
-          className: D.buttons,
-          children: [(0, r.jsx)(d.Button, {
+        }), (0, I.isBundleProduct)(l) ? (0, a.jsxs)("div", {
+          className: P.buttons,
+          children: [(0, a.jsx)(d.Button, {
             color: J ? d.ButtonColors.PRIMARY : d.ButtonColors.BRAND,
-            onClick: X,
-            children: B.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
-          }), J ? (0, r.jsx)(d.Button, {
             onClick: Z,
+            children: B.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
+          }), J ? (0, a.jsx)(d.Button, {
+            onClick: K,
             children: B.default.Messages.COLLECTIBLES_USE_NOW
           }) : null]
-        }) : (0, r.jsx)(d.Button, {
-          onClick: X,
+        }) : (0, a.jsx)(d.Button, {
+          onClick: Z,
           children: B.default.Messages.COLLECTIBLES_USE_NOW
         })]
-      }), (0, r.jsx)(d.ModalCloseButton, {
-        onClick: o,
-        className: D.modalCloseButton,
+      }), (0, a.jsx)(d.ModalCloseButton, {
+        onClick: n,
+        className: P.modalCloseButton,
         withCircleBackground: !0
       })]
-    }), !w && !z && (0, r.jsx)(y.default, {
-      confettiTarget: null != P ? P : V.current,
-      confettiCanvas: k,
-      sprites: (0, N.getConfettiSprites)(n.categorySkuId),
-      colors: null == F ? void 0 : F.map(e => e.toHexString())
+    }), !M && !z && (0, a.jsx)(N.default, {
+      confettiTarget: null != k ? k : W.current,
+      confettiCanvas: F,
+      sprites: (0, _.getConfettiSprites)(l.categorySkuId),
+      colors: null == D ? void 0 : D.map(e => e.toHexString())
     })]
   })
 };
 t.default = e => {
   let {
     transitionState: t,
-    product: a,
-    onClose: o,
-    analyticsLocations: l
-  } = e, i = s.useRef(new n.Environment), [c, u] = s.useState(null), f = (0, P.getCustomConfettiDisplayOptions)(a.skuId);
-  return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(n.ConfettiCanvas, {
+    product: r,
+    onClose: n,
+    analyticsLocations: s
+  } = e, i = o.useRef(new l.Environment), [c, u] = o.useState(null), f = (0, k.getCustomConfettiDisplayOptions)(r.skuId);
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(l.ConfettiCanvas, {
       ref: u,
-      className: D.confettiCanvas,
+      className: P.confettiCanvas,
       environment: i.current
-    }), (0, r.jsxs)(d.ModalRoot, {
+    }), (0, a.jsxs)(d.ModalRoot, {
       hideShadow: !0,
       transitionState: t,
       size: d.ModalSize.DYNAMIC,
-      className: D.modalRoot,
-      children: [null != f && (0, r.jsx)("img", {
+      className: P.modalRoot,
+      children: [null != f && (0, a.jsx)("img", {
         src: f.confettiAssetSrc,
-        className: D.customConfetti,
+        className: P.customConfetti,
         style: f.style,
         alt: "",
         "aria-hidden": "true"
-      }), (0, r.jsx)(d.ModalContent, {
-        className: D.modalContent,
-        children: (0, r.jsx)(k, {
-          product: a,
-          onClose: o,
+      }), (0, a.jsx)(d.ModalContent, {
+        className: P.modalContent,
+        children: (0, a.jsx)(F, {
+          product: r,
+          onClose: n,
           confettiCanvas: c,
           hideConfetti: null != f,
-          analyticsLocations: l
+          analyticsLocations: s
         })
       })]
     })]

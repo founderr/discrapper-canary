@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("687516"),
   A = n("718805"),
   v = n("871118"),
-  x = n("981631"),
-  N = n("689938"),
+  N = n("981631"),
+  x = n("689938"),
   M = n("526755");
 class R extends l.PureComponent {
   componentDidMount() {
@@ -35,7 +35,7 @@ class R extends l.PureComponent {
       user: e,
       streamApplication: t
     } = this.props;
-    _.default.track(x.AnalyticEvents.OPEN_POPOUT, {
+    _.default.track(N.AnalyticEvents.OPEN_POPOUT, {
       type: "Stream Preview",
       other_user_id: e.id,
       application_id: null != t ? t.id : null,
@@ -93,8 +93,8 @@ class R extends l.PureComponent {
             channelId: n.channelId,
             analyticsParams: {
               location: {
-                page: x.AnalyticsPages.GO_LIVE_MODAL,
-                section: x.AnalyticsSections.STREAM_VIEWER_POPOUT
+                page: N.AnalyticsPages.GO_LIVE_MODAL,
+                section: N.AnalyticsSections.STREAM_VIEWER_POPOUT
               }
             }
           }) : (0, a.jsx)(c.default, {
@@ -108,7 +108,7 @@ class R extends l.PureComponent {
           }), (0, a.jsx)(S.default, {
             type: S.default.Types.INLINE,
             className: M.protip,
-            children: __OVERLAY__ ? N.default.Messages.WATCH_STREAM_IN_APP : N.default.Messages.WATCH_STREAM_TIP
+            children: __OVERLAY__ ? x.default.Messages.WATCH_STREAM_IN_APP : x.default.Messages.WATCH_STREAM_TIP
           })]
         })]
       })

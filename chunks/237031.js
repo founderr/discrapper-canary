@@ -1,40 +1,40 @@
 "use strict";
 a.r(t), a.d(t, {
   closeCollectiblesShopProductDetailsModal: function() {
-    return o
+    return i
   },
   openCollectiblesShopProductDetailsModal: function() {
-    return l
+    return n
   }
 });
-var s = a("735250");
+var l = a("735250");
 a("470079");
-var r = a("481060");
-let n = "collectibles shop product details modal",
-  l = e => {
+var s = a("481060");
+let r = "collectibles shop product details modal",
+  n = e => {
     let {
       product: t,
-      category: l,
-      analyticsSource: o,
-      analyticsLocations: i,
+      category: n,
+      analyticsSource: i,
+      analyticsLocations: o,
       returnRef: c
     } = e;
-    (0, r.openModalLazy)(async () => {
+    (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([a.e("99387"), a.e("65866"), a.e("36848")]).then(a.bind(a, "702370"));
-      return a => (0, s.jsx)(e, {
+      return a => (0, l.jsx)(e, {
         ...a,
         product: t,
-        category: l,
-        analyticsSource: o,
-        analyticsLocations: i,
+        category: n,
+        analyticsSource: i,
+        analyticsLocations: o,
         returnRef: c
       })
     }, {
-      modalKey: n
+      modalKey: r
     })
   },
-  o = () => {
-    (0, r.closeModal)(n)
+  i = () => {
+    (0, s.closeModal)(r)
   }

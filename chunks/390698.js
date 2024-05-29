@@ -4,40 +4,40 @@ a.r(t), a.d(t, {
     return u
   }
 });
-var s = a("735250");
+var l = a("735250");
 a("470079");
-var r = a("120356"),
-  n = a.n(r),
-  l = a("481060"),
-  o = a("507893"),
-  i = a("689938"),
+var s = a("120356"),
+  r = a.n(s),
+  n = a("481060"),
+  i = a("507893"),
+  o = a("689938"),
   c = a("992911");
 let u = e => {
   let {
     className: t,
     isPartiallyPurchased: a
   } = e;
-  return a ? (0, s.jsx)(l.Tooltip, {
+  return a ? (0, l.jsx)(n.Tooltip, {
     tooltipClassName: c.partiallyOwnedDisclaimer,
     position: "top",
     align: "left",
-    text: i.default.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
-    children: e => (0, s.jsxs)("div", {
-      className: n()(c.partialOwnStateContainer, t),
+    text: o.default.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
+    children: e => (0, l.jsxs)("div", {
+      className: r()(c.partialOwnStateContainer, t),
       ...e,
-      children: [(0, s.jsx)("span", {
+      children: [(0, l.jsx)("span", {
         className: c.iconWrapper,
-        children: (0, s.jsx)(o.default, {
+        children: (0, l.jsx)(i.default, {
           className: c.infoIcon
         })
-      }), (0, s.jsx)(l.Text, {
+      }), (0, l.jsx)(n.Text, {
         variant: "text-md/semibold",
-        children: i.default.Messages.COLLECTIBLES_ALREADY_OWNED
+        children: o.default.Messages.COLLECTIBLES_ALREADY_OWNED
       })]
     })
-  }) : (0, s.jsx)(l.Text, {
+  }) : (0, l.jsx)(n.Text, {
     variant: "text-md/semibold",
     className: t,
-    children: i.default.Messages.COLLECTIBLES_ALREADY_OWNED
+    children: o.default.Messages.COLLECTIBLES_ALREADY_OWNED
   })
 }

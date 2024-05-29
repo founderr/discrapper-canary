@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return N
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,13 +27,13 @@ var a = n("735250"),
   A = n("228168"),
   v = n("30262");
 
-function x(e) {
+function N(e) {
   let {
     userId: t,
     guildId: n,
     onClose: s,
-    className: x,
-    infoPanelClassName: N,
+    className: N,
+    infoPanelClassName: x,
     style: M
   } = e, R = (0, _.useCanAccessGuildMemberModView)(n), y = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [O, j] = l.useState(null == y || null == L), P = (0, d.default)(L), D = l.useRef(null), {
     analyticsLocations: b
@@ -60,7 +60,7 @@ function x(e) {
       await Promise.all(e), j(!1)
     })()
   }, [n, t]), R) ? O || null == y || null == L ? (0, a.jsx)("div", {
-    className: i()(v.sidebarContianer, v.loadingContainer, x),
+    className: i()(v.sidebarContianer, v.loadingContainer, N),
     style: M,
     children: (0, a.jsx)(o.Spinner, {
       animated: !0,
@@ -69,7 +69,7 @@ function x(e) {
   }) : (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: b,
     children: (0, a.jsx)("div", {
-      className: i()(v.sidebarContianer, x),
+      className: i()(v.sidebarContianer, N),
       style: M,
       children: (0, a.jsx)(C.default, {
         user: y,
@@ -87,7 +87,7 @@ function x(e) {
             userId: t,
             guildId: n,
             onClose: s,
-            className: N
+            className: x
           })]
         })
       })

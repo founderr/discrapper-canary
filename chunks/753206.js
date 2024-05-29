@@ -1,47 +1,47 @@
 "use strict";
-i.r(s);
-var t = i("735250"),
-  n = i("470079"),
-  E = i("120356"),
-  r = i.n(E),
-  S = i("628238"),
-  o = i("998951"),
-  _ = i("25015"),
-  l = i("963550"),
-  a = i("845080"),
-  I = i("373947");
-s.default = n.memo(function(e) {
-  var s;
+s.r(t);
+var E = s("735250"),
+  _ = s("470079"),
+  a = s("120356"),
+  n = s.n(a),
+  T = s("628238"),
+  i = s("998951"),
+  A = s("25015"),
+  u = s("963550"),
+  l = s("845080"),
+  I = s("373947");
+t.default = _.memo(function(e) {
+  var t;
   let {
-    message: i,
-    channel: n,
-    compact: E,
-    className: u,
-    isGroupStart: N,
-    hideSimpleEmbedContent: A = !0,
-    disableInteraction: R
-  } = e, O = (0, S.isMessageNewerThanImprovedMarkdownEpoch)((null !== (s = i.editedTimestamp) && void 0 !== s ? s : i.timestamp).valueOf()), {
-    content: T
-  } = (0, _.default)(i, {
-    hideSimpleEmbedContent: A,
-    allowList: O,
-    allowHeading: O,
+    message: s,
+    channel: _,
+    compact: a,
+    className: r,
+    isGroupStart: o,
+    hideSimpleEmbedContent: L = !0,
+    disableInteraction: d
+  } = e, N = (0, T.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), {
+    content: S
+  } = (0, A.default)(s, {
+    hideSimpleEmbedContent: L,
+    allowList: N,
+    allowHeading: N,
     allowLinks: !0,
     previewLinkTarget: !0
   });
-  return (0, t.jsx)(o.default, {
-    compact: E,
-    className: r()(u, {
+  return (0, E.jsx)(i.default, {
+    compact: a,
+    className: n()(r, {
       [I.message]: !0,
-      [I.cozyMessage]: !E,
-      [I.groupStart]: N
+      [I.cozyMessage]: !a,
+      [I.groupStart]: o
     }),
-    childrenHeader: (0, a.default)({
+    childrenHeader: (0, l.default)({
       ...e,
-      channel: n,
+      channel: _,
       guildId: void 0
     }),
-    childrenMessageContent: (0, l.default)(e, T),
-    disableInteraction: R
+    childrenMessageContent: (0, u.default)(e, S),
+    disableInteraction: d
   })
 })

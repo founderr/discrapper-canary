@@ -12,10 +12,10 @@ var a = r("870271"),
       o = e.keyPath,
       i = e.valueRenderer,
       u = e.value,
-      l = e.valueGetter;
-    return s().createElement("li", r("value", t, o), s().createElement("label", r(["label", "valueLabel"], t, o), n(o, t, !1, !1)), s().createElement("span", r("valueText", t, o), i.apply(void 0, [(void 0 === l ? function(e) {
+      c = e.valueGetter;
+    return s().createElement("li", r("value", t, o), s().createElement("label", r(["label", "valueLabel"], t, o), n(o, t, !1, !1)), s().createElement("span", r("valueText", t, o), i.apply(void 0, [(void 0 === c ? function(e) {
       return e
-    } : l)(u), u].concat((0, a.default)(o)))))
+    } : c)(u), u].concat((0, a.default)(o)))))
   };
 u.propTypes = {
   nodeType: i().string.isRequired,

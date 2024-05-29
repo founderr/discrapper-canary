@@ -11,10 +11,10 @@ var a = n("735250"),
   c = n("792125"),
   f = n("547280"),
   E = n("678513"),
-  C = n("981631"),
-  h = n("689938"),
-  _ = n("934206");
-let S = (0, c.getThemeClass)(C.ThemeTypes.DARK);
+  h = n("981631"),
+  _ = n("689938"),
+  C = n("934206");
+let m = (0, c.getThemeClass)(h.ThemeTypes.DARK);
 t.default = function(e) {
   let {
     guild: t
@@ -29,22 +29,22 @@ t.default = function(e) {
         guildId: t.id
       })
     })
-  }, [l, t.id]), m = s.useCallback(() => {
+  }, [l, t.id]), S = s.useCallback(() => {
     null != l && (0, f.dismissSignUp)(l.key, l.dismissibleContent)
   }, [l]);
   if (null == l) return null;
   let p = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");
   return (0, a.jsx)(o.ThemeContextProvider, {
-    theme: C.ThemeTypes.DARK,
+    theme: h.ThemeTypes.DARK,
     children: (0, a.jsx)("div", {
-      className: i()(_.container, S),
+      className: i()(C.container, m),
       children: (0, a.jsxs)("div", {
-        className: _.card,
+        className: C.card,
         style: {
           background: p
         },
         children: [(0, a.jsxs)("div", {
-          className: _.eyebrow,
+          className: C.eyebrow,
           children: [(0, a.jsx)(r.EnvelopeIcon, {
             height: 12,
             width: 12,
@@ -52,24 +52,24 @@ t.default = function(e) {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "none",
-            children: h.default.Messages.SIGNUP_NOTICE_EYEBROW
+            children: _.default.Messages.SIGNUP_NOTICE_EYEBROW
           })]
         }), (0, a.jsx)(o.Heading, {
           variant: "heading-sm/medium",
           children: l.noticeHeader
         }), (0, a.jsx)(o.Button, {
-          className: _.button,
+          className: C.button,
           color: "none",
           onClick: c,
           children: (0, a.jsx)(o.Text, {
             variant: "text-sm/medium",
             color: "none",
-            children: h.default.Messages.SIGNUP_NOTICE_CTA
+            children: _.default.Messages.SIGNUP_NOTICE_CTA
           })
         }), (0, a.jsx)("div", {
-          className: _.dismiss,
+          className: C.dismiss,
           children: (0, a.jsx)(o.Clickable, {
-            onClick: m,
+            onClick: S,
             children: (0, a.jsx)(d.default, {
               height: 16,
               width: 16,

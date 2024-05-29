@@ -1,24 +1,24 @@
     "use strict";
-    t.r(a), t.d(a, {
+    a.r(t), a.d(t, {
       getOpenAppFromEmailDestinations: function() {
         return i
       }
-    }), t("315314"), t("610138"), t("216116"), t("78328"), t("815648"), t("47120");
-    var d = t("593473"),
-      c = t("591759");
-    let n = e => {
+    }), a("315314"), a("610138"), a("216116"), a("78328"), a("815648"), a("47120");
+    var d = a("593473"),
+      n = a("591759");
+    let c = e => {
         if (null == e || "" === e) return null;
         try {
-          let a = new URL(e);
-          return c.default.isDiscordHostname(a.hostname) || window.location.host === a.host ? a : null
+          let t = new URL(e);
+          return n.default.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null
         } catch (e) {
           return null
         }
       },
       i = e => {
-        let a = (0, d.parse)(e);
+        let t = (0, d.parse)(e);
         return {
-          desktop: n(a.desktop_link),
-          mobile: n(a.mobile_link)
+          desktop: c(t.desktop_link),
+          mobile: c(t.mobile_link)
         }
       }

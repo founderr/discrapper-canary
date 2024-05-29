@@ -1,12 +1,12 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   fetchGuildAffinities: function() {
     return i
   }
 });
-var a = s("544891"),
-  n = s("570140"),
-  l = s("981631");
+var a = n("544891"),
+  s = n("570140"),
+  l = n("981631");
 let i = () => a.HTTP.get({
   url: l.Endpoints.GUILD_AFFINITIES,
   oldFormErrors: !0
@@ -16,12 +16,12 @@ let i = () => a.HTTP.get({
       guild_affinities: t
     }
   } = e;
-  n.default.dispatch({
+  s.default.dispatch({
     type: "LOAD_GUILD_AFFINITIES_SUCCESS",
     guildAffinities: t
   })
 }, () => {
-  n.default.dispatch({
+  s.default.dispatch({
     type: "LOAD_GUILD_AFFINITIES_FAILURE"
   })
 })

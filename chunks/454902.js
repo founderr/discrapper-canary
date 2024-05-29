@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return a
   },
   renderKeybindHint: function() {
-    return C
+    return y
   },
   renderSubtleHint: function() {
-    return y
+    return O
   }
 });
 var i, a, l, s = n("735250"),
@@ -19,7 +19,7 @@ var i, a, l, s = n("735250"),
   f = n("465670"),
   h = n("689938"),
   p = n("297505"),
-  E = n("611273");
+  g = n("611273");
 
 function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -29,17 +29,17 @@ function m(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let g = e => e.stopPropagation(),
+let E = e => e.stopPropagation(),
   S = () => (0, s.jsx)("div", {
     className: p.clickBlocker,
-    onClick: g,
-    onMouseEnter: g,
-    onMouseOver: g
+    onClick: E,
+    onMouseEnter: E,
+    onMouseOver: E
   }),
   v = () => (0, s.jsx)("div", {
     className: p.divider
   }),
-  C = (e, t, n) => (0, s.jsx)("div", {
+  y = (e, t, n) => (0, s.jsx)("div", {
     className: p.keybindMessage,
     children: n.format({
       keybind: t,
@@ -49,12 +49,12 @@ let g = e => e.stopPropagation(),
       }, n)
     })
   }),
-  y = (e, t) => (0, s.jsx)("div", {
+  O = (e, t) => (0, s.jsx)("div", {
     className: p.hintSubtleText,
     children: t
   });
 (i = a || (a = {})).PRIMARY = "PRIMARY", i.BRAND = "BRAND", i.DANGER = "DANGER";
-class _ extends(l = o.PureComponent) {
+class C extends(l = o.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     let {
       expand: n
@@ -199,7 +199,7 @@ class _ extends(l = o.PureComponent) {
           className: p.title,
           children: t
         }), null != e ? (0, s.jsx)("div", {
-          className: d()(p.body, E.marginTop4),
+          className: d()(p.body, g.marginTop4),
           style: {
             WebkitLineClamp: n,
             lineClamp: n
@@ -265,9 +265,9 @@ class _ extends(l = o.PureComponent) {
     }
   }
 }
-m(_, "ColorSchemes", a), m(_, "defaultProps", {
+m(C, "ColorSchemes", a), m(C, "defaultProps", {
   maxBodyLines: void 0,
   colorScheme: "PRIMARY",
   expand: !1,
   disabled: !1
-}), t.default = _
+}), t.default = C

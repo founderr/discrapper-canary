@@ -1,47 +1,47 @@
 "use strict";
-s.r(t);
-var a, n, l, i, r = s("442837"),
-  u = s("570140");
-let o = {},
+n.r(t);
+var a, s, l, i, r = n("442837"),
+  o = n("570140");
+let u = {},
   d = null;
 
 function c() {
-  o = {}, d = null
+  u = {}, d = null
 }
-class E extends(i = r.default.Store) {
+class f extends(i = r.default.Store) {
   getEmailSettings() {
     return {
-      categories: o,
+      categories: u,
       initialized: d
     }
   }
 }
-l = "EmailSettingsStore", (n = "displayName") in(a = E) ? Object.defineProperty(a, n, {
+l = "EmailSettingsStore", (s = "displayName") in(a = f) ? Object.defineProperty(a, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[n] = l, t.default = new E(u.default, {
+}) : a[s] = l, t.default = new f(o.default, {
   CONNECTION_OPEN: c,
   LOGOUT: c,
   EMAIL_SETTINGS_FETCH_SUCCESS: function(e) {
     let {
       settings: t
     } = e;
-    o = t.categories, d = t.initialized
+    u = t.categories, d = t.initialized
   },
   EMAIL_SETTINGS_UPDATE_SUCCESS: function(e) {
     let {
       settings: t
     } = e;
-    o = t.categories
+    u = t.categories
   },
   EMAIL_SETTINGS_UPDATE: function(e) {
     let {
       updates: t
     } = e;
-    o = {
-      ...o,
+    u = {
+      ...u,
       ...t
     }
   }

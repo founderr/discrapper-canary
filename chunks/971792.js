@@ -1,14 +1,14 @@
 "use strict";
-i.r(s), i.d(s, {
+s.r(t), s.d(t, {
   default: function() {
-    return r
+    return n
   }
 });
-var t = i("442837"),
-  n = i("430824"),
-  E = i("584825");
+var E = s("442837"),
+  _ = s("430824"),
+  a = s("584825");
 
-function r(e, s) {
-  let i = (0, E.useSubscriptionListing)(s);
-  return (0, t.useStateFromStores)([n.default], () => null != e && null != i ? n.default.getRole(e, i.role_id) : void 0)
+function n(e, t) {
+  let s = (0, a.useSubscriptionListing)(t);
+  return (0, E.useStateFromStores)([_.default], () => null != e && null != s ? _.default.getRole(e, s.role_id) : void 0)
 }

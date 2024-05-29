@@ -36,13 +36,13 @@ function S(e) {
   } = e, [T, I] = a.useState(!1), {
     requestId: A,
     entries: v,
-    impressionCappedEntryIds: x
-  } = (0, f.default)(S), N = (0, l.useStateFromStores)([c.default], () => c.default.hidden), M = (0, l.useStateFromStores)([o.default], () => o.default.isFocused()), R = (0, l.useStateFromStores)([r.default], () => r.default.getChannel(S)), y = (null == R ? void 0 : R.isForumChannel()) === !1, [L, O, j, P] = a.useMemo(() => {
+    impressionCappedEntryIds: N
+  } = (0, f.default)(S), x = (0, l.useStateFromStores)([c.default], () => c.default.hidden), M = (0, l.useStateFromStores)([o.default], () => o.default.isFocused()), R = (0, l.useStateFromStores)([r.default], () => r.default.getChannel(S)), y = (null == R ? void 0 : R.isForumChannel()) === !1, [L, O, j, P] = a.useMemo(() => {
     let e;
     if (null == v || 0 === v.length || null == A || !y) return [t, n, g];
     let a = T ? v.length : 3,
       l = v.slice(0, a);
-    e = N ? [{
+    e = x ? [{
       type: i.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY
     }] : l.map(e => ({
       type: i.MemberListRowTypes.CONTENT_INVENTORY,
@@ -73,8 +73,8 @@ function S(e) {
       r = [s, ...t],
       o = [...n, s, ...e];
     return [r, o, Math.random(), e]
-  }, [S, v, T, t, _, A, n, g, N, y]), D = a.useRef(0), b = a.useRef(v), U = a.useRef(), F = a.useRef({
-    impressionCappedEntryIds: x
+  }, [S, v, T, t, _, A, n, g, x, y]), D = a.useRef(0), b = a.useRef(v), U = a.useRef(), F = a.useRef({
+    impressionCappedEntryIds: N
   }), w = a.useCallback(e => {
     var t;
     let n = Math.floor(e / h.DEFAULT_CONTENT_ROW_HEIGHT),
@@ -85,14 +85,14 @@ function S(e) {
     b.current = v
   }, [v]), a.useEffect(() => {
     F.current = {
-      impressionCappedEntryIds: x
+      impressionCappedEntryIds: N
     }
-  }, [x]), a.useEffect(() => (D.current = 0, U.current = Date.now(), () => {
+  }, [N]), a.useEffect(() => (D.current = 0, U.current = Date.now(), () => {
     var e, t;
     if (null == A || null == U.current || Date.now() - U.current < 3e3) return;
     let n = null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
       a = n.slice(0, D.current);
-    !N && M && y && (u.default.track(E.AnalyticEvents.RANKING_ITEMS_SEEN, {
+    !x && M && y && (u.default.track(E.AnalyticEvents.RANKING_ITEMS_SEEN, {
       request_id: A,
       first_shown_at: U.current,
       item_ids: a,
@@ -105,7 +105,7 @@ function S(e) {
       type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS",
       itemIds: a
     }))
-  }), [A, S, _, N, M, y]), {
+  }), [A, S, _, x, M, y]), {
     groups: L,
     rows: O,
     version: j,

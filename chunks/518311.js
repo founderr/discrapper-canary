@@ -25,8 +25,8 @@ var a, l = n("735250"),
   I = n("194359"),
   A = n("425493"),
   v = n("461745"),
-  x = n("40851"),
-  N = n("367907"),
+  N = n("40851"),
+  x = n("367907"),
   M = n("762914"),
   R = n("43267"),
   y = n("933557"),
@@ -40,19 +40,19 @@ var a, l = n("735250"),
   F = n("306680"),
   w = n("699516"),
   k = n("246946"),
-  H = n("594174"),
-  G = n("285952"),
-  B = n("153124"),
+  B = n("594174"),
+  H = n("285952"),
+  G = n("153124"),
   V = n("917885"),
   W = n("502568"),
   Y = n("626135"),
   z = n("572004"),
   K = n("585483"),
   Z = n("823379"),
-  X = n("709054"),
-  q = n("51144"),
-  J = n("73752"),
-  Q = n("575464"),
+  q = n("709054"),
+  X = n("51144"),
+  Q = n("73752"),
+  J = n("575464"),
   $ = n("981631"),
   ee = n("689938"),
   et = n("93923"),
@@ -67,18 +67,18 @@ function el(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let es = (0, B.uid)(),
-  ei = (0, B.uid)();
+let es = (0, G.uid)(),
+  ei = (0, G.uid)();
 
 function er(e) {
   let {
     className: t,
     children: n
   } = e;
-  return (0, l.jsxs)(G.default, {
-    align: G.default.Align.CENTER,
-    justify: G.default.Justify.CENTER,
-    direction: G.default.Direction.VERTICAL,
+  return (0, l.jsxs)(H.default, {
+    align: H.default.Align.CENTER,
+    justify: H.default.Justify.CENTER,
+    direction: H.default.Direction.VERTICAL,
     className: r()(et.errorState, t),
     children: [(0, l.jsx)("div", {
       className: r()(et.errorStateIcon, ea.marginBottom20)
@@ -109,7 +109,7 @@ let eo = e => {
           children: s
         }), (0, l.jsx)("span", {
           className: et.lastActiveTimestamp,
-          children: c()(X.default.extractTimestamp(i)).fromNow()
+          children: c()(q.default.extractTimestamp(i)).fromNow()
         })]
       })
     })
@@ -139,7 +139,7 @@ let eo = e => {
           var n, a;
           let l = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
             s = null !== (a = t.lastMessageId) && void 0 !== a ? a : t.id;
-          return X.default.compare(s, l)
+          return q.default.compare(s, l)
         }).map(e => (0, l.jsx)(eo, {
           onClose: a.onClose,
           channel: e
@@ -153,7 +153,7 @@ class ed extends(a = s.PureComponent) {
       channel: e
     } = this.props;
     E.default.wait(() => T.default.open(null == e ? void 0 : e.id));
-    let t = (0, N.collectChannelAnalyticsMetadata)(e);
+    let t = (0, x.collectChannelAnalyticsMetadata)(e);
     null != e ? e.isDM() ? Y.default.track($.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
@@ -188,7 +188,7 @@ class ed extends(a = s.PureComponent) {
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
     let {
       inviteMaxAgeSeconds: t
-    } = J.default.getCurrentConfig({
+    } = Q.default.getCurrentConfig({
       location: "5326c5_1"
     }, {
       autoTrackExposure: !1
@@ -206,7 +206,7 @@ class ed extends(a = s.PureComponent) {
   getMaxParticipants() {
     let {
       channel: e
-    } = this.props, t = H.default.getCurrentUser();
+    } = this.props, t = B.default.getCurrentUser();
     return null != t && t.isStaff() ? $.MAX_GROUP_DM_STAFF_PARTICIPANTS : null != e && e.isBroadcastChannel() ? $.MAX_GROUP_DM_BROADCAST_PARTICIPANTS : null != e && e.userLimit > 0 ? e.userLimit : $.MAX_GROUP_DM_PARTICIPANTS
   }
   getRemaining() {
@@ -274,9 +274,9 @@ class ed extends(a = s.PureComponent) {
     if (!n || this.isNotFriends()) return null;
     let o = [];
     return i.forEach(e => {
-      let t = H.default.getUser(e);
-      null != t && o.push(q.default.getName(t))
-    }), (0, l.jsxs)(G.default, {
+      let t = B.default.getUser(e);
+      null != t && o.push(X.default.getName(t))
+    }), (0, l.jsxs)(H.default, {
       className: r()(et.searchBar, ea.marginTop20),
       children: [(0, l.jsx)(v.default, {
         ref: this.searchBarRef,
@@ -306,8 +306,8 @@ class ed extends(a = s.PureComponent) {
     let e = null != this.scrollerRef.current && this.state.separator,
       t = this.isNotFriends() ? ee.default.Messages.GROUP_DM_ADD_FRIENDS : ee.default.Messages.GROUP_DM_HEADER;
     return (0, l.jsxs)(p.ModalHeader, {
-      direction: G.default.Direction.VERTICAL,
-      align: G.default.Align.STRETCH,
+      direction: H.default.Direction.VERTICAL,
+      align: H.default.Align.STRETCH,
       className: et.__invalid_header,
       separator: e,
       children: [f.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(p.Heading, {
@@ -326,7 +326,7 @@ class ed extends(a = s.PureComponent) {
     if (this.isNotFriends()) {
       let t = null != e ? e.getRecipientId() : null;
       if (null == t) throw Error("no recipient in DM");
-      let n = H.default.getUser(t),
+      let n = B.default.getUser(t),
         a = null != n ? n.username : "",
         s = null != n && w.default.getRelationshipType(n.id) === $.RelationshipTypes.PENDING_OUTGOING;
       return (0, l.jsxs)(er, {
@@ -408,12 +408,12 @@ class ed extends(a = s.PureComponent) {
         tag: "h5",
         className: ea.marginBottom8,
         children: ee.default.Messages.GROUP_DM_INVITE_LINK_TITLE
-      }), (0, l.jsxs)(G.default, {
+      }), (0, l.jsxs)(H.default, {
         className: r()(en.input, {
           [en.success]: a
         }),
-        justify: G.default.Justify.BETWEEN,
-        align: G.default.Align.CENTER,
+        justify: H.default.Justify.BETWEEN,
+        align: H.default.Align.CENTER,
         children: [i.length > 0 ? (0, l.jsx)(p.TextInput, {
           className: et.copyInput,
           name: "invite",
@@ -463,8 +463,8 @@ class ed extends(a = s.PureComponent) {
     if (null != n) return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)("div", {
         className: et.footerSeparator
-      }), (0, l.jsx)(G.default, {
-        direction: G.default.Direction.VERTICAL,
+      }), (0, l.jsx)(H.default, {
+        direction: H.default.Direction.VERTICAL,
         className: et.footer,
         children: n
       })]
@@ -482,7 +482,7 @@ class ed extends(a = s.PureComponent) {
   }
   handleAddFriend(e) {
     this.props.onClose(), I.default.sendRequest({
-      discordTag: q.default.getUserTag(e, {
+      discordTag: X.default.getUserTag(e, {
         identifiable: "always"
       }),
       context: {
@@ -540,7 +540,7 @@ class ed extends(a = s.PureComponent) {
         user: u,
         comparator: d
       } = o, c = s.has(u.id);
-      return (0, l.jsx)(Q.default, {
+      return (0, l.jsx)(J.default, {
         row: n,
         user: u,
         hideDiscriminator: r,
@@ -649,7 +649,7 @@ class ed extends(a = s.PureComponent) {
     })
   }
 }
-el(ed, "contextType", x.default);
+el(ed, "contextType", N.default);
 let ec = h.default.connectStores([b.default, D.default, k.default], e => {
   let t, {
     channel: n

@@ -12,16 +12,16 @@ var s = n("481060"),
   c = n("758119"),
   f = n("920644"),
   E = n("208381"),
-  C = n("723359"),
-  h = n("981631");
+  h = n("723359"),
+  _ = n("981631");
 
-function _(e, t) {
+function C(e, t) {
   var n;
   if (null == e) return;
   let a = d.default.getCurrentUser();
-  (null === (n = r.default.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != a && null == a.nsfwAllowed && (0, c.openAgeGateModal)(C.AgeGateSource.NSFW_CHANNEL)
+  (null === (n = r.default.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != a && null == a.nsfwAllowed && (0, c.openAgeGateModal)(h.AgeGateSource.NSFW_CHANNEL)
 }
-class S extends i.default {
+class m extends i.default {
   _initialize() {
     l.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.subscribe("CHANNEL_SELECT", this.handleChannelSelect), l.default.subscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen), l.default.subscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose), l.default.subscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess), l.default.subscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure)
   }
@@ -33,11 +33,11 @@ class S extends i.default {
       guildId: t,
       channelId: n
     } = e;
-    _(t, n)
+    C(t, n)
   }
   handleConnectionOpen() {
     let e = u.default.getGuildId();
-    _(e, o.default.getChannelId())
+    C(e, o.default.getChannelId())
   }
   handleAgeGateModalOpen(e) {
     let {
@@ -52,12 +52,12 @@ class S extends i.default {
         ...n
       })
     }, {
-      modalKey: C.EXISTING_USER_AGE_GATE_MODAL_KEY,
-      onCloseRequest: h.NOOP
+      modalKey: h.EXISTING_USER_AGE_GATE_MODAL_KEY,
+      onCloseRequest: _.NOOP
     })
   }
   handleAgeGateSuccess() {
-    (0, s.updateModal)(C.EXISTING_USER_AGE_GATE_MODAL_KEY, e => (0, a.jsx)(E.default, {
+    (0, s.updateModal)(h.EXISTING_USER_AGE_GATE_MODAL_KEY, e => (0, a.jsx)(E.default, {
       ...e
     }))
   }
@@ -65,13 +65,13 @@ class S extends i.default {
     let {
       underageMessage: t
     } = e;
-    (0, s.updateModal)(C.EXISTING_USER_AGE_GATE_MODAL_KEY, e => (0, a.jsx)(f.default, {
+    (0, s.updateModal)(h.EXISTING_USER_AGE_GATE_MODAL_KEY, e => (0, a.jsx)(f.default, {
       underageMessage: t,
       ...e
     }))
   }
   handleAgeGateModalClose() {
-    (0, s.closeModal)(C.EXISTING_USER_AGE_GATE_MODAL_KEY)
+    (0, s.closeModal)(h.EXISTING_USER_AGE_GATE_MODAL_KEY)
   }
 }
-t.default = new S
+t.default = new m

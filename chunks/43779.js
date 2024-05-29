@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("735250"),
@@ -15,54 +15,54 @@ var a = n("735250"),
   c = n("69439"),
   f = n("46140"),
   E = n("689938"),
-  C = n("641935");
+  h = n("641935");
 
-function h(e) {
+function _(e) {
   let {
     quest: t
-  } = e, n = (0, o.getRewardAsset)(t), l = u.SharedQuestFields.build(t.config).defaultReward.messages.name, h = (0, o.getQuestsInstructionsToWinReward)({
+  } = e, n = (0, o.getRewardAsset)(t), l = u.SharedQuestFields.build(t.config).defaultReward.messages.name, _ = (0, o.getQuestsInstructionsToWinReward)({
     quest: t,
     location: f.QuestsExperimentLocations.QUEST_HOME_DESKTOP,
     useV2Variants: !0
-  }), _ = !(0, o.isQuestExpired)(t), S = s.useCallback(() => (0, a.jsx)(r.Text, {
+  }), C = !(0, o.isQuestExpired)(t), m = s.useCallback(() => (0, a.jsx)(r.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
-    className: C.header,
+    className: h.header,
     children: l
   }), [l]);
   return (0, a.jsxs)("div", {
-    className: C.container,
+    className: h.container,
     children: [(0, a.jsxs)("div", {
-      className: C.rewardDescriptionContainer,
+      className: h.rewardDescriptionContainer,
       children: [(0, a.jsx)(d.QuestsAsset, {
         id: "QuestRewardTile_rewardTileStatic",
         children: e => (0, a.jsx)("img", {
           ref: e,
           alt: l,
-          className: i()(C.questRewardTileAsset),
+          className: i()(h.questRewardTileAsset),
           src: n.url
         })
       }), (0, a.jsxs)("div", {
-        className: C.textContainer,
+        className: h.textContainer,
         children: [(0, a.jsx)("span", {
-          className: C.headerSpan,
+          className: h.headerSpan,
           children: (0, a.jsx)(r.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
-            className: C.header,
+            className: h.header,
             children: E.default.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: S
+              rewardHook: m
             })
           })
-        }), null != h ? (0, a.jsx)(r.Text, {
+        }), null != _ ? (0, a.jsx)(r.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
-          className: C.description,
-          children: h
+          className: h.description,
+          children: _
         }) : null]
       })]
-    }), _ ? (0, a.jsx)(c.default, {
+    }), C ? (0, a.jsx)(c.default, {
       quest: t
     }) : null]
   })

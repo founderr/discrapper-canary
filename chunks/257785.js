@@ -4,31 +4,31 @@ r.r(t), r.d(t, {
     return d
   },
   Properties: function() {
-    return c
+    return s
   },
   Property: function() {
-    return s
+    return c
   }
 });
 var a = r("735250");
 r("470079");
 var i = r("120356"),
-  n = r.n(i),
-  l = r("481060"),
+  l = r.n(i),
+  n = r("481060"),
   o = r("277513");
 
-function c(e) {
+function s(e) {
   let {
     className: t,
     children: r
   } = e;
   return (0, a.jsx)("dl", {
-    className: n()(o.properties, t),
+    className: l()(o.properties, t),
     children: r
   })
 }
 
-function s(e) {
+function c(e) {
   let {
     name: t,
     children: r
@@ -47,10 +47,10 @@ function d(e) {
   let {
     value: t
   } = e;
-  return (0, a.jsx)(l.Checkbox, {
+  return (0, a.jsx)(n.Checkbox, {
     size: 16,
     value: t,
-    shape: l.Checkbox.Shapes.SMALL_BOX,
+    shape: n.Checkbox.Shapes.SMALL_BOX,
     displayOnly: !0
   })
 }

@@ -1,24 +1,24 @@
     "use strict";
-    t.r(a), t.d(a, {
+    a.r(t), a.d(t, {
       failMigration: function() {
-        return n
+        return c
       },
       finishMigration: function() {
         return i
       },
       migrate: function() {
-        return c
+        return n
       }
     });
-    var d = t("570140");
+    var d = a("570140");
 
-    function c() {
+    function n() {
       d.default.wait(() => d.default.dispatch({
         type: "DOMAIN_MIGRATION_START"
       }))
     }
 
-    function n() {
+    function c() {
       d.default.dispatch({
         type: "DOMAIN_MIGRATION_FAILURE"
       })

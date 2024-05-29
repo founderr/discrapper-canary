@@ -1,43 +1,43 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return u
   }
 });
-var i = l("735250");
-l("470079");
-var a = l("120356"),
-  n = l.n(a),
-  s = l("481060"),
-  r = l("366695"),
-  d = l("846801");
+var l = n("735250");
+n("470079");
+var a = n("120356"),
+  s = n.n(a),
+  i = n("481060"),
+  r = n("366695"),
+  o = n("846801");
 
-function c(e) {
+function u(e) {
   let {
     className: t,
-    embeddedApps: l,
+    embeddedApps: n,
     muted: a
   } = e;
-  if (l.length <= 0) return null;
+  if (n.length <= 0) return null;
   {
-    if (1 === l.length) return (0, i.jsx)("div", {
-      className: n()(d.container, t, a && d.modeMuted),
-      children: (0, i.jsx)(r.default, {
-        game: l[0].application,
-        className: d.icon20px
+    if (1 === n.length) return (0, l.jsx)("div", {
+      className: s()(o.container, t, a && o.modeMuted),
+      children: (0, l.jsx)(r.default, {
+        game: n[0].application,
+        className: o.icon20px
       })
     });
-    let e = l.length - 1;
-    return (0, i.jsxs)("div", {
-      className: n()(d.container, t, a && d.modeMuted),
-      children: [(0, i.jsx)(r.default, {
-        game: l[0].application,
-        className: d.icon20px
-      }), 2 === l.length ? (0, i.jsx)(r.default, {
-        game: l[1].application,
-        className: d.icon20px
-      }) : (0, i.jsx)(s.Text, {
-        className: d.overflow,
+    let e = n.length - 1;
+    return (0, l.jsxs)("div", {
+      className: s()(o.container, t, a && o.modeMuted),
+      children: [(0, l.jsx)(r.default, {
+        game: n[0].application,
+        className: o.icon20px
+      }), 2 === n.length ? (0, l.jsx)(r.default, {
+        game: n[1].application,
+        className: o.icon20px
+      }) : (0, l.jsx)(i.Text, {
+        className: o.overflow,
         variant: "text-xs/bold",
         color: "interactive-active",
         children: "+".concat(e)

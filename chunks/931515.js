@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useAutoFetchClanDiscoveryResults: function() {
-    return h
+    return _
   },
   useClanDiscoveryList: function() {
-    return _
+    return C
   }
 });
 var a = n("470079"),
@@ -18,9 +18,9 @@ var a = n("470079"),
   c = n("10473"),
   f = n("207796"),
   E = n("976757"),
-  C = n("308083");
+  h = n("308083");
 
-function h() {
+function _() {
   let e = (0, f.useClanDiscoveryUIStore)(e => e.setGame, i.default),
     t = (0, f.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default),
     n = (0, f.useClanDiscoveryUIStore)(e => e.selectedGames, i.default),
@@ -29,28 +29,28 @@ function h() {
       location: "clan_discovery"
     }),
     {
-      defaultGameId: h
+      defaultGameId: _
     } = (0, u.useClanPilotExperiment)("clan_discovery"),
-    _ = null != E ? E : h,
-    S = function() {
+    C = null != E ? E : _,
+    m = function() {
       let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery());
       return a.useEffect(() => {
         !e && (0, d.loadStaticClanDiscovery)()
       }, [e]), e
     }(),
-    m = (0, r.useStateFromStores)([c.default], () => c.default.isLoading());
+    S = (0, r.useStateFromStores)([c.default], () => c.default.isLoading());
   return a.useEffect(() => {
-    !(n.length > 0) && (_ === C.VALORANT_ID ? (e(f.ClanDiscoveryGame.VALORANT), t([_])) : _ === C.GENSHIN_ID && (e(f.ClanDiscoveryGame.GENSHIN), t([_])))
-  }, [e, t, _, n]), a.useEffect(() => {
-    S && (0, d.searchClanDiscovery)(s)
-  }, [s, S]), a.useEffect(() => {
+    !(n.length > 0) && (C === h.VALORANT_ID ? (e(f.ClanDiscoveryGame.VALORANT), t([C])) : C === h.GENSHIN_ID && (e(f.ClanDiscoveryGame.GENSHIN), t([C])))
+  }, [e, t, C, n]), a.useEffect(() => {
+    m && (0, d.searchClanDiscovery)(s)
+  }, [s, m]), a.useEffect(() => {
     o.default.getDetectableGames()
   }, []), {
-    loading: m
+    loading: S
   }
 }
 
-function _() {
+function C() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
     t = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, l()),
     n = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery()),

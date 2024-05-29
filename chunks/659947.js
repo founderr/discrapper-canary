@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return O
   }
 }), s("653041"), s("47120");
 var a = s("735250"),
@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("689938"),
   m = s("158200");
 
-function I() {}
-let g = [_.AutocompleterResultTypes.VOICE_CHANNEL];
+function g() {}
+let I = [_.AutocompleterResultTypes.VOICE_CHANNEL];
 
 function N(e) {
   e.setOptions({
@@ -46,13 +46,13 @@ function C() {
   }, "footer")
 }
 
-function O() {
+function A() {
   return (0, a.jsx)(h, {
     height: 8
   }, "header")
 }
 
-function A() {
+function p() {
   return (0, a.jsx)("div", {
     className: m.voiceListSearchEmpty,
     children: (0, a.jsx)(i.Text, {
@@ -64,7 +64,7 @@ function A() {
   })
 }
 
-function p(e) {
+function O(e) {
   var t, s;
   let {
     keybind: l
@@ -110,9 +110,9 @@ function R(e) {
     transitionState: t,
     onClose: s,
     onSelect: r
-  } = e, E = n.useId(), I = n.useRef(null), {
+  } = e, E = n.useId(), g = n.useRef(null), {
     mouseFocusEnabled: h,
-    enableMouseFocus: p,
+    enableMouseFocus: O,
     disableMouseFocus: R
   } = function() {
     let e = n.useRef(!1),
@@ -130,12 +130,12 @@ function R(e) {
   }(), {
     query: x,
     updateQuery: M,
-    queryResults: L
+    queryResults: v
   } = (0, o.default)({
     visible: !0,
-    autocompleterResultTypes: g,
+    autocompleterResultTypes: I,
     autocompleterBeforeCreateSearchContext: N
-  }), D = function(e) {
+  }), L = function(e) {
     let t = "" !== e,
       s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
         let e = S.default.getGuildId();
@@ -149,8 +149,8 @@ function R(e) {
       }, [t]);
     return t ? null : s
   }(x), {
-    focusedIndex: P,
-    setFocusedIndex: v
+    focusedIndex: D,
+    setFocusedIndex: P
   } = function(e) {
     let [t, s] = n.useState(0), a = n.useRef(e);
     return e !== a.current && 0 !== t && s(0), n.useEffect(() => void(a.current = e)), {
@@ -161,24 +161,24 @@ function R(e) {
   n.useEffect(() => {
     let {
       current: e
-    } = I;
-    !(null == e || e.isItemVisible(0, P, !0)) && e.scrollToIndex({
+    } = g;
+    !(null == e || e.isItemVisible(0, D, !0)) && e.scrollToIndex({
       section: 0,
-      row: P
+      row: D
     })
-  }, [P]);
-  let b = null != D ? D.length : L.length,
+  }, [D]);
+  let b = null != L ? L.length : v.length,
     j = (() => {
-      if (null != D) {
+      if (null != L) {
         var e;
-        return null === (e = D[P]) || void 0 === e ? void 0 : e.id
+        return null === (e = L[D]) || void 0 === e ? void 0 : e.id
       }
-      let t = L[P];
+      let t = v[D];
       if ((null == t ? void 0 : t.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
     className: m.voiceModalContainer,
-    onMouseMove: p,
+    onMouseMove: O,
     children: (0, a.jsxs)(i.ModalRoot, {
       transitionState: t,
       size: i.ModalSize.MEDIUM,
@@ -197,18 +197,18 @@ function R(e) {
                 break;
               case "enter": {
                 let e = (() => {
-                  if (null != D) return D[P];
-                  let e = L[P];
+                  if (null != L) return L[D];
+                  let e = v[D];
                   if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                 })();
                 null == e ? r(void 0) : r(e.id), s();
                 break
               }
               case "arrowup":
-                0 === P ? v(b - 1) : v(P - 1);
+                0 === D ? P(b - 1) : P(D - 1);
                 break;
               case "arrowdown":
-                P >= b - 1 ? v(0) : v(P + 1)
+                D >= b - 1 ? P(0) : P(D + 1)
             }
           },
           placeholder: f.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
@@ -219,18 +219,18 @@ function R(e) {
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === b && "" !== x && (0, a.jsx)(A, {}), (b > 0 || "" === x) && (0, a.jsx)(i.ListThin, {
+      }), 0 === b && "" !== x && (0, a.jsx)(p, {}), (b > 0 || "" === x) && (0, a.jsx)(i.ListThin, {
         innerId: E,
         innerRole: "listbox",
         "aria-label": f.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
-        ref: I,
+        ref: g,
         sections: [b],
         renderRow: function(e) {
           let {
             row: t
           } = e, n = (() => {
-            if (null != D) return D[t];
-            let e = L[t];
+            if (null != L) return L[t];
+            let e = v[t];
             if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
           })();
           if (null == n) return null;
@@ -240,19 +240,19 @@ function R(e) {
             id: n.id,
             channel: n,
             category: l,
-            focused: P === t,
-            onMouseEnter: () => h.current && v(t),
+            focused: D === t,
+            onMouseEnter: () => h.current && P(t),
             onClick: () => {
               r(n.id), s()
             },
-            onFocus: () => v(t),
+            onFocus: () => P(t),
             children: null != i ? (0, a.jsx)("div", {
               className: m.guildName,
               children: i.name
             }) : null
           }, n.id)
         },
-        renderListHeader: O,
+        renderListHeader: A,
         renderFooter: C,
         sectionHeight: 0,
         rowHeight: 34,
@@ -292,9 +292,9 @@ function x(e) {
     channel: s,
     id: s.id,
     category: n,
-    onClick: I,
-    onFocus: I,
-    onMouseEnter: I,
+    onClick: g,
+    onFocus: g,
+    onMouseEnter: g,
     focused: !1,
     children: null != r ? (0, a.jsx)("div", {
       className: m.guildName,

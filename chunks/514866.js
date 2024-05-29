@@ -1,17 +1,17 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = r("735250");
 r("470079");
 var i = r("120356"),
-  n = r.n(i),
-  l = r("481060"),
+  l = r.n(i),
+  n = r("481060"),
   o = r("45114"),
-  c = r("423932"),
-  s = r("601948"),
+  s = r("423932"),
+  c = r("601948"),
   d = r("139128"),
   u = r("611273");
 let h = () => {
@@ -36,28 +36,28 @@ let h = () => {
   })
 };
 
-function p() {
+function m() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: n()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(s.OverridePremiumTypeDropDown, {
+      className: l()(d.buttonsContainer, u.marginBottom20),
+      children: (0, a.jsx)(c.OverridePremiumTypeDropDown, {
         isDevTools: !0
       })
     }), (0, a.jsx)("div", {
-      className: n()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
+      className: l()(d.buttonsContainer, u.marginBottom20),
+      children: (0, a.jsx)(n.Button, {
         onClick: h,
         children: "Launch MFA"
       })
     }), (0, a.jsx)("div", {
-      className: n()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
-        onClick: () => (0, c.default)(),
+      className: l()(d.buttonsContainer, u.marginBottom20),
+      children: (0, a.jsx)(n.Button, {
+        onClick: () => (0, s.default)(),
         children: "Launch Vibing Wumpus"
       })
     }), (0, a.jsx)("div", {
-      className: n()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
+      className: l()(d.buttonsContainer, u.marginBottom20),
+      children: (0, a.jsx)(n.Button, {
         onClick: o.ackMessageRequestClear,
         children: "Clear Message Requests Read State"
       })

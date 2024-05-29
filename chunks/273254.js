@@ -18,10 +18,10 @@ function d(e) {
     selectedGame: n
   } = e, d = (0, i.useDiscoveryGameApplicationId)({
     selectedGame: n
-  }), c = a.useMemo(() => null == d ? [] : [d], [d]), f = (0, r.useFakeDiscoveryUpsellClans)(d), E = (0, l.useClanInfo)(null == t ? void 0 : t.id), [C, h] = (0, l.useFetchClanInfo)(null == t ? void 0 : t.id);
+  }), c = a.useMemo(() => null == d ? [] : [d], [d]), f = (0, r.useFakeDiscoveryUpsellClans)(d), E = (0, l.useClanInfo)(null == t ? void 0 : t.id), [h, _] = (0, l.useFetchClanInfo)(null == t ? void 0 : t.id);
   return a.useEffect(() => {
-    !C && null != t && h()
-  }, [t, C, h]), a.useMemo(() => {
+    !h && null != t && _()
+  }, [t, h, _]), a.useMemo(() => {
     var e;
     return null != E ? E : null == t ? null : {
       ...f[f.length - 1],

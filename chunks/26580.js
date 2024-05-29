@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoveryTagStyle: function() {
-    return _
+    return C
   },
   DiscoveryTags: function() {
-    return S
+    return m
   }
 }), n("47120");
 var a = n("735250"),
@@ -37,7 +37,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  C = e => {
+  h = e => {
     let {
       tags: t,
       onTagClick: n,
@@ -64,13 +64,13 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  h = e => {
+  _ = e => {
     let {
       className: t,
       count: n
     } = e;
     return (0, a.jsx)(r.Popout, {
-      renderPopout: () => (0, a.jsx)(C, {
+      renderPopout: () => (0, a.jsx)(h, {
         ...e
       }),
       position: "right",
@@ -83,36 +83,36 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  _ = {
+  C = {
     DEFAULT: c.tagDefault,
     LIGHT: c.tagLight,
     ALT: c.tagAlt
   },
-  S = e => {
+  m = e => {
     let {
       tags: t,
       onTagClick: n,
       className: l,
-      discoveryTagStyle: r = _.DEFAULT,
+      discoveryTagStyle: r = C.DEFAULT,
       hideOverflow: u = !1,
       guildId: d,
-      section: C
+      section: h
     } = e, {
-      ref: S,
-      width: m
+      ref: m,
+      width: S
     } = (0, o.default)(), [p, I] = s.useState(null), g = t.filter(e => !f.includes(e.toLowerCase()));
     return s.useLayoutEffect(() => {
-      if (null == S.current || null == m || 0 === m) return;
+      if (null == m.current || null == S || 0 === S) return;
       let e = 0,
         t = 0,
-        n = m - 40 - 4;
-      for (let a = 0; a < g.length && (t += S.current.children[a].clientWidth + 4, a === g.length - 1 ? !(t > n + 40) : !(t > n)); a++) {
+        n = S - 40 - 4;
+      for (let a = 0; a < g.length && (t += m.current.children[a].clientWidth + 4, a === g.length - 1 ? !(t > n + 40) : !(t > n)); a++) {
         ;
         e++
       }
       I(t => e <= g.length ? e : t)
-    }, [m, S, g]), (0, a.jsxs)("ul", {
-      ref: S,
+    }, [S, m, g]), (0, a.jsxs)("ul", {
+      ref: m,
       className: i()(c.tagContainer, l, {
         [c.invisible]: null == p
       }),
@@ -121,13 +121,13 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
         onClick: () => n(e),
         hide: null != p && t >= p,
         text: e
-      }, e)), !u && null != p && p < g.length && (0, a.jsx)(h, {
+      }, e)), !u && null != p && p < g.length && (0, a.jsx)(_, {
         className: r,
         onTagClick: n,
         tags: g.slice(p),
         count: g.length - p,
         guildId: d,
-        section: C
+        section: h
       })]
     })
   }

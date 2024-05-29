@@ -1,25 +1,25 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(t), i.d(t, {
   SlideDirection: function() {
-    return r
+    return a
   }
 });
-var a, r, i = s("735250"),
-  n = s("470079"),
-  l = s("120356"),
-  o = s.n(l),
-  u = s("748780"),
-  c = s("215569"),
-  d = s("721034");
-(a = r || (r = {}))[a.RIGHT = -1] = "RIGHT", a[a.LEFT = 1] = "LEFT";
-let _ = {
+var n, a, l = i("735250"),
+  s = i("470079"),
+  r = i("120356"),
+  o = i.n(r),
+  c = i("748780"),
+  d = i("215569"),
+  u = i("721034");
+(n = a || (a = {}))[n.RIGHT = -1] = "RIGHT", n[n.LEFT = 1] = "LEFT";
+let h = {
   friction: 7,
   tension: 40,
   clamp: !0
 };
-class E extends n.PureComponent {
+class p extends s.PureComponent {
   componentWillEnter(e) {
-    this._animated.setValue(-this.props.direction), u.default.spring(this._animated, {
+    this._animated.setValue(-this.props.direction), c.default.spring(this._animated, {
       toValue: 0,
       ...this.props.springSettings
     }).start(e)
@@ -28,13 +28,13 @@ class E extends n.PureComponent {
     this._animated.setValue(0)
   }
   componentWillLeave(e) {
-    u.default.spring(this._animated, {
+    c.default.spring(this._animated, {
       toValue: this.props.direction,
       ...this.props.springSettings
     }).start(e)
   }
   getStyle() {
-    let e = u.default.accelerate({
+    let e = c.default.accelerate({
       transform: [{
         translateX: this._animated.interpolate({
           inputRange: [0, 1],
@@ -48,39 +48,39 @@ class E extends n.PureComponent {
     })), e
   }
   render() {
-    return (0, i.jsx)(u.default.div, {
+    return (0, l.jsx)(c.default.div, {
       style: this.getStyle(),
-      className: d.item,
+      className: u.item,
       children: this.props.children
     })
   }
   constructor(e) {
-    var t, s, a;
-    super(e), t = this, a = void 0, (s = "_animated") in t ? Object.defineProperty(t, s, {
-      value: a,
+    var t, i, n;
+    super(e), t = this, n = void 0, (i = "_animated") in t ? Object.defineProperty(t, i, {
+      value: n,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[s] = a, this._animated = new u.default.Value(-1 * e.direction)
+    }) : t[i] = n, this._animated = new c.default.Value(-1 * e.direction)
   }
 }
 t.default = e => {
   let {
     children: t,
-    step: s,
-    direction: a,
-    className: r,
-    springSettings: n = _,
-    fadeInOut: l = !1
+    step: i,
+    direction: n,
+    className: a,
+    springSettings: s = h,
+    fadeInOut: r = !1
   } = e;
-  return (0, i.jsx)(c.TransitionGroup, {
+  return (0, l.jsx)(d.TransitionGroup, {
     component: "div",
-    className: o()(d.animator, r),
-    children: (0, i.jsx)(E, {
-      direction: a,
-      springSettings: n,
-      fadeInOut: l,
+    className: o()(u.animator, a),
+    children: (0, l.jsx)(p, {
+      direction: n,
+      springSettings: s,
+      fadeInOut: r,
       children: t
-    }, s)
+    }, i)
   })
 }

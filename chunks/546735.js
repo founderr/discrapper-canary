@@ -20,18 +20,18 @@ function i(e) {
     description: d,
     tag: c,
     verificationForm: f
-  } = t, E = a.useMemo(() => null != f && f.formFields.some(e => !(0, s.isTermsFormField)(e)), [f]), C = a.useMemo(() => Array.from(u).filter(e => !l.ALL_TRAITS_SET.has(e) && !l.LANGUAGES_SET.has(e)), [u]), h = a.useCallback(() => {
+  } = t, E = a.useMemo(() => null != f && f.formFields.some(e => !(0, s.isTermsFormField)(e)), [f]), h = a.useMemo(() => Array.from(u).filter(e => !l.ALL_TRAITS_SET.has(e) && !l.LANGUAGES_SET.has(e)), [u]), _ = a.useCallback(() => {
     n(i + 1)
-  }, [i, n]), _ = a.useCallback(() => {
+  }, [i, n]), C = a.useCallback(() => {
     n(i - 1)
-  }, [i, n]), S = a.useCallback(e => n(e), [n]), m = a.useMemo(() => {
+  }, [i, n]), m = a.useCallback(e => n(e), [n]), S = a.useMemo(() => {
     switch (i) {
       case l.ClanSetupSteps.GAMES:
         return 0 === r.size;
       case l.ClanSetupSteps.PLAYSTYLE:
         return o === l.ClanPlaystyles.NONE;
       case l.ClanSetupSteps.INTERESTS:
-        return C.length < 3;
+        return h.length < 3;
       case l.ClanSetupSteps.DESCRIPTION:
         return 0 === d.length;
       case l.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
@@ -41,12 +41,12 @@ function i(e) {
       default:
         return !1
     }
-  }, [i, d.length, r.size, E, C.length, o, c.length]), p = 0 === i;
+  }, [i, d.length, r.size, E, h.length, o, c.length]), p = 0 === i;
   return a.useMemo(() => ({
-    onStepClick: S,
-    onNextClick: h,
-    onBackClick: _,
-    isNextDisabled: m,
+    onStepClick: m,
+    onNextClick: _,
+    onBackClick: C,
+    isNextDisabled: S,
     isBackDisabled: p
-  }), [p, m, _, h, S])
+  }), [p, S, C, _, m])
 }

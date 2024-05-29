@@ -8,11 +8,11 @@ var u = e.exports = {
   get: {}
 };
 
-function l(e, t, r) {
+function c(e, t, r) {
   return Math.min(Math.max(t, e), r)
 }
 
-function c(e) {
+function l(e) {
   var t = Math.round(e).toString(16).toUpperCase();
   return t.length < 2 ? "0" + t : t
 }
@@ -52,14 +52,14 @@ u.get = function(e) {
     t[4] && (t[5] ? o[3] = .01 * parseFloat(t[4]) : o[3] = parseFloat(t[4]))
   } else if (!(t = e.match(/^(\w+)$/))) return null;
   else return "transparent" === t[1] ? [0, 0, 0, 0] : s.call(a, t[1]) ? ((o = a[t[1]])[3] = 1, o) : null;
-  for (r = 0; r < 3; r++) o[r] = l(o[r], 0, 255);
-  return o[3] = l(o[3], 0, 1), o
+  for (r = 0; r < 3; r++) o[r] = c(o[r], 0, 255);
+  return o[3] = c(o[3], 0, 1), o
 }, u.get.hsl = function(e) {
   if (!e) return null;
   var t = e.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
   if (t) {
     var r = parseFloat(t[4]);
-    return [(parseFloat(t[1]) % 360 + 360) % 360, l(parseFloat(t[2]), 0, 100), l(parseFloat(t[3]), 0, 100), l(isNaN(r) ? 1 : r, 0, 1)]
+    return [(parseFloat(t[1]) % 360 + 360) % 360, c(parseFloat(t[2]), 0, 100), c(parseFloat(t[3]), 0, 100), c(isNaN(r) ? 1 : r, 0, 1)]
   }
   return null
 }, u.get.hwb = function(e) {
@@ -67,12 +67,12 @@ u.get = function(e) {
   var t = e.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
   if (t) {
     var r = parseFloat(t[4]);
-    return [(parseFloat(t[1]) % 360 + 360) % 360, l(parseFloat(t[2]), 0, 100), l(parseFloat(t[3]), 0, 100), l(isNaN(r) ? 1 : r, 0, 1)]
+    return [(parseFloat(t[1]) % 360 + 360) % 360, c(parseFloat(t[2]), 0, 100), c(parseFloat(t[3]), 0, 100), c(isNaN(r) ? 1 : r, 0, 1)]
   }
   return null
 }, u.to.hex = function() {
   var e = n(arguments);
-  return "#" + c(e[0]) + c(e[1]) + c(e[2]) + (e[3] < 1 ? c(Math.round(255 * e[3])) : "")
+  return "#" + l(e[0]) + l(e[1]) + l(e[2]) + (e[3] < 1 ? l(Math.round(255 * e[3])) : "")
 }, u.to.rgb = function() {
   var e = n(arguments);
   return e.length < 4 || 1 === e[3] ? "rgb(" + Math.round(e[0]) + ", " + Math.round(e[1]) + ", " + Math.round(e[2]) + ")" : "rgba(" + Math.round(e[0]) + ", " + Math.round(e[1]) + ", " + Math.round(e[2]) + ", " + e[3] + ")"

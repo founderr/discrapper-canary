@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return M
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,11 +15,11 @@ var a = n("735250"),
   c = n("607070"),
   f = n("207796"),
   E = n("729017"),
-  C = n("889711"),
-  h = n("931240"),
-  _ = n("970606"),
-  S = n("963202"),
-  m = n("650461"),
+  h = n("889711"),
+  _ = n("931240"),
+  C = n("970606"),
+  m = n("963202"),
+  S = n("650461"),
   p = n("432632"),
   I = n("35313"),
   g = n("284019"),
@@ -36,22 +36,22 @@ let L = {
   clamp: !0
 };
 
-function P(e) {
+function M(e) {
   let {
     guildId: t,
     onClose: n
-  } = e, l = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), P = (0, m.useDefaultClanProgress)(), {
-    progress: y,
-    errors: M,
-    submitting: D
-  } = (0, u.useStateFromStoresObject)([m.default], () => {
+  } = e, l = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, S.useDefaultClanProgress)(), {
+    progress: x,
+    errors: P,
+    submitting: y
+  } = (0, u.useStateFromStoresObject)([S.default], () => {
     var e, n, a, s;
     return {
-      progress: null !== (s = null === (e = m.default.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : P,
-      errors: null === (n = m.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
-      submitting: null === (a = m.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
+      progress: null !== (s = null === (e = S.default.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : M,
+      errors: null === (n = S.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
+      submitting: null === (a = S.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
     }
-  }), x = (0, p.useDefaultGameIdForClan)(t, "ClanSetupModal"), b = s.useMemo(() => (0, v.getClanSetupProgressSteps)(M), [M]), [U, j] = s.useState(!1), [G, w] = s.useState(window.innerWidth), [k, B] = s.useState(1), [F, H] = s.useState(!0), V = (0, I.useFullScreenModalAnimationStyle)(), Y = (0, o.useSpring)({
+  }), D = (0, p.useDefaultGameIdForClan)(t, "ClanSetupModal"), b = s.useMemo(() => (0, v.getClanSetupProgressSteps)(P), [P]), [U, j] = s.useState(!1), [G, w] = s.useState(window.innerWidth), [k, B] = s.useState(1), [F, H] = s.useState(!0), V = (0, I.useFullScreenModalAnimationStyle)(), Y = (0, o.useSpring)({
     opacity: k,
     config: L,
     onStart: () => H(!0),
@@ -83,43 +83,43 @@ function P(e) {
     },
     config: L,
     immediate: l
-  }), q = s.useCallback(e => {
-    if (e === b.length) B(0), (0, _.trackConvertStepViewed)(t, "signature");
+  }), Q = s.useCallback(e => {
+    if (e === b.length) B(0), (0, C.trackConvertStepViewed)(t, "signature");
     else if (0 === k) B(1);
     else {
       var n;
-      h.updateClanSetup(t, {
+      _.updateClanSetup(t, {
         currentStep: e,
-        furthestStep: Math.max(null !== (n = y.furthestStep) && void 0 !== n ? n : 0, e)
+        furthestStep: Math.max(null !== (n = x.furthestStep) && void 0 !== n ? n : 0, e)
       })
     }
-  }, [k, t, y.furthestStep, b.length]);
+  }, [k, t, x.furthestStep, b.length]);
   s.useEffect(() => {
-    (0, _.trackConvertStepViewed)(t, (0, _.getProgressStepAnalyticsName)(y.currentStep))
-  }, [t, y.currentStep]), s.useEffect(() => {
-    let e = (0, C.getResizeObserver)((0, r.debounce)(() => w(window.innerWidth), 250));
-    return (0, C.watch)(e, document.body), () => (0, C.unwatch)(e, document.body)
+    (0, C.trackConvertStepViewed)(t, (0, C.getProgressStepAnalyticsName)(x.currentStep))
+  }, [t, x.currentStep]), s.useEffect(() => {
+    let e = (0, h.getResizeObserver)((0, r.debounce)(() => w(window.innerWidth), 250));
+    return (0, h.watch)(e, document.body), () => (0, h.unwatch)(e, document.body)
   }, [k, F]), s.useEffect(() => {
-    null != x && (0, h.updateClanSetup)(t, {
-      requiredGameId: x
+    null != D && (0, _.updateClanSetup)(t, {
+      requiredGameId: D
     })
-  }, [x, t]);
-  let Q = s.useMemo(() => null != M && Object.values(M).some(e => null != e), [M]),
-    Z = s.useMemo(() => null != M && Object.values(M).length > 0 ? (0, v.getClanSetupProgressSteps)(M).find(e => e.hasError) : null, [M]),
+  }, [D, t]);
+  let q = s.useMemo(() => null != P && Object.values(P).some(e => null != e), [P]),
+    Z = s.useMemo(() => null != P && Object.values(P).length > 0 ? (0, v.getClanSetupProgressSteps)(P).find(e => e.hasError) : null, [P]),
     X = s.useCallback(() => {
-      B(1), h.updateClanSetup(t, {
+      B(1), _.updateClanSetup(t, {
         currentStep: null == Z ? void 0 : Z.index
       })
     }, [null == Z ? void 0 : Z.index, t]),
     {
       guilds: J
-    } = (0, S.useClanPrepilotExperimentForAllGuilds)({
+    } = (0, m.useClanPrepilotExperimentForAllGuilds)({
       location: "ClanDiscoveryAdminContainer",
       includeConverted: !1
     }),
     {
       enableApplication: $
-    } = (0, S.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer"),
+    } = (0, m.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer"),
     ee = s.useCallback(() => {
       0 === J.filter(e => e.id !== t).length && $ ? (0, f.setClanDiscoveryMode)(f.ClanDiscoveryMode.GET_STARTED) : (0, f.setClanDiscoveryMode)(f.ClanDiscoveryMode.ADMIN_UPSELL)
     }, [J, t, $]),
@@ -129,9 +129,9 @@ function P(e) {
         onSuccess: () => {
           ee(), n()
         },
-        progress: y
+        progress: x
       })
-    }, [t, y, ee, n]),
+    }, [t, x, ee, n]),
     en = s.useRef(null),
     ea = null != Z ? (0, a.jsxs)("div", {
       className: O.tooltipContents,
@@ -186,8 +186,8 @@ function P(e) {
             }),
             children: (0, a.jsx)(T.default, {
               steps: b,
-              progress: y,
-              updateCurrentStep: q,
+              progress: x,
+              updateCurrentStep: Q,
               animationStyle: Y,
               animationClassName: i()({
                 [O.hidden]: !F
@@ -212,7 +212,7 @@ function P(e) {
             sidebarWidth: 380,
             windowWidth: G,
             transition: K,
-            brandPrimaryColor: y.brandPrimaryColor
+            brandPrimaryColor: x.brandPrimaryColor
           })
         })]
       }), z((e, t) => t && (0, a.jsx)(o.animated.div, {
@@ -227,9 +227,9 @@ function P(e) {
           forceOpen: null != Z,
           children: e => (0, a.jsx)(g.default, {
             ...e,
-            themeColor: y.brandPrimaryColor,
-            disabled: !U || Q,
-            submitting: D,
+            themeColor: x.brandPrimaryColor,
+            disabled: !U || q,
+            submitting: y,
             look: d.Button.Looks.FILLED,
             size: d.Button.Sizes.MEDIUM,
             color: d.Button.Colors.BRAND,

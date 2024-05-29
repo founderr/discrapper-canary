@@ -1,14 +1,14 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   useFetchProfileEffects: function() {
     return s
   }
 });
-var n = r("470079"),
-  a = r("365943");
+var a = n("470079"),
+  r = n("365943");
 
 function s() {
-  n.useEffect(() => {
-    (0, a.fetchUserProfileEffects)()
+  a.useEffect(() => {
+    (0, r.fetchUserProfileEffects)()
   }, [])
 }

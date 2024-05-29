@@ -1,18 +1,18 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   useFetchCollectiblesProductCategory: function() {
-    return o
+    return n
   }
-}), a("47120");
-var r = a("399606"),
-  s = a("597688"),
-  n = a("223143");
+}), r("47120");
+var a = r("399606"),
+  o = r("597688"),
+  l = r("223143");
 
-function o(e) {
-  (0, n.useMaybeFetchCollectiblesCategories)();
-  let [t, a] = (0, r.useStateFromStoresArray)([s.default], () => [s.default.isFetchingCategories, s.default.getCategoryForProduct(e)]);
+function n(e) {
+  (0, l.useMaybeFetchCollectiblesCategories)();
+  let [t, r] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.isFetchingCategories, o.default.getCategoryForProduct(e)]);
   return {
     isFetching: t,
-    category: a
+    category: r
   }
 }

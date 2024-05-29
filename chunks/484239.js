@@ -8,36 +8,36 @@ var r = s("120356"),
   l = s("314684"),
   o = s("176782"),
   u = s("743612"),
-  c = s("735825"),
-  d = s("955627"),
+  d = s("735825"),
+  c = s("955627"),
   _ = s("721239"),
   E = s("557634"),
-  R = s("992429");
+  T = s("992429");
 t.default = e => {
   var t;
   let s, r, {
-      title: T,
-      titleClassName: f,
-      perkImage: m,
-      isCarousel: I,
-      onCtaClick: S,
-      perkComponent: p,
-      subtitle: A = "",
-      descriptionCta: g = "",
-      cardVariant: N,
-      subtitleClassName: M
+      title: I,
+      titleClassName: R,
+      perkImage: f,
+      isCarousel: S,
+      onCtaClick: m,
+      perkComponent: A,
+      subtitle: p = "",
+      descriptionCta: N = "",
+      cardVariant: g,
+      subtitleClassName: C
     } = e,
-    C = (0, o.useCardVariantsInfo)(N),
-    P = (0, l.useFreeBoostUserTenureReward)(),
-    O = (null == P ? void 0 : P.nitroTenureStatus) === c.NitroRewardStatus.REDEEMABLE;
-  switch (null == P ? void 0 : P.nitroTenureStatus) {
-    case c.NitroRewardStatus.REDEEMABLE:
-      s = R, r = "unlocked icon";
+    P = (0, o.useCardVariantsInfo)(g),
+    O = (0, l.useFreeBoostUserTenureReward)(),
+    M = (null == O ? void 0 : O.nitroTenureStatus) === d.NitroRewardStatus.REDEEMABLE;
+  switch (null == O ? void 0 : O.nitroTenureStatus) {
+    case d.NitroRewardStatus.REDEEMABLE:
+      s = T, r = "unlocked icon";
       break;
-    case c.NitroRewardStatus.PENDING:
+    case d.NitroRewardStatus.PENDING:
       s = _, r = "locked icon";
       break;
-    case c.NitroRewardStatus.REDEEMED:
+    case d.NitroRewardStatus.REDEEMED:
       s = E, r = "thumbs up icon";
       break;
     default:
@@ -45,37 +45,37 @@ t.default = e => {
   }
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: i()(d.cover, d.below)
+      className: i()(c.cover, c.below)
     }), (0, a.jsx)(u.default, {
-      title: T,
+      title: I,
       shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-      cardVariantStyleInfo: C,
-      titleClassName: f,
-      subtitle: A,
-      subtitleClassName: M
-    }), null != m && (0, a.jsx)("img", {
-      src: m,
+      cardVariantStyleInfo: P,
+      titleClassName: R,
+      subtitle: p,
+      subtitleClassName: C
+    }), null != f && (0, a.jsx)("img", {
+      src: f,
       alt: "",
       className: i()({
-        [d.cardImage]: !I,
-        [d.carouselCardImage]: I
+        [c.cardImage]: !S,
+        [c.carouselCardImage]: S
       })
-    }), null != p && (0, a.jsx)(a.Fragment, {
+    }), null != A && (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)("div", {
-        className: d.cardIllustrationNoHover,
+        className: c.cardIllustrationNoHover,
         children: [(0, a.jsx)("div", {
-          className: d.cardComponent,
-          children: p
-        }), 0 !== g.length && null != S && (0, a.jsx)(n.Button, {
-          disabled: !O,
+          className: c.cardComponent,
+          children: A
+        }), 0 !== N.length && null != m && (0, a.jsx)(n.Button, {
+          disabled: !M,
           fullWidth: !0,
-          onClick: S,
+          onClick: m,
           children: (0, a.jsxs)("div", {
-            className: null == C ? void 0 : null === (t = C.descriptionCta) || void 0 === t ? void 0 : t.className,
+            className: null == P ? void 0 : null === (t = P.descriptionCta) || void 0 === t ? void 0 : t.className,
             children: [(0, a.jsx)("img", {
               alt: r,
               src: s
-            }), g]
+            }), N]
           })
         })]
       })

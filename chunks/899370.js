@@ -1,15 +1,15 @@
 "use strict";
 n.r(t);
-var s, a, i, l, r = n("973361"),
+var s, a, i, r, l = n("973361"),
   o = n("442837"),
   u = n("570140"),
   d = n("358085"),
   c = n("723359");
 let f = null,
   h = "underage";
-class E extends(l = o.default.Store) {
+class E extends(r = o.default.Store) {
   isUnderageAnonymous() {
-    return d.isPlatformEmbedded ? !!(null != f && f + c.AGE_GATE_REGISTER_TIMEOUT_MS > Date.now()) || !1 : null != r.parse(document.cookie)[h]
+    return d.isPlatformEmbedded ? !!(null != f && f + c.AGE_GATE_REGISTER_TIMEOUT_MS > Date.now()) || !1 : null != l.parse(document.cookie)[h]
   }
 }
 i = "AgeGateStore", (a = "displayName") in(s = E) ? Object.defineProperty(s, a, {

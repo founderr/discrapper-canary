@@ -31,39 +31,39 @@ function v(e) {
     participants: t,
     onClick: n,
     onDoubleClick: v,
-    onContextMenu: x,
-    channel: N,
+    onContextMenu: N,
+    channel: x,
     className: M,
     inCall: R,
     totalNumberOfParticipants: y,
     paused: L = !1
-  } = e, O = (0, o.useAppContext)() === I.AppContext.POPOUT, j = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(N.guild_id), [N.guild_id]), {
+  } = e, O = (0, o.useAppContext)() === I.AppContext.POPOUT, j = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(x.guild_id), [x.guild_id]), {
     dismissedActivityEntryPointTileChannel: P
-  } = (0, _.useChannelCallVideoGridStore)(), D = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(N.id), [N]), b = l.useCallback(() => {
+  } = (0, _.useChannelCallVideoGridStore)(), D = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(x.id), [x]), b = l.useCallback(() => {
     _.useChannelCallVideoGridStore.setState({
-      dismissedActivityEntryPointTileChannel: N.id
+      dismissedActivityEntryPointTileChannel: x.id
     })
-  }, [N.id]);
+  }, [x.id]);
   l.useEffect(() => {
-    null != P && N.id !== P && _.useChannelCallVideoGridStore.setState({
+    null != P && x.id !== P && _.useChannelCallVideoGridStore.setState({
       dismissedActivityEntryPointTileChannel: null
     })
-  }, [N.id, P]);
-  let U = (0, i.useStateFromStores)([E.default], () => N.isPrivate() || (0, m.canViewInviteModal)(E.default, j, N), [j, N]),
-    F = (null == j ? void 0 : j.afkChannelId) === N.id,
-    w = N.userLimit <= 0 || N.userLimit > 1,
-    k = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(N.id).length <= 0),
-    H = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
-    G = (0, d.useEmbeddedActivityLaunchability)(N.id) !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
-    B = null != P && P === N.id,
+  }, [x.id, P]);
+  let U = (0, i.useStateFromStores)([E.default], () => x.isPrivate() || (0, m.canViewInviteModal)(E.default, j, x), [j, x]),
+    F = (null == j ? void 0 : j.afkChannelId) === x.id,
+    w = x.userLimit <= 0 || x.userLimit > 1,
+    k = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(x.id).length <= 0),
+    B = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
+    H = (0, d.useEmbeddedActivityLaunchability)(x.id) !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
+    G = null != P && P === x.id,
     V = t.map(e => t => (0, a.jsx)(S.default, {
       participant: e,
-      channel: N,
+      channel: x,
       className: A.tile,
       paused: L,
       onClick: n,
       onDoubleClick: v,
-      onContextMenu: x,
+      onContextMenu: N,
       inCall: R,
       width: t,
       inPopout: O
@@ -75,12 +75,12 @@ function v(e) {
       total_participants: y,
       can_invite: U,
       is_afk_channel: F,
-      channel_user_limit: N.userLimit
+      channel_user_limit: x.userLimit
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != j && !F && (!(D >= 2) || !k || G || H || B ? w && 1 === D && U && (k && !G ? V.push(e => (0, a.jsx)(g.ActivityEntryPointTile, {
-    channel: N,
+  }, []), null != j && !F && (!(D >= 2) || !k || H || B || G ? w && 1 === D && U && (k && !H ? V.push(e => (0, a.jsx)(g.ActivityEntryPointTile, {
+    channel: x,
     guild: j,
     width: e,
     inPopout: O,
@@ -88,11 +88,11 @@ function v(e) {
     userParticipantCount: D
   })) : V.push(e => (0, a.jsx)(T.default, {
     width: e,
-    channel: N,
+    channel: x,
     guild: j,
     inPopout: O
   }))) : V.push(e => (0, a.jsx)(g.ActivityEntryPointTile, {
-    channel: N,
+    channel: x,
     guild: j,
     width: e,
     inPopout: O,

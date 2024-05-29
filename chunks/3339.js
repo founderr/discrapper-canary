@@ -6,8 +6,8 @@ var a = r("599295"),
   o = r.n(s),
   i = r("639519"),
   u = r.n(i),
-  l = r("863850"),
-  c = ["data"];
+  c = r("863850"),
+  l = ["data"];
 
 function f(e) {
   var t = Object.getOwnPropertyNames(e).length;
@@ -15,8 +15,8 @@ function f(e) {
 }
 var b = function(e) {
   var t = e.data,
-    r = (0, n.default)(e, c);
-  return o().createElement(l.default, (0, a.default)({}, r, {
+    r = (0, n.default)(e, l);
+  return o().createElement(c.default, (0, a.default)({}, r, {
     data: t,
     nodeType: "Object",
     nodeTypeIndicator: "Error" === r.nodeType ? "Error()" : "{}",
