@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   clearPurchaseError: function() {
-    return p
+    return U
   },
   fetchPublishedSKU: function() {
     return I
@@ -15,20 +15,11 @@ n.r(t), n.d(t, {
   fetchTestSKUsForApplication: function() {
     return C
   },
-  grantChannelBranchEntitlement: function() {
-    return R
-  },
   purchaseSKU: function() {
-    return U
+    return N
   },
   resendPaymentVerificationEmail: function() {
     return M
-  },
-  showPurchaseConfirmationStep: function() {
-    return h
-  },
-  updateSKUPaymentIsGift: function() {
-    return O
   }
 }), n("411104");
 var r = n("544891"),
@@ -127,37 +118,10 @@ async function P(e, t, n, r) {
   }
   return i
 }
-async function R(e, t, n) {
-  u.default.dispatch({
-    type: "SKU_PURCHASE_START",
-    applicationId: e,
-    skuId: n
-  });
-  try {
-    let e = await r.HTTP.post({
-      url: T.Endpoints.CHANNEL_ENTITLEMENT_GRANT(t),
-      oldFormErrors: !0
-    });
-    return u.default.dispatch({
-      type: "SKU_PURCHASE_SUCCESS",
-      skuId: n,
-      entitlements: e.body,
-      libraryApplications: []
-    }), e.body
-  } catch (r) {
-    let t = new i.BillingError(r);
-    throw u.default.dispatch({
-      type: "SKU_PURCHASE_FAIL",
-      applicationId: e,
-      skuId: n,
-      error: t
-    }), t
-  }
-}
-let N = {
+let R = {
   isGift: !1
 };
-async function U(e, t, n) {
+async function N(e, t, n) {
   let {
     paymentSource: l,
     expectedAmount: s,
@@ -166,10 +130,10 @@ async function U(e, t, n) {
     isGift: I,
     giftInfoOptions: C,
     subscriptionPlanId: P,
-    loadId: R,
-    countryCode: U
+    loadId: N,
+    countryCode: M
   } = {
-    ...N,
+    ...R,
     ...n
   };
   u.default.wait(() => {
@@ -179,21 +143,21 @@ async function U(e, t, n) {
       skuId: t
     })
   });
-  let M = E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e);
+  let U = E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e);
   try {
     let e = {
       gift: I,
       sku_subscription_plan_id: P,
       gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(l),
-      load_id: R
+      load_id: N
     };
-    if (M) e.test_mode = !0;
+    if (U) e.test_mode = !0;
     else {
       if (null != l && (e.payment_source_id = l.id, e.payment_source_token = await (0, A.createPaymentSourceToken)(l), T.ADYEN_PAYMENT_SOURCES.has(l.type))) {
         let t = await (0, A.popupBridgeState)(l.type);
         e.return_url = (0, r.getAPIBaseURL)() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(l.type, null != t ? t : "", "success")
       }
-      null != s && (e.expected_amount = s), null != c && (e.expected_currency = c), e.gift_info_options = C, null != U && (e.country_code = U), e.purchase_token = (0, d.getPurchaseToken)()
+      null != s && (e.expected_amount = s), null != c && (e.expected_currency = c), e.gift_info_options = C, null != M && (e.country_code = M), e.purchase_token = (0, d.getPurchaseToken)()
     }
     let n = await r.HTTP.post({
       url: T.Endpoints.STORE_SKU_PURCHASE(t),
@@ -246,21 +210,8 @@ async function M() {
   }
 }
 
-function p() {
+function U() {
   u.default.dispatch({
     type: "SKU_PURCHASE_CLEAR_ERROR"
-  })
-}
-
-function h() {
-  u.default.wait(() => u.default.dispatch({
-    type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP"
-  }))
-}
-
-function O(e) {
-  u.default.dispatch({
-    type: "SKU_PURCHASE_UPDATE_IS_GIFT",
-    isGift: e
   })
 }

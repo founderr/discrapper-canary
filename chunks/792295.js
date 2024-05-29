@@ -85,4 +85,4 @@ d(c, "Header", l.ModalHeader), d(c, "Footer", l.ModalFooter), d(c, "Content", l.
   fullscreenOnMobile: !0,
   size: _.SMALL,
   tag: "div"
-}), t.default = c
+})

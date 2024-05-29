@@ -1,46 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
-  canUserInstall: function() {
-    return E
-  },
   getReadablePreorderReleaseDate: function() {
-    return m
+    return f
   },
   getSKUIdFromURL: function() {
-    return f
+    return d
   }
 }), n("757143"), n("47120");
 var s = n("913527"),
   a = n.n(s),
-  l = n("266067"),
-  i = n("358085"),
-  r = n("73346"),
-  o = n("981631");
+  l = n("266067");
+n("358085"), n("73346");
+var i = n("981631");
 n("689938");
-let u = {},
-  d = {},
-  c = Object.freeze({
+let r = {},
+  o = {},
+  u = Object.freeze({
     ALL: -1,
-    ...o.SKUGenres
+    ...i.SKUGenres
   });
 
-function f(e) {
+function d(e) {
   let t = (0, l.matchPath)(e, {
-    path: o.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug")
+    path: i.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug")
   });
   return null != t ? t.params.skuId : null
 }
-
-function E(e) {
-  let t = (0, r.nativePlatformTypeToSKUOperatingSystem)((0, i.getPlatform)());
-  return e.type === o.SKUTypes.DURABLE_PRIMARY && null != t && e.supportedOperatingSystems.includes(t)
-}
-Object.keys(c).forEach(e => {
+Object.keys(u).forEach(e => {
   let t = e.toLowerCase().replace(/_/g, "-"),
-    n = c[e];
-  u[t] = n, d[n] = t
+    n = u[e];
+  r[t] = n, o[n] = t
 });
-let _ = [
+let c = [
   ["YYYY-MM-DD", "MMMM DD, Y"],
   ["YYYY-MM", "MMMM Y"],
   ["MM-DD", "MMMM DD"],
@@ -48,15 +39,15 @@ let _ = [
   ["YYYY", "Y"]
 ];
 
-function m(e) {
+function f(e) {
   let {
     preorderReleaseAt: t,
     preorderApproximateReleaseDate: n
   } = e;
   if (null != t) return t.format("MMMM DD");
   if (null == n) return null;
-  for (let e = 0; e < _.length; e++) {
-    let [t, s] = _[e], l = a()(n, t, !0);
+  for (let e = 0; e < c.length; e++) {
+    let [t, s] = c[e], l = a()(n, t, !0);
     if (l.isValid()) return l.format(s)
   }
   return n

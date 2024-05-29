@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return c
   }
 });
 var s = n("735250");
@@ -11,50 +11,43 @@ var a = n("442837"),
   i = n("283595"),
   r = n("55563"),
   o = n("780570"),
-  u = n("404133"),
-  d = n("701560"),
-  c = n("785547");
+  u = n("701560"),
+  d = n("785547");
 
-function f(e) {
+function c(e) {
   let {
     application: t,
     fullWidth: n = !1,
-    size: f = l.Button.Sizes.LARGE,
-    color: E,
-    customDisabledColor: _,
-    hideNotLaunchable: m,
-    tooltipPosition: T,
-    onClick: I,
-    className: p,
-    source: h,
-    storeListingAnalyticsProperties: N,
-    pauseAnimation: S,
-    hover: C,
-    innerClassName: g
-  } = e, A = {
+    size: c = l.Button.Sizes.LARGE,
+    color: f,
+    customDisabledColor: E,
+    hideNotLaunchable: _,
+    tooltipPosition: m,
+    onClick: T,
+    className: I,
+    source: p,
+    hover: h,
+    innerClassName: N
+  } = e, S = {
     fullWidth: n,
-    size: f,
-    color: E,
-    customDisabledColor: _,
-    tooltipPosition: T,
-    onClick: I,
-    className: p,
-    hover: C,
-    innerClassName: g
-  }, M = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), R = null != M ? M.sku.id : null, v = null != R ? R : t.primarySkuId, O = (0, a.useStateFromStores)([r.default], () => null != v && !r.default.didFetchingSkuFail(v));
-  return null != M && (0, o.isUserEntitledToLibraryApplication)(M) ? (0, s.jsx)(c.default, {
-    ...A,
-    libraryApplication: M,
-    source: h
-  }) : O ? (0, s.jsx)(u.default, {
-    ...A,
-    skuId: null != M ? M.sku.id : null,
-    applicationId: t.id,
-    pauseAnimation: S,
-    storeListingAnalyticsProperties: N
-  }) : (0, s.jsx)(d.default, {
-    ...A,
-    hideNotLaunchable: m,
+    size: c,
+    color: f,
+    customDisabledColor: E,
+    tooltipPosition: m,
+    onClick: T,
+    className: I,
+    hover: h,
+    innerClassName: N
+  }, C = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), g = null != C ? C.sku.id : null, A = null != g ? g : t.primarySkuId, M = (0, a.useStateFromStores)([r.default], () => null != A && !r.default.didFetchingSkuFail(A));
+  return null != C && (0, o.isUserEntitledToLibraryApplication)(C) ? (0, s.jsx)(d.default, {
+    ...S,
+    libraryApplication: C,
+    source: p
+  }) : M ? (0, s.jsx)("div", {
+    children: "deprecated!"
+  }) : (0, s.jsx)(u.default, {
+    ...S,
+    hideNotLaunchable: _,
     applicationId: t.id
   })
 }

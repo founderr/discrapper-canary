@@ -1,31 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
-  getApplicationStoreListingLocation: function() {
-    return R
-  },
   getAssetURL: function() {
-    return g
+    return O
   },
   getNonSocialRecommendationReasons: function() {
-    return b
+    return D
   },
   getPrimarySKUForApplication: function() {
-    return M
+    return R
   },
   getSocialRecommendationReasons: function() {
-    return P
-  },
-  getStoreListingLocation: function() {
-    return C
-  },
-  httpGetWithCountryCodeQuery: function() {
     return L
   },
-  nativePlatformTypeToSKUOperatingSystem: function() {
-    return v
+  getStoreListingLocation: function() {
+    return p
   },
-  skuOperatingSystemToText: function() {
-    return D
+  httpGetWithCountryCodeQuery: function() {
+    return C
   }
 }), n("653041"), n("998459"), n("47120"), n("411104"), n("789020");
 var i = n("392711"),
@@ -43,15 +34,14 @@ var i = n("392711"),
   T = n("78839"),
   f = n("526167"),
   S = n("630388"),
-  h = n("823379"),
-  A = n("358085"),
-  m = n("709054"),
-  N = n("981631"),
-  p = n("689938");
-l().shim();
-let O = !u.isMobile && !u.isTablet && -1 !== (0, f.getChromeVersion)();
+  h = n("823379");
+n("358085");
+var A = n("709054"),
+  m = n("981631");
+n("689938"), l().shim();
+let N = !u.isMobile && !u.isTablet && -1 !== (0, f.getChromeVersion)();
 
-function C(e, t) {
+function p(e, t) {
   let {
     analyticsSource: n,
     analyticsProperties: i,
@@ -61,7 +51,7 @@ function C(e, t) {
     guildId: o
   } = t;
   return {
-    pathname: null != a && null != o ? N.Routes.CHANNEL(o, a, e) : N.Routes.APPLICATION_STORE_LISTING_SKU(e, s),
+    pathname: null != a && null != o ? m.Routes.CHANNEL(o, a, e) : m.Routes.APPLICATION_STORE_LISTING_SKU(e, s),
     state: {
       analyticsSource: n,
       analyticsProperties: i
@@ -70,22 +60,7 @@ function C(e, t) {
   }
 }
 
-function R(e, t) {
-  let {
-    analyticsSource: n,
-    analyticsProperties: i,
-    slug: r
-  } = t;
-  return {
-    pathname: N.Routes.APPLICATION_STORE_LISTING_APPLICATION(e, r),
-    state: {
-      analyticsSource: n,
-      analyticsProperties: i
-    }
-  }
-}
-
-function g(e, t, n, i) {
+function O(e, t, n, i) {
   var r;
   let s;
   let a = window.GLOBAL_ENV.CDN_HOST;
@@ -100,12 +75,12 @@ function g(e, t, n, i) {
     default:
       i = "webp"
   }
-  "webp" === i && !O && (i = "png");
+  "webp" === i && !N && (i = "png");
   let o = "string" == typeof t ? t : t.id,
     l = (r = "https:", "https:");
-  return s = null != a ? "".concat(l, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(i) : "".concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(N.Endpoints.STORE_ASSET(e, o, i)), null != n && (s += "?size=".concat((0, c.getBestMediaProxySize)(n * (0, c.getDevicePixelRatio)()))), s
+  return s = null != a ? "".concat(l, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(i) : "".concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(m.Endpoints.STORE_ASSET(e, o, i)), null != n && (s += "?size=".concat((0, c.getBestMediaProxySize)(n * (0, c.getDevicePixelRatio)()))), s
 }
-async function L(e) {
+async function C(e) {
   var t, n, i, r;
   let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   if (s) {
@@ -138,47 +113,22 @@ async function L(e) {
   return d.HTTP.get(e)
 }
 
-function v(e) {
-  switch (e) {
-    case A.PlatformTypes.WINDOWS:
-      return N.OperatingSystems.WINDOWS;
-    case A.PlatformTypes.OSX:
-      return N.OperatingSystems.MACOS;
-    case A.PlatformTypes.LINUX:
-      return N.OperatingSystems.LINUX;
-    default:
-      return null
-  }
-}
-
-function D(e) {
-  switch (e) {
-    case N.OperatingSystems.WINDOWS:
-      return p.default.Messages.WINDOWS;
-    case N.OperatingSystems.MACOS:
-      return p.default.Messages.MACOS;
-    case N.OperatingSystems.LINUX:
-      return p.default.Messages.LINUX
-  }
-  throw Error("Unknown operating system value: ".concat(e))
-}
-
-function M(e, t, n) {
+function R(e, t, n) {
   let i = t.getApplication(e);
   return null == i || null == i.primarySkuId ? null : n.get(i.primarySkuId)
 }
-let y = [];
+let g = [];
 
-function P(e, t, n, i, s) {
+function L(e, t, n, i, s) {
   let a = t.get(e);
-  if (null == a) return y;
+  if (null == a) return g;
   let o = a.applicationId,
     l = [],
     u = [],
     d = function(e, t, n) {
       var i;
       let r = null !== (i = n.getNowPlaying(e)) && void 0 !== i ? i : {},
-        s = m.default.keys(r).map(e => {
+        s = A.default.keys(r).map(e => {
           let n = t.getUser(e);
           return null == n ? null : {
             user: n,
@@ -186,7 +136,7 @@ function P(e, t, n, i, s) {
           }
         }).filter(h.isNotNullish).sort((e, t) => t.startTime - e.startTime);
       return 0 === s.length ? null : {
-        type: N.StoreRecommendationTypes.NOW_PLAYING,
+        type: m.StoreRecommendationTypes.NOW_PLAYING,
         userInfo: s
       }
     }(o, n, i);
@@ -211,7 +161,7 @@ function P(e, t, n, i, s) {
           }
         }).filter(h.isNotNullish).sort((e, t) => t.endTime - e.endTime);
         return 0 === r.length ? null : {
-          type: N.StoreRecommendationTypes.EVER_PLAYED,
+          type: m.StoreRecommendationTypes.EVER_PLAYED,
           userInfo: r
         }
       }(o, n, s);
@@ -220,25 +170,25 @@ function P(e, t, n, i, s) {
   }
   return l
 }
-let U = [];
+let v = [];
 
-function b(e, t, n) {
+function D(e, t, n) {
   let i = t.get(e),
     r = n.getForSKU(e);
-  if (null == i || null == r) return U;
+  if (null == i || null == r) return v;
   let s = [];
-  (0, S.hasFlag)(i.flags, N.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && s.push({
-    type: N.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT
+  (0, S.hasFlag)(i.flags, m.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && s.push({
+    type: m.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT
   });
   let o = i.releaseDate;
-  return null != o && 3 > a()().diff(o, "months") && (i.accessType === N.SKUAccessTypes.EARLY_ACCESS ? s.push({
-    type: N.StoreRecommendationTypes.EARLY_ACCESS,
+  return null != o && 3 > a()().diff(o, "months") && (i.accessType === m.SKUAccessTypes.EARLY_ACCESS ? s.push({
+    type: m.StoreRecommendationTypes.EARLY_ACCESS,
     releaseDate: o
   }) : s.push({
-    type: N.StoreRecommendationTypes.RECENT_RELEASE_DATE,
+    type: m.StoreRecommendationTypes.RECENT_RELEASE_DATE,
     releaseDate: o
   })), null != r.flavorText && s.push({
-    type: N.StoreRecommendationTypes.FLAVOR_TEXT,
+    type: m.StoreRecommendationTypes.FLAVOR_TEXT,
     flavorText: r.flavorText
   }), s
 }

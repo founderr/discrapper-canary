@@ -12,9 +12,6 @@ n.r(t), n.d(t, {
   fetchStoreListingForSku: function() {
     return f
   },
-  goToApplicationStoreListing: function() {
-    return g
-  },
   goToSKUStoreListing: function() {
     return v
   },
@@ -109,13 +106,5 @@ function v(e, t) {
     pathname: n,
     ...i
   } = (0, u.getStoreListingLocation)(e, t);
-  (0, a.transitionTo)(n, i)
-}
-
-function g(e, t) {
-  let {
-    pathname: n,
-    ...i
-  } = (0, u.getApplicationStoreListingLocation)(e, t);
   (0, a.transitionTo)(n, i)
 }
