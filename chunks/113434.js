@@ -128,7 +128,7 @@ function C(e) {
       return n.current = e, e
     }, [t])
   }(t), a = [], l = [];
-  for (let t of a = "incomplete" === e ? r : s) {
+  for (let t of a = "unclaimed" === e ? r : s) {
     let e = i.get(t);
     null != e && l.push(e)
   }
@@ -248,4 +248,4 @@ function P(e) {
     avatarDecoration: null == i ? void 0 : null === (t = i.items) || void 0 === t ? void 0 : t[0],
     isFetching: r
   }
-}(a = r || (r = {})).INCOMPLETE = "incomplete", a.COMPLETE = "complete"
+}(a = r || (r = {})).UNCLAIMED = "unclaimed", a.CLAIMED = "claimed"
