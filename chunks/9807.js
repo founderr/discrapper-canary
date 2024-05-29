@@ -25,7 +25,7 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let v = e => {
+let N = e => {
     let {
       className: t,
       ...n
@@ -37,7 +37,7 @@ let v = e => {
       renderLinkComponent: u.renderMaskedLinkComponent
     })
   },
-  N = e => {
+  v = e => {
     let {
       containerClassName: t,
       className: n,
@@ -56,7 +56,7 @@ let v = e => {
     width: 640,
     height: 360
   },
-  y = e => {
+  P = e => {
     let t, n, s, {
       item: i,
       onPlay: r,
@@ -105,13 +105,13 @@ let v = e => {
         autoMute: m,
         onMute: h,
         autoPlay: g,
-        renderImageComponent: N,
-        renderVideoComponent: v,
+        renderImageComponent: v,
+        renderVideoComponent: N,
         renderLinkComponent: u.renderMaskedLinkComponent
       })
     })
   };
-class L extends(s = i.PureComponent) {
+class O extends(s = i.PureComponent) {
   componentDidMount() {
     let {
       items: e
@@ -141,7 +141,7 @@ class L extends(s = i.PureComponent) {
     return (0, a.jsx)(h.default, {
       items: e.slice(0, 12),
       delay: t,
-      paused: s || r,
+      initialPaused: s || r,
       renderItem: this.renderItem,
       className: l()(x.smallCarousel, n),
       themedPagination: i,
@@ -214,7 +214,7 @@ class L extends(s = i.PureComponent) {
       switch (e.type) {
         case C.CarouselMediaTypes.YOUTUBE_VIDEO:
         case C.CarouselMediaTypes.VIDEO:
-          n = (0, a.jsx)(y, {
+          n = (0, a.jsx)(P, {
             item: e,
             onPlay: this.handlePlay,
             isMuted: s,
@@ -266,7 +266,7 @@ class L extends(s = i.PureComponent) {
     })
   }
 }
-E(L, "defaultProps", {
+E(O, "defaultProps", {
   paused: !1,
   videoAutoPlay: !0
-}), t.default = L
+}), t.default = O
