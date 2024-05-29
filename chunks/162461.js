@@ -9,6 +9,9 @@ n.r(t), n.d(t, {
   isEligibleForListenedMediaInventory: function() {
     return E
   },
+  useIsEligibleForRichPresenceInventory: function() {
+    return T
+  },
   useIsEligibleForTopArtistInventory: function() {
     return _
   }
@@ -173,7 +176,8 @@ function E(e) {
     autoTrackExposure: !0
   });
   return t
-}(0, i.createExperiment)({
+}
+let I = (0, i.createExperiment)({
   kind: "user",
   id: "2024-05_content_inventory_games_rich_presence",
   label: "Content Inventory: Rich Presence for Games",
@@ -187,4 +191,15 @@ function E(e) {
       enabled: !0
     }
   }]
-})
+});
+
+function T(e) {
+  let {
+    enabled: t
+  } = I.useExperiment({
+    location: e
+  }, {
+    autoTrackExposure: !0
+  });
+  return t
+}

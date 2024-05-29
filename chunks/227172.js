@@ -23,78 +23,83 @@ t.default = e => {
     closePopout: S
   } = e, {
     iconUrl: _,
-    user: T
+    iconTitle: T,
+    user: I,
+    details: A,
+    gameTitle: v
   } = (0, E.useGamingContentData)(n), {
-    primaryColor: I,
-    secondaryColor: A
-  } = (0, f.default)(_), v = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
-    streamPreviewUrl: N,
-    stream: x,
-    channel: M
+    primaryColor: N,
+    secondaryColor: x
+  } = (0, f.default)(_), M = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
+    streamPreviewUrl: R,
+    stream: y,
+    channel: L
   } = (0, o.default)(n), {
-    displayParticipants: R,
-    participant1: y,
-    participant2: L,
-    numOtherParticipants: O
-  } = (0, r.default)(n, 3), j = l.useCallback(e => {
-    if (null == _ || null == t || null == T) return;
-    let a = O > 0 ? (0, c.formatGroupCanvasDescription)({
+    displayParticipants: O,
+    participant1: j,
+    participant2: P,
+    numOtherParticipants: D
+  } = (0, r.default)(n, 3), b = l.useCallback(e => {
+    if (null == _ || null == t || null == I) return;
+    let a = D > 0 ? (0, c.formatGroupCanvasDescription)({
       entry: n,
       channel: t,
-      users: [y, L],
-      countOthers: O
-    }) : (0, c.formatCanvasDescription)(n, t, T);
+      users: [j, P],
+      countOthers: D
+    }) : (0, c.formatCanvasDescription)(n, t, I);
     return (0, d.generateGamingContentImage)({
       entry: n,
       applicationImageSrc: _,
-      avatarSrcs: R.map(e => e.getAvatarURL(t.guild_id, 128)),
+      avatarSrcs: O.map(e => e.getAvatarURL(t.guild_id, 128)),
       description: a,
-      timestamp: (0, u.formatEntryTimestamp)(n, v),
-      colors: [I, A],
+      timestamp: (0, u.formatEntryTimestamp)(n, M),
+      colors: [N, x],
       channelId: e
     })
-  }, [_, t, R, n, v, O, y, L, I, A, T]);
-  if (null == T) return null;
-  let P = (0, a.jsx)(m.BadgesContainer, {
+  }, [_, t, O, n, M, D, j, P, N, x, I]);
+  if (null == I) return null;
+  let U = (0, a.jsx)(m.BadgesContainer, {
       location: m.BadgeLocation.POPOUT,
       children: h.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
         entry: n
       }, t))
     }),
-    D = null == N ? (0, a.jsx)(p.PopoutContent, {
+    F = null == R ? (0, a.jsx)(p.PopoutContent, {
       thumbnailSrc: _,
+      thumbnailTitle: T,
       channel: t,
       userDescription: (0, u.isEntryActive)(n) ? C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-      title: n.extra.game_name,
-      badges: P,
+      title: v,
+      subtitle: A,
+      badges: U,
       entry: n
     }) : (0, a.jsx)(p.StreamingPopoutContent, {
       channel: t,
-      streamPreviewSrc: N,
+      streamPreviewSrc: R,
       title: n.extra.game_name,
-      badges: P,
+      badges: U,
       userDescription: C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
       entry: n,
-      stream: x
+      stream: y
     });
   return (0, a.jsxs)(p.Popout, {
-    children: [D, (0, a.jsx)(p.PopoutInteractionsContainer, {
-      children: null != M ? (0, a.jsx)(p.VoiceChannelPopoutReactor, {
+    children: [F, (0, a.jsx)(p.PopoutInteractionsContainer, {
+      children: null != L ? (0, a.jsx)(p.VoiceChannelPopoutReactor, {
         closePopout: S,
-        user: T,
+        user: I,
         channel: t,
-        generateReactionImage: j,
-        reactionImageAltText: (0, c.getContentAltText)(n, T),
+        generateReactionImage: b,
+        reactionImageAltText: (0, c.getContentAltText)(n, I),
         entry: n,
         requestId: g,
-        voiceChannel: M,
-        isStreaming: null != N
+        voiceChannel: L,
+        isStreaming: null != R
       }) : (0, a.jsx)(p.PopoutReactor, {
         closePopout: S,
-        user: T,
+        user: I,
         channel: t,
-        generateReactionImage: j,
-        reactionImageAltText: (0, c.getContentAltText)(n, T),
+        generateReactionImage: b,
+        reactionImageAltText: (0, c.getContentAltText)(n, I),
         entry: n,
         requestId: g
       })

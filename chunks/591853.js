@@ -386,24 +386,26 @@ function eC(e) {
 function eg(e) {
   let {
     thumbnailSrc: t,
-    title: n,
-    subtitle: l,
-    badges: s,
-    children: i,
-    onClickTitle: r,
-    onClickSubtitle: o,
-    ...u
+    thumbnailTitle: n,
+    title: l,
+    subtitle: s,
+    badges: i,
+    children: r,
+    onClickTitle: o,
+    onClickSubtitle: u,
+    ...d
   } = e;
   return (0, a.jsxs)(ec, {
     backgroundImgSrc: t,
     children: [(0, a.jsx)(eE, {
-      ...u
+      ...d
     }), (0, a.jsxs)("div", {
       className: eo.popoutContentBody,
       children: [(0, a.jsx)("div", {
         className: eo.popoutThumbnailContainer,
         children: (0, a.jsx)(ea.ContentImage, {
           size: 72,
+          alt: n,
           src: t,
           className: eo.contentImage
         })
@@ -412,25 +414,25 @@ function eg(e) {
         horizontal: !0
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsx)(eC, {
-          onClick: r,
+          onClick: o,
           children: (0, a.jsx)(_.Heading, {
             variant: "heading-md/medium",
             className: eo.popoutTextPrimary,
             lineClamp: 3,
-            children: n
+            children: l
           })
-        }), null != l ? (0, a.jsx)(eC, {
-          onClick: o,
+        }), null != s ? (0, a.jsx)(eC, {
+          onClick: u,
           children: (0, a.jsx)(_.Text, {
             variant: "text-md/normal",
             className: eo.popoutTextSecondary,
-            children: l
+            children: s
           })
         }) : null, (0, a.jsx)(W.default, {
           size: 8
-        }), s]
+        }), i]
       })]
-    }), i]
+    }), r]
   })
 }
 
