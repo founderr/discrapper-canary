@@ -19,11 +19,6 @@ let l = (0, a("818083").createExperiment)({
       }
     }]
   }),
-  s = e => {
-    let {
-      location: t
-    } = e;
-    return l.useExperiment({
-      location: t
-    })
-  }
+  s = e => l.useExperiment({
+    location: e
+  })
