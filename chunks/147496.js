@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ItemDetailsModal: function() {
-    return T
+    return v
   }
 });
 var i = n("735250");
@@ -20,8 +20,8 @@ var r = n("752843"),
   m = n("981631"),
   h = n("689938");
 
-function T(e) {
-  var t, n, T, v;
+function v(e) {
+  var t, n, v, T;
   let {
     onClose: I,
     transitionState: _,
@@ -30,8 +30,8 @@ function T(e) {
   } = e, E = (0, a.useStateFromStores)([o.default], () => o.default.getForSKU(g), [g]), N = (0, a.useStateFromStores)([s.default], () => s.default.get(g), [g]), C = (0, c.useHasActiveEntitlement)(g);
   if (null == N) return null;
   let j = null !== (n = N.name) && void 0 !== n ? n : "",
-    R = null !== (T = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== T ? T : void 0,
-    L = (null == E ? void 0 : E.headerBackground) != null && null !== (v = d.default.toURLSafe((0, u.getAssetURL)(x, E.headerBackground, 256))) && void 0 !== v ? v : void 0,
+    R = null !== (v = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== v ? v : void 0,
+    L = (null == E ? void 0 : E.headerBackground) != null && null !== (T = d.default.toURLSafe((0, u.getAssetURL)(x, E.headerBackground, 256))) && void 0 !== T ? T : void 0,
     A = N.type === m.SKUTypes.DURABLE && C,
     b = N.type === m.SKUTypes.DURABLE ? A ? h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
     {

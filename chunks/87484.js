@@ -22,7 +22,7 @@ function d(e) {
     analyticsLocations: S,
     analyticsLocationObject: p,
     contextKey: m
-  } = e, h = !1, T = (0, r.v4)();
+  } = e, h = !1, v = (0, r.v4)();
   (0, l.openModalLazy)(async () => {
     let {
       default: e
@@ -34,7 +34,7 @@ function d(e) {
       } = n;
       return (0, i.jsx)(e, {
         ...l,
-        loadId: T,
+        loadId: v,
         applicationId: t,
         skuId: d,
         analyticsLocations: S,
@@ -51,7 +51,7 @@ function d(e) {
     contextKey: m,
     onCloseCallback: () => {
       !h && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: T,
+        load_id: v,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
         location: p,
         is_gift: !1,

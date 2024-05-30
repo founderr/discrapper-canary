@@ -28,8 +28,8 @@ function S(e) {
     subscriptionType: p,
     title: m,
     onDetails: h,
-    benefitItems: T,
-    benefitsSummary: v
+    benefitItems: v,
+    benefitsSummary: T
   } = e;
   return (0, i.jsx)(a.FocusRing, {
     children: (0, i.jsxs)("div", {
@@ -70,16 +70,16 @@ function S(e) {
             children: t
           })]
         })]
-      }), null != v && (0, i.jsx)("div", {
+      }), null != T && (0, i.jsx)("div", {
         className: c.benefitsSummary,
         children: (0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/medium",
           children: d.default.Messages.Storefront.BENEFITS_SUMMARY.format({
-            count: v
+            count: T
           })
         })
-      }), null != T && (0, i.jsx)("div", {
+      }), null != v && (0, i.jsx)("div", {
         className: c.benefits,
         children: (0, i.jsx)("div", {
           className: c.benefitsContainer,
@@ -89,15 +89,15 @@ function S(e) {
               color: "header-secondary",
               variant: "eyebrow",
               children: d.default.Messages.Storefront.BENEFITS_TITLE
-            }), T.length > 3 ? (0, i.jsxs)(i.Fragment, {
-              children: [T.slice(0, 3), (0, i.jsx)(o.Text, {
+            }), v.length > 3 ? (0, i.jsxs)(i.Fragment, {
+              children: [v.slice(0, 3), (0, i.jsx)(o.Text, {
                 variant: "text-md/semibold",
                 color: "text-secondary",
                 children: d.default.Messages.Storefront.MORE_BENEFITS.format({
-                  count: T.length - 3
+                  count: v.length - 3
                 })
               })]
-            }) : T]
+            }) : v]
           })
         })
       })]

@@ -26,8 +26,8 @@ function c(e) {
   if (null == m) return null;
   let h = (0, s.findAppIconSrc)(m, 25),
     {
-      termsOfServiceUrl: T,
-      privacyPolicyUrl: v
+      termsOfServiceUrl: v,
+      privacyPolicyUrl: T
     } = m;
   return (0, i.jsxs)(l.ModalRoot, {
     transitionState: n,
@@ -52,12 +52,12 @@ function c(e) {
       })]
     }), S, (0, i.jsxs)(l.ModalFooter, {
       className: d.footer,
-      children: [null != T && null != v ? (0, i.jsx)(l.Text, {
+      children: [null != v && null != T ? (0, i.jsx)(l.Text, {
         color: "header-primary",
         variant: "text-sm/normal",
         children: o.default.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
-          tosUrl: T,
-          ppUrl: v
+          tosUrl: v,
+          ppUrl: T
         })
       }) : null, p]
     })]

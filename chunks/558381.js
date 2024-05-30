@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return f
   },
   goToSKUStoreListing: function() {
-    return v
+    return T
   },
   joinPublishedStoreListingSkuGuild: function() {
-    return T
+    return v
   },
   matureAgree: function() {
     return m
@@ -94,14 +94,14 @@ function h() {
   (0, a.transitionTo)(d.Routes.APPLICATION_STORE)
 }
 
-function T(e) {
+function v(e) {
   return i.HTTP.post({
     url: d.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
     oldFormErrors: !0
   })
 }
 
-function v(e, t) {
+function T(e, t) {
   let {
     pathname: n,
     ...i

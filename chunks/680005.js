@@ -40,10 +40,10 @@ function m(e) {
     analyticsLocation: f.AnalyticsLocations.APP_STOREFRONT,
     skuId: u
   }), I = (0, c.useHasActiveEntitlement)(u);
-  return "guild" !== l && ("user" !== l || I) ? (0, i.jsx)(v, {
+  return "guild" !== l && ("user" !== l || I) ? (0, i.jsx)(T, {
     className: n,
     children: p.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
-  }) : (0, i.jsx)(T, {
+  }) : (0, i.jsx)(v, {
     appId: t,
     skuId: u,
     onClick: null != s ? s : h,
@@ -65,10 +65,10 @@ function h(e) {
   } = (0, a.default)(l.default.APP_STOREFRONT), S = (0, c.useHasActiveEntitlement)(o.id), m = o.type === f.SKUTypes.DURABLE && S, {
     price: h
   } = o;
-  return null == h ? null : m ? (0, i.jsx)(v, {
+  return null == h ? null : m ? (0, i.jsx)(T, {
     className: n,
     children: p.default.Messages.COLLECTIBLES_ALREADY_OWNED
-  }) : (0, i.jsx)(T, {
+  }) : (0, i.jsx)(v, {
     appId: t,
     skuId: o.id,
     onClick: null != r ? r : () => {
@@ -85,7 +85,7 @@ function h(e) {
   })
 }
 
-function T(e) {
+function v(e) {
   let {
     appId: t,
     skuId: n,
@@ -103,7 +103,7 @@ function T(e) {
   })
 }
 
-function v(e) {
+function T(e) {
   let {
     className: t,
     children: n
