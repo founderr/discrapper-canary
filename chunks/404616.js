@@ -42,8 +42,8 @@ var n = i("735250"),
   E = i("566006"),
   R = i("255269"),
   I = i("937889"),
-  N = i("443877"),
-  C = i("524444"),
+  C = i("443877"),
+  N = i("524444"),
   _ = i("287151"),
   x = i("695346"),
   O = i("433355"),
@@ -126,18 +126,18 @@ t.default = a.memo(function(e) {
   }), {
     ref: R,
     height: I
-  } = (0, g.default)(), N = (0, K.useForumPostComposerStore)(e => e.setCardHeight);
+  } = (0, g.default)(), C = (0, K.useForumPostComposerStore)(e => e.setCardHeight);
   a.useEffect(() => {
-    null != I && N(t, I)
-  }, [I, N, t]), a.useEffect(() => {
+    null != I && C(t, I)
+  }, [I, C, t]), a.useEffect(() => {
     null == s || s(R.current, t)
   }, [R, s, t]);
-  let C = a.useRef(null),
+  let N = a.useRef(null),
     {
       handleLeftClick: _,
       handleRightClick: x
     } = (0, q.default)({
-      facepileRef: C,
+      facepileRef: N,
       goToThread: i,
       channel: f
     }),
@@ -188,7 +188,7 @@ t.default = a.memo(function(e) {
         children: (0, n.jsx)(er, {
           channel: f,
           firstMessage: v,
-          facepileRef: C
+          facepileRef: N
         })
       })]
     }), (null == v ? void 0 : v.blocked) || null == E ? null : (0, n.jsx)(em, {
@@ -290,7 +290,8 @@ let eo = a.memo(function(e) {
       contentPlaceholder: null,
       renderedContent: null
     } : (0, w.renderSingleLineMessage)(t, a, r, l()(et.messageContent, ei.inlineFormat, ei.__invalid_smallFontSize), {
-      iconClass: et.messageContentIcon,
+      leadingIconClass: et.messageContentLeadingIcon,
+      trailingIconClass: et.messageContentTrailingIcon,
       iconSize: $.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
     });
     f = null != i ? (0, n.jsx)(m.Text, {
@@ -407,7 +408,7 @@ function ed(e) {
     disableReactionCreates: l,
     isLurking: o,
     isPendingMember: r
-  } = (0, N.default)(i);
+  } = (0, C.default)(i);
   return null == s || l ? null : (0, n.jsx)(_.Reaction, {
     className: et.updateReactionButton,
     message: t,
@@ -435,7 +436,7 @@ function ec(e) {
     disableReactionUpdates: l,
     isLurking: o,
     isPendingMember: r
-  } = (0, N.default)(a);
+  } = (0, C.default)(a);
   return null == s ? null : (0, n.jsx)(_.Reaction, {
     className: et.updateReactionButton,
     message: i,
@@ -528,7 +529,7 @@ function em(e) {
           [et.obscured]: d,
           [et.thumbnailOverride]: !0
         })
-      }) : (0, C.renderImageComponent)({
+      }) : (0, N.renderImageComponent)({
         src: p,
         maxHeight: t,
         maxWidth: i,

@@ -86,13 +86,15 @@ function p(e) {
         {
           contentPlaceholder: t,
           renderedContent: l,
-          icon: r
+          trailingIcon: r,
+          leadingIcon: n
         } = (0, E.renderSingleLineMessage)(a, e, C, M.messageContent, {
-          iconClass: M.messageContentIcon,
+          trailingIconClass: M.messageContentTrailingIcon,
+          leadingIconClass: M.messageContentLeadingIcon,
           iconSize: _.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
         });
       return (0, s.jsxs)(s.Fragment, {
-        children: [null != l ? l : (0, s.jsx)("span", {
+        children: [n, null != l ? l : (0, s.jsx)("span", {
           children: t
         }), r]
       })

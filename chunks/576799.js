@@ -44,16 +44,18 @@ function _(e) {
         let {
           contentPlaceholder: a,
           renderedContent: l,
-          icon: i
+          leadingIcon: i,
+          trailingIcon: r
         } = (0, c.renderSingleLineMessage)(e, t, n, E.threadMessageAccessoryContent, {
-          iconClass: E.threadMessageAccessoryContentIcon,
+          trailingIconClass: E.threadMessageAccessoryContentTrailingIcon,
+          leadingIconClass: E.threadMessageAccessoryContentLeadingIcon,
           iconSize: f.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
         });
         return (0, s.jsxs)(s.Fragment, {
-          children: [null != l ? l : (0, s.jsx)("span", {
+          children: [i, null != l ? l : (0, s.jsx)("span", {
             className: E.threadMessageAccessoryPlaceholder,
             children: a
-          }), i]
+          }), r]
         })
       }(t, I, _)
     })]

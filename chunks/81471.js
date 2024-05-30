@@ -53,8 +53,9 @@ let A = s.memo(function(e) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, C.renderSingleLineMessage)(A, L, v, i()(g.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
-        iconClass: g.messageContentIcon,
+      } = (0, C.renderSingleLineMessage)(A, L, v, i()(g.messageContent, T.inlineFormat), {
+        leadingIconClass: g.messageContentIcon,
+        trailingIconClass: g.messageContentIcon,
         iconSize: p.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
       M = null != t ? (0, a.jsx)(o.Text, {

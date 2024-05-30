@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return v
   }
-}), n("789020");
+});
 var s = n("735250"),
   a = n("470079"),
   l = n("59262"),
@@ -21,26 +21,27 @@ var s = n("735250"),
   I = n("113039"),
   p = n("100604"),
   h = n("694784"),
-  N = n("689938"),
-  S = n("296854");
+  N = n("39154"),
+  S = n("689938"),
+  C = n("296854");
 
-function C() {
+function g() {
   return (0, s.jsxs)("div", {
-    className: S.headerContainer,
+    className: C.headerContainer,
     children: [(0, s.jsx)(l.ArrowAngleRightUpIcon, {
       width: 14,
       height: 16,
       color: o.default.colors.HEADER_MUTED
     }), (0, s.jsx)(i.Text, {
-      className: S.headerText,
+      className: C.headerText,
       variant: "text-sm/semibold",
       color: "header-muted",
-      children: N.default.Messages.MESSAGE_FORWARDED
+      children: S.default.Messages.MESSAGE_FORWARDED
     })]
   })
 }
 
-function g(e) {
+function A(e) {
   let {
     message: t,
     snapshot: n,
@@ -49,14 +50,14 @@ function g(e) {
     (0, h.default)(t, n)
   }, [t, n]);
   return null == r.originLabel ? null : (0, s.jsxs)(d.Clickable, {
-    className: S.footerContainer,
+    className: C.footerContainer,
     onClick: c,
     children: [null != r.originIconUrl ? (0, s.jsx)("img", {
-      className: S.originIcon,
+      className: C.originIcon,
       src: r.originIconUrl,
       alt: ""
     }) : null, (0, s.jsx)(i.Text, {
-      className: S.footerText,
+      className: C.footerText,
       variant: "text-sm/medium",
       color: "none",
       children: "".concat(r.originLabel, "  •  ").concat(r.timestampLabel)
@@ -68,27 +69,15 @@ function g(e) {
   })
 }
 
-function A(e) {
+function M(e) {
   var t;
   let {
     message: n,
     snapshot: l,
     index: i
-  } = e, o = a.useMemo(() => n.merge({
-    content: l.message.content,
-    channel_id: l.message.channel_id,
-    attachments: l.message.attachments,
-    embeds: l.message.embeds,
-    flags: l.message.flags,
-    components: l.message.components,
-    editedTimestamp: null,
-    timestamp: l.message.timestamp,
-    reactions: [],
-    messageSnapshots: [],
-    customRenderedContent: null
-  }), [n, l]), u = _.InlineEmbedMedia.useSetting(), d = _.RenderEmbeds.useSetting(), p = (0, r.useStateFromStores)([T.default], () => T.default.isDeveloper), h = (0, c.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-    content: N,
-    hasSpoilerEmbeds: A
+  } = e, o = a.useMemo(() => (0, N.default)(n, l), [n, l]), u = _.InlineEmbedMedia.useSetting(), d = _.RenderEmbeds.useSetting(), p = (0, r.useStateFromStores)([T.default], () => T.default.isDeveloper), h = (0, c.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+    content: S,
+    hasSpoilerEmbeds: M
   } = (0, f.default)(o, {
     hideSimpleEmbedContent: u && d,
     isInteracting: !1,
@@ -98,25 +87,25 @@ function A(e) {
     allowLinks: !0,
     allowDevLinks: p,
     previewLinkTarget: !0
-  }), M = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(n.channel_id)), v = _.MessageDisplayCompact.useSetting();
-  return null == M ? null : (0, s.jsxs)("div", {
-    className: S.container,
+  }), v = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(n.channel_id)), R = _.MessageDisplayCompact.useSetting();
+  return null == v ? null : (0, s.jsxs)("div", {
+    className: C.container,
     children: [(0, s.jsx)("div", {
-      className: S.quote
+      className: C.quote
     }), (0, s.jsxs)("div", {
-      className: S.content,
-      children: [(0, s.jsx)(C, {}), (0, s.jsx)(I.default, {
+      className: C.content,
+      children: [(0, s.jsx)(g, {}), (0, s.jsx)(I.default, {
         message: o,
-        content: N
+        content: S
       }), (0, E.default)({
         channelMessageProps: {
           message: o,
-          channel: M,
-          compact: v
+          channel: v,
+          compact: R
         },
-        hasSpoilerEmbeds: A,
+        hasSpoilerEmbeds: M,
         isInteracting: !1
-      }), (0, s.jsx)(g, {
+      }), (0, s.jsx)(A, {
         message: n,
         snapshot: l,
         index: i
@@ -125,12 +114,12 @@ function A(e) {
   }, i)
 }
 
-function M(e) {
+function v(e) {
   let {
     message: t
   } = e;
   return (0, s.jsx)(s.Fragment, {
-    children: t.messageSnapshots.map((e, n) => (0, s.jsx)(A, {
+    children: t.messageSnapshots.map((e, n) => (0, s.jsx)(M, {
       message: t,
       snapshot: e,
       index: n

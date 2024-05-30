@@ -52,11 +52,13 @@ function O(e) {
   }).content : null, {
     contentPlaceholder: M,
     renderedContent: L,
-    icon: O
+    trailingIcon: O,
+    leadingIcon: j
   } = (0, I.renderSingleLineMessage)(n, x, s, y.messageContent, {
-    iconClass: y.messageContentIcon,
+    trailingIconClass: y.messageContentTrailingIcon,
+    leadingIconClass: y.messageContentLeadingIcon,
     iconSize: R.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-  }), j = (0, g.getMessageStickers)(n), P = j.length > 0 ? j.map(e => (0, a.jsx)(S.default, {
+  }), P = (0, g.getMessageStickers)(n), D = P.length > 0 ? P.map(e => (0, a.jsx)(S.default, {
     className: y.sticker,
     size: 128,
     sticker: e,
@@ -75,9 +77,9 @@ function O(e) {
       className: i()(y.messageContentWrapper, {
         [y.mentioned]: n.mentioned
       }),
-      children: [null !== (t = null != L ? L : P) && void 0 !== t ? t : (0, a.jsx)("span", {
+      children: [null != D ? null : j, null !== (t = null != L ? L : D) && void 0 !== t ? t : (0, a.jsx)("span", {
         children: M
-      }), null != P ? null : O]
+      }), null != D ? null : O]
     }), (0, a.jsx)("img", {
       alt: "",
       src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, A.getGuildMemberAvatarURLSimple)({

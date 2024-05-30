@@ -34,9 +34,10 @@ t.default = e => {
         childrenMessageContent: (() => {
           if (null == S || "" === S || Array.isArray(S) && 0 === S.length) {
             let {
-              icon: e
+              trailingIcon: e
             } = (0, c.renderSingleLineMessage)(t, S, !1, "", {
-              iconClass: T.attachmentIcon,
+              leadingIconClass: T.attachmentIcon,
+              trailingIconClass: T.attachmentIcon,
               iconSize: E.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
             });
             return e
