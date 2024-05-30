@@ -142048,6 +142048,11 @@ code {
         var(--custom-theme-background) fixed 0 0 / cover
 }
 
+[data-disable-adaptive-theme=true] {
+    --custom-theme-mix-amount-base: 0% !important;
+    --custom-theme-mix-amount-text: 0% !important
+}
+
 body,
 html,
 .appMount_c99875 {

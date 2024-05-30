@@ -340,6 +340,7 @@ t.default = e => {
   } = e;
   return (0, a.jsxs)(n, {
     "data-theme": c,
+    "data-disable-adaptive-theme": !0,
     onSubmit: r,
     style: u,
     className: l()(o ? N.authBoxExpanded : N.authBox, (0, x.getThemeClass)(c), t),

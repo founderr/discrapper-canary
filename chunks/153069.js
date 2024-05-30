@@ -130,6 +130,7 @@ class L extends(a = n.PureComponent) {
         children: this.renderDefaultForm()
       }), (0, r.jsxs)("div", {
         "data-theme": a,
+        "data-disable-adaptive-theme": !0,
         className: l()((0, _.getThemeClass)(a), R.navRow),
         children: [(0, r.jsx)(d.Button, {
           type: "button",
