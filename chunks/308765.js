@@ -32,6 +32,10 @@ let r = {
     inlineRequire: () => n("397776").default,
     neverLoadBeforeConnectionOpen: !0
   },
+  CommonTriggerPointManager: {
+    actions: ["POST_CONNECTION_OPEN"],
+    inlineRequire: () => n("957899").default
+  },
   CommunicationDisabledManager: {
     inlineRequire: () => n("202107").default,
     loadAfterConnectionOpen: !0

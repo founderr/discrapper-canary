@@ -35,14 +35,16 @@ function o(e) {
     id: t,
     title: n,
     description: i,
-    buckets: a
+    buckets: a,
+    commonTriggerPoint: o
   } = e;
   return (0, r.registerExperiment)({
     experimentId: t,
     experimentType: s.ExperimentTypes.USER,
     title: n,
     description: i,
-    buckets: a
+    buckets: a,
+    commonTriggerPoint: o
   }), {
     id: t
   }
@@ -53,14 +55,16 @@ function l(e) {
     id: t,
     title: n,
     description: i,
-    buckets: a
+    buckets: a,
+    commonTriggerPoint: o
   } = e;
   return (0, r.registerExperiment)({
     experimentId: t,
     experimentType: s.ExperimentTypes.GUILD,
     title: n,
     description: i,
-    buckets: a
+    buckets: a,
+    commonTriggerPoint: o
   }), {
     id: t
   }

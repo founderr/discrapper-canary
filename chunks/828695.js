@@ -46,6 +46,5 @@ s = "LegacyExperimentStore", (r = "displayName") in(i = d) ? Object.defineProper
   OVERLAY_INITIALIZE: _,
   CACHE_LOADED: _,
   EXPERIMENTS_FETCH_FAILURE: _,
-  EXPERIMENT_REGISTER_LEGACY: _,
   EXPERIMENT_OVERRIDE_BUCKET: _
 })

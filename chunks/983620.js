@@ -28,6 +28,5 @@ s = "GuildExperimentStore", (r = "displayName") in(i = _) ? Object.definePropert
   OVERLAY_INITIALIZE: d,
   CACHE_LOADED: d,
   EXPERIMENTS_FETCH_FAILURE: d,
-  EXPERIMENT_REGISTER_LEGACY: d,
   EXPERIMENT_OVERRIDE_BUCKET: d
 })
