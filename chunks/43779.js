@@ -1,68 +1,80 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("481060"),
-  o = n("918701"),
-  u = n("566078"),
-  d = n("78826"),
+  l = n("481060"),
+  i = n("497505"),
+  r = n("918701"),
+  o = n("566078"),
+  u = n("472144"),
+  d = n("644646"),
   c = n("69439"),
-  f = n("46140"),
-  E = n("689938"),
-  h = n("641935");
+  f = n("689938"),
+  E = n("641935");
 
-function _(e) {
+function h(e) {
   let {
-    quest: t
-  } = e, n = (0, o.getRewardAsset)(t), l = u.SharedQuestFields.build(t.config).defaultReward.messages.name, _ = (0, o.getQuestsInstructionsToWinReward)({
     quest: t,
-    location: f.QuestsExperimentLocations.QUEST_HOME_DESKTOP,
+    location: n,
+    questContent: h
+  } = e, _ = o.SharedQuestFields.build(t.config).defaultReward.messages.name, C = (0, r.getQuestsInstructionsToWinReward)({
+    quest: t,
+    location: n,
     useV2Variants: !0
-  }), C = !(0, o.isQuestExpired)(t), m = s.useCallback(() => (0, a.jsx)(r.Text, {
+  }), m = s.useRef(null), S = s.useMemo(() => (0, r.calculatePercentComplete)(t), [t]), p = S > 0, I = !(0, r.isQuestExpired)(t), g = s.useCallback(() => (0, a.jsx)(l.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
-    className: h.header,
-    children: l
-  }), [l]);
+    className: E.header,
+    children: _
+  }), [_]);
   return (0, a.jsxs)("div", {
-    className: h.container,
+    className: E.container,
     children: [(0, a.jsxs)("div", {
-      className: h.rewardDescriptionContainer,
-      children: [(0, a.jsx)(d.QuestsAsset, {
-        id: "QuestRewardTile_rewardTileStatic",
-        children: e => (0, a.jsx)("img", {
-          ref: e,
-          alt: l,
-          className: i()(h.questRewardTileAsset),
-          src: n.url
-        })
-      }), (0, a.jsxs)("div", {
-        className: h.textContainer,
-        children: [(0, a.jsx)("span", {
-          className: h.headerSpan,
-          children: (0, a.jsx)(r.Text, {
-            variant: "text-md/semibold",
-            color: "header-primary",
-            className: h.header,
-            children: E.default.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: m
+      className: E.rewardDescriptionContainer,
+      children: [p ? (0, a.jsx)("div", {
+        className: E.progressWrapper,
+        children: (0, a.jsx)(u.default, {
+          size: 76,
+          percentComplete: S,
+          progressBarRef: m,
+          children: (0, a.jsx)("div", {
+            className: E.circularRewardTileWrapper,
+            children: (0, a.jsx)(d.default, {
+              quest: t,
+              questContent: h,
+              className: E.circularQuestRewardTileAsset
             })
           })
-        }), null != _ ? (0, a.jsx)(r.Text, {
+        })
+      }) : (0, a.jsx)(d.default, {
+        quest: t,
+        questContent: i.QuestContent.QUEST_HOME_DESKTOP,
+        className: E.questRewardTileAsset
+      }), (0, a.jsxs)("div", {
+        className: E.textContainer,
+        children: [(0, a.jsx)("span", {
+          className: E.headerSpan,
+          children: (0, a.jsx)(l.Text, {
+            variant: "text-md/semibold",
+            color: "header-primary",
+            className: E.header,
+            children: f.default.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+              rewardHook: g
+            })
+          })
+        }), null != C ? (0, a.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
-          className: h.description,
-          children: _
+          className: E.description,
+          children: C
         }) : null]
       })]
-    }), C ? (0, a.jsx)(c.default, {
+    }), I ? (0, a.jsx)(c.default, {
       quest: t
     }) : null]
   })
