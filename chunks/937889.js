@@ -86,7 +86,10 @@ function I(e) {
       shouldFilterKeywords: E,
       contentMessage: I
     } = n, T = !1, h = (null != I ? I : t).content, A = e(E ? (0, r.getKeywordSubstitutedContent)(h, {
-      escapeReplacement: !0
+      escapeReplacement: !0,
+      messageId: t.id,
+      channelId: t.channel_id,
+      authorId: t.author.id
     }) : h, !0, _(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), a && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],

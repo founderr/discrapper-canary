@@ -224,6 +224,10 @@ let N = {
   [E.AnalyticEvents.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
     throttlePeriod: 36e5,
     throttleKeys: () => []
+  },
+  [E.AnalyticEvents.KEYWORD_FILTER_MATCH]: {
+    throttlePeriod: 9e5,
+    throttleKeys: e => [e.message_id]
   }
 };
 

@@ -26,12 +26,14 @@ let s = e => /\p{P}/gu.test(null != e ? e : "") || " " === e || "" === e,
   u = (e, t, n, i) => {
     if (0 === i) return {
       start: t,
-      end: n
+      end: n,
+      keyword: e.substring(t, n + 1)
     };
     let r = n;
     for (; r < e.length - 1 && !s(e.charAt(r + 1));) r++;
     return {
       start: t,
-      end: r
+      end: r,
+      keyword: e.substring(t, r + 1)
     }
   }

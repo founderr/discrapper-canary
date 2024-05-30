@@ -38,15 +38,15 @@ class o {
       n = null,
       r = null,
       s = {};
-    for (let u = 0; u <= e.length; u++)
-      if (n = e.charAt(u), (t = null != (r = t.suffix[n]) ? r : null != this.trie.suffix[n] ? this.trie.suffix[n] : this.trie).isWord) {
-        var a, o, l;
+    for (let l = 0; l <= e.length; l++)
+      if (n = e.charAt(l), (t = null != (r = t.suffix[n]) ? r : null != this.trie.suffix[n] ? this.trie.suffix[n] : this.trie).isWord) {
+        var a, o;
         let n = t.strategy,
-          r = u + 1 - (null !== (o = null === (a = t.value) || void 0 === a ? void 0 : a.length) && void 0 !== o ? o : 0),
-          d = u;
-        if ((0, i.isMatch)(e, r, d, n)) {
-          let t = (0, i.getMatchedPositions)(e, r, d, n);
-          s[t.start] = Math.max(Number(null !== (l = s[t.start]) && void 0 !== l ? l : 0), t.end)
+          r = l + 1 - (null !== (o = null === (a = t.value) || void 0 === a ? void 0 : a.length) && void 0 !== o ? o : 0),
+          u = l;
+        if ((0, i.isMatch)(e, r, u, n)) {
+          let t = (0, i.getMatchedPositions)(e, r, u, n);
+          (null == s[t.start] || s[t.start].end < t.end) && (s[t.start] = t)
         }
       } return s
   }

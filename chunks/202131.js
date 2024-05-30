@@ -1,34 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   getKeywordSubstitutedContent: function() {
-    return o
+    return u
   }
 }), n("47120"), n("724458");
-var i = n("960048"),
-  r = n("592204"),
-  s = n("803141"),
-  a = n("603158");
+var i = n("626135"),
+  r = n("960048"),
+  s = n("592204"),
+  a = n("803141"),
+  o = n("603158"),
+  l = n("981631");
 
-function o(e, t) {
-  (0, r.isEligibleForKeywordFiltering)({
+function u(e, t) {
+  (0, s.isEligibleForKeywordFiltering)({
     location: "keyword_substituted_content"
   });
   try {
     let n = function(e) {
       var t;
-      let n = s.default.getKeywordTrie();
+      let n = a.default.getKeywordTrie();
       if ("" === e) return [];
-      let i = (0, a.normalize)(e).toLowerCase();
-      return Object.entries(null !== (t = null == n ? void 0 : n.search(i)) && void 0 !== t ? t : {}).map(e => {
-        let [t, n] = e;
-        return {
-          start: Number(t),
-          end: n
-        }
-      })
+      let i = (0, o.normalize)(e).toLowerCase();
+      return Object.values(null !== (t = null == n ? void 0 : n.search(i)) && void 0 !== t ? t : {})
     }(e);
     if (0 === n.length) return e;
-    return n.sort((e, t) => t.start - e.start).reduce((e, n) => (function(e, t, n) {
+    return n.forEach(e => {
+      i.default.track(l.AnalyticEvents.KEYWORD_FILTER_MATCH, {
+        message_id: null == t ? void 0 : t.messageId,
+        channel_id: null == t ? void 0 : t.channelId,
+        author_id: null == t ? void 0 : t.authorId,
+        keyword: e.keyword
+      })
+    }), n.sort((e, t) => t.start - e.start).reduce((e, n) => (function(e, t, n) {
       let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = Math.max(t, 0),
         s = Math.min(n, e.length - 1),
@@ -37,7 +40,7 @@ function o(e, t) {
       return "".concat(e.substring(0, r)).concat(o).concat(e.substring(s + 1))
     })(e, n.start, n.end, null == t ? void 0 : t.escapeReplacement), e)
   } catch (t) {
-    return i.default.captureException(t, {
+    return r.default.captureException(t, {
       tags: {
         app_context: "keyword_filtering"
       }
