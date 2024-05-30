@@ -97,27 +97,27 @@ function z(e) {
     othersCount: $
   } = (0, G.useVoiceChannelUsers)(null !== (t = null == Q ? void 0 : Q.id) && void 0 !== t ? t : "", s), {
     usersToShow: ee
-  } = (0, G.useGetEventCardUsers)(Q), et = function(e, t, n) {
+  } = (0, G.useGetEventCardUsers)(Q), et = (0, G.useGetOrFetchEmbeddedActivityApplication)(n), en = function(e, t, n, r) {
     let {
-      category: r
-    } = e, s = (0, U.default)(e), {
-      usersToShow: a
-    } = (0, G.useGetEventCardUsers)(s), d = (0, l.useStateFromStores)([f.default], () => r === F.CardCategory.HANGOUT ? f.default.getIsPreviewLoading(t, e.channelId, e.streamUserIds[0]) : null);
-    switch (r) {
+      category: s
+    } = e, a = (0, U.default)(e), {
+      usersToShow: d
+    } = (0, G.useGetEventCardUsers)(a), c = (0, l.useStateFromStores)([f.default], () => s === F.CardCategory.HANGOUT ? f.default.getIsPreviewLoading(t, e.channelId, e.streamUserIds[0]) : null);
+    switch (s) {
       case F.CardCategory.GAMING:
         let {
-          games: c
+          games: E
         } = e;
-        if (null == c[0].application_id) return (0, i.jsx)(O.default, {});
+        if (null == E[0].application_id) return (0, i.jsx)(O.default, {});
         return (0, i.jsx)(N.default, {
-          game: _.default.getApplication(c[0].application_id),
+          game: _.default.getApplication(E[0].application_id),
           size: "xl",
           className: W.gameIcon
         });
       case F.CardCategory.EVENT:
-        if (a.length > 0) return (0, i.jsx)(b.default, {
+        if (d.length > 0) return (0, i.jsx)(b.default, {
           guildId: t,
-          users: a
+          users: d
         });
         return e.isStage ? (0, i.jsx)(B.default, {
           className: W.imageIcon
@@ -126,11 +126,11 @@ function z(e) {
         });
       case F.CardCategory.EMBEDDED_ACTIVITY:
         let {
-          embeddedActivities: E
+          embeddedActivities: I
         } = e;
-        if (null == E[0].applicationId) return (0, i.jsx)(L.default, {});
+        if (null == I[0].applicationId) return (0, i.jsx)(L.default, {});
         return (0, i.jsx)(N.default, {
-          game: _.default.getApplication(E[0].applicationId),
+          game: r,
           size: "xl",
           className: W.gameIcon
         });
@@ -138,16 +138,16 @@ function z(e) {
         let {
           streamUserIds: r,
           userIds: s,
-          channelHasVideo: l,
-          isStage: _
-        } = e, c = _ ? a : [];
-        if (_) {
-          if (0 === c.length) return (0, i.jsx)(B.default, {
+          channelHasVideo: a,
+          isStage: l
+        } = e, _ = l ? d : [];
+        if (l) {
+          if (0 === _.length) return (0, i.jsx)(B.default, {
             className: W.imageIcon
           });
           return (0, i.jsx)(b.default, {
             guildId: t,
-            users: c
+            users: _
           })
         }
         if (r.length > 0) {
@@ -156,7 +156,7 @@ function z(e) {
             color: o.default.STATUS_DANGER,
             className: e
           });
-          if (d) return (0, i.jsxs)(i.Fragment, {
+          if (c) return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(u.Spinner, {
               className: W.streamPreview
             }), e(W.liveBadge)]
@@ -181,7 +181,7 @@ function z(e) {
         })
       }
     }
-  }(n, s, z), en = function(e, t) {
+  }(n, s, z, et), ei = function(e, t) {
     let {
       category: n
     } = e, i = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT ? null == e ? void 0 : e.userIds : []), r = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT ? null == e ? void 0 : e.streamUserIds : []), s = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.GAMING ? null == e ? void 0 : e.gameUserIds : []), a = (0, U.default)(e), {
@@ -209,8 +209,8 @@ function z(e) {
       default:
         return null
     }
-  }(n, s), ei = function(e) {
-    var t, n, r, s;
+  }(n, s), er = function(e, t) {
+    var n, r, s;
     let {
       category: a
     } = e, o = (0, U.default)(e), l = function(e) {
@@ -225,7 +225,7 @@ function z(e) {
     switch (a) {
       case F.CardCategory.GAMING:
         let {
-          games: c, channelId: E
+          games: _, channelId: c
         } = e;
         return (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(O.default, {
@@ -234,8 +234,8 @@ function z(e) {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: W.ellipsis,
-            children: 1 === c.length ? c[0].name : j.default.Messages.MULTIPLE_GAMES_IN_CHANNEL.format({
-              numGames: c.length
+            children: 1 === _.length ? _[0].name : j.default.Messages.MULTIPLE_GAMES_IN_CHANNEL.format({
+              numGames: _.length
             })
           }), "•", null != l && (0, i.jsx)(l, {
             className: W.categoryIcon
@@ -243,21 +243,21 @@ function z(e) {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: W.ellipsis,
-            children: null === (t = S.default.getChannel(E)) || void 0 === t ? void 0 : t.name
+            children: null === (n = S.default.getChannel(c)) || void 0 === n ? void 0 : n.name
           })]
         });
       case F.CardCategory.EVENT:
         let {
-          event: I
-        } = e, T = (0, G.getEventLocationData)(I), f = null == T ? void 0 : T.IconComponent, h = null == T ? void 0 : T.locationName;
-        if (null != f && null != h) return (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(f, {
+          event: E
+        } = e, I = (0, G.getEventLocationData)(E), T = null == I ? void 0 : I.IconComponent, f = null == I ? void 0 : I.locationName;
+        if (null != T && null != f) return (0, i.jsxs)(i.Fragment, {
+          children: [(0, i.jsx)(T, {
             className: W.categoryIcon
           }), (0, i.jsx)(u.Text, {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: W.ellipsis,
-            children: h
+            children: f
           }), null != d && d > 0 && (0, i.jsxs)(i.Fragment, {
             children: ["•", (0, i.jsx)(g.default, {
               className: W.categoryIcon
@@ -271,7 +271,7 @@ function z(e) {
         return null;
       case F.CardCategory.EMBEDDED_ACTIVITY:
         let {
-          embeddedActivities: A
+          embeddedActivities: h
         } = e;
         return (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(L.default, {
@@ -280,8 +280,8 @@ function z(e) {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: W.ellipsis,
-            children: 1 === A.length ? null === (n = _.default.getApplication(A[0].applicationId)) || void 0 === n ? void 0 : n.name : j.default.Messages.MULTIPLE_ACTIVITIES_IN_CHANNEL.format({
-              numActivities: A.length
+            children: 1 === h.length ? null == t ? void 0 : t.name : j.default.Messages.MULTIPLE_ACTIVITIES_IN_CHANNEL.format({
+              numActivities: h.length
             })
           }), "•", null != l && (0, i.jsx)(l, {
             className: W.categoryIcon
@@ -289,7 +289,7 @@ function z(e) {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: W.ellipsis,
-            children: null === (r = S.default.getChannel(A[0].channelId)) || void 0 === r ? void 0 : r.name
+            children: null === (r = S.default.getChannel(h[0].channelId)) || void 0 === r ? void 0 : r.name
           })]
         });
       case F.CardCategory.HANGOUT: {
@@ -318,7 +318,7 @@ function z(e) {
       default:
         return null
     }
-  }(n), er = function(e) {
+  }(n, et), es = function(e) {
     let {
       category: t
     } = e, n = (0, U.default)(e), {
@@ -366,7 +366,7 @@ function z(e) {
       default:
         return []
     }
-  }(n), es = (0, G.getClickHandler)(n, s, d), ea = function(e, t, n) {
+  }(n), ea = (0, G.getClickHandler)(n, s, d), eo = function(e, t, n) {
     var r;
     let {
       category: s
@@ -394,7 +394,7 @@ function z(e) {
       className: W.joinButtonWhatWrapper,
       children: E
     })
-  }(n, s, d), eo = (null != q || !!(null == Q ? void 0 : Q.isGuildStageVoice())) && ee.length > 0, el = P === F.CardCategory.HANGOUT && (0 === n.streamUserIds.length || X) && !(null == Q ? void 0 : Q.isGuildStageVoice()), eu = P === F.CardCategory.EMBEDDED_ACTIVITY && n.streamersCount > 0 ? (0, i.jsxs)("div", {
+  }(n, s, d), el = (null != q || !!(null == Q ? void 0 : Q.isGuildStageVoice())) && ee.length > 0, eu = P === F.CardCategory.HANGOUT && (0 === n.streamUserIds.length || X) && !(null == Q ? void 0 : Q.isGuildStageVoice()), ed = P === F.CardCategory.EMBEDDED_ACTIVITY && n.streamersCount > 0 ? (0, i.jsxs)("div", {
     className: W.pill,
     children: [(0, i.jsx)(v.default, {
       className: W.pillIcon
@@ -405,7 +405,7 @@ function z(e) {
     })]
   }) : null;
   return (0, i.jsxs)(u.Clickable, {
-    onClick: () => null == es ? void 0 : es(),
+    onClick: () => null == ea ? void 0 : ea(),
     tag: "div",
     className: W.container,
     onMouseEnter: () => V(!0),
@@ -414,24 +414,24 @@ function z(e) {
       className: a()(W.image, {
         [W.streamContainer]: x && !X && !(null == Q ? void 0 : Q.isGuildStageVoice())
       }),
-      children: et
+      children: en
     }), (0, i.jsxs)("div", {
       className: W.content,
-      children: [null != en && (0, i.jsx)(u.Heading, {
+      children: [null != ei && (0, i.jsx)(u.Heading, {
         color: "header-primary",
         variant: "heading-sm/semibold",
-        className: 0 === er.length ? W.multiLineTitle : W.singleLineTitle,
-        children: en
-      }), null != ei && (0, i.jsx)(u.Text, {
+        className: 0 === es.length ? W.multiLineTitle : W.singleLineTitle,
+        children: ei
+      }), null != er && (0, i.jsx)(u.Text, {
         variant: "text-xs/medium",
         color: "text-secondary",
         className: W.subtitle,
-        children: ei
-      }), !(eo || el) && !(null == Q ? void 0 : Q.isGuildStageVoice()) && J.length > 0 && (0, i.jsx)(K, {
+        children: er
+      }), !(el || eu) && !(null == Q ? void 0 : Q.isGuildStageVoice()) && J.length > 0 && (0, i.jsx)(K, {
         users: J,
         othersCount: $,
-        extraPill: eu
+        extraPill: ed
       })]
-    }), k && ea]
+    }), k && eo]
   })
 }
