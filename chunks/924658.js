@@ -538,6 +538,9 @@ e.exports = Object.freeze({
   MESSAGES_SEND_SEPARATELY: "Send ({count, number})",
   MESSAGES_FORWARD_MAX_DESTINATION_COUNT: "Maximum {count, number} places at once",
   MESSAGE_FORWARD_SUCCESS: "Message forwarded!",
+  MESSAGE_FORWARDING_NSFW_NOT_ALLOWED: "Messages cannot be forwarded from age-restricted to unrestricted channels",
+  MESSAGE_CHANNEL_ATTACHMENTS_DISABLED: "Attachments are disabled in this channel.",
+  MESSAGE_CHANNEL_EMBEDS_DISABLED: "Embeds are disabled in this channel.",
   MESSAGE_FORWARD_FAILED: "Forward Failed",
   MESSAGE_FORWARD_FAILED_BODY: "The message could not be forwarded to the following {count, plural, one {location} other {locations}}:",
   SELECTED: "Selected"
