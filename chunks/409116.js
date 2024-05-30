@@ -20,17 +20,18 @@ t.default = e => {
     className: f,
     discount: C,
     variant: p = "heading-md/semibold"
-  } = e, m = c((0, i.formatPrice)(a, s)), g = null != C && C > 0 ? (0, l.jsxs)(l.Fragment, {
+  } = e, m = c((0, i.formatPrice)(a, s)), g = null != C && C > 2 ? (0, l.jsxs)(l.Fragment, {
     children: [m, (0, l.jsx)(n.Heading, {
       variant: p,
       color: "text-positive",
+      className: o.discount,
       children: " (-".concat(C, "%)")
     })]
   }) : m;
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)(n.Heading, {
       variant: p,
-      className: r()(o.heading, f),
+      className: r()(o.container, f),
       children: [d, null !== (t = null == u ? void 0 : u(g)) && void 0 !== t ? t : g]
     })
   })

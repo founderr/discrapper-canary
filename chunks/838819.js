@@ -70,8 +70,8 @@ function ec(e) {
     isPremiumUser: n,
     isGiftEasterEggEnabled: i,
     lightningCheckoutEnabled: o
-  } = e;
-  return 0 === t.length ? null : (0, l.jsxs)("div", {
+  } = e, u = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser());
+  return null == u || 0 === t.length ? null : (0, l.jsxs)("div", {
     children: [null != s ? (0, l.jsx)(f.Text, {
       className: eo.itemTypeTitle,
       color: "header-secondary",
@@ -89,6 +89,7 @@ function ec(e) {
           isPremiumUser: n,
           category: r,
           product: e,
+          user: u,
           isGiftEasterEggEnabled: i
         }, e.skuId)
       })

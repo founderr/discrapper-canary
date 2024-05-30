@@ -1,4 +1,5 @@
 "use strict";
 e.exports = {
-  heading: "heading__1b057"
+  container: "container__528d5",
+  discount: "discount__0188b"
 }
