@@ -254,8 +254,7 @@ class ek extends l.PureComponent {
         onContextMenuParticipant: this.handleContextMenu,
         showParticipants: o && (!S || T),
         popoutWindow: this.inPopout ? r : null,
-        awaitingRemoteSessionInfo: E,
-        forceShowToggleParticipants: T
+        awaitingRemoteSessionInfo: E
       })
     })
   }
