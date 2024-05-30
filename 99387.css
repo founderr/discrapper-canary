@@ -6792,8 +6792,7 @@ div.cardContainer__94a1c {
 }
 
 .chipletContainerInline_fe40ef {
-    margin-top: -2px;
-    margin-left: 4px
+    margin-top: -2px
 }
 
 .clickable__8131d {
@@ -6824,6 +6823,12 @@ div.cardContainer__94a1c {
 
 .chipletContainerInner_bfcb1e.noTooltip_e2f660:hover {
     background: var(--bg-mod-strong)
+}
+
+.unselectable__20cc6 {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
 .questRewardTile__0a963 {
@@ -95841,6 +95846,10 @@ input::-webkit-inner-spin-button {
 .overflowTooltip__6cbcb {
     width: auto;
     max-width: 500px
+}
+
+.clanTag__50ee5 {
+    margin-left: 4px
 }
 
 .interactiveSelected__689f0 {

@@ -59,41 +59,39 @@ function g(e) {
     {
       analyticsLocations: G
     } = (0, I.default)(E.default.USERNAME),
-    w = m ? "@" : "",
     {
-      nick: k,
-      colorString: B,
-      colorRoleName: V
+      nick: w,
+      colorString: k,
+      colorRoleName: B
     } = n,
-    x = null != i.messageReference && null != i.webhookId,
-    F = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
-    H = (0, h.useCanSeeRemixBadge)(),
-    Y = a.useMemo(() => ({
+    V = null != i.messageReference && null != i.webhookId,
+    x = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
+    F = (0, h.useCanSeeRemixBadge)(),
+    H = a.useMemo(() => ({
       source: O.AnalyticsSections.CHANNEL,
       messageId: i.id,
       tagUserId: i.author.id
     }), [i.id, i.author.id]),
-    j = {
+    Y = {
       className: C.username,
-      style: "username" === F && null != B ? {
-        color: B
+      style: "username" === x && null != k ? {
+        color: k
       } : void 0,
       onClick: v,
       onContextMenu: D,
-      children: o ? (0, s.jsxs)(s.Fragment, {
-        children: [w + k, (0, s.jsx)(T.default, {
-          clan: n.clan,
-          userId: i.author.id,
-          contextGuildId: b,
-          className: C.clanTagChiplet,
-          profileViewedAnalytics: Y
-        })]
-      }) : (0, s.jsx)(s.Fragment, {
-        children: w + k
+      children: (0, s.jsx)(s.Fragment, {
+        children: (m ? "@" : "") + w
       })
-    };
+    },
+    j = a.useMemo(() => o ? (0, s.jsx)(T.default, {
+      clan: n.clan,
+      userId: i.author.id,
+      contextGuildId: b,
+      className: C.clanTagChiplet,
+      profileViewedAnalytics: H
+    }) : null, [o, H, n.clan, b, i.author.id]);
   t = null != y && null != g ? (0, s.jsx)(_.Popout, {
-    preload: x ? void 0 : function() {
+    preload: V ? void 0 : function() {
       let e = null != r ? r : i.author;
       return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != b ? (0, N.getGuildMemberAvatarURLSimple)({
         guildId: b,
@@ -114,16 +112,20 @@ function g(e) {
         onClick: t,
         ...n
       } = e;
-      return (0, s.jsx)(_.Clickable, {
-        tag: "span",
-        ...n,
-        ...j,
-        className: l()(j.className, C.clickable, L)
+      return (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)(_.Clickable, {
+          tag: "span",
+          ...n,
+          ...Y,
+          className: l()(Y.className, C.clickable, L)
+        }), j]
       })
     }
-  }) : (0, s.jsx)(_.Clickable, {
-    ...j,
-    className: l()(j.className, L)
+  }) : (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(_.Clickable, {
+      ...Y,
+      className: l()(Y.className, L)
+    }), j]
   });
   let W = null != U ? U[0] : null,
     K = null != U ? U[1] : null;
@@ -131,9 +133,9 @@ function g(e) {
     value: G,
     children: [null != W && o ? (0, s.jsxs)(s.Fragment, {
       children: [" ", W, " "]
-    }) : null, "dot" === F ? (0, s.jsx)(_.RoleDot, {
-      color: B,
-      name: V,
+    }) : null, "dot" === x ? (0, s.jsx)(_.RoleDot, {
+      color: k,
+      name: B,
       className: C.roleDot
     }) : null, t, !o && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(T.default, {
@@ -141,12 +143,12 @@ function g(e) {
         userId: i.author.id,
         contextGuildId: b,
         className: C.clanTagChiplet,
-        profileViewedAnalytics: Y
+        profileViewedAnalytics: H
       }), (0, s.jsx)(p.default, {
         message: i
       })]
     }), null != K ? (0, s.jsx)(s.Fragment, {
       children: K
-    }) : null, null == W || o ? null : W, null != i && (0, S.default)(i) && H && P ? (0, s.jsx)(R, {}) : null]
+    }) : null, null == W || o ? null : W, null != i && (0, S.default)(i) && F && P ? (0, s.jsx)(R, {}) : null]
   })
 }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"

@@ -30,15 +30,18 @@ var i = n("735250"),
 let m = r.memo(function(e) {
     let {
       src: t,
-      className: n,
-      size: r = S.ClanTagBadgeSize.SIZE_16
+      tag: n,
+      className: r,
+      size: s = S.ClanTagBadgeSize.SIZE_16
     } = e;
     return null == t ? null : (0, i.jsx)("img", {
       src: t,
-      alt: h.default.Messages.CLAN_BADGE,
-      className: a()(A.badge, n),
-      width: r,
-      height: r
+      alt: h.default.Messages.CLAN_BADGE_ALT.format({
+        tag: n
+      }),
+      className: a()(A.badge, r),
+      width: s,
+      height: s
     })
   }),
   N = r.memo(function(e) {
@@ -67,10 +70,14 @@ let m = r.memo(function(e) {
         tag: "span",
         className: a()(A.text, s),
         children: [null != n && "string" == typeof n ? (0, i.jsx)(m, {
+          tag: null == t ? void 0 : t.toString(),
           src: n,
           size: E,
           className: o
-        }) : n, t]
+        }) : n, (0, i.jsx)("span", {
+          className: A.unselectable,
+          children: t
+        })]
       })
     }) : null
   }),

@@ -7,5 +7,6 @@ e.exports = {
   noTooltip: "noTooltip_e2f660",
   text: "text_c2b2cb",
   tooltip: "tooltip_a9f8fc",
-  tooltipContainer: "tooltipContainer_d9b1ea"
+  tooltipContainer: "tooltipContainer_d9b1ea",
+  unselectable: "unselectable__20cc6"
 }
