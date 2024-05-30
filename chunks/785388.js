@@ -24,8 +24,8 @@ var n = i("735250"),
   E = i("372900"),
   R = i("642101"),
   I = i("566006"),
-  N = i("620652"),
-  C = i("815605"),
+  C = i("620652"),
+  N = i("815605"),
   _ = i("222677"),
   x = i("995774"),
   O = i("665906"),
@@ -69,14 +69,14 @@ let X = e => {
     messageId: s
   } = e, [o, r] = a.useState(!0), [u, d] = a.useState([]), c = a.useMemo(() => {
     if (null == u || u.length < 1) return;
-    let e = (0, C.buildEffect)(t, u[0], i, {
-      emojiSize: N.BurstReactionSize.LARGE,
+    let e = (0, N.buildEffect)(t, u[0], i, {
+      emojiSize: C.BurstReactionSize.LARGE,
       messageId: s
     });
-    return (0, n.jsx)(N.default, {
+    return (0, n.jsx)(C.default, {
       className: K.__invalid_effect,
       effect: e,
-      emojiSize: N.BurstReactionSize.LARGE,
+      emojiSize: C.BurstReactionSize.LARGE,
       onComplete: () => r(!1)
     })
   }, [u, t, i, s]);
@@ -383,7 +383,7 @@ function et(e) {
     let a = null !== (n = null !== (t = L.default.getMessage(i.getChannelId(), i.id)) && void 0 !== t ? t : null === (e = S.default.getMessage(V.default.castMessageIdAsChannelId(i.id))) || void 0 === e ? void 0 : e.firstMessage) && void 0 !== n ? n : null != p ? R.default.getCachedMessage(p, i.getChannelId(), i.id) : void 0;
     return null != a ? a.reactions : []
   }, [i, p]);
-  let N = (t = T, a.useMemo(() => {
+  let C = (t = T, a.useMemo(() => {
       let e = [];
       return t.forEach(t => {
         t.burst_count > 0 && e.push({
@@ -398,7 +398,7 @@ function et(e) {
         return (t.burst_count > 0 ? t.burst_count : t.count) - i
       }), e
     }, [t])),
-    C = N[0],
+    N = C[0],
     [_, O] = function(e, t, i) {
       let [n, s] = a.useState(null != e ? e : t);
       return a.useEffect(() => {
@@ -407,9 +407,9 @@ function et(e) {
           return (0, x.emojiEquals)(e.emoji, n.emoji) && t === n.reactionType
         }) && s(t)
       }, [n, s, i, t]), [n, s]
-    }(s, null != C ? {
-      emoji: C.emoji,
-      reactionType: C.burst_count > 0 ? I.ReactionTypes.BURST : I.ReactionTypes.NORMAL
+    }(s, null != N ? {
+      emoji: N.emoji,
+      reactionType: N.burst_count > 0 ? I.ReactionTypes.BURST : I.ReactionTypes.NORMAL
     } : null, T),
     A = a.useMemo(() => {
       var e;
@@ -431,7 +431,7 @@ function et(e) {
       children: [o ? null : (0, n.jsx)(h.Scroller, {
         className: K.scroller,
         fade: !0,
-        children: N.map(e => {
+        children: C.map(e => {
           var t;
           let i = e.burst_count > 0;
           return (0, n.jsx)(q, {

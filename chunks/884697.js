@@ -84,7 +84,7 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
     let n = I(e);
     if (n <= 0) return;
     let i = T(e, t ? d.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : d.PriceSetAssignmentPurchaseTypes.DEFAULT);
-    if (null != i) return Math.round((n - i.amount) / n * 100)
+    if (null != i) return Math.floor((n - i.amount) / n * 100)
   },
   S = e => {
     var t;

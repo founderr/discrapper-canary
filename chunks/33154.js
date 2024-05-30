@@ -39,7 +39,7 @@ t.default = e => {
       return (0, c.assertNever)(t)
   }
   if (null == R) return null;
-  let N = async () => {
+  let C = async () => {
     S(!0);
     try {
       await u.default.joinGuild(n.id, {
@@ -70,7 +70,7 @@ t.default = e => {
         className: p.buttonContainer,
         children: [(0, s.jsx)(r.Button, {
           buttonRef: g,
-          onClick: N,
+          onClick: C,
           submitting: v,
           children: m.default.Messages.LURKER_MODE_POPOUT_JOIN
         }), (0, s.jsx)(r.Button, {

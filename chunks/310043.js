@@ -3,9 +3,9 @@ n.r(t), n("47120");
 var i = n("735250"),
   s = n("470079"),
   a = n("120356"),
-  l = n.n(a),
-  o = n("512722"),
-  r = n.n(o),
+  o = n.n(a),
+  l = n("512722"),
+  r = n.n(l),
   u = n("392711"),
   d = n.n(u),
   c = n("426275"),
@@ -46,9 +46,9 @@ function A(e) {
       itemsForLayout: t.slice(0, a)
     }), 2 === a && (0, i.jsx)(y, {
       itemsForLayout: t.slice(0, a)
-    }), 0 === a ? (0, i.jsx)(v, {
+    }), 0 === a ? (0, i.jsx)(N, {
       itemsForLayout: t
-    }) : (0, i.jsx)(v, {
+    }) : (0, i.jsx)(N, {
       itemsForLayout: t.slice(a)
     })]
   })
@@ -61,7 +61,7 @@ function T(e) {
     footer: s
   } = e, a = t[0];
   return (0, i.jsx)("div", {
-    className: l()(M.oneByOneGrid, {
+    className: o()(M.oneByOneGrid, {
       [M.oneByOneGridSingle]: n,
       [M.oneByOneGridMosaic]: !n,
       [M.hasFooter]: null != s
@@ -97,7 +97,7 @@ function E(e) {
     itemsForLayout: t
   } = e;
   return (0, i.jsxs)("div", {
-    className: l()(M.oneByTwoGrid, M.oneByTwoLayoutThreeGrid),
+    className: o()(M.oneByTwoGrid, M.oneByTwoLayoutThreeGrid),
     children: [(0, i.jsx)("div", {
       className: M.oneByTwoSoloItem,
       children: (0, i.jsx)(_, {
@@ -135,7 +135,7 @@ function j(e) {
   })
 }
 
-function v(e) {
+function N(e) {
   let {
     itemsForLayout: t
   } = e;
@@ -148,13 +148,13 @@ function v(e) {
     }, e.item.uniqueId))
   })
 }
-let N = e => ({
-    className: l()(e, M.itemContentContainer),
+let O = e => ({
+    className: o()(e, M.itemContentContainer),
     imgContainerClassName: M.lazyImgContainer,
     imgClassName: M.lazyImg
   }),
-  O = e => ({
-    className: l()(e, M.lazyImg)
+  v = e => ({
+    className: o()(e, M.lazyImg)
   });
 
 function _(e) {
@@ -163,23 +163,23 @@ function _(e) {
     maxWidth: n = I.MEDIA_MOSAIC_MAX_WIDTH,
     maxHeight: s = I.MEDIA_MOSAIC_MAX_HEIGHT,
     useFullWidth: a = !0,
-    isSingleItem: l = !1,
-    footer: o
+    isSingleItem: o = !1,
+    footer: l
   } = e, r = t.item.type, u = {
     ...t,
-    ..."IMAGE" === r && N(t.className),
-    ..."VIDEO" === r && O(t.className),
+    ..."IMAGE" === r && O(t.className),
+    ..."VIDEO" === r && v(t.className),
     mediaLayoutType: I.MediaLayoutType.MOSAIC,
     maxWidth: n,
     maxHeight: s,
     useFullWidth: a,
-    isSingleMosaicItem: l
+    isSingleMosaicItem: o
   };
   return (0, i.jsx)(m.GIFAccessoryContext.Provider, {
     value: t.gifFavoriteButton,
     children: (0, i.jsx)(h.default, {
       ...u,
-      footer: o
+      footer: l
     })
   })
 }
@@ -189,8 +189,8 @@ t.default = function(e) {
     hasInlineForwardButton: n = !1
   } = e, {
     groupableVisualMediaItems: a,
-    nonGroupableVisualMediaItems: l,
-    nonVisualMediaItems: o
+    nonGroupableVisualMediaItems: o,
+    nonVisualMediaItems: l
   } = function(e) {
     return s.useMemo(() => {
       let [t, n] = d().partition(e, e => (0, h.isVisualMedia)(e.item.type)), [i, s] = d().partition(t, e => (0, h.isGroupableMedia)(e.item.type));
@@ -217,7 +217,7 @@ t.default = function(e) {
       children: (0, i.jsx)(A, {
         visualMediaItems: a
       })
-    })), l.length > 0 && l.map(e => {
+    })), o.length > 0 && o.map(e => {
       let t = e.renderMosaicItemFooter({
         item: e.item,
         message: e.message
@@ -229,9 +229,9 @@ t.default = function(e) {
           footer: t
         })
       }, e.item.uniqueId)
-    }), o.length > 0 && (0, i.jsx)("div", {
+    }), l.length > 0 && (0, i.jsx)("div", {
       className: M.nonVisualMediaItemContainer,
-      children: o.map(e => (0, i.jsx)("div", {
+      children: l.map(e => (0, i.jsx)("div", {
         className: M.nonVisualMediaItem,
         children: (0, i.jsx)(_, {
           props: e

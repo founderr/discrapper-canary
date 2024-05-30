@@ -20,21 +20,21 @@ function c(e) {
     guildId: c,
     onRsvp: v,
     ...m
-  } = e, [h, p] = s.useState(u.ResponseOptions.SERIES), N = (0, u.getExistingRsvp)(l.id, null), E = (null == N ? void 0 : N.response) === o.GuildScheduledEventUserResponses.INTERESTED ? o.GuildScheduledEventUserResponses.UNINTERESTED : o.GuildScheduledEventUserResponses.INTERESTED, g = E === o.GuildScheduledEventUserResponses.INTERESTED ? r.default.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED : r.default.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED;
+  } = e, [p, h] = s.useState(u.ResponseOptions.SERIES), E = (0, u.getExistingRsvp)(l.id, null), N = (null == E ? void 0 : E.response) === o.GuildScheduledEventUserResponses.INTERESTED ? o.GuildScheduledEventUserResponses.UNINTERESTED : o.GuildScheduledEventUserResponses.INTERESTED, f = N === o.GuildScheduledEventUserResponses.INTERESTED ? r.default.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED : r.default.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED;
   return (0, t.jsx)(a.ConfirmModal, {
     ...m,
-    header: g,
+    header: f,
     confirmText: r.default.Messages.OK,
     cancelText: r.default.Messages.CANCEL,
     onConfirm: () => {
-      h === u.ResponseOptions.SERIES ? i.default.updateRsvp(l.id, null, c, E) : i.default.updateRsvp(l.id, n, c, E), null == v || v(), m.onClose()
+      p === u.ResponseOptions.SERIES ? i.default.updateRsvp(l.id, null, c, N) : i.default.updateRsvp(l.id, n, c, N), null == v || v(), m.onClose()
     },
     confirmButtonColor: a.Button.Colors.BRAND,
     children: (0, t.jsx)(a.RadioGroup, {
       className: d.responseOptions,
-      value: h,
+      value: p,
       options: (0, u.getResponseOptions)(),
-      onChange: e => p(e.value)
+      onChange: e => h(e.value)
     })
   })
 }

@@ -25,9 +25,9 @@ function T(e) {
     emoji: i,
     startPosition: T,
     targetPosition: v
-  } = e, [S, E] = a.useState(0), [R, I] = a.useState(0), [N, C] = a.useState(null), {
+  } = e, [S, E] = a.useState(0), [R, I] = a.useState(0), [C, N] = a.useState(null), {
     confettiCanvas: _
-  } = a.useContext(u.ConfettiCannonContext), x = (0, s.useConfettiCannon)(_, N), O = a.useMemo(() => [{
+  } = a.useContext(u.ConfettiCannonContext), x = (0, s.useConfettiCannon)(_, C), O = a.useMemo(() => [{
     src: null == i.id ? f.default.getURL(i.name) : h.default.getEmojiURL({
       id: i.id,
       animated: !1,
@@ -89,7 +89,7 @@ function T(e) {
     })
   }, [x, S, R]), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(s.SpriteCanvas, {
-      ref: C,
+      ref: N,
       sprites: O,
       colors: g,
       spriteWidth: m.COMMON_CONFETTI_MAX_SPRITE_SIZE,

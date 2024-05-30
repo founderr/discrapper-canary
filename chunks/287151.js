@@ -32,8 +32,8 @@ var n, a = i("735250"),
   E = i("906411"),
   R = i("56314"),
   I = i("400106"),
-  N = i("944386"),
-  C = i("305325"),
+  C = i("944386"),
+  N = i("305325"),
   _ = i("33154"),
   x = i("692147"),
   O = i("197115"),
@@ -129,9 +129,9 @@ class er extends(n = s.PureComponent) {
       useChatFontScaling: E,
       message: R,
       hideEmoji: I,
-      animationStartPosition: N
+      animationStartPosition: C
     } = this.props, {
-      shouldShowTooltip: C,
+      shouldShowTooltip: N,
       tooltipTextAria: _,
       reactionRef: O,
       tooltipPositionKey: j
@@ -151,11 +151,11 @@ class er extends(n = s.PureComponent) {
       this.isMe() && (b.borderColor = n), b.background = l, e = i, t = i
     }
     let P = null == O ? void 0 : O.getBoundingClientRect(),
-      U = null != N && null != P,
-      w = null == N;
+      U = null != C && null != P,
+      w = null == C;
     return (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(f.Popout, {
-        shouldShow: C,
+        shouldShow: N,
         "aria-label": null != _ && _,
         renderPopout: this.renderTooltip,
         nudgeAlignIntoViewport: !0,
@@ -170,7 +170,7 @@ class er extends(n = s.PureComponent) {
             className: o()(A.reaction, S, {
               [A.reactionMe]: this.isMe(),
               [A.reactionReadOnly]: h && !p && !T && !g,
-              [A.shakeReaction]: I && null == N
+              [A.shakeReaction]: I && null == C
             }),
             style: b,
             children: (0, a.jsx)(f.Popout, {
@@ -195,7 +195,7 @@ class er extends(n = s.PureComponent) {
                     children: [U && (0, a.jsx)(v.default, {
                       messageId: R.id,
                       emoji: c,
-                      startPosition: N,
+                      startPosition: C,
                       targetPosition: P
                     }), w && (0, a.jsx)(X.default, {
                       count: n,
@@ -458,7 +458,7 @@ class er extends(n = s.PureComponent) {
       if (!t) return null;
       let i = y.default.getChannel(e.getChannelId()),
         n = L.default.getGuild(null == i ? void 0 : i.getGuildId());
-      null != n && (0, C.openMemberVerificationModal)(n.id)
+      null != n && (0, N.openMemberVerificationModal)(n.id)
     }), ea(this, "handleSetReactionRef", e => {
       this.setState({
         reactionRef: e
@@ -519,7 +519,7 @@ let eu = s.memo(e => {
       currentGuildId: r,
       nonce: u
     } = e;
-    (0, N.useTrackOpenPopout)({
+    (0, C.useTrackOpenPopout)({
       emojiId: i,
       currentGuildId: r,
       popoutData: o,
@@ -566,10 +566,10 @@ let eu = s.memo(e => {
       return {
         joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === E.EmojiTypes.GUILD ? L.default.getGuild(null == e ? void 0 : e.guildId) : void 0
       }
-    }), [d, h] = s.useState(void 0), [m, p] = s.useState(!1), [g, T] = s.useState(!1), [v, R] = s.useState(!1), N = null != u, C = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t, _ = U.default.getGuildId(), x = null != _ && (_ === (null == d ? void 0 : d.id) || _ === (null == u ? void 0 : u.id)), O = w.default.getCurrentUser(), j = (0, K.getEmojiPopoutData)({
+    }), [d, h] = s.useState(void 0), [m, p] = s.useState(!1), [g, T] = s.useState(!1), [v, R] = s.useState(!1), C = null != u, N = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t, _ = U.default.getGuildId(), x = null != _ && (_ === (null == d ? void 0 : d.id) || _ === (null == u ? void 0 : u.id)), O = w.default.getCurrentUser(), j = (0, K.getEmojiPopoutData)({
       isPremium: G.default.isPremium(O),
-      hasJoinedEmojiSourceGuild: N,
-      isDiscoverable: C,
+      hasJoinedEmojiSourceGuild: C,
+      isDiscoverable: N,
       emojiComesFromCurrentGuild: x,
       isUnusableRoleSubscriptionEmoji: !1,
       userIsRoleSubscriber: !1,
@@ -581,7 +581,7 @@ let eu = s.memo(e => {
         n(), T(!0), h(await I.default.getGuildFromEmojiId(i)), T(!1), R(!0), n()
       })()
     }, [i, m, v, n]);
-    if (N) return null;
+    if (C) return null;
     let A = () => {
         p(!m)
       },
@@ -618,7 +618,7 @@ let eu = s.memo(e => {
       }) : M && (0, a.jsx)(ed, {
         emojiId: i,
         expressionSourceGuild: d,
-        hasJoinedExpressionSourceGuild: N,
+        hasJoinedExpressionSourceGuild: C,
         onClose: l,
         popoutData: j,
         currentGuildId: _,
