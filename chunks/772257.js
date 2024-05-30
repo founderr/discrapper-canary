@@ -1,30 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
-});
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  l = n.n(s),
-  i = n("918701"),
-  r = n("439826"),
-  o = n("43779"),
-  u = n("73060");
+}), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("918701"),
+  o = n("439826"),
+  u = n("43779"),
+  d = n("73060");
 
-function d(e) {
+function c(e) {
   let {
     quest: t
-  } = e, n = (0, i.isQuestExpired)(t);
+  } = e, n = (0, r.isQuestExpired)(t), [l, c] = s.useState(!1);
   return (0, a.jsxs)("div", {
-    className: l()(u.container, {
-      [u.expired]: n,
-      [u.live]: !n
+    className: i()(d.container, {
+      [d.expired]: n,
+      [d.live]: !n
     }),
-    children: [(0, a.jsx)(r.default, {
-      quest: t
-    }), (0, a.jsx)(o.default, {
+    onMouseEnter: () => c(!0),
+    onMouseLeave: () => c(!1),
+    children: [(0, a.jsx)(o.default, {
+      quest: t,
+      isHovering: l
+    }), (0, a.jsx)(u.default, {
       quest: t
     })]
   })
