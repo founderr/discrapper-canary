@@ -538,5 +538,7 @@ e.exports = Object.freeze({
   MESSAGES_SEND_SEPARATELY: "Send Separately ({count, number})",
   MESSAGES_FORWARD_MAX_DESTINATION_COUNT: "Maximum ({count, number}) places at once",
   MESSAGE_FORWARD_SUCCESS: "Message forwarded!",
+  MESSAGE_FORWARD_FAILED: "Forward Failed",
+  MESSAGE_FORWARD_FAILED_BODY: "The message could not be forwarded to the following {count, plural, one {location} other {locations}}:",
   SELECTED: "Selected"
 })
