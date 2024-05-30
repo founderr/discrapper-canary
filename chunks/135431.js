@@ -1,83 +1,78 @@
 "use strict";
 n.r(t), n.d(t, {
   canInstallApplication: function() {
-    return d
+    return u
   },
   installApplication: function() {
-    return _
+    return d
   }
 });
 var i = n("873546"),
   r = n("149765"),
-  s = n("581364"),
-  a = n("69580"),
-  o = n("626135"),
-  l = n("49012"),
-  u = n("981631");
+  s = n("69580"),
+  a = n("626135"),
+  o = n("49012"),
+  l = n("981631");
 
-function d(e) {
+function u(e) {
   let {
     customInstallUrl: t,
     installParams: n,
     integrationTypesConfig: i
   } = e;
-  return null != t || null != n || null != i && Object.values(i).some(e => null != e && null != e.oauth2_install_params) && (0, s.isUserInUserAppExperiment)({
-    location: "canInstallApplication"
-  })
+  return null != t || null != n || null != i && Object.values(i).some(e => null != e && null != e.oauth2_install_params)
 }
 
-function _(e) {
+function d(e) {
   let {
     applicationId: t,
     customInstallUrl: n,
-    installParams: d,
-    integrationTypesConfig: _,
-    guildId: c,
-    channelId: E,
-    disableGuildSelect: I,
-    source: T
+    installParams: u,
+    integrationTypesConfig: d,
+    guildId: _,
+    channelId: c,
+    disableGuildSelect: E,
+    source: I
   } = e;
   if (null != n) {
-    o.default.track(u.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
+    a.default.track(l.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
       application_id: t,
-      guild_id: c,
+      guild_id: _,
       auth_type: "custom_url",
-      source: T,
+      source: I,
       device_platform: i.isMobile ? "mobile_web" : "desktop_web"
-    }), (0, l.handleClick)({
+    }), (0, o.handleClick)({
       href: n
     });
     return
   }
-  if (null != _ && Object.values(_).some(e => null != e && null != e.oauth2_install_params) && (0, s.isUserInUserAppExperiment)({
-      location: "installApplication"
-    })) {
-    o.default.track(u.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
+  if (null != d && Object.values(d).some(e => null != e && null != e.oauth2_install_params)) {
+    a.default.track(l.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
       application_id: t,
-      guild_id: c,
+      guild_id: _,
       auth_type: "in_app",
-      source: T,
+      source: I,
       device_platform: i.isMobile ? "mobile_web" : "desktop_web"
-    }), (0, a.openOAuth2Modal)({
+    }), (0, s.openOAuth2Modal)({
       clientId: t,
-      guildId: c,
-      channelId: E,
-      disableGuildSelect: I
+      guildId: _,
+      channelId: c,
+      disableGuildSelect: E
     });
     return
   }
-  null != d && (o.default.track(u.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
+  null != u && (a.default.track(l.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
     application_id: t,
-    guild_id: c,
+    guild_id: _,
     auth_type: "in_app",
-    source: T,
+    source: I,
     device_platform: i.isMobile ? "mobile_web" : "desktop_web"
-  }), (0, a.openOAuth2Modal)({
+  }), (0, s.openOAuth2Modal)({
     clientId: t,
-    guildId: c,
-    channelId: E,
-    disableGuildSelect: I,
-    scopes: d.scopes,
-    permissions: null != d.permissions ? r.deserialize(d.permissions) : void 0
+    guildId: _,
+    channelId: c,
+    disableGuildSelect: E,
+    scopes: u.scopes,
+    permissions: null != u.permissions ? r.deserialize(u.permissions) : void 0
   }))
 }

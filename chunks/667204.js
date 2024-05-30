@@ -339,7 +339,7 @@ function W(e, t) {
     message: e
   }, n => {
     var i;
-    (0, h.handleInteractionResponse)(e.nonce, e.channelId, null !== (i = e.guildId) && void 0 !== i ? i : null, n), n.ok && null != t && t()
+    (0, h.handleInteractionResponse)(e.nonce, n, e.applicationId, e.channelId, null !== (i = e.guildId) && void 0 !== i ? i : null), n.ok && null != t && t()
   })
 }
 async function K(e, t) {

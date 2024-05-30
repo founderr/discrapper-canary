@@ -145,13 +145,19 @@ class Z extends(i = d.default.Store) {
     var t, n;
     return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : F : x
   }
+  hasContextStateApplication(e, t, n) {
+    var i, r;
+    let s = this.indices[null != n ? n : t];
+    return e in (null !== (r = null == s ? void 0 : null === (i = s.result) || void 0 === i ? void 0 : i.sections) && void 0 !== r ? r : {})
+  }
   getUserState() {
     var e;
-    return (0, v.isUserInUserAppExperiment)({
-      location: "getUserState"
-    }, {
-      autoTrackExposure: !1
-    }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : F : x
+    return null !== (e = this.indices[w]) && void 0 !== e ? e : F
+  }
+  hasUserStateApplication(e) {
+    var t, n;
+    let i = this.indices[w];
+    return e in (null !== (n = null == i ? void 0 : null === (t = i.result) || void 0 === t ? void 0 : t.sections) && void 0 !== n ? n : {})
   }
   getApplicationState(e) {
     var t;
@@ -159,6 +165,9 @@ class Z extends(i = d.default.Store) {
   }
   getApplicationStates() {
     return this.applicationIndices
+  }
+  hasApplicationState(e) {
+    return e in this.indices
   }
   query(e, t, n) {
     if (null == m.default.getCurrentUser()) return V;
@@ -178,9 +187,7 @@ class Z extends(i = d.default.Store) {
     }) : (0, R.requestApplicationCommandIndex)({
       type: "channel",
       channelId: e.id
-    }), u = !0)), (0, v.isUserInUserAppExperiment)({
-      location: "query"
-    }) && er(r) && ((0, R.requestApplicationCommandIndex)({
+    }), u = !0)), er(r) && ((0, R.requestApplicationCommandIndex)({
       type: "user"
     }), u = !0), er(s) && null != n.applicationId && ((0, R.requestApplicationCommandIndex)({
       type: "application",
@@ -328,16 +335,26 @@ let X = new Z(_.default, {
     })
   },
   APPLICATION_COMMAND_EXECUTE_BAD_VERSION: function(e) {
-    let t, {
+    let {
+      applicationId: t,
       channelId: n,
       guildId: i
     } = e;
-    j(t = null != i ? {
+    X.hasContextStateApplication(t, n, i) && j(null != i ? {
       type: "guild",
       guildId: i
     } : {
       type: "channel",
       channelId: n
+    }, {
+      serverVersion: k
+    }), X.hasUserStateApplication(t) && j({
+      type: "user"
+    }, {
+      serverVersion: k
+    }), X.hasApplicationState(t) && j({
+      type: "application",
+      applicationId: t
     }, {
       serverVersion: k
     })
@@ -360,6 +377,8 @@ let X = new Z(_.default, {
       guildId: t.id
     })
   },
+  USER_APPLICATION_UPDATE: z,
+  USER_APPLICATION_REMOVE: z,
   GUILD_APPLICATION_COMMAND_INDEX_UPDATE: function(e) {
     var t;
     let {
@@ -415,9 +434,7 @@ let X = new Z(_.default, {
       }), s
     }(e.guildId, e.members) || n;
     return n
-  },
-  USER_APPLICATION_UPDATE: z,
-  USER_APPLICATION_REMOVE: z
+  }
 });
 
 function Q(e, t, n) {
@@ -453,14 +470,12 @@ function q(e, t) {
 }
 
 function J(e, t) {
-  let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([X], () => X.getUserState()), s = (0, v.useIsUserInUserAppExperiment)({
-    location: "useUserIndexState"
-  });
+  let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([X], () => X.getUserState());
   return a.useEffect(() => {
-    n && (t && er(r) && e && s && (0, R.requestApplicationCommandIndex)({
+    n && (t && er(r) && e && (0, R.requestApplicationCommandIndex)({
       type: "user"
     }), i(!1))
-  }, [r, t, e, s, n]), r
+  }, [r, t, e, n]), r
 }
 t.default = X;
 

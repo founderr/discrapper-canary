@@ -88,7 +88,7 @@ let h = async e => {
     body: A,
     timeout: 3e3
   }, e => {
-    N(h, I, T, e)
+    N(h, e, o, I, T)
   })
 }, A = async e => {
   let {
@@ -118,26 +118,27 @@ let h = async e => {
     body: u,
     timeout: 3e3
   }, e => {
-    N(a, n, null != i ? i : null, e)
+    N(a, e, t, n, i)
   })
 }, m = (e, t, n) => {
   null == n && null != t && o.default.sendClydeError(e, t)
-}, N = (e, t, n, i) => {
-  if (!i.ok) {
-    if (!i.hasErr) {
-      var r;
-      if (i.status >= 400 && i.status < 500 && i.body) {
-        if (i.body.code === f.AbortCodes.INVALID_FORM_BODY && i.body.errors) {
-          let r = (0, T.getFirstSkemaError)(i.body.errors);
-          null != r && ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === r.code || "INTERACTION_APPLICATION_COMMAND_INVALID" === r.code) && a.default.dispatch({
+}, N = (e, t, n, i, r) => {
+  if (!t.ok) {
+    if (!t.hasErr) {
+      var s;
+      if (t.status >= 400 && t.status < 500 && t.body) {
+        if (t.body.code === f.AbortCodes.INVALID_FORM_BODY && t.body.errors) {
+          let s = (0, T.getFirstSkemaError)(t.body.errors);
+          null != s && ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === s.code || "INTERACTION_APPLICATION_COMMAND_INVALID" === s.code) && a.default.dispatch({
             type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
-            channelId: t,
-            guildId: n
-          }), (0, c.setFailed)(e, void 0, null == r ? void 0 : r.message);
+            applicationId: n,
+            channelId: i,
+            guildId: null != r ? r : null
+          }), (0, c.setFailed)(e, void 0, null == s ? void 0 : s.message);
           return
-        }(0, c.setFailed)(e, void 0, i.body.message);
+        }(0, c.setFailed)(e, void 0, t.body.message);
         return
-      }(0, c.setFailed)(e, null === (r = i.body) || void 0 === r ? void 0 : r.code);
+      }(0, c.setFailed)(e, null === (s = t.body) || void 0 === s ? void 0 : s.code);
       return
     }(0, c.setFailed)(e)
   }
