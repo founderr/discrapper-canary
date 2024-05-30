@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
   getEmojiUrl: function() {
     return O
   }
-}), n("47120"), n("757143");
+}), n("47120"), n("757143"), n("653041");
 var i = n("738774"),
   r = n("906411"),
   s = n("889564"),
@@ -105,6 +105,31 @@ t.default = {
   isInternalEmojiForGuildId: A,
   getEmojiUnavailableReason: m,
   isCustomEmoji: h,
+  getEmojiUnavailableReasons(e) {
+    let {
+      categoryEmojis: t,
+      channel: n,
+      guildId: i,
+      intention: r,
+      computeUnfiltered: s = !1
+    } = e, a = new Set, o = 0, l = s ? [] : void 0, u = 0, d = !1;
+    for (let e of t) {
+      let t = m({
+        emoji: e,
+        channel: n,
+        guildId: i,
+        intention: r
+      });
+      null != t ? (S.has(t) ? o++ : s && (null == l || l.push(e)), T.has(t) && (!d && t === I.EmojiDisabledReasons.PREMIUM_LOCKED && (d = !0), null != e.id && a.add(e.id), u++)) : s && (null == l || l.push(e))
+    }
+    return {
+      emojisDisabled: a,
+      emojisUnfiltered: l,
+      emojisFilteredCount: o,
+      emojisPremiumLockedCount: u,
+      emojiNitroLocked: d
+    }
+  },
   isEmojiFiltered(e) {
     let t = m(e);
     return S.has(t)

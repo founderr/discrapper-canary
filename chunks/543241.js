@@ -110,54 +110,80 @@ let L = function(e, t) {
     return i.useMemo(() => {
       let i = h.getGroupedCustomEmoji(),
         a = c.default.getFlattenedGuildIds(),
-        u = [];
-      return ((r, s) => {
-        for (let a of r) {
-          let r;
-          if (s === N.EmojiCategoryTypes.GUILD && (r = _.default.getGuild(a)), null == r) continue;
-          let o = null == i ? void 0 : i[r.id];
-          if (null == o || 0 === o.length || null != t && o.every(n => f.default.isEmojiFiltered({
-              emoji: n,
-              channel: t,
-              intention: e
-            }))) continue;
-          let l = null;
-          s === N.EmojiCategoryTypes.GUILD && (l = {
+        u = [],
+        d = (i, r) => f.default.getEmojiUnavailableReasons({
+          categoryEmojis: i,
+          channel: t,
+          guildId: n,
+          intention: e,
+          computeUnfiltered: r
+        });
+      return ((e, r) => {
+        for (let s of e) {
+          let e;
+          if (r === N.EmojiCategoryTypes.GUILD && (e = _.default.getGuild(s)), null == e) continue;
+          let a = null == i ? void 0 : i[e.id];
+          if (null == a || 0 === a.length) continue;
+          let {
+            emojisDisabled: o,
+            emojisFilteredCount: l,
+            emojisPremiumLockedCount: c,
+            emojiNitroLocked: E
+          } = d(a, !1);
+          if (null != t && a.length === l) continue;
+          let I = null;
+          r === N.EmojiCategoryTypes.GUILD && (I = {
             type: N.EmojiCategoryTypes.GUILD,
-            guild: r,
-            isNitroLocked: !R && f.default.isEmojiCategoryNitroLocked({
-              categoryEmojis: o,
-              channel: t,
-              intention: e
-            })
-          }), null != l && (r.id === n ? u.unshift(l) : u.push(l))
+            guild: e,
+            isNitroLocked: !R && E && c === a.length,
+            emojis: a,
+            emojisDisabled: o
+          }), null != I && (e.id === n ? u.unshift(I) : u.push(I))
         }
       })(a, N.EmojiCategoryTypes.GUILD), l.default.categories.reduce((e, t) => {
         if (t === N.EmojiCategories.TOP_GUILD_EMOJI) {
-          if (0 === T.length) return e;
+          let {
+            emojisDisabled: n,
+            emojisUnfiltered: i
+          } = d(T, !0);
+          if (null == i || 0 === i.length) return e;
           e.push({
             type: N.EmojiCategoryTypes.TOP_GUILD_EMOJI,
             id: t,
             name: g.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
               guildName: p
             }),
-            isNitroLocked: !1
+            isNitroLocked: !1,
+            emojis: i,
+            emojisDisabled: n
           })
         } else if (t === N.EmojiCategories.RECENT) {
-          if (0 === s.length) return e;
+          let {
+            emojisDisabled: n,
+            emojisUnfiltered: i
+          } = d(s, !0);
+          if (null == i || 0 === i.length) return e;
           e.push({
             type: N.EmojiCategoryTypes.RECENT,
             id: t,
             name: g.default.Messages.EMOJI_CATEGORY_RECENT,
-            isNitroLocked: !1
+            isNitroLocked: !1,
+            emojis: i,
+            emojisDisabled: n
           })
         } else if (t === N.EmojiCategories.FAVORITES) {
-          if (0 === o.length) return e;
+          let {
+            emojisDisabled: n,
+            emojisUnfiltered: i
+          } = d(o, !0);
+          if (null == i || 0 === i.length) return e;
           e.push({
             type: N.EmojiCategoryTypes.FAVORITES,
             id: t,
             name: g.default.Messages.CATEGORY_FAVORITE,
-            isNitroLocked: !1
+            isNitroLocked: !1,
+            emojis: i,
+            emojisDisabled: n
           })
         } else if (t === N.EmojiCategories.CUSTOM) {
           let t = u;
@@ -170,7 +196,7 @@ let L = function(e, t) {
         });
         return e
       }, [])
-    }, [h, t, n, e, T.length, p, s.length, o.length, r, R])
+    }, [h, t, n, e, T, p, s, o, r, R])
   },
   v = e => {
     let t = (null == e ? void 0 : e.getGuildId()) != null;
