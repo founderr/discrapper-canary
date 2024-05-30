@@ -14,8 +14,9 @@ t.default = () => {
     t = (0, u.useShopNewBadgeCoachtipEdition)("useCollectiblesShopTabNewBadge"),
     n = a.useMemo(() => {
       if ((0, o.ageEligibleForPremiumUpsell)(e)) {
+        if (t === d.ShopCoachtipEditions.ARCADE) return [l.DismissibleContent.COLLECTIBLES_SHOP_ARCADE_COACHTIP];
         if (t === d.ShopCoachtipEditions.RETRO_AND_PIRATES) return [l.DismissibleContent.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP];
-        if (t === d.ShopCoachtipEditions.GALAXY) return [l.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP]
+        else if (t === d.ShopCoachtipEditions.GALAXY) return [l.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP]
       }
       return []
     }, [e, t]),
