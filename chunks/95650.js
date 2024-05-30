@@ -27,11 +27,10 @@ function d(e) {
         transitionState: i.transitionState,
         onClose: i.onClose,
         appId: t,
-        subscriptionGroupListing: u,
-        guildId: d
+        subscriptionGroupListing: u
       })
     })
-  }, [t, d, u]);
+  }, [t, u]);
   return null == u ? null : p ? (0, l.jsx)(r.StorefrontButton, {
     onClick: m
   }) : (0, l.jsx)(n.Tooltip, {

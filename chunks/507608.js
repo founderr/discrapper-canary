@@ -176,15 +176,16 @@ function P(e) {
       (0, u.openModal)(e => {
         let {
           onClose: l,
-          transitionState: r
+          transitionState: a
         } = e;
         return (0, i.jsx)(N.SubscriptionDetailsModal, {
           appId: t,
           groupListingId: n,
           groupListingType: o,
+          guildId: r,
           onClose: l,
           skuId: s.id,
-          transitionState: r
+          transitionState: a
         })
       })
     } : void 0
