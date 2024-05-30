@@ -34,8 +34,8 @@ var a = s("735250"),
   j = s("210887"),
   U = s("601948"),
   y = s("981631"),
-  F = s("908442"),
-  G = s("724510"),
+  G = s("908442"),
+  F = s("724510"),
   B = s("164149"),
   k = s("611273"),
   H = s("842648");
@@ -71,10 +71,10 @@ class K extends n.Component {
     } = this.props;
     return (0, a.jsxs)(D.default, {
       direction: D.default.Direction.VERTICAL,
-      className: i()(G.buildOverrideGroup, k.marginBottom20, B.card, G.row),
+      className: i()(F.buildOverrideGroup, k.marginBottom20, B.card, F.row),
       children: [(0, a.jsx)(m.default, {
-        className: i()(G.removeBuildOverride, {
-          [G.removeBuildOverrideDisabled]: n
+        className: i()(F.removeBuildOverride, {
+          [F.removeBuildOverrideDisabled]: n
         }),
         onClick: n ? void 0 : this.handleRemoveBuildOverride
       }), (0, a.jsxs)(D.default, {
@@ -83,7 +83,7 @@ class K extends n.Component {
           basis: "50%",
           children: (0, a.jsx)(S.FormItem, {
             title: "Override Type",
-            className: G.item,
+            className: F.item,
             children: (0, a.jsx)(S.SingleSelect, {
               options: V,
               onChange: this.handleOverrideTypeChanged,
@@ -95,7 +95,7 @@ class K extends n.Component {
           basis: "50%",
           children: (0, a.jsx)(S.FormItem, {
             title: "branch" === t ? "Branch Name" : "Build ID",
-            className: G.item,
+            className: F.item,
             children: (0, a.jsx)(S.TextInput, {
               value: s,
               onChange: this.handleOverrideIdChanged,
@@ -105,14 +105,14 @@ class K extends n.Component {
         })]
       }), (0, a.jsxs)(D.default.Child, {
         children: [null != l && "" !== l && (0, a.jsx)(S.FormText, {
-          className: G.item,
+          className: F.item,
           style: {
             color: c.default.unsafe_rawColors.RED_400.css
           },
           type: S.FormText.Types.DESCRIPTION,
           children: l
         }), (0, a.jsxs)(S.FormText, {
-          className: G.item,
+          className: F.item,
           type: S.FormText.Types.DESCRIPTION,
           children: ["This controls the build that will be served for the ", (0, a.jsx)("code", {
             children: e
@@ -327,7 +327,7 @@ class z extends n.Component {
               })
             }), (0, a.jsx)(S.ModalContent, {
               children: (0, a.jsx)("div", {
-                className: G.buildOverrideList,
+                className: F.buildOverrideList,
                 children: e.map(e => (0, a.jsx)(S.Button, {
                   value: e,
                   color: S.Button.Colors.GREEN,
@@ -440,7 +440,7 @@ class Q extends n.Component {
       allowLoggedOut: o,
       experiments: d,
       experimentsError: u
-    } = this.state, c = F.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = l.map(e => ({
+    } = this.state, c = G.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = l.map(e => ({
       label: e,
       value: e
     }));
@@ -451,7 +451,7 @@ class Q extends n.Component {
         className: k.marginBottom20,
         children: (0, a.jsx)(S.SingleSelect, {
           value: null != c ? c.value : null,
-          options: F.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
+          options: G.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
           onChange: this.handleExpirationChange
         })
       }), this.isMobile() ? null : (0, a.jsx)(S.FormItem, {
@@ -459,7 +459,7 @@ class Q extends n.Component {
         className: k.marginBottom20,
         children: (0, a.jsx)(S.SingleSelect, {
           value: t,
-          options: F.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
+          options: G.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
           onChange: this.handleReleaseChannelChange
         })
       }), this.isMobile() ? (0, a.jsxs)(a.Fragment, {
@@ -555,7 +555,7 @@ class Q extends n.Component {
         render: s => {
           let n = s.highlight("json", e, !0);
           return null == n ? t() : (0, a.jsx)("code", {
-            className: "hljs scroller ".concat(n.language, " ").concat(H.scrollbarGhost, " ").concat(G.codebox),
+            className: "hljs scroller ".concat(n.language, " ").concat(H.scrollbarGhost, " ").concat(F.codebox),
             dangerouslySetInnerHTML: {
               __html: n.value
             }
@@ -762,7 +762,7 @@ function Z() {
     })()
   }, []), e) ? {} : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: [G.buttonsContainer, k.marginBottom20].join(" "),
+      className: [F.buttonsContainer, k.marginBottom20].join(" "),
       children: [(0, a.jsx)(S.Button, {
         onClick: () => window.open(s, "_blank"),
         disabled: "" === s,
@@ -787,7 +787,7 @@ function Z() {
       title: "Crashes",
       tag: S.FormTitleTags.H1,
       children: (0, a.jsxs)("div", {
-        className: G.buttonsContainer,
+        className: F.buttonsContainer,
         children: [(0, a.jsx)(S.SingleSelect, {
           value: void 0,
           options: [{
@@ -932,10 +932,10 @@ let X = u.default.connectStores([R.default], () => ({
       children: "Preview Unpublished Collections on App Directory Homepage"
     }) : null, O.default.isDeveloper ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: [G.buttonsContainer, k.marginBottom20].join(" "),
+        className: [F.buttonsContainer, k.marginBottom20].join(" "),
         children: (0, a.jsx)(U.OverridePremiumTypeDropDown, {})
       }), (0, a.jsx)(S.FormDivider, {
-        className: G.divider
+        className: F.divider
       })]
     }) : null]
   })
@@ -951,12 +951,12 @@ function J() {
     children: [(0, a.jsx)(S.FormTitle, {
       children: "Copy the ID of the Survey you want to test:"
     }), (0, a.jsxs)("form", {
-      className: G.surveyOverride,
+      className: F.surveyOverride,
       onSubmit: e => {
         e.preventDefault(), t.length > 0 ? f.overrideSurvey(t) : f.overrideSurvey(null)
       },
       children: [(0, a.jsx)(S.TextInput, {
-        className: G.surveyOverrideInput,
+        className: F.surveyOverrideInput,
         value: t,
         onChange: s
       }), (0, a.jsx)(S.Button, {
@@ -978,9 +978,9 @@ function $() {
     children: [(0, a.jsx)(S.FormTitle, {
       children: "Enter the ID of the changelog you want to test"
     }), (0, a.jsxs)("div", {
-      className: G.surveyOverride,
+      className: F.surveyOverride,
       children: [(0, a.jsx)(S.TextInput, {
-        className: G.surveyOverrideInput,
+        className: F.surveyOverrideInput,
         value: s,
         onChange: l
       }), (0, a.jsx)(S.Button, {

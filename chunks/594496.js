@@ -45,8 +45,8 @@ function L(e) {
     pendingNickname: j,
     pendingBanner: U,
     pendingBio: y,
-    pendingPronouns: F,
-    pendingThemeColors: G,
+    pendingPronouns: G,
+    pendingThemeColors: F,
     errors: B,
     guild: k
   } = (0, i.useStateFromStoresObject)([p.default], () => {
@@ -76,7 +76,7 @@ function L(e) {
     W = h.default.canUsePremiumProfileCustomization(P),
     K = (0, d.showRemoveAvatar)(b, null == Y ? void 0 : Y.avatar),
     z = (0, d.showRemoveBanner)(U, null == V ? void 0 : V.banner),
-    Q = (0, O.canResetThemeColors)(G, null == V ? void 0 : V.themeColors),
+    Q = (0, O.canResetThemeColors)(F, null == V ? void 0 : V.themeColors),
     q = null !== (t = null == V ? void 0 : V.bio) && void 0 !== t ? t : "",
     Z = null !== (s = null == V ? void 0 : V.pronouns) && void 0 !== s ? s : "",
     X = (e, t, s) => {
@@ -96,7 +96,7 @@ function L(e) {
       onPronounsChange: e => {
         (0, O.setNewPendingGuildIdentityPronouns)(e, Z)
       },
-      pendingPronouns: F,
+      pendingPronouns: G,
       currentPronouns: Z
     }, "pronouns"), (0, a.jsxs)(x.default, {
       user: P,
@@ -149,7 +149,7 @@ function L(e) {
       }, "banner"), (0, a.jsx)(_.default, {
         user: P,
         pendingAvatar: b,
-        pendingColors: G,
+        pendingColors: F,
         onThemeColorsChange: e => {
           (0, O.setNewPendingGuildIdentityThemeColors)(e, null == V ? void 0 : V.themeColors)
         },

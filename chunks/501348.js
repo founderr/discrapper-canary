@@ -38,8 +38,8 @@ var a = s("735250"),
   j = s("981631"),
   U = s("921944"),
   y = s("959517"),
-  F = s("689938"),
-  G = s("471264"),
+  G = s("689938"),
+  F = s("471264"),
   B = s("611273");
 
 function k(e, t, s) {
@@ -63,35 +63,35 @@ let H = {
     return [(0, I.createMessageRecord)({
       ...(0, N.default)({
         channelId: W,
-        content: F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
+        content: G.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: j.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, I.createMessageRecord)({
       ...(0, N.default)({
         channelId: W,
-        content: (0, d.isThemeDark)(e) ? F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
+        content: (0, d.isThemeDark)(e) ? G.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : G.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: j.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, I.createMessageRecord)({
       ...(0, N.default)({
         channelId: W,
-        content: F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
+        content: G.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: j.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, I.createMessageRecord)({
       ...(0, N.default)({
         channelId: W,
-        content: F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
+        content: G.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: j.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, I.createMessageRecord)({
       ...(0, N.default)({
         channelId: W,
-        content: F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
+        content: G.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),
       state: j.MessageStates.SENT,
       id: "".concat(t)
@@ -105,7 +105,7 @@ class z extends n.Component {
         id: w,
         tag: u.FormTitleTags.H5,
         className: B.marginBottom8,
-        children: F.default.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
+        children: G.default.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
       }), (0, a.jsx)(u.Slider, {
         className: i()(B.marginTop20, B.marginBottom4),
         initialValue: this.props.zoom,
@@ -117,7 +117,7 @@ class z extends n.Component {
         "aria-labelledby": w
       }), (0, a.jsx)(u.FormText, {
         type: u.FormText.Types.DESCRIPTION,
-        children: F.default.Messages.USER_SETTINGS_APPEARANCE_ZOOM_TIP.format({
+        children: G.default.Messages.USER_SETTINGS_APPEARANCE_ZOOM_TIP.format({
           modKey: E.default.modKey
         })
       })]
@@ -130,7 +130,7 @@ class z extends n.Component {
         id: Y,
         tag: u.FormTitleTags.H5,
         className: B.marginBottom8,
-        children: F.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
+        children: G.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
       }), (0, a.jsx)(R.default, {
         align: R.default.Align.CENTER,
         children: (0, a.jsx)(u.Slider, {
@@ -159,7 +159,7 @@ class z extends n.Component {
         id: V,
         tag: u.FormTitleTags.H5,
         className: B.marginBottom8,
-        children: F.default.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
+        children: G.default.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
       }), (0, a.jsx)(u.Slider, {
         className: i()(B.marginTop20, B.marginBottom4),
         initialValue: t,
@@ -183,7 +183,7 @@ class z extends n.Component {
     } = this.props, l = (0, d.isThemeDark)(t) ? this.darkMessages : this.lightMessages;
     return (0, a.jsx)(u.FocusBlock, {
       children: (0, a.jsx)(u.Card, {
-        className: i()(G.preview, B.marginBottom40, e ? G.compactPreview : void 0, "group-spacing-".concat(null != s ? s : e ? y.DEFAULT_COMPACT_SPACING : y.DEFAULT_COZY_SPACING)),
+        className: i()(F.preview, B.marginBottom40, e ? F.compactPreview : void 0, "group-spacing-".concat(null != s ? s : e ? y.DEFAULT_COMPACT_SPACING : y.DEFAULT_COZY_SPACING)),
         outline: !0,
         "aria-hidden": !0,
         children: l.map((t, s) => (0, a.jsx)(C.default, {
@@ -191,7 +191,7 @@ class z extends n.Component {
           message: t,
           compact: e,
           isGroupStart: s % 2 == 0,
-          className: 0 === s ? G.firstMessage : void 0,
+          className: 0 === s ? F.firstMessage : void 0,
           hideSimpleEmbedContent: n
         }, t.id))
       })
@@ -207,28 +207,28 @@ class z extends n.Component {
     return t ? (0, a.jsx)(u.FormItem, {
       className: i()(B.marginTop8, B.marginBottom40),
       title: (0, a.jsx)("div", {
-        className: G.themeTitle,
+        className: F.themeTitle,
         children: (0, a.jsx)("div", {
-          className: G.title,
-          children: F.default.Messages.THEME
+          className: F.title,
+          children: G.default.Messages.THEME
         })
       }),
       children: (0, a.jsx)(u.FormText, {
         type: u.FormText.Types.DEFAULT,
-        className: G.forcedColorsWarning,
-        children: (0, f.canEnableForcedColors)() ? F.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
+        className: F.forcedColorsWarning,
+        children: (0, f.canEnableForcedColors)() ? G.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
           onClick: () => {
             S.default.open(j.UserSettingsSections.ACCESSIBILITY)
           }
-        }) : F.default.Messages.THEME_DISABLED_FOR_FORCED_COLORS
+        }) : G.default.Messages.THEME_DISABLED_FOR_FORCED_COLORS
       })
     }) : (0, a.jsxs)(u.FormItem, {
       className: B.marginTop8,
       title: (0, a.jsxs)("div", {
-        className: G.themeTitle,
+        className: F.themeTitle,
         children: [(0, a.jsx)("div", {
-          className: G.title,
-          children: F.default.Messages.THEME
+          className: F.title,
+          children: G.default.Messages.THEME
         }), (0, a.jsx)(P.ClientThemesSidebarButton, {})]
       }),
       children: [(0, a.jsx)(P.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(b.UserSettingsAppearanceInAppIcon, {}), (0, a.jsx)(u.FormSwitch, {
@@ -236,20 +236,20 @@ class z extends n.Component {
         disabled: e !== j.ThemeTypes.LIGHT || t || null != n,
         onChange: this.handleDarkSidebarChecked,
         className: B.marginTop20,
-        children: F.default.Messages.ACCESSIBILITY_DARK_SIDEBAR
+        children: G.default.Messages.ACCESSIBILITY_DARK_SIDEBAR
       })]
     })
   }
   renderDisplayMode() {
     return (0, a.jsxs)(u.FormItem, {
-      title: F.default.Messages.MESSAGE_DISPLAY_MODE_LABEL,
+      title: G.default.Messages.MESSAGE_DISPLAY_MODE_LABEL,
       className: B.marginTop8,
       children: [(0, a.jsx)(u.RadioGroup, {
         options: [{
-          name: F.default.Messages.COZY_MODE,
+          name: G.default.Messages.COZY_MODE,
           value: H.COZY
         }, {
-          name: F.default.Messages.COMPACT_MODE,
+          name: G.default.Messages.COMPACT_MODE,
           value: H.COMPACT
         }],
         onChange: this.handleMessageDisplayModeChange,
@@ -259,7 +259,7 @@ class z extends n.Component {
         disabled: !this.props.messageDisplayCompact,
         onChange: this.handleDisplayCompactAvatarsChanged,
         className: B.marginTop20,
-        children: F.default.Messages.DISPLAY_COMPACT_AVATARS
+        children: G.default.Messages.DISPLAY_COMPACT_AVATARS
       })]
     })
   }
@@ -276,11 +276,11 @@ class z extends n.Component {
   render() {
     return (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H1,
-      title: F.default.Messages.APPEARANCE,
+      title: G.default.Messages.APPEARANCE,
       children: [this.renderPreview(), this.renderTheme(), this.renderDisplayMode(), this.renderScalingAndSpacing(), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
         className: B.marginTop20,
-        children: F.default.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
+        children: G.default.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
           onAccessibilityClick() {
             S.default.open(j.UserSettingsSections.ACCESSIBILITY)
           }
@@ -295,7 +295,7 @@ class z extends n.Component {
     return "".concat(e.toFixed(0), "px")
   }
   handleSliderValueText(e) {
-    return F.default.Messages.PIXEL_VALUE_A11Y_TEXT.format({
+    return G.default.Messages.PIXEL_VALUE_A11Y_TEXT.format({
       value: e
     })
   }

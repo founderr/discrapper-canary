@@ -54,8 +54,8 @@ t.default = function() {
       plan_id: R.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
       gift: "true"
     }),
-    F = "true" !== U.gift && null != v,
-    [G, B] = n.useState(L.length > 0 ? L[0].value : null),
+    G = "true" !== U.gift && null != v,
+    [F, B] = n.useState(L.length > 0 ? L[0].value : null),
     {
       analyticsLocations: k
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
@@ -210,7 +210,7 @@ t.default = function() {
           }))
         }), (0, a.jsx)(r.Tooltip, {
           text: "Already subscribed",
-          shouldShow: F,
+          shouldShow: G,
           children: e => {
             let {
               onMouseEnter: t,
@@ -219,7 +219,7 @@ t.default = function() {
             return (0, a.jsx)(r.Button, {
               onMouseLeave: s,
               onMouseEnter: t,
-              disabled: F,
+              disabled: G,
               onClick: () => {
                 window.open(O.Routes.BILLING_PREMIUM_SUBSCRIBE + "?" + l.stringify({
                   ...U
@@ -240,14 +240,14 @@ t.default = function() {
           variant: "text-sm/normal",
           children: "Premium Server Subscription For"
         }), (0, a.jsx)(r.SingleSelect, {
-          value: G,
+          value: F,
           options: L,
           onChange: e => B(e)
         })]
       }), (0, a.jsx)(_.GroupListingsFetchContextProvider, {
-        guildId: null == G ? void 0 : G.id,
+        guildId: null == F ? void 0 : F.id,
         children: (0, a.jsx)(M, {
-          selectedGuildForGuildSub: G
+          selectedGuildForGuildSub: F
         })
       }), (0, a.jsx)(r.FormDivider, {
         className: x.formDivider

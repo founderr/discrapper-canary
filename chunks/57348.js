@@ -52,7 +52,7 @@ function x(e) {
           call_to_action_url: A
         } = e;
         if (null == m) return;
-        let E = (0, d.getCollectionItemAssetUrl)({
+        let N = (0, d.getCollectionItemAssetUrl)({
           itemId: t,
           hash: m
         });
@@ -60,7 +60,7 @@ function x(e) {
           href: g.Routes.APPLICATION_DIRECTORY_PROFILE(p.id),
           className: C.item,
           children: (0, n.jsx)(u.default, {
-            imageSrc: E,
+            imageSrc: N,
             application: p,
             onClick: e => {
               let {
@@ -79,7 +79,7 @@ function x(e) {
           })
         }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != x ? (0, n.jsxs)(h.default, {
           className: l()(C.item, C.linkCard),
-          imageSrc: E,
+          imageSrc: N,
           header: x,
           headerClassName: C.cardHeader,
           children: [(0, n.jsx)(r.Text, {

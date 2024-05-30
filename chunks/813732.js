@@ -34,8 +34,8 @@ var a = s("735250"),
   j = s("52164"),
   U = s("91430"),
   y = s("474936"),
-  F = s("981631"),
-  G = s("526761"),
+  G = s("981631"),
+  F = s("526761"),
   B = s("726985"),
   k = s("689938"),
   H = s("431008");
@@ -92,9 +92,9 @@ t.default = function() {
     (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
   }), function() {
     T.default.clearSubsection()
-  }), []), A.default.enabled) ? (0, a.jsx)(_.default, {}) : S && v ? L === G.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
+  }), []), A.default.enabled) ? (0, a.jsx)(_.default, {}) : S && v ? L === F.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
     onGoBack: () => T.default.clearSubsection()
-  }) : L === G.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(h.default, {
+  }) : L === F.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(h.default, {
     onGoBack: () => T.default.clearSubsection()
   }) : (0, a.jsx)("div", {
     className: H.container,
@@ -109,10 +109,10 @@ t.default = function() {
       }) : (0, a.jsx)(U.SubscriptionDetailsEmpty, {
         className: H.subscriptionDetails
       }), (0, a.jsx)(g.default, {
-        onClickManageSubscription: () => T.default.setSection(F.UserSettingsSections.SUBSCRIPTIONS, G.ROLE_SUBSCRIPTION_SUBSECTION)
+        onClickManageSubscription: () => T.default.setSection(G.UserSettingsSections.SUBSCRIPTIONS, F.ROLE_SUBSCRIPTION_SUBSECTION)
       }), (0, a.jsx)(N.default, {
         onClickManageSubscription: () => {
-          T.default.setSection(F.UserSettingsSections.SUBSCRIPTIONS, G.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(F.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
+          T.default.setSection(G.UserSettingsSections.SUBSCRIPTIONS, F.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(G.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }
       }), (0, a.jsx)(C.Subsetting, {
         setting: B.WebSetting.SUBSCRIPTIONS_CREDITS,

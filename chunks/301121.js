@@ -36,8 +36,8 @@ var a, n, l = s("735250"),
   j = s("237292"),
   U = s("604849"),
   y = s("278828"),
-  F = s("921801"),
-  G = s("480294"),
+  G = s("921801"),
+  F = s("480294"),
   B = s("430824"),
   k = s("663389"),
   H = s("594174"),
@@ -476,10 +476,10 @@ class em extends i.PureComponent {
       children: [(0, l.jsxs)(_.FormSection, {
         tag: _.FormTitleTags.H3,
         className: er.marginBottom20,
-        children: [(0, l.jsx)(F.Subsetting, {
+        children: [(0, l.jsx)(G.Subsetting, {
           setting: es.WebSetting.PRIVACY_SENSITIVE_MEDIA,
           children: (0, l.jsx)(eE, {})
-        }), (0, l.jsx)(F.Subsetting, {
+        }), (0, l.jsx)(G.Subsetting, {
           setting: es.WebSetting.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER,
           children: (0, l.jsxs)(_.FormItem, {
             tag: _.FormTitleTags.H5,
@@ -552,7 +552,7 @@ class em extends i.PureComponent {
           type: _.FormTextTypes.DESCRIPTION,
           className: er.marginBottom8,
           children: el.default.Messages.USER_KEYWORD_FILTERS_DESCRIPTION
-        }), (0, l.jsx)(F.Subsetting, {
+        }), (0, l.jsx)(G.Subsetting, {
           setting: es.WebSetting.PRIVACY_KEYWORD_FILTER_PROFANITY,
           children: (0, l.jsx)(_.FormSwitch, {
             value: e,
@@ -564,7 +564,7 @@ class em extends i.PureComponent {
             }),
             children: el.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE
           })
-        }), (0, l.jsx)(F.Subsetting, {
+        }), (0, l.jsx)(G.Subsetting, {
           setting: es.WebSetting.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS,
           children: (0, l.jsx)(_.FormSwitch, {
             value: t,
@@ -576,7 +576,7 @@ class em extends i.PureComponent {
             }),
             children: el.default.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE
           })
-        }), (0, l.jsx)(F.Subsetting, {
+        }), (0, l.jsx)(G.Subsetting, {
           setting: es.WebSetting.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT,
           children: (0, l.jsx)(_.FormSwitch, {
             value: s,
@@ -782,16 +782,16 @@ class em extends i.PureComponent {
     return (0, l.jsxs)(_.FormSection, {
       tag: _.FormTitleTags.H1,
       title: el.default.Messages.PRIVACY_AND_SAFETY,
-      children: [this.renderDMSafety(), (0, l.jsx)(F.Subsetting, {
+      children: [this.renderDMSafety(), (0, l.jsx)(G.Subsetting, {
         setting: es.WebSetting.PRIVACY_KEYWORD_FILTER,
         children: this.renderKeywordFiltering()
-      }), (0, l.jsx)(F.Subsetting, {
+      }), (0, l.jsx)(G.Subsetting, {
         setting: es.WebSetting.PRIVACY_SERVER_PRIVACY,
         children: this.renderServerPrivacy()
-      }), (0, l.jsx)(F.Subsetting, {
+      }), (0, l.jsx)(G.Subsetting, {
         setting: es.WebSetting.PRIVACY_DATA_PRIVACY,
         children: e ? this.renderDataPrivacy() : null
-      }), this.renderPrivacyAndTermsNote(), (0, l.jsx)(F.Subsetting, {
+      }), this.renderPrivacyAndTermsNote(), (0, l.jsx)(G.Subsetting, {
         setting: es.WebSetting.PRIVACY_STAFF_ONLY,
         children: this.renderStaffOnlySettings()
       })]
@@ -936,10 +936,10 @@ function eg() {
       let e = H.default.getCurrentUser();
       return u()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
-    t = (0, E.useStateFromStoresObject)([G.default], () => ({
-      fetchedConsents: G.default.fetchedConsents,
-      usageStatistics: G.default.hasConsented(ea.Consents.USAGE_STATISTICS),
-      personalization: G.default.hasConsented(ea.Consents.PERSONALIZATION)
+    t = (0, E.useStateFromStoresObject)([F.default], () => ({
+      fetchedConsents: F.default.fetchedConsents,
+      usageStatistics: F.default.hasConsented(ea.Consents.USAGE_STATISTICS),
+      personalization: F.default.hasConsented(ea.Consents.PERSONALIZATION)
     })),
     s = (0, E.useStateFromStores)([P.default], () => P.default.getFetchError()),
     a = (0, E.useStateFromStores)([k.default], () => k.default.getSubsection()),

@@ -13,16 +13,16 @@ var a = n("735250"),
   h = n("566010"),
   E = n("353926"),
   g = n("703656"),
-  _ = n("980483"),
-  m = n("612744"),
+  m = n("980483"),
+  _ = n("612744"),
   p = n("624138"),
   T = n("830064"),
-  A = n("981631"),
-  I = n("734541");
-let S = n("407025"),
+  I = n("981631"),
+  S = n("734541");
+let A = n("407025"),
   N = n("2984"),
-  R = (0, p.cssValueToNumber)(I.responsiveWidthMobile),
-  C = [A.Routes.LOGIN, A.Routes.LOGIN_HANDOFF, A.Routes.REGISTER, A.Routes.INVITE(""), A.Routes.GIFT_CODE(""), A.Routes.GUILD_TEMPLATE_LOGIN(""), A.Routes.GUILD_TEMPLATE(""), A.Routes.DISABLE_EMAIL_NOTIFICATIONS, A.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, A.Routes.BILLING_PREMIUM_SUBSCRIBE, A.Routes.BILLING_PAYMENT_SOURCES_CREATE, A.Routes.BILLING_PAYMENTS, A.Routes.BILLING_PREMIUM_SWITCH_PLAN, A.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, A.Routes.VERIFY, A.Routes.VERIFY_HUB_EMAIL, A.Routes.REJECT_IP, A.Routes.REJECT_MFA, A.Routes.AUTHORIZE_IP, A.Routes.AUTHORIZE_PAYMENT, A.Routes.RESET, A.Routes.HANDOFF, A.Routes.REPORT, A.Routes.REPORT_SECOND_LOOK];
+  R = (0, p.cssValueToNumber)(S.responsiveWidthMobile),
+  C = [I.Routes.LOGIN, I.Routes.LOGIN_HANDOFF, I.Routes.REGISTER, I.Routes.INVITE(""), I.Routes.GIFT_CODE(""), I.Routes.GUILD_TEMPLATE_LOGIN(""), I.Routes.GUILD_TEMPLATE(""), I.Routes.DISABLE_EMAIL_NOTIFICATIONS, I.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, I.Routes.BILLING_PREMIUM_SUBSCRIBE, I.Routes.BILLING_PAYMENT_SOURCES_CREATE, I.Routes.BILLING_PAYMENTS, I.Routes.BILLING_PREMIUM_SWITCH_PLAN, I.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, I.Routes.VERIFY, I.Routes.VERIFY_HUB_EMAIL, I.Routes.REJECT_IP, I.Routes.REJECT_MFA, I.Routes.AUTHORIZE_IP, I.Routes.AUTHORIZE_PAYMENT, I.Routes.RESET, I.Routes.HANDOFF, I.Routes.REPORT, I.Routes.REPORT_SECOND_LOOK];
 
 function O(e) {
   return C.some(t => e.startsWith(t))
@@ -48,11 +48,11 @@ function L(e) {
     case "refresh":
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("img", {
-          className: I.artwork,
-          src: S,
+          className: S.artwork,
+          src: A,
           alt: ""
         }), (0, a.jsx)("img", {
-          className: I.logoWithText,
+          className: S.logoWithText,
           src: N,
           alt: ""
         }), t]
@@ -60,7 +60,7 @@ function L(e) {
     case "legacy":
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(T.default, {
-          className: I.artwork,
+          className: S.artwork,
           preserveAspectRatio: "xMinYMin slice"
         }), t]
       });
@@ -96,14 +96,14 @@ class x extends i.Component {
       }))
     });
     return (0, a.jsx)("div", {
-      className: I.characterBackground,
+      className: S.characterBackground,
       children: (0, a.jsx)(d.HeadingLevel, {
         forceLevel: 1,
         children: null != e ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(_.default, {
+          children: [(0, a.jsx)(m.default, {
             show: !0,
-            className: l()(I.logo)
-          }), (0, a.jsx)(m.Splash, {
+            className: l()(S.logo)
+          }), (0, a.jsx)(_.Splash, {
             splash: e,
             children: t
           })]

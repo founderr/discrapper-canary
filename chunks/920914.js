@@ -34,8 +34,8 @@ var a = s("735250"),
   j = s("26290"),
   U = s("626135"),
   y = s("63063"),
-  F = s("706454"),
-  G = s("349728"),
+  G = s("706454"),
+  F = s("349728"),
   B = s("494620"),
   k = s("205266"),
   H = s("216153"),
@@ -113,7 +113,7 @@ function q(e) {
     [O, R] = n.useState(T.visibility),
     [x, M] = n.useState(T.metadataVisibility),
     [L, P] = n.useState(T.showActivity),
-    [U, F] = n.useState(null),
+    [U, G] = n.useState(null),
     [V, z] = n.useState(null),
     [q, Z] = n.useState(!1),
     [X, J] = n.useState([]),
@@ -122,7 +122,7 @@ function q(e) {
   n.useEffect(() => {
     p(T.friendSync), R(T.visibility), M(T.metadataVisibility), P(T.showActivity)
   }, [T]), n.useEffect(() => {
-    !1 !== T.verified && (null != U && (R(U), E.default.setVisibility(T.type, T.id, U), F(null)), null != V && (M(V), E.default.setMetadataVisibility(T.type, T.id, V), z(null)))
+    !1 !== T.verified && (null != U && (R(U), E.default.setVisibility(T.type, T.id, U), G(null)), null != V && (M(V), E.default.setMetadataVisibility(T.type, T.id, V), z(null)))
   }, [T]);
 
   function et() {
@@ -135,7 +135,7 @@ function q(e) {
   function es() {
     let e = g.default.get(T.type),
       t = W.default.Messages.DISCONNECT_ACCOUNT_BODY;
-    (0, G.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
+    (0, F.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
       children: [t, (0, a.jsx)(B.default, {
         className: K.infoBox,
         children: W.default.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({
@@ -159,7 +159,7 @@ function q(e) {
       verified: t
     } = T, s = e ? 1 : 0;
     if (e && !t) {
-      F(s), (0, h.default)({
+      G(s), (0, h.default)({
         platformType: T.type,
         location: "User Settings"
       });
@@ -512,7 +512,7 @@ t.default = () => {
     s = (0, r.useStateFromStores)([p.default], () => p.default.getAccounts()),
     l = (0, m.default)();
   (0, r.useStateFromStores)([R.default], () => R.default.getFlattenedGuildIds());
-  let i = (0, r.useStateFromStores)([F.default], () => F.default.locale);
+  let i = (0, r.useStateFromStores)([G.default], () => G.default.locale);
   return (n.useEffect(() => {
     E.default.fetch()
   }, []), e) ? (0, a.jsx)(T.default, {}) : (0, a.jsxs)(c.FormSection, {

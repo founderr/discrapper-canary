@@ -96,7 +96,7 @@ function A(e) {
     }
   } = e, h = (0, C.default)({
     collection: t
-  }), [g, A] = a.useState(), E = (0, f.useApplicationDirectoryHistory)(e => e.guildId);
+  }), [g, A] = a.useState(), N = (0, f.useApplicationDirectoryHistory)(e => e.guildId);
   return a.useEffect(() => {
     let e = null == h ? void 0 : h.current;
     if (null == e) return;
@@ -126,7 +126,7 @@ function A(e) {
           collection_id: i,
           offset: n,
           results: [a.id],
-          guild_id: E
+          guild_id: N
         })
       },
       renderItem: e => {
@@ -155,7 +155,7 @@ function A(e) {
               u.default.track(x.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: i,
                 application_id: s.id,
-                guild_id: E,
+                guild_id: N,
                 shown_mutual_guilds_count: void 0
               }), (0, m.goToApplication)({
                 applicationId: s.id
@@ -174,7 +174,7 @@ function A(e) {
             u.default.track(x.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
               collection_id: i,
               link: f,
-              guild_id: E,
+              guild_id: N,
               shown_mutual_guilds_count: void 0
             })
           },

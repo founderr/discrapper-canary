@@ -53,14 +53,14 @@ function D() {
     }),
     y = (0, N.default)(_.default),
     {
-      showClipsHeaderEntrypoint: F
+      showClipsHeaderEntrypoint: G
     } = m.ClipsExperiment.useExperiment({
       location: "clips_recording_settings"
     }, {
       autoTrackExposure: !1
     });
   i()(null != j, "Save clip keybind unset");
-  let G = (0, r.useStateFromStores)([E.default], () => E.default.locale),
+  let F = (0, r.useStateFromStores)([E.default], () => E.default.locale),
     B = n.useMemo(() => [{
       value: A.ClipsLengthSettings.SECONDS_30,
       label: x.default.Messages.CLIPS_LENGTH_SECONDS.format({
@@ -76,7 +76,7 @@ function D() {
       label: x.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 2
       })
-    }], [G]),
+    }], [F]),
     k = n.useMemo(() => [{
       value: O.ApplicationStreamResolutions.RESOLUTION_480,
       label: x.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
@@ -100,7 +100,7 @@ function D() {
     }, {
       value: O.ApplicationStreamResolutions.RESOLUTION_SOURCE,
       label: x.default.Messages.SCREENSHARE_SOURCE
-    }], [G]),
+    }], [F]),
     H = n.useMemo(() => [{
       value: O.ApplicationStreamFPS.FPS_15,
       label: x.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
@@ -116,7 +116,7 @@ function D() {
       label: x.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: O.ApplicationStreamFPS.FPS_60
       })
-    }], [G]),
+    }], [F]),
     w = n.useCallback(e => {
       d.default.setKeybind({
         ...j,
@@ -170,7 +170,7 @@ function D() {
           children: x.default.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS
         })
       })]
-    }), F && (0, a.jsxs)(a.Fragment, {
+    }), G && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.FormDivider, {}), (0, a.jsx)(o.FormSection, {
         className: L.marginTop20,
         children: (0, a.jsx)(o.FormSwitch, {

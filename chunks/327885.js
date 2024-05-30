@@ -97,7 +97,7 @@ function M(e) {
     })
   }
 
-  function F(e) {
+  function G(e) {
     c.default.setEnabled(n, e), N.default.track(C.AnalyticEvents.OVERLAY_TOGGLED, {
       enabled: e,
       setting_type: "overlay toggled - legacy"
@@ -128,7 +128,7 @@ function M(e) {
             disabled: U || !n,
             note: U ? A.default.Messages.OVERLAY_DISABLED_OLD_CLIENT : null,
             hideBorder: !0,
-            onChange: F,
+            onChange: G,
             children: A.default.Messages.ENABLE_LEGACY_OVERLAY
           })]
         }) : (0, a.jsx)(d.FormItem, {

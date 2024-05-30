@@ -17,10 +17,10 @@ function a(e) {
 }
 n.r(t), n.d(t, {
   get: function() {
-    return m
+    return _
   },
   parseRequestOptionsFromJSON: function() {
-    return _
+    return m
   }
 });
 var i = "copy",
@@ -135,10 +135,10 @@ var E = {
     clientExtensionResults: o(h, e => e.getClientExtensionResults())
   };
 
-function _(e) {
+function m(e) {
   return l(s, E, e)
 }
-async function m(e) {
+async function _(e) {
   let t = await navigator.credentials.get(e);
   return t.toJSON = () => l(a, g, t), t
 }

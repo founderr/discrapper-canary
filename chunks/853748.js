@@ -15,9 +15,9 @@ var l = a("735250"),
   d = a("774078"),
   f = a("607070"),
   C = a("689938"),
-  m = a("549622");
+  p = a("549622");
 
-function p(e) {
+function m(e) {
   let {
     endDate: t
   } = e, {
@@ -32,7 +32,7 @@ function p(e) {
   }(a, s, r, n);
   return (0, l.jsx)(u.Text, {
     variant: "heading-md/medium",
-    className: m.countdown,
+    className: p.countdown,
     tag: "div",
     children: (0, l.jsx)("div", {
       role: "timer",
@@ -57,7 +57,7 @@ let g = s.memo(function(e) {
     immediate: d
   });
   return (0, l.jsxs)(i.animated.div, {
-    className: n()([m.countDownWrapper, r && m.fullScreenWrapper, o.isMobile && m.mobileWrapper]),
+    className: n()([p.countDownWrapper, r && p.fullScreenWrapper, o.isMobile && p.mobileWrapper]),
     role: "status",
     style: {
       backgroundColor: s.backgroundColor,
@@ -67,18 +67,18 @@ let g = s.memo(function(e) {
     },
     children: [null != s.iconSrc && (0, l.jsx)("img", {
       src: s.iconSrc,
-      className: m.countdownIcon,
+      className: p.countdownIcon,
       alt: "",
       "aria-hidden": !0
     }), (0, l.jsx)(u.Heading, {
       variant: "heading-md/medium",
-      className: m.countdownLabel,
+      className: p.countdownLabel,
       children: s.label()
     }), (0, l.jsx)(u.Heading, {
       variant: "heading-md/medium",
-      className: m.countdown,
+      className: p.countdown,
       children: "—"
-    }), (0, l.jsx)(p, {
+    }), (0, l.jsx)(m, {
       endDate: t
     })]
   })

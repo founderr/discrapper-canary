@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var r, u, i, l, a = n("442837"),
+var r, u, i, a, l = n("442837"),
   o = n("570140"),
   s = n("622999");
 let E = "",
@@ -9,8 +9,8 @@ let E = "",
   d = null,
   c = !1,
   A = null,
-  f = "",
   T = "",
+  f = "",
   I = "",
   C = "",
   P = "",
@@ -18,30 +18,30 @@ let E = "",
   N = "",
   M = "",
   U = !1,
-  h = null,
   p = null,
+  h = null,
   O = null,
   L = null;
 
 function m() {
-  d = null, E = "", S = null, _ = "", c = !1, A = null, f = "US", T = "", I = "", C = "", P = "", R = "", N = "", M = "", U = !1, h = null, p = null, O = null, L = null
+  d = null, E = "", S = null, _ = "", c = !1, A = null, T = "US", f = "", I = "", C = "", P = "", R = "", N = "", M = "", U = !1, p = null, h = null, O = null, L = null
 }
 
 function F(e) {
-  T = e.name, f = e.country, C = e.line1, P = e.line2, R = e.city, N = e.postalCode, M = e.state, I = e.email
+  f = e.name, T = e.country, C = e.line1, P = e.line2, R = e.city, N = e.postalCode, M = e.state, I = e.email
 }
 
 function y() {
-  h = null
+  p = null
 }
 
 function G(e) {
   let {
     error: t
   } = e;
-  h = t
+  p = t
 }
-class B extends(l = a.default.Store) {
+class g extends(a = l.default.Store) {
   get stripePaymentMethod() {
     return d
   }
@@ -58,7 +58,7 @@ class B extends(l = a.default.Store) {
     return _
   }
   get redirectedPaymentId() {
-    return p
+    return h
   }
   get adyenPaymentData() {
     return A
@@ -68,7 +68,7 @@ class B extends(l = a.default.Store) {
   }
   getCreditCardInfo() {
     return {
-      name: T
+      name: f
     }
   }
   get isCardInfoValid() {
@@ -76,9 +76,9 @@ class B extends(l = a.default.Store) {
   }
   getBillingAddressInfo() {
     return {
-      name: T,
+      name: f,
       email: I,
-      country: f,
+      country: T,
       line1: C,
       line2: P,
       city: R,
@@ -90,15 +90,15 @@ class B extends(l = a.default.Store) {
     return U
   }
   get error() {
-    return h
+    return p
   }
 }
-i = "NewPaymentSourceStore", (u = "displayName") in(r = B) ? Object.defineProperty(r, u, {
+i = "NewPaymentSourceStore", (u = "displayName") in(r = g) ? Object.defineProperty(r, u, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[u] = i, t.default = new B(o.default, {
+}) : r[u] = i, t.default = new g(o.default, {
   NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: function(e) {
     let {
       stripePaymentMethod: t
@@ -118,14 +118,14 @@ i = "NewPaymentSourceStore", (u = "displayName") in(r = B) ? Object.defineProper
       info: t,
       isValid: n
     } = e;
-    T = t.name, c = n
+    f = t.name, c = n
   },
   NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: function(e) {
     let {
       info: t,
       isValid: n
     } = e;
-    null != t.name && "" !== t.name && (T = t.name), f = t.country, T = t.name, C = t.line1, P = t.line2, R = t.city, N = t.postalCode, M = t.state, I = t.email, U = n
+    null != t.name && "" !== t.name && (f = t.name), T = t.country, f = t.name, C = t.line1, P = t.line2, R = t.city, N = t.postalCode, M = t.state, I = t.email, U = n
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
     E = "", S = null
@@ -136,7 +136,7 @@ i = "NewPaymentSourceStore", (u = "displayName") in(r = B) ? Object.defineProper
       nonce: n,
       billingAddress: r
     } = e;
-    E = t, S = n, F(r), U = f.length > 0
+    E = t, S = n, F(r), U = T.length > 0
   },
   BRAINTREE_TOKENIZE_VENMO_START: function() {
     _ = "", S = null
@@ -165,9 +165,9 @@ i = "NewPaymentSourceStore", (u = "displayName") in(r = B) ? Object.defineProper
     let {
       query: t
     } = e;
-    (null == t ? void 0 : t.payment_id) != null ? (O = !0, p = t.payment_id) : (null == t ? void 0 : t.payment_source_id) != null && (O = !0, L = t.payment_source_id)
+    (null == t ? void 0 : t.payment_id) != null ? (O = !0, h = t.payment_id) : (null == t ? void 0 : t.payment_source_id) != null && (O = !0, L = t.payment_source_id)
   },
   RESET_PAYMENT_ID: function() {
-    O = !1, p = null
+    O = !1, h = null
   }
 })

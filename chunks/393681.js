@@ -34,8 +34,8 @@ var a = s("735250"),
   j = s("730820"),
   U = s("888256"),
   y = s("2719"),
-  F = s("194530"),
-  G = s("839469"),
+  G = s("194530"),
+  F = s("839469"),
   B = s("726985"),
   k = s("981631"),
   H = s("801461"),
@@ -151,7 +151,7 @@ class W extends n.PureComponent {
           children: (0, a.jsx)(c.Button, {
             size: c.Button.Sizes.SMALL,
             className: Y.changePasswordButton,
-            onClick: () => (0, c.openModal)(e => (0, a.jsx)(F.default, {
+            onClick: () => (0, c.openModal)(e => (0, a.jsx)(G.default, {
               ...e,
               onSuccess: e.onClose
             })),
@@ -318,7 +318,7 @@ t.default = () => {
     {
       hasSearchResults: n,
       searchResults: l
-    } = (0, G.useSettingSearchResults)(),
+    } = (0, F.useSettingSearchResults)(),
     i = (0, d.useStateFromStores)([P.default], () => P.default.theme),
     r = (0, I.useIsEligibleForPomelo)(),
     u = (0, g.useForceMigration)(),

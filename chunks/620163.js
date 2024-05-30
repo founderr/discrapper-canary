@@ -39,8 +39,8 @@ var n = s("990547"),
   j = s("25990"),
   U = s("87086"),
   y = s("759231"),
-  F = s("26290"),
-  G = s("626135"),
+  G = s("26290"),
+  F = s("626135"),
   B = s("49012"),
   k = s("358085"),
   H = s("392735"),
@@ -106,8 +106,8 @@ let ej = () => {
       showPrepaidPaymentPastDueWarning: p,
       impressionSource: O,
       numOfPendingFamilyRequests: ey,
-      isOverlaySupported: eF,
-      isClipsBetaTagShowing: eG = !1,
+      isOverlaySupported: eG,
+      isClipsBetaTagShowing: eF = !1,
       shouldMergeGameSettings: eB,
       isUserSettingsSearchEnabled: ek
     } = e;
@@ -229,7 +229,7 @@ let ej = () => {
         label: eP.default.Messages.USER_SETTINGS_PROFILES,
         ariaLabel: eP.default.Messages.USER_SETTINGS_PROFILES,
         element: M.default,
-        newIndicator: (0, a.jsx)(F.PremiumBadge, {
+        newIndicator: (0, a.jsx)(G.PremiumBadge, {
           text: eP.default.Messages.NEW
         }),
         notice: {
@@ -316,7 +316,7 @@ let ej = () => {
         ariaLabel: eP.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         element: er.default,
         badgeCount: ey,
-        newIndicator: (0, a.jsx)(F.TextBadge, {
+        newIndicator: (0, a.jsx)(G.TextBadge, {
           text: eP.default.Messages.NEW,
           color: g.default.BG_BRAND
         }),
@@ -364,7 +364,7 @@ let ej = () => {
         searchableTitle: eP.default.Messages.CLIPS,
         label: eP.default.Messages.CLIPS,
         ariaLabel: eP.default.Messages.CLIPS,
-        icon: eG ? (0, a.jsx)(_.default, {}) : void 0,
+        icon: eF ? (0, a.jsx)(_.default, {}) : void 0,
         element: f.default,
         predicate: () => !eB
       },
@@ -441,7 +441,7 @@ let ej = () => {
         label: eP.default.Messages.APPEARANCE,
         ariaLabel: eP.default.Messages.APPEARANCE,
         element: et.default,
-        newIndicator: (0, a.jsx)(F.PremiumBadge, {
+        newIndicator: (0, a.jsx)(G.PremiumBadge, {
           text: eP.default.Messages.NEW
         }),
         newIndicatorDismissibleContentTypes: ej()
@@ -550,7 +550,7 @@ let ej = () => {
         searchableTitle: eP.default.Messages.OVERLAY,
         label: eP.default.Messages.OVERLAY,
         element: e_.default,
-        predicate: () => !eB && eF
+        predicate: () => !eB && eG
       },
       [ev.WebSetting.CHANGELOG]: {
         section: "changelog",
@@ -562,11 +562,11 @@ let ej = () => {
         section: "merchandise",
         onClick: () => {
           let e = "https://discordmerch.com/Dsktopprm";
-          G.default.track(eL.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, B.handleClick)({
+          F.default.track(eL.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, B.handleClick)({
             href: e,
             shouldConfirm: !0,
             onConfirm: () => {
-              G.default.track(eL.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
+              F.default.track(eL.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
             }
           })
         },

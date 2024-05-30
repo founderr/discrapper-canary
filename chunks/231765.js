@@ -56,7 +56,7 @@ let y = () => [{
     title: v.default.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED,
     description: v.default.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED_DESCRIPTION
   }],
-  F = () => [{
+  G = () => [{
     location: x.ShakeLocation.CHAT_INPUT,
     title: v.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED,
     description: v.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
@@ -70,7 +70,7 @@ let y = () => [{
     description: v.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_MENTION_ENABLED_DESCRIPTION
   }];
 
-function G(e) {
+function F(e) {
   let {
     disabled: t,
     locations: s,
@@ -196,7 +196,7 @@ function H(e) {
         }, 0),
         onValueRender: e => "".concat(e)
       })]
-    }), (0, r.jsx)(G, {
+    }), (0, r.jsx)(F, {
       disabled: o,
       locations: y(),
       settingsLocations: l,
@@ -303,9 +303,9 @@ function Y(e) {
         }, 1),
         onMarkerRender: e => e === b[b.length - 1] ? v.default.Messages.POGGERMODE_SCREENSHAKE_MAX : "".concat(100 * e, "%")
       })]
-    }), (0, r.jsx)(G, {
+    }), (0, r.jsx)(F, {
       disabled: o,
-      locations: F(),
+      locations: G(),
       settingsLocations: n,
       onChange: e => l({
         screenshakeEnabledLocations: e

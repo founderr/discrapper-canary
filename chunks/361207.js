@@ -15,8 +15,8 @@ n.r(t), n.d(t, {
 });
 var s = n("525654"),
   a = n.n(s),
-  r = n("271579"),
-  l = n("314897"),
+  l = n("271579"),
+  r = n("314897"),
   i = n("981631");
 let o = "linux";
 
@@ -49,17 +49,17 @@ function p(e, t, n) {
   let s = null != n ? n.toString() : null;
   switch (t) {
     case "iOS":
-      return (0, r.default)(null != s ? s : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
+      return (0, l.default)(null != s ? s : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
         utmSource: e,
-        fingerprint: l.default.getFingerprint(),
-        attemptId: (0, r.generateAttemptId)()
+        fingerprint: r.default.getFingerprint(),
+        attemptId: (0, l.generateAttemptId)()
       });
     case "Android":
-      return (0, r.default)(null != s ? s : "https://play.google.com/store/apps/details", {
+      return (0, l.default)(null != s ? s : "https://play.google.com/store/apps/details", {
         utmSource: e,
         id: "com.discord",
-        fingerprint: l.default.getFingerprint(),
-        attemptId: (0, r.generateAttemptId)()
+        fingerprint: r.default.getFingerprint(),
+        attemptId: (0, l.generateAttemptId)()
       });
     default:
       return null != s ? s : "https://www.discord.com"

@@ -27,7 +27,7 @@ function C(e) {
       title: C,
       application_directory_collection_items: x
     }
-  } = e, [_, I] = a.useState(300), [v, A] = a.useState(4), E = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), N = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, f.default)({
+  } = e, [_, I] = a.useState(300), [v, A] = a.useState(4), N = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), E = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, f.default)({
     collection: t
   });
   a.useEffect(() => {
@@ -35,7 +35,7 @@ function C(e) {
       var e;
       let t = null === (e = T.current) || void 0 === e ? void 0 : e.offsetWidth,
         i = 1;
-      return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1e3 && (i = 4), A(i), (t - (i - 1) * E) / i)
+      return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1e3 && (i = 4), A(i), (t - (i - 1) * N) / i)
     }
     let t = T.current;
     if (null == t) return;
@@ -45,7 +45,7 @@ function C(e) {
     return I(e()), i.observe(t), () => {
       i.disconnect()
     }
-  }, [E, T]);
+  }, [N, T]);
   let R = (0, r.useUID)();
   return (0, n.jsx)("div", {
     ref: T,
@@ -53,7 +53,7 @@ function C(e) {
       header: C,
       headerId: R,
       tileWidth: _,
-      tileMargin: E,
+      tileMargin: N,
       onScroll: e => {
         let {
           tileIndex: t
@@ -68,7 +68,7 @@ function C(e) {
           collection_id: i,
           offset: t,
           results: n,
-          guild_id: N
+          guild_id: E
         })
       },
       children: (0, n.jsx)("ul", {
@@ -97,7 +97,7 @@ function C(e) {
                   o.default.track(m.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: i,
                     application_id: s.id,
-                    guild_id: N,
+                    guild_id: E,
                     shown_mutual_guilds_count: t.length
                   }), (0, h.goToApplication)({
                     applicationId: s.id

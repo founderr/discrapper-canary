@@ -24,7 +24,7 @@ let E = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
     START: 0,
     END: 1
   },
-  _ = {
+  m = {
     friction: 10,
     tension: 130
   };
@@ -48,7 +48,7 @@ t.default = function(e) {
     animateTo(e, t) {
       l.default.spring(this.anim, {
         toValue: e,
-        ..._
+        ...m
       }).start(t)
     }
     getAnimatedStyle(e) {

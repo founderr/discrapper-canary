@@ -146,7 +146,7 @@ t.default = function() {
       addClaimedOutboundPromotionCode: y
     } = (0, h.useOutboundPromotions)();
 
-  function F() {
+  function G() {
     E.default.open(M.UserSettingsSections.PREMIUM)
   }
   return i && C && N ? (0, a.jsxs)(a.Fragment, {
@@ -225,7 +225,7 @@ t.default = function() {
           }), (0, a.jsx)("p", {
             className: D.emptyStateSubtext,
             children: L.default.Messages.GIFT_INVENTORY_NO_GIFTS_SUBTEXT.format({
-              onClick: F
+              onClick: G
             })
           })]
         }) : o().keys(l).map(e => {

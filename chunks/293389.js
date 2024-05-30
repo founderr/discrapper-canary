@@ -36,9 +36,9 @@ var a = s("735250"),
 let y = r.default.connectStores([M.default], () => ({
     theme: M.default.theme
   }))(f.default),
-  F = (0, x.isWindows)();
+  G = (0, x.isWindows)();
 
-function G(e) {
+function F(e) {
   let {
     onClose: t
   } = e, s = (0, r.useStateFromStores)([S.default], () => S.default.getCandidateGames()), [l, o] = n.useState(null), c = s.map(e => ({
@@ -94,7 +94,7 @@ function B(e) {
     u.default.deleteEntry(f)
   }
 
-  function G() {
+  function F() {
     f.name !== M && u.default.editName(f, M)
   }
 
@@ -144,7 +144,7 @@ function B(e) {
         type: "text",
         maxLength: 128,
         value: M,
-        onBlur: G,
+        onBlur: F,
         onKeyDown: B,
         onChange: e => P(e.target.value)
       }), function() {
@@ -223,7 +223,7 @@ function B(e) {
         })
       })
     }(), function() {
-      if (!F) return null;
+      if (!G) return null;
       let {
         overlay: e,
         overlayWarn: t
@@ -332,7 +332,7 @@ t.default = function(e) {
           let {
             closePopout: t
           } = e;
-          return (0, a.jsx)(G, {
+          return (0, a.jsx)(F, {
             onClose: t
           })
         },

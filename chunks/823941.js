@@ -18,15 +18,15 @@ var l = a("735250"),
   d = a("963249"),
   f = a("594174"),
   C = a("68972"),
-  m = a("754347"),
-  p = a("74538"),
+  p = a("754347"),
+  m = a("74538"),
   g = a("884697"),
   E = a("624377"),
   h = a("141011"),
   b = a("813083"),
   x = a("372654"),
-  v = a("994896"),
-  S = a("215023"),
+  S = a("994896"),
+  v = a("215023"),
   I = a("474936"),
   L = a("689938"),
   T = a("897246");
@@ -81,7 +81,7 @@ let N = (0, g.getLogoSize)(96),
     } = e, {
       analyticsLocations: a
     } = (0, u.default)(), r = s.useRef(null), n = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-    return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
+    return m.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
       children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
@@ -117,7 +117,7 @@ function A(e) {
     format: "jpg"
   }), f = u ? null == c ? void 0 : null === (t = c.leftOverflow) || void 0 === t ? void 0 : t.call(c) : null == c ? void 0 : null === (a = c.rightOverflow) || void 0 === a ? void 0 : a.call(c), {
     backgroundColors: C
-  } = (0, E.default)(i.styles), m = {
+  } = (0, E.default)(i.styles), p = {
     objectPosition: u ? "left" : "right",
     background: null != C ? "".concat((0, x.getBackgroundGradient)(C), " border-box border-box") : void 0,
     outlineColor: null != C ? C.border.toHslString() : void 0
@@ -126,7 +126,7 @@ function A(e) {
     className: n()(T.condensedBannerContainer),
     children: [(0, l.jsx)("img", {
       src: d,
-      style: m,
+      style: p,
       className: T.condensedBannerImage,
       alt: ""
     }), null != f && (0, l.jsx)("img", {
@@ -144,7 +144,7 @@ function A(e) {
       }),
       alt: i.name,
       style: {
-        maxWidth: null === (s = S.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
+        maxWidth: null === (s = v.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
       }
     }), (0, l.jsx)(b.default, {
       category: i,
@@ -165,12 +165,12 @@ function j(e) {
     index: u = 0
   } = e, {
     backgroundColors: d
-  } = (0, E.default)(s.styles), f = !!(null === (t = S.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
-    condensedBannersEnabled: p
-  } = (0, v.useCollectiblesCondensedBannersExperiment)({
+  } = (0, E.default)(s.styles), f = !!(null === (t = v.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+    condensedBannersEnabled: m
+  } = (0, S.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
   });
-  return p ? (0, l.jsx)(A, {
+  return m ? (0, l.jsx)(A, {
     category: s,
     index: u
   }) : (0, l.jsxs)(h.default, {
@@ -184,7 +184,7 @@ function j(e) {
       className: T.discordLogo,
       children: [(0, l.jsx)(C.default, {
         className: T.discordIcon
-      }), (0, l.jsx)(m.default, {
+      }), (0, l.jsx)(p.default, {
         className: T.discordWordmark
       })]
     }), (0, l.jsx)("img", {
@@ -194,7 +194,7 @@ function j(e) {
       }),
       alt: s.name,
       style: {
-        maxWidth: null === (a = S.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
+        maxWidth: null === (a = v.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
       }
     }), (0, l.jsx)(c.Text, {
       className: n()(T.summary, {

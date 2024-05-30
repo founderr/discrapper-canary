@@ -15,15 +15,15 @@ var l = a("735250"),
   d = a("100527"),
   f = a("906732"),
   C = a("1585"),
-  m = a("624377"),
-  p = a("372654"),
+  p = a("624377"),
+  m = a("372654"),
   g = a("715627"),
   E = a("300284"),
   h = a("642619"),
   b = a("598"),
   x = a("333867"),
-  v = a("329067"),
-  S = a("981631"),
+  S = a("329067"),
+  v = a("981631"),
   I = a("302800"),
   L = a("689938"),
   T = a("894775");
@@ -54,26 +54,26 @@ function y(e) {
     onUse: A,
     onError: j,
     onReviewPurchase: O,
-    loadId: P,
-    baseAnalyticsData: R,
-    confettiCanvas: k = null
+    loadId: k,
+    baseAnalyticsData: P,
+    confettiCanvas: R = null
   } = e;
-  P = null != P ? P : (0, r.v4)();
+  k = null != k ? k : (0, r.v4)();
   let B = s.useRef(null),
     [M] = t.items,
     {
       analyticsLocations: D
     } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD, d.default.COLLECTIBLES_LIGHTNING_CHECKOUT),
     {
-      buttonColors: F
-    } = (0, m.default)(t.styles),
-    H = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    w = (0, I.getCustomConfettiDisplayOptions)(t.skuId),
+      buttonColors: w
+    } = (0, p.default)(t.styles),
+    F = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion),
+    H = (0, I.getCustomConfettiDisplayOptions)(t.skuId),
     [U, W] = s.useState(!1),
     [G, V] = s.useState(!1),
-    K = null != F ? {
-      background: (0, p.getBackgroundGradient)(F, 90),
-      color: F.text.toHslString()
+    K = null != w ? {
+      background: (0, m.getBackgroundGradient)(w, 90),
+      color: w.text.toHslString()
     } : void 0,
     z = (0, E.default)({
       analyticsLocations: D
@@ -88,8 +88,8 @@ function y(e) {
       onReviewPurchase: O,
       paymentSource: a,
       skuId: t.skuId,
-      loadId: P,
-      baseAnalyticsData: R
+      loadId: k,
+      baseAnalyticsData: P
     };
   return (0, l.jsxs)("div", {
     ref: B,
@@ -155,20 +155,20 @@ function y(e) {
         className: T.productName,
         children: t.name
       }), (0, l.jsx)(b.PaymentContextProvider, {
-        loadId: P,
+        loadId: k,
         stepConfigs: [],
-        applicationId: S.COLLECTIBLES_APPLICATION_ID,
+        applicationId: v.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: S.PurchaseTypes.ONE_TIME,
-        children: (0, l.jsx)(v.default, {
+        purchaseType: v.PurchaseTypes.ONE_TIME,
+        children: (0, l.jsx)(S.default, {
           ...Y
         })
       })]
-    })), !G && U && !(null != w) && !H && (0, l.jsx)(g.default, {
+    })), !G && U && !(null != H) && !F && (0, l.jsx)(g.default, {
       confettiTarget: B.current,
-      customConfettiCanvas: k,
+      customConfettiCanvas: R,
       speedValues: N,
       numBursts: 4,
       particlesPerBurst: 100,

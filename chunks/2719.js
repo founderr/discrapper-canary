@@ -38,8 +38,8 @@ var a = s("735250"),
   j = s("695346"),
   U = s("461877"),
   y = s("726985"),
-  F = s("981631"),
-  G = s("815660"),
+  G = s("981631"),
+  F = s("815660"),
   B = s("801461"),
   k = s("228168"),
   H = s("689938"),
@@ -326,7 +326,7 @@ function Q(e) {
           (0, c.openModal)(e => (0, a.jsx)(T.default, {
             ...e,
             title: H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
-            children: l.hasFlag(F.UserFlags.MFA_SMS) ? H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
+            children: l.hasFlag(G.UserFlags.MFA_SMS) ? H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
             actionText: H.default.Messages.REMOVE,
             handleSubmit: e => g.default.removePhone(e, g.ChangePhoneReason.USER_SETTINGS_UPDATE)
           }))
@@ -347,7 +347,7 @@ function Q(e) {
               ...t
             })
           }, {
-            modalKey: G.PHONE_VERIFICATION_MODAL_KEY
+            modalKey: F.PHONE_VERIFICATION_MODAL_KEY
           })
         },
         children: d ? H.default.Messages.EDIT : H.default.Messages.ADD
@@ -390,7 +390,7 @@ function q(e) {
 }
 
 function Z() {
-  S.default.setSection(F.UserSettingsSections.PROFILE_CUSTOMIZATION)
+  S.default.setSection(G.UserSettingsSections.PROFILE_CUSTOMIZATION)
 }
 
 function X() {

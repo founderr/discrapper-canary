@@ -38,12 +38,12 @@ var n = s("512722"),
   b = s("741129");
 
 function j() {
-  var e, t, s, n, j, U, y, F;
-  let G = (0, i.useStateFromStores)([L.default], () => {
+  var e, t, s, n, j, U, y, G;
+  let F = (0, i.useStateFromStores)([L.default], () => {
       let e = L.default.getCurrentUser();
       return l()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
     }),
-    B = (0, i.useStateFromStores)([R.default], () => R.default.getUserProfile(G.id)),
+    B = (0, i.useStateFromStores)([R.default], () => R.default.getUserProfile(F.id)),
     {
       pendingAvatar: k,
       pendingGlobalName: H,
@@ -62,8 +62,8 @@ function j() {
       }
     }),
     Q = (0, S.useGuildAutomodProfileQuarantineErrors)(),
-    q = D.default.canUsePremiumProfileCustomization(G),
-    Z = (0, E.showRemoveAvatar)(k, G.avatar),
+    q = D.default.canUsePremiumProfileCustomization(F),
+    Z = (0, E.showRemoveAvatar)(k, F.avatar),
     X = (0, E.showRemoveBanner)(w, null == B ? void 0 : B.banner),
     J = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
@@ -73,7 +73,7 @@ function j() {
     location: J + " auto off",
     autoTrackExposure: !1
   });
-  let $ = (0, x.default)(G.id),
+  let $ = (0, x.default)(F.id),
     ee = null == $ ? void 0 : $.getLegacyUsername(),
     et = (null !== (s = null === (e = z.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? z.global_name : null !== (n = null == Q ? void 0 : Q.nick) && void 0 !== n ? n : [],
     es = (null !== (j = null === (t = z.bio) || void 0 === t ? void 0 : t.length) && void 0 !== j ? j : 0) > 0 ? z.bio : null !== (U = null == Q ? void 0 : Q.bio) && void 0 !== U ? U : [],
@@ -86,9 +86,9 @@ function j() {
   return (0, a.jsxs)("div", {
     className: b.sectionsContainer,
     children: [(0, a.jsx)(m.default, {
-      placeholder: G.username,
+      placeholder: F.username,
       errors: et,
-      currentGlobalName: G.globalName,
+      currentGlobalName: F.globalName,
       pendingGlobalName: H,
       onGlobalNameChange: r.setPendingGlobalNameName
     }), (0, a.jsx)(A.default, {
@@ -104,10 +104,10 @@ function j() {
       sectionTitle: P.default.Messages.USER_SETTINGS_AVATAR,
       forcedDivider: !0
     }, "avatar"), (0, a.jsx)(_.default, {
-      user: G,
+      user: F,
       sectionTitle: P.default.Messages.USER_SETTINGS_AVATAR_DECORATION
     }, "decoration"), (0, a.jsx)(h.default, {
-      user: G,
+      user: F,
       sectionTitle: P.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), q ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(I.default, {
@@ -116,14 +116,14 @@ function j() {
         onBannerChange: O.setPendingBanner,
         forcedDivider: !0
       }, "banner"), (0, a.jsx)(C.default, {
-        user: G,
+        user: F,
         pendingAvatar: k,
         pendingColors: K,
         onThemeColorsChange: O.setPendingThemeColors,
         forcedDivider: !0
       })]
     }) : (0, a.jsx)(N.default, {
-      user: G,
+      user: F,
       savedUserColor: null == B ? void 0 : B.accentColor,
       pendingColor: W,
       setPendingAccentColor: O.setPendingAccentColor
@@ -132,7 +132,7 @@ function j() {
       errors: es,
       onBioChange: e => (0, E.setNewPendingUserBio)(e, null == B ? void 0 : B.bio),
       pendingBio: Y,
-      currentBio: null !== (F = null == B ? void 0 : B.bio) && void 0 !== F ? F : ""
+      currentBio: null !== (G = null == B ? void 0 : B.bio) && void 0 !== G ? G : ""
     }, "bio"), en && el.length > 0 && (0, a.jsx)(c.default, {
       availableClans: el
     }), ea && (0, a.jsx)(p.default, {}), null != ee && (0, a.jsx)(g.default, {

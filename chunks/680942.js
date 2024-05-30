@@ -11,8 +11,8 @@ var l = a("735250"),
   d = a("884697"),
   f = a("231338"),
   C = a("689938"),
-  m = a("46309");
-let p = {
+  p = a("46309");
+let m = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -68,18 +68,18 @@ t.default = e => {
     disableCustomColor: b = !1
   } = e, {
     analyticsLocations: x
-  } = (0, i.default)(), v = s.useRef(null), S = (0, n.default)(v), I = b ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+  } = (0, i.default)(), S = s.useRef(null), v = (0, n.default)(S), I = b ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
   return (0, d.isBundleProduct)(t) ? null : (0, l.jsx)(r.Tooltip, {
     text: C.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: E,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: v,
-      className: m.giftButton,
+      buttonRef: S,
+      className: p.giftButton,
       color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
-      innerClassName: m.giftButtonInner,
+      innerClassName: p.giftButtonInner,
       "aria-label": C.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
         e.stopPropagation(), (0, c.default)({
@@ -93,10 +93,10 @@ t.default = e => {
         })
       },
       children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: S,
+        hovered: v,
         isContentDismissed: !0,
         themeOverride: I,
-        boxColors: p
+        boxColors: m
       }) : (0, l.jsx)(u.default, {
         width: 24,
         height: 24
