@@ -1,82 +1,86 @@
 "use strict";
 a.r(t), a.d(t, {
   COLLECTIBLES_HEADERS: function() {
-    return S
+    return L
   }
 });
 var l = a("180650"),
   s = a("44315"),
   r = a("981631"),
   n = a("689938"),
-  i = a("216299"),
-  o = a("994745"),
-  c = a("341364"),
-  u = a("298132"),
-  d = a("999715"),
-  f = a("194349"),
-  C = a("523569"),
-  m = a("967567"),
-  p = a("696228"),
-  g = a("922140"),
-  E = a("927412"),
-  h = a("199546"),
-  b = a("613540");
-let x = {
+  i = a("994745"),
+  o = a("341364"),
+  c = a("763542"),
+  u = a("354873"),
+  d = a("525071"),
+  f = a("737140"),
+  C = a("194349"),
+  p = a("523569"),
+  m = a("55817"),
+  g = a("696228"),
+  E = a("202796"),
+  h = a("570593"),
+  b = a("199546"),
+  x = a("613540"),
+  S = a("769411");
+let v = {
     MOST_POPULAR: () => n.default.Messages.MOST_POPULAR,
     NEW_RELEASE: () => n.default.Messages.APPLICATION_STORE_NEW_RELEASE,
     NITRO_EXCLUSIVE: () => n.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE
   },
-  v = {
+  I = {
     TAKE_ME_THERE: () => n.default.Messages.TAKE_ME_THERE
   },
-  S = [{
-    staticImageSrc: i,
-    videoSrc: o,
-    staticOverflowImageSrc: u,
-    logoSrc: c,
+  L = [{
+    backgroundStaticSrc: f,
+    backgroundVideoSrc: i,
+    overflowSrcStatic: d,
+    overflowSrcAnimatedBackground: u,
+    overflowSrcAnimated: c,
+    logoSrc: o,
     textColor: (0, s.getColor)(r.Color.BLACK_500),
     badge: {
-      label: x.MOST_POPULAR
+      label: v.MOST_POPULAR
     },
     cta: {
-      label: v.TAKE_ME_THERE,
+      label: I.TAKE_ME_THERE,
       categorySkuId: l.CollectiblesCategorySkuId.ANIME_V2
     }
   }, {
-    staticImageSrc: E,
-    videoSrc: h,
-    logoSrc: b,
+    backgroundStaticSrc: S,
+    backgroundVideoSrc: b,
+    logoSrc: x,
     textColor: (0, s.getColor)(r.Color.WHITE_100),
     badge: {
-      label: x.NEW_RELEASE,
+      label: v.NEW_RELEASE,
       date: new Date
     },
     cta: {
-      label: v.TAKE_ME_THERE,
+      label: I.TAKE_ME_THERE,
       categorySkuId: l.CollectiblesCategorySkuId.GALAXY
     }
   }, {
-    staticImageSrc: m,
-    staticOverflowImageSrc: g,
-    logoSrc: p,
+    backgroundStaticSrc: h,
+    overflowSrcStatic: E,
+    logoSrc: g,
     textColor: (0, s.getColor)(r.Color.WHITE_100),
     badge: {
-      label: x.NITRO_EXCLUSIVE
+      label: v.NITRO_EXCLUSIVE
     },
     cta: {
-      label: v.TAKE_ME_THERE,
+      label: I.TAKE_ME_THERE,
       categorySkuId: l.CollectiblesCategorySkuId.DISXCORE
     }
   }, {
-    staticImageSrc: d,
-    videoSrc: f,
-    logoSrc: C,
+    backgroundStaticSrc: m,
+    backgroundVideoSrc: C,
+    logoSrc: p,
     textColor: (0, s.getColor)(r.Color.WHITE_100),
     badge: {
-      label: x.MOST_POPULAR
+      label: v.MOST_POPULAR
     },
     cta: {
-      label: v.TAKE_ME_THERE,
+      label: I.TAKE_ME_THERE,
       categorySkuId: l.CollectiblesCategorySkuId.CYBERPUNK
     }
   }]

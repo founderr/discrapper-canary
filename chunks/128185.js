@@ -15,8 +15,8 @@ var l = a("735250"),
   d = a("810090"),
   f = a("948625"),
   C = a("981631"),
-  m = a("139557");
-let p = {
+  p = a("139557");
+let m = {
   tension: 20,
   friction: 30,
   clamp: !0
@@ -29,48 +29,48 @@ function g(e) {
     handleScrollToCategory: c,
     text: u,
     reducedMotion: f = !1
-  } = e, p = s.useCallback(() => {
+  } = e, m = s.useCallback(() => {
     var e;
     (null === (e = i.cta) || void 0 === e ? void 0 : e.categorySkuId) != null && c(i.cta.categorySkuId)
   }, [null === (t = i.cta) || void 0 === t ? void 0 : t.categorySkuId, c]);
   return (0, l.jsxs)("div", {
-    className: m.headerContainer,
-    children: [null == i.videoSrc || f ? (0, l.jsx)("img", {
-      src: i.staticImageSrc,
+    className: p.headerContainer,
+    children: [null == i.backgroundVideoSrc || f ? (0, l.jsx)("img", {
+      src: i.backgroundStaticSrc,
       alt: "",
-      className: m.headerAsset
+      className: p.headerAsset
     }) : (0, l.jsx)(d.default, {
       autoPlay: !0,
       muted: !0,
       loop: !0,
       playsInline: !0,
       responsive: !0,
-      className: m.headerAsset,
+      className: p.headerAsset,
       children: (0, l.jsx)("source", {
-        src: i.videoSrc,
+        src: i.backgroundVideoSrc,
         type: "video/mp4"
       })
     }), (0, l.jsxs)("div", {
-      className: m.headerContent,
+      className: p.headerContent,
       style: {
         color: null !== (a = i.textColor) && void 0 !== a ? a : (0, o.getColor)(C.Color.WHITE_100)
       },
       children: [(0, l.jsx)("div", {
-        className: m.badgeContainer,
+        className: p.badgeContainer,
         style: {
           visibility: null != i.badge ? "visible" : "hidden"
         },
         children: null != i.badge && (0, l.jsx)(n.Text, {
           variant: "text-xs/bold",
-          className: m.badge,
+          className: p.badge,
           children: i.badge.label()
         })
       }), (0, l.jsxs)("div", {
-        className: m.logoAndDescriptionContainer,
+        className: p.logoAndDescriptionContainer,
         children: [null != i.logoSrc && (0, l.jsx)("img", {
           src: i.logoSrc,
           alt: "",
-          className: m.logo
+          className: p.logo
         }), (null != i.description || null != u) && (0, l.jsx)(n.Text, {
           variant: "text-md/medium",
           color: "currentColor",
@@ -78,7 +78,7 @@ function g(e) {
         })]
       }), (0, l.jsx)("div", {
         children: null != i.cta && (0, l.jsx)(n.Button, {
-          onClick: p,
+          onClick: m,
           children: i.cta.label()
         })
       })]
@@ -91,23 +91,30 @@ function E(e) {
     step: t,
     direction: a,
     reducedMotion: r = !1
-  } = e, n = f.COLLECTIBLES_HEADERS[t], i = s.useMemo(() => {
-    var e;
-    return null == n ? null : r ? n.staticOverflowImageSrc : null !== (e = n.animatedOverflowImageSrc) && void 0 !== e ? e : n.staticOverflowImageSrc
-  }, [n, r]);
+  } = e, n = f.COLLECTIBLES_HEADERS[t], i = s.useMemo(() => null == n || null == n.overflowSrcStatic ? null : r || null == n.overflowSrcAnimated ? (0, l.jsx)("img", {
+    src: n.overflowSrcStatic,
+    alt: "",
+    className: p.overflowImage
+  }) : (0, l.jsxs)(l.Fragment, {
+    children: [null != n.overflowSrcAnimatedBackground && (0, l.jsx)("img", {
+      src: n.overflowSrcAnimatedBackground,
+      alt: "",
+      className: p.overflowImage
+    }), (0, l.jsx)("img", {
+      src: n.overflowSrcAnimated,
+      alt: "",
+      className: p.overflowImage
+    })]
+  }), [n, r]);
   return (0, l.jsx)("div", {
-    className: m.overflowSlideAnimatorContainer,
+    className: p.overflowSlideAnimatorContainer,
     children: (0, l.jsx)(u.default, {
       step: t,
       direction: a,
-      className: m.overflowSlideAnimator,
-      springSettings: p,
+      className: p.overflowSlideAnimator,
+      springSettings: m,
       fadeInOut: !0,
-      children: null != i && (0, l.jsx)("img", {
-        src: i,
-        alt: "",
-        className: m.overflowImage
-      })
+      children: i
     })
   })
 }
@@ -132,20 +139,20 @@ function h(e) {
     })
   }, [o, a, n]);
   return (0, l.jsx)("div", {
-    className: m.carouselContainer,
+    className: p.carouselContainer,
     children: (0, l.jsx)(c.default, {
       delay: 5e3,
       items: f.COLLECTIBLES_HEADERS,
-      className: m.carousel,
+      className: p.carousel,
       aspectRatio: 1060 / 292,
-      slideAnimatorClassName: m.slideAnimator,
-      slideAnimatorSpringSettings: p,
+      slideAnimatorClassName: p.slideAnimator,
+      slideAnimatorSpringSettings: m,
       slideAnimatorFadeInOut: !0,
-      paginationClassName: m.paginationControls,
-      paginationArrowClassName: m.paginationArrow,
+      paginationClassName: p.paginationControls,
+      paginationArrowClassName: p.paginationArrow,
       paginationArrowIconType: c.PaginationArrowIconType.CARET,
-      paginationDotClassName: m.paginationDot,
-      paginationDotSelectedClassName: m.paginationDotSelected,
+      paginationDotClassName: p.paginationDot,
+      paginationDotSelectedClassName: p.paginationDotSelected,
       renderItem: u,
       children: e => (0, l.jsx)(E, {
         step: e.step,

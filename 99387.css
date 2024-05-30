@@ -98599,9 +98599,9 @@ div.content_aac020 {
 
 .overflowImage_b382c8 {
     position: absolute;
-    bottom: 24px;
-    right: 20px;
-    height: 336px;
+    bottom: 0;
+    right: 0;
+    height: 356px;
     pointer-events: none
 }
 
