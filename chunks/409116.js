@@ -20,7 +20,7 @@ t.default = e => {
     className: f,
     discount: C,
     variant: p = "heading-md/semibold"
-  } = e, m = c((0, i.formatPrice)(a, s)), g = null != C && C > 2 ? (0, l.jsxs)(l.Fragment, {
+  } = e, m = c((0, i.formatPrice)(a, s)), g = null != C && C >= 5 ? (0, l.jsxs)(l.Fragment, {
     children: [m, (0, l.jsx)(n.Heading, {
       variant: p,
       color: "text-positive",
