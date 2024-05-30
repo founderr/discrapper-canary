@@ -84,7 +84,8 @@ function A(e) {
     editedTimestamp: null,
     timestamp: l.message.timestamp,
     reactions: [],
-    messageSnapshots: []
+    messageSnapshots: [],
+    customRenderedContent: null
   }), [n, l]), u = _.InlineEmbedMedia.useSetting(), d = _.RenderEmbeds.useSetting(), p = (0, r.useStateFromStores)([T.default], () => T.default.isDeveloper), h = (0, c.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
     content: N,
     hasSpoilerEmbeds: A
