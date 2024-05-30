@@ -23,10 +23,10 @@ function m(e) {
     groupListingId: n,
     groupListingType: m,
     guildId: h,
-    onClose: T,
-    skuId: v,
+    onClose: v,
+    skuId: T,
     transitionState: I
-  } = e, _ = (0, o.useGetSubscriptionListing__DO_NOT_USE)(v), g = r.useMemo(() => {
+  } = e, _ = (0, o.useGetSubscriptionListing__DO_NOT_USE)(T), g = r.useMemo(() => {
     var e;
     return (null == _ ? void 0 : _.image_asset) != null && null !== (e = c.default.toURLSafe((0, d.getAssetURL)(t, _.image_asset, 256))) && void 0 !== e ? e : void 0
   }, [t, null == _ ? void 0 : _.image_asset]), x = r.useMemo(() => {
@@ -40,27 +40,27 @@ function m(e) {
   }, [t, null == _ ? void 0 : _.store_listing_benefits]);
   if (null == _) return null;
   let E = _.subscription_plans.length > 0 ? _.subscription_plans[0] : null;
-  return null == E || null == x ? null : (0, i.jsx)(f.CardDetailsModal, {
+  return null == E ? null : (0, i.jsx)(f.CardDetailsModal, {
     appId: t,
     transitionState: I,
-    onHeaderTitleClick: T,
-    onClose: T,
+    onHeaderTitleClick: v,
+    onClose: v,
     footer: (0, i.jsx)(S.SubscriptionPurchaseButton, {
       appId: t,
       groupListingId: n,
       groupListingType: m,
       guildId: h,
-      skuId: v,
+      skuId: T,
       subPlan: E
     }),
     children: (0, i.jsx)(p.TrackedCardDetails, {
       appId: t,
-      skuId: v,
-      benefits: x.map(e => (0, i.jsx)(l.SubscriptionCardBenefit, {
+      skuId: T,
+      benefits: null != x ? x.map(e => (0, i.jsx)(l.SubscriptionCardBenefit, {
         name: e.title,
         icon: e.icon,
         description: e.description
-      }, e.id)),
+      }, e.id)) : void 0,
       description: _.description,
       imgSrc: g,
       title: _.name,
