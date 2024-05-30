@@ -447,7 +447,7 @@ function $(e, t) {
         }
         let a = async () => {
           let e = await (0, S.connectOrLurkStage)(i, n);
-          (0, f.navigateToStage)(e)
+          (0, f.navigateToStage)(e, null, !1)
         };
         r === x.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? a() : r === x.GuildScheduledEventEntityTypes.VOICE && (_.default.handleVoiceConnect({
           channel: s,
