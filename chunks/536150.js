@@ -9,7 +9,7 @@ var i = n("544891"),
   s = n("981631");
 async function a(e, t) {
   try {
-    await i.HTTP.post({
+    await i.HTTP.patch({
       url: s.Endpoints.MY_CONTENT_INVENTORY_APPLICATION(e),
       body: t
     })
