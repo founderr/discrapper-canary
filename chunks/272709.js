@@ -265,7 +265,6 @@ function Z(e) {
             }), (0, i.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "text-secondary",
-              className: K.ellipsis,
               children: d
             })]
           })]
@@ -312,7 +311,6 @@ function Z(e) {
             }), (0, i.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "text-secondary",
-              className: K.ellipsis,
               children: d
             })]
           })]
