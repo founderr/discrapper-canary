@@ -856,14 +856,18 @@ class eo extends _.default {
   _handleMLSPrepareCommitTransition(e, t) {
     var n;
     this.logger.info("Received MLS commit for transition ID ".concat(e)), null === (n = this._connection) || void 0 === n || n.prepareMLSCommitTransition(e, t, (t, n) => {
-      t ? (this._maybeSendSecureFramesTransitionReady(e), this._trackSecureFrameTransition(e, n)) : this.logger.warn("Failed to process MLS commit for transition ID ".concat(e))
+      t ? (this._maybeSendSecureFramesTransitionReady(e), this._trackSecureFrameTransition(e, n)) : (this.logger.warn("Failed to process MLS commit for transition ID ".concat(e)), this._flagMLSInvalidCommitWelcome(e), this._handleSecureFramesInit(n))
     })
   }
   _handleMLSWelcome(e, t) {
     var n;
     this.logger.info("Received MLS welcome for transition ID ".concat(e)), null === (n = this._connection) || void 0 === n || n.processMLSWelcome(e, t, (t, n) => {
-      t && (this._maybeSendSecureFramesTransitionReady(e), this._trackSecureFrameTransition(e, n))
+      t ? (this._maybeSendSecureFramesTransitionReady(e), this._trackSecureFrameTransition(e, n)) : (this._flagMLSInvalidCommitWelcome(e), this._sendMLSKeyPackage())
     })
+  }
+  _flagMLSInvalidCommitWelcome(e) {
+    var t;
+    this.logger.info("Flagging invalid MLS commit/welcome for transition ID ".concat(e)), null === (t = this._socket) || void 0 === t || t.flagMLSInvalidCommitWelcome(e)
   }
   _getExtraConnectionOptions() {
     return {}
