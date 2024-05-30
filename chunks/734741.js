@@ -59,31 +59,32 @@ let C = "getWhatsNewBadgeCount",
       });
     return !t && n && !r && !s
   },
-  h = () => {
-    let e = o.default.getCurrentUser(),
-      t = a.default.isPremium(e),
+  h = function() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+      t = o.default.getCurrentUser(),
+      n = a.default.isPremium(t),
       {
-        enabled: n
+        enabled: i
       } = c.ReferralProgramRecipient.getCurrentConfig({
         location: C
       }, {
         autoTrackExposure: !1
       }),
       {
-        enabled: i
+        enabled: r
       } = u.DiscountModelDataCollection.getCurrentConfig({
         location: C
       }, {
         autoTrackExposure: !1
       }),
       {
-        enabled: r
+        enabled: s
       } = l.CannibalizationModelDataCollection.getCurrentConfig({
         location: C
       }, {
         autoTrackExposure: !1
       });
-    return !t && n && !i && !r
+    return (e || !n) && i && !r && !s
   },
   R = () => {
     let {
@@ -189,5 +190,5 @@ let C = "getWhatsNewBadgeCount",
     }, {
       autoTrackExposure: !1
     });
-    return h() && e
+    return h(!0) && e
   }
