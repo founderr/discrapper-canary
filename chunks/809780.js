@@ -32,8 +32,8 @@ var s, a, l, i, r = n("470079"),
   g = n("723170"),
   A = n("675478"),
   M = n("581883"),
-  v = n("131704"),
-  R = n("592125"),
+  R = n("131704"),
+  v = n("592125"),
   O = n("984933"),
   x = n("731290"),
   L = n("430824"),
@@ -270,14 +270,14 @@ function K() {
         s = null !== (t = null === (e = M.default.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
       for (let e in s)
         for (let t in s[e].channels) {
-          let a = R.default.getChannel(t);
+          let a = v.default.getChannel(t);
           (!(t in n) || (null == a ? void 0 : a.guild_id) === e) && (n[t] = s[e].channels[t].collapsedInInbox)
         }
       return n
     }(),
     t = function(e) {
       let t = [];
-      return R.default.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), U.default.getFlattenedGuildIds().forEach(n => {
+      return v.default.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), U.default.getFlattenedGuildIds().forEach(n => {
         if (null == n) return;
         let s = O.default.getSelectableChannelIds(n),
           a = N.default.getActiveJoinedUnreadThreadsForGuild(n);
@@ -303,8 +303,8 @@ function K() {
 
 function W(e, t, n, s) {
   if (null == s) return;
-  let a = R.default.getChannel(s);
-  if (null == a || !v.THREAD_CHANNEL_TYPES.has(a.type) && j.default.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
+  let a = v.default.getChannel(s);
+  if (null == a || !R.THREAD_CHANNEL_TYPES.has(a.type) && j.default.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
   if (a.isPrivate()) {
     if (0 === y.default.getMentionCount(s)) return
   } else if (!(0, h.getHasImportantUnread)(a) && 0 === y.default.getMentionCount(s)) return;
@@ -334,7 +334,7 @@ function W(e, t, n, s) {
     hasMentionsOrUnreads: u,
     mentionCount: o,
     sortOrder: function(e, t, n) {
-      let s = R.default.getChannel(t);
+      let s = v.default.getChannel(t);
       if (I.default.isFavorite(t)) return 0;
       if (s.isPrivate()) return 1;
       if (y.default.getMentionCount(t) > 0) return 2;

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return R
   }
 }), n("47120");
 var s = n("735250"),
@@ -28,13 +28,13 @@ var s = n("735250"),
   A = n("689938"),
   M = n("98742");
 
-function v(e) {
+function R(e) {
   var t;
   let {
     guildId: n
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuild(n)), {
-    loading: v,
-    subscriptionsSettings: R
+    loading: R,
+    subscriptionsSettings: v
   } = (0, N.useMonetizationSettings)(n), {
     listingsLoaded: O
   } = (0, E.useFetchGuildProductListingsForGuild)(n), x = (0, E.useGuildProductsForGuild)(n, {
@@ -51,13 +51,13 @@ function v(e) {
     disableTrack: null == l
   });
   let D = x.length > 0 ? new Date(Math.min(...x.map(e => Date.parse(e.published_at)))) : void 0;
-  return v || !O ? (0, s.jsx)("div", {
+  return R || !O ? (0, s.jsx)("div", {
     className: i()(M.guildShopEmbed, M.spinnerContainer),
     children: (0, s.jsx)(d.Spinner, {})
-  }) : null == l || null == R ? null : (0, s.jsxs)("div", {
+  }) : null == l || null == v ? null : (0, s.jsxs)("div", {
     className: M.guildShopEmbed,
     children: [(0, s.jsx)(S.HeroImage, {
-      coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null
+      coverImageAsset: null !== (t = v.cover_image_asset) && void 0 !== t ? t : null
     }), (0, s.jsx)(I.default, {
       size: 16
     }), (0, s.jsxs)("div", {
@@ -86,7 +86,7 @@ function v(e) {
       variant: "text-sm/normal",
       color: "text-muted",
       lineClamp: 2,
-      children: R.description
+      children: v.description
     }), (0, s.jsx)(I.default, {
       size: 16
     }), (0, s.jsx)(p.default, {}), (0, s.jsx)(I.default, {

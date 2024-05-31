@@ -27,8 +27,8 @@ var s = n("512722"),
   g = n("375954"),
   A = n("117530"),
   M = n("553803"),
-  v = n("316758"),
-  R = n("467531"),
+  R = n("316758"),
+  v = n("467531"),
   O = n("798628"),
   x = n("918088"),
   L = n("981631"),
@@ -191,7 +191,7 @@ async function B(e) {
       channelId: t,
       messageId: n,
       answerIds: e
-    }), await R.submitPollVote({
+    }), await v.submitPollVote({
       channelId: t,
       messageId: n,
       answerIds: e
@@ -349,7 +349,7 @@ async function w(e) {
     if (null != u && u.length > 0) {
       var _;
       let e = null !== (_ = h.default.getToken()) && void 0 !== _ ? _ : "";
-      await v.sendPollMessageWithAttachments({
+      await R.sendPollMessageWithAttachments({
         channel: t,
         items: u,
         token: e,
@@ -375,7 +375,7 @@ async function H(e) {
   await d.default.confirm({
     title: D.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
     body: D.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
-  }) && await R.endPollEarly({
+  }) && await v.endPollEarly({
     channelId: t,
     messageId: n
   })

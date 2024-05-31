@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return v
   }
 });
 var s = n("735250"),
@@ -27,13 +27,13 @@ var s = n("735250"),
   g = n("358595"),
   A = n("563917"),
   M = n("135845"),
-  v = n("981631");
+  R = n("981631");
 
-function R(e) {
+function v(e) {
   let {
     code: t,
     author: n,
-    getAcceptInviteContext: R
+    getAcceptInviteContext: v
   } = e, {
     invite: O,
     inviteError: x
@@ -45,7 +45,7 @@ function R(e) {
     null == O && i.default.resolveInvite(t)
   }, [t]);
   let L = null != O ? O : {
-      state: v.InviteStates.RESOLVING,
+      state: R.InviteStates.RESOLVING,
       code: ""
     },
     {
@@ -63,16 +63,16 @@ function R(e) {
     b = () => {
       (0, f.isAtGuildCapAndNonPremium)() ? (0, E.default)({
         analyticsSource: {
-          page: v.AnalyticsPages.INVITE_EMBED
+          page: R.AnalyticsPages.INVITE_EMBED
         },
         analyticsLocation: {
-          page: v.AnalyticsPages.INVITE_EMBED,
-          section: v.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+          page: R.AnalyticsPages.INVITE_EMBED,
+          section: R.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
         },
         analyticsLocations: D
       }) : i.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: t,
-        context: R("Invite Button Embed")
+        context: v("Invite Button Embed")
       })
     },
     F = (0, s.jsx)(S.default, {
@@ -84,17 +84,17 @@ function R(e) {
       author: n
     });
   switch (L.state) {
-    case v.InviteStates.RESOLVING:
+    case R.InviteStates.RESOLVING:
       F = (0, s.jsx)(g.default, {});
       break;
-    case v.InviteStates.EXPIRED:
-    case v.InviteStates.BANNED:
+    case R.InviteStates.EXPIRED:
+    case R.InviteStates.BANNED:
       F = (0, s.jsx)(C.default, {
-        banned: L.state === v.InviteStates.BANNED,
+        banned: L.state === R.InviteStates.BANNED,
         author: n
       });
       break;
-    case v.InviteStates.ERROR:
+    case R.InviteStates.ERROR:
       F = (0, s.jsx)(p.default, {
         author: n,
         inviteError: x
@@ -115,7 +115,7 @@ function R(e) {
           F = (0, s.jsx)(h.default, {
             invite: L,
             author: n,
-            getAcceptInviteContext: R
+            getAcceptInviteContext: v
           });
           break;
         default:
@@ -151,12 +151,12 @@ function R(e) {
             break
           }(0, c.isEmbeddedApplicationInvite)(L) && (F = (0, s.jsx)(I.default, {
             invite: L,
-            getAcceptInviteContext: R
+            getAcceptInviteContext: v
           }))
       }
   }
   return (0, s.jsx)(r.default, {
-    section: v.AnalyticsSections.INVITE_LINK,
+    section: R.AnalyticsSections.INVITE_LINK,
     children: F
   })
 }

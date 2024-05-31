@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("901461"),
   A = n("739566"),
   M = n("443877"),
-  v = n("938353"),
-  R = n("25015"),
+  R = n("938353"),
+  v = n("25015"),
   O = n("689674"),
   x = n("963550"),
   L = n("845080"),
@@ -80,7 +80,7 @@ t.default = a.memo(function e(t) {
   } = (0, M.default)(l), {
     content: ee,
     hasSpoilerEmbeds: et
-  } = (0, R.default)(I, {
+  } = (0, v.default)(I, {
     hideSimpleEmbedContent: Q && q,
     allowList: Z,
     allowHeading: Z,
@@ -114,7 +114,7 @@ t.default = a.memo(function e(t) {
       author: en,
       guildId: l.guild_id
     }),
-    childrenAccessories: (0, s.jsx)(v.MessageAccessories, {
+    childrenAccessories: (0, s.jsx)(R.MessageAccessories, {
       channel: l,
       message: I,
       hasSpoilerEmbeds: et,

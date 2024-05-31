@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("283595"),
   A = n("594174"),
   M = n("509545"),
-  v = n("55563"),
-  R = n("285952"),
+  R = n("55563"),
+  v = n("285952"),
   O = n("427828"),
   x = n("199480"),
   L = n("70613"),
@@ -114,18 +114,18 @@ class Y extends a.Component {
     let {
       libraryApplication: t
     } = this.props;
-    return (0, s.jsxs)(R.default, {
-      justify: R.default.Justify.BETWEEN,
-      children: [(0, s.jsxs)(R.default, {
+    return (0, s.jsxs)(v.default, {
+      justify: v.default.Justify.BETWEEN,
+      children: [(0, s.jsxs)(v.default, {
         children: [this.renderButton(e), null == t || e.isSubscription ? null : (0, s.jsx)(H, {
           onClick: this.handleViewLibrary,
           libraryApplication: t
         })]
-      }), (0, s.jsxs)(R.default, {
-        align: R.default.Align.END,
-        justify: R.default.Justify.END,
+      }), (0, s.jsxs)(v.default, {
+        align: v.default.Align.END,
+        justify: v.default.Justify.END,
         className: k.metadata,
-        direction: R.default.Direction.VERTICAL,
+        direction: v.default.Direction.VERTICAL,
         children: [e.hasMultipleCopies ? (0, s.jsx)("div", {
           children: this.renderGiftCodeCopiesLeft(e)
         }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, s.jsx)("div", {
@@ -359,12 +359,12 @@ class Y extends a.Component {
   }
 }
 let K = (0, _.default)((0, E.default)(Y));
-t.default = u.default.connectStores([C.default, v.default, A.default, g.default, M.default, S.default, m.default], e => {
+t.default = u.default.connectStores([C.default, R.default, A.default, g.default, M.default, S.default, m.default], e => {
   let {
     code: t,
     author: n,
     currentUser: s
-  } = e, a = C.default.get(t), l = null != a ? v.default.get(a.skuId) : null, i = null != a && null != a.userId ? A.default.getUser(a.userId) : null, r = m.default.useReducedMotion;
+  } = e, a = C.default.get(t), l = null != a ? R.default.get(a.skuId) : null, i = null != a && null != a.userId ? A.default.getUser(a.userId) : null, r = m.default.useReducedMotion;
   return {
     sku: l,
     giftCode: a,

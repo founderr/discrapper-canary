@@ -34,8 +34,8 @@ function p(e, t) {
       guild: g,
       parentChannel: A,
       user: M,
-      selectedGuildId: v,
-      canAccess: R
+      selectedGuildId: R,
+      canAccess: v
     } = (0, a.useStateFromStoresObject)([m.default, d.default, o.default, f.default, c.default], () => {
       var e;
       let t = null === (e = m.default.getMediaPostEmbed(null == p ? void 0 : p.threadId)) || void 0 === e ? void 0 : e.media,
@@ -59,14 +59,14 @@ function p(e, t) {
         guild: g,
         parentChannel: A,
         user: M,
-        selectedGuildId: v,
-        canAccess: R
+        selectedGuildId: R,
+        canAccess: v
       });
       return null == e ? null : {
         ...e,
         user: M
       }
-    }, [C, g, A, M, v, R]);
+    }, [C, g, A, M, R, v]);
   return s.useEffect(() => {
     if ((null == p ? void 0 : p.threadId) != null) {
       let e = m.default.getEmbedFetchState(p.threadId);

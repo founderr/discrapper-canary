@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("153124"),
   A = n("585483"),
   M = n("72006"),
-  v = n("405656"),
-  R = n("181389"),
+  R = n("405656"),
+  v = n("181389"),
   O = n("854709"),
   x = n("778177"),
   L = n("981631"),
@@ -53,8 +53,8 @@ class b extends a.PureComponent {
       searchId: n
     } = this.props;
     if (t !== e.editorState) {
-      let e = v.tokenizeQuery(M.getFirstTextBlock(t)),
-        s = R.getSelectionScope(e, t);
+      let e = R.tokenizeQuery(M.getFirstTextBlock(t)),
+        s = v.getSelectionScope(e, t);
       f.updateAutocompleteQuery(n, e, s), null != this._editorRef && M.scrollCursorIntoView(this._editorRef.editor)
     }
   }
@@ -62,7 +62,7 @@ class b extends a.PureComponent {
     A.ComponentDispatch.unsubscribe(L.ComponentActions.PERFORM_SEARCH, this.search), A.ComponentDispatch.unsubscribe(L.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.ComponentDispatch.unsubscribe(L.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch)
   }
   tokenize(e) {
-    let t = v.tokenizeQuery(M.getFirstTextBlock(e)).filter(e => e.type !== _.default.NON_TOKEN_TYPE);
+    let t = R.tokenizeQuery(M.getFirstTextBlock(e)).filter(e => e.type !== _.default.NON_TOKEN_TYPE);
     return M.applyTokensAsEntities(t, e, m.default)
   }
   clearSearch() {
@@ -197,9 +197,9 @@ class b extends a.PureComponent {
         s = M.getFirstTextBlock(e)
       }
       if (null != t && !n) {
-        let e = v.tokenizeQuery(s),
-          n = v.getSearchQueryFromTokens(e);
-        for (let t = 0; t < e.length; t++) !v.filterHasAnswer(e[t], e[t + 1]) && (s = s.substring(0, e[t].start) + s.substring(e[t].end));
+        let e = R.tokenizeQuery(s),
+          n = R.getSearchQueryFromTokens(e);
+        for (let t = 0; t < e.length; t++) !R.filterHasAnswer(e[t], e[t + 1]) && (s = s.substring(0, e[t].start) + s.substring(e[t].end));
         if (0 === e.length || 0 === Object.keys(n).length) return !1;
         j(t, n, s, !!a), c.AccessibilityAnnouncer.announce(D.default.Messages.SEARCH_STARTED_A11Y_ANNOUNCE), this.onBlur()
       }
@@ -364,7 +364,7 @@ class b extends a.PureComponent {
         return this.setEditorState(e), !0
       }
       return M.getDefaultKeyBinding(e)
-    }), v.clearTokenCache()
+    }), R.clearTokenCache()
   }
 }
 t.default = d.default.connectStores([I.default, S.default], () => {
@@ -372,7 +372,7 @@ t.default = d.default.connectStores([I.default, S.default], () => {
   let t = S.default.getCurrentSearchId(),
     n = S.default.getSearchType(),
     s = null != t && S.default.isSearching(t),
-    a = null != t && null !== (e = S.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(R.generateDecorators(m.default)),
+    a = null != t && null !== (e = S.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(v.generateDecorators(m.default)),
     l = I.default.keyboardModeEnabled;
   return {
     searchId: t,

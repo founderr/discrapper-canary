@@ -40,8 +40,8 @@ var s, a, l = n("735250"),
   g = n("839963"),
   A = n("294608"),
   M = n("65145"),
-  v = n("981631"),
-  R = n("689938"),
+  R = n("981631"),
+  v = n("689938"),
   O = n("565131");
 
 function x(e) {
@@ -50,7 +50,7 @@ function x(e) {
     children: n
   } = e;
   return (0, l.jsx)("ul", {
-    "aria-label": R.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     className: t,
     children: n
   })
@@ -62,7 +62,7 @@ function L(e) {
     children: n
   } = e;
   return (0, l.jsx)("div", {
-    "aria-label": R.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     role: "group",
     className: t,
     children: n
@@ -77,7 +77,7 @@ function D(e) {
     orientation: "vertical"
   });
   return (0, l.jsx)("div", {
-    "aria-label": R.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     ...s,
     className: t,
     children: n
@@ -310,7 +310,7 @@ function k(e) {
     isVictor: !0
   }, () => ({
     color: E.default.BUTTON_POSITIVE_BACKGROUND,
-    backgroundColor: (0, f.getColor)(v.Color.WHITE_500)
+    backgroundColor: (0, f.getColor)(R.Color.WHITE_500)
   })).with({
     isExpired: !0,
     isVictor: !1
@@ -318,8 +318,8 @@ function k(e) {
     color: E.default.ICON_PRIMARY,
     backgroundColor: E.default.BG_MOD_FAINT
   })).otherwise(() => ({
-    color: (0, f.getColor)(v.Color.BRAND_500),
-    backgroundColor: (0, f.getColor)(v.Color.WHITE_500)
+    color: (0, f.getColor)(R.Color.BRAND_500),
+    backgroundColor: (0, f.getColor)(R.Color.WHITE_500)
   }));
   return (0, l.jsx)(I.default, {
     width: s,
@@ -370,7 +370,7 @@ function H(e) {
     children: t && (0, l.jsx)(T.default, {
       width: a,
       height: a,
-      color: (0, f.getColor)(v.Color.WHITE_500)
+      color: (0, f.getColor)(R.Color.WHITE_500)
     })
   })
 }(a = s || (s = {}))[a.LIST_ITEM = 0] = "LIST_ITEM", a[a.RADIO = 1] = "RADIO", a[a.CHECKBOX = 2] = "CHECKBOX", a[a.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"

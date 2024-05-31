@@ -36,8 +36,8 @@ var s = n("735250"),
   g = n("387204"),
   A = n("465670"),
   M = n("626135"),
-  v = n("585483"),
-  R = n("981631"),
+  R = n("585483"),
+  v = n("981631"),
   O = n("689938"),
   x = n("114267");
 
@@ -149,7 +149,7 @@ let j = d.default.connectStores([N.default], e => {
     channel: t
   } = e;
   return {
-    canManageMessages: null != t && N.default.can(R.Permissions.MANAGE_MESSAGES, t)
+    canManageMessages: null != t && N.default.can(v.Permissions.MANAGE_MESSAGES, t)
   }
 })(U);
 
@@ -169,7 +169,7 @@ function b(e) {
     listName: A
   } = e, L = a.useRef(null), P = (0, _.default)(A, L), y = (0, d.useStateFromStores)([S.default], () => S.default.hasNotice()), U = (0, d.useStateFromStores)([C.default], () => C.default.windowSize());
   a.useEffect(() => {
-    M.default.track(R.AnalyticEvents.OPEN_POPOUT, {
+    M.default.track(v.AnalyticEvents.OPEN_POPOUT, {
       type: t
     })
   }, [t]), a.useEffect(() => {
@@ -186,8 +186,8 @@ function b(e) {
         animate: !0
       })
     }
-    return v.ComponentDispatch.subscribe(R.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.subscribe(R.ComponentActions.SCROLL_PAGE_UP, e), () => {
-      v.ComponentDispatch.unsubscribe(R.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(R.ComponentActions.SCROLL_PAGE_UP, e)
+    return R.ComponentDispatch.subscribe(v.ComponentActions.SCROLL_PAGE_DOWN, t), R.ComponentDispatch.subscribe(v.ComponentActions.SCROLL_PAGE_UP, e), () => {
+      R.ComponentDispatch.unsubscribe(v.ComponentActions.SCROLL_PAGE_DOWN, t), R.ComponentDispatch.unsubscribe(v.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
   let j = a.useCallback(() => {
@@ -290,7 +290,7 @@ function F(e) {
     scrollerClassName: g,
     className: A,
     onCloseMessage: M,
-    listName: v
+    listName: R
   } = e, L = (0, d.useStateFromStores)([h.default], () => {
     let e = null != l ? h.default.getMessages(l.id) : null;
     return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId)
@@ -312,7 +312,7 @@ function F(e) {
     });
     else if (!L) {
       let e = p.default.getChannel(i);
-      null != e && (E.default.trackJump(i, s, t), (0, T.transitionTo)(R.Routes.CHANNEL(e.getGuildId(), i, s))), null == c || c(n)
+      null != e && (E.default.trackJump(i, s, t), (0, T.transitionTo)(v.Routes.CHANNEL(e.getGuildId(), i, s))), null == c || c(n)
     }
   }
   a.useEffect(() => {
@@ -357,7 +357,7 @@ function F(e) {
         })]
       }, t.id)), a)
     },
-    listName: v,
+    listName: R,
     "aria-label": e["aria-label"]
   })
 }

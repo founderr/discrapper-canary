@@ -47,12 +47,12 @@ function T(e) {
   (null == g || "" === g) && (g = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : _.default.Messages.UNNAMED);
   let A = C ? I : p,
     M = _.default.Messages.JOIN_GUILD,
-    v = d.default.Button.Colors.GREEN;
-  C && (M = _.default.Messages.JOINED_GUILD, v = d.default.Button.Colors.PRIMARY);
-  let R = _.default.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-  return h && (R = _.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, s.jsxs)(d.default, {
+    R = d.default.Button.Colors.GREEN;
+  C && (M = _.default.Messages.JOINED_GUILD, R = d.default.Button.Colors.PRIMARY);
+  let v = _.default.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+  return h && (v = _.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.default.Header, {
-      text: R
+      text: v
     }), (0, s.jsxs)(d.default.Body, {
       children: [(0, s.jsxs)("div", {
         className: m.headerLine,
@@ -70,7 +70,7 @@ function T(e) {
         onClick: A,
         submitting: N,
         isDisabled: C,
-        color: v,
+        color: R,
         children: M
       })]
     })]

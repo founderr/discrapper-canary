@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return O
   },
   reactionForId: function() {
-    return v
+    return R
   }
 }), n("47120"), n("627341");
 var s = n("278074"),
@@ -43,11 +43,11 @@ let M = {
   showResults: !1
 };
 
-function v(e, t) {
+function R(e, t) {
   for (let n of e)
     if (("number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id) === t) return n
 }
-let R = e => (0, s.match)(e).with({
+let v = e => (0, s.match)(e).with({
   isExpired: !0,
   isLeader: !0,
   didSelfVote: !0
@@ -100,11 +100,11 @@ function x(e, t) {
     let t = f.default.getMessage(e.channel_id, e.id);
     A = !e.isSearchHit && null != t, S = null !== (l = null == t ? void 0 : t.reactions) && void 0 !== l ? l : S
   }
-  let v = T.size > 0,
-    R = S.some(e => !0 === e.me_vote),
-    x = !h && R,
+  let R = T.size > 0,
+    v = S.some(e => !0 === e.me_vote),
+    x = !h && v,
     L = x || m || N,
-    D = E && A && (!R || h || L),
+    D = E && A && (!v || h || L),
     P = null === (s = d.default.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
     y = null != P ? c.default.getSelfMember(P) : null,
     U = (0, o.hasAutomodQuarantinedProfile)(y),
@@ -114,11 +114,11 @@ function x(e, t) {
     canTapAnswers: D,
     canRemoveVote: x && E && !m,
     canShowVoteCounts: L,
-    canSubmitVote: !p && v && !x && E && !U && !j,
+    canSubmitVote: !p && R && !x && E && !U && !j,
     expirationLabel: _,
-    hasSelectedAnswer: v,
+    hasSelectedAnswer: R,
     hasVoted: x,
-    hasVoteRecorded: R,
+    hasVoteRecorded: v,
     isEditingVote: h,
     isExpired: m,
     isInteractive: A,
@@ -172,17 +172,17 @@ function L(e, t) {
     count: Q.toLocaleString()
   }), X = Math.max(...L.map(e => {
     var t, n;
-    let s = v(V, "".concat(e.answer_id));
+    let s = R(V, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
   })), Z = L.map(e => {
     var t, n, l;
     let o = "".concat(e.answer_id),
-      d = v(V, o),
+      d = R(V, o),
       c = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       f = Y.has(o),
       E = c >= X && 0 !== c,
       T = G && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
-      I = R({
+      I = v({
         didSelfVote: T,
         hasVoted: G,
         isExpired: w,

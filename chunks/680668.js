@@ -28,10 +28,10 @@ function p(e) {
       onAcceptInstantInvite: g,
       guild: A,
       invite: M,
-      author: v,
-      currentUserId: R
+      author: R,
+      currentUserId: v
     } = e,
-    O = R === v.id,
+    O = v === R.id,
     {
       channel: x,
       approximate_member_count: L,

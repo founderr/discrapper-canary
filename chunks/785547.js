@@ -24,8 +24,8 @@ var s, a, l, i = n("735250"),
   g = n("346329"),
   A = n("701560"),
   M = n("981631"),
-  v = n("689938"),
-  R = n("340514");
+  R = n("689938"),
+  v = n("340514");
 
 function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ let x = Object.freeze({
     [M.LibraryApplicationActions.MOVE_UP]: "queued",
     [M.LibraryApplicationActions.RESUME]: "paused"
   }),
-  L = () => [v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, v.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
+  L = () => [R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
 class D extends(a = r.Component) {
   get analyticsLocation() {
     return {
@@ -55,24 +55,24 @@ class D extends(a = r.Component) {
     switch ("uninstalling" !== e && (this._uninstallStringIndex = null), e) {
       case "install":
       case "unsupported_os":
-        return v.default.Messages.GAME_ACTION_BUTTON_INSTALL;
+        return R.default.Messages.GAME_ACTION_BUTTON_INSTALL;
       case "update":
-        return v.default.Messages.GAME_ACTION_BUTTON_UPDATE;
+        return R.default.Messages.GAME_ACTION_BUTTON_UPDATE;
       case "paused":
-        return v.default.Messages.GAME_ACTION_BUTTON_PAUSED;
+        return R.default.Messages.GAME_ACTION_BUTTON_PAUSED;
       case "locate":
-        return v.default.Messages.GAME_ACTION_BUTTON_LOCATE;
+        return R.default.Messages.GAME_ACTION_BUTTON_LOCATE;
       case "uninstalling":
         let t = L();
         return null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex];
       case "queued":
-        return v.default.Messages.GAME_ACTION_BUTTON_QUEUED;
+        return R.default.Messages.GAME_ACTION_BUTTON_QUEUED;
       case "downloading":
-        return v.default.Messages.GAME_ACTION_BUTTON_DOWNLOADING;
+        return R.default.Messages.GAME_ACTION_BUTTON_DOWNLOADING;
       case "preorder_wait":
-        return v.default.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT;
+        return R.default.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT;
       case "add_to_library":
-        return v.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY;
+        return R.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY;
       default:
         throw Error("Unexpected button state")
     }
@@ -124,19 +124,19 @@ class D extends(a = r.Component) {
       tooltipPosition: r
     } = this.props;
     return (0, i.jsxs)("div", {
-      className: R.disabledButtonWrapper,
+      className: v.disabledButtonWrapper,
       children: [(0, i.jsxs)(d.Button, {
         className: n,
         fullWidth: s,
         size: a,
-        color: null != l ? l : R.disabledButtonColor,
+        color: null != l ? l : v.disabledButtonColor,
         disabled: !0,
         children: [this.getText(e), this.renderProgressBar()]
       }), (0, i.jsx)(d.Tooltip, {
         text: t,
         position: r,
         children: e => (0, i.jsx)("div", {
-          className: R.disabledButtonOverlay,
+          className: v.disabledButtonOverlay,
           ...e
         })
       })]
@@ -156,7 +156,7 @@ class D extends(a = r.Component) {
       size: d.Progress.Sizes.XSMALL,
       foregroundColor: n.paused ? u.default.unsafe_rawColors.PRIMARY_500.css : u.default.unsafe_rawColors.GREEN_360.css,
       backgroundColor: u.default.unsafe_rawColors.TRANSPARENT.css,
-      className: R.progress
+      className: v.progress
     })
   }
   renderActionButton(e, t) {
@@ -185,14 +185,14 @@ class D extends(a = r.Component) {
     if ("play" === n) return this.renderPlayButton();
     if ("preorder_wait" === n) return this.renderDisabledButton(n, function(e) {
       let t = C.getReadablePreorderReleaseDate(e.sku);
-      return null != t ? v.default.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT_TOOLTIP.format({
+      return null != t ? R.default.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT_TOOLTIP.format({
         date: t
       }) : null
     }(t));
-    if ("unsupported_os" === n) return this.renderDisabledButton(n, v.default.Messages.GAME_ACTION_BUTTON_UNAVAILABLE_TOOLTIP.format({
-      operatingSystem: v.default.Messages.WINDOWS
+    if ("unsupported_os" === n) return this.renderDisabledButton(n, R.default.Messages.GAME_ACTION_BUTTON_UNAVAILABLE_TOOLTIP.format({
+      operatingSystem: R.default.Messages.WINDOWS
     }));
-    if ("install" === n && e) return this.renderDisabledButton(n, v.default.Messages.GAME_ACTION_BUTTON_CANNOT_INSTALL);
+    if ("install" === n && e) return this.renderDisabledButton(n, R.default.Messages.GAME_ACTION_BUTTON_CANNOT_INSTALL);
     let s = this.onClickHandlers[n];
     return null == s ? this.renderDisabledButton(n) : this.renderActionButton(n, s)
   }

@@ -30,8 +30,8 @@ var s = n("735250"),
   g = n("726542"),
   A = n("100527"),
   M = n("906732"),
-  v = n("812206"),
-  R = n("391650"),
+  R = n("812206"),
+  v = n("391650"),
   O = n("605236"),
   x = n("749277"),
   L = n("492435"),
@@ -146,7 +146,7 @@ let eS = a.memo(function() {
     dismissibleContent: eM,
     noticeType: ec.type
   });
-  let ev = null === (e = ec.metadata) || void 0 === e ? void 0 : e.premiumType;
+  let eR = null === (e = ec.metadata) || void 0 === e ? void 0 : e.premiumType;
   switch (ec.type) {
     case ef.NoticeTypes.LURKING_GUILD:
       return (0, s.jsx)(w.default, {});
@@ -156,10 +156,10 @@ let eS = a.memo(function() {
       return (0, s.jsx)(Q.default, {});
     case ef.NoticeTypes.GUILD_RAID_NOTIFICATION:
       let {
-        dismissUntil: eR
+        dismissUntil: ev
       } = ec.metadata;
       return (0, s.jsx)(P.default, {
-        onDismiss: () => eN(eR)
+        onDismiss: () => eN(ev)
       });
     case ef.NoticeTypes.WIN32_DEPRECATED_MESSAGE:
       let {
@@ -285,7 +285,7 @@ let eS = a.memo(function() {
         color: ei.NoticeColors.DEFAULT,
         children: [eT.default.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           noticeType: ef.NoticeTypes.UNCLAIMED_ACCOUNT,
-          onClick: () => eA && null != A ? (0, j.openMemberVerificationModal)(A) : R.openClaimAccountModal(),
+          onClick: () => eA && null != A ? (0, j.openMemberVerificationModal)(A) : v.openClaimAccountModal(),
           children: eT.default.Messages.CLAIM_ACCOUNT
         })]
       });
@@ -301,7 +301,7 @@ let eS = a.memo(function() {
                 email: null == _ ? void 0 : _.email
               }),
               secondaryConfirmText: eT.default.Messages.CHANGE_EMAIL,
-              onConfirmSecondary: R.openClaimAccountModal
+              onConfirmSecondary: v.openClaimAccountModal
             })
           },
           children: eT.default.Messages.RESEND_EMAIL_SHORT
@@ -369,7 +369,7 @@ let eS = a.memo(function() {
       if (null == ec.metadata) return null;
       let {
         skuId: eU, applicationId: ej
-      } = ec.metadata, eb = et.default.get(eU), eF = v.default.getApplication(ej);
+      } = ec.metadata, eb = et.default.get(eU), eF = R.default.getApplication(ej);
       if (null == eb || null == eF) return null;
       let eB = {
         page: ef.AnalyticsPages.IN_APP
@@ -409,7 +409,7 @@ let eS = a.memo(function() {
       let {
         skuId: e,
         applicationId: t
-      } = ec.metadata, n = et.default.get(e), a = v.default.getApplication(t);
+      } = ec.metadata, n = et.default.get(e), a = R.default.getApplication(t);
       if (null == n || null == a) return null;
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.PREMIUM_TIER_1,
@@ -629,7 +629,7 @@ let eS = a.memo(function() {
       return (0, s.jsx)(k.default, {});
     case ef.NoticeTypes.PREMIUM_UNCANCEL:
       return (0, s.jsxs)(ei.default, {
-        color: ev === eE.PremiumTypes.TIER_1 ? ei.NoticeColors.PREMIUM_TIER_1 : ev === eE.PremiumTypes.TIER_0 ? ei.NoticeColors.PREMIUM_TIER_0 : ei.NoticeColors.PREMIUM_TIER_2,
+        color: eR === eE.PremiumTypes.TIER_1 ? ei.NoticeColors.PREMIUM_TIER_1 : eR === eE.PremiumTypes.TIER_0 ? ei.NoticeColors.PREMIUM_TIER_0 : ei.NoticeColors.PREMIUM_TIER_2,
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
           noticeType: ef.NoticeTypes.PREMIUM_UNCANCEL,
           onClick: () => {
@@ -638,9 +638,9 @@ let eS = a.memo(function() {
           }
         }), (0, s.jsx)(el.default, {
           className: eI.premiumIcon
-        }), ev === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
+        }), eR === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
-        }) : ev === eE.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
+        }) : eR === eE.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
         }) : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
@@ -655,13 +655,13 @@ let eS = a.memo(function() {
               return t => (0, s.jsx)(e, {
                 ...t,
                 daysLeft: ec.metadata.daysLeft,
-                premiumType: ev,
+                premiumType: eR,
                 analyticsSource: "Nag Bar",
                 premiumSubscription: ec.metadata.premiumSubscription
               })
             })
           },
-          children: ev === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : ev === eE.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
+          children: eR === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eR === eE.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
         })]
       });
     case ef.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
@@ -730,9 +730,9 @@ let eS = a.memo(function() {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), ev === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
+        }), eR === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
-        }) : ev === eE.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
+        }) : eR === eE.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
         }) : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
@@ -742,7 +742,7 @@ let eS = a.memo(function() {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(ef.UserSettingsSections.SUBSCRIPTIONS)
           },
-          children: ev === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : ev === eE.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+          children: eR === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eR === eE.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
         })]
       });
     case ef.NoticeTypes.BACK_TO_PREVIOUS_SCREEN:

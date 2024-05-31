@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("963550"),
   A = n("845080"),
   M = n("295790"),
-  v = n("145807"),
-  R = n("56744"),
+  R = n("145807"),
+  v = n("56744"),
   O = n("981631"),
   x = n("373947");
 t.default = a.memo(function(e) {
@@ -71,8 +71,8 @@ t.default = a.memo(function(e) {
       [x.disableInteraction]: P
     }),
     disableInteraction: P,
-    childrenRepliedMessage: (0, R.default)(n, U, K, W, a),
-    childrenExecutedCommand: (0, v.default)(n, U, a),
+    childrenRepliedMessage: (0, v.default)(n, U, K, W, a),
+    childrenExecutedCommand: (0, R.default)(n, U, a),
     childrenHeader: (0, A.default)({
       ...e,
       guildId: U.guild_id,

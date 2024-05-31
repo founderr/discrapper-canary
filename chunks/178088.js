@@ -32,8 +32,8 @@ function A(e) {
     onClose: n,
     children: A,
     badgeState: M,
-    popoutPosition: v,
-    popoutAlign: R
+    popoutPosition: R,
+    popoutAlign: v
   } = e, {
     analyticsLocations: O
   } = (0, d.default)(u.default.NOTIFICATION_CENTER), [x, L] = a.useState(!1), [D, P] = function() {
@@ -93,8 +93,8 @@ function A(e) {
     value: O,
     children: (0, s.jsx)(o.Popout, {
       animation: o.Popout.Animation.NONE,
-      position: v,
-      align: R,
+      position: R,
+      align: v,
       autoInvert: !1,
       shouldShow: x,
       onRequestClose: j,

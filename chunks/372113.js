@@ -24,8 +24,8 @@ var a = n("120356"),
   g = n("644646"),
   A = n("667105"),
   M = n("87894"),
-  v = n("2660"),
-  R = n("46140"),
+  R = n("2660"),
+  v = n("46140"),
   O = n("981631"),
   x = n("689938"),
   L = n("526123");
@@ -68,7 +68,7 @@ t.default = e => {
     isExpanded: G,
     isAnimating: k,
     contentPosition: w
-  } = e, H = (null === (t = U.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, V = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (0, N.hasCollectiblesQuestReward)(U.config), K = (null === (a = U.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, W = G || k, z = (0, I.useQuestInstructionTitle)(U, R.QuestsExperimentLocations.QUESTS_CARD), Q = V && !K && j !== h.QuestContent.QUESTS_EMBED, q = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), X = D(H, V, K, Y), Z = V ? x.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : x.default.Messages.QUESTS_ACCEPT_TOOLTIP, J = (0, A.useHandleClaimQuestsReward)({
+  } = e, H = (null === (t = U.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, V = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (0, N.hasCollectiblesQuestReward)(U.config), K = (null === (a = U.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, W = G || k, z = (0, I.useQuestInstructionTitle)(U, v.QuestsExperimentLocations.QUESTS_CARD), Q = V && !K && j !== h.QuestContent.QUESTS_EMBED, q = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), X = D(H, V, K, Y), Z = V ? x.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : x.default.Messages.QUESTS_ACCEPT_TOOLTIP, J = (0, A.useHandleClaimQuestsReward)({
     quest: U,
     location: j,
     questContentPosition: w
@@ -114,7 +114,7 @@ t.default = e => {
           children: (0, s.jsx)(r.CircleExclamationPointIcon, {
             color: o.tokens.colors.WHITE
           })
-        }), el ? (0, s.jsx)(v.default, {
+        }), el ? (0, s.jsx)(R.default, {
           questConfig: U.config,
           fallback: er,
           isFocused: F

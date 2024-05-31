@@ -93,8 +93,8 @@ function p(e) {
     showOpaqueBackground: g = !1,
     hideRoleTag: A = !1,
     lineClamp: M = 1,
-    cardWidth: v = 332,
-    cardHeight: R,
+    cardWidth: R = 332,
+    cardHeight: v,
     thumbnailHeight: O = 187,
     descriptionTextVariant: x = "text-sm/normal",
     isDraft: L = !1
@@ -165,8 +165,8 @@ function p(e) {
     children: P
   }) : (0, s.jsx)("div", {
     style: {
-      width: v,
-      height: R
+      width: R,
+      height: v
     },
     children: (0, s.jsx)(i.ClickableContainer, {
       tag: "article",

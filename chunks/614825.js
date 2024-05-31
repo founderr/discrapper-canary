@@ -27,20 +27,20 @@ var s = n("735250"),
   g = n("786397"),
   A = n("474936"),
   M = n("981631"),
-  v = n("689938"),
-  R = n("613057");
+  R = n("689938"),
+  v = n("613057");
 class O extends a.Component {
   renderTitle(e, t, n) {
     let {
       trialOffer: s
     } = this.props, a = T.default.getUser(s.user_id), l = null != a ? a.username : "???", i = T.default.getUser(s.referrer_id), r = null != i ? i.username : "???";
-    if (e && void 0 === s.redeemed_at) return v.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
+    if (e && void 0 === s.redeemed_at) return R.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
       username: l
     });
-    if (t) return n ? v.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : v.default.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({
+    if (t) return n ? R.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : R.default.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({
       userName: r
     });
-    return v.default.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
+    return R.default.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
       senderUserName: r,
       recipientUserName: l
     })
@@ -49,9 +49,9 @@ class O extends a.Component {
     let {
       trialOffer: s
     } = this.props;
-    return e && !n && void 0 === s.redeemed_at ? v.default.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({
+    return e && !n && void 0 === s.redeemed_at ? R.default.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({
       helpdeskArticle: h.default.getArticleURL(M.HelpdeskArticles.REFERRAL_PROGRAM)
-    }) : t ? null : v.default.Messages.REFERRAL_PROGRAM_EMBED_BODY
+    }) : t ? null : R.default.Messages.REFERRAL_PROGRAM_EMBED_BODY
   }
   renderActions(e, t, n) {
     let {
@@ -65,7 +65,7 @@ class O extends a.Component {
       color: c.Button.Colors.BRAND
     }, o = l.id !== a.user_id || (0, N.isPremium)(l) || !l.verified || (0, g.hasUserTrialOfferExpired)(a), u = this.renderExpirationDate(e, t, n);
     return r.disabled = o, (0, s.jsxs)("div", {
-      className: R.buttonContainer,
+      className: v.buttonContainer,
       children: [(0, s.jsx)("div", {
         children: (0, s.jsx)(c.Button, {
           ...r,
@@ -79,10 +79,10 @@ class O extends a.Component {
               referralTrialOfferId: a.id
             })
           },
-          children: v.default.Messages.START_TRIAL
+          children: R.default.Messages.START_TRIAL
         })
       }), (0, s.jsx)("div", {
-        className: R.metadata,
+        className: v.metadata,
         children: u
       })]
     })
@@ -92,34 +92,34 @@ class O extends a.Component {
       trialOffer: s,
       trialEndsAt: a
     } = this.props;
-    if (void 0 !== s.redeemed_at && !n && null !== a) return v.default.Messages.TRIAL_EXPIRES.format({
+    if (void 0 !== s.redeemed_at && !n && null !== a) return R.default.Messages.TRIAL_EXPIRES.format({
       date: (0, p.dateFormat)(o()(a), "LL")
     });
     if (e || void 0 === s.expires_at) return null;
     let l = o()(s.expires_at);
-    if (t) return v.default.Messages.EXPIRED_DATE.format({
+    if (t) return R.default.Messages.EXPIRED_DATE.format({
       date: (0, p.dateFormat)(o()(l), "LL")
     });
     let i = l.diff(o()(), "h");
     if (i > 48) {
       let e = l.diff(o()(), "d");
-      return v.default.Messages.EXPIRES_DAYS.format({
+      return R.default.Messages.EXPIRES_DAYS.format({
         numDays: e
       })
     }
-    if (i > 1) return v.default.Messages.EXPIRES_HOURS.format({
+    if (i > 1) return R.default.Messages.EXPIRES_HOURS.format({
       numHours: i
     });
     let r = l.diff(o()(), "minutes");
-    return v.default.Messages.EXPIRES_MINUTES.format({
+    return R.default.Messages.EXPIRES_MINUTES.format({
       numMinutes: r
     })
   }
   renderMedia(e) {
     return (0, s.jsx)("div", {
       className: i()({
-        [R.referral]: !e,
-        [R.birthdayReferral]: e
+        [v.referral]: !e,
+        [v.birthdayReferral]: e
       })
     })
   }
@@ -131,20 +131,20 @@ class O extends a.Component {
       shouldShowBirthdayUX: a
     } = this.props, l = (0, g.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
     return (0, s.jsxs)("div", {
-      className: i()(R.tile, R.container),
+      className: i()(v.tile, v.container),
       children: [(0, s.jsx)("div", {
-        className: R.media,
+        className: v.media,
         children: this.renderMedia(a)
       }), (0, s.jsxs)("div", {
-        className: R.description,
+        className: v.description,
         children: [(0, s.jsx)(c.H, {
-          className: R.title,
+          className: v.title,
           children: this.renderTitle(n, l, r)
         }), (0, s.jsx)("div", {
-          className: R.tagline,
+          className: v.tagline,
           children: this.renderBody(n, l, r)
         }), (0, s.jsx)("div", {
-          className: R.actions,
+          className: v.actions,
           children: this.renderActions(n, l, r)
         })]
       })]
@@ -201,9 +201,9 @@ function x(e) {
     shouldShowBirthdayUX: m,
     ...e
   }) : (0, s.jsx)("div", {
-    className: R.invalidWrapper,
+    className: v.invalidWrapper,
     children: (0, s.jsx)("div", {
-      className: R.invalid
+      className: v.invalid
     })
   })
 }

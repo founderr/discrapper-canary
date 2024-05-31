@@ -24,7 +24,7 @@ let h = null,
     interrupted: !1,
     retries: 0
   },
-  v = e => {
+  R = e => {
     let {
       dropsQuestId: t,
       streamKey: n,
@@ -36,11 +36,11 @@ let h = null,
       (0, T.sendHeartbeat)(t, n, s.pid)
     }))
   },
-  R = e => {
+  v = e => {
     M.retries = 0, M.completed = e.completed, M.initialProgressFetched = !0, M.progress = e.progress, M.lastCheckedAt = o().now(), g = M.completed ? p.TooltipActions.QUEST_COMPLETION : p.TooltipActions.TRACK_PROGRESS
   },
   O = (e, t, n) => {
-    (!M.completed || e.dropsQuestId !== M.dropsQuestId) && (M.game = t, M.dropsQuestId = e.dropsQuestId, M.gameTitle = e.title, M.completed = !1, M.interrupted = !1, M.streamKey = n, M.retries = 0, M.lastCheckedAt = o().now(), A.start(5e3, () => v(!0)))
+    (!M.completed || e.dropsQuestId !== M.dropsQuestId) && (M.game = t, M.dropsQuestId = e.dropsQuestId, M.gameTitle = e.title, M.completed = !1, M.interrupted = !1, M.streamKey = n, M.retries = 0, M.lastCheckedAt = o().now(), A.start(5e3, () => R(!0)))
   };
 class x extends(i = u.default.Store) {
   initialize() {
@@ -115,12 +115,12 @@ l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
       enrolledUser: e.enrolledUser
     }
   },
-  DROPS_FETCH_PROGRESS_SUCCESS: R,
+  DROPS_FETCH_PROGRESS_SUCCESS: v,
   DROPS_FETCH_PROGRESS_FAILURE: e => {
     !M.initialProgressFetched && (M.initialProgressFetched = !0, g = p.TooltipActions.STREAM_CTA)
   },
   DROPS_HEARTBEAT_SUCCESS: e => {
-    R(e), S[e.dropsQuestId] = !0, v()
+    v(e), S[e.dropsQuestId] = !0, R()
   },
   DROPS_HEARTBEAT_FAILURE: e => {
     let {
@@ -128,7 +128,7 @@ l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
       statusCode: n
     } = e;
     if (M.completed = !1, M.initialProgressFetched = !0, M.lastCheckedAt = o().now(), 429 === n && 0 === M.retries) {
-      M.retries = M.retries + 1, v();
+      M.retries = M.retries + 1, R();
       return
     }
     g = p.TooltipActions.STREAM_CTA, 403 === n ? S[t] = !1 : M.interrupted = !0

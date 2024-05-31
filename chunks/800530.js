@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
     return M
   },
   SlidesOrderNonDsaEligible: function() {
-    return v
+    return R
   },
   ViolationType: function() {
     return T
@@ -91,7 +91,7 @@ let M = {
       prev: null
     }
   },
-  v = {
+  R = {
     "collect-signal": {
       next: "thanks",
       prev: null

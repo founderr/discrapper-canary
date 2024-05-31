@@ -19,14 +19,14 @@ var s, a, l, i, r = n("392711"),
   g = n("914010"),
   A = n("9156"),
   M = n("594174"),
-  v = n("981631");
-let R = "recentMentionFilterSettings",
+  R = n("981631");
+let v = "recentMentionFilterSettings",
   O = [],
   x = {},
   L = !1,
   D = !0,
-  P = d.Storage.get(R, {
-    guildFilter: v.RecentMentionsFilters.ALL_SERVERS,
+  P = d.Storage.get(v, {
+    guildFilter: R.RecentMentionsFilters.ALL_SERVERS,
     everyoneFilter: !0,
     roleFilter: !0
   }),
@@ -44,10 +44,10 @@ function F(e) {
 function B(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-  if ((0, m.default)(e) && !v.MessageTypesSets.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
+  if ((0, m.default)(e) && !R.MessageTypesSets.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
   null == n && (n = e.channel_id);
   let s = h.default.getChannel(n);
-  if (null == s || s.type === v.ChannelTypes.DM || P.guildFilter === v.RecentMentionsFilters.THIS_SERVER && s.getGuildId() !== g.default.getGuildId()) return null;
+  if (null == s || s.type === R.ChannelTypes.DM || P.guildFilter === R.RecentMentionsFilters.THIS_SERVER && s.getGuildId() !== g.default.getGuildId()) return null;
   let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
     l = p.default.getId();
   if (null != a && C.default.isBlocked(a) || (0, T.default)(e, l)) return null;
@@ -88,9 +88,9 @@ function w(e) {
   let t = {
     ...P
   };
-  P = o().defaults(o().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), P), d.Storage.set(R, P);
+  P = o().defaults(o().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), P), d.Storage.set(v, P);
   let n = (e, n) => t[e] !== P[e] && P[e] === n,
-    s = n("guildFilter", v.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
+    s = n("guildFilter", R.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
   x = {};
   let a = [];
   s && O.forEach(e => {
@@ -161,8 +161,8 @@ i = "RecentMentionsStore", (l = "displayName") in(a = K) ? Object.defineProperty
     let {
       guildId: t
     } = e;
-    L = !0, null == t && P.guildFilter === v.RecentMentionsFilters.THIS_SERVER && w({
-      guildFilter: v.RecentMentionsFilters.ALL_SERVERS
+    L = !0, null == t && P.guildFilter === R.RecentMentionsFilters.THIS_SERVER && w({
+      guildFilter: R.RecentMentionsFilters.ALL_SERVERS
     })
   },
   LOAD_RECENT_MENTIONS_SUCCESS: function(e) {
@@ -191,7 +191,7 @@ i = "RecentMentionsStore", (l = "displayName") in(a = K) ? Object.defineProperty
     n > (O = O.slice(0, t)).length && (D = !0)
   },
   CHANNEL_SELECT: function() {
-    if (P.guildFilter !== v.RecentMentionsFilters.THIS_SERVER) return !1;
+    if (P.guildFilter !== R.RecentMentionsFilters.THIS_SERVER) return !1;
     y = !1
   },
   CONNECTION_OPEN: H,

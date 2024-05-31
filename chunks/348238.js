@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return L
   },
   useClickMessageAuthorUsername: function() {
-    return v
+    return R
   },
   useClickReferencedMessageAuthorAvatar: function() {
     return D
   },
   useClickReferencedMessageAuthorUsername: function() {
-    return R
+    return v
   },
   useClickReply: function() {
     return k
@@ -95,12 +95,12 @@ function M(e, t, n) {
   }, [e, t, n])
 }
 
-function v(e, t, n, s) {
+function R(e, t, n, s) {
   let a = A("usernameProfile", n, s);
   return M(e.author.id, t.id, a)
 }
 
-function R(e, t, n, s) {
+function v(e, t, n, s) {
   let a = A("referencedUsernameProfile", n, s);
   return M(null == e ? void 0 : e.author.id, t.id, a)
 }

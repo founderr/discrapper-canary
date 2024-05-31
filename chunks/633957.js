@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return v
   }
 }), n("47120");
 var s = n("735250"),
@@ -27,17 +27,17 @@ var s = n("735250"),
   g = n("226378"),
   A = n("701488"),
   M = n("689938"),
-  v = n("975720");
+  R = n("975720");
 
-function R(e) {
+function v(e) {
   var t;
   let {
     application: n,
-    channelId: R,
+    channelId: v,
     guildId: O
   } = e, [x, L] = a.useState(!1), {
     analyticsLocations: D
-  } = (0, m.default)(_.default.ACTIVITY_INSTANCE_EMBED), P = (0, r.useAnalyticsContext)(), y = (0, f.default)(), U = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(R)), j = (null == U ? void 0 : null === (t = U.isThread) || void 0 === t ? void 0 : t.call(U)) ? null == U ? void 0 : U.parent_id : R, b = (0, l.useStateFromStores)([I.default], () => I.default.getId()), {
+  } = (0, m.default)(_.default.ACTIVITY_INSTANCE_EMBED), P = (0, r.useAnalyticsContext)(), y = (0, f.default)(), U = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(v)), j = (null == U ? void 0 : null === (t = U.isThread) || void 0 === t ? void 0 : t.call(U)) ? null == U ? void 0 : U.parent_id : v, b = (0, l.useStateFromStores)([I.default], () => I.default.getId()), {
     embeddedActivity: F,
     currentEmbeddedActivity: B
   } = (0, l.useStateFromStoresObject)([o.default], () => ({
@@ -55,7 +55,7 @@ function R(e) {
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
   }, [n]), H = (0, c.useEmbeddedActivityJoinability)({
     userId: b,
-    channelId: R,
+    channelId: v,
     application: w
   }), V = null == F, Y = (0, g.useJoinOrStartButtonState)({
     embeddedActivity: F,
@@ -68,7 +68,7 @@ function R(e) {
       V ? await (0, d.default)({
         targetApplicationId: n.id,
         currentEmbeddedApplication: y,
-        channelId: R,
+        channelId: v,
         guildId: O,
         locationObject: P.location,
         embeddedActivitiesManager: E.default,
@@ -76,7 +76,7 @@ function R(e) {
       }) : await (0, u.default)({
         applicationId: F.applicationId,
         currentEmbeddedApplication: y,
-        activityChannelId: R,
+        activityChannelId: v,
         locationObject: P.location,
         embeddedActivitiesManager: E.default,
         analyticsLocations: D
@@ -86,13 +86,13 @@ function R(e) {
     }
   }, W = Y.disabled ? M.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
   return (0, s.jsx)("div", {
-    className: v.container,
+    className: R.container,
     children: (0, s.jsxs)("div", {
-      className: v.contentContainer,
+      className: R.contentContainer,
       children: [(0, s.jsx)("div", {
-        className: v.headerContainer,
+        className: R.headerContainer,
         children: V ? (0, s.jsx)("div", {
-          className: v.__invalid_endedNote,
+          className: R.__invalid_endedNote,
           children: (0, s.jsx)(i.Text, {
             variant: "text-md/medium",
             children: W
@@ -104,7 +104,7 @@ function R(e) {
           children: null != k ? k : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
         })
       }), (0, s.jsxs)("div", {
-        className: v.footerContainer,
+        className: R.footerContainer,
         children: [(0, s.jsx)(i.Tooltip, {
           text: Y.tooltip,
           children: e => {

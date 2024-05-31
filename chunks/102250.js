@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("36459"),
   A = n("434404"),
   M = n("348238"),
-  v = n("103575"),
-  R = n("204197"),
+  R = n("103575"),
+  v = n("204197"),
   O = n("592125"),
   x = n("271383"),
   L = n("594174"),
@@ -144,7 +144,7 @@ function W(e) {
     avatarSrc: d,
     avatarDecorationSrc: c,
     eventHandlers: f
-  } = (0, R.default)({
+  } = (0, v.default)({
     user: i,
     guildId: r,
     size: 12
@@ -173,7 +173,7 @@ function W(e) {
             children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
           }), (0, s.jsx)(T.Popout, {
             renderPopout: function(e) {
-              return null == i ? (0, s.jsx)(s.Fragment, {}) : (0, s.jsx)(v.default, {
+              return null == i ? (0, s.jsx)(s.Fragment, {}) : (0, s.jsx)(R.default, {
                 ...e,
                 location: "AutomodNotification",
                 userId: i.id,
@@ -229,10 +229,10 @@ function z(e) {
     dmsSent: m,
     raidType: I,
     resolvedReason: g
-  } = (0, S.extractAutomodNotificationFields)(l), A = (0, f.useStateFromStores)([O.default], () => O.default.getChannel(l.channel_id), [l.channel_id]), v = null !== (t = null == A ? void 0 : A.guild_id) && void 0 !== t ? t : null, {
-    incidentData: R,
+  } = (0, S.extractAutomodNotificationFields)(l), A = (0, f.useStateFromStores)([O.default], () => O.default.getChannel(l.channel_id), [l.channel_id]), R = null !== (t = null == A ? void 0 : A.guild_id) && void 0 !== t ? t : null, {
+    incidentData: v,
     shouldShowIncidentActions: x
-  } = (0, p.useGuildIncidentsState)(v), L = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
+  } = (0, p.useGuildIncidentsState)(R), L = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
     let e = null == A ? void 0 : A.guild_id;
     null != e && (0, C.openRaidResolveModal)(l.id, e)
   }, [l.id, A]), j = I === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
@@ -282,11 +282,11 @@ function z(e) {
       className: w.dotSeparatedRow,
       children: [(0, s.jsx)(T.Button, {
         onClick: e => {
-          if (null != v && x) {
+          if (null != R && x) {
             let e = {
               source: h.GuildIncidentActionSources.MESSAGE,
               messageId: l.id,
-              alertType: (0, N.getIncidentAlertType)(R)
+              alertType: (0, N.getIncidentAlertType)(v)
             };
             (0, T.openModalLazy)(async () => {
               let {
@@ -294,7 +294,7 @@ function z(e) {
               } = await Promise.all([n.e("99387"), n.e("61536")]).then(n.bind(n, "664452"));
               return n => (0, s.jsx)(t, {
                 ...n,
-                guildId: v,
+                guildId: R,
                 analyticsData: e
               })
             })

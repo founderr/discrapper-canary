@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("74538"),
   A = n("453070"),
   M = n("926491"),
-  v = n("378233"),
-  R = n("419922"),
+  R = n("378233"),
+  v = n("419922"),
   O = n("688179"),
   x = n("981631"),
   L = n("474936"),
@@ -57,7 +57,7 @@ function F(e) {
     description: n
   } = e;
   return (0, s.jsxs)(h.default, {
-    children: [(0, s.jsx)(R.default, {
+    children: [(0, s.jsx)(v.default, {
       sticker: t,
       size: 48,
       isInteracting: !0
@@ -111,7 +111,7 @@ let B = e => {
         children: U(u, f)
       }), (0, s.jsx)("ul", {
         className: P.stickersList,
-        children: E.map(e => (0, s.jsx)(R.default, {
+        children: E.map(e => (0, s.jsx)(v.default, {
           isInteracting: !0,
           size: 80,
           sticker: e
@@ -140,7 +140,7 @@ let B = e => {
         refreshPositionKey: N
       } = e,
       [A, M] = a.useState(null),
-      [v, O] = a.useState(!1),
+      [R, O] = a.useState(!1),
       U = p.default.getCurrentUser(),
       j = g.default.canUseCustomStickersEverywhere(U),
       B = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(n.guild_id)),
@@ -174,12 +174,12 @@ let B = e => {
     let X = !Q && !G && z && j;
     return (a.useEffect(() => {
       N()
-    }, [v, A]), a.useEffect(() => {
+    }, [R, A]), a.useEffect(() => {
       C.default.track(x.AnalyticEvents.OPEN_POPOUT, {
         type: q,
         ...K
       })
-    }, []), v) ? (0, s.jsxs)(_.MessagePopoutContent, {
+    }, []), R) ? (0, s.jsxs)(_.MessagePopoutContent, {
       className: y.popoutContent,
       children: [(() => {
         let e = async () => {
@@ -269,7 +269,7 @@ let B = e => {
                       null == a || a(), V(null)
                     },
                     ...l,
-                    children: (0, s.jsx)(R.default, {
+                    children: (0, s.jsx)(v.default, {
                       size: 32,
                       enlargeOnInteraction: !0,
                       enlargeWithName: !1,
@@ -314,13 +314,13 @@ t.default = e => {
     closePopout: a,
     refreshPositionKey: l
   } = e, [i, r] = (0, A.useStickerForRenderableSticker)(t, !0);
-  if (null != i && (0, v.isStandardSticker)(i)) return (0, s.jsx)(B, {
+  if (null != i && (0, R.isStandardSticker)(i)) return (0, s.jsx)(B, {
     sticker: i,
     closePopout: a,
     channel: n,
     refreshPositionKey: l
   });
-  if (null != i && (0, v.isGuildSticker)(i)) return (0, s.jsx)(G, {
+  if (null != i && (0, R.isGuildSticker)(i)) return (0, s.jsx)(G, {
     sticker: i,
     channel: n,
     closePopout: a,

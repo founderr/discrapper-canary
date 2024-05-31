@@ -110,7 +110,7 @@ function M() {
     N = null
   }()
 }
-class v extends(a = r.default.PersistedStore) {
+class R extends(a = r.default.PersistedStore) {
   initialize(e) {
     p = null != e ? e : I, this.syncWith([E.default], M)
   }
@@ -127,7 +127,7 @@ class v extends(a = r.default.PersistedStore) {
     return p.lastSeen
   }
 }
-T(v, "displayName", "SurveyStore"), T(v, "persistKey", "SurveyStore"), T(v, "migrations", [e => {
+T(R, "displayName", "SurveyStore"), T(R, "persistKey", "SurveyStore"), T(R, "migrations", [e => {
   let t = {
     ...e
   };
@@ -144,7 +144,7 @@ T(v, "displayName", "SurveyStore"), T(v, "persistKey", "SurveyStore"), T(v, "mig
     ...e,
     hiddenSurveys: null !== (t = e.hiddenSurveys) && void 0 !== t ? t : {}
   }
-}]), t.default = new v(o.default, {
+}]), t.default = new R(o.default, {
   CONNECTION_OPEN: function() {
     var e;
     if (!(null != p.lastFetched && Date.now() - (null !== (e = p.lastFetched) && void 0 !== e ? e : 0) < S) || null != p.surveyOverride)(0, u.surveyFetch)(p.surveyOverride, !0)

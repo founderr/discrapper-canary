@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return R
   }
 });
 var s = n("735250"),
@@ -87,8 +87,8 @@ function M(e) {
     allowLinks: !0,
     allowDevLinks: p,
     previewLinkTarget: !0
-  }), v = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(n.channel_id)), R = _.MessageDisplayCompact.useSetting();
-  return null == v ? null : (0, s.jsxs)("div", {
+  }), R = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(n.channel_id)), v = _.MessageDisplayCompact.useSetting();
+  return null == R ? null : (0, s.jsxs)("div", {
     className: C.container,
     children: [(0, s.jsx)("div", {
       className: C.quote
@@ -100,8 +100,8 @@ function M(e) {
       }), (0, E.default)({
         channelMessageProps: {
           message: o,
-          channel: v,
-          compact: R
+          channel: R,
+          compact: v
         },
         hasSpoilerEmbeds: M,
         isInteracting: !1
@@ -114,7 +114,7 @@ function M(e) {
   }, i)
 }
 
-function v(e) {
+function R(e) {
   let {
     message: t
   } = e;

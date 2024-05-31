@@ -141,14 +141,14 @@ function A(e) {
 }
 
 function M(e) {
-  if ("CLIP" === e.item.type) return (0, s.jsx)(v, {
+  if ("CLIP" === e.item.type) return (0, s.jsx)(R, {
     attachment: e.item.originalItem,
     message: e.message
   });
   return null
 }
 
-function v(e) {
+function R(e) {
   var t;
   let {
     attachment: n,

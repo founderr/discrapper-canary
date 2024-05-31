@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("38267"),
   A = n("103575"),
   M = n("496675"),
-  v = n("594174"),
-  R = n("467679"),
+  R = n("594174"),
+  v = n("467679"),
   O = n("263704"),
   x = n("795295"),
   L = n("288176"),
@@ -143,7 +143,7 @@ function X(e) {
   let {
     alertAction: t,
     guildId: n
-  } = e, a = (0, c.useStateFromStores)([v.default], () => v.default.getUser(t.actor), [t.actor]);
+  } = e, a = (0, c.useStateFromStores)([R.default], () => R.default.getUser(t.actor), [t.actor]);
   try {
     let e = parseInt(t.actionType);
     if (null == a) return q(e, {});
@@ -217,7 +217,7 @@ let J = a.memo(function(e) {
       compact: i,
       ...o
     }, u),
-    E = v.default.getUser(r),
+    E = R.default.getUser(r),
     _ = K(n, a),
     T = W(a, E);
   if (null != E) {
@@ -264,7 +264,7 @@ function $(e) {
     onFocus: g,
     ...A
   } = (0, u.useListItem)(null != t ? t : ""), {
-    isFocused: v,
+    isFocused: R,
     handleFocus: O,
     handleBlur: x
   } = (0, C.useFocusInside)(g), D = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), P = (0, c.useStateFromStores)([M.default], () => M.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
@@ -320,7 +320,7 @@ function $(e) {
               tag: "span",
               className: Y.username,
               children: V.default.Messages.GUILD_AUTOMOD_USERNAME
-            }), (0, s.jsx)(R.default, {
+            }), (0, s.jsx)(v.default, {
               type: k.BotTagTypes.SYSTEM_DM,
               className: Y.systemTag
             }), (0, s.jsx)(J, {
@@ -347,7 +347,7 @@ function $(e) {
             hideTimestamp: !0,
             className: i()(Y.embedCard, {
               [Y.compact]: n,
-              [Y.selected]: ei || D && v,
+              [Y.selected]: ei || D && R,
               [Y.isClickable]: null != $ && null != F
             }),
             childrenAccessories: (0, s.jsxs)(s.Fragment, {

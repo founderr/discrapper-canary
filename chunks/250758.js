@@ -72,7 +72,7 @@ function A(e, t) {
   } = a, {
     autocompletes: f
   } = a;
-  f = R(e, u), S[e] = g({
+  f = v(e, u), S[e] = g({
     searchId: e,
     query: o,
     mode: u,
@@ -108,7 +108,7 @@ function M(e, t, n) {
   }
 }
 
-function v(e) {
+function R(e) {
   let t = (null != e ? e.getFullMatch() : "").trim(),
     n = function() {
       let e = (0, c.isInMainTabsExperiment)() && !1;
@@ -130,7 +130,7 @@ function v(e) {
   }
 }
 
-function R(e, t) {
+function v(e, t) {
   let n = [];
   return t.type === N.SearchPopoutModes.FILTER ? n.push(M(t.filter, t.token, e, 10)) : t.type === N.SearchPopoutModes.FILTER_ALL ? n = function(e, t) {
     let n = (null != e ? e.getFullMatch() : "").trim(),
@@ -155,8 +155,8 @@ function R(e, t) {
           results: [e, i, r]
         }
       }
-    }(e, t))), 5 > (0, _.getTotalResults)(s) && s.push(v(e)), s
-  }(t.token, e) : t.type === N.SearchPopoutModes.EMPTY && (n.push(v(t.token)), (0, c.isInMainTabsExperiment)(), n.push(function(e) {
+    }(e, t))), 5 > (0, _.getTotalResults)(s) && s.push(R(e)), s
+  }(t.token, e) : t.type === N.SearchPopoutModes.EMPTY && (n.push(R(t.token)), (0, c.isInMainTabsExperiment)(), n.push(function(e) {
     if (p.default.hidePersonalInformation) return null;
     let t = I.default.getHistory(e);
     return null == t ? null : {
@@ -207,7 +207,7 @@ function L() {
     mode: n,
     tokens: s,
     cursorScope: a,
-    autocompletes: R(e, n)
+    autocompletes: v(e, n)
   })
 }
 class D extends(s = r.default.Store) {
@@ -241,14 +241,14 @@ let P = new D(o.default, {
       u = C[s],
       d = !0;
     if (i === o.query && (null == o.mode || o.mode.filter === r.filter)) n = o.autocompletes, d = !1;
-    else if (r.type === N.SearchPopoutModes.EMPTY || r.type === N.SearchPopoutModes.FILTER && r.filter !== N.SearchTokenTypes.FILTER_FROM && r.filter !== N.SearchTokenTypes.FILTER_MENTIONS) null != u && (u.context.clearQuery(), u.results = []), n = R(s, r);
+    else if (r.type === N.SearchPopoutModes.EMPTY || r.type === N.SearchPopoutModes.FILTER && r.filter !== N.SearchTokenTypes.FILTER_FROM && r.filter !== N.SearchTokenTypes.FILTER_MENTIONS) null != u && (u.context.clearQuery(), u.results = []), n = v(s, r);
     else if (null != u) {
       let {
         token: e
       } = r;
       null != e && e.getFullMatch().trim().length > 0 ? (E.default.requestMembers(s, e.getFullMatch().trim(), 10), u.context.setQuery(e.getFullMatch().trim(), {
         guild: s
-      }), n = o.autocompletes, d = !1) : (u.context.clearQuery(), n = R(s, r))
+      }), n = o.autocompletes, d = !1) : (u.context.clearQuery(), n = v(s, r))
     }
     return S[s] = g({
       searchId: s,

@@ -32,16 +32,16 @@ let T = a.memo(function(e) {
         isLurking: g,
         isGuest: A,
         isPendingMember: M,
-        type: v
+        type: R
       } = e,
-      R = v === f.ReactionTypes.BURST,
-      O = (0, E.isMeReaction)(p, h, v),
-      x = (0, d.useEmojiColorPalette)(R && null != S ? S : []),
+      v = R === f.ReactionTypes.BURST,
+      O = (0, E.isMeReaction)(p, h, R),
+      x = (0, d.useEmojiColorPalette)(v && null != S ? S : []),
       L = a ? m : _,
-      D = R ? N : I,
+      D = v ? N : I,
       P = (0, c.getMinCounterWidth)(D, E.REACTION_MIN_WIDTH_DIGITS),
       y = {};
-    if (R && null != x) {
+    if (v && null != x) {
       var U;
       let {
         accentColor: e,
@@ -68,7 +68,7 @@ let T = a.memo(function(e) {
         emojiId: u.id,
         emojiName: u.name,
         size: "reaction",
-        animated: R && u.animated
+        animated: v && u.animated
       }), (0, s.jsx)("div", {
         className: L.reactionCount,
         style: j,

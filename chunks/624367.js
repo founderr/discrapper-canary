@@ -28,8 +28,8 @@ var a = n("613828"),
   g = n("638880"),
   A = n("146936"),
   M = n("147865"),
-  v = n("778569"),
-  R = n("513202"),
+  R = n("778569"),
+  v = n("513202"),
   O = n("403404"),
   x = n("701488"),
   L = n("981631"),
@@ -44,7 +44,7 @@ function U(e) {
     message: j
   } = e, {
     analyticsLocations: b
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), B = j.channel_id, G = (0, l.useStateFromStores)([m.default], () => m.default.getChannel(B), [B]), k = null == G ? void 0 : G.guild_id, w = null != G && (G.isGuildVoice() || G.isPrivate()), H = (0, l.useStateFromStores)([C.default], () => C.default.getSelfEmbeddedActivityForChannel(B)), V = (null == H ? void 0 : H.applicationId) === U, [Y, K] = (0, f.default)([U, null !== (n = null == H ? void 0 : H.applicationId) && void 0 !== n ? n : ""]), W = (0, M.default)(null !== (i = null == Y ? void 0 : Y.maxParticipants) && void 0 !== i ? i : 0), [z] = (0, l.useStateFromStoresArray)([C.default], () => w ? C.default.getEmbeddedActivitiesForChannel(B).filter(e => e.applicationId === U) : [], [U, B, w]), Q = Array.from(null !== (S = null == z ? void 0 : z.userIds) && void 0 !== S ? S : []), q = (0, l.useStateFromStoresArray)([T.default], () => Q.map(e => T.default.getUser(e)).filter(N.isNotNullish), [Q]), X = (0, v.default)({
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), B = j.channel_id, G = (0, l.useStateFromStores)([m.default], () => m.default.getChannel(B), [B]), k = null == G ? void 0 : G.guild_id, w = null != G && (G.isGuildVoice() || G.isPrivate()), H = (0, l.useStateFromStores)([C.default], () => C.default.getSelfEmbeddedActivityForChannel(B)), V = (null == H ? void 0 : H.applicationId) === U, [Y, K] = (0, f.default)([U, null !== (n = null == H ? void 0 : H.applicationId) && void 0 !== n ? n : ""]), W = (0, M.default)(null !== (i = null == Y ? void 0 : Y.maxParticipants) && void 0 !== i ? i : 0), [z] = (0, l.useStateFromStoresArray)([C.default], () => w ? C.default.getEmbeddedActivitiesForChannel(B).filter(e => e.applicationId === U) : [], [U, B, w]), Q = Array.from(null !== (S = null == z ? void 0 : z.userIds) && void 0 !== S ? S : []), q = (0, l.useStateFromStoresArray)([T.default], () => Q.map(e => T.default.getUser(e)).filter(N.isNotNullish), [Q]), X = (0, R.default)({
     applicationId: U,
     size: y,
     names: ["embedded_cover"]
@@ -54,7 +54,7 @@ function U(e) {
         applicationId: z.applicationId,
         currentEmbeddedApplication: K,
         activityChannelId: B,
-        embeddedActivitiesManager: R.default,
+        embeddedActivitiesManager: v.default,
         locationObject: F.location,
         analyticsLocations: b
       });
@@ -65,7 +65,7 @@ function U(e) {
             currentEmbeddedApplication: K,
             channelId: B,
             guildId: k,
-            embeddedActivitiesManager: R.default,
+            embeddedActivitiesManager: v.default,
             analyticsLocations: b
           });
         e ? o.default.show({

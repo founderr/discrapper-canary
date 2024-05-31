@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("566078"),
   A = n("685613"),
   M = n("611855"),
-  v = n("644646"),
-  R = n("670638"),
+  R = n("644646"),
+  v = n("670638"),
   O = n("87894"),
   x = n("46140"),
   L = n("689938"),
@@ -166,7 +166,7 @@ t.default = e => {
             className: D.headerCollapsedClickableContainer,
             children: [(0, s.jsx)("div", {
               className: D.headerCollapsedContentRewardWrapper,
-              children: (0, s.jsx)(v.default, {
+              children: (0, s.jsx)(R.default, {
                 quest: u,
                 questContent: c,
                 className: D.headerCollapsedRewardTile
@@ -256,7 +256,7 @@ t.default = e => {
             output: [O.QUESTS_CARD_COLLAPSED_HEIGHT_PX / 2 - O.QUESTS_CARD_ICON_SIZE_PX / 2, O.QUESTS_CARD_PADDING_Y_PX]
           }) : O.QUESTS_CARD_PADDING_Y_PX
         },
-        children: [(0, s.jsx)(R.QuestsEntryContextMenuPopout, {
+        children: [(0, s.jsx)(v.QuestsEntryContextMenuPopout, {
           questContent: c,
           quest: u,
           questContentPosition: B,

@@ -23,8 +23,8 @@ var s = n("735250"),
   g = n("271383"),
   A = n("699516"),
   M = n("250758"),
-  v = n("944486"),
-  R = n("914010"),
+  R = n("944486"),
+  v = n("914010"),
   O = n("246946"),
   x = n("594174"),
   L = n("396525"),
@@ -480,9 +480,9 @@ class q extends a.PureComponent {
   }
 }
 t.default = a.forwardRef((e, t) => {
-  let [n, a, l] = (0, _.useStateFromStoresArray)([R.default, v.default, M.default], () => {
-    let e = R.default.getGuildId(),
-      t = v.default.getChannelId(),
+  let [n, a, l] = (0, _.useStateFromStoresArray)([v.default, R.default, M.default], () => {
+    let e = v.default.getGuildId(),
+      t = R.default.getChannelId(),
       n = null != e ? e : t;
     o()(null != n, "SearchPopout.getStateFromStores - invalid searchId");
     let s = M.default.getState(n),

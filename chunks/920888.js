@@ -47,11 +47,11 @@ class N extends a.PureComponent {
       useChatFontScaling: g,
       forceHideReactionCreates: A,
       remainingReactions: M,
-      combinedReactions: v,
-      visibleReactionsCount: R
+      combinedReactions: R,
+      visibleReactionsCount: v
     } = this.props, {
       disableTransitionAppear: O
-    } = this.state, x = g ? T : m, L = R > 0;
+    } = this.state, x = g ? T : m, L = v > 0;
     return L || S ? (0, s.jsxs)(r.TransitionGroup, {
       component: "div",
       className: i()(x.reactions, N),
@@ -66,7 +66,7 @@ class N extends a.PureComponent {
         isHovered: !1
       }),
       children: [(0, s.jsx)(f.MessageReactionsGroupWrapper, {
-        reactions: v,
+        reactions: R,
         message: e,
         readOnly: n,
         isLurking: a,

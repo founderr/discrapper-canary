@@ -27,15 +27,15 @@ let T = e => {
     containerRef: g,
     size: A,
     height: M
-  } = (0, E.useQuestCardSize)([t]), v = (0, i.useIsEligibleForConcurrentQuests)({
+  } = (0, E.useQuestCardSize)([t]), R = (0, i.useIsEligibleForConcurrentQuests)({
     location: _.QuestsExperimentLocations.QUESTS_CARD
   }), {
-    expansionSpring: R,
+    expansionSpring: v,
     isAnimating: O,
     isExpanded: x,
     toggleExpanded: L
   } = (0, E.useQuestCardAnimation)({
-    initiallyExpanded: !v || T || (0, d.shouldQuestBeInitiallyExpanded)({
+    initiallyExpanded: !R || T || (0, d.shouldQuestBeInitiallyExpanded)({
       location: n,
       quest: t
     })
@@ -48,7 +48,7 @@ let T = e => {
     children: e => (0, s.jsx)(s.Fragment, {
       children: (0, s.jsxs)(l.animated.div, {
         style: {
-          maxHeight: n === o.QuestContent.QUESTS_EMBED ? void 0 : R.to({
+          maxHeight: n === o.QuestContent.QUESTS_EMBED ? void 0 : v.to({
             range: [0, 1],
             output: [d.QUESTS_CARD_COLLAPSED_HEIGHT_PX, D]
           })
@@ -67,10 +67,10 @@ let T = e => {
           location: n,
           quest: t,
           size: A,
-          expansionSpring: R,
+          expansionSpring: v,
           isAnimating: O,
           isExpanded: x,
-          isInConcurrentQuestExperiment: v,
+          isInConcurrentQuestExperiment: R,
           contentPosition: I,
           toggleExpanded: L
         }), (0, s.jsx)(c.default, {

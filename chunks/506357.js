@@ -29,14 +29,14 @@ function g(e) {
   var t, g;
   let {
     onDismiss: A
-  } = e, M = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), v = (0, l.useStateFromStores)([d.default], () => null != M ? d.default.getChannelId(M) : null, [M]), R = null != M ? M : null, O = (0, l.useStateFromStores)([u.default], () => null != R ? u.default.getGuild(R) : null, [R]), {
+  } = e, M = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), R = (0, l.useStateFromStores)([d.default], () => null != M ? d.default.getChannelId(M) : null, [M]), v = null != M ? M : null, O = (0, l.useStateFromStores)([u.default], () => null != v ? u.default.getGuild(v) : null, [v]), {
     shouldShowIncidentActions: x,
     incidentData: L,
     isUnderLockdown: D
-  } = (0, T.useGuildIncidentsState)(R), P = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.EMPTY_STRING_SNOWFLAKE_ID), y = a.useCallback(() => null != O && (0, o.goToMemberSafetyDashboard)(O.id), [O]);
+  } = (0, T.useGuildIncidentsState)(v), P = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.EMPTY_STRING_SNOWFLAKE_ID), y = a.useCallback(() => null != O && (0, o.goToMemberSafetyDashboard)(O.id), [O]);
   if (null == O || null == L || !x) return null;
   let U = e => {
-      if (e && P && v !== N.StaticChannelRoute.MEMBER_SAFETY && y()) {
+      if (e && P && R !== N.StaticChannelRoute.MEMBER_SAFETY && y()) {
         m.default.track(h.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
           notice_type: h.NoticeTypes.GUILD_RAID_NOTIFICATION,
           guild_id: O.id
@@ -90,7 +90,7 @@ function g(e) {
     }) : S.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
       guildName: O.name
     }),
-    B = P && v === N.StaticChannelRoute.MEMBER_SAFETY;
+    B = P && R === N.StaticChannelRoute.MEMBER_SAFETY;
   return (0, s.jsxs)(_.default, {
     className: C.notice,
     color: _.NoticeColors.WARNING,

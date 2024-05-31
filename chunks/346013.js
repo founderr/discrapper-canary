@@ -27,8 +27,8 @@ var s = n("735250"),
   g = n("103575"),
   A = n("695346"),
   M = n("271383"),
-  v = n("594174"),
-  R = n("976644"),
+  R = n("594174"),
+  v = n("976644"),
   O = n("806361"),
   x = n("768581"),
   L = n("900849"),
@@ -49,9 +49,9 @@ function G(e) {
     channel: k
   } = e, w = (0, y.useMediaPostEmbedData)(r, G), {
     setPopout: H
-  } = (0, S.default)(G.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(G, k, H, !0), Y = A.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, v.default], () => {
+  } = (0, S.default)(G.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(G, k, H, !0), Y = A.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, R.default], () => {
     var e;
-    return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+    return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [w]), J = (0, c.useStateFromStores)([M.default], () => (null == w ? void 0 : w.authorId) != null ? M.default.getMember(w.guildId, w.authorId) : null), [$, ee] = a.useMemo(() => {
     var e;
     return [null !== (e = null == J ? void 0 : J.colorString) && void 0 !== e ? e : "inherit", null == J ? void 0 : J.colorRoleId]
@@ -212,7 +212,7 @@ function G(e) {
             color: "always-white",
             children: w.ctaText
           })
-        }) : (0, s.jsx)(R.default, {
+        }) : (0, s.jsx)(v.default, {
           pauseAnimation: X,
           onClick: ei,
           className: i()(F.__invalid_ctaButtonContent, F.subscribeButton),
