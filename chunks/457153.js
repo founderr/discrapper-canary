@@ -83,7 +83,8 @@ t.default = function(e) {
       useReducedMotion: A
     }), (0, a.jsx)(h.default, {
       progressBarRef: N,
-      quest: T
+      quest: T,
+      isExpanded: I
     }), (0, a.jsx)("div", {
       className: S.contentCollapsedWrapper,
       children: v ? (0, a.jsx)(_.default, {

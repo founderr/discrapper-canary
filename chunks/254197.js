@@ -178,7 +178,8 @@ let b = e => {
           className: D.divider
         }), (0, a.jsx)(M.default, {
           progressBarRef: k,
-          quest: G
+          quest: G,
+          isExpanded: u
         }), (0, a.jsx)(x.default, {
           quest: G,
           progressBarRef: k,
