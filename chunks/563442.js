@@ -26,6 +26,8 @@ function E(e) {
     children: [(0, a.jsx)("div", {
       className: i()(f.image)
     }), (0, a.jsx)("div", {
+      className: i()(f.leftToRightGradient)
+    }), (0, a.jsx)("div", {
       className: i()(f.gradient)
     }), (0, a.jsx)("div", {
       className: f.contents,

@@ -17258,6 +17258,7 @@ e.exports = Object.freeze({
   QUESTS_OTHER: "OTHER QUESTS",
   QUESTS_ALL: "All Quests",
   QUESTS_COMPLETED: "Completed Quests",
+  QUESTS_CLAIMED: "Claimed Quests",
   QUESTS_PROMOTED_BY_GUILD: "Promoted by $[{guildName}]({guildHook})",
   QUESTS_PROMOTED_BY_BRAND: "Promoted by **{brandName}**",
   QUESTS_REWARD_VERIFICATION_TITLE: "Verify your account to claim rewards!",

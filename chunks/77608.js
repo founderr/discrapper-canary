@@ -25,7 +25,7 @@ function h(e) {
     label: f.default.Messages.QUESTS_ALL
   }, {
     id: d.QuestFilters.CLAIMED,
-    label: f.default.Messages.QUESTS_COMPLETED
+    label: f.default.Messages.QUESTS_CLAIMED
   }], h = s.useCallback(() => {
     window.open(u.default.getArticleURL(c.HelpdeskArticles.QUESTS_LEARN_MORE))
   }, []), _ = s.useCallback(e => {
