@@ -629,44 +629,45 @@ class ed extends er {
       selectedVoiceChannelId: i,
       activeJoinedRelevantThreads: s,
       activeJoinedUnreadThreads: l
-    } = e, a = [];
+    } = e;
     if (!A.default.can(j.Permissions.VIEW_CHANNEL, this.record)) {
       if (this.id === i) return {
         renderLevel: 4,
-        threadIds: a
+        threadIds: []
       };
       if (!c.default.isChannelGatedAndVisible(this.record.guild_id, this.record.id)) return {
         renderLevel: 1,
-        threadIds: a
+        threadIds: []
       }
     }
-    let r = this.record.parent_id,
-      o = this.category.guild;
-    if (ep(o, this.record)) return {
+    let a = this.record.parent_id,
+      r = this.category.guild;
+    if (ep(r, this.record)) return {
       renderLevel: 1,
-      threadIds: a
+      threadIds: []
     };
-    let h = (null == n ? void 0 : n.id) === this.id || i === this.id,
-      u = null != n && n.isThread() && n.parent_id === this.id,
-      C = null !== (t = h || u || !this.category.isCollapsed && !this.isMuted ? s[this.id] : l[this.id]) && void 0 !== t ? t : {};
-    return (a = ef(this.record, C, n, i, o.hideMutedChannels), o.optInEnabled && o.hideResourceChannels && this.record.hasFlag(B.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) ? {
-      renderLevel: h ? 4 : 1,
-      threadIds: a
-    } : !o.optInEnabled || o.optedInChannels.has(this.id) || null != r && o.optedInChannels.has(r) ? h || u || !d().isEmpty(a) || R.default.getMentionCount(this.id) > 0 ? {
+    let o = (null == n ? void 0 : n.id) === this.id || i === this.id,
+      h = null != n && n.isThread() && n.parent_id === this.id,
+      u = null !== (t = o || h || !this.category.isCollapsed && !this.isMuted ? s[this.id] : l[this.id]) && void 0 !== t ? t : {},
+      C = ef(this.record, u, n, i, r.hideMutedChannels);
+    return r.optInEnabled && r.hideResourceChannels && this.record.hasFlag(B.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL) ? {
+      renderLevel: o ? 4 : 1,
+      threadIds: C
+    } : !r.optInEnabled || r.optedInChannels.has(this.id) || null != a && r.optedInChannels.has(a) ? o || h || !d().isEmpty(C) || R.default.getMentionCount(this.id) > 0 ? {
       renderLevel: 4,
-      threadIds: a
-    } : o.hideMutedChannels && o.mutedChannelIds.has(this.id) ? {
+      threadIds: C
+    } : r.hideMutedChannels && r.mutedChannelIds.has(this.id) ? {
       renderLevel: 2,
-      threadIds: a
-    } : this.category.isCollapsed && (o.mutedChannelIds.has(this.id) || null != r && o.mutedChannelIds.has(r) || this.record.isGuildVocal() || this.record.type === H.ChannelTypes.GUILD_STORE || (0, w.isGuildReadableType)(this.record.type) && !R.default.hasUnread(this.record.id)) ? {
+      threadIds: C
+    } : this.category.isCollapsed && (r.mutedChannelIds.has(this.id) || null != a && r.mutedChannelIds.has(a) || this.record.isGuildVocal() || this.record.type === H.ChannelTypes.GUILD_STORE || (0, w.isGuildReadableType)(this.record.type) && !R.default.hasUnread(this.record.id)) ? {
       renderLevel: 3,
-      threadIds: a
+      threadIds: C
     } : {
       renderLevel: 4,
-      threadIds: a
+      threadIds: C
     } : {
       renderLevel: 2,
-      threadIds: a
+      threadIds: C
     }
   }
 }
@@ -772,7 +773,7 @@ function ef(e, t, n, i, s) {
     let e = d().sortBy(Object.values(t), e => -e.joinTimestamp).map(e => e.channel.id);
     if (l) return e;
     if (a) return !(n.id in t) && !(0, p.isInMainTabsExperiment)() && e.unshift(n.id), e;
-    else if (s) return e.filter(e => !m.default.isMuted(e));
+    else if (s) return e.filter(e => !m.default.isMuted(e) || R.default.getMentionCount(e) > 0);
     else return e
   }
   return []
