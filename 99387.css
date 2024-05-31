@@ -109127,6 +109127,13 @@ html .invoiceCancelRow__6ff3e {
     margin-bottom: 8px
 }
 
+.content__09e03 {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
 .container_ef1953 {
     padding: 16px;
     display: flex;
@@ -109139,6 +109146,11 @@ html .invoiceCancelRow__6ff3e {
 .disabledFormRenderer__8faf7 {
     padding: 0 16px;
     padding-bottom: 40px
+}
+
+.actionButtons__949aa {
+    display: flex;
+    gap: 8px
 }
 
 .content__3cb43 {

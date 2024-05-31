@@ -11,15 +11,16 @@ var i = n("544891"),
   _ = n("271383"),
   c = n("701190"),
   E = n("594174"),
-  I = n("981631"),
-  T = n("689938");
-let f = async (e, t) => {
+  I = n("626135"),
+  T = n("981631"),
+  f = n("689938");
+let S = async (e, t) => {
   let n = null != t ? t : c.default.getInviteKeyForGuildId(e),
     s = E.default.getCurrentUser(),
     a = !_.default.isMember(e, null == s ? void 0 : s.id);
   try {
     let t = await i.HTTP.get({
-      url: I.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+      url: T.Endpoints.GUILD_MEMBER_VERIFICATION(e),
       query: {
         with_guild: a,
         invite_code: null != n ? (0, d.parseInviteCodeFromInviteKey)(n) : void 0
@@ -46,11 +47,11 @@ let f = async (e, t) => {
       guildId: e
     })
   }
-}, S = async (e, t) => {
+}, h = async (e, t) => {
   let {
     body: n
   } = await i.HTTP.patch({
-    url: I.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    url: T.Endpoints.GUILD_MEMBER_VERIFICATION(e),
     body: {
       form_fields: t
     },
@@ -65,11 +66,11 @@ let f = async (e, t) => {
       formFields: n.form_fields
     }
   })
-}, h = async (e, t) => {
+}, A = async (e, t) => {
   let {
     body: n
   } = await i.HTTP.patch({
-    url: I.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    url: T.Endpoints.GUILD_MEMBER_VERIFICATION(e),
     body: {
       description: t
     },
@@ -84,15 +85,15 @@ let f = async (e, t) => {
       formFields: n.form_fields
     }
   })
-}, A = async (e, t) => {
+}, m = async (e, t) => {
   await i.HTTP.patch({
-    url: I.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    url: T.Endpoints.GUILD_MEMBER_VERIFICATION(e),
     body: {
       enabled: t
     },
     oldFormErrors: !0
   })
-}, m = async (e, t) => {
+}, N = async (e, t) => {
   if (u.default.isFullServerPreview(e)) {
     (0, l.updateImpersonatedData)(e, {
       memberOptions: {
@@ -105,7 +106,7 @@ let f = async (e, t) => {
     let {
       body: n
     } = await i.HTTP.put({
-      url: I.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
+      url: T.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
       body: {
         version: t.version,
         form_fields: t.formFields
@@ -115,7 +116,7 @@ let f = async (e, t) => {
       type: "USER_GUILD_JOIN_REQUEST_UPDATE",
       guildId: e,
       request: n
-    }), setTimeout(N, 200), n
+    }), setTimeout(p, 200), n
   } catch (t) {
     let {
       status: e
@@ -123,34 +124,34 @@ let f = async (e, t) => {
     switch (e) {
       case 429:
         throw (0, a.closeContextMenu)(), s.default.show({
-          title: T.default.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
-          body: T.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
-          confirmText: T.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
+          title: f.default.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
+          body: f.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
+          confirmText: f.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
         }), {
           ...t,
-          message: T.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY
+          message: f.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY
         };
       case 403:
         throw {
-          ...t, message: T.default.Messages.CLAN_APPLICATION_MISSING_PERMISSION
+          ...t, message: f.default.Messages.CLAN_APPLICATION_MISSING_PERMISSION
         };
       default:
         var n, d;
         throw {
-          ...t, message: null !== (d = (n = new o.APIError(t), n.getAnyErrorMessage())) && void 0 !== d ? d : T.default.Messages.ERROR_GENERIC_TITLE
+          ...t, message: null !== (d = (n = new o.APIError(t), n.getAnyErrorMessage())) && void 0 !== d ? d : f.default.Messages.ERROR_GENERIC_TITLE
         }
     }
   }
 };
 
-function N() {
+function p() {
   r.default.dispatch({
     type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW"
   })
 }
 t.default = {
-  fetchVerificationForm: f,
-  updateVerificationForm: S,
+  fetchVerificationForm: S,
+  updateVerificationForm: h,
   updateVerificationFormFieldsLocal: (e, t) => {
     r.default.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -161,7 +162,7 @@ t.default = {
       isLocalUpdate: !0
     })
   },
-  updateVerificationFormDescription: h,
+  updateVerificationFormDescription: A,
   updateVerificationFormDescriptionLocal: (e, t) => {
     r.default.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -172,11 +173,29 @@ t.default = {
       isLocalUpdate: !0
     })
   },
-  enableVerificationForm: A,
-  submitVerificationForm: m,
+  enableVerificationForm: m,
+  submitVerificationForm: N,
   clearCoachmark: function() {
     r.default.dispatch({
       type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR"
+    })
+  },
+  reportApplication: function(e) {
+    let {
+      guild: t,
+      guildJoinRequest: n,
+      guildJoinRequestUser: i,
+      reason: r,
+      reasonOther: s,
+      responses: a
+    } = e;
+    I.default.track(T.AnalyticEvents.GUILD_MEMBER_APPLICATION_REPORTED, {
+      application_id: n.joinRequestId,
+      applicant_id: i.id,
+      guild_id: t.id,
+      reason: r,
+      reason_other: s,
+      responses: a
     })
   }
 }
