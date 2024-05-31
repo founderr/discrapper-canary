@@ -109,7 +109,7 @@ function y(e) {
         size: 20,
         className: D.rowIcon
       }), (0, i.jsx)(a.Text, {
-        variant: "text-md/bold",
+        variant: "text-md/semibold",
         color: "header-primary",
         children: n.name
       })]
