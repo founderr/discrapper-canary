@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var a = s("735250");
@@ -14,44 +14,48 @@ var l = s("120356"),
   o = s("768581"),
   d = s("51144"),
   c = s("981631"),
-  E = s("313602");
+  E = s("689938"),
+  I = s("313602");
 
-function I(e) {
+function T(e) {
   let {
     user: t,
     guildId: s,
     className: l
   } = e, {
-    username: I
-  } = t, T = o.default.getUserAvatarURL(t), {
-    analyticsLocations: f
-  } = (0, r.default)();
+    username: T
+  } = t, f = o.default.getUserAvatarURL(t), {
+    analyticsLocations: R
+  } = (0, r.default)(), _ = () => {
+    (0, u.openUserProfileModal)({
+      userId: t.id,
+      guildId: s,
+      sourceAnalyticsLocations: R,
+      analyticsLocation: {
+        section: c.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+        object: c.AnalyticsObjects.JOIN_REQUEST
+      }
+    })
+  };
   return (0, a.jsxs)("div", {
-    className: i()(E.container, l),
+    className: i()(I.container, l),
     children: [(0, a.jsx)(n.Anchor, {
-      onClick: () => {
-        (0, u.openUserProfileModal)({
-          userId: t.id,
-          guildId: s,
-          sourceAnalyticsLocations: f,
-          analyticsLocation: {
-            section: c.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-            object: c.AnalyticsObjects.JOIN_REQUEST
-          }
-        })
-      },
+      onClick: _,
       children: (0, a.jsx)(n.Avatar, {
-        src: T,
+        src: f,
         size: n.AvatarSizes.SIZE_80,
-        "aria-label": I,
-        className: E.avatar
+        "aria-label": T,
+        className: I.avatar
       })
     }), (0, a.jsx)("div", {
-      className: E.username,
+      className: I.username,
       children: (0, a.jsx)(n.Heading, {
         variant: "heading-lg/semibold",
         children: d.default.getFormattedName(t)
       })
+    }), (0, a.jsx)(n.Anchor, {
+      onClick: _,
+      children: E.default.Messages.VIEW_PROFILE
     })]
   })
 }
