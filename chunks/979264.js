@@ -46,37 +46,38 @@ let m = r.memo(function(e) {
   }),
   N = r.memo(function(e) {
     let {
-      clanTag: t,
-      clanBadge: n,
-      className: r,
-      textClassName: s,
-      badgeClassName: o,
-      onClick: u,
-      onMouseEnter: d,
-      textVariant: _ = "text-xs/medium",
-      textColor: c = "text-normal",
-      badgeSize: E = S.ClanTagBadgeSize.SIZE_12,
-      inline: I = !0
+      guildId: t,
+      clanTag: n,
+      clanBadge: r,
+      className: s,
+      textClassName: o,
+      badgeClassName: u,
+      onClick: d,
+      onMouseEnter: _,
+      textVariant: c = "text-xs/medium",
+      textColor: E = "text-normal",
+      badgeSize: f = S.ClanTagBadgeSize.SIZE_12,
+      inline: h = !0
     } = e;
     return (0, T.default)("base_clan_tag_chiplet") ? (0, i.jsx)(l.Clickable, {
       tag: "span",
-      tabIndex: null == u ? -1 : void 0,
-      onClick: u,
-      onMouseEnter: d,
-      className: a()(A.chipletContainerInner, I && A.chipletContainerInline, null != u && A.clickable, r),
+      tabIndex: null == d ? -1 : void 0,
+      onClick: d,
+      onMouseEnter: _,
+      className: a()(A.chipletContainerInner, h && A.chipletContainerInline, null != d && A.clickable, s),
       children: (0, i.jsxs)(l.Text, {
-        variant: _,
-        color: c,
+        variant: c,
+        color: E,
         tag: "span",
-        className: a()(A.text, s),
-        children: [null != n && "string" == typeof n ? (0, i.jsx)(m, {
-          tag: null == t ? void 0 : t.toString(),
-          src: n,
-          size: E,
-          className: o
-        }) : n, (0, i.jsx)("span", {
+        className: a()(A.text, o),
+        children: [null != r && "string" == typeof r ? (0, i.jsx)(m, {
+          src: (0, I.getClanBadgeUrl)(t, r, f),
+          tag: null == n ? void 0 : n.toString(),
+          size: f,
+          className: u
+        }) : r, (0, i.jsx)("span", {
           className: A.unselectable,
-          children: t
+          children: n
         })]
       })
     }) : null
@@ -148,7 +149,7 @@ t.default = r.memo(function(e) {
     textVariant: u,
     textColor: d,
     badgeSize: _,
-    disableTooltip: E = !1,
+    disableGuildProfile: E = !1,
     inline: T = !0,
     profileViewedAnalytics: f
   } = e, S = (0, o.useStateFromStores)([c.default], () => c.default.getUser(r), [r]), h = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n, {
@@ -156,11 +157,10 @@ t.default = r.memo(function(e) {
     badge: C,
     guildId: R
   } = (0, I.getUserClanData)(h);
-  if (!O(r, s) || null == R) return null;
-  let g = (0, I.getClanBadgeUrl)(R, C, _);
-  return E ? (0, i.jsx)(N, {
+  return O(r, s) && null != R ? E ? (0, i.jsx)(N, {
+    guildId: R,
     clanTag: m,
-    clanBadge: g,
+    clanBadge: C,
     className: a()(A.noTooltip, l),
     textVariant: u,
     textColor: d,
@@ -171,13 +171,14 @@ t.default = r.memo(function(e) {
     userId: r,
     profileViewedAnalytics: f,
     children: (0, i.jsx)(N, {
+      guildId: R,
       clanTag: m,
-      clanBadge: g,
+      clanBadge: C,
       className: l,
       textVariant: u,
       textColor: d,
       badgeSize: _,
       inline: T
     })
-  })
+  }) : null
 })

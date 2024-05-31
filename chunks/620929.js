@@ -28,30 +28,32 @@ var a = n("735250"),
 
 function v(e) {
   let {
-    tag: t,
-    badge: n,
-    primaryColor: l,
-    secondaryColor: s
+    guildId: t,
+    tag: n,
+    badge: l,
+    primaryColor: s,
+    secondaryColor: i
   } = e;
-  return null == t || 0 === t.length ? (0, a.jsx)("div", {
+  return null == n || 0 === n.length ? (0, a.jsx)("div", {
     className: A.placeholderIcon,
     children: (0, a.jsx)(g.default, {
       height: 42,
       width: 42
     })
   }) : (0, a.jsx)(C.BaseClanTagChiplet, {
+    guildId: t,
     className: A.charterClanTag,
-    clanTag: t,
+    clanTag: n,
     textVariant: "heading-lg/semibold",
     textColor: "text-normal",
     badgeSize: T.ClanTagBadgeSize.SIZE_24,
     clanBadge: (0, a.jsx)(S.ClanBadge, {
       className: A.charterClanBadge,
-      badge: n,
+      badge: l,
       width: T.ClanTagBadgeSize.SIZE_24,
       height: T.ClanTagBadgeSize.SIZE_24,
-      primaryTintColor: l,
-      secondaryTintColor: s
+      primaryTintColor: s,
+      secondaryTintColor: i
     })
   })
 }
@@ -116,6 +118,7 @@ t.default = e => {
         fade: !0,
         className: A.overviewSidebarContent,
         children: [(0, a.jsx)(v, {
+          guildId: n,
           tag: y,
           badge: L,
           primaryColor: null != O ? O : _.CLAN_BADGE_PRIMARY_DEFAULT,

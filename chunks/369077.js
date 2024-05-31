@@ -39,14 +39,12 @@ function A(e) {
     guildName: u,
     guildIcon: c,
     guildIconSize: S,
-    memberCount: T
-  } = e, _ = n.useRef(null), [N, h] = n.useState(!1);
-  n.useEffect(() => {
-    let e = _.current;
-    null != e && null != e.offsetWidth && null != e.scrollWidth && h(e.offsetWidth < e.scrollWidth)
-  }, []);
-  let A = (0, E.getClanBadgeUrl)(d, l, I.ClanTagBadgeSize.SIZE_16);
-  return (0, a.jsxs)("div", {
+    memberCount: E
+  } = e, T = n.useRef(null), [_, N] = n.useState(!1);
+  return n.useEffect(() => {
+    let e = T.current;
+    null != e && null != e.offsetWidth && null != e.scrollWidth && N(e.offsetWidth < e.scrollWidth)
+  }, []), (0, a.jsxs)("div", {
     className: i()(C.container, t),
     children: [(0, a.jsxs)("div", {
       className: C.guildPrefixContainer,
@@ -62,23 +60,24 @@ function A(e) {
         children: [(0, a.jsx)(o.Tooltip, {
           text: u,
           color: o.Tooltip.Colors.PRIMARY,
-          shouldShow: N,
+          shouldShow: _,
           children: e => (0, a.jsx)("span", {
-            ref: _,
+            ref: T,
             ...e,
             className: C.guildName,
             children: u
           })
-        }), null != T && (0, a.jsx)(m.default, {
-          count: T
+        }), null != E && (0, a.jsx)(m.default, {
+          count: E
         })]
       })]
     }), (0, a.jsx)("div", {
       className: C.tagContainer,
       children: (0, a.jsx)(g.BaseClanTagChiplet, {
+        guildId: d,
         className: C.tag,
         clanTag: s,
-        clanBadge: A,
+        clanBadge: l,
         onClick: r,
         badgeSize: I.ClanTagBadgeSize.SIZE_16,
         textColor: "interactive-normal",

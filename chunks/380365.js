@@ -1,34 +1,31 @@
 "use strict";
-l.r(a);
-var t = l("735250"),
-  s = l("470079"),
-  n = l("442837"),
-  o = l("481060"),
-  i = l("271383"),
-  d = l("430824"),
-  r = l("594174"),
-  u = l("5192"),
-  c = l("645896"),
-  m = l("353093"),
-  C = l("979264"),
-  _ = l("308083"),
-  g = l("689938"),
-  A = l("182976");
-a.default = s.memo(function(e) {
-  var a, l, s, S, v, x;
+a.r(l);
+var t = a("735250"),
+  s = a("470079"),
+  n = a("442837"),
+  o = a("481060"),
+  i = a("271383"),
+  d = a("430824"),
+  r = a("594174"),
+  u = a("5192"),
+  c = a("645896"),
+  m = a("979264"),
+  C = a("308083"),
+  _ = a("689938"),
+  A = a("182976");
+l.default = s.memo(function(e) {
+  var l, a, s, g, v, S;
   let {
-    guildId: N,
-    isTagAdopted: T,
-    onChangeUseTag: f
-  } = e, h = (0, c.useClanInfo)(N), D = (0, n.useStateFromStores)([d.default], () => d.default.getGuild(N)), E = null !== (S = null == h ? void 0 : null === (a = h.badge) || void 0 === a ? void 0 : a.imageHash) && void 0 !== S ? S : null == D ? void 0 : null === (l = D.clan) || void 0 === l ? void 0 : l.badge, I = null !== (v = null == h ? void 0 : h.tag) && void 0 !== v ? v : null == D ? void 0 : null === (s = D.clan) || void 0 === s ? void 0 : s.tag, L = (0, n.useStateFromStores)([r.default], () => r.default.getCurrentUser()), M = (0, n.useStateFromStores)([i.default], () => null != L ? i.default.getMember(N, L.id) : null);
-  if (null == D || null == L || null == M || null == E) return null;
-  let j = (0, m.getClanBadgeUrl)(D.id, E, _.ClanTagBadgeSize.SIZE_36);
-  return (0, t.jsxs)("div", {
+    guildId: x,
+    isTagAdopted: N,
+    onChangeUseTag: T
+  } = e, f = (0, c.useClanInfo)(x), h = (0, n.useStateFromStores)([d.default], () => d.default.getGuild(x)), D = null !== (g = null == f ? void 0 : null === (l = f.badge) || void 0 === l ? void 0 : l.imageHash) && void 0 !== g ? g : null == h ? void 0 : null === (a = h.clan) || void 0 === a ? void 0 : a.badge, E = null !== (v = null == f ? void 0 : f.tag) && void 0 !== v ? v : null == h ? void 0 : null === (s = h.clan) || void 0 === s ? void 0 : s.tag, I = (0, n.useStateFromStores)([r.default], () => r.default.getCurrentUser()), L = (0, n.useStateFromStores)([i.default], () => null != I ? i.default.getMember(x, I.id) : null);
+  return null == h || null == I || null == L || null == D ? null : (0, t.jsxs)("div", {
     className: A.previewSection,
     children: [(0, t.jsxs)("div", {
       className: A.chatPreview,
       children: [(0, t.jsx)(o.Avatar, {
-        src: L.getAvatarURL(N, 40),
+        src: I.getAvatarURL(x, 40),
         size: o.AvatarSizes.SIZE_40,
         "aria-hidden": !0
       }), (0, t.jsxs)("div", {
@@ -37,12 +34,13 @@ a.default = s.memo(function(e) {
           className: A.userName,
           children: [(0, t.jsx)(o.NameWithRole, {
             className: A.userName,
-            name: u.default.getName(N, null, L),
-            color: null !== (x = M.colorString) && void 0 !== x ? x : void 0
-          }), T && (0, t.jsx)(C.BaseClanTagChiplet, {
-            clanBadge: j,
-            clanTag: I,
-            badgeSize: _.ClanTagBadgeSize.SIZE_12,
+            name: u.default.getName(x, null, I),
+            color: null !== (S = L.colorString) && void 0 !== S ? S : void 0
+          }), N && (0, t.jsx)(m.BaseClanTagChiplet, {
+            guildId: x,
+            clanBadge: D,
+            clanTag: E,
+            badgeSize: C.ClanTagBadgeSize.SIZE_12,
             textVariant: "text-xs/normal"
           })]
         }), (0, t.jsx)("div", {
@@ -65,15 +63,15 @@ a.default = s.memo(function(e) {
         children: [(0, t.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "header-primary",
-          children: g.default.Messages.CLAN_SUCCESS_USE_TAG_TEXT
+          children: _.default.Messages.CLAN_SUCCESS_USE_TAG_TEXT
         }), (0, t.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: g.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
+          children: _.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
         })]
       }), (0, t.jsx)(o.Switch, {
-        onChange: f,
-        checked: T
+        onChange: T,
+        checked: N
       })]
     })]
   })

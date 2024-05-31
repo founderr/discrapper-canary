@@ -8,95 +8,95 @@ var t = s("735250"),
   r = s("481060"),
   c = s("271383"),
   o = s("430824"),
-  S = s("594174"),
-  u = s("153124"),
-  x = s("931240"),
+  u = s("594174"),
+  x = s("153124"),
+  S = s("931240"),
   m = s("970606"),
-  C = s("353093"),
   g = s("979264"),
-  h = s("284019"),
-  v = s("308083"),
-  T = s("981631"),
+  C = s("284019"),
+  h = s("308083"),
+  v = s("981631"),
   N = s("689938"),
-  _ = s("306366");
+  T = s("306366");
 a.default = e => {
-  var a, s, i;
+  var a, s, i, j;
   let {
-    guildId: j,
+    guildId: _,
     tag: f,
     brandPrimaryColor: p,
     transitionState: E,
     onClose: A
-  } = e, L = (0, u.useUID)(), [M, U] = l.useState(!0), k = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(j)), b = (0, n.useStateFromStores)([S.default], () => S.default.getCurrentUser()), w = (0, n.useStateFromStores)([c.default], () => null != b ? c.default.getMember(j, b.id) : null);
+  } = e, L = (0, x.useUID)(), [M, U] = l.useState(!0), b = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(_)), k = (0, n.useStateFromStores)([u.default], () => u.default.getCurrentUser()), w = (0, n.useStateFromStores)([c.default], () => null != k ? c.default.getMember(_, k.id) : null);
   if (l.useEffect(() => {
-      (0, m.trackConvertSuccessModalViewed)(j)
-    }, [j]), null == k || null == b || null == w) return null;
-  let z = null != p ? {
-      background: "radial-gradient(circle at top, ".concat(d()(p).alpha(.3).hex(), " 0%, transparent 50%)")
-    } : void 0,
-    B = (0, C.getClanBadgeUrl)(k.id, null === (a = k.clan) || void 0 === a ? void 0 : a.badge, v.ClanTagBadgeSize.SIZE_36);
+      (0, m.trackConvertSuccessModalViewed)(_)
+    }, [_]), null == b || null == k || null == w) return null;
+  let I = null != p ? {
+    background: "radial-gradient(circle at top, ".concat(d()(p).alpha(.3).hex(), " 0%, transparent 50%)")
+  } : void 0;
   return (0, t.jsx)(r.ModalRoot, {
-    className: _.modal,
+    className: T.modal,
     transitionState: E,
     "aria-labelledby": L,
     size: r.ModalSize.SMALL,
     children: (0, t.jsxs)("div", {
-      className: _.content,
-      style: z,
+      className: T.content,
+      style: I,
       children: [(0, t.jsx)(g.BaseClanTagChiplet, {
+        guildId: _,
         clanTag: f,
-        clanBadge: B,
-        className: _.tagPreview,
-        textClassName: _.tagText,
+        clanBadge: null === (a = b.clan) || void 0 === a ? void 0 : a.badge,
+        className: T.tagPreview,
+        textClassName: T.tagText,
         textVariant: "heading-xxl/semibold",
-        badgeSize: v.ClanTagBadgeSize.SIZE_36
+        badgeSize: h.ClanTagBadgeSize.SIZE_36
       }), (0, t.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
         children: N.default.Messages.CLAN_SUCCESS_TITLE.format({
-          name: k.name
+          name: b.name
         })
       }), (0, t.jsx)(r.Text, {
-        className: _.subtitle,
+        className: T.subtitle,
         variant: "text-md/normal",
         children: N.default.Messages.CLAN_SUCCESS_SUBTITLE
       }), (0, t.jsxs)("div", {
-        className: _.previewSection,
+        className: T.previewSection,
         children: [(0, t.jsxs)("div", {
-          className: _.chatPreview,
+          className: T.chatPreview,
           children: [(0, t.jsx)(r.Avatar, {
-            src: b.getAvatarURL(j, 40),
+            src: k.getAvatarURL(_, 40),
             size: r.AvatarSizes.SIZE_40,
             "aria-hidden": !0
           }), (0, t.jsxs)("div", {
-            className: _.previewText,
+            className: T.previewText,
             children: [(0, t.jsxs)("div", {
-              className: _.userName,
+              className: T.userName,
               children: [(0, t.jsx)(r.NameWithRole, {
-                className: _.userName,
-                name: null !== (s = w.nick) && void 0 !== s ? s : b.username,
-                color: null !== (i = w.colorString) && void 0 !== i ? i : void 0
+                className: T.userName,
+                name: null !== (i = w.nick) && void 0 !== i ? i : k.username,
+                color: null !== (j = w.colorString) && void 0 !== j ? j : void 0
               }), M && (0, t.jsx)(g.BaseClanTagChiplet, {
-                clanBadge: B,
+                guildId: _,
+                clanBadge: null === (s = b.clan) || void 0 === s ? void 0 : s.badge,
                 clanTag: f,
-                badgeSize: v.ClanTagBadgeSize.SIZE_12,
+                badgeSize: h.ClanTagBadgeSize.SIZE_12,
                 textVariant: "text-xs/normal"
               })]
             }), (0, t.jsx)("div", {
-              className: _.fakeMessage,
+              className: T.fakeMessage,
               style: {
                 width: "80%"
               }
             }), (0, t.jsx)("div", {
-              className: _.fakeMessage,
+              className: T.fakeMessage,
               style: {
                 width: "50%"
               }
             })]
           })]
         }), (0, t.jsx)("div", {
-          className: _.divider
+          className: T.divider
         }), (0, t.jsxs)("div", {
-          className: _.settingSection,
+          className: T.settingSection,
           children: [(0, t.jsxs)("div", {
             children: [(0, t.jsx)(r.Text, {
               variant: "text-md/normal",
@@ -112,10 +112,10 @@ a.default = e => {
             checked: M
           })]
         })]
-      }), (0, t.jsx)(h.default, {
+      }), (0, t.jsx)(C.default, {
         themeColor: p,
         onClick: () => {
-          M && (0, x.adoptClanIdentity)(j, M, T.AnalyticsLocations.CLAN_SETUP_MODAL), (0, m.trackConvertSuccessModalConfirm)(j, M), A()
+          M && (0, S.adoptClanIdentity)(_, M, v.AnalyticsLocations.CLAN_SETUP_MODAL), (0, m.trackConvertSuccessModalConfirm)(_, M), A()
         },
         children: (0, t.jsx)(r.Text, {
           color: "none",
@@ -123,7 +123,7 @@ a.default = e => {
           children: N.default.Messages.CLAN_SUCCESS_CTA
         })
       }), (0, t.jsx)(r.Text, {
-        className: _.postscript,
+        className: T.postscript,
         variant: "text-xs/normal",
         color: "header-secondary",
         children: N.default.Messages.CLAN_SUCCESS_POSTSCRIPT

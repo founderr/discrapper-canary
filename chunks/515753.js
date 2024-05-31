@@ -301,7 +301,7 @@ function $(e) {
         clan: null == c ? void 0 : c.clan,
         userId: null == c ? void 0 : c.id,
         inline: !0,
-        disableTooltip: !0,
+        disableGuildProfile: !0,
         className: z.clanTag
       })]
     });

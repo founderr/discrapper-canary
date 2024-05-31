@@ -33,36 +33,36 @@ var a = n("735250"),
   y = n("838373");
 
 function L(e) {
-  var t, n;
+  var t;
   let {
-    guild: s,
-    showToast: o,
-    onConfirm: m,
-    onDismiss: p
-  } = e, [E, g] = l.useState(!1), _ = l.useRef(null), A = (0, S.useClanInfo)(s.id), x = (0, f.default)(), M = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), L = (0, T.useBrandColor)(null == A ? void 0 : null === (t = A.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), O = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-    theme: x,
+    guild: n,
+    showToast: s,
+    onConfirm: o,
+    onDismiss: m
+  } = e, [p, E] = l.useState(!1), g = l.useRef(null), _ = (0, S.useClanInfo)(n.id), A = (0, f.default)(), x = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), M = (0, T.useBrandColor)(null == _ ? void 0 : null === (t = _.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), L = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+    theme: A,
     saturation: 1
-  }).hex(), j = (0, T.getClanRadialBackgroundStyle)(L, O, "top left", .3, "30%"), P = (0, c.useStateFromStores)([C.default], () => {
+  }).hex(), O = (0, T.getClanRadialBackgroundStyle)(M, L, "top left", .3, "30%"), j = (0, c.useStateFromStores)([C.default], () => {
     var e;
     return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan
   }, []);
   l.useLayoutEffect(() => {
     var e;
-    if (null == _.current) return;
-    let t = null === (e = _.current) || void 0 === e ? void 0 : e.parentNode;
+    if (null == g.current) return;
+    let t = null === (e = g.current) || void 0 === e ? void 0 : e.parentNode;
     return null != t && (t.style.zIndex = "1003"), () => {
       null != t && (t.style.zIndex = "1002")
     }
   }, []);
-  let D = l.useCallback(e => {
-      e.stopPropagation(), e.preventDefault(), p()
-    }, [p]),
-    b = l.useCallback(e => {
+  let P = l.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), m()
     }, [m]),
-    U = (0, r.useTransition)(o, {
+    D = l.useCallback(e => {
+      e.stopPropagation(), e.preventDefault(), o()
+    }, [o]),
+    b = (0, r.useTransition)(s, {
       from: {
-        transform: M ? "translateY(0)" : "translateY(16px)",
+        transform: x ? "translateY(0)" : "translateY(16px)",
         opacity: 0,
         pointerEvents: "none"
       },
@@ -72,7 +72,7 @@ function L(e) {
         pointerEvents: "all"
       },
       leave: {
-        transform: M ? "translateY(0)" : "translateY(16px)",
+        transform: x ? "translateY(0)" : "translateY(16px)",
         opacity: 0,
         pointerEvents: "none"
       },
@@ -84,46 +84,46 @@ function L(e) {
       },
       delay: 200
     }),
-    F = (0, I.isGuildAdoptedUserClanIdentityChanged)(s, P),
-    w = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
-      guildName: s.name
+    U = (0, I.isGuildAdoptedUserClanIdentityChanged)(n, j),
+    F = U ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
+      guildName: n.name
     }) : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({
-      guildName: s.name
+      guildName: n.name
     }),
-    k = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
-    B = F ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
-      guildName: s.name
+    w = U ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
+    k = U ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
+      guildName: n.name
     }) : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
-      guildName: s.name
-    }),
-    H = (0, I.getClanBadgeUrl)(s.id, null === (n = s.clan) || void 0 === n ? void 0 : n.badge);
-  return U((e, t) => {
-    var n;
+      guildName: n.name
+    });
+  return b((e, t) => {
+    var l, s;
     return t && (0, a.jsx)(r.animated.div, {
-      onMouseEnter: () => g(!0),
-      onMouseLeave: () => g(!1),
+      onMouseEnter: () => E(!0),
+      onMouseLeave: () => E(!1),
       className: i()(y.wrapper),
       style: {
         ...e,
-        ...j
+        ...O
       },
-      ref: _,
+      ref: g,
       children: (0, a.jsx)(d.ClickableContainer, {
-        "aria-label": B,
-        onClick: b,
+        "aria-label": k,
+        onClick: D,
         children: (0, a.jsxs)("div", {
-          className: i()(y.toastContainerInner, E ? y.hovered : null),
+          className: i()(y.toastContainerInner, p ? y.hovered : null),
           children: [(0, a.jsxs)("div", {
             className: y.guildIconContainer,
             children: [(0, a.jsx)(v.default, {
-              guild: s,
+              guild: n,
               iconSize: 64,
               className: y.icon
             }), (0, a.jsx)("div", {
               className: y.guildTagContainer,
               children: (0, a.jsx)(N.BaseClanTagChiplet, {
-                clanTag: null === (n = s.clan) || void 0 === n ? void 0 : n.tag,
-                clanBadge: H,
+                guildId: n.id,
+                clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
+                clanBadge: null === (s = n.clan) || void 0 === s ? void 0 : s.badge,
                 className: y.guildClanTag
               })
             })]
@@ -132,19 +132,19 @@ function L(e) {
               children: (0, a.jsx)(d.Heading, {
                 variant: "heading-md/bold",
                 color: "header-primary",
-                children: w
+                children: F
               })
             }), (0, a.jsx)("div", {
               children: (0, a.jsx)(d.Text, {
                 variant: "text-sm/medium",
                 color: "header-secondary",
-                children: k
+                children: w
               })
             })]
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(d.Clickable, {
               className: y.toastButton,
-              onClick: D,
+              onClick: P,
               children: (0, a.jsx)(u.CloseSmallBoldIcon, {
                 width: 20,
                 height: 20

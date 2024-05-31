@@ -182,7 +182,7 @@ t.default = function(e) {
         clan: null == G ? void 0 : G.clan,
         userId: null == G ? void 0 : G.id,
         contextGuildId: j,
-        disableTooltip: !0,
+        disableGuildProfile: !0,
         className: M.clanTag,
         profileViewedAnalytics: eS
       })]
