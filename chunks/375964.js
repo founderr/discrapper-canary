@@ -17316,6 +17316,7 @@ e.exports = Object.freeze({
   QUESTS_FIND_QUEST: "You can find this again in User Settings > Gift Inventory",
   QUESTS_CLAIM_BY_DATE: "Claim by {expirationDate}",
   QUESTS_AVAILABLE_UNTIL_DATE: "Available until {expirationDate}",
+  QUESTS_EXPIRES: "Expires {expirationDate}",
   QUESTS_EXPIRED_ON: "Expired on {expirationDate}.",
   QUESTS_EXPIRED_ON_DATE: "Expired on {expirationDate}",
   QUESTS_EXPIRED_QUEST_CARD_HEADING: "{questName} Quest is expired.",

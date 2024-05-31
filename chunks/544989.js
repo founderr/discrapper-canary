@@ -19,7 +19,8 @@ function l(e) {
   return (0, i.jsx)("div", {
     className: s()(o.wrapper, {
       [o.biteSize]: t === a.UserProfileTypes.BITE_SIZE,
-      [o.fullSize]: t === a.UserProfileTypes.FULL_SIZE
+      [o.fullSize]: t === a.UserProfileTypes.FULL_SIZE,
+      [o.panel]: t === a.UserProfileTypes.PANEL
     }),
     children: n
   })
