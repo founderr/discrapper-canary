@@ -275,7 +275,7 @@ function V(e) {
       onContextMenu: e => null == h ? void 0 : h(e, n),
       onMouseEnter: L,
       onMouseLeave: H,
-      children: [i || !T || I && !ee ? null : (0, l.jsx)("div", {
+      children: [i || !T ? null : (0, l.jsx)("div", {
         className: a()(D.unread, z ? D.unreadImportant : void 0)
       }), null !== (t = null == P ? void 0 : P(et)) && void 0 !== t ? t : et]
     })
