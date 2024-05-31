@@ -214,8 +214,8 @@ class eo extends _.default {
     null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.setPipOpen(e)
   }
   setClipRecordUser(e, t, n) {
-    var i;
-    null === (i = this._connection) || void 0 === i || i.setClipRecordUser(e, t, n)
+    var i, r;
+    null === (r = this._connection) || void 0 === r || null === (i = r.setClipRecordUser) || void 0 === i || i.call(r, e, t, n)
   }
   setSimulcastDebugOverride(e, t, n) {
     var i, r;
