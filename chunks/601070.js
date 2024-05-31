@@ -183,7 +183,7 @@ function x() {
 
 function F(e) {
   let t = I.default.getMentionCount(e.id) > 0,
-    n = I.default.hasUnread(e.id) && (!h.default.isMuted(e.id) || t),
+    n = I.default.hasUnreadOrMentions(e.id) && (!h.default.isMuted(e.id) || t),
     i = e.hasFlag(m.ChannelFlags.PINNED),
     r = e.isActiveThread(),
     s = r && (0, A.default)(e) > Date.now();

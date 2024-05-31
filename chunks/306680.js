@@ -867,6 +867,10 @@ class eJ extends(s = _.default.Store) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eo.ReadStateTypes.CHANNEL;
     return ey.getValue(e, t, e => e.canBeUnread() && e.hasUnread(), !1)
   }
+  hasUnreadOrMentions(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eo.ReadStateTypes.CHANNEL;
+    return ey.getValue(e, t, e => e.canBeUnread() && e.hasUnreadOrMentions(), !1)
+  }
   hasTrackedUnread(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eo.ReadStateTypes.CHANNEL;
     return ey.getValue(e, t, e => e.canTrackUnreads() && e.hasUnread(), !1)
@@ -1289,7 +1293,7 @@ let e$ = new eJ(T.default, {
       context: s,
       onFinished: a
     } = e;
-    t = r.filter(e => null != e.messageId && e$.hasUnread(e.channelId, e.readStateType)), n = s, i = a, t.forEach(e => {
+    t = r.filter(e => null != e.messageId && e$.hasUnreadOrMentions(e.channelId, e.readStateType)), n = s, i = a, t.forEach(e => {
       let {
         channelId: t,
         messageId: n,

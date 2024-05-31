@@ -441,18 +441,15 @@ class eT extends S.default {
     for (let e in t) {
       let n = t[e];
       if (null != n) {
-        if ((!n.isGuildVocal() || 0 !== T.default.getMentionCount(e)) && I.default.can(n.accessPermissions, n) && T.default.hasUnread(e)) return !0
+        if ((!n.isGuildVocal() || 0 !== T.default.getMentionCount(e)) && I.default.can(n.accessPermissions, n) && T.default.hasUnreadOrMentions(e)) return !0
       }
     }
     let n = a.default.getActiveJoinedThreadsForGuild(e);
-    for (let e in n) {
-      let t = c.default.getChannel(e);
-      if (null != t && P(t)) {
+    for (let e in n)
+      if (null != c.default.getChannel(e)) {
         for (let t in n[e])
-          if (T.default.hasUnread(t)) return !0
-      }
-    }
-    return !!T.default.hasUnread(e, p.ReadStateTypes.GUILD_EVENT) || !1
+          if (T.default.hasUnreadOrMentions(t)) return !0
+      } return !!T.default.hasUnreadOrMentions(e, p.ReadStateTypes.GUILD_EVENT) || !1
   }
   getTotalMentionCount(e) {
     let t = 0;

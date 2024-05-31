@@ -9,8 +9,8 @@ t("470079");
 var l = t("442837"),
   u = t("481060"),
   r = t("45114"),
-  d = t("456269"),
-  i = t("344185"),
+  i = t("456269"),
+  d = t("344185"),
   s = t("569471"),
   o = t("131704"),
   f = t("324067"),
@@ -20,10 +20,10 @@ var l = t("442837"),
 
 function v(e) {
   let n = function(e) {
-    let n = (0, d.useUnreadThreadsCountForParent)(e.guild_id, e.id),
-      t = (0, l.useStateFromStores)([c.default, f.default, i.default, s.default], () => {
+    let n = (0, i.useUnreadThreadsCountForParent)(e.guild_id, e.id),
+      t = (0, l.useStateFromStores)([c.default, f.default, d.default, s.default], () => {
         if (e.isForumPost()) return c.default.isForumPostUnread(e.id);
-        if (e.type !== h.ChannelTypes.GUILD_CATEGORY) return c.default.hasUnread(e.id);
+        if (e.type !== h.ChannelTypes.GUILD_CATEGORY) return c.default.hasUnreadOrMentions(e.id);
         {
           let n = f.default.getCategories(e.getGuildId());
           if (null == n[e.id]) return !1;
@@ -31,14 +31,14 @@ function v(e) {
               let {
                 channel: n
               } = e;
-              return (0, o.isReadableType)(n.type) && c.default.hasUnread(n.id)
+              return (0, o.isReadableType)(n.type) && c.default.hasUnreadOrMentions(n.id)
             })) return !0;
           let t = new Set(n[e.id].map(e => e.channel.id)),
-            a = i.default.getThreadsForGuild(e.guild_id);
+            a = d.default.getThreadsForGuild(e.guild_id);
           for (let e in a)
             if (t.has(e)) {
               for (let n in a[e])
-                if (s.default.hasJoined(n) && !s.default.isMuted(n) && c.default.hasUnread(n)) return !0
+                if (s.default.hasJoined(n) && !s.default.isMuted(n) && c.default.hasUnreadOrMentions(n)) return !0
             } return !1
         }
       }, [e]);
