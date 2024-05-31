@@ -168,26 +168,32 @@ function w(e) {
     channel: t
   } = e, s = S.default.getCurrentUser(), o = null == s ? void 0 : s.isStaff(), {
     analyticsLocations: u
-  } = (0, c.default)(d.default.MEMBER_LIST), p = function(e) {
+  } = (0, c.default)(d.default.MEMBER_LIST), {
+    shouldTrackRecentlyOnlineExposure: p,
+    listItems: g
+  } = function(e) {
     let {
       isRecentlyOnlineEnabled: t
     } = h.default.useExperiment({
       location: "n/a"
     }, {
       autoTrackExposure: !1
-    }), n = (0, i.useStateFromStoresArray)([S.default], () => (0, M.getRecipients)(e.recipients, S.default), [e.recipients]), a = (0, i.useStateFromStoresObject)([C.default, S.default, E.default], () => {
+    }), n = (0, i.useStateFromStoresArray)([S.default], () => (0, M.getRecipients)(e.recipients, S.default), [e.recipients]), a = l.useRef(!1), s = (0, i.useStateFromStoresObject)([C.default, S.default, E.default], () => {
       let e = {};
-      for (let s of n) {
-        var t, a, l;
-        if (C.default.isFriend(s.id) || s.id === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
-          let t = E.default.getLastOnlineTimestamp(s.id),
-            n = null != t && (0, h.isRecentlyOnline)(t);
-          e[s.id] = {
-            status: null !== (a = E.default.getStatus(s.id)) && void 0 !== a ? a : O.StatusTypes.OFFLINE,
-            activities: null !== (l = E.default.getActivities(s.id)) && void 0 !== l ? l : [],
+      for (let i of n) {
+        var t, l, s;
+        if (C.default.isFriend(i.id) || i.id === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
+          let t = E.default.getLastOnlineTimestamp(i.id),
+            {
+              isRecentlyOnlineShowable: n,
+              isRecentlyOnlineTrackable: r
+            } = (0, h.getRecentlyOnlineStrategy)(t);
+          e[i.id] = {
+            status: null !== (l = E.default.getStatus(i.id)) && void 0 !== l ? l : O.StatusTypes.OFFLINE,
+            activities: null !== (s = E.default.getActivities(i.id)) && void 0 !== s ? s : [],
             lastOnlineTimestamp: n ? t : void 0
-          }
-        } else e[s.id] = {
+          }, r && (a.current = !0)
+        } else e[i.id] = {
           status: O.StatusTypes.OFFLINE,
           activities: []
         }
@@ -199,44 +205,54 @@ function w(e) {
       for (let t of n) {
         let n = {
           user: t,
-          status: a[t.id].status,
-          activities: a[t.id].activities,
-          lastOnlineTimestamp: a[t.id].lastOnlineTimestamp
+          status: s[t.id].status,
+          activities: s[t.id].activities,
+          lastOnlineTimestamp: s[t.id].lastOnlineTimestamp
         };
         e.push(n)
       }
-      if (!t) return e;
+      if (!t) return {
+        shouldTrackRecentlyOnlineExposure: a.current,
+        listItems: e
+      };
       let l = [O.StatusTypes.OFFLINE, O.StatusTypes.INVISIBLE, null, void 0],
-        s = [],
         i = [],
-        r = [];
+        r = [],
+        o = [];
       return e.forEach(e => {
-        l.includes(e.status) ? null != e.lastOnlineTimestamp ? i.push(e) : r.push(e) : s.push(e)
-      }), [...s, ...i, ...r]
-    }, [t, n, a])
-  }(t), {
-    installedIntegrations: g,
-    applicationsShelf: N,
-    fetched: x,
-    appsInGDMEnabled: R,
-    availableApplications: y
+        l.includes(e.status) ? null != e.lastOnlineTimestamp ? r.push(e) : o.push(e) : i.push(e)
+      }), {
+        shouldTrackRecentlyOnlineExposure: a.current,
+        listItems: [...i, ...r, ...o]
+      }
+    }, [t, n, s])
+  }(t);
+  p && h.default.trackExposure({
+    location: "private_channel_recipients"
+  });
+  let {
+    installedIntegrations: N,
+    applicationsShelf: x,
+    fetched: R,
+    appsInGDMEnabled: y,
+    availableApplications: L
   } = (0, f.usePrivateChannelIntegrationState)({
     channelId: t.id
   });
   l.useEffect(() => {
     if (o)
-      for (let e of p)(0, m.maybeFetchUserProfileForPopout)(e.user, {
+      for (let e of g)(0, m.maybeFetchUserProfileForPopout)(e.user, {
         dispatchWait: !0,
         channelId: t.id
       })
-  }, [o, p, t.id]), l.useEffect(() => {
+  }, [o, g, t.id]), l.useEffect(() => {
     v.default.track(O.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id, t.type]);
-  let L = o && p.every(e => e.user.isStaff());
+  let b = o && g.every(e => e.user.isStaff());
   return (0, a.jsx)(c.AnalyticsLocationProvider, {
     value: u,
     children: (0, a.jsx)("div", {
@@ -246,24 +262,24 @@ function w(e) {
         fade: !0,
         children: [(0, a.jsxs)(A.default, {
           className: D.membersGroup,
-          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(p.length, " "), L ? (0, a.jsx)(_.default, {
+          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(g.length, " "), b ? (0, a.jsx)(_.default, {
             className: D.__invalid_decorator,
             type: _.default.Types.STAFF_ONLY_DM
           }) : null]
-        }), p.map(e => (0, a.jsx)(U, {
+        }), g.map(e => (0, a.jsx)(U, {
           user: e.user,
           status: e.status,
           activities: e.activities,
           lastOnlineTimestamp: e.lastOnlineTimestamp,
           channel: t
-        }, e.user.id)), R && (g.length > 0 || x && N.length > 0) && (0, a.jsxs)(a.Fragment, {
+        }, e.user.id)), y && (N.length > 0 || R && x.length > 0) && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(A.default, {
             className: D.membersGroup,
-            children: "".concat(j.default.Messages.APPS, "—").concat(g.length)
-          }), g.map(e => (0, a.jsx)(F, {
+            children: "".concat(j.default.Messages.APPS, "—").concat(N.length)
+          }), N.map(e => (0, a.jsx)(F, {
             integration: e,
             channel: t
-          }, e.application.id)), y.length > 0 && (0, a.jsx)(I.default, {
+          }, e.application.id)), L.length > 0 && (0, a.jsx)(I.default, {
             className: P.member,
             onClick: () => {
               (0, r.openModalLazy)(async () => {

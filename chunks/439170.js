@@ -84,7 +84,9 @@ function P(e, t, n) {
     o = S.default.getStreamForUser(n, e),
     l = R.default.getUser(n),
     u = O.default.getLastOnlineTimestamp(n),
-    d = null != u && (0, I.isRecentlyOnline)(u);
+    {
+      isRecentlyOnlineShowable: d
+    } = (0, I.getRecentlyOnlineStrategy)(u);
   return null == l ? null : {
     type: "MEMBER",
     ...N.default.getMember(e, n),

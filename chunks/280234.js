@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n.d(t, {
-  isRecentlyOnline: function() {
+  getRecentlyOnlineStrategy: function() {
     return r
   }
 });
@@ -8,13 +8,17 @@ var i = n("818083");
 
 function r(e) {
   let {
-    maxRecentMs: t
+    isRecentlyOnlineEnabled: t,
+    maxRecentMs: n
   } = s.getCurrentConfig({
     location: "n/a"
   }, {
     autoTrackExposure: !1
-  });
-  return Date.now() - e <= t
+  }), i = Date.now() - (null != e ? e : 0);
+  return {
+    isRecentlyOnlineShowable: t && i <= n,
+    isRecentlyOnlineTrackable: i <= 1728e5
+  }
 }
 let s = (0, i.createExperiment)({
   kind: "user",
