@@ -57,7 +57,7 @@ class O extends(s = u.PureComponent) {
         break;
       case "row":
       case "inverted":
-        r.borderColor = "var(--brand-experiment-400)", r.backgroundColor = "var(--brand-experiment-500)"
+        r.borderColor = "var(--brand-400)", r.backgroundColor = "var(--brand-500)"
     } else switch (n) {
       case "default":
         r.borderColor = i;
