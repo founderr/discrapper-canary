@@ -17526,5 +17526,19 @@ e.exports = Object.freeze({
   GUILD_POPOUT_USER_ON_VIDEO: "{username} is on video",
   GUILD_POPOUT_USERS_ON_VIDEO: "{username} and {count, plural, one {{count} other are} other {{count} others are}} on video",
   RECENTLY_ONLINE: "Recently Online",
-  RECENTLY_ONLINE_STATUS: "Online **{time} ago**"
+  RECENTLY_ONLINE_STATUS: "Online **{time} ago**",
+  MESSAGE_ACTION_FORWARD: "Forward",
+  MESSAGE_ACTION_FORWARD_TO: "Forward To",
+  MESSAGE_FORWARDED: "Forwarded",
+  MESSAGE_ACTION_FORWARD_MEDIA_A11Y: "Forward media from this message",
+  MESSAGE_ACTION_FORWARD_EMBED_A11Y: "Forward embed from this message",
+  MESSAGES_SEND_SEPARATELY: "Send ({count, number})",
+  MESSAGES_FORWARD_MAX_DESTINATION_COUNT: "Maximum {count, number} places at once",
+  MESSAGE_FORWARD_SUCCESS: "Message forwarded!",
+  MESSAGE_FORWARDING_NSFW_NOT_ALLOWED: "Messages cannot be forwarded from age-restricted to unrestricted channels",
+  MESSAGE_CHANNEL_ATTACHMENTS_DISABLED: "Attachments are disabled in this channel.",
+  MESSAGE_CHANNEL_EMBEDS_DISABLED: "Embeds are disabled in this channel.",
+  MESSAGE_FORWARD_FAILED: "Forward Failed",
+  MESSAGE_FORWARD_FAILED_BODY: "The message could not be forwarded to the following {count, plural, one {location} other {locations}}:",
+  SELECTED: "Selected"
 })

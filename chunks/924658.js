@@ -528,19 +528,5 @@ e.exports = Object.freeze({
   CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL: "Join Wumpus Feedback Squad server",
   CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP: "You cannot apply to Guilds right now",
   CLAN_DISCOVERY_APPLICATION_MAX_MEMBERS: "This Guild is at maximum capacity. You may want to apply for more Guilds.",
-  CLAN_CARD_BADGE_APPLIED: "Applied",
-  MESSAGE_ACTION_FORWARD: "Forward",
-  MESSAGE_ACTION_FORWARD_TO: "Forward To",
-  MESSAGE_FORWARDED: "Forwarded",
-  MESSAGE_ACTION_FORWARD_MEDIA_A11Y: "Forward media from this message",
-  MESSAGE_ACTION_FORWARD_EMBED_A11Y: "Forward embed from this message",
-  MESSAGES_SEND_SEPARATELY: "Send ({count, number})",
-  MESSAGES_FORWARD_MAX_DESTINATION_COUNT: "Maximum {count, number} places at once",
-  MESSAGE_FORWARD_SUCCESS: "Message forwarded!",
-  MESSAGE_FORWARDING_NSFW_NOT_ALLOWED: "Messages cannot be forwarded from age-restricted to unrestricted channels",
-  MESSAGE_CHANNEL_ATTACHMENTS_DISABLED: "Attachments are disabled in this channel.",
-  MESSAGE_CHANNEL_EMBEDS_DISABLED: "Embeds are disabled in this channel.",
-  MESSAGE_FORWARD_FAILED: "Forward Failed",
-  MESSAGE_FORWARD_FAILED_BODY: "The message could not be forwarded to the following {count, plural, one {location} other {locations}}:",
-  SELECTED: "Selected"
+  CLAN_CARD_BADGE_APPLIED: "Applied"
 })
