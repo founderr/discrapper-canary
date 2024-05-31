@@ -76,7 +76,7 @@ var a = n("735250"),
   eI = n("900157"),
   eA = n("108427"),
   ev = n("171368"),
-  eN = n("123579"),
+  eN = n("346967"),
   ex = n("524329"),
   eM = n("995532"),
   eR = n("738643"),
@@ -277,9 +277,9 @@ class e5 extends l.PureComponent {
       showActivityPanel: u
     } = this.props;
     if (o()(null != t, "Missing channel in Channel.renderSidebar"), __OVERLAY__ || s);
-    else if (i === eX.ChannelSections.PROFILE && t.isPrivate()) return (0, a.jsx)(eN.default, {
-      channel: t,
-      showCallOrActivityPanel: r || u
+    else if (i === eX.ChannelSections.PROFILE && t.isPrivate() && !r && !u) return (0, a.jsx)(eN.default, {
+      location: "Channel",
+      channel: t
     }, "private-channel-profile-".concat(t.id));
     else if (i === eX.ChannelSections.MEMBERS) switch (t.type) {
       case eX.ChannelTypes.GROUP_DM:

@@ -64,7 +64,7 @@ let a = e => t => {
   },
   u = Object.freeze({
     [r.UserProfileTypes.POPOUT]: 340,
-    [r.UserProfileTypes.PANEL]: 480,
+    [r.UserProfileTypes.PANEL]: 340,
     [r.UserProfileTypes.MODAL]: 600,
     [r.UserProfileTypes.SETTINGS]: 600,
     [r.UserProfileTypes.POMELO_POPOUT]: 432,
