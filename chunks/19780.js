@@ -248,6 +248,14 @@ let P = new y(d.default, __OVERLAY__ ? {} : {
       i.setAppBackgrounded(t, n)
     }
     return e.state === h.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
+  },
+  RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function(e) {
+    let {
+      userId: t,
+      context: n,
+      quality: r
+    } = e;
+    null == i || i.setSimulcastDebugOverride(t, n, r)
   }
 });
 Promise.resolve().then(n.bind(n, "626135")).then(e => {

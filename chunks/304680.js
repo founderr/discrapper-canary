@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   chooseReplayPath: function() {
-    return d
+    return _
   },
   close: function() {
     return a
@@ -17,6 +17,9 @@ n.r(t), n.d(t, {
   },
   setShouldRecordNextConnection: function() {
     return u
+  },
+  setSimulcastDebugOverride: function() {
+    return d
   }
 });
 var i = n("570140"),
@@ -57,7 +60,16 @@ function u(e) {
   })
 }
 
-function d() {
+function d(e, t, n) {
+  i.default.dispatch({
+    type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE",
+    userId: e,
+    context: t,
+    quality: n
+  })
+}
+
+function _() {
   r.default.fileManager.showOpenDialog({
     filters: [{
       name: "All Files",

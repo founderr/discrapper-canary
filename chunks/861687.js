@@ -217,6 +217,10 @@ class eo extends _.default {
     var i;
     null === (i = this._connection) || void 0 === i || i.setClipRecordUser(e, t, n)
   }
+  setSimulcastDebugOverride(e, t, n) {
+    var i, r;
+    t === this.context && (t === ei.MediaEngineContextTypes.DEFAULT ? null === (i = this._localMediaSinkWantsManager) || void 0 === i || i.setSimulcastDebugOverride(e, n) : null === (r = this._goLiveQualityManager) || void 0 === r || r.setSimulcastDebugOverride(e, n))
+  }
   set channelId(e) {
     this._channelId = e, this.channelIds.add(e)
   }

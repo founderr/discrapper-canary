@@ -1,56 +1,57 @@
 "use strict";
-r.r(t), r("411104");
-var a = r("735250"),
-  n = r("470079"),
-  i = r("442837"),
-  s = r("481060"),
-  l = r("271383"),
-  o = r("19780"),
-  d = r("226961"),
-  u = r("594174"),
-  c = r("51144"),
-  m = r("481250"),
-  f = r("689938");
+a.r(t), a("411104");
+var r = a("735250"),
+  n = a("470079"),
+  i = a("442837"),
+  l = a("481060"),
+  s = a("271383"),
+  o = a("19780"),
+  u = a("226961"),
+  d = a("594174"),
+  c = a("51144"),
+  m = a("481250"),
+  f = a("689938");
 class p extends n.PureComponent {
   render() {
     let {
       streams: e,
-      userId: t,
-      mediaEngineConnectionId: r,
-      videoStreams: n
+      context: t,
+      userId: a,
+      mediaEngineConnectionId: n,
+      videoStreams: i
     } = this.props;
-    if (null == t || null == e || 0 === e.length) return (0, a.jsx)(s.Spinner, {
-      type: s.Spinner.Type.SPINNING_CIRCLE
+    if (null == a || null == e || 0 === e.length) return (0, r.jsx)(l.Spinner, {
+      type: l.Spinner.Type.SPINNING_CIRCLE
     });
-    let i = o.default.getGuildId(),
-      d = u.default.getUser(t),
-      p = l.default.getNick(i, t),
-      h = null == d ? f.default.Messages.RTC_DEBUG_RTP_INBOUND : "".concat(f.default.Messages.RTC_DEBUG_RTP_INBOUND, " — ").concat(null != p ? p : c.default.getName(d));
-    return (0, a.jsx)(s.FormSection, {
-      tag: s.FormTitleTags.H2,
-      title: h,
-      children: (0, m.renderStreams)(e, r, t, n)
+    let u = o.default.getGuildId(),
+      p = d.default.getUser(a),
+      h = s.default.getNick(u, a),
+      g = null == p ? f.default.Messages.RTC_DEBUG_RTP_INBOUND : "".concat(f.default.Messages.RTC_DEBUG_RTP_INBOUND, " — ").concat(null != h ? h : c.default.getName(p));
+    return (0, r.jsx)(l.FormSection, {
+      tag: l.FormTitleTags.H2,
+      title: g,
+      children: (0, m.renderStreams)(e, t, n, a, i)
     })
   }
 }
-t.default = i.default.connectStores([d.default], e => {
+t.default = i.default.connectStores([u.default], e => {
   let {
     context: t,
-    index: r,
-    videoStreams: a
-  } = e, n = d.default.getAllStats(t)[r], {
+    index: a,
+    videoStreams: r
+  } = e, n = u.default.getAllStats(t)[a], {
     section: i
-  } = (0, d.parseSection)(d.default.getSection());
+  } = (0, u.parseSection)(u.default.getSection());
   if (null == i) throw Error("Unrecognized section format");
-  let s = null;
+  let l = null;
   if (null != n && null != n.rtp.inbound) {
-    var l;
-    s = null !== (l = n.rtp.inbound[i]) && void 0 !== l ? l : []
+    var s;
+    l = null !== (s = n.rtp.inbound[i]) && void 0 !== s ? s : []
   }
   return {
     mediaEngineConnectionId: null == n ? void 0 : n.mediaEngineConnectionId,
     userId: i,
-    streams: s,
-    videoStreams: a
+    streams: l,
+    videoStreams: r
   }
 })(p)

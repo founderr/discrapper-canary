@@ -277,5 +277,15 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = x) ? Object.definePro
       layout: t
     } = e;
     b = t, Object.values(G).forEach(e => e.layoutChange(t))
+  },
+  RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function(e) {
+    let {
+      userId: t,
+      context: n,
+      quality: i
+    } = e;
+    c().forEach(G, e => {
+      e.setSimulcastDebugOverride(t, n, i)
+    })
   }
 })
