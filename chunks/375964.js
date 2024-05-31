@@ -928,6 +928,7 @@ e.exports = Object.freeze({
   EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "External Application",
   EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION: "You're about to launch an external app. Do you want to continue?",
   EMBEDDED_ACTIVITIES_MINI_SHELF_DEATH_BY_AI_POSTER: "Death By AI",
+  EMBEDDED_ACTIVITIES_MINI_SHELF_TUNE_IN_POSTER_ALT: "TuneIn",
   EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED: "Activity ended. Start a new one?",
   EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Activity started",
   EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION: "You do not have permissions to join this Voice Channel.",
