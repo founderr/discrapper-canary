@@ -1,74 +1,74 @@
 "use strict";
-r.r(t), r.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return A
   }
-}), r("653041"), r("390547"), r("733860"), r("47120");
-var a = r("735250"),
-  n = r("470079"),
-  i = r("392711"),
-  s = r.n(i),
-  l = r("442837"),
-  o = r("481060"),
-  d = r("304680"),
-  u = r("503089"),
-  c = r("493544"),
-  m = r("210887"),
-  f = r("592125"),
-  p = r("271383"),
-  h = r("19780"),
-  g = r("226961"),
-  y = r("594174"),
-  C = r("285952"),
-  S = r("51144"),
-  D = r("189648"),
-  E = r("775194"),
-  v = r("499848"),
-  R = r("724392"),
-  T = r("442580"),
-  F = r("770800"),
-  x = r("981631"),
-  N = r("65154"),
-  b = r("689938"),
-  P = r("746057");
-let j = (e, t, r) => (0, a.jsx)(C.default, {
-    align: C.default.Align.CENTER,
-    children: (0, a.jsx)(C.default.Child, {
-      children: (0, a.jsxs)(C.default, {
-        align: C.default.Align.CENTER,
-        children: [(0, a.jsx)(o.Avatar, {
+}), a("653041"), a("390547"), a("733860"), a("47120");
+var r = a("735250"),
+  n = a("470079"),
+  i = a("392711"),
+  l = a.n(i),
+  s = a("442837"),
+  o = a("481060"),
+  u = a("304680"),
+  d = a("503089"),
+  c = a("493544"),
+  m = a("210887"),
+  f = a("592125"),
+  p = a("271383"),
+  h = a("19780"),
+  g = a("226961"),
+  y = a("594174"),
+  S = a("285952"),
+  C = a("51144"),
+  v = a("189648"),
+  D = a("775194"),
+  E = a("499848"),
+  R = a("724392"),
+  T = a("442580"),
+  F = a("770800"),
+  x = a("981631"),
+  N = a("65154"),
+  b = a("689938"),
+  j = a("746057");
+let I = (e, t, a) => (0, r.jsx)(S.default, {
+    align: S.default.Align.CENTER,
+    children: (0, r.jsx)(S.default.Child, {
+      children: (0, r.jsxs)(S.default, {
+        align: S.default.Align.CENTER,
+        children: [(0, r.jsx)(o.Avatar, {
           size: o.AvatarSizes.SIZE_24,
-          src: e.getAvatarURL(r, 24),
+          src: e.getAvatarURL(a, 24),
           "aria-label": e.username,
-          className: P.avatar
-        }), (0, a.jsx)("span", {
-          className: P.username,
-          children: null != t ? t : S.default.getName(e)
+          className: j.avatar
+        }), (0, r.jsx)("span", {
+          className: j.username,
+          children: null != t ? t : C.default.getName(e)
         })]
       })
     })
   }),
-  I = e => (0, a.jsx)(C.default, {
-    align: C.default.Align.CENTER,
-    children: (0, a.jsx)(C.default.Child, {
-      children: (0, a.jsx)(C.default, {
-        align: C.default.Align.CENTER,
-        children: (0, a.jsx)("span", {
-          className: P.username,
+  P = e => (0, r.jsx)(S.default, {
+    align: S.default.Align.CENTER,
+    children: (0, r.jsx)(S.default.Child, {
+      children: (0, r.jsx)(S.default, {
+        align: S.default.Align.CENTER,
+        children: (0, r.jsx)("span", {
+          className: j.username,
           children: e
         })
       })
     })
   });
 
-function B(e, t, r, a, n) {
+function B(e, t, a, r, n) {
   let i = [];
   if (null == t) return i;
   let {
-    transport: l,
+    transport: s,
     rtp: {
       inbound: o,
-      outbound: u
+      outbound: d
     },
     camera: m
   } = t;
@@ -77,50 +77,50 @@ function B(e, t, r, a, n) {
     label: b.default.Messages.RTC_DEBUG_CONTEXT.format({
       context: e
     })
-  }), null != l && i.push({
-    section: (0, g.keySection)(e, x.RTCDebugSections.TRANSPORT, r),
+  }), null != s && i.push({
+    section: (0, g.keySection)(e, x.RTCDebugSections.TRANSPORT, a),
     label: b.default.Messages.RTC_DEBUG_TRANSPORT,
     element: F.default,
     elementProps: {
       context: e,
-      index: r
+      index: a
     }
-  }), null != u && i.push({
-    section: (0, g.keySection)(e, x.RTCDebugSections.OUTBOUND, r),
+  }), null != d && i.push({
+    section: (0, g.keySection)(e, x.RTCDebugSections.OUTBOUND, a),
     label: b.default.Messages.RTC_DEBUG_RTP_OUTBOUND,
     element: R.default,
     elementProps: {
       context: e,
-      index: r
+      index: a
     }
   }), null != m && i.push({
-    section: (0, g.keySection)(e, x.RTCDebugSections.CAMERA, r),
+    section: (0, g.keySection)(e, x.RTCDebugSections.CAMERA, a),
     label: b.default.Messages.RTC_DEBUG_CAMERA,
-    element: D.default,
+    element: v.default,
     elementProps: {
       context: e,
-      index: r,
+      index: a,
       camera: m
     }
-  }), null != o && !s().isEmpty(o) && (i.push({
+  }), null != o && !l().isEmpty(o) && (i.push({
     section: c.SectionTypes.HEADER,
     label: b.default.Messages.RTC_DEBUG_RTP_INBOUND
   }), Object.keys(o).forEach(t => {
-    let s = y.default.getUser(t),
-      l = p.default.getNick(n, t),
-      o = (0, g.keySection)(e, t, r);
+    let l = y.default.getUser(t),
+      s = p.default.getNick(n, t),
+      o = (0, g.keySection)(e, t, a);
     i.push({
       section: o,
-      label: null != s ? j(s, l, n) : I(null != l ? l : t),
-      ariaLabel: null != s ? s.tag : t,
+      label: null != l ? I(l, s, n) : P(null != s ? s : t),
+      ariaLabel: null != l ? l.tag : t,
       onClick: () => {
-        d.setSection(o)
+        u.setSection(o)
       },
-      element: v.default,
+      element: E.default,
       elementProps: {
         context: e,
-        index: r,
-        videoStreams: a
+        index: a,
+        videoStreams: r
       }
     })
   })), i
@@ -129,21 +129,21 @@ function B(e, t, r, a, n) {
 function A() {
   var e, t;
   let {
-    defaultStats: r,
+    defaultStats: a,
     streamStats: i
-  } = (0, l.useStateFromStores)([g.default], () => ({
+  } = (0, s.useStateFromStores)([g.default], () => ({
     defaultStats: g.default.getAllStats(N.MediaEngineContextTypes.DEFAULT),
     streamStats: g.default.getAllStats(N.MediaEngineContextTypes.STREAM)
-  }), [], l.statesWillNeverBeEqual), s = (0, l.useStateFromStores)([h.default, f.default], () => f.default.getChannel(h.default.getChannelId())), p = null === (e = r.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, y = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, C = (0, l.useStateFromStores)([m.default], () => m.default.theme), S = (0, l.useStateFromStores)([m.default], () => m.default.darkSidebar ? x.ThemeTypes.DARK : void 0), D = (0, l.useStateFromStores)([g.default], () => g.default.getSection()), v = (0, l.useStateFromStores)([g.default], () => g.default.getVideoStreams()), R = function(e) {
+  }), [], s.statesWillNeverBeEqual), l = (0, s.useStateFromStores)([h.default, f.default], () => f.default.getChannel(h.default.getChannelId())), p = null === (e = a.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, y = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, S = (0, s.useStateFromStores)([m.default], () => m.default.theme), C = (0, s.useStateFromStores)([m.default], () => m.default.darkSidebar ? x.ThemeTypes.DARK : void 0), v = (0, s.useStateFromStores)([g.default], () => g.default.getSection()), E = (0, s.useStateFromStores)([g.default], () => g.default.getVideoStreams()), R = function(e) {
     let {
       defaultStats: t,
-      streamStats: r,
+      streamStats: a,
       videoStreams: n,
       screenshare: i,
-      clips: s,
-      channel: l,
-      connectionState: d
-    } = e, u = t.flatMap((e, t) => B(N.MediaEngineContextTypes.DEFAULT, e, t, n, null == l ? void 0 : l.getGuildId())), m = r.flatMap((e, t) => B(N.MediaEngineContextTypes.STREAM, e, t, n, null == l ? void 0 : l.getGuildId())), f = [], p = [], h = {
+      clips: l,
+      channel: s,
+      connectionState: u
+    } = e, d = t.flatMap((e, t) => B(N.MediaEngineContextTypes.DEFAULT, e, t, n, null == s ? void 0 : s.getGuildId())), m = a.flatMap((e, t) => B(N.MediaEngineContextTypes.STREAM, e, t, n, null == s ? void 0 : s.getGuildId())), f = [], p = [], h = {
       section: c.SectionTypes.DIVIDER
     };
     null != i && (f.push(h), f.push({
@@ -153,48 +153,48 @@ function A() {
       elementProps: {
         screenshare: i
       }
-    })), null != s && (p.push(h), p.push({
+    })), null != l && (p.push(h), p.push({
       section: x.RTCDebugSections.CLIPS,
       label: b.default.Messages.RTC_DEBUG_CLIPS,
-      element: E.default,
+      element: D.default,
       elementProps: {
-        clips: s
+        clips: l
       }
     })), m.length > 0 && m.unshift(h);
-    let g = null != l ? [{
+    let g = null != s ? [{
       section: c.SectionTypes.CUSTOM,
       label: "Channel Name",
-      element: () => (0, a.jsx)(o.Heading, {
-        className: P.channelName,
+      element: () => (0, r.jsx)(o.Heading, {
+        className: j.channelName,
         variant: "heading-lg/semibold",
-        children: l.name
+        children: s.name
       })
     }] : [];
     return [...g, {
       section: c.SectionTypes.CUSTOM,
       label: "Connection State",
-      element: () => (0, a.jsx)(o.Heading, {
-        className: P.channelName,
+      element: () => (0, r.jsx)(o.Heading, {
+        className: j.channelName,
         variant: "heading-md/normal",
-        children: d === x.RTCConnectionStates.RTC_CONNECTED ? "Connected" : "Disconnected"
+        children: u === x.RTCConnectionStates.RTC_CONNECTED ? "Connected" : "Disconnected"
       })
-    }, ...u, ...m, ...f, ...p]
+    }, ...d, ...m, ...f, ...p]
   }({
-    defaultStats: r,
+    defaultStats: a,
     streamStats: i,
-    videoStreams: v,
+    videoStreams: E,
     screenshare: p,
     clips: y,
-    channel: s,
-    connectionState: (0, l.useStateFromStores)([h.default], () => h.default.getState())
+    channel: l,
+    connectionState: (0, s.useStateFromStores)([h.default], () => h.default.getState())
   });
   return n.useEffect(() => () => {
-    d.close()
-  }, []), (0, a.jsx)(u.default, {
-    theme: C,
-    sidebarTheme: S,
-    section: D,
-    onSetSection: d.setSection,
+    u.close()
+  }, []), (0, r.jsx)(d.default, {
+    theme: S,
+    sidebarTheme: C,
+    section: v,
+    onSetSection: u.setSection,
     sections: R
   })
 }

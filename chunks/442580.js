@@ -1,30 +1,30 @@
 "use strict";
-r.r(t);
-var a = r("735250"),
-  n = r("470079"),
-  i = r("392711"),
-  s = r.n(i),
-  l = r("481060"),
-  o = r("481250"),
-  d = r("513547"),
-  u = r("689938");
+a.r(t);
+var r = a("735250"),
+  n = a("470079"),
+  i = a("392711"),
+  l = a.n(i),
+  s = a("481060"),
+  o = a("481250"),
+  u = a("513547"),
+  d = a("689938");
 class c extends n.PureComponent {
   render() {
     let {
       screenshare: e
     } = this.props;
-    if (null == e) return (0, a.jsx)(l.Spinner, {
-      type: l.Spinner.Type.SPINNING_CIRCLE
+    if (null == e) return (0, r.jsx)(s.Spinner, {
+      type: s.Spinner.Type.SPINNING_CIRCLE
     });
-    let t = s().map(e, (e, t) => {
-      if (!(d.hidden[t] || void 0 === e)) return (0, a.jsx)(d.Item, {
+    let t = l().map(e, (e, t) => {
+      if (!(u.hidden[t] || void 0 === e)) return (0, r.jsx)(u.Item, {
         label: t,
         value: e
       }, t)
     });
-    return (0, a.jsx)(l.FormSection, {
-      tag: l.FormTitleTags.H2,
-      title: u.default.Messages.RTC_DEBUG_SCREENSHARE,
+    return (0, r.jsx)(s.FormSection, {
+      tag: s.FormTitleTags.H2,
+      title: d.default.Messages.RTC_DEBUG_SCREENSHARE,
       children: (0, o.renderTwoColumns)(t)
     })
   }

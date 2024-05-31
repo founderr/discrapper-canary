@@ -1,26 +1,26 @@
 "use strict";
-r.r(t), r.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return f
   }
 });
-var a = r("735250"),
-  n = r("470079"),
-  i = r("120356"),
-  s = r.n(i),
-  l = r("692547"),
-  o = r("481060"),
-  d = r("285952"),
-  u = r("4912"),
-  c = r("746057");
+var r = a("735250"),
+  n = a("470079"),
+  i = a("120356"),
+  l = a.n(i),
+  s = a("692547"),
+  o = a("481060"),
+  u = a("285952"),
+  d = a("4912"),
+  c = a("746057");
 let m = ["firCount", "nackCount"];
 class f extends n.PureComponent {
   renderValueIcon() {
     let {
       label: e
     } = this.props;
-    return m.includes(e) ? (0, a.jsx)(u.default, {
-      color: l.default.unsafe_rawColors.YELLOW_300.css,
+    return m.includes(e) ? (0, r.jsx)(d.default, {
+      color: s.default.unsafe_rawColors.YELLOW_300.css,
       className: c.valueIcon
     }) : null
   }
@@ -28,42 +28,42 @@ class f extends n.PureComponent {
     let {
       children: e,
       className: t,
-      valueRendered: r,
+      valueRendered: a,
       section: n,
       label: i,
-      renderGraph: l
+      renderGraph: s
     } = this.props;
-    return (0, a.jsxs)(d.default, {
-      className: s()(c.item, t),
-      direction: d.default.Direction.VERTICAL,
+    return (0, r.jsxs)(u.default, {
+      className: l()(c.item, t),
+      direction: u.default.Direction.VERTICAL,
       basis: "50%",
-      children: [(0, a.jsxs)(d.default, {
+      children: [(0, r.jsxs)(u.default, {
         className: c.kvContainer,
-        align: d.default.Align.START,
-        children: [(0, a.jsx)(d.default.Child, {
-          children: (0, a.jsx)(o.H, {
+        align: u.default.Align.START,
+        children: [(0, r.jsx)(u.default.Child, {
+          children: (0, r.jsx)(o.H, {
             className: c.title,
             children: e
           })
-        }), Array.isArray(r) ? (0, a.jsx)(d.default.Child, {
+        }), Array.isArray(a) ? (0, r.jsx)(u.default.Child, {
           grow: 1,
-          children: r
-        }) : (0, a.jsxs)(d.default.Child, {
+          children: a
+        }) : (0, r.jsxs)(u.default.Child, {
           grow: 0,
           shrink: 0,
-          children: [this.renderValueIcon(), (0, a.jsx)("span", {
+          children: [this.renderValueIcon(), (0, r.jsx)("span", {
             className: c.itemValue,
-            title: r,
-            children: r
+            title: a,
+            children: a
           })]
         })]
-      }), null !== l && (0, a.jsx)(d.default.Child, {
+      }), null !== s && (0, r.jsx)(u.default.Child, {
         className: c.graph,
-        children: (0, a.jsx)(o.FormText, {
+        children: (0, r.jsx)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
-          children: l
+          children: s
         })
-      }, null != n ? "".concat(n, "-").concat(i) : i), (0, a.jsx)(o.FormDivider, {
+      }, null != n ? "".concat(n, "-").concat(i) : i), (0, r.jsx)(o.FormDivider, {
         className: c.divider
       })]
     })

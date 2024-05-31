@@ -149,6 +149,6 @@ function g(e) {
       })]
     }), null != K ? (0, s.jsx)(s.Fragment, {
       children: K
-    }) : null, null == W || o ? null : W, null != i && (0, S.default)(i) && F && P ? (0, s.jsx)(R, {}) : null]
+    }) : null, null == W || o ? null : W, null != i && (0, S.isRemix)(i) && F && P ? (0, s.jsx)(R, {}) : null]
   })
 }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"

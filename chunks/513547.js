@@ -1,20 +1,20 @@
 "use strict";
-r.r(t), r.d(t, {
+a.r(t), a.d(t, {
   Item: function() {
     return R
   },
   hidden: function() {
-    return S
+    return C
   }
-}), r("47120"), r("653041"), r("571269"), r("298267");
-var a = r("735250"),
-  n = r("470079"),
-  i = r("112456"),
-  s = r.n(i),
-  l = r("226961"),
-  o = r("706619"),
-  d = r("206314");
-let u = {
+}), a("47120"), a("653041"), a("571269"), a("298267");
+var r = a("735250"),
+  n = a("470079"),
+  i = a("112456"),
+  l = a.n(i),
+  s = a("226961"),
+  o = a("706619"),
+  u = a("206314");
+let d = {
   accelerateRate: "Accelerate Rate",
   audioDetected: "Audio Detected",
   audioLevel: "Audio Level",
@@ -136,7 +136,7 @@ function c(e) {
 }
 
 function m(e) {
-  return s().filesize(e)
+  return l().filesize(e)
 }
 
 function f(e) {
@@ -159,13 +159,13 @@ function y(e) {
   return "".concat(Math.max(e, 0).toFixed(2), " dB")
 }
 
-function C(e) {
+function S(e) {
   let {
     last: t
   } = e;
   return "".concat(t, " ms")
 }
-let S = {
+let C = {
     audioJitterBuffer: !0,
     audioJitterDelay: !0,
     audioJitterTarget: !0,
@@ -189,7 +189,7 @@ let S = {
     encryptDuration: !0,
     encryptMaxAttempts: !0
   },
-  D = {
+  v = {
     accelerateRate: h,
     audioDetected: g,
     audioLevel: y,
@@ -204,9 +204,9 @@ let S = {
     codec: function(e) {
       let {
         id: t,
-        name: r
+        name: a
       } = e;
-      return r = null != (r = "" === r ? "unknown" : r) ? r : "unknown", "".concat(r[0].toUpperCase()).concat(r.slice(1), " (").concat(t, ")")
+      return a = null != (a = "" === a ? "unknown" : a) ? a : "unknown", "".concat(a[0].toUpperCase()).concat(a.slice(1), " (").concat(t, ")")
     },
     cpuLimitedResolution: g,
     currentDelay: p,
@@ -230,15 +230,15 @@ let S = {
     ping: p,
     preemptiveExpandRate: h,
     receiverBitrateEstimate: c,
-    relativePlayoutDelay: C,
-    relativeReceptionDelay: C,
+    relativePlayoutDelay: S,
+    relativeReceptionDelay: S,
     renderDelay: p,
     resolution: e => {
       let {
         width: t,
-        height: r
+        height: a
       } = e;
-      return "".concat(t, "x").concat(r)
+      return "".concat(t, "x").concat(a)
     },
     secondaryDecodedRate: h,
     secureFramesProtocolVersion: function(e) {
@@ -251,13 +251,13 @@ let S = {
       return e < t.length ? t[e] : "Unknown"
     }
   },
-  E = e => e,
-  v = e => {
+  D = e => e,
+  E = e => {
     let [t] = n.useState([]);
     return t.push({
       value: e.value,
       time: Date.now()
-    }), t.length > 600 && t.shift(), (0, a.jsx)(o.default, {
+    }), t.length > 600 && t.shift(), (0, r.jsx)(o.default, {
       dataPoints: t,
       width: e.width,
       height: e.height
@@ -265,27 +265,27 @@ let S = {
   };
 
 function R(e) {
-  var t, r, n, i;
+  var t, a, n, i;
   let {
-    label: s,
+    label: l,
     value: c,
     section: m
-  } = e, f = null !== (r = D[s]) && void 0 !== r ? r : E;
-  let p = l.graphs[s] && (Array.isArray(i = c) && i.length > 0 && "number" == typeof i[0].value ? (0, a.jsx)(o.default, {
+  } = e, f = null !== (a = v[l]) && void 0 !== a ? a : D;
+  let p = s.graphs[l] && (Array.isArray(i = c) && i.length > 0 && "number" == typeof i[0].value ? (0, r.jsx)(o.default, {
       dataPoints: i,
       width: 300,
       height: 100
-    }) : "number" == typeof i ? (0, a.jsx)(v, {
+    }) : "number" == typeof i ? (0, r.jsx)(E, {
       value: i,
       width: 300,
       height: 100
     }) : void 0),
     h = Array.isArray(c) ? null === (t = c.at(-1)) || void 0 === t ? void 0 : t.value : c;
-  return (0, a.jsx)(d.default, {
-    label: s,
+  return (0, r.jsx)(u.default, {
+    label: l,
     valueRendered: f(h),
     section: m,
     renderGraph: p,
-    children: null !== (n = u[s]) && void 0 !== n ? n : s
+    children: null !== (n = d[l]) && void 0 !== n ? n : l
   })
 }
