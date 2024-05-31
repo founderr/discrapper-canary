@@ -59,7 +59,7 @@ function E(e) {
     let e = {};
     for (let [n, a] of p.default.entries(g)) {
       var t;
-      let l = (0, S.getAvailableSoundboardSoundCount)(null !== (t = v.default.getSoundsForGuild(n)) && void 0 !== t ? t : _.EMPTY_SOUND_LIST, a.premiumTier);
+      let l = (0, S.getAvailableSoundboardSoundCount)(a, null !== (t = v.default.getSoundsForGuild(n)) && void 0 !== t ? t : _.EMPTY_SOUND_LIST, a.premiumTier);
       e[n] = l
     }
     return e

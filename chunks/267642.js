@@ -95,7 +95,8 @@ Object.freeze({
   7: 15,
   8: 18,
   9: 24
-}), (r = i || (i = {}))[r.EMOJI = 1] = "EMOJI", r[r.AUDIO = 2] = "AUDIO", r[r.ANIMATED = 3] = "ANIMATED", r[r.CUSTOMIZATION = 4] = "CUSTOMIZATION", r[r.UPLOAD = 5] = "UPLOAD", r[r.VANITY = 6] = "VANITY", r[r.STREAM = 7] = "STREAM", r[r.STICKER = 8] = "STICKER", r[r.CUSTOM_ROLE_ICON = 11] = "CUSTOM_ROLE_ICON", r[r.STAGE_VIDEO = 12] = "STAGE_VIDEO", r[r.SOUNDBOARD = 13] = "SOUNDBOARD";
+});
+(r = i || (i = {}))[r.EMOJI = 1] = "EMOJI", r[r.AUDIO = 2] = "AUDIO", r[r.ANIMATED = 3] = "ANIMATED", r[r.CUSTOMIZATION = 4] = "CUSTOMIZATION", r[r.UPLOAD = 5] = "UPLOAD", r[r.VANITY = 6] = "VANITY", r[r.STREAM = 7] = "STREAM", r[r.STICKER = 8] = "STICKER", r[r.CUSTOM_ROLE_ICON = 11] = "CUSTOM_ROLE_ICON", r[r.STAGE_VIDEO = 12] = "STAGE_VIDEO", r[r.SOUNDBOARD = 13] = "SOUNDBOARD";
 let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTiers.TIER_2, E.BoostedGuildTiers.TIER_3],
   S = (e, t) => {
     var n;
@@ -103,7 +104,7 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
   },
   h = e => I.TotalStickerCountsByTier[e],
   A = e => I.IncrementalStickerCountsByTier[e],
-  m = e => I.TotalSoundboardSoundCountsByTier[e],
+  m = (e, t) => null != t && t.hasFeature(E.GuildFeatures.MORE_SOUNDBOARD) ? 96 : I.TotalSoundboardSoundCountsByTier[e],
   N = e => {
     if (e === E.BoostedGuildTiers.NONE) return I.TotalSoundboardSoundCountsByTier[e];
     let t = f[f.indexOf(e) - 1];
@@ -400,8 +401,8 @@ function k(e, t) {
   return Math.max(0, n - e.slice(s, a).length)
 }
 
-function B(e, t) {
-  return -1 === f.indexOf(t) ? 0 : Math.max(0, m(t) - e.length)
+function B(e, t, n) {
+  return -1 === f.indexOf(n) ? 0 : Math.max(0, m(n, e) - t.length)
 }
 
 function V(e, t) {
