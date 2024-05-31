@@ -206,7 +206,9 @@ t.default = function(e) {
   return (0, P.isBundleProduct)(t) && null != er && er < 0 ? null : (0, l.jsx)(p.FocusRing, {
     children: (0, l.jsxs)(p.Clickable, {
       innerRef: q,
-      className: n()(z.shopCard, z.shopCardAnimation),
+      className: n()(z.shopCard, z.shopCardAnimation, {
+        [z.partiallyOwned]: ec
+      }),
       onBlur: () => J(!1),
       onClick: eh,
       style: null != ea ? {
@@ -226,28 +228,31 @@ t.default = function(e) {
             className: z.premiumWheel
           })
         })
-      }), (0, c.match)(t.type).with(u.CollectiblesItemType.PROFILE_EFFECT, () => (0, l.jsx)("div", {
-        className: z.profileEffectShopPreview,
-        children: (0, l.jsx)(I.default, {
-          isHovering: ee,
-          profileEffectId: et.id,
-          isPurchased: eo,
-          removeSetHeight: !0
-        })
-      })).with(u.CollectiblesItemType.AVATAR_DECORATION, () => (o()(et.type === u.CollectiblesItemType.AVATAR_DECORATION, "ts-match already checked the type"), (0, l.jsx)("div", {
-        className: z.avatarContainer,
-        children: (0, l.jsx)(U.AvatarDecorationPreview, {
-          item: et,
+      }), (0, l.jsx)("div", {
+        className: z.preview,
+        children: (0, c.match)(t.type).with(u.CollectiblesItemType.PROFILE_EFFECT, () => (0, l.jsx)("div", {
+          className: z.profileEffectShopPreview,
+          children: (0, l.jsx)(I.default, {
+            isHovering: ee,
+            profileEffectId: et.id,
+            isPurchased: eo,
+            removeSetHeight: !0
+          })
+        })).with(u.CollectiblesItemType.AVATAR_DECORATION, () => (o()(et.type === u.CollectiblesItemType.AVATAR_DECORATION, "ts-match already checked the type"), (0, l.jsx)("div", {
+          className: z.avatarContainer,
+          children: (0, l.jsx)(U.AvatarDecorationPreview, {
+            item: et,
+            user: a,
+            isPurchased: eo,
+            isHighlighted: ee
+          })
+        }))).with(u.CollectiblesItemType.BUNDLE, () => (0, l.jsx)(W.BundlePreview, {
+          product: t,
           user: a,
           isPurchased: eo,
           isHighlighted: ee
-        })
-      }))).with(u.CollectiblesItemType.BUNDLE, () => (0, l.jsx)(W.BundlePreview, {
-        product: t,
-        user: a,
-        isPurchased: eo,
-        isHighlighted: ee
-      })).otherwise(() => null), eo ? (0, l.jsx)("div", {
+        })).otherwise(() => null)
+      }), eo ? (0, l.jsx)("div", {
         className: z.checkmarkWrapper,
         children: (0, l.jsx)(N.default, {
           width: 38,
