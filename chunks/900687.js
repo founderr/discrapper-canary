@@ -1,23 +1,23 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return I
   }
 });
-var s = l("735250");
-l("470079");
-var a = l("481060"),
-  i = l("493683"),
-  n = l("239091"),
-  r = l("194359"),
-  o = l("906732"),
-  u = l("726521"),
-  d = l("621113"),
-  c = l("705556"),
-  f = l("30556"),
-  S = l("496206"),
-  E = l("981631"),
-  m = l("590106");
+var l = s("735250");
+s("470079");
+var a = s("481060"),
+  i = s("493683"),
+  n = s("239091"),
+  r = s("194359"),
+  o = s("906732"),
+  u = s("726521"),
+  d = s("621113"),
+  c = s("705556"),
+  f = s("30556"),
+  S = s("496206"),
+  E = s("981631"),
+  m = s("590106");
 
 function I(e) {
   let {
@@ -46,9 +46,9 @@ function I(e) {
     }), (0, n.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await l.e("29136").then(l.bind(l, "193646"));
-      return l => (0, s.jsx)(e, {
-        ...l,
+      } = await s.e("29136").then(s.bind(s, "193646"));
+      return s => (0, l.jsx)(e, {
+        ...s,
         originalFriendingEnabled: A,
         relationshipType: T,
         onRemoveFriend: h,
@@ -118,35 +118,35 @@ function I(e) {
       action: "REPORT"
     }), (0, u.showReportModalForUser)(t, "@me" === _ ? void 0 : _)
   }
-  return (0, s.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: m.buttons,
-    children: A ? (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(S.default, {
+    children: A ? (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsx)(S.default, {
         user: t,
         isCurrentUser: I,
         relationshipType: T,
         onAddFriend: R,
         onIgnoreFriend: P,
         onSendMessage: () => N("User Profile Modal Header Buttons - Send Message Button")
-      }), I && (0, s.jsx)(c.default, {
+      }), I && (0, l.jsx)(c.default, {
         user: t,
         guildId: _,
         onClose: U
-      }), I || t.isNonUserBot() ? null : (0, s.jsx)(a.Clickable, {
+      }), I || t.isNonUserBot() ? null : (0, l.jsx)(a.Clickable, {
         focusProps: {
           offset: {
             left: 8
           }
         },
         onClick: C,
-        children: (0, s.jsx)(d.default, {
+        children: (0, l.jsx)(d.default, {
           className: m.additionalActionsIcon
         })
       })]
-    }) : g ? (0, s.jsx)(f.default, {
+    }) : g ? (0, l.jsx)(f.default, {
       user: t,
       onClose: U
-    }) : (0, s.jsx)(c.default, {
+    }) : (0, l.jsx)(c.default, {
       user: t,
       guildId: _,
       onClose: U

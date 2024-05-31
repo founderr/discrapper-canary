@@ -12,8 +12,8 @@ t("470079");
 var l = t("392711"),
   u = t.n(l),
   r = t("442837"),
-  d = t("481060"),
-  i = t("984933"),
+  i = t("481060"),
+  d = t("984933"),
   s = t("853856"),
   o = t("117984"),
   f = t("593214"),
@@ -26,7 +26,7 @@ function v(e, n) {
 }
 
 function m(e) {
-  let n = (0, r.useStateFromStores)([i.default], () => i.default.getChannels(h.FAVORITES))[h.ChannelTypes.GUILD_CATEGORY],
+  let n = (0, r.useStateFromStores)([d.default], () => d.default.getChannels(h.FAVORITES))[h.ChannelTypes.GUILD_CATEGORY],
     {
       isFavoritesPerk: t
     } = (0, c.useFavoritesServerExperiment)("58e21a_1"),
@@ -41,22 +41,22 @@ function m(e) {
   function m(n) {
     l(), (0, o.addFavoriteChannel)(e.id, n)
   }
-  return 0 === M.length ? (0, a.jsx)(d.MenuItem, {
+  return 0 === M.length ? (0, a.jsx)(i.MenuItem, {
     id: "favorite-channel",
     label: v(e, !1),
     action: () => m(null)
-  }) : (0, a.jsxs)(d.MenuItem, {
+  }) : (0, a.jsxs)(i.MenuItem, {
     id: "favorite-channel",
     label: v(e, !1),
     action: () => m(null),
-    children: [t && (0, a.jsx)(d.MenuGroup, {
-      children: (0, a.jsx)(d.MenuItem, {
+    children: [t && (0, a.jsx)(i.MenuGroup, {
+      children: (0, a.jsx)(i.MenuItem, {
         id: "favorite-".concat(s.channel.id),
         label: s.channel.name,
         action: () => m("null" === s.channel.id ? null : s.channel.id)
       }, s.channel.id)
-    }), (0, a.jsx)(d.MenuGroup, {
-      children: M.map(e => (0, a.jsx)(d.MenuItem, {
+    }), (0, a.jsx)(i.MenuGroup, {
+      children: M.map(e => (0, a.jsx)(i.MenuItem, {
         id: "favorite-".concat(e.channel.id),
         label: e.channel.name,
         action: () => m(e.channel.id)
@@ -67,11 +67,11 @@ function m(e) {
 
 function p(e) {
   let n = (0, r.useStateFromStores)([s.default], () => s.default.isFavorite(e.id));
-  return __OVERLAY__ || !n ? null : (0, a.jsx)(d.MenuItem, {
+  return __OVERLAY__ || !n ? null : (0, a.jsx)(i.MenuItem, {
     id: "favorite-channel",
     label: v(e, !0),
     color: "danger",
-    action: () => e.type === h.ChannelTypes.GUILD_CATEGORY ? (0, d.openModalLazy)(async () => {
+    action: () => e.type === h.ChannelTypes.GUILD_CATEGORY ? (0, i.openModalLazy)(async () => {
       let {
         default: n
       } = await t.e("37720").then(t.bind(t, "357632"));

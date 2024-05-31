@@ -1,38 +1,38 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return C
   }
-}), l("47120");
-var s = l("735250");
-l("470079");
-var a = l("442837"),
-  i = l("974674"),
-  n = l("696826"),
-  r = l("420660"),
-  o = l("233440"),
-  u = l("314897"),
-  d = l("158776"),
-  c = l("699516"),
-  f = l("998502"),
-  S = l("785717"),
-  E = l("505737"),
-  m = l("204197"),
-  I = l("78675"),
-  _ = l("438163"),
-  v = l("652853"),
-  g = l("900687"),
-  T = l("228168"),
-  A = l("182294"),
-  x = l("602091"),
-  U = l("231338"),
-  p = l("566483");
+}), s("47120");
+var l = s("735250");
+s("470079");
+var a = s("442837"),
+  i = s("974674"),
+  n = s("696826"),
+  r = s("420660"),
+  o = s("233440"),
+  u = s("314897"),
+  d = s("158776"),
+  c = s("699516"),
+  f = s("998502"),
+  S = s("785717"),
+  E = s("505737"),
+  m = s("204197"),
+  I = s("78675"),
+  _ = s("438163"),
+  v = s("652853"),
+  g = s("900687"),
+  T = s("228168"),
+  A = s("182294"),
+  x = s("602091"),
+  U = s("231338"),
+  p = s("566483");
 let N = f.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function C(e) {
   let {
     user: t,
-    displayProfile: l,
+    displayProfile: s,
     activity: i,
     customStatusActivity: f,
     guildId: C,
@@ -48,7 +48,7 @@ function C(e) {
     avatarDecorationSrc: F
   } = (0, m.default)({
     user: t,
-    guildId: null == l ? void 0 : l.guildId,
+    guildId: null == s ? void 0 : s.guildId,
     size: A.AvatarSizes.SIZE_120
   }), {
     trackUserProfileAction: D
@@ -56,17 +56,17 @@ function C(e) {
     let e = d.default.isMobileOnline(t.id);
     return (0, o.shouldDisableUserPresenceInChannel)(t, h) ? [U.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [U.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
-  return (0, s.jsxs)("header", {
-    children: [(0, s.jsx)(I.default, {
+  return (0, l.jsxs)("header", {
+    children: [(0, l.jsx)(I.default, {
       user: t,
-      displayProfile: l,
+      displayProfile: s,
       profileType: T.UserProfileTypes.FULL_SIZE,
-      hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
-    }), (0, s.jsx)("div", {
+      hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
+    }), (0, l.jsx)("div", {
       className: p.inner,
-      children: (0, s.jsxs)("div", {
+      children: (0, l.jsxs)("div", {
         ...O,
-        children: [(0, s.jsx)(N, {
+        children: [(0, l.jsx)(N, {
           src: L,
           avatarDecoration: F,
           size: A.AvatarSizes.SIZE_120,
@@ -77,7 +77,7 @@ function C(e) {
           isMobile: k,
           statusTooltip: !0,
           statusTooltipDelay: T.USER_PROFILE_TOOLTIP_DELAY
-        }), (0, s.jsx)(g.default, {
+        }), (0, l.jsx)(g.default, {
           user: t,
           isCurrentUser: B,
           guildId: C,
@@ -86,7 +86,7 @@ function C(e) {
           originalFriendingEnabled: R,
           trackUserProfileAction: D,
           onClose: M
-        }), (0, s.jsx)(_.UserProfileCustomStatusBubble, {
+        }), (0, l.jsx)(_.UserProfileCustomStatusBubble, {
           statusActivity: f,
           profileType: T.UserProfileTypes.FULL_SIZE,
           hasEntered: P === x.ModalTransitionState.ENTERED

@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return n
   }
 });
-var s = l("735250");
-l("470079");
-var a = l("481060"),
-  i = l("363175");
+var l = s("735250");
+s("470079");
+var a = s("481060"),
+  i = s("363175");
 
 function n(e) {
   let {
     title: t,
-    children: l
+    children: s
   } = e;
-  return (0, s.jsxs)("section", {
+  return (0, l.jsxs)("section", {
     className: i.section,
-    children: [(0, s.jsx)(a.Heading, {
+    children: [(0, l.jsx)(a.Heading, {
       variant: "text-xs/semibold",
       color: "header-secondary",
       children: t
-    }), l]
+    }), s]
   })
 }

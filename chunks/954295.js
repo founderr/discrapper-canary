@@ -1,28 +1,28 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return u
   }
-}), l("789020"), l("653041");
-var s = l("735250");
-l("470079");
-var a = l("481060"),
-  i = l("860719"),
-  n = l("689938"),
-  r = l("763638");
+}), s("789020"), s("653041");
+var l = s("735250");
+s("470079");
+var a = s("481060"),
+  i = s("860719"),
+  n = s("689938"),
+  r = s("763638");
 
 function o(e) {
   let {
     content: t,
-    heading: l
+    heading: s
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: r.row,
-    children: [null != l ? (0, s.jsx)(a.Heading, {
+    children: [null != s ? (0, l.jsx)(a.Heading, {
       className: r.heading,
       variant: "text-sm/normal",
-      children: l
-    }) : null, (0, s.jsx)(a.Text, {
+      children: s
+    }) : null, (0, l.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
       children: t
@@ -33,7 +33,7 @@ function o(e) {
 function u(e) {
   let {
     flags: t,
-    listScrollerStyle: l
+    listScrollerStyle: s
   } = e, {
     hasMessageContent: u,
     hasGuildPresences: d,
@@ -43,24 +43,24 @@ function u(e) {
   });
   if (null == t) return null;
   let f = [];
-  return u && f.push((0, s.jsx)(o, {
+  return u && f.push((0, l.jsx)(o, {
     heading: n.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
     content: n.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
-  })), d && f.push((0, s.jsx)(o, {
+  })), d && f.push((0, l.jsx)(o, {
     heading: n.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
     content: n.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
-  })), c && f.push((0, s.jsx)(o, {
+  })), c && f.push((0, l.jsx)(o, {
     heading: n.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
     content: n.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
-  })), f.length > 0 && f.push((0, s.jsx)("div", {
+  })), f.length > 0 && f.push((0, l.jsx)("div", {
     className: r.divider,
-    children: (0, s.jsx)(a.FormDivider, {})
-  })), f.push((0, s.jsx)(o, {
+    children: (0, l.jsx)(a.FormDivider, {})
+  })), f.push((0, l.jsx)(o, {
     content: n.default.Messages.BOTS_DATA_ACCESS_BASELINE.format({
       helpCenterUrl: "https://support.discord.com/hc/articles/7933951485975"
     })
-  })), (0, s.jsx)(a.ScrollerThin, {
-    className: l,
+  })), (0, l.jsx)(a.ScrollerThin, {
+    className: s,
     children: f
   })
 }

@@ -1,38 +1,38 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return h
   }
-}), l("47120");
-var s = l("735250"),
-  a = l("470079"),
-  i = l("442837"),
-  n = l("481060"),
-  r = l("727637"),
-  o = l("100527"),
-  u = l("906732"),
-  d = l("680295"),
-  c = l("158776"),
-  f = l("5192"),
-  S = l("877485"),
-  E = l("785717"),
-  m = l("318661"),
-  I = l("502762"),
-  _ = l("544989"),
-  v = l("301984"),
-  g = l("94918"),
-  T = l("664794"),
-  A = l("806926"),
-  x = l("740021"),
-  U = l("228168"),
-  p = l("981631"),
-  N = l("689938"),
-  C = l("61007");
+}), s("47120");
+var l = s("735250"),
+  a = s("470079"),
+  i = s("442837"),
+  n = s("481060"),
+  r = s("727637"),
+  o = s("100527"),
+  u = s("906732"),
+  d = s("680295"),
+  c = s("158776"),
+  f = s("5192"),
+  S = s("877485"),
+  E = s("785717"),
+  m = s("318661"),
+  I = s("502762"),
+  _ = s("544989"),
+  v = s("301984"),
+  g = s("94918"),
+  T = s("664794"),
+  A = s("806926"),
+  x = s("740021"),
+  U = s("228168"),
+  p = s("981631"),
+  N = s("689938"),
+  C = s("61007");
 
 function h(e) {
   let {
     user: t,
-    guildId: l,
+    guildId: s,
     channelId: h,
     messageId: R,
     roleId: P,
@@ -42,7 +42,7 @@ function h(e) {
     transitionState: L,
     sourceAnalyticsLocations: O = [],
     onClose: F
-  } = e, D = l === p.ME ? void 0 : l, {
+  } = e, D = s === p.ME ? void 0 : s, {
     analyticsLocations: b
   } = (0, u.default)([...O, o.default.SIMPLIFIED_PROFILE_MODAL]), {
     originalFriendingEnabled: B
@@ -72,41 +72,41 @@ function h(e) {
       return t === p.ActivityTypes.CUSTOM_STATUS
     })
   })), Z = a.createRef(), K = (0, r.default)(Z);
-  return (0, s.jsx)(u.AnalyticsLocationProvider, {
+  return (0, l.jsx)(u.AnalyticsLocationProvider, {
     value: b,
-    children: (0, s.jsx)(E.UserProfileAnalyticsProvider, {
+    children: (0, l.jsx)(E.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: D,
       channelId: h,
       messageId: R,
       roleId: P,
-      children: (0, s.jsxs)(n.ModalRoot, {
+      children: (0, l.jsxs)(n.ModalRoot, {
         transitionState: L,
         className: C.root,
         hideShadow: !0,
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
-        children: [(0, s.jsxs)(I.default, {
+        children: [(0, l.jsxs)(I.default, {
           user: t,
           displayProfile: V,
           profileType: U.UserProfileTypes.FULL_SIZE,
           ref: Z,
-          children: [(0, s.jsxs)(_.default, {
+          children: [(0, l.jsxs)(_.default, {
             profileType: U.UserProfileTypes.FULL_SIZE,
-            children: [(0, s.jsx)(g.default, {
+            children: [(0, l.jsx)(g.default, {
               user: t,
               guildId: D,
               channelId: h,
               onClose: F
-            }), !B && (0, s.jsxs)(s.Fragment, {
-              children: [(0, s.jsx)(v.default, {
+            }), !B && (0, l.jsxs)(l.Fragment, {
+              children: [(0, l.jsx)(v.default, {
                 user: t,
                 friendToken: M
-              }), (0, s.jsx)(T.default, {
+              }), (0, l.jsx)(T.default, {
                 user: t,
                 profileType: U.UserProfileTypes.FULL_SIZE,
                 guildId: D,
-                viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == V ? void 0 : V.guildId) != null ? (0, s.jsx)(n.MenuItem, {
+                viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == V ? void 0 : V.guildId) != null ? (0, l.jsx)(n.MenuItem, {
                   id: "view-main-profile",
                   label: N.default.Messages.VIEW_MAIN_PROFILE,
                   subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
@@ -118,7 +118,7 @@ function h(e) {
                       analyticsLocations: b
                     }), w(void 0)
                   }
-                }) : (0, s.jsx)(n.MenuItem, {
+                }) : (0, l.jsx)(n.MenuItem, {
                   id: "view-server-profile",
                   label: N.default.Messages.VIEW_SERVER_PROFILE,
                   subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
@@ -133,7 +133,7 @@ function h(e) {
                 })
               })]
             })]
-          }), (0, s.jsx)(x.default, {
+          }), (0, l.jsx)(x.default, {
             user: t,
             displayProfile: V,
             guildId: D,
@@ -143,7 +143,7 @@ function h(e) {
             originalFriendingEnabled: B,
             transitionState: L,
             onClose: F
-          }), (0, s.jsx)(A.default, {
+          }), (0, l.jsx)(A.default, {
             user: t,
             displayProfile: V,
             initialSection: j,
@@ -151,7 +151,7 @@ function h(e) {
             transitionState: L,
             onClose: F
           })]
-        }), (null == V ? void 0 : V.profileEffectId) != null && (0, s.jsx)(d.default, {
+        }), (null == V ? void 0 : V.profileEffectId) != null && (0, l.jsx)(d.default, {
           profileEffectId: null == V ? void 0 : V.profileEffectId,
           isHovering: K
         })]

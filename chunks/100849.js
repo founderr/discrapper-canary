@@ -1,28 +1,28 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return _
   }
 });
-var s = l("735250"),
-  a = l("470079"),
-  i = l("442837"),
-  n = l("481060"),
-  r = l("717881"),
-  o = l("906732"),
-  u = l("199902"),
-  d = l("158776"),
-  c = l("543595"),
-  f = l("785717"),
-  S = l("221292"),
-  E = l("981631"),
-  m = l("886140"),
-  I = l("305944");
+var l = s("735250"),
+  a = s("470079"),
+  i = s("442837"),
+  n = s("481060"),
+  r = s("717881"),
+  o = s("906732"),
+  u = s("199902"),
+  d = s("158776"),
+  c = s("543595"),
+  f = s("785717"),
+  S = s("221292"),
+  E = s("981631"),
+  m = s("886140"),
+  I = s("305944");
 
 function _(e) {
   let {
     user: t,
-    type: l
+    type: s
   } = e, _ = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), v = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), g = a.useMemo(() => v.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS), [v]), T = a.useMemo(() => _ ? g.find(e => e.type === E.ActivityTypes.PLAYING) : null, [g, _]), A = a.useMemo(() => g.filter(e => e !== T), [T, g]), {
     analyticsLocations: x,
     newestAnalyticsLocation: U
@@ -35,16 +35,16 @@ function _(e) {
       section: E.AnalyticsSections.PROFILE_MODAL
     }
   };
-  return (0, s.jsxs)(n.ScrollerThin, {
+  return (0, l.jsxs)(n.ScrollerThin, {
     className: I.listScroller,
     fade: !0,
-    children: [_ ? (0, s.jsx)(r.default, {
-      type: l,
+    children: [_ ? (0, l.jsx)(r.default, {
+      type: s,
       user: t,
       source: U,
       className: m.userProfileActivity,
-      hideHeader: l === c.Types.SIMPLIFIED_PROFILE,
-      showChannelDetails: l === c.Types.SIMPLIFIED_PROFILE,
+      hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
+      showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
       activity: T,
       actionColor: m.actionColor,
       analyticsParams: C,
@@ -61,15 +61,15 @@ function _(e) {
           ...N
         })
       }
-    }) : null, A.map(e => (0, s.jsx)(r.default, {
-      type: l,
+    }) : null, A.map(e => (0, l.jsx)(r.default, {
+      type: s,
       activity: e,
       user: t,
       useStoreStream: !1,
       source: U,
       className: m.userProfileActivity,
-      hideHeader: l === c.Types.SIMPLIFIED_PROFILE,
-      showChannelDetails: l === c.Types.SIMPLIFIED_PROFILE,
+      hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
+      showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
       actionColor: m.actionColor,
       analyticsParams: C,
       onAction: () => {

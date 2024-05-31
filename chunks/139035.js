@@ -21,21 +21,21 @@ var l = a("481060"),
   g = a("218035"),
   T = a("775666"),
   p = a("442754"),
-  I = a("623483"),
-  O = a("689938");
+  O = a("623483"),
+  I = a("689938");
 
 function m(e) {
   let {
     channel: t,
     onSelect: a
-  } = e, s = (0, h.default)(t), d = (0, N.default)(t), i = (0, g.default)(t), C = (0, E.default)(t), M = (0, _.default)(t), A = (0, c.default)(t), p = (0, o.default)(t), m = (0, I.default)(t), S = (0, r.default)({
+  } = e, s = (0, h.default)(t), d = (0, N.default)(t), i = (0, g.default)(t), C = (0, E.default)(t), M = (0, _.default)(t), A = (0, c.default)(t), p = (0, o.default)(t), m = (0, O.default)(t), S = (0, r.default)({
     id: t.id,
-    label: O.default.Messages.COPY_ID_CHANNEL
+    label: I.default.Messages.COPY_ID_CHANNEL
   }), L = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), x = (0, T.default)(t);
   return (0, n.jsxs)(l.Menu, {
     navId: "channel-context",
     onClose: u.closeContextMenu,
-    "aria-label": O.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    "aria-label": I.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onSelect: a,
     children: [(0, n.jsxs)(l.MenuGroup, {
       children: [s, p, A]
@@ -56,19 +56,19 @@ function S(e) {
     channel: t,
     guild: a,
     onSelect: s
-  } = e, d = (0, h.default)(t), i = (0, N.default)(t), o = (0, g.default)(t), I = (0, E.default)(t), m = (0, _.default)(t), S = (0, A.default)(t), L = (0, c.default)(t), x = (0, C.default)(t, a), G = (0, M.default)(t), v = (0, r.default)({
+  } = e, d = (0, h.default)(t), i = (0, N.default)(t), o = (0, g.default)(t), O = (0, E.default)(t), m = (0, _.default)(t), S = (0, A.default)(t), L = (0, c.default)(t), x = (0, C.default)(t, a), G = (0, M.default)(t), v = (0, r.default)({
     id: t.id,
-    label: O.default.Messages.COPY_ID_CHANNEL
+    label: I.default.Messages.COPY_ID_CHANNEL
   }), y = (0, p.default)(t), R = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), j = (0, T.default)(t);
   return (0, n.jsxs)(l.Menu, {
     navId: "channel-context",
     onClose: u.closeContextMenu,
-    "aria-label": O.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    "aria-label": I.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onSelect: s,
     children: [(0, n.jsx)(l.MenuGroup, {
       children: d
     }, "mark-as-read"), (0, n.jsxs)(l.MenuGroup, {
-      children: [y, I, m]
+      children: [y, O, m]
     }, "channel-actions"), (0, n.jsxs)(l.MenuGroup, {
       children: [i, R ? j : o]
     }, "notifications"), (0, n.jsxs)(l.MenuGroup, {
