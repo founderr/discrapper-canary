@@ -283,7 +283,7 @@ t.default = function(e) {
         category: r,
         className: z.limitedTimeBadge,
         display: "card"
-      }), eC && (0, l.jsx)(A.TextBadge, {
+      }), eC && !ec && !eo && (0, l.jsx)(A.TextBadge, {
         text: K.default.Messages.NEW,
         disableColor: !0,
         className: z.newBadge
