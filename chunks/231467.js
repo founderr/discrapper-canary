@@ -181,29 +181,32 @@ function k(e) {
       secondaryColor: g
     },
     bannerHash: v
-  } = n, D = (0, E.default)(n.games), k = (0, h.default)("clan_discovery_card"), [B, V] = r.useState(!1), x = r.useCallback(() => {
+  } = n, D = (0, E.default)(n.games), k = (0, h.default)("clan_discovery_card"), [B, V] = r.useState(!1), x = r.useRef(null), [F, H] = r.useState(!1), Y = r.useCallback(() => {
     V(!0)
-  }, []), F = r.useCallback(() => {
+  }, []), j = r.useCallback(() => {
     V(!1)
-  }, []), H = y.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+  }, []), W = y.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: n.memberCount
-  }), Y = null != T ? T : (0, S.getClanBannerUrl)(n.id, v), j = null == s && null == Y ? {
+  }), K = null != T ? T : (0, S.getClanBannerUrl)(n.id, v), z = null == s && null == K ? {
     background: "linear-gradient(90deg, ".concat(R, ", ").concat(g, ")")
-  } : void 0, W = null != s ? s : null != Y ? (0, i.jsx)("img", {
+  } : void 0, Z = null != s ? s : null != K ? (0, i.jsx)("img", {
     alt: y.default.Messages.CLAN_LOOK_BANNER,
-    src: Y,
+    src: K,
     className: P.bannerImage
-  }) : null, K = r.useMemo(() => (0, M.getSortedTraits)(n.traits, u), [n.traits, u]);
-  return (0, i.jsxs)("div", {
+  }) : null, X = r.useMemo(() => (0, M.getSortedTraits)(n.traits, u), [n.traits, u]);
+  return r.useEffect(() => {
+    let e = x.current;
+    null != e && null != e.offsetWidth && null != e.scrollWidth && H(e.offsetWidth < e.scrollWidth)
+  }, []), (0, i.jsxs)("div", {
     className: a()(P.card, c, {
       [P.cardStaticHeight]: !o
     }),
-    onMouseEnter: x,
-    onMouseLeave: F,
+    onMouseEnter: Y,
+    onMouseLeave: j,
     children: [(0, i.jsxs)("div", {
       className: P.cardBrandingHeader,
-      style: j,
-      children: [W, (0, i.jsx)(w, {
+      style: z,
+      children: [Z, (0, i.jsx)(w, {
         hasPendingJoinRequest: m,
         atMaxMemberCapacity: p,
         isGuildMember: l
@@ -248,7 +251,17 @@ function k(e) {
           variant: "heading-md/medium",
           color: "header-primary",
           lineClamp: 1,
-          children: n.name
+          children: (0, i.jsx)(d.Tooltip, {
+            text: n.name,
+            color: d.Tooltip.Colors.PRIMARY,
+            shouldShow: F,
+            children: e => (0, i.jsx)("span", {
+              ...e,
+              ref: x,
+              className: P.nameText,
+              children: n.name
+            })
+          })
         }), (0, i.jsxs)("div", {
           className: P.clanInfoRow,
           children: [(0, i.jsx)(d.Text, {
@@ -273,7 +286,7 @@ function k(e) {
         description: n.description,
         expanded: o
       }), (0, i.jsx)(G, {
-        traits: K,
+        traits: X,
         traitsToHighlight: u
       })]
     }), (0, i.jsxs)("div", {
@@ -285,7 +298,7 @@ function k(e) {
           children: (0, i.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: H
+            children: W
           })
         })
       }), (0, i.jsx)("div", {
