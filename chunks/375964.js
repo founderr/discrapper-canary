@@ -15660,6 +15660,7 @@ e.exports = Object.freeze({
   COLLECTIBLES_BUNDLE_DESCRIPTION: "Bundle Includes: {avatarDecorationName} Decoration & {profileEffectName} Profile Effect",
   COLLECTIBLES_BUNDLE_BUY_BUNDLE: "Buy Bundle",
   COLLECTIBLES_BUNDLE_PURCHASE_BUNDLE_AT_PRICE: "Buy Bundle for {price}",
+  COLLECTIBLES_DETAILS_MODAL_BUNDLE_PURCHASE_DISCLAIMER: "Once purchased, those decorations will be added to your collection and can be used anytime",
   DIRECTORY_CATEGORY_TOWN_HALL_1: "Staff Picks",
   DIRECTORY_CATEGORY_TOWN_HALL_2: "Gaming",
   DIRECTORY_CATEGORY_TOWN_HALL_3: "Indie Spotlight",
