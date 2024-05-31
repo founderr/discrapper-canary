@@ -27,6 +27,9 @@ n.r(t), n.d(t, {
   useQuestInstructionTitle: function() {
     return v
   },
+  useQuestPreviewActions: function() {
+    return U
+  },
   useQuests: function() {
     return p
   },
@@ -247,5 +250,14 @@ function P(e) {
     hasQuestCollectibles: n,
     avatarDecoration: null == i ? void 0 : null === (t = i.items) || void 0 === t ? void 0 : t[0],
     isFetching: r
+  }
+}
+
+function U(e) {
+  return {
+    handleComplete: () => (0, c.completeQuestPreview)(e),
+    handleResetStatusClick: () => (0, c.resetQuestPreviewStatus)(e),
+    handleResetDismissibilityClick: () => (0, c.resetQuestDismissibilityStatus)(e),
+    handleOverrideDeliveryClick: () => (0, c.overrideQuestDelivery)(e)
   }
 }(a = r || (r = {})).UNCLAIMED = "unclaimed", a.CLAIMED = "claimed"

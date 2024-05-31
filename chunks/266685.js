@@ -25,39 +25,38 @@ var a = n("735250"),
   v = n("78826"),
   R = n("670638"),
   O = n("667105"),
-  L = n("341907"),
-  M = n("46140"),
-  x = n("689938"),
-  P = n("96268");
-let y = s.forwardRef(function(e, t) {
+  L = n("46140"),
+  M = n("689938"),
+  x = n("96268");
+let P = s.forwardRef(function(e, t) {
   var n, l;
   let {
     className: I,
-    isExpanded: y,
-    isExpansionAnimationComplete: b,
-    onCtxMenuOpen: U,
-    onCtxMenuClose: j,
-    onCtxMenuSelect: G,
-    quest: w,
-    useReducedMotion: k
-  } = e, B = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(w.id), [w]), F = (0, C.useQuestFormattedDate)(w.config.expiresAt), H = g.SharedQuestFields.build(w.config), V = (0, C.useQuestFormattedDate)(H.rewardsExpireAt), Y = s.useMemo(() => (0, p.isAssetAnimated)(w.config.assets.questBarHero), [w]), W = (0, O.useHasLaunchedGame)(H.application.id), K = s.useCallback(() => {
-    (0, _.enrollInQuest)(w.id, {
+    isExpanded: P,
+    isExpansionAnimationComplete: D,
+    onCtxMenuOpen: b,
+    onCtxMenuClose: U,
+    onCtxMenuSelect: j,
+    quest: G,
+    useReducedMotion: w
+  } = e, k = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(G.id), [G]), B = (0, C.useQuestFormattedDate)(G.config.expiresAt), F = g.SharedQuestFields.build(G.config), H = (0, C.useQuestFormattedDate)(F.rewardsExpireAt), V = s.useMemo(() => (0, p.isAssetAnimated)(G.config.assets.questBarHero), [G]), Y = (0, O.useHasLaunchedGame)(F.application.id), W = s.useCallback(() => {
+    (0, _.enrollInQuest)(G.id, {
       questContent: S.QuestContent.QUEST_BAR,
       questContentCTA: h.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [w]), z = (0, O.useHandleClaimQuestsReward)({
-    quest: w,
+  }, [G]), K = (0, O.useHandleClaimQuestsReward)({
+    quest: G,
     location: S.QuestContent.QUEST_BAR
-  }), Q = s.useCallback(() => {
-    (0, L.openGameLink)(w, {
+  }), z = s.useCallback(() => {
+    (0, p.openGameLink)(G, {
       content: S.QuestContent.QUEST_BAR,
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [w]), q = H.features.has(M.QuestVariants.POST_ENROLLMENT_CTA), Z = s.useMemo(() => (0, p.calculatePercentComplete)(w) > 0, [w]), X = (null === (n = w.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, J = (null === (l = w.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, $ = s.useMemo(() => (0, p.hasCollectiblesQuestReward)(w.config), [w.config]), ee = y && b, et = (0, p.getQuestBarHeroAssetUrl)(w), en = (0, p.getQuestsInstructionsToWinReward)({
-    quest: w,
-    location: M.QuestsExperimentLocations.QUESTS_BAR
-  }), ea = (0, E.isWeb)(), es = s.useMemo(() => {
-    let e = (0, u.getContrastingColor)(w.config.colors.primary, {
+  }, [G]), Q = F.features.has(L.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Z = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, J = s.useMemo(() => (0, p.hasCollectiblesQuestReward)(G.config), [G.config]), $ = P && D, ee = (0, p.getQuestBarHeroAssetUrl)(G), et = (0, p.getQuestsInstructionsToWinReward)({
+    quest: G,
+    location: L.QuestsExperimentLocations.QUESTS_BAR
+  }), en = (0, E.isWeb)(), ea = s.useMemo(() => {
+    let e = (0, u.getContrastingColor)(G.config.colors.primary, {
       base: "#ffffff",
       contrastRatio: u.WCAGContrastRatios.Text
     });
@@ -66,149 +65,149 @@ let y = s.forwardRef(function(e, t) {
       "--custom-cta-color-hover": (0, o.darkenColor)(e, .3),
       "--custom-cta-color-active": (0, o.darkenColor)(e, .35)
     }
-  }, [w.config.colors.primary]);
+  }, [G.config.colors.primary]);
   return (0, a.jsx)("div", {
-    "aria-hidden": !ee,
-    className: i()(I, P.contentExpanded, {
-      [P.contentInteractable]: ee
+    "aria-hidden": !$,
+    className: i()(I, x.contentExpanded, {
+      [x.contentInteractable]: $
     }),
-    children: X ? (0, a.jsxs)("div", {
-      className: P.questAcceptedContent,
+    children: Z ? (0, a.jsxs)("div", {
+      className: x.questAcceptedContent,
       ref: t,
       children: [(0, a.jsxs)("div", {
-        className: P.utils,
+        className: x.utils,
         children: [(0, a.jsxs)("div", {
-          className: P.questAcceptedContentHeading,
+          className: x.questAcceptedContentHeading,
           children: [(0, a.jsx)(N.default, {
-            className: P.questProgressRewardTile,
+            className: x.questProgressRewardTile,
             learnMoreStyle: "icon",
-            quest: w,
+            quest: G,
             questContent: S.QuestContent.QUEST_BAR
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(d.Heading, {
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: (0, p.getContextualEntrypointHeading)(w)
+              children: (0, p.getContextualEntrypointHeading)(G)
             }), (0, a.jsx)(d.Text, {
-              className: P.questAcceptedContentCopySubheading,
+              className: x.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
-              children: J ? x.default.Messages.QUESTS_CLAIM_BY_DATE.format({
-                expirationDate: V
-              }) : x.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
-                expirationDate: F
+              children: X ? M.default.Messages.QUESTS_CLAIM_BY_DATE.format({
+                expirationDate: H
+              }) : M.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+                expirationDate: B
               })
             })]
           })]
         }), (0, a.jsx)(R.QuestsEntryContextMenuPopout, {
-          onOpen: U,
-          onClose: j,
-          onSelect: G,
+          onOpen: b,
+          onClose: U,
+          onSelect: j,
           questContent: S.QuestContent.QUEST_BAR,
-          quest: w,
+          quest: G,
           shouldShowDisclosure: !1,
           showShareLink: !0,
           children: e => (0, a.jsx)(d.Clickable, {
             ...e,
-            className: P.submenuWrapper,
-            "aria-label": x.default.Messages.ACTIONS,
+            className: x.submenuWrapper,
+            "aria-label": M.default.Messages.ACTIONS,
             children: (0, a.jsx)(c.default, {
-              className: P.submenuIcon
+              className: x.submenuIcon
             })
           })
         })]
-      }), J ? (0, a.jsx)(d.Button, {
-        className: i()(P.cta, P.ctaClaimReward),
-        style: $ ? es : void 0,
+      }), X ? (0, a.jsx)(d.Button, {
+        className: i()(x.cta, x.ctaClaimReward),
+        style: J ? ea : void 0,
         color: d.Button.Colors.CUSTOM,
         fullWidth: !0,
-        onClick: z,
+        onClick: K,
         size: d.Button.Sizes.NONE,
-        children: x.default.Messages.QUESTS_CLAIM_REWARD
+        children: M.default.Messages.QUESTS_CLAIM_REWARD
       }) : (0, a.jsx)(d.Text, {
-        className: P.description,
+        className: x.description,
         color: "always-white",
         variant: "text-xs/normal",
-        children: en
+        children: et
       }), (0, a.jsx)(T.default, {
-        quest: w
-      }), !ea && !Z && !W && q && (0, a.jsx)(D, {
-        onClick: ee ? Q : void 0
+        quest: G
+      }), !en && !q && !Y && Q && (0, a.jsx)(y, {
+        onClick: $ ? z : void 0
       })]
     }) : (0, a.jsxs)("div", {
-      className: P.questUnacceptedContent,
+      className: x.questUnacceptedContent,
       children: [(0, a.jsxs)("div", {
-        className: P.questPromoContent,
+        className: x.questPromoContent,
         ref: t,
         children: [(0, a.jsxs)("div", {
-          className: P.utils,
+          className: x.utils,
           children: [(0, a.jsx)(A.default, {
             color: "always-white"
           }), (0, a.jsx)(R.QuestsEntryContextMenuPopout, {
-            onOpen: U,
-            onClose: j,
-            onSelect: G,
+            onOpen: b,
+            onClose: U,
+            onSelect: j,
             questContent: S.QuestContent.QUEST_BAR,
-            quest: w,
+            quest: G,
             shouldShowDisclosure: !0,
             showShareLink: !0,
             children: e => (0, a.jsx)(d.Clickable, {
               ...e,
-              className: P.submenuWrapper,
-              "aria-label": x.default.Messages.ACTIONS,
+              className: x.submenuWrapper,
+              "aria-label": M.default.Messages.ACTIONS,
               children: (0, a.jsx)(c.default, {
-                className: P.submenuIcon
+                className: x.submenuIcon
               })
             })
           })]
         }), (0, a.jsxs)("div", {
-          className: P.details,
+          className: x.details,
           children: [(0, a.jsx)(N.default, {
-            className: P.rewardTile,
+            className: x.rewardTile,
             learnMoreStyle: "text",
-            quest: w,
+            quest: G,
             questContent: S.QuestContent.QUEST_BAR
           }), (0, a.jsx)(d.Heading, {
-            className: P.title,
+            className: x.title,
             color: "always-white",
             variant: "heading-md/medium",
-            children: x.default.Messages.QUESTS_TITLE.format({
-              questName: w.config.messages.questName
+            children: M.default.Messages.QUESTS_TITLE.format({
+              questName: G.config.messages.questName
             })
           }), (0, a.jsx)(d.Text, {
-            className: P.description,
+            className: x.description,
             color: "always-white",
             variant: "text-sm/normal",
-            children: en
+            children: et
           })]
         }), (0, a.jsx)(d.Button, {
-          className: P.cta,
-          style: "1232852290197655573" !== w.id ? es : void 0,
+          className: x.cta,
+          style: "1232852290197655573" !== G.id ? ea : void 0,
           color: d.Button.Colors.CUSTOM,
           fullWidth: !0,
-          onClick: ee ? K : void 0,
+          onClick: $ ? W : void 0,
           size: d.Button.Sizes.NONE,
-          submitting: B,
-          children: x.default.Messages.QUESTS_ACCEPT_QUEST
+          submitting: k,
+          children: M.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
-        className: P.heroAssetWrapper,
+        className: x.heroAssetWrapper,
         style: {
-          color: w.config.colors.secondary
+          color: G.config.colors.secondary
         },
-        children: Y ? (0, a.jsx)(v.QuestsAsset, {
+        children: V ? (0, a.jsx)(v.QuestsAsset, {
           id: "QuestBarContentExpanded_heroAnimated",
           children: e => (0, a.jsx)(f.default, {
             ref: e,
-            autoPlay: !k,
+            autoPlay: !w,
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: P.heroAsset,
+            className: x.heroAsset,
             controls: !1,
             children: (0, a.jsx)("source", {
-              src: et,
-              type: (0, p.getVideoAssetMimeType)(et)
+              src: ee,
+              type: (0, p.getVideoAssetMimeType)(ee)
             })
           })
         }) : (0, a.jsx)(v.QuestsAsset, {
@@ -216,8 +215,8 @@ let y = s.forwardRef(function(e, t) {
           children: e => (0, a.jsx)("img", {
             ref: e,
             alt: "",
-            className: P.heroAsset,
-            src: et
+            className: x.heroAsset,
+            src: ee
           })
         })
       })]
@@ -225,22 +224,22 @@ let y = s.forwardRef(function(e, t) {
   })
 });
 
-function D(e) {
+function y(e) {
   let {
     style: t,
     onClick: n
   } = e;
   return (0, I.useIsEligibleForQuestBarProgressCTA)({
-    location: M.QuestsExperimentLocations.QUESTS_BAR,
+    location: L.QuestsExperimentLocations.QUESTS_BAR,
     autoTrackExposure: !0
   }) ? (0, a.jsx)(d.Button, {
-    className: P.cta,
+    className: x.cta,
     style: t,
     color: d.Button.Colors.CUSTOM,
     fullWidth: !0,
     onClick: n,
     size: d.Button.Sizes.NONE,
-    children: x.default.Messages.QUESTS_GET_THIS_GAME
+    children: M.default.Messages.QUESTS_GET_THIS_GAME
   }) : null
 }
-t.default = y
+t.default = P
