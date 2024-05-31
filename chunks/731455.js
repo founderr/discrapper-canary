@@ -52,7 +52,7 @@ let c = 0,
   I = !0,
   T = -1,
   f = -2;
-(i = o || (o = {}))[i.Clans = -3] = "Clans", i[i.Hub = f] = "Hub", i[i.Communities = T] = "Communities", i[i.Activity = 1] = "Activity", i[i.Music = 2] = "Music", i[i.Television = 3] = "Television", i[i.Science = 5] = "Science", i[i.Education = 6] = "Education";
+(i = o || (o = {}))[i.Quests = -4] = "Quests", i[i.Clans = -3] = "Clans", i[i.Hub = f] = "Hub", i[i.Communities = T] = "Communities", i[i.Activity = 1] = "Activity", i[i.Music = 2] = "Music", i[i.Television = 3] = "Television", i[i.Science = 5] = "Science", i[i.Education = 6] = "Education";
 let S = 1e3,
   h = [1, 2, 3, 5, 6];
 (r = l || (l = {}))[r.GENERAL_CHATTING = 14] = "GENERAL_CHATTING", r[r.GAMING = 1] = "GAMING", r[r.MUSIC = 2] = "MUSIC", r[r.ENTERTAINMENT = 3] = "ENTERTAINMENT", r[r.CREATIVE_ARTS = 4] = "CREATIVE_ARTS", r[r.SCIENCE_AND_TECH = 5] = "SCIENCE_AND_TECH", r[r.EDUCATION = 6] = "EDUCATION", r[r.SPORTS = 7] = "SPORTS", r[r.FASHION_AND_BEAUTY = 8] = "FASHION_AND_BEAUTY", r[r.RELATIONSHIPS_AND_IDENTITY = 9] = "RELATIONSHIPS_AND_IDENTITY", r[r.TRAVEL_AND_FOOD = 10] = "TRAVEL_AND_FOOD", r[r.FITNESS_AND_HEALTH = 11] = "FITNESS_AND_HEALTH", r[r.FINANCE = 12] = "FINANCE", r[r.OTHER = 13] = "OTHER", r[r.EMOJI = 43] = "EMOJI", r[r.BOTS = 49] = "BOTS";
@@ -106,7 +106,7 @@ let p = _.default.getLanguages().filter(e => !m.includes(e.code)).map(e => "en-U
   } : e),
   O = 40,
   C = 20;
-(s = u || (u = {})).GAME_RECOMMENDATIONS = "Game Recommendations", s.SERVER_RECOMMENDATIONS = "Server Recommendations", (a = d || (d = {}))[a.Activity = 0] = "Activity", a[a.Discover = 1] = "Discover", a[a.Education = 2] = "Education", a[a.Music = 3] = "Music", a[a.Science = 4] = "Science", a[a.Stage = 5] = "Stage", a[a.Television = 6] = "Television", a[a.Server = 7] = "Server";
+(s = u || (u = {})).GAME_RECOMMENDATIONS = "Game Recommendations", s.SERVER_RECOMMENDATIONS = "Server Recommendations", (a = d || (d = {}))[a.Activity = 0] = "Activity", a[a.Discover = 1] = "Discover", a[a.Education = 2] = "Education", a[a.Music = 3] = "Music", a[a.Science = 4] = "Science", a[a.Stage = 5] = "Stage", a[a.Television = 6] = "Television", a[a.Server = 7] = "Server", a[a.Quest = 8] = "Quest";
 let R = {
   facebook: {
     presentation: "Facebook",

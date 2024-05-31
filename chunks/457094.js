@@ -386,7 +386,7 @@ let e7 = [{
   isSessionRequired: !0,
   isChatRoute: !0
 }, {
-  path: [eq.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eq.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"), eq.Routes.ACTIVITY, eq.Routes.ACTIVITIES, eq.Routes.ACTIVITIES_HAPPENING_NOW, eq.Routes.ACTIVITY_DETAILS(":applicationId"), eq.Routes.APPLICATION_LIBRARY, eq.Routes.APPLICATION_STORE, eq.Routes.MESSAGE_REQUESTS, eq.Routes.QUEST_HOME, eq.Routes.COLLECTIBLES_SHOP, eq.Routes.COLLECTIBLES_SHOP_FULLSCREEN, eq.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), eq.Routes.GUILD_DISCOVERY, eq.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), eq.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), eq.Routes.GUILD_BOOSTING_MARKETING(":guildId"), eq.Routes.FEATURE(":feature"), eq.Routes.FAMILY_CENTER],
+  path: [eq.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eq.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"), eq.Routes.ACTIVITY, eq.Routes.ACTIVITIES, eq.Routes.ACTIVITIES_HAPPENING_NOW, eq.Routes.ACTIVITY_DETAILS(":applicationId"), eq.Routes.APPLICATION_LIBRARY, eq.Routes.APPLICATION_STORE, eq.Routes.MESSAGE_REQUESTS, eq.Routes.COLLECTIBLES_SHOP, eq.Routes.COLLECTIBLES_SHOP_FULLSCREEN, eq.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), eq.Routes.GUILD_DISCOVERY, eq.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), eq.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), eq.Routes.GUILD_BOOSTING_MARKETING(":guildId"), eq.Routes.FEATURE(":feature"), eq.Routes.FAMILY_CENTER],
   render: e1,
   isSessionRequired: !0,
   isChatRoute: !0
