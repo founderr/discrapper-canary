@@ -21,10 +21,10 @@ t.default = function(e) {
     guildJoinRequest: s,
     guildJoinRequestUser: S,
     onClose: N
-  } = e, m = l.useMemo(() => {
+  } = e, A = l.useMemo(() => {
     var e;
     return null !== (e = s.formResponses) && void 0 !== e ? e : []
-  }, [s.formResponses]), A = t.hasFeature(f.GuildFeatures.CLAN) && s.applicationStatus === d.GuildJoinRequestApplicationStatuses.SUBMITTED;
+  }, [s.formResponses]), m = t.hasFeature(f.GuildFeatures.CLAN) && s.applicationStatus === d.GuildJoinRequestApplicationStatuses.SUBMITTED;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.default, {
       toolbar: (0, a.jsx)(u.default.Icon, {
@@ -50,14 +50,14 @@ t.default = function(e) {
         children: [(0, a.jsx)(T.default, {
           user: S,
           guildId: t.id
-        }), A && (0, a.jsx)(I.default, {
+        }), m && (0, a.jsx)(I.default, {
           joinRequest: s
         })]
       }), (0, a.jsx)("div", {
         className: _.disabledFormRenderer,
         children: (0, a.jsx)(c.default, {
           guildId: t.id,
-          formFields: m,
+          formFields: A,
           user: S
         })
       })]

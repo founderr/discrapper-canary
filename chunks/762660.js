@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   MemberApplicationsListRow: function() {
-    return A
+    return m
   },
   MemberApplicationsListRowPlaceholder: function() {
     return M
@@ -25,7 +25,7 @@ var a = s("735250"),
   S = s("689938"),
   N = s("858347");
 
-function m(e) {
+function A(e) {
   let {
     icon: t,
     onClick: s,
@@ -49,12 +49,12 @@ function m(e) {
   })
 }
 
-function A(e) {
+function m(e) {
   let {
     applicationStatus: t,
     guild: i,
     guildJoinRequest: r,
-    className: A,
+    className: m,
     onClick: M
   } = e, [C, h] = l.useState(null), {
     user: p,
@@ -78,13 +78,13 @@ function A(e) {
         }
       }
     }, [C]),
-    G = async () => {
+    O = async () => {
       await v(r, _.GuildJoinRequestApplicationStatuses.APPROVED)
-    }, O = async () => {
+    }, G = async () => {
       await v(r, _.GuildJoinRequestApplicationStatuses.REJECTED)
     };
   return (0, a.jsxs)(o.Clickable, {
-    className: n()(N.container, A),
+    className: n()(N.container, m),
     onClick: M,
     children: [(0, a.jsx)(o.Avatar, {
       src: P,
@@ -103,14 +103,14 @@ function A(e) {
         color: "header-secondary",
         children: u()(x).format("lll")
       })]
-    }), j && (0, a.jsx)(m, {
+    }), j && (0, a.jsx)(A, {
       icon: E.default,
-      onClick: G,
+      onClick: O,
       submitting: C === _.GuildJoinRequestApplicationStatuses.APPROVED,
       disabled: null != C && C !== _.GuildJoinRequestApplicationStatuses.APPROVED
-    }), j && (0, a.jsx)(m, {
+    }), j && (0, a.jsx)(A, {
       icon: I.default,
-      onClick: O,
+      onClick: G,
       submitting: C === _.GuildJoinRequestApplicationStatuses.REJECTED,
       disabled: null != C && C !== _.GuildJoinRequestApplicationStatuses.REJECTED
     }), (0, a.jsx)(o.Clickable, {

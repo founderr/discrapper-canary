@@ -22,8 +22,8 @@ var l = s("913527"),
   _ = s("709054"),
   S = s("246364"),
   N = s("360328"),
-  m = s("981631"),
-  A = s("689938"),
+  A = s("981631"),
+  m = s("689938"),
   M = s("859663");
 
 function C(e) {
@@ -40,24 +40,24 @@ function C(e) {
   } = l, {
     approveRequest: j,
     rejectRequest: v,
-    submitting: G
-  } = (0, N.useJoinRequestButtonActions)(g, P), O = null === (t = l.actionedByUser) || void 0 === t ? void 0 : t.id, L = (0, n.useStateFromStores)([E.default], () => E.default.getUser(O)), D = (0, n.useStateFromStores)([c.default], () => null != O ? c.default.getMember(g, O) : null, [O, g]), b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, F = (0, a.jsx)(f.default, {
+    submitting: O
+  } = (0, N.useJoinRequestButtonActions)(g, P), G = null === (t = l.actionedByUser) || void 0 === t ? void 0 : t.id, L = (0, n.useStateFromStores)([E.default], () => E.default.getUser(G)), D = (0, n.useStateFromStores)([c.default], () => null != G ? c.default.getMember(g, G) : null, [G, g]), b = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, F = (0, a.jsx)(f.default, {
     width: 24,
     height: 24,
     className: M.icon
   });
-  l.applicationStatus === S.GuildJoinRequestApplicationStatuses.APPROVED ? (b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED, F = (0, a.jsx)(I.default, {
+  l.applicationStatus === S.GuildJoinRequestApplicationStatuses.APPROVED ? (b = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED, F = (0, a.jsx)(I.default, {
     width: 24,
     height: 24,
     className: M.iconApproved,
     backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
-  })) : l.applicationStatus === S.GuildJoinRequestApplicationStatuses.REJECTED && (b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, F = (0, a.jsx)(T.default, {
+  })) : l.applicationStatus === S.GuildJoinRequestApplicationStatuses.REJECTED && (b = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, F = (0, a.jsx)(T.default, {
     width: 24,
     height: 24,
     className: M.iconRejected,
     backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
   }));
-  let B = null != L && null != x ? A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
+  let B = null != L && null != x ? m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
     date: i()(_.default.extractTimestamp(x)).format("ll"),
     usernameHook: function() {
       var e;
@@ -67,8 +67,8 @@ function C(e) {
           userId: L.id,
           guildId: g,
           analyticsLocation: {
-            section: m.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-            object: m.AnalyticsObjects.ACTIONED_BY_USER
+            section: A.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+            object: A.AnalyticsObjects.ACTIONED_BY_USER
           }
         }),
         tag: "div",
@@ -104,14 +104,14 @@ function C(e) {
           className: M.buttons,
           children: [(0, a.jsx)(u.Button, {
             color: u.Button.Colors.GREEN,
-            submitting: G,
+            submitting: O,
             onClick: j,
-            children: A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
+            children: m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
           }), (0, a.jsx)(u.Button, {
             color: u.Button.Colors.RED,
             onClick: v,
-            disabled: G,
-            children: A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
+            disabled: O,
+            children: m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
           })]
         }), (0, a.jsx)(u.Clickable, {
           onClick: e => {

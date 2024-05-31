@@ -1,23 +1,23 @@
 "use strict";
-s.r(t), s.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return I
   }
 });
-var l = s("735250");
-s("470079");
-var a = s("481060"),
-  i = s("493683"),
-  n = s("239091"),
-  r = s("194359"),
-  o = s("906732"),
-  u = s("726521"),
-  d = s("621113"),
-  c = s("705556"),
-  f = s("30556"),
-  S = s("496206"),
-  E = s("981631"),
-  m = s("590106");
+var s = l("735250");
+l("470079");
+var a = l("481060"),
+  i = l("493683"),
+  n = l("239091"),
+  r = l("194359"),
+  o = l("906732"),
+  u = l("726521"),
+  d = l("621113"),
+  c = l("705556"),
+  f = l("30556"),
+  S = l("496206"),
+  E = l("981631"),
+  m = l("590106");
 
 function I(e) {
   let {
@@ -28,33 +28,33 @@ function I(e) {
     canDM: g,
     relationshipType: T,
     originalFriendingEnabled: A = !1,
-    trackUserProfileAction: x,
-    onClose: U
+    trackUserProfileAction: U,
+    onClose: p
   } = e, {
-    newestAnalyticsLocation: p
+    newestAnalyticsLocation: x
   } = (0, o.default)();
 
   function N(e) {
-    x({
+    U({
       action: "SEND_MESSAGE"
-    }), i.default.openPrivateChannel(t.id, !1, !1, e), U()
+    }), i.default.openPrivateChannel(t.id, !1, !1, e), p()
   }
 
   function C(e) {
-    x({
+    U({
       action: "PRESS_OPTIONS"
     }), (0, n.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await s.e("29136").then(s.bind(s, "193646"));
-      return s => (0, l.jsx)(e, {
-        ...s,
+      } = await l.e("29136").then(l.bind(l, "193646"));
+      return l => (0, s.jsx)(e, {
+        ...l,
         originalFriendingEnabled: A,
         relationshipType: T,
         onRemoveFriend: h,
         onBlock: M,
         onReport: j,
-        onCopyId: () => x({
+        onCopyId: () => U({
           action: "COPY_USER_ID"
         }),
         onMessage: () => N("User Profile Modal Header Buttons - Context Menu"),
@@ -65,91 +65,91 @@ function I(e) {
   }
 
   function h() {
-    x({
+    U({
       action: "REMOVE_FRIEND"
     }), r.default.removeFriend(t.id, {
-      location: p
+      location: x
     })
   }
 
   function R() {
     try {
-      x({
+      U({
         action: "SEND_FRIEND_REQUEST"
       }), r.default.addRelationship({
         userId: t.id,
         context: {
-          location: p
+          location: x
         },
         type: void 0,
         friendToken: v
       })
     } catch (e) {
-      U()
+      p()
     }
   }
 
   function P() {
-    x({
+    U({
       action: "IGNORE_FRIEND_REQUEST"
     }), r.default.cancelFriendRequest(t.id, {
-      location: p
+      location: x
     })
   }
 
   function M() {
     try {
-      x({
+      U({
         action: "BLOCK"
       }), r.default.addRelationship({
         userId: t.id,
         context: {
-          location: p
+          location: x
         },
         type: E.RelationshipTypes.BLOCKED
       })
     } catch (e) {
-      U()
+      p()
     }
   }
 
   function j() {
-    x({
+    U({
       action: "REPORT"
     }), (0, u.showReportModalForUser)(t, "@me" === _ ? void 0 : _)
   }
-  return (0, l.jsx)("div", {
+  return (0, s.jsx)("div", {
     className: m.buttons,
-    children: A ? (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(S.default, {
+    children: A ? (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(S.default, {
         user: t,
         isCurrentUser: I,
         relationshipType: T,
         onAddFriend: R,
         onIgnoreFriend: P,
         onSendMessage: () => N("User Profile Modal Header Buttons - Send Message Button")
-      }), I && (0, l.jsx)(c.default, {
+      }), I && (0, s.jsx)(c.default, {
         user: t,
         guildId: _,
-        onClose: U
-      }), I || t.isNonUserBot() ? null : (0, l.jsx)(a.Clickable, {
+        onClose: p
+      }), I || t.isNonUserBot() ? null : (0, s.jsx)(a.Clickable, {
         focusProps: {
           offset: {
             left: 8
           }
         },
         onClick: C,
-        children: (0, l.jsx)(d.default, {
+        children: (0, s.jsx)(d.default, {
           className: m.additionalActionsIcon
         })
       })]
-    }) : g ? (0, l.jsx)(f.default, {
+    }) : g ? (0, s.jsx)(f.default, {
       user: t,
-      onClose: U
-    }) : (0, l.jsx)(c.default, {
+      onClose: p
+    }) : (0, s.jsx)(c.default, {
       user: t,
       guildId: _,
-      onClose: U
+      onClose: p
     })
   })
 }

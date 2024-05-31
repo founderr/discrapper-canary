@@ -35,7 +35,7 @@ function c(e) {
     }
   }, [E, t.joinRequestId, I, s]);
   return (0, a.jsx)(n.Button, {
-    color: n.Button.Colors.GREEN,
+    color: n.Button.Colors.BRAND,
     submitting: s,
     onClick: T,
     children: d.default.Messages.CLAN_DM_APPLICANT

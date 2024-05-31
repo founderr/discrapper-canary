@@ -740,7 +740,7 @@ class e5 extends l.PureComponent {
     })
   }
 }
-let e9 = (0, I.default)(e5);
+let e6 = (0, I.default)(e5);
 t.default = l.memo(function(e) {
   var t;
   let {
@@ -791,7 +791,7 @@ t.default = l.memo(function(e) {
     })
   }, [null == u ? void 0 : u.id, eu, ea, el]);
   let ec = (0, p.useHasAnyModalOpen)();
-  return (0, a.jsx)(e9, {
+  return (0, a.jsx)(e6, {
     guildId: null == u ? void 0 : u.guild_id,
     channelId: r,
     channel: u,

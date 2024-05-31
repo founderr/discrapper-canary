@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("223312"),
   S = s("571728"),
   N = s("572940"),
-  m = s("80487"),
-  A = s("146463"),
+  A = s("80487"),
+  m = s("146463"),
   M = s("981631"),
   C = s("689938"),
   h = s("134040");
@@ -74,10 +74,10 @@ function x(e) {
     guildId: d
   }), v = (0, f.useSelectedGuildJoinRequest)({
     guildId: d
-  }), G = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
+  }), O = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
     guildId: d
   })) && void 0 !== t ? t : 0, {
-    guildJoinRequests: O
+    guildJoinRequests: G
   } = (0, _.useSortedMemberApplications)({
     guildId: d,
     applicationStatus: "REVIEW_APPLICATION" === g ? E.GuildJoinRequestApplicationStatuses.SUBMITTED : g,
@@ -86,18 +86,18 @@ function x(e) {
     fetchNextPage: L
   } = (0, I.usePaginatedMemberApplications)({
     guildId: d,
-    guildJoinRequests: O
+    guildJoinRequests: G
   }), D = l.useRef(!1);
   !D.current && (D.current = !0, L(j, "REVIEW_APPLICATION" === g ? E.GuildJoinRequestApplicationStatuses.SUBMITTED : g));
   let b = l.useRef(!1);
   l.useEffect(() => {
     b.current = !0
   }, [j, g]), l.useEffect(() => {
-    if (b.current && 0 !== O.length && "REVIEW_APPLICATION" !== g) {
+    if (b.current && 0 !== G.length && "REVIEW_APPLICATION" !== g) {
       var e;
-      b.current = !1, c.default.setSelectedGuildJoinRequest(d, O[0]), null === (e = x.current) || void 0 === e || e.scrollToTop()
+      b.current = !1, c.default.setSelectedGuildJoinRequest(d, G[0]), null === (e = x.current) || void 0 === e || e.scrollToTop()
     }
-  }, [d, O, v, g]);
+  }, [d, G, v, g]);
   let F = l.useCallback(async e => {
       if ("REVIEW_APPLICATION" !== g) j !== e && (c.default.setSelectedSortOrder(d, e), await L(e, g))
     }, [g, j, d, L]),
@@ -117,10 +117,10 @@ function x(e) {
     U = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(d)),
     J = null !== (s = null == U ? void 0 : U.hasFeature(M.GuildFeatures.CLAN)) && void 0 !== s && s;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(m.default, {
+    children: [(0, a.jsx)(A.default, {
       currentTab: g,
       onTabItemSelect: B,
-      pendingGuildJoinRequestsTotal: G,
+      pendingGuildJoinRequestsTotal: O,
       showSetupTab: J
     }), (0, a.jsx)("div", {
       className: h.content,
@@ -147,9 +147,9 @@ function x(e) {
           variant: "text-xs/normal",
           color: "header-secondary",
           children: C.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
-        }), (0, a.jsx)(A.default, {
+        }), (0, a.jsx)(m.default, {
           applicationStatus: g,
-          guildJoinRequests: O,
+          guildJoinRequests: G,
           guildId: d,
           onScroll: V,
           listRef: x

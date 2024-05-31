@@ -24,10 +24,10 @@ t.default = function(e) {
     guildId: t
   }), {
     user: N
-  } = null != S ? S : {}, m = l.useMemo(() => null != N ? new o.default(N) : null, [N]), A = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
+  } = null != S ? S : {}, A = l.useMemo(() => null != N ? new o.default(N) : null, [N]), m = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]);
   return (0, u.usePageTitle)({
     subsection: R.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
-    location: null == A ? void 0 : A.name
+    location: null == m ? void 0 : m.name
   }), l.useEffect(() => {
     E.default.fetchVerificationForm(t)
   }, [t]), (0, a.jsxs)(r.AnalyticsLocationProvider, {
@@ -37,15 +37,15 @@ t.default = function(e) {
       children: (0, a.jsx)(T.default, {
         guildId: t
       })
-    }), null != S && null != A && null != m && (0, a.jsxs)(a.Fragment, {
+    }), null != S && null != m && null != A && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: _.sidebarSeparator
       }), (0, a.jsx)("section", {
         className: _.sidebar,
         children: (0, a.jsx)(f.default, {
-          guild: A,
+          guild: m,
           guildJoinRequest: S,
-          guildJoinRequestUser: m,
+          guildJoinRequestUser: A,
           onClose: () => c.default.setSelectedGuildJoinRequest(t, null)
         })
       })]
