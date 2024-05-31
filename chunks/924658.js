@@ -528,5 +528,8 @@ e.exports = Object.freeze({
   CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL: "Join Wumpus Feedback Squad server",
   CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP: "You cannot apply to Guilds right now",
   CLAN_DISCOVERY_APPLICATION_MAX_MEMBERS: "This Guild is at maximum capacity. You may want to apply for more Guilds.",
-  CLAN_CARD_BADGE_APPLIED: "Applied"
+  CLAN_CARD_BADGE_APPLIED: "Applied",
+  QUESTS_MOBILE_EMBED_UNKNOWN_TITLE: "This is an invalid quest",
+  QUESTS_MOBILE_EMBED_UNKNOWN_BODY: "Check to confirm you're using a valid quest URL",
+  QUESTS_MOBILE_EMBED_UNSUPPORTED_TITLE: "This Quest is not available on mobile"
 })
