@@ -73,7 +73,7 @@ let I = (e, t) => {
       })
     })
   }),
-  S = e => (0, o.match)(e).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, () => E.userPopoutOverlayBackground).with(c.UserProfileTypes.MODAL, () => E.userProfileModalOverlayBackground).with(c.UserProfileTypes.PANEL, () => E.userPanelOverlayBackground).with(c.UserProfileTypes.BITE_SIZE, () => E.biteSizeOverlayBackground).with(c.UserProfileTypes.FULL_SIZE, () => E.fullSizeOverlayBackground).otherwise(() => E.overlayBackground);
+  S = e => (0, o.match)(e).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, () => E.userPopoutOverlayBackground).with(c.UserProfileTypes.MODAL, () => E.userProfileModalOverlayBackground).with(c.UserProfileTypes.BITE_SIZE, () => E.biteSizeOverlayBackground).with(c.UserProfileTypes.FULL_SIZE, () => E.fullSizeOverlayBackground).otherwise(() => E.overlayBackground);
 t.default = Object.assign(f, {
   Overlay: function(e) {
     let {
