@@ -24,17 +24,17 @@ function d(e) {
     required: S,
     value: C
   } = e, [v, E] = a.useState(null != C ? C : ""), {
-    state: N,
-    executeStateUpdate: h,
+    state: h,
+    executeStateUpdate: N,
     error: g
   } = (0, o.useComponentState)(e, null != C ? {
     type: n,
     value: C
-  } : void 0), T = (0, s.useIsFirstTextInputInModal)(e.id);
+  } : void 0), y = (0, s.useIsFirstTextInputInModal)(e.id);
   a.useEffect(() => {
-    (null == N ? void 0 : N.type) === n && E(N.value)
-  }, [n, N]);
-  let y = {
+    (null == h ? void 0 : h.type) === n && E(h.value)
+  }, [n, h]);
+  let T = {
     name: c,
     value: v,
     placeholder: p,
@@ -42,22 +42,22 @@ function d(e) {
     maxLength: f,
     required: S,
     onChange: e => {
-      E(e), h({
+      E(e), N({
         type: n,
         value: e
       })
     },
-    autoFocus: T
+    autoFocus: y
   };
   switch (d) {
     case i.TextComponentStyle.SMALL:
       t = (0, l.jsx)(u.TextInput, {
-        ...y
+        ...T
       });
       break;
     case i.TextComponentStyle.PARAGRAPH:
       t = (0, l.jsx)(u.TextArea, {
-        ...y
+        ...T
       })
   }
   return (0, l.jsx)(u.FormItem, {

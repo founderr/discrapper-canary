@@ -42,8 +42,8 @@ var a = s("735250"),
   F = s("611273"),
   B = s("328756");
 let k = (0, p.uid)(),
-  H = (0, p.uid)(),
   w = (0, p.uid)(),
+  H = (0, p.uid)(),
   Y = o().debounce(e => {
     (0, E.setSaturation)(e)
   }, 250),
@@ -132,13 +132,13 @@ function z() {
       className: F.marginBottom8,
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
     }), (0, a.jsx)(u.FormText, {
-      id: H,
+      id: w,
       type: u.FormText.Types.DESCRIPTION,
       className: F.marginBottom20,
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
     }), (0, a.jsx)(u.Slider, {
       "aria-labelledby": k,
-      "aria-describedby": H,
+      "aria-describedby": w,
       markers: b.Accessibility.SATURATION_INCREMENTS,
       equidistant: !0,
       stickToMarkers: !0,
@@ -408,7 +408,7 @@ function es() {
     }), (0, a.jsxs)(u.FormItem, {
       className: F.marginBottom20,
       children: [(0, a.jsx)(u.FormTitle, {
-        id: w,
+        id: H,
         className: F.marginBottom20,
         children: y.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL
       }), (0, a.jsx)("div", {
@@ -452,7 +452,7 @@ function es() {
         }) : 1 === e ? (0, a.jsx)("span", {
           children: "x1.0"
         }) : e % 1 == 0 ? "" : void 0,
-        "aria-labelledby": w
+        "aria-labelledby": H
       })]
     })]
   }) : null

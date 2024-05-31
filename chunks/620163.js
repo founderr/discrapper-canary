@@ -43,8 +43,8 @@ var n = s("990547"),
   F = s("626135"),
   B = s("49012"),
   k = s("358085"),
-  H = s("392735"),
-  w = s("61160"),
+  w = s("392735"),
+  H = s("61160"),
   Y = s("604227"),
   V = s("38915"),
   W = s("498639"),
@@ -335,7 +335,7 @@ let ej = () => {
         ariaLabel: eP.default.Messages.AUTH_SESSIONS,
         element: eN.default,
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.AUTH_SESSIONS_NEW],
-        predicate: () => H.default.getCurrentConfig({
+        predicate: () => w.default.getCurrentConfig({
           location: "9f7d84_1"
         }, {
           autoTrackExposure: !1
@@ -521,7 +521,7 @@ let ej = () => {
         searchableTitle: "Speed Test",
         label: "Speed Test",
         element: Q.default,
-        predicate: () => D.default.isSupported() && w.default.getCurrentConfig({
+        predicate: () => D.default.isSupported() && H.default.getCurrentConfig({
           location: "9f7d84_2"
         }).showSettings
       },

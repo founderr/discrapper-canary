@@ -26,18 +26,18 @@ function C(e) {
     shouldHideMediaOptions: C,
     shouldRedactExplicitContent: v,
     gifAutoPlay: E,
-    getGifFavButton: N,
-    getOnMediaItemContextMenu: h
+    getGifFavButton: h,
+    getOnMediaItemContextMenu: N
   } = (0, o.useMessageAccessoriesComponentContext)();
   if (null == t || null == n) return null;
   let g = e.items.map(e => (0, p.carouselAssetFromMediaItem)(e.media, C, v)).filter(m.isNotNullish),
-    T = {
+    y = {
       source: "Media Mosaic",
       guild_id: n.guild_id,
       channel_id: n.id,
       channel_type: n.type
     },
-    y = g.length > 1 ? (0, p.createMediaOnClickOverrides)(g, T) : {};
+    T = g.length > 1 ? (0, p.createMediaOnClickOverrides)(g, y) : {};
 
   function I(e, t) {
     let n = e.originalItem;
@@ -45,7 +45,7 @@ function C(e) {
   }
   let x = e.items.map(e => {
     let n = e.media,
-      l = null == h ? void 0 : h(n),
+      l = null == N ? void 0 : N(n),
       a = {
         message: t,
         item: {
@@ -67,7 +67,7 @@ function C(e) {
         renderPlaintextFilePreview: S.NOOP,
         renderGenericFileComponent: S.NOOP,
         renderMosaicItemFooter: S.NOOP,
-        gifFavoriteButton: N(n),
+        gifFavoriteButton: h(n),
         onPlay: (e, t, n) => {},
         canRemoveItem: !1,
         onRemoveItem: S.NOOP
@@ -76,7 +76,7 @@ function C(e) {
         proxyURL: n.proxyUrl,
         url: n.url
       });
-    return u in y && (a.onClick = y[u]), a
+    return u in T && (a.onClick = T[u]), a
   });
   return (0, l.jsx)("div", {
     children: (0, l.jsx)(d.default, {

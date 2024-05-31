@@ -44,10 +44,10 @@ function E(e) {
     defaultValues: o
   } = e, {
     type: E,
-    placeholder: N,
-    maxValues: h,
+    placeholder: h,
+    maxValues: N,
     disabled: g
-  } = t, [T, y] = i.useState(!1), [I, x] = i.useState(!1), [O, j] = i.useState(new Map(null == o ? void 0 : o.map(e => [e.value, e]))), [L, _] = i.useState(new Set(O.keys())), [M, R] = i.useState(() => (null != o ? o : []).map(e => e.value)), [A, b] = i.useState(0);
+  } = t, [y, T] = i.useState(!1), [I, x] = i.useState(!1), [O, j] = i.useState(new Map(null == o ? void 0 : o.map(e => [e.value, e]))), [L, _] = i.useState(new Set(O.keys())), [M, R] = i.useState(() => (null != o ? o : []).map(e => e.value)), [A, b] = i.useState(0);
   i.useEffect(() => {
     let e = (null != o ? o : []).map(e => e.value);
     if (e.every(e => M.includes(e)) && M.every(t => e.includes(t))) return;
@@ -58,13 +58,13 @@ function E(e) {
   let {
     state: U,
     executeStateUpdate: P,
-    visualState: k,
-    isDisabled: w,
+    visualState: w,
+    isDisabled: k,
     error: D
   } = (0, p.useComponentState)(t, {
     type: E,
     selectedOptions: Array.from(O.values())
-  }), G = k === m.ActionComponentState.LOADING;
+  }), G = w === m.ActionComponentState.LOADING;
   i.useEffect(() => {
     if ((null == U ? void 0 : U.type) === d.ComponentType.USER_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.ROLE_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.MENTIONABLE_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.CHANNEL_SELECT) {
       let e = new Map(U.selectedOptions.map(e => [e.value, e]));
@@ -78,18 +78,18 @@ function E(e) {
     }) && _(new Set(O.keys()))
   }, [P, E, O]);
   i.useEffect(() => {
-    if (!T && !I) !(O.size === L.size && Array.from(O.keys()).every(e => L.has(e))) && F()
-  }, [T, I, L, O, F]);
-  let V = 0 === O.size || T,
+    if (!y && !I) !(O.size === L.size && Array.from(O.keys()).every(e => L.has(e))) && F()
+  }, [y, I, L, O, F]);
+  let V = 0 === O.size || y,
     B = {
-      isDisabled: g || w,
+      isDisabled: g || k,
       wrapperClassName: S.select,
       options: e => new Promise(t => {
         t(n(e))
       }),
-      placeholder: V ? null != N ? N : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
-      onClose: () => y(!1),
-      onOpen: () => y(!0),
+      placeholder: V ? null != h ? h : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
+      onClose: () => T(!1),
+      onOpen: () => T(!0),
       onBlur: () => x(!1),
       maxVisibleItems: 5,
       optionClassName: S.__invalid_selectOption,
@@ -107,11 +107,11 @@ function E(e) {
   return (0, u.jsxs)(i.Fragment, {
     children: [(0, u.jsxs)("div", {
       className: S.container,
-      children: [h > 1 ? (0, u.jsx)(r.SearchableSelect, {
+      children: [N > 1 ? (0, u.jsx)(r.SearchableSelect, {
         className: S.badges,
         value: Array.from(O.values()),
         onChange: e => {
-          !T && x(!0), j(new Map(e.map(e => [e.value, e])))
+          !y && x(!0), j(new Map(e.map(e => [e.value, e])))
         },
         multi: !0,
         inputClassNames: s()({

@@ -58,7 +58,7 @@ let B = o()((0, f.getDefaultLayoutContent)()).filter(e => e.description !== b.de
   k = d.default.connectStores([v.default], () => ({
     theme: v.default.theme
   }))(A.default);
-class H extends n.PureComponent {
+class w extends n.PureComponent {
   renderMessage() {
     let {
       keybind: e
@@ -176,7 +176,7 @@ class H extends n.PureComponent {
     })
   }
 }
-class w extends n.PureComponent {
+class H extends n.PureComponent {
   componentDidMount() {
     S.default.enableAll(!1)
   }
@@ -269,7 +269,7 @@ class w extends n.PureComponent {
   renderKeybinds(e) {
     return e.map(e => (0, a.jsx)("div", {
       className: j.row,
-      children: (0, a.jsx)(H, {
+      children: (0, a.jsx)(w, {
         keybind: e,
         keybindDescriptions: this.keybindDescriptions,
         keybindActionTypes: this.keybindActionTypes
@@ -392,7 +392,7 @@ function Y() {
     t = (0, d.useStateFromStores)([N.default], () => (0, I.default)(N.default)),
     s = (0, d.useStateFromStores)([C.default], () => C.default.isSupported()),
     n = (0, g.useEnableClips)();
-  return (0, a.jsx)(w, {
+  return (0, a.jsx)(H, {
     keybinds: e,
     canGoLive: t,
     overlaySupported: s,

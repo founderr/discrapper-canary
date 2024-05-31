@@ -104,47 +104,47 @@ function E(e) {
     placeholder: i,
     maxValues: s,
     minValues: E,
-    disabled: N
-  } = e, h = a.useMemo(() => n.filter(e => e.default).map(e => e.value), [n]), {
+    disabled: h
+  } = e, N = a.useMemo(() => n.filter(e => e.default).map(e => e.value), [n]), {
     state: g,
-    executeStateUpdate: T,
-    visualState: y,
+    executeStateUpdate: y,
+    visualState: T,
     isDisabled: I,
     error: x
   } = (0, c.useComponentState)(e, {
     type: t,
-    values: h
-  }), O = s > 1, j = y === p.ActionComponentState.LOADING, [L, _] = a.useState(!1), [M, R] = a.useState(() => new Set(n.filter(e => e.default).map(e => e.value))), [A, b] = a.useState(M), U = a.useMemo(() => n.some(e => null != e.emoji), [n]);
+    values: N
+  }), O = s > 1, j = T === p.ActionComponentState.LOADING, [L, _] = a.useState(!1), [M, R] = a.useState(() => new Set(n.filter(e => e.default).map(e => e.value))), [A, b] = a.useState(M), U = a.useMemo(() => n.some(e => null != e.emoji), [n]);
   a.useEffect(() => {
     if ((null == g ? void 0 : g.type) === r.ComponentType.STRING_SELECT) {
       let e = new Set(g.values);
       R(e), b(e)
     } else {
-      let e = new Set(h);
+      let e = new Set(N);
       R(e), b(e)
     }
-  }, [u, h, g]);
+  }, [u, N, g]);
   let P = a.useCallback(() => {
-    A !== M && T({
+    A !== M && y({
       type: r.ComponentType.STRING_SELECT,
       values: Array.from(M)
     }) && b(M)
-  }, [M, A, b, T]);
+  }, [M, A, b, y]);
   a.useEffect(() => {
     if (!L) !(M.size === A.size && Array.from(A).every(e => M.has(e))) && P()
   }, [L, M, A, P]);
-  let k = o.singleSelect;
-  O ? k = o.multiSelect : 0 === E && (k = o.toggleSelect);
-  let w = (0, o.useVariableSelect)({
+  let w = o.singleSelect;
+  O ? w = o.multiSelect : 0 === E && (w = o.toggleSelect);
+  let k = (0, o.useVariableSelect)({
     value: M,
     onChange: e => R(e),
-    onSelectInteraction: k
+    onSelectInteraction: w
   });
   return (0, l.jsxs)(a.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: f.container,
       children: [(0, l.jsx)(o.Select, {
-        isDisabled: N || I,
+        isDisabled: h || I,
         className: f.select,
         options: n.map(e => ({
           ...e,
@@ -166,7 +166,7 @@ function E(e) {
         }) : (0, l.jsx)(C, {
           ...e[0]
         }),
-        ...w
+        ...k
       }), j ? (0, l.jsx)("div", {
         className: f.__invalid_loading,
         children: (0, l.jsx)(o.Dots, {

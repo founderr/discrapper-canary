@@ -20,11 +20,11 @@ var l = n("735250"),
   C = n("241820"),
   v = n("176278"),
   E = n("970184"),
-  N = n("280501"),
-  h = n("811654"),
+  h = n("280501"),
+  N = n("811654"),
   g = n("344991"),
-  T = n("981631"),
-  y = n("879565");
+  y = n("981631"),
+  T = n("879565");
 
 function I(e) {
   var t;
@@ -32,14 +32,14 @@ function I(e) {
     I = null == n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.getChannelId(),
     x = c.default.getChannel(I),
     O = p.default.getGuild(null == x ? void 0 : x.getGuildId()),
-    j = (0, d.default)(null == O ? void 0 : O.id, h.MIN_REREQUEST_TIME),
-    L = a.useMemo(() => (0, h.getSnowflakeSelectDefaultValues)(e.defaultValues, null == O ? void 0 : O.id), [e.defaultValues, O]);
+    j = (0, d.default)(null == O ? void 0 : O.id, N.MIN_REREQUEST_TIME),
+    L = a.useMemo(() => (0, N.getSnowflakeSelectDefaultValues)(e.defaultValues, null == O ? void 0 : O.id), [e.defaultValues, O]);
   return (0, l.jsx)(g.default, {
     selectActionComponent: e,
-    queryOptions: t => (0, h.queryMentionables)(e.type, t, I),
+    queryOptions: t => (0, N.queryMentionables)(e.type, t, I),
     renderIcon: (e, t) => {
       let n = t === g.SelectIconSize.PILL_ICON_SIZE;
-      if ((null == e ? void 0 : e.type) === N.SelectOptionType.USER) {
+      if ((null == e ? void 0 : e.type) === h.SelectOptionType.USER) {
         let a = f.default.getUser(e.value);
         if (null == a) return;
         return (0, l.jsx)(i.Avatar, {
@@ -49,7 +49,7 @@ function I(e) {
           "aria-hidden": !0
         })
       }
-      if ((null == e ? void 0 : e.type) === N.SelectOptionType.ROLE) {
+      if ((null == e ? void 0 : e.type) === h.SelectOptionType.ROLE) {
         var a;
         let n = null != O ? p.default.getRole(O.id, e.value) : void 0;
         if (null == n || null == O) return;
@@ -57,7 +57,7 @@ function I(e) {
         return null != i ? (0, l.jsx)(v.default, {
           ...i
         }) : (0, l.jsx)(C.default, {
-          color: null !== (a = n.colorString) && void 0 !== a ? a : (0, u.int2hex)(T.DEFAULT_ROLE_COLOR),
+          color: null !== (a = n.colorString) && void 0 !== a ? a : (0, u.int2hex)(y.DEFAULT_ROLE_COLOR),
           height: t,
           width: t
         })
@@ -65,35 +65,35 @@ function I(e) {
     },
     renderOptionLabel: e => {
       let t = null;
-      if (e.type === N.SelectOptionType.USER) {
+      if (e.type === h.SelectOptionType.USER) {
         let n = f.default.getUser(e.value);
         null != n && (t = (0, l.jsx)(o.default, {
-          className: y.tag,
-          usernameClass: y.username,
-          discriminatorClass: y.discriminator,
-          botClass: y.bot,
+          className: T.tag,
+          usernameClass: T.username,
+          discriminatorClass: T.discriminator,
+          botClass: T.bot,
           user: n,
           forceUsername: !0
         }))
-      } else if (e.type === N.SelectOptionType.ROLE) {
+      } else if (e.type === h.SelectOptionType.ROLE) {
         let n = null != O ? p.default.getRole(O.id, e.value) : void 0,
           a = null == n ? null : null == j ? void 0 : j[n.id];
         null != a && (t = (0, l.jsxs)("div", {
-          className: y.roleCountContainer,
+          className: T.roleCountContainer,
           children: [(0, l.jsx)(S.default, {
-            className: y.roleCountIcon,
+            className: T.roleCountIcon,
             height: 18,
             width: 18
           }), (0, l.jsx)("span", {
-            className: y.roleCountText,
+            className: T.roleCountText,
             children: a
           })]
         }))
       }
       return (0, l.jsxs)("span", {
-        className: y.label,
+        className: T.label,
         children: [(0, l.jsx)("span", {
-          className: y.labelText,
+          className: T.labelText,
           children: e.label
         }), t]
       })

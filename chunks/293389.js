@@ -106,7 +106,7 @@ function B(e) {
     u.default.toggleDetection(f)
   }
 
-  function H() {
+  function w() {
     if (R) return;
     let e = null != f.id ? T.default.getDetectableGame(f.id) : null;
     O.default.track(v.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
@@ -175,7 +175,7 @@ function B(e) {
           return (0, a.jsx)(d.Clickable, {
             "aria-label": L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
             className: D.toggleIcon,
-            onClick: H,
+            onClick: w,
             onMouseEnter: t,
             onMouseLeave: s,
             children: (0, a.jsx)(h.default, {
@@ -286,7 +286,7 @@ function k() {
   })
 }
 
-function H(e) {
+function w(e) {
   let {
     children: t
   } = e;
@@ -300,7 +300,7 @@ function H(e) {
     }), t]
   })
 }
-let w = (0, R.cachedFunction)(function() {
+let H = (0, R.cachedFunction)(function() {
   for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
   return new Set(t.map(e => e.exePath))
 });
@@ -313,7 +313,7 @@ t.default = function(e) {
     overrideExePaths: u
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     runningGame: S.default.getVisibleGame(),
-    overrideExePaths: w(...S.default.getOverrides())
+    overrideExePaths: H(...S.default.getOverrides())
   }));
   return n.useEffect(() => ((0, E.watchCandidateGames)(), E.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",
@@ -346,7 +346,7 @@ t.default = function(e) {
           children: L.default.Messages.SETTINGS_GAMES_ADD_GAME
         })
       })]
-    }), 0 === l.length ? (0, a.jsx)(H, {
+    }), 0 === l.length ? (0, a.jsx)(w, {
       children: (0, a.jsx)(f.EmptyStateText, {
         children: L.default.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })

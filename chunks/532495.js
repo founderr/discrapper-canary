@@ -46,8 +46,8 @@ function j() {
     B = (0, i.useStateFromStores)([R.default], () => R.default.getUserProfile(F.id)),
     {
       pendingAvatar: k,
-      pendingGlobalName: H,
-      pendingBanner: w,
+      pendingGlobalName: w,
+      pendingBanner: H,
       pendingBio: Y,
       pendingPronouns: V,
       pendingAccentColor: W,
@@ -64,7 +64,7 @@ function j() {
     Q = (0, S.useGuildAutomodProfileQuarantineErrors)(),
     q = D.default.canUsePremiumProfileCustomization(F),
     Z = (0, E.showRemoveAvatar)(k, F.avatar),
-    X = (0, E.showRemoveBanner)(w, null == B ? void 0 : B.banner),
+    X = (0, E.showRemoveBanner)(H, null == B ? void 0 : B.banner),
     J = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
     location: J + " auto on",
@@ -89,7 +89,7 @@ function j() {
       placeholder: F.username,
       errors: et,
       currentGlobalName: F.globalName,
-      pendingGlobalName: H,
+      pendingGlobalName: w,
       onGlobalNameChange: r.setPendingGlobalNameName
     }), (0, a.jsx)(A.default, {
       sectionTitle: P.default.Messages.USER_SETTINGS_PRONOUNS,

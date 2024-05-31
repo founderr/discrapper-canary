@@ -101,7 +101,7 @@ function D() {
       value: O.ApplicationStreamResolutions.RESOLUTION_SOURCE,
       label: x.default.Messages.SCREENSHARE_SOURCE
     }], [F]),
-    H = n.useMemo(() => [{
+    w = n.useMemo(() => [{
       value: O.ApplicationStreamFPS.FPS_15,
       label: x.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: O.ApplicationStreamFPS.FPS_15
@@ -117,7 +117,7 @@ function D() {
         fps: O.ApplicationStreamFPS.FPS_60
       })
     }], [F]),
-    w = n.useCallback(e => {
+    H = n.useCallback(e => {
       d.default.setKeybind({
         ...j,
         shortcut: e
@@ -210,7 +210,7 @@ function D() {
         title: x.default.Messages.CLIPS_SETTINGS_FRAMERATE,
         note: x.default.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
         value: P.frameRate,
-        options: H
+        options: w
       }), (0, a.jsx)(C.InputItem, {
         className: v.formItem,
         title: x.default.Messages.CLIPS_SETTINGS_KEYBIND,
@@ -219,7 +219,7 @@ function D() {
           className: M.keyRecorder,
           children: (0, a.jsx)(c.default, {
             defaultValue: j.shortcut,
-            onChange: w
+            onChange: H
           })
         })
       })]

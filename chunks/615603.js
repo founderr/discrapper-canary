@@ -127,14 +127,14 @@ t.default = function(e) {
       useReducedMotion: M
     }, t));
     return e
-  }, [B, M]), H = null != L, w = n.useMemo(() => P.find(e => e.isAvailable()), [P]);
+  }, [B, M]), w = null != L, H = n.useMemo(() => P.find(e => e.isAvailable()), [P]);
   if (0 === P.length) return null;
   let Y = P.length;
-  return t = F ? 1 === Y && H ? C.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
+  return t = F ? 1 === Y && w ? C.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
     numUnappliedGuildBoostSlots: Y
   }) : C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format({
     numUnappliedGuildBoostSlots: Y
-  }), f.default.isPremium(v) ? l = F && 1 === Y && H ? L.skuId === h.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? C.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : C.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
+  }), f.default.isPremium(v) ? l = F && 1 === Y && w ? L.skuId === h.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? C.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : C.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
     numUnappliedGuildBoostSlots: Y,
     learnMoreHook: (e, t) => (0, a.jsx)(o.Clickable, {
       className: A.headerLearnMoreLink,
@@ -148,7 +148,7 @@ t.default = function(e) {
     numUnappliedGuildBoostSlots: Y
   }), (0, a.jsxs)("div", {
     className: A.wrapper,
-    children: [H && (0, a.jsxs)("div", {
+    children: [w && (0, a.jsxs)("div", {
       className: A.specialHeader,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-xs/semibold",
@@ -161,8 +161,8 @@ t.default = function(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: i()(A.content, {
-        [A.headerWithBoost]: H,
-        [A.headerWithoutSpecialHeader]: !H
+        [A.headerWithBoost]: w,
+        [A.headerWithoutSpecialHeader]: !w
       }),
       children: [(0, a.jsxs)("div", {
         className: A.header,
@@ -187,14 +187,14 @@ t.default = function(e) {
         }), (0, a.jsx)("div", {
           className: A.headerContentSecondary,
           children: (0, a.jsx)(o.Tooltip, {
-            shouldShow: null == w || x,
+            shouldShow: null == H || x,
             text: x ? C.default.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION : C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
             children: e => (0, a.jsx)(o.Button, {
               ...e,
-              disabled: null == w || x,
-              onClick: null != w ? () => {
+              disabled: null == H || x,
+              onClick: null != H ? () => {
                 var e;
-                return e = w, void(0, o.openModalLazy)(async () => {
+                return e = H, void(0, o.openModalLazy)(async () => {
                   let {
                     default: t
                   } = await Promise.all([s.e("49237"), s.e("99387"), s.e("54167"), s.e("8016"), s.e("22646"), s.e("30419")]).then(s.bind(s, "760558"));

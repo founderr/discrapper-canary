@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return h
   },
   renderComponents: function() {
     return E
@@ -70,7 +70,7 @@ function E(e) {
   })(e, t.toString()))
 }
 
-function N(e) {
+function h(e) {
   let {
     message: t
   } = e, {
