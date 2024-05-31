@@ -2,7 +2,7 @@
 n.r(t);
 var a = n("735250");
 n("470079");
-var s = n("743294"),
+var s = n("569379"),
   l = n("956506");
 t.default = e => {
   let {
@@ -10,25 +10,21 @@ t.default = e => {
     percentComplete: n,
     size: i = 42,
     strokeWidth: r = 3,
-    progressBarBackgroundTop: o = s.NO_PROGRESS_COLORS.backgroundTop,
-    progressBarBackgroundBottom: u = s.NO_PROGRESS_COLORS.backgroundBottom,
-    progressBarForeground: d = s.NO_PROGRESS_COLORS.foreground,
-    glowColor: c = s.NO_PROGRESS_COLORS.glow,
-    glowBlur: f = .4,
-    children: E
-  } = e, h = i / 2, _ = i / 2 - r / 2, C = 2 * Math.PI * _, m = C - n * C, S = {
-    strokeDasharray: "".concat(C, " ").concat(C),
-    strokeDashoffset: m
+    glowBlur: o = .4,
+    children: u
+  } = e, d = (0, s.useProgressBarColors)(n > 0), c = i / 2, f = i / 2 - r / 2, E = 2 * Math.PI * f, h = E - n * E, _ = {
+    strokeDasharray: "".concat(E, " ").concat(E),
+    strokeDashoffset: h
+  }, C = {
+    boxShadow: "0 0 30px 0px ".concat(d.glow)
   };
   return (0, a.jsxs)("div", {
     className: l.outer,
     children: [(0, a.jsx)("div", {
       className: l.inner,
-      style: {
-        boxShadow: "0 0 30px 0px ".concat(c)
-      },
+      style: C,
       ref: t,
-      children: E
+      children: u
     }), (0, a.jsxs)("svg", {
       className: l.progressBar,
       height: i,
@@ -38,7 +34,7 @@ t.default = e => {
           id: "glow",
           children: [(0, a.jsx)("feGaussianBlur", {
             result: "coloredBlur",
-            stdDeviation: f
+            stdDeviation: o
           }), (0, a.jsxs)("feMerge", {
             children: [(0, a.jsx)("feMergeNode", {
               in: "coloredBlur"
@@ -58,28 +54,28 @@ t.default = e => {
           y2: "100%",
           children: [(0, a.jsx)("stop", {
             offset: "0%",
-            stopColor: o
+            stopColor: d.backgroundTop
           }), (0, a.jsx)("stop", {
             offset: "100%",
-            stopColor: u
+            stopColor: d.backgroundBottom
           })]
         })]
       }), (0, a.jsx)("circle", {
         strokeWidth: r,
         fill: "transparent",
-        r: _,
-        cx: h,
-        cy: h,
+        r: f,
+        cx: c,
+        cy: c,
         stroke: "url(#linear)"
       }), (0, a.jsx)("circle", {
         className: l.progress,
         strokeWidth: r,
         fill: "transparent",
-        r: _,
-        cx: h,
-        cy: h,
-        stroke: d,
-        style: S
+        r: f,
+        cx: c,
+        cy: c,
+        stroke: d.foreground,
+        style: _
       })]
     })]
   })

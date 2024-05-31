@@ -147,7 +147,7 @@ function R(e) {
           color: h.config.colors.secondary,
           height: eE.to({
             range: [0, 1],
-            output: [0, y && Q ? ee : V.collapsedHeight]
+            output: [0, !V.canCollapseOnBlur && Q ? ee : V.collapsedHeight]
           })
         },
         children: (0, a.jsx)(r.animated.div, {

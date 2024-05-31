@@ -34,8 +34,9 @@ var a = n("735250"),
 let b = e => {
     let {
       quest: t,
-      useReducedMotion: n
-    } = e, s = (0, O.useHandleClaimQuestsReward)({
+      useReducedMotion: n,
+      isExpanded: s
+    } = e, l = (0, O.useHandleClaimQuestsReward)({
       quest: t,
       location: I.QuestContent.QUEST_BAR
     });
@@ -44,8 +45,9 @@ let b = e => {
       children: (0, a.jsx)(f.default, {
         fullWidth: !0,
         size: c.Button.Sizes.SMALL,
-        onClick: s,
-        pauseAnimation: n,
+        onClick: l,
+        pauseAnimation: n || !s,
+        buttonShineClassName: D.shine,
         children: y.default.Messages.QUESTS_CLAIM_REWARD
       })
     })
@@ -64,20 +66,20 @@ let b = e => {
         }
       }, []), (null !== (n = null === (t = l.userStatus) || void 0 === t ? void 0 : t.streamProgressSeconds) && void 0 !== n ? n : 0) > 0) return null;
     let S = () => {
-        (0, L.copyShareLink)(l.id, {
+        (0, g.copyShareLink)(l.id, {
           content: I.QuestContent.QUEST_BAR_V2,
           ctaContent: C.QuestContentCTA.QUEST_BAR_COPY_LINK
         }), h(!0), d(!0), _.current.start(500, () => d(!1)), m.current.start(600, () => h(!1))
       },
       p = f ? c.Tooltip.Colors.GREEN : c.Tooltip.Colors.PRIMARY,
-      g = f ? y.default.Messages.COPY_SUCCESS_1 : y.default.Messages.QUESTS_SHARE_LINK,
-      T = f ? r.default.GREEN_360 : "currentColor";
+      T = f ? y.default.Messages.COPY_SUCCESS_1 : y.default.Messages.QUESTS_SHARE_LINK,
+      A = f ? r.default.GREEN_360 : "currentColor";
     return (0, a.jsxs)("div", {
       className: D.ctaContainer,
       children: [(0, a.jsx)(c.Button, {
         className: D.flex,
         size: c.Button.Sizes.SMALL,
-        onClick: () => (0, L.openGameLink)(l, {
+        onClick: () => (0, g.openGameLink)(l, {
           content: I.QuestContent.QUEST_BAR_V2,
           ctaContent: C.QuestContentCTA.OPEN_GAME_LINK
         }),
@@ -86,7 +88,7 @@ let b = e => {
         hideOnClick: !1,
         forceOpen: o && i,
         color: p,
-        text: g,
+        text: T,
         children: e => (0, a.jsx)(c.Button, {
           ...e,
           className: D.iconButton,
@@ -97,7 +99,7 @@ let b = e => {
           children: (0, a.jsx)(E.default, {
             width: 16,
             height: 16,
-            color: T
+            color: A
           })
         })
       })]
@@ -120,7 +122,7 @@ let b = e => {
         questContentCTA: C.QuestContentCTA.ACCEPT_QUEST
       })
     }, [G]), Y = s.useCallback(() => {
-      (0, L.openGameLink)(G, {
+      (0, g.openGameLink)(G, {
         content: I.QuestContent.QUEST_BAR,
         ctaContent: C.QuestContentCTA.OPEN_GAME_LINK
       })

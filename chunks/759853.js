@@ -26,6 +26,7 @@ t.default = e => {
     gravity: 0,
     wind: 0
   })), P = (0, l.useConfettiCannon)(R, L), y = s.useCallback(() => {
+    if (T) return;
     let e = C.current,
       t = A.current;
     if (null != t && null != e && P.isReady) {
@@ -77,7 +78,7 @@ t.default = e => {
         }
       }), 100)
     }
-  }, [C, P]), D = (0, o.default)(m);
+  }, [C, A, P, T]), D = (0, o.default)(m);
   return (s.useEffect(() => {
     I && m && !D && (p(), y())
   }, [m, I, p, y, D]), s.useEffect(() => {
@@ -85,8 +86,8 @@ t.default = e => {
       p(), y()
     }, 200)
   }, [I, v, N, p, y]), s.useEffect(() => {
-    !g.current && I && (p(), setTimeout(() => y(), 50)), g.current = I
-  }, [I, g, y, p]), T) ? null : (0, a.jsxs)("div", {
+    P.isReady && (!g.current && I && (p(), y()), g.current = I)
+  }, [I, g, y, p, P]), T) ? null : (0, a.jsxs)("div", {
     className: E.wrapper,
     "aria-hidden": "true",
     ref: A,

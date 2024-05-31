@@ -30,7 +30,7 @@ let o = {
     },
     getPreEnrollmentExpandedHeight: () => 270,
     getPostEnrollmentBackgroundImage: () => "linear-gradient(90deg, ".concat(r.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(r.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")"),
-    getPreEnrollmentBackgroundColor: e => "var(--background-secondary-alt)",
+    getPreEnrollmentBackgroundColor: e => "var(--home-background)",
     canCollapseOnBlur: e => !0,
     shouldExpandOnQuestComplete: e => !1,
     getVerticalPadding: () => 12
