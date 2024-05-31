@@ -1,61 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return l
   }
 });
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("285952"),
-  a = n("395361"),
-  o = n("829820"),
-  l = n("22387");
+  s = n("395361"),
+  a = n("829820"),
+  o = n("22387");
 
-function u(e) {
+function l(e) {
   let {
     activity: t,
     user: n,
-    source: u,
-    className: d,
-    size: _,
-    look: c,
-    color: E,
-    fullWidth: I,
-    onAction: T
+    source: l,
+    className: u,
+    size: d,
+    look: _,
+    color: c,
+    fullWidth: E,
+    onAction: I
   } = e, {
-    label: f,
-    tooltip: S,
-    loading: h,
-    disabled: A,
-    onClick: m
-  } = (0, o.useSpotifyPlayAction)(t, n, u), N = () => {
-    null == T || T(), m()
+    label: T,
+    tooltip: f,
+    loading: S,
+    disabled: h,
+    onClick: A
+  } = (0, a.useSpotifyPlayAction)(t, n, l), m = () => {
+    null == I || I(), A()
   };
   return (0, i.jsx)(r.Tooltip, {
-    text: S,
+    text: f,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: n
       } = e;
-      return (0, i.jsx)(r.Button, {
-        className: d,
-        size: _,
-        look: c,
-        color: E,
-        fullWidth: I,
-        onClick: N,
+      return (0, i.jsxs)(r.Button, {
+        className: u,
+        innerClassName: o.playButtonInner,
+        size: d,
+        look: _,
+        color: c,
+        fullWidth: E,
+        onClick: m,
         onMouseEnter: t,
         onMouseLeave: n,
-        disabled: A,
-        submitting: h,
-        children: (0, i.jsxs)(s.default, {
-          align: s.default.Align.CENTER,
-          children: [(0, i.jsx)(a.default, {
-            className: l.spotifyButtonLogo
-          }), f]
-        })
+        disabled: h,
+        submitting: S,
+        children: [(0, i.jsx)(s.default, {
+          width: 16,
+          height: 16
+        }), T]
       })
     }
   })

@@ -51,8 +51,8 @@ function c(e) {
         }), c()
       }
     }), (0, i.jsx)(r.MenuItem, {
-      id: "edit-default-profile",
-      label: l.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
+      id: "edit-main-profile",
+      label: l.default.Messages.EDIT_MAIN_PROFILE,
       subtext: l.default.Messages.USER_PROFILE_MENU_HELP,
       action: () => {
         I({

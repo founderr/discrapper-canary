@@ -42,8 +42,9 @@ function _(e) {
         onMouseLeave: r
       } = e;
       return (0, i.jsx)(a.Button, {
-        size: s()(E, d.iconButtonSize),
-        className: s()(f, d.iconButton),
+        size: E,
+        className: s()(d.syncButton, f),
+        innerClassName: d.syncButtonInner,
         look: I,
         color: T,
         onClick: p,
@@ -53,7 +54,8 @@ function _(e) {
         submitting: A,
         "aria-label": null != h ? h : t.name,
         children: (0, i.jsx)(o.default, {
-          className: d.listenAlongIcon
+          width: 16,
+          height: 16
         })
       })
     }
