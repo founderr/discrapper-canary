@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("735250"),
@@ -16,66 +16,77 @@ var a = n("735250"),
   f = n("998502"),
   h = n("204197"),
   m = n("78675"),
-  p = n("652853"),
-  E = n("228168"),
-  C = n("981631"),
-  g = n("187393");
-let S = f.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
-  _ = r.AvatarSizes.SIZE_80;
+  p = n("438163"),
+  E = n("652853"),
+  C = n("228168"),
+  g = n("981631"),
+  S = n("187393");
+let _ = f.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
+  T = r.AvatarSizes.SIZE_80;
 
-function T(e) {
+function I(e) {
   let {
     user: t,
     displayProfile: n,
     channel: i,
     isHovering: f
   } = e, {
-    theme: T
-  } = (0, p.useUserProfileThemeContext)(), I = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
-    avatarSrc: A,
-    eventHandlers: v,
-    avatarDecorationSrc: N
+    theme: I
+  } = (0, E.useUserProfileThemeContext)(), A = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
+    avatarSrc: v,
+    eventHandlers: N,
+    avatarDecorationSrc: x
   } = (0, h.default)({
     user: t,
-    size: _,
+    size: T,
     animateOnHover: !f
-  }), x = l.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(t, i.id), [t, i.id]), {
-    status: M,
-    isMobileOnline: R
+  }), M = l.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(t, i.id), [t, i.id]), {
+    status: R,
+    customStatusActivity: y,
+    isMobileOnline: L
   } = (0, s.useStateFromStoresObject)([d.default, c.default], () => {
     let e = null != d.default.getAnyStreamForUser(t.id),
       n = c.default.findActivity(t.id, t => {
         let {
           type: n
         } = t;
-        return e ? n === C.ActivityTypes.PLAYING : n !== C.ActivityTypes.CUSTOM_STATUS
+        return e ? n === g.ActivityTypes.PLAYING : n !== g.ActivityTypes.CUSTOM_STATUS
       });
     return {
       status: (0, o.default)(n) ? r.StatusTypes.STREAMING : c.default.getStatus(t.id),
+      customStatusActivity: c.default.findActivity(t.id, e => {
+        let {
+          type: t
+        } = e;
+        return t === g.ActivityTypes.CUSTOM_STATUS
+      }),
       isMobileOnline: c.default.isMobileOnline(t.id)
     }
   });
   return (0, a.jsxs)("header", {
-    className: g.header,
+    className: S.header,
     children: [(0, a.jsx)(m.default, {
       user: t,
       displayProfile: n,
-      profileType: E.UserProfileTypes.PANEL,
+      profileType: C.UserProfileTypes.PANEL,
       animateOnHover: !f
     }), (0, a.jsx)("div", {
-      ...v,
-      children: (0, a.jsx)(S, {
-        src: A,
-        avatarDecoration: N,
-        size: _,
-        className: g.avatar,
-        status: x ? r.StatusTypes.UNKNOWN : M,
-        statusBackdropColor: I && !x ? (0, r.getStatusBackdropColor)(T) : void 0,
+      ...N,
+      children: (0, a.jsx)(_, {
+        src: v,
+        avatarDecoration: x,
+        size: T,
+        className: S.avatar,
+        status: M ? r.StatusTypes.UNKNOWN : R,
+        statusBackdropColor: A && !M ? (0, r.getStatusBackdropColor)(I) : void 0,
         "aria-label": t.username,
-        isMobile: R,
+        isMobile: L,
         statusTooltip: !0,
-        statusTooltipDelay: E.USER_PROFILE_TOOLTIP_DELAY
+        statusTooltipDelay: C.USER_PROFILE_TOOLTIP_DELAY
       })
+    }), (0, a.jsx)(p.UserProfileCustomStatusBubble, {
+      statusActivity: y,
+      profileType: C.UserProfileTypes.PANEL
     })]
   })
 }

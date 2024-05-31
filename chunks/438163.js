@@ -70,7 +70,11 @@ function T(e) {
       className: I.statusText,
       children: C
     }) : null,
-    k = n === E.UserProfileTypes.BITE_SIZE ? I.biteSize : I.fullSize,
+    k = {
+      [I.biteSize]: n === E.UserProfileTypes.BITE_SIZE,
+      [I.fullSize]: n === E.UserProfileTypes.FULL_SIZE,
+      [I.panel]: n === E.UserProfileTypes.PANEL
+    },
     B = a()(I.statusBubbleOuter, k, {
       [I.statusBubbleShape]: !R && L || !M,
       [I.statusBubbleSingleLineWithTextShape]: M && R
