@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return Q
   },
   copyShareLink: function() {
-    return eu
+    return e_
   },
   getCollectiblesQuestReward: function() {
     return z
@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
     return x
   },
   getQuestTaskDetails: function() {
-    return e_
+    return eE
   },
   getQuestUrl: function() {
     return V
@@ -49,13 +49,13 @@ n.r(t), n.d(t, {
     return q
   },
   getQuestsInstructionsToWinReward: function() {
-    return eo
+    return eu
   },
   getRewardAsset: function() {
     return b
   },
   getRewardCodeQuestReward: function() {
-    return ea
+    return el
   },
   getVideoAssetMimeType: function() {
     return et
@@ -91,7 +91,7 @@ n.r(t), n.d(t, {
     return en
   },
   openGameLink: function() {
-    return el
+    return ed
   },
   questUserStatusFromServer: function() {
     return v
@@ -104,6 +104,9 @@ n.r(t), n.d(t, {
   },
   questsRewardCodeFromServer: function() {
     return M
+  },
+  shouldShowSocialEntrypoints: function() {
+    return ea
   },
   shouldUsePlayOnDesktopTask: function() {
     return es
@@ -304,7 +307,7 @@ function U(e, t) {
 }
 let b = e => {
     var t, n;
-    let i = ea({
+    let i = el({
         quest: e,
         idx: null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedTier
       }),
@@ -355,7 +358,7 @@ function Y(e) {
   let {
     progressSeconds: i,
     targetSeconds: r
-  } = e_({
+  } = eE({
     quest: t,
     location: n
   });
@@ -479,9 +482,9 @@ function er(e) {
   } = e;
   return (0, i.match)(t.config).with({
     configVersion: 1
-  }, e => h.SharedQuestFields.build(e).features.has(m.QuestVariants.PLAYTIME_TASK)).with({
+  }, e => eo(t, m.QuestVariants.PLAYTIME_TASK)).with({
     configVersion: 2
-  }, e => h.SharedQuestFields.build(e).features.has(m.QuestVariants.PLAYTIME_TASK) || ei(e)).exhaustive()
+  }, e => eo(t, m.QuestVariants.PLAYTIME_TASK) || ei(e)).exhaustive()
 }
 
 function es(e) {
@@ -497,6 +500,14 @@ function es(e) {
 }
 
 function ea(e) {
+  return !eo(e, m.QuestVariants.IN_HOUSE_CONSOLE_QUEST)
+}
+
+function eo(e, t) {
+  return h.SharedQuestFields.build(e.config).features.has(t)
+}
+
+function el(e) {
   let {
     quest: t,
     idx: n
@@ -510,12 +521,12 @@ function ea(e) {
   }, e => e).otherwise(() => null)
 }
 
-function eo(e) {
+function eu(e) {
   let {
     quest: t,
     location: n,
     useV2Variants: i = !1
-  } = e, r = t.config.messages.gameTitle, s = h.SharedQuestFields.build(t.config).defaultReward, a = e_({
+  } = e, r = t.config.messages.gameTitle, s = h.SharedQuestFields.build(t.config).defaultReward, a = eE({
     quest: t,
     location: n
   }).targetMinutes;
@@ -538,7 +549,7 @@ function eo(e) {
   })
 }
 
-function el(e, t) {
+function ed(e, t) {
   let n = h.SharedQuestFields.build(e.config).application.link;
   (0, c.handleClick)({
     href: n,
@@ -552,7 +563,7 @@ function el(e, t) {
     }
   })
 }
-let eu = (e, t) => {
+let e_ = (e, t) => {
     (0, I.trackQuestContentClicked)({
       questId: e,
       questContent: t.content,
@@ -560,7 +571,7 @@ let eu = (e, t) => {
       questContentPosition: t.position
     }), (0, u.copy)(V(e))
   },
-  ed = e => {
+  ec = e => {
     var t, n, i, s, a, l, u;
     let {
       quest: _,
@@ -577,7 +588,7 @@ let eu = (e, t) => {
       taskType: c
     }
   },
-  e_ = e => {
+  eE = e => {
     let {
       quest: t,
       location: n
@@ -600,10 +611,10 @@ let eu = (e, t) => {
     }, e => es({
       quest: e,
       location: n
-    }) ? ed({
+    }) ? ec({
       quest: e,
       taskType: r.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP
-    }) : ed({
+    }) : ec({
       quest: e,
       taskType: r.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP
     })).exhaustive()

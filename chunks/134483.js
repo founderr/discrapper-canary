@@ -110,7 +110,7 @@ t.default = function(e) {
     quest: J,
     location: b.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
   }), [J]), ef = (0, T.useIsQuestExpired)(J);
-  if (null == J) return null;
+  if (null == J || !(0, v.shouldShowSocialEntrypoints)(J)) return null;
   let eh = (null === (t = J.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     em = (null === (n = J.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
     ep = null != J.userStatus && (0, v.isDismissed)(J.userStatus, A.QuestContent.QUEST_LIVE_STREAM),
