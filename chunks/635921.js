@@ -72,14 +72,17 @@ let O = "HeroHeading",
 
 function L(e) {
   let {
-    variant: t = "text-lg/normal"
-  } = e, s = (0, A.useCheapestMonthlyPrice)();
+    variant: t = "text-lg/normal",
+    withBottomMargin: s = !0
+  } = e, r = (0, A.useCheapestMonthlyPrice)();
   return (0, a.jsx)(l.Text, {
     variant: t,
     color: "always-white",
-    className: P.description,
+    className: i()(P.description, {
+      [P.descriptionBottomMargin]: s
+    }),
     children: C.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
-      cheapestMonthlyPrice: s
+      cheapestMonthlyPrice: r
     })
   })
 }
@@ -135,7 +138,8 @@ t.default = e => {
           inOfferExperience: D,
           inTrial: v
         }), y && !B && (0, a.jsx)(L, {
-          variant: "text-md/normal"
+          variant: "text-md/normal",
+          withBottomMargin: !1
         })]
       }), !(D || d) && (0, a.jsx)(h, {
         isFullscreen: t
