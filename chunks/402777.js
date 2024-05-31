@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return A
   }
 });
 var a = n("735250"),
@@ -19,57 +19,61 @@ var a = n("735250"),
   p = n("301984"),
   E = n("664794"),
   C = n("926150"),
-  g = n("354810"),
-  S = n("940885"),
-  _ = n("228168"),
-  T = n("828592");
+  g = n("308829"),
+  S = n("354810"),
+  _ = n("940885"),
+  T = n("228168"),
+  I = n("828592");
 
-function I(e) {
+function A(e) {
   let {
     user: t,
     channel: n
   } = e, {
-    analyticsLocations: I
-  } = (0, u.default)(o.default.PROFILE_PANEL), A = (0, f.default)(t.id), v = (0, r.default)(), N = l.useRef(null), x = (0, i.default)(N);
+    analyticsLocations: A
+  } = (0, u.default)(o.default.PROFILE_PANEL), v = (0, f.default)(t.id), N = (0, r.default)(), x = l.useRef(null), M = (0, i.default)(x);
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
-    value: I,
+    value: A,
     children: (0, a.jsx)(c.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_DM_PANEL",
       userId: t.id,
       channelId: n.id,
       children: (0, a.jsxs)(h.default, {
-        ref: N,
+        ref: x,
         user: t,
-        displayProfile: A,
-        profileType: _.UserProfileTypes.PANEL,
-        themeOverride: v,
-        className: T.container,
+        displayProfile: v,
+        profileType: T.UserProfileTypes.PANEL,
+        themeOverride: N,
+        className: I.container,
         children: [(0, a.jsxs)(s.ScrollerNone, {
           children: [(0, a.jsxs)(m.default, {
-            profileType: _.UserProfileTypes.PANEL,
+            profileType: T.UserProfileTypes.PANEL,
             children: [(0, a.jsx)(p.default, {
               user: t
             }), (0, a.jsx)(E.default, {
               user: t,
-              profileType: _.UserProfileTypes.PANEL
+              profileType: T.UserProfileTypes.PANEL
             })]
-          }), (0, a.jsx)(g.default, {
+          }), (0, a.jsx)(S.default, {
             user: t,
-            displayProfile: A,
+            displayProfile: v,
             channel: n,
-            isHovering: x
+            isHovering: M
           }), (0, a.jsx)(C.default, {
             user: t,
-            displayProfile: A,
+            displayProfile: v,
             channelId: n.id,
-            isHovering: x
-          }), (0, a.jsx)(S.default, {
+            isHovering: M
+          }), (0, a.jsx)(_.default, {
             user: t,
             channelId: n.id
           })]
-        }), (null == A ? void 0 : A.profileEffectId) != null && (0, a.jsx)(d.default, {
-          profileEffectId: null == A ? void 0 : A.profileEffectId,
-          isHovering: x
+        }), (0, a.jsx)(g.default, {
+          user: t,
+          channelId: n.id
+        }), (null == v ? void 0 : v.profileEffectId) != null && (0, a.jsx)(d.default, {
+          profileEffectId: null == v ? void 0 : v.profileEffectId,
+          isHovering: M
         })]
       })
     })
