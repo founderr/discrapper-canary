@@ -339,34 +339,38 @@ function et(e) {
 }
 
 function en(e) {
+  var t;
   let {
-    experimentId: t,
-    experimentBucket: n
-  } = e, i = C[t];
-  if (null == i) return !1;
-  for (let e of (null == n ? (M = {
+    experimentId: n,
+    experimentBucket: i,
+    experimentType: r,
+    skipCleanup: s
+  } = e, a = null != r ? r : null === (t = C[n]) || void 0 === t ? void 0 : t.type;
+  if (null == a) return !1;
+  if (null == i ? (M = {
       ...M
-    }, delete M[t], y = {
+    }, delete M[n], y = {
       ...y
-    }, delete y[t]) : "user" === i.type ? M = {
+    }, delete y[n]) : "user" === a ? M = {
       ...M,
-      [t]: {
-        type: i.type,
+      [n]: {
+        type: a,
         revision: 1,
         population: 0,
-        bucket: n,
+        bucket: i,
         override: !0
       }
     } : y = {
       ...y,
-      [t]: {
-        type: i.type,
+      [n]: {
+        type: a,
         revision: 1,
-        bucket: n,
+        bucket: i,
         override: !0
       }
-    }, [M, y]))
-    for (let t in e) null == C[t] && delete M[t];
+    }, !s)
+    for (let e of [M, y])
+      for (let t in e) null == C[t] && delete M[t];
   $()
 }
 
