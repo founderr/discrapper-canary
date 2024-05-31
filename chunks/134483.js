@@ -63,7 +63,7 @@ t.default = function(e) {
               if (!(0, F.isActivityParticipant)(a))
                 for (let e of n.getActivities(a.user.id)) {
                   if (null == e.application_id) continue;
-                  let n = (0, v.getPlaytimeQuestByApplicationId)(t, e.application_id);
+                  let n = (0, v.getPlayOnDesktopQuestByApplicationId)(t, e.application_id);
                   if (null != n && (null === (l = n.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null) return n
                 }
             }
@@ -82,10 +82,9 @@ t.default = function(e) {
     }
   }, [B, Z, H]), $ = null != J ? M.SharedQuestFields.build(J.config) : null, ee = null == $ ? void 0 : $.application.id, et = (0, r.useStateFromStoresObject)([f.default], () => {
     let e = f.default.getRunningGames().map(e => e.id);
-    return null != J && (0, N.isEligibleForQuestPlaytime)({
+    return (0, v.shouldUsePlayOnDesktopTask)({
+      quest: J,
       location: b.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
-    }) && (0, v.hasPlaytimeTaskVariant)({
-      quest: J
     }) && e.includes(ee)
   }, [J, ee]), en = !0 === G || Q || et, ea = (0, r.useStateFromStores)([I.default], () => null != J && I.default.isEnrolling(J.id), [J]), el = (0, r.useStateFromStores)([c.default], () => ((null == Z ? void 0 : Z.id) == null ? null : c.default.getParticipant(B, Z.id)) != null, [B, Z]), es = (0, T.useQuestFormattedDate)(null == J ? void 0 : J.config.expiresAt), ei = (0, T.useQuestFormattedDate)(null == $ ? void 0 : $.rewardsExpireAt), er = l.useCallback(() => {
     null != J && (0, _.enrollInQuest)(J.id, {
@@ -167,7 +166,10 @@ t.default = function(e) {
                   className: k.questTitle,
                   variant: "heading-md/semibold",
                   color: "header-primary",
-                  children: en ? (0, v.getContextualEntrypointHeading)(J) : w.default.Messages.QUESTS_TITLE.format({
+                  children: en ? (0, v.getContextualEntrypointHeading)({
+                    quest: J,
+                    location: b.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
+                  }) : w.default.Messages.QUESTS_TITLE.format({
                     questName: J.config.messages.questName
                   })
                 }), (0, a.jsx)(j.QuestsEntryContextMenuPopout, {

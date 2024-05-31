@@ -185,12 +185,17 @@ function L(e) {
 }
 
 function v(e, t) {
-  return ((0, f.useIsEligibleForQuestPlaytime)({
-    location: t
-  }) && (0, T.hasPlaytimeTaskVariant)({
-    quest: e
-  }) ? N.default.Messages.QUESTS_PLAY_TASK : N.default.Messages.QUESTS_STREAM_TASK).format({
-    minutes: A.SharedQuestFields.build(e.config).streamTargetMinutes,
+  let n = (0, f.useIsEligibleForQuestPlaytime)({
+      location: t
+    }) && (0, T.hasPlayOnDesktopTask)({
+      quest: e
+    }) ? N.default.Messages.QUESTS_PLAY_TASK : N.default.Messages.QUESTS_STREAM_TASK,
+    i = (0, T.getQuestTaskDetails)({
+      quest: e,
+      location: t
+    }).targetMinutes;
+  return n.format({
+    minutes: i,
     gameTitle: e.config.messages.gameTitle
   })
 }

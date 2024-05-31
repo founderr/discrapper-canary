@@ -8,37 +8,41 @@ var a = n("735250"),
   o = n("644646"),
   u = n("472144"),
   d = n("569379"),
-  c = n("481900");
+  c = n("46140"),
+  f = n("481900");
 t.default = e => {
   let {
     quest: t,
     progressBarRef: n,
-    isExpanded: f
-  } = e, E = s.useMemo(() => (0, r.calculatePercentComplete)(t), [t]), h = (0, d.useQuestBarTitle)(t), _ = (0, d.useQuestBarSubtitle)(t, f);
+    isExpanded: E
+  } = e, h = s.useMemo(() => (0, r.calculatePercentComplete)({
+    quest: t,
+    location: c.QuestsExperimentLocations.QUESTS_BAR
+  }), [t]), _ = (0, d.useQuestBarTitle)(t), C = (0, d.useQuestBarSubtitle)(t, E);
   return (0, a.jsxs)("div", {
-    className: c.questProgressWrapper,
+    className: f.questProgressWrapper,
     children: [(0, a.jsx)(u.default, {
-      percentComplete: E,
+      percentComplete: h,
       size: 42,
       strokeWidth: 3,
       progressBarRef: n,
       children: (0, a.jsx)(o.default, {
-        className: c.questProgressRewardTile,
+        className: f.questProgressRewardTile,
         quest: t,
         questContent: i.QuestContent.QUEST_BAR,
         autoplay: !1
       })
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsx)(l.Text, {
-        className: c.questProgressHint,
+        className: f.questProgressHint,
         color: "header-primary",
         variant: "text-sm/semibold",
-        children: h
+        children: _
       }), (0, a.jsx)(l.Text, {
-        className: c.questProgressHint,
+        className: f.questProgressHint,
         color: "text-muted",
         variant: "text-xs/normal",
-        children: _
+        children: C
       })]
     })]
   })

@@ -43,31 +43,37 @@ t.default = () => {
       let o = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
         d = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
         S = (null === (n = t.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        E = (null === (l = t.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-      if (o && !d && S && !E) return 0;
+        T = (null === (l = t.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+      if (o && !d && S && !T) return 0;
       if (o && !d) return -1;
-      if (S && !E) return 1;
-      let T = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
-        _ = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-      if (T && !o && _ && !S) {
-        let s = (0, c.calculatePercentComplete)(e);
-        return (0, c.calculatePercentComplete)(t) - s
+      if (S && !T) return 1;
+      let _ = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
+        f = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
+      if (_ && !o && f && !S) {
+        let s = (0, c.calculatePercentComplete)({
+          quest: e,
+          location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+        });
+        return (0, c.calculatePercentComplete)({
+          quest: t,
+          location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+        }) - s
       }
-      if (T && !o) return -1;
-      if (_ && !S) return 1;
-      let f = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
-        m = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
-      if (f && m) return 0;
-      if (f) return -1;
-      if (m) return 1;
-      let g = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
-        I = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-      if (g && !T && !o && I && !_ && !S) return 0;
-      if (g && !T && !o) return -1;
-      if (I && !_ && !S) return 1;
-      let N = o && d,
-        h = S && E;
-      return N && !h ? 1 : !N && h ? -1 : 0
+      if (_ && !o) return -1;
+      if (f && !S) return 1;
+      let m = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
+        g = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
+      if (m && g) return 0;
+      if (m) return -1;
+      if (g) return 1;
+      let I = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
+        N = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
+      if (I && !_ && !o && N && !f && !S) return 0;
+      if (I && !_ && !o) return -1;
+      if (N && !f && !S) return 1;
+      let h = o && d,
+        C = S && T;
+      return h && !C ? 1 : !h && C ? -1 : 0
     }).map(e => e.id);
     return h.current = !0, C.current = e, e
   }, [I]), p = n.useRef(null), O = n.useMemo(() => {

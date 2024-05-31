@@ -52,7 +52,10 @@ let P = s.forwardRef(function(e, t) {
       content: S.QuestContent.QUEST_BAR,
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [G]), Q = F.features.has(L.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Z = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, J = s.useMemo(() => (0, p.hasCollectiblesQuestReward)(G.config), [G.config]), $ = P && D, ee = (0, p.getQuestBarHeroAssetUrl)(G), et = (0, p.getQuestsInstructionsToWinReward)({
+  }, [G]), Q = F.features.has(L.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)({
+    quest: G,
+    location: L.QuestsExperimentLocations.QUESTS_BAR
+  }) > 0, [G]), Z = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, J = s.useMemo(() => (0, p.hasCollectiblesQuestReward)(G.config), [G.config]), $ = P && D, ee = (0, p.getQuestBarHeroAssetUrl)(G), et = (0, p.getQuestsInstructionsToWinReward)({
     quest: G,
     location: L.QuestsExperimentLocations.QUESTS_BAR
   }), en = (0, E.isWeb)(), ea = s.useMemo(() => {
@@ -87,7 +90,10 @@ let P = s.forwardRef(function(e, t) {
             children: [(0, a.jsx)(d.Heading, {
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: (0, p.getContextualEntrypointHeading)(G)
+              children: (0, p.getContextualEntrypointHeading)({
+                quest: G,
+                location: L.QuestsExperimentLocations.QUESTS_BAR
+              })
             }), (0, a.jsx)(d.Text, {
               className: x.questAcceptedContentCopySubheading,
               color: "always-white",

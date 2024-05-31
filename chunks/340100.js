@@ -13,62 +13,65 @@ var s = n("735250"),
   E = n("930153"),
   _ = n("358085"),
   m = n("918701"),
-  T = n("689938"),
-  I = n("333964");
+  T = n("46140"),
+  I = n("689938"),
+  p = n("333964");
 t.default = function(e) {
   var t;
   let {
     className: n,
     color: l = o.default.colors.WHITE,
-    quest: p,
-    isInventory: h
-  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = a.useMemo(() => (0, m.calculatePercentComplete)(p), [p]), g = 100 * C, A = (0, _.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
-    className: I.desktopTooltip,
+    quest: h,
+    isInventory: N
+  } = e, S = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, C = (0, r.useStateFromStores)([c.default], () => c.default.locale), g = a.useMemo(() => (0, m.calculatePercentComplete)({
+    quest: h,
+    location: T.QuestsExperimentLocations.QUEST_PROGRESS_BAR
+  }), [h]), A = 100 * g, M = (0, _.isWeb)() && !S, R = () => (0, s.jsxs)("div", {
+    className: p.desktopTooltip,
     style: {
-      marginTop: h ? 8 : 0
+      marginTop: N ? 8 : 0
     },
     children: [(0, s.jsx)(f.default, {
-      className: I.infoIcon,
-      height: h ? 16 : 12,
-      width: h ? 16 : 12,
-      color: h ? d.default.TEXT_MUTED : d.default.WHITE
+      className: p.infoIcon,
+      height: N ? 16 : 12,
+      width: N ? 16 : 12,
+      color: N ? d.default.TEXT_MUTED : d.default.WHITE
     }), (0, s.jsx)(u.Text, {
-      className: I.__invalid_desktopTooltipText,
-      color: h ? "text-muted" : "always-white",
-      variant: h ? "text-xs/normal" : "text-xxs/normal",
-      children: T.default.Messages.QUESTS_PROGRESS_WEB_TIP
+      color: N ? "text-muted" : "always-white",
+      variant: N ? "text-xs/normal" : "text-xxs/normal",
+      children: I.default.Messages.QUESTS_PROGRESS_WEB_TIP
     })]
   });
-  return A && !h ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
-    className: i()(I.wrapper, n),
+  return M && !N ? (0, s.jsx)(R, {}) : (0, s.jsxs)("div", {
+    className: i()(p.wrapper, n),
     style: {
       color: l.css
     },
     children: [(0, s.jsxs)("div", {
-      className: I.percentCompleteWrapper,
+      className: p.percentCompleteWrapper,
       children: [(0, s.jsx)(u.Text, {
         variant: "text-xs/semibold",
-        className: I.percentCompleteLabel,
+        className: p.percentCompleteLabel,
         color: "none",
-        children: (0, E.formatPercent)(S, C, {
+        children: (0, E.formatPercent)(C, g, {
           roundingMode: "floor"
         })
       }), (0, s.jsx)("div", {
-        className: I.percentCompleteLabelOffset,
+        className: p.percentCompleteLabelOffset,
         style: {
-          width: "".concat(100 - g, "%")
+          width: "".concat(100 - A, "%")
         }
       })]
     }), (0, s.jsx)("div", {
-      className: I.progressBar,
+      className: p.progressBar,
       role: "progressbar",
-      "aria-valuenow": g,
+      "aria-valuenow": A,
       children: (0, s.jsx)("div", {
-        className: I.progressBarFill,
+        className: p.progressBarFill,
         style: {
-          width: "".concat(g, "%")
+          width: "".concat(A, "%")
         }
       })
-    }), A && (0, s.jsx)(M, {})]
+    }), M && (0, s.jsx)(R, {})]
   })
 }

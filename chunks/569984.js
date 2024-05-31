@@ -18,16 +18,19 @@ function g(e, t) {
     },
     i = (r = new Map(r)).get(e);
   if (null != i) {
-    var s;
-    let a = null === (s = i.userStatus) || void 0 === s ? void 0 : s.streamProgressSeconds,
-      o = {
+    var s, a;
+    let o = null === (s = i.userStatus) || void 0 === s ? void 0 : s.streamProgressSeconds,
+      l = null === (a = i.userStatus) || void 0 === a ? void 0 : a.progress,
+      u = null == o && null == l,
+      d = {
         ...i,
         ...t
       };
-    !(n.updateProgress || null == o.userStatus || null == a || null != o.userStatus.completedAt || null == o.userStatus.enrolledAt) && null != o.userStatus && (o.userStatus = {
-      ...o.userStatus,
-      streamProgressSeconds: a
-    }), r.set(e, o)
+    !(n.updateProgress || null == d.userStatus || u || null != d.userStatus.completedAt || null == d.userStatus.enrolledAt) && null != d.userStatus && (d.userStatus = {
+      ...d.userStatus,
+      streamProgressSeconds: null != o ? o : 0,
+      progress: null != l ? l : {}
+    }), r.set(e, d)
   }
 }
 

@@ -53,53 +53,57 @@ let b = e => {
     })
   },
   U = e => {
-    var t, n;
     let {
-      quest: l,
-      isExpanded: i
-    } = e, [o, d] = s.useState(!1), [f, h] = s.useState(!1), _ = s.useRef(new u.Timeout), m = s.useRef(new u.Timeout);
-    if (s.useEffect(() => {
-        let e = _.current,
-          t = m.current;
-        return function() {
-          e.stop(), t.stop()
-        }
-      }, []), (null !== (n = null === (t = l.userStatus) || void 0 === t ? void 0 : t.streamProgressSeconds) && void 0 !== n ? n : 0) > 0) return null;
-    let S = () => {
-        (0, g.copyShareLink)(l.id, {
+      quest: t,
+      isExpanded: n
+    } = e, [l, i] = s.useState(!1), [o, d] = s.useState(!1), f = s.useRef(new u.Timeout), h = s.useRef(new u.Timeout);
+    s.useEffect(() => {
+      let e = f.current,
+        t = h.current;
+      return function() {
+        e.stop(), t.stop()
+      }
+    }, []);
+    let _ = (0, g.calculatePercentComplete)({
+      quest: t,
+      location: P.QuestsExperimentLocations.QUESTS_BAR
+    });
+    if (_ > 0) return null;
+    let m = () => {
+        (0, g.copyShareLink)(t.id, {
           content: I.QuestContent.QUEST_BAR_V2,
           ctaContent: C.QuestContentCTA.QUEST_BAR_COPY_LINK
-        }), h(!0), d(!0), _.current.start(500, () => d(!1)), m.current.start(600, () => h(!1))
+        }), d(!0), i(!0), f.current.start(500, () => i(!1)), h.current.start(600, () => d(!1))
       },
-      p = f ? c.Tooltip.Colors.GREEN : c.Tooltip.Colors.PRIMARY,
-      T = f ? y.default.Messages.COPY_SUCCESS_1 : y.default.Messages.QUESTS_SHARE_LINK,
-      A = f ? r.default.GREEN_360 : "currentColor";
+      S = o ? c.Tooltip.Colors.GREEN : c.Tooltip.Colors.PRIMARY,
+      p = o ? y.default.Messages.COPY_SUCCESS_1 : y.default.Messages.QUESTS_SHARE_LINK,
+      T = o ? r.default.GREEN_360 : "currentColor";
     return (0, a.jsxs)("div", {
       className: D.ctaContainer,
       children: [(0, a.jsx)(c.Button, {
         className: D.flex,
         size: c.Button.Sizes.SMALL,
-        onClick: () => (0, g.openGameLink)(l, {
+        onClick: () => (0, g.openGameLink)(t, {
           content: I.QuestContent.QUEST_BAR_V2,
           ctaContent: C.QuestContentCTA.OPEN_GAME_LINK
         }),
         children: y.default.Messages.QUESTS_PLAY_GAME
       }), (0, a.jsx)(c.Tooltip, {
         hideOnClick: !1,
-        forceOpen: o && i,
-        color: p,
-        text: T,
+        forceOpen: l && n,
+        color: S,
+        text: p,
         children: e => (0, a.jsx)(c.Button, {
           ...e,
           className: D.iconButton,
           innerClassName: D.shareIcon,
           size: c.Button.Sizes.ICON,
           color: c.Button.Colors.CUSTOM,
-          onClick: S,
+          onClick: m,
           children: (0, a.jsx)(E.default, {
             width: 16,
             height: 16,
-            color: A
+            color: T
           })
         })
       })]

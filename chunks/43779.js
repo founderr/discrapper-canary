@@ -25,7 +25,10 @@ function h(e) {
     quest: t,
     location: n,
     useV2Variants: !0
-  }), m = s.useRef(null), S = s.useMemo(() => (0, r.calculatePercentComplete)(t), [t]), p = S > 0, I = !(0, r.isQuestExpired)(t), g = s.useCallback(() => (0, a.jsx)(l.Text, {
+  }), m = s.useRef(null), S = s.useMemo(() => (0, r.calculatePercentComplete)({
+    quest: t,
+    location: n
+  }), [t, n]), p = S > 0, I = !(0, r.isQuestExpired)(t), g = s.useCallback(() => (0, a.jsx)(l.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",

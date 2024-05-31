@@ -28,7 +28,10 @@ var a = n("470079"),
 function h(e) {
   var t, n;
   let a = (0, l.useStateFromStores)([r.default], () => r.default.locale),
-    s = (0, d.calculatePercentComplete)(e);
+    s = (0, d.calculatePercentComplete)({
+      quest: e,
+      location: f.QuestsExperimentLocations.QUESTS_BAR
+    });
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return E.default.Messages.QUESTS_COMPLETION_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && s > 0) {
     let e = (0, o.formatPercent)(a, s, {
@@ -44,14 +47,20 @@ function h(e) {
 function _(e, t) {
   var n;
   let s = (0, u.useQuestFormattedDate)(c.SharedQuestFields.build(e.config).rewardsExpireAt),
-    l = a.useMemo(() => (0, d.calculatePercentComplete)(e), [e]);
+    l = a.useMemo(() => (0, d.calculatePercentComplete)({
+      quest: e,
+      location: f.QuestsExperimentLocations.QUESTS_BAR
+    }), [e]);
   return (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null ? E.default.Messages.QUESTS_CLAIM_BY_DATE.format({
     expirationDate: s
   }) : t ? (0, d.getQuestsInstructionsToWinReward)({
     quest: e,
     location: f.QuestsExperimentLocations.QUESTS_BAR,
     useV2Variants: !0
-  }) : l > 0 ? (0, d.getContextualEntrypointHeading)(e) : E.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
+  }) : l > 0 ? (0, d.getContextualEntrypointHeading)({
+    quest: e,
+    location: f.QuestsExperimentLocations.QUESTS_BAR
+  }) : E.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
 }
 
 function C() {
