@@ -37467,7 +37467,8 @@ html .progress__00e29 {
 .container__43fce .chipletParent_db23c1 {
     position: relative;
     overflow: hidden;
-    display: inline
+    display: inline;
+    padding-left: 4px
 }
 
 .container__43fce .usernameContainer__60276 {
