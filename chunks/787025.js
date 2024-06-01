@@ -52,20 +52,14 @@ function S(e) {
 function h(e) {
   let {
     children: t,
-    footer: n,
-    transitionState: r,
-    ...s
+    transitionState: n,
+    ...r
   } = e;
-  return (0, i.jsxs)(o.ModalRoot, {
+  return (0, i.jsx)(o.ModalRoot, {
     size: o.ModalSize.DYNAMIC,
-    transitionState: r,
+    transitionState: n,
     className: f.oauth2Wrapper,
-    ...s,
-    children: [(0, i.jsx)(o.ModalContent, {
-      children: t
-    }), null != n && (0, i.jsx)(o.ModalFooter, {
-      className: f.footer,
-      children: n
-    })]
+    ...r,
+    children: t
   })
 }
