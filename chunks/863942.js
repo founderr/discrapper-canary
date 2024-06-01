@@ -1,3 +1,3 @@
 "use strict";
-var r = n("22092");
-(0, n("192291").exportTypedArrayStaticMethod)("from", n("12367"), r)
+var a = l("22092");
+(0, l("192291").exportTypedArrayStaticMethod)("from", l("12367"), a)

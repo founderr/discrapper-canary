@@ -31,7 +31,7 @@ function p(e, t) {
     action: () => (0, s.openModalLazy)(async () => {
       let {
         UnfeatureItemConfirmationModal: e
-      } = await Promise.all([l.e("99387"), l.e("11345")]).then(l.bind(l, "560454"));
+      } = await Promise.all([l.e("49237"), l.e("99387"), l.e("29549"), l.e("31605"), l.e("56630"), l.e("6380"), l.e("11250"), l.e("57878"), l.e("77172"), l.e("95393"), l.e("81539"), l.e("88390"), l.e("8739"), l.e("58286"), l.e("30243"), l.e("3084"), l.e("75837"), l.e("38779"), l.e("89585"), l.e("69563"), l.e("7620"), l.e("24719")]).then(l.bind(l, "560454"));
       return t => (0, n.jsx)(e, {
         featureableItem: f,
         header: m.default.Messages.GUILD_FEED_UNFEATURE_FORUM_POST_MODAL_HEADER,
@@ -53,7 +53,7 @@ function p(e, t) {
         action: () => (0, s.openModalLazy)(async () => {
           let {
             FeatureForumPostConfirmationModal: u
-          } = await Promise.all([l.e("99387"), l.e("11345")]).then(l.bind(l, "560454"));
+          } = await Promise.all([l.e("49237"), l.e("99387"), l.e("29549"), l.e("31605"), l.e("56630"), l.e("6380"), l.e("11250"), l.e("57878"), l.e("77172"), l.e("95393"), l.e("81539"), l.e("88390"), l.e("8739"), l.e("58286"), l.e("30243"), l.e("3084"), l.e("75837"), l.e("38779"), l.e("89585"), l.e("69563"), l.e("7620"), l.e("24719")]).then(l.bind(l, "560454"));
           return l => (0, n.jsx)(u, {
             thread: e,
             guildId: p,
