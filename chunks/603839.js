@@ -58,7 +58,7 @@ function M(e) {
     onRest: () => H(1 === k),
     immediate: l
   }), W = (0, o.useSpring)({
-    transform: "translateX(".concat(1 === k ? 0 : -1 * G / 2 + 190, "px)"),
+    transform: "translateX(".concat(1 === k ? 0 : -1 * (G - 380) / 2 + 190, "px)"),
     config: L,
     immediate: l
   }), K = (0, o.useTransition)(0 === k, {

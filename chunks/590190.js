@@ -1,5 +1,7 @@
 "use strict";
 e.exports = {
+  charterScroll: "charterScroll__917bf",
+  charterScrollContainer: "charterScrollContainer_f5fb5a",
   close: "close_fe82d9",
   content: "content__845fb",
   divider: "divider_ef3200",
