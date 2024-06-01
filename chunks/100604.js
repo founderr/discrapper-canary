@@ -22,31 +22,31 @@ function d(e, t, n) {
 }
 class c {
   getForwardInfo() {
-    var e, t, n, d, c, f;
+    var e, t, n, d, c, E;
     let {
-      snapshotIndex: E,
+      snapshotIndex: f,
       parentMessage: _,
-      messageSnapshot: m
-    } = this, T = (0, u.calendarFormatCompact)(m.message.timestamp), I = a.default.getChannel(null === (e = _.messageReference) || void 0 === e ? void 0 : e.channel_id), p = a.default.getChannel(this.parentMessage.channel_id);
-    if (null != I && null != p && I.guild_id === p.guild_id) return i.default.can(I.accessPermissions, I) ? {
-      snapshotIndex: E,
+      messageSnapshot: T
+    } = this, m = (0, u.calendarFormatCompact)(T.message.timestamp), I = a.default.getChannel(null === (e = _.messageReference) || void 0 === e ? void 0 : e.channel_id), N = a.default.getChannel(this.parentMessage.channel_id);
+    if (null != I && null != N && I.guild_id === N.guild_id) return i.default.can(I.accessPermissions, I) ? {
+      snapshotIndex: f,
       originLabel: (0, s.computeChannelName)(I, o.default, r.default, !0),
-      timestampLabel: T
+      timestampLabel: m
     } : {
-      snapshotIndex: E,
-      timestampLabel: T
+      snapshotIndex: f,
+      timestampLabel: m
     };
-    if ((null === (t = m.guild) || void 0 === t ? void 0 : t.name) == null) return {
-      snapshotIndex: E,
-      timestampLabel: T
+    if ((null === (t = T.guild) || void 0 === t ? void 0 : t.name) == null) return {
+      snapshotIndex: f,
+      timestampLabel: m
     };
-    let h = null === (n = _.messageReference) || void 0 === n ? void 0 : n.guild_id,
-      N = null != h ? l.default.getGuild(h) : null;
+    let p = null === (n = _.messageReference) || void 0 === n ? void 0 : n.guild_id,
+      S = null != p ? l.default.getGuild(p) : null;
     return {
-      snapshotIndex: E,
-      originLabel: null !== (c = null == N ? void 0 : N.name) && void 0 !== c ? c : null === (d = m.guild) || void 0 === d ? void 0 : d.name,
-      originIconUrl: null !== (f = null == N ? void 0 : N.getIconURL(16, !1)) && void 0 !== f ? f : void 0,
-      timestampLabel: T
+      snapshotIndex: f,
+      originLabel: null !== (c = null == S ? void 0 : S.name) && void 0 !== c ? c : null === (d = T.guild) || void 0 === d ? void 0 : d.name,
+      originIconUrl: null !== (E = null == S ? void 0 : S.getIconURL(16, !1)) && void 0 !== E ? E : void 0,
+      timestampLabel: m
     }
   }
   constructor(e, t, n) {

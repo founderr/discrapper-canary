@@ -18,9 +18,9 @@ var a = l("735250"),
   S = l("98131"),
   E = l("594190"),
   _ = l("695346"),
-  N = l("494620"),
+  h = l("494620"),
   C = l("592125"),
-  h = l("650774"),
+  N = l("650774"),
   g = l("430824"),
   p = l("131951"),
   A = l("944486"),
@@ -39,8 +39,8 @@ var a = l("735250"),
   U = l("653255"),
   G = l("989941"),
   w = l("618407"),
-  k = l("586290"),
-  y = l("233037"),
+  y = l("586290"),
+  k = l("233037"),
   F = l("810013"),
   V = l("537135"),
   B = l("641115"),
@@ -67,7 +67,7 @@ function Z(e) {
       } = e;
       return t === (null == S ? void 0 : S.id)
     }) : o,
-    N = null != t && t.id.startsWith("screen") ? L.default : O.default;
+    h = null != t && t.id.startsWith("screen") ? L.default : O.default;
   return (0, a.jsx)(u.FormItem, {
     title: Y.default.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
     className: q.modalContent,
@@ -77,7 +77,7 @@ function Z(e) {
         game: _,
         size: T.default.Sizes.XSMALL,
         className: Q.selectedIcon
-      }) : (0, a.jsx)(N, {
+      }) : (0, a.jsx)(h, {
         className: Q.selectedIcon
       }), (0, a.jsx)("span", {
         className: Q.ellipsisText,
@@ -141,9 +141,9 @@ function X(e) {
 function $(e) {
   let {
     guildId: t
-  } = e, l = (0, r.useStateFromStores)([h.default], () => {
+  } = e, l = (0, r.useStateFromStores)([N.default], () => {
     var e;
-    return null !== (e = h.default.getMemberCount(t)) && void 0 !== e ? e : 0
+    return null !== (e = N.default.getMemberCount(t)) && void 0 !== e ? e : 0
   }), s = _.NotifyFriendsOnGoLive.useSetting(), o = n.useCallback((e, t) => {
     _.NotifyFriendsOnGoLive.updateSetting(t), j.default.track(K.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
       value: t
@@ -194,7 +194,7 @@ function et(e) {
     sourceChanged: d,
     selectedGuildId: E,
     targetGuildPremiumTier: _,
-    selectSource: h,
+    selectSource: N,
     selectGuild: g,
     sound: I,
     onClose: R,
@@ -220,13 +220,13 @@ function et(e) {
     eu = null != H && !(0, c.isPrivateGuildChannel)(H),
     eo = !(0, r.useStateFromStores)([p.default], () => p.default.getHardwareH264());
   return (0, a.jsxs)(n.Fragment, {
-    children: [ei ? (0, a.jsx)(k.default, {
+    children: [ei ? (0, a.jsx)(y.default, {
       selectedSource: t,
       onChangeVideoDeviceSource: O,
       onChangeAudioDevice: j
     }) : (0, a.jsxs)("div", {
       children: [(0, a.jsx)(Z, {
-        selectSource: h,
+        selectSource: N,
         sourceChanged: d,
         onChangeSource: O,
         selectedSource: t
@@ -241,7 +241,7 @@ function et(e) {
       onChange: D
     }) : null, null != H ? (0, a.jsx)(F.default, {
       channel: H
-    }) : (0, a.jsx)(y.default, {
+    }) : (0, a.jsx)(k.default, {
       guildId: E,
       selectedChannelId: s,
       onChangeSelectedChannelId: M
@@ -253,8 +253,8 @@ function et(e) {
       text: Y.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
         helpCenterLink: b.default.getArticleURL(K.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })
-    }) : null, eo && (0, a.jsx)(N.default, {
-      look: N.InfoBoxLooks.WARNING,
+    }) : null, eo && (0, a.jsx)(h.default, {
+      look: h.InfoBoxLooks.WARNING,
       className: Q.hardwareWarning,
       children: Y.default.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
         onClick: () => {

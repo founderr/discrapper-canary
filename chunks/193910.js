@@ -107,7 +107,7 @@ function P(e) {
     b()
   }
 
-  function B() {
+  function H() {
     (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK, {
       dismissAction: x.ContentDismissActionType.TAKE_ACTION
     }), (0, o.openModalLazy)(async () => {
@@ -123,7 +123,7 @@ function P(e) {
     })
   }
 
-  function H() {
+  function B() {
     S.default.track(N.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
       channel_type: t.type,
       channel_id: t.id,
@@ -201,7 +201,7 @@ function P(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "poll",
             label: l,
-            action: B
+            action: H
           }, "poll");
         case v.AttachmentTypes.INVITE_TO_PLAY_GAME:
           return (0, a.jsx)(o.MenuItem, {
@@ -256,7 +256,7 @@ function P(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "activity",
             label: l,
-            action: H,
+            action: B,
             hint: (0, a.jsx)(j, {})
           }, "activity");
         default:

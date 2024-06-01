@@ -8,21 +8,21 @@ var i, o, l, a, u, s, d, r = n("442837"),
   C = n("944486"),
   T = n("55589"),
   S = n("981631");
-let I = (null !== (s = null === (u = window) || void 0 === u ? void 0 : null === (a = u.location) || void 0 === a ? void 0 : a.pathname) && void 0 !== s ? s : "").startsWith(S.Routes.ACTIVITIES) ? S.Routes.ACTIVITIES : null;
+let f = (null !== (s = null === (u = window) || void 0 === u ? void 0 : null === (a = u.location) || void 0 === a ? void 0 : a.pathname) && void 0 !== s ? s : "").startsWith(S.Routes.ACTIVITIES) ? S.Routes.ACTIVITIES : null;
 
-function f(e) {
+function I(e) {
   let {
     link: t
   } = e;
-  if (I === t) return !1;
-  I = t
+  if (f === t) return !1;
+  f = t
 }
 class O extends(d = r.default.Store) {
   initialize() {
     this.waitFor(_.default, T.default, C.default, A.default, c.default)
   }
   getHomeLink() {
-    return null != I ? I : _.default.fallbackRoute
+    return null != f ? f : _.default.fallbackRoute
   }
 }
 l = "AppViewStore", (o = "displayName") in(i = O) ? Object.defineProperty(i, o, {
@@ -34,21 +34,21 @@ l = "AppViewStore", (o = "displayName") in(i = O) ? Object.defineProperty(i, o, 
   OVERLAY_INITIALIZE: function() {
     let e = T.default.getPrivateChannelIds(),
       t = C.default.getChannelId(S.ME);
-    (null != t || null != e[0]) && (I = S.Routes.CHANNEL(S.ME, null != t ? t : e[0]))
+    (null != t || null != e[0]) && (f = S.Routes.CHANNEL(S.ME, null != t ? t : e[0]))
   },
-  APP_VIEW_SET_HOME_LINK: f,
+  APP_VIEW_SET_HOME_LINK: I,
   APPLICATION_STORE_LOCATION_CHANGE: function(e) {
     let {
       location: t
     } = e;
-    f({
+    I({
       link: t.pathname,
       type: "APP_VIEW_SET_HOME_LINK"
     })
   },
   APPLICATION_STORE_RESET_NAVIGATION: function() {
-    if (null == I || !I.startsWith(S.Routes.APPLICATION_STORE)) return !1;
-    I = S.Routes.APPLICATION_STORE
+    if (null == f || !f.startsWith(S.Routes.APPLICATION_STORE)) return !1;
+    f = S.Routes.APPLICATION_STORE
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -57,7 +57,7 @@ l = "AppViewStore", (o = "displayName") in(i = O) ? Object.defineProperty(i, o, 
     } = e;
     if (null == t && null != n) {
       let e = S.Routes.CHANNEL(S.ME, n);
-      if (e !== I) return I = e, !0
+      if (e !== f) return f = e, !0
     }
     return !1
   },
@@ -65,6 +65,6 @@ l = "AppViewStore", (o = "displayName") in(i = O) ? Object.defineProperty(i, o, 
     let {
       channel: t
     } = e;
-    null == t.guild_id && null != t.id && null != I && I === S.Routes.CHANNEL(S.ME, t.id) && (I = null)
+    null == t.guild_id && null != t.id && null != f && f === S.Routes.CHANNEL(S.ME, t.id) && (f = null)
   }
 })

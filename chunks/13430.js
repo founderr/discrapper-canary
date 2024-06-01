@@ -70,9 +70,9 @@ let T = a.forwardRef(function(e, t) {
     onPopulated: h,
     error: m,
     autoFocus: T,
-    required: I
+    required: S
   } = e, {
-    day: S,
+    day: I,
     setDay: A,
     month: N,
     setMonth: R,
@@ -92,7 +92,7 @@ let T = a.forwardRef(function(e, t) {
       year: u,
       setYear: d
     }
-  }(n), v = a.useMemo(() => null != S && null != N && null != C ? o()("".concat(S, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [S, N, C]);
+  }(n), v = a.useMemo(() => null != I && null != N && null != C ? o()("".concat(I, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [I, N, C]);
   a.useEffect(() => {
     l((null == v ? void 0 : v.isValid()) ? v : null)
   }, [v, l]);
@@ -138,14 +138,14 @@ let T = a.forwardRef(function(e, t) {
     }
     G()
   }, [M, G]);
-  let j = [];
+  let w = [];
   for (let e = 0; e < 3; e++) {
     let {
       type: t
     } = P[e];
     switch (t) {
       case "day":
-        j.push({
+        w.push({
           key: "day",
           input: (0, s.jsx)(_, {
             options: E,
@@ -160,7 +160,7 @@ let T = a.forwardRef(function(e, t) {
                 children: c.default.Messages.AGE_GATE_DOB_DAY
               }),
               options: E,
-              value: S,
+              value: I,
               onChange: t => {
                 let {
                   value: n
@@ -173,7 +173,7 @@ let T = a.forwardRef(function(e, t) {
         });
         break;
       case "month":
-        j.push({
+        w.push({
           key: "month",
           input: (0, s.jsx)(_, {
             options: g,
@@ -201,7 +201,7 @@ let T = a.forwardRef(function(e, t) {
         });
         break;
       case "year":
-        j.push({
+        w.push({
           key: "year",
           input: (0, s.jsx)(_, {
             options: x,
@@ -233,12 +233,12 @@ let T = a.forwardRef(function(e, t) {
     className: r()(f.container, i),
     children: [(0, s.jsx)(u.FormTitle, {
       tag: "legend",
-      required: I,
+      required: S,
       error: L,
       children: c.default.Messages.AGE_GATE_DATE_OF_BIRTH
     }), (0, s.jsx)("div", {
       className: f.inputs,
-      children: j.map((e, t) => {
+      children: w.map((e, t) => {
         let {
           key: n,
           input: a

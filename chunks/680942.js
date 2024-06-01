@@ -1,17 +1,17 @@
 "use strict";
-a.r(t);
-var l = a("735250"),
-  s = a("470079"),
-  r = a("481060"),
-  n = a("727637"),
-  i = a("906732"),
-  o = a("241553"),
-  c = a("333867"),
-  u = a("559629"),
-  d = a("884697"),
-  f = a("231338"),
-  C = a("689938"),
-  p = a("46309");
+l.r(t);
+var a = l("735250"),
+  s = l("470079"),
+  r = l("481060"),
+  n = l("727637"),
+  i = l("906732"),
+  o = l("241553"),
+  c = l("333867"),
+  u = l("559629"),
+  d = l("884697"),
+  f = l("231338"),
+  C = l("689938"),
+  p = l("46309");
 let m = {
   dark: [{
     box: "#FFF19E",
@@ -61,7 +61,7 @@ let m = {
 t.default = e => {
   let {
     product: t,
-    returnRef: a,
+    returnRef: l,
     onSuccess: g,
     tooltipDelay: E,
     isGiftEasterEggEnabled: h,
@@ -69,10 +69,10 @@ t.default = e => {
   } = e, {
     analyticsLocations: x
   } = (0, i.default)(), S = s.useRef(null), v = (0, n.default)(S), I = b ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
-  return (0, d.isBundleProduct)(t) ? null : (0, l.jsx)(r.Tooltip, {
+  return (0, d.isBundleProduct)(t) ? null : (0, a.jsx)(r.Tooltip, {
     text: C.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: E,
-    children: e => (0, l.jsx)(r.Button, {
+    children: e => (0, a.jsx)(r.Button, {
       ...e,
       buttonRef: S,
       className: p.giftButton,
@@ -86,18 +86,18 @@ t.default = e => {
           skuId: t.skuId,
           isGift: !0,
           analyticsLocations: x,
-          returnRef: a,
+          returnRef: l,
           onClose: null != g ? e => {
             e && g()
           } : void 0
         })
       },
-      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
+      children: h ? (0, a.jsx)(o.SeasonalGiftIcon, {
         hovered: v,
         isContentDismissed: !0,
         themeOverride: I,
         boxColors: m
-      }) : (0, l.jsx)(u.default, {
+      }) : (0, a.jsx)(u.default, {
         width: 24,
         height: 24
       })

@@ -41,8 +41,8 @@ var a = n("735250"),
   F = n("131951"),
   w = n("158776"),
   k = n("979651"),
-  B = n("366695"),
-  H = n("40300"),
+  H = n("366695"),
+  B = n("40300"),
   G = n("83097"),
   V = n("119828"),
   W = n("156338"),
@@ -76,7 +76,7 @@ let eh = l.memo(e => {
     onContextMenu: h,
     onClick: A,
     onMouseDown: v,
-    onKeyDown: B,
+    onKeyDown: H,
     className: G,
     style: W,
     channel: Y,
@@ -89,7 +89,7 @@ let eh = l.memo(e => {
     noVideoRender: J = !1,
     focused: $ = !1,
     blocked: es = !1,
-    fit: eh = H.VideoStreamFit.CONTAIN,
+    fit: eh = B.VideoStreamFit.CONTAIN,
     paused: em = !1,
     pulseSpeakingIndicator: eE = !1
   } = e, eC = l.useContext(j.IdleStateContext), [eg, eS] = l.useState(!1), e_ = (0, o.useStateFromStores)([b.default], () => b.default.getId()), eT = c.type === eo.ParticipantTypes.ACTIVITY ? null : null === (t = c.user) || void 0 === t ? void 0 : t.id, [eI] = (0, g.default)(c.type === eo.ParticipantTypes.ACTIVITY ? [c.id] : []), eA = (0, o.useStateFromStores)([N.default], () => N.default.getEnabled()), ev = (0, o.useStateFromStores)([F.default], () => null != eT && F.default.isLocalVideoDisabled(eT, (0, S.default)(c.type)), [eT, c.type]), eN = (0, o.useStateFromStores)([F.default], () => null != eT ? F.default.getVideoToggleState(eT, (0, S.default)(c.type)) : er.VideoToggleState.NONE, [eT, c.type]), ex = eN === er.VideoToggleState.AUTO_PROBING, {
@@ -143,13 +143,13 @@ let eh = l.memo(e => {
     location: "voice_users"
   }, {
     autoTrackExposure: !1
-  }), eB = ek || ew, {
-    hangStatusActivity: eH,
+  }), eH = ek || ew, {
+    hangStatusActivity: eB,
     gameActivity: eG
   } = (0, o.useStateFromStoresObject)([w.default], () => ({
     hangStatusActivity: ew && null != eT ? w.default.findActivity(eT, e => e.type === er.ActivityTypes.HANG_STATUS) : null,
-    gameActivity: eB && null != eT ? w.default.findActivity(eT, e => null != e.application_id && e.type === er.ActivityTypes.PLAYING) : null
-  }), [ew, eT, eB]), eV = (0, o.useStateFromStores)([U.default], () => (null == eG ? void 0 : eG.application_id) != null ? U.default.getDetectableGame(eG.application_id) : null), eW = (0, o.useStateFromStores)([C.default], () => null != eV && (null == eG ? void 0 : eG.application_id) != null ? C.default.getApplication(null == eG ? void 0 : eG.application_id) : void 0);
+    gameActivity: eH && null != eT ? w.default.findActivity(eT, e => null != e.application_id && e.type === er.ActivityTypes.PLAYING) : null
+  }), [ew, eT, eH]), eV = (0, o.useStateFromStores)([U.default], () => (null == eG ? void 0 : eG.application_id) != null ? U.default.getDetectableGame(eG.application_id) : null), eW = (0, o.useStateFromStores)([C.default], () => null != eV && (null == eG ? void 0 : eG.application_id) != null ? C.default.getApplication(null == eG ? void 0 : eG.application_id) : void 0);
   l.useEffect(() => {
     eS($)
   }, [$]);
@@ -261,7 +261,7 @@ let eh = l.memo(e => {
             onContextMenu: eq,
             onClick: eK,
             onMouseDown: v,
-            onKeyDown: B,
+            onKeyDown: H,
             focusProps: {
               offset: 1
             },
@@ -308,7 +308,7 @@ let eh = l.memo(e => {
               onContextMenu: eq,
               onToggleMute: eY,
               participantUserId: eT,
-              hangStatusActivity: eH,
+              hangStatusActivity: eB,
               application: eW,
               speaking: eM
             }) : null, c.type === eo.ParticipantTypes.USER && eA ? (0, a.jsx)(x.default, {
@@ -384,7 +384,7 @@ let ep = l.memo(e => {
     hangStatusActivity: P,
     application: D,
     speaking: b
-  } = e, U = null, w = null, k = null, H = null, K = (0, es.isVideoCompact)(C), Z = (0, es.isNamesCompact)(C), X = (0, o.useStateFromStores)([F.default], () => null != y && F.default.isLocalVideoAutoDisabled(y, (0, S.default)(R)), [y, R]), Q = (0, m.useRedesignIconContext)().enabled;
+  } = e, U = null, w = null, k = null, B = null, K = (0, es.isVideoCompact)(C), Z = (0, es.isNamesCompact)(C), X = (0, o.useStateFromStores)([F.default], () => null != y && F.default.isLocalVideoAutoDisabled(y, (0, S.default)(R)), [y, R]), Q = (0, m.useRedesignIconContext)().enabled;
   if (!M) {
     if (l && R === eo.ParticipantTypes.STREAM && g && !N) U = (0, a.jsx)(m.Tooltip, {
       text: ec.default.Messages.UNMUTE,
@@ -453,7 +453,7 @@ let ep = l.memo(e => {
         children: (0, a.jsx)(q.default, {})
       })
     }
-  })), R === eo.ParticipantTypes.USER && null != P ? H = (0, a.jsx)(m.Tooltip, {
+  })), R === eo.ParticipantTypes.USER && null != P ? B = (0, a.jsx)(m.Tooltip, {
     text: (0, A.getHangStatusText)(P),
     children: e => (0, a.jsx)("div", {
       ...e,
@@ -466,7 +466,7 @@ let ep = l.memo(e => {
         animate: b
       })
     })
-  }) : R === eo.ParticipantTypes.USER && null != D && (H = (0, a.jsx)(m.Tooltip, {
+  }) : R === eo.ParticipantTypes.USER && null != D && (B = (0, a.jsx)(m.Tooltip, {
     text: ec.default.Messages.UNFORMATTED_PLAYING_GAME.format({
       game: D.name
     }),
@@ -475,10 +475,10 @@ let ep = l.memo(e => {
       className: i()(ef.hangStatusContainer, {
         [ef.hangStatusSmall]: C < 500
       }),
-      children: (0, a.jsx)(B.default, {
+      children: (0, a.jsx)(H.default, {
         className: ef.hangStatusIcon,
         game: D,
-        size: B.default.Sizes.SMALL
+        size: H.default.Sizes.SMALL
       })
     })
   })), (0, a.jsxs)("div", {
@@ -533,11 +533,11 @@ let ep = l.memo(e => {
         }), null != U && (0, a.jsx)("div", {
           className: ef.status,
           children: U
-        }), k, H]
+        }), k, B]
       })]
     })]
   })
 });
 ep.displayName = "CallTileOverlay";
-let eE = H.VideoStreamFit;
+let eE = B.VideoStreamFit;
 t.default = eh

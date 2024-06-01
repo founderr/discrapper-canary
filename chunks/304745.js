@@ -49,9 +49,9 @@ function N(e) {
       openInPopout: F,
       analyticsLocations: w
     })
-  }, [U.location, w, t, F]), B = [];
-  return !M && B.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.default)(t.id) && !M && B.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(S.default, {
-    contentTypes: B,
+  }, [U.location, w, t, F]), H = [];
+  return !M && H.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.default)(t.id) && !M && H.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(S.default, {
+    contentTypes: H,
     children: e => {
       let {
         visibleContent: n,

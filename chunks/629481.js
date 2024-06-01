@@ -1,8 +1,8 @@
 "use strict";
-var r, i, l, s;
+var i, r, s, l;
 n.r(t), n.d(t, {
   GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE: function() {
-    return c
+    return d
   },
   GUILD_SHOP_CHANNEL_ROW_CLICK: function() {
     return u
@@ -11,16 +11,16 @@ n.r(t), n.d(t, {
     return o
   },
   GuildShopCopyLinkLocations: function() {
-    return i
+    return r
   },
   GuildShopPreviewClickActions: function() {
-    return r
+    return i
   },
   SERVER_SHOP_URL: function() {
     return a
   }
-}), (l = r || (r = {})).GET_STARTED_CLICK = "get_started_click", l.DISMISS_FULL_PREVIEW = "dismiss_full_preview", l.DISMISS_TAB_PREVIEW = "dismiss_tab_preview", l.DISMISS_CHANNEL_ROW = "dismiss_channel_row", (s = i || (i = {})).CHANNEL_ROW_CONTEXT_MENU = "channel_row_context_menu", s.SHOP_HEADER_BUTTON = "shop_header_button";
+}), (s = i || (i = {})).GET_STARTED_CLICK = "get_started_click", s.DISMISS_FULL_PREVIEW = "dismiss_full_preview", s.DISMISS_TAB_PREVIEW = "dismiss_tab_preview", s.DISMISS_CHANNEL_ROW = "dismiss_channel_row", (l = r || (r = {})).CHANNEL_ROW_CONTEXT_MENU = "channel_row_context_menu", l.SHOP_HEADER_BUTTON = "shop_header_button";
 let o = "hasClickedGuildShopProductPreviewTab",
   u = "hasClickedGuildShopChannelRow",
   a = "https://discord.com/servershop",
-  c = "1 GB"
+  d = "1 GB"

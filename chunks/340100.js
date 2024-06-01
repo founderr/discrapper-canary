@@ -9,69 +9,69 @@ var s = n("735250"),
   u = n("481060"),
   d = n("377171"),
   c = n("706454"),
-  f = n("507893"),
-  E = n("930153"),
+  E = n("507893"),
+  f = n("930153"),
   _ = n("358085"),
-  m = n("918701"),
-  T = n("46140"),
+  T = n("918701"),
+  m = n("46140"),
   I = n("689938"),
-  p = n("333964");
+  N = n("333964");
 t.default = function(e) {
   var t;
   let {
     className: n,
     color: l = o.default.colors.WHITE,
-    quest: h,
-    isInventory: N
-  } = e, S = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, C = (0, r.useStateFromStores)([c.default], () => c.default.locale), g = a.useMemo(() => (0, m.calculatePercentComplete)({
-    quest: h,
-    location: T.QuestsExperimentLocations.QUEST_PROGRESS_BAR
-  }), [h]), A = 100 * g, M = (0, _.isWeb)() && !S, R = () => (0, s.jsxs)("div", {
-    className: p.desktopTooltip,
+    quest: p,
+    isInventory: S
+  } = e, C = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, A = (0, r.useStateFromStores)([c.default], () => c.default.locale), h = a.useMemo(() => (0, T.calculatePercentComplete)({
+    quest: p,
+    location: m.QuestsExperimentLocations.QUEST_PROGRESS_BAR
+  }), [p]), g = 100 * h, M = (0, _.isWeb)() && !C, O = () => (0, s.jsxs)("div", {
+    className: N.desktopTooltip,
     style: {
-      marginTop: N ? 8 : 0
+      marginTop: S ? 8 : 0
     },
-    children: [(0, s.jsx)(f.default, {
-      className: p.infoIcon,
-      height: N ? 16 : 12,
-      width: N ? 16 : 12,
-      color: N ? d.default.TEXT_MUTED : d.default.WHITE
+    children: [(0, s.jsx)(E.default, {
+      className: N.infoIcon,
+      height: S ? 16 : 12,
+      width: S ? 16 : 12,
+      color: S ? d.default.TEXT_MUTED : d.default.WHITE
     }), (0, s.jsx)(u.Text, {
-      color: N ? "text-muted" : "always-white",
-      variant: N ? "text-xs/normal" : "text-xxs/normal",
+      color: S ? "text-muted" : "always-white",
+      variant: S ? "text-xs/normal" : "text-xxs/normal",
       children: I.default.Messages.QUESTS_PROGRESS_WEB_TIP
     })]
   });
-  return M && !N ? (0, s.jsx)(R, {}) : (0, s.jsxs)("div", {
-    className: i()(p.wrapper, n),
+  return M && !S ? (0, s.jsx)(O, {}) : (0, s.jsxs)("div", {
+    className: i()(N.wrapper, n),
     style: {
       color: l.css
     },
     children: [(0, s.jsxs)("div", {
-      className: p.percentCompleteWrapper,
+      className: N.percentCompleteWrapper,
       children: [(0, s.jsx)(u.Text, {
         variant: "text-xs/semibold",
-        className: p.percentCompleteLabel,
+        className: N.percentCompleteLabel,
         color: "none",
-        children: (0, E.formatPercent)(C, g, {
+        children: (0, f.formatPercent)(A, h, {
           roundingMode: "floor"
         })
       }), (0, s.jsx)("div", {
-        className: p.percentCompleteLabelOffset,
+        className: N.percentCompleteLabelOffset,
         style: {
-          width: "".concat(100 - A, "%")
+          width: "".concat(100 - g, "%")
         }
       })]
     }), (0, s.jsx)("div", {
-      className: p.progressBar,
+      className: N.progressBar,
       role: "progressbar",
-      "aria-valuenow": A,
+      "aria-valuenow": g,
       children: (0, s.jsx)("div", {
-        className: p.progressBarFill,
+        className: N.progressBarFill,
         style: {
-          width: "".concat(A, "%")
+          width: "".concat(g, "%")
         }
       })
-    }), M && (0, s.jsx)(R, {})]
+    }), M && (0, s.jsx)(O, {})]
   })
 }

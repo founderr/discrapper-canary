@@ -79,7 +79,7 @@ let w = e => {
       })
     }, "hang-status")
   };
-class B extends(a = s.Component) {
+class H extends(a = s.Component) {
   renderPrioritySpeaker() {
     let {
       speaking: e,
@@ -181,7 +181,7 @@ class B extends(a = s.Component) {
       guildId: O,
       channelId: F,
       user: w,
-      handleHoverHangStatus: B
+      handleHoverHangStatus: H
     } = this.props;
     if (o || c) return null;
     let V = [],
@@ -240,12 +240,12 @@ class B extends(a = s.Component) {
       className: U.icons,
       children: [(0, l.jsxs)("div", {
         className: U.iconGroup,
-        onMouseEnter: () => null == B ? void 0 : B(!1),
+        onMouseEnter: () => null == H ? void 0 : H(!1),
         children: [W, V]
       }), _ || z ? (0, l.jsx)("div", {
         className: U.iconGroup,
-        onMouseEnter: () => null == B ? void 0 : B(!0),
-        children: z ? (0, l.jsx)(H, {
+        onMouseEnter: () => null == H ? void 0 : H(!0),
+        children: z ? (0, l.jsx)(B, {
           application: N,
           iconClassName: m,
           guildId: O,
@@ -340,7 +340,7 @@ class B extends(a = s.Component) {
   }
 }
 
-function H(e) {
+function B(e) {
   let {
     application: t,
     iconClassName: n,
@@ -437,11 +437,11 @@ function G(e) {
     children: p
   })
 }
-F(B, "defaultProps", {
+F(H, "defaultProps", {
   avatarContainerClass: U.avatarContainer,
   userNameClassName: U.usernameFont,
   size: j.OverlayAvatarSizes.SMALL,
   selected: !1,
   disabled: !1,
   isOverlay: !1
-}), t.default = B
+}), t.default = H

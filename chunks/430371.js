@@ -47,13 +47,13 @@ function v(e) {
     } = e,
     w = null != M,
     k = c.default.getVideoComponent(),
-    B = d.default.getId(),
-    [H, G] = l.useState(null),
+    H = d.default.getId(),
+    [B, G] = l.useState(null),
     [V, W] = l.useState(!0),
     [Y, z] = l.useState(!1),
     K = L.type === S.ParticipantTypes.ACTIVITY,
     Z = !K && null != L.streamId,
-    q = Z && null != H && H.width > 0 && H.height > 0 ? H.width / H.height : I,
+    q = Z && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : I,
     X = b <= 2 * A + 144,
     Q = O && !X,
     J = (0, o.default)(Q),
@@ -129,7 +129,7 @@ function v(e) {
     ef = l.useCallback(e => {
       G(e), W(!1)
     }, []),
-    eh = Q || P ? [] : (0, E.getPipParticipants)(N, L, B),
+    eh = Q || P ? [] : (0, E.getPipParticipants)(N, L, H),
     {
       visibleParticipants: em,
       participantTileWidth: ep

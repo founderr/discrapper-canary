@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return tr
   },
   Table: function() {
-    return e7
+    return e9
   },
   TableBody: function() {
     return tn
@@ -1497,7 +1497,7 @@ class e6 extends b {
 }
 let e5 = (0, a.createContext)(null),
   e8 = (0, a.createContext)(null),
-  e7 = (0, a.forwardRef)(function(e, t) {
+  e9 = (0, a.forwardRef)(function(e, t) {
     let n, o, s;
     [e, t] = N(e, t, e5);
     let {
@@ -1590,11 +1590,11 @@ let e5 = (0, a.createContext)(null),
     }), a.createElement(to, {
       collection: c,
       isDroppable: g
-    }))), y), a.createElement(e9.Provider, {
+    }))), y), a.createElement(e7.Provider, {
       value: A
     }, u))
   }),
-  e9 = (0, a.createContext)(null),
+  e7 = (0, a.createContext)(null),
   te = (0, a.forwardRef)(function(e, t) {
     let n = E({
         children: e.children,

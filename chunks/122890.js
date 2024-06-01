@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var a = n("470079"),
-  r = n("409813"),
-  s = n("45572");
+  s = n("409813"),
+  r = n("45572");
 
 function o(e) {
   let {
@@ -18,8 +18,8 @@ function o(e) {
     successScene: u
   } = e, [c, d] = (0, a.useState)(o);
   return (0, a.useEffect)(() => {
-    t === s.PurchaseState.PURCHASING ? d(l) : t === s.PurchaseState.FAIL && d(i)
+    t === r.PurchaseState.PURCHASING ? d(l) : t === r.PurchaseState.FAIL && d(i)
   }, [t, l, i]), (0, a.useEffect)(() => {
-    n === r.Step.CONFIRM && d(u)
+    n === s.Step.CONFIRM && d(u)
   }, [n, u]), [c, d]
 }

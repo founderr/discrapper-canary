@@ -1,19 +1,19 @@
     "use strict";
-    e.r(r), e("47120"), e("312677");
+    e.r(t), e("47120"), e("312677");
     var n = e("8048"),
-      o = e("647425");
-    let i = new Map,
-      u = t => {
+      i = e("647425");
+    let o = new Map,
+      u = r => {
         let {
-          canvas: r,
+          canvas: t,
           canvasId: e,
           animationId: u,
           assetUrl: c,
           assetData: s,
           isVisible: a,
           shouldAnimate: f
-        } = t, p = new n.default({
-          canvas: r,
+        } = r, l = new n.default({
+          canvas: t,
           id: u,
           assetUrl: c,
           assetData: s,
@@ -21,58 +21,58 @@
           shouldAnimate: f,
           onInitialDraw: () => {
             self.postMessage({
-              type: o.MessageTypes.FIRST_DRAW,
+              type: i.MessageTypes.FIRST_DRAW,
               canvasId: e
             })
           },
           onError: () => {
             self.postMessage({
-              type: o.MessageTypes.ERROR,
+              type: i.MessageTypes.ERROR,
               canvasId: e
             })
           }
         });
-        i.set(e, p)
+        o.set(e, l)
       },
-      c = t => {
-        var r;
+      c = r => {
+        var t;
         let {
           canvasId: e
-        } = t;
-        null === (r = i.get(e)) || void 0 === r || r.drop(), i.delete(e)
+        } = r;
+        null === (t = o.get(e)) || void 0 === t || t.drop(), o.delete(e)
       },
-      s = t => {
-        var r;
+      s = r => {
+        var t;
         let {
           canvasId: e,
           isVisible: n
-        } = t;
-        null === (r = i.get(e)) || void 0 === r || r.setVisibility(n)
+        } = r;
+        null === (t = o.get(e)) || void 0 === t || t.setVisibility(n)
       },
-      a = t => {
-        var r;
+      a = r => {
+        var t;
         let {
           canvasId: e,
           shouldAnimate: n,
-          nextFrame: o
-        } = t;
-        null === (r = i.get(e)) || void 0 === r || r.setState(n, o)
+          nextFrame: i
+        } = r;
+        null === (t = o.get(e)) || void 0 === t || t.setState(n, i)
       };
-    self.addEventListener("message", t => {
+    self.addEventListener("message", r => {
       let {
-        data: r
-      } = t;
-      switch (r.type) {
-        case o.MessageTypes.INITIALIZE:
-          u(r);
+        data: t
+      } = r;
+      switch (t.type) {
+        case i.MessageTypes.INITIALIZE:
+          u(t);
           break;
-        case o.MessageTypes.DROP:
-          c(r);
+        case i.MessageTypes.DROP:
+          c(t);
           break;
-        case o.MessageTypes.VISIBILITY_CHANGE:
-          s(r);
+        case i.MessageTypes.VISIBILITY_CHANGE:
+          s(t);
           break;
-        case o.MessageTypes.STATE_CHANGE:
-          a(r)
+        case i.MessageTypes.STATE_CHANGE:
+          a(t)
       }
     })

@@ -19,9 +19,9 @@ var n = l("120356"),
   S = l("346656"),
   E = l("259580"),
   _ = l("102172"),
-  N = l("148381"),
+  h = l("148381"),
   C = l("689938"),
-  h = l("555066"),
+  N = l("555066"),
   g = l("386475");
 
 function p(e) {
@@ -56,9 +56,9 @@ function A(e) {
   let {
     onSelectGuild: t
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());
-  return (0, a.jsx)(N.default, {
+  return (0, a.jsx)(h.default, {
     title: C.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-    scrollerClassName: s()(g.guildScroller, h.marginBottom),
+    scrollerClassName: s()(g.guildScroller, N.marginBottom),
     children: r().flatMap(l, e => {
       let {
         guildIds: l

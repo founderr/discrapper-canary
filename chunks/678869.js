@@ -106,14 +106,14 @@ function P(e) {
       activity: F,
       currentEntry: w,
       artist: k,
-      imageUrl: B,
-      title: H,
+      imageUrl: H,
+      title: B,
       user: G
     } = (0, T.useListenedSessionData)(D),
     {
       primaryColor: V,
       secondaryColor: W
-    } = (0, _.default)(B),
+    } = (0, _.default)(H),
     {
       streamPreviewUrl: Y,
       channel: z
@@ -129,18 +129,18 @@ function P(e) {
       return (0, S.generateListenContentImage)({
         user: G,
         channel: P,
-        mediaImageSrc: B,
+        mediaImageSrc: H,
         artist: k,
         description: O({
           artist: k,
-          media: H
+          media: B
         }, P, G),
         colors: [V, W],
         badges: (0, S.getListenSessionImageBadges)({
           timestamp: n
         })
       })
-    }, [F, k, P, D, B, V, W, H, G]);
+    }, [F, k, P, D, H, V, W, B, G]);
   if (null == F || null == w) return null;
   let q = k;
   if (w.media.provider === s.ContentInventoryListenedMediaProvider.SPOTIFY && (null == K ? void 0 : K.syncDisabled) === !1) {
@@ -163,7 +163,7 @@ function P(e) {
     }, A = (0, c.default)(K, x.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != P ? E.default.getNickname(P.guild_id, P.id, G) : void 0)
   }
   let X = (0, a.jsx)(I.PopoutContent, {
-    thumbnailSrc: B,
+    thumbnailSrc: H,
     channel: P,
     entry: D,
     headerIcons: (0, a.jsx)(v.default, {
@@ -172,7 +172,7 @@ function P(e) {
       provider: w.media.provider
     }),
     userDescription: (0, g.isEntryActive)(D) ? M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
-    title: H,
+    title: B,
     onClickTitle: o,
     subtitle: q,
     badges: null,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return O
   }
 });
 var s = n("735250"),
@@ -13,51 +13,51 @@ var s = n("735250"),
   u = n("465270"),
   d = n("481060"),
   c = n("628238"),
-  f = n("25015"),
-  E = n("438075"),
+  E = n("25015"),
+  f = n("438075"),
   _ = n("695346"),
-  m = n("592125"),
-  T = n("906467"),
+  T = n("592125"),
+  m = n("906467"),
   I = n("113039"),
-  p = n("100604"),
-  h = n("694784"),
-  N = n("39154"),
-  S = n("689938"),
-  C = n("296854");
+  N = n("100604"),
+  p = n("694784"),
+  S = n("39154"),
+  C = n("689938"),
+  A = n("296854");
 
-function g() {
+function h() {
   return (0, s.jsxs)("div", {
-    className: C.headerContainer,
+    className: A.headerContainer,
     children: [(0, s.jsx)(l.ArrowAngleRightUpIcon, {
       width: 14,
       height: 16,
       color: o.default.colors.HEADER_MUTED
     }), (0, s.jsx)(i.Text, {
-      className: C.headerText,
+      className: A.headerText,
       variant: "text-sm/semibold",
       color: "header-muted",
-      children: S.default.Messages.MESSAGE_FORWARDED
+      children: C.default.Messages.MESSAGE_FORWARDED
     })]
   })
 }
 
-function A(e) {
+function g(e) {
   let {
     message: t,
     snapshot: n,
     index: l
-  } = e, r = a.useMemo(() => new p.MessageForward(t, n, l).getForwardInfo(), [t, n, l]), c = a.useCallback(() => {
-    (0, h.default)(t, n)
+  } = e, r = a.useMemo(() => new N.MessageForward(t, n, l).getForwardInfo(), [t, n, l]), c = a.useCallback(() => {
+    (0, p.default)(t, n)
   }, [t, n]);
   return null == r.originLabel ? null : (0, s.jsxs)(d.Clickable, {
-    className: C.footerContainer,
+    className: A.footerContainer,
     onClick: c,
     children: [null != r.originIconUrl ? (0, s.jsx)("img", {
-      className: C.originIcon,
+      className: A.originIcon,
       src: r.originIconUrl,
       alt: ""
     }) : null, (0, s.jsx)(i.Text, {
-      className: C.footerText,
+      className: A.footerText,
       variant: "text-sm/medium",
       color: "none",
       children: "".concat(r.originLabel, "  •  ").concat(r.timestampLabel)
@@ -75,37 +75,37 @@ function M(e) {
     message: n,
     snapshot: l,
     index: i
-  } = e, o = a.useMemo(() => (0, N.default)(n, l), [n, l]), u = _.InlineEmbedMedia.useSetting(), d = _.RenderEmbeds.useSetting(), p = (0, r.useStateFromStores)([T.default], () => T.default.isDeveloper), h = (0, c.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-    content: S,
+  } = e, o = a.useMemo(() => (0, S.default)(n, l), [n, l]), u = _.InlineEmbedMedia.useSetting(), d = _.RenderEmbeds.useSetting(), N = (0, r.useStateFromStores)([m.default], () => m.default.isDeveloper), p = (0, c.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+    content: C,
     hasSpoilerEmbeds: M
-  } = (0, f.default)(o, {
+  } = (0, E.default)(o, {
     hideSimpleEmbedContent: u && d,
     isInteracting: !1,
     formatInline: !1,
-    allowList: h,
-    allowHeading: h,
+    allowList: p,
+    allowHeading: p,
     allowLinks: !0,
-    allowDevLinks: p,
+    allowDevLinks: N,
     previewLinkTarget: !0
-  }), R = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(n.channel_id)), v = _.MessageDisplayCompact.useSetting();
-  return null == R ? null : (0, s.jsxs)("div", {
-    className: C.container,
+  }), O = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(n.channel_id)), R = _.MessageDisplayCompact.useSetting();
+  return null == O ? null : (0, s.jsxs)("div", {
+    className: A.container,
     children: [(0, s.jsx)("div", {
-      className: C.quote
+      className: A.quote
     }), (0, s.jsxs)("div", {
-      className: C.content,
-      children: [(0, s.jsx)(g, {}), (0, s.jsx)(I.default, {
+      className: A.content,
+      children: [(0, s.jsx)(h, {}), (0, s.jsx)(I.default, {
         message: o,
-        content: S
-      }), (0, E.default)({
+        content: C
+      }), (0, f.default)({
         channelMessageProps: {
           message: o,
-          channel: R,
-          compact: v
+          channel: O,
+          compact: R
         },
         hasSpoilerEmbeds: M,
         isInteracting: !1
-      }), (0, s.jsx)(A, {
+      }), (0, s.jsx)(g, {
         message: n,
         snapshot: l,
         index: i
@@ -114,7 +114,7 @@ function M(e) {
   }, i)
 }
 
-function R(e) {
+function O(e) {
   let {
     message: t
   } = e;

@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   useInappropriateConversationBannerForChannel: function() {
-    return u
+    return l
   }
 });
-var r = n("359119"),
-  a = n("897769"),
-  i = n("237292"),
-  s = n("403485"),
-  o = n("604849");
+var a = n("359119"),
+  s = n("897769"),
+  r = n("237292"),
+  i = n("403485"),
+  u = n("604849");
 
-function u(e, t) {
-  let n = (0, i.useIsEligibleForInappropriateConversationWarning)({
+function l(e, t) {
+  let n = (0, r.useIsEligibleForInappropriateConversationWarning)({
       location: t
     }),
-    u = (0, o.useSafetyAlertsSettingOrDefault)(),
-    d = (0, s.useInappropriateConversationWarningsForChannel)(e),
-    l = (0, a.useChannelSafetyWarning)(e, r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
-  if (!!n && !!u && 0 !== d.length) {
-    if (!d.some(e => e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2 && null != e.dismiss_timestamp)) return l
+    l = (0, u.useSafetyAlertsSettingOrDefault)(),
+    E = (0, i.useInappropriateConversationWarningsForChannel)(e),
+    o = (0, s.useChannelSafetyWarning)(e, a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
+  if (!!n && !!l && 0 !== E.length) {
+    if (!E.some(e => e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2 && null != e.dismiss_timestamp)) return o
   }
 }

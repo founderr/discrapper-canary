@@ -63,8 +63,8 @@ var u = n("194048"),
   F = n("430824"),
   w = n("496675"),
   k = n("699516"),
-  B = n("9156"),
-  H = n("979651"),
+  H = n("9156"),
+  B = n("979651"),
   G = n("938475"),
   V = n("346656"),
   W = n("682864"),
@@ -442,7 +442,7 @@ function eS(e) {
     badges: n,
     stream: s,
     ...i
-  } = e, r = (0, d.useStateFromStores)([U.default], () => U.default.getChannel(null == s ? void 0 : s.channelId)), [o] = l.useMemo(() => (0, j.canWatchStream)(r, H.default, F.default, w.default, O.default), [r]);
+  } = e, r = (0, d.useStateFromStores)([U.default], () => U.default.getChannel(null == s ? void 0 : s.channelId)), [o] = l.useMemo(() => (0, j.canWatchStream)(r, B.default, F.default, w.default, O.default), [r]);
   return null == s ? null : (0, a.jsxs)(ec, {
     className: eo.streamingPopoutHero,
     children: [(0, a.jsx)(eE, {
@@ -587,7 +587,7 @@ function eI(e) {
   } = s, c = (0, d.useStateFromStores)([F.default], () => F.default.getGuild(t.guild_id)), h = (0, d.useStateFromStoresArray)([G.default], () => G.default.getVoiceStatesForChannel(t), [t]), m = l.useMemo(() => {
     for (let e of h) {
       let t = U.default.getDMFromUserId(e.user.id),
-        n = null != t && B.default.isChannelMuted(null, t),
+        n = null != t && H.default.isChannelMuted(null, t),
         a = k.default.isBlocked(e.user.id);
       if (n || a) return !0
     }

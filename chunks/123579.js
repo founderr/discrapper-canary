@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("421486"),
   w = n("347949"),
   k = n("240328"),
-  B = n("436478"),
-  H = n("138394"),
+  H = n("436478"),
+  B = n("138394"),
   G = n("248345"),
   V = n("19836"),
   W = n("538564"),
@@ -117,7 +117,7 @@ t.default = e => {
     isFetching: ex
   } = (0, j.default)(n.id, !n.bot), eM = !n.bot && null != eA && eA.length > 0, eR = !n.bot && null != eN && eN.length > 0, ey = (0, Z.useShouldShowUserPopoutCollectiblesUpsell)({
     popoutUser: n,
-    source: B.UserPopoutUpsellSource.PROFILE_PANEL
+    source: H.UserPopoutUpsellSource.PROFILE_PANEL
   }), eL = (0, u.default)();
   l.useEffect(() => {
     el.current = Date.now()
@@ -181,7 +181,7 @@ t.default = e => {
       location: d.default.PROFILE,
       disable: ew
     }),
-    eB = (0, E.useIsUserRecentGamesEnabled)({
+    eH = (0, E.useIsUserRecentGamesEnabled)({
       userId: n.id,
       location: "28tk0bf_2"
     });
@@ -202,7 +202,7 @@ t.default = e => {
           themeOverride: eL,
           children: [ey.shouldShow && (0, a.jsx)(k.default, {
             user: n,
-            upsellSource: B.UserPopoutUpsellSource.PROFILE_PANEL,
+            upsellSource: H.UserPopoutUpsellSource.PROFILE_PANEL,
             displayProfile: er,
             isInSidebar: !0,
             ...ey
@@ -222,7 +222,7 @@ t.default = e => {
               }), (0, a.jsx)(W.default, {
                 customStatusActivity: ep,
                 animate: en
-              }), (0, a.jsx)(H.default, {}), (0, a.jsx)(V.default, {
+              }), (0, a.jsx)(B.default, {}), (0, a.jsx)(V.default, {
                 bio: null == er ? void 0 : er.bio,
                 hidePersonalInformation: eI,
                 animateOnHover: !0,
@@ -234,7 +234,7 @@ t.default = e => {
               }), !n.isSystemUser() && (0, a.jsxs)(a.Fragment, {
                 children: [(0, a.jsx)(Y.default, {
                   userId: n.id
-                }), (0, a.jsx)(H.default, {})]
+                }), (0, a.jsx)(B.default, {})]
               }), !n.isSystemUser() && (0, a.jsx)(z.default, {
                 user: n,
                 setNote: !1
@@ -252,7 +252,7 @@ t.default = e => {
                   }
                 }
               })
-            }) : null, eB && (0, a.jsx)(w.UserProfileRecentGamesThemedSection, {
+            }) : null, eH && (0, a.jsx)(w.UserProfileRecentGamesThemedSection, {
               userId: n.id
             }), (eR || eM) && (0, a.jsxs)(P.default.Overlay, {
               className: et.profilePanelConnections,

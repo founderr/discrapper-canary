@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return N
   }
 }), n("789020");
 var s = n("735250");
@@ -14,118 +14,118 @@ var a = n("533800"),
   u = n("507893"),
   d = n("630388"),
   c = n("267642"),
-  f = n("411198"),
-  E = n("277707"),
+  E = n("411198"),
+  f = n("277707"),
   _ = n("358595"),
-  m = n("981631"),
-  T = n("689938"),
+  T = n("981631"),
+  m = n("689938"),
   I = n("798719");
 
-function p(e) {
-  var t, p;
-  let h, N, S, {
-      onTransitionToInviteChannel: C,
-      onAcceptInstantInvite: g,
-      guild: A,
+function N(e) {
+  var t, N;
+  let p, S, C, {
+      onTransitionToInviteChannel: A,
+      onAcceptInstantInvite: h,
+      guild: g,
       invite: M,
-      author: R,
-      currentUserId: v
+      author: O,
+      currentUserId: R
     } = e,
-    O = v === R.id,
+    v = R === O.id,
     {
-      channel: x,
-      approximate_member_count: L,
-      approximate_presence_count: D
+      channel: L,
+      approximate_member_count: x,
+      approximate_presence_count: P
     } = M,
-    P = M.state === m.InviteStates.ACCEPTING,
-    y = null != x ? (0, r.createChannelRecordFromInvite)(x) : null,
-    U = null != A,
+    D = M.state === T.InviteStates.ACCEPTING,
+    y = null != L ? (0, r.createChannelRecordFromInvite)(L) : null,
+    U = null != g,
     j = null != y,
     b = null != y && y.isGuildVocal(),
-    F = null != y && y.isGuildStageVoice(),
+    G = null != y && y.isGuildStageVoice(),
     B = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
-    G = null !== (p = null == A ? void 0 : A.hasFeature(m.GuildFeatures.HUB)) && void 0 !== p && p;
-  if (null == A) {
+    F = null !== (N = null == g ? void 0 : g.hasFeature(T.GuildFeatures.HUB)) && void 0 !== N && N;
+  if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
-    A = f.fromInviteGuild(M.guild);
+    g = E.fromInviteGuild(M.guild);
     let e = (0, c.getGuildTierFromAppliedBoostCount)(M.guild.premium_subscription_count, M.guild.id);
-    A.premiumTier = e
+    g.premiumTier = e
   }
-  let k = U ? C : g,
-    w = (0, E.getHeaderTextForInvite)({
+  let k = U ? A : h,
+    w = (0, f.getHeaderTextForInvite)({
       isVoiceChannel: b,
-      isOwnInvite: O,
+      isOwnInvite: v,
       isGuest: B,
-      isHubGuild: G,
-      isStage: F,
+      isHubGuild: F,
+      isStage: G,
       isStream: !1
     });
-  return N = (0, s.jsxs)("span", {
+  return S = (0, s.jsxs)("span", {
     className: I.infoTitle,
     children: [(0, s.jsx)(o.default.GuildName, {
-      guild: A
+      guild: g
     }), (0, s.jsx)("span", {
       className: I.infoBadge,
       children: (0, s.jsx)(i.default, {
-        guild: A,
+        guild: g,
         isBannerVisible: !1,
         disableBoostClick: !0
       })
     })]
-  }), B && (S = (0, s.jsx)(l.TooltipContainer, {
+  }), B && (C = (0, s.jsx)(l.TooltipContainer, {
     className: I.tooltipContainer,
-    text: T.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
+    text: m.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {
       className: I.infoIcon
     })
-  })), b ? (N = (0, s.jsx)(o.default.Channel, {
+  })), b ? (S = (0, s.jsx)(o.default.Channel, {
     channel: y
-  }), h = (0, s.jsxs)("span", {
+  }), p = (0, s.jsxs)("span", {
     className: I.infoTitle,
-    children: [T.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
-      guildName: A.name
+    children: [m.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
+      guildName: g.name
     }), (0, s.jsx)("span", {
       className: I.infoBadge,
       children: (0, s.jsx)(i.default, {
-        guild: A,
+        guild: g,
         isBannerVisible: !1
       })
     })]
-  })) : null != L && L >= 5 || null != D && D > 0 ? h = (0, s.jsx)(o.default.Data, {
-    members: L,
-    membersOnline: D
-  }) : j && (h = (0, s.jsx)(o.default.Channel, {
+  })) : null != x && x >= 5 || null != P && P > 0 ? p = (0, s.jsx)(o.default.Data, {
+    members: x,
+    membersOnline: P
+  }) : j && (p = (0, s.jsx)(o.default.Channel, {
     channel: y,
-    guild: A
+    guild: g
   })), (0, s.jsxs)(o.default, {
     children: [(0, s.jsx)(o.default.GuildSplash, {
-      guild: A
+      guild: g
     }), (0, s.jsx)(o.default.Header, {
       text: w,
-      extra: S
+      extra: C
     }), (0, s.jsxs)(o.default.Body, {
       children: [(0, s.jsxs)("div", {
         className: I.headerLine,
         children: [(0, s.jsx)(o.default.Icon, {
-          guild: A
+          guild: g
         }), (0, s.jsx)(o.default.Info, {
-          title: N,
+          title: S,
           onClick: U ? k : null,
-          children: h
+          children: p
         })]
       }), (0, s.jsx)(o.default.Button, {
         onClick: k,
-        submitting: P,
+        submitting: D,
         color: o.default.Button.Colors.GREEN,
-        children: b ? F ? T.default.Messages.STAGE_CHANNEL_JOIN : T.default.Messages.INVITE_VOICE_CHANNEL_JOIN : U ? T.default.Messages.JOINED_GUILD : T.default.Messages.JOIN_GUILD
+        children: b ? G ? m.default.Messages.STAGE_CHANNEL_JOIN : m.default.Messages.INVITE_VOICE_CHANNEL_JOIN : U ? m.default.Messages.JOINED_GUILD : m.default.Messages.JOIN_GUILD
       })]
-    }), A.hasFeature(m.GuildFeatures.HUB) && (0, s.jsxs)(s.Fragment, {
+    }), g.hasFeature(T.GuildFeatures.HUB) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         className: I.separator
       }), (0, s.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: T.default.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
+        children: m.default.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
           onClick: () => (0, l.openModalLazy)(async () => {
             let {
               default: e

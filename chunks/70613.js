@@ -1,16 +1,16 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
-}), a("47120");
-var n = a("735250"),
-  r = a("470079"),
-  s = a("887024");
-let o = [a("992134")],
-  i = ["#FFFFFF"],
+}), n("47120");
+var s = n("735250"),
+  a = n("470079"),
+  r = n("887024");
+let i = [n("992134")],
+  l = ["#FFFFFF"],
   u = 1e3 / 60,
-  l = {
+  o = {
     velocity: {
       type: "static-random",
       minValue: {
@@ -63,19 +63,19 @@ let o = [a("992134")],
     }
   };
 
-function c(e) {
+function d(e) {
   let {
     className: t,
-    firing: a = !0,
-    wind: c = 2
-  } = e, [d, p] = r.useState(null), [f, y] = r.useState(null), C = (0, s.useConfettiCannon)(f, d), A = r.useMemo(() => new s.Environment({
-    wind: c
-  }), [c]), P = r.useCallback(() => {
-    let e = null == f ? void 0 : f.getCanvas();
+    firing: n = !0,
+    wind: d = 2
+  } = e, [c, C] = a.useState(null), [E, _] = a.useState(null), f = (0, r.useConfettiCannon)(E, c), A = a.useMemo(() => new r.Environment({
+    wind: d
+  }), [d]), p = a.useCallback(() => {
+    let e = null == E ? void 0 : E.getCanvas();
     if (null == e) return;
     let t = e.getBoundingClientRect();
-    C.createConfetti({
-      ...l,
+    f.createConfetti({
+      ...o,
       position: {
         type: "static-random",
         minValue: {
@@ -88,19 +88,19 @@ function c(e) {
         }
       }
     })
-  }, [C, f]);
-  return r.useEffect(() => {
-    let e = a ? setInterval(P, u) : null;
+  }, [f, E]);
+  return a.useEffect(() => {
+    let e = n ? setInterval(p, u) : null;
     return () => clearInterval(e)
-  }, [a, P]), (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(s.ConfettiCanvas, {
-      ref: y,
+  }, [n, p]), (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(r.ConfettiCanvas, {
+      ref: _,
       className: t,
       environment: A
-    }), (0, n.jsx)(s.SpriteCanvas, {
-      ref: p,
-      colors: i,
-      sprites: o,
+    }), (0, s.jsx)(r.SpriteCanvas, {
+      ref: C,
+      colors: l,
+      sprites: i,
       spriteWidth: 6,
       spriteHeight: 6
     })]

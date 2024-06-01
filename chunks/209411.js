@@ -43,9 +43,9 @@ function m(e) {
       location: _,
       redirectTo: p
     } = e,
-    [T, I] = a.useState(n);
+    [T, S] = a.useState(n);
 
-  function S(e) {
+  function I(e) {
     let {
       handoffKey: t,
       handoffToken: n,
@@ -55,7 +55,7 @@ function m(e) {
       handoffKey: t,
       handoffToken: n,
       handoffSource: s
-    }), I(!1)
+    }), S(!1)
   }
   return (a.useEffect(() => {
     if (null != _) {
@@ -66,12 +66,12 @@ function m(e) {
       if (null != e && null != t) {
         let n = null != p ? (0, d.getLoginHandoffSourceFromRedirectTo)(p) : void 0;
         T ? o.default.logout(null).finally(() => {
-          S({
+          I({
             handoffKey: e,
             handoffToken: t,
             handoffSource: n
           })
-        }) : S({
+        }) : I({
           handoffKey: e,
           handoffToken: t,
           handoffSource: n

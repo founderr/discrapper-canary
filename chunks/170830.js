@@ -1,23 +1,23 @@
     "use strict";
-    var n, o;
+    var n, i;
 
-    function i(t) {
-      let r = 0,
+    function o(r) {
+      let t = 0,
         e = [];
       return async function() {
-        if (2 !== r) {
-          if (1 === r) return new Promise(t => {
-            e.push(t)
+        if (2 !== t) {
+          if (1 === t) return new Promise(r => {
+            e.push(r)
           });
-          for (r = 1, await t(), r = 2; e.length > 0;) {
+          for (t = 1, await r(), t = 2; e.length > 0;) {
             var n;
             null === (n = e.shift()) || void 0 === n || n()
           }
         }
       }
     }
-    e.r(r), e.d(r, {
+    e.r(t), e.d(t, {
       createQueuedAsyncInitializer: function() {
-        return i
+        return o
       }
-    }), e("653041"), (o = n || (n = {}))[o.UNINITIALIZED = 0] = "UNINITIALIZED", o[o.INITIALIZING = 1] = "INITIALIZING", o[o.READY = 2] = "READY"
+    }), e("653041"), (i = n || (n = {}))[i.UNINITIALIZED = 0] = "UNINITIALIZED", i[i.INITIALIZING = 1] = "INITIALIZING", i[i.READY = 2] = "READY"

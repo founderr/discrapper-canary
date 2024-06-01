@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("295474"),
   w = n("521476"),
   k = n("69882"),
-  B = n("71619"),
-  H = n("185145"),
+  H = n("71619"),
+  B = n("185145"),
   G = n("736052"),
   V = n("898188"),
   W = n("925975"),
@@ -649,7 +649,7 @@ class eD extends l.PureComponent {
         communicationDisabledUntil: s,
         showAutomodUserProfileChatBlocker: i
       } = e;
-      return t.type === ex.ChannelTypes.DM && n ? (0, a.jsx)(J.default, {}) : null != s && (0, k.isCommunicationDisabled)(s) && null != l && !eu.default.can(ex.Permissions.ADMINISTRATOR, l) ? (0, a.jsx)(H.CommunicationDisabledBanner, {
+      return t.type === ex.ChannelTypes.DM && n ? (0, a.jsx)(J.default, {}) : null != s && (0, k.isCommunicationDisabled)(s) && null != l && !eu.default.can(ex.Permissions.ADMINISTRATOR, l) ? (0, a.jsx)(B.CommunicationDisabledBanner, {
         guild: l,
         disabledUntil: s
       }) : i ? (0, a.jsx)(w.AutomodUserProfileQuarantineChatInputNotice, {
@@ -667,7 +667,7 @@ t.default = l.memo(function(e) {
   } = e, {
     placeholder: i,
     accessibilityLabel: r
-  } = (0, eI.default)(t), o = (0, J.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [c] = (0, B.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, F.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, u.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), m = (0, u.useStateFromStores)([er.default], () => {
+  } = (0, eI.default)(t), o = (0, J.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [c] = (0, H.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, F.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, u.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), m = (0, u.useStateFromStores)([er.default], () => {
     var e, t, a;
     return null != h && null !== (a = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ex.EMPTY_STRING_SNOWFLAKE_ID, null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== a && a
   }), p = (0, u.useStateFromStores)([Z.default], () => Z.default.isEnabled()), E = (0, Q.default)(t.id), C = (0, G.default)(t.id);

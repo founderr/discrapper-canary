@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("653041");
 var a = n("735250"),
@@ -42,7 +42,7 @@ var a = n("735250"),
   w = n("689938"),
   k = n("122993");
 
-function B(e) {
+function H(e) {
   let {
     channelId: t,
     guildId: n
@@ -68,7 +68,7 @@ function B(e) {
   })
 }
 
-function H(e) {
+function B(e) {
   let {
     inPopout: t,
     channel: n,
@@ -84,7 +84,7 @@ function H(e) {
     selectedParticipant: j.default.getSelectedParticipant(g),
     voiceParticipantsHidden: j.default.getVoiceParticipantsHidden(g),
     userParticipantCount: j.default.getUserParticipantCount(g)
-  }), [g]), H = (0, P.default)(n), {
+  }), [g]), B = (0, P.default)(n), {
     available: G,
     activated: V,
     hqStreamingState: W
@@ -92,7 +92,7 @@ function H(e) {
     preventIdle: z,
     allowIdle: K
   } = (0, _.usePreventIdle)("popup"), Z = [];
-  if (H) {
+  if (B) {
     let e = (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(L.id) : void 0,
       t = (null == L ? void 0 : L.type) === U.ParticipantTypes.ACTIVITY ? L.id : void 0;
     Z.push((0, a.jsx)(N.default, {
@@ -104,7 +104,7 @@ function H(e) {
       analyticsLocation: n.type === F.ChannelTypes.GUILD_VOICE ? F.AnalyticsPages.GUILD_CHANNEL : F.AnalyticsPages.DM_CHANNEL
     }, "invite-button"))
   }
-  return R && Z.push((0, a.jsx)(B, {
+  return R && Z.push((0, a.jsx)(H, {
     channelId: g,
     guildId: n.guild_id
   }, "current-speaker")), Z.push((0, a.jsx)(h.default, {

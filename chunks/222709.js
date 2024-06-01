@@ -9,21 +9,21 @@ var s = n("735250"),
   u = n("696202"),
   d = n("316949"),
   c = n("727218"),
-  f = n("212342"),
-  E = n("689938"),
+  E = n("212342"),
+  f = n("689938"),
   _ = n("248847");
 t.default = e => {
   let {
     channelId: t,
     messageId: n
-  } = e, m = (0, l.useStateFromStores)([f.default], () => f.default.shouldShowBump(n), [n]), T = a.useCallback(() => {
+  } = e, T = (0, l.useStateFromStores)([E.default], () => E.default.shouldShowBump(n), [n]), m = a.useCallback(() => {
     r.default.dismissPublishBump(n), (0, o.default)(t, n)
   }, [t, n]), I = a.useCallback(() => {
     r.default.dismissPublishBump(n)
-  }, [n]), p = a.useCallback(() => {
+  }, [n]), N = a.useCallback(() => {
     r.default.permanentlyHidePublishBump(t)
   }, [t]);
-  return m ? (0, s.jsxs)("div", {
+  return T ? (0, s.jsxs)("div", {
     className: _.container,
     children: [(0, s.jsxs)("div", {
       className: _.bumpBox,
@@ -32,14 +32,14 @@ t.default = e => {
       }), (0, s.jsx)(c.default, {
         className: _.tagline,
         size: c.default.Sizes.SIZE_14,
-        children: E.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP
+        children: f.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP
       }), (0, s.jsx)(i.Button, {
         color: i.Button.Colors.LINK,
         look: i.Button.Looks.LINK,
         size: i.Button.Sizes.MIN,
         className: _.publish,
-        onClick: T,
-        children: E.default.Messages.NEWS_CHANNEL_PUBLISH
+        onClick: m,
+        children: f.default.Messages.NEWS_CHANNEL_PUBLISH
       }), (0, s.jsx)(i.Clickable, {
         onClick: I,
         children: (0, s.jsx)(u.default, {
@@ -53,8 +53,8 @@ t.default = e => {
       className: _.hidePermanently,
       variant: "text-sm/normal",
       children: (0, s.jsx)(i.Clickable, {
-        onClick: p,
-        children: E.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
+        onClick: N,
+        children: f.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
       })
     })]
   }) : null

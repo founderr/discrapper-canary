@@ -41,8 +41,8 @@ var a = n("735250"),
   F = n("186877"),
   w = n("294218"),
   k = n("534469"),
-  B = n("993397"),
-  H = n("511010"),
+  H = n("993397"),
+  B = n("511010"),
   G = n("524444"),
   V = n("977391"),
   W = n("921235"),
@@ -138,7 +138,7 @@ function $(e) {
           item: e,
           channel: y,
           isBeforeGroup: null == e.content && Q(en[t + 1])
-        }) : (0, a.jsx)(H.default, {
+        }) : (0, a.jsx)(B.default, {
           isUnread: s,
           isBeforeGroup: null == e.content && Q(en[t + 1]),
           id: s ? K.NEW_MESSAGE_BAR_ID : void 0,
@@ -153,7 +153,7 @@ function $(e) {
       }, "forum-post-action-bar-".concat(y.id));
       if (e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
         let t;
-        return t = e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? X.default.Messages.BLOCKED_MESSAGE_COUNT : X.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(B.default, {
+        return t = e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? X.default.Messages.BLOCKED_MESSAGE_COUNT : X.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(H.default, {
           unreadId: K.NEW_MESSAGE_BAR_ID,
           messages: e,
           channel: y,

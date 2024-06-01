@@ -13,31 +13,31 @@ var s = n("735250"),
   u = n("512665"),
   d = n("937889"),
   c = n("739566"),
-  f = n("981631");
-let E = a.memo(function(e) {
+  E = n("981631");
+let f = a.memo(function(e) {
   let {
     baseMessage: t,
     channel: n,
-    referencedMessage: f,
-    compact: E = !1
-  } = e, _ = f.state === r.ReferencedMessageState.LOADED ? f.message : void 0, m = (0, i.useActiveKeywordFiltersCacheKey)(), T = a.useMemo(() => (null == _ ? void 0 : _.content) != null && "" !== _.content ? (0, d.default)(_, {
+    referencedMessage: E,
+    compact: f = !1
+  } = e, _ = E.state === r.ReferencedMessageState.LOADED ? E.message : void 0, T = (0, i.useActiveKeywordFiltersCacheKey)(), m = a.useMemo(() => (null == _ ? void 0 : _.content) != null && "" !== _.content ? (0, d.default)(_, {
     formatInline: !0,
-    shouldFilterKeywords: null != m
-  }).content : null, [_, m]), I = (0, l.useStateFromStores)([o.default], () => null != _ && o.default.isBlocked(_.author.id), [_]), p = (0, c.useNullableMessageAuthor)(_), h = (0, c.useNullableMessageAuthor)(t);
+    shouldFilterKeywords: null != T
+  }).content : null, [_, T]), I = (0, l.useStateFromStores)([o.default], () => null != _ && o.default.isBlocked(_.author.id), [_]), N = (0, c.useNullableMessageAuthor)(_), p = (0, c.useNullableMessageAuthor)(t);
   return (0, s.jsx)(u.default, {
-    repliedAuthor: p,
-    baseAuthor: h,
+    repliedAuthor: N,
+    baseAuthor: p,
     baseMessage: t,
     channel: n,
-    referencedMessage: f,
-    content: T,
-    compact: E,
+    referencedMessage: E,
+    content: m,
+    compact: f,
     isReplyAuthorBlocked: I
   })
 });
 
 function _(e, t, n, a, l) {
-  return e.type !== f.MessageTypes.REPLY || null == n ? null : (0, s.jsx)(E, {
+  return e.type !== E.MessageTypes.REPLY || null == n ? null : (0, s.jsx)(f, {
     baseMessage: e,
     channel: t,
     referencedMessage: a,

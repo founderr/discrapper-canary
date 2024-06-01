@@ -68,13 +68,13 @@ t.default = e => {
   }, [d, t, P, n, y, U, D, b, M, R, v]);
   if (null == v) return null;
   let k = null != n.extra.platform ? I[n.extra.platform] : null,
-    B = (0, a.jsx)(g.BadgesContainer, {
+    H = (0, a.jsx)(g.BadgesContainer, {
       location: g.BadgeLocation.POPOUT,
       children: C.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
         entry: n
       }, t))
     }),
-    H = null == L ? (0, a.jsx)(S.PopoutContent, {
+    B = null == L ? (0, a.jsx)(S.PopoutContent, {
       thumbnailSrc: d,
       thumbnailTitle: A,
       channel: t,
@@ -86,19 +86,19 @@ t.default = e => {
       userDescription: (0, h.isEntryActive)(n) ? T.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : T.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: x,
       subtitle: N,
-      badges: B,
+      badges: H,
       entry: n
     }) : (0, a.jsx)(S.StreamingPopoutContent, {
       channel: t,
       streamPreviewSrc: L,
       title: n.extra.game_name,
-      badges: B,
+      badges: H,
       userDescription: T.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
       entry: n,
       stream: O
     });
   return (0, a.jsxs)(S.Popout, {
-    children: [H, (0, a.jsx)(S.PopoutInteractionsContainer, {
+    children: [B, (0, a.jsx)(S.PopoutInteractionsContainer, {
       children: null != j ? (0, a.jsx)(S.VoiceChannelPopoutReactor, {
         closePopout: u,
         user: v,

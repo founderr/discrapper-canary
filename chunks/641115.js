@@ -18,9 +18,9 @@ var a = l("735250"),
   S = l("924557"),
   E = l("736871"),
   _ = l("351742"),
-  N = l("386542"),
+  h = l("386542"),
   C = l("193878"),
-  h = l("594174"),
+  N = l("594174"),
   g = l("746124"),
   p = l("285952"),
   A = l("466111"),
@@ -141,11 +141,11 @@ function w(e) {
     selectedFPS: A,
     onResolutionChange: U,
     onFPSChange: w,
-    onPresetChange: k,
-    targetGuildPremiumTier: y,
+    onPresetChange: y,
+    targetGuildPremiumTier: k,
     captureDeviceSelected: F
-  } = e, V = (0, d.useStateFromStores)([h.default], () => {
-    let e = h.default.getCurrentUser();
+  } = e, V = (0, d.useStateFromStores)([N.default], () => {
+    let e = N.default.getCurrentUser();
     return u()(null != e, "StreamSettings: user cannot be undefined"), e
   }), B = x.default.canStreamQuality(x.StreamQuality.MID, V), {
     location: H
@@ -168,7 +168,7 @@ function w(e) {
   let {
     available: Y,
     hqStreamingState: Q
-  } = (0, N.usePerksDemo)(o.EntitlementFeatureNames.STREAM_HIGH_QUALITY), q = !B && !W && !Y, {
+  } = (0, h.usePerksDemo)(o.EntitlementFeatureNames.STREAM_HIGH_QUALITY), q = !B && !W && !Y, {
     enabled: Z,
     variant: J
   } = C.default.useExperiment({
@@ -196,7 +196,7 @@ function w(e) {
       buttons: en.map(e => G({
         type: e,
         selected: e.value === r,
-        needsPremium: !(0, I.default)(i, e.value, A, V, y),
+        needsPremium: !(0, I.default)(i, e.value, A, V, k),
         needsDemo: Y && e.value !== v.ApplicationStreamResolutions.RESOLUTION_720,
         analyticsLocation: es,
         useGradient: X,
@@ -209,7 +209,7 @@ function w(e) {
       buttons: v.ApplicationStreamFPSButtons.map(e => G({
         type: e,
         selected: e.value === A,
-        needsPremium: !(0, I.default)(i, r, e.value, V, y),
+        needsPremium: !(0, I.default)(i, r, e.value, V, k),
         needsDemo: Y && e.value === v.ApplicationStreamFPS.FPS_60,
         analyticsLocation: es,
         useGradient: X,
@@ -286,7 +286,7 @@ function w(e) {
           value: i,
           className: b.marginTop8,
           options: eu,
-          onChange: e => k(e)
+          onChange: e => y(e)
         }), eo]
       })
     })

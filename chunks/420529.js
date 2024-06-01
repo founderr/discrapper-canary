@@ -24,11 +24,11 @@ function _(e) {
     _ = (0, c.default)(),
     g = (null == _ ? void 0 : _.channelId) === e.id,
     C = (0, s.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
-    h = (0, s.default)(e),
-    L = !(0, a.useStateFromStores)([d.default], () => d.default.isInChannel(e.id)) && h || C,
-    T = (0, f.default)();
-  if (!g && 0 === T.length) return null;
-  let I = t => {
+    T = (0, s.default)(e),
+    h = !(0, a.useStateFromStores)([d.default], () => d.default.isInChannel(e.id)) && T || C,
+    L = (0, f.default)();
+  if (!g && 0 === L.length) return null;
+  let M = t => {
     if (!t.twoWayLink || t.revoked) {
       (0, u.default)({
         platformType: t.type,
@@ -63,17 +63,17 @@ function _(e) {
         (0, o.handoffRemote)(_)
       },
       icon: (0, E.default)(void 0),
-      disabled: L
-    }) : T.map(e => (0, l.jsx)(i.MenuItem, {
+      disabled: h
+    }) : L.map(e => (0, l.jsx)(i.MenuItem, {
       id: "transfer-".concat(e.type, "-").concat(e.id),
       label: function(e, t) {
         if (e === S.PlatformTypes.XBOX) return t ? N.default.Messages.TRANSFER_VOICE_TO_XBOX : N.default.Messages.JOIN_ON_XBOX;
         if (e === S.PlatformTypes.PLAYSTATION) return t ? N.default.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : N.default.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
         if (e === S.PlatformTypes.PLAYSTATION_STAGING) return t ? N.default.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : N.default.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE
       }(e.type, t),
-      action: () => I(e),
+      action: () => M(e),
       icon: (0, E.default)(e.type),
-      disabled: L
+      disabled: h
     }, e.id))
   })
 }

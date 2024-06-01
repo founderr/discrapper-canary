@@ -7,30 +7,30 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("653041");
-var s = n("395041");
+var a = n("395041");
 n("349033");
-var a = n("999650");
+var l = n("999650");
 n("72006");
-var l = n("405656");
+var s = n("405656");
 n("981631");
 let i = {
-  [a.ComponentTypes.FILTER]: s.Filter,
-  [a.ComponentTypes.ANSWER]: s.Answer
+  [l.ComponentTypes.FILTER]: a.Filter,
+  [l.ComponentTypes.ANSWER]: a.Answer
 };
 
 function r() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     t = [];
   return Object.keys(e).forEach(n => {
-    let s = e[n];
+    let a = e[n];
     t.push({
-      strategy: (e, t, s) => (function(e, t, n, s) {
+      strategy: (e, t, a) => (function(e, t, n, a) {
         t.findEntityRanges(t => {
           let n = t.getEntity();
-          return null !== n && e.getEntity(n).getType() === s
+          return null !== n && e.getEntity(n).getType() === a
         }, n)
-      })(s, e, t, n),
-      component: i[s.componentType]
+      })(a, e, t, n),
+      component: i[a.componentType]
     })
   }), t
 }
@@ -38,7 +38,7 @@ function r() {
 function o(e, t) {
   let {
     focusOffset: n,
-    anchorOffset: s
+    anchorOffset: a
   } = t.getSelection();
-  return (0, l.getSelectionScope)(e, n, s)
+  return (0, s.getSelectionScope)(e, n, a)
 }

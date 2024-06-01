@@ -24,7 +24,7 @@ let l = Math.min(4, Math.ceil(navigator.hardwareConcurrency / 2)),
   v = new Map,
   I = (0, a.createQueuedAsyncInitializer)(async () => {
     for (let i = 0; i < l; i++) {
-      let i = new Worker(new URL(t.p + t.u("42892"), t.b));
+      let i = new Worker(new URL(t.p + t.u("36412"), t.b));
       d.push({
         worker: i,
         numActive: 0

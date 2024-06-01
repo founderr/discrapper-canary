@@ -3,7 +3,7 @@ var e = n("863664"),
   o = n("192291"),
   i = o.aTypedArray,
   u = o.exportTypedArrayMethod,
-  f = o.getTypedArrayConstructor;
+  c = o.getTypedArrayConstructor;
 u("toReversed", function() {
-  return e(i(this), f(this))
+  return e(i(this), c(this))
 })

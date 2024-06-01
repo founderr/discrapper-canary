@@ -18,9 +18,9 @@ var a = l("735250"),
   S = l("594190"),
   E = l("569984"),
   _ = l("918701"),
-  N = l("977156"),
+  h = l("977156"),
   C = l("433811"),
-  h = l("131951"),
+  N = l("131951"),
   g = l("449224"),
   p = l("285952"),
   A = l("643095"),
@@ -35,8 +35,8 @@ var a = l("735250"),
   j = l("689938"),
   D = l("578168");
 async function b() {
-  let e = h.default.getVideoDevices(),
-    t = (0, d.default)(h.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
+  let e = N.default.getVideoDevices(),
+    t = (0, d.default)(N.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
       width: 176,
       height: 99
     }),
@@ -104,8 +104,8 @@ function G(e) {
     enableGoLiveCaptureCard: s
   } = I.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = h.default.supports(O.Features.GO_LIVE_HARDWARE), [d, m] = n.useState(null), [g, x] = n.useState(null), [T, P] = n.useState(null), G = null != T && T.length > 0, [w, k] = n.useState(u.DesktopSources.WINDOW), [y, F] = n.useState(!1), V = n.useRef(null), B = n.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
-    let a = (0, N.useIsEligibleForQuests)({
+  }), r = N.default.supports(O.Features.GO_LIVE_HARDWARE), [d, m] = n.useState(null), [g, x] = n.useState(null), [T, P] = n.useState(null), G = null != T && T.length > 0, [w, y] = n.useState(u.DesktopSources.WINDOW), [k, F] = n.useState(!1), V = n.useRef(null), B = n.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
+    let a = (0, h.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT
     });
     return n.useMemo(() => {
@@ -189,7 +189,7 @@ function G(e) {
     children: [(0, a.jsxs)("div", {
       className: D.segmentContainer,
       children: [(0, a.jsx)(v.default, {
-        separator: y
+        separator: k
       }), (0, a.jsx)(f.SegmentedControl, {
         options: function() {
           let e = [{
@@ -209,7 +209,7 @@ function G(e) {
           let {
             value: t
           } = e;
-          return k(t)
+          return y(t)
         },
         className: D.segmentControl,
         optionClassName: D.segmentControlOption

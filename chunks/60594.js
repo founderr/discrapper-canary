@@ -16,9 +16,9 @@ var a, n, s = l("735250"),
   S = l("287734"),
   E = l("872810"),
   _ = l("410575"),
-  N = l("812206"),
+  h = l("812206"),
   C = l("594190"),
-  h = l("751571"),
+  N = l("751571"),
   g = l("120522"),
   p = l("933843"),
   A = l("485731"),
@@ -37,8 +37,8 @@ var a, n, s = l("735250"),
   U = l("451467"),
   G = l("537413"),
   w = l("989941"),
-  k = l("399299"),
-  y = l("351152"),
+  y = l("399299"),
+  k = l("351152"),
   F = l("567126"),
   V = l("143135"),
   B = l("37113"),
@@ -71,11 +71,11 @@ function Y(e) {
   }), [ed, ec] = null !== (a = (0, G.default)(et, er, eo)) && void 0 !== a ? a : [B.ApplicationStreamResolutions.RESOLUTION_720, B.ApplicationStreamFPS.FPS_30];
   et !== B.ApplicationStreamPresets.PRESET_CUSTOM && (el = ed, ea = ec), !(0, U.default)(et, el, ea, er, eo) && (el = ed, ea = ec);
   let ef = (0, j.useUID)();
-  let [em, eS] = i.useState((Y = q, Q = Z, Y ? 0 : Q ? 1 : 2)), [eE, e_] = i.useState(null), [eN, eC] = i.useState(!1), [eh, eg] = i.useState(null), [ep, eA] = i.useState(null), [ex, eI] = i.useState(null), [eR, eT] = i.useState(et), [ev, eL] = i.useState(el), [eM, eO] = i.useState(ea), [ej, eD] = i.useState(en), [eb, eP] = i.useState(null != J ? J : null), eU = null !== (n = null == es ? void 0 : es.id) && void 0 !== n ? n : eh;
+  let [em, eS] = i.useState((Y = q, Q = Z, Y ? 0 : Q ? 1 : 2)), [eE, e_] = i.useState(null), [eh, eC] = i.useState(!1), [eN, eg] = i.useState(null), [ep, eA] = i.useState(null), [ex, eI] = i.useState(null), [eR, eT] = i.useState(et), [ev, eL] = i.useState(el), [eM, eO] = i.useState(ea), [ej, eD] = i.useState(en), [eb, eP] = i.useState(null != J ? J : null), eU = null !== (n = null == es ? void 0 : es.id) && void 0 !== n ? n : eN;
   async function eG() {
     var e, t, l;
     u()(null != ei || null != ep, "got nothing to stream");
-    let a = null !== (e = null == es ? void 0 : es.id) && void 0 !== e ? e : eh;
+    let a = null !== (e = null == es ? void 0 : es.id) && void 0 !== e ? e : eN;
     u()(null != a, "Received null target channel ID");
     let n = I.default.getChannel(a),
       s = null !== (t = null == n ? void 0 : n.getGuildId()) && void 0 !== t ? t : J;
@@ -83,7 +83,7 @@ function Y(e) {
     let i = !0;
     (0, p.shouldActivatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY) && (i = await (0, g.activatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY), (0, A.hqStreamingSetEnabled)(!(0, p.ineligibleQualitySetting)(ev, eM)), D.default.track(H.AnalyticEvents.PERK_DEMO_OFFER_ACCEPTED, {
       guild_id: s,
-      channel_id: null !== (l = null == es ? void 0 : es.id) && void 0 !== l ? l : eh,
+      channel_id: null !== (l = null == es ? void 0 : es.id) && void 0 !== l ? l : eN,
       perk_type: d.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
       resolution: ev,
       max_fps: eM
@@ -106,7 +106,7 @@ function Y(e) {
       audioSourceId: ex,
       sound: ej
     }), (async () => {
-      !await h.default.hasPermission(W.NativePermissionTypes.SCREEN_RECORDING, {
+      !await N.default.hasPermission(W.NativePermissionTypes.SCREEN_RECORDING, {
         showAuthorizationError: !1
       }) && m.default.show({
         title: K.default.Messages.WARNING_SCREEN_RECORDING_PERMISSION_TITLE,
@@ -120,7 +120,7 @@ function Y(e) {
   }
   i.useEffect(() => {
     let e = (0, b.isWindows)() ? (0, w.default)(C.default, M.default) : null,
-      t = (null == e ? void 0 : e.id) != null ? N.default.getApplication(e.id) : null;
+      t = (null == e ? void 0 : e.id) != null ? h.default.getApplication(e.id) : null;
     D.default.track(H.AnalyticEvents.OPEN_MODAL, {
       type: "Go Live Modal",
       application_id: null == t ? void 0 : t.id,
@@ -129,7 +129,7 @@ function Y(e) {
       location_section: X
     })
   }, [X]);
-  let ek = i.useCallback((e, t, l) => {
+  let ey = i.useCallback((e, t, l) => {
     let a = (0, G.default)(e, er, eo),
       [n, s] = null != a ? a : [t, l];
     if (e !== eR && (t = n, l = s), !(0, U.default)(e, t, l, er, eo)) {
@@ -138,7 +138,7 @@ function Y(e) {
     }
     l !== eM && eO(l), t !== ev && eL(t), n !== t || s !== l ? eT(B.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eR && eT(e)
   }, [er, eo, eM, ev, eR]);
-  async function ey(e) {
+  async function ek(e) {
     if (e.preventDefault(), 1 === em) return eS(2);
     let t = (0, V.default)(ei, ep, C.default.getRunningGames()),
       a = P.default.supportsFeature(H.NativeFeatures.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated);
@@ -227,7 +227,7 @@ function Y(e) {
         id: 0,
         children: (0, s.jsx)("div", {
           className: z.modalSize,
-          children: (0, s.jsx)(y.default, {
+          children: (0, s.jsx)(k.default, {
             onSelectGuild: eV
           })
         })
@@ -244,18 +244,18 @@ function Y(e) {
         id: 2,
         children: (0, s.jsx)("div", {
           className: z.modalSize,
-          children: (0, s.jsx)(k.default, {
-            selectedChannelId: null !== (r = null == es ? void 0 : es.id) && void 0 !== r ? r : eh,
+          children: (0, s.jsx)(y.default, {
+            selectedChannelId: null !== (r = null == es ? void 0 : es.id) && void 0 !== r ? r : eN,
             selectedPreset: eR,
             selectedResolution: ev,
             selectedSource: ep,
             selectedFPS: eM,
             sound: ej,
-            sourceChanged: eN,
+            sourceChanged: eh,
             selectSource: Z,
-            onChangeSelectedFPS: e => ek(eR, ev, e),
-            onChangeSelectedResolution: e => ek(eR, e, eM),
-            onChangeSelectedPreset: e => ek(e, ev, eM),
+            onChangeSelectedFPS: e => ey(eR, ev, e),
+            onChangeSelectedResolution: e => ey(eR, e, eM),
+            onChangeSelectedPreset: e => ey(e, ev, eM),
             onChangeSelectedChannelId: eg,
             onChangeSelectedSource: eF,
             onChangeSource: () => eS(1),
@@ -282,7 +282,7 @@ function Y(e) {
         default:
           return null
       }
-    }(em, q, Z, eN),
+    }(em, q, Z, eh),
     ez = 2 !== em || null == ep && null == ei || null == eU,
     eY = (0, s.jsxs)(f.ModalFooter, {
       justify: null == eK ? O.default.Justify.START : O.default.Justify.BETWEEN,
@@ -319,7 +319,7 @@ function Y(e) {
       }), (0, s.jsx)("div", {
         className: z.art
       }), (0, s.jsxs)("form", {
-        onSubmit: ey,
+        onSubmit: ek,
         children: [eH, eW, eY]
       })]
     })

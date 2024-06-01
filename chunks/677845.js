@@ -53,8 +53,8 @@ function v(e) {
     F = (null == j ? void 0 : j.afkChannelId) === x.id,
     w = x.userLimit <= 0 || x.userLimit > 1,
     k = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(x.id).length <= 0),
-    B = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
-    H = (0, d.useEmbeddedActivityLaunchability)(x.id) !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
+    H = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
+    B = (0, d.useEmbeddedActivityLaunchability)(x.id) !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
     G = null != P && P === x.id,
     V = t.map(e => t => (0, a.jsx)(S.default, {
       participant: e,
@@ -79,7 +79,7 @@ function v(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != j && !F && (!(D >= 2) || !k || H || B || G ? w && 1 === D && U && (k && !H ? V.push(e => (0, a.jsx)(g.ActivityEntryPointTile, {
+  }, []), null != j && !F && (!(D >= 2) || !k || B || H || G ? w && 1 === D && U && (k && !B ? V.push(e => (0, a.jsx)(g.ActivityEntryPointTile, {
     channel: x,
     guild: j,
     width: e,

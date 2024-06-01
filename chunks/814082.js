@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
-var s = n("981631");
+var a = n("981631");
 
-function a(e, t) {
+function l(e, t) {
   var n;
-  return !s.MessageTypesSets.SELF_MENTIONABLE_SYSTEM.has(e.type) && (null === (n = e.author) || void 0 === n ? void 0 : n.id) === t
+  return !a.MessageTypesSets.SELF_MENTIONABLE_SYSTEM.has(e.type) && (null === (n = e.author) || void 0 === n ? void 0 : n.id) === t
 }

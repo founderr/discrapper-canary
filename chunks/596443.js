@@ -148,9 +148,9 @@ function j(e) {
     location: s,
     className: r,
     onNavigate: d
-  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, v.useProfileThemedPanelBackground)(t, n), S = (0, N.useUserPermissionsAndRoles)(t, n, N.ALL_PERMISSIONS), j = Object.keys(S).length, P = l.useMemo(() => null != h ? I.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? I.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [F, w] = l.useState(""), k = l.useCallback(o()(w, 300), []), B = l.useCallback(e => {
+  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, v.useProfileThemedPanelBackground)(t, n), S = (0, N.useUserPermissionsAndRoles)(t, n, N.ALL_PERMISSIONS), j = Object.keys(S).length, P = l.useMemo(() => null != h ? I.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? I.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [F, w] = l.useState(""), k = l.useCallback(o()(w, 300), []), H = l.useCallback(e => {
     U(e), k(e)
-  }, [k]), H = l.useCallback(() => {
+  }, [k]), B = l.useCallback(() => {
     U(""), w("")
   }, []), G = l.useMemo(() => {
     if (null == h || null == P || null == m) return null;
@@ -215,8 +215,8 @@ function j(e) {
             className: y.searchBar,
             query: b,
             placeholder: M.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
-            onChange: B,
-            onClear: H,
+            onChange: H,
+            onClear: B,
             autoComplete: "off",
             inputProps: {
               autoCapitalize: "none",

@@ -6,7 +6,7 @@ var r = function(t) {
     i = "function" == typeof BigInt;
 
   function a(t, e, n, r) {
-    return void 0 === t ? a[0] : void 0 !== e ? 10 != +e || n ? z(t, e, n, r) : $(t) : $(t)
+    return void 0 === t ? a[0] : void 0 !== e ? 10 != +e || n ? F(t, e, n, r) : $(t) : $(t)
   }
 
   function o(t, e) {
@@ -599,7 +599,7 @@ var r = function(t) {
       }
     }(t, r(2)).e).add(r(1))
   }, u.prototype.bitLength = s.prototype.bitLength = o.prototype.bitLength;
-  var z = function(t, e, r, i) {
+  var F = function(t, e, r, i) {
     r = r || n, t = String(t), !i && (t = t.toLowerCase(), r = r.toLowerCase());
     var a, o = t.length,
       s = Math.abs(e),
@@ -624,17 +624,17 @@ var r = function(t) {
         l.push($(t.slice(f + 1, a)))
       } else throw Error(c + " is not a valid character")
     }
-    return F(l, e, d)
+    return Y(l, e, d)
   };
 
-  function F(t, e, n) {
+  function Y(t, e, n) {
     var r, i = a[0],
       o = a[1];
     for (r = t.length - 1; r >= 0; r--) i = i.add(t[r].times(o)), o = o.times(e);
     return n ? i.negate() : i
   }
 
-  function Y(t, e) {
+  function z(t, e) {
     if ((e = r(e)).isZero()) {
       if (t.isZero()) return {
         value: [0],
@@ -677,7 +677,7 @@ var r = function(t) {
   }
 
   function j(t, e, r) {
-    var i = Y(t, e);
+    var i = z(t, e);
     return (i.isNegative ? "-" : "") + i.value.map(function(t) {
       var e, i;
       return (e = t) < (i = (i = r) || n).length ? i[e] : "<" + e + ">"
@@ -708,11 +708,11 @@ var r = function(t) {
     return f(p), new o(p, n)
   }
   o.prototype.toArray = function(t) {
-    return Y(this, t)
+    return z(this, t)
   }, s.prototype.toArray = function(t) {
-    return Y(this, t)
+    return z(this, t)
   }, u.prototype.toArray = function(t) {
-    return Y(this, t)
+    return z(this, t)
   }, o.prototype.toString = function(e, n) {
     if (t === e && (e = 10), 10 !== e) return j(this, e, n);
     for (var r, i = this.value, a = i.length, o = String(i[--a]); --a >= 0;) r = String(i[a]), o += "0000000".slice(r.length) + r;
@@ -750,14 +750,14 @@ var r = function(t) {
       i = P(t, e),
       o = L(t, e).subtract(i).add(1);
     if (o.isSmall) return i.add(Math.floor(r() * o));
-    for (var s = Y(o, 1e7).value, u = [], c = !0, l = 0; l < s.length; l++) {
+    for (var s = z(o, 1e7).value, u = [], c = !0, l = 0; l < s.length; l++) {
       var d = c ? s[l] : 1e7,
         f = h(r() * d);
       u.push(f), f < d && (c = !1)
     }
     return i.add(a.fromArray(u, 1e7, !1))
   }, a.fromArray = function(t, e, n) {
-    return F(t.map($), $(e || 10), n)
+    return Y(t.map($), $(e || 10), n)
   }, a
 }();
 t.hasOwnProperty("exports") && (t.exports = r), "function" == typeof define && define.amd && define(function() {

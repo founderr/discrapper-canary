@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return h
+    return N
   }
 }), l("47120");
 var a = l("735250"),
@@ -18,7 +18,7 @@ var a = l("735250"),
   S = l("626135"),
   E = l("981631"),
   _ = l("689938"),
-  N = l("492626");
+  h = l("492626");
 let C = async () => {
   let {
     default: e
@@ -26,12 +26,12 @@ let C = async () => {
   return e
 };
 
-function h(e) {
+function N(e) {
   let {
     selectedGuildId: t,
     selectedChannelId: l,
     glow: s,
-    playIntroTransition: h,
+    playIntroTransition: N,
     onUnlocked: g
   } = e, [p, A] = n.useState(!1), x = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
     hqStreamingState: I
@@ -65,21 +65,21 @@ function h(e) {
       perk_type: r.EntitlementFeatureNames.STREAM_HIGH_QUALITY
     })
   }, []), (0, a.jsx)("div", {
-    className: i()(N.container, {
-      [N.gradientGlow]: s
+    className: i()(h.container, {
+      [h.gradientGlow]: s
     }),
     children: (0, a.jsxs)("div", {
-      className: N.content,
+      className: h.content,
       children: [(0, a.jsx)(m.default, {
         importData: C,
         shouldAnimate: !x,
         pauseAtFrame: 90,
-        className: i()(N.animation, {
-          [N.animationEndState]: p || !h || x
+        className: i()(h.animation, {
+          [h.animationEndState]: p || !N || x
         }),
         loop: !1
       }), (0, a.jsx)("div", {
-        className: N.message,
+        className: h.message,
         children: (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
           children: _.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_INITIAL_UPSELL

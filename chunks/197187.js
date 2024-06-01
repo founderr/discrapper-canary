@@ -1,8 +1,8 @@
     "use strict";
     var n = e("962557"),
-      o = Function.prototype,
-      i = o.apply,
-      u = o.call;
-    t.exports = "object" == typeof Reflect && Reflect.apply || (n ? u.bind(i) : function() {
-      return u.apply(i, arguments)
+      i = Function.prototype,
+      o = i.apply,
+      u = i.call;
+    r.exports = "object" == typeof Reflect && Reflect.apply || (n ? u.bind(o) : function() {
+      return u.apply(o, arguments)
     })

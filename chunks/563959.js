@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   PrivateChannelIntegrationAddedSystemMessage: function() {
-    return h
+    return p
   },
   PrivateChannelIntegrationRemovedSystemMessage: function() {
-    return N
+    return S
   }
 });
 var s = n("735250"),
@@ -16,25 +16,25 @@ var s = n("735250"),
   u = n("484459"),
   d = n("103575"),
   c = n("594174"),
-  f = n("702346"),
-  E = n("768581"),
+  E = n("702346"),
+  f = n("768581"),
   _ = n("91047"),
-  m = n("628566"),
-  T = n("693912"),
+  T = n("628566"),
+  m = n("693912"),
   I = n("981631");
 
-function p(e, t) {
+function N(e, t) {
   return a.useCallback(a => (r, o) => {
-    var f;
-    let T = E.default.getApplicationIconURL({
+    var E;
+    let m = f.default.getApplicationIconURL({
         id: a.id,
         icon: a.icon,
         bot: a.bot,
         botIconFirst: !0
       }),
-      I = c.default.getUser(null === (f = a.bot) || void 0 === f ? void 0 : f.id),
-      p = m.default.getIntegration(e.id, a.id),
-      h = e.isPrivate() && null != p ? t => {
+      I = c.default.getUser(null === (E = a.bot) || void 0 === E ? void 0 : E.id),
+      N = T.default.getIntegration(e.id, a.id),
+      p = e.isPrivate() && null != N ? t => {
         (0, i.openContextMenuLazy)(t, async () => {
           let {
             default: t
@@ -42,37 +42,37 @@ function p(e, t) {
           return n => (0, s.jsx)(t, {
             ...n,
             channel: e,
-            integration: p
+            integration: N
           })
         })
       } : null != I ? t => (0, _.openUserContextMenu)(t, I, e) : void 0,
       {
-        bot: N
+        bot: S
       } = a;
-    return null == N ? r : (0, s.jsx)(l.Popout, {
+    return null == S ? r : (0, s.jsx)(l.Popout, {
       position: "right",
-      preload: () => (0, u.maybeFetchUserProfileForPopout)(N.id, T, {
+      preload: () => (0, u.maybeFetchUserProfileForPopout)(S.id, m, {
         guildId: e.guild_id,
         channelId: e.id
       }),
       renderPopout: n => (0, s.jsx)(d.default, {
         ...n,
         location: "PrivateChannelIntegrationSystemMessage",
-        userId: N.id,
+        userId: S.id,
         guildId: e.guild_id,
         channelId: e.id,
         messageId: t.id
       }),
       children: e => (0, s.jsx)(l.Anchor, {
         ...e,
-        onContextMenu: h,
+        onContextMenu: p,
         children: r
       })
     }, o)
   }, [e, t.id])
 }
 
-function h(e) {
+function p(e) {
   let {
     message: t,
     channel: a,
@@ -82,12 +82,12 @@ function h(e) {
     channelId: a.id,
     guildId: a.guild_id,
     messageId: t.id
-  }), c = p(a, t);
-  return (0, s.jsx)(f.default, {
+  }), c = N(a, t);
+  return (0, s.jsx)(E.default, {
     icon: n("570111"),
     timestamp: t.timestamp,
     compact: l,
-    children: (0, T.getPrivateChannelIntegrationAddedSystemMessageContent)({
+    children: (0, m.getPrivateChannelIntegrationAddedSystemMessageContent)({
       application: u,
       username: i.nick,
       usernameHook: d(i),
@@ -96,7 +96,7 @@ function h(e) {
   })
 }
 
-function N(e) {
+function S(e) {
   let {
     message: t,
     channel: a,
@@ -106,12 +106,12 @@ function N(e) {
     channelId: a.id,
     guildId: a.guild_id,
     messageId: t.id
-  }), c = p(a, t);
-  return (0, s.jsx)(f.default, {
+  }), c = N(a, t);
+  return (0, s.jsx)(E.default, {
     icon: n("474019"),
     timestamp: t.timestamp,
     compact: l,
-    children: (0, T.getPrivateChannelIntegrationRemovedSystemMessageContent)({
+    children: (0, m.getPrivateChannelIntegrationRemovedSystemMessageContent)({
       application: u,
       username: i.nick,
       usernameHook: d(i),

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getReadablePreorderReleaseDate: function() {
-    return f
+    return E
   },
   getSKUIdFromURL: function() {
     return d
@@ -39,7 +39,7 @@ let c = [
   ["YYYY", "Y"]
 ];
 
-function f(e) {
+function E(e) {
   let {
     preorderReleaseAt: t,
     preorderApproximateReleaseDate: n

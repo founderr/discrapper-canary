@@ -90,8 +90,8 @@ function P(e) {
     guildPersonalized: w
   } = (0, p.useCompletedStates)(s), {
     handleInvite: k,
-    handleMessage: B,
-    handlePersonalize: H,
+    handleMessage: H,
+    handlePersonalize: B,
     handleDownload: G,
     handleAddApplication: V
   } = function(e) {
@@ -233,7 +233,7 @@ function P(e) {
       iconUrl: n("753033"),
       header: L.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: w,
-      onClick: H
+      onClick: B
     })
   }, "customize")), D && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
@@ -244,7 +244,7 @@ function P(e) {
       iconUrl: n("15717"),
       header: L.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
       completed: F,
-      onClick: B
+      onClick: H
     })
   }, "message")), (0, N.isWeb)() && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,

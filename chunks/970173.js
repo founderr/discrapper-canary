@@ -7,6 +7,6 @@ var e = n("192291"),
   var r = u(this),
     n = o(r),
     e = i(t),
-    f = e >= 0 ? e : n + e;
-  return f < 0 || f >= n ? void 0 : r[f]
+    c = e >= 0 ? e : n + e;
+  return c < 0 || c >= n ? void 0 : r[c]
 })

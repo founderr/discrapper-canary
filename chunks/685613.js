@@ -12,7 +12,7 @@ var i = n("120356"),
   u = n("918701"),
   d = n("78826"),
   c = n("981631"),
-  f = n("862317");
+  E = n("862317");
 (s = a || (a = {}))[s.SMALL = 24] = "SMALL", s[s.MEDIUM = 32] = "MEDIUM";
 t.default = function(e) {
   let {
@@ -21,16 +21,16 @@ t.default = function(e) {
     quest: s,
     theme: a = c.ThemeTypes.DARK,
     withGameTile: i = !0
-  } = e, E = (0, o.isThemeDark)(a) ? c.ThemeTypes.DARK : c.ThemeTypes.LIGHT;
+  } = e, f = (0, o.isThemeDark)(a) ? c.ThemeTypes.DARK : c.ThemeTypes.LIGHT;
   return (0, l.jsxs)("div", {
-    className: r()(f.partnerBranding, t),
+    className: r()(E.partnerBranding, t),
     children: [i && (0, l.jsx)(d.QuestsAsset, {
       id: "QuestPartnerBranding_gameTile",
       children: e => (0, l.jsx)("img", {
         ref: e,
-        className: f.partnerBrandingGameTile,
+        className: E.partnerBrandingGameTile,
         alt: "",
-        src: (0, u.getGameTileAssetUrl)(s, E),
+        src: (0, u.getGameTileAssetUrl)(s, f),
         style: {
           borderRadius: function(e) {
             switch (e) {
@@ -48,9 +48,9 @@ t.default = function(e) {
       id: "QuestPartnerBranding_gameLogotype",
       children: e => (0, l.jsx)("img", {
         ref: e,
-        className: f.partnerBrandingLogotype,
+        className: E.partnerBrandingLogotype,
         alt: s.config.messages.gameTitle,
-        src: (0, u.getGameLogotypeAssetUrl)(s, E)
+        src: (0, u.getGameLogotypeAssetUrl)(s, f)
       })
     })]
   })

@@ -82,12 +82,12 @@ let A = l.memo(function(e) {
   }, [y, L, v, j, O]), D = (0, s.useStateFromStores)([m.default], () => null != y && m.default.isBlocked(y.author.id), [y]), b = (0, _.useContextMenuUser)(null == y ? void 0 : y.author.id, v.id), U = (0, _.useClickReply)(n, y, D), F = (0, _.useClickReferencedMessageAuthorUsername)(y, v, x, R), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, R), k = l.useCallback(() => R({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [R]), B = (0, g.useNullableMessageAuthor)(n);
+  }), [R]), H = (0, g.useNullableMessageAuthor)(n);
   return (0, a.jsx)(p.default, {
     repliedAuthor: L,
     baseMessage: n,
     channel: v,
-    baseAuthor: B,
+    baseAuthor: H,
     referencedMessage: A,
     content: P,
     compact: N,

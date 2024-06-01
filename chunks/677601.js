@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("102172"),
   w = n("788983"),
   k = n("928518"),
-  B = n("703656"),
-  H = n("740492"),
+  H = n("703656"),
+  B = n("740492"),
   G = n("793319"),
   V = n("3861"),
   W = n("493754"),
@@ -318,7 +318,7 @@ class ek extends l.PureComponent {
   }
   constructor(...e) {
     super(...e), eU(this, "_prevLayout", eP.ChannelLayouts.MINIMUM), eU(this, "_wrapperRef", l.createRef()), eU(this, "_callContainerRef", l.createRef()), eU(this, "_channelChatRef", l.createRef()), eU(this, "_contentRef", l.createRef()), eU(this, "_videoBackgroundTooltipTimeout", new c.Timeout), eU(this, "_lastIdleProps", null), eU(this, "state", {
-      resizedHeight: H.default.callHeaderHeight
+      resizedHeight: B.default.callHeaderHeight
     }), eU(this, "handleFullScreenChange", () => {
       let e = this.getRootNode();
       null != e && !(0, eT.isFullScreen)(e, this.currentDocument) && this.props.layout === eP.ChannelLayouts.FULL_SCREEN && this.handleFullScreen()
@@ -439,7 +439,7 @@ class ek extends l.PureComponent {
         connectedToEmbeddedActivity: t
       } = this.props, n = () => {
         let t = e.getGuildId();
-        null != t && (0, B.transitionTo)((0, eE.previousTextChannelRouteForGuild)(t)), w.openChannelCallPopout(e)
+        null != t && (0, H.transitionTo)((0, eE.previousTextChannelRouteForGuild)(t)), w.openChannelCallPopout(e)
       };
       t ? (0, R.default)(n) : n()
     }), eU(this, "handleStayOnTop", e => {
@@ -676,7 +676,7 @@ t.default = function(e) {
     filteredParticipants: U,
     participantsVersion: F,
     mode: w,
-    layout: B,
+    layout: H,
     participantsOpen: G,
     chatOpen: V,
     selectedParticipant: W
@@ -705,7 +705,7 @@ t.default = function(e) {
   } = (0, u.useStateFromStoresObject)([k.default], () => ({
     popoutWindow: k.default.getWindow(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     popoutWindowAlwaysOnTop: k.default.getIsAlwaysOnTop(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
-  })), $ = (0, u.useStateFromStores)([eo.default], () => eo.default.can(eP.Permissions.CONNECT, n)), ee = (0, u.useStateFromStores)([es.default], () => es.default.getToastsEnabled(n.id)), et = (0, u.useStateFromStores)([P.default], () => P.default.getAwaitingRemoteSessionInfo()), en = (0, u.useStateFromStores)([H.default], () => H.default.callHeaderHeight), ec = l.useCallback(e => {
+  })), $ = (0, u.useStateFromStores)([eo.default], () => eo.default.can(eP.Permissions.CONNECT, n)), ee = (0, u.useStateFromStores)([es.default], () => es.default.getToastsEnabled(n.id)), et = (0, u.useStateFromStores)([P.default], () => P.default.getAwaitingRemoteSessionInfo()), en = (0, u.useStateFromStores)([B.default], () => B.default.callHeaderHeight), ec = l.useCallback(e => {
     g.default.updatedUnsyncedSettings({
       callHeaderHeight: e
     })
@@ -756,7 +756,7 @@ t.default = function(e) {
             participants: b,
             filteredParticipants: U,
             participantsVersion: F,
-            layout: B,
+            layout: H,
             chatOpen: V,
             maxSidebarWidth: r - 550,
             shouldUseVoiceEffectsActionBar: eC,

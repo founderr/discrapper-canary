@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   openGiftCodeAcceptModal: function() {
-    return f
+    return E
   }
 });
 var s = n("735250");
@@ -15,13 +15,13 @@ var a = n("481060"),
   d = n("474936"),
   c = n("981631");
 
-function f(e) {
+function E(e) {
   let {
     processedCode: t,
-    channelContext: f,
-    customGiftMessage: E,
+    channelContext: E,
+    customGiftMessage: f,
     giftInfo: _
-  } = e, m = !1, T = null, I = l.default.getCurrentUser(), p = (0, o.isPremiumAtLeast)(null == I ? void 0 : I.premiumType, d.PremiumTypes.TIER_0);
+  } = e, T = !1, m = null, I = l.default.getCurrentUser(), N = (0, o.isPremiumAtLeast)(null == I ? void 0 : I.premiumType, d.PremiumTypes.TIER_0);
   (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -30,12 +30,12 @@ function f(e) {
       var a, l;
       return (0, s.jsx)(e, {
         code: t,
-        channelContext: f,
-        customGiftMessage: E,
+        channelContext: E,
+        customGiftMessage: f,
         emojiName: null == _ ? void 0 : null === (a = _.emoji) || void 0 === a ? void 0 : a.name,
         soundId: null == _ ? void 0 : null === (l = _.sound) || void 0 === l ? void 0 : l.id,
         onComplete: (e, t) => {
-          T = e, t && (m = t, e.isSubscription && null == i.default.getPremiumSubscription(!1) && (0, u.setCanPlayWowMoment)(!0))
+          m = e, t && (T = t, e.isSubscription && null == i.default.getPremiumSubscription(!1) && (0, u.setCanPlayWowMoment)(!0))
         },
         ...n
       })
@@ -43,7 +43,7 @@ function f(e) {
   }, {
     onCloseCallback: () => {
       var e;
-      m && null != T && !p && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.PremiumTypes.TIER_2 && r.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)
+      T && null != m && !N && m.isSubscription && (null == m ? void 0 : null === (e = m.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.PremiumTypes.TIER_2 && r.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)
     }
   })
 }

@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return N
   }
 });
-var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+var a = n("735250"),
+  l = n("470079"),
+  s = n("442837"),
   i = n("317632"),
   r = n("602478"),
   o = n("360629"),
@@ -14,50 +14,50 @@ var s = n("735250"),
   d = n("594174"),
   c = n("837062"),
   f = n("502568"),
-  E = n("280763"),
-  _ = n("178088"),
+  h = n("280763"),
+  E = n("178088"),
   m = n("222940"),
-  T = n("490897"),
-  I = n("689938"),
-  p = n("75028");
+  p = n("490897"),
+  S = n("689938"),
+  g = n("75028");
 
-function h(e) {
+function N(e) {
   let {
     onOpen: t,
     onClose: n,
-    className: h
-  } = e, N = (0, o.useInDesktopNotificationCenterExperiment)(), S = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), C = a.useRef(null), g = (0, l.useStateFromStores)([u.default], () => !!N && (null == S ? void 0 : S.id) != null && u.default.getMentionCount(S.id, T.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+    className: N
+  } = e, _ = (0, o.useInDesktopNotificationCenterExperiment)(), I = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), T = l.useRef(null), C = (0, s.useStateFromStores)([u.default], () => !!_ && (null == I ? void 0 : I.id) != null && u.default.getMentionCount(I.id, p.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
     enabled: A
   } = r.default.useExperiment({
     location: "RecentsButton"
   }, {
     autoTrackExposure: !1
-  }), M = (0, l.useStateFromStores)([i.default], () => A && i.default.getUnseenInviteCount() > 0);
-  return (0, s.jsx)(_.RecentsPopout, {
+  }), v = (0, s.useStateFromStores)([i.default], () => A && i.default.getUnseenInviteCount() > 0);
+  return (0, a.jsx)(E.RecentsPopout, {
     onOpen: t,
     onClose: n,
     badgeState: {
-      badgeForYou: g
+      badgeForYou: C
     },
     popoutPosition: "bottom",
     popoutAlign: "right",
-    children: (e, t, n) => (0, s.jsxs)("div", {
-      ref: C,
-      className: p.recentsIcon,
-      children: [A && (0, s.jsx)(m.default, {
-        inboxIconRef: C,
+    children: (e, t, n) => (0, a.jsxs)("div", {
+      ref: T,
+      className: g.recentsIcon,
+      children: [A && (0, a.jsx)(m.default, {
+        inboxIconRef: T,
         recentsPopoutShown: t
-      }), (0, s.jsx)(f.Icon, {
+      }), (0, a.jsx)(f.Icon, {
         ...n,
-        className: h,
+        className: N,
         onClick: e,
         icon: c.default,
-        "aria-label": I.default.Messages.INBOX,
-        tooltip: t ? null : I.default.Messages.INBOX,
+        "aria-label": S.default.Messages.INBOX,
+        tooltip: t ? null : S.default.Messages.INBOX,
         selected: t,
-        showBadge: g || M,
-        children: (0, s.jsx)(E.default, {
-          className: p.todoBadge
+        showBadge: C || v,
+        children: (0, a.jsx)(h.default, {
+          className: g.todoBadge
         })
       })]
     })

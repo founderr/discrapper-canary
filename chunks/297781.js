@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return $
   },
   GameTimestampBadge: function() {
-    return H
+    return B
   },
   ListenTimestampBadge: function() {
     return V
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return X
   },
   VoiceChannelBadge: function() {
-    return B
+    return H
   },
   WatchTimestampBadge: function() {
     return J
@@ -119,7 +119,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function H(e) {
   let {
     entry: t
   } = e, {
@@ -133,7 +133,7 @@ function B(e) {
   })
 }
 
-function H(e) {
+function B(e) {
   let {
     entry: t
   } = e, {

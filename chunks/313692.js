@@ -59,7 +59,7 @@ function N(e) {
       })
     }, [N, s, L, j]),
     k = (0, r.throttle)(w, 300),
-    B = l.useCallback(e => {
+    H = l.useCallback(e => {
       if (null == L) return;
       let t = {
         ...j,
@@ -71,7 +71,7 @@ function N(e) {
         scrollOffset: O.current
       })
     }, [N, s, L, j]),
-    H = null !== (n = null == j ? void 0 : j.offset) && void 0 !== n ? n : 0,
+    B = null !== (n = null == j ? void 0 : j.offset) && void 0 !== n ? n : 0,
     G = (0, o.useStateFromStores)([c.default], () => {
       if (null == D.result) return [];
       let e = D.result.messages,
@@ -96,7 +96,7 @@ function N(e) {
         isSearching: !0,
         isIndexing: !1,
         isHistoricalIndexing: !1,
-        offset: H,
+        offset: B,
         totalResults: 0,
         hasError: !1,
         showBlockedResults: !1,
@@ -106,13 +106,13 @@ function N(e) {
         isSearching: !1,
         isIndexing: null !== (t = D.result.doing_deep_historical_index) && void 0 !== t && t,
         isHistoricalIndexing: null !== (n = D.result.doing_deep_historical_index) && void 0 !== n && n,
-        offset: H,
+        offset: B,
         totalResults: null !== (a = D.result.total_results) && void 0 !== a ? a : 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       }
-    }, [D.result, H]);
+    }, [D.result, B]);
   return null == b || null == U || null == V ? null : (0, a.jsxs)("div", {
     className: i()(A.container, M),
     style: {
@@ -133,7 +133,7 @@ function N(e) {
         renderEmbeds: !0,
         blockCount: 0,
         scrollTo: () => {},
-        onChangePage: B
+        onChangePage: H
       })
     })]
   })

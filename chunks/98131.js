@@ -14,9 +14,9 @@ var a = l("735250"),
   S = l("63063"),
   E = l("13140"),
   _ = l("435064"),
-  N = l("894694"),
+  h = l("894694"),
   C = l("39604"),
-  h = l("981631"),
+  N = l("981631"),
   g = l("921944"),
   p = l("689938"),
   A = l("639412"),
@@ -27,7 +27,7 @@ let I = e => {
     isAnimationDone: l,
     guildId: s,
     children: i
-  } = e, m = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareClassification()), E = m === N.ClipsHardwareClassification.MEETS_MINIMUM || m === N.ClipsHardwareClassification.UNKNOWN, x = m === N.ClipsHardwareClassification.BELOW_MINIMUM, I = l && (E || x) && !t, [R, T] = (0, c.useGetDismissibleContent)(I ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = R === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+  } = e, m = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareClassification()), E = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, x = m === h.ClipsHardwareClassification.BELOW_MINIMUM, I = l && (E || x) && !t, [R, T] = (0, c.useGetDismissibleContent)(I ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = R === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
   n.useEffect(() => {
     t && (0, d.markDismissibleContentAsDismissed)(u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
       forceTrack: !0
@@ -62,7 +62,7 @@ let I = e => {
             color: "always-white",
             className: A.warningText,
             children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-              url: S.default.getArticleURL(h.HelpdeskArticles.CLIPS)
+              url: S.default.getArticleURL(N.HelpdeskArticles.CLIPS)
             })
           }) : null]
         }),
@@ -86,7 +86,7 @@ t.default = function(e) {
   let {
     isAnimationDone: t,
     guildId: l
-  } = e, n = (0, r.useStateFromStores)([_.default], () => _.default.getSettings().clipsEnabled), s = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(h.GlobalKeybindActions.SAVE_CLIP));
+  } = e, n = (0, r.useStateFromStores)([_.default], () => _.default.getSettings().clipsEnabled), s = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(N.GlobalKeybindActions.SAVE_CLIP));
   i()(null != s, "Clips keybind should be set");
   let u = E.toString(s.shortcut, !0);
   return (0, a.jsx)(o.FormItem, {

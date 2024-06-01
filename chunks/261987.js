@@ -1,37 +1,37 @@
     "use strict";
     var n = e("545576"),
-      o = e("740362"),
-      i = e("251069"),
+      i = e("740362"),
+      o = e("251069"),
       u = e("838957"),
       c = e("276321"),
       s = e("381740"),
       a = e("504559"),
       f = e("95948"),
-      p = e("892725"),
-      l = e("668788"),
+      l = e("892725"),
+      p = e("668788"),
       v = e("154154"),
       d = e("325008"),
-      y = e("992051");
-    t.exports = function(t, r, e, g) {
-      var I = "stackTraceLimit",
-        h = g ? 2 : 1,
-        E = t.split("."),
-        b = E[E.length - 1],
-        T = n.apply(null, E);
-      if (T) {
-        var m = T.prototype;
-        if (!y && o(m, "cause") && delete m.cause, !e) return T;
-        var S = n("Error"),
-          R = r(function(t, r) {
-            var e = p(g ? r : t, void 0),
-              n = g ? new T(t) : new T;
-            return void 0 !== e && i(n, "message", e), v(n, R, n.stack, 2), this && u(m, this) && f(n, this, R), arguments.length > h && l(n, arguments[h]), n
+      I = e("992051");
+    r.exports = function(r, t, e, y) {
+      var h = "stackTraceLimit",
+        E = y ? 2 : 1,
+        g = r.split("."),
+        T = g[g.length - 1],
+        b = n.apply(null, g);
+      if (b) {
+        var R = b.prototype;
+        if (!I && i(R, "cause") && delete R.cause, !e) return b;
+        var m = n("Error"),
+          A = t(function(r, t) {
+            var e = l(y ? t : r, void 0),
+              n = y ? new b(r) : new b;
+            return void 0 !== e && o(n, "message", e), v(n, A, n.stack, 2), this && u(R, this) && f(n, this, A), arguments.length > E && p(n, arguments[E]), n
           });
-        if (R.prototype = m, "Error" !== b ? c ? c(R, S) : s(R, S, {
+        if (A.prototype = R, "Error" !== T ? c ? c(A, m) : s(A, m, {
             name: !0
-          }) : d && I in T && (a(R, T, I), a(R, T, "prepareStackTrace")), s(R, T), !y) try {
-          m.name !== b && i(m, "name", b), m.constructor = R
-        } catch (t) {}
-        return R
+          }) : d && h in b && (a(A, b, h), a(A, b, "prepareStackTrace")), s(A, b), !I) try {
+          R.name !== T && o(R, "name", T), R.constructor = A
+        } catch (r) {}
+        return A
       }
     }

@@ -8,14 +8,14 @@ var s, a = n("735250"),
   u = n("54936"),
   d = n("55008"),
   c = n("592771"),
-  f = n("305177"),
-  E = n("73346"),
+  E = n("305177"),
+  f = n("73346"),
   _ = n("568836"),
-  m = n("345898"),
-  T = n("981631"),
+  T = n("345898"),
+  m = n("981631"),
   I = n("838674");
 
-function p(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class h extends(s = l.PureComponent) {
+class p extends(s = l.PureComponent) {
   render() {
     let {
       sku: e,
@@ -34,7 +34,7 @@ class h extends(s = l.PureComponent) {
       renderCustomTitle: i,
       renderCustomMedia: r,
       isEmbed: o
-    } = this.props, u = o ? _.ResponsiveEmbedTile : m.default;
+    } = this.props, u = o ? _.ResponsiveEmbedTile : T.default;
     return (0, a.jsx)(u, {
       className: s,
       renderMedia: null != r ? r : this.renderMedia,
@@ -45,7 +45,7 @@ class h extends(s = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), p(this, "renderActions", () => {
+    super(...e), N(this, "renderActions", () => {
       let {
         inLibrary: e,
         sku: t,
@@ -61,13 +61,13 @@ class h extends(s = l.PureComponent) {
           inLibrary: e,
           className: i && s ? I.tilePriceWithVisibleBuyButton : I.tilePrice
         }), (0, a.jsx)(u.OperatingSystemSection, {
-          systems: [T.OperatingSystems.WINDOWS],
+          systems: [m.OperatingSystems.WINDOWS],
           className: I.platform
         }), i ? (0, a.jsx)("div", {
           children: "deprecated!"
         }) : null]
       })
-    }), p(this, "renderMedia", () => {
+    }), N(this, "renderMedia", () => {
       let {
         playing: e,
         muted: t,
@@ -78,12 +78,12 @@ class h extends(s = l.PureComponent) {
         storeListing: u
       } = this.props;
       return (0, a.jsxs)(l.Fragment, {
-        children: [(0, a.jsx)(f.default, {
+        children: [(0, a.jsx)(E.default, {
           className: r()(I.splashContainer, {
             [I.splashContainerHorizontal]: o
           }),
-          video: null != u.previewVideo ? (0, E.getAssetURL)(i.applicationId, u.previewVideo) : void 0,
-          image: null != u.thumbnail ? (0, E.getAssetURL)(i.applicationId, u.thumbnail, 600) : null,
+          video: null != u.previewVideo ? (0, f.getAssetURL)(i.applicationId, u.previewVideo) : void 0,
+          image: null != u.thumbnail ? (0, f.getAssetURL)(i.applicationId, u.thumbnail, 600) : null,
           title: i.name,
           playing: e,
           muted: t,
@@ -104,10 +104,10 @@ class h extends(s = l.PureComponent) {
     })
   }
 }
-p(h, "defaultProps", {
+N(p, "defaultProps", {
   showMediaPlaceholder: !1,
   isMouseOver: !1,
   showBuyInline: !1,
   isHorizontal: !1,
   isEmbed: !1
-}), t.default = h
+}), t.default = p

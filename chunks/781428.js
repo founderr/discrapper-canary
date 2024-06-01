@@ -20,8 +20,8 @@ var s, a = n("735250"),
   _ = n("743142"),
   p = n("379760"),
   T = n("100159"),
-  I = n("473855"),
-  S = n("124860"),
+  S = n("473855"),
+  I = n("124860"),
   A = n("86779"),
   N = n("726745"),
   R = n("913583"),
@@ -37,8 +37,8 @@ var s, a = n("735250"),
   U = n("285952"),
   P = n("819570"),
   G = n("292937"),
-  j = n("626135"),
-  w = n("585483"),
+  w = n("626135"),
+  j = n("585483"),
   F = n("358085"),
   k = n("481153"),
   B = n("588705"),
@@ -82,7 +82,7 @@ class J extends(s = i.PureComponent) {
       invite: s,
       location: a
     } = this.props;
-    e && !t ? (0, g.handoffBegin)() : t && this.loginOrSSO(t, a, !0), j.default.track(W.AnalyticEvents.LOGIN_VIEWED, {
+    e && !t ? (0, g.handoffBegin)() : t && this.loginOrSSO(t, a, !0), w.default.track(W.AnalyticEvents.LOGIN_VIEWED, {
       location: null != s ? "Invite Login Page" : "Non-Invite Login Page",
       login_source: this.loginSource,
       authenticated: t,
@@ -453,7 +453,7 @@ class J extends(s = i.PureComponent) {
       onSubmit: this.handleLogin,
       tag: "form",
       className: o()(this.props.authBoxClassName, z.horizontalAuthBox),
-      children: () => [(0, a.jsx)(I.default, {
+      children: () => [(0, a.jsx)(S.default, {
         guildTemplate: e
       }, "template"), this.renderDefaultForm(!1)]
     })
@@ -467,7 +467,7 @@ class J extends(s = i.PureComponent) {
       style: {
         padding: 0
       },
-      children: (0, a.jsx)(S.MFASlides, {
+      children: (0, a.jsx)(I.MFASlides, {
         mfaFinish: this.handleTokenSubmitMFA,
         request: e,
         onEarlyClose: () => {
@@ -571,7 +571,7 @@ class J extends(s = i.PureComponent) {
   constructor(e) {
     var t, n;
     super(e), Z(this, "loginRef", void 0), Z(this, "passwordRef", void 0), Z(this, "codeRef", void 0), Z(this, "handleAuthToken", async e => {
-      await E.default.loginToken(e, !1), j.default.track(W.AnalyticEvents.LOGIN_SUCCESSFUL, {
+      await E.default.loginToken(e, !1), w.default.track(W.AnalyticEvents.LOGIN_SUCCESSFUL, {
         source: W.LoginSuccessfulSources.QR_CODE,
         login_source: this.loginSource,
         gift_code_sku_id: this.giftCodeSKUId,
@@ -610,7 +610,7 @@ class J extends(s = i.PureComponent) {
         source: this.loginSource,
         giftCodeSKUId: this.giftCodeSKUId,
         invite: this.props.invite
-      }), w.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE)
+      }), j.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE)
     }), Z(this, "handleIPAuthorize", async e => {
       let {
         password: t,
@@ -626,7 +626,7 @@ class J extends(s = i.PureComponent) {
           undelete: n,
           source: this.loginSource,
           giftCodeSKUId: this.giftCodeSKUId
-        }), w.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE)
+        }), j.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE)
       } catch (e) {
         null != e.body && null != e.body.message && this.setState({
           phoneVerifyError: e.body.message
@@ -660,7 +660,7 @@ class J extends(s = i.PureComponent) {
         data: n,
         ticket: s
       } = e;
-      return w.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE), E.default.loginMFAv2({
+      return j.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE), E.default.loginMFAv2({
         code: n,
         ticket: s,
         mfaType: t,
@@ -671,7 +671,7 @@ class J extends(s = i.PureComponent) {
       null != e && e.preventDefault(), null != this.loginRef && this.loginRef.focus();
       let t = this.getFullLogin();
       try {
-        w.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE), await E.default.forgotPassword(t), (0, f.openModal)(e => (0, a.jsx)(f.ConfirmModal, {
+        j.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE), await E.default.forgotPassword(t), (0, f.openModal)(e => (0, a.jsx)(f.ConfirmModal, {
           header: K.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
           confirmText: K.default.Messages.OKAY,
           confirmButtonColor: P.Button.Colors.BRAND,
@@ -716,7 +716,7 @@ class J extends(s = i.PureComponent) {
       } = this.props, o = null != i ? (0, u.parse)(i.search) : {};
       "" !== t && (o.email = t), null != n ? (o.mode = "register", e = W.Routes.INVITE(n.code)) : null != s ? (o.mode = "register", e = W.Routes.GIFT_CODE(s.code)) : null != a ? e = W.Routes.GUILD_TEMPLATE(a.code) : null != l ? (e = W.Routes.REGISTER, o.redirect_to = l) : e = W.Routes.REGISTER, E.default.loginReset(), r(e, {
         search: (0, u.stringify)(o)
-      }), w.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE)
+      }), j.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE)
     });
     let s = null != e.location ? (0, u.parse)(e.location.search) : {};
     this.state = {

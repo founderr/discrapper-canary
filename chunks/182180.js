@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 });
 var s = n("735250"),
@@ -13,23 +13,23 @@ var s = n("735250"),
   u = n("942951"),
   d = n("703656"),
   c = n("702346"),
-  f = n("35125"),
-  E = n("626751"),
+  E = n("35125"),
+  f = n("626751"),
   _ = n("891614"),
-  m = n("981631"),
-  T = n("176505"),
+  T = n("981631"),
+  m = n("176505"),
   I = n("689938"),
-  p = n("920890");
+  N = n("920890");
 
-function h(e) {
+function p(e) {
   let {
     username: t
   } = e;
   return (0, s.jsx)("div", {
-    className: p.welcomeCardText,
+    className: N.welcomeCardText,
     children: (0, s.jsx)(l.Text, {
       tag: "p",
-      className: p.welcomeCardText,
+      className: N.welcomeCardText,
       color: "status-positive-text",
       variant: "heading-xl/medium",
       children: I.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_TEXT.format({
@@ -46,14 +46,14 @@ function h(e) {
   })
 }
 
-function N(e) {
+function S(e) {
   let {
     guildId: t,
     user: n,
     username: a
   } = e;
   return (0, s.jsxs)("div", {
-    className: p.welcomeCard,
+    className: N.welcomeCard,
     role: "img",
     "aria-label": I.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
       username: a
@@ -61,20 +61,20 @@ function N(e) {
     children: [(0, s.jsx)(_.default, {
       guildId: t,
       user: n,
-      className: p.welcomeCardBadge
-    }), (0, s.jsx)(h, {
+      className: N.welcomeCardBadge
+    }), (0, s.jsx)(p, {
       username: a
     })]
   })
 }
 
-function S(e) {
+function C(e) {
   var t, l;
   let {
     channel: _,
     message: I,
-    compact: p
-  } = e, h = (0, o.default)(I), S = function(e) {
+    compact: N
+  } = e, p = (0, o.default)(I), C = function(e) {
     let {
       author: t,
       channel: n,
@@ -86,10 +86,10 @@ function S(e) {
       messageId: s.id
     })(t), {
       analyticsLocations: c
-    } = (0, r.default)(i.default.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), E = s.roleSubscriptionData, _ = a.useCallback(() => {
-      (0, d.transitionTo)(m.Routes.CHANNEL(l, T.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, f.trackRoleSubscriptionPurchaseMessageTierClick)(l, n.id, s.id, E.role_subscription_listing_id)
-    }, [l, n, s, E, c]);
-    return null == E ? null : (0, f.getRoleSubscriptionPurchaseSystemMessageFormattedContent)({
+    } = (0, r.default)(i.default.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), f = s.roleSubscriptionData, _ = a.useCallback(() => {
+      (0, d.transitionTo)(T.Routes.CHANNEL(l, m.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == f ? void 0 : f.role_subscription_listing_id) != null && (0, E.trackRoleSubscriptionPurchaseMessageTierClick)(l, n.id, s.id, f.role_subscription_listing_id)
+    }, [l, n, s, f, c]);
+    return null == f ? null : (0, E.getRoleSubscriptionPurchaseSystemMessageFormattedContent)({
       username: t.nick,
       usernameOnClickHandler: o,
       roleSubscriptionOnClickHandler: _,
@@ -99,19 +99,19 @@ function S(e) {
   }({
     channel: _,
     message: I,
-    author: h
-  }), C = (null === (t = I.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = I.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
-  return null == S ? null : (0, s.jsxs)(s.Fragment, {
+    author: p
+  }), A = (null === (t = I.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = I.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
+  return null == C ? null : (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(c.default, {
       icon: n("570111"),
       timestamp: I.timestamp,
-      compact: p,
-      children: S
-    }), C && (0, s.jsx)(N, {
+      compact: N,
+      children: C
+    }), A && (0, s.jsx)(S, {
       guildId: _.guild_id,
       user: I.author,
-      username: h.nick
-    }), (0, s.jsx)(E.default, {
+      username: p.nick
+    }), (0, s.jsx)(f.default, {
       channel: _,
       message: I
     })]

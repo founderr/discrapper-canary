@@ -103,7 +103,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
           location_stack: P
         }), y(!0))
       }, [t, s, b, R, y, P]), null == j) return null;
-    let B = (0, a.jsx)(f.Tooltip, {
+    let H = (0, a.jsx)(f.Tooltip, {
       text: D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
       color: f.Tooltip.Colors.GREY,
@@ -124,7 +124,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       })
     });
     return (0, a.jsx)(g.TextBadge, {
-      text: B,
+      text: H,
       className: i()(L, M.qualityIndicatorBadge, {
         [M.qualityIndicatorBadgePremium]: O
       }),

@@ -1,13 +1,13 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   useLightningCheckoutExperimentEnabled: function() {
     return o
   }
 });
-var l = a("470079"),
-  s = a("100527"),
-  r = a("818083"),
-  n = a("329067");
+var a = l("470079"),
+  s = l("100527"),
+  r = l("818083"),
+  n = l("329067");
 let i = (0, r.createExperiment)({
     kind: "user",
     id: "2024-04_lightning_checkout",
@@ -32,7 +32,7 @@ let i = (0, r.createExperiment)({
       {
         userIsEligible: t
       } = (0, n.useLightningCheckoutEligibility)();
-    return l.useEffect(() => {
+    return a.useEffect(() => {
       t && i.trackExposure({
         location: s.default.COLLECTIBLES_SHOP
       })

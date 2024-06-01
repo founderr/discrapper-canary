@@ -1,26 +1,26 @@
     "use strict";
     var n = e("147018"),
-      o = e("161581"),
-      i = e("197187"),
+      i = e("161581"),
+      o = e("197187"),
       u = e("261987"),
       c = "WebAssembly",
-      s = o[c],
+      s = i[c],
       a = 7 !== Error("e", {
         cause: 7
       }).cause,
-      f = function(t, r) {
+      f = function(r, t) {
         var e = {};
-        e[t] = u(t, r, a), n({
+        e[r] = u(r, t, a), n({
           global: !0,
           constructor: !0,
           arity: 1,
           forced: a
         }, e)
       },
-      p = function(t, r) {
-        if (s && s[t]) {
+      l = function(r, t) {
+        if (s && s[r]) {
           var e = {};
-          e[t] = u(c + "." + t, r, a), n({
+          e[r] = u(c + "." + r, t, a), n({
             target: c,
             stat: !0,
             constructor: !0,
@@ -29,44 +29,44 @@
           }, e)
         }
       };
-    f("Error", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    f("Error", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), f("EvalError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), f("EvalError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), f("RangeError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), f("RangeError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), f("ReferenceError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), f("ReferenceError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), f("SyntaxError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), f("SyntaxError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), f("TypeError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), f("TypeError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), f("URIError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), f("URIError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), p("CompileError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), l("CompileError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), p("LinkError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), l("LinkError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
-    }), p("RuntimeError", function(t) {
-      return function(r) {
-        return i(t, this, arguments)
+    }), l("RuntimeError", function(r) {
+      return function(t) {
+        return o(r, this, arguments)
       }
     })

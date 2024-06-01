@@ -17,8 +17,8 @@ var s, a, i, r, l = n("735250"),
   _ = n("710845"),
   p = n("314897"),
   T = n("277390"),
-  I = n("819570"),
-  S = n("585483"),
+  S = n("819570"),
+  I = n("585483"),
   A = n("358085"),
   N = n("172517"),
   R = n("51144"),
@@ -95,12 +95,12 @@ function P(e) {
       return (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(D, {
           text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : ""
-        }), (0, l.jsx)(I.Title, {
+        }), (0, l.jsx)(S.Title, {
           className: M.marginBottom8,
           children: L.default.Messages.LOGIN_WITH_QR
         }), null != s ? (0, l.jsx)(U, {
           children: s
-        }) : (0, l.jsx)(I.SubTitle, {
+        }) : (0, l.jsx)(S.SubTitle, {
           children: L.default.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
         }), a && (0, l.jsx)(h.Button, {
           size: h.ButtonSizes.LARGE,
@@ -132,10 +132,10 @@ function P(e) {
           size: h.AvatarSizes.SIZE_120,
           isMobile: !0,
           status: v.StatusTypes.ONLINE
-        }), (0, l.jsx)(I.Title, {
+        }), (0, l.jsx)(S.Title, {
           className: M.marginBottom8,
           children: L.default.Messages.CONFIRM_QR_CHECK_YOUR_PHONE
-        }), (0, l.jsx)(I.SubTitle, {
+        }), (0, l.jsx)(S.SubTitle, {
           children: L.default.Messages.LOGIN_AS.format({
             username: "".concat(R.default.getUserTag(e))
           })
@@ -229,7 +229,7 @@ function G(e) {
             return
           }
           case "pending_remote_init": {
-            f.succeed(), S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE);
+            f.succeed(), I.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE);
             let e = await (0, N.publicKeyFingerprint)(m());
             if (e !== s.fingerprint) throw Error("bad fingerprint ".concat(e, " !== ").concat(s.fingerprint));
             i("handshake complete awaiting remote auth."), r({
@@ -247,7 +247,7 @@ function G(e) {
             return
           }
           case "pending_ticket": {
-            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting ticket/cancel.");
+            I.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting ticket/cancel.");
             let e = s.encrypted_user_payload;
             r({
               step: 3,
@@ -256,7 +256,7 @@ function G(e) {
             return
           }
           case "pending_finish": {
-            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting finish/cancel.");
+            I.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting finish/cancel.");
             let e = s.encrypted_user_payload;
             r({
               step: 2,
@@ -265,7 +265,7 @@ function G(e) {
             return
           }
           case "finish": {
-            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake finished.");
+            I.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake finished.");
             let t = s.encrypted_token;
             r({
               step: 5

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return h
+    return N
   }
 }), l("724458"), l("47120");
 var a = l("735250"),
@@ -18,10 +18,10 @@ var a = l("735250"),
   S = l("176940"),
   E = l("689938"),
   _ = l("378873"),
-  N = l("555066"),
+  h = l("555066"),
   C = l("611273");
 
-function h(e) {
+function N(e) {
   let {
     selectedSource: t,
     onChangeVideoDeviceSource: l,
@@ -29,7 +29,7 @@ function h(e) {
   } = e;
   i()(null != t, "Camera capture device cannot be null");
   let r = (0, S.default)(),
-    h = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
+    N = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
     [g, p] = n.useState(function(e, t, l) {
       if (null != t && null != l) {
         let a = t.find(t => t.id === e);
@@ -37,11 +37,11 @@ function h(e) {
         let n = u().reduce(l, (e, t) => (0, o.stringSimilarity)(a.name, t.name) > (0, o.stringSimilarity)(a.name, e.name) ? t : e);
         if (null != n) return n.id
       }
-    }(t.id, r, h));
+    }(t.id, r, N));
   return null != g && s(g), (0, a.jsx)(n.Fragment, {
     children: (0, a.jsxs)(c.FormItem, {
       title: "Capture Device",
-      className: N.modalContent,
+      className: h.modalContent,
       children: [(0, a.jsx)(c.FormItem, {
         className: C.marginTop8,
         children: (0, a.jsxs)(m.default, {
@@ -65,7 +65,7 @@ function h(e) {
           onChange: e => {
             p(e), s(e)
           },
-          options: u().map(h, e => {
+          options: u().map(N, e => {
             let {
               id: t,
               name: l

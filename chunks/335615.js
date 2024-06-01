@@ -41,8 +41,8 @@ var a = n("735250"),
   F = n("594174"),
   w = n("153124"),
   k = n("151827"),
-  B = n("176278"),
-  H = n("585483"),
+  H = n("176278"),
+  B = n("585483"),
   G = n("823379"),
   V = n("51144"),
   W = n("998502"),
@@ -156,7 +156,7 @@ class J extends l.Component {
       } = this.props, n = "@".concat(V.default.getUserTag(e, {
         decoration: "never"
       })), a = "<@".concat(e.id, ">");
-      H.ComponentDispatch.dispatchToLastSubscribed(Y.ComponentActions.INSERT_TEXT, {
+      B.ComponentDispatch.dispatchToLastSubscribed(Y.ComponentActions.INSERT_TEXT, {
         plainText: n,
         rawText: a
       }), E.default.startTyping(t.id)
@@ -238,7 +238,7 @@ let $ = l.memo(e => {
         })
       }), (0, a.jsxs)("span", {
         "aria-hidden": !0,
-        children: [null != i ? (0, a.jsx)(B.default, {
+        children: [null != i ? (0, a.jsx)(H.default, {
           className: K.roleIcon,
           ...i
         }) : null, n, " — ", l]

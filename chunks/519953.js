@@ -990,7 +990,7 @@ function e8(e, t) {
   } : null
 }
 
-function e7(e, t, n) {
+function e9(e, t, n) {
   var r = B.get(e),
     i = null == r ? void 0 : r.find(e => {
       var {
@@ -1030,14 +1030,14 @@ function e7(e, t, n) {
   } : null
 }
 
-function e9(e, t, n) {
-  var r = e7(e, t.anchor, n);
+function e7(e, t, n) {
+  var r = e9(e, t.anchor, n);
   if (!r) return null;
   if (f.Range.isCollapsed(t)) return {
     anchor: r,
     focus: r
   };
-  var i = e7(e, t.focus, n);
+  var i = e9(e, t.focus, n);
   return i ? {
     anchor: r,
     focus: i
@@ -2455,10 +2455,10 @@ var tO = function(e) {
         B.set(e, o)
       }
       var s = Y.get(e);
-      s && Y.set(e, e9(e, s, t));
+      s && Y.set(e, e7(e, s, t));
       var u = U.get(e);
       if (null != u && u.at) {
-        var c = f.Point.isPoint(null == u ? void 0 : u.at) ? e7(e, u.at, t) : e9(e, u.at, t);
+        var c = f.Point.isPoint(null == u ? void 0 : u.at) ? e9(e, u.at, t) : e7(e, u.at, t);
         U.set(e, c ? tD(tD({}, u), {}, {
           at: c
         }) : null)

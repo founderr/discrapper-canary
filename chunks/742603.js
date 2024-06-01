@@ -43,7 +43,7 @@ var l = n("120356"),
   w = n("32825"),
   k = n("946278");
 
-function B(e) {
+function H(e) {
   let {
     focusedParticipant: t,
     channel: n
@@ -60,7 +60,7 @@ function B(e) {
   })
 }
 
-function H(e) {
+function B(e) {
   let {
     user: t,
     channel: n,
@@ -103,7 +103,7 @@ function G(e) {
       variant: "text-md/normal",
       color: "none",
       children: (0, d.default)(n.name)
-    }), i && (0, a.jsx)(B, {
+    }), i && (0, a.jsx)(H, {
       channel: s,
       focusedParticipant: l
     })]
@@ -114,12 +114,12 @@ function G(e) {
     t = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(x.default.Divider, {
         className: w.divider
-      }), (0, a.jsx)(H, {
+      }), (0, a.jsx)(B, {
         user: e,
         channel: s,
         stream: n,
         color: i ? "header-primary" : "none"
-      }), i && (0, a.jsx)(B, {
+      }), i && (0, a.jsx)(H, {
         channel: s,
         focusedParticipant: l
       })]
@@ -151,27 +151,27 @@ function V(e) {
   t.isDM() ? v = F.default.Messages.DM : t.isGroupDM() && (v = F.default.Messages.GROUP_DM);
   let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     j = t.isGuildVoice() && u && null != L && L.length > 0,
-    B = (0, y.default)(t),
-    H = j ? (0, a.jsx)(r.Tooltip, {
+    H = (0, y.default)(t),
+    B = j ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
-      shouldShow: B,
+      shouldShow: H,
       children: e => (0, a.jsxs)(r.Clickable, {
         ...e,
         className: s()(w.channelStatusClickable, {
-          [w.hoverable]: B
+          [w.hoverable]: H
         }),
-        onClick: B ? V : void 0,
+        onClick: H ? V : void 0,
         children: [(0, a.jsx)(r.Text, {
           variant: "text-xs/normal",
           className: s()(w.channelStatus, k.markup, {
-            [w.hoverable]: B
+            [w.hoverable]: H
           }),
           children: _.default.parseVoiceChannelStatus(L, !0, {
             channelId: t.id
           })
-        }), B && (0, a.jsx)(N.default, {
+        }), H && (0, a.jsx)(N.default, {
           className: s()(w.pencilIcon, w.hoverable),
           width: 14,
           height: 14
@@ -198,7 +198,7 @@ function V(e) {
       onDoubleClick: g.handleDoubleClick,
       transparent: !0,
       className: (0, M.getThemeClass)(U.ThemeTypes.DARK),
-      childrenBottom: H,
+      childrenBottom: B,
       toolbar: (0, a.jsx)(O.default, {
         inPopout: o === b.AppContext.POPOUT,
         channel: t,

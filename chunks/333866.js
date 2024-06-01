@@ -4,16 +4,16 @@ n.r(t), n.d(t, {
     return a
   },
   GuildProductSortOptions: function() {
-    return l
+    return s
   },
   ServerShopTabOrder: function() {
-    return s
+    return l
   },
   getGuildProductSortOptionLabel: function() {
     return u
   }
 });
-var r, i, l, s, o = n("689938");
+var i, r, s, l, o = n("689938");
 
 function u(e) {
   return ({
@@ -22,5 +22,5 @@ function u(e) {
     3: o.default.Messages.GUILD_STORE_SORT_OPTION_PRICE_DESC,
     1: o.default.Messages.GUILD_STORE_SORT_OPTION_NAME
   })[e]
-}(r = l || (l = {}))[r.NAME = 1] = "NAME", r[r.PRICE_ASC = 2] = "PRICE_ASC", r[r.PRICE_DESC = 3] = "PRICE_DESC", r[r.NEWEST_ARRIVALS = 4] = "NEWEST_ARRIVALS", (i = s || (s = {}))[i.SUBS_FIRST = 1] = "SUBS_FIRST", i[i.PRODUCTS_FIRST = 2] = "PRODUCTS_FIRST";
+}(i = s || (s = {}))[i.NAME = 1] = "NAME", i[i.PRICE_ASC = 2] = "PRICE_ASC", i[i.PRICE_DESC = 3] = "PRICE_DESC", i[i.NEWEST_ARRIVALS = 4] = "NEWEST_ARRIVALS", (r = l || (l = {}))[r.SUBS_FIRST = 1] = "SUBS_FIRST", r[r.PRODUCTS_FIRST = 2] = "PRODUCTS_FIRST";
 let a = [4, 2, 3, 1]

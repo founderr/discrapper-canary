@@ -36,8 +36,8 @@ var a, l = n("735250"),
   F = n("473159"),
   w = n("928518"),
   k = n("981631"),
-  B = n("689938"),
-  H = n("622209");
+  H = n("689938"),
+  B = n("622209");
 
 function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -165,14 +165,14 @@ class V extends(a = s.Component) {
                       renderWindow: S,
                       children: (0, l.jsxs)(j.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
-                          className: H.popout,
+                          className: B.popout,
                           children: [g && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
                             type: N,
                             windowKey: i,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
-                            className: r()(H.content, T),
+                            className: r()(B.content, T),
                             children: s
                           })]
                         }), (0, l.jsx)(f.Modals, {}), (0, l.jsx)(h.default, {}), (0, l.jsx)(j.AppLayerContainer, {})]
@@ -189,7 +189,7 @@ class V extends(a = s.Component) {
   }
   constructor(...e) {
     super(...e), G(this, "rootRef", s.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
-      this.props.connectedToEmbeddedActivity && !L.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = B.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, D.isPlatformEmbedded && (0, g.default)(() => {
+      this.props.connectedToEmbeddedActivity && !L.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = H.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, D.isPlatformEmbedded && (0, g.default)(() => {
         w.default.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && U.default.close(this.props.windowKey)
       }))
     }), G(this, "handleBlur", () => {

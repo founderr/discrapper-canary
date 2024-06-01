@@ -19,23 +19,23 @@ function u(e) {
       onDeleteMessage: d,
       children: c
     } = e,
-    f = null === (t = u.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
-    E = () => d(u, !0);
-  if (null != f) {
-    let e = (0, a.getEphemeralReasonMessage)(f);
+    E = null === (t = u.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
+    f = () => d(u, !0);
+  if (null != E) {
+    let e = (0, a.getEphemeralReasonMessage)(E);
     n = (0, s.jsx)("div", {
       className: o.userAppsBetaContent,
       children: r.default.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_WITH_REASON.format({
-        handleDelete: E,
+        handleDelete: f,
         reason: e
       })
     })
   } else n = u.type === i.MessageTypes.STAGE_RAISE_HAND ? r.default.Messages.STAGE_SYSTEM_MESSAGE_MODERATOR_VISIBILITY_MESSAGE.format({
-    handleDelete: E
+    handleDelete: f
   }) : r.default.Messages.ONLY_YOU_CAN_SEE_AND_DELETE_THESE.format({
     count: 1,
     countMessages: 1,
-    handleDelete: E
+    handleDelete: f
   });
   return (0, s.jsxs)("div", {
     className: o.ephemeralMessage,
