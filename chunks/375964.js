@@ -17547,5 +17547,7 @@ e.exports = Object.freeze({
   MESSAGE_CHANNEL_EMBEDS_DISABLED: "Embeds are disabled in this channel.",
   MESSAGE_FORWARD_FAILED: "Forward Failed",
   MESSAGE_FORWARD_FAILED_BODY: "The message could not be forwarded to the following {count, plural, one {location} other {locations}}:",
+  MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y: "Message originally sent in !!{origin}!! at {timestamp}",
+  MESSAGE_FORWARD_FOOTER_A11Y: "Message originally sent at {timestamp}",
   SELECTED: "Selected"
 })

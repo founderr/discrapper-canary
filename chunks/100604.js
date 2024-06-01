@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageForward: function() {
-    return c
+    return E
   }
 });
 var s = n("933557"),
@@ -10,9 +10,10 @@ var s = n("933557"),
   i = n("496675"),
   r = n("699516"),
   o = n("594174"),
-  u = n("55935");
+  u = n("55935"),
+  d = n("689938");
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,36 +21,47 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c {
+class E {
   getForwardInfo() {
-    var e, t, n, d, c, E;
+    var e, t, n, c, E, f;
     let {
-      snapshotIndex: f,
-      parentMessage: _,
-      messageSnapshot: T
-    } = this, m = (0, u.calendarFormatCompact)(T.message.timestamp), I = a.default.getChannel(null === (e = _.messageReference) || void 0 === e ? void 0 : e.channel_id), N = a.default.getChannel(this.parentMessage.channel_id);
-    if (null != I && null != N && I.guild_id === N.guild_id) return i.default.can(I.accessPermissions, I) ? {
-      snapshotIndex: f,
-      originLabel: (0, s.computeChannelName)(I, o.default, r.default, !0),
-      timestampLabel: m
-    } : {
-      snapshotIndex: f,
-      timestampLabel: m
+      snapshotIndex: _,
+      parentMessage: T,
+      messageSnapshot: m
+    } = this, I = (0, u.calendarFormatCompact)(m.message.timestamp), N = a.default.getChannel(null === (e = T.messageReference) || void 0 === e ? void 0 : e.channel_id), p = a.default.getChannel(this.parentMessage.channel_id);
+    if (null != N && null != p && N.guild_id === p.guild_id) {
+      if (!i.default.can(N.accessPermissions, N)) return {
+        snapshotIndex: _
+      };
+      let e = (0, s.computeChannelName)(N, o.default, r.default, !0);
+      return {
+        snapshotIndex: _,
+        originLabel: e,
+        timestampLabel: I,
+        accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+          origin: e,
+          timestamp: I
+        })
+      }
+    }
+    if ((null === (t = m.guild) || void 0 === t ? void 0 : t.name) == null) return {
+      snapshotIndex: _
     };
-    if ((null === (t = T.guild) || void 0 === t ? void 0 : t.name) == null) return {
-      snapshotIndex: f,
-      timestampLabel: m
-    };
-    let p = null === (n = _.messageReference) || void 0 === n ? void 0 : n.guild_id,
-      S = null != p ? l.default.getGuild(p) : null;
+    let S = null === (n = T.messageReference) || void 0 === n ? void 0 : n.guild_id,
+      C = null != S ? l.default.getGuild(S) : null,
+      A = null !== (E = null == C ? void 0 : C.name) && void 0 !== E ? E : null === (c = m.guild) || void 0 === c ? void 0 : c.name;
     return {
-      snapshotIndex: f,
-      originLabel: null !== (c = null == S ? void 0 : S.name) && void 0 !== c ? c : null === (d = T.guild) || void 0 === d ? void 0 : d.name,
-      originIconUrl: null !== (E = null == S ? void 0 : S.getIconURL(16, !1)) && void 0 !== E ? E : void 0,
-      timestampLabel: m
+      snapshotIndex: _,
+      originLabel: A,
+      originIconUrl: null !== (f = null == C ? void 0 : C.getIconURL(16, !1)) && void 0 !== f ? f : void 0,
+      timestampLabel: I,
+      accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+        origin: A,
+        timestamp: I
+      })
     }
   }
   constructor(e, t, n) {
-    d(this, "parentMessage", void 0), d(this, "messageSnapshot", void 0), d(this, "snapshotIndex", void 0), this.parentMessage = e, this.messageSnapshot = t, this.snapshotIndex = n
+    c(this, "parentMessage", void 0), c(this, "messageSnapshot", void 0), c(this, "snapshotIndex", void 0), this.parentMessage = e, this.messageSnapshot = t, this.snapshotIndex = n
   }
 }
