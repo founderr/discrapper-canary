@@ -29,6 +29,7 @@ function E(e) {
     className: n()(g.headerBar, {
       [g.fullscreenHeaderBar]: r
     }),
+    innerClassname: g.shopLogoContainer,
     toolbar: r ? null : (0, a.jsx)(s.Fragment, {}),
     children: [(0, a.jsx)(d.default, {
       className: g.shopLogo
