@@ -98617,7 +98617,6 @@ div.content_aac020 {
     grid-column: 1/-1;
     position: relative;
     width: 100%;
-    max-width: 1060px;
     min-height: 240px;
     border-radius: var(--radius-xxl);
     display: flex;
@@ -98752,6 +98751,53 @@ div.content_aac020 {
 
 .reload__6fe99 {
     margin-top: 24px
+}
+
+.headerBar__7c489 {
+    position: sticky;
+    top: 0;
+    height: 40px;
+    padding: 0 12px
+}
+
+.fullscreenHeaderBar_cc16ce {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1316px;
+    background-color: var(--background-primary)
+}
+
+.shopLogo__377d8 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    color: var(--text-normal)
+}
+
+.shopLogoContainer_c34b29 {
+    position: static
+}
+
+.discordLogoContainer__55095 {
+    display: flex;
+    align-items: center;
+    margin-top: 12px
+}
+
+.discordLogo__606c1 {
+    height: 20px;
+    color: var(--text-normal);
+    margin-right: -6px
+}
+
+.closeIcon__0f2da {
+    margin-top: 40px;
+    margin-left: auto;
+    z-index: 1
 }
 
 .carouselContainer__9995f {
@@ -99695,56 +99741,33 @@ div.content_aac020 {
     }
 }
 
+.pageWrapper__18871 {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    background-color: var(--background-primary)
+}
+
 .page__8ffff {
     width: 100%;
     max-width: 1124px;
     padding: 0 32px 32px;
     box-sizing: border-box;
-    margin: 44px 0 300px;
+    margin-bottom: 300px;
     display: flex;
     flex-direction: column
 }
 
-.pageWithShopBannerHidden__4dbdc {
-    margin-top: 8px
-}
-
-.headerBar__7effc {
-    position: relative
-}
-
-.shopLogoContainer__5fd13 {
-    position: static
-}
-
-.shopLogo__7193c {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 20px
+.pageFullscreen__67fa1 {
+    padding: 0;
+    margin-left: 8px
 }
 
 .categoryWrapper__3d4f2 {
     position: relative;
     padding-top: 40px
-}
-
-.closeWrapper_fa833c {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-end;
-    background-color: red;
-    padding: 0 32px;
-    height: 0;
-    max-width: 1316px;
-    margin: 0 auto
-}
-
-.close__354a2 {
-    position: sticky;
-    margin-top: 24px;
-    z-index: 1
 }
 
 .cardsContainer__8b28d {
@@ -99755,7 +99778,7 @@ div.content_aac020 {
 }
 
 .shop_b31ed2 {
-    background-color: var(--background-floating);
+    background-color: var(--background-primary);
     flex: 1;
     height: 100%;
     min-width: 575px
@@ -99771,28 +99794,6 @@ div.content_aac020 {
     margin-top: 26px;
     margin-bottom: 10px;
     padding-left: 8px
-}
-
-.pageWrapperFullscreen__0c78f {
-    left: 20px
-}
-
-.pageWrapper__18871 {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    background-color: var(--background-primary)
-}
-
-.logo_b80583 {
-    height: 20px;
-    color: var(--text-normal)
-}
-
-.title__132e2 {
-    margin-left: -6px
 }
 
 @keyframes easterEggAnimation_c14e21 {
