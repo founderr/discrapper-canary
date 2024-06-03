@@ -120,13 +120,9 @@ class D extends n.PureComponent {
     let e;
     let {
       sku: t,
-      subscriptionPlan: s,
-      giftCodeBatchId: n
+      subscriptionPlan: s
     } = this.props;
-    return e = n === R.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID ? x.default.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE : n === R.STICKERS_GIFT_CODE_BATCH_ID && null != s ? (s.interval === R.SubscriptionIntervalTypes.MONTH ? x.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : x.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
-      skuName: t.name,
-      intervalCount: s.intervalCount
-    }) : null == s ? t.name : (s.interval === R.SubscriptionIntervalTypes.MONTH ? x.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : x.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
+    return e = null == s ? t.name : (s.interval === R.SubscriptionIntervalTypes.MONTH ? x.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : x.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
       skuName: t.name,
       intervalCount: s.intervalCount
     }), (0, a.jsx)("div", {
