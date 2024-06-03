@@ -43,8 +43,8 @@ var n = s("990547"),
   F = s("626135"),
   B = s("49012"),
   k = s("358085"),
-  w = s("392735"),
-  H = s("61160"),
+  H = s("392735"),
+  w = s("61160"),
   Y = s("604227"),
   V = s("38915"),
   W = s("498639"),
@@ -309,6 +309,11 @@ let ej = () => {
         searchableTitle: eP.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
         parent: ev.WebSetting.PRIVACY_KEYWORD_FILTER
       },
+      [ev.WebSetting.PRIVACY_TERMS_POLICY]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eP.default.Messages.USER_SETTINGS_PRIVACY_TERMS_SEARCHABLE,
+        parent: ev.WebSetting.PRIVACY_AND_SAFETY
+      },
       [ev.WebSetting.PRIVACY_FAMILY_CENTER]: {
         section: eL.UserSettingsSections.FAMILY_CENTER,
         searchableTitle: eP.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
@@ -335,7 +340,7 @@ let ej = () => {
         ariaLabel: eP.default.Messages.AUTH_SESSIONS,
         element: eN.default,
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.AUTH_SESSIONS_NEW],
-        predicate: () => w.default.getCurrentConfig({
+        predicate: () => H.default.getCurrentConfig({
           location: "9f7d84_1"
         }, {
           autoTrackExposure: !1
@@ -521,7 +526,7 @@ let ej = () => {
         searchableTitle: "Speed Test",
         label: "Speed Test",
         element: Q.default,
-        predicate: () => D.default.isSupported() && H.default.getCurrentConfig({
+        predicate: () => D.default.isSupported() && w.default.getCurrentConfig({
           location: "9f7d84_2"
         }).showSettings
       },

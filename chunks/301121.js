@@ -40,8 +40,8 @@ var a, n, l = s("735250"),
   F = s("480294"),
   B = s("430824"),
   k = s("663389"),
-  w = s("594174"),
-  H = s("285952"),
+  H = s("594174"),
+  w = s("285952"),
   Y = s("153124"),
   V = s("626135"),
   W = s("63063"),
@@ -711,7 +711,7 @@ class em extends i.PureComponent {
           date: S()(a.created_at).add(ea.REQUEST_DATA_LIMIT_DAYS, "days").format("MMMM Do YYYY")
         })
       })
-    }), r = null), null != r && (r = (0, l.jsx)(H.default, {
+    }), r = null), null != r && (r = (0, l.jsx)(w.default, {
       children: r
     })), (0, l.jsxs)(i.Fragment, {
       children: [(0, l.jsx)(_.FormDivider, {
@@ -791,7 +791,10 @@ class em extends i.PureComponent {
       }), (0, l.jsx)(G.Subsetting, {
         setting: es.WebSetting.PRIVACY_DATA_PRIVACY,
         children: e ? this.renderDataPrivacy() : null
-      }), this.renderPrivacyAndTermsNote(), (0, l.jsx)(G.Subsetting, {
+      }), (0, l.jsx)(G.Subsetting, {
+        setting: es.WebSetting.PRIVACY_TERMS_POLICY,
+        children: this.renderPrivacyAndTermsNote()
+      }), (0, l.jsx)(G.Subsetting, {
         setting: es.WebSetting.PRIVACY_STAFF_ONLY,
         children: this.renderStaffOnlySettings()
       })]
@@ -932,8 +935,8 @@ class em extends i.PureComponent {
 }
 
 function eg() {
-  let e = (0, E.useStateFromStores)([w.default], () => {
-      let e = w.default.getCurrentUser();
+  let e = (0, E.useStateFromStores)([H.default], () => {
+      let e = H.default.getCurrentUser();
       return u()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
     t = (0, E.useStateFromStoresObject)([F.default], () => ({
