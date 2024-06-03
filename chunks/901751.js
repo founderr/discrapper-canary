@@ -246,11 +246,11 @@ class F extends s.default {
               ...l,
               streamProgressSeconds: s
             };
-            i && (t.progress[i] = {
+            t.progress[i] = {
               ...t.progress[i],
               eventName: i,
               value: s
-            }), (0, I.optimisticallyUpdateQuestProgress)(t), this.lastOptimisticallyUpdatedProgressMap.set(e, Date.now())
+            }, (0, I.optimisticallyUpdateQuestProgress)(t), this.lastOptimisticallyUpdatedProgressMap.set(e, Date.now())
           }
         }
       }, D))
