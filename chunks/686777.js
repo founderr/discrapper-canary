@@ -1,11 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsEligibleForConcurrentQuests: function() {
-    return l
+    return a
   }
-}), n("47120");
-var s = n("818083");
-let a = (0, s.createExperiment)({
+});
+let s = (0, n("818083").createExperiment)({
     id: "2024-04_concurrent_quests",
     kind: "user",
     label: "Concurrent Quests",
@@ -18,20 +17,20 @@ let a = (0, s.createExperiment)({
       config: {
         enabled: !1
       }
-    }, ...[1, 99, 100].map(e => ({
-      id: e,
+    }, {
+      id: 1,
       label: "Concurrent Quests Enabled",
       config: {
         enabled: !0
       }
-    }))]
+    }]
   }),
-  l = e => {
+  a = e => {
     let {
       location: t,
       autoTrackExposure: n = !1
     } = e;
-    return a.useExperiment({
+    return s.useExperiment({
       location: t
     }, {
       autoTrackExposure: n
