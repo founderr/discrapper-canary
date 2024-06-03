@@ -60,8 +60,6 @@ function h() {
   }, {
     divider: !0,
     settings: [I.WebSetting.SOCIAL_LINKS, I.WebSetting.CLIENT_DEBUG_INFO]
-  }, {
-    settings: [I.WebSetting.SEARCH_NO_RESULTS]
   }]
 }
 
@@ -187,12 +185,12 @@ function R(e) {
       let e = h();
       return [{
         header: N.default.Messages.USER_SETTINGS,
-        settings: e.map(e => {
+        settings: [...e.map(e => {
           let {
             settings: t
           } = e;
           return t
-        }).flat(1)
+        }).flat(1), I.WebSetting.SEARCH_NO_RESULTS]
       }]
     })(), []);
   return a.useMemo(() => p(s, t, new Set(e)), [s, t, e])
