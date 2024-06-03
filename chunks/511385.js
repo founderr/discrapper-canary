@@ -9,8 +9,8 @@ var t = s("735250"),
   c = s("271383"),
   o = s("430824"),
   u = s("594174"),
-  x = s("153124"),
-  S = s("931240"),
+  S = s("153124"),
+  x = s("931240"),
   m = s("970606"),
   g = s("979264"),
   C = s("284019"),
@@ -26,11 +26,11 @@ a.default = e => {
     brandPrimaryColor: p,
     transitionState: E,
     onClose: A
-  } = e, L = (0, x.useUID)(), [M, U] = l.useState(!0), b = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(_)), k = (0, n.useStateFromStores)([u.default], () => u.default.getCurrentUser()), w = (0, n.useStateFromStores)([c.default], () => null != k ? c.default.getMember(_, k.id) : null);
+  } = e, L = (0, S.useUID)(), [M, U] = l.useState(!0), b = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(_)), k = (0, n.useStateFromStores)([u.default], () => u.default.getCurrentUser()), w = (0, n.useStateFromStores)([c.default], () => null != k ? c.default.getMember(_, k.id) : null);
   if (l.useEffect(() => {
       (0, m.trackConvertSuccessModalViewed)(_)
     }, [_]), null == b || null == k || null == w) return null;
-  let I = null != p ? {
+  let z = null != p ? {
     background: "radial-gradient(circle at top, ".concat(d()(p).alpha(.3).hex(), " 0%, transparent 50%)")
   } : void 0;
   return (0, t.jsx)(r.ModalRoot, {
@@ -40,7 +40,7 @@ a.default = e => {
     size: r.ModalSize.SMALL,
     children: (0, t.jsxs)("div", {
       className: T.content,
-      style: I,
+      style: z,
       children: [(0, t.jsx)(g.BaseClanTagChiplet, {
         guildId: _,
         clanTag: f,
@@ -113,9 +113,10 @@ a.default = e => {
           })]
         })]
       }), (0, t.jsx)(C.default, {
+        size: r.Button.Sizes.LARGE,
         themeColor: p,
         onClick: () => {
-          M && (0, S.adoptClanIdentity)(_, M, v.AnalyticsLocations.CLAN_SETUP_MODAL), (0, m.trackConvertSuccessModalConfirm)(_, M), A()
+          M && (0, x.adoptClanIdentity)(_, M, v.AnalyticsLocations.CLAN_SETUP_MODAL), (0, m.trackConvertSuccessModalConfirm)(_, M), A()
         },
         children: (0, t.jsx)(r.Text, {
           color: "none",
