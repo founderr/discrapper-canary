@@ -555,7 +555,7 @@ function e_(e) {
 function eT(e) {
   let {
     IconComponent: t,
-    label: n,
+    children: n,
     ...l
   } = e;
   return (0, a.jsxs)(_.Button, {

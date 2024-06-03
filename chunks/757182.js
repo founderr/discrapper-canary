@@ -14,19 +14,18 @@ var r = n("655922"),
 function l(e) {
   let {
     activity: t,
-    color: n,
-    look: l,
-    onAction: u
+    onAction: n,
+    ButtonComponent: l = a.default,
+    ...u
   } = e;
-  return (0, s.default)(t) ? (0, i.jsx)(a.default, {
+  return (0, s.default)(t) ? (0, i.jsx)(l, {
     onClick: () => {
-      null == u || u();
+      null == n || n();
       let e = (0, r.default)(t);
       return window.open(null != e ? e : void 0)
     },
-    color: n,
-    look: l,
     fullWidth: !0,
+    ...u,
     children: o.default.Messages.WATCH
   }, "play-activity") : null
 }

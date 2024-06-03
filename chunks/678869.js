@@ -204,7 +204,7 @@ function P(e) {
         children: (0, a.jsx)(I.PrimaryActionButton, {
           onClick: R.handleClick,
           IconComponent: R.icon,
-          label: R.label
+          children: R.label
         })
       }) : (0, a.jsx)(I.PopoutReactor, {
         closePopout: U,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return H
   }
 }), n("47120");
 var i = n("735250"),
@@ -37,57 +37,53 @@ var i = n("735250"),
   U = n("527805"),
   b = n("620662"),
   G = n("275920"),
-  w = n("513202"),
-  k = n("915863"),
-  B = n("701488"),
-  V = n("981631"),
-  x = n("689938");
+  w = n("952561"),
+  k = n("513202"),
+  B = n("915863"),
+  V = n("701488"),
+  x = n("981631"),
+  F = n("689938");
 
-function F(e) {
+function H(e) {
   var t, n;
   let {
-    activity: F,
-    embeddedActivity: H,
-    currentEmbeddedApplication: Y,
-    isCurrentUser: j,
-    color: W,
-    look: K,
-    user: z,
-    onAction: Z,
-    isEmbedded: X = !1
+    activity: H,
+    embeddedActivity: Y,
+    user: j,
+    onAction: W,
+    isEmbedded: K = !1,
+    ButtonComponent: z = B.default,
+    ...Z
   } = e, {
-    analyticsLocations: Q
-  } = (0, _.default)(), [q, J] = r.useState(!1), $ = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), ee = null !== (t = null == H ? void 0 : H.applicationId) && void 0 !== t ? t : null == F ? void 0 : F.application_id, et = (0, P.default)({
-    channelId: null == H ? void 0 : H.channelId,
-    userId: z.id,
-    activity: F
-  }), en = (0, s.useStateFromStores)([h.default, E.default, R.default, T.default], () => {
-    let e;
-    return (null == H ? void 0 : H.applicationId) != null ? e = H.applicationId : (null == F ? void 0 : F.application_id) != null && (e = F.application_id), X || null != e && (0, L.isLaunchable)({
-      LibraryApplicationStore: h.default,
-      LaunchableGameStore: E.default,
-      DispatchApplicationStore: R.default,
-      ConnectedAppsStore: T.default,
-      applicationId: e
-    })
-  }), ei = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => {
+    analyticsLocations: X
+  } = (0, _.default)(), [Q, q] = r.useState(!1), J = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), $ = j.id === (null == J ? void 0 : J.id), ee = null !== (t = null == Y ? void 0 : Y.applicationId) && void 0 !== t ? t : null == H ? void 0 : H.application_id, et = (0, P.default)({
+    channelId: null == Y ? void 0 : Y.channelId,
+    userId: j.id,
+    activity: H
+  }), en = (0, s.useStateFromStores)([h.default, E.default, R.default, T.default], () => K || null != ee && (0, L.isLaunchable)({
+    LibraryApplicationStore: h.default,
+    LaunchableGameStore: E.default,
+    DispatchApplicationStore: R.default,
+    ConnectedAppsStore: T.default,
+    applicationId: ee
+  })), ei = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => {
     let {
       applicationId: t,
       channelId: n
     } = e;
-    return (t === (null == F ? void 0 : F.application_id) || t === (null == H ? void 0 : H.applicationId)) && n === et
-  })), er = (0, s.useStateFromStores)([C.default], () => null != F && null != F.application_id && C.default.getState(F.application_id, V.ActivityActionTypes.JOIN) === V.ActivityActionStates.LOADING), [es] = (0, c.default)((null == H ? void 0 : H.applicationId) != null ? [null == H ? void 0 : H.applicationId] : (null == F ? void 0 : F.application_id) != null ? [null == F ? void 0 : F.application_id] : []), ea = (0, U.useEmbeddedActivityJoinability)({
-    userId: z.id,
-    activity: F,
+    return (t === (null == H ? void 0 : H.application_id) || t === (null == Y ? void 0 : Y.applicationId)) && n === et
+  })), er = (0, s.useStateFromStores)([C.default], () => null != H && null != H.application_id && C.default.getState(H.application_id, x.ActivityActionTypes.JOIN) === x.ActivityActionStates.LOADING), [es] = (0, c.default)((null == Y ? void 0 : Y.applicationId) != null ? [null == Y ? void 0 : Y.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), ea = (0, U.useEmbeddedActivityJoinability)({
+    userId: j.id,
+    activity: H,
     channelId: et,
     application: es
-  }), eo = (0, s.useStateFromStores)([I.default, S.default, f.default, m.default, N.default, O.default, A.default], () => null != H ? ea === U.EmbeddedActivityJoinability.CAN_JOIN : null != F ? (0, y.default)({
-    user: z,
-    activity: F,
+  }), eo = (0, s.useStateFromStores)([I.default, S.default, f.default, m.default, N.default, O.default, A.default], () => null != Y ? ea === U.EmbeddedActivityJoinability.CAN_JOIN : null != H ? (0, y.default)({
+    user: j,
+    activity: H,
     application: es,
     channelId: et,
-    currentUser: $,
-    isEmbedded: X,
+    currentUser: J,
+    isEmbedded: K,
     ChannelStore: I.default,
     GuildStore: S.default,
     GuildMemberCountStore: f.default,
@@ -95,15 +91,15 @@ function F(e) {
     SelectedChannelStore: N.default,
     VoiceStateStore: O.default,
     PermissionStore: A.default
-  }) : void 0), el = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == H ? void 0 : H.applicationId) && e.channelId === (null == H ? void 0 : H.channelId))), eu = (0, d.useAnalyticsContext)(), ed = !g.isPlatformEmbedded, e_ = (0, b.default)(F, V.ActivityFlags.JOIN) || X;
-  if (null == H || !e_ || null == H.applicationId) return null;
-  let ec = !j || X && !el,
-    eE = ec && (ed || en) && !q && !ei && (!X || eo),
+  }) : void 0), el = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == Y ? void 0 : Y.applicationId) && e.channelId === (null == Y ? void 0 : Y.channelId))), eu = (0, w.default)(), ed = (0, d.useAnalyticsContext)(), e_ = !g.isPlatformEmbedded;
+  if (!((0, b.default)(H, x.ActivityFlags.JOIN) || K) || null == ee) return null;
+  let ec = !$ || K && !el,
+    eE = ec && (e_ || en) && !Q && !ei && (!K || eo),
     eI = null;
-  ec ? !ed && !en && null != F && (eI = x.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
-    name: F.name
-  })) : eI = x.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF;
-  let eT = null !== (n = H.launchId) && void 0 !== n ? n : null == F ? void 0 : F.session_id,
+  ec ? !e_ && !en && null != H && (eI = F.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+    name: H.name
+  })) : eI = F.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF;
+  let eT = null !== (n = null == Y ? void 0 : Y.launchId) && void 0 !== n ? n : null == H ? void 0 : H.session_id,
     ef = async (e, t) => {
       var n;
       null != eT && null != ee && (await l.default.join({
@@ -112,61 +108,59 @@ function F(e) {
         applicationId: ee,
         channelId: N.default.getVoiceChannelId(),
         messageId: null,
-        intent: B.ActivityIntent.PLAY,
-        embedded: (0, b.default)(t, V.ActivityFlags.EMBEDDED)
+        intent: V.ActivityIntent.PLAY,
+        embedded: (0, b.default)(t, x.ActivityFlags.EMBEDDED)
       }), (0, G.default)({
-        type: V.AnalyticsGameOpenTypes.JOIN,
+        type: x.AnalyticsGameOpenTypes.JOIN,
         userId: e.id,
         applicationId: ee,
         partyId: null != t ? null == t ? void 0 : null === (n = t.party) || void 0 === n ? void 0 : n.id : "",
-        locationObject: eu.location,
-        analyticsLocations: Q
+        locationObject: ed.location,
+        analyticsLocations: X
       }))
     }, eS = async () => {
       let e = !1;
-      if (X) {
-        var t;
+      if (K) {
         if (!eo || null == et || null == ee) return;
         e = await (0, M.default)({
-          applicationId: null !== (t = null == F ? void 0 : F.application_id) && void 0 !== t ? t : H.applicationId,
-          currentEmbeddedApplication: Y,
+          applicationId: ee,
+          currentEmbeddedApplication: eu,
           activityChannelId: et,
-          locationObject: eu.location,
-          embeddedActivitiesManager: w.default,
-          analyticsLocations: Q
+          locationObject: ed.location,
+          embeddedActivitiesManager: k.default,
+          analyticsLocations: X
         })
       }
       if (!e) {
         let e;
-        eo && (null == Z || Z(), ef(z, F)), J(!0), null != et && null != ee ? e = await v.sendEmbeddedActivityInviteUser({
+        eo && (null == W || W(), ef(j, H)), q(!0), null != et && null != ee ? e = await v.sendEmbeddedActivityInviteUser({
           channelId: et,
           applicationId: ee,
-          userId: z.id,
-          location: V.AnalyticsLocations.PROFILE_POPOUT
-        }) : null != F && (e = await o.default.sendActivityInviteUser({
-          type: V.ActivityActionTypes.JOIN_REQUEST,
-          userId: z.id,
-          activity: F,
-          location: V.AnalyticsLocations.PROFILE_POPOUT
+          userId: j.id,
+          location: x.AnalyticsLocations.PROFILE_POPOUT
+        }) : null != H && (e = await o.default.sendActivityInviteUser({
+          type: x.ActivityActionTypes.JOIN_REQUEST,
+          userId: j.id,
+          activity: H,
+          location: x.AnalyticsLocations.PROFILE_POPOUT
         })), null != e && u.default.selectPrivateChannel(e.id)
       }
-    }, eh = eo ? x.default.Messages.JOIN : x.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN;
-  return X && (eh = x.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY), el && (eh = x.default.Messages.EMBEDDED_ACTIVITIES_JOINED), (0, i.jsx)(a.Tooltip, {
+    }, eh = eo ? F.default.Messages.JOIN : F.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN;
+  return K && (eh = F.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY), el && (eh = F.default.Messages.EMBEDDED_ACTIVITIES_JOINED), (0, i.jsx)(a.Tooltip, {
     text: eI,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: n
       } = e;
-      return (0, i.jsx)(k.default, {
+      return (0, i.jsx)(z, {
         onClick: eS,
         onMouseEnter: t,
         onMouseLeave: n,
-        color: W,
-        look: K,
         disabled: !eE,
         submitting: er,
         fullWidth: !0,
+        ...Z,
         children: eh
       })
     }
