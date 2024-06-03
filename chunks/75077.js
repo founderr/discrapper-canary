@@ -102,71 +102,70 @@ let P = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       perksCards: s,
       isFullScreen: a,
       showTenureCard: r,
-      shopMarketingVariation: i,
-      isPremiumSubscriber: l
-    } = e, o = a ? 3 : 2, u = e => {
+      shopMarketingVariation: i
+    } = e, l = a ? 3 : 2, o = e => {
       let {
         card: s
       } = e;
-      t.length < o && t.push(s)
-    }, E = () => {
-      i !== n.CollectiblesShopMarketingVariants.DEFAULT ? u({
+      t.length < l && t.push(s)
+    }, u = () => {
+      i !== n.CollectiblesShopMarketingVariants.DEFAULT ? o({
         card: s.specialShopPerks
-      }) : u({
+      }) : o({
         card: s.specialMemberPricing
       })
     }, {
-      shouldShowCard: f
+      shouldShowCard: E
     } = _.June2024NewAppStylesWhatsNewCardExperiment.getCurrentConfig({
       location: O
     }, {
       autoTrackExposure: !1
     }), {
-      shouldShowCard: S
+      shouldShowCard: f
     } = R.ServerProfilesExperiment.getCurrentConfig({
       location: O
     }, {
       autoTrackExposure: !1
     }), {
-      shouldShowCard: A
+      shouldShowCard: S
     } = I.ReferralProgramWhatsNewCardExperiment.getCurrentConfig({
       location: O
     }, {
       autoTrackExposure: !1
     }), {
-      enabled: m
+      enabled: A
     } = T.ReferralProgramRecipient.getCurrentConfig({
       location: O
     }, {
       autoTrackExposure: !1
     }), {
-      enabled: N
+      enabled: m
     } = c.DiscountModelDataCollection.getCurrentConfig({
       location: O
     }, {
       autoTrackExposure: !1
     }), {
-      enabled: p
+      enabled: N
     } = d.CannibalizationModelDataCollection.getCurrentConfig({
       location: O
     }, {
       autoTrackExposure: !1
-    });
-    return null != s.freeBoost && !0 === r && u({
+    }), p = v();
+    return null != s.freeBoost && !0 === r && o({
       card: s.freeBoost
-    }), a && l && f && S ? (0 === t.length && E(), u({
+    }), a && p && E && f ? (0 === t.length && u(), o({
       card: s.serverProfiles
-    }), u({
+    }), o({
       card: s.newAppStylesUpdateJune2024
-    })) : a && !l && f && S && (A && m && !N && !p ? u({
+    })) : a && !p && E && f && (S && A && !m && !N ? o({
       card: s.referralProgram
-    }) : E(), u({
+    }) : u(), o({
       card: s.serverProfiles
-    }), u({
+    }), o({
       card: s.newAppStylesUpdateJune2024
-    })), u({
+    })), o({
       card: s.earlyAccess
-    }), E(), u({
+    }), u(), o({
       card: s.unlimitedSuperReactions
     }), t
   },
@@ -197,7 +196,6 @@ let P = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
         u = M({
           cards: u,
           perksCards: t,
-          isPremiumSubscriber: o,
           isFullScreen: i,
           showTenureCard: n,
           shopMarketingVariation: r
@@ -251,4 +249,8 @@ let P = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
   x = () => {
     let e = (0, r.useStateFromStores)([l.default], () => l.default.getCurrentUser());
     return (0, u.isPremium)(e)
+  },
+  v = () => {
+    let e = l.default.getCurrentUser();
+    return (0, u.isPremiumExactly)(e, S.PremiumTypes.TIER_2)
   }
