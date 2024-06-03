@@ -5182,6 +5182,7 @@ e.exports = Object.freeze({
   USER_SUMMARY_TWO: "!!{first}!!, !!{second}!!",
   USER_SUMMARY_THREE: "!!{first}!!, !!{second}!!, !!{third}!!",
   USER_SUMMARY_THREE_AND_OTHERS: "!!{first}!!, !!{second}!!, !!{third}!!, and {count, plural, one {1 other} other {{count} others}}",
+  USER_SUMMARY_AND_OTHERS: "and {count, plural, one {1 other} other {{count} others}}",
   ADD_FRIEND_SUCCESS: "Success! Your friend request to **!!{discordTag}!!** was sent.",
   ADD_FRIEND_ERROR_NUMBERS_ONLY: "We're more than numbers... we're people! Enter a username and tag. It should look something like: TotallyARealUsername#0000",
   ADD_FRIEND_ERROR_USERNAME_ONLY: "We need !!{username}!!'s four digit tag so we know which one they are.",
