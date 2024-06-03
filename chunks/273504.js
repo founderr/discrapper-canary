@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   AutomodActionType: function() {
-    return a.AutomodActionType
+    return u.AutomodActionType
   },
   AutomodEventType: function() {
-    return u.AutomodEventType
+    return a.AutomodEventType
   },
   AutomodTriggerType: function() {
     return r.AutomodTriggerType
@@ -52,11 +52,11 @@ n.r(t), n.d(t, {
     return l
   },
   QUARANTINE_USER_ALERT_KEY: function() {
-    return R
+    return m
   }
 });
-var o, _, a = n("401653"),
-  u = n("95930"),
+var o, _, u = n("401653"),
+  a = n("95930"),
   r = n("41381");
 (o = _ || (_ = {}))[o.PROFANITY = 1] = "PROFANITY", o[o.SEXUAL_CONTENT = 2] = "SEXUAL_CONTENT", o[o.SLURS = 3] = "SLURS", r.AutomodTriggerType.USER_PROFILE, r.AutomodTriggerType.SERVER_POLICY, r.AutomodTriggerType.MENTION_SPAM, r.AutomodTriggerType.ML_SPAM, r.AutomodTriggerType.DEFAULT_KEYWORD_LIST, r.AutomodTriggerType.KEYWORD;
 let E = 1e3,
@@ -72,4 +72,4 @@ let E = 1e3,
   c = 50,
   M = 20,
   D = 150,
-  R = "automod-profile-quarantine-alert"
+  m = "automod-profile-quarantine-alert"

@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return M
   },
   deleteAutomodRule: function() {
-    return R
+    return m
   },
   executeAlertAction: function() {
     return f
   },
   fetchAutomodRules: function() {
-    return m
+    return R
   },
   removeMentionRaidRestrictionWithFeedback: function() {
     return L
@@ -27,8 +27,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var o = n("544891"),
   _ = n("570140"),
-  a = n("367907"),
-  u = n("430824"),
+  u = n("367907"),
+  a = n("430824"),
   r = n("496675"),
   E = n("823379"),
   i = n("709054"),
@@ -110,12 +110,12 @@ async function D(e) {
     body: t
   })).body)
 }
-async function R(e, t) {
+async function m(e, t) {
   return await o.HTTP.del({
     url: T.Endpoints.GUILD_AUTOMOD_RULE(t, e)
   }), !0
 }
-async function m(e) {
+async function R(e) {
   let t = await o.HTTP.get({
     url: T.Endpoints.GUILD_AUTOMOD_RULES(e)
   });
@@ -133,9 +133,9 @@ async function f(e, t, n) {
 }
 
 function L(e, t, n) {
-  let _ = u.default.getGuild(e);
+  let _ = a.default.getGuild(e);
   if (null != _ && !!r.default.can(T.Permissions.MANAGE_GUILD, _))(0, d.openConfirmRemoveMentionRaid)(() => {
-    (0, a.trackWithMetadata)(T.AnalyticEvents.GUILD_AUTOMOD_FEEDBACK, {
+    (0, u.trackWithMetadata)(T.AnalyticEvents.GUILD_AUTOMOD_FEEDBACK, {
       feedback_type: A.Feedback.MENTION_RAID_REMOVE_RESTRICTION,
       decision_id: t
     }), o.HTTP.post({
