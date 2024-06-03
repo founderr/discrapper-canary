@@ -67,8 +67,8 @@ t.default = new class e {
         body: {
           metrics: e,
           client_info: {
-            built_at: "1717448890172",
-            build_number: "298403"
+            built_at: "1717452053117",
+            build_number: "298453"
           }
         },
         retries: 1
