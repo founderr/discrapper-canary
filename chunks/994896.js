@@ -14,6 +14,14 @@ let a = (0, l("818083").createExperiment)({
       newShopLogoEnabled: !1
     },
     treatments: [{
+      id: 0,
+      label: "Control",
+      config: {
+        condensedBannersEnabled: !1,
+        condensedBannersAndDynamicHeadersEnabled: !1,
+        newShopLogoEnabled: !1
+      }
+    }, {
       id: 1,
       label: "Enables condensed banners in the Shop",
       config: {
