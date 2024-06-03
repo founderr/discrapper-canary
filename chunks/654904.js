@@ -9,11 +9,14 @@ n.r(t), n.d(t, {
   getPreviewNickname: function() {
     return f
   },
+  getPreviewProfileEffectId: function() {
+    return h
+  },
   handleOpenSelectImageModal: function() {
     return E
   },
   isColorDark: function() {
-    return h
+    return A
   },
   showFileSizeErrorModal: function() {
     return I
@@ -82,5 +85,14 @@ function S(e, t) {
 }
 
 function h(e) {
+  var t, n;
+  let {
+    pendingProfileEffectId: i,
+    displayProfile: r
+  } = e, s = null == r ? void 0 : null === (t = r._userProfile) || void 0 === t ? void 0 : t.profileEffectId, a = null == r ? void 0 : null === (n = r._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId, o = null === i;
+  return o && null != a ? s : o ? null : null != i ? i : null == r ? void 0 : r.profileEffectId
+}
+
+function A(e) {
   return (null != e ? (0, r.getDarkness)(e) : 1) > .25
 }
