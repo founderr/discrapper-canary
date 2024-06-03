@@ -540,8 +540,19 @@ let ej = () => {
         section: eL.UserSettingsSections.ACTIVITY_PRIVACY,
         searchableTitle: eP.default.Messages.ACTIVITY_PRIVACY,
         label: eP.default.Messages.ACTIVITY_PRIVACY,
+        ariaLabel: eP.default.Messages.ACTIVITY_PRIVACY,
         element: $.default,
         predicate: () => !eB
+      },
+      [ev.WebSetting.ACTIVITY_PRIVACY_STATUS]: {
+        section: eL.UserSettingsSections.ACTIVITY_PRIVACY,
+        searchableTitle: eP.default.Messages.ACTIVITY_STATUS,
+        parent: ev.WebSetting.ACTIVITY_PRIVACY
+      },
+      [ev.WebSetting.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
+        section: eL.UserSettingsSections.ACTIVITY_PRIVACY,
+        searchableTitle: eP.default.Messages.ACTIVITY_PARTY_PRIVACY,
+        parent: ev.WebSetting.ACTIVITY_PRIVACY
       },
       [ev.WebSetting.REGISTERED_GAMES]: {
         section: eL.UserSettingsSections.REGISTERED_GAMES,
@@ -629,6 +640,7 @@ let ej = () => {
       },
       [ev.WebSetting.DESIGN_SYSTEMS]: {
         section: eL.UserSettingsSections.DESIGN_SYSTEMS,
+        searchableTitle: "Design Systems",
         label: "Design Systems",
         element: el.default,
         predicate: () => P.default.isDeveloper
