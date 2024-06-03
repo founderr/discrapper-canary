@@ -79,7 +79,7 @@ t.default = r.forwardRef(function(e, t) {
       tabIndex: M,
       ...y,
       children: [O ? (0, i.jsx)(_.TooltipContainer, {
-        text: h.default.Messages.REMOVE_SYNCED_ROLE,
+        text: h.default.Messages.USER_PROFILE_REMOVE_ROLE,
         children: (0, i.jsxs)(_.Clickable, {
           className: a()(A.roleRemoveButtonCanRemove, A.roleRemoveButton),
           onClick: g,
