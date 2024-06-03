@@ -40,9 +40,12 @@ function r(e) {
 
 function o(e) {
   let {
-    userStatus: t
-  } = e.quest;
-  return (null == t ? void 0 : t.enrolledAt) != null && null == t.completedAt || r(e.location)
+    quest: t,
+    location: n
+  } = e, {
+    userStatus: s
+  } = t;
+  return (null == s ? void 0 : s.enrolledAt) != null && null == s.completedAt || r(n)
 }(s = a || (a = {}))[s.FOR_YOU = 0] = "FOR_YOU", s[s.OTHER = 1] = "OTHER";
 let u = 100,
   d = 20,
