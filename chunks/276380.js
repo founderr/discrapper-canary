@@ -5,6 +5,7 @@ e.exports = {
   avatarError: "avatarError__5cda5",
   avatarUploaderInner: "avatarUploaderInner__34f08",
   background: "background__4e802",
+  badge: "badge_bf025b",
   badgeList: "badgeList__6b2c7",
   constrainedRow: "constrainedRow__72f7a",
   details: "details_c180ea",

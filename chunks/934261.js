@@ -10,7 +10,7 @@ var a = l("442837"),
   o = l("18438"),
   c = l("778825"),
   d = l("957730"),
-  f = l("962746"),
+  f = l("589266"),
   m = l("350327"),
   h = l("318661"),
   E = l("706454"),
@@ -109,6 +109,7 @@ t.default = e => {
     className: w ? S.previewContainerWithTheme : S.previewContainerWithoutTheme,
     children: [(0, s.jsx)(f.default, {
       ...D,
+      location: "ProfileEffectPreview",
       disabledInputs: !0,
       forProfileEffectModal: !0,
       hideRecentGames: !0

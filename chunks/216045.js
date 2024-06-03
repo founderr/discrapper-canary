@@ -18,7 +18,7 @@ var a = s("735250"),
   T = s("906732"),
   _ = s("475977"),
   f = s("957730"),
-  m = s("962746"),
+  m = s("589266"),
   g = s("296810"),
   I = s("935147"),
   N = s("350327"),
@@ -90,6 +90,7 @@ function M() {
       children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(g.default, {
         profilePreview: (0, a.jsx)(m.default, {
           ...F,
+          location: "UserSettingsProfileCustomization",
           pendingThemeColors: b,
           pendingAccentColor: D
         }),

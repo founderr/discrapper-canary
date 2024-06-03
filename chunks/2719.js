@@ -440,7 +440,8 @@ function X() {
           })]
         }), (0, a.jsx)(p.default, {
           badges: n,
-          className: w.badgeList
+          className: w.badgeList,
+          badgeClassName: w.badge
         })]
       }), (0, a.jsx)(c.Button, {
         onClick: Z,

@@ -29,7 +29,11 @@ function c(e) {
     onOpenProfile: h,
     nicknameVariant: A = "heading-lg/bold",
     pronounsVariant: m = "text-sm/medium"
-  } = e, N = e => null == h ? e : (0, i.jsx)(a.Clickable, {
+  } = e, N = {
+    [_.biteSize]: n === u.UserProfileTypes.BITE_SIZE,
+    [_.fullSize]: n === u.UserProfileTypes.FULL_SIZE,
+    [_.panel]: n === u.UserProfileTypes.PANEL
+  }, p = e => null == h ? e : (0, i.jsx)(a.Clickable, {
     onClick: h,
     className: _.clickableUsername,
     children: e
@@ -38,17 +42,17 @@ function c(e) {
     className: s()(_.container, S),
     children: [(0, i.jsxs)("div", {
       className: _.usernameRow,
-      children: [N((0, i.jsx)(a.Heading, {
-        className: s()(_.nickname, n === u.UserProfileTypes.FULL_SIZE && _.fullSizeNickname),
+      children: [p((0, i.jsx)(a.Heading, {
+        className: s()(_.nickname, N),
         variant: A,
         children: l.default.getName(r, c, t)
-      })), (0, i.jsx)("div", {
+      })), null != T && (0, i.jsx)("div", {
         className: _.nicknameIcons,
         children: T
       })]
     }), (0, i.jsxs)("div", {
-      className: _.tags,
-      children: [N((0, i.jsx)(o.default, {
+      className: s()(_.tags, N),
+      children: [p((0, i.jsx)(o.default, {
         user: t,
         usernameIcon: E,
         forceUsername: !0,

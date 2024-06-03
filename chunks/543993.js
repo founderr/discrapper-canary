@@ -30,11 +30,11 @@ var a = n("735250"),
   R = n("447452"),
   O = n("785717"),
   L = n("318661"),
-  M = n("681837"),
-  x = n("724593"),
-  P = n("502762"),
-  y = n("530"),
-  D = n("894374"),
+  M = n("741308"),
+  x = n("681837"),
+  P = n("724593"),
+  y = n("502762"),
+  D = n("530"),
   b = n("544989"),
   U = n("162159"),
   j = n("171368"),
@@ -305,7 +305,7 @@ function ei(e) {
       children: (0, a.jsx)("div", {
         className: en.popoutContainer,
         ref: ec,
-        children: (0, a.jsxs)(P.default, {
+        children: (0, a.jsxs)(y.default, {
           className: en.themeContainer,
           user: t,
           displayProfile: W,
@@ -321,7 +321,7 @@ function ei(e) {
             onOpenProfile: H ? void 0 : eE
           }), (0, a.jsxs)("div", {
             className: en.body,
-            children: [(0, a.jsx)(y.default, {
+            children: [(0, a.jsx)(D.default, {
               user: t,
               className: en.username,
               profileType: ee.UserProfileTypes.BITE_SIZE,
@@ -329,14 +329,15 @@ function ei(e) {
                 autoFocusNote: !1
               }),
               pronouns: null == W ? void 0 : W.pronouns,
-              tags: (0, a.jsx)(D.UserProfileBadgesTag, {
+              tags: (0, a.jsx)(M.default, {
                 displayProfile: W,
+                profileType: ee.UserProfileTypes.BITE_SIZE,
                 onClose: o
               }),
               nicknameIcons: (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(M.default, {
+                children: [(0, a.jsx)(x.default, {
                   userId: t.id
-                }), Q && !ep && (0, a.jsx)(x.default, {
+                }), Q && !ep && (0, a.jsx)(P.default, {
                   user: t,
                   isHovering: ef,
                   onOpenProfile: () => eE({

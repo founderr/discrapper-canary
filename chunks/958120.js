@@ -12,10 +12,10 @@ var i = n("735250"),
   l = n("246946"),
   u = n("5192"),
   d = n("447452"),
-  _ = n("681837"),
-  c = n("724593"),
-  E = n("530"),
-  I = n("894374"),
+  _ = n("741308"),
+  c = n("681837"),
+  E = n("724593"),
+  I = n("530"),
   T = n("790711"),
   f = n("580512"),
   S = n("67152"),
@@ -45,7 +45,7 @@ function O(e) {
   }), [t.id]);
   return (0, i.jsxs)("div", {
     className: p.body,
-    children: [(0, i.jsx)(E.default, {
+    children: [(0, i.jsx)(I.default, {
       user: t,
       profileType: m.UserProfileTypes.BITE_SIZE,
       onOpenProfile: () => g({
@@ -57,14 +57,15 @@ function O(e) {
         nickname: M
       }),
       pronouns: null == O ? void 0 : O.pronouns,
-      tags: (0, i.jsx)(I.UserProfileBadgesTag, {
+      tags: (0, i.jsx)(_.default, {
         displayProfile: O,
+        profileType: m.UserProfileTypes.BITE_SIZE,
         onClose: v
       }),
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(_.default, {
+        children: [(0, i.jsx)(c.default, {
           userId: t.id
-        }), D && !y && (0, i.jsx)(c.default, {
+        }), D && !y && (0, i.jsx)(E.default, {
           user: t,
           isHovering: R,
           onOpenProfile: () => g({
