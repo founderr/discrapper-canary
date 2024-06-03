@@ -49,9 +49,11 @@ function C(e) {
     g = new Date(S.default.extractTimestamp(r.id)),
     L = (0, A.getSecurityMessage)(s),
     v = (0, f.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, m.ApplicationFlags.EMBEDDED);
-  if (null != o && !v && !_) {
+  if (null != o && !v && !_) try {
     let e = new URL(o);
     n = null != e.host && e.host.length > 0 ? e.origin : e.href
+  } catch (e) {
+    n = null
   }
   return (0, i.jsxs)("div", {
     className: p.applicationDetails,
