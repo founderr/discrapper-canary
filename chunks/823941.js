@@ -73,6 +73,10 @@ let N = (0, g.getLogoSize)(96),
     [i.CollectiblesCategorySkuId.PIRATES]: {
       left: () => l("519741"),
       right: () => l("980112")
+    },
+    [i.CollectiblesCategorySkuId.ARCADE]: {
+      left: () => l("6414"),
+      right: () => l("959436")
     }
   },
   y = e => {
