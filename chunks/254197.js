@@ -200,7 +200,6 @@ let b = e => {
           isExpanded: u
         })]
       }) : (0, a.jsxs)("div", {
-        className: D.questUnacceptedContent,
         children: [(0, a.jsxs)("div", {
           className: D.questPromoContent,
           ref: t,

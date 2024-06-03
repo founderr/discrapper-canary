@@ -24,7 +24,6 @@ e.exports = {
   questAcceptedHeader: "questAcceptedHeader_f7d1f7",
   questProgressRewardTile: "questProgressRewardTile_c72c7a",
   questPromoContent: "questPromoContent_f910bc",
-  questUnacceptedContent: "questUnacceptedContent_c91b61",
   rewardTile: "rewardTile__66594",
   shareIcon: "shareIcon__6b675",
   shine: "shine__72ddb",

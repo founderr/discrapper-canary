@@ -141,7 +141,6 @@ let P = s.forwardRef(function(e, t) {
         onClick: $ ? z : void 0
       })]
     }) : (0, a.jsxs)("div", {
-      className: x.questUnacceptedContent,
       children: [(0, a.jsxs)("div", {
         className: x.questPromoContent,
         ref: t,

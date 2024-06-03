@@ -13,7 +13,6 @@ e.exports = {
   questAcceptedContentHeading: "questAcceptedContentHeading__46da5",
   questProgressRewardTile: "questProgressRewardTile__46cc9",
   questPromoContent: "questPromoContent_f8a83c",
-  questUnacceptedContent: "questUnacceptedContent_dba3ea",
   rewardTile: "rewardTile_d4b430",
   submenuIcon: "submenuIcon__89d1a",
   submenuWrapper: "submenuWrapper__71f75",

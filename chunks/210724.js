@@ -164,7 +164,7 @@ function R(e) {
             backgroundImage: x ? V.postEnrollmentBackgroundImage : void 0,
             height: ef.to({
               range: [0, 1],
-              output: [V.collapsedHeight, x ? ee : V.preEnrollmentExpandedHeight]
+              output: [V.collapsedHeight, ee]
             }),
             transform: eE.to({
               range: [0, 1],
