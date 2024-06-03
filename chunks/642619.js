@@ -16,7 +16,7 @@ let l = e => {
   (0, n.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([s.e("99387"), s.e("4934"), s.e("55228")]).then(s.bind(s, "191564"));
+    } = await Promise.all([s.e("99387"), s.e("65866"), s.e("55228")]).then(s.bind(s, "191564"));
     return s => (0, a.jsx)(e, {
       ...s,
       guild: i,

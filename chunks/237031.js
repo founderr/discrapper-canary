@@ -22,7 +22,7 @@ let r = "collectibles shop product details modal",
     (0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([l.e("99387"), l.e("4934"), l.e("36848")]).then(l.bind(l, "702370"));
+      } = await Promise.all([l.e("99387"), l.e("65866"), l.e("36848")]).then(l.bind(l, "702370"));
       return l => (0, a.jsx)(e, {
         ...l,
         product: t,

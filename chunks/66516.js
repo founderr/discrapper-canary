@@ -17,7 +17,7 @@ var a = s("735250"),
   E = s("367907"),
   T = s("906732"),
   _ = s("414666"),
-  f = s("589266"),
+  f = s("962746"),
   m = s("296810"),
   g = s("621853"),
   I = s("246946"),
@@ -123,7 +123,6 @@ function b(e) {
         }),
         profilePreview: (0, a.jsx)(f.default, {
           ...Y,
-          location: "GuildIdentitySettingsPage",
           pendingThemeColors: k
         }),
         children: (0, a.jsx)(x.default, {})

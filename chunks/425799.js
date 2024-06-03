@@ -12,7 +12,7 @@ var a = s("735250"),
   o = s("481060"),
   d = s("53281"),
   u = s("410030"),
-  c = s("589266"),
+  c = s("962746"),
   S = s("680295"),
   E = s("594174"),
   T = s("590259"),
@@ -51,7 +51,6 @@ function g() {
     }), A && (0, a.jsxs)("div", {
       className: _.userProfilePreview,
       children: [(0, a.jsx)(c.default, {
-        location: "ProfileEffectsPreviewToolPage",
         user: e,
         pendingAvatar: void 0,
         pendingProfileEffectId: null,
