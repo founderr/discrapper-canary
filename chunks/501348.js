@@ -50,11 +50,11 @@ function k(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let w = {
+let H = {
     COZY: "cozy",
     COMPACT: "compact"
   },
-  H = (0, x.uid)(),
+  w = (0, x.uid)(),
   Y = (0, x.uid)(),
   V = (0, x.uid)(),
   W = "1337",
@@ -102,7 +102,7 @@ class z extends n.Component {
     return M.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
-        id: H,
+        id: w,
         tag: u.FormTitleTags.H5,
         className: B.marginBottom8,
         children: G.default.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
@@ -114,7 +114,7 @@ class z extends n.Component {
         stickToMarkers: !0,
         onValueChange: this.handleZoomChange,
         onValueRender: this.handleSliderRender,
-        "aria-labelledby": H
+        "aria-labelledby": w
       }), (0, a.jsx)(u.FormText, {
         type: u.FormText.Types.DESCRIPTION,
         children: G.default.Messages.USER_SETTINGS_APPEARANCE_ZOOM_TIP.format({
@@ -247,13 +247,13 @@ class z extends n.Component {
       children: [(0, a.jsx)(u.RadioGroup, {
         options: [{
           name: G.default.Messages.COZY_MODE,
-          value: w.COZY
+          value: H.COZY
         }, {
           name: G.default.Messages.COMPACT_MODE,
-          value: w.COMPACT
+          value: H.COMPACT
         }],
         onChange: this.handleMessageDisplayModeChange,
-        value: this.props.messageDisplayCompact ? w.COMPACT : w.COZY
+        value: this.props.messageDisplayCompact ? H.COMPACT : H.COZY
       }), (0, a.jsx)(u.FormSwitch, {
         value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
         disabled: !this.props.messageDisplayCompact,
@@ -324,7 +324,7 @@ class z extends n.Component {
       let {
         value: t
       } = e;
-      D.MessageDisplayCompact.updateSetting(t === w.COMPACT), (0, T.setMessageGroupSpacing)()
+      D.MessageDisplayCompact.updateSetting(t === H.COMPACT), (0, T.setMessageGroupSpacing)()
     })
   }
 }

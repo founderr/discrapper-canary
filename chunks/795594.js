@@ -38,11 +38,11 @@ var a = s("735250"),
   F = s("689938"),
   B = s("338009"),
   k = s("611273");
-let w = u.default.connectStores([j.default], () => ({
+let H = u.default.connectStores([j.default], () => ({
   theme: j.default.theme
 }))(x.default);
 
-function H(e) {
+function w(e) {
   let {
     application: t
   } = e;
@@ -224,7 +224,7 @@ let Y = e => {
               })]
             })
           })
-        })(), c && (0, a.jsx)(H, {
+        })(), c && (0, a.jsx)(w, {
           application: s
         })]
       })
@@ -267,7 +267,7 @@ t.default = () => {
         "aria-label": F.default.Messages.INTEGRATIONS_SEARCH
       })
     }),
-    T = (e, t) => (0, a.jsxs)(w, {
+    T = (e, t) => (0, a.jsxs)(H, {
       className: B.__invalid_marginTop20,
       children: [(0, a.jsx)(x.EmptyStateImage, {
         darkSrc: s("701972"),

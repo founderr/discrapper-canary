@@ -78,13 +78,13 @@ function y() {
     experimentalAudioSubsystemSupported: S.default.supports(L.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
     qosSupported: S.default.supports(L.Features.QOS),
     attenuationSupported: S.default.supports(L.Features.ATTENUATION)
-  })), w = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), H = n.createRef(), Y = f.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
+  })), H = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), w = n.createRef(), Y = f.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
-    if (w === M.SOUNDBOARD_SUBSECTION) {
+    if (H === M.SOUNDBOARD_SUBSECTION) {
       var e;
-      null == H || null === (e = H.current) || void 0 === e || e.scrollIntoView(), u.default.clearSubsection()
+      null == w || null === (e = w.current) || void 0 === e || e.scrollIntoView(), u.default.clearSubsection()
     }
-  }, [H, w]), (0, a.jsxs)(o.FormSection, {
+  }, [w, H]), (0, a.jsxs)(o.FormSection, {
     tag: o.FormTitleTags.H1,
     title: D.default.Messages.VOICE_SETTINGS,
     children: [(0, a.jsx)(N.default, {}), (0, a.jsx)(x.default, {}), (0, a.jsx)(C.default, {}), (0, a.jsx)(o.FormText, {
@@ -101,7 +101,7 @@ function y() {
       style: {
         scrollMarginTop: "48px"
       },
-      ref: H
+      ref: w
     }), (0, a.jsx)(m.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsxs)(o.HeadingLevel, {
       component: (0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H1,

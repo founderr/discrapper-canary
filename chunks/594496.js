@@ -68,11 +68,11 @@ function L(e) {
       errors: p.default.getErrors(),
       guild: p.default.getGuild()
     }
-  }), w = null != D ? D : k;
-  l()(null != w, "guild should not be null");
-  let H = (0, o.useGuildAutomodProfileQuarantineErrors)(w.id),
-    Y = (0, i.useStateFromStores)([g.default], () => null == w.id ? null : g.default.getMember(w.id, P.id)),
-    V = (0, i.useStateFromStores)([m.default], () => m.default.getGuildMemberProfile(P.id, w.id)),
+  }), H = null != D ? D : k;
+  l()(null != H, "guild should not be null");
+  let w = (0, o.useGuildAutomodProfileQuarantineErrors)(H.id),
+    Y = (0, i.useStateFromStores)([g.default], () => null == H.id ? null : g.default.getMember(H.id, P.id)),
+    V = (0, i.useStateFromStores)([m.default], () => m.default.getGuildMemberProfile(P.id, H.id)),
     W = h.default.canUsePremiumProfileCustomization(P),
     K = (0, d.showRemoveAvatar)(b, null == Y ? void 0 : Y.avatar),
     z = (0, d.showRemoveBanner)(U, null == V ? void 0 : V.banner),
@@ -85,11 +85,11 @@ function L(e) {
   return (0, a.jsxs)("div", {
     className: v.sectionsContainer,
     children: [(0, a.jsx)(R.default, {
-      errors: null !== (n = null == B ? void 0 : B.nick) && void 0 !== n ? n : null == H ? void 0 : H.nick,
+      errors: null !== (n = null == B ? void 0 : B.nick) && void 0 !== n ? n : null == w ? void 0 : w.nick,
       username: C.default.getName(P),
       pendingNick: j,
       currentNick: null == Y ? void 0 : Y.nick,
-      guild: w
+      guild: H
     }, "nick"), (0, a.jsx)(f.default, {
       sectionTitle: M.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: null == B ? void 0 : B.pronouns,
@@ -114,7 +114,7 @@ function L(e) {
         showRemoveAvatarButton: K,
         onAvatarChange: e => X(e, null == Y ? void 0 : Y.avatar, A.setPendingAvatar),
         errors: null == B ? void 0 : B.avatar,
-        guildId: w.id,
+        guildId: H.id,
         disabled: !W
       }, "avatar"), (0, a.jsx)(c.default, {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
@@ -127,7 +127,7 @@ function L(e) {
           })]
         }),
         user: P,
-        guild: w
+        guild: H
       }, "decoration"), (0, a.jsx)(T.default, {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_SETTINGS_PROFILE_EFFECT, (0, a.jsx)(r.Tooltip, {
@@ -139,12 +139,12 @@ function L(e) {
           })]
         }),
         user: P,
-        guild: w
+        guild: H
       }, "effect"), (0, a.jsx)(E.default, {
         showRemoveBannerButton: z,
         errors: null == B ? void 0 : B.banner,
         onBannerChange: e => X(e, null == V ? void 0 : V.banner, A.setPendingBanner),
-        guildId: null == w ? void 0 : w.id,
+        guildId: null == H ? void 0 : H.id,
         disabled: !W
       }, "banner"), (0, a.jsx)(_.default, {
         user: P,
@@ -153,7 +153,7 @@ function L(e) {
         onThemeColorsChange: e => {
           (0, O.setNewPendingGuildIdentityThemeColors)(e, null == V ? void 0 : V.themeColors)
         },
-        guildId: null == w ? void 0 : w.id,
+        guildId: null == H ? void 0 : H.id,
         showResetThemeButton: Q
       }), (0, a.jsx)(u.default, {
         placeholder: M.default.Messages.CHANGE_IDENTITY_BIO_PLACEHOLDER,
@@ -167,7 +167,7 @@ function L(e) {
           })]
         }),
         onBioChange: e => (0, O.setNewPendingGuildIdentityBio)(e, q),
-        errors: null !== (L = null == B ? void 0 : B.bio) && void 0 !== L ? L : null == H ? void 0 : H.bio,
+        errors: null !== (L = null == B ? void 0 : B.bio) && void 0 !== L ? L : null == w ? void 0 : w.bio,
         pendingBio: y,
         currentBio: q,
         disabled: !W
