@@ -292,7 +292,7 @@ function eA(e) {
       methodType: G.PaymentSourceTypes.CASH_APP
     },
     [eN, eP] = s.useState(S),
-    [eC, eh] = s.useState(null == C ? j : {
+    [eC, eh] = s.useState(S === I.Step.CREDIT_CARD_INFORMATION ? j : {
       steps: [I.Step.ADD_PAYMENT_STEPS]
     }),
     {

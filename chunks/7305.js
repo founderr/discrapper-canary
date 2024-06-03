@@ -64,22 +64,23 @@ function O(e) {
     referralTrialOfferId: b,
     skuId: U,
     returnRef: k,
-    skipConfirm: R = !1
+    skipConfirm: R = !1,
+    continueSession: B = !1
   } = e, {
-    analyticsLocations: B
+    analyticsLocations: H
   } = (0, C.default)();
   i.useEffect(() => {
     !u.default.isLoadedForPremiumSKUs() && l.default.wait(() => (0, a.fetchPremiumSubscriptionPlans)())
   }, []);
   let {
-    step: H
+    step: G
   } = (0, f.usePaymentContext)(), {
-    isGift: G,
-    giftMessage: w,
-    giftRecipient: F
-  } = (0, p.useGiftContext)(), D = G && (0, c.shouldShowCustomGiftExperience)(F) && H === x.Step.PLAN_SELECT;
+    isGift: w,
+    giftMessage: F,
+    giftRecipient: D
+  } = (0, p.useGiftContext)(), Z = w && (0, c.shouldShowCustomGiftExperience)(D) && G === x.Step.PLAN_SELECT;
   return (0, n.jsx)(_.PaymentModal, {
-    analyticsLocations: B,
+    analyticsLocations: H,
     analyticsLocation: t,
     analyticsObject: s,
     analyticsSourceLocation: r,
@@ -87,11 +88,11 @@ function O(e) {
     onComplete: o,
     transitionState: d,
     initialPlanId: m,
-    giftMessage: w,
+    giftMessage: F,
     subscriptionTier: L,
     onClose: h,
     trialId: S,
-    isGift: G,
+    isGift: w,
     trialFooterMessageOverride: j,
     reviewWarningMessage: E,
     planGroup: I.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -106,9 +107,10 @@ function O(e) {
     referralTrialOfferId: b,
     skuId: U,
     shakeWhilePurchasing: !0,
-    isLargeModal: D,
+    isLargeModal: Z,
     returnRef: k,
-    skipConfirm: R
+    skipConfirm: R,
+    continueSession: B
   })
 }
 

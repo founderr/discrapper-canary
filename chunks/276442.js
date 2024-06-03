@@ -23,45 +23,46 @@ function p(e) {
     breadcrumbSteps: i,
     handleStepChange: p,
     referralTrialOfferId: S,
-    onReturn: _
+    onReturn: _,
+    continueSession: I = !1
   } = e, {
-    contextMetadata: I,
-    step: P,
-    paymentSources: E,
-    paymentSourceId: T,
-    setPaymentSourceId: N,
-    purchaseError: v,
-    setPurchaseError: h,
-    purchaseErrorBlockRef: x,
-    paymentAuthenticationState: A,
+    contextMetadata: P,
+    step: E,
+    paymentSources: T,
+    paymentSourceId: N,
+    setPaymentSourceId: v,
+    purchaseError: h,
+    setPurchaseError: x,
+    purchaseErrorBlockRef: A,
+    paymentAuthenticationState: C,
     selectedSkuId: y
   } = (0, c.usePaymentContext)(), {
-    isGift: C
-  } = (0, o.useGiftContext)(), g = {
+    isGift: g
+  } = (0, o.useGiftContext)(), M = {
     ...(0, r.useSharedPaymentModal)(),
-    paymentSources: E,
-    paymentSourceId: T,
-    setPaymentSourceId: N,
-    purchaseError: v,
-    setPurchaseError: h,
-    purchaseErrorBlockRef: x,
-    paymentAuthenticationState: A
-  }, M = (0, a.usePremiumTrialOffer)(S), R = !C && null != M && null != y && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(y), b = null != _ ? _ : () => {
-    p(Object.values(E).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
+    paymentSources: T,
+    paymentSourceId: N,
+    setPaymentSourceId: v,
+    purchaseError: h,
+    setPurchaseError: x,
+    purchaseErrorBlockRef: A,
+    paymentAuthenticationState: C
+  }, R = (0, a.usePremiumTrialOffer)(S), b = !g && null != R && null != y && (0, f.SubscriptionTrials)[R.trial_id].skus.includes(y), L = null != _ ? _ : () => {
+    p(Object.values(T).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
-  s()(P, "Step should be set here");
-  let L = (0, l.useStableMemo)(() => Date.now(), [P]);
+  s()(E, "Step should be set here");
+  let O = (0, l.useStableMemo)(() => Date.now(), [E]);
   return (0, r.AddPaymentFlow)({
-    paymentModalArgs: g,
-    initialStep: d.Step.PAYMENT_TYPE,
+    paymentModalArgs: M,
+    initialStep: I && null == N ? d.Step.CREDIT_CARD_INFORMATION : d.Step.PAYMENT_TYPE,
     prependSteps: [d.Step.PROMOTION_INFO],
     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],
     breadcrumpSteps: i,
-    currentBreadcrumpStep: P,
+    currentBreadcrumpStep: E,
     usePaymentModalStep: !0,
-    onReturn: b,
+    onReturn: L,
     onComplete: e => {
       p(d.Step.REVIEW, {
         trackedFromStep: e
@@ -76,10 +77,10 @@ function p(e) {
         ...t,
         from_step: n,
         to_step: i,
-        step_duration_ms: s - L,
-        flow_duration_ms: s - I.startTime
+        step_duration_ms: s - O,
+        flow_duration_ms: s - P.startTime
       })
     },
-    isEligibleForTrial: R
+    isEligibleForTrial: b
   })
 }
