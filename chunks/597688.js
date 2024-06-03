@@ -12,7 +12,7 @@ let I = new Map,
   S = T,
   h = !1,
   A = new Set;
-let m = null,
+let m = {},
   N = () => {
     f = I, S = T, r = void 0, h = !1, A = new Set, i = void 0
   };
@@ -59,7 +59,7 @@ l = "CollectiblesCategoryStore", (o = "displayName") in(a = p) ? Object.definePr
   writable: !0
 }) : a[o] = l, t.default = new p(_.default, {
   COLLECTIBLES_CATEGORIES_FETCH: e => {
-    h = !0, i = void 0, m = null != e.options ? e.options : null
+    h = !0, i = void 0, m = e.options
   },
   COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
     0 === e.categories.length ? (f = I, S = T) : !(0, u.isEqual)([...f.values()], e.categories) && (f = new Map(e.categories.map(e => [e.skuId, e])), S = new Map((0, E.getProductsFromCategories)(f).map(e => [e.skuId, e]))), r = Date.now(), h = !1, i = void 0
