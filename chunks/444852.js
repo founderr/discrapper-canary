@@ -273,55 +273,33 @@ class y extends o.default {
       } = this._streamContext,
       r = null,
       s = null,
-      a = this._videoQuality;
-    if (null == a) return;
-    r = a.getNetworkStats(), s = this.isOwner ? a.getCodecUsageStats("streamer", this.userId) : a.getCodecUsageStats("receiver", i);
-    let o = (0, u.areClipsEnabled)(),
-      l = d.default.getSettings(),
-      c = this.isOwner ? {
-        clips_enabled: l.clipsEnabled && o,
-        clips_buffer_length: l.clipsLength
-      } : {},
+      a = null,
+      o = this._videoQuality;
+    null != o && (r = this.isOwner ? o.getOutboundStats()[0] : o.getInboundStats(i), s = o.getNetworkStats(), a = this.isOwner ? o.getCodecUsageStats("streamer", this.userId) : o.getCodecUsageStats("receiver", i));
+    let l = (0, u.areClipsEnabled)(),
+      c = d.default.getSettings(),
       E = this.isOwner ? {
+        clips_enabled: c.clipsEnabled && l,
+        clips_buffer_length: c.clipsLength
+      } : {},
+      I = this.isOwner ? {
         bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment()
       } : {};
-    a.getOutboundStats().forEach(t => {
-      var i;
-      (null !== (i = t.num_frames) && void 0 !== i ? i : 0) > 0 && O.default.track(L.AnalyticEvents.VIDEO_STREAM_ENDED, {
-        ...t,
-        ...s,
-        ...r,
-        ...this._videoStreamStats.getStats(),
-        ...this._soundshareStats.getStats(),
-        ...this._getStreamAnalyticsProperties(),
-        ...c,
-        ...E,
-        channel_type: n,
-        reason: e,
-        max_viewers: this.analyticsContext.maxViewers,
-        hostname: this.hostname,
-        hardware_enabled: h.default.getHardwareH264(),
-        device_performance_class: this.isOwner ? (0, _.getMediaPerformanceClass)() : null
-      })
-    }), a.getInboundParticipants().forEach(t => {
-      var i;
-      let o = a.getInboundStats(t);
-      (null !== (i = null == o ? void 0 : o.num_frames) && void 0 !== i ? i : 0) > 0 && O.default.track(L.AnalyticEvents.VIDEO_STREAM_ENDED, {
-        ...o,
-        ...s,
-        ...r,
-        ...this._videoStreamStats.getStats(),
-        ...this._soundshareStats.getStats(),
-        ...this._getStreamAnalyticsProperties(),
-        ...c,
-        ...E,
-        channel_type: n,
-        reason: e,
-        max_viewers: this.analyticsContext.maxViewers,
-        hostname: this.hostname,
-        hardware_enabled: h.default.getHardwareH264(),
-        device_performance_class: this.isOwner ? (0, _.getMediaPerformanceClass)() : null
-      })
+    O.default.track(L.AnalyticEvents.VIDEO_STREAM_ENDED, {
+      ...r,
+      ...a,
+      ...s,
+      ...this._videoStreamStats.getStats(),
+      ...this._soundshareStats.getStats(),
+      ...this._getStreamAnalyticsProperties(),
+      ...E,
+      ...I,
+      channel_type: n,
+      reason: e,
+      max_viewers: this.analyticsContext.maxViewers,
+      hostname: this.hostname,
+      hardware_enabled: h.default.getHardwareH264(),
+      device_performance_class: this.isOwner ? (0, _.getMediaPerformanceClass)() : null
     })
   }
   _getExtraConnectionOptions() {
