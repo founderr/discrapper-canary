@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return C
   }
 });
 var s = l("735250"),
@@ -16,38 +16,38 @@ var s = l("735250"),
   f = l("761174"),
   S = l("706454"),
   E = l("246946"),
-  m = l("785717"),
-  I = l("648067"),
+  I = l("785717"),
+  m = l("648067"),
   _ = l("588822"),
   v = l("900927"),
-  g = l("652853"),
-  T = l("335191"),
+  T = l("652853"),
+  g = l("335191"),
   A = l("347949"),
-  U = l("988246"),
-  p = l("689938"),
+  p = l("988246"),
+  U = l("689938"),
   x = l("921152");
 
-function N(e) {
+function C(e) {
   var t;
   let {
     user: l,
     displayProfile: i,
-    autoFocusNote: N = !1,
-    scrollToConnections: C = !1
+    autoFocusNote: C = !1,
+    scrollToConnections: N = !1
   } = e, {
     trackUserProfileAction: h
-  } = (0, m.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
+  } = (0, I.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
     theme: P
-  } = (0, g.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, T.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
     userId: l.id,
     location: "28tk0bf_3"
-  }), y = (0, d.default)("user_profile"), L = (0, I.default)(l.id), O = a.useRef(null);
+  }), y = (0, d.default)("user_profile"), L = (0, m.default)(l.id), O = a.useRef(null);
   return (a.useLayoutEffect(() => {
-    if (C) {
+    if (N) {
       var e;
       null == O || null === (e = O.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [C]), R) ? (0, s.jsx)(U.default, {}) : (0, s.jsxs)(o.ScrollerThin, {
+  }, [N]), R) ? (0, s.jsx)(p.default, {}) : (0, s.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: x.infoScroller,
     children: [(0, s.jsxs)("div", {
@@ -56,7 +56,7 @@ function N(e) {
         children: [(0, s.jsx)(o.Heading, {
           variant: "eyebrow",
           className: x.userInfoSectionHeader,
-          children: p.default.Messages.USER_PROFILE_ABOUT_ME
+          children: U.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, s.jsx)(_.default, {
           className: x.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
@@ -65,7 +65,7 @@ function N(e) {
         children: [(0, s.jsx)(o.Heading, {
           variant: "eyebrow",
           className: x.userInfoSectionHeader,
-          children: p.default.Messages.USER_PROFILE_MEMBER_SINCE
+          children: U.default.Messages.USER_PROFILE_MEMBER_SINCE
         }), (0, s.jsx)(v.default, {
           userId: l.id,
           textClassName: x.userInfoText
@@ -85,16 +85,16 @@ function N(e) {
       }), (0, s.jsx)(o.Heading, {
         variant: "eyebrow",
         className: x.userInfoSectionHeader,
-        children: p.default.Messages.NOTE
+        children: U.default.Messages.NOTE
       }), (0, s.jsx)(u.default, {
         userId: l.id,
-        autoFocus: N,
+        autoFocus: C,
         className: x.note,
         onUpdate: () => h({
           action: "SET_NOTE"
         })
       })]
-    }), (0, s.jsx)(T.ConnectedUserAccounts, {
+    }), (0, s.jsx)(g.ConnectedUserAccounts, {
       ref: O,
       connectedAccounts: L,
       theme: P,

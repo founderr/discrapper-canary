@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return m
+    return I
   }
 });
 var s = l("735250");
@@ -18,25 +18,25 @@ var a = l("120356"),
   S = l("689938"),
   E = l("809842");
 
-function m(e) {
+function I(e) {
   let {
     user: t,
     displayProfile: l
-  } = e, a = (0, n.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), m = c.default.getName(t);
+  } = e, a = (0, n.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), I = c.default.getName(t);
   return (0, s.jsxs)("div", {
     className: E.container,
-    children: [null == m && (0, s.jsx)(o.default, {
+    children: [null == I && (0, s.jsx)(o.default, {
       user: t,
       className: E.nameTag,
       usernameClass: E.username,
       discriminatorClass: E.discriminator
-    }), null != m && (0, s.jsxs)("div", {
+    }), null != I && (0, s.jsxs)("div", {
       children: [(0, s.jsx)(r.Text, {
         variant: "text-lg/semibold",
         style: {
           marginRight: "12px"
         },
-        children: m
+        children: I
       }), (0, s.jsx)(o.default, {
         user: t,
         forceUsername: !0,

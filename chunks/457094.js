@@ -165,10 +165,10 @@ let e0 = o.default.connectStores([F.default, eU.default, ey.default], () => ({
   e1 = (0, R.makeAuthenticated)(L.default, null, {
     passProps: !1
   }),
-  e2 = (0, R.makeAuthenticated)(v.default, null, {
+  e4 = (0, R.makeAuthenticated)(v.default, null, {
     passProps: !1
   }),
-  e4 = [eq.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(eZ.StaticChannelRoutes).map(e => eq.Routes.CHANNEL(":guildId", e))];
+  e2 = [eq.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(eZ.StaticChannelRoutes).map(e => eq.Routes.CHANNEL(":guildId", e))];
 
 function e3(e) {
   let {
@@ -392,7 +392,7 @@ let e7 = [{
   isChatRoute: !0
 }, {
   path: [eq.Routes.APPLICATION_DIRECTORY],
-  render: e2,
+  render: e4,
   isSessionRequired: !0
 }];
 
@@ -512,7 +512,7 @@ class e6 extends s.PureComponent {
         } else(i && u || !_ && !i) && $.default.closeSidebar()
       } else {
         var C;
-        if (C = e, !e4.some(e => {
+        if (C = e, !e2.some(e => {
             var t;
             return (null === (t = (0, i.matchPath)(C, e)) || void 0 === t ? void 0 : t.isExact) === !0
           }))(0, eh.replaceWith)(eU.default.fallbackRoute)

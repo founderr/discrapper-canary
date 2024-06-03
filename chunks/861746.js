@@ -332,7 +332,7 @@ t.default = function(e) {
     e8 = null != ev && eR ? {
       boxShadow: "0px 4px 50px 0px " + ev.primary.toHexString()
     } : {},
-    e6 = eR && eH ? {
+    e9 = eR && eH ? {
       boxShadow: "0px 4px 50px 0px " + (ek ? L.default.WHITE : L.default.BLACK)
     } : e8;
   return s.useEffect(() => {
@@ -368,7 +368,7 @@ t.default = function(e) {
           className: n()(et.overflowContainer, {
             [et.lightningCheckout]: eR
           }),
-          style: e6,
+          style: e9,
           role: "dialog",
           "aria-modal": "true",
           children: [(0, a.jsx)(i.ConfettiCanvas, {

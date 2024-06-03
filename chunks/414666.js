@@ -1,32 +1,32 @@
 "use strict";
-t.r(a), t.d(a, {
+l.r(a), l.d(a, {
   FakeActivityCharacter: function() {
-    return l
+    return t
   }
-}), t("47120");
-var l, i, n = t("735250"),
-  r = t("470079"),
-  s = t("120356"),
-  o = t.n(s),
-  u = t("920906"),
-  d = t("481060"),
-  c = t("607070"),
-  f = t("659101"),
-  m = t("689938"),
-  v = t("427503"),
-  p = t("508840"),
-  h = t("576909");
-(i = l || (l = {}))[i.WUMPUS = 0] = "WUMPUS", i[i.PHIBI = 1] = "PHIBI";
-let g = {
+}), l("47120");
+var t, i, n = l("735250"),
+  r = l("470079"),
+  o = l("120356"),
+  s = l.n(o),
+  u = l("920906"),
+  d = l("481060"),
+  c = l("607070"),
+  f = l("659101"),
+  m = l("689938"),
+  v = l("427503"),
+  p = l("508840"),
+  g = l("576909");
+(i = t || (t = {}))[i.WUMPUS = 0] = "WUMPUS", i[i.PHIBI = 1] = "PHIBI";
+let h = {
   0: v.activityCharacterWumpus,
   1: v.activityCharacterPhibi
 };
 a.default = r.memo(function(e) {
   let {
     activityName: a,
-    activityCharacter: t = 0,
-    showExampleButton: l = !1
-  } = e, [i, s] = r.useState(0), [S, I] = (0, u.useSpring)(() => ({
+    activityCharacter: l = 0,
+    showExampleButton: t = !1
+  } = e, [i, o] = r.useState(0), [S, A] = (0, u.useSpring)(() => ({
     from: {
       rotate: "0deg"
     },
@@ -34,23 +34,23 @@ a.default = r.memo(function(e) {
       tension: 1e3,
       friction: 5
     }
-  })), A = r.useRef({
+  })), I = r.useRef({
     seconds: i,
     jitter: async () => {
       for (;;) {
         var e;
-        let a = (e = A.current.seconds, c.default.useReducedMotion ? 0 : Math.min(10, (e -= 5399) / 300 * 10));
-        I({
+        let a = (e = I.current.seconds, c.default.useReducedMotion ? 0 : Math.min(10, (e -= 5399) / 300 * 10));
+        A({
           rotate: "-".concat(a, "deg")
-        }), await new Promise(e => setTimeout(e, 80)), I({
+        }), await new Promise(e => setTimeout(e, 80)), A({
           rotate: "".concat(a, "deg")
         }), await new Promise(e => setTimeout(e, 80))
       }
     }
   });
-  return r.useEffect(() => void(A.current.seconds = i)), r.useEffect(() => {
+  return r.useEffect(() => void(I.current.seconds = i)), r.useEffect(() => {
     let e = setInterval(() => {
-      s(e => (5399 === e && A.current.jitter(), ++e))
+      o(e => (5399 === e && I.current.jitter(), ++e))
     }, 1e3);
     return () => clearInterval(e)
   }, []), (0, n.jsxs)(f.default, {
@@ -63,10 +63,10 @@ a.default = r.memo(function(e) {
     }), (0, n.jsxs)("div", {
       className: v.fakeActivityLayout,
       children: [(0, n.jsx)("div", {
-        className: o()(v.fakeActivityIcon, g[t]),
+        className: s()(v.fakeActivityIcon, h[l]),
         children: (0, n.jsx)(u.animated.img, {
           className: v.fakeActivityPencil,
-          src: 0 === t ? h : p,
+          src: 0 === l ? g : p,
           style: S
         })
       }), (0, n.jsxs)("div", {
@@ -78,17 +78,17 @@ a.default = r.memo(function(e) {
           variant: "text-sm/normal",
           children: m.default.Messages.PROFILE_CUSTOMIZATION_ACTIVITY_TIME.format({
             renderTimeHook(e, a) {
-              let t = i % 60,
-                l = (i - t) / 60;
+              let l = i % 60,
+                t = (i - l) / 60;
               return (0, n.jsxs)("span", {
                 className: v.fakeActivityTimeValues,
-                children: [l.toString().padStart(2, "0"), ":", t.toString().padStart(2, "0")]
+                children: [t.toString().padStart(2, "0"), ":", l.toString().padStart(2, "0")]
               }, a)
             }
           })
         })]
       })]
-    }), l && (0, n.jsx)(d.Button, {
+    }), t && (0, n.jsx)(d.Button, {
       className: v.button,
       color: v.buttonColor,
       size: d.Button.Sizes.SMALL,

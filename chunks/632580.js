@@ -32,8 +32,8 @@ async function _(e) {
     flowStartTime: h,
     subscriptionPlan: x,
     planGroup: A,
-    trialId: y,
-    priceOptions: C,
+    trialId: C,
+    priceOptions: y,
     paymentSource: g,
     isPrepaidPaymentPastDue: M,
     openInvoiceId: R,
@@ -80,22 +80,22 @@ async function _(e) {
         loadId: F,
         giftInfoOptions: w
       })
-    } else if (M && null != R && null != g && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(g.type) ? await (0, a.payInvoiceManually)(b, R, g, C.currency) : await (0, a.updateSubscription)(b, {
+    } else if (M && null != R && null != g && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(g.type) ? await (0, a.payInvoiceManually)(b, R, g, y.currency) : await (0, a.updateSubscription)(b, {
       paymentSource: g,
-      currency: C.currency
+      currency: y.currency
     }, v, N, F);
     else if (null != b) {
       let t = (0, m.getItemsWithUpsertedPlanIdForGroup)(b, x.id, 1, new Set(A)),
         n = {
           paymentSource: g,
-          currency: C.currency
+          currency: y.currency
         };
       b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, a.updateSubscription)(b, n, v, N, F)
     } else e = await (0, u.subscribe)({
       planId: x.id,
-      currency: C.currency,
+      currency: y.currency,
       paymentSource: g,
-      trialId: y,
+      trialId: C,
       metadata: O,
       referralCode: U,
       loadId: F

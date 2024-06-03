@@ -29,9 +29,9 @@ let I = e => {
     soundEffect: T,
     setEmojiConfetti: N,
     setSoundEffect: v
-  } = (0, a.useGiftContext)(), [h, x] = s.useState(!1), A = s.useRef(null), y = (0, l.useRadioGroup)({
+  } = (0, a.useGiftContext)(), [h, x] = s.useState(!1), A = s.useRef(null), C = (0, l.useRadioGroup)({
     orientation: "horizontal"
-  }), C = (0, u.getGiftExperience)(n, t), g = C === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = C !== u.GiftExperience.DEFAULT, R = (0, c.useIsSeasonalGiftingActive)(), {
+  }), y = (0, u.getGiftExperience)(n, t), g = y === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = y !== u.GiftExperience.DEFAULT, R = (0, c.useIsSeasonalGiftingActive)(), {
     enabled: b
   } = c.default.useExperiment({
     location: "premiumGiftSelect_GiftAnimationOptions"
@@ -75,7 +75,7 @@ let I = e => {
       },
       className: _.giftBoxOptionContainer,
       "aria-label": S.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
-      ...y,
+      ...C,
       children: null != L && L.map((e, t) => (0, i.jsx)(f.GiftStaticOption, {
         isSelected: I === e,
         giftStyle: e,

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return m
   }
 });
 var s = l("735250");
@@ -17,31 +17,31 @@ var a = l("481060"),
   f = l("30556"),
   S = l("496206"),
   E = l("981631"),
-  m = l("590106");
+  I = l("590106");
 
-function I(e) {
+function m(e) {
   let {
     user: t,
-    isCurrentUser: I,
+    isCurrentUser: m,
     guildId: _,
     friendToken: v,
-    canDM: g,
-    relationshipType: T,
+    canDM: T,
+    relationshipType: g,
     originalFriendingEnabled: A = !1,
-    trackUserProfileAction: U,
-    onClose: p
+    trackUserProfileAction: p,
+    onClose: U
   } = e, {
     newestAnalyticsLocation: x
   } = (0, o.default)();
 
-  function N(e) {
-    U({
+  function C(e) {
+    p({
       action: "SEND_MESSAGE"
-    }), i.default.openPrivateChannel(t.id, !1, !1, e), p()
+    }), i.default.openPrivateChannel(t.id, !1, !1, e), U()
   }
 
-  function C(e) {
-    U({
+  function N(e) {
+    p({
       action: "PRESS_OPTIONS"
     }), (0, n.openContextMenuLazy)(e, async () => {
       let {
@@ -50,14 +50,14 @@ function I(e) {
       return l => (0, s.jsx)(e, {
         ...l,
         originalFriendingEnabled: A,
-        relationshipType: T,
+        relationshipType: g,
         onRemoveFriend: h,
         onBlock: M,
         onReport: j,
-        onCopyId: () => U({
+        onCopyId: () => p({
           action: "COPY_USER_ID"
         }),
-        onMessage: () => N("User Profile Modal Header Buttons - Context Menu"),
+        onMessage: () => C("User Profile Modal Header Buttons - Context Menu"),
         user: t,
         guildId: _
       })
@@ -65,7 +65,7 @@ function I(e) {
   }
 
   function h() {
-    U({
+    p({
       action: "REMOVE_FRIEND"
     }), r.default.removeFriend(t.id, {
       location: x
@@ -74,7 +74,7 @@ function I(e) {
 
   function R() {
     try {
-      U({
+      p({
         action: "SEND_FRIEND_REQUEST"
       }), r.default.addRelationship({
         userId: t.id,
@@ -85,12 +85,12 @@ function I(e) {
         friendToken: v
       })
     } catch (e) {
-      p()
+      U()
     }
   }
 
   function P() {
-    U({
+    p({
       action: "IGNORE_FRIEND_REQUEST"
     }), r.default.cancelFriendRequest(t.id, {
       location: x
@@ -99,7 +99,7 @@ function I(e) {
 
   function M() {
     try {
-      U({
+      p({
         action: "BLOCK"
       }), r.default.addRelationship({
         userId: t.id,
@@ -109,47 +109,47 @@ function I(e) {
         type: E.RelationshipTypes.BLOCKED
       })
     } catch (e) {
-      p()
+      U()
     }
   }
 
   function j() {
-    U({
+    p({
       action: "REPORT"
     }), (0, u.showReportModalForUser)(t, "@me" === _ ? void 0 : _)
   }
   return (0, s.jsx)("div", {
-    className: m.buttons,
+    className: I.buttons,
     children: A ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(S.default, {
         user: t,
-        isCurrentUser: I,
-        relationshipType: T,
+        isCurrentUser: m,
+        relationshipType: g,
         onAddFriend: R,
         onIgnoreFriend: P,
-        onSendMessage: () => N("User Profile Modal Header Buttons - Send Message Button")
-      }), I && (0, s.jsx)(c.default, {
+        onSendMessage: () => C("User Profile Modal Header Buttons - Send Message Button")
+      }), m && (0, s.jsx)(c.default, {
         user: t,
         guildId: _,
-        onClose: p
-      }), I || t.isNonUserBot() ? null : (0, s.jsx)(a.Clickable, {
+        onClose: U
+      }), m || t.isNonUserBot() ? null : (0, s.jsx)(a.Clickable, {
         focusProps: {
           offset: {
             left: 8
           }
         },
-        onClick: C,
+        onClick: N,
         children: (0, s.jsx)(d.default, {
-          className: m.additionalActionsIcon
+          className: I.additionalActionsIcon
         })
       })]
-    }) : g ? (0, s.jsx)(f.default, {
+    }) : T ? (0, s.jsx)(f.default, {
       user: t,
-      onClose: p
+      onClose: U
     }) : (0, s.jsx)(c.default, {
       user: t,
       guildId: _,
-      onClose: p
+      onClose: U
     })
   })
 }

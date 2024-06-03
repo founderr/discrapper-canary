@@ -32,8 +32,8 @@ function g(e) {
     onComplete: s,
     onStepChange: a,
     transitionState: g,
-    loadId: x,
-    skuId: P,
+    loadId: P,
+    skuId: x,
     isGift: O = !1,
     giftRecipient: R,
     giftMessage: v,
@@ -41,7 +41,7 @@ function g(e) {
     returnRef: M
   } = e, {
     analyticsLocations: j
-  } = (0, d.default)([...L, u.default.COLLECTIBLES_PAYMENT_MODAL]), F = n.useRef(new r.Environment), [y, G] = n.useState(null), [b, U] = n.useState(!1), D = n.useMemo(() => (0, N.getCustomConfettiDisplayOptions)(P), [P]), B = n.useCallback(() => {
+  } = (0, d.default)([...L, u.default.COLLECTIBLES_PAYMENT_MODAL]), F = n.useRef(new r.Environment), [y, G] = n.useState(null), [b, U] = n.useState(!1), D = n.useMemo(() => (0, N.getCustomConfettiDisplayOptions)(x), [x]), B = n.useCallback(() => {
     U(!0), null == s || s()
   }, [s]), k = n.useCallback(e => {
     U(!1), t(e)
@@ -73,10 +73,10 @@ function g(e) {
       alt: "",
       "aria-hidden": !0
     }), (0, l.jsx)(c.PaymentContextProvider, {
-      loadId: x,
+      loadId: P,
       stepConfigs: H,
       applicationId: m.COLLECTIBLES_APPLICATION_ID,
-      skuIDs: [P],
+      skuIDs: [x],
       isGift: O,
       activeSubscription: null,
       purchaseType: A.PurchaseTypes.ONE_TIME,
@@ -88,7 +88,7 @@ function g(e) {
           onClose: k,
           onComplete: B,
           applicationId: m.COLLECTIBLES_APPLICATION_ID,
-          skuId: P,
+          skuId: x,
           initialPlanId: null,
           analyticsLocations: j,
           transitionState: g,

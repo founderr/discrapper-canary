@@ -28,8 +28,8 @@ var s = n("512722"),
   h = n("669079"),
   x = n("937615"),
   A = n("987209"),
-  y = n("598"),
-  C = n("45572"),
+  C = n("598"),
+  y = n("45572"),
   g = n("916616"),
   M = n("981631"),
   R = n("689938"),
@@ -102,7 +102,7 @@ function j(e) {
     selectedSkuId: w,
     isEmbeddedIAP: B,
     purchaseType: k
-  } = (0, y.usePaymentContext)(), {
+  } = (0, C.usePaymentContext)(), {
     isGift: H,
     giftRecipient: W
   } = (0, A.useGiftContext)(), Y = H && (0, h.shouldShowCustomGiftExperience)(W);
@@ -115,7 +115,7 @@ function j(e) {
   let J = (0, r.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
     X = (0, r.useStateFromStores)([I.default], () => I.default.enabled),
     q = a.CountryCodesSets.EEA_COUNTRIES.has(P.default.ipCountryCodeWithFallback),
-    Q = x === C.PurchaseState.PURCHASING || x === C.PurchaseState.COMPLETED,
+    Q = x === y.PurchaseState.PURCHASING || x === y.PurchaseState.COMPLETED,
     $ = null != G ? j[G].type : null;
   return (0, i.jsxs)("div", {
     className: b.stepBody,

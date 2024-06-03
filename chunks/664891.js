@@ -27,8 +27,8 @@ var i = n("735250"),
   h = n("74538"),
   x = n("296848"),
   A = n("374649"),
-  y = n("653798"),
-  C = n("585602"),
+  C = n("653798"),
+  y = n("585602"),
   g = n("314182"),
   M = n("314404"),
   R = n("42818"),
@@ -44,7 +44,7 @@ function G(e) {
       paymentSources: p,
       priceOptions: S,
       onPaymentSourceChange: A,
-      onPaymentSourceAdd: C,
+      onPaymentSourceAdd: y,
       planId: R,
       setHasAcceptedTerms: O,
       legalTermsNodeRef: G,
@@ -123,7 +123,7 @@ function G(e) {
   })), (0, i.jsxs)("div", {
     className: j.stepBody,
     children: [!eu && er && (0, i.jsxs)("div", {
-      children: [(0, i.jsx)(y.PremiumInvoiceTableDivider, {
+      children: [(0, i.jsx)(C.PremiumInvoiceTableDivider, {
         negativeMarginBottom: !0,
         negativeMarginTop: !0
       }), (0, i.jsx)(M.PremiumSwitchPlanSelectBody, {
@@ -132,7 +132,7 @@ function G(e) {
         selectedPlanId: R,
         showTotal: !1,
         handleClose: z
-      }), (0, i.jsx)(y.PremiumInvoiceTableDivider, {})]
+      }), (0, i.jsx)(C.PremiumInvoiceTableDivider, {})]
     }), (0, i.jsx)(o.FormTitle, {
       tag: o.FormTitleTags.H5,
       children: n
@@ -145,7 +145,7 @@ function G(e) {
         paymentSources: Object.values(p),
         selectedPaymentSourceId: et,
         onChange: A,
-        onPaymentSourceAdd: C,
+        onPaymentSourceAdd: y,
         hidePersonalInformation: ei,
         disabled: ea
       })]
@@ -212,7 +212,7 @@ function D(e) {
     n(u)
   }, [n, u]);
   let c = (0, h.isPrepaidPaymentSource)(l.paymentSourceId);
-  return null != r ? (0, i.jsxs)(y.PremiumInvoiceTable, {
+  return null != r ? (0, i.jsxs)(C.PremiumInvoiceTable, {
     className: O.__invalid_invoice,
     children: [(0, i.jsx)(R.PremiumSubscriptionCurrentInvoiceRows, {
       invoice: r,
@@ -252,7 +252,7 @@ function U(e) {
     preventFetch: u,
     analyticsLocations: P,
     analyticsLocation: p.default.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW
-  }), [x, C] = (0, A.useSubscriptionInvoicePreview)({
+  }), [x, y] = (0, A.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
     items: T,
     renewal: !0,
@@ -261,7 +261,7 @@ function U(e) {
     preventFetch: u,
     analyticsLocations: P,
     analyticsLocation: p.default.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
-  }), g = null != v ? v : C;
+  }), g = null != v ? v : y;
   if (s.useEffect(() => {
       l(g)
     }, [l, g]), null != g) return (0, i.jsx)(o.FormErrorBlock, {
@@ -282,9 +282,9 @@ function U(e) {
     children: [(0, i.jsx)(R.SubscriptionPeriodResetNotice, {
       proratedInvoice: N,
       renewalInvoice: x
-    }), (0, i.jsxs)(y.PremiumInvoiceTable, {
+    }), (0, i.jsxs)(C.PremiumInvoiceTable, {
       className: j.invoice,
-      children: [(0, i.jsx)(y.PremiumInvoiceTableHeader, {
+      children: [(0, i.jsx)(C.PremiumInvoiceTableHeader, {
         children: L.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
       }), (0, i.jsx)(R.PremiumSubscriptionChangePlanInvoiceRows, {
         invoice: N,
@@ -321,10 +321,10 @@ function F(e) {
     {
       analyticsLocations: x
     } = (0, S.default)(),
-    y = (0, h.getItemsWithUpsertedPlanIdForGroup)(a, r.id, 1, new Set(c)),
-    [C, g] = (0, A.useSubscriptionInvoicePreview)({
+    C = (0, h.getItemsWithUpsertedPlanIdForGroup)(a, r.id, 1, new Set(c)),
+    [y, g] = (0, A.useSubscriptionInvoicePreview)({
       subscriptionId: a.id,
-      items: y,
+      items: C,
       renewal: !0,
       paymentSourceId: m.paymentSourceId,
       currency: m.currency,
@@ -336,11 +336,11 @@ function F(e) {
     u(g)
   }, [u, g]), null != g) ? (0, i.jsx)(o.FormErrorBlock, {
     children: g.message
-  }) : (null != C && (l = {
-    amount: C.total,
-    currency: C.currency,
-    tax: C.tax,
-    taxInclusive: C.taxInclusive
+  }) : (null != y && (l = {
+    amount: y.total,
+    currency: y.currency,
+    tax: y.tax,
+    taxInclusive: y.taxInclusive
   }), null == l) ? null : (0, i.jsx)(f.default, {
     onChange: T,
     finePrint: (0, i.jsx)(d.default, {
@@ -399,9 +399,9 @@ function w(e) {
     children: [(0, i.jsx)("div", {
       className: O.renewalInvoiceDate,
       children: L.default.Messages.BILLING_RESUME_PAUSED_SUBSCRIPTION_IMMEDIATELY
-    }), (0, i.jsxs)(y.PremiumInvoiceTable, {
+    }), (0, i.jsxs)(C.PremiumInvoiceTable, {
       className: j.invoice,
-      children: [(0, i.jsx)(y.PremiumInvoiceTableHeader, {
+      children: [(0, i.jsx)(C.PremiumInvoiceTableHeader, {
         children: L.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
       }), (0, i.jsx)(R.PremiumSubscriptionCurrentInvoiceRows, {
         invoice: u,
@@ -454,16 +454,16 @@ function B(e) {
       children: L.default.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({
         renewalDate: d.subscriptionPeriodStart
       })
-    }), (0, i.jsxs)(y.PremiumInvoiceTable, {
+    }), (0, i.jsxs)(C.PremiumInvoiceTable, {
       className: j.invoice,
-      children: [(0, i.jsx)(y.PremiumInvoiceTableHeader, {
+      children: [(0, i.jsx)(C.PremiumInvoiceTableHeader, {
         children: L.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES
-      }), (0, i.jsx)(y.PremiumInvoiceTableRow, {
+      }), (0, i.jsx)(C.PremiumInvoiceTableRow, {
         label: t,
         value: (0, h.getFormattedRateForPlan)(s, a, !0)
-      }), (0, i.jsx)(C.default, {
+      }), (0, i.jsx)(y.default, {
         invoice: d
-      }), (0, i.jsx)(y.PremiumInvoiceTableDivider, {}), (0, i.jsx)(R.SubscriptionInvoiceFooter, {
+      }), (0, i.jsx)(C.PremiumInvoiceTableDivider, {}), (0, i.jsx)(R.SubscriptionInvoiceFooter, {
         premiumSubscription: n,
         renewalInvoice: d,
         isUpdate: !0,

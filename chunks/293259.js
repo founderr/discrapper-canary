@@ -16,18 +16,18 @@ var s = l("735250"),
   f = l("726521"),
   S = l("233440"),
   E = l("314897"),
-  m = l("158776"),
-  I = l("699516"),
+  I = l("158776"),
+  m = l("699516"),
   _ = l("621113"),
   v = l("759231"),
-  g = l("998502"),
-  T = l("785717"),
+  T = l("998502"),
+  g = l("785717"),
   A = l("621853"),
-  U = l("204197"),
-  p = l("735336"),
+  p = l("204197"),
+  U = l("735336"),
   x = l("520978"),
-  N = l("184325"),
-  C = l("652853"),
+  C = l("184325"),
+  N = l("652853"),
   h = l("496206"),
   R = l("228168"),
   P = l("981631"),
@@ -35,12 +35,12 @@ var s = l("735250"),
   j = l("689938"),
   y = l("155614");
 let L = r.AvatarSizes.SIZE_120,
-  O = g.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+  O = T.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function F(e) {
   let {
     displayProfile: t,
-    user: g,
+    user: T,
     guildId: F,
     channelId: D,
     friendToken: b,
@@ -48,18 +48,18 @@ function F(e) {
     isStreaming: G,
     hasProfileEffect: k,
     onClose: w
-  } = e, Y = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(g.id)), H = (0, i.useStateFromStores)([m.default], () => m.default.isMobileOnline(g.id)), V = (0, i.useStateFromStores)([m.default], () => m.default.getStatus(g.id)), z = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(g.id)), W = (0, i.useStateFromStores)([E.default], () => E.default.getId() === g.id), {
+  } = e, Y = (0, i.useStateFromStores)([m.default], () => m.default.getRelationshipType(T.id)), H = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(T.id)), V = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(T.id)), z = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([E.default], () => E.default.getId() === T.id), {
     theme: Z
-  } = (0, C.useUserProfileThemeContext)(), {
+  } = (0, N.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
-  } = (0, T.useUserProfileAnalyticsContext)(), {
+  } = (0, g.useUserProfileAnalyticsContext)(), {
     avatarSrc: Q,
     eventHandlers: J,
     avatarDecorationSrc: q
-  } = (0, U.default)({
-    user: g,
+  } = (0, p.default)({
+    user: T,
     size: L
-  }), X = a.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(g, D), [g, D]);
+  }), X = a.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(T, D), [T, D]);
 
   function $() {
     w(), (0, d.popLayer)()
@@ -68,7 +68,7 @@ function F(e) {
   function ee() {
     K({
       action: "REMOVE_FRIEND"
-    }), c.default.removeFriend(g.id, {
+    }), c.default.removeFriend(T.id, {
       location: "User Profile"
     })
   }
@@ -76,7 +76,7 @@ function F(e) {
   function et(e) {
     K({
       action: "SEND_MESSAGE"
-    }), o.default.openPrivateChannel(g.id, !1, !1, e), $()
+    }), o.default.openPrivateChannel(T.id, !1, !1, e), $()
   }
 
   function el() {
@@ -84,7 +84,7 @@ function F(e) {
       K({
         action: "BLOCK"
       }), c.default.addRelationship({
-        userId: g.id,
+        userId: T.id,
         context: {
           location: "User Profile"
         },
@@ -99,14 +99,14 @@ function F(e) {
     let e = "@me" === F ? void 0 : F;
     K({
       action: "REPORT"
-    }), (0, f.showReportModalForUser)(g, e)
+    }), (0, f.showReportModalForUser)(T, e)
   }
   return (0, s.jsxs)("header", {
     className: B,
-    children: [(0, s.jsx)(p.default, {
+    children: [(0, s.jsx)(U.default, {
       displayProfile: t,
       onClose: $,
-      user: g,
+      user: T,
       profileType: R.UserProfileTypes.MODAL,
       hasProfileEffect: k
     }), (0, s.jsxs)("div", {
@@ -122,11 +122,11 @@ function F(e) {
           statusBackdropColor: (0, r.getStatusBackdropColor)(Z),
           isMobile: H,
           statusTooltip: !0,
-          "aria-label": g.username
+          "aria-label": T.username
         })
       }), (0, s.jsxs)("div", {
         className: y.headerTop,
-        children: [(null == z ? void 0 : z.profileFetchFailed) && !g.isClyde() ? (0, s.jsx)(r.Tooltip, {
+        children: [(null == z ? void 0 : z.profileFetchFailed) && !T.isClyde() ? (0, s.jsx)(r.Tooltip, {
           text: j.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           children: e => (0, s.jsx)(v.default, {
@@ -134,13 +134,13 @@ function F(e) {
             className: y.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, s.jsx)(N.default, {
-          user: g,
+        }) : (0, s.jsx)(C.default, {
+          user: T,
           className: y.badgeList,
           guildId: F,
-          size: N.BadgeSizes.SIZE_24,
+          size: C.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: N.BadgeSizes.SIZE_18,
+          shrinkToSize: C.BadgeSizes.SIZE_18,
           onBadgeClick: w
         }), (0, s.jsxs)("div", {
           className: y.relationshipButtons,
@@ -148,7 +148,7 @@ function F(e) {
             className: y.applicationInstallButton,
             application: z.application
           }), (0, s.jsx)(h.default, {
-            user: g,
+            user: T,
             isCurrentUser: W,
             relationshipType: Y,
             onAddFriend: function() {
@@ -156,7 +156,7 @@ function F(e) {
                 K({
                   action: "SEND_FRIEND_REQUEST"
                 }), c.default.addRelationship({
-                  userId: g.id,
+                  userId: T.id,
                   context: {
                     location: "User Profile"
                   },
@@ -170,12 +170,12 @@ function F(e) {
             onIgnoreFriend: function() {
               K({
                 action: "CANCEL_FRIEND_REQUEST"
-              }), c.default.cancelFriendRequest(g.id, {
+              }), c.default.cancelFriendRequest(T.id, {
                 location: "User Profile"
               })
             },
             onSendMessage: () => et("User Profile Modal - Send Message Button")
-          }), W || g.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {
+          }), W || T.isNonUserBot() ? null : (0, s.jsx)(r.Clickable, {
             focusProps: {
               offset: {
                 left: 8
@@ -198,7 +198,7 @@ function F(e) {
                     action: "COPY_USER_ID"
                   }),
                   onMessage: () => et("User Profile Modal - Context Menu"),
-                  user: g,
+                  user: T,
                   guildId: F
                 })
               })

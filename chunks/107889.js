@@ -16,18 +16,18 @@ var s = l("735250"),
   f = l("5192"),
   S = l("877485"),
   E = l("785717"),
-  m = l("318661"),
-  I = l("502762"),
+  I = l("318661"),
+  m = l("502762"),
   _ = l("544989"),
   v = l("301984"),
-  g = l("94918"),
-  T = l("664794"),
+  T = l("94918"),
+  g = l("664794"),
   A = l("806926"),
-  U = l("740021"),
-  p = l("228168"),
+  p = l("740021"),
+  U = l("228168"),
   x = l("981631"),
-  N = l("689938"),
-  C = l("61007");
+  C = l("689938"),
+  N = l("61007");
 
 function h(e) {
   let {
@@ -55,7 +55,7 @@ function h(e) {
     channelId: h,
     messageId: R,
     roleId: P
-  }), [k, w] = a.useState(D), Y = (0, m.default)(t.id), H = (0, m.default)(t.id, D), V = null == k ? Y : H, {
+  }), [k, w] = a.useState(D), Y = (0, I.default)(t.id), H = (0, I.default)(t.id, D), V = null == k ? Y : H, {
     activity: z,
     customStatusActivity: W
   } = (0, i.useStateFromStoresObject)([c.default], () => ({
@@ -83,17 +83,17 @@ function h(e) {
       roleId: P,
       children: (0, s.jsxs)(n.ModalRoot, {
         transitionState: L,
-        className: C.root,
+        className: N.root,
         hideShadow: !0,
-        "aria-label": N.default.Messages.USER_PROFILE_MODAL,
-        children: [(0, s.jsxs)(I.default, {
+        "aria-label": C.default.Messages.USER_PROFILE_MODAL,
+        children: [(0, s.jsxs)(m.default, {
           user: t,
           displayProfile: V,
-          profileType: p.UserProfileTypes.FULL_SIZE,
+          profileType: U.UserProfileTypes.FULL_SIZE,
           ref: Z,
           children: [(0, s.jsxs)(_.default, {
-            profileType: p.UserProfileTypes.FULL_SIZE,
-            children: [(0, s.jsx)(g.default, {
+            profileType: U.UserProfileTypes.FULL_SIZE,
+            children: [(0, s.jsx)(T.default, {
               user: t,
               guildId: D,
               channelId: h,
@@ -102,14 +102,14 @@ function h(e) {
               children: [(0, s.jsx)(v.default, {
                 user: t,
                 friendToken: M
-              }), (0, s.jsx)(T.default, {
+              }), (0, s.jsx)(g.default, {
                 user: t,
-                profileType: p.UserProfileTypes.FULL_SIZE,
+                profileType: U.UserProfileTypes.FULL_SIZE,
                 guildId: D,
                 viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == V ? void 0 : V.guildId) != null ? (0, s.jsx)(n.MenuItem, {
                   id: "view-main-profile",
-                  label: N.default.Messages.VIEW_MAIN_PROFILE,
-                  subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
+                  label: C.default.Messages.VIEW_MAIN_PROFILE,
+                  subtext: C.default.Messages.AKA_DISPLAY_NAME.format({
                     displayName: f.default.getName(void 0, void 0, t)
                   }),
                   action: () => {
@@ -120,8 +120,8 @@ function h(e) {
                   }
                 }) : (0, s.jsx)(n.MenuItem, {
                   id: "view-server-profile",
-                  label: N.default.Messages.VIEW_SERVER_PROFILE,
-                  subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
+                  label: C.default.Messages.VIEW_SERVER_PROFILE,
+                  subtext: C.default.Messages.AKA_DISPLAY_NAME.format({
                     displayName: f.default.getName(D, h, t)
                   }),
                   action: () => {
@@ -133,7 +133,7 @@ function h(e) {
                 })
               })]
             })]
-          }), (0, s.jsx)(U.default, {
+          }), (0, s.jsx)(p.default, {
             user: t,
             displayProfile: V,
             guildId: D,
