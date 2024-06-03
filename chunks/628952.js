@@ -10,7 +10,7 @@ var n = s("120356"),
   d = s("1585"),
   o = s("125988"),
   c = s("987209"),
-  f = s("962746"),
+  f = s("589266"),
   S = s("731896"),
   E = s("484459"),
   I = s("594174"),
@@ -70,7 +70,7 @@ t.default = e => {
     giftRecipientError: S
   } = (0, c.useGiftContext)(), N = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser());
   if (null == d || null == s) return null;
-  let [g] = d.items, x = null != o && o.id !== (null == N ? void 0 : N.id);
+  let [g] = d.items, P = null != o && o.id !== (null == N ? void 0 : N.id);
   return (0, l.jsxs)("div", {
     className: n,
     children: [(0, l.jsxs)("div", {
@@ -78,10 +78,11 @@ t.default = e => {
       children: [(0, l.jsx)(u.FormTitle, {
         className: m.previewTitle,
         children: p.default.Messages.COLLECTIBLES_GIFT_LABEL
-      }), x && (0, l.jsx)(u.Popout, {
+      }), P && (0, l.jsx)(u.Popout, {
         preload: () => (0, E.default)(o.id, o.getAvatarURL(null, 80)),
         renderPopout: e => (0, l.jsx)(f.default, {
           ...e,
+          location: "CollectiblesGiftPreview",
           user: o,
           pendingAvatar: o.getAvatarURL(null, (0, u.getAvatarSize)(u.AvatarSizes.SIZE_80)),
           pendingAvatarDecoration: g.type === i.CollectiblesItemType.AVATAR_DECORATION ? g : null,

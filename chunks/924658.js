@@ -538,6 +538,7 @@ e.exports = Object.freeze({
   CLAN_MEMBER_APPLICATION_REPORT_REASON_OTHER_PLACEHOLDER: "Please provide more details",
   CLAN_MEMBER_APPLICATION_REPORT_MODAL_HEADER: "Report Application",
   CLAN_MEMBER_APPLICATION_REPORT_DESCRIPTION: "Report {username}'s application for the following reason:",
+  CLAN_MEMBER_APPLICATION_REPORT_BAN: "Ban {username} from this server. This will reject the current application.",
   QUESTS_MOBILE_EMBED_UNKNOWN_TITLE: "This is an invalid quest",
   QUESTS_MOBILE_EMBED_UNKNOWN_BODY: "Check to confirm you're using a valid quest URL",
   QUESTS_MOBILE_EMBED_UNSUPPORTED_TITLE: "This Quest is not available on mobile"

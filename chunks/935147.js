@@ -25,7 +25,7 @@ var a = s("735250"),
   h = s("466111"),
   C = s("626135"),
   A = s("74538"),
-  p = s("962746"),
+  p = s("589266"),
   O = s("296810"),
   R = s("433411"),
   x = s("532432"),
@@ -108,6 +108,7 @@ function G(e) {
           }), U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
         profilePreview: (0, a.jsx)(p.default, {
+          location: "TryOutPremiumSection",
           user: B,
           onAvatarChange: m.setTryItOutAvatar,
           onBannerChange: m.setTryItOutBanner,
