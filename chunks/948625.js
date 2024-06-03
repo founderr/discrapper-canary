@@ -2,6 +2,9 @@
 l.r(t), l.d(t, {
   COLLECTIBLES_HEADERS: function() {
     return L
+  },
+  getOverflowImages: function() {
+    return T
   }
 });
 var a = l("180650"),
@@ -83,4 +86,12 @@ let v = {
       label: I.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
     }
-  }]
+  }],
+  T = (e, t) => {
+    let {
+      overflowSrcStatic: l,
+      overflowSrcAnimated: a,
+      overflowSrcAnimatedBackground: s
+    } = e;
+    return null == l ? [] : t || null == a ? [l] : null == s ? [a] : [s, a]
+  }

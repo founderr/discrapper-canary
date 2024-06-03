@@ -1,9 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
-  PaginationArrowIconType: function() {
-    return n
-  }
-}), i("47120");
+i.r(t), i("47120");
 var n, a, l, s, r = i("735250"),
   o = i("470079"),
   c = i("120356"),
