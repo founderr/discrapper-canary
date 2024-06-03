@@ -19,8 +19,8 @@ var a = l("735250"),
   E = l("594190"),
   _ = l("695346"),
   h = l("494620"),
-  C = l("592125"),
-  N = l("650774"),
+  N = l("592125"),
+  C = l("650774"),
   g = l("430824"),
   p = l("131951"),
   A = l("944486"),
@@ -141,9 +141,9 @@ function X(e) {
 function $(e) {
   let {
     guildId: t
-  } = e, l = (0, r.useStateFromStores)([N.default], () => {
+  } = e, l = (0, r.useStateFromStores)([C.default], () => {
     var e;
-    return null !== (e = N.default.getMemberCount(t)) && void 0 !== e ? e : 0
+    return null !== (e = C.default.getMemberCount(t)) && void 0 !== e ? e : 0
   }), s = _.NotifyFriendsOnGoLive.useSetting(), o = n.useCallback((e, t) => {
     _.NotifyFriendsOnGoLive.updateSetting(t), j.default.track(K.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
       value: t
@@ -166,8 +166,9 @@ function $(e) {
 function ee(e) {
   let {
     enabled: t,
-    onChange: l
-  } = e, s = n.useCallback((e, t) => {
+    onChange: l,
+    screen: s
+  } = e, r = n.useCallback((e, t) => {
     l(t)
   }, [l]);
   return (0, a.jsx)(u.FormItem, {
@@ -175,10 +176,10 @@ function ee(e) {
     children: (0, a.jsx)(u.Checkbox, {
       value: t,
       type: u.Checkbox.Types.INVERTED,
-      onChange: s,
+      onChange: r,
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
-        children: Y.default.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL
+        children: s ? Y.default.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL : Y.default.Messages.GO_LIVE_MODAL_ENABLE_APP_SOUNDSHARE_LABEL
       })
     })
   })
@@ -194,7 +195,7 @@ function et(e) {
     sourceChanged: d,
     selectedGuildId: E,
     targetGuildPremiumTier: _,
-    selectSource: N,
+    selectSource: C,
     selectGuild: g,
     sound: I,
     onClose: R,
@@ -205,55 +206,56 @@ function et(e) {
     onChangeSource: O,
     onChangeAudioDevice: j,
     onChangeGuild: D,
-    onChangeSound: G,
-    isAnimationDone: V
-  } = e, H = (0, r.useStateFromStores)([A.default, C.default], () => C.default.getChannel(A.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([U.default], () => U.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([U.default], () => U.default.problematicGPUDriver), et = (0, r.useStateFromStores)([x.default], () => x.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
-    autoTrackExposure: !el
-  }), en = (0, w.default)();
-  null != t && t.id.startsWith("screen") && !p.default.supportsScreenSoundshare() && (en = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
-  let es = el ? (0, a.jsx)(S.default, {
+    onChangeSound: P,
+    isAnimationDone: G
+  } = e, V = (0, r.useStateFromStores)([A.default, N.default], () => N.default.getChannel(A.default.getVoiceChannelId())), H = (0, r.useStateFromStores)([U.default], () => U.default.GPUDriversOutdated), W = (0, r.useStateFromStores)([U.default], () => U.default.problematicGPUDriver), q = (0, r.useStateFromStores)([x.default], () => x.default.getCurrentUser()), et = (0, f.useEnableClips)(), el = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+    autoTrackExposure: !et
+  }), ea = (0, w.default)();
+  null != t && t.id.startsWith("screen") && !p.default.supportsScreenSoundshare() && (ea = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
+  let en = et ? (0, a.jsx)(S.default, {
       guildId: E,
-      isAnimationDone: V
-    }) : ea ? (0, a.jsx)(m.default, {}) : void 0,
-    ei = !!(null == t ? void 0 : t.id.startsWith("camera")),
-    er = null != et && et.verified && !et.bot,
-    eu = null != H && !(0, c.isPrivateGuildChannel)(H),
-    eo = !(0, r.useStateFromStores)([p.default], () => p.default.getHardwareH264());
+      isAnimationDone: G
+    }) : el ? (0, a.jsx)(m.default, {}) : void 0,
+    es = !!(null == t ? void 0 : t.id.startsWith("camera")),
+    ei = null != q && q.verified && !q.bot,
+    er = null != V && !(0, c.isPrivateGuildChannel)(V),
+    eu = !(0, r.useStateFromStores)([p.default], () => p.default.getHardwareH264());
   return (0, a.jsxs)(n.Fragment, {
-    children: [ei ? (0, a.jsx)(y.default, {
+    children: [es ? (0, a.jsx)(y.default, {
       selectedSource: t,
       onChangeVideoDeviceSource: O,
       onChangeAudioDevice: j
     }) : (0, a.jsxs)("div", {
       children: [(0, a.jsx)(Z, {
-        selectSource: N,
+        selectSource: C,
         sourceChanged: d,
         onChangeSource: O,
         selectedSource: t
-      }), null != en ? (0, a.jsx)(X, {
-        text: en
-      }) : null, (0, P.isWindows)() && null != t && t.id.startsWith("screen") && null == en ? (0, a.jsx)(ee, {
+      }), null != ea ? (0, a.jsx)(X, {
+        text: ea
+      }) : null, null != t && null == ea ? (0, a.jsx)(ee, {
         enabled: I,
-        onChange: G
+        onChange: P,
+        screen: t.id.startsWith("screen")
       }) : null]
     }), g && null != E ? (0, a.jsx)(J, {
       guildId: E,
       onChange: D
-    }) : null, null != H ? (0, a.jsx)(F.default, {
-      channel: H
+    }) : null, null != V ? (0, a.jsx)(F.default, {
+      channel: V
     }) : (0, a.jsx)(k.default, {
       guildId: E,
       selectedChannelId: s,
       onChangeSelectedChannelId: M
-    }), null != E && er && eu ? (0, a.jsx)($, {
+    }), null != E && ei && er ? (0, a.jsx)($, {
       guildId: E
-    }) : null, W ? (0, a.jsx)(X, {
+    }) : null, H ? (0, a.jsx)(X, {
       text: Y.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
-    }) : null, q ? (0, a.jsx)(X, {
+    }) : null, W ? (0, a.jsx)(X, {
       text: Y.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
         helpCenterLink: b.default.getArticleURL(K.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })
-    }) : null, eo && (0, a.jsx)(h.default, {
+    }) : null, eu && (0, a.jsx)(h.default, {
       look: h.InfoBoxLooks.WARNING,
       className: Q.hardwareWarning,
       children: Y.default.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
@@ -274,7 +276,7 @@ function et(e) {
       onFPSChange: T,
       onResolutionChange: v,
       onPresetChange: L,
-      captureDeviceSelected: ei
-    }), es]
+      captureDeviceSelected: es
+    }), en]
   })
 }

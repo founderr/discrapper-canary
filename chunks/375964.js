@@ -9686,6 +9686,7 @@ e.exports = Object.freeze({
   GO_LIVE_WATCHING_USER: "Watching {username}",
   GO_LIVE_MODAL_NOTIFY_FRIENDS_CHECKBOX_LABEL: "Notify my friends in this server that I'm streaming.",
   GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL: "Also share system audio.",
+  GO_LIVE_MODAL_ENABLE_APP_SOUNDSHARE_LABEL: "Also share application audio.",
   GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_INITIAL_UPSELL: "Get a taste of Nitro. Try out HD streaming, our treat!",
   GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_UPSELL_TOOLTIP: "You are currently streaming in high resolution",
   GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE: "Lock in endless HD streaming",
