@@ -12,12 +12,13 @@ let I = new Map,
   S = T,
   h = !1,
   A = new Set;
-let m = () => {
-  f = I, S = T, r = void 0, h = !1, A = new Set, i = void 0
-};
-class N extends(s = d.default.Store) {
+let m = null,
+  N = () => {
+    f = I, S = T, r = void 0, h = !1, A = new Set, i = void 0
+  };
+class p extends(s = d.default.Store) {
   initialize() {
-    this.syncWith([c.default], m)
+    this.syncWith([c.default], N)
   }
   get isFetchingCategories() {
     return h
@@ -28,8 +29,11 @@ class N extends(s = d.default.Store) {
   get error() {
     return i
   }
-  get lastFetched() {
+  get lastSuccessFetched() {
     return r
+  }
+  get lastFetchOptions() {
+    return m
   }
   get categories() {
     return f
@@ -48,14 +52,14 @@ class N extends(s = d.default.Store) {
     return this.getCategory(null == t ? void 0 : t.categorySkuId)
   }
 }
-l = "CollectiblesCategoryStore", (o = "displayName") in(a = N) ? Object.defineProperty(a, o, {
+l = "CollectiblesCategoryStore", (o = "displayName") in(a = p) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new N(_.default, {
+}) : a[o] = l, t.default = new p(_.default, {
   COLLECTIBLES_CATEGORIES_FETCH: e => {
-    h = !0, i = void 0
+    h = !0, i = void 0, m = null != e.options ? e.options : null
   },
   COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
     0 === e.categories.length ? (f = I, S = T) : !(0, u.isEqual)([...f.values()], e.categories) && (f = new Map(e.categories.map(e => [e.skuId, e])), S = new Map((0, E.getProductsFromCategories)(f).map(e => [e.skuId, e]))), r = Date.now(), h = !1, i = void 0
@@ -86,5 +90,5 @@ l = "CollectiblesCategoryStore", (o = "displayName") in(a = N) ? Object.definePr
     } = e;
     (A = new Set(A)).delete(t), i = n
   },
-  LOGOUT: m
+  LOGOUT: N
 })
