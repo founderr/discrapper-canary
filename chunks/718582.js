@@ -147,7 +147,7 @@ function Q(e, t) {
     } = e;
     return t.id
   }), t, e)
-}
+}(r = i || (i = {})).CARD = "card", r.JOIN_BUTTON = "join_button";
 
 function q(e) {
   let t = e.id,
@@ -239,7 +239,42 @@ function q(e) {
     p = (0, l.useStateFromStores)([b.default], () => b.default.getUserAffinities()),
     O = N && p.length > 0,
     C = [...m, ...E];
-  return r !== C.length && (i((function(e, t) {
+  return r !== C.length && C.length > 0 && (i((function(e) {
+    let t = [...e],
+      n = t[0].category,
+      i = t.findIndex(e => e.category === j.CardCategory.EVENT),
+      r = t.findIndex(e => e.category === j.CardCategory.HANGOUT && e.isStage),
+      s = t.findIndex(e => e.category === j.CardCategory.EMBEDDED_ACTIVITY),
+      a = t.findIndex(e => e.category === j.CardCategory.HANGOUT && e.streamUserIds.length > 0),
+      o = t.findIndex(e => e.category === j.CardCategory.HANGOUT && e.videoUserIds.length > 0),
+      l = t.findIndex(e => e.category === j.CardCategory.GAMING);
+    if (n === j.CardCategory.EVENT && 0 === i || n === j.CardCategory.HANGOUT && 0 === r || n === j.CardCategory.EMBEDDED_ACTIVITY && 0 === s || n === j.CardCategory.HANGOUT && 0 === a && -1 === r || n === j.CardCategory.HANGOUT && 0 === o && -1 === r && -1 === a || n === j.CardCategory.GAMING && 0 === l || -1 === i && -1 === r && -1 === s && -1 === a && -1 === o && -1 === l) return e;
+    if (-1 !== i) {
+      let e = t.splice(i, 1);
+      return t.splice(0, 0, e[0]), t
+    }
+    if (-1 !== r) {
+      let e = t.splice(r, 1);
+      return t.splice(0, 0, e[0]), t
+    }
+    if (-1 !== s) {
+      let e = t.splice(s, 1);
+      return t.splice(0, 0, e[0]), t
+    }
+    if (-1 !== a) {
+      let e = t.splice(a, 1);
+      return t.splice(0, 0, e[0]), t
+    }
+    if (-1 !== o) {
+      let e = t.splice(o, 1);
+      return t.splice(0, 0, e[0]), t
+    }
+    if (-1 !== l) {
+      let e = t.splice(l, 1);
+      return t.splice(0, 0, e[0]), t
+    }
+    return e
+  })(function(e, t) {
     return (0, a.orderBy)(e, [e => (function(e, t) {
       let n = e => e > 0 ? Math.log(e + 1) : 0,
         i = e => e.map(e => {
@@ -289,8 +324,8 @@ function q(e) {
       }
       return s = s > 0 ? s * r : 1e-5 * r
     })(e, t)], ["desc"])
-  })(C, O).slice(0, 3)), u(C.length)), n
-}(r = i || (i = {})).CARD = "card", r.JOIN_BUTTON = "join_button";
+  }(C, O)).slice(0, 3)), u(C.length)), n
+}
 let J = e => e => [W.ActivityTypes.PLAYING, W.ActivityTypes.WATCHING].includes(e.type) && (null != e.assets || null != e.state || null != e.details || null != e.party) && !1;
 
 function $(e) {
