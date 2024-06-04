@@ -9970,7 +9970,7 @@ e.exports = Object.freeze({
   MOBILE_CUSTOM_GIFT_SUCCESS_BODY: "Delivered with ninja-like efficiency (and zero paper waste).",
   PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA: "View all Nitro perks",
   OUTBOUND_PROMO_UPSELL_EXPERIMENT_GIFTS_DESCRIPTION: "Claim all gifts with [Nitro](onClick).",
-  OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE: "Hey, take a sneak peak of surprises that come with Nitro.",
+  OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE: "Hey, take a sneak peek of the surprises that come with Nitro.",
   OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2: "Don’t miss out! Claim surprises in your gift inventory when you have Nitro.",
   PREMIUM_CUSTOM_NOTIFICATION_SOUND: "Notification Sound",
   PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_DESCRIPTION_V2: "Set a unique sound for **desktop notifications** from $[](guildName). Now available in Beta with Nitro.",
