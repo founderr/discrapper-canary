@@ -38,7 +38,8 @@ function f(e, t) {
     O = o.default.isViewingRoles(T),
     {
       computedPermissions: C,
-      hasBaseAccessPermissions: R
+      hasBaseAccessPermissions: R,
+      hasSendMessagesPermission: g
     } = A(E);
   return {
     context: E,
@@ -48,6 +49,7 @@ function f(e, t) {
     commandType: t,
     computedPermissions: C,
     hasBaseAccessPermissions: R,
+    hasSendMessagesPermission: g,
     allowNsfw: h(E, m, f)
   }
 }
@@ -75,7 +77,8 @@ function S(e, t) {
   return i.useMemo(() => {
     let {
       computedPermissions: e,
-      hasBaseAccessPermissions: i
+      hasBaseAccessPermissions: i,
+      hasSendMessagesPermission: r
     } = A(n);
     return {
       context: n,
@@ -85,6 +88,7 @@ function S(e, t) {
       isImpersonating: S,
       computedPermissions: e,
       hasBaseAccessPermissions: i,
+      hasSendMessagesPermission: r,
       allowNsfw: h(n, T, a)
     }
   }, [t, n, S, f, E, T, a])
@@ -98,12 +102,14 @@ function A(e) {
   let t;
   if (e instanceof u.ChannelRecordBase && e.isPrivate()) return {
     computedPermissions: r.deserialize(0),
-    hasBaseAccessPermissions: !0
+    hasBaseAccessPermissions: !0,
+    hasSendMessagesPermission: !0
   };
   let n = E.default.computePermissions(e);
   return t = !!r.has(n, T.Permissions.ADMINISTRATOR) || (e instanceof u.ChannelRecordBase ? r.has(n, T.Permissions.VIEW_CHANNEL) && r.has(n, T.Permissions.USE_APPLICATION_COMMANDS) : r.has(n, T.Permissions.VIEW_CHANNEL)), {
     computedPermissions: n,
-    hasBaseAccessPermissions: t
+    hasBaseAccessPermissions: t,
+    hasSendMessagesPermission: r.has(n, T.Permissions.SEND_MESSAGES)
   }
 }
 

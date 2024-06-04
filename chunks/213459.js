@@ -596,7 +596,8 @@ function et(e) {
       let i, r;
       let s = e[n],
         a = t[n],
-        o = c.get(n);
+        o = c.get(n),
+        u = null != s;
       if (null != s && null != a) {
         for (let e in i = a.descriptor, r = [], a.commands) {
           let t = a.commands[e];
@@ -609,8 +610,8 @@ function et(e) {
           }
       } else null != s ? (i = s.descriptor, r = Object.values(s.commands)) : null != a ? (i = a.descriptor, r = Object.values(a.commands)) : null != o && (i = o.descriptor, r = Object.values(o.commands));
       l()(null != i, "Failed to select application descriptor"), l()(null != r, "Failed to select list of application commands");
-      let u = en(i, r, P);
-      null != u && M.push(u)
+      let d = en(i, r, u, P);
+      null != d && M.push(d)
     }
     N.applications.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), M.sort((e, t) => {
       if (N.applications.useScore && m === g.ScoreMethod.APPLICATION_ONLY) {
@@ -628,7 +629,7 @@ function et(e) {
     })
   }
   if (D.length > 0 || !0 === h) {
-    let e = en(p.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], D, P);
+    let e = en(p.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], D, !0, P);
     null != e && M.push(e)
   }
   let U = M.flatMap(e => e.data.map(t => ({
@@ -667,25 +668,30 @@ function et(e) {
   }
 }
 
-function en(e, t, n) {
-  let i, {
-      query: r,
-      splitQuery: s,
-      allowEmptySections: a,
-      scoreMethod: o,
-      permissionContext: l
-    } = n,
+function en(e, t, n, i) {
+  let r, {
+      query: s,
+      splitQuery: a,
+      allowEmptySections: o,
+      scoreMethod: l,
+      permissionContext: u
+    } = i,
     {
-      context: u,
-      userId: d,
-      roleIds: _,
-      isImpersonating: c
-    } = l,
-    E = null != u.guild_id ? M.computeAllowedForUser(e.permissions, u.guild_id, d, _, c) : null,
-    I = null != u.guild_id ? M.computeAllowedForChannel(e.permissions, u, u.guild_id) : null,
-    T = [];
-  for (let n of t) M.hasAccess(n, l, E, I, e.botId) === M.HasAccessResult.ALLOWED && T.push(n);
-  return 0 !== (i = o !== g.ScoreMethod.NONE && null != r && null != s ? function(e, t, n, i, r) {
+      context: d,
+      userId: _,
+      roleIds: c,
+      isImpersonating: E
+    } = u,
+    I = null != d.guild_id ? M.computeAllowedForUser(e.permissions, d.guild_id, _, c, E) : null,
+    T = null != d.guild_id ? M.computeAllowedForChannel(e.permissions, d, d.guild_id) : null,
+    f = [];
+  for (let i of t) M.hasAccess(i, u, {
+    applicationAllowedForUser: I,
+    applicationAllowedForChannel: T,
+    commandBotId: e.botId,
+    isGuildInstalled: n
+  }) === M.HasAccessResult.ALLOWED && f.push(i);
+  return 0 !== (r = l !== g.ScoreMethod.NONE && null != s && null != a ? function(e, t, n, i, r) {
     let s;
     let a = [];
     if (r === g.ScoreMethod.APPLICATION_ONLY || r === g.ScoreMethod.COMMAND_OR_APPLICATION) {
@@ -725,9 +731,9 @@ function en(e, t, n) {
       })
     }
     return a
-  }(r, s, T, e, o) : T).length || a ? ((o === g.ScoreMethod.NONE || o === g.ScoreMethod.APPLICATION_ONLY) && i.sort((e, t) => el(e.displayName, t.displayName)), {
+  }(s, a, f, e, l) : f).length || o ? ((l === g.ScoreMethod.NONE || l === g.ScoreMethod.APPLICATION_ONLY) && r.sort((e, t) => el(e.displayName, t.displayName)), {
     section: e,
-    data: i
+    data: r
   }) : null
 }
 

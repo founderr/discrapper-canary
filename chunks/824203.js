@@ -31,7 +31,11 @@ function d(e, t, n) {
   if (void 0 !== m) {
     let n = (0, l.computeAllowedForChannel)(m.permissions, t, null == t ? void 0 : t.guild_id),
       i = (0, l.computeAllowedForUser)(m.permissions, f.guild_id, S, h, A);
-    if ((0, l.hasAccess)(e, c, i, n, m.botId) === l.HasAccessResult.ALLOWED) return !1
+    if ((0, l.hasAccess)(e, c, {
+        applicationAllowedForUser: i,
+        applicationAllowedForChannel: n,
+        commandBotId: m.botId
+      }) === l.HasAccessResult.ALLOWED) return !1
   }
   let N = null === (_ = E.result) || void 0 === _ ? void 0 : null === (d = _.sections[e.applicationId]) || void 0 === d ? void 0 : d.commands;
   return null != N && e.id in N
