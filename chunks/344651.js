@@ -1064,6 +1064,11 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     type: "NOTIFICATION_CENTER_ITEM_COMPLETED",
     item_enum: e.item_enum
   })
+}), k(["QUESTS_USER_STATUS_UPDATE"], e => {
+  x({
+    type: "QUESTS_USER_STATUS_UPDATE",
+    user_status: e.user_status
+  })
 }), k(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (e, t) => {
   x({
     type: t,
