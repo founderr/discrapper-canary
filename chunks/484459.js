@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return S
   },
   maybeFetchUserProfileForPopout: function() {
-    return T
+    return f
   }
 }), n("411104");
 var i = n("570140"),
@@ -17,10 +17,11 @@ var i = n("570140"),
   d = n("271383"),
   _ = n("342656"),
   c = n("447452"),
-  E = n("621853"),
-  I = n("120569");
+  E = n("877485"),
+  I = n("621853"),
+  T = n("120569");
 
-function T() {
+function f() {
   let e, t, n;
   for (var i, r, s = arguments.length, a = Array(s), o = 0; o < s; o++) a[o] = arguments[o];
   let u = a[0],
@@ -29,20 +30,24 @@ function T() {
   else if (u instanceof l.default && ("object" == typeof d || null == d)) e = u.id, t = u.getAvatarURL(void 0, 80), n = d;
   else throw Error("Invalid arguments");
   if (null == e) return Promise.resolve();
-  let E = (0, _.isInProfileMutualsExperiment)().enabled || (0, c.getSimplifiedProfileExperimentConfig)({
-    location: "maybeFetchUserProfileForPopout",
-    autoTrackExposure: !1
-  }).basicsEnabled;
-  return f(e, t, {
-    withMutualFriends: null !== (i = null == n ? void 0 : n.withMutualFriends) && void 0 !== i ? i : E,
-    withMutualGuilds: null !== (r = null == n ? void 0 : n.withMutualGuilds) && void 0 !== r ? r : E,
+  let I = (0, E.getSimplifiedProfileFriendingExperimentConfig)({
+      location: "maybeFetchUserProfileForPopout",
+      autoTrackExposure: !1
+    }),
+    T = (0, _.isInProfileMutualsExperiment)().enabled || (0, c.getSimplifiedProfileExperimentConfig)({
+      location: "maybeFetchUserProfileForPopout",
+      autoTrackExposure: !1
+    }).basicsEnabled || I.originalFriendingEnabled || I.improvedFriendingEnabled;
+  return S(e, t, {
+    withMutualFriends: null !== (i = null == n ? void 0 : n.withMutualFriends) && void 0 !== i ? i : T,
+    withMutualGuilds: null !== (r = null == n ? void 0 : n.withMutualGuilds) && void 0 !== r ? r : T,
     ...n
   })
 }
-async function f(e, t) {
+async function S(e, t) {
   var n, l, _;
   let c, {
-    withMutualGuilds: T = !1,
+    withMutualGuilds: E = !1,
     withMutualFriendsCount: f = !1,
     withMutualFriends: S = !1,
     friendToken: h,
@@ -53,23 +58,23 @@ async function f(e, t) {
     abortSignal: O
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   if ("" === e) return;
-  (0, o.fetchUserProfileEffects)(), null != t && (0, s.maybeFetchColors)(t), null != N && !T && (T = !0), null != N && (c = null !== (l = null === (n = (0, a.getVisibleConnectionsRole)({
+  (0, o.fetchUserProfileEffects)(), null != t && (0, s.maybeFetchColors)(t), null != N && !E && (E = !0), null != N && (c = null !== (l = null === (n = (0, a.getVisibleConnectionsRole)({
     guildMember: d.default.getMember(N, e),
     channel: u.default.getChannel(p)
   })) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : void 0);
-  let C = E.default.getUserProfile(e),
-    R = E.default.getMutualGuilds(e),
-    g = E.default.getMutualFriends(e),
-    L = E.default.getMutualFriendsCount(e),
-    v = E.default.isFetchingProfile(e),
-    D = !Array.isArray(R) && T,
+  let C = I.default.getUserProfile(e),
+    R = I.default.getMutualGuilds(e),
+    g = I.default.getMutualFriends(e),
+    L = I.default.getMutualFriendsCount(e),
+    v = I.default.isFetchingProfile(e),
+    D = !Array.isArray(R) && E,
     M = !Array.isArray(g) && S,
     y = null == L && f,
     P = (null == C ? void 0 : C.profileFetchFailed) || !v && (D || y || M),
-    U = A ? I.default : void 0,
+    U = A ? T.default : void 0,
     b = !1;
-  null != N && (b = null == E.default.getGuildMemberProfile(e, N)), !(!P && !b && (v || Date.now() - (null !== (_ = null == C ? void 0 : C.lastFetched) && void 0 !== _ ? _ : 0) < 6e4)) && (m ? await i.default.wait(() => (0, r.fetchProfile)(e, {
-    withMutualGuilds: T,
+  null != N && (b = null == I.default.getGuildMemberProfile(e, N)), !(!P && !b && (v || Date.now() - (null !== (_ = null == C ? void 0 : C.lastFetched) && void 0 !== _ ? _ : 0) < 6e4)) && (m ? await i.default.wait(() => (0, r.fetchProfile)(e, {
+    withMutualGuilds: E,
     withMutualFriends: S,
     withMutualFriendsCount: f,
     friendToken: h,
@@ -77,7 +82,7 @@ async function f(e, t) {
     connectionsRoleId: c,
     abortSignal: O
   }, U)) : await (0, r.fetchProfile)(e, {
-    withMutualGuilds: T,
+    withMutualGuilds: E,
     withMutualFriends: S,
     withMutualFriendsCount: f,
     friendToken: h,

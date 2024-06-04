@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return c
   }
 });
 var i = n("735250");
@@ -11,25 +11,31 @@ var r = n("512722"),
   a = n("442837"),
   o = n("594174"),
   l = n("447452"),
-  u = n("788197"),
-  d = n("969835");
+  u = n("877485"),
+  d = n("788197"),
+  _ = n("969835");
 
-function _(e) {
+function c(e) {
   let {
     location: t,
     userId: n,
     user: r,
-    ..._
+    ...c
   } = e, {
-    basicsEnabled: c
+    basicsEnabled: E
   } = (0, l.useSimplifiedProfileExperiment)({
     location: t
-  }), E = (0, a.useStateFromStores)([o.default], () => o.default.getUser(n), [n]), I = null != r ? r : E;
-  return (s()(null != I, "Unexpected missing user"), !c || I.bot || I.isNonUserBot() || I.isClyde()) ? (0, i.jsx)(u.default, {
-    ..._,
-    user: I
+  }), {
+    originalFriendingEnabled: I,
+    improvedFriendingEnabled: T
+  } = (0, u.useSimplifiedProfileFriendingExperiment)({
+    location: t
+  }), f = (0, a.useStateFromStores)([o.default], () => o.default.getUser(n), [n]), S = null != r ? r : f;
+  return (s()(null != S, "Unexpected missing user"), (E || I || T) && !S.bot && !S.isNonUserBot() && !S.isClyde()) ? (0, i.jsx)(_.default, {
+    ...c,
+    user: S
   }) : (0, i.jsx)(d.default, {
-    ..._,
-    user: I
+    ...c,
+    user: S
   })
 }

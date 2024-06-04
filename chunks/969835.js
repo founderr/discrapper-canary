@@ -100,6 +100,7 @@ function D(e) {
               channelId: D,
               onClose: P
             }), (0, i.jsx)(A.default, {
+              profileType: g.UserProfileTypes.BITE_SIZE,
               user: t,
               acceptFriendRequestColor: w ? a.tokens.colors.BUTTON_OUTLINE_POSITIVE_BORDER : null
             }), (0, i.jsx)(N.default, {

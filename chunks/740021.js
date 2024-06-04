@@ -1,95 +1,103 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return R
   }
 }), l("47120");
 var s = l("735250");
 l("470079");
-var a = l("442837"),
-  i = l("974674"),
+var i = l("442837"),
+  a = l("974674"),
   n = l("696826"),
-  r = l("420660"),
-  o = l("233440"),
+  o = l("420660"),
+  r = l("233440"),
   u = l("314897"),
   d = l("158776"),
   c = l("699516"),
   f = l("998502"),
-  S = l("785717"),
-  E = l("505737"),
-  I = l("204197"),
-  m = l("78675"),
-  _ = l("438163"),
-  v = l("652853"),
+  S = l("877485"),
+  E = l("785717"),
+  I = l("505737"),
+  m = l("204197"),
+  _ = l("78675"),
+  v = l("438163"),
+  p = l("652853"),
   T = l("900687"),
   g = l("228168"),
-  A = l("182294"),
-  p = l("602091"),
-  U = l("231338"),
-  x = l("566483");
-let C = f.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+  x = l("182294"),
+  A = l("602091"),
+  C = l("231338"),
+  N = l("566483");
+let U = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
-function N(e) {
+function R(e) {
   let {
     user: t,
     displayProfile: l,
-    activity: i,
+    activity: a,
     customStatusActivity: f,
-    guildId: N,
+    guildId: R,
     channelId: h,
-    originalFriendingEnabled: R,
     transitionState: P,
-    onClose: M
+    viewProfileItem: M,
+    onClose: j
   } = e, {
-    theme: j
-  } = (0, v.useUserProfileThemeContext)(), y = (0, E.default)(t.id, N), {
-    avatarSrc: L,
-    eventHandlers: O,
-    avatarDecorationSrc: F
-  } = (0, I.default)({
+    theme: y
+  } = (0, p.useUserProfileThemeContext)(), F = (0, I.default)(t.id, R), {
+    avatarSrc: O,
+    eventHandlers: L,
+    avatarDecorationSrc: D
+  } = (0, m.default)({
     user: t,
     guildId: null == l ? void 0 : l.guildId,
-    size: A.AvatarSizes.SIZE_120
+    size: x.AvatarSizes.SIZE_120
   }), {
-    trackUserProfileAction: D
-  } = (0, S.useUserProfileAnalyticsContext)(), b = (0, a.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), B = (0, a.useStateFromStores)([u.default], () => u.default.getId() === t.id), [G, k] = (0, a.useStateFromStoresArray)([d.default], () => {
+    originalFriendingEnabled: b,
+    improvedFriendingEnabled: B
+  } = (0, S.useSimplifiedProfileFriendingExperiment)({
+    location: "SimplifiedUserProfileModalHeader"
+  }), {
+    trackUserProfileAction: G
+  } = (0, E.useUserProfileAnalyticsContext)(), k = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), w = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [Y, H] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, o.shouldDisableUserPresenceInChannel)(t, h) ? [U.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [U.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [C.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [C.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
-    children: [(0, s.jsx)(m.default, {
+    children: [(0, s.jsx)(_.default, {
       user: t,
       displayProfile: l,
       profileType: g.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
     }), (0, s.jsx)("div", {
-      className: x.inner,
+      className: N.inner,
       children: (0, s.jsxs)("div", {
-        ...O,
-        children: [(0, s.jsx)(C, {
-          src: L,
-          avatarDecoration: F,
-          size: A.AvatarSizes.SIZE_120,
-          className: x.avatar,
-          status: G,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(j),
+        ...L,
+        children: [(0, s.jsx)(U, {
+          src: O,
+          avatarDecoration: D,
+          size: x.AvatarSizes.SIZE_120,
+          className: N.avatar,
+          status: Y,
+          statusBackdropColor: (0, n.getStatusBackdropColor)(y),
           "aria-label": t.username,
-          isMobile: k,
+          isMobile: H,
           statusTooltip: !0,
           statusTooltipDelay: g.USER_PROFILE_TOOLTIP_DELAY
         }), (0, s.jsx)(T.default, {
           user: t,
-          isCurrentUser: B,
-          guildId: N,
-          canDM: y,
-          relationshipType: b,
-          originalFriendingEnabled: R,
-          trackUserProfileAction: D,
-          onClose: M
-        }), (0, s.jsx)(_.UserProfileCustomStatusBubble, {
+          isCurrentUser: w,
+          guildId: R,
+          canDM: F,
+          relationshipType: k,
+          originalFriendingEnabled: b,
+          improvedFriendingEnabled: B,
+          viewProfileItem: M,
+          trackUserProfileAction: G,
+          onClose: j
+        }), (0, s.jsx)(v.UserProfileCustomStatusBubble, {
           statusActivity: f,
           profileType: g.UserProfileTypes.FULL_SIZE,
-          hasEntered: P === p.ModalTransitionState.ENTERED
+          hasEntered: P === A.ModalTransitionState.ENTERED
         })]
       })
     })]

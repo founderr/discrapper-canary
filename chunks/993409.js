@@ -14,19 +14,19 @@ var r = n("120356"),
 
 function u(e) {
   let {
-    icon: t,
-    text: n,
+    text: t,
+    icon: n,
     compact: r,
     className: u,
     innerClassName: d,
     ..._
-  } = e, c = (0, i.jsx)(t, {
+  } = e, c = null != n ? (0, i.jsx)(n, {
     width: 16,
     height: 16,
     color: "currentColor"
-  });
+  }) : null;
   return r ? (0, i.jsx)(o.TooltipContainer, {
-    text: n,
+    text: t,
     "aria-label": _["aria-label"],
     children: (0, i.jsx)(a.Button, {
       className: s()(l.compactButton, u),
@@ -45,6 +45,6 @@ function u(e) {
     look: a.Button.Looks.FILLED,
     size: a.Button.Sizes.MEDIUM,
     ..._,
-    children: [c, n]
+    children: [c, t]
   })
 }

@@ -49,7 +49,8 @@ function A(e) {
           children: [(0, a.jsxs)(m.default, {
             profileType: T.UserProfileTypes.PANEL,
             children: [(0, a.jsx)(p.default, {
-              user: t
+              user: t,
+              profileType: T.UserProfileTypes.PANEL
             }), (0, a.jsx)(E.default, {
               user: t,
               profileType: T.UserProfileTypes.PANEL

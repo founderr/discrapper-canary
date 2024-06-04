@@ -1,56 +1,77 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return S
+    return v
   }
 });
 var s = l("735250");
 l("470079");
-var a = l("741308"),
-  i = l("484404"),
-  n = l("681837"),
-  r = l("502762"),
-  o = l("530"),
-  u = l("616140"),
-  d = l("228168"),
-  c = l("602091"),
-  f = l("854898");
+var i = l("442837"),
+  a = l("699516"),
+  n = l("877485"),
+  o = l("741308"),
+  r = l("484404"),
+  u = l("681837"),
+  d = l("91433"),
+  c = l("502762"),
+  f = l("530"),
+  S = l("616140"),
+  E = l("228168"),
+  I = l("981631"),
+  m = l("602091"),
+  _ = l("854898");
 
-function S(e) {
+function v(e) {
   let {
     user: t,
-    displayProfile: l,
-    initialSection: S,
-    autoFocusNote: E,
-    transitionState: I,
-    onClose: m
-  } = e;
+    guildId: l,
+    channelId: v,
+    displayProfile: p,
+    initialSection: T,
+    autoFocusNote: g,
+    friendToken: x,
+    transitionState: A,
+    onClose: C
+  } = e, N = (0, i.useStateFromStores)([a.default], () => a.default.getRelationshipType(t.id)), {
+    originalFriendingEnabled: U,
+    improvedFriendingEnabled: R
+  } = (0, n.useSimplifiedProfileFriendingExperiment)({
+    location: "SimplifiedUserProfileModalBody"
+  });
   return (0, s.jsxs)("div", {
-    className: f.container,
-    children: [(0, s.jsx)(o.default, {
+    className: _.container,
+    children: [(0, s.jsx)(f.default, {
       user: t,
-      profileType: d.UserProfileTypes.FULL_SIZE,
-      guildId: null == l ? void 0 : l.guildId,
-      pronouns: null == l ? void 0 : l.pronouns,
+      profileType: E.UserProfileTypes.FULL_SIZE,
+      guildId: null == p ? void 0 : p.guildId,
+      pronouns: null == p ? void 0 : p.pronouns,
       nicknameVariant: "heading-xl/bold",
-      nicknameIcons: (0, s.jsx)(n.default, {
+      nicknameIcons: (0, s.jsx)(u.default, {
         userId: t.id
       }),
-      tags: (0, s.jsx)(a.default, {
-        displayProfile: l,
-        profileType: d.UserProfileTypes.FULL_SIZE,
-        onClose: m
+      tags: (0, s.jsx)(o.default, {
+        displayProfile: p,
+        profileType: E.UserProfileTypes.FULL_SIZE,
+        onClose: C
       })
-    }), (0, s.jsxs)(r.default.Overlay, {
-      className: f.overlay,
-      children: [I === c.ModalTransitionState.ENTERED && (0, s.jsx)(i.default, {
-        onTooltipClose: m
-      }), (0, s.jsx)(u.default, {
+    }), (R || U) && N === I.RelationshipTypes.PENDING_INCOMING && (0, s.jsx)(c.default.Overlay, {
+      className: _.banner,
+      children: (0, s.jsx)(d.default, {
         user: t,
-        displayProfile: l,
-        initialSection: S,
-        autoFocusNote: E,
-        onClose: m
+        guildId: l,
+        channelId: v,
+        friendToken: x
+      })
+    }), (0, s.jsxs)(c.default.Overlay, {
+      className: _.overlay,
+      children: [A === m.ModalTransitionState.ENTERED && (0, s.jsx)(r.default, {
+        onTooltipClose: C
+      }), (0, s.jsx)(S.default, {
+        user: t,
+        displayProfile: p,
+        initialSection: T,
+        autoFocusNote: g,
+        onClose: C
       })]
     })]
   })

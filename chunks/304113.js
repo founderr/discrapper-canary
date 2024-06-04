@@ -6,9 +6,10 @@ l.r(t), l.d(t, {
 });
 var s = l("735250");
 l("470079");
-var a = l("447452"),
-  i = l("910364"),
-  n = l("107889");
+var i = l("447452"),
+  a = l("877485"),
+  n = l("910364"),
+  o = l("107889");
 
 function r(e) {
   let {
@@ -16,11 +17,16 @@ function r(e) {
     user: l,
     ...r
   } = e, {
-    basicsEnabled: o
-  } = (0, a.useSimplifiedProfileExperiment)({
+    basicsEnabled: u
+  } = (0, i.useSimplifiedProfileExperiment)({
+    location: t
+  }), {
+    originalFriendingEnabled: d,
+    improvedFriendingEnabled: c
+  } = (0, a.useSimplifiedProfileFriendingExperiment)({
     location: t
   });
-  return !o || l.bot || l.isNonUserBot() || l.isClyde() ? (0, s.jsx)(i.default, {
+  return (u || d || c) && !l.bot && !l.isNonUserBot() && !l.isClyde() ? (0, s.jsx)(o.default, {
     ...r,
     user: l
   }) : (0, s.jsx)(n.default, {

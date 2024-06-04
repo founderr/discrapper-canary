@@ -1,15 +1,15 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return h
+    return R
   }
 }), l("47120");
 var s = l("735250"),
-  a = l("470079"),
-  i = l("442837"),
+  i = l("470079"),
+  a = l("442837"),
   n = l("481060"),
-  r = l("727637"),
-  o = l("100527"),
+  o = l("727637"),
+  r = l("100527"),
   u = l("906732"),
   d = l("680295"),
   c = l("158776"),
@@ -20,31 +20,31 @@ var s = l("735250"),
   m = l("502762"),
   _ = l("544989"),
   v = l("301984"),
-  T = l("94918"),
-  g = l("664794"),
-  A = l("806926"),
-  p = l("740021"),
-  U = l("228168"),
-  x = l("981631"),
-  C = l("689938"),
-  N = l("61007");
+  p = l("94918"),
+  T = l("664794"),
+  g = l("806926"),
+  x = l("740021"),
+  A = l("228168"),
+  C = l("981631"),
+  N = l("689938"),
+  U = l("61007");
 
-function h(e) {
+function R(e) {
   let {
     user: t,
     guildId: l,
-    channelId: h,
-    messageId: R,
+    channelId: R,
+    messageId: h,
     roleId: P,
     friendToken: M,
     initialSection: j,
     autoFocusNote: y,
-    transitionState: L,
+    transitionState: F,
     sourceAnalyticsLocations: O = [],
-    onClose: F
-  } = e, D = l === x.ME ? void 0 : l, {
+    onClose: L
+  } = e, D = l === C.ME ? void 0 : l, {
     analyticsLocations: b
-  } = (0, u.default)([...O, o.default.SIMPLIFIED_PROFILE_MODAL]), {
+  } = (0, u.default)([...O, r.default.SIMPLIFIED_PROFILE_MODAL]), {
     originalFriendingEnabled: B
   } = (0, S.useSimplifiedProfileFriendingExperiment)({
     location: "SimplifiedUserProfileModal"
@@ -52,104 +52,114 @@ function h(e) {
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: D,
-    channelId: h,
-    messageId: R,
+    channelId: R,
+    messageId: h,
     roleId: P
-  }), [k, w] = a.useState(D), Y = (0, I.default)(t.id), H = (0, I.default)(t.id, D), V = null == k ? Y : H, {
-    activity: z,
-    customStatusActivity: W
-  } = (0, i.useStateFromStoresObject)([c.default], () => ({
+  }), [k, w] = i.useState(D), Y = (0, I.default)(t.id), H = (0, I.default)(t.id, D), V = null == k ? Y : H, {
+    activity: W,
+    customStatusActivity: z
+  } = (0, a.useStateFromStoresObject)([c.default], () => ({
     activity: c.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t !== x.ActivityTypes.CUSTOM_STATUS
+      return t !== C.ActivityTypes.CUSTOM_STATUS
     }),
     customStatusActivity: c.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t === x.ActivityTypes.CUSTOM_STATUS
+      return t === C.ActivityTypes.CUSTOM_STATUS
     })
-  })), Z = a.createRef(), K = (0, r.default)(Z);
+  })), Z = i.createRef(), K = (0, o.default)(Z), Q = () => (null == H ? void 0 : H.guildId) == null ? null : (null == V ? void 0 : V.guildId) != null ? (0, s.jsx)(n.MenuItem, {
+    id: "view-main-profile",
+    label: N.default.Messages.VIEW_MAIN_PROFILE,
+    subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
+      displayName: f.default.getName(void 0, void 0, t)
+    }),
+    action: () => {
+      G({
+        action: "PRESS_VIEW_MAIN_PROFILE",
+        analyticsLocations: b
+      }), w(void 0)
+    }
+  }) : (0, s.jsx)(n.MenuItem, {
+    id: "view-server-profile",
+    label: N.default.Messages.VIEW_SERVER_PROFILE,
+    subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
+      displayName: f.default.getName(D, R, t)
+    }),
+    action: () => {
+      G({
+        action: "PRESS_VIEW_SERVER_PROFILE",
+        analyticsLocations: b
+      }), w(D)
+    }
+  });
   return (0, s.jsx)(u.AnalyticsLocationProvider, {
     value: b,
     children: (0, s.jsx)(E.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: D,
-      channelId: h,
-      messageId: R,
+      channelId: R,
+      messageId: h,
       roleId: P,
       children: (0, s.jsxs)(n.ModalRoot, {
-        transitionState: L,
-        className: N.root,
+        transitionState: F,
+        className: U.root,
         hideShadow: !0,
-        "aria-label": C.default.Messages.USER_PROFILE_MODAL,
+        "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, s.jsxs)(m.default, {
           user: t,
           displayProfile: V,
-          profileType: U.UserProfileTypes.FULL_SIZE,
+          profileType: A.UserProfileTypes.FULL_SIZE,
           ref: Z,
-          children: [(0, s.jsxs)(_.default, {
-            profileType: U.UserProfileTypes.FULL_SIZE,
-            children: [(0, s.jsx)(T.default, {
+          children: [B ? (0, s.jsx)(_.default, {
+            profileType: A.UserProfileTypes.FULL_SIZE,
+            children: (0, s.jsx)(p.default, {
               user: t,
               guildId: D,
-              channelId: h,
-              onClose: F
-            }), !B && (0, s.jsxs)(s.Fragment, {
-              children: [(0, s.jsx)(v.default, {
-                user: t,
-                friendToken: M
-              }), (0, s.jsx)(g.default, {
-                user: t,
-                profileType: U.UserProfileTypes.FULL_SIZE,
-                guildId: D,
-                viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == V ? void 0 : V.guildId) != null ? (0, s.jsx)(n.MenuItem, {
-                  id: "view-main-profile",
-                  label: C.default.Messages.VIEW_MAIN_PROFILE,
-                  subtext: C.default.Messages.AKA_DISPLAY_NAME.format({
-                    displayName: f.default.getName(void 0, void 0, t)
-                  }),
-                  action: () => {
-                    G({
-                      action: "PRESS_VIEW_MAIN_PROFILE",
-                      analyticsLocations: b
-                    }), w(void 0)
-                  }
-                }) : (0, s.jsx)(n.MenuItem, {
-                  id: "view-server-profile",
-                  label: C.default.Messages.VIEW_SERVER_PROFILE,
-                  subtext: C.default.Messages.AKA_DISPLAY_NAME.format({
-                    displayName: f.default.getName(D, h, t)
-                  }),
-                  action: () => {
-                    G({
-                      action: "PRESS_VIEW_SERVER_PROFILE",
-                      analyticsLocations: b
-                    }), w(D)
-                  }
-                })
-              })]
+              channelId: R,
+              onClose: L
+            })
+          }) : (0, s.jsxs)(_.default, {
+            profileType: A.UserProfileTypes.FULL_SIZE,
+            children: [(0, s.jsx)(p.default, {
+              user: t,
+              guildId: D,
+              channelId: R,
+              onClose: L
+            }), (0, s.jsx)(v.default, {
+              profileType: A.UserProfileTypes.FULL_SIZE,
+              user: t,
+              friendToken: M
+            }), (0, s.jsx)(T.default, {
+              user: t,
+              profileType: A.UserProfileTypes.FULL_SIZE,
+              guildId: D,
+              viewProfileItem: Q()
             })]
-          }), (0, s.jsx)(p.default, {
+          }), (0, s.jsx)(x.default, {
             user: t,
             displayProfile: V,
             guildId: D,
-            channelId: h,
-            activity: z,
-            customStatusActivity: W,
-            originalFriendingEnabled: B,
-            transitionState: L,
-            onClose: F
-          }), (0, s.jsx)(A.default, {
+            channelId: R,
+            activity: W,
+            customStatusActivity: z,
+            transitionState: F,
+            viewProfileItem: Q(),
+            onClose: L
+          }), (0, s.jsx)(g.default, {
             user: t,
+            guildId: D,
+            channelId: R,
             displayProfile: V,
             initialSection: j,
             autoFocusNote: y,
-            transitionState: L,
-            onClose: F
+            friendToken: M,
+            transitionState: F,
+            onClose: L
           })]
         }), (null == V ? void 0 : V.profileEffectId) != null && (0, s.jsx)(d.default, {
           profileEffectId: null == V ? void 0 : V.profileEffectId,

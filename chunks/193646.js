@@ -1,92 +1,95 @@
 "use strict";
 a.r(s), a("653041");
-var u = a("735250");
+var l = a("735250");
 a("470079");
-var l = a("481060"),
-  n = a("239091"),
+var n = a("481060"),
+  u = a("239091"),
   t = a("108843"),
   r = a("100527"),
-  o = a("299206"),
-  i = a("87620"),
+  i = a("299206"),
+  o = a("87620"),
   c = a("505737"),
   d = a("981631"),
   p = a("689938");
 s.default = (0, t.default)(function(e) {
   let {
     user: s,
-    guildId: a,
-    relationshipType: t,
-    originalFriendingEnabled: r,
-    onRemoveFriend: M,
+    isCurrentUser: a,
+    guildId: t,
+    relationshipType: r,
+    originalFriendingEnabled: M = !1,
+    onRemoveFriend: E,
     onBlock: f,
-    onReport: E,
-    onMessage: h,
-    onCopyId: I,
+    onReport: h,
+    onMessage: I,
+    viewProfileItem: N,
+    onCopyId: T,
     onSelect: _
-  } = e, R = s.isNonUserBot(), T = [], N = (0, i.useIsIarUserReportingEnabled)("User Profile Actions Menu"), O = (0, c.default)(s.id, a), b = () => (0, u.jsx)(l.MenuItem, {
+  } = e, O = s.isNonUserBot(), R = (0, o.useIsIarUserReportingEnabled)("User Profile Actions Menu"), b = (0, c.default)(s.id, t), U = () => (0, l.jsx)(n.MenuItem, {
     id: "user-message",
     label: p.default.Messages.USER_POPOUT_MESSAGE,
-    action: h
-  });
-  if (!R) switch (t) {
+    action: I
+  }), g = [];
+  if (!O && !a) switch (r) {
     case d.RelationshipTypes.BLOCKED:
-      T.push((0, u.jsx)(l.MenuItem, {
+      g.push((0, l.jsx)(n.MenuItem, {
         id: "user-unblock",
         label: p.default.Messages.UNBLOCK,
-        action: M
+        action: E
       }));
       break;
     case d.RelationshipTypes.FRIEND:
-      T.push((0, u.jsx)(l.MenuItem, {
+      g.push((0, l.jsx)(n.MenuItem, {
         id: "user-remove",
         label: p.default.Messages.REMOVE_FRIEND,
-        action: M,
+        action: E,
         color: "danger"
-      })), T.push((0, u.jsx)(l.MenuItem, {
+      })), g.push((0, l.jsx)(n.MenuItem, {
         id: "user-block",
         label: p.default.Messages.BLOCK,
         action: f,
         color: "danger"
-      })), N && T.push((0, u.jsx)(l.MenuItem, {
+      })), R && g.push((0, l.jsx)(n.MenuItem, {
         id: "user-report",
         label: p.default.Messages.REPORTS_USER_BUTTON_TITLE,
-        action: E,
+        action: h,
         color: "danger"
       }));
       break;
     case d.RelationshipTypes.NONE:
     case d.RelationshipTypes.PENDING_INCOMING:
     default:
-      T.push((0, u.jsx)(l.MenuItem, {
+      g.push((0, l.jsx)(n.MenuItem, {
         id: "user-block",
         label: p.default.Messages.BLOCK,
         action: f,
         color: "danger"
-      })), N && T.push((0, u.jsx)(l.MenuItem, {
+      })), R && g.push((0, l.jsx)(n.MenuItem, {
         id: "user-report",
         label: p.default.Messages.REPORTS_USER_BUTTON_TITLE,
-        action: E,
+        action: h,
         color: "danger"
       }))
-  }!r && O && T.push(b());
-  let g = (0, o.default)({
-    id: s.id,
-    label: p.default.Messages.COPY_ID_USER,
-    onSuccess: () => {
-      I(), (0, n.closeContextMenu)()
-    }
-  });
-  return (0, u.jsxs)(l.Menu, {
+  }!M && b && g.push(U());
+  let x = (0, i.default)({
+      id: s.id,
+      label: p.default.Messages.COPY_ID_USER,
+      onSuccess: () => {
+        T(), (0, u.closeContextMenu)()
+      }
+    }),
+    C = b && (r === d.RelationshipTypes.NONE || r === d.RelationshipTypes.PENDING_OUTGOING);
+  return (0, l.jsxs)(n.Menu, {
     navId: "user-profile-actions",
     "aria-label": p.default.Messages.USER_ACTIONS_MENU_LABEL,
-    onClose: n.closeContextMenu,
+    onClose: u.closeContextMenu,
     onSelect: _,
-    children: [r && O ? (0, u.jsx)(l.MenuGroup, {
-      children: b()
-    }) : null, (0, u.jsx)(l.MenuGroup, {
-      children: T
-    }), null != g ? (0, u.jsx)(l.MenuGroup, {
+    children: [M && (0, l.jsxs)(n.MenuGroup, {
+      children: [N, C ? U() : null]
+    }), (0, l.jsx)(n.MenuGroup, {
       children: g
+    }), null != x ? (0, l.jsx)(n.MenuGroup, {
+      children: x
     }) : null]
   })
 }, [r.default.CONTEXT_MENU, r.default.USER_PROFILE_ACTIONS_MENU])
