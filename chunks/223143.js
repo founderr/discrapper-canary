@@ -1,109 +1,103 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   },
   useFetchPurchases: function() {
-    return T
+    return c
   },
   useMaybeFetchCollectiblesCategories: function() {
-    return I
+    return _
   }
 }), n("47120");
 var i = n("470079"),
-  r = n("498607"),
-  s = n.n(r),
-  a = n("399606"),
-  o = n("634894"),
-  l = n("828695"),
-  u = n("335131"),
-  d = n("597688"),
-  _ = n("337679"),
-  c = n("1870"),
-  E = n("617452");
+  r = n("399606"),
+  s = n("634894"),
+  a = n("335131"),
+  o = n("597688"),
+  l = n("337679"),
+  u = n("1870"),
+  d = n("617452");
 
-function I(e) {
+function _(e) {
   let t = "useMaybeFetchCollectiblesCategories";
-  (0, o.useTriggerDebuggingAA)({
+  (0, s.useTriggerDebuggingAA)({
     location: t + " auto on",
     autoTrackExposure: !0
-  }), (0, o.useTriggerDebuggingAA)({
+  }), (0, s.useTriggerDebuggingAA)({
     location: t + " auto off",
     autoTrackExposure: !1
   });
-  let n = (0, a.useStateFromStores)([l.default], () => l.default.hasLoadedExperiments),
-    r = (0, E.useShopBundleEnabled)("useMaybeFetchCollectiblesCategories"),
-    [_, c, I, T, f] = (0, a.useStateFromStoresArray)([d.default], () => {
+  let n = (0, d.useShopBundleEnabled)("useMaybeFetchCollectiblesCategories"),
+    [l, u, _, c] = (0, r.useStateFromStoresArray)([o.default], () => {
       var e;
-      return [d.default.isFetchingCategories, d.default.lastFetchOptions, d.default.error, null !== (e = d.default.lastSuccessFetched) && void 0 !== e ? e : 0, d.default.categories]
+      return [o.default.isFetchingCategories, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
     });
   return (0, i.useEffect)(() => {
-    let t = {
-        ...e,
-        includeBundles: r
-      },
-      i = null === c || !s()(c, t);
-    if (!!n && !_) !(!i && Date.now() - T < 6e5) && (0, u.fetchCollectiblesCategories)(t)
-  }, [n, _, c, T, e, r]), {
-    isFetching: _,
-    categories: f,
-    error: I
+    !(l || u || Date.now() - _ < 6e5) && (0, a.fetchCollectiblesCategories)({
+      ...e,
+      includeBundles: n
+    })
+  }, [l, _, u, e, n]), {
+    isFetching: l,
+    categories: c,
+    error: u
   }
 }
 
-function T() {
+function c() {
   let e = "useFetchPurchases";
-  (0, o.useTriggerDebuggingAA)({
+  (0, s.useTriggerDebuggingAA)({
     location: e + " auto on",
     autoTrackExposure: !0
-  }), (0, o.useTriggerDebuggingAA)({
+  }), (0, s.useTriggerDebuggingAA)({
     location: e + " auto off",
     autoTrackExposure: !1
   });
-  let [t, n, r, s, l] = (0, a.useStateFromStoresArray)([c.default], () => [c.default.isFetching, c.default.isClaiming, c.default.fetchError, c.default.claimError, c.default.purchases]), {
-    shouldFakePurchaseSuccessFlowLocally: d
-  } = (0, _.default)({
+  let [t, n, o, d, _] = (0, r.useStateFromStoresArray)([u.default], () => [u.default.isFetching, u.default.isClaiming, u.default.fetchError, u.default.claimError, u.default.purchases]), {
+    shouldFakePurchaseSuccessFlowLocally: c
+  } = (0, l.default)({
     location: "useFetchPurchases"
   });
   return (0, i.useEffect)(() => {
-    (!d || !(l.size > 0)) && (0, u.fetchCollectiblesPurchases)()
-  }, [d]), {
+    (!c || !(_.size > 0)) && (0, a.fetchCollectiblesPurchases)()
+  }, [c]), {
     isClaiming: n,
-    fetchError: r,
-    claimError: s,
+    fetchError: o,
+    claimError: d,
     isFetching: t,
-    purchases: l
+    purchases: _
   }
 }
 
-function f(e) {
+function E(e) {
   var t;
   let n = "useFetchCollectiblesCategoriesAndPurchases";
-  (0, o.useTriggerDebuggingAA)({
+  (0, s.useTriggerDebuggingAA)({
     location: n + " auto on",
     autoTrackExposure: !0
-  }), (0, o.useTriggerDebuggingAA)({
+  }), (0, s.useTriggerDebuggingAA)({
     location: n + " auto off",
     autoTrackExposure: !1
   });
   let {
     isFetching: i,
     categories: r,
-    error: s
-  } = I(e), {
-    isClaiming: a,
+    error: a
+  } = _(e), {
+    isClaiming: o,
     fetchError: l,
     claimError: u,
     isFetching: d,
-    purchases: _
-  } = T();
+    purchases: E
+  } = c();
   return {
     isFetching: i || d,
     isFetchingCategories: i,
     isFetchingPurchases: d,
-    isClaiming: a,
+    isClaiming: o,
     categories: r,
-    purchases: _,
-    error: null !== (t = null != s ? s : l) && void 0 !== t ? t : u
+    purchases: E,
+    error: null !== (t = null != a ? a : l) && void 0 !== t ? t : u
   }
 }
