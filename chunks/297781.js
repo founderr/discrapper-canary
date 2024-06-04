@@ -169,7 +169,7 @@ function G(e) {
   if (!c) return null;
   let f = null !== (a = null == d ? void 0 : null === (t = d.size) || void 0 === t ? void 0 : t[0]) && void 0 !== a ? a : void 0,
     h = null !== (l = null == d ? void 0 : null === (n = d.size) || void 0 === n ? void 0 : n[1]) && void 0 !== l ? l : void 0,
-    p = null != f && null != h ? b.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
+    p = null != f && null != h ? b.default.Messages.CONTENT_INVENTORY_GAME_STATE_SIZE.format({
       count: f,
       max: h
     }) : void 0,
