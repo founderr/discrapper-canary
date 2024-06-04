@@ -37,12 +37,14 @@ class E {
       let e = (0, s.computeChannelName)(N, o.default, r.default, !0);
       return {
         snapshotIndex: _,
-        originLabel: e,
-        timestampLabel: I,
-        accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
-          origin: e,
-          timestamp: I
-        })
+        footerInfo: {
+          originLabel: e,
+          timestampLabel: I,
+          accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+            origin: e,
+            timestamp: I
+          })
+        }
       }
     }
     if ((null === (t = m.guild) || void 0 === t ? void 0 : t.name) == null) return {
@@ -53,13 +55,15 @@ class E {
       A = null !== (E = null == C ? void 0 : C.name) && void 0 !== E ? E : null === (c = m.guild) || void 0 === c ? void 0 : c.name;
     return {
       snapshotIndex: _,
-      originLabel: A,
-      originIconUrl: null !== (f = null == C ? void 0 : C.getIconURL(16, !1)) && void 0 !== f ? f : void 0,
-      timestampLabel: I,
-      accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
-        origin: A,
-        timestamp: I
-      })
+      footerInfo: {
+        originLabel: A,
+        originIconUrl: null !== (f = null == C ? void 0 : C.getIconURL(16, !1)) && void 0 !== f ? f : void 0,
+        timestampLabel: I,
+        accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+          origin: A,
+          timestamp: I
+        })
+      }
     }
   }
   constructor(e, t, n) {

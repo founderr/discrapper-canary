@@ -48,19 +48,19 @@ function g(e) {
     index: l
   } = e, r = a.useMemo(() => new N.MessageForward(t, n, l).getForwardInfo(), [t, n, l]), c = a.useCallback(() => {
     (0, p.default)(t, n)
-  }, [t, n]);
-  return null == r.originLabel ? null : (0, s.jsxs)(d.Clickable, {
+  }, [t, n]), E = r.footerInfo;
+  return null == E ? null : (0, s.jsxs)(d.Clickable, {
     className: A.footerContainer,
     onClick: c,
-    children: [null != r.originIconUrl ? (0, s.jsx)("img", {
+    children: [null != E.originIconUrl ? (0, s.jsx)("img", {
       className: A.originIcon,
-      src: r.originIconUrl,
+      src: E.originIconUrl,
       alt: ""
     }) : null, (0, s.jsx)(i.Text, {
       className: A.footerText,
       variant: "text-sm/medium",
       color: "none",
-      children: "".concat(r.originLabel, "  •  ").concat(r.timestampLabel)
+      children: "".concat(E.originLabel, "  •  ").concat(E.timestampLabel)
     }), (0, s.jsx)(u.ChevronSmallRightIcon, {
       width: 12,
       height: 12,
