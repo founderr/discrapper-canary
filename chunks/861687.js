@@ -758,7 +758,7 @@ class eo extends _.default {
       }), r.destroyUser(e), null === (i = this._videoHealthManager) || void 0 === i || i.deleteUser(e))
     }
     let s = this._connection;
-    null != s && s.destroyUser(e), null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.destroyUser(e)
+    null != s && s.destroyUser(e), null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.destroyUser(e), this.emit(K.RTCConnectionEvent.ClientDisconnect, e)
   }
   _handleCodecs(e, t) {
     let n = this._connection;

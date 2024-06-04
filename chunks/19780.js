@@ -69,6 +69,15 @@ function g(e, t) {
         context: s.context
       })
     })
+  }), s.on(_.RTCConnectionEvent.ClientDisconnect, e => {
+    d.default.wait(() => {
+      d.default.dispatch({
+        type: "RTC_CONNECTION_CLIENT_DISCONNECT",
+        userId: e,
+        guildId: s.guildId,
+        channelId: s.channelId
+      })
+    })
   }), s.on(_.RTCConnectionEvent.Platform, (e, t, n) => {
     d.default.wait(() => {
       d.default.dispatch({

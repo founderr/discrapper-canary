@@ -441,6 +441,7 @@ class eo extends(l = s.PureComponent) {
           let t = e.length * en.HEIGHT_USER;
           (u.isCollapsed || d.isCollapsed) && (t = en.HEIGHT_USER), r += t + en.HEIGHT_USER_PADDING
         }
+        u.id === this.props.rtcConnectedChannelId && (r += this.props.rtcDesyncedVoiceStatesCount * en.HEIGHT_USER)
       }
       if (null != u.subtitle && (r += en.HEIGHT_CHANNEL_SUBTITLE), u.record.isGuildStageVoice()) {
         var f, h;
