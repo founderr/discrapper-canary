@@ -288,16 +288,6 @@ function eT(e) {
       label: el.default.Messages.HARVEST_BACKEND_USERS,
       checked: !1
     },
-    Messages: {
-      value: "Messages",
-      label: el.default.Messages.HARVEST_BACKEND_MESSAGES,
-      checked: !1
-    },
-    Servers: {
-      value: "Servers",
-      label: el.default.Messages.HARVEST_BACKEND_GUILDS,
-      checked: !1
-    },
     Analytics: {
       value: "Analytics",
       label: el.default.Messages.HARVEST_BACKEND_ANALYTICS,
@@ -308,9 +298,19 @@ function eT(e) {
       label: el.default.Messages.HARVEST_BACKEND_ACTIVITIES,
       checked: !1
     },
+    Messages: {
+      value: "Messages",
+      label: el.default.Messages.HARVEST_BACKEND_MESSAGES,
+      checked: !1
+    },
     Programs: {
       value: "Programs",
       label: el.default.Messages.HARVEST_BACKEND_HUBSPOT,
+      checked: !1
+    },
+    Servers: {
+      value: "Servers",
+      label: el.default.Messages.HARVEST_BACKEND_GUILDS,
       checked: !1
     }
   }), o = e => (t, s) => {
