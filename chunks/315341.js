@@ -208,7 +208,11 @@ let C = [{
   version: 20,
   run(e) {
     let t = i.Storage.get("lastChangeLogId");
-    return null != t && ((0, r.isSnowflake)(t) ? (null == e.userContent && (e.userContent = s.UserContentSettings.create()), e.userContent.lastReceivedChangelogId = t, !0) : (i.Storage.remove("lastChangeLogId"), !1))
+    if (null == t) return !1;
+    if (!(0, r.isSnowflake)(t)) return i.Storage.remove("lastChangeLogId"), !1;
+    if (null == e.userContent) e.userContent = s.UserContentSettings.create();
+    else if (null != e.userContent && null != e.userContent.lastReceivedChangelogId && "0" !== e.userContent.lastReceivedChangelogId) return i.Storage.remove("lastChangeLogId"), !1;
+    return e.userContent.lastReceivedChangelogId = t, !0
   },
   cleanup() {
     i.Storage.remove("lastChangeLogId")
