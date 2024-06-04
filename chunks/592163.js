@@ -1,54 +1,44 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return p
   }
 });
-var a = s("735250");
-s("470079");
-var i = s("98278"),
-  r = s("348121"),
-  n = s("790527"),
-  o = s("474936"),
-  u = s("981631"),
-  c = s("689938"),
-  _ = s("679214"),
-  l = s("399103");
+var s = a("735250");
+a("470079");
+var n = a("98278"),
+  i = a("790527"),
+  r = a("474936"),
+  o = a("981631"),
+  c = a("689938"),
+  u = a("679214"),
+  l = a("399103");
 
 function p(e) {
   let {
     onClose: t,
-    analyticsSource: s,
+    analyticsSource: a,
     onLearnMore: p,
-    ...d
-  } = e;
-
-  function U() {
-    null == p || p(), t(), (0, i.navigateToPremiumMarketingPage)()
-  }
-  let {
-    isLoading: E,
-    suggestedPremiumType: L
-  } = (0, r.default)(), O = L === o.PremiumTypes.TIER_0 ? o.PremiumSubscriptionSKUs.TIER_0 : o.PremiumSubscriptionSKUs.TIER_2, m = O === o.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY_TIER_0.format({
-    onLearnMore: U
-  }) : c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
-    onLearnMore: U
+    ..._
+  } = e, d = r.PremiumSubscriptionSKUs.TIER_2, O = c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
+    onLearnMore: function() {
+      null == p || p(), t(), (0, n.navigateToPremiumMarketingPage)()
+    }
   });
-  return (0, a.jsx)(n.default, {
+  return (0, s.jsx)(i.default, {
     artURL: l,
-    artContainerClassName: _.videoBackgroundArt,
-    type: o.PremiumUpsellTypes.VIDEO_BACKGROUNDS_MODAL,
+    artContainerClassName: u.videoBackgroundArt,
+    type: r.PremiumUpsellTypes.VIDEO_BACKGROUNDS_MODAL,
     title: c.default.Messages.VIDEO_BACKGROUND_UPSELL_TITLE,
-    body: m,
-    glowUp: m,
-    analyticsSource: s,
+    body: O,
+    glowUp: O,
+    analyticsSource: a,
     analyticsLocation: {
-      page: u.AnalyticsPages.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
-      object: u.AnalyticsObjects.BUTTON_CTA
+      page: o.AnalyticsPages.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
+      object: o.AnalyticsObjects.BUTTON_CTA
     },
     onClose: t,
-    subscriptionTier: O,
-    isLoading: E,
-    ...d
+    subscriptionTier: d,
+    ..._
   })
 }

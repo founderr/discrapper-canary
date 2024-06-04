@@ -9,77 +9,69 @@ var i = n("735250"),
   u = n("2052"),
   d = n("906732"),
   _ = n("963249"),
-  c = n("348121"),
-  E = n("672752"),
-  I = n("465670"),
-  T = n("466111"),
-  f = n("626135"),
-  S = n("74538"),
-  h = n("981631"),
-  A = n("474936"),
-  m = n("689938"),
-  N = n("356623");
+  c = n("672752"),
+  E = n("465670"),
+  I = n("466111"),
+  T = n("626135"),
+  f = n("74538"),
+  S = n("981631"),
+  h = n("474936"),
+  A = n("689938"),
+  m = n("356623");
 t.default = function(e) {
   let {
-    bodyCopy: t = m.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
+    bodyCopy: t = A.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
     className: n,
     onDismiss: s,
-    onCtaClick: p
+    onCtaClick: N
   } = e, {
-    location: O
+    location: p
   } = (0, u.useAnalyticsContext)(), {
-    analyticsLocations: C
-  } = (0, d.default)(), {
-    isLoading: R,
-    suggestedPremiumType: g
-  } = (0, c.default)(), L = r.useRef(!1), v = r.useCallback(() => {
+    analyticsLocations: O
+  } = (0, d.default)(), C = r.useRef(!1), R = r.useCallback(() => {
     (0, _.default)({
-      subscriptionTier: S.default.getSkuIdForPremiumType(g),
-      analyticsLocations: C,
+      subscriptionTier: f.default.getSkuIdForPremiumType(h.PremiumTypes.TIER_2),
+      analyticsLocations: O,
       analyticsObject: {
-        ...O,
-        object: h.AnalyticsObjects.BUTTON_CTA,
-        objectType: h.AnalyticsObjectTypes.TIER_2
+        ...p,
+        object: S.AnalyticsObjects.BUTTON_CTA,
+        objectType: S.AnalyticsObjectTypes.TIER_2
       }
-    }), null == p || p()
-  }, [C, O, p, g]), D = g === A.PremiumTypes.TIER_0;
+    }), null == N || N()
+  }, [O, p, N]);
   return (0, i.jsx)("div", {
-    className: a()(N.wrapper, n),
-    children: R ? (0, i.jsx)(l.Spinner, {
-      type: l.SpinnerTypes.PULSING_ELLIPSIS
-    }) : (0, i.jsx)(o.VisibilitySensor, {
+    className: a()(m.wrapper, n),
+    children: (0, i.jsx)(o.VisibilitySensor, {
       onChange: e => {
-        e && !L.current && (f.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-          type: A.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
-          location: O,
-          location_stack: C,
-          sku_id: S.default.getSkuIdForPremiumType(g)
-        }), L.current = !0)
+        e && !C.current && (T.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+          type: h.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
+          location: p,
+          location_stack: O,
+          sku_id: f.default.getSkuIdForPremiumType(h.PremiumTypes.TIER_2)
+        }), C.current = !0)
       },
       children: (0, i.jsxs)("div", {
-        className: N.upsell,
-        children: [(0, i.jsx)(T.default, {
-          color: D ? E.GradientCssUrls.PREMIUM_TIER_0 : E.GradientCssUrls.PREMIUM_TIER_2,
-          className: N.premiumIcon
+        className: m.upsell,
+        children: [(0, i.jsx)(I.default, {
+          color: c.GradientCssUrls.PREMIUM_TIER_2,
+          className: m.premiumIcon
         }), (0, i.jsx)(l.Text, {
           color: "interactive-normal",
-          className: N.body,
+          className: m.body,
           variant: "text-sm/normal",
-          children: D ? m.default.Messages.EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY.format({
-            planName: (0, S.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0)
-          }) : t
+          children: t
         }), (0, i.jsx)(l.Button, {
           look: l.Button.Looks.LINK,
           color: l.Button.Colors.LINK,
-          onClick: v,
-          children: D ? m.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : m.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
+          onClick: R,
+          children: A.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
         }), null != s && (0, i.jsx)(l.Button, {
           onClick: s,
-          className: N.dismissButton,
+          className: m.dismissButton,
           look: l.Button.Looks.BLANK,
           size: l.Button.Sizes.ICON,
-          children: (0, i.jsx)(I.default, {
-            className: N.dismissIcon
+          children: (0, i.jsx)(E.default, {
+            className: m.dismissIcon
           })
         })]
       })
