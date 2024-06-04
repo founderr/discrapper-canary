@@ -9,8 +9,10 @@ t.default = function(e) {
     initialValue: s,
     onMessageChange: i,
     title: r
-  } = e, [o, d] = n.useState(null != s ? s : "");
-  return (0, a.jsxs)(l.FormItem, {
+  } = e, [o, d] = n.useState("");
+  return n.useEffect(() => {
+    d(null != s ? s : "")
+  }, [s]), (0, a.jsxs)(l.FormItem, {
     children: [(0, a.jsx)(l.FormTitle, {
       tag: l.FormTitleTags.H5,
       children: r
