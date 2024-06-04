@@ -25,26 +25,31 @@ t.default = e => {
     backgroundCircleSize: f,
     percentage: p,
     initialPercentage: E,
-    progressCircleVariation: x = 0
-  } = e, R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), h = t && !R;
+    progressCircleVariation: x = 0,
+    ellipseOpacity: R,
+    customAnimationClassName: h,
+    circleColor: T
+  } = e, m = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = t && !m;
   return (0, n.jsx)("div", {
     className: a()(C.progressCircle, r, {
       [C.progressCricleBottomMargin]: 0 === x
     }),
     children: (0, n.jsx)(_.default, {
       animationClassName: a()(C.activeProgressCircle, {
-        [C.activeProgressCircleAnimation]: h
+        [C.activeProgressCircleAnimation]: S,
+        [null != h ? h : ""]: S
       }),
       progressCircleStrokeSize: l,
       percentage: null != s ? s : p,
       initialPercentage: null != s ? s : E,
       progressCircleVariation: x,
       children: 0 === x ? (0, n.jsx)(d.default, {
-        className: h ? C.nitroGemAnimation : void 0,
+        className: S ? C.nitroGemAnimation : void 0,
         backgroundColor: a()(C.gemBackgroundFill, i),
         backgroundCircleSize: f
       }) : (0, n.jsx)(c.default, {
-        percentage: p
+        circleColor: T,
+        ellipseOpacity: R
       })
     })
   })
