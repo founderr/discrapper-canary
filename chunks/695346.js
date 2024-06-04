@@ -292,14 +292,8 @@ let h = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
     value: e
   })),
   v = "0",
-  D = (0, o.defineProtoSetting)("notifications", "notificationCenterAckedBeforeId", e => null != e ? e : v, e => e);
-(0, o.defineProtoSetting)("notifications", "enableBurstReactionNotifications", e => {
-  var t;
-  return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
-}, e => s.BoolValue.create({
-  value: e
-}));
-let M = (0, o.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => {
+  D = (0, o.defineProtoSetting)("notifications", "notificationCenterAckedBeforeId", e => null != e ? e : v, e => e),
+  M = (0, o.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({
