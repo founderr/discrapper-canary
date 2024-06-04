@@ -17551,6 +17551,7 @@ e.exports = Object.freeze({
   MESSAGE_ACTION_FORWARD: "Forward",
   MESSAGE_ACTION_FORWARD_TO: "Forward To",
   MESSAGE_FORWARDED: "Forwarded",
+  MESSAGE_FORWARDED_NOTIFICATION_BODY: "Forwarded a message",
   MESSAGE_ACTION_FORWARD_MEDIA_A11Y: "Forward media from this message",
   MESSAGE_ACTION_FORWARD_EMBED_A11Y: "Forward embed from this message",
   MESSAGES_SEND_SEPARATELY: "Send ({count, number})",
