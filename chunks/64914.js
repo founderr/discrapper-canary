@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return A
   }
 }), s("47120");
 var a = s("735250"),
@@ -10,85 +10,102 @@ var a = s("735250"),
   i = s("692547"),
   r = s("481060"),
   o = s("401430"),
-  d = s("283595"),
-  u = s("695103"),
-  c = s("26290"),
-  S = s("572004"),
-  E = s("63063"),
-  T = s("358085"),
-  _ = s("998502"),
-  f = s("695346"),
+  d = s("921801"),
+  u = s("283595"),
+  c = s("695103"),
+  S = s("26290"),
+  E = s("572004"),
+  T = s("63063"),
+  _ = s("358085"),
+  f = s("998502"),
+  I = s("695346"),
   m = s("399970"),
+  N = s("726985"),
   g = s("981631"),
-  I = s("689938"),
-  N = s("485767");
+  h = s("689938"),
+  C = s("485767");
 
-function h() {
-  let [e] = n.useState(() => _.default.getEnableHardwareAcceleration()), t = f.DisableGamesTab.useSetting(), s = f.DeveloperMode.useSetting(), h = f.DisableHomeAutoNav.useSetting(), {
-    hasLibraryApplication: C,
-    testModeApplicationId: A
-  } = (0, l.useStateFromStoresObject)([u.default, d.default], () => ({
-    hasLibraryApplication: d.default.hasLibraryApplication(),
-    testModeApplicationId: u.default.testModeApplicationId
-  })), p = n.useCallback(e => {
-    f.DisableGamesTab.updateSetting(!e)
-  }, []), O = n.useCallback(e => {
+function A() {
+  let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = I.DisableGamesTab.useSetting(), s = I.DeveloperMode.useSetting(), A = I.DisableHomeAutoNav.useSetting(), {
+    hasLibraryApplication: O,
+    testModeApplicationId: p
+  } = (0, l.useStateFromStoresObject)([c.default, u.default], () => ({
+    hasLibraryApplication: u.default.hasLibraryApplication(),
+    testModeApplicationId: c.default.testModeApplicationId
+  })), R = n.useCallback(e => {
+    I.DisableGamesTab.updateSetting(!e)
+  }, []), x = n.useCallback(e => {
     e ? (0, r.openModal)(e => (0, a.jsx)(m.default, {
       ...e
     })) : o.reset()
-  }, []), R = n.useCallback(e => {
+  }, []), M = n.useCallback(e => {
     (0, r.openModal)(t => (0, a.jsx)(r.ConfirmModal, {
-      header: I.default.Messages.SWITCH_HARDWARE_ACCELERATION,
-      confirmText: I.default.Messages.OKAY,
-      cancelText: I.default.Messages.CANCEL,
-      onConfirm: () => _.default.setEnableHardwareAcceleration(e),
+      header: h.default.Messages.SWITCH_HARDWARE_ACCELERATION,
+      confirmText: h.default.Messages.OKAY,
+      cancelText: h.default.Messages.CANCEL,
+      onConfirm: () => f.default.setEnableHardwareAcceleration(e),
       ...t,
       children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
-        children: I.default.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
+        children: h.default.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
       })
     }))
-  }, []), x = n.useCallback(e => {
-    f.DisableHomeAutoNav.updateSetting(!e)
+  }, []), L = n.useCallback(e => {
+    I.DisableHomeAutoNav.updateSetting(!e)
   }, []);
   return (0, a.jsxs)(r.FormSection, {
     tag: r.FormTitleTags.H1,
-    title: I.default.Messages.SETTINGS_ADVANCED,
-    children: [S.SUPPORTS_COPY && (0, a.jsx)(r.FormSwitch, {
-      value: s,
-      onChange: f.DeveloperMode.updateSetting,
-      note: I.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
-        apiDocsUrl: g.MarketingURLs.API_DOCS
-      }),
-      children: I.default.Messages.DEVELOPER_MODE
-    }), T.isPlatformEmbedded && (0, a.jsx)(r.FormSwitch, {
-      value: e,
-      onChange: R,
-      note: I.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
-      children: I.default.Messages.HARDWARE_ACCELERATION
-    }), C && (0, a.jsx)(r.FormSwitch, {
-      value: !t,
-      onChange: p,
-      note: I.default.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
-      children: I.default.Messages.USER_SETTINGS_SHOW_LIBRARY
-    }), s && (0, a.jsx)(r.FormSwitch, {
-      value: null != A,
-      note: I.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
-      onChange: O,
-      children: I.default.Messages.DEVELOPER_APPLICATION_TEST_MODE
-    }), (0, a.jsx)(r.FormSwitch, {
-      value: !h,
-      note: I.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
-        helpCenterLink: E.default.getArticleURL(g.HelpdeskArticles.GUILD_HOME)
-      }),
-      onChange: x,
-      children: (0, a.jsxs)("div", {
-        className: N.badgedItem,
-        children: [I.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(c.TextBadge, {
-          text: I.default.Messages.BETA,
-          color: i.default.unsafe_rawColors.BRAND_500.css,
-          className: N.__invalid_betaTag
-        })]
+    title: h.default.Messages.SETTINGS_ADVANCED,
+    children: [E.SUPPORTS_COPY && (0, a.jsx)(d.Subsetting, {
+      setting: N.WebSetting.SETTINGS_ADVANCED_DEVELOPER_MODE,
+      children: (0, a.jsx)(r.FormSwitch, {
+        value: s,
+        onChange: I.DeveloperMode.updateSetting,
+        note: h.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
+          apiDocsUrl: g.MarketingURLs.API_DOCS
+        }),
+        children: h.default.Messages.DEVELOPER_MODE
+      })
+    }), _.isPlatformEmbedded && (0, a.jsx)(d.Subsetting, {
+      setting: N.WebSetting.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+      children: (0, a.jsx)(r.FormSwitch, {
+        value: e,
+        onChange: M,
+        note: h.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
+        children: h.default.Messages.HARDWARE_ACCELERATION
+      })
+    }), O && (0, a.jsx)(d.Subsetting, {
+      setting: N.WebSetting.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+      children: (0, a.jsx)(r.FormSwitch, {
+        value: !t,
+        onChange: R,
+        note: h.default.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
+        children: h.default.Messages.USER_SETTINGS_SHOW_LIBRARY
+      })
+    }), s && (0, a.jsx)(d.Subsetting, {
+      setting: N.WebSetting.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+      children: (0, a.jsx)(r.FormSwitch, {
+        value: null != p,
+        note: h.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
+        onChange: x,
+        children: h.default.Messages.DEVELOPER_APPLICATION_TEST_MODE
+      })
+    }), (0, a.jsx)(d.Subsetting, {
+      setting: N.WebSetting.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME,
+      children: (0, a.jsx)(r.FormSwitch, {
+        value: !A,
+        note: h.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
+          helpCenterLink: T.default.getArticleURL(g.HelpdeskArticles.GUILD_HOME)
+        }),
+        onChange: L,
+        children: (0, a.jsxs)("div", {
+          className: C.badgedItem,
+          children: [h.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(S.TextBadge, {
+            text: h.default.Messages.BETA,
+            color: i.default.unsafe_rawColors.BRAND_500.css,
+            className: C.__invalid_betaTag
+          })]
+        })
       })
     })]
   })

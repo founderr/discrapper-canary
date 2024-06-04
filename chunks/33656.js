@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return N
   }
 }), s("724458");
 var a = s("735250"),
@@ -10,15 +10,17 @@ var a = s("735250"),
   i = s.n(l),
   r = s("442837"),
   o = s("481060"),
-  d = s("663389"),
-  u = s("960412"),
-  c = s("151662"),
-  S = s("930441"),
-  E = s("689938"),
-  T = s("63057"),
-  _ = s("611273");
+  d = s("921801"),
+  u = s("663389"),
+  c = s("960412"),
+  S = s("151662"),
+  E = s("930441"),
+  T = s("726985"),
+  _ = s("689938"),
+  f = s("63057"),
+  I = s("611273");
 
-function f(e) {
+function m(e) {
   let {
     label: t,
     onChange: s,
@@ -33,55 +35,69 @@ function f(e) {
   })
 }
 
-function m() {
-  let e = (0, r.useStateFromStores)([d.default], () => d.default.getSubsection()),
+function N() {
+  let e = (0, r.useStateFromStores)([u.default], () => u.default.getSubsection()),
     t = n.createRef(),
     {
       categories: s,
       initialized: l
-    } = (0, r.useStateFromStoresObject)([c.default], () => c.default.getEmailSettings());
+    } = (0, r.useStateFromStoresObject)([S.default], () => S.default.getEmailSettings());
   n.useEffect(() => {
-    if (null == l)(0, u.fetchEmailSettings)();
-    else if (e === S.EMAILS_SUBSECTION.toUpperCase()) {
+    if (null == l)(0, c.fetchEmailSettings)();
+    else if (e === E.EMAILS_SUBSECTION.toUpperCase()) {
       var s;
       null == t || null === (s = t.current) || void 0 === s || s.scrollIntoView(!0)
     }
   }, [l, t, e]);
-  let m = S.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1);
-  return l ? (0, a.jsxs)(a.Fragment, {
+  let N = E.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1),
+    g = {
+      [E.EmailCategories.COMMUNICATION]: T.WebSetting.NOTIFICATIONS_EMAILS_COMMUNICATION,
+      [E.EmailCategories.SOCIAL]: T.WebSetting.NOTIFICATIONS_EMAILS_SOCIAL,
+      [E.EmailCategories.UPDATES_AND_ANNOUNCEMENTS]: T.WebSetting.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
+      [E.EmailCategories.TIPS]: T.WebSetting.NOTIFICATIONS_EMAILS_TIPS,
+      [E.EmailCategories.RECOMMENDATIONS_AND_EVENTS]: T.WebSetting.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
+    };
+  return l ? (0, a.jsxs)(d.Subsetting, {
+    setting: T.WebSetting.NOTIFICATIONS_EMAILS,
     children: [(0, a.jsx)("div", {
       ref: t
     }), (0, a.jsxs)(o.FormSection, {
-      className: i()(_.marginTop40),
+      className: i()(I.marginTop40),
       tag: o.FormTitleTags.H1,
-      title: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
-      children: [S.EmailCategoriesList.map(e => {
+      title: _.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
+      children: [E.EmailCategoriesList.map(e => {
         let {
           category: t,
           label: n,
           subLabel: l
-        } = e;
-        return (0, a.jsx)(f, {
+        } = e, i = g[t], r = (0, a.jsx)(m, {
           label: n(),
           subLabel: l(),
           enabled: s[t],
           onChange: e => {
             var s, a;
-            return s = t, a = e, void(0, u.updateEmailSetting)(s, a)
+            return s = t, a = e, void(0, c.updateEmailSetting)(s, a)
           }
-        }, n())
-      }), (0, a.jsx)(o.Button, {
-        className: T.marketingUnsubscribeButton,
-        disabled: !m,
-        look: o.ButtonLooks.LINK,
-        color: o.ButtonColors.LINK,
-        onClick: u.updateMarketingEmailSettings,
-        children: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING
-      }), (0, a.jsx)(o.FormText, {
-        type: o.FormTextTypes.DESCRIPTION,
-        children: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
-      }), (0, a.jsx)(o.FormDivider, {
-        className: i()(_.marginTop40, _.marginBottom40)
+        }, n());
+        return null != i ? (0, a.jsx)(d.Subsetting, {
+          setting: i,
+          children: r
+        }, n()) : r
+      }), (0, a.jsxs)(d.Subsetting, {
+        setting: T.WebSetting.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
+        children: [(0, a.jsx)(o.Button, {
+          className: f.marketingUnsubscribeButton,
+          disabled: !N,
+          look: o.ButtonLooks.LINK,
+          color: o.ButtonColors.LINK,
+          onClick: c.updateMarketingEmailSettings,
+          children: _.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING
+        }), (0, a.jsx)(o.FormText, {
+          type: o.FormTextTypes.DESCRIPTION,
+          children: _.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
+        }), (0, a.jsx)(o.FormDivider, {
+          className: i()(I.marginTop40, I.marginBottom40)
+        })]
       })]
     })]
   }) : null
