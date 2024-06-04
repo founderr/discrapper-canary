@@ -34,7 +34,7 @@ let I = e => {
         return S.CategoryIcons.Discover
     }
   },
-  T = () => {
+  g = () => {
     let {
       currentCategoryId: e,
       isViewingSearchResults: t
@@ -44,7 +44,7 @@ let I = e => {
     })), n = (0, f.default)(r.default.QUEST_HOME_PAGE), o = (0, s.useStateFromStores)([h.default], () => h.default.getDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), m = null == o ? void 0 : o.map(e => ({
       ...e,
       icon: I(e.categoryId)
-    })), T = e => {
+    })), g = e => {
       (0, i.selectCategory)(e, !0), d.default.closeSidebar(), t && (0, i.clearSearch)()
     };
     return (0, a.jsxs)(l.Scroller, {
@@ -52,15 +52,15 @@ let I = e => {
         text: p.default.Messages.DISCOVER
       }), (0, a.jsx)(_.default, {
         categories: m,
-        handleCategorySelect: T,
+        handleCategorySelect: g,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), (0, a.jsx)(u.default, {
-        handleCategorySelect: T,
+        handleCategorySelect: g,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), n && (0, a.jsx)(c.default, {
-        onClick: () => T(S.CategoryId.Quests),
+        onClick: () => g(S.CategoryId.Quests),
         isSelected: e === S.CategoryId.Quests
       })]
     })
@@ -74,5 +74,5 @@ t.default = function() {
   }), t = e.length > 0, {
     clanDiscoveryEnabled: n
   } = (0, o.useClanPilotExperiment)("guild_discovery_sidebar");
-  return t || n ? (0, a.jsx)(m.default, {}) : (0, a.jsx)(T, {})
+  return t || n ? (0, a.jsx)(m.default, {}) : (0, a.jsx)(g, {})
 }

@@ -22,12 +22,12 @@ t.default = function(e) {
     className: l,
     expansionSpring: p,
     isExpanded: I,
-    isExpansionAnimationComplete: T,
-    quest: g,
+    isExpansionAnimationComplete: g,
+    quest: T,
     useReducedMotion: A
-  } = e, N = s.useRef(null), v = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, R = s.useMemo(() => (0, d.isAssetAnimated)(g.config.assets.questBarHero), [g]), O = (0, d.getQuestBarHeroAssetUrl)(g);
+  } = e, N = s.useRef(null), v = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, R = s.useMemo(() => (0, d.isAssetAnimated)(T.config.assets.questBarHero), [T]), O = (0, d.getQuestBarHeroAssetUrl)(T);
   return (0, a.jsxs)(r.animated.div, {
-    "aria-hidden": I && T,
+    "aria-hidden": I && g,
     className: i()(l, S.contentCollapsed, {
       [S.contentCollapsedExpanded]: I,
       [S.contentCollapsedAccepted]: v
@@ -45,7 +45,7 @@ t.default = function(e) {
       }), (0, a.jsx)("div", {
         className: S.heroAssetTint,
         style: {
-          backgroundColor: g.config.colors.primary
+          backgroundColor: T.config.colors.primary
         }
       }), R ? (0, a.jsx)(f.QuestsAsset, {
         id: "QuestBarV2ContentExpanded_heroAnimated",
@@ -79,16 +79,16 @@ t.default = function(e) {
     }) : (0, a.jsx)(E.QuestBarBackgroundAnimation, {
       className: S.background,
       animationClassName: S.backgroundAnimation,
-      quest: g,
+      quest: T,
       useReducedMotion: A
     }), (0, a.jsx)(h.default, {
       progressBarRef: N,
-      quest: g,
+      quest: T,
       isExpanded: I
     }), (0, a.jsx)("div", {
       className: S.contentCollapsedWrapper,
       children: v ? (0, a.jsx)(_.default, {
-        quest: g,
+        quest: T,
         progressBarRef: N,
         isExpanded: !1
       }) : (0, a.jsxs)("div", {
@@ -99,7 +99,7 @@ t.default = function(e) {
           src: n("896145")
         }), (0, a.jsx)(c.default, {
           className: S.partnerBranding,
-          quest: g,
+          quest: T,
           withGameTile: !1
         }), (0, a.jsx)(o.Text, {
           color: "always-white",

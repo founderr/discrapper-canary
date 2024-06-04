@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryUserUpsellBackgroundRings: function() {
-    return T
+    return g
   }
 }), n("47120");
 var a = n("735250"),
@@ -45,7 +45,7 @@ let S = {
     config: S
   };
 
-function T() {
+function g() {
   let e = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion),
     t = s.useRef(null),
     n = s.useRef(null),
@@ -83,13 +83,13 @@ t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     onClick: n
-  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), g = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), O = (0, h.useDiscoveryGameApplicationId)({
+  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), O = (0, h.useDiscoveryGameApplicationId)({
     selectedGame: t
   }), L = (0, _.useFakeDiscoveryUpsellClans)(O), M = (0, l.useSpring)({
-    ref: T,
+    ref: g,
     ...p
   }), P = (0, l.useSpring)({
-    ref: g,
+    ref: T,
     ...p
   }), x = (0, l.useSpring)({
     ref: A,
@@ -112,7 +112,7 @@ t.default = s.memo(function(e) {
     },
     config: S
   });
-  (0, l.useChain)([T, g, A, N, v, R], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
+  (0, l.useChain)([g, T, A, N, v, R], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
     (0, d.trackClanUserInviteViewed)({
       location: u.default.CLAN_DISCOVERY
     })

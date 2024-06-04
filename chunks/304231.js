@@ -47,7 +47,7 @@ function I() {
   })
 }
 
-function T(e) {
+function g(e) {
   let {
     selectedGame: t
   } = e, n = (0, _.useDiscoveryGameApplicationId)({
@@ -63,7 +63,7 @@ function T(e) {
   })
 }
 
-function g(e) {
+function T(e) {
   return e.toString()
 }
 t.default = s.memo(function(e) {
@@ -128,7 +128,7 @@ t.default = s.memo(function(e) {
         case 1:
           return (0, a.jsx)(I, {});
         case 2:
-          return (0, a.jsx)(T, {
+          return (0, a.jsx)(g, {
             selectedGame: t
           })
       }
@@ -143,7 +143,7 @@ t.default = s.memo(function(e) {
         currentStep: A,
         items: G,
         renderItem: w,
-        getItemKey: g
+        getItemKey: T
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: m.footer,

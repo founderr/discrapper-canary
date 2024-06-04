@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("918701"),
   p = n("566078"),
   I = n("874137"),
-  T = n("611855"),
-  g = n("670638"),
+  g = n("611855"),
+  T = n("670638"),
   A = n("667105"),
   N = n("860151"),
   v = n("46140"),
@@ -107,9 +107,9 @@ t.default = function(e) {
           className: L.utils,
           children: [k ? (0, a.jsx)(M, {
             quest: o
-          }) : (0, a.jsx)(T.default, {
+          }) : (0, a.jsx)(g.default, {
             textOpacity: .5
-          }), (0, a.jsx)(g.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
             quest: o,
             questContent: m.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,

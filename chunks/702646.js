@@ -19,7 +19,7 @@ var a = n("735250"),
   p = n("689938"),
   I = n("683391");
 
-function T(e) {
+function g(e) {
   let {
     icon: t,
     text: n,
@@ -32,8 +32,8 @@ function T(e) {
   s.useEffect(() => {
     p && (h(!1), C(!1))
   }, [p]);
-  let T = d && (_ || f),
-    g = s.useMemo(() => (0, a.jsxs)(E.Clickable, {
+  let g = d && (_ || f),
+    T = s.useMemo(() => (0, a.jsxs)(E.Clickable, {
       className: I.tooltipContentWrapper,
       onClick: u,
       onMouseEnter: () => {
@@ -47,11 +47,11 @@ function T(e) {
       }), r]
     }), [r, u, p]);
   return (0, a.jsx)(E.Tooltip, {
-    text: g,
+    text: T,
     position: "bottom",
     "aria-label": l,
-    shouldShow: T,
-    forceOpen: T,
+    shouldShow: g,
+    forceOpen: g,
     allowOverflow: !0,
     disableTooltipPointerEvents: !1,
     tooltipClassName: i()(I.filterTooltip, {
@@ -88,7 +88,7 @@ function T(e) {
   })
 }
 
-function g() {
+function T() {
   var e;
   let t = (0, m.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
     n = s.useCallback(() => {
@@ -108,7 +108,7 @@ function g() {
       className: I.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(T, {
+  return (0, a.jsx)(g, {
     icon: c,
     text: p.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
@@ -148,7 +148,7 @@ function A() {
       className: I.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(T, {
+  return (0, a.jsx)(g, {
     icon: u,
     text: l,
     tooltip: o,
@@ -179,7 +179,7 @@ function N() {
       className: I.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(T, {
+  return (0, a.jsx)(g, {
     icon: l,
     text: p.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
     tooltip: n,
@@ -221,7 +221,7 @@ t.default = function() {
       children: (0, a.jsx)(v, {})
     }), (0, a.jsxs)("div", {
       className: I.preferences,
-      children: [(0, a.jsx)(g, {}), (0, a.jsx)(A, {}), (0, a.jsx)(N, {})]
+      children: [(0, a.jsx)(T, {}), (0, a.jsx)(A, {}), (0, a.jsx)(N, {})]
     }), (0, a.jsx)("div", {
       className: I.actions
     })]

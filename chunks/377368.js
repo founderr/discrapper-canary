@@ -20,7 +20,7 @@ var s = n("481060"),
   p = n("981631"),
   I = n("65154");
 
-function T(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends f.default {
+class T extends f.default {
   _initialize() {
     super._initialize(), !__OVERLAY__ && l.default.subscribe("OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", this._handleOverlaySoundboardSoundsFetchRequest)
   }
@@ -37,13 +37,13 @@ class g extends f.default {
   }
   constructor(...e) {
     var t;
-    super(...e), t = this, T(this, "playingSoundsWeb", new Map), T(this, "_stopAndClearSounds", () => {
+    super(...e), t = this, g(this, "playingSoundsWeb", new Map), g(this, "_stopAndClearSounds", () => {
       u.default.supports(I.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
         e.stopAllSamplesLocalPlayback()
       }), this.playingSoundsWeb.forEach(e => {
         e.pause(), e.src = ""
       }), this.playingSoundsWeb = new Map
-    }), T(this, "_playSound", async function(e) {
+    }), g(this, "_playSound", async function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         a = arguments.length > 2 ? arguments[2] : void 0,
         s = arguments.length > 3 ? arguments[3] : void 0,
@@ -59,9 +59,9 @@ class g extends f.default {
       } finally {
         (0, E.reportSoundFinishedPlaying)(e, a)
       }
-    }), T(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
+    }), g(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
       (0, E.maybeFetchSoundboardSounds)()
-    }), T(this, "_handleOpenEducationModal", (e, t) => {
+    }), g(this, "_handleOpenEducationModal", (e, t) => {
       if (null == e) return;
       let l = o.default.getChannel(t),
         u = c.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD);
@@ -79,4 +79,4 @@ class g extends f.default {
     })
   }
 }
-t.default = new g
+t.default = new T

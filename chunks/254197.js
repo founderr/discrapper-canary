@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("113434"),
   p = n("569984"),
   I = n("497505"),
-  T = n("918701"),
-  g = n("988303"),
+  g = n("918701"),
+  T = n("988303"),
   A = n("685613"),
   N = n("644646"),
   v = n("78826"),
@@ -64,26 +64,26 @@ let b = e => {
         e.stop(), t.stop()
       }
     }, []);
-    let _ = (0, T.calculatePercentComplete)({
+    let _ = (0, g.calculatePercentComplete)({
       quest: t,
       location: x.QuestsExperimentLocations.QUESTS_BAR
     });
     if (_ > 0) return null;
     let m = () => {
-        (0, T.copyShareLink)(t.id, {
+        (0, g.copyShareLink)(t.id, {
           content: I.QuestContent.QUEST_BAR_V2,
           ctaContent: C.QuestContentCTA.QUEST_BAR_COPY_LINK
         }), d(!0), i(!0), f.current.start(500, () => i(!1)), h.current.start(600, () => d(!1))
       },
       S = o ? c.Tooltip.Colors.GREEN : c.Tooltip.Colors.PRIMARY,
       p = o ? y.default.Messages.COPY_SUCCESS_1 : y.default.Messages.QUESTS_SHARE_LINK,
-      g = o ? r.default.GREEN_360 : "currentColor";
+      T = o ? r.default.GREEN_360 : "currentColor";
     return (0, a.jsxs)("div", {
       className: D.ctaContainer,
       children: [(0, a.jsx)(c.Button, {
         className: D.flex,
         size: c.Button.Sizes.SMALL,
-        onClick: () => (0, T.openGameLink)(t, {
+        onClick: () => (0, g.openGameLink)(t, {
           content: I.QuestContent.QUEST_BAR_V2,
           ctaContent: C.QuestContentCTA.OPEN_GAME_LINK
         }),
@@ -103,7 +103,7 @@ let b = e => {
           children: (0, a.jsx)(E.default, {
             width: 16,
             height: 16,
-            color: g
+            color: T
           })
         })
       })]
@@ -120,13 +120,13 @@ let b = e => {
       onCtxMenuSelect: j,
       quest: G,
       useReducedMotion: w
-    } = e, k = s.useRef(null), B = (0, o.useStateFromStores)([p.default], () => p.default.isEnrolling(G.id), [G]), F = (0, S.useQuestFormattedDate)(G.config.expiresAt), H = s.useMemo(() => (0, T.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = s.useCallback(() => {
+    } = e, k = s.useRef(null), B = (0, o.useStateFromStores)([p.default], () => p.default.isEnrolling(G.id), [G]), F = (0, S.useQuestFormattedDate)(G.config.expiresAt), H = s.useMemo(() => (0, g.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = s.useCallback(() => {
       (0, m.enrollInQuest)(G.id, {
         questContent: I.QuestContent.QUEST_BAR,
         questContentCTA: C.QuestContentCTA.ACCEPT_QUEST
       })
     }, [G]), Y = s.useCallback(() => {
-      (0, T.openGameLink)(G, {
+      (0, g.openGameLink)(G, {
         content: I.QuestContent.QUEST_BAR,
         ctaContent: C.QuestContentCTA.OPEN_GAME_LINK
       })
@@ -137,14 +137,14 @@ let b = e => {
       })
     }, [G]), {
       primaryVariant: K
-    } = g.QuestBarExperiment.useExperiment({
+    } = T.QuestBarExperiment.useExperiment({
       location: x.QuestsExperimentLocations.QUESTS_BAR
     }, {
       autoTrackExposure: !1
-    }), z = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Q = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, q = u && f, Z = (0, T.getQuestBarHeroAssetUrl)(G), X = (0, T.getQuestsInstructionsToWinReward)({
+    }), z = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Q = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, q = u && f, Z = (0, g.getQuestBarHeroAssetUrl)(G), X = (0, g.getQuestsInstructionsToWinReward)({
       quest: G,
       location: x.QuestsExperimentLocations.QUESTS_BAR,
-      useV2Variants: K === g.QuestBarExperimentVariants.V2
+      useV2Variants: K === T.QuestBarExperimentVariants.V2
     });
     return (0, a.jsx)("div", {
       "aria-hidden": !q,
@@ -284,7 +284,7 @@ let b = e => {
               controls: !1,
               children: (0, a.jsx)("source", {
                 src: Z,
-                type: (0, T.getVideoAssetMimeType)(Z)
+                type: (0, g.getVideoAssetMimeType)(Z)
               })
             })
           }) : (0, a.jsx)(v.QuestsAsset, {
