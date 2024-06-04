@@ -67,6 +67,9 @@ n.r(t), n.d(t, {
   hasPlayOnDesktopTask: function() {
     return ea
   },
+  hasVariant: function() {
+    return eu
+  },
   includesTarget: function() {
     return q
   },
