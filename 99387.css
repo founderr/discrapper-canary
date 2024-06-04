@@ -34015,7 +34015,8 @@ html .progress__00e29 {
     flex-direction: row;
     align-items: center;
     color: var(--header-primary);
-    font-weight: 600
+    font-weight: 600;
+    gap: 4px
 }
 
 .previewSection_e0dc08 .chatPreview_b035d6 .fakeMessage__6740a {
