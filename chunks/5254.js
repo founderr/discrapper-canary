@@ -5,13 +5,14 @@ var a, s, l, i, r = n("392711"),
   u = n("442837"),
   d = n("570140"),
   c = n("598077"),
-  f = n("594174");
-let E = {},
-  h = 0,
-  _ = !1,
-  C = !1;
+  f = n("594174"),
+  E = n("388380");
+let h = {},
+  _ = 0,
+  C = !1,
+  m = !1;
 
-function m(e) {
+function S(e) {
   var t;
   let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
   return {
@@ -22,48 +23,48 @@ function m(e) {
     contactNames: n
   }
 }
-class S extends(a = u.default.Store) {
+class p extends(a = u.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
   getSuggestionCount() {
-    return h
+    return _
   }
   getSuggestions() {
-    return Object.entries(E).map(e => {
+    return Object.entries(h).map(e => {
       let [t, n] = e;
       return n
     })
   }
   getSuggestion(e) {
-    return E[e]
+    return h[e]
   }
 }
-i = "FriendSuggestionStore", (l = "displayName") in(s = S) ? Object.defineProperty(s, l, {
+i = "FriendSuggestionStore", (l = "displayName") in(s = p) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new S(d.default, {
+}) : s[l] = i, t.default = new p(d.default, {
   CONNECTION_OPEN: function(e) {
-    E = {}, (h = e.friendSuggestionCount) > 0 && (C = !0, _ || !C || (_ = !0, C = !1))
+    h = {}, (_ = e.friendSuggestionCount) > 0 && (m = !0, C || !m || (C = !0, m = !1, E.default.fetch()))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
-    let t = m(e.suggestion);
-    if (null != E[t.key]) return !1;
-    h++, E = {
-      ...E,
+    let t = S(e.suggestion);
+    if (null != h[t.key]) return !1;
+    _++, h = {
+      ...h,
       [t.key]: t
     }
   },
   FRIEND_SUGGESTION_DELETE: function(e) {
-    h = Math.max(0, --h), delete E[e.suggestedUserId]
+    _ = Math.max(0, --_), delete h[e.suggestedUserId]
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     var t;
-    _ = !1, t = e.suggestions, E = o().chain(t).map(e => m(e)).keyBy(e => e.key).value(), h = o().keys(E).length
+    C = !1, t = e.suggestions, h = o().chain(t).map(e => S(e)).keyBy(e => e.key).value(), _ = o().keys(h).length
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
-    _ = !1, E = {}
+    C = !1, h = {}
   }
 })
