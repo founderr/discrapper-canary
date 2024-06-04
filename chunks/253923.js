@@ -1,7 +1,10 @@
 "use strict";
 S.r(s), S.d(s, {
+  generateChannelAppsSection: function() {
+    return O
+  },
   generateChannelEventsSection: function() {
-    return P
+    return T
   },
   generateChannelGeneralSection: function() {
     return t
@@ -10,10 +13,10 @@ S.r(s), S.d(s, {
     return r
   },
   generateChannelStageSection: function() {
-    return A
+    return P
   },
   generateChannelStageVoiceSection: function() {
-    return O
+    return A
   },
   generateChannelTextSection: function() {
     return N
@@ -31,7 +34,7 @@ S.r(s), S.d(s, {
     return n
   },
   renderDescription: function() {
-    return T
+    return M
   }
 }), S("653041");
 var e = S("231338");
@@ -187,6 +190,11 @@ function n(E, s) {
       description: E.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS_GUILD_DESCRIPTION,
       flag: e.Permissions.USE_APPLICATION_COMMANDS
     },
+    [e.Permissions.USE_EXTERNAL_APPS.toString()]: {
+      title: E.ROLE_PERMISSIONS_USE_EXTERNAL_APPS,
+      description: s.externalAppsEnabled ? E.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_GUILD_DESCRIPTION : "".concat(E.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_GUILD_DESCRIPTION, " ").concat(E.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_GUILD_DESCRIPTION_NOT_ENABLED_YET),
+      flag: e.Permissions.USE_EXTERNAL_APPS
+    },
     [e.Permissions.SEND_VOICE_MESSAGES.toString()]: {
       title: E.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE,
       description: E.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE_GUILD_DESCRIPTION,
@@ -314,7 +322,7 @@ function n(E, s) {
 function I(E, s) {
   var S, I, t, r, N, o, R, O, A, P;
   let T, M = n(E, s);
-  let C = [function(E, s, S) {
+  let a = [function(E, s, S) {
     let n = [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES, e.Permissions.CREATE_GUILD_EXPRESSIONS, e.Permissions.MANAGE_GUILD_EXPRESSIONS, e.Permissions.VIEW_AUDIT_LOG, e.Permissions.VIEW_GUILD_ANALYTICS];
     return S.showCreatorMonetizationAnalyticsPermission && n.push(e.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS), n.push(e.Permissions.MANAGE_WEBHOOKS), n.push(e.Permissions.MANAGE_GUILD), i({
       title: s.ROLE_PERMISSIONS_SECTION_GENERAL_GUILD,
@@ -326,30 +334,36 @@ function I(E, s) {
       title: s.ROLE_PERMISSIONS_SECTION_MEMBERSHIP,
       permissions: _(S, E)
     })
-  }(M, E), (S = M, I = E, t = s, T = [e.Permissions.SEND_MESSAGES, e.Permissions.SEND_MESSAGES_IN_THREADS, e.Permissions.CREATE_PUBLIC_THREADS, e.Permissions.CREATE_PRIVATE_THREADS, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.MANAGE_THREADS, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.USE_CLYDE_AI, e.Permissions.SEND_POLLS], !t.showClydeAIPermissions && (T = T.filter(E => E !== e.Permissions.USE_CLYDE_AI)), i({
+  }(M, E), (S = M, I = E, t = s, T = [e.Permissions.SEND_MESSAGES, e.Permissions.SEND_MESSAGES_IN_THREADS, e.Permissions.CREATE_PUBLIC_THREADS, e.Permissions.CREATE_PRIVATE_THREADS, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.MANAGE_THREADS, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.USE_CLYDE_AI, e.Permissions.SEND_POLLS], !t.showClydeAIPermissions && (T = T.filter(E => E !== e.Permissions.USE_CLYDE_AI)), i({
     title: I.ROLE_PERMISSIONS_SECTION_TEXT,
     permissions: _(T, S)
   })), function(E, s, S) {
-    let n = [e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS, e.Permissions.SET_VOICE_CHANNEL_STATUS];
+    let n = [e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS, e.Permissions.SET_VOICE_CHANNEL_STATUS];
     return i({
       title: s.ROLE_PERMISSIONS_SECTION_VOICE,
       permissions: _(n, E)
     })
-  }(M, E, 0)];
+  }(M, E, 0), function(E, s) {
+    let S = [e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_EXTERNAL_APPS];
+    return i({
+      title: s.ROLE_PERMISSIONS_SECTION_APPS,
+      permissions: _(S, E)
+    })
+  }(M, E)];
   if (s.showStageChannelPermissions) {
     ;
-    C.push((r = M, N = E, o = s, i({
+    a.push((r = M, N = E, o = s, i({
       title: N.ROLE_PERMISSIONS_SECTION_STAGE,
       permissions: _([e.Permissions.REQUEST_TO_SPEAK], r)
     }, o.showExperimental)))
   }
-  return C.push((R = M, O = E, A = s, i({
+  return a.push((R = M, O = E, A = s, i({
     title: O.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS,
     permissions: _([e.Permissions.CREATE_EVENTS, e.Permissions.MANAGE_EVENTS], R)
-  }, A.showExperimental))), C.push((P = M, i({
+  }, A.showExperimental))), a.push((P = M, i({
     title: E.ROLE_PERMISSIONS_SECTION_ADVANCED,
     permissions: _([e.Permissions.ADMINISTRATOR], P)
-  }))), C
+  }))), a
 }
 
 function t(E, s) {
@@ -370,7 +384,7 @@ function r(E, s) {
 }
 
 function N(E, s, S) {
-  let i = [e.Permissions.SEND_MESSAGES, e.Permissions.SEND_MESSAGES_IN_THREADS, e.Permissions.CREATE_PUBLIC_THREADS, e.Permissions.CREATE_PRIVATE_THREADS, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.MANAGE_THREADS, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.USE_CLYDE_AI, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.SEND_POLLS];
+  let i = [e.Permissions.SEND_MESSAGES, e.Permissions.SEND_MESSAGES_IN_THREADS, e.Permissions.CREATE_PUBLIC_THREADS, e.Permissions.CREATE_PRIVATE_THREADS, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.MANAGE_THREADS, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.USE_CLYDE_AI, e.Permissions.SEND_POLLS];
   return (!S.showPrivateThreads || !S.showCreateThreads) && (i = i.filter(E => E !== e.Permissions.CREATE_PRIVATE_THREADS)), !S.showCreateThreads && (i = i.filter(E => E !== e.Permissions.CREATE_PUBLIC_THREADS)), !S.showClydeAIPermissions && (i = i.filter(E => E !== e.Permissions.USE_CLYDE_AI)), {
     title: s,
     description: S.sectionDescription,
@@ -381,7 +395,7 @@ function N(E, s, S) {
 function o(E, s) {
   return {
     title: s,
-    permissions: _([e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS, e.Permissions.SET_VOICE_CHANNEL_STATUS], E)
+    permissions: _([e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS, e.Permissions.SET_VOICE_CHANNEL_STATUS], E)
   }
 }
 
@@ -394,27 +408,34 @@ function R(E, s, S) {
   }
 }
 
-function O(E, s, S) {
+function O(E, s) {
+  return {
+    title: s,
+    permissions: _([e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_EXTERNAL_APPS], E)
+  }
+}
+
+function A(E, s, S) {
   return {
     title: s,
     permissions: _(S ? [e.Permissions.CONNECT, e.Permissions.STREAM, e.Permissions.MUTE_MEMBERS, e.Permissions.MOVE_MEMBERS] : [e.Permissions.CONNECT, e.Permissions.MUTE_MEMBERS, e.Permissions.MOVE_MEMBERS], E)
   }
 }
 
-function A(E, s) {
+function P(E, s) {
   return {
     title: s,
     permissions: _([e.Permissions.REQUEST_TO_SPEAK, e.Permissions.MENTION_EVERYONE], E)
   }
 }
 
-function P(E, s) {
+function T(E, s) {
   return {
     title: s,
     permissions: _([e.Permissions.CREATE_EVENTS, e.Permissions.MANAGE_EVENTS], E)
   }
 }
 
-function T(E) {
+function M(E) {
   return null == E ? E : "string" == typeof E ? E.trim() : "function" == typeof E.format ? E.format() : E
 }

@@ -1017,7 +1017,9 @@ function eu(e, t) {
     case y.Permissions.SET_VOICE_CHANNEL_STATUS:
       return H.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE;
     case y.Permissions.SEND_POLLS:
-      return H.default.Messages.ROLE_PERMISSIONS_SEND_POLLS
+      return H.default.Messages.ROLE_PERMISSIONS_SEND_POLLS;
+    case y.Permissions.USE_EXTERNAL_APPS:
+      return H.default.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS
   }
   return null
 }

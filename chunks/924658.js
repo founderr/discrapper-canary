@@ -161,6 +161,7 @@ e.exports = Object.freeze({
   ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION_THREADS: "Allows members to deafen other members in this channel's threads, which means they won’t be able to speak or hear others.",
   ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION_THREADS: "Allows members to disconnect other members from this channel's threads. They will also be able to move somebody into other channels that they have this permission in.",
   ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION_THREADS: "Allows members to use Activities in this channel's threads.",
+  ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_THREADS: "Allows members to use External Apps in this channel's threads.",
   MESSAGE_REMINDERS_EMPTY: "You have no Reminders!",
   MESSAGE_REMINDERS_EMPTY_TIP: "You can mark any message as a Reminder to have it appear here.",
   MESSAGE_REMINDERS_HEADER: "Message Reminders",

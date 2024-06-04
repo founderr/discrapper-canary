@@ -295,6 +295,21 @@ function A(e, t, n, i) {
       })(),
       flag: T.Permissions.USE_EMBEDDED_ACTIVITIES
     },
+    [T.Permissions.USE_EXTERNAL_APPS.toString()]: {
+      title: f.default.Messages.USE_EXTERNAL_APPS,
+      description: (() => {
+        switch (r) {
+          case T.ChannelTypes.GUILD_CATEGORY:
+            return f.default.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_CATEGORY;
+          case T.ChannelTypes.GUILD_FORUM:
+          case T.ChannelTypes.GUILD_MEDIA:
+            return f.default.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_THREADS;
+          default:
+            return f.default.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_CHANNEL
+        }
+      })(),
+      flag: T.Permissions.USE_EXTERNAL_APPS
+    },
     [T.Permissions.USE_SOUNDBOARD.toString()]: {
       title: f.default.Messages.USE_SOUNDBOARD,
       description: (() => {
