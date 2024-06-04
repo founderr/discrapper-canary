@@ -18,36 +18,36 @@ var a = s("735250"),
   T = s("314684"),
   _ = s("899667"),
   f = s("853872"),
-  m = s("78839"),
-  g = s("783739"),
-  I = s("981631"),
-  N = s("220439");
+  I = s("78839"),
+  m = s("783739"),
+  N = s("981631"),
+  g = s("220439");
 
 function h() {
   n.useEffect(() => {
     d.default.wait(() => {
-      u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, I.RevenueSurfaces.DISCOVERY), (0, c.fetchAppliedGuildBoostsForUser)(!0)
+      u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, N.RevenueSurfaces.DISCOVERY), (0, c.fetchAppliedGuildBoostsForUser)(!0)
     })
   }, []);
   let {
     hasFetchedSubscriptions: e,
     premiumSubscription: t
-  } = (0, r.useStateFromStoresObject)([m.default], () => ({
-    hasFetchedSubscriptions: m.default.hasFetchedSubscriptions(),
-    premiumSubscription: m.default.getPremiumTypeSubscription()
+  } = (0, r.useStateFromStoresObject)([I.default], () => ({
+    hasFetchedSubscriptions: I.default.hasFetchedSubscriptions(),
+    premiumSubscription: I.default.getPremiumTypeSubscription()
   })), s = (0, E.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([f.default], () => f.default.hasFetchedPaymentSources), h = (0, r.useStateFromStores)([_.default], () => _.default.isFetchingCurrentUserAppliedBoosts);
   return ((0, T.useFetchEntitlementsForTenureReward)(), e && s && l && !h) ? (0, a.jsxs)("div", {
-    className: N.container,
+    className: g.container,
     children: [(0, a.jsx)("div", {
-      className: N.background
+      className: g.background
     }), (0, a.jsx)("div", {
-      className: N.content,
-      children: (0, a.jsx)(g.default, {
+      className: g.content,
+      children: (0, a.jsx)(m.default, {
         premiumSubscription: t
       })
     })]
   }) : (0, a.jsx)("div", {
-    className: i()(N.container, N.loading),
+    className: i()(g.container, g.loading),
     children: (0, a.jsx)(o.Spinner, {})
   })
 }

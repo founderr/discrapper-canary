@@ -14,31 +14,31 @@ var a = s("735250"),
   T = s("981631"),
   _ = s("474936"),
   f = s("689938"),
-  m = s("449221"),
-  g = s("786792");
-let I = e => {
+  I = s("449221"),
+  m = s("786792");
+let N = e => {
     let {
       artSrc: t
     } = e;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: m.artContainer,
+        className: I.artContainer,
         "aria-hidden": !0,
         role: "presentation",
         children: (0, a.jsx)("img", {
           src: t,
-          className: m.art,
+          className: I.art,
           alt: " "
         })
       }), (0, a.jsxs)("div", {
-        className: m.mainColumn,
+        className: I.mainColumn,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-lg/extrabold",
           color: "always-white",
-          className: m.title,
+          className: I.title,
           children: f.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
         }), (0, a.jsx)(o.Text, {
-          className: m.__invalid_textBody,
+          className: I.__invalid_textBody,
           variant: "text-sm/normal",
           color: "always-white",
           children: f.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
@@ -46,13 +46,13 @@ let I = e => {
       })]
     })
   },
-  N = e => {
+  g = e => {
     let {
       variation: t
     } = e;
-    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(I, {
+    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(N, {
       artSrc: s("161594")
-    })).otherwise(() => (0, a.jsx)(I, {
+    })).otherwise(() => (0, a.jsx)(N, {
       artSrc: s("353437")
     }))
   };
@@ -67,11 +67,11 @@ t.default = () => {
     })
   }, [e]), (0, a.jsxs)("div", {
     ref: t,
-    className: i()(m.container),
+    className: i()(I.container),
     style: {
-      backgroundImage: "url(".concat(g, ")")
+      backgroundImage: "url(".concat(m, ")")
     },
-    children: [(0, a.jsx)(N, {
+    children: [(0, a.jsx)(g, {
       variation: s
     }), (0, a.jsx)(o.Button, {
       onClick: () => {
@@ -80,7 +80,7 @@ t.default = () => {
           analyticsSource: d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
         })
       },
-      className: m.ctaButton,
+      className: I.ctaButton,
       color: o.Button.Colors.BRAND_INVERTED,
       children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => f.default.Messages.CHECK_IT_OUT).otherwise(() => f.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
     })]

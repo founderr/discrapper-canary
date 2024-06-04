@@ -17,34 +17,34 @@ var i = s("120356"),
   T = s("285952"),
   _ = s("153124"),
   f = s("626135"),
-  m = s("63063"),
-  g = s("210887"),
-  I = s("981631"),
-  N = s("689938"),
+  I = s("63063"),
+  m = s("210887"),
+  N = s("981631"),
+  g = s("689938"),
   h = s("611273");
 let C = s("775322"),
   A = s("853453"),
-  p = (0, _.uid)();
+  O = (0, _.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
-let O = {
-  page: I.AnalyticsPages.USER_SETTINGS,
-  section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+let p = {
+  page: N.AnalyticsPages.USER_SETTINGS,
+  section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
 };
 
 function R(e) {
   let t = e.currentTarget;
-  f.default.track(I.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  f.default.track(N.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
-      page: I.AnalyticsPages.USER_SETTINGS,
-      section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+      page: N.AnalyticsPages.USER_SETTINGS,
+      section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
     }
   })
 }
 
 function x() {
-  let e = (0, o.useStateFromStores)([g.default], () => g.default.theme),
+  let e = (0, o.useStateFromStores)([m.default], () => m.default.theme),
     {
       noiseCancellation: t,
       noiseSuppression: s,
@@ -59,29 +59,29 @@ function x() {
   if (!a && !n) return null;
   let i = [];
   return n && i.push({
-    name: N.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_KRISP,
+    name: g.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_KRISP,
     value: 2
   }), a && i.push({
-    name: N.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_STANDARD,
+    name: g.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_STANDARD,
     value: 1
   }), i.push({
-    name: N.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DISABLED,
+    name: g.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DISABLED,
     value: 0
   }), (0, l.jsxs)(u.FormSection, {
     className: h.marginBottom20,
     children: [(0, l.jsx)(u.FormTitle, {
-      id: p,
+      id: O,
       tag: u.FormTitleTags.H3,
       className: h.marginBottom8,
-      children: N.default.Messages.NOISE_SUPPRESSION
+      children: g.default.Messages.NOISE_SUPPRESSION
     }), (0, l.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
       className: h.marginBottom8,
-      children: N.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION
+      children: g.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION
     }), (0, l.jsx)(u.RadioGroup, {
       options: i,
       onChange: e => {
-        c.default.setNoiseCancellation(2 === e.value, O), c.default.setNoiseSuppression(1 === e.value, O)
+        c.default.setNoiseCancellation(2 === e.value, p), c.default.setNoiseSuppression(1 === e.value, p)
       },
       value: t ? 2 : s ? 1 : 0
     }), n && (0, l.jsx)(u.FormNotice, {
@@ -94,9 +94,9 @@ function x() {
       },
       align: T.default.Align.CENTER,
       body: (0, l.jsx)(u.Anchor, {
-        href: m.default.getArticleURL(I.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: I.default.getArticleURL(N.HelpdeskArticles.NOISE_SUPPRESSION),
         onClick: R,
-        children: N.default.Messages.LEARN_MORE
+        children: g.default.Messages.LEARN_MORE
       })
     }), (0, l.jsx)(u.FormDivider, {})]
   })
@@ -124,46 +124,46 @@ function M() {
   })), {
     hasEchoCancellation: _,
     hasNoiseSuppression: f,
-    hasAutomaticGainControl: m
+    hasAutomaticGainControl: I
   } = (0, o.useStateFromStoresObject)([S.default], () => ({
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), g = _ || f || m, C = e === I.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), m = _ || f || I, C = e === N.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
     className: h.marginBottom20,
-    title: N.default.Messages.FORM_LABEL_VOICE_PROCESSING,
-    children: [g && (0, l.jsx)(u.FormText, {
+    title: g.default.Messages.FORM_LABEL_VOICE_PROCESSING,
+    children: [m && (0, l.jsx)(u.FormText, {
       className: h.marginBottom20,
       type: u.FormText.Types.DESCRIPTION,
-      children: N.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
+      children: g.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
     }), (0, l.jsx)(u.FormSwitch, {
       className: r()(h.marginTop8, h.marginBottom20),
       value: s,
       onChange: e => c.default.setEchoCancellation(e, {
-        page: I.AnalyticsPages.USER_SETTINGS,
-        section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: N.AnalyticsPages.USER_SETTINGS,
+        section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       disabled: _,
-      children: N.default.Messages.ECHO_CANCELLATION
+      children: g.default.Messages.ECHO_CANCELLATION
     }), (0, l.jsx)(x, {}), d && (0, l.jsx)(u.FormSwitch, {
       value: i,
       onChange: t => c.default.setMode(e, {
         vadUseKrisp: t
       }),
-      note: N.default.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
+      note: g.default.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
       disabled: !C,
-      children: N.default.Messages.ADVANCED_VOICE_ACTIVITY
+      children: g.default.Messages.ADVANCED_VOICE_ACTIVITY
     }), T && (0, l.jsx)(u.FormSwitch, {
       className: "",
       value: a,
       onChange: e => c.default.setAutomaticGainControl(e, {
-        page: I.AnalyticsPages.USER_SETTINGS,
-        section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: N.AnalyticsPages.USER_SETTINGS,
+        section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
-      note: N.default.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
-      disabled: m,
-      children: N.default.Messages.AUTOMATIC_GAIN_CONTROL
+      note: g.default.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
+      disabled: I,
+      children: g.default.Messages.AUTOMATIC_GAIN_CONTROL
     })]
   })
 }

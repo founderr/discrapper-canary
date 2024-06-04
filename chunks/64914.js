@@ -50,7 +50,7 @@ function A() {
         children: h.default.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
       })
     }))
-  }, []), L = n.useCallback(e => {
+  }, []), D = n.useCallback(e => {
     I.DisableHomeAutoNav.updateSetting(!e)
   }, []);
   return (0, a.jsxs)(r.FormSection, {
@@ -97,7 +97,7 @@ function A() {
         note: h.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
           helpCenterLink: T.default.getArticleURL(g.HelpdeskArticles.GUILD_HOME)
         }),
-        onChange: L,
+        onChange: D,
         children: (0, a.jsxs)("div", {
           className: C.badgedItem,
           children: [h.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(S.TextBadge, {

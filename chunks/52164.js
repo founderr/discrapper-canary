@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return m
   }
 }), s("47120");
 var a = s("735250");
@@ -20,31 +20,31 @@ var n = s("512722"),
   _ = s("689938"),
   f = s("904014");
 
-function m(e) {
+function I(e) {
   let {
     subscription: t,
     withOverheadSeparator: s
   } = e, {
     analyticsLocations: n
-  } = (0, o.default)(), [m] = (0, S.useSubscriptionInvoicePreview)({
+  } = (0, o.default)(), [I] = (0, S.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
     renewal: !0,
     analyticsLocations: n,
     analyticsLocation: r.default.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
   });
-  if (null == m) return null;
-  let g = s ? f.finePrintWithOverheadSeparator : f.finePrint,
-    I = m.invoiceItems.find(e => {
+  if (null == I) return null;
+  let m = s ? f.finePrintWithOverheadSeparator : f.finePrint,
+    N = I.invoiceItems.find(e => {
       let {
         subscriptionPlanId: t
       } = e;
       return (0, u.isPremiumBaseSubscriptionPlan)(t)
     });
-  if (null == I) return null;
-  let N = I.subscriptionPlanId,
-    h = d.default.get(N);
+  if (null == N) return null;
+  let g = N.subscriptionPlanId,
+    h = d.default.get(g);
   l()(null != h, "Missing plan");
-  let C = (0, c.formatPrice)(m.total, m.currency),
+  let C = (0, c.formatPrice)(I.total, I.currency),
     A = "";
   return h.interval === E.SubscriptionIntervalTypes.YEAR ? A = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
     price: C,
@@ -64,18 +64,18 @@ function m(e) {
     intervalCount: h.intervalCount
   })), (0, a.jsx)(i.Text, {
     color: "text-muted",
-    className: g,
+    className: m,
     variant: "text-xs/normal",
     children: A
   })
 }
 
-function g(e) {
+function m(e) {
   let {
     subscription: t,
     withOverheadSeparator: s
   } = e;
-  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(m, {
+  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(I, {
     subscription: t,
     withOverheadSeparator: s
   })

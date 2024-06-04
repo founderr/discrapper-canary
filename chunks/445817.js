@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), s("47120");
 var a = s("735250"),
@@ -18,47 +18,47 @@ var a = s("735250"),
   T = s("594174"),
   _ = s("981631"),
   f = s("689938"),
-  m = s("688725");
-let g = {
+  I = s("688725");
+let m = {
   width: 387,
   height: 218
 };
 
-function I(e) {
+function N(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, I = E.default.getCameraComponent(), [N, h] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), C = n.useRef(!1), A = n.useRef(N), p = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, N = E.default.getCameraComponent(), [g, h] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), C = n.useRef(!1), A = n.useRef(g), O = (0, o.useAnalyticsContext)(), p = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
     C.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(A.current))
   }, []), (0, a.jsx)(S.default, {
-    selectedBackgroundOption: N,
+    selectedBackgroundOption: g,
     onSelectBackgroundOption: e => {
       C.current = !0, A.current = e, h(e), (0, c.applyBackgroundOptionLive)(e, {
-        location: p.location
+        location: O.location
       }).catch(_.NOOP)
     },
     renderCamera: e => t ? (0, a.jsx)("div", {
-      className: m.cameraWrapper,
+      className: I.cameraWrapper,
       children: (0, a.jsxs)("div", {
-        className: m.camera,
-        children: [(0, a.jsx)(I, {
+        className: I.camera,
+        children: [(0, a.jsx)(N, {
           deviceId: e,
-          width: g.width,
-          height: g.height,
+          width: m.width,
+          height: m.height,
           disabled: !t
         }), (0, a.jsx)(S.FilterLoadingIndicator, {})]
       })
     }) : (0, a.jsxs)("div", {
-      className: m.cameraWrapper,
+      className: I.cameraWrapper,
       children: [(0, a.jsx)("div", {
-        className: m.previewImage
+        className: I.previewImage
       }), (0, a.jsx)(i.Tooltip, {
-        text: O ? null : f.default.Messages.CAMERA_UNAVAILABLE,
+        text: p ? null : f.default.Messages.CAMERA_UNAVAILABLE,
         children: e => (0, a.jsx)(i.Button, {
           ...e,
           onClick: s,
-          disabled: !O,
+          disabled: !p,
           children: f.default.Messages.TEST_VIDEO
         })
       })]

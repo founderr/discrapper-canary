@@ -20,9 +20,9 @@ var i = n("120356"),
   m = n("176354"),
   g = n("981631"),
   S = n("185923"),
-  p = n("689938"),
-  v = n("982581");
-let I = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+  I = n("689938"),
+  p = n("982581");
+let v = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
 function h(e) {
   var t;
@@ -44,19 +44,19 @@ function h(e) {
     spacing: 16,
     forceOpen: i,
     children: e => (0, a.jsx)("div", {
-      "aria-label": p.default.Messages.ADD_REACTION_NAMED.format({
+      "aria-label": I.default.Messages.ADD_REACTION_NAMED.format({
         emojiName: n.name
       }),
-      className: l()(v.button, {
-        [v.focused]: i
+      className: l()(p.button, {
+        [p.focused]: i
       }),
       ...e,
       children: null == r || "" === r.trim() ? (0, a.jsx)("span", {
-        className: l()("emoji", "emoji-text", v.icon),
+        className: l()("emoji", "emoji-text", p.icon),
         ...e,
         children: o
       }) : (0, a.jsx)("img", {
-        className: v.icon,
+        className: p.icon,
         src: r,
         alt: ""
       })
@@ -67,7 +67,7 @@ function h(e) {
 function A(e, t) {
   let n = (0, r.useEmojiInPriorityOrder)(t.guild_id).filter(e => {
     var n;
-    return !(e.useSpriteSheet && I.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !m.default.isEmojiPremiumLocked({
+    return !(e.useSpriteSheet && v.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !m.default.isEmojiPremiumLocked({
       emoji: e,
       channel: t,
       intention: S.EmojiIntention.REACTION
@@ -77,11 +77,11 @@ function A(e, t) {
   let i = f.RenderReactions.useSetting(),
     l = (0, c.useIsActiveChannelOrUnarchivableThread)(t),
     M = (0, s.useStateFromStores)([E.default], () => i && l && (t.isPrivate() || E.default.can(g.Permissions.ADD_REACTIONS, t)), [t, l, i]),
-    p = n => {
+    I = n => {
       (0, o.addReaction)(t.id, e.id, (0, d.toReactionEmoji)(n), void 0)
     };
   return M && n.length > 0 ? (0, a.jsx)(u.MenuGroup, {
-    className: v.wrapper,
+    className: p.wrapper,
     children: n.map((e, t) => {
       var n;
       return (0, a.jsx)(u.MenuItem, {
@@ -95,7 +95,7 @@ function A(e, t) {
             isFocused: n
           })
         },
-        action: () => p(e),
+        action: () => I(e),
         dontCloseOnActionIfHoldingShiftKey: !0
       }, t)
     })

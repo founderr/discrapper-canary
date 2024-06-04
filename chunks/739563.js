@@ -28,7 +28,7 @@ let E = 0,
   },
   f = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
 
-function m(e) {
+function I(e) {
   let {
     position: t,
     onChange: s
@@ -70,4 +70,4 @@ function m(e) {
     })]
   })
 }
-m.Positions = d.OverlayNotificationPositions, t.default = m
+I.Positions = d.OverlayNotificationPositions, t.default = I

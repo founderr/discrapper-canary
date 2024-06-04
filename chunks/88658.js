@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return n
   },
   NonSpamRetrainingOptInOptionsToValue: function() {
-    return m
+    return I
   },
   computeFlags: function() {
     return _
   },
   generateNonSpamRetrainingOptInSettingOptions: function() {
-    return g
+    return m
   },
   getSanitizedActivityJoiningRestrictedGuilds: function() {
     return T
@@ -71,13 +71,13 @@ function _(e) {
 function f(e, t) {
   return !t.verified || null != e && u > Date.now() - new Date(e.created_at).getTime()
 }(a = n || (n = {}))[a.UNDECIDED = 0] = "UNDECIDED", a[a.OPTIN = 1] = "OPTIN", a[a.OPTOUT = 2] = "OPTOUT";
-let m = {
+let I = {
   0: void 0,
   1: !0,
   2: !1
 };
 
-function g() {
+function m() {
   return [{
     name: d.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_HEADER,
     desc: d.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_DESC,

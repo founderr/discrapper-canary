@@ -34,11 +34,11 @@ function _(e) {
       let e = r.default.getApplication(_.applicationId);
       if (null != e) return e
     }, [_]),
-    m = (0, i.useStateFromStores)([o.default], () => {
+    I = (0, i.useStateFromStores)([o.default], () => {
       if (null != _) return o.default.getGuild(_.guildId)
     }, [_]),
-    [g, I] = a.useState(!1),
-    N = null == s ? void 0 : function(e) {
+    [m, N] = a.useState(!1),
+    g = null == s ? void 0 : function(e) {
       let {
         listing: t,
         subscription: s
@@ -58,11 +58,11 @@ function _(e) {
     });
   return {
     application: f,
-    guild: m,
-    expanded: g,
-    handleToggleExpanded: () => I(e => !e),
+    guild: I,
+    expanded: m,
+    handleToggleExpanded: () => N(e => !e),
     listing: s,
     groupListing: n,
-    subscriptionInfo: N
+    subscriptionInfo: g
   }
 }

@@ -23,25 +23,25 @@ var i = n("374470"),
   m = n("786095"),
   g = n("36829"),
   S = n("667922"),
-  p = n("941389"),
-  v = n("449751"),
-  I = n("749339"),
+  I = n("941389"),
+  p = n("449751"),
+  v = n("749339"),
   h = n("601184"),
   A = n("6148"),
   _ = n("519110"),
   T = n("168405"),
   C = n("536639"),
   R = n("720904"),
-  y = n("88791"),
-  O = n("235047"),
+  O = n("88791"),
+  y = n("235047"),
   x = n("385302"),
   N = n("873699"),
   j = n("134323"),
   b = n("429260"),
-  G = n("1626"),
-  P = n("279329"),
-  D = n("627938"),
-  L = n("481300"),
+  D = n("1626"),
+  G = n("279329"),
+  L = n("627938"),
+  P = n("481300"),
   F = n("689938");
 
 function U(e) {
@@ -57,8 +57,8 @@ function U(e) {
     } = e,
     g = c,
     S = c.getAttribute("data-type"),
-    p = c.getAttribute("data-id"),
-    v = c.getAttribute("data-name");
+    I = c.getAttribute("data-id"),
+    p = c.getAttribute("data-name");
   if (null != f) l = a = u = f.url;
   else
     for (;
@@ -69,8 +69,8 @@ function U(e) {
     mediaItem: f,
     textSelection: null !== (n = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : "",
     favoriteableType: S,
-    favoriteableId: p,
-    favoriteableName: v,
+    favoriteableId: I,
+    favoriteableName: p,
     itemHref: a,
     itemSrc: l,
     itemSafeSrc: u,
@@ -102,24 +102,24 @@ function w(e) {
     onHeightUpdate: X,
     onSelect: Z,
     onClose: z,
-    navId: J,
-    ariaLabel: W,
+    navId: W,
+    ariaLabel: J,
     shouldHideMediaOptions: q = !1
   } = e, $ = (0, o.default)(s), Q = (0, f.default)(s), ee = (0, R.default)(t, n), et = (0, S.default)(t, n), en = (0, A.default)(t, n), ea = (0, C.default)(t, n), ei = (0, _.default)({
     type: U,
     id: w,
     name: k
-  }), el = (0, G.default)(t, n), es = (0, T.default)(t, n), eu = (0, y.default)(t), er = (0, p.default)(t, n), eo = (0, v.default)(t, n), ed = (0, x.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, b.default)(t), eM = (0, P.default)(t, n), em = (0, c.default)(null != V ? V : K, Y, t, {
+  }), el = (0, D.default)(t, n), es = (0, T.default)(t, n), eu = (0, O.default)(t), er = (0, I.default)(t, n), eo = (0, p.default)(t, n), ed = (0, x.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, b.default)(t), eM = (0, G.default)(t, n), em = (0, c.default)(null != V ? V : K, Y, t, {
     shouldHideMediaOptions: q
   }), eg = (0, d.default)(H, t, {
     shouldHideMediaOptions: q
-  }), eS = (0, L.default)(t, i), ep = (0, r.default)({
+  }), eS = (0, P.default)(t, i), eI = (0, r.default)({
     id: t.id,
     label: F.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(t.channel_id, "-").concat(t.id)
-  }), ev = (0, j.default)(t, n), eI = (0, D.default)(t, n), eh = (0, g.default)(t, n, {
+  }), ep = (0, j.default)(t, n), ev = (0, L.default)(t, n), eh = (0, g.default)(t, n, {
     hoist: !0
-  }), eA = (0, m.default)(s, n.getGuildId()), e_ = (0, O.default)(t), eT = (0, I.default)(t), eC = (0, M.default)({
+  }), eA = (0, m.default)(s, n.getGuildId()), e_ = (0, y.default)(t), eT = (0, v.default)(t), eC = (0, M.default)({
     commandType: u.ApplicationCommandType.MESSAGE,
     commandTargetId: t.id,
     channel: n,
@@ -127,16 +127,16 @@ function w(e) {
     onHeightUpdate: X
   }), eR = (0, E.default)(t);
   return (0, a.jsxs)(l.Menu, {
-    navId: J,
+    navId: W,
     onClose: z,
-    "aria-label": W,
+    "aria-label": J,
     onSelect: Z,
     children: [(0, a.jsx)(l.MenuGroup, {
       children: $
     }), (0, a.jsx)(l.MenuGroup, {
       children: Q
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: ["" === s ? ee : null, et, eu, en, ea, ei, ev, eI, eT, eC, el, es, e_, er, eo, eM, eh, eR, ec, ed, ef, B && eE]
+      children: ["" === s ? ee : null, et, eu, en, ea, ei, ep, ev, eT, eC, el, es, e_, er, eo, eM, eh, eR, ec, ed, ef, B && eE]
     }), null != eA && (0, a.jsx)(l.MenuGroup, {
       children: eA
     }), (0, a.jsxs)(l.MenuGroup, {
@@ -144,7 +144,7 @@ function w(e) {
     }), (0, a.jsx)(l.MenuGroup, {
       children: em
     }), (0, a.jsx)(l.MenuGroup, {
-      children: ep
+      children: eI
     })]
   })
 }

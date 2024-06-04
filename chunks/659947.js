@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return p
   }
 }), s("653041"), s("47120");
 var a = s("735250"),
@@ -18,12 +18,12 @@ var a = s("735250"),
   T = s("107828"),
   _ = s("727785"),
   f = s("689938"),
-  m = s("158200");
+  I = s("158200");
 
-function g() {}
-let I = [_.AutocompleterResultTypes.VOICE_CHANNEL];
+function m() {}
+let N = [_.AutocompleterResultTypes.VOICE_CHANNEL];
 
-function N(e) {
+function g(e) {
   e.setOptions({
     voiceChannelGuildFilter: null
   }), e.setLimit(1 / 0)
@@ -52,19 +52,19 @@ function A() {
   }, "header")
 }
 
-function p() {
+function O() {
   return (0, a.jsx)("div", {
-    className: m.voiceListSearchEmpty,
+    className: I.voiceListSearchEmpty,
     children: (0, a.jsx)(i.Text, {
       variant: "text-md/medium",
       color: "text-muted",
-      className: m.noVoiceChannelSelected,
+      className: I.noVoiceChannelSelected,
       children: f.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
     })
   })
 }
 
-function O(e) {
+function p(e) {
   var t, s;
   let {
     keybind: l
@@ -85,11 +85,11 @@ function O(e) {
   }, []);
   return (0, a.jsx)(i.FormSection, {
     title: f.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
-    className: m.channelIdSection,
+    className: I.channelIdSection,
     children: (0, a.jsxs)(E.default, {
       align: E.default.Align.STRETCH,
       children: [(0, a.jsx)("div", {
-        className: m.selectedVoiceChannel,
+        className: I.selectedVoiceChannel,
         children: (0, a.jsx)(x, {
           channelId: d
         })
@@ -110,9 +110,9 @@ function R(e) {
     transitionState: t,
     onClose: s,
     onSelect: r
-  } = e, E = n.useId(), g = n.useRef(null), {
+  } = e, E = n.useId(), m = n.useRef(null), {
     mouseFocusEnabled: h,
-    enableMouseFocus: O,
+    enableMouseFocus: p,
     disableMouseFocus: R
   } = function() {
     let e = n.useRef(!1),
@@ -130,11 +130,11 @@ function R(e) {
   }(), {
     query: x,
     updateQuery: M,
-    queryResults: v
+    queryResults: D
   } = (0, o.default)({
     visible: !0,
-    autocompleterResultTypes: I,
-    autocompleterBeforeCreateSearchContext: N
+    autocompleterResultTypes: N,
+    autocompleterBeforeCreateSearchContext: g
   }), L = function(e) {
     let t = "" !== e,
       s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
@@ -149,7 +149,7 @@ function R(e) {
       }, [t]);
     return t ? null : s
   }(x), {
-    focusedIndex: D,
+    focusedIndex: v,
     setFocusedIndex: P
   } = function(e) {
     let [t, s] = n.useState(0), a = n.useRef(e);
@@ -161,30 +161,30 @@ function R(e) {
   n.useEffect(() => {
     let {
       current: e
-    } = g;
-    !(null == e || e.isItemVisible(0, D, !0)) && e.scrollToIndex({
+    } = m;
+    !(null == e || e.isItemVisible(0, v, !0)) && e.scrollToIndex({
       section: 0,
-      row: D
+      row: v
     })
-  }, [D]);
-  let b = null != L ? L.length : v.length,
-    j = (() => {
+  }, [v]);
+  let b = null != L ? L.length : D.length,
+    U = (() => {
       if (null != L) {
         var e;
-        return null === (e = L[D]) || void 0 === e ? void 0 : e.id
+        return null === (e = L[v]) || void 0 === e ? void 0 : e.id
       }
-      let t = v[D];
+      let t = D[v];
       if ((null == t ? void 0 : t.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
-    className: m.voiceModalContainer,
-    onMouseMove: O,
+    className: I.voiceModalContainer,
+    onMouseMove: p,
     children: (0, a.jsxs)(i.ModalRoot, {
       transitionState: t,
       size: i.ModalSize.MEDIUM,
-      className: m.voiceModalRootContainer,
+      className: I.voiceModalRootContainer,
       children: [(0, a.jsx)("div", {
-        className: m.inputWrapper,
+        className: I.inputWrapper,
         children: (0, a.jsx)(i.TextInput, {
           value: x,
           onChange: M,
@@ -197,40 +197,40 @@ function R(e) {
                 break;
               case "enter": {
                 let e = (() => {
-                  if (null != L) return L[D];
-                  let e = v[D];
+                  if (null != L) return L[v];
+                  let e = D[v];
                   if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                 })();
                 null == e ? r(void 0) : r(e.id), s();
                 break
               }
               case "arrowup":
-                0 === D ? P(b - 1) : P(D - 1);
+                0 === v ? P(b - 1) : P(v - 1);
                 break;
               case "arrowdown":
-                D >= b - 1 ? P(0) : P(D + 1)
+                v >= b - 1 ? P(0) : P(v + 1)
             }
           },
           placeholder: f.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
           role: "combobox",
           "aria-controls": E,
           "aria-expanded": b > 0,
-          "aria-activedescendant": b > 0 && null != j ? j : void 0,
+          "aria-activedescendant": b > 0 && null != U ? U : void 0,
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === b && "" !== x && (0, a.jsx)(p, {}), (b > 0 || "" === x) && (0, a.jsx)(i.ListThin, {
+      }), 0 === b && "" !== x && (0, a.jsx)(O, {}), (b > 0 || "" === x) && (0, a.jsx)(i.ListThin, {
         innerId: E,
         innerRole: "listbox",
         "aria-label": f.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
-        ref: g,
+        ref: m,
         sections: [b],
         renderRow: function(e) {
           let {
             row: t
           } = e, n = (() => {
             if (null != L) return L[t];
-            let e = v[t];
+            let e = D[t];
             if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
           })();
           if (null == n) return null;
@@ -240,14 +240,14 @@ function R(e) {
             id: n.id,
             channel: n,
             category: l,
-            focused: D === t,
+            focused: v === t,
             onMouseEnter: () => h.current && P(t),
             onClick: () => {
               r(n.id), s()
             },
             onFocus: () => P(t),
             children: null != i ? (0, a.jsx)("div", {
-              className: m.guildName,
+              className: I.guildName,
               children: i.name
             }) : null
           }, n.id)
@@ -256,7 +256,7 @@ function R(e) {
         renderFooter: C,
         sectionHeight: 0,
         rowHeight: 34,
-        className: m.voiceChannelList,
+        className: I.voiceChannelList,
         listHeaderHeight: 8,
         footerHeight: 16
       })]
@@ -286,18 +286,18 @@ function x(e) {
   return null == s ? (0, a.jsx)(i.Text, {
     variant: "text-md/medium",
     color: "text-muted",
-    className: m.noVoiceChannelSelected,
+    className: I.noVoiceChannelSelected,
     children: f.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
   }) : (0, a.jsx)(T.Channel, {
     channel: s,
     id: s.id,
     category: n,
-    onClick: g,
-    onFocus: g,
-    onMouseEnter: g,
+    onClick: m,
+    onFocus: m,
+    onMouseEnter: m,
     focused: !1,
     children: null != r ? (0, a.jsx)("div", {
-      className: m.guildName,
+      className: I.guildName,
       children: r.name
     }) : null
   })

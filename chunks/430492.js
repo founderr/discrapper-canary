@@ -109,9 +109,9 @@ t.default = function(e) {
     onClose: t,
     code: o,
     drop: f,
-    platform: m,
-    transitionState: g
-  } = e, I = (0, d.useUID)(), [N, h] = n.useState();
+    platform: I,
+    transitionState: m
+  } = e, N = (0, d.useUID)(), [g, h] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
       await (0, u.fetchCodePlatformAvailability)(f.dropsQuestId)
@@ -119,15 +119,15 @@ t.default = function(e) {
   }, [f.dropsQuestId, o]);
   let C = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
   return (0, a.jsx)(i.ModalRoot, {
-    transitionState: g,
-    "aria-labelledby": I,
+    transitionState: m,
+    "aria-labelledby": N,
     children: (0, a.jsx)(a.Fragment, {
       children: (() => {
         if (null != o) return (0, a.jsx)(_, {
           bodyText: f.messages.claimTip(),
           onClose: t,
           copyInputTitle: E.default.Messages.DROPS_REDEMPTION_CODE_PLATFORM_TITLE.format({
-            platform: m
+            platform: I
           }),
           code: o
         });
@@ -167,7 +167,7 @@ t.default = function(e) {
                     value: e,
                     label: (0, S.getPlatformLabel)(e)
                   })),
-                  value: n ? C[0] : N,
+                  value: n ? C[0] : g,
                   isDisabled: !e,
                   className: e ? "" : T.selectDangerBorder,
                   look: e ? i.SelectLooks.FILLED : i.SelectLooks.CUSTOM
@@ -186,9 +186,9 @@ t.default = function(e) {
                     let {
                       default: e
                     } = await Promise.all([s.e("99387"), s.e("5004")]).then(s.bind(s, "233070"));
-                    return s => (void 0 !== N || n) && (0, a.jsx)(e, {
+                    return s => (void 0 !== g || n) && (0, a.jsx)(e, {
                       ...s,
-                      platform: void 0 === N ? C[0] : N,
+                      platform: void 0 === g ? C[0] : g,
                       code: o,
                       dropsQuestId: f.dropsQuestId,
                       closeParentModal: t,
@@ -196,7 +196,7 @@ t.default = function(e) {
                     })
                   })
                 },
-                disabled: void 0 === N && !n,
+                disabled: void 0 === g && !n,
                 children: E.default.Messages.UNLOCK_CODE
               }), e ? (0, a.jsx)(i.Button, {
                 onClick: t,

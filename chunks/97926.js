@@ -15,7 +15,7 @@ var a = s("735250"),
   _ = s("689938"),
   f = s("201403");
 
-function m(e) {
+function I(e) {
   if (null == e) return !1;
   let {
     userStatus: t
@@ -29,21 +29,21 @@ t.default = () => {
     isFetchingCurrentQuests: t
   } = (0, d.useQuests)({
     fetchPolicy: "cache-and-network"
-  }), s = (0, d.useExpiredQuestsMap)(), g = (0, o.useIsEligibleForConcurrentQuests)({
+  }), s = (0, d.useExpiredQuestsMap)(), m = (0, o.useIsEligibleForConcurrentQuests)({
     location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
-  }), I = n.useRef(!0), N = n.useRef([]), h = n.useRef([]);
+  }), N = n.useRef(!0), g = n.useRef([]), h = n.useRef([]);
   n.useEffect(() => {
-    I.current = !0
+    N.current = !0
   }, [t, s]), n.useEffect(() => {
-    let e = new Set(N.current);
+    let e = new Set(g.current);
     for (let [t, a] of s)
       if (a && e.has(t)) {
-        I.current = !0;
+        N.current = !0;
         break
       }
   }, [s]), n.useEffect(() => {
-    if (I.current) {
-      I.current = !1;
+    if (N.current) {
+      N.current = !1;
       let {
         sortedQuestIds: t,
         sections: a
@@ -72,16 +72,16 @@ t.default = () => {
             }
             if (_ && !o) return -1;
             if (f && !S) return 1;
-            let m = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
-              g = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
-            if (m && g) return 0;
-            if (m) return -1;
-            if (g) return 1;
-            let I = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
-              N = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-            if (I && !_ && !o && N && !f && !S) return 0;
-            if (I && !_ && !o) return -1;
-            if (N && !f && !S) return 1;
+            let I = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
+              m = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
+            if (I && m) return 0;
+            if (I) return -1;
+            if (m) return 1;
+            let N = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
+              g = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
+            if (N && !_ && !o && g && !f && !S) return 0;
+            if (N && !_ && !o) return -1;
+            if (g && !f && !S) return 1;
             let h = o && d,
               C = S && T;
             return h && !C ? 1 : !h && C ? -1 : 0
@@ -89,11 +89,11 @@ t.default = () => {
           a = [{
             location: u.QuestContent.GIFT_INVENTORY_FOR_YOU,
             title: _.default.Messages.QUESTS_FOR_YOU,
-            questIds: s.filter(e => m(t.get(e)))
+            questIds: s.filter(e => I(t.get(e)))
           }, {
             location: u.QuestContent.GIFT_INVENTORY_OTHER,
             title: _.default.Messages.QUESTS_OTHER,
-            questIds: s.filter(e => !m(t.get(e)))
+            questIds: s.filter(e => !I(t.get(e)))
           }];
         return {
           sortedQuestIds: s,
@@ -104,12 +104,12 @@ t.default = () => {
         let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
         return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
       }));
-      N.current = t, h.current = a
+      g.current = t, h.current = a
     }
   }, [e, s]);
   let C = h.current,
-    A = N.current,
-    p = C.every(e => {
+    A = g.current,
+    O = C.every(e => {
       let {
         questIds: t
       } = e;
@@ -122,7 +122,7 @@ t.default = () => {
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsxs)("div", {
         className: f.questsHeading,
-        children: [g && (0, a.jsx)(l.QuestsIcon, {
+        children: [m && (0, a.jsx)(l.QuestsIcon, {
           className: f.questsIcon
         }), (0, a.jsx)(i.Heading, {
           variant: "heading-md/semibold",
@@ -138,7 +138,7 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: f.divider
-      }), g ? C.map((e, t, s) => {
+      }), m ? C.map((e, t, s) => {
         let {
           location: n,
           questIds: l,
@@ -153,7 +153,7 @@ t.default = () => {
         }, 0);
         return (0, a.jsxs)("section", {
           className: f.questsListContainer,
-          children: [p && (0, a.jsx)(i.Text, {
+          children: [O && (0, a.jsx)(i.Text, {
             variant: "text-xs/semibold",
             color: "header-secondary",
             className: f.sectionHeader,
@@ -162,7 +162,7 @@ t.default = () => {
             questId: e,
             location: n,
             contentPosition: t + o,
-            initiallyExpanded: !p
+            initiallyExpanded: !O
           }, e))]
         }, n)
       }) : A.map((e, t) => (0, a.jsx)(S.QuestsCardWrapper, {

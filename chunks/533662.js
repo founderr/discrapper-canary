@@ -21,7 +21,7 @@ var a = s("735250"),
 function f(e) {
   let {
     onBackClick: t
-  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getAllUnlockedAchievements()), f = n.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), m = n.useMemo(() => Object.values(S.ACHIEVEMENT_LIST).filter(u.isNotNullish).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
+  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getAllUnlockedAchievements()), f = n.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), I = n.useMemo(() => Object.values(S.ACHIEVEMENT_LIST).filter(u.isNotNullish).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormSection, {
       children: (0, a.jsxs)(r.Clickable, {
@@ -72,7 +72,7 @@ function f(e) {
           }, t)
         })
       })
-    }), m.length > 0 && (0, a.jsxs)(r.FormSection, {
+    }), I.length > 0 && (0, a.jsxs)(r.FormSection, {
       className: _.divider,
       children: [(0, a.jsx)("div", {
         className: _.headerTextContainer,
@@ -83,7 +83,7 @@ function f(e) {
         })
       }), (0, a.jsx)("div", {
         className: _.achievementGrid,
-        children: m.map(e => (0, a.jsx)(E.default, {
+        children: I.map(e => (0, a.jsx)(E.default, {
           achievementId: e.id
         }, e.id))
       })]

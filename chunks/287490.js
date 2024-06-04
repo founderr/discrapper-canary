@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return m
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -19,14 +19,14 @@ var a = s("735250"),
   _ = s("987338"),
   f = s("964966");
 
-function m(e, t) {
+function I(e, t) {
   return e.map((e, s) => ({
     label: "object" == typeof t ? t[s] : E.default.getExperimentBucketName(e),
     value: e
   }))
 }
 
-function g() {
+function m() {
   let e = (0, r.useStateFromStoresObject)([u.default], () => u.default.getAllExperimentOverrideDescriptors()),
     t = (0, r.useStateFromStoresObject)([u.default], () => u.default.getRegisteredExperiments()),
     [s, l] = n.useState(""),
@@ -40,7 +40,7 @@ function g() {
       onChange: l,
       onClear: () => l("")
     }), i.length > 0 ? i.map(t => {
-      let s = t.experiment.type === _.ExperimentTypes.GUILD ? N : I;
+      let s = t.experiment.type === _.ExperimentTypes.GUILD ? g : N;
       return (0, a.jsx)(s, {
         experiment: t.experiment,
         experimentId: t.id,
@@ -56,22 +56,22 @@ function g() {
   })
 }
 
-function I(e) {
+function N(e) {
   var t;
   let {
     experiment: s,
     experimentId: l,
     overrideDescriptor: c
-  } = e, [S, E] = n.useState(null != c), [T, g] = n.useState(!1), I = n.useCallback(() => {
+  } = e, [S, E] = n.useState(null != c), [T, m] = n.useState(!1), N = n.useCallback(() => {
     E(e => !e)
-  }, []), N = (0, r.useStateFromStores)([u.default], () => u.default.getUserExperimentDescriptor(l)), h = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedUserExperiment(l)), C = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(_.ExperimentTypes.USER, l), e => {
+  }, []), g = (0, r.useStateFromStores)([u.default], () => u.default.getUserExperimentDescriptor(l)), h = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedUserExperiment(l)), C = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(_.ExperimentTypes.USER, l), e => {
     let [t, s] = e;
     return -s
   }).map(e => {
     let [t, s] = e;
     return "".concat(new Date(s).toLocaleString(), " (").concat(t, ")")
   })), A = (0, a.jsx)(o.Clickable, {
-    onClick: I,
+    onClick: N,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
       className: f.title,
@@ -98,7 +98,7 @@ function I(e) {
           children: (0, a.jsx)(o.SingleSelect, {
             value: null != c ? c.bucket : null,
             clearable: null != c,
-            options: m(s.buckets, s.description),
+            options: I(s.buckets, s.description),
             onChange: e => {
               (0, d.overrideBucket)(l, e)
             }
@@ -114,7 +114,7 @@ function I(e) {
         className: f.description,
         children: [(0, a.jsxs)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
-          children: ["Current assigned to bucket ", null !== (t = null == N ? void 0 : N.bucket) && void 0 !== t ? t : _.ExperimentBuckets.NOT_ELIGIBLE]
+          children: ["Current assigned to bucket ", null !== (t = null == g ? void 0 : g.bucket) && void 0 !== t ? t : _.ExperimentBuckets.NOT_ELIGIBLE]
         }), null == h ? (0, a.jsx)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -149,7 +149,7 @@ function I(e) {
         className: f.debugButton,
         size: o.Button.Sizes.SMALL,
         look: o.Button.Looks.BLANK,
-        onClick: () => g(!0),
+        onClick: () => m(!0),
         children: "More Details \xbb"
       })]
     }), (0, a.jsx)(o.FormDivider, {
@@ -163,14 +163,14 @@ function I(e) {
   })
 }
 
-function N(e) {
+function g(e) {
   let {
     experiment: t,
     experimentId: s,
     overrideDescriptor: l
-  } = e, [S, E] = n.useState(null != l), [T, g] = n.useState(!1), I = n.useCallback(() => {
+  } = e, [S, E] = n.useState(null != l), [T, m] = n.useState(!1), N = n.useCallback(() => {
     E(e => !e)
-  }, []), N = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedGuildExperiment(s)), h = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(_.ExperimentTypes.GUILD, s), e => {
+  }, []), g = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedGuildExperiment(s)), h = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(_.ExperimentTypes.GUILD, s), e => {
     let [t, s] = e;
     return -s
   }).map(e => {
@@ -187,8 +187,8 @@ function N(e) {
       !(i in t) && (t[i] = 0), t[i]++, a.push("".concat(l.name, ": ").concat(i))
     }
     return [a, i()(t).keys().map(Number).sort().map(e => "".concat(t[e], " guilds in bucket ").concat(e)).join(", ")]
-  }), p = (0, a.jsx)(o.Clickable, {
-    onClick: I,
+  }), O = (0, a.jsx)(o.Clickable, {
+    onClick: N,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
       className: f.title,
@@ -209,13 +209,13 @@ function N(e) {
   return S ? (0, a.jsxs)("div", {
     className: f.group,
     children: [(0, a.jsxs)(o.FormSection, {
-      children: [p, (0, a.jsxs)("div", {
+      children: [O, (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.FormItem, {
           title: "Bucket Override",
           children: (0, a.jsx)(o.SingleSelect, {
             value: null != l ? l.bucket : null,
             clearable: null != l,
-            options: m(t.buckets, t.description),
+            options: I(t.buckets, t.description),
             onChange: e => {
               (0, d.overrideBucket)(s, e)
             }
@@ -232,7 +232,7 @@ function N(e) {
         children: [(0, a.jsxs)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: ["Current Assignments: ", A]
-        }), null == N ? (0, a.jsx)(o.FormText, {
+        }), null == g ? (0, a.jsx)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
         }) : null]
@@ -252,7 +252,7 @@ function N(e) {
         }), (0, a.jsx)(o.Text, {
           variant: "code",
           className: f.pre,
-          children: null == N ? "None" : JSON.stringify(N, void 0, 2)
+          children: null == g ? "None" : JSON.stringify(g, void 0, 2)
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
           className: f.debugTitle,
@@ -274,7 +274,7 @@ function N(e) {
         className: f.debugButton,
         size: o.Button.Sizes.SMALL,
         look: o.Button.Looks.BLANK,
-        onClick: () => g(!0),
+        onClick: () => m(!0),
         children: "More Details \xbb"
       })]
     }), (0, a.jsx)(o.FormDivider, {
@@ -283,7 +283,7 @@ function N(e) {
   }) : (0, a.jsx)("div", {
     className: f.group,
     children: (0, a.jsx)(o.FormSection, {
-      children: p
+      children: O
     })
   })
 }

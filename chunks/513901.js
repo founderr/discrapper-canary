@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return g
   }
 });
 var a = s("735250"),
@@ -18,66 +18,66 @@ var a = s("735250"),
   T = s("993413"),
   _ = s("504983"),
   f = s("981631"),
-  m = s("474936"),
-  g = s("689938"),
-  I = s("484589");
+  I = s("474936"),
+  m = s("689938"),
+  N = s("484589");
 
-function N(e) {
+function g(e) {
   let {
     user: t,
     guild: s,
     className: l,
-    sectionTitle: N,
+    sectionTitle: g,
     forcedDivider: h = !1,
     withTutorial: C = !1,
     showBorder: A = !1,
-    isTryItOutFlow: p = !1,
-    initialSelectedEffectId: O
+    isTryItOutFlow: O = !1,
+    initialSelectedEffectId: p
   } = e, R = (0, E.useGlobalOrGuildIdentityProfileEffect)(t, s), x = S.default.canUsePremiumProfileCustomization(t), {
     analyticsLocations: M
   } = (0, o.default)(), {
-    pendingProfileEffectId: v,
+    pendingProfileEffectId: D,
     errors: L
-  } = (0, E.useGlobalOrGuildIdentityPendingProfileEffect)(s), D = n.useCallback(() => (0, d.openProfileEffectModal)({
+  } = (0, E.useGlobalOrGuildIdentityPendingProfileEffect)(s), v = n.useCallback(() => (0, d.openProfileEffectModal)({
     analyticsLocations: M,
-    initialSelectedEffectId: O,
+    initialSelectedEffectId: p,
     guild: s
-  }), [M, O, s]);
+  }), [M, p, s]);
   n.useEffect(() => {
     x && c.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: m.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
+      type: I.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
       location_stack: M
     })
   }, [x, M]);
   let P = null != s,
-    b = p || void 0 !== v ? null != v : null != R,
-    j = C ? u.default : r.Button;
+    b = O || void 0 !== D ? null != D : null != R,
+    U = C ? u.default : r.Button;
   return (0, a.jsx)(T.default, {
     forcedDivider: h,
     borderType: _.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
-    title: N,
+    title: g,
     showBorder: A,
     errors: L,
     className: l,
     children: (0, a.jsxs)("div", {
-      className: I.buttonsContainer,
-      children: [(0, a.jsx)(j, {
+      className: N.buttonsContainer,
+      children: [(0, a.jsx)(U, {
         size: r.Button.Sizes.SMALL,
-        onClick: D,
+        onClick: v,
         className: i()({
-          [I.buttonHighlighted]: C
+          [N.buttonHighlighted]: C
         }),
-        children: g.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
+        children: m.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
       }), b && (0, a.jsx)(r.Button, {
-        className: I.removeButton,
+        className: N.removeButton,
         color: r.Button.Colors.PRIMARY,
         look: r.Button.Looks.LINK,
         size: r.Button.Sizes.SMALL,
         onClick: function() {
           (0, E.setNewPendingProfileEffectId)(null, R, s)
         },
-        children: P ? g.default.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : g.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+        children: P ? m.default.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : m.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
       })]
     })
   })

@@ -25,25 +25,25 @@ function E(e) {
     className: T,
     disabled: _ = !1,
     showPremiumIcon: f = !0,
-    isTryItOutFlow: m = !1,
-    forcedDivider: g,
-    withHighlight: I = !1
-  } = e, N = I ? r.default : i.Button;
+    isTryItOutFlow: I = !1,
+    forcedDivider: m,
+    withHighlight: N = !1
+  } = e, g = N ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: T,
     title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
     showPremiumIcon: f,
     errors: s,
     disabled: _,
-    forcedDivider: g,
+    forcedDivider: m,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
-      children: [(0, a.jsx)(N, {
+      children: [(0, a.jsx)(g, {
         className: l()({
-          [S.buttonHighlighted]: I
+          [S.buttonHighlighted]: N
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, E, m, void 0),
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, E, I, void 0),
         children: c.default.Messages.CHANGE_BANNER
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,

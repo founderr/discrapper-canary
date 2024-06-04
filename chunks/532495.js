@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return j
+    return U
   }
 });
 var a = s("735250");
@@ -19,52 +19,52 @@ var n = s("512722"),
   T = s("126631"),
   _ = s("433411"),
   f = s("532432"),
-  m = s("349177"),
-  g = s("872736"),
-  I = s("134795"),
-  N = s("610966"),
+  I = s("349177"),
+  m = s("872736"),
+  N = s("134795"),
+  g = s("610966"),
   h = s("513901"),
   C = s("451392"),
   A = s("906364"),
-  p = s("676934"),
-  O = s("350327"),
+  O = s("676934"),
+  p = s("350327"),
   R = s("621853"),
   x = s("318661"),
   M = s("619914"),
-  v = s("25990"),
+  D = s("25990"),
   L = s("594174"),
-  D = s("74538"),
+  v = s("74538"),
   P = s("689938"),
   b = s("741129");
 
-function j() {
-  var e, t, s, n, j, U, y, G;
-  let F = (0, i.useStateFromStores)([L.default], () => {
+function U() {
+  var e, t, s, n, U, j, F, G;
+  let y = (0, i.useStateFromStores)([L.default], () => {
       let e = L.default.getCurrentUser();
       return l()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
     }),
-    B = (0, i.useStateFromStores)([R.default], () => R.default.getUserProfile(F.id)),
+    B = (0, i.useStateFromStores)([R.default], () => R.default.getUserProfile(y.id)),
     {
       pendingAvatar: k,
-      pendingGlobalName: w,
-      pendingBanner: H,
+      pendingGlobalName: H,
+      pendingBanner: w,
       pendingBio: V,
       pendingPronouns: Y,
       pendingAccentColor: W,
       pendingThemeColors: K,
       errors: z
-    } = (0, i.useStateFromStoresObject)([v.default], () => {
-      let e = v.default.getAllPending(),
-        t = v.default.getErrors();
+    } = (0, i.useStateFromStoresObject)([D.default], () => {
+      let e = D.default.getAllPending(),
+        t = D.default.getErrors();
       return {
         ...e,
         errors: t
       }
     }),
     Q = (0, S.useGuildAutomodProfileQuarantineErrors)(),
-    q = D.default.canUsePremiumProfileCustomization(F),
-    Z = (0, E.showRemoveAvatar)(k, F.avatar),
-    X = (0, E.showRemoveBanner)(H, null == B ? void 0 : B.banner),
+    q = v.default.canUsePremiumProfileCustomization(y),
+    Z = (0, E.showRemoveAvatar)(k, y.avatar),
+    X = (0, E.showRemoveBanner)(w, null == B ? void 0 : B.banner),
     J = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
     location: J + " auto on",
@@ -73,10 +73,10 @@ function j() {
     location: J + " auto off",
     autoTrackExposure: !1
   });
-  let $ = (0, x.default)(F.id),
+  let $ = (0, x.default)(y.id),
     ee = null == $ ? void 0 : $.getLegacyUsername(),
     et = (null !== (s = null === (e = z.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? z.global_name : null !== (n = null == Q ? void 0 : Q.nick) && void 0 !== n ? n : [],
-    es = (null !== (j = null === (t = z.bio) || void 0 === t ? void 0 : t.length) && void 0 !== j ? j : 0) > 0 ? z.bio : null !== (U = null == Q ? void 0 : Q.bio) && void 0 !== U ? U : [],
+    es = (null !== (U = null === (t = z.bio) || void 0 === t ? void 0 : t.length) && void 0 !== U ? U : 0) > 0 ? z.bio : null !== (j = null == Q ? void 0 : Q.bio) && void 0 !== j ? j : [],
     ea = (0, M.useUserIsRecentGamesExperimentEnabled)({
       location: "28tk0bf_7",
       autoTrackExposure: !0
@@ -85,18 +85,18 @@ function j() {
     el = (0, u.useCurrentUserAvailableClans)();
   return (0, a.jsxs)("div", {
     className: b.sectionsContainer,
-    children: [(0, a.jsx)(m.default, {
-      placeholder: F.username,
+    children: [(0, a.jsx)(I.default, {
+      placeholder: y.username,
       errors: et,
-      currentGlobalName: F.globalName,
-      pendingGlobalName: w,
+      currentGlobalName: y.globalName,
+      pendingGlobalName: H,
       onGlobalNameChange: r.setPendingGlobalNameName
     }), (0, a.jsx)(A.default, {
       sectionTitle: P.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: z.pronouns,
-      onPronounsChange: O.setPendingPronouns,
+      onPronounsChange: p.setPendingPronouns,
       pendingPronouns: Y,
-      currentPronouns: null !== (y = null == B ? void 0 : B.pronouns) && void 0 !== y ? y : ""
+      currentPronouns: null !== (F = null == B ? void 0 : B.pronouns) && void 0 !== F ? F : ""
     }, "pronouns"), (0, a.jsx)(f.default, {
       onAvatarChange: r.setPendingAvatar,
       showRemoveAvatarButton: Z,
@@ -104,29 +104,29 @@ function j() {
       sectionTitle: P.default.Messages.USER_SETTINGS_AVATAR,
       forcedDivider: !0
     }, "avatar"), (0, a.jsx)(_.default, {
-      user: F,
+      user: y,
       sectionTitle: P.default.Messages.USER_SETTINGS_AVATAR_DECORATION
     }, "decoration"), (0, a.jsx)(h.default, {
-      user: F,
+      user: y,
       sectionTitle: P.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), q ? (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(I.default, {
+      children: [(0, a.jsx)(N.default, {
         showRemoveBannerButton: X,
         errors: z.banner,
-        onBannerChange: O.setPendingBanner,
+        onBannerChange: p.setPendingBanner,
         forcedDivider: !0
       }, "banner"), (0, a.jsx)(C.default, {
-        user: F,
+        user: y,
         pendingAvatar: k,
         pendingColors: K,
-        onThemeColorsChange: O.setPendingThemeColors,
+        onThemeColorsChange: p.setPendingThemeColors,
         forcedDivider: !0
       })]
-    }) : (0, a.jsx)(N.default, {
-      user: F,
+    }) : (0, a.jsx)(g.default, {
+      user: y,
       savedUserColor: null == B ? void 0 : B.accentColor,
       pendingColor: W,
-      setPendingAccentColor: O.setPendingAccentColor
+      setPendingAccentColor: p.setPendingAccentColor
     }, "color"), (0, a.jsx)(T.default, {
       sectionTitle: P.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: es,
@@ -135,7 +135,7 @@ function j() {
       currentBio: null !== (G = null == B ? void 0 : B.bio) && void 0 !== G ? G : ""
     }, "bio"), en && el.length > 0 && (0, a.jsx)(c.default, {
       availableClans: el
-    }), ea && (0, a.jsx)(p.default, {}), null != ee && (0, a.jsx)(g.default, {
+    }), ea && (0, a.jsx)(O.default, {}), null != ee && (0, a.jsx)(m.default, {
       legacyUsername: ee
     }, "legacy_username")]
   })

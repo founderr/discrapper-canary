@@ -18,15 +18,15 @@ var a = s("735250"),
   T = s("906732"),
   _ = s("475977"),
   f = s("957730"),
-  m = s("589266"),
-  g = s("296810"),
-  I = s("935147"),
-  N = s("350327"),
+  I = s("589266"),
+  m = s("296810"),
+  N = s("935147"),
+  g = s("350327"),
   h = s("246946"),
   C = s("25990"),
   A = s("594174"),
-  p = s("74538"),
-  O = s("695346"),
+  O = s("74538"),
+  p = s("695346"),
   R = s("265159"),
   x = s("532495");
 
@@ -43,12 +43,12 @@ function M() {
       pendingAvatar: s,
       pendingBanner: l,
       pendingBio: M,
-      pendingPronouns: v,
+      pendingPronouns: D,
       pendingGlobalName: L,
-      pendingAccentColor: D,
+      pendingAccentColor: v,
       pendingAvatarDecoration: P,
       pendingThemeColors: b,
-      pendingProfileEffectId: j
+      pendingProfileEffectId: U
     } = (0, r.useStateFromStoresObject)([C.default], () => {
       let e = C.default.getAllPending(),
         t = C.default.getErrors();
@@ -57,24 +57,24 @@ function M() {
         errors: t
       }
     }),
-    U = O.UseLegacyChatInput.useSetting() && null != M ? f.default.parse(void 0, M).content : M,
-    y = p.default.canUsePremiumProfileCustomization(e),
+    j = p.UseLegacyChatInput.useSetting() && null != M ? f.default.parse(void 0, M).content : M,
+    F = O.default.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: G
     } = (0, T.default)(E.default.PROFILE),
-    F = {
+    y = {
       user: e,
-      canUsePremiumCustomization: y,
+      canUsePremiumCustomization: F,
       onUpsellClick: R.default,
       onAvatarChange: u.setPendingAvatar,
-      onBannerChange: N.setPendingBanner,
+      onBannerChange: g.setPendingBanner,
       pendingBanner: l,
-      pendingBio: U,
-      pendingPronouns: v,
+      pendingBio: j,
+      pendingPronouns: D,
       pendingAvatar: s,
       pendingGlobalName: L,
       pendingAvatarDecoration: P,
-      pendingProfileEffectId: j
+      pendingProfileEffectId: U
     };
   n.useEffect(() => () => o.default.wait(u.resetAllPending), []);
   let B = "UserSettingsProfileCustomization";
@@ -87,15 +87,15 @@ function M() {
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
     value: G,
     children: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(g.default, {
-        profilePreview: (0, a.jsx)(m.default, {
-          ...F,
+      children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(m.default, {
+        profilePreview: (0, a.jsx)(I.default, {
+          ...y,
           location: "UserSettingsProfileCustomization",
           pendingThemeColors: b,
-          pendingAccentColor: D
+          pendingAccentColor: v
         }),
         children: (0, a.jsx)(x.default, {})
-      }), !p.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(I.default, {
+      }), !O.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(N.default, {
         user: e
       })]
     })

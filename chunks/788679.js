@@ -23,26 +23,26 @@ function f(e) {
     embedId: E,
     transitionState: M,
     onClose: m
-  } = e, g = (0, s.useIsEligibleForExplicitMediaRedaction)(), S = (0, o.useExplicitMediaAttachmentsForMessage)(t, n, f), p = (0, o.useExplicitMediaEmbedsForMessage)(t, n, E), {
-    reportFalsePositive: v,
-    isReportFalsePositiveLoading: I
+  } = e, g = (0, s.useIsEligibleForExplicitMediaRedaction)(), S = (0, o.useExplicitMediaAttachmentsForMessage)(t, n, f), I = (0, o.useExplicitMediaEmbedsForMessage)(t, n, E), {
+    reportFalsePositive: p,
+    isReportFalsePositiveLoading: v
   } = (0, r.useExplicitMediaActions)({
     onSuccess: () => (0, d.handleSuccess)(m),
     onError: () => {
       (0, i.showToast)((0, i.createToast)(c.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE))
     },
     report: () => {
-      (0, l.reportFalsePositive)(t, n, S.map(e => e.id), p.map(e => e.id))
+      (0, l.reportFalsePositive)(t, n, S.map(e => e.id), I.map(e => e.id))
     }
   });
-  return !(g && (S.length > 0 || p.length > 0)) && m(), (0, a.jsx)(d.ExplicitMediaFalsePositiveModal, {
+  return !(g && (S.length > 0 || I.length > 0)) && m(), (0, a.jsx)(d.ExplicitMediaFalsePositiveModal, {
     messageId: n,
     channelId: t,
-    isReportFalsePositiveLoading: I,
+    isReportFalsePositiveLoading: v,
     analyticsContext: u.TrackMediaRedactionContext.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-    onConfirmPress: v,
-    attachmentPreview: 1 === S.length && 0 === p.length ? S[0] : void 0,
-    embedPreview: 1 === p.length && 0 === S.length ? p[0] : void 0,
+    onConfirmPress: p,
+    attachmentPreview: 1 === S.length && 0 === I.length ? S[0] : void 0,
+    embedPreview: 1 === I.length && 0 === S.length ? I[0] : void 0,
     transitionState: M,
     onClose: m
   })

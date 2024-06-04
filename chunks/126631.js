@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return m
   }
 }), s("47120");
 var a = s("735250"),
@@ -21,49 +21,49 @@ let _ = (0, u.uid)(),
     id: "1",
     type: S.ChannelTypes.DM
   }),
-  m = (0, u.uid)();
+  I = (0, u.uid)();
 
-function g(e) {
+function m(e) {
   let {
     sectionTitle: t,
     errors: s,
     onBioChange: d,
     pendingBio: u,
-    placeholder: g,
-    currentBio: I,
-    disabled: N = !1
-  } = e, [h, C] = n.useState(null != u ? u : I), [A, p] = n.useState((0, r.toRichValue)(h)), O = n.useRef(!1);
+    placeholder: m,
+    currentBio: N,
+    disabled: g = !1
+  } = e, [h, C] = n.useState(null != u ? u : N), [A, O] = n.useState((0, r.toRichValue)(h)), p = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
-      let e = (0, r.toRichValue)(I);
-      C(I), p(e)
+      let e = (0, r.toRichValue)(N);
+      C(N), O(e)
     }
-  }, [u, I]), (0, a.jsxs)(c.default, {
+  }, [u, N]), (0, a.jsxs)(c.default, {
     title: t,
     titleId: _,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: s,
-    disabled: N,
+    disabled: g,
     children: [(0, a.jsx)(o.default, {
-      "aria-describedby": m,
+      "aria-describedby": I,
       "aria-labelledby": _,
       innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
-        t !== h && (C(t), p(s), d(t))
+        t !== h && (C(t), O(s), d(t))
       },
-      placeholder: g,
+      placeholder: m,
       channel: f,
       textValue: h,
       richValue: A,
       type: i.ChatInputTypes.PROFILE_BIO_INPUT,
       onBlur: () => {
-        O.current = !1
+        p.current = !1
       },
       onFocus: () => {
-        O.current = !0
+        p.current = !0
       },
-      focused: O.current,
+      focused: p.current,
       onSubmit: function() {
         return new Promise(e => {
           e({
@@ -73,7 +73,7 @@ function g(e) {
         })
       }
     }), (0, a.jsx)(l.HiddenVisually, {
-      id: m,
+      id: I,
       children: E.default.Messages.MAXIMUM_LENGTH.format({
         maxLength: S.BIO_MAX_LENGTH
       })

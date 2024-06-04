@@ -25,10 +25,10 @@ function _() {
     n = c.RenderSpoilers.useSetting(),
     _ = c.UseThreadSidebar.useSetting(),
     f = c.ViewImageDescriptions.useSetting(),
-    m = c.ConvertEmoticons.useSetting(),
-    g = c.InlineAttachmentMedia.useSetting(),
-    I = c.InlineEmbedMedia.useSetting(),
-    N = c.RenderEmbeds.useSetting(),
+    I = c.ConvertEmoticons.useSetting(),
+    m = c.InlineAttachmentMedia.useSetting(),
+    N = c.InlineEmbedMedia.useSetting(),
+    g = c.RenderEmbeds.useSetting(),
     h = c.RenderReactions.useSetting(),
     {
       analyticsLocations: C
@@ -41,12 +41,12 @@ function _() {
       children: E.default.Messages.INLINE_MEDIA_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: I,
+      value: N,
       onChange: c.InlineEmbedMedia.updateSetting,
       children: E.default.Messages.INLINE_EMBED_MEDIA
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: g,
+      value: m,
       note: E.default.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
         maxSize: 10
       }),
@@ -63,7 +63,7 @@ function _() {
       children: E.default.Messages.RENDER_EMBEDS_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom40),
-      value: N,
+      value: g,
       onChange: c.RenderEmbeds.updateSetting,
       children: E.default.Messages.RENDER_EMBEDS
     }), (0, a.jsx)(i.FormTitle, {
@@ -76,7 +76,7 @@ function _() {
       children: E.default.Messages.RENDER_REACTIONS
     }), (0, a.jsx)(i.FormSwitch, {
       className: T.marginBottom40,
-      value: m,
+      value: I,
       note: d.default.parse(E.default.Messages.CONVERT_EMOTICONS_HELP),
       onChange: c.ConvertEmoticons.updateSetting,
       children: E.default.Messages.CONVERT_EMOTICONS

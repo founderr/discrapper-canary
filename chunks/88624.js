@@ -14,14 +14,14 @@ var a = s("735250"),
   T = s("63063"),
   _ = s("843200"),
   f = s("981631"),
-  m = s("689938"),
-  g = s("459056");
-class I extends n.PureComponent {
+  I = s("689938"),
+  m = s("459056");
+class N extends n.PureComponent {
   renderIntroHeader() {
     let {
       houseMembership: e
     } = this.props;
-    return null == e ? m.default.Messages.HYPESQUAD_HEADING : m.default.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER
+    return null == e ? I.default.Messages.HYPESQUAD_HEADING : I.default.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER
   }
   render() {
     let {
@@ -31,20 +31,20 @@ class I extends n.PureComponent {
     } = this.props;
     return (0, a.jsxs)(o.HeadingLevel, {
       component: (0, a.jsxs)("div", {
-        className: g.intro,
+        className: m.intro,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xxl/semibold",
-          className: g.introHeader,
+          className: m.introHeader,
           children: this.renderIntroHeader()
         }), (0, a.jsx)(o.Text, {
           variant: "text-lg/normal",
-          children: m.default.Messages.HYPESQUAD_SUBHEADING
+          children: I.default.Messages.HYPESQUAD_SUBHEADING
         })]
       }),
       children: [(0, a.jsx)(_.default, {
-        className: g.verificationNotice,
-        unclaimedNotice: m.default.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
-        unverifiedNotice: m.default.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
+        className: m.verificationNotice,
+        unclaimedNotice: I.default.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
+        unverifiedNotice: I.default.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
       }), (0, a.jsx)(u.default, {
         houseMembership: e,
         isClaimed: t,
@@ -52,8 +52,8 @@ class I extends n.PureComponent {
       }), (0, a.jsx)(d.default, {}), (0, a.jsx)(c.default, {
         isHypeSquadOnlineMember: null != e
       }), (0, a.jsx)(o.Card, {
-        className: g.attendeeCTA,
-        children: m.default.Messages.HYPESQUAD_ATTENDEE_CTA.format({
+        className: m.attendeeCTA,
+        children: I.default.Messages.HYPESQUAD_ATTENDEE_CTA.format({
           url: T.default.getArticleURL(f.HelpdeskArticles.PROFILE_BADGES)
         })
       })]
@@ -67,4 +67,4 @@ t.default = r.default.connectStores([E.default, S.default], () => {
     isClaimed: e.isClaimed(),
     isVerified: e.verified
   }
-})(I)
+})(N)

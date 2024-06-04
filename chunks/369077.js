@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   UserProfileClanContainer: function() {
-    return O
+    return p
   },
   UserProfileClanRow: function() {
     return A
@@ -22,10 +22,10 @@ var u = s("594174"),
   T = s("891728"),
   _ = s("438365"),
   f = s("114487"),
-  m = s("219039"),
-  g = s("979264"),
-  I = s("308083"),
-  N = s("981631"),
+  I = s("219039"),
+  m = s("979264"),
+  N = s("308083"),
+  g = s("981631"),
   h = s("689938"),
   C = s("407020");
 
@@ -40,10 +40,10 @@ function A(e) {
     guildIcon: c,
     guildIconSize: S,
     memberCount: E
-  } = e, T = n.useRef(null), [_, N] = n.useState(!1);
+  } = e, T = n.useRef(null), [_, g] = n.useState(!1);
   return n.useEffect(() => {
     let e = T.current;
-    null != e && null != e.offsetWidth && null != e.scrollWidth && N(e.offsetWidth < e.scrollWidth)
+    null != e && null != e.offsetWidth && null != e.scrollWidth && g(e.offsetWidth < e.scrollWidth)
   }, []), (0, a.jsxs)("div", {
     className: i()(C.container, t),
     children: [(0, a.jsxs)("div", {
@@ -67,19 +67,19 @@ function A(e) {
             className: C.guildName,
             children: u
           })
-        }), null != E && (0, a.jsx)(m.default, {
+        }), null != E && (0, a.jsx)(I.default, {
           count: E
         })]
       })]
     }), (0, a.jsx)("div", {
       className: C.tagContainer,
-      children: (0, a.jsx)(g.BaseClanTagChiplet, {
+      children: (0, a.jsx)(m.BaseClanTagChiplet, {
         guildId: d,
         className: C.tag,
         clanTag: s,
         clanBadge: l,
         onClick: r,
-        badgeSize: I.ClanTagBadgeSize.SIZE_16,
+        badgeSize: N.ClanTagBadgeSize.SIZE_16,
         textColor: "interactive-normal",
         textVariant: "text-sm/medium",
         badgeClassName: C.badge
@@ -88,7 +88,7 @@ function A(e) {
   })
 }
 
-function p(e) {
+function O(e) {
   let {
     userClanTag: t,
     userClanBadge: s,
@@ -96,13 +96,13 @@ function p(e) {
     guildName: i,
     guildIcon: _,
     clan: f,
-    userId: m
-  } = e, g = (0, T.useCurrentUserAvailableClanIds)(), I = (0, r.useStateFromStores)([u.default], () => {
+    userId: I
+  } = e, m = (0, T.useCurrentUserAvailableClanIds)(), N = (0, r.useStateFromStores)([u.default], () => {
     var e;
     return (0, E.getUserClanData)(null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
-  }), p = n.useMemo(() => {
-    if (l !== I) {
-      if (g.has(l)) return () => {
+  }), O = n.useMemo(() => {
+    if (l !== N) {
+      if (m.has(l)) return () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
           ...e,
           header: h.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA,
@@ -122,13 +122,13 @@ function p(e) {
       };
       if (null != f) return () => {
         (0, S.openClanApplyFlow)(l, f, {
-          source: N.AnalyticsSections.USER_PROFILE,
+          source: g.AnalyticsSections.USER_PROFILE,
           location: d.default.CLAN_TAG,
-          tagUserId: m
+          tagUserId: I
         })
       }
     }
-  }, [g, f, I, l, i, m]);
+  }, [m, f, N, l, i, I]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Heading, {
       className: C.header,
@@ -138,7 +138,7 @@ function p(e) {
       className: C.profileContainer,
       clanTag: t,
       clanBadge: s,
-      onTagClick: p,
+      onTagClick: O,
       guildName: i,
       guildId: l,
       guildIcon: _,
@@ -148,7 +148,7 @@ function p(e) {
   })
 }
 
-function O(e) {
+function p(e) {
   let {
     userId: t,
     wrapChildren: s
@@ -163,7 +163,7 @@ function O(e) {
     userId: t
   });
   if (null == n || null == i || null == r) return null;
-  let u = (0, a.jsx)(p, {
+  let u = (0, a.jsx)(O, {
     userClanTag: n,
     userClanBadge: l,
     guildId: i,

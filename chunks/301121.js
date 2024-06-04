@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return eg
+    return em
   }
 }), s("47120"), s("733860"), s("773603");
 var a, n, l = s("735250"),
@@ -16,32 +16,32 @@ var a, n, l = s("735250"),
   T = s("524437"),
   _ = s("481060"),
   f = s("570140"),
-  m = s("668781"),
-  g = s("409700"),
-  I = s("809206"),
-  N = s("230711"),
+  I = s("668781"),
+  m = s("409700"),
+  N = s("809206"),
+  g = s("230711"),
   h = s("241420"),
   C = s("651530"),
   A = s("163268"),
-  p = s("294602"),
-  O = s("778825"),
+  O = s("294602"),
+  p = s("778825"),
   R = s("856768"),
   x = s("592204"),
   M = s("712950"),
-  v = s("610697"),
+  D = s("610697"),
   L = s("880257"),
-  D = s("16703"),
+  v = s("16703"),
   P = s("236289"),
   b = s("518560"),
-  j = s("237292"),
-  U = s("604849"),
-  y = s("278828"),
+  U = s("237292"),
+  j = s("604849"),
+  F = s("278828"),
   G = s("921801"),
-  F = s("480294"),
+  y = s("480294"),
   B = s("430824"),
   k = s("663389"),
-  w = s("594174"),
-  H = s("285952"),
+  H = s("594174"),
+  w = s("285952"),
   V = s("153124"),
   Y = s("626135"),
   W = s("63063"),
@@ -72,8 +72,8 @@ function eo(e, t, s) {
 }
 
 function ed() {
-  let e = (0, E.useStateFromStores)([O.default], () => O.default.getGuild()),
-    t = (0, D.default)(),
+  let e = (0, E.useStateFromStores)([p.default], () => p.default.getGuild()),
+    t = (0, v.default)(),
     s = null != e ? e : t;
   i.useEffect(() => {
     Y.default.track(ea.AnalyticEvents.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
@@ -106,10 +106,10 @@ function ed() {
 function eu() {
   var e;
   let t = null === (e = (0, L.default)()) || void 0 === e || e,
-    s = (0, j.useIsEligibleForInappropriateConversationWarning)({
+    s = (0, U.useIsEligibleForInappropriateConversationWarning)({
       location: "user_settings_web"
     }),
-    a = (0, U.useSafetyAlertsSettingOrDefault)(),
+    a = (0, j.useSafetyAlertsSettingOrDefault)(),
     n = (0, X.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return t || !s ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(_.FormDivider, {
@@ -128,7 +128,7 @@ function eu() {
           note: el.default.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({
             learnMoreLink: W.default.getArticleURL(ea.HelpdeskArticles.SAFETY_ALERTS)
           }),
-          onChange: y.updateDmSafetyAlertsSetting,
+          onChange: F.updateDmSafetyAlertsSetting,
           hideBorder: !0,
           children: el.default.Messages.SAFETY_ALERTS_SETTING_TITLE
         }), (0, l.jsx)(J.default, {
@@ -150,7 +150,7 @@ function ec(e, t) {
 }
 
 function eS() {
-  let e = (0, v.default)(),
+  let e = (0, D.default)(),
     t = Z.DefaultGuildsRestricted.useSetting(),
     s = Z.MessageRequestRestrictedDefault.useSetting(),
     a = (0, X.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
@@ -201,7 +201,7 @@ function eE() {
       explicitContentGuilds: s,
       explicitContentFriendDm: a,
       explicitContentNonFriendDm: n
-    } = (0, p.useExplicitContentSettingOrDefault)(),
+    } = (0, O.useExplicitContentSettingOrDefault)(),
     i = (0, X.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
     r = [{
       value: T.ExplicitContentRedaction.BLUR,
@@ -381,9 +381,9 @@ function ef(e) {
     body: t
   })
 }
-class em extends i.PureComponent {
+class eI extends i.PureComponent {
   componentDidMount() {
-    (0, g.fetchConsents)(), (0, I.getHarvestStatus)().then(e => {
+    (0, m.fetchConsents)(), (0, N.getHarvestStatus)().then(e => {
       let t = {
         requestingHarvest: !1,
         currentHarvestRequest: e.body
@@ -671,7 +671,7 @@ class em extends i.PureComponent {
         className: er.marginBottom20,
         children: el.default.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
           onClick: () => {
-            N.default.setSection(ea.UserSettingsSections.ACCOUNT)
+            g.default.setSection(ea.UserSettingsSections.ACCOUNT)
           }
         })
       }), this.renderHarvestRequest()]
@@ -711,7 +711,7 @@ class em extends i.PureComponent {
           date: S()(a.created_at).add(ea.REQUEST_DATA_LIMIT_DAYS, "days").format("MMMM Do YYYY")
         })
       })
-    }), r = null), null != r && (r = (0, l.jsx)(H.default, {
+    }), r = null), null != r && (r = (0, l.jsx)(w.default, {
       children: r
     })), (0, l.jsxs)(i.Fragment, {
       children: [(0, l.jsx)(_.FormDivider, {
@@ -870,18 +870,18 @@ class em extends i.PureComponent {
         body: el.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
         confirmText: el.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
         cancelText: el.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-        onConfirm: () => (0, g.setConsents)([], [ea.Consents.USAGE_STATISTICS]).catch(ef)
-      }) : (0, g.setConsents)([ea.Consents.USAGE_STATISTICS], []).catch(ef)
+        onConfirm: () => (0, m.setConsents)([], [ea.Consents.USAGE_STATISTICS]).catch(ef)
+      }) : (0, m.setConsents)([ea.Consents.USAGE_STATISTICS], []).catch(ef)
     }), eo(this, "handlePersonalizationChange", () => {
       this.props.personalization ? e_({
         header: el.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
         confirmText: el.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
         cancelText: el.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
         onConfirm: () => {
-          (0, g.setConsents)([], [ea.Consents.PERSONALIZATION]).catch(ef)
+          (0, m.setConsents)([], [ea.Consents.PERSONALIZATION]).catch(ef)
         },
         body: el.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
-      }) : (0, g.setConsents)([ea.Consents.PERSONALIZATION], []).catch(ef)
+      }) : (0, m.setConsents)([ea.Consents.PERSONALIZATION], []).catch(ef)
     }), eo(this, "handleDataDownloadRequest", () => {
       var e;
       e = {
@@ -896,16 +896,16 @@ class em extends i.PureComponent {
           this.setState({
             requestingHarvest: !0
           }, () => {
-            (0, I.requestHarvest)(e).then(e => {
+            (0, N.requestHarvest)(e).then(e => {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
-              }), m.default.show({
+              }), I.default.show({
                 body: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS
-              })) : m.default.show({
+              })) : I.default.show({
                 title: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
                 body: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
               })
-            }, () => m.default.show({
+            }, () => I.default.show({
               title: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
               body: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
             })).finally(() => this.setState({
@@ -934,15 +934,15 @@ class em extends i.PureComponent {
   }
 }
 
-function eg() {
-  let e = (0, E.useStateFromStores)([w.default], () => {
-      let e = w.default.getCurrentUser();
+function em() {
+  let e = (0, E.useStateFromStores)([H.default], () => {
+      let e = H.default.getCurrentUser();
       return u()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
-    t = (0, E.useStateFromStoresObject)([F.default], () => ({
-      fetchedConsents: F.default.fetchedConsents,
-      usageStatistics: F.default.hasConsented(ea.Consents.USAGE_STATISTICS),
-      personalization: F.default.hasConsented(ea.Consents.PERSONALIZATION)
+    t = (0, E.useStateFromStoresObject)([y.default], () => ({
+      fetchedConsents: y.default.fetchedConsents,
+      usageStatistics: y.default.hasConsented(ea.Consents.USAGE_STATISTICS),
+      personalization: y.default.hasConsented(ea.Consents.PERSONALIZATION)
     })),
     s = (0, E.useStateFromStores)([P.default], () => P.default.getFetchError()),
     a = (0, E.useStateFromStores)([k.default], () => k.default.getSubsection()),
@@ -955,7 +955,7 @@ function eg() {
     d = (0, q.useServerPrivacySettingsInUserSettingsEnabled)({
       location: "user_settings_privacy_safety"
     });
-  return (0, l.jsx)(em, {
+  return (0, l.jsx)(eI, {
     currentUser: e,
     defaultGuildsRestricted: Z.DefaultGuildsRestricted.useSetting(),
     nonSpamRetrainingOptIn: Z.NonSpamRetrainingOptIn.useSetting(),

@@ -21,12 +21,12 @@ function c(e) {
     savedUserColor: c,
     pendingColor: S,
     setPendingAccentColor: E
-  } = e, T = s.getAvatarURL(null, 80), _ = (0, i.useToken)(l.default.unsafe_rawColors.PRIMARY_530).hex(), f = (0, r.useAvatarColors)(T, _, !1), m = (0, n.hex2int)(f[0]);
+  } = e, T = s.getAvatarURL(null, 80), _ = (0, i.useToken)(l.default.unsafe_rawColors.PRIMARY_530).hex(), f = (0, r.useAvatarColors)(T, _, !1), I = (0, n.hex2int)(f[0]);
   return (0, a.jsx)(d.default, {
     title: u.default.Messages.USER_SETTINGS_BANNER_COLOR_TITLE,
     children: (0, a.jsx)(o.default, {
       onChange: e => E(e),
-      color: null !== (t = null != S ? S : c) && void 0 !== t ? t : m,
+      color: null !== (t = null != S ? S : c) && void 0 !== t ? t : I,
       suggestedColors: f,
       showEyeDropper: !0
     })

@@ -18,10 +18,10 @@ var a = s("735250"),
   T = s("626135"),
   _ = s("981631"),
   f = s("474936"),
-  m = s("689938"),
-  g = s("772866"),
-  I = s("611273");
-let N = () => {
+  I = s("689938"),
+  m = s("772866"),
+  N = s("611273");
+let g = () => {
     r.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
     }), (0, o.popLayer)()
@@ -36,22 +36,22 @@ let N = () => {
         location_stack: e
       })
     }, []), (0, a.jsxs)("div", {
-      className: g.selectionGroup,
+      className: m.selectionGroup,
       children: [(0, a.jsx)(S.default, {
         disabled: t,
         renderCTAButtons: () => (0, a.jsxs)("div", {
-          className: g.tryItOutButtons,
+          className: m.tryItOutButtons,
           children: [(0, a.jsx)(i.Button, {
             color: t ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
-            onClick: () => N(),
-            children: m.default.Messages.APP_ICON_PREVIEW_TITLE
+            onClick: () => g(),
+            children: I.default.Messages.APP_ICON_PREVIEW_TITLE
           }), t ? (0, a.jsx)(E.default, {
             subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
-            buttonText: m.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+            buttonText: I.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
           }) : null]
         })
       }), (0, a.jsx)(i.FormDivider, {
-        className: I.marginTop20
+        className: N.marginTop20
       })]
     })
   }

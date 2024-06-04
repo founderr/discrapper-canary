@@ -30,8 +30,8 @@ var a = s("735250"),
   R = s("657254"),
   x = s("470647"),
   M = s("292959"),
-  L = s("9156"),
-  D = s("632184"),
+  D = s("9156"),
+  L = s("632184"),
   v = s("626135"),
   P = s("912101"),
   b = s("358085"),
@@ -80,7 +80,7 @@ function K(e) {
         className: V.soundIcon,
         onClick: l,
         "aria-label": w.default.Messages.USER_SETTINGS_NOTIFICATIONS_PREVIEW_SOUND,
-        children: (0, a.jsx)(D.default, {
+        children: (0, a.jsx)(L.default, {
           width: 16,
           height: 16,
           className: V.icon,
@@ -455,7 +455,7 @@ function X() {
     }, {
       autoTrackExposure: !1
     }).enabled,
-    t = (0, d.useStateFromStores)([L.default], () => L.default.mentionOnAllMessages);
+    t = (0, d.useStateFromStores)([D.default], () => D.default.mentionOnAllMessages);
   return e ? (0, a.jsx)(p.Subsetting, {
     setting: B.WebSetting.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
     children: (0, a.jsx)(u.FormSwitch, {
@@ -483,7 +483,7 @@ function J() {
     }, {
       autoTrackExposure: !1
     }),
-    s = (0, d.useStateFromStores)([L.default], () => L.default.useNewNotifications),
+    s = (0, d.useStateFromStores)([D.default], () => D.default.useNewNotifications),
     [l, i] = n.useState(!1);
   return e && (s || t) ? (0, a.jsxs)(a.Fragment, {
     children: [s ? (0, a.jsx)(p.Subsetting, {

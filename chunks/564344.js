@@ -18,47 +18,47 @@ var a = s("735250"),
   T = s("216045"),
   _ = s("839469"),
   f = s("25990"),
-  m = s("594174"),
-  g = s("585483"),
-  I = s("16703"),
-  N = s("785145"),
+  I = s("594174"),
+  m = s("585483"),
+  N = s("16703"),
+  g = s("785145"),
   h = s("981631"),
   C = s("526761"),
   A = s("726985"),
-  p = s("689938"),
-  O = s("347620");
+  O = s("689938"),
+  p = s("347620");
 
 function R() {
   d.default.useExperiment({
     location: "profile_customization_auto"
   });
   let e = (0, l.useStateFromStores)([c.default], () => c.default.getGuild()),
-    t = (0, I.default)(),
+    t = (0, N.default)(),
     s = (0, l.useStateFromStores)([c.default, f.default], () => c.default.showNotice() || f.default.showNotice()),
     R = null != e ? e : t,
-    x = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()),
+    x = (0, l.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
     {
       subsection: M,
-      setSubsection: v
-    } = (0, N.default)(),
+      setSubsection: D
+    } = (0, g.default)(),
     {
       analyticsLocations: L
     } = (0, o.default)(),
     {
-      hasSearchResults: D,
+      hasSearchResults: v,
       searchResults: P
     } = (0, _.useSettingSearchResults)();
 
   function b(t) {
     if (M !== t) {
       if (s) {
-        g.ComponentDispatch.dispatch(h.ComponentActions.SHAKE_APP, {
+        m.ComponentDispatch.dispatch(h.ComponentActions.SHAKE_APP, {
           duration: 300,
           intensity: r.SHAKE_INTENSITY_DEFAULT
-        }), g.ComponentDispatch.dispatch(h.ComponentActions.EMPHASIZE_NOTICE);
+        }), m.ComponentDispatch.dispatch(h.ComponentActions.EMPHASIZE_NOTICE);
         return
       }
-      t === C.ProfileCustomizationSubsection.GUILD && null == e && null != R && (0, u.initGuildIdentitySettings)(R, L), v(t)
+      t === C.ProfileCustomizationSubsection.GUILD && null == e && null != R && (0, u.initGuildIdentitySettings)(R, L), D(t)
     }
   }
   n.useEffect(() => {
@@ -66,28 +66,28 @@ function R() {
       guildId: null == R ? void 0 : R.id
     })
   }, [null == R ? void 0 : R.id, x]);
-  let j = !0;
-  return D && P.includes(A.WebSetting.PROFILE_SERVER_PROFILES) && 1 === P.length && (b(C.ProfileCustomizationSubsection.GUILD), j = !1), (0, a.jsx)(o.AnalyticsLocationProvider, {
+  let U = !0;
+  return v && P.includes(A.WebSetting.PROFILE_SERVER_PROFILES) && 1 === P.length && (b(C.ProfileCustomizationSubsection.GUILD), U = !1), (0, a.jsx)(o.AnalyticsLocationProvider, {
     value: L,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsx)(i.Heading, {
         variant: "heading-lg/semibold",
-        children: p.default.Messages.USER_SETTINGS_PROFILES
+        children: O.default.Messages.USER_SETTINGS_PROFILES
       }),
       children: [(0, a.jsxs)(i.TabBar, {
-        className: O.tabBar,
+        className: p.tabBar,
         type: "top",
         look: "brand",
         selectedItem: M,
         onItemSelect: b,
-        children: [j ? (0, a.jsx)(i.TabBar.Item, {
-          className: O.tabBarItem,
+        children: [U ? (0, a.jsx)(i.TabBar.Item, {
+          className: p.tabBarItem,
           id: C.ProfileCustomizationSubsection.USER_PROFILE,
-          children: p.default.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
+          children: O.default.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
         }, C.ProfileCustomizationSubsection.USER_PROFILE) : null, (0, a.jsx)(i.TabBar.Item, {
-          className: O.tabBarItem,
+          className: p.tabBarItem,
           id: C.ProfileCustomizationSubsection.GUILD,
-          children: p.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
+          children: O.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
         }, C.ProfileCustomizationSubsection.GUILD)]
       }), M === C.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
         selectedGuild: R

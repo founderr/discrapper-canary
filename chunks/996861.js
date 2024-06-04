@@ -19,19 +19,19 @@ n.r(t), n.d(t, {
     return R
   },
   goToThread: function() {
-    return G
-  },
-  markMessageAsReminder: function() {
-    return P
-  },
-  markMessageRemindersAsComplete: function() {
     return D
   },
+  markMessageAsReminder: function() {
+    return G
+  },
+  markMessageRemindersAsComplete: function() {
+    return L
+  },
   markMessageUnread: function() {
-    return y
+    return O
   },
   pinMessage: function() {
-    return O
+    return y
   },
   publishMessage: function() {
     return x
@@ -59,9 +59,9 @@ var r = n("822893"),
   m = n("572004"),
   g = n("585483"),
   S = n("709054"),
-  p = n("111618"),
-  v = n("50284"),
-  I = n("730954"),
+  I = n("111618"),
+  p = n("50284"),
+  v = n("730954"),
   h = n("981631");
 
 function A(e) {
@@ -88,11 +88,11 @@ function R(e, t) {
   i.default.startEditMessage(e.id, t.id, t.content)
 }
 
-function y(e, t) {
-  (0, v.default)(e.id, t.id)
+function O(e, t) {
+  (0, p.default)(e.id, t.id)
 }
 
-function O(e, t, n) {
+function y(e, t, n) {
   if (!1 === t.pinned) {
     n.shiftKey ? a.default.pinMessage(e, t.id) : l.default.confirmPin(e, t);
     return
@@ -105,7 +105,7 @@ function x(e, t) {
 }
 
 function N(e, t) {
-  (0, I.default)(e, t, void 0, p.default.getOptions(t.id))
+  (0, v.default)(e, t, void 0, I.default.getOptions(t.id))
 }
 
 function j(e, t, n) {
@@ -123,15 +123,15 @@ function b(e, t) {
   (0, d.openThreadSidebarForCreating)(e, t, "Message")
 }
 
-function G(e, t) {
+function D(e, t) {
   let n = f.default.getChannel(S.default.castMessageIdAsChannelId(t.id));
   null != n && (0, d.openThreadSidebarForViewing)(n)
 }
 
-function P(e, t) {
+function G(e, t) {
   (0, r.addMessageReminders)(t)
 }
 
-function D(e, t) {
+function L(e, t) {
   (0, r.completeMessageReminders)(t.id)
 }

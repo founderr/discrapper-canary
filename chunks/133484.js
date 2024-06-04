@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return m
   }
 });
 var a = s("735250"),
@@ -18,25 +18,25 @@ var a = s("735250"),
   T = s("689938"),
   _ = s("664338"),
   f = s("699623"),
-  m = s("820350");
+  I = s("820350");
 
-function g(e) {
+function m(e) {
   let {
     user: t,
     showOverlay: s,
-    children: g
-  } = e, I = (0, i.default)(), {
-    analyticsLocations: N
+    children: m
+  } = e, N = (0, i.default)(), {
+    analyticsLocations: g
   } = (0, o.default)(r.default.PREMIUM_UPSELL_OVERLAY);
   return (n.useEffect(() => {
     s && u.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      location_stack: N,
+      location_stack: g,
       type: E.PremiumUpsellTypes.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
     })
-  }, [s, N]), s) ? (0, a.jsxs)("div", {
+  }, [s, g]), s) ? (0, a.jsxs)("div", {
     className: _.upsellOverlayContainer,
     children: [(0, a.jsx)("div", {
-      children: g
+      children: m
     }), (0, a.jsxs)("div", {
       className: _.upsellOverlay,
       children: [(0, a.jsx)("img", {
@@ -47,9 +47,9 @@ function g(e) {
             case S.ThemeTypes.DARK:
               return f;
             case S.ThemeTypes.LIGHT:
-              return m
+              return I
           }
-        }(I)
+        }(N)
       }), (0, a.jsxs)("div", {
         className: _.upsellTextContainer,
         children: [(0, a.jsx)(l.Text, {
@@ -69,6 +69,6 @@ function g(e) {
       })]
     })]
   }) : (0, a.jsx)(a.Fragment, {
-    children: g
+    children: m
   })
 }

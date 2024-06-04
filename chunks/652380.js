@@ -14,10 +14,10 @@ var a = s("735250"),
   T = s("478977"),
   _ = s("456799"),
   f = s("210851"),
-  m = s("602683"),
-  g = s("916028"),
-  I = s("15033"),
-  N = s("899457"),
+  I = s("602683"),
+  m = s("916028"),
+  N = s("15033"),
+  g = s("899457"),
   h = s("975266");
 
 function C(e, t, s) {
@@ -29,8 +29,8 @@ function C(e, t, s) {
   }) : e[t] = s, e
 }
 let A = ["svg", "png", "gif", "webp"],
-  p = [...A, "jpg", "jpeg"],
-  O = Array.from(new Set([...p, "gif", "mp4", "webm"]));
+  O = [...A, "jpg", "jpeg"],
+  p = Array.from(new Set([...O, "gif", "mp4", "webm"]));
 
 function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -105,8 +105,8 @@ let x = {
 
 function M() {
   var e, t, s;
-  let [i, C] = n.useState(x), [M, v] = n.useState(N.UserState.UNENROLLED), [L, D] = n.useState([]), [P, b] = n.useState(!1), [j, U] = n.useState(null);
-  let y = (s = i.config, (0, l.match)(s).with({
+  let [i, C] = n.useState(x), [M, D] = n.useState(g.UserState.UNENROLLED), [L, v] = n.useState([]), [P, b] = n.useState(!1), [U, j] = n.useState(null);
+  let F = (s = i.config, (0, l.match)(s).with({
     configVersion: 1
   }, e => ({
     name: e.messages.rewardName,
@@ -124,7 +124,7 @@ function M() {
   }).exhaustive());
   n.useEffect(() => {
     var e;
-    D((e = i.config, (0, l.match)(e).with({
+    v((e = i.config, (0, l.match)(e).with({
       configVersion: 1
     }, e => e.variants).with({
       configVersion: 2
@@ -159,7 +159,7 @@ function M() {
     }
   }
 
-  function F(e, t) {
+  function y(e, t) {
     if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
       var s, a;
       C({
@@ -240,11 +240,11 @@ function M() {
       children: "Quest Preview Tool"
     }), (0, a.jsx)("div", {
       className: h.fields,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(m.default, {
         onSelect: function(e) {
-          U(e), null != e && C(e)
+          j(e), null != e && C(e)
         },
-        quest: j
+        quest: U
       })
     }), (0, a.jsx)(r.Heading, {
       variant: "heading-md/semibold",
@@ -252,26 +252,26 @@ function M() {
       children: "Messages"
     }), (0, a.jsxs)("div", {
       className: h.fields,
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(I.default, {
         title: "Quest Name",
         assetKey: "questName",
-        onMessageChange: F,
+        onMessageChange: y,
         initialValue: i.config.messages.questName
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(I.default, {
         title: "Game Title",
         assetKey: "gameTitle",
-        onMessageChange: F,
+        onMessageChange: y,
         initialValue: i.config.messages.gameTitle
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(I.default, {
         title: "Reward Name",
         assetKey: "rewardName",
         onMessageChange: B,
-        initialValue: y.name
-      }), (0, a.jsx)(m.default, {
+        initialValue: F.name
+      }), (0, a.jsx)(I.default, {
         title: "Reward Name With Article",
         assetKey: "rewardNameWithArticle",
         onMessageChange: B,
-        initialValue: y.nameWithArticle
+        initialValue: F.nameWithArticle
       })]
     }), (0, a.jsx)(r.Heading, {
       variant: "heading-md/semibold",
@@ -283,7 +283,7 @@ function M() {
         title: "Game Tile Asset",
         assetKey: "gameTile",
         onFileChange: G,
-        filters: p,
+        filters: O,
         initialValue: i.config.assets.gameTile
       }), (0, a.jsx)(f.default, {
         title: "Logotype",
@@ -295,7 +295,7 @@ function M() {
         title: "Quest Bar Hero Asset",
         assetKey: "questBarHero",
         onFileChange: G,
-        filters: O,
+        filters: p,
         initialValue: i.config.assets.questBarHero
       }), (0, a.jsx)(f.default, {
         title: "Reward Tile Asset",
@@ -334,20 +334,20 @@ function M() {
             })
           }
         },
-        filters: O,
-        initialValue: y.rewardTile
+        filters: p,
+        initialValue: F.rewardTile
       }), (0, a.jsx)(f.default, {
         title: "Gift Inventory Hero",
         assetKey: "hero",
         onFileChange: G,
-        filters: O,
+        filters: p,
         initialValue: i.config.assets.hero
       })]
     }), (0, a.jsx)("div", {
       className: h.fields,
       children: (0, a.jsx)("div", {
         className: h.fullWidthField,
-        children: (0, a.jsx)(I.default, {
+        children: (0, a.jsx)(N.default, {
           onChange: function(e) {
             var t, s;
             C({
@@ -363,7 +363,7 @@ function M() {
                 ...e,
                 features: s
               })).exhaustive())
-            }), D(e)
+            }), v(e)
           },
           values: L
         })
@@ -390,16 +390,16 @@ function M() {
           onChange: k,
           value: i.config.colors.secondary
         })]
-      }), (0, a.jsx)(N.default, {
+      }), (0, a.jsx)(g.default, {
         onChange: function(e) {
-          switch (v(e), e) {
-            case N.UserState.UNENROLLED:
+          switch (D(e), e) {
+            case g.UserState.UNENROLLED:
               C({
                 ...i,
                 userStatus: null
               });
               break;
-            case N.UserState.ENROLLED:
+            case g.UserState.ENROLLED:
               C({
                 ...i,
                 userStatus: R({
@@ -407,7 +407,7 @@ function M() {
                 })
               });
               break;
-            case N.UserState.COMPLETED_25:
+            case g.UserState.COMPLETED_25:
               C({
                 ...i,
                 userStatus: R({
@@ -416,7 +416,7 @@ function M() {
                 })
               });
               break;
-            case N.UserState.COMPLETED_50:
+            case g.UserState.COMPLETED_50:
               C({
                 ...i,
                 userStatus: R({
@@ -425,7 +425,7 @@ function M() {
                 })
               });
               break;
-            case N.UserState.COMPLETED_75:
+            case g.UserState.COMPLETED_75:
               C({
                 ...i,
                 userStatus: R({
@@ -434,7 +434,7 @@ function M() {
                 })
               });
               break;
-            case N.UserState.COMPLETED_100:
+            case g.UserState.COMPLETED_100:
               C({
                 ...i,
                 userStatus: R({
@@ -444,7 +444,7 @@ function M() {
                 })
               });
               break;
-            case N.UserState.CLAIMED:
+            case g.UserState.CLAIMED:
               C({
                 ...i,
                 userStatus: R({
@@ -532,7 +532,7 @@ function M() {
     })]
   })
 }
-class v extends n.Component {
+class D extends n.Component {
   componentDidCatch(e) {
     this.setState({
       error: e
@@ -575,4 +575,4 @@ class v extends n.Component {
     })
   }
 }
-t.default = v
+t.default = D

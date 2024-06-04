@@ -14,15 +14,15 @@ var a = s("735250"),
   T = s("960359"),
   _ = s("853197"),
   f = s("430492"),
-  m = s("688465"),
-  g = s("594174"),
-  I = s("55935"),
-  N = s("702512"),
+  I = s("688465"),
+  m = s("594174"),
+  N = s("55935"),
+  g = s("702512"),
   h = s("689938"),
   C = s("193225");
 let A = "YYYY-MM-DD HH:mm";
 
-function p(e) {
+function O(e) {
   let {
     drop: t,
     enrolled: s,
@@ -40,13 +40,13 @@ function p(e) {
   let {
     title: u,
     endDate: f,
-    dropsQuestId: m,
-    assets: g,
-    articleUrl: I
-  } = t, N = (0, _.getDropByQuestId)(m);
-  if (null == N) return null;
+    dropsQuestId: I,
+    assets: m,
+    articleUrl: N
+  } = t, g = (0, _.getDropByQuestId)(I);
+  if (null == g) return null;
   let A = () => {
-    (0, T.enrollDropsUser)(m).then(() => {
+    (0, T.enrollDropsUser)(I).then(() => {
       S.default.wait(async () => {
         await (0, T.fetchDropsUserStatus)()
       })
@@ -64,7 +64,7 @@ function p(e) {
             className: C.promotionIcon,
             children: (0, a.jsx)("img", {
               alt: "",
-              src: g.iconSrc,
+              src: m.iconSrc,
               className: C.promotionIconImage
             })
           }), (0, a.jsxs)("div", {
@@ -98,7 +98,7 @@ function p(e) {
       className: C.dropCriteria,
       children: [(0, a.jsx)("img", {
         alt: "",
-        src: g.rewardSrc,
+        src: m.rewardSrc,
         className: C.dropRewardImage
       }), (0, a.jsx)("div", {
         ref: i,
@@ -106,26 +106,26 @@ function p(e) {
           color: "text-muted",
           variant: "text-sm/normal",
           className: C.dropCriteriaText,
-          children: N.messages.giftInfo()
+          children: g.messages.giftInfo()
         })
       }), (0, a.jsx)(c.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
         className: C.dropLearnMore,
         children: h.default.Messages.DROPS_LEARN_MORE.format({
-          faqUrl: I
+          faqUrl: N
         })
       })]
     })]
   })
 }
 
-function O(e) {
+function p(e) {
   let {
     drop: t,
     code: s,
     platform: l
-  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, I.dateFormat)(o()(t.endDate), "LL"), E = h.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, N.dateFormat)(o()(t.endDate), "LL"), E = h.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: S
   }), T = u ? h.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : h.default.Messages.PROMOTION_CARD_ACTION_CLAIM, _ = n.useCallback(() => d(!1), []);
   return (0, a.jsxs)(a.Fragment, {
@@ -177,7 +177,7 @@ t.default = function(e) {
   let {
     dropsOptedOut: s,
     dropsStatuses: n
-  } = e, l = [], i = [], r = (0, u.useStateFromStores)([g.default], () => g.default.getCurrentUser()), d = !1;
+  } = e, l = [], i = [], r = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), d = !1;
   if (null == n) return null;
   for (let e of Object.keys(n)) {
     let t = (0, _.getDropByQuestId)(e);
@@ -222,7 +222,7 @@ t.default = function(e) {
     children: [(0, a.jsx)(c.Heading, {
       variant: "heading-md/semibold",
       children: h.default.Messages.DROPS_GIFT_INVENTORY_TITLE
-    }), (0, a.jsx)(m.default, {
+    }), (0, a.jsx)(I.default, {
       className: C.betaTagIcon
     })]
   });
@@ -232,7 +232,7 @@ t.default = function(e) {
     }), (0, a.jsx)("div", {
       className: C.dropsHelpText,
       children: h.default.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
-        blogURL: N.DropsFaqUrl
+        blogURL: g.DropsFaqUrl
       })
     })]
   }) : 0 === l.length && 0 === i.length ? null : (0, a.jsxs)(c.FormSection, {
@@ -243,7 +243,7 @@ t.default = function(e) {
         s = null != e.dropsStatus.enrolled_at,
         n = null != e.dropsStatus.completed_at;
       return null != t ? (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(p, {
+        children: [(0, a.jsx)(O, {
           drop: {
             ...t
           },
@@ -259,7 +259,7 @@ t.default = function(e) {
       var t, s;
       let n = (0, _.getDropByQuestId)(e.dropsQuestId);
       return null != n ? (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(O, {
+        children: [(0, a.jsx)(p, {
           drop: n,
           code: null !== (t = e.dropsStatus.code) && void 0 !== t ? t : void 0,
           platform: null !== (s = e.dropsStatus.platform) && void 0 !== s ? s : void 0

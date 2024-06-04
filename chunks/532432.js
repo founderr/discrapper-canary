@@ -28,18 +28,18 @@ function T(e) {
     sectionTitle: T,
     changeAvatarButtonText: _,
     guildId: f,
-    className: m,
-    disabled: g = !1,
-    isTryItOutFlow: I = !1,
-    forcedDivider: N,
+    className: I,
+    disabled: m = !1,
+    isTryItOutFlow: N = !1,
+    forcedDivider: g,
     withHighlight: h = !1
   } = e, C = h ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
-    className: m,
+    className: I,
     title: T,
     errors: s,
-    disabled: g,
-    forcedDivider: N,
+    disabled: m,
+    forcedDivider: g,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
       children: [(0, a.jsx)(C, {
@@ -47,7 +47,7 @@ function T(e) {
           [S.buttonHighlighted]: h
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, f, I, I ? E : void 0),
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, f, N, N ? E : void 0),
         children: null != _ ? _ : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,

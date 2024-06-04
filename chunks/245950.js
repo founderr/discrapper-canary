@@ -23,12 +23,12 @@ function T(e) {
     T = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(null == n ? void 0 : n.guild_id)),
     [_, f] = a.useState(!1),
     {
-      fetchSubscriptionsSettings: m
+      fetchSubscriptionsSettings: I
     } = (0, d.useFetchSubscriptionsSettings)();
   a.useEffect(() => {
-    _ && null != T && null == u.default.getSubscriptionSettings(T.id) && m(T.id)
-  }, [_, T, m]);
-  let g = null == s ? void 0 : function(e) {
+    _ && null != T && null == u.default.getSubscriptionSettings(T.id) && I(T.id)
+  }, [_, T, I]);
+  let m = null == s ? void 0 : function(e) {
     let {
       subscription: t
     } = e, s = l()(t.currentPeriodEnd).format("M/D/YY"), a = null != t.price ? (0, o.formatPrice)(t.price, t.currency) : "", n = l()(t.createdAt).format("M/D/YY"), i = t.status === S.SubscriptionStatusTypes.CANCELED, r = t.status === S.SubscriptionStatusTypes.PAST_DUE, d = null != t.trialId;
@@ -50,6 +50,6 @@ function T(e) {
     handleToggleExpanded: () => f(e => !e),
     listing: s,
     groupListing: n,
-    subscriptionInfo: g
+    subscriptionInfo: m
   }
 }

@@ -18,15 +18,15 @@ var a = s("735250"),
   T = s("390954"),
   _ = s("89057"),
   f = s("921801"),
-  m = s("246946"),
-  g = s("594174"),
-  I = s("351402"),
-  N = s("853872"),
+  I = s("246946"),
+  m = s("594174"),
+  N = s("351402"),
+  g = s("853872"),
   h = s("78839"),
   C = s("706454"),
   A = s("726985"),
-  p = s("981631"),
-  O = s("689938"),
+  O = s("981631"),
+  p = s("689938"),
   R = s("499937");
 class x extends n.PureComponent {
   componentDidMount() {
@@ -35,7 +35,7 @@ class x extends n.PureComponent {
     })
   }
   handleRedemptionRedirect() {
-    c.default.setSection(p.UserSettingsSections.INVENTORY)
+    c.default.setSection(O.UserSettingsSections.INVENTORY)
   }
   render() {
     let {
@@ -58,7 +58,7 @@ class x extends n.PureComponent {
         children: (0, a.jsx)(T.default, {
           paymentSources: s,
           defaultPaymentSourceId: n,
-          premiumSubscriptionPaymentSourceId: null != i && i.status !== p.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
+          premiumSubscriptionPaymentSourceId: null != i && i.status !== O.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
           locale: l,
           removing: r,
           submitting: d
@@ -70,7 +70,7 @@ class x extends n.PureComponent {
           children: (0, a.jsxs)(o.HeadingLevel, {
             component: (0, a.jsx)(o.FormTitle, {
               tag: "h1",
-              children: O.default.Messages.BILLING_PAYMENT_HISTORY
+              children: p.default.Messages.BILLING_PAYMENT_HISTORY
             }),
             children: [(0, a.jsx)(_.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
               locale: l
@@ -80,7 +80,7 @@ class x extends n.PureComponent {
       }), (0, a.jsx)(o.Card, {
         className: R.codeRedemptionRedirect,
         type: o.Card.Types.CUSTOM,
-        children: O.default.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
+        children: p.default.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
           onClick: this.handleRedemptionRedirect
         })
       })]
@@ -89,20 +89,20 @@ class x extends n.PureComponent {
 }
 
 function M() {
-  let e = (0, r.useStateFromStoresObject)([C.default, I.default, N.default, g.default, m.default, h.default], () => {
+  let e = (0, r.useStateFromStoresObject)([C.default, N.default, g.default, m.default, I.default, h.default], () => {
     let e = h.default.getPremiumTypeSubscription(),
-      t = g.default.getCurrentUser();
+      t = m.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
       locale: C.default.locale,
-      hide: m.default.enabled,
+      hide: I.default.enabled,
       isClaimed: t.isClaimed(),
       isVerified: t.verified,
       premiumSubscription: e,
-      defaultPaymentSourceId: N.default.defaultPaymentSourceId,
-      paymentSources: N.default.paymentSources,
-      syncing: I.default.isSyncing,
-      isRemovingPaymentSource: I.default.isRemovingPaymentSource,
-      isUpdatingPaymentSource: I.default.isUpdatingPaymentSource
+      defaultPaymentSourceId: g.default.defaultPaymentSourceId,
+      paymentSources: g.default.paymentSources,
+      syncing: N.default.isSyncing,
+      isRemovingPaymentSource: N.default.isRemovingPaymentSource,
+      isUpdatingPaymentSource: N.default.isUpdatingPaymentSource
     }
   });
   return (0, a.jsx)(x, {

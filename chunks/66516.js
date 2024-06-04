@@ -18,26 +18,26 @@ var a = s("735250"),
   T = s("906732"),
   _ = s("414666"),
   f = s("589266"),
-  m = s("296810"),
-  g = s("621853"),
-  I = s("246946"),
-  N = s("594174"),
+  I = s("296810"),
+  m = s("621853"),
+  N = s("246946"),
+  g = s("594174"),
   h = s("626135"),
   C = s("63063"),
   A = s("74538"),
-  p = s("18438"),
-  O = s("778825"),
+  O = s("18438"),
+  p = s("778825"),
   R = s("856607"),
   x = s("594496"),
   M = s("856768"),
-  v = s("981631"),
+  D = s("981631"),
   L = s("689938");
 
-function D() {
-  h.default.track(v.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-    location_page: v.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
-    location_object: v.AnalyticsObjects.BADGE
-  }), (0, p.closeGuildIdentitySettings)(), u.default.open(v.UserSettingsSections.PREMIUM)
+function v() {
+  h.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+    location_page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
+    location_object: D.AnalyticsObjects.BADGE
+  }), (0, O.closeGuildIdentitySettings)(), u.default.open(D.UserSettingsSections.PREMIUM)
 }
 
 function P(e) {
@@ -48,7 +48,7 @@ function P(e) {
     return s => (0, a.jsx)(t, {
       source: {
         ...e,
-        page: v.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS
+        page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS
       },
       ...s
     })
@@ -60,64 +60,64 @@ function b(e) {
     selectedGuild: t
   } = e, {
     analyticsLocations: s
-  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([N.default], () => {
-    let e = N.default.getCurrentUser();
+  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([g.default], () => {
+    let e = g.default.getCurrentUser();
     return i()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
-  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), h = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), {
+  }), u = (0, r.useStateFromStores)([m.default], () => !m.default.isFetchingProfile(l.id)), h = (0, r.useStateFromStores)([N.default], () => N.default.hidePersonalInformation), {
     pendingAvatar: b,
-    pendingAvatarDecoration: j,
-    pendingProfileEffectId: U,
-    pendingNickname: y,
+    pendingAvatarDecoration: U,
+    pendingProfileEffectId: j,
+    pendingNickname: F,
     pendingBanner: G,
-    pendingBio: F,
+    pendingBio: y,
     pendingPronouns: B,
     pendingThemeColors: k,
-    source: w
-  } = (0, r.useStateFromStoresObject)([O.default], () => ({
-    ...O.default.getAllPending(),
-    source: O.default.getSource()
+    source: H
+  } = (0, r.useStateFromStoresObject)([p.default], () => ({
+    ...p.default.getAllPending(),
+    source: p.default.getSource()
   }));
-  if (n.useEffect(() => () => d.default.wait(p.resetAllPending), []), n.useEffect(() => {
-      null != w && E.default.trackWithMetadata(v.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+  if (n.useEffect(() => () => d.default.wait(O.resetAllPending), []), n.useEffect(() => {
+      null != H && E.default.trackWithMetadata(D.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
-        destination_pane: v.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
-        source: w
+        destination_pane: D.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
+        source: H
       })
-    }, [w]), h) return (0, a.jsx)(c.default, {});
+    }, [H]), h) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let H = A.default.canUsePremiumProfileCustomization(l),
+  let w = A.default.canUsePremiumProfileCustomization(l),
     V = {
       user: l,
       guild: t,
-      canUsePremiumCustomization: H,
-      onAvatarChange: p.setPendingAvatar,
-      onBannerChange: p.setPendingBanner,
+      canUsePremiumCustomization: w,
+      onAvatarChange: O.setPendingAvatar,
+      onBannerChange: O.setPendingBanner,
       onUpsellClick: P,
       pendingAvatar: b,
-      pendingAvatarDecoration: j,
-      pendingProfileEffectId: U,
+      pendingAvatarDecoration: U,
+      pendingProfileEffectId: j,
       pendingBanner: G,
-      pendingBio: F,
+      pendingBio: y,
       pendingPronouns: B,
-      pendingNickname: y,
+      pendingNickname: F,
       activityName: L.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
       activityCharacter: _.FakeActivityCharacter.PHIBI,
-      openPremiumSettings: D
+      openPremiumSettings: v
     };
   return (0, a.jsxs)(T.AnalyticsLocationProvider, {
     value: s,
     children: [(0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
       children: L.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
-        helpCenterLink: C.default.getArticleURL(v.HelpdeskArticles.GUILD_PROFILES)
+        helpCenterLink: C.default.getArticleURL(D.HelpdeskArticles.GUILD_PROFILES)
       })
     }), null != t ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(M.default, {
         guildId: t.id,
         onChange: e => {
-          null != e && (0, p.setCurrentGuild)(e)
+          null != e && (0, O.setCurrentGuild)(e)
         }
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(I.default, {
         previewTitle: L.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
           guildName: null == t ? void 0 : t.name
         }),

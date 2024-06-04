@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var a = n("735250"),
@@ -19,18 +19,18 @@ var a = n("735250"),
   m = n("585483"),
   g = n("176354"),
   S = n("981631"),
-  p = n("185923"),
-  v = n("689938");
+  I = n("185923"),
+  p = n("689938");
 
-function I(e, t) {
+function v(e, t) {
   let {
     reducedMotion: n
-  } = i.useContext(s.AccessibilityPreferencesContext), I = (0, d.useIsActiveChannelOrUnarchivableThread)(t), h = (0, l.useStateFromStores)([f.default], () => (t.isPrivate() || f.default.can(S.Permissions.ADD_REACTIONS, t)) && I, [t, I]), A = (0, u.useEmojiInPriorityOrder)(t.getGuildId());
+  } = i.useContext(s.AccessibilityPreferencesContext), v = (0, d.useIsActiveChannelOrUnarchivableThread)(t), h = (0, l.useStateFromStores)([f.default], () => (t.isPrivate() || f.default.can(S.Permissions.ADD_REACTIONS, t)) && v, [t, v]), A = (0, u.useEmojiInPriorityOrder)(t.getGuildId());
   if (!c.RenderReactions.getSetting() || !h || e.type === S.MessageTypes.GUILD_INVITE_REMINDER) return null;
   let _ = A.filter(e => !g.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
-    intention: p.EmojiIntention.REACTION
+    intention: I.EmojiIntention.REACTION
   })).slice(0, 12).map((i, l) => {
     var u, d, c;
     return (0, a.jsx)(s.MenuItem, {
@@ -56,7 +56,7 @@ function I(e, t) {
   });
   return (0, a.jsx)(s.MenuItem, {
     id: "add-reaction",
-    label: v.default.Messages.ADD_REACTION,
+    label: p.default.Messages.ADD_REACTION,
     action: () => {
       m.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
         emojiPicker: !0
@@ -67,7 +67,7 @@ function I(e, t) {
       children: [_, (0, a.jsx)(s.MenuSeparator, {}), (0, a.jsx)(s.MenuItem, {
         color: "default",
         id: "other-reactions",
-        label: v.default.Messages.VIEW_MORE,
+        label: p.default.Messages.VIEW_MORE,
         icon: E.default,
         action: () => {
           m.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {

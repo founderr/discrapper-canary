@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return m
   }
 }), s("47120"), s("411104");
 var a = s("735250"),
@@ -26,7 +26,7 @@ function f(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class m extends n.Component {
+class I extends n.Component {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -135,10 +135,10 @@ class m extends n.Component {
   }
 }
 
-function g() {
+function m() {
   let e = n.useContext(c.AnalyticsContext),
     t = (0, l.useStateFromStores)([d.default], () => d.default.enabled);
-  return (0, a.jsx)(m, {
+  return (0, a.jsx)(I, {
     analyticsContext: e,
     obscureInput: t
   })

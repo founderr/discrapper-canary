@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return I
   }
 }), s("47120");
 var a = s("735250"),
@@ -34,7 +34,7 @@ let E = {
     [u.HypeSquadHouses.HOUSE_2]: c.default.Messages.HYPESQUAD_DESCRIPTION_HOUSE_2,
     [u.HypeSquadHouses.HOUSE_3]: c.default.Messages.HYPESQUAD_DESCRIPTION_HOUSE_3
   })[e];
-class m extends n.Component {
+class I extends n.Component {
   render() {
     let {
       houseMembership: e,

@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return M
   },
   default: function() {
-    return v
+    return D
   }
 }), s("653041"), s("47120");
 var a = s("735250"),
@@ -21,15 +21,15 @@ var a = s("735250"),
   T = s("621113"),
   _ = s("267642"),
   f = s("709054"),
-  m = s("357956"),
-  g = s("275909"),
-  I = s("300037"),
-  N = s("981631"),
+  I = s("357956"),
+  m = s("275909"),
+  N = s("300037"),
+  g = s("981631"),
   h = s("474936"),
   C = s("689938"),
   A = s("441083");
 
-function p(e) {
+function O(e) {
   let {
     guildTier: t,
     guildBoostSlot: s,
@@ -45,7 +45,7 @@ function p(e) {
       date: new Date(e)
     })
   }, [s, o, d]), c = n.useMemo(() => (function(e) {
-    if (null == e || e === N.BoostedGuildTiers.NONE) return "";
+    if (null == e || e === g.BoostedGuildTiers.NONE) return "";
     let t = [C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_EMOJI_SLOTS.format({
       numEmojiSlots: h.BoostedGuildFeatures[e].limits.emoji
     }), C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STICKER_SLOTS.format({
@@ -62,7 +62,7 @@ function p(e) {
     }), C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VIDEO_STAGE_SEATS.format({
       numVideoStageSeats: h.BoostedGuildFeatures[e].limits.stageVideoUsers
     }), C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_ANIMATED_GUILD_ICON, C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_INVITE_BACKGROUND];
-    e >= N.BoostedGuildTiers.TIER_2 && (t.push(C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), t.push(C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= N.BoostedGuildTiers.TIER_3 && t.push(C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
+    e >= g.BoostedGuildTiers.TIER_2 && (t.push(C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), t.push(C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= g.BoostedGuildTiers.TIER_3 && t.push(C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
     let s = t[Math.floor(Math.random() * t.length)];
     return C.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_TEMPLATE.format({
       perk: s
@@ -78,7 +78,7 @@ function p(e) {
       opacity: 0
     }
   });
-  return o || t === N.BoostedGuildTiers.NONE ? (0, a.jsx)("div", {
+  return o || t === g.BoostedGuildTiers.NONE ? (0, a.jsx)("div", {
     className: A.boostDescriptionInnerContainer,
     children: (0, a.jsx)(r.Text, {
       variant: "text-sm/medium",
@@ -96,7 +96,7 @@ function p(e) {
   }))
 }
 
-function O(e) {
+function p(e) {
   let {
     guildTier: t,
     guildBoostSlot: s,
@@ -104,25 +104,25 @@ function O(e) {
     hasCancelableGuildBoostSlot: d,
     showAltText: c,
     isLastGuildBoostSlot: S
-  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), f = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), I = n.useMemo(() => null != f && f > new Date, [f]), N = (0, _.isGuildBoostSlotCanceled)(s);
+  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), f = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), N = n.useMemo(() => null != f && f > new Date, [f]), g = (0, _.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
     className: A.boostContainer,
     children: [(0, a.jsxs)("div", {
       className: A.boostInnerContainer,
-      children: [(0, a.jsx)(g.default, {
-        isCanceled: N,
-        hasCooldown: I,
+      children: [(0, a.jsx)(m.default, {
+        isCanceled: g,
+        hasCooldown: N,
         useReducedMotion: E
       }), (0, a.jsx)("div", {
         className: A.boostDescriptionContainer,
-        children: null != f && I && !N ? (0, a.jsx)(m.default, {
+        children: null != f && N && !g ? (0, a.jsx)(I.default, {
           className: A.boostDescriptionInnerContainer,
           cooldown: f.getTime()
-        }) : (0, a.jsx)(p, {
+        }) : (0, a.jsx)(O, {
           guildTier: t,
           guildBoostSlot: s,
           showAltText: c,
-          isCanceled: N,
+          isCanceled: g,
           premiumSubscription: l
         })
       }), (0, a.jsx)(r.Popout, {
@@ -162,10 +162,10 @@ function R(e) {
   } = e, o = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
   return (0, a.jsxs)("div", {
     className: A.appliedBoostContainer,
-    children: [(0, a.jsx)(I.default, {
+    children: [(0, a.jsx)(N.default, {
       guildId: t,
       boostingVariant: !1
-    }), s.map((e, t) => (0, a.jsx)(O, {
+    }), s.map((e, t) => (0, a.jsx)(p, {
       guildTier: null == o ? void 0 : o.premiumTier,
       guildBoostSlot: e,
       premiumSubscription: n,
@@ -197,10 +197,10 @@ function x(e) {
   }, n);
   return (0, a.jsxs)("div", {
     className: A.appliedBoostContainer,
-    children: [(0, a.jsx)(I.default, {
+    children: [(0, a.jsx)(N.default, {
       guildId: t,
       boostingVariant: !1
-    }), s.map((e, t) => (0, a.jsx)(O, {
+    }), s.map((e, t) => (0, a.jsx)(p, {
       guildTier: null == l ? void 0 : l.premiumTier,
       guildBoostSlot: o,
       premiumSubscription: n,
@@ -237,7 +237,7 @@ function M(e) {
   })
 }
 
-function v(e) {
+function D(e) {
   let {
     guildBoostSlots: t,
     premiumSubscription: s

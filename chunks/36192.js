@@ -18,15 +18,15 @@ var a = s("735250"),
   T = s("136097"),
   _ = s("605236"),
   f = s("246946"),
-  m = s("594174"),
-  g = s("460562"),
-  I = s("465670"),
-  N = s("736921"),
+  I = s("594174"),
+  m = s("460562"),
+  N = s("465670"),
+  g = s("736921"),
   h = s("169278"),
   C = s("823379"),
   A = s("981631"),
-  p = s("921944"),
-  O = s("689938"),
+  O = s("921944"),
+  p = s("689938"),
   R = s("663563");
 
 function x() {
@@ -34,22 +34,22 @@ function x() {
   let {
     currentSession: t,
     otherSessions: s
-  } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), i = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), [c, g] = n.useState(!1);
+  } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), i = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [c, m] = n.useState(!1);
   n.useEffect(() => {
     (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
-      dismissAction: p.ContentDismissActionType.AUTO
+      dismissAction: O.ContentDismissActionType.AUTO
     }), (0, E.fetchAuthSessions)();
-    let e = setTimeout(() => g(!0), 500);
+    let e = setTimeout(() => m(!0), 500);
     return () => {
       clearTimeout(e), (0, E.clearAuthSessions)()
     }
   }, []);
-  let I = () => {
+  let N = () => {
       o.HTTP.post({
         url: A.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
-    [N, h] = n.useState(new Set);
+    [g, h] = n.useState(new Set);
   return l ? (0, a.jsx)(S.default, {}) : (e = null == t && 0 === s.length ? c ? (0, a.jsx)("div", {
     className: R.loading,
     children: (0, a.jsx)(u.Spinner, {})
@@ -58,7 +58,7 @@ function x() {
       className: R.sessions,
       children: [(0, a.jsx)(u.FormSection, {
         tag: u.FormTitleTags.H5,
-        title: O.default.Messages.AUTH_SESSIONS_CURRENT,
+        title: p.default.Messages.AUTH_SESSIONS_CURRENT,
         titleClassName: R.groupTitle,
         children: null != t ? (0, a.jsx)(M, {
           session: t,
@@ -66,45 +66,45 @@ function x() {
         }) : null
       }), !(s.length > 0) && (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsxs)(u.FormSection, {
         tag: u.FormTitleTags.H5,
-        title: O.default.Messages.AUTH_SESSIONS_OTHERS,
+        title: p.default.Messages.AUTH_SESSIONS_OTHERS,
         titleClassName: R.groupTitle,
         className: R.otherSessions,
         children: [s.map(e => (0, a.jsx)(M, {
           session: e,
-          useChecks: N.size > 0,
-          checked: N.has(e.id_hash),
+          useChecks: g.size > 0,
+          checked: g.has(e.id_hash),
           setChecked: t => {
-            let s = new Set(N);
+            let s = new Set(g);
             t ? s.add(e.id_hash) : s.delete(e.id_hash), h(s)
           }
-        }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(v, {})]
+        }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(D, {})]
       })]
     }), s.length > 0 ? (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H5,
-      title: N.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+      title: g.size > 0 ? p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
       children: [(0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
-        children: O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
+        children: p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
       }), (0, a.jsx)(u.Button, {
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.RED,
         size: u.Button.Sizes.SMALL,
         className: R.logOutAllButton,
         onClick: () => {
-          N.size > 0 ? (0, E.logOutSessions)(Array.from(N)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
+          g.size > 0 ? (0, E.logOutSessions)(Array.from(g)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
         },
-        children: N.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
-          count: N.size
-        }) : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
+        children: g.size > 0 ? p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
+          count: g.size
+        }) : p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
       })]
     }) : null]
   }), (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
-    title: O.default.Messages.AUTH_SESSIONS,
+    title: p.default.Messages.AUTH_SESSIONS,
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
       className: R.description,
-      children: O.default.Messages.AUTH_SESSIONS_DESCRIPTION
+      children: p.default.Messages.AUTH_SESSIONS_DESCRIPTION
     }), (null == i ? void 0 : i.isStaff()) ? (0, a.jsxs)("div", {
       className: R.tools,
       children: [(0, a.jsx)(u.Text, {
@@ -126,7 +126,7 @@ function x() {
           return (0, a.jsx)(u.Button, {
             size: u.Button.Sizes.SMALL,
             color: u.Button.Colors.PRIMARY,
-            onClick: I,
+            onClick: N,
             onMouseEnter: t,
             onMouseLeave: s,
             children: "Trigger Suspicious Sessions Notification"
@@ -145,8 +145,8 @@ function M(e) {
     setChecked: c,
     checked: S,
     useChecks: _
-  } = e, f = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, m = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
-    text: g,
+  } = e, f = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, I = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
+    text: m,
     icon: A
   } = function(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
@@ -154,26 +154,26 @@ function M(e) {
       case void 0:
       case "":
         return {
-          text: O.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: h.default
+          text: p.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: h.default
         };
       case "ios":
       case "android":
         return {
-          text: e, icon: N.default
+          text: e, icon: g.default
         };
       default:
         return {
           text: e, icon: h.default
         }
     }
-  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), p = d ? null : (0, T.formatDate)(o.approx_last_used_time), x = [g, m].filter(C.isNotNullish), M = [f, p].filter(C.isNotNullish), v = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
+  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), O = d ? null : (0, T.formatDate)(o.approx_last_used_time), x = [m, I].filter(C.isNotNullish), M = [f, O].filter(C.isNotNullish), D = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
   return (0, a.jsxs)("div", {
     className: i()(R.session, d ? R.currentSession : null),
     children: [(0, a.jsx)("div", {
       className: R.sessionIcon,
       children: (0, a.jsx)(A, {
-        width: v,
-        height: v
+        width: D,
+        height: D
       })
     }), (0, a.jsxs)("div", {
       className: R.sessionInfo,
@@ -215,18 +215,18 @@ function M(e) {
       onClick: e => {
         e.shiftKey ? null == c || c(!0) : (0, E.logOutSessions)(o.id_hash)
       },
-      "aria-label": O.default.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
-      children: (0, a.jsx)(I.default, {})
+      "aria-label": p.default.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
+      children: (0, a.jsx)(N.default, {})
     })]
   }, o.id_hash)
 }
 
-function v() {
+function D() {
   return (0, a.jsxs)("div", {
     className: i()(R.session, R.legacySession),
     children: [(0, a.jsx)("div", {
       className: R.sessionIcon,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(m.default, {
         width: "32",
         height: "32"
       })
@@ -237,14 +237,14 @@ function v() {
         className: R.sessionInfoRow,
         color: "text-muted",
         children: (0, a.jsx)("span", {
-          children: O.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY
+          children: p.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY
         })
       }), (0, a.jsx)(u.Text, {
         variant: "text-sm/medium",
         className: R.sessionInfoRow,
         color: "text-muted",
         children: (0, a.jsx)("span", {
-          children: O.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
+          children: p.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
             onClick: () => c.default.setSection(A.UserSettingsSections.ACCOUNT)
           })
         })

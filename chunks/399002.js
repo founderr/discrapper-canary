@@ -64,7 +64,7 @@ function c(e, t, s) {
     T = null,
     _ = null,
     f = null,
-    m = null;
+    I = null;
   for (let e = 0; e < i.byteLength / r; e++) {
     let t = i.getUint32(4 * (4 * e + 0)),
       a = i.getUint32(4 * (4 * e + 1)),
@@ -72,27 +72,27 @@ function c(e, t, s) {
       l = i.getUint32(4 * (4 * e + 3));
     u++, c += a, S += a + s, null == T && (T = l), _ = l, null == E && (E = n), null == f && (f = t);
     let r = l - (n - E);
-    null == m && (m = r), r < m && (m = r)
+    null == I && (I = r), r < I && (I = r)
   }
-  let g = new n.Histogram,
-    I = null;
+  let m = new n.Histogram,
+    N = null;
   for (let e = 0; e < i.byteLength / r; e++) {
     let t = i.getUint32(4 * (4 * e + 2)),
-      s = (i.getUint32(4 * (4 * e + 3)) - (t - E) - m) / 1e3;
-    g.addSample(s), null == I && (I = s), s > I && (I = s)
+      s = (i.getUint32(4 * (4 * e + 3)) - (t - E) - I) / 1e3;
+    m.addSample(s), null == N && (N = s), s > N && (N = s)
   }
-  let N = null != T && null != _ ? (_ - T) / 1e3 : 0,
+  let g = null != T && null != _ ? (_ - T) / 1e3 : 0,
     h = 1 - u / d,
-    C = 8 * c / N,
-    A = 8 * S / N,
-    p = g.getReport([50, 95, 99]);
+    C = 8 * c / g,
+    A = 8 * S / g,
+    O = m.getReport([50, 95, 99]);
   return {
     payloadBandwidth: C,
     networkBandwidth: A,
     loss: h,
-    iatP50: p.percentiles[50],
-    iatP95: p.percentiles[95],
-    iatP99: p.percentiles[99],
-    iatMax: null != I ? I : 0
+    iatP50: O.percentiles[50],
+    iatP95: O.percentiles[95],
+    iatP99: O.percentiles[99],
+    iatMax: null != N ? N : 0
   }
 }
