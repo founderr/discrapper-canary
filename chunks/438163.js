@@ -95,11 +95,15 @@ function T(e) {
         children: (0, i.jsxs)("span", {
           className: V,
           children: [(0, i.jsxs)("div", {
-            className: a()(I.content, I.clamp, I.placeholderWidth, k),
+            className: a()(I.content, I.clamp, I.placeholderWidth, {
+              [I.panel]: n === E.UserProfileTypes.PANEL
+            }),
             ref: p,
             children: [G(), w()]
           }), (0, i.jsxs)("div", {
-            className: a()(I.content, I.unclamp, I.placeholderWidth, I.incorporeal, k),
+            className: a()(I.content, I.unclamp, I.placeholderWidth, I.incorporeal, {
+              [I.panel]: n === E.UserProfileTypes.PANEL
+            }),
             ref: m,
             children: [G(), w()]
           })]
