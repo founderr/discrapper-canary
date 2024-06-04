@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return f
   }
 });
 var i = n("735250");
@@ -12,43 +12,50 @@ var r = n("442837"),
   o = n("314897"),
   l = n("430824"),
   u = n("185403"),
-  d = n("785717"),
-  _ = n("841040"),
-  c = n("993409"),
-  E = n("689938");
+  d = n("877485"),
+  _ = n("785717"),
+  c = n("841040"),
+  E = n("993409"),
+  I = n("228168"),
+  T = n("689938");
 
-function I(e) {
+function f(e) {
   let {
     user: t,
     guildId: n,
-    onClose: I
-  } = e, T = (0, r.useStateFromStores)([o.default], () => o.default.getId() === t.id), f = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getGuild(n) : null), {
-    trackUserProfileAction: S
-  } = (0, d.useUserProfileAnalyticsContext)(), h = (0, a.default)();
-  return T ? null == f ? (0, i.jsx)(c.default, {
-    icon: u.default,
-    text: E.default.Messages.EDIT_PROFILE,
+    profileType: f,
+    onClose: S
+  } = e, h = (0, r.useStateFromStores)([o.default], () => o.default.getId() === t.id), A = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getGuild(n) : null), {
+    originalFriendingEnabled: m
+  } = (0, d.useSimplifiedProfileFriendingExperiment)({
+    location: "UserProfileEditMenuButton"
+  }), {
+    trackUserProfileAction: N
+  } = (0, _.useUserProfileAnalyticsContext)(), p = (0, a.default)(), O = m && f === I.UserProfileTypes.FULL_SIZE ? void 0 : u.default;
+  return h ? null == A ? (0, i.jsx)(E.default, {
+    icon: O,
+    text: T.default.Messages.EDIT_PROFILE,
     autoFocus: !0,
     onClick: () => {
-      S({
+      N({
         action: "EDIT_PROFILE"
-      }), null == I || I(), h()
+      }), null == S || S(), p()
     }
   }) : (0, i.jsx)(s.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
       } = e;
-      return (0, i.jsx)(_.default, {
-        guild: f,
+      return (0, i.jsx)(c.default, {
+        guild: A,
         onClose: () => {
-          t(), null == I || I()
+          t(), null == S || S()
         }
       })
     },
-    children: e => (0, i.jsx)(c.default, {
-      icon: u.default,
-      text: E.default.Messages.EDIT_PROFILE,
+    children: e => (0, i.jsx)(E.default, {
+      icon: O,
+      text: T.default.Messages.EDIT_PROFILE,
       autoFocus: !0,
       ...e
     })
