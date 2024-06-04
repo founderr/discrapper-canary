@@ -63,44 +63,41 @@ function D() {
   let e = [g.KeybindGroup.MESSAGE, g.KeybindGroup.NAVIGATION, g.KeybindGroup.VOICE_AND_VIDEO, g.KeybindGroup.CHAT, g.KeybindGroup.MISCELLANEOUS];
   return (0, s.jsx)("div", {
     className: v.keyboardShortcutList,
-    children: e.map((t, n) => {
-      let l = n === e.length - 1,
-        a = M[t],
-        i = (0, g.getNameForKeybindGroup)(t),
-        r = (0, g.getDescriptionForKeybindGroup)(t);
+    children: e.map(e => {
+      let t = M[e],
+        n = (0, g.getNameForKeybindGroup)(e),
+        l = (0, g.getDescriptionForKeybindGroup)(e);
       return (0, s.jsxs)("div", {
-        className: o()(v.keyboardShortcutListGroup, {
-          [v.firstGroup]: 0 === n
-        }),
+        className: v.keyboardShortcutSection,
         children: [(0, s.jsxs)("div", {
-          className: o()(v.keybindGroup),
           children: [(0, s.jsx)(C.Heading, {
-            variant: "heading-md/semibold",
-            children: i
-          }), null != r && (0, s.jsx)(C.Text, {
+            variant: "heading-lg/semibold",
+            children: n
+          }), null != l && (0, s.jsx)(C.Text, {
             className: v.keybindGroupDescription,
             variant: "text-sm/normal",
-            children: r
+            children: l
           })]
-        }, t), a.map((e, t) => {
-          var n;
-          return (null === (n = e.predicate) || void 0 === n ? void 0 : n.call(e)) === !1 ? null : (0, s.jsxs)("div", {
-            className: o()(v.keybindGroup),
-            children: [(0, s.jsx)("div", {
-              className: v.keybindDescription,
-              children: e.description
-            }), (0, s.jsx)("div", {
-              className: "keybind-shortcuts",
-              children: e.binds.map(e => (0, s.jsx)(C.KeyCombo, {
-                className: v.keybindKey,
-                shortcut: e
-              }, e))
-            })]
-          }, t)
-        }), !l && (0, s.jsx)(C.FormDivider, {
-          className: v.keybindGroupDivider
-        })]
-      }, t)
+        }), (0, s.jsx)("div", {
+          className: v.keyboardShortcutListGroup,
+          children: t.map((e, t) => {
+            var n;
+            return (null === (n = e.predicate) || void 0 === n ? void 0 : n.call(e)) === !1 ? null : (0, s.jsxs)("div", {
+              className: o()(v.keybindGroup),
+              children: [(0, s.jsx)(C.Text, {
+                variant: "text-sm/normal",
+                children: e.description
+              }), (0, s.jsx)("div", {
+                className: "keybind-shortcuts",
+                children: e.binds.map(e => (0, s.jsx)(C.KeyCombo, {
+                  className: v.keybindKey,
+                  shortcut: e
+                }, e))
+              })]
+            }, t)
+          })
+        }, e)]
+      }, e)
     })
   })
 }

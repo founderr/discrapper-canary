@@ -276,10 +276,13 @@ class ef extends(l = s.PureComponent) {
             className: eo.welcomeImage,
             src: ec,
             alt: ""
-          }), (0, a.jsx)(f.H, {
+          }), (0, a.jsx)(f.Heading, {
+            variant: "heading-lg/semibold",
             className: eo.welcomeHeading,
             children: er.default.Messages.INVITE_WELCOME_HEADING
-          }), (0, a.jsx)("p", {
+          }), (0, a.jsx)(f.Text, {
+            variant: "text-md/normal",
+            color: "text-secondary",
             className: eo.welcomeSubheading,
             children: er.default.Messages.INVITE_WELCOME_SUBHEADING
           })]
@@ -379,7 +382,6 @@ class ef extends(l = s.PureComponent) {
         value: d === eg.value,
         onChange: this.handleToggleMaxAge,
         children: (0, a.jsx)(f.Text, {
-          className: eo.checkBoxLabel,
           variant: "text-sm/normal",
           children: er.default.Messages.SET_INVITE_LINK_NEVER_EXPIRE
         })

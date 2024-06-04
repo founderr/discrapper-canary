@@ -127,6 +127,7 @@ function y(e) {
     children: (0, a.jsxs)("div", {
       className: M.previewContainer,
       "aria-hidden": !0,
+      "data-disable-adaptive-theme": !0,
       children: [(0, a.jsx)("div", {
         className: (0, N.getThemeClass)(p.ThemeTypes.LIGHT),
         children: (0, a.jsx)("div", {

@@ -2,7 +2,6 @@
 e.exports = {
   acronym: "acronym__7011b",
   channelIcon: "channelIcon__78020",
-  checkBoxLabel: "checkBoxLabel__873a9",
   closeButton: "closeButton_f375b7",
   content: "content_d3cfc2",
   copied: "copied__3e37c",
@@ -24,8 +23,6 @@ e.exports = {
   hubHeader: "hubHeader__3a129",
   hubInviteTitle: "hubInviteTitle__81ed2",
   input: "input_e652e6",
-  inviteBannerUpsell: "inviteBannerUpsell_d4a58d",
-  inviteLink: "inviteLink__8123a",
   inviteRow: "inviteRow_d6ad74",
   inviteRowAvatar: "inviteRowAvatar_d5fa2f",
   inviteRowButton: "inviteRowButton__14750",

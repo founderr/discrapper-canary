@@ -674,5 +674,9 @@ let a = {
     },
     "stage-card-pill-bg": {
       name: "card-secondary-bg"
+    },
+    "autocomplete-bg": {
+      light: "primary.100",
+      dark: "primary.630"
     }
   }

@@ -53,7 +53,8 @@ class p extends a.Component {
         size: 32
       }) : e = (0, f.getAcronym)(n.name))
     }
-    if (null == t || null == n) return null != e ? (0, l.jsx)("div", {
+    if (null == t || null == n) return null != e ? (0, l.jsx)(i.Text, {
+      variant: "text-md/medium",
       className: v.acronym,
       "aria-hidden": !0,
       children: e
