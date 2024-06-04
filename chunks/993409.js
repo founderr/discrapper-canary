@@ -43,7 +43,7 @@ function u(e) {
     innerClassName: s()(l.button, d),
     color: s()(a.ButtonColors.PRIMARY, l.color),
     look: a.Button.Looks.FILLED,
-    size: a.Button.Sizes.MEDIUM,
+    size: a.Button.Sizes.SMALL,
     ..._,
     children: [c, t]
   })

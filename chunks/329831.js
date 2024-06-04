@@ -37,7 +37,7 @@ function p(e) {
     originalFriendingEnabled: R,
     improvedFriendingEnabled: g
   } = (0, f.useSimplifiedProfileFriendingExperiment)({
-    location: "UserProfileFriendRequestButtons"
+    location: "UserProfileFriendRequestOverlayButtons"
   }), L = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)), v = (0, r.useStateFromStores)([I.default], () => null != t ? I.default.getRelationshipType(t.id) : m.RelationshipTypes.NONE), {
     analyticsLocations: D,
     newestAnalyticsLocation: M
