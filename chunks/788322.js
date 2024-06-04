@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("879484"),
   p = n("26580"),
   I = n("206887"),
-  g = n("981631"),
-  T = n("689938"),
+  T = n("981631"),
+  g = n("689938"),
   A = n("283434"),
   N = n("129512"),
   v = n("330065");
@@ -39,8 +39,8 @@ t.default = e => {
     onTagClick: L
   } = e, {
     id: M,
-    discoverySplash: x,
-    icon: P,
+    discoverySplash: P,
+    icon: x,
     name: y,
     description: D,
     presenceCount: b,
@@ -50,18 +50,18 @@ t.default = e => {
     analyticsLocations: F
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
-    splash: x,
+    splash: P,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case g.ThemeTypes.DARK:
+      case T.ThemeTypes.DARK:
         return N;
-      case g.ThemeTypes.LIGHT:
+      case T.ThemeTypes.LIGHT:
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
-    icon: P,
+    icon: x,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: g.AnalyticsPages.GUILD_DISCOVERY
+            page: T.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: g.AnalyticsPages.GUILD_DISCOVERY,
-            section: g.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: T.AnalyticsPages.GUILD_DISCOVERY,
+            section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: F
         });
@@ -180,7 +180,7 @@ t.default = e => {
               children: (0, a.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                   membersOnline: b
                 })
               })
@@ -192,7 +192,7 @@ t.default = e => {
                 children: (0, a.jsx)(r.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
-                  children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                  children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                     count: U
                   })
                 })

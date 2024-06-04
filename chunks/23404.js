@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("918701"),
   p = n("566078"),
   I = n("874137"),
-  g = n("611855"),
-  T = n("670638"),
+  T = n("611855"),
+  g = n("670638"),
   A = n("667105"),
   N = n("860151"),
   v = n("46140"),
@@ -62,7 +62,7 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [p, x] = s.useState(!1), P = s.useCallback(() => x(!0), []), y = s.useCallback(() => x(!1), []), D = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [p, P] = s.useState(!1), x = s.useCallback(() => P(!0), []), y = s.useCallback(() => P(!1), []), D = s.useCallback(e => {
     e.stopPropagation()
   }, []), b = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -99,17 +99,17 @@ t.default = function(e) {
         }),
         onClick: D,
         onKeyPress: D,
-        onFocus: P,
-        onMouseEnter: P,
+        onFocus: x,
+        onMouseEnter: x,
         onBlur: y,
         onMouseLeave: y,
         children: [(0, a.jsxs)("div", {
           className: L.utils,
           children: [k ? (0, a.jsx)(M, {
             quest: o
-          }) : (0, a.jsx)(g.default, {
+          }) : (0, a.jsx)(T.default, {
             textOpacity: .5
-          }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(g.QuestsEntryContextMenuPopout, {
             quest: o,
             questContent: m.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,

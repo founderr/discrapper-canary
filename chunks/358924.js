@@ -16,8 +16,8 @@ var a, s, l = n("735250"),
   S = n("833664"),
   p = n("503438"),
   I = n("420660"),
-  g = n("74433"),
-  T = n("952561"),
+  T = n("74433"),
+  g = n("952561"),
   A = n("513202"),
   N = n("906732"),
   v = n("812206"),
@@ -25,8 +25,8 @@ var a, s, l = n("735250"),
   O = n("102172"),
   L = n("871118"),
   M = n("849171"),
-  x = n("314897"),
-  P = n("592125"),
+  P = n("314897"),
+  x = n("592125"),
   y = n("594174"),
   D = n("368874"),
   b = n("366695"),
@@ -449,7 +449,7 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([P.default], () => P.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: Q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(L.default, {
@@ -462,7 +462,7 @@ es.Header = ea, es.Body = e => {
         children: (0, O.getStreamCTAString)(E)
       })
     })]
-  }), _ = null !== (n = null === (t = (0, g.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
+  }), _ = null !== (n = null === (t = (0, T.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: Q.applicationStreamingSection,
@@ -484,14 +484,14 @@ es.Header = ea, es.Body = e => {
     channel: n,
     guildId: a,
     participants: s
-  } = e, r = (0, T.default)(), [o, d] = i.useState(null), f = t.application_id;
+  } = e, r = (0, g.default)(), [o, d] = i.useState(null), f = t.application_id;
   i.useEffect(() => {
     null != f && (0, H.fetchAssetIds)(f, ["embedded_background"]).then(e => {
       let [t] = e;
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([y.default, x.default], () => Array.from(s).map(e => x.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m

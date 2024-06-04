@@ -42,7 +42,7 @@ function I(e) {
   }
 }
 
-function g(e) {
+function T(e) {
   let t = [];
   return l()(f.default.memberOf(e)).map(E.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
     null != e && t.push(e)
@@ -51,7 +51,7 @@ function g(e) {
     mutualGuilds: t.slice(0, 5)
   }
 }
-class T extends u.default {
+class g extends u.default {
   get comparator() {
     var e, t, n, a, s;
     return [this.type, null !== (s = null !== (a = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== a ? a : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : this.usernameLower]
@@ -62,21 +62,21 @@ class T extends u.default {
 }
 class A {
   reset() {
-    let e = l().map(_.default.getRelationships(), (e, t) => new T({
+    let e = l().map(_.default.getRelationships(), (e, t) => new g({
         key: t,
         type: e,
         nickname: _.default.getNickname(t),
         ...p(t),
         ...I(t),
-        ...g(t)
+        ...T(t)
       })),
-      t = l().map(d.default.getSuggestions(), e => new T({
+      t = l().map(d.default.getSuggestions(), e => new g({
         key: e.key,
         type: 99,
         nickname: e.name,
         ...p(e.key),
         ...I(e.key),
-        ...g(e.key)
+        ...T(e.key)
       }));
     return new A(l().concat(e, t))
   }
@@ -139,13 +139,13 @@ let N = !0,
   L = !0,
   M = !1;
 
-function x() {
+function P() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   N && (e || R !== m.FriendsSections.ONLINE && R !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
 }
 
-function P() {
-  if (N = !0, L ? v = !1 : x(), O = O.reset(), M) return;
+function x() {
+  if (N = !0, L ? v = !1 : P(), O = O.reset(), M) return;
   let e = O.getRelationshipCounts();
   R = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
 }
@@ -161,7 +161,7 @@ function D(e) {
 }
 class b extends(a = i.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], y), this.syncWith([d.default], y), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(I)), P()
+    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], y), this.syncWith([d.default], y), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(I)), x()
   }
   getState() {
     return {
@@ -174,10 +174,10 @@ class b extends(a = i.default.Store) {
 }
 S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
   CONNECTION_OPEN: function() {
-    P()
+    x()
   },
   FRIENDS_SET_SECTION: function(e) {
-    R = e.section, x()
+    R = e.section, P()
   },
   CHANNEL_SELECT: function(e) {
     let {

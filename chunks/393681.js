@@ -40,8 +40,8 @@ var a = s("735250"),
   k = s("981631"),
   w = s("801461"),
   H = s("689938"),
-  Y = s("493087"),
-  V = s("611273");
+  V = s("493087"),
+  Y = s("611273");
 class W extends n.PureComponent {
   componentDidMount() {
     let {
@@ -59,7 +59,7 @@ class W extends n.PureComponent {
     if (!e.isClaimed()) {
       let e = (0, a.jsxs)("section", {
         children: [(0, a.jsx)("div", {
-          className: Y.accountWarningBodyText,
+          className: V.accountWarningBodyText,
           children: H.default.Messages.UNCLAIMED_ACCOUNT_BODY_2
         }), (0, a.jsx)(c.Button, {
           look: c.ButtonLooks.OUTLINED,
@@ -71,7 +71,7 @@ class W extends n.PureComponent {
       });
       return (0, a.jsx)(c.FormNotice, {
         type: c.FormNotice.Types.DANGER,
-        className: V.marginBottom20,
+        className: Y.marginBottom20,
         imageData: {
           src: s("418558"),
           width: 60,
@@ -85,7 +85,7 @@ class W extends n.PureComponent {
     if (!e.verified) {
       let e = (0, a.jsxs)("section", {
         children: [(0, a.jsx)("div", {
-          className: Y.accountWarningBodyText,
+          className: V.accountWarningBodyText,
           children: H.default.Messages.USER_SETTINGS_UNVERIFIED_EMAIL_BODY
         }), (0, a.jsx)(b.default, {
           size: c.ButtonSizes.SMALL,
@@ -94,7 +94,7 @@ class W extends n.PureComponent {
       });
       return (0, a.jsx)(c.FormNotice, {
         type: c.FormNotice.Types.PRIMARY,
-        className: V.marginBottom20,
+        className: Y.marginBottom20,
         imageData: {
           src: s("449125"),
           width: 60,
@@ -107,12 +107,12 @@ class W extends n.PureComponent {
   }
   renderPomeloWarning() {
     return this.props.shouldRenderPomeloWarning ? (0, a.jsxs)(M.default, {
-      className: Y.accountWarningBodyText,
+      className: V.accountWarningBodyText,
       messageType: M.HelpMessageTypes.WARNING,
       children: [this.props.forceMigrationExperiment ? H.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
         date: (0, m.getLocalizedForcedUUDate)(this.props.locale)
       }) : H.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(v.default, {
-        className: Y.noticeTextButton,
+        className: V.noticeTextButton,
         onClick: () => (0, N.default)(w.PomeloEntrypoints.USER_SETTINGS),
         children: H.default.Messages.GET_STARTED
       })]
@@ -122,7 +122,7 @@ class W extends n.PureComponent {
     return (0, a.jsxs)(c.FormSection, {
       tag: c.FormTitleTags.H1,
       title: H.default.Messages.USER_SETTINGS_MY_ACCOUNT,
-      className: Y.__invalid_userSettingsAccount,
+      className: V.__invalid_userSettingsAccount,
       children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, a.jsx)(y.default, {})]
     })
   }
@@ -133,15 +133,15 @@ class W extends n.PureComponent {
       theme: n
     } = this.props, l = (0, u.isThemeDark)(n) ? s("555702") : s("610802");
     return (0, a.jsxs)(c.FormSection, {
-      className: i()(Y.userSettingsSecurity, V.marginTop40),
+      className: i()(V.userSettingsSecurity, Y.marginTop40),
       title: H.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
       tag: "h1",
       children: [t.mfaEnabled ? (0, a.jsx)(c.FormSection, {
         children: (0, a.jsxs)(c.FormTitle, {
-          className: i()(Y.isEnabled, V.marginBottom20),
+          className: i()(V.isEnabled, Y.marginBottom20),
           children: [(0, a.jsx)("img", {
             alt: "",
-            className: i()(Y.lockIcon),
+            className: i()(V.lockIcon),
             src: s("511391")
           }), H.default.Messages.TWO_FA_ENABLED]
         })
@@ -150,7 +150,7 @@ class W extends n.PureComponent {
         children: (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Button, {
             size: c.Button.Sizes.SMALL,
-            className: Y.changePasswordButton,
+            className: V.changePasswordButton,
             onClick: () => (0, c.openModal)(e => (0, a.jsx)(G.default, {
               ...e,
               onSuccess: e.onClose
@@ -173,7 +173,7 @@ class W extends n.PureComponent {
             grow: 0,
             children: (0, a.jsx)("img", {
               src: l,
-              className: Y.userSettingsSecurityImage,
+              className: V.userSettingsSecurityImage,
               alt: ""
             })
           })]
@@ -247,7 +247,7 @@ class W extends n.PureComponent {
       currentUser: e
     } = this.props;
     return (0, a.jsx)(U.default, {
-      className: V.marginTop40,
+      className: Y.marginTop40,
       currentUser: e,
       handleDisableAccount: () => this.handleDisableAccount(!1),
       handleDeleteAccount: () => this.handleDisableAccount(!0)

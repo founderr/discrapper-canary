@@ -44,9 +44,9 @@ var a = s("735250"),
   k = s("228168"),
   w = s("689938"),
   H = s("276380");
-let Y = b.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
+let V = b.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
-function V(e) {
+function Y(e) {
   var t, l;
   let {
     className: r,
@@ -421,7 +421,7 @@ function X() {
       profileType: k.UserProfileTypes.SETTINGS
     }), (0, a.jsxs)("div", {
       className: H.userInfo,
-      children: [(0, a.jsx)(Y, {
+      children: [(0, a.jsx)(V, {
         className: H.avatar,
         src: u,
         avatarDecoration: S,
@@ -465,7 +465,7 @@ function X() {
           })
         }), (0, a.jsx)(h.Subsetting, {
           setting: y.WebSetting.ACCOUNT_USERNAME,
-          children: (0, a.jsx)(V, {
+          children: (0, a.jsx)(Y, {
             user: t
           })
         }), (0, a.jsx)(h.Subsetting, {

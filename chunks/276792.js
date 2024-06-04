@@ -27,8 +27,8 @@ function S(e) {
     content: S,
     renderModalProps: p,
     analyticsLocations: I,
-    analyticsLocation: g,
-    isLightTheme: T
+    analyticsLocation: T,
+    isLightTheme: g
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
   } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
@@ -37,7 +37,7 @@ function S(e) {
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: I,
     analyticsObject: {
-      ...g,
+      ...T,
       object: h.AnalyticsObjects.BUTTON_CTA,
       objectType: h.AnalyticsObjectTypes.TIER_2
     },
@@ -54,29 +54,29 @@ function S(e) {
     })
   }) : void 0, M = {
     type: "video",
-    src: T ? S.heroArtVideoLinkLightTheme : S.videoLink
+    src: g ? S.heroArtVideoLinkLightTheme : S.videoLink
   };
   ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (M = {
     type: "image",
-    src: T ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
+    src: g ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
   });
-  let x = T ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-    P = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
+  let P = g ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+    x = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
       text: S.modalTopPill,
       className: C.modalTopPill,
-      colorOptions: x
+      colorOptions: P
     }) : void 0;
   return {
     renderModalProps: p,
     header: S.header,
-    modalTopExtra: P,
+    modalTopExtra: x,
     subHeader: S.subheader,
     subHeaderExtra: L,
     heroArt: M,
     featureCards: S.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: g ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
     changeLogId: A,

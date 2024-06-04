@@ -78,7 +78,7 @@ function y() {
     experimentalAudioSubsystemSupported: S.default.supports(L.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
     qosSupported: S.default.supports(L.Features.QOS),
     attenuationSupported: S.default.supports(L.Features.ATTENUATION)
-  })), w = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), H = n.createRef(), Y = f.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
+  })), w = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), H = n.createRef(), V = f.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
     if (w === M.SOUNDBOARD_SUBSECTION) {
       var e;
@@ -180,7 +180,7 @@ function y() {
             children: D.default.Messages.DISPLAY_SILENCE_WARNING
           })
         })]
-      }), Y && (0, a.jsx)(I.default, {}), (0, a.jsx)(o.FormItem, {
+      }), V && (0, a.jsx)(I.default, {}), (0, a.jsx)(o.FormItem, {
         children: (0, a.jsx)(o.Button, {
           look: o.Button.Looks.OUTLINED,
           color: o.Button.Colors.RED,

@@ -20,8 +20,8 @@ var a, s, l = n("735250"),
   S = n("207796"),
   p = n("777734"),
   I = n("976757"),
-  g = n("981631"),
-  T = n("689938"),
+  T = n("981631"),
+  g = n("689938"),
   A = n("886722");
 
 function N(e) {
@@ -33,9 +33,9 @@ function N(e) {
     clans: s,
     searchResult: N,
     searchCriteria: v
-  } = (0, m.useClanDiscoveryList)(), R = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), O = (0, c.default)(N), [L, M] = i.useState(0), x = i.useMemo(() => ({
+  } = (0, m.useClanDiscoveryList)(), R = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), O = (0, c.default)(N), [L, M] = i.useState(0), P = i.useMemo(() => ({
     height: L
-  }), [L]), P = (0, r.useSpring)({
+  }), [L]), x = (0, r.useSpring)({
     opacity: L > 0 ? 1 : 0,
     config: r.config.stiff
   }), y = Math.min(null != t ? t : 1024, 2e3), D = i.useMemo(() => {
@@ -65,13 +65,13 @@ function N(e) {
       section: "top_picks",
       items: s.slice(0, D),
       sectionHeight: 24,
-      header: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-      subtitle: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+      header: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+      subtitle: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
     }, {
       section: "other_guilds",
       items: s.slice(D),
       sectionHeight: 24,
-      header: T.default.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+      header: g.default.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
     }], [s, D]),
     k = i.useMemo(() => new Set(v.games), [v.games]),
     B = i.useCallback((e, t, n, a) => {
@@ -85,7 +85,7 @@ function N(e) {
         traitsToHighlight: R,
         className: A.card,
         style: n,
-        source: g.AnalyticsSections.DISCOVER_SEARCH,
+        source: T.AnalyticsSections.DISCOVER_SEARCH,
         prioritizedGameIds: k,
         onlyAnimateIconOnHover: !0
       }, a)
@@ -114,8 +114,8 @@ function N(e) {
       children: [(0, l.jsx)(r.animated.div, {
         className: A.masonryListGradient,
         style: {
-          ...P,
-          ...x
+          ...x,
+          ...P
         }
       }), (0, l.jsx)(d.MasonryList, {
         className: A.masonryList,

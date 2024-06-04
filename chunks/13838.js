@@ -18,8 +18,8 @@ var a = n("392711"),
   S = n("238679"),
   p = n("452426"),
   I = n("295424"),
-  g = n("863141"),
-  T = n("186901"),
+  T = n("863141"),
+  g = n("186901"),
   A = n("981631");
 let N = e => (0, p.default)(e).required().keys({
   channel_id: e.string().required()
@@ -90,7 +90,7 @@ let L = {
   },
   [A.RPCEvents.VOICE_STATE_CREATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
     },
     validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
@@ -123,7 +123,7 @@ let L = {
   },
   [A.RPCEvents.VOICE_STATE_DELETE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
     },
     validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
@@ -156,7 +156,7 @@ let L = {
   },
   [A.RPCEvents.VOICE_STATE_UPDATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
     },
     validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
@@ -184,7 +184,7 @@ let L = {
   },
   [A.RPCEvents.VOICE_CONNECTION_STATUS]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
     },
     handler: () => e => {
       let {
@@ -217,14 +217,14 @@ let L = {
   },
   [A.RPCEvents.SPEAKING_START]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
     validation: R,
     handler: O
   },
   [A.RPCEvents.SPEAKING_STOP]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
     validation: R,
     handler: O
@@ -239,62 +239,62 @@ let L = {
   },
   [A.RPCEvents.GAME_JOIN]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.GAME_SPECTATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ACTIVITY_JOIN]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, T.RPC_AUTHENTICATED_SCOPE, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, g.RPC_AUTHENTICATED_SCOPE, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ACTIVITY_JOIN_REQUEST]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ACTIVITY_SPECTATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, T.RPC_AUTHENTICATED_SCOPE, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, g.RPC_AUTHENTICATED_SCOPE, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ACTIVITY_INVITE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ACTIVITY_PIP_MODE_UPDATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, T.RPC_AUTHENTICATED_SCOPE, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, g.RPC_AUTHENTICATED_SCOPE, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, T.RPC_AUTHENTICATED_SCOPE, T.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, g.RPC_AUTHENTICATED_SCOPE, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: S.activityInstanceConnectedParticipantsUpdateEvent,
   [A.RPCEvents.THERMAL_STATE_UPDATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [T.RPC_AUTHENTICATED_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_AUTHENTICATED_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ORIENTATION_UPDATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [T.RPC_AUTHENTICATED_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_AUTHENTICATED_SCOPE]
     },
     handler() {}
   },
@@ -304,7 +304,7 @@ let L = {
   },
   [A.RPCEvents.NOTIFICATION_CREATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ALL]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_NOTIFICATIONS_READ]
+      [g.RPC_SCOPE_CONFIG.ALL]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_NOTIFICATIONS_READ]
     },
     handler() {}
   },
@@ -314,7 +314,7 @@ let L = {
   },
   [A.RPCEvents.CURRENT_USER_UPDATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [T.RPC_LOCAL_SCOPE, l.OAuth2Scopes.IDENTIFY]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_LOCAL_SCOPE, l.OAuth2Scopes.IDENTIFY]
     },
     handler: () => e => {
       let {
@@ -323,28 +323,28 @@ let L = {
       } = e, a = {
         currentUser: h.default.getCurrentUser()
       };
-      return null != a.currentUser && (null == t || !(0, i.default)(a, t)) && n((0, g.default)(a.currentUser)), a
+      return null != a.currentUser && (null == t || !(0, i.default)(a, t)) && n((0, T.default)(a.currentUser)), a
     }
   },
   [A.RPCEvents.ENTITLEMENT_CREATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [T.RPC_LOCAL_SCOPE, T.RPC_AUTHENTICATED_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_LOCAL_SCOPE, g.RPC_AUTHENTICATED_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.ENTITLEMENT_DELETE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ANY]: [T.RPC_LOCAL_SCOPE, T.RPC_AUTHENTICATED_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_LOCAL_SCOPE, g.RPC_AUTHENTICATED_SCOPE]
     },
     handler() {}
   },
   [A.RPCEvents.USER_ACHIEVEMENT_UPDATE]: {
-    scope: T.RPC_LOCAL_SCOPE,
+    scope: g.RPC_LOCAL_SCOPE,
     handler() {}
   },
   [A.RPCEvents.SCREENSHARE_STATE_UPDATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ALL]: [T.RPC_LOCAL_SCOPE, l.OAuth2Scopes.RPC_SCREENSHARE_READ]
+      [g.RPC_SCOPE_CONFIG.ALL]: [g.RPC_LOCAL_SCOPE, l.OAuth2Scopes.RPC_SCREENSHARE_READ]
     },
     handler: () => e => {
       var t, n;
@@ -363,7 +363,7 @@ let L = {
   },
   [A.RPCEvents.VIDEO_STATE_UPDATE]: {
     scope: {
-      [T.RPC_SCOPE_CONFIG.ALL]: [T.RPC_LOCAL_SCOPE, l.OAuth2Scopes.RPC_VIDEO_READ]
+      [g.RPC_SCOPE_CONFIG.ALL]: [g.RPC_LOCAL_SCOPE, l.OAuth2Scopes.RPC_VIDEO_READ]
     },
     handler: () => e => {
       let {

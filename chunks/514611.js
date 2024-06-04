@@ -17,8 +17,8 @@ var a, s = n("735250"),
   S = n("900849"),
   p = n("940627"),
   I = n("806519"),
-  g = n("981631"),
-  T = n("689938"),
+  T = n("981631"),
+  g = n("689938"),
   A = n("785518"),
   N = n("129512"),
   v = n("330065"),
@@ -36,9 +36,9 @@ class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
-      case g.ThemeTypes.DARK:
+      case T.ThemeTypes.DARK:
         return N;
-      case g.ThemeTypes.LIGHT:
+      case T.ThemeTypes.LIGHT:
         return v
     }
   }
@@ -59,12 +59,12 @@ class L extends(a = l.PureComponent) {
       description: O,
       presenceCount: L,
       memberCount: M,
-      keywords: x
-    } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
+      keywords: P
+    } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != y ? y : this.getDefaultSplashURL(a, P), b = m.default.getGuildIconURL({
+    }), D = null != y ? y : this.getDefaultSplashURL(a, x), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -120,7 +120,7 @@ class L extends(a = l.PureComponent) {
                   src: D,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !P
+                    [A.splashImageHeight]: !x
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
@@ -170,8 +170,8 @@ class L extends(a = l.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: O
-              }), U && null != x && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: x,
+              }), U && null != P && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: P,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: S.AnalyticsContexts.POPULAR
@@ -184,7 +184,7 @@ class L extends(a = l.PureComponent) {
                   }), (0, s.jsx)(u.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                    children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                       membersOnline: L
                     })
                   })]
@@ -195,7 +195,7 @@ class L extends(a = l.PureComponent) {
                   }), (0, s.jsx)(u.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                    children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                       count: M
                     })
                   })]

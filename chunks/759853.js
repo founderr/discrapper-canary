@@ -22,14 +22,14 @@ t.default = e => {
   } = e, {
     completionSpring: S,
     startCompletionAnimation: p
-  } = (0, c.useQuestBarCompletionAnimation)(), I = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, g = s.useRef(!1), T = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), A = s.useRef(null), N = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), v = (0, o.default)(N), [R, O] = s.useState(null), [L, M] = s.useState(null), x = s.useRef(new l.Environment({
+  } = (0, c.useQuestBarCompletionAnimation)(), I = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, T = s.useRef(!1), g = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), A = s.useRef(null), N = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), v = (0, o.default)(N), [R, O] = s.useState(null), [L, M] = s.useState(null), P = s.useRef(new l.Environment({
     gravity: 0,
     wind: 0
-  })), P = (0, l.useConfettiCannon)(R, L), y = s.useCallback(() => {
-    if (T) return;
+  })), x = (0, l.useConfettiCannon)(R, L), y = s.useCallback(() => {
+    if (g) return;
     let e = C.current,
       t = A.current;
-    if (null != t && null != e && P.isReady) {
+    if (null != t && null != e && x.isReady) {
       var n, a, s, l;
       let {
         x: i,
@@ -38,7 +38,7 @@ t.default = e => {
         x: o,
         y: u
       } = t.getBoundingClientRect();
-      P.createMultipleConfetti((n = i - o, a = r - u, s = e.clientHeight, l = e.clientWidth, {
+      x.createMultipleConfetti((n = i - o, a = r - u, s = e.clientHeight, l = e.clientWidth, {
         ...f.COMMON_CONFETTI_BASE_CONFIG,
         position: {
           type: "static-random",
@@ -78,7 +78,7 @@ t.default = e => {
         }
       }), 100)
     }
-  }, [C, A, P, T]), D = (0, o.default)(m);
+  }, [C, A, x, g]), D = (0, o.default)(m);
   return (s.useEffect(() => {
     I && m && !D && (p(), y())
   }, [m, I, p, y, D]), s.useEffect(() => {
@@ -86,8 +86,8 @@ t.default = e => {
       p(), y()
     }, 200)
   }, [I, v, N, p, y]), s.useEffect(() => {
-    P.isReady && (!g.current && I && (p(), y()), g.current = I)
-  }, [I, g, y, p, P]), T) ? null : (0, a.jsxs)("div", {
+    x.isReady && (!T.current && I && (p(), y()), T.current = I)
+  }, [I, T, y, p, x]), g) ? null : (0, a.jsxs)("div", {
     className: E.wrapper,
     "aria-hidden": "true",
     ref: A,
@@ -99,7 +99,7 @@ t.default = e => {
     }), (0, a.jsx)(l.ConfettiCanvas, {
       ref: O,
       className: E.confetti,
-      environment: x.current
+      environment: P.current
     }), (0, a.jsx)(l.SpriteCanvas, {
       ref: M,
       sprites: [h],

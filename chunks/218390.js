@@ -40,8 +40,8 @@ var a = s("735250"),
   k = s("504865"),
   w = s("179984"),
   H = s("386733"),
-  Y = s("487980"),
-  V = s("474936"),
+  V = s("487980"),
+  Y = s("474936"),
   W = s("981631"),
   K = s("689938"),
   z = s("995953"),
@@ -60,10 +60,10 @@ function X() {
     E = (0, N.default)();
   if (null == n || null == n.planIdFromItems) return null;
   let T = null != n.trialId,
-    f = n.planIdFromItems === V.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+    f = n.planIdFromItems === Y.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
     g = l || T,
     I = null != n.trialEndsAt ? o()(n.trialEndsAt).diff(o()(), "d") : 0,
-    h = V.SubscriptionPlanInfo[n.planIdFromItems],
+    h = Y.SubscriptionPlanInfo[n.planIdFromItems],
     C = P.default.formatPriceString(P.default.getDefaultPrice(h.id), h.interval);
   return (0, a.jsxs)("div", {
     className: i()(z.tierCard, {
@@ -91,13 +91,13 @@ function X() {
             percent: null !== (e = null == r ? void 0 : r.percentage) && void 0 !== e ? e : u,
             regularPrice: C
           }) : K.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-            percent: null !== (t = null == r ? void 0 : r.percentage) && void 0 !== t ? t : V.DISCOUNT_PERCENTAGE_FALLBACK,
+            percent: null !== (t = null == r ? void 0 : r.percentage) && void 0 !== t ? t : Y.DISCOUNT_PERCENTAGE_FALLBACK,
             regularPrice: C,
-            numMonths: null !== (s = null == r ? void 0 : r.duration) && void 0 !== s ? s : V.DISCOUNT_DURATION_FALLBACK
+            numMonths: null !== (s = null == r ? void 0 : r.duration) && void 0 !== s ? s : Y.DISCOUNT_DURATION_FALLBACK
           })
         })]
       }) : (0, a.jsx)(k.default, {
-        subscriptionTier: V.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: Y.PremiumSubscriptionSKUs.TIER_2,
         interval: h.interval
       }), (0, a.jsx)(B.Tier2FeatureItems, {}), (0, a.jsx)(S.Button, {
         className: z.tierCardButton,
@@ -217,7 +217,7 @@ t.default = function() {
     location: N + " auto off",
     autoTrackExposure: !1
   }), (0, G.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
-  let R = (0, Y.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");
+  let R = (0, V.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");
   n.useEffect(() => {
     E.default.wait(async () => {
       !m && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, f.fetchPremiumSubscriptionPlans)(_, null, W.RevenueSurfaces.DISCOVERY)]), o(!1)
@@ -245,7 +245,7 @@ t.default = function() {
           headingOverride: K.default.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
           hidePill: !b,
           selectedPlanColumnClassName: z.tier2PlanComparisonTableBackground,
-          selectedPlanTier: V.PremiumTypes.TIER_2
+          selectedPlanTier: Y.PremiumTypes.TIER_2
         })]
       }), (0, a.jsx)(u.VisibilitySensor, {
         onChange: e => {

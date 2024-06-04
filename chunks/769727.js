@@ -16,9 +16,9 @@ var a, s, l = n("735250"),
   S = n("207796"),
   p = n("543550"),
   I = n("895068"),
-  g = n("93118");
+  T = n("93118");
 (s = a || (a = {})).TOP_PICKS = "top_picks", s.OTHER_GUILDS = "other_guilds";
-let T = {
+let g = {
     mass: 1,
     tension: 600,
     friction: 60
@@ -33,7 +33,7 @@ let T = {
       to: {
         opacity: a === S.ClanDiscoveryMode.GET_STARTED ? 0 : 1
       },
-      config: T,
+      config: g,
       delay: 500,
       immediate: n,
       onRest: () => u(!1)
@@ -69,16 +69,16 @@ let T = {
       case S.ClanDiscoveryMode.PLAYSTYLE:
       case S.ClanDiscoveryMode.TRAITS:
         return (0, l.jsxs)("div", {
-          className: g.discoveryContainer,
+          className: T.discoveryContainer,
           children: [(0, l.jsx)(r.animated.div, {
-            className: g.toolbar,
+            className: T.toolbar,
             style: {
               opacity: c.opacity,
               transform: c.opacity.to([0, 1], [-40, 0]).to(e => "translateY(".concat(e, "px)"))
             },
             children: (0, l.jsx)(m.default, {})
           }), (0, l.jsx)(r.animated.div, {
-            className: g.content,
+            className: T.content,
             style: {
               opacity: c.opacity,
               transform: c.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
@@ -88,7 +88,7 @@ let T = {
               isAnimating: s
             })
           }), (0, l.jsx)("div", {
-            className: g.selectors,
+            className: T.selectors,
             children: (0, l.jsx)(C.default, {
               mode: a
             })
@@ -104,12 +104,12 @@ t.default = i.memo(function() {
     width: n
   } = (0, c.default)();
   return (0, l.jsxs)("main", {
-    className: g.container,
+    className: T.container,
     ref: t,
     children: [(0, l.jsx)("div", {
-      className: g.dragRegion
+      className: T.dragRegion
     }), e ? (0, l.jsx)("div", {
-      className: g.loading,
+      className: T.loading,
       children: (0, l.jsx)(u.Spinner, {})
     }) : (0, l.jsx)(A, {
       width: null != n ? n : 0

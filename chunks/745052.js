@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("209613"),
   p = n("325708"),
   I = n("320149"),
-  g = n("252618"),
-  T = n("605236"),
+  T = n("252618"),
+  g = n("605236"),
   A = n("243778"),
   N = n("984370"),
   v = n("797614"),
@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("6025"),
   L = n("897473"),
   M = n("108427"),
-  x = n("970731"),
-  P = n("210887"),
+  P = n("970731"),
+  x = n("210887"),
   y = n("433355"),
   D = n("592125"),
   b = n("819640"),
@@ -85,7 +85,7 @@ function el() {
     I = s.useCallback(() => {
       _(n.map(e => e.channel.id))
     }, [n, _]),
-    g = s.useCallback(e => {
+    T = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -101,7 +101,7 @@ function el() {
         hasSingleMessageRequest: l
       }, d)
     }, [l, n, p]),
-    T = s.useCallback(() => (0, a.jsxs)(j.default, {
+    g = s.useCallback(() => (0, a.jsxs)(j.default, {
       className: ea.sectionTitle,
       children: [t > 0 ? en.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
@@ -148,8 +148,8 @@ function el() {
           paddingBottom: 24,
           sectionHeight: J.LIST_SECTION_HEIGHT,
           rowHeight: J.LIST_ROW_HEIGHT,
-          renderSection: T,
-          renderRow: g,
+          renderSection: g,
+          renderRow: T,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -181,14 +181,14 @@ let er = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(x.default, {
+    return (0, a.jsx)(P.default, {
       header: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: ea.messageRequestCoachmark,
       onClick: () => t(ee.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: x.CaretPosition.TOP_CENTER,
+      caretPosition: P.CaretPosition.TOP_CENTER,
       headerClassName: ea.__invalid_header
     })
   },
@@ -197,7 +197,7 @@ let er = function(e) {
       n = () => b.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([m.default], () => m.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, T.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, g.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(A.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -208,7 +208,7 @@ let er = function(e) {
         if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
           renderPopout: () => t ? (0, a.jsx)(er, {
             markAsDismissed: r
-          }) : (0, a.jsx)(x.default, {
+          }) : (0, a.jsx)(P.default, {
             header: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -220,7 +220,7 @@ let er = function(e) {
               })
             },
             markAsDismissed: r,
-            caretPosition: x.CaretPosition.TOP_CENTER,
+            caretPosition: P.CaretPosition.TOP_CENTER,
             headerClassName: ea.__invalid_header
           }),
           position: "bottom",
@@ -252,7 +252,7 @@ let ed = (0, _.default)(function(e) {
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let l = (0, u.useStateFromStores)([P.default], () => P.default.theme),
+  let l = (0, u.useStateFromStores)([x.default], () => x.default.theme),
     r = (0, Q.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([y.default], () => {
@@ -267,7 +267,7 @@ let ed = (0, _.default)(function(e) {
     null != _ && !m && S && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
   let [p, I] = s.useState(J.MessageRequestSections.REQUESTS);
-  return (0, g.usePageTitle)({
+  return (0, T.usePageTitle)({
     location: en.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {

@@ -47,7 +47,7 @@ function I() {
   })
 }
 
-function g(e) {
+function T(e) {
   let {
     selectedGame: t
   } = e, n = (0, _.useDiscoveryGameApplicationId)({
@@ -63,7 +63,7 @@ function g(e) {
   })
 }
 
-function T(e) {
+function g(e) {
   return e.toString()
 }
 t.default = s.memo(function(e) {
@@ -72,9 +72,9 @@ t.default = s.memo(function(e) {
     setScreen: n
   } = e, u = s.useRef(null), d = s.useRef(null), E = s.useRef(null), _ = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [A, N] = s.useState(0), [v, R] = s.useState(0), O = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), L = (0, h.useClanDiscoveryUIStore)(e => e.previousMode, i.default), M = s.useCallback(e => {
     N(e), v < e && R(e)
-  }, [v]), x = s.useCallback(() => {
+  }, [v]), P = s.useCallback(() => {
     0 === A ? (n(h.ClanDiscoveryUserScreens.USER_UPSELL), (0, h.setClanDiscoveryMode)(L)) : M(A - 1)
-  }, [A, L, n, M]), P = s.useCallback(() => {
+  }, [A, L, n, M]), x = s.useCallback(() => {
     2 === A ? (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.DISCOVERY) : M(A + 1)
   }, [A, M]), y = s.useMemo(() => 1 === A && null == O, [O, A]), D = s.useMemo(() => [{
     index: 0,
@@ -128,7 +128,7 @@ t.default = s.memo(function(e) {
         case 1:
           return (0, a.jsx)(I, {});
         case 2:
-          return (0, a.jsx)(g, {
+          return (0, a.jsx)(T, {
             selectedGame: t
           })
       }
@@ -143,7 +143,7 @@ t.default = s.memo(function(e) {
         currentStep: A,
         items: G,
         renderItem: w,
-        getItemKey: T
+        getItemKey: g
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: m.footer,
@@ -157,8 +157,8 @@ t.default = s.memo(function(e) {
         className: m.footerButtons,
         isBackDisabled: !1,
         isNextDisabled: y,
-        onNextClick: P,
-        onBackClick: x
+        onNextClick: x,
+        onBackClick: P
       })]
     })]
   })

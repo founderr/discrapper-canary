@@ -42,8 +42,8 @@ var a, n, l = s("735250"),
   k = s("663389"),
   w = s("594174"),
   H = s("285952"),
-  Y = s("153124"),
-  V = s("626135"),
+  V = s("153124"),
+  Y = s("626135"),
   W = s("63063"),
   K = s("78451"),
   z = s("709054"),
@@ -76,7 +76,7 @@ function ed() {
     t = (0, D.default)(),
     s = null != e ? e : t;
   i.useEffect(() => {
-    V.default.track(ea.AnalyticEvents.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+    Y.default.track(ea.AnalyticEvents.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
       action: ee.UserGuildPrivacySettingsAction.VIEW_SETTINGS_PAGE
     })
   }, []);
@@ -84,7 +84,7 @@ function ed() {
     null != e && f.default.dispatch({
       type: "GUILD_IDENTITY_SETTINGS_SET_GUILD",
       guild: e
-    }), V.default.track(ea.AnalyticEvents.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+    }), Y.default.track(ea.AnalyticEvents.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
       action: ee.UserGuildPrivacySettingsAction.SELECT_GUILD,
       guild_id: null == e ? void 0 : e.id
     })
@@ -143,7 +143,7 @@ function eu() {
 }
 
 function ec(e, t) {
-  V.default.track(ea.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+  Y.default.track(ea.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
     default_guilds_restricted: e,
     applied_to_existing_guilds: t
   })
@@ -416,7 +416,7 @@ class em extends i.PureComponent {
     })
   }
   trackDefaultDmsUpdated(e, t) {
-    V.default.track(ea.AnalyticEvents.GUILD_DEFAULT_DMS_UPDATED, {
+    Y.default.track(ea.AnalyticEvents.GUILD_DEFAULT_DMS_UPDATED, {
       default_guilds_restricted: e,
       applied_to_existing_guilds: t
     })
@@ -437,7 +437,7 @@ class em extends i.PureComponent {
     })
   }
   trackDefaultMessageRequestUpdated(e, t) {
-    V.default.track(ea.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+    Y.default.track(ea.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
       default_guilds_restricted: e,
       applied_to_existing_guilds: t
     })
@@ -843,7 +843,7 @@ class em extends i.PureComponent {
         })]
       }), (0, l.jsx)(_.TabBar.Panel, {
         id: n,
-        "aria-labelledby": (0, Y.uid)(),
+        "aria-labelledby": (0, V.uid)(),
         className: o()(ei.contentPanel, {
           [ei.contentPanelNagbar]: r
         }),

@@ -6,11 +6,11 @@ l.r(t), l.d(t, {
 });
 var s = l("735250");
 l("470079");
-var a = l("543595"),
-  i = l("100849"),
+var i = l("543595"),
+  a = l("100849"),
   n = l("487922"),
-  r = l("620648"),
-  o = l("944546"),
+  o = l("620648"),
+  r = l("944546"),
   u = l("470900"),
   d = l("228168");
 
@@ -24,9 +24,9 @@ function c(e) {
   } = e;
   switch (c) {
     case d.UserProfileSections.ACTIVITY:
-      return (0, s.jsx)(i.default, {
+      return (0, s.jsx)(a.default, {
         user: l,
-        type: a.Types.PROFILE_V2
+        type: i.Types.PROFILE_V2
       });
     case d.UserProfileSections.MUTUAL_GUILDS:
       return (0, s.jsx)(u.default, {
@@ -34,7 +34,7 @@ function c(e) {
         onClose: S
       });
     case d.UserProfileSections.MUTUAL_FRIENDS:
-      return (0, s.jsx)(o.default, {
+      return (0, s.jsx)(r.default, {
         user: l,
         onClose: S
       });
@@ -45,7 +45,7 @@ function c(e) {
     case d.UserProfileSections.USER_INFO_CONNECTIONS:
     case d.UserProfileSections.USER_INFO:
     default:
-      return (0, s.jsx)(r.default, {
+      return (0, s.jsx)(o.default, {
         displayProfile: t,
         autoFocusNote: f,
         user: l,

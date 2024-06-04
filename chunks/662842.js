@@ -20,8 +20,8 @@ var a, s, l = n("735250"),
   S = n("151864"),
   p = n("725436"),
   I = n("497656"),
-  g = n("554747"),
-  T = n("230900"),
+  T = n("554747"),
+  g = n("230900"),
   A = n("854698"),
   N = n("703656"),
   v = n("922482"),
@@ -29,8 +29,8 @@ var a, s, l = n("735250"),
   O = n("501655"),
   L = n("427679"),
   M = n("448206"),
-  x = n("484459"),
-  P = n("103575"),
+  P = n("484459"),
+  x = n("103575"),
   y = n("496675"),
   D = n("594174"),
   b = n("465670"),
@@ -49,7 +49,7 @@ function Y(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, a = (0, I.useActiveEventOrStageInstanceChannel)(t.id), s = (0, g.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = e, a = (0, I.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
   } = (0, u.useStateFromStoresObject)([S.default], () => ({
@@ -171,7 +171,7 @@ function Y(e) {
         }
       }
       if (t.entity_type === F.GuildScheduledEventEntityTypes.EXTERNAL) {
-        let e = (0, T.getLocationFromEvent)(t);
+        let e = (0, g.getLocationFromEvent)(t);
         if (null == e) return {
           noticeType: null
         };
@@ -278,10 +278,10 @@ function Y(e) {
     }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
       className: V.participants,
       children: [el.map(e => (0, l.jsx)(c.Popout, {
-        preload: () => (0, x.maybeFetchUserProfileForPopout)(e, {
+        preload: () => (0, P.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
-        renderPopout: n => (0, l.jsx)(P.default, {
+        renderPopout: n => (0, l.jsx)(x.default, {
           ...n,
           location: "LiveChannelNotice",
           userId: e.id,

@@ -48,8 +48,8 @@ function j() {
       pendingAvatar: k,
       pendingGlobalName: w,
       pendingBanner: H,
-      pendingBio: Y,
-      pendingPronouns: V,
+      pendingBio: V,
+      pendingPronouns: Y,
       pendingAccentColor: W,
       pendingThemeColors: K,
       errors: z
@@ -95,7 +95,7 @@ function j() {
       sectionTitle: P.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: z.pronouns,
       onPronounsChange: O.setPendingPronouns,
-      pendingPronouns: V,
+      pendingPronouns: Y,
       currentPronouns: null !== (y = null == B ? void 0 : B.pronouns) && void 0 !== y ? y : ""
     }, "pronouns"), (0, a.jsx)(f.default, {
       onAvatarChange: r.setPendingAvatar,
@@ -131,7 +131,7 @@ function j() {
       sectionTitle: P.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: es,
       onBioChange: e => (0, E.setNewPendingUserBio)(e, null == B ? void 0 : B.bio),
-      pendingBio: Y,
+      pendingBio: V,
       currentBio: null !== (G = null == B ? void 0 : B.bio) && void 0 !== G ? G : ""
     }, "bio"), en && el.length > 0 && (0, a.jsx)(c.default, {
       availableClans: el

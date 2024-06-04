@@ -86,7 +86,7 @@ function b(e) {
     }, [w]), h) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
   let H = A.default.canUsePremiumProfileCustomization(l),
-    Y = {
+    V = {
       user: l,
       guild: t,
       canUsePremiumCustomization: H,
@@ -122,7 +122,7 @@ function b(e) {
           guildName: null == t ? void 0 : t.name
         }),
         profilePreview: (0, a.jsx)(f.default, {
-          ...Y,
+          ...V,
           location: "GuildIdentitySettingsPage",
           pendingThemeColors: k
         }),

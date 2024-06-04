@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("420660"),
   p = n("100527"),
   I = n("906732"),
-  g = n("521868"),
-  T = n("299206"),
+  T = n("521868"),
+  g = n("299206"),
   A = n("440051"),
   N = n("734934"),
   v = n("158238"),
@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("221292"),
   L = n("318661"),
   M = n("502762"),
-  x = n("192133"),
-  P = n("138394"),
+  P = n("192133"),
+  x = n("138394"),
   y = n("131640"),
   D = n("695346"),
   b = n("199902"),
@@ -265,8 +265,8 @@ function $(e) {
   let el = (0, N.useFocusModeEnabled)(),
     ei = ee === K.StatusTypes.DND,
     er = (0, Y.useMultiAccountMenuItems)(),
-    eo = (0, g.useCustomStatusMenuItem)(null != n ? n : void 0, q.menuItemFocused),
-    eu = (0, T.default)({
+    eo = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, q.menuItemFocused),
+    eu = (0, g.default)({
       id: t.id,
       label: Q.default.Messages.COPY_ID_USER,
       showIconFirst: !0
@@ -297,7 +297,7 @@ function $(e) {
               isHovering: es,
               showPremiumBadgeUpsell: !1
             }), (0, a.jsxs)(M.default.Overlay, {
-              children: [(0, a.jsx)(x.default, {
+              children: [(0, a.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: F,
@@ -307,7 +307,7 @@ function $(e) {
                 canDM: !1,
                 hideNote: !0,
                 showCopiableUsername: !0
-              }), (0, a.jsx)(P.default, {
+              }), (0, a.jsx)(x.default, {
                 className: q.divider
               }), (0, a.jsxs)(E.Menu, {
                 navId: "account",

@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("185666"),
   p = n("503737"),
   I = n("513202"),
-  g = n("318891"),
-  T = n("687751"),
+  T = n("318891"),
+  g = n("687751"),
   A = n("912471"),
   N = n("100527"),
   v = n("838134"),
@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("679891"),
   L = n("491575"),
   M = n("314533"),
-  x = n("935347"),
-  P = n("560067"),
+  P = n("935347"),
+  x = n("560067"),
   y = n("823169"),
   D = n("620360"),
   b = n("96051"),
@@ -72,8 +72,8 @@ var a = n("735250"),
   eS = n("897473"),
   ep = n("377368"),
   eI = n("262702"),
-  eg = n("639033"),
-  eT = n("479313"),
+  eT = n("639033"),
+  eg = n("479313"),
   eA = n("911560"),
   eN = n("703016"),
   ev = n("171368"),
@@ -81,8 +81,8 @@ var a = n("735250"),
   eO = n("332754"),
   eL = n("507468"),
   eM = n("357269"),
-  ex = n("282506"),
-  eP = n("444961"),
+  eP = n("282506"),
+  ex = n("444961"),
   ey = n("314897"),
   eD = n("433355"),
   eb = n("592125"),
@@ -152,7 +152,7 @@ let e0 = o.default.connectStores([F.default, eU.default, ey.default], () => ({
         to: eq.Routes.DEFAULT_LOGGED_OUT
       });
       if (e) {
-        let e = e5(t);
+        let e = e9(t);
         return null == e || (e.params.guildId === eq.ME || null != ej.default.getGuild(e.params.guildId)) && null != eb.default.getChannel(e.params.channelId) ? (0, a.jsx)(r.Redirect, {
           to: t
         }) : (0, a.jsx)(r.Redirect, {
@@ -165,10 +165,10 @@ let e0 = o.default.connectStores([F.default, eU.default, ey.default], () => ({
   e1 = (0, R.makeAuthenticated)(L.default, null, {
     passProps: !1
   }),
-  e4 = (0, R.makeAuthenticated)(v.default, null, {
+  e2 = (0, R.makeAuthenticated)(v.default, null, {
     passProps: !1
   }),
-  e2 = [eq.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(eZ.StaticChannelRoutes).map(e => eq.Routes.CHANNEL(":guildId", e))];
+  e4 = [eq.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(eZ.StaticChannelRoutes).map(e => eq.Routes.CHANNEL(":guildId", e))];
 
 function e3(e) {
   let {
@@ -264,7 +264,7 @@ let e7 = [{
 }, {
   path: [eq.Routes.GUILD_CREATE],
   render: function() {
-    return (0, H.addPostConnectionCallback)(() => P.default.openCreateGuildModal({
+    return (0, H.addPostConnectionCallback)(() => x.default.openCreateGuildModal({
       location: "External link"
     })), (0, a.jsx)(r.Redirect, {
       to: eU.default.defaultRoute
@@ -392,11 +392,11 @@ let e7 = [{
   isChatRoute: !0
 }, {
   path: [eq.Routes.APPLICATION_DIRECTORY],
-  render: e4,
+  render: e2,
   isSessionRequired: !0
 }];
 
-function e5(e) {
+function e9(e) {
   for (let {
       path: t,
       isChatRoute: n
@@ -411,7 +411,7 @@ function e5(e) {
   return null
 }
 
-function e9(e) {
+function e5(e) {
   let {
     channelId: t,
     guildId: n,
@@ -423,9 +423,9 @@ function e9(e) {
   } = (0, eh.getHistory)();
   s.pathname === a && (null == eb.default.getChannel(t) ? (0, eh.replaceWith)(eq.Routes.CHANNEL(n)) : (0, eh.replaceWith)(a))
 }
-class e6 extends s.PureComponent {
+class e8 extends s.PureComponent {
   componentDidMount() {
-    ez.default.setZoomFactor(C.default.zoom), e_.default.init(), O.default.initialize(), er.default.initialize(), G.default.initialize(), eP.default.initialize(), w.default.initialize(), eu.default.initialize(), X.default.initialize(), m.default.init(), B.default.init(), k.default.init(), en.default.initialize(), T.default.initialize(), U.default.initialize(), ed.default.initialize(), g.default.initialize(), ex.default.initialize(), ei.default.initialize(), I.default.initialize(), V.default.init(), q.default.init(), eV.default.init(), eW.default.init(), p.default.initialize(), eN.default.init(), eH.default.init(), eO.default.init(), eI.default.initialize(), eg.default.initialize(), eR.default.initialize(), eL.default.init(), b.default.initialize(), S.default.initialize(), eC.default.initialize(), ep.default.initialize(), es.default.initialize(), ea.default.initialize(), el.default.initialize(), M.default.initialize(), Z.default.init({
+    ez.default.setZoomFactor(C.default.zoom), e_.default.init(), O.default.initialize(), er.default.initialize(), G.default.initialize(), ex.default.initialize(), w.default.initialize(), eu.default.initialize(), X.default.initialize(), m.default.init(), B.default.init(), k.default.init(), en.default.initialize(), g.default.initialize(), U.default.initialize(), ed.default.initialize(), T.default.initialize(), eP.default.initialize(), ei.default.initialize(), I.default.initialize(), V.default.init(), q.default.init(), eV.default.init(), eW.default.init(), p.default.initialize(), eN.default.init(), eH.default.init(), eO.default.init(), eI.default.initialize(), eT.default.initialize(), eR.default.initialize(), eL.default.init(), b.default.initialize(), S.default.initialize(), eC.default.initialize(), ep.default.initialize(), es.default.initialize(), ea.default.initialize(), el.default.initialize(), M.default.initialize(), Z.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -438,7 +438,7 @@ class e6 extends s.PureComponent {
     }), D.default.init(), J.default.initialize(), ec.default.initialize(), eo.default.initialize(), y.default.initialize(), this.rewriterUnlisten = ef.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = ef.default.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    eP.default.terminate(), eu.default.terminate(), er.default.terminate(), O.default.terminate(), g.default.terminate(), ex.default.terminate(), I.default.terminate(), ed.default.terminate(), ei.default.terminate(), eR.default.terminate(), p.default.terminate(), b.default.terminate(), J.default.terminate(), S.default.terminate(), ec.default.terminate(), eC.default.terminate(), ep.default.terminate(), es.default.terminate(), ea.default.terminate(), el.default.terminate(), M.default.terminate(), eo.default.terminate(), y.default.terminate(), j.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    ex.default.terminate(), eu.default.terminate(), er.default.terminate(), O.default.terminate(), T.default.terminate(), eP.default.terminate(), I.default.terminate(), ed.default.terminate(), ei.default.terminate(), eR.default.terminate(), p.default.terminate(), b.default.terminate(), J.default.terminate(), S.default.terminate(), ec.default.terminate(), eC.default.terminate(), ep.default.terminate(), es.default.terminate(), ea.default.terminate(), el.default.terminate(), M.default.terminate(), eo.default.terminate(), y.default.terminate(), j.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {
@@ -463,7 +463,7 @@ class e6 extends s.PureComponent {
         return null
       }(e) && d.default.startSession(t)
     }(t), ! function(e, t) {
-      let n = e5(e);
+      let n = e9(e);
       if (null == n) return;
       let {
         guildId: a,
@@ -483,7 +483,7 @@ class e6 extends s.PureComponent {
           let {
             summaryId: e
           } = (0, l.parse)(t);
-          null != e && eT.default.setSelectedSummary(s, e)
+          null != e && eg.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
           let e = eD.default.getCurrentSidebarChannelId(n) !== o,
@@ -512,7 +512,7 @@ class e6 extends s.PureComponent {
         } else(i && u || !_ && !i) && $.default.closeSidebar()
       } else {
         var C;
-        if (C = e, !e2.some(e => {
+        if (C = e, !e4.some(e => {
             var t;
             return (null === (t = (0, i.matchPath)(C, e)) || void 0 === t ? void 0 : t.isExact) === !0
           }))(0, eh.replaceWith)(eU.default.fallbackRoute)
@@ -523,7 +523,7 @@ class e6 extends s.PureComponent {
     if (!F.default.isConnected()) return null;
     let {
       pathname: t
-    } = e, n = e5(t);
+    } = e, n = e9(t);
     if (null == n) return null;
     let {
       guildId: a,
@@ -532,7 +532,7 @@ class e6 extends s.PureComponent {
     } = e3(n), i = (0, eE.isValidGuildId)(a) && a !== eq.ME && a !== eq.FAVORITES;
     if (null != s && (0, eE.isValidChannelId)(s) && !(0, eZ.isStaticChannelRoute)(s) && i) {
       let n = eb.default.getChannel(s);
-      if (null == n) eA.default.loadThread(s).then(() => e9({
+      if (null == n) eA.default.loadThread(s).then(() => e5({
         channelId: s,
         guildId: a,
         pathname: t
@@ -544,7 +544,7 @@ class e6 extends s.PureComponent {
       if (null != l) {
         if (!((0, eE.isValidChannelId)(l) && !(0, eZ.isStaticChannelRoute)(s))) return null;
         let n = eb.default.getChannel(l);
-        if (null == n) eA.default.loadThread(l).then(() => e9({
+        if (null == n) eA.default.loadThread(l).then(() => e5({
           channelId: l,
           guildId: a,
           pathname: t
@@ -576,11 +576,11 @@ class e6 extends s.PureComponent {
         }), (0, a.jsx)(r.Redirect, {
           to: "/"
         })]
-      }), (0, a.jsx)(x.default, {})]
+      }), (0, a.jsx)(P.default, {})]
     })
   }
   constructor(...e) {
     super(...e), eJ(this, "historyUnlisten", () => {}), eJ(this, "rewriterUnlisten", () => {})
   }
 }
-t.default = e6
+t.default = e8

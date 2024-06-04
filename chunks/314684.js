@@ -1,13 +1,13 @@
 "use strict";
 r.r(t), r.d(t, {
   getTenureRewardDimissibleContentType: function() {
-    return L
+    return D
   },
   useClearTenureBadge: function() {
-    return F
+    return U
   },
   useFetchEntitlementsForTenureReward: function() {
-    return U
+    return y
   },
   useFetchTenureRewardStatusDetails: function() {
     return M
@@ -22,10 +22,10 @@ r.r(t), r.d(t, {
     return A
   },
   useShouldShowConfettiAndGlow: function() {
-    return y
+    return F
   },
   useTenureRewardBadgeDescription: function() {
-    return D
+    return L
   }
 }), r("47120");
 var s = r("470079"),
@@ -129,7 +129,7 @@ function I() {
     });
   if (null != (0, S.getPremiumTier2Entitlement)(e) || !!t) return (0, S.getTenureRewardEntitlement)([w.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH, w.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS], e)
 }
-let L = e => {
+let D = e => {
     if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
     switch (e.nitroTenureStatus) {
       case w.NitroRewardStatus.PENDING:
@@ -140,19 +140,19 @@ let L = e => {
         return []
     }
   },
-  D = () => {
+  L = () => {
     let e = A(),
-      [t, r] = s.useState(L(e)),
+      [t, r] = s.useState(D(e)),
       i = (0, h.useUserEligibleForNitroTenureRewardCard)({
         location: "Home"
       });
     s.useEffect(() => {
-      !1 !== i && r(L(e))
+      !1 !== i && r(D(e))
     }, [e, i]);
     let [n] = (0, _.useSelectedDismissibleContent)(i ? t : []);
     return i ? null != e && !0 === e.showNotification && (n === a.DismissibleContent.TENURE_REWARD_REDEEMABLE || n === a.DismissibleContent.TENURE_REWARD_PENDING) ? (0, S.getTenureRewardBadgeDescription)(e.nitroTenureStatus) : null : null
   },
-  y = () => {
+  F = () => {
     var e;
     let t = null === (e = A()) || void 0 === e ? void 0 : e.nitroTenureStatus,
       r = (0, h.useUserEligibleForNitroTenureRewardCard)({
@@ -161,9 +161,9 @@ let L = e => {
       [s] = (0, _.useSelectedDismissibleContent)(r ? [a.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
     return !!r && s === a.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI
   },
-  F = () => {
+  U = () => {
     let e = A(),
-      t = s.useMemo(() => L(e), [e]),
+      t = s.useMemo(() => D(e), [e]),
       [r] = (0, c.useGetDismissibleContent)(t),
       i = s.useRef(!1);
     return s.useCallback(() => {
@@ -176,7 +176,7 @@ let L = e => {
     }, [e, r])
   };
 
-function U() {
+function y() {
   let {
     hasFetchedPremiumApplicationEntitlements: e,
     isFetchingPremiumApplicationEntitlements: t
@@ -194,7 +194,7 @@ function U() {
 
 function M() {
   var e;
-  U();
+  y();
   let t = A(),
     r = null !== (e = null == t ? void 0 : t.showCard) && void 0 !== e && e;
   s.useEffect(() => {

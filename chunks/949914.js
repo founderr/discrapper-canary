@@ -127,8 +127,8 @@ t.default = e => {
   } = (0, v.default)(t), [h, A] = n.useState(!1), x = (0, O.useUID)(), {
     analyticsLocations: H
   } = (0, _.default)(), {
-    shouldHideGuildPurchaseEntryPoints: Y
-  } = (0, m.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), V = (null == t ? void 0 : t.paymentGateway) === j.PaymentGateways.APPLE_PARTNER;
+    shouldHideGuildPurchaseEntryPoints: V
+  } = (0, m.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === j.PaymentGateways.APPLE_PARTNER;
   if (null == l || null == s || null == I) return null;
   let W = () => {
       null != o && ((0, N.transitionTo)(j.Routes.CHANNEL(o.id, U.StaticChannelRoute.ROLE_SUBSCRIPTIONS)), (0, c.popLayer)(), S.default.show(j.NoticeTypes.BACK_TO_PREVIOUS_SCREEN, void 0, G.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.default.open(j.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)))
@@ -155,7 +155,7 @@ t.default = e => {
       nextRenewalDate: J,
       nextRenewalLabel: $,
       isTrial: ee
-    } = I, et = s.soft_deleted || null == o || V, es = () => {
+    } = I, et = s.soft_deleted || null == o || Y, es = () => {
       if (Q) return (0, a.jsx)(M.TextBadge, {
         text: G.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_CANCELLED
       });
@@ -175,7 +175,7 @@ t.default = e => {
         })
       });
       else return null
-    }, ea = () => V ? (0, a.jsx)(d.Tooltip, {
+    }, ea = () => Y ? (0, a.jsx)(d.Tooltip, {
       text: G.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM_TOOLTIP,
       children: e => (0, a.jsx)("div", {
         ...e,
@@ -254,7 +254,7 @@ t.default = e => {
         })]
       }), (0, a.jsx)(p.default, {
         size: 16
-      }), !Q && !V && (0, a.jsxs)(a.Fragment, {
+      }), !Q && !Y && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.FormTitle, {
           children: G.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL
         }), (0, a.jsx)(k, {
@@ -264,7 +264,7 @@ t.default = e => {
         isTrial: ee,
         isCancelled: Q,
         isResubscribing: h,
-        shouldHideRoleSubscriptionEntryPoints: Y,
+        shouldHideRoleSubscriptionEntryPoints: V,
         onCancelSubscriptionClick: K,
         onChangePlanClick: W,
         onResubscribeClick: z

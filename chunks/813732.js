@@ -58,7 +58,7 @@ function H() {
   })
 }
 
-function Y() {
+function V() {
   let e = (0, r.useStateFromStores)([M.default], () => M.default.getForApplication(y.PREMIUM_SUBSCRIPTION_APPLICATION));
   return n.useEffect(() => {
     (0, S.fetchUserEntitlementsForApplication)(y.PREMIUM_SUBSCRIPTION_APPLICATION)
@@ -116,7 +116,7 @@ t.default = function() {
         }
       }), (0, a.jsx)(C.Subsetting, {
         setting: B.WebSetting.SUBSCRIPTIONS_CREDITS,
-        children: (0, a.jsx)(Y, {})
+        children: (0, a.jsx)(V, {})
       }), null != e ? (0, a.jsx)(j.default, {
         subscription: e,
         withOverheadSeparator: !1

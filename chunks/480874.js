@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("727813"),
   p = n("355350"),
   I = n("307947"),
-  g = n("125855"),
-  T = n("687683"),
+  T = n("125855"),
+  g = n("687683"),
   A = n("981631"),
   N = n("689938"),
   v = n("563585");
@@ -42,13 +42,13 @@ function R() {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: x
+      rejectAll: P
     } = (0, C.useMessageRequestActions)({
       onError: M
     }),
-    P = s.useCallback(() => {
-      x(t.map(e => e.channel.id))
-    }, [t, x]);
+    x = s.useCallback(() => {
+      P(t.map(e => e.channel.id))
+    }, [t, P]);
   s.useEffect(() => {
     h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
@@ -61,7 +61,7 @@ function R() {
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(T.default, {
         index: r,
         className: i()({
           [v.selected]: null != L && L === d,
@@ -84,7 +84,7 @@ function R() {
           tag: "span",
           children: "•"
         }), (0, a.jsx)(u.Button, {
-          onClick: P,
+          onClick: x,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -93,9 +93,9 @@ function R() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, P, R]);
+    }, "message-requests-spam-title"), [n, x, R]);
   return 0 === t.length ? (0, a.jsx)(I.default, {
-    section: T.MessageRequestSections.SPAM
+    section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: O,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
@@ -115,8 +115,8 @@ function R() {
           },
           paddingTop: 24,
           paddingBottom: 24,
-          sectionHeight: T.LIST_SECTION_HEIGHT,
-          rowHeight: T.LIST_ROW_HEIGHT,
+          sectionHeight: g.LIST_SECTION_HEIGHT,
+          rowHeight: g.LIST_ROW_HEIGHT,
           renderSection: D,
           renderRow: y,
           sections: [t.length],

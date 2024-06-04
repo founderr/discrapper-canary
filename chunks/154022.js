@@ -44,10 +44,10 @@ var a = s("735250"),
 let k = (0, p.uid)(),
   w = (0, p.uid)(),
   H = (0, p.uid)(),
-  Y = o().debounce(e => {
+  V = o().debounce(e => {
     (0, E.setSaturation)(e)
   }, 250),
-  V = o().debounce(e => {
+  Y = o().debounce(e => {
     (0, h.setSpeechRate)(e)
   }, 250);
 
@@ -145,7 +145,7 @@ function z() {
       maxValue: 1,
       minValue: 0,
       initialValue: e,
-      onValueChange: Y,
+      onValueChange: V,
       onMarkerRender: e => 100 * e % 2 == 0 ? "".concat(100 * e, "%") : void 0
     }), (0, a.jsx)(u.FormSwitch, {
       hideBorder: !0,
@@ -441,7 +441,7 @@ function es() {
         initialValue: t,
         defaultValue: 1,
         stickToMarkers: !0,
-        onValueChange: V,
+        onValueChange: Y,
         onValueRender: e => "x".concat(e.toFixed(2)),
         onMarkerRender: e => 0 === e ? (0, a.jsx)("span", {
           className: G.ttsSliderMarker,

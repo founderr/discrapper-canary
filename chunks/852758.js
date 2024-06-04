@@ -28,8 +28,8 @@ var a = n("735250"),
   S = n("610001"),
   p = n("78415"),
   I = n("1964"),
-  g = n("981631"),
-  T = n("815660"),
+  T = n("981631"),
+  g = n("815660"),
   A = n("689938");
 let N = "Email Verification",
   v = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
@@ -50,7 +50,7 @@ function R() {
       verification_types: R
     }
   }, {}, [R.toString()]);
-  let x = () => {
+  let P = () => {
       (0, c.accountDetailsInit)(), (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -63,7 +63,7 @@ function R() {
         Layer: p.default
       })
     },
-    P = () => {
+    x = () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -73,14 +73,14 @@ function R() {
           ...t
         })
       }, {
-        modalKey: T.PHONE_VERIFICATION_MODAL_KEY,
+        modalKey: g.PHONE_VERIFICATION_MODAL_KEY,
         Layer: p.default
       })
     };
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == M ? void 0 : M[0]) === g.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === g.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == M ? void 0 : M[0]) === T.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, "468026"));
@@ -93,14 +93,14 @@ function R() {
     }, {
       modalKey: v,
       Layer: p.default,
-      onCloseCallback: x
+      onCloseCallback: P
     })
   }, [R, M]), (0, a.jsx)(S.default, {
     types: R,
     captchaKey: O,
     onCaptchaVerify: e => {
       r.HTTP.post({
-        url: g.Endpoints.CAPTCHA,
+        url: T.Endpoints.CAPTCHA,
         body: {
           captcha_key: e
         },
@@ -111,7 +111,7 @@ function R() {
     },
     theme: t,
     onClick: e => {
-      e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? x() : P()
+      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? P() : x()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {

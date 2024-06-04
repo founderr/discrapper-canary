@@ -45,8 +45,8 @@ var n = s("990547"),
   k = s("358085"),
   w = s("392735"),
   H = s("61160"),
-  Y = s("604227"),
-  V = s("38915"),
+  V = s("604227"),
+  Y = s("38915"),
   W = s("498639"),
   K = s("748717"),
   z = s("419636"),
@@ -614,7 +614,7 @@ let ej = () => {
         section: eL.UserSettingsSections.HOTSPOT_OPTIONS,
         searchableTitle: "Hotspot Options",
         label: "Hotspot Options",
-        element: V.default,
+        element: Y.default,
         predicate: () => P.default.isDeveloper
       },
       [ev.WebSetting.DISMISSIBLE_CONTENT_OPTIONS]: {
@@ -697,7 +697,7 @@ let ej = () => {
       },
       [ev.WebSetting.CLIENT_DEBUG_INFO]: {
         section: S.SectionTypes.CUSTOM,
-        element: Y.default
+        element: V.default
       }
     })
   }

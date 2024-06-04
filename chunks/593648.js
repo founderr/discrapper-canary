@@ -45,7 +45,7 @@ var a = s("735250"),
   w = s("153764"),
   H = s("611273");
 
-function Y(e, t, s) {
+function V(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -54,7 +54,7 @@ function Y(e, t, s) {
   }) : e[t] = s, e
 }
 
-function V(e) {
+function Y(e) {
   let {
     label: t,
     enabled: s,
@@ -221,7 +221,7 @@ function W(e) {
         disabled: i,
         focusModeDisabled: r
       } = e;
-      return (0, a.jsx)(V, {
+      return (0, a.jsx)(Y, {
         label: n,
         disabled: s || !0 === i || !0 === r,
         tooltip: r ? k.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
@@ -368,11 +368,11 @@ class z extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), Y(this, "handleToggleShowUnreadBadge", () => {
+    super(...e), V(this, "handleToggleShowUnreadBadge", () => {
       S.default.setDisableUnreadBadge(!this.props.disableUnreadBadge)
-    }), Y(this, "handleToggleShowFlash", () => {
+    }), V(this, "handleToggleShowFlash", () => {
       S.default.setTaskbarFlash(!this.props.taskbarFlash)
-    }), Y(this, "renderTTS", () => {
+    }), V(this, "renderTTS", () => {
       if (!T.supported) return null;
       let e = [{
         name: k.default.Messages.TTS_ALLS,

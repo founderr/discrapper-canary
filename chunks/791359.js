@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("626135"),
   p = n("70956"),
   I = n("225559"),
-  g = n("910436"),
-  T = n("203028"),
+  T = n("910436"),
+  g = n("203028"),
   A = n("358924"),
   N = n("292140"),
   v = n("525296"),
@@ -31,17 +31,17 @@ var a = n("735250"),
   O = n("674563"),
   L = n("689938"),
   M = n("676563");
-let x = 15 * p.default.Millis.MINUTE,
-  P = (0, v.default)(function(e) {
+let P = 15 * p.default.Millis.MINUTE,
+  x = (0, v.default)(function(e) {
     let {
       party: t,
       onUserContextMenu: n,
       onChannelContextMenu: l,
       quest: i
-    } = e, r = (0, a.jsx)(T.default, {
+    } = e, r = (0, a.jsx)(g.default, {
       party: t,
       onUserContextMenu: n
-    }), u = (0, a.jsx)(g.default, {
+    }), u = (0, a.jsx)(T.default, {
       party: t,
       onChannelContextMenu: l,
       quest: i
@@ -62,7 +62,7 @@ let x = 15 * p.default.Millis.MINUTE,
         in_voice_channel: p,
         games_detected: e
       })
-    }, [_, C, m, p, E]), v = o()(I, x);
+    }, [_, C, m, p, E]), v = o()(I, P);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -130,7 +130,7 @@ function D() {
     let {
       party: t
     } = e;
-    return (0, a.jsx)(P, {
+    return (0, a.jsx)(x, {
       party: t,
       quest: o.get(t.id)
     }, t.id)

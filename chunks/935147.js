@@ -47,8 +47,8 @@ function G(e) {
     reducedMotion: k
   } = n.useContext(i.AccessibilityPreferencesContext), w = A.default.isPremium(B), {
     pendingAvatar: H,
-    pendingBanner: Y,
-    pendingThemeColors: V,
+    pendingBanner: V,
+    pendingThemeColors: Y,
     pendingPronouns: W,
     pendingBio: K,
     tryItOutThemeColors: z,
@@ -114,9 +114,9 @@ function G(e) {
           onBannerChange: m.setTryItOutBanner,
           pendingPronouns: W,
           pendingBio: K,
-          pendingBanner: null !== (F = null != q ? q : Y) && void 0 !== F ? F : s("466045"),
+          pendingBanner: null !== (F = null != q ? q : V) && void 0 !== F ? F : s("466045"),
           pendingAvatar: null != Q ? Q : H,
-          pendingThemeColors: null != z ? z : V,
+          pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,
           pendingProfileEffectId: $,
           avatarClassName: null != Q || null != H || k.enabled ? void 0 : y.spinningAvatar,
@@ -140,7 +140,7 @@ function G(e) {
             className: y.customizationSection,
             user: B,
             pendingAvatar: null != Q ? Q : H,
-            pendingColors: null != z ? z : V,
+            pendingColors: null != z ? z : Y,
             onThemeColorsChange: m.setTryItOutThemeColors,
             showPremiumIcon: !1,
             preventDisabled: !0

@@ -48,8 +48,8 @@ function H(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let Y = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
-  V = [{
+let V = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
+  Y = [{
     value: "branch",
     label: "Branch Name"
   }, {
@@ -85,7 +85,7 @@ class K extends n.Component {
             title: "Override Type",
             className: F.item,
             children: (0, a.jsx)(S.SingleSelect, {
-              options: V,
+              options: Y,
               onChange: this.handleOverrideTypeChanged,
               value: t,
               isDisabled: n
@@ -165,7 +165,7 @@ class z extends n.Component {
     } = this.state;
     if (null == e) return [];
     let t = Object.keys(e);
-    return o().without(Y, ...t)
+    return o().without(V, ...t)
   }
   renderEmpty() {
     return (0, a.jsxs)(L.default, {

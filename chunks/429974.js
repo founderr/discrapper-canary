@@ -21,8 +21,8 @@ async function m(e) {
     userId: S,
     section: p,
     guildId: I = h.ME,
-    channelId: g,
-    friendToken: T,
+    channelId: T,
+    friendToken: g,
     autoFocusNote: A,
     analyticsLocation: N
   } = e, v = c.default.getUser(S);
@@ -32,8 +32,8 @@ async function m(e) {
     L = u.default.getStatus(S),
     M = u.default.isMobileOnline(S),
     {
-      party: x,
-      assets: P,
+      party: P,
+      assets: x,
       application_id: y
     } = null != O ? O : {},
     D = null != y ? o.default.getApplication(y) : null,
@@ -49,23 +49,23 @@ async function m(e) {
       user: v,
       autoFocusNote: A,
       guildId: I,
-      friendToken: T,
+      friendToken: g,
       initialSection: p,
-      channelId: g
+      channelId: T
     })
   }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
     guild_id: I !== h.ME ? I : null,
-    channel_id: g,
+    channel_id: T,
     other_user_id: S,
     application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
     application_name: null == O ? void 0 : O.name,
     sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
-    has_images: !!(null !== (m = null == P ? void 0 : P.large_image) && void 0 !== m ? m : null == P ? void 0 : P.small_image),
-    party_max: null == x ? void 0 : null === (t = x.size) || void 0 === t ? void 0 : t[1],
-    party_id: null == x ? void 0 : x.id,
-    party_platform: (0, _.isSpotifyParty)(null == x ? void 0 : x.id) ? h.PlatformTypes.SPOTIFY : null,
+    has_images: !!(null !== (m = null == x ? void 0 : x.large_image) && void 0 !== m ? m : null == x ? void 0 : x.small_image),
+    party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
+    party_id: null == P ? void 0 : P.id,
+    party_platform: (0, _.isSpotifyParty)(null == P ? void 0 : P.id) ? h.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(O),
     profile_user_status: U,
     profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,

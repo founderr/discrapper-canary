@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("451478"),
   p = n("6048"),
   I = n("390697"),
-  g = n("434184"),
-  T = n("701861"),
+  T = n("434184"),
+  g = n("701861"),
   A = n("437314"),
   N = n("696577"),
   v = n("163417"),
@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("42575"),
   L = n("617015"),
   M = n("981631"),
-  x = n("689938"),
-  P = n("739426");
+  P = n("689938"),
+  x = n("739426");
 t.default = function(e) {
   let {
     sectionFilter: t,
@@ -54,7 +54,7 @@ t.default = function(e) {
     })
   }, [G, t]), F = y.filter(t, G[t]);
   if (0 === F.length && "" === G[t]) return (0, a.jsxs)("div", {
-    className: P.emptyStateContainer,
+    className: x.emptyStateContainer,
     children: [t === M.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
       type: t,
       onClick: () => {
@@ -70,35 +70,35 @@ t.default = function(e) {
     children: (0, a.jsxs)(c.default, {
       section: M.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(p.default, {
-        className: i()(P.searchBar, H ? P.searchEmptyState : null),
+        className: i()(x.searchBar, H ? x.searchEmptyState : null),
         query: G[t],
         onChange: k,
         onClear: B,
         size: p.default.Sizes.MEDIUM
       }), t === M.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
-        className: P.sectionTitle,
+        className: x.sectionTitle,
         children: [(0, a.jsx)(R.default, {
           id: n,
           title: function(e, t) {
             switch (e) {
               case M.FriendsSections.ONLINE:
-                return x.default.Messages.FRIENDS_ONLINE_HEADER.format({
+                return P.default.Messages.FRIENDS_ONLINE_HEADER.format({
                   online: t.toString()
                 });
               case M.FriendsSections.PENDING:
-                return x.default.Messages.FRIENDS_PENDING_HEADER.format({
+                return P.default.Messages.FRIENDS_PENDING_HEADER.format({
                   count: t.toString()
                 });
               case M.FriendsSections.SUGGESTIONS:
-                return x.default.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({
+                return P.default.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({
                   count: t.toString()
                 });
               case M.FriendsSections.BLOCKED:
-                return x.default.Messages.FRIENDS_BLOCKED_HEADER.format({
+                return P.default.Messages.FRIENDS_BLOCKED_HEADER.format({
                   count: t.toString()
                 });
               default:
-                return x.default.Messages.FRIENDS_ALL_HEADER.format({
+                return P.default.Messages.FRIENDS_ALL_HEADER.format({
                   count: t.toString()
                 })
             }
@@ -106,16 +106,16 @@ t.default = function(e) {
         }), Y && (0, a.jsx)(o.Button, {
           look: o.ButtonLooks.LINK,
           color: o.ButtonColors.LINK,
-          className: P.clearButton,
+          className: x.clearButton,
           size: o.Button.Sizes.TINY,
           onClick: e => {
             e.stopPropagation(), d.default.confirmClearPendingRelationships(V)
           },
-          "aria-label": x.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
-          children: x.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
+          "aria-label": P.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
+          children: P.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
         })]
       }), H ? (0, a.jsx)("div", {
-        className: P.emptyStateContainer,
+        className: x.emptyStateContainer,
         children: (0, a.jsx)(A.default, {
           type: A.FriendsSearchStatus.SECTION_NO_RESULTS
         }, D)
@@ -125,7 +125,7 @@ t.default = function(e) {
         renderRow: function(e) {
           switch (t) {
             case M.FriendsSections.BLOCKED:
-              return (0, a.jsx)(g.default, {
+              return (0, a.jsx)(T.default, {
                 ...e,
                 isFocused: b
               });
@@ -142,7 +142,7 @@ t.default = function(e) {
             case M.FriendsSections.ONLINE:
             case M.FriendsSections.ALL:
             default:
-              return (0, a.jsx)(T.default, {
+              return (0, a.jsx)(g.default, {
                 ...e,
                 isFocused: b
               })

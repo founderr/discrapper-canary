@@ -32,8 +32,8 @@ try {
     a = f.default.requireModule("erlpack")
   } catch (e) {}
 }
-let g = f.default.requireModule("discord_rpc").RPCWebSocket,
-  T = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+let T = f.default.requireModule("discord_rpc").RPCWebSocket,
+  g = window.GLOBAL_ENV.MARKETING_ENDPOINT,
   A = new d.default("RPCServer:WSS"),
   N = [];
 
@@ -95,7 +95,7 @@ class M extends _.default {
     this._socket = e
   }
 }
-class x extends _.default {
+class P extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
@@ -109,7 +109,7 @@ class x extends _.default {
     this._sendCallback = e, this._closeCallback = t
   }
 }
-class P extends l.EventEmitter {
+class x extends l.EventEmitter {
   handleRequest(e, t) {
     let [n, a] = v(e.url).split("?"), s = v(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
@@ -128,9 +128,9 @@ class P extends l.EventEmitter {
             protocol: a,
             host: s
           } = o.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
-          a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", T), t.writeHead(301), t.end()
+          a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        u = new x(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+        u = new P(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
       if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
         e.on("data", e => n += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, n))
@@ -187,14 +187,14 @@ class P extends l.EventEmitter {
     var e;
     super();
     let t = 0;
-    (s = g.http.createServer()).on("error", e => {
+    (s = T.http.createServer()).on("error", e => {
       A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => R(++t), 1e3)
     }), s.on("request", this.handleRequest.bind(this)), R(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s
     };
-    new g.ws.Server(n).on("connection", e => this.handleConnection(e))
+    new T.ws.Server(n).on("connection", e => this.handleConnection(e))
   }
 }
-t.default = new P
+t.default = new x

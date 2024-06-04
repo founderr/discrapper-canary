@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("112724"),
   p = n("812206"),
   I = n("44315"),
-  g = n("210887"),
-  T = n("283595"),
+  T = n("210887"),
+  g = n("283595"),
   A = n("417363"),
   N = n("941128"),
   v = n("451478"),
@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("366695"),
   L = n("366966"),
   M = n("151011"),
-  x = n("774832"),
-  P = n("465670"),
+  P = n("774832"),
+  x = n("465670"),
   y = n("786048"),
   D = n("897353"),
   b = n("424218"),
@@ -483,7 +483,7 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: x.default,
+      icon: P.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
       onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
@@ -493,7 +493,7 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: P.default,
+      icon: x.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
       onClick: () => _.cancel(t.applicationId, t.branchId)
     })
@@ -643,18 +643,18 @@ function ea(e, t, n, a) {
       branchId: r,
       state: u,
       application: o,
-      libraryApplication: T.default.getLibraryApplication(i, r),
+      libraryApplication: g.default.getLibraryApplication(i, r),
       finished: t,
       index: l
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, g.default, v.default], () => {
+t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, T.default, v.default], () => {
   let e = ea(N.default.activeItems, !1, p.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, p.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
-    theme: g.default.theme
+    theme: T.default.theme
   }
 })((0, m.default)(en)))

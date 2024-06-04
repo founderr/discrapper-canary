@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("242291"),
   p = n("792165"),
   I = n("603074"),
-  g = n("981631"),
-  T = n("921944"),
+  T = n("981631"),
+  g = n("921944"),
   A = n("689938"),
   N = n("726271");
 
@@ -37,8 +37,8 @@ function v(e) {
   } = e, {
     mute: L,
     suppress: M
-  } = (0, _.default)(t), x = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = L || M || x, [y, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: P
+  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), x = L || M || P, [y, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: x
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
   } = (0, E.default)(f.default.SOUNDBOARD_BUTTON);
@@ -86,14 +86,14 @@ function v(e) {
         ...t,
         className: i()(v, {
           [N.buttonActive]: y,
-          [N.disabled]: P
+          [N.disabled]: x
         }),
         wrapperClassName: v,
         innerClassName: R,
-        disabled: P,
+        disabled: x,
         onClick: () => {
           var t, n;
-          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!y), F()
+          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!y), F()
         },
         onMouseEnter: t => {
           var n, a;
@@ -115,10 +115,10 @@ function v(e) {
       })
     })
   }), W = s.useCallback(() => {
-    !P && D(!y)
-  }, [P, y]);
+    !x && D(!y)
+  }, [x, y]);
   return (0, m.useComponentAction)({
-    event: g.ComponentActions.TOGGLE_SOUNDBOARD,
+    event: T.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: w,
@@ -126,7 +126,7 @@ function v(e) {
       text: function() {
         if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (x) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)

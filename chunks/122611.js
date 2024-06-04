@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("919285"),
   p = n("118470"),
   I = n("413307"),
-  g = n("849688"),
-  T = n("374023"),
+  T = n("849688"),
+  g = n("374023"),
   A = n("661599"),
   N = n("923608"),
   v = n("617899"),
@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("760326"),
   L = n("536687"),
   M = n("652785"),
-  x = n("981631"),
-  P = n("921944");
+  P = n("981631"),
+  x = n("921944");
 
 function y(e) {
   e.stopPropagation()
@@ -52,18 +52,18 @@ function D(e) {
       type: t,
       store: a
     } = e;
-    if (t === x.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
+    if (t === P.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
     return null == a ? void 0 : a.channelNoticePredicate(n, f)
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(c.default, {
     contentTypes: I,
-    groupName: P.DismissibleContentGroupName.CHANNEL_NOTICES,
+    groupName: x.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        m(Date.now()), s(P.ContentDismissActionType.UNKNOWN)
+        m(Date.now()), s(x.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
@@ -99,7 +99,7 @@ function D(e) {
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, a.jsx)(d.default, {
               guild: n,
-              markAsDismissed: () => s(P.ContentDismissActionType.UNKNOWN)
+              markAsDismissed: () => s(x.ContentDismissActionType.UNKNOWN)
             });
           case i.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
             return (0, a.jsx)(u.default, {
@@ -156,11 +156,11 @@ t.default = e => {
         guild: t
       });
     case L.ConnectedChannelNotices.SIGNUP:
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(T.default, {
         guild: t
       })
   }
-  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(D, {
+  return g.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(D, {
     guild: e.guild
   })
 }

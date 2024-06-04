@@ -26,8 +26,8 @@ var a, s, l = n("735250"),
   S = n("448206"),
   p = n("496675"),
   I = n("938475"),
-  g = n("808602"),
-  T = n("305878"),
+  T = n("808602"),
+  g = n("305878"),
   A = n("263704"),
   N = n("465670"),
   v = n("242315"),
@@ -35,8 +35,8 @@ var a, s, l = n("735250"),
   O = n("170039"),
   L = n("602623"),
   M = n("626135"),
-  x = n("823379"),
-  P = n("15274"),
+  P = n("823379"),
+  x = n("15274"),
   y = n("924301"),
   D = n("504160"),
   b = n("151864"),
@@ -170,7 +170,7 @@ function q(e) {
       width: 16,
       height: 16,
       className: K.buttonIcon
-    }) : (0, l.jsx)(g.default, {
+    }) : (0, l.jsx)(T.default, {
       width: 16,
       height: 16,
       className: K.buttonIcon
@@ -205,7 +205,7 @@ function Z(e) {
     children: [(0, l.jsxs)("div", {
       className: K.textBlock,
       children: [(0, l.jsx)(o.Clickable, {
-        onClick: () => (0, P.openGuildEventDetails)({
+        onClick: () => (0, x.openGuildEventDetails)({
           eventId: n.id
         }),
         className: K.eventNameClickable,
@@ -231,7 +231,7 @@ function Z(e) {
       })]
     }), (0, l.jsxs)("div", {
       className: K.textBlock,
-      children: [(0, l.jsx)(T.default, {
+      children: [(0, l.jsx)(g.default, {
         className: K.stageIcon,
         width: 16,
         height: 16
@@ -290,7 +290,7 @@ function J(e) {
   let {
     guildEvent: t
   } = e, n = i.useCallback(() => {
-    (0, P.openGuildEventDetails)({
+    (0, x.openGuildEventDetails)({
       eventId: t.id
     })
   }, [t]);
@@ -371,7 +371,7 @@ function et(e) {
       f = W.default.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
       break;
     default:
-      (0, x.assertNever)(a)
+      (0, P.assertNever)(a)
   }
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [u.length > 0 ? (0, l.jsxs)("div", {

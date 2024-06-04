@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return Y
+    return V
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -387,7 +387,7 @@ class H extends n.PureComponent {
   }
 }
 
-function Y() {
+function V() {
   let e = (0, d.useStateFromStores)([h.default], () => h.default.getState()),
     t = (0, d.useStateFromStores)([N.default], () => (0, I.default)(N.default)),
     s = (0, d.useStateFromStores)([C.default], () => C.default.isSupported()),

@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("279240"),
   p = n("765717"),
   I = n("358221"),
-  g = n("823748"),
-  T = n("626421"),
+  T = n("823748"),
+  g = n("626421"),
   A = n("118379"),
   N = n("652515"),
   v = n("544978"),
@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("668940"),
   L = n("372900"),
   M = n("6039"),
-  x = n("637853"),
-  P = n("326145"),
+  P = n("637853"),
+  x = n("326145"),
   y = n("269675"),
   D = n("242601"),
   b = n("416568"),
@@ -94,13 +94,13 @@ let em = () => (0, a.jsx)("div", {
     name: "GuildHomePage",
     renderLoader: em
   }),
-  eg = (0, d.makeLazy)({
+  eT = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("85552"), n.e("16600")]).then(n.bind(n, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
     renderLoader: em
   }),
-  eT = (0, d.makeLazy)({
+  eg = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("75475"), n.e("58227"), n.e("38359"), n.e("51199")]).then(n.bind(n, "603072")),
     webpackId: "603072",
     name: "ChannelsAndRolesPage",
@@ -157,7 +157,7 @@ let em = () => (0, a.jsx)("div", {
           guildId: s
         });
       case eE.StaticChannelRoute.CHANNEL_BROWSER:
-        return (0, a.jsx)(eT, {
+        return (0, a.jsx)(eg, {
           guildId: s,
           selectedSection: eh.GuildOnboardingTab.BROWSE
         });
@@ -166,18 +166,18 @@ let em = () => (0, a.jsx)("div", {
           guildId: s
         });
       case eE.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-        return (0, a.jsx)(eT, {
+        return (0, a.jsx)(eg, {
           guildId: s,
           selectedSection: eh.GuildOnboardingTab.CUSTOMIZE
         });
       case eE.StaticChannelRoute.MEMBER_SAFETY:
-        return (0, a.jsx)(eg, {
+        return (0, a.jsx)(eT, {
           guildId: s
         });
       default:
         (0, en.assertNever)(l)
     }
-    if ((0, x.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(P.default, {
+    if ((0, P.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(x.default, {
       guildId: s,
       channelId: l
     });
@@ -188,7 +188,7 @@ let em = () => (0, a.jsx)("div", {
         inputSkuId: e
       }, n.id)
     }
-    return (0, a.jsx)(g.default, {})
+    return (0, a.jsx)(T.default, {})
   },
   ev = s.memo(function() {
     let {
@@ -233,7 +233,7 @@ let eO = e => (0, a.jsx)(eN, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  ex = e => {
+  eP = e => {
     let {
       match: t
     } = e;
@@ -242,7 +242,7 @@ let eO = e => (0, a.jsx)(eN, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  eP = () => (0, a.jsx)(ed.default, {}),
+  ex = () => (0, a.jsx)(ed.default, {}),
   ey = () => (0, a.jsx)(ec.default, {}),
   eD = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -382,7 +382,7 @@ function eF() {
           className: eC.base,
           children: [c.isMobile ? null : (0, a.jsx)(er.default, {}), (0, a.jsxs)("div", {
             className: eC.content,
-            children: [(0, a.jsx)(T.default, {}), (0, a.jsx)(eB, {
+            children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(eB, {
               hasNotice: t,
               sidebarTheme: n,
               hideSidebar: l || i || d || E || m || !h
@@ -417,7 +417,7 @@ function eF() {
                   impressionName: u.ImpressionNames.ACTIVITIES
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.APPLICATION_LIBRARY,
-                  render: eP,
+                  render: ex,
                   impressionName: u.ImpressionNames.APPLICATION_LIBRARY,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
@@ -473,7 +473,7 @@ function eF() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
-                  render: ex,
+                  render: eP,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
                   impressionProperties: e => {
                     let {

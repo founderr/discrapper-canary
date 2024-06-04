@@ -60,7 +60,7 @@ function H(e) {
     })]
   })
 }
-let Y = e => {
+let V = e => {
     let {
       disclosure: t
     } = e;
@@ -81,7 +81,7 @@ let Y = e => {
       }
     }, [t])
   },
-  V = e => {
+  Y = e => {
     let {
       scopes: t,
       application: s,
@@ -215,7 +215,7 @@ let Y = e => {
                 let n = (0, A.getTextForDisclosure)(t);
                 return null != n ? (0, a.jsxs)("li", {
                   className: i()(B.permission, k.marginTop8),
-                  children: [(0, a.jsx)(Y, {
+                  children: [(0, a.jsx)(V, {
                     disclosure: t
                   }), (0, a.jsx)(f.FormText, {
                     children: n
@@ -299,7 +299,7 @@ t.default = () => {
       }) : 0 === t.length ? T(F.default.Messages.NO_AUTHORIZED_APPS_NOTE, F.default.Messages.NO_AUTHORIZED_APPS) : 0 === _.length ? (0, a.jsxs)(a.Fragment, {
         children: [E(), T(null, F.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, a.jsxs)(a.Fragment, {
-        children: [E(), _.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(V, {
+        children: [E(), _.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(Y, {
           onDelete: () => i(e),
           ...e
         }, e.id))]

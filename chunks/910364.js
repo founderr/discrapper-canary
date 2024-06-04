@@ -5,11 +5,11 @@ l.r(t), l.d(t, {
   }
 }), l("47120");
 var s = l("735250"),
-  a = l("470079"),
-  i = l("442837"),
+  i = l("470079"),
+  a = l("442837"),
   n = l("481060"),
-  r = l("410575"),
-  o = l("727637"),
+  o = l("410575"),
+  r = l("727637"),
   u = l("58540"),
   d = l("420660"),
   c = l("100527"),
@@ -20,61 +20,61 @@ var s = l("735250"),
   m = l("158776"),
   _ = l("594174"),
   v = l("785717"),
-  T = l("221292"),
-  g = l("621853"),
-  A = l("318661"),
-  p = l("726059"),
-  U = l("162267"),
-  x = l("484404"),
-  C = l("502762"),
-  N = l("62154"),
-  h = l("293259"),
-  R = l("725954"),
+  p = l("221292"),
+  T = l("621853"),
+  g = l("318661"),
+  x = l("726059"),
+  A = l("162267"),
+  C = l("484404"),
+  N = l("502762"),
+  U = l("62154"),
+  R = l("293259"),
+  h = l("725954"),
   P = l("228168"),
   M = l("981631"),
   j = l("689938"),
   y = l("463469");
 
-function L(e) {
+function F(e) {
   var t, l;
   let {
-    user: a,
-    isCurrentUser: r,
-    section: o,
+    user: i,
+    isCurrentUser: o,
+    section: r,
     setSection: u,
     hasActivity: d
-  } = e, c = (0, i.useStateFromStores)([g.default], () => {
+  } = e, c = (0, a.useStateFromStores)([T.default], () => {
     var e, t;
-    return (null === (t = g.default.getUserProfile(a.id)) || void 0 === t ? void 0 : null === (e = t.application) || void 0 === e ? void 0 : e.id) != null
-  }), f = null === (t = (0, p.default)(a.id, !a.bot && !r).mutualFriends) || void 0 === t ? void 0 : t.length, S = null === (l = (0, U.default)(a.id, !a.bot && !r).mutualGuilds) || void 0 === l ? void 0 : l.length;
+    return (null === (t = T.default.getUserProfile(i.id)) || void 0 === t ? void 0 : null === (e = t.application) || void 0 === e ? void 0 : e.id) != null
+  }), f = null === (t = (0, x.default)(i.id, !i.bot && !o).mutualFriends) || void 0 === t ? void 0 : t.length, S = null === (l = (0, A.default)(i.id, !i.bot && !o).mutualGuilds) || void 0 === l ? void 0 : l.length;
   return (0, s.jsx)("div", {
     className: y.tabBarContainer,
     children: (0, s.jsxs)(n.TabBar, {
-      selectedItem: o,
+      selectedItem: r,
       type: "top",
       onItemSelect: u,
       className: y.tabBar,
-      children: [!a.isNonUserBot() || a.isClyde() ? (0, s.jsx)(n.TabBar.Item, {
+      children: [!i.isNonUserBot() || i.isClyde() ? (0, s.jsx)(n.TabBar.Item, {
         className: y.tabBarItem,
         id: P.UserProfileSections.USER_INFO,
         children: j.default.Messages.USER_INFO
-      }) : null, !a.bot && d ? (0, s.jsx)(n.TabBar.Item, {
+      }) : null, !i.bot && d ? (0, s.jsx)(n.TabBar.Item, {
         className: y.tabBarItem,
         id: P.UserProfileSections.ACTIVITY,
         children: j.default.Messages.USER_PROFILE_ACTIVITY
-      }) : null, a.bot || r ? null : (0, s.jsx)(n.TabBar.Item, {
+      }) : null, i.bot || o ? null : (0, s.jsx)(n.TabBar.Item, {
         className: y.tabBarItem,
         id: P.UserProfileSections.MUTUAL_FRIENDS,
         children: null == f ? j.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER : j.default.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
           count: "".concat(f)
         })
-      }), r || a.isClyde() ? null : (0, s.jsx)(n.TabBar.Item, {
+      }), o || i.isClyde() ? null : (0, s.jsx)(n.TabBar.Item, {
         className: y.tabBarItem,
         id: P.UserProfileSections.MUTUAL_GUILDS,
         children: null == S ? j.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : j.default.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
           count: "".concat(S)
         })
-      }), a.bot && c ? (0, s.jsx)(n.TabBar.Item, {
+      }), i.bot && c ? (0, s.jsx)(n.TabBar.Item, {
         className: y.tabBarItem,
         id: P.UserProfileSections.BOT_DATA_ACCESS,
         children: j.default.Messages.BOTS_DATA_ACCESS_TAB
@@ -86,87 +86,87 @@ function L(e) {
 function O(e) {
   var t, l;
   let {
-    user: g,
-    guildId: p,
-    channelId: U,
+    user: T,
+    guildId: x,
+    channelId: A,
     messageId: O,
-    roleId: F,
+    roleId: L,
     friendToken: D,
     autoFocusNote: b,
     initialSection: B = P.UserProfileSections.USER_INFO,
     transitionState: G,
     sourceAnalyticsLocations: k = [],
     onClose: w
-  } = e, Y = null !== (t = (0, i.useStateFromStores)([_.default], () => _.default.getUser(g.id))) && void 0 !== t ? t : g, H = (0, A.default)(null !== (l = Y.id) && void 0 !== l ? l : ""), {
+  } = e, Y = null !== (t = (0, a.useStateFromStores)([_.default], () => _.default.getUser(T.id))) && void 0 !== t ? t : T, H = (0, g.default)(null !== (l = Y.id) && void 0 !== l ? l : ""), {
     analyticsLocations: V
   } = (0, f.default)([...k, c.default.PROFILE_MODAL]);
   (0, u.useSubscribeGuildMembers)({
-    [p]: [Y.id]
+    [x]: [Y.id]
   });
-  let z = (0, i.useStateFromStores)([E.default], () => null != E.default.getAnyStreamForUser(Y.id)),
-    W = (0, i.useStateFromStores)([m.default], () => m.default.findActivity(Y.id, e => e.type !== M.ActivityTypes.CUSTOM_STATUS)),
-    [Z, K] = a.useState(!1),
-    [Q, J] = a.useState(Y.isNonUserBot() && !Y.isClyde() ? P.UserProfileSections.MUTUAL_GUILDS : B),
-    q = (0, i.useStateFromStores)([I.default], () => I.default.getId() === Y.id),
-    X = null != W || z,
+  let W = (0, a.useStateFromStores)([E.default], () => null != E.default.getAnyStreamForUser(Y.id)),
+    z = (0, a.useStateFromStores)([m.default], () => m.default.findActivity(Y.id, e => e.type !== M.ActivityTypes.CUSTOM_STATUS)),
+    [Z, K] = i.useState(!1),
+    [Q, J] = i.useState(Y.isNonUserBot() && !Y.isClyde() ? P.UserProfileSections.MUTUAL_GUILDS : B),
+    q = (0, a.useStateFromStores)([I.default], () => I.default.getId() === Y.id),
+    X = null != z || W,
     $ = !q || X,
-    ee = a.createRef(),
-    et = (0, o.default)(ee);
+    ee = i.createRef(),
+    et = (0, r.default)(ee);
   !X && Q === P.UserProfileSections.ACTIVITY && J(P.UserProfileSections.USER_INFO);
-  let el = a.useCallback(e => {
-      (0, T.trackUserProfileAction)({
+  let el = i.useCallback(e => {
+      (0, p.trackUserProfileAction)({
         action: "PRESS_SECTION",
         layout: "MODAL",
         userId: Y.id,
-        guildId: p,
-        channelId: U,
+        guildId: x,
+        channelId: A,
         messageId: O,
-        roleId: F,
+        roleId: L,
         analyticsLocations: V
       }), K(!0), J(e)
-    }, [Y.id, p, U, O, F, V]),
+    }, [Y.id, x, A, O, L, V]),
     es = null == H ? void 0 : H.profileEffectId;
   return (0, s.jsx)(f.AnalyticsLocationProvider, {
     value: V,
     children: (0, s.jsx)(v.UserProfileAnalyticsProvider, {
       layout: "MODAL",
       userId: Y.id,
-      guildId: p,
-      channelId: U,
+      guildId: x,
+      channelId: A,
       messageId: O,
-      roleId: F,
-      children: (0, s.jsx)(r.default, {
+      roleId: L,
+      children: (0, s.jsx)(o.default, {
         section: M.AnalyticsSections.PROFILE_MODAL,
         children: (0, s.jsxs)(n.ModalRoot, {
           transitionState: G,
           className: y.root,
           hideShadow: !0,
           "aria-label": j.default.Messages.USER_PROFILE_MODAL,
-          children: [(0, s.jsxs)(C.default, {
+          children: [(0, s.jsxs)(N.default, {
             user: Y,
             displayProfile: H,
             profileType: P.UserProfileTypes.MODAL,
             ref: ee,
-            children: [(0, s.jsx)(h.default, {
+            children: [(0, s.jsx)(R.default, {
               className: y.topSection,
               displayProfile: H,
               user: Y,
               friendToken: D,
               onClose: w,
-              isStreaming: (0, d.default)(W),
-              guildId: p,
-              channelId: U,
+              isStreaming: (0, d.default)(z),
+              guildId: x,
+              channelId: A,
               hasProfileEffect: null != es
-            }), (0, s.jsxs)(C.default.Overlay, {
+            }), (0, s.jsxs)(N.default.Overlay, {
               className: y.overlay,
-              children: [G === n.ModalTransitionState.ENTERED && (0, s.jsx)(x.default, {
+              children: [G === n.ModalTransitionState.ENTERED && (0, s.jsx)(C.default, {
                 onTooltipClose: w
               }), (0, s.jsxs)("div", {
                 className: y.body,
-                children: [(0, s.jsx)(R.default, {
+                children: [(0, s.jsx)(h.default, {
                   user: Y,
                   displayProfile: H
-                }), $ ? (0, s.jsx)(L, {
+                }), $ ? (0, s.jsx)(F, {
                   user: Y,
                   section: Q === P.UserProfileSections.USER_INFO_CONNECTIONS ? P.UserProfileSections.USER_INFO : Q,
                   setSection: el,
@@ -174,7 +174,7 @@ function O(e) {
                   isCurrentUser: q
                 }) : (0, s.jsx)("div", {
                   className: y.divider
-                }), (0, s.jsx)(N.default, {
+                }), (0, s.jsx)(U.default, {
                   displayProfile: H,
                   user: Y,
                   autoFocusNote: b && !Z,

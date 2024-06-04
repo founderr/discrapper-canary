@@ -21,8 +21,8 @@ var i = n("924826"),
   S = n("647265"),
   p = n("650032"),
   I = n("104494"),
-  g = n("639119"),
-  T = n("655525"),
+  T = n("639119"),
+  g = n("655525"),
   A = n("314684"),
   N = n("52188"),
   v = n("248042"),
@@ -30,8 +30,8 @@ var i = n("924826"),
   O = n("649765"),
   L = n("565626"),
   M = n("734741"),
-  x = n("701910"),
-  P = n("487980"),
+  P = n("701910"),
+  x = n("487980"),
   y = n("474936"),
   D = n("981631"),
   b = n("921944"),
@@ -50,14 +50,14 @@ let w = e => {
     H = (0, r.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()),
     V = (0, C.hasPremiumSubscriptionToDisplay)(F, H),
     Y = (0, i.useListItem)("nitro"),
-    W = (0, g.usePremiumTrialOffer)(),
+    W = (0, T.usePremiumTrialOffer)(),
     K = (0, I.usePremiumDiscountOffer)(),
     z = (0, r.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled) && null == W,
     Q = (0, v.useIsEligibleForBogoPromotion)(),
     q = (0, L.default)(),
     Z = (0, M.useShouldShowWhatsNewBadge)(),
     X = (0, A.useTenureRewardBadgeDescription)(),
-    J = (0, P.useIsEligibleSenderForReferralProgramTabBadge)(G),
+    J = (0, x.useIsEligibleSenderForReferralProgramTabBadge)(G),
     $ = (0, r.useStateFromStores)([m.default], () => m.default.getCreatedAtOverride()),
     ee = null != $ ? $ : null == F ? void 0 : F.createdAt,
     et = s || null != W || null != K || Q || q || Z || null != X || V,
@@ -74,11 +74,11 @@ let w = e => {
       showTabForOtherReasons: et
     });
   if (!(et = et || null != F && null != ee && Date.now() - ee.getTime() > es)) return null;
-  Z ? (n = (0, l.jsx)(x.PerksDiscoverabilityMarketingMomentWhatsNewBadge, {}), a = 2) : Q ? (n = (0, l.jsx)(T.default, {
+  Z ? (n = (0, l.jsx)(P.PerksDiscoverabilityMarketingMomentWhatsNewBadge, {}), a = 2) : Q ? (n = (0, l.jsx)(g.default, {
     isNitroTab: !0
-  }), a = 0) : null != X ? (n = (0, l.jsx)(x.default, {
+  }), a = 0) : null != X ? (n = (0, l.jsx)(P.default, {
     copy: X
-  }), a = 1) : q ? (n = (0, l.jsx)(x.default, {}), a = 2) : null != K ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
+  }), a = 1) : q ? (n = (0, l.jsx)(P.default, {}), a = 2) : null != K ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
     userDiscount: K,
     isTabSelected: s,
     includesAmountOff: !1

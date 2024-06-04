@@ -40,8 +40,8 @@ var a = s("735250"),
   k = s("205266"),
   w = s("216153"),
   H = s("981631"),
-  Y = s("856651"),
-  V = s("921944"),
+  V = s("856651"),
+  Y = s("921944"),
   W = s("689938"),
   K = s("220301"),
   z = s("611273");
@@ -114,7 +114,7 @@ function q(e) {
     [x, M] = n.useState(T.metadataVisibility),
     [L, P] = n.useState(T.showActivity),
     [U, G] = n.useState(null),
-    [V, z] = n.useState(null),
+    [Y, z] = n.useState(null),
     [q, Z] = n.useState(!1),
     [X, J] = n.useState([]),
     $ = (0, I.useLegacyPlatformType)(T.type),
@@ -122,7 +122,7 @@ function q(e) {
   n.useEffect(() => {
     p(T.friendSync), R(T.visibility), M(T.metadataVisibility), P(T.showActivity)
   }, [T]), n.useEffect(() => {
-    !1 !== T.verified && (null != U && (R(U), E.default.setVisibility(T.type, T.id, U), G(null)), null != V && (M(V), E.default.setMetadataVisibility(T.type, T.id, V), z(null)))
+    !1 !== T.verified && (null != U && (R(U), E.default.setVisibility(T.type, T.id, U), G(null)), null != Y && (M(Y), E.default.setMetadataVisibility(T.type, T.id, Y), z(null)))
   }, [T]);
 
   function et() {
@@ -195,7 +195,7 @@ function q(e) {
       var t;
       let s = g.default.get(e.type),
         n = g.default.get($),
-        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[Y.MetadataFields.TWITTER_VERIFIED],
+        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[V.MetadataFields.TWITTER_VERIFIED],
         i = null;
       return s.type === H.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
         text: W.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
@@ -255,7 +255,7 @@ function q(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, N.getCreatedAtDate)(s[Y.MetadataFields.CREATED_AT], m);
+        l = (0, N.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], m);
       switch (e.type) {
         case H.PlatformTypes.REDDIT:
           n = (0, C.generateRedditMetadataItems)(s, K.metadataItem);
@@ -393,7 +393,7 @@ function q(e) {
 function Z() {
   return n.useEffect(() => () => {
     (0, A.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
-      dismissAction: V.ContentDismissActionType.AUTO
+      dismissAction: Y.ContentDismissActionType.AUTO
     })
   }, []), (0, a.jsxs)("div", {
     className: K.connectContainer,

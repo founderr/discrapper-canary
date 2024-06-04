@@ -260,7 +260,7 @@ function H(e) {
   })
 }
 
-function Y(e) {
+function V(e) {
   let {
     settings: {
       enabled: t,
@@ -314,7 +314,7 @@ function Y(e) {
   })
 }
 
-function V(e) {
+function Y(e) {
   let {
     updateSettings: t
   } = e;
@@ -436,13 +436,13 @@ function z(e) {
     }), (0, r.jsx)(H, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(Y, {
+    }), (0, r.jsx)(V, {
       settings: a,
       updateSettings: E
     }), (0, r.jsx)(w, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(V, {
+    }), (0, r.jsx)(Y, {
       updateSettings: E
     })]
   })

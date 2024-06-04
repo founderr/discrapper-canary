@@ -71,14 +71,14 @@ function L(e) {
   }), w = null != D ? D : k;
   l()(null != w, "guild should not be null");
   let H = (0, o.useGuildAutomodProfileQuarantineErrors)(w.id),
-    Y = (0, i.useStateFromStores)([g.default], () => null == w.id ? null : g.default.getMember(w.id, P.id)),
-    V = (0, i.useStateFromStores)([m.default], () => m.default.getGuildMemberProfile(P.id, w.id)),
+    V = (0, i.useStateFromStores)([g.default], () => null == w.id ? null : g.default.getMember(w.id, P.id)),
+    Y = (0, i.useStateFromStores)([m.default], () => m.default.getGuildMemberProfile(P.id, w.id)),
     W = h.default.canUsePremiumProfileCustomization(P),
-    K = (0, d.showRemoveAvatar)(b, null == Y ? void 0 : Y.avatar),
-    z = (0, d.showRemoveBanner)(U, null == V ? void 0 : V.banner),
-    Q = (0, O.canResetThemeColors)(F, null == V ? void 0 : V.themeColors),
-    q = null !== (t = null == V ? void 0 : V.bio) && void 0 !== t ? t : "",
-    Z = null !== (s = null == V ? void 0 : V.pronouns) && void 0 !== s ? s : "",
+    K = (0, d.showRemoveAvatar)(b, null == V ? void 0 : V.avatar),
+    z = (0, d.showRemoveBanner)(U, null == Y ? void 0 : Y.banner),
+    Q = (0, O.canResetThemeColors)(F, null == Y ? void 0 : Y.themeColors),
+    q = null !== (t = null == Y ? void 0 : Y.bio) && void 0 !== t ? t : "",
+    Z = null !== (s = null == Y ? void 0 : Y.pronouns) && void 0 !== s ? s : "",
     X = (e, t, s) => {
       s(null != e ? e : null != t ? null : void 0)
     };
@@ -88,7 +88,7 @@ function L(e) {
       errors: null !== (n = null == B ? void 0 : B.nick) && void 0 !== n ? n : null == H ? void 0 : H.nick,
       username: C.default.getName(P),
       pendingNick: j,
-      currentNick: null == Y ? void 0 : Y.nick,
+      currentNick: null == V ? void 0 : V.nick,
       guild: w
     }, "nick"), (0, a.jsx)(f.default, {
       sectionTitle: M.default.Messages.USER_SETTINGS_PRONOUNS,
@@ -112,7 +112,7 @@ function L(e) {
           })]
         }),
         showRemoveAvatarButton: K,
-        onAvatarChange: e => X(e, null == Y ? void 0 : Y.avatar, A.setPendingAvatar),
+        onAvatarChange: e => X(e, null == V ? void 0 : V.avatar, A.setPendingAvatar),
         errors: null == B ? void 0 : B.avatar,
         guildId: w.id,
         disabled: !W
@@ -143,7 +143,7 @@ function L(e) {
       }, "effect"), (0, a.jsx)(E.default, {
         showRemoveBannerButton: z,
         errors: null == B ? void 0 : B.banner,
-        onBannerChange: e => X(e, null == V ? void 0 : V.banner, A.setPendingBanner),
+        onBannerChange: e => X(e, null == Y ? void 0 : Y.banner, A.setPendingBanner),
         guildId: null == w ? void 0 : w.id,
         disabled: !W
       }, "banner"), (0, a.jsx)(_.default, {
@@ -151,7 +151,7 @@ function L(e) {
         pendingAvatar: b,
         pendingColors: F,
         onThemeColorsChange: e => {
-          (0, O.setNewPendingGuildIdentityThemeColors)(e, null == V ? void 0 : V.themeColors)
+          (0, O.setNewPendingGuildIdentityThemeColors)(e, null == Y ? void 0 : Y.themeColors)
         },
         guildId: null == w ? void 0 : w.id,
         showResetThemeButton: Q

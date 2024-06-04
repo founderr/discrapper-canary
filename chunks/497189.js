@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("931240"),
   p = n("970606"),
   I = n("963202"),
-  g = n("650461"),
-  T = n("353093"),
+  T = n("650461"),
+  g = n("353093"),
   A = n("603839"),
   N = n("430824"),
   v = n("725568"),
@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("207796"),
   L = n("316553"),
   M = n("273254"),
-  x = n("559469"),
-  P = n("308083"),
+  P = n("559469"),
+  x = n("308083"),
   y = n("689938"),
   D = n("18712"),
   b = n("345480"),
@@ -94,9 +94,9 @@ function k(e) {
     label: e.name
   })), [l]), I = s.useCallback(() => {
     (0, O.setClanDiscoveryMode)(O.ClanDiscoveryMode.DISCOVERY)
-  }, []), g = s.useCallback(() => {
+  }, []), T = s.useCallback(() => {
     (0, O.setClanDiscoveryMode)(O.ClanDiscoveryMode.GET_STARTED), m(O.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [m]), T = l.length > 1;
+  }, [m]), g = l.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [_ ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
@@ -129,7 +129,7 @@ function k(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: D.upsellButton,
-      children: [T && (0, a.jsx)(h.SearchableSelect, {
+      children: [g && (0, a.jsx)(h.SearchableSelect, {
         className: D.upsellSelect,
         value: t,
         options: p,
@@ -139,7 +139,7 @@ function k(e) {
         size: h.ButtonSizes.LARGE,
         color: h.ButtonColors.BRAND,
         className: i()(D.reserveButton, {
-          [D.buttonWithSelect]: T
+          [D.buttonWithSelect]: g
         }),
         onClick: r,
         children: (0, a.jsx)(h.Text, {
@@ -147,14 +147,14 @@ function k(e) {
           color: "always-white",
           children: f
         })
-      }), T && C && (0, a.jsx)("div", {
+      }), g && C && (0, a.jsx)("div", {
         className: D.spacer,
         children: "\xb7"
       }), C && (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.OUTLINED,
         color: h.ButtonColors.PRIMARY,
         className: D.browseButton,
-        onClick: g,
+        onClick: T,
         children: y.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
       })]
     }), S && (0, a.jsx)("div", {
@@ -177,7 +177,7 @@ t.default = s.memo(function(e) {
     selectedGame: l,
     isBrowseButtonVisible: i
   } = e, o = 0 === t.length, [u, d] = s.useState(() => {
-    let e = new Set(g.default.getGuildIds());
+    let e = new Set(T.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
     return o ? n[0].id : t[0].id
@@ -189,7 +189,7 @@ t.default = s.memo(function(e) {
     })
   }, [o, u]);
   let c = (0, f.useStateFromStores)([N.default], () => N.default.getGuild(u)),
-    E = (0, f.useStateFromStores)([g.default], () => null != u ? g.default.getStateForGuild(u).progress : null),
+    E = (0, f.useStateFromStores)([T.default], () => null != u ? T.default.getStateForGuild(u).progress : null),
     b = (0, L.useDiscoveryGameApplicationId)({
       selectedGame: l
     }),
@@ -201,7 +201,7 @@ t.default = s.memo(function(e) {
       includeConverted: !1
     });
   s.useEffect(() => {
-    let e = U === P.VALORANT_ID ? O.ClanDiscoveryGame.VALORANT : U === P.GENSHIN_ID ? O.ClanDiscoveryGame.GENSHIN : void 0;
+    let e = U === x.VALORANT_ID ? O.ClanDiscoveryGame.VALORANT : U === x.GENSHIN_ID ? O.ClanDiscoveryGame.GENSHIN : void 0;
     null != e && b !== U && O.useClanDiscoveryUIStore.getState().setGame(e)
   }, [U, b]);
   let w = s.useCallback(() => {
@@ -217,7 +217,7 @@ t.default = s.memo(function(e) {
           guildId: u
         })
       }, {
-        layerKey: P.CLAN_SETUP_MODAL_LAYER_KEY
+        layerKey: x.CLAN_SETUP_MODAL_LAYER_KEY
       }))
     }, [o, u]),
     B = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
@@ -225,7 +225,7 @@ t.default = s.memo(function(e) {
       guild: c,
       selectedGame: l
     }),
-    H = (0, x.useFakeDiscoveryUpsellClans)(b),
+    H = (0, P.useFakeDiscoveryUpsellClans)(b),
     [V, Y] = s.useState(!0),
     W = (0, r.useSpring)({
       from: {
@@ -368,7 +368,7 @@ t.default = s.memo(function(e) {
               children: (0, a.jsx)(R.ClanDiscoveryCardView, {
                 clan: F,
                 className: D.clanCardCenter,
-                bannerUrl: (0, T.getClanBannerUrl)(H[4].id, H[4].bannerHash)
+                bannerUrl: (0, g.getClanBannerUrl)(H[4].id, H[4].bannerHash)
               })
             })
           })
