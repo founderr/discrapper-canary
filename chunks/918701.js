@@ -73,9 +73,6 @@ n.r(t), n.d(t, {
   isAssetAnimated: function() {
     return ee
   },
-  isConsoleHearbeatAlive: function() {
-    return eN
-  },
   isConsoleQuest: function() {
     return eA
   },
@@ -87,6 +84,9 @@ n.r(t), n.d(t, {
   },
   isQuestExpired: function() {
     return D
+  },
+  isQuestProgressingOnConsole: function() {
+    return eN
   },
   isQuestWithKnownConfigVersion: function() {
     return R

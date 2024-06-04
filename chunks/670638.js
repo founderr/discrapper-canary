@@ -128,7 +128,7 @@ function A(e) {
         children: [(0, s.jsx)(o.MenuItem, {
           disabled: !0,
           id: "status",
-          label: "Status: ".concat((0, I.isConsoleHearbeatAlive)(e.quest) ? "alive" : "dead")
+          label: "Status: ".concat((0, I.isQuestProgressingOnConsole)(e.quest) ? "alive" : "dead")
         }), (0, s.jsx)(o.MenuItem, {
           id: "start",
           label: "Start heartbeat (cheatmode)",
