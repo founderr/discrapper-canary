@@ -13490,6 +13490,8 @@ e.exports = Object.freeze({
   CHAT_DISABLED_HOME_BACK: "Done reading? Hop back to Home.",
   CHAT_DISABLED_CTA: "Explore",
   GUILD_AUTOMOD_ADD_SELECTION: "Filter ({keywordCount, plural, =1 {# Word} other {# Words}})",
+  GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS: "Success!",
+  GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR: "Something went wrong! Please try again.",
   GUILD_AUTOMOD_ADD_NEW_RULE: "Create New AutoMod Rule",
   GUILD_SETTINGS_AUTOMOD_TITLE: "AutoMod",
   GUILD_SETTINGS_AUTOMOD_DESCRIPTION: "Set up rules for moderation in your server to automatically filter content and post alerts to keep your server safe around the clock. Users with Admin permissions will be ignored from AutoMod rules.",
