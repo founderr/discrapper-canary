@@ -54,6 +54,7 @@ let p = (0, s.default)(m),
       });
     return {
       iconUrl: null != N ? N : v,
+      iconFallbackUrl: null != N ? v : void 0,
       iconTitle: x,
       user: _,
       activity: I,
