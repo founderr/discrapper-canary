@@ -21,8 +21,8 @@ async function m(e) {
     userId: S,
     section: p,
     guildId: I = h.ME,
-    channelId: g,
-    friendToken: T,
+    channelId: T,
+    friendToken: g,
     autoFocusNote: A,
     analyticsLocation: N
   } = e, v = c.default.getUser(S);
@@ -49,14 +49,14 @@ async function m(e) {
       user: v,
       autoFocusNote: A,
       guildId: I,
-      friendToken: T,
+      friendToken: g,
       initialSection: p,
-      channelId: g
+      channelId: T
     })
   }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
     guild_id: I !== h.ME ? I : null,
-    channel_id: g,
+    channel_id: T,
     other_user_id: S,
     application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
     application_name: null == O ? void 0 : O.name,

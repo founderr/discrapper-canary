@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("650461"),
   p = n("432632"),
   I = n("35313"),
-  g = n("284019"),
-  T = n("672775"),
+  T = n("284019"),
+  g = n("672775"),
   A = n("601463"),
   N = n("192565"),
   v = n("641037"),
@@ -184,7 +184,7 @@ function M(e) {
             className: i()(O.navigationContainer, {
               [O.elevatedNavigationContainer]: !F
             }),
-            children: (0, a.jsx)(T.default, {
+            children: (0, a.jsx)(g.default, {
               steps: b,
               progress: P,
               updateCurrentStep: Q,
@@ -225,7 +225,7 @@ function M(e) {
           "aria-label": null != Z ? R.default.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
           shouldShow: null != Z,
           forceOpen: null != Z,
-          children: e => (0, a.jsx)(g.default, {
+          children: e => (0, a.jsx)(T.default, {
             ...e,
             themeColor: P.brandPrimaryColor,
             disabled: !U || q,

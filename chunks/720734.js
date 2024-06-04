@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("355467"),
   p = n("239091"),
   I = n("230711"),
-  g = n("255952"),
-  T = n("410575"),
+  T = n("255952"),
+  g = n("410575"),
   A = n("941129"),
   N = n("83200"),
   v = n("634894"),
@@ -76,8 +76,8 @@ var a = n("735250"),
   eS = n("19780"),
   ep = n("885110"),
   eI = n("246946"),
-  eg = n("594174"),
-  eT = n("78839"),
+  eT = n("594174"),
+  eg = n("78839"),
   eA = n("285952"),
   eN = n("546591"),
   ev = n("86813"),
@@ -235,7 +235,7 @@ class eQ extends s.PureComponent {
       avatarDecoration: n.avatarDecoration,
       size: (0, L.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
-    return (0, a.jsx)(T.default, {
+    return (0, a.jsx)(g.default, {
       object: eB.AnalyticsObjects.AVATAR,
       children: (0, a.jsx)(m.Popout, {
         renderPopout: this.renderStatusPickerPopout,
@@ -607,7 +607,7 @@ class eQ extends s.PureComponent {
           })
         })
       }
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(T.default, {
         onClose: () => {
           this.handleMouseLeave(), null == t || t()
         }
@@ -623,7 +623,7 @@ class eQ extends s.PureComponent {
 
 function eq() {
   var e, t;
-  let n = (0, r.useStateFromStores)([eg.default], () => eg.default.getCurrentUser()),
+  let n = (0, r.useStateFromStores)([eT.default], () => eT.default.getCurrentUser()),
     l = (0, F.useShowEligibilityEnrollmentTooltip)(eH.PartnerGame.FORTNITE),
     i = (0, r.useStateFromStores)([eh.default], () => eh.default.getId()),
     u = (0, G.useCustomStatusActivity)(),
@@ -651,14 +651,14 @@ function eq() {
       suppress: I
     } = (0, eE.default)(_),
     {
-      selfDeaf: g,
-      deaf: T
+      selfDeaf: T,
+      deaf: g
     } = (0, ef.default)(_),
     O = (0, r.useStateFromStores)([M.default], () => {
       var e;
       return (0, P.probablyHasBuildOverride)() ? null === (e = M.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    L = (0, r.useStateFromStores)([eT.default], () => eT.default.getPremiumTypeSubscription()),
+    L = (0, r.useStateFromStores)([eg.default], () => eg.default.getPremiumTypeSubscription()),
     x = (0, r.useStateFromStores)([em.default], () => em.default.getEverSpeakingWhileMuted()),
     y = (0, r.useStateFromStores)([eC.default], () => eC.default.hasLayers()),
     D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eG.ProcessArgs.isDisallowPopupsSet(),
@@ -699,7 +699,7 @@ function eq() {
     eA = function() {
       let e = (0, k.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
         [t, n] = (0, r.useStateFromStoresArray)([X.default], () => [X.default.hasFetchedRelevance, X.default.profileThemesRelevanceExceeded]),
-        [a, l] = (0, r.useStateFromStoresArray)([eT.default], () => [eT.default.hasFetchedMostRecentPremiumTypeSubscription(), eT.default.getMostRecentPremiumTypeSubscription()]),
+        [a, l] = (0, r.useStateFromStoresArray)([eg.default], () => [eg.default.hasFetchedMostRecentPremiumTypeSubscription(), eg.default.getMostRecentPremiumTypeSubscription()]),
         {
           enabled: i
         } = $.default.useExperiment({
@@ -739,9 +739,9 @@ function eq() {
     hidePrivateData: h,
     occluded: D,
     premiumSubscription: L,
-    selfDeaf: g,
+    selfDeaf: T,
     selfMute: p,
-    serverDeaf: T,
+    serverDeaf: g,
     serverMute: C,
     showRichProfilePopup: j,
     showTagAsButton: w,
@@ -803,7 +803,7 @@ function eX(e) {
     Component: S,
     play: p,
     events: I
-  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), g = n || l ? c.MicrophoneDenyIcon : S;
+  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = n || l ? c.MicrophoneDenyIcon : S;
   return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eM.default, {
     tooltipText: r,
     tooltipColor: o,
@@ -814,7 +814,7 @@ function eX(e) {
     onMouseLeave: () => {
       f(), I.onMouseLeave()
     },
-    icon: (0, a.jsx)(g, {
+    icon: (0, a.jsx)(T, {
       size: "custom",
       width: 20,
       height: 20,

@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("377171"),
   p = n("633302"),
   I = n("126900"),
-  g = n("26290"),
-  T = n("153066"),
+  T = n("26290"),
+  g = n("153066"),
   A = n("335131"),
   N = n("141594"),
   v = n("302800"),
@@ -34,7 +34,7 @@ let M = e => {
     let {
       color: t
     } = e;
-    return (0, a.jsx)(g.TextBadge, {
+    return (0, a.jsx)(T.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
       text: O.default.Messages.NEW
@@ -120,7 +120,7 @@ let M = e => {
       hideOnClick: !1,
       "aria-label": l.title(),
       children: e => (0, a.jsxs)(P, {
-        className: null != l.entryPointClassName ? (0, T.getClass)(L, l.entryPointClassName) : void 0,
+        className: null != l.entryPointClassName ? (0, g.getClass)(L, l.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
         ...e,

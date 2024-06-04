@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return C
   }
 });
 var s = l("735250"),
@@ -24,82 +24,82 @@ var s = l("735250"),
   T = l("335191"),
   g = l("347949"),
   x = l("988246"),
-  A = l("689938"),
-  C = l("921152");
+  U = l("689938"),
+  A = l("921152");
 
-function N(e) {
+function C(e) {
   var t;
   let {
     user: l,
     displayProfile: a,
-    autoFocusNote: N = !1,
-    scrollToConnections: U = !1
+    autoFocusNote: C = !1,
+    scrollToConnections: N = !1
   } = e, {
     trackUserProfileAction: R
   } = (0, I.useUserProfileAnalyticsContext)(), h = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
     theme: P
-  } = (0, p.useUserProfileThemeContext)(), M = (0, o.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, p.useUserProfileThemeContext)(), M = (0, o.useStateFromStores)([S.default], () => S.default.locale), y = (0, f.useIsUserRecentGamesEnabled)({
     userId: l.id,
     location: "28tk0bf_3"
-  }), y = (0, d.default)("user_profile"), F = (0, m.default)(l.id), O = i.useRef(null);
+  }), j = (0, d.default)("user_profile"), F = (0, m.default)(l.id), L = i.useRef(null);
   return (i.useLayoutEffect(() => {
-    if (U) {
+    if (N) {
       var e;
-      null == O || null === (e = O.current) || void 0 === e || e.scrollIntoView()
+      null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [U]), h) ? (0, s.jsx)(x.default, {}) : (0, s.jsxs)(r.ScrollerThin, {
+  }, [N]), h) ? (0, s.jsx)(x.default, {}) : (0, s.jsxs)(r.ScrollerThin, {
     fade: !0,
-    className: C.infoScroller,
+    className: A.infoScroller,
     children: [(0, s.jsxs)("div", {
-      className: C.userInfoSection,
+      className: A.userInfoSection,
       children: [(null == a ? void 0 : a.bio) != null && (null == a ? void 0 : a.bio) !== "" && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(r.Heading, {
           variant: "eyebrow",
-          className: C.userInfoSectionHeader,
-          children: A.default.Messages.USER_PROFILE_ABOUT_ME
+          className: A.userInfoSectionHeader,
+          children: U.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, s.jsx)(_.default, {
-          className: C.userInfoText,
+          className: A.userInfoText,
           userBio: null !== (t = null == a ? void 0 : a.bio) && void 0 !== t ? t : ""
         })]
       }), (0, s.jsxs)("div", {
         children: [(0, s.jsx)(r.Heading, {
           variant: "eyebrow",
-          className: C.userInfoSectionHeader,
-          children: A.default.Messages.USER_PROFILE_MEMBER_SINCE
+          className: A.userInfoSectionHeader,
+          children: U.default.Messages.USER_PROFILE_MEMBER_SINCE
         }), (0, s.jsx)(v.default, {
           userId: l.id,
-          textClassName: C.userInfoText
+          textClassName: A.userInfoText
         })]
-      }), y && (0, s.jsx)("div", {
-        className: C.clans,
+      }), j && (0, s.jsx)("div", {
+        className: A.clans,
         children: (0, s.jsx)("div", {
-          className: C.userInfoText,
+          className: A.userInfoText,
           children: (0, s.jsx)(c.UserProfileClanContainer, {
             userId: l.id
           })
         })
-      }), j && (0, s.jsx)(g.UserProfileRecentGamesContainer, {
+      }), y && (0, s.jsx)(g.UserProfileRecentGamesContainer, {
         userId: l.id,
         maxItems: 6,
-        containerClassName: n()(C.userInfoText, C.recentGames)
+        containerClassName: n()(A.userInfoText, A.recentGames)
       }), (0, s.jsx)(r.Heading, {
         variant: "eyebrow",
-        className: C.userInfoSectionHeader,
-        children: A.default.Messages.NOTE
+        className: A.userInfoSectionHeader,
+        children: U.default.Messages.NOTE
       }), (0, s.jsx)(u.default, {
         userId: l.id,
-        autoFocus: N,
-        className: C.note,
+        autoFocus: C,
+        className: A.note,
         onUpdate: () => R({
           action: "SET_NOTE"
         })
       })]
     }), (0, s.jsx)(T.ConnectedUserAccounts, {
-      ref: O,
+      ref: L,
       connectedAccounts: F,
       theme: P,
       locale: M,
-      className: C.userInfoSection,
+      className: A.userInfoSection,
       userId: l.id
     })]
   })

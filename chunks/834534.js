@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return U
+    return N
   }
 });
 var s = l("735250"),
@@ -24,71 +24,71 @@ var s = l("735250"),
   T = l("335191"),
   g = l("347949"),
   x = l("351707"),
-  A = l("228168"),
-  C = l("689938"),
-  N = l("363175");
+  U = l("228168"),
+  A = l("689938"),
+  C = l("363175");
 
-function U(e) {
+function N(e) {
   let {
     user: t,
     currentUser: l,
     displayProfile: a,
-    autoFocusNote: U,
+    autoFocusNote: N,
     className: R
   } = e, {
     theme: h
   } = (0, p.useUserProfileThemeContext)(), {
     trackUserProfileAction: P
-  } = (0, E.useUserProfileAnalyticsContext)(), M = null == a ? void 0 : a.guildId, j = (0, o.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
-    recentGames: y,
+  } = (0, E.useUserProfileAnalyticsContext)(), M = null == a ? void 0 : a.guildId, y = (0, o.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
+    recentGames: j,
     isFetching: F,
-    currentUserApplicationIds: O
-  } = (0, c.useUserRecentGames)(t.id), L = i.useMemo(() => {
+    currentUserApplicationIds: L
+  } = (0, c.useUserRecentGames)(t.id), O = i.useMemo(() => {
     var e;
-    return null !== (e = null == y ? void 0 : y.slice(0, 6)) && void 0 !== e ? e : []
-  }, [y]), D = (0, d.useIsUserRecentGamesEnabled)({
+    return null !== (e = null == j ? void 0 : j.slice(0, 6)) && void 0 !== e ? e : []
+  }, [j]), D = (0, d.useIsUserRecentGamesEnabled)({
     location: "SimplifiedUserProfileModalInfo",
     userId: t.id
   }), b = (0, o.useStateFromStores)([f.default], () => f.default.locale), B = (0, I.default)(t.id);
   return (0, s.jsxs)(r.ScrollerThin, {
     fade: !0,
-    className: n()(N.scroller, R),
+    className: n()(C.scroller, R),
     children: [(null == a ? void 0 : a.bio) != null && (null == a ? void 0 : a.bio) !== "" && (0, s.jsx)(m.default, {
       userBio: a.bio,
       setLineClamp: !1
-    }), null != j && (0, s.jsx)(x.default, {
+    }), null != y && (0, s.jsx)(x.default, {
       user: t,
       currentUser: l,
-      guild: j
+      guild: y
     }), (0, s.jsx)(v.default, {
-      title: C.default.Messages.USER_PROFILE_MEMBER_SINCE,
+      title: A.default.Messages.USER_PROFILE_MEMBER_SINCE,
       children: (0, s.jsx)(_.default, {
         userId: t.id,
         guildId: null == a ? void 0 : a.guildId,
-        tooltipDelay: A.USER_PROFILE_TOOLTIP_DELAY
+        tooltipDelay: U.USER_PROFILE_TOOLTIP_DELAY
       })
-    }), D && !F && L.length > 0 && (0, s.jsx)(v.default, {
-      title: C.default.Messages.LAST_PLAYED_GAMES,
+    }), D && !F && O.length > 0 && (0, s.jsx)(v.default, {
+      title: A.default.Messages.LAST_PLAYED_GAMES,
       children: (0, s.jsx)(g.UserProfileRecentGames, {
         userId: t.id,
-        recentGames: L,
-        currentUserApplicationIds: O
+        recentGames: O,
+        currentUserApplicationIds: L
       })
     }), B.length > 0 && (0, s.jsx)(v.default, {
-      title: C.default.Messages.CONNECTIONS,
+      title: A.default.Messages.CONNECTIONS,
       children: (0, s.jsx)(T.ConnectedUserAccounts, {
         connectedAccounts: B,
-        className: N.connections,
+        className: C.connections,
         userId: t.id,
         theme: h,
         locale: b
       })
     }), (0, s.jsx)(v.default, {
-      title: C.default.Messages.NOTE,
+      title: A.default.Messages.NOTE,
       children: (0, s.jsx)(u.default, {
         userId: t.id,
-        className: N.note,
-        autoFocus: U,
+        className: C.note,
+        autoFocus: N,
         onUpdate: () => P({
           action: "SET_NOTE"
         })

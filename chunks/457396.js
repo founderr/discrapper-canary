@@ -21,8 +21,8 @@ var i = n("924826"),
   S = n("647265"),
   p = n("650032"),
   I = n("104494"),
-  g = n("639119"),
-  T = n("655525"),
+  T = n("639119"),
+  g = n("655525"),
   A = n("314684"),
   N = n("52188"),
   v = n("248042"),
@@ -50,7 +50,7 @@ let w = e => {
     H = (0, r.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()),
     V = (0, C.hasPremiumSubscriptionToDisplay)(F, H),
     Y = (0, i.useListItem)("nitro"),
-    W = (0, g.usePremiumTrialOffer)(),
+    W = (0, T.usePremiumTrialOffer)(),
     K = (0, I.usePremiumDiscountOffer)(),
     z = (0, r.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled) && null == W,
     Q = (0, v.useIsEligibleForBogoPromotion)(),
@@ -74,7 +74,7 @@ let w = e => {
       showTabForOtherReasons: et
     });
   if (!(et = et || null != F && null != ee && Date.now() - ee.getTime() > es)) return null;
-  Z ? (n = (0, l.jsx)(P.PerksDiscoverabilityMarketingMomentWhatsNewBadge, {}), a = 2) : Q ? (n = (0, l.jsx)(T.default, {
+  Z ? (n = (0, l.jsx)(P.PerksDiscoverabilityMarketingMomentWhatsNewBadge, {}), a = 2) : Q ? (n = (0, l.jsx)(g.default, {
     isNitroTab: !0
   }), a = 0) : null != X ? (n = (0, l.jsx)(P.default, {
     copy: X

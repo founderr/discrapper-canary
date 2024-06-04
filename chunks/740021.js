@@ -25,10 +25,10 @@ var i = l("442837"),
   T = l("900687"),
   g = l("228168"),
   x = l("182294"),
-  A = l("602091"),
-  C = l("231338"),
-  N = l("566483");
-let U = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+  U = l("602091"),
+  A = l("231338"),
+  C = l("566483");
+let N = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function R(e) {
   let {
@@ -40,12 +40,12 @@ function R(e) {
     channelId: h,
     transitionState: P,
     viewProfileItem: M,
-    onClose: j
+    onClose: y
   } = e, {
-    theme: y
+    theme: j
   } = (0, p.useUserProfileThemeContext)(), F = (0, I.default)(t.id, R), {
-    avatarSrc: O,
-    eventHandlers: L,
+    avatarSrc: L,
+    eventHandlers: O,
     avatarDecorationSrc: D
   } = (0, m.default)({
     user: t,
@@ -60,7 +60,7 @@ function R(e) {
     trackUserProfileAction: G
   } = (0, E.useUserProfileAnalyticsContext)(), k = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), w = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [Y, H] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [C.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [C.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [A.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [A.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
     children: [(0, s.jsx)(_.default, {
@@ -69,16 +69,16 @@ function R(e) {
       profileType: g.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
     }), (0, s.jsx)("div", {
-      className: N.inner,
+      className: C.inner,
       children: (0, s.jsxs)("div", {
-        ...L,
-        children: [(0, s.jsx)(U, {
-          src: O,
+        ...O,
+        children: [(0, s.jsx)(N, {
+          src: L,
           avatarDecoration: D,
           size: x.AvatarSizes.SIZE_120,
-          className: N.avatar,
+          className: C.avatar,
           status: Y,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(y),
+          statusBackdropColor: (0, n.getStatusBackdropColor)(j),
           "aria-label": t.username,
           isMobile: H,
           statusTooltip: !0,
@@ -93,11 +93,11 @@ function R(e) {
           improvedFriendingEnabled: B,
           viewProfileItem: M,
           trackUserProfileAction: G,
-          onClose: j
+          onClose: y
         }), (0, s.jsx)(v.UserProfileCustomStatusBubble, {
           statusActivity: f,
           profileType: g.UserProfileTypes.FULL_SIZE,
-          hasEntered: P === A.ModalTransitionState.ENTERED
+          hasEntered: P === U.ModalTransitionState.ENTERED
         })]
       })
     })]

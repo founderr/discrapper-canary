@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("100527"),
   p = n("963202"),
   I = n("252618"),
-  g = n("440190"),
-  T = n("5955"),
+  T = n("440190"),
+  g = n("5955"),
   A = n("121711"),
   N = n("709158"),
   v = n("703656"),
@@ -291,7 +291,7 @@ class X extends s.PureComponent {
     }, {
       autoTrackExposure: !1
     }), h = r === Y.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[W.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
-    if (r === Y.DISCORD_HUB_ID) return (0, a.jsx)(T.default, {
+    if (r === Y.DISCORD_HUB_ID) return (0, a.jsx)(g.default, {
       loadId: this.loadId
     });
     let _ = r === Y.DISCOVERY_ALL_CATEGORIES_ID ? K.default.Messages.GUILD_DISCOVERY_HOME_TITLE : K.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
@@ -477,10 +477,10 @@ function $(e) {
     fetching: n,
     loadId: s,
     recommendedGuilds: l
-  } = (0, f.useStateFromStoresObject)([g.default], () => ({
-    recommendedGuilds: g.default.getRecommendedGuilds(),
-    loadId: g.default.getLoadId(),
-    fetching: g.default.isFetching()
+  } = (0, f.useStateFromStoresObject)([T.default], () => ({
+    recommendedGuilds: T.default.getRecommendedGuilds(),
+    loadId: T.default.getLoadId(),
+    fetching: T.default.isFetching()
   }));
   return (0, a.jsx)(J, {
     searchRoute: t,

@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("497505"),
   p = n("918701"),
   I = n("865364"),
-  g = n("566078"),
-  T = n("340100"),
+  T = n("566078"),
+  g = n("340100"),
   A = n("611855"),
   N = n("644646"),
   v = n("78826"),
@@ -39,7 +39,7 @@ let x = s.forwardRef(function(e, t) {
     onCtxMenuSelect: j,
     quest: G,
     useReducedMotion: w
-  } = e, k = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(G.id), [G]), B = (0, C.useQuestFormattedDate)(G.config.expiresAt), F = g.SharedQuestFields.build(G.config), H = (0, C.useQuestFormattedDate)(F.rewardsExpireAt), V = s.useMemo(() => (0, p.isAssetAnimated)(G.config.assets.questBarHero), [G]), Y = (0, O.useHasLaunchedGame)(F.application.id), W = s.useCallback(() => {
+  } = e, k = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(G.id), [G]), B = (0, C.useQuestFormattedDate)(G.config.expiresAt), F = T.SharedQuestFields.build(G.config), H = (0, C.useQuestFormattedDate)(F.rewardsExpireAt), V = s.useMemo(() => (0, p.isAssetAnimated)(G.config.assets.questBarHero), [G]), Y = (0, O.useHasLaunchedGame)(F.application.id), W = s.useCallback(() => {
     (0, _.enrollInQuest)(G.id, {
       questContent: S.QuestContent.QUEST_BAR,
       questContentCTA: h.QuestContentCTA.ACCEPT_QUEST
@@ -135,7 +135,7 @@ let x = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: et
-      }), (0, a.jsx)(T.default, {
+      }), (0, a.jsx)(g.default, {
         quest: G
       }), !en && !q && !Y && Q && (0, a.jsx)(y, {
         onClick: $ ? z : void 0

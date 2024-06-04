@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("931240"),
   p = n("970606"),
   I = n("963202"),
-  g = n("650461"),
-  T = n("353093"),
+  T = n("650461"),
+  g = n("353093"),
   A = n("603839"),
   N = n("430824"),
   v = n("725568"),
@@ -94,9 +94,9 @@ function k(e) {
     label: e.name
   })), [l]), I = s.useCallback(() => {
     (0, O.setClanDiscoveryMode)(O.ClanDiscoveryMode.DISCOVERY)
-  }, []), g = s.useCallback(() => {
+  }, []), T = s.useCallback(() => {
     (0, O.setClanDiscoveryMode)(O.ClanDiscoveryMode.GET_STARTED), m(O.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [m]), T = l.length > 1;
+  }, [m]), g = l.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [_ ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
@@ -129,7 +129,7 @@ function k(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: D.upsellButton,
-      children: [T && (0, a.jsx)(h.SearchableSelect, {
+      children: [g && (0, a.jsx)(h.SearchableSelect, {
         className: D.upsellSelect,
         value: t,
         options: p,
@@ -139,7 +139,7 @@ function k(e) {
         size: h.ButtonSizes.LARGE,
         color: h.ButtonColors.BRAND,
         className: i()(D.reserveButton, {
-          [D.buttonWithSelect]: T
+          [D.buttonWithSelect]: g
         }),
         onClick: r,
         children: (0, a.jsx)(h.Text, {
@@ -147,14 +147,14 @@ function k(e) {
           color: "always-white",
           children: f
         })
-      }), T && C && (0, a.jsx)("div", {
+      }), g && C && (0, a.jsx)("div", {
         className: D.spacer,
         children: "\xb7"
       }), C && (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.OUTLINED,
         color: h.ButtonColors.PRIMARY,
         className: D.browseButton,
-        onClick: g,
+        onClick: T,
         children: y.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
       })]
     }), S && (0, a.jsx)("div", {
@@ -177,7 +177,7 @@ t.default = s.memo(function(e) {
     selectedGame: l,
     isBrowseButtonVisible: i
   } = e, o = 0 === t.length, [u, d] = s.useState(() => {
-    let e = new Set(g.default.getGuildIds());
+    let e = new Set(T.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
     return o ? n[0].id : t[0].id
@@ -189,7 +189,7 @@ t.default = s.memo(function(e) {
     })
   }, [o, u]);
   let c = (0, f.useStateFromStores)([N.default], () => N.default.getGuild(u)),
-    E = (0, f.useStateFromStores)([g.default], () => null != u ? g.default.getStateForGuild(u).progress : null),
+    E = (0, f.useStateFromStores)([T.default], () => null != u ? T.default.getStateForGuild(u).progress : null),
     b = (0, L.useDiscoveryGameApplicationId)({
       selectedGame: l
     }),
@@ -368,7 +368,7 @@ t.default = s.memo(function(e) {
               children: (0, a.jsx)(R.ClanDiscoveryCardView, {
                 clan: F,
                 className: D.clanCardCenter,
-                bannerUrl: (0, T.getClanBannerUrl)(H[4].id, H[4].bannerHash)
+                bannerUrl: (0, g.getClanBannerUrl)(H[4].id, H[4].bannerHash)
               })
             })
           })

@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("858719"),
   p = n("780985"),
   I = n("880257"),
-  g = n("631885"),
-  T = n("240351"),
+  T = n("631885"),
+  g = n("240351"),
   A = n("792258"),
   N = n("657825"),
   v = n("198952"),
@@ -62,9 +62,9 @@ function D(e) {
     isMoreLoading: c
   } = (0, m.useFamilyCenterActions)({
     onError: n
-  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), g = (0, _.useIsEligibleForFamilyCenterVCJoin)({
+  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), T = (0, _.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
-  }), T = s.useCallback(() => {
+  }), g = s.useCallback(() => {
     p(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
@@ -91,9 +91,9 @@ function D(e) {
         className: x.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
-        children: E.sectionDescription(null != l && l, g)
+        children: E.sectionDescription(null != l && l, T)
       }) : null]
-    }), [v, E, l, g]);
+    }), [v, E, l, T]);
   if (0 === r.length) return null;
   let M = r.slice(0, C);
   return (0, a.jsxs)("div", {
@@ -108,7 +108,7 @@ function D(e) {
       }))
     }), M.length !== u ? (0, a.jsx)(o.Clickable, {
       className: x.loadMoreBar,
-      onClick: T,
+      onClick: g,
       role: "button",
       children: c ? (0, a.jsx)(o.Spinner, {
         type: o.Spinner.Type.PULSING_ELLIPSIS,
@@ -125,12 +125,12 @@ function D(e) {
 }
 let b = () => {
     let e = (0, I.default)(),
-      t = (0, g.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
+      t = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       n = (0, C.useAgeSpecificText)(P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
       }), P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       s = (0, h.getActivityWindowTimestampFormatter)(!!e),
-      l = (0, g.useActivityWindowTimeStamp)(s);
+      l = (0, T.useActivityWindowTimeStamp)(s);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
       variant: "eyebrow",
       children: l
@@ -167,7 +167,7 @@ let b = () => {
     })
   },
   j = () => {
-    let e = (0, g.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
+    let e = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       t = (0, r.useStateFromStores)([E.default], () => E.default.getSelectedTeenId()),
       {
         selectTeenUser: n
@@ -200,7 +200,7 @@ let b = () => {
   G = e => {
     let {
       userId: t
-    } = e, n = (0, I.default)(), s = (0, g.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!n), i = (0, g.useActivityWindowTimeStamp)(l);
+    } = e, n = (0, I.default)(), s = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!n), i = (0, T.useActivityWindowTimeStamp)(l);
     return n && 1 !== s.length ? (0, a.jsx)(j, {}) : (0, a.jsx)(U, {
       userId: t,
       subText: i
@@ -209,7 +209,7 @@ let b = () => {
 t.default = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, g.useActivityWindowTimeStamp)(l);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, T.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
     className: x.container,
     children: [(0, a.jsxs)("div", {
@@ -228,7 +228,7 @@ t.default = e => {
           className: x.activityCounterRow,
           children: n.map(e => {
             let [t, n] = e;
-            return (0, a.jsx)(T.default, {
+            return (0, a.jsx)(g.default, {
               displayType: t,
               header: n.tooltipHeader()
             }, "counter-".concat(t))

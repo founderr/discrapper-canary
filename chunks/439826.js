@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return T
   }
 });
 var a = n("735250"),
@@ -23,13 +23,13 @@ var a = n("735250"),
   p = n("689938"),
   I = n("430783");
 
-function g(e) {
+function T(e) {
   let {
     quest: t,
     isHovering: n,
     onCtxMenuClose: l,
-    onCtxMenuOpen: g,
-    onCtxMenuSelect: T
+    onCtxMenuOpen: T,
+    onCtxMenuSelect: g
   } = e, A = (0, _.getQuestBarHeroAssetUrl)(t), N = (0, d.default)(), v = (0, o.isThemeDark)(N) ? S.ThemeTypes.DARK : S.ThemeTypes.LIGHT, R = v === S.ThemeTypes.DARK, O = s.useMemo(() => (0, _.isAssetAnimated)(t.config.assets.questBarHero), [t]), L = s.useContext(r.AccessibilityPreferencesContext).reducedMotion.enabled, M = (0, _.isTargetedForContent)(t, h.QuestContent.GIFT_INVENTORY_FOR_YOU), P = (0, E.useIsQuestExpired)(t), x = s.useRef(n), y = s.useRef(null);
   return s.useEffect(() => {
     if (O && null != y.current) return x.current !== n && (n ? y.current.play() : (y.current.pause(), y.current.currentTime = 0)), x.current = n, () => {
@@ -84,9 +84,9 @@ function g(e) {
                 children: p.default.Messages.RECOMMENDED
               })
             }), (0, a.jsx)(m.QuestsEntryContextMenuPopout, {
-              onOpen: g,
+              onOpen: T,
               onClose: l,
-              onSelect: T,
+              onSelect: g,
               questContent: h.QuestContent.QUEST_HOME_DESKTOP,
               quest: t,
               hideLearnMore: !0,

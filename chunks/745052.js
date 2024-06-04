@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("209613"),
   p = n("325708"),
   I = n("320149"),
-  g = n("252618"),
-  T = n("605236"),
+  T = n("252618"),
+  g = n("605236"),
   A = n("243778"),
   N = n("984370"),
   v = n("797614"),
@@ -85,7 +85,7 @@ function el() {
     I = s.useCallback(() => {
       _(n.map(e => e.channel.id))
     }, [n, _]),
-    g = s.useCallback(e => {
+    T = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -101,7 +101,7 @@ function el() {
         hasSingleMessageRequest: l
       }, d)
     }, [l, n, p]),
-    T = s.useCallback(() => (0, a.jsxs)(j.default, {
+    g = s.useCallback(() => (0, a.jsxs)(j.default, {
       className: ea.sectionTitle,
       children: [t > 0 ? en.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
@@ -148,8 +148,8 @@ function el() {
           paddingBottom: 24,
           sectionHeight: J.LIST_SECTION_HEIGHT,
           rowHeight: J.LIST_ROW_HEIGHT,
-          renderSection: T,
-          renderRow: g,
+          renderSection: g,
+          renderRow: T,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -197,7 +197,7 @@ let er = function(e) {
       n = () => b.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([m.default], () => m.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, T.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, g.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(A.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -267,7 +267,7 @@ let ed = (0, _.default)(function(e) {
     null != _ && !m && S && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
   let [p, I] = s.useState(J.MessageRequestSections.REQUESTS);
-  return (0, g.usePageTitle)({
+  return (0, T.usePageTitle)({
     location: en.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {

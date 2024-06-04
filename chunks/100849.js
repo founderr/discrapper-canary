@@ -25,11 +25,11 @@ function _(e) {
     type: l
   } = e, _ = (0, a.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), v = (0, a.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), p = i.useMemo(() => v.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS), [v]), T = i.useMemo(() => _ ? p.find(e => e.type === E.ActivityTypes.PLAYING) : null, [p, _]), g = i.useMemo(() => p.filter(e => e !== T), [T, p]), {
     analyticsLocations: x,
-    newestAnalyticsLocation: A
+    newestAnalyticsLocation: U
   } = (0, r.default)(), {
-    trackUserProfileAction: C,
-    ...N
-  } = (0, f.useUserProfileAnalyticsContext)(), U = {
+    trackUserProfileAction: A,
+    ...C
+  } = (0, f.useUserProfileAnalyticsContext)(), N = {
     location: {
       page: E.AnalyticsPages.USER_PROFILE,
       section: E.AnalyticsSections.PROFILE_MODAL
@@ -41,15 +41,15 @@ function _(e) {
     children: [_ ? (0, s.jsx)(o.default, {
       type: l,
       user: t,
-      source: A,
+      source: U,
       className: I.userProfileActivity,
       hideHeader: l === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: l === c.Types.SIMPLIFIED_PROFILE,
       activity: T,
       actionColor: I.actionColor,
-      analyticsParams: U,
+      analyticsParams: N,
       onAction: () => {
-        C({
+        A({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: E.ActivityTypes.STREAMING,
@@ -58,7 +58,7 @@ function _(e) {
           activitySessionId: null == T ? void 0 : T.session_id,
           applicationId: null == T ? void 0 : T.application_id,
           analyticsLocations: x,
-          ...N
+          ...C
         })
       }
     }) : null, g.map(e => (0, s.jsx)(o.default, {
@@ -66,14 +66,14 @@ function _(e) {
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: A,
+      source: U,
       className: I.userProfileActivity,
       hideHeader: l === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: l === c.Types.SIMPLIFIED_PROFILE,
       actionColor: I.actionColor,
-      analyticsParams: U,
+      analyticsParams: N,
       onAction: () => {
-        C({
+        A({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: e.type,
@@ -82,7 +82,7 @@ function _(e) {
           activitySessionId: e.session_id,
           applicationId: e.application_id,
           analyticsLocations: x,
-          ...N
+          ...C
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

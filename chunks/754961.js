@@ -30,7 +30,7 @@ function C(e) {
     animate: C,
     fillBackgroundColor: m,
     hasError: S
-  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), I = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), g = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(m, I.hex()), [m, I]), T = null != g, A = (0, r.useSpring)({
+  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), I = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), T = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(m, I.hex()), [m, I]), g = null != T, A = (0, r.useSpring)({
     transform: E ? "translateX(0%)" : "translateX(-100%)",
     config: {
       ...r.config.stiff,
@@ -53,9 +53,9 @@ function C(e) {
     text: S ? N : l,
     "aria-label": S ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
     shouldShow: null != n,
-    tooltipStyle: g,
+    tooltipStyle: T,
     tooltipClassName: i()(_.progressStepTooltip, {
-      [_.progressStepTooltipCustomColors]: !S && null != g
+      [_.progressStepTooltipCustomColors]: !S && null != T
     }),
     children: e => (0, a.jsxs)(u.Clickable, {
       ...e,
@@ -72,10 +72,10 @@ function C(e) {
         children: (0, a.jsx)(r.animated.div, {
           style: {
             ...A,
-            ...g
+            ...T
           },
           className: i()(_.progressStepFill, {
-            [_.customProgressStepFill]: T
+            [_.customProgressStepFill]: g
           })
         })
       })]

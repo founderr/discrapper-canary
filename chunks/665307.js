@@ -21,8 +21,8 @@ var a, s = n("735250"),
   S = n("799777"),
   p = n("285952"),
   I = n("366695"),
-  g = n("366966"),
-  T = n("151011"),
+  T = n("366966"),
+  g = n("151011"),
   A = n("880008"),
   N = n("466111"),
   v = n("931003"),
@@ -113,9 +113,9 @@ let b = (0, L.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: y.textCell,
     render(e) {
       let t;
-      return t = e.isRunning ? x.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? x.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(g.default, {
+      return t = e.isRunning ? x.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? x.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(T.default, {
         end: e.lastPlayed,
-        location: g.default.Locations.GAME_LIBRARY_LAST_PLAYED
+        location: T.default.Locations.GAME_LIBRARY_LAST_PLAYED
       }) : x.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(p.default, {
         align: p.default.Align.CENTER,
         className: r()({
@@ -316,7 +316,7 @@ class B extends(a = l.PureComponent) {
       highlightedApplicationKey: o
     } = this.state;
     return (0, s.jsxs)(l.Fragment, {
-      children: [n.length > 0 ? (0, s.jsx)(T.default, {
+      children: [n.length > 0 ? (0, s.jsx)(g.default, {
         columns: w,
         data: n,
         sortData: !1,

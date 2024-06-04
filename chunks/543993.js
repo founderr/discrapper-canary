@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("727637"),
   p = n("100527"),
   I = n("906732"),
-  g = n("521868"),
-  T = n("299206"),
+  T = n("521868"),
+  g = n("299206"),
   A = n("440051"),
   N = n("734934"),
   v = n("158238"),
@@ -294,14 +294,14 @@ function er(e) {
     em = (0, N.useFocusModeEnabled)(),
     eS = ef === ee.StatusTypes.DND,
     ep = (0, J.useMultiAccountMenuItems)(),
-    eI = (0, g.useCustomStatusMenuItem)(null != n ? n : void 0, ea.menuItemFocused),
-    eg = (0, T.default)({
+    eI = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, ea.menuItemFocused),
+    eT = (0, g.default)({
       id: t.id,
       label: en.default.Messages.COPY_ID_USER,
       showIconFirst: !0,
       focusedClassName: ea.menuItemFocused
     }),
-    eT = (0, c.useStateFromStores)([W.default], () => W.default.hidePersonalInformation);
+    eg = (0, c.useStateFromStores)([W.default], () => W.default.hidePersonalInformation);
   return (0, a.jsx)(I.AnalyticsLocationProvider, {
     value: eu,
     children: (0, a.jsx)(L.UserProfileAnalyticsProvider, {
@@ -343,7 +343,7 @@ function er(e) {
               nicknameIcons: (0, a.jsxs)(a.Fragment, {
                 children: [(0, a.jsx)(x.default, {
                   userId: t.id
-                }), (q || X || er) && !eT && (0, a.jsx)(y.default, {
+                }), (q || X || er) && !eg && (0, a.jsx)(y.default, {
                   user: t,
                   isHovering: e_,
                   onOpenProfile: () => eC({
@@ -354,7 +354,7 @@ function er(e) {
             }), (0, a.jsx)(k.default, {
               user: t,
               bio: null == K ? void 0 : K.bio,
-              hidePersonalInformation: eT,
+              hidePersonalInformation: eg,
               onClose: o
             }), (0, a.jsx)(w.default, {
               user: t,
@@ -449,7 +449,7 @@ function er(e) {
                     children: ep
                   })
                 }), (0, a.jsx)(h.MenuGroup, {
-                  children: eg
+                  children: eT
                 })]
               })]
             })]

@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("185666"),
   p = n("503737"),
   I = n("513202"),
-  g = n("318891"),
-  T = n("687751"),
+  T = n("318891"),
+  g = n("687751"),
   A = n("912471"),
   N = n("100527"),
   v = n("838134"),
@@ -72,8 +72,8 @@ var a = n("735250"),
   eS = n("897473"),
   ep = n("377368"),
   eI = n("262702"),
-  eg = n("639033"),
-  eT = n("479313"),
+  eT = n("639033"),
+  eg = n("479313"),
   eA = n("911560"),
   eN = n("703016"),
   ev = n("171368"),
@@ -425,7 +425,7 @@ function e5(e) {
 }
 class e8 extends s.PureComponent {
   componentDidMount() {
-    ez.default.setZoomFactor(C.default.zoom), e_.default.init(), O.default.initialize(), er.default.initialize(), G.default.initialize(), ex.default.initialize(), w.default.initialize(), eu.default.initialize(), X.default.initialize(), m.default.init(), B.default.init(), k.default.init(), en.default.initialize(), T.default.initialize(), U.default.initialize(), ed.default.initialize(), g.default.initialize(), eP.default.initialize(), ei.default.initialize(), I.default.initialize(), V.default.init(), q.default.init(), eV.default.init(), eW.default.init(), p.default.initialize(), eN.default.init(), eH.default.init(), eO.default.init(), eI.default.initialize(), eg.default.initialize(), eR.default.initialize(), eL.default.init(), b.default.initialize(), S.default.initialize(), eC.default.initialize(), ep.default.initialize(), es.default.initialize(), ea.default.initialize(), el.default.initialize(), M.default.initialize(), Z.default.init({
+    ez.default.setZoomFactor(C.default.zoom), e_.default.init(), O.default.initialize(), er.default.initialize(), G.default.initialize(), ex.default.initialize(), w.default.initialize(), eu.default.initialize(), X.default.initialize(), m.default.init(), B.default.init(), k.default.init(), en.default.initialize(), g.default.initialize(), U.default.initialize(), ed.default.initialize(), T.default.initialize(), eP.default.initialize(), ei.default.initialize(), I.default.initialize(), V.default.init(), q.default.init(), eV.default.init(), eW.default.init(), p.default.initialize(), eN.default.init(), eH.default.init(), eO.default.init(), eI.default.initialize(), eT.default.initialize(), eR.default.initialize(), eL.default.init(), b.default.initialize(), S.default.initialize(), eC.default.initialize(), ep.default.initialize(), es.default.initialize(), ea.default.initialize(), el.default.initialize(), M.default.initialize(), Z.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -438,7 +438,7 @@ class e8 extends s.PureComponent {
     }), D.default.init(), J.default.initialize(), ec.default.initialize(), eo.default.initialize(), y.default.initialize(), this.rewriterUnlisten = ef.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = ef.default.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    ex.default.terminate(), eu.default.terminate(), er.default.terminate(), O.default.terminate(), g.default.terminate(), eP.default.terminate(), I.default.terminate(), ed.default.terminate(), ei.default.terminate(), eR.default.terminate(), p.default.terminate(), b.default.terminate(), J.default.terminate(), S.default.terminate(), ec.default.terminate(), eC.default.terminate(), ep.default.terminate(), es.default.terminate(), ea.default.terminate(), el.default.terminate(), M.default.terminate(), eo.default.terminate(), y.default.terminate(), j.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    ex.default.terminate(), eu.default.terminate(), er.default.terminate(), O.default.terminate(), T.default.terminate(), eP.default.terminate(), I.default.terminate(), ed.default.terminate(), ei.default.terminate(), eR.default.terminate(), p.default.terminate(), b.default.terminate(), J.default.terminate(), S.default.terminate(), ec.default.terminate(), eC.default.terminate(), ep.default.terminate(), es.default.terminate(), ea.default.terminate(), el.default.terminate(), M.default.terminate(), eo.default.terminate(), y.default.terminate(), j.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {
@@ -483,7 +483,7 @@ class e8 extends s.PureComponent {
           let {
             summaryId: e
           } = (0, l.parse)(t);
-          null != e && eT.default.setSelectedSummary(s, e)
+          null != e && eg.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
           let e = eD.default.getCurrentSidebarChannelId(n) !== o,

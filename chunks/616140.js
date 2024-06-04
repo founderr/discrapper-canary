@@ -24,10 +24,10 @@ var s = l("735250"),
   T = l("988246"),
   g = l("834534"),
   x = l("228168"),
-  A = l("981631"),
-  C = l("689938"),
-  N = l("773386");
-let U = e => {
+  U = l("981631"),
+  A = l("689938"),
+  C = l("773386");
+let N = e => {
   var t, l;
   let {
     user: s,
@@ -36,22 +36,22 @@ let U = e => {
     let {
       type: t
     } = e;
-    return t !== A.ActivityTypes.CUSTOM_STATUS
+    return t !== U.ActivityTypes.CUSTOM_STATUS
   })), c = null === (t = (0, I.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualFriends) || void 0 === t ? void 0 : t.length, f = null === (l = (0, m.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualGuilds) || void 0 === l ? void 0 : l.length, S = [{
     section: x.UserProfileSections.USER_INFO,
-    text: C.default.Messages.USER_PROFILE_ABOUT_ME
+    text: A.default.Messages.USER_PROFILE_ABOUT_ME
   }];
   return (null != o || null != r) && S.push({
     section: x.UserProfileSections.ACTIVITY,
-    text: C.default.Messages.USER_PROFILE_ACTIVITY
+    text: A.default.Messages.USER_PROFILE_ACTIVITY
   }), s.id !== (null == i ? void 0 : i.id) && (S.push({
     section: x.UserProfileSections.MUTUAL_FRIENDS,
-    text: (0, a.match)(c).with(void 0, () => C.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => C.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => C.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+    text: (0, a.match)(c).with(void 0, () => A.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => A.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => A.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: e
     }))
   }), S.push({
     section: x.UserProfileSections.MUTUAL_GUILDS,
-    text: (0, a.match)(f).with(void 0, () => C.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => C.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => C.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+    text: (0, a.match)(f).with(void 0, () => A.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => A.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => A.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: e
     }))
   })), S
@@ -93,10 +93,10 @@ function h(e) {
     onClose: I
   } = e, {
     trackUserProfileAction: m
-  } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = U({
+  } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = N({
     user: a,
     currentUser: _
-  }), [g, A] = i.useState(S), [C, h] = i.useState(null !== (l = null === (t = p.find(e => {
+  }), [g, U] = i.useState(S), [A, h] = i.useState(null !== (l = null === (t = p.find(e => {
     let {
       section: t
     } = e;
@@ -105,17 +105,17 @@ function h(e) {
     m({
       action: "PRESS_SECTION",
       section: e
-    }), h(e), A(!1)
+    }), h(e), U(!1)
   }, [m, h]);
   return null == _ ? null : v ? (0, s.jsx)("div", {
-    className: N.container,
+    className: C.container,
     children: (0, s.jsx)(T.default, {})
   }) : (0, s.jsxs)("div", {
-    className: N.container,
+    className: C.container,
     children: [(0, s.jsx)(o.TabBar, {
-      className: N.tabBar,
+      className: C.tabBar,
       type: "top",
-      selectedItem: C,
+      selectedItem: A,
       onItemSelect: P,
       children: p.map(e => {
         let {
@@ -123,7 +123,7 @@ function h(e) {
           text: l
         } = e;
         return (0, s.jsx)(o.TabBar.Item, {
-          className: N.tabBarItem,
+          className: C.tabBarItem,
           id: t,
           "aria-label": l,
           children: (0, s.jsx)(r.Text, {
@@ -133,7 +133,7 @@ function h(e) {
         }, t)
       })
     }), (0, s.jsx)(R, {
-      section: C,
+      section: A,
       user: a,
       currentUser: _,
       displayProfile: u,

@@ -28,7 +28,7 @@ function h(e) {
   }), m = s.useRef(null), S = s.useMemo(() => (0, r.calculatePercentComplete)({
     quest: t,
     location: n
-  }), [t, n]), p = S > 0, I = !(0, r.isQuestExpired)(t), g = s.useCallback(() => (0, a.jsx)(l.Text, {
+  }), [t, n]), p = S > 0, I = !(0, r.isQuestExpired)(t), T = s.useCallback(() => (0, a.jsx)(l.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
@@ -67,7 +67,7 @@ function h(e) {
             color: "header-primary",
             className: E.header,
             children: f.default.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: g
+              rewardHook: T
             })
           })
         }), null != C ? (0, a.jsx)(l.Text, {
