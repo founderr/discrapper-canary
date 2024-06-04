@@ -56,7 +56,7 @@ let N = e => {
     width: 640,
     height: 360
   },
-  P = e => {
+  O = e => {
     let t, n, s, {
       item: i,
       onPlay: r,
@@ -111,7 +111,7 @@ let N = e => {
       })
     })
   };
-class O extends(s = i.PureComponent) {
+class P extends(s = i.PureComponent) {
   componentDidMount() {
     let {
       items: e
@@ -214,7 +214,7 @@ class O extends(s = i.PureComponent) {
       switch (e.type) {
         case C.CarouselMediaTypes.YOUTUBE_VIDEO:
         case C.CarouselMediaTypes.VIDEO:
-          n = (0, a.jsx)(P, {
+          n = (0, a.jsx)(O, {
             item: e,
             onPlay: this.handlePlay,
             isMuted: s,
@@ -266,7 +266,7 @@ class O extends(s = i.PureComponent) {
     })
   }
 }
-E(O, "defaultProps", {
+E(P, "defaultProps", {
   paused: !1,
   videoAutoPlay: !0
-}), t.default = O
+}), t.default = P

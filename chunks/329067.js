@@ -84,9 +84,9 @@ function _(e) {
     loadId: N,
     skuId: _,
     isGift: y = !1,
-    baseAnalyticsData: A
+    baseAnalyticsData: j
   } = e, {
-    step: j,
+    step: A,
     setStep: k,
     paymentError: O,
     paymentAuthenticationState: P,
@@ -94,15 +94,15 @@ function _(e) {
     skuPricePreviewsById: B
   } = (0, E.usePaymentContext)(), {
     analyticsLocations: M
-  } = (0, f.default)(), [D, w] = s.useState(!1), F = s.useRef(null), H = B[_], U = null != H ? H[x.id] : null, W = null != U ? (0, g.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, G = s.useMemo(() => ({
-    ...A,
+  } = (0, f.default)(), [D, F] = s.useState(!1), H = s.useRef(null), w = B[_], U = null != w ? w[x.id] : null, W = null != U ? (0, g.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, G = s.useMemo(() => ({
+    ...j,
     load_id: N,
     payment_type: S.PurchaseTypeToAnalyticsPaymentType[S.PurchaseTypes.ONE_TIME],
     price: null == U ? void 0 : U.amount,
     currency: null == U ? void 0 : U.currency
-  }), [A, U, N]);
+  }), [j, U, N]);
   s.useEffect(() => {
-    j !== h.Step.REVIEW && k(h.Step.REVIEW)
+    A !== h.Step.REVIEW && k(h.Step.REVIEW)
   }), s.useEffect(() => {
     P === C.PaymentAuthenticationState.ERROR && l(O)
   }, [l, O, P]);
@@ -115,7 +115,7 @@ function _(e) {
         isGift: y,
         paymentSource: x,
         loadId: N
-      }), w(!1), t()
+      }), F(!1), t()
     } catch (t) {
       let e = t instanceof u.BillingError ? t : new u.BillingError(t);
       e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && l(t)
@@ -124,9 +124,9 @@ function _(e) {
     p.default.track(S.AnalyticEvents.PAYMENT_FLOW_STEP, {
       ...G,
       to_step: e
-    }), e === h.Step.CONFIRM && (w(!1), t()), k(e)
+    }), e === h.Step.CONFIRM && (F(!1), t()), k(e)
   }, [G, k, t]);
-  return (0, C.usePaymentStepForAuthentication)(j, P, K), (0, a.jsxs)("div", {
+  return (0, C.usePaymentStepForAuthentication)(A, P, K), (0, a.jsxs)("div", {
     className: I.reviewContainer,
     children: [(0, a.jsx)(i.FormSection, {
       children: (0, a.jsx)(i.FormItem, {
@@ -151,7 +151,7 @@ function _(e) {
       submitting: D,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
-        w(!0), await V()
+        F(!0), await V()
       },
       children: null !== W ? v.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: W
@@ -164,7 +164,7 @@ function _(e) {
         r(), (0, b.default)({
           skuId: _,
           analyticsLocations: M,
-          returnRef: F
+          returnRef: H
         })
       },
       children: v.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE

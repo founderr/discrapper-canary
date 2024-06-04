@@ -1,7 +1,7 @@
 "use strict";
 l.r(a), l.d(a, {
   default: function() {
-    return o
+    return s
   }
 });
 var t = l("735250");
@@ -10,16 +10,16 @@ var i = l("447452"),
   n = l("962746"),
   r = l("25373");
 
-function o(e) {
+function s(e) {
   let {
     location: a,
     ...l
   } = e, {
-    updatedOnAllSurfaces: o
+    updatedOnAllSurfaces: s
   } = (0, i.useSimplifiedProfileExperiment)({
     location: a
   });
-  return o ? (0, t.jsx)(r.default, {
+  return s ? (0, t.jsx)(r.default, {
     ...l
   }) : (0, t.jsx)(n.default, {
     ...l

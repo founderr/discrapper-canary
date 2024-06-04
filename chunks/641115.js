@@ -19,8 +19,8 @@ var a = l("735250"),
   E = l("736871"),
   _ = l("351742"),
   h = l("386542"),
-  C = l("193878"),
-  N = l("594174"),
+  N = l("193878"),
+  C = l("594174"),
   g = l("746124"),
   p = l("285952"),
   A = l("466111"),
@@ -144,8 +144,8 @@ function w(e) {
     onPresetChange: y,
     targetGuildPremiumTier: k,
     captureDeviceSelected: F
-  } = e, V = (0, d.useStateFromStores)([N.default], () => {
-    let e = N.default.getCurrentUser();
+  } = e, V = (0, d.useStateFromStores)([C.default], () => {
+    let e = C.default.getCurrentUser();
     return u()(null != e, "StreamSettings: user cannot be undefined"), e
   }), B = x.default.canStreamQuality(x.StreamQuality.MID, V), {
     location: H
@@ -171,11 +171,11 @@ function w(e) {
   } = (0, h.usePerksDemo)(o.EntitlementFeatureNames.STREAM_HIGH_QUALITY), q = !B && !W && !Y, {
     enabled: Z,
     variant: J
-  } = C.default.useExperiment({
+  } = N.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: q
-  }), X = Z && C.GradientVariants.includes(J), [$, ee] = n.useState(!1), [et, el] = n.useState(!1);
+  }), X = Z && N.GradientVariants.includes(J), [$, ee] = n.useState(!1), [et, el] = n.useState(!1);
   n.useEffect(() => {
     let e = 0;
     return Y && Q.hqStreamingUnlockAnimationPlayed && (e = setTimeout(() => {

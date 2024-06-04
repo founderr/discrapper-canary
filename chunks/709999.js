@@ -26,8 +26,8 @@ var a = l("735250"),
   N = l("725808"),
   _ = l("794358"),
   y = l("466111"),
-  A = l("26290"),
-  j = l("74538"),
+  j = l("26290"),
+  A = l("74538"),
   k = l("335131"),
   O = l("1870"),
   P = l("884697"),
@@ -35,9 +35,9 @@ var a = l("735250"),
   B = l("624377"),
   M = l("390698"),
   D = l("813083"),
-  w = l("680942"),
-  F = l("558060"),
-  H = l("237031"),
+  F = l("680942"),
+  H = l("558060"),
+  w = l("237031"),
   U = l("616066"),
   W = l("216541"),
   G = l("832149"),
@@ -90,7 +90,7 @@ t.default = function(e) {
     analyticsLocations: X
   } = (0, h.default)(E.default.COLLECTIBLES_SHOP_CARD), q = s.useRef(null), Q = (0, g.default)(q), [$, J] = s.useState(!1), ee = Q || $, [et] = t.items, {
     backgroundColors: el
-  } = (0, B.default)(t.styles), ea = j.default.canUseCollectibles(l), es = (0, P.getFormattedPriceForCollectiblesProduct)(t, ea, !1), er = s.useMemo(() => (0, P.getProductDiscount)(t, ea), [t, ea]), en = (0, P.isPremiumCollectiblesProduct)(t), ei = (0, P.isFreeCollectiblesProduct)(t), {
+  } = (0, B.default)(t.styles), ea = A.default.canUseCollectibles(l), es = (0, P.getFormattedPriceForCollectiblesProduct)(t, ea, !1), er = s.useMemo(() => (0, P.getProductDiscount)(t, ea), [t, ea]), en = (0, P.isPremiumCollectiblesProduct)(t), ei = (0, P.isFreeCollectiblesProduct)(t), {
     isPurchased: eo,
     isPartiallyPurchased: ec
   } = (0, R.useProductPurchaseState)(t), [eu, ed] = (0, d.useStateFromStoresArray)([O.default], () => [O.default.isClaiming === t.skuId, null != O.default.isClaiming && O.default.isClaiming !== t.skuId]), ef = (0, d.useStateFromStores)([T.default], () => (0, C.isThemeDark)(T.default.theme)), eC = (0, P.isProductNew)(t.skuId);
@@ -124,7 +124,7 @@ t.default = function(e) {
       })
     },
     eE = e => l => {
-      em.current = l.currentTarget, (0, H.openCollectiblesShopProductDetailsModal)({
+      em.current = l.currentTarget, (0, w.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: r,
         analyticsLocations: X,
@@ -152,7 +152,7 @@ t.default = function(e) {
       variant: "text-md/semibold",
       className: z.priceTag,
       children: K.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
-    }) : (0, a.jsx)(F.default, {
+    }) : (0, a.jsx)(H.default, {
       product: t,
       discount: er,
       isPremiumUser: ea,
@@ -160,7 +160,7 @@ t.default = function(e) {
     }),
     ev = () => en ? null : ei ? (0, a.jsx)(Z, {
       onClick: eb
-    }) : (0, a.jsx)(w.default, {
+    }) : (0, a.jsx)(F.default, {
       product: t,
       returnRef: q,
       isGiftEasterEggEnabled: _,
@@ -221,7 +221,7 @@ t.default = function(e) {
         tooltipContentClassName: z.premiumWheelTooltipContent,
         color: p.Tooltip.Colors.PRIMARY,
         text: K.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
-        children: e => (0, a.jsx)(A.TextBadge, {
+        children: e => (0, a.jsx)(j.TextBadge, {
           ...e,
           className: z.premiumWheelBadge,
           text: (0, a.jsx)(y.default, {
@@ -283,7 +283,7 @@ t.default = function(e) {
         category: r,
         className: z.limitedTimeBadge,
         display: "card"
-      }), eC && !ec && !eo && (0, a.jsx)(A.TextBadge, {
+      }), eC && !ec && !eo && (0, a.jsx)(j.TextBadge, {
         text: K.default.Messages.NEW,
         disableColor: !0,
         className: z.newBadge

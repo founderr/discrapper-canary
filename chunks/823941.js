@@ -4,7 +4,7 @@ l.r(t), l.d(t, {
     return N
   },
   default: function() {
-    return j
+    return A
   }
 });
 var a = l("735250"),
@@ -111,7 +111,7 @@ let N = (0, g.getLogoSize)(96),
     })
   };
 
-function A(e) {
+function j(e) {
   var t, l, s, r;
   let {
     category: i,
@@ -160,7 +160,7 @@ function A(e) {
   })
 }
 
-function j(e) {
+function A(e) {
   var t, l;
   let {
     category: s,
@@ -174,7 +174,7 @@ function j(e) {
   } = (0, S.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
   });
-  return m ? (0, a.jsx)(A, {
+  return m ? (0, a.jsx)(j, {
     category: s,
     index: u
   }) : (0, a.jsxs)(h.default, {

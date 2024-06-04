@@ -9,8 +9,8 @@ a.default = e => {
   let {
     children: a,
     initTranslate3d: l
-  } = e, o = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion), s = (0, i.useSpring)({
-    immediate: o,
+  } = e, s = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion), o = (0, i.useSpring)({
+    immediate: s,
     from: {
       transform: l
     },
@@ -19,7 +19,7 @@ a.default = e => {
     }
   });
   return (0, t.jsx)(i.animated.div, {
-    style: s,
+    style: o,
     children: a
   })
 }

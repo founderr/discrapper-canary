@@ -51,8 +51,8 @@ function y(e) {
     product: t,
     paymentSource: l,
     onPurchaseComplete: y,
-    onUse: A,
-    onError: j,
+    onUse: j,
+    onError: A,
     onReviewPurchase: k,
     loadId: O,
     baseAnalyticsData: P,
@@ -65,15 +65,15 @@ function y(e) {
       analyticsLocations: D
     } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD, d.default.COLLECTIBLES_LIGHTNING_CHECKOUT),
     {
-      buttonColors: w
+      buttonColors: F
     } = (0, p.default)(t.styles),
-    F = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    H = (0, I.getCustomConfettiDisplayOptions)(t.skuId),
+    H = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion),
+    w = (0, I.getCustomConfettiDisplayOptions)(t.skuId),
     [U, W] = s.useState(!1),
     [G, V] = s.useState(!1),
-    K = null != w ? {
-      background: (0, m.getBackgroundGradient)(w, 90),
-      color: w.text.toHslString()
+    K = null != F ? {
+      background: (0, m.getBackgroundGradient)(F, 90),
+      color: F.text.toHslString()
     } : void 0,
     z = (0, E.default)({
       analyticsLocations: D
@@ -83,7 +83,7 @@ function y(e) {
         W(!0), y()
       },
       onError: e => {
-        j(e), V(!0)
+        A(e), V(!0)
       },
       onReviewPurchase: k,
       paymentSource: l,
@@ -135,7 +135,7 @@ function y(e) {
       }), (0, a.jsx)(_, {
         style: K,
         onClick: () => {
-          if (A(), (0, c.popLayer)(), z(), (null == M ? void 0 : M.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
+          if (j(), (0, c.popLayer)(), z(), (null == M ? void 0 : M.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
             (0, C.openAvatarDecorationModal)({
               initialSelectedDecoration: M,
               analyticsLocations: D
@@ -166,7 +166,7 @@ function y(e) {
           ...Y
         })
       })]
-    })), !G && U && !(null != H) && !F && (0, a.jsx)(g.default, {
+    })), !G && U && !(null != w) && !H && (0, a.jsx)(g.default, {
       confettiTarget: B.current,
       customConfettiCanvas: R,
       speedValues: N,

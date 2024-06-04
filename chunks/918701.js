@@ -596,7 +596,7 @@ let ec = (e, t) => {
     let {
       quest: i
     } = e;
-    for (let e of Object.values(null !== (n = null === (t = i.userStatus) || void 0 === t ? void 0 : t.progress) && void 0 !== n ? n : {}).sort((e, t) => (null == e ? void 0 : e.updatedAt) != null && (null == t ? void 0 : t.updatedAt) != null && e.updatedAt < t.updatedAt ? -1 : 1).filter(c.isNotNullish)) {
+    for (let e of Object.values(null !== (n = null === (t = i.userStatus) || void 0 === t ? void 0 : t.progress) && void 0 !== n ? n : {}).sort((e, t) => (null == e ? void 0 : e.updatedAt) != null && (null == t ? void 0 : t.updatedAt) != null && e.updatedAt > t.updatedAt ? -1 : 1).filter(c.isNotNullish)) {
       let t = eI(e.eventName);
       if (null != t) return eE({
         quest: i,

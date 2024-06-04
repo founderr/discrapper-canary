@@ -12,8 +12,8 @@ l.r(t), l.d(t, {
 });
 var n = l("652874"),
   r = l("626135"),
-  s = l("981631");
-let i = {
+  i = l("981631");
+let s = {
     guildId: void 0,
     channelId: void 0,
     channelType: void 0,
@@ -22,11 +22,11 @@ let i = {
     selectedItemChanges: 0,
     numMediaItems: 0
   },
-  a = (0, n.default)(() => i);
+  a = (0, n.default)(() => s);
 
 function o(e, t, l, n) {
   a.setState({
-    ...i,
+    ...s,
     guildId: e,
     channelId: t,
     channelType: l,
@@ -36,7 +36,7 @@ function o(e, t, l, n) {
 
 function d() {
   let e = a.getState();
-  r.default.track(s.AnalyticEvents.MEDIA_VIEWER_SESSION_COMPLETED, {
+  r.default.track(i.AnalyticEvents.MEDIA_VIEWER_SESSION_COMPLETED, {
     guild_id: e.guildId,
     channel_id: e.channelId,
     channel_type: e.channelType,
@@ -45,7 +45,7 @@ function d() {
     number_selected_item_changes: e.selectedItemChanges,
     number_media_items: e.numMediaItems
   }), a.setState({
-    ...i
+    ...s
   })
 }
 

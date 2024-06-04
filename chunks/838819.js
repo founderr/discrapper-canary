@@ -26,8 +26,8 @@ var a = l("735250"),
   N = l("682864"),
   _ = l("626135"),
   y = l("74538"),
-  A = l("335131"),
-  j = l("328347"),
+  j = l("335131"),
+  A = l("328347"),
   k = l("280773"),
   O = l("884697"),
   P = l("617452"),
@@ -35,9 +35,9 @@ var a = l("735250"),
   B = l("298228"),
   M = l("937510"),
   D = l("853748"),
-  w = l("426171"),
-  F = l("823941"),
-  H = l("752053"),
+  F = l("426171"),
+  H = l("823941"),
+  w = l("752053"),
   U = l("963102"),
   W = l("128185"),
   G = l("861746"),
@@ -97,7 +97,7 @@ function es(e) {
     initialItemCardRef: l,
     includeBundles: r = !1,
     ...n
-  } = e, u = (0, M.usePurchasedProductsSort)(t.products), d = (0, c.useStateFromStores)([j.default], () => j.default.initialProductSkuId), f = s.useCallback(e => t => {
+  } = e, u = (0, M.usePurchasedProductsSort)(t.products), d = (0, c.useStateFromStores)([A.default], () => A.default.initialProductSkuId), f = s.useCallback(e => t => {
     e.skuId === d && (l.current = t.current)
   }, [d, l]), {
     unifiedProductCatalogEnabled: C
@@ -159,7 +159,7 @@ function er(e) {
         idleAnimationState: S.AnimationState.IDLE,
         giftStyle: ee.PremiumGiftStyles.BOX
       })
-    }), (0, a.jsx)(F.default, {
+    }), (0, a.jsx)(H.default, {
       category: t,
       hideLimitedTimeBadge: null != b,
       index: C
@@ -184,13 +184,13 @@ t.default = function(e) {
   } = e, {
     analyticsSource: l,
     analyticsLocations: r
-  } = (0, c.useStateFromStoresObject)([j.default], () => j.default.getAnalytics()), {
+  } = (0, c.useStateFromStoresObject)([A.default], () => A.default.getAnalytics()), {
     analyticsLocations: i
   } = (0, g.default)([...r, m.default.COLLECTIBLES_SHOP]), p = (0, c.useStateFromStores)([L.default], () => L.default.getLayers().includes(Q.Layers.COLLECTIBLES_SHOP)), S = (0, d.useHasAnyModalOpen)(), {
     onClose: v
   } = (0, V.useCollectiblesShopRouting)(), N = (0, c.useStateFromStores)([T.default], () => T.default.getCurrentUser()), k = y.default.canUseCollectibles(N), O = (0, h.default)("shop_disable_cache"), M = (0, h.default)("shop_include_unpublished"), {
     categories: D,
-    isFetchingCategories: F,
+    isFetchingCategories: H,
     error: G
   } = (0, R.default)({
     noCache: O,
@@ -202,9 +202,9 @@ t.default = function(e) {
     et = (0, P.useShopBundleEnabled)("CollectiblesShop"),
     ea = s.useRef(null),
     [es, en] = s.useState(!1);
-  (0, w.useProductDetailsDeepLinking)({
+  (0, F.useProductDetailsDeepLinking)({
     categories: D,
-    isFetchingCategories: F,
+    isFetchingCategories: H,
     isLayer: p,
     initialItemCardRef: ea
   });
@@ -234,7 +234,7 @@ t.default = function(e) {
   }, [eu]), s.useEffect(() => {
     !t && (0, C.setHomeLink)(Q.Routes.COLLECTIBLES_SHOP)
   }, [t]), s.useEffect(() => () => {
-    (0, A.setCollectiblesCategoryItemsViewed)({
+    (0, j.setCollectiblesCategoryItemsViewed)({
       categories: [...D.values()],
       itemTypes: [o.CollectiblesItemType.AVATAR_DECORATION, o.CollectiblesItemType.PROFILE_EFFECT]
     })
@@ -246,7 +246,7 @@ t.default = function(e) {
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [t, p, S, v]);
   let ed = s.useCallback(() => {
-      (0, A.fetchCollectiblesCategories)({
+      (0, j.fetchCollectiblesCategories)({
         noCache: O,
         includeUnpublished: M,
         includeBundles: et
@@ -267,7 +267,7 @@ t.default = function(e) {
     {
       setCategoryRef: eC,
       handleScrollToCategory: ep
-    } = (0, w.useCategoryDeepLinking)(),
+    } = (0, F.useCategoryDeepLinking)(),
     {
       condensedBannersAndDynamicHeadersEnabled: em
     } = (0, Z.useCollectiblesCondensedBannersExperiment)({
@@ -295,7 +295,7 @@ t.default = function(e) {
             children: [em && (0, a.jsx)(W.CollectiblesShopHeaderCarousel, {
               categories: z,
               handleScrollToCategory: ep
-            }), F ? (0, a.jsx)(K.default, {}) : G ? (0, a.jsx)(H.default, {
+            }), H ? (0, a.jsx)(K.default, {}) : G ? (0, a.jsx)(w.default, {
               onRetry: ed
             }) : (0, a.jsx)("div", {
               className: el.categories,

@@ -15,8 +15,8 @@ var a = l("735250"),
   E = l("13140"),
   _ = l("435064"),
   h = l("894694"),
-  C = l("39604"),
-  N = l("981631"),
+  N = l("39604"),
+  C = l("981631"),
   g = l("921944"),
   p = l("689938"),
   A = l("639412"),
@@ -62,13 +62,13 @@ let I = e => {
             color: "always-white",
             className: A.warningText,
             children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-              url: S.default.getArticleURL(N.HelpdeskArticles.CLIPS)
+              url: S.default.getArticleURL(C.HelpdeskArticles.CLIPS)
             })
           }) : null]
         }),
         tryItText: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
         onTryFeature: e => {
-          (0, C.updateClipsEnabled)({
+          (0, N.updateClipsEnabled)({
             clipsEnabled: !0,
             guildId: s,
             trackAnalytics: !0
@@ -86,7 +86,7 @@ t.default = function(e) {
   let {
     isAnimationDone: t,
     guildId: l
-  } = e, n = (0, r.useStateFromStores)([_.default], () => _.default.getSettings().clipsEnabled), s = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(N.GlobalKeybindActions.SAVE_CLIP));
+  } = e, n = (0, r.useStateFromStores)([_.default], () => _.default.getSettings().clipsEnabled), s = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(C.GlobalKeybindActions.SAVE_CLIP));
   i()(null != s, "Clips keybind should be set");
   let u = E.toString(s.shortcut, !0);
   return (0, a.jsx)(o.FormItem, {
@@ -102,7 +102,7 @@ t.default = function(e) {
         children: (0, a.jsx)(o.FormSwitch, {
           className: A.formSwitch,
           value: n,
-          onChange: e => (0, C.updateClipsEnabled)({
+          onChange: e => (0, N.updateClipsEnabled)({
             clipsEnabled: e,
             guildId: l,
             trackAnalytics: !0

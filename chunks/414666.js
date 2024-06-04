@@ -6,8 +6,8 @@ l.r(a), l.d(a, {
 }), l("47120");
 var t, i, n = l("735250"),
   r = l("470079"),
-  o = l("120356"),
-  s = l.n(o),
+  s = l("120356"),
+  o = l.n(s),
   u = l("920906"),
   d = l("481060"),
   c = l("607070"),
@@ -26,7 +26,7 @@ a.default = r.memo(function(e) {
     activityName: a,
     activityCharacter: l = 0,
     showExampleButton: t = !1
-  } = e, [i, o] = r.useState(0), [S, A] = (0, u.useSpring)(() => ({
+  } = e, [i, s] = r.useState(0), [S, A] = (0, u.useSpring)(() => ({
     from: {
       rotate: "0deg"
     },
@@ -50,7 +50,7 @@ a.default = r.memo(function(e) {
   });
   return r.useEffect(() => void(I.current.seconds = i)), r.useEffect(() => {
     let e = setInterval(() => {
-      o(e => (5399 === e && I.current.jitter(), ++e))
+      s(e => (5399 === e && I.current.jitter(), ++e))
     }, 1e3);
     return () => clearInterval(e)
   }, []), (0, n.jsxs)(f.default, {
@@ -63,7 +63,7 @@ a.default = r.memo(function(e) {
     }), (0, n.jsxs)("div", {
       className: v.fakeActivityLayout,
       children: [(0, n.jsx)("div", {
-        className: s()(v.fakeActivityIcon, h[l]),
+        className: o()(v.fakeActivityIcon, h[l]),
         children: (0, n.jsx)(u.animated.img, {
           className: v.fakeActivityPencil,
           src: 0 === l ? g : p,
