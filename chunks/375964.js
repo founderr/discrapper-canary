@@ -5053,7 +5053,7 @@ e.exports = Object.freeze({
   HARVEST_BACKEND_USERS: "Account",
   HARVEST_BACKEND_MESSAGES: "Messages",
   HARVEST_BACKEND_GUILDS: "Servers",
-  HARVEST_BACKEND_ANALYTICS: "Analytics",
+  HARVEST_BACKEND_ANALYTICS: "Your Activity",
   HARVEST_BACKEND_ACTIVITIES: "Activities",
   HARVEST_BACKEND_HUBSPOT: "Programs",
   USER_DM_SETTINGS: "Server Privacy Defaults",
