@@ -1,141 +1,137 @@
 "use strict";
-l.r(a), l.d(a, {
+t.r(a), t.d(a, {
   default: function() {
-    return E
+    return A
   }
 });
-var t = l("735250");
-l("470079");
-var i = l("120356"),
-  r = l.n(i),
-  n = l("442837"),
-  s = l("481060"),
-  o = l("680295"),
-  u = l("318661"),
-  d = l("721987"),
-  c = l("438163"),
-  f = l("502762"),
-  m = l("204197"),
-  v = l("158776"),
-  p = l("654904"),
-  g = l("985425"),
-  h = l("813454"),
-  S = l("826646"),
-  I = l("981631"),
-  T = l("228168"),
-  A = l("455108");
+var l = t("735250");
+t("470079");
+var i = t("120356"),
+  r = t.n(i),
+  n = t("442837"),
+  s = t("481060"),
+  o = t("680295"),
+  u = t("318661"),
+  d = t("721987"),
+  c = t("438163"),
+  f = t("502762"),
+  m = t("204197"),
+  v = t("158776"),
+  p = t("654904"),
+  g = t("985425"),
+  h = t("813454"),
+  S = t("826646"),
+  I = t("981631"),
+  T = t("228168"),
+  P = t("455108");
 
-function E(e) {
+function A(e) {
   let {
     user: a,
-    guild: l,
+    guild: t,
     canUsePremiumCustomization: i,
-    onUpsellClick: E,
-    onBannerChange: y,
-    pendingAccentColor: P,
-    pendingBanner: x,
-    pendingBio: j,
-    pendingPronouns: U,
-    pendingAvatar: C,
-    pendingAvatarDecoration: N,
-    pendingNickname: b,
-    pendingGlobalName: w,
-    pendingThemeColors: _,
-    pendingProfileEffectId: M,
-    avatarClassName: B,
-    isTryItOutFlow: R = !1,
-    disabledInputs: k = !1,
-    hideCustomStatus: O = !1,
-    hideBioSection: z = !1,
-    hideExampleButton: F = !1,
-    forProfileEffectModal: L = !1
-  } = e, D = (0, n.useStateFromStores)([v.default], () => v.default.findActivity(a.id, e => {
+    onUpsellClick: A,
+    pendingBanner: E,
+    pendingBio: y,
+    pendingPronouns: x,
+    pendingAvatar: j,
+    pendingAvatarDecoration: U,
+    pendingNickname: N,
+    pendingGlobalName: C,
+    pendingThemeColors: b,
+    pendingProfileEffectId: w,
+    avatarClassName: _,
+    isTryItOutFlow: M = !1,
+    disabledInputs: B = !1,
+    hideCustomStatus: R = !1,
+    hideBioSection: k = !1,
+    hideExampleButton: O = !1,
+    forProfileEffectModal: z = !1
+  } = e, L = (0, n.useStateFromStores)([v.default], () => v.default.findActivity(a.id, e => {
     let {
       type: a
     } = e;
     return a === I.ActivityTypes.CUSTOM_STATUS
-  })), G = (0, u.default)(a.id, null == l ? void 0 : l.id), {
-    avatarSrc: Z,
-    avatarDecorationSrc: W
+  })), F = (0, u.default)(a.id, null == t ? void 0 : t.id), {
+    avatarSrc: D,
+    avatarDecorationSrc: G
   } = (0, m.default)({
     user: a,
-    guildId: null == l ? void 0 : l.id,
-    avatarDecorationOverride: N,
-    avatarOverride: C,
+    guildId: null == t ? void 0 : t.id,
+    avatarDecorationOverride: U,
+    avatarOverride: j,
     size: s.AvatarSizes.SIZE_80,
     showPending: !0
-  }), H = null == G ? void 0 : G.getPreviewBanner(x, !1), V = (0, p.getPreviewProfileEffectId)({
-    pendingProfileEffectId: M,
-    displayProfile: G
+  }), Z = null == F ? void 0 : F.getPreviewBanner(E, !1), W = (0, p.getPreviewProfileEffectId)({
+    pendingProfileEffectId: w,
+    displayProfile: F
   }), {
-    theme: Y,
-    primaryColor: X
+    theme: H,
+    primaryColor: V
   } = (0, d.default)({
     user: a,
-    displayProfile: G,
-    pendingThemeColors: _,
+    displayProfile: F,
+    pendingThemeColors: b,
     isPreview: i
   });
-  return (0, t.jsxs)(f.default, {
+  return (0, l.jsxs)(f.default, {
     user: a,
-    displayProfile: G,
+    displayProfile: F,
     profileType: T.UserProfileTypes.BITE_SIZE,
-    pendingThemeColors: _,
-    pendingProfileEffectId: V,
-    className: r()(A.container, {
-      [A.profileEffectPreview]: L
+    pendingThemeColors: b,
+    pendingProfileEffectId: W,
+    className: r()(P.container, {
+      [P.profileEffectPreview]: z
     }),
     forceShowPremium: i,
-    children: [(0, t.jsxs)("header", {
-      className: A.header,
-      children: [(0, t.jsx)(h.default, {
-        displayProfile: G,
+    children: [(0, l.jsxs)("header", {
+      className: P.header,
+      children: [(0, l.jsx)(h.default, {
+        user: a,
+        displayProfile: F,
+        guildId: null == t ? void 0 : t.id,
         canUsePremiumCustomization: i,
-        previewAvatar: Z,
-        previewBanner: H,
-        previewPrimaryColor: X,
-        previewProfileEffectId: V,
-        pendingAccentColor: P,
-        isTryItOutFlow: R,
-        disabledInputs: k,
-        forProfileEffectModal: L,
-        onBannerChange: y,
-        onUpsellClick: () => null == E ? void 0 : E({
+        previewBanner: Z,
+        previewProfileEffectId: W,
+        isTryItOutFlow: M,
+        disabledInputs: B,
+        forProfileEffectModal: z,
+        onUpsellClick: () => null == A ? void 0 : A({
           object: I.AnalyticsObjects.EDIT_PROFILE_BANNER
         })
-      }), (0, t.jsx)(g.default, {
+      }), (0, l.jsx)(g.default, {
         user: a,
-        guild: l,
-        displayProfile: G,
+        guild: t,
+        displayProfile: F,
         canUsePremiumCustomization: i,
-        previewAvatar: Z,
-        previewAvatarDecoration: W,
-        previewTheme: Y,
-        previewPrimaryColor: X,
-        className: B,
-        disabledInputs: k,
-        isTryItOutFlow: R,
-        onUpsellClick: () => null == E ? void 0 : E({
+        previewAvatar: D,
+        previewAvatarDecoration: G,
+        previewTheme: H,
+        previewPrimaryColor: V,
+        className: _,
+        disabledInputs: B,
+        isTryItOutFlow: M,
+        onUpsellClick: () => null == A ? void 0 : A({
           object: I.AnalyticsObjects.AVATAR
         })
-      }), !O && (0, t.jsx)(c.UserProfileCustomStatusBubble, {
+      }), !R && (0, l.jsx)(c.UserProfileCustomStatusBubble, {
         profileType: T.UserProfileTypes.BITE_SIZE,
-        statusActivity: D
+        statusActivity: L
       })]
-    }), (0, t.jsx)(S.default, {
+    }), (0, l.jsx)(S.default, {
       user: a,
-      displayProfile: G,
-      guild: l,
-      pendingAvatar: C,
-      pendingNickname: b,
-      pendingGlobalName: w,
-      pendingBio: j,
-      pendingPronouns: U,
-      isTryItOutFlow: R,
-      hideBioSection: z,
-      hideExampleButton: F
-    }), null != V && (0, t.jsx)(o.default, {
-      profileEffectId: V
+      displayProfile: F,
+      guild: t,
+      pendingAvatar: j,
+      pendingNickname: N,
+      pendingGlobalName: C,
+      pendingBio: y,
+      pendingPronouns: x,
+      isTryItOutFlow: M,
+      hideBioSection: k,
+      hideExampleButton: O
+    }), null != W && (0, l.jsx)(o.default, {
+      profileEffectId: W
     })]
   })
 }

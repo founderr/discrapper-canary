@@ -31,43 +31,47 @@ function O(e) {
     user: s,
     displayProfile: O,
     guildId: C,
-    overrideBannerSrc: R,
-    profileType: g,
-    animateOnHover: L = !1,
-    hasProfileEffect: v = !1
-  } = e, D = S.default.isPremiumAtLeast(null == O ? void 0 : O.premiumType, N.PremiumTypes.TIER_2), [M, y] = r.useState(!1), P = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), U = E.GifAutoPlay.getSetting(), {
-    bannerSrc: b,
-    status: G
+    profileType: R,
+    overrideBannerSrc: g,
+    overrideBannerWidth: L,
+    children: v,
+    animateOnHover: D = !1,
+    hasProfileEffect: M = !1,
+    canUsePremiumCustomization: y = !1
+  } = e, P = y || S.default.isPremiumAtLeast(null == O ? void 0 : O.premiumType, N.PremiumTypes.TIER_2), [U, b] = r.useState(!1), G = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), w = E.GifAutoPlay.getSetting(), {
+    bannerSrc: k,
+    status: B
   } = (0, h.default)({
     displayProfile: O,
-    overrideBannerSrc: R,
-    size: (0, m.getUserBannerSize)(g),
-    canAnimate: L || !U ? M : P
-  }), w = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), k = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), B = (0, o.hex2int)((0, _.default)(s.getAvatarURL(C, k), w, !1)), V = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : B).hsl;
+    overrideBannerSrc: g,
+    size: (0, m.getUserBannerSize)(R),
+    canAnimate: D || !w ? U : G
+  }), V = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), x = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), F = (0, o.hex2int)((0, _.default)(s.getAvatarURL(C, x), V, !1)), H = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : F).hsl;
   return (0, i.jsx)(A.default, {
-    isPremium: D,
+    isPremium: P,
     hasThemeColors: null !== (n = null == O ? void 0 : O.canEditThemes) && void 0 !== n && n,
-    profileType: g,
-    hasBanner: null != b,
-    hasProfileEffect: v,
-    children: (0, i.jsx)("div", {
+    profileType: R,
+    hasBanner: null != k,
+    hasProfileEffect: M,
+    overrideBannerWidth: L,
+    children: (0, i.jsxs)("div", {
       className: a()(p.banner, p.divider, (0, m.getUserBannerStyles)({
-        profileType: g,
+        profileType: R,
         user: {
-          hasBanner: null != b,
-          isPremium: D,
-          hasProfileEffect: v
+          hasBanner: null != k,
+          isPremium: P,
+          hasProfileEffect: M
         }
       })),
-      onMouseMove: () => y(!0),
-      onMouseLeave: () => y(!1),
+      onMouseMove: () => b(!0),
+      onMouseLeave: () => b(!1),
       style: {
-        backgroundImage: null != b ? "url(".concat(b, ")") : void 0,
-        backgroundColor: G !== h.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : V
+        backgroundImage: null != k ? "url(".concat(k, ")") : void 0,
+        backgroundColor: B !== h.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : H
       },
-      children: !U && (0, f.isAnimatedImageURL)(b) && (0, i.jsx)(T.default, {
+      children: [!w && (0, f.isAnimatedImageURL)(k) && (0, i.jsx)(T.default, {
         className: p.gifTag
-      })
+      }), v]
     })
   })
 }
