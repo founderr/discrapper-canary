@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   QuestsCard: function() {
-    return p
+    return h
   },
   QuestsCardWrapper: function() {
-    return N
+    return p
   }
 }), n("47120");
 var s = n("735250"),
@@ -15,15 +15,15 @@ var s = n("735250"),
   o = n("113434"),
   u = n("569984"),
   d = n("497505"),
-  c = n("874137"),
-  E = n("87894"),
-  f = n("372113"),
+  c = n("602667"),
+  f = n("87894"),
+  E = n("372113"),
   _ = n("206044"),
-  T = n("266843"),
-  m = n("46140"),
+  m = n("266843"),
+  T = n("46140"),
   I = n("598762");
 
-function N(e) {
+function p(e) {
   let {
     questId: t,
     ...n
@@ -34,36 +34,36 @@ function N(e) {
       quest: a,
       ...n
     };
-    return (0, s.jsx)(p, {
+    return (0, s.jsx)(h, {
       ...e
     })
   }
 }
 
-function p(e) {
+function h(e) {
   let {
     quest: t,
     location: n,
     initiallyExpanded: i,
     contentPosition: u
-  } = e, [N, p] = a.useState(!1), S = a.useCallback(() => p(!0), []), C = a.useCallback(() => p(!1), []), A = (0, o.useIsQuestExpired)(t), {
-    containerRef: h,
-    size: g,
+  } = e, [p, h] = a.useState(!1), N = a.useCallback(() => h(!0), []), S = a.useCallback(() => h(!1), []), C = (0, o.useIsQuestExpired)(t), {
+    containerRef: g,
+    size: A,
     height: M
-  } = (0, T.useQuestCardSize)([t]), O = (0, r.useIsEligibleForConcurrentQuests)({
-    location: m.QuestsExperimentLocations.QUESTS_CARD
+  } = (0, m.useQuestCardSize)([t]), R = (0, r.useIsEligibleForConcurrentQuests)({
+    location: T.QuestsExperimentLocations.QUESTS_CARD
   }), {
-    expansionSpring: R,
-    isAnimating: v,
-    isExpanded: L,
-    toggleExpanded: x
-  } = (0, T.useQuestCardAnimation)({
-    initiallyExpanded: !O || i || (0, E.shouldQuestBeInitiallyExpanded)({
+    expansionSpring: v,
+    isAnimating: O,
+    isExpanded: x,
+    toggleExpanded: L
+  } = (0, m.useQuestCardAnimation)({
+    initiallyExpanded: !R || i || (0, f.shouldQuestBeInitiallyExpanded)({
       location: n,
       quest: t
     })
-  }), P = null != M ? M : E.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
-  return (0, s.jsx)(c.QuestContentImpressionTracker, {
+  }), D = null != M ? M : f.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
+  return (0, s.jsx)(c.QuestContentImpressionTrackerWeb, {
     questOrQuests: t,
     questContent: n,
     questContentPosition: u,
@@ -71,39 +71,39 @@ function p(e) {
     children: e => (0, s.jsx)(s.Fragment, {
       children: (0, s.jsxs)(l.animated.div, {
         style: {
-          maxHeight: n === d.QuestContent.QUESTS_EMBED ? void 0 : R.to({
+          maxHeight: n === d.QuestContent.QUESTS_EMBED ? void 0 : v.to({
             range: [0, 1],
-            output: [E.QUESTS_CARD_COLLAPSED_HEIGHT_PX, P]
+            output: [f.QUESTS_CARD_COLLAPSED_HEIGHT_PX, D]
           })
         },
         ref: t => {
-          e.current = t, h.current = t
+          e.current = t, g.current = t
         },
         className: I.questsCard,
-        onFocus: S,
-        onMouseEnter: S,
-        onBlur: C,
-        onMouseLeave: C,
+        onFocus: N,
+        onMouseEnter: N,
+        onBlur: S,
+        onMouseLeave: S,
         children: [(0, s.jsx)(_.default, {
-          isFocused: N,
-          isQuestExpired: A,
+          isFocused: p,
+          isQuestExpired: C,
           location: n,
           quest: t,
-          size: g,
-          expansionSpring: R,
-          isAnimating: v,
-          isExpanded: L,
-          isInConcurrentQuestExperiment: O,
+          size: A,
+          expansionSpring: v,
+          isAnimating: O,
+          isExpanded: x,
+          isInConcurrentQuestExperiment: R,
           contentPosition: u,
-          toggleExpanded: x
-        }), (0, s.jsx)(f.default, {
+          toggleExpanded: L
+        }), (0, s.jsx)(E.default, {
           quest: t,
-          isQuestExpired: A,
+          isQuestExpired: C,
           location: n,
-          size: g,
-          isFocused: N,
-          isExpanded: L,
-          isAnimating: v,
+          size: A,
+          isFocused: p,
+          isExpanded: x,
+          isAnimating: O,
           contentPosition: u
         })]
       })

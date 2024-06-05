@@ -25,7 +25,7 @@ var i = n("735250"),
   R = n("113434"),
   g = n("497505"),
   L = n("918701"),
-  v = n("874137"),
+  v = n("602667"),
   D = n("644646"),
   M = n("667105"),
   y = n("981631"),
@@ -158,7 +158,7 @@ t.default = function(e) {
       handleClickCta: ea,
       tileAssetType: "game"
     };
-  return (0, i.jsx)(v.QuestContentImpressionTracker, {
+  return (0, i.jsx)(v.QuestContentImpressionTrackerWeb, {
     questOrQuests: N,
     questContent: g.QuestContent.MEMBERS_LIST,
     trackGuildAndChannelMetadata: !0,
