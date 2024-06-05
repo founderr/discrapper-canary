@@ -2,6 +2,9 @@
 n.r(t), n.d(t, {
   isRTCVoiceStateDesyncExperimentEnabled: function() {
     return l
+  },
+  useIsRTCVoiceStateDesyncExperimentEnabled: function() {
+    return s
   }
 });
 let a = (0, n("818083").createExperiment)({
@@ -24,7 +27,16 @@ function l() {
   let {
     enabled: e
   } = a.getCurrentConfig({
-    location: "is_enabled"
+    location: "isRTCVoiceStateDesyncExperimentEnabled"
+  });
+  return e
+}
+
+function s() {
+  let {
+    enabled: e
+  } = a.useExperiment({
+    location: "useIsRTCVoiceStateDesyncExperimentEnabled"
   });
   return e
 }

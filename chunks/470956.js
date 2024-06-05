@@ -16,7 +16,8 @@ var a = n("470079"),
   u = n("413402");
 
 function d(e, t) {
-  let n = (0, s.useStateFromStoresArray)([o.default, r.default], () => o.default.getChannelId() !== e ? [] : r.default.desyncedVoiceStates);
+  let n = (0, u.useIsRTCVoiceStateDesyncExperimentEnabled)(),
+    i = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getChannelId() === e && n ? r.default.desyncedVoiceStates : null);
   return a.useMemo(() => (function(e, t) {
     if (!(0, u.isRTCVoiceStateDesyncExperimentEnabled)() || null == e || 0 === e.length) return t;
     let n = null != t ? [...t] : [];
@@ -28,16 +29,17 @@ function d(e, t) {
         return t
       }), 0, e)
     }), n
-  })(n, t), [n, t])
+  })(i, t), [i, t])
 }
 
-function c(e, t, n) {
-  let d = (0, s.useStateFromStoresArray)([o.default, r.default], () => o.default.getChannelId() !== e ? [] : r.default.desyncedParticipants);
+function c(e, t) {
+  let n = (0, u.useIsRTCVoiceStateDesyncExperimentEnabled)(),
+    d = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getChannelId() === e && n ? r.default.desyncedParticipants : null);
   return a.useMemo(() => (function(e, t) {
     if (!(0, u.isRTCVoiceStateDesyncExperimentEnabled)() || null == e || 0 === e.length) return t;
     let n = [...t];
     return e.forEach(e => {
       n.splice((0, l.sortedIndexBy)(n, e, e => (0, i.sortKey)(e)), 0, e)
     }), n
-  })(d, n), [d, n])
+  })(d, t), [d, t])
 }

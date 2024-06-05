@@ -1,58 +1,83 @@
 "use strict";
 n.r(t), n("47120"), n("724458");
-var a, l, s, i, r = n("442837"),
-  o = n("570140"),
-  u = n("189786"),
-  d = n("5192"),
-  c = n("594174"),
-  f = n("979651"),
-  h = n("938475"),
-  m = n("981631"),
-  p = n("354459");
-let E = null,
-  C = new Map,
-  g = new Map;
-class S extends(a = r.default.Store) {
-  initialize() {
-    this.waitFor(f.default, c.default)
+var a, l = n("442837"),
+  s = n("570140"),
+  i = n("189786"),
+  r = n("251625"),
+  o = n("5192"),
+  u = n("594174"),
+  d = n("979651"),
+  c = n("938475"),
+  f = n("981631"),
+  h = n("354459");
+
+function m(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[t] = n, e
+}
+class p {
+  values() {
+    return this.cachedValues(this.version)
   }
-  get desyncedVoiceStatesCount() {
-    return C.size
+  size() {
+    return this.data.size
   }
-  get desyncedVoiceStates() {
-    return Array.from(C.values())
+  set(e, t) {
+    this.data.get(e) !== t && (this.data.set(e, t), this.version++)
   }
-  get desyncedParticipants() {
-    return Array.from(g.values())
+  delete(e) {
+    this.data.delete(e) && this.version++
+  }
+  clear() {
+    0 !== this.data.size && (this.data.clear(), this.version++)
+  }
+  constructor() {
+    m(this, "version", 0), m(this, "data", new Map), m(this, "cachedValues", void 0), this.cachedValues = (0, r.cachedFunction)(e => Array.from(this.data.values()))
   }
 }
-i = "RTCConnectionDesyncStore", (s = "displayName") in(l = S) ? Object.defineProperty(l, s, {
-  value: i,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : l[s] = i, t.default = new S(o.default, {
+let E = new p,
+  C = new p,
+  g = null;
+class S extends(a = l.default.Store) {
+  initialize() {
+    this.waitFor(d.default, u.default)
+  }
+  get desyncedVoiceStatesCount() {
+    return E.size()
+  }
+  get desyncedVoiceStates() {
+    return E.values()
+  }
+  get desyncedParticipants() {
+    return C.values()
+  }
+}
+m(S, "displayName", "RTCConnectionDesyncStore"), t.default = new S(s.default, {
   CONNECTION_OPEN: function() {
-    C = new Map, g = new Map
+    E.clear(), C.clear()
   },
   RTC_CONNECTION_STATE: function(e) {
     let {
       state: t,
       channelId: n
     } = e;
-    if (t !== m.RTCConnectionStates.DISCONNECTED && E === n) return !1;
-    E = n, C = new Map, g = new Map
+    if (t !== f.RTCConnectionStates.DISCONNECTED && g === n) return !1;
+    g = n, E.clear(), C.clear()
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
     } = e;
-    return t.reduce((e, t) => {
+    return null != g && t.reduce((e, t) => {
       let {
         userId: n,
         channelId: a
       } = t;
-      return null != a && a === E ? (C.delete(n), !0) : e
+      return null != a && a === g ? (E.delete(n), C.delete(n), !0) : e
     }, !1)
   },
   RTC_CONNECTION_FLAGS: function(e) {
@@ -60,22 +85,22 @@ i = "RTCConnectionDesyncStore", (s = "displayName") in(l = S) ? Object.definePro
       userId: t,
       guildId: n,
       channelId: a
-    } = e, l = f.default.getVoiceStateForUser(t);
-    if ((null == l ? void 0 : l.channelId) === a && a === E) return !1;
-    let s = new u.default({
+    } = e, l = d.default.getVoiceStateForUser(t);
+    if ((null == l ? void 0 : l.channelId) === a && a === g) return !1;
+    let s = new i.default({
         userId: t,
         channelId: a
       }),
-      i = (0, h.makeSortedVoiceState)(s, null != n ? n : m.ME, t);
-    C.set(t, i);
-    let r = c.default.getUser(t);
-    if (null == r) return;
-    let o = {
-      type: p.ParticipantTypes.USER,
-      user: r,
-      id: r.id,
+      r = (0, c.makeSortedVoiceState)(s, null != n ? n : f.ME, t);
+    E.set(t, r);
+    let m = u.default.getUser(t);
+    if (null == m) return;
+    let p = {
+      type: h.ParticipantTypes.USER,
+      user: m,
+      id: m.id,
       streamId: null,
-      voiceState: new u.default({
+      voiceState: new i.default({
         userId: t,
         channelId: a
       }),
@@ -84,15 +109,15 @@ i = "RTCConnectionDesyncStore", (s = "displayName") in(l = S) ? Object.definePro
       lastSpoke: 0,
       soundsharing: !1,
       ringing: !1,
-      userNick: d.default.getName(n, a, r),
+      userNick: o.default.getName(n, a, m),
       localVideoDisabled: !1
     };
-    g.set(t, o)
+    C.set(t, p)
   },
   RTC_CONNECTION_CLIENT_DISCONNECT: function(e) {
     let {
       userId: t
     } = e;
-    C.delete(t)
+    E.delete(t)
   }
 })
