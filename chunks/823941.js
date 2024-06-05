@@ -22,8 +22,8 @@ var a = s("735250"),
   p = s("74538"),
   m = s("884697"),
   g = s("624377"),
-  h = s("141011"),
-  S = s("813083"),
+  S = s("141011"),
+  h = s("813083"),
   I = s("372654"),
   T = s("994896"),
   x = s("215023"),
@@ -31,7 +31,7 @@ var a = s("735250"),
   N = s("689938"),
   L = s("897246");
 let b = (0, m.getLogoSize)(96),
-  v = {
+  R = {
     [i.CollectiblesCategorySkuId.DISXCORE]: {
       left: () => s("136648"),
       right: () => s("850298")
@@ -79,7 +79,7 @@ let b = (0, m.getLogoSize)(96),
       right: () => s("959436")
     }
   },
-  R = e => {
+  v = e => {
     let {
       category: t
     } = e, {
@@ -116,7 +116,7 @@ function A(e) {
   let {
     category: i,
     index: o
-  } = e, u = v[i.skuId], c = o % 2 == 1, d = null !== (n = c ? null == u ? void 0 : u.left() : null == u ? void 0 : u.right()) && void 0 !== n ? n : (0, m.getCollectiblesAssetURL)(i.banner, {
+  } = e, u = R[i.skuId], c = o % 2 == 1, d = null !== (n = c ? null == u ? void 0 : u.left() : null == u ? void 0 : u.right()) && void 0 !== n ? n : (0, m.getCollectiblesAssetURL)(i.banner, {
     size: I.MAX_CONTENT_WIDTH,
     format: "jpg"
   }), f = c ? null == u ? void 0 : null === (t = u.leftOverflow) || void 0 === t ? void 0 : t.call(u) : null == u ? void 0 : null === (s = u.rightOverflow) || void 0 === s ? void 0 : s.call(u), {
@@ -150,7 +150,7 @@ function A(e) {
       style: {
         maxWidth: null === (l = x.categoryBannerOverrides[i.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
       }
-    }), (0, a.jsx)(S.default, {
+    }), (0, a.jsx)(h.default, {
       category: i,
       className: r()(L.limitedTimeBadge, {
         [L.limitedTimeBadgeLeft]: c
@@ -177,7 +177,7 @@ function P(e) {
   return p ? (0, a.jsx)(A, {
     category: l,
     index: c
-  }) : (0, a.jsxs)(h.default, {
+  }) : (0, a.jsxs)(S.default, {
     asset: l.banner,
     className: r()(L.shopBanner, n),
     style: null != d ? {
@@ -205,10 +205,10 @@ function P(e) {
         [L.blackSummary]: f
       }),
       variant: "text-md/normal",
-      children: l.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(R, {
+      children: l.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(v, {
         category: l
       }) : l.summary
-    }), !o && (0, a.jsx)(S.default, {
+    }), !o && (0, a.jsx)(h.default, {
       category: l,
       className: L.limitedTimeBadge,
       display: "banner"

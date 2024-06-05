@@ -33,20 +33,20 @@ function E(e) {
     })
   });
   let g = (0, o.extractPriceByPurchaseTypes)(t, d.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    h = !s && !(0, o.isBundleProduct)(t),
-    S = (0, o.isBundleProduct)(t) && s ? {
+    S = !s && !(0, o.isBundleProduct)(t),
+    h = (0, o.isBundleProduct)(t) && s ? {
       ...m,
       amount: l.original
     } : m;
   return (0, a.jsxs)("div", {
     className: n()(C.priceTagsContainer, E),
     children: [(0, a.jsx)(u.CollectiblesShopPriceTag, {
-      price: S,
+      price: h,
       discount: s ? o.NoDiscount : l,
       className: n()(C.price, {
         [C.striked]: s,
         [C.dimmed]: s,
-        [C.fullPrice]: h
+        [C.fullPrice]: S
       })
     }), null != g && (0, a.jsx)(u.CollectiblesShopPriceTag, {
       price: g,
@@ -59,12 +59,12 @@ function E(e) {
             text: e
           })
         })
-      }) : h ? e => f.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
+      }) : S ? e => f.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
       className: n()(C.price, {
         [C.dimmed]: !s,
-        [C.fullPrice]: h
+        [C.fullPrice]: S
       }),
       variant: s ? void 0 : "text-xs/semibold",
       icon: (0, a.jsx)(r.Tooltip, {
@@ -77,7 +77,7 @@ function E(e) {
           return (0, a.jsx)(i.default, {
             ...t,
             className: n()(C.premiumIcon, {
-              [C.fullPrice]: h
+              [C.fullPrice]: S
             })
           })
         }

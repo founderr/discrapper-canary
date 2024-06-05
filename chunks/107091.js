@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return v
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   p = s("372654"),
   m = s("715627"),
   g = s("300284"),
-  h = s("642619"),
-  S = s("598"),
+  S = s("642619"),
+  h = s("598"),
   I = s("333867"),
   T = s("329067"),
   x = s("981631"),
@@ -33,7 +33,7 @@ let b = {
     yMin: -150,
     yMax: 0
   },
-  v = e => {
+  R = e => {
     let {
       children: t,
       ...s
@@ -46,11 +46,11 @@ let b = {
     })
   };
 
-function R(e) {
+function v(e) {
   let {
     product: t,
     paymentSource: s,
-    onPurchaseComplete: R,
+    onPurchaseComplete: v,
     onUse: A,
     onError: P,
     onReviewPurchase: O,
@@ -80,7 +80,7 @@ function R(e) {
     }),
     z = {
       onPurchaseComplete: () => {
-        G(!0), R()
+        G(!0), v()
       },
       onError: e => {
         P(e), Y(!0)
@@ -132,7 +132,7 @@ function R(e) {
           variant: "text-xs/normal",
           children: N.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
-      }), (0, a.jsx)(v, {
+      }), (0, a.jsx)(R, {
         style: V,
         onClick: () => {
           if (A(), (0, u.popLayer)(), K(), (null == B ? void 0 : B.type) === r.CollectiblesItemType.AVATAR_DECORATION) {
@@ -141,7 +141,7 @@ function R(e) {
               analyticsLocations: F
             });
             return
-          }(null == B ? void 0 : B.type) === r.CollectiblesItemType.PROFILE_EFFECT && (0, h.openProfileEffectModal)({
+          }(null == B ? void 0 : B.type) === r.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
             initialSelectedEffectId: B.id,
             analyticsLocations: F
           })
@@ -154,7 +154,7 @@ function R(e) {
         variant: "text-lg/bold",
         className: L.productName,
         children: t.name
-      }), (0, a.jsx)(S.PaymentContextProvider, {
+      }), (0, a.jsx)(h.PaymentContextProvider, {
         loadId: j,
         stepConfigs: [],
         applicationId: x.COLLECTIBLES_APPLICATION_ID,

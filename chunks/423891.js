@@ -57,37 +57,37 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
       U = A ? A.length : 0;
     if (1 == l)
       for (var I = 0; I < t; I++) {
-        for (var R = I * o, _ = I * r, v = 0; v < r; v++) {
-          var y = _ + v << 2,
-            S = e[R + (v >> 3)] >> 7 - ((7 & v) << 0) & 1,
-            N = 3 * S;
-          f[y] = m[N], f[y + 1] = m[N + 1], f[y + 2] = m[N + 2], f[y + 3] = S < U ? A[S] : 255
+        for (var R = I * o, S = I * r, v = 0; v < r; v++) {
+          var y = S + v << 2,
+            _ = e[R + (v >> 3)] >> 7 - ((7 & v) << 0) & 1,
+            N = 3 * _;
+          f[y] = m[N], f[y + 1] = m[N + 1], f[y + 2] = m[N + 2], f[y + 3] = _ < U ? A[_] : 255
         }
       }
     if (2 == l)
       for (var I = 0; I < t; I++) {
-        for (var R = I * o, _ = I * r, v = 0; v < r; v++) {
-          var y = _ + v << 2,
-            S = e[R + (v >> 2)] >> 6 - ((3 & v) << 1) & 3,
-            N = 3 * S;
-          f[y] = m[N], f[y + 1] = m[N + 1], f[y + 2] = m[N + 2], f[y + 3] = S < U ? A[S] : 255
+        for (var R = I * o, S = I * r, v = 0; v < r; v++) {
+          var y = S + v << 2,
+            _ = e[R + (v >> 2)] >> 6 - ((3 & v) << 1) & 3,
+            N = 3 * _;
+          f[y] = m[N], f[y + 1] = m[N + 1], f[y + 2] = m[N + 2], f[y + 3] = _ < U ? A[_] : 255
         }
       }
     if (4 == l)
       for (var I = 0; I < t; I++) {
-        for (var R = I * o, _ = I * r, v = 0; v < r; v++) {
-          var y = _ + v << 2,
-            S = e[R + (v >> 1)] >> 4 - ((1 & v) << 2) & 15,
-            N = 3 * S;
-          f[y] = m[N], f[y + 1] = m[N + 1], f[y + 2] = m[N + 2], f[y + 3] = S < U ? A[S] : 255
+        for (var R = I * o, S = I * r, v = 0; v < r; v++) {
+          var y = S + v << 2,
+            _ = e[R + (v >> 1)] >> 4 - ((1 & v) << 2) & 15,
+            N = 3 * _;
+          f[y] = m[N], f[y + 1] = m[N + 1], f[y + 2] = m[N + 2], f[y + 3] = _ < U ? A[_] : 255
         }
       }
     if (8 == l)
       for (var v = 0; v < a; v++) {
         var y = v << 2,
-          S = e[v],
-          N = 3 * S;
-        f[y] = m[N], f[y + 1] = m[N + 1], f[y + 2] = m[N + 2], f[y + 3] = S < U ? A[S] : 255
+          _ = e[v],
+          N = 3 * _;
+        f[y] = m[N], f[y + 1] = m[N + 1], f[y + 2] = m[N + 2], f[y + 3] = _ < U ? A[_] : 255
       }
   } else if (4 == c) {
     if (8 == l)
@@ -228,23 +228,23 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
     var A = Math.ceil(b * a / 8);
     i.decode._filterZero(e, r, c, b, y);
     for (var U = 0, I = l[h]; I < n;) {
-      for (var R = u[h], _ = c + U * A << 3; R < t;) {
+      for (var R = u[h], S = c + U * A << 3; R < t;) {
         if (1 == a) {
-          var S = e[_ >> 3];
-          S = S >> 7 - (7 & _) & 1, s[I * f + (R >> 3)] |= S << 7 - ((3 & R) << 0)
+          var _ = e[S >> 3];
+          _ = _ >> 7 - (7 & S) & 1, s[I * f + (R >> 3)] |= _ << 7 - ((3 & R) << 0)
         }
         if (2 == a) {
-          var S = e[_ >> 3];
-          S = S >> 6 - (7 & _) & 3, s[I * f + (R >> 2)] |= S << 6 - ((3 & R) << 1)
+          var _ = e[S >> 3];
+          _ = _ >> 6 - (7 & S) & 3, s[I * f + (R >> 2)] |= _ << 6 - ((3 & R) << 1)
         }
         if (4 == a) {
-          var S = e[_ >> 3];
-          S = S >> 4 - (7 & _) & 15, s[I * f + (R >> 1)] |= S << 4 - ((1 & R) << 2)
+          var _ = e[S >> 3];
+          _ = _ >> 4 - (7 & S) & 15, s[I * f + (R >> 1)] |= _ << 4 - ((1 & R) << 2)
         }
         if (a >= 8) {
-          for (var N = I * f + R * o, T = 0; T < o; T++) s[N + T] = e[(_ >> 3) + T]
+          for (var N = I * f + R * o, T = 0; T < o; T++) s[N + T] = e[(S >> 3) + T]
         }
-        _ += a, R += g
+        S += a, R += g
       }
       U++, I += p
     }
@@ -353,8 +353,8 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
       U = n[d + 2] * w,
       I = 1 - p,
       R = p + w * I,
-      _ = 0 == R ? 0 : 1 / R;
-    n[d + 3] = 255 * R, n[d + 0] = (g + m * I) * _, n[d + 1] = (b + A * I) * _, n[d + 2] = (y + U * I) * _
+      S = 0 == R ? 0 : 1 / R;
+    n[d + 3] = 255 * R, n[d + 0] = (g + m * I) * S, n[d + 1] = (b + A * I) * S, n[d + 2] = (y + U * I) * S
   } else if (2 == s) {
     var p = e[u + 3],
       g = e[u],
@@ -407,14 +407,14 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
       v(f, l += y, d(f, l - y - 4, y + 4)), l += 4
     }
   }
-  for (var R = 0, _ = 0; _ < g.frames.length; _++) {
-    var S = g.frames[_];
-    b && (v(f, l, 26), p(f, l += 4, "fcTL"), v(f, l += 4, R++), v(f, l += 4, S.rect.width), v(f, l += 4, S.rect.height), v(f, l += 4, S.rect.x), v(f, l += 4, S.rect.y), h(f, l += 4, a[_]), h(f, l += 2, 1e3), f[l += 2] = S.dispose, f[++l] = S.blend, v(f, ++l, d(f, l - 30, 30)), l += 4);
-    var N = S.cimg,
+  for (var R = 0, S = 0; S < g.frames.length; S++) {
+    var _ = g.frames[S];
+    b && (v(f, l, 26), p(f, l += 4, "fcTL"), v(f, l += 4, R++), v(f, l += 4, _.rect.width), v(f, l += 4, _.rect.height), v(f, l += 4, _.rect.x), v(f, l += 4, _.rect.y), h(f, l += 4, a[S]), h(f, l += 2, 1e3), f[l += 2] = _.dispose, f[++l] = _.blend, v(f, ++l, d(f, l - 30, 30)), l += 4);
+    var N = _.cimg,
       y = N.length;
-    v(f, l, y + (0 == _ ? 0 : 4));
+    v(f, l, y + (0 == S ? 0 : 4));
     var T = l += 4;
-    p(f, l, 0 == _ ? "IDAT" : "fdAT"), l += 4, 0 != _ && (v(f, l, R++), l += 4);
+    p(f, l, 0 == S ? "IDAT" : "fdAT"), l += 4, 0 != S && (v(f, l, R++), l += 4);
     for (var c = 0; c < y; c++) f[l + c] = N[c];
     v(f, l += y, d(f, T, l - T)), l += 4
   }
@@ -456,8 +456,8 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
   U <= 256 && !1 == o && (s = U <= 2 ? 1 : U <= 4 ? 2 : U <= 16 ? 4 : 8, a && (s = 8), p = !0);
   for (var I = [], u = 0; u < e.length; u++) {
     var R = new Uint8Array(e[u]),
-      _ = new Uint32Array(R.buffer),
-      S = 0,
+      S = new Uint32Array(R.buffer),
+      _ = 0,
       N = 0,
       T = r,
       M = t,
@@ -467,15 +467,15 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
         for (var O = new Uint8Array(e[u - 1 - C]), z = new Uint32Array(e[u - 1 - C]), L = r, B = t, P = -1, k = -1, G = 0; G < t; G++)
           for (var F = 0; F < r; F++) {
             var h = G * r + F;
-            _[h] != z[h] && (F < L && (L = F), F > P && (P = F), G < B && (B = G), G > k && (k = G))
+            S[h] != z[h] && (F < L && (L = F), F > P && (P = F), G < B && (B = G), G > k && (k = G))
           }
         var Z = -1 == P ? 1 : (P - L + 1) * (k - B + 1);
-        Z < D && (D = Z, E = C, -1 == P ? (S = N = 0, T = M = 1) : (S = L, N = B, T = P - L + 1, M = k - B + 1))
+        Z < D && (D = Z, E = C, -1 == P ? (_ = N = 0, T = M = 1) : (_ = L, N = B, T = P - L + 1, M = k - B + 1))
       }
       var O = new Uint8Array(e[u - 1 - E]);
       1 == E && (I[I.length - 1].dispose = 2);
       var H = new Uint8Array(T * M * 4);
-      new Uint32Array(H.buffer), i._copyTile(O, r, t, H, T, M, -S, -N, 0), i._copyTile(R, r, t, H, T, M, -S, -N, 3) ? (i._copyTile(R, r, t, H, T, M, -S, -N, 2), q = 1) : (i._copyTile(R, r, t, H, T, M, -S, -N, 0), q = 0), R = H, _ = new Uint32Array(R.buffer)
+      new Uint32Array(H.buffer), i._copyTile(O, r, t, H, T, M, -_, -N, 0), i._copyTile(R, r, t, H, T, M, -_, -N, 3) ? (i._copyTile(R, r, t, H, T, M, -_, -N, 2), q = 1) : (i._copyTile(R, r, t, H, T, M, -_, -N, 0), q = 0), R = H, S = new Uint32Array(R.buffer)
     }
     var j = 4 * T;
     if (U <= 256 && !1 == o) {
@@ -484,13 +484,13 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
         var h = G * j,
           K = G * T;
         if (8 == s)
-          for (var F = 0; F < T; F++) H[h + F] = g[_[K + F]];
+          for (var F = 0; F < T; F++) H[h + F] = g[S[K + F]];
         else if (4 == s)
-          for (var F = 0; F < T; F++) H[h + (F >> 1)] |= g[_[K + F]] << 4 - (1 & F) * 4;
+          for (var F = 0; F < T; F++) H[h + (F >> 1)] |= g[S[K + F]] << 4 - (1 & F) * 4;
         else if (2 == s)
-          for (var F = 0; F < T; F++) H[h + (F >> 2)] |= g[_[K + F]] << 6 - (3 & F) * 2;
+          for (var F = 0; F < T; F++) H[h + (F >> 2)] |= g[S[K + F]] << 6 - (3 & F) * 2;
         else if (1 == s)
-          for (var F = 0; F < T; F++) H[h + (F >> 3)] |= g[_[K + F]] << 7 - (7 & F) * 1
+          for (var F = 0; F < T; F++) H[h + (F >> 3)] |= g[S[K + F]] << 7 - (7 & F) * 1
       }
       R = H, f = 3, c = 1
     } else if (!1 == p && 1 == e.length) {
@@ -503,7 +503,7 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
     }
     I.push({
       rect: {
-        x: S,
+        x: _,
         y: N,
         width: T,
         height: M
@@ -626,8 +626,8 @@ t("444675"), a = {}, e.exports = a, n = t("457854"), i = a, o = n, i.toRGBA8 = f
     return r.bst.N - e.bst.N
   });
   for (var A = 0; A < n.length; A++) {
-    for (var U = i.quantize.planeDst, I = new Uint8Array(n[A].buffer), R = new Uint32Array(n[A].buffer), _ = I.length, o = 0; o < _; o += 4) {
-      for (var S = I[o] * (1 / 255), N = I[o + 1] * (1 / 255), T = I[o + 2] * (1 / 255), M = I[o + 3] * (1 / 255), q = v; q.left;) q = 0 >= U(q.est, S, N, T, M) ? q.left : q.right;
+    for (var U = i.quantize.planeDst, I = new Uint8Array(n[A].buffer), R = new Uint32Array(n[A].buffer), S = I.length, o = 0; o < S; o += 4) {
+      for (var _ = I[o] * (1 / 255), N = I[o + 1] * (1 / 255), T = I[o + 2] * (1 / 255), M = I[o + 3] * (1 / 255), q = v; q.left;) q = 0 >= U(q.est, _, N, T, M) ? q.left : q.right;
       R[o >> 2] = q.est.rgba
     }
     n[A] = R.buffer

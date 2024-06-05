@@ -22,8 +22,8 @@ var a = s("180650"),
   p = s("55817"),
   m = s("696228"),
   g = s("202796"),
-  h = s("570593"),
-  S = s("199546"),
+  S = s("570593"),
+  h = s("199546"),
   I = s("613540"),
   T = s("769411");
 let x = {
@@ -51,7 +51,7 @@ let x = {
     }
   }, {
     backgroundStaticSrc: T,
-    backgroundVideoSrc: S,
+    backgroundVideoSrc: h,
     logoSrc: I,
     textColor: (0, l.getColor)(n.Color.WHITE_100),
     badge: {
@@ -63,7 +63,7 @@ let x = {
       categorySkuId: a.CollectiblesCategorySkuId.GALAXY
     }
   }, {
-    backgroundStaticSrc: h,
+    backgroundStaticSrc: S,
     overflowSrcStatic: g,
     logoSrc: m,
     textColor: (0, l.getColor)(n.Color.WHITE_100),

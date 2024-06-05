@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   CollectiblesShopHeaderBar: function() {
-    return h
+    return S
   }
 });
 var a = s("735250"),
@@ -41,7 +41,7 @@ function g(e) {
   })
 }
 
-function h(e) {
+function S(e) {
   let {
     isFullScreen: t,
     isLayer: s,
@@ -50,13 +50,13 @@ function h(e) {
     newShopLogoEnabled: d
   } = (0, E.useCollectiblesCondensedBannersExperiment)({
     location: "CollectiblesShop"
-  }), h = (0, o.default)();
+  }), S = (0, o.default)();
   return d ? (0, a.jsx)(g, {
     isLayer: s,
     onClose: n,
     isFullScreen: t
   }) : (0, a.jsxs)(u.default, {
-    className: r()((0, f.getThemeClass)(h), m.headerBar, {
+    className: r()((0, f.getThemeClass)(S), m.headerBar, {
       [m.fullscreenHeaderBar]: t
     }),
     toolbar: t ? null : (0, a.jsx)(l.Fragment, {}),

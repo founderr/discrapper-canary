@@ -17,8 +17,8 @@ var a, l, n = s("735250"),
   p = s("442837"),
   m = s("481060"),
   g = s("451478"),
-  h = s("259580"),
-  S = s("689938"),
+  S = s("259580"),
+  h = s("689938"),
   I = s("816124");
 let T = {
   mass: 1,
@@ -45,10 +45,10 @@ let x = e => {
         look: m.Button.Looks.BLANK,
         className: c,
         onClick: l,
-        "aria-label": S.default.Messages.PAGINATION_PREVIOUS,
-        children: (0, n.jsx)(h.default, {
+        "aria-label": h.default.Messages.PAGINATION_PREVIOUS,
+        children: (0, n.jsx)(S.default, {
           className: I.paginationButtonIcon,
-          direction: h.default.Directions.LEFT
+          direction: S.default.Directions.LEFT
         })
       }), (0, n.jsx)("div", {
         className: I.paginationIndicatorContainer,
@@ -59,7 +59,7 @@ let x = e => {
           className: u()(I.paginationIndicatorButton, {
             [I.selected]: e === t
           }),
-          "aria-label": S.default.Messages.PAGINATION_SLIDE_LABEL.format({
+          "aria-label": h.default.Messages.PAGINATION_SLIDE_LABEL.format({
             pageNumber: e + 1
           }),
           children: (0, n.jsx)("div", {
@@ -72,10 +72,10 @@ let x = e => {
         look: m.Button.Looks.BLANK,
         className: c,
         onClick: a,
-        "aria-label": S.default.Messages.PAGINATION_NEXT,
-        children: (0, n.jsx)(h.default, {
+        "aria-label": h.default.Messages.PAGINATION_NEXT,
+        children: (0, n.jsx)(S.default, {
           className: I.paginationButtonIcon,
-          direction: h.default.Directions.RIGHT
+          direction: S.default.Directions.RIGHT
         })
       })]
     })
@@ -91,23 +91,23 @@ let x = e => {
       paginationButtonClassName: f,
       delay: C,
       initialPaused: E = !1,
-      springConfig: h
-    } = e, [S, _] = (0, r.useState)(0), [N, L] = (0, r.useState)(!1), b = i().useCallback(() => L(!0), []), v = i().useCallback(() => L(!1), []), R = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), A = null != C && !E && !N && R, P = i().useCallback(e => (t.length + S + e) % t.length, [t, S]), O = i().useCallback(d()((e, s, n) => {
+      springConfig: S
+    } = e, [h, _] = (0, r.useState)(0), [N, L] = (0, r.useState)(!1), b = i().useCallback(() => L(!0), []), R = i().useCallback(() => L(!1), []), v = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), A = null != C && !E && !N && v, P = i().useCallback(e => (t.length + h + e) % t.length, [t, h]), O = i().useCallback(d()((e, s, n) => {
       null != n && (null == a || a(t[e], s, e, n)), null == l || l(t[e], s, e), _(e)
     }, 500), [t, a, l]);
     return (0, r.useEffect)(() => {
       if (A) {
         let e = P(1),
-          t = setInterval(() => O(e, S), C);
+          t = setInterval(() => O(e, h), C);
         return () => clearInterval(t)
       }
-    }, [A, C, S, P, O]), (0, n.jsxs)("div", {
+    }, [A, C, h, P, O]), (0, n.jsxs)("div", {
       className: u()(I.carouselContainer, o),
       onMouseEnter: b,
-      onMouseLeave: v,
+      onMouseLeave: R,
       children: [(0, n.jsx)(m.Slides, {
-        activeSlide: String(S),
-        springConfig: null != h ? h : T,
+        activeSlide: String(h),
+        springConfig: null != S ? S : T,
         fadeInOut: !0,
         children: t.map((e, t) => (0, n.jsx)(m.Slide, {
           id: String(t),
@@ -119,16 +119,16 @@ let x = e => {
       }), t.length > 1 && (0, n.jsx)(x, {
         className: c,
         paginationButtonClassName: f,
-        currentSlideIndex: S,
+        currentSlideIndex: h,
         numSlides: t.length,
         onNext: () => {
-          O(P(1), S, "NEXT")
+          O(P(1), h, "NEXT")
         },
         onPrevious: () => {
-          O(P(11), S, "PREVIOUS")
+          O(P(11), h, "PREVIOUS")
         },
         onIndicatorClick: e => {
-          O(e, S, "GO_TO_SLIDE")
+          O(e, h, "GO_TO_SLIDE")
         }
       })]
     })

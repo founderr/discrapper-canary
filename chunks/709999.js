@@ -15,8 +15,8 @@ var a = s("735250"),
   p = s("37234"),
   m = s("727637"),
   g = s("100527"),
-  h = s("906732"),
-  S = s("1585"),
+  S = s("906732"),
+  h = s("1585"),
   I = s("333867"),
   T = s("197115"),
   x = s("300284"),
@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("642619"),
   L = s("210887"),
   b = s("725808"),
-  v = s("794358"),
-  R = s("466111"),
+  R = s("794358"),
+  v = s("466111"),
   A = s("26290"),
   P = s("74538"),
   O = s("335131"),
@@ -73,7 +73,7 @@ let z = e => {
       innerClassName: K.previewButtonInner,
       "aria-label": V.default.Messages.PREVIEW,
       ...s,
-      children: (0, a.jsx)(v.default, {
+      children: (0, a.jsx)(R.default, {
         width: 24,
         height: 24
       })
@@ -85,10 +85,10 @@ t.default = function(e) {
     user: s,
     category: n,
     onMount: i,
-    isGiftEasterEggEnabled: v
+    isGiftEasterEggEnabled: R
   } = e, {
     analyticsLocations: X
-  } = (0, h.default)(g.default.COLLECTIBLES_SHOP_CARD), q = l.useRef(null), Q = (0, m.default)(q), [$, J] = l.useState(!1), ee = Q || $, [et] = t.items, {
+  } = (0, S.default)(g.default.COLLECTIBLES_SHOP_CARD), q = l.useRef(null), Q = (0, m.default)(q), [$, J] = l.useState(!1), ee = Q || $, [et] = t.items, {
     backgroundColors: es
   } = (0, k.default)(t.styles), ea = P.default.canUseCollectibles(s), el = (0, y.getFormattedPriceForCollectiblesProduct)(t, ea, !1), en = l.useMemo(() => (0, y.getProductDiscount)(t, ea), [t, ea]), er = (0, y.isPremiumCollectiblesProduct)(t), ei = (0, y.isFreeCollectiblesProduct)(t), {
     isPurchased: eo,
@@ -112,7 +112,7 @@ t.default = function(e) {
     ep = l.useRef(null),
     em = () => {
       if ((0, p.popLayer)(), eE(), t.type === c.CollectiblesItemType.AVATAR_DECORATION && null != et) {
-        o()(et.type === t.type, "product type is equivlant to first item's check for avatar deco"), (0, S.openAvatarDecorationModal)({
+        o()(et.type === t.type, "product type is equivlant to first item's check for avatar deco"), (0, h.openAvatarDecorationModal)({
           initialSelectedDecoration: et,
           analyticsLocations: X
         });
@@ -132,8 +132,8 @@ t.default = function(e) {
         returnRef: ep
       })
     },
-    eh = eg(g.default.COLLECTIBLES_SHOP_CARD),
-    eS = eg(g.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eS = eg(g.default.COLLECTIBLES_SHOP_CARD),
+    eh = eg(g.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eI = () => (0, a.jsx)("div", {
       className: K.hoverUpsellContainer,
       children: (0, a.jsx)(T.default, {
@@ -159,11 +159,11 @@ t.default = function(e) {
       className: K.priceTag
     }),
     ex = () => er ? null : ei ? (0, a.jsx)(Z, {
-      onClick: eS
+      onClick: eh
     }) : (0, a.jsx)(D.default, {
       product: t,
       returnRef: q,
-      isGiftEasterEggEnabled: v,
+      isGiftEasterEggEnabled: R,
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
@@ -210,7 +210,7 @@ t.default = function(e) {
         [K.partiallyOwned]: eu
       }),
       onBlur: () => J(!1),
-      onClick: eh,
+      onClick: eS,
       style: null != es ? {
         backgroundColor: ef ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
@@ -224,7 +224,7 @@ t.default = function(e) {
         children: e => (0, a.jsx)(A.TextBadge, {
           ...e,
           className: K.premiumWheelBadge,
-          text: (0, a.jsx)(R.default, {
+          text: (0, a.jsx)(v.default, {
             className: K.premiumWheel
           })
         })
