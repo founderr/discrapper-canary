@@ -15,7 +15,7 @@ s.r(t), s.d(t, {
   useViewableSettingsFilterFromSearch: function() {
     return R
   }
-}), s("536091"), s("47120"), s("653041");
+}), s("639576"), s("536091"), s("47120"), s("653041");
 var a = s("470079"),
   n = s("442837"),
   l = s("704215"),
@@ -38,32 +38,34 @@ var a = s("470079"),
   A = s("726985"),
   h = s("689938");
 
-function O() {
-  return [{
-    header: h.default.Messages.USER_SETTINGS,
-    settings: [A.WebSetting.SEARCH_BAR, A.WebSetting.ACCOUNT, A.WebSetting.GAMES, A.WebSetting.PROFILE_CUSTOMIZATION, A.WebSetting.PRIVACY_AND_SAFETY, A.WebSetting.PRIVACY_FAMILY_CENTER, A.WebSetting.AUTHORIZED_APPS, A.WebSetting.SESSIONS, A.WebSetting.CONNECTIONS, A.WebSetting.CLIPS, A.WebSetting.FRIEND_REQUESTS]
-  }, {
-    header: h.default.Messages.BILLING_SETTINGS,
-    divider: !0,
-    settings: [A.WebSetting.PREMIUM, A.WebSetting.GUILD_BOOSTING, A.WebSetting.SUBSCRIPTIONS, A.WebSetting.GIFT_INVENTORY, A.WebSetting.BILLING]
-  }, {
-    header: h.default.Messages.APP_SETTINGS,
-    divider: !0,
-    settings: [A.WebSetting.APPEARANCE, A.WebSetting.ACCESSIBILITY, A.WebSetting.VOICE_AND_VIDEO, A.WebSetting.POGGERMODE, A.WebSetting.CHAT, A.WebSetting.NOTIFICATIONS, A.WebSetting.KEYBINDS, A.WebSetting.LANGUAGE, A.WebSetting.WINDOW_SETTINGS, A.WebSetting.LINUX_SETTINGS, A.WebSetting.STREAMER_MODE, A.WebSetting.SPEED_TEST, A.WebSetting.SETTINGS_ADVANCED]
-  }, {
-    header: h.default.Messages.ACTIVITY_SETTINGS,
-    divider: !0,
-    settings: [A.WebSetting.ACTIVITY_PRIVACY, A.WebSetting.REGISTERED_GAMES, A.WebSetting.OVERLAY]
-  }, {
-    divider: !0,
-    settings: [A.WebSetting.CHANGELOG, A.WebSetting.MERCHANDISE, A.WebSetting.HYPESQUAD, A.WebSetting.EXPERIMENTS, A.WebSetting.DEVELOPER_OPTIONS, A.WebSetting.HOTSPOT_OPTIONS, A.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, A.WebSetting.PAYMENT_FLOW_MODALS, A.WebSetting.DESIGN_SYSTEMS, A.WebSetting.TEXT_PLAYGROUND, A.WebSetting.TEXT_COMPONENTS, A.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, A.WebSetting.QUEST_PREVIEW_TOOL]
-  }, {
-    divider: !0,
-    settings: [A.WebSetting.LOGOUT]
-  }, {
-    divider: !0,
-    settings: [A.WebSetting.SOCIAL_LINKS, A.WebSetting.CLIENT_DEBUG_INFO]
-  }]
+function O(e) {
+  let t = [{
+      header: h.default.Messages.USER_SETTINGS,
+      settings: [A.WebSetting.SEARCH_BAR, A.WebSetting.ACCOUNT, A.WebSetting.GAMES, A.WebSetting.PROFILE_CUSTOMIZATION, A.WebSetting.PRIVACY_AND_SAFETY, A.WebSetting.PRIVACY_FAMILY_CENTER, A.WebSetting.AUTHORIZED_APPS, A.WebSetting.SESSIONS, A.WebSetting.CONNECTIONS, A.WebSetting.CLIPS, A.WebSetting.FRIEND_REQUESTS]
+    }, {
+      header: h.default.Messages.BILLING_SETTINGS,
+      divider: !0,
+      settings: [A.WebSetting.PREMIUM, A.WebSetting.GUILD_BOOSTING, A.WebSetting.SUBSCRIPTIONS, A.WebSetting.GIFT_INVENTORY, A.WebSetting.BILLING]
+    }, {
+      header: h.default.Messages.APP_SETTINGS,
+      divider: !0,
+      settings: [A.WebSetting.APPEARANCE, A.WebSetting.ACCESSIBILITY, A.WebSetting.VOICE_AND_VIDEO, A.WebSetting.POGGERMODE, A.WebSetting.CHAT, A.WebSetting.NOTIFICATIONS, A.WebSetting.KEYBINDS, A.WebSetting.LANGUAGE, A.WebSetting.WINDOW_SETTINGS, A.WebSetting.LINUX_SETTINGS, A.WebSetting.STREAMER_MODE, A.WebSetting.SPEED_TEST, A.WebSetting.SETTINGS_ADVANCED]
+    }, {
+      divider: !0,
+      settings: [A.WebSetting.CHANGELOG, A.WebSetting.MERCHANDISE, A.WebSetting.HYPESQUAD, A.WebSetting.EXPERIMENTS, A.WebSetting.DEVELOPER_OPTIONS, A.WebSetting.HOTSPOT_OPTIONS, A.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, A.WebSetting.PAYMENT_FLOW_MODALS, A.WebSetting.DESIGN_SYSTEMS, A.WebSetting.TEXT_PLAYGROUND, A.WebSetting.TEXT_COMPONENTS, A.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, A.WebSetting.QUEST_PREVIEW_TOOL]
+    }, {
+      divider: !0,
+      settings: [A.WebSetting.LOGOUT]
+    }, {
+      divider: !0,
+      settings: [A.WebSetting.SOCIAL_LINKS, A.WebSetting.CLIENT_DEBUG_INFO]
+    }],
+    s = {
+      header: h.default.Messages.ACTIVITY_SETTINGS,
+      divider: !0,
+      settings: [A.WebSetting.ACTIVITY_PRIVACY, A.WebSetting.REGISTERED_GAMES, A.WebSetting.OVERLAY]
+    };
+  return e ? t : t.toSpliced(3, 0, s)
 }
 
 function p() {
@@ -187,24 +189,33 @@ function x(e, t, s) {
 
 function M() {
   let e = p(),
-    t = a.useMemo(() => O(), []);
-  return a.useMemo(() => x(t, e), [t, e])
+    {
+      shouldMergeGameSettings: t
+    } = N.GameSettingsMergeExperiment.useExperiment({
+      location: "settings"
+    }),
+    s = a.useMemo(() => O(t), [t]);
+  return a.useMemo(() => x(s, e), [s, e])
 }
 
 function D(e) {
   let t = p(),
-    s = a.useMemo(() => (function() {
-      let e = O();
-      return [{
+    s = function() {
+      let {
+        shouldMergeGameSettings: e
+      } = N.GameSettingsMergeExperiment.useExperiment({
+        location: "settings"
+      }), t = O(e);
+      return a.useMemo(() => [{
         header: h.default.Messages.USER_SETTINGS,
-        settings: [...e.map(e => {
+        settings: [...t.map(e => {
           let {
             settings: t
           } = e;
           return t
         }).flat(1), A.WebSetting.SEARCH_NO_RESULTS]
-      }]
-    })(), []);
+      }], [t])
+    }();
   return a.useMemo(() => x(s, t, new Set(e)), [s, t, e])
 }
 
