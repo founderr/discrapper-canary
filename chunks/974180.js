@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   MESSAGE_SOUND_VOLUME: function() {
     return j
   }
-}), n("653041");
+}), n("47120"), n("653041");
 var l, i = n("149765"),
   a = n("442837"),
   u = n("433517"),
@@ -25,8 +25,8 @@ var l, i = n("149765"),
   S = n("11352"),
   C = n("671105"),
   A = n("703656"),
-  p = n("359110"),
-  h = n("922482"),
+  h = n("359110"),
+  p = n("922482"),
   O = n("427679"),
   y = n("488131"),
   m = n("695346"),
@@ -64,7 +64,7 @@ let X = "message1",
   K = "discord_dismissed_notification_shown",
   z = document.hasFocus(),
   Z = null,
-  $ = [],
+  $ = new Set,
   ee = ["FR", "GF", "PF", "TF", "RE", "GP", "MQ", "YT", "NC", "PM", "WF"],
   et = new class {
     track(e, t) {
@@ -144,11 +144,11 @@ q(ei, "displayName", "NotificationStore"), new ei(s.default, __OVERLAY__ ? {} : 
       N = D.default.getNotifyMessagesInSelectedChannel() && (0, k.shouldNotifyForSelectedChannel)(d, u);
     if (!g && !N || d.type === W.MessageTypes.CHANGELOG && (null == d.changelog_id || _.default.latestChangelogId() !== d.changelog_id)) return !1;
     let A = !D.default.isSoundDisabled(X),
-      h = Y.default.canUseCustomNotificationSounds(E),
+      p = Y.default.canUseCustomNotificationSounds(E),
       O = S.CustomNotificationSoundExperiment.getCurrentConfig({
         location: "NotificationStore"
       }).enabled,
-      y = h && O && A ? null !== (a = (0, C.getChannelCustomNotificationSound)(null !== (i = c.guild_id) && void 0 !== i ? i : W.ZERO_STRING_GUILD_ID, u)) && void 0 !== a ? a : (0, C.getGuildCustomNotificationSound)(c.guild_id) : void 0;
+      y = p && O && A ? null !== (a = (0, C.getChannelCustomNotificationSound)(null !== (i = c.guild_id) && void 0 !== i ? i : W.ZERO_STRING_GUILD_ID, u)) && void 0 !== a ? a : (0, C.getGuildCustomNotificationSound)(c.guild_id) : void 0;
     if (N && (A && B.playSound("message3", .4, void 0, y), !z) || !g) return !1;
     let m = n("808506").default,
       v = n("237997").default;
@@ -181,7 +181,7 @@ q(ei, "displayName", "NotificationStore"), new ei(s.default, __OVERLAY__ ? {} : 
       soundpack: y,
       volume: j,
       onClick() {
-        (0, p.transitionToChannel)(c.id), (c.type === W.ChannelTypes.GUILD_VOICE || c.type === W.ChannelTypes.GUILD_STAGE_VOICE) && o.default.updateChatOpen(c.id, !0), f.default.clickedNotification()
+        (0, h.transitionToChannel)(c.id), (c.type === W.ChannelTypes.GUILD_VOICE || c.type === W.ChannelTypes.GUILD_STAGE_VOICE) && o.default.updateChatOpen(c.id, !0), f.default.clickedNotification()
       }
     });
     null != L && et.track(c.id, L)
@@ -266,8 +266,8 @@ q(ei, "displayName", "NotificationStore"), new ei(s.default, __OVERLAY__ ? {} : 
       l = v.default.getGuild(t.guild_id),
       a = M.default.getChannel(t.channel_id),
       u = P.default.getUser(t.host_id);
-    if (null == n || null == a || null == l || null == u || !(0, k.shouldNotifyBase)(n, u, a) || !R.default.can(i.combine(W.Permissions.CONNECT, W.Permissions.VIEW_CHANNEL), a) || $.includes(t.id)) return !1;
-    $.push(t.id), H.default.showNotification(l.getIconURL(128), Q.default.Messages.STAGE_START_PUSH_NOTIFICATION_TITLE.format({
+    if (null == n || null == a || null == l || null == u || !(0, k.shouldNotifyBase)(n, u, a) || !R.default.can(i.combine(W.Permissions.CONNECT, W.Permissions.VIEW_CHANNEL), a) || $.has(t.id)) return !1;
+    $.add(t.id), H.default.showNotification(l.getIconURL(128), Q.default.Messages.STAGE_START_PUSH_NOTIFICATION_TITLE.format({
       guildName: l.name
     }), Q.default.Messages.STAGE_START_PUSH_NOTIFICATION_BODY.format({
       username: V.default.getName(l.id, a.id, u),
@@ -278,9 +278,15 @@ q(ei, "displayName", "NotificationStore"), new ei(s.default, __OVERLAY__ ? {} : 
       channel_id: a.id
     }, {
       onClick() {
-        (0, h.connectAndOpen)(a)
+        (0, p.connectAndOpen)(a)
       }
     })
+  },
+  STAGE_INSTANCE_DELETE: function(e) {
+    let {
+      instance: t
+    } = e;
+    $.delete(t.id)
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function(e) {
     let {
@@ -307,7 +313,7 @@ q(ei, "displayName", "NotificationStore"), new ei(s.default, __OVERLAY__ ? {} : 
         channel_id: a.id
       }, {
         onClick() {
-          e.entity_type === J.GuildScheduledEventEntityTypes.STAGE_INSTANCE && (0, h.connectAndOpen)(a), e.entity_type === J.GuildScheduledEventEntityTypes.VOICE && c.default.selectVoiceChannel(a.id)
+          e.entity_type === J.GuildScheduledEventEntityTypes.STAGE_INSTANCE && (0, p.connectAndOpen)(a), e.entity_type === J.GuildScheduledEventEntityTypes.VOICE && c.default.selectVoiceChannel(a.id)
         }
       })
     }(t) : t.entity_type === J.GuildScheduledEventEntityTypes.EXTERNAL && ! function(e) {
@@ -405,8 +411,9 @@ q(ei, "displayName", "NotificationStore"), new ei(s.default, __OVERLAY__ ? {} : 
   },
   CONNECTION_OPEN: function(e) {
     let {
-      countryCode: t
+      countryCode: t,
+      guilds: n
     } = e;
-    Z = t
+    Z = t, $.clear(), n.forEach(e => e.stage_instances.forEach(e => $.add(e.id)))
   }
 })
