@@ -14,8 +14,9 @@ t.default = function(e) {
     onCtxMenuOpened: u,
     onCtxMenuClosed: d,
     onCtxMenuSelection: c,
-    quest: f,
-    useReducedMotion: E
+    onContentHeightChange: f,
+    quest: E,
+    useReducedMotion: h
   } = e;
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(s.default, {
@@ -23,17 +24,18 @@ t.default = function(e) {
       expansionSpring: n,
       isExpanded: r,
       isExpansionAnimationComplete: o,
-      quest: f,
-      useReducedMotion: E
+      quest: E,
+      useReducedMotion: h
     }), (0, a.jsx)(l.default, {
       className: i.content,
       onCtxMenuOpen: u,
       onCtxMenuClose: d,
       onCtxMenuSelect: c,
+      onContentHeightChange: f,
       isExpanded: r,
       isExpansionAnimationComplete: o,
-      quest: f,
-      useReducedMotion: E,
+      quest: E,
+      useReducedMotion: h,
       ref: t
     })]
   })
