@@ -11,7 +11,6 @@ e.exports = {
   enhancedPrimaryActions: "enhancedPrimaryActions_db2d14",
   enhancedSecondaryAction: "enhancedSecondaryAction_bbd620",
   footer: "footer_fbde49",
-  getNitroCTA: "getNitroCTA__8d970",
   header: "header__3ab01",
   learnMoreLink: "learnMoreLink__97b89",
   newBadge: "newBadge__9c4b4",

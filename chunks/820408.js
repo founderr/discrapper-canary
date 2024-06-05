@@ -49,8 +49,9 @@ function T(e) {
         children: m.default.Messages.LEARN_MORE
       })]
     }), (0, i.jsx)("div", {
+      className: E.nitroButton,
       children: (0, i.jsx)(N.default, {
-        className: E.nitroButton,
+        showGradient: !0,
         buttonText: m.default.Messages.PREMIUM_UPSELL_GET_NITRO,
         size: n.Button.Sizes.SMALL,
         shinyButtonClassName: E.nitroButton,

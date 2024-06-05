@@ -161,9 +161,7 @@ function O(e) {
             }))
           }
           return (0, i.jsx)(f.default, {
-            className: a()({
-              [N.getNitroCTA]: K
-            }),
+            showGradient: K,
             premiumModalAnalyticsLocation: L,
             subscriptionTier: H,
             trialId: e,
