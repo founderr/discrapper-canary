@@ -17587,5 +17587,7 @@ e.exports = Object.freeze({
   MESSAGE_FORWARD_FAILED_BODY: "The message could not be forwarded to the following {count, plural, one {location} other {locations}}:",
   MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y: "Message originally sent in !!{origin}!! at {timestamp}",
   MESSAGE_FORWARD_FOOTER_A11Y: "Message originally sent at {timestamp}",
-  SELECTED: "Selected"
+  SELECTED: "Selected",
+  CHECKOUT_RECOVERY_NAGBAR_CONTENT: "Heads up! You’re a few clicks away from unlocking custom profiles, larger file uploads & more perks with Nitro.",
+  CHECKOUT_RECOVERY_NAGBAR_CTA: "Complete Checkout"
 })
