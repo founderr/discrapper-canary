@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   useCategoryDeepLinking: function() {
-    return h
+    return S
   },
   useProductDetailsDeepLinking: function() {
     return g
@@ -69,9 +69,9 @@ let f = "".concat("#").concat("itemSkuId", "="),
       isFetchingCategories: s,
       isLayer: c,
       initialItemCardRef: f
-    } = e, E = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = a.useRef(null), g = (0, l.useLocation)(), h = g.pathname === d.Routes.COLLECTIBLES_SHOP ? i.default.HOME_PAGE_SHOP_TAB : g.pathname === d.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? i.default.COLLECTIBLES_SHOP_FULLSCREEN : i.default.COLLECTIBLES_SHOP, {
-      analyticsLocations: S
-    } = (0, o.default)(h);
+    } = e, E = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = a.useRef(null), g = (0, l.useLocation)(), S = g.pathname === d.Routes.COLLECTIBLES_SHOP ? i.default.HOME_PAGE_SHOP_TAB : g.pathname === d.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? i.default.COLLECTIBLES_SHOP_FULLSCREEN : i.default.COLLECTIBLES_SHOP, {
+      analyticsLocations: h
+    } = (0, o.default)(S);
     a.useEffect(() => {
       if (c) return;
       let e = C.exec(g.hash);
@@ -90,8 +90,8 @@ let f = "".concat("#").concat("itemSkuId", "="),
             let a = m({
               categories: t,
               productSkuId: e,
-              analyticsLocations: S,
-              analyticsSource: h,
+              analyticsLocations: h,
+              analyticsSource: S,
               initialItemCardRef: f,
               reducedMotion: E
             });
@@ -101,22 +101,24 @@ let f = "".concat("#").concat("itemSkuId", "="),
           s.forEach(e => e())
         }
       }
-    }, [c, S, h, t, s, I, f, E])
+    }, [c, h, S, t, s, I, f, E])
   },
-  h = () => {
-    let e = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion),
-      t = a.useRef({}),
-      s = a.useCallback((e, s) => {
+  S = e => {
+    let t = a.useRef({}),
+      s = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion),
+      l = a.useCallback((e, s) => {
         t.current[e] = s
       }, []);
     return {
-      setCategoryRef: s,
-      handleScrollToCategory: a.useCallback(s => {
-        var a;
-        null === (a = t.current[s]) || void 0 === a || a.scrollIntoView({
-          behavior: e ? "instant" : "smooth",
-          block: "start"
-        })
-      }, [e])
+      setCategoryRef: l,
+      handleScrollToCategory: a.useCallback(a => {
+        let l = t.current[a];
+        null != l && (null == e || e.scrollIntoViewNode({
+          node: l,
+          padding: 12,
+          animate: !s,
+          shouldScrollToStart: !0
+        }))
+      }, [e, s])
     }
   }

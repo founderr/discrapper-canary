@@ -15,8 +15,8 @@ var a = s("735250"),
   p = s("100527"),
   m = s("906732"),
   g = s("702486"),
-  h = s("580747"),
-  S = s("605236"),
+  S = s("580747"),
+  h = s("605236"),
   I = s("51855"),
   T = s("479446"),
   x = s("981632"),
@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("819640"),
   L = s("594174"),
   b = s("682864"),
-  v = s("626135"),
-  R = s("74538"),
+  R = s("626135"),
+  v = s("74538"),
   A = s("335131"),
   P = s("328347"),
   O = s("280773"),
@@ -141,8 +141,8 @@ function en(e) {
     lightningCheckoutEnabled: d,
     index: C,
     includeBundles: p = !1
-  } = e, m = l.useRef(10 + 70 * Math.random()), [g, h] = l.useState(!1), S = (0, q.getCountdownDisplayOptions)(t.skuId), I = (0, E.useIsVisible)(e => {
-    h(e && null != S)
+  } = e, m = l.useRef(10 + 70 * Math.random()), [g, S] = l.useState(!1), h = (0, q.getCountdownDisplayOptions)(t.skuId), I = (0, E.useIsVisible)(e => {
+    S(e && null != h)
   }, c ? .13 : .15);
   return (0, a.jsxs)("div", {
     className: es.categoryWrapper,
@@ -161,7 +161,7 @@ function en(e) {
       })
     }), (0, a.jsx)(U.default, {
       category: t,
-      hideLimitedTimeBadge: null != S,
+      hideLimitedTimeBadge: null != h,
       index: C
     }), (0, a.jsx)(el, {
       category: t,
@@ -170,10 +170,10 @@ function en(e) {
       isGiftEasterEggEnabled: i,
       lightningCheckoutEnabled: d,
       includeBundles: p
-    }), null != S && null != t.unpublishedAt && (0, a.jsx)(F.CollectiblesCountdown, {
+    }), null != h && null != t.unpublishedAt && (0, a.jsx)(F.CollectiblesCountdown, {
       unpublishedAt: t.unpublishedAt,
       isVisible: g,
-      displayOptions: S,
+      displayOptions: h,
       isFullScreen: c
     })]
   })
@@ -188,7 +188,7 @@ t.default = function(e) {
     analyticsLocations: i
   } = (0, m.default)([...n, p.default.COLLECTIBLES_SHOP]), E = (0, u.useStateFromStores)([N.default], () => N.default.getLayers().includes(Q.Layers.COLLECTIBLES_SHOP)), T = (0, d.useHasAnyModalOpen)(), {
     onClose: x
-  } = (0, Y.useCollectiblesShopRouting)(), b = (0, u.useStateFromStores)([L.default], () => L.default.getCurrentUser()), O = R.default.canUseCollectibles(b), j = (0, h.default)("shop_disable_cache"), B = (0, h.default)("shop_include_unpublished"), {
+  } = (0, Y.useCollectiblesShopRouting)(), b = (0, u.useStateFromStores)([L.default], () => L.default.getCurrentUser()), O = v.default.canUseCollectibles(b), j = (0, S.default)("shop_disable_cache"), B = (0, S.default)("shop_include_unpublished"), {
     categories: F,
     isFetchingCategories: U,
     error: W
@@ -214,11 +214,11 @@ t.default = function(e) {
     scrollHandler: eu
   } = (0, g.usePageScrollPosition)(Q.AnalyticEvents.COLLECTIBLES_SHOP_SCROLLED, s);
   l.useEffect(() => {
-    v.default.track(Q.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
+    R.default.track(Q.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
       location_stack: i,
       source: s,
       page_session_id: ei
-    }), !O && v.default.track(Q.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    }), !O && R.default.track(Q.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: ee.PremiumUpsellTypes.COLLECTIBLES_SHOP,
       location_stack: i
     })
@@ -227,7 +227,7 @@ t.default = function(e) {
     dismissCollectiblesShopTabNewBadge: ec
   } = (0, X.default)();
   l.useEffect(() => {
-    ec(), !(0, S.isDismissibleContentDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, S.markDismissibleContentAsDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
+    ec(), !(0, h.isDismissibleContentDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, h.markDismissibleContentAsDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
       dismissAction: $.ContentDismissActionType.AUTO_DISMISS,
       forceTrack: !0
     })
@@ -267,7 +267,7 @@ t.default = function(e) {
     {
       setCategoryRef: eC,
       handleScrollToCategory: eE
-    } = (0, D.useCategoryDeepLinking)(),
+    } = (0, D.useCategoryDeepLinking)(eo.current),
     {
       condensedBannersAndDynamicHeadersEnabled: ep
     } = (0, Z.useCollectiblesCondensedBannersExperiment)({

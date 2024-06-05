@@ -57,21 +57,22 @@ function s(e, t, n) {
       let {
         start: n,
         end: i,
-        padding: o = 0,
-        animate: l,
-        callback: u
+        shouldScrollToStart: o = !1,
+        padding: l = 0,
+        animate: u,
+        callback: d
       } = e, {
-        scrollPosition: d,
-        offsetSize: _
+        scrollPosition: _,
+        offsetSize: c
       } = r(t(), s);
-      n -= o, i += o, n >= d && i <= d + _ ? null != u && u() : n < d ? a({
+      n -= l, i += l, n >= _ && i <= _ + c ? null != d && d() : n < _ || o ? a({
         to: n,
-        animate: l,
-        callback: u
+        animate: u,
+        callback: d
       }) : a({
-        to: i - _,
-        animate: l,
-        callback: u
+        to: i - c,
+        animate: u,
+        callback: d
       })
     };
   return {
@@ -82,16 +83,17 @@ function s(e, t, n) {
     scrollIntoViewNode(t) {
       let {
         node: n,
-        padding: r = 0,
-        animate: a = !1,
-        callback: l
+        shouldScrollToStart: r = !1,
+        padding: a = 0,
+        animate: l = !1,
+        callback: u
       } = t, {
-        current: u
+        current: d
       } = e;
-      if (null == u) return;
+      if (null == d) return;
       let {
-        offset: d,
-        offsetSize: _
+        offset: _,
+        offsetSize: c
       } = function(e, t, n) {
         let r = "horizontal" === t ? e.offsetWidth : e.offsetHeight,
           s = "horizontal" === t ? e.offsetLeft : e.offsetTop,
@@ -101,13 +103,14 @@ function s(e, t, n) {
           offset: s,
           offsetSize: r
         }
-      }(n, s, u);
+      }(n, s, d);
       o({
-        start: d,
-        end: d + _,
-        padding: r,
-        animate: a,
-        callback: l
+        start: _,
+        end: _ + c,
+        shouldScrollToStart: r,
+        padding: a,
+        animate: l,
+        callback: u
       })
     },
     scrollPageUp() {
