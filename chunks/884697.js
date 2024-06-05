@@ -1,46 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
+  NoDiscount: function() {
+    return f
+  },
   extractPriceByPurchaseTypes: function() {
     return T
   },
   getAvatarDecorations: function() {
-    return O
-  },
-  getCollectiblesAssetURL: function() {
     return C
   },
+  getCollectiblesAssetURL: function() {
+    return R
+  },
   getDaysRemaining: function() {
-    return M
+    return y
   },
   getFormattedPriceForCollectiblesProduct: function() {
     return E
   },
   getLogoSize: function() {
-    return D
+    return M
   },
   getProductDiscount: function() {
-    return f
+    return S
   },
   getProductsFromCategories: function() {
-    return h
+    return A
   },
   getProfileEffectsFromCategories: function() {
-    return g
-  },
-  getProfileEffectsFromPurchases: function() {
-    return R
-  },
-  groupProfileEffects: function() {
     return L
   },
-  isBundleProduct: function() {
-    return P
+  getProfileEffectsFromPurchases: function() {
+    return g
   },
-  isCollectiblesGiftCode: function() {
+  groupProfileEffects: function() {
     return v
   },
+  isBundleProduct: function() {
+    return U
+  },
+  isCollectiblesGiftCode: function() {
+    return D
+  },
   isFreeCollectiblesProduct: function() {
-    return S
+    return h
   },
   isPremiumCollectiblesProduct: function() {
     return _
@@ -49,7 +52,7 @@ n.r(t), n.d(t, {
     return c
   },
   isProductNew: function() {
-    return y
+    return P
   }
 }), n("724458"), n("47120");
 var i = n("392711"),
@@ -80,21 +83,28 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
     let s = null !== (r = e.prices[t]) && void 0 !== r ? r : null;
     return null == s ? null : null === (i = s.countryPrices) || void 0 === i ? void 0 : null === (n = i.prices) || void 0 === n ? void 0 : n[0]
   },
-  f = (e, t) => {
-    let n = I(e);
-    if (n <= 0) return;
-    let i = T(e, t ? d.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : d.PriceSetAssignmentPurchaseTypes.DEFAULT);
-    if (null != i) return Math.floor((n - i.amount) / n * 100)
+  f = {
+    original: -1,
+    discountPercentage: -1
   },
-  S = e => {
+  S = (e, t) => {
+    let n = I(e);
+    if (n <= 0) return f;
+    let i = T(e, t ? d.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : d.PriceSetAssignmentPurchaseTypes.DEFAULT);
+    return null == i ? f : {
+      original: n,
+      discountPercentage: Math.floor((n - i.amount) / n * 100)
+    }
+  },
+  h = e => {
     var t;
     return (null === (t = T(e, d.PriceSetAssignmentPurchaseTypes.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0
   },
-  h = e => {
+  A = e => {
     let t = (0, i.flatMap)([...e.values()], "products");
     return (0, i.uniqBy)(t, "storeListingId")
   },
-  A = (e, t) => {
+  m = (e, t) => {
     if (t === r.CollectiblesItemType.AVATAR_DECORATION) {
       let t = (0, i.flatMap)([...e.values()], "items").filter(o.isAvatarDecorationRecord);
       return (0, i.uniqBy)(t, "id")
@@ -104,8 +114,8 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
       return (0, i.uniqBy)(t, "id")
     }
   },
-  m = (e, t) => {
-    let n = h(e);
+  N = (e, t) => {
+    let n = A(e);
     if (t === r.CollectiblesItemType.AVATAR_DECORATION) {
       let e = (0, i.flatMap)(n, "items").filter(o.isAvatarDecorationRecord);
       return (0, i.uniqBy)(e, "id")
@@ -115,10 +125,10 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
       return (0, i.uniqBy)(e, "id")
     }
   },
-  N = e => A(e, r.CollectiblesItemType.AVATAR_DECORATION),
   p = e => m(e, r.CollectiblesItemType.AVATAR_DECORATION),
-  O = (e, t) => (0, i.uniqBy)([...N(e), ...p(t)], "id"),
-  C = (e, t) => {
+  O = e => N(e, r.CollectiblesItemType.AVATAR_DECORATION),
+  C = (e, t) => (0, i.uniqBy)([...p(e), ...O(t)], "id"),
+  R = (e, t) => {
     var n;
     let {
       CDN_HOST: i,
@@ -128,11 +138,11 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
     let l = d.Endpoints.APPLICATION_ASSET(d.COLLECTIBLES_APPLICATION_ID, e, o);
     return "".concat(location.protocol).concat(r).concat(l, "?size=").concat(a)
   },
-  R = e => A(e, r.CollectiblesItemType.PROFILE_EFFECT),
   g = e => m(e, r.CollectiblesItemType.PROFILE_EFFECT),
-  L = (e, t) => {
-    let n = R(t),
-      i = g(e).filter(e => {
+  L = e => N(e, r.CollectiblesItemType.PROFILE_EFFECT),
+  v = (e, t) => {
+    let n = g(t),
+      i = L(e).filter(e => {
         let {
           id: t
         } = e;
@@ -143,15 +153,15 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
       shopPreviews: i
     }
   },
-  v = e => e.applicationId === d.COLLECTIBLES_APPLICATION_ID,
-  D = e => 3.8 * e,
-  M = e => {
+  D = e => e.applicationId === d.COLLECTIBLES_APPLICATION_ID,
+  M = e => 3.8 * e,
+  y = e => {
     let t = new Date,
       n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
     return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5)
   },
-  y = e => {
+  P = e => {
     let t = u.SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS[e];
     return null != t && new Date().getTime() < t
   },
-  P = e => (null == e ? void 0 : e.type) === r.CollectiblesItemType.BUNDLE
+  U = e => (null == e ? void 0 : e.type) === r.CollectiblesItemType.BUNDLE
