@@ -66,7 +66,7 @@ function E(e) {
   });
   if (i === c.RelationshipTypes.FRIEND || l.bot) return _ ? (0, s.jsx)(d.default, {
     text: f.default.Messages.SEND_DM,
-    color: u.Button.Colors.PRIMARY,
+    color: a()(u.Button.Colors.PRIMARY, S.color),
     onClick: m
   }) : (0, s.jsx)(d.default, {
     text: f.default.Messages.SEND_MESSAGE,
@@ -80,7 +80,7 @@ function E(e) {
   });
   if (i === c.RelationshipTypes.PENDING_INCOMING) return _ ? (0, s.jsx)(d.default, {
     text: f.default.Messages.SEND_DM,
-    color: u.Button.Colors.PRIMARY,
+    color: a()(u.Button.Colors.PRIMARY, S.color),
     onClick: m
   }) : (0, s.jsxs)("div", {
     className: S.pendingIncoming,
