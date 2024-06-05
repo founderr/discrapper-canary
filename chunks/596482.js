@@ -15,8 +15,8 @@ var a, s, n = l("735250"),
   m = l("223606"),
   E = l("976644"),
   f = l("630641"),
-  M = l("288176"),
-  _ = l("689938"),
+  _ = l("288176"),
+  M = l("689938"),
   h = l("733837");
 
 function T(e) {
@@ -26,11 +26,11 @@ function T(e) {
     a = null != e.invitesDisabledUntil;
   switch (!0) {
     case l && a:
-      return _.default.Messages.MEMBER_SAFETY_DM_AND_INVITES_PAUSED_HEADER;
+      return M.default.Messages.MEMBER_SAFETY_DM_AND_INVITES_PAUSED_HEADER;
     case l:
-      return _.default.Messages.MEMBER_SAFETY_DM_PAUSED_HEADER;
+      return M.default.Messages.MEMBER_SAFETY_DM_PAUSED_HEADER;
     case a:
-      return _.default.Messages.MEMBER_SAFETY_INVITES_PAUSED_HEADER;
+      return M.default.Messages.MEMBER_SAFETY_INVITES_PAUSED_HEADER;
     default:
       return ""
   }
@@ -47,7 +47,7 @@ function S(e) {
     className: h.subheaderContainer,
     children: [(0, n.jsxs)("div", {
       className: h.subHeaderTextContainer,
-      children: [(0, n.jsx)(M.default, {
+      children: [(0, n.jsx)(_.default, {
         className: h.shieldIcon,
         color: i.default.RED_345,
         width: 24,
@@ -58,12 +58,12 @@ function S(e) {
           className: h.heading,
           variant: "heading-lg/semibold",
           color: "text-danger",
-          children: (0, C.hasDetectedDMRaid)(s) ? _.default.Messages.MEMBER_SAFETY_DM_RAID_ALERT_HEADER : _.default.Messages.MEMBER_SAFETY_JOIN_RAID_ALERT_HEADER
+          children: (0, C.hasDetectedDMRaid)(s) ? M.default.Messages.MEMBER_SAFETY_DM_RAID_ALERT_HEADER : M.default.Messages.MEMBER_SAFETY_JOIN_RAID_ALERT_HEADER
         }), (0, n.jsx)(r.Text, {
           className: h.tagLine,
           variant: "text-sm/medium",
-          children: _.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
-            dateTime: new Date(null != o ? o : "").toLocaleString(_.default.getLocale(), C.DATE_CONFIG)
+          children: M.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
+            dateTime: new Date(null != o ? o : "").toLocaleString(M.default.getLocale(), C.DATE_CONFIG)
           })
         })]
       })]
@@ -75,7 +75,7 @@ function S(e) {
         onClick: a,
         children: (0, n.jsx)(r.Text, {
           variant: "text-sm/semibold",
-          children: _.default.Messages.MEMBER_SAFETY_RESOLVE_RAID_ALERT_BUTTON
+          children: M.default.Messages.MEMBER_SAFETY_RESOLVE_RAID_ALERT_BUTTON
         })
       }), (0, n.jsx)(E.default, {
         className: h.__invalid_lockdownButton,
@@ -90,7 +90,7 @@ function S(e) {
           }), (0, n.jsx)(r.Text, {
             className: h.lockdownButtonText,
             variant: "text-sm/semibold",
-            children: _.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION
+            children: M.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION
           })]
         })
       })]
@@ -108,7 +108,7 @@ function x(e) {
     className: h.subheaderContainer,
     children: [(0, n.jsxs)("div", {
       className: h.subHeaderTextContainer,
-      children: [(0, n.jsx)(M.default, {
+      children: [(0, n.jsx)(_.default, {
         className: h.shieldIcon,
         color: i.default.BRAND_360,
         width: 24,
@@ -139,7 +139,7 @@ function x(e) {
         }), (0, n.jsx)(r.Text, {
           className: h.lockdownButtonText,
           variant: "text-sm/semibold",
-          children: _.default.Messages.GUILD_ANTIRAID_NAGBAR_EDIT_ACTION
+          children: M.default.Messages.GUILD_ANTIRAID_NAGBAR_EDIT_ACTION
         })]
       })
     })]
@@ -157,7 +157,7 @@ function A(e) {
     className: h.subheaderContainer,
     children: [(0, n.jsxs)("div", {
       className: h.subHeaderTextContainer,
-      children: [(0, n.jsx)(M.default, {
+      children: [(0, n.jsx)(_.default, {
         className: h.shieldIcon,
         color: i.default.BRAND_360,
         width: 24,
@@ -183,7 +183,7 @@ function A(e) {
         onClick: l,
         children: (0, n.jsx)(r.Text, {
           variant: "text-sm/semibold",
-          children: _.default.Messages.MEMBER_SAFETY_RESOLVE_RAID_ALERT_BUTTON
+          children: M.default.Messages.MEMBER_SAFETY_RESOLVE_RAID_ALERT_BUTTON
         })
       }), (0, n.jsx)(r.Button, {
         className: h.__invalid_lockdownButton,
@@ -198,7 +198,7 @@ function A(e) {
           }), (0, n.jsx)(r.Text, {
             className: h.lockdownButtonText,
             variant: "text-sm/semibold",
-            children: _.default.Messages.GUILD_ANTIRAID_NAGBAR_EDIT_ACTION
+            children: M.default.Messages.GUILD_ANTIRAID_NAGBAR_EDIT_ACTION
           })]
         })
       })]
@@ -221,7 +221,7 @@ function p(e) {
         },
         {
           default: s
-        } = await Promise.all([l.e("99387"), l.e("77122")]).then(l.bind(l, "664452"));
+        } = await Promise.resolve().then(l.bind(l, "664452"));
       return l => (0, n.jsx)(s, {
         ...l,
         guildId: t.id,
@@ -231,7 +231,7 @@ function p(e) {
   }, [t.id, a]), f = o.useCallback(() => {
     let e = m.default.getLastIncidentAlertMessage(t.id);
     (0, c.openRaidResolveModal)(e, t.id)
-  }, [t.id]), M = (() => {
+  }, [t.id]), _ = (() => {
     switch (!0) {
       case i && s:
         return 3;
@@ -244,7 +244,7 @@ function p(e) {
     }
   })();
   if (null == t || null == a) return null;
-  switch (M) {
+  switch (_) {
     case 1:
       return (0, n.jsx)(S, {
         onHandleEnableLockdown: E,

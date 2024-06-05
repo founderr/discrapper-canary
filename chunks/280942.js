@@ -73,7 +73,7 @@ function S(e) {
         (0, l.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([s.e("99387"), s.e("73049")]).then(s.bind(s, "450468"));
+          } = await Promise.resolve().then(s.bind(s, "450468"));
           return s => (0, a.jsx)(e, {
             ...s,
             guildBoostSlotId: t.id
@@ -89,7 +89,7 @@ function S(e) {
         (0, l.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([s.e("99387"), s.e("55224")]).then(s.bind(s, "401786"));
+          } = await Promise.resolve().then(s.bind(s, "401786"));
           return s => (0, a.jsx)(e, {
             ...s,
             guildBoostSlot: t
