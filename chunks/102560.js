@@ -4,30 +4,28 @@ var a = s("735250"),
   l = s("470079"),
   o = s("392711"),
   r = s.n(o),
-  n = s("442837"),
-  u = s("481060"),
-  d = s("48210"),
-  i = s("412899"),
-  c = s("605436"),
-  m = s("430824"),
-  f = s("496675"),
-  E = s("987134"),
-  p = s("689938"),
-  g = s("700344");
+  d = s("442837"),
+  n = s("481060"),
+  u = s("48210"),
+  i = s("605436"),
+  c = s("430824"),
+  E = s("496675"),
+  f = s("689938"),
+  m = s("700344");
 t.default = e => {
   let {
     guild: t,
     transitionState: s,
     onClose: o
-  } = e, [_, R] = l.useState(7), [h, M] = l.useState(null), [S, v] = l.useState([]), x = l.useCallback(async () => {
-    M(null), M(await d.default.updateEstimate(t.id, _, S))
-  }, [_, t.id, S]);
+  } = e, [p, _] = l.useState(7), [g, h] = l.useState(null), [S, R] = l.useState([]), M = l.useCallback(async () => {
+    h(null), h(await u.default.updateEstimate(t.id, p, S))
+  }, [p, t.id, S]);
   l.useEffect(() => {
-    x()
-  }, [x]);
-  let N = (0, n.useStateFromStoresArray)([f.default, m.default], () => {
-    let e = f.default.getHighestRole(t);
-    return r()(m.default.getRoles(t.id)).sortBy(e => e.position).filter(e => !(0, c.isEveryoneRoleId)(t.id, e.id)).filter(s => f.default.isRoleHigher(t, e, s)).value().map(e => {
+    M()
+  }, [M]);
+  let L = (0, d.useStateFromStoresArray)([E.default, c.default], () => {
+    let e = E.default.getHighestRole(t);
+    return r()(c.default.getRoles(t.id)).sortBy(e => e.position).filter(e => !(0, i.isEveryoneRoleId)(t.id, e.id)).filter(s => E.default.isRoleHigher(t, e, s)).value().map(e => {
       let {
         id: t,
         name: s
@@ -38,27 +36,27 @@ t.default = e => {
       }
     })
   }, [t]);
-  return (0, a.jsxs)(u.ModalRoot, {
+  return (0, a.jsxs)(n.ModalRoot, {
     transitionState: s,
-    children: [(0, a.jsx)(u.ModalHeader, {
+    children: [(0, a.jsx)(n.ModalHeader, {
       separator: !1,
-      children: (0, a.jsxs)(u.Heading, {
+      children: (0, a.jsxs)(n.Heading, {
         variant: "heading-lg/semibold",
-        children: [p.default.Messages.PRUNE_MEMBERS, "—", null != t ? t.toString() : ""]
+        children: [f.default.Messages.PRUNE_MEMBERS, "—", null != t ? t.toString() : ""]
       })
     }), (0, a.jsxs)("div", {
-      className: g.content,
-      children: [(0, a.jsx)(u.FormItem, {
-        title: p.default.Messages.FORM_LABEL_LAST_SEEN,
-        children: (0, a.jsx)(u.RadioGroup, {
-          value: _,
+      className: m.content,
+      children: [(0, a.jsx)(n.FormItem, {
+        title: f.default.Messages.FORM_LABEL_LAST_SEEN,
+        children: (0, a.jsx)(n.RadioGroup, {
+          value: p,
           options: [{
-            name: p.default.Messages.LAST_SEEN.format({
+            name: f.default.Messages.LAST_SEEN.format({
               days: 7
             }),
             value: 7
           }, {
-            name: p.default.Messages.LAST_SEEN.format({
+            name: f.default.Messages.LAST_SEEN.format({
               days: 30
             }),
             value: 30
@@ -67,62 +65,40 @@ t.default = e => {
             let {
               value: t
             } = e;
-            R(t)
+            _(t)
           },
-          className: g.spacing
+          className: m.spacing
         })
-      }), (0, a.jsx)(u.FormItem, {
-        title: p.default.Messages.PRUNE_WITH_ROLES,
-        children: (0, a.jsx)(E.default, {
-          isMulti: !0,
-          options: N,
-          onChange: e => {
-            v(e.map(e => e.value))
-          },
+      }), (0, a.jsx)(n.FormItem, {
+        title: f.default.Messages.PRUNE_WITH_ROLES,
+        children: (0, a.jsx)(n.SearchableSelect, {
+          multi: !0,
           value: S,
-          multiValueRenderer: e => {
-            let {
-              value: s
-            } = e, l = m.default.getRole(t.id, s);
-            if (null == l) return null;
-            let o = S.indexOf(s);
-            return (0, a.jsx)(i.MemberRole, {
-              className: g.role,
-              role: l,
-              canRemove: !0,
-              onRemove: () => {
-                v([...S.slice(0, o), ...S.slice(o + 1)])
-              },
-              onMouseDown: e => {
-                e.stopPropagation(), e.preventDefault()
-              },
-              guildId: t.id
-            })
-          },
-          maxMenuHeight: 200
+          onChange: e => R(e),
+          options: L
         })
-      }), (0, a.jsx)(u.FormText, {
-        type: u.FormText.Types.DESCRIPTION,
-        className: g.spacing,
-        children: S.length > 0 ? p.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
-          members: h,
-          days: _
-        }) : p.default.Messages.FORM_HELP_LAST_SEEN_1.format({
-          members: h,
-          days: _
+      }), (0, a.jsx)(n.FormText, {
+        type: n.FormText.Types.DESCRIPTION,
+        className: m.spacing,
+        children: S.length > 0 ? f.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
+          members: g,
+          days: p
+        }) : f.default.Messages.FORM_HELP_LAST_SEEN_1.format({
+          members: g,
+          days: p
         })
       })]
-    }), (0, a.jsxs)(u.ModalFooter, {
-      children: [(0, a.jsx)(u.Button, {
+    }), (0, a.jsxs)(n.ModalFooter, {
+      children: [(0, a.jsx)(n.Button, {
         onClick: () => {
-          d.default.prune(t.id, _, S), o()
+          u.default.prune(t.id, p, S), o()
         },
-        children: p.default.Messages.PRUNE
-      }), (0, a.jsx)(u.Button, {
-        look: u.Button.Looks.LINK,
-        color: u.Button.Colors.PRIMARY,
+        children: f.default.Messages.PRUNE
+      }), (0, a.jsx)(n.Button, {
+        look: n.Button.Looks.LINK,
+        color: n.Button.Colors.PRIMARY,
         onClick: o,
-        children: p.default.Messages.CANCEL
+        children: f.default.Messages.CANCEL
       })]
     })]
   })
