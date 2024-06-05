@@ -74,7 +74,7 @@ let v = e => (0, s.match)(e).with({
 }, () => "notVoted").otherwise(() => "normalVote");
 
 function O(e) {
-  return f.default.getMessage(e.channel_id, e.id) === e && !0
+  return null == e.poll || f.default.getMessage(e.channel_id, e.id) === e && !0
 }
 
 function x(e, t) {
