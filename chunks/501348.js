@@ -44,7 +44,7 @@ var a = s("735250"),
   V = s("471264"),
   H = s("611273");
 
-function Y(e, t, s) {
+function k(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -52,7 +52,7 @@ function Y(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let k = {
+let Y = {
     COZY: "cozy",
     COMPACT: "compact"
   },
@@ -252,13 +252,13 @@ class q extends n.Component {
       children: [(0, a.jsx)(u.RadioGroup, {
         options: [{
           name: y.default.Messages.COZY_MODE,
-          value: k.COZY
+          value: Y.COZY
         }, {
           name: y.default.Messages.COMPACT_MODE,
-          value: k.COMPACT
+          value: Y.COMPACT
         }],
         onChange: this.handleMessageDisplayModeChange,
-        value: this.props.messageDisplayCompact ? k.COMPACT : k.COZY
+        value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
       }), (0, a.jsx)(u.FormSwitch, {
         value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
         disabled: !this.props.messageDisplayCompact,
@@ -330,15 +330,15 @@ class q extends n.Component {
     (0, T.setZoom)(e)
   }
   constructor(...e) {
-    super(...e), Y(this, "darkMessages", Q(G.ThemeTypes.DARK)), Y(this, "lightMessages", Q(G.ThemeTypes.LIGHT)), Y(this, "handleDisplayCompactAvatarsChanged", e => {
+    super(...e), k(this, "darkMessages", Q(G.ThemeTypes.DARK)), k(this, "lightMessages", Q(G.ThemeTypes.LIGHT)), k(this, "handleDisplayCompactAvatarsChanged", e => {
       c.default.updatedUnsyncedSettings({
         displayCompactAvatars: e
       })
-    }), Y(this, "handleMessageDisplayModeChange", e => {
+    }), k(this, "handleMessageDisplayModeChange", e => {
       let {
         value: t
       } = e;
-      b.MessageDisplayCompact.updateSetting(t === k.COMPACT), (0, T.setMessageGroupSpacing)()
+      b.MessageDisplayCompact.updateSetting(t === Y.COMPACT), (0, T.setMessageGroupSpacing)()
     })
   }
 }

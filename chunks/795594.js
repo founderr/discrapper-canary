@@ -42,7 +42,7 @@ let H = u.default.connectStores([U.default], () => ({
   theme: U.default.theme
 }))(x.default);
 
-function Y(e) {
+function k(e) {
   let {
     application: t
   } = e;
@@ -60,7 +60,7 @@ function Y(e) {
     })]
   })
 }
-let k = e => {
+let Y = e => {
     let {
       disclosure: t
     } = e;
@@ -215,7 +215,7 @@ let k = e => {
                 let n = (0, h.getTextForDisclosure)(t);
                 return null != n ? (0, a.jsxs)("li", {
                   className: i()(y.permission, V.marginTop8),
-                  children: [(0, a.jsx)(k, {
+                  children: [(0, a.jsx)(Y, {
                     disclosure: t
                   }), (0, a.jsx)(I.FormText, {
                     children: n
@@ -224,7 +224,7 @@ let k = e => {
               })]
             })
           })
-        })(), c && (0, a.jsx)(Y, {
+        })(), c && (0, a.jsx)(k, {
           application: s
         })]
       })

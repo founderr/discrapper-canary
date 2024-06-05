@@ -39,8 +39,8 @@ let g = e => {
       tooltipDisabled: v,
       hideOnClick: S = !0,
       role: C,
-      "aria-label": T,
-      "aria-hidden": j,
+      "aria-label": j,
+      "aria-hidden": T,
       "aria-checked": N,
       "aria-expanded": w,
       "aria-haspopup": E
@@ -53,8 +53,8 @@ let g = e => {
       foreground: null != u ? u : void 0,
       background: null != h ? h : void 0,
       color: d
-    }), R = T;
-    return null == R && "string" == typeof b && (R = b), (0, a.jsx)(c.Tooltip, {
+    }), P = j;
+    return null == P && "string" == typeof b && (P = b), (0, a.jsx)(c.Tooltip, {
       text: b,
       color: x,
       position: k,
@@ -78,7 +78,7 @@ let g = e => {
             foreground: null != u ? u : void 0,
             background: null != h ? h : void 0,
             color: d,
-            "aria-hidden": j,
+            "aria-hidden": T,
             onMouseEnter: b,
             onMouseLeave: x,
             onFocus: k,
@@ -98,8 +98,8 @@ let g = e => {
             [m.selected]: i
           }),
           role: C,
-          "aria-label": R,
-          "aria-hidden": j,
+          "aria-label": P,
+          "aria-hidden": T,
           "aria-checked": N,
           "aria-haspopup": E,
           "aria-expanded": w,

@@ -39,8 +39,8 @@ var a = s("735250"),
   y = s("823188"),
   V = s("504865"),
   H = s("179984"),
-  Y = s("386733"),
-  k = s("487980"),
+  k = s("386733"),
+  Y = s("487980"),
   w = s("474936"),
   W = s("981631"),
   K = s("689938"),
@@ -217,7 +217,7 @@ t.default = function() {
     location: m + " auto off",
     autoTrackExposure: !1
   }), (0, F.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
-  let R = (0, k.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");
+  let R = (0, Y.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");
   n.useEffect(() => {
     E.default.wait(async () => {
       !N && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, I.fetchPremiumSubscriptionPlans)(_, null, W.RevenueSurfaces.DISCOVERY)]), o(!1)
@@ -237,7 +237,7 @@ t.default = function() {
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
         className: z.__invalid_container,
-        children: [(0, a.jsx)(Z, {}), R && (0, a.jsx)(Y.default, {
+        children: [(0, a.jsx)(Z, {}), R && (0, a.jsx)(k.default, {
           isInSettings: !0
         }), (0, a.jsx)(J, {}), (0, a.jsx)(H.default, {
           className: z.__invalid_planComparisonTable,

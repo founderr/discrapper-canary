@@ -66,7 +66,7 @@ function B() {
     legacyAudioSubsystemSupported: y,
     experimentalAudioSubsystemSupported: V,
     qosSupported: H,
-    attenuationSupported: Y
+    attenuationSupported: k
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
     qosEnabled: E.default.getQoS(),
@@ -80,13 +80,13 @@ function B() {
     experimentalAudioSubsystemSupported: E.default.supports(b.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
     qosSupported: E.default.supports(b.Features.QOS),
     attenuationSupported: E.default.supports(b.Features.ATTENUATION)
-  })), k = (0, r.useStateFromStores)([T.default], () => T.default.getSubsection()), w = n.createRef(), W = N.isPlatformEmbedded && B && null != c.default.fileManager.readLogFiles;
+  })), Y = (0, r.useStateFromStores)([T.default], () => T.default.getSubsection()), w = n.createRef(), W = N.isPlatformEmbedded && B && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
-    if (k === D.SOUNDBOARD_SUBSECTION) {
+    if (Y === D.SOUNDBOARD_SUBSECTION) {
       var e;
       null == w || null === (e = w.current) || void 0 === e || e.scrollIntoView(), u.default.clearSubsection()
     }
-  }, [w, k]), (0, a.jsxs)(o.FormSection, {
+  }, [w, Y]), (0, a.jsxs)(o.FormSection, {
     tag: o.FormTitleTags.H1,
     title: v.default.Messages.VOICE_SETTINGS,
     children: [(0, a.jsx)(S.Subsetting, {
@@ -157,7 +157,7 @@ function B() {
               children: v.default.Messages.FORM_CHECKBOX_QOS
             })
           })
-        }), Y && (0, a.jsx)(S.Subsetting, {
+        }), k && (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
           children: (0, a.jsxs)(o.FormSection, {
             className: U.marginBottom20,

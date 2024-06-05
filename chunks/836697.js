@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return S
   }
 }), n("47120"), n("653041");
 var l = n("735250"),
@@ -20,12 +20,12 @@ var l = n("735250"),
   C = n("773182"),
   g = n("588275"),
   E = n("689938"),
-  S = n("693353");
+  _ = n("693353");
 
-function _(e) {
+function S(e) {
   let {
     onActivate: t
-  } = e, [n, _] = a.useState(!1), I = (0, s.useStateFromStores)([d.default], () => d.default.getGuildId()), N = (0, s.useStateFromStores)([u.default], () => u.default.hasFetchedRequestToJoinGuilds), T = (0, m.default)(), A = (0, i.default)(I), L = a.useMemo(() => {
+  } = e, [n, S] = a.useState(!1), I = (0, s.useStateFromStores)([d.default], () => d.default.getGuildId()), N = (0, s.useStateFromStores)([u.default], () => u.default.hasFetchedRequestToJoinGuilds), T = (0, m.default)(), A = (0, i.default)(I), L = a.useMemo(() => {
     let e = (0, h.createFolderNode)({
       folderId: f.SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: E.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
@@ -38,25 +38,25 @@ function _(e) {
   a.useEffect(() => {
     n && !N && r.default.fetchRequestToJoinGuilds()
   }, [n, N]);
-  let v = null != I && T.includes(I);
+  let x = null != I && T.includes(I);
   return (a.useEffect(() => {
-    !n && v && A !== I && _(!0)
-  }, [n, v, A, I]), 0 === T.length) ? null : (0, l.jsx)(C.GuildsBarClanApplicationCoachmarkPopout, {
+    !n && x && A !== I && S(!0)
+  }, [n, x, A, I]), 0 === T.length) ? null : (0, l.jsx)(C.GuildsBarClanApplicationCoachmarkPopout, {
     onActivate: t,
     children: (0, l.jsx)(p.default, {
       folderNode: L,
       expanded: n,
-      useCircleMask: !n && !v,
-      selected: v,
+      useCircleMask: !n && !x,
+      selected: x,
       draggable: !1,
       sorting: !1,
       onExpandCollapse: () => {
-        _(!n), o.default.clearCoachmark()
+        S(!n), o.default.clearCoachmark()
       },
       folderIconContent: (0, l.jsx)(c.default, {
         width: 24,
         height: 24,
-        className: S.pendingIcon
+        className: _.pendingIcon
       }),
       renderChildNode: function(e) {
         return e.type !== h.GuildsNodeType.GUILD ? null : (0, l.jsx)(g.default, {

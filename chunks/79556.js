@@ -21,15 +21,15 @@ var a = n("120356"),
   C = n("22082"),
   g = n("665906"),
   E = n("592125"),
-  S = n("430824"),
-  _ = n("496675"),
+  _ = n("430824"),
+  S = n("496675"),
   I = n("306680"),
   N = n("9156"),
   T = n("594174"),
   A = n("109446"),
   L = n("98597"),
-  v = n("648501"),
-  x = n("473403"),
+  x = n("648501"),
+  v = n("473403"),
   R = n("304471"),
   M = n("981631"),
   y = n("647086"),
@@ -75,13 +75,13 @@ class b extends L.default {
       canReorderChannel: C,
       isSubscriptionGated: g,
       isFavoriteSuggestion: E,
-      subtitle: S,
-      forceTopLevelThread: _,
+      subtitle: _,
+      forceTopLevelThread: S,
       embeddedApps: I,
       resolvedUnreadSetting: N,
       withGuildIcon: T,
       enableActivities: A
-    } = this.props, L = A && null != I && I.length > 0, v = (0, m.getChannelSubtitle)(S), R = (0, l.jsx)("li", {
+    } = this.props, L = A && null != I && I.length > 0, x = (0, m.getChannelSubtitle)(_), R = (0, l.jsx)("li", {
       className: s()(this.getClassName(), {
         [O.disabled]: this.isDisabled(),
         [O.selected]: n
@@ -95,7 +95,7 @@ class b extends L.default {
         spacing: 0,
         onRequestClose: this.handleClosePopout,
         shouldShow: u && this.state.shouldShowThreadsPopout || L && this.state.shouldShowActivities,
-        children: () => (0, l.jsxs)(x.default, {
+        children: () => (0, l.jsxs)(v.default, {
           className: O.iconVisibility,
           channel: e,
           guild: t,
@@ -104,13 +104,13 @@ class b extends L.default {
           unread: i,
           mentionCount: d,
           hasActiveThreads: o,
-          subtitle: null == v ? void 0 : v.subtitle,
-          subtitleColor: null == v ? void 0 : v.color,
+          subtitle: null == x ? void 0 : x.subtitle,
+          subtitleColor: null == x ? void 0 : x.color,
           onMouseDown: this.handleMouseDown,
           onContextMenu: this.handleContextMenu,
           connectDragPreview: C ? p : null,
           isFavoriteSuggestion: E,
-          channelTypeOverride: _ ? M.ChannelTypes.GUILD_TEXT : void 0,
+          channelTypeOverride: S ? M.ChannelTypes.GUILD_TEXT : void 0,
           resolvedUnreadSetting: N,
           withGuildIcon: T,
           "aria-label": (0, h.default)({
@@ -208,7 +208,7 @@ class b extends L.default {
         });
         return
       }
-      let a = S.default.getGuild(t.getGuildId());
+      let a = _.default.getGuild(t.getGuildId());
       null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -239,23 +239,23 @@ function P(e) {
     unread: I.default.hasUnread(t.id),
     ackMessageId: I.default.ackMessageId(t.id),
     mentionCount: I.default.getMentionCount(t.id)
-  })), m = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), S = (0, i.useStateFromStoresObject)([E.default, _.default], () => {
+  })), m = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), _ = (0, i.useStateFromStoresObject)([E.default, S.default], () => {
     let e = E.default.getChannel(t.parent_id);
     return {
-      canManageChannel: _.default.can(M.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && (n.id === y.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(M.Permissions.MANAGE_CHANNELS, e) : _.default.can(M.Permissions.MANAGE_CHANNELS, n)))
+      canManageChannel: S.default.can(M.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && (n.id === y.FAVORITES_RAW_GUILD_ID || (null != e ? S.default.can(M.Permissions.MANAGE_CHANNELS, e) : S.default.can(M.Permissions.MANAGE_CHANNELS, n)))
     }
   }), A = (0, i.useStateFromStores)([C.default], () => C.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,
-    isSubscriptionGated: x
+    isSubscriptionGated: v
   } = (0, p.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
     let e = T.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
-  }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), b = (0, v.default)({
+  }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), b = (0, x.default)({
     channel: t,
     isChannelCollapsed: !1,
     isChannelSelected: o,
-    isSubscriptionGated: x,
+    isSubscriptionGated: v,
     needSubscriptionToAccess: L,
     isNewChannel: A,
     muted: r,
@@ -264,11 +264,11 @@ function P(e) {
   }), P = (0, f.default)(t);
   return (0, l.jsx)(j, {
     ...h,
-    ...S,
+    ..._,
     ...e,
     hasActiveThreads: u,
     hasMoreActiveThreads: d,
-    isSubscriptionGated: x,
+    isSubscriptionGated: v,
     needSubscriptionToAccess: L,
     isNewChannel: A && e.canBeNewChannel,
     isFavoriteSuggestion: s && !R,

@@ -70,11 +70,11 @@ function L(e) {
     }
   }), H = null != P ? P : V;
   l()(null != H, "guild should not be null");
-  let Y = (0, o.useGuildAutomodProfileQuarantineErrors)(H.id),
-    k = (0, i.useStateFromStores)([f.default], () => null == H.id ? null : f.default.getMember(H.id, b.id)),
+  let k = (0, o.useGuildAutomodProfileQuarantineErrors)(H.id),
+    Y = (0, i.useStateFromStores)([f.default], () => null == H.id ? null : f.default.getMember(H.id, b.id)),
     w = (0, i.useStateFromStores)([N.default], () => N.default.getGuildMemberProfile(b.id, H.id)),
     W = C.default.canUsePremiumProfileCustomization(b),
-    K = (0, d.showRemoveAvatar)(v, null == k ? void 0 : k.avatar),
+    K = (0, d.showRemoveAvatar)(v, null == Y ? void 0 : Y.avatar),
     z = (0, d.showRemoveBanner)(j, null == w ? void 0 : w.banner),
     Q = (0, p.canResetThemeColors)(B, null == w ? void 0 : w.themeColors),
     q = null !== (t = null == w ? void 0 : w.bio) && void 0 !== t ? t : "",
@@ -85,10 +85,10 @@ function L(e) {
   return (0, a.jsxs)("div", {
     className: D.sectionsContainer,
     children: [(0, a.jsx)(R.default, {
-      errors: null !== (n = null == y ? void 0 : y.nick) && void 0 !== n ? n : null == Y ? void 0 : Y.nick,
+      errors: null !== (n = null == y ? void 0 : y.nick) && void 0 !== n ? n : null == k ? void 0 : k.nick,
       username: A.default.getName(b),
       pendingNick: U,
-      currentNick: null == k ? void 0 : k.nick,
+      currentNick: null == Y ? void 0 : Y.nick,
       guild: H
     }, "nick"), (0, a.jsx)(I.default, {
       sectionTitle: M.default.Messages.USER_SETTINGS_PRONOUNS,
@@ -112,7 +112,7 @@ function L(e) {
           })]
         }),
         showRemoveAvatarButton: K,
-        onAvatarChange: e => Z(e, null == k ? void 0 : k.avatar, h.setPendingAvatar),
+        onAvatarChange: e => Z(e, null == Y ? void 0 : Y.avatar, h.setPendingAvatar),
         errors: null == y ? void 0 : y.avatar,
         guildId: H.id,
         disabled: !W
@@ -167,7 +167,7 @@ function L(e) {
           })]
         }),
         onBioChange: e => (0, p.setNewPendingGuildIdentityBio)(e, q),
-        errors: null !== (L = null == y ? void 0 : y.bio) && void 0 !== L ? L : null == Y ? void 0 : Y.bio,
+        errors: null !== (L = null == y ? void 0 : y.bio) && void 0 !== L ? L : null == k ? void 0 : k.bio,
         pendingBio: G,
         currentBio: q,
         disabled: !W

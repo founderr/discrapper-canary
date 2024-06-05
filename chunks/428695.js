@@ -22,15 +22,15 @@ t.default = function(e) {
     type: C,
     imageStyles: g,
     imageMarginX: E,
-    imageMarginTop: S,
-    trackingSource: _,
+    imageMarginTop: _,
+    trackingSource: S,
     undismissable: I,
     onDismissed: N,
     onClick: T,
     cta: A,
     ctaColor: L,
-    centerText: v,
-    className: x
+    centerText: x,
+    className: v
   } = e;
   a.useEffect(() => {
     p(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -44,7 +44,7 @@ t.default = function(e) {
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: _,
+        source: S,
         guild_id: t.id,
         notice_type: C
       }), null == T || T()
@@ -60,14 +60,14 @@ t.default = function(e) {
     className: i()(m.title, {
       [m.noImageTitle]: null == r
     }, {
-      [m.center]: v
+      [m.center]: x
     }),
     children: n
   }));
   let y = null;
   "function" == typeof s ? y = s() : null != s && (y = (0, l.jsx)(o.Text, {
     className: i()({
-      [m.center]: v
+      [m.center]: x
     }),
     variant: "text-sm/normal",
     color: "text-muted",
@@ -75,7 +75,7 @@ t.default = function(e) {
   }));
   let O = null != E ? "".concat(E, "px") : "16px";
   return (0, l.jsxs)("div", {
-    className: i()(m.container, x),
+    className: i()(m.container, v),
     children: [!0 === I ? null : (0, l.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
@@ -90,7 +90,7 @@ t.default = function(e) {
     }), null != r && (0, l.jsx)("div", {
       className: m.imageContainer,
       style: {
-        marginTop: "".concat(S, "px"),
+        marginTop: "".concat(_, "px"),
         marginLeft: O,
         marginRight: O
       },

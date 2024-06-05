@@ -1,11 +1,11 @@
 "use strict";
-let n;
-a.r(t), a("47120");
-var r, s, i, l, o = a("392711"),
-  c = a.n(o),
-  d = a("442837"),
-  u = a("570140"),
-  f = a("308063");
+let a;
+n.r(t), n("47120");
+var r, s, i, l, o = n("392711"),
+  c = n.n(o),
+  d = n("442837"),
+  u = n("570140"),
+  f = n("308063");
 let m = {},
   h = {};
 
@@ -20,9 +20,9 @@ function p(e) {
 function C(e) {
   let {
     guildId: t,
-    webhook: a
+    webhook: n
   } = e;
-  p(t)[a.id] = a
+  p(t)[n.id] = n
 }
 class T extends(r = d.default.Store) {
   isFetching(e, t) {
@@ -35,7 +35,7 @@ class T extends(r = d.default.Store) {
     return c()(p(e)).values().filter(e => e.channel_id === t).value()
   }
   get error() {
-    return n
+    return a
   }
 }
 l = "WebhooksStore", (i = "displayName") in(s = T) ? Object.defineProperty(s, i, {
@@ -47,34 +47,34 @@ l = "WebhooksStore", (i = "displayName") in(s = T) ? Object.defineProperty(s, i,
   WEBHOOKS_UPDATE: function(e) {
     let {
       guildId: t,
-      channelId: a,
+      channelId: n,
       webhooks: r,
       error: s
     } = e;
     if (null == r) {
-      null != s ? (n = s, delete h[E(t, a)]) : null != a && null != m[t] && (n = null, f.default.fetchForChannel(t, a));
+      null != s ? (a = s, delete h[E(t, n)]) : null != n && null != m[t] && (a = null, f.default.fetchForChannel(t, n));
       return
     }
-    n = null;
+    a = null;
     let i = [];
-    null != a && (i = c()(p(t)).values().filter(e => e.channel_id !== a).value());
+    null != n && (i = c()(p(t)).values().filter(e => e.channel_id !== n).value());
     let l = m[t] = {};
-    i.concat(r).forEach(e => l[e.id] = e), delete h[E(t, a)]
+    i.concat(r).forEach(e => l[e.id] = e), delete h[E(t, n)]
   },
   WEBHOOKS_FETCHING: function(e) {
     let {
       guildId: t,
-      channelId: a
+      channelId: n
     } = e;
-    h[E(t, a)] = !0
+    h[E(t, n)] = !0
   },
   WEBHOOK_CREATE: C,
   WEBHOOK_UPDATE: C,
   WEBHOOK_DELETE: function(e) {
     let {
       guildId: t,
-      webhookId: a
+      webhookId: n
     } = e;
-    delete p(t)[a]
+    delete p(t)[n]
   }
 })

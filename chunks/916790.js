@@ -47,7 +47,7 @@ let C = [{
   }
 }];
 
-function T(e) {
+function j(e) {
   let {
     actionLog: t
   } = e, r = n.useMemo(() => t.traces.map(e => ({
@@ -61,7 +61,7 @@ function T(e) {
     })
   })
 }
-let j = [{
+let T = [{
   id: "action",
   name: "Action",
   render(e) {
@@ -98,7 +98,7 @@ let j = [{
     let {
       actionLog: t
     } = e;
-    return (0, a.jsx)(T, {
+    return (0, a.jsx)(j, {
       actionLog: t
     })
   }
@@ -108,7 +108,7 @@ function N(e) {
   let {
     actionLog: t,
     initialHeight: r
-  } = e, i = n.useMemo(() => t.error ? [...j, {
+  } = e, i = n.useMemo(() => t.error ? [...T, {
     id: "error",
     name: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.default, {
@@ -139,7 +139,7 @@ function N(e) {
         })]
       })
     }
-  }] : j, [t]), {
+  }] : T, [t]), {
     TabBar: o,
     renderSelectedTab: s
   } = (0, x.default)({

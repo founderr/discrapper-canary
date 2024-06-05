@@ -85,11 +85,11 @@ function v(e) {
       })
     }, [H]), C) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let Y = h.default.canUsePremiumProfileCustomization(l),
-    k = {
+  let k = h.default.canUsePremiumProfileCustomization(l),
+    Y = {
       user: l,
       guild: t,
-      canUsePremiumCustomization: Y,
+      canUsePremiumCustomization: k,
       onAvatarChange: O.setPendingAvatar,
       onBannerChange: O.setPendingBanner,
       onUpsellClick: b,
@@ -122,7 +122,7 @@ function v(e) {
           guildName: null == t ? void 0 : t.name
         }),
         profilePreview: (0, a.jsx)(I.default, {
-          ...k,
+          ...Y,
           location: "GuildIdentitySettingsPage",
           pendingThemeColors: V
         }),

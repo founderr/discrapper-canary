@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return k
+    return Y
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -176,7 +176,7 @@ class H extends n.PureComponent {
     })
   }
 }
-class Y extends n.PureComponent {
+class k extends n.PureComponent {
   componentDidMount() {
     S.default.enableAll(!1)
   }
@@ -387,12 +387,12 @@ class Y extends n.PureComponent {
   }
 }
 
-function k() {
+function Y() {
   let e = (0, d.useStateFromStores)([C.default], () => C.default.getState()),
     t = (0, d.useStateFromStores)([m.default], () => (0, g.default)(m.default)),
     s = (0, d.useStateFromStores)([A.default], () => A.default.isSupported()),
     n = (0, f.useEnableClips)();
-  return (0, a.jsx)(Y, {
+  return (0, a.jsx)(k, {
     keybinds: e,
     canGoLive: t,
     overlaySupported: s,

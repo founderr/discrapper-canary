@@ -207,7 +207,7 @@ function H(e) {
   })
 }
 
-function Y(e) {
+function k(e) {
   let {
     settings: {
       enabled: t,
@@ -260,7 +260,7 @@ function Y(e) {
   })
 }
 
-function k(e) {
+function Y(e) {
   let {
     settings: {
       enabled: t,
@@ -433,10 +433,10 @@ function z(e) {
       updateSettings: E
     }), (0, r.jsx)(W, {
       onChangePage: t
-    }), (0, r.jsx)(Y, {
+    }), (0, r.jsx)(k, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(k, {
+    }), (0, r.jsx)(Y, {
       settings: a,
       updateSettings: E
     }), (0, r.jsx)(H, {

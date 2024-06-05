@@ -28,15 +28,15 @@ var l, a, s, i, r = n("735250"),
   C = n("159300"),
   g = n("152376"),
   E = n("427679"),
-  S = n("155409"),
-  _ = n("131704"),
+  _ = n("155409"),
+  S = n("131704"),
   I = n("199902"),
   N = n("430824"),
   T = n("496675"),
   A = n("914010"),
   L = n("263704"),
-  v = n("465670"),
-  x = n("937482"),
+  x = n("465670"),
+  v = n("937482"),
   R = n("281029"),
   M = n("981631"),
   y = n("689938"),
@@ -58,7 +58,7 @@ function j(e) {
     forceShowButtons: a,
     hasChannelInfo: s = !1
   } = e;
-  if ((0, c.useStateFromStores)([T.default, A.default], () => n || A.default.getGuildId() === M.FAVORITES || !T.default.can(M.Permissions.MANAGE_CHANNELS, t) && !T.default.can(M.Permissions.MANAGE_ROLES, t) && !T.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, _.isGuildSelectableChannelType)(t.type) && !T.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !T.default.can(M.Permissions.CONNECT, t) || !_.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
+  if ((0, c.useStateFromStores)([T.default, A.default], () => n || A.default.getGuildId() === M.FAVORITES || !T.default.can(M.Permissions.MANAGE_CHANNELS, t) && !T.default.can(M.Permissions.MANAGE_ROLES, t) && !T.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, S.isGuildSelectableChannelType)(t.type) && !T.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !T.default.can(M.Permissions.CONNECT, t) || !S.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
 
   function i() {
     m.default.open(t.id)
@@ -81,7 +81,7 @@ function j(e) {
         onMouseLeave: n,
         onFocus: o,
         onBlur: u,
-        children: (0, r.jsx)(x.default, {
+        children: (0, r.jsx)(v.default, {
           width: 16,
           height: 16,
           className: O.actionIcon
@@ -99,8 +99,8 @@ function P(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), m = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), _ = (0, c.useStateFromStores)([T.default], () => (0, C.canViewInviteModal)(T.default, u, t, m)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
-  if (a || !_) return null;
+  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), m = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([T.default], () => (0, C.canViewInviteModal)(T.default, u, t, m)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
+  if (a || !S) return null;
 
   function L() {
     if (null != u) {
@@ -120,17 +120,17 @@ function P(e) {
       })
     }
   }
-  let v = (0, r.jsx)(f.GroupPlusIcon, {
+  let x = (0, r.jsx)(f.GroupPlusIcon, {
     width: 16,
     height: 16,
     className: O.actionIcon,
     "aria-hidden": !0
   });
-  return l && (v = (0, r.jsx)(S.default, {
+  return l && (x = (0, r.jsx)(_.default, {
     tutorialId: "instant-invite",
     position: "left",
     children: (0, r.jsx)("div", {
-      children: v
+      children: x
     })
   })), (0, r.jsx)(h.Tooltip, {
     text: A,
@@ -140,7 +140,7 @@ function P(e) {
       onClick: L,
       tabIndex: s,
       "aria-label": A,
-      children: v
+      children: x
     })
   })
 }
@@ -158,7 +158,7 @@ function G(e) {
       ...e,
       onClick: n,
       "aria-label": y.default.Messages.REMOVE_FAVORITE_SUGGESTION,
-      children: (0, r.jsx)(v.default, {
+      children: (0, r.jsx)(x.default, {
         width: 16,
         height: 16,
         className: O.actionIcon

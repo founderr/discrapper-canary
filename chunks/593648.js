@@ -43,8 +43,8 @@ var a = s("735250"),
   y = s("726985"),
   V = s("981631"),
   H = s("468788"),
-  Y = s("689938"),
-  k = s("153764"),
+  k = s("689938"),
+  Y = s("153764"),
   w = s("611273");
 
 function W(e, t, s) {
@@ -66,24 +66,24 @@ function K(e) {
     tooltip: r
   } = e;
   return (0, a.jsx)(u.FormSwitch, {
-    className: k.soundRow,
+    className: Y.soundRow,
     value: s,
     onChange: i,
     disabled: n,
     tooltipNote: r,
     children: (0, a.jsxs)("div", {
-      className: k.notificationSound,
+      className: Y.notificationSound,
       children: [(0, a.jsx)("div", {
-        className: k.soundName,
+        className: Y.soundName,
         children: t
       }), (0, a.jsx)(u.Clickable, {
-        className: k.soundIcon,
+        className: Y.soundIcon,
         onClick: l,
-        "aria-label": Y.default.Messages.USER_SETTINGS_NOTIFICATIONS_PREVIEW_SOUND,
+        "aria-label": k.default.Messages.USER_SETTINGS_NOTIFICATIONS_PREVIEW_SOUND,
         children: (0, a.jsx)(L.default, {
           width: 16,
           height: 16,
-          className: k.icon,
+          className: Y.icon,
           "aria-hidden": !0
         })
       })]
@@ -125,99 +125,99 @@ function z(e) {
     null === (e = d.current) || void 0 === e || e.stop()
   });
   let _ = [{
-    label: Y.default.Messages.SOUND_MESSAGE,
+    label: k.default.Messages.SOUND_MESSAGE,
     sound: "message1",
     focusModeDisabled: c
   }, {
-    label: Y.default.Messages.SOUND_DEAFEN,
+    label: k.default.Messages.SOUND_DEAFEN,
     sound: "deafen"
   }, {
-    label: Y.default.Messages.SOUND_UNDEAFEN,
+    label: k.default.Messages.SOUND_UNDEAFEN,
     sound: "undeafen"
   }, {
-    label: Y.default.Messages.MUTE,
+    label: k.default.Messages.MUTE,
     sound: "mute"
   }, {
-    label: Y.default.Messages.UNMUTE,
+    label: k.default.Messages.UNMUTE,
     sound: "unmute"
   }, {
-    label: Y.default.Messages.SOUND_VOICE_DISCONNECTED,
+    label: k.default.Messages.SOUND_VOICE_DISCONNECTED,
     sound: "disconnect"
   }, {
-    label: Y.default.Messages.SOUND_PTT_ACTIVATE,
+    label: k.default.Messages.SOUND_PTT_ACTIVATE,
     sound: "ptt_start"
   }, {
-    label: Y.default.Messages.SOUND_PTT_DEACTIVATE,
+    label: k.default.Messages.SOUND_PTT_DEACTIVATE,
     sound: "ptt_stop"
   }, {
-    label: Y.default.Messages.SOUND_USER_JOIN,
+    label: k.default.Messages.SOUND_USER_JOIN,
     sound: "user_join"
   }, {
-    label: Y.default.Messages.SOUND_USER_LEAVE,
+    label: k.default.Messages.SOUND_USER_LEAVE,
     sound: "user_leave"
   }, {
-    label: Y.default.Messages.SOUND_USER_MOVED,
+    label: k.default.Messages.SOUND_USER_MOVED,
     sound: "user_moved"
   }, {
-    label: Y.default.Messages.SOUND_OUTGOING_RING,
+    label: k.default.Messages.SOUND_OUTGOING_RING,
     sound: "call_calling"
   }, {
-    label: Y.default.Messages.SOUND_INCOMING_RING,
+    label: k.default.Messages.SOUND_INCOMING_RING,
     sound: "call_ringing"
   }, ...o ? [{
     label: f.default.getRingtoneSettingsLabel(),
     sound: f.default.ringtone,
     disabled: t.includes("call_ringing")
   }] : [], {
-    label: Y.default.Messages.SOUND_STREAM_STARTED,
+    label: k.default.Messages.SOUND_STREAM_STARTED,
     sound: "stream_started"
   }, {
-    label: Y.default.Messages.SOUND_STREAM_STOPPED,
+    label: k.default.Messages.SOUND_STREAM_STOPPED,
     sound: "stream_ended"
   }, {
-    label: Y.default.Messages.SOUND_VIEWER_JOIN,
+    label: k.default.Messages.SOUND_VIEWER_JOIN,
     sound: "stream_user_joined"
   }, {
-    label: Y.default.Messages.SOUND_VIEWER_LEAVE,
+    label: k.default.Messages.SOUND_VIEWER_LEAVE,
     sound: "stream_user_left"
   }, {
-    label: Y.default.Messages.SOUND_ACTIVITY_START,
+    label: k.default.Messages.SOUND_ACTIVITY_START,
     sound: "activity_launch"
   }, {
-    label: Y.default.Messages.SOUND_ACTIVITY_END,
+    label: k.default.Messages.SOUND_ACTIVITY_END,
     sound: "activity_end"
   }, {
-    label: Y.default.Messages.SOUND_ACTIVITY_USER_JOIN,
+    label: k.default.Messages.SOUND_ACTIVITY_USER_JOIN,
     sound: "activity_user_join"
   }, {
-    label: Y.default.Messages.SOUND_ACTIVITY_USER_LEAVE,
+    label: k.default.Messages.SOUND_ACTIVITY_USER_LEAVE,
     sound: "activity_user_left"
   }, {
-    label: Y.default.Messages.SOUND_INVITED_TO_SPEAK,
+    label: k.default.Messages.SOUND_INVITED_TO_SPEAK,
     sound: "reconnect"
   }];
   return (0, a.jsx)(p.Subsetting, {
     setting: y.WebSetting.NOTIFICATIONS_SOUNDS,
     children: (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H1,
-      title: Y.default.Messages.SOUNDS,
+      title: k.default.Messages.SOUNDS,
       children: [r ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.FormTitle, {
           className: w.marginBottom20,
-          children: Y.default.Messages.SOUNDPACK_LABEL
+          children: k.default.Messages.SOUNDPACK_LABEL
         }), (0, a.jsx)(x.default, {
-          className: i()(k.soundpackSelect, w.marginBottom40)
+          className: i()(Y.soundpackSelect, w.marginBottom40)
         })]
       }) : null, (0, a.jsx)(u.FormSwitch, {
-        note: Y.default.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_NOTE,
+        note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_NOTE,
         value: l,
         onChange: S.default.setNotifyMessagesInSelectedChannel,
-        children: Y.default.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_LABEL
+        children: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_LABEL
       }), (0, a.jsx)(u.FormSwitch, {
-        note: Y.default.Messages.SOUND_DISABLE_ALL_NOTE,
+        note: k.default.Messages.SOUND_DISABLE_ALL_NOTE,
         value: s,
         onChange: S.default.toggleDisableAllSounds,
-        children: Y.default.Messages.SOUND_DISABLE_ALL
+        children: k.default.Messages.SOUND_DISABLE_ALL
       }), _.map(e => {
         let {
           label: n,
@@ -228,7 +228,7 @@ function z(e) {
         return (0, a.jsx)(K, {
           label: n,
           disabled: s || !0 === i || !0 === r,
-          tooltip: r ? Y.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
+          tooltip: r ? k.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
           onChange: e => T(l, e),
           onPreview: e => E(l, e),
           enabled: !s && !t.includes(l) && !0 !== r
@@ -252,14 +252,14 @@ function Q() {
     setting: y.WebSetting.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
     children: [(0, a.jsxs)(u.Heading, {
       variant: "heading-lg/semibold",
-      className: i()(k.titleWithBeta, w.marginBottom20),
-      children: [Y.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(I.default, {})]
+      className: i()(Y.titleWithBeta, w.marginBottom20),
+      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(I.default, {})]
     }), (0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
       className: w.marginBottom20,
-      children: Y.default.Messages.GUILD_COMMUNITY_ALERTS_DESCRIPTION
+      children: k.default.Messages.GUILD_COMMUNITY_ALERTS_DESCRIPTION
     }), (0, a.jsxs)(u.FormItem, {
-      title: Y.default.Messages.GUILD_COMMUNITY_ALERTS_CHOOSE_SERVER,
+      title: k.default.Messages.GUILD_COMMUNITY_ALERTS_CHOOSE_SERVER,
       children: [(0, a.jsx)(u.SingleSelect, {
         className: null != t ? w.marginBottom20 : w.marginBottom40,
         value: t,
@@ -273,7 +273,7 @@ function Q() {
           setting: y.WebSetting.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
           children: [(0, a.jsx)(u.FormSwitch, {
             className: i()(w.marginBottom20),
-            note: Y.default.Messages.GUILD_COMMUNITY_ALERTS_NAG_DESCRIPTION,
+            note: k.default.Messages.GUILD_COMMUNITY_ALERTS_NAG_DESCRIPTION,
             value: !e[t].disableRaidAlertNag,
             onChange: () => {
               (0, F.updateUserGuildSettings)(t, e => {
@@ -281,7 +281,7 @@ function Q() {
               }, F.UserSettingsDelay.INFREQUENT_USER_ACTION)
             },
             hideBorder: !0,
-            children: Y.default.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER
+            children: k.default.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER
           }), (0, a.jsx)(u.FormDivider, {
             className: i()(w.marginTop20, w.marginBottom40)
           })]
@@ -289,7 +289,7 @@ function Q() {
           setting: y.WebSetting.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
           children: [(0, a.jsx)(u.FormSwitch, {
             className: w.marginBottom20,
-            note: Y.default.Messages.GUILD_COMMUNITY_ALERTS_PUSH_DESCRIPTION,
+            note: k.default.Messages.GUILD_COMMUNITY_ALERTS_PUSH_DESCRIPTION,
             value: !e[t].disableRaidAlertPush,
             onChange: () => {
               (0, F.updateUserGuildSettings)(t, e => {
@@ -297,7 +297,7 @@ function Q() {
               }, F.UserSettingsDelay.INFREQUENT_USER_ACTION)
             },
             hideBorder: !0,
-            children: Y.default.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER
+            children: k.default.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER
           }), (0, a.jsx)(u.FormDivider, {
             className: i()(w.marginTop20, w.marginBottom40)
           })]
@@ -335,46 +335,46 @@ class q extends n.PureComponent {
       focusMode: c
     } = this.props, S = v.isPlatformEmbedded && (0, v.isWindows)(), E = o().range(1, 11).map(e => ({
       value: 60 * e,
-      label: Y.default.Messages.DURATION_MINUTES.format({
+      label: k.default.Messages.DURATION_MINUTES.format({
         minutes: e
       })
     }));
     return (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H1,
-      title: Y.default.Messages.NOTIFICATIONS,
+      title: k.default.Messages.NOTIFICATIONS,
       children: [(0, a.jsx)(p.Subsetting, {
         setting: y.WebSetting.NOTIFICATIONS_ENABLE_DESKTOP,
         children: (0, a.jsx)(u.FormSwitch, {
           className: w.marginBottom20,
           value: e !== V.DesktopNotificationTypes.NEVER && !c,
           onChange: this.handleDesktopChange,
-          note: Y.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
+          note: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
           disabled: c,
-          tooltipNote: c ? Y.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
-          children: Y.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE
+          tooltipNote: c ? k.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
+          children: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE
         })
       }), (0, a.jsx)(Z, {}), (0, a.jsx)(p.Subsetting, {
         setting: y.WebSetting.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
         children: (0, a.jsx)(u.FormSwitch, {
           className: S ? w.marginBottom20 : w.marginBottom40,
           value: !s,
-          note: Y.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
+          note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
           onChange: this.handleToggleShowUnreadBadge,
-          children: Y.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL
+          children: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL
         })
       }), S ? (0, a.jsx)(p.Subsetting, {
         setting: y.WebSetting.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
         children: (0, a.jsx)(u.FormSwitch, {
           className: w.marginBottom40,
           value: n,
-          note: Y.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_BODY,
+          note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_BODY,
           onChange: this.handleToggleShowFlash,
-          children: Y.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL
+          children: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL
         })
       }) : null, (0, a.jsx)(J, {}), (0, a.jsx)(p.Subsetting, {
         setting: y.WebSetting.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
         children: (0, a.jsxs)(u.FormItem, {
-          title: Y.default.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
+          title: k.default.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
           children: [(0, a.jsx)(u.SingleSelect, {
             value: t,
             onChange: G.AfkTimeout.updateSetting,
@@ -382,7 +382,7 @@ class q extends n.PureComponent {
           }), (0, a.jsx)(u.FormText, {
             type: u.FormTextTypes.DESCRIPTION,
             className: w.marginTop8,
-            children: Y.default.Messages.FORM_DESCRIPTION_PUSH_AFK_TIMEOUT
+            children: k.default.Messages.FORM_DESCRIPTION_PUSH_AFK_TIMEOUT
           }), (0, a.jsx)(u.FormDivider, {
             className: i()(w.marginTop40, w.marginBottom40)
           })]
@@ -404,23 +404,23 @@ class q extends n.PureComponent {
     }), W(this, "renderTTS", () => {
       if (!T.supported) return null;
       let e = [{
-        name: Y.default.Messages.TTS_ALLS,
+        name: k.default.Messages.TTS_ALLS,
         value: V.TTSNotificationTypes.ALL_CHANNELS
       }, {
-        name: Y.default.Messages.TTS_CURRENT,
+        name: k.default.Messages.TTS_CURRENT,
         value: V.TTSNotificationTypes.SELECTED_CHANNEL
       }, {
-        name: Y.default.Messages.TTS_NEVER,
+        name: k.default.Messages.TTS_NEVER,
         value: V.TTSNotificationTypes.NEVER
       }];
       return (0, a.jsxs)(p.Subsetting, {
         setting: y.WebSetting.NOTIFICATIONS_TEXT_TO_SPEECH,
         children: [(0, a.jsxs)(u.FormItem, {
-          title: Y.default.Messages.FORM_LABEL_TTS_NOTIFICATIONS,
+          title: k.default.Messages.FORM_LABEL_TTS_NOTIFICATIONS,
           children: [(0, a.jsx)(u.FormText, {
             type: u.FormTextTypes.DESCRIPTION,
             className: w.marginBottom8,
-            children: Y.default.Messages.FORM_DESCRIPTION_TTS
+            children: k.default.Messages.FORM_DESCRIPTION_TTS
           }), (0, a.jsx)(u.RadioGroup, {
             options: e,
             onChange: this.handleTTSChange,
@@ -495,9 +495,9 @@ function J() {
         },
         value: s,
         disabled: l || !s,
-        note: Y.default.Messages.NOTIF_MIGRATION_SETTINGS_SUBTITLE,
+        note: k.default.Messages.NOTIF_MIGRATION_SETTINGS_SUBTITLE,
         onChange: () => $(i),
-        children: Y.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
+        children: k.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
     }) : t ? (0, a.jsx)(p.Subsetting, {
       setting: y.WebSetting.NOTIFICATIONS_UNREAD_SETTINGS,
@@ -507,7 +507,7 @@ function J() {
         disabled: l || s,
         note: "Turns on the new notification system",
         onChange: () => (0, O.openMigrationModal)(!0),
-        children: Y.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
+        children: k.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
     }) : null, null]
   }) : null
@@ -516,12 +516,12 @@ async function $(e) {
   e(!0);
   let t = await (0, C.listSnapshots)();
   0 === t.length ? await (0, h.revertToOldSystem)() : c.default.show({
-    title: Y.default.Messages.CONFIRM,
-    body: Y.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
+    title: k.default.Messages.CONFIRM,
+    body: k.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
       date: new Date(t[t.length - 1].recorded_at)
     }),
-    cancelText: Y.default.Messages.CANCEL,
-    confirmText: Y.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_ACTION,
+    cancelText: k.default.Messages.CANCEL,
+    confirmText: k.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_ACTION,
     onConfirm: h.revertToOldSystem
   }), e(!1)
 }

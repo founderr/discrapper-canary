@@ -20,8 +20,8 @@ var l = n("735250"),
   C = n("823379"),
   g = n("355363"),
   E = n("737592"),
-  S = n("561788"),
-  _ = n("135724"),
+  _ = n("561788"),
+  S = n("135724"),
   I = n("543432"),
   N = n("981631"),
   T = n("689938"),
@@ -34,8 +34,8 @@ function L(e) {
     guild: h,
     onAction: p,
     voiceStates: g,
-    isChannelSelected: S,
-    shouldShowSettingNudge: _
+    isChannelSelected: _,
+    shouldShowSettingNudge: S
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -53,11 +53,11 @@ function L(e) {
   }(f, g);
   let I = (0, o.default)(f),
     L = Array.from((0, o.useEmbeddedAppsWithPresence)(I).values()),
-    x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
+    v = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
     M = (0, s.useStateFromStores)([m.default], () => {
       let e = {};
-      return x.forEach(t => {
+      return v.forEach(t => {
         let n = m.default.findActivity(t.user.id, R(t));
         if (null != n && !(0, d.default)(n)) {
           var l, a, s, i;
@@ -69,12 +69,12 @@ function L(e) {
           o.members.push(t), !(0, u.default)(o.activity, N.ActivityFlags.JOIN) && (o.activity = n), e[r] = o
         }
       }), Object.values(e)
-    }, [x], s.statesWillNeverBeEqual);
+    }, [v], s.statesWillNeverBeEqual);
   return M.length + L.length === 0 ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
-    children: [(0, l.jsx)(v, {
+    children: [(0, l.jsx)(x, {
       channel: f,
-      isChannelSelected: S,
+      isChannelSelected: _,
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
@@ -97,7 +97,7 @@ function L(e) {
         members: n,
         onAction: p
       }, t)
-    }), _ && (0, l.jsxs)(l.Fragment, {
+    }), S && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -124,7 +124,7 @@ function L(e) {
   })
 }
 
-function v(e) {
+function x(e) {
   let {
     channel: t,
     isChannelSelected: n,
@@ -137,9 +137,9 @@ function v(e) {
   }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id));
   return null == (0, c.getChannelIconComponent)(t, u) ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(_.default, {
       channel: t
-    }), o ? (0, l.jsx)(_.default, {
+    }), o ? (0, l.jsx)(S.default, {
       userCount: a,
       video: r,
       channel: t

@@ -43,8 +43,8 @@ var a = s("735250"),
   y = s("572965"),
   V = s("611273"),
   H = s("328756");
-let Y = (0, p.uid)(),
-  k = (0, p.uid)(),
+let k = (0, p.uid)(),
+  Y = (0, p.uid)(),
   w = (0, p.uid)(),
   W = o().debounce(e => {
     (0, E.setSaturation)(e)
@@ -160,17 +160,17 @@ function q() {
   return (0, a.jsxs)(u.FormSection, {
     className: V.marginTop20,
     children: [(0, a.jsx)(u.FormTitle, {
-      id: Y,
+      id: k,
       className: V.marginBottom8,
       children: B.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
     }), (0, a.jsx)(u.FormText, {
-      id: k,
+      id: Y,
       type: u.FormText.Types.DESCRIPTION,
       className: V.marginBottom20,
       children: B.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
     }), (0, a.jsx)(u.Slider, {
-      "aria-labelledby": Y,
-      "aria-describedby": k,
+      "aria-labelledby": k,
+      "aria-describedby": Y,
       markers: j.Accessibility.SATURATION_INCREMENTS,
       equidistant: !0,
       stickToMarkers: !0,

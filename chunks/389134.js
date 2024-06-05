@@ -1,14 +1,14 @@
 "use strict";
-a.r(t), a("47120");
-var n, r, s, i, l = a("392711"),
-  o = a.n(l),
-  c = a("906280"),
-  d = a.n(c),
-  u = a("442837"),
-  f = a("570140"),
-  m = a("944163"),
-  h = a("116175"),
-  E = a("308083");
+n.r(t), n("47120");
+var a, r, s, i, l = n("392711"),
+  o = n.n(l),
+  c = n("906280"),
+  d = n.n(c),
+  u = n("442837"),
+  f = n("570140"),
+  m = n("944163"),
+  h = n("116175"),
+  E = n("308083");
 let p = () => ({
     gameApplicationIds: new Set,
     playstyle: E.ClanPlaystyles.NONE,
@@ -31,7 +31,7 @@ let p = () => ({
   _ = !1,
   x = !1,
   g = {};
-class I extends(n = u.default.Store) {
+class I extends(a = u.default.Store) {
   getState() {
     return {
       initialSettings: C,
@@ -94,7 +94,7 @@ i = "ClanSettingsStore", (s = "displayName") in(r = I) ? Object.defineProperty(r
   MEMBER_VERIFICATION_FORM_UPDATE: function(e) {
     let {
       form: t,
-      isLocalUpdate: a
+      isLocalUpdate: n
     } = e;
     if (null == T.verificationForm) return !1;
     if (T = {
@@ -103,9 +103,9 @@ i = "ClanSettingsStore", (s = "displayName") in(r = I) ? Object.defineProperty(r
           ...T.verificationForm,
           ...t
         }
-      }, a) {
-      var n;
-      _ = !o().isEqual(T.verificationForm.formFields, null === (n = C.verificationForm) || void 0 === n ? void 0 : n.formFields)
+      }, n) {
+      var a;
+      _ = !o().isEqual(T.verificationForm.formFields, null === (a = C.verificationForm) || void 0 === a ? void 0 : a.formFields)
     } else _ = !1
   }
 })

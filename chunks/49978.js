@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   ChannelSelectorFooter: function() {
-    return R
+    return O
   },
   default: function() {
     return b
@@ -18,14 +18,14 @@ var i = l("735250"),
   u = l("740492"),
   v = l("592125"),
   f = l("430824"),
-  h = l("496675"),
-  m = l("944486"),
-  I = l("368874"),
+  I = l("496675"),
+  h = l("944486"),
+  m = l("368874"),
   E = l("810090"),
   T = l("566620"),
   x = l("317381"),
-  S = l("146936"),
-  C = l("678173"),
+  C = l("146936"),
+  S = l("678173"),
   p = l("696068"),
   A = l("361213"),
   _ = l("952561"),
@@ -34,12 +34,12 @@ var i = l("735250"),
   j = l("412019"),
   D = l("981631"),
   y = l("689938"),
-  M = l("777874");
+  L = l("777874");
 
-function L(e) {
-  return (0, n.useStateFromStores)([f.default, h.default], () => {
+function M(e) {
+  return (0, n.useStateFromStores)([f.default, I.default], () => {
     let t = f.default.getGuild(e);
-    return null != t && h.default.can(D.Permissions.CREATE_INSTANT_INVITE, t)
+    return null != t && I.default.can(D.Permissions.CREATE_INSTANT_INVITE, t)
   }, [e])
 }
 let V = ["embedded_background"];
@@ -49,10 +49,10 @@ function b(e) {
   let {
     applicationId: o,
     guildId: c,
-    selectedChannelId: h,
+    selectedChannelId: I,
     setSelectedChannelId: x,
-    enableSelectedTextChannelInvite: S
-  } = e, _ = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = (0, n.useStateFromStores)([v.default], () => v.default.getChannel(h)), D = (0, C.useActivityShelfItemData)(null != c ? c : null, null != o ? o : "", N), [b, R] = a.useState(S && !u.default.disableInviteWithTextChannelActivityLaunch), O = (0, p.useSelectVoiceChannelOptions)(c);
+    enableSelectedTextChannelInvite: C
+  } = e, _ = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = (0, n.useStateFromStores)([v.default], () => v.default.getChannel(I)), D = (0, S.useActivityShelfItemData)(null != c ? c : null, null != o ? o : "", N), [b, O] = a.useState(C && !u.default.disableInviteWithTextChannelActivityLaunch), R = (0, p.useSelectVoiceChannelOptions)(c);
   a.useEffect(() => {
     var e;
     T.fetchShelf({
@@ -71,17 +71,17 @@ function b(e) {
       names: V
     }),
     Y = (0, n.useStateFromStores)([f.default], () => f.default.getGuild(c)),
-    k = (0, n.useStateFromStores)([v.default, m.default], () => v.default.getChannel(m.default.getChannelId())),
-    P = L(null != c ? c : void 0);
+    k = (0, n.useStateFromStores)([v.default, h.default], () => v.default.getChannel(h.default.getChannelId())),
+    P = M(null != c ? c : void 0);
   if ((null == D ? void 0 : D.application) == null || null == Y) return null;
   let w = (null == k ? void 0 : k.name) == null || (null == k ? void 0 : k.name) === "" ? y.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(k.name);
   return (0, i.jsxs)(s.Scroller, {
-    className: M.scroll,
-    children: [null != F || null != H ? (0, i.jsx)(I.default, {
+    className: L.scroll,
+    children: [null != F || null != H ? (0, i.jsx)(m.default, {
       aspectRatio: 16 / 9,
-      className: M.imageContainer,
+      className: L.imageContainer,
       children: (0, i.jsx)(E.default, {
-        className: M.video,
+        className: L.video,
         src: F,
         loop: !0,
         autoPlay: !_,
@@ -89,24 +89,24 @@ function b(e) {
         muted: !0
       })
     }) : null, (0, i.jsxs)("div", {
-      className: M.descriptionArea,
+      className: L.descriptionArea,
       children: [(0, i.jsx)(s.Heading, {
         variant: "heading-xl/semibold",
         children: null == D ? void 0 : D.application.name
       }), (0, i.jsx)(s.Text, {
-        className: M.descriptionAreaSubtext,
+        className: L.descriptionAreaSubtext,
         variant: "text-md/normal",
         children: null == D ? void 0 : D.application.description
       })]
     }), (0, i.jsx)(s.Select, {
       placeholder: y.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-      optionClassName: M.__invalid_option,
-      options: O,
+      optionClassName: L.__invalid_option,
+      options: R,
       isSelected: e => {
         let {
           channel: t
         } = e;
-        return t.id === h
+        return t.id === I
       },
       select: e => {
         let {
@@ -121,7 +121,7 @@ function b(e) {
         return t.id
       },
       renderOptionValue: () => {
-        let e = O.find(e => e.value.channel.id === h);
+        let e = R.find(e => e.value.channel.id === I);
         return null == e ? null : (0, i.jsx)(j.SelectChannelOption, {
           channel: e.value.channel,
           users: e.value.users
@@ -139,17 +139,17 @@ function b(e) {
           users: l
         })
       }
-    }), P && S ? (0, i.jsxs)(s.Clickable, {
-      className: M.checkboxContainer,
+    }), P && C ? (0, i.jsxs)(s.Clickable, {
+      className: L.checkboxContainer,
       onClick: () => {
         let e = !b;
         r.default.updatedUnsyncedSettings({
           disableInviteWithTextChannelActivityLaunch: !e
-        }), R(e)
+        }), O(e)
       },
       children: [(0, i.jsx)(s.Checkbox, {
         type: s.Checkbox.Types.INVERTED,
-        className: M.checkbox,
+        className: L.checkbox,
         value: b,
         displayOnly: !0
       }), (0, i.jsxs)(s.Text, {
@@ -162,7 +162,7 @@ function b(e) {
   })
 }
 
-function R(e) {
+function O(e) {
   let {
     applicationId: t,
     guildId: l,
@@ -170,19 +170,19 @@ function R(e) {
     onBack: r,
     onClose: d,
     selectedChannelId: f,
-    enableSelectedTextChannelInvite: h
+    enableSelectedTextChannelInvite: I
   } = e, {
-    analyticsLocations: I
-  } = (0, c.default)(o.default.ACTIVITY_CHANNEL_SELECTOR), E = (0, n.useStateFromStores)([v.default], () => v.default.getChannel(f)), p = (0, C.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null, E), A = (0, _.default)(), g = (0, n.useStateFromStores)([v.default, m.default], () => v.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([x.default], () => null != f && "" !== f && x.default.getEmbeddedActivitiesForChannel(f).some(e => e.applicationId === t)), b = L(l), R = async () => {
+    analyticsLocations: m
+  } = (0, c.default)(o.default.ACTIVITY_CHANNEL_SELECTOR), E = (0, n.useStateFromStores)([v.default], () => v.default.getChannel(f)), p = (0, S.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null, E), A = (0, _.default)(), g = (0, n.useStateFromStores)([v.default, h.default], () => v.default.getChannel(h.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => I && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([x.default], () => null != f && "" !== f && x.default.getEmbeddedActivitiesForChannel(f).some(e => e.applicationId === t)), b = M(l), O = async () => {
     var e;
-    if (null != f && "" !== f && null != p && null != l && "" !== l) await (0, S.default)({
+    if (null != f && "" !== f && null != p && null != l && "" !== l) await (0, C.default)({
       targetApplicationId: null === (e = p.application) || void 0 === e ? void 0 : e.id,
       currentEmbeddedApplication: A,
       locationObject: a,
       channelId: f,
       guildId: l,
       embeddedActivitiesManager: N.default,
-      analyticsLocations: I
+      analyticsLocations: m
     }) && (d(), null != g && b && j && await T.sendEmbeddedActivityInvite({
       activityChannelId: f,
       invitedChannelId: g.id,
@@ -191,20 +191,20 @@ function R(e) {
     }))
   };
   return (0, i.jsx)(c.AnalyticsLocationProvider, {
-    value: I,
+    value: m,
     children: (0, i.jsxs)("div", {
-      className: M.footerContainer,
+      className: L.footerContainer,
       children: [(0, i.jsx)(s.Clickable, {
         onClick: r,
-        className: M.backToBrowse,
+        className: L.backToBrowse,
         children: (0, i.jsx)(s.Text, {
           color: "header-secondary",
           variant: "text-md/normal",
           children: y.default.Messages.BACK
         })
       }), null == f ? (0, i.jsx)("div", {}) : (0, i.jsx)(s.Button, {
-        className: M.launchButton,
-        onClick: R,
+        className: L.launchButton,
+        onClick: O,
         color: V ? s.Button.Colors.GREEN : void 0,
         fullWidth: !0,
         children: V ? y.default.Messages.EMBEDDED_ACTIVITIES_JOIN : y.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH

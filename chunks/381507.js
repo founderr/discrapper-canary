@@ -2,9 +2,9 @@
 s.r(t);
 var n = s("735250");
 s("470079");
-var l = s("780384"),
+var i = s("780384"),
   r = s("481060"),
-  i = s("410030"),
+  l = s("410030"),
   a = s("204197"),
   o = s("51144"),
   u = s("105759"),
@@ -23,10 +23,10 @@ t.default = () => {
       size: c.AvatarSizes.SIZE_32,
       animateOnHover: !0
     }),
-    f = (0, i.useTheme)(),
-    E = (0, l.isThemeLight)(f),
-    x = o.default.getName(e),
-    L = E ? C.default : d.default;
+    f = (0, l.useTheme)(),
+    x = (0, i.isThemeLight)(f),
+    E = o.default.getName(e),
+    m = x ? C.default : d.default;
   return null == e ? null : (0, n.jsxs)("div", {
     className: _.attributionBannerContainer,
     children: [(0, n.jsx)("div", {
@@ -41,9 +41,9 @@ t.default = () => {
       variant: "text-xs/bold",
       className: _.bannerHeader,
       children: p.default.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({
-        userName: x
+        userName: E
       })
-    }), (0, n.jsx)(L, {
+    }), (0, n.jsx)(m, {
       className: _.bannerIcon
     })]
   })

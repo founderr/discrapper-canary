@@ -125,9 +125,9 @@ t.default = e => {
     handleToggleExpanded: f,
     subscriptionInfo: g
   } = (0, D.default)(t), [C, h] = n.useState(!1), x = (0, p.useUID)(), {
-    analyticsLocations: Y
+    analyticsLocations: k
   } = (0, _.default)(), {
-    shouldHideGuildPurchaseEntryPoints: k
+    shouldHideGuildPurchaseEntryPoints: Y
   } = (0, N.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), w = (null == t ? void 0 : t.paymentGateway) === U.PaymentGateways.APPLE_PARTNER;
   if (null == l || null == s || null == g) return null;
   let W = () => {
@@ -143,7 +143,7 @@ t.default = e => {
     },
     z = async () => {
       try {
-        h(!0), await u.resubscribeToSubscription(t, Y), (0, v.openModal)()
+        h(!0), await u.resubscribeToSubscription(t, k), (0, v.openModal)()
       } finally {
         h(!1)
       }
@@ -264,7 +264,7 @@ t.default = e => {
         isTrial: ee,
         isCancelled: Q,
         isResubscribing: C,
-        shouldHideRoleSubscriptionEntryPoints: k,
+        shouldHideRoleSubscriptionEntryPoints: Y,
         onCancelSubscriptionClick: K,
         onChangePlanClick: W,
         onResubscribeClick: z

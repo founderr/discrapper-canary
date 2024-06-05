@@ -26,19 +26,19 @@ r("381996");
 var v = r("392750"),
   S = r("926976"),
   C = r("592197"),
-  T = r("860337"),
-  j = r("789654"),
+  j = r("860337"),
+  T = r("789654"),
   N = r("691867"),
   w = r("916790"),
   E = r("912072"),
   _ = r("246992"),
-  R = r("442954"),
+  P = r("442954"),
   A = r("702904"),
-  P = r("248526"),
+  R = r("248526"),
   L = r("958328"),
   O = r("514866"),
-  I = r("678639"),
-  M = r("351930"),
+  M = r("678639"),
+  I = r("351930"),
   D = r("771751"),
   B = r("596768"),
   F = r("621060"),
@@ -78,7 +78,7 @@ function Y() {
       }, {
         id: "stores",
         name: "Stores",
-        render: () => (0, a.jsx)(I.default, {})
+        render: () => (0, a.jsx)(M.default, {})
       }, {
         id: "dispatcher",
         name: "Dispatcher",
@@ -91,15 +91,15 @@ function Y() {
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(P.default, {})
+        render: () => (0, a.jsx)(R.default, {})
       })), p.default.isDeveloper && e.push({
         id: "clans",
         name: "Clans",
-        render: () => (0, a.jsx)(T.default, {})
+        render: () => (0, a.jsx)(j.default, {})
       }), e.push({
         id: "colors",
         name: "Colors",
-        render: () => (0, a.jsx)(j.default, {})
+        render: () => (0, a.jsx)(T.default, {})
       }), e.push({
         id: "design_toggles",
         name: "Design Toggles",
@@ -123,7 +123,7 @@ function Y() {
       }), e.push({
         id: "modals",
         name: "Modals",
-        render: () => (0, a.jsx)(R.default, {})
+        render: () => (0, a.jsx)(P.default, {})
       }), e.push({
         id: "affinity",
         name: "Affinity",
@@ -143,7 +143,7 @@ function Y() {
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
-        render: () => (0, a.jsx)(M.default, {})
+        render: () => (0, a.jsx)(I.default, {})
       }), e.push({
         id: "billing",
         name: "Billing",

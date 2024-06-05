@@ -14,22 +14,22 @@ var l, a, s, i, r, o, u = n("392711"),
   C = n("569471"),
   g = n("592125"),
   E = n("430824"),
-  S = n("306680"),
-  _ = n("914010"),
+  _ = n("306680"),
+  S = n("914010"),
   I = n("9156"),
   N = n("938475"),
   T = n("823379"),
   A = n("734307"),
   L = n("981631");
 (s = l || (l = {})).HIDDEN = "hidden", s.UNREAD = "unread", s.MENTIONS = "mentions", s.VOICE_CHANNELS = "voice-channels";
-let v = {
+let x = {
     mode: "hidden",
     mentionCount: 0,
     targetChannelId: null
   },
-  x = {
-    topBar: v,
-    bottomBar: v
+  v = {
+    topBar: x,
+    bottomBar: x
   },
   R = {},
   M = {};
@@ -46,7 +46,7 @@ function O(e) {
   if (null == n) return !1;
   let l = I.default.isGuildCollapsed(n),
     a = I.default.isChannelMuted(n, t.id);
-  return (!l || !a) && S.default.getMentionCount(e) > 0
+  return (!l || !a) && _.default.getMentionCount(e) > 0
 }
 
 function D(e) {
@@ -73,23 +73,23 @@ function b(e) {
     let t = g[e];
     if ((y(t.id) || d().some(t.threadIds, y)) && (f = !1), (O(t.id) || d().some(t.threadIds, O)) && (c = !1), p.includes(t.id) && (h = !0), !f && !c && h) break
   }
-  let _ = 0,
+  let S = 0,
     I = !1,
     N = 0,
     T = !1;
   if (f || c)
     for (let e = C.length - 1; e >= 0; e--) {
       let t = C[e];
-      (y(t.id) || d().some(t.threadIds, y)) && (null == r && (r = t.id), I = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == i && (i = t.id), _ += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
+      (y(t.id) || d().some(t.threadIds, y)) && (null == r && (r = t.id), I = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == i && (i = t.id), S += _.default.getMentionCount(t.id) + d().sumBy(t.threadIds, _.default.getMentionCount))
     }
   if (f || c)
     for (let e = 0; e < E.length; e++) {
       let t = E[e];
       if (!f && !c) break;
-      (y(t.id) || d().some(t.threadIds, y)) && (null == u && (u = t.id), T = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == o && (o = t.id), N += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
+      (y(t.id) || d().some(t.threadIds, y)) && (null == u && (u = t.id), T = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == o && (o = t.id), N += _.default.getMentionCount(t.id) + d().sumBy(t.threadIds, _.default.getMentionCount))
     }
   let L = null,
-    x = null,
+    v = null,
     b = null !== (l = null == m ? void 0 : m.getChannelRecords()) && void 0 !== l ? l : [];
   c && N > 0 ? L = {
     mode: "mentions",
@@ -103,20 +103,20 @@ function b(e) {
     mode: "unread",
     mentionCount: 0,
     targetChannelId: u
-  }), c && _ > 0 ? x = {
+  }), c && S > 0 ? v = {
     mode: "mentions",
-    mentionCount: _,
+    mentionCount: S,
     targetChannelId: i
-  } : f && I && (x = {
+  } : f && I && (v = {
     mode: "unread",
     mentionCount: 0,
     targetChannelId: r
   });
-  let j = null != x && (null == L || "mentions" !== L.mode && "mentions" === x.mode),
+  let j = null != v && (null == L || "mentions" !== L.mode && "mentions" === v.mode),
     P = null != L && ("mentions" === L.mode || !j);
   return R[e] = {
-    topBar: j && null != x ? x : v,
-    bottomBar: P && null != L ? L : v
+    topBar: j && null != v ? v : x,
+    bottomBar: P && null != L ? L : x
   }, !0
 }
 let j = d().throttle(b, 200);
@@ -152,7 +152,7 @@ function w(e) {
   } = e, n = g.default.getChannel(t);
   if (null == n) return !1;
   let l = E.default.getGuild(n.guild_id);
-  return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && _.default.getGuildId() === n.guild_id && j(n.guild_id)
+  return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && S.default.getGuildId() === n.guild_id && j(n.guild_id)
 }
 
 function B(e) {
@@ -163,11 +163,11 @@ function B(e) {
 }
 class F extends(a = c.default.Store) {
   initialize() {
-    this.waitFor(A.default, S.default, I.default, C.default, N.default, _.default, E.default)
+    this.waitFor(A.default, _.default, I.default, C.default, N.default, S.default, E.default)
   }
   getUnreadStateForGuildId(e) {
     var t;
-    return null !== (t = R[e]) && void 0 !== t ? t : x
+    return null !== (t = R[e]) && void 0 !== t ? t : v
   }
 }
 o = "ChannelListUnreadsStore", (r = "displayName") in(i = F) ? Object.defineProperty(i, r, {
@@ -222,7 +222,7 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = F) ? Object.defineProp
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
-    } = e, n = _.default.getGuildId();
+    } = e, n = S.default.getGuildId();
     if (null == n || !new Set(t.map(e => e.guildId)).has(n)) return !1;
     let l = R[n];
     return null != l && "voice-channels" === l.bottomBar.mode && j(n)

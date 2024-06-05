@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   acceptCreatorMonetizationTerms: function() {
     return d
   },
@@ -31,39 +31,39 @@ a.r(t), a.d(t, {
     return T
   }
 });
-var n = a("544891"),
-  r = a("570140"),
-  s = a("728345"),
-  i = a("981631"),
-  l = a("674563");
+var a = n("544891"),
+  r = n("570140"),
+  s = n("728345"),
+  i = n("981631"),
+  l = n("674563");
 async function o(e) {
-  await n.HTTP.post({
+  await a.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)
   })
 }
 async function c(e) {
-  return (await n.HTTP.get({
+  return (await a.HTTP.get({
     url: i.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e)
   })).body
 }
 async function d(e, t) {
-  await n.HTTP.post({
+  await a.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t)
   })
 }
 async function u(e) {
-  await n.HTTP.post({
+  await a.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e)
   })
 }
 async function f(e) {
-  return (await n.HTTP.get({
+  return (await a.HTTP.get({
     url: i.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
   })).body
 }
 async function m(e) {
   try {
-    let t = await n.HTTP.get({
+    let t = await a.HTTP.get({
       url: i.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
       query: {
         nag_guild_ids: e
@@ -76,31 +76,31 @@ async function m(e) {
   } catch (e) {}
 }
 async function h(e, t) {
-  let a = (await n.HTTP.post({
+  let n = (await a.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
     body: {
       team_id: t
     }
   })).body;
-  return null != a.application && r.default.dispatch({
+  return null != n.application && r.default.dispatch({
     type: "APPLICATION_FETCH_SUCCESS",
-    application: a.application
-  }), a
+    application: n.application
+  }), n
 }
 
 function E(e) {
-  return n.HTTP.post({
+  return a.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
   })
 }
 
 function p(e) {
-  return n.HTTP.post({
+  return a.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
   })
 }
 async function C(e) {
-  await n.HTTP.post({
+  await a.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
     body: {}
   })

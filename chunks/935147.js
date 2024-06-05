@@ -46,8 +46,8 @@ function F(e) {
   } = e, {
     reducedMotion: V
   } = n.useContext(i.AccessibilityPreferencesContext), H = h.default.isPremium(y), {
-    pendingAvatar: Y,
-    pendingBanner: k,
+    pendingAvatar: k,
+    pendingBanner: Y,
     pendingThemeColors: w,
     pendingPronouns: W,
     pendingBio: K,
@@ -114,12 +114,12 @@ function F(e) {
           onBannerChange: N.setTryItOutBanner,
           pendingPronouns: W,
           pendingBio: K,
-          pendingBanner: null !== (B = null != q ? q : k) && void 0 !== B ? B : s("466045"),
-          pendingAvatar: null != Q ? Q : Y,
+          pendingBanner: null !== (B = null != q ? q : Y) && void 0 !== B ? B : s("466045"),
+          pendingAvatar: null != Q ? Q : k,
           pendingThemeColors: null != z ? z : w,
           pendingAvatarDecoration: J,
           pendingProfileEffectId: $,
-          avatarClassName: null != Q || null != Y || V.enabled ? void 0 : G.spinningAvatar,
+          avatarClassName: null != Q || null != k || V.enabled ? void 0 : G.spinningAvatar,
           canUsePremiumCustomization: !0,
           isTryItOutFlow: !0,
           hideExampleButton: !0,
@@ -139,7 +139,7 @@ function F(e) {
           }), (0, a.jsx)(P.default, {
             className: G.customizationSection,
             user: y,
-            pendingAvatar: null != Q ? Q : Y,
+            pendingAvatar: null != Q ? Q : k,
             pendingColors: null != z ? z : w,
             onThemeColorsChange: N.setTryItOutThemeColors,
             showPremiumIcon: !1,

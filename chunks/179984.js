@@ -29,8 +29,8 @@ var a = s("735250"),
   L = s("243794"),
   x = s("102655"),
   v = s("768236"),
-  D = s("314907"),
-  b = s("826701");
+  b = s("314907"),
+  D = s("826701");
 let U = e => {
     let {
       isLightTheme: t
@@ -54,7 +54,7 @@ let U = e => {
         premiumType: s
       } = e,
       r = (0, c.default)();
-    t = s === M.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(r) ? x : v : (0, o.isThemeDark)(r) ? D : b;
+    t = s === M.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(r) ? x : v : (0, o.isThemeDark)(r) ? b : D;
     let i = (0, f.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
@@ -129,8 +129,8 @@ t.default = e => {
       className: i,
       hideCTAs: x = !1,
       headingOverride: v,
-      hidePill: D = !1,
-      selectedPlanColumnClassName: b,
+      hidePill: b = !1,
+      selectedPlanColumnClassName: D,
       selectedPlanTier: k = M.PremiumTypes.TIER_2
     } = e,
     {
@@ -223,7 +223,7 @@ t.default = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == Q
-  }), s = D ? null : null != Q || null != J ? (0, a.jsx)(g.PremiumPillWithSparkles, {
+  }), s = b ? null : null != Q || null != J ? (0, a.jsx)(g.PremiumPillWithSparkles, {
     text: null != Q ? h.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : h.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: L.freeTrialPillWithSparkles,
     colorOptions: Q === M.PremiumSubscriptionSKUs.TIER_0 ? V ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : V ? z ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
@@ -243,7 +243,7 @@ t.default = e => {
       }), (0, a.jsxs)("div", {
         className: L.tableWrapper,
         children: [(0, a.jsx)("div", {
-          className: n()(b, {
+          className: n()(D, {
             [L.tier0ColumnOuter]: en,
             [L.tier2ColumnOuter]: !en
           }),

@@ -59,8 +59,8 @@ t.default = function() {
     {
       analyticsLocations: V
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
-    [H, Y] = n.useState(""),
-    [k, w] = n.useState(p.EMPTY_STRING_SNOWFLAKE_ID),
+    [H, k] = n.useState(""),
+    [Y, w] = n.useState(p.EMPTY_STRING_SNOWFLAKE_ID),
     [W, K] = n.useState(""),
     [z, Q] = n.useState(p.EMPTY_STRING_SNOWFLAKE_ID),
     [q, X] = n.useState(p.EMPTY_STRING_SNOWFLAKE_ID);
@@ -258,15 +258,15 @@ t.default = function() {
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "Application Id",
           value: H,
-          onChange: Y
+          onChange: k
         }), (0, a.jsx)(r.TextInput, {
           placeholder: "Sku Id",
-          value: k,
+          value: Y,
           onChange: e => w(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, u.openIAPPurchaseModal)({
             applicationId: H,
-            skuId: k,
+            skuId: Y,
             openPremiumPaymentModal: () => !0,
             analyticsLocations: [],
             analyticsLocationObject: {

@@ -117,7 +117,7 @@ function P() {
         fps: p.ApplicationStreamFPS.FPS_60
       })
     }], [B]),
-    Y = n.useCallback(e => {
+    k = n.useCallback(e => {
       d.default.setKeybind({
         ...U,
         shortcut: e
@@ -219,7 +219,7 @@ function P() {
           className: M.keyRecorder,
           children: (0, a.jsx)(c.default, {
             defaultValue: U.shortcut,
-            onChange: Y
+            onChange: k
           })
         })
       })]

@@ -137,7 +137,7 @@ t.default = e => {
         })
       })
     },
-    Y = async () => {
+    k = async () => {
       try {
         y(!0);
         let {
@@ -157,14 +157,14 @@ t.default = e => {
         y(!1)
       }
     }, {
-      isCancelled: k,
+      isCancelled: Y,
       isDeleted: w,
       isPastDue: W,
       subscriptionPlanPrice: K,
       subscribedSinceDate: z,
       currentPeriodEndDate: Q,
       currentPeriodEndLabel: q
-    } = g, X = (0, L.isApplicationUserSubscription)(l.sku_flags), Z = (0, L.isApplicationGuildSubscription)(l.sku_flags), J = l.soft_deleted || null == C || (!Z || null == u) && !X, $ = () => k || w ? (0, a.jsx)(D.TextBadge, {
+    } = g, X = (0, L.isApplicationUserSubscription)(l.sku_flags), Z = (0, L.isApplicationGuildSubscription)(l.sku_flags), J = l.soft_deleted || null == C || (!Z || null == u) && !X, $ = () => Y || w ? (0, a.jsx)(D.TextBadge, {
       text: U.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED
     }) : W ? (0, a.jsx)(c.Tooltip, {
       text: U.default.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
@@ -271,10 +271,10 @@ t.default = e => {
         subscription: t,
         disabled: w
       }), !J && (0, a.jsx)(B, {
-        isCancelled: k,
+        isCancelled: Y,
         onCancelSubscriptionClick: H,
         isResubscribing: M,
-        onResubscribeClick: Y
+        onResubscribeClick: k
       })]
     }) : null]
   })

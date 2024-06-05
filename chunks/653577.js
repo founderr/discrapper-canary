@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return _
   }
 });
 var l = n("735250"),
@@ -21,16 +21,16 @@ var l = n("735250"),
   g = n("965752"),
   E = n("946278");
 
-function S(e) {
+function _(e) {
   let {
     channel: t,
     connected: n,
     hovered: s,
-    subtitle: S,
-    onClick: _,
+    subtitle: _,
+    onClick: S,
     enableHangStatus: I,
     allowChannelTopic: N
-  } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, u.default)(t, !0), v = (!I || !!N) && L, x = null != S && S.length > 0;
+  } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, u.default)(t, !0), x = (!I || !!N) && L, v = null != _ && _.length > 0;
   a.useEffect(() => {
     A && m.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
@@ -39,10 +39,10 @@ function S(e) {
   }, [t.id, A, t.guild_id]);
   let R = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
   if (null == t.guild_id) return null;
-  let M = i()(g.statusDiv, n && v ? g.hoverable : null);
+  let M = i()(g.statusDiv, n && x ? g.hoverable : null);
   if (A) return (0, l.jsx)(o.Clickable, {
     className: M,
-    onClick: v ? _ : void 0,
+    onClick: x ? S : void 0,
     children: (0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: i()(g.statusText, E.markup),
@@ -53,9 +53,9 @@ function S(e) {
       })
     })
   });
-  if (n && v && (!x || s)) return (0, l.jsxs)(o.Clickable, {
+  if (n && x && (!v || s)) return (0, l.jsxs)(o.Clickable, {
     className: M,
-    onClick: _,
+    onClick: S,
     children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: g.statusText,
@@ -66,8 +66,8 @@ function S(e) {
       height: R
     })]
   });
-  if (x) return (0, l.jsx)(f.default, {
-    children: S
+  if (v) return (0, l.jsx)(f.default, {
+    children: _
   });
   return null
 }

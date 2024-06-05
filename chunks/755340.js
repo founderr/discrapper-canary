@@ -1,23 +1,23 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  r = a("470079"),
-  s = a("481060"),
-  i = a("467138"),
-  l = a("246364"),
-  o = a("983736"),
-  c = a("5056"),
-  d = a("565321"),
-  u = a("297619"),
-  f = a("456935"),
-  m = a("446945"),
-  h = a("700833"),
-  E = a("592286"),
-  p = a("689938");
+n.r(t), n("47120");
+var a = n("735250"),
+  r = n("470079"),
+  s = n("481060"),
+  i = n("467138"),
+  l = n("246364"),
+  o = n("983736"),
+  c = n("5056"),
+  d = n("565321"),
+  u = n("297619"),
+  f = n("456935"),
+  m = n("446945"),
+  h = n("700833"),
+  E = n("592286"),
+  p = n("689938");
 t.default = function(e) {
   let {
     guild: t,
-    submittedGuildJoinRequestsCount: a,
+    submittedGuildJoinRequestsCount: n,
     onFormFieldUpdate: C,
     hideVerificationLevelField: T,
     isClanContext: _,
@@ -56,13 +56,13 @@ t.default = function(e) {
     }, [S, B]),
     U = r.useCallback(async (e, t) => {
       if (S[e] === t) return;
-      let a = [...S];
-      a[e] = t, await B(a)
+      let n = [...S];
+      n[e] = t, await B(n)
     }, [S, B]),
-    k = r.useCallback(async (e, t, a) => {
-      let n = S.indexOf(e),
+    k = r.useCallback(async (e, t, n) => {
+      let a = S.indexOf(e),
         r = [...S];
-      if (null != t && t !== n && (r.splice(n, 1), r.splice(t, 0, e), L(r)), a) try {
+      if (null != t && t !== a && (r.splice(a, 1), r.splice(t, 0, e), L(r)), n) try {
         await B(r), null !== v && A(null)
       } catch (e) {
         w()
@@ -75,14 +75,14 @@ t.default = function(e) {
         w()
       }
     }, [S, B, w]),
-    V = (0, n.jsxs)(n.Fragment, {
-      children: [!T && (0, n.jsx)(f.default, {
+    V = (0, a.jsxs)(a.Fragment, {
+      children: [!T && (0, a.jsx)(f.default, {
         guild: t
-      }), (0, n.jsx)(d.default, {
+      }), (0, a.jsx)(d.default, {
         formDescription: x,
         guildId: t.id,
         onSave: I
-      }), !O && !j && (0, n.jsx)(u.default, {
+      }), !O && !j && (0, a.jsx)(u.default, {
         addFormField: G,
         guild: t
       }), y.map(e => (0, h.getFormFieldBuilderComponent)({
@@ -91,7 +91,7 @@ t.default = function(e) {
         guild: t,
         index: S.indexOf(e),
         isDragEnabled: !1,
-        submittedGuildJoinRequestsCount: a,
+        submittedGuildJoinRequestsCount: n,
         removeFormField: H,
         updateFormField: U,
         updateFormFieldOrder: k,
@@ -99,8 +99,8 @@ t.default = function(e) {
         actionsLocation: _ ? "side" : "footer"
       }))]
     });
-  return P ? (0, n.jsxs)(n.Fragment, {
-    children: [!_ && V, !D && (0, n.jsx)(c.default, {
+  return P ? (0, a.jsxs)(a.Fragment, {
+    children: [!_ && V, !D && (0, a.jsx)(c.default, {
       addFormField: G,
       showManualApprovalWarning: !_ && !F,
       guild: t,
@@ -111,13 +111,13 @@ t.default = function(e) {
       guild: t,
       index: S.indexOf(e),
       isDragEnabled: F,
-      submittedGuildJoinRequestsCount: a,
+      submittedGuildJoinRequestsCount: n,
       removeFormField: H,
       updateFormField: U,
       updateFormFieldOrder: k,
       canRemove: !(_ && M.length <= 1),
       actionsLocation: _ ? "side" : "footer"
-    })), D && !j && (0, n.jsx)(m.default, {
+    })), D && !j && (0, a.jsx)(m.default, {
       addFormField: G,
       guild: t
     })]

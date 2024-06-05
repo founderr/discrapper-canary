@@ -21,8 +21,8 @@ let E = (0, u.makeChannelSortable)(function(e) {
     selectedChannelId: s,
     position: u,
     disableManageChannels: E,
-    sorting: S,
-    sortingType: _,
+    sorting: _,
+    sortingType: S,
     sortingPosition: I,
     connectChannelDragSource: N,
     connectChannelDropTarget: T,
@@ -30,7 +30,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
   } = e, L = (0, r.useStateFromStores)([d.default, c.default], () => {
     let e = c.default.getDirectoryChannelIds(t.id);
     return 0 === e.length ? null : d.default.getChannel(e[0])
-  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(p.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(p.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
+  }), x = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), v = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != x ? f.default.can(p.Permissions.MANAGE_CHANNELS, x) : null != t && f.default.can(p.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
     null != L && (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -43,18 +43,18 @@ let E = (0, u.makeChannelSortable)(function(e) {
   }, [L]);
   if (null == L) return null;
   let y = (0, h.getChannelItemClassName)(u, I),
-    O = (0, h.isChannelItemDisabled)(L, S, _),
+    O = (0, h.isChannelItemDisabled)(L, _, S),
     D = (0, l.jsx)("div", {
       className: i()(y, {
         [g.disabled]: O,
-        [g.selected]: x
+        [g.selected]: v
       }),
       "data-dnd-name": L.name,
       children: (0, l.jsxs)(m.default, {
         className: g.iconVisibility,
         channel: L,
         guild: t,
-        selected: x,
+        selected: v,
         onContextMenu: M,
         forceInteractable: !0,
         resolvedUnreadSetting: C.UnreadSetting.ONLY_MENTIONS,

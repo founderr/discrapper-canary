@@ -94,7 +94,7 @@ let x = e => {
       springConfig: h
     } = e, [S, _] = (0, r.useState)(0), [N, L] = (0, r.useState)(!1), b = i().useCallback(() => L(!0), []), v = i().useCallback(() => L(!1), []), R = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), A = null != C && !E && !N && R, P = i().useCallback(e => (t.length + S + e) % t.length, [t, S]), O = i().useCallback(d()((e, s, n) => {
       null != n && (null == a || a(t[e], s, e, n)), null == l || l(t[e], s, e), _(e)
-    }, 1e3), [t, a, l]);
+    }, 500), [t, a, l]);
     return (0, r.useEffect)(() => {
       if (A) {
         let e = P(1),

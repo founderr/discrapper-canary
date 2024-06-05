@@ -39,9 +39,9 @@ t.default = e => {
       location: m.NitroLandingPages.SEE_ALL
     }),
     {
-      analyticsLocations: D
+      analyticsLocations: b
     } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-    [b, U] = r.useState(!1),
+    [D, U] = r.useState(!1),
     j = (0, E.default)("perks-discoverability"),
     G = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion),
     B = (0, N.useIsPremiumSubscriber)();
@@ -54,7 +54,7 @@ t.default = e => {
     children: (0, a.jsx)("div", {
       className: C.container,
       children: (0, a.jsxs)(_.AnalyticsLocationProvider, {
-        value: D,
+        value: b,
         children: [(0, a.jsx)(f.default, {
           className: C.heroHeading,
           onBackClick: () => {
@@ -119,8 +119,8 @@ t.default = e => {
           className: C.footerSpacing
         }), (0, a.jsx)(o.VisibilitySensor, {
           onChange: e => {
-            e && !b && (I.default.track(p.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-              location_stack: D
+            e && !D && (I.default.track(p.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+              location_stack: b
             }), U(!0))
           },
           children: (0, a.jsx)("div", {

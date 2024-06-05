@@ -300,7 +300,7 @@ function H(e) {
     }), t]
   })
 }
-let Y = (0, R.cachedFunction)(function() {
+let k = (0, R.cachedFunction)(function() {
   for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
   return new Set(t.map(e => e.exePath))
 });
@@ -313,7 +313,7 @@ t.default = function(e) {
     overrideExePaths: u
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     runningGame: S.default.getVisibleGame(),
-    overrideExePaths: Y(...S.default.getOverrides())
+    overrideExePaths: k(...S.default.getOverrides())
   }));
   return n.useEffect(() => ((0, E.watchCandidateGames)(), E.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",

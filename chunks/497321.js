@@ -1,25 +1,25 @@
 "use strict";
-a.r(t), a("47120");
-var n, r = a("735250"),
-  s = a("470079"),
-  i = a("120356"),
-  l = a.n(i),
-  o = a("481060"),
-  c = a("37234"),
-  d = a("230711"),
-  u = a("981631"),
-  f = a("689938"),
-  m = a("662090");
+n.r(t), n("47120");
+var a, r = n("735250"),
+  s = n("470079"),
+  i = n("120356"),
+  l = n.n(i),
+  o = n("481060"),
+  c = n("37234"),
+  d = n("230711"),
+  u = n("981631"),
+  f = n("689938"),
+  m = n("662090");
 
-function h(e, t, a) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
-class E extends(n = s.Component) {
+class E extends(a = s.Component) {
   render() {
     return (0, r.jsxs)("div", {
       className: m.streamerModeEnabled,

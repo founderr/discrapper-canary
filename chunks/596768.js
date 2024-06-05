@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return R
+    return P
   }
 }), r("47120");
 var a = r("735250"),
@@ -25,8 +25,8 @@ var a = r("735250"),
   v = r("257785"),
   S = r("484036"),
   C = r("681619"),
-  T = r("621060"),
-  j = r("689938"),
+  j = r("621060"),
+  T = r("689938"),
   N = r("457501"),
   w = r("277513");
 let E = [{
@@ -136,13 +136,13 @@ let E = [{
     }
   }];
 
-function R() {
+function P() {
   let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), g = o.find(e => e.key === c), {
     TabBar: y,
     renderSelectedTab: b
-  } = (0, T.default)({
+  } = (0, j.default)({
     tabs: _
-  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), R = n.useCallback(e => {
+  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), P = n.useCallback(e => {
     p.default.dispatch({
       type: "SET_TRACK_TRIGGERS",
       enabled: e
@@ -158,7 +158,7 @@ function R() {
         className: N.triggersEnable,
         children: (0, a.jsx)(h.Switch, {
           checked: v,
-          onChange: R,
+          onChange: P,
           className: N.__invalid_toolbarSwitch
         })
       }), (0, a.jsx)(h.Button, {
@@ -167,9 +167,9 @@ function R() {
         size: h.Button.Sizes.ICON,
         onClick: k.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
-          title: j.default.Messages.CLEAR,
+          title: T.default.Messages.CLEAR,
           children: (0, a.jsx)(f.default, {
-            "aria-label": j.default.Messages.CLEAR
+            "aria-label": T.default.Messages.CLEAR
           })
         })
       }), (0, a.jsx)(m.default, {

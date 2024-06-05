@@ -29,16 +29,16 @@ var l = n("735250"),
   C = n("963202"),
   g = n("824991"),
   E = n("243778"),
-  S = n("863249"),
-  _ = n("937111"),
+  _ = n("863249"),
+  S = n("937111"),
   I = n("602147"),
   N = n("981631"),
   T = n("308083"),
   A = n("921944"),
   L = n("689938"),
-  v = n("41004");
+  x = n("41004");
 
-function x(e) {
+function v(e) {
   let {
     title: t,
     message: n,
@@ -49,28 +49,28 @@ function x(e) {
     children: h,
     isEligibleForUpsell: m = !0,
     withInviteIcon: p = !0
-  } = e, C = (0, r.useLocation)(), [S, _] = (0, E.useSelectedDismissibleContent)([s], A.DismissibleContentGroupName.SIDEBAR), L = S !== s, x = (0, f.default)(), R = m && !x && !L && C.pathname !== N.Routes.GUILD_DISCOVERY;
+  } = e, C = (0, r.useLocation)(), [_, S] = (0, E.useSelectedDismissibleContent)([s], A.DismissibleContentGroupName.SIDEBAR), L = _ !== s, v = (0, f.default)(), R = m && !v && !L && C.pathname !== N.Routes.GUILD_DISCOVERY;
   a.useEffect(() => {
     R && u()
   }, [R, u]);
   let M = a.useMemo(() => {
       switch (i) {
         case T.VALORANT_ID:
-          return v.valorantBackgroundImage;
+          return x.valorantBackgroundImage;
         case T.GENSHIN_ID:
-          return v.genshinBackgroundImage;
+          return x.genshinBackgroundImage;
         default:
           return
       }
     }, [i]),
     y = a.useCallback(() => {
-      _(A.ContentDismissActionType.TAKE_ACTION), d(), (0, I.handleDiscoveryButtonClick)()
-    }, [_, d]),
+      S(A.ContentDismissActionType.TAKE_ACTION), d(), (0, I.handleDiscoveryButtonClick)()
+    }, [S, d]),
     O = a.useCallback(e => {
-      e(), _(A.ContentDismissActionType.USER_DISMISS)
-    }, [_]);
+      e(), S(A.ContentDismissActionType.USER_DISMISS)
+    }, [S]);
   return (0, l.jsxs)("div", {
-    className: v.container,
+    className: x.container,
     children: [(0, l.jsx)(c.Popout, {
       shouldShow: R,
       renderPopout: e => {
@@ -78,19 +78,19 @@ function x(e) {
           closePopout: a
         } = e;
         return (0, l.jsxs)("div", {
-          className: v.popoutContainer,
+          className: x.popoutContainer,
           children: [(0, l.jsx)("div", {
             className: M
           }), (0, l.jsx)(c.Clickable, {
             onClick: () => O(a),
-            className: v.close,
+            className: x.close,
             children: (0, l.jsx)(o.CloseSmallIcon, {
               width: 16,
               height: 16,
               color: c.tokens.colors.WHITE
             })
           }), (0, l.jsxs)("div", {
-            className: v.popoutContent,
+            className: x.popoutContent,
             children: [p && (0, l.jsx)(g.ClanUpsellInviteByline, {}), (0, l.jsx)(g.ClanUpsellTitle, {
               title: t
             }), (0, l.jsx)(g.ClanUpsellMessage, {
@@ -99,7 +99,7 @@ function x(e) {
               onClick: y
             })]
           }), (0, l.jsx)("div", {
-            className: v.popoutCaret
+            className: x.popoutCaret
           })]
         })
       },
@@ -109,7 +109,7 @@ function x(e) {
       spacing: 16,
       children: e => (0, l.jsx)("div", {
         ...e,
-        className: v.popoutAnchor
+        className: x.popoutAnchor
       })
     }), h({
       onClick: y
@@ -139,7 +139,7 @@ function R(e) {
         return [void 0, void 0]
     }
   }, [t]);
-  return (0, l.jsx)(x, {
+  return (0, l.jsx)(v, {
     title: r,
     message: o,
     dismissibleContent: d.DismissibleContent.GUILD_LIST_CLAN_USER_UPSELL,
@@ -178,7 +178,7 @@ function M(e) {
         return [void 0, void 0]
     }
   }, [t]);
-  return (0, l.jsx)(x, {
+  return (0, l.jsx)(v, {
     title: u,
     message: c,
     dismissibleContent: d.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL,
@@ -194,8 +194,8 @@ function y(e) {
   let {
     onActivate: t,
     children: n
-  } = e, s = (0, u.useStateFromStores)([_.default], () => _.default.hasJoinRequestCoackmark()), i = a.useCallback(() => {
-    S.default.clearCoachmark()
+  } = e, s = (0, u.useStateFromStores)([S.default], () => S.default.hasJoinRequestCoackmark()), i = a.useCallback(() => {
+    _.default.clearCoachmark()
   }, []), r = (0, h.default)(s), o = a.useRef(null);
   return a.useEffect(() => {
     if (s && s !== r) {
@@ -203,16 +203,16 @@ function y(e) {
       t(), null === (i = o.current) || void 0 === i || null === (a = i.ref) || void 0 === a || null === (l = a.current) || void 0 === l || null === (n = l.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition()
     }
   }, [o, s, r, t]), (0, l.jsxs)("div", {
-    className: v.container,
+    className: x.container,
     children: [(0, l.jsx)(c.Popout, {
       ref: o,
       shouldShow: s,
       renderPopout: () => (0, l.jsxs)("div", {
-        className: v.popoutContainer,
+        className: x.popoutContainer,
         children: [(0, l.jsxs)("div", {
-          className: v.popoutContent,
+          className: x.popoutContent,
           children: [(0, l.jsxs)("div", {
-            className: v.coachmarkTextContainer,
+            className: x.coachmarkTextContainer,
             children: [(0, l.jsx)(c.Heading, {
               variant: "heading-md/medium",
               children: L.default.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
@@ -229,7 +229,7 @@ function y(e) {
             children: L.default.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
           })]
         }), (0, l.jsx)("div", {
-          className: v.popoutCaretLeft
+          className: x.popoutCaretLeft
         })]
       }),
       position: "right",
@@ -238,7 +238,7 @@ function y(e) {
       spacing: 16,
       children: e => (0, l.jsx)("div", {
         ...e,
-        className: v.popoutAnchor
+        className: x.popoutAnchor
       })
     }), n]
   })
@@ -250,10 +250,10 @@ function O(e) {
     children: n
   } = e;
   return (0, l.jsxs)("div", {
-    className: v.footer,
+    className: x.footer,
     children: [(0, l.jsx)("div", {
-      className: i()(v.gradient, {
-        [v.gradientHidden]: t
+      className: i()(x.gradient, {
+        [x.gradientHidden]: t
       })
     }), n]
   })

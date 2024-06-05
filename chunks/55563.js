@@ -13,11 +13,11 @@ let E = new Set,
   S = new Map;
 
 function h(e) {
-  T.set(e.id, _.default.createFromServer(e)), !f.has(e.application_id) && f.set(e.application_id, new Set), f.get(e.application_id).add(e.id)
+  T.set(e.id, _.default.createFromServer(e)), E.delete(e.id), I.delete(e.id), !f.has(e.application_id) && f.set(e.application_id, new Set), f.get(e.application_id).add(e.id)
 }
 
 function A(e) {
-  E.delete(e.id), I.delete(e.id), h(e)
+  h(e)
 }
 
 function m(e) {
@@ -95,7 +95,7 @@ o = "SKUStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
     let {
       sku: t
     } = e;
-    A(t)
+    h(t)
   },
   SKU_FETCH_FAIL: function(e) {
     let {
@@ -108,7 +108,7 @@ o = "SKUStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
       guildId: t,
       skus: n
     } = e;
-    for (let e of n) A(e);
+    for (let e of n) h(e);
     null != t && S.set(t, new Set(n.map(e => e.id)))
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: N,

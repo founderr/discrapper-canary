@@ -16,15 +16,15 @@ var l = n("735250"),
   C = n("979651"),
   g = n("938475"),
   E = n("514342"),
-  S = n("714794"),
-  _ = n("135724"),
+  _ = n("714794"),
+  S = n("135724"),
   I = n("25601"),
   N = n("207055"),
   T = n("981631"),
   A = n("124368"),
   L = n("689938"),
-  v = n("513285"),
-  x = n("628462"),
+  x = n("513285"),
+  v = n("628462"),
   R = n("52645");
 
 function M(e) {
@@ -77,9 +77,9 @@ t.default = a.memo(function(e) {
       })
     })
   }, [t.id]), F = null == D ? 0 : D.length, {
-    role: V,
-    ...H
-  } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+    role: H,
+    ...V
+  } = (0, r.useListItem)(t.id), k = a.useRef(null), W = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
     channelName: t.name,
     mentionCount: P
   }) : j ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
@@ -88,9 +88,9 @@ t.default = a.memo(function(e) {
     channelName: t.name
   });
   return (0, l.jsxs)("li", {
-    role: V,
-    className: i()(v.containerDefault, {
-      [v.selected]: s
+    role: H,
+    className: i()(x.containerDefault, {
+      [x.selected]: s
     }),
     children: [(0, l.jsx)(M, {
       withGuildIcon: O
@@ -108,38 +108,38 @@ t.default = a.memo(function(e) {
         right: 4
       },
       children: (0, l.jsxs)("div", {
-        className: i()(v.iconVisibility, x.wrapper, x.typeThread, {
-          [x.modeSelected]: s,
-          [x.modeMuted]: !s && G,
-          [x.modeUnreadImportant]: !G && !s && j,
-          [x.withGuildIcon]: O
+        className: i()(x.iconVisibility, v.wrapper, v.typeThread, {
+          [v.modeSelected]: s,
+          [v.modeMuted]: !s && G,
+          [v.modeUnreadImportant]: !G && !s && j,
+          [v.withGuildIcon]: O
         }),
         onMouseDown: w,
         onContextMenu: B,
         children: [!j || G || s ? null : (0, l.jsx)("div", {
-          className: i()(x.unread, x.unreadImportant)
+          className: i()(v.unread, v.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
-          ...H,
+          ...V,
           innerRef: k,
-          className: x.link,
+          className: v.link,
           onClick: U,
-          "aria-label": Y,
+          "aria-label": W,
           focusProps: {
             enabled: !1
           },
           children: (0, l.jsxs)("div", {
-            className: i()(x.linkTop, x.__invalid_threadMainContent),
+            className: i()(v.linkTop, v.__invalid_threadMainContent),
             children: [(0, l.jsx)(E.default, {
-              className: x.name,
+              className: v.name,
               "aria-hidden": !0,
               children: t.name
             }), (0, l.jsxs)("div", {
-              className: x.children,
-              children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
+              className: v.children,
+              children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
                 userCount: F,
                 video: b,
                 channel: t
-              }) : null, (0, S.default)(P) ? (0, l.jsx)(I.default, {
+              }) : null, (0, _.default)(P) ? (0, l.jsx)(I.default, {
                 mentionsCount: P
               }) : null]
             })]

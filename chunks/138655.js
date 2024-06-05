@@ -60,7 +60,7 @@ function T(e) {
           primaryColor: n,
           secondaryColor: r,
           isDarkTheme: (0, l.isThemeDark)(t),
-          textMixAmount: 25
+          textMixAmount: 70
         })
       }
     }, [n, r, S, h, A, m, N, t, T]),

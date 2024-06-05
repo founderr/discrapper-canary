@@ -20,9 +20,9 @@ t.default = a.memo(function(e) {
   } = e, {
     id: g,
     name: E,
-    color: S,
-    children: _
-  } = t, I = _.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
+    color: _,
+    children: S
+  } = t, I = S.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
     let t = e.children.map(e => {
         let t = e.id,
           n = c.default.getGuild(t);
@@ -33,8 +33,8 @@ t.default = a.memo(function(e) {
     for (let e of t)(e.length < n || 0 === l.length) && (l.push(e), n -= e.length);
     return "".concat(l.join(", ")).concat(l.length < t.length ? ", ..." : "")
   }(t), L = (0, m.default)(t), {
-    mentionCount: v,
-    unread: x
+    mentionCount: x,
+    unread: v
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
     mentionCount: I.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
     unread: I.some(e => d.default.hasUnread(e))
@@ -49,18 +49,18 @@ t.default = a.memo(function(e) {
         ...t,
         folderId: g,
         folderName: E,
-        folderColor: S,
-        unread: x || v > 0
+        folderColor: _,
+        unread: v || x > 0
       })
     })
-  }, [g, E, S, x, v]);
+  }, [g, E, _, v, x]);
   return (0, l.jsx)(h.default, {
     ...C,
     folderNode: t,
     expanded: T,
     selected: null != N && I.includes(N),
-    mentionCount: v,
-    unread: x,
+    mentionCount: x,
+    unread: v,
     mediaState: L,
     defaultFolderName: A,
     onExpandCollapse: R,

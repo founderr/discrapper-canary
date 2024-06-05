@@ -26,8 +26,8 @@ function E(e) {
     guild: t,
     selected: E
   } = e, {
-    hasUnread: S,
-    mentionCount: _
+    hasUnread: _,
+    mentionCount: S
   } = (0, a.useStateFromStoresObject)([d.default], () => ({
     hasUnread: d.default.hasUnread(t.id, p.ReadStateTypes.GUILD_EVENT),
     mentionCount: d.default.getMentionCount(t.id, p.ReadStateTypes.GUILD_EVENT)
@@ -66,11 +66,11 @@ function E(e) {
         })
       })
     },
-    showUnread: S && !I,
-    trailing: !I && _ > 0 ? (0, l.jsx)(h.NumberBadge, {
+    showUnread: _ && !I,
+    trailing: !I && S > 0 ? (0, l.jsx)(h.NumberBadge, {
       className: g.numberBadge,
       disableColor: !0,
-      count: _
+      count: S
     }) : null
   })
 }

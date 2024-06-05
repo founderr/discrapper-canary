@@ -59,23 +59,23 @@ t.default = e => {
   let v = (0, d.useGetMarketingPageNonSubPerkTileOrderExperiment)({
       location: I.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY
     }),
-    D = i === I.PerksDiscoverabilityCardSection.WHATS_NEW,
-    b = (0, c.useClearTenureBadge)();
+    b = i === I.PerksDiscoverabilityCardSection.WHATS_NEW,
+    D = (0, c.useClearTenureBadge)();
   r.useEffect(() => {
-    D && !L && b()
-  }, [b, D, L]), r.useEffect(() => {
+    b && !L && D()
+  }, [D, b, L]), r.useEffect(() => {
     let e = P.current;
-    if (null == e || !L || !D) return;
+    if (null == e || !L || !b) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
         behavior: "smooth"
-      }), D && b()
+      }), b && D()
     });
     return () => {
-      cancelAnimationFrame(t), D && b()
+      cancelAnimationFrame(t), b && D()
     }
-  }, [P, L, D, b]);
-  let U = (0, R.usePerksDiscoverabilityStrings)(D),
+  }, [P, L, b, D]);
+  let U = (0, R.usePerksDiscoverabilityStrings)(b),
     j = (0, E.default)(),
     G = (0, R.useIsPremiumSubscriber)(),
     B = (0, R.getFilteredPerksDiscoverabilityCards)({
@@ -112,7 +112,7 @@ t.default = e => {
         className: n()(S.subtitle, {
           [S.subtitle]: null == p || N,
           [S.subtitleWithButton]: null != p && !N,
-          [S.fullWidth]: D || N,
+          [S.fullWidth]: b || N,
           [S.moreSubtitleMargin]: y,
           [S.leftAlignSubtitle]: N,
           [S.centerAlignSubtitle]: !N

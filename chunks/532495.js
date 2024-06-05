@@ -47,8 +47,8 @@ function U() {
     {
       pendingAvatar: V,
       pendingGlobalName: H,
-      pendingBanner: Y,
-      pendingBio: k,
+      pendingBanner: k,
+      pendingBio: Y,
       pendingPronouns: w,
       pendingAccentColor: W,
       pendingThemeColors: K,
@@ -64,7 +64,7 @@ function U() {
     Q = (0, S.useGuildAutomodProfileQuarantineErrors)(),
     q = P.default.canUsePremiumProfileCustomization(B),
     X = (0, E.showRemoveAvatar)(V, B.avatar),
-    Z = (0, E.showRemoveBanner)(Y, null == y ? void 0 : y.banner),
+    Z = (0, E.showRemoveBanner)(k, null == y ? void 0 : y.banner),
     J = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
     location: J + " auto on",
@@ -131,7 +131,7 @@ function U() {
       sectionTitle: b.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: es,
       onBioChange: e => (0, E.setNewPendingUserBio)(e, null == y ? void 0 : y.bio),
-      pendingBio: k,
+      pendingBio: Y,
       currentBio: null !== (F = null == y ? void 0 : y.bio) && void 0 !== F ? F : ""
     }, "bio"), en && el.length > 0 && (0, a.jsx)(c.default, {
       availableClans: el

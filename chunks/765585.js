@@ -20,15 +20,15 @@ t.default = a.forwardRef(function(e, t) {
     headerClassName: C,
     contentClassName: g,
     tryItText: E,
-    dismissText: S,
-    onTryFeature: _,
+    dismissText: _,
+    onTryFeature: S,
     onClose: I,
     className: N,
     inlineArt: T = !1,
     isPremiumFeature: A = !1,
     shouldUseHorizontalButtons: L = !1,
-    showGIFTag: v = !1,
-    dismissibleContent: x,
+    showGIFTag: x = !1,
+    dismissibleContent: v,
     position: R = "top",
     align: M = "center",
     art: y,
@@ -40,7 +40,7 @@ t.default = a.forwardRef(function(e, t) {
   } = (0, o.default)();
 
   function w(e) {
-    (0, u.markDismissibleContentAsDismissed)(x, {
+    (0, u.markDismissibleContentAsDismissed)(v, {
       dismissAction: e
     })
   }
@@ -49,8 +49,8 @@ t.default = a.forwardRef(function(e, t) {
     let n = (null !== (t = null === (e = G.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
     !j && n > D && P(!0)
   }, [j, U, G, D]), a.useEffect(() => {
-    (0, u.requestMarkDismissibleContentAsShown)(x)
-  }, [x]), (0, l.jsx)("div", {
+    (0, u.requestMarkDismissibleContentAsShown)(v)
+  }, [v]), (0, l.jsx)("div", {
     className: N,
     ref: t,
     children: (0, l.jsxs)("div", {
@@ -60,7 +60,7 @@ t.default = a.forwardRef(function(e, t) {
       }),
       children: [(0, l.jsxs)("div", {
         className: i()(p, T ? m.artInline : m.artAbsolute),
-        children: [v && (0, l.jsx)(d.default, {
+        children: [x && (0, l.jsx)(d.default, {
           className: m.gifTag
         }), y]
       }), (0, l.jsxs)("div", {
@@ -90,12 +90,12 @@ t.default = a.forwardRef(function(e, t) {
       }), (0, l.jsx)("div", {
         ref: G,
         className: j || !L ? m.buttonContainerVertical : m.buttonContainerHorizontal,
-        children: null != _ ? (0, l.jsxs)(l.Fragment, {
+        children: null != S ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {
             className: m.button,
             size: b,
             onClick: e => {
-              null == I || I(e), _(e), w(f.ContentDismissActionType.PRIMARY)
+              null == I || I(e), S(e), w(f.ContentDismissActionType.PRIMARY)
             },
             color: A || O ? r.Button.Colors.BRAND_INVERTED : r.Button.Colors.WHITE,
             children: null != E ? E : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
@@ -107,7 +107,7 @@ t.default = a.forwardRef(function(e, t) {
             },
             color: A || O ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
             look: A || O ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
-            children: null != S ? S : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
+            children: null != _ ? _ : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })]
         }) : (0, l.jsx)(r.Button, {
           className: m.button,

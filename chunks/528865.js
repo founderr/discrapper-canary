@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   June2024NewAppStylesWhatsNewCardExperiment: function() {
-    return i
+    return l
   }
 });
-let i = (0, n("818083").createExperiment)({
+let l = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-05_june_2024_new_app_styles_whats_new_card",
   label: "June 2024 New App Styles Whats New Card",

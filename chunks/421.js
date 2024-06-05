@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return M
+    return L
   }
 }), l("47120");
 var i = l("735250"),
@@ -15,14 +15,14 @@ var i = l("735250"),
   u = l("158010"),
   v = l("351167"),
   f = l("943802"),
-  h = l("810090"),
-  m = l("566620"),
-  I = l("146936"),
+  I = l("810090"),
+  h = l("566620"),
+  m = l("146936"),
   E = l("678173"),
   T = l("636508"),
   x = l("696068"),
-  S = l("361213"),
-  C = l("952561"),
+  C = l("361213"),
+  S = l("952561"),
   p = l("778569"),
   A = l("182906"),
   _ = l("513202"),
@@ -32,31 +32,31 @@ var i = l("735250"),
   D = l("689938"),
   y = l("6863");
 
-function M(e) {
+function L(e) {
   var t;
   let {
     applicationId: l,
     guildId: v,
-    channelId: I,
+    channelId: m,
     onActivityLaunch: T
   } = e, {
     analyticsLocations: x
   } = (0, d.default)(r.default.ACTIVITY_SHELF_ACTIVITY_DETAILS);
   a.useEffect(() => {
-    (0, m.fetchShelf)({
+    (0, h.fetchShelf)({
       guildId: v
     })
   }, [v]);
-  let C = (0, p.default)({
+  let S = (0, p.default)({
       applicationId: null != l ? l : "",
       size: 2048
     }),
-    A = (0, n.useStateFromStores)([o.default], () => o.default.getChannel(I)),
+    A = (0, n.useStateFromStores)([o.default], () => o.default.getChannel(m)),
     _ = (0, E.useActivityShelfItemData)(null != v ? v : null, l, A);
   if (null == _) return null;
-  let g = null != _.activity.activity_preview_video_asset_id ? (0, S.default)(l, _.activity.activity_preview_video_asset_id) : null,
+  let g = null != _.activity.activity_preview_video_asset_id ? (0, C.default)(l, _.activity.activity_preview_video_asset_id) : null,
     N = j.ACTIVITIES_EXTRA_DETAILS[l],
-    M = (null == N ? void 0 : N.playersSuggestionMin) != null && (null == N ? void 0 : N.playersSuggestionMax) != null ? "".concat(N.playersSuggestionMin, " - ").concat(N.playersSuggestionMax) : void 0;
+    L = (null == N ? void 0 : N.playersSuggestionMin) != null && (null == N ? void 0 : N.playersSuggestionMax) != null ? "".concat(N.playersSuggestionMin, " - ").concat(N.playersSuggestionMax) : void 0;
   return (0, i.jsx)(d.AnalyticsLocationProvider, {
     value: x,
     children: (0, i.jsx)("div", {
@@ -65,23 +65,23 @@ function M(e) {
         className: y.scroller,
         children: [(0, i.jsx)("div", {
           className: y.launcherOuterContainer,
-          children: (0, i.jsx)(L, {
+          children: (0, i.jsx)(M, {
             activityItem: _,
             onLaunch: T,
-            channelId: I
+            channelId: m
           })
         }), (0, i.jsxs)("div", {
           className: y.activityDetailsContainer,
           children: [(0, i.jsxs)("div", {
             children: [null != g ? (0, i.jsx)("div", {
               className: y.heroVideoContainer,
-              children: (0, i.jsx)(h.default, {
+              children: (0, i.jsx)(I.default, {
                 loop: !0,
                 autoPlay: !0,
                 muted: !0,
                 className: y.heroVideo,
                 src: g,
-                poster: C.url
+                poster: S.url
               })
             }) : null, (0, i.jsx)("div", {
               className: y.detailsTitle,
@@ -91,7 +91,7 @@ function M(e) {
               })
             }), (0, i.jsxs)("div", {
               className: y.detailsDetails,
-              children: [null != M ? (0, i.jsxs)("div", {
+              children: [null != L ? (0, i.jsxs)("div", {
                 className: y.detailItem,
                 children: [(0, i.jsx)(u.default, {
                   width: 16,
@@ -100,7 +100,7 @@ function M(e) {
                   variant: "text-xs/semibold",
                   className: y.detailItemText,
                   children: D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({
-                    nPlayers: M
+                    nPlayers: L
                   })
                 })]
               }) : null, (null == N ? void 0 : N.timeSuggestionMinutes) != null ? (0, i.jsxs)("div", {
@@ -149,33 +149,33 @@ function M(e) {
   })
 }
 
-function L(e) {
+function M(e) {
   var t, r;
   let {
     activityItem: c,
     onLaunch: u,
     channelId: f
-  } = e, h = (0, p.default)({
+  } = e, I = (0, p.default)({
     applicationId: c.application.id,
     size: 2048
   }), {
-    analyticsLocations: m
-  } = (0, d.default)(), E = (0, C.default)(), [S, j] = a.useState(null !== (t = (0, T.getActivityGuildSuggestion)({
+    analyticsLocations: h
+  } = (0, d.default)(), E = (0, S.default)(), [C, j] = a.useState(null !== (t = (0, T.getActivityGuildSuggestion)({
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== t ? t : void 0), [M, L] = a.useState(null !== (r = (0, x.getActivityVoiceChannelSuggestion)({
-    guildId: S,
+  })) && void 0 !== t ? t : void 0), [L, M] = a.useState(null !== (r = (0, x.getActivityVoiceChannelSuggestion)({
+    guildId: C,
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== r ? r : void 0), V = (0, n.useStateFromStores)([o.default], () => o.default.getChannel(M), [M]), b = (0, T.useSelectGuildOptions)(), R = (0, x.useSelectVoiceChannelOptions)(S), O = a.useCallback(() => {
+  })) && void 0 !== r ? r : void 0), V = (0, n.useStateFromStores)([o.default], () => o.default.getChannel(L), [L]), b = (0, T.useSelectGuildOptions)(), O = (0, x.useSelectVoiceChannelOptions)(C), R = a.useCallback(() => {
     var e;
-    null != M && (0, I.default)({
+    null != L && (0, m.default)({
       targetApplicationId: null == c ? void 0 : null === (e = c.application) || void 0 === e ? void 0 : e.id,
       currentEmbeddedApplication: E,
-      channelId: M,
-      guildId: S,
+      channelId: L,
+      guildId: C,
       embeddedActivitiesManager: _.default,
-      analyticsLocations: m
+      analyticsLocations: h
     }).then(u)
-  }, [c, m, E, u, M, S]), B = a.useCallback(() => {
+  }, [c, h, E, u, L, C]), B = a.useCallback(() => {
     (0, s.openModalLazy)(async () => {
       let {
         default: e
@@ -183,15 +183,15 @@ function L(e) {
       return t => (0, i.jsx)(e, {
         activityItem: c,
         ...t,
-        analyticsLocations: m
+        analyticsLocations: h
       })
     })
-  }, [c, m]), F = null == V || null != V.guild_id && !(null != S && null != M && b.some(e => e.value === S) && R.some(e => e.value.channel.id === M)) && !0;
+  }, [c, h]), F = null == V || null != V.guild_id && !(null != C && null != L && b.some(e => e.value === C) && O.some(e => e.value.channel.id === L)) && !0;
   return (0, i.jsxs)("div", {
     className: y.launcherInnerContainer,
     children: [(0, i.jsx)(A.default, {
       applicationName: c.application.name,
-      imageBackground: h,
+      imageBackground: I,
       imageClassName: y.launchImage,
       imageNotFoundClassName: y.brokenLaunchImage
     }), (0, i.jsx)(s.Text, {
@@ -203,7 +203,7 @@ function L(e) {
         optionClassName: y.__invalid_option,
         options: b,
         renderOptionValue: e => {
-          let t = e.find(e => e.value === S);
+          let t = e.find(e => e.value === C);
           return null == t ? null : (0, i.jsx)(N.SelectGuildOption, {
             guildId: t.value
           })
@@ -216,10 +216,10 @@ function L(e) {
             guildId: t
           })
         },
-        isSelected: e => e === S,
+        isSelected: e => e === C,
         select: e => {
           var t;
-          j(e), L(null !== (t = (0, x.getActivityVoiceChannelSuggestion)({
+          j(e), M(null !== (t = (0, x.getActivityVoiceChannelSuggestion)({
             guildId: e
           })) && void 0 !== t ? t : void 0)
         },
@@ -227,18 +227,18 @@ function L(e) {
       }), (0, i.jsx)(s.Select, {
         placeholder: D.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
         optionClassName: y.__invalid_option,
-        options: R,
+        options: O,
         isSelected: e => {
           let {
             channel: t
           } = e;
-          return t.id === M
+          return t.id === L
         },
         select: e => {
           let {
             channel: t
           } = e;
-          return L(t.id)
+          return M(t.id)
         },
         serialize: e => {
           let {
@@ -247,7 +247,7 @@ function L(e) {
           return t.id
         },
         renderOptionValue: () => {
-          let e = R.find(e => e.value.channel.id === M);
+          let e = O.find(e => e.value.channel.id === L);
           return null == e ? null : (0, i.jsx)(g.SelectChannelOption, {
             channel: e.value.channel,
             users: e.value.users
@@ -268,7 +268,7 @@ function L(e) {
       }), (0, i.jsx)(s.Button, {
         fullWidth: !0,
         disabled: F,
-        onClick: O,
+        onClick: R,
         children: D.default.Messages.START
       }), (0, i.jsx)("div", {
         className: y.divider
@@ -283,7 +283,7 @@ function L(e) {
       children: [(0, i.jsx)(s.Button, {
         fullWidth: !0,
         disabled: F,
-        onClick: O,
+        onClick: R,
         children: D.default.Messages.START
       }), (0, i.jsx)(s.Button, {
         className: y.shareIconButton,

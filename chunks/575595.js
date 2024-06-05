@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscountModelDataCollection: function() {
-    return i
+    return l
   }
 });
-let i = (0, n("818083").createExperiment)({
+let l = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-05_discount_model_data_collection",
   label: "Discount Model Data Collection",

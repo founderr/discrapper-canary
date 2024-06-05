@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return M
   },
   Guild: function() {
-    return x
+    return v
   },
   Header: function() {
     return D
@@ -37,8 +37,8 @@ var l, a = n("735250"),
   C = n("2093"),
   g = n("366695"),
   E = n("346656"),
-  S = n("409216"),
-  _ = n("136033"),
+  _ = n("409216"),
+  S = n("136033"),
   I = n("757698"),
   N = n("630641"),
   T = n("689938"),
@@ -52,7 +52,7 @@ function L(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class v extends s.PureComponent {
+class x extends s.PureComponent {
   componentDidMount() {
     let {
       focused: e,
@@ -121,7 +121,7 @@ class v extends s.PureComponent {
     })
   }
 }
-class x extends s.Component {
+class v extends s.Component {
   renderIcon() {
     let {
       guild: e
@@ -179,7 +179,7 @@ class x extends s.Component {
       score: i,
       id: r
     } = this.props;
-    return (0, a.jsx)(v, {
+    return (0, a.jsx)(x, {
       id: r,
       "aria-label": this.getAccessibilityLabel(),
       onMouseEnter: e,
@@ -237,7 +237,7 @@ class R extends(l = s.Component) {
       voiceStates: e,
       channel: t
     } = this.props;
-    return null == e ? null : (0, a.jsx)(S.default, {
+    return null == e ? null : (0, a.jsx)(_.default, {
       className: A.voiceSummaryContainer,
       guildId: t.guild_id,
       users: e.map(e => {
@@ -287,7 +287,7 @@ class R extends(l = s.Component) {
       score: i,
       id: r
     } = this.props;
-    return (0, a.jsx)(v, {
+    return (0, a.jsx)(x, {
       id: r,
       "aria-label": this.getAccessibilityLabel(),
       onMouseEnter: e,
@@ -369,7 +369,7 @@ class M extends s.Component {
       score: i,
       id: r
     } = this.props;
-    return (0, a.jsx)(v, {
+    return (0, a.jsx)(x, {
       id: r,
       "aria-label": this.getAccessibilityLabel(),
       onMouseEnter: e,
@@ -461,7 +461,7 @@ class y extends s.Component {
       score: i,
       id: r
     } = this.props;
-    return (0, a.jsx)(v, {
+    return (0, a.jsx)(x, {
       id: r,
       "aria-label": this.getAccessibilityLabel(),
       onMouseEnter: e,
@@ -504,7 +504,7 @@ class O extends s.Component {
       focused: l,
       id: s
     } = this.props;
-    return (0, a.jsx)(v, {
+    return (0, a.jsx)(x, {
       id: s,
       onMouseEnter: e,
       onClick: t,
@@ -538,7 +538,7 @@ class b extends s.Component {
     return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(I.default, {
       width: 16,
       height: 16
-    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(_.default, {
+    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(S.default, {
       width: 16,
       height: 16
     })) : (e = T.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, a.jsx)(N.default, {
@@ -565,7 +565,7 @@ class b extends s.Component {
       score: i,
       id: r
     } = this.props;
-    return (0, a.jsx)(v, {
+    return (0, a.jsx)(x, {
       id: r,
       onMouseEnter: e,
       onClick: t,

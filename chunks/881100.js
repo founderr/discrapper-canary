@@ -33,8 +33,8 @@ var a = s("399606"),
   L = s("193943"),
   x = s("334347"),
   v = s("943734"),
-  D = s("603076"),
-  b = s("472656"),
+  b = s("603076"),
+  D = s("472656"),
   U = s("912429"),
   j = s("772969"),
   G = s("926262");
@@ -99,13 +99,13 @@ let B = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       longerMessages: {
         title: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-        imageSource: B(s, v, D),
+        imageSource: B(s, v, b),
         imageClassName: t.longerMessagesImage
       },
       moreGuilds: {
         title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: B(s, I, b),
+        imageSource: B(s, I, D),
         imageClassName: t.moreGuildsImage
       },
       moreGuildsAlt: {

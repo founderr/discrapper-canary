@@ -43,8 +43,8 @@ var a = s("735250"),
   y = s("801461"),
   V = s("228168"),
   H = s("689938"),
-  Y = s("276380");
-let k = v.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
+  k = s("276380");
+let Y = v.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
 function w(e) {
   var t, l;
@@ -59,16 +59,16 @@ function w(e) {
     A = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || C,
     h = A ? H.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
-    className: i()(Y.field, r),
+    className: i()(k.field, r),
     children: [(0, a.jsx)("div", {
-      className: Y.constrainedRow,
+      className: k.constrainedRow,
       children: (0, a.jsxs)("div", {
-        className: Y.usernameRow,
+        className: k.usernameRow,
         children: [(0, a.jsx)(c.FormTitle, {
-          className: Y.fieldTitle,
+          className: k.fieldTitle,
           children: H.default.Messages.USER_SETTINGS_LABEL_USERNAME
         }), (0, a.jsxs)("div", {
-          className: Y.usernameInnerRow,
+          className: k.usernameInnerRow,
           ref: d,
           children: [(0, a.jsx)(c.Text, {
             tag: "span",
@@ -84,7 +84,7 @@ function w(e) {
         })]
       })
     }), E && (0, a.jsx)("div", {
-      className: Y.pomeloWarning,
+      className: k.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
         text: H.default.Messages.ACTION_NEEDED,
         children: e => (0, a.jsx)(L.default, {
@@ -93,7 +93,7 @@ function w(e) {
         })
       })
     }), null != _ && (0, a.jsx)("div", {
-      className: Y.pomeloWarning,
+      className: k.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
         text: _,
         "aria-label": !1,
@@ -108,7 +108,7 @@ function w(e) {
         ...e,
         disabled: A,
         size: c.Button.Sizes.SMALL,
-        className: Y.fieldButton,
+        className: k.fieldButton,
         color: c.Button.Colors.PRIMARY,
         "aria-label": H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_USERNAME_A11Y_LABEL,
         onClick: () => (0, c.openModalLazy)(async () => {
@@ -144,16 +144,16 @@ function W(e) {
   return n.useEffect(() => {
     _(null != E.current && E.current.scrollWidth > E.current.clientWidth)
   }, [S]), (0, a.jsxs)("div", {
-    className: i()(Y.field, r),
+    className: i()(k.field, r),
     children: [(0, a.jsx)("div", {
-      className: Y.constrainedRow,
+      className: k.constrainedRow,
       children: (0, a.jsxs)("div", {
-        className: Y.usernameRow,
+        className: k.usernameRow,
         children: [(0, a.jsx)(c.FormTitle, {
-          className: Y.fieldTitle,
+          className: k.fieldTitle,
           children: H.default.Messages.DISPLAY_NAME
         }), (0, a.jsx)("div", {
-          className: Y.usernameInnerRow,
+          className: k.usernameInnerRow,
           ref: E,
           children: (0, a.jsx)(c.Text, {
             tag: "span",
@@ -164,7 +164,7 @@ function W(e) {
         })]
       })
     }), null != d && (0, a.jsx)("div", {
-      className: Y.pomeloWarning,
+      className: k.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
         text: d,
         "aria-label": !1,
@@ -174,7 +174,7 @@ function W(e) {
         })
       })
     }), (0, a.jsx)(c.Button, {
-      className: Y.fieldButton,
+      className: k.fieldButton,
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.PRIMARY,
       "aria-label": H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
@@ -255,12 +255,12 @@ function z(e) {
     handleClick: () => _.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
-    className: i()(Y.field, n),
+    className: i()(k.field, n),
     children: [(0, a.jsx)("div", {
-      className: Y.constrainedRow,
+      className: k.constrainedRow,
       children: (0, a.jsxs)("div", {
         children: [(0, a.jsx)(c.FormTitle, {
-          className: Y.fieldTitle,
+          className: k.fieldTitle,
           children: H.default.Messages.USER_SETTINGS_LABEL_EMAIL
         }), (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Text, {
@@ -272,7 +272,7 @@ function z(e) {
         })]
       })
     }), (0, a.jsx)(c.Button, {
-      className: Y.fieldButton,
+      className: k.fieldButton,
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.PRIMARY,
       "aria-label": t.buttonAriaLabel,
@@ -298,12 +298,12 @@ function Q(e) {
     revealLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
     hideLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
   }) : H.default.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, a.jsxs)("div", {
-    className: i()(Y.field, n),
+    className: i()(k.field, n),
     children: [(0, a.jsx)("div", {
-      className: Y.constrainedRow,
+      className: k.constrainedRow,
       children: (0, a.jsxs)("div", {
         children: [(0, a.jsx)(c.FormTitle, {
-          className: Y.fieldTitle,
+          className: k.fieldTitle,
           children: H.default.Messages.USER_SETTINGS_LABEL_PHONE_NUMBER
         }), (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Text, {
@@ -315,9 +315,9 @@ function Q(e) {
         })]
       })
     }), (0, a.jsxs)("div", {
-      className: Y.fieldButtonList,
+      className: k.fieldButtonList,
       children: [d && null != o ? (0, a.jsx)(c.Button, {
-        className: i()(Y.fieldButton, Y.removeButton),
+        className: i()(k.fieldButton, k.removeButton),
         size: c.Button.Sizes.SMALL,
         look: c.Button.Looks.LINK,
         color: c.Button.Colors.PRIMARY,
@@ -333,7 +333,7 @@ function Q(e) {
         },
         children: H.default.Messages.REMOVE
       }) : null, (0, a.jsx)(c.Button, {
-        className: Y.fieldButton,
+        className: k.fieldButton,
         size: c.Button.Sizes.SMALL,
         color: c.Button.Colors.PRIMARY,
         "aria-label": d ? H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL : H.default.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
@@ -378,10 +378,10 @@ function q(e) {
     },
     children: e => (0, a.jsx)(c.Clickable, {
       ...e,
-      className: Y.overflowMenuButton,
+      className: k.overflowMenuButton,
       "aria-label": H.default.Messages.ACTIONS,
       children: (0, a.jsx)(D.default, {
-        className: Y.overflowMenuIcon,
+        className: k.overflowMenuIcon,
         height: 24,
         width: 24
       })
@@ -412,7 +412,7 @@ function Z() {
       size: c.AvatarSizes.SIZE_80
     });
   return (0, a.jsxs)("div", {
-    className: Y.accountProfileCard,
+    className: k.accountProfileCard,
     children: [(0, a.jsx)(p.default, {
       displayProfile: s,
       user: t,
@@ -420,9 +420,9 @@ function Z() {
       guildId: void 0,
       profileType: V.UserProfileTypes.SETTINGS
     }), (0, a.jsxs)("div", {
-      className: Y.userInfo,
-      children: [(0, a.jsx)(k, {
-        className: Y.avatar,
+      className: k.userInfo,
+      children: [(0, a.jsx)(Y, {
+        className: k.avatar,
         src: u,
         avatarDecoration: S,
         status: l,
@@ -430,18 +430,18 @@ function Z() {
         "aria-label": t.username
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsxs)("div", {
-          className: Y.profileCardUsernameRow,
+          className: k.profileCardUsernameRow,
           children: [(0, a.jsx)(E.default, {
             user: t,
-            className: Y.userTag,
-            discriminatorClass: Y.discriminator
+            className: k.userTag,
+            discriminatorClass: k.discriminator
           }), (0, a.jsx)(q, {
             user: t
           })]
         }), (0, a.jsx)(O.default, {
           badges: n,
-          className: Y.badgeList,
-          badgeClassName: Y.badge
+          className: k.badgeList,
+          badgeClassName: k.badge
         })]
       }), (0, a.jsx)(c.Button, {
         onClick: X,
@@ -449,18 +449,18 @@ function Z() {
         children: H.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
       })]
     }), (0, a.jsxs)("div", {
-      className: Y.background,
+      className: k.background,
       children: [null != r ? (0, a.jsx)(c.Text, {
-        className: Y.avatarError,
+        className: k.avatarError,
         variant: "text-xs/normal",
         color: "text-danger",
         children: r
       }) : null, (0, a.jsxs)("div", {
-        className: Y.fieldList,
+        className: k.fieldList,
         children: [(0, a.jsx)(C.Subsetting, {
           setting: G.WebSetting.ACCOUNT_DISPLAY_NAME,
           children: (0, a.jsx)(W, {
-            className: Y.fieldSpacerBottom,
+            className: k.fieldSpacerBottom,
             user: t
           })
         }), (0, a.jsx)(C.Subsetting, {
@@ -471,13 +471,13 @@ function Z() {
         }), (0, a.jsx)(C.Subsetting, {
           setting: G.WebSetting.ACCOUNT_EMAIL,
           children: (0, a.jsx)(z, {
-            className: Y.fieldSpacer,
+            className: k.fieldSpacer,
             user: t
           })
         }), (0, a.jsx)(C.Subsetting, {
           setting: G.WebSetting.ACCOUNT_PHONE_NUMBER,
           children: (0, a.jsx)(Q, {
-            className: Y.fieldSpacer,
+            className: k.fieldSpacer,
             user: t
           })
         })]

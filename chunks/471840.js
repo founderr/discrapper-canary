@@ -15,14 +15,14 @@ var i = l("735250"),
   u = l("110924"),
   v = l("40851"),
   f = l("367907"),
-  h = l("565384"),
-  m = l("906732"),
-  I = l("835473"),
+  I = l("565384"),
+  h = l("906732"),
+  m = l("835473"),
   E = l("592125"),
   T = l("451478"),
   x = l("285952"),
-  S = l("292937"),
-  C = l("626135"),
+  C = l("292937"),
+  S = l("626135"),
   p = l("585483"),
   A = l("624138"),
   _ = l("115130"),
@@ -31,12 +31,12 @@ var i = l("735250"),
   j = l("895395"),
   D = l("49978"),
   y = l("427996"),
-  M = l("701488"),
-  L = l("981631"),
+  L = l("701488"),
+  M = l("981631"),
   V = l("689938"),
   b = l("554657"),
-  R = l("361205"),
-  O = l("812320");
+  O = l("361205"),
+  R = l("812320");
 let B = (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
   F = (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
   H = (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + B + (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
@@ -48,53 +48,53 @@ function Y(e) {
     locationObject: n,
     onClose: o,
     initialSelectedApplicationId: v,
-    initialSlide: T = M.ActivityShelfSlides.DIRECTORY,
+    initialSlide: T = L.ActivityShelfSlides.DIRECTORY,
     enableSelectedTextChannelInvite: A,
     analyticsLocations: B,
     ...H
   } = e, Y = (0, d.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), {
     analyticsLocations: P
-  } = (0, m.default)(B), [w, G] = a.useState(T), U = (0, u.default)(w), [W, z] = a.useState(null), [Z, q] = a.useState(v), [J, K] = a.useState(void 0), [X] = (0, I.default)(null == Z ? [] : [Z]), Q = a.useRef(null), $ = a.useMemo(() => ({
+  } = (0, h.default)(B), [w, U] = a.useState(T), G = (0, u.default)(w), [W, z] = a.useState(null), [Z, q] = a.useState(v), [J, K] = a.useState(void 0), [X] = (0, m.default)(null == Z ? [] : [Z]), Q = a.useRef(null), $ = a.useMemo(() => ({
     application_id: Z,
     source_section: n.section,
     impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
   }), [n.section, Z]);
   a.useEffect(() => {
-    if (w === M.ActivityShelfSlides.DIRECTORY && null != U && U !== M.ActivityShelfSlides.DIRECTORY && null != W) {
+    if (w === L.ActivityShelfSlides.DIRECTORY && null != G && G !== L.ActivityShelfSlides.DIRECTORY && null != W) {
       var e;
       null === (e = Q.current) || void 0 === e || e.scrollTo({
         top: W
       })
     }
-  }, [W, U, w]);
+  }, [W, G, w]);
   let ee = a.useCallback(e => {
       var t;
       let {
         applicationId: l
       } = e, i = null === (t = Q.current) || void 0 === t ? void 0 : t.scrollTop;
-      null != i && z(i), q(l), G(M.ActivityShelfSlides.SELECT_CHANNEL)
+      null != i && z(i), q(l), U(L.ActivityShelfSlides.SELECT_CHANNEL)
     }, []),
     et = a.useCallback(e => {
       let {
         applicationId: t
       } = e;
-      q(t), G(M.ActivityShelfSlides.DETAIL_PAGE)
+      q(t), U(L.ActivityShelfSlides.DETAIL_PAGE)
     }, []);
   a.useEffect(() => {
-    C.default.track(L.AnalyticEvents.OPEN_MODAL, {
+    S.default.track(M.AnalyticEvents.OPEN_MODAL, {
       type: "Activity Shelf",
       channel_id: null == t ? void 0 : t.id,
       guild_id: l
     })
-  }, [t, l]), a.useEffect(() => (p.ComponentDispatch.subscribe(L.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ee), () => {
-    p.ComponentDispatch.unsubscribe(L.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ee)
-  }), [ee]), a.useEffect(() => (p.ComponentDispatch.subscribe(L.ComponentActions.SHOW_ACTIVITY_DETAILS, et), () => {
-    p.ComponentDispatch.unsubscribe(L.ComponentActions.SHOW_ACTIVITY_DETAILS, et)
+  }, [t, l]), a.useEffect(() => (p.ComponentDispatch.subscribe(M.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ee), () => {
+    p.ComponentDispatch.unsubscribe(M.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ee)
+  }), [ee]), a.useEffect(() => (p.ComponentDispatch.subscribe(M.ComponentActions.SHOW_ACTIVITY_DETAILS, et), () => {
+    p.ComponentDispatch.unsubscribe(M.ComponentActions.SHOW_ACTIVITY_DETAILS, et)
   }), [et]), a.useEffect(() => {
     g.dismissNewActivityIndicator()
   }, []);
   let el = () => {
-      G(M.ActivityShelfSlides.DIRECTORY)
+      U(L.ActivityShelfSlides.DIRECTORY)
     },
     ei = a.useRef(Date.now()),
     ea = a.useRef(!1),
@@ -119,14 +119,14 @@ function Y(e) {
       i = {
         channel_id: null == t ? void 0 : t.id,
         guild_id: l,
-        location: (0, h.getLocation)(),
+        location: (0, I.getLocation)(),
         ...(0, f.collectGuildAnalyticsMetadata)(l),
         ...(0, f.collectChannelAnalyticsMetadata)(E.default.getChannel(null == t ? void 0 : t.id)),
         ...$,
         ...e
       };
-    C.default.track(L.AnalyticEvents.ACTIVITY_SHELF_CLOSE, i)
-  }, [null == t ? void 0 : t.id, $, l]), (0, i.jsx)(m.AnalyticsLocationProvider, {
+    S.default.track(M.AnalyticEvents.ACTIVITY_SHELF_CLOSE, i)
+  }, [null == t ? void 0 : t.id, $, l]), (0, i.jsx)(h.AnalyticsLocationProvider, {
     value: P,
     children: (0, i.jsxs)(c.ModalRoot, {
       className: s()(b.root),
@@ -134,11 +134,11 @@ function Y(e) {
       ...H,
       children: [(0, i.jsx)("img", {
         alt: V.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
-        src: R,
+        src: O,
         className: b.shelfTopBackground
       }), (0, i.jsx)("img", {
         alt: V.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
-        src: O,
+        src: R,
         className: b.shelfTopForeground
       }), (0, i.jsxs)(c.ModalHeader, {
         separator: !1,
@@ -147,7 +147,7 @@ function Y(e) {
         children: [(0, i.jsxs)("div", {
           className: b.headerTextContainer,
           children: [(() => {
-            if (w === M.ActivityShelfSlides.DETAIL_PAGE) return null == X ? null : (0, i.jsxs)("div", {
+            if (w === L.ActivityShelfSlides.DETAIL_PAGE) return null == X ? null : (0, i.jsxs)("div", {
               className: b.activityShelfTitle,
               children: [(0, i.jsx)(c.Heading, {
                 variant: "heading-xl/extrabold",
@@ -155,7 +155,7 @@ function Y(e) {
               }), (0, i.jsxs)(c.Clickable, {
                 className: b.headerBackButton,
                 onClick: el,
-                children: [(0, i.jsx)(S.default, {}), (0, i.jsx)(c.Text, {
+                children: [(0, i.jsx)(C.default, {}), (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   children: V.default.Messages.BACK
                 })]
@@ -169,7 +169,7 @@ function Y(e) {
               })
             })
           })(), (() => {
-            if (w === M.ActivityShelfSlides.DIRECTORY) return (0, i.jsx)(c.Text, {
+            if (w === L.ActivityShelfSlides.DIRECTORY) return (0, i.jsx)(c.Text, {
               variant: "text-sm/normal",
               children: Y ? V.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE : V.default.Messages.EMBEDDED_ACTIVITIES_SHELF_SUBTITLE
             });
@@ -179,14 +179,14 @@ function Y(e) {
           className: b.modalCloseButton,
           onClick: o
         })]
-      }), w === M.ActivityShelfSlides.DIRECTORY && Y ? (0, i.jsx)(y.DeveloperShelfControls, {}) : null, (0, i.jsx)("div", {
+      }), w === L.ActivityShelfSlides.DIRECTORY && Y ? (0, i.jsx)(y.DeveloperShelfControls, {}) : null, (0, i.jsx)("div", {
         className: b.modalDivider
       }), (0, i.jsxs)(c.Slides, {
         activeSlide: w,
         centered: !1,
         width: F,
         children: [(0, i.jsx)(c.Slide, {
-          id: M.ActivityShelfSlides.DIRECTORY,
+          id: L.ActivityShelfSlides.DIRECTORY,
           impressionName: r.ImpressionNames.ACTIVITY_SHELF,
           impressionProperties: {
             source_section: n.section,
@@ -204,7 +204,7 @@ function Y(e) {
             })
           })
         }), (0, i.jsx)(c.Slide, {
-          id: M.ActivityShelfSlides.SELECT_CHANNEL,
+          id: L.ActivityShelfSlides.SELECT_CHANNEL,
           impressionName: r.ImpressionNames.ACTIVITY_SHELF_SELECT_CHANNEL,
           impressionProperties: {
             source_section: n.section,
@@ -222,7 +222,7 @@ function Y(e) {
             })
           })
         }), (0, i.jsx)(c.Slide, {
-          id: M.ActivityShelfSlides.DETAIL_PAGE,
+          id: L.ActivityShelfSlides.DETAIL_PAGE,
           impressionName: r.ImpressionNames.ACTIVITY_DETAILS,
           impressionProperties: $,
           children: (0, i.jsx)(k, {
@@ -242,9 +242,9 @@ function Y(e) {
         className: b.footer,
         children: (() => {
           switch (w) {
-            case M.ActivityShelfSlides.DIRECTORY:
+            case L.ActivityShelfSlides.DIRECTORY:
               return (0, i.jsx)(j.ActivityDirectoryFooter, {});
-            case M.ActivityShelfSlides.SELECT_CHANNEL:
+            case L.ActivityShelfSlides.SELECT_CHANNEL:
               return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)("div", {
                   className: b.modalDivider
@@ -262,8 +262,8 @@ function Y(e) {
                   })
                 })]
               });
-            case M.ActivityShelfSlides.DETAIL_PAGE:
-            case M.ActivityShelfSlides.DIRECTORY:
+            case L.ActivityShelfSlides.DETAIL_PAGE:
+            case L.ActivityShelfSlides.DIRECTORY:
             default:
               return null
           }
@@ -279,13 +279,13 @@ let k = e => {
   } = e, n = (0, d.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), r = a.useContext(v.default), o = (0, d.useStateFromStores)([T.default], () => T.default.windowSize(r.windowId).height, [r.windowId]);
   return (0, i.jsx)("div", {
     className: s()(b.slideContentOuterContainerSquished, {
-      [b.slideContentOuterContainerSquishedWithDev]: l === M.ActivityShelfSlides.DIRECTORY && n,
-      [b.slideContentOuterContainerTall]: l === M.ActivityShelfSlides.DIRECTORY && o > H,
-      [b.slideContentOuterContainerTallWithDev]: l === M.ActivityShelfSlides.DIRECTORY && o > H && n,
-      [b.slideContentOuterContainerNoMetaTextSquished]: l === M.ActivityShelfSlides.SELECT_CHANNEL,
-      [b.slideContentOuterContainerNoMetaTextTall]: l === M.ActivityShelfSlides.SELECT_CHANNEL && o > H,
-      [b.slideContentOuterContainerNoMetaTextNoFooterSquished]: l === M.ActivityShelfSlides.DETAIL_PAGE,
-      [b.slideContentOuterContainerNoMetaTextNoFooterTall]: l === M.ActivityShelfSlides.DETAIL_PAGE && o > H
+      [b.slideContentOuterContainerSquishedWithDev]: l === L.ActivityShelfSlides.DIRECTORY && n,
+      [b.slideContentOuterContainerTall]: l === L.ActivityShelfSlides.DIRECTORY && o > H,
+      [b.slideContentOuterContainerTallWithDev]: l === L.ActivityShelfSlides.DIRECTORY && o > H && n,
+      [b.slideContentOuterContainerNoMetaTextSquished]: l === L.ActivityShelfSlides.SELECT_CHANNEL,
+      [b.slideContentOuterContainerNoMetaTextTall]: l === L.ActivityShelfSlides.SELECT_CHANNEL && o > H,
+      [b.slideContentOuterContainerNoMetaTextNoFooterSquished]: l === L.ActivityShelfSlides.DETAIL_PAGE,
+      [b.slideContentOuterContainerNoMetaTextNoFooterTall]: l === L.ActivityShelfSlides.DETAIL_PAGE && o > H
     }),
     children: t
   })

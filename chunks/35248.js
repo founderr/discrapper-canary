@@ -9,13 +9,13 @@ s.r(t), s.d(t, {
 });
 var n = s("735250");
 s("470079");
-var l = s("481060"),
+var i = s("481060"),
   r = s("311821"),
-  i = s("285952"),
+  l = s("285952"),
   a = s("409813"),
   o = s("689938");
 let u = () => (0, n.jsx)("div", {
-    children: (0, n.jsx)(l.Heading, {
+    children: (0, n.jsx)(i.Heading, {
       variant: "heading-xl/bold",
       children: o.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_HEADER
     })
@@ -26,11 +26,11 @@ let u = () => (0, n.jsx)("div", {
       onBackClick: s
     } = e;
     return (0, n.jsx)("div", {
-      children: (0, n.jsxs)(l.ModalFooter, {
-        justify: i.default.Justify.BETWEEN,
-        align: i.default.Align.CENTER,
-        children: [(0, n.jsx)(l.Button, {
-          color: l.Button.Colors.BRAND,
+      children: (0, n.jsxs)(i.ModalFooter, {
+        justify: l.default.Justify.BETWEEN,
+        align: l.default.Align.CENTER,
+        children: [(0, n.jsx)(i.Button, {
+          color: i.Button.Colors.BRAND,
           onClick: () => {
             t(a.Step.ADD_PAYMENT_STEPS)
           },

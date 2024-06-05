@@ -40,7 +40,7 @@ var a = s("735250"),
   V = s("689938"),
   H = s("431008");
 
-function Y() {
+function k() {
   return (0, a.jsx)(o.Card, {
     className: H.noItemsCard,
     type: o.Card.Types.CUSTOM,
@@ -58,7 +58,7 @@ function Y() {
   })
 }
 
-function k() {
+function Y() {
   let e = (0, r.useStateFromStores)([M.default], () => M.default.getForApplication(G.PREMIUM_SUBSCRIPTION_APPLICATION));
   return n.useEffect(() => {
     (0, S.fetchUserEntitlementsForApplication)(G.PREMIUM_SUBSCRIPTION_APPLICATION)
@@ -74,7 +74,7 @@ function k() {
     }), null != e && b.default.hasAccountCredit(e) ? (0, a.jsx)(v.default, {
       className: H.accountCredit,
       entitlements: e
-    }) : (0, a.jsx)(Y, {})]
+    }) : (0, a.jsx)(k, {})]
   })
 }
 t.default = function() {
@@ -116,7 +116,7 @@ t.default = function() {
         }
       }), (0, a.jsx)(A.Subsetting, {
         setting: y.WebSetting.SUBSCRIPTIONS_CREDITS,
-        children: (0, a.jsx)(k, {})
+        children: (0, a.jsx)(Y, {})
       }), null != e ? (0, a.jsx)(U.default, {
         subscription: e,
         withOverheadSeparator: !1

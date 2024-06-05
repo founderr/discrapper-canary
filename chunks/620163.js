@@ -44,8 +44,8 @@ var n = s("990547"),
   y = s("49012"),
   V = s("358085"),
   H = s("392735"),
-  Y = s("61160"),
-  k = s("604227"),
+  k = s("61160"),
+  Y = s("604227"),
   w = s("38915"),
   W = s("498639"),
   K = s("748717"),
@@ -111,8 +111,8 @@ let eU = () => {
       shouldMergeGameSettings: ey,
       isUserSettingsSearchEnabled: eV,
       isKeywordFilteringEnabled: eH,
-      isStaff: eY,
-      isInappropriateConversationWarningEnabled: ek
+      isStaff: ek,
+      isInappropriateConversationWarningEnabled: eY
     } = e;
     return Object.freeze({
       [eD.WebSetting.SEARCH_BAR]: {
@@ -286,7 +286,7 @@ let eU = () => {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eb.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER,
         parent: eD.WebSetting.PRIVACY_AND_SAFETY,
-        predicate: () => eY
+        predicate: () => ek
       },
       [eD.WebSetting.PRIVACY_ACCOUNT_STANDING]: {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
@@ -326,7 +326,7 @@ let eU = () => {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eb.default.Messages.SAFETY_ALERTS_SETTING_TITLE,
         parent: eD.WebSetting.PRIVACY_AND_SAFETY,
-        predicate: () => ek
+        predicate: () => eY
       },
       [eD.WebSetting.PRIVACY_FAMILY_CENTER]: {
         section: eL.UserSettingsSections.FAMILY_CENTER,
@@ -869,7 +869,7 @@ let eU = () => {
         searchableTitle: "Speed Test",
         label: "Speed Test",
         element: Q.default,
-        predicate: () => P.default.isSupported() && Y.default.getCurrentConfig({
+        predicate: () => P.default.isSupported() && k.default.getCurrentConfig({
           location: "9f7d84_2"
         }).showSettings
       },
@@ -1194,7 +1194,7 @@ let eU = () => {
       },
       [eD.WebSetting.CLIENT_DEBUG_INFO]: {
         section: S.SectionTypes.CUSTOM,
-        element: k.default
+        element: Y.default
       }
     })
   }

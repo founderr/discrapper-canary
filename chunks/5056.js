@@ -1,37 +1,37 @@
 "use strict";
-a.r(t);
-var n = a("735250"),
-  r = a("470079"),
-  s = a("120356"),
-  i = a.n(s),
-  l = a("481060"),
-  o = a("282597"),
-  c = a("877715"),
-  d = a("729285"),
-  u = a("838221"),
-  f = a("246364"),
-  m = a("700833"),
-  h = a("689938"),
-  E = a("17359");
+n.r(t);
+var a = n("735250"),
+  r = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  l = n("481060"),
+  o = n("282597"),
+  c = n("877715"),
+  d = n("729285"),
+  u = n("838221"),
+  f = n("246364"),
+  m = n("700833"),
+  h = n("689938"),
+  E = n("17359");
 
 function p(e) {
   let {
     onClick: t,
-    text: a,
+    text: n,
     icon: r
   } = e;
-  return (0, n.jsx)("div", {
+  return (0, a.jsx)("div", {
     className: E.addFormFieldContainer,
-    children: (0, n.jsxs)(l.Clickable, {
+    children: (0, a.jsxs)(l.Clickable, {
       className: E.addFormField,
       onClick: t,
-      children: [(0, n.jsx)(r, {
+      children: [(0, a.jsx)(r, {
         className: E.icon,
         height: 16,
         width: 16
-      }), (0, n.jsx)(l.FormText, {
+      }), (0, a.jsx)(l.FormText, {
         className: E.addFormFieldText,
-        children: a
+        children: n
       })]
     })
   })
@@ -48,54 +48,54 @@ t.default = function(e) {
     s ? (0, l.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([a.e("99387"), a.e("54845")]).then(a.bind(a, "199836"));
-      return a => (0, n.jsx)(t, {
-        ...a,
+      } = await Promise.all([n.e("99387"), n.e("54845")]).then(n.bind(n, "199836"));
+      return n => (0, a.jsx)(t, {
+        ...n,
         onSubmit: () => _(e)
       })
     }) : _(e)
   }, [s, _]);
-  return (0, n.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: i()(E.spacingContainer, E.backgroundContainer),
-    children: [T && (0, n.jsx)("div", {
+    children: [T && (0, a.jsx)("div", {
       className: E.containerTopHat,
-      children: (0, n.jsx)(l.Text, {
+      children: (0, a.jsx)(l.Text, {
         className: E.containerTopHatText,
         variant: "text-xs/bold",
         color: "header-secondary",
         children: h.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_REQUIRED
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: E.leftRailIconContainer,
-      children: [(0, n.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         className: E.iconContainer,
-        children: (0, n.jsx)(d.default, {
+        children: (0, a.jsx)(d.default, {
           width: 18,
           height: 20,
           className: E.icon
         })
-      }), (0, n.jsxs)(l.FormSection, {
-        children: [(0, n.jsx)(l.FormTitle, {
+      }), (0, a.jsxs)(l.FormSection, {
+        children: [(0, a.jsx)(l.FormTitle, {
           tag: "h3",
           className: E.leftRailIconContainerTitle,
           children: h.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS
-        }), (0, n.jsx)(l.FormText, {
+        }), (0, a.jsx)(l.FormText, {
           className: E.leftRailIconContainerDescription,
           type: l.FormText.Types.DESCRIPTION,
           children: h.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
-        }), (0, n.jsx)(p, {
+        }), (0, a.jsx)(p, {
           formFieldType: f.VerificationFormFieldTypes.TEXT_INPUT,
           addFormField: t,
           icon: u.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
           onClick: () => x(f.VerificationFormFieldTypes.TEXT_INPUT)
-        }), (0, n.jsx)(p, {
+        }), (0, a.jsx)(p, {
           formFieldType: f.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
           icon: c.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
           onClick: () => x(f.VerificationFormFieldTypes.PARAGRAPH)
-        }), (0, n.jsx)(p, {
+        }), (0, a.jsx)(p, {
           formFieldType: f.VerificationFormFieldTypes.MULTIPLE_CHOICE,
           addFormField: t,
           icon: o.default,

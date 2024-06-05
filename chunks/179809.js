@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return v
   }
 }), n("47120");
 var l = n("735250"),
@@ -20,23 +20,23 @@ var l = n("735250"),
   C = n("199540"),
   g = n("40153"),
   E = n("252686"),
-  S = n("682662"),
-  _ = n("662146"),
+  _ = n("682662"),
+  S = n("662146"),
   I = n("689938"),
   N = n("538962"),
   T = n("634165");
 let A = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
   L = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE),
-  v = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_MARGIN);
+  x = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_MARGIN);
 
-function x(e) {
+function v(e) {
   let {
     folderNode: t,
     setNodeRef: n,
     selected: s,
     expanded: d,
     mediaState: m,
-    mentionCount: x = 0,
+    mentionCount: v = 0,
     unread: R = !1,
     defaultFolderName: M,
     useCircleMask: y = !1,
@@ -51,8 +51,8 @@ function x(e) {
   } = e, {
     id: B,
     name: F,
-    children: V
-  } = t, [H, k] = a.useState(!1), [Y, K] = a.useState(!1), W = H || Y;
+    children: H
+  } = t, [V, k] = a.useState(!1), [W, Y] = a.useState(!1), K = V || W;
   a.useEffect(() => {
     D && k(!1)
   }, [D]);
@@ -71,10 +71,10 @@ function x(e) {
       dragging: e.isDragging()
     })
   }), X = a.useCallback(e => {
-    K(e)
+    Y(e)
   }, []), q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
-  }, [P, d]), Q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = V.length * (L + v), et = (0, o.useTransition)(!z && d, {
+  }, [P, d]), Q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = H.length * (L + x), et = (0, o.useTransition)(!z && d, {
     from: {
       height: 0
     },
@@ -87,14 +87,14 @@ function x(e) {
     config: {
       duration: A
     }
-  }), en = a.useCallback(e => null == n ? void 0 : n(B, e), [n, B]), el = (0, l.jsxs)(S.ListItem, {
+  }), en = a.useCallback(e => null == n ? void 0 : n(B, e), [n, B]), el = (0, l.jsxs)(_.ListItem, {
     children: [(0, l.jsx)(h.default, {
       disabled: z || d,
-      hovered: H,
+      hovered: V,
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(_.default, {
+    }), (0, l.jsx)(S.default, {
       text: Q,
       disabled: D,
       selected: s,
@@ -102,7 +102,7 @@ function x(e) {
       children: (0, l.jsx)("div", {
         ref: O ? Z : void 0,
         className: i()({
-          [T.wobble]: !z && Y && !d
+          [T.wobble]: !z && W && !d
         }),
         "data-dnd-name": Q,
         children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
@@ -111,7 +111,7 @@ function x(e) {
           forceCircular: y,
           sorting: D,
           mediaState: m,
-          mentionCount: x,
+          mentionCount: v,
           tooltipName: Q,
           folderGroupId: $,
           onClick: P,
@@ -134,7 +134,7 @@ function x(e) {
     children: [!z && (0, l.jsx)("span", {
       className: i()(N.expandedFolderBackground, {
         [N.collapsed]: !d,
-        [N.hover]: W
+        [N.hover]: K
       })
     }), el, et((e, t, n) => {
       let {
@@ -147,7 +147,7 @@ function x(e) {
         },
         className: N.__invalid_expandedGuilds,
         role: "group",
-        children: V.map(U)
+        children: H.map(U)
       }, a)
     }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
       name: Q,

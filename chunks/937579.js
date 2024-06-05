@@ -1,94 +1,94 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   acknowledgeUserOffer: function() {
-    return p
+    return E
   },
   fetchUserOffer: function() {
-    return u
+    return _
   }
 });
-var a = r("544891"),
-  n = r("704215"),
-  i = r("570140"),
-  l = r("605236"),
-  o = r("675478"),
-  s = r("295226"),
-  c = r("424082"),
-  d = r("981631");
-async function u() {
+var i = n("544891"),
+  r = n("704215"),
+  s = n("570140"),
+  a = n("605236"),
+  o = n("675478"),
+  l = n("295226"),
+  u = n("424082"),
+  d = n("981631");
+async function _() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     {
       annualDiscountsEnabled: t
-    } = (0, c.getAnnualDiscountsExperimentConfig)("PremiumManager"),
-    r = t && s.default.shouldFetchAnnualOffer();
+    } = (0, u.getAnnualDiscountsExperimentConfig)("PremiumManager"),
+    n = t && l.default.shouldFetchAnnualOffer();
   if (e) {
-    i.default.dispatch({
+    s.default.dispatch({
       type: "BILLING_USER_OFFER_FETCH_START"
     });
     try {
-      var u, p, m;
-      let e = await a.HTTP.post({
+      var _, E, I;
+      let e = await i.HTTP.post({
           url: d.Endpoints.USER_OFFER
         }),
-        t = null !== (u = e.body.user_trial_offer) && void 0 !== u ? u : null,
-        s = null !== (p = e.body.user_discount) && void 0 !== p ? p : null,
-        c = null !== (m = e.body.user_discount_offer) && void 0 !== m ? m : null;
-      return null == t && (0, l.isDismissibleContentDismissed)(n.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.removeDismissedContent)(n.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), i.default.dispatch({
+        t = null !== (_ = e.body.user_trial_offer) && void 0 !== _ ? _ : null,
+        l = null !== (E = e.body.user_discount) && void 0 !== E ? E : null,
+        u = null !== (I = e.body.user_discount_offer) && void 0 !== I ? I : null;
+      return null == t && (0, a.isDismissibleContentDismissed)(r.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.removeDismissedContent)(r.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), s.default.dispatch({
         type: "BILLING_USER_OFFER_FETCH_SUCCESS",
         userTrialOffer: t,
-        userDiscount: s,
-        userDiscountOffer: c
-      }), null == t && r && h(), {
+        userDiscount: l,
+        userDiscountOffer: u
+      }), null == t && n && c(), {
         userTrialOffer: t,
-        userDiscount: s,
-        userDiscountOffer: c
+        userDiscount: l,
+        userDiscountOffer: u
       }
     } catch (e) {
-      i.default.dispatch({
+      s.default.dispatch({
         type: "BILLING_USER_OFFER_FETCH_FAIL"
       })
     }
   }
-  r && h()
+  n && c()
 }
-async function h() {
+async function c() {
   try {
     var e;
-    let t = await a.HTTP.post({
+    let t = await i.HTTP.post({
         url: d.Endpoints.ANNUAL_USER_OFFER
       }),
-      r = null !== (e = t.body.user_discount_offer) && void 0 !== e ? e : null;
-    null != r && (m(r), i.default.dispatch({
+      n = null !== (e = t.body.user_discount_offer) && void 0 !== e ? e : null;
+    null != n && (I(n), s.default.dispatch({
       type: "BILLING_ANNUAL_USER_OFFER_FETCH_SUCCESS",
-      userDiscountOffer: r
+      userDiscountOffer: n
     }))
   } catch (e) {
-    i.default.dispatch({
+    s.default.dispatch({
       type: "BILLING_ANNUAL_USER_OFFER_FETCH_FAIL"
     })
   }
 }
 
-function p(e, t) {
-  let r = null != e && null == e.expires_at ? e.id : void 0,
-    n = null != t && null == t.expires_at ? t.id : void 0;
-  if (void 0 !== r || void 0 !== n) return a.HTTP.post({
+function E(e, t) {
+  let n = null != e && null == e.expires_at ? e.id : void 0,
+    r = null != t && null == t.expires_at ? t.id : void 0;
+  if (void 0 !== n || void 0 !== r) return i.HTTP.post({
     url: d.Endpoints.USER_OFFER_ACKNOWLEDGED,
     body: {
-      user_trial_offer_id: r,
-      user_discount_offer_id: n
+      user_trial_offer_id: n,
+      user_discount_offer_id: r
     },
     oldFormErrors: !0
   }).then(e => {
-    var t, r, a;
-    i.default.dispatch({
+    var t, n, i;
+    s.default.dispatch({
       type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
       userTrialOffer: null !== (t = e.body.user_trial_offer) && void 0 !== t ? t : null,
-      userDiscount: null !== (r = e.body.user_discount) && void 0 !== r ? r : null,
-      userDiscountOffer: null !== (a = e.body.user_discount_offer) && void 0 !== a ? a : null
+      userDiscount: null !== (n = e.body.user_discount) && void 0 !== n ? n : null,
+      userDiscountOffer: null !== (i = e.body.user_discount_offer) && void 0 !== i ? i : null
     })
   }).catch(e => {
-    404 === e.status && i.default.dispatch({
+    404 === e.status && s.default.dispatch({
       type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
       userTrialOffer: null,
       userDiscount: null,
@@ -96,9 +96,9 @@ function p(e, t) {
     })
   })
 }
-async function m(e) {
+async function I(e) {
   if (null != e && null == e.applied_at) try {
-    await a.HTTP.post({
+    await i.HTTP.post({
       url: d.Endpoints.USER_OFFER_REDEEM,
       body: {
         user_discount_offer_id: e.id

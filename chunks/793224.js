@@ -21,20 +21,20 @@ var a = n("442837"),
   C = n("594190"),
   g = n("569545"),
   E = n("989941"),
-  S = n("199902"),
-  _ = n("314897"),
+  _ = n("199902"),
+  S = n("314897"),
   I = n("944486"),
   N = n("885110"),
   T = n("449224"),
   A = n("436088"),
   L = n("976401"),
-  v = n("981631"),
-  x = n("921944"),
+  x = n("981631"),
+  v = n("921944"),
   R = n("689938");
 
 function M() {
   let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([_.default], () => _.default.getId()),
+    t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
     n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
     {
       canBroadcast: M
@@ -45,7 +45,7 @@ function M() {
     }),
     y = (0, c.default)() && null != n,
     O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
-    D = (0, a.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams());
+    D = (0, a.useStateFromStoresArray)([_.default], () => _.default.getAllActiveStreams());
   if (!y && !O) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
@@ -53,7 +53,7 @@ function M() {
   let b = [];
   y && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
-      o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
+      o.default.trackWithMetadata(x.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
       })
     },
@@ -71,7 +71,7 @@ function M() {
     G = e => (0, l.jsx)(L.default, {
       tooltipText: y ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
       onClick: () => {
-        P(), null == e || e(x.ContentDismissActionType.UNKNOWN)
+        P(), null == e || e(v.ContentDismissActionType.UNKNOWN)
       },
       onMouseEnter: j,
       icon: y ? A.default : () => (0, l.jsx)(h.default, {

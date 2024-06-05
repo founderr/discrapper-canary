@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ServerProfilesExperiment: function() {
-    return i
+    return l
   }
 });
-let i = (0, n("818083").createExperiment)({
+let l = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-05_server_profiles",
   label: "Server Profiles",

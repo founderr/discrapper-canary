@@ -21,15 +21,15 @@ var a = n("120356"),
   C = n("938475"),
   g = n("242315"),
   E = n("944581"),
-  S = n("632184"),
-  _ = n("170039"),
+  _ = n("632184"),
+  S = n("170039"),
   I = n("761374"),
   N = n("602623"),
   T = n("823379"),
   A = n("709054"),
   L = n("853856"),
-  v = n("981631"),
-  x = n("689938"),
+  x = n("981631"),
+  v = n("689938"),
   R = n("952972"),
   M = n("81311");
 
@@ -50,9 +50,9 @@ function O() {
   var e, t;
   let n = (0, o.useStateFromStoresArray)([L.default, m.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => m.default.getChannel(e)).filter(T.isNotNullish)),
     a = n.map(e => e.id),
-    s = n.filter(e => e.type === v.ChannelTypes.GUILD_VOICE),
-    i = n.filter(e => e.type === v.ChannelTypes.GUILD_STAGE_VOICE).map(e => e.id),
-    x = (0, o.useStateFromStoresArray)([C.default], () => r().flatMap(s, e => C.default.getVoiceStatesForChannel(e).map(e => {
+    s = n.filter(e => e.type === x.ChannelTypes.GUILD_VOICE),
+    i = n.filter(e => e.type === x.ChannelTypes.GUILD_STAGE_VOICE).map(e => e.id),
+    v = (0, o.useStateFromStoresArray)([C.default], () => r().flatMap(s, e => C.default.getVoiceStatesForChannel(e).map(e => {
       let {
         user: t
       } = e;
@@ -81,10 +81,10 @@ function O() {
     }, [a]),
     j = (0, o.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
     P = (0, o.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
-    G = y(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
+    G = y(_.default, v.filter(e => !D.includes(e.id) && !b.includes(e.id)));
   let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(_.default, {
+      children: [(0, l.jsx)(S.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,
@@ -116,7 +116,7 @@ function D() {
       className: s()(R.row, R.rowGuildName),
       children: (0, l.jsx)("span", {
         className: s()(R.guildNameText, R.guildNameTextLimitedSize),
-        children: x.default.Messages.FAVORITES_GUILD_NAME
+        children: v.default.Messages.FAVORITES_GUILD_NAME
       })
     }), (0, l.jsx)(O, {})]
   })

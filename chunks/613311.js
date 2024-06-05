@@ -29,8 +29,8 @@ var a = s("735250"),
   L = s("525395"),
   x = s("558314"),
   v = s("580130"),
-  D = s("55563"),
-  b = s("551428"),
+  b = s("55563"),
+  D = s("551428"),
   U = s("695103"),
   j = s("451478"),
   G = s("378720"),
@@ -574,7 +574,7 @@ class e_ extends r.PureComponent {
     })
   }
 }
-t.default = (0, f.default)((0, S.default)(l.default.connectStores([x.default, O.default, P.default, j.default, b.default, D.default, U.default, A.default, m.default, L.default, M.default, v.default], e => {
+t.default = (0, f.default)((0, S.default)(l.default.connectStores([x.default, O.default, P.default, j.default, D.default, b.default, U.default, A.default, m.default, L.default, M.default, v.default], e => {
   let t, s, a, {
     inputSkuId: r,
     applicationId: i,
@@ -584,10 +584,10 @@ t.default = (0, f.default)((0, S.default)(l.default.connectStores([x.default, O.
   } = e;
   if (null == i) {
     if (null == r) throw Error("Needs applicationId or skuId");
-    t = r, null != (i = null != (s = D.default.get(r)) ? s.applicationId : null) && (a = m.default.getApplication(i))
+    t = r, null != (i = null != (s = b.default.get(r)) ? s.applicationId : null) && (a = m.default.getApplication(i))
   } else if (null == r) {
     if (null == i) throw Error("Needs applicationId or skuId");
-    null != (a = m.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? D.default.get(t) : null
+    null != (a = m.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
   }(null == s ? void 0 : s.flags) != null && (0, K.hasFlag)(s.flags, el.SKUFlags.STICKER_PACK) && (s = null);
   let u = null != i && (U.default.inTestModeForApplication(i) || A.default.inDevModeForApplication(i));
   return {
@@ -598,7 +598,7 @@ t.default = (0, f.default)((0, S.default)(l.default.connectStores([x.default, O.
     shouldFetchStatistics: l && null != i && L.default.shouldFetchStatisticsForApplication(i),
     sku: s,
     isFocused: j.default.isFocused(),
-    storeListing: b.default.getStoreListing({
+    storeListing: D.default.getStoreListing({
       storeListingId: n,
       skuId: t,
       channelId: null != o ? o.id : null,

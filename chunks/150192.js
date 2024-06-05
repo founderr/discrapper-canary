@@ -1,16 +1,16 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   areDiscoveryCategoriesEqual: function() {
     return h
   }
-}), a("653041"), a("47120");
-var n, r, s, i, l = a("392711"),
-  o = a.n(l),
-  c = a("442837"),
-  d = a("570140"),
-  u = a("823379"),
-  f = a("731455"),
-  m = a("689938");
+}), n("653041"), n("47120");
+var a, r, s, i, l = n("392711"),
+  o = n.n(l),
+  c = n("442837"),
+  d = n("570140"),
+  u = n("823379"),
+  f = n("731455"),
+  m = n("689938");
 
 function h(e, t) {
   return o().isEqual(e.map(e => [e.categoryId, e.name]), t.map(e => [e.categoryId, e.name]))
@@ -19,7 +19,7 @@ let E = null,
   p = [],
   C = [],
   T = {};
-class _ extends(n = c.default.Store) {
+class _ extends(a = c.default.Store) {
   getPrimaryCategories() {
     return p
   }
@@ -55,42 +55,42 @@ i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.define
 }) : r[s] = i, t.default = new _(d.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
-        categories: a,
-        locale: n
+        categories: n,
+        locale: a
       } = e,
       r = [],
       s = [];
-    if (a.sort((e, t) => e.name < t.name ? -1 : 1).forEach(e => {
+    if (n.sort((e, t) => e.name < t.name ? -1 : 1).forEach(e => {
         let {
-          id: a,
-          name: n,
+          id: n,
+          name: a,
           is_primary: i
         } = e;
-        if (a !== f.DEFAULT_DISCOVERY_CATEGORY_ID) {
-          if (a === f.OTHER_DISCOVERY_CATEGORY_ID) {
+        if (n !== f.DEFAULT_DISCOVERY_CATEGORY_ID) {
+          if (n === f.OTHER_DISCOVERY_CATEGORY_ID) {
             t = {
-              categoryId: a,
-              name: n
+              categoryId: n,
+              name: a
             };
             return
           }!0 === i && r.push({
-            categoryId: a,
-            name: n
+            categoryId: n,
+            name: a
           }), s.push({
-            categoryId: a,
-            name: n
-          }), T[a] = n
+            categoryId: n,
+            name: a
+          }), T[n] = a
         }
       }), null != t) {
       let {
         categoryId: e,
-        name: a
+        name: n
       } = t;
       r.push({
         categoryId: e,
-        name: a
-      }), T[e] = a
+        name: n
+      }), T[e] = n
     }
-    E = n, p = r, C = s
+    E = a, p = r, C = s
   }
 })

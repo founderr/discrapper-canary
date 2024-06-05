@@ -33,16 +33,16 @@ function C(e, t) {
   }))
 }
 
-function T() {
+function j() {
   let e = C(["\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ", "\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  "]);
-  return T = function() {
+  return j = function() {
     return e
   }, e
 }
 
-function j() {
+function T() {
   let e = C(["\n      export const rawPalette = {\n        ", "\n      } as const;\n    "]);
-  return j = function() {
+  return T = function() {
     return e
   }, e
 }
@@ -66,7 +66,7 @@ function _(e) {
   }
 }
 
-function R(e) {
+function P(e) {
   return "name" in e
 }
 
@@ -87,7 +87,7 @@ function A(e) {
   }), t
 }
 
-function P(e, t) {
+function R(e, t) {
   let [r, a] = n.useState(() => {
     let r = h.Storage.get(e);
     return null != r ? r : t
@@ -103,7 +103,7 @@ function L() {
       rawPalette: t,
       semanticTokens: r
     }, i, o, c, h, p] = function(e, t) {
-      let [r, a] = P("".concat(e, "-states"), [t]), [i, l] = P("".concat(e, "-index"), 0), o = r[i], s = n.useCallback(e => {
+      let [r, a] = R("".concat(e, "-states"), [t]), [i, l] = R("".concat(e, "-index"), 0), o = r[i], s = n.useCallback(e => {
         a([e, ...r].slice(0, 20)), l(0)
       }, [l, a, r]), c = n.useCallback(() => {
         l(Math.min(r.length - 1, i + 1))
@@ -117,7 +117,7 @@ function L() {
     }),
     [m, f] = n.useState(""),
     [C, N] = n.useState({}),
-    [_, R] = n.useState({}),
+    [_, P] = n.useState({}),
     A = n.useMemo(() => Object.keys(t).reduce((e, t) => [...e, {
       value: t,
       label: t
@@ -159,11 +159,11 @@ function L() {
         });
       return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(C).filter(e => C[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(_).filter(e => _[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
     }, [e, r, t, C, _]),
-    I = n.useCallback(e => {
+    M = n.useCallback(e => {
       let t = "",
         r = "",
         a = !1;
-      return s()(T(), Object.keys(e).map(n => {
+      return s()(j(), Object.keys(e).map(n => {
         (r = n.split("-")[0]) !== t ? (t = r, a = !0) : a = !1;
         let i = e[n],
           l = i.light,
@@ -185,7 +185,7 @@ function L() {
         return "".concat(a ? "\n" : "").concat(u)
       }).join(",\n"))
     }, []),
-    M = n.useCallback(e => s()(j(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
+    I = n.useCallback(e => s()(T(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
     D = n.useCallback(e => {
       let t = {};
       Object.keys(e).forEach(r => {
@@ -243,7 +243,7 @@ function L() {
         }), (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
           onClick: () => {
-            navigator.clipboard.writeText(M(t))
+            navigator.clipboard.writeText(I(t))
           },
           children: "Export"
         })]
@@ -257,7 +257,7 @@ function L() {
         }), (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
           onClick: () => {
-            navigator.clipboard.writeText(I(r))
+            navigator.clipboard.writeText(M(r))
           },
           children: "Export"
         })]
@@ -312,13 +312,13 @@ function L() {
           return (0, a.jsxs)(n.Fragment, {
             children: [(0, a.jsx)("div", {
               onMouseEnter: () => {
-                R(e => ({
+                P(e => ({
                   ...e,
                   [t]: !0
                 }))
               },
               onMouseLeave: () => {
-                R(e => ({
+                P(e => ({
                   ...e,
                   [t]: !1
                 }))

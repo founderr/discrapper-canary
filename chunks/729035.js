@@ -131,7 +131,7 @@ let v = {
   },
   S = d().parserFor(v),
   C = d().reactFor(d().ruleOutput(v, "react"));
-class T extends(n = l.PureComponent) {
+class j extends(n = l.PureComponent) {
   render() {
     let {
       className: e,
@@ -149,7 +149,7 @@ class T extends(n = l.PureComponent) {
     })
   }
 }
-b(T, "rules", v), b(T, "defaultProps", {
+b(j, "rules", v), b(j, "defaultProps", {
   parser: S,
   output: C
-}), t.default = T
+}), t.default = j
