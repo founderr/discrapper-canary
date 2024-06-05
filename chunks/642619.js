@@ -1,26 +1,26 @@
 "use strict";
-s.r(t), s.d(t, {
+r.r(t), r.d(t, {
   openProfileEffectModal: function() {
-    return l
+    return o
   }
 });
-var a = s("735250");
-s("470079");
-var n = s("481060");
-let l = e => {
+var a = r("735250");
+r("470079");
+var n = r("481060");
+let o = e => {
   let {
     analyticsLocations: t,
-    initialSelectedEffectId: l,
-    guild: i
+    initialSelectedEffectId: o,
+    guild: l
   } = e;
   (0, n.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([s.e("99387"), s.e("4934"), s.e("55228")]).then(s.bind(s, "191564"));
-    return s => (0, a.jsx)(e, {
-      ...s,
-      guild: i,
-      initialSelectedEffectId: l,
+    } = await Promise.all([r.e("99387"), r.e("4934"), r.e("55228")]).then(r.bind(r, "191564"));
+    return r => (0, a.jsx)(e, {
+      ...r,
+      guild: l,
+      initialSelectedEffectId: o,
       analyticsLocations: t
     })
   }, {})

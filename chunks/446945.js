@@ -3,17 +3,17 @@ a.r(t);
 var n = a("735250");
 a("470079");
 var r = a("481060"),
-  s = a("239091"),
-  i = a("282597"),
+  i = a("239091"),
+  s = a("282597"),
   l = a("877715"),
   o = a("729285"),
-  c = a("838221"),
-  d = a("246364"),
+  d = a("838221"),
+  c = a("246364"),
   u = a("700833"),
   f = a("689938"),
   m = a("166562");
 
-function h(e) {
+function E(e) {
   let {
     addFormField: t,
     onSelect: a,
@@ -22,25 +22,25 @@ function h(e) {
   return (0, n.jsx)(r.Menu, {
     navId: "add-questions",
     className: m.menu,
-    onClose: s.closeContextMenu,
+    onClose: i.closeContextMenu,
     "aria-label": f.default.Messages.USER_ACTIONS_MENU_LABEL,
     onSelect: a,
     children: (0, n.jsxs)(r.MenuGroup, {
       children: [(0, n.jsx)(r.MenuItem, {
         id: "text-input",
-        icon: c.default,
+        icon: d.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
-        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.TEXT_INPUT, t, o)
+        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.TEXT_INPUT, t, o)
       }), (0, n.jsx)(r.MenuItem, {
         id: "paragraph",
         icon: l.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
-        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.PARAGRAPH, t, o)
+        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.PARAGRAPH, t, o)
       }), (0, n.jsx)(r.MenuItem, {
         id: "multiple-choice",
-        icon: i.default,
+        icon: s.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
-        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.MULTIPLE_CHOICE, t, o)
+        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.MULTIPLE_CHOICE, t, o)
       })]
     })
   })
@@ -49,8 +49,8 @@ t.default = function(e) {
   let {
     addFormField: t,
     guild: a
-  } = e, i = e => {
-    (0, s.openContextMenu)(e, e => (0, n.jsx)(h, {
+  } = e, s = e => {
+    (0, i.openContextMenu)(e, e => (0, n.jsx)(E, {
       ...e,
       addFormField: t,
       guild: a
@@ -64,7 +64,7 @@ t.default = function(e) {
     children: e => (0, n.jsxs)(r.Clickable, {
       ...e,
       className: m.container,
-      onClick: i,
+      onClick: s,
       children: [(0, n.jsx)(o.default, {
         width: 24,
         height: 24,

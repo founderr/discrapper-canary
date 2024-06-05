@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   QuestionRenderer: function() {
-    return c
+    return d
   },
   RequirementRenderer: function() {
-    return d
+    return c
   },
   RequirementWithActionRenderer: function() {
     return u
@@ -13,19 +13,19 @@ a.r(t), a.d(t, {
 var n = a("735250");
 a("470079");
 var r = a("692547"),
-  s = a("481060"),
-  i = a("441674"),
+  i = a("481060"),
+  s = a("441674"),
   l = a("696202"),
   o = a("73356");
 
-function c(e) {
+function d(e) {
   let {
     title: t,
     children: a
   } = e;
   return (0, n.jsxs)("div", {
     className: o.questionContainer,
-    children: [(0, n.jsx)(s.Text, {
+    children: [(0, n.jsx)(i.Text, {
       className: o.questionTitle,
       variant: "text-md/semibold",
       color: "header-primary",
@@ -34,11 +34,11 @@ function c(e) {
   })
 }
 
-function d(e) {
+function c(e) {
   let {
     icon: t,
     text: a,
-    meetsRequirement: c
+    meetsRequirement: d
   } = e;
   return (0, n.jsxs)("div", {
     className: o.requirementContainer,
@@ -46,11 +46,11 @@ function d(e) {
       className: o.requirementIcon,
       height: 20,
       width: 20
-    }), (0, n.jsx)(s.Text, {
+    }), (0, n.jsx)(i.Text, {
       className: o.requirementText,
       variant: "text-md/normal",
       children: a
-    }), c ? (0, n.jsx)(i.default, {
+    }), d ? (0, n.jsx)(s.default, {
       width: 24,
       height: 24,
       className: o.requirementSuccess,
@@ -69,8 +69,8 @@ function u(e) {
     icon: t,
     text: a,
     footnote: l,
-    meetsRequirement: c,
-    children: d
+    meetsRequirement: d,
+    children: c
   } = e;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
@@ -79,17 +79,17 @@ function u(e) {
         className: o.requirementIcon,
         height: 20,
         width: 20
-      }), (0, n.jsx)(s.Text, {
+      }), (0, n.jsx)(i.Text, {
         className: o.requirementText,
         variant: "text-md/normal",
         children: a
-      }), c ? (0, n.jsx)(i.default, {
+      }), d ? (0, n.jsx)(s.default, {
         width: 24,
         height: 24,
         className: o.requirementSuccess,
         backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
-      }) : d]
-    }), null != l && (0, n.jsx)(s.Text, {
+      }) : c]
+    }), null != l && (0, n.jsx)(i.Text, {
       color: "header-secondary",
       className: o.footnote,
       variant: "text-xs/normal",

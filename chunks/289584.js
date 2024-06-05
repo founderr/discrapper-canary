@@ -1,41 +1,41 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return E
   }
-}), n("47120");
-var a = n("470079"),
-  l = n("749210"),
-  s = n("287734"),
-  i = n("881052"),
-  r = n("142497"),
-  d = n("570188"),
-  u = n("471253"),
-  o = n("427679"),
-  c = n("190378");
+}), a("47120");
+var l = a("470079"),
+  s = a("749210"),
+  n = a("287734"),
+  i = a("881052"),
+  r = a("142497"),
+  d = a("570188"),
+  o = a("471253"),
+  u = a("427679"),
+  c = a("190378");
 
 function E(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-    [E, _] = a.useState(!1),
-    [f, S] = a.useState(null),
-    T = a.useMemo(() => o.default.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
-    h = (0, d.useCanSendStageStartNotification)(e);
+  let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+    [E, f] = l.useState(!1),
+    [h, _] = l.useState(null),
+    N = l.useMemo(() => u.default.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
+    S = (0, d.useCanSendStageStartNotification)(e);
   return {
     loading: E,
-    error: f,
-    onSave: async a => {
+    error: h,
+    onSave: async l => {
       let {
         topic: d,
-        privacyLevel: o,
+        privacyLevel: u,
         sendStartNotification: E
-      } = a;
-      if (null != e && "" !== d && null != o) {
-        _(!0), S(null), null != n && (l.default.selectGuild(n), s.default.selectVoiceChannel(e.id));
+      } = l;
+      if (null != e && "" !== d && null != u) {
+        f(!0), _(null), null != a && (s.default.selectGuild(a), n.default.selectVoiceChannel(e.id));
         try {
-          let n;
-          null != T ? n = await u.editStage(e, d, o) : (n = await u.startStage(e, d, o, null != E && E), h && r.hideHotspot(c.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), t(n)
+          let a;
+          null != N ? a = await o.editStage(e, d, u) : (a = await o.startStage(e, d, u, null != E && E), S && r.hideHotspot(c.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), t(a)
         } catch (e) {
-          S(new i.APIError(e)), _(!1)
+          _(new i.APIError(e)), f(!1)
         }
       }
     }

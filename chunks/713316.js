@@ -1,50 +1,50 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   PaymentModalConfirmStep: function() {
     return f
   }
 });
-var l = s("735250");
-s("470079");
-var n = s("512722"),
-  a = s.n(n),
-  i = s("481060"),
-  r = s("598"),
-  u = s("698708"),
-  d = s("614277"),
-  o = s("689938"),
-  c = s("802302");
+var r = n("735250");
+n("470079");
+var a = n("512722"),
+  s = n.n(a),
+  l = n("481060"),
+  i = n("598"),
+  u = n("698708"),
+  o = n("614277"),
+  d = n("689938"),
+  c = n("802302");
 
 function f(e) {
   let {
     handleClose: t
   } = e, {
-    skusById: s,
-    selectedSkuId: n,
+    skusById: n,
+    selectedSkuId: a,
     application: f
-  } = (0, r.usePaymentContext)();
-  a()(null != n, "Expected selectedSkuId"), a()(null != f, "Expected application");
-  let S = s[n];
-  a()(null != S, "Expected sku");
-  let E = o.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+  } = (0, i.usePaymentContext)();
+  s()(null != a, "Expected selectedSkuId"), s()(null != f, "Expected application");
+  let _ = n[a];
+  s()(null != _, "Expected sku");
+  let I = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
     applicationName: f.name,
-    itemName: S.name
+    itemName: _.name
   });
-  return (0, l.jsxs)(d.PaymentPortalBody, {
-    children: [(0, l.jsx)(u.default, {}), (0, l.jsxs)("div", {
+  return (0, r.jsxs)(o.PaymentPortalBody, {
+    children: [(0, r.jsx)(u.default, {}), (0, r.jsxs)("div", {
       className: c.confirmation,
-      children: [(0, l.jsx)(i.Heading, {
+      children: [(0, r.jsx)(l.Heading, {
         variant: "heading-xxl/bold",
         className: c.confirmationHeader,
         children: "Success!"
-      }), (0, l.jsx)(i.Text, {
+      }), (0, r.jsx)(l.Text, {
         variant: "text-md/normal",
-        children: E
-      }), (0, l.jsx)("div", {
+        children: I
+      }), (0, r.jsx)("div", {
         className: c.divider
-      }), (0, l.jsx)(i.Button, {
+      }), (0, r.jsx)(l.Button, {
         onClick: t,
-        children: o.default.Messages.CLOSE
+        children: d.default.Messages.CLOSE
       })]
     })]
   })

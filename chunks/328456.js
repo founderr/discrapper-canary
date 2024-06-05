@@ -1,20 +1,20 @@
 "use strict";
 r.r(t), r.d(t, {
   ItemsSortingHat: function() {
-    return l
+    return o
   },
   useShopProductItems: function() {
-    return n
+    return l
   }
 }), r("724458"), r("653041"), r("47120");
 var a = r("470079"),
-  o = r("979554");
-class l {
+  n = r("979554");
+class o {
   get firstAvatarDecoration() {
-    return this.getFirstItemByType(o.CollectiblesItemType.AVATAR_DECORATION)
+    return this.getFirstItemByType(n.CollectiblesItemType.AVATAR_DECORATION)
   }
   get firstProfileEffect() {
-    return this.getFirstItemByType(o.CollectiblesItemType.PROFILE_EFFECT)
+    return this.getFirstItemByType(n.CollectiblesItemType.PROFILE_EFFECT)
   }
   getFirstItemByType(e) {
     var t;
@@ -37,11 +37,11 @@ class l {
     }) : t[r] = a, this.itemsByTypes = this.sortByTypes(e)
   }
 }
-let n = e => {
+let l = e => {
   let {
     firstProfileEffect: t,
     firstAvatarDecoration: r
-  } = a.useMemo(() => new l(e.items), [e]);
+  } = a.useMemo(() => new o(e.items), [e]);
   return {
     firstProfileEffect: t,
     firstAvatarDecoration: r

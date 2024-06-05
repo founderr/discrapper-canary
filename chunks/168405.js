@@ -1,22 +1,22 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return u
+    return r
   }
 });
-var a = s("735250");
+var n = s("735250");
 s("470079");
-var n = s("481060"),
+var a = s("481060"),
   l = s("665906"),
   i = s("827104"),
-  d = s("50284"),
-  r = s("689938");
+  u = s("50284"),
+  d = s("689938");
 
-function u(e, t) {
-  return (0, l.useIsActiveChannelOrUnarchivableThread)(t) ? (0, a.jsx)(n.MenuItem, {
+function r(e, t) {
+  return (0, l.useIsActiveChannelOrUnarchivableThread)(t) ? (0, n.jsx)(a.MenuItem, {
     id: "mark-unread",
-    label: r.default.Messages.MARK_UNREAD,
-    action: () => (0, d.default)(t.id, e.id),
+    label: d.default.Messages.MARK_UNREAD,
+    action: () => (0, u.default)(t.id, e.id),
     icon: i.default
   }) : null
 }

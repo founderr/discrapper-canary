@@ -1,63 +1,63 @@
 "use strict";
-s.r(t), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("481060"),
-  o = s("729285"),
-  d = s("150954"),
-  u = s("994614");
+n.r(t), n("47120");
+var i = n("735250"),
+  s = n("470079"),
+  r = n("120356"),
+  a = n.n(r),
+  l = n("481060"),
+  u = n("729285"),
+  o = n("150954"),
+  c = n("994614");
 
-function c(e) {
+function d(e) {
   return "" === e || "-" === e
 }
 t.default = e => {
   let {
     value: t,
-    onChange: s,
-    className: n,
-    minValue: E,
-    maxValue: _
-  } = e, [I, T] = l.useState(t), S = c(I) || null != E && I <= E, f = c(I) || null != _ && I >= _, m = e => {
-    s(c(e) ? null != E ? E : 0 : e), T(e)
+    onChange: n,
+    className: r,
+    minValue: p,
+    maxValue: h
+  } = e, [f, S] = s.useState(t), m = d(f) || null != p && f <= p, _ = d(f) || null != h && f >= h, P = e => {
+    n(d(e) ? null != p ? p : 0 : e), S(e)
   };
-  return (0, a.jsx)(r.FocusRing, {
+  return (0, i.jsx)(l.FocusRing, {
     within: !0,
-    children: (0, a.jsxs)("div", {
-      className: i()(u.actions, n),
-      children: [(0, a.jsx)(r.Clickable, {
+    children: (0, i.jsxs)("div", {
+      className: a()(c.actions, r),
+      children: [(0, i.jsx)(l.Clickable, {
         onClick: e => {
-          e.stopPropagation(), !S && m(I - 1)
+          e.stopPropagation(), !m && P(f - 1)
         },
         tabIndex: -1,
-        className: i()(u.iconWrapper, u.__invalid_subtract, {
-          [u.disabled]: S
+        className: a()(c.iconWrapper, c.__invalid_subtract, {
+          [c.disabled]: m
         }),
-        children: (0, a.jsx)(d.default, {
-          className: i()(u.icon, {
-            [u.disabled]: S
+        children: (0, i.jsx)(o.default, {
+          className: a()(c.icon, {
+            [c.disabled]: m
           })
         })
-      }), (0, a.jsx)(r.TextInput, {
-        value: "".concat(I),
+      }), (0, i.jsx)(l.TextInput, {
+        value: "".concat(f),
         onChange: e => {
-          if (c(e)) return m(e);
+          if (d(e)) return P(e);
           let t = parseInt(e);
-          if (!isNaN(t)) return null != _ && t >= _ ? m(_) : null != E && t <= E ? m(E) : m(t)
+          if (!isNaN(t)) return null != h && t >= h ? P(h) : null != p && t <= p ? P(p) : P(t)
         },
-        inputClassName: u.value
-      }), (0, a.jsx)(r.Clickable, {
+        inputClassName: c.value
+      }), (0, i.jsx)(l.Clickable, {
         onClick: e => {
-          e.stopPropagation(), !f && m(I + 1)
+          e.stopPropagation(), !_ && P(f + 1)
         },
         tabIndex: -1,
-        className: i()(u.iconWrapper, u.__invalid_add, {
-          [u.disabled]: f
+        className: a()(c.iconWrapper, c.__invalid_add, {
+          [c.disabled]: _
         }),
-        children: (0, a.jsx)(o.default, {
-          className: i()(u.icon, {
-            [u.disabled]: f
+        children: (0, i.jsx)(u.default, {
+          className: a()(c.icon, {
+            [c.disabled]: _
           })
         })
       })]

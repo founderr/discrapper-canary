@@ -1,162 +1,162 @@
 "use strict";
-a.r(l), a.d(l, {
+n.r(t), n.d(t, {
   GuildDialog: function() {
-    return L
+    return j
   },
   GuildUnavilableDialog: function() {
-    return S
+    return R
   },
   default: function() {
-    return C
+    return b
   }
-}), a("47120");
-var s = a("735250"),
-  t = a("470079"),
-  i = a("120356"),
-  n = a.n(i),
-  d = a("442837"),
-  u = a("692547"),
-  c = a("780384"),
-  r = a("481060"),
-  o = a("410030"),
-  h = a("134432"),
-  m = a("703656"),
-  f = a("314897"),
-  g = a("271383"),
-  x = a("940627"),
-  j = a("806519"),
-  v = a("768581"),
-  p = a("900849"),
-  N = a("249842"),
-  I = a("838367"),
-  b = a("981631"),
-  _ = a("689938"),
-  P = a("246551"),
-  E = a("892561"),
-  T = a("494536");
+}), n("47120");
+var l = n("735250"),
+  a = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  d = n("442837"),
+  u = n("692547"),
+  r = n("780384"),
+  o = n("481060"),
+  c = n("410030"),
+  h = n("134432"),
+  f = n("703656"),
+  g = n("314897"),
+  m = n("271383"),
+  T = n("940627"),
+  _ = n("806519"),
+  E = n("768581"),
+  S = n("900849"),
+  p = n("249842"),
+  I = n("838367"),
+  N = n("981631"),
+  v = n("689938"),
+  P = n("246551"),
+  x = n("892561"),
+  A = n("494536");
 
-function U() {
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)("div", {
+function O() {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)("div", {
       className: P.splashPlaceholder
-    }), (0, s.jsxs)("div", {
-      className: n()(P.body, P.hasSplash),
-      children: [(0, s.jsx)("div", {
+    }), (0, l.jsxs)("div", {
+      className: i()(P.body, P.hasSplash),
+      children: [(0, l.jsx)("div", {
         className: P.iconPlaceholder
-      }), (0, s.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: P.__invalid_headerText,
-        children: (0, s.jsx)("div", {
+        children: (0, l.jsx)("div", {
           className: P.namePlaceholder
         })
-      }), (0, s.jsxs)("div", {
+      }), (0, l.jsxs)("div", {
         className: P.memberInfo,
-        children: [(0, s.jsx)("div", {
+        children: [(0, l.jsx)("div", {
           className: P.memberCount,
-          children: (0, s.jsx)("div", {
+          children: (0, l.jsx)("div", {
             className: P.memberInfoPlaceholder
           })
-        }), (0, s.jsx)("div", {
+        }), (0, l.jsx)("div", {
           className: P.memberCount,
-          children: (0, s.jsx)("div", {
+          children: (0, l.jsx)("div", {
             className: P.memberInfoPlaceholder
           })
         })]
-      }), (0, s.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: P.viewButtonPlaceholder
       })]
     })]
   })
 }
 
-function S() {
-  let e = (0, o.default)();
-  return (0, s.jsx)(r.Dialog, {
-    "aria-label": _.default.Messages.GUILD_UNAVAILABLE_HEADER,
+function R() {
+  let e = (0, c.default)();
+  return (0, l.jsx)(o.Dialog, {
+    "aria-label": v.default.Messages.GUILD_UNAVAILABLE_HEADER,
     className: P.guildPopout,
-    children: (0, s.jsxs)("div", {
+    children: (0, l.jsxs)("div", {
       className: P.body,
-      children: [(0, s.jsx)("img", {
-        src: (0, c.isThemeDark)(e) ? E : T,
+      children: [(0, l.jsx)("img", {
+        src: (0, r.isThemeDark)(e) ? x : A,
         className: P.unavailableIcon,
         width: 80,
         height: 80,
         alt: ""
-      }), (0, s.jsx)(r.Heading, {
+      }), (0, l.jsx)(o.Heading, {
         className: P.unavailableHeader,
         variant: "heading-md/semibold",
-        children: _.default.Messages.GUILD_POPOUT_UNAVAILABLE_HEADER
-      }), (0, s.jsx)(r.Text, {
+        children: v.default.Messages.GUILD_POPOUT_UNAVAILABLE_HEADER
+      }), (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: _.default.Messages.GUILD_POPOUT_UNAVAILABLE_FLAVOR
+        children: v.default.Messages.GUILD_POPOUT_UNAVAILABLE_FLAVOR
       })]
     })
   })
 }
 
-function L(e) {
-  var l, a;
+function j(e) {
+  var t, n;
   let {
-    guild: i,
-    channelId: c,
-    messageId: o
+    guild: s,
+    channelId: r,
+    messageId: c
   } = e, {
-    name: N,
+    name: p,
     id: I,
-    discoverySplash: E,
-    icon: T,
-    description: U,
-    presenceCount: S,
-    memberCount: L,
-    emojis: C
-  } = i, D = (0, d.useStateFromStores)([f.default], () => f.default.getId()), G = (0, d.useStateFromStores)([g.default], () => g.default.isMember(I, D), [I, D]), [F, O] = t.useState(!1), A = e => {
-    if (e.stopPropagation(), G)(0, m.transitionToGuild)(I, c, o);
+    discoverySplash: x,
+    icon: A,
+    description: O,
+    presenceCount: R,
+    memberCount: j,
+    emojis: b
+  } = s, C = (0, d.useStateFromStores)([g.default], () => g.default.getId()), U = (0, d.useStateFromStores)([m.default], () => m.default.isMember(I, C), [I, C]), [y, D] = a.useState(!1), M = e => {
+    if (e.stopPropagation(), U)(0, f.transitionToGuild)(I, r, c);
     else {
       let e = {
-        page: b.AnalyticsPages.GUILD_CHANNEL,
-        section: b.AnalyticsSections.GUILD_POPOUT,
-        object: b.AnalyticsObjects.CARD
+        page: N.AnalyticsPages.GUILD_CHANNEL,
+        section: N.AnalyticsSections.GUILD_POPOUT,
+        object: N.AnalyticsObjects.CARD
       };
-      (0, p.startLurking)(I, e)
+      (0, S.startLurking)(I, e)
     }
-    O(!0)
-  }, R = v.default.getGuildDiscoverySplashURL({
+    D(!0)
+  }, L = E.default.getGuildDiscoverySplashURL({
     id: I,
-    splash: E,
+    splash: x,
     size: 250 * (0, h.getDevicePixelRatio)()
-  }), y = null !== (l = v.default.getGuildIconURL({
+  }), G = null !== (t = E.default.getGuildIconURL({
     id: I,
-    icon: T,
+    icon: A,
     size: 80
-  })) && void 0 !== l ? l : void 0, M = C, k = null;
-  return null != M && M.length > 6 && null != C && (M = null !== (a = null == C ? void 0 : C.slice(Math.max((null == C ? void 0 : C.length) - 6, 0))) && void 0 !== a ? a : [], k = C.length - 6), (0, s.jsxs)(r.Dialog, {
-    "aria-label": N,
+  })) && void 0 !== t ? t : void 0, w = b, F = null;
+  return null != w && w.length > 6 && null != b && (w = null !== (n = null == b ? void 0 : b.slice(Math.max((null == b ? void 0 : b.length) - 6, 0))) && void 0 !== n ? n : [], F = b.length - 6), (0, l.jsxs)(o.Dialog, {
+    "aria-label": p,
     className: P.guildPopout,
-    children: [null != R ? (0, s.jsx)("img", {
-      src: R,
+    children: [null != L ? (0, l.jsx)("img", {
+      src: L,
       alt: "",
       className: P.splashImage
-    }) : null, (0, s.jsxs)("div", {
-      className: n()(P.body, {
-        [P.hasSplash]: null != R
+    }) : null, (0, l.jsxs)("div", {
+      className: i()(P.body, {
+        [P.hasSplash]: null != L
       }),
-      children: [(0, s.jsx)("div", {
-        className: n()({
-          [P.iconWithSplash]: null != R
+      children: [(0, l.jsx)("div", {
+        className: i()({
+          [P.iconWithSplash]: null != L
         }),
-        children: (0, s.jsx)(r.Clickable, {
-          onClick: A,
-          children: (0, s.jsx)(j.default, {
-            mask: j.default.Masks.SQUIRCLE,
+        children: (0, l.jsx)(o.Clickable, {
+          onClick: M,
+          children: (0, l.jsx)(_.default, {
+            mask: _.default.Masks.SQUIRCLE,
             width: 88,
             height: 88,
-            children: (0, s.jsx)("div", {
+            children: (0, l.jsx)("div", {
               className: P.iconMask,
-              children: (0, s.jsx)(j.default, {
-                mask: j.default.Masks.SQUIRCLE,
+              children: (0, l.jsx)(_.default, {
+                mask: _.default.Masks.SQUIRCLE,
                 width: 80,
                 height: 80,
-                children: (0, s.jsx)("img", {
-                  src: y,
+                children: (0, l.jsx)("img", {
+                  src: G,
                   alt: "",
                   className: P.avatar
                 })
@@ -164,124 +164,124 @@ function L(e) {
             })
           })
         })
-      }), null != N ? (0, s.jsxs)("div", {
+      }), null != p ? (0, l.jsxs)("div", {
         className: P.guildNameWrapper,
-        children: [(0, s.jsx)(x.default, {
+        children: [(0, l.jsx)(T.default, {
           className: P.badge,
-          guild: i,
+          guild: s,
           tooltipPosition: "top",
-          tooltipColor: r.Tooltip.Colors.PRIMARY,
+          tooltipColor: o.Tooltip.Colors.PRIMARY,
           badgeColor: u.default.unsafe_rawColors.PRIMARY_500.css
-        }), (0, s.jsx)(r.Text, {
+        }), (0, l.jsx)(o.Text, {
           variant: "text-md/semibold",
           className: P.guildName,
-          children: N
+          children: p
         })]
-      }) : null, null != U ? (0, s.jsx)(r.Text, {
+      }) : null, null != O ? (0, l.jsx)(o.Text, {
         color: "header-secondary",
         className: P.description,
         variant: "text-sm/normal",
-        children: U
-      }) : null, (0, s.jsxs)("div", {
+        children: O
+      }) : null, (0, l.jsxs)("div", {
         className: P.memberInfo,
-        children: [null != S ? (0, s.jsxs)("div", {
+        children: [null != R ? (0, l.jsxs)("div", {
           className: P.memberCount,
-          children: [(0, s.jsx)("div", {
+          children: [(0, l.jsx)("div", {
             className: P.dotOnline
-          }), (0, s.jsx)(r.Text, {
+          }), (0, l.jsx)(o.Text, {
             variant: "text-xs/normal",
             className: P.memberText,
-            children: _.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-              membersOnline: S
+            children: v.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+              membersOnline: R
             })
           })]
-        }) : null, null != L ? (0, s.jsxs)("div", {
+        }) : null, null != j ? (0, l.jsxs)("div", {
           className: P.memberCount,
-          children: [(0, s.jsx)("div", {
+          children: [(0, l.jsx)("div", {
             className: P.dotOffline
-          }), (0, s.jsx)(r.Text, {
+          }), (0, l.jsx)(o.Text, {
             variant: "text-xs/normal",
             className: P.memberText,
-            children: _.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-              count: L
+            children: v.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+              count: j
             })
           })]
         }) : null]
       })]
-    }), (0, s.jsxs)("div", {
+    }), (0, l.jsxs)("div", {
       className: P.footer,
-      children: [null != M && M.length > 0 ? (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(r.Heading, {
+      children: [null != w && w.length > 0 ? (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(o.Heading, {
           variant: "heading-deprecated-12/semibold",
           className: P.emojiHeader,
           color: "header-secondary",
-          children: _.default.Messages.SERVER_EMOJI
-        }), (0, s.jsxs)("div", {
-          className: n()(P.emojiContainer, {
-            [P.withCounter]: null != k
+          children: v.default.Messages.SERVER_EMOJI
+        }), (0, l.jsxs)("div", {
+          className: i()(P.emojiContainer, {
+            [P.withCounter]: null != F
           }),
-          children: [M.map(e => {
-            let l = v.default.getEmojiURL({
+          children: [w.map(e => {
+            let t = E.default.getEmojiURL({
               id: e.id,
               animated: !1,
               size: 24
             });
-            return (0, s.jsx)(r.Tooltip, {
+            return (0, l.jsx)(o.Tooltip, {
               text: ":".concat(e.name, ":"),
-              children: e => (0, s.jsx)("img", {
+              children: e => (0, l.jsx)("img", {
                 ...e,
                 width: 24,
                 height: 24,
-                src: l,
-                className: n()({
-                  [P.emoji]: null == k
+                src: t,
+                className: i()({
+                  [P.emoji]: null == F
                 }),
                 alt: ""
               })
             }, e.id)
-          }), null != k ? (0, s.jsx)(r.Heading, {
+          }), null != F ? (0, l.jsx)(o.Heading, {
             variant: "heading-deprecated-12/semibold",
             className: P.emojiCounter,
             color: "header-secondary",
-            children: "+".concat(k)
+            children: "+".concat(F)
           }) : null]
         })]
-      }) : null, (0, s.jsx)(r.Button, {
-        look: r.Button.Looks.FILLED,
-        color: r.Button.Colors.BRAND,
-        size: r.Button.Sizes.SMALL,
-        onClick: A,
-        submitting: F,
+      }) : null, (0, l.jsx)(o.Button, {
+        look: o.Button.Looks.FILLED,
+        color: o.Button.Colors.BRAND,
+        size: o.Button.Sizes.SMALL,
+        onClick: M,
+        submitting: y,
         autoFocus: !0,
-        children: _.default.Messages.GUILD_POPOUT_VIEW_SERVER_BUTTON
+        children: v.default.Messages.GUILD_POPOUT_VIEW_SERVER_BUTTON
       })]
     })]
   })
 }
 
-function C(e) {
+function b(e) {
   let {
-    guildId: l,
-    channelId: a,
-    messageId: i
+    guildId: t,
+    channelId: n,
+    messageId: s
   } = e, {
-    loading: n,
+    loading: i,
     unavailable: u,
-    guild: c
+    guild: r
   } = (0, d.useStateFromStoresObject)([I.default], () => ({
-    guild: I.default.getGuild(l),
-    loading: I.default.isFetchingGuild(l),
-    unavailable: I.default.hasFetchFailed(l)
-  }), [l]);
-  return (t.useEffect(() => {
-    null == c && !n && !u && (0, N.fetchGuildForPopout)(l)
-  }, [c, l, n, u]), n) ? (0, s.jsx)(r.Dialog, {
-    "aria-label": _.default.Messages.LOADING,
+    guild: I.default.getGuild(t),
+    loading: I.default.isFetchingGuild(t),
+    unavailable: I.default.hasFetchFailed(t)
+  }), [t]);
+  return (a.useEffect(() => {
+    null == r && !i && !u && (0, p.fetchGuildForPopout)(t)
+  }, [r, t, i, u]), i) ? (0, l.jsx)(o.Dialog, {
+    "aria-label": v.default.Messages.LOADING,
     className: P.guildPopout,
-    children: (0, s.jsx)(U, {})
-  }) : null == c || u ? (0, s.jsx)(S, {}) : (0, s.jsx)(L, {
-    guild: c,
-    channelId: a,
-    messageId: i
+    children: (0, l.jsx)(O, {})
+  }) : null == r || u ? (0, l.jsx)(R, {}) : (0, l.jsx)(j, {
+    guild: r,
+    channelId: n,
+    messageId: s
   })
 }

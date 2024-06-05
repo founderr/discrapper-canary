@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return f
   }
 });
 var a = s("735250"),
@@ -17,9 +17,9 @@ var a = s("735250"),
   E = s("689938"),
   T = s("535273"),
   _ = s("822293"),
-  f = s("845904");
+  I = s("845904");
 
-function I(e) {
+function f(e) {
   let {
     onClickManageSubscription: t
   } = e, s = (0, r.useStateFromStores)([u.default], () => u.default.getSubscriptions()), l = n.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === S.SubscriptionTypes.APPLICATION && e.status !== S.SubscriptionStatusTypes.ENDED), [s]);
@@ -40,7 +40,7 @@ function I(e) {
     }), (0, a.jsxs)("div", {
       className: i()(_.guildBoostingSubscriptionRow, T.card),
       children: [(0, a.jsx)("img", {
-        src: f,
+        src: I,
         alt: "",
         className: T.bannerImage
       }), (0, a.jsxs)("div", {

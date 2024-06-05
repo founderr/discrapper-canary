@@ -16,14 +16,14 @@ var a = n("735250"),
   p = n("836946"),
   S = n("259580"),
   g = n("263704"),
-  N = n("568570"),
-  _ = n("617379"),
-  I = n("324081"),
-  T = n("305248"),
+  _ = n("568570"),
+  N = n("617379"),
+  T = n("324081"),
+  I = n("305248"),
   C = n("520116"),
   A = n("981631"),
   v = n("689938"),
-  x = n("623122");
+  M = n("623122");
 let R = l.memo(function(e) {
   let {
     channel: t,
@@ -61,13 +61,13 @@ let R = l.memo(function(e) {
   return (0, a.jsx)(r.animated.div, {
     ref: s,
     style: h,
-    children: (0, a.jsx)(M, {
+    children: (0, a.jsx)(x, {
       ...e
     })
   })
 });
 t.default = R;
-let M = l.memo(function(e) {
+let x = l.memo(function(e) {
   let {
     channel: t,
     onJump: n,
@@ -88,17 +88,17 @@ let M = l.memo(function(e) {
     (0, E.transitionTo)(A.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : l)), n(e)
   };
   return (0, a.jsx)("div", {
-    className: x.channel,
+    className: M.channel,
     children: (0, a.jsx)(u.HeadingLevel, {
-      component: (0, a.jsxs)(I.default, {
+      component: (0, a.jsxs)(T.default, {
         channel: r,
         gotoChannel: h,
         mentionCount: t.mentionCount,
         toggleCollapsed: i,
         channelState: t,
-        children: [(0, a.jsx)(_.default, {
+        children: [(0, a.jsx)(N.default, {
           channel: r
-        }), (0, a.jsx)(b, {
+        }), (0, a.jsx)(L, {
           ...e
         }), "nsfw" === t.type ? null : (0, a.jsx)(O, {
           ...e
@@ -108,7 +108,7 @@ let M = l.memo(function(e) {
         channel: t,
         channelRecord: r,
         gotoChannel: h
-      }) : "forum" === t.type ? (0, a.jsx)(T.default, {
+      }) : "forum" === t.type ? (0, a.jsx)(I.default, {
         channel: t,
         channelRecord: r,
         deleteChannel: s
@@ -117,7 +117,7 @@ let M = l.memo(function(e) {
   })
 });
 
-function b(e) {
+function L(e) {
   let {
     channel: t,
     markChannelRead: n,
@@ -125,10 +125,10 @@ function b(e) {
     getNumUnreadChannels: s
   } = e, i = (0, h.default)() && null != t.guildId;
   return (0, a.jsx)(p.default, {
-    className: x.markReadButton,
+    className: M.markReadButton,
     tooltip: i ? v.default.Messages.MARK_GUILD_AS_READ : v.default.Messages.MARK_AS_READ,
     color: p.CircleIconButtonColors.TERTIARY,
-    icon: i ? (0, a.jsx)(N.default, {
+    icon: i ? (0, a.jsx)(_.default, {
       width: 16,
       height: 16
     }) : (0, a.jsx)(g.default, {
@@ -165,8 +165,8 @@ function O(e) {
     text: v.default.Messages.COLLAPSE,
     children: e => (0, a.jsx)(u.Clickable, {
       ...e,
-      className: i()(x.collapseButton, {
-        [x.collapsed]: t.collapsed
+      className: i()(M.collapseButton, {
+        [M.collapsed]: t.collapsed
       }),
       onClick: s,
       children: (0, a.jsx)(S.default, {

@@ -21,10 +21,10 @@ var l = n("120356"),
   p = n("998502"),
   S = n("300986"),
   g = n("314451"),
-  N = n("35583"),
-  _ = n("981631"),
-  I = n("176505"),
-  T = n("504891");
+  _ = n("35583"),
+  N = n("981631"),
+  T = n("176505"),
+  I = n("504891");
 async function C() {
   if ((0, m.isMac)() && m.isPlatformEmbedded) {
     var e, t, n;
@@ -43,31 +43,31 @@ function A(e) {
     transparent: u = !1,
     toolbar: m,
     mobileToolbar: p,
-    "aria-label": _,
-    "aria-labelledby": I,
+    "aria-label": N,
+    "aria-labelledby": T,
     scrollable: A,
     role: v,
-    hideSearch: x,
+    hideSearch: M,
     showDivider: R
-  } = e, M = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), b = (null == M ? void 0 : M.isStaff()) || (null == M ? void 0 : M.isStaffPersonal()) || !1;
+  } = e, x = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (null == x ? void 0 : x.isStaff()) || (null == x ? void 0 : x.isStaffPersonal()) || !1;
   return (0, a.jsx)(E.default, {
     className: n,
     innerClassName: o,
     toolbar: function() {
       if (null == m) return null;
-      let e = null != l && !x;
+      let e = null != l && !M;
       return i.isMobile ? p : (0, a.jsxs)(a.Fragment, {
         children: [m, e ? (0, a.jsx)(f.default, {
-          className: T.search
-        }, null != s ? s : l) : null, R && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(N.default, {}), (0, a.jsx)(d.default, {
+          className: I.search
+        }, null != s ? s : l) : null, R && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(d.default, {
           canShowReminder: !0
-        }), (0, a.jsx)(c.default, {}), b ? (0, a.jsx)(g.default, {}) : (0, a.jsx)(S.default, {})]
+        }), (0, a.jsx)(c.default, {}), L ? (0, a.jsx)(g.default, {}) : (0, a.jsx)(S.default, {})]
       })
     }(),
     transparent: u,
     onDoubleClick: C,
-    "aria-label": _,
-    "aria-labelledby": I,
+    "aria-label": N,
+    "aria-labelledby": T,
     role: v,
     scrollable: A,
     children: t
@@ -92,14 +92,14 @@ function v(e) {
   })
 }
 
-function x(e) {
+function M(e) {
   let {
     isAuthenticated: t = !0,
     ...n
   } = e, {
     analyticsLocations: l
   } = (0, u.default)(o.default.HEADER_BAR), i = s()(n.className, {
-    [T.forumOrHome]: null != n.channelType && _.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === I.StaticChannelRoute.GUILD_HOME
+    [I.forumOrHome]: null != n.channelType && N.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === T.StaticChannelRoute.GUILD_HOME
   });
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
     value: l,
@@ -112,4 +112,4 @@ function x(e) {
     })
   })
 }
-x.Title = E.default.Title, x.Icon = E.default.Icon, x.Divider = E.default.Divider, x.Caret = E.default.Caret, t.default = x
+M.Title = E.default.Title, M.Icon = E.default.Icon, M.Divider = E.default.Divider, M.Caret = E.default.Caret, t.default = M

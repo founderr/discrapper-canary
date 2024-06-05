@@ -1,57 +1,57 @@
 "use strict";
-s.r(t);
-var a, n, l, i, r = s("392711"),
-  o = s.n(r),
-  d = s("213919"),
-  u = s("442837"),
-  c = s("570140");
-let S = !1,
+n.r(t);
+var a, s, o, r, i = n("392711"),
+  l = n.n(i),
+  d = n("213919"),
+  c = n("442837"),
+  u = n("570140");
+let f = !1,
   E = [],
-  T = "",
   _ = "",
-  f = !1,
-  I = {
+  p = "",
+  h = !1,
+  A = {
     viewNonce: "",
     regenerateNonce: ""
   };
-class m extends(i = u.default.Store) {
+class T extends(r = c.default.Store) {
   getVerificationKey() {
-    return T
+    return _
   }
   getBackupCodes() {
     return E
   }
   get togglingSMS() {
-    return S
-  }
-  getNonces() {
-    return I
-  }
-  get emailToken() {
-    return _
-  }
-  get hasSeenBackupPrompt() {
     return f
   }
+  getNonces() {
+    return A
+  }
+  get emailToken() {
+    return p
+  }
+  get hasSeenBackupPrompt() {
+    return h
+  }
 }
-l = "MFAStore", (n = "displayName") in(a = m) ? Object.defineProperty(a, n, {
-  value: l,
+o = "MFAStore", (s = "displayName") in(a = T) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[n] = l, t.default = new m(c.default, {
+}) : a[s] = o, t.default = new T(u.default, {
   MFA_ENABLE_SUCCESS: function(e) {
     let {
       token: t,
-      codes: s
+      codes: n
     } = e;
-    void 0 !== t && d.setToken(t), E = s
+    void 0 !== t && d.setToken(t), E = n
   },
   MFA_ENABLE_EMAIL_TOKEN: function(e) {
     let {
       token: t
     } = e;
-    _ = t
+    p = t
   },
   MFA_DISABLE_SUCCESS: function(e) {
     let {
@@ -60,10 +60,10 @@ l = "MFAStore", (n = "displayName") in(a = m) ? Object.defineProperty(a, n, {
     d.setToken(t)
   },
   MFA_SMS_TOGGLE: function() {
-    S = !0
+    f = !0
   },
   MFA_SMS_TOGGLE_COMPLETE: function() {
-    S = !1
+    f = !1
   },
   MFA_CLEAR_BACKUP_CODES: function() {
     E = []
@@ -71,17 +71,17 @@ l = "MFAStore", (n = "displayName") in(a = m) ? Object.defineProperty(a, n, {
   MFA_VIEW_BACKUP_CODES: function(e) {
     let {
       codes: t,
-      key: s
+      key: n
     } = e;
-    E = o().sortBy(t, "code"), T = s
+    E = l().sortBy(t, "code"), _ = n
   },
   MFA_SEND_VERIFICATION_KEY: function(e) {
     let {
       nonces: t
     } = e;
-    I = t
+    A = t
   },
   MFA_SEEN_BACKUP_CODE_PROMPT: function() {
-    f = !0
+    h = !0
   }
 })

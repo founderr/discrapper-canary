@@ -33,7 +33,7 @@ function v(e) {
     closePopout: n,
     appContext: l,
     onSelect: v
-  } = e, N = (0, i.useStateFromStores)([u.default], () => u.default.getSelectedParticipant(t)), x = (null == N ? void 0 : N.type) === I.ParticipantTypes.STREAM ? N.stream : null, M = (0, h.default)(t);
+  } = e, x = (0, i.useStateFromStores)([u.default], () => u.default.getSelectedParticipant(t)), N = (null == x ? void 0 : x.type) === I.ParticipantTypes.STREAM ? x.stream : null, M = (0, h.default)(t);
   return (0, a.jsxs)(r.Menu, {
     navId: "stage-channel-call-overflow-popout",
     onClose: n,
@@ -61,6 +61,6 @@ function v(e) {
         a = (0, p.default)(t),
         l = (0, m.default)(t);
       return n ? a : l
-    }(t), (0, c.default)(), (0, d.default)(t), M, (0, f.default)(x, l)]
+    }(t), (0, c.default)(), (0, d.default)(t), M, (0, f.default)(N, l)]
   })
 }

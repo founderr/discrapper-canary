@@ -13,7 +13,7 @@ var a = s("735250"),
   E = s("418632"),
   T = s("689938"),
   _ = s("70983");
-class f extends n.Component {
+class I extends n.Component {
   renderNotice() {
     let {
       isClaimed: e,
@@ -59,7 +59,7 @@ class f extends n.Component {
     (0, u.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("31093")]).then(s.bind(s, "324239"));
+      } = await Promise.all([s.e("99387"), s.e("69495")]).then(s.bind(s, "324239"));
       return t => (0, a.jsx)(e, {
         ...t
       })
@@ -110,4 +110,4 @@ t.default = d.default.connectStores([c.default], () => {
     isVerified: e.verified,
     hasEmail: null != e.email
   }
-})(f)
+})(I)

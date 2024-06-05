@@ -18,13 +18,13 @@ var n = s("410575"),
   E = s("541540"),
   T = s("206339"),
   _ = s("726985"),
-  f = s("981631"),
-  I = s("46140"),
+  I = s("981631"),
+  f = s("46140"),
   m = s("313026");
 
 function N() {
   let e = (0, u.useIsEligibleForQuests)({
-      location: I.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+      location: f.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
     {
       enabled: t
@@ -45,21 +45,21 @@ function N() {
           width: "360px"
         },
         analyticsLocation: {
-          page: f.AnalyticsPages.GIFTING_SETTINGS,
-          section: f.AnalyticsSections.GIFT_BANNER
+          page: I.AnalyticsPages.GIFTING_SETTINGS,
+          section: I.AnalyticsSections.GIFT_BANNER
         }
       }), (0, a.jsx)(n.default, {
-        section: f.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
+        section: I.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
         children: (0, a.jsx)(E.default, {})
       })]
     }), e && (0, a.jsx)(S.Subsetting, {
       setting: _.WebSetting.GIFT_INVENTORY_QUESTS,
       children: (0, a.jsx)(n.default, {
-        section: f.AnalyticsSections.QUESTS,
+        section: I.AnalyticsSections.QUESTS,
         children: (0, a.jsx)(c.default, {})
       })
     }), !s && (0, a.jsx)(n.default, {
-      section: f.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+      section: I.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
       children: (0, a.jsx)(T.default, {})
     }), s && (0, a.jsx)(r.BlockedPaymentsContentSettings, {})]
   })

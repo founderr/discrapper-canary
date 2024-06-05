@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("796918"),
   E = n("513532"),
   h = n("741595"),
-  _ = n("974842"),
-  C = n("363915"),
+  C = n("974842"),
+  _ = n("363915"),
   m = n("359380"),
   S = n("308083"),
   p = n("689938");
@@ -41,7 +41,7 @@ function I(e) {
     handleClanUpdate: s.useCallback(t => r.updateClanSetup(e, t), [e])
   }
 }
-let T = {
+let g = {
   [S.ClanSetupSteps.GAMES]: function(e) {
     let {
       guildId: t
@@ -139,7 +139,7 @@ let T = {
       errors: s,
       handleClanUpdate: l
     } = I(t);
-    return (0, a.jsx)(_.default, {
+    return (0, a.jsx)(C.default, {
       handleUpdate: l,
       tag: n.tag,
       error: null == s ? void 0 : s.tag,
@@ -172,12 +172,12 @@ let T = {
   }
 };
 
-function g(e) {
+function T(e) {
   return e.currentStep.toString()
 }
 
 function A(e) {
-  let t = T[e.currentStep];
+  let t = g[e.currentStep];
   return (0, a.jsx)(t, {
     guildId: e.guildId
   })
@@ -193,10 +193,10 @@ function N(e) {
     currentStep: i,
     guildId: t
   }], [i, t]);
-  return (0, a.jsx)(C.default, {
+  return (0, a.jsx)(_.default, {
     currentStep: i,
     items: r,
     renderItem: A,
-    getItemKey: g
+    getItemKey: T
   })
 }

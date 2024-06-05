@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return f
   }
 });
 var a = s("735250");
@@ -18,19 +18,19 @@ var n = s("442837"),
   E = s("332325"),
   T = s("981631"),
   _ = s("689938"),
-  f = s("417433");
+  I = s("417433");
 
-function I() {
+function f() {
   let e = (0, S.useGameSettingsTabs)(),
     t = (0, n.useStateFromStores)([o.default], () => o.default.getSubsection()),
     s = null != t ? t : e[0].id;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.Heading, {
-      className: f.heading,
+      className: I.heading,
       variant: "heading-xl/semibold",
       children: _.default.Messages.GAMES
     }), (0, a.jsx)(l.TabBar, {
-      className: f.tabBar,
+      className: I.tabBar,
       selectedItem: s,
       onItemSelect: e => {
         i.default.setSection(T.UserSettingsSections.GAMES, e)
@@ -39,14 +39,14 @@ function I() {
       type: "top",
       look: "brand",
       children: e.map(e => (0, a.jsxs)(l.TabBar.Item, {
-        className: f.tab,
+        className: I.tab,
         id: e.id,
         "aria-label": e.title,
         children: [(0, a.jsx)(e.icon, {
-          className: f.tabIcon,
+          className: I.tabIcon,
           color: "currentColor"
         }), (0, a.jsx)("div", {
-          className: f.iconTitle,
+          className: I.iconTitle,
           children: e.title
         })]
       }, e.id))
@@ -54,23 +54,23 @@ function I() {
       switch (s) {
         case E.GameSettingsTab.CLIPS:
           return (0, a.jsx)(r.default, {
-            className: f.body,
+            className: I.body,
             showHeader: !1
           });
         case E.GameSettingsTab.OVERLAY:
           return (0, a.jsx)(c.default, {
-            className: f.body,
+            className: I.body,
             showHeader: !1
           });
         case E.GameSettingsTab.ACTIVITY_PRIVACY:
           return (0, a.jsx)(d.default, {
-            className: f.body,
+            className: I.body,
             showHeader: !1
           });
         case E.GameSettingsTab.MY_GAMES:
         default:
           return (0, a.jsx)(u.default, {
-            className: f.body,
+            className: I.body,
             showHeader: !1
           })
       }

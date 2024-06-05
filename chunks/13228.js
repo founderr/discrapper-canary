@@ -38,14 +38,14 @@ function E(e) {
       },
       hasTakenDecoupledClip: h,
       clipsSettings: {
-        clipsEnabled: _
+        clipsEnabled: C
       }
     } = u.default.getState();
     if (null === a) return !0;
     if (!(null != e && (0, o.isUserPremiumTypeForClipsEarlyAccess)(e))) return !1;
-    let C = Date.now() - a > c.CLIPS_EDUCATION_COOLDOWN,
+    let _ = Date.now() - a > c.CLIPS_EDUCATION_COOLDOWN,
       m = l >= c.CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD,
-      S = _ ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
-    return C && m && E < S && !h
+      S = C ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
+    return _ && m && E < S && !h
   })
 }

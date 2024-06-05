@@ -3,8 +3,8 @@ let s;
 n.r(t), n("47120");
 var a = n("735250"),
   i = n("470079"),
-  r = n("120356"),
-  l = n.n(r),
+  l = n("120356"),
+  r = n.n(l),
   o = n("873546"),
   u = n("442837"),
   d = n("481060"),
@@ -18,10 +18,10 @@ var a = n("735250"),
   p = n("624138"),
   T = n("830064"),
   S = n("981631"),
-  I = n("734541");
-let A = n("407025"),
+  A = n("734541");
+let I = n("407025"),
   N = n("2984"),
-  R = (0, p.cssValueToNumber)(I.responsiveWidthMobile),
+  R = (0, p.cssValueToNumber)(A.responsiveWidthMobile),
   C = [S.Routes.LOGIN, S.Routes.LOGIN_HANDOFF, S.Routes.REGISTER, S.Routes.INVITE(""), S.Routes.GIFT_CODE(""), S.Routes.GUILD_TEMPLATE_LOGIN(""), S.Routes.GUILD_TEMPLATE(""), S.Routes.DISABLE_EMAIL_NOTIFICATIONS, S.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, S.Routes.BILLING_PREMIUM_SUBSCRIBE, S.Routes.BILLING_PAYMENT_SOURCES_CREATE, S.Routes.BILLING_PAYMENTS, S.Routes.BILLING_PREMIUM_SWITCH_PLAN, S.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, S.Routes.VERIFY, S.Routes.VERIFY_HUB_EMAIL, S.Routes.REJECT_IP, S.Routes.REJECT_MFA, S.Routes.AUTHORIZE_IP, S.Routes.AUTHORIZE_PAYMENT, S.Routes.RESET, S.Routes.HANDOFF, S.Routes.REPORT, S.Routes.REPORT_SECOND_LOOK];
 
 function O(e) {
@@ -34,25 +34,25 @@ function L(e) {
     children: t
   } = e;
   switch (function() {
-      let [e, t] = i.useState(!1), [n, a] = i.useState(!1), r = h.default.useExperiment({
+      let [e, t] = i.useState(!1), [n, a] = i.useState(!1), l = h.default.useExperiment({
         location: "authWrapper"
       }, {
         autoTrackExposure: !1
-      }), l = (0, u.useStateFromStores)([E.default], () => E.default.hasLoadedExperiments);
+      }), r = (0, u.useStateFromStores)([E.default], () => E.default.hasLoadedExperiments);
       return ((0, c.default)(() => {
-        !l && a(!0)
-      }, 300), void 0 !== s) ? s : !n && l ? (!e && (h.default.trackExposure({
+        !r && a(!0)
+      }, 300), void 0 !== s) ? s : !n && r ? (!e && (h.default.trackExposure({
         location: "authWrapper"
-      }), t(!0)), v(r.isWelcomeRefreshEnabled ? "refresh" : "legacy")) : n ? v("legacy") : "loading"
+      }), t(!0)), v(l.isWelcomeRefreshEnabled ? "refresh" : "legacy")) : n ? v("legacy") : "loading"
     }()) {
     case "refresh":
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("img", {
-          className: I.artwork,
-          src: A,
+          className: A.artwork,
+          src: I,
           alt: ""
         }), (0, a.jsx)("img", {
-          className: I.logoWithText,
+          className: A.logoWithText,
           src: N,
           alt: ""
         }), t]
@@ -60,7 +60,7 @@ function L(e) {
     case "legacy":
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(T.default, {
-          className: I.artwork,
+          className: A.artwork,
           preserveAspectRatio: "xMinYMin slice"
         }), t]
       });
@@ -96,13 +96,13 @@ class x extends i.Component {
       }))
     });
     return (0, a.jsx)("div", {
-      className: I.characterBackground,
+      className: A.characterBackground,
       children: (0, a.jsx)(d.HeadingLevel, {
         forceLevel: 1,
         children: null != e ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(m.default, {
             show: !0,
-            className: l()(I.logo)
+            className: r()(A.logo)
           }), (0, a.jsx)(_.Splash, {
             splash: e,
             children: t

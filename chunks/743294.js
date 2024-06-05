@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT: function() {
     return a
   },
   QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT: function() {
-    return s
+    return n
   }
 });
 let a = "#00000000",
-  s = "#CDD8FF1A"
+  n = "#CDD8FF1A"

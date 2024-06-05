@@ -15,9 +15,9 @@ var s = n("735250"),
   _ = n("639946"),
   p = n("792766"),
   h = n("362762"),
-  T = n("978684"),
-  g = n("264229"),
-  m = n("929809"),
+  g = n("978684"),
+  m = n("264229"),
+  T = n("929809"),
   N = n("703656"),
   A = n("108427"),
   S = n("314897"),
@@ -31,8 +31,8 @@ var s = n("735250"),
   P = n("954824"),
   M = n("588705"),
   j = n("781428"),
-  U = n("423527"),
-  b = n("981631"),
+  b = n("423527"),
+  U = n("981631"),
   B = n("188785"),
   G = n("701476"),
   y = n("436620"),
@@ -66,20 +66,20 @@ class K extends a.PureComponent {
       login: t,
       inviteKey: n
     } = this.props;
-    if (R.default.track(b.AnalyticEvents.INVITE_VIEWED, {
+    if (R.default.track(U.AnalyticEvents.INVITE_VIEWED, {
         invite_code: n
       }, {
         flush: !0
       }), (0, A.trackAppUIViewed)("invite"), !y.IS_APP_COMPATIBLE_BROWSER) {
       let e = this.getInviteKey();
-      P.default.launch("discord://" + b.Routes.INVITE(e), () => void 0)
+      P.default.launch("discord://" + U.Routes.INVITE(e), () => void 0)
     }
     if (!t && e) {
       let e = this.getInviteKey(),
         {
           baseCode: t
-        } = (0, g.parseExtraDataFromInviteKey)(e);
-      (0, N.replaceWith)(b.Routes.INVITE_LOGIN(t))
+        } = (0, m.parseExtraDataFromInviteKey)(e);
+      (0, N.replaceWith)(U.Routes.INVITE_LOGIN(t))
     }
   }
   componentDidUpdate(e) {
@@ -90,12 +90,12 @@ class K extends a.PureComponent {
       transitionTo: a
     } = this.props, l = this.getInviteKey();
     if (l !== this.getInviteKey(e)) Y(l);
-    else if (t.state === b.InviteStates.APP_NOT_OPENED) this.handleContinue();
+    else if (t.state === U.InviteStates.APP_NOT_OPENED) this.handleContinue();
     else if (this.getMode() === H.LOGIN && s !== e.authenticated && s) {
       let e = S.default.getFingerprint();
       if (null != e) {
         let t = (0, u.extractId)(e);
-        this.track(b.AnalyticEvents.INVITE_LOGIN_SUCCESSFUL, !0, {
+        this.track(U.AnalyticEvents.INVITE_LOGIN_SUCCESSFUL, !0, {
           prev_user_id: t
         })
       }
@@ -106,11 +106,11 @@ class K extends a.PureComponent {
         callback: this.handleContinue
       })
     }
-    if (n !== e.nativeAppState && n === b.NativeAppStates.OPEN && this.track(b.AnalyticEvents.INVITE_APP_INVOKED, !1), this.getMode() === H.REGISTER && s && !e.authenticated) {
+    if (n !== e.nativeAppState && n === U.NativeAppStates.OPEN && this.track(U.AnalyticEvents.INVITE_APP_INVOKED, !1), this.getMode() === H.REGISTER && s && !e.authenticated) {
       let {
         channel: e
       } = t;
-      null != e && ((0, m.setNewUser)(G.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(b.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
+      null != e && ((0, T.setNewUser)(G.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(U.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
     }
   }
   getInviteKey() {
@@ -127,7 +127,7 @@ class K extends a.PureComponent {
         invite: s
       } = this.props,
       a = this.getInviteKey(),
-      l = (0, g.parseInviteCodeFromInviteKey)(a),
+      l = (0, m.parseInviteCodeFromInviteKey)(a),
       i = t ? {
         guild_id: null != s.guild ? s.guild.id : null,
         channel_id: null != s.channel ? s.channel.id : null,
@@ -160,7 +160,7 @@ class K extends a.PureComponent {
       }), (0, s.jsx)(O.SubTitle, {
         children: e ? F.default.Messages.AUTH_BANNED_INVITE_BODY : F.default.Messages.AUTH_INVALID_INVITE_BODY
       }), this.renderButton(F.default.Messages.CONTINUE_TO_WEBAPP), (0, s.jsx)(O.Button, {
-        onClick: () => window.open(L.default.getArticleURL(b.HelpdeskArticles.INVALID_INVITES), "_blank"),
+        onClick: () => window.open(L.default.getArticleURL(U.HelpdeskArticles.INVALID_INVITES), "_blank"),
         look: O.Button.Looks.LINK,
         color: O.Button.Colors.LINK,
         className: V.marginTop8,
@@ -174,7 +174,7 @@ class K extends a.PureComponent {
       children: [(0, s.jsx)(M.default, {
         invite: this.props.invite,
         error: null === (e = this.state.error) || void 0 === e ? void 0 : e.message
-      }), (null === (t = this.state.error) || void 0 === t ? void 0 : t.code) === b.AbortCodes.INVALID_CANNOT_FRIEND_SELF ? this.renderButton(F.default.Messages.CONTINUE_TO_WEBAPP) : this.renderButton(F.default.Messages.INSTANT_INVITE_ACCEPT, this.handleAccept)]
+      }), (null === (t = this.state.error) || void 0 === t ? void 0 : t.code) === U.AbortCodes.INVALID_CANNOT_FRIEND_SELF ? this.renderButton(F.default.Messages.CONTINUE_TO_WEBAPP) : this.renderButton(F.default.Messages.INSTANT_INVITE_ACCEPT, this.handleAccept)]
     })
   }
   renderExpiredInvite() {
@@ -245,40 +245,40 @@ class K extends a.PureComponent {
       transitionTo: a,
       location: l
     } = this.props;
-    if (t === b.NativeAppStates.OPEN) return this.renderAppOpened();
+    if (t === U.NativeAppStates.OPEN) return this.renderAppOpened();
     switch (e.state) {
-      case b.InviteStates.APP_OPENED:
+      case U.InviteStates.APP_OPENED:
         return this.renderAppOpened();
-      case b.InviteStates.APP_NOT_OPENED:
+      case U.InviteStates.APP_NOT_OPENED:
         return this.renderContinue();
-      case b.InviteStates.RESOLVING:
+      case U.InviteStates.RESOLVING:
         return B.CONFERENCE_MODE_ENABLED ? this.renderSpinner(F.default.Messages.DEFAULT_INPUT_PLACEHOLDER) : this.renderSpinner(F.default.Messages.APP_OPENING);
-      case b.InviteStates.APP_OPENING:
+      case U.InviteStates.APP_OPENING:
         return this.renderSpinner(F.default.Messages.APP_OPENING);
-      case b.InviteStates.RESOLVED:
+      case U.InviteStates.RESOLVED:
         var i;
-        if (n && (0, x.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.SessionStorage.set(T.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(b.Routes.APP));
+        if (n && (0, x.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.SessionStorage.set(g.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(U.Routes.APP));
         if (n || !y.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
         else if (this.getMode() === H.LOGIN) return (0, s.jsx)(j.default, {
           invite: e,
           transitionTo: a,
           location: l
         });
-        else return (0, s.jsx)(U.default, {
+        else return (0, s.jsx)(b.default, {
           invite: e,
-          onLoginStart: () => this.track(b.AnalyticEvents.INVITE_LOGIN, !0),
+          onLoginStart: () => this.track(U.AnalyticEvents.INVITE_LOGIN, !0),
           location: l,
           transitionTo: a
         });
-      case b.InviteStates.ACCEPTING:
+      case U.InviteStates.ACCEPTING:
         return this.renderSpinner(F.default.Messages.INSTANT_INVITE_ACCEPTING);
-      case b.InviteStates.EXPIRED:
+      case U.InviteStates.EXPIRED:
         return this.renderExpiredInvite();
-      case b.InviteStates.BANNED:
+      case U.InviteStates.BANNED:
         return this.renderBannedInvite();
-      case b.InviteStates.ERROR:
+      case U.InviteStates.ERROR:
         return this.renderErrorInvite();
-      case b.InviteStates.ACCEPTED:
+      case U.InviteStates.ACCEPTED:
       default:
         return null
     }
@@ -294,7 +294,7 @@ class K extends a.PureComponent {
       } = this.props;
       if (null != t.channel || (null == e ? void 0 : e.channel) != null) {
         var s;
-        (null === (s = t.guild) || void 0 === s ? void 0 : s.id) != null ? n(b.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(null != e ? e : t, n)
+        (null === (s = t.guild) || void 0 === s ? void 0 : s.id) != null ? n(U.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(null != e ? e : t, n)
       }
     }), k(this, "handleAccept", () => {
       this.setState({

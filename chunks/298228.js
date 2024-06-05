@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   usePurchasedCategoriesSort: function() {
-    return n
+    return r
   }
 }), s("47120"), s("653041");
 var a = s("470079"),
   l = s("399606"),
-  r = s("1870");
-let n = e => {
-  let t = (0, l.useStateFromStores)([r.default], () => r.default.purchases);
+  n = s("1870");
+let r = e => {
+  let t = (0, l.useStateFromStores)([n.default], () => n.default.purchases);
   return (0, a.useMemo)(() => {
     let s = [],
       a = [];

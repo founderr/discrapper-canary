@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return _
   }
 });
 var a = n("735250"),
@@ -16,13 +16,13 @@ var a = n("735250"),
   f = n("170245"),
   E = n("981631"),
   h = n("689938"),
-  _ = n("621982");
+  C = n("621982");
 
-function C(e) {
+function _(e) {
   let {
     user: t,
     key: n,
-    isFocused: C
+    isFocused: _
   } = e, m = s.useContext(u.AnalyticsContext), {
     analyticsLocations: S
   } = (0, i.default)(), p = e => {
@@ -31,7 +31,7 @@ function C(e) {
     })
   };
   return (0, a.jsx)(c.default, {
-    isFocused: C,
+    isFocused: _,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: S,
@@ -39,7 +39,7 @@ function C(e) {
     }),
     user: t,
     children: e => (0, a.jsxs)("div", {
-      className: _.listItemContents,
+      className: C.listItemContents,
       children: [(0, a.jsx)(f.default, {
         user: t,
         hovered: e,

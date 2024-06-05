@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   getQuestBarVariantConfig: function() {
     return d
   }
 });
-var a = n("497505"),
-  s = n("988303"),
-  l = n("909389"),
-  i = n("941348"),
-  r = n("743294");
+var a = s("497505"),
+  n = s("988303"),
+  l = s("909389"),
+  i = s("941348"),
+  r = s("743294");
 let o = {
     component: l.default,
     getCollapsedHeight: () => 40,
@@ -35,10 +35,10 @@ let o = {
     shouldExpandOnQuestComplete: e => !1,
     getVerticalPadding: () => 12
   },
-  d = (e, t, n) => {
+  d = (e, t, s) => {
     var l;
     let i = (null === (l = e.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null,
-      r = !i && t === s.QuestBarExperimentVariants.V2 || i && n === s.QuestBarExperimentVariants.V2,
+      r = !i && t === n.QuestBarExperimentVariants.V2 || i && s === n.QuestBarExperimentVariants.V2,
       d = r ? u : o;
     return {
       component: d.component,

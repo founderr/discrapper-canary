@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("474936"),
   T = s("689938"),
   _ = s("664338"),
-  f = s("699623"),
-  I = s("820350");
+  I = s("699623"),
+  f = s("820350");
 
 function m(e) {
   let {
@@ -45,9 +45,9 @@ function m(e) {
         src: function(e) {
           switch (e) {
             case S.ThemeTypes.DARK:
-              return f;
+              return I;
             case S.ThemeTypes.LIGHT:
-              return I
+              return f
           }
         }(N)
       }), (0, a.jsxs)("div", {

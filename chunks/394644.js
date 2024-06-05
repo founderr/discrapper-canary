@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return R
   },
   useViewableSettingsFilterFromSearch: function() {
-    return A
+    return O
   }
 }), s("536091"), s("47120"), s("653041");
 var a = s("470079"),
@@ -29,8 +29,8 @@ var a = s("470079"),
   E = s("663389"),
   T = s("202527"),
   _ = s("620163"),
-  f = s("295545"),
-  I = s("168308"),
+  I = s("295545"),
+  f = s("168308"),
   m = s("839469"),
   N = s("726985"),
   g = s("689938");
@@ -68,7 +68,7 @@ function C() {
     t = (0, c.useIsPrepaidPaymentPastDue)(),
     s = (0, n.useStateFromStores)([E.default], () => E.default.getProps().impressionSource),
     a = (0, u.usePendingRequestCount)(),
-    i = (0, I.useShouldShowOverlaySettings)(),
+    i = (0, f.useShouldShowOverlaySettings)(),
     m = (0, o.useEnableClips)(),
     [N] = (0, d.useGetDismissibleContent)(m ? [l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
     g = "useGenerateUserSettingsSections";
@@ -83,7 +83,7 @@ function C() {
     shouldMergeGameSettings: h
   } = T.GameSettingsMergeExperiment.useExperiment({
     location: "settings"
-  }), C = (0, f.useIsEligibleForUserSettingsSearchDesktop)({
+  }), C = (0, I.useIsEligibleForUserSettingsSearchDesktop)({
     location: "settings"
   });
   return (0, _.getConfig)({
@@ -98,7 +98,7 @@ function C() {
   })
 }
 
-function A(e) {
+function O(e) {
   let {
     searchResults: t
   } = (0, m.useSettingSearchResults)(), s = C(), a = s[e], n = Object.fromEntries(Object.entries(s).filter(e => {
@@ -140,7 +140,7 @@ function A(e) {
   return i
 }
 
-function O(e, t, s) {
+function A(e, t, s) {
   let a = [],
     n = function(e, t) {
       let s = new Map;
@@ -176,7 +176,7 @@ function O(e, t, s) {
 function p() {
   let e = C(),
     t = a.useMemo(() => h(), []);
-  return a.useMemo(() => O(t, e), [t, e])
+  return a.useMemo(() => A(t, e), [t, e])
 }
 
 function R(e) {
@@ -193,7 +193,7 @@ function R(e) {
         }).flat(1), N.WebSetting.SEARCH_NO_RESULTS]
       }]
     })(), []);
-  return a.useMemo(() => O(s, t, new Set(e)), [s, t, e])
+  return a.useMemo(() => A(s, t, new Set(e)), [s, t, e])
 }
 
 function x(e) {

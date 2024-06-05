@@ -1,10 +1,10 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   isMfaEmailVerificationEnabled: function() {
-    return n
+    return s
   }
 });
-let a = (0, s("818083").createExperiment)({
+let a = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-07_mfa_email_verification",
   label: "Safety Experience Mfa Email Verification",
@@ -20,7 +20,7 @@ let a = (0, s("818083").createExperiment)({
   }]
 });
 
-function n() {
+function s() {
   let {
     enabled: e
   } = a.getCurrentConfig({

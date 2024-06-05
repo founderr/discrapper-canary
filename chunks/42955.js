@@ -16,8 +16,8 @@ var a, n = s("654861"),
   E = s("131951"),
   T = s("70956"),
   _ = s("358085"),
-  f = s("399002"),
-  I = s("369541"),
+  I = s("399002"),
+  f = s("369541"),
   m = s("981631"),
   N = s("65154");
 
@@ -55,13 +55,13 @@ class C extends i.EventEmitter {
     }, t)
   }
   startClientToServerSpeedTest(e) {
-    this.state === m.RTCConnectionStates.RTC_CONNECTED && (this._speedTestParams = e, this._speedTestDirection = I.SpeedTestDirections.CLIENT_TO_SERVER, this._setSpeedTestState(I.SpeedTestStates.STARTING_RECEIVER), this._speedTest(I.SpeedTestOpcodes.CLIENT_TO_SERVER_START, {}))
+    this.state === m.RTCConnectionStates.RTC_CONNECTED && (this._speedTestParams = e, this._speedTestDirection = f.SpeedTestDirections.CLIENT_TO_SERVER, this._setSpeedTestState(f.SpeedTestStates.STARTING_RECEIVER), this._speedTest(f.SpeedTestOpcodes.CLIENT_TO_SERVER_START, {}))
   }
   startServerToClientSpeedTest(e) {
     let t = this._connection;
-    this.state === m.RTCConnectionStates.RTC_CONNECTED && null != t && (this._speedTestParams = e, this._speedTestDirection = I.SpeedTestDirections.SERVER_TO_CLIENT, this._setSpeedTestState(I.SpeedTestStates.STARTING_RECEIVER), t.startSpeedTestReceiver(() => {
+    this.state === m.RTCConnectionStates.RTC_CONNECTED && null != t && (this._speedTestParams = e, this._speedTestDirection = f.SpeedTestDirections.SERVER_TO_CLIENT, this._setSpeedTestState(f.SpeedTestStates.STARTING_RECEIVER), t.startSpeedTestReceiver(() => {
       var e, t, s;
-      this._setSpeedTestState(I.SpeedTestStates.SENDING), this._speedTest(I.SpeedTestOpcodes.SERVER_TO_CLIENT_START, {
+      this._setSpeedTestState(f.SpeedTestStates.SENDING), this._speedTest(f.SpeedTestOpcodes.SERVER_TO_CLIENT_START, {
         cluster_size: null === (e = this._speedTestParams) || void 0 === e ? void 0 : e.clusterSize,
         cluster_interval_ms: null === (t = this._speedTestParams) || void 0 === t ? void 0 : t.clusterIntervalMs,
         num_clusters: null === (s = this._speedTestParams) || void 0 === s ? void 0 : s.numClusters
@@ -69,10 +69,10 @@ class C extends i.EventEmitter {
     }, -1))
   }
   stopClientToServerSpeedTest() {
-    this._speedTest(I.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), null != this._connection && this._connection.stopSpeedTestSender()
+    this._speedTest(f.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), null != this._connection && this._connection.stopSpeedTestSender()
   }
   stopServerToClientSpeedTest() {
-    this._speedTest(I.SpeedTestOpcodes.SERVER_TO_CLIENT_END, {}), null != this._connection && this._connection.stopSpeedTestReceiver(() => {})
+    this._speedTest(f.SpeedTestOpcodes.SERVER_TO_CLIENT_END, {}), null != this._connection && this._connection.stopSpeedTestReceiver(() => {})
   }
   getNetworkOverhead() {
     return this._networkOverhead
@@ -84,7 +84,7 @@ class C extends i.EventEmitter {
     this._speedTestState = e, this.emit("speed-test-state", e)
   }
   _completeSpeedTests(e, t) {
-    this._speedTestState = I.SpeedTestStates.COMPLETED, this.emit("speed-test-completed", e, t)
+    this._speedTestState = f.SpeedTestStates.COMPLETED, this.emit("speed-test-completed", e, t)
   }
   _speedTest(e, t) {
     let s = this._socket;
@@ -156,20 +156,20 @@ class C extends i.EventEmitter {
   _handleSpeedTest(e, t) {
     let s = this._connection;
     if (null != s && null != e) {
-      if (this._speedTestState === I.SpeedTestStates.STARTING_RECEIVER && this._speedTestDirection === I.SpeedTestDirections.CLIENT_TO_SERVER && e === I.SpeedTestOpcodes.CLIENT_TO_SERVER_START) {
+      if (this._speedTestState === f.SpeedTestStates.STARTING_RECEIVER && this._speedTestDirection === f.SpeedTestDirections.CLIENT_TO_SERVER && e === f.SpeedTestOpcodes.CLIENT_TO_SERVER_START) {
         var a;
-        this._setSpeedTestState(I.SpeedTestStates.SENDING), s.startSpeedTestSender((e, t) => {
-          this._speedTest(I.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), this._setSpeedTestState(I.SpeedTestStates.AWAITING_RESULTS)
+        this._setSpeedTestState(f.SpeedTestStates.SENDING), s.startSpeedTestSender((e, t) => {
+          this._speedTest(f.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), this._setSpeedTestState(f.SpeedTestStates.AWAITING_RESULTS)
         }, this._speedTestParams.clusterSize, this._speedTestParams.clusterIntervalMs, this._speedTestParams.numClusters)
       }
-      if (this._speedTestState === I.SpeedTestStates.AWAITING_RESULTS && this._speedTestDirection === I.SpeedTestDirections.CLIENT_TO_SERVER && e === I.SpeedTestOpcodes.CLIENT_TO_SERVER_END) {
+      if (this._speedTestState === f.SpeedTestStates.AWAITING_RESULTS && this._speedTestDirection === f.SpeedTestDirections.CLIENT_TO_SERVER && e === f.SpeedTestOpcodes.CLIENT_TO_SERVER_END) {
         let e = t.results,
-          s = (0, f.speedTestSummary)(e, this._speedTestParams, null !== (a = this._networkOverhead) && void 0 !== a ? a : 0);
+          s = (0, I.speedTestSummary)(e, this._speedTestParams, null !== (a = this._networkOverhead) && void 0 !== a ? a : 0);
         this._speedTestDirection = null, this._speedTestParams = null, this._completeSpeedTests(e, s)
       }
-      this._speedTestState === I.SpeedTestStates.SENDING && this._speedTestDirection === I.SpeedTestDirections.SERVER_TO_CLIENT && e === I.SpeedTestOpcodes.SERVER_TO_CLIENT_END && (this._setSpeedTestState(I.SpeedTestStates.AWAITING_RESULTS), s.stopSpeedTestReceiver((e, t) => {
+      this._speedTestState === f.SpeedTestStates.SENDING && this._speedTestDirection === f.SpeedTestDirections.SERVER_TO_CLIENT && e === f.SpeedTestOpcodes.SERVER_TO_CLIENT_END && (this._setSpeedTestState(f.SpeedTestStates.AWAITING_RESULTS), s.stopSpeedTestReceiver((e, t) => {
         var s;
-        let a = (0, f.speedTestSummary)(t, this._speedTestParams, null !== (s = this._networkOverhead) && void 0 !== s ? s : 0);
+        let a = (0, I.speedTestSummary)(t, this._speedTestParams, null !== (s = this._networkOverhead) && void 0 !== s ? s : 0);
         this._speedTestDirection = null, this._speedTestParams = null, this._completeSpeedTests(t, a)
       }))
     }

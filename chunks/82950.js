@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("428695"),
   E = n("981631"),
   h = n("689938"),
-  _ = n("361114");
-let C = i().debounce(o.default.trackWithMetadata, 500),
+  C = n("361114");
+let _ = i().debounce(o.default.trackWithMetadata, 500),
   m = e => {
     let {
       guild: t,
@@ -26,62 +26,62 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       trackingSource: S,
       undismissable: p,
       onDismissed: I,
-      onClick: T,
-      cta: g,
+      onClick: g,
+      cta: T,
       ctaColor: A
     } = e;
     s.useEffect(() => {
-      C(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+      _(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
         notice_type: c,
         guild_id: t.id
       })
     }, [t.id, c]);
     let N = null;
-    "function" == typeof g ? N = g() : null != g && (N = (0, a.jsx)(r.Button, {
-      className: _.btn,
+    "function" == typeof T ? N = T() : null != T && (N = (0, a.jsx)(r.Button, {
+      className: C.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
         null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
           source: S,
           guild_id: t.id,
           notice_type: c
-        }), null == T || T()
+        }), null == g || g()
       },
       fullWidth: !0,
       color: A,
-      children: g
+      children: T
     }));
     let v = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
-      className: _.channelNotice,
+      className: C.channelNotice,
       children: [!0 === p ? null : (0, a.jsx)(r.Clickable, {
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
           }), null == I || I()
         },
-        className: _.close,
+        className: C.close,
         "aria-label": h.default.Messages.DISMISS,
         children: (0, a.jsx)(u.default, {
-          className: _.closeIcon
+          className: C.closeIcon
         })
       }), (0, a.jsx)("div", {
-        className: _.imageContainer,
+        className: C.imageContainer,
         style: {
           marginTop: "".concat(m, "px"),
           marginLeft: v,
           marginRight: v
         },
         children: (0, a.jsx)("img", {
-          className: _.image,
+          className: C.image,
           src: i,
           alt: ""
         })
       }), (0, a.jsxs)("div", {
-        className: _.message,
+        className: C.message,
         children: [null != n ? (0, a.jsx)(r.Heading, {
           variant: "heading-md/semibold",
-          className: _.title,
+          className: C.title,
           children: n
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",

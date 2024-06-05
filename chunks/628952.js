@@ -1,137 +1,137 @@
 "use strict";
-s.r(t), s("47120");
-var l = s("735250");
-s("470079");
-var n = s("120356"),
-  a = s.n(n),
-  i = s("979554"),
-  r = s("442837"),
-  u = s("481060"),
-  d = s("1585"),
-  o = s("125988"),
-  c = s("987209"),
-  f = s("589266"),
-  S = s("731896"),
-  E = s("484459"),
-  I = s("594174"),
-  C = s("937615"),
-  _ = s("583434"),
-  T = s("981631"),
-  p = s("689938"),
-  m = s("530244"),
-  N = s("223223");
-let A = e => {
+n.r(t), n("47120");
+var a = n("735250");
+n("470079");
+var l = n("120356"),
+  s = n.n(l),
+  r = n("979554"),
+  i = n("442837"),
+  o = n("481060"),
+  d = n("1585"),
+  u = n("125988"),
+  c = n("987209"),
+  f = n("589266"),
+  E = n("731896"),
+  S = n("484459"),
+  C = n("594174"),
+  p = n("937615"),
+  T = n("583434"),
+  m = n("981631"),
+  I = n("689938"),
+  _ = n("530244"),
+  x = n("223223");
+let N = e => {
     let {
       avatarDecoration: t
-    } = e, s = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser()), {
-      avatarDecorationSrc: n
-    } = (0, o.default)({
-      user: s,
+    } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
+      avatarDecorationSrc: l
+    } = (0, u.default)({
+      user: n,
       avatarDecorationOverride: t,
-      size: (0, d.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_40)
+      size: (0, d.getDecorationSizeForAvatarSize)(o.AvatarSizes.SIZE_40)
     });
-    return (0, l.jsx)("img", {
-      src: n,
+    return (0, a.jsx)("img", {
+      src: l,
       alt: t.label,
-      className: m.avatarDecoration
+      className: _.avatarDecoration
     })
   },
-  h = e => {
+  P = e => {
     var t;
     let {
-      profileEffect: s
-    } = e, n = (0, S.useProfileEffectPreset)(s.id), {
-      accessibilityLabel: a,
-      thumbnailPreviewSrc: i,
-      title: r
-    } = null !== (t = null == n ? void 0 : n.config) && void 0 !== t ? t : {};
-    return (0, l.jsxs)("div", {
-      className: m.profileEffectContainer,
-      children: [(0, l.jsx)("img", {
-        src: N,
-        alt: a,
-        className: m.profileEffectBackground
-      }), (0, l.jsx)("img", {
-        className: m.profileEffect,
-        src: i,
-        alt: r
+      profileEffect: n
+    } = e, l = (0, E.useProfileEffectPreset)(n.id), {
+      accessibilityLabel: s,
+      thumbnailPreviewSrc: r,
+      title: i
+    } = null !== (t = null == l ? void 0 : l.config) && void 0 !== t ? t : {};
+    return (0, a.jsxs)("div", {
+      className: _.profileEffectContainer,
+      children: [(0, a.jsx)("img", {
+        src: x,
+        alt: s,
+        className: _.profileEffectBackground
+      }), (0, a.jsx)("img", {
+        className: _.profileEffect,
+        src: r,
+        alt: i
       })]
     })
   };
 t.default = e => {
   let {
     selectedSkuId: t,
-    selectedSkuPricePreview: s,
-    className: n
+    selectedSkuPricePreview: n,
+    className: l
   } = e, {
     product: d
-  } = (0, _.useFetchCollectiblesProduct)(t), {
-    giftRecipient: o,
-    giftRecipientError: S
-  } = (0, c.useGiftContext)(), N = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser());
-  if (null == d || null == s) return null;
-  let [g] = d.items, P = null != o && o.id !== (null == N ? void 0 : N.id);
-  return (0, l.jsxs)("div", {
-    className: n,
-    children: [(0, l.jsxs)("div", {
-      className: m.previewTitleContainer,
-      children: [(0, l.jsx)(u.FormTitle, {
-        className: m.previewTitle,
-        children: p.default.Messages.COLLECTIBLES_GIFT_LABEL
-      }), P && (0, l.jsx)(u.Popout, {
-        preload: () => (0, E.default)(o.id, o.getAvatarURL(null, 80)),
-        renderPopout: e => (0, l.jsx)(f.default, {
+  } = (0, T.useFetchCollectiblesProduct)(t), {
+    giftRecipient: u,
+    giftRecipientError: E
+  } = (0, c.useGiftContext)(), x = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser());
+  if (null == d || null == n) return null;
+  let [A] = d.items, h = null != u && u.id !== (null == x ? void 0 : x.id);
+  return (0, a.jsxs)("div", {
+    className: l,
+    children: [(0, a.jsxs)("div", {
+      className: _.previewTitleContainer,
+      children: [(0, a.jsx)(o.FormTitle, {
+        className: _.previewTitle,
+        children: I.default.Messages.COLLECTIBLES_GIFT_LABEL
+      }), h && (0, a.jsx)(o.Popout, {
+        preload: () => (0, S.default)(u.id, u.getAvatarURL(null, 80)),
+        renderPopout: e => (0, a.jsx)(f.default, {
           ...e,
           location: "CollectiblesGiftPreview",
-          user: o,
-          pendingAvatar: o.getAvatarURL(null, (0, u.getAvatarSize)(u.AvatarSizes.SIZE_80)),
-          pendingAvatarDecoration: g.type === i.CollectiblesItemType.AVATAR_DECORATION ? g : null,
-          pendingProfileEffectId: g.type === i.CollectiblesItemType.PROFILE_EFFECT ? g.id : null,
+          user: u,
+          pendingAvatar: u.getAvatarURL(null, (0, o.getAvatarSize)(o.AvatarSizes.SIZE_80)),
+          pendingAvatarDecoration: A.type === r.CollectiblesItemType.AVATAR_DECORATION ? A : null,
+          pendingProfileEffectId: A.type === r.CollectiblesItemType.PROFILE_EFFECT ? A.id : null,
           canUsePremiumCustomization: !0,
-          onAvatarChange: T.NOOP,
-          onBannerChange: T.NOOP,
+          onAvatarChange: m.NOOP,
+          onBannerChange: m.NOOP,
           hideRecentGames: !0,
           disabledInputs: !0
         }),
         align: "center",
         position: "right",
-        children: e => (0, l.jsx)(u.Clickable, {
+        children: e => (0, a.jsx)(o.Clickable, {
           ...e,
-          className: m.previewLink,
-          children: (0, l.jsx)(u.Text, {
+          className: _.previewLink,
+          children: (0, a.jsx)(o.Text, {
             variant: "text-xs/medium",
             color: "text-link",
-            children: p.default.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
+            children: I.default.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
           })
         })
-      }, o.id)]
-    }), (0, l.jsxs)("div", {
-      className: a()(m.previewContainer, {
-        [m.previewContainerError]: null != S
+      }, u.id)]
+    }), (0, a.jsxs)("div", {
+      className: s()(_.previewContainer, {
+        [_.previewContainerError]: null != E
       }),
-      children: [g.type === i.CollectiblesItemType.AVATAR_DECORATION && (0, l.jsx)(A, {
-        avatarDecoration: g
-      }), g.type === i.CollectiblesItemType.PROFILE_EFFECT && (0, l.jsx)(h, {
-        profileEffect: g
-      }), (0, l.jsxs)("div", {
-        className: m.previewTextContainer,
-        children: [(0, l.jsx)(u.Text, {
+      children: [A.type === r.CollectiblesItemType.AVATAR_DECORATION && (0, a.jsx)(N, {
+        avatarDecoration: A
+      }), A.type === r.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(P, {
+        profileEffect: A
+      }), (0, a.jsxs)("div", {
+        className: _.previewTextContainer,
+        children: [(0, a.jsx)(o.Text, {
           variant: "text-md/semibold",
           children: d.name
-        }), (0, l.jsx)(u.Heading, {
+        }), (0, a.jsx)(o.Heading, {
           variant: "heading-sm/medium",
           color: "header-secondary",
-          children: g.type === i.CollectiblesItemType.AVATAR_DECORATION ? p.default.Messages.USER_SETTINGS_AVATAR_DECORATION : g.type === i.CollectiblesItemType.PROFILE_EFFECT ? p.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
+          children: A.type === r.CollectiblesItemType.AVATAR_DECORATION ? I.default.Messages.USER_SETTINGS_AVATAR_DECORATION : A.type === r.CollectiblesItemType.PROFILE_EFFECT ? I.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
         })]
-      }), (0, l.jsx)(u.Text, {
+      }), (0, a.jsx)(o.Text, {
         variant: "text-md/semibold",
-        children: (0, C.formatPrice)(s.amount, s.currency)
+        children: (0, p.formatPrice)(n.amount, n.currency)
       })]
-    }), null != S && (0, l.jsx)(u.Text, {
-      className: m.recipientError,
+    }), null != E && (0, a.jsx)(o.Text, {
+      className: _.recipientError,
       variant: "text-sm/normal",
       color: "status-danger-background",
-      children: S
+      children: E
     })]
   })
 }

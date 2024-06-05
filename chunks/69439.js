@@ -18,7 +18,7 @@ function f(e) {
   var t, n, f, E;
   let {
     quest: h
-  } = e, _ = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, C = (null === (n = h.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (f = h.userStatus) || void 0 === f ? void 0 : f.claimedAt) == null, m = (null === (E = h.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null, S = (0, u.useHandleClaimQuestsReward)({
+  } = e, C = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, _ = (null === (n = h.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (f = h.userStatus) || void 0 === f ? void 0 : f.claimedAt) == null, m = (null === (E = h.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null, S = (0, u.useHandleClaimQuestsReward)({
     quest: h,
     location: o.QuestContent.QUEST_BAR
   }), p = s.useCallback(() => {
@@ -27,7 +27,7 @@ function f(e) {
       questContentCTA: i.QuestContentCTA.ACCEPT_QUEST
     })
   }, [h]);
-  return C ? (0, a.jsx)("div", {
+  return _ ? (0, a.jsx)("div", {
     className: c.container,
     children: (0, a.jsx)(l.Button, {
       color: l.ButtonColors.BRAND,
@@ -35,7 +35,7 @@ function f(e) {
       className: c.button,
       children: d.default.Messages.QUESTS_CLAIM_REWARD
     })
-  }) : _ && !m ? (0, a.jsx)("div", {
+  }) : C && !m ? (0, a.jsx)("div", {
     className: c.container,
     children: (0, a.jsx)(l.Button, {
       color: l.ButtonColors.PRIMARY,

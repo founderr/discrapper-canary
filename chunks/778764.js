@@ -17,24 +17,24 @@ var a = s("735250"),
   E = s("287880"),
   T = s("358085"),
   _ = s("960048"),
-  f = s("998502"),
-  I = s("365007"),
+  I = s("998502"),
+  f = s("365007"),
   m = s("15980"),
   N = s("755733"),
   g = s("981631"),
   h = s("689938"),
   C = s("865156");
 
-function A(e) {
+function O(e) {
   let {
     transitionState: t,
     onClose: i,
     ticket: o,
     challenge: c
-  } = e, S = (0, u.useUID)(), [E, m] = n.useState(""), [A, O] = n.useState(!0), [p, R] = n.useState(N.WebAuthnScreens.INIT), [x, M] = n.useState(""), [D, L] = n.useState(null), v = async () => {
+  } = e, S = (0, u.useUID)(), [E, m] = n.useState(""), [O, A] = n.useState(!0), [p, R] = n.useState(N.WebAuthnScreens.INIT), [x, M] = n.useState(""), [D, L] = n.useState(null), P = async () => {
     let e;
     R(N.WebAuthnScreens.REGISTER);
-    let t = T.isPlatformEmbedded && f.default.supportsFeature(g.NativeFeatures.WEBAUTHN) ? f.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
+    let t = T.isPlatformEmbedded && I.default.supportsFeature(g.NativeFeatures.WEBAUTHN) ? I.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
     try {
       e = await t
     } catch (e) {
@@ -84,7 +84,7 @@ function A(e) {
           })]
         }), (0, a.jsx)(r.ModalFooter, {
           children: (0, a.jsx)(r.Button, {
-            onClick: v,
+            onClick: P,
             children: h.default.Messages.TWO_FA_WEBAUTHN_REGISTER_CONFIRM
           })
         })]
@@ -113,7 +113,7 @@ function A(e) {
         id: N.WebAuthnScreens.NAME,
         children: (0, a.jsxs)("form", {
           onSubmit: e => {
-            e.preventDefault(), (0, I.finishRegisterWebAuthnCredential)(E, o, x).then(async () => {
+            e.preventDefault(), (0, f.finishRegisterWebAuthnCredential)(E, o, x).then(async () => {
               await (0, d.showMFASuccessModal)(!1)
             }).then(() => i()).catch(() => {
               L(h.default.Messages.ERROR_OCCURRED_TRY_AGAIN), R(N.WebAuthnScreens.INIT)
@@ -135,7 +135,7 @@ function A(e) {
                 className: C.input,
                 value: E,
                 onChange: e => {
-                  m(e), O(0 === e.length)
+                  m(e), A(0 === e.length)
                 },
                 autoFocus: !0,
                 minLength: 1
@@ -145,7 +145,7 @@ function A(e) {
             className: C.footer,
             children: [(0, a.jsx)(r.Button, {
               type: "submit",
-              disabled: A,
+              disabled: O,
               children: h.default.Messages.TWO_FA_WEBAUTHN_REGISTER_FINISH
             }), (0, a.jsx)(r.Button, {
               look: r.Button.Looks.LINK,
@@ -162,7 +162,7 @@ function A(e) {
   })
 }
 
-function O(e) {
+function A(e) {
   let {
     onSelect: t,
     credential: n
@@ -191,7 +191,7 @@ function O(e) {
       label: h.default.Messages.TWO_FA_WEBAUTHN_DELETE_CREDENTIAL,
       color: "danger",
       action: () => {
-        (0, I.deleteWebAuthnCredential)(n)
+        (0, f.deleteWebAuthnCredential)(n)
       }
     })]
   })
@@ -206,7 +206,7 @@ function p() {
     credentials: m.default.getCredentials()
   }));
   n.useEffect(() => {
-    !t && (0, I.fetchWebAuthnCredentials)()
+    !t && (0, f.fetchWebAuthnCredentials)()
   }, [t]);
   let [s, l] = n.useState(!1);
   return (0, a.jsxs)(r.FormSection, {
@@ -223,7 +223,7 @@ function p() {
         name: e.name,
         className: C.credentialItem,
         onContextMenu: t => {
-          (0, o.openContextMenu)(t, t => (0, a.jsx)(O, {
+          (0, o.openContextMenu)(t, t => (0, a.jsx)(A, {
             ...t,
             credential: e
           }))
@@ -233,7 +233,7 @@ function p() {
           color: r.Button.Colors.TRANSPARENT,
           size: r.Button.Sizes.ICON,
           onClick: t => {
-            (0, o.openContextMenu)(t, t => (0, a.jsx)(O, {
+            (0, o.openContextMenu)(t, t => (0, a.jsx)(A, {
               ...t,
               credential: e
             }))
@@ -250,12 +250,12 @@ function p() {
     }), (0, a.jsx)("div", {
       children: (0, a.jsx)(r.Button, {
         onClick: () => {
-          l(!0), (0, I.startRegisterWebAuthnCredential)().then(e => {
+          l(!0), (0, f.startRegisterWebAuthnCredential)().then(e => {
             let {
               ticket: t,
               challenge: s
             } = e;
-            (0, r.openModal)(e => (0, a.jsx)(A, {
+            (0, r.openModal)(e => (0, a.jsx)(O, {
               ...e,
               ticket: t,
               challenge: s

@@ -13,14 +13,14 @@ var l = n("481060"),
   f = n("390885"),
   E = n("524329"),
   h = n("995532"),
-  _ = n("486472"),
-  C = n("430824"),
+  C = n("486472"),
+  _ = n("430824"),
   m = n("914010"),
   S = n("594174"),
   p = n("823379"),
   I = n("358085"),
-  T = n("929809"),
-  g = n("179645"),
+  g = n("929809"),
+  T = n("179645"),
   A = n("701476"),
   N = n("785997"),
   v = n("981631"),
@@ -30,7 +30,7 @@ var l = n("481060"),
 function L() {
   null != a && (0, l.closeModal)(a)
 }
-class M extends r.default {
+class P extends r.default {
   _initialize() {
     i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", L)
   }
@@ -39,7 +39,7 @@ class M extends r.default {
   }
   handleConnectionOpen() {
     var e;
-    let t, i = g.default.getType();
+    let t, i = T.default.getType();
     if (null == i) return;
     switch (i) {
       case A.NewUserTypes.INVITE_UNCLAIMED:
@@ -54,11 +54,11 @@ class M extends r.default {
     let r = !1,
       L = m.default.getGuildId();
     if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
-      let e = C.default.getGuild(L);
+      let e = _.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let M = () => 0 === _.default.totalGuilds && !I.isPlatformEmbedded,
-      P = o.userNeedsAgeGate();
+    let P = () => 0 === C.default.totalGuilds && !I.isPlatformEmbedded,
+      M = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
       open: async function e(e) {
@@ -105,11 +105,11 @@ class M extends r.default {
           modalKey: a
         })
       },
-      predicate: () => M() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => P && !M() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => M && !P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
       open: e => u.openClaimAccountModal(I.isPlatformEmbedded, e),
@@ -139,7 +139,7 @@ class M extends r.default {
       }),
       predicate: () => null != L && null != h.default.get(L) && h.default.get(L) !== h.NO_WELCOME_SCREEN
     }], t = () => {
-      T.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
+      g.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {
@@ -148,4 +148,4 @@ class M extends r.default {
     }), t()
   }
 }
-t.default = new M
+t.default = new P

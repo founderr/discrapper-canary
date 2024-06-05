@@ -16,31 +16,31 @@ var a = n("735250"),
   f = n("515753"),
   E = n("410030"),
   h = n("607070"),
-  _ = n("100527"),
-  C = n("906732"),
+  C = n("100527"),
+  _ = n("906732"),
   m = n("821982"),
   S = n("377171"),
   p = n("633302"),
   I = n("126900"),
-  T = n("26290"),
-  g = n("153066"),
+  g = n("26290"),
+  T = n("153066"),
   A = n("335131"),
   N = n("141594"),
   v = n("302800"),
   R = n("981631"),
   O = n("689938"),
   L = n("858666");
-let M = e => {
+let P = e => {
     let {
       color: t
     } = e;
-    return (0, a.jsx)(T.TextBadge, {
+    return (0, a.jsx)(g.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
       text: O.default.Messages.NEW
     })
   },
-  P = e => {
+  M = e => {
     let {
       selected: t,
       locationState: n,
@@ -48,9 +48,9 @@ let M = e => {
       onMouseLeave: i,
       children: o,
       ...u
-    } = e, d = (0, r.useListItem)("shop"), c = _.default.HOME_PAGE_SHOP_TAB, {
+    } = e, d = (0, r.useListItem)("shop"), c = C.default.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: E
-    } = (0, C.default)(c), h = s.useCallback(() => (0, A.openCollectiblesShop)({
+    } = (0, _.default)(c), h = s.useCallback(() => (0, A.openCollectiblesShop)({
       openInLayer: !1,
       analyticsSource: c,
       analyticsLocations: E
@@ -69,7 +69,7 @@ let M = e => {
       children: o
     })
   },
-  x = s.memo(function(e) {
+  y = s.memo(function(e) {
     let {
       displayOptions: t,
       assetId: n
@@ -98,18 +98,18 @@ let M = e => {
       })]
     })
   }),
-  y = e => {
+  D = e => {
     let {
       selected: t,
       locationState: n,
       displayOptions: l
-    } = e, [r, o] = s.useState(0), [c, f] = s.useState(!1), h = (0, E.default)(), _ = l.entrypointDecorationAssets, C = s.useCallback(e => {
+    } = e, [r, o] = s.useState(0), [c, f] = s.useState(!1), h = (0, E.default)(), C = l.entrypointDecorationAssets, _ = s.useCallback(e => {
       o(e => (e + 1) % l.assetIds.length), f(!0), null == e || e()
     }, [l.assetIds]), m = s.useCallback(e => {
       f(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
-      text: (0, a.jsx)(x, {
+      text: (0, a.jsx)(y, {
         displayOptions: l,
         assetId: l.assetIds[r]
       }),
@@ -119,27 +119,27 @@ let M = e => {
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsxs)(P, {
-        className: null != l.entryPointClassName ? (0, g.getClass)(L, l.entryPointClassName) : void 0,
+      children: e => (0, a.jsxs)(M, {
+        className: null != l.entryPointClassName ? (0, T.getClass)(L, l.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
         ...e,
-        onMouseEnter: () => C(e.onMouseEnter),
+        onMouseEnter: () => _(e.onMouseEnter),
         onMouseLeave: () => m(e.onMouseLeave),
-        children: [null != _ && (0, a.jsx)("img", {
-          src: (0, u.isThemeDark)(h) ? _.srcDark : _.srcLight,
+        children: [null != C && (0, a.jsx)("img", {
+          src: (0, u.isThemeDark)(h) ? C.srcDark : C.srcLight,
           className: i()(L.marketingButtonImage, {
             [L.marketingButtonImageHovered]: c
           }),
           alt: "",
           "aria-hidden": !0
-        }), (0, a.jsx)(M, {
+        }), (0, a.jsx)(P, {
           color: l.badgeColor
         })]
       })
     })
   },
-  D = e => {
+  x = e => {
     let {
       selected: t,
       locationState: n,
@@ -162,11 +162,11 @@ let M = e => {
       delay: 100,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsx)(P, {
+      children: e => (0, a.jsx)(M, {
         selected: t,
         locationState: n,
         ...e,
-        children: (0, a.jsx)(M, {
+        children: (0, a.jsx)(P, {
           color: l.badgeColor
         })
       })
@@ -181,19 +181,19 @@ let M = e => {
     } = (0, N.default)();
     if (null != s) switch (s.type) {
       case v.CollectiblesMarketingVariant.TOOLTIP:
-        return (0, a.jsx)(D, {
+        return (0, a.jsx)(x, {
           selected: t,
           locationState: n,
           displayOptions: s
         });
       case v.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(y, {
+        return (0, a.jsx)(D, {
           selected: t,
           locationState: n,
           displayOptions: s
         })
     }
-    return (0, a.jsx)(P, {
+    return (0, a.jsx)(M, {
       selected: t,
       locationState: n
     })

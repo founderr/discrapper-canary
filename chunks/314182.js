@@ -1,21 +1,21 @@
 "use strict";
-s.r(t);
-var a = s("735250"),
-  r = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
-  n = s("418195");
-let c = r.forwardRef(function(e, t) {
+a.r(t);
+var n = a("735250"),
+  r = a("470079"),
+  s = a("120356"),
+  i = a.n(s),
+  l = a("418195");
+let o = r.forwardRef(function(e, t) {
   let {
-    isActive: s,
+    isActive: a,
     children: r
   } = e;
-  return (0, a.jsx)("div", {
-    className: i()(n.wrapper, {
-      [n.wrapperActive]: s
+  return (0, n.jsx)("div", {
+    className: i()(l.wrapper, {
+      [l.wrapperActive]: a
     }),
     ref: t,
     children: r
   })
 });
-t.default = c
+t.default = o

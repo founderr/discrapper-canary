@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("547280"),
   E = n("678513"),
   h = n("981631"),
-  _ = n("689938"),
-  C = n("934206");
+  C = n("689938"),
+  _ = n("934206");
 let m = (0, c.getThemeClass)(h.ThemeTypes.DARK);
 t.default = function(e) {
   let {
@@ -37,14 +37,14 @@ t.default = function(e) {
   return (0, a.jsx)(o.ThemeContextProvider, {
     theme: h.ThemeTypes.DARK,
     children: (0, a.jsx)("div", {
-      className: i()(C.container, m),
+      className: i()(_.container, m),
       children: (0, a.jsxs)("div", {
-        className: C.card,
+        className: _.card,
         style: {
           background: p
         },
         children: [(0, a.jsxs)("div", {
-          className: C.eyebrow,
+          className: _.eyebrow,
           children: [(0, a.jsx)(r.EnvelopeIcon, {
             height: 12,
             width: 12,
@@ -52,22 +52,22 @@ t.default = function(e) {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "none",
-            children: _.default.Messages.SIGNUP_NOTICE_EYEBROW
+            children: C.default.Messages.SIGNUP_NOTICE_EYEBROW
           })]
         }), (0, a.jsx)(o.Heading, {
           variant: "heading-sm/medium",
           children: l.noticeHeader
         }), (0, a.jsx)(o.Button, {
-          className: C.button,
+          className: _.button,
           color: "none",
           onClick: c,
           children: (0, a.jsx)(o.Text, {
             variant: "text-sm/medium",
             color: "none",
-            children: _.default.Messages.SIGNUP_NOTICE_CTA
+            children: C.default.Messages.SIGNUP_NOTICE_CTA
           })
         }), (0, a.jsx)("div", {
-          className: C.dismiss,
+          className: _.dismiss,
           children: (0, a.jsx)(o.Clickable, {
             onClick: S,
             children: (0, a.jsx)(d.default, {

@@ -12,14 +12,14 @@ var a = n("735250"),
   f = n("703656"),
   E = n("592125"),
   h = n("131951"),
-  _ = n("974029"),
-  C = n("621113"),
+  C = n("974029"),
+  _ = n("621113"),
   m = n("51144"),
   S = n("321488"),
   p = n("417183"),
   I = n("825682"),
-  T = n("170245"),
-  g = n("981631"),
+  g = n("170245"),
+  T = n("981631"),
   A = n("65154"),
   N = n("689938"),
   v = n("965831");
@@ -111,7 +111,7 @@ class L extends s.PureComponent {
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
         className: v.listItemContents,
-        children: [(0, a.jsx)(T.default, {
+        children: [(0, a.jsx)(g.default, {
           user: e,
           status: l,
           isMobile: r,
@@ -129,12 +129,12 @@ class L extends s.PureComponent {
         }), (0, a.jsxs)("div", {
           className: v.actions,
           children: [(0, a.jsx)(S.default, {
-            icon: _.default,
+            icon: C.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
           }), (0, a.jsx)(S.default, {
-            icon: C.default,
+            icon: _.default,
             tooltip: N.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
             shouldHighlight: t
@@ -151,8 +151,8 @@ class L extends s.PureComponent {
         user: t
       } = this.props;
       e.stopPropagation();
-      let n = i().find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
-      null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
+      let n = i().find(E.default.getMutablePrivateChannels(), e => e.type === T.ChannelTypes.DM && e.getRecipientId() === t.id);
+      null != n ? (0, f.transitionTo)(T.Routes.CHANNEL(T.ME, n.id)) : u.default.openPrivateChannel(t.id)
     }), R(this, "handleOpenActionsMenu", e => {
       let {
         user: t

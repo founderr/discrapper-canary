@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   }
 }), n("47120");
 var a = n("735250"),
@@ -21,12 +21,12 @@ var a = n("735250"),
   S = n("124368"),
   g = n("314569");
 
-function N(e) {
+function _(e) {
   let {
     channel: t,
     channelRecord: n,
     deleteChannel: s
-  } = e, N = (0, r.useStateFromStoresArray)([f.default, E.default], () => i()(f.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
+  } = e, _ = (0, r.useStateFromStoresArray)([f.default, E.default], () => i()(f.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
     let {
       id: n
     } = e;
@@ -36,21 +36,21 @@ function N(e) {
       id: t
     } = e;
     return E.default.getChannel(t)
-  }).filter(m.isNotNullish).sort((e, t) => p.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), _ = l.useCallback((e, t) => {
+  }).filter(m.isNotNullish).sort((e, t) => p.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), N = l.useCallback((e, t) => {
     (0, h.openThreadSidebarForViewing)(e, t, S.OpenThreadAnalyticsLocations.INBOX)
   }, []);
   return l.useEffect(() => {
-    null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === N.length && o.default.wait(() => {
+    null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === _.length && o.default.wait(() => {
       (0, u.ack)(t.channelId, !0), s(t.channelId)
     })
   }), (0, a.jsx)("div", {
     className: g.container,
-    children: N.map(e => (0, a.jsx)(c.ForumPostComposerStoreProvider, {
+    children: _.map(e => (0, a.jsx)(c.ForumPostComposerStoreProvider, {
       createStore: () => (0, c.createForumPostComposerStore)(n),
       children: (0, a.jsx)(d.default, {
         className: g.forumPost,
         threadId: e.id,
-        goToThread: _
+        goToThread: N
       })
     }, e.id))
   })

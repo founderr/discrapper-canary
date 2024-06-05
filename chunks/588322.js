@@ -26,11 +26,11 @@ var a = n("735250"),
 function T(e) {
   let {
     channelId: t
-  } = e, T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == T ? void 0 : T.parent_id)), A = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == T ? void 0 : T.getGuildId())), v = (0, o.default)(T), N = l.useRef(!1);
+  } = e, T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == T ? void 0 : T.parent_id)), A = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == T ? void 0 : T.getGuildId())), v = (0, o.default)(T), x = l.useRef(!1);
   if (l.useEffect(() => {
-      null != T && !N.current && (N.current = !0, (0, g.trackForumPostSidebarViewed)(T))
+      null != T && !x.current && (x.current = !0, (0, g.trackForumPostSidebarViewed)(T))
     }, [T]), null == T || null == A) return null;
-  let x = (0, a.jsx)(h.default, {
+  let N = (0, a.jsx)(h.default, {
     channel: T
   });
   return (0, a.jsxs)(a.Fragment, {
@@ -38,7 +38,7 @@ function T(e) {
       channel: T,
       draftType: p.DraftType.ChannelMessage
     }), (0, a.jsx)(C.default, {
-      toolbar: x,
+      toolbar: N,
       "aria-label": S.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, c.renderTitle)({
         channel: T,

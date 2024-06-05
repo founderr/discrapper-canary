@@ -1,23 +1,23 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   useCanGuildFeedFeatureChannel: function() {
-    return c
+    return f
   }
 });
-var n = l("149765"),
-  u = l("442837"),
-  a = l("971930"),
-  i = l("859802"),
-  s = l("430824"),
-  d = l("496675"),
-  r = l("981631");
-let o = n.combine(r.Permissions.VIEW_CHANNEL, r.Permissions.MANAGE_MESSAGES, r.Permissions.READ_MESSAGE_HISTORY);
+var u = n("149765"),
+  a = n("442837"),
+  r = n("971930"),
+  l = n("859802"),
+  s = n("430824"),
+  i = n("496675"),
+  d = n("981631");
+let o = u.combine(d.Permissions.VIEW_CHANNEL, d.Permissions.MANAGE_MESSAGES, d.Permissions.READ_MESSAGE_HISTORY);
 
-function c(e) {
+function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    l = e.getGuildId(),
-    n = (0, u.useStateFromStores)([d.default], () => d.default.can(o, e), [e]),
-    c = (0, u.useStateFromStores)([s.default], () => s.default.getGuild(l), [l]),
-    m = (0, i.useGuildHomeExperiment)(c, !1);
-  return !!(n && null !== l && m && (null != e.parentChannelThreadType && r.ChannelTypesSets.GUILD_THREADS_ONLY.has(e.parentChannelThreadType) || t) && (0, a.isChannelAvailableInGuildFeed)(e)) || !1
+    n = e.getGuildId(),
+    u = (0, a.useStateFromStores)([i.default], () => i.default.can(o, e), [e]),
+    f = (0, a.useStateFromStores)([s.default], () => s.default.getGuild(n), [n]),
+    c = (0, l.useGuildHomeExperiment)(f, !1);
+  return !!(u && null !== n && c && (null != e.parentChannelThreadType && d.ChannelTypesSets.GUILD_THREADS_ONLY.has(e.parentChannelThreadType) || t) && (0, r.isChannelAvailableInGuildFeed)(e)) || !1
 }

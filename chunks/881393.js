@@ -61,7 +61,7 @@ async function h(e) {
   return [...r, ...await E(n, a.map(e => e.sku))]
 }
 
-function _(e) {
+function C(e) {
   let {
     socket: t
   } = e;
@@ -79,7 +79,7 @@ t.default = {
   },
   [f.RPCCommands.GET_ENTITLEMENTS]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
-    handler: _
+    handler: C
   },
   [f.RPCCommands.GET_SKUS_EMBEDDED]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
@@ -90,7 +90,7 @@ t.default = {
   [f.RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: async e => ({
-      entitlements: await _(e)
+      entitlements: await C(e)
     })
   }
 }

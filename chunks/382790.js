@@ -11,9 +11,9 @@ var i, a = n("735250"),
   f = n("547881"),
   h = n("178528"),
   p = n("669083"),
-  g = n("483962"),
+  E = n("483962"),
   m = n("711553"),
-  E = n("689938"),
+  g = n("689938"),
   S = n("974285");
 
 function v(e, t, n) {
@@ -25,7 +25,7 @@ function v(e, t, n) {
   }) : e[t] = n, e
 }
 
-function y(e) {
+function C(e) {
   let {
     closePopout: t
   } = e;
@@ -33,7 +33,7 @@ function y(e) {
     onClose: t
   })
 }
-class O extends(i = l.PureComponent) {
+class y extends(i = l.PureComponent) {
   render() {
     let {
       selectedGuildId: e,
@@ -43,10 +43,10 @@ class O extends(i = l.PureComponent) {
       guildId: e,
       onDragStart: this.onDragStart
     }, e) : (0, a.jsx)(m.default, {
-      title: E.default.Messages.DIRECT_MESSAGES,
-      renderSettings: y,
+      title: g.default.Messages.DIRECT_MESSAGES,
+      renderSettings: C,
       onDragStart: this.onDragStart,
-      children: (0, a.jsx)(g.default, {})
+      children: (0, a.jsx)(E.default, {})
     }), l = n ? "div" : f.default;
     return (0, a.jsxs)(l, {
       className: o()(S.base, {
@@ -68,8 +68,8 @@ class O extends(i = l.PureComponent) {
     })
   }
 }
-v(O, "defaultProps", {
+v(y, "defaultProps", {
   contained: !1
 }), t.default = r.default.connectStores([u.default], () => ({
   selectedGuildId: u.default.getGuildId()
-}))(O)
+}))(y)

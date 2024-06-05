@@ -3,18 +3,18 @@ a.r(t);
 var n = a("735250");
 a("470079");
 var r = a("960259"),
-  s = a("25752"),
-  i = a("325767");
+  i = a("25752"),
+  s = a("325767");
 t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: a = 24,
     color: r = "currentColor",
-    foreground: s,
+    foreground: i,
     ...l
   } = e;
   return (0, n.jsxs)("svg", {
-    ...(0, i.default)(l),
+    ...(0, s.default)(l),
     width: t,
     height: a,
     viewBox: "0 0 24 24",
@@ -22,13 +22,13 @@ t.default = (0, r.replaceIcon)(function(e) {
     children: [(0, n.jsx)("path", {
       d: "M12.0002 10.823L20.9652 5.26C20.6772 5.1 20.3522 5 20.0002 5H4.00016C3.64816 5 3.32216 5.1 3.03516 5.26L12.0002 10.823Z",
       fill: r,
-      className: s
+      className: i
     }), (0, n.jsx)("path", {
       d: "M12.527 12.8489C12.366 12.9489 12.183 12.9999 12 12.9999C11.817 12.9999 11.634 12.9489 11.473 12.8499L2.003 6.97292C2.003 6.98192 2 6.99092 2 6.99892V15.9989C2 17.1009 2.897 17.9989 4 17.9989H20C21.103 17.9989 22 17.1009 22 15.9989V6.99892C22 6.98992 21.997 6.98092 21.997 6.97192L12.527 12.8489Z",
       fill: r,
-      className: s
+      className: i
     })]
   })
-}, s.EnvelopeIcon, void 0, {
+}, i.EnvelopeIcon, void 0, {
   size: 24
 })

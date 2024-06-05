@@ -25,11 +25,11 @@ var a, l = n("735250"),
   I = n("194359"),
   A = n("425493"),
   v = n("461745"),
-  N = n("40851"),
-  x = n("367907"),
+  x = n("40851"),
+  N = n("367907"),
   M = n("762914"),
-  R = n("43267"),
-  y = n("933557"),
+  y = n("43267"),
+  R = n("933557"),
   L = n("366980"),
   O = n("703656"),
   j = n("131704"),
@@ -49,10 +49,10 @@ var a, l = n("735250"),
   z = n("572004"),
   K = n("585483"),
   Z = n("823379"),
-  q = n("709054"),
-  X = n("51144"),
-  Q = n("73752"),
-  J = n("575464"),
+  X = n("709054"),
+  q = n("51144"),
+  J = n("73752"),
+  Q = n("575464"),
   $ = n("981631"),
   ee = n("689938"),
   et = n("93923"),
@@ -90,7 +90,7 @@ let eo = e => {
     let {
       channel: n,
       onClose: a
-    } = e, s = null !== (t = (0, y.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([F.default], () => {
+    } = e, s = null !== (t = (0, R.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([F.default], () => {
       var e;
       return null !== (e = F.default.lastMessageId(n.id)) && void 0 !== e ? e : n.id
     });
@@ -101,7 +101,7 @@ let eo = e => {
       children: (0, l.jsxs)("div", {
         className: et.confirmChannelItemContainer,
         children: [(0, l.jsx)(p.Avatar, {
-          src: (0, R.getChannelIconURL)(n),
+          src: (0, y.getChannelIconURL)(n),
           size: p.AvatarSizes.SIZE_24,
           "aria-label": s
         }), (0, l.jsx)("span", {
@@ -109,7 +109,7 @@ let eo = e => {
           children: s
         }), (0, l.jsx)("span", {
           className: et.lastActiveTimestamp,
-          children: c()(q.default.extractTimestamp(i)).fromNow()
+          children: c()(X.default.extractTimestamp(i)).fromNow()
         })]
       })
     })
@@ -139,7 +139,7 @@ let eo = e => {
           var n, a;
           let l = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
             s = null !== (a = t.lastMessageId) && void 0 !== a ? a : t.id;
-          return q.default.compare(s, l)
+          return X.default.compare(s, l)
         }).map(e => (0, l.jsx)(eo, {
           onClose: a.onClose,
           channel: e
@@ -153,7 +153,7 @@ class ed extends(a = s.PureComponent) {
       channel: e
     } = this.props;
     E.default.wait(() => T.default.open(null == e ? void 0 : e.id));
-    let t = (0, x.collectChannelAnalyticsMetadata)(e);
+    let t = (0, N.collectChannelAnalyticsMetadata)(e);
     null != e ? e.isDM() ? Y.default.track($.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
@@ -188,7 +188,7 @@ class ed extends(a = s.PureComponent) {
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
     let {
       inviteMaxAgeSeconds: t
-    } = Q.default.getCurrentConfig({
+    } = J.default.getCurrentConfig({
       location: "5326c5_1"
     }, {
       autoTrackExposure: !1
@@ -275,7 +275,7 @@ class ed extends(a = s.PureComponent) {
     let o = [];
     return i.forEach(e => {
       let t = H.default.getUser(e);
-      null != t && o.push(X.default.getName(t))
+      null != t && o.push(q.default.getName(t))
     }), (0, l.jsxs)(B.default, {
       className: r()(et.searchBar, ea.marginTop20),
       children: [(0, l.jsx)(v.default, {
@@ -482,7 +482,7 @@ class ed extends(a = s.PureComponent) {
   }
   handleAddFriend(e) {
     this.props.onClose(), I.default.sendRequest({
-      discordTag: X.default.getUserTag(e, {
+      discordTag: q.default.getUserTag(e, {
         identifiable: "always"
       }),
       context: {
@@ -540,7 +540,7 @@ class ed extends(a = s.PureComponent) {
         user: u,
         comparator: d
       } = o, c = s.has(u.id);
-      return (0, l.jsx)(J.default, {
+      return (0, l.jsx)(Q.default, {
         row: n,
         user: u,
         hideDiscriminator: r,
@@ -649,7 +649,7 @@ class ed extends(a = s.PureComponent) {
     })
   }
 }
-el(ed, "contextType", N.default);
+el(ed, "contextType", x.default);
 let ec = h.default.connectStores([b.default, D.default, k.default], e => {
   let t, {
     channel: n

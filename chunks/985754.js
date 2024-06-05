@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   PAYMENT_SOURCE_NAMES: function() {
     return C
   },
   getLocalizedPricingBannerStrings: function() {
-    return f
+    return p
   },
   getLocalizedPricingNotice: function() {
-    return _
+    return f
   }
-}), n("47120"), n("653041");
-var s = n("217986"),
-  a = n("133080"),
-  r = n("63063"),
-  i = n("937615"),
-  l = n("981631"),
-  u = n("231338"),
-  o = n("689938");
-let d = new Set([u.CurrencyCodes.ARS, u.CurrencyCodes.CLP, u.CurrencyCodes.COP]),
-  c = new Set([u.CurrencyCodes.USD, u.CurrencyCodes.JPY]),
+}), s("47120"), s("653041");
+var n = s("217986"),
+  a = s("133080"),
+  r = s("63063"),
+  i = s("937615"),
+  l = s("981631"),
+  u = s("231338"),
+  o = s("689938");
+let c = new Set([u.CurrencyCodes.ARS, u.CurrencyCodes.CLP, u.CurrencyCodes.COP]),
+  d = new Set([u.CurrencyCodes.USD, u.CurrencyCodes.JPY]),
   C = {
     [l.PaymentSourceTypes.CARD]: () => o.default.Messages.PAYMENT_SOURCE_CREDIT_CARD_CARD_ONLY,
     [l.PaymentSourceTypes.PAYPAL]: () => o.default.Messages.PAYMENT_SOURCE_PAYPAL,
@@ -39,86 +39,86 @@ let d = new Set([u.CurrencyCodes.ARS, u.CurrencyCodes.CLP, u.CurrencyCodes.COP])
     [l.PaymentSourceTypes.APPLE]: () => o.default.Messages.PAYMENT_SOURCE_APPLE
   },
   E = [l.PaymentSourceTypes.EPS, l.PaymentSourceTypes.BANCONTACT, l.PaymentSourceTypes.IDEAL, l.PaymentSourceTypes.SOFORT, l.PaymentSourceTypes.GIROPAY, l.PaymentSourceTypes.SEPA_DEBIT, l.PaymentSourceTypes.PAYSAFE_CARD],
-  _ = (e, t, n, s) => {
+  f = (e, t, s, n) => {
     if (null == e) return "";
     let r = (0, a.getI18NCountryName)(e);
-    if (t === u.CurrencyCodes.EUR) return n ? o.default.Messages.LOCALIZED_PRICING_NOTICE_GENERALIZED_PAYMENT_METHODS_PROMO.format({
+    if (t === u.CurrencyCodes.EUR) return s ? o.default.Messages.LOCALIZED_PRICING_NOTICE_GENERALIZED_PAYMENT_METHODS_PROMO.format({
       country: r
     }) : o.default.Messages.LOCALIZED_PRICING_NOTICE_NO_LOWERED_PRICE.format({
       currencyISOCode: t.toUpperCase()
     });
-    return s ? o.default.Messages.NOTICE_NITRO_PRICE_CHANGED.format({
+    return n ? o.default.Messages.NOTICE_NITRO_PRICE_CHANGED.format({
       countryName: r
     }) : o.default.Messages.LOCALIZED_PRICING_NOTICE.format({
       country: r
     })
   },
-  f = e => {
+  p = e => {
     let {
       localizedPricingPromo: t,
-      subscription: n,
-      forceSingleLine: s = !1,
-      userLocale: _
+      subscription: s,
+      forceSingleLine: n = !1,
+      userLocale: f
     } = e, {
-      countryCode: f,
-      amount: p,
-      currency: m,
-      paymentSourceTypes: h
-    } = t, N = 0 !== h.length, P = A(f), I = (0, i.formatPrice)(p, m, {
+      countryCode: p,
+      amount: A,
+      currency: _,
+      paymentSourceTypes: P
+    } = t, N = 0 !== P.length, h = m(p), S = (0, i.formatPrice)(A, _, {
       style: "currency",
-      currency: m,
+      currency: _,
       currencyDisplay: "symbol",
-      localeOverride: P
-    }), R = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
+      localeOverride: h
+    }), I = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
       helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-      currencyISOCode: m.toUpperCase(),
-      localizedPriceWithCurrencySymbol: I
+      currencyISOCode: _.toUpperCase(),
+      localizedPriceWithCurrencySymbol: S
     });
-    if (c.has(m) && (R = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
+    if (d.has(_) && (I = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-        localizedPriceWithCurrencySymbol: I
-      })), d.has(m) && (R = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
+        localizedPriceWithCurrencySymbol: S
+      })), c.has(_) && (I = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-        currencyISOCode: m.toUpperCase(),
-        localizedPriceWithCurrencySymbol: I
-      })), null != n && !n.hasPremiumNitroMonthly && (R = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
+        currencyISOCode: _.toUpperCase(),
+        localizedPriceWithCurrencySymbol: S
+      })), null != s && !s.hasPremiumNitroMonthly && (I = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-        currencyISOCode: m.toUpperCase()
-      })), m === u.CurrencyCodes.EUR && (R = s ? o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
-        country: (0, a.getI18NCountryName)(f),
-        currencyISOCode: m.toUpperCase(),
+        currencyISOCode: _.toUpperCase()
+      })), _ === u.CurrencyCodes.EUR && (I = n ? o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
+        country: (0, a.getI18NCountryName)(p),
+        currencyISOCode: _.toUpperCase(),
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING)
       }) : o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE.format({
-        currencyISOCode: m.toUpperCase(),
+        currencyISOCode: _.toUpperCase(),
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING)
       })), N) {
-      let e = E.filter(e => h.includes(e)),
-        t = [...e, ...h.filter(e => !E.includes(e))].slice(0, 2).map(e => {
-          var t, n;
-          return null !== (n = null === (t = C[e]) || void 0 === t ? void 0 : t.call(C)) && void 0 !== n ? n : o.default.Messages.PAYMENT_SOURCE_UNKNOWN
+      let e = E.filter(e => P.includes(e)),
+        t = [...e, ...P.filter(e => !E.includes(e))].slice(0, 2).map(e => {
+          var t, s;
+          return null !== (s = null === (t = C[e]) || void 0 === t ? void 0 : t.call(C)) && void 0 !== s ? s : o.default.Messages.PAYMENT_SOURCE_UNKNOWN
         });
-      h.length >= 3 && t.push(o.default.Messages.LOCALIZED_PRICING_MORE_NEW_WAYS_TO_PAY);
-      let n = new Intl.ListFormat(_, {
+      P.length >= 3 && t.push(o.default.Messages.LOCALIZED_PRICING_MORE_NEW_WAYS_TO_PAY);
+      let s = new Intl.ListFormat(f, {
         style: "short",
         type: "conjunction"
       });
-      R = o.default.Messages.LOCALIZED_PRICING_PAYMENT_METHODS_PROMO.format({
+      I = o.default.Messages.LOCALIZED_PRICING_PAYMENT_METHODS_PROMO.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-        paymentMethods: n.format(t)
+        paymentMethods: s.format(t)
       })
     }
     return {
       localizedPricingBannerHeader: o.default.Messages.LOCALIZED_PRICING_BANNER_HEADER.format({
-        country: (0, a.getI18NCountryName)(f)
+        country: (0, a.getI18NCountryName)(p)
       }),
-      localizedPricingBannerBody: R,
+      localizedPricingBannerBody: I,
       localizedPricingBannerLinkOnly: o.default.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING)
       }),
       localizedPricingBannerSubNotif: N ? void 0 : o.default.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
     }
   },
-  A = e => {
-    let t = s.default.find(t => t.alpha2 === e);
+  m = e => {
+    let t = n.default.find(t => t.alpha2 === e);
     return null == t ? void 0 : t.localeForICU
   }

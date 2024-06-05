@@ -18,23 +18,23 @@ var n = s("512722"),
   E = s("474936"),
   T = s("981631"),
   _ = s("689938"),
-  f = s("904014");
+  I = s("904014");
 
-function I(e) {
+function f(e) {
   let {
     subscription: t,
     withOverheadSeparator: s
   } = e, {
     analyticsLocations: n
-  } = (0, o.default)(), [I] = (0, S.useSubscriptionInvoicePreview)({
+  } = (0, o.default)(), [f] = (0, S.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
     renewal: !0,
     analyticsLocations: n,
     analyticsLocation: r.default.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
   });
-  if (null == I) return null;
-  let m = s ? f.finePrintWithOverheadSeparator : f.finePrint,
-    N = I.invoiceItems.find(e => {
+  if (null == f) return null;
+  let m = s ? I.finePrintWithOverheadSeparator : I.finePrint,
+    N = f.invoiceItems.find(e => {
       let {
         subscriptionPlanId: t
       } = e;
@@ -44,14 +44,14 @@ function I(e) {
   let g = N.subscriptionPlanId,
     h = d.default.get(g);
   l()(null != h, "Missing plan");
-  let C = (0, c.formatPrice)(I.total, I.currency),
-    A = "";
-  return h.interval === E.SubscriptionIntervalTypes.YEAR ? A = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+  let C = (0, c.formatPrice)(f.total, f.currency),
+    O = "";
+  return h.interval === E.SubscriptionIntervalTypes.YEAR ? O = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
     price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : h.interval === E.SubscriptionIntervalTypes.MONTH && (A = 1 === h.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+  }) : h.interval === E.SubscriptionIntervalTypes.MONTH && (O = 1 === h.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
     price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
@@ -66,7 +66,7 @@ function I(e) {
     color: "text-muted",
     className: m,
     variant: "text-xs/normal",
-    children: A
+    children: O
   })
 }
 
@@ -75,7 +75,7 @@ function m(e) {
     subscription: t,
     withOverheadSeparator: s
   } = e;
-  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(I, {
+  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(f, {
     subscription: t,
     withOverheadSeparator: s
   })

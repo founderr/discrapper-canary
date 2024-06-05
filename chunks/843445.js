@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   PAGE_WIDTH_THRESHOLD: function() {
-    return s
+    return n
   },
   PageSizes: function() {
     return a
   }
 });
-let s = 1e3,
+let n = 1e3,
   a = Object.freeze({
     SMALL: "small",
     LARGE: "large"

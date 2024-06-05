@@ -33,8 +33,8 @@ function A(e) {
   } = e, {
     analyticsLocations: v
   } = (0, u.default)(), {
-    fetched: N,
-    applicationsShelf: x,
+    fetched: x,
+    applicationsShelf: N,
     installedIntegrations: M
   } = (0, C.usePrivateChannelIntegrationState)({
     channelId: t
@@ -42,14 +42,14 @@ function A(e) {
   l.useEffect(() => {
     (0, o.trackWithMetadata)(g.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
   }, []);
-  let R = e => {
+  let y = e => {
       var t;
       (0, f.default)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", null == e ? void 0 : e.getAvatarURL(void 0, 80), {
         dispatchWait: !0
       })
     },
-    y = (e, t) => {
-      I.has(e.key) && R(t)
+    R = (e, t) => {
+      I.has(e.key) && y(t)
     },
     L = l.useCallback(e => {
       let {
@@ -89,7 +89,7 @@ function A(e) {
           })]
         }), (0, a.jsx)("div", {
           className: _.applicationRowContainer,
-          children: N ? x.map(e => {
+          children: x ? N.map(e => {
             if (null != M.find(t => t.application.id === e.id)) return null;
             let n = null != e.description ? (0, d.parseBioReact)(e.description) : null,
               l = m.default.getApplicationIconURL({
@@ -140,8 +140,8 @@ function A(e) {
                 bot: o
               } = e;
             return null != o ? (0, a.jsx)(r.ClickableContainer, {
-              onMouseDown: () => R(o),
-              onKeyDown: e => y(e, o),
+              onMouseDown: () => y(o),
+              onKeyDown: e => R(e, o),
               className: _.applicationRow,
               onClick: () => {
                 (0, h.openUserProfileModal)({

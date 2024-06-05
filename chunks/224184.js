@@ -26,32 +26,32 @@ t.default = e => {
   let {
     hangStatusActivity: t,
     userId: s,
-    channel: N,
-    previewIsOpen: x
+    channel: x,
+    previewIsOpen: N
   } = e, {
     enableHangStatus: M
   } = g.HangStatusExperiment.useExperiment({
-    guildId: N.guild_id,
+    guildId: x.guild_id,
     location: "HangStatusPopout"
-  }), R = (0, r.useStateFromStores)([c.default], () => c.default.getId()), y = (0, r.useStateFromStores)([p.default], () => p.default.getUser(s)), L = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId() === N.id), O = (0, r.useStateFromStores)([h.default], () => h.default.can(I.Permissions.CONNECT, N)), j = (0, r.useStateFromStores)([f.default], () => null != N.guild_id && null != y ? f.default.getMember(N.guild_id, s) : null), P = l.useMemo(() => null != y ? (0, d.getPreviewAvatar)(void 0, j, y, {
+  }), y = (0, r.useStateFromStores)([c.default], () => c.default.getId()), R = (0, r.useStateFromStores)([p.default], () => p.default.getUser(s)), L = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId() === x.id), O = (0, r.useStateFromStores)([h.default], () => h.default.can(I.Permissions.CONNECT, x)), j = (0, r.useStateFromStores)([f.default], () => null != x.guild_id && null != R ? f.default.getMember(x.guild_id, s) : null), P = l.useMemo(() => null != R ? (0, d.getPreviewAvatar)(void 0, j, R, {
     size: 40
-  }) : void 0, [j, y]);
+  }) : void 0, [j, R]);
   return (l.useEffect(() => {
-    M && null != t && x && null != y && R !== s && E.default.track(I.AnalyticEvents.VIEW_HANG_STATUS, {
+    M && null != t && N && null != R && y !== s && E.default.track(I.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "HangStatusPopout",
-      guild_id: N.guild_id,
-      channel_id: N.id
+      guild_id: x.guild_id,
+      channel_id: x.id
     })
-  }, [M, t, x, y, R, s, N]), M && null != y) ? R === s ? (0, a.jsx)("div", {
+  }, [M, t, N, R, y, s, x]), M && null != R) ? y === s ? (0, a.jsx)("div", {
     className: i()(v.popoutWrapper, {
-      [v.mounted]: x
+      [v.mounted]: N
     }),
     children: (0, a.jsx)(T.HangStatusPopout, {
       currentStatus: t
     })
   }) : null == t ? null : (0, a.jsx)("div", {
     className: i()(v.popoutWrapper, {
-      [v.mounted]: x
+      [v.mounted]: N
     }),
     children: (0, a.jsxs)("div", {
       className: v.popout,
@@ -90,10 +90,10 @@ t.default = e => {
         className: v.cta,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          !L && O && (u.default.selectVoiceChannel(N.id), E.default.track(I.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+          !L && O && (u.default.selectVoiceChannel(x.id), E.default.track(I.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
             source: "HangStatusPopout",
-            guild_id: N.guild_id,
-            channel_id: N.id
+            guild_id: x.guild_id,
+            channel_id: x.id
           }))
         },
         children: A.default.Messages.CUSTOM_HANG_STATUS_CTA
@@ -112,8 +112,8 @@ t.default = e => {
               startingEmoji: t.emoji
             })
           }) : (0, C.updateHangStatus)(e, !0), E.default.track(I.AnalyticEvents.SWIPE_HANG_STATUS, {
-            guild_id: N.guild_id,
-            channel_id: N.id,
+            guild_id: x.guild_id,
+            channel_id: x.id,
             media_session_id: m.default.getMediaSessionId()
           })
         },

@@ -2,64 +2,64 @@
 t.r(s);
 var a = t("735250");
 t("470079");
-var r = t("780384"),
-  l = t("481060"),
-  i = t("410030"),
+var l = t("780384"),
+  i = t("481060"),
+  r = t("410030"),
   n = t("976644"),
-  o = t("466111"),
-  u = t("689938"),
-  c = t("554965"),
-  d = t("982404"),
-  m = t("299156");
+  u = t("466111"),
+  o = t("689938"),
+  d = t("554965"),
+  c = t("982404"),
+  _ = t("299156");
 s.default = function(e) {
   let {
     churnUserDiscountOffer: s,
     onDiscountClaim: t,
-    onContinue: f
-  } = e, p = (0, i.default)(), _ = (0, r.isThemeDark)(p) ? d : m;
+    onContinue: m
+  } = e, f = (0, r.default)(), I = (0, l.isThemeDark)(f) ? c : _;
   return null == s ? null : (0, a.jsxs)("div", {
-    className: c.churnFooterContainer,
+    className: d.churnFooterContainer,
     children: [(0, a.jsx)("div", {
-      className: c.churnFooterGlow
+      className: d.churnFooterGlow
     }), (0, a.jsx)("div", {
-      className: c.churnFooterTopBorder
+      className: d.churnFooterTopBorder
     }), (0, a.jsx)("div", {
-      className: c.churnFooterContent,
+      className: d.churnFooterContent,
       children: (0, a.jsxs)("div", {
-        className: c.churnFooterContentBody,
+        className: d.churnFooterContentBody,
         children: [(0, a.jsx)("img", {
           alt: "",
-          src: _,
-          className: c.churnFooterIcon
+          src: I,
+          className: d.churnFooterIcon
         }), (0, a.jsxs)("div", {
-          className: c.churnFooterContentBodyInner,
-          children: [(0, a.jsx)(l.Text, {
+          className: d.churnFooterContentBodyInner,
+          children: [(0, a.jsx)(i.Text, {
             variant: "text-md/medium",
-            className: c.churnFooterCopy,
-            children: u.default.Messages.CHURN_DISCOUNT_DESCRIPTION.format({
+            className: d.churnFooterCopy,
+            children: o.default.Messages.CHURN_DISCOUNT_DESCRIPTION.format({
               percent: s.discount.amount,
               numMonths: s.discount.user_usage_limit
             })
           }), (0, a.jsxs)("div", {
-            className: c.churnFooterCTAs,
+            className: d.churnFooterCTAs,
             children: [(0, a.jsxs)(n.default, {
-              className: c.churnFooterClaimCTA,
-              innerClassName: c.churnFooterClaimCTAInner,
-              look: l.ButtonLooks.OUTLINED,
-              color: l.ButtonColors.CUSTOM,
+              className: d.churnFooterClaimCTA,
+              innerClassName: d.churnFooterClaimCTAInner,
+              look: i.ButtonLooks.OUTLINED,
+              color: i.ButtonColors.CUSTOM,
               onClick: () => null == t ? void 0 : t(),
-              children: [(0, a.jsx)(o.default, {
+              children: [(0, a.jsx)(u.default, {
                 height: 16,
                 width: 16,
-                className: c.churnFooterClaimIcon
-              }), (0, a.jsx)(l.Text, {
+                className: d.churnFooterClaimIcon
+              }), (0, a.jsx)(i.Text, {
                 variant: "text-sm/semibold",
-                className: c.churnFooterClaimCopy,
-                children: u.default.Messages.CHURN_DISCOUNT_CLAIM
+                className: d.churnFooterClaimCopy,
+                children: o.default.Messages.CHURN_DISCOUNT_CLAIM
               })]
-            }), (0, a.jsx)(l.Button, {
-              onClick: () => null == f ? void 0 : f(),
-              children: u.default.Messages.CONTINUE
+            }), (0, a.jsx)(i.Button, {
+              onClick: () => null == m ? void 0 : m(),
+              children: o.default.Messages.CONTINUE
             })]
           })]
         })]

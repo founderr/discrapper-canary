@@ -28,36 +28,36 @@ function f(e) {
     color: s = u.MessageBlockColors.YELLOW,
     buttonPosition: l = E.BOTTOM,
     notice: f,
-    ctaLabel: I,
-    ctaLoading: _,
+    ctaLabel: _,
+    ctaLoading: I,
     ctaDisabled: h,
     ctaClassName: N,
     onClick: C
-  } = e, R = (0, r.default)();
+  } = e, p = (0, r.default)();
   return (0, n.jsx)(c.default, {
     className: a()(d.statusWarningBlock, {
-      [d.statusWarningBlockWithCta]: null != I
+      [d.statusWarningBlockWithCta]: null != _
     }, t),
-    color: (0, i.isThemeDark)(R) ? s : u.MessageBlockColors.BROWN,
+    color: (0, i.isThemeDark)(p) ? s : u.MessageBlockColors.BROWN,
     children: (0, n.jsxs)("div", {
       className: l,
       children: [(0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "interactive-active",
         children: f
-      }), null != I && null != C && (0, n.jsx)("div", {
+      }), null != _ && null != C && (0, n.jsx)("div", {
         className: d.ctaButtonContainer,
         children: (0, n.jsx)(o.Button, {
-          className: a()(d.ctaButton, (0, i.isThemeDark)(R) ? void 0 : d.ctaBlackButton, N),
-          color: (0, i.isThemeDark)(R) ? o.Button.Colors.WHITE : o.Button.Colors.CUSTOM,
+          className: a()(d.ctaButton, (0, i.isThemeDark)(p) ? void 0 : d.ctaBlackButton, N),
+          color: (0, i.isThemeDark)(p) ? o.Button.Colors.WHITE : o.Button.Colors.CUSTOM,
           size: o.ButtonSizes.MEDIUM,
           onClick: C,
           disabled: h,
-          submitting: _,
+          submitting: I,
           children: (0, n.jsx)(o.Text, {
             className: d.ctaButtonText,
             variant: "text-sm/medium",
-            children: I
+            children: _
           })
         })
       })]

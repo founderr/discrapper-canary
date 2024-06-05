@@ -16,15 +16,15 @@ var i = s("120356"),
   E = s("131951"),
   T = s("285952"),
   _ = s("153124"),
-  f = s("626135"),
-  I = s("63063"),
+  I = s("626135"),
+  f = s("63063"),
   m = s("210887"),
   N = s("981631"),
   g = s("689938"),
   h = s("611273");
 let C = s("775322"),
-  A = s("853453"),
-  O = (0, _.uid)();
+  O = s("853453"),
+  A = (0, _.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
 let p = {
   page: N.AnalyticsPages.USER_SETTINGS,
@@ -33,7 +33,7 @@ let p = {
 
 function R(e) {
   let t = e.currentTarget;
-  f.default.track(N.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  I.default.track(N.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
@@ -70,7 +70,7 @@ function x() {
   }), (0, l.jsxs)(u.FormSection, {
     className: h.marginBottom20,
     children: [(0, l.jsx)(u.FormTitle, {
-      id: O,
+      id: A,
       tag: u.FormTitleTags.H3,
       className: h.marginBottom8,
       children: g.default.Messages.NOISE_SUPPRESSION
@@ -88,13 +88,13 @@ function x() {
       className: h.marginBottom8,
       type: u.FormNoticeTypes.PRIMARY,
       imageData: {
-        src: (0, d.isThemeLight)(e) ? C : A,
+        src: (0, d.isThemeLight)(e) ? C : O,
         width: 70,
         height: 40
       },
       align: T.default.Align.CENTER,
       body: (0, l.jsx)(u.Anchor, {
-        href: I.default.getArticleURL(N.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: f.default.getArticleURL(N.HelpdeskArticles.NOISE_SUPPRESSION),
         onClick: R,
         children: g.default.Messages.LEARN_MORE
       })
@@ -123,13 +123,13 @@ function M() {
     automaticGainControlSupported: E.default.isAutomaticGainControlSupported()
   })), {
     hasEchoCancellation: _,
-    hasNoiseSuppression: f,
-    hasAutomaticGainControl: I
+    hasNoiseSuppression: I,
+    hasAutomaticGainControl: f
   } = (0, o.useStateFromStoresObject)([S.default], () => ({
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), m = _ || f || I, C = e === N.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), m = _ || I || f, C = e === N.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
     className: h.marginBottom20,
     title: g.default.Messages.FORM_LABEL_VOICE_PROCESSING,
@@ -162,7 +162,7 @@ function M() {
         section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       note: g.default.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
-      disabled: I,
+      disabled: f,
       children: g.default.Messages.AUTOMATIC_GAIN_CONTROL
     })]
   })

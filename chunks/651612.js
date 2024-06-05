@@ -32,7 +32,7 @@ function _(e) {
     (0, m.updateFocusedActivityLayout)(e)
   }, [I]), {
     unreadCount: v,
-    mentionCount: N
+    mentionCount: x
   } = function(e) {
     let t = (0, i.useStateFromStores)([f.default], () => !(0, s.isEmpty)(f.default.getTypingUsers(e)), [e]),
       {
@@ -47,21 +47,21 @@ function _(e) {
       mentionCount: a,
       isTyping: t
     }
-  }(t), x = l.useCallback(() => {
+  }(t), N = l.useCallback(() => {
     var e;
     null === (e = T.current) || void 0 === e || e.focus()
   }, []);
   (0, h.useComponentAction)({
     event: C.ComponentActions.FOCUS_CHAT_BUTTON,
-    handler: x
+    handler: N
   });
   let M = I ? g.default.Messages.HIDE_CHAT : g.default.Messages.SHOW_CHAT,
-    R = [M];
-  N > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
-    mentionCount: N
-  })), v > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
-  let y = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
-    L = N > 0 ? N : v,
+    y = [M];
+  x > 0 && y.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+    mentionCount: x
+  })), v > 0 && y.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+  let R = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
+    L = x > 0 ? x : v,
     O = L > 0;
   return (0, a.jsxs)("div", {
     className: S.wrapper,
@@ -69,14 +69,14 @@ function _(e) {
       buttonRef: T,
       onClick: A,
       label: M,
-      "aria-label": R.join(", "),
+      "aria-label": y.join(", "),
       tooltipPosition: "top",
-      iconComponent: y === E.FocusedActivityLayouts.NO_CHAT ? o.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
+      iconComponent: R === E.FocusedActivityLayouts.NO_CHAT ? o.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
       themeable: !0,
       className: n,
       ..._
     }), O ? (0, a.jsx)(u.default, {
-      hasMentions: N > 0,
+      hasMentions: x > 0,
       truncatedCount: L > 99 ? "99+" : L,
       className: S.badge
     }) : null]

@@ -18,15 +18,15 @@ let T = !1,
   I = "",
   A = 0,
   v = [],
-  N = !1,
-  x = new Set,
+  x = !1,
+  N = new Set,
   M = null;
 
-function R() {
-  I = "", A = 0, v = [], x = new Set, T = !1, M = null
+function y() {
+  I = "", A = 0, v = [], N = new Set, T = !1, M = null
 }
 
-function y(e) {
+function R(e) {
   I = e, A = 0, L()
 }
 
@@ -66,8 +66,8 @@ function L() {
 
 function O() {
   if (!T) return !1;
-  let e = N;
-  return (N = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
+  let e = x;
+  return (x = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
 }
 
 function j(e, t) {
@@ -94,7 +94,7 @@ function D() {
 
 function b(e) {
   if (e.key !== _.NEW_GROUP_DM_POPOUT_ID) return !1;
-  T = !0, O(), a = D(), M = null, y("")
+  T = !0, O(), a = D(), M = null, R("")
 }
 
 function U(e) {
@@ -103,7 +103,7 @@ function U(e) {
 }
 
 function F() {
-  null != a && (a.destroy(), a = null), R()
+  null != a && (a.destroy(), a = null), y()
 }
 class w extends(l = d.default.Store) {
   initialize() {
@@ -113,10 +113,10 @@ class w extends(l = d.default.Store) {
     return v
   }
   hasFriends() {
-    return N
+    return x
   }
   getSelectedUsers() {
-    return x
+    return N
   }
   getQuery() {
     return I
@@ -125,9 +125,9 @@ class w extends(l = d.default.Store) {
     return {
       query: I,
       selectedRow: A,
-      selectedUsers: x,
+      selectedUsers: N,
       results: v,
-      hasFriends: N
+      hasFriends: x
     }
   }
 }
@@ -139,7 +139,7 @@ r = "PrivateChannelRecipientsInviteStore", (i = "displayName") in(s = w) ? Objec
 }) : s[i] = r;
 let k = new w(c.default, {
   CONNECTION_OPEN: function() {
-    R()
+    y()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -148,18 +148,18 @@ let k = new w(c.default, {
     } = e;
     if (null != t) return !1;
     let a = T;
-    return R(), T = a, M = n, L()
+    return y(), T = a, M = n, L()
   },
   MODAL_PUSH: b,
   SHOW_ACTION_SHEET: b,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    T = !0, O(), a = D(), M = e.channelId, y("")
+    T = !0, O(), a = D(), M = e.channelId, R("")
   },
   MODAL_POP: U,
   HIDE_ACTION_SHEET: U,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: F,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function(e) {
-    M = e.channelId, y(e.query)
+    M = e.channelId, R(e.query)
   },
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function(e) {
     A = e.row
@@ -168,13 +168,13 @@ let k = new w(c.default, {
     let {
       userId: t
     } = e;
-    x.add(t), x = new Set(x)
+    N.add(t), N = new Set(N)
   },
   PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function(e) {
     let {
       userId: t
     } = e;
-    x.delete(t), x = new Set(x)
+    N.delete(t), N = new Set(N)
   }
 });
 t.default = k

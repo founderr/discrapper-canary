@@ -20,17 +20,17 @@ var a = n("735250"),
   p = n("591759"),
   S = n("833592"),
   g = n("497089"),
-  N = n("178480"),
-  _ = n("418316"),
-  I = n("526146"),
-  T = n("400565"),
+  _ = n("178480"),
+  N = n("418316"),
+  T = n("526146"),
+  I = n("400565"),
   C = n("148789"),
   A = n("11825"),
   v = n("981631"),
-  x = n("689938"),
+  M = n("689938"),
   R = n("202001"),
-  M = n("756688"),
-  b = n("886765");
+  x = n("756688"),
+  L = n("886765");
 
 function O(e) {
   var t, n, l;
@@ -54,7 +54,7 @@ function O(e) {
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     item: {
       callout: t
@@ -72,11 +72,11 @@ function y(e) {
   })
 }
 
-function L(e) {
+function y(e) {
   let {
     item: t
-  } = e, n = b, l = x.default.Messages.NOTIFICATION_CENTER_TODO;
-  return t.completed && (n = M, l = x.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
+  } = e, n = L, l = M.default.Messages.NOTIFICATION_CENTER_TODO;
+  return t.completed && (n = x, l = M.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
     className: R.lifecycleContainer,
     children: [(0, a.jsx)("img", {
       className: R.checkbox,
@@ -90,14 +90,14 @@ function L(e) {
     })]
   })
 }
-let j = l.memo(function(e) {
+let F = l.memo(function(e) {
     var t;
     let {
       item: i,
       ackedBeforeId: c
     } = e, {
       analyticsLocations: f
-    } = (0, r.default)(), h = (0, I.useNotificationCenterItemAcked)(i, c), x = l.useCallback(async () => {
+    } = (0, r.default)(), h = (0, T.useNotificationCenterItemAcked)(i, c), M = l.useCallback(async () => {
       if (!h && (0, S.markNotificationCenterItemAcked)(i), null != i.item_enum && i.item_enum === g.ItemEnum.FIND_FRIENDS) {
         (0, s.openModalLazy)(async () => {
           let {
@@ -137,12 +137,12 @@ let j = l.memo(function(e) {
           acked: h
         })
       }
-    }, [i, h, f]), M = null;
-    i.type === g.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (M = (0, a.jsx)(C.default, {
+    }, [i, h, f]), x = null;
+    i.type === g.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (x = (0, a.jsx)(C.default, {
       userId: i.other_user.id
     }));
-    let b = null != i.local_id,
-      j = (0, _.default)(i);
+    let L = null != i.local_id,
+      F = (0, N.default)(i);
     return (0, a.jsxs)("div", {
       className: R.row,
       children: [(0, a.jsxs)(s.ClickableContainer, {
@@ -150,31 +150,31 @@ let j = l.memo(function(e) {
         focusProps: {
           offset: 4
         },
-        "aria-label": j,
-        onClick: x,
+        "aria-label": F,
+        onClick: M,
         children: [h ? null : (0, a.jsx)("div", {
           className: R.unread
-        }), (0, a.jsx)(T.ForYouItemImage, {
+        }), (0, a.jsx)(I.ForYouItemImage, {
           item: i
         }), (0, a.jsxs)("div", {
           className: R.body,
-          children: ["lifecycle_item" === i.type && null != i.item_enum && (0, a.jsx)(L, {
+          children: ["lifecycle_item" === i.type && null != i.item_enum && (0, a.jsx)(y, {
             item: i
           }), (0, a.jsx)(s.Text, {
             variant: "text-md/normal",
             color: h ? "text-muted" : "text-normal",
-            children: "string" != typeof j ? j : u.default.parse(j)
+            children: "string" != typeof F ? F : u.default.parse(F)
           }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, a.jsx)(O, {
             item: i
-          }) : null, null != i.callout ? (0, a.jsx)(y, {
+          }) : null, null != i.callout ? (0, a.jsx)(b, {
             item: i
           }) : null, (0, a.jsx)(s.Text, {
             variant: "text-xs/medium",
             color: h ? "text-muted" : "header-secondary",
-            children: (0, N.getRelativeTimestamp)(m.default.extractTimestamp(i.id))
-          }), M]
+            children: (0, _.getRelativeTimestamp)(m.default.extractTimestamp(i.id))
+          }), x]
         })]
-      }), b ? null : (0, a.jsx)(A.MoreButton, {
+      }), L ? null : (0, a.jsx)(A.MoreButton, {
         item: i
       })]
     })
@@ -184,7 +184,7 @@ let j = l.memo(function(e) {
       items: t
     } = e, n = c.NotificationCenterAckedBeforeId.useSetting();
     return (0, a.jsx)(a.Fragment, {
-      children: t.map(e => (0, a.jsx)(j, {
+      children: t.map(e => (0, a.jsx)(F, {
         item: e,
         ackedBeforeId: n
       }, e.id))

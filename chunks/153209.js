@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("47120");
 var a = n("735250"),
@@ -20,49 +20,49 @@ var a = n("735250"),
   p = n("709054"),
   S = n("791914"),
   g = n("981631"),
-  N = n("689938"),
-  _ = n("269939");
+  _ = n("689938"),
+  N = n("269939");
 
-function I(e) {
+function T(e) {
   let {
     onClick: t
   } = e;
   return (0, a.jsx)(h.default, {
-    tooltip: N.default.Messages.MARK_ALL_AS_READ,
+    tooltip: _.default.Messages.MARK_ALL_AS_READ,
     color: h.CircleIconButtonColors.SECONDARY,
     icon: (0, a.jsx)(E.default, {}),
     onClick: t
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     setTab: t,
     badgeState: n,
     closePopout: h
   } = e, {
     initialized: E,
-    items: N,
-    loading: T,
+    items: _,
+    loading: I,
     loadMore: C
-  } = (0, d.useDesktopNotificationCenterItemsLoader)(), A = (0, s.useStateFromStores)([r.default], () => r.default.localItems), v = l.useMemo(() => [...[...N, ...A].sort((e, t) => -1 * p.default.compare(e.id, t.id))], [N, A]), x = N.length > 0 ? N[0] : null, R = f.NotificationCenterAckedBeforeId.useSetting(), M = l.useMemo(() => {
-    if (null != x && 0 >= p.default.compare(x.id, R)) return !1;
+  } = (0, d.useDesktopNotificationCenterItemsLoader)(), A = (0, s.useStateFromStores)([r.default], () => r.default.localItems), v = l.useMemo(() => [...[..._, ...A].sort((e, t) => -1 * p.default.compare(e.id, t.id))], [_, A]), M = _.length > 0 ? _[0] : null, R = f.NotificationCenterAckedBeforeId.useSetting(), x = l.useMemo(() => {
+    if (null != M && 0 >= p.default.compare(M.id, R)) return !1;
     for (let e of v) {
       if (0 >= p.default.compare(e.id, R)) break;
       if (!(0, u.isRemoteAcked)(e, R)) return !0
     }
     return !1
-  }, [x, R, v]);
+  }, [M, R, v]);
   return (0, a.jsxs)("div", {
-    className: _.container,
+    className: N.container,
     children: [(0, a.jsx)(S.default, {
       tab: i.InboxTab.FOR_YOU,
       setTab: t,
       badgeState: n,
       closePopout: h,
-      children: M ? (0, a.jsx)(I, {
+      children: x ? (0, a.jsx)(T, {
         onClick: () => {
-          null != x && (f.NotificationCenterAckedBeforeId.updateSetting(x.id), m.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+          null != M && (f.NotificationCenterAckedBeforeId.updateSetting(M.id), m.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
             action_type: o.NotificationCenterActionTypes.MARK_ALL_READ
           }))
         }
@@ -70,7 +70,7 @@ function T(e) {
     }), (0, a.jsx)(c.default, {
       initialized: E,
       items: v,
-      loading: T,
+      loading: I,
       loadMore: C
     })]
   })

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var a = n("735250");
+var r = n("735250");
 n("470079");
-var r = n("481060"),
+var a = n("481060"),
   s = n("848106");
 
 function l() {
-  return (0, a.jsx)(r.Spinner, {
+  return (0, r.jsx)(a.Spinner, {
     className: s.spinner
   })
 }

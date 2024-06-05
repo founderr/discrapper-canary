@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return x
   }
 }), n("653041");
 var a = n("735250"),
@@ -20,14 +20,14 @@ var a = n("735250"),
   p = n("314897"),
   S = n("496675"),
   g = n("594174"),
-  N = n("132338"),
-  _ = n("55935"),
-  I = n("655354"),
-  T = n("809780"),
+  _ = n("132338"),
+  N = n("55935"),
+  T = n("655354"),
+  I = n("809780"),
   C = n("981631"),
   A = n("689938"),
   v = n("443039");
-let x = {
+let M = {
   left: 4,
   right: -12
 };
@@ -48,12 +48,12 @@ function R(e) {
     }
   }, [n.id]);
   return (0, a.jsx)(u.FocusRing, {
-    offset: x,
+    offset: M,
     children: (0, a.jsxs)("div", {
       className: v.messageContainer,
       onKeyDown: h,
       ...f,
-      children: [(0, a.jsx)(I.default, {
+      children: [(0, a.jsx)(T.default, {
         className: v.jumpButton,
         onJump: e => c(e, s.id)
       }), (0, a.jsx)(E.default, {
@@ -71,7 +71,7 @@ function R(e) {
   })
 }
 
-function M(e) {
+function x(e) {
   var t, n;
   let {
     channel: l,
@@ -83,41 +83,41 @@ function M(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), I = m.MessageDisplayCompact.useSetting(), x = (0, o.useStateFromStores)([S.default], () => S.default.can(C.Permissions.CREATE_INSTANT_INVITE, s)), M = (0, h.isSpamSupported)(s), b = !1, O = 0 === l.messages.length || i()(l.messages[0].timestamp).isSame(i()(), "day"), y = null !== (n = null === (t = g.default.getUser(p.default.getId())) || void 0 === t ? void 0 : t.hasFlag(C.UserFlags.SPAMMER)) && void 0 !== n && n, L = [];
+  }), T = m.MessageDisplayCompact.useSetting(), M = (0, o.useStateFromStores)([S.default], () => S.default.can(C.Permissions.CREATE_INSTANT_INVITE, s)), x = (0, h.isSpamSupported)(s), L = !1, O = 0 === l.messages.length || i()(l.messages[0].timestamp).isSame(i()(), "day"), b = null !== (n = null === (t = g.default.getUser(p.default.getId())) || void 0 === t ? void 0 : t.hasFlag(C.UserFlags.SPAMMER)) && void 0 !== n && n, y = [];
   if (!l.collapsed) {
     let e = null,
       t = null,
-      n = l.messages.slice(0, T.MAX_SHOWN_MESSAGES);
+      n = l.messages.slice(0, I.MAX_SHOWN_MESSAGES);
     n.forEach(n => {
-      if (!(0, c.default)(n, x)) {
+      if (!(0, c.default)(n, M)) {
         if (!O && (null == e || !e.isSame(n.timestamp, "day"))) {
-          let t = (0, _.dateFormat)(n.timestamp, "LL");
-          L.push((0, a.jsx)(N.default, {
+          let t = (0, N.dateFormat)(n.timestamp, "LL");
+          y.push((0, a.jsx)(_.default, {
             className: v.divider,
             children: t
           }, t)), e = i()(n.timestamp)
         }
         let l = null == t || (0, f.default)(s, t, n);
-        t = n, b = b || (0, h.isSpam)(n), L.push((0, a.jsx)(R, {
+        t = n, L = L || (0, h.isSpam)(n), y.push((0, a.jsx)(R, {
           channel: s,
           message: n,
-          compact: I,
+          compact: T,
           isGroupStart: l,
-          treatSpam: !y && E && (0, h.isSpam)(n) && M,
+          treatSpam: !b && E && (0, h.isSpam)(n) && x,
           gotoChannel: r
         }, n.id))
       }
-    }), l.messages.length >= T.MAX_SHOWN_MESSAGES && L.push((0, a.jsxs)(u.Button, {
+    }), l.messages.length >= I.MAX_SHOWN_MESSAGES && y.push((0, a.jsxs)(u.Button, {
       color: u.Button.Colors.LINK,
       look: u.Button.Looks.LINK,
       onClick: e => r(e, n[n.length - 1].id),
       children: [A.default.Messages.UNREADS_VIEW_CHANNEL, " ›"]
-    }, "view-all")), 0 === L.length && (L = [(0, a.jsx)(u.Spinner, {}, "spinner")])
+    }, "view-all")), 0 === y.length && (y = [(0, a.jsx)(u.Spinner, {}, "spinner")])
   }
-  return b && M && d.default.trackExposure({
+  return L && x && d.default.trackExposure({
     location: "20e3b0_2"
   }), (0, a.jsx)("div", {
     className: v.messages,
-    children: L
+    children: y
   })
 }

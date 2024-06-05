@@ -1,23 +1,23 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var n = a("735250");
 a("470079");
 var r = a("108930"),
-  s = a("86406"),
-  i = a("146068"),
+  i = a("86406"),
+  s = a("146068"),
   l = a("308545"),
   o = a("397697"),
-  c = a("129871"),
-  d = a("206851"),
+  d = a("129871"),
+  c = a("206851"),
   u = a("246933"),
   f = a("995414"),
   m = a("308083");
 
-function h(e) {
+function E(e) {
   let {
     banner: t,
     ...a
@@ -36,7 +36,7 @@ function h(e) {
         ...a
       });
     case m.ClanBannerKind.SEA_FOAM:
-      return (0, n.jsx)(c.default, {
+      return (0, n.jsx)(d.default, {
         ...a
       });
     case m.ClanBannerKind.WARP_TUNNEL:
@@ -44,11 +44,11 @@ function h(e) {
         ...a
       });
     case m.ClanBannerKind.HOUSE:
-      return (0, n.jsx)(i.default, {
+      return (0, n.jsx)(s.default, {
         ...a
       });
     case m.ClanBannerKind.HEIGHTMAP:
-      return (0, n.jsx)(s.default, {
+      return (0, n.jsx)(i.default, {
         ...a
       });
     case m.ClanBannerKind.MESH:
@@ -56,7 +56,7 @@ function h(e) {
         ...a
       });
     case m.ClanBannerKind.SPATTER:
-      return (0, n.jsx)(d.default, {
+      return (0, n.jsx)(c.default, {
         ...a
       })
   }

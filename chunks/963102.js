@@ -6,35 +6,35 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   l = s("470079"),
-  r = s("120356"),
-  n = s.n(r),
+  n = s("120356"),
+  r = s.n(n),
   i = s("425493"),
   o = s("410030"),
-  c = s("984370"),
-  u = s("471731"),
+  u = s("984370"),
+  c = s("471731"),
   d = s("486620"),
   f = s("792125"),
   C = s("335131"),
-  p = s("994896"),
-  m = s("689938"),
-  g = s("424681");
+  E = s("994896"),
+  p = s("689938"),
+  m = s("424681");
 
-function E(e) {
+function g(e) {
   let {
     isLayer: t,
     onClose: s,
-    isFullScreen: r = !1
+    isFullScreen: n = !1
   } = e;
-  return (0, a.jsxs)(c.default, {
-    className: n()(g.headerBar, {
-      [g.fullscreenHeaderBar]: r
+  return (0, a.jsxs)(u.default, {
+    className: r()(m.headerBar, {
+      [m.fullscreenHeaderBar]: n
     }),
-    innerClassname: g.shopLogoContainer,
-    toolbar: r ? null : (0, a.jsx)(l.Fragment, {}),
+    innerClassname: m.shopLogoContainer,
+    toolbar: n ? null : (0, a.jsx)(l.Fragment, {}),
     children: [(0, a.jsx)(d.default, {
-      className: g.shopLogo
-    }), r && (0, a.jsx)(i.default, {
-      className: g.closeIcon,
+      className: m.shopLogo
+    }), n && (0, a.jsx)(i.default, {
+      className: m.closeIcon,
       closeAction: t ? C.closeCollectiblesShop : s,
       keybind: "ESC"
     })]
@@ -45,28 +45,28 @@ function h(e) {
   let {
     isFullScreen: t,
     isLayer: s,
-    onClose: r
+    onClose: n
   } = e, {
     newShopLogoEnabled: d
-  } = (0, p.useCollectiblesCondensedBannersExperiment)({
+  } = (0, E.useCollectiblesCondensedBannersExperiment)({
     location: "CollectiblesShop"
   }), h = (0, o.default)();
-  return d ? (0, a.jsx)(E, {
+  return d ? (0, a.jsx)(g, {
     isLayer: s,
-    onClose: r,
+    onClose: n,
     isFullScreen: t
-  }) : (0, a.jsxs)(c.default, {
-    className: n()((0, f.getThemeClass)(h), g.headerBar, {
-      [g.fullscreenHeaderBar]: t
+  }) : (0, a.jsxs)(u.default, {
+    className: r()((0, f.getThemeClass)(h), m.headerBar, {
+      [m.fullscreenHeaderBar]: t
     }),
     toolbar: t ? null : (0, a.jsx)(l.Fragment, {}),
-    children: [(0, a.jsx)(u.default, {
-      className: g.discordLogo
-    }), (0, a.jsx)(c.default.Title, {
-      children: m.default.Messages.COLLECTIBLES_SHOP
+    children: [(0, a.jsx)(c.default, {
+      className: m.discordLogo
+    }), (0, a.jsx)(u.default.Title, {
+      children: p.default.Messages.COLLECTIBLES_SHOP
     }), t && (0, a.jsx)(i.default, {
-      className: g.closeIcon,
-      closeAction: s ? C.closeCollectiblesShop : r,
+      className: m.closeIcon,
+      closeAction: s ? C.closeCollectiblesShop : n,
       keybind: "ESC"
     })]
   })

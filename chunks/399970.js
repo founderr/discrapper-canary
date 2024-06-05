@@ -15,8 +15,8 @@ var a, n, l = s("735250"),
   E = s("285952"),
   T = s("153124"),
   _ = s("689938"),
-  f = s("737646"),
-  I = s("611273");
+  I = s("737646"),
+  f = s("611273");
 let m = /^\d+$|^$/;
 (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
 
@@ -32,7 +32,7 @@ function N(e) {
     authorizedApplicationId: S.default.testModeApplicationId,
     authorizationError: S.default.error,
     authorizing: S.default.isFetchingAuthorization
-  })), [g, h] = i.useState(null != a ? a : ""), [C, A] = i.useState("8080"), [O, p] = i.useState("localhost"), R = (0, T.useUID)(), x = m.test(g);
+  })), [g, h] = i.useState(null != a ? a : ""), [C, O] = i.useState("8080"), [A, p] = i.useState("localhost"), R = (0, T.useUID)(), x = m.test(g);
   async function M() {
     u.resetError();
     let e = function(e, t, s) {
@@ -43,7 +43,7 @@ function N(e) {
         case "proxy":
           return (0, c.default)(s)
       }
-    }(O, C, g);
+    }(A, C, g);
     null != await u.authorizeAndSetTestModeApplication(g, e) && t()
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
@@ -60,19 +60,19 @@ function N(e) {
       children: [(0, l.jsx)(o.FormTitle, {
         id: R,
         tag: "h1",
-        className: I.marginReset,
+        className: f.marginReset,
         children: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
       }), (0, l.jsx)(o.ModalCloseButton, {
         onClick: t
       })]
     }), (0, l.jsxs)(o.ModalContent, {
-      className: f.modalContent,
+      className: I.modalContent,
       children: [(0, l.jsx)(o.FormText, {
-        className: I.marginBottom20,
+        className: f.marginBottom20,
         type: o.FormText.Types.DESCRIPTION,
         children: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
       }), null == n ? null : (0, l.jsx)(o.FormErrorBlock, {
-        className: I.marginBottom20,
+        className: f.marginBottom20,
         children: n
       }), (0, l.jsx)("form", {
         onSubmit: e => {
@@ -82,7 +82,7 @@ function N(e) {
           direction: E.default.Direction.VERTICAL,
           align: E.default.Align.START,
           children: [(0, l.jsx)(o.FormItem, {
-            className: f.inputWrapper,
+            className: I.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
@@ -95,11 +95,11 @@ function N(e) {
               disabled: N
             })
           }), (0, l.jsx)(o.FormItem, {
-            className: f.inputWrapper,
+            className: I.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
               isDisabled: !x || "" === g,
-              value: O,
+              value: A,
               options: [{
                 value: "localhost",
                 label: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
@@ -114,20 +114,20 @@ function N(e) {
               },
               placeholder: "URL Origin Type"
             })
-          }), "localhost" !== O ? null : (0, l.jsx)(o.FormItem, {
-            className: f.inputWrapper,
+          }), "localhost" !== A ? null : (0, l.jsx)(o.FormItem, {
+            className: I.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
               value: C,
               maxLength: 5,
-              onChange: e => A(e),
+              onChange: e => O(e),
               disabled: N
             })
           }), (0, l.jsx)(o.Button, {
             submitting: N,
             type: "submit",
-            disabled: !x || 0 === g.length || "localhost" === O && 0 === C.length,
+            disabled: !x || 0 === g.length || "localhost" === A && 0 === C.length,
             color: D ? o.Button.Colors.RED : o.Button.Colors.GREEN,
             children: D ? _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]

@@ -17,15 +17,15 @@ var a = s("735250"),
   E = s("231428"),
   T = s("390954"),
   _ = s("89057"),
-  f = s("921801"),
-  I = s("246946"),
+  I = s("921801"),
+  f = s("246946"),
   m = s("594174"),
   N = s("351402"),
   g = s("853872"),
   h = s("78839"),
   C = s("706454"),
-  A = s("726985"),
-  O = s("981631"),
+  O = s("726985"),
+  A = s("981631"),
   p = s("689938"),
   R = s("499937");
 class x extends n.PureComponent {
@@ -35,7 +35,7 @@ class x extends n.PureComponent {
     })
   }
   handleRedemptionRedirect() {
-    c.default.setSection(O.UserSettingsSections.INVENTORY)
+    c.default.setSection(A.UserSettingsSections.INVENTORY)
   }
   render() {
     let {
@@ -53,18 +53,18 @@ class x extends n.PureComponent {
       children: [e && 0 === Object.keys(s).length ? (0, a.jsx)("div", {
         className: R.syncing,
         children: (0, a.jsx)(o.Spinner, {})
-      }) : (0, a.jsx)(f.Subsetting, {
-        setting: A.WebSetting.BILLING_PAYMENT_METHODS,
+      }) : (0, a.jsx)(I.Subsetting, {
+        setting: O.WebSetting.BILLING_PAYMENT_METHODS,
         children: (0, a.jsx)(T.default, {
           paymentSources: s,
           defaultPaymentSourceId: n,
-          premiumSubscriptionPaymentSourceId: null != i && i.status !== O.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
+          premiumSubscriptionPaymentSourceId: null != i && i.status !== A.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
           locale: l,
           removing: r,
           submitting: d
         })
-      }), (0, a.jsx)(f.Subsetting, {
-        setting: A.WebSetting.BILLING_TRANSACTION_HISTORY,
+      }), (0, a.jsx)(I.Subsetting, {
+        setting: O.WebSetting.BILLING_TRANSACTION_HISTORY,
         children: (0, a.jsx)("div", {
           className: R.paymentHistory,
           children: (0, a.jsxs)(o.HeadingLevel, {
@@ -89,12 +89,12 @@ class x extends n.PureComponent {
 }
 
 function M() {
-  let e = (0, r.useStateFromStoresObject)([C.default, N.default, g.default, m.default, I.default, h.default], () => {
+  let e = (0, r.useStateFromStoresObject)([C.default, N.default, g.default, m.default, f.default, h.default], () => {
     let e = h.default.getPremiumTypeSubscription(),
       t = m.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
       locale: C.default.locale,
-      hide: I.default.enabled,
+      hide: f.default.enabled,
       isClaimed: t.isClaimed(),
       isVerified: t.verified,
       premiumSubscription: e,

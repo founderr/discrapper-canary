@@ -13,34 +13,34 @@ var a = s("735250"),
   E = s("457330"),
   T = s("497321"),
   _ = s("23551"),
-  f = s("468026"),
-  I = s("410030"),
+  I = s("468026"),
+  f = s("410030"),
   m = s("726542"),
   N = s("122021"),
   g = s("275759"),
   h = s("231757"),
   C = s("323588"),
-  A = s("605236"),
-  O = s("553795"),
+  O = s("605236"),
+  A = s("553795"),
   p = s("430824"),
   R = s("771845"),
   x = s("246946"),
   M = s("186095"),
   D = s("797717"),
   L = s("346656"),
-  v = s("465670"),
-  P = s("692437"),
+  P = s("465670"),
+  v = s("692437"),
   b = s("507957"),
   U = s("26290"),
   j = s("626135"),
   F = s("63063"),
   G = s("706454"),
-  y = s("349728"),
-  B = s("494620"),
-  k = s("205266"),
+  B = s("349728"),
+  y = s("494620"),
+  V = s("205266"),
   H = s("216153"),
-  w = s("981631"),
-  V = s("856651"),
+  k = s("981631"),
+  w = s("856651"),
   Y = s("921944"),
   W = s("689938"),
   K = s("220301"),
@@ -54,10 +54,10 @@ let Q = e => {
       isJoining: i,
       joinErrorMessage: o,
       showJoinErrorMessage: d
-    } = (0, r.useStateFromStoresObject)([O.default], () => ({
-      isJoining: O.default.isJoining(l.id),
-      joinErrorMessage: "" === O.default.joinErrorMessage(l.id) ? W.default.Messages.ERROR : O.default.joinErrorMessage(l.id),
-      showJoinErrorMessage: void 0 !== O.default.joinErrorMessage(l.id)
+    } = (0, r.useStateFromStoresObject)([A.default], () => ({
+      isJoining: A.default.isJoining(l.id),
+      joinErrorMessage: "" === A.default.joinErrorMessage(l.id) ? W.default.Messages.ERROR : A.default.joinErrorMessage(l.id),
+      showJoinErrorMessage: void 0 !== A.default.joinErrorMessage(l.id)
     }), [l.id]),
     u = null != (0, r.useStateFromStores)([p.default], () => p.default.getGuild(l.guild.id), [l.guild.id]);
   return !u && (n = (0, a.jsx)(c.Button, {
@@ -107,20 +107,20 @@ function q(e) {
       onDisconnect: S,
       account: T,
       theme: _,
-      locale: I
+      locale: f
     } = e,
-    [A, O] = n.useState(T.friendSync),
+    [O, A] = n.useState(T.friendSync),
     [p, R] = n.useState(T.visibility),
     [x, M] = n.useState(T.metadataVisibility),
-    [L, P] = n.useState(T.showActivity),
+    [L, v] = n.useState(T.showActivity),
     [j, G] = n.useState(null),
     [Y, z] = n.useState(null),
-    [q, Z] = n.useState(!1),
-    [X, J] = n.useState([]),
+    [q, X] = n.useState(!1),
+    [Z, J] = n.useState([]),
     $ = (0, N.useLegacyPlatformType)(T.type),
     ee = m.default.get($);
   n.useEffect(() => {
-    O(T.friendSync), R(T.visibility), M(T.metadataVisibility), P(T.showActivity)
+    A(T.friendSync), R(T.visibility), M(T.metadataVisibility), v(T.showActivity)
   }, [T]), n.useEffect(() => {
     !1 !== T.verified && (null != j && (R(j), E.default.setVisibility(T.type, T.id, j), G(null)), null != Y && (M(Y), E.default.setMetadataVisibility(T.type, T.id, Y), z(null)))
   }, [T]);
@@ -135,14 +135,14 @@ function q(e) {
   function es() {
     let e = m.default.get(T.type),
       t = W.default.Messages.DISCONNECT_ACCOUNT_BODY;
-    (0, y.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
-      children: [t, (0, a.jsx)(B.default, {
+    (0, B.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
+      children: [t, (0, a.jsx)(y.default, {
         className: K.infoBox,
         children: W.default.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({
           platformName: e.name
         })
       })]
-    })), (0, c.openModal)(s => (0, a.jsx)(f.default, {
+    })), (0, c.openModal)(s => (0, a.jsx)(I.default, {
       title: W.default.Messages.DISCONNECT_ACCOUNT_TITLE.format({
         name: e.name
       }),
@@ -183,11 +183,11 @@ function q(e) {
   }
 
   function el(e) {
-    O(e), E.default.setFriendSync(T.type, T.id, e)
+    A(e), E.default.setFriendSync(T.type, T.id, e)
   }
 
   function ei(e) {
-    P(e), E.default.setShowActivity(T.type, T.id, e)
+    v(e), E.default.setShowActivity(T.type, T.id, e)
   }
   return (0, a.jsxs)("div", {
     className: K.connection,
@@ -195,9 +195,9 @@ function q(e) {
       var t;
       let s = m.default.get(e.type),
         n = m.default.get($),
-        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[V.MetadataFields.TWITTER_VERIFIED],
+        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[w.MetadataFields.TWITTER_VERIFIED],
         i = null;
-      return s.type === w.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
+      return s.type === k.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
         text: W.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
         children: e => (0, a.jsx)(D.default, {
           ...e,
@@ -239,40 +239,40 @@ function q(e) {
               right: -4
             }
           },
-          children: (0, a.jsx)(v.default, {
+          children: (0, a.jsx)(P.default, {
             width: 16,
             height: 16
           })
         })]
       })
-    }(T), (t = T).twoWayLink ? null : t.type === w.PlatformTypes.XBOX ? (0, a.jsx)("div", {
+    }(T), (t = T).twoWayLink ? null : t.type === k.PlatformTypes.XBOX ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
       children: (0, a.jsx)(H.XboxTwoWayLinkUpsell, {})
-    }) : t.type === w.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
+    }) : t.type === k.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
-      children: (0, a.jsx)(k.PlayStationTwoWayLinkUpsell, {})
+      children: (0, a.jsx)(V.PlayStationTwoWayLinkUpsell, {})
     }) : null, function(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, g.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], I);
+        l = (0, g.getCreatedAtDate)(s[w.MetadataFields.CREATED_AT], f);
       switch (e.type) {
-        case w.PlatformTypes.REDDIT:
+        case k.PlatformTypes.REDDIT:
           n = (0, C.generateRedditMetadataItems)(s, K.metadataItem);
           break;
-        case w.PlatformTypes.STEAM:
+        case k.PlatformTypes.STEAM:
           n = (0, C.generateSteamMetadataItems)(s, K.metadataItem);
           break;
-        case w.PlatformTypes.TWITTER:
+        case k.PlatformTypes.TWITTER:
           n = (0, C.generateTwitterMetadataItems)(s, K.metadataItem);
           break;
-        case w.PlatformTypes.EBAY:
+        case k.PlatformTypes.EBAY:
           n = (0, C.generateEbayMetadataItems)(s, K.metadataItem);
           break;
-        case w.PlatformTypes.PAYPAL:
+        case k.PlatformTypes.PAYPAL:
           n = (0, C.generatePaypalMetadataItems)(s, K.metadataItem);
           break;
-        case w.PlatformTypes.TIKTOK:
+        case k.PlatformTypes.TIKTOK:
           n = (0, C.generateTikTokMetadataItems)(s, K.metadataItem)
       }
       null !== l && (null == n && (n = []), null == n || n.push((0, a.jsx)(c.Text, {
@@ -283,7 +283,7 @@ function q(e) {
           date: l
         })
       }, "member-since")));
-      let i = X.includes(e.id),
+      let i = Z.includes(e.id),
         r = W.default.Messages.REFRESH;
       if (null == n || 0 === n.length) {
         if (!0 !== m.default.get(e.type).hasMetadata) return null;
@@ -294,7 +294,7 @@ function q(e) {
           variant: "text-xs/normal",
           className: K.connectionMetadataUpsellDescription,
           children: W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-            helpdeskUrl: F.default.getArticleURL(w.HelpdeskArticles.CONNECTION_DETAILS)
+            helpdeskUrl: F.default.getArticleURL(k.HelpdeskArticles.CONNECTION_DETAILS)
           })
         }, "label")], r = W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS
       }
@@ -305,9 +305,9 @@ function q(e) {
         submitting: q,
         disabled: i,
         onClick: i ? void 0 : () => {
-          Z(!0), E.default.refresh(e.type, e.id).finally(() => {
+          X(!0), E.default.refresh(e.type, e.id).finally(() => {
             setTimeout(() => {
-              X.push(e.id), J(X), Z(!1)
+              Z.push(e.id), J(Z), X(!1)
             }, 2e3)
           })
         },
@@ -316,16 +316,16 @@ function q(e) {
         className: K.metadataContainer,
         children: n
       })
-    }(T), (s = ee, w.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
+    }(T), (s = ee, k.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: A,
+      value: O,
       onChange: el,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
         children: W.default.Messages.SYNC_FRIENDS
       })
-    })), w.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
+    })), k.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: L,
@@ -390,9 +390,9 @@ function q(e) {
   })
 }
 
-function Z() {
+function X() {
   return n.useEffect(() => () => {
-    (0, A.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
+    (0, O.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
       dismissAction: Y.ContentDismissActionType.AUTO
     })
   }, []), (0, a.jsxs)("div", {
@@ -406,18 +406,18 @@ function Z() {
       variant: "text-xs/normal",
       color: "header-secondary",
       children: W.default.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
-        privacyPolicyUrl: w.MarketingURLs.PRIVACY
+        privacyPolicyUrl: k.MarketingURLs.PRIVACY
       })
-    }), (0, a.jsx)(X, {})]
+    }), (0, a.jsx)(Z, {})]
   })
 }
 
-function X() {
+function Z() {
   function e(e) {
     let t = m.default.get(e);
     (0, h.default)({
       platformType: t.type
-    }), j.default.track(w.AnalyticEvents.ACCOUNT_LINK_STEP, {
+    }), j.default.track(k.AnalyticEvents.ACCOUNT_LINK_STEP, {
       previous_step: "desktop connections",
       current_step: "desktop oauth",
       platform_type: t.type
@@ -455,7 +455,7 @@ function X() {
               type: "button",
               onClick: t,
               "aria-label": W.default.Messages.ADD_NEW_CONNECTION,
-              children: (0, a.jsx)(P.default, {
+              children: (0, a.jsx)(v.default, {
                 height: n,
                 width: n,
                 "aria-label": W.default.Messages.CONNECTIONS_VIEW_MORE
@@ -508,9 +508,9 @@ function J(e) {
 }
 t.default = () => {
   let e = (0, r.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
-    t = (0, r.useStateFromStores)([O.default], () => O.default.isFetching()),
-    s = (0, r.useStateFromStores)([O.default], () => O.default.getAccounts()),
-    l = (0, I.default)();
+    t = (0, r.useStateFromStores)([A.default], () => A.default.isFetching()),
+    s = (0, r.useStateFromStores)([A.default], () => A.default.getAccounts()),
+    l = (0, f.default)();
   (0, r.useStateFromStores)([R.default], () => R.default.getFlattenedGuildIds());
   let i = (0, r.useStateFromStores)([G.default], () => G.default.locale);
   return (n.useEffect(() => {
@@ -519,7 +519,7 @@ t.default = () => {
     className: K.__invalid_connections,
     tag: c.FormTitleTags.H1,
     title: W.default.Messages.CONNECTIONS,
-    children: [(0, a.jsx)(Z, {}), (0, a.jsx)(J, {
+    children: [(0, a.jsx)(X, {}), (0, a.jsx)(J, {
       fetching: t,
       accounts: s,
       theme: l,

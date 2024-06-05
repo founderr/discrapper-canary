@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoveryTagStyle: function() {
-    return C
+    return _
   },
   DiscoveryTags: function() {
     return m
@@ -64,7 +64,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  _ = e => {
+  C = e => {
     let {
       className: t,
       count: n
@@ -83,7 +83,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  C = {
+  _ = {
     DEFAULT: c.tagDefault,
     LIGHT: c.tagLight,
     ALT: c.tagAlt
@@ -93,39 +93,39 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       tags: t,
       onTagClick: n,
       className: l,
-      discoveryTagStyle: r = C.DEFAULT,
+      discoveryTagStyle: r = _.DEFAULT,
       hideOverflow: u = !1,
       guildId: d,
       section: h
     } = e, {
       ref: m,
       width: S
-    } = (0, o.default)(), [p, I] = s.useState(null), T = t.filter(e => !f.includes(e.toLowerCase()));
+    } = (0, o.default)(), [p, I] = s.useState(null), g = t.filter(e => !f.includes(e.toLowerCase()));
     return s.useLayoutEffect(() => {
       if (null == m.current || null == S || 0 === S) return;
       let e = 0,
         t = 0,
         n = S - 40 - 4;
-      for (let a = 0; a < T.length && (t += m.current.children[a].clientWidth + 4, a === T.length - 1 ? !(t > n + 40) : !(t > n)); a++) {
+      for (let a = 0; a < g.length && (t += m.current.children[a].clientWidth + 4, a === g.length - 1 ? !(t > n + 40) : !(t > n)); a++) {
         ;
         e++
       }
-      I(t => e <= T.length ? e : t)
-    }, [S, m, T]), (0, a.jsxs)("ul", {
+      I(t => e <= g.length ? e : t)
+    }, [S, m, g]), (0, a.jsxs)("ul", {
       ref: m,
       className: i()(c.tagContainer, l, {
         [c.invisible]: null == p
       }),
-      children: [T.map((e, t) => (0, a.jsx)(E, {
+      children: [g.map((e, t) => (0, a.jsx)(E, {
         className: r,
         onClick: () => n(e),
         hide: null != p && t >= p,
         text: e
-      }, e)), !u && null != p && p < T.length && (0, a.jsx)(_, {
+      }, e)), !u && null != p && p < g.length && (0, a.jsx)(C, {
         className: r,
         onTagClick: n,
-        tags: T.slice(p),
-        count: T.length - p,
+        tags: g.slice(p),
+        count: g.length - p,
         guildId: d,
         section: h
       })]

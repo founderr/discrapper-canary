@@ -17,11 +17,11 @@ var a = s("735250"),
   E = s("689938"),
   T = s("496166");
 let _ = (0, u.uid)(),
-  f = (0, d.createChannelRecord)({
+  I = (0, d.createChannelRecord)({
     id: "1",
     type: S.ChannelTypes.DM
   }),
-  I = (0, u.uid)();
+  f = (0, u.uid)();
 
 function m(e) {
   let {
@@ -32,11 +32,11 @@ function m(e) {
     placeholder: m,
     currentBio: N,
     disabled: g = !1
-  } = e, [h, C] = n.useState(null != u ? u : N), [A, O] = n.useState((0, r.toRichValue)(h)), p = n.useRef(!1);
+  } = e, [h, C] = n.useState(null != u ? u : N), [O, A] = n.useState((0, r.toRichValue)(h)), p = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
       let e = (0, r.toRichValue)(N);
-      C(N), O(e)
+      C(N), A(e)
     }
   }, [u, N]), (0, a.jsxs)(c.default, {
     title: t,
@@ -45,17 +45,17 @@ function m(e) {
     errors: s,
     disabled: g,
     children: [(0, a.jsx)(o.default, {
-      "aria-describedby": I,
+      "aria-describedby": f,
       "aria-labelledby": _,
       innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
-        t !== h && (C(t), O(s), d(t))
+        t !== h && (C(t), A(s), d(t))
       },
       placeholder: m,
-      channel: f,
+      channel: I,
       textValue: h,
-      richValue: A,
+      richValue: O,
       type: i.ChatInputTypes.PROFILE_BIO_INPUT,
       onBlur: () => {
         p.current = !1
@@ -73,7 +73,7 @@ function m(e) {
         })
       }
     }), (0, a.jsx)(l.HiddenVisually, {
-      id: I,
+      id: f,
       children: E.default.Messages.MAXIMUM_LENGTH.format({
         maxLength: S.BIO_MAX_LENGTH
       })

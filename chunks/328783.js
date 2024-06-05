@@ -13,14 +13,14 @@ var a = s("735250"),
   E = s("981631"),
   T = s("689938"),
   _ = s("101331");
-let f = (0, d.uid)();
+let I = (0, d.uid)();
 t.default = n.memo(function(e) {
   let {
     availableClans: t
   } = e, s = n.useMemo(() => new Map(t.map(e => [e.id, e])), [t]), d = (0, l.useStateFromStores)([o.default], () => {
     var e;
     return (0, c.getUserClanData)(null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
-  }), I = n.useMemo(() => t.reduce((e, t) => {
+  }), f = n.useMemo(() => t.reduce((e, t) => {
     var s;
     return (null === (s = t.clan) || void 0 === s ? void 0 : s.tag) != null && e.push({
       label: t.name,
@@ -45,10 +45,10 @@ t.default = n.memo(function(e) {
     return null == t ? null : (0, a.jsx)(a.Fragment, {
       children: m(t)
     })
-  }, [m]), g = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), h = n.useCallback(e => e === d, [d]), C = n.useCallback(e => e, []), A = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
+  }, [m]), g = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), h = n.useCallback(e => e === d, [d]), C = n.useCallback(e => e, []), O = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
   return (0, a.jsxs)(r.default, {
     title: T.default.Messages.CLANS,
-    titleId: f,
+    titleId: I,
     children: [(0, a.jsx)(i.Text, {
       className: _.subtitle,
       variant: "text-sm/normal",
@@ -57,12 +57,12 @@ t.default = n.memo(function(e) {
       className: _.select,
       optionClassName: _.selectPopout,
       isSelected: h,
-      options: I,
+      options: f,
       select: g,
       renderOptionValue: N,
       renderOptionLabel: m,
       serialize: C,
-      clear: A,
+      clear: O,
       clearable: null != d
     })]
   })

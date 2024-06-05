@@ -28,11 +28,11 @@ var a, l = n("735250"),
   I = n("224184"),
   A = n("484459"),
   v = n("103575"),
-  N = n("314897"),
-  x = n("430824"),
+  x = n("314897"),
+  N = n("430824"),
   M = n("496675"),
-  R = n("979651"),
-  y = n("242315"),
+  y = n("979651"),
+  R = n("242315"),
   L = n("805009"),
   O = n("981631"),
   j = n("927923"),
@@ -76,7 +76,7 @@ function w(e) {
     }),
     children: [(0, l.jsx)("div", {
       className: b.audienceIconContainer,
-      children: (0, l.jsx)(y.default, {
+      children: (0, l.jsx)(R.default, {
         className: b.audienceIcon
       })
     }), (0, l.jsx)(u.Text, {
@@ -92,7 +92,7 @@ class k extends(a = s.PureComponent) {
       channel: e,
       isStreaming: t
     } = this.props;
-    return t && (0, S.canWatchStream)(e, R.default, x.default, M.default, E.default)[0]
+    return t && (0, S.canWatchStream)(e, y.default, N.default, M.default, E.default)[0]
   }
   render() {
     let {
@@ -170,7 +170,7 @@ class k extends(a = s.PureComponent) {
         channelId: t.id,
         guildId: t.guild_id
       };
-      N.default.getId() !== e.id && f.default.selectVoiceChannel(t.id), n ? ((0, _.default)(l), d.default.selectParticipant(l.channelId, (0, g.encodeStreamKey)(l))) : (0, h.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+      x.default.getId() !== e.id && f.default.selectVoiceChannel(t.id), n ? ((0, _.default)(l), d.default.selectParticipant(l.channelId, (0, g.encodeStreamKey)(l))) : (0, h.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
     }), U(this, "handleJoinVoice", () => {
       let {
         user: e,
@@ -258,11 +258,11 @@ class k extends(a = s.PureComponent) {
         serverDeaf: I,
         tabIndex: A,
         embeddedApplication: v,
-        channel: N,
-        hangStatusActivity: x,
+        channel: x,
+        hangStatusActivity: N,
         showHangStatus: M,
-        isSelf: R,
-        application: y
+        isSelf: y,
+        application: R
       } = this.props, {
         userPopoutOpen: O,
         isHoveringHangStatus: P
@@ -294,12 +294,12 @@ class k extends(a = s.PureComponent) {
         onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
-        guildId: N.guild_id,
-        hangStatusActivity: x,
+        guildId: x.guild_id,
+        hangStatusActivity: N,
         showHangStatus: M,
-        isSelf: R,
-        application: y,
-        channelId: N.id
+        isSelf: y,
+        application: R,
+        channelId: x.id
       };
       if (t) {
         var w;

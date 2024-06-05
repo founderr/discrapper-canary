@@ -27,15 +27,15 @@ function T(e) {
     onAvatarChange: n,
     sectionTitle: T,
     changeAvatarButtonText: _,
-    guildId: f,
-    className: I,
+    guildId: I,
+    className: f,
     disabled: m = !1,
     isTryItOutFlow: N = !1,
     forcedDivider: g,
     withHighlight: h = !1
   } = e, C = h ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
-    className: I,
+    className: f,
     title: T,
     errors: s,
     disabled: m,
@@ -47,7 +47,7 @@ function T(e) {
           [S.buttonHighlighted]: h
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, f, N, N ? E : void 0),
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, I, N, N ? E : void 0),
         children: null != _ ? _ : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,
@@ -55,7 +55,7 @@ function T(e) {
         look: i.Button.Looks.LINK,
         size: i.Button.Sizes.SMALL,
         onClick: () => n(null),
-        children: null != f ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
+        children: null != I ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

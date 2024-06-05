@@ -1,59 +1,59 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(i), t.d(i, {
   ChecklistItem: function() {
     return u
   }
 });
-var i = n("735250");
-n("470079");
-var a = n("120356"),
-  o = n.n(a),
-  l = n("692547"),
-  s = n("481060");
-n("651711");
-var r = n("696202"),
-  d = n("551556");
-n("689938");
-var c = n("859888");
-n("347157"), n("177266");
+var l = t("735250");
+t("470079");
+var n = t("120356"),
+  s = t.n(n),
+  r = t("692547"),
+  a = t("481060");
+t("651711");
+var o = t("696202"),
+  d = t("551556");
+t("689938");
+var c = t("859888");
+t("347157"), t("177266");
 let u = e => {
   let {
-    name: t,
-    description: n,
-    checked: a,
+    name: i,
+    description: t,
+    checked: n,
     actionLabel: u,
-    actionHandler: E
-  } = e, _ = null;
-  return _ = a ? (0, i.jsx)(d.default, {
+    actionHandler: f
+  } = e, h = null;
+  return h = n ? (0, l.jsx)(d.default, {
     width: 20,
     height: 20
-  }) : (0, i.jsx)(r.default, {
-    color: l.default.unsafe_rawColors.RED_400.css,
+  }) : (0, l.jsx)(o.default, {
+    color: r.default.unsafe_rawColors.RED_400.css,
     width: 20,
     height: 20
-  }), (0, i.jsxs)("div", {
+  }), (0, l.jsxs)("div", {
     className: c.checklistItem,
-    children: [(0, i.jsx)("div", {
+    children: [(0, l.jsx)("div", {
       className: c.checklistIcon,
-      children: _
-    }), (0, i.jsxs)("div", {
-      className: o()(c.__invalid_checklistText, a && c.ineligibleRow),
-      children: [(0, i.jsx)(s.Heading, {
+      children: h
+    }), (0, l.jsxs)("div", {
+      className: s()(c.__invalid_checklistText, n && c.ineligibleRow),
+      children: [(0, l.jsx)(a.Heading, {
         variant: "heading-md/semibold",
         className: c.checklistItemName,
-        children: t
-      }), (0, i.jsx)(s.Text, {
+        children: i
+      }), (0, l.jsx)(a.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
-        children: n
+        children: t
       })]
-    }), null != u && (0, i.jsx)("div", {
+    }), null != u && (0, l.jsx)("div", {
       className: c.eligibilityActionContainer,
-      children: (0, i.jsx)(s.Button, {
+      children: (0, l.jsx)(a.Button, {
         className: c.eligibilityActionButton,
-        look: s.ButtonLooks.OUTLINED,
-        color: s.ButtonColors.PRIMARY,
-        onClick: E,
+        look: a.ButtonLooks.OUTLINED,
+        color: a.ButtonColors.PRIMARY,
+        onClick: f,
         grow: !0,
         children: u
       })

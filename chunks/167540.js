@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return I
   }
 }), s("47120");
 var a = s("735250"),
@@ -31,7 +31,7 @@ function _() {
   })
 }
 
-function f() {
+function I() {
   let e = (0, r.useStateFromStores)([d.default], () => d.default.supports(S.Features.VIDEO)),
     [t, s] = n.useState(!1);
   return (0, a.jsxs)("div", {

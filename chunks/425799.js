@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("594174"),
   T = s("590259"),
   _ = s("301733"),
-  f = s("334428"),
-  I = s("844593");
+  I = s("334428"),
+  f = s("844593");
 
 function m() {
   let e = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
@@ -26,14 +26,14 @@ function m() {
     [m, N] = n.useState([]),
     g = n.useRef(null),
     [h, C] = n.useState(!1),
-    [A, O] = n.useState(!1),
+    [O, A] = n.useState(!1),
     [p, R] = n.useState(!1),
     x = (0, r.isThemeDark)((0, u.default)());
   return null == e ? (0, a.jsx)("div", {}) : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: _.root,
       children: [(0, a.jsx)("img", {
-        src: h ? f : I,
+        src: h ? I : f,
         alt: "",
         width: 450
       }), t && (0, a.jsx)(S.ProfileEffect, {
@@ -48,7 +48,7 @@ function m() {
         },
         profileEffectId: "debug"
       })]
-    }), A && (0, a.jsxs)("div", {
+    }), O && (0, a.jsxs)("div", {
       className: _.userProfilePreview,
       children: [(0, a.jsx)(c.default, {
         location: "ProfileEffectsPreviewToolPage",
@@ -88,10 +88,10 @@ function m() {
         children: "Show User Profile"
       }), (0, a.jsx)("input", {
         type: "checkbox",
-        checked: A,
+        checked: O,
         className: _.checkBox,
         onChange: () => {
-          O(!A)
+          A(!O)
         }
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/normal",

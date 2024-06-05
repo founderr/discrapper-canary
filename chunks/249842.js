@@ -1,29 +1,29 @@
 "use strict";
-a.r(l), a.d(l, {
+n.r(t), n.d(t, {
   fetchGuildForPopout: function() {
-    return n
+    return i
   }
 });
-var s = a("544891"),
-  t = a("570140"),
-  i = a("981631");
-async function n(e) {
-  t.default.dispatch({
+var l = n("544891"),
+  a = n("570140"),
+  s = n("981631");
+async function i(e) {
+  a.default.dispatch({
     type: "GUILD_POPOUT_FETCH_START",
     guildId: e
   });
   try {
-    let l = await s.HTTP.get({
-      url: i.Endpoints.GUILD_PREVIEW(e),
+    let t = await l.HTTP.get({
+      url: s.Endpoints.GUILD_PREVIEW(e),
       oldFormErrors: !0
     });
-    t.default.dispatch({
+    a.default.dispatch({
       type: "GUILD_POPOUT_FETCH_SUCCESS",
       guildId: e,
-      guild: l.body
+      guild: t.body
     })
-  } catch (l) {
-    t.default.dispatch({
+  } catch (t) {
+    a.default.dispatch({
       type: "GUILD_POPOUT_FETCH_FAILURE",
       guildId: e
     })

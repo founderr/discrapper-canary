@@ -12,9 +12,9 @@ var a = n("735250"),
   f = n("613311"),
   E = n("601564"),
   h = n("981631"),
-  _ = n("597589");
+  C = n("597589");
 
-function C(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,7 +31,7 @@ class m extends s.Component {
       page: h.AnalyticsPages.CHANNEL_STORE_LISTING,
       root: !0,
       children: (0, a.jsx)("div", {
-        className: _.applicationStore,
+        className: C.applicationStore,
         children: (0, a.jsx)(l.Route, {
           path: "*",
           render: this.renderApplicationListing
@@ -40,13 +40,13 @@ class m extends s.Component {
     }) : null
   }
   constructor(...e) {
-    super(...e), C(this, "fetchStoreListing", e => {
+    super(...e), _(this, "fetchStoreListing", e => {
       let {
         channel: t,
         inputSkuId: n
       } = this.props;
       return null != e ? r.default.fetchChannelStoreListing(t.id, e) : null != n ? r.default.fetchChannelStoreListing(t.id, n) : r.default.fetchChannelStoreListing(t.id)
-    }), C(this, "renderApplicationListing", e => {
+    }), _(this, "renderApplicationListing", e => {
       let {
         location: t
       } = e, {

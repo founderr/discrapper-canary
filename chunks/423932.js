@@ -1,20 +1,20 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return n
+    return a
   }
 });
-var a = r("735250");
-r("470079");
-var i = r("481060"),
-  l = r("468436");
+var i = n("735250");
+n("470079");
+var o = n("481060"),
+  l = n("468436");
 
-function n(e) {
-  (0, i.openModalLazy)(async () => {
+function a(e) {
+  (0, o.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([r.e("99387"), r.e("76815")]).then(r.bind(r, "336977"));
-    return t => (0, a.jsx)(e, {
+    } = await Promise.all([n.e("99387"), n.e("76815")]).then(n.bind(n, "336977"));
+    return t => (0, i.jsx)(e, {
       ...t
     })
   }, {

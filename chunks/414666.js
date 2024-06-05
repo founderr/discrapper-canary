@@ -26,7 +26,7 @@ a.default = r.memo(function(e) {
     activityName: a,
     activityCharacter: l = 0,
     showExampleButton: t = !1
-  } = e, [i, s] = r.useState(0), [S, A] = (0, u.useSpring)(() => ({
+  } = e, [i, s] = r.useState(0), [S, I] = (0, u.useSpring)(() => ({
     from: {
       rotate: "0deg"
     },
@@ -34,23 +34,23 @@ a.default = r.memo(function(e) {
       tension: 1e3,
       friction: 5
     }
-  })), I = r.useRef({
+  })), A = r.useRef({
     seconds: i,
     jitter: async () => {
       for (;;) {
         var e;
-        let a = (e = I.current.seconds, c.default.useReducedMotion ? 0 : Math.min(10, (e -= 5399) / 300 * 10));
-        A({
+        let a = (e = A.current.seconds, c.default.useReducedMotion ? 0 : Math.min(10, (e -= 5399) / 300 * 10));
+        I({
           rotate: "-".concat(a, "deg")
-        }), await new Promise(e => setTimeout(e, 80)), A({
+        }), await new Promise(e => setTimeout(e, 80)), I({
           rotate: "".concat(a, "deg")
         }), await new Promise(e => setTimeout(e, 80))
       }
     }
   });
-  return r.useEffect(() => void(I.current.seconds = i)), r.useEffect(() => {
+  return r.useEffect(() => void(A.current.seconds = i)), r.useEffect(() => {
     let e = setInterval(() => {
-      s(e => (5399 === e && I.current.jitter(), ++e))
+      s(e => (5399 === e && A.current.jitter(), ++e))
     }, 1e3);
     return () => clearInterval(e)
   }, []), (0, n.jsxs)(f.default, {

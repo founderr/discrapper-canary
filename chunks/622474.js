@@ -13,16 +13,16 @@ var a = s("735250"),
   E = s("37234"),
   T = s("960359"),
   _ = s("853197"),
-  f = s("430492"),
-  I = s("688465"),
+  I = s("430492"),
+  f = s("688465"),
   m = s("594174"),
   N = s("55935"),
   g = s("702512"),
   h = s("689938"),
   C = s("193225");
-let A = "YYYY-MM-DD HH:mm";
+let O = "YYYY-MM-DD HH:mm";
 
-function O(e) {
+function A(e) {
   let {
     drop: t,
     enrolled: s,
@@ -39,14 +39,14 @@ function O(e) {
   }, []);
   let {
     title: u,
-    endDate: f,
-    dropsQuestId: I,
+    endDate: I,
+    dropsQuestId: f,
     assets: m,
     articleUrl: N
-  } = t, g = (0, _.getDropByQuestId)(I);
+  } = t, g = (0, _.getDropByQuestId)(f);
   if (null == g) return null;
-  let A = () => {
-    (0, T.enrollDropsUser)(I).then(() => {
+  let O = () => {
+    (0, T.enrollDropsUser)(f).then(() => {
       S.default.wait(async () => {
         await (0, T.fetchDropsUserStatus)()
       })
@@ -76,7 +76,7 @@ function O(e) {
               color: "text-normal",
               className: C.availableUntil,
               children: h.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
-                endDate: o()(f, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
+                endDate: o()(I, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
               })
             })]
           })]
@@ -87,7 +87,7 @@ function O(e) {
             className: C.promotionCardButton,
             color: c.Button.Colors.BRAND,
             size: c.Button.Sizes.SMALL,
-            onClick: A,
+            onClick: O,
             disabled: s && !l,
             ...e,
             children: s ? h.default.Messages.REDEEM : h.default.Messages.DROPS_GIFT_INVENTORY_ENROLL
@@ -161,7 +161,7 @@ function p(e) {
         })]
       })
     }), r && (0, a.jsx)(c.Modal, {
-      renderModal: e => (0, a.jsx)(f.default, {
+      renderModal: e => (0, a.jsx)(I.default, {
         ...e,
         onClose: _,
         code: s,
@@ -203,14 +203,14 @@ t.default = function(e) {
         autoTrackExposure: !1
       }).dropsEnabled) continue;
     d = !0;
-    let T = o()(t.endDate, A),
-      f = o()();
-    c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible ? f < T && l.push({
+    let T = o()(t.endDate, O),
+      I = o()();
+    c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible ? I < T && l.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
       experiment: S
-    }) : (null != s.code || null != s.completed_at) && f < o()(t.finalClaimDate, A) && i.push({
+    }) : (null != s.code || null != s.completed_at) && I < o()(t.finalClaimDate, O) && i.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
@@ -222,7 +222,7 @@ t.default = function(e) {
     children: [(0, a.jsx)(c.Heading, {
       variant: "heading-md/semibold",
       children: h.default.Messages.DROPS_GIFT_INVENTORY_TITLE
-    }), (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(f.default, {
       className: C.betaTagIcon
     })]
   });
@@ -243,7 +243,7 @@ t.default = function(e) {
         s = null != e.dropsStatus.enrolled_at,
         n = null != e.dropsStatus.completed_at;
       return null != t ? (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(O, {
+        children: [(0, a.jsx)(A, {
           drop: {
             ...t
           },

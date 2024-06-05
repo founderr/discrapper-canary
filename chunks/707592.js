@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return u
   },
   TextInputFieldBody: function() {
-    return d
+    return c
   },
   TextInputFormField: function() {
     return f
@@ -13,29 +13,29 @@ a.r(t), a.d(t, {
 var n = a("735250");
 a("470079");
 var r = a("120356"),
-  s = a.n(r),
-  i = a("481060"),
+  i = a.n(r),
+  s = a("481060"),
   l = a("489813"),
   o = a("592286"),
-  c = a("303765");
+  d = a("303765");
 
-function d(e) {
+function c(e) {
   let {
     value: t,
     placeholder: a,
     onChange: r,
     disabled: l,
-    autofocus: d,
+    autofocus: c,
     className: u
   } = e;
-  return (0, n.jsx)(i.TextInput, {
-    inputClassName: s()(c.textInputFieldBodyInput, u),
+  return (0, n.jsx)(s.TextInput, {
+    inputClassName: i()(d.textInputFieldBodyInput, u),
     maxLength: o.MAX_TEXT_RESPONSE_LENGTH,
     value: null != t ? t : "",
     placeholder: a,
     onChange: r,
     disabled: l,
-    autoFocus: d
+    autoFocus: c
   })
 }
 
@@ -45,8 +45,8 @@ function u(e) {
   } = e;
   return (0, n.jsx)(l.QuestionRenderer, {
     title: t.label,
-    children: (0, n.jsx)(i.TextArea, {
-      className: s()(c.textInputFieldBodyInput, c.fieldBackground),
+    children: (0, n.jsx)(s.TextArea, {
+      className: i()(d.textInputFieldBodyInput, d.fieldBackground),
       value: t.response,
       disabled: !0,
       autoFocus: !0,
@@ -63,8 +63,8 @@ function f(e) {
   } = e;
   return (0, n.jsx)(l.QuestionRenderer, {
     title: t.label,
-    children: (0, n.jsx)(d, {
-      className: c.fieldBackground,
+    children: (0, n.jsx)(c, {
+      className: d.fieldBackground,
       onChange: r,
       value: t.response,
       autofocus: a

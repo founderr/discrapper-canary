@@ -6,13 +6,13 @@ a.r(t), a.d(t, {
 }), a("653041"), a("47120");
 var n = a("470079"),
   r = a("392711"),
-  s = a.n(r),
-  i = a("442837"),
+  i = a.n(r),
+  s = a("442837"),
   l = a("846519"),
   o = a("224706"),
-  c = a("669764");
+  d = a("669764");
 
-function d(e, t, a) {
+function c(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -28,12 +28,12 @@ let u = new class e {
     let e = [];
     this._pending.forEach(t => {
       this._fetched.add(t), e.push(t)
-    }), s().chunk(e, 20).forEach(e => {
+    }), i().chunk(e, 20).forEach(e => {
       o.default.getDetectableGamesSupplemental(e)
     })
   }
   constructor() {
-    d(this, "_fetched", new Set), d(this, "_pending", new Set), d(this, "_flushHandler", new l.DelayedCall(0, () => this._flush()))
+    c(this, "_fetched", new Set), c(this, "_pending", new Set), c(this, "_flushHandler", new l.DelayedCall(0, () => this._flush()))
   }
 };
 
@@ -45,10 +45,10 @@ function f(e, t) {
     width: t.coverImageWidth,
     height: t.coverImageHeight
   } : void 0, [t]);
-  return (0, i.useStateFromStoresObject)([c.default], () => ({
-    isFetching: c.default.isFetching(e),
-    localizedName: c.default.getLocalizedName(e),
-    themes: c.default.getThemes(e),
-    coverImageUrl: c.default.getCoverImageUrl(e, a)
+  return (0, s.useStateFromStoresObject)([d.default], () => ({
+    isFetching: d.default.isFetching(e),
+    localizedName: d.default.getLocalizedName(e),
+    themes: d.default.getThemes(e),
+    coverImageUrl: d.default.getCoverImageUrl(e, a)
   }))
 }

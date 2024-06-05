@@ -26,17 +26,17 @@ var a = n("735250"),
   I = n("360048"),
   A = n("151827"),
   v = n("626135"),
-  N = n("768581"),
-  x = n("585483"),
+  x = n("768581"),
+  N = n("585483"),
   M = n("233870"),
-  R = n("51144"),
-  y = n("998502"),
+  y = n("51144"),
+  R = n("998502"),
   L = n("276264"),
   O = n("981631"),
   j = n("689938"),
   P = n("895294"),
   D = n("67431");
-let b = y.default.getEnableHardwareAcceleration();
+let b = R.default.getEnableHardwareAcceleration();
 
 function U(e) {
   let {
@@ -70,11 +70,11 @@ function U(e) {
     position: s.isMobile ? "window_center" : "left",
     spacing: 16,
     onShiftClick: () => {
-      let e = "@".concat(R.default.getUserTag(t, {
+      let e = "@".concat(y.default.getUserTag(t, {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
-      x.ComponentDispatch.dispatchToLastSubscribed(O.ComponentActions.INSERT_TEXT, {
+      N.ComponentDispatch.dispatchToLastSubscribed(O.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), u.default.startTyping(l.id)
@@ -114,7 +114,7 @@ function F(e) {
         integration: i
       })
     })
-  }, [i, u]), c = i.application.bot, f = N.default.getApplicationIconURL({
+  }, [i, u]), c = i.application.bot, f = x.default.getApplicationIconURL({
     id: i.application.id,
     icon: i.application.icon,
     bot: null === (t = i.application) || void 0 === t ? void 0 : t.bot,
@@ -231,10 +231,10 @@ function w(e) {
     location: "private_channel_recipients"
   });
   let {
-    installedIntegrations: N,
-    applicationsShelf: x,
-    fetched: R,
-    appsInGDMEnabled: y,
+    installedIntegrations: x,
+    applicationsShelf: N,
+    fetched: y,
+    appsInGDMEnabled: R,
     availableApplications: L
   } = (0, f.usePrivateChannelIntegrationState)({
     channelId: t.id
@@ -272,11 +272,11 @@ function w(e) {
           activities: e.activities,
           lastOnlineTimestamp: e.lastOnlineTimestamp,
           channel: t
-        }, e.user.id)), y && (N.length > 0 || R && x.length > 0) && (0, a.jsxs)(a.Fragment, {
+        }, e.user.id)), R && (x.length > 0 || y && N.length > 0) && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(A.default, {
             className: D.membersGroup,
-            children: "".concat(j.default.Messages.APPS, "—").concat(N.length)
-          }), N.map(e => (0, a.jsx)(F, {
+            children: "".concat(j.default.Messages.APPS, "—").concat(x.length)
+          }), x.map(e => (0, a.jsx)(F, {
             integration: e,
             channel: t
           }, e.application.id)), L.length > 0 && (0, a.jsx)(I.default, {

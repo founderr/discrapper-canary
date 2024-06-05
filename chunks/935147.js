@@ -17,45 +17,45 @@ var a = s("735250"),
   E = s("104494"),
   T = s("639119"),
   _ = s("165583"),
-  f = s("197115"),
-  I = s("350327"),
+  I = s("197115"),
+  f = s("350327"),
   m = s("318661"),
   N = s("996073"),
   g = s("25990"),
   h = s("466111"),
   C = s("626135"),
-  A = s("74538"),
-  O = s("589266"),
+  O = s("74538"),
+  A = s("589266"),
   p = s("296810"),
   R = s("433411"),
   x = s("532432"),
   M = s("504983"),
   D = s("134795"),
   L = s("513901"),
-  v = s("451392"),
-  P = s("981631"),
+  P = s("451392"),
+  v = s("981631"),
   b = s("474936"),
   U = s("526761"),
   j = s("689938"),
   F = s("764277");
 
 function G(e) {
-  var t, G, y;
+  var t, G, B;
   let {
-    user: B
+    user: y
   } = e, {
-    reducedMotion: k
-  } = n.useContext(i.AccessibilityPreferencesContext), H = A.default.isPremium(B), {
-    pendingAvatar: w,
-    pendingBanner: V,
+    reducedMotion: V
+  } = n.useContext(i.AccessibilityPreferencesContext), H = O.default.isPremium(y), {
+    pendingAvatar: k,
+    pendingBanner: w,
     pendingThemeColors: Y,
     pendingPronouns: W,
     pendingBio: K,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
     tryItOutBanner: q,
-    tryItOutAvatarDecoration: Z,
-    tryItOutProfileEffectId: X
+    tryItOutAvatarDecoration: X,
+    tryItOutProfileEffectId: Z
   } = (0, l.useStateFromStoresObject)([g.default], () => {
     let e = g.default.getAllPending(),
       t = g.default.getErrors(),
@@ -65,23 +65,23 @@ function G(e) {
       ...s,
       errors: t
     }
-  }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
+  }), J = (0, c.default)(X), $ = (0, S.default)(Z), ee = n.useRef(null);
   (0, N.default)(ee, U.ProfileCustomizationScrollPositions.TRY_IT_OUT);
-  let et = (0, m.default)(B.id),
+  let et = (0, m.default)(y.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
     {
       analyticsLocations: ea,
       sourceAnalyticsLocations: en
     } = (0, u.default)(d.default.USER_SETTINGS_TRY_OUT_PREMIUM);
   n.useEffect(() => {
-    C.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    C.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: b.PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
       location: {
-        page: P.AnalyticsPages.USER_SETTINGS
+        page: v.AnalyticsPages.USER_SETTINGS
       },
       location_stack: en
     })
-  }, [en, B]);
+  }, [en, y]);
   let el = (null === (G = (0, T.usePremiumTrialOffer)()) || void 0 === G ? void 0 : null === (t = G.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === b.PremiumSubscriptionSKUs.TIER_2,
     ei = (0, E.usePremiumDiscountOffer)(),
     er = (0, E.discountOfferHasTier)(ei, b.PremiumSubscriptionSKUs.TIER_2),
@@ -107,19 +107,19 @@ function G(e) {
             className: F.premiumIcon
           }), j.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
-        profilePreview: (0, a.jsx)(O.default, {
+        profilePreview: (0, a.jsx)(A.default, {
           location: "TryOutPremiumSection",
-          user: B,
-          onAvatarChange: I.setTryItOutAvatar,
-          onBannerChange: I.setTryItOutBanner,
+          user: y,
+          onAvatarChange: f.setTryItOutAvatar,
+          onBannerChange: f.setTryItOutBanner,
           pendingPronouns: W,
           pendingBio: K,
-          pendingBanner: null !== (y = null != q ? q : V) && void 0 !== y ? y : s("466045"),
-          pendingAvatar: null != Q ? Q : w,
+          pendingBanner: null !== (B = null != q ? q : w) && void 0 !== B ? B : s("466045"),
+          pendingAvatar: null != Q ? Q : k,
           pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,
           pendingProfileEffectId: $,
-          avatarClassName: null != Q || null != w || k.enabled ? void 0 : F.spinningAvatar,
+          avatarClassName: null != Q || null != k || V.enabled ? void 0 : F.spinningAvatar,
           canUsePremiumCustomization: !0,
           isTryItOutFlow: !0,
           hideExampleButton: !0,
@@ -136,46 +136,46 @@ function G(e) {
               variant: "text-sm/normal",
               children: j.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_DESCRIPTION
             })]
-          }), (0, a.jsx)(v.default, {
+          }), (0, a.jsx)(P.default, {
             className: F.customizationSection,
-            user: B,
-            pendingAvatar: null != Q ? Q : w,
+            user: y,
+            pendingAvatar: null != Q ? Q : k,
             pendingColors: null != z ? z : Y,
-            onThemeColorsChange: I.setTryItOutThemeColors,
+            onThemeColorsChange: f.setTryItOutThemeColors,
             showPremiumIcon: !1,
             preventDisabled: !0
           }), (0, a.jsx)(D.default, {
             className: F.customizationSection,
             isTryItOutFlow: !0,
             showRemoveBannerButton: null != q,
-            onBannerChange: I.setTryItOutBanner,
+            onBannerChange: f.setTryItOutBanner,
             showPremiumIcon: !1
           }), (0, a.jsx)(x.default, {
             className: F.customizationSection,
             isTryItOutFlow: !0,
-            onAvatarChange: I.setTryItOutAvatar,
+            onAvatarChange: f.setTryItOutAvatar,
             showRemoveAvatarButton: !1,
             changeAvatarButtonText: j.default.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
             sectionTitle: j.default.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
           }), (0, a.jsx)(R.default, {
             isTryItOutFlow: !0,
             className: F.customizationSection,
-            user: B,
+            user: y,
             sectionTitle: j.default.Messages.USER_SETTINGS_AVATAR_DECORATION
           }, "decoration"), (0, a.jsx)(L.default, {
             className: F.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: $,
-            user: B,
+            user: y,
             sectionTitle: j.default.Messages.USER_SETTINGS_PROFILE_EFFECT
           }, "effect"), !el && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(i.Text, {
               variant: "text-sm/normal",
               className: F.premiumPerksListTitle,
               children: j.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
-            }), (0, a.jsx)(f.default, {
+            }), (0, a.jsx)(I.default, {
               onSubscribeModalClose: e => {
-                e && ((0, r.setPendingAvatar)(Q), (0, I.setPendingBanner)(q), (0, I.setPendingThemeColors)(z))
+                e && ((0, r.setPendingAvatar)(Q), (0, f.setPendingBanner)(q), (0, f.setPendingThemeColors)(z))
               },
               subscriptionTier: b.PremiumSubscriptionSKUs.TIER_2,
               className: F.premiumSubscribeButton,

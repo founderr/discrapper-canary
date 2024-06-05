@@ -27,9 +27,9 @@ function f(e) {
       } = e;
       return t.id
     }),
-    _ = 1 === f.length && 1 === n.length,
-    C = n.length - f.length > 0;
-  return (_ || t) && !C && 0 !== h.length ? (0, a.jsx)(l.MenuItem, {
+    C = 1 === f.length && 1 === n.length,
+    _ = n.length - f.length > 0;
+  return (C || t) && !_ && 0 !== h.length ? (0, a.jsx)(l.MenuItem, {
     id: "message",
     action: function() {
       i.default.openPrivateChannel(h).then(t => r.default.trackWithMetadata(d.AnalyticEvents.ACTIVITY_FEED_DM_VISITED, {

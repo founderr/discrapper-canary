@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s("47120");
-var a = s("735250"),
-  r = s("470079"),
-  i = s("558381"),
-  n = s("499371"),
-  l = s("689938"),
-  o = s("424330");
+var n = s("735250"),
+  a = s("470079"),
+  r = s("558381"),
+  l = s("499371"),
+  i = s("689938"),
+  u = s("424330");
 
-function u(e, t, s) {
+function o(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -15,32 +15,32 @@ function u(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class d extends r.PureComponent {
+class d extends a.PureComponent {
   render() {
     let {
       game: {
         name: e
       }
     } = this.props;
-    return (0, a.jsx)("div", {
-      className: o.matureListing,
-      children: (0, a.jsx)(n.default, {
+    return (0, n.jsx)("div", {
+      className: u.matureListing,
+      children: (0, n.jsx)(l.default, {
         onAgree: this.handleAgree,
         onDisagree: this.handleDisagree,
-        title: l.default.Messages.MATURE_LISTING_TITLE.format({
+        title: i.default.Messages.MATURE_LISTING_TITLE.format({
           name: e
         }),
-        description: l.default.Messages.MATURE_LISTING_DESCRIPTION,
-        agreement: l.default.Messages.MATURE_LISTING_ACCEPT,
-        disagreement: l.default.Messages.MATURE_LISTING_DECLINE
+        description: i.default.Messages.MATURE_LISTING_DESCRIPTION,
+        agreement: i.default.Messages.MATURE_LISTING_ACCEPT,
+        disagreement: i.default.Messages.MATURE_LISTING_DECLINE
       })
     })
   }
   constructor(...e) {
-    super(...e), u(this, "handleDisagree", () => {
-      (0, i.matureDisagree)()
-    }), u(this, "handleAgree", () => {
-      (0, i.matureAgree)()
+    super(...e), o(this, "handleDisagree", () => {
+      (0, r.matureDisagree)()
+    }), o(this, "handleAgree", () => {
+      (0, r.matureAgree)()
     })
   }
 }

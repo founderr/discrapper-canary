@@ -16,15 +16,15 @@ t.default = function(e) {
     children: l,
     user: E,
     channel: h,
-    onClick: _,
-    isFocused: C,
+    onClick: C,
+    isFocused: _,
     isActive: m,
     onOtherHover: S,
     className: p
-  } = e, [I, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
-    T(!0), C && !m && !g && (null == S || S())
+  } = e, [I, g] = s.useState(!1), [T, A] = s.useState(!1), N = () => {
+    g(!0), _ && !m && !T && (null == S || S())
   }, v = () => {
-    T(!1)
+    g(!1)
   }, R = (e, t) => {
     null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
@@ -49,19 +49,19 @@ t.default = function(e) {
       },
       children: (0, a.jsx)(r.default.div, {
         className: i()(f.messageRequestItem, p, {
-          [f.active]: m || g,
+          [f.active]: m || T,
           [f.firstItem]: 0 === t
         }),
         onContextMenu: e => R(e, E),
         onMouseEnter: N,
         onMouseLeave: v,
-        onClick: null != _ ? _ : void 0,
+        onClick: null != C ? C : void 0,
         style: {
           LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,
           opacity: 1
         },
         ...e,
-        children: l(I || m || g)
+        children: l(I || m || T)
       })
     })
   })

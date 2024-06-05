@@ -1,41 +1,41 @@
 "use strict";
 s.r(t), s.d(t, {
   CollectiblesShopHeaderCarousel: function() {
-    return m
+    return p
   }
 }), s("47120");
 var a = s("735250"),
   l = s("470079"),
-  r = s("442837"),
-  n = s("481060"),
+  n = s("442837"),
+  r = s("481060"),
   i = s("607070"),
   o = s("44315"),
-  c = s("810090"),
-  u = s("530915"),
+  u = s("810090"),
+  c = s("530915"),
   d = s("948625"),
   f = s("981631"),
   C = s("139557");
 
-function p(e) {
-  var t, s, r;
+function E(e) {
+  var t, s, n;
   let {
     config: i,
-    handleScrollToCategory: u,
-    text: p,
-    reducedMotion: m = !1
-  } = e, g = l.useMemo(() => (0, d.getOverflowImages)(i, m), [i, m]), E = l.useCallback(() => {
+    handleScrollToCategory: c,
+    text: E,
+    reducedMotion: p = !1
+  } = e, m = l.useMemo(() => (0, d.getOverflowImages)(i, p), [i, p]), g = l.useCallback(() => {
     var e;
-    (null === (e = i.cta) || void 0 === e ? void 0 : e.categorySkuId) != null && u(i.cta.categorySkuId)
-  }, [null === (t = i.cta) || void 0 === t ? void 0 : t.categorySkuId, u]);
+    (null === (e = i.cta) || void 0 === e ? void 0 : e.categorySkuId) != null && c(i.cta.categorySkuId)
+  }, [null === (t = i.cta) || void 0 === t ? void 0 : t.categorySkuId, c]);
   return (0, a.jsxs)("div", {
     className: C.headerContainer,
     children: [(0, a.jsxs)("div", {
       className: C.headerInnerContainer,
-      children: [null == i.backgroundVideoSrc || m ? (0, a.jsx)("img", {
+      children: [null == i.backgroundVideoSrc || p ? (0, a.jsx)("img", {
         src: i.backgroundStaticSrc,
         alt: "",
         className: C.headerAsset
-      }) : (0, a.jsx)(c.default, {
+      }) : (0, a.jsx)(u.default, {
         autoPlay: !0,
         muted: !0,
         loop: !0,
@@ -56,7 +56,7 @@ function p(e) {
           style: {
             visibility: null != i.badge ? "visible" : "hidden"
           },
-          children: null != i.badge && (0, a.jsx)(n.Text, {
+          children: null != i.badge && (0, a.jsx)(r.Text, {
             variant: "text-xs/bold",
             className: C.badge,
             children: i.badge.label()
@@ -67,19 +67,19 @@ function p(e) {
             src: i.logoSrc,
             alt: "",
             className: C.logo
-          }), (null != i.description || null != p) && (0, a.jsx)(n.Text, {
+          }), (null != i.description || null != E) && (0, a.jsx)(r.Text, {
             variant: "text-md/medium",
             color: "currentColor",
-            children: null !== (r = i.description) && void 0 !== r ? r : p
+            children: null !== (n = i.description) && void 0 !== n ? n : E
           })]
         }), (0, a.jsx)("div", {
-          children: null != i.cta && (0, a.jsx)(n.Button, {
-            onClick: E,
+          children: null != i.cta && (0, a.jsx)(r.Button, {
+            onClick: g,
             children: i.cta.label()
           })
         })]
       })]
-    }), g.map((e, t) => (0, a.jsx)("img", {
+    }), m.map((e, t) => (0, a.jsx)("img", {
       src: e,
       className: C.overflowImage,
       alt: ""
@@ -87,32 +87,32 @@ function p(e) {
   })
 }
 
-function m(e) {
+function p(e) {
   let {
     categories: t,
     handleScrollToCategory: s
-  } = e, n = (0, r.useStateFromStores)([i.default], () => i.default.useReducedMotion), o = l.useMemo(() => {
+  } = e, r = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion), o = l.useMemo(() => {
     let e = {};
     for (let s of t) e[s.skuId] = s.summary;
     return e
-  }, [t]), c = l.useCallback(e => {
+  }, [t]), u = l.useCallback(e => {
     var t;
     let l = null === (t = e.cta) || void 0 === t ? void 0 : t.categorySkuId,
-      r = null != l ? o[l] : void 0;
-    return (0, a.jsx)(p, {
+      n = null != l ? o[l] : void 0;
+    return (0, a.jsx)(E, {
       config: e,
-      text: r,
+      text: n,
       handleScrollToCategory: s,
-      reducedMotion: n
+      reducedMotion: r
     })
-  }, [o, s, n]);
+  }, [o, s, r]);
   return (0, a.jsx)("div", {
     className: C.carouselContainer,
-    children: (0, a.jsx)(u.SlideCarousel, {
+    children: (0, a.jsx)(c.SlideCarousel, {
       delay: 6e3,
       items: d.COLLECTIBLES_HEADERS,
       className: C.carousel,
-      renderItem: c,
+      renderItem: u,
       controlsClassName: C.paginationControls,
       paginationButtonClassName: C.paginationButton
     })

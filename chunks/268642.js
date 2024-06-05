@@ -7,8 +7,8 @@ l.r(t), l.d(t, {
 var n = l("735250");
 l("470079");
 var r = l("120356"),
-  i = l.n(r),
-  s = l("729594"),
+  s = l.n(r),
+  i = l("729594"),
   a = l("616922"),
   o = l("214607");
 
@@ -23,7 +23,7 @@ function d(e) {
   let r = null,
     d = null;
   try {
-    let e = s.parse(l.replace(/intl-[^/]+\//, ""), !0);
+    let e = i.parse(l.replace(/intl-[^/]+\//, ""), !0);
     r = e.host, d = e.pathname
   } catch (e) {
     return null
@@ -31,13 +31,13 @@ function d(e) {
   if ("open.spotify.com" !== r || null == d) return null;
   let u = d.split("/"),
     c = null != u[1] ? u[1].toLowerCase() : null,
-    h = null != u[3] ? u[3].toLowerCase() : null,
-    m = u[4];
-  if (!["track", "playlist", "album", "artist", "user", "show", "episode"].includes(null != c ? c : "") || "user" === c && "playlist" !== h) return null;
-  "user" === c && "playlist" === h && null != m && (d = "/playlist/".concat(m));
+    m = null != u[3] ? u[3].toLowerCase() : null,
+    h = u[4];
+  if (!["track", "playlist", "album", "artist", "user", "show", "episode"].includes(null != c ? c : "") || "user" === c && "playlist" !== m) return null;
+  "user" === c && "playlist" === m && null != h && (d = "/playlist/".concat(h));
   let p = 352;
   return "track" === c ? p = 80 : ("episode" === c || "show" === c) && (p = 232), (0, n.jsx)("iframe", {
-    className: i()(o.embedSpotify, t),
+    className: s()(o.embedSpotify, t),
     src: a.SpotifyEndpoints.EMBED(d),
     style: {
       width: 400,

@@ -1,187 +1,187 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("512722"),
-  i = n.n(l),
-  r = n("399606"),
-  o = n("481060"),
-  u = n("794358"),
-  d = n("507893"),
-  c = n("626135"),
-  f = n("709054"),
-  E = n("914788"),
-  h = n("546791"),
-  _ = n("259756"),
-  C = n("785681"),
-  m = n("985002"),
-  S = n("858719"),
-  p = n("780985"),
-  I = n("880257"),
-  T = n("631885"),
-  g = n("240351"),
-  A = n("792258"),
-  N = n("657825"),
-  v = n("198952"),
-  R = n("329242"),
-  O = n("895328"),
-  L = n("292352"),
-  M = n("981631"),
-  P = n("689938"),
-  x = n("334611");
+s.r(t), s("47120");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("512722"),
+  i = s.n(l),
+  r = s("399606"),
+  o = s("481060"),
+  u = s("794358"),
+  d = s("507893"),
+  c = s("626135"),
+  E = s("709054"),
+  _ = s("914788"),
+  f = s("546791"),
+  h = s("259756"),
+  T = s("785681"),
+  m = s("985002"),
+  C = s("858719"),
+  g = s("780985"),
+  A = s("880257"),
+  p = s("631885"),
+  N = s("240351"),
+  I = s("792258"),
+  S = s("657825"),
+  R = s("198952"),
+  v = s("329242"),
+  x = s("895328"),
+  M = s("292352"),
+  L = s("981631"),
+  O = s("689938"),
+  y = s("334611");
 
-function y() {
-  let e = s.useCallback(() => {
+function D() {
+  let e = n.useCallback(() => {
     (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("66462")]).then(n.bind(n, "756226"));
+      } = await Promise.all([s.e("99387"), s.e("66462")]).then(s.bind(s, "756226"));
       return t => (0, a.jsx)(e, {
         ...t
       })
     })
   }, []);
   return (0, a.jsx)(o.Clickable, {
-    className: x.tooltip,
+    className: y.tooltip,
     onClick: e,
     children: (0, a.jsx)(d.default, {
-      className: x.icon,
+      className: y.icon,
       width: 15,
       height: 15
     })
   })
 }
 
-function D(e) {
+function b(e) {
   let {
     displayType: t
-  } = e, n = s.useCallback(() => {
-    (0, o.showToast)((0, o.createToast)(P.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-  }, []), l = (0, I.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
+  } = e, s = n.useCallback(() => {
+    (0, o.showToast)((0, o.createToast)(O.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
+  }, []), l = (0, A.default)(), r = (0, C.useActionsForDisplayType)(t), u = (0, C.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
   } = (0, m.useFamilyCenterActions)({
-    onError: n
-  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), T = (0, _.useIsEligibleForFamilyCenterVCJoin)({
+    onError: s
+  }), _ = M.ACTION_TO_TEXT.get(t), [T, g] = n.useState(M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), p = (0, h.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
-  }), g = s.useCallback(() => {
-    p(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+  }), N = n.useCallback(() => {
+    g(e => e + M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
-  i()(E, "No text for action type");
-  let v = E.sectionHeader(u),
-    R = s.useCallback(e => {
+  i()(_, "No text for action type");
+  let R = _.sectionHeader(u),
+    v = n.useCallback(e => {
       let {
         row: t
-      } = e, n = r[t];
-      return (0, h.isUserAction)(n) ? (0, a.jsx)(N.default, {
-        userId: n.entity_id,
-        timestamp: f.default.extractTimestamp(n.event_id),
-        timestampFormatter: E.timestampFormatter
-      }, n.event_id) : (0, h.isGuildAction)(n) ? (0, a.jsx)(A.default, {
-        guildId: n.entity_id
-      }, n.event_id) : void 0
-    }, [r, E.timestampFormatter]),
-    O = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
+      } = e, s = r[t];
+      return (0, f.isUserAction)(s) ? (0, a.jsx)(S.default, {
+        userId: s.entity_id,
+        timestamp: E.default.extractTimestamp(s.event_id),
+        timestampFormatter: _.timestampFormatter
+      }, s.event_id) : (0, f.isGuildAction)(s) ? (0, a.jsx)(I.default, {
+        guildId: s.entity_id
+      }, s.event_id) : void 0
+    }, [r, _.timestampFormatter]),
+    x = n.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
-        className: x.sectionHeader,
+        className: y.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: v
-      }), void 0 !== E.sectionDescription ? (0, a.jsx)(o.Text, {
-        className: x.sectionDescription,
+        children: R
+      }), void 0 !== _.sectionDescription ? (0, a.jsx)(o.Text, {
+        className: y.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
-        children: E.sectionDescription(null != l && l, T)
+        children: _.sectionDescription(null != l && l, p)
       }) : null]
-    }), [v, E, l, T]);
+    }), [R, _, l, p]);
   if (0 === r.length) return null;
-  let M = r.slice(0, C);
+  let L = r.slice(0, T);
   return (0, a.jsxs)("div", {
-    className: x.actionSection,
-    children: [O(), (0, a.jsx)("div", {
-      className: x.actions,
+    className: y.actionSection,
+    children: [x(), (0, a.jsx)("div", {
+      className: y.actions,
       style: {
-        maxHeight: 65 * M.length
+        maxHeight: 65 * L.length
       },
-      children: M.map((e, t) => R({
+      children: L.map((e, t) => v({
         row: t
       }))
-    }), M.length !== u ? (0, a.jsx)(o.Clickable, {
-      className: x.loadMoreBar,
-      onClick: g,
+    }), L.length !== u ? (0, a.jsx)(o.Clickable, {
+      className: y.loadMoreBar,
+      onClick: N,
       role: "button",
       children: c ? (0, a.jsx)(o.Spinner, {
         type: o.Spinner.Type.PULSING_ELLIPSIS,
-        className: x.spinner
+        className: y.spinner
       }) : (0, a.jsx)(o.Text, {
-        className: x.loadMore,
+        className: y.loadMore,
         variant: "text-sm/bold",
-        children: P.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-          pageSize: Math.min(u - M.length, L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
+        children: O.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
+          pageSize: Math.min(u - L.length, M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
         })
       })
     }) : null]
   })
 }
-let b = () => {
-    let e = (0, I.default)(),
-      t = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
-      n = (0, C.useAgeSpecificText)(P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
+let j = () => {
+    let e = (0, A.default)(),
+      t = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE),
+      s = (0, T.useAgeSpecificText)(O.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
-      }), P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
-      s = (0, h.getActivityWindowTimestampFormatter)(!!e),
-      l = (0, T.useActivityWindowTimeStamp)(s);
+      }), O.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
+      n = (0, f.getActivityWindowTimestampFormatter)(!!e),
+      l = (0, p.useActivityWindowTimeStamp)(n);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
       variant: "eyebrow",
       children: l
     }) : (0, a.jsxs)(a.Fragment, {
       children: [e ? null : (0, a.jsx)(u.default, {
-        className: x.icon
+        className: y.icon
       }), (0, a.jsx)(o.Text, {
         variant: "eyebrow",
-        children: n
+        children: s
       })]
     })
   },
   U = e => {
     let {
       userId: t,
-      subText: n,
-      avatarSize: s = o.AvatarSizes.SIZE_40
-    } = e, l = (0, p.useTeenUserForId)(t);
+      subText: s,
+      avatarSize: n = o.AvatarSizes.SIZE_40
+    } = e, l = (0, g.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
-      className: x.accountRow,
-      children: [(0, a.jsx)(v.FamilyCenterAvatar, {
+      className: y.accountRow,
+      children: [(0, a.jsx)(R.FamilyCenterAvatar, {
         user: l,
-        avatarSize: s
+        avatarSize: n
       }), (0, a.jsxs)("div", {
-        className: x.headerText,
-        children: [(0, a.jsx)(R.default, {
+        className: y.headerText,
+        children: [(0, a.jsx)(v.default, {
           user: l
-        }), void 0 !== n ? (0, a.jsx)(o.Text, {
+        }), void 0 !== s ? (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
-          children: n
+          children: s
         }) : null]
       })]
     })
   },
-  j = () => {
-    let e = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
-      t = (0, r.useStateFromStores)([E.default], () => E.default.getSelectedTeenId()),
+  P = () => {
+    let e = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE),
+      t = (0, r.useStateFromStores)([_.default], () => _.default.getSelectedTeenId()),
       {
-        selectTeenUser: n
+        selectTeenUser: s
       } = (0, m.useFamilyCenterActions)({}),
       l = e.map(e => ({
         label: e.id,
         value: e.id
       })),
-      i = s.useCallback(e => (0, a.jsx)(U, {
+      i = n.useCallback(e => (0, a.jsx)(U, {
         userId: e.value,
         avatarSize: o.AvatarSizes.SIZE_24
       }), []);
     return (0, a.jsx)(o.Select, {
-      className: x.select,
+      className: y.select,
       renderOptionLabel: i,
       renderOptionValue: e => {
         let [t] = e;
@@ -189,8 +189,8 @@ let b = () => {
       },
       serialize: e => e,
       select: e => {
-        n(e), c.default.track(M.AnalyticEvents.FAMILY_CENTER_ACTION, {
-          action: L.FamilyCenterAction.SelectTeen
+        s(e), c.default.track(L.AnalyticEvents.FAMILY_CENTER_ACTION, {
+          action: M.FamilyCenterAction.SelectTeen
         })
       },
       isSelected: e => e === t,
@@ -200,8 +200,8 @@ let b = () => {
   G = e => {
     let {
       userId: t
-    } = e, n = (0, I.default)(), s = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!n), i = (0, T.useActivityWindowTimeStamp)(l);
-    return n && 1 !== s.length ? (0, a.jsx)(j, {}) : (0, a.jsx)(U, {
+    } = e, s = (0, A.default)(), n = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE), l = (0, f.getActivityWindowTimestampFormatter)(!!s), i = (0, p.useActivityWindowTimeStamp)(l);
+    return s && 1 !== n.length ? (0, a.jsx)(P, {}) : (0, a.jsx)(U, {
       userId: t,
       subText: i
     })
@@ -209,39 +209,39 @@ let b = () => {
 t.default = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, T.useActivityWindowTimeStamp)(l);
+  } = e, s = Array.from(M.ACTION_TO_TEXT.entries()), n = (0, C.useHasActionForAnyDisplayType)(), l = (0, f.getEmptyActivityFormatter)(), i = (0, p.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
-    className: x.container,
+    className: y.container,
     children: [(0, a.jsxs)("div", {
-      className: x.connectedCounter,
-      children: [(0, a.jsx)(b, {}), (0, a.jsx)(y, {})]
+      className: y.connectedCounter,
+      children: [(0, a.jsx)(j, {}), (0, a.jsx)(D, {})]
     }), (0, a.jsxs)("div", {
-      className: x.card,
+      className: y.card,
       children: [(0, a.jsx)("div", {
-        className: x.header,
+        className: y.header,
         children: (0, a.jsx)(G, {
           userId: t.id
         })
       }), (0, a.jsxs)("div", {
-        className: x.content,
+        className: y.content,
         children: [(0, a.jsx)("div", {
-          className: x.activityCounterRow,
-          children: n.map(e => {
-            let [t, n] = e;
-            return (0, a.jsx)(g.default, {
+          className: y.activityCounterRow,
+          children: s.map(e => {
+            let [t, s] = e;
+            return (0, a.jsx)(N.default, {
               displayType: t,
-              header: n.tooltipHeader()
+              header: s.tooltipHeader()
             }, "counter-".concat(t))
           })
         }), (0, a.jsx)("div", {
-          className: x.activityOverview,
-          children: s ? n.map(e => {
+          className: y.activityOverview,
+          children: n ? s.map(e => {
             let [t] = e;
-            return (0, a.jsx)(D, {
+            return (0, a.jsx)(b, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(O.default, {
-            className: x.emptyActivity,
+          }) : (0, a.jsx)(x.default, {
+            className: y.emptyActivity,
             text: null != i ? i : ""
           })
         })]

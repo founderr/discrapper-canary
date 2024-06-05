@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("607070"),
   T = s("304761"),
   _ = s("865427"),
-  f = s("358085"),
-  I = s("210887"),
+  I = s("358085"),
+  f = s("210887"),
   m = s("981631"),
   N = s("689938"),
   g = s("307723");
@@ -55,14 +55,14 @@ function C(e, t) {
   }, [e, s]), [s, a]
 }
 
-function A() {
+function O() {
   let [e, t] = n.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
     platformZoom: s,
     theme: l
-  } = (0, r.useStateFromStoresObject)([I.default, E.default], () => ({
-    theme: I.default.theme,
+  } = (0, r.useStateFromStoresObject)([f.default, E.default], () => ({
+    theme: f.default.theme,
     platformZoom: E.default.zoom
-  })), [o, A] = n.useState("upright"), O = ["normal", "medium", "semibold", "bold", "extrabold"], p = new Map([
+  })), [o, O] = n.useState("upright"), A = ["normal", "medium", "semibold", "bold", "extrabold"], p = new Map([
     ["normal", 400],
     ["medium", 500],
     ["semibold", 600],
@@ -70,26 +70,26 @@ function A() {
     ["extrabold", 800]
   ]);
   n.useEffect(() => {
-    !f.isPlatformEmbedded && window.addEventListener("resize", () => {
+    !I.isPlatformEmbedded && window.addEventListener("resize", () => {
       t(Math.round(window.outerWidth / window.innerWidth * 100))
     })
   }, []);
-  let R = f.isPlatformEmbedded ? s : e,
+  let R = I.isPlatformEmbedded ? s : e,
     x = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
       return (0, _.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     [M, D] = C("playground-overrideText", null),
-    [L, v] = C("playground-defaultText", h[0].value),
-    P = n.useCallback(e => {
+    [L, P] = C("playground-defaultText", h[0].value),
+    v = n.useCallback(e => {
       let t = h.find(t => {
         let {
           value: s
         } = t;
         return s === e
       });
-      "" === e || null == e ? (v(h[0].value), D(null)) : null != t ? v(t.value) : (v("custom"), D(e))
-    }, [D, v]);
+      "" === e || null == e ? (P(h[0].value), D(null)) : null != t ? P(t.value) : (P("custom"), D(e))
+    }, [D, P]);
   return (0, a.jsx)("div", {
     className: g.fullscreen,
     style: {
@@ -122,7 +122,7 @@ function A() {
           children: (0, a.jsx)(d.SingleSelect, {
             className: g.select,
             options: h,
-            onChange: e => P(e),
+            onChange: e => v(e),
             value: L
           })
         }), (0, a.jsx)(d.FormItem, {
@@ -131,7 +131,7 @@ function A() {
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
               value: null != M ? M : "",
-              onChange: P
+              onChange: v
             })
           })
         }), (0, a.jsx)(d.FormItem, {
@@ -169,7 +169,7 @@ function A() {
               value: "mono"
             }],
             onChange: e => {
-              A(e.value)
+              O(e.value)
             },
             value: o
           })
@@ -179,7 +179,7 @@ function A() {
         })]
       }), (0, a.jsxs)("div", {
         className: g.textGrid,
-        children: [(0, a.jsx)("div", {}), O.map(e => (0, a.jsx)("div", {
+        children: [(0, a.jsx)("div", {}), A.map(e => (0, a.jsx)("div", {
           className: g.columnHeading,
           children: (0, a.jsx)(d.Heading, {
             variant: "eyebrow",
@@ -196,7 +196,7 @@ function A() {
               color: "text-muted",
               children: ["(", e * R / 100, ")"]
             }) : null]
-          }, e), O.map(t => {
+          }, e), A.map(t => {
             var s;
             let n = null !== (s = "custom" === L ? M : L) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {

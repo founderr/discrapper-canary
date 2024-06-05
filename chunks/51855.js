@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 });
 var a = s("470079"),
   l = s("100527"),
-  r = s("818083"),
-  n = s("329067");
-let i = (0, r.createExperiment)({
+  n = s("818083"),
+  r = s("329067");
+let i = (0, n.createExperiment)({
     kind: "user",
     id: "2024-04_lightning_checkout",
     label: "Lightning Checkout Experiment",
@@ -31,7 +31,7 @@ let i = (0, r.createExperiment)({
       }),
       {
         userIsEligible: t
-      } = (0, n.useLightningCheckoutEligibility)();
+      } = (0, r.useLightningCheckoutEligibility)();
     return a.useEffect(() => {
       t && i.trackExposure({
         location: l.default.COLLECTIBLES_SHOP

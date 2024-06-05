@@ -15,10 +15,10 @@ var n = s("735250"),
   d = s("409813"),
   c = s("35248"),
   p = s("362755"),
-  f = s("51499"),
-  x = s("614277"),
-  _ = s("981631"),
-  m = s("474936");
+  _ = s("51499"),
+  f = s("614277"),
+  x = s("981631"),
+  E = s("474936");
 
 function L(e) {
   let {
@@ -26,19 +26,19 @@ function L(e) {
   } = e, {
     selectedPlan: s,
     browserCheckoutState: L,
-    browserCheckoutStateLoadId: h,
-    contextMetadata: S
+    browserCheckoutStateLoadId: S,
+    contextMetadata: I
   } = (0, u.usePaymentContext)(), {
-    isGift: j
-  } = (0, C.useGiftContext)(), [E, P] = i.useState(!1);
+    isGift: m
+  } = (0, C.useGiftContext)(), [h, P] = i.useState(!1);
   return i.useEffect(() => {
     var e;
-    !E && (P(!0), (0, a.startBrowserCheckout)(S.loadId), ! function(e, t, s, n) {
-      let i = _.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, s),
-        a = new URL(o.default.makeUrl(_.Routes.BILLING_LOGIN_HANDOFF)),
+    !h && (P(!0), (0, a.startBrowserCheckout)(I.loadId), ! function(e, t, s, n) {
+      let i = x.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, s),
+        a = new URL(o.default.makeUrl(x.Routes.BILLING_LOGIN_HANDOFF)),
         C = (0, r.v4)();
       a.searchParams.append("handoff_key", C), a.searchParams.append("redirect_to", i), l.HTTP.post({
-        url: _.Endpoints.HANDOFF,
+        url: x.Endpoints.HANDOFF,
         body: {
           key: C
         },
@@ -48,13 +48,13 @@ function L(e) {
       }, () => {
         n()
       })
-    }(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, j, S.loadId, () => t(d.Step.ADD_PAYMENT_STEPS)))
-  }, [s, j, E, P, S, t]), i.useEffect(() => {
-    h === S.loadId && L === p.BrowserCheckoutState.DONE && t(d.Step.CONFIRM)
-  }, [L, h, S, t]), (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(f.default, {}), (0, n.jsx)(x.PaymentPortalBody, {
+    }(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : E.SubscriptionPlans.PREMIUM_MONTH_TIER_2, m, I.loadId, () => t(d.Step.ADD_PAYMENT_STEPS)))
+  }, [s, m, h, P, I, t]), i.useEffect(() => {
+    S === I.loadId && L === p.BrowserCheckoutState.DONE && t(d.Step.CONFIRM)
+  }, [L, S, I, t]), (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(_.default, {}), (0, n.jsx)(f.PaymentPortalBody, {
       children: (0, n.jsx)(c.AwaitingBrowserCheckoutStepBody, {})
-    }), (0, n.jsx)(x.PaymentPortalFooter, {
+    }), (0, n.jsx)(f.PaymentPortalFooter, {
       children: (0, n.jsx)(c.AwaitingBrowserCheckoutStepFooter, {
         onStepChange: t,
         onBackClick: () => t(d.Step.PLAN_SELECT)

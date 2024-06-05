@@ -26,11 +26,11 @@ var a = n("735250"),
   I = n("696900"),
   A = n("456631"),
   v = n("963838"),
-  N = n("535879"),
-  x = n("310892"),
+  x = n("535879"),
+  N = n("310892"),
   M = n("12168"),
-  R = n("353368"),
-  y = n("981631"),
+  y = n("353368"),
+  R = n("981631"),
   L = n("354459"),
   O = n("185923"),
   j = n("474936"),
@@ -39,7 +39,7 @@ var a = n("735250"),
   b = n("873137");
 let U = O.EmojiIntention.CHAT,
   F = {
-    section: y.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
+    section: R.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "voice_channel_effect_emoji_picker"
   },
   w = [p.default.getByName("thumbsup"), p.default.getByName("eyes"), p.default.getByName("laughing"), p.default.getByName("watermelon"), p.default.getByName("fork_and_knife"), p.default.getByName("yum")].filter(S.isNotNullish);
@@ -71,34 +71,34 @@ function k(e) {
       })
     },
     Z = () => {
-      (0, x.openEffectsUpsellModal)({
+      (0, N.openEffectsUpsellModal)({
         analytics: {
           type: j.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
-          object: y.AnalyticsObjects.BUTTON_CTA,
-          section: y.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
+          object: R.AnalyticsObjects.BUTTON_CTA,
+          section: R.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
         }
       })
     },
-    q = e => {
-      G.current = e, e && f.default.trackWithMetadata(y.AnalyticEvents.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
-        channel_id: X,
-        guild_id: Q
+    X = e => {
+      G.current = e, e && f.default.trackWithMetadata(R.AnalyticEvents.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
+        channel_id: q,
+        guild_id: J
       })
     },
     {
-      id: X,
-      guild_id: Q
+      id: q,
+      guild_id: J
     } = n;
   l.useEffect(() => {
-    f.default.trackWithMetadata(y.AnalyticEvents.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
-      channel_id: X,
-      guild_id: Q
+    f.default.trackWithMetadata(R.AnalyticEvents.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
+      channel_id: q,
+      guild_id: J
     })
-  }, [X, Q]);
-  let J = O ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
-    $ = B === R.VoiceChannelEffectAnimationType.PREMIUM;
+  }, [q, J]);
+  let Q = O ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+    $ = B === y.VoiceChannelEffectAnimationType.PREMIUM;
   return (0, a.jsx)(h.default, {
-    contentTypes: J,
+    contentTypes: Q,
     children: e => {
       let {
         visibleContent: t,
@@ -115,7 +115,7 @@ function k(e) {
             header: D.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
             content: D.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
             onClick: () => {
-              d.default.open(y.UserSettingsSections.ACCESSIBILITY, null, {
+              d.default.open(R.UserSettingsSections.ACCESSIBILITY, null, {
                 scrollPosition: P.AccessibilityScrollPositions.REDUCED_MOTION
               }), p()
             },
@@ -132,26 +132,26 @@ function k(e) {
           onSelectEmoji: K,
           onSelectDisabledEmoji: Z,
           onFocus: S,
-          onExpandedToggle: q,
+          onExpandedToggle: X,
           analyticsOverride: F,
           emojiSearchProps: {
-            accessory: (0, a.jsx)(N.default, {
+            accessory: (0, a.jsx)(x.default, {
               labelText: D.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: $,
               onChange: () => {
-                if (H) return f.default.trackWithMetadata(y.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
-                  channel_id: X,
-                  guild_id: Q,
+                if (H) return f.default.trackWithMetadata(R.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
+                  channel_id: q,
+                  guild_id: J,
                   enabled: !$
                 }), u.default.dispatch({
                   type: "VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE"
                 })
               },
-              onShowUpsell: () => (0, x.openEffectsUpsellModal)({
+              onShowUpsell: () => (0, N.openEffectsUpsellModal)({
                 analytics: {
                   type: G.current ? j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
-                  object: y.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,
-                  section: G.current ? y.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : y.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
+                  object: R.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,
+                  section: G.current ? R.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : R.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
                 }
               })
             })

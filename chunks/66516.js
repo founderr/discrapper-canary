@@ -17,15 +17,15 @@ var a = s("735250"),
   E = s("367907"),
   T = s("906732"),
   _ = s("414666"),
-  f = s("589266"),
-  I = s("296810"),
+  I = s("589266"),
+  f = s("296810"),
   m = s("621853"),
   N = s("246946"),
   g = s("594174"),
   h = s("626135"),
   C = s("63063"),
-  A = s("74538"),
-  O = s("18438"),
+  O = s("74538"),
+  A = s("18438"),
   p = s("778825"),
   R = s("856607"),
   x = s("594496"),
@@ -33,14 +33,14 @@ var a = s("735250"),
   D = s("981631"),
   L = s("689938");
 
-function v() {
+function P() {
   h.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
     location_page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
     location_object: D.AnalyticsObjects.BADGE
-  }), (0, O.closeGuildIdentitySettings)(), u.default.open(D.UserSettingsSections.PREMIUM)
+  }), (0, A.closeGuildIdentitySettings)(), u.default.open(D.UserSettingsSections.PREMIUM)
 }
 
-function P(e) {
+function v(e) {
   (0, o.openModalLazy)(async () => {
     let {
       default: t
@@ -69,15 +69,15 @@ function b(e) {
     pendingProfileEffectId: j,
     pendingNickname: F,
     pendingBanner: G,
-    pendingBio: y,
-    pendingPronouns: B,
-    pendingThemeColors: k,
+    pendingBio: B,
+    pendingPronouns: y,
+    pendingThemeColors: V,
     source: H
   } = (0, r.useStateFromStoresObject)([p.default], () => ({
     ...p.default.getAllPending(),
     source: p.default.getSource()
   }));
-  if (n.useEffect(() => () => d.default.wait(O.resetAllPending), []), n.useEffect(() => {
+  if (n.useEffect(() => () => d.default.wait(A.resetAllPending), []), n.useEffect(() => {
       null != H && E.default.trackWithMetadata(D.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
         destination_pane: D.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
@@ -85,24 +85,24 @@ function b(e) {
       })
     }, [H]), h) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let w = A.default.canUsePremiumProfileCustomization(l),
-    V = {
+  let k = O.default.canUsePremiumProfileCustomization(l),
+    w = {
       user: l,
       guild: t,
-      canUsePremiumCustomization: w,
-      onAvatarChange: O.setPendingAvatar,
-      onBannerChange: O.setPendingBanner,
-      onUpsellClick: P,
+      canUsePremiumCustomization: k,
+      onAvatarChange: A.setPendingAvatar,
+      onBannerChange: A.setPendingBanner,
+      onUpsellClick: v,
       pendingAvatar: b,
       pendingAvatarDecoration: U,
       pendingProfileEffectId: j,
       pendingBanner: G,
-      pendingBio: y,
-      pendingPronouns: B,
+      pendingBio: B,
+      pendingPronouns: y,
       pendingNickname: F,
       activityName: L.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
       activityCharacter: _.FakeActivityCharacter.PHIBI,
-      openPremiumSettings: v
+      openPremiumSettings: P
     };
   return (0, a.jsxs)(T.AnalyticsLocationProvider, {
     value: s,
@@ -115,16 +115,16 @@ function b(e) {
       children: [(0, a.jsx)(M.default, {
         guildId: t.id,
         onChange: e => {
-          null != e && (0, O.setCurrentGuild)(e)
+          null != e && (0, A.setCurrentGuild)(e)
         }
-      }), (0, a.jsx)(I.default, {
+      }), (0, a.jsx)(f.default, {
         previewTitle: L.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
           guildName: null == t ? void 0 : t.name
         }),
-        profilePreview: (0, a.jsx)(f.default, {
-          ...V,
+        profilePreview: (0, a.jsx)(I.default, {
+          ...w,
           location: "GuildIdentitySettingsPage",
-          pendingThemeColors: k
+          pendingThemeColors: V
         }),
         children: (0, a.jsx)(x.default, {})
       })]

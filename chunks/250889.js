@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   XBOX_APPLICATION_ID_PREFIX: function() {
-    return s
+    return n
   },
   default: function() {
-    return o
+    return l
   }
 });
-var i = n("726542"),
-  r = n("973616");
-let s = "xbox:";
-class o extends r.default {
+var s = r("726542"),
+  i = r("973616");
+let n = "xbox:";
+class l extends i.default {
   getIconURL() {
-    return i.default.get("xbox").icon.lightPNG
+    return s.default.get("xbox").icon.lightPNG
   }
   constructor(e) {
-    super(e), this.id = "".concat(s).concat(e.name), this.name = e.name
+    super(e), this.id = "".concat(n).concat(e.name), this.name = e.name
   }
 }

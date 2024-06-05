@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   MAX_CONTENT_WIDTH: function() {
-    return l
+    return o
   },
   getAssetSizeByHeight: function() {
-    return n
+    return l
   },
   getBackgroundGradient: function() {
     return s
@@ -14,9 +14,9 @@ r.r(t), r.d(t, {
   }
 });
 var a = r("180650"),
-  o = r("921948");
-let l = 1060,
-  n = e => e * (0, o.default)(),
+  n = r("921948");
+let o = 1060,
+  l = e => e * (0, n.default)(),
   s = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
       {

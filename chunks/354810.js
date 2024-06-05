@@ -34,15 +34,15 @@ function I(e) {
     theme: I
   } = (0, E.useUserProfileThemeContext)(), A = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
     avatarSrc: v,
-    eventHandlers: N,
-    avatarDecorationSrc: x
+    eventHandlers: x,
+    avatarDecorationSrc: N
   } = (0, h.default)({
     user: t,
     size: T,
     animateOnHover: !f
   }), M = l.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(t, i.id), [t, i.id]), {
-    status: R,
-    customStatusActivity: y,
+    status: y,
+    customStatusActivity: R,
     isMobileOnline: L
   } = (0, s.useStateFromStoresObject)([d.default, c.default], () => {
     let e = null != d.default.getAnyStreamForUser(t.id),
@@ -71,13 +71,13 @@ function I(e) {
       profileType: C.UserProfileTypes.PANEL,
       animateOnHover: !f
     }), (0, a.jsx)("div", {
-      ...N,
+      ...x,
       children: (0, a.jsx)(_, {
         src: v,
-        avatarDecoration: x,
+        avatarDecoration: N,
         size: T,
         className: S.avatar,
-        status: M ? r.StatusTypes.UNKNOWN : R,
+        status: M ? r.StatusTypes.UNKNOWN : y,
         statusBackdropColor: A && !M ? (0, r.getStatusBackdropColor)(I) : void 0,
         "aria-label": t.username,
         isMobile: L,
@@ -85,7 +85,7 @@ function I(e) {
         statusTooltipDelay: C.USER_PROFILE_TOOLTIP_DELAY
       })
     }), (0, a.jsx)(p.UserProfileCustomStatusBubble, {
-      statusActivity: y,
+      statusActivity: R,
       profileType: C.UserProfileTypes.PANEL
     })]
   })

@@ -7,21 +7,21 @@ a.r(t), a.d(t, {
     return o
   },
   isValidFormResponse: function() {
-    return i
+    return s
   }
 });
 var n = a("823379"),
   r = a("246364"),
-  s = a("592286");
-let i = e => {
+  i = a("592286");
+let s = e => {
   let {
     required: t,
     response: a,
-    field_type: s
+    field_type: i
   } = e;
   if (!t) return !0;
   if (null == a) return !1;
-  switch (s) {
+  switch (i) {
     case r.VerificationFormFieldTypes.TERMS:
     case r.VerificationFormFieldTypes.VERIFICATION:
       return !!a;
@@ -31,14 +31,14 @@ let i = e => {
     case r.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return "number" == typeof a;
     default:
-      return (0, n.assertNever)(s)
+      return (0, n.assertNever)(i)
   }
 };
 
 function l(e) {
-  return s.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
+  return i.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
 }
 
 function o(e) {
-  return s.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
+  return i.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
 }

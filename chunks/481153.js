@@ -3,8 +3,8 @@ n.r(t);
 var s = n("735250"),
   a = n("470079"),
   i = n("120356"),
-  r = n.n(i),
-  l = n("442837"),
+  l = n.n(i),
+  r = n("442837"),
   o = n("481060"),
   u = n("812206"),
   d = n("479446"),
@@ -18,10 +18,10 @@ var s = n("735250"),
   p = n("981631"),
   T = n("474936"),
   S = n("689938"),
-  I = n("354052"),
-  A = n("961047"),
+  A = n("354052"),
+  I = n("961047"),
   N = n("611273");
-t.default = l.default.connectStores([E.default, u.default, h.default, f.default], e => {
+t.default = r.default.connectStores([E.default, u.default, h.default, f.default], e => {
   let {
     giftCode: t
   } = e, n = E.default.get(t.skuId), {
@@ -38,20 +38,20 @@ t.default = l.default.connectStores([E.default, u.default, h.default, f.default]
     error: t,
     giftCode: n,
     gifter: i,
-    sku: l,
+    sku: r,
     application: u,
     subscriptionPlan: f
   } = e, h = null == i ? S.default.Messages.GIFT_CODE_AUTH_GIFTED : S.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
     username: i.username
-  }), E = l.name;
+  }), E = r.name;
   return null != f && (E = (f.interval === T.SubscriptionIntervalTypes.MONTH ? S.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : S.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
-    skuName: l.name,
+    skuName: r.name,
     intervalCount: f.intervalCount
   })), (0, s.jsxs)(a.Fragment, {
     children: [null != n.giftStyle ? (0, s.jsx)(c.default, {
       defaultAnimationState: d.AnimationState.LOOP,
       giftStyle: n.giftStyle,
-      className: I.seasonalIcon
+      className: A.seasonalIcon
     }) : (0, s.jsx)(m.Avatar, {
       src: null != i ? i.getAvatarURL(void 0, 100) : null,
       size: o.AvatarSizes.DEPRECATED_SIZE_100,
@@ -66,12 +66,12 @@ t.default = l.default.connectStores([E.default, u.default, h.default, f.default]
       children: [(0, s.jsx)(m.SubTitle, {
         children: h
       }), (0, s.jsxs)(m.Title, {
-        className: r()(N.marginTop8, A.flexCenter),
-        children: [l.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(g.default, {
+        className: l()(N.marginTop8, I.flexCenter),
+        children: [r.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(g.default, {
           size: g.default.Sizes.MEDIUM,
-          className: I.applicationIcon,
+          className: A.applicationIcon,
           game: u,
-          skuId: l.id
+          skuId: r.id
         }), E]
       })]
     })]

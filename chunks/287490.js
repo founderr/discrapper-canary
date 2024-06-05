@@ -17,9 +17,9 @@ var a = s("735250"),
   E = s("499533"),
   T = s("878209"),
   _ = s("987338"),
-  f = s("964966");
+  I = s("964966");
 
-function I(e, t) {
+function f(e, t) {
   return e.map((e, s) => ({
     label: "object" == typeof t ? t[s] : E.default.getExperimentBucketName(e),
     value: e
@@ -47,7 +47,7 @@ function m() {
         overrideDescriptor: e[t.id]
       }, t.id)
     }) : (0, a.jsx)("div", {
-      className: f.emptyState,
+      className: I.emptyState,
       children: (0, a.jsx)(o.Heading, {
         variant: "heading-md/semibold",
         children: "No Experiments Found"
@@ -70,11 +70,11 @@ function N(e) {
   }).map(e => {
     let [t, s] = e;
     return "".concat(new Date(s).toLocaleString(), " (").concat(t, ")")
-  })), A = (0, a.jsx)(o.Clickable, {
+  })), O = (0, a.jsx)(o.Clickable, {
     onClick: N,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
-      className: f.title,
+      className: I.title,
       children: [(0, a.jsxs)("div", {
         children: [(0, a.jsx)("span", {
           children: s.title
@@ -84,34 +84,34 @@ function N(e) {
           children: l
         })]
       }), (0, a.jsx)("span", {
-        className: f.experimentDate,
+        className: I.experimentDate,
         children: "User"
       })]
     })
   });
   return S ? (0, a.jsxs)("div", {
-    className: f.group,
+    className: I.group,
     children: [(0, a.jsxs)(o.FormSection, {
-      children: [A, (0, a.jsxs)("div", {
+      children: [O, (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.FormItem, {
           title: "Bucket Override",
           children: (0, a.jsx)(o.SingleSelect, {
             value: null != c ? c.bucket : null,
             clearable: null != c,
-            options: I(s.buckets, s.description),
+            options: f(s.buckets, s.description),
             onChange: e => {
               (0, d.overrideBucket)(l, e)
             }
           })
         }), "string" == typeof s.description ? (0, a.jsx)("div", {
-          className: f.description,
+          className: I.description,
           children: (0, a.jsx)(o.FormText, {
             type: o.FormTextTypes.DESCRIPTION,
             children: s.description
           })
         }) : null]
       }), (0, a.jsxs)("div", {
-        className: f.description,
+        className: I.description,
         children: [(0, a.jsxs)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: ["Current assigned to bucket ", null !== (t = null == g ? void 0 : g.bucket) && void 0 !== t ? t : _.ExperimentBuckets.NOT_ELIGIBLE]
@@ -122,43 +122,43 @@ function N(e) {
       }), T ? (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.FormTitle, {
           tag: "h5",
-          className: f.debugTitle,
+          className: I.debugTitle,
           children: "Server Descriptor"
         }), (0, a.jsx)(o.Text, {
           variant: "code",
-          className: f.pre,
+          className: I.pre,
           children: null == h ? "None" : JSON.stringify(h, void 0, 2)
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
-          className: f.debugTitle,
+          className: I.debugTitle,
           children: "Override Descriptor"
         }), (0, a.jsx)(o.Text, {
           variant: "code",
-          className: f.pre,
+          className: I.pre,
           children: null == c ? "None" : JSON.stringify(c, void 0, 2)
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
-          className: f.debugTitle,
+          className: I.debugTitle,
           children: "Recent Exposures"
         }), (0, a.jsx)(o.Text, {
           variant: "code",
-          className: f.pre,
+          className: I.pre,
           children: 0 === C.length ? "None" : C.join("\n")
         })]
       }) : (0, a.jsx)(o.Button, {
-        className: f.debugButton,
+        className: I.debugButton,
         size: o.Button.Sizes.SMALL,
         look: o.Button.Looks.BLANK,
         onClick: () => m(!0),
         children: "More Details \xbb"
       })]
     }), (0, a.jsx)(o.FormDivider, {
-      className: f.divider
+      className: I.divider
     })]
   }) : (0, a.jsx)("div", {
-    className: f.group,
+    className: I.group,
     children: (0, a.jsx)(o.FormSection, {
-      children: A
+      children: O
     })
   })
 }
@@ -176,7 +176,7 @@ function g(e) {
   }).map(e => {
     let [t, s] = e;
     return "".concat(new Date(s).toLocaleString(), " (").concat(t, ")")
-  })), [C, A] = (0, r.useStateFromStoresArray)([c.default, u.default], () => {
+  })), [C, O] = (0, r.useStateFromStoresArray)([c.default, u.default], () => {
     let e = i().sortBy(i().values(c.default.getGuilds()), e => e.name.toLowerCase()),
       t = {},
       a = [];
@@ -187,11 +187,11 @@ function g(e) {
       !(i in t) && (t[i] = 0), t[i]++, a.push("".concat(l.name, ": ").concat(i))
     }
     return [a, i()(t).keys().map(Number).sort().map(e => "".concat(t[e], " guilds in bucket ").concat(e)).join(", ")]
-  }), O = (0, a.jsx)(o.Clickable, {
+  }), A = (0, a.jsx)(o.Clickable, {
     onClick: N,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
-      className: f.title,
+      className: I.title,
       children: [(0, a.jsxs)("div", {
         children: [(0, a.jsx)("span", {
           children: t.title
@@ -201,37 +201,37 @@ function g(e) {
           children: s
         })]
       }), (0, a.jsx)("span", {
-        className: f.experimentDate,
+        className: I.experimentDate,
         children: "Guild"
       })]
     })
   });
   return S ? (0, a.jsxs)("div", {
-    className: f.group,
+    className: I.group,
     children: [(0, a.jsxs)(o.FormSection, {
-      children: [O, (0, a.jsxs)("div", {
+      children: [A, (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.FormItem, {
           title: "Bucket Override",
           children: (0, a.jsx)(o.SingleSelect, {
             value: null != l ? l.bucket : null,
             clearable: null != l,
-            options: I(t.buckets, t.description),
+            options: f(t.buckets, t.description),
             onChange: e => {
               (0, d.overrideBucket)(s, e)
             }
           })
         }), "string" == typeof t.description ? (0, a.jsx)("div", {
-          className: f.description,
+          className: I.description,
           children: (0, a.jsx)(o.FormText, {
             type: o.FormTextTypes.DESCRIPTION,
             children: t.description
           })
         }) : null]
       }), (0, a.jsxs)("div", {
-        className: f.description,
+        className: I.description,
         children: [(0, a.jsxs)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
-          children: ["Current Assignments: ", A]
+          children: ["Current Assignments: ", O]
         }), null == g ? (0, a.jsx)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -239,51 +239,51 @@ function g(e) {
       }), T ? (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.FormTitle, {
           tag: "h5",
-          className: f.debugTitle,
+          className: I.debugTitle,
           children: "Guild Assignments"
         }), (0, a.jsx)(o.Text, {
           variant: "code",
-          className: f.pre,
+          className: I.pre,
           children: C.join("\n")
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
-          className: f.debugTitle,
+          className: I.debugTitle,
           children: "Server Descriptor"
         }), (0, a.jsx)(o.Text, {
           variant: "code",
-          className: f.pre,
+          className: I.pre,
           children: null == g ? "None" : JSON.stringify(g, void 0, 2)
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
-          className: f.debugTitle,
+          className: I.debugTitle,
           children: "Override Descriptor"
         }), (0, a.jsx)(o.Text, {
           variant: "code",
-          className: f.pre,
+          className: I.pre,
           children: null == l ? "None" : JSON.stringify(l, void 0, 2)
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
-          className: f.debugTitle,
+          className: I.debugTitle,
           children: "Recent Exposures"
         }), (0, a.jsx)(o.Text, {
           variant: "code",
-          className: f.pre,
+          className: I.pre,
           children: 0 === h.length ? "None" : h.join("\n")
         })]
       }) : (0, a.jsx)(o.Button, {
-        className: f.debugButton,
+        className: I.debugButton,
         size: o.Button.Sizes.SMALL,
         look: o.Button.Looks.BLANK,
         onClick: () => m(!0),
         children: "More Details \xbb"
       })]
     }), (0, a.jsx)(o.FormDivider, {
-      className: f.divider
+      className: I.divider
     })]
   }) : (0, a.jsx)("div", {
-    className: f.group,
+    className: I.group,
     children: (0, a.jsx)(o.FormSection, {
-      children: O
+      children: A
     })
   })
 }

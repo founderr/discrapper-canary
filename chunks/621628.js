@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return A
   }
 }), s("47120"), s("518263"), s("970173"), s("520712"), s("268111"), s("941497"), s("32026"), s("480839"), s("744285"), s("492257"), s("873817"), s("733860");
 var a = s("735250"),
@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("285952"),
   T = s("6048"),
   _ = s("154921"),
-  f = s("915486"),
-  I = s("883904"),
+  I = s("915486"),
+  f = s("883904"),
   m = s("68985"),
   N = s("211644"),
   g = s("312244"),
@@ -29,7 +29,7 @@ function C(e) {
     contents: t,
     content: s,
     onChange: n
-  } = e, l = (0, f.hasBit)(t, o.DismissibleContent[s]);
+  } = e, l = (0, I.hasBit)(t, o.DismissibleContent[s]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(u.FormSwitch, {
       value: l,
@@ -45,7 +45,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function O(e) {
   let {
     items: t,
     dismissedContents: s,
@@ -60,7 +60,7 @@ function A(e) {
   })
 }
 
-function O() {
+function A() {
   var e;
   let t = (0, N.default)(e => e.recentlyShown),
     {
@@ -70,12 +70,12 @@ function O() {
       dailyCapReached: m.default.hasUserHitDCCap(),
       dailyCapOverridden: m.default.dailyCapOverridden
     })),
-    [_, f] = n.useState(""),
+    [_, I] = n.useState(""),
     C = null !== (e = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     })) && void 0 !== e ? e : new Uint8Array,
-    [O, p] = function(e, t) {
+    [A, p] = function(e, t) {
       let [s, a] = n.useState(() => {
         let s = d.Storage.get(e);
         return null != s ? s : t
@@ -93,8 +93,8 @@ function O() {
       })
     },
     x = t.map(e => o.DismissibleContent[e]),
-    M = O.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !x.includes(e)),
-    D = Object.keys(o.DismissibleContent).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    M = A.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !x.includes(e)),
+    D = Object.keys(o.DismissibleContent).filter(e => !x.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
@@ -107,11 +107,11 @@ function O() {
         })
       }), (0, a.jsx)(u.FormSwitch, {
         value: l,
-        onChange: I.overrideDismissibleContentFramework,
+        onChange: f.overrideDismissibleContentFramework,
         children: "Override Dismissible Content Daily Cap"
       }), (0, a.jsxs)(u.FormItem, {
         children: [(0, a.jsx)(u.Button, {
-          onClick: () => (0, I.resetDismissibleContentFrameworkStore)(),
+          onClick: () => (0, f.resetDismissibleContentFrameworkStore)(),
           children: "Reset DismissibleContentFrameworkStore"
         }), (0, a.jsx)(u.FormText, {
           className: h.marginTop4,
@@ -125,8 +125,8 @@ function O() {
         className: h.marginBottom20,
         size: T.default.Sizes.LARGE,
         query: _,
-        onChange: f,
-        onClear: () => f("")
+        onChange: I,
+        onClear: () => I("")
       }), (0, a.jsxs)(u.FormItem, {
         className: g.buttonsContainer,
         children: [(0, a.jsx)(u.Button, {
@@ -143,7 +143,7 @@ function O() {
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recently Shown"
           })
-        }), (0, a.jsx)(A, {
+        }), (0, a.jsx)(O, {
           items: x,
           dismissedContents: C,
           handleChange: R
@@ -154,7 +154,7 @@ function O() {
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recent Overrides"
           })
-        }), (0, a.jsx)(A, {
+        }), (0, a.jsx)(O, {
           items: M,
           dismissedContents: C,
           handleChange: R
@@ -164,7 +164,7 @@ function O() {
         children: (0, a.jsx)(u.FormTitle, {
           children: "Available Dismissible Contents"
         })
-      }), (0, a.jsx)(A, {
+      }), (0, a.jsx)(O, {
         items: D,
         dismissedContents: C,
         handleChange: R

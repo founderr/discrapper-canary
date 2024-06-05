@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return P
   }
 }), n("47120");
 var a = n("392711"),
@@ -16,14 +16,14 @@ var a = n("392711"),
   f = n("158776"),
   E = n("19780"),
   h = n("699516"),
-  _ = n("944486"),
-  C = n("800599"),
+  C = n("944486"),
+  _ = n("800599"),
   m = n("594174"),
   S = n("979651"),
   p = n("626135"),
   I = n("823379"),
-  T = n("358085"),
-  g = n("914946"),
+  g = n("358085"),
+  T = n("914946"),
   A = n("238679"),
   N = n("863141"),
   v = n("981631"),
@@ -38,9 +38,9 @@ function L(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class M {
+class P {
   loadServer() {
-    for (let e of (T.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+    for (let e of (g.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
     for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
     for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t)
   }
@@ -90,14 +90,14 @@ class M {
       channel_id: n
     }, {
       channel_id: n,
-      message: (0, g.transformInternalTextMessage)(a)
+      message: (0, T.transformInternalTextMessage)(a)
     }, s)
   }
   handleSpeaking(e) {
     if (0 === this.rpcServer.subscriptions.length) return;
     let t = 0 !== e.speakingFlags ? v.RPCEvents.SPEAKING_START : v.RPCEvents.SPEAKING_STOP;
     if (e.context === O.MediaEngineContextTypes.DEFAULT) {
-      let n = _.default.getVoiceChannelId();
+      let n = C.default.getVoiceChannelId();
       if (null != n) {
         let a = o.default.getChannel(n);
         if (null == a) return;
@@ -132,8 +132,8 @@ class M {
     } = e;
     0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.NOTIFICATION_CREATE, {}, {
       channel_id: t,
-      message: (0, g.transformInternalTextMessage)(n),
-      icon_url: null != a ? (0, g.getRemoteIconURL)(a) : null,
+      message: (0, T.transformInternalTextMessage)(n),
+      icon_url: null != a ? (0, T.getRemoteIconURL)(a) : null,
       title: s,
       body: l
     })
@@ -262,7 +262,7 @@ class M {
         type: n
       }
     } = e;
-    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(n, t))
+    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, T.transformRelationship)(n, t))
   }
   handleRelationshipRemove(e) {
     let {
@@ -270,7 +270,7 @@ class M {
         id: t
       }
     } = e;
-    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(v.RelationshipTypes.NONE, t))
+    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, T.transformRelationship)(v.RelationshipTypes.NONE, t))
   }
   handlePresenceUpdate(e) {
     let {
@@ -285,12 +285,12 @@ class M {
       } = e;
       if (null != t) return;
       let a = h.default.getRelationshipType(n);
-      a === v.RelationshipTypes.NONE && C.default.getUserAffinitiesUserIds().has(n) && (a = v.RelationshipTypes.IMPLICIT), a !== v.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(a, n))
+      a === v.RelationshipTypes.NONE && _.default.getUserAffinitiesUserIds().has(n) && (a = v.RelationshipTypes.IMPLICIT), a !== v.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, T.transformRelationship)(a, n))
     })
   }
   handlePresencesReplace() {
     0 !== this.rpcServer.subscriptions.length && s().forEach(h.default.getRelationships(), (e, t) => {
-      this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(e, t))
+      this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, T.transformRelationship)(e, t))
     })
   }
   handleEntitlementCreate(e) {

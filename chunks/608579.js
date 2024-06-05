@@ -1,106 +1,106 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
-}), s("47120");
-var l = s("735250"),
-  n = s("470079"),
-  a = s("120356"),
-  i = s.n(a),
-  r = s("887024"),
-  u = s("100527"),
-  d = s("906732"),
-  o = s("987209"),
-  c = s("598"),
-  f = s("409813"),
-  S = s("791785"),
-  E = s("961830"),
-  I = s("742956"),
-  C = s("346790"),
-  _ = s("49308"),
-  T = s("117652"),
-  p = s("126982"),
-  m = s("981631"),
-  N = s("302800"),
-  A = s("231338"),
-  h = s("257450");
+}), n("47120");
+var a = n("735250"),
+  l = n("470079"),
+  s = n("120356"),
+  r = n.n(s),
+  i = n("887024"),
+  o = n("100527"),
+  d = n("906732"),
+  u = n("987209"),
+  c = n("598"),
+  f = n("409813"),
+  E = n("791785"),
+  S = n("961830"),
+  C = n("742956"),
+  p = n("346790"),
+  T = n("49308"),
+  m = n("117652"),
+  I = n("126982"),
+  _ = n("981631"),
+  x = n("302800"),
+  N = n("231338"),
+  P = n("257450");
 
-function g(e) {
+function A(e) {
   let {
     onClose: t,
-    onComplete: s,
-    onStepChange: a,
-    transitionState: g,
-    loadId: P,
-    skuId: x,
+    onComplete: n,
+    onStepChange: s,
+    transitionState: A,
+    loadId: h,
+    skuId: v,
     isGift: O = !1,
-    giftRecipient: R,
-    giftMessage: v,
-    analyticsLocations: L,
-    returnRef: M
+    giftRecipient: g,
+    giftMessage: M,
+    analyticsLocations: y,
+    returnRef: L
   } = e, {
     analyticsLocations: j
-  } = (0, d.default)([...L, u.default.COLLECTIBLES_PAYMENT_MODAL]), F = n.useRef(new r.Environment), [y, G] = n.useState(null), [b, U] = n.useState(!1), D = n.useMemo(() => (0, N.getCustomConfettiDisplayOptions)(x), [x]), B = n.useCallback(() => {
-    U(!0), null == s || s()
-  }, [s]), k = n.useCallback(e => {
-    U(!1), t(e)
-  }, [t]), H = n.useMemo(() => [E.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, T.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, C.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...E.SHARED_STEP_CONFIGS, E.REVIEW_STEP_CONFIG, {
+  } = (0, d.default)([...y, o.default.COLLECTIBLES_PAYMENT_MODAL]), R = l.useRef(new i.Environment), [F, D] = l.useState(null), [G, b] = l.useState(!1), k = l.useMemo(() => (0, x.getCustomConfettiDisplayOptions)(v), [v]), B = l.useCallback(() => {
+    b(!0), null == n || n()
+  }, [n]), H = l.useCallback(e => {
+    b(!1), t(e)
+  }, [t]), w = l.useMemo(() => [S.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, m.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, p.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...S.SHARED_STEP_CONFIGS, S.REVIEW_STEP_CONFIG, {
     key: f.Step.CONFIRM,
-    renderStep: e => (0, l.jsx)(_.CollectiblesPaymentModalConfirmStep, {
+    renderStep: e => (0, a.jsx)(T.CollectiblesPaymentModalConfirmStep, {
       ...e,
-      confettiCanvas: y,
+      confettiCanvas: F,
       analyticsLocations: j,
-      hideConfetti: null != D
+      hideConfetti: null != k
     }),
     options: {
-      bodyClassName: h.modalOverrideBody,
-      sliderBodyClassName: h.modalOverrideSliderBody
+      bodyClassName: P.modalOverrideBody,
+      sliderBodyClassName: P.modalOverrideSliderBody
     }
-  }], [j, y, D]);
-  return (0, l.jsxs)(d.AnalyticsLocationProvider, {
+  }], [j, F, k]);
+  return (0, a.jsxs)(d.AnalyticsLocationProvider, {
     value: j,
-    children: [(0, l.jsx)(r.ConfettiCanvas, {
-      ref: G,
-      className: h.confettiCanvas,
-      environment: F.current
-    }), null != D && (0, l.jsx)("img", {
-      src: D.confettiAssetSrc,
-      className: i()(h.customConfetti, {
-        [h.hidden]: !b
+    children: [(0, a.jsx)(i.ConfettiCanvas, {
+      ref: D,
+      className: P.confettiCanvas,
+      environment: R.current
+    }), null != k && (0, a.jsx)("img", {
+      src: k.confettiAssetSrc,
+      className: r()(P.customConfetti, {
+        [P.hidden]: !G
       }),
-      style: D.style,
+      style: k.style,
       alt: "",
       "aria-hidden": !0
-    }), (0, l.jsx)(c.PaymentContextProvider, {
-      loadId: P,
-      stepConfigs: H,
-      applicationId: m.COLLECTIBLES_APPLICATION_ID,
-      skuIDs: [x],
+    }), (0, a.jsx)(c.PaymentContextProvider, {
+      loadId: h,
+      stepConfigs: w,
+      applicationId: _.COLLECTIBLES_APPLICATION_ID,
+      skuIDs: [v],
       isGift: O,
       activeSubscription: null,
-      purchaseType: A.PurchaseTypes.ONE_TIME,
-      children: (0, l.jsx)(o.GiftContextProvider, {
+      purchaseType: N.PurchaseTypes.ONE_TIME,
+      children: (0, a.jsx)(u.GiftContextProvider, {
         isGift: O,
-        giftRecipient: R,
-        giftMessage: v,
-        children: (0, l.jsx)(S.PaymentModal, {
-          onClose: k,
+        giftRecipient: g,
+        giftMessage: M,
+        children: (0, a.jsx)(E.PaymentModal, {
+          onClose: H,
           onComplete: B,
-          applicationId: m.COLLECTIBLES_APPLICATION_ID,
-          skuId: x,
+          applicationId: _.COLLECTIBLES_APPLICATION_ID,
+          skuId: v,
           initialPlanId: null,
           analyticsLocations: j,
-          transitionState: g,
-          renderHeader: (e, t, s) => O ? (0, l.jsx)(I.default, {
-            step: s,
+          transitionState: A,
+          renderHeader: (e, t, n) => O ? (0, a.jsx)(C.default, {
+            step: n,
             onClose: () => t(!1)
-          }) : (0, l.jsx)(p.default, {
-            step: s,
+          }) : (0, a.jsx)(I.default, {
+            step: n,
             onClose: () => t(!1)
           }),
-          returnRef: M,
-          onStepChange: a,
+          returnRef: L,
+          onStepChange: s,
           hideShadow: !0
         })
       })

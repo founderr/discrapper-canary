@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   useCollectiblesHoverPreviewExperiment: function() {
-    return o
+    return n
   }
 });
 let a = (0, r("818083").createExperiment)({
@@ -19,6 +19,6 @@ let a = (0, r("818083").createExperiment)({
       }
     }]
   }),
-  o = e => a.useExperiment({
+  n = e => a.useExperiment({
     location: e
   }).enabled

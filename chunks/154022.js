@@ -17,34 +17,34 @@ var a = s("735250"),
   E = s("857595"),
   T = s("607070"),
   _ = s("627845"),
-  f = s("786761"),
-  I = s("3148"),
+  I = s("786761"),
+  f = s("3148"),
   m = s("739566"),
   N = s("753206"),
   g = s("440849"),
   h = s("196051"),
   C = s("441729"),
-  A = s("285952"),
-  O = s("153124"),
+  O = s("285952"),
+  A = s("153124"),
   p = s("786048"),
   R = s("897353"),
   x = s("626135"),
   M = s("63063"),
   D = s("695346"),
   L = s("263937"),
-  v = s("996073"),
-  P = s("526761"),
+  P = s("996073"),
+  v = s("526761"),
   b = s("981631"),
   U = s("611480"),
   j = s("653477"),
   F = s("689938"),
   G = s("572965"),
-  y = s("611273"),
-  B = s("328756");
-let k = (0, O.uid)(),
-  H = (0, O.uid)(),
-  w = (0, O.uid)(),
-  V = o().debounce(e => {
+  B = s("611273"),
+  y = s("328756");
+let V = (0, A.uid)(),
+  H = (0, A.uid)(),
+  k = (0, A.uid)(),
+  w = o().debounce(e => {
     (0, E.setSaturation)(e)
   }, 250),
   Y = o().debounce(e => {
@@ -55,8 +55,8 @@ function W(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: F.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, a.jsx)(X, {}), (0, _.canEnableForcedColors)() ? (0, a.jsx)(J, {}) : null, (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(es, {}), (0, a.jsx)(u.FormDivider, {
-      className: y.marginBottom20
+    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(X, {}), (0, a.jsx)(Z, {}), (0, _.canEnableForcedColors)() ? (0, a.jsx)(J, {}) : null, (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(es, {}), (0, a.jsx)(u.FormDivider, {
+      className: B.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       children: F.default.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
@@ -71,8 +71,8 @@ function W(e) {
 function K() {
   let e = D.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
-      let e = (0, f.createMessageRecord)({
-        ...(0, I.default)({
+      let e = (0, I.createMessageRecord)({
+        ...(0, f.default)({
           channelId: "1337",
           content: F.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({
             previewLink: "https://discord.com/accessibility"
@@ -97,7 +97,7 @@ function K() {
           className: G.previewAvatars,
           children: [b.StatusTypes.ONLINE, b.StatusTypes.DND, b.StatusTypes.IDLE].map(e => (0, a.jsx)(u.AnimatedAvatar, {
             "aria-label": F.default.Messages.USER_SETTINGS_AVATAR,
-            src: B,
+            src: y,
             size: u.AvatarSizes.SIZE_32,
             status: e
           }, e))
@@ -126,18 +126,18 @@ function z() {
     desaturateUserColors: T.default.desaturateUserColors
   }));
   return (0, a.jsxs)(u.FormSection, {
-    className: y.marginTop20,
+    className: B.marginTop20,
     children: [(0, a.jsx)(u.FormTitle, {
-      id: k,
-      className: y.marginBottom8,
+      id: V,
+      className: B.marginBottom8,
       children: F.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
     }), (0, a.jsx)(u.FormText, {
       id: H,
       type: u.FormText.Types.DESCRIPTION,
-      className: y.marginBottom20,
+      className: B.marginBottom20,
       children: F.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
     }), (0, a.jsx)(u.Slider, {
-      "aria-labelledby": k,
+      "aria-labelledby": V,
       "aria-describedby": H,
       markers: b.Accessibility.SATURATION_INCREMENTS,
       equidistant: !0,
@@ -145,11 +145,11 @@ function z() {
       maxValue: 1,
       minValue: 0,
       initialValue: e,
-      onValueChange: V,
+      onValueChange: w,
       onMarkerRender: e => 100 * e % 2 == 0 ? "".concat(100 * e, "%") : void 0
     }), (0, a.jsx)(u.FormSwitch, {
       hideBorder: !0,
-      className: i()(y.marginTop8, y.marginBottom20),
+      className: i()(B.marginTop8, B.marginBottom20),
       value: t,
       onChange: E.toggleDesaturateUserColors,
       note: F.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_CUSTOM_COLORS_DESCRIPTION,
@@ -161,7 +161,7 @@ function z() {
 function Q() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.alwaysShowLinkDecorations);
   return (0, a.jsx)(u.FormItem, {
-    className: y.marginTop20,
+    className: B.marginTop20,
     children: (0, a.jsx)(u.FormSwitch, {
       note: F.default.Messages.ACCESSIBILITY_SETTINGS_ALWAYS_SHOW_LINK_DECORATIONS_NOTE,
       value: e,
@@ -178,10 +178,10 @@ function q() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormItem, {
       title: F.default.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
-      className: y.marginTop20,
+      className: B.marginTop20,
       children: [(0, a.jsx)(u.FormText, {
         type: u.FormText.Types.DESCRIPTION,
-        className: y.marginBottom8,
+        className: B.marginBottom8,
         children: F.default.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_DESCRIPTION
       }), (0, a.jsx)(u.RadioGroup, {
         options: [{
@@ -200,16 +200,16 @@ function q() {
         value: e
       })]
     }), (0, a.jsx)(u.FormDivider, {
-      className: y.marginTop20
+      className: B.marginTop20
     })]
   })
 }
 
-function Z() {
+function X() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.hideTags);
   return (0, a.jsx)(u.FormItem, {
     title: F.default.Messages.ACCESSIBILITY_SETTINGS_TAGS_TITLE,
-    className: y.marginTop20,
+    className: B.marginTop20,
     children: (0, a.jsx)(u.FormSwitch, {
       value: !e,
       onChange: () => (0, E.setHideTags)(!e),
@@ -218,20 +218,20 @@ function Z() {
   })
 }
 
-function X() {
+function Z() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.syncProfileThemeWithUserTheme),
     t = n.useRef(null);
-  return (0, v.default)(t, P.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
+  return (0, P.default)(t, v.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
     ref: t,
     title: F.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE,
-    className: i()(y.marginTop20, G.syncProfileThemeWithUserTheme),
+    className: i()(B.marginTop20, G.syncProfileThemeWithUserTheme),
     children: (0, a.jsx)(u.FormSwitch, {
       note: F.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
         onThemeClick() {
           c.default.open(b.UserSettingsSections.APPEARANCE)
         }
       }),
-      className: y.marginTop20,
+      className: B.marginTop20,
       value: e,
       onChange: E.toggleSyncProfileThemeWithUserTheme,
       children: F.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_DESCRIPTION
@@ -253,7 +253,7 @@ function J() {
   });
   return (0, a.jsx)(u.FormItem, {
     title: F.default.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
-    className: y.marginTop20,
+    className: B.marginTop20,
     children: (0, a.jsx)(u.FormSwitch, {
       value: t,
       note: i,
@@ -280,25 +280,25 @@ function $() {
       animateEmojiOverrideReason: L.default.getAppliedOverrideReasonKey("animateEmoji")
     })),
     S = n.useRef(null);
-  (0, v.default)(S, P.AccessibilityScrollPositions.REDUCED_MOTION);
+  (0, P.default)(S, v.AccessibilityScrollPositions.REDUCED_MOTION);
   let _ = n.useCallback((e, t) => {
       (0, E.setPrefersReducedMotion)(t ? "auto" : r)
     }, [r]),
-    f = n.useCallback(e => {
+    I = n.useCallback(e => {
       (0, E.setPrefersReducedMotion)(e ? "reduce" : "no-preference")
     }, []);
   return (0, a.jsxs)(u.FormItem, {
     ref: S,
     title: F.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION,
-    className: i()(y.marginTop20, G.reducedMotion),
+    className: i()(B.marginTop20, G.reducedMotion),
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
-      className: y.marginBottom8,
+      className: B.marginBottom8,
       children: F.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
         helpdeskArticle: M.default.getArticleURL(b.HelpdeskArticles.REDUCED_MOTION)
       })
     }), (0, a.jsx)(u.Checkbox, {
-      className: y.marginTop20,
+      className: B.marginTop20,
       value: "auto" === l,
       shape: u.Checkbox.Shapes.BOX,
       type: u.Checkbox.Types.INVERTED,
@@ -308,18 +308,18 @@ function $() {
         children: F.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_AUTO
       })
     }), (0, a.jsx)(u.FormSwitch, {
-      className: y.marginTop20,
+      className: B.marginTop20,
       value: s,
-      onChange: f,
+      onChange: I,
       children: F.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE
     }), (0, a.jsx)(u.FormSwitch, {
-      className: y.marginBottom40,
+      className: B.marginBottom40,
       value: e,
       note: null != o ? (0, g.default)(o) : void 0,
       onChange: D.GifAutoPlay.updateSetting,
       children: F.default.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, a.jsx)(u.FormSwitch, {
-      className: i()(y.marginTop8, y.marginBottom20),
+      className: i()(B.marginTop8, B.marginBottom20),
       value: t,
       note: null != c ? (0, g.default)(c) : void 0,
       onChange: D.AnimateEmoji.updateSetting,
@@ -335,11 +335,11 @@ function ee() {
       D.AnimateStickers.updateSetting(e.value)
     }, []);
   return (0, a.jsxs)(u.FormItem, {
-    className: y.marginBottom40,
+    className: B.marginBottom40,
     title: F.default.Messages.STICKERS_AUTO_PLAY_HEADING,
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
-      className: y.marginBottom8,
+      className: B.marginBottom8,
       children: null != t ? (0, g.default)(t) : F.default.Messages.STICKERS_AUTO_PLAY_HELP
     }), (0, a.jsx)(u.RadioGroup, {
       options: [{
@@ -363,18 +363,18 @@ function et() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.isSubmitButtonEnabled),
     t = D.UseLegacyChatInput.useSetting(),
     s = n.useRef(null);
-  return (0, v.default)(s, P.AccessibilityScrollPositions.LEGACY_CHAT_INPUT), (0, a.jsxs)(u.FormItem, {
+  return (0, P.default)(s, v.AccessibilityScrollPositions.LEGACY_CHAT_INPUT), (0, a.jsxs)(u.FormItem, {
     ref: s,
     children: [(0, a.jsx)(u.FormTitle, {
-      className: y.marginBottom8,
+      className: B.marginBottom8,
       children: F.default.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT
     }), (0, a.jsx)(u.FormSwitch, {
-      className: y.marginTop20,
+      className: B.marginTop20,
       value: e,
       onChange: E.toggleSubmitButton,
       children: F.default.Messages.DISPLAY_SUBMIT_BUTTON
     }), (0, a.jsx)(u.FormSwitch, {
-      className: y.marginTop8,
+      className: B.marginTop8,
       value: t,
       note: F.default.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
       onChange: e => {
@@ -397,19 +397,19 @@ function es() {
   return S.supported ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormItem, {
       children: [(0, a.jsx)(u.FormTitle, {
-        className: y.marginBottom8,
+        className: B.marginBottom8,
         children: F.default.Messages.FORM_LABEL_TTS
       }), (0, a.jsx)(u.FormSwitch, {
-        className: y.marginTop20,
+        className: B.marginTop20,
         value: e,
         onChange: D.EnableTTSCommand.updateSetting,
         children: F.default.Messages.ALLOW_TTS_COMMAND
       })]
     }), (0, a.jsxs)(u.FormItem, {
-      className: y.marginBottom20,
+      className: B.marginBottom20,
       children: [(0, a.jsx)(u.FormTitle, {
-        id: w,
-        className: y.marginBottom20,
+        id: k,
+        className: B.marginBottom20,
         children: F.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL
       }), (0, a.jsx)("div", {
         className: G.ttsPreviewWrapper,
@@ -421,8 +421,8 @@ function es() {
               return
             }(0, h.speakText)(F.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => l(!0), () => l(!1)), l(!0)
           },
-          children: (0, a.jsxs)(A.default, {
-            align: A.default.Align.CENTER,
+          children: (0, a.jsxs)(O.default, {
+            align: O.default.Align.CENTER,
             children: [s ? (0, a.jsx)(p.default, {
               width: 24,
               height: 24
@@ -452,7 +452,7 @@ function es() {
         }) : 1 === e ? (0, a.jsx)("span", {
           children: "x1.0"
         }) : e % 1 == 0 ? "" : void 0,
-        "aria-labelledby": w
+        "aria-labelledby": k
       })]
     })]
   }) : null

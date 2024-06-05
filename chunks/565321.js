@@ -2,49 +2,49 @@
 a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
-  s = a("481060"),
-  i = a("881052"),
+  i = a("481060"),
+  s = a("881052"),
   l = a("484455"),
   o = a("592286"),
-  c = a("689938"),
-  d = a("17359");
+  d = a("689938"),
+  c = a("17359");
 t.default = function(e) {
   let {
     guildId: t,
     onSave: a,
     formDescription: u
-  } = e, [f, m] = r.useState(null), [h, E] = r.useState(u), p = r.useRef(!1), C = r.useRef(!1);
+  } = e, [f, m] = r.useState(null), [E, h] = r.useState(u), T = r.useRef(!1), _ = r.useRef(!1);
   r.useEffect(() => () => {
-    C.current = !0
+    _.current = !0
   }, []);
-  let T = r.useCallback(async () => {
-    if (!p.current) {
+  let C = r.useCallback(async () => {
+    if (!T.current) {
       m(null);
       try {
-        await a(t, h)
+        await a(t, E)
       } catch (e) {
-        if (C.current) return;
-        m(new i.APIError(e).getAnyErrorMessage())
+        if (_.current) return;
+        m(new s.APIError(e).getAnyErrorMessage())
       } finally {
-        if (C.current) return;
-        p.current = !1
+        if (_.current) return;
+        T.current = !1
       }
     }
-  }, [h, t, a]);
+  }, [E, t, a]);
   return (0, n.jsxs)(l.default, {
-    title: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
-    children: [(0, n.jsx)(s.TextArea, {
-      className: d.fieldBackground,
+    title: d.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
+    children: [(0, n.jsx)(i.TextArea, {
+      className: c.fieldBackground,
       maxLength: o.MAX_DESCRIPTION_LENGTH,
-      value: null != h ? h : "",
-      placeholder: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
+      value: null != E ? E : "",
+      placeholder: d.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
       onChange: e => {
-        E(e)
+        h(e)
       },
-      onBlur: T,
+      onBlur: C,
       autosize: !0
-    }), null != f && "" !== f ? (0, n.jsx)(s.Text, {
-      className: d.errorText,
+    }), null != f && "" !== f ? (0, n.jsx)(i.Text, {
+      className: c.errorText,
       variant: "text-xs/normal",
       color: "text-danger",
       children: f

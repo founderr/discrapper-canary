@@ -1,26 +1,26 @@
-var r = s("413135").Buffer,
+var l = t("413135").Buffer,
   n = [255, 255, 26, 27, 28, 29, 30, 31, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255];
-t.encode = function(e) {
-  !r.isBuffer(e) && (e = new r(e));
-  var t, s, n = 0,
-    a = 0,
-    i = 0,
-    l = 0;
-  for (var o = new r(8 * (s = Math.floor((t = e).length / 5), t.length % 5 == 0 ? s : s + 1)); n < e.length;) {
+i.encode = function(e) {
+  !l.isBuffer(e) && (e = new l(e));
+  var i, t, n = 0,
+    s = 0,
+    r = 0,
+    a = 0;
+  for (var o = new l(8 * (t = Math.floor((i = e).length / 5), i.length % 5 == 0 ? t : t + 1)); n < e.length;) {
     var d = e[n];
-    i > 3 ? (l = (l = d & 255 >> i) << (i = (i + 5) % 8) | (n + 1 < e.length ? e[n + 1] : 0) >> 8 - i, n++) : (l = d >> 8 - (i + 5) & 31, 0 == (i = (i + 5) % 8) && n++), o[a] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt(l), a++
+    r > 3 ? (a = (a = d & 255 >> r) << (r = (r + 5) % 8) | (n + 1 < e.length ? e[n + 1] : 0) >> 8 - r, n++) : (a = d >> 8 - (r + 5) & 31, 0 == (r = (r + 5) % 8) && n++), o[s] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt(a), s++
   }
-  for (n = a; n < o.length; n++) o[n] = 61;
+  for (n = s; n < o.length; n++) o[n] = 61;
   return o
-}, t.decode = function(e) {
-  var t, s = 0,
-    a = 0,
-    i = 0;
-  !r.isBuffer(e) && (e = new r(e));
-  for (var l = new r(Math.ceil(5 * e.length / 8)), o = 0; o < e.length && 61 != e[o]; o++) {
+}, i.decode = function(e) {
+  var i, t = 0,
+    s = 0,
+    r = 0;
+  !l.isBuffer(e) && (e = new l(e));
+  for (var a = new l(Math.ceil(5 * e.length / 8)), o = 0; o < e.length && 61 != e[o]; o++) {
     var d = e[o] - 48;
-    if (d < n.length) a = n[d], s <= 3 ? 0 == (s = (s + 5) % 8) ? (t |= a, l[i] = t, i++, t = 0) : t |= 255 & a << 8 - s : (t |= 255 & a >>> (s = (s + 5) % 8), l[i] = t, i++, t = 255 & a << 8 - s);
+    if (d < n.length) s = n[d], t <= 3 ? 0 == (t = (t + 5) % 8) ? (i |= s, a[r] = i, r++, i = 0) : i |= 255 & s << 8 - t : (i |= 255 & s >>> (t = (t + 5) % 8), a[r] = i, r++, i = 255 & s << 8 - t);
     else throw Error("Invalid input - it is not base32 encoded string")
   }
-  return l.slice(0, i)
+  return a.slice(0, r)
 }

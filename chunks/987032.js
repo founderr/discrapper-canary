@@ -1,16 +1,16 @@
 "use strict";
-n.r(a), n.d(a, {
+a.r(t), a.d(t, {
   getEPSBankDisplayNameFromBankName: function() {
     return u
   },
   getIdealBankDisplayNameFromBankName: function() {
-    return c
+    return l
   }
-}), n("47120");
-var r = n("818083"),
-  t = n("981631"),
-  o = n("689938");
-a.default = (0, r.createExperiment)({
+}), a("47120");
+var n = a("818083"),
+  r = a("981631"),
+  s = a("689938");
+t.default = (0, n.createExperiment)({
   kind: "user",
   id: "2021-08_regional_payment_methods",
   label: "Regional Payment Methods",
@@ -23,7 +23,7 @@ a.default = (0, r.createExperiment)({
     id: 1,
     label: "Regional Payment Method for Germany",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.SOFORT, t.PaymentSourceTypes.GIROPAY],
+      enabledPaymentTypes: [r.PaymentSourceTypes.SOFORT, r.PaymentSourceTypes.GIROPAY],
       forceCountryCode: "DE",
       validCountryCodes: ["DE"]
     }
@@ -31,7 +31,7 @@ a.default = (0, r.createExperiment)({
     id: 2,
     label: "Regional Payment Method for US",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.VENMO, t.PaymentSourceTypes.CASH_APP],
+      enabledPaymentTypes: [r.PaymentSourceTypes.VENMO, r.PaymentSourceTypes.CASH_APP],
       forceCountryCode: "US",
       validCountryCodes: ["US"]
     }
@@ -55,7 +55,7 @@ a.default = (0, r.createExperiment)({
     id: 5,
     label: "Regional Payment Method for Poland",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.PRZELEWY24],
+      enabledPaymentTypes: [r.PaymentSourceTypes.PRZELEWY24],
       forceCountryCode: "PL",
       validCountryCodes: ["PL"]
     }
@@ -63,7 +63,7 @@ a.default = (0, r.createExperiment)({
     id: 6,
     label: "Enable paysafecard",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD],
+      enabledPaymentTypes: [r.PaymentSourceTypes.PAYSAFE_CARD],
       forceCountryCode: "DE",
       validCountryCodes: ["BG", "CZ", "DK", "HU", "RO", "SE", "DE"]
     }
@@ -71,7 +71,7 @@ a.default = (0, r.createExperiment)({
     id: 7,
     label: "Regional Payment Method for Philippines",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.GCASH],
+      enabledPaymentTypes: [r.PaymentSourceTypes.GCASH],
       forceCountryCode: "PH",
       validCountryCodes: ["PH"]
     }
@@ -79,7 +79,7 @@ a.default = (0, r.createExperiment)({
     id: 8,
     label: "Regional Payment Method for Malaysia",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.GRABPAY_MY],
+      enabledPaymentTypes: [r.PaymentSourceTypes.GRABPAY_MY],
       forceCountryCode: "MY",
       validCountryCodes: ["MY"]
     }
@@ -87,7 +87,7 @@ a.default = (0, r.createExperiment)({
     id: 9,
     label: "Regional Payment Method for Vietnam",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.MOMO_WALLET],
+      enabledPaymentTypes: [r.PaymentSourceTypes.MOMO_WALLET],
       forceCountryCode: "VN",
       validCountryCodes: ["VN"]
     }
@@ -95,7 +95,7 @@ a.default = (0, r.createExperiment)({
     id: 10,
     label: "Regional Payment Method for Indonesia",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.GOPAY_WALLET],
+      enabledPaymentTypes: [r.PaymentSourceTypes.GOPAY_WALLET],
       forceCountryCode: "ID",
       validCountryCodes: ["ID"]
     }
@@ -103,7 +103,7 @@ a.default = (0, r.createExperiment)({
     id: 11,
     label: "Regional Payment Method for South Korea",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.KAKAOPAY],
+      enabledPaymentTypes: [r.PaymentSourceTypes.KAKAOPAY],
       forceCountryCode: "KR",
       validCountryCodes: ["KR"]
     }
@@ -111,7 +111,7 @@ a.default = (0, r.createExperiment)({
     id: 12,
     label: "Regional Payment Method for Belgium",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD, t.PaymentSourceTypes.SOFORT, t.PaymentSourceTypes.BANCONTACT],
+      enabledPaymentTypes: [r.PaymentSourceTypes.PAYSAFE_CARD, r.PaymentSourceTypes.SOFORT, r.PaymentSourceTypes.BANCONTACT],
       forceCountryCode: "BE",
       validCountryCodes: ["BE"]
     }
@@ -119,7 +119,7 @@ a.default = (0, r.createExperiment)({
     id: 13,
     label: "Regional Payment Method for Austria",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD, t.PaymentSourceTypes.EPS, t.PaymentSourceTypes.SOFORT],
+      enabledPaymentTypes: [r.PaymentSourceTypes.PAYSAFE_CARD, r.PaymentSourceTypes.EPS, r.PaymentSourceTypes.SOFORT],
       forceCountryCode: "AT",
       validCountryCodes: ["AT"]
     }
@@ -127,7 +127,7 @@ a.default = (0, r.createExperiment)({
     id: 14,
     label: "Regional Payment Method for Netherlands",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD, t.PaymentSourceTypes.IDEAL, t.PaymentSourceTypes.SOFORT],
+      enabledPaymentTypes: [r.PaymentSourceTypes.PAYSAFE_CARD, r.PaymentSourceTypes.IDEAL, r.PaymentSourceTypes.SOFORT],
       forceCountryCode: "NL",
       validCountryCodes: ["NL"]
     }
@@ -135,7 +135,7 @@ a.default = (0, r.createExperiment)({
     id: 15,
     label: "Launch Paysafecard and Sofort",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD, t.PaymentSourceTypes.SOFORT],
+      enabledPaymentTypes: [r.PaymentSourceTypes.PAYSAFE_CARD, r.PaymentSourceTypes.SOFORT],
       forceCountryCode: "ES",
       validCountryCodes: ["ES", "IT"]
     }
@@ -143,13 +143,13 @@ a.default = (0, r.createExperiment)({
     id: 16,
     label: "Launch Cash App",
     config: {
-      enabledPaymentTypes: [t.PaymentSourceTypes.CASH_APP],
+      enabledPaymentTypes: [r.PaymentSourceTypes.CASH_APP],
       forceCountryCode: "US",
       validCountryCodes: ["US"]
     }
   }]
 });
-let s = new Map([
+let i = new Map([
   ["abn_amro", "ABN AMRO"],
   ["asn_bank", "ASN Bank"],
   ["bunq", "Bunq"],
@@ -164,10 +164,10 @@ let s = new Map([
   ["van_lanschot", "Van Lanschot"]
 ]);
 
-function c(e) {
-  return void 0 !== e && s.has(e) ? s.get(e) : o.default.Messages.PAYMENT_SOURCE_UNKNOWN
+function l(e) {
+  return void 0 !== e && i.has(e) ? i.get(e) : s.default.Messages.PAYMENT_SOURCE_UNKNOWN
 }
-let i = new Map([
+let o = new Map([
   ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],
   ["austrian_anadi_bank_ag", "Austrian Anadi Bank AG"],
   ["bank_austria", "Bank Austria"],
@@ -198,5 +198,5 @@ let i = new Map([
 ]);
 
 function u(e) {
-  return void 0 !== e && i.has(e) ? i.get(e) : o.default.Messages.PAYMENT_SOURCE_UNKNOWN
+  return void 0 !== e && o.has(e) ? o.get(e) : s.default.Messages.PAYMENT_SOURCE_UNKNOWN
 }

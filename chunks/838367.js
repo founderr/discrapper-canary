@@ -1,62 +1,62 @@
 "use strict";
-a.r(l);
-var s, t, i, n, d, u, c = a("442837"),
-  r = a("570140"),
-  o = a("314897"),
-  h = a("900849");
-(s = d || (d = {})).UNSET = "unset", s.FETCHING = "fetching", s.FAILED = "failed", s.SUCCEEDED = "succeeded";
-let m = {
+n.r(t);
+var l, a, s, i, d, u, r = n("442837"),
+  o = n("570140"),
+  c = n("314897"),
+  h = n("900849");
+(l = d || (d = {})).UNSET = "unset", l.FETCHING = "fetching", l.FAILED = "failed", l.SUCCEEDED = "succeeded";
+let f = {
   guilds: {}
 };
-class f extends(u = c.default.Store) {
+class g extends(u = r.default.Store) {
   initialize() {
-    this.waitFor(o.default)
+    this.waitFor(c.default)
   }
   isFetchingGuild(e) {
-    let l = m.guilds[e];
-    return null != l && "fetching" === l.fetchState
+    let t = f.guilds[e];
+    return null != t && "fetching" === t.fetchState
   }
   getGuild(e) {
-    let l = m.guilds[e];
-    return null != l ? l.guild : null
+    let t = f.guilds[e];
+    return null != t ? t.guild : null
   }
   hasFetchFailed(e) {
-    let l = m.guilds[e];
-    return null != l && "failed" === l.fetchState
+    let t = f.guilds[e];
+    return null != t && "failed" === t.fetchState
   }
 }
-n = "GuildPopoutStore", (i = "displayName") in(t = f) ? Object.defineProperty(t, i, {
-  value: n,
+i = "GuildPopoutStore", (s = "displayName") in(a = g) ? Object.defineProperty(a, s, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : t[i] = n, l.default = new f(r.default, {
+}) : a[s] = i, t.default = new g(o.default, {
   GUILD_POPOUT_FETCH_START: function(e) {
     let {
-      guildId: l
+      guildId: t
     } = e;
-    m.guilds[l] = {
-      ...m.guilds[l],
+    f.guilds[t] = {
+      ...f.guilds[t],
       fetchState: "fetching"
     }
   },
   GUILD_POPOUT_FETCH_SUCCESS: function(e) {
     let {
-      guildId: l,
-      guild: a
-    } = e, s = (0, h.makeDiscoverableGuild)(a);
-    m.guilds[l] = {
-      ...m.guilds[l],
-      guild: s,
+      guildId: t,
+      guild: n
+    } = e, l = (0, h.makeDiscoverableGuild)(n);
+    f.guilds[t] = {
+      ...f.guilds[t],
+      guild: l,
       fetchState: "succeeded"
     }
   },
   GUILD_POPOUT_FETCH_FAILURE: function(e) {
     let {
-      guildId: l
+      guildId: t
     } = e;
-    m.guilds[l] = {
-      ...m.guilds[l],
+    f.guilds[t] = {
+      ...f.guilds[t],
       fetchState: "failed"
     }
   }

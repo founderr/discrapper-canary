@@ -43,14 +43,14 @@ function _(e) {
       currentLayout: l,
       mode: e
     }
-  }, [t, n]), N = (0, s.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === t.id, [t.id]);
+  }, [t, n]), x = (0, s.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === t.id, [t.id]);
   l.useEffect(() => {
     I.current = v
   });
-  let x = l.useRef(A),
+  let N = l.useRef(A),
     {
       currentDocument: M,
-      rootNode: R
+      rootNode: y
     } = l.useMemo(() => {
       let e = null != d && T ? d.document : document,
         t = _.document.getElementById("app-mount");
@@ -60,38 +60,38 @@ function _(e) {
         rootNode: t
       }
     }, [d, T, _]),
-    y = i && !T,
-    L = v === C.ChannelModes.VIDEO && N && !y,
+    R = i && !T,
+    L = v === C.ChannelModes.VIDEO && x && !R,
     O = l.useCallback((e, a) => {
       a !== e && (r.default.updateLayout(t.id, a, n), a === C.ChannelLayouts.FULL_SCREEN && t.isPrivate() && m.ComponentDispatch.dispatch(C.ComponentActions.TEXTAREA_BLUR))
     }, [n, t]),
     j = l.useCallback(e => {
-      if (null != R) e === C.ChannelLayouts.FULL_SCREEN && (O(e, x.current), (0, E.exitFullScreen)(e => {
-        x.current = e
+      if (null != y) e === C.ChannelLayouts.FULL_SCREEN && (O(e, N.current), (0, E.exitFullScreen)(e => {
+        N.current = e
       }, M))
-    }, [M, O, R]),
+    }, [M, O, y]),
     P = l.useCallback(e => () => {
-      null != R && (e !== C.ChannelLayouts.FULL_SCREEN ? (x.current = e, O(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : j(e))
-    }, [O, j, R]);
+      null != y && (e !== C.ChannelLayouts.FULL_SCREEN ? (N.current = e, O(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(y)) : j(e))
+    }, [O, j, y]);
   return (l.useEffect(() => {
     let e = () => {
-      null != R && !(0, E.isFullScreen)(R, M) && A === C.ChannelLayouts.FULL_SCREEN && P(A)()
+      null != y && !(0, E.isFullScreen)(y, M) && A === C.ChannelLayouts.FULL_SCREEN && P(A)()
     };
     return M.addEventListener(E.FULLSCREEN_CHANGE_EVENT, e), () => {
       M.removeEventListener(E.FULLSCREEN_CHANGE_EVENT, e)
     }
-  }, [M, A, P, R]), l.useEffect(() => (h.default.track(C.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
+  }, [M, A, P, y]), l.useEffect(() => (h.default.track(C.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
     video_layout: T ? "popout" : A,
     ...(0, o.collectVoiceAnalyticsMetadata)(t.id)
   }), () => {
     !(T && (0, p.isMac)()) && j(A)
   }), [A, T]), l.useEffect(() => {
-    null != R && I.current === C.ChannelModes.VIDEO && v === C.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
-  }, [M, v, I, R]), l.useEffect(() => {
-    !N && T && S()
-  }, [N, T]), L) ? (0, a.jsx)(c.default, {
+    null != y && I.current === C.ChannelModes.VIDEO && v === C.ChannelModes.VOICE && (0, E.exitFullScreen)(y, M)
+  }, [M, v, I, y]), l.useEffect(() => {
+    !x && T && S()
+  }, [x, T]), L) ? (0, a.jsx)(c.default, {
     themeable: !1,
-    node: R,
+    node: y,
     guestWindow: d,
     className: g.rightTrayIcon,
     onClick: P(A)

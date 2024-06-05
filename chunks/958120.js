@@ -82,6 +82,13 @@ function L(e) {
           })
         })]
       })
+    }), (G || b) && k === R.RelationshipTypes.PENDING_INCOMING && (0, i.jsx)(S.default.Overlay, {
+      children: (0, i.jsx)(T.default, {
+        user: t,
+        guildId: null == v ? void 0 : v.id,
+        channelId: y,
+        className: g.banner
+      })
     }), t.id !== n.id && (0, i.jsx)(O.default, {
       user: t,
       onOpenProfile: e => M({
@@ -92,13 +99,6 @@ function L(e) {
       userId: t.id,
       inline: !1,
       profileViewedAnalytics: x
-    }), (G || b) && k === R.RelationshipTypes.PENDING_INCOMING && (0, i.jsx)(S.default.Overlay, {
-      children: (0, i.jsx)(T.default, {
-        user: t,
-        guildId: null == v ? void 0 : v.id,
-        channelId: y,
-        className: g.banner
-      })
     }), (U || b || G) && (0, i.jsx)(N.default, {
       user: t,
       bio: null == L ? void 0 : L.bio,

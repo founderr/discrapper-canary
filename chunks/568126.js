@@ -8,26 +8,26 @@ var r = s("442837"),
   l = s("78839"),
   o = s("985754"),
   u = s("222727"),
-  d = s("474494"),
-  c = s("981631"),
+  c = s("474494"),
+  d = s("981631"),
   _ = s("137018");
 t.default = function(e) {
   let {
     localizedPricingPromo: t
   } = e, s = t.countryCode, E = (0, r.useStateFromStores)([n.default], () => n.default.locale);
-  (0, u.useTrackLocalizedPricingPromoImpression)(c.AnalyticsSections.SETTINGS_PREMIUM_BANNER, s);
-  let T = (0, r.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()),
+  (0, u.useTrackLocalizedPricingPromoImpression)(d.AnalyticsSections.SETTINGS_PREMIUM_BANNER, s);
+  let R = (0, r.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()),
     {
-      localizedPricingBannerBody: I
+      localizedPricingBannerBody: T
     } = (0, o.getLocalizedPricingBannerStrings)({
       localizedPricingPromo: t,
-      subscription: T,
+      subscription: R,
       forceSingleLine: !0,
       userLocale: E
     });
   return (0, a.jsxs)("div", {
     className: _.bannerContainer,
-    children: [(0, a.jsx)(d.default, {
+    children: [(0, a.jsx)(c.default, {
       className: _.badge,
       countryCode: s
     }), (0, a.jsx)("div", {
@@ -36,7 +36,7 @@ t.default = function(e) {
         color: "none",
         variant: "text-md/normal",
         className: _.bannerBody,
-        children: I
+        children: T
       })
     })]
   })

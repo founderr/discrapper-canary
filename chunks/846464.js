@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumPaymentSKUSelectStep: function() {
-    return j
+    return m
   }
 });
 var n = s("735250");
@@ -16,15 +16,15 @@ var i = s("120356"),
   d = s("973007"),
   c = s("74538"),
   p = s("987209"),
-  f = s("598"),
-  x = s("409813"),
-  _ = s("614223"),
-  m = s("48175"),
+  _ = s("598"),
+  f = s("409813"),
+  x = s("614223"),
+  E = s("48175"),
   L = s("474936"),
-  h = s("689938"),
-  S = s("385231");
+  S = s("689938"),
+  I = s("385231");
 
-function j(e) {
+function m(e) {
   let {
     handleStepChange: t,
     handleClose: s,
@@ -34,13 +34,13 @@ function j(e) {
     activeSubscription: l,
     startedPaymentFlowWithPaymentSourcesRef: u,
     setSelectedPlanId: d,
-    priceOptions: h
-  } = (0, f.usePaymentContext)(), {
-    isGift: S
-  } = (0, p.useGiftContext)(), j = (0, C.usePremiumTrialOffer)(i);
-  (0, o.useAnnualDiscountExperiment)("PremiumPaymentSKUSelectStep", null == j);
+    priceOptions: S
+  } = (0, _.usePaymentContext)(), {
+    isGift: I
+  } = (0, p.useGiftContext)(), m = (0, C.usePremiumTrialOffer)(i);
+  (0, o.useAnnualDiscountExperiment)("PremiumPaymentSKUSelectStep", null == m);
   let P = (0, a.useIsInPremiumOfferExperience)();
-  return (0, n.jsx)(E, {
+  return (0, n.jsx)(h, {
     selectSku: e => (function(e) {
       let {
         activeSubscription: t,
@@ -53,21 +53,21 @@ function j(e) {
         startedPaymentFlowWithPaymentSources: o
       } = e;
       n(s);
-      let C = x.Step.PLAN_SELECT,
+      let C = f.Step.PLAN_SELECT,
         u = (0, c.getPremiumSkuIdForSubscription)(t);
-      (u === L.PremiumSubscriptionSKUs.TIER_1 || u === L.PremiumSubscriptionSKUs.TIER_2) && s === L.PremiumSubscriptionSKUs.TIER_0 && !r && (C = x.Step.WHAT_YOU_LOSE);
-      let d = (0, m.isInTrialRedemption)({
+      (u === L.PremiumSubscriptionSKUs.TIER_1 || u === L.PremiumSubscriptionSKUs.TIER_2) && s === L.PremiumSubscriptionSKUs.TIER_0 && !r && (C = f.Step.WHAT_YOU_LOSE);
+      let d = (0, E.isInTrialRedemption)({
           userTrialOffer: l,
           isGift: r,
           skuId: s
         }),
-        p = (0, _.inOneStepSubscriptionCheckout)({
+        p = (0, x.inOneStepSubscriptionCheckout)({
           isTrial: d,
           isGift: r,
           selectedSkuId: s,
           startedPaymentFlowWithPaymentSources: o
         });
-      C !== x.Step.WHAT_YOU_LOSE && p && (C = x.Step.REVIEW, a((0, _.getDefaultPlanOneStepCheckout)(s, t))), i(C, {
+      C !== f.Step.WHAT_YOU_LOSE && p && (C = f.Step.REVIEW, a((0, x.getDefaultPlanOneStepCheckout)(s, t))), i(C, {
         analyticsDataOverride: {
           sku_id: s
         }
@@ -77,19 +77,19 @@ function j(e) {
       newSkuId: e,
       setSelectedSkuId: r,
       handleStepChange: t,
-      isGift: S,
-      userTrialOffer: j,
+      isGift: I,
+      userTrialOffer: m,
       startedPaymentFlowWithPaymentSources: u.current,
       setSelectedPlanId: d
     }),
     onClose: s,
-    isGift: S,
+    isGift: I,
     inOfferExperience: P,
-    priceOptions: h
+    priceOptions: S
   })
 }
 
-function E(e) {
+function h(e) {
   let {
     selectSku: t,
     onClose: s,
@@ -99,21 +99,21 @@ function E(e) {
   } = e;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(l.ModalHeader, {
-      className: S.skuSelectModalHeader,
+      className: I.skuSelectModalHeader,
       separator: !1,
       children: [(0, n.jsx)(l.FormTitle, {
         tag: l.FormTitleTags.H4,
-        children: h.default.Messages.BILLING_STEP_SELECT_PLAN
+        children: S.default.Messages.BILLING_STEP_SELECT_PLAN
       }), (0, n.jsx)(l.ModalCloseButton, {
         onClick: s
       })]
     }), (0, n.jsxs)(l.ModalContent, {
-      className: r()(S.skuSelectModalContent, {
-        [S.modalPadding]: a
+      className: r()(I.skuSelectModalContent, {
+        [I.modalPadding]: a
       }),
       children: [(0, n.jsx)(u.default, {
         fromBoostCancelModal: !1,
-        className: S.legacyPricingNotice
+        className: I.legacyPricingNotice
       }), (0, n.jsx)(d.default, {
         onSelectSku: e => t((0, c.castPremiumSubscriptionAsSkuId)(e)),
         isGift: i,

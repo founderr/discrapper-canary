@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var s, a = n("735250"),
   i = n("470079"),
-  r = n("615231"),
-  l = n("120356"),
-  o = n.n(l),
+  l = n("615231"),
+  r = n("120356"),
+  o = n.n(r),
   u = n("593473"),
   d = n("873546"),
   c = n("442837"),
@@ -21,8 +21,8 @@ var s, a = n("735250"),
   p = n("379760"),
   T = n("100159"),
   S = n("473855"),
-  I = n("124860"),
-  A = n("86779"),
+  A = n("124860"),
+  I = n("86779"),
   N = n("726745"),
   R = n("913583"),
   C = n("144114"),
@@ -94,8 +94,8 @@ class J extends(s = i.PureComponent) {
         let {
           challenge: t,
           ticket: n
-        } = e, s = (0, r.parseRequestOptionsFromJSON)(JSON.parse(t));
-        return s.signal = this.state.conditionalMediationAbortController.signal, (0, r.get)(s).then(e => (h.default.dispatch({
+        } = e, s = (0, l.parseRequestOptionsFromJSON)(JSON.parse(t));
+        return s.signal = this.state.conditionalMediationAbortController.signal, (0, l.get)(s).then(e => (h.default.dispatch({
           type: "PASSWORDLESS_START"
         }), E.default.loginWebAuthn({
           ticket: n,
@@ -116,8 +116,8 @@ class J extends(s = i.PureComponent) {
       checkingHandoff: s
     } = this.state;
     if (t && !e.authenticated && !s && (this.state.conditionalMediationAbortController.abort(), this.loginOrSSO(t, n)), e.errors !== this.props.errors) {
-      var a, i, r;
-      this.hasError("password") ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError("email") || this.hasError("login") ? null === (i = this.loginRef) || void 0 === i || i.focus() : this.hasError("code") && (null === (r = this.codeRef) || void 0 === r || r.focus())
+      var a, i, l;
+      this.hasError("password") ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError("email") || this.hasError("login") ? null === (i = this.loginRef) || void 0 === i || i.focus() : this.hasError("code") && (null === (l = this.codeRef) || void 0 === l || l.focus())
     }
   }
   get loginSource() {
@@ -318,8 +318,8 @@ class J extends(s = i.PureComponent) {
     let {
       invite: s,
       giftCode: i,
-      loginStatus: r,
-      country: l,
+      loginStatus: l,
+      country: r,
       showMobileWebHandoff: u,
       disableAutofocusOnDefaultForm: d
     } = this.props, c = !this.hasError("email") && this.hasError("password"), h = (null == s ? void 0 : s.stage_instance) != null;
@@ -365,8 +365,8 @@ class J extends(s = i.PureComponent) {
           children: (0, a.jsxs)(P.Block, {
             className: q.marginTop20,
             children: [(0, a.jsx)(v.default, {
-              alpha2: l.alpha2,
-              countryCode: l.code.split(" ")[0],
+              alpha2: r.alpha2,
+              countryCode: r.code.split(" ")[0],
               className: q.marginBottom20,
               label: K.default.Messages.FORM_LABEL_EMAIL_OR_PHONE_NUMBER,
               error: null !== (t = this.renderError("login")) && void 0 !== t ? t : this.renderError("email"),
@@ -404,7 +404,7 @@ class J extends(s = i.PureComponent) {
               children: K.default.Messages.FORGOT_PASSWORD
             }), (0, a.jsx)(P.Button, {
               type: "submit",
-              submitting: r === W.LoginStates.LOGGING_IN,
+              submitting: l === W.LoginStates.LOGGING_IN,
               color: h ? P.Button.Colors.GREEN : P.Button.Colors.BRAND,
               className: q.marginBottom8,
               children: h ? K.default.Messages._LOGIN_STAGE : K.default.Messages._LOGIN
@@ -445,7 +445,7 @@ class J extends(s = i.PureComponent) {
         className: e,
         expanded: !0,
         children: this.renderDefaultForm(!0)
-      }), t && (0, a.jsx)(A.default, {})]
+      }), t && (0, a.jsx)(I.default, {})]
     })
   }
   renderGuildTemplate(e) {
@@ -467,7 +467,7 @@ class J extends(s = i.PureComponent) {
       style: {
         padding: 0
       },
-      children: (0, a.jsx)(I.MFASlides, {
+      children: (0, a.jsx)(A.MFASlides, {
         mfaFinish: this.handleTokenSubmitMFA,
         request: e,
         onEarlyClose: () => {
@@ -537,12 +537,12 @@ class J extends(s = i.PureComponent) {
       loginStatus: s,
       handoffAvailable: i
     } = this.props, {
-      checkingHandoff: r,
-      redirecting: l
+      checkingHandoff: l,
+      redirecting: r
     } = this.state;
-    if (l || r) return (0, a.jsx)(Q, {});
+    if (r || l) return (0, a.jsx)(Q, {});
     if (i) return this.renderHandOffAvailable();
-    if (e && r) return this.renderHandOffContinue();
+    if (e && l) return this.renderHandOffContinue();
     switch (s) {
       case W.LoginStates.LOGGING_IN_MFA_SMS:
       case W.LoginStates.MFA_SMS_STEP:
@@ -711,10 +711,10 @@ class J extends(s = i.PureComponent) {
         giftCode: s,
         guildTemplate: a,
         location: i,
-        transitionTo: r,
-        redirectTo: l
+        transitionTo: l,
+        redirectTo: r
       } = this.props, o = null != i ? (0, u.parse)(i.search) : {};
-      "" !== t && (o.email = t), null != n ? (o.mode = "register", e = W.Routes.INVITE(n.code)) : null != s ? (o.mode = "register", e = W.Routes.GIFT_CODE(s.code)) : null != a ? e = W.Routes.GUILD_TEMPLATE(a.code) : null != l ? (e = W.Routes.REGISTER, o.redirect_to = l) : e = W.Routes.REGISTER, E.default.loginReset(), r(e, {
+      "" !== t && (o.email = t), null != n ? (o.mode = "register", e = W.Routes.INVITE(n.code)) : null != s ? (o.mode = "register", e = W.Routes.GIFT_CODE(s.code)) : null != a ? e = W.Routes.GUILD_TEMPLATE(a.code) : null != r ? (e = W.Routes.REGISTER, o.redirect_to = r) : e = W.Routes.REGISTER, E.default.loginReset(), l(e, {
         search: (0, u.stringify)(o)
       }), j.ComponentDispatch.dispatch(W.ComponentActions.WAVE_EMPHASIZE)
     });

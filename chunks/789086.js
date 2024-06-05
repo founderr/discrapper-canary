@@ -6,39 +6,39 @@ r.r(t), r.d(t, {
 });
 var a = r("735250"),
   i = r("442837"),
-  l = r("481060"),
-  n = r("373791"),
+  n = r("481060"),
+  l = r("373791"),
   o = r("146282"),
-  s = r("371991"),
-  c = r("206583");
+  c = r("371991"),
+  s = r("206583");
 
 function d() {
   let e = (0, i.useStateFromStores)([o.default], () => {
       var e;
-      return (null === (e = o.default.getFeed(c.ContentInventoryFeedKey.GLOBAL_FEED)) || void 0 === e ? void 0 : e.refresh_stale_inbox_after_ms) != null
+      return (null === (e = o.default.getFeed(s.ContentInventoryFeedKey.GLOBAL_FEED)) || void 0 === e ? void 0 : e.refresh_stale_inbox_after_ms) != null
     }),
     {
       loading: t,
       nextFetchDate: r
     } = (0, i.useStateFromStores)([o.default], () => {
       var e;
-      return null !== (e = o.default.getFeedState(c.ContentInventoryFeedKey.GLOBAL_FEED)) && void 0 !== e ? e : {
+      return null !== (e = o.default.getFeedState(s.ContentInventoryFeedKey.GLOBAL_FEED)) && void 0 !== e ? e : {
         loading: !1
       }
     }),
     d = (0, i.useStateFromStores)([o.default], () => o.default.getLastFeedFetchDate());
   return (0, a.jsxs)("div", {
-    children: [t ? (0, a.jsx)(l.Text, {
+    children: [t ? (0, a.jsx)(n.Text, {
       variant: "text-md/normal",
       children: "(fetching)"
-    }) : (0, a.jsxs)(l.Text, {
+    }) : (0, a.jsxs)(n.Text, {
       variant: "text-md/normal",
-      children: ["Next fetch: ", null != r ? (0, a.jsx)(n.default, {
+      children: ["Next fetch: ", null != r ? (0, a.jsx)(l.default, {
         deadline: r
       }) : e ? "(awaiting push)" : "(unscheduled)"]
-    }), (0, a.jsxs)(l.Text, {
+    }), (0, a.jsxs)(n.Text, {
       variant: "text-md/normal",
-      children: ["Last fetch:", " ", null != d ? (0, a.jsx)(s.ActiveTimestamp, {
+      children: ["Last fetch:", " ", null != d ? (0, a.jsx)(c.ActiveTimestamp, {
         inline: !0,
         entry: {
           start: d.getTime()

@@ -26,11 +26,11 @@ var a = n("735250"),
   I = n("703656"),
   A = n("493754"),
   v = n("880831"),
-  N = n("73563"),
-  x = n("800965"),
+  x = n("73563"),
+  N = n("800965"),
   M = n("107169"),
-  R = n("891551"),
-  y = n("314897"),
+  y = n("891551"),
+  R = n("314897"),
   L = n("979696"),
   O = n("430824"),
   j = n("496675"),
@@ -50,10 +50,10 @@ var a = n("735250"),
   z = n("700483"),
   K = n("686468"),
   Z = n("801405"),
-  q = n("903108"),
-  X = n("981631"),
-  Q = n("354459"),
-  J = n("689938"),
+  X = n("903108"),
+  q = n("981631"),
+  J = n("354459"),
+  Q = n("689938"),
   $ = n("807136");
 let ee = "HasBeenInStageChannel",
   et = (e, t) => () => {
@@ -61,10 +61,10 @@ let ee = "HasBeenInStageChannel",
     null != n && null != t && (0, I.transitionToGuild)(n, t), _.openChannelCallPopout(e)
   },
   en = () => {
-    c.default.wait(() => _.close(X.PopoutWindowKeys.CHANNEL_CALL_POPOUT))
+    c.default.wait(() => _.close(q.PopoutWindowKeys.CHANNEL_CALL_POPOUT))
   },
   ea = e => {
-    _.setAlwaysOnTop(X.PopoutWindowKeys.CHANNEL_CALL_POPOUT, e)
+    _.setAlwaysOnTop(q.PopoutWindowKeys.CHANNEL_CALL_POPOUT, e)
   };
 
 function el(e) {
@@ -75,7 +75,7 @@ function el(e) {
     popoutWindow: i,
     popoutWindowAlwaysOnTop: r,
     selectedParticipant: u
-  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = y.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== Q.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
+  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = R.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(q.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== J.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
   }, [i]), g = (0, Z.default)({
@@ -84,9 +84,9 @@ function el(e) {
     popoutOpen: s,
     popoutWindow: i,
     currentWindow: p
-  }), S = n === X.AppContext.POPOUT && D.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS);
+  }), S = n === q.AppContext.POPOUT && D.isPlatformEmbedded && U.default.supportsFeature(q.NativeFeatures.POPOUT_WINDOWS);
   return (0, a.jsxs)(a.Fragment, {
-    children: [m ? (0, a.jsx)(R.default, {
+    children: [m ? (0, a.jsx)(y.default, {
       context: (0, C.default)(u.type),
       userId: u.user.id,
       currentWindow: p,
@@ -95,7 +95,7 @@ function el(e) {
       className: $.rightTrayIcon,
       popoutWindowAlwaysOnTop: r,
       onToggleStayOnTop: ea
-    }) : null, h ? (0, a.jsx)(x.default, {
+    }) : null, h ? (0, a.jsx)(N.default, {
       className: $.rightTrayIcon,
       popoutOpen: s,
       onOpenPopout: et(t, c),
@@ -107,12 +107,12 @@ function el(e) {
 function es(e) {
   let {
     channel: t
-  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([j.default], () => j.default.can(X.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
+  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([j.default], () => j.default.can(q.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
   return null != s && r ? (0, a.jsx)(A.default, {
     channel: t,
     appContext: n,
     className: $.__invalid_leftTrayIcon,
-    analyticsLocation: X.AnalyticsPages.GUILD_CHANNEL
+    analyticsLocation: q.AnalyticsPages.GUILD_CHANNEL
   }) : null
 }
 
@@ -128,17 +128,17 @@ function ei(e) {
     } = e,
     p = (0, h.useAppContext)(),
     C = (0, o.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === n.id, [n.id]),
-    S = (0, o.useStateFromStores)([j.default], () => j.default.can(X.Permissions.CONNECT, n)),
+    S = (0, o.useStateFromStores)([j.default], () => j.default.can(q.Permissions.CONNECT, n)),
     _ = (0, w.useStageParticipants)(n.id, k.StageChannelParticipantNamedIndex.SPEAKER),
     T = (0, o.useStateFromStores)([E.default], () => E.default.getSelectedParticipant(n.id)),
-    I = f && p !== X.AppContext.POPOUT,
-    [A, x] = l.useState(0),
+    I = f && p !== q.AppContext.POPOUT,
+    [A, N] = l.useState(0),
     {
       isOnStartStageScreen: M
     } = (0, B.default)();
   (0, B.useUpdateIsOnStartStageScreenEffect)(n);
-  let R = (0, o.useStateFromStores)([L.default], () => L.default.getToastsEnabled(n.id)),
-    y = (0, q.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
+  let y = (0, o.useStateFromStores)([L.default], () => L.default.getToastsEnabled(n.id)),
+    R = (0, X.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
   return t = M ? (0, a.jsx)(K.default, {
     channel: n,
     onContinueClick: () => {
@@ -150,7 +150,7 @@ function ei(e) {
       let {
         scrollTop: t
       } = e.target;
-      (0, r.debounce)(() => x(t), 1e3, {
+      (0, r.debounce)(() => N(t), 1e3, {
         leading: !0
       })()
     }
@@ -158,12 +158,12 @@ function ei(e) {
     participants: _,
     channel: n,
     hasConnectPermission: S
-  }), (0, a.jsx)(N.default, {
+  }), (0, a.jsx)(x.default, {
     style: {
-      height: "calc(100% - ".concat(y, ")"),
-      paddingTop: y
+      height: "calc(100% - ".concat(R, ")"),
+      paddingTop: R
     },
-    disableGradients: 0 === A && N.DisableGradient.TOP,
+    disableGradients: 0 === A && x.DisableGradient.TOP,
     renderBottomLeft: () => (0, a.jsx)(es, {
       channel: n
     }),
@@ -180,12 +180,12 @@ function ei(e) {
       selectedParticipant: T
     }) : null,
     renderHeader: () => (0, a.jsx)(W.default, {
-      inPopout: p === X.AppContext.POPOUT,
+      inPopout: p === q.AppContext.POPOUT,
       toggleRequestToSpeakSidebar: s,
       showRequestToSpeakSidebar: u,
       channel: n
     }),
-    renderChatToasts: () => !R || m || I ? null : (0, a.jsx)(g.default, {
+    renderChatToasts: () => !y || m || I ? null : (0, a.jsx)(g.default, {
       children: (0, a.jsx)(v.default, {
         className: i()($.chatToasts, {
           [$.rtsSidebarOpen]: u
@@ -198,7 +198,7 @@ function ei(e) {
     onAllowIdle: () => {},
     onForceIdle: () => {},
     screenMessage: I ? {
-      mainText: J.default.Messages.POPOUT_PLAYER_OPENED
+      mainText: Q.default.Messages.POPOUT_PLAYER_OPENED
     } : null,
     idle: !1,
     children: !I && t
@@ -214,11 +214,11 @@ function er(e) {
     popoutWindow: C,
     popoutWindowAlwaysOnTop: _
   } = (0, o.useStateFromStoresObject)([T.default], () => ({
-    popoutWindow: T.default.getWindow(X.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
-    popoutWindowAlwaysOnTop: T.default.getIsAlwaysOnTop(X.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
+    popoutWindow: T.default.getWindow(q.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
+    popoutWindowAlwaysOnTop: T.default.getIsAlwaysOnTop(q.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
   })), I = null != C && !C.closed, {
     analyticsLocations: A
-  } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), v = (0, h.useAppContext)(), N = (0, o.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), x = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id), [t.guild_id]);
+  } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), v = (0, h.useAppContext)(), x = (0, o.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), N = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id), [t.guild_id]);
   l.useEffect(() => {
     null == u.Storage.get(ee) && ((0, d.openModalLazy)(async () => {
       let {
@@ -231,18 +231,18 @@ function er(e) {
   }, []);
   let {
     width: M = 0,
-    ref: R
+    ref: y
   } = (0, f.default)();
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: A,
     children: (0, a.jsxs)(g.ChannelCallChatLayerProvider, {
       children: [(0, a.jsxs)("div", {
         className: $.container,
-        ref: R,
+        ref: y,
         children: [(0, a.jsx)("div", {
-          className: i()($.callContainer, (0, b.getThemeClass)(X.ThemeTypes.DARK), {
+          className: i()($.callContainer, (0, b.getThemeClass)(q.ThemeTypes.DARK), {
             [$.sidebarVisible]: s,
-            [$.sidebarOrChatVisible]: s || N
+            [$.sidebarOrChatVisible]: s || x
           }),
           children: (0, a.jsx)(ei, {
             channel: t,
@@ -251,17 +251,17 @@ function er(e) {
             popoutWindow: C,
             popoutWindowAlwaysOnTop: _,
             popoutOpen: I,
-            chatOpen: N
+            chatOpen: x
           })
         }), s ? (0, a.jsx)(G.default, {
           channel: t,
           toggleRequestToSpeakSidebar: c,
-          chatOpen: N
+          chatOpen: x
         }) : null, (0, a.jsx)("div", {
           className: $.channelChatWrapper,
-          children: N && (!I || I && v === X.AppContext.POPOUT) && (0, a.jsx)(S.default, {
+          children: x && (!I || I && v === q.AppContext.POPOUT) && (0, a.jsx)(S.default, {
             channel: t,
-            guild: x,
+            guild: N,
             maxWidth: M - 550
           })
         })]

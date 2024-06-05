@@ -1,42 +1,42 @@
 "use strict";
 n.r(t), n.d(t, {
   STICKERS: function() {
-    return u
+    return o
   },
   getJoinButtonLabels: function() {
-    return r
+    return s
   },
   getRenewButtonLabels: function() {
-    return i
+    return l
   }
 });
-var a = n("373228"),
-  s = n("689938");
-let r = () => [s.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, s.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
-  i = () => [s.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, s.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
-  u = [{
+var i = n("373228"),
+  r = n("689938");
+let s = () => [r.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, r.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
+  l = () => [r.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, r.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
+  o = [{
     id: "781323471249604648",
-    format_type: a.StickerFormat.APNG,
+    format_type: i.StickerFormat.APNG,
     description: "Cheerful Choco jumps out of gift box",
     name: "Surprise"
   }, {
     id: "781324642736144424",
-    format_type: a.StickerFormat.APNG,
+    format_type: i.StickerFormat.APNG,
     description: "Cheerful Choco preens against window",
     name: "Affection"
   }, {
     id: "781323769960202280",
-    format_type: a.StickerFormat.APNG,
+    format_type: i.StickerFormat.APNG,
     description: "Cheerful Choco sparkles",
     name: "OMG"
   }, {
     id: "781324722394103808",
-    format_type: a.StickerFormat.APNG,
+    format_type: i.StickerFormat.APNG,
     description: "Cheerful Choco cheers",
     name: "Cheer"
   }, {
     id: "813951723822645278",
-    format_type: a.StickerFormat.APNG,
+    format_type: i.StickerFormat.APNG,
     description: "Cheerful Choco gives thumbs up",
     name: "Nice"
   }]

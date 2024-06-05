@@ -15,9 +15,9 @@ var s = n("735250"),
   _ = n("819570"),
   p = n("63063"),
   h = n("981631"),
-  T = n("689938"),
-  g = n("194409"),
-  m = n("611273");
+  g = n("689938"),
+  m = n("194409"),
+  T = n("611273");
 i.default.initialize();
 let N = e => {
   let {
@@ -31,8 +31,8 @@ let N = e => {
       return t => (0, s.jsx)(e, {
         ...t,
         onSuccess: u,
-        headerText: T.default.Messages.ENTER_EMAIL,
-        confirmButtonText: T.default.Messages.NEXT,
+        headerText: g.default.Messages.ENTER_EMAIL,
+        confirmButtonText: g.default.Messages.NEXT,
         confirmButtonColor: r.Button.Colors.BRAND,
         impressionName: l.ImpressionNames.URF_ENTER_EMAIL
       })
@@ -53,17 +53,17 @@ let N = e => {
         onFormSubmit: i,
         onResend: t,
         onSuccess: u,
-        headerText: T.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
-        confirmButtonText: T.default.Messages.VERIFY,
+        headerText: g.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
+        confirmButtonText: g.default.Messages.VERIFY,
         confirmButtonColor: r.Button.Colors.BRAND,
         impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
       })
     })
   };
   return (0, s.jsx)("div", {
-    className: g.buttonColumn,
+    className: m.buttonColumn,
     children: (0, s.jsx)(r.Button, {
-      className: m.__invalid_reportButton,
+      className: T.__invalid_reportButton,
       fullWidth: !0,
       color: r.Button.Colors.BRAND,
       onClick: () => i(),
@@ -91,20 +91,20 @@ t.default = () => {
     children: (0, s.jsx)(r.Spinner, {})
   }) : n && (0, s.jsxs)(_.default, {
     children: [(0, s.jsx)(_.Title, {
-      className: m.marginBottom8,
-      children: T.default.Messages.URF_LANDING_PAGE_TITLE
+      className: T.marginBottom8,
+      children: g.default.Messages.URF_LANDING_PAGE_TITLE
     }), (0, s.jsx)(_.SubTitle, {
-      className: m.marginBottom8,
-      children: T.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
+      className: T.marginBottom8,
+      children: g.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
         supportURL: p.default.getArticleURL(h.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
       })
     }), (0, s.jsxs)("div", {
-      className: g.container,
+      className: m.container,
       children: [(0, s.jsx)(N, {
-        title: T.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
+        title: g.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
         menuType: d.UnauthenticatedReportNames.MESSAGE
       }), (0, s.jsx)(N, {
-        title: T.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
+        title: g.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
         menuType: d.UnauthenticatedReportNames.USER
       })]
     })]

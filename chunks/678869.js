@@ -26,15 +26,15 @@ var a = n("735250"),
   I = n("551228"),
   A = n("591853"),
   v = n("371991"),
-  N = n("410441"),
-  x = n("981631"),
+  x = n("410441"),
+  N = n("981631"),
   M = n("616922"),
-  R = n("689938"),
-  y = n("417094"),
+  y = n("689938"),
+  R = n("417094"),
   L = n("936183");
 
 function O(e, t) {
-  return R.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
+  return y.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
     username: t.username,
     activity: e
   })
@@ -43,7 +43,7 @@ let j = (e, t, n) => {
   let {
     artist: a,
     media: l
-  } = e, s = R.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, i = C.default.getName(t.guild_id, t.id, n);
+  } = e, s = y.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, i = C.default.getName(t.guild_id, t.id, n);
   return s.plainFormat({
     artist: a,
     userName: i,
@@ -77,13 +77,13 @@ function P(e) {
     }
   }, [t, s]);
   return null == r ? null : (0, a.jsxs)("div", {
-    className: y.listeningTimeline,
+    className: R.listeningTimeline,
     children: [(0, a.jsx)(v.ActiveTimestamp, {
       entry: n
     }), (0, a.jsx)("div", {
-      className: y.seekBarContainer,
+      className: R.seekBarContainer,
       children: (0, a.jsx)("div", {
-        className: y.seekBarFill,
+        className: R.seekBarFill,
         style: r
       })
     }), (0, a.jsx)(u.Text, {
@@ -97,7 +97,7 @@ function P(e) {
 
 function D(e) {
   var t;
-  let n, u, v, y, {
+  let n, u, v, R, {
       channel: D,
       entry: b,
       requestId: U,
@@ -119,8 +119,8 @@ function D(e) {
       streamPreviewUrl: z,
       channel: K
     } = (0, g.default)(b),
-    Z = (0, r.useStateFromStores)([c.default, p.default], () => (null == w ? void 0 : w.type) === x.ActivityTypes.LISTENING && null != V ? (0, h.default)(c.default, p.default, V, w) : void 0, [w, V], o.default),
-    q = l.useCallback(() => {
+    Z = (0, r.useStateFromStores)([c.default, p.default], () => (null == w ? void 0 : w.type) === N.ActivityTypes.LISTENING && null != V ? (0, h.default)(c.default, p.default, V, w) : void 0, [w, V], o.default),
+    X = l.useCallback(() => {
       var e;
       if (null == D || null == V) return;
       let t = null === (e = w.timestamps) || void 0 === e ? void 0 : e.start,
@@ -143,16 +143,16 @@ function D(e) {
       })
     }, [w, H, D, b, B, W, Y, G, V]);
   if (null == w || null == k) return null;
-  let X = H;
+  let q = H;
   if (k.media.provider === s.ContentInventoryListenedMediaProvider.SPOTIFY && (null == Z ? void 0 : Z.syncDisabled) === !1) {
-    y = {
+    R = {
       handleClick: n = () => {
         (0, m.default)(Z, M.SpotifyActionTypes.USER_ACTIVITY_SYNC), F()
       },
-      label: R.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
+      label: y.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
       icon: i.UserPlayIcon
     };
-    X = (0, a.jsx)(E.default, {
+    q = (0, a.jsx)(E.default, {
       artists: H,
       canOpen: null != w.sync_id,
       linkClassName: L.popoutTextSecondary,
@@ -163,55 +163,55 @@ function D(e) {
       (0, d.openTrack)(w)
     }, v = (0, f.default)(Z, M.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != D ? C.default.getNickname(D.guild_id, D.id, V) : void 0)
   }
-  let Q = (0, a.jsx)(A.PopoutContent, {
+  let J = (0, a.jsx)(A.PopoutContent, {
     thumbnailSrc: B,
     channel: D,
     entry: b,
-    headerIcons: (0, a.jsx)(N.default, {
+    headerIcons: (0, a.jsx)(x.default, {
       onClick: n,
       "aria-label": v,
       provider: k.media.provider
     }),
-    userDescription: (0, S.isEntryActive)(b) ? R.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : R.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+    userDescription: (0, S.isEntryActive)(b) ? y.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : y.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
     title: G,
     onClickTitle: u,
-    subtitle: X,
+    subtitle: q,
     badges: null,
     children: (null === (t = w.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, a.jsx)(P, {
       activity: w
     })
   });
   return (0, a.jsxs)(A.Popout, {
-    children: [Q, (0, a.jsx)(A.PopoutInteractionsContainer, {
+    children: [J, (0, a.jsx)(A.PopoutInteractionsContainer, {
       children: null != K ? (0, a.jsx)(A.VoiceChannelPopoutReactor, {
         closePopout: F,
         user: V,
         channel: D,
-        generateReactionImage: q,
+        generateReactionImage: X,
         reactionImageAltText: O(H, V),
         entry: b,
         requestId: U,
         voiceChannel: K,
         isStreaming: null != z
-      }) : null != y ? (0, a.jsx)(A.PrimaryActionPopoutReactor, {
+      }) : null != R ? (0, a.jsx)(A.PrimaryActionPopoutReactor, {
         closePopout: F,
         user: V,
         channel: D,
         header: null,
-        generateReactionImage: q,
+        generateReactionImage: X,
         reactionImageAltText: O(H, V),
         entry: b,
         requestId: U,
         children: (0, a.jsx)(A.PrimaryActionButton, {
-          onClick: y.handleClick,
-          IconComponent: y.icon,
-          children: y.label
+          onClick: R.handleClick,
+          IconComponent: R.icon,
+          children: R.label
         })
       }) : (0, a.jsx)(A.PopoutReactor, {
         closePopout: F,
         user: V,
         channel: D,
-        generateReactionImage: q,
+        generateReactionImage: X,
         reactionImageAltText: O(H, V),
         entry: b,
         requestId: U

@@ -26,11 +26,11 @@ var a = n("735250"),
   I = n("961048"),
   A = n("430824"),
   v = n("496675"),
-  N = n("976644"),
-  x = n("357727"),
+  x = n("976644"),
+  N = n("357727"),
   M = n("158010"),
-  R = n("170039"),
-  y = n("502568"),
+  y = n("170039"),
+  R = n("502568"),
   L = n("626135"),
   O = n("792125"),
   j = n("431328"),
@@ -54,7 +54,7 @@ function W(e) {
     showRequestToSpeakSidebar: o
   } = e, h = (0, c.useAppContext)(), E = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), C = (0, D.useCanModerateRequestToSpeak)(n.id), A = (0, j.useStageParticipantsCount)(n.id, P.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
     preventIdle: v,
-    allowIdle: N
+    allowIdle: x
   } = (0, S.usePreventIdle)("popup");
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(p.default, {
@@ -87,7 +87,7 @@ function W(e) {
       className: V.button
     }, "clips"), (0, a.jsx)(g.default, {
       onOpen: v,
-      onClose: N,
+      onClose: x,
       className: V.button
     }, "recents"), !o && C ? (0, a.jsx)("div", {
       className: V.button,
@@ -135,7 +135,7 @@ function Y(e) {
       listener_count: S + _
     })
   }, [F]);
-  let K = (0, a.jsxs)(y.default, {
+  let K = (0, a.jsxs)(R.default, {
     toolbar: (0, a.jsx)(W, {
       inPopout: s,
       toggleRequestToSpeakSidebar: f,
@@ -145,20 +145,20 @@ function Y(e) {
     onDoubleClick: C.handleDoubleClick,
     transparent: !0,
     className: i()((0, O.getThemeClass)(H.ThemeTypes.DARK), V.participants),
-    children: [(0, a.jsx)(y.default.Icon, {
-      icon: R.default,
+    children: [(0, a.jsx)(R.default.Icon, {
+      icon: y.default,
       disabled: !0,
       "aria-label": G.default.Messages.STAGE_CHANNEL,
       className: V.icon,
       color: null != g ? o.default.unsafe_rawColors.GREEN_360.css : void 0
-    }), (0, a.jsx)(y.default.Title, {
+    }), (0, a.jsx)(R.default.Title, {
       className: V.channelName,
       wrapperClassName: V.channelNameWrapper,
       children: null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : p
-    }), (0, a.jsx)(y.default.Divider, {
+    }), (0, a.jsx)(R.default.Divider, {
       className: V.divider
-    }), (0, a.jsxs)(y.default.Title, {
-      children: [(0, a.jsx)(x.default, {
+    }), (0, a.jsxs)(R.default.Title, {
+      children: [(0, a.jsx)(N.default, {
         width: 16,
         height: 16
       }), (0, a.jsx)(u.Text, {
@@ -204,7 +204,7 @@ function Y(e) {
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.SMALL,
             children: G.default.Messages.NOT_NOW
-          }), (0, a.jsx)(N.default, {
+          }), (0, a.jsx)(x.default, {
             size: u.Button.Sizes.SMALL,
             onClick: () => {
               (0, E.openGuildBoostingMarketingModal)({

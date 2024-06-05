@@ -1,77 +1,77 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  l = n.n(s),
-  i = n("920906"),
-  r = n("481060"),
-  o = n("497505"),
-  u = n("918701"),
-  d = n("685613"),
-  c = n("340100"),
-  f = n("644646"),
-  E = n("898170"),
-  h = n("46140"),
-  _ = n("689938"),
-  C = n("743451");
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("120356"),
+  l = s.n(n),
+  i = s("920906"),
+  r = s("481060"),
+  o = s("497505"),
+  u = s("918701"),
+  d = s("685613"),
+  c = s("340100"),
+  E = s("644646"),
+  _ = s("898170"),
+  f = s("46140"),
+  h = s("689938"),
+  T = s("743451");
 t.default = function(e) {
   var t;
   let {
-    className: n,
-    expansionSpring: s,
+    className: s,
+    expansionSpring: n,
     isExpanded: m,
-    isExpansionAnimationComplete: S,
-    quest: p,
-    useReducedMotion: I
-  } = e, T = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = (0, u.calculatePercentComplete)({
-    quest: p,
-    location: h.QuestsExperimentLocations.QUESTS_BAR
+    isExpansionAnimationComplete: C,
+    quest: g,
+    useReducedMotion: A
+  } = e, p = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (0, u.calculatePercentComplete)({
+    quest: g,
+    location: f.QuestsExperimentLocations.QUESTS_BAR
   });
   return (0, a.jsxs)(i.animated.div, {
-    "aria-hidden": m && S,
-    className: l()(n, C.contentCollapsed, {
-      [C.contentCollapsedExpanded]: m,
-      [C.contentCollapsedAccepted]: T
+    "aria-hidden": m && C,
+    className: l()(s, T.contentCollapsed, {
+      [T.contentCollapsedExpanded]: m,
+      [T.contentCollapsedAccepted]: p
     }),
     style: {
-      opacity: s.to({
+      opacity: n.to({
         range: [0, 1],
         output: [1, 0]
       })
     },
-    children: [(0, a.jsx)(E.QuestBarBackgroundAnimation, {
-      quest: p,
-      useReducedMotion: I
+    children: [(0, a.jsx)(_.QuestBarBackgroundAnimation, {
+      quest: g,
+      useReducedMotion: A
     }), (0, a.jsx)("div", {
-      className: C.contentCollapsedWrapper,
-      children: T ? (0, a.jsxs)("div", {
-        className: C.questProgressWrapper,
-        children: [(0, a.jsx)(f.default, {
-          className: C.questProgressRewardTile,
-          quest: p,
+      className: T.contentCollapsedWrapper,
+      children: p ? (0, a.jsxs)("div", {
+        className: T.questProgressWrapper,
+        children: [(0, a.jsx)(E.default, {
+          className: T.questProgressRewardTile,
+          quest: g,
           questContent: o.QuestContent.QUEST_BAR,
           autoplay: !1
-        }), g > 0 ? (0, a.jsx)(c.default, {
-          className: C.questProgressBar,
-          quest: p
+        }), N > 0 ? (0, a.jsx)(c.default, {
+          className: T.questProgressBar,
+          quest: g
         }) : (0, a.jsx)(r.Text, {
-          className: C.questProgressHint,
+          className: T.questProgressHint,
           color: "always-white",
           variant: "text-sm/semibold",
-          children: _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
+          children: h.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
         })]
       }) : (0, a.jsxs)("div", {
-        className: C.brandingWrapper,
+        className: T.brandingWrapper,
         children: [(0, a.jsx)(d.default, {
-          className: C.partnerBranding,
-          quest: p
+          className: T.partnerBranding,
+          quest: g
         }), (0, a.jsx)(r.Heading, {
           color: "always-white",
           variant: "heading-sm/medium",
-          className: C.questName,
-          children: _.default.Messages.QUEST.format({
-            questName: p.config.messages.questName
+          className: T.questName,
+          children: h.default.Messages.QUEST.format({
+            questName: g.config.messages.questName
           })
         })]
       })

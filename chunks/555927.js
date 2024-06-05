@@ -96,7 +96,7 @@ function f(e) {
     return n.filter(t => !e.includes(t.id))
   }, [n, r]);
   if (r.length <= 1 && 0 === h.length) {
-    var _, C;
+    var C, _;
     return (0, a.jsx)(l.MenuGroup, {
       label: n.length > 1 ? d.default.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
         memberCount: n.length
@@ -105,7 +105,7 @@ function f(e) {
         priorityMembers: t,
         otherMembers: f,
         totalMembers: n.length,
-        activity: null !== (C = null === (_ = r[0]) || void 0 === _ ? void 0 : _.activity) && void 0 !== C ? C : void 0,
+        activity: null !== (_ = null === (C = r[0]) || void 0 === C ? void 0 : C.activity) && void 0 !== _ ? _ : void 0,
         guildId: null == o ? void 0 : o.id,
         sourceAnalyticsLocations: E
       })

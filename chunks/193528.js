@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("703685"),
   T = s("586791"),
   _ = s("654904"),
-  f = s("981631"),
-  I = s("689938"),
+  I = s("981631"),
+  f = s("689938"),
   m = s("395495");
 
 function N(e) {
@@ -30,12 +30,12 @@ function N(e) {
     disabled: g,
     label: h,
     colorPickerMiddle: C,
-    colorPickerFooter: A,
-    showEyeDropper: O
-  } = e, p = n.useRef(null), R = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), x = d.default.colors.BACKGROUND_ACCENT.css, M = (0, _.isColorDark)(l), D = (0, o.int2hex)(l), L = D === R ? x : D, v = (0, S.getColor)(M ? f.Color.WHITE_500 : f.Color.PRIMARY_530), P = (0, c.default)(C), b = (0, c.default)(A), [U, j] = n.useState((0, r.v4)());
+    colorPickerFooter: O,
+    showEyeDropper: A
+  } = e, p = n.useRef(null), R = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), x = d.default.colors.BACKGROUND_ACCENT.css, M = (0, _.isColorDark)(l), D = (0, o.int2hex)(l), L = D === R ? x : D, P = (0, S.getColor)(M ? I.Color.WHITE_500 : I.Color.PRIMARY_530), v = (0, c.default)(C), b = (0, c.default)(O), [U, j] = n.useState((0, r.v4)());
   return n.useEffect(() => {
-    (P !== C || b !== A) && j((0, r.v4)())
-  }, [A, C, b, P]), (0, a.jsx)(u.Popout, {
+    (v !== C || b !== O) && j((0, r.v4)())
+  }, [O, C, b, v]), (0, a.jsx)(u.Popout, {
     positionKey: U,
     renderPopout: e => (0, a.jsx)(E.CustomColorPicker, {
       ...e,
@@ -43,8 +43,8 @@ function N(e) {
       onChange: t,
       suggestedColors: N,
       middle: C,
-      footer: A,
-      showEyeDropper: O
+      footer: O,
+      showEyeDropper: A
     }),
     onRequestClose: s,
     children: e => {
@@ -60,13 +60,13 @@ function N(e) {
         children: [(0, a.jsx)(u.Clickable, {
           ...s,
           tabIndex: g ? -1 : 0,
-          onClick: g ? f.NOOP : t,
+          onClick: g ? I.NOOP : t,
           style: {
             backgroundColor: D,
             borderColor: L
           },
           className: m.swatch,
-          "aria-label": I.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
+          "aria-label": f.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
           focusProps: {
             ringTarget: p
           },
@@ -74,7 +74,7 @@ function N(e) {
             className: m.editPencilIcon,
             width: 14,
             height: 14,
-            color: v
+            color: P
           })
         }), h]
       })

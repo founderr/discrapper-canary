@@ -10,15 +10,15 @@ var a, s, l = n("735250"),
   f = n("607070"),
   E = n("963202"),
   h = n("353093"),
-  _ = n("931515"),
-  C = n("807933"),
+  C = n("931515"),
+  _ = n("807933"),
   m = n("702646"),
   S = n("207796"),
   p = n("543550"),
   I = n("895068"),
-  T = n("93118");
+  g = n("93118");
 (s = a || (a = {})).TOP_PICKS = "top_picks", s.OTHER_GUILDS = "other_guilds";
-let g = {
+let T = {
     mass: 1,
     tension: 600,
     friction: 60
@@ -33,11 +33,11 @@ let g = {
       to: {
         opacity: a === S.ClanDiscoveryMode.GET_STARTED ? 0 : 1
       },
-      config: g,
+      config: T,
       delay: 500,
       immediate: n,
       onRest: () => u(!1)
-    }), _ = (0, S.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), A = (0, S.useClanDiscoveryUIStore)(e => e.started, o.default), {
+    }), C = (0, S.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), A = (0, S.useClanDiscoveryUIStore)(e => e.started, o.default), {
       guilds: N
     } = (0, E.useClanPrepilotExperimentForAllGuilds)({
       location: "ClanDiscoveryAdminContainer",
@@ -47,7 +47,7 @@ let g = {
     } = (0, E.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer");
     switch (i.useEffect(() => {
         let e = N.length > 0;
-        if (e && !R && _ === S.ClanDiscoveryUserScreens.USER_UPSELL) {
+        if (e && !R && C === S.ClanDiscoveryUserScreens.USER_UPSELL) {
           (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.ADMIN_UPSELL);
           return
         }
@@ -59,7 +59,7 @@ let g = {
           (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.GET_STARTED), S.useClanDiscoveryUIStore.getState().setUserUpsellScreen(S.ClanDiscoveryUserScreens.USER_UPSELL);
           return
         }
-      }, [v.length, N.length, A, R, a, _]), a) {
+      }, [v.length, N.length, A, R, a, C]), a) {
       case S.ClanDiscoveryMode.ADMIN_UPSELL:
         return (0, l.jsx)(p.ClanDiscoveryAdminContainer, {});
       case S.ClanDiscoveryMode.GET_STARTED:
@@ -69,16 +69,16 @@ let g = {
       case S.ClanDiscoveryMode.PLAYSTYLE:
       case S.ClanDiscoveryMode.TRAITS:
         return (0, l.jsxs)("div", {
-          className: T.discoveryContainer,
+          className: g.discoveryContainer,
           children: [(0, l.jsx)(r.animated.div, {
-            className: T.toolbar,
+            className: g.toolbar,
             style: {
               opacity: c.opacity,
               transform: c.opacity.to([0, 1], [-40, 0]).to(e => "translateY(".concat(e, "px)"))
             },
             children: (0, l.jsx)(m.default, {})
           }), (0, l.jsx)(r.animated.div, {
-            className: T.content,
+            className: g.content,
             style: {
               opacity: c.opacity,
               transform: c.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
@@ -88,8 +88,8 @@ let g = {
               isAnimating: s
             })
           }), (0, l.jsx)("div", {
-            className: T.selectors,
-            children: (0, l.jsx)(C.default, {
+            className: g.selectors,
+            children: (0, l.jsx)(_.default, {
               mode: a
             })
           })]
@@ -99,17 +99,17 @@ let g = {
 t.default = i.memo(function() {
   let {
     loading: e
-  } = (0, _.useAutoFetchClanDiscoveryResults)(), {
+  } = (0, C.useAutoFetchClanDiscoveryResults)(), {
     ref: t,
     width: n
   } = (0, c.default)();
   return (0, l.jsxs)("main", {
-    className: T.container,
+    className: g.container,
     ref: t,
     children: [(0, l.jsx)("div", {
-      className: T.dragRegion
+      className: g.dragRegion
     }), e ? (0, l.jsx)("div", {
-      className: T.loading,
+      className: g.loading,
       children: (0, l.jsx)(u.Spinner, {})
     }) : (0, l.jsx)(A, {
       width: null != n ? n : 0

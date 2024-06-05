@@ -1,21 +1,21 @@
 "use strict";
-l.r(t);
-var a = l("735250");
-l("470079");
-var s = l("960259"),
-  n = l("154128"),
-  u = l("325767");
-t.default = (0, s.replaceIcon)(function(e) {
+n.r(t);
+var a = n("735250");
+n("470079");
+var l = n("960259"),
+  s = n("154128"),
+  i = n("325767");
+t.default = (0, l.replaceIcon)(function(e) {
   let {
     color: t = "currentColor",
-    height: l = 24,
-    width: s = 24,
-    ...n
+    height: n = 24,
+    width: l = 24,
+    ...s
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, u.default)(n),
-    width: s,
-    height: l,
+    ...(0, i.default)(s),
+    width: l,
+    height: n,
     viewBox: "0 0 24 24",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
@@ -32,6 +32,6 @@ t.default = (0, s.replaceIcon)(function(e) {
       fill: t
     })]
   })
-}, n.ChatXIcon, void 0, {
+}, s.ChatXIcon, void 0, {
   size: 24
 })

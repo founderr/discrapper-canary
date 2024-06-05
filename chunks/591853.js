@@ -48,11 +48,11 @@ var u = n("194048"),
   I = n("475179"),
   A = n("287734"),
   v = n("872810"),
-  N = n("607070"),
-  x = n("220779"),
+  x = n("607070"),
+  N = n("220779"),
   M = n("201133"),
-  R = n("605236"),
-  y = n("543241"),
+  y = n("605236"),
+  R = n("543241"),
   L = n("318374"),
   O = n("258609"),
   j = n("102172"),
@@ -72,10 +72,10 @@ var u = n("194048"),
   z = n("368666"),
   K = n("626135"),
   Z = n("768581"),
-  q = n("5192"),
-  X = n("485267"),
-  Q = n("71585"),
-  J = n("192918"),
+  X = n("5192"),
+  q = n("485267"),
+  J = n("71585"),
+  Q = n("192918"),
   $ = n("571243"),
   ee = n("69259"),
   et = n("206295"),
@@ -157,9 +157,9 @@ function em(e) {
     closePopout: r,
     entry: u,
     requestId: f
-  } = e, m = (0, d.useStateFromStores)([Q.default], () => Q.default.isChannelReplyMode()), [p, E] = l.useState(null), C = (0, d.useStateFromStores)([w.default], () => w.default.can(ei.Permissions.SEND_MESSAGES, t)), S = (0, $.useIsEligibleForMemberlistOneClickReply)({
+  } = e, m = (0, d.useStateFromStores)([J.default], () => J.default.isChannelReplyMode()), [p, E] = l.useState(null), C = (0, d.useStateFromStores)([w.default], () => w.default.can(ei.Permissions.SEND_MESSAGES, t)), S = (0, $.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [I, A] = l.useState(!1), [v, N] = l.useState(!1), y = "#".concat(t.name), L = q.default.getName(t.guild_id, t.id, n), O = m ? er.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : er.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, j = async e => {
+  }), [I, A] = l.useState(!1), [v, x] = l.useState(!1), R = "#".concat(t.name), L = X.default.getName(t.guild_id, t.id, n), O = m ? er.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : er.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, j = async e => {
     if (null != e) {
       if (K.default.track(ei.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: es.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
@@ -167,7 +167,7 @@ function em(e) {
           guild_id: t.guild_id
         }), S) {
         let l;
-        if ((0, R.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), A(!0), N(!1), m) l = t;
+        if ((0, y.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), A(!0), x(!1), m) l = t;
         else {
           var a;
           let e = await T.default.getOrEnsurePrivateChannel(n.id);
@@ -177,7 +177,7 @@ function em(e) {
           reply: ":".concat(e.name, ":"),
           sendToChannel: l,
           onComplete: () => {
-            N(!0), setTimeout(() => {
+            x(!0), setTimeout(() => {
               A(!1), r()
             }, 600)
           },
@@ -188,7 +188,7 @@ function em(e) {
     }
   }, P = async e => {
     let a;
-    if (S && (0, R.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
+    if (S && (0, y.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
     else {
       let e = await T.default.openPrivateChannel(n.id, !1, !1),
         t = U.default.getChannel(e);
@@ -236,7 +236,7 @@ function em(e) {
         children: [(0, a.jsx)(ep, {
           channel: t,
           onClickSuggestion: j
-        }), (0, a.jsx)(x.ReactionPickerButton, {
+        }), (0, a.jsx)(N.ReactionPickerButton, {
           onSelectEmoji: j
         })]
       })
@@ -253,7 +253,7 @@ function em(e) {
         children: e => (0, a.jsx)(_.Clickable, {
           ...e,
           className: eo.shareToChannelButton,
-          onClick: X.toggleContentInventoryReplyMode,
+          onClick: q.toggleContentInventoryReplyMode,
           children: m ? (0, a.jsx)(g.TextIcon, {
             width: 20,
             height: 20
@@ -262,9 +262,9 @@ function em(e) {
             height: 20
           })
         })
-      }), (0, a.jsx)(x.ReplyInput, {
+      }), (0, a.jsx)(N.ReplyInput, {
         placeholder: er.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: m ? y : "@".concat(L)
+          channel: m ? R : "@".concat(L)
         }),
         onEnter: P,
         setEditorRef: e => E(e),
@@ -281,8 +281,8 @@ let ep = e => {
   l.useEffect(() => {
     i(!0)
   }, []);
-  let r = !!N.default.keyboardModeEnabled && !s,
-    o = (0, y.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
+  let r = !!x.default.keyboardModeEnabled && !s,
+    o = (0, R.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
       emoji: e,
       url: e.url
     } : {
@@ -333,7 +333,7 @@ function eE(e) {
     participant1: u,
     participant2: d,
     numOtherParticipants: c
-  } = (0, J.default)(s, 3);
+  } = (0, Q.default)(s, 3);
   return (0, a.jsxs)("div", {
     className: eo.popoutContentHeader,
     children: [(0, a.jsxs)("div", {
@@ -352,8 +352,8 @@ function eE(e) {
         variant: "heading-sm/normal",
         className: eo.popoutTextSecondary,
         children: n.format({
-          user1: q.default.getName(r, t.id, u),
-          user2: q.default.getName(r, t.id, d),
+          user1: X.default.getName(r, t.id, u),
+          user2: X.default.getName(r, t.id, d),
           countOthers: c,
           nameHook: (e, t) => (0, a.jsx)(_.Text, {
             variant: "text-sm/medium",
@@ -496,7 +496,7 @@ function e_(e) {
     requestId: u,
     reactionImageAltText: d,
     generateReactionImage: c
-  } = e, h = q.default.getName(s.guild_id, s.id, t), [p, C] = l.useState(!1), g = async e => {
+  } = e, h = X.default.getName(s.guild_id, s.id, t), [p, C] = l.useState(!1), g = async e => {
     let a = await T.default.openPrivateChannel(t.id, !1, !1),
       l = U.default.getChannel(a);
     o()(null != l, "DM channel must be defined");
@@ -516,7 +516,7 @@ function e_(e) {
   return (0, a.jsxs)("div", {
     children: [r, null != r && (0, a.jsx)("div", {
       className: eo.primaryActionPopoutDivider
-    }), p ? (0, a.jsx)(x.ReplyInput, {
+    }), p ? (0, a.jsx)(N.ReplyInput, {
       placeholder: er.default.Messages.TEXTAREA_PLACEHOLDER.format({
         channel: "@".concat(h)
       }),

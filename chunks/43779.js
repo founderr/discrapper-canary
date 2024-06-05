@@ -21,20 +21,20 @@ function h(e) {
     quest: t,
     location: n,
     questContent: h
-  } = e, _ = o.SharedQuestFields.build(t.config).defaultReward.messages.name, C = (0, r.getQuestsInstructionsToWinReward)({
+  } = e, C = o.SharedQuestFields.build(t.config).defaultReward.messages.name, _ = (0, r.getQuestsInstructionsToWinReward)({
     quest: t,
     location: n,
     useV2Variants: !0
   }), m = s.useRef(null), S = s.useMemo(() => (0, r.calculatePercentComplete)({
     quest: t,
     location: n
-  }), [t, n]), p = S > 0, I = !(0, r.isQuestExpired)(t), T = s.useCallback(() => (0, a.jsx)(l.Text, {
+  }), [t, n]), p = S > 0, I = !(0, r.isQuestExpired)(t), g = s.useCallback(() => (0, a.jsx)(l.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
     className: E.header,
-    children: _
-  }), [_]);
+    children: C
+  }), [C]);
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsxs)("div", {
@@ -67,14 +67,14 @@ function h(e) {
             color: "header-primary",
             className: E.header,
             children: f.default.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: T
+              rewardHook: g
             })
           })
-        }), null != C ? (0, a.jsx)(l.Text, {
+        }), null != _ ? (0, a.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
           className: E.description,
-          children: C
+          children: _
         }) : null]
       })]
     }), I ? (0, a.jsx)(c.default, {

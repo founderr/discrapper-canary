@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return _
   },
   DropsModalClaimErrorBody: function() {
-    return f
+    return I
   }
 }), s("47120");
 var a = s("735250"),
@@ -68,7 +68,7 @@ function _(e) {
   })
 }
 
-function f(e) {
+function I(e) {
   let {
     onClose: t,
     errorCode: s
@@ -108,15 +108,15 @@ t.default = function(e) {
   let {
     onClose: t,
     code: o,
-    drop: f,
-    platform: I,
+    drop: I,
+    platform: f,
     transitionState: m
   } = e, N = (0, d.useUID)(), [g, h] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
-      await (0, u.fetchCodePlatformAvailability)(f.dropsQuestId)
+      await (0, u.fetchCodePlatformAvailability)(I.dropsQuestId)
     })
-  }, [f.dropsQuestId, o]);
+  }, [I.dropsQuestId, o]);
   let C = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
   return (0, a.jsx)(i.ModalRoot, {
     transitionState: m,
@@ -124,10 +124,10 @@ t.default = function(e) {
     children: (0, a.jsx)(a.Fragment, {
       children: (() => {
         if (null != o) return (0, a.jsx)(_, {
-          bodyText: f.messages.claimTip(),
+          bodyText: I.messages.claimTip(),
           onClose: t,
           copyInputTitle: E.default.Messages.DROPS_REDEMPTION_CODE_PLATFORM_TITLE.format({
-            platform: I
+            platform: f
           }),
           code: o
         });
@@ -155,7 +155,7 @@ t.default = function(e) {
                 children: n ? E.default.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
                   platform: (0, S.getPlatformLabel)(C[0])
                 }) : E.default.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
-                  title: f.title
+                  title: I.title
                 })
               }), (0, a.jsx)(i.FormDivider, {
                 className: T.formDivider
@@ -190,7 +190,7 @@ t.default = function(e) {
                       ...s,
                       platform: void 0 === g ? C[0] : g,
                       code: o,
-                      dropsQuestId: f.dropsQuestId,
+                      dropsQuestId: I.dropsQuestId,
                       closeParentModal: t,
                       singlePlatformClaim: n
                     })

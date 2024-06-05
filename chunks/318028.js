@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r.d(t, {
   useFetchCollectiblesProductCategory: function() {
-    return n
+    return l
   }
 }), r("47120");
 var a = r("399606"),
-  o = r("597688"),
-  l = r("223143");
+  n = r("597688"),
+  o = r("223143");
 
-function n(e) {
-  (0, l.useMaybeFetchCollectiblesCategories)();
-  let [t, r] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.isFetchingCategories, o.default.getCategoryForProduct(e)]);
+function l(e) {
+  (0, o.useMaybeFetchCollectiblesCategories)();
+  let [t, r] = (0, a.useStateFromStoresArray)([n.default], () => [n.default.isFetchingCategories, n.default.getCategoryForProduct(e)]);
   return {
     isFetching: t,
     category: r

@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("410154"),
   T = s("981631"),
   _ = s("474936"),
-  f = s("689938"),
-  I = s("449221"),
+  I = s("689938"),
+  f = s("449221"),
   m = s("786792");
 let N = e => {
     let {
@@ -22,26 +22,26 @@ let N = e => {
     } = e;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: I.artContainer,
+        className: f.artContainer,
         "aria-hidden": !0,
         role: "presentation",
         children: (0, a.jsx)("img", {
           src: t,
-          className: I.art,
+          className: f.art,
           alt: " "
         })
       }), (0, a.jsxs)("div", {
-        className: I.mainColumn,
+        className: f.mainColumn,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-lg/extrabold",
           color: "always-white",
-          className: I.title,
-          children: f.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
+          className: f.title,
+          children: I.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
         }), (0, a.jsx)(o.Text, {
-          className: I.__invalid_textBody,
+          className: f.__invalid_textBody,
           variant: "text-sm/normal",
           color: "always-white",
-          children: f.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+          children: I.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
         })]
       })]
     })
@@ -67,7 +67,7 @@ t.default = () => {
     })
   }, [e]), (0, a.jsxs)("div", {
     ref: t,
-    className: i()(I.container),
+    className: i()(f.container),
     style: {
       backgroundImage: "url(".concat(m, ")")
     },
@@ -80,9 +80,9 @@ t.default = () => {
           analyticsSource: d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
         })
       },
-      className: I.ctaButton,
+      className: f.ctaButton,
       color: o.Button.Colors.BRAND_INVERTED,
-      children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => f.default.Messages.CHECK_IT_OUT).otherwise(() => f.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
+      children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => I.default.Messages.CHECK_IT_OUT).otherwise(() => I.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
     })]
   })
 }

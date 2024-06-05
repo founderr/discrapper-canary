@@ -12,9 +12,9 @@ var i = n("735250"),
   f = n("981631"),
   h = n("689938"),
   p = n("696756");
-let g = Object.values(c.OpacityBounds).map(e => 100 * e),
+let E = Object.values(c.OpacityBounds).map(e => 100 * e),
   m = (0, d.uid)();
-class E extends a.PureComponent {
+class g extends a.PureComponent {
   handleUpdateBackgroundOpacity(e) {
     o.default.setTextWidgetOpacity((0, u.default)(e / 100)), o.default.track(f.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
       text_opacity_slider: e
@@ -37,12 +37,12 @@ class E extends a.PureComponent {
           mini: !0,
           initialValue: this.initialValue,
           defaultValue: this.initialValue,
-          minValue: g[0],
-          maxValue: g[g.length - 1],
+          minValue: E[0],
+          maxValue: E[E.length - 1],
           handleSize: 10,
           onValueChange: this.handleUpdateBackgroundOpacity,
           asValueChanges: this.handlePreviewBackgroundOpacity,
-          markers: g,
+          markers: E,
           onMarkerRender: f.NOOP,
           equidistant: !0,
           stickToMarkers: !0,
@@ -63,4 +63,4 @@ class E extends a.PureComponent {
 }
 t.default = l.default.connectStores([r.default], () => ({
   opacity: r.default.getTextWidgetOpacity()
-}))(E)
+}))(g)

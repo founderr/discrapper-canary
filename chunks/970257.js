@@ -1,19 +1,19 @@
 "use strict";
 s.r(t), s.d(t, {
   canDeleteAndReportMessage: function() {
-    return u
+    return r
   },
   canReportMessage: function() {
-    return r
+    return d
   }
 });
-var a = s("592125"),
-  n = s("650774"),
+var n = s("592125"),
+  a = s("650774"),
   l = s("496675"),
   i = s("594174"),
-  d = s("981631");
+  u = s("981631");
 
-function r(e) {
+function d(e) {
   return null != e && function(e) {
     if (null == e) return !1;
     let t = e.id,
@@ -22,15 +22,15 @@ function r(e) {
   }(e.author)
 }
 
-function u(e) {
-  return null != e && r(e) && function(e) {
-    let t = a.default.getChannel(e);
+function r(e) {
+  return null != e && d(e) && function(e) {
+    let t = n.default.getChannel(e);
     if (null == t) return !1;
-    if (t.type === d.ChannelTypes.DM || t.type === d.ChannelTypes.GROUP_DM) return !0;
-    if (l.default.canWithPartialContext(d.Permissions.MANAGE_MESSAGES, {
+    if (t.type === u.ChannelTypes.DM || t.type === u.ChannelTypes.GROUP_DM) return !0;
+    if (l.default.canWithPartialContext(u.Permissions.MANAGE_MESSAGES, {
         channelId: e
       })) {
-      let e = n.default.getMemberCount(t.getGuildId());
+      let e = a.default.getMemberCount(t.getGuildId());
       return null != e && e >= 50
     }
     return !1

@@ -1,38 +1,38 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
-var l = s("735250");
-s("470079");
-var n = s("481060"),
-  a = s("131388"),
-  i = s("409813"),
-  r = s("750143"),
-  u = s("646900"),
-  d = s("60314");
+var a = n("735250");
+n("470079");
+var l = n("481060"),
+  s = n("131388"),
+  r = n("409813"),
+  i = n("750143"),
+  o = n("646900"),
+  d = n("60314");
 
-function o(e) {
+function u(e) {
   let {
     step: t,
-    onClose: s
-  } = e, o = (0, a.default)(r.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
-  return t === i.Step.BENEFITS || t === i.Step.CONFIRM ? null : (0, l.jsxs)("div", {
-    className: u.headerContainer,
-    children: [!o && (0, l.jsx)("div", {
-      className: u.headerImageContainer,
+    onClose: n
+  } = e, u = (0, s.default)(i.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
+  return t === r.Step.BENEFITS || t === r.Step.CONFIRM ? null : (0, a.jsxs)("div", {
+    className: o.headerContainer,
+    children: [!u && (0, a.jsx)("div", {
+      className: o.headerImageContainer,
       "aria-hidden": "true",
       "data-accessibility": "desaturate",
-      children: (0, l.jsx)("img", {
+      children: (0, a.jsx)("img", {
         src: d,
         alt: "",
-        className: u.headerImage
+        className: o.headerImage
       })
-    }), (0, l.jsx)(n.ModalCloseButton, {
+    }), (0, a.jsx)(l.ModalCloseButton, {
       withCircleBackground: !0,
-      className: u.closeButton,
-      onClick: s
+      className: o.closeButton,
+      onClick: n
     })]
   })
 }

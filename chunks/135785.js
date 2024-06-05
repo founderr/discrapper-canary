@@ -8,44 +8,44 @@ var r = s("120356"),
   l = s("230711"),
   o = s("759231"),
   u = s("63063"),
-  d = s("74538"),
-  c = s("140465"),
+  c = s("74538"),
+  d = s("140465"),
   _ = s("474936"),
   E = s("981631"),
-  T = s("689938"),
-  I = s("624855");
+  R = s("689938"),
+  T = s("624855");
 t.default = e => {
   let t, s, {
       premiumSubscription: r,
-      className: R,
-      isFullscreen: f = !1,
+      className: f,
+      isFullscreen: I = !1,
       textColor: S
     } = e,
-    A = (0, c.useIsInPremiumOfferExperience)();
+    m = (0, d.useIsInPremiumOfferExperience)();
   if (null == r) return null;
-  let m = null != r ? d.default.getPremiumPlanItem(r) : null;
-  if (d.default.isBoostOnlySubscription(r) ? t = T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != m && (t = d.default.getDisplayPremiumType(m.planId)), null == t) return null;
-  let N = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
-    p = (null != m ? d.default.getSkuIdForPlan(m.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
-  return s = null != S ? S : A || f ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
-    className: i()(I.container, R, {
-      [I.lightTextLink]: f,
-      [I.centerText]: A
+  let p = null != r ? c.default.getPremiumPlanItem(r) : null;
+  if (c.default.isBoostOnlySubscription(r) ? t = R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != p && (t = c.default.getDisplayPremiumType(p.planId)), null == t) return null;
+  let A = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
+    N = (null != p ? c.default.getSkuIdForPlan(p.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
+  return s = null != S ? S : m || I ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
+    className: i()(T.container, f, {
+      [T.lightTextLink]: I,
+      [T.centerText]: m
     }),
     type: n.Card.Types.CUSTOM,
     children: [(0, a.jsx)(o.default, {
-      className: i()(I.icon, {
-        [I.lightThemeColorOnly]: A || f
+      className: i()(T.icon, {
+        [T.lightThemeColorOnly]: m || I
       })
     }), (0, a.jsx)(n.Text, {
       variant: "text-sm/medium",
       color: s,
-      children: p ? T.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+      children: N ? R.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
         helpdeskArticle: u.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
-        onSubscriptionsClick: N
-      }) : T.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
+        onSubscriptionsClick: A
+      }) : R.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
         subscriptionName: t,
-        onSubscriptionsClick: N
+        onSubscriptionsClick: A
       })
     })]
   })

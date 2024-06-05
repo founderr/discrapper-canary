@@ -16,25 +16,25 @@ var a = n("735250"),
   f = n("116061"),
   E = n("549080"),
   h = n("481060"),
-  _ = n("232567"),
-  C = n("2052"),
+  C = n("232567"),
+  _ = n("2052"),
   m = n("393238"),
   S = n("727637"),
   p = n("100527"),
   I = n("906732"),
-  T = n("521868"),
-  g = n("299206"),
+  g = n("521868"),
+  T = n("299206"),
   A = n("440051"),
   N = n("734934"),
   v = n("158238"),
   R = n("447452"),
   O = n("877485"),
   L = n("785717"),
-  M = n("318661"),
-  P = n("741308"),
-  x = n("681837"),
-  y = n("724593"),
-  D = n("502762"),
+  P = n("318661"),
+  M = n("741308"),
+  y = n("681837"),
+  D = n("724593"),
+  x = n("502762"),
   b = n("530"),
   U = n("564440"),
   j = n("796214"),
@@ -49,8 +49,8 @@ var a = n("735250"),
   W = n("246946"),
   K = n("594174"),
   z = n("26290"),
-  Q = n("626135"),
-  q = n("70956"),
+  q = n("626135"),
+  Q = n("70956"),
   Z = n("51144"),
   X = n("246133"),
   J = n("474376"),
@@ -60,19 +60,19 @@ var a = n("735250"),
   en = n("689938"),
   ea = n("476002");
 let es = [{
-  duration: 30 * q.default.Millis.MINUTE,
+  duration: 30 * Q.default.Millis.MINUTE,
   label: () => en.default.Messages.MUTE_DURATION_30_MINUTES
 }, {
-  duration: q.default.Millis.HOUR,
+  duration: Q.default.Millis.HOUR,
   label: () => en.default.Messages.MUTE_DURATION_1_HOUR
 }, {
-  duration: 3 * q.default.Millis.HOUR,
+  duration: 3 * Q.default.Millis.HOUR,
   label: () => en.default.Messages.MUTE_DURATION_3_HOURS
 }, {
-  duration: 8 * q.default.Millis.HOUR,
+  duration: 8 * Q.default.Millis.HOUR,
   label: () => en.default.Messages.MUTE_DURATION_8_HOURS
 }, {
-  duration: q.default.Millis.DAY,
+  duration: Q.default.Millis.DAY,
   label: () => en.default.Messages.MUTE_DURATION_24_HOURS
 }, {
   duration: void 0,
@@ -161,10 +161,10 @@ function er(e) {
     guildId: l,
     isApplicationStreaming: r,
     onClose: o,
-    onSelect: _,
+    onSelect: C,
     closePopout: H
-  } = e, V = __OVERLAY__, K = (0, M.default)(t.id, l), {
-    moreUserDetailsEnabled: q
+  } = e, V = __OVERLAY__, K = (0, P.default)(t.id, l), {
+    moreUserDetailsEnabled: Q
   } = (0, R.useSimplifiedProfileExperiment)({
     location: "SimplifiedAccountProfilePopout"
   }), {
@@ -172,7 +172,7 @@ function er(e) {
     improvedFriendingEnabled: er
   } = (0, O.useSimplifiedProfileFriendingExperiment)({
     location: "SimplifiedAccountProfilePopout"
-  }), eo = (0, C.useAnalyticsContext)(), {
+  }), eo = (0, _.useAnalyticsContext)(), {
     analyticsLocations: eu
   } = (0, I.default)(p.default.ACCOUNT_PROFILE_POPOUT), ed = (0, L.useTrackUserProfileAction)({
     layout: "SIMPLIFIED_ACCOUNT_POPOUT",
@@ -269,9 +269,9 @@ function er(e) {
     })
   }(ef, eo), {
     ref: eh
-  } = (0, m.default)(), e_ = (0, S.default)(eh);
+  } = (0, m.default)(), eC = (0, S.default)(eh);
   s.useEffect(() => {
-    Q.default.track(ee.AnalyticEvents.OPEN_POPOUT, {
+    q.default.track(ee.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != n,
       other_user_id: t.id,
@@ -283,7 +283,7 @@ function er(e) {
       has_profile_effect: (null == K ? void 0 : K.profileEffectId) != null
     })
   }, []);
-  let eC = e => {
+  let e_ = e => {
       null == H || H(), (0, G.openUserProfileModal)({
         sourceAnalyticsLocations: eu,
         userId: t.id,
@@ -294,14 +294,14 @@ function er(e) {
     em = (0, N.useFocusModeEnabled)(),
     eS = ef === ee.StatusTypes.DND,
     ep = (0, J.useMultiAccountMenuItems)(),
-    eI = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, ea.menuItemFocused),
-    eT = (0, g.default)({
+    eI = (0, g.useCustomStatusMenuItem)(null != n ? n : void 0, ea.menuItemFocused),
+    eg = (0, T.default)({
       id: t.id,
       label: en.default.Messages.COPY_ID_USER,
       showIconFirst: !0,
       focusedClassName: ea.menuItemFocused
     }),
-    eg = (0, c.useStateFromStores)([W.default], () => W.default.hidePersonalInformation);
+    eT = (0, c.useStateFromStores)([W.default], () => W.default.hidePersonalInformation);
   return (0, a.jsx)(I.AnalyticsLocationProvider, {
     value: eu,
     children: (0, a.jsx)(L.UserProfileAnalyticsProvider, {
@@ -311,7 +311,7 @@ function er(e) {
       children: (0, a.jsx)("div", {
         className: ea.popoutContainer,
         ref: eh,
-        children: (0, a.jsxs)(D.default, {
+        children: (0, a.jsxs)(x.default, {
           className: ea.themeContainer,
           user: t,
           displayProfile: K,
@@ -324,29 +324,29 @@ function er(e) {
           }), (0, a.jsx)(B.default, {
             user: t,
             displayProfile: K,
-            onOpenProfile: V ? void 0 : eC
+            onOpenProfile: V ? void 0 : e_
           }), (0, a.jsxs)("div", {
             className: ea.body,
             children: [(0, a.jsx)(b.default, {
               user: t,
               className: ea.username,
               profileType: et.UserProfileTypes.BITE_SIZE,
-              onOpenProfile: () => eC({
+              onOpenProfile: () => e_({
                 autoFocusNote: !1
               }),
               pronouns: null == K ? void 0 : K.pronouns,
-              tags: (0, a.jsx)(P.default, {
+              tags: (0, a.jsx)(M.default, {
                 displayProfile: K,
                 profileType: et.UserProfileTypes.BITE_SIZE,
                 onClose: o
               }),
               nicknameIcons: (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(x.default, {
+                children: [(0, a.jsx)(y.default, {
                   userId: t.id
-                }), (q || X || er) && !eg && (0, a.jsx)(y.default, {
+                }), (Q || X || er) && !eT && (0, a.jsx)(D.default, {
                   user: t,
-                  isHovering: e_,
-                  onOpenProfile: () => eC({
+                  isHovering: eC,
+                  onOpenProfile: () => e_({
                     autoFocusNote: !0
                   })
                 })]
@@ -354,7 +354,7 @@ function er(e) {
             }), (0, a.jsx)(k.default, {
               user: t,
               bio: null == K ? void 0 : K.bio,
-              hidePersonalInformation: eg,
+              hidePersonalInformation: eT,
               onClose: o
             }), (0, a.jsx)(w.default, {
               user: t,
@@ -367,7 +367,7 @@ function er(e) {
                 hideScroller: !0,
                 className: ea.menu,
                 onClose: o,
-                onSelect: _,
+                onSelect: C,
                 children: [(0, a.jsx)(h.MenuGroup, {
                   children: (0, a.jsx)(h.MenuItem, {
                     id: "status-picker",
@@ -431,7 +431,7 @@ function er(e) {
                 hideScroller: !0,
                 className: ea.menu,
                 onClose: o,
-                onSelect: _,
+                onSelect: C,
                 children: [(0, a.jsx)(h.MenuGroup, {
                   children: (0, a.jsx)(h.MenuItem, {
                     id: "switch-account",
@@ -449,7 +449,7 @@ function er(e) {
                     children: ep
                   })
                 }), (0, a.jsx)(h.MenuGroup, {
-                  children: eT
+                  children: eg
                 })]
               })]
             })]
@@ -467,18 +467,18 @@ function eo(e) {
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, c.useStateFromStores)([K.default], () => K.default.getUser(t), [t]), d = (0, c.useStateFromStores)([V.default], () => V.default.getCustomStatusActivity()), [f, E] = s.useState(!1), h = null != u ? u : n, C = (0, c.useStateFromStores)([H.default], () => null != h && null != H.default.getAnyStreamForUser(h.id));
+  } = e, u = (0, c.useStateFromStores)([K.default], () => K.default.getUser(t), [t]), d = (0, c.useStateFromStores)([V.default], () => V.default.getCustomStatusActivity()), [f, E] = s.useState(!1), h = null != u ? u : n, _ = (0, c.useStateFromStores)([H.default], () => null != h && null != H.default.getAnyStreamForUser(h.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {
-      "string" == typeof t && (await (0, _.getUser)(t), E(!0))
+      "string" == typeof t && (await (0, C.getUser)(t), E(!0))
     }
   }, [u, t]), null == h) ? (f && o()(null != h, "Unexpected missing user"), null) : (0, a.jsx)(er, {
     closePopout: i,
     user: h,
     customStatus: d,
     guildId: l,
-    isApplicationStreaming: C,
+    isApplicationStreaming: _,
     onClose: i,
     onSelect: r
   })

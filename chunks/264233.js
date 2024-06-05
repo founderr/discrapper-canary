@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return N
   }
 }), n("47120");
 var a = n("735250"),
@@ -20,28 +20,28 @@ var a = n("735250"),
   p = n("791914"),
   S = n("326838"),
   g = n("689938"),
-  N = n("493634");
+  _ = n("493634");
 
-function _(e) {
+function N(e) {
   let {
     setTab: t,
     badgeState: s,
-    closePopout: _
-  } = e, T = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, v] = l.useMemo(() => i().partition(T, e => {
+    closePopout: N
+  } = e, I = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, v] = l.useMemo(() => i().partition(I, e => {
     var t;
     return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1e3 < e.ttl
-  }), [T, C]);
+  }), [I, C]);
   return (l.useEffect(() => {
     (0, h.clearUnseenInvites)()
-  }), 0 === T.length) ? (0, a.jsxs)("div", {
-    className: N.container,
+  }), 0 === I.length) ? (0, a.jsxs)("div", {
+    className: _.container,
     children: [(0, a.jsx)(p.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: s,
-      closePopout: _
+      closePopout: N
     }), (0, a.jsx)("div", {
-      className: N.__invalid_emptyStateContainer,
+      className: _.__invalid_emptyStateContainer,
       children: (0, a.jsx)(m.default, {
         Icon: u.GameControllerIcon,
         header: g.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
@@ -49,14 +49,14 @@ function _(e) {
       })
     })]
   }) : (0, a.jsxs)("div", {
-    className: N.container,
+    className: _.container,
     children: [(0, a.jsx)(p.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: s,
-      closePopout: _,
+      closePopout: N,
       children: (0, a.jsx)(E.default, {
-        className: N.__invalid_deleteButton,
+        className: _.__invalid_deleteButton,
         tooltip: g.default.Messages.GAME_INVITES_DELETE_ALL,
         color: E.CircleIconButtonColors.SECONDARY,
         icon: (0, a.jsx)(d.TrashIcon, {
@@ -79,9 +79,9 @@ function _(e) {
       })
     }), (0, a.jsx)(c.AdvancedScrollerThin, {
       children: (0, a.jsxs)("div", {
-        className: N.invitesContainer,
+        className: _.invitesContainer,
         children: [A.length > 0 && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(I, {
+          children: [(0, a.jsx)(T, {
             title: g.default.Messages.GAME_INVITES_RECENT_HEADER
           }), (0, a.jsx)(a.Fragment, {
             children: A.map(e => (0, a.jsx)(S.default, {
@@ -90,7 +90,7 @@ function _(e) {
             }, e.invite_id))
           })]
         }), v.length > 0 && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(I, {
+          children: [(0, a.jsx)(T, {
             title: g.default.Messages.GAME_INVITES_EXPIRED_HEADER
           }), (0, a.jsx)(a.Fragment, {
             children: v.map(e => (0, a.jsx)(S.default, {
@@ -104,19 +104,19 @@ function _(e) {
   })
 }
 
-function I(e) {
+function T(e) {
   let {
     title: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: N.headerContainer,
+    className: _.headerContainer,
     children: [(0, a.jsx)(c.Text, {
-      className: N.headerTitle,
+      className: _.headerTitle,
       variant: "text-xs/semibold",
       color: "interactive-normal",
       children: t
     }), (0, a.jsx)("div", {
-      className: N.headerDivider
+      className: _.headerDivider
     })]
   })
 }

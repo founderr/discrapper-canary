@@ -6,35 +6,35 @@ r.r(t), r.d(t, {
 });
 var a = r("735250");
 r("470079");
-var o = r("120356"),
-  l = r.n(o),
-  n = r("780384"),
+var n = r("120356"),
+  o = r.n(n),
+  l = r("780384"),
   s = r("481060"),
   i = r("410030"),
   c = r("876917"),
   u = r("328456"),
   d = r("616066"),
   f = r("141169"),
-  C = r("63243"),
-  p = r("244488");
+  p = r("63243"),
+  C = r("244488");
 let g = e => {
   let {
     product: t,
     isPurchased: r,
-    isHighlighted: o,
+    isHighlighted: n,
     user: g,
     forCollectedModal: v,
     profileEffectClassName: b
   } = e, {
     firstProfileEffect: m,
     firstAvatarDecoration: h
-  } = (0, u.useShopProductItems)(t), y = (0, i.default)(), E = (0, n.isThemeLight)(y);
+  } = (0, u.useShopProductItems)(t), y = (0, i.default)(), E = (0, l.isThemeLight)(y);
   return (0, a.jsxs)("div", {
     className: f.container,
     children: [null != m ? (0, a.jsx)("div", {
-      className: l()(f.profileEffectShopPreview, b),
+      className: o()(f.profileEffectShopPreview, b),
       children: (0, a.jsx)(c.default, {
-        isHovering: o,
+        isHovering: n,
         profileEffectId: m.id,
         isPurchased: r,
         forCollectedModal: v,
@@ -47,8 +47,8 @@ let g = e => {
         user: g,
         avatarSize: s.AvatarSizes.SIZE_120,
         isPurchased: r,
-        isHighlighted: o,
-        avatarPlaceholderSrc: E ? p : C
+        isHighlighted: n,
+        avatarPlaceholderSrc: E ? C : p
       })
     }) : null]
   })

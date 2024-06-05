@@ -1,7 +1,7 @@
 "use strict";
-u.r(t), u.d(t, {
+n.r(t), n.d(t, {
   GuildForumExperiment: function() {
-    return x
+    return H
   },
   getEnableForumPermissions: function() {
     return Y
@@ -10,19 +10,19 @@ u.r(t), u.d(t, {
     return et
   },
   useAppliedTags: function() {
-    return X
+    return W
   },
   useAutomaticForumSearch: function() {
     return em
   },
   useCanCreateForumChannel: function() {
-    return K
+    return z
   },
   useCanManageChannel: function() {
     return el
   },
   useCanSearchForumPosts: function() {
-    return es
+    return ed
   },
   useCanViewArchivedPosts: function() {
     return ef
@@ -34,10 +34,10 @@ u.r(t), u.d(t, {
     return Z
   },
   useExistingPin: function() {
-    return W
+    return B
   },
   useFacepileUsers: function() {
-    return q
+    return X
   },
   useForumActiveThreadIds: function() {
     return eS
@@ -46,7 +46,7 @@ u.r(t), u.d(t, {
     return ee
   },
   useForumPostFirstMessageMarkup: function() {
-    return en
+    return eu
   },
   useForumPostReadStates: function() {
     return ea
@@ -55,10 +55,10 @@ u.r(t), u.d(t, {
     return ec
   },
   useLastActiveTimestamp: function() {
-    return z
+    return q
   },
   useLoadForumUnreadCounts: function() {
-    return V
+    return K
   },
   useMessageCount: function() {
     return $
@@ -67,60 +67,60 @@ u.r(t), u.d(t, {
     return J
   },
   useSomeAppliedTags: function() {
-    return B
+    return Q
   },
   useTypingUserIds: function() {
-    return eu
+    return en
   },
   useUnreadThreadsCountForParent: function() {
     return eg
   },
   useVisibleAppliedForumTags: function() {
-    return ed
+    return es
   },
   useVisibleForumTags: function() {
     return eo
   }
-}), u("47120"), u("724458");
-var n = u("470079"),
-  l = u("392711"),
-  r = u.n(l),
-  a = u("683860"),
-  i = u("442837"),
-  o = u("570140"),
-  d = u("45114"),
-  s = u("339085"),
-  f = u("987170"),
-  c = u("200120"),
-  m = u("937889"),
-  g = u("739566"),
-  S = u("601070"),
-  T = u("344185"),
-  E = u("723774"),
-  h = u("144140"),
-  _ = u("91159"),
-  v = u("592125"),
-  A = u("720202"),
-  C = u("430824"),
-  M = u("496675"),
-  p = u("306680"),
-  F = u("699516"),
-  I = u("111583"),
-  N = u("594174"),
-  O = u("823379"),
-  R = u("709054"),
-  P = u("883429"),
-  U = u("238349"),
-  b = u("368844"),
-  y = u("660189"),
-  D = u("581036"),
-  w = u("208970"),
-  L = u("882252"),
-  G = u("710352"),
-  k = u("981631"),
-  j = u("176505"),
-  H = u("124368");
-let x = (0, f.default)({
+}), n("47120"), n("724458");
+var u = n("470079"),
+  l = n("392711"),
+  r = n.n(l),
+  a = n("683860"),
+  i = n("442837"),
+  o = n("570140"),
+  s = n("45114"),
+  d = n("339085"),
+  f = n("987170"),
+  c = n("200120"),
+  m = n("937889"),
+  g = n("739566"),
+  S = n("601070"),
+  h = n("344185"),
+  T = n("723774"),
+  M = n("144140"),
+  E = n("91159"),
+  _ = n("592125"),
+  p = n("720202"),
+  C = n("430824"),
+  v = n("496675"),
+  A = n("306680"),
+  F = n("699516"),
+  I = n("111583"),
+  N = n("594174"),
+  b = n("823379"),
+  y = n("709054"),
+  O = n("883429"),
+  x = n("238349"),
+  R = n("368844"),
+  L = n("660189"),
+  P = n("581036"),
+  U = n("208970"),
+  j = n("882252"),
+  w = n("710352"),
+  D = n("981631"),
+  G = n("176505"),
+  k = n("124368");
+let H = (0, f.default)({
   id: "2023-01_forums_non_community",
   label: "Forum non-community",
   kind: "guild",
@@ -137,32 +137,32 @@ let x = (0, f.default)({
 });
 
 function Y(e) {
-  return x.getCurrentConfig({
+  return H.getCurrentConfig({
     guildId: e,
     location: "553713_2"
   }).enabled
 }
 
-function K(e) {
+function z(e) {
   return function(e) {
     let t = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(e));
-    return x.useExperiment({
+    return H.useExperiment({
       guildId: e,
       location: "553713_1"
     }, {
       autoTrackExposure: !1
-    }).enabled || !!((null == t ? void 0 : t.hasFeature(k.GuildFeatures.COMMUNITY)) || (null == t ? void 0 : t.hasFeature(k.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)))
+    }).enabled || !!((null == t ? void 0 : t.hasFeature(D.GuildFeatures.COMMUNITY)) || (null == t ? void 0 : t.hasFeature(D.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)))
   }(e)
 }
 
-function V(e, t, u) {
-  let l = (0, i.useStateFromStores)([T.default], () => T.default.hasLoaded(e.guild_id));
-  n.useEffect(() => {
+function K(e, t, n) {
+  let l = (0, i.useStateFromStores)([h.default], () => h.default.hasLoaded(e.guild_id));
+  u.useEffect(() => {
     if (!l) return;
-    let n = U.default.getThreadIds(e.id, t, u),
-      r = D.default.getThreadIdsMissingCounts(e.guild_id, n).filter(e => (0, L.canDisplayPostUnreadMessageCount)(e, [p.default])).slice(0, 180).map(e => ({
+    let u = x.default.getThreadIds(e.id, t, n),
+      r = P.default.getThreadIdsMissingCounts(e.guild_id, u).filter(e => (0, j.canDisplayPostUnreadMessageCount)(e, [A.default])).slice(0, 180).map(e => ({
         threadId: e,
-        ackMessageId: p.default.getTrackedAckMessageId(e)
+        ackMessageId: A.default.getTrackedAckMessageId(e)
       }));
     r.length > 0 && o.default.dispatch({
       type: "REQUEST_FORUM_UNREADS",
@@ -170,63 +170,63 @@ function V(e, t, u) {
       channelId: e.id,
       threads: r
     })
-  }, [e.id, e.guild_id, l, u, t])
+  }, [e.id, e.guild_id, l, n, t])
 }
 
-function W(e) {
-  return (0, i.useStateFromStores)([T.default, v.default], () => {
-    let t = r()(T.default.getThreadsForParent(e.guild_id, e.parent_id)).keys().filter(e => {
+function B(e) {
+  return (0, i.useStateFromStores)([h.default, _.default], () => {
+    let t = r()(h.default.getThreadsForParent(e.guild_id, e.parent_id)).keys().filter(e => {
       var t;
-      return (null === (t = v.default.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(j.ChannelFlags.PINNED)) === !0
+      return (null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(G.ChannelFlags.PINNED)) === !0
     }).head();
-    return v.default.getChannel(t)
+    return _.default.getChannel(t)
   })
 }
-let Q = [];
+let V = [];
 
-function X(e) {
+function W(e) {
   let t = function(e) {
     let t = null == e ? void 0 : e.parent_id;
-    return (0, i.useStateFromStoresObject)([v.default], () => {
+    return (0, i.useStateFromStoresObject)([_.default], () => {
       var e;
-      let u = v.default.getChannel(t);
-      return (null !== (e = null == u ? void 0 : u.availableTags) && void 0 !== e ? e : []).reduce((e, t) => ({
+      let n = _.default.getChannel(t);
+      return (null !== (e = null == n ? void 0 : n.availableTags) && void 0 !== e ? e : []).reduce((e, t) => ({
         ...e,
         [t.id]: t
       }), {})
     }, [t])
   }(e);
-  return n.useMemo(() => {
-    var u, n, l;
-    return null !== (l = null == e ? void 0 : null === (n = e.appliedTags) || void 0 === n ? void 0 : null === (u = n.map(e => t[e])) || void 0 === u ? void 0 : u.filter(O.isNotNullish)) && void 0 !== l ? l : Q
+  return u.useMemo(() => {
+    var n, u, l;
+    return null !== (l = null == e ? void 0 : null === (u = e.appliedTags) || void 0 === u ? void 0 : null === (n = u.map(e => t[e])) || void 0 === n ? void 0 : n.filter(b.isNotNullish)) && void 0 !== l ? l : V
   }, [t, null == e ? void 0 : e.appliedTags])
 }
 
-function B(e) {
+function Q(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-    u = X(e);
-  return n.useMemo(() => [u.slice(0, t), Math.max(0, u.length - t)], [u, t])
+    n = W(e);
+  return u.useMemo(() => [n.slice(0, t), Math.max(0, n.length - t)], [n, t])
+}
+
+function X(e, t) {
+  let n = (0, i.useStateFromStoresArray)([N.default], () => t.map(e => N.default.getUser(e)).filter(b.isNotNullish));
+  return u.useEffect(() => {
+    n.forEach(t => {
+      p.default.requestMember(e.guild_id, t.id)
+    })
+  }, []), n
 }
 
 function q(e, t) {
-  let u = (0, i.useStateFromStoresArray)([N.default], () => t.map(e => N.default.getUser(e)).filter(O.isNotNullish));
-  return n.useEffect(() => {
-    u.forEach(t => {
-      A.default.requestMember(e.guild_id, t.id)
-    })
-  }, []), u
-}
-
-function z(e, t) {
-  let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : G.ForumTimestampFormats.DURATION_AGO,
-    l = n.useMemo(() => R.default.extractTimestamp(e.id), [e.id]),
-    r = (0, _.useLastMessageTimestamp)(e),
-    i = n.useMemo(() => (0, L.getForumTimestampFormatter)(t, u), [t, u]);
-  return n.useMemo(() => t === a.ThreadSortOrder.CREATION_DATE ? (0, _.getTimestampString)(l, i) : (0, _.getTimestampString)(r, i), [r, t, l, i])
+  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : w.ForumTimestampFormats.DURATION_AGO,
+    l = u.useMemo(() => y.default.extractTimestamp(e.id), [e.id]),
+    r = (0, E.useLastMessageTimestamp)(e),
+    i = u.useMemo(() => (0, j.getForumTimestampFormatter)(t, n), [t, n]);
+  return u.useMemo(() => t === a.ThreadSortOrder.CREATION_DATE ? (0, E.getTimestampString)(l, i) : (0, E.getTimestampString)(r, i), [r, t, l, i])
 }
 
 function J(e) {
-  return n.useMemo(() => {
+  return u.useMemo(() => {
     var t;
     return r().maxBy(null !== (t = null == e ? void 0 : e.reactions) && void 0 !== t ? t : [], e => Math.max(e.burst_count, e.count))
   }, [null == e ? void 0 : e.reactions])
@@ -234,11 +234,11 @@ function J(e) {
 
 function Z(e) {
   let t = null == e ? void 0 : e.defaultReactionEmoji,
-    u = (0, i.useStateFromStores)([s.default], () => (null == t ? void 0 : t.emojiId) != null ? s.default.getUsableCustomEmojiById(t.emojiId) : null);
-  return null == t ? null : null != t.emojiId && null != u ? {
+    n = (0, i.useStateFromStores)([d.default], () => (null == t ? void 0 : t.emojiId) != null ? d.default.getUsableCustomEmojiById(t.emojiId) : null);
+  return null == t ? null : null != t.emojiId && null != n ? {
     id: t.emojiId,
-    name: u.name,
-    animated: u.animated
+    name: n.name,
+    animated: n.animated
   } : null != t.emojiName ? {
     id: t.emojiId,
     name: t.emojiName,
@@ -247,73 +247,73 @@ function Z(e) {
 }
 
 function $(e) {
-  let t = (0, i.useStateFromStores)([h.default], () => {
+  let t = (0, i.useStateFromStores)([M.default], () => {
       var t;
-      return null !== (t = h.default.getCount(e.id)) && void 0 !== t ? t : 0
+      return null !== (t = M.default.getCount(e.id)) && void 0 !== t ? t : 0
     }),
-    u = (0, E.getMessageCountText)(t, e.id),
-    n = (0, i.useStateFromStores)([p.default], () => (0, L.canDisplayPostUnreadMessageCount)(e.id, [p.default])),
-    l = (0, i.useStateFromStores)([D.default], () => {
-      if (!n) return null;
-      let u = D.default.getCount(e.id);
-      if (null == u || !(u > 0)) return "1+";
+    n = (0, T.getMessageCountText)(t, e.id),
+    u = (0, i.useStateFromStores)([A.default], () => (0, j.canDisplayPostUnreadMessageCount)(e.id, [A.default])),
+    l = (0, i.useStateFromStores)([P.default], () => {
+      if (!u) return null;
+      let n = P.default.getCount(e.id);
+      if (null == n || !(n > 0)) return "1+";
       {
-        let e = Math.min(u, t);
-        return e >= H.MAX_THREAD_UNREAD_MESSAGE_COUNT ? "".concat(H.MAX_THREAD_UNREAD_MESSAGE_COUNT, "+") : e
+        let e = Math.min(n, t);
+        return e >= k.MAX_THREAD_UNREAD_MESSAGE_COUNT ? "".concat(k.MAX_THREAD_UNREAD_MESSAGE_COUNT, "+") : e
       }
     });
   return {
     messageCount: t,
-    isMaxMessageCount: null != t && "".concat(t) !== u,
-    messageCountText: u,
+    isMaxMessageCount: null != t && "".concat(t) !== n,
+    messageCountText: n,
     unreadCount: l
   }
 }
 
 function ee(e) {
   var t;
-  let u = (0, i.useStateFromStores)([N.default], () => N.default.getUser(e.ownerId)),
-    l = (0, i.useStateFromStores)([y.default], () => {
+  let n = (0, i.useStateFromStores)([N.default], () => N.default.getUser(e.ownerId)),
+    l = (0, i.useStateFromStores)([L.default], () => {
       var t;
-      return null === (t = y.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage
+      return null === (t = L.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage
     }),
-    r = (0, g.useNullableUserAuthor)(null !== (t = null == l ? void 0 : l.author) && void 0 !== t ? t : u, e);
-  return n.useEffect(() => {
-    null != e.ownerId && A.default.requestMember(e.guild_id, e.ownerId)
+    r = (0, g.useNullableUserAuthor)(null !== (t = null == l ? void 0 : l.author) && void 0 !== t ? t : n, e);
+  return u.useEffect(() => {
+    null != e.ownerId && p.default.requestMember(e.guild_id, e.ownerId)
   }, [e.guild_id, e.ownerId]), {
-    user: u,
-    author: r
-  }
-}
-
-function et(e) {
-  var t, u;
-  let n = N.default.getUser(e.ownerId),
-    l = null === (t = y.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage,
-    r = (0, g.getUserAuthor)(null !== (u = null == l ? void 0 : l.author) && void 0 !== u ? u : n, e);
-  return {
     user: n,
     author: r
   }
 }
 
-function eu(e) {
-  return (0, i.useStateFromStoresArray)([I.default, N.default, F.default], () => {
-    let t = N.default.getCurrentUser();
-    return r()(I.default.getTypingUsers(e.id)).keys().filter(e => e !== (null == t ? void 0 : t.id)).reject(e => F.default.isBlocked(e)).map(e => N.default.getUser(e)).filter(O.isNotNullish).map(e => e.id).value()
-  })
+function et(e) {
+  var t, n;
+  let u = N.default.getUser(e.ownerId),
+    l = null === (t = L.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage,
+    r = (0, g.getUserAuthor)(null !== (n = null == l ? void 0 : l.author) && void 0 !== n ? n : u, e);
+  return {
+    user: u,
+    author: r
+  }
 }
 
 function en(e) {
+  return (0, i.useStateFromStoresArray)([I.default, N.default, F.default], () => {
+    let t = N.default.getCurrentUser();
+    return r()(I.default.getTypingUsers(e.id)).keys().filter(e => e !== (null == t ? void 0 : t.id)).reject(e => F.default.isBlocked(e)).map(e => N.default.getUser(e)).filter(b.isNotNullish).map(e => e.id).value()
+  })
+}
+
+function eu(e) {
   let {
     firstMessage: t,
-    formatInline: u = !0,
+    formatInline: n = !0,
     noStyleAndInteraction: l = !0
   } = e, r = (0, c.useActiveKeywordFiltersCacheKey)(), {
     hasSpoilerEmbeds: a,
     content: i
-  } = n.useMemo(() => (null == t ? void 0 : t.content) != null && "" !== t.content ? (0, m.default)(t, {
-    formatInline: u,
+  } = u.useMemo(() => (null == t ? void 0 : t.content) != null && "" !== t.content ? (0, m.default)(t, {
+    formatInline: n,
     noStyleAndInteraction: l,
     allowHeading: !0,
     allowList: !0,
@@ -321,17 +321,17 @@ function en(e) {
   }) : {
     hasSpoilerEmbeds: !1,
     content: null
-  }, [t, u, l, r]), o = (0, b.useFindFirstMediaProperties)(t, a), d = (0, b.useFirstMediaIsEmbed)(t, a);
+  }, [t, n, l, r]), o = (0, R.useFindFirstMediaProperties)(t, a), s = (0, R.useFirstMediaIsEmbed)(t, a);
   return {
     hasSpoilerEmbeds: a,
     content: i,
     firstMedia: o,
-    firstMediaIsEmbed: d
+    firstMediaIsEmbed: s
   }
 }
 
 function el(e) {
-  return (0, i.useStateFromStores)([M.default], () => M.default.can(k.Permissions.MANAGE_CHANNELS, e))
+  return (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.MANAGE_CHANNELS, e))
 }
 let er = {
   isNew: !1,
@@ -339,100 +339,100 @@ let er = {
 };
 
 function ea(e) {
-  return (0, i.useStateFromStoresObject)([C.default, p.default], () => {
+  return (0, i.useStateFromStoresObject)([C.default, A.default], () => {
     var t;
-    let u = C.default.getGuild(null !== (t = e.getGuildId()) && void 0 !== t ? t : k.EMPTY_STRING_SNOWFLAKE_ID);
-    return null == u ? er : (0, L.getForumPostReadStates)(e, u, [p.default])
+    let n = C.default.getGuild(null !== (t = e.getGuildId()) && void 0 !== t ? t : D.EMPTY_STRING_SNOWFLAKE_ID);
+    return null == n ? er : (0, j.getForumPostReadStates)(e, n, [A.default])
   })
 }
 
 function ei(e) {
-  return n.useMemo(() => null == e ? "" : null == e.template ? "" : e.template.trim(), [e])
+  return u.useMemo(() => null == e ? "" : null == e.template ? "" : e.template.trim(), [e])
 }
 
 function eo(e) {
-  let t = (0, i.useStateFromStores)([M.default], () => M.default.can(k.Permissions.MANAGE_THREADS, e));
-  return n.useMemo(() => {
-    var u;
-    let n = [...null !== (u = null == e ? void 0 : e.availableTags) && void 0 !== u ? u : []];
-    return !t && (n = n.filter(e => !e.moderated)), n
+  let t = (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.MANAGE_THREADS, e));
+  return u.useMemo(() => {
+    var n;
+    let u = [...null !== (n = null == e ? void 0 : e.availableTags) && void 0 !== n ? n : []];
+    return !t && (u = u.filter(e => !e.moderated)), u
   }, [t, null == e ? void 0 : e.availableTags])
 }
 
-function ed(e, t) {
-  let u = eo((0, i.useStateFromStores)([v.default], () => v.default.getChannel(null == e ? void 0 : e.parent_id), [e]));
-  return n.useMemo(() => t.filter(e => u.includes(e)), [t, u])
+function es(e, t) {
+  let n = eo((0, i.useStateFromStores)([_.default], () => _.default.getChannel(null == e ? void 0 : e.parent_id), [e]));
+  return u.useMemo(() => t.filter(e => n.includes(e)), [t, n])
 }
 
-function es(e) {
-  return (0, i.useStateFromStores)([M.default], () => M.default.can(k.Permissions.READ_MESSAGE_HISTORY, e))
+function ed(e) {
+  return (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.READ_MESSAGE_HISTORY, e))
 }
 
 function ef(e) {
-  return (0, i.useStateFromStores)([M.default], () => M.default.can(k.Permissions.READ_MESSAGE_HISTORY, e))
+  return (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.READ_MESSAGE_HISTORY, e))
 }
 
 function ec(e) {
   let {
     channelId: t
   } = e;
-  return (0, i.useStateFromStoresObject)([w.default], () => ({
-    isSearchLoading: w.default.getSearchLoading(t),
-    searchQuery: w.default.getSearchQuery(t),
-    searchResults: w.default.getSearchResults(t)
+  return (0, i.useStateFromStoresObject)([U.default], () => ({
+    isSearchLoading: U.default.getSearchLoading(t),
+    searchQuery: U.default.getSearchQuery(t),
+    searchResults: U.default.getSearchResults(t)
   }))
 }
 
 function em(e, t) {
-  let u = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     {
       isSearchLoading: l,
       searchQuery: r
     } = ec({
       channelId: e.id
     }),
-    a = es(e),
-    i = n.useRef(null),
-    o = n.useRef(new Set);
-  n.useEffect(() => {
+    a = ed(e),
+    i = u.useRef(null),
+    o = u.useRef(new Set);
+  u.useEffect(() => {
     if (null == r && null != i.current) {
-      P.default.clearForumSearch(e.id), i.current = null;
+      O.default.clearForumSearch(e.id), i.current = null;
       return
     }
-    if (null == r || 0 === r.length || u) return;
+    if (null == r || 0 === r.length || n) return;
     if (!a) {
-      P.default.clearForumSearch(e.id);
+      O.default.clearForumSearch(e.id);
       return
     }
     if (i.current === r && o.current === t || l) return;
-    let n = setTimeout(async () => {
+    let u = setTimeout(async () => {
       i.current = r, o.current = t;
       try {
-        await P.default.searchForumPosts(e.guild_id, e.id, r, t)
+        await O.default.searchForumPosts(e.guild_id, e.id, r, t)
       } catch {}
     }, 350);
-    return () => clearTimeout(n)
-  }, [a, e.guild_id, e.id, u, l, r, t])
+    return () => clearTimeout(u)
+  }, [a, e.guild_id, e.id, n, l, r, t])
 }
 
 function eg(e, t) {
-  return (0, i.useStateFromStores)([S.default, p.default, v.default], () => {
-    let u = v.default.getChannel(t);
-    if (!(null == u ? void 0 : u.isForumLikeChannel())) return 0;
-    let n = S.default.getActiveJoinedUnreadThreadsForParent(e, t),
+  return (0, i.useStateFromStores)([S.default, A.default, _.default], () => {
+    let n = _.default.getChannel(t);
+    if (!(null == n ? void 0 : n.isForumLikeChannel())) return 0;
+    let u = S.default.getActiveJoinedUnreadThreadsForParent(e, t),
       l = S.default.getActiveUnjoinedUnreadThreadsForParent(e, t),
-      r = p.default.ackMessageId(t),
+      r = A.default.ackMessageId(t),
       a = 0;
     if (null == r) return a;
-    for (let e in n) {
-      let t = n[e],
-        u = p.default.lastMessageId(t.channel.id);
-      null != u && u > r && a++
+    for (let e in u) {
+      let t = u[e],
+        n = A.default.lastMessageId(t.channel.id);
+      null != n && n > r && a++
     }
     for (let e in l) {
       let t = l[e],
-        u = p.default.lastMessageId(t.id);
-      null != u && u > r && a++
+        n = A.default.lastMessageId(t.id);
+      null != n && n > r && a++
     }
     return a
   })
@@ -441,11 +441,11 @@ function eg(e, t) {
 function eS(e) {
   let {
     channel: t,
-    sortOrder: u,
+    sortOrder: n,
     tagFilter: l,
     shouldAutomaticallyAck: r
-  } = e, a = (0, i.useStateFromStoresArray)([U.default], () => U.default.getThreadIds(t.id, u, l)), o = eg(t.guild_id, t.id), s = (0, i.useStateFromStores)([U.default], () => r && (o > 0 || U.default.getCanAckThreads()), [r, o]);
-  return n.useEffect(() => {
-    s && (0, d.ackChannel)(t)
-  }, [t, s]), a
+  } = e, a = (0, i.useStateFromStoresArray)([x.default], () => x.default.getThreadIds(t.id, n, l)), o = eg(t.guild_id, t.id), d = (0, i.useStateFromStores)([x.default], () => r && (o > 0 || x.default.getCanAckThreads()), [r, o]);
+  return u.useEffect(() => {
+    d && (0, s.ackChannel)(t)
+  }, [t, d]), a
 }

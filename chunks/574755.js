@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return A
   }
 });
 var a = s("735250"),
@@ -17,20 +17,20 @@ var a = s("735250"),
   E = s("924557"),
   T = s("435064"),
   _ = s("779618"),
-  f = s("39604"),
-  I = s("703288"),
+  I = s("39604"),
+  f = s("703288"),
   m = s("491758"),
   N = s("183632"),
   g = s("689938"),
   h = s("477716"),
   C = s("151501"),
-  A = s("611273");
+  O = s("611273");
 
-function O(e) {
+function A(e) {
   let {
     className: t,
     showHeader: s = !0
-  } = e, O = c.ClipsAllowVoiceRecording.useSetting(), {
+  } = e, A = c.ClipsAllowVoiceRecording.useSetting(), {
     enableViewerClipping: p
   } = u.default.useExperiment({
     location: "Clips Settings"
@@ -50,20 +50,20 @@ function O(e) {
       tag: r.FormTitleTags.H1,
       title: s ? (0, a.jsxs)("div", {
         className: h.headerContainer,
-        children: [g.default.Messages.CLIPS, (0, a.jsx)(I.default, {})]
+        children: [g.default.Messages.CLIPS, (0, a.jsx)(f.default, {})]
       }) : null,
       children: x && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
         children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(N.default, {})]
       })
     }), x && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: s || x ? A.marginTop20 : t,
+      className: s || x ? O.marginTop20 : t,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: C.formItem,
-        value: O,
+        value: A,
         note: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
-        onChange: e => f.updateAllowVoiceRecording({
+        onChange: e => I.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
         children: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
@@ -72,7 +72,7 @@ function O(e) {
         className: C.formItem,
         value: M,
         note: g.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
-        onChange: e => f.updateViewerClipsEnabled({
+        onChange: e => I.updateViewerClipsEnabled({
           enabled: e,
           trackAnalytics: !0
         }),

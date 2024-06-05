@@ -3,33 +3,33 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var l = s("780384"),
-  r = s("481060"),
-  n = s("410030"),
+  n = s("481060"),
+  r = s("410030"),
   i = s("689938"),
   o = s("797056"),
-  c = s("982240"),
-  u = s("533854");
+  u = s("982240"),
+  c = s("533854");
 t.default = e => {
   let {
     onRetry: t
-  } = e, s = (0, n.default)();
+  } = e, s = (0, r.default)();
   return (0, a.jsxs)("div", {
     className: o.wrapper,
     children: [(0, a.jsx)("img", {
       className: o.__invalid_loadIssueImg,
-      src: (0, l.isThemeDark)(s) ? c : u,
+      src: (0, l.isThemeDark)(s) ? u : c,
       alt: ""
-    }), (0, a.jsx)(r.Heading, {
+    }), (0, a.jsx)(n.Heading, {
       className: o.heading1,
       variant: "heading-xl/semibold",
       children: i.default.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
-    }), (0, a.jsx)(r.Text, {
+    }), (0, a.jsx)(n.Text, {
       variant: "text-md/normal",
       children: i.default.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
-    }), (0, a.jsx)(r.Button, {
+    }), (0, a.jsx)(n.Button, {
       className: o.reload,
-      size: r.Button.Sizes.MEDIUM,
-      color: r.Button.Colors.BRAND,
+      size: n.Button.Sizes.MEDIUM,
+      color: n.Button.Colors.BRAND,
       onClick: t,
       children: i.default.Messages.ERRORS_RELOAD
     })]

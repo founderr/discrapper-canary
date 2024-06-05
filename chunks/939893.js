@@ -12,7 +12,7 @@ var a = i("302454"),
   u = i("746878"),
   p = i("729035");
 let m = /^discord.gg\/[a-zA-Z0-9-]+/,
-  _ = {
+  f = {
     ...p.default.rules,
     heading: {
       ...o.Rules.heading
@@ -53,4 +53,4 @@ let m = /^discord.gg\/[a-zA-Z0-9-]+/,
       }, i.key)
     }
   };
-t.default = _
+t.default = f

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return O
   }
 });
 var a = s("735250"),
@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("998502"),
   T = s("210887"),
   _ = s("996073"),
-  f = s("526761"),
-  I = s("65154"),
+  I = s("526761"),
+  f = s("65154"),
   m = s("689938"),
   N = s("611273");
 let g = s("651714"),
@@ -39,7 +39,7 @@ function C() {
   }) : null
 }
 
-function A() {
+function O() {
   let e = (0, r.useStateFromStores)([T.default], () => T.default.theme),
     {
       openH264: t,
@@ -48,10 +48,10 @@ function A() {
     } = (0, r.useStateFromStoresObject)([c.default], () => ({
       openH264: c.default.getOpenH264(),
       hardwareH264: c.default.getHardwareH264(),
-      supportsOpenH264: c.default.supports(I.Features.OPEN_H264)
+      supportsOpenH264: c.default.supports(f.Features.OPEN_H264)
     })),
     E = n.useRef(null);
-  return (0, _.default)(E, f.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
+  return (0, _.default)(E, I.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
       className: N.marginBottom20,
       title: m.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,

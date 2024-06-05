@@ -5,9 +5,9 @@ r.r(t), r.d(t, {
   }
 }), r("47120");
 var a = r("470079"),
-  o = r("809206"),
-  l = r("350327"),
-  n = r("328456");
+  n = r("809206"),
+  o = r("350327"),
+  l = r("328456");
 let s = e => {
   let {
     product: t,
@@ -16,18 +16,18 @@ let s = e => {
   } = e, [i, c] = a.useState(!1), {
     firstAvatarDecoration: u,
     firstProfileEffect: d
-  } = (0, n.useShopProductItems)(t);
+  } = (0, l.useShopProductItems)(t);
   return {
     handleUseNow: a.useCallback(async () => {
       c(!0);
       try {
-        if (null != u && await (0, o.saveAccountChanges)({
+        if (null != u && await (0, n.saveAccountChanges)({
             avatarDecoration: u
           }), null != d) {
           let e = {
             profile_effect_id: d.id
           };
-          await (0, l.saveProfileChanges)(e)
+          await (0, o.saveProfileChanges)(e)
         }
         r()
       } catch (e) {

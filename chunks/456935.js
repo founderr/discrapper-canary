@@ -1,23 +1,23 @@
 "use strict";
 a.r(t), a.d(t, {
   getVerificationLevelText: function() {
-    return E
+    return h
   }
 });
 var n = a("735250"),
   r = a("470079"),
-  s = a("692547"),
-  i = a("481060"),
+  i = a("692547"),
+  s = a("481060"),
   l = a("496675"),
   o = a("916187"),
-  c = a("736921"),
-  d = a("185403"),
+  d = a("736921"),
+  c = a("185403"),
   u = a("484455"),
   f = a("981631"),
   m = a("689938"),
-  h = a("17359");
+  E = a("17359");
 
-function E(e) {
+function h(e) {
   switch (e) {
     case f.VerificationLevels.LOW:
       return m.default.Messages.VERIFICATION_LEVEL_LOW;
@@ -31,46 +31,46 @@ function E(e) {
       return ""
   }
 }
-let p = {
+let T = {
   [f.VerificationLevels.NONE]: "",
-  [f.VerificationLevels.LOW]: s.default.unsafe_rawColors.GREEN_360.css,
-  [f.VerificationLevels.MEDIUM]: s.default.unsafe_rawColors.YELLOW_300.css,
-  [f.VerificationLevels.HIGH]: s.default.unsafe_rawColors.ORANGE_345.css,
-  [f.VerificationLevels.VERY_HIGH]: s.default.unsafe_rawColors.RED_400.css
+  [f.VerificationLevels.LOW]: i.default.unsafe_rawColors.GREEN_360.css,
+  [f.VerificationLevels.MEDIUM]: i.default.unsafe_rawColors.YELLOW_300.css,
+  [f.VerificationLevels.HIGH]: i.default.unsafe_rawColors.ORANGE_345.css,
+  [f.VerificationLevels.VERY_HIGH]: i.default.unsafe_rawColors.RED_400.css
 };
 t.default = function(e) {
   let {
     guild: t
-  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), C = t.verificationLevel, T = C === f.VerificationLevels.VERY_HIGH ? c.default : o.default, _ = r.useMemo(() => E(C), [C]), x = p[C], g = (0, n.jsx)("div", {
-    className: h.verificationLevelTitle,
+  } = e, i = l.default.can(f.Permissions.MANAGE_GUILD, t), _ = t.verificationLevel, C = _ === f.VerificationLevels.VERY_HIGH ? d.default : o.default, x = r.useMemo(() => h(_), [_]), p = T[_], I = (0, n.jsx)("div", {
+    className: E.verificationLevelTitle,
     children: m.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
-        return (0, n.jsx)(i.Text, {
-          className: h.verificationLevelHook,
+        return (0, n.jsx)(s.Text, {
+          className: E.verificationLevelHook,
           style: {
-            color: x
+            color: p
           },
           variant: "text-sm/semibold",
-          children: _
+          children: x
         }, "hook")
       }
     })
-  }), N = C === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  }), g = _ === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
   return (0, n.jsx)(u.default, {
-    title: g,
+    title: I,
     children: (0, n.jsxs)("div", {
-      className: h.verificationContainer,
-      children: [(0, n.jsx)(T, {
+      className: E.verificationContainer,
+      children: [(0, n.jsx)(C, {
         width: 20,
         height: 20,
-        className: h.icon
-      }), (0, n.jsx)(i.Text, {
-        className: h.guildVerificationText,
+        className: E.icon
+      }), (0, n.jsx)(s.Text, {
+        className: E.guildVerificationText,
         variant: "text-sm/normal",
-        children: N
-      }), s && (0, n.jsx)(i.Clickable, {
-        className: h.iconInteractiveContainer,
-        onClick: () => (0, i.openModalLazy)(async () => {
+        children: g
+      }), i && (0, n.jsx)(s.Clickable, {
+        className: E.iconInteractiveContainer,
+        onClick: () => (0, s.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([a.e("99387"), a.e("27933")]).then(a.bind(a, "694278"));
@@ -79,10 +79,10 @@ t.default = function(e) {
             guild: t
           })
         }),
-        children: (0, n.jsx)(d.default, {
+        children: (0, n.jsx)(c.default, {
           width: 20,
           height: 20,
-          className: h.iconInteractive
+          className: E.iconInteractive
         })
       })]
     })

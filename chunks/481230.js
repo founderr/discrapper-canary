@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var s = n("913527"),
   a = n.n(s),
   i = n("990547"),
-  r = n("570140"),
-  l = n("479531"),
+  l = n("570140"),
+  r = n("479531"),
   o = n("771308"),
   u = n("314897"),
   d = n("626135"),
@@ -44,14 +44,14 @@ function m(e) {
     guildTemplateCode: p,
     birthday: T,
     invite: S = null,
-    giftCodeSKUId: I = null,
-    multiStep: A = !1,
+    giftCodeSKUId: A = null,
+    multiStep: I = !1,
     promoEmailConsent: N = null,
     usedUsernameSuggestion: R = null
   } = e;
-  return r.default.dispatch({
+  return l.default.dispatch({
     type: "REGISTER",
-    birthday: A ? T : null
+    birthday: I ? T : null
   }), null != T && ((0, f.default)(T, h.AnalyticsSections.REGISTER), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
     source: E.AgeGateSource.REGISTER,
     action: E.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
@@ -73,7 +73,7 @@ function m(e) {
       consent: m,
       phone_token: n,
       date_of_birth: null == T ? void 0 : T.format("YYYY-MM-DD"),
-      gift_code_sku_id: I,
+      gift_code_sku_id: A,
       guild_template_code: p,
       promotional_email_opt_in: null == N ? void 0 : N.checked
     },
@@ -88,7 +88,7 @@ function m(e) {
       }
     }
   }).then(e => {
-    r.default.dispatch({
+    l.default.dispatch({
       type: "REGISTER_SUCCESS",
       token: e.body.token
     }), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
@@ -96,8 +96,8 @@ function m(e) {
       action: E.AgeGateAnalyticAction.AGE_GATE_SUCCESS
     })
   }, e => {
-    let t = new l.default(e);
-    throw r.default.dispatch({
+    let t = new r.default(e);
+    throw l.default.dispatch({
       type: "REGISTER_FAILURE",
       error: t
     }), null != t.getFieldErrors("date_of_birth") && o.preventUnderageRegistration(E.AgeGateSource.REGISTER), d.default.track(h.AnalyticEvents.REGISTER_SUBMIT_ERRORED, {

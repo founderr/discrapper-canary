@@ -17,15 +17,15 @@ var a = s("735250"),
   E = s("242291"),
   T = s("893663"),
   _ = s("331642"),
-  f = s("474333"),
-  I = s("466111"),
+  I = s("474333"),
+  f = s("466111"),
   m = s("632184"),
   N = s("63063"),
   g = s("581883"),
   h = s("918257"),
   C = s("981631"),
-  A = s("710111"),
-  O = s("689938"),
+  O = s("710111"),
+  A = s("689938"),
   p = s("976130"),
   R = s("611273");
 
@@ -36,14 +36,14 @@ function x(e) {
       guildId: t,
       soundId: s
     } = e;
-    return S.default.getSound(t === A.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? A.DEFAULT_SOUND_GUILD_ID : t, s)
+    return S.default.getSound(t === O.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? O.DEFAULT_SOUND_GUILD_ID : t, s)
   })
 }
 
 function M() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(A.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), m = x(r), g = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, L = g && null != r && null == m;
+  } = (0, o.default)(), [t, s] = n.useState(O.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), m = x(r), g = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, L = g && null != r && null == m;
   n.useEffect(() => {
     L && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
@@ -51,7 +51,7 @@ function M() {
   }, [L, e]), n.useEffect(() => {
     (0, c.maybeFetchSoundboardSounds)()
   }, []);
-  let v = n.useCallback((e, t) => {
+  let P = n.useCallback((e, t) => {
     let {
       inDropdown: s
     } = t;
@@ -63,34 +63,34 @@ function M() {
     className: p.container,
     tag: i.FormTitleTags.H1,
     titleClassName: R.__invalid_marginBottom16,
-    title: O.default.Messages.SOUNDBOARD,
+    title: A.default.Messages.SOUNDBOARD,
     children: [(0, a.jsx)(h.default, {}), (0, a.jsx)(i.FormDivider, {
       className: p.callSoundsDivider
     }), (0, a.jsx)(i.Heading, {
       variant: "text-md/medium",
       color: "header-primary",
       className: p.callSoundsTitle,
-      children: O.default.Messages.CALL_SOUNDS_SETTINGS
+      children: A.default.Messages.CALL_SOUNDS_SETTINGS
     }), (0, a.jsx)(i.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
-      children: O.default.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
+      children: A.default.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
         helpdeskArticle: N.default.getArticleURL(C.HelpdeskArticles.SOUNDBOARD)
       })
     }), (0, a.jsx)(d.default, {
       guildId: t,
       className: p.guildSelector,
       globalOption: {
-        label: O.default.Messages.CALL_SOUNDS_SETTINGS_GLOBAL_GUILD_SEARCH,
-        value: A.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID
+        label: A.default.Messages.CALL_SOUNDS_SETTINGS_GLOBAL_GUILD_SEARCH,
+        value: O.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID
       },
-      onChange: e => s(null == e ? A.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : e.id),
-      renderOptionSuffix: v,
+      onChange: e => s(null == e ? O.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : e.id),
+      renderOptionSuffix: P,
       hideDivider: !0
     }), (0, a.jsxs)(u.default, {
       className: R.marginTop20,
-      title: O.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
-        nitroWheelHook: () => (0, a.jsx)(I.default, {
+      title: A.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
+        nitroWheelHook: () => (0, a.jsx)(f.default, {
           className: p.nitroWheel
         })
       }),
@@ -101,10 +101,10 @@ function M() {
         onSelect: s => {
           null == s ? (0, E.removeCustomJoinSound)(t, e) : (0, E.updateCustomJoinSound)(t, s, e)
         }
-      }), L && (0, a.jsx)(f.default, {
+      }), L && (0, a.jsx)(I.default, {
         className: p.notice,
-        messageType: f.HelpMessageTypes.WARNING,
-        children: O.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
+        messageType: I.HelpMessageTypes.WARNING,
+        children: A.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
       })]
     })]
   })

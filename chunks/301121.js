@@ -15,42 +15,42 @@ var a, n, l = s("735250"),
   E = s("442837"),
   T = s("524437"),
   _ = s("481060"),
-  f = s("570140"),
-  I = s("668781"),
+  I = s("570140"),
+  f = s("668781"),
   m = s("409700"),
   N = s("809206"),
   g = s("230711"),
   h = s("241420"),
   C = s("651530"),
-  A = s("163268"),
-  O = s("294602"),
+  O = s("163268"),
+  A = s("294602"),
   p = s("778825"),
   R = s("856768"),
   x = s("592204"),
   M = s("712950"),
   D = s("610697"),
   L = s("880257"),
-  v = s("16703"),
-  P = s("236289"),
+  P = s("16703"),
+  v = s("236289"),
   b = s("518560"),
   U = s("237292"),
   j = s("604849"),
   F = s("278828"),
   G = s("921801"),
-  y = s("480294"),
-  B = s("430824"),
-  k = s("663389"),
+  B = s("480294"),
+  y = s("430824"),
+  V = s("663389"),
   H = s("594174"),
-  w = s("285952"),
-  V = s("153124"),
+  k = s("285952"),
+  w = s("153124"),
   Y = s("626135"),
   W = s("63063"),
   K = s("78451"),
   z = s("709054"),
   Q = s("88658"),
   q = s("263399"),
-  Z = s("695346"),
-  X = s("3957"),
+  X = s("695346"),
+  Z = s("3957"),
   J = s("279743"),
   $ = s("973005"),
   ee = s("703115"),
@@ -73,7 +73,7 @@ function eo(e, t, s) {
 
 function ed() {
   let e = (0, E.useStateFromStores)([p.default], () => p.default.getGuild()),
-    t = (0, v.default)(),
+    t = (0, P.default)(),
     s = null != e ? e : t;
   i.useEffect(() => {
     Y.default.track(ea.AnalyticEvents.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
@@ -81,7 +81,7 @@ function ed() {
     })
   }, []);
   let a = i.useCallback(e => {
-    null != e && f.default.dispatch({
+    null != e && I.default.dispatch({
       type: "GUILD_IDENTITY_SETTINGS_SET_GUILD",
       guild: e
     }), Y.default.track(ea.AnalyticEvents.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
@@ -110,7 +110,7 @@ function eu() {
       location: "user_settings_web"
     }),
     a = (0, j.useSafetyAlertsSettingOrDefault)(),
-    n = (0, X.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
+    n = (0, Z.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return t || !s ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(_.FormDivider, {
       className: er.marginBottom20
@@ -151,9 +151,9 @@ function ec(e, t) {
 
 function eS() {
   let e = (0, D.default)(),
-    t = Z.DefaultGuildsRestricted.useSetting(),
-    s = Z.MessageRequestRestrictedDefault.useSetting(),
-    a = (0, X.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
+    t = X.DefaultGuildsRestricted.useSetting(),
+    s = X.MessageRequestRestrictedDefault.useSetting(),
+    a = (0, Z.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return e ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: ei.settingsBackgroundFlashElement,
@@ -174,10 +174,10 @@ function eS() {
               cancelText: el.default.Messages.YES_TEXT,
               confirmButtonColor: _.Button.Colors.BRAND,
               onConfirm: () => {
-                Z.MessageRequestRestrictedDefault.updateSetting(e), ec(e, !1)
+                X.MessageRequestRestrictedDefault.updateSetting(e), ec(e, !1)
               },
               onCancel: () => {
-                Z.MessageRequestRestrictedDefault.updateSetting(e), Z.MessageRequestRestrictedGuildIds.updateSetting(e ? z.default.keys(B.default.getGuilds()) : []), ec(e, !0)
+                X.MessageRequestRestrictedDefault.updateSetting(e), X.MessageRequestRestrictedGuildIds.updateSetting(e ? z.default.keys(y.default.getGuilds()) : []), ec(e, !0)
               }
             })
           },
@@ -201,8 +201,8 @@ function eE() {
       explicitContentGuilds: s,
       explicitContentFriendDm: a,
       explicitContentNonFriendDm: n
-    } = (0, O.useExplicitContentSettingOrDefault)(),
-    i = (0, X.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
+    } = (0, A.useExplicitContentSettingOrDefault)(),
+    i = (0, Z.useScrollToSetting)(et.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
     r = [{
       value: T.ExplicitContentRedaction.BLUR,
       label: el.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
@@ -240,7 +240,7 @@ function eE() {
         children: (0, l.jsx)(_.SingleSelect, {
           options: r,
           value: a,
-          onChange: e => (0, A.updateExplicitContentSetting)({
+          onChange: e => (0, O.updateExplicitContentSetting)({
             explicitContentFriendDm: e
           })
         })
@@ -251,7 +251,7 @@ function eE() {
         children: (0, l.jsx)(_.SingleSelect, {
           options: r,
           value: n,
-          onChange: e => (0, A.updateExplicitContentSetting)({
+          onChange: e => (0, O.updateExplicitContentSetting)({
             explicitContentNonFriendDm: e
           })
         })
@@ -262,7 +262,7 @@ function eE() {
         children: (0, l.jsx)(_.SingleSelect, {
           options: o,
           value: s,
-          onChange: e => (0, A.updateExplicitContentSetting)({
+          onChange: e => (0, O.updateExplicitContentSetting)({
             explicitContentGuilds: e
           })
         })
@@ -371,7 +371,7 @@ function e_(e) {
   }))
 }
 
-function ef(e) {
+function eI(e) {
   let {
     message: t
   } = e;
@@ -381,7 +381,7 @@ function ef(e) {
     body: t
   })
 }
-class eI extends i.PureComponent {
+class ef extends i.PureComponent {
   componentDidMount() {
     (0, m.fetchConsents)(), (0, N.getHarvestStatus)().then(e => {
       let t = {
@@ -408,10 +408,10 @@ class eI extends i.PureComponent {
       cancelText: el.default.Messages.YES_TEXT,
       confirmButtonColor: _.Button.Colors.BRAND,
       onConfirm: () => {
-        Z.DefaultGuildsRestricted.updateSetting(e), this.trackDefaultDmsUpdated(e, !1)
+        X.DefaultGuildsRestricted.updateSetting(e), this.trackDefaultDmsUpdated(e, !1)
       },
       onCancel: () => {
-        Z.DefaultGuildsRestricted.updateSetting(e), Z.RestrictedGuildIds.updateSetting(e ? z.default.keys(B.default.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0)
+        X.DefaultGuildsRestricted.updateSetting(e), X.RestrictedGuildIds.updateSetting(e ? z.default.keys(y.default.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0)
       }
     })
   }
@@ -429,10 +429,10 @@ class eI extends i.PureComponent {
       cancelText: el.default.Messages.YES_TEXT,
       confirmButtonColor: _.Button.Colors.BRAND,
       onConfirm: () => {
-        Z.MessageRequestRestrictedDefault.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1)
+        X.MessageRequestRestrictedDefault.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1)
       },
       onCancel: () => {
-        Z.MessageRequestRestrictedDefault.updateSetting(e), Z.MessageRequestRestrictedGuildIds.updateSetting(e ? z.default.keys(B.default.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0)
+        X.MessageRequestRestrictedDefault.updateSetting(e), X.MessageRequestRestrictedGuildIds.updateSetting(e ? z.default.keys(y.default.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0)
       }
     })
   }
@@ -461,9 +461,9 @@ class eI extends i.PureComponent {
             let {
               value: s
             } = t;
-            this.props.dmSpamFilter === T.DmSpamFilterV2.DEFAULT_UNSET ? Z.DmSpamFilterV2.updateSetting(e).then(() => {
-              Z.ExplicitContentFilter.updateSetting(s)
-            }) : Z.ExplicitContentFilter.updateSetting(s)
+            this.props.dmSpamFilter === T.DmSpamFilterV2.DEFAULT_UNSET ? X.DmSpamFilterV2.updateSetting(e).then(() => {
+              X.ExplicitContentFilter.updateSetting(s)
+            }) : X.ExplicitContentFilter.updateSetting(s)
           }
         })]
       })
@@ -498,7 +498,7 @@ class eI extends i.PureComponent {
                 let {
                   value: t
                 } = e;
-                return Z.DmSpamFilterV2.updateSetting(t)
+                return X.DmSpamFilterV2.updateSetting(t)
               }
             })]
           })
@@ -526,7 +526,7 @@ class eI extends i.PureComponent {
               let {
                 value: t
               } = e;
-              return Z.DmSpamFilterV2.updateSetting(t)
+              return X.DmSpamFilterV2.updateSetting(t)
             }
           })]
         })]
@@ -557,7 +557,7 @@ class eI extends i.PureComponent {
           children: (0, l.jsx)(_.FormSwitch, {
             value: e,
             note: el.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_DESCRIPTION,
-            onChange: e => Z.KeywordFilterSettings.updateSetting({
+            onChange: e => X.KeywordFilterSettings.updateSetting({
               profanity: e,
               slurs: t,
               sexualContent: s
@@ -569,7 +569,7 @@ class eI extends i.PureComponent {
           children: (0, l.jsx)(_.FormSwitch, {
             value: t,
             note: el.default.Messages.USER_KEYWORD_FILTERS_SLURS_DESCRIPTION,
-            onChange: t => Z.KeywordFilterSettings.updateSetting({
+            onChange: t => X.KeywordFilterSettings.updateSetting({
               profanity: e,
               slurs: t,
               sexualContent: s
@@ -581,7 +581,7 @@ class eI extends i.PureComponent {
           children: (0, l.jsx)(_.FormSwitch, {
             value: s,
             note: el.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_DESCRIPTION,
-            onChange: s => Z.KeywordFilterSettings.updateSetting({
+            onChange: s => X.KeywordFilterSettings.updateSetting({
               profanity: e,
               slurs: t,
               sexualContent: s
@@ -615,13 +615,13 @@ class eI extends i.PureComponent {
         value: !!n && e,
         note: el.default.Messages.NSFW_GUILDS_TOGGLE_CAPTION,
         disabled: !n,
-        onChange: Z.ViewNsfwGuilds.updateSetting,
+        onChange: X.ViewNsfwGuilds.updateSetting,
         children: el.default.Messages.NSFW_GUILDS_TOGGLE_HEADER
       }), (0, l.jsx)(eS, {}), (0, l.jsx)(_.FormSwitch, {
         value: !!n && s,
         note: el.default.Messages.NSFW_DM_COMMANDS_CAPTION,
         disabled: !n,
-        onChange: Z.ViewNsfwCommands.updateSetting,
+        onChange: X.ViewNsfwCommands.updateSetting,
         children: el.default.Messages.NSFW_DM_COMMANDS_HEADER
       })]
     })
@@ -711,7 +711,7 @@ class eI extends i.PureComponent {
           date: S()(a.created_at).add(ea.REQUEST_DATA_LIMIT_DAYS, "days").format("MMMM Do YYYY")
         })
       })
-    }), r = null), null != r && (r = (0, l.jsx)(w.default, {
+    }), r = null), null != r && (r = (0, l.jsx)(k.default, {
       children: r
     })), (0, l.jsxs)(i.Fragment, {
       children: [(0, l.jsx)(_.FormDivider, {
@@ -768,7 +768,7 @@ class eI extends i.PureComponent {
               let {
                 value: t
               } = e;
-              return Z.NonSpamRetrainingOptIn.updateSetting(Q.NonSpamRetrainingOptInOptionsToValue[t])
+              return X.NonSpamRetrainingOptIn.updateSetting(Q.NonSpamRetrainingOptInOptionsToValue[t])
             }
           })]
         })]
@@ -843,7 +843,7 @@ class eI extends i.PureComponent {
         })]
       }), (0, l.jsx)(_.TabBar.Panel, {
         id: n,
-        "aria-labelledby": (0, V.uid)(),
+        "aria-labelledby": (0, w.uid)(),
         className: o()(ei.contentPanel, {
           [ei.contentPanelNagbar]: r
         }),
@@ -863,25 +863,25 @@ class eI extends i.PureComponent {
         defaultGuildsRestricted: !e
       }, () => this.showGuildRestrictionModal(!e))
     }), eo(this, "handleChangeDropsOptedOut", () => {
-      Z.DropsOptedOut.updateSetting(!this.props.dropsOptedOut)
+      X.DropsOptedOut.updateSetting(!this.props.dropsOptedOut)
     }), eo(this, "handleUsageStatisticsChange", () => {
       this.props.usageStatistics ? e_({
         header: el.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_TITLE,
         body: el.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
         confirmText: el.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
         cancelText: el.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-        onConfirm: () => (0, m.setConsents)([], [ea.Consents.USAGE_STATISTICS]).catch(ef)
-      }) : (0, m.setConsents)([ea.Consents.USAGE_STATISTICS], []).catch(ef)
+        onConfirm: () => (0, m.setConsents)([], [ea.Consents.USAGE_STATISTICS]).catch(eI)
+      }) : (0, m.setConsents)([ea.Consents.USAGE_STATISTICS], []).catch(eI)
     }), eo(this, "handlePersonalizationChange", () => {
       this.props.personalization ? e_({
         header: el.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
         confirmText: el.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
         cancelText: el.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
         onConfirm: () => {
-          (0, m.setConsents)([], [ea.Consents.PERSONALIZATION]).catch(ef)
+          (0, m.setConsents)([], [ea.Consents.PERSONALIZATION]).catch(eI)
         },
         body: el.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
-      }) : (0, m.setConsents)([ea.Consents.PERSONALIZATION], []).catch(ef)
+      }) : (0, m.setConsents)([ea.Consents.PERSONALIZATION], []).catch(eI)
     }), eo(this, "handleDataDownloadRequest", () => {
       var e;
       e = {
@@ -899,13 +899,13 @@ class eI extends i.PureComponent {
             (0, N.requestHarvest)(e).then(e => {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
-              }), I.default.show({
+              }), f.default.show({
                 body: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS
-              })) : I.default.show({
+              })) : f.default.show({
                 title: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
                 body: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
               })
-            }, () => I.default.show({
+            }, () => f.default.show({
               title: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
               body: el.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
             })).finally(() => this.setState({
@@ -939,13 +939,13 @@ function em() {
       let e = H.default.getCurrentUser();
       return u()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
-    t = (0, E.useStateFromStoresObject)([y.default], () => ({
-      fetchedConsents: y.default.fetchedConsents,
-      usageStatistics: y.default.hasConsented(ea.Consents.USAGE_STATISTICS),
-      personalization: y.default.hasConsented(ea.Consents.PERSONALIZATION)
+    t = (0, E.useStateFromStoresObject)([B.default], () => ({
+      fetchedConsents: B.default.fetchedConsents,
+      usageStatistics: B.default.hasConsented(ea.Consents.USAGE_STATISTICS),
+      personalization: B.default.hasConsented(ea.Consents.PERSONALIZATION)
     })),
-    s = (0, E.useStateFromStores)([P.default], () => P.default.getFetchError()),
-    a = (0, E.useStateFromStores)([k.default], () => k.default.getSubsection()),
+    s = (0, E.useStateFromStores)([v.default], () => v.default.getFetchError()),
+    a = (0, E.useStateFromStores)([V.default], () => V.default.getSubsection()),
     n = (0, C.useIsEligibleForExplicitMediaRedaction)(),
     i = (0, x.useIsEligibleForKeywordFiltering)({
       location: "web_user_privacy_and_safety_settings"
@@ -955,17 +955,17 @@ function em() {
     d = (0, q.useServerPrivacySettingsInUserSettingsEnabled)({
       location: "user_settings_privacy_safety"
     });
-  return (0, l.jsx)(eI, {
+  return (0, l.jsx)(ef, {
     currentUser: e,
-    defaultGuildsRestricted: Z.DefaultGuildsRestricted.useSetting(),
-    nonSpamRetrainingOptIn: Z.NonSpamRetrainingOptIn.useSetting(),
-    viewNsfwGuilds: Z.ViewNsfwGuilds.useSetting(),
-    viewNsfwCommands: Z.ViewNsfwCommands.useSetting(),
-    explicitContentFilter: Z.ExplicitContentFilter.useSetting(),
+    defaultGuildsRestricted: X.DefaultGuildsRestricted.useSetting(),
+    nonSpamRetrainingOptIn: X.NonSpamRetrainingOptIn.useSetting(),
+    viewNsfwGuilds: X.ViewNsfwGuilds.useSetting(),
+    viewNsfwCommands: X.ViewNsfwCommands.useSetting(),
+    explicitContentFilter: X.ExplicitContentFilter.useSetting(),
     keywordFilter: r,
-    dmSpamFilter: Z.DmSpamFilterV2.useSetting(),
-    showCurrentGame: Z.ShowCurrentGame.useSetting(),
-    dropsOptedOut: Z.DropsOptedOut.useSetting(),
+    dmSpamFilter: X.DmSpamFilterV2.useSetting(),
+    showCurrentGame: X.ShowCurrentGame.useSetting(),
+    dropsOptedOut: X.DropsOptedOut.useSetting(),
     safetyHubFetchError: s,
     mediaRedactionIsEnabled: n,
     keywordFilteringEnabled: i,

@@ -13,15 +13,15 @@ var a = s("735250"),
   E = s("594174"),
   T = s("63063"),
   _ = s("843200"),
-  f = s("981631"),
-  I = s("689938"),
+  I = s("981631"),
+  f = s("689938"),
   m = s("459056");
 class N extends n.PureComponent {
   renderIntroHeader() {
     let {
       houseMembership: e
     } = this.props;
-    return null == e ? I.default.Messages.HYPESQUAD_HEADING : I.default.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER
+    return null == e ? f.default.Messages.HYPESQUAD_HEADING : f.default.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER
   }
   render() {
     let {
@@ -38,13 +38,13 @@ class N extends n.PureComponent {
           children: this.renderIntroHeader()
         }), (0, a.jsx)(o.Text, {
           variant: "text-lg/normal",
-          children: I.default.Messages.HYPESQUAD_SUBHEADING
+          children: f.default.Messages.HYPESQUAD_SUBHEADING
         })]
       }),
       children: [(0, a.jsx)(_.default, {
         className: m.verificationNotice,
-        unclaimedNotice: I.default.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
-        unverifiedNotice: I.default.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
+        unclaimedNotice: f.default.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
+        unverifiedNotice: f.default.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
       }), (0, a.jsx)(u.default, {
         houseMembership: e,
         isClaimed: t,
@@ -53,8 +53,8 @@ class N extends n.PureComponent {
         isHypeSquadOnlineMember: null != e
       }), (0, a.jsx)(o.Card, {
         className: m.attendeeCTA,
-        children: I.default.Messages.HYPESQUAD_ATTENDEE_CTA.format({
-          url: T.default.getArticleURL(f.HelpdeskArticles.PROFILE_BADGES)
+        children: f.default.Messages.HYPESQUAD_ATTENDEE_CTA.format({
+          url: T.default.getArticleURL(I.HelpdeskArticles.PROFILE_BADGES)
         })
       })]
     })

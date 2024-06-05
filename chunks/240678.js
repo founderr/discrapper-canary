@@ -1,74 +1,74 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
-    return N
+    return _
   }
 });
-var i = n("735250");
+var a = n("735250");
 n("470079");
-var a = n("374470"),
-  l = n("481060"),
+var i = n("374470"),
+  T = n("481060"),
   d = n("239091"),
   s = n("911969"),
-  u = n("299206"),
-  o = n("26737"),
-  r = n("905041"),
-  T = n("89013"),
-  I = n("570870"),
-  E = n("449751"),
-  c = n("601184"),
-  p = n("168405"),
-  S = n("689938");
+  I = n("299206"),
+  E = n("26737"),
+  o = n("905041"),
+  r = n("89013"),
+  l = n("570870"),
+  u = n("449751"),
+  p = n("601184"),
+  S = n("168405"),
+  N = n("689938");
 
-function N(e) {
-  var t;
-  let n, N, _, {
-      channel: f,
-      message: A,
-      target: O,
-      mediaItem: m,
+function _(t) {
+  var e;
+  let n, _, c, {
+      channel: O,
+      message: f,
+      target: A,
+      mediaItem: G,
       onSelect: h,
-      onHeightUpdate: G
-    } = e,
-    M = O;
-  if (null != m) N = n = m.url;
+      onHeightUpdate: m
+    } = t,
+    y = A;
+  if (null != G) _ = n = G.url;
   else
     for (;
-      (0, a.isElement)(M);)(0, a.isElement)(M, HTMLImageElement) && null != M.src && (N = M.src), (0, a.isElement)(M, HTMLAnchorElement) && null != M.href && (n = M.href, _ = M.textContent), M = M.parentNode;
-  let y = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString(),
-    R = (0, o.default)(y),
-    C = (0, T.default)(y),
-    P = (0, I.default)({
+      (0, i.isElement)(y);)(0, i.isElement)(y, HTMLImageElement) && null != y.src && (_ = y.src), (0, i.isElement)(y, HTMLAnchorElement) && null != y.href && (n = y.href, c = y.textContent), y = y.parentNode;
+  let R = null === (e = document.getSelection()) || void 0 === e ? void 0 : e.toString(),
+    C = (0, E.default)(R),
+    P = (0, r.default)(R),
+    M = (0, l.default)({
       commandType: s.ApplicationCommandType.MESSAGE,
-      commandTargetId: A.id,
-      channel: f,
+      commandTargetId: f.id,
+      channel: O,
       guildId: void 0,
-      onHeightUpdate: G
+      onHeightUpdate: m
     }),
-    g = (0, p.default)(A, f),
-    v = (0, E.default)(A, f),
-    b = (0, c.default)(A, f),
-    D = (0, r.default)(null != n ? n : N, _),
-    H = (0, u.default)({
-      id: A.id,
-      label: S.default.Messages.COPY_ID_MESSAGE,
-      shiftId: "".concat(A.channel_id, "-").concat(A.id)
+    H = (0, S.default)(f, O),
+    g = (0, u.default)(f, O),
+    D = (0, p.default)(f, O),
+    U = (0, o.default)(null != n ? n : _, c),
+    b = (0, I.default)({
+      id: f.id,
+      label: N.default.Messages.COPY_ID_MESSAGE,
+      shiftId: "".concat(f.channel_id, "-").concat(f.id)
     });
-  return (0, i.jsxs)(l.Menu, {
+  return (0, a.jsxs)(T.Menu, {
     navId: "message",
     onClose: d.closeContextMenu,
-    "aria-label": S.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
+    "aria-label": N.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     onSelect: h,
-    children: [(0, i.jsx)(l.MenuGroup, {
-      children: R
-    }), (0, i.jsx)(l.MenuGroup, {
+    children: [(0, a.jsx)(T.MenuGroup, {
       children: C
-    }), (0, i.jsxs)(l.MenuGroup, {
-      children: [P, g, v, b]
-    }), (0, i.jsx)(l.MenuGroup, {
-      children: D
-    }), (0, i.jsx)(l.MenuGroup, {
-      children: H
+    }), (0, a.jsx)(T.MenuGroup, {
+      children: P
+    }), (0, a.jsxs)(T.MenuGroup, {
+      children: [M, H, g, D]
+    }), (0, a.jsx)(T.MenuGroup, {
+      children: U
+    }), (0, a.jsx)(T.MenuGroup, {
+      children: b
     })]
   })
 }

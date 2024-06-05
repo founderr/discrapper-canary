@@ -31,11 +31,11 @@ function v(e) {
       onSelectParticipant: n,
       onContextMenuParticipant: s,
       onFullscreenParticipant: v,
-      participants: N,
-      filteredParticipants: x,
+      participants: x,
+      filteredParticipants: N,
       popoutWindow: M,
-      inCall: R,
-      channel: y,
+      inCall: y,
+      channel: R,
       selectedParticipant: L,
       showParticipants: O = !0,
       className: j,
@@ -53,20 +53,20 @@ function v(e) {
     [Y, z] = l.useState(!1),
     K = L.type === S.ParticipantTypes.ACTIVITY,
     Z = !K && null != L.streamId,
-    q = Z && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : I,
-    X = b <= 2 * A + 144,
-    Q = O && !X,
-    J = (0, o.default)(Q),
+    X = Z && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : I,
+    q = b <= 2 * A + 144,
+    J = O && !q,
+    Q = (0, o.default)(J),
     $ = U === g.ChannelLayouts.MINIMUM || U === g.ChannelLayouts.NORMAL,
-    ee = !X && (!$ || K),
+    ee = !q && (!$ || K),
     et = (0, h.default)(ee, 100),
     en = 0;
-  (K || Q) && (en += 72), K && !Q && (ee ? en += 48 : en += 8), Q && (en += .5 * A + 8);
+  (K || J) && (en += 72), K && !J && (ee ? en += 48 : en += 8), J && (en += .5 * A + 8);
   let ea = b - 2 * en,
-    el = ea * q,
-    es = Math.floor(Math.min(D, el) / q),
-    ei = b > D / q + 72 + A + 8;
-  t = Q || K ? Q ? -16 : -8 : 40 + Math.max(0, 72 - (b - es) / 2), l.useEffect(() => {
+    el = ea * X,
+    es = Math.floor(Math.min(D, el) / X),
+    ei = b > D / X + 72 + A + 8;
+  t = J || K ? J ? -16 : -8 : 40 + Math.max(0, 72 - (b - es) / 2), l.useEffect(() => {
     let e = setTimeout(() => {
       W(!1)
     }, 250);
@@ -75,8 +75,8 @@ function v(e) {
     }
   }, []);
   let er = (0, r.useSpring)({
-      value: Q ? 1 : 0,
-      delay: ei || !Q ? 0 : 100,
+      value: J ? 1 : 0,
+      delay: ei || !J ? 0 : 100,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -88,7 +88,7 @@ function v(e) {
       }
     }),
     eo = (0, r.useSpring)({
-      value: Q ? 1 : 0,
+      value: J ? 1 : 0,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -100,7 +100,7 @@ function v(e) {
         ...r.config.stiff,
         clamp: !0
       },
-      immediate: J === Q && eo.value.idle && !et
+      immediate: Q === J && eo.value.idle && !et
     }),
     ed = (0, r.useSpring)({
       value: t,
@@ -129,11 +129,11 @@ function v(e) {
     ef = l.useCallback(e => {
       G(e), W(!1)
     }, []),
-    eh = Q || P ? [] : (0, E.getPipParticipants)(N, L, H),
+    eh = J || P ? [] : (0, E.getPipParticipants)(x, L, H),
     {
       visibleParticipants: em,
       participantTileWidth: ep
-    } = (0, C.useVisibleParticipants)(D, x);
+    } = (0, C.useVisibleParticipants)(D, N);
   return (0, a.jsxs)("div", {
     className: i()(T.root, _.flexCenter, j),
     children: [(0, a.jsxs)("div", {
@@ -154,7 +154,7 @@ function v(e) {
           children: (0, a.jsx)("div", {
             className: i()(_.videoSizer),
             style: {
-              aspectRatio: q
+              aspectRatio: X
             },
             children: ec((e, t, l) => {
               let {
@@ -166,7 +166,7 @@ function v(e) {
                 children: (0, a.jsx)(m.default, {
                   focused: !0,
                   noBorder: el >= D || ea >= b,
-                  channel: y,
+                  channel: R,
                   className: _.focusedVideo,
                   videoComponent: k,
                   paused: P,
@@ -176,7 +176,7 @@ function v(e) {
                   onDoubleClick: v,
                   onContextMenu: s,
                   onVideoResize: ef,
-                  inCall: R,
+                  inCall: y,
                   inPopout: w
                 })
               }, i) : null
@@ -190,7 +190,7 @@ function v(e) {
             bottom: ed.value
           },
           children: (0, a.jsx)(u.default, {
-            channelId: y.id,
+            channelId: R.id,
             isParticipantsOpen: O,
             isVertical: !0
           })
@@ -203,14 +203,14 @@ function v(e) {
           visibility: er.value.to(e => 0 === e ? "hidden" : "visible")
         },
         children: (0, a.jsx)(C.default, {
-          channel: y,
+          channel: R,
           onClick: n,
           onContextMenu: s,
           onDoubleClick: v,
           participants: em,
           participantTileWidth: ep,
           selectedParticipantId: L.id,
-          inCall: R,
+          inCall: y,
           paused: P || Y || !O,
           popoutWindow: M
         })
@@ -219,7 +219,7 @@ function v(e) {
       onContextMenuParticipant: s,
       width: D,
       height: b,
-      channel: y,
+      channel: R,
       participants: eh
     }) : null]
   })

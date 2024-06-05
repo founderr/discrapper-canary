@@ -13,8 +13,8 @@ var s = n("442837"),
   f = n("709158"),
   E = n("683301"),
   h = n("150192"),
-  _ = n("889010"),
-  C = n("488905"),
+  C = n("889010"),
+  _ = n("488905"),
   m = n("347137"),
   S = n("731455"),
   p = n("689938");
@@ -34,7 +34,7 @@ let I = e => {
         return S.CategoryIcons.Discover
     }
   },
-  T = () => {
+  g = () => {
     let {
       currentCategoryId: e,
       isViewingSearchResults: t
@@ -44,23 +44,23 @@ let I = e => {
     })), n = (0, f.default)(r.default.QUEST_HOME_PAGE), o = (0, s.useStateFromStores)([h.default], () => h.default.getDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), m = null == o ? void 0 : o.map(e => ({
       ...e,
       icon: I(e.categoryId)
-    })), T = e => {
+    })), g = e => {
       (0, i.selectCategory)(e, !0), d.default.closeSidebar(), t && (0, i.clearSearch)()
     };
     return (0, a.jsxs)(l.Scroller, {
-      children: [(0, a.jsx)(C.DiscoverySidebarHeader, {
+      children: [(0, a.jsx)(_.DiscoverySidebarHeader, {
         text: p.default.Messages.DISCOVER
-      }), (0, a.jsx)(_.default, {
+      }), (0, a.jsx)(C.default, {
         categories: m,
-        handleCategorySelect: T,
+        handleCategorySelect: g,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), (0, a.jsx)(u.default, {
-        handleCategorySelect: T,
+        handleCategorySelect: g,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), n && (0, a.jsx)(c.default, {
-        onClick: () => T(S.CategoryId.Quests),
+        onClick: () => g(S.CategoryId.Quests),
         isSelected: e === S.CategoryId.Quests
       })]
     })
@@ -74,5 +74,5 @@ t.default = function() {
   }), t = e.length > 0, {
     clanDiscoveryEnabled: n
   } = (0, o.useClanPilotExperiment)("guild_discovery_sidebar");
-  return t || n ? (0, a.jsx)(m.default, {}) : (0, a.jsx)(T, {})
+  return t || n ? (0, a.jsx)(m.default, {}) : (0, a.jsx)(g, {})
 }

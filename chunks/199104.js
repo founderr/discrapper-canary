@@ -17,18 +17,18 @@ var s = n("442837"),
   f = n("480294"),
   E = n("153124"),
   h = n("791359"),
-  _ = n("981631"),
-  C = n("689938"),
+  C = n("981631"),
+  _ = n("689938"),
   m = n("995858");
 
 function S() {
   let {
     analyticsLocations: e
-  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(_.Consents.PERSONALIZATION)) ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], n = (0, E.useUID)();
+  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(C.Consents.PERSONALIZATION)) ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], n = (0, E.useUID)();
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
     value: e,
     children: (0, a.jsx)(r.default, {
-      section: _.AnalyticsSections.ACTIVE_NOW_COLUMN,
+      section: C.AnalyticsSections.ACTIVE_NOW_COLUMN,
       children: (0, a.jsx)("aside", {
         className: m.container,
         "aria-labelledby": n,
@@ -38,7 +38,7 @@ function S() {
             variant: "heading-lg/semibold",
             className: m.header,
             id: n,
-            children: C.default.Messages.GAME_FEED_CURRENT_HEADER_TITLE
+            children: _.default.Messages.GAME_FEED_CURRENT_HEADER_TITLE
           }), (0, a.jsx)(d.default, {
             contentTypes: t,
             children: e => {

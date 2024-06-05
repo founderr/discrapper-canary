@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return g
   }
 });
 var i = n("735250");
@@ -17,7 +17,7 @@ var a = n("120356"),
   f = n("779863"),
   h = n("13140"),
   p = n("981631"),
-  g = n("480004");
+  E = n("480004");
 let m = {
   [p.GlobalKeybindActions.TOGGLE_MUTE]: {
     legacy: {
@@ -31,7 +31,7 @@ let m = {
   }
 };
 
-function E(e) {
+function g(e) {
   let {
     value: t,
     action: n,
@@ -42,14 +42,14 @@ function E(e) {
     f = r ? m[n].new : m[n].legacy,
     p = t ? f.slash : f.default;
   return (0, i.jsxs)("div", {
-    className: g.keybindIndicator,
+    className: E.keybindIndicator,
     children: [(0, i.jsx)(p, {
-      className: g.keybindIcon,
+      className: E.keybindIcon,
       width: 16,
       height: 16
     }), (0, i.jsx)(d.Text, {
       variant: "text-xxs/semibold",
-      className: l()(g.keybindIndicatorText),
+      className: l()(E.keybindIndicatorText),
       children: c
     })]
   })

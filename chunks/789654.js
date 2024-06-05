@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return L
+    return O
   }
 }), r("47120"), r("724458"), r("757143"), r("390547"), r("653041");
 var a = r("735250"),
@@ -46,14 +46,14 @@ function T() {
     return e
   }, e
 }
-let C = {
+let N = {
     ...f.semanticColorTokens,
     ...p.componentColorTokens,
     ...m.gradients
   },
-  N = {
-    ...R(f.semanticColorTokens),
-    ...R(p.componentColorTokens)
+  C = {
+    ...P(f.semanticColorTokens),
+    ...P(p.componentColorTokens)
   },
   _ = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
@@ -70,12 +70,12 @@ function I(e) {
   return "name" in e
 }
 
-function R(e) {
+function P(e) {
   let t = {};
   return Object.keys(e).forEach(r => {
     let a = e[r];
     if ("name" in a) a = function e(t) {
-      let r = C[t.name];
+      let r = N[t.name];
       return "name" in r ? e(r) : r
     }(a);
     t[r] = {
@@ -87,7 +87,7 @@ function R(e) {
   }), t
 }
 
-function P(e, t) {
+function R(e, t) {
   let [r, a] = i.useState(() => {
     let r = h.Storage.get(e);
     return null != r ? r : t
@@ -97,13 +97,13 @@ function P(e, t) {
   }, [e, r]), [r, a]
 }
 
-function L() {
+function O() {
   let e = (0, b.useTheme)(),
     [{
       rawPalette: t,
       semanticTokens: r
     }, n, o, s, h, p] = function(e, t) {
-      let [r, a] = P("".concat(e, "-states"), [t]), [n, l] = P("".concat(e, "-index"), 0), o = r[n], c = i.useCallback(e => {
+      let [r, a] = R("".concat(e, "-states"), [t]), [n, l] = R("".concat(e, "-index"), 0), o = r[n], c = i.useCallback(e => {
         a([e, ...r].slice(0, 20)), l(0)
       }, [l, a, r]), s = i.useCallback(() => {
         l(Math.min(r.length - 1, n + 1))
@@ -113,16 +113,16 @@ function L() {
       return [o, c, s, d, u, n > 0]
     }("color-override-03-03-23", {
       rawPalette: g.rawPalette,
-      semanticTokens: N
+      semanticTokens: C
     }),
     [m, f] = i.useState(""),
-    [w, C] = i.useState({}),
+    [w, N] = i.useState({}),
     [E, I] = i.useState({}),
-    R = i.useMemo(() => Object.keys(t).reduce((e, t) => [...e, {
+    P = i.useMemo(() => Object.keys(t).reduce((e, t) => [...e, {
       value: t,
       label: t
     }], []), [t]),
-    L = i.useCallback((e, a, i, l) => {
+    O = i.useCallback((e, a, i, l) => {
       let o = d().cloneDeep(r);
       o[e][a] = {
         color: i,
@@ -132,7 +132,7 @@ function L() {
         semanticTokens: o
       })
     }, [r, t, n]),
-    O = i.useMemo(() => {
+    A = i.useMemo(() => {
       let a = Object.keys(r).map(t => {
           let {
             color: a,
@@ -159,7 +159,7 @@ function L() {
         });
       return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(w).filter(e => w[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(E).filter(e => E[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(i.join("\n"), "\n      }\n    ")
     }, [e, r, t, w, E]),
-    A = i.useCallback(e => {
+    L = i.useCallback(e => {
       let t = "",
         r = "",
         a = !1;
@@ -257,7 +257,7 @@ function L() {
         }), (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
           onClick: () => {
-            navigator.clipboard.writeText(A(r))
+            navigator.clipboard.writeText(L(r))
           },
           children: "Export"
         })]
@@ -272,7 +272,7 @@ function L() {
           onClick: () => {
             n({
               rawPalette: g.rawPalette,
-              semanticTokens: N
+              semanticTokens: C
             })
           },
           children: "Reset all"
@@ -302,9 +302,9 @@ function L() {
           margin: 8,
           alignItems: "center"
         },
-        children: Object.keys(N).filter(e => "" === m || e.toLowerCase().includes(m)).map(t => {
+        children: Object.keys(C).filter(e => "" === m || e.toLowerCase().includes(m)).map(t => {
           var n;
-          let l = N[t][e],
+          let l = C[t][e],
             o = null == r[t] ? {
               ...l
             } : r[t][e],
@@ -326,7 +326,7 @@ function L() {
               children: (0, a.jsx)(y.Checkbox, {
                 value: w[t],
                 onChange: () => {
-                  C(e => ({
+                  N(e => ({
                     ...e,
                     [t]: !e[t]
                   }))
@@ -336,9 +336,9 @@ function L() {
               children: t
             }), (0, a.jsx)(y.SearchableSelect, {
               value: o.color,
-              options: R,
+              options: P,
               onChange: r => {
-                L(t, e, r, o.opacity)
+                O(t, e, r, o.opacity)
               },
               renderOptionPrefix: t => null == t ? null : (0, a.jsx)("div", {
                 style: {
@@ -357,7 +357,7 @@ function L() {
               },
               value: null === (n = o.opacity) || void 0 === n ? void 0 : n.toString(),
               onChange: r => {
-                "" !== r && L(t, e, o.color, parseFloat(r))
+                "" !== r && O(t, e, o.color, parseFloat(r))
               }
             }), (0, a.jsx)(y.Clickable, {
               style: c ? {} : {
@@ -366,7 +366,7 @@ function L() {
               },
               onClick: () => {
                 var r;
-                c && L(t, e, l.color, null !== (r = l.opacity) && void 0 !== r ? r : 1)
+                c && O(t, e, l.color, null !== (r = l.opacity) && void 0 !== r ? r : 1)
               },
               children: (0, a.jsx)(k.default, {
                 width: 16,
@@ -379,7 +379,7 @@ function L() {
     }), (0, a.jsx)(u.Helmet, {
       children: (0, a.jsx)("style", {
         id: "devtools-color-overrides",
-        children: O
+        children: A
       })
     })]
   })

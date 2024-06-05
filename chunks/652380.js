@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("134483"),
   T = s("478977"),
   _ = s("456799"),
-  f = s("210851"),
-  I = s("602683"),
+  I = s("210851"),
+  f = s("602683"),
   m = s("916028"),
   N = s("15033"),
   g = s("899457"),
@@ -28,9 +28,9 @@ function C(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let A = ["svg", "png", "gif", "webp"],
-  O = [...A, "jpg", "jpeg"],
-  p = Array.from(new Set([...O, "gif", "mp4", "webm"]));
+let O = ["svg", "png", "gif", "webp"],
+  A = [...O, "jpg", "jpeg"],
+  p = Array.from(new Set([...A, "gif", "mp4", "webm"]));
 
 function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -105,7 +105,7 @@ let x = {
 
 function M() {
   var e, t, s;
-  let [i, C] = n.useState(x), [M, D] = n.useState(g.UserState.UNENROLLED), [L, v] = n.useState([]), [P, b] = n.useState(!1), [U, j] = n.useState(null);
+  let [i, C] = n.useState(x), [M, D] = n.useState(g.UserState.UNENROLLED), [L, P] = n.useState([]), [v, b] = n.useState(!1), [U, j] = n.useState(null);
   let F = (s = i.config, (0, l.match)(s).with({
     configVersion: 1
   }, e => ({
@@ -124,7 +124,7 @@ function M() {
   }).exhaustive());
   n.useEffect(() => {
     var e;
-    v((e = i.config, (0, l.match)(e).with({
+    P((e = i.config, (0, l.match)(e).with({
       configVersion: 1
     }, e => e.variants).with({
       configVersion: 2
@@ -159,7 +159,7 @@ function M() {
     }
   }
 
-  function y(e, t) {
+  function B(e, t) {
     if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
       var s, a;
       C({
@@ -187,7 +187,7 @@ function M() {
     }
   }
 
-  function B(e, t) {
+  function y(e, t) {
     if ("rewardName" === e || "rewardNameWithArticle" === e) {
       var s, a;
       C({
@@ -221,7 +221,7 @@ function M() {
     }
   }
 
-  function k(e, t) {
+  function V(e, t) {
     C({
       ...i,
       config: {
@@ -252,25 +252,25 @@ function M() {
       children: "Messages"
     }), (0, a.jsxs)("div", {
       className: h.fields,
-      children: [(0, a.jsx)(I.default, {
+      children: [(0, a.jsx)(f.default, {
         title: "Quest Name",
         assetKey: "questName",
-        onMessageChange: y,
+        onMessageChange: B,
         initialValue: i.config.messages.questName
-      }), (0, a.jsx)(I.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Game Title",
         assetKey: "gameTitle",
-        onMessageChange: y,
+        onMessageChange: B,
         initialValue: i.config.messages.gameTitle
-      }), (0, a.jsx)(I.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Reward Name",
         assetKey: "rewardName",
-        onMessageChange: B,
+        onMessageChange: y,
         initialValue: F.name
-      }), (0, a.jsx)(I.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Reward Name With Article",
         assetKey: "rewardNameWithArticle",
-        onMessageChange: B,
+        onMessageChange: y,
         initialValue: F.nameWithArticle
       })]
     }), (0, a.jsx)(r.Heading, {
@@ -279,25 +279,25 @@ function M() {
       children: "Assets"
     }), (0, a.jsxs)("div", {
       className: h.fields,
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(I.default, {
         title: "Game Tile Asset",
         assetKey: "gameTile",
         onFileChange: G,
-        filters: O,
+        filters: A,
         initialValue: i.config.assets.gameTile
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(I.default, {
         title: "Logotype",
         assetKey: "logotype",
         onFileChange: G,
-        filters: A,
+        filters: O,
         initialValue: i.config.assets.logotype
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(I.default, {
         title: "Quest Bar Hero Asset",
         assetKey: "questBarHero",
         onFileChange: G,
         filters: p,
         initialValue: i.config.assets.questBarHero
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(I.default, {
         title: "Reward Tile Asset",
         assetKey: "rewardTile",
         onFileChange: function(e, t) {
@@ -336,7 +336,7 @@ function M() {
         },
         filters: p,
         initialValue: F.rewardTile
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(I.default, {
         title: "Gift Inventory Hero",
         assetKey: "hero",
         onFileChange: G,
@@ -363,7 +363,7 @@ function M() {
                 ...e,
                 features: s
               })).exhaustive())
-            }), v(e)
+            }), P(e)
           },
           values: L
         })
@@ -382,12 +382,12 @@ function M() {
         children: [(0, a.jsx)(T.default, {
           title: "Primary",
           colorKey: "primary",
-          onChange: k,
+          onChange: V,
           value: i.config.colors.primary
         }), (0, a.jsx)(T.default, {
           title: "Secondary",
           colorKey: "secondary",
-          onChange: k,
+          onChange: V,
           value: i.config.colors.secondary
         })]
       }), (0, a.jsx)(g.default, {
@@ -511,7 +511,7 @@ function M() {
               children: (0, a.jsx)(E.default, {
                 channelId: "123",
                 previewQuest: i,
-                isParticipatingOverride: P
+                isParticipatingOverride: v
               })
             })
           })
@@ -520,7 +520,7 @@ function M() {
         className: h.channelCallParticipationToggle,
         children: (0, a.jsx)(r.FormItem, {
           children: (0, a.jsx)(r.FormSwitch, {
-            value: P,
+            value: v,
             onChange: function(e) {
               b(e)
             },

@@ -1,7 +1,7 @@
 "use strict";
-e.r(n), e.d(n, {
+n.r(e), n.d(e, {
   getCurrentHub: function() {
     return r.getCurrentHub
   }
 });
-var r = e("742031")
+var r = n("742031")

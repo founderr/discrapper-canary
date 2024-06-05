@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   UnreadsCrashed: function() {
-    return b
+    return L
   },
   default: function() {
     return R
@@ -23,14 +23,14 @@ var a = n("735250"),
   p = n("837062"),
   S = n("626135"),
   g = n("585483"),
-  N = n("143316"),
-  _ = n("240126"),
-  I = n("791914"),
-  T = n("147522"),
+  _ = n("143316"),
+  N = n("240126"),
+  T = n("791914"),
+  I = n("147522"),
   C = n("809780"),
   A = n("981631"),
   v = n("689938"),
-  x = n("953214");
+  M = n("953214");
 
 function R(e) {
   let {
@@ -39,14 +39,14 @@ function R(e) {
     showTutorial: s,
     setSeenTutorial: r,
     closePopout: R,
-    badgeState: b
-  } = e, O = l.useRef(null), [y, L] = (0, C.default)(O), {
-    loadState: j,
+    badgeState: L
+  } = e, O = l.useRef(null), [b, y] = (0, C.default)(O), {
+    loadState: F,
     channels: D
-  } = y, {
-    maybeLoadMore: F,
-    markAllRead: P
-  } = L;
+  } = b, {
+    maybeLoadMore: j,
+    markAllRead: U
+  } = y;
   (function(e, t, n) {
     l.useLayoutEffect(() => {
       var a;
@@ -70,7 +70,7 @@ function R(e) {
         to: r.offsetTop
       })
     })
-  })(O, y, L),
+  })(O, b, y),
   function(e, t) {
     l.useEffect(() => {
       let n = () => {
@@ -81,25 +81,25 @@ function R(e) {
         g.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
       }
     }, [t, e.channels])
-  }(y, L), l.useEffect(() => {
+  }(b, y), l.useEffect(() => {
     S.default.track(A.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
   }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", R), () => {
     h.default.unsubscribe("CONNECTION_OPEN", R)
   }), [R]);
-  let k = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
-    U = (0, m.default)("unreads", O);
+  let P = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
+    k = (0, m.default)("unreads", O);
   if (0 === D.length) {
     var w;
     return (0, a.jsxs)("div", {
-      className: x.container,
-      children: [(0, a.jsx)(I.default, {
+      className: M.container,
+      children: [(0, a.jsx)(T.default, {
         tab: c.InboxTab.UNREADS,
         setTab: t,
-        badgeState: b,
+        badgeState: L,
         closePopout: R
-      }), (0, a.jsx)(_.default, {
+      }), (0, a.jsx)(N.default, {
         Icon: p.default,
         header: v.default.Messages.UNREADS_EMPTY_STATE_HEADER,
         tip: (null === (w = o().os) || void 0 === w ? void 0 : w.family) === "OS X" ? v.default.Messages.UNREADS_EMPTY_STATE_TIP_MAC : v.default.Messages.UNREADS_EMPTY_STATE_TIP
@@ -107,19 +107,19 @@ function R(e) {
     })
   }
   return (0, a.jsxs)("div", {
-    className: i()(x.container, "group-spacing-".concat(k)),
+    className: i()(M.container, "group-spacing-".concat(P)),
     "aria-label": v.default.Messages.UNREADS_TAB_LABEL,
-    children: [(0, a.jsx)(I.default, {
+    children: [(0, a.jsx)(T.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
-      badgeState: b,
+      badgeState: L,
       closePopout: R,
-      children: (0, a.jsx)(N.default, {
+      children: (0, a.jsx)(_.default, {
         type: "top-header",
-        onClick: P
+        onClick: U
       })
     }), (0, a.jsx)(u.ListNavigatorProvider, {
-      navigator: U,
+      navigator: k,
       children: (0, a.jsx)(u.ListNavigatorContainer, {
         children: e => {
           let {
@@ -132,12 +132,12 @@ function R(e) {
               O.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...l,
-            onScroll: j === C.LoadState.Done ? void 0 : F,
-            className: x.scroller,
-            children: [s ? (0, a.jsx)(M, {
+            onScroll: F === C.LoadState.Done ? void 0 : j,
+            className: M.scroller,
+            children: [s ? (0, a.jsx)(x, {
               setSeenTutorial: r
-            }) : null, (0, T.default)(D, L, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
-              className: x.spinner
+            }) : null, (0, I.default)(D, y, n), F === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
+              className: M.spinner
             })]
           })
         }
@@ -146,21 +146,21 @@ function R(e) {
   })
 }
 
-function M(e) {
+function x(e) {
   let {
     setSeenTutorial: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: x.tutorial,
+    className: M.tutorial,
     children: [(0, a.jsx)("div", {
-      className: x.tutorialIcon,
+      className: M.tutorialIcon,
       children: (0, a.jsx)(p.default, {
         width: 24,
         height: 24
       })
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsx)(f.Heading, {
-        className: x.__invalid_tutorialHeader,
+        className: M.__invalid_tutorialHeader,
         variant: "heading-md/semibold",
         children: v.default.Messages.UNREADS_TUTORIAL_HEADER
       }), (0, a.jsx)(f.Text, {
@@ -168,7 +168,7 @@ function M(e) {
         variant: "text-sm/normal",
         children: v.default.Messages.UNREADS_TUTORIAL_BODY
       }), (0, a.jsx)(f.Button, {
-        className: x.tutorialButton,
+        className: M.tutorialButton,
         onClick: t,
         size: f.Button.Sizes.SMALL,
         children: v.default.Messages.TUTORIAL_CLOSE
@@ -177,20 +177,20 @@ function M(e) {
   })
 }
 
-function b(e) {
+function L(e) {
   let {
     setTab: t,
     badgeState: n,
     closePopout: l
   } = e;
   return (0, a.jsxs)("div", {
-    className: x.container,
-    children: [(0, a.jsx)(I.default, {
+    className: M.container,
+    children: [(0, a.jsx)(T.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: n,
       closePopout: l
-    }), (0, a.jsx)(_.default, {
+    }), (0, a.jsx)(N.default, {
       Icon: p.default,
       disableStars: !0,
       header: v.default.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,

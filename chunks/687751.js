@@ -13,9 +13,9 @@ var s = n("481060"),
   f = n("920644"),
   E = n("208381"),
   h = n("723359"),
-  _ = n("981631");
+  C = n("981631");
 
-function C(e, t) {
+function _(e, t) {
   var n;
   if (null == e) return;
   let a = d.default.getCurrentUser();
@@ -33,11 +33,11 @@ class m extends i.default {
       guildId: t,
       channelId: n
     } = e;
-    C(t, n)
+    _(t, n)
   }
   handleConnectionOpen() {
     let e = u.default.getGuildId();
-    C(e, o.default.getChannelId())
+    _(e, o.default.getChannelId())
   }
   handleAgeGateModalOpen(e) {
     let {
@@ -53,7 +53,7 @@ class m extends i.default {
       })
     }, {
       modalKey: h.EXISTING_USER_AGE_GATE_MODAL_KEY,
-      onCloseRequest: _.NOOP
+      onCloseRequest: C.NOOP
     })
   }
   handleAgeGateSuccess() {

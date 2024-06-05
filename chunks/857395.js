@@ -1,47 +1,47 @@
 "use strict";
-a.r(l), a.d(l, {
+n.r(t), n.d(t, {
   default: function() {
-    return r
+    return o
   }
 });
-var s = a("735250"),
-  t = a("470079"),
-  i = a("442837"),
-  n = a("481060"),
-  d = a("249842"),
-  u = a("838367"),
-  c = a("83474");
+var l = n("735250"),
+  a = n("470079"),
+  s = n("442837"),
+  i = n("481060"),
+  d = n("249842"),
+  u = n("838367"),
+  r = n("83474");
 
-function r(e) {
+function o(e) {
   let {
-    guildId: l,
-    channelId: a,
-    messageId: r,
-    ...o
+    guildId: t,
+    channelId: n,
+    messageId: o,
+    ...c
   } = e, {
     unavailable: h,
-    guild: m
-  } = (0, i.useStateFromStoresObject)([u.default], () => ({
-    guild: u.default.getGuild(l),
-    unavailable: u.default.hasFetchFailed(l)
-  }), [l]), f = null != m, g = t.useCallback(async () => {
+    guild: f
+  } = (0, s.useStateFromStoresObject)([u.default], () => ({
+    guild: u.default.getGuild(t),
+    unavailable: u.default.hasFetchFailed(t)
+  }), [t]), g = null != f, m = a.useCallback(async () => {
     try {
-      !f && await (0, d.fetchGuildForPopout)(l)
+      !g && await (0, d.fetchGuildForPopout)(t)
     } catch {}
-  }, [f, l]);
-  return h ? (0, s.jsx)(n.Popout, {
+  }, [g, t]);
+  return h ? (0, l.jsx)(i.Popout, {
     position: "right",
-    renderPopout: e => (0, s.jsx)(c.GuildUnavilableDialog, {}),
-    ...o
-  }) : (0, s.jsx)(n.Popout, {
+    renderPopout: e => (0, l.jsx)(r.GuildUnavilableDialog, {}),
+    ...c
+  }) : (0, l.jsx)(i.Popout, {
     position: "right",
-    preload: g,
-    renderPopout: e => null == m ? (0, s.jsx)(s.Fragment, {}) : (0, s.jsx)(c.GuildDialog, {
+    preload: m,
+    renderPopout: e => null == f ? (0, l.jsx)(l.Fragment, {}) : (0, l.jsx)(r.GuildDialog, {
       ...e,
-      guild: m,
-      channelId: a,
-      messageId: r
+      guild: f,
+      channelId: n,
+      messageId: o
     }),
-    ...o
+    ...c
   })
 }

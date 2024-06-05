@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("131951"),
   T = s("594174"),
   _ = s("981631"),
-  f = s("689938"),
-  I = s("688725");
+  I = s("689938"),
+  f = s("688725");
 let m = {
   width: 387,
   height: 218
@@ -28,20 +28,20 @@ function N(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, N = E.default.getCameraComponent(), [g, h] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), C = n.useRef(!1), A = n.useRef(g), O = (0, o.useAnalyticsContext)(), p = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, N = E.default.getCameraComponent(), [g, h] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), C = n.useRef(!1), O = n.useRef(g), A = (0, o.useAnalyticsContext)(), p = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
-    C.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(A.current))
+    C.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(O.current))
   }, []), (0, a.jsx)(S.default, {
     selectedBackgroundOption: g,
     onSelectBackgroundOption: e => {
-      C.current = !0, A.current = e, h(e), (0, c.applyBackgroundOptionLive)(e, {
-        location: O.location
+      C.current = !0, O.current = e, h(e), (0, c.applyBackgroundOptionLive)(e, {
+        location: A.location
       }).catch(_.NOOP)
     },
     renderCamera: e => t ? (0, a.jsx)("div", {
-      className: I.cameraWrapper,
+      className: f.cameraWrapper,
       children: (0, a.jsxs)("div", {
-        className: I.camera,
+        className: f.camera,
         children: [(0, a.jsx)(N, {
           deviceId: e,
           width: m.width,
@@ -50,16 +50,16 @@ function N(e) {
         }), (0, a.jsx)(S.FilterLoadingIndicator, {})]
       })
     }) : (0, a.jsxs)("div", {
-      className: I.cameraWrapper,
+      className: f.cameraWrapper,
       children: [(0, a.jsx)("div", {
-        className: I.previewImage
+        className: f.previewImage
       }), (0, a.jsx)(i.Tooltip, {
-        text: p ? null : f.default.Messages.CAMERA_UNAVAILABLE,
+        text: p ? null : I.default.Messages.CAMERA_UNAVAILABLE,
         children: e => (0, a.jsx)(i.Button, {
           ...e,
           onClick: s,
           disabled: !p,
-          children: f.default.Messages.TEST_VIDEO
+          children: I.default.Messages.TEST_VIDEO
         })
       })]
     })

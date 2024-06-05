@@ -1,12 +1,12 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(s), i.d(s, {
   default: function() {
-    return a
+    return E
   }
 });
-var E = s("442837"),
-  _ = s("592125");
+var n = i("442837"),
+  t = i("592125");
 
-function a(e) {
-  return (0, E.useStateFromStoresArray)([_.default], () => e.filter(e => _.default.hasChannel(e.ref_id)), [e])
+function E(e) {
+  return (0, n.useStateFromStoresArray)([t.default], () => e.filter(e => t.default.hasChannel(e.ref_id)), [e])
 }

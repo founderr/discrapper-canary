@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return P
   }
 });
 var a = s("735250"),
@@ -17,15 +17,15 @@ var a = s("735250"),
   E = s("706454"),
   T = s("494620"),
   _ = s("131951"),
-  f = s("556296"),
-  I = s("924557"),
+  I = s("556296"),
+  f = s("924557"),
   m = s("435064"),
   N = s("894694"),
   g = s("779618"),
   h = s("39604"),
   C = s("442334"),
-  A = s("356659"),
-  O = s("981631"),
+  O = s("356659"),
+  A = s("981631"),
   p = s("37113"),
   R = s("526761"),
   x = s("689938"),
@@ -33,17 +33,17 @@ var a = s("735250"),
   D = s("151501"),
   L = s("611273");
 
-function v() {
+function P() {
   let e = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareH264()),
     {
       clipsEnabled: t,
       remindersEnabled: s,
       decoupledClipsEnabled: l,
-      clipsLength: v,
-      clipsQuality: P
+      clipsLength: P,
+      clipsQuality: v
     } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getSettings()),
     b = (0, r.useStateFromStores)([m.default], () => m.default.getHardwareClassification()),
-    U = (0, r.useStateFromStores)([f.default], () => f.default.getKeybindForAction(O.GlobalKeybindActions.SAVE_CLIP, !0)),
+    U = (0, r.useStateFromStores)([I.default], () => I.default.getKeybindForAction(A.GlobalKeybindActions.SAVE_CLIP, !0)),
     {
       enableDecoupledGameClipping: j
     } = S.default.useExperiment({
@@ -54,30 +54,30 @@ function v() {
     F = (0, g.default)(_.default),
     {
       showClipsHeaderEntrypoint: G
-    } = I.ClipsExperiment.useExperiment({
+    } = f.ClipsExperiment.useExperiment({
       location: "clips_recording_settings"
     }, {
       autoTrackExposure: !1
     });
   i()(null != U, "Save clip keybind unset");
-  let y = (0, r.useStateFromStores)([E.default], () => E.default.locale),
-    B = n.useMemo(() => [{
-      value: A.ClipsLengthSettings.SECONDS_30,
+  let B = (0, r.useStateFromStores)([E.default], () => E.default.locale),
+    y = n.useMemo(() => [{
+      value: O.ClipsLengthSettings.SECONDS_30,
       label: x.default.Messages.CLIPS_LENGTH_SECONDS.format({
         count: 30
       })
     }, {
-      value: A.ClipsLengthSettings.MINUTES_1,
+      value: O.ClipsLengthSettings.MINUTES_1,
       label: x.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 1
       })
     }, {
-      value: A.ClipsLengthSettings.MINUTES_2,
+      value: O.ClipsLengthSettings.MINUTES_2,
       label: x.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 2
       })
-    }], [y]),
-    k = n.useMemo(() => [{
+    }], [B]),
+    V = n.useMemo(() => [{
       value: p.ApplicationStreamResolutions.RESOLUTION_480,
       label: x.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
         resolution: p.ApplicationStreamResolutions.RESOLUTION_480
@@ -100,7 +100,7 @@ function v() {
     }, {
       value: p.ApplicationStreamResolutions.RESOLUTION_SOURCE,
       label: x.default.Messages.SCREENSHARE_SOURCE
-    }], [y]),
+    }], [B]),
     H = n.useMemo(() => [{
       value: p.ApplicationStreamFPS.FPS_15,
       label: x.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
@@ -116,8 +116,8 @@ function v() {
       label: x.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: p.ApplicationStreamFPS.FPS_60
       })
-    }], [y]),
-    w = n.useCallback(e => {
+    }], [B]),
+    k = n.useCallback(e => {
       d.default.setKeybind({
         ...U,
         shortcut: e
@@ -130,7 +130,7 @@ function v() {
         look: T.InfoBoxLooks.WARNING,
         className: D.formItem,
         children: x.default.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
-          onClick: () => u.default.open(O.UserSettingsSections.VOICE, null, {
+          onClick: () => u.default.open(A.UserSettingsSections.VOICE, null, {
             scrollPosition: R.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
@@ -189,27 +189,27 @@ function v() {
         select: h.updateClipsLength,
         title: x.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: x.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
-        value: v,
-        options: B
+        value: P,
+        options: y
       }), (0, a.jsx)(C.SelectItem, {
         className: D.formItem,
         select: e => h.updateClipsQuality({
           resolution: e,
-          frameRate: P.frameRate
+          frameRate: v.frameRate
         }),
         title: x.default.Messages.CLIPS_SETTINGS_RESOLUTION,
         note: x.default.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
-        value: P.resolution,
-        options: k
+        value: v.resolution,
+        options: V
       }), (0, a.jsx)(C.SelectItem, {
         className: D.formItem,
         select: e => h.updateClipsQuality({
-          resolution: P.resolution,
+          resolution: v.resolution,
           frameRate: e
         }),
         title: x.default.Messages.CLIPS_SETTINGS_FRAMERATE,
         note: x.default.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
-        value: P.frameRate,
+        value: v.frameRate,
         options: H
       }), (0, a.jsx)(C.InputItem, {
         className: D.formItem,
@@ -219,7 +219,7 @@ function v() {
           className: M.keyRecorder,
           children: (0, a.jsx)(c.default, {
             defaultValue: U.shortcut,
-            onChange: w
+            onChange: k
           })
         })
       })]

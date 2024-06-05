@@ -12,7 +12,7 @@ var a = n("392711"),
   f = n("452426"),
   E = n("186901"),
   h = n("981631");
-let _ = ["349134787773988865"];
+let C = ["349134787773988865"];
 t.default = {
   [h.RPCCommands.SET_ACTIVITY]: {
     scope: {
@@ -60,7 +60,7 @@ t.default = {
           pid: l,
           activity: f
         },
-        isSocketConnected: C
+        isSocketConnected: _
       } = e;
       if (![E.TransportTypes.IPC, E.TransportTypes.WEBSOCKET, E.TransportTypes.POST_MESSAGE].includes(a.transport)) throw new d.default({
         errorCode: h.RPCErrors.INVALID_COMMAND
@@ -81,14 +81,14 @@ t.default = {
       let {
         assets: p,
         party: I,
-        secrets: T,
-        timestamps: g,
+        secrets: g,
+        timestamps: T,
         buttons: A,
         type: N
       } = f;
-      if ((null == N || N !== h.ActivityTypes.PLAYING && !m) && (f.type = h.ActivityTypes.PLAYING), null != T) {
-        let e = s().values(T).filter(e => !!e);
-        if (null != I && s().intersection(e, [I.id]).length > 0 && !_.includes(a.application.id)) throw new d.default({
+      if ((null == N || N !== h.ActivityTypes.PLAYING && !m) && (f.type = h.ActivityTypes.PLAYING), null != g) {
+        let e = s().values(g).filter(e => !!e);
+        if (null != I && s().intersection(e, [I.id]).length > 0 && !C.includes(a.application.id)) throw new d.default({
           errorCode: h.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s().uniq(e).length < e.length) throw new d.default({
@@ -100,8 +100,8 @@ t.default = {
       }
       if (null != A && (f.metadata = {
           button_urls: A.map(e => e.url)
-        }, f.buttons = A.map(e => e.label)), null != g)
-        for (let e of Object.keys(g)) Date.now().toString().length - g[e].toString().length > 2 && (g[e] = Math.floor(g[e] * u.default.Millis.SECOND));
+        }, f.buttons = A.map(e => e.label)), null != T)
+        for (let e of Object.keys(T)) Date.now().toString().length - T[e].toString().length > 2 && (T[e] = Math.floor(T[e] * u.default.Millis.SECOND));
       if (null == p) n = Promise.resolve([]);
       else {
         if (null == a.application || null == a.application.id) throw Error();
@@ -110,7 +110,7 @@ t.default = {
       return n.then(e => {
         var t, n;
         let [s, o] = e;
-        if (null != p && (null != s ? p.large_image = s : delete p.large_image, null != o ? p.small_image = o : delete p.small_image), !C()) return;
+        if (null != p && (null != s ? p.large_image = s : delete p.large_image, null != o ? p.small_image = o : delete p.small_image), !_()) return;
         i.default.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: a.id,

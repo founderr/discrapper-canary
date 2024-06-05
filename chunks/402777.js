@@ -31,7 +31,7 @@ function A(e) {
     channel: n
   } = e, {
     analyticsLocations: A
-  } = (0, u.default)(o.default.PROFILE_PANEL), v = (0, f.default)(t.id), N = (0, r.default)(), x = l.useRef(null), M = (0, i.default)(x);
+  } = (0, u.default)(o.default.PROFILE_PANEL), v = (0, f.default)(t.id), x = (0, r.default)(), N = l.useRef(null), M = (0, i.default)(N);
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
     value: A,
     children: (0, a.jsx)(c.UserProfileAnalyticsProvider, {
@@ -39,11 +39,11 @@ function A(e) {
       userId: t.id,
       channelId: n.id,
       children: (0, a.jsxs)(h.default, {
-        ref: x,
+        ref: N,
         user: t,
         displayProfile: v,
         profileType: T.UserProfileTypes.PANEL,
-        themeOverride: N,
+        themeOverride: x,
         className: I.container,
         children: [(0, a.jsxs)(s.ScrollerNone, {
           children: [(0, a.jsxs)(m.default, {

@@ -1,93 +1,93 @@
 "use strict";
 s.r(t), s.d(t, {
   COLLECTIBLES_HEADERS: function() {
-    return L
+    return N
   },
   getOverflowImages: function() {
-    return T
+    return b
   }
 });
 var a = s("180650"),
   l = s("44315"),
-  r = s("981631"),
-  n = s("689938"),
+  n = s("981631"),
+  r = s("689938"),
   i = s("994745"),
   o = s("341364"),
-  c = s("763542"),
-  u = s("354873"),
+  u = s("763542"),
+  c = s("354873"),
   d = s("525071"),
   f = s("737140"),
   C = s("194349"),
-  p = s("523569"),
-  m = s("55817"),
-  g = s("696228"),
-  E = s("202796"),
+  E = s("523569"),
+  p = s("55817"),
+  m = s("696228"),
+  g = s("202796"),
   h = s("570593"),
-  b = s("199546"),
-  x = s("613540"),
-  S = s("769411");
-let v = {
-    MOST_POPULAR: () => n.default.Messages.MOST_POPULAR,
-    NEW_RELEASE: () => n.default.Messages.APPLICATION_STORE_NEW_RELEASE,
-    NITRO_EXCLUSIVE: () => n.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE
+  S = s("199546"),
+  I = s("613540"),
+  T = s("769411");
+let x = {
+    MOST_POPULAR: () => r.default.Messages.MOST_POPULAR,
+    NEW_RELEASE: () => r.default.Messages.APPLICATION_STORE_NEW_RELEASE,
+    NITRO_EXCLUSIVE: () => r.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE
   },
-  I = {
-    TAKE_ME_THERE: () => n.default.Messages.TAKE_ME_THERE
+  _ = {
+    TAKE_ME_THERE: () => r.default.Messages.TAKE_ME_THERE
   },
-  L = [{
+  N = [{
     backgroundStaticSrc: f,
     backgroundVideoSrc: i,
     overflowSrcStatic: d,
-    overflowSrcAnimatedBackground: u,
-    overflowSrcAnimated: c,
+    overflowSrcAnimatedBackground: c,
+    overflowSrcAnimated: u,
     logoSrc: o,
-    textColor: (0, l.getColor)(r.Color.BLACK_500),
+    textColor: (0, l.getColor)(n.Color.BLACK_500),
     badge: {
-      label: v.MOST_POPULAR
+      label: x.MOST_POPULAR
     },
     cta: {
-      label: I.TAKE_ME_THERE,
+      label: _.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.ANIME_V2
     }
   }, {
-    backgroundStaticSrc: S,
-    backgroundVideoSrc: b,
-    logoSrc: x,
-    textColor: (0, l.getColor)(r.Color.WHITE_100),
+    backgroundStaticSrc: T,
+    backgroundVideoSrc: S,
+    logoSrc: I,
+    textColor: (0, l.getColor)(n.Color.WHITE_100),
     badge: {
-      label: v.NEW_RELEASE,
+      label: x.NEW_RELEASE,
       date: new Date
     },
     cta: {
-      label: I.TAKE_ME_THERE,
+      label: _.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.GALAXY
     }
   }, {
     backgroundStaticSrc: h,
-    overflowSrcStatic: E,
-    logoSrc: g,
-    textColor: (0, l.getColor)(r.Color.WHITE_100),
+    overflowSrcStatic: g,
+    logoSrc: m,
+    textColor: (0, l.getColor)(n.Color.WHITE_100),
     badge: {
-      label: v.NITRO_EXCLUSIVE
+      label: x.NITRO_EXCLUSIVE
     },
     cta: {
-      label: I.TAKE_ME_THERE,
+      label: _.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.DISXCORE
     }
   }, {
-    backgroundStaticSrc: m,
+    backgroundStaticSrc: p,
     backgroundVideoSrc: C,
-    logoSrc: p,
-    textColor: (0, l.getColor)(r.Color.WHITE_100),
+    logoSrc: E,
+    textColor: (0, l.getColor)(n.Color.WHITE_100),
     badge: {
-      label: v.MOST_POPULAR
+      label: x.MOST_POPULAR
     },
     cta: {
-      label: I.TAKE_ME_THERE,
+      label: _.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
     }
   }],
-  T = (e, t) => {
+  b = (e, t) => {
     let {
       overflowSrcStatic: s,
       overflowSrcAnimated: a,

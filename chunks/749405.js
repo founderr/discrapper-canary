@@ -21,17 +21,17 @@ function h(e) {
     active: t,
     user: n,
     channel: h
-  } = e, _ = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
+  } = e, C = (0, u.useListHasSingleMessageRequest)(), _ = s.useCallback(() => {
     (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
   }, []), m = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), S = s.useCallback(() => {
-    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
-  }, [h.id, _]), {
+    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), C && (0, i.transitionToChannel)(h.id)
+  }, [h.id, C]), {
     acceptMessageRequest: p,
     rejectMessageRequest: I,
-    isAcceptLoading: T,
-    isRejectLoading: g,
+    isAcceptLoading: g,
+    isRejectLoading: T,
     isUserProfileLoading: A,
     isOptimisticAccepted: N,
     isOptimisticRejected: v
@@ -39,8 +39,8 @@ function h(e) {
     user: n,
     onAcceptSuccess: S,
     onRejectSuccess: m,
-    onError: C
-  }), R = T || g || A || N || v;
+    onError: _
+  }), R = g || T || A || N || v;
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
@@ -57,7 +57,7 @@ function h(e) {
           e.stopPropagation(), I(h.id)
         },
         disabled: R,
-        submitting: g || v,
+        submitting: T || v,
         children: f.default.Messages.MESSAGE_REQUEST_IGNORE
       }), (0, a.jsx)(l.Button, {
         className: E.button,
@@ -67,7 +67,7 @@ function h(e) {
           e.stopPropagation(), p(h.id)
         },
         disabled: R,
-        submitting: T || A || N,
+        submitting: g || A || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]

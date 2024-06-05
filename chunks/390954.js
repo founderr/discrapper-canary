@@ -12,8 +12,8 @@ var a, n = s("735250"),
   E = s("212895"),
   T = s("709054"),
   _ = s("156729"),
-  f = s("244526"),
-  I = s("981631"),
+  I = s("244526"),
+  f = s("981631"),
   m = s("689938"),
   N = s("788988");
 
@@ -59,7 +59,7 @@ class h extends(a = l.PureComponent) {
         align: c.default.Align.CENTER,
         justify: c.default.Justify.BETWEEN,
         className: N.paymentSourceRow,
-        children: [(0, n.jsx)(f.default, {
+        children: [(0, n.jsx)(I.default, {
           paymentSource: e,
           isDefault: t,
           isForSubscription: i,
@@ -189,7 +189,7 @@ class C extends l.PureComponent {
         onCloseCallback: () => {
           (0, u.clearError)()
         },
-        onCloseRequest: I.NOOP
+        onCloseRequest: f.NOOP
       })
     })
   }

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return i
   },
   getPrivateChannelIntegrationRemovedSystemMessageASTContent: function() {
-    return E
+    return o
   },
   getPrivateChannelIntegrationRemovedSystemMessageContent: function() {
     return u
@@ -84,7 +84,7 @@ function l(e) {
   })
 }
 
-function E(e) {
+function o(e) {
   let {
     application: t,
     username: n,

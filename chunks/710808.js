@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("594174"),
   T = s("285952"),
   _ = s("12647"),
-  f = s("998502"),
-  I = s("981631"),
+  I = s("998502"),
+  f = s("981631"),
   m = s("65154"),
   N = s("689938"),
   g = s("611273");
@@ -43,12 +43,12 @@ function C(e) {
   }))
 }
 
-function A() {
+function O() {
   let [e, t] = n.useState(!1), {
     aecDumpSupported: s,
     debugLogging: d,
-    aecDumpEnabled: A,
-    supportsConnectionReplay: O
+    aecDumpEnabled: O,
+    supportsConnectionReplay: A
   } = (0, l.useStateFromStoresObject)([c.default], () => ({
     aecDumpSupported: c.default.isAecDumpSupported(),
     debugLogging: c.default.getDebugLogging(),
@@ -57,7 +57,7 @@ function A() {
   })), p = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), R = (0, l.useStateFromStores)([E.default], () => {
     var e, t;
     return null !== (t = null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
-  }), x = ("canary" === f.default.releaseChannel || "development" === f.default.releaseChannel) && R && O;
+  }), x = ("canary" === I.default.releaseChannel || "development" === I.default.releaseChannel) && R && A;
   async function M() {
     t(!0);
     try {
@@ -65,7 +65,7 @@ function A() {
         message: {
           message: "User Live Dump"
         }
-      }), await (0, u.uploadDebugLogFiles)(I.DebugLogCategory.RTC), ! function() {
+      }), await (0, u.uploadDebugLogFiles)(f.DebugLogCategory.RTC), ! function() {
         let e = N.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
           t = N.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
         (0, i.openModal)(s => (0, a.jsx)(i.ConfirmModal, {
@@ -100,7 +100,7 @@ function A() {
     className: g.marginBottom40,
     title: N.default.Messages.FORM_LABEL_DEBUG,
     children: [s && (0, a.jsx)(i.FormSwitch, {
-      value: A,
+      value: O,
       onChange: e => r.default.setAecDump(e),
       note: N.default.Messages.FORM_HELP_AEC_DUMP,
       children: N.default.Messages.FORM_CHECKBOX_AEC_DUMP

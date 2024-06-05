@@ -13,15 +13,15 @@ var a = s("735250"),
   E = s("314897"),
   T = s("82142"),
   _ = s("246946"),
-  f = s("509545"),
-  I = s("55563"),
+  I = s("509545"),
+  f = s("55563"),
   m = s("15887"),
   N = s("581874"),
   g = s("285952"),
   h = s("366695"),
   C = s("259580"),
-  A = s("572004"),
-  O = s("669079"),
+  O = s("572004"),
+  A = s("669079"),
   p = s("296848"),
   R = s("474936"),
   x = s("689938"),
@@ -64,10 +64,10 @@ class L extends n.PureComponent {
       className: M.giftCodeRow,
       children: [(0, a.jsx)(N.default, {
         className: M.codeText,
-        value: (0, O.getGiftCodeURL)(t.code),
+        value: (0, A.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
         mode: s,
-        supportsCopy: A.SUPPORTS_COPY,
+        supportsCopy: O.SUPPORTS_COPY,
         hideMessage: e ? x.default.Messages.GIFT_INVENTORY_HIDDEN : null,
         onCopy: this.handleCopy,
         buttonColor: N.default.ButtonColors.BRAND,
@@ -94,9 +94,9 @@ class L extends n.PureComponent {
         giftCode: t,
         sku: s
       } = this.props;
-      (0, O.trackGiftCodeCopy)(t, s);
+      (0, A.trackGiftCodeCopy)(t, s);
       try {
-        (0, A.copy)(e), this.setState({
+        (0, O.copy)(e), this.setState({
           copyMode: N.CopyInputModes.SUCCESS
         })
       } catch (e) {
@@ -112,7 +112,7 @@ class L extends n.PureComponent {
     })
   }
 }
-class v extends n.PureComponent {
+class P extends n.PureComponent {
   componentDidMount() {
     this._loadedAt = Date.now()
   }
@@ -244,12 +244,12 @@ class v extends n.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([I.default, _.default, T.default, c.default, f.default, E.default], e => {
+t.default = r.default.connectStores([f.default, _.default, T.default, c.default, I.default, E.default], e => {
   let {
     skuId: t,
     subscriptionPlanId: s,
     giftStyle: a
-  } = e, n = I.default.get(t);
+  } = e, n = f.default.get(t);
   if (null == n) throw Error("SKU was unavailable while rendering gift.");
   let l = T.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
   return {
@@ -261,4 +261,4 @@ t.default = r.default.connectStores([I.default, _.default, T.default, c.default,
     subscriptionPlan: null != s ? (0, p.getOrFetchSubscriptionPlan)(s) : null,
     giftCodes: l
   }
-})(v)
+})(P)

@@ -1,37 +1,37 @@
 "use strict";
 s.r(t), s.d(t, {
   LOGO_SIZE: function() {
-    return N
+    return L
   },
   default: function() {
-    return A
+    return P
   }
 });
 var a = s("735250"),
   l = s("470079"),
-  r = s("120356"),
-  n = s.n(r),
+  n = s("120356"),
+  r = s.n(n),
   i = s("180650"),
   o = s("399606"),
-  c = s("481060"),
-  u = s("906732"),
+  u = s("481060"),
+  c = s("906732"),
   d = s("963249"),
   f = s("594174"),
   C = s("68972"),
-  p = s("754347"),
-  m = s("74538"),
-  g = s("884697"),
-  E = s("624377"),
+  E = s("754347"),
+  p = s("74538"),
+  m = s("884697"),
+  g = s("624377"),
   h = s("141011"),
-  b = s("813083"),
-  x = s("372654"),
-  S = s("994896"),
-  v = s("215023"),
-  I = s("474936"),
-  L = s("689938"),
-  T = s("897246");
-let N = (0, g.getLogoSize)(96),
-  _ = {
+  S = s("813083"),
+  I = s("372654"),
+  T = s("994896"),
+  x = s("215023"),
+  _ = s("474936"),
+  N = s("689938"),
+  b = s("897246");
+let L = (0, m.getLogoSize)(96),
+  v = {
     [i.CollectiblesCategorySkuId.DISXCORE]: {
       left: () => s("136648"),
       right: () => s("850298")
@@ -79,28 +79,28 @@ let N = (0, g.getLogoSize)(96),
       right: () => s("959436")
     }
   },
-  y = e => {
+  R = e => {
     let {
       category: t
     } = e, {
       analyticsLocations: s
-    } = (0, u.default)(), r = l.useRef(null), n = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-    return m.default.canUseCollectibles(n) ? (0, a.jsx)(a.Fragment, {
+    } = (0, c.default)(), n = l.useRef(null), r = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser());
+    return p.default.canUseCollectibles(r) ? (0, a.jsx)(a.Fragment, {
       children: t.summary
     }) : (0, a.jsx)(a.Fragment, {
-      children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
-        getPremium: e => (0, a.jsx)(c.Clickable, {
-          innerRef: r,
-          className: T.getPremiumHook,
+      children: N.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+        getPremium: e => (0, a.jsx)(u.Clickable, {
+          innerRef: n,
+          className: b.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: _.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: s,
-              returnRef: r
+              returnRef: n
             })
           },
           tag: "span",
-          children: (0, a.jsx)(c.Text, {
+          children: (0, a.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "always-white",
             tag: "span",
@@ -111,106 +111,106 @@ let N = (0, g.getLogoSize)(96),
     })
   };
 
-function j(e) {
-  var t, s, l, r;
+function A(e) {
+  var t, s, l, n;
   let {
     category: i,
     index: o
-  } = e, c = _[i.skuId], u = o % 2 == 1, d = null !== (r = u ? null == c ? void 0 : c.left() : null == c ? void 0 : c.right()) && void 0 !== r ? r : (0, g.getCollectiblesAssetURL)(i.banner, {
-    size: x.MAX_CONTENT_WIDTH,
+  } = e, u = v[i.skuId], c = o % 2 == 1, d = null !== (n = c ? null == u ? void 0 : u.left() : null == u ? void 0 : u.right()) && void 0 !== n ? n : (0, m.getCollectiblesAssetURL)(i.banner, {
+    size: I.MAX_CONTENT_WIDTH,
     format: "jpg"
-  }), f = u ? null == c ? void 0 : null === (t = c.leftOverflow) || void 0 === t ? void 0 : t.call(c) : null == c ? void 0 : null === (s = c.rightOverflow) || void 0 === s ? void 0 : s.call(c), {
+  }), f = c ? null == u ? void 0 : null === (t = u.leftOverflow) || void 0 === t ? void 0 : t.call(u) : null == u ? void 0 : null === (s = u.rightOverflow) || void 0 === s ? void 0 : s.call(u), {
     backgroundColors: C
-  } = (0, E.default)(i.styles), p = {
-    objectPosition: u ? "left" : "right",
-    background: null != C ? "".concat((0, x.getBackgroundGradient)(C), " border-box border-box") : void 0,
+  } = (0, g.default)(i.styles), E = {
+    objectPosition: c ? "left" : "right",
+    background: null != C ? "".concat((0, I.getBackgroundGradient)(C), " border-box border-box") : void 0,
     outlineColor: null != C ? C.border.toHslString() : void 0
   };
   return (0, a.jsxs)("div", {
-    className: n()(T.condensedBannerContainer),
+    className: r()(b.condensedBannerContainer),
     children: [(0, a.jsx)("img", {
       src: d,
-      style: p,
-      className: T.condensedBannerImage,
+      style: E,
+      className: b.condensedBannerImage,
       alt: ""
     }), null != f && (0, a.jsx)("img", {
       src: f,
-      className: n()(T.overflowImage, {
-        [T.overflowImageLeft]: u
+      className: r()(b.overflowImage, {
+        [b.overflowImageLeft]: c
       }),
       alt: ""
     }), (0, a.jsx)("img", {
-      className: n()(T.condensedCategoryLogo, {
-        [T.condensedCategoryLogoLeft]: !u
+      className: r()(b.condensedCategoryLogo, {
+        [b.condensedCategoryLogoLeft]: !c
       }),
-      src: (0, g.getCollectiblesAssetURL)(i.logo, {
-        size: N
+      src: (0, m.getCollectiblesAssetURL)(i.logo, {
+        size: L
       }),
       alt: i.name,
       style: {
-        maxWidth: null === (l = v.categoryBannerOverrides[i.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
+        maxWidth: null === (l = x.categoryBannerOverrides[i.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
       }
-    }), (0, a.jsx)(b.default, {
+    }), (0, a.jsx)(S.default, {
       category: i,
-      className: n()(T.limitedTimeBadge, {
-        [T.limitedTimeBadgeLeft]: u
+      className: r()(b.limitedTimeBadge, {
+        [b.limitedTimeBadgeLeft]: c
       }),
       display: "banner"
     })]
   })
 }
 
-function A(e) {
+function P(e) {
   var t, s;
   let {
     category: l,
-    className: r,
+    className: n,
     hideLimitedTimeBadge: o = !1,
-    index: u = 0
+    index: c = 0
   } = e, {
     backgroundColors: d
-  } = (0, E.default)(l.styles), f = !!(null === (t = v.categoryBannerOverrides[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
-    condensedBannersEnabled: m
-  } = (0, S.useCollectiblesCondensedBannersExperiment)({
+  } = (0, g.default)(l.styles), f = !!(null === (t = x.categoryBannerOverrides[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+    condensedBannersEnabled: p
+  } = (0, T.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
   });
-  return m ? (0, a.jsx)(j, {
+  return p ? (0, a.jsx)(A, {
     category: l,
-    index: u
+    index: c
   }) : (0, a.jsxs)(h.default, {
     asset: l.banner,
-    className: n()(T.shopBanner, r),
+    className: r()(b.shopBanner, n),
     style: null != d ? {
-      background: "".concat((0, x.getBackgroundGradient)(d), " border-box border-box"),
+      background: "".concat((0, I.getBackgroundGradient)(d), " border-box border-box"),
       outlineColor: d.border.toHslString()
     } : void 0,
     children: [(0, a.jsxs)("div", {
-      className: T.discordLogo,
+      className: b.discordLogo,
       children: [(0, a.jsx)(C.default, {
-        className: T.discordIcon
-      }), (0, a.jsx)(p.default, {
-        className: T.discordWordmark
+        className: b.discordIcon
+      }), (0, a.jsx)(E.default, {
+        className: b.discordWordmark
       })]
     }), (0, a.jsx)("img", {
-      className: T.categoryLogo,
-      src: (0, g.getCollectiblesAssetURL)(l.logo, {
-        size: N
+      className: b.categoryLogo,
+      src: (0, m.getCollectiblesAssetURL)(l.logo, {
+        size: L
       }),
       alt: l.name,
       style: {
-        maxWidth: null === (s = v.categoryBannerOverrides[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
+        maxWidth: null === (s = x.categoryBannerOverrides[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
       }
-    }), (0, a.jsx)(c.Text, {
-      className: n()(T.summary, {
-        [T.blackSummary]: f
+    }), (0, a.jsx)(u.Text, {
+      className: r()(b.summary, {
+        [b.blackSummary]: f
       }),
       variant: "text-md/normal",
-      children: l.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(y, {
+      children: l.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(R, {
         category: l
       }) : l.summary
-    }), !o && (0, a.jsx)(b.default, {
+    }), !o && (0, a.jsx)(S.default, {
       category: l,
-      className: T.limitedTimeBadge,
+      className: b.limitedTimeBadge,
       display: "banner"
     })]
   })

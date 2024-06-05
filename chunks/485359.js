@@ -1,46 +1,46 @@
     "use strict";
-    a.r(t), a("47120");
-    var d = a("735250");
-    a("470079");
-    var n = a("525654"),
-      c = a.n(n),
-      i = a("481060"),
-      o = a("570140"),
-      r = a("468026"),
-      f = a("317770"),
-      l = a("63063"),
-      s = a("981631"),
-      u = a("689938");
-    class b extends f.default {
+    t.r(a), t("47120");
+    var d = t("735250");
+    t("470079");
+    var n = t("525654"),
+      c = t.n(n),
+      i = t("481060"),
+      f = t("570140"),
+      o = t("468026"),
+      r = t("317770"),
+      l = t("63063"),
+      s = t("981631"),
+      b = t("689938");
+    class u extends r.default {
       _initialize() {
-        o.default.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
+        f.default.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
       }
       _terminate() {
-        o.default.unsubscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
+        f.default.unsubscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
       }
       constructor(...e) {
-        var t, a, n;
-        super(...e), t = this, a = "handlePermission", n = e => {
+        var a, t, n;
+        super(...e), a = this, t = "handlePermission", n = e => {
           let {
-            kind: t,
-            granted: a
+            kind: a,
+            granted: t
           } = e, n = "Firefox" === c().name ? s.HelpdeskArticles.ENABLE_MIC_FIREFOX : s.HelpdeskArticles.ENABLE_MIC_CHROME;
-          if (!a) {
-            let e = "audio" !== t;
-            (0, i.openModal)(t => (0, d.jsx)(r.default, {
-              title: e ? u.default.Messages.NO_CAMERA_TITLE : u.default.Messages.NO_MIC_TITLE,
-              body: e ? u.default.Messages.NO_CAMERA_BODY : u.default.Messages.NO_MIC_BODY,
+          if (!t) {
+            let e = "audio" !== a;
+            (0, i.openModal)(a => (0, d.jsx)(o.default, {
+              title: e ? b.default.Messages.NO_CAMERA_TITLE : b.default.Messages.NO_MIC_TITLE,
+              body: e ? b.default.Messages.NO_CAMERA_BODY : b.default.Messages.NO_MIC_BODY,
               onConfirm: () => window.open(l.default.getArticleURL(n), "_blank"),
-              confirmText: u.default.Messages.HELP_DESK,
-              ...t
+              confirmText: b.default.Messages.HELP_DESK,
+              ...a
             }))
           }
-        }, a in t ? Object.defineProperty(t, a, {
+        }, t in a ? Object.defineProperty(a, t, {
           value: n,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : t[a] = n
+        }) : a[t] = n
       }
     }
-    t.default = new b
+    a.default = new u

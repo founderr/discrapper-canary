@@ -24,15 +24,15 @@ function E(e) {
     guildId: E,
     className: T,
     disabled: _ = !1,
-    showPremiumIcon: f = !0,
-    isTryItOutFlow: I = !1,
+    showPremiumIcon: I = !0,
+    isTryItOutFlow: f = !1,
     forcedDivider: m,
     withHighlight: N = !1
   } = e, g = N ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: T,
     title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
-    showPremiumIcon: f,
+    showPremiumIcon: I,
     errors: s,
     disabled: _,
     forcedDivider: m,
@@ -43,7 +43,7 @@ function E(e) {
           [S.buttonHighlighted]: N
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, E, I, void 0),
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, E, f, void 0),
         children: c.default.Messages.CHANGE_BANNER
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,

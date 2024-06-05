@@ -12,37 +12,37 @@ var a = n("735250"),
   f = n("465670"),
   E = n("820254"),
   h = n("689938"),
-  _ = n("595609");
-let C = "isHideDevBanner";
+  C = n("595609");
+let _ = "isHideDevBanner";
 t.default = () => {
   var e;
-  let [t, n] = (0, s.useState)((null === (e = o.Storage.get(C, "false")) || void 0 === e ? void 0 : e.toString()) === "true"), l = (0, r.useStateFromStores)([d.default], () => {
+  let [t, n] = (0, s.useState)((null === (e = o.Storage.get(_, "false")) || void 0 === e ? void 0 : e.toString()) === "true"), l = (0, r.useStateFromStores)([d.default], () => {
     var e;
     return (0, c.probablyHasBuildOverride)() ? null === (e = d.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (t) return null;
   let m = () => {
-      o.Storage.set(C, !0), n(!0)
+      o.Storage.set(_, !0), n(!0)
     },
     S = () => (0, a.jsx)(u.Clickable, {
       onClick: m,
-      className: _.closeButton,
+      className: C.closeButton,
       "aria-label": h.default.Messages.DISMISS,
       children: (0, a.jsx)(f.default, {
-        className: _.closeIcon
+        className: C.closeIcon
       })
     });
   return null != l ? (0, a.jsxs)("div", {
-    className: i()(_.devBanner, _.buildOverride),
+    className: i()(C.devBanner, C.buildOverride),
     children: [(0, a.jsx)(E.default, {
-      className: _.icon
+      className: C.icon
     }), h.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(S, {})]
   }) : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsxs)("div", {
-    className: i()(_.devBanner, _.staging),
+    className: i()(C.devBanner, C.staging),
     children: [(0, a.jsx)(E.default, {
-      className: _.icon
+      className: C.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "298997"
+      buildNumber: "299049"
     }), (0, a.jsx)(S, {})]
   }) : null
 }

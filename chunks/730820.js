@@ -17,24 +17,24 @@ var a = s("735250"),
   E = s("279837"),
   T = s("144114"),
   _ = s("921801"),
-  f = s("607018"),
-  I = s("778764"),
+  I = s("607018"),
+  f = s("778764"),
   m = s("314897"),
   N = s("325067"),
   g = s("594174"),
   h = s("285952"),
   C = s("572004"),
-  A = s("287880"),
-  O = s("714565"),
+  O = s("287880"),
+  A = s("714565"),
   p = s("202858"),
   R = s("726985"),
   x = s("981631"),
   M = s("815660"),
   D = s("689938"),
   L = s("493087"),
-  v = s("611273");
+  P = s("611273");
 
-function P(e, t, s) {
+function v(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -56,7 +56,7 @@ function b(e) {
     }
   }, [l]);
   return (0, a.jsx)("li", {
-    className: v.marginBottom20,
+    className: P.marginBottom20,
     children: (0, a.jsx)(o.Clickable, {
       innerRef: i,
       className: L.backupCode,
@@ -90,7 +90,7 @@ class U extends n.PureComponent {
       let e = s ? n.phone : this.maskPhoneNumber(n.phone);
       t = (0, a.jsxs)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: v.marginBottom8,
+        className: P.marginBottom8,
         children: [D.default.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
           phoneNumber: e
         }), (0, a.jsx)(o.Anchor, {
@@ -101,7 +101,7 @@ class U extends n.PureComponent {
       })
     }
     if (r) e = (0, a.jsx)(h.default, {
-      className: i ? "" : v.marginTop8,
+      className: i ? "" : P.marginTop8,
       children: (0, a.jsx)(o.Button, {
         color: o.Button.Colors.RED,
         look: o.Button.Looks.OUTLINED,
@@ -112,9 +112,9 @@ class U extends n.PureComponent {
       })
     });
     else {
-      let t = (0, O.getSMSBackupDisabledMessage)(n);
+      let t = (0, A.getSMSBackupDisabledMessage)(n);
       e = (0, a.jsxs)(h.default, {
-        className: i ? "" : v.marginTop8,
+        className: i ? "" : P.marginTop8,
         children: [(0, a.jsx)(o.Button, {
           onClick: this.handleEnableSMS,
           size: o.Button.Sizes.SMALL,
@@ -133,7 +133,7 @@ class U extends n.PureComponent {
     return (0, a.jsx)(_.Subsetting, {
       setting: R.WebSetting.ACCOUNT_SMS_BACKUP,
       children: (0, a.jsxs)(o.FormSection, {
-        className: v.marginTop40,
+        className: P.marginTop40,
         title: D.default.Messages.MFA_SMS_AUTH,
         children: [(0, a.jsx)(o.FormText, {
           type: o.FormText.Types.DESCRIPTION,
@@ -171,7 +171,7 @@ class U extends n.PureComponent {
         title: D.default.Messages.TWO_FA_BACKUP_CODES_LABEL,
         children: [(0, a.jsx)(o.FormText, {
           type: o.FormText.Types.DESCRIPTION,
-          className: v.marginBottom20,
+          className: P.marginBottom20,
           children: D.default.Messages.TWO_FA_BACKUP_CODES_BODY.format()
         }), (0, a.jsxs)(h.default, {
           children: [(0, a.jsx)(h.default.Child, {
@@ -193,7 +193,7 @@ class U extends n.PureComponent {
             children: D.default.Messages.TWO_FA_GENERATE_CODES
           })
         }), (0, a.jsx)(o.FormDivider, {
-          className: v.marginTop20
+          className: P.marginTop20
         })]
       })
     }
@@ -202,11 +202,11 @@ class U extends n.PureComponent {
         children: D.default.Messages.TWO_FA
       }), (0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: v.marginBottom20,
+        className: P.marginBottom20,
         children: D.default.Messages.TWO_FA_DESCRIPTION
       }), (0, a.jsxs)(h.default, {
         justify: h.default.Justify.START,
-        className: v.marginBottom20,
+        className: P.marginBottom20,
         children: [(0, a.jsx)(h.default.Child, {
           wrap: !0,
           grow: 0,
@@ -233,7 +233,7 @@ class U extends n.PureComponent {
         })]
       }), e, this.renderMFASMS(), (0, a.jsx)(_.Subsetting, {
         setting: R.WebSetting.ACCOUNT_SECURITY_KEYS,
-        children: (0, a.jsx)(I.default, {})
+        children: (0, a.jsx)(f.default, {})
       })]
     })
   }
@@ -242,7 +242,7 @@ class U extends n.PureComponent {
       title: D.default.Messages.TWO_FA,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: v.marginBottom20,
+        className: P.marginBottom20,
         children: D.default.Messages.TWO_FA_SALES_PITCH
       }), (0, a.jsx)(o.FormItem, {
         children: (0, a.jsx)(o.Button, {
@@ -250,14 +250,14 @@ class U extends n.PureComponent {
           size: o.ButtonSizes.SMALL,
           children: D.default.Messages.TWO_FA_ENABLE
         })
-      }), (0, a.jsx)(I.default, {})]
+      }), (0, a.jsx)(f.default, {})]
     })
   }
   render() {
     let {
       currentUser: e
     } = this.props;
-    return A.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
+    return O.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
       title: D.default.Messages.TWO_FA,
       children: (0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
@@ -273,7 +273,7 @@ class U extends n.PureComponent {
   }
   openPhoneVerificationModal() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (0, o.openModal)(t => (0, a.jsx)(f.default, {
+    (0, o.openModal)(t => (0, a.jsx)(I.default, {
       reason: T.ChangePhoneReason.USER_SETTINGS_UPDATE,
       ...t,
       ...e
@@ -282,24 +282,24 @@ class U extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), P(this, "state", {
+    super(...e), v(this, "state", {
       revealed: !1,
       password: ""
-    }), P(this, "togglePhoneNumberVisibility", e => {
+    }), v(this, "togglePhoneNumberVisibility", e => {
       e.preventDefault(), this.setState({
         revealed: !this.state.revealed
       })
-    }), P(this, "handleDisableMFA", () => {
+    }), v(this, "handleDisableMFA", () => {
       u.default.show({
         title: D.default.Messages.TWO_FA_REMOVE,
         body: D.default.Messages.TWO_FA_REMOVE_CONFIRMATION,
         cancelText: D.default.Messages.CANCEL,
         onConfirm: () => d.default.disable()
       })
-    }), P(this, "generateBackupCodes", async () => {
+    }), v(this, "generateBackupCodes", async () => {
       let e = N.default.getVerificationKey();
       await d.default.confirmViewBackupCodes(e, !0)
-    }), P(this, "sendMFABackupCodesVerificationKeyEmail", () => {
+    }), v(this, "sendMFABackupCodesVerificationKeyEmail", () => {
       (0, o.openModal)(e => (0, a.jsx)(E.default, {
         ...e,
         handleSubmit: e => d.default.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -308,7 +308,7 @@ class U extends n.PureComponent {
         title: D.default.Messages.TWO_FA_VIEW_BACKUP_CODES_ENTER_PASSWORD,
         actionText: D.default.Messages.TWO_FA_BACKUP_CODES_NEXT_ACTION
       }))
-    }), P(this, "viewBackupCodes", e => {
+    }), v(this, "viewBackupCodes", e => {
       (0, o.openModal)(t => (0, a.jsx)(S.default, {
         ...t,
         handleSubmit: e => d.default.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
@@ -322,7 +322,7 @@ class U extends n.PureComponent {
         actionText: D.default.Messages.TWO_FA_VIEW_CODES_SUBMIT,
         helpMessage: D.default.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_BODY
       }))
-    }), P(this, "getDownloadFileContents", () => {
+    }), v(this, "getDownloadFileContents", () => {
       let e = this.props.backupCodes.map(e => {
           let {
             consumed: t,
@@ -334,9 +334,9 @@ class U extends n.PureComponent {
           email: this.props.currentUser.email
         });
       return "".concat(t, "\r\n\r\n").concat(e)
-    }), P(this, "handleChangePhoneNumber", () => {
+    }), v(this, "handleChangePhoneNumber", () => {
       this.openPhoneVerificationModal()
-    }), P(this, "handleEnableSMS", () => {
+    }), v(this, "handleEnableSMS", () => {
       let {
         currentUser: e
       } = this.props, t = () => {
@@ -349,7 +349,7 @@ class U extends n.PureComponent {
       null == e.phone ? this.openPhoneVerificationModal({
         onAddedPhone: t
       }) : t()
-    }), P(this, "handleDisableSMS", () => {
+    }), v(this, "handleDisableSMS", () => {
       (0, o.openModal)(e => (0, a.jsx)(E.default, {
         ...e,
         handleSubmit: d.default.disableSMS,

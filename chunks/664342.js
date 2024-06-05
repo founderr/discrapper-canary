@@ -26,11 +26,11 @@ var a = n("735250"),
   I = n("502568"),
   A = n("585483"),
   v = n("739830"),
-  N = n("488131"),
-  x = n("981631"),
+  x = n("488131"),
+  N = n("981631"),
   M = n("689938");
 
-function R(e) {
+function y(e) {
   let {
     channel: t
   } = e, [n, i] = l.useState(!1);
@@ -47,7 +47,7 @@ function R(e) {
     autoInvert: !1,
     onRequestClose: () => i(!1),
     renderPopout: function(e) {
-      return (0, a.jsx)(y, {
+      return (0, a.jsx)(R, {
         ...e,
         channel: t
       })
@@ -68,12 +68,12 @@ function R(e) {
   })
 }
 
-function y(e) {
+function R(e) {
   let {
     channel: t,
     closePopout: n,
     onSelect: l
-  } = e, C = (0, o.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), T = (0, h.default)(t), I = (0, m.default)(t), v = (0, i.default)(t), N = (0, u.default)(t), R = (0, f.default)(t.id), y = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
+  } = e, C = (0, o.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), T = (0, h.default)(t), I = (0, m.default)(t), v = (0, i.default)(t), x = (0, u.default)(t), y = (0, f.default)(t.id), R = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
     id: t.id,
     label: M.default.Messages.COPY_ID_THREAD
   }), j = (0, p.default)(t);
@@ -95,7 +95,7 @@ function y(e) {
     }), (0, a.jsxs)(s.MenuGroup, {
       children: [T, I]
     }), (0, a.jsxs)(s.MenuGroup, {
-      children: [y, S, R]
+      children: [R, S, y]
     }), (0, a.jsxs)(s.MenuGroup, {
       children: [(0, a.jsx)(s.MenuItem, {
         id: "search",
@@ -103,7 +103,7 @@ function y(e) {
         icon: _.default,
         action: function() {
           P(), setTimeout(() => {
-            A.ComponentDispatch.dispatch(x.ComponentActions.FOCUS_SEARCH, {
+            A.ComponentDispatch.dispatch(N.ComponentActions.FOCUS_SEARCH, {
               prefillCurrentChannel: !1
             })
           }, 2e3)
@@ -113,11 +113,11 @@ function y(e) {
         label: M.default.Messages.PINS,
         icon: _.default,
         action: function() {
-          P(), A.ComponentDispatch.dispatch(x.ComponentActions.TOGGLE_CHANNEL_PINS)
+          P(), A.ComponentDispatch.dispatch(N.ComponentActions.TOGGLE_CHANNEL_PINS)
         }
       })]
     }), (0, a.jsxs)(s.MenuGroup, {
-      children: [j, v, N, L]
+      children: [j, v, x, L]
     }), (0, a.jsx)(s.MenuGroup, {
       children: O
     })]
@@ -132,12 +132,12 @@ function L(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [t.isForumPost() ? null : (0, a.jsx)(v.default, {
       channel: t
-    }), (0, a.jsx)(R, {
+    }), (0, a.jsx)(y, {
       channel: t
     }), (0, a.jsx)(I.default.Icon, {
       icon: S.default,
       tooltip: M.default.Messages.CLOSE,
-      onClick: () => (0, N.closeThreadSidebar)((0, C.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
+      onClick: () => (0, x.closeThreadSidebar)((0, C.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
     })]
   })
 }

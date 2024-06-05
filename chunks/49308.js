@@ -1,81 +1,81 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   CollectiblesPaymentModalConfirmStep: function() {
-    return m
+    return _
   }
 });
-var l = s("735250"),
-  n = s("470079"),
-  a = s("512722"),
-  i = s.n(a),
-  r = s("399606"),
-  u = s("607070"),
-  d = s("597688"),
-  o = s("624377"),
-  c = s("530618"),
-  f = s("331042"),
-  S = s("372654"),
-  E = s("987209"),
-  I = s("598"),
-  C = s("179118"),
-  _ = s("614277"),
-  T = s("698708");
+var a = n("735250"),
+  l = n("470079"),
+  s = n("512722"),
+  r = n.n(s),
+  i = n("399606"),
+  o = n("607070"),
+  d = n("597688"),
+  u = n("624377"),
+  c = n("530618"),
+  f = n("331042"),
+  E = n("372654"),
+  S = n("987209"),
+  C = n("598"),
+  p = n("179118"),
+  T = n("614277"),
+  m = n("698708");
 
-function p(e) {
+function I(e) {
   let {
     handleClose: t,
-    confettiCanvas: s,
-    hideConfetti: n = !1,
-    analyticsLocations: a
+    confettiCanvas: n,
+    hideConfetti: l = !1,
+    analyticsLocations: s
   } = e, {
-    skusById: u,
-    selectedSkuId: o,
+    skusById: o,
+    selectedSkuId: u,
     application: c
-  } = (0, I.usePaymentContext)(), S = (0, r.useStateFromStores)([d.default], () => d.default.getProduct(o));
-  i()(null != o, "Expected selectedSkuId"), i()(null != c, "Expected application");
-  let E = u[o];
-  return (i()(null != E, "Expected sku"), null == S) ? null : (0, l.jsxs)(_.PaymentPortalBody, {
-    children: [(0, l.jsx)(T.default, {}), (0, l.jsx)(f.CollectiblesCollectedModalInner, {
-      product: S,
+  } = (0, C.usePaymentContext)(), E = (0, i.useStateFromStores)([d.default], () => d.default.getProduct(u));
+  r()(null != u, "Expected selectedSkuId"), r()(null != c, "Expected application");
+  let S = o[u];
+  return (r()(null != S, "Expected sku"), null == E) ? null : (0, a.jsxs)(T.PaymentPortalBody, {
+    children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(f.CollectiblesCollectedModalInner, {
+      product: E,
       onClose: t,
-      confettiCanvas: s,
-      analyticsLocations: a,
-      hideConfetti: n
+      confettiCanvas: n,
+      analyticsLocations: s,
+      hideConfetti: l
     })]
   })
 }
 
-function m(e) {
+function _(e) {
   let {
     isGift: t,
-    giftCode: s,
-    selectedGiftStyle: a,
-    hasSentMessage: i,
+    giftCode: n,
+    selectedGiftStyle: s,
+    hasSentMessage: r,
     giftRecipient: f,
-    giftMessageError: _,
-    isSendingMessage: T
-  } = (0, E.useGiftContext)(), m = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), N = n.useRef(null), {
-    selectedSkuId: A
-  } = (0, I.usePaymentContext)(), h = (0, r.useStateFromStores)([d.default], () => d.default.getProduct(A)), {
-    confettiColors: g
-  } = (0, o.default)(null == h ? void 0 : h.styles);
-  return t ? (0, l.jsxs)("div", {
-    ref: N,
-    children: [(0, l.jsx)(C.default, {
-      giftCode: s,
+    giftMessageError: T,
+    isSendingMessage: m
+  } = (0, S.useGiftContext)(), _ = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), x = l.useRef(null), {
+    selectedSkuId: N
+  } = (0, C.usePaymentContext)(), P = (0, i.useStateFromStores)([d.default], () => d.default.getProduct(N)), {
+    confettiColors: A
+  } = (0, u.default)(null == P ? void 0 : P.styles);
+  return t ? (0, a.jsxs)("div", {
+    ref: x,
+    children: [(0, a.jsx)(p.default, {
+      giftCode: n,
       onClose: e.handleClose,
-      selectedGiftStyle: a,
-      hasSentMessage: i,
+      selectedGiftStyle: s,
+      hasSentMessage: r,
       giftRecipient: f,
-      giftMessageError: _,
-      isSendingMessage: T
-    }), !e.hideConfetti && !m && (0, l.jsx)(c.default, {
-      confettiTarget: N.current,
+      giftMessageError: T,
+      isSendingMessage: m
+    }), !e.hideConfetti && !_ && (0, a.jsx)(c.default, {
+      confettiTarget: x.current,
       confettiCanvas: e.confettiCanvas,
-      sprites: (0, S.getConfettiSprites)(null == h ? void 0 : h.categorySkuId),
-      colors: null == g ? void 0 : g.map(e => e.toHexString())
+      sprites: (0, E.getConfettiSprites)(null == P ? void 0 : P.categorySkuId),
+      colors: null == A ? void 0 : A.map(e => e.toHexString())
     })]
-  }) : (0, l.jsx)(p, {
+  }) : (0, a.jsx)(I, {
     ...e
   })
 }

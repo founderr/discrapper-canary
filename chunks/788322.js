@@ -16,14 +16,14 @@ var a = n("735250"),
   f = n("885714"),
   E = n("940627"),
   h = n("806519"),
-  _ = n("768581"),
-  C = n("900849"),
+  C = n("768581"),
+  _ = n("900849"),
   m = n("556017"),
   S = n("879484"),
   p = n("26580"),
   I = n("206887"),
-  T = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  T = n("689938"),
   A = n("283434"),
   N = n("129512"),
   v = n("330065");
@@ -38,30 +38,30 @@ t.default = e => {
     onView: O,
     onTagClick: L
   } = e, {
-    id: M,
-    discoverySplash: P,
-    icon: x,
-    name: y,
-    description: D,
+    id: P,
+    discoverySplash: M,
+    icon: y,
+    name: D,
+    description: x,
     presenceCount: b,
     memberCount: U,
     keywords: j
   } = l, [G, w] = s.useState(!1), [k, B] = s.useState(!1), {
     analyticsLocations: F
-  } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
-    id: M,
-    splash: P,
+  } = (0, u.default)(), H = C.default.getGuildDiscoverySplashURL({
+    id: P,
+    splash: M,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case T.ThemeTypes.DARK:
+      case g.ThemeTypes.DARK:
         return N;
-      case T.ThemeTypes.LIGHT:
+      case g.ThemeTypes.LIGHT:
         return v
     }
-  }(R), Y = null !== (t = _.default.getGuildIconURL({
-    id: M,
-    icon: x,
+  }(R), Y = null !== (t = C.default.getGuildIconURL({
+    id: P,
+    icon: y,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: T.AnalyticsPages.GUILD_DISCOVERY
+            page: g.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: T.AnalyticsPages.GUILD_DISCOVERY,
-            section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: g.AnalyticsPages.GUILD_DISCOVERY,
+            section: g.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: F
         });
@@ -160,19 +160,19 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: y
+                children: D
               })]
             })]
           }), (0, a.jsx)(r.Text, {
             className: A.description,
             variant: "text-sm/normal",
-            children: D
+            children: x
           }), K && null != j && null != L && (0, a.jsx)(p.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: p.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
             tags: j,
-            section: C.AnalyticsContexts.SEARCH
+            section: _.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
             className: A.memberInfo,
             children: [null != b && (0, a.jsx)("div", {
@@ -180,7 +180,7 @@ t.default = e => {
               children: (0, a.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                   membersOnline: b
                 })
               })
@@ -192,7 +192,7 @@ t.default = e => {
                 children: (0, a.jsx)(r.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
-                  children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                  children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                     count: U
                   })
                 })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumSubscritionDiscountAppliedModal: function() {
-    return C
+    return P
   }
 }), s("47120");
 var a = s("735250"),
@@ -9,73 +9,73 @@ var a = s("735250"),
   i = s("442837"),
   l = s("780384"),
   r = s("481060"),
-  u = s("410030"),
-  o = s("607070"),
+  o = s("410030"),
+  u = s("607070"),
   d = s("530618"),
   c = s("74538"),
   p = s("937615"),
-  m = s("230916"),
-  f = s("798769"),
+  f = s("230916"),
+  m = s("798769"),
   E = s("474936"),
   _ = s("689938"),
-  I = s("874984"),
-  S = s("982404"),
+  S = s("874984"),
+  I = s("982404"),
   N = s("299156");
 
-function C(e) {
+function P(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
-    onClose: C,
-    confettiCanvas: P,
+    onClose: P,
+    confettiCanvas: C,
     userWasChurned: h = !1,
     userDiscountOffer: T
-  } = e, A = (0, u.default)(), R = (0, l.isThemeDark)(A) ? S : N, y = n.useRef(null), [M, L] = n.useState(!1), g = (0, m.useChurnDiscountedPrice)(t, E.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), x = (0, c.getPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, p.formatPrice)(x.amount, x.currency), b = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+  } = e, A = (0, o.default)(), R = (0, l.isThemeDark)(A) ? I : N, M = n.useRef(null), [y, g] = n.useState(!1), L = (0, f.useChurnDiscountedPrice)(t, E.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), x = (0, c.getPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, p.formatPrice)(x.amount, x.currency), b = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
   if (n.useEffect(() => {
-      null != y.current && null != g && L(!0)
-    }, [y, M, g]), null == T || null == g) return null;
+      null != M.current && null != L && g(!0)
+    }, [M, y, L]), null == T || null == L) return null;
   let U = _.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
       numMonths: T.discount.user_usage_limit,
-      discountedPrice: g,
+      discountedPrice: L,
       regularPrice: D
     }),
     v = (0, a.jsx)("div", {
-      className: I.whatYouLoseButtonContainer,
+      className: S.whatYouLoseButtonContainer,
       children: (0, a.jsx)(r.Button, {
         color: r.Button.Colors.BRAND,
-        onClick: C,
+        onClick: P,
         children: _.default.Messages.PREMIUM_DISCOUNT_SWEET
       })
     });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(m.default, {
       premiumType: s,
-      className: I.cancellationHeader,
-      onClose: C
+      className: S.cancellationHeader,
+      onClose: P
     }), (0, a.jsx)("div", {
-      ref: y,
+      ref: M,
       children: (0, a.jsx)(r.ModalContent, {
-        className: I.body,
-        children: null != g ? (0, a.jsxs)(a.Fragment, {
+        className: S.body,
+        children: null != L ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)("div", {
-            className: I.discountAppliedBody,
+            className: S.discountAppliedBody,
             children: [(0, a.jsx)("img", {
               alt: "",
               src: R,
-              className: I.nitroIcon
+              className: S.nitroIcon
             }), (0, a.jsx)(r.Heading, {
               variant: "heading-xl/bold",
               children: h ? _.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : _.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
             })]
           }), (0, a.jsx)("div", {
-            className: I.bodyString,
+            className: S.bodyString,
             children: U
           }), v]
         }) : (0, a.jsx)(r.Spinner, {})
       })
-    }), !b && M && (0, a.jsx)(d.default, {
-      confettiTarget: y.current,
-      confettiCanvas: P,
+    }), !b && y && (0, a.jsx)(d.default, {
+      confettiTarget: M.current,
+      confettiCanvas: C,
       confettiVelocityMultiplier: .75
     })]
   })
