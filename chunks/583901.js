@@ -4,6 +4,7 @@ e.exports = {
   autocompleteAttached: "autocompleteAttached__5d2a6",
   autocompleteInner: "autocompleteInner__0bf3d",
   autocompletePopout: "autocompletePopout__8309a",
+  autocompleteTop: "autocompleteTop_afe414",
   bottom: "bottom_a3c5f3",
   scroller: "scroller__3fc84",
   sticker: "sticker__6a843",
