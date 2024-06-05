@@ -26,7 +26,7 @@ function u() {
       PremiumSubscriptionAprilMarketingDecoModal: async () => {
         let {
           default: e
-        } = await Promise.all([r.e("99387"), r.e("8016"), r.e("18327")]).then(r.bind(r, "731433"));
+        } = await Promise.all([r.e("99387"), r.e("18327")]).then(r.bind(r, "731433"));
         return t => (0, a.jsx)(e, {
           ...t
         })

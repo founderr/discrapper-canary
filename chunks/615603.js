@@ -197,7 +197,7 @@ t.default = function(e) {
                 return e = k, void(0, o.openModalLazy)(async () => {
                   let {
                     default: t
-                  } = await Promise.all([s.e("49237"), s.e("99387"), s.e("8016"), s.e("22646"), s.e("30419")]).then(s.bind(s, "760558"));
+                  } = await Promise.resolve().then(s.bind(s, "760558"));
                   return s => (0, a.jsx)(t, {
                     ...s,
                     guildBoostSlots: [e],

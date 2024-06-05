@@ -162,7 +162,7 @@ function y(e, t, l, r) {
       } {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("47939"), n.e("37220"), n.e("92557"), n.e("91497")]).then(n.bind(n, "225138"));
+        } = await Promise.all([n.e("99387"), n.e("47939"), n.e("37220"), n.e("92557"), n.e("6777")]).then(n.bind(n, "225138"));
         return n => (0, s.jsx)(e, {
           ...n,
           message: u,

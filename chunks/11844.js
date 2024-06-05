@@ -32,7 +32,7 @@ t.default = function() {
     e.current = await (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("50591")]).then(s.bind(s, "719228"));
+      } = await Promise.resolve().then(s.bind(s, "719228"));
       return t => (0, a.jsx)(e, {
         ...t,
         onSelectGuild: E
