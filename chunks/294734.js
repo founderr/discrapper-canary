@@ -31,11 +31,11 @@ function h() {
     children: [(0, s.jsx)(l.ArrowAngleRightUpIcon, {
       width: 14,
       height: 16,
-      color: o.default.colors.HEADER_MUTED
+      color: o.default.colors.TEXT_LOW_CONTRAST
     }), (0, s.jsx)(i.Text, {
       className: A.headerText,
       variant: "text-sm/semibold",
-      color: "header-muted",
+      color: "text-low-contrast",
       children: C.default.Messages.MESSAGE_FORWARDED
     })]
   })
