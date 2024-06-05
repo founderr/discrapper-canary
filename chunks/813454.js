@@ -1,7 +1,7 @@
 "use strict";
 l.r(a), l.d(a, {
   default: function() {
-    return U
+    return j
   }
 }), l("47120");
 var t = l("735250"),
@@ -20,56 +20,56 @@ var t = l("735250"),
   g = l("311715"),
   h = l("768581"),
   S = l("654904"),
-  A = l("200299"),
-  I = l("486324"),
-  x = l("228168"),
-  y = l("689938"),
-  E = l("361142");
+  I = l("200299"),
+  A = l("486324"),
+  y = l("228168"),
+  T = l("689938"),
+  x = l("361142");
 
-function T(e) {
+function P(e) {
   let {
     backgroundColor: a,
     disabledInputs: l,
     onUpsellClick: i
   } = e;
   return (0, t.jsx)("div", {
-    className: E.banner,
+    className: x.banner,
     style: {
       backgroundColor: a
     },
     children: !l && (0, t.jsx)(s.Clickable, {
       onClick: i,
-      className: E.upsell,
+      className: x.upsell,
       children: (0, t.jsx)(s.Heading, {
         variant: "eyebrow",
         color: "always-white",
-        children: y.default.Messages.USER_SETTINGS_UNLOCK_BANNER
+        children: T.default.Messages.USER_SETTINGS_UNLOCK_BANNER
       })
     })
   })
 }
 
-function P(e) {
+function E(e) {
   let {
     backgroundColor: a,
     displayProfile: n,
-    pendingBanner: o,
+    previewBanner: o,
     isTryItOutFlow: u,
     disabledInputs: c,
-    onBannerChange: T
-  } = e, P = (0, r.useStateFromStores)([p.default], () => p.default.isFocused()), [U, j] = i.useState(!1), N = v.GifAutoPlay.getSetting(), {
+    onBannerChange: P
+  } = e, E = (0, r.useStateFromStores)([p.default], () => p.default.isFocused()), [j, N] = i.useState(!1), U = v.GifAutoPlay.getSetting(), {
     bannerSrc: C
   } = (0, m.default)({
     displayProfile: n,
     overrideBannerSrc: null != o ? o : void 0,
-    size: (0, f.getUserBannerSize)(x.UserProfileTypes.BITE_SIZE),
-    canAnimate: N ? P : U
+    size: (0, f.getUserBannerSize)(y.UserProfileTypes.BITE_SIZE),
+    canAnimate: U ? E : j
   });
   return (0, t.jsxs)("div", {
-    onMouseEnter: () => j(!0),
-    onMouseLeave: () => j(!1),
+    onMouseEnter: () => N(!0),
+    onMouseLeave: () => N(!1),
     children: [(0, t.jsx)(d.default, {
-      className: E.imageUploader,
+      className: x.imageUploader,
       showRemoveButton: !1,
       disabled: c,
       image: C,
@@ -77,19 +77,19 @@ function P(e) {
       imageStyle: {
         backgroundColor: a
       },
-      imageClassName: E.banner,
-      hint: y.default.Messages.CHANGE_BANNER,
+      imageClassName: x.banner,
+      hint: T.default.Messages.CHANGE_BANNER,
       hideSize: !0,
-      maxFileSizeBytes: A.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
+      maxFileSizeBytes: I.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
       onChange: (e, a) => {
-        if (null == e || null == a) return T(null);
+        if (null == e || null == a) return P(null);
         (0, s.openModalLazy)(async () => {
           let {
             default: i
           } = await Promise.all([l.e("99387"), l.e("22872")]).then(l.bind(l, "850085"));
           return l => (0, t.jsx)(i, {
-            onCrop: T,
-            uploadType: I.UploadTypes.BANNER,
+            onCrop: P,
+            uploadType: A.UploadTypes.BANNER,
             file: a,
             imgURI: e,
             allowSkip: !0,
@@ -101,49 +101,49 @@ function P(e) {
       onOpenImageSelectModal: () => {
         var e;
         let a = null !== (e = null == n ? void 0 : n.guildId) && void 0 !== e ? e : void 0;
-        (0, S.handleOpenSelectImageModal)(I.UploadTypes.BANNER, a, u)
+        (0, S.handleOpenSelectImageModal)(A.UploadTypes.BANNER, a, u)
       }
-    }), !N && (0, h.isAnimatedImageURL)(C) && (0, t.jsx)(g.default, {
-      className: E.gifTag
+    }), !U && (0, h.isAnimatedImageURL)(C) && (0, t.jsx)(g.default, {
+      className: x.gifTag
     })]
   })
 }
 
-function U(e) {
+function j(e) {
   var a;
   let {
     displayProfile: l,
     canUsePremiumCustomization: i,
-    pendingBanner: r,
-    pendingAccentColor: d,
-    previewAvatar: f,
-    previewThemeColors: m,
-    previewProfileEffectId: v,
+    previewAvatar: r,
+    previewBanner: d,
+    previewPrimaryColor: f,
+    previewProfileEffectId: m,
+    pendingAccentColor: v,
     isTryItOutFlow: p,
     disabledInputs: g,
     forProfileEffectModal: h,
     onBannerChange: S,
-    onUpsellClick: A
-  } = e, I = (0, o.default)(f, (0, s.useToken)(s.tokens.unsafe_rawColors.PRIMARY_530).hsl(), !1), y = null !== (a = null != d ? d : null == m ? void 0 : m[0]) && void 0 !== a ? a : (0, n.hex2int)(I), E = (0, u.default)(y).hsl;
+    onUpsellClick: I
+  } = e, A = (0, o.default)(r, (0, s.useToken)(s.tokens.unsafe_rawColors.PRIMARY_530).hsl(), !1), T = null !== (a = null != v ? v : f) && void 0 !== a ? a : (0, n.hex2int)(A), x = (0, u.default)(T).hsl;
   return (0, t.jsx)(t.Fragment, {
     children: (0, t.jsx)(c.default, {
-      profileType: x.UserProfileTypes.BITE_SIZE,
-      hasBanner: null != v || (null == l ? void 0 : l.getPreviewBanner(r, !1)) != null,
+      profileType: y.UserProfileTypes.BITE_SIZE,
+      hasBanner: null != d,
       isPremium: i,
-      hasThemeColors: (null == l ? void 0 : l.canUsePremiumProfileCustomization) || i,
-      hasProfileEffect: null != v,
+      hasThemeColors: null != f,
+      hasProfileEffect: null != m,
       overrideBannerWidth: h ? 280 : void 0,
-      children: i ? (0, t.jsx)(P, {
-        backgroundColor: E,
+      children: i ? (0, t.jsx)(E, {
+        backgroundColor: x,
         displayProfile: l,
-        pendingBanner: r,
+        previewBanner: d,
         isTryItOutFlow: p,
         disabledInputs: g,
         onBannerChange: S
-      }) : (0, t.jsx)(T, {
-        backgroundColor: E,
+      }) : (0, t.jsx)(P, {
+        backgroundColor: x,
         disabledInputs: g,
-        onUpsellClick: A
+        onUpsellClick: I
       })
     })
   })
