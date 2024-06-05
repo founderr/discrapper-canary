@@ -13,7 +13,7 @@ var a = s("470079"),
 function o() {
   let e = (0, l.useSettingSearchQuery)(),
     t = (0, i.useGenerateUserSettingsSections)(),
-    s = a.useRef(new n.default((0, i.getSearchableSettingTitles)(t))),
+    s = a.useRef(new n.default((0, i.getSearchableSettingsTitles)(t))),
     [o, d] = a.useState(!1),
     [u, c] = a.useState(r.EMPTY_SETTINGS_LIST),
     S = a.useCallback(async e => {

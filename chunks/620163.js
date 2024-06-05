@@ -20,8 +20,8 @@ var n = s("990547"),
   _ = s("703288"),
   I = s("574755"),
   N = s("425799"),
-  g = s("377171"),
-  f = s("621628"),
+  f = s("377171"),
+  g = s("621628"),
   m = s("18438"),
   C = s("778825"),
   A = s("351780"),
@@ -74,8 +74,8 @@ var n = s("990547"),
   e_ = s("327885"),
   eI = s("595242"),
   eN = s("301121"),
-  eg = s("207874"),
-  ef = s("463153"),
+  ef = s("207874"),
+  eg = s("463153"),
   em = s("36192"),
   eC = s("338345"),
   eA = s("400287"),
@@ -109,17 +109,20 @@ let eU = () => {
       isOverlaySupported: eF,
       isClipsBetaTagShowing: eB = !1,
       shouldMergeGameSettings: ey,
-      isUserSettingsSearchEnabled: eV
+      isUserSettingsSearchEnabled: eV,
+      isKeywordFilteringEnabled: eH,
+      isStaff: eY,
+      isInappropriateConversationWarningEnabled: ek
     } = e;
     return Object.freeze({
       [eD.WebSetting.SEARCH_BAR]: {
         section: S.SectionTypes.CUSTOM,
-        element: eg.default,
+        element: ef.default,
         predicate: () => eV
       },
       [eD.WebSetting.SEARCH_NO_RESULTS]: {
         section: S.SectionTypes.CUSTOM,
-        element: ef.default,
+        element: eg.default,
         predicate: () => eV
       },
       [eD.WebSetting.ACCOUNT]: {
@@ -282,7 +285,8 @@ let eU = () => {
       [eD.WebSetting.PRIVACY_STAFF_ONLY]: {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eb.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY
+        parent: eD.WebSetting.PRIVACY_AND_SAFETY,
+        predicate: () => eY
       },
       [eD.WebSetting.PRIVACY_ACCOUNT_STANDING]: {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
@@ -292,27 +296,37 @@ let eU = () => {
       [eD.WebSetting.PRIVACY_KEYWORD_FILTER]: {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eb.default.Messages.USER_KEYWORD_FILTERS_DESCRIPTION,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY
+        parent: eD.WebSetting.PRIVACY_AND_SAFETY,
+        predicate: () => eH
       },
       [eD.WebSetting.PRIVACY_KEYWORD_FILTER_PROFANITY]: {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eb.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE,
-        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER
+        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER,
+        predicate: () => eH
       },
       [eD.WebSetting.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS]: {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eb.default.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE,
-        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER
+        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER,
+        predicate: () => eH
       },
       [eD.WebSetting.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT]: {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eb.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
-        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER
+        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER,
+        predicate: () => eH
       },
       [eD.WebSetting.PRIVACY_TERMS_POLICY]: {
         section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eb.default.Messages.USER_SETTINGS_PRIVACY_TERMS_SEARCHABLE,
         parent: eD.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [eD.WebSetting.PRIVACY_SAFETY_ALERTS]: {
+        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eb.default.Messages.SAFETY_ALERTS_SETTING_TITLE,
+        parent: eD.WebSetting.PRIVACY_AND_SAFETY,
+        predicate: () => ek
       },
       [eD.WebSetting.PRIVACY_FAMILY_CENTER]: {
         section: eL.UserSettingsSections.FAMILY_CENTER,
@@ -323,7 +337,7 @@ let eU = () => {
         badgeCount: eG,
         newIndicator: (0, a.jsx)(F.TextBadge, {
           text: eb.default.Messages.NEW,
-          color: g.default.BG_BRAND
+          color: f.default.BG_BRAND
         }),
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.FAMILY_CENTER_NEW_BADGE]
       },
@@ -706,22 +720,26 @@ let eU = () => {
       [eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS]: {
         section: eL.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "New Notification Settings (Advancd, Staff Only)",
-        parent: eD.WebSetting.NOTIFICATIONS
+        parent: eD.WebSetting.NOTIFICATIONS,
+        predicate: () => !1
       },
       [eD.WebSetting.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT]: {
         section: eL.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "Restore most recent snapshot",
-        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS
+        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
+        predicate: () => !1
       },
       [eD.WebSetting.NOTIFICATIONS_LAUNCH_MIGRATION]: {
         section: eL.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "Launch Migration",
-        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS
+        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
+        predicate: () => !1
       },
       [eD.WebSetting.NOTIFICATIONS_TOGGLE_NEW_SYSTEM]: {
         section: eL.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "Toggle new system on/off",
-        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS
+        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
+        predicate: () => !1
       },
       [eD.WebSetting.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT]: {
         section: eL.UserSettingsSections.NOTIFICATIONS,
@@ -863,24 +881,25 @@ let eU = () => {
         element: ee.default
       },
       [eD.WebSetting.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+        section: eL.UserSettingsSections.ADVANCED,
         searchableTitle: eb.default.Messages.DEVELOPER_MODE,
         parent: eD.WebSetting.SETTINGS_ADVANCED
       },
       [eD.WebSetting.SETTINGS_ADVANCED_HARDWARE_ACCELERATION]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+        section: eL.UserSettingsSections.ADVANCED,
         searchableTitle: eb.default.Messages.HARDWARE_ACCELERATION,
         parent: eD.WebSetting.SETTINGS_ADVANCED
       },
       [eD.WebSetting.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+        section: eL.UserSettingsSections.ADVANCED,
         searchableTitle: eb.default.Messages.USER_SETTINGS_SHOW_LIBRARY,
         parent: eD.WebSetting.SETTINGS_ADVANCED
       },
       [eD.WebSetting.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+        section: eL.UserSettingsSections.ADVANCED,
         searchableTitle: eb.default.Messages.DEVELOPER_APPLICATION_TEST_MODE,
-        parent: eD.WebSetting.SETTINGS_ADVANCED
+        parent: eD.WebSetting.SETTINGS_ADVANCED,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
@@ -965,107 +984,128 @@ let eU = () => {
       [eD.WebSetting.DEVELOPER_OPTIONS_FLAGS]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Developer Options Flags",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_TRACING_REQUESTS]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Tracing Requests",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_FORCED_CANARY]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Forced Canary",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Gateway Events To Console",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Rpc Events Commands",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Analytics Events Logging",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Source Maps",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Analytics Debugger View",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Idle Status Indicator",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Accessibility Auditing",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Preview Unpublished Collections",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Override Client Side",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Override Client Side Premium Type",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Override Client Side Account Created Data",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE
+        parent: eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Open Overlay",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_RESET_SOCKET]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Reset Socket",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_CLEAR_CACHES]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Clear Caches",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_CRASHES]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Crashes",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_SURVEY_OVERRIDE]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Survey Override",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Changelog Override",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.DEVELOPER_OPTIONS_BUILD_OVERRIDE]: {
         section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Build Override",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS
+        parent: eD.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.HOTSPOT_OPTIONS]: {
         section: eL.UserSettingsSections.HOTSPOT_OPTIONS,
@@ -1078,7 +1118,7 @@ let eU = () => {
         section: eL.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
         searchableTitle: "Dismissible Contents",
         label: "Dismissible Contents",
-        element: f.default,
+        element: g.default,
         predicate: () => b.default.isDeveloper
       },
       [eD.WebSetting.PAYMENT_FLOW_MODALS]: {
