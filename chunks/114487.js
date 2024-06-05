@@ -32,7 +32,7 @@ function E(e) {
   if (null == f) {
     let e = (0, _.getAcronym)(n);
     return (0, i.jsx)(u.default, {
-      mask: u.default.Masks.SQUIRCLE,
+      mask: u.default.Masks.CLAN_ICON,
       width: s,
       height: s,
       className: E,
@@ -43,7 +43,7 @@ function E(e) {
     })
   }
   return (0, i.jsx)(u.default, {
-    mask: u.default.Masks.SQUIRCLE,
+    mask: u.default.Masks.CLAN_ICON,
     width: s,
     height: s,
     className: E,
