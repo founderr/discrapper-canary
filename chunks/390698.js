@@ -1,41 +1,41 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   AlreadyOwned: function() {
     return u
   }
 });
-var a = l("735250");
-l("470079");
-var s = l("120356"),
-  r = l.n(s),
-  n = l("481060"),
-  i = l("507893"),
-  o = l("689938"),
-  c = l("992911");
+var s = a("735250");
+a("470079");
+var l = a("120356"),
+  r = a.n(l),
+  n = a("481060"),
+  i = a("507893"),
+  o = a("689938"),
+  c = a("992911");
 let u = e => {
   let {
     className: t,
-    isPartiallyPurchased: l
+    isPartiallyPurchased: a
   } = e;
-  return l ? (0, a.jsx)(n.Tooltip, {
+  return a ? (0, s.jsx)(n.Tooltip, {
     tooltipClassName: c.partiallyOwnedDisclaimer,
     position: "top",
     align: "left",
     text: o.default.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
-    children: e => (0, a.jsxs)("div", {
+    children: e => (0, s.jsxs)("div", {
       className: r()(c.partialOwnStateContainer, t),
       ...e,
-      children: [(0, a.jsx)("span", {
+      children: [(0, s.jsx)("span", {
         className: c.iconWrapper,
-        children: (0, a.jsx)(i.default, {
+        children: (0, s.jsx)(i.default, {
           className: c.infoIcon
         })
-      }), (0, a.jsx)(n.Text, {
+      }), (0, s.jsx)(n.Text, {
         variant: "text-md/semibold",
         children: o.default.Messages.COLLECTIBLES_ALREADY_OWNED
       })]
     })
-  }) : (0, a.jsx)(n.Text, {
+  }) : (0, s.jsx)(n.Text, {
     variant: "text-md/semibold",
     className: t,
     children: o.default.Messages.COLLECTIBLES_ALREADY_OWNED

@@ -1,18 +1,18 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   usePurchasedCategoriesSort: function() {
     return n
   }
-}), l("47120"), l("653041");
-var a = l("470079"),
-  s = l("399606"),
-  r = l("1870");
+}), a("47120"), a("653041");
+var s = a("470079"),
+  l = a("399606"),
+  r = a("1870");
 let n = e => {
-  let t = (0, s.useStateFromStores)([r.default], () => r.default.purchases);
-  return (0, a.useMemo)(() => {
-    let l = [],
-      a = [];
-    for (let s of e.values()) s.products.every(e => !!t.get(e.skuId)) ? l.push(s) : a.push(s);
-    return a.concat(l)
+  let t = (0, l.useStateFromStores)([r.default], () => r.default.purchases);
+  return (0, s.useMemo)(() => {
+    let a = [],
+      s = [];
+    for (let l of e.values()) l.products.every(e => !!t.get(e.skuId)) ? a.push(l) : s.push(l);
+    return s.concat(a)
   }, [e, t])
 }

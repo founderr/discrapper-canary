@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   usePageScrollPosition: function() {
     return o
   }
 });
-var a = l("470079"),
-  s = l("153832"),
-  r = l("638730"),
-  n = l("626135");
-let i = (e, t, l, a) => {
+var s = a("470079"),
+  l = a("153832"),
+  r = a("638730"),
+  n = a("626135");
+let i = (e, t, a, s) => {
     let {
-      scrollTop: s = 0,
+      scrollTop: l = 0,
       scrollOffset: r = 0,
       scrollHeight: i = 0,
       scrollWidth: o = 0
-    } = a;
+    } = s;
     if (i > 0) {
-      let a = (s + r) / i;
-      a > 0 && n.default.track(e, {
-        scroll_visible_percent: a,
-        source: l,
+      let s = (l + r) / i;
+      s > 0 && n.default.track(e, {
+        scroll_visible_percent: s,
+        source: a,
         page_height: Math.round(i),
         page_width: Math.round(o),
         page_session_id: t
@@ -27,23 +27,23 @@ let i = (e, t, l, a) => {
     }
   },
   o = (e, t) => {
-    let l = a.useRef(null),
-      n = a.useRef((0, s.v4)()),
+    let a = s.useRef(null),
+      n = s.useRef((0, l.v4)()),
       o = (0, r.useThrottledFunction)(i, 5e3, [], {
         trailing: !0
       }),
-      c = a.useCallback(() => {
-        var a;
-        let s = null === (a = l.current) || void 0 === a ? void 0 : a.getScrollerNode();
-        null != s && o(e, n.current, t, {
-          scrollTop: s.scrollTop,
-          scrollOffset: s.offsetHeight,
-          scrollHeight: s.scrollHeight,
-          scrollWidth: s.scrollWidth
+      c = s.useCallback(() => {
+        var s;
+        let l = null === (s = a.current) || void 0 === s ? void 0 : s.getScrollerNode();
+        null != l && o(e, n.current, t, {
+          scrollTop: l.scrollTop,
+          scrollOffset: l.offsetHeight,
+          scrollHeight: l.scrollHeight,
+          scrollWidth: l.scrollWidth
         })
       }, [o, e, t]);
     return {
-      scrollerRef: l,
+      scrollerRef: a,
       scrollHandler: c,
       sessionId: n.current
     }

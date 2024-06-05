@@ -1,5 +1,5 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   getProductPurchaseState: function() {
     return i
   },
@@ -7,17 +7,17 @@ l.r(t), l.d(t, {
     return o
   }
 });
-var a = l("24217"),
-  s = l.n(a),
-  r = l("442837"),
-  n = l("1870");
+var s = a("24217"),
+  l = a.n(s),
+  r = a("442837"),
+  n = a("1870");
 let i = (e, t) => {
-    var l;
-    let a = null != e.getPurchase(t.skuId),
-      r = null !== (l = t.items) && void 0 !== l ? l : [],
-      n = s()(r.map(t => e.getPurchase(t.skuId)));
+    var a;
+    let s = null != e.getPurchase(t.skuId),
+      r = null !== (a = t.items) && void 0 !== a ? a : [],
+      n = l()(r.map(t => e.getPurchase(t.skuId)));
     return {
-      isPurchased: a || r.length > 0 && n.length === r.length,
+      isPurchased: s || r.length > 0 && n.length === r.length,
       isPartiallyPurchased: n.length > 0 && n.length < r.length
     }
   },

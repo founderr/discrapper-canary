@@ -1,5 +1,5 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   COLLECTIBLES_HEADERS: function() {
     return L
   },
@@ -7,25 +7,25 @@ l.r(t), l.d(t, {
     return T
   }
 });
-var a = l("180650"),
-  s = l("44315"),
-  r = l("981631"),
-  n = l("689938"),
-  i = l("994745"),
-  o = l("341364"),
-  c = l("763542"),
-  u = l("354873"),
-  d = l("525071"),
-  f = l("737140"),
-  C = l("194349"),
-  p = l("523569"),
-  m = l("55817"),
-  g = l("696228"),
-  E = l("202796"),
-  h = l("570593"),
-  b = l("199546"),
-  x = l("613540"),
-  S = l("769411");
+var s = a("180650"),
+  l = a("44315"),
+  r = a("981631"),
+  n = a("689938"),
+  i = a("994745"),
+  o = a("341364"),
+  c = a("763542"),
+  u = a("354873"),
+  d = a("525071"),
+  f = a("737140"),
+  C = a("194349"),
+  p = a("523569"),
+  m = a("55817"),
+  g = a("696228"),
+  E = a("202796"),
+  h = a("570593"),
+  b = a("199546"),
+  x = a("613540"),
+  S = a("769411");
 let v = {
     MOST_POPULAR: () => n.default.Messages.MOST_POPULAR,
     NEW_RELEASE: () => n.default.Messages.APPLICATION_STORE_NEW_RELEASE,
@@ -41,57 +41,57 @@ let v = {
     overflowSrcAnimatedBackground: u,
     overflowSrcAnimated: c,
     logoSrc: o,
-    textColor: (0, s.getColor)(r.Color.BLACK_500),
+    textColor: (0, l.getColor)(r.Color.BLACK_500),
     badge: {
       label: v.MOST_POPULAR
     },
     cta: {
       label: I.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.ANIME_V2
+      categorySkuId: s.CollectiblesCategorySkuId.ANIME_V2
     }
   }, {
     backgroundStaticSrc: S,
     backgroundVideoSrc: b,
     logoSrc: x,
-    textColor: (0, s.getColor)(r.Color.WHITE_100),
+    textColor: (0, l.getColor)(r.Color.WHITE_100),
     badge: {
       label: v.NEW_RELEASE,
       date: new Date
     },
     cta: {
       label: I.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.GALAXY
+      categorySkuId: s.CollectiblesCategorySkuId.GALAXY
     }
   }, {
     backgroundStaticSrc: h,
     overflowSrcStatic: E,
     logoSrc: g,
-    textColor: (0, s.getColor)(r.Color.WHITE_100),
+    textColor: (0, l.getColor)(r.Color.WHITE_100),
     badge: {
       label: v.NITRO_EXCLUSIVE
     },
     cta: {
       label: I.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.DISXCORE
+      categorySkuId: s.CollectiblesCategorySkuId.DISXCORE
     }
   }, {
     backgroundStaticSrc: m,
     backgroundVideoSrc: C,
     logoSrc: p,
-    textColor: (0, s.getColor)(r.Color.WHITE_100),
+    textColor: (0, l.getColor)(r.Color.WHITE_100),
     badge: {
       label: v.MOST_POPULAR
     },
     cta: {
       label: I.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
+      categorySkuId: s.CollectiblesCategorySkuId.CYBERPUNK
     }
   }],
   T = (e, t) => {
     let {
-      overflowSrcStatic: l,
-      overflowSrcAnimated: a,
-      overflowSrcAnimatedBackground: s
+      overflowSrcStatic: a,
+      overflowSrcAnimated: s,
+      overflowSrcAnimatedBackground: l
     } = e;
-    return null == l ? [] : t || null == a ? [l] : null == s ? [a] : [s, a]
+    return null == a ? [] : t || null == s ? [a] : null == l ? [s] : [l, s]
   }
