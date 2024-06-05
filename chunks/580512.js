@@ -71,7 +71,6 @@ function E(e) {
       }), null == I || I()
     },
     actionColor: c.buttonColor,
-    hideHeader: !0,
     showChannelDetails: !0
   })
 }
