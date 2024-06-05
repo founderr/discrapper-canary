@@ -2,18 +2,18 @@
 s.r(t);
 var n = s("735250");
 s("470079");
-var i = s("481060"),
+var l = s("481060"),
   r = s("823188"),
-  l = s("474936"),
+  i = s("474936"),
   a = s("69769");
 
 function o(e) {
   let {
     onClick: t,
     isGift: s,
-    priceOptions: l
+    priceOptions: i
   } = e;
-  return (0, n.jsx)(i.Clickable, {
+  return (0, n.jsx)(l.Clickable, {
     onClick: t,
     style: {
       cursor: "pointer"
@@ -25,18 +25,18 @@ function o(e) {
       showYearlyPrice: !0,
       isGift: s,
       isModal: !0,
-      priceOptions: l
+      priceOptions: i
     })
   })
 }
 
-function C(e) {
+function u(e) {
   let {
     onClick: t,
     isGift: s,
-    priceOptions: l
+    priceOptions: i
   } = e;
-  return (0, n.jsx)(i.Clickable, {
+  return (0, n.jsx)(l.Clickable, {
     onClick: t,
     style: {
       cursor: "pointer"
@@ -47,7 +47,7 @@ function C(e) {
       showWumpus: !0,
       showYearlyPrice: !0,
       isGift: s,
-      priceOptions: l
+      priceOptions: i
     })
   })
 }
@@ -55,17 +55,17 @@ t.default = function(e) {
   let {
     onSelectSku: t,
     isGift: s,
-    priceOptions: i
+    priceOptions: l
   } = e;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o, {
-      onClick: () => t(l.PremiumSubscriptionSKUs.TIER_2),
+      onClick: () => t(i.PremiumSubscriptionSKUs.TIER_2),
       isGift: s,
-      priceOptions: i
-    }), (0, n.jsx)(C, {
-      onClick: () => t(l.PremiumSubscriptionSKUs.TIER_0),
+      priceOptions: l
+    }), (0, n.jsx)(u, {
+      onClick: () => t(i.PremiumSubscriptionSKUs.TIER_0),
       isGift: s,
-      priceOptions: i
+      priceOptions: l
     })]
   })
 }

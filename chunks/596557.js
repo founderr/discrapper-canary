@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return _
   }
 });
 var a = n("735250"),
@@ -17,20 +17,20 @@ var a = n("735250"),
   E = n("647086"),
   h = n("135899");
 
-function C(e) {
+function _(e) {
   var t;
-  let C = (0, r.useCanCurrentUserViewDisableUnsafeGuildSettingsNotice)(e),
-    _ = h.MODERATOR_PERMISSIONS.some(t => (null == e ? void 0 : e.id) !== E.FAVORITES_RAW_GUILD_ID && u.canEveryone(t, e)),
+  let _ = (0, r.useCanCurrentUserViewDisableUnsafeGuildSettingsNotice)(e),
+    C = h.MODERATOR_PERMISSIONS.some(t => (null == e ? void 0 : e.id) !== E.FAVORITES_RAW_GUILD_ID && u.canEveryone(t, e)),
     m = (null == e ? void 0 : e.defaultMessageNotifications) === c.UserNotificationSettings.ALL_MESSAGES,
     S = (0, d.useIsContentDismissed)(l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_SNOWFLAKE_ID),
-    p = C && (_ || m) && !S,
+    p = _ && (C || m) && !S,
     I = s.useCallback(() => {
       var t;
       (0, d.markContentAsDismissed)(l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_SNOWFLAKE_ID, !0, f.ContentDismissActionType.DISMISS)
     }, [e]),
-    g = s.useRef(!1);
+    T = s.useRef(!1);
   s.useEffect(() => {
-    if (p && !g.current) {
+    if (p && !T.current) {
       var t;
       (0, i.openModalLazy)(async () => {
         let {
@@ -38,7 +38,7 @@ function C(e) {
         } = await Promise.all([n.e("99387"), n.e("54597")]).then(n.bind(n, "29022"));
         return n => (0, a.jsx)(t, {
           guild: e,
-          canEveryoneModerate: _,
+          canEveryoneModerate: C,
           isDefaultNotificationsAllMessages: m,
           ...n
         })
@@ -47,7 +47,7 @@ function C(e) {
       }), o.default.track(c.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
         type: l.DismissibleGuildContent[l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
         guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_SNOWFLAKE_ID
-      }), g.current = !0
+      }), T.current = !0
     }
-  }, [_, e, I, m, p])
+  }, [C, e, I, m, p])
 }

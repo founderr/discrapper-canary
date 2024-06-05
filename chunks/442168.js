@@ -42,7 +42,7 @@ function g(e) {
   l.useEffect(() => () => {
     (0, u.dismissSaveClipAnimation)(T)
   }, [T]);
-  let x = () => {
+  let N = () => {
       var e;
       let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
       return null == t || n ? m : {
@@ -52,7 +52,7 @@ function g(e) {
         left: t.left
       }
     },
-    N = e => {
+    x = e => {
       let t = null == _ ? void 0 : _.getBoundingClientRect();
       if (v.current = t, e.timestamp !== I || null == t || n) return m;
       let {
@@ -67,7 +67,7 @@ function g(e) {
       }
     },
     M = (0, l.useRef)(null),
-    y = (0, s.useTransition)(A, {
+    R = (0, s.useTransition)(A, {
       keys: e => e.timestamp,
       ref: M,
       from: {
@@ -78,20 +78,20 @@ function g(e) {
       },
       config: p
     }),
-    R = (0, l.useRef)(null),
+    y = (0, l.useRef)(null),
     L = (0, s.useTransition)(A, {
-      ref: R,
+      ref: y,
       keys: e => e.timestamp,
       from: e => ({
         position: "fixed",
         visibility: "hidden",
         opacity: 1,
-        ...g.enabled ? N(e) : x()
+        ...g.enabled ? x(e) : N()
       }),
       enter: e => [{
         opacity: 1,
         visibility: "visible",
-        ...N(e)
+        ...x(e)
       }],
       leave: {
         opacity: 0,
@@ -111,11 +111,11 @@ function g(e) {
         null != t.item && null != A.find(e => e.timestamp === t.item.timestamp) && (0, u.dismissSaveClipAnimation)(T, t.item.timestamp)
       }
     });
-  return (0, s.useChain)([M, R], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {
+  return (0, s.useChain)([M, y], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: h.hidden,
       ref: S
-    }), y((e, t) => null != t && (0, a.jsx)(s.animated.div, {
+    }), R((e, t) => null != t && (0, a.jsx)(s.animated.div, {
       className: h.whiteFlash,
       style: e
     })), (0, a.jsx)(f.default, {

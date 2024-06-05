@@ -11,8 +11,8 @@ var a, s = n("735250"),
   f = n("285952"),
   E = n("672705"),
   h = n("981631"),
-  C = n("689938"),
-  _ = n("679091"),
+  _ = n("689938"),
+  C = n("679091"),
   m = n("611273");
 
 function S(e, t, n) {
@@ -45,24 +45,24 @@ class I extends(a = l.PureComponent) {
   }
   render() {
     return (0, s.jsxs)(f.default, {
-      className: _.verification,
+      className: C.verification,
       align: f.default.Align.CENTER,
       direction: f.default.Direction.VERTICAL,
       children: [(0, s.jsxs)(f.default, {
-        className: r()(_.container, {
-          [_.isMobile]: o.isMobile
+        className: r()(C.container, {
+          [C.isMobile]: o.isMobile
         }),
         direction: f.default.Direction.VERTICAL,
         align: f.default.Align.CENTER,
         justify: f.default.Justify.CENTER,
         children: [(0, s.jsx)("div", {
-          className: _.image
+          className: C.image
         }), (0, s.jsx)("div", {
-          className: r()(_.title, m.marginTop20),
-          children: C.default.Messages.VERIFICATION_TITLE
+          className: r()(C.title, m.marginTop20),
+          children: _.default.Messages.VERIFICATION_TITLE
         }), (0, s.jsx)("div", {
-          className: r()(_.body, m.marginTop4, m.marginBottom20),
-          children: C.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
+          className: r()(C.body, m.marginTop4, m.marginBottom20),
+          children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
             helpCenterURL: p
           })
         }), (0, s.jsx)(f.default, {
@@ -72,22 +72,22 @@ class I extends(a = l.PureComponent) {
           children: this.renderFields()
         })]
       }), (0, s.jsx)("div", {
-        className: r()(_.footer, m.marginTop20),
-        children: C.default.Messages.VERIFICATION_FOOTER
+        className: r()(C.footer, m.marginTop20),
+        children: _.default.Messages.VERIFICATION_FOOTER
       }), (0, s.jsxs)(f.default, {
         className: r()(m.marginTop4, m.marginBottom20),
         grow: 0,
         children: [(0, s.jsx)("div", {
-          className: r()(_.footer, _.footerAction),
-          children: C.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
+          className: r()(C.footer, C.footerAction),
+          children: _.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
             supportURL: c.default.getSubmitRequestURL()
           })
         }), (0, s.jsx)("div", {
-          className: r()(_.footer, _.footerBullet),
+          className: r()(C.footer, C.footerBullet),
           children: "•"
         }), (0, s.jsx)("div", {
-          className: r()(_.footer, _.footerAction),
-          children: C.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
+          className: r()(C.footer, C.footerAction),
+          children: _.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
             logoutOnClick: this.props.onLogout
           })
         })]

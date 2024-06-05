@@ -11,29 +11,29 @@ s.r(t), s.d(t, {
   }
 }), s("411104"), s("47120");
 var n = s("735250"),
-  i = s("470079"),
+  l = s("470079"),
   r = s("442837"),
-  l = s("570140"),
+  i = s("570140"),
   a = s("821849"),
   o = s("100527"),
-  C = s("906732"),
-  u = s("509545"),
+  u = s("906732"),
+  C = s("509545"),
   d = s("78839"),
   c = s("669079"),
   p = s("987209"),
   _ = s("598"),
   f = s("409813"),
-  x = s("791785"),
-  E = s("276442"),
+  E = s("791785"),
+  x = s("276442"),
   L = s("793541"),
-  S = s("274247"),
-  I = s("380898"),
-  m = s("710094"),
+  m = s("274247"),
+  S = s("380898"),
+  I = s("710094"),
   h = s("293858"),
   P = s("614223"),
   M = s("174827"),
-  T = s("846464"),
-  N = s("184160"),
+  N = s("846464"),
+  T = s("184160"),
   A = s("48175"),
   j = s("981631"),
   R = s("474936"),
@@ -47,16 +47,16 @@ function O(e) {
     analyticsSourceLocation: r,
     onComplete: o,
     transitionState: d,
-    initialPlanId: E,
+    initialPlanId: x,
     subscriptionTier: L,
-    onClose: S,
-    trialId: I,
-    trialFooterMessageOverride: m,
+    onClose: m,
+    trialId: S,
+    trialFooterMessageOverride: I,
     reviewWarningMessage: h,
     openInvoiceId: P,
     onSubscriptionConfirmation: M,
-    renderPurchaseConfirmation: T,
-    postSuccessGuild: N,
+    renderPurchaseConfirmation: N,
+    postSuccessGuild: T,
     followupSKUInfo: A,
     renderHeader: g,
     applicationId: y,
@@ -68,9 +68,9 @@ function O(e) {
     continueSession: k = !1
   } = e, {
     analyticsLocations: F
-  } = (0, C.default)();
-  i.useEffect(() => {
-    !u.default.isLoadedForPremiumSKUs() && l.default.wait(() => (0, a.fetchPremiumSubscriptionPlans)())
+  } = (0, u.default)();
+  l.useEffect(() => {
+    !C.default.isLoadedForPremiumSKUs() && i.default.wait(() => (0, a.fetchPremiumSubscriptionPlans)())
   }, []);
   let {
     step: G
@@ -79,7 +79,7 @@ function O(e) {
     giftMessage: D,
     giftRecipient: w
   } = (0, p.useGiftContext)(), W = H && (0, c.shouldShowCustomGiftExperience)(w) && G === f.Step.PLAN_SELECT;
-  return (0, n.jsx)(x.PaymentModal, {
+  return (0, n.jsx)(E.PaymentModal, {
     analyticsLocations: F,
     analyticsLocation: t,
     analyticsObject: s,
@@ -87,19 +87,19 @@ function O(e) {
     analyticsSubscriptionType: j.SubscriptionTypes.PREMIUM,
     onComplete: o,
     transitionState: d,
-    initialPlanId: E,
+    initialPlanId: x,
     giftMessage: D,
     subscriptionTier: L,
-    onClose: S,
-    trialId: I,
+    onClose: m,
+    trialId: S,
     isGift: H,
-    trialFooterMessageOverride: m,
+    trialFooterMessageOverride: I,
     reviewWarningMessage: h,
     planGroup: R.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
     openInvoiceId: P,
     onSubscriptionConfirmation: M,
-    renderPurchaseConfirmation: T,
-    postSuccessGuild: N,
+    renderPurchaseConfirmation: N,
+    postSuccessGuild: T,
     followupSKUInfo: A,
     renderHeader: g,
     applicationId: y,
@@ -133,19 +133,19 @@ function b(e) {
   let {
     initialPlanId: t,
     handleStepChange: s,
-    referralTrialOfferId: i
+    referralTrialOfferId: l
   } = e, {
     paymentSources: r,
-    selectedSkuId: l
+    selectedSkuId: i
   } = (0, _.usePaymentContext)(), {
     isGift: a
   } = (0, p.useGiftContext)(), o = U((0, A.default)({
     isGift: a,
-    skuId: l,
-    referralTrialOfferId: i
+    skuId: i,
+    referralTrialOfferId: l
   }));
   return (0, n.jsx)(n.Fragment, {
-    children: (0, n.jsx)(E.PaymentModalAddPaymentStep, {
+    children: (0, n.jsx)(x.PaymentModalAddPaymentStep, {
       ...e,
       breadcrumbSteps: y,
       onReturn: () => {
@@ -159,12 +159,12 @@ function b(e) {
 }
 let v = [{
   key: null,
-  renderStep: e => (0, n.jsx)(x.PaymentPredicateStep, {
+  renderStep: e => (0, n.jsx)(E.PaymentPredicateStep, {
     ...e
   })
 }, {
   key: f.Step.SKU_SELECT,
-  renderStep: e => (0, n.jsx)(T.PremiumPaymentSKUSelectStep, {
+  renderStep: e => (0, n.jsx)(N.PremiumPaymentSKUSelectStep, {
     ...e
   }),
   options: {
@@ -173,7 +173,7 @@ let v = [{
   }
 }, {
   key: f.Step.WHAT_YOU_LOSE,
-  renderStep: e => (0, n.jsx)(N.PremiumPaymentWhatYouLoseStep, {
+  renderStep: e => (0, n.jsx)(T.PremiumPaymentWhatYouLoseStep, {
     ...e
   }),
   options: {
@@ -202,18 +202,18 @@ let v = [{
   }
 }, {
   key: f.Step.AWAITING_BROWSER_CHECKOUT,
-  renderStep: e => (0, n.jsx)(S.default, {
+  renderStep: e => (0, n.jsx)(m.default, {
     ...e
   })
 }, {
   key: f.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-  renderStep: () => (0, n.jsx)(I.default, {})
+  renderStep: () => (0, n.jsx)(S.default, {})
 }, {
   key: f.Step.AWAITING_AUTHENTICATION,
   renderStep: () => (0, n.jsx)(L.default, {})
 }, {
   key: f.Step.REVIEW,
-  renderStep: e => (0, n.jsx)(m.PaymentModalReviewStep, {
+  renderStep: e => (0, n.jsx)(I.PaymentModalReviewStep, {
     ...e
   }),
   options: {
@@ -231,31 +231,31 @@ function B(e) {
   let t = (0, r.useStateFromStores)([d.default], () => d.default.getPremiumTypeSubscription()),
     {
       analyticsLocations: s
-    } = (0, C.default)(e.analyticsLocations, o.default.PREMIUM_PAYMENT_MODAL),
+    } = (0, u.default)(e.analyticsLocations, o.default.PREMIUM_PAYMENT_MODAL),
     {
-      subscriptionTier: i,
-      isGift: l,
+      subscriptionTier: l,
+      isGift: i,
       giftRecipient: a,
-      giftMessage: u,
+      giftMessage: C,
       loadId: c,
       defaultPlanId: f,
-      referralCode: x
+      referralCode: E
     } = e;
-  if (null != i && !Object.values(R.PremiumSubscriptionSKUs).includes(i)) throw Error("subscriptionTier must be a premium subscription");
-  return (0, n.jsx)(C.AnalyticsLocationProvider, {
+  if (null != l && !Object.values(R.PremiumSubscriptionSKUs).includes(l)) throw Error("subscriptionTier must be a premium subscription");
+  return (0, n.jsx)(u.AnalyticsLocationProvider, {
     value: s,
     children: (0, n.jsx)(_.PaymentContextProvider, {
       loadId: c,
       activeSubscription: null != e.subscription ? e.subscription : t,
       stepConfigs: v,
       skuIDs: [...R.ACTIVE_PREMIUM_SKUS],
-      isGift: l,
+      isGift: i,
       defaultPlanId: f,
-      referralCode: x,
+      referralCode: E,
       children: (0, n.jsx)(p.GiftContextProvider, {
-        isGift: l,
+        isGift: i,
         giftRecipient: null == a ? void 0 : a,
-        giftMessage: u,
+        giftMessage: C,
         children: (0, n.jsx)(O, {
           ...e
         })

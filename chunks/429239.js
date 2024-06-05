@@ -136,10 +136,10 @@ t.default = function(e) {
   } = e, {
     size: v
   } = u.AvatarSizeSpecs[p], {
-    statusCoords: x,
-    frontAvatarOffsetPx: N,
+    statusCoords: N,
+    frontAvatarOffsetPx: x,
     frontAvatarSizePx: M,
-    backAvatarSizePx: y
+    backAvatarSizePx: R
   } = l.useMemo(() => {
     var e;
     let t = "".concat(v, "-").concat(S);
@@ -158,7 +158,7 @@ t.default = function(e) {
       return h[n] = o, o
     }(p, S, t)
   }, [v, S, p]);
-  let R = (t = null != _, n = S, s = p, n ? g[s].typing : t ? g[s].status : g[s].default);
+  let y = (t = null != _, n = S, s = p, n ? g[s].typing : t ? g[s].status : g[s].default);
   return (0, a.jsxs)("div", {
     style: {
       width: v,
@@ -169,19 +169,19 @@ t.default = function(e) {
     "aria-hidden": A["aria-hidden"],
     className: i()(f.container, I),
     children: [(0, a.jsxs)(d.default, {
-      mask: R,
+      mask: y,
       height: v,
       width: v,
       children: [(0, a.jsx)("img", {
         src: o,
         alt: "",
-        width: y,
-        height: y
+        width: R,
+        height: R
       }), (0, a.jsx)("div", {
         style: {
           position: "absolute",
-          top: N,
-          left: N
+          top: x,
+          left: x
         },
         children: (0, a.jsx)(C, {
           src: m,
@@ -191,7 +191,7 @@ t.default = function(e) {
         })
       })]
     }), (0, a.jsx)(E, {
-      statusCoords: x,
+      statusCoords: N,
       status: _,
       isTyping: S
     })]

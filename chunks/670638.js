@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   QuestsEntryContextMenuPopout: function() {
-    return g
+    return A
   }
 });
 var s = n("735250"),
@@ -13,97 +13,97 @@ var s = n("735250"),
   u = n("239091"),
   d = n("230711"),
   c = n("479531"),
-  E = n("390322"),
-  f = n("617136"),
+  f = n("390322"),
+  E = n("617136"),
   _ = n("272008"),
-  T = n("113434"),
-  m = n("569984"),
+  m = n("113434"),
+  T = n("569984"),
   I = n("918701"),
-  N = n("341907"),
-  p = n("46140"),
-  S = n("981631"),
-  C = n("231338"),
-  A = n("689938");
+  p = n("341907"),
+  h = n("46140"),
+  N = n("981631"),
+  S = n("231338"),
+  C = n("689938");
 
-function h(e) {
+function g(e) {
   var t;
-  let n = (0, l.useStateFromStores)([m.default], () => m.default.questDeliveryOverride, []),
-    E = (0, I.isDismissible)(e.questContent),
-    h = (0, I.hasVariant)(e.quest, p.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
+  let n = (0, l.useStateFromStores)([T.default], () => T.default.questDeliveryOverride, []),
+    f = (0, I.isDismissible)(e.questContent),
+    g = (0, I.hasVariant)(e.quest, h.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
     {
-      handleComplete: g,
+      handleComplete: A,
       handleResetDismissibilityClick: M,
-      handleResetStatusClick: O,
-      handleOverrideDeliveryClick: R
-    } = (0, T.useQuestPreviewActions)(e.quest.id),
-    v = a.useCallback(() => {
+      handleResetStatusClick: R,
+      handleOverrideDeliveryClick: v
+    } = (0, m.useQuestPreviewActions)(e.quest.id),
+    O = a.useCallback(() => {
       (0, I.openGameLink)(e.quest, {
         content: e.questContent,
-        ctaContent: f.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
+        ctaContent: E.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
       })
     }, [e.quest, e.questContent]),
-    L = a.useCallback(() => {
+    x = a.useCallback(() => {
       (0, I.copyShareLink)(e.quest.id, {
         content: e.questContent,
         position: e.questContentPosition,
-        ctaContent: f.QuestContentCTA.CONTEXT_MENU_COPY_LINK
+        ctaContent: E.QuestContentCTA.CONTEXT_MENU_COPY_LINK
       })
     }, [e.quest, e.questContent, e.questContentPosition]),
-    x = e => (0, o.showToast)((0, o.createToast)(new c.default(e, e.status).message, o.ToastType.FAILURE));
+    L = e => (0, o.showToast)((0, o.createToast)(new c.default(e, e.status).message, o.ToastType.FAILURE));
   return (0, s.jsxs)(o.Menu, {
     variant: "fixed",
     onSelect: () => {
       null != e.onSelect ? e.onSelect() : (0, u.closeContextMenu)()
     },
     navId: "quests-entry",
-    "aria-label": A.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
-    onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : C.NOOP,
+    "aria-label": C.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : S.NOOP,
     children: [(0, s.jsxs)(o.MenuGroup, {
-      children: [!1 === h && (0, s.jsx)(o.MenuItem, {
+      children: [!1 === g && (0, s.jsx)(o.MenuItem, {
         id: "play-game",
-        label: A.default.Messages.QUESTS_PLAY_GAME,
-        action: v,
+        label: C.default.Messages.QUESTS_PLAY_GAME,
+        action: O,
         icon: r.LinkExternalMediumIcon
       }), !0 === e.showShareLink && (0, s.jsx)(o.MenuItem, {
         id: "share-link",
-        label: A.default.Messages.COPY_LINK,
-        action: L,
+        label: C.default.Messages.COPY_LINK,
+        action: x,
         icon: i.CopyIcon
       })]
     }, "major-actions"), (0, s.jsxs)(o.MenuGroup, {
       children: [!e.hideLearnMore && (0, s.jsx)(o.MenuItem, {
         id: "learn-more",
-        label: A.default.Messages.QUESTS_LEARN_MORE_V2,
+        label: C.default.Messages.QUESTS_LEARN_MORE_V2,
         action: () => {
-          (0, f.trackQuestContentClicked)({
+          (0, E.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
             questContentPosition: e.questContentPosition,
-            questContentCTA: f.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
-          }), d.default.open(S.UserSettingsSections.INVENTORY)
+            questContentCTA: E.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
+          }), d.default.open(N.UserSettingsSections.INVENTORY)
         }
       }), e.shouldShowDisclosure && (0, s.jsx)(o.MenuItem, {
         id: "display-disclosure",
-        label: A.default.Messages.QUESTS_DISCLOSURE_LABEL,
+        label: C.default.Messages.QUESTS_DISCLOSURE_LABEL,
         action: () => {
-          (0, N.openDisclosureModal)(e.quest, {
+          (0, p.openDisclosureModal)(e.quest, {
             content: e.questContent,
             position: e.questContentPosition,
-            ctaContent: f.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
+            ctaContent: E.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
           })
         }
-      }), E && (0, s.jsx)(o.MenuItem, {
+      }), f && (0, s.jsx)(o.MenuItem, {
         id: "hide-entrypoint",
-        label: A.default.Messages.QUESTS_HIDE_THIS,
+        label: C.default.Messages.QUESTS_HIDE_THIS,
         action: () => {
-          (0, f.trackQuestContentClicked)({
+          (0, E.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
             questContentPosition: e.questContentPosition,
-            questContentCTA: f.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
+            questContentCTA: E.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
           }), (0, I.isDismissible)(e.questContent) && (0, _.dismissQuestContent)(e.quest.id, e.questContent)
         },
-        subtext: A.default.Messages.QUESTS_FIND_QUEST
+        subtext: C.default.Messages.QUESTS_FIND_QUEST
       })]
     }, "minor-actions"), e.quest.preview && (0, s.jsxs)(o.MenuGroup, {
       label: "Preview Controls",
@@ -111,7 +111,7 @@ function h(e) {
         id: "delivery",
         label: "Show in Quest Bar",
         checked: (null == n ? void 0 : n.id) === e.quest.id,
-        action: R
+        action: v
       }), (0, s.jsx)(o.MenuItem, {
         id: "dismiss",
         label: "Reset Dismissibility",
@@ -119,11 +119,11 @@ function h(e) {
       }), (0, s.jsx)(o.MenuItem, {
         id: "enrollment",
         label: "Reset Quest",
-        action: O
+        action: R
       }), (0, s.jsx)(o.MenuItem, {
         id: "complete",
         label: "Complete Quest",
-        action: g
+        action: A
       }), (0, I.isConsoleQuest)(e.quest) && (0, s.jsxs)(o.MenuItem, {
         id: "console",
         label: "Console Heartbeat",
@@ -134,18 +134,18 @@ function h(e) {
         }), (0, s.jsx)(o.MenuItem, {
           id: "start",
           label: "Start heartbeat (cheatmode)",
-          action: () => (0, _.manualStartConsoleQuest)(e.quest.id, !0).catch(x)
+          action: () => (0, _.manualStartConsoleQuest)(e.quest.id, !0).catch(L)
         }), (0, s.jsx)(o.MenuItem, {
           id: "stop",
           label: "Stop heartbeat",
-          action: () => (0, _.manualStopConsoleQuest)(e.quest.id).catch(x)
+          action: () => (0, _.manualStopConsoleQuest)(e.quest.id).catch(L)
         })]
       })]
     }, "preview-controls")]
   })
 }
 
-function g(e) {
+function A(e) {
   let {
     children: t,
     onOpen: n,
@@ -156,10 +156,10 @@ function g(e) {
     questContentPosition: d,
     ...c
   } = e, _ = a.useCallback(() => {
-    (0, f.trackQuestContentClicked)({
+    (0, E.trackQuestContentClicked)({
       questId: r.id,
       questContent: u,
-      questContentCTA: f.QuestContentCTA.OPEN_CONTEXT_MENU,
+      questContentCTA: E.QuestContentCTA.OPEN_CONTEXT_MENU,
       questContentPosition: d
     }), null != n && n()
   }, [n, r.id, u, d]);
@@ -170,15 +170,15 @@ function g(e) {
       let {
         closePopout: t
       } = e;
-      return i ? (0, s.jsx)(E.default, {
-        children: (0, s.jsx)(h, {
+      return i ? (0, s.jsx)(f.default, {
+        children: (0, s.jsx)(g, {
           ...c,
           quest: r,
           questContent: u,
           questContentPosition: d,
           onClose: t
         })
-      }) : (0, s.jsx)(h, {
+      }) : (0, s.jsx)(g, {
         ...c,
         quest: r,
         questContent: u,

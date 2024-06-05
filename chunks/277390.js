@@ -1,81 +1,81 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(s), t.d(s, {
   QRCodeOverlaySizes: function() {
-    return n
+    return a
   },
   QRCodeWithOverlay: function() {
     return E
   }
 });
-var a, n, i, l, r = s("735250"),
-  o = s("470079"),
-  u = s("253483"),
-  d = s("81834");
+var r, a, o, l, n = t("735250"),
+  i = t("470079"),
+  d = t("253483"),
+  c = t("81834");
 
-function c(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: s,
+function u(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
-}(a = n || (n = {})).SIZE_40 = "SIZE_40", a.SIZE_60 = "SIZE_60";
-let p = Object.freeze({
+  }) : e[s] = t, e
+}(r = a || (a = {})).SIZE_40 = "SIZE_40", r.SIZE_60 = "SIZE_60";
+let C = Object.freeze({
     SIZE_40: "size-40",
     SIZE_60: "size-60"
   }),
-  f = s("515695");
-class m extends(i = o.PureComponent) {
+  _ = t("515695");
+class f extends(o = i.PureComponent) {
   render() {
     let {
       className: e,
-      text: t,
-      ...s
+      text: s,
+      ...t
     } = this.props;
-    return (0, r.jsx)("div", {
+    return (0, n.jsx)("div", {
       style: {
         padding: 8,
         borderRadius: 4,
-        width: s.size,
-        height: s.size,
-        backgroundColor: s.bgColor
+        width: t.size,
+        height: t.size,
+        backgroundColor: t.bgColor
       },
       className: e,
-      children: (0, r.jsx)(u.default, {
-        value: t,
+      children: (0, n.jsx)(d.default, {
+        value: s,
         level: "M",
-        ...s
+        ...t
       })
     })
   }
 }
-c(m, "defaultProps", {
+u(f, "defaultProps", {
   size: 128,
   bgColor: "#ffffff",
   fgColor: "#000000"
 });
-class E extends(l = o.PureComponent) {
+class E extends(l = i.PureComponent) {
   render() {
     let {
       overlaySize: e
-    } = this.props, t = p[null != e ? e : "SIZE_40"];
-    return (0, r.jsxs)("div", {
-      className: d.qrCodeContainer,
-      children: [(0, r.jsx)(m, {
+    } = this.props, s = C[null != e ? e : "SIZE_40"];
+    return (0, n.jsxs)("div", {
+      className: c.qrCodeContainer,
+      children: [(0, n.jsx)(f, {
         ...this.props
-      }), (0, r.jsx)("div", {
-        className: d.qrCodeOverlay,
-        children: (0, r.jsx)("img", {
-          className: d[t],
-          src: f,
+      }), (0, n.jsx)("div", {
+        className: c.qrCodeOverlay,
+        children: (0, n.jsx)("img", {
+          className: c[s],
+          src: _,
           alt: ""
         })
       })]
     })
   }
 }
-c(E, "defaultProps", {
+u(E, "defaultProps", {
   size: 144,
   bgColor: "#ffffff",
   fgColor: "#000000"
-}), t.default = m
+}), s.default = f

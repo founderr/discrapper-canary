@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return N
   }
 });
 var s = l("735250"),
@@ -27,27 +27,27 @@ var s = l("735250"),
   U = l("689938"),
   A = l("921152");
 
-function C(e) {
+function N(e) {
   var t;
   let {
     user: l,
     displayProfile: a,
-    autoFocusNote: C = !1,
-    scrollToConnections: N = !1
+    autoFocusNote: N = !1,
+    scrollToConnections: C = !1
   } = e, {
     trackUserProfileAction: R
-  } = (0, I.useUserProfileAnalyticsContext)(), h = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
-    theme: P
+  } = (0, I.useUserProfileAnalyticsContext)(), P = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
+    theme: h
   } = (0, p.useUserProfileThemeContext)(), M = (0, o.useStateFromStores)([S.default], () => S.default.locale), y = (0, f.useIsUserRecentGamesEnabled)({
     userId: l.id,
     location: "28tk0bf_3"
   }), j = (0, d.default)("user_profile"), F = (0, m.default)(l.id), L = i.useRef(null);
   return (i.useLayoutEffect(() => {
-    if (N) {
+    if (C) {
       var e;
       null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [N]), h) ? (0, s.jsx)(x.default, {}) : (0, s.jsxs)(r.ScrollerThin, {
+  }, [C]), P) ? (0, s.jsx)(x.default, {}) : (0, s.jsxs)(r.ScrollerThin, {
     fade: !0,
     className: A.infoScroller,
     children: [(0, s.jsxs)("div", {
@@ -88,7 +88,7 @@ function C(e) {
         children: U.default.Messages.NOTE
       }), (0, s.jsx)(u.default, {
         userId: l.id,
-        autoFocus: C,
+        autoFocus: N,
         className: A.note,
         onUpdate: () => R({
           action: "SET_NOTE"
@@ -97,7 +97,7 @@ function C(e) {
     }), (0, s.jsx)(T.ConnectedUserAccounts, {
       ref: L,
       connectedAccounts: F,
-      theme: P,
+      theme: h,
       locale: M,
       className: A.userInfoSection,
       userId: l.id

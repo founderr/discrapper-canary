@@ -14,15 +14,15 @@ var a = s("735250"),
   T = s("960359"),
   _ = s("853197"),
   I = s("430492"),
-  f = s("688465"),
-  m = s("594174"),
-  N = s("55935"),
-  g = s("702512"),
-  h = s("689938"),
-  C = s("193225");
-let O = "YYYY-MM-DD HH:mm";
+  N = s("688465"),
+  f = s("594174"),
+  g = s("55935"),
+  m = s("702512"),
+  C = s("689938"),
+  A = s("193225");
+let h = "YYYY-MM-DD HH:mm";
 
-function A(e) {
+function O(e) {
   let {
     drop: t,
     enrolled: s,
@@ -40,32 +40,32 @@ function A(e) {
   let {
     title: u,
     endDate: I,
-    dropsQuestId: f,
-    assets: m,
-    articleUrl: N
-  } = t, g = (0, _.getDropByQuestId)(f);
-  if (null == g) return null;
-  let O = () => {
-    (0, T.enrollDropsUser)(f).then(() => {
+    dropsQuestId: N,
+    assets: f,
+    articleUrl: g
+  } = t, m = (0, _.getDropByQuestId)(N);
+  if (null == m) return null;
+  let h = () => {
+    (0, T.enrollDropsUser)(N).then(() => {
       S.default.wait(async () => {
         await (0, T.fetchDropsUserStatus)()
       })
     })
   };
   return (0, a.jsxs)("div", {
-    className: C.dropContainer,
+    className: A.dropContainer,
     children: [(0, a.jsx)("div", {
-      className: C.dropCard,
+      className: A.dropCard,
       children: (0, a.jsxs)("div", {
-        className: C.mainPromotionCardContainer,
+        className: A.mainPromotionCardContainer,
         children: [(0, a.jsxs)("div", {
-          className: C.promotionCardLeftContainer,
+          className: A.promotionCardLeftContainer,
           children: [(0, a.jsx)("div", {
-            className: C.promotionIcon,
+            className: A.promotionIcon,
             children: (0, a.jsx)("img", {
               alt: "",
-              src: m.iconSrc,
-              className: C.promotionIconImage
+              src: f.iconSrc,
+              className: A.promotionIconImage
             })
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(c.Heading, {
@@ -74,46 +74,46 @@ function A(e) {
             }), (0, a.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "text-normal",
-              className: C.availableUntil,
-              children: h.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+              className: A.availableUntil,
+              children: C.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
                 endDate: o()(I, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
               })
             })]
           })]
         }), (0, a.jsx)(c.Tooltip, {
-          text: s && !l ? h.default.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
-          tooltipContentClassName: C.redeemTooltipContent,
+          text: s && !l ? C.default.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
+          tooltipContentClassName: A.redeemTooltipContent,
           children: e => (0, a.jsx)(c.Button, {
-            className: C.promotionCardButton,
+            className: A.promotionCardButton,
             color: c.Button.Colors.BRAND,
             size: c.Button.Sizes.SMALL,
-            onClick: O,
+            onClick: h,
             disabled: s && !l,
             ...e,
-            children: s ? h.default.Messages.REDEEM : h.default.Messages.DROPS_GIFT_INVENTORY_ENROLL
+            children: s ? C.default.Messages.REDEEM : C.default.Messages.DROPS_GIFT_INVENTORY_ENROLL
           })
         })]
       })
     }), (0, a.jsxs)("div", {
-      className: C.dropCriteria,
+      className: A.dropCriteria,
       children: [(0, a.jsx)("img", {
         alt: "",
-        src: m.rewardSrc,
-        className: C.dropRewardImage
+        src: f.rewardSrc,
+        className: A.dropRewardImage
       }), (0, a.jsx)("div", {
         ref: i,
         children: (0, a.jsx)(c.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          className: C.dropCriteriaText,
-          children: g.messages.giftInfo()
+          className: A.dropCriteriaText,
+          children: m.messages.giftInfo()
         })
       }), (0, a.jsx)(c.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
-        className: C.dropLearnMore,
-        children: h.default.Messages.DROPS_LEARN_MORE.format({
-          faqUrl: N
+        className: A.dropLearnMore,
+        children: C.default.Messages.DROPS_LEARN_MORE.format({
+          faqUrl: g
         })
       })]
     })]
@@ -125,22 +125,22 @@ function p(e) {
     drop: t,
     code: s,
     platform: l
-  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, N.dateFormat)(o()(t.endDate), "LL"), E = h.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, g.dateFormat)(o()(t.endDate), "LL"), E = C.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: S
-  }), T = u ? h.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : h.default.Messages.PROMOTION_CARD_ACTION_CLAIM, _ = n.useCallback(() => d(!1), []);
+  }), T = u ? C.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : C.default.Messages.PROMOTION_CARD_ACTION_CLAIM, _ = n.useCallback(() => d(!1), []);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: i()(C.skuCard, C.promotionCard),
+      className: i()(A.skuCard, A.promotionCard),
       children: (0, a.jsxs)("div", {
-        className: C.mainPromotionCardContainer,
+        className: A.mainPromotionCardContainer,
         children: [(0, a.jsxs)("div", {
-          className: C.promotionCardLeftContainer,
+          className: A.promotionCardLeftContainer,
           children: [(0, a.jsx)("div", {
-            className: C.promotionIcon,
+            className: A.promotionIcon,
             children: (0, a.jsx)("img", {
               alt: "",
               src: t.assets.iconSrc,
-              className: C.promotionIconImage
+              className: A.promotionIconImage
             })
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(c.Heading, {
@@ -149,7 +149,7 @@ function p(e) {
             }), (0, a.jsx)(c.Text, {
               variant: "text-sm/normal",
               color: "text-normal",
-              className: C.__invalid_promotionText,
+              className: A.__invalid_promotionText,
               children: E
             })]
           })]
@@ -177,7 +177,7 @@ t.default = function(e) {
   let {
     dropsOptedOut: s,
     dropsStatuses: n
-  } = e, l = [], i = [], r = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), d = !1;
+  } = e, l = [], i = [], r = (0, u.useStateFromStores)([f.default], () => f.default.getCurrentUser()), d = !1;
   if (null == n) return null;
   for (let e of Object.keys(n)) {
     let t = (0, _.getDropByQuestId)(e);
@@ -203,14 +203,14 @@ t.default = function(e) {
         autoTrackExposure: !1
       }).dropsEnabled) continue;
     d = !0;
-    let T = o()(t.endDate, O),
+    let T = o()(t.endDate, h),
       I = o()();
     c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible ? I < T && l.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
       experiment: S
-    }) : (null != s.code || null != s.completed_at) && I < o()(t.finalClaimDate, O) && i.push({
+    }) : (null != s.code || null != s.completed_at) && I < o()(t.finalClaimDate, h) && i.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
@@ -218,32 +218,32 @@ t.default = function(e) {
     })
   }
   let S = (0, a.jsxs)("div", {
-    className: C.dropsHeaderContainer,
+    className: A.dropsHeaderContainer,
     children: [(0, a.jsx)(c.Heading, {
       variant: "heading-md/semibold",
-      children: h.default.Messages.DROPS_GIFT_INVENTORY_TITLE
-    }), (0, a.jsx)(f.default, {
-      className: C.betaTagIcon
+      children: C.default.Messages.DROPS_GIFT_INVENTORY_TITLE
+    }), (0, a.jsx)(N.default, {
+      className: A.betaTagIcon
     })]
   });
   return d && 0 === l.length && 0 === i.length && s ? (0, a.jsxs)(c.FormSection, {
     children: [S, (0, a.jsx)(c.FormDivider, {
-      className: C.divider
+      className: A.divider
     }), (0, a.jsx)("div", {
-      className: C.dropsHelpText,
-      children: h.default.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
-        blogURL: g.DropsFaqUrl
+      className: A.dropsHelpText,
+      children: C.default.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
+        blogURL: m.DropsFaqUrl
       })
     })]
   }) : 0 === l.length && 0 === i.length ? null : (0, a.jsxs)(c.FormSection, {
     children: [S, (0, a.jsx)(c.FormDivider, {
-      className: C.divider
+      className: A.divider
     }), l.map(e => {
       let t = (0, _.getDropByQuestId)(e.dropsQuestId),
         s = null != e.dropsStatus.enrolled_at,
         n = null != e.dropsStatus.completed_at;
       return null != t ? (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(A, {
+        children: [(0, a.jsx)(O, {
           drop: {
             ...t
           },
@@ -270,8 +270,8 @@ t.default = function(e) {
         })]
       }) : null
     }), "string" == typeof(null == r ? void 0 : r.id) && i.length > 0 ? (0, a.jsx)("div", {
-      className: C.feedback,
-      children: h.default.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
+      className: A.feedback,
+      children: C.default.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
         feedbackURL: "https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id=".concat(null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "")
       })
     }) : null]

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return G
+    return j
   }
 }), s("47120"), s("653041"), s("536091");
 var a = s("735250"),
@@ -67,7 +67,7 @@ function v(e) {
   })
 }
 
-function G(e) {
+function j(e) {
   let {
     guild: t,
     role: s,
@@ -76,9 +76,9 @@ function G(e) {
     integrations: o
   } = e, {
     headerHeight: _,
-    headerRef: G
+    headerRef: j
   } = (0, g.default)(0), {
-    scrolledToTop: j,
+    scrolledToTop: G,
     handleScroll: U
   } = (0, C.useScrolledToTop)(), P = (0, d.useStateFromStores)([f.default], () => {
     var e;
@@ -86,18 +86,18 @@ function G(e) {
   }, [s.id, t.id]), b = (0, d.useStateFromStoresArray)([N.default], () => {
     var e;
     return null !== (e = N.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
-  }), y = b.length > 1 ? E.ConnectionConfigurationRuleOperator.OR : E.ConnectionConfigurationRuleOperator.AND, B = l.useMemo(() => y === E.ConnectionConfigurationRuleOperator.OR ? b.flat() : null != b && b.length > 0 ? b[0] : [], [y, b]), F = l.useMemo(() => new Set(B.map(e => e.connectionType)), [B]);
+  }), B = b.length > 1 ? E.ConnectionConfigurationRuleOperator.OR : E.ConnectionConfigurationRuleOperator.AND, y = l.useMemo(() => B === E.ConnectionConfigurationRuleOperator.OR ? b.flat() : null != b && b.length > 0 ? b[0] : [], [B, b]), F = l.useMemo(() => new Set(y.map(e => e.connectionType)), [y]);
 
   function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-      a = [...B];
+      a = [...y];
     a.push({
       connectionType: e,
       connectionMetadataField: void 0,
       applicationId: t,
       operator: void 0,
       value: void 0
-    }), (0, m.updateRoleConnectionConfigurations)(s.id, D(a, y))
+    }), (0, m.updateRoleConnectionConfigurations)(s.id, D(a, B))
   }
 
   function k() {
@@ -110,14 +110,14 @@ function G(e) {
     })
   }
   let w = null;
-  if (0 === B.length) w = (0, a.jsx)(v, {
+  if (0 === y.length) w = (0, a.jsx)(v, {
     handleAddVerificationClicked: k,
     locked: n
   });
-  else if (B.length > 0) {
+  else if (y.length > 0) {
     var V, Y;
     let e = null;
-    B.length < 10 && (e = (0, a.jsx)(u.Button, {
+    y.length < 10 && (e = (0, a.jsx)(u.Button, {
       className: i()(p.addVerificationButton, p.addVerificationButtonAppend),
       size: u.Button.Sizes.LARGE,
       look: u.Button.Looks.BLANK,
@@ -172,7 +172,7 @@ function G(e) {
             "aria-labelledby": M
           })
         })
-      }(n, s.id, y, B, (e, t) => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, t))), function(e, t, s, l, n) {
+      }(n, s.id, B, y, (e, t) => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, t))), function(e, t, s, l, n) {
         function i(s, a) {
           let l = [];
           for (let t of e) l.push({
@@ -225,7 +225,7 @@ function G(e) {
             integrations: n
           }, e[0].configuration.connectionType + ":" + e[0].index))
         })
-      }(B, e => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, y)), n, s.id, o), e]
+      }(y, e => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, B)), n, s.id, o), e]
     })
   }
   return (0, a.jsx)(u.AdvancedScrollerAuto, {
@@ -238,9 +238,9 @@ function G(e) {
       className: A.contentWidth,
       children: [(0, a.jsx)("div", {
         className: i()(A.header, A.stickyHeader, {
-          [A.stickyHeaderElevated]: !j
+          [A.stickyHeaderElevated]: !G
         }),
-        ref: G,
+        ref: j,
         children: (0, a.jsx)(C.default, {
           guild: t,
           role: s,

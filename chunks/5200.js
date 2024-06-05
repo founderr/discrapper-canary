@@ -36,7 +36,7 @@ function T(e) {
     onActivityItemSelected: I,
     imageBackground: A,
     activityAction: v,
-    labelType: x
+    labelType: N
   } = (0, f.default)({
     channel: n,
     activityItem: a,
@@ -45,9 +45,9 @@ function T(e) {
     onActivityItemSelected: l,
     embeddedActivitiesManager: p.default,
     assetNames: S
-  }), [N, M] = i.useState(!1), y = i.useCallback(() => {
+  }), [x, M] = i.useState(!1), R = i.useCallback(() => {
     M(!0)
-  }, [M]), R = i.useCallback(() => {
+  }, [M]), y = i.useCallback(() => {
     M(!1)
   }, [M]), L = i.useMemo(() => (0, s.jsx)("div", {
     className: g.overlayBadge,
@@ -55,10 +55,10 @@ function T(e) {
       className: g.badgeContainer,
       children: (0, s.jsx)(m.default, {
         name: a.application.name,
-        labelType: x
+        labelType: N
       })
     })
-  }), [a.application.name, x]), O = i.useMemo(() => {
+  }), [a.application.name, N]), O = i.useMemo(() => {
     switch (v) {
       case f.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
@@ -94,10 +94,10 @@ function T(e) {
     color: "transparent",
     look: d.Button.Looks.BLANK,
     size: d.Button.Sizes.NONE,
-    onFocus: y,
-    onBlur: R,
-    onMouseEnter: y,
-    onMouseLeave: R,
+    onFocus: R,
+    onBlur: y,
+    onMouseEnter: R,
+    onMouseLeave: y,
     innerClassName: g.activityItemButtonInnerClass,
     children: (0, s.jsx)(u.Spring, {
       config: _,
@@ -105,7 +105,7 @@ function T(e) {
         value: 0
       },
       to: {
-        value: N ? 1 : 0
+        value: x ? 1 : 0
       },
       children: e => {
         let {

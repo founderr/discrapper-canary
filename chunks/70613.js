@@ -68,13 +68,13 @@ function c(e) {
     className: t,
     firing: s = !0,
     wind: c = 2
-  } = e, [d, C] = a.useState(null), [E, f] = a.useState(null), p = (0, r.useConfettiCannon)(E, d), m = a.useMemo(() => new r.Environment({
+  } = e, [d, C] = a.useState(null), [p, E] = a.useState(null), A = (0, r.useConfettiCannon)(p, d), f = a.useMemo(() => new r.Environment({
     wind: c
-  }), [c]), A = a.useCallback(() => {
-    let e = null == E ? void 0 : E.getCanvas();
+  }), [c]), _ = a.useCallback(() => {
+    let e = null == p ? void 0 : p.getCanvas();
     if (null == e) return;
     let t = e.getBoundingClientRect();
-    p.createConfetti({
+    A.createConfetti({
       ...o,
       position: {
         type: "static-random",
@@ -88,15 +88,15 @@ function c(e) {
         }
       }
     })
-  }, [p, E]);
+  }, [A, p]);
   return a.useEffect(() => {
-    let e = s ? setInterval(A, u) : null;
+    let e = s ? setInterval(_, u) : null;
     return () => clearInterval(e)
-  }, [s, A]), (0, n.jsxs)(n.Fragment, {
+  }, [s, _]), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(r.ConfettiCanvas, {
-      ref: f,
+      ref: E,
       className: t,
-      environment: m
+      environment: f
     }), (0, n.jsx)(r.SpriteCanvas, {
       ref: C,
       colors: l,

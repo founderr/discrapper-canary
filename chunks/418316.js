@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a = n("924301");
+var s = n("924301");
 n("57132");
-var l = n("430824"),
-  s = n("699516"),
+var a = n("430824"),
+  l = n("699516"),
   i = n("594174"),
   r = n("624138"),
   o = n("51144"),
@@ -16,42 +16,42 @@ var l = n("430824"),
   c = n("689938");
 
 function f(e) {
-  var t, n, f, h, E, m, p, S, g, _, N, T, I, C, A;
-  let v = null !== (f = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== f ? f : d.EMPTY_STRING_SNOWFLAKE_ID,
-    M = o.default.getName(i.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
+  var t, n, f, E, _, m, T, I, p, h, N, S, C, g, A;
+  let M = null !== (f = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== f ? f : d.EMPTY_STRING_SNOWFLAKE_ID,
+    R = o.default.getName(i.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
   switch (e.type) {
     case u.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS:
       return c.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({
-        username: "**".concat(M, "**")
+        username: "**".concat(R, "**")
       });
     case u.NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED:
-      let R = o.default.getName(i.default.getUser(null === (E = e.other_users) || void 0 === E ? void 0 : null === (h = E[0]) || void 0 === h ? void 0 : h.id)),
-        x = o.default.getName(i.default.getUser(null === (p = e.other_users) || void 0 === p ? void 0 : null === (m = p[1]) || void 0 === m ? void 0 : m.id)),
-        L = Math.max((null !== (g = null === (S = e.other_users) || void 0 === S ? void 0 : S.length) && void 0 !== g ? g : 0) - 2, 0);
+      let v = o.default.getName(i.default.getUser(null === (_ = e.other_users) || void 0 === _ ? void 0 : null === (E = _[0]) || void 0 === E ? void 0 : E.id)),
+        O = o.default.getName(i.default.getUser(null === (T = e.other_users) || void 0 === T ? void 0 : null === (m = T[1]) || void 0 === m ? void 0 : m.id)),
+        x = Math.max((null !== (p = null === (I = e.other_users) || void 0 === I ? void 0 : I.length) && void 0 !== p ? p : 0) - 2, 0);
       return c.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUESTS.format({
-        user: R,
-        user2: x,
-        count: L
+        user: v,
+        user2: O,
+        count: x
       });
     case u.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE:
-      let O = null !== (N = null === (_ = e.local_id) || void 0 === _ ? void 0 : _.split("_").pop()) && void 0 !== N ? N : "unknown";
-      return "Update to build ".concat(O, " available!");
+      let L = null !== (N = null === (h = e.local_id) || void 0 === h ? void 0 : h.split("_").pop()) && void 0 !== N ? N : "unknown";
+      return "Update to build ".concat(L, " available!");
     case u.NotificationCenterItems.FRIEND_SUGGESTION_CREATED:
-      let b = s.default.getRelationshipType(v) === d.RelationshipTypes.PENDING_OUTGOING;
-      return null !== (T = e.body) && void 0 !== T ? T : "";
+      let D = l.default.getRelationshipType(M) === d.RelationshipTypes.PENDING_OUTGOING;
+      return null !== (S = e.body) && void 0 !== S ? S : "";
     case u.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED:
-      let y = e.guild_scheduled_event_id,
-        F = null != y ? a.default.getGuildScheduledEvent(y) : null,
-        D = null == F ? void 0 : F.name,
-        j = null === (I = l.default.getGuild(null == F ? void 0 : F.guild_id)) || void 0 === I ? void 0 : I.name,
-        U = (0, a.isGuildEventEnded)(null != F ? F : void 0);
-      return (0, r.isNullOrEmpty)(j) || (0, r.isNullOrEmpty)(D) || !U ? null !== (C = e.body) && void 0 !== C ? C : "" : c.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
-        event_name: D,
+      let P = e.guild_scheduled_event_id,
+        y = null != P ? s.default.getGuildScheduledEvent(P) : null,
+        U = null == y ? void 0 : y.name,
+        j = null === (C = a.default.getGuild(null == y ? void 0 : y.guild_id)) || void 0 === C ? void 0 : C.name,
+        b = (0, s.isGuildEventEnded)(null != y ? y : void 0);
+      return (0, r.isNullOrEmpty)(j) || (0, r.isNullOrEmpty)(U) || !b ? null !== (g = e.body) && void 0 !== g ? g : "" : c.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
+        event_name: U,
         guild_name: j
       });
     case u.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED:
       return c.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST_ACCEPTED.format({
-        username: "**".concat(M, "**")
+        username: "**".concat(R, "**")
       })
   }
   return null !== (A = e.body) && void 0 !== A ? A : ""

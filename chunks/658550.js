@@ -1,58 +1,58 @@
 "use strict";
 s.r(t), s.d(t, {
   BACKUP_CODE_MAX_LENGTH: function() {
-    return a
+    return l
   },
   BACKUP_CODE_MIN_LENGTH: function() {
-    return n
+    return a
   },
   SMS_CODE_LENGTH: function() {
-    return o
+    return i
   },
   TOTP_CODE_LENGTH: function() {
-    return i
+    return r
   },
   trySubmit: function() {
     return u
   }
 }), s("411104");
-var l = s("544891");
-let n = 8,
-  a = 11,
-  i = 6,
-  o = 6;
-async function r(e) {
+var n = s("544891");
+let a = 8,
+  l = 11,
+  r = 6,
+  i = 6;
+async function o(e) {
   let {
     ticket: t,
     mfaType: s,
-    data: n
-  } = e, a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+    data: a
+  } = e, l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
   try {
-    return (await l.HTTP.post({
+    return (await n.HTTP.post({
       url: "/mfa/finish",
       body: {
         ticket: t,
         mfa_type: s,
-        data: n
+        data: a
       },
-      retries: a
+      retries: l
     })).body
   } catch (e) {
-    var i;
-    if (null === (i = e.body) || void 0 === i ? void 0 : i.message) throw Error(e.body.message);
+    var r;
+    if (null === (r = e.body) || void 0 === r ? void 0 : r.message) throw Error(e.body.message);
     throw e
   }
 }
 async function u(e, t) {
   let {
     token: s
-  } = await r(e);
-  return new Promise((e, l) => {
+  } = await o(e);
+  return new Promise((e, n) => {
     t({
       "X-Discord-MFA-Authorization": s
     }, t => {
-      var s, n;
-      return (null === (s = t.body) || void 0 === s ? void 0 : s.code) === 60008 || (null === (n = t.body) || void 0 === n ? void 0 : n.code) === 60003 ? (l(Error(t.body.message)), !0) : (e(), !1)
+      var s, a;
+      return (null === (s = t.body) || void 0 === s ? void 0 : s.code) === 60008 || (null === (a = t.body) || void 0 === a ? void 0 : a.code) === 60003 ? (n(Error(t.body.message)), !0) : (e(), !1)
     })
   })
 }

@@ -1,124 +1,124 @@
 "use strict";
 n.r(t), n("789020");
-var a = n("735250"),
-  l = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
+var s = n("735250"),
+  a = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
   r = n("442837"),
   o = n("25610"),
   u = n("703751"),
   d = n("628238"),
   c = n("976853"),
   f = n("977683"),
-  h = n("869765"),
-  E = n("695346"),
+  E = n("869765"),
+  _ = n("695346"),
   m = n("592125"),
-  p = n("699516"),
-  S = n("465670"),
-  g = n("998951"),
-  _ = n("702346"),
+  T = n("699516"),
+  I = n("465670"),
+  p = n("998951"),
+  h = n("702346"),
   N = n("630388"),
-  T = n("709054"),
-  I = n("493892"),
-  C = n("901461"),
+  S = n("709054"),
+  C = n("493892"),
+  g = n("901461"),
   A = n("739566"),
-  v = n("443877"),
-  M = n("938353"),
-  R = n("25015"),
-  x = n("689674"),
-  L = n("963550"),
-  O = n("845080"),
-  b = n("295790"),
-  y = n("145807"),
-  F = n("56744"),
-  D = n("981631"),
+  M = n("443877"),
+  R = n("938353"),
+  v = n("25015"),
+  O = n("689674"),
+  x = n("963550"),
+  L = n("845080"),
+  D = n("295790"),
+  P = n("145807"),
+  y = n("56744"),
+  U = n("981631"),
   j = n("689938"),
-  U = n("268283"),
-  P = n("373947");
+  b = n("268283"),
+  F = n("373947");
 
-function k(e) {
+function B(e) {
   let {
     className: t,
     count: n,
-    compact: l,
-    collapsedReason: s
+    compact: a,
+    collapsedReason: l
   } = e;
-  return (0, a.jsx)(g.default, {
+  return (0, s.jsx)(p.default, {
     className: t,
-    compact: l,
+    compact: a,
     role: "group",
-    childrenMessageContent: (0, a.jsx)(_.default, {
-      compact: l,
-      className: U.blockedSystemMessage,
-      iconNode: (0, a.jsx)(S.default, {
-        className: U.blockedIcon
+    childrenMessageContent: (0, s.jsx)(h.default, {
+      compact: a,
+      className: b.blockedSystemMessage,
+      iconNode: (0, s.jsx)(I.default, {
+        className: b.blockedIcon
       }),
-      children: (0, a.jsx)("div", {
-        className: U.blockedMessageText,
-        children: s.format({
+      children: (0, s.jsx)("div", {
+        className: b.blockedMessageText,
+        children: l.format({
           count: n
         })
       })
     })
   })
 }
-t.default = l.memo(function e(t) {
+t.default = a.memo(function e(t) {
   var n;
-  let l;
+  let a;
   let {
-    channel: s,
-    message: S,
-    compact: _ = !1,
-    className: U,
-    onContextMenu: w,
-    onClick: G,
-    disableInteraction: B = !1,
+    channel: l,
+    message: I,
+    compact: h = !1,
+    className: b,
+    onContextMenu: G,
+    onClick: k,
+    disableInteraction: w = !1,
     hasThread: H,
     treatSpam: V
-  } = t, Y = D.MessageTypesWithLazyLoadedReferences.has(S.type) ? S.messageReference : void 0, K = (0, r.useStateFromStores)([h.default], () => h.default.getMessageByReference(Y)), z = (0, r.useStateFromStores)([m.default], () => S.type === D.MessageTypes.THREAD_STARTER_MESSAGE && K.state === h.ReferencedMessageState.LOADED ? m.default.getChannel(K.message.channel_id) : null), Q = E.InlineAttachmentMedia.useSetting(), W = E.InlineEmbedMedia.useSetting(), X = E.RenderEmbeds.useSetting(), q = E.GifAutoPlay.useSetting(), Z = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = S.editedTimestamp) && void 0 !== n ? n : S.timestamp).valueOf()), J = (0, c.default)(null == s ? void 0 : s.id), {
+  } = t, Y = U.MessageTypesWithLazyLoadedReferences.has(I.type) ? I.messageReference : void 0, K = (0, r.useStateFromStores)([E.default], () => E.default.getMessageByReference(Y)), W = (0, r.useStateFromStores)([m.default], () => I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED ? m.default.getChannel(K.message.channel_id) : null), z = _.InlineAttachmentMedia.useSetting(), Q = _.InlineEmbedMedia.useSetting(), q = _.RenderEmbeds.useSetting(), X = _.GifAutoPlay.useSetting(), Z = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()), J = (0, c.default)(null == l ? void 0 : l.id), {
     disableReactionCreates: $
-  } = (0, v.default)(s), {
+  } = (0, M.default)(l), {
     content: ee,
     hasSpoilerEmbeds: et
-  } = (0, R.default)(S, {
-    hideSimpleEmbedContent: W && X,
+  } = (0, v.default)(I, {
+    hideSimpleEmbedContent: Q && q,
     allowList: Z,
     allowHeading: Z,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), en = (0, A.default)(S), ea = (0, r.useStateFromStores)([m.default], () => S.hasFlag(D.MessageFlags.HAS_THREAD) && m.default.getChannel(T.default.castMessageIdAsChannelId(S.id))), el = S.type === D.MessageTypes.THREAD_STARTER_MESSAGE && K.state === h.ReferencedMessageState.LOADED && null != z, es = !el && void 0 === l, ei = (0, x.default)({
-    message: S,
-    channel: s,
-    enabled: es
-  }), er = (0, o.useShouldRedactExplicitContent)(s.id, S.author.id), eo = (0, u.useShouldRenderReportFalsePositiveButton)(S.id), eu = (0, f.default)(S);
-  return el ? (0, a.jsx)(e, {
+  }), en = (0, A.default)(I), es = (0, r.useStateFromStores)([m.default], () => I.hasFlag(U.MessageFlags.HAS_THREAD) && m.default.getChannel(S.default.castMessageIdAsChannelId(I.id))), ea = I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED && null != W, el = !ea && void 0 === a, ei = (0, O.default)({
+    message: I,
+    channel: l,
+    enabled: el
+  }), er = (0, o.useShouldRedactExplicitContent)(l.id, I.author.id), eo = (0, u.useShouldRenderReportFalsePositiveButton)(I.id), eu = (0, f.default)(I);
+  return ea ? (0, s.jsx)(e, {
     ...t,
     message: K.message,
-    channel: z,
+    channel: W,
     hasThread: !1
-  }) : (p.default.isBlocked(S.author.id) ? l = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, I.isSpam)(S) && V && (l = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== l) ? (0, a.jsx)(k, {
-    className: U,
-    compact: _,
+  }) : (T.default.isBlocked(I.author.id) ? a = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(B, {
+    className: b,
+    compact: h,
     count: 1,
-    collapsedReason: l
-  }) : (0, a.jsx)(g.default, {
-    compact: _,
-    className: i()(U, {
-      [P.ephemeral]: (0, N.hasFlag)(S.flags, D.MessageFlags.EPHEMERAL),
-      [P.disableInteraction]: B,
-      [P.groupStart]: t.isGroupStart
+    collapsedReason: a
+  }) : (0, s.jsx)(p.default, {
+    compact: h,
+    className: i()(b, {
+      [F.ephemeral]: (0, N.hasFlag)(I.flags, U.MessageFlags.EPHEMERAL),
+      [F.disableInteraction]: w,
+      [F.groupStart]: t.isGroupStart
     }),
-    childrenRepliedMessage: (0, F.default)(S, s, Y, K, _),
-    childrenHeader: (0, O.default)({
+    childrenRepliedMessage: (0, y.default)(I, l, Y, K, h),
+    childrenHeader: (0, L.default)({
       ...t,
       author: en,
-      guildId: s.guild_id
+      guildId: l.guild_id
     }),
-    childrenAccessories: (0, a.jsx)(M.MessageAccessories, {
-      channel: s,
-      message: S,
+    childrenAccessories: (0, s.jsx)(R.MessageAccessories, {
+      channel: l,
+      message: I,
       hasSpoilerEmbeds: et,
-      compact: _,
+      compact: h,
       canSuppressEmbeds: !1,
       canDeleteAttachments: !1,
       disableReactionReads: !1,
@@ -126,10 +126,10 @@ t.default = l.memo(function e(t) {
       disableReactionUpdates: !1,
       renderThreadAccessory: H,
       renderComponentAccessory: !1,
-      inlineAttachmentMedia: Q,
-      inlineEmbedMedia: W,
-      renderEmbeds: X,
-      gifAutoPlay: q,
+      inlineAttachmentMedia: z,
+      inlineEmbedMedia: Q,
+      renderEmbeds: q,
+      gifAutoPlay: X,
       poll: eu,
       showListsAndHeaders: Z,
       showMaskedLinks: Z,
@@ -138,14 +138,14 @@ t.default = l.memo(function e(t) {
       shouldRenderCtaButton: eo,
       hasInlineForwardButton: !1
     }),
-    childrenExecutedCommand: (0, y.default)(S, s, _),
-    childrenMessageContent: (0, L.default)(t, ee),
-    childrenSystemMessage: (0, b.default)(t),
-    onContextMenu: w,
-    onClick: G,
-    hasThread: !1 !== H && null != ea && S.hasFlag(D.MessageFlags.HAS_THREAD),
-    hasReply: S.type === D.MessageTypes.REPLY,
-    isSystemMessage: (0, C.default)(S),
+    childrenExecutedCommand: (0, P.default)(I, l, h),
+    childrenMessageContent: (0, x.default)(t, ee),
+    childrenSystemMessage: (0, D.default)(t),
+    onContextMenu: G,
+    onClick: k,
+    hasThread: !1 !== H && null != es && I.hasFlag(U.MessageFlags.HAS_THREAD),
+    hasReply: I.type === U.MessageTypes.REPLY,
+    isSystemMessage: (0, g.default)(I),
     messageRef: ei
   })
 })

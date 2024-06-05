@@ -13,12 +13,12 @@ var s = n("481060"),
   f = n("996106"),
   E = n("914946"),
   h = n("452426"),
-  C = n("852926"),
-  _ = n("186901"),
+  _ = n("852926"),
+  C = n("186901"),
   m = n("981631");
 t.default = {
   [m.RPCCommands.SET_OVERLAY_LOCKED]: {
-    scope: _.RPC_LOCAL_SCOPE,
+    scope: C.RPC_LOCAL_SCOPE,
     validation: e => (0, h.default)(e).required().keys({
       locked: e.boolean().required(),
       pid: e.number().min(0).required()
@@ -40,7 +40,7 @@ t.default = {
     }
   },
   [m.RPCCommands.OPEN_OVERLAY_ACTIVITY_INVITE]: {
-    scope: _.RPC_LOCAL_SCOPE,
+    scope: C.RPC_LOCAL_SCOPE,
     validation: e => (0, h.default)(e).required().keys({
       type: e.number().required().valid([m.ActivityActionTypes.JOIN]),
       pid: e.number().min(0).required()
@@ -62,7 +62,7 @@ t.default = {
       }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
       let {
         lock: r
-      } = (0, C.unlockOverlay)(a), o = (0, u.default)(l, c.default);
+      } = (0, _.unlockOverlay)(a), o = (0, u.default)(l, c.default);
       return (0, i.openModal)(l, o).then(() => {
         if (r(), o) throw new f.default({
           errorCode: m.RPCErrors.NO_ELIGIBLE_ACTIVITY
@@ -71,7 +71,7 @@ t.default = {
     }
   },
   [m.RPCCommands.OPEN_OVERLAY_GUILD_INVITE]: {
-    scope: _.RPC_LOCAL_SCOPE,
+    scope: C.RPC_LOCAL_SCOPE,
     validation: e => (0, h.default)(e).required().keys({
       code: e.string().required(),
       pid: e.number().min(0).required()
@@ -98,7 +98,7 @@ t.default = {
         let {
           context: s,
           lock: i
-        } = (0, C.unlockOverlay)(n);
+        } = (0, _.unlockOverlay)(n);
         return new Promise(e => {
           l.default.dispatch({
             type: "INVITE_MODAL_OPEN",
@@ -112,7 +112,7 @@ t.default = {
     }
   },
   [m.RPCCommands.OPEN_OVERLAY_VOICE_SETTINGS]: {
-    scope: _.RPC_LOCAL_SCOPE,
+    scope: C.RPC_LOCAL_SCOPE,
     validation: e => (0, h.default)(e).required().keys({
       pid: e.number().min(0).required()
     }),
@@ -128,7 +128,7 @@ t.default = {
       }, "No application.");
       let {
         lock: r
-      } = (0, C.unlockOverlay)(t);
+      } = (0, _.unlockOverlay)(t);
       return new Promise(e => {
         (0, s.openModalLazy)(async () => {
           let {

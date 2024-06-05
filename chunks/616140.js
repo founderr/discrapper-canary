@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return h
+    return P
   }
 }), l("653041"), l("627341"), l("47120");
 var s = l("735250"),
@@ -26,8 +26,8 @@ var s = l("735250"),
   x = l("228168"),
   U = l("981631"),
   A = l("689938"),
-  C = l("773386");
-let N = e => {
+  N = l("773386");
+let C = e => {
   var t, l;
   let {
     user: s,
@@ -83,7 +83,7 @@ function R(e) {
   })
 }
 
-function h(e) {
+function P(e) {
   var t, l;
   let {
     user: a,
@@ -93,37 +93,37 @@ function h(e) {
     onClose: I
   } = e, {
     trackUserProfileAction: m
-  } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = N({
+  } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = C({
     user: a,
     currentUser: _
-  }), [g, U] = i.useState(S), [A, h] = i.useState(null !== (l = null === (t = p.find(e => {
+  }), [g, U] = i.useState(S), [A, P] = i.useState(null !== (l = null === (t = p.find(e => {
     let {
       section: t
     } = e;
     return t === d
-  })) || void 0 === t ? void 0 : t.section) && void 0 !== l ? l : x.UserProfileSections.USER_INFO), P = i.useCallback(e => {
+  })) || void 0 === t ? void 0 : t.section) && void 0 !== l ? l : x.UserProfileSections.USER_INFO), h = i.useCallback(e => {
     m({
       action: "PRESS_SECTION",
       section: e
-    }), h(e), U(!1)
-  }, [m, h]);
+    }), P(e), U(!1)
+  }, [m, P]);
   return null == _ ? null : v ? (0, s.jsx)("div", {
-    className: C.container,
+    className: N.container,
     children: (0, s.jsx)(T.default, {})
   }) : (0, s.jsxs)("div", {
-    className: C.container,
+    className: N.container,
     children: [(0, s.jsx)(o.TabBar, {
-      className: C.tabBar,
+      className: N.tabBar,
       type: "top",
       selectedItem: A,
-      onItemSelect: P,
+      onItemSelect: h,
       children: p.map(e => {
         let {
           section: t,
           text: l
         } = e;
         return (0, s.jsx)(o.TabBar.Item, {
-          className: C.tabBarItem,
+          className: N.tabBarItem,
           id: t,
           "aria-label": l,
           children: (0, s.jsx)(r.Text, {

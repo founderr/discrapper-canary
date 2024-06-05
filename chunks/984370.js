@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   handleDoubleClick: function() {
-    return C
+    return g
   }
 });
-var a = n("735250");
+var s = n("735250");
 n("470079");
-var l = n("120356"),
-  s = n.n(l),
+var a = n("120356"),
+  l = n.n(a),
   i = n("873546"),
   r = n("442837"),
   o = n("100527"),
@@ -15,21 +15,21 @@ var l = n("120356"),
   d = n("320007"),
   c = n("141321"),
   f = n("208450"),
-  h = n("594174"),
-  E = n("502568"),
+  E = n("594174"),
+  _ = n("502568"),
   m = n("358085"),
-  p = n("998502"),
-  S = n("300986"),
-  g = n("314451"),
-  _ = n("35583"),
+  T = n("998502"),
+  I = n("300986"),
+  p = n("314451"),
+  h = n("35583"),
   N = n("981631"),
-  T = n("176505"),
-  I = n("504891");
-async function C() {
+  S = n("176505"),
+  C = n("504891");
+async function g() {
   if ((0, m.isMac)() && m.isPlatformEmbedded) {
     var e, t, n;
-    let a = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : "Maximize";
-    "Minimize" === a ? p.default.minimize() : "Maximize" === a && p.default.maximize()
+    let s = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : "Maximize";
+    "Minimize" === s ? T.default.minimize() : "Maximize" === s && T.default.maximize()
   }
 }
 
@@ -37,79 +37,79 @@ function A(e) {
   let {
     children: t,
     className: n,
-    channelId: l,
-    guildId: s,
+    channelId: a,
+    guildId: l,
     innerClassname: o,
     transparent: u = !1,
     toolbar: m,
-    mobileToolbar: p,
+    mobileToolbar: T,
     "aria-label": N,
-    "aria-labelledby": T,
+    "aria-labelledby": S,
     scrollable: A,
-    role: v,
-    hideSearch: M,
-    showDivider: R
-  } = e, x = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (null == x ? void 0 : x.isStaff()) || (null == x ? void 0 : x.isStaffPersonal()) || !1;
-  return (0, a.jsx)(E.default, {
+    role: M,
+    hideSearch: R,
+    showDivider: v
+  } = e, O = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), x = (null == O ? void 0 : O.isStaff()) || (null == O ? void 0 : O.isStaffPersonal()) || !1;
+  return (0, s.jsx)(_.default, {
     className: n,
     innerClassName: o,
     toolbar: function() {
       if (null == m) return null;
-      let e = null != l && !M;
-      return i.isMobile ? p : (0, a.jsxs)(a.Fragment, {
-        children: [m, e ? (0, a.jsx)(f.default, {
-          className: I.search
-        }, null != s ? s : l) : null, R && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(d.default, {
+      let e = null != a && !R;
+      return i.isMobile ? T : (0, s.jsxs)(s.Fragment, {
+        children: [m, e ? (0, s.jsx)(f.default, {
+          className: C.search
+        }, null != l ? l : a) : null, v && (0, s.jsx)(_.default.Divider, {}), (0, s.jsx)(h.default, {}), (0, s.jsx)(d.default, {
           canShowReminder: !0
-        }), (0, a.jsx)(c.default, {}), L ? (0, a.jsx)(g.default, {}) : (0, a.jsx)(S.default, {})]
+        }), (0, s.jsx)(c.default, {}), x ? (0, s.jsx)(p.default, {}) : (0, s.jsx)(I.default, {})]
       })
     }(),
     transparent: u,
-    onDoubleClick: C,
+    onDoubleClick: g,
     "aria-label": N,
-    "aria-labelledby": T,
-    role: v,
+    "aria-labelledby": S,
+    role: M,
     scrollable: A,
-    children: t
-  })
-}
-
-function v(e) {
-  let {
-    children: t,
-    className: n,
-    "aria-label": l,
-    "aria-labelledby": s,
-    role: i
-  } = e;
-  return (0, a.jsx)(E.default, {
-    className: n,
-    onDoubleClick: C,
-    "aria-label": l,
-    "aria-labelledby": s,
-    role: i,
     children: t
   })
 }
 
 function M(e) {
   let {
+    children: t,
+    className: n,
+    "aria-label": a,
+    "aria-labelledby": l,
+    role: i
+  } = e;
+  return (0, s.jsx)(_.default, {
+    className: n,
+    onDoubleClick: g,
+    "aria-label": a,
+    "aria-labelledby": l,
+    role: i,
+    children: t
+  })
+}
+
+function R(e) {
+  let {
     isAuthenticated: t = !0,
     ...n
   } = e, {
-    analyticsLocations: l
-  } = (0, u.default)(o.default.HEADER_BAR), i = s()(n.className, {
-    [I.forumOrHome]: null != n.channelType && N.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === T.StaticChannelRoute.GUILD_HOME
+    analyticsLocations: a
+  } = (0, u.default)(o.default.HEADER_BAR), i = l()(n.className, {
+    [C.forumOrHome]: null != n.channelType && N.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === S.StaticChannelRoute.GUILD_HOME
   });
-  return (0, a.jsx)(u.AnalyticsLocationProvider, {
-    value: l,
-    children: t ? (0, a.jsx)(A, {
+  return (0, s.jsx)(u.AnalyticsLocationProvider, {
+    value: a,
+    children: t ? (0, s.jsx)(A, {
       ...n,
       className: i
-    }) : (0, a.jsx)(v, {
+    }) : (0, s.jsx)(M, {
       ...n,
       className: i
     })
   })
 }
-M.Title = E.default.Title, M.Icon = E.default.Icon, M.Divider = E.default.Divider, M.Caret = E.default.Caret, t.default = M
+R.Title = _.default.Title, R.Icon = _.default.Icon, R.Divider = _.default.Divider, R.Caret = _.default.Caret, t.default = R

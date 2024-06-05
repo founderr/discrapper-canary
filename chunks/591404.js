@@ -1,7 +1,7 @@
 "use strict";
 r.r(t);
 var a = r("319301");
-let i = {
+let n = {
   figma: {
     category: "feedback"
   }
@@ -16,17 +16,17 @@ t.default = (0, a.defineColorTokens)({
       color: "green.400",
       opacity: .05
     },
-    meta: i
+    meta: n
   },
   "info-positive-foreground": {
     dark: "green.360",
     light: "green.400",
-    meta: i
+    meta: n
   },
   "info-positive-text": {
     dark: "white.500",
     light: "black.500",
-    meta: i
+    meta: n
   },
   "info-warning-background": {
     dark: {
@@ -37,17 +37,17 @@ t.default = (0, a.defineColorTokens)({
       color: "yellow.400",
       opacity: .1
     },
-    meta: i
+    meta: n
   },
   "info-warning-foreground": {
     dark: "yellow.300",
     light: "yellow.400",
-    meta: i
+    meta: n
   },
   "info-warning-text": {
     dark: "white.500",
     light: "black.500",
-    meta: i
+    meta: n
   },
   "info-danger-background": {
     dark: {
@@ -58,17 +58,17 @@ t.default = (0, a.defineColorTokens)({
       color: "red.430",
       opacity: .1
     },
-    meta: i
+    meta: n
   },
   "info-danger-foreground": {
     dark: "red.400",
     light: "red.430",
-    meta: i
+    meta: n
   },
   "info-danger-text": {
     dark: "white.500",
     light: "black.500",
-    meta: i
+    meta: n
   },
   "info-help-background": {
     dark: {
@@ -79,16 +79,16 @@ t.default = (0, a.defineColorTokens)({
       color: "blue.430",
       opacity: .1
     },
-    meta: i
+    meta: n
   },
   "info-help-foreground": {
     dark: "blue.345",
     light: "blue.430",
-    meta: i
+    meta: n
   },
   "info-help-text": {
     dark: "white.500",
     light: "black.500",
-    meta: i
+    meta: n
   }
 })

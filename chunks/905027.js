@@ -38,13 +38,13 @@ function E() {
       }
       i && (0, u.clearErrors)(), T(!1)
     }, [null == t ? void 0 : t.id]),
-    f = n.useCallback(() => {
+    N = n.useCallback(() => {
       (0, u.resetAllPending)()
     }, []);
   return (0, a.jsx)(i.default, {
     submitting: E,
     onSave: I,
-    onReset: f,
+    onReset: N,
     disabled: e,
     errorMessage: null != _ ? _ : void 0
   })

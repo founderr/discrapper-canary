@@ -72,7 +72,7 @@ t.default = l.memo(function(e) {
   let {
     member: t,
     onNavigate: n
-  } = e, s = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.guildId), [t.guildId]), u = (0, E.useUserPermissionsAndRoles)(t.userId, t.guildId, E.MOD_PERMISSIONS), c = (0, E.useUserPermissionsAndRoles)(t.userId, t.guildId, E.ALL_PERMISSIONS), f = Object.keys(u).length, I = Object.keys(c).length, A = l.useMemo(() => null != s ? m.default.getGuildPermissionSpecMap(s) : null, [s]), v = l.useMemo(() => null != s ? m.default.generateGuildPermissionSpec(s) : null, [s]), x = l.useMemo(() => {
+  } = e, s = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.guildId), [t.guildId]), u = (0, E.useUserPermissionsAndRoles)(t.userId, t.guildId, E.MOD_PERMISSIONS), c = (0, E.useUserPermissionsAndRoles)(t.userId, t.guildId, E.ALL_PERMISSIONS), f = Object.keys(u).length, I = Object.keys(c).length, A = l.useMemo(() => null != s ? m.default.getGuildPermissionSpecMap(s) : null, [s]), v = l.useMemo(() => null != s ? m.default.generateGuildPermissionSpec(s) : null, [s]), N = l.useMemo(() => {
     if (null == s || null == A) return null;
     if (0 === f) return (0, a.jsx)("div", {
       className: i()(_.permissionChiplet, _.noModPerms),
@@ -125,7 +125,7 @@ t.default = l.memo(function(e) {
       children: (0, a.jsx)(p.UserModInfoItem, {
         description: (0, a.jsx)("div", {
           className: _.permissionsContainer,
-          children: x
+          children: N
         })
       })
     })

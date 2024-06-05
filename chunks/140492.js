@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return f
   }
 }), n("47120"), n("733860");
 var i = n("718528"),
@@ -23,11 +23,11 @@ let S = () => {
   return [C.Routes.FRIENDS, r.default.hasLibraryApplication() && !d.DisableGamesTab.getSetting() ? C.Routes.APPLICATION_LIBRARY : null, C.Routes.APPLICATION_STORE, e ? C.Routes.MESSAGE_REQUESTS : null, C.Routes.COLLECTIBLES_SHOP, d.FamilyCenterEnabled.getSetting() ? C.Routes.FAMILY_CENTER : null].filter(_.isNotNullish)
 };
 
-function f(e, t) {
+function I(e, t) {
   (0, A.transitionToChannel)(e, t)
 }
 
-function I() {
+function f() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
     t = s.default.getState().guildId;
   null == t ? ! function(e) {
@@ -43,13 +43,13 @@ function I() {
     S().includes(d) ? ! function(e) {
       let t = E.default.getCurrentRoute();
       e === C.Routes.APPLICATION_STORE && null != t ? (0, A.transitionToPage)(t) : (0, A.transitionToPage)(e)
-    }(d) : f(C.ME, d)
+    }(d) : I(C.ME, d)
   }(e) : ! function(e, t) {
     var n, a;
     let u = s.default.getState().channelId,
       d = (0, i.default)(t).map(e => e.id);
     ((0, o.canSeeGuildHome)(t) || (0, l.canSeeOnboardingHome)(t)) && d.unshift(T.StaticChannelRoute.GUILD_HOME);
     let r = (n = (null != u ? d.indexOf(u) : -1) + e, a = d.length, n < 0 ? a - 1 : n >= a ? 0 : n);
-    f(t, d[r])
+    I(t, d[r])
   }(e, t)
 }

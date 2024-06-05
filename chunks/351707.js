@@ -39,15 +39,15 @@ function g(e) {
     let i = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== null,
       a = (null === (s = t.tags) || void 0 === s ? void 0 : s.guild_connections) !== null;
     return i && !a ? 1 : !i && a ? -1 : 0
-  }), [x, d]), A = E && null != u, C = i.useMemo(() => "roles-".concat((0, a.v4)()), []), N = (0, n.default)({
-    id: C,
+  }), [x, d]), A = E && null != u, N = i.useMemo(() => "roles-".concat((0, a.v4)()), []), C = (0, n.default)({
+    id: N,
     isEnabled: !0,
     scrollToStart: v.NOOP_PROMISE,
     scrollToEnd: v.NOOP_PROMISE,
     wrap: !0
-  }), R = U.length, h = 0 === R ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
+  }), R = U.length, P = 0 === R ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
     numRoles: R
-  }), P = U.map(e => {
+  }), h = U.map(e => {
     var i;
     return (0, s.jsx)(I.default, {
       role: e,
@@ -58,7 +58,7 @@ function g(e) {
     }, e.id)
   });
   return (0, s.jsx)(n.ListNavigatorProvider, {
-    navigator: N,
+    navigator: C,
     children: (0, s.jsx)(n.ListNavigatorContainer, {
       children: e => {
         let {
@@ -67,10 +67,10 @@ function g(e) {
         } = e;
         return (0, s.jsxs)("div", {
           className: T.root,
-          "aria-label": h,
+          "aria-label": P,
           ref: t,
           ...l,
-          children: [P, A && (0, s.jsx)(_.default, {
+          children: [h, A && (0, s.jsx)(_.default, {
             guild: r,
             guildMember: u,
             highestRole: f,

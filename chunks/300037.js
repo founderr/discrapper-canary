@@ -20,8 +20,8 @@ t.default = function(e) {
     className: t,
     guildId: s,
     boostingVariant: n
-  } = e, f = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(s), [s]);
-  return null == f ? (0, a.jsx)("div", {
+  } = e, N = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(s), [s]);
+  return null == N ? (0, a.jsx)("div", {
     className: l()(t, I.guildContainer),
     children: (0, a.jsx)("div", {
       className: I.guildInfoContainer,
@@ -34,13 +34,13 @@ t.default = function(e) {
     className: l()(t, I.guildContainer),
     children: [(0, a.jsx)(c.default, {
       className: I.__invalid_guildIcon,
-      guild: f,
+      guild: N,
       size: c.default.Sizes.LARGER
     }), (0, a.jsxs)("div", {
       className: I.guildInfoContainer,
       children: [(0, a.jsx)(r.Text, {
         variant: "text-lg/bold",
-        children: f.name
+        children: N.name
       }), (0, a.jsxs)("div", {
         className: I.guildBoostStatsContainer,
         children: [(0, a.jsx)(S.default, {
@@ -51,20 +51,20 @@ t.default = function(e) {
           variant: "text-sm/bold",
           color: "text-muted",
           children: _.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({
-            subscriptions: f.premiumSubscriberCount
+            subscriptions: N.premiumSubscriberCount
           })
         }), (0, a.jsx)("div", {
           className: I.separator
         }), (0, a.jsx)(r.Text, {
           variant: "text-sm/bold",
           color: "text-muted",
-          children: (0, E.getTierName)(f.premiumTier, {
+          children: (0, E.getTierName)(N.premiumTier, {
             useLevels: !1
           })
         })]
       })]
     }), n ? (0, a.jsx)(d.default, {
-      guild: f,
+      guild: N,
       analyticsLocation: {
         page: T.AnalyticsPages.GUILD_BOOSTING_USER_SETTINGS,
         section: T.AnalyticsSections.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
@@ -79,7 +79,7 @@ t.default = function(e) {
       color: r.Button.Colors.PRIMARY,
       onClick: () => {
         (0, o.openGuildBoostingMarketingModal)({
-          guildId: f.id,
+          guildId: N.id,
           location: {
             section: T.AnalyticsSections.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA
           }

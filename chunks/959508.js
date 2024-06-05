@@ -41,13 +41,13 @@ function L(e) {
     singleColumn: M,
     onPromptDragComplete: D,
     onPromptDragStart: v,
-    onPromptDragReset: G
+    onPromptDragReset: j
   } = e, {
-    dropdownsAllowed: j
-  } = (0, E.useOnboardingDropdownExperiment)(s.id), U = (0, r.useStateFromStores)([f.default], () => f.default.editedDefaultChannelIds), P = j ? h.DROPDOWN_MAX_NUM_OPTIONS : h.MULTIPLE_CHOICE_MAX_NUM_OPTIONS, {
+    dropdownsAllowed: G
+  } = (0, E.useOnboardingDropdownExperiment)(s.id), U = (0, r.useStateFromStores)([f.default], () => f.default.editedDefaultChannelIds), P = G ? h.DROPDOWN_MAX_NUM_OPTIONS : h.MULTIPLE_CHOICE_MAX_NUM_OPTIONS, {
     drag: b,
-    dragSourcePosition: y,
-    drop: B,
+    dragSourcePosition: B,
+    drop: y,
     setIsDraggable: F
   } = (0, d.default)({
     type: "ONBOARDING_PROMPT_CARD",
@@ -55,11 +55,11 @@ function L(e) {
     optionId: n.id,
     onDragStart: v,
     onDragComplete: D,
-    onDragReset: G
+    onDragReset: j
   }), H = (0, r.useStateFromStoresObject)([N.default], () => {
     var e;
     return null !== (e = N.default.errors[g]) && void 0 !== e ? e : x
-  }), [k, w] = l.useState(!1), [V, Y] = l.useState(!1), W = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], z = H.config, K = j && n.options.length >= h.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(U), [n]).length - U.size, X = l.useRef(null);
+  }), [k, w] = l.useState(!1), [V, Y] = l.useState(!1), W = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], z = H.config, K = G && n.options.length >= h.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(U), [n]).length - U.size, X = l.useRef(null);
   return (l.useLayoutEffect(() => {
     setTimeout(() => {
       if (0 === g && !u) {
@@ -74,11 +74,11 @@ function L(e) {
       onBlur: () => Y(!1),
       onMouseLeave: () => Y(!1),
       className: i()(R.container, {
-        [R.dropIndicatorBefore]: null != y && g < y,
-        [R.dropIndicatorAfter]: null != y && g > y,
+        [R.dropIndicatorBefore]: null != B && g < B,
+        [R.dropIndicatorAfter]: null != B && g > B,
         [R.containerFocused]: V
       }),
-      ref: e => b(B(e)),
+      ref: e => b(y(e)),
       children: [(0, a.jsx)("div", {
         className: R.dragContainer,
         onMouseEnter: () => F(!0),
@@ -124,11 +124,11 @@ function L(e) {
       onFocus: () => Y(!0),
       onBlur: () => Y(!1),
       className: i()(R.container, {
-        [R.dropIndicatorBefore]: null != y && g < y,
-        [R.dropIndicatorAfter]: null != y && g > y,
+        [R.dropIndicatorBefore]: null != B && g < B,
+        [R.dropIndicatorAfter]: null != B && g > B,
         [R.containerFocused]: V
       }),
-      ref: e => b(B(e)),
+      ref: e => b(y(e)),
       children: [(0, a.jsx)("div", {
         className: R.dragContainer,
         onMouseEnter: () => F(!0),

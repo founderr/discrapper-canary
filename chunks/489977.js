@@ -23,9 +23,9 @@ let E = e => {
       return
     }
     let h = d.default.getCurrentUser(),
-      C = null != r ? o.setPendingAvatar : i.setPendingAvatar;
+      _ = null != r ? o.setPendingAvatar : i.setPendingAvatar;
     if (c.default.canUseAnimatedAvatar(h) || "image/gif" !== l.type) {
-      C(t);
+      _(t);
       return
     }
     if (null != h) return (0, s.openModalLazy)(async () => {
@@ -36,7 +36,7 @@ let E = e => {
         user: h,
         imageSrc: t,
         uploadType: f.UploadTypes.AVATAR,
-        onSubscribe: () => C(t),
+        onSubscribe: () => _(t),
         ...n
       })
     })
@@ -70,7 +70,7 @@ let E = e => {
       })
     })
   };
-class C extends r.default {
+class _ extends r.default {
   _initialize() {
     l.default.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
@@ -81,4 +81,4 @@ class C extends r.default {
     return e.uploadType === f.UploadTypes.AVATAR ? E(e) : e.uploadType === f.UploadTypes.BANNER ? h(e) : void 0
   }
 }
-t.default = new C
+t.default = new _

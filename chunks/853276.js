@@ -109,13 +109,13 @@ function T(e) {
   } = (0, d.default)(R), {
     ref: p,
     width: A = 0
-  } = (0, d.default)(R), M = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [D, v] = l.useState(g), G = l.useRef(null), j = O > A ? O : A;
+  } = (0, d.default)(R), M = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [D, v] = l.useState(g), j = l.useRef(null), G = O > A ? O : A;
   l.useEffect(() => {
-    g ? (v(!0), G.current = setTimeout(() => {
-      v(!1), G.current = null
+    g ? (v(!0), j.current = setTimeout(() => {
+      v(!1), j.current = null
     }, E.CHIPLET_ERROR_FORCE_SHOW_TOOLTIP_TIMER_MS)) : v(!1)
   }, [g]), l.useEffect(() => () => {
-    clearTimeout(G.current)
+    clearTimeout(j.current)
   }, []);
   let U = l.useCallback(e => {
       s(e.target.value)
@@ -132,11 +132,11 @@ function T(e) {
       let s = t.trim().length <= 0;
       E.NEXT_CHIP_INPUT_KEY.has(e.key) ? (e.preventDefault(), e.stopPropagation(), P(!0)) : "Backspace" === e.key && s && (e.preventDefault(), e.stopPropagation(), P(!0))
     }, [P, t]),
-    y = l.useCallback(e => {
+    B = l.useCallback(e => {
       let t = e.metaKey || e.ctrlKey;
       T(t), t ? e.preventDefault() : x(!0), e.stopPropagation()
     }, [T]),
-    B = l.useCallback(e => {
+    y = l.useCallback(e => {
       S()
     }, [S]);
   return (0, a.jsx)("div", {
@@ -153,7 +153,7 @@ function T(e) {
       children: [(0, a.jsxs)(o.Clickable, {
         tag: "div",
         onBlur: () => P(!1),
-        onClick: y,
+        onClick: B,
         ignoreKeyPress: !0,
         onMouseEnter: () => v(!0),
         onMouseLeave: () => v(!1),
@@ -172,7 +172,7 @@ function T(e) {
           onKeyDownCapture: b,
           value: t,
           style: {
-            width: j > 0 ? j : "calc(".concat(t.length, "ch + 10px)")
+            width: G > 0 ? G : "calc(".concat(t.length, "ch + 10px)")
           }
         }), (0, a.jsx)(I, {
           ref: L,
@@ -184,7 +184,7 @@ function T(e) {
         })]
       }), !R && (0, a.jsx)(o.Clickable, {
         className: _.closeIconContainer,
-        onClick: B,
+        onClick: y,
         children: (0, a.jsx)(c.default, {
           className: _.closeIcon,
           width: 12,

@@ -7,8 +7,8 @@ l.r(a), l.d(a, {
 var t = l("735250");
 l("470079");
 var i = l("447452"),
-  n = l("962746"),
-  r = l("25373");
+  r = l("962746"),
+  n = l("25373");
 
 function s(e) {
   let {
@@ -19,9 +19,9 @@ function s(e) {
   } = (0, i.useSimplifiedProfileExperiment)({
     location: a
   });
-  return s ? (0, t.jsx)(r.default, {
+  return s ? (0, t.jsx)(n.default, {
     ...l
-  }) : (0, t.jsx)(n.default, {
+  }) : (0, t.jsx)(r.default, {
     ...l
   })
 }

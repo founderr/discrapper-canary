@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return m
+    return I
   }
 });
 var n = l("735250"),
@@ -15,7 +15,7 @@ var n = l("735250"),
   c = l("62012");
 let f = [!1, !0];
 
-function m(e) {
+function I(e) {
   let {
     isDisabled: t,
     currentValue: l,
@@ -31,7 +31,7 @@ function m(e) {
       [c.disabled]: t
     }),
     ...o,
-    children: f.map(e => (0, n.jsx)(I, {
+    children: f.map(e => (0, n.jsx)(m, {
       isSelected: l === e,
       itemValue: e,
       onClick: () => d(e)
@@ -39,21 +39,21 @@ function m(e) {
   })
 }
 
-function I(e) {
+function m(e) {
   let {
     isSelected: t,
     itemValue: l,
     onClick: a
-  } = e, s = l ? c.allow : c.deny, f = l ? o.default : d.default, m = l ? u.default.Messages.PERMISSION_OVERRIDE_ALLOW : u.default.Messages.PERMISSION_OVERRIDE_DENY, I = (0, r.useRadioItem)({
+  } = e, s = l ? c.allow : c.deny, f = l ? o.default : d.default, I = l ? u.default.Messages.PERMISSION_OVERRIDE_ALLOW : u.default.Messages.PERMISSION_OVERRIDE_DENY, m = (0, r.useRadioItem)({
     isSelected: t,
-    label: m
+    label: I
   });
   return (0, n.jsx)(r.Clickable, {
     className: i()(c.item, s, {
       [c.selected]: t
     }),
     onClick: a,
-    ...I,
+    ...m,
     children: (0, n.jsx)(f, {
       width: 16,
       height: 16

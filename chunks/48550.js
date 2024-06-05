@@ -1,24 +1,24 @@
 "use strict";
 s.r(t), s.d(t, {
   SELECT_NAMES: function() {
-    return n
+    return a
   }
 });
-var l = s("689938");
-let n = {
+var n = s("689938");
+let a = {
   get webauthn() {
-    return l.default.Messages.MFA_V2_WEBAUTHN_NAME
+    return n.default.Messages.MFA_V2_WEBAUTHN_NAME
   },
   get totp() {
-    return l.default.Messages.MFA_V2_TOTP_NAME
+    return n.default.Messages.MFA_V2_TOTP_NAME
   },
   get sms() {
-    return l.default.Messages.MFA_V2_SMS_NAME
+    return n.default.Messages.MFA_V2_SMS_NAME
   },
   get password() {
-    return l.default.Messages.MFA_V2_PASSWORD_NAME
+    return n.default.Messages.MFA_V2_PASSWORD_NAME
   },
   get backup() {
-    return l.default.Messages.MFA_V2_BACKUP_NAME
+    return n.default.Messages.MFA_V2_BACKUP_NAME
   }
 }

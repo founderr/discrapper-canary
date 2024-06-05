@@ -30,13 +30,13 @@ let A = l.memo(function(e) {
     baseMessage: n,
     referencedMessage: A,
     channel: v,
-    compact: x = !1,
-    referencedUsernameProfile: N,
+    compact: N = !1,
+    referencedUsernameProfile: x,
     referencedAvatarProfile: M,
-    setPopout: y
-  } = e, R = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, g.useNullableMessageAuthor)(R), O = (0, u.useActiveKeywordFiltersCacheKey)(), j = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
-    if (null == R) return null;
-    let e = (0, r.default)(R);
+    setPopout: R
+  } = e, y = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, g.useNullableMessageAuthor)(y), O = (0, u.useActiveKeywordFiltersCacheKey)(), j = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
+    if (null == y) return null;
+    let e = (0, r.default)(y);
     if (e.type === T.MessageTypes.USER_JOIN) return (0, i.astToString)(E.default.getSystemMessageUserJoin(e.id).astFormat({
       username: null != L ? L.nick : e.author.username,
       usernameHook: e => e
@@ -79,10 +79,10 @@ let A = l.memo(function(e) {
       return (0, C.default)(e, n).content
     }
     return null
-  }, [R, L, v, j, O]), D = (0, s.useStateFromStores)([m.default], () => null != R && m.default.isBlocked(R.author.id), [R]), b = (0, _.useContextMenuUser)(null == R ? void 0 : R.author.id, v.id), U = (0, _.useClickReply)(n, R, D), F = (0, _.useClickReferencedMessageAuthorUsername)(R, v, N, y), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, y), k = l.useCallback(() => y({
+  }, [y, L, v, j, O]), D = (0, s.useStateFromStores)([m.default], () => null != y && m.default.isBlocked(y.author.id), [y]), b = (0, _.useContextMenuUser)(null == y ? void 0 : y.author.id, v.id), U = (0, _.useClickReply)(n, y, D), F = (0, _.useClickReferencedMessageAuthorUsername)(y, v, x, R), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, R), k = l.useCallback(() => R({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [y]), H = (0, g.useNullableMessageAuthor)(n);
+  }), [R]), H = (0, g.useNullableMessageAuthor)(n);
   return (0, a.jsx)(p.default, {
     repliedAuthor: L,
     baseMessage: n,
@@ -90,10 +90,10 @@ let A = l.memo(function(e) {
     baseAuthor: H,
     referencedMessage: A,
     content: P,
-    compact: x,
+    compact: N,
     isReplyAuthorBlocked: D,
     showAvatarPopout: M,
-    showUsernamePopout: N,
+    showUsernamePopout: x,
     renderPopout: S.default,
     onClickAvatar: w,
     onClickUsername: F,

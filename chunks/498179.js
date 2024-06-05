@@ -19,34 +19,34 @@ function c(e) {
     application: t,
     fullWidth: n = !1,
     size: c = l.Button.Sizes.LARGE,
-    color: E,
-    customDisabledColor: f,
+    color: f,
+    customDisabledColor: E,
     hideNotLaunchable: _,
-    tooltipPosition: T,
-    onClick: m,
+    tooltipPosition: m,
+    onClick: T,
     className: I,
-    source: N,
-    hover: p,
-    innerClassName: S
-  } = e, C = {
+    source: p,
+    hover: h,
+    innerClassName: N
+  } = e, S = {
     fullWidth: n,
     size: c,
-    color: E,
-    customDisabledColor: f,
-    tooltipPosition: T,
-    onClick: m,
+    color: f,
+    customDisabledColor: E,
+    tooltipPosition: m,
+    onClick: T,
     className: I,
-    hover: p,
-    innerClassName: S
-  }, A = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), h = null != A ? A.sku.id : null, g = null != h ? h : t.primarySkuId, M = (0, a.useStateFromStores)([r.default], () => null != g && !r.default.didFetchingSkuFail(g));
-  return null != A && (0, o.isUserEntitledToLibraryApplication)(A) ? (0, s.jsx)(d.default, {
-    ...C,
-    libraryApplication: A,
-    source: N
+    hover: h,
+    innerClassName: N
+  }, C = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), g = null != C ? C.sku.id : null, A = null != g ? g : t.primarySkuId, M = (0, a.useStateFromStores)([r.default], () => null != A && !r.default.didFetchingSkuFail(A));
+  return null != C && (0, o.isUserEntitledToLibraryApplication)(C) ? (0, s.jsx)(d.default, {
+    ...S,
+    libraryApplication: C,
+    source: p
   }) : M ? (0, s.jsx)("div", {
     children: "deprecated!"
   }) : (0, s.jsx)(u.default, {
-    ...C,
+    ...S,
     hideNotLaunchable: _,
     applicationId: t.id
   })

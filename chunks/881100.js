@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   usePerkCards: function() {
-    return k
+    return y
   }
 });
 var a = s("399606"),
@@ -11,166 +11,166 @@ var a = s("399606"),
   l = s("594174"),
   o = s("74538"),
   u = s("981631"),
-  c = s("526761"),
-  d = s("689938"),
+  d = s("526761"),
+  c = s("689938"),
   _ = s("323780"),
   E = s("101732"),
-  R = s("450598"),
-  T = s("633030"),
-  f = s("97942"),
-  I = s("269987"),
+  T = s("450598"),
+  I = s("633030"),
+  R = s("97942"),
+  f = s("269987"),
   S = s("548629"),
-  m = s("507084"),
-  p = s("680313"),
-  A = s("926433"),
-  N = s("302036"),
-  M = s("994554"),
+  A = s("507084"),
+  m = s("680313"),
+  N = s("926433"),
+  p = s("302036"),
+  g = s("994554"),
   C = s("1549"),
-  g = s("13327"),
-  P = s("59137"),
-  O = s("405991"),
-  x = s("24615"),
-  b = s("193943"),
-  h = s("334347"),
-  D = s("943734"),
-  L = s("603076"),
-  v = s("472656"),
+  P = s("13327"),
+  O = s("59137"),
+  M = s("405991"),
+  h = s("24615"),
+  L = s("193943"),
+  x = s("334347"),
+  v = s("943734"),
+  D = s("603076"),
+  b = s("472656"),
   U = s("912429"),
-  B = s("772969"),
-  j = s("926262");
-let G = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
-  k = e => {
+  j = s("772969"),
+  G = s("926262");
+let B = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
+  y = e => {
     let {
       styles: t
     } = e, s = (0, n.default)(), r = (0, a.useStateFromStores)([l.default], () => {
       let e = l.default.getCurrentUser();
       return o.default.canUsePremiumProfileCustomization(e)
-    }), k = d.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE;
+    }), y = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE;
     return {
       badge: {
-        title: d.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_BADGE_PERK_DESCRIPTION,
-        imageSource: R,
+        title: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_DESCRIPTION,
+        imageSource: T,
         imageClassName: t.badgeImage
       },
       badgeAlt: {
-        title: d.default.Messages.PREMIUM_MARKETING_PERK_GRID_ITEM_HEADING_PREMIUM_SUBSCRIPTION_BADGE,
-        description: d.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_BADGE_DESCRIPTION_VARIANT_1,
-        imageSource: G(s, _, E),
+        title: c.default.Messages.PREMIUM_MARKETING_PERK_GRID_ITEM_HEADING_PREMIUM_SUBSCRIPTION_BADGE,
+        description: c.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_BADGE_DESCRIPTION_VARIANT_1,
+        imageSource: B(s, _, E),
         imageClassName: t.badgeNewImage
       },
       clientThemes: {
-        title: d.default.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
+        title: c.default.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
         className: t.clientThemesCard,
-        imageSource: x,
+        imageSource: h,
         imageClassName: t.clientThemesImage
       },
       customAppIcons: {
-        title: d.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-        imageSource: b,
+        title: c.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
+        imageSource: L,
         imageClassName: t.customAppIconImage
       },
       emoji: {
-        title: d.default.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
-        imageSource: h,
+        title: c.default.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
+        imageSource: x,
         imageClassName: t.emojiImage
       },
       guildProfile: {
-        title: d.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
+        title: c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
             i.default.open(u.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
-              scrollPosition: c.ProfileCustomizationScrollPositions.TRY_IT_OUT,
+              scrollPosition: d.ProfileCustomizationScrollPositions.TRY_IT_OUT,
               analyticsLocations: e
             })
           };
-          return r ? d.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({
+          return r ? c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({
             onCheckItOutClick: t
-          }) : d.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({
+          }) : c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({
             onTryItOutClick: t
           })
         },
-        imageSource: f,
+        imageSource: R,
         imageClassName: t.perGuildProfilesImage
       },
       longerMessages: {
-        title: d.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-        imageSource: G(s, D, L),
+        title: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
+        imageSource: B(s, v, D),
         imageClassName: t.longerMessagesImage
       },
       moreGuilds: {
-        title: d.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: G(s, T, v),
+        title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
+        imageSource: B(s, I, b),
         imageClassName: t.moreGuildsImage
       },
       moreGuildsAlt: {
-        title: d.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: G(s, m, p),
+        title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
+        imageSource: B(s, A, m),
         imageClassName: t.moreGuildsAltImage
       },
       remix: {
-        title: d.default.Messages.REMIXING_PERKS_CARD_TITLE,
-        description: d.default.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-        imageSource: G(s, I, S),
+        title: c.default.Messages.REMIXING_PERKS_CARD_TITLE,
+        description: c.default.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
+        imageSource: B(s, f, S),
         imageClassName: t.remixingImage,
         isEarlyAccess: !0
       },
       soundboard: {
-        title: d.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
-        description: d.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-        imageSource: G(s, A, N),
+        title: c.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
+        description: c.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
+        imageSource: B(s, N, p),
         imageClassName: t.soundboardImage
       },
       stickers: {
-        title: d.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
-        description: d.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: G(s, M, U),
+        title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
+        description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
+        imageSource: B(s, g, U),
         imageClassName: t.stickersImage
       },
       stickersBurst: {
-        title: d.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: G(s, M, U),
+        title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
+        imageSource: B(s, g, U),
         imageClassName: t.stickersImage
       },
       stickersPerkDiscoverability: {
-        title: d.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-        imageSource: G(s, M, U),
+        title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
+        imageSource: B(s, g, U),
         imageClassName: t.stickersImage
       },
       streaming: {
-        title: d.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-        imageSource: B,
+        title: c.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
+        imageSource: j,
         imageClassName: t.streamingImage
       },
       superReactions: {
-        title: d.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
-        description: d.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-        imageSource: G(s, C, g),
+        title: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
+        description: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
+        imageSource: B(s, C, P),
         imageClassName: t.superReactionsImage
       },
       upload: {
-        title: d.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
-          premiumMaxSize: k
+        title: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
+          premiumMaxSize: y
         }),
-        description: d.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
-          premiumMaxSize: k
+        description: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
+          premiumMaxSize: y
         }),
-        imageSource: j,
+        imageSource: G,
         imageClassName: t.uploadImage
       },
       videoBackground: {
-        title: d.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
-        description: d.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-        imageSource: G(s, P, O),
+        title: c.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
+        description: c.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
+        imageSource: B(s, O, M),
         imageClassName: t.videoBackgroundImage
       }
     }

@@ -36,13 +36,13 @@ var a = s("735250"),
   M = s("93879"),
   D = s("263704"),
   v = s("465670"),
-  G = s("548343"),
-  j = s("586791"),
+  j = s("548343"),
+  G = s("586791"),
   U = s("709586"),
   P = s("151785"),
   b = s("931468"),
-  y = s("768581"),
-  B = s("700785"),
+  B = s("768581"),
+  y = s("700785"),
   F = s("434404"),
   H = s("999382"),
   k = s("8426"),
@@ -96,7 +96,7 @@ function $(e) {
       children: e => (0, a.jsxs)("div", {
         ...e,
         className: i()(Z.actionItemEditButton, Z.editWelcomeButton),
-        children: [(0, a.jsx)(j.default, {
+        children: [(0, a.jsx)(G.default, {
           className: Z.__invalid_editIcon
         }), (0, a.jsx)(d.HiddenVisually, {
           children: K.default.Messages.EDIT
@@ -120,13 +120,13 @@ function ee(e) {
   } = e, O = (0, r.useStateFromStores)([L.default], () => L.default.getChannel(T.channelId)), A = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(I)), {
     customEmoji: D,
     unicodeEmoji: v
-  } = (0, f.default)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (n = T.emoji) || void 0 === n ? void 0 : n.name), U = null == T.emoji || null != D || null != v, P = y.default.getNewMemberActionIconURL({
+  } = (0, f.default)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (n = T.emoji) || void 0 === n ? void 0 : n.name), U = null == T.emoji || null != D || null != v, P = B.default.getNewMemberActionIconURL({
     channelId: T.channelId,
     icon: T.icon
   }), b = null;
   null != O && (0, m.isChannelValidForNewMemberAction)(O) ? !U && (b = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : b = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
   let {
-    drag: B,
+    drag: y,
     dragSourcePosition: F,
     drop: H,
     setIsDraggable: w
@@ -164,12 +164,12 @@ function ee(e) {
         [Z.dropIndicatorAfter]: null != F && S > F,
         [Z.actionItemError]: null != b
       }),
-      ref: e => B(H(e)),
+      ref: e => y(H(e)),
       children: [(0, a.jsx)("div", {
         className: Z.dragContainer,
         onMouseEnter: () => w(!0),
         onMouseLeave: () => w(!1),
-        children: (0, a.jsx)(G.default, {
+        children: (0, a.jsx)(j.default, {
           className: Z.dragIcon
         })
       }), null != P ? (0, a.jsx)("div", {
@@ -211,7 +211,7 @@ function ee(e) {
           innerClassName: Z.actionItemEditButtonInner,
           size: d.Button.Sizes.MIN,
           onClick: Y,
-          children: [(0, a.jsx)(j.default, {
+          children: [(0, a.jsx)(G.default, {
             className: Z.__invalid_editIcon
           }), (0, a.jsx)(d.HiddenVisually, {
             children: K.default.Messages.EDIT
@@ -410,7 +410,7 @@ function en(e) {
   if (null == i) return null;
   let _ = (0, a.jsx)(h.default, {
     image: i.homeHeader,
-    makeURL: e => null != e ? y.default.getGuildHomeHeaderURL({
+    makeURL: e => null != e ? B.default.getGuildHomeHeaderURL({
       id: i.id,
       homeHeader: e
     }) : null,
@@ -519,7 +519,7 @@ function ei(e) {
   } = n, N = L.default.getChannel(S), g = null;
   (null == N || !(0, m.isChannelValidForResourceChannel)(N)) && (g = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
   let h = null == f || 0 === f.length,
-    C = y.default.getResourceChannelIconURL({
+    C = B.default.getResourceChannelIconURL({
       channelId: n.channelId,
       icon: n.icon
     }),
@@ -574,7 +574,7 @@ function ei(e) {
         className: Z.dragContainer,
         onMouseEnter: () => A(!0),
         onMouseLeave: () => A(!1),
-        children: (0, a.jsx)(G.default, {
+        children: (0, a.jsx)(j.default, {
           className: Z.dragIcon
         })
       }), null != C && (0, a.jsx)("div", {
@@ -609,7 +609,7 @@ function ei(e) {
           innerClassName: Z.resourceChannelEditButtonInner,
           size: d.Button.Sizes.MIN,
           onClick: v,
-          children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(d.HiddenVisually, {
+          children: [(0, a.jsx)(G.default, {}), (0, a.jsx)(d.HiddenVisually, {
             children: K.default.Messages.EDIT
           })]
         })
@@ -667,7 +667,7 @@ function eo(e) {
   } = e, s = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(t)), n = (0, r.useStateFromStoresArray)([w.default], () => {
     var e, t;
     return null !== (t = null === (e = w.default.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== t ? t : []
-  }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && B.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !B.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {
+  }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && y.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !y.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {
     let e = o.map(e => e.channel.id);
     (0, k.dismissSuggestedChannels)(t, e)
   }, [t, o]);

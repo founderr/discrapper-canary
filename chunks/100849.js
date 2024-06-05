@@ -29,8 +29,8 @@ function p(e) {
     analyticsLocations: U,
     newestAnalyticsLocation: A
   } = (0, d.default)(), {
-    trackUserProfileAction: C,
-    ...N
+    trackUserProfileAction: N,
+    ...C
   } = (0, E.useUserProfileAnalyticsContext)(), R = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
@@ -50,7 +50,7 @@ function p(e) {
       actionColor: _.actionColor,
       analyticsParams: R,
       onAction: () => {
-        C({
+        N({
           action: "JOIN_ACTIVITY"
         }), (0, I.trackUserProfileActivityJoined)({
           activityType: m.ActivityTypes.STREAMING,
@@ -59,7 +59,7 @@ function p(e) {
           activitySessionId: null == g ? void 0 : g.session_id,
           applicationId: null == g ? void 0 : g.application_id,
           analyticsLocations: U,
-          ...N
+          ...C
         })
       }
     }) : null, x.map(e => (0, s.jsx)(u.default, {
@@ -73,7 +73,7 @@ function p(e) {
       actionColor: _.actionColor,
       analyticsParams: R,
       onAction: () => {
-        C({
+        N({
           action: "JOIN_ACTIVITY"
         }), (0, I.trackUserProfileActivityJoined)({
           activityType: e.type,
@@ -82,7 +82,7 @@ function p(e) {
           activitySessionId: e.session_id,
           applicationId: e.application_id,
           analyticsLocations: U,
-          ...N
+          ...C
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

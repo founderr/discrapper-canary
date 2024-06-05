@@ -4,8 +4,8 @@ var a, n = s("735250"),
   i = s("470079"),
   l = s("512722"),
   r = s.n(l),
-  o = s("442837"),
-  u = s("481060"),
+  u = s("442837"),
+  o = s("481060"),
   d = s("893776"),
   c = s("468026"),
   p = s("594174"),
@@ -26,7 +26,7 @@ class E extends(a = i.Component) {
       look: t,
       size: s
     } = this.props;
-    return (0, n.jsx)(u.Button, {
+    return (0, n.jsx)(o.Button, {
       look: t,
       size: s,
       color: e,
@@ -46,12 +46,12 @@ class E extends(a = i.Component) {
       null == t || t(), this.setState({
         isSendingVerificationEmail: !0
       }, () => {
-        d.default.verifyResend().then(() => (0, u.openModal)(t => (0, n.jsx)(u.ConfirmModal, {
+        d.default.verifyResend().then(() => (0, o.openModal)(t => (0, n.jsx)(o.ConfirmModal, {
           header: f.default.Messages.VERIFICATION_EMAIL_TITLE,
           confirmText: f.default.Messages.OKAY,
-          confirmButtonColor: u.Button.Colors.BRAND,
+          confirmButtonColor: o.Button.Colors.BRAND,
           ...t,
-          children: (0, n.jsx)(u.Text, {
+          children: (0, n.jsx)(o.Text, {
             variant: "text-md/normal",
             children: f.default.Messages.VERIFICATION_EMAIL_BODY.format({
               email: e.email
@@ -61,7 +61,7 @@ class E extends(a = i.Component) {
           let {
             body: t
           } = e, s = f.default.Messages.VERIFICATION_EMAIL_ERROR_BODY;
-          null != t && t.email && (s = t.email), (0, u.openModal)(e => (0, n.jsx)(c.default, {
+          null != t && t.email && (s = t.email), (0, o.openModal)(e => (0, n.jsx)(c.default, {
             title: f.default.Messages.VERIFICATION_EMAIL_ERROR_TITLE,
             body: s,
             ...e
@@ -74,9 +74,9 @@ class E extends(a = i.Component) {
   }
 }
 m(E, "defaultProps", {
-  size: u.Button.Sizes.MEDIUM,
-  color: u.Button.Colors.BRAND
-}), t.default = o.default.connectStores([p.default], () => {
+  size: o.Button.Sizes.MEDIUM,
+  color: o.Button.Colors.BRAND
+}), t.default = u.default.connectStores([p.default], () => {
   let e = p.default.getCurrentUser();
   return r()(null != e, "ResendEmailVerificationButton: currentUser cannot be undefined"), {
     currentUser: e

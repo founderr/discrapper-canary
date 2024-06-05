@@ -26,11 +26,11 @@ var a = n("735250"),
   I = n("594174"),
   A = n("185403"),
   v = n("158010"),
-  x = n("183156"),
-  N = n("52736"),
+  N = n("183156"),
+  x = n("52736"),
   M = n("700785"),
-  y = n("51144"),
-  R = n("396769"),
+  R = n("51144"),
+  y = n("396769"),
   L = n("967128"),
   O = n("318374"),
   j = n("981631"),
@@ -94,14 +94,14 @@ function b(e) {
       })
     }), B ? (0, a.jsxs)("div", {
       className: D.channelSettingButtons,
-      children: [(0, a.jsx)(R.default, {
+      children: [(0, a.jsx)(y.default, {
         label: P.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => s(!0),
         icon: (0, a.jsx)(v.default, {
           width: 16,
           height: 16
         })
-      }), (0, a.jsx)(R.default, {
+      }), (0, a.jsx)(y.default, {
         label: P.default.Messages.EDIT_CHANNEL,
         onClick: G,
         icon: (0, a.jsx)(A.default, {
@@ -119,7 +119,7 @@ function b(e) {
           users: H
         });
         let e = H[0],
-          n = y.default.getName(e);
+          n = R.default.getName(e);
         return (0, a.jsxs)("div", {
           className: D.avatars,
           children: [(0, a.jsx)(f.Avatar, {
@@ -142,7 +142,7 @@ function b(e) {
         var l, s;
         let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, d.int2hex)(j.DEFAULT_ROLE_COLOR),
           o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
-        return B ? (0, a.jsx)(x.default, {
+        return B ? (0, a.jsx)(N.default, {
           className: i()(D.role, {
             [D.last]: n === k.length - 1
           }),
@@ -153,7 +153,7 @@ function b(e) {
           onClick: () => {
             g.default.open(t.guild_id, j.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
           }
-        }, e.id) : (0, a.jsx)(N.default, {
+        }, e.id) : (0, a.jsx)(x.default, {
           className: i()(D.role, {
             [D.last]: n === k.length - 1
           }),

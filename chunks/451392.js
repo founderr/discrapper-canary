@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return f
   }
 });
 var a = s("735250");
@@ -19,50 +19,50 @@ var n = s("120356"),
   T = s("193528"),
   _ = s("993413"),
   I = s("689938"),
-  f = s("452240");
+  N = s("452240");
 
-function m(e) {
+function f(e) {
   let {
     user: t,
     pendingAvatar: s,
     pendingColors: n,
     onThemeColorsChange: i,
-    preventDisabled: m,
-    guildId: N,
-    className: g,
-    showPremiumIcon: h = !0,
-    showResetThemeButton: C = !1,
-    forcedDivider: O
-  } = e, A = (0, c.default)(t.id, N), {
+    preventDisabled: f,
+    guildId: g,
+    className: m,
+    showPremiumIcon: C = !0,
+    showResetThemeButton: A = !1,
+    forcedDivider: h
+  } = e, O = (0, c.default)(t.id, g), {
     primaryColor: p,
     secondaryColor: R
   } = (0, S.default)({
     user: t,
-    displayProfile: A,
+    displayProfile: O,
     pendingThemeColors: n,
     isPreview: !0
-  }), x = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(N, 80), D = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), L = (0, u.useAvatarColors)(M, D, !1);
+  }), x = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(g, 80), D = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), L = (0, u.useAvatarColors)(M, D, !1);
   if (null == p || null == R) return null;
   let P = e => {
-    i(r()(e, null == A ? void 0 : A.themeColors) ? void 0 : e)
+    i(r()(e, null == O ? void 0 : O.themeColors) ? void 0 : e)
   };
   return (0, a.jsx)(_.default, {
     title: I.default.Messages.USER_SETTINGS_PROFILE_THEME,
-    disabled: !x && !m,
-    className: l()(f.__invalid_profileThemesSection, g),
-    showPremiumIcon: h,
-    forcedDivider: O,
+    disabled: !x && !f,
+    className: l()(N.__invalid_profileThemesSection, m),
+    showPremiumIcon: C,
+    forcedDivider: h,
     children: (0, a.jsxs)("div", {
-      className: f.sectionContainer,
+      className: N.sectionContainer,
       children: [(0, a.jsx)("div", {
-        className: f.sparkleContainer,
+        className: N.sparkleContainer,
         children: (0, a.jsx)(T.default, {
           onChange: e => P([e, R]),
           color: p,
           suggestedColors: L,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
-            className: f.colorSwatchLabel,
+            className: N.colorSwatchLabel,
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
@@ -70,22 +70,22 @@ function m(e) {
           })
         })
       }), (0, a.jsx)("div", {
-        className: f.sparkleContainer,
+        className: N.sparkleContainer,
         children: (0, a.jsx)(T.default, {
           onChange: e => P([p, e]),
           color: R,
           suggestedColors: L,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
-            className: f.colorSwatchLabel,
+            className: N.colorSwatchLabel,
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
             children: I.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
-      }), C && null != N && (0, a.jsx)(d.Button, {
-        className: f.resetButton,
+      }), A && null != g && (0, a.jsx)(d.Button, {
+        className: N.resetButton,
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,
         size: d.Button.Sizes.SMALL,

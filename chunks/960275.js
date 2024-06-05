@@ -46,14 +46,14 @@ class E extends s.default {
       if ((null == c ? void 0 : c.find(e => e.id === E)) != null ? (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == c ? void 0 : c.length) && void 0 !== t ? t : 0) > 0 && (null == a ? void 0 : a.id) === E && (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(null == a ? void 0 : a.id, E, s, f)) return !1;
       let h = d.default.getMostRecentMessageCombo(n),
         {
-          combo: C
+          combo: _
         } = null != h ? h : {};
-      if (null == C) return !1;
+      if (null == _) return !1;
       Object.values(o.PoggermodeAchievementId).forEach(e => {
         if (null != r.default.getUnlocked(e)) return;
         let t = (0, o.getPoggermodeAchievementData)(e),
           n = null == t ? void 0 : t.checkUnlock;
-        if (null != n) !1 !== n(C) && (0, i.unlockAchievement)(e)
+        if (null != n) !1 !== n(_) && (0, i.unlockAchievement)(e)
       })
     })
   }

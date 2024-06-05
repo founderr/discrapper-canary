@@ -18,7 +18,7 @@ function r(e) {
     joinable: u,
     usernameHook: d,
     onClickJoinCall: c
-  } = e, E = (0, a.default)(t), f = E.nick, _ = d(E), T = function(e) {
+  } = e, f = (0, a.default)(t), E = f.nick, _ = d(f), m = function(e) {
     let t = null != e.call ? e.call.duration : null;
     return null != t ? t.humanize() : null
   }(t);
@@ -26,24 +26,24 @@ function r(e) {
     icon: n("154239"),
     timestamp: t.timestamp,
     compact: r,
-    children: null != T ? i.default.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
-      username: f,
+    children: null != m ? i.default.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
+      username: E,
       usernameHook: _,
-      callDuration: T
+      callDuration: m
     }) : i.default.Messages.SYSTEM_MESSAGE_CALL_MISSED_HOOK.format({
-      username: f,
+      username: E,
       usernameHook: _
     })
   }) : (0, s.jsxs)(l.default, {
     icon: n("344163"),
     timestamp: t.timestamp,
     compact: r,
-    children: [null != T ? i.default.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
-      username: f,
+    children: [null != m ? i.default.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
+      username: E,
       usernameHook: _,
-      callDuration: T
+      callDuration: m
     }) : i.default.Messages.SYSTEM_MESSAGE_CALL_STARTED_HOOK.format({
-      username: f,
+      username: E,
       usernameHook: _
     }), u ? (0, s.jsx)(l.default.Action, {
       onClick: c,

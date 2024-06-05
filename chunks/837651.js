@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  o = n("481060"),
-  r = n("816814"),
+var s = n("735250"),
+  a = n("470079"),
+  r = n("481060"),
+  o = n("816814"),
   i = n("200483"),
   l = n("594174"),
   d = n("285952"),
@@ -12,7 +12,7 @@ var a = n("735250"),
   f = n("689938"),
   E = n("225576");
 
-function _(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,54 +20,54 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let p = e => {
+let _ = e => {
   let {
     image: t,
     label: n,
-    text: s,
-    children: r
+    text: a,
+    children: o
   } = e;
-  return (0, a.jsxs)(d.default, {
+  return (0, s.jsxs)(d.default, {
     className: E.spacing,
-    children: [(0, a.jsx)(d.default, {
+    children: [(0, s.jsx)(d.default, {
       grow: 0,
       shrink: 0,
       basis: "156px",
       justify: d.default.Justify.CENTER,
       className: E.image,
       children: t
-    }), (0, a.jsx)(d.default, {
+    }), (0, s.jsx)(d.default, {
       direction: d.default.Direction.VERTICAL,
       justify: d.default.Justify.CENTER,
-      children: (0, a.jsxs)("div", {
-        children: [(0, a.jsx)(o.FormTitle, {
+      children: (0, s.jsxs)("div", {
+        children: [(0, s.jsx)(r.FormTitle, {
           tag: "h5",
           className: E.headerSpacing,
           children: n
-        }), (0, a.jsx)(o.FormText, {
-          type: o.FormText.Types.DESCRIPTION,
-          children: s
-        }), r]
+        }), (0, s.jsx)(r.FormText, {
+          type: r.FormText.Types.DESCRIPTION,
+          children: a
+        }), o]
       })
     })]
   })
 };
-class h extends s.PureComponent {
+class h extends a.PureComponent {
   render() {
     var e;
     let {
       transitionState: t,
-      onClose: s
+      onClose: a
     } = this.props, {
-      totpSecret: r,
+      totpSecret: o,
       code: i,
-      isVerifying: _
-    } = this.state, h = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, A = (0, u.encodeTotpSecretAsUrl)(null != h ? h : "", r), T = (0, a.jsx)("form", {
+      isVerifying: p
+    } = this.state, h = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, A = (0, u.encodeTotpSecretAsUrl)(null != h ? h : "", o), C = (0, s.jsx)("form", {
       onSubmit: this.handleActivate,
-      children: (0, a.jsxs)(d.default, {
+      children: (0, s.jsxs)(d.default, {
         className: E.inputContainer,
         align: d.default.Align.START,
-        children: [(0, a.jsx)(o.TextInput, {
+        children: [(0, s.jsx)(r.TextInput, {
           value: i,
           className: E.input,
           placeholder: "000 000",
@@ -76,43 +76,43 @@ class h extends s.PureComponent {
           onChange: this.handleCodeChange,
           error: this.state.error,
           autoFocus: !0
-        }), (0, a.jsx)(d.default.Child, {
+        }), (0, s.jsx)(d.default.Child, {
           grow: 0,
           shrink: 0,
-          children: (0, a.jsx)(o.Button, {
+          children: (0, s.jsx)(r.Button, {
             type: "submit",
-            submitting: _,
+            submitting: p,
             children: f.default.Messages.TWO_FA_ACTIVATE
           })
         })]
       })
     });
-    return (0, a.jsxs)(o.ModalRoot, {
+    return (0, s.jsxs)(r.ModalRoot, {
       transitionState: t,
-      size: o.ModalSize.DYNAMIC,
+      size: r.ModalSize.DYNAMIC,
       className: E.customWidth,
-      children: [(0, a.jsxs)(o.ModalHeader, {
+      children: [(0, s.jsxs)(r.ModalHeader, {
         separator: !1,
-        children: [(0, a.jsxs)(d.default.Child, {
+        children: [(0, s.jsxs)(d.default.Child, {
           grow: 1,
           shrink: 1,
-          children: [(0, a.jsx)(o.Heading, {
+          children: [(0, s.jsx)(r.Heading, {
             variant: "heading-lg/semibold",
             children: f.default.Messages.TWO_FA_ENABLE
-          }), (0, a.jsx)(o.Text, {
+          }), (0, s.jsx)(r.Text, {
             variant: "text-xs/normal",
             className: E.subHeader,
             children: f.default.Messages.TWO_FA_ENABLE_SUBHEADER
           })]
-        }), (0, a.jsx)(d.default.Child, {
+        }), (0, s.jsx)(d.default.Child, {
           grow: 0,
-          children: (0, a.jsx)(o.ModalCloseButton, {
-            onClick: s
+          children: (0, s.jsx)(r.ModalCloseButton, {
+            onClick: a
           })
         })]
-      }), (0, a.jsxs)(o.ModalContent, {
-        children: [(0, a.jsx)(p, {
-          image: (0, a.jsx)("img", {
+      }), (0, s.jsxs)(r.ModalContent, {
+        children: [(0, s.jsx)(_, {
+          image: (0, s.jsx)("img", {
             alt: "",
             src: n("340061"),
             width: 100,
@@ -123,66 +123,66 @@ class h extends s.PureComponent {
             googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en",
             authyURL: "https://www.authy.com/"
           })
-        }), (0, a.jsx)(o.FormDivider, {
+        }), (0, s.jsx)(r.FormDivider, {
           className: E.divider
-        }), (0, a.jsx)(p, {
-          image: (0, a.jsx)(c.default, {
+        }), (0, s.jsx)(_, {
+          image: (0, s.jsx)(c.default, {
             text: A
           }),
           label: f.default.Messages.TWO_FA_QR_LABEL,
           text: f.default.Messages.TWO_FA_QR_BODY,
-          children: (0, a.jsxs)("div", {
+          children: (0, s.jsxs)("div", {
             className: E.topSpacing,
-            children: [(0, a.jsx)(o.FormTitle, {
+            children: [(0, s.jsx)(r.FormTitle, {
               tag: "h5",
               className: E.headerSpacing,
               children: f.default.Messages.TWO_FA_KEY
-            }), (0, a.jsx)(o.Text, {
+            }), (0, s.jsx)(r.Text, {
               variant: "text-md/normal",
               className: E.secret,
               selectable: !0,
-              children: r
+              children: o
             })]
           })
-        }), (0, a.jsx)(o.FormDivider, {
+        }), (0, s.jsx)(r.FormDivider, {
           className: E.divider
-        }), (0, a.jsx)(p, {
-          image: (0, a.jsx)("img", {
+        }), (0, s.jsx)(_, {
+          image: (0, s.jsx)("img", {
             alt: "",
             src: n("308777")
           }),
           label: f.default.Messages._TWO_FA_LOGIN_LABEL,
           text: f.default.Messages.TWO_FA_LOGIN_BODY,
-          children: T
+          children: C
         })]
       })]
     })
   }
   constructor(...e) {
-    super(...e), _(this, "state", {
+    super(...e), p(this, "state", {
       code: "",
       totpSecret: (0, u.generateTotpSecret)(),
       error: null,
       isVerifying: !1
-    }), _(this, "handleCodeChange", e => {
+    }), p(this, "handleCodeChange", e => {
       this.setState({
         code: e
       })
-    }), _(this, "handleActivate", e => {
+    }), p(this, "handleActivate", e => {
       e.preventDefault();
       let {
         password: t,
         emailToken: n
       } = this.props, {
-        totpSecret: a,
-        code: s
+        totpSecret: s,
+        code: a
       } = this.state;
       this.setState({
         isVerifying: !0
-      }), r.default.enable({
+      }), o.default.enable({
         password: t,
-        code: s,
-        secret: (0, u.encodeTotpSecret)(a),
+        code: a,
+        secret: (0, u.encodeTotpSecret)(s),
         ...(0, i.isMfaEmailVerificationEnabled)() && {
           emailToken: n
         }
@@ -190,7 +190,7 @@ class h extends s.PureComponent {
         error: e.body.message,
         isVerifying: !1
       }))
-    }), _(this, "handleActivateSuccess", () => {
+    }), p(this, "handleActivateSuccess", () => {
       let {
         onClose: e,
         handleEnableMFASuccess: t

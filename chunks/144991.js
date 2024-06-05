@@ -10,8 +10,8 @@ var n = l("735250"),
   u = l("901524"),
   c = l("291913"),
   f = l("783014"),
-  m = l("495395"),
-  I = l("611273");
+  I = l("495395"),
+  m = l("611273");
 class T extends a.PureComponent {
   getOverwriteValue(e) {
     let {
@@ -38,7 +38,7 @@ class T extends a.PureComponent {
       children: e => (0, n.jsx)("span", {
         ...e,
         children: (0, n.jsx)(f.default, {
-          className: m.icon,
+          className: I.icon,
           width: 18,
           height: 18
         })
@@ -55,8 +55,8 @@ class T extends a.PureComponent {
       permissions: r,
       locked: u,
       permissionRender: f
-    } = this.props, I = null == f ? void 0 : f(s), T = !!(u || I), N = "string" == typeof I ? this.renderDisabledIndicator(I) : null, E = i()({
-      [m.title]: null != N
+    } = this.props, m = null == f ? void 0 : f(s), T = !!(u || m), E = "string" == typeof m ? this.renderDisabledIndicator(m) : null, N = i()({
+      [I.title]: null != E
     });
     return null == r ? (0, n.jsxs)(c.default, {
       disabled: T,
@@ -64,8 +64,8 @@ class T extends a.PureComponent {
       onChange: e => this.handleChange(s, e),
       note: (0, o.renderDescription)(l),
       helpdeskArticleId: a,
-      children: [N, (0, n.jsx)("span", {
-        className: E,
+      children: [E, (0, n.jsx)("span", {
+        className: N,
         children: t
       })]
     }, String(s)) : (0, n.jsxs)(d.FormSwitch, {
@@ -73,8 +73,8 @@ class T extends a.PureComponent {
       value: this.getPermissionValue(s, r),
       onChange: e => this.handleChange(s, e),
       note: (0, o.renderDescription)(l),
-      children: [N, (0, n.jsx)("span", {
-        className: E,
+      children: [E, (0, n.jsx)("span", {
+        className: N,
         children: t
       })]
     }, String(s))
@@ -89,13 +89,13 @@ class T extends a.PureComponent {
       children: (0, n.jsxs)(d.HeadingLevel, {
         component: (0, n.jsx)(d.FormTitle, {
           tag: d.FormTitleTags.H5,
-          className: null != e.description ? I.marginBottom8 : I.marginBottom20,
+          className: null != e.description ? m.marginBottom8 : m.marginBottom20,
           children: e.title
         }),
         children: [null != e.description && (0, n.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          className: I.marginBottom20,
+          className: m.marginBottom20,
           children: e.description
         }), e.permissions.map(this.renderComponent, this)]
       })

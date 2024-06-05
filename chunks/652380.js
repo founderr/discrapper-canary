@@ -14,13 +14,13 @@ var a = s("735250"),
   T = s("478977"),
   _ = s("456799"),
   I = s("210851"),
-  f = s("602683"),
-  m = s("916028"),
-  N = s("15033"),
-  g = s("899457"),
-  h = s("975266");
+  N = s("602683"),
+  f = s("916028"),
+  g = s("15033"),
+  m = s("899457"),
+  C = s("975266");
 
-function C(e, t, s) {
+function A(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -28,9 +28,9 @@ function C(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let O = ["svg", "png", "gif", "webp"],
-  A = [...O, "jpg", "jpeg"],
-  p = Array.from(new Set([...A, "gif", "mp4", "webm"]));
+let h = ["svg", "png", "gif", "webp"],
+  O = [...h, "jpg", "jpeg"],
+  p = Array.from(new Set([...O, "gif", "mp4", "webm"]));
 
 function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -105,8 +105,8 @@ let x = {
 
 function M() {
   var e, t, s;
-  let [i, C] = n.useState(x), [M, D] = n.useState(g.UserState.UNENROLLED), [L, P] = n.useState([]), [v, b] = n.useState(!1), [U, j] = n.useState(null);
-  let F = (s = i.config, (0, l.match)(s).with({
+  let [i, A] = n.useState(x), [M, D] = n.useState(m.UserState.UNENROLLED), [L, P] = n.useState([]), [b, v] = n.useState(!1), [U, j] = n.useState(null);
+  let G = (s = i.config, (0, l.match)(s).with({
     configVersion: 1
   }, e => ({
     name: e.messages.rewardName,
@@ -131,10 +131,10 @@ function M() {
     }, e => e.features).exhaustive()))
   }, [i]);
 
-  function G(e, t) {
+  function F(e, t) {
     if ("hero" === e || "questBarHero" === e || "gameTile" === e || "logotype" === e) {
       var s, a;
-      C({
+      A({
         ...i,
         config: (s = i.config, a = {
           [e]: t
@@ -162,7 +162,7 @@ function M() {
   function B(e, t) {
     if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
       var s, a;
-      C({
+      A({
         ...i,
         config: (s = i.config, a = {
           [e]: t
@@ -190,7 +190,7 @@ function M() {
   function y(e, t) {
     if ("rewardName" === e || "rewardNameWithArticle" === e) {
       var s, a;
-      C({
+      A({
         ...i,
         config: (s = i.config, a = {
           [e]: t
@@ -222,7 +222,7 @@ function M() {
   }
 
   function V(e, t) {
-    C({
+    A({
       ...i,
       config: {
         ...i.config,
@@ -236,65 +236,65 @@ function M() {
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(r.Heading, {
       variant: "heading-lg/bold",
-      className: h.heading,
+      className: C.heading,
       children: "Quest Preview Tool"
     }), (0, a.jsx)("div", {
-      className: h.fields,
-      children: (0, a.jsx)(m.default, {
+      className: C.fields,
+      children: (0, a.jsx)(f.default, {
         onSelect: function(e) {
-          j(e), null != e && C(e)
+          j(e), null != e && A(e)
         },
         quest: U
       })
     }), (0, a.jsx)(r.Heading, {
       variant: "heading-md/semibold",
-      className: h.subheading,
+      className: C.subheading,
       children: "Messages"
     }), (0, a.jsxs)("div", {
-      className: h.fields,
-      children: [(0, a.jsx)(f.default, {
+      className: C.fields,
+      children: [(0, a.jsx)(N.default, {
         title: "Quest Name",
         assetKey: "questName",
         onMessageChange: B,
         initialValue: i.config.messages.questName
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(N.default, {
         title: "Game Title",
         assetKey: "gameTitle",
         onMessageChange: B,
         initialValue: i.config.messages.gameTitle
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(N.default, {
         title: "Reward Name",
         assetKey: "rewardName",
         onMessageChange: y,
-        initialValue: F.name
-      }), (0, a.jsx)(f.default, {
+        initialValue: G.name
+      }), (0, a.jsx)(N.default, {
         title: "Reward Name With Article",
         assetKey: "rewardNameWithArticle",
         onMessageChange: y,
-        initialValue: F.nameWithArticle
+        initialValue: G.nameWithArticle
       })]
     }), (0, a.jsx)(r.Heading, {
       variant: "heading-md/semibold",
-      className: h.subheading,
+      className: C.subheading,
       children: "Assets"
     }), (0, a.jsxs)("div", {
-      className: h.fields,
+      className: C.fields,
       children: [(0, a.jsx)(I.default, {
         title: "Game Tile Asset",
         assetKey: "gameTile",
-        onFileChange: G,
-        filters: A,
+        onFileChange: F,
+        filters: O,
         initialValue: i.config.assets.gameTile
       }), (0, a.jsx)(I.default, {
         title: "Logotype",
         assetKey: "logotype",
-        onFileChange: G,
-        filters: O,
+        onFileChange: F,
+        filters: h,
         initialValue: i.config.assets.logotype
       }), (0, a.jsx)(I.default, {
         title: "Quest Bar Hero Asset",
         assetKey: "questBarHero",
-        onFileChange: G,
+        onFileChange: F,
         filters: p,
         initialValue: i.config.assets.questBarHero
       }), (0, a.jsx)(I.default, {
@@ -303,7 +303,7 @@ function M() {
         onFileChange: function(e, t) {
           if ("rewardTile" === e) {
             var s, a;
-            C({
+            A({
               ...i,
               config: (s = i.config, a = {
                 [e]: t
@@ -335,22 +335,22 @@ function M() {
           }
         },
         filters: p,
-        initialValue: F.rewardTile
+        initialValue: G.rewardTile
       }), (0, a.jsx)(I.default, {
         title: "Gift Inventory Hero",
         assetKey: "hero",
-        onFileChange: G,
+        onFileChange: F,
         filters: p,
         initialValue: i.config.assets.hero
       })]
     }), (0, a.jsx)("div", {
-      className: h.fields,
+      className: C.fields,
       children: (0, a.jsx)("div", {
-        className: h.fullWidthField,
-        children: (0, a.jsx)(N.default, {
+        className: C.fullWidthField,
+        children: (0, a.jsx)(g.default, {
           onChange: function(e) {
             var t, s;
-            C({
+            A({
               ...i,
               config: (t = i.config, s = e, (0, l.match)(t).with({
                 configVersion: 1
@@ -370,12 +370,12 @@ function M() {
       })
     }), (0, a.jsx)(r.Heading, {
       variant: "heading-md/semibold",
-      className: h.subheading,
+      className: C.subheading,
       children: "Colors & Quest States"
     }), (0, a.jsxs)("div", {
-      className: h.fields,
+      className: C.fields,
       children: [(0, a.jsxs)("div", {
-        className: h.fields,
+        className: C.fields,
         style: {
           marginBottom: 0
         },
@@ -390,25 +390,25 @@ function M() {
           onChange: V,
           value: i.config.colors.secondary
         })]
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(m.default, {
         onChange: function(e) {
           switch (D(e), e) {
-            case g.UserState.UNENROLLED:
-              C({
+            case m.UserState.UNENROLLED:
+              A({
                 ...i,
                 userStatus: null
               });
               break;
-            case g.UserState.ENROLLED:
-              C({
+            case m.UserState.ENROLLED:
+              A({
                 ...i,
                 userStatus: R({
                   enrolledAt: new Date().toISOString()
                 })
               });
               break;
-            case g.UserState.COMPLETED_25:
-              C({
+            case m.UserState.COMPLETED_25:
+              A({
                 ...i,
                 userStatus: R({
                   enrolledAt: new Date().toISOString(),
@@ -416,8 +416,8 @@ function M() {
                 })
               });
               break;
-            case g.UserState.COMPLETED_50:
-              C({
+            case m.UserState.COMPLETED_50:
+              A({
                 ...i,
                 userStatus: R({
                   enrolledAt: new Date().toISOString(),
@@ -425,8 +425,8 @@ function M() {
                 })
               });
               break;
-            case g.UserState.COMPLETED_75:
-              C({
+            case m.UserState.COMPLETED_75:
+              A({
                 ...i,
                 userStatus: R({
                   enrolledAt: new Date().toISOString(),
@@ -434,8 +434,8 @@ function M() {
                 })
               });
               break;
-            case g.UserState.COMPLETED_100:
-              C({
+            case m.UserState.COMPLETED_100:
+              A({
                 ...i,
                 userStatus: R({
                   completedAt: new Date().toISOString(),
@@ -444,8 +444,8 @@ function M() {
                 })
               });
               break;
-            case g.UserState.CLAIMED:
-              C({
+            case m.UserState.CLAIMED:
+              A({
                 ...i,
                 userStatus: R({
                   claimedAt: new Date().toISOString(),
@@ -460,22 +460,22 @@ function M() {
       })]
     }), (0, a.jsx)(r.Heading, {
       variant: "heading-lg/bold",
-      className: h.heading,
+      className: C.heading,
       children: "Component Previews"
     }), (0, a.jsxs)("div", {
-      className: h.componentPreviews,
+      className: C.componentPreviews,
       children: [(0, a.jsxs)(_.default, {
         withBorder: !0,
         children: [(0, a.jsx)(r.FormTitle, {
           children: "Quest Bar"
         }), (0, a.jsxs)("div", {
-          className: h.questBarPreviewWrapper,
+          className: C.questBarPreviewWrapper,
           children: [(null === (e = i.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null && (0, a.jsx)(r.Text, {
             color: "text-secondary",
             variant: "text-sm/normal",
             children: "The Quest Bar is hidden when the user has claimed the reward."
           }), (0, a.jsx)("div", {
-            className: h.questBarPreview,
+            className: C.questBarPreview,
             children: (0, a.jsx)(c.QuestsAssetContextProvider, {
               isPreview: !0,
               children: (0, a.jsx)(u.QuestBar, {
@@ -503,26 +503,26 @@ function M() {
           variant: "text-sm/normal",
           children: "The Quest Channel Call Header is hidden when the user has claimed the reward."
         }), (0, a.jsx)("div", {
-          className: h.questBarPreviewWrapper,
+          className: C.questBarPreviewWrapper,
           children: (0, a.jsx)(c.QuestsAssetContextProvider, {
             isPreview: !0,
             children: (0, a.jsx)("div", {
-              className: h.questChannelCallHeaderPreview,
+              className: C.questChannelCallHeaderPreview,
               children: (0, a.jsx)(E.default, {
                 channelId: "123",
                 previewQuest: i,
-                isParticipatingOverride: v
+                isParticipatingOverride: b
               })
             })
           })
         })]
       }), (0, a.jsx)("div", {
-        className: h.channelCallParticipationToggle,
+        className: C.channelCallParticipationToggle,
         children: (0, a.jsx)(r.FormItem, {
           children: (0, a.jsx)(r.FormSwitch, {
-            value: v,
+            value: b,
             onChange: function(e) {
-              b(e)
+              v(e)
             },
             hideBorder: !0,
             children: "Is Participating:"
@@ -544,9 +544,9 @@ class D extends n.Component {
       renderKey: t
     } = this.state;
     return null != e ? (0, a.jsxs)("div", {
-      className: h.errorBoundary,
+      className: C.errorBoundary,
       children: [(0, a.jsx)(i.CircleExclamationPointIcon, {
-        className: h.errorBoundaryIcon
+        className: C.errorBoundaryIcon
       }), (0, a.jsx)(r.Heading, {
         variant: "heading-lg/semibold",
         children: "Something broke in the Quest preview tool :("
@@ -555,19 +555,19 @@ class D extends n.Component {
         onClick: this.handleResetState,
         children: "Reset"
       }), null != e.message && (0, a.jsx)(r.Card, {
-        className: h.errorMessageWrapper,
+        className: C.errorMessageWrapper,
         children: (0, a.jsx)("code", {
-          className: h.errorMessage,
+          className: C.errorMessage,
           children: e.message
         })
       })]
     }) : (0, a.jsx)(M, {}, t)
   }
   constructor(...e) {
-    super(...e), C(this, "state", {
+    super(...e), A(this, "state", {
       error: null,
       renderKey: 0
-    }), C(this, "handleResetState", () => {
+    }), A(this, "handleResetState", () => {
       this.setState(e => ({
         error: null,
         renderKey: e.renderKey + 1

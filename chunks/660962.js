@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("75518"),
   D = s("585512"),
   v = s("179517"),
-  G = s("79829");
-let j = (0, E.makeLazy)({
+  j = s("79829");
+let G = (0, E.makeLazy)({
     createPromise: () => s.e("5609").then(s.bind(s, "336231")),
     webpackId: "336231"
   }),
@@ -74,7 +74,7 @@ function b(e) {
     children: [(0, a.jsx)(u.FormText, {
       className: M.colorDescription,
       children: A.default.Messages.ROLE_COLOR_HELP
-    }), (0, a.jsx)(j, {
+    }), (0, a.jsx)(G, {
       defaultColor: p.DEFAULT_ROLE_COLOR,
       colors: p.ROLE_COLORS,
       value: t.color,
@@ -88,7 +88,7 @@ function b(e) {
   })
 }
 
-function y(e) {
+function B(e) {
   var t, n;
   let {
     role: i,
@@ -119,7 +119,7 @@ function y(e) {
       name: i.name
     },
     E = {
-      src: G,
+      src: j,
       name: i.name
     },
     m = (0, _.useRoleIconForPreview)(r, i);
@@ -155,7 +155,7 @@ function y(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     role: t,
     disabled: s
@@ -229,12 +229,12 @@ function F(e) {
         guild: t,
         disabled: o,
         role: s
-      }), (0, a.jsx)(y, {
+      }), (0, a.jsx)(B, {
         role: s,
         guildId: t.id
       }), (0, a.jsx)(u.FormDivider, {
         className: M.divider
-      }), (0, a.jsx)(B, {
+      }), (0, a.jsx)(y, {
         role: s,
         disabled: o
       }), E ? (0, a.jsxs)(a.Fragment, {

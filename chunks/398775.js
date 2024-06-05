@@ -12,8 +12,8 @@ var a = s("735250"),
   i = s("913527"),
   l = s.n(i),
   r = s("99945"),
-  o = s("780384"),
-  u = s("481060"),
+  u = s("780384"),
+  o = s("481060"),
   d = s("355467"),
   c = s("410030"),
   p = s("906732"),
@@ -48,7 +48,7 @@ function P(e) {
     onClose: s,
     pauseDuration: i,
     setPauseDuration: l,
-    footer: o,
+    footer: u,
     premiumSubscription: d
   } = e, c = n.useCallback(e => {
     let {
@@ -85,30 +85,30 @@ function P(e) {
     children: [(0, a.jsx)(E.default, {
       premiumType: t,
       onClose: s
-    }), (0, a.jsx)(u.ModalHeader, {
+    }), (0, a.jsx)(o.ModalHeader, {
       separator: !1,
       children: (0, a.jsxs)("div", {
         className: I.__invalid_header,
-        children: [(0, a.jsx)(u.Heading, {
+        children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/bold",
           className: I.__invalid_modalHeader,
           children: S.default.Messages.PREMIUM_PAUSE_SELECT_TITLE
-        }), (0, a.jsx)(u.Heading, {
+        }), (0, a.jsx)(o.Heading, {
           variant: "heading-sm/medium",
           className: I.subtitle,
           children: p
         })]
       })
-    }), (0, a.jsx)(u.ModalContent, {
+    }), (0, a.jsx)(o.ModalContent, {
       className: I.body,
-      children: (0, a.jsx)(u.RadioGroup, {
+      children: (0, a.jsx)(o.RadioGroup, {
         options: N,
         onChange: c,
         value: i
       })
-    }), (0, a.jsx)(u.ModalFooter, {
+    }), (0, a.jsx)(o.ModalFooter, {
       justify: f.default.Justify.START,
-      children: o
+      children: u
     })]
   })
 }
@@ -149,28 +149,28 @@ function C(e) {
     children: [(0, a.jsx)(E.default, {
       premiumType: s,
       onClose: i
-    }), (0, a.jsx)(u.ModalHeader, {
+    }), (0, a.jsx)(o.ModalHeader, {
       separator: !1,
       children: (0, a.jsx)("div", {
         className: I.__invalid_header,
-        children: (0, a.jsx)(u.Heading, {
+        children: (0, a.jsx)(o.Heading, {
           variant: "heading-xl/bold",
           className: I.__invalid_modalHeader,
           children: S.default.Messages.PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED
         })
       })
-    }), (0, a.jsxs)(u.ModalContent, {
+    }), (0, a.jsxs)(o.ModalContent, {
       className: I.body,
-      children: [m ? (0, a.jsx)(u.FormErrorBlock, {
+      children: [m ? (0, a.jsx)(o.FormErrorBlock, {
         className: I.errorBlock,
         children: S.default.Messages.BILLING_ERROR_GENERIC
       }) : null, R]
-    }), (0, a.jsx)(u.ModalFooter, {
+    }), (0, a.jsx)(o.ModalFooter, {
       justify: f.default.Justify.START,
       children: (0, a.jsxs)("div", {
         className: I.whatYouLoseButtonContainer,
-        children: [(0, a.jsx)(u.Button, {
-          color: u.Button.Colors.RED,
+        children: [(0, a.jsx)(o.Button, {
+          color: o.Button.Colors.RED,
           disabled: h || null == r,
           onClick: async () => {
             await N({
@@ -184,9 +184,9 @@ function C(e) {
             })
           },
           children: S.default.Messages.CONFIRM
-        }), (0, a.jsx)(u.Button, {
-          look: u.Button.Looks.LINK,
-          color: (0, o.isThemeDark)(A) ? u.Button.Colors.WHITE : u.Button.Colors.PRIMARY,
+        }), (0, a.jsx)(o.Button, {
+          look: o.Button.Looks.LINK,
+          color: (0, u.isThemeDark)(A) ? o.Button.Colors.WHITE : o.Button.Colors.PRIMARY,
           onClick: i,
           children: S.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
         })]

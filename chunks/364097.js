@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("735250");
@@ -14,13 +14,13 @@ var a = n("442837"),
   u = n("58346"),
   d = n("689938"),
   c = n("892344"),
-  E = n("798719");
+  f = n("798719");
 
-function f(e) {
+function E(e) {
   var t;
   let {
-    code: f
-  } = e, _ = (0, a.useStateFromStores)([o.default], () => o.default.getGuildTemplate(f));
+    code: E
+  } = e, _ = (0, a.useStateFromStores)([o.default], () => o.default.getGuildTemplate(E));
   if (null == _ || _.state === u.GuildTemplateStates.RESOLVING) return (0, s.jsxs)(i.default, {
     children: [(0, s.jsx)(i.default.Header, {
       text: d.default.Messages.GUILD_TEMPLATE_RESOLVING_TITLE
@@ -40,7 +40,7 @@ function f(e) {
       })]
     })]
   });
-  let T = __OVERLAY__ ? (0, s.jsx)(i.default.Button, {
+  let m = __OVERLAY__ ? (0, s.jsx)(i.default.Button, {
     isDisabled: !0,
     color: i.default.Button.Colors.PRIMARY,
     children: d.default.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
@@ -65,7 +65,7 @@ function f(e) {
       text: d.default.Messages.GUILD_TEMPLATE_RESOLVED_EMBED_TITLE
     }), (0, s.jsxs)(i.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: E.headerLine,
+        className: f.headerLine,
         children: [(0, s.jsx)(r.default, {
           className: c.icon
         }), (0, s.jsx)(i.default.Info, {
@@ -74,7 +74,7 @@ function f(e) {
             usageCount: String(null !== (t = _.usageCount) && void 0 !== t ? t : 0)
           })
         })]
-      }), T]
+      }), m]
     })]
   })
 }

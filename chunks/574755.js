@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return O
   }
 });
 var a = s("735250"),
@@ -18,19 +18,19 @@ var a = s("735250"),
   T = s("435064"),
   _ = s("779618"),
   I = s("39604"),
-  f = s("703288"),
-  m = s("491758"),
-  N = s("183632"),
-  g = s("689938"),
-  h = s("477716"),
-  C = s("151501"),
-  O = s("611273");
+  N = s("703288"),
+  f = s("491758"),
+  g = s("183632"),
+  m = s("689938"),
+  C = s("477716"),
+  A = s("151501"),
+  h = s("611273");
 
-function A(e) {
+function O(e) {
   let {
     className: t,
     showHeader: s = !0
-  } = e, A = c.ClipsAllowVoiceRecording.useSetting(), {
+  } = e, O = c.ClipsAllowVoiceRecording.useSetting(), {
     enableViewerClipping: p
   } = u.default.useExperiment({
     location: "Clips Settings"
@@ -49,34 +49,34 @@ function A(e) {
       className: t,
       tag: r.FormTitleTags.H1,
       title: s ? (0, a.jsxs)("div", {
-        className: h.headerContainer,
-        children: [g.default.Messages.CLIPS, (0, a.jsx)(f.default, {})]
+        className: C.headerContainer,
+        children: [m.default.Messages.CLIPS, (0, a.jsx)(N.default, {})]
       }) : null,
       children: x && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(N.default, {})]
+        children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {})]
       })
     }), x && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: s || x ? O.marginTop20 : t,
+      className: s || x ? h.marginTop20 : t,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        className: C.formItem,
-        value: A,
-        note: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+        className: A.formItem,
+        value: O,
+        note: m.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => I.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
-        children: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+        children: m.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
       }), p && D && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        className: C.formItem,
+        className: A.formItem,
         value: M,
-        note: g.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
+        note: m.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => I.updateViewerClipsEnabled({
           enabled: e,
           trackAnalytics: !0
         }),
-        children: g.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
+        children: m.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]
   })

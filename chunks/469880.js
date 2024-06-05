@@ -19,30 +19,30 @@ function f(e) {
     applicationIcon: t,
     applicationName: l,
     canNavigate: f,
-    guildId: m
+    guildId: I
   } = e, {
-    results: I,
+    results: m,
     query: T,
-    setQuery: N,
-    unfilteredCount: E
+    setQuery: E,
+    unfilteredCount: N
   } = (0, r.useIntegrationPermissionCommandSearch)();
   return (0, n.jsx)(a.Fragment, {
-    children: null != I && E > 0 ? (0, n.jsx)(d.default, {
+    children: null != m && N > 0 ? (0, n.jsx)(d.default, {
       bar: (0, n.jsx)(i.default, {
         query: T,
-        onChange: N,
-        onClear: () => N("")
+        onChange: E,
+        onClear: () => E("")
       }),
       inModal: !1,
       title: u.default.Messages.COMMANDS,
-      children: I.map((e, i) => (0, n.jsxs)(a.Fragment, {
+      children: m.map((e, i) => (0, n.jsxs)(a.Fragment, {
         children: [(0, n.jsx)(o.default, {
           applicationIcon: t,
           applicationName: l,
           canNavigate: f,
           command: e,
-          guildId: m
-        }), i < I.length - 1 ? (0, n.jsx)(s.FormDivider, {}) : null]
+          guildId: I
+        }), i < m.length - 1 ? (0, n.jsx)(s.FormDivider, {}) : null]
       }, e.id))
     }) : (0, n.jsx)(s.Card, {
       className: c.emptyCard,

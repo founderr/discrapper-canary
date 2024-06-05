@@ -41,19 +41,19 @@ t.default = function(e) {
     id: n.id,
     splash: n.discoverySplash,
     size: 240 * (0, u.getDevicePixelRatio)()
-  }), G = (0, r.isThemeDark)(p) ? f : m, j = null !== (t = _.default.getGuildIconURL({
+  }), j = (0, r.isThemeDark)(p) ? f : m, G = null !== (t = _.default.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 40
-  })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, y = null;
-  if (null != j) y = (0, a.jsx)("img", {
-    src: j,
+  })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, B = null;
+  if (null != G) B = (0, a.jsx)("img", {
+    src: G,
     alt: "",
     className: S.avatar
   });
   else {
     let e = (0, I.getAcronym)(n.name);
-    y = (0, a.jsx)("div", {
+    B = (0, a.jsx)("div", {
       className: S.defaultIcon,
       children: (0, a.jsx)(o.Text, {
         className: S.acronym,
@@ -76,7 +76,7 @@ t.default = function(e) {
       children: [(0, a.jsx)("div", {
         className: S.splash,
         children: (0, a.jsx)("img", {
-          src: null != v ? v : G,
+          src: null != v ? v : j,
           alt: "",
           className: S.splashImage,
           onLoad: () => M(!0)
@@ -93,7 +93,7 @@ t.default = function(e) {
               mask: E.default.Masks.SQUIRCLE,
               width: 40,
               height: 40,
-              children: null != y ? y : null
+              children: null != B ? B : null
             })
           })
         })

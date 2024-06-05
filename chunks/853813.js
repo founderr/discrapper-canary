@@ -48,8 +48,8 @@ function p(e) {
   l.useEffect(() => {
     null == D && n(null)
   }, [D, n]);
-  let G = (0, r.useStateFromStores)([E.default], () => E.default.getHighestRole(M), [M]),
-    j = (0, r.useStateFromStores)([E.default], () => !E.default.isRoleHigher(M, G, D)),
+  let j = (0, r.useStateFromStores)([E.default], () => E.default.getHighestRole(M), [M]),
+    G = (0, r.useStateFromStores)([E.default], () => !E.default.isRoleHigher(M, j, D)),
     U = l.useRef(null),
     P = (0, r.useStateFromStores)([f.default], () => f.default.getProps().integrations);
   if (l.useEffect(() => {
@@ -74,8 +74,8 @@ function p(e) {
       t = (0, a.jsx)(g.default, {
         guild: M,
         role: D,
-        locked: j,
-        highestRole: G,
+        locked: G,
+        highestRole: j,
         setSelectedSection: A
       });
       break;
@@ -83,7 +83,7 @@ function p(e) {
       t = (0, a.jsx)(C.default, {
         guild: M,
         role: D,
-        locked: j,
+        locked: G,
         setSelectedSection: A,
         initialSearchQuery: v
       });
@@ -92,7 +92,7 @@ function p(e) {
       t = (0, a.jsx)(N.default, {
         guild: M,
         role: D,
-        locked: j,
+        locked: G,
         setSelectedSection: A,
         integrations: null != P ? P : void 0
       });
@@ -101,7 +101,7 @@ function p(e) {
       t = (0, a.jsx)(h.default, {
         guild: M,
         role: D,
-        locked: j,
+        locked: G,
         setSelectedSection: A
       });
       break;

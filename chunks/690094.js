@@ -9,19 +9,19 @@ Object.keys(n).forEach(function(e) {
 });
 var u = {};
 
-function l(e, t) {
-  if (!(this instanceof l)) return new l(e, t);
+function c(e, t) {
+  if (!(this instanceof c)) return new c(e, t);
   if (t && t in o && (t = null), t && !(t in n)) throw Error("Unknown model: " + t);
   if (null == e) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-  else if (e instanceof l) this.model = e.model, this.color = e.color.slice(), this.valpha = e.valpha;
+  else if (e instanceof c) this.model = e.model, this.color = e.color.slice(), this.valpha = e.valpha;
   else if ("string" == typeof e) {
-    var r, c, f = a.get(e);
+    var r, l, f = a.get(e);
     if (null === f) throw Error("Unable to parse color from string: " + e);
-    this.model = f.model, c = n[this.model].channels, this.color = f.value.slice(0, c), this.valpha = "number" == typeof f.value[c] ? f.value[c] : 1
+    this.model = f.model, l = n[this.model].channels, this.color = f.value.slice(0, l), this.valpha = "number" == typeof f.value[l] ? f.value[l] : 1
   } else if (e.length) {
-    this.model = t || "rgb", c = n[this.model].channels;
-    var d = s.call(e, 0, c);
-    this.color = b(d, c), this.valpha = "number" == typeof e[c] ? e[c] : 1
+    this.model = t || "rgb", l = n[this.model].channels;
+    var d = s.call(e, 0, l);
+    this.color = b(d, l), this.valpha = "number" == typeof e[l] ? e[l] : 1
   } else if ("number" == typeof e) e &= 16777215, this.model = "rgb", this.color = [e >> 16 & 255, e >> 8 & 255, 255 & e], this.valpha = 1;
   else {
     this.valpha = 1;
@@ -30,19 +30,19 @@ function l(e, t) {
     var p = h.sort().join("");
     if (!(p in i)) throw Error("Unable to parse color from object: " + JSON.stringify(e));
     this.model = i[p];
-    var g = n[this.model].labels,
-      y = [];
-    for (r = 0; r < g.length; r++) y.push(e[g[r]]);
-    this.color = b(y)
+    var y = n[this.model].labels,
+      g = [];
+    for (r = 0; r < y.length; r++) g.push(e[y[r]]);
+    this.color = b(g)
   }
   if (u[this.model])
-    for (r = 0, c = n[this.model].channels; r < c; r++) {
+    for (r = 0, l = n[this.model].channels; r < l; r++) {
       var v = u[this.model][r];
       v && (this.color[r] = v(this.color[r]))
     }
   this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
 }
-l.prototype = {
+c.prototype = {
   toString: function() {
     return this.string()
   },
@@ -75,7 +75,7 @@ l.prototype = {
     return e.r /= 255, e.g /= 255, e.b /= 255, 1 !== this.valpha && (e.alpha = this.valpha), e
   },
   round: function(e) {
-    return e = Math.max(e || 0, 0), new l(this.color.map(function(e) {
+    return e = Math.max(e || 0, 0), new c(this.color.map(function(e) {
       return function(t) {
         var r, a;
         return r = t, a = e, Number(r.toFixed(a))
@@ -83,37 +83,37 @@ l.prototype = {
     }(e)).concat(this.valpha), this.model)
   },
   alpha: function(e) {
-    return arguments.length ? new l(this.color.concat(Math.max(0, Math.min(1, e))), this.model) : this.valpha
+    return arguments.length ? new c(this.color.concat(Math.max(0, Math.min(1, e))), this.model) : this.valpha
   },
-  red: c("rgb", 0, f(255)),
-  green: c("rgb", 1, f(255)),
-  blue: c("rgb", 2, f(255)),
-  hue: c(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, function(e) {
+  red: l("rgb", 0, f(255)),
+  green: l("rgb", 1, f(255)),
+  blue: l("rgb", 2, f(255)),
+  hue: l(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, function(e) {
     return (e % 360 + 360) % 360
   }),
-  saturationl: c("hsl", 1, f(100)),
-  lightness: c("hsl", 2, f(100)),
-  saturationv: c("hsv", 1, f(100)),
-  value: c("hsv", 2, f(100)),
-  chroma: c("hcg", 1, f(100)),
-  gray: c("hcg", 2, f(100)),
-  white: c("hwb", 1, f(100)),
-  wblack: c("hwb", 2, f(100)),
-  cyan: c("cmyk", 0, f(100)),
-  magenta: c("cmyk", 1, f(100)),
-  yellow: c("cmyk", 2, f(100)),
-  black: c("cmyk", 3, f(100)),
-  x: c("xyz", 0, f(100)),
-  y: c("xyz", 1, f(100)),
-  z: c("xyz", 2, f(100)),
-  l: c("lab", 0, f(100)),
-  a: c("lab", 1),
-  b: c("lab", 2),
+  saturationl: l("hsl", 1, f(100)),
+  lightness: l("hsl", 2, f(100)),
+  saturationv: l("hsv", 1, f(100)),
+  value: l("hsv", 2, f(100)),
+  chroma: l("hcg", 1, f(100)),
+  gray: l("hcg", 2, f(100)),
+  white: l("hwb", 1, f(100)),
+  wblack: l("hwb", 2, f(100)),
+  cyan: l("cmyk", 0, f(100)),
+  magenta: l("cmyk", 1, f(100)),
+  yellow: l("cmyk", 2, f(100)),
+  black: l("cmyk", 3, f(100)),
+  x: l("xyz", 0, f(100)),
+  y: l("xyz", 1, f(100)),
+  z: l("xyz", 2, f(100)),
+  l: l("lab", 0, f(100)),
+  a: l("lab", 1),
+  b: l("lab", 2),
   keyword: function(e) {
-    return arguments.length ? new l(e) : n[this.model].keyword(this.color)
+    return arguments.length ? new c(e) : n[this.model].keyword(this.color)
   },
   hex: function(e) {
-    return arguments.length ? new l(e) : a.to.hex(this.rgb().round().color)
+    return arguments.length ? new c(e) : a.to.hex(this.rgb().round().color)
   },
   rgbNumber: function() {
     var e = this.rgb().color;
@@ -173,7 +173,7 @@ l.prototype = {
   grayscale: function() {
     var e = this.rgb().color,
       t = .3 * e[0] + .59 * e[1] + .11 * e[2];
-    return l.rgb(t, t, t)
+    return c.rgb(t, t, t)
   },
   fade: function(e) {
     return this.alpha(this.valpha - this.valpha * e)
@@ -195,25 +195,25 @@ l.prototype = {
       o = r.alpha() - a.alpha(),
       i = ((s * o == -1 ? s : (s + o) / (1 + s * o)) + 1) / 2,
       u = 1 - i;
-    return l.rgb(i * r.red() + u * a.red(), i * r.green() + u * a.green(), i * r.blue() + u * a.blue(), r.alpha() * n + a.alpha() * (1 - n))
+    return c.rgb(i * r.red() + u * a.red(), i * r.green() + u * a.green(), i * r.blue() + u * a.blue(), r.alpha() * n + a.alpha() * (1 - n))
   }
 }, Object.keys(n).forEach(function(e) {
   if (-1 === o.indexOf(e)) {
     var t = n[e].channels;
-    l.prototype[e] = function() {
-      if (this.model === e) return new l(this);
-      if (arguments.length) return new l(arguments, e);
+    c.prototype[e] = function() {
+      if (this.model === e) return new c(this);
+      if (arguments.length) return new c(arguments, e);
       var r = "number" == typeof arguments[t] ? t : this.valpha;
-      return new l((function(e) {
+      return new c((function(e) {
         return Array.isArray(e) ? e : [e]
       })(n[this.model][e].raw(this.color)).concat(r), e)
-    }, l[e] = function(r) {
-      return "number" == typeof r && (r = b(s.call(arguments), t)), new l(r, e)
+    }, c[e] = function(r) {
+      return "number" == typeof r && (r = b(s.call(arguments), t)), new c(r, e)
     }
   }
 });
 
-function c(e, t, r) {
+function l(e, t, r) {
   return (e = Array.isArray(e) ? e : [e]).forEach(function(e) {
       (u[e] || (u[e] = []))[t] = r
     }), e = e[0],
@@ -233,4 +233,4 @@ function b(e, t) {
   for (var r = 0; r < t; r++) "number" != typeof e[r] && (e[r] = 0);
   return e
 }
-e.exports = l
+e.exports = c

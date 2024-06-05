@@ -12,7 +12,7 @@ e.exports = function(e) {
       for (t[e].distance = 0; r.length;) {
         for (var n = r.pop(), s = Object.keys(a[n]), o = s.length, i = 0; i < o; i++) {
           var u = s[i],
-            l = t[u]; - 1 === l.distance && (l.distance = t[n].distance + 1, l.parent = n, r.unshift(u))
+            c = t[u]; - 1 === c.distance && (c.distance = t[n].distance + 1, c.parent = n, r.unshift(u))
         }
       }
       return t

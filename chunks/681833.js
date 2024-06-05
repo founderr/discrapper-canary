@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return N
   }
 });
 var a = s("735250"),
@@ -19,7 +19,7 @@ var a = s("735250"),
   _ = s("822293"),
   I = s("845904");
 
-function f(e) {
+function N(e) {
   let {
     onClickManageSubscription: t
   } = e, s = (0, r.useStateFromStores)([u.default], () => u.default.getSubscriptions()), l = n.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === S.SubscriptionTypes.APPLICATION && e.status !== S.SubscriptionStatusTypes.ENDED), [s]);

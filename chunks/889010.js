@@ -13,30 +13,30 @@ var s = n("844099"),
   f = n("199202"),
   E = n("360048"),
   h = n("823379"),
-  C = n("731455"),
-  _ = n("84051");
+  _ = n("731455"),
+  C = n("84051");
 let m = e => {
     switch (e) {
-      case C.CategoryIcons.Activity:
+      case _.CategoryIcons.Activity:
         return (0, a.jsx)(i.default, {});
-      case C.CategoryIcons.Discover:
+      case _.CategoryIcons.Discover:
         return (0, a.jsx)(r.default, {});
-      case C.CategoryIcons.Education:
+      case _.CategoryIcons.Education:
         return (0, a.jsx)(o.default, {});
-      case C.CategoryIcons.Music:
+      case _.CategoryIcons.Music:
         return (0, a.jsx)(u.default, {});
-      case C.CategoryIcons.Science:
+      case _.CategoryIcons.Science:
         return (0, a.jsx)(d.default, {});
-      case C.CategoryIcons.Stage:
+      case _.CategoryIcons.Stage:
         return (0, a.jsx)(c.default, {
           height: 22,
           width: 22
         });
-      case C.CategoryIcons.Television:
+      case _.CategoryIcons.Television:
         return (0, a.jsx)(f.default, {});
-      case C.CategoryIcons.Server:
+      case _.CategoryIcons.Server:
         return (0, a.jsx)(l.ServerIcon, {});
-      case C.CategoryIcons.Quest:
+      case _.CategoryIcons.Quest:
         return (0, a.jsx)(s.QuestsIcon, {});
       default:
         (0, h.assertNever)(e)
@@ -63,10 +63,10 @@ let m = e => {
         onClick: () => s(e.categoryId),
         wrapContent: !0,
         selected: l && e.categoryId === n,
-        className: _.categoryItem,
-        selectedClassName: _.selectedCategoryItem,
-        innerClassName: _.itemInner
+        className: C.categoryItem,
+        selectedClassName: C.selectedCategoryItem,
+        innerClassName: C.itemInner
       }, e.categoryId))
     })
   };
-S.Icons = C.CategoryIcons, t.default = S
+S.Icons = _.CategoryIcons, t.default = S

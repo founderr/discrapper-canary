@@ -13,7 +13,7 @@ var s = n("704215"),
   f = n("228392"),
   E = n("981631"),
   h = n("921944");
-let C = e => {
+let _ = e => {
   var t;
   let n = d.default.getGuild(e),
     a = !!(null == n ? void 0 : n.hasFeature(E.GuildFeatures.COMMUNITY)),
@@ -22,7 +22,7 @@ let C = e => {
     r = null !== (t = u.default.getMemberCount(e)) && void 0 !== t ? t : 0;
   return a && l && !i && r >= 200
 };
-class _ extends r.default {
+class C extends r.default {
   _initialize() {
     i.default.subscribe("CHANNEL_SELECT", this.handleChannelSelect)
   }
@@ -33,7 +33,7 @@ class _ extends r.default {
     let {
       guildId: t
     } = e;
-    if (null == t || !C(t)) return;
+    if (null == t || !_(t)) return;
     (0, f.trackForumUpsellModalViewed)(), (0, o.requestMarkDismissibleContentAsShown)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL);
     let i = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.ContentDismissActionType.DISMISS;
@@ -61,4 +61,4 @@ class _ extends r.default {
     })
   }
 }
-t.default = new _
+t.default = new C

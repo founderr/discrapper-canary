@@ -27,11 +27,11 @@ var a, l, s = n("735250"),
   I = n("100527"),
   A = n("906732"),
   v = n("67212"),
-  x = n("757454"),
-  N = n("158631"),
+  N = n("757454"),
+  x = n("158631"),
   M = n("709369"),
-  y = n("552740"),
-  R = n("358221"),
+  R = n("552740"),
+  y = n("358221"),
   L = n("887012"),
   O = n("659580"),
   j = n("793865"),
@@ -51,10 +51,10 @@ var a, l, s = n("735250"),
   z = n("611845"),
   K = n("618158"),
   Z = n("390322"),
-  X = n("791592"),
-  q = n("136995"),
-  J = n("402113"),
-  Q = n("197016"),
+  q = n("791592"),
+  X = n("136995"),
+  Q = n("402113"),
+  J = n("197016"),
   $ = n("386000"),
   ee = n("698877"),
   et = n("25827"),
@@ -101,14 +101,14 @@ function ev(e) {
   } = (0, W.usePerksDemo)(f.EntitlementFeatureNames.STREAM_HIGH_QUALITY), g = null != d && c && p, _ = i.useRef(null), T = t.getGuildId(), I = i.useCallback(() => {
     if (null == a || a(), !l) return (0, eC.default)();
     (0, eg.default)(T, t.id, e_.AnalyticsPages.GUILD_CHANNEL)
-  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, N.default)(), R = (0, x.default)() && null != A, L = () => {
-    R && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
+  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, x.default)(), y = (0, N.default)() && null != A, L = () => {
+    y && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
       channelId: t.id,
       pid: null == A ? void 0 : A.pid
     }) : (0, v.startBroadcastForStream)((0, F.encodeStreamKey)(d), null == A ? void 0 : A.pid))
   }, O = () => {
-    if (R) {
-      (0, y.openStartBroadcastConfirmModal)(L);
+    if (y) {
+      (0, R.openStartBroadcastConfirmModal)(L);
       return
     }
     if (l) {
@@ -117,7 +117,7 @@ function ev(e) {
     }(0, eC.default)()
   }, j = () => {
     if (M) {
-      (0, y.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
+      (0, R.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
       return
     }(0, H.default)(d)
   }, P = (e, t) => {
@@ -187,7 +187,7 @@ function ev(e) {
   })
 }
 
-function ex(e) {
+function eN(e) {
   let {
     channel: t
   } = e, n = t.getGuildId();
@@ -198,25 +198,25 @@ function ex(e) {
     })
   }) : null
 }(l = a || (a = {})).ACTIVITY = "ACTIVITY", l.STREAM = "STREAM", l.CALL = "CALL", l.EVENT = "EVENT", l.BROADCAST = "BROADCAST";
-let eN = i.memo(function(e) {
+let ex = i.memo(function(e) {
   let {
     connectedActivityApplicationId: t,
     currentUser: n,
     onDisconnectCall: a,
     channel: l
-  } = e, r = (0, h.useStateFromStores)([R.default], () => R.default.getSelectedParticipant(l.id)), {
+  } = e, r = (0, h.useStateFromStores)([y.default], () => y.default.getSelectedParticipant(l.id)), {
     reducedMotion: o
   } = i.useContext(m.AccessibilityPreferencesContext), [u, d] = i.useState(!1), f = null == r ? void 0 : r.id, p = (0, h.useStateFromStores)([en.default], () => null != f ? en.default.getActiveStreamForStreamKey(f) : null, [f]), g = (null == r ? void 0 : r.type) === eT.ParticipantTypes.STREAM && null != p && p.ownerId !== (null == n ? void 0 : n.id), S = (0, h.useStateFromStoresArray)([en.default], () => en.default.getAllActiveStreamsForChannel(l.id).filter(e => {
     let {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, B.useActiveEvent)(l.id), T = (0, N.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
+  })), _ = (0, B.useActiveEvent)(l.id), T = (0, x.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eT.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (g) return "STREAM";
     if (null != _) return "EVENT";
     return "CALL"
-  }, [r, t, g, _]), [A, v] = i.useState(I()), x = (0, c.useSpring)({
+  }, [r, t, g, _]), [A, v] = i.useState(I()), N = (0, c.useSpring)({
     opacity: u ? .2 : 1,
     transform: u && !o.enabled ? "scale(0.7)" : "scale(1)",
     config: {
@@ -233,7 +233,7 @@ let eN = i.memo(function(e) {
   i.useEffect(() => {
     I() !== A && d(!0)
   }, [A, I]);
-  let y = i.useCallback(() => {
+  let R = i.useCallback(() => {
       if (null != p)(0, C.stopStream)((0, F.encodeStreamKey)(p));
       else
         for (let e of S)(0, C.stopStream)((0, F.encodeStreamKey)(e))
@@ -247,7 +247,7 @@ let eN = i.memo(function(e) {
       switch (A) {
         case "ACTIVITY":
           if (null == r || null == n) return;
-          return (0, s.jsx)(J.default, {
+          return (0, s.jsx)(Q.default, {
             ...i,
             applicationId: r.id,
             color: "red",
@@ -260,12 +260,12 @@ let eN = i.memo(function(e) {
             hasPermission: !0,
             streamActive: !0,
             color: "red",
-            onClick: y,
+            onClick: R,
             onPopoutClick: S.length > 1 ? t : null,
             isSelfStream: !1
           });
         case "CALL":
-          return (0, s.jsx)(Q.default, {
+          return (0, s.jsx)(J.default, {
             ...i,
             color: "red",
             onClick: () => null == a ? void 0 : a(),
@@ -307,7 +307,7 @@ let eN = i.memo(function(e) {
         isShown: a
       } = t;
       return (0, s.jsx)(c.animated.div, {
-        style: x,
+        style: N,
         children: L(a, n)
       })
     }
@@ -346,12 +346,12 @@ function eM(e) {
       className: eI.controlButton,
       iconClassName: eI.__invalid_joinIcon,
       onChange: c
-    }), (0, s.jsx)(q.default, {
+    }), (0, s.jsx)(X.default, {
       centerButton: !0,
       color: "green",
       channel: t,
       className: o()(eI.controlButton, eI.__invalid_lastButton)
-    }), m ? (0, s.jsx)(X.default, {
+    }), m ? (0, s.jsx)(q.default, {
       color: "red",
       channel: t,
       className: eI.controlButton
@@ -378,19 +378,19 @@ t.default = function(e) {
     canGoLive: C
   } = (0, h.useStateFromStoresObject)([el.default], () => ({
     canGoLive: (0, w.default)(el.default)
-  })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), v = null != S, x = (0, h.useStateFromStores)([es.default], () => {
+  })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), v = null != S, N = (0, h.useStateFromStores)([es.default], () => {
     var e;
     return (null !== (e = null == S ? void 0 : S.channelId) && void 0 !== e ? e : es.default.getVoiceChannelId()) === t.id
-  }), N = (0, L.default)(t, !0), M = (0, h.useStateFromStores)([_.default], () => {
+  }), x = (0, L.default)(t, !0), M = (0, h.useStateFromStores)([_.default], () => {
     let e = _.default.getSelfEmbeddedActivityForChannel(t.id);
     return null != e ? e.applicationId : null
   }), {
-    reachedLimit: y,
-    limit: R
+    reachedLimit: R,
+    limit: y
   } = (0, ed.default)(t), {
     analyticsLocations: U
   } = (0, A.default)(I.default.VOICE_CONTROL_TRAY);
-  if (!x) return (0, s.jsx)(A.AnalyticsLocationProvider, {
+  if (!N) return (0, s.jsx)(A.AnalyticsLocationProvider, {
     value: U,
     children: (0, s.jsx)(eM, {
       channel: t,
@@ -403,7 +403,7 @@ t.default = function(e) {
     permission: e_.Permissions.ADD_REACTIONS,
     user: i,
     context: t
-  }) && !t.isPrivate() && !N;
+  }) && !t.isPrivate() && !x;
   return (0, s.jsx)(A.AnalyticsLocationProvider, {
     value: U,
     children: (0, s.jsxs)(g.default, {
@@ -443,13 +443,13 @@ t.default = function(e) {
               cameraUnavailable: r,
               onChange: eA,
               onCameraUnavailable: eE.default,
-              channelLimitReached: y,
-              channelLimit: R,
+              channelLimitReached: R,
+              channelLimit: y,
               popoutOpen: a,
               onPopoutClick: n
             })
           }
-        }), !v && (0, s.jsx)(ex, {
+        }), !v && (0, s.jsx)(eN, {
           channel: t
         }), !v && (0, s.jsx)(ev, {
           channel: t,
@@ -497,7 +497,7 @@ t.default = function(e) {
           children: (0, s.jsx)(em.default, {
             channel: t
           })
-        }) : null, (0, s.jsx)(eN, {
+        }) : null, (0, s.jsx)(ex, {
           connectedActivityApplicationId: M,
           currentUser: i,
           channel: t,

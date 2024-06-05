@@ -16,13 +16,13 @@ function d(e, t) {
   var n;
   let d = (0, r.useInteractivePollMessage)(e),
     c = (0, i.useChannelPollInteractions)(d.getChannelId())[d.id],
-    E = (0, u.default)(null === (n = d.poll) || void 0 === n ? void 0 : n.expiry),
-    f = l.AnimateEmoji.useSetting(),
+    f = (0, u.default)(null === (n = d.poll) || void 0 === n ? void 0 : n.expiry),
+    E = l.AnimateEmoji.useSetting(),
     _ = (0, a.default)(),
-    T = null != t ? t : _;
+    m = null != t ? t : _;
   return s.useMemo(() => (0, o.default)(d, c, {
-    animateEmoji: f,
-    theme: T,
-    formattedExpirationLabel: E
-  }), [f, d, c, E, T])
+    animateEmoji: E,
+    theme: m,
+    formattedExpirationLabel: f
+  }), [E, d, c, f, m])
 }

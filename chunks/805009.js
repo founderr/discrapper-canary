@@ -25,11 +25,11 @@ var a, l = n("735250"),
   I = n("156338"),
   A = n("794358"),
   v = n("381238"),
-  x = n("779863"),
-  N = n("374129"),
+  N = n("779863"),
+  x = n("374129"),
   M = n("639351"),
-  y = n("944581"),
-  R = n("368666"),
+  R = n("944581"),
+  y = n("368666"),
   L = n("630388"),
   O = n("51144"),
   j = n("981631"),
@@ -177,7 +177,7 @@ class H extends(a = s.Component) {
       hangStatusActivity: S,
       showHangStatus: _,
       isSelf: v,
-      application: x,
+      application: N,
       guildId: O,
       channelId: F,
       user: w,
@@ -209,7 +209,7 @@ class H extends(a = s.Component) {
     }, "video"))), null != E && V.push((0, l.jsx)(h.TooltipContainer, {
       text: (0, p.default)(E.name),
       className: U.iconSpacing,
-      children: (0, l.jsx)(y.default, {
+      children: (0, l.jsx)(R.default, {
         className: r()(U.icon, m)
       })
     }, "activity")), C === D.GameConsoleTypes.XBOX || g === P.VoicePlatforms.XBOX ? V.push((0, l.jsx)("div", {
@@ -219,13 +219,13 @@ class H extends(a = s.Component) {
       })
     }, "xbox")) : (C === D.GameConsoleTypes.PLAYSTATION || g === P.VoicePlatforms.PLAYSTATION) && V.push((0, l.jsx)("div", {
       className: r()(U.iconSpacing),
-      children: (0, l.jsx)(N.default, {
+      children: (0, l.jsx)(x.default, {
         className: r()(U.icon, m)
       })
     }, "playstation")), d ? V.push((0, l.jsx)("div", {
       className: r()(U.iconSpacing, U.liveIconSpacing),
-      children: (0, l.jsx)(R.default, {
-        size: R.default.Sizes.SMALL
+      children: (0, l.jsx)(y.default, {
+        size: y.default.Sizes.SMALL
       })
     }, "stream")) : f && V.push((0, l.jsx)(h.TooltipContainer, {
       className: U.iconSpacing,
@@ -234,7 +234,7 @@ class H extends(a = s.Component) {
         className: r()(U.icon, m)
       })
     }, "watch"));
-    let Y = null != x && !(0, L.hasFlag)(x.flags, j.ApplicationFlags.EMBEDDED),
+    let Y = null != N && !(0, L.hasFlag)(N.flags, j.ApplicationFlags.EMBEDDED),
       z = null == S && Y;
     return 0 !== V.length || null != W || _ || z ? (0, l.jsxs)("div", {
       className: U.icons,
@@ -246,7 +246,7 @@ class H extends(a = s.Component) {
         className: U.iconGroup,
         onMouseEnter: () => null == H ? void 0 : H(!0),
         children: z ? (0, l.jsx)(B, {
-          application: x,
+          application: N,
           iconClassName: m,
           guildId: O,
           channelId: F,
@@ -400,7 +400,7 @@ function G(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(x.default, {
+    } else e = (0, l.jsx)(N.default, {
       className: r()(U.icon, t, {
         [U.iconServer]: s
       }),

@@ -17,17 +17,17 @@ function u(e) {
     children: u,
     contentClassName: d,
     iconClassName: c,
-    iconContainerClassName: E,
-    compact: f = !1
+    iconContainerClassName: f,
+    compact: E = !1
   } = e;
   return (0, s.jsxs)("div", {
     className: l()(i, {
       [o.container]: !0,
-      [o.compact]: f,
-      [o.cozy]: !f
+      [o.compact]: E,
+      [o.cozy]: !E
     }),
     children: [null != n && (0, s.jsx)("div", {
-      className: l()(o.iconContainer, E),
+      className: l()(o.iconContainer, f),
       children: n
     }), null != t && (0, s.jsx)("div", {
       className: o.iconContainer,

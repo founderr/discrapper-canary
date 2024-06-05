@@ -17,8 +17,8 @@ var a = l("735250"),
   m = l("910693"),
   E = l("893966"),
   f = l("527379"),
-  M = l("981631"),
-  _ = l("689938"),
+  _ = l("981631"),
+  M = l("689938"),
   h = l("296323");
 
 function T(e) {
@@ -49,8 +49,8 @@ function T(e) {
   return (0, a.jsx)(r.Menu, {
     navId: "member-safety-flags",
     onClose: l,
-    "aria-label": _.default.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
-    onSelect: M.NOOP,
+    "aria-label": M.default.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
+    onSelect: _.NOOP,
     children: (0, a.jsxs)(r.MenuGroup, {
       children: [(0, a.jsx)(r.MenuCheckboxItem, {
         id: "toggle-require-unusual-dm-activity",
@@ -60,7 +60,7 @@ function T(e) {
             width: 16,
             height: 16,
             className: h.unusualDMLabelIcon
-          }), _.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY]
+          }), M.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY]
         }),
         action: S,
         checked: n.requireUnusualDmActivity
@@ -72,7 +72,7 @@ function T(e) {
             width: 16,
             height: 16,
             className: h.timeoutLabelIcon
-          }), _.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED]
+          }), M.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED]
         }),
         action: x,
         checked: n.requireCommunicationDisabled
@@ -85,7 +85,7 @@ function T(e) {
               width: 16,
               height: 16,
               className: h.unusualAccountActivityLabelIcon
-            }), _.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY]
+            }), M.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY]
           }),
           action: A,
           checked: n.requireUnusualAccountActivity
@@ -97,7 +97,7 @@ function T(e) {
               width: 16,
               height: 16,
               className: h.quarantinedLabelIcon
-            }), _.default.Messages.MEMBER_SAFETY_USERNAME_QUARANTINED]
+            }), M.default.Messages.MEMBER_SAFETY_USERNAME_QUARANTINED]
           }),
           action: p,
           checked: n.requireUsernameQuarantined

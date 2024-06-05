@@ -41,11 +41,11 @@ let p = (0, s.default)(m),
       user: _,
       inExperiment: A
     };
-    let x = (null === (t = I.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(g, I.assets.large_image, [h.ImageSizes.LARGE, h.ImageSizes.LARGE]) : void 0,
-      N = null !== (E = null === (n = I.assets) || void 0 === n ? void 0 : n.large_text) && void 0 !== E ? E : void 0,
+    let N = (null === (t = I.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(g, I.assets.large_image, [h.ImageSizes.LARGE, h.ImageSizes.LARGE]) : void 0,
+      x = null !== (E = null === (n = I.assets) || void 0 === n ? void 0 : n.large_text) && void 0 !== E ? E : void 0,
       M = null !== (C = I.name) && void 0 !== C ? C : e.extra.game_name,
-      y = I.details,
-      R = I.state,
+      R = I.details,
+      y = I.state,
       L = I.party,
       O = null != I.timestamps ? (0, a.jsx)(p, {
         timestamps: I.timestamps
@@ -53,13 +53,13 @@ let p = (0, s.default)(m),
         message: (0, f.formatEntryTimestamp)(e, S)
       });
     return {
-      iconUrl: null != x ? x : v,
-      iconFallbackUrl: null != x ? v : void 0,
-      iconTitle: N,
+      iconUrl: null != N ? N : v,
+      iconFallbackUrl: null != N ? v : void 0,
+      iconTitle: x,
       user: _,
       activity: I,
-      state: R,
-      details: y,
+      state: y,
+      details: R,
       party: L,
       gameTitle: M,
       gameTime: O,

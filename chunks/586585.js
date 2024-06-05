@@ -21,12 +21,12 @@ let f = e => {
     primaryCTA: r,
     primaryType: f,
     primaryText: p,
-    primaryTooltip: C,
-    primaryDisabled: E,
-    primarySubmitting: m,
+    primaryTooltip: m,
+    primaryDisabled: C,
+    primarySubmitting: E,
     onPrimary: P,
-    secondaryText: N,
-    onSecondary: A
+    secondaryText: A,
+    onSecondary: N
   } = e;
   return (0, a.jsxs)(l.ModalFooter, {
     justify: i.default.Justify.BETWEEN,
@@ -37,13 +37,13 @@ let f = e => {
         t = {
           innerClassName: d.button,
           type: f,
-          disabled: E,
-          submitting: m,
+          disabled: C,
+          submitting: E,
           color: 0 === r ? l.Button.Colors.BRAND : l.Button.Colors.GREEN,
           onClick: P
         };
-      return null != C ? (0, a.jsx)(l.Tooltip, {
-        text: C,
+      return null != m ? (0, a.jsx)(l.Tooltip, {
+        text: m,
         children: n => (0, a.jsxs)(e, {
           ...n,
           ...t,
@@ -57,11 +57,11 @@ let f = e => {
           className: d.primaryIcon
         }), p]
       })
-    })(), null == N ? null : (0, a.jsx)(l.Button, {
+    })(), null == A ? null : (0, a.jsx)(l.Button, {
       color: l.Button.Colors.PRIMARY,
       look: l.Button.Looks.LINK,
-      onClick: A,
-      children: N
+      onClick: N,
+      children: A
     }), (0, a.jsx)(o.default, {}), null == t ? null : (0, a.jsx)(l.Button, {
       className: d.back,
       color: l.Button.Colors.PRIMARY,

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return d
   },
   surveyFetch: function() {
-    return E
+    return f
   },
   surveyHide: function() {
     return c
   },
   surveySeen: function() {
-    return f
+    return E
   }
 });
 var s = n("990547"),
@@ -41,7 +41,7 @@ function c(e, t) {
   })
 }
 
-function E(e, t) {
+function f(e, t) {
   var n = {};
   return null != e && (n.survey_override = e), null != t && (n.disable_auto_seen = t), o.default.get({
     url: u.Endpoints.USER_SURVEY,
@@ -70,7 +70,7 @@ function E(e, t) {
   })
 }
 
-function f(e) {
+function E(e) {
   let t = i.default.getLastSeenTimestamp();
   if (null === t || null != t && Date.now() - t >= i.SURVEY_REFETCH_INTERVAL) return l.default.dispatch({
     type: "SURVEY_SEEN",

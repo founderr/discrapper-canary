@@ -35,7 +35,7 @@ function s(e) {
     }
   }), [{
     dragSourcePosition: f
-  }, m] = (0, a.useDrop)({
+  }, I] = (0, a.useDrop)({
     accept: t,
     canDrop: () => !0,
     collect: e => {
@@ -53,7 +53,7 @@ function s(e) {
   return {
     drag: c,
     dragSourcePosition: f,
-    drop: m,
+    drop: I,
     setIsDraggable: u
   }
 }

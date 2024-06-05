@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return C
   }
 });
 var s = l("735250"),
@@ -26,19 +26,19 @@ var s = l("735250"),
   x = l("351707"),
   U = l("228168"),
   A = l("689938"),
-  C = l("363175");
+  N = l("363175");
 
-function N(e) {
+function C(e) {
   let {
     user: t,
     currentUser: l,
     displayProfile: a,
-    autoFocusNote: N,
+    autoFocusNote: C,
     className: R
   } = e, {
-    theme: h
+    theme: P
   } = (0, p.useUserProfileThemeContext)(), {
-    trackUserProfileAction: P
+    trackUserProfileAction: h
   } = (0, E.useUserProfileAnalyticsContext)(), M = null == a ? void 0 : a.guildId, y = (0, o.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
     recentGames: j,
     isFetching: F,
@@ -52,7 +52,7 @@ function N(e) {
   }), b = (0, o.useStateFromStores)([f.default], () => f.default.locale), B = (0, I.default)(t.id);
   return (0, s.jsxs)(r.ScrollerThin, {
     fade: !0,
-    className: n()(C.scroller, R),
+    className: n()(N.scroller, R),
     children: [(null == a ? void 0 : a.bio) != null && (null == a ? void 0 : a.bio) !== "" && (0, s.jsx)(m.default, {
       userBio: a.bio,
       setLineClamp: !1
@@ -78,18 +78,18 @@ function N(e) {
       title: A.default.Messages.CONNECTIONS,
       children: (0, s.jsx)(T.ConnectedUserAccounts, {
         connectedAccounts: B,
-        className: C.connections,
+        className: N.connections,
         userId: t.id,
-        theme: h,
+        theme: P,
         locale: b
       })
     }), (0, s.jsx)(v.default, {
       title: A.default.Messages.NOTE,
       children: (0, s.jsx)(u.default, {
         userId: t.id,
-        className: C.note,
-        autoFocus: N,
-        onUpdate: () => P({
+        className: N.note,
+        autoFocus: C,
+        onUpdate: () => h({
           action: "SET_NOTE"
         })
       })

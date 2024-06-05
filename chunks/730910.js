@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return B
   }
 }), s("47120");
 var a = s("735250"),
@@ -33,24 +33,24 @@ var a = s("735250"),
   M = s("142961"),
   D = s("232764"),
   v = s("729311"),
-  G = s("850864"),
-  j = s("966301"),
+  j = s("850864"),
+  G = s("966301"),
   U = s("981631"),
   P = s("689938"),
   b = s("231249");
 
-function y() {
+function B() {
   let e = (0, o.useStateFromStores)([g.default], () => g.default.getGuild());
-  return null == e ? null : (0, a.jsx)(B, {
+  return null == e ? null : (0, a.jsx)(y, {
     guild: e
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     guild: t
-  } = e, n = t.id, g = (0, o.useStateFromStores)([p.default], () => p.default.getCurrentPage()), y = (0, M.default)(n), {
-    hasChanges: B,
+  } = e, n = t.id, g = (0, o.useStateFromStores)([p.default], () => p.default.getCurrentPage()), B = (0, M.default)(n), {
+    hasChanges: y,
     hasConfiguredAnythingForCurrentStep: F,
     hasErrors: H
   } = (0, o.useStateFromStoresObject)([p.default], () => ({
@@ -91,15 +91,15 @@ function B(e) {
       range: [0, 1],
       output: [X, (0, E.useToken)(d.default.colors.STATUS_DANGER).hex()]
     });
-  if (y) {
+  if (B) {
     if (g === A.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return (0, a.jsx)(v.GuildSettingsDefaultChannelsNotice, {});
-    if (g === A.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return (0, a.jsx)(j.GuildSettingsOnboardingPromptsNotice, {});
-    else if (g === A.GuildSettingsOnboardingPage.HOME_SETTINGS) return (0, a.jsx)(G.GuildSettingsHomeSettingsNotice, {})
+    if (g === A.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return (0, a.jsx)(G.GuildSettingsOnboardingPromptsNotice, {});
+    else if (g === A.GuildSettingsOnboardingPage.HOME_SETTINGS) return (0, a.jsx)(j.GuildSettingsHomeSettingsNotice, {})
   }
   let q = g === A.ONBOARDING_STEPS[A.ONBOARDING_STEPS.length - 1],
     $ = async () => {
       let e = O.default.advancedMode;
-      if (B) try {
+      if (y) try {
         if (g === A.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) await (0, h.saveDefaultChannels)(t).then(() => e ? (0, L.saveGuildOnboardingPrompts)(t, {
           ignoreDefaultPrompt: !0
         }) : Promise.resolve());
@@ -119,7 +119,7 @@ function B(e) {
         ...(0, T.collectGuildAnalyticsMetadata)(n),
         step: A.GuildSettingsOnboardingPage[g],
         back: !1,
-        skip: !B
+        skip: !y
       }), (0, C.dismissEducationUpsell)((0, A.pageToEducationUpsellType)(g)), await $() && (0, C.goToNextOnboardingStep)(n, g)
     }, et = async () => {
       m.default.track(U.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {

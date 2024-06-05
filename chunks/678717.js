@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return Y
+    return K
   }
 }), r("653041"), r("47120");
 var a = r("735250"),
-  i = r("470079"),
-  n = r("120356"),
-  l = r.n(n),
+  n = r("470079"),
+  i = r("120356"),
+  l = r.n(i),
   o = r("990547"),
-  c = r("442837"),
-  s = r("481060"),
+  s = r("442837"),
+  c = r("481060"),
   d = r("347469"),
   u = r("213609"),
   h = r("29338"),
@@ -24,82 +24,82 @@ var a = r("735250"),
   k = r("432877");
 r("381996");
 var v = r("392750"),
-  j = r("926976"),
-  w = r("592197"),
-  S = r("860337"),
-  T = r("789654"),
+  S = r("926976"),
+  C = r("592197"),
+  T = r("860337"),
+  j = r("789654"),
   N = r("691867"),
-  C = r("916790"),
-  _ = r("912072"),
-  E = r("246992"),
-  I = r("442954"),
-  P = r("702904"),
-  R = r("248526"),
-  O = r("958328"),
-  A = r("514866"),
-  L = r("678639"),
-  D = r("351930"),
-  B = r("771751"),
-  F = r("596768"),
-  M = r("621060"),
-  H = r("689938"),
-  z = r("770131"),
-  U = r("277513");
+  w = r("916790"),
+  E = r("912072"),
+  _ = r("246992"),
+  R = r("442954"),
+  A = r("702904"),
+  P = r("248526"),
+  L = r("958328"),
+  O = r("514866"),
+  I = r("678639"),
+  M = r("351930"),
+  D = r("771751"),
+  B = r("596768"),
+  F = r("621060"),
+  G = r("689938"),
+  U = r("770131"),
+  H = r("277513");
 
-function V(e) {
+function z(e) {
   let {
     resizableNode: t,
     onResize: r,
-    onResizeEnd: i
-  } = e, n = (0, d.default)({
+    onResizeEnd: n
+  } = e, i = (0, d.default)({
     minDimension: x.DEVTOOLS_SIDEBAR_MIN_WIDTH,
     resizableDomNodeRef: t,
     onElementResize: r,
-    onElementResizeEnd: i,
+    onElementResizeEnd: n,
     orientation: d.ResizeOrientation.HORIZONTAL_LEFT
   });
   return (0, a.jsx)("div", {
-    onMouseDown: n,
-    className: z.resizeHandle
+    onMouseDown: i,
+    className: U.resizeHandle
   })
 }
 
-function G() {
+function Y() {
   var e;
-  let t = i.useMemo(() => {
+  let t = n.useMemo(() => {
       let e = [{
         id: "analytics",
         name: "Analytics",
-        render: () => (0, a.jsx)(j.default, {})
+        render: () => (0, a.jsx)(S.default, {})
       }, {
         id: "triggers",
         name: "Triggers",
-        render: () => (0, a.jsx)(F.default, {})
+        render: () => (0, a.jsx)(B.default, {})
       }, {
         id: "stores",
         name: "Stores",
-        render: () => (0, a.jsx)(L.default, {})
+        render: () => (0, a.jsx)(I.default, {})
       }, {
         id: "dispatcher",
         name: "Dispatcher",
-        render: () => (0, a.jsx)(C.default, {})
+        render: () => (0, a.jsx)(w.default, {})
       }];
       return p.default.isDeveloper && (e.push({
         id: "quick_actions",
         name: "Quick Actions",
-        render: () => (0, a.jsx)(A.default, {})
+        render: () => (0, a.jsx)(O.default, {})
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(R.default, {})
+        render: () => (0, a.jsx)(P.default, {})
       })), p.default.isDeveloper && e.push({
         id: "clans",
         name: "Clans",
-        render: () => (0, a.jsx)(S.default, {})
+        render: () => (0, a.jsx)(T.default, {})
       }), e.push({
         id: "colors",
         name: "Colors",
-        render: () => (0, a.jsx)(T.default, {})
+        render: () => (0, a.jsx)(j.default, {})
       }), e.push({
         id: "design_toggles",
         name: "Design Toggles",
@@ -107,23 +107,23 @@ function G() {
       }), e.push({
         id: "overlays",
         name: "Dev Overlays",
-        render: () => (0, a.jsx)(_.default, {
+        render: () => (0, a.jsx)(E.default, {
           devSettingsCategory: k.DevSettingsCategory.OVERLAYS
         })
       }), e.push({
         id: "messaging",
         name: "Messaging",
-        render: () => (0, a.jsx)(_.default, {
+        render: () => (0, a.jsx)(E.default, {
           devSettingsCategory: k.DevSettingsCategory.MESSAGING
         })
       }), e.push({
         id: "permissions",
         name: "Permissions",
-        render: () => (0, a.jsx)(O.default, {})
+        render: () => (0, a.jsx)(L.default, {})
       }), e.push({
         id: "modals",
         name: "Modals",
-        render: () => (0, a.jsx)(I.default, {})
+        render: () => (0, a.jsx)(R.default, {})
       }), e.push({
         id: "affinity",
         name: "Affinity",
@@ -135,26 +135,26 @@ function G() {
       }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (e.push({
         id: "trials",
         name: "Trials",
-        render: () => (0, a.jsx)(B.default, {})
+        render: () => (0, a.jsx)(D.default, {})
       }), e.push({
         id: "payments",
         name: "Payments",
-        render: () => (0, a.jsx)(P.default, {})
+        render: () => (0, a.jsx)(A.default, {})
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
-        render: () => (0, a.jsx)(D.default, {})
+        render: () => (0, a.jsx)(M.default, {})
       }), e.push({
         id: "billing",
         name: "Billing",
-        render: () => (0, a.jsx)(w.default, {})
+        render: () => (0, a.jsx)(C.default, {})
       })), e
     }, []),
     {
       TabBar: r,
-      renderSelectedTab: n,
+      renderSelectedTab: i,
       selectedTabId: l
-    } = (0, M.default)({
+    } = (0, F.default)({
       tabs: t,
       initialSelectedTabId: null !== (e = x.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {
@@ -169,12 +169,12 @@ function G() {
     properties: {
       panel: l
     }
-  }), (0, a.jsxs)(E.DevToolsLayerProvider, {
+  }), (0, a.jsxs)(_.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(y.default, {
-      className: U.headerBar,
+      className: H.headerBar,
       toolbar: (0, a.jsx)(y.default.Icon, {
         icon: g.default,
-        tooltip: H.default.Messages.CLOSE,
+        tooltip: G.default.Messages.CLOSE,
         onClick: b.toggleDisplayDevTools
       }),
       children: [(0, a.jsx)(y.default.Icon, {
@@ -183,53 +183,53 @@ function G() {
       }), (0, a.jsx)(y.default.Title, {
         children: "DevTools"
       })]
-    }), (0, a.jsx)(r, {}), n(), (0, a.jsx)(E.DevToolsLayerContainer, {
-      className: z.layerContainer
+    }), (0, a.jsx)(r, {}), i(), (0, a.jsx)(_.DevToolsLayerContainer, {
+      className: U.layerContainer
     })]
   })
 }
 
-function K() {
-  let e = i.useRef(null),
-    t = (0, c.useStateFromStores)([x.default], () => x.default.sidebarWidth),
-    [r, n] = i.useState(null),
-    o = i.useCallback(e => (0, b.updateDevToolsSettings)({
+function V() {
+  let e = n.useRef(null),
+    t = (0, s.useStateFromStores)([x.default], () => x.default.sidebarWidth),
+    [r, i] = n.useState(null),
+    o = n.useCallback(e => (0, b.updateDevToolsSettings)({
       sidebarWidth: e
     }), []);
-  return (i.useEffect(() => {
-    null === r && null !== t && n(t)
+  return (n.useEffect(() => {
+    null === r && null !== t && i(t)
   }, [t, r]), null === r) ? null : (0, a.jsxs)("div", {
     ref: e,
-    className: l()(z.container),
+    className: l()(U.container),
     style: {
       minWidth: x.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: r
     },
-    children: [(0, a.jsx)(V, {
+    children: [(0, a.jsx)(z, {
       resizableNode: e,
-      onResize: n,
+      onResize: i,
       onResizeEnd: o
     }), (0, a.jsx)("div", {
-      className: z.sidebarContent,
-      children: (0, a.jsx)(G, {})
+      className: U.sidebarContent,
+      children: (0, a.jsx)(Y, {})
     })]
   })
 }
 
 function W() {
-  let e = (0, c.useStateFromStores)([x.default], () => x.default.displayTools);
+  let e = (0, s.useStateFromStores)([x.default], () => x.default.displayTools);
   return e ? (0, a.jsx)("div", {
-    className: l()(z.container, z.mobileContainerExpanded),
+    className: l()(U.container, U.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
-      className: z.sidebarContent,
-      children: (0, a.jsx)(G, {})
+      className: U.sidebarContent,
+      children: (0, a.jsx)(Y, {})
     })
   }) : (0, a.jsx)("div", {
-    className: z.container,
-    children: (0, a.jsx)(s.Clickable, {
+    className: U.container,
+    children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(y.default, {
-        className: l()(U.headerBar, z.mobileHeaderCollapsed),
+        className: l()(H.headerBar, U.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(m.default, {
           direction: m.default.Directions.UP
         }),
@@ -244,9 +244,9 @@ function W() {
   })
 }
 
-function Y(e) {
+function K(e) {
   let {
     mobile: t
   } = e;
-  return t ? (0, a.jsx)(W, {}) : (0, a.jsx)(K, {})
+  return t ? (0, a.jsx)(W, {}) : (0, a.jsx)(V, {})
 }

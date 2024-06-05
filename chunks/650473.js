@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   FRIEND_BACKGROUND: function() {
-    return l
+    return a
   },
   MESSAGE_BACKGROUND: function() {
-    return s
+    return l
   },
   PROFILE_BACKGROUND: function() {
-    return a
+    return s
   }
 });
-let a = "#83DDC5",
-  l = "#F47FFF",
-  s = "#FFDE4D"
+let s = "#83DDC5",
+  a = "#F47FFF",
+  l = "#FFDE4D"

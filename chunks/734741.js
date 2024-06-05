@@ -1,195 +1,195 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldScrollToMarketingMomentContent: function() {
-    return R
+    return F
   },
   shouldShowReferralProgramPlanComparisonRow: function() {
-    return L
+    return w
   },
   useDismissWhatsNewCardDCs: function() {
-    return x
+    return P
   },
   useShouldShowAppStylesBadge: function() {
-    return C
+    return h
   },
   useShouldShowWhatsNewBadge: function() {
-    return A
+    return g
   },
   useWhatsNewBadgeCount: function() {
     return I
   }
 });
 var i = n("442837"),
-  a = n("704215"),
-  l = n("605236"),
-  s = n("594174"),
-  o = n("74538"),
-  r = n("331119"),
-  d = n("575595"),
-  u = n("528865"),
+  r = n("704215"),
+  s = n("605236"),
+  o = n("594174"),
+  a = n("74538"),
+  l = n("331119"),
+  u = n("575595"),
+  d = n("528865"),
   c = n("650032"),
-  f = n("781922"),
-  h = n("885462"),
-  p = n("474936"),
-  E = n("921944");
-let m = "getWhatsNewBadgeCount",
-  g = "useShouldShowWhatsNewBadge",
-  S = () => {
-    let e = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
-      t = o.default.isPremiumExactly(e, p.PremiumTypes.TIER_2),
+  _ = n("781922"),
+  E = n("885462"),
+  f = n("474936"),
+  C = n("921944");
+let p = "getWhatsNewBadgeCount",
+  m = "useShouldShowWhatsNewBadge",
+  R = () => {
+    let e = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+      t = a.default.isPremiumExactly(e, f.PremiumTypes.TIER_2),
       {
         enabled: n
       } = c.ReferralProgramRecipient.useExperiment({
-        location: m
+        location: p
       }, {
         autoTrackExposure: !1
       }),
       {
-        enabled: a
-      } = d.DiscountModelDataCollection.useExperiment({
-        location: m
+        enabled: r
+      } = u.DiscountModelDataCollection.useExperiment({
+        location: p
       }, {
         autoTrackExposure: !1
       }),
       {
-        enabled: l
-      } = r.CannibalizationModelDataCollection.useExperiment({
-        location: m
+        enabled: s
+      } = l.CannibalizationModelDataCollection.useExperiment({
+        location: p
       }, {
         autoTrackExposure: !1
       });
-    return !t && n && !a && !l
+    return !t && n && !r && !s
   },
-  v = function() {
+  T = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-      t = s.default.getCurrentUser(),
-      n = o.default.isPremiumExactly(t, p.PremiumTypes.TIER_2),
+      t = o.default.getCurrentUser(),
+      n = a.default.isPremiumExactly(t, f.PremiumTypes.TIER_2),
       {
         enabled: i
       } = c.ReferralProgramRecipient.getCurrentConfig({
-        location: m
+        location: p
       }, {
         autoTrackExposure: !1
       }),
       {
-        enabled: a
-      } = d.DiscountModelDataCollection.getCurrentConfig({
-        location: m
+        enabled: r
+      } = u.DiscountModelDataCollection.getCurrentConfig({
+        location: p
       }, {
         autoTrackExposure: !1
       }),
       {
-        enabled: l
-      } = r.CannibalizationModelDataCollection.getCurrentConfig({
-        location: m
+        enabled: s
+      } = l.CannibalizationModelDataCollection.getCurrentConfig({
+        location: p
       }, {
         autoTrackExposure: !1
       });
-    return (e || !n) && i && !a && !l
+    return (e || !n) && i && !r && !s
   },
-  C = () => {
+  h = () => {
     let {
       canFlipCard: e
-    } = u.June2024NewAppStylesWhatsNewCardExperiment.useExperiment({
-      location: m
+    } = d.June2024NewAppStylesWhatsNewCardExperiment.useExperiment({
+      location: p
     }, {
       autoTrackExposure: !1
-    }), t = (0, l.useIsDismissibleContentDismissed)(a.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE);
+    }), t = (0, s.useIsDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE);
     return e && !t
   },
-  y = () => {
+  D = () => {
     let {
       canFlipCard: e
-    } = u.June2024NewAppStylesWhatsNewCardExperiment.getCurrentConfig({
-      location: m
+    } = d.June2024NewAppStylesWhatsNewCardExperiment.getCurrentConfig({
+      location: p
     }, {
       autoTrackExposure: !1
-    }), t = (0, l.isDismissibleContentDismissed)(a.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE);
+    }), t = (0, s.isDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE);
     return e && !t
   },
-  _ = () => {
+  A = () => {
     let {
       canFlipCard: e
-    } = f.ReferralProgramWhatsNewCardExperiment.useExperiment({
-      location: m
+    } = _.ReferralProgramWhatsNewCardExperiment.useExperiment({
+      location: p
     }, {
       autoTrackExposure: !1
-    }), t = S(), n = (0, l.useIsDismissibleContentDismissed)(a.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE);
+    }), t = R(), n = (0, s.useIsDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE);
     return t && e && !n
   },
-  T = () => {
+  S = () => {
     let {
       canFlipCard: e
-    } = f.ReferralProgramWhatsNewCardExperiment.getCurrentConfig({
-      location: m
+    } = _.ReferralProgramWhatsNewCardExperiment.getCurrentConfig({
+      location: p
     }, {
       autoTrackExposure: !1
-    }), t = v(), n = (0, l.isDismissibleContentDismissed)(a.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE);
+    }), t = T(), n = (0, s.isDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE);
     return t && e && !n
-  },
-  O = () => {
-    let {
-      canFlipCard: e
-    } = h.ServerProfilesExperiment.useExperiment({
-      location: m
-    }, {
-      autoTrackExposure: !1
-    }), t = (0, l.useIsDismissibleContentDismissed)(a.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE);
-    return e && !t
   },
   N = () => {
     let {
       canFlipCard: e
-    } = h.ServerProfilesExperiment.getCurrentConfig({
-      location: m
+    } = E.ServerProfilesExperiment.useExperiment({
+      location: p
     }, {
       autoTrackExposure: !1
-    }), t = (0, l.isDismissibleContentDismissed)(a.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE);
+    }), t = (0, s.useIsDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE);
+    return e && !t
+  },
+  b = () => {
+    let {
+      canFlipCard: e
+    } = E.ServerProfilesExperiment.getCurrentConfig({
+      location: p
+    }, {
+      autoTrackExposure: !1
+    }), t = (0, s.isDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE);
     return e && !t
   },
   I = () => {
-    let e = C(),
-      t = _(),
-      n = O();
+    let e = h(),
+      t = A(),
+      n = N();
     return e || t || n ? 1 : 0
   },
-  A = () => {
-    let e = C(),
-      t = _(),
-      n = O();
-    return e ? u.June2024NewAppStylesWhatsNewCardExperiment.trackExposure({
-      location: g
-    }) : (t && f.ReferralProgramWhatsNewCardExperiment.trackExposure({
-      location: g
-    }), n && h.ServerProfilesExperiment.trackExposure({
-      location: g
+  g = () => {
+    let e = h(),
+      t = A(),
+      n = N();
+    return e ? d.June2024NewAppStylesWhatsNewCardExperiment.trackExposure({
+      location: m
+    }) : (t && _.ReferralProgramWhatsNewCardExperiment.trackExposure({
+      location: m
+    }), n && E.ServerProfilesExperiment.trackExposure({
+      location: m
     })), e || t || n
   },
-  x = () => {
-    let e = C(),
-      t = _(),
-      n = O();
-    e && (0, l.markDismissibleContentAsDismissed)(a.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE, {
-      dismissAction: E.ContentDismissActionType.TAKE_ACTION
-    }), t && (0, l.markDismissibleContentAsDismissed)(a.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE, {
-      dismissAction: E.ContentDismissActionType.TAKE_ACTION
-    }), n && (0, l.markDismissibleContentAsDismissed)(a.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE, {
-      dismissAction: E.ContentDismissActionType.TAKE_ACTION
+  P = () => {
+    let e = h(),
+      t = A(),
+      n = N();
+    e && (0, s.markDismissibleContentAsDismissed)(r.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE, {
+      dismissAction: C.ContentDismissActionType.TAKE_ACTION
+    }), t && (0, s.markDismissibleContentAsDismissed)(r.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE, {
+      dismissAction: C.ContentDismissActionType.TAKE_ACTION
+    }), n && (0, s.markDismissibleContentAsDismissed)(r.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE, {
+      dismissAction: C.ContentDismissActionType.TAKE_ACTION
     })
   },
-  R = () => {
-    let e = y(),
-      t = T(),
-      n = N();
+  F = () => {
+    let e = D(),
+      t = S(),
+      n = b();
     return e || t || n
   },
-  L = () => {
+  w = () => {
     let {
       canFlipCard: e
-    } = f.ReferralProgramWhatsNewCardExperiment.getCurrentConfig({
+    } = _.ReferralProgramWhatsNewCardExperiment.getCurrentConfig({
       location: "shouldShowReferralProgramPlanComparisonRow"
     }, {
       autoTrackExposure: !1
     });
-    return v(!0) && e
+    return T(!0) && e
   }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return f
   }
 });
 var a = s("735250"),
@@ -18,46 +18,46 @@ var a = s("735250"),
   T = s("150039"),
   _ = s("993413"),
   I = s("689938"),
-  f = s("35071");
+  N = s("35071");
 
-function m(e) {
+function f(e) {
   let {
     user: t,
     guild: s,
     className: l,
     sectionTitle: E,
-    forcedDivider: m = !1,
-    withTutorial: g = !1,
-    isTryItOutFlow: h = !1
+    forcedDivider: f = !1,
+    withTutorial: m = !1,
+    isTryItOutFlow: C = !1
   } = e, {
-    analyticsLocations: C
-  } = (0, o.default)(), O = null != s, {
-    userAvatarDecoration: A,
+    analyticsLocations: A
+  } = (0, o.default)(), h = null != s, {
+    userAvatarDecoration: O,
     guildAvatarDecoration: p,
     pendingAvatarDecoration: R,
     pendingErrors: x
   } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), M = (0, c.default)("enable_avatar_decoration_uploads"), D = n.useCallback(() => (0, u.openAvatarDecorationModal)({
-    analyticsLocations: C,
-    isTryItOutFlow: h,
+    analyticsLocations: A,
+    isTryItOutFlow: C,
     guild: s
-  }), [C, h, s]), L = h || void 0 !== R ? null != R : (O ? p : A) != null, P = g ? S.default : r.Button;
+  }), [A, C, s]), L = C || void 0 !== R ? null != R : (h ? p : O) != null, P = m ? S.default : r.Button;
   return (0, a.jsxs)(_.default, {
     className: l,
-    forcedDivider: m,
+    forcedDivider: f,
     hasBackground: !0,
     title: E,
     errors: x,
     children: [(0, a.jsxs)("div", {
-      className: f.buttonsContainer,
+      className: N.buttonsContainer,
       children: [(0, a.jsx)(P, {
         size: r.Button.Sizes.SMALL,
         onClick: D,
         className: i()({
-          [f.buttonHighlighted]: g
+          [N.buttonHighlighted]: m
         }),
         children: I.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), L && (0, a.jsx)(r.Button, {
-        className: f.removeButton,
+        className: N.removeButton,
         color: r.Button.Colors.PRIMARY,
         look: r.Button.Looks.LINK,
         size: r.Button.Sizes.SMALL,
@@ -66,17 +66,17 @@ function m(e) {
         },
         children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? I.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : I.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
-    }), t.isStaff() && M && (0, a.jsx)(N, {
+    }), t.isStaff() && M && (0, a.jsx)(g, {
       user: t
     })]
   })
 }
-let N = e => {
+let g = e => {
   let {
     user: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: f.overrideButtonsContainer,
+    className: N.overrideButtonsContainer,
     children: [(0, a.jsx)(r.Text, {
       variant: "text-xs/bold",
       children: "STAFF ONLY and Experimental. Upload a decoration to view throughout the app."

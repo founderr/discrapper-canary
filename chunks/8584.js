@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return v
   },
   CurrencyAmountCell: function() {
-    return G
+    return j
   },
   SubscribersCell: function() {
     return b
@@ -110,7 +110,7 @@ let D = (e, t, s, a) => {
       children: t
     })
   },
-  G = e => {
+  j = e => {
     let {
       children: t
     } = e;
@@ -119,7 +119,7 @@ let D = (e, t, s, a) => {
       children: (0, g.formatPrice)(null != t ? t : 0, O.CurrencyCodes.USD)
     })
   },
-  j = e => {
+  G = e => {
     let {
       children: t
     } = e;
@@ -158,7 +158,7 @@ let D = (e, t, s, a) => {
       })]
     })
   },
-  y = () => {
+  B = () => {
     let e = (0, n.jsx)(E.Tooltip, {
       text: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT_DISCLAIMER,
       children: e => (0, n.jsx)(f.default, {
@@ -170,7 +170,7 @@ let D = (e, t, s, a) => {
       children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT, " ", e]
     })
   },
-  B = () => {
+  y = () => {
     let e = (0, n.jsx)(E.Tooltip, {
       text: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_NEXT_PAYMENT_DISCLAIMER,
       children: e => (0, n.jsx)(f.default, {
@@ -220,17 +220,17 @@ let D = (e, t, s, a) => {
   }, {
     key: "amount",
     cellClassName: o()(M.amountColumn, M.cellAlignRight),
-    renderHeader: () => (0, n.jsx)(y, {}),
+    renderHeader: () => (0, n.jsx)(B, {}),
     render(e, t) {
       let {
         expandedRows: s
-      } = t, a = [(0, n.jsx)(G, {
+      } = t, a = [(0, n.jsx)(j, {
         children: e.amount
       }, e.key)];
       if (s.has(e.key))
         for (let t in e.ppgs) {
           let s = e.ppgs[t];
-          a.push((0, n.jsx)(G, {
+          a.push((0, n.jsx)(j, {
             children: null == s ? void 0 : s.amount
           }, t))
         }
@@ -239,7 +239,7 @@ let D = (e, t, s, a) => {
   }, {
     key: "status",
     cellClassName: o()(M.statusColumn, M.cellAlignRight),
-    renderHeader: () => (0, n.jsx)(B, {}),
+    renderHeader: () => (0, n.jsx)(y, {}),
     render(e) {
       let {
         ppgStatus: t,
@@ -247,7 +247,7 @@ let D = (e, t, s, a) => {
         ppgDeferralReasons: a,
         periodEndDate: l
       } = (0, _.getStatusForPeriod)(e);
-      return (0, n.jsx)(j, {
+      return (0, n.jsx)(G, {
         children: D(t, s, a, l)
       })
     }

@@ -26,11 +26,11 @@ var s = l("735250"),
   x = l("726059"),
   U = l("162267"),
   A = l("484404"),
-  C = l("502762"),
-  N = l("62154"),
+  N = l("502762"),
+  C = l("62154"),
   R = l("293259"),
-  h = l("725954"),
-  P = l("228168"),
+  P = l("725954"),
+  h = l("228168"),
   M = l("981631"),
   y = l("689938"),
   j = l("463469");
@@ -56,27 +56,27 @@ function F(e) {
       className: j.tabBar,
       children: [!i.isNonUserBot() || i.isClyde() ? (0, s.jsx)(n.TabBar.Item, {
         className: j.tabBarItem,
-        id: P.UserProfileSections.USER_INFO,
+        id: h.UserProfileSections.USER_INFO,
         children: y.default.Messages.USER_INFO
       }) : null, !i.bot && d ? (0, s.jsx)(n.TabBar.Item, {
         className: j.tabBarItem,
-        id: P.UserProfileSections.ACTIVITY,
+        id: h.UserProfileSections.ACTIVITY,
         children: y.default.Messages.USER_PROFILE_ACTIVITY
       }) : null, i.bot || o ? null : (0, s.jsx)(n.TabBar.Item, {
         className: j.tabBarItem,
-        id: P.UserProfileSections.MUTUAL_FRIENDS,
+        id: h.UserProfileSections.MUTUAL_FRIENDS,
         children: null == f ? y.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER : y.default.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
           count: "".concat(f)
         })
       }), o || i.isClyde() ? null : (0, s.jsx)(n.TabBar.Item, {
         className: j.tabBarItem,
-        id: P.UserProfileSections.MUTUAL_GUILDS,
+        id: h.UserProfileSections.MUTUAL_GUILDS,
         children: null == S ? y.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : y.default.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
           count: "".concat(S)
         })
       }), i.bot && c ? (0, s.jsx)(n.TabBar.Item, {
         className: j.tabBarItem,
-        id: P.UserProfileSections.BOT_DATA_ACCESS,
+        id: h.UserProfileSections.BOT_DATA_ACCESS,
         children: y.default.Messages.BOTS_DATA_ACCESS_TAB
       }) : null]
     })
@@ -93,7 +93,7 @@ function L(e) {
     roleId: O,
     friendToken: D,
     autoFocusNote: b,
-    initialSection: B = P.UserProfileSections.USER_INFO,
+    initialSection: B = h.UserProfileSections.USER_INFO,
     transitionState: G,
     sourceAnalyticsLocations: k = [],
     onClose: w
@@ -106,13 +106,13 @@ function L(e) {
   let W = (0, a.useStateFromStores)([E.default], () => null != E.default.getAnyStreamForUser(Y.id)),
     z = (0, a.useStateFromStores)([m.default], () => m.default.findActivity(Y.id, e => e.type !== M.ActivityTypes.CUSTOM_STATUS)),
     [Z, K] = i.useState(!1),
-    [Q, J] = i.useState(Y.isNonUserBot() && !Y.isClyde() ? P.UserProfileSections.MUTUAL_GUILDS : B),
+    [Q, J] = i.useState(Y.isNonUserBot() && !Y.isClyde() ? h.UserProfileSections.MUTUAL_GUILDS : B),
     q = (0, a.useStateFromStores)([I.default], () => I.default.getId() === Y.id),
     X = null != z || W,
     $ = !q || X,
     ee = i.createRef(),
     et = (0, r.default)(ee);
-  !X && Q === P.UserProfileSections.ACTIVITY && J(P.UserProfileSections.USER_INFO);
+  !X && Q === h.UserProfileSections.ACTIVITY && J(h.UserProfileSections.USER_INFO);
   let el = i.useCallback(e => {
       (0, p.trackUserProfileAction)({
         action: "PRESS_SECTION",
@@ -142,10 +142,10 @@ function L(e) {
           className: j.root,
           hideShadow: !0,
           "aria-label": y.default.Messages.USER_PROFILE_MODAL,
-          children: [(0, s.jsxs)(C.default, {
+          children: [(0, s.jsxs)(N.default, {
             user: Y,
             displayProfile: H,
-            profileType: P.UserProfileTypes.MODAL,
+            profileType: h.UserProfileTypes.MODAL,
             ref: ee,
             children: [(0, s.jsx)(R.default, {
               className: j.topSection,
@@ -157,24 +157,24 @@ function L(e) {
               guildId: x,
               channelId: U,
               hasProfileEffect: null != es
-            }), (0, s.jsxs)(C.default.Overlay, {
+            }), (0, s.jsxs)(N.default.Overlay, {
               className: j.overlay,
               children: [G === n.ModalTransitionState.ENTERED && (0, s.jsx)(A.default, {
                 onTooltipClose: w
               }), (0, s.jsxs)("div", {
                 className: j.body,
-                children: [(0, s.jsx)(h.default, {
+                children: [(0, s.jsx)(P.default, {
                   user: Y,
                   displayProfile: H
                 }), $ ? (0, s.jsx)(F, {
                   user: Y,
-                  section: Q === P.UserProfileSections.USER_INFO_CONNECTIONS ? P.UserProfileSections.USER_INFO : Q,
+                  section: Q === h.UserProfileSections.USER_INFO_CONNECTIONS ? h.UserProfileSections.USER_INFO : Q,
                   setSection: el,
                   hasActivity: X,
                   isCurrentUser: q
                 }) : (0, s.jsx)("div", {
                   className: j.divider
-                }), (0, s.jsx)(N.default, {
+                }), (0, s.jsx)(C.default, {
                   displayProfile: H,
                   user: Y,
                   autoFocusNote: b && !Z,

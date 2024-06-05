@@ -39,19 +39,19 @@ function O(e) {
   } = (0, m.useAutomodEditingRuleState)(), {
     guild: D,
     subsection: v
-  } = (0, n.useStateFromStoresObject)([o.default], () => o.default.getProps()), G = null !== (s = null !== (t = null == D ? void 0 : D.id) && void 0 !== t ? t : O) && void 0 !== s ? s : R.EMPTY_STRING_SNOWFLAKE_ID, j = null != A, [U] = (0, T.useSyncAutomodRulesEffect)(G), {
+  } = (0, n.useStateFromStoresObject)([o.default], () => o.default.getProps()), j = null !== (s = null !== (t = null == D ? void 0 : D.id) && void 0 !== t ? t : O) && void 0 !== s ? s : R.EMPTY_STRING_SNOWFLAKE_ID, G = null != A, [U] = (0, T.useSyncAutomodRulesEffect)(j), {
     rulesByTriggerType: P
-  } = (0, T.useAutomodRulesList)(G), b = {
+  } = (0, T.useAutomodRulesList)(j), b = {
     [S.AutomodTriggerCategory.MEMBERS]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
     [S.AutomodTriggerCategory.CONTENT]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
-  }, y = l.useMemo(() => Object.values(null != P ? P : {}).flat().filter(E.isNotNullish), [P]);
+  }, B = l.useMemo(() => Object.values(null != P ? P : {}).flat().filter(E.isNotNullish), [P]);
   l.useEffect(() => {
-    j && M(null)
-  }, [G]);
-  let B = l.useCallback((e, t) => {
+    G && M(null)
+  }, [j]);
+  let y = l.useCallback((e, t) => {
       if (null != e) {
         var s, a;
-        return null !== (a = null === (s = y.find(t => {
+        return null !== (a = null === (s = B.find(t => {
           let {
             id: s
           } = t;
@@ -59,20 +59,20 @@ function O(e) {
         })) || void 0 === s ? void 0 : s.name) && void 0 !== a ? a : null
       }
       return null != t ? (0, S.triggerConfigs)[t].getDefaultRuleName() : null
-    }, [y]),
+    }, [B]),
     F = l.useMemo(() => {
       var e, t;
-      return B(null !== (e = null == A ? void 0 : A.id) && void 0 !== e ? e : null, null !== (t = null == A ? void 0 : A.triggerType) && void 0 !== t ? t : null)
-    }, [B, A]);
+      return y(null !== (e = null == A ? void 0 : A.id) && void 0 !== e ? e : null, null !== (t = null == A ? void 0 : A.triggerType) && void 0 !== t ? t : null)
+    }, [y, A]);
   l.useEffect(() => {
-    p(j, (0, h.createOnPreventNavigation)(F))
-  }, [p, j, F]);
-  let H = (0, S.useAvailableTriggerTypes)(G),
+    p(G, (0, h.createOnPreventNavigation)(F))
+  }, [p, G, F]);
+  let H = (0, S.useAvailableTriggerTypes)(j),
     k = e => (0, a.jsx)(a.Fragment, {
       children: e.map(e => {
         var t;
         return (0, a.jsx)(g.default, {
-          guildId: G,
+          guildId: j,
           triggerType: e,
           rules: null !== (t = P[e]) && void 0 !== t ? t : [],
           initWithEdit: v === R.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM && e === C.AutomodTriggerType.MENTION_SPAM
@@ -143,9 +143,9 @@ function O(e) {
       withDivider: !1,
       className: L.explicitContentFilterSection
     }), (0, a.jsx)(N.default, {
-      guildId: G,
-      existingRules: y
-    }), j && (0, a.jsx)("div", {
+      guildId: j,
+      existingRules: B
+    }), G && (0, a.jsx)("div", {
       className: L.endSpacer
     })]
   })

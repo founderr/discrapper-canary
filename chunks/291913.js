@@ -20,20 +20,20 @@ function c(e) {
     onChange: l,
     children: c,
     note: f,
-    helpdeskArticleId: m,
-    style: I,
+    helpdeskArticleId: I,
+    style: m,
     disabled: T = !1,
-    hideBorder: N = !1,
-    className: E = u.marginBottom20
-  } = e, S = (0, o.useUID)();
+    hideBorder: E = !1,
+    className: N = u.marginBottom20
+  } = e, _ = (0, o.useUID)();
   return (0, n.jsxs)(i.default, {
-    style: I,
-    className: E,
+    style: m,
+    className: N,
     direction: i.default.Direction.VERTICAL,
     children: [(0, n.jsxs)(i.default, {
       children: [(0, n.jsx)(i.default.Child, {
         children: (0, n.jsx)(a.FormTitle, {
-          id: S,
+          id: _,
           className: u.marginReset,
           tag: a.FormTitleTags.H3,
           disabled: T,
@@ -46,7 +46,7 @@ function c(e) {
           value: t,
           onChange: l,
           disabled: T,
-          labelledBy: S
+          labelledBy: _
         })
       })]
     }), null != f && (0, n.jsx)(i.default.Child, {
@@ -55,17 +55,17 @@ function c(e) {
         type: a.FormTextTypes.DESCRIPTION,
         children: f
       })
-    }), null != m && (0, n.jsx)(i.default.Child, {
+    }), null != I && (0, n.jsx)(i.default.Child, {
       className: u.marginTop4,
       children: (0, n.jsx)(a.FormText, {
         disabled: T,
         type: a.FormTextTypes.DESCRIPTION,
         children: (0, n.jsx)(a.Anchor, {
-          href: s.default.getArticleURL(m),
+          href: s.default.getArticleURL(I),
           children: d.default.Messages.LEARN_MORE
         })
       })
-    }), !N && (0, n.jsx)(i.default.Child, {
+    }), !E && (0, n.jsx)(i.default.Child, {
       className: u.marginTop20,
       children: (0, n.jsx)(a.FormDivider, {})
     })]

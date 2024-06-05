@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return g
   }
 });
 var a = s("735250");
@@ -19,18 +19,18 @@ var n = s("120356"),
   T = s("726985"),
   _ = s("981631"),
   I = s("689938"),
-  f = s("247763"),
-  m = s("611273");
+  N = s("247763"),
+  f = s("611273");
 
-function N() {
+function g() {
   var e, t, n;
   let {
-    enabled: N,
-    autoToggle: g,
-    hideInstantInvites: h,
-    hidePersonalInformation: C,
-    disableSounds: O,
-    disableNotifications: A,
+    enabled: g,
+    autoToggle: m,
+    hideInstantInvites: C,
+    hidePersonalInformation: A,
+    disableSounds: h,
+    disableNotifications: O,
     enableContentProtection: p
   } = (0, i.useStateFromStoresObject)([S.default], () => ({
     ...S.default.getSettings()
@@ -40,12 +40,12 @@ function N() {
     })
   }, x = null !== (n = null === u.default || void 0 === u.default ? void 0 : null === (t = u.default.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
   return (0, a.jsxs)(r.FormSection, {
-    className: f.container,
+    className: N.container,
     tag: r.FormTitleTags.H1,
     title: I.default.Messages.STREAMER_MODE,
     children: [(0, a.jsx)(r.FormNotice, {
-      className: m.marginBottom40,
-      iconClassName: f.noticeIcon,
+      className: f.marginBottom40,
+      iconClassName: N.noticeIcon,
       type: r.FormNoticeTypes.PRIMARY,
       imageData: {
         src: s("560264"),
@@ -58,7 +58,7 @@ function N() {
         streamkitURL: _.MarketingURLs.STREAMKIT
       })
     }), (0, a.jsx)(r.FormSwitch, {
-      value: N,
+      value: g,
       onChange: e => R("enabled", e),
       note: I.default.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
         onClick: () => {
@@ -68,18 +68,18 @@ function N() {
       children: I.default.Messages.ENABLE_STREAMER_MODE_LABEL
     }), (() => {
       if (E.isPlatformEmbedded) return (0, a.jsx)(r.FormSwitch, {
-        value: g,
+        value: m,
         onChange: e => R("autoToggle", e),
         note: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
         children: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
       })
     })(), (0, a.jsx)(r.FormTitle, {
-      className: l()(m.marginTop40, m.marginBottom8),
+      className: l()(f.marginTop40, f.marginBottom8),
       children: I.default.Messages.OPTIONS
     }), (0, a.jsx)(c.Subsetting, {
       setting: T.WebSetting.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
       children: (0, a.jsx)(r.FormSwitch, {
-        value: C,
+        value: A,
         onChange: e => R("hidePersonalInformation", e),
         note: I.default.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
         children: I.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL
@@ -87,7 +87,7 @@ function N() {
     }), (0, a.jsx)(c.Subsetting, {
       setting: T.WebSetting.STREAMER_MODE_HIDE_INVITE_LINKS,
       children: (0, a.jsx)(r.FormSwitch, {
-        value: h,
+        value: C,
         onChange: e => R("hideInstantInvites", e),
         note: I.default.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
         children: I.default.Messages.HIDE_INSTANT_INVITES_LABEL
@@ -95,7 +95,7 @@ function N() {
     }), (0, a.jsx)(c.Subsetting, {
       setting: T.WebSetting.STREAMER_MODE_DISABLE_SOUNDS,
       children: (0, a.jsx)(r.FormSwitch, {
-        value: O,
+        value: h,
         onChange: e => R("disableSounds", e),
         note: I.default.Messages.DISABLE_SOUNDS_DESCRIPTION,
         children: I.default.Messages.DISABLE_SOUNDS_LABEL
@@ -103,7 +103,7 @@ function N() {
     }), (0, a.jsx)(c.Subsetting, {
       setting: T.WebSetting.STREAMER_MODE_DISABLE_NOTIFICATIONS,
       children: (0, a.jsx)(r.FormSwitch, {
-        value: A,
+        value: O,
         onChange: e => R("disableNotifications", e),
         note: I.default.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
         children: I.default.Messages.DISABLE_NOTIFICATIONS_LABEL

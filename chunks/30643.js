@@ -12,21 +12,21 @@ var a = n("237997"),
   f = n("177698"),
   E = n("121826"),
   h = n("567481"),
-  C = n("498164"),
-  _ = n("111097"),
+  _ = n("498164"),
+  C = n("111097"),
   m = n("908711"),
   S = n("197941"),
   p = n("462414"),
   I = n("662194"),
-  g = n("188861");
-let T = {
+  T = n("188861");
+let g = {
     ...l.crossPlatformCommands,
     ...d.default,
     ...c.default,
     ...E.default,
     ...h.default,
-    ...C.default,
     ..._.default,
+    ...C.default,
     ...S.default,
     ...I.default,
     ...p.default,
@@ -40,10 +40,10 @@ let T = {
   };
 t.default = {
   server: r.default,
-  commands: T,
+  commands: g,
   events: A,
   stores: [a.default],
-  transports: [g.default],
+  transports: [T.default],
   registerTransportsForEmbeddedPlatform: function() {
     s.default.ensureModule("discord_rpc").then(() => {
       for (let e of [n("178318").default, n("967351").default]) r.default.registerTransport(e)

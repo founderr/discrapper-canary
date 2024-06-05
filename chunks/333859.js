@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   UserSettingsAppearanceInAppIcon: function() {
-    return h
+    return C
   }
 });
 var a = s("735250"),
@@ -18,15 +18,15 @@ var a = s("735250"),
   T = s("626135"),
   _ = s("981631"),
   I = s("474936"),
-  f = s("689938"),
-  m = s("772866"),
-  N = s("611273");
-let g = () => {
+  N = s("689938"),
+  f = s("772866"),
+  g = s("611273");
+let m = () => {
     r.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
     }), (0, o.popLayer)()
   },
-  h = () => {
+  C = () => {
     let {
       analyticsLocations: e
     } = (0, u.default)(d.default.USER_SETTINGS), t = (0, l.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
@@ -36,22 +36,22 @@ let g = () => {
         location_stack: e
       })
     }, []), (0, a.jsxs)("div", {
-      className: m.selectionGroup,
+      className: f.selectionGroup,
       children: [(0, a.jsx)(S.default, {
         disabled: t,
         renderCTAButtons: () => (0, a.jsxs)("div", {
-          className: m.tryItOutButtons,
+          className: f.tryItOutButtons,
           children: [(0, a.jsx)(i.Button, {
             color: t ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
-            onClick: () => g(),
-            children: f.default.Messages.APP_ICON_PREVIEW_TITLE
+            onClick: () => m(),
+            children: N.default.Messages.APP_ICON_PREVIEW_TITLE
           }), t ? (0, a.jsx)(E.default, {
             subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
-            buttonText: f.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+            buttonText: N.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
           }) : null]
         })
       }), (0, a.jsx)(i.FormDivider, {
-        className: N.marginTop20
+        className: g.marginTop20
       })]
     })
   }

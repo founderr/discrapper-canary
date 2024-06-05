@@ -18,8 +18,8 @@ function d(e) {
     guildProductListing: t,
     guildId: d,
     sourceAnalyticsLocations: c
-  } = e, E = !1, f = (0, a.v4)(), _ = () => {
-    E = !0
+  } = e, f = !1, E = (0, a.v4)(), _ = () => {
+    f = !0
   };
   (0, l.openModalLazy)(async () => {
     let {
@@ -34,13 +34,13 @@ function d(e) {
         guildProductListingId: t.id,
         guildId: d
       },
-      loadId: f,
+      loadId: E,
       onComplete: _
     })
   }, {
     onCloseCallback: () => {
-      !E && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: f,
+      !f && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: E,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
         is_gift: !1,
         location_stack: Array.isArray(c) ? c : [c]

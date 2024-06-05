@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_CONTENT_ROW_HEIGHT: function() {
-    return y
+    return R
   },
   getContentRowHeight: function() {
-    return R
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -29,13 +29,13 @@ var a = n("735250"),
   I = n("886217"),
   A = n("555672"),
   v = n("644548"),
-  x = n("335326"),
-  N = n("268010"),
+  N = n("335326"),
+  x = n("268010"),
   M = n("206583");
-let y = 72;
+let R = 72;
 
-function R(e) {
-  return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? y : 0
+function y(e) {
+  return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? R : 0
 }
 let L = i().throttle(e => {
     (0, E.trackInteraction)(M.ContentInventoryInteractionTypes.CARD_HOVER, e)
@@ -55,7 +55,7 @@ let L = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(x.default, {
+        return (0, a.jsx)(N.default, {
           ...n,
           entry: t
         });
@@ -90,7 +90,7 @@ let L = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(N.default, {
+        return (0, a.jsx)(x.default, {
           ...n,
           entry: t
         });
@@ -127,10 +127,10 @@ t.default = l.memo(e => {
     openOnHover: _
   } = (0, p.useMemberListHoverInteractions)({
     location: "MemberListContentRow"
-  }), T = l.useRef(!1), [I, A] = l.useState(!1), [v, x] = l.useState(!1), [N, y] = l.useState(!1), R = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
+  }), T = l.useRef(!1), [I, A] = l.useState(!1), [v, N] = l.useState(!1), [x, R] = l.useState(!1), y = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
   l.useEffect(() => {
-    I && R && y(!0)
-  }, [I, R]);
+    I && y && R(!0)
+  }, [I, y]);
   let P = l.useCallback(e => {
       g && (0, c.openContextMenuLazy)(e, async () => {
         let {
@@ -147,7 +147,7 @@ t.default = l.memo(e => {
     }, []),
     b = () => {
       T.current = !1, setTimeout(() => {
-        !T.current && (A(!1), y(R))
+        !T.current && (A(!1), R(y))
       }, 100)
     };
   return (0, a.jsx)("div", {
@@ -173,7 +173,7 @@ t.default = l.memo(e => {
       positionKey: o,
       onRequestOpen: () => (0, E.trackInteraction)(M.ContentInventoryInteractionTypes.CARD_CLICK, S),
       onRequestClose: () => {
-        N && b(), !_ && (A(!1), x(!1))
+        x && b(), !_ && (A(!1), N(!1))
       },
       spacing: 8,
       children: (e, t) => {
@@ -182,7 +182,7 @@ t.default = l.memo(e => {
         } = t;
         return (0, a.jsx)(d.Clickable, {
           onClick: () => {
-            _ && !I && A(!0), !_ && x(e => !e)
+            _ && !I && A(!0), !_ && N(e => !e)
           },
           children: (0, a.jsx)(d.FocusRing, {
             offset: {

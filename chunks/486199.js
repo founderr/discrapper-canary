@@ -21,12 +21,12 @@ function f(e) {
     description: l,
     icon: a,
     imageSrc: f,
-    iconBackgroundColor: m,
-    iconClassName: I,
+    iconBackgroundColor: I,
+    iconClassName: m,
     details: T,
-    detailsClassName: N,
-    isHeader: E,
-    isPremium: S
+    detailsClassName: E,
+    isHeader: N,
+    isPremium: _
   } = e;
   return (0, n.jsxs)(r.default, {
     justify: r.default.Justify.CENTER,
@@ -56,22 +56,22 @@ function f(e) {
           className: c.iconWrapper,
           children: i
         })
-      }(a, f, m, I)
+      }(a, f, I, m)
     }) : null, function(e) {
       let {
         name: t,
         description: l,
         details: a,
         detailsClassName: f,
-        isHeader: m,
-        isPremium: I
+        isHeader: I,
+        isPremium: m
       } = e, T = null == a ? void 0 : a.map((e, t) => {
         let {
           icon: l,
           text: a
         } = e;
         return (0, n.jsxs)("div", {
-          className: s()(c.detailsWrapper, m ? c.headerDetailsWrapper : null),
+          className: s()(c.detailsWrapper, I ? c.headerDetailsWrapper : null),
           children: [null != l ? (0, n.jsx)(l, {
             width: 16,
             height: 16,
@@ -87,9 +87,9 @@ function f(e) {
       return (0, n.jsxs)(r.default, {
         direction: r.default.Direction.VERTICAL,
         children: [(0, n.jsxs)(d.default, {
-          size: m ? d.default.Sizes.SIZE_24 : d.default.Sizes.SIZE_16,
-          className: m ? c.header : c.secondaryHeader,
-          children: [t, I && (0, n.jsx)(i.Tooltip, {
+          size: I ? d.default.Sizes.SIZE_24 : d.default.Sizes.SIZE_16,
+          className: I ? c.header : c.secondaryHeader,
+          children: [t, m && (0, n.jsx)(i.Tooltip, {
             text: u.default.Messages.APPLICATION_SUBSCRIPTION_PREMIUM,
             children: e => (0, n.jsx)(o.default, {
               ...e,
@@ -113,9 +113,9 @@ function f(e) {
       name: t,
       description: l,
       details: T,
-      detailsClassName: N,
-      isHeader: E,
-      isPremium: S
+      detailsClassName: E,
+      isHeader: N,
+      isPremium: _
     })]
   })
 }

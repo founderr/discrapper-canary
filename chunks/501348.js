@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("607070"),
   I = s("627845"),
   N = s("514361"),
-  g = s("605236"),
-  f = s("786761"),
+  f = s("605236"),
+  g = s("786761"),
   m = s("3148"),
   C = s("739566"),
   A = s("753206"),
@@ -62,35 +62,35 @@ let k = {
   z = "1337",
   Q = e => {
     let t = 0;
-    return [(0, f.createMessageRecord)({
+    return [(0, g.createMessageRecord)({
       ...(0, m.default)({
         channelId: z,
         content: y.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: G.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, f.createMessageRecord)({
+    }), (0, g.createMessageRecord)({
       ...(0, m.default)({
         channelId: z,
         content: (0, d.isThemeDark)(e) ? y.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : y.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: G.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, f.createMessageRecord)({
+    }), (0, g.createMessageRecord)({
       ...(0, m.default)({
         channelId: z,
         content: y.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: G.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, f.createMessageRecord)({
+    }), (0, g.createMessageRecord)({
       ...(0, m.default)({
         channelId: z,
         content: y.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: G.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, f.createMessageRecord)({
+    }), (0, g.createMessageRecord)({
       ...(0, m.default)({
         channelId: z,
         content: y.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
@@ -343,7 +343,7 @@ class q extends n.Component {
   }
 }
 let X = e => {
-  !(0, g.isDismissibleContentDismissed)(e) && (0, g.markDismissibleContentAsDismissed)(e, {
+  !(0, f.isDismissibleContentDismissed)(e) && (0, f.markDismissibleContentAsDismissed)(e, {
     dismissAction: F.ContentDismissActionType.AUTO,
     forceTrack: !0
   })

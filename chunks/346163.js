@@ -48,7 +48,7 @@ function T(e) {
     } = (0, n.useIsMonetizationReapplicationDisabled)(null == e ? void 0 : e.id),
     D = h || (null == L ? void 0 : L.isApplicationPending) === !0,
     v = (null == L ? void 0 : L.canApply) === !0,
-    G = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
+    j = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
       faqUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_FAQ)
     });
   O && M ? t = !0 === T ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
@@ -59,13 +59,13 @@ function T(e) {
     requestCooldownDuration: p,
     creatorRevenuePolicyUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_POLICY)
   }));
-  let j = s && f && !1 === S,
+  let G = s && f && !1 === S,
     U = s && !1 === T,
     P = (0, E.getCreatorMonetizationAcceptTermsCheckboxText)(),
     b = O && v && f ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
   return a.useEffect(() => {
-    j && x()
-  }, [x, j]), {
+    G && x()
+  }, [x, G]), {
     resubmittingEnableRequest: N,
     resubmissionError: m,
     isGuildOwner: f,
@@ -82,7 +82,7 @@ function T(e) {
     reapplyNoticeText: b,
     showAcceptTermsFlow: U,
     wasRejectedInV1: U && (A || O),
-    requirementsFinePrintText: G,
+    requirementsFinePrintText: j,
     acceptTermsCheckboxText: P
   }
 }

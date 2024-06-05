@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return _
   }
 });
 var a = n("735250");
@@ -25,20 +25,20 @@ let h = (e, t) => ({
   imgStyle: E.defaultDropImage
 });
 
-function C(e) {
+function _(e) {
   let {
     markAsDismissed: t,
     partnerGame: n
   } = e;
   (0, u.useTrackDropsImpression)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_ENROLLMENT);
-  let C = (0, u.useDropsExperiment)(n);
-  if (null == C) return null;
+  let _ = (0, u.useDropsExperiment)(n);
+  if (null == _) return null;
   let {
-    header: _,
+    header: C,
     body: m,
     imgSrc: S,
     imgStyle: p
-  } = h(C.drop, C.config.streamLengthRequirement), I = () => {
+  } = h(_.drop, _.config.streamLengthRequirement), I = () => {
     t(c.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
@@ -59,12 +59,12 @@ function C(e) {
     }), (0, a.jsx)(l.Heading, {
       className: E.title,
       variant: "heading-md/extrabold",
-      children: _
+      children: C
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
       className: E.subTitle,
       children: m
-    }), C.config.autoEnrollment ? (0, a.jsx)(l.Button, {
+    }), _.config.autoEnrollment ? (0, a.jsx)(l.Button, {
       color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
@@ -76,7 +76,7 @@ function C(e) {
       color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
-        (0, o.enrollDropsUser)(C.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
+        (0, o.enrollDropsUser)(_.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
       children: f.default.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
     }), (0, a.jsx)(l.Button, {

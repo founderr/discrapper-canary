@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return W
   },
   NewReleaseBadge: function() {
-    return J
+    return Q
   },
   ResurrectedBadge: function() {
     return z
@@ -34,19 +34,19 @@ n.r(t), n.d(t, {
     return K
   },
   TopArtistBadge: function() {
-    return X
+    return q
   },
   TopGameBadge: function() {
     return Z
   },
   TrendingBadge: function() {
-    return q
+    return X
   },
   VoiceChannelBadge: function() {
     return H
   },
   WatchTimestampBadge: function() {
-    return Q
+    return J
   }
 });
 var a, l, s = n("735250"),
@@ -69,11 +69,11 @@ var a, l, s = n("735250"),
   I = n("137443"),
   A = n("700287"),
   v = n("71970"),
-  x = n("277758"),
-  N = n("690172"),
+  N = n("277758"),
+  x = n("690172"),
   M = n("481060"),
-  y = n("70956"),
-  R = n("709054"),
+  R = n("70956"),
+  y = n("709054"),
   L = n("719247"),
   O = n("22211"),
   j = n("561308"),
@@ -128,7 +128,7 @@ function H(e) {
     location: a
   } = w();
   return null == n || 1 === a ? null : (0, s.jsx)(k, {
-    Icon: N.VoiceNormalIcon,
+    Icon: x.VoiceNormalIcon,
     text: n.name
   })
 }
@@ -294,13 +294,13 @@ function Z(e) {
     Icon: v.TrophyIcon,
     text: (0, s.jsxs)(s.Fragment, {
       children: [b.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
-        hours: Math.round(a / y.default.Seconds.HOUR)
+        hours: Math.round(a / R.default.Seconds.HOUR)
       })]
     })
   })
 }
 
-function X(e) {
+function q(e) {
   var t;
   let {
     entry: n
@@ -319,7 +319,7 @@ function X(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   let {
     entry: t
   } = e, n = (0, j.getTrendingType)(t);
@@ -329,17 +329,17 @@ function q(e) {
   })
 }
 
-function J(e) {
+function Q(e) {
   let {
     entry: t
-  } = e, n = R.default.extractTimestamp(t.extra.application_id);
+  } = e, n = y.default.extractTimestamp(t.extra.application_id);
   return d()().diff(d()(n), "days") > 7 ? null : (0, s.jsx)(k, {
     Icon: h.CircleExclamationPointIcon,
     text: "New Release"
   })
 }
 
-function Q(e) {
+function J(e) {
   let {
     entry: t
   } = e, {
@@ -348,7 +348,7 @@ function Q(e) {
   } = w();
   return (0, s.jsxs)("div", {
     className: U.badgeContainer,
-    children: [(0, s.jsx)(x.TvIcon, {
+    children: [(0, s.jsx)(N.TvIcon, {
       width: 12,
       height: 12,
       color: a

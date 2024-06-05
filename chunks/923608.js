@@ -27,7 +27,7 @@ t.default = e => {
         dismissAction: f.ContentDismissActionType.PRIMARY
       }), (0, r.dismissedGuildOnboardingUpsell)(t.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
     }, [t.id]),
-    C = s.useCallback(() => {
+    _ = s.useCallback(() => {
       u.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
         type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
         action: "dismiss"
@@ -35,7 +35,7 @@ t.default = e => {
     }, [t.id, n]);
   return (0, a.jsx)(d.default, {
     guild: t,
-    onDismissed: C,
+    onDismissed: _,
     onClick: h,
     title: E.default.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_TITLE,
     message: E.default.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_MESSAGE,

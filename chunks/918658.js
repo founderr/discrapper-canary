@@ -1,189 +1,189 @@
 "use strict";
 n.r(t), n.d(t, {
   ViewingRolesSettingsNotice: function() {
-    return G
+    return D
   },
   default: function() {
-    return D
+    return w
   }
 });
-var i = n("735250");
+var r = n("735250");
 n("470079");
-var r = n("120356"),
-  s = n.n(r),
-  l = n("442837"),
+var i = n("120356"),
+  l = n.n(i),
+  s = n("442837"),
   o = n("692547"),
   u = n("481060"),
   a = n("549817"),
-  d = n("819553"),
-  c = n("17181"),
+  c = n("819553"),
+  d = n("17181"),
   f = n("303737"),
   S = n("434404"),
-  _ = n("703656"),
-  p = n("944486"),
-  E = n("914010"),
-  g = n("671533"),
-  I = n("259580"),
-  h = n("759231"),
-  C = n("644766"),
-  T = n("358085"),
-  m = n("962086"),
-  R = n("160404"),
-  N = n("889695"),
-  v = n("981631"),
-  O = n("176505"),
-  A = n("302463"),
-  M = n("293810"),
-  b = n("689938"),
-  L = n("794491");
+  p = n("703656"),
+  g = n("944486"),
+  h = n("914010"),
+  E = n("671533"),
+  _ = n("259580"),
+  C = n("759231"),
+  I = n("644766"),
+  m = n("358085"),
+  T = n("962086"),
+  v = n("160404"),
+  R = n("889695"),
+  N = n("981631"),
+  M = n("176505"),
+  b = n("302463"),
+  O = n("293810"),
+  A = n("689938"),
+  x = n("794491");
 
-function P(e) {
+function L(e) {
   let {
     className: t,
     onClick: n,
-    children: r
+    children: i
   } = e;
-  return (0, i.jsx)(u.Button, {
-    className: s()(L.button, t),
-    innerClassName: L.buttonInner,
+  return (0, r.jsx)(u.Button, {
+    className: l()(x.button, t),
+    innerClassName: x.buttonInner,
     look: u.Button.Looks.OUTLINED,
     color: u.Button.Colors.WHITE,
     size: u.Button.Sizes.NONE,
     onClick: n,
-    children: r
+    children: i
   })
 }
 
-function x(e) {
+function P(e) {
   let {
     onClick: t
   } = e;
-  return (0, i.jsx)(P, {
+  return (0, r.jsx)(L, {
     onClick: t,
-    children: b.default.Messages.DISABLE
+    children: A.default.Messages.DISABLE
   })
 }
 
-function D() {
-  let e = (0, l.useStateFromStores)([E.default], () => E.default.getGuildId()),
-    t = (0, l.useStateFromStores)([p.default], () => p.default.getChannelId(e)),
+function w() {
+  let e = (0, s.useStateFromStores)([h.default], () => h.default.getGuildId()),
+    t = (0, s.useStateFromStores)([g.default], () => g.default.getChannelId(e)),
     {
       viewingRoles: n,
-      backNavigationSection: r,
-      isFullServerPreview: s,
-      isServerShopPreview: T
-    } = (0, l.useStateFromStoresObject)([R.default], () => ({
-      viewingRoles: null != e ? R.default.getViewingRoles(e) : null,
-      backNavigationSection: R.default.getBackNavigationSection(e),
-      isFullServerPreview: null != e && R.default.isFullServerPreview(e),
-      isServerShopPreview: null != e && R.default.isViewingServerShop(e)
+      backNavigationSection: i,
+      isFullServerPreview: l,
+      isServerShopPreview: m
+    } = (0, s.useStateFromStoresObject)([v.default], () => ({
+      viewingRoles: null != e ? v.default.getViewingRoles(e) : null,
+      backNavigationSection: v.default.getBackNavigationSection(e),
+      isFullServerPreview: null != e && v.default.isFullServerPreview(e),
+      isServerShopPreview: null != e && v.default.isViewingServerShop(e)
     }));
   if (null == n || null == e) return null;
-  let D = function(e) {
+  let w = function(e) {
       switch (e) {
-        case v.GuildSettingsSections.INTEGRATIONS:
-          return b.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
-        case v.GuildSettingsSections.ROLE_SUBSCRIPTIONS:
-          return b.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
-        case v.GuildSettingsSections.ONBOARDING:
-          return b.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
+        case N.GuildSettingsSections.INTEGRATIONS:
+          return A.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
+        case N.GuildSettingsSections.ROLE_SUBSCRIPTIONS:
+          return A.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
+        case N.GuildSettingsSections.ONBOARDING:
+          return A.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
         default:
-          return b.default.Messages.VIEWING_AS_ROLES_BACK
+          return A.default.Messages.VIEWING_AS_ROLES_BACK
       }
-    }(r),
-    G = r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? b.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : b.default.Messages.VIEWING_AS_ROLES_SELECT,
-    w = t === O.StaticChannelRoute.GUILD_ONBOARDING,
-    U = t => {
+    }(i),
+    D = i === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? A.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : A.default.Messages.VIEWING_AS_ROLES_SELECT,
+    y = t === M.StaticChannelRoute.GUILD_ONBOARDING,
+    j = t => {
       let {
         backToSettings: n
       } = t;
-      null != e && (R.default.isFullServerPreview(e) && (0, _.transitionTo)(v.Routes.CHANNEL(e)), d.default.shouldShowOnboarding(e) && (a.default.finishOnboarding(e), (0, c.discardOnboardingPromise)(e)), (0, m.stopImpersonating)(e), n && S.default.open(e, r), r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, f.announceDeleteTemplateChannels)(e))
+      null != e && (v.default.isFullServerPreview(e) && (0, p.transitionTo)(N.Routes.CHANNEL(e)), c.default.shouldShowOnboarding(e) && (a.default.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, T.stopImpersonating)(e), n && S.default.open(e, i), i === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, f.announceDeleteTemplateChannels)(e))
     };
-  return (0, i.jsxs)(C.default, {
-    color: C.NoticeColors.BRAND,
-    className: L.notice,
-    children: [(0, i.jsxs)(P, {
-      onClick: () => U({
+  return (0, r.jsxs)(I.default, {
+    color: I.NoticeColors.BRAND,
+    className: x.notice,
+    children: [(0, r.jsxs)(L, {
+      onClick: () => j({
         backToSettings: !0
       }),
-      className: L.backButton,
-      children: [(0, i.jsx)(g.default, {
+      className: x.backButton,
+      children: [(0, r.jsx)(E.default, {
         width: 16,
         height: 16,
-        direction: g.default.Directions.LEFT,
-        className: L.backArrow
-      }), D]
-    }), w && s ? (0, i.jsx)("div", {
-      className: L.noticeContents,
-      children: (0, i.jsx)("div", {
-        className: L.noticeText,
-        children: b.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
+        direction: E.default.Directions.LEFT,
+        className: x.backArrow
+      }), w]
+    }), y && l ? (0, r.jsx)("div", {
+      className: x.noticeContents,
+      children: (0, r.jsx)("div", {
+        className: x.noticeText,
+        children: A.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
       })
-    }) : (0, i.jsxs)("div", {
-      className: L.noticeContents,
-      children: [(0, i.jsx)("div", {
-        className: L.noticeText,
-        children: s ? b.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
+    }) : (0, r.jsxs)("div", {
+      className: x.noticeContents,
+      children: [(0, r.jsx)("div", {
+        className: x.noticeText,
+        children: l ? A.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
           numRoles: Object.keys(n).length
-        }) : b.default.Messages.VIEWING_AS_ROLES.format({
+        }) : A.default.Messages.VIEWING_AS_ROLES.format({
           numRoles: Object.keys(n).length
         })
-      }), (0, i.jsx)(u.Popout, {
+      }), (0, r.jsx)(u.Popout, {
         position: "bottom",
-        renderPopout: () => (0, i.jsx)(N.default, {
+        renderPopout: () => (0, r.jsx)(R.default, {
           guildId: e
         }),
         children: e => {
           let {
             onClick: t
           } = e;
-          return (0, i.jsxs)(P, {
+          return (0, r.jsxs)(L, {
             onClick: t,
-            children: [G, (0, i.jsx)(I.default, {
+            children: [D, (0, r.jsx)(_.default, {
               width: 16,
               height: 16,
-              direction: I.default.Directions.DOWN,
-              className: L.selectCaret
+              direction: _.default.Directions.DOWN,
+              className: x.selectCaret
             })]
           })
         }
-      }), s && (0, i.jsx)(u.TooltipContainer, {
-        className: L.previewWarning,
-        text: b.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
-        children: (0, i.jsx)(h.default, {
+      }), l && (0, r.jsx)(u.TooltipContainer, {
+        className: x.previewWarning,
+        text: A.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
+        children: (0, r.jsx)(C.default, {
           width: 16,
           height: 16,
           color: o.default.unsafe_rawColors.YELLOW_300.css
         })
-      }), T && (0, i.jsx)(u.TooltipContainer, {
-        className: L.previewWarning,
-        text: b.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-          maxTiers: M.MAX_SUBSCRIPTION_TIERS,
-          maxProducts: A.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
+      }), m && (0, r.jsx)(u.TooltipContainer, {
+        className: x.previewWarning,
+        text: A.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
+          maxTiers: O.MAX_SUBSCRIPTION_TIERS,
+          maxProducts: b.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
         }),
-        children: (0, i.jsx)(h.default, {
+        children: (0, r.jsx)(C.default, {
           width: 16,
           height: 16,
           color: o.default.unsafe_rawColors.YELLOW_300.css
         })
       })]
-    }), s || r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(x, {
-      onClick: () => U({
+    }), l || i === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(P, {
+      onClick: () => j({
         backToSettings: !1
       })
     })]
   })
 }
 
-function G(e) {
+function D(e) {
   let {
     guildId: t
   } = e;
-  return (0, l.useStateFromStores)([R.default], () => R.default.isViewingRoles(t)) ? (0, i.jsx)("div", {
-    className: s()(L.settingsWrapper, {
-      [L.windows]: (0, T.isWindows)(),
-      [L.osx]: (0, T.isMac)()
+  return (0, s.useStateFromStores)([v.default], () => v.default.isViewingRoles(t)) ? (0, r.jsx)("div", {
+    className: l()(x.settingsWrapper, {
+      [x.windows]: (0, m.isWindows)(),
+      [x.osx]: (0, m.isMac)()
     }),
-    children: (0, i.jsx)(D, {})
+    children: (0, r.jsx)(w, {})
   }) : null
 }

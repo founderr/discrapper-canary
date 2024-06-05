@@ -1,8 +1,8 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   useAgeSpecificText: function() {
-    return n
+    return s
   }
 });
-var a = s("880257");
-let n = (e, t) => (0, a.default)() ? t : e
+var a = n("880257");
+let s = (e, t) => (0, a.default)() ? t : e

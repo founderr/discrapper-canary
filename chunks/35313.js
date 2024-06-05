@@ -6,11 +6,11 @@ a.r(t), a.d(t, {
 });
 var n = a("920906"),
   r = a("748780"),
-  i = a("442837"),
-  s = a("607070");
+  s = a("442837"),
+  i = a("607070");
 
 function l() {
-  let e = (0, i.useStateFromStores)([s.default], () => s.default.useReducedMotion);
+  let e = (0, s.useStateFromStores)([i.default], () => i.default.useReducedMotion);
   return (0, n.useSpring)({
     from: {
       opacity: e ? 1 : 0,

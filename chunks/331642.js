@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return h
   }
 }), s("47120");
 var a = s("735250"),
@@ -18,12 +18,12 @@ var a = s("735250"),
   T = s("242291"),
   _ = s("706667"),
   I = s("792165"),
-  f = s("409673"),
-  m = s("603074"),
-  N = s("689938"),
-  g = s("152951");
+  N = s("409673"),
+  f = s("603074"),
+  g = s("689938"),
+  m = s("152951");
 
-function h(e) {
+function C(e) {
   let {
     onSelect: t
   } = e, [s, i] = n.useState(!1), o = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), c = E.default.canUseCustomCallSounds(o);
@@ -40,7 +40,7 @@ function h(e) {
         closePopout: t
       } = e;
       return (0, a.jsx)(r.Dialog, {
-        children: (0, a.jsx)(m.default, {
+        children: (0, a.jsx)(f.default, {
           suppressPlaySound: !0,
           shouldShowUpsell: !1,
           guildId: null,
@@ -52,38 +52,38 @@ function h(e) {
         })
       })
     },
-    children: e => (0, a.jsx)(f.SecondaryActionButton, {
+    children: e => (0, a.jsx)(N.SecondaryActionButton, {
       ...e,
       onClick: () => {
         i(!s)
       },
-      text: N.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
+      text: g.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
       children: (0, a.jsx)(u.default, {
-        className: g.secondaryIcon
+        className: m.secondaryIcon
       })
     })
   })
 }
 
-function C(e) {
+function A(e) {
   let {
     sound: t
   } = e, {
     previewSound: s
-  } = (0, _.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? N.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : N.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+  } = (0, _.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? g.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : g.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
     emojiName: t.emojiName,
     soundName: t.name
   });
-  return (0, a.jsx)(f.SecondaryActionButton, {
+  return (0, a.jsx)(N.SecondaryActionButton, {
     onClick: s,
     text: n,
     children: (0, a.jsx)(c.default, {
-      className: g.secondaryIconActive
+      className: m.secondaryIconActive
     })
   })
 }
 
-function O(e) {
+function h(e) {
   let {
     sound: t,
     isGlobal: s,
@@ -95,36 +95,36 @@ function O(e) {
     children: e
   });
   return (0, a.jsxs)("div", {
-    className: g.soundButtonSettingContainer,
+    className: m.soundButtonSettingContainer,
     children: [(0, a.jsxs)("div", {
-      className: g.container,
+      className: m.container,
       children: [E && (0, a.jsx)(o.default, {
         emojiId: d,
         emojiName: u,
-        className: g.emoji
+        className: m.emoji
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-primary",
-        className: g.soundText,
-        children: null == t ? N.default.Messages.NONE : s ? N.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
+        className: m.soundText,
+        children: null == t ? g.default.Messages.NONE : s ? g.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
           soundName: t.name,
           subtextHook: T
         }) : t.name
-      }), l ? (0, a.jsx)(C, {
+      }), l ? (0, a.jsx)(A, {
         sound: t
       }) : (0, a.jsx)(c.default, {
-        className: g.secondaryIconDisabled
+        className: m.secondaryIconDisabled
       })]
     }), (0, a.jsxs)("div", {
-      className: g.container,
-      children: [(0, a.jsx)(h, {
+      className: m.container,
+      children: [(0, a.jsx)(C, {
         onSelect: n
-      }), l && !s && (0, a.jsx)(f.SecondaryActionButton, {
+      }), l && !s && (0, a.jsx)(N.SecondaryActionButton, {
         onClick: () => n(null),
-        text: N.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
+        text: g.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
         children: (0, a.jsx)(S.default, {
           color: i.default.unsafe_rawColors.RED_400.css,
-          className: g.secondaryIcon
+          className: m.secondaryIcon
         })
       })]
     })]

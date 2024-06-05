@@ -36,13 +36,13 @@ var a = s("735250"),
   M = s("745752"),
   D = s("45966"),
   v = s("637853"),
-  G = s("526120"),
-  j = s("621923"),
+  j = s("526120"),
+  G = s("621923"),
   U = s("352981"),
   P = s("610403"),
   b = s("923726"),
-  y = s("144507"),
-  B = s("303737"),
+  B = s("144507"),
+  y = s("303737"),
   F = s("15030"),
   H = s("220685"),
   k = s("751189"),
@@ -90,13 +90,13 @@ var a = s("735250"),
   eM = s("495300"),
   eD = s("312397"),
   ev = s("651780"),
-  eG = s("279542"),
-  ej = s("413335"),
+  ej = s("279542"),
+  eG = s("413335"),
   eU = s("665324"),
   eP = s("208150"),
   eb = s("353398"),
-  ey = s("365774"),
-  eB = s("803288"),
+  eB = s("365774"),
+  ey = s("803288"),
   eF = s("804153"),
   eH = s("981631"),
   ek = s("308083"),
@@ -121,7 +121,7 @@ function eK(e) {
     canManageWebhooks: C,
     canManageBans: L,
     canAccessMembersPage: M,
-    canViewGuildAnalytics: G,
+    canViewGuildAnalytics: j,
     isOwner: k,
     isOwnerWithRequiredMfaLevel: w,
     showDirtyGuildTemplateIndicator: Y,
@@ -134,10 +134,10 @@ function eK(e) {
     guildMetadata: ea,
     section: ei,
     canAccessClanSettings: er
-  } = e, eK = () => (0, y.canSeeGuildRoleSubscriptionSettings)({
+  } = e, eK = () => (0, B.canSeeGuildRoleSubscriptionSettings)({
     guild: l,
     isOwner: k,
-    canManageGuildRoleSubscriptions: (0, y.canManageGuildRoleSubscriptions)(l),
+    canManageGuildRoleSubscriptions: (0, B.canManageGuildRoleSubscriptions)(l),
     isMonetizationWaitlistEnabledForGuild: (0, g.isMonetizationWaitlistEnabledForGuild)(l.id),
     isGuildEligibleForRoleSubscriptions: (0, b.isGuildEligibleForRoleSubscriptions)(l.id),
     isExpeditedMonetizationOnboardingGuild: (0, g.isExpeditedMonetizationOnboardingGuild)(l),
@@ -210,7 +210,7 @@ function eK(e) {
   }, {
     section: eH.GuildSettingsSections.GUILD_TEMPLATES,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-    label: (0, a.jsx)(ey.default, {
+    label: (0, a.jsx)(eB.default, {
       showDirtyIndicator: Y
     }),
     ariaLabel: eY.default.Messages.GUILD_TEMPLATES,
@@ -224,10 +224,10 @@ function eK(e) {
     section: eH.GuildSettingsSections.VANITY_URL,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_VANITY_URL,
     label: eY.default.Messages.VANITY_URL,
-    element: eB.default,
+    element: ey.default,
     notice: {
       stores: [ec.default],
-      element: eB.GuildSettingsVanityURLNotice
+      element: ey.GuildSettingsVanityURLNotice
     },
     predicate: () => i
   }, {
@@ -280,7 +280,7 @@ function eK(e) {
     section: eH.GuildSettingsSections.MODERATION,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_MODERATION,
     label: eY.default.Messages.SAFETY_SETUP,
-    element: eG.default,
+    element: ej.default,
     predicate: () => i && !l.hasFeature(eH.GuildFeatures.COMMUNITY)
   }, {
     section: eH.GuildSettingsSections.GUILD_AUTOMOD,
@@ -314,11 +314,11 @@ function eK(e) {
     predicate: () => L
   }, {
     section: c.SectionTypes.DIVIDER,
-    predicate: () => i || G
+    predicate: () => i || j
   }, {
     section: c.SectionTypes.HEADER,
     label: eY.default.Messages.COMMUNITY,
-    predicate: () => !er && (i || G)
+    predicate: () => !er && (i || j)
   }, {
     section: eH.GuildSettingsSections.CLAN,
     label: eY.default.Messages.CLAN_SETTINGS,
@@ -366,7 +366,7 @@ function eK(e) {
     decoration: function(e, t) {
       let {
         homeSettingsEnabled: s
-      } = (0, j.getOnboardingHomeAdminExperiment)(e);
+      } = (0, G.getOnboardingHomeAdminExperiment)(e);
       if (D.default.getEnabled(e)) return eY.default.Messages.GUILD_ONBOARDING_ON.toUpperCase();
       if ((0, eT.isOnboardingWizardCompleted)(e)) return eY.default.Messages.GUILD_ONBOARDING_OFF.toUpperCase();
       let a = eI.COMPLETABLE_ONBOARDING_STEPS.filter(e => !!s || e !== eI.GuildSettingsOnboardingPage.HOME_SETTINGS || !1),
@@ -384,7 +384,7 @@ function eK(e) {
     element: eN.default,
     newIndicator: V.default.hasHotspot(ew.HotspotLocations.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
     newIndicatorDismissibleContentTypes: Z ? [r.DismissibleContent.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
-    predicate: () => G && l.hasFeature(eH.GuildFeatures.COMMUNITY)
+    predicate: () => j && l.hasFeature(eH.GuildFeatures.COMMUNITY)
   }, {
     section: eH.GuildSettingsSections.DISCOVERY,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
@@ -435,7 +435,7 @@ function eK(e) {
     element: F.default,
     type: c.ContentTypes.CUSTOM,
     predicate: eK,
-    newIndicatorDismissibleContentTypes: (0, B.isEligibleForNewBadge)(l) ? [r.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
+    newIndicatorDismissibleContentTypes: (0, y.isEligibleForNewBadge)(l) ? [r.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
   }, {
     section: eH.GuildSettingsSections.GUILD_PRODUCTS,
     label: eY.default.Messages.GUILD_PRODUCTS_TITLE,
@@ -459,7 +459,7 @@ function eK(e) {
     ariaLabel: eY.default.Messages.GUILD_PREMIUM,
     element: ev.default,
     className: eW.serverBoostTabItem,
-    icon: (0, a.jsx)(ej.default, {
+    icon: (0, a.jsx)(eG.default, {
       className: eW.icon
     })
   }, {
@@ -727,9 +727,9 @@ function eq() {
   }, [f, O]);
   let {
     homeSettingsEnabled: p
-  } = (0, j.useOnboardingHomeAdminExperiment)(null != f ? f : eH.EMPTY_STRING_SNOWFLAKE_ID);
+  } = (0, G.useOnboardingHomeAdminExperiment)(null != f ? f : eH.EMPTY_STRING_SNOWFLAKE_ID);
   l.useEffect(() => {
-    null != f && p && (0, G.fetchGuildHomeSettings)(f)
+    null != f && p && (0, j.fetchGuildHomeSettings)(f)
   }, [p, f]);
   let {
     showAccessRate: A
@@ -742,8 +742,8 @@ function eq() {
   }, [f, S.canManageGuild]), l.useEffect(() => {
     !g && en.default.close()
   }, [g]);
-  let y = (0, i.useStateFromStores)([e_.default], () => e_.default.getCurrentPage()),
-    B = (0, i.useStateFromStores)([D.default], () => null != f && D.default.getEnabled(f)),
+  let B = (0, i.useStateFromStores)([e_.default], () => e_.default.getCurrentPage()),
+    y = (0, i.useStateFromStores)([D.default], () => null != f && D.default.getEnabled(f)),
     F = (0, i.useStateFromStores)([Z.default], () => null != f && Z.default.isEmpty(f));
   return (0, a.jsx)(I.AnalyticsLocationProvider, {
     value: u,
@@ -760,8 +760,8 @@ function eq() {
       ...S,
       canViewGuildAnalytics: h,
       showAccessRate: A,
-      onboardingStep: y,
-      onboardingEnabled: B,
+      onboardingStep: B,
+      onboardingEnabled: y,
       welcomeScreenEmpty: F,
       guildMetadata: o,
       canAccessClanSettings: v

@@ -124,7 +124,7 @@ function R(e) {
         }(0, a.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([l.e("49237"), l.e("99387"), l.e("43643"), l.e("7654"), l.e("96626")]).then(l.bind(l, "560114"));
+          } = await Promise.all([l.e("49237"), l.e("99387"), l.e("7654"), l.e("43643"), l.e("96626")]).then(l.bind(l, "560114"));
           return l => (0, n.jsx)(e, {
             ...l,
             guild: t,

@@ -24,23 +24,23 @@ function T(e) {
     animationDelay: S = 500
   } = e, T = d.tokens.colors.TEXT_LINK, _ = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), I = (0, d.useToken)(T).spring({
     opacity: 0
-  }), f = (0, d.useToken)(T).spring({
-    opacity: .1
-  }), m = (0, d.useToken)(T).spring({
-    opacity: 0
   }), N = (0, d.useToken)(T).spring({
+    opacity: .1
+  }), f = (0, d.useToken)(T).spring({
+    opacity: 0
+  }), g = (0, d.useToken)(T).spring({
     opacity: 1
-  }), g = e => {
+  }), m = e => {
     e.finished && (null == l || l())
-  }, [h, C] = (0, r.useSpring)(() => ({
+  }, [C, A] = (0, r.useSpring)(() => ({
     immediate: !0,
     from: {
       backgroundColor: I,
       borderColor: I
     }
-  })), O = S + 200 + 200, A = _ ? 0 : 200;
+  })), h = S + 200 + 200, O = _ ? 0 : 200;
   return n.useEffect(() => {
-    C({
+    A({
       reset: !0,
       immediate: !1,
       to: {
@@ -48,35 +48,35 @@ function T(e) {
         borderColor: I
       },
       config: {
-        duration: A,
+        duration: O,
         easing: o.default.Easing.ease
       }
-    }), C({
+    }), A({
       delay: S,
       immediate: _,
       to: [{
-        backgroundColor: f,
-        borderColor: N
+        backgroundColor: N,
+        borderColor: g
       }],
       config: {
-        duration: A,
+        duration: O,
         easing: o.default.Easing.ease
       }
-    }), C({
-      delay: O,
+    }), A({
+      delay: h,
       immediate: _,
       to: [{
-        backgroundColor: m,
-        borderColor: m
+        backgroundColor: f,
+        borderColor: f
       }],
       config: {
-        duration: A,
+        duration: O,
         easing: o.default.Easing.ease
       },
-      onRest: g
+      onRest: m
     })
-  }, [C]), (0, a.jsx)(r.animated.div, {
-    style: h,
+  }, [A]), (0, a.jsx)(r.animated.div, {
+    style: C,
     className: i()(E.settingsItemHighlight, s),
     children: t
   })

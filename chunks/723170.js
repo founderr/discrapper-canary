@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   computeThreadNotificationSetting: function() {
-    return d
+    return M
   },
   useThreadNotificationSetting: function() {
-    return c
+    return S
   }
-}), n("789020");
-var a = n("442837"),
-  l = n("592125"),
-  s = n("9156"),
-  i = n("630388"),
-  r = n("569471"),
-  o = n("124368"),
-  u = n("981631");
+}), a("789020");
+var s = a("442837"),
+  n = a("592125"),
+  E = a("9156"),
+  l = a("630388"),
+  _ = a("569471"),
+  r = a("124368"),
+  u = a("981631");
 
-function d(e) {
-  let t = r.default.flags(e.id);
-  if (null == t) return o.ThreadMemberFlags.NO_MESSAGES;
-  if ((0, i.hasFlag)(t, o.ThreadMemberFlags.ALL_MESSAGES)) return o.ThreadMemberFlags.ALL_MESSAGES;
-  if ((0, i.hasFlag)(t, o.ThreadMemberFlags.ONLY_MENTIONS)) return o.ThreadMemberFlags.ONLY_MENTIONS;
-  if ((0, i.hasFlag)(t, o.ThreadMemberFlags.NO_MESSAGES)) return o.ThreadMemberFlags.NO_MESSAGES;
-  let n = l.default.getChannel(e.parent_id);
-  if (null == n || s.default.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id)) return o.ThreadMemberFlags.NO_MESSAGES;
-  let a = s.default.resolvedMessageNotifications(n);
-  return a === u.UserNotificationSettings.NO_MESSAGES ? o.ThreadMemberFlags.NO_MESSAGES : a === u.UserNotificationSettings.ONLY_MENTIONS ? o.ThreadMemberFlags.ONLY_MENTIONS : o.ThreadMemberFlags.ALL_MESSAGES
+function M(e) {
+  let t = _.default.flags(e.id);
+  if (null == t) return r.ThreadMemberFlags.NO_MESSAGES;
+  if ((0, l.hasFlag)(t, r.ThreadMemberFlags.ALL_MESSAGES)) return r.ThreadMemberFlags.ALL_MESSAGES;
+  if ((0, l.hasFlag)(t, r.ThreadMemberFlags.ONLY_MENTIONS)) return r.ThreadMemberFlags.ONLY_MENTIONS;
+  if ((0, l.hasFlag)(t, r.ThreadMemberFlags.NO_MESSAGES)) return r.ThreadMemberFlags.NO_MESSAGES;
+  let a = n.default.getChannel(e.parent_id);
+  if (null == a || E.default.isGuildOrCategoryOrChannelMuted(a.guild_id, a.id)) return r.ThreadMemberFlags.NO_MESSAGES;
+  let s = E.default.resolvedMessageNotifications(a);
+  return s === u.UserNotificationSettings.NO_MESSAGES ? r.ThreadMemberFlags.NO_MESSAGES : s === u.UserNotificationSettings.ONLY_MENTIONS ? r.ThreadMemberFlags.ONLY_MENTIONS : r.ThreadMemberFlags.ALL_MESSAGES
 }
 
-function c(e) {
-  return (0, a.useStateFromStores)([r.default, s.default, l.default], () => d(e), [e])
+function S(e) {
+  return (0, s.useStateFromStores)([_.default, E.default, n.default], () => M(e), [e])
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildSettingsDiscoveryLandingPageNotice: function() {
-    return j
+    return G
   }
 }), s("47120"), s("315314"), s("610138"), s("216116"), s("78328"), s("815648"), s("627494"), s("757143");
 var a = s("735250"),
@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("731455"),
   D = s("689938"),
   v = s("845978");
-let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
-  j = () => {
+let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
+  G = () => {
     let {
       guild: e,
       guildMetadata: t,
@@ -72,15 +72,15 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
     var e;
     let t = l.useRef(null),
       s = (0, n.useStateFromStores)([L.default], () => L.default.getGuild()),
-      [u, j] = l.useState(!1);
+      [u, G] = l.useState(!1);
     l.useEffect(() => {
-      !u && null != s && (c.maybeFetchGuildDiscoveryCategories(), c.fetchMetadataForGuild(s.id), c.fetchSlugForGuild(s.id), j(!0))
+      !u && null != s && (c.maybeFetchGuildDiscoveryCategories(), c.fetchMetadataForGuild(s.id), c.fetchSlugForGuild(s.id), G(!0))
     }, [s, u]);
     let {
       canManageGuild: U
     } = (0, n.useStateFromStoresObject)([f.default], () => ({
       canManageGuild: f.default.can(A.Permissions.MANAGE_GUILD, s)
-    })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), y = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [B, F] = l.useState([!0]), [H, k] = l.useState(!0), [w, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
+    })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), B = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [y, F] = l.useState([!0]), [H, k] = l.useState(!0), [w, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
       let t = Object.entries(M.ALLOWED_SOCIAL_LINKS_DOMAINS).filter(e => !Y.includes(e[1].presentation)).map(e => ({
         label: e[1].presentation,
         value: e[0]
@@ -171,7 +171,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       es = (e, t) => {
         let a = [...b.socialLinks],
           l = [...Y],
-          n = [...B];
+          n = [...y];
         l[t] = e, a[t] = M.ALLOWED_SOCIAL_LINKS_DOMAINS[e].baseUrl, n[t] = !0, F(n), W(l), k(n.every(e => !0 === e)), c.updateGuildDiscoveryMetadataSocialLinks(s.id, a)
       },
       ea = (e, t) => {
@@ -183,7 +183,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       el = e => {
         let t = [...w];
         t.splice(e, 1), V(t);
-        let a = [...B];
+        let a = [...y];
         a.splice(e, 1), F(a);
         let l = [...Y];
         l.splice(e, 1), W(l);
@@ -258,8 +258,8 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                       learnMoreURL: R.default.getArticleURL(A.HelpdeskArticles.SERVER_WEB_PAGES)
                     })]
                   }), (() => {
-                    if (!b.isPublished || null == y) return;
-                    let e = G + y;
+                    if (!b.isPublished || null == B) return;
+                    let e = j + B;
                     return (0, a.jsx)(a.Fragment, {
                       children: (0, a.jsxs)(r.FormSection, {
                         className: v.noDividerFormSection,
@@ -461,7 +461,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           placeholder: D.default.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_HINT,
                           maxLength: 150,
                           disabled: !U
-                        }, "link-" + t), B[t] ? (0, a.jsx)(g.default, {
+                        }, "link-" + t), y[t] ? (0, a.jsx)(g.default, {
                           className: b.isPublished ? v.validationButtonMax : v.validationButtonMin,
                           color: i.default.unsafe_rawColors.GREEN_230.css,
                           width: 20,

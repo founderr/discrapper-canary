@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return v
+    return L
   }
 }), l("47120"), l("315314"), l("610138"), l("216116"), l("78328"), l("815648");
 var n = l("735250"),
@@ -14,16 +14,16 @@ var n = l("735250"),
   u = l("481060"),
   c = l("139387"),
   f = l("726542"),
-  m = l("339085"),
-  I = l("434404"),
+  I = l("339085"),
+  m = l("434404"),
   T = l("598077"),
-  N = l("430824"),
-  E = l("246946"),
-  S = l("285952"),
-  g = l("259580"),
-  p = l("497309"),
-  h = l("531087"),
-  _ = l("768581"),
+  E = l("430824"),
+  N = l("246946"),
+  _ = l("285952"),
+  S = l("259580"),
+  h = l("497309"),
+  g = l("531087"),
+  p = l("768581"),
   O = l("709054"),
   A = l("486199"),
   C = l("981631"),
@@ -31,19 +31,19 @@ var n = l("735250"),
   R = l("32512"),
   M = l("611273");
 
-function v(e) {
+function L(e) {
   let t, {
       guild: l,
       integration: s,
       editedIntegration: r,
-      isExpanded: v,
-      onToggleExpand: L,
+      isExpanded: L,
+      onToggleExpand: v,
       onDisable: j,
       onEnable: P
     } = e,
-    b = (0, d.useStateFromStores)([N.default], () => N.default.getRoles(l.id)),
+    b = (0, d.useStateFromStores)([E.default], () => E.default.getRoles(l.id)),
     [D, y] = a.useState(!1),
-    G = (0, d.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
+    G = (0, d.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
     B = a.useCallback(() => {
       y(!0), P(s)
     }, [s, P]),
@@ -63,18 +63,18 @@ function v(e) {
         })
       })
     }, [s, j]),
-    H = a.useCallback(() => {
-      I.default.syncIntegration(l.id, s.id)
-    }, [l.id, s.id]),
     U = a.useCallback(() => {
-      null != s.role_id && (I.default.setSection(C.GuildSettingsSections.ROLES), I.default.selectRole(s.role_id))
+      m.default.syncIntegration(l.id, s.id)
+    }, [l.id, s.id]),
+    H = a.useCallback(() => {
+      null != s.role_id && (m.default.setSection(C.GuildSettingsSections.ROLES), m.default.selectRole(s.role_id))
     }, [s.role_id]),
     {
       serviceName: F,
-      channelURL: W,
-      expireBehaviorLabel: w,
+      channelURL: w,
+      expireBehaviorLabel: W,
       syncLabel: V,
-      subscribersText: Y
+      subscribersText: K
     } = a.useMemo(() => {
       var e, t, l, n, a;
       let i = null !== (l = null === (t = f.default.get(s.type)) || void 0 === t ? void 0 : null === (e = t.getPlatformUserUrl) || void 0 === e ? void 0 : e.call(t, s.account)) && void 0 !== l ? l : "";
@@ -95,13 +95,13 @@ function v(e) {
       }
     }, [s.account, s.subscriber_count, s.type]),
     {
-      roleLink: K,
+      roleLink: Y,
       syncDescriptionText: z
     } = a.useMemo(() => {
       let e, t;
       let l = null != s.role_id ? b[s.role_id] : null;
       e = null != l ? (0, n.jsx)(u.Anchor, {
-        onClick: U,
+        onClick: H,
         children: l.name
       }) : x.default.Messages.NONE;
       let a = f.default.get(s.type);
@@ -114,16 +114,16 @@ function v(e) {
           datetime: o()(s.synced_at).calendar()
         })
       }
-    }, [b, U, s.revoked, s.role_id, s.synced_at, s.type, s.user]),
+    }, [b, H, s.revoked, s.role_id, s.synced_at, s.type, s.user]),
     Z = a.useMemo(() => {
-      let e = m.default.getGuildEmoji(l.id),
+      let e = I.default.getGuildEmoji(l.id),
         t = Object.values(b).filter(e => null != e.tags && e.tags.integration_id === s.id).map(e => e.id);
       return s.enable_emoticons ? e.sort((e, t) => e.name.localeCompare(t.name)).filter(e => null != s.role_id && (null == e ? void 0 : e.roles.some(e => t.includes(e)))) : []
     }, [l.id, b, s.enable_emoticons, s.id, s.role_id]);
   if (a.useEffect(() => {
       (null == r ? void 0 : r.id) === s.id && (null == r ? void 0 : r.enabled) === !0 && y(!1)
     }, [r, s.id]), s.enabled && null != s.user) t = [{
-    icon: p.default,
+    icon: h.default,
     text: G ? x.default.Messages.INTEGRATION_ADDED_DATE.format({
       timestamp: O.default.extractTimestamp(s.id)
     }) : x.default.Messages.INTEGRATION_ADDED_USER_DATE.format({
@@ -132,31 +132,31 @@ function v(e) {
     })
   }];
   else {
-    let e = new URL(W);
+    let e = new URL(w);
     t = [{
       text: x.default.Messages.INTEGRATIONS_ACCOUNT_DESCRIPTION.format({
         serviceName: F,
-        accountUrl: W,
+        accountUrl: w,
         accountUrlText: e.hostname + e.pathname
       })
     }]
   }
-  let q = (0, n.jsxs)(S.default, {
+  let q = (0, n.jsxs)(_.default, {
       className: R.header,
-      align: S.default.Align.CENTER,
+      align: _.default.Align.CENTER,
       children: [(0, n.jsx)(A.default, {
         name: "".concat(s.name),
         detailsClassName: R.description,
         details: t
-      }), s.enabled ? (0, n.jsx)(S.default.Child, {
+      }), s.enabled ? (0, n.jsx)(_.default.Child, {
         shrink: 0,
         grow: 0,
-        children: (0, n.jsx)(g.default, {
+        children: (0, n.jsx)(S.default, {
           className: R.expandIcon,
-          expanded: v && !D,
+          expanded: L && !D,
           "aria-hidden": !0
         })
-      }) : (0, n.jsx)(S.default.Child, {
+      }) : (0, n.jsx)(_.default.Child, {
         shrink: 0,
         grow: 0,
         children: (0, n.jsx)(u.Button, {
@@ -164,7 +164,7 @@ function v(e) {
           color: u.Button.Colors.PRIMARY,
           onClick: B,
           disabled: D,
-          children: D ? (0, n.jsx)(h.default, {
+          children: D ? (0, n.jsx)(g.default, {
             width: 24,
             height: 24
           }) : (0, n.jsx)(n.Fragment, {
@@ -173,10 +173,10 @@ function v(e) {
         })
       })]
     }),
-    J = null;
-  return v && !D && null != r && (J = (0, n.jsxs)(S.default, {
+    X = null;
+  return L && !D && null != r && (X = (0, n.jsxs)(_.default, {
     className: R.body,
-    direction: S.default.Direction.VERTICAL,
+    direction: _.default.Direction.VERTICAL,
     children: [(0, n.jsx)(u.FormDivider, {
       className: R.topDivider
     }), function(e) {
@@ -188,8 +188,8 @@ function v(e) {
         roleLink: i,
         onSync: r
       } = e;
-      return (0, n.jsxs)(S.default, {
-        children: [(0, n.jsxs)(S.default.Child, {
+      return (0, n.jsxs)(_.default, {
+        children: [(0, n.jsxs)(_.default.Child, {
           basis: "50%",
           children: [(0, n.jsx)(u.FormTitle, {
             className: M.marginBottom8,
@@ -200,15 +200,15 @@ function v(e) {
             variant: "text-sm/normal",
             children: i
           })]
-        }), (0, n.jsxs)(S.default.Child, {
+        }), (0, n.jsxs)(_.default.Child, {
           basis: "50%",
           children: [(0, n.jsx)(u.FormTitle, {
             className: M.marginBottom8,
             children: l
-          }), (0, n.jsxs)(S.default, {
-            justify: S.default.Justify.BETWEEN,
-            children: [(0, n.jsxs)(S.default, {
-              direction: S.default.Direction.VERTICAL,
+          }), (0, n.jsxs)(_.default, {
+            justify: _.default.Justify.BETWEEN,
+            children: [(0, n.jsxs)(_.default, {
+              direction: _.default.Direction.VERTICAL,
               children: [(0, n.jsx)(u.Text, {
                 color: "header-primary",
                 variant: "text-sm/normal",
@@ -224,7 +224,7 @@ function v(e) {
               color: u.Button.Colors.PRIMARY,
               disabled: t.syncing || t.revoked,
               onClick: r,
-              children: t.syncing ? (0, n.jsx)(h.default, {
+              children: t.syncing ? (0, n.jsx)(g.default, {
                 width: 24,
                 height: 24
               }) : (0, n.jsx)(n.Fragment, {
@@ -237,10 +237,10 @@ function v(e) {
     }({
       integration: r,
       labelText: V,
-      subscribersText: Y,
+      subscribersText: K,
       descriptionText: z,
-      roleLink: K,
-      onSync: H
+      roleLink: Y,
+      onSync: U
     }), (0, n.jsx)(u.FormDivider, {
       className: R.midDivider
     }), function(e) {
@@ -250,8 +250,8 @@ function v(e) {
         onBehaviorChange: a,
         onGracePeriodChange: s
       } = e;
-      return (0, n.jsxs)(S.default, {
-        children: [(0, n.jsxs)(S.default.Child, {
+      return (0, n.jsxs)(_.default, {
+        children: [(0, n.jsxs)(_.default.Child, {
           basis: "50%",
           children: [(0, n.jsx)(u.FormTitle, {
             className: M.marginBottom8,
@@ -269,7 +269,7 @@ function v(e) {
             isDisabled: t.syncing,
             onChange: e => a(parseInt(e))
           })]
-        }), (0, n.jsxs)(S.default.Child, {
+        }), (0, n.jsxs)(_.default.Child, {
           basis: "50%",
           children: [(0, n.jsx)(u.FormTitle, {
             className: M.marginBottom8,
@@ -291,7 +291,7 @@ function v(e) {
       })
     }({
       integration: r,
-      labelText: w,
+      labelText: W,
       onBehaviorChange: function(e) {
         c.default.updateIntegration({
           expireBehavior: e
@@ -308,8 +308,8 @@ function v(e) {
         emojis: l,
         onToggle: a
       } = e;
-      return (0, n.jsxs)(S.default, {
-        direction: S.default.Direction.VERTICAL,
+      return (0, n.jsxs)(_.default, {
+        direction: _.default.Direction.VERTICAL,
         children: [(0, n.jsx)(u.Checkbox, {
           type: u.Checkbox.Types.INVERTED,
           className: i()(M.marginTop20, M.marginBottom8),
@@ -324,8 +324,8 @@ function v(e) {
           children: (0, n.jsx)(u.FormText, {
             children: x.default.Messages.ENABLE_TWITCH_EMOJI_SYNC
           })
-        }), (0, n.jsx)(S.default, {
-          wrap: S.default.Wrap.WRAP,
+        }), (0, n.jsx)(_.default, {
+          wrap: _.default.Wrap.WRAP,
           className: R.__invalid_twitchEmojis,
           children: l.map((e, t) => (0, n.jsx)(u.Tooltip, {
             text: e.name,
@@ -335,7 +335,7 @@ function v(e) {
               }),
               draggable: !1,
               className: i()(R.emoji, "emoji", "jumboable"),
-              src: _.default.getEmojiURL({
+              src: p.default.getEmojiURL({
                 id: e.id,
                 animated: e.animated,
                 size: 28
@@ -355,7 +355,7 @@ function v(e) {
       }
     }) : null, (0, n.jsx)(u.FormDivider, {
       className: R.bottomDivider
-    }), (0, n.jsx)(S.default, {
+    }), (0, n.jsx)(_.default, {
       children: (0, n.jsx)(u.Button, {
         className: R.disableButton,
         size: u.Button.Sizes.SMALL,
@@ -368,14 +368,14 @@ function v(e) {
   })), (0, n.jsx)(u.Card, {
     editable: !0,
     className: R.card,
-    children: (0, n.jsxs)(S.default, {
-      direction: S.default.Direction.VERTICAL,
+    children: (0, n.jsxs)(_.default, {
+      direction: _.default.Direction.VERTICAL,
       children: [s.enabled ? (0, n.jsx)(u.Clickable, {
         className: R.expandableHeader,
-        "aria-expanded": v && !D,
-        onClick: L,
+        "aria-expanded": L && !D,
+        onClick: v,
         children: q
-      }) : q, J]
+      }) : q, X]
     })
   })
 }

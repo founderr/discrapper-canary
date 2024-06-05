@@ -22,11 +22,11 @@ var a = n("735250"),
   I = n("557457"),
   A = n("475674"),
   v = n("981631"),
-  x = n("474936"),
-  N = n("689938"),
+  N = n("474936"),
+  x = n("689938"),
   M = n("909143");
-let y = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
-  R = {
+let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
+  y = {
     opacity: 0,
     transform: "translate3d(100%, 0, 0)"
   },
@@ -41,10 +41,10 @@ let y = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     opacity: 1
   },
   P = {
-    borderRadius: "".concat(y, "px ").concat(y, "px ").concat(y, "px ").concat(y, "px")
+    borderRadius: "".concat(R, "px ").concat(R, "px ").concat(R, "px ").concat(R, "px")
   },
   D = {
-    borderRadius: "0px ".concat(y, "px ").concat(y, "px 0px")
+    borderRadius: "0px ".concat(R, "px ").concat(R, "px 0px")
   },
   b = {
     mass: 1,
@@ -58,8 +58,8 @@ let y = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         isUpsellEnabled: o,
         shape: c,
         size: p,
-        didTrackUpsellViewed: y,
-        setDidTrackUpsellViewed: R,
+        didTrackUpsellViewed: R,
+        setDidTrackUpsellViewed: y,
         className: L,
         premiumIndicator: O
       } = e,
@@ -83,7 +83,7 @@ let y = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         location: U
       } = (0, h.useAnalyticsContext)(),
       F = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      w = o && !T.default.isPremium(F, x.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
+      w = o && !T.default.isPremium(F, N.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
       k = l.useCallback(() => {
         w && b && (0, f.openModalLazy)(async () => {
           let {
@@ -96,15 +96,15 @@ let y = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         })
       }, [w, b, U]);
     if (l.useEffect(() => {
-        !y && b && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-          type: x.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
+        !R && b && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+          type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: P
-        }), R(!0))
-      }, [t, s, b, y, R, P]), null == j) return null;
+        }), y(!0))
+      }, [t, s, b, R, y, P]), null == j) return null;
     let H = (0, a.jsx)(f.Tooltip, {
-      text: D ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+      text: D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
       color: f.Tooltip.Colors.GREY,
       children: e => (0, a.jsxs)(f.Clickable, {
@@ -150,10 +150,10 @@ t.default = e => {
   }, [t]);
   let _ = (0, r.useTransition)(C, {
       enter: {
-        from: E.enabled ? O : R,
+        from: E.enabled ? O : y,
         to: E.enabled ? j : L
       },
-      leave: E.enabled ? O : R,
+      leave: E.enabled ? O : y,
       config: b
     }),
     T = (0, r.useSpring)({

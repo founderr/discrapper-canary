@@ -74,7 +74,7 @@ function E(e) {
     v = l.useCallback(() => {
       g(), T(f.CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
     }, [g, T]),
-    x = l.useCallback(() => {
+    N = l.useCallback(() => {
       (0, r.openModalLazy)(async () => {
         let {
           default: e
@@ -113,7 +113,7 @@ function E(e) {
     }, ...S ? [] : [{
       text: p.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
       color: r.Button.Colors.PRIMARY,
-      onclick: x
+      onclick: N
     }]]
   })
 }

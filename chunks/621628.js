@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return O
   }
 }), s("47120"), s("518263"), s("970173"), s("520712"), s("268111"), s("941497"), s("32026"), s("480839"), s("744285"), s("492257"), s("873817"), s("733860");
 var a = s("735250"),
@@ -18,13 +18,13 @@ var a = s("735250"),
   T = s("6048"),
   _ = s("154921"),
   I = s("915486"),
-  f = s("883904"),
-  m = s("68985"),
-  N = s("211644"),
-  g = s("312244"),
-  h = s("611273");
+  N = s("883904"),
+  f = s("68985"),
+  g = s("211644"),
+  m = s("312244"),
+  C = s("611273");
 
-function C(e) {
+function A(e) {
   let {
     contents: t,
     content: s,
@@ -38,21 +38,21 @@ function C(e) {
       },
       children: (0, a.jsx)(u.FormText, {
         size: _.default.Sizes.SIZE_16,
-        className: h.marginTop4,
+        className: C.marginTop4,
         children: "".concat(s.toLowerCase(), " (").concat(o.DismissibleContent[s], ")")
       })
     })
   })
 }
 
-function O(e) {
+function h(e) {
   let {
     items: t,
     dismissedContents: s,
     handleChange: n
   } = e;
   return (0, a.jsx)(a.Fragment, {
-    children: t.filter(e => isNaN(Number(e))).map(e => (0, a.jsx)(C, {
+    children: t.filter(e => isNaN(Number(e))).map(e => (0, a.jsx)(A, {
       contents: s,
       content: e,
       onChange: n
@@ -60,22 +60,22 @@ function O(e) {
   })
 }
 
-function A() {
+function O() {
   var e;
-  let t = (0, N.default)(e => e.recentlyShown),
+  let t = (0, g.default)(e => e.recentlyShown),
     {
       dailyCapReached: s,
       dailyCapOverridden: l
-    } = (0, r.useStateFromStoresObject)([m.default], () => ({
-      dailyCapReached: m.default.hasUserHitDCCap(),
-      dailyCapOverridden: m.default.dailyCapOverridden
+    } = (0, r.useStateFromStoresObject)([f.default], () => ({
+      dailyCapReached: f.default.hasUserHitDCCap(),
+      dailyCapOverridden: f.default.dailyCapOverridden
     })),
     [_, I] = n.useState(""),
-    C = null !== (e = (0, r.useStateFromStores)([S.default], () => {
+    A = null !== (e = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     })) && void 0 !== e ? e : new Uint8Array,
-    [A, p] = function(e, t) {
+    [O, p] = function(e, t) {
       let [s, a] = n.useState(() => {
         let s = d.Storage.get(e);
         return null != s ? s : t
@@ -93,28 +93,28 @@ function A() {
       })
     },
     x = t.map(e => o.DismissibleContent[e]),
-    M = A.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !x.includes(e)),
-    D = Object.keys(o.DismissibleContent).filter(e => !x.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    M = O.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !x.includes(e)),
+    D = Object.keys(o.DismissibleContent).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
       tag: u.FormTitleTags.H1,
-      className: h.marginBottom60,
+      className: C.marginBottom60,
       children: [(0, a.jsx)(u.FormItem, {
         children: (0, a.jsxs)(u.FormText, {
-          className: h.marginBottom4,
+          className: C.marginBottom4,
           children: ["Daily Cap Reached: ", s ? "Yes" : "No"]
         })
       }), (0, a.jsx)(u.FormSwitch, {
         value: l,
-        onChange: f.overrideDismissibleContentFramework,
+        onChange: N.overrideDismissibleContentFramework,
         children: "Override Dismissible Content Daily Cap"
       }), (0, a.jsxs)(u.FormItem, {
         children: [(0, a.jsx)(u.Button, {
-          onClick: () => (0, f.resetDismissibleContentFrameworkStore)(),
+          onClick: () => (0, N.resetDismissibleContentFrameworkStore)(),
           children: "Reset DismissibleContentFrameworkStore"
         }), (0, a.jsx)(u.FormText, {
-          className: h.marginTop4,
+          className: C.marginTop4,
           children: "This will reset the daily cap and content seen during session"
         })]
       })]
@@ -122,13 +122,13 @@ function A() {
       title: "Dismissible Contents",
       tag: u.FormTitleTags.H1,
       children: [(0, a.jsx)(T.default, {
-        className: h.marginBottom20,
+        className: C.marginBottom20,
         size: T.default.Sizes.LARGE,
         query: _,
         onChange: I,
         onClear: () => I("")
       }), (0, a.jsxs)(u.FormItem, {
-        className: g.buttonsContainer,
+        className: m.buttonsContainer,
         children: [(0, a.jsx)(u.Button, {
           onClick: c.clearDismissedContents,
           children: "Clear All Dismissed Contents"
@@ -137,36 +137,36 @@ function A() {
           children: "Check All Dismissed Contents"
         })]
       }), t.length > 0 ? (0, a.jsxs)("div", {
-        className: h.marginBottom20,
+        className: C.marginBottom20,
         children: [(0, a.jsx)("div", {
-          className: h.marginBottom20,
+          className: C.marginBottom20,
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recently Shown"
           })
-        }), (0, a.jsx)(O, {
+        }), (0, a.jsx)(h, {
           items: x,
-          dismissedContents: C,
+          dismissedContents: A,
           handleChange: R
         })]
       }) : null, M.length > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: h.marginBottom20,
+          className: C.marginBottom20,
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recent Overrides"
           })
-        }), (0, a.jsx)(O, {
+        }), (0, a.jsx)(h, {
           items: M,
-          dismissedContents: C,
+          dismissedContents: A,
           handleChange: R
         })]
       }) : null, (0, a.jsx)(E.default, {
-        className: i()(h.marginBottom20, h.marginTop20),
+        className: i()(C.marginBottom20, C.marginTop20),
         children: (0, a.jsx)(u.FormTitle, {
           children: "Available Dismissible Contents"
         })
-      }), (0, a.jsx)(O, {
+      }), (0, a.jsx)(h, {
         items: D,
-        dismissedContents: C,
+        dismissedContents: A,
         handleChange: R
       })]
     })]

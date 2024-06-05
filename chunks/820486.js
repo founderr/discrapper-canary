@@ -23,17 +23,17 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = {},
-  _ = C,
+let _ = {},
+  C = _,
   m = !1,
   S = {},
   p = {},
   I = {},
-  g = {
+  T = {
     id: null,
     justChanged: !1
   },
-  T = {
+  g = {
     id: null,
     justChanged: !1
   },
@@ -58,10 +58,10 @@ function v(e, t, n) {
 }
 class R extends(a = i.default.DeviceSettingsStore) {
   initialize(e) {
-    this.waitFor(c.default, u.default), _ = null != e ? e : C
+    this.waitFor(c.default, u.default), C = null != e ? e : _
   }
   getUserAgnosticState() {
-    return _
+    return C
   }
   get initialized() {
     return m
@@ -73,13 +73,13 @@ class R extends(a = i.default.DeviceSettingsStore) {
     return S
   }
   get lastInputSystemDevice() {
-    return g
+    return T
   }
   get outputDevices() {
     return p
   }
   get lastOutputSystemDevice() {
-    return T
+    return g
   }
 }
 h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDeviceStore"), t.default = new R(r.default, {
@@ -88,19 +88,19 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       inputDevices: t,
       outputDevices: n
     } = e, a = {};
-    g.justChanged = !1, t.forEach(e => {
+    T.justChanged = !1, t.forEach(e => {
       if (a[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-        n !== g.id && (g.justChanged = !0), g.id = n
+        n !== T.id && (T.justChanged = !0), T.id = n
       }
     });
     let s = {};
-    if (T.justChanged = !1, n.forEach(e => {
+    if (g.justChanged = !1, n.forEach(e => {
         if (s[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-          n !== T.id && (T.justChanged = !0), T.id = n
+          n !== g.id && (g.justChanged = !0), g.id = n
         }
       }), !m) {
       S = a, p = s, m = !0;
@@ -142,7 +142,7 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
     delete I[t]
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-    I = {}, _ = {
+    I = {}, C = {
       neverShowModal: !0
     }
   }

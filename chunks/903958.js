@@ -17,7 +17,7 @@ function C(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class E extends(n = r.PureComponent) {
+class p extends(n = r.PureComponent) {
   async componentDidMount() {
     let {
       importData: e,
@@ -101,7 +101,7 @@ class E extends(n = r.PureComponent) {
     })
   }
 }
-C(E, "defaultProps", {
+C(p, "defaultProps", {
   pauseWhileUnfocused: !0,
   pause: !1
 });
@@ -111,7 +111,7 @@ t.default = e => {
     ignoreReducedMotion: s = !1,
     ...n
   } = e, r = (0, u.useStateFromStores)([c.default], () => c.default.isFocused()), i = (0, u.useStateFromStores)([o.default], () => o.default.useReducedMotion);
-  return (0, a.jsx)(E, {
+  return (0, a.jsx)(p, {
     ...n,
     isWindowFocused: r,
     useReducedMotion: i && !s,

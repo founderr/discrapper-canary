@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return G
+    return j
   }
 }), s("47120");
 var a = s("735250"),
@@ -80,7 +80,7 @@ function v(e) {
   })
 }
 
-function G() {
+function j() {
   let e, t;
   let {
     guildId: s,
@@ -89,8 +89,8 @@ function G() {
     isLoading: d,
     isLoadingNextPage: S,
     showLoadMore: x,
-    hasError: G,
-    hasOlderLogs: j,
+    hasError: j,
+    hasOlderLogs: G,
     rawLogs: U,
     theme: P,
     hide: b
@@ -111,11 +111,11 @@ function G() {
       theme: N.default.theme,
       hide: h.default.enabled
     }
-  }), [y, B] = l.useState({
+  }), [B, y] = l.useState({
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(y), V = (0, T.default)(F), Y = () => {
+  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(B), V = (0, T.default)(F), Y = () => {
     var e;
     return (null === (e = k.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
   };
@@ -139,15 +139,15 @@ function G() {
     K = (0, I.default)(null, () => {
       let {
         expandedId: s
-      } = y;
-      null == s || H ? null != s && (H = !1) : (e = null, t = null, B(e => ({
+      } = B;
+      null == s || H ? null != s && (H = !1) : (e = null, t = null, y(e => ({
         ...e,
         expandedId: null,
         lastExpandedId: null
       })), z = W())
     });
   l.useEffect(() => {
-    y.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
+    B.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
   }, []);
   let Z = () => {
       let e = k.current;
@@ -164,12 +164,12 @@ function G() {
     X = s => {
       let {
         expandedId: a
-      } = y;
-      a !== s.id ? (H = !0, B(e => ({
+      } = B;
+      a !== s.id ? (H = !0, y(e => ({
         ...e,
         expandedId: null == s ? void 0 : s.id,
         lastExpandedId: a
-      })), z = W()) : (e = null, t = null, null != a && (z = W()), B(e => ({
+      })), z = W()) : (e = null, t = null, null != a && (z = W()), y(e => ({
         ...e,
         expandedId: null,
         lastExpandedId: null
@@ -219,8 +219,8 @@ function G() {
             if (b) return (0, a.jsx)(_.default, {});
             if (d || r) return ee();
             if ((null == F ? void 0 : F.length) === 0) {
-              let e = G ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
-                t = G ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+              let e = j ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
+                t = j ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
               return (0, a.jsxs)(C.default, {
                 theme: P,
                 className: p.__invalid_empty,
@@ -241,7 +241,7 @@ function G() {
             let {
               expandedId: e,
               lastExpandedId: t
-            } = y;
+            } = B;
             return (0, a.jsx)(v, {
               logs: F,
               guildId: s,
@@ -254,7 +254,7 @@ function G() {
               scroller: k.current
             })
           })(), (() => {
-            if (x && j && !b) return (0, a.jsx)(E.Button, {
+            if (x && G && !b) return (0, a.jsx)(E.Button, {
               color: E.Button.Colors.PRIMARY,
               className: p.__invalid_loadMore,
               onClick: J,

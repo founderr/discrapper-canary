@@ -36,13 +36,13 @@ var a = s("735250"),
   M = s("859802"),
   D = s("744178"),
   v = s("35125"),
-  G = s("536442"),
-  j = s("142497"),
+  j = s("536442"),
+  G = s("142497"),
   U = s("884858"),
   P = s("516129"),
   b = s("813197"),
-  y = s("208567"),
-  B = s("592125"),
+  B = s("208567"),
+  y = s("592125"),
   F = s("324067"),
   H = s("650774"),
   k = s("496675"),
@@ -108,7 +108,7 @@ function eg(e) {
     value: e.id,
     label: (0, C.computeChannelName)(e, V.default, w.default),
     channel: e,
-    category: B.default.getChannel(e.parent_id)
+    category: y.default.getChannel(e.parent_id)
   }
 }
 let eh = () => {
@@ -226,7 +226,7 @@ class eC extends l.PureComponent {
         justify: Y.default.Justify.BETWEEN,
         children: [(0, a.jsxs)(Y.default.Child, {
           wrap: !0,
-          children: [(0, a.jsx)(y.default, {
+          children: [(0, a.jsx)(B.default, {
             showIcon: !0,
             name: e.name,
             image: e.icon,
@@ -955,7 +955,7 @@ function eR() {
     analyticsLocations: d
   } = (0, g.default)(m.default.OVERVIEW);
   l.useEffect(() => {
-    (0, j.hideHotspot)(G.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
+    (0, G.hideHotspot)(j.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
   let u = (0, c.useStateFromStores)([F.default], () => F.default.getCategories(null == t ? void 0 : t.id)),
     E = l.useMemo(() => (0, h.default)(u._categories, u), [u]),

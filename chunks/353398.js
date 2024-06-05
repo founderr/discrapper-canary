@@ -98,14 +98,14 @@ function v() {
         className: O.marginBottom20,
         type: E.FormTextTypes.DESCRIPTION,
         children: x.default.Messages.GUILD_TEMPLATE_SETTINGS_DESCRIPTION.format()
-      }), (0, l.jsx)(j, {}), (0, l.jsx)(E.FormDivider, {
+      }), (0, l.jsx)(G, {}), (0, l.jsx)(E.FormDivider, {
         className: L.divider
-      }), (0, l.jsx)(G, {})]
+      }), (0, l.jsx)(j, {})]
     })
   })
 }
 
-function G() {
+function j() {
   let {
     guild: e
   } = C.default.getProps();
@@ -162,7 +162,7 @@ function G() {
   })
 }
 
-function j() {
+function G() {
   return (0, l.jsxs)("div", {
     className: L.descriptionBox,
     children: [(0, l.jsxs)("div", {
@@ -277,7 +277,7 @@ function b(e) {
     guild: t,
     guildTemplate: s
   } = e;
-  return null == s ? (0, l.jsx)(y, {
+  return null == s ? (0, l.jsx)(B, {
     guild: t
   }) : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(E.FormItem, {
@@ -294,7 +294,7 @@ function b(e) {
       children: x.default.Messages.GUILD_TEMPLATES_UNSYNCED_WARNING
     }), (0, l.jsxs)("div", {
       className: r()(O.marginTop20, L.buttonContainer),
-      children: [s.isDirty && (0, l.jsx)(B, {
+      children: [s.isDirty && (0, l.jsx)(y, {
         guild: t,
         guildTemplate: s
       }), (0, l.jsxs)("div", {
@@ -315,7 +315,7 @@ function b(e) {
   })
 }
 
-function y(e) {
+function B(e) {
   var t;
   let {
     guild: s
@@ -337,7 +337,7 @@ function y(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     guild: t,
     guildTemplate: s

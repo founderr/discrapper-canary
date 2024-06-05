@@ -1,110 +1,110 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   StageDiscoveryRecommendationSource: function() {
-    return s
+    return l
   },
   default: function() {
-    return N
+    return T
   }
 });
-var l, s, n = a("735250");
-a("470079");
-var i = a("120356"),
-  r = a.n(i),
-  d = a("481060"),
-  o = a("857395"),
-  u = a("131154"),
-  c = a("940627"),
-  E = a("346656"),
-  f = a("170039"),
-  h = a("38981"),
-  _ = a("317112");
+var a, l, s = n("735250");
+n("470079");
+var i = n("120356"),
+  r = n.n(i),
+  d = n("481060"),
+  u = n("857395"),
+  o = n("131154"),
+  c = n("940627"),
+  E = n("346656"),
+  _ = n("170039"),
+  f = n("38981"),
+  S = n("317112");
 
-function N(e) {
+function T(e) {
   let {
     guild: t,
-    stageInstance: a,
-    showGuildPopout: l,
-    setShowGuildPopout: s,
+    stageInstance: n,
+    showGuildPopout: a,
+    setShowGuildPopout: l,
     handleGuildNameClick: i,
-    source: N,
-    speakers: S,
-    speakerCount: x,
-    audienceCount: T,
+    source: T,
+    speakers: h,
+    speakerCount: N,
+    audienceCount: g,
     channelName: v
-  } = e, m = t.id;
-  return (0, n.jsx)("div", {
-    className: _.contentContainer,
-    children: (0, n.jsxs)("div", {
-      className: _.headerContainer,
-      children: [(0, n.jsxs)("div", {
-        className: _.guildInfoContainer,
-        children: [(0, n.jsx)(o.default, {
-          guildId: m,
-          shouldShow: l,
-          onRequestClose: () => s(!1),
-          children: () => (0, n.jsxs)(d.Clickable, {
-            className: _.flexContainerRow,
+  } = e, I = t.id;
+  return (0, s.jsx)("div", {
+    className: S.contentContainer,
+    children: (0, s.jsxs)("div", {
+      className: S.headerContainer,
+      children: [(0, s.jsxs)("div", {
+        className: S.guildInfoContainer,
+        children: [(0, s.jsx)(u.default, {
+          guildId: I,
+          shouldShow: a,
+          onRequestClose: () => l(!1),
+          children: () => (0, s.jsxs)(d.Clickable, {
+            className: S.flexContainerRow,
             onClick: i,
-            children: [(0, n.jsx)(E.default, {
+            children: [(0, s.jsx)(E.default, {
               guild: t,
               size: E.default.Sizes.MINI,
-              className: _.guildIcon
-            }), (0, n.jsxs)("div", {
-              className: _.flexContainerRow,
-              children: [(0, n.jsx)(d.Text, {
+              className: S.guildIcon
+            }), (0, s.jsxs)("div", {
+              className: S.flexContainerRow,
+              children: [(0, s.jsx)(d.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: r()(_.guildName, {
-                  [_.disabled]: null == i
+                className: r()(S.guildName, {
+                  [S.disabled]: null == i
                 }),
                 children: t.name
-              }), (0, n.jsx)(c.default, {
+              }), (0, s.jsx)(c.default, {
                 guild: t
               })]
             })]
           })
-        }), (0, n.jsxs)("div", {
-          className: _.rightJustifiedContent,
-          children: [6 === N && (0, n.jsx)("div", {
-            className: _.featuredTag,
-            children: (0, n.jsx)(d.Text, {
+        }), (0, s.jsxs)("div", {
+          className: S.rightJustifiedContent,
+          children: [6 === T && (0, s.jsx)("div", {
+            className: S.featuredTag,
+            children: (0, s.jsx)(d.Text, {
               variant: "text-sm/normal",
-              className: _.featuredTagText,
+              className: S.featuredTagText,
               children: "Featured"
             })
-          }), (0, n.jsx)(h.default, {
-            count: T,
-            className: _.__invalid_audienceCount
+          }), (0, s.jsx)(f.default, {
+            count: g,
+            className: S.__invalid_audienceCount
           })]
         })]
-      }), (0, n.jsx)(d.Text, {
+      }), (0, s.jsx)(d.Text, {
         color: "header-primary",
         variant: "text-lg/semibold",
-        className: _.topicText,
-        children: a.topic
-      }), (0, n.jsx)(d.Text, {
+        className: S.topicText,
+        children: n.topic
+      }), (0, s.jsx)(d.Text, {
         color: "header-secondary",
-        className: _.description,
+        className: S.description,
         variant: "text-sm/normal",
-        children: a.description
-      }), (0, n.jsx)(u.default, {
+        children: n.description
+      }), (0, s.jsx)(o.default, {
         guild: t,
-        speakers: S,
-        speakerCount: x,
-        className: _.speakers
-      }), null != v && (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)("hr", {
-          className: _.divider
-        }), (0, n.jsxs)("div", {
-          className: _.footer,
-          children: [(0, n.jsx)(f.default, {
+        speakers: h,
+        speakerCount: N,
+        className: S.speakers
+      }), null != v && (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)("hr", {
+          className: S.divider
+        }), (0, s.jsxs)("div", {
+          className: S.footer,
+          children: [(0, s.jsx)(_.default, {
             width: 20,
             height: 20,
-            className: _.icon
-          }), (0, n.jsx)(d.Text, {
+            className: S.icon
+          }), (0, s.jsx)(d.Text, {
             color: "header-secondary",
-            className: _.__invalid_label,
+            className: S.__invalid_label,
             variant: "text-sm/normal",
             children: v
           })]
@@ -112,4 +112,4 @@ function N(e) {
       })]
     })
   })
-}(l = s || (s = {}))[l.UNSPECIFIED = 0] = "UNSPECIFIED", l[l.TRENDING = 1] = "TRENDING", l[l.PERSONALIZED = 2] = "PERSONALIZED", l[l.USER_GUILDS = 3] = "USER_GUILDS", l[l.FRIENDS_GUILDS = 4] = "FRIENDS_GUILDS", l[l.INTRO_CARD = 5] = "INTRO_CARD", l[l.FEATURED = 6] = "FEATURED"
+}(a = l || (l = {}))[a.UNSPECIFIED = 0] = "UNSPECIFIED", a[a.TRENDING = 1] = "TRENDING", a[a.PERSONALIZED = 2] = "PERSONALIZED", a[a.USER_GUILDS = 3] = "USER_GUILDS", a[a.FRIENDS_GUILDS = 4] = "FRIENDS_GUILDS", a[a.INTRO_CARD = 5] = "INTRO_CARD", a[a.FEATURED = 6] = "FEATURED"

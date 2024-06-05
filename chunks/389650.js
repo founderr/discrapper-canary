@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return w
+    return k
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -18,14 +18,14 @@ var a = s("735250"),
   T = s("825209"),
   _ = s("721383"),
   I = s("612226"),
-  f = s("714338"),
-  m = s("924557"),
-  N = s("74299"),
-  g = s("131951"),
-  h = s("556296"),
-  C = s("808506"),
-  O = s("186095"),
-  A = s("285952"),
+  N = s("714338"),
+  f = s("924557"),
+  g = s("74299"),
+  m = s("131951"),
+  C = s("556296"),
+  A = s("808506"),
+  h = s("186095"),
+  O = s("285952"),
   p = s("474333"),
   R = s("63063"),
   x = s("358085"),
@@ -33,13 +33,13 @@ var a = s("735250"),
   D = s("210887"),
   L = s("659947"),
   P = s("981631"),
-  v = s("420212"),
-  b = s("689938"),
+  b = s("420212"),
+  v = s("689938"),
   U = s("996196"),
   j = s("164149"),
-  F = s("611273");
+  G = s("611273");
 
-function G(e, t, s) {
+function F(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -54,29 +54,29 @@ function B(e) {
   } = e;
   return t([I.KeybindGroup.MESSAGE, I.KeybindGroup.NAVIGATION, I.KeybindGroup.DND, I.KeybindGroup.CHAT, I.KeybindGroup.VOICE_AND_VIDEO, I.KeybindGroup.MISCELLANEOUS])
 }
-let y = o()((0, I.getDefaultLayoutContent)()).filter(e => e.description !== b.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
+let y = o()((0, I.getDefaultLayoutContent)()).filter(e => e.description !== v.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
   V = d.default.connectStores([D.default], () => ({
     theme: D.default.theme
-  }))(O.default);
+  }))(h.default);
 class H extends n.PureComponent {
   renderMessage() {
     let {
       keybind: e
     } = this.props, t = M.toString(e.shortcut);
-    return f.default.hasBind(t) ? (0, a.jsx)(c.FormText, {
+    return N.default.hasBind(t) ? (0, a.jsx)(c.FormText, {
       className: U.keybindMessage,
       type: c.FormTextTypes.DESCRIPTION,
       style: {
         color: u.default.unsafe_rawColors.RED_400.css
       },
-      children: b.default.Messages.KEYBIND_CONFLICT
-    }) : v.NavigationShortcuts.has(t) ? (0, a.jsx)(c.FormText, {
+      children: v.default.Messages.KEYBIND_CONFLICT
+    }) : b.NavigationShortcuts.has(t) ? (0, a.jsx)(c.FormText, {
       className: U.keybindMessage,
       type: c.FormTextTypes.DESCRIPTION,
       style: {
         color: u.default.unsafe_rawColors.RED_400.css
       },
-      children: b.default.Messages.KEYBIND_NAVIGATION_CONFLICT.format({
+      children: v.default.Messages.KEYBIND_NAVIGATION_CONFLICT.format({
         keyboardNavArticle: R.default.getArticleURL(P.HelpdeskArticles.KEYBOARD_NAVIGATION)
       })
     }) : (0, a.jsx)(c.FormText, {
@@ -90,20 +90,20 @@ class H extends n.PureComponent {
       managed: e,
       enabled: t
     } = this.props.keybind;
-    return (0, a.jsxs)(A.default, {
-      direction: A.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       className: i()(U.keybindGroup, j.card),
       children: [!e && (0, a.jsx)(E.default, {
-        "aria-label": b.default.Messages.REMOVE_KEYBIND,
+        "aria-label": v.default.Messages.REMOVE_KEYBIND,
         className: U.removeKeybind,
         onClick: this.handleDeleteKeybind,
         look: E.default.Looks.FILLED
-      }), (0, a.jsxs)(A.default, {
-        className: F.marginBottom8,
-        children: [(0, a.jsx)(A.default.Child, {
+      }), (0, a.jsxs)(O.default, {
+        className: G.marginBottom8,
+        children: [(0, a.jsx)(O.default.Child, {
           basis: "45%",
           children: (0, a.jsx)(c.FormItem, {
-            title: b.default.Messages.USER_SETTINGS_KEYBINDS_ACTION,
+            title: v.default.Messages.USER_SETTINGS_KEYBINDS_ACTION,
             className: U.item,
             children: (0, a.jsx)(c.SingleSelect, {
               value: this.props.keybind.action,
@@ -112,23 +112,23 @@ class H extends n.PureComponent {
               isDisabled: e
             })
           })
-        }), (0, a.jsx)(A.default.Child, {
+        }), (0, a.jsx)(O.default.Child, {
           basis: "45%",
           children: (0, a.jsx)(c.FormItem, {
-            title: b.default.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
+            title: v.default.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
             className: U.item,
             children: (0, a.jsx)(T.default, {
               defaultValue: this.props.keybind.shortcut,
               onChange: this.handleShortcutChange
             })
           })
-        }), (0, a.jsx)(A.default.Child, {
+        }), (0, a.jsx)(O.default.Child, {
           grow: 0,
           shrink: 0,
           children: (0, a.jsx)(c.FormItem, {
             className: U.switch,
             children: (0, a.jsx)(c.Tooltip, {
-              text: b.default.Messages.USER_SETTINGS_KEYBIND_ENABLE_DISABLE,
+              text: v.default.Messages.USER_SETTINGS_KEYBIND_ENABLE_DISABLE,
               children: e => (0, a.jsx)("div", {
                 ...e,
                 children: (0, a.jsx)(c.Switch, {
@@ -139,7 +139,7 @@ class H extends n.PureComponent {
             })
           })
         })]
-      }), (0, a.jsx)(A.default.Child, {
+      }), (0, a.jsx)(O.default.Child, {
         children: this.renderMessage()
       }), this.renderExtraSettings()]
     })
@@ -153,19 +153,19 @@ class H extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), G(this, "handleActionChanged", e => {
+    super(...e), F(this, "handleActionChanged", e => {
       S.default.setKeybind({
         ...this.props.keybind,
         action: e
       })
-    }), G(this, "handleShortcutChange", e => {
+    }), F(this, "handleShortcutChange", e => {
       S.default.setKeybind({
         ...this.props.keybind,
         shortcut: e
       })
-    }), G(this, "handleDeleteKeybind", () => {
+    }), F(this, "handleDeleteKeybind", () => {
       S.default.deleteKeybind(this.props.keybind.id)
-    }), G(this, "handleEnableDisable", () => {
+    }), F(this, "handleEnableDisable", () => {
       let {
         keybind: e
       } = this.props;
@@ -176,7 +176,7 @@ class H extends n.PureComponent {
     })
   }
 }
-class k extends n.PureComponent {
+class Y extends n.PureComponent {
   componentDidMount() {
     S.default.enableAll(!1)
   }
@@ -191,62 +191,62 @@ class k extends n.PureComponent {
       enableClips: a
     } = this.props, n = [{
       value: P.GlobalKeybindActions.UNASSIGNED,
-      label: b.default.Messages.KEYBIND_UNASSIGNED
+      label: v.default.Messages.KEYBIND_UNASSIGNED
     }, {
       value: P.GlobalKeybindActions.PUSH_TO_TALK,
-      label: b.default.Messages.KEYBIND_PUSH_TO_TALK
+      label: v.default.Messages.KEYBIND_PUSH_TO_TALK
     }, {
       value: P.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY,
-      label: b.default.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY
+      label: v.default.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY
     }, {
       value: P.GlobalKeybindActions.PUSH_TO_MUTE,
-      label: b.default.Messages.KEYBIND_PUSH_TO_MUTE
+      label: v.default.Messages.KEYBIND_PUSH_TO_MUTE
     }, {
       value: P.GlobalKeybindActions.TOGGLE_MUTE,
-      label: b.default.Messages.KEYBIND_TOGGLE_MUTE
+      label: v.default.Messages.KEYBIND_TOGGLE_MUTE
     }, {
       value: P.GlobalKeybindActions.TOGGLE_DEAFEN,
-      label: b.default.Messages.KEYBIND_TOGGLE_DEAFEN
+      label: v.default.Messages.KEYBIND_TOGGLE_DEAFEN
     }, {
       value: P.GlobalKeybindActions.TOGGLE_VOICE_MODE,
-      label: b.default.Messages.KEYBIND_TOGGLE_VOICE_MODE
+      label: v.default.Messages.KEYBIND_TOGGLE_VOICE_MODE
     }, {
       value: P.GlobalKeybindActions.TOGGLE_STREAMER_MODE,
-      label: b.default.Messages.KEYBIND_TOGGLE_STREAM_MODE
+      label: v.default.Messages.KEYBIND_TOGGLE_STREAM_MODE
     }];
     return e && (n.push({
       value: P.GlobalKeybindActions.TOGGLE_OVERLAY,
-      label: b.default.Messages.KEYBIND_TOGGLE_OVERLAY
+      label: v.default.Messages.KEYBIND_TOGGLE_OVERLAY
     }), n.push({
       value: P.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK,
-      label: b.default.Messages.KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK
+      label: v.default.Messages.KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK
     }), n.push({
       value: P.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
-      label: b.default.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
+      label: v.default.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
     })), t && (0, x.isWindows)() && n.push({
       value: P.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING,
-      label: b.default.Messages.KEYBIND_TOGGLE_GO_LIVE_STREAMING
+      label: v.default.Messages.KEYBIND_TOGGLE_GO_LIVE_STREAMING
     }), (0, x.isDesktop)() && (n.push({
       value: P.GlobalKeybindActions.NAVIGATE_BACK,
-      label: b.default.Messages.KEYBIND_NAVIGATE_BACK
+      label: v.default.Messages.KEYBIND_NAVIGATE_BACK
     }, {
       value: P.GlobalKeybindActions.NAVIGATE_FORWARD,
-      label: b.default.Messages.KEYBIND_NAVIGATE_FORWARD
+      label: v.default.Messages.KEYBIND_NAVIGATE_FORWARD
     }, {
       value: P.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL,
-      label: b.default.Messages.USER_SETTINGS_KEYBINDS_SWITCH_TO_VOICE_CHANNEL_LABEL
+      label: v.default.Messages.USER_SETTINGS_KEYBINDS_SWITCH_TO_VOICE_CHANNEL_LABEL
     }, {
       value: P.GlobalKeybindActions.DISCONNECT_FROM_VOICE_CHANNEL,
-      label: b.default.Messages.USER_SETTINGS_KEYBINDS_VOICE_CHANNEL_DISCONNECT_LABEL
+      label: v.default.Messages.USER_SETTINGS_KEYBINDS_VOICE_CHANNEL_DISCONNECT_LABEL
     }), s && n.push({
       value: P.GlobalKeybindActions.SOUNDBOARD,
-      label: b.default.Messages.KEYBIND_SOUNDBOARD
+      label: v.default.Messages.KEYBIND_SOUNDBOARD
     }, {
       value: P.GlobalKeybindActions.SOUNDBOARD_HOLD,
-      label: b.default.Messages.KEYBIND_SOUNDBOARD_HOLD
+      label: v.default.Messages.KEYBIND_SOUNDBOARD_HOLD
     }), a && n.push({
       value: P.GlobalKeybindActions.SAVE_CLIP,
-      label: b.default.Messages.CLIPS_SAVE
+      label: v.default.Messages.CLIPS_SAVE
     })), n
   }
   get keybindDescriptions() {
@@ -255,16 +255,16 @@ class k extends n.PureComponent {
       canGoLive: t,
       enableClips: s
     } = this.props, a = {
-      [P.GlobalKeybindActions.UNASSIGNED]: b.default.Messages.KEYBIND_DESCRIPTION_UNASSIGNED,
-      [P.GlobalKeybindActions.PUSH_TO_MUTE]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_MUTE,
-      [P.GlobalKeybindActions.PUSH_TO_TALK]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK,
-      [P.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: b.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK_PRIORITY,
-      [P.GlobalKeybindActions.TOGGLE_MUTE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_MUTE,
-      [P.GlobalKeybindActions.TOGGLE_DEAFEN]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_DEAFEN,
-      [P.GlobalKeybindActions.TOGGLE_VOICE_MODE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
-      [P.GlobalKeybindActions.TOGGLE_STREAMER_MODE]: b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
+      [P.GlobalKeybindActions.UNASSIGNED]: v.default.Messages.KEYBIND_DESCRIPTION_UNASSIGNED,
+      [P.GlobalKeybindActions.PUSH_TO_MUTE]: v.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_MUTE,
+      [P.GlobalKeybindActions.PUSH_TO_TALK]: v.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK,
+      [P.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: v.default.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK_PRIORITY,
+      [P.GlobalKeybindActions.TOGGLE_MUTE]: v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_MUTE,
+      [P.GlobalKeybindActions.TOGGLE_DEAFEN]: v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_DEAFEN,
+      [P.GlobalKeybindActions.TOGGLE_VOICE_MODE]: v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
+      [P.GlobalKeybindActions.TOGGLE_STREAMER_MODE]: v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
     };
-    return e && (a[P.GlobalKeybindActions.TOGGLE_OVERLAY] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY, a[P.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK), t && (0, x.isWindows)() && (a[P.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING] = b.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, x.isDesktop)() && (a[P.GlobalKeybindActions.NAVIGATE_BACK] = b.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK, a[P.GlobalKeybindActions.NAVIGATE_FORWARD] = b.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD, a[P.GlobalKeybindActions.SOUNDBOARD] = (0, x.isWindows)() ? b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD, a[P.GlobalKeybindActions.SOUNDBOARD_HOLD] = (0, x.isWindows)() ? b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : b.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD, s && (a[P.GlobalKeybindActions.SAVE_CLIP] = b.default.Messages.CLIPS_KEYBIND_DESCRIPTION)), a
+    return e && (a[P.GlobalKeybindActions.TOGGLE_OVERLAY] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY, a[P.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK), t && (0, x.isWindows)() && (a[P.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, x.isDesktop)() && (a[P.GlobalKeybindActions.NAVIGATE_BACK] = v.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK, a[P.GlobalKeybindActions.NAVIGATE_FORWARD] = v.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD, a[P.GlobalKeybindActions.SOUNDBOARD] = (0, x.isWindows)() ? v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD, a[P.GlobalKeybindActions.SOUNDBOARD_HOLD] = (0, x.isWindows)() ? v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD, s && (a[P.GlobalKeybindActions.SAVE_CLIP] = v.default.Messages.CLIPS_KEYBIND_DESCRIPTION)), a
   }
   renderKeybinds(e) {
     return e.map(e => (0, a.jsx)("div", {
@@ -278,8 +278,8 @@ class k extends n.PureComponent {
   }
   renderEmpty(e) {
     if (0 === e.length) return (0, a.jsx)(V, {
-      className: F.marginTop60,
-      children: (0, a.jsx)(O.EmptyStateImage, {
+      className: G.marginTop60,
+      children: (0, a.jsx)(h.EmptyStateImage, {
         darkSrc: s("572279"),
         lightSrc: s("871803"),
         width: 320,
@@ -293,24 +293,24 @@ class k extends n.PureComponent {
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.FormSection, {
         tag: c.FormTitleTags.H1,
-        title: b.default.Messages.KEYBINDS,
+        title: v.default.Messages.KEYBINDS,
         children: x.isPlatformEmbedded ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsxs)(A.default, {
-            justify: A.default.Justify.BETWEEN,
-            className: F.marginBottom20,
-            children: [(0, a.jsx)(A.default.Child, {
+          children: [(0, a.jsxs)(O.default, {
+            justify: O.default.Justify.BETWEEN,
+            className: G.marginBottom20,
+            children: [(0, a.jsx)(O.default.Child, {
               grow: 0,
               children: (0, a.jsx)(p.default, {
                 messageType: p.HelpMessageTypes.WARNING,
-                children: b.default.Messages.ADD_KEYBIND_WARNING
+                children: v.default.Messages.ADD_KEYBIND_WARNING
               })
-            }), (0, a.jsx)(A.default.Child, {
+            }), (0, a.jsx)(O.default.Child, {
               wrap: !0,
               grow: 0,
               children: (0, a.jsx)(c.Button, {
                 size: c.ButtonSizes.LARGE,
                 onClick: this.handleAddKeybind,
-                children: b.default.Messages.ADD_KEYBIND
+                children: v.default.Messages.ADD_KEYBIND
               })
             })]
           }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsxs)(c.FormSection, {
@@ -320,19 +320,19 @@ class k extends n.PureComponent {
           messageType: p.HelpMessageTypes.INFO,
           textVariant: "text-lg/medium",
           className: U.browserNotice,
-          children: b.default.Messages.KEYBIND_IN_BROSWER_NOTICE.format({
+          children: v.default.Messages.KEYBIND_IN_BROSWER_NOTICE.format({
             downloadLink: P.MarketingURLs.DOWNLOAD
           })
         })
       }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsxs)(c.FormSection, {
         tag: c.FormTitleTags.H1,
-        title: b.default.Messages.USER_SETTINGS_KEYBINDS_DEFAULT_KEYBINDS_TITLE,
-        className: F.marginTop60,
+        title: v.default.Messages.USER_SETTINGS_KEYBINDS_DEFAULT_KEYBINDS_TITLE,
+        className: G.marginTop60,
         children: [(0, a.jsxs)("div", {
           className: U.defaultKeybind,
           children: [(0, a.jsx)(c.Text, {
             variant: "text-md/normal",
-            children: b.default.Messages.USER_SETTINGS_KEYBINDS_SHOW_LIST_TITLE
+            children: v.default.Messages.USER_SETTINGS_KEYBINDS_SHOW_LIST_TITLE
           }), (0, a.jsx)("div", {
             className: U.defaultKeybindShortcutGroup,
             children: (0, a.jsx)(c.KeyCombo, {
@@ -381,18 +381,18 @@ class k extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), G(this, "handleAddKeybind", () => {
+    super(...e), F(this, "handleAddKeybind", () => {
       S.default.addKeybind()
     })
   }
 }
 
-function w() {
-  let e = (0, d.useStateFromStores)([h.default], () => h.default.getState()),
-    t = (0, d.useStateFromStores)([g.default], () => (0, N.default)(g.default)),
-    s = (0, d.useStateFromStores)([C.default], () => C.default.isSupported()),
-    n = (0, m.useEnableClips)();
-  return (0, a.jsx)(k, {
+function k() {
+  let e = (0, d.useStateFromStores)([C.default], () => C.default.getState()),
+    t = (0, d.useStateFromStores)([m.default], () => (0, g.default)(m.default)),
+    s = (0, d.useStateFromStores)([A.default], () => A.default.isSupported()),
+    n = (0, f.useEnableClips)();
+  return (0, a.jsx)(Y, {
     keybinds: e,
     canGoLive: t,
     overlaySupported: s,

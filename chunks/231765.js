@@ -14,15 +14,15 @@ var a, n, l, i, r = s("735250"),
   T = s("607070"),
   _ = s("301822"),
   I = s("206895"),
-  f = s("692437"),
-  m = s("783539"),
-  N = s("585483"),
-  g = s("557177"),
-  h = s("57562"),
-  C = s("955204"),
-  O = s("64078"),
-  A = s("351780"),
-  p = s("954794"),
+  N = s("692437"),
+  f = s("783539"),
+  g = s("585483"),
+  m = s("557177"),
+  C = s("57562"),
+  A = s("955204"),
+  h = s("64078"),
+  O = s("351780"),
+  p = s("533662"),
   R = s("112843"),
   x = s("524484"),
   M = s("981631"),
@@ -34,12 +34,12 @@ let P = {
     screenshakeEnabled: !1,
     confettiEnabled: !1
   },
-  v = (0, d.range)(0, 11),
-  b = (0, d.range)(0, 2.25, .25),
+  b = (0, d.range)(0, 11),
+  v = (0, d.range)(0, 2.25, .25),
   U = (0, d.range)(1, 11),
   j = (0, d.range)(1, 26);
 (l = a || (a = {}))[l.CONFETTI = 0] = "CONFETTI", l[l.SHAKE = 1] = "SHAKE", (i = n || (n = {}))[i.USER_SETTINGS = 0] = "USER_SETTINGS", i[i.ACHIEVEMENT_LIST = 1] = "ACHIEVEMENT_LIST";
-let F = () => [{
+let G = () => [{
     location: x.ConfettiLocation.CHAT_INPUT,
     title: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED,
     description: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
@@ -56,7 +56,7 @@ let F = () => [{
     title: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED,
     description: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED_DESCRIPTION
   }],
-  G = () => [{
+  F = () => [{
     location: x.ShakeLocation.CHAT_INPUT,
     title: D.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED,
     description: D.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
@@ -117,7 +117,7 @@ function V(e) {
     value: t,
     note: D.default.Messages.POGGERMODE_ENABLE_DESCRIPTION,
     onChange: e => {
-      !e && (0, h.unlockAchievement)(C.PoggermodeAchievementId.DISABLE_POGGERMODE), e && (!s || n) ? (0, S.openModal)(e => (0, r.jsx)(S.ConfirmModal, {
+      !e && (0, C.unlockAchievement)(A.PoggermodeAchievementId.DISABLE_POGGERMODE), e && (!s || n) ? (0, S.openModal)(e => (0, r.jsx)(S.ConfirmModal, {
         header: n ? D.default.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : D.default.Messages.POGGERMODE_WARNING_TITLE,
         confirmText: D.default.Messages.ENABLE,
         cancelText: D.default.Messages.CANCEL,
@@ -198,7 +198,7 @@ function H(e) {
       })]
     }), (0, r.jsx)(B, {
       disabled: o,
-      locations: F(),
+      locations: G(),
       settingsLocations: l,
       onChange: e => i({
         confettiEnabledLocations: e
@@ -207,7 +207,7 @@ function H(e) {
   })
 }
 
-function k(e) {
+function Y(e) {
   let {
     settings: {
       enabled: t,
@@ -244,10 +244,10 @@ function k(e) {
         children: D.default.Messages.POGGERMODE_COMBOS_REQUIRED_DESCRIPTION
       }), (0, r.jsx)(S.Slider, {
         disabled: i,
-        markers: v,
+        markers: b,
         stickToMarkers: !0,
-        minValue: v[0],
-        maxValue: v[v.length - 1],
+        minValue: b[0],
+        maxValue: b[b.length - 1],
         initialValue: n,
         onValueChange: e => l({
           combosRequiredCount: e
@@ -260,7 +260,7 @@ function k(e) {
   })
 }
 
-function w(e) {
+function k(e) {
   let {
     settings: {
       enabled: t,
@@ -270,7 +270,7 @@ function w(e) {
     },
     updateSettings: l
   } = e, i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), o = !t || !s || i, d = (e, t) => {
-    null != e.shakeIntensity && e.shakeIntensity > a && (0, h.unlockAchievement)(C.PoggermodeAchievementId.MORE), l(e, t)
+    null != e.shakeIntensity && e.shakeIntensity > a && (0, C.unlockAchievement)(A.PoggermodeAchievementId.MORE), l(e, t)
   };
   return (0, r.jsxs)(S.FormSection, {
     tag: S.FormTitleTags.H1,
@@ -292,20 +292,20 @@ function w(e) {
         children: D.default.Messages.POGGERMODE_SCREENSHAKE_DESCRIPTION
       }), (0, r.jsx)(S.Slider, {
         disabled: o,
-        markers: b,
+        markers: v,
         equidistant: !0,
         stickToMarkers: !0,
-        minValue: b[0],
-        maxValue: b[b.length - 1],
+        minValue: v[0],
+        maxValue: v[v.length - 1],
         initialValue: a,
         onValueChange: e => d({
           shakeIntensity: e
         }, 1),
-        onMarkerRender: e => e === b[b.length - 1] ? D.default.Messages.POGGERMODE_SCREENSHAKE_MAX : "".concat(100 * e, "%")
+        onMarkerRender: e => e === v[v.length - 1] ? D.default.Messages.POGGERMODE_SCREENSHAKE_MAX : "".concat(100 * e, "%")
       })]
     }), (0, r.jsx)(B, {
       disabled: o,
-      locations: G(),
+      locations: F(),
       settingsLocations: n,
       onChange: e => l({
         screenshakeEnabledLocations: e
@@ -314,7 +314,7 @@ function w(e) {
   })
 }
 
-function Y(e) {
+function w(e) {
   let {
     updateSettings: t
   } = e;
@@ -351,7 +351,7 @@ function W(e) {
       className: L.achievementContainer,
       children: [(0, r.jsx)("div", {
         className: L.achievementIconContainer,
-        children: (0, r.jsx)(m.default, {
+        children: (0, r.jsx)(f.default, {
           color: c.default.unsafe_rawColors.ORANGE_345.css
         })
       }), (0, r.jsxs)("div", {
@@ -365,7 +365,7 @@ function W(e) {
           color: "header-secondary",
           children: D.default.Messages.POGGERMODE_ACHIEVEMENT_DESCRIPTION
         })]
-      }), (0, r.jsx)(f.default, {
+      }), (0, r.jsx)(N.default, {
         width: 16,
         className: L.rightCaretIcon
       })]
@@ -385,7 +385,7 @@ function z(e) {
   let {
     onChangePage: t,
     setShowEnableAnimation: s
-  } = e, a = (0, u.useStateFromStoresObject)([A.default], () => A.default.getState()), [n, l] = o.useState({
+  } = e, a = (0, u.useStateFromStoresObject)([O.default], () => O.default.getState()), [n, l] = o.useState({
     x: 0,
     y: 0
   }), i = (0, R.default)();
@@ -396,14 +396,14 @@ function z(e) {
   let c = e => {
       if (e.enabled && !1 === a.enabled) {
         var t;
-        s(!0), (0, g.playSound)("poggermode_enabled"), N.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        s(!0), (0, m.playSound)("poggermode_enabled"), g.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
           duration: 2e3,
           intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : a.shakeIntensity
         })
       }
     },
     E = (e, t) => {
-      if (c(e), (0, O.updatePoggermodeSettings)(e), null == t) return;
+      if (c(e), (0, h.updatePoggermodeSettings)(e), null == t) return;
       let s = d(a.confettiEnabled, e.confettiEnabled, a.enabled, e.enabled);
       0 === t && s && i.fire(n.x, n.y, {
         settings: e
@@ -411,7 +411,7 @@ function z(e) {
       let l = d(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
       if (1 === t && l) {
         var r;
-        N.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        g.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
           duration: 1e3,
           intensity: null !== (r = e.shakeIntensity) && void 0 !== r ? r : a.shakeIntensity
         })
@@ -433,16 +433,16 @@ function z(e) {
       updateSettings: E
     }), (0, r.jsx)(W, {
       onChangePage: t
-    }), (0, r.jsx)(k, {
+    }), (0, r.jsx)(Y, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(w, {
+    }), (0, r.jsx)(k, {
       settings: a,
       updateSettings: E
     }), (0, r.jsx)(H, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(Y, {
+    }), (0, r.jsx)(w, {
       updateSettings: E
     })]
   })
@@ -475,7 +475,7 @@ function X() {
     }, 500);
     return () => clearTimeout(t)
   }, [e]), o.useEffect(() => {
-    Math.random() > .99 && (0, h.unlockAchievement)(C.PoggermodeAchievementId.VISITOR_100)
+    Math.random() > .99 && (0, C.unlockAchievement)(A.PoggermodeAchievementId.VISITOR_100)
   }, []), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(I.default, {
       className: L.slideAnimator,

@@ -3,13 +3,13 @@ l.r(a);
 var t = l("735250");
 l("470079");
 var i = l("920906"),
-  n = l("399606"),
-  r = l("607070");
+  r = l("399606"),
+  n = l("607070");
 a.default = e => {
   let {
     children: a,
     initTranslate3d: l
-  } = e, s = (0, n.useStateFromStores)([r.default], () => r.default.useReducedMotion), o = (0, i.useSpring)({
+  } = e, s = (0, r.useStateFromStores)([n.default], () => n.default.useReducedMotion), o = (0, i.useSpring)({
     immediate: s,
     from: {
       transform: l

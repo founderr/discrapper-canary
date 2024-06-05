@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   CLAN_BANNER_HEIGHT: function() {
-    return s
+    return i
   },
   CLAN_BANNER_WIDTH: function() {
-    return i
+    return s
   },
   useClanBannerStyleInjection: function() {
     return l
@@ -12,8 +12,8 @@ a.r(t), a.d(t, {
 });
 var n = a("470079"),
   r = a("153832");
-let i = 262,
-  s = 100;
+let s = 262,
+  i = 100;
 
 function l(e, t) {
   let a = n.useMemo(() => "clan-banner-container-".concat((0, r.v4)()), []);

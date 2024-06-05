@@ -66,8 +66,8 @@ function M(e) {
       }
     }),
     [{
-      dragSourcePosition: G
-    }, j] = (0, r.useDrop)({
+      dragSourcePosition: j
+    }, G] = (0, r.useDrop)({
       accept: A,
       canDrop: () => M,
       collect: e => {
@@ -95,8 +95,8 @@ function M(e) {
     color: U
   }), (0, a.jsxs)(u.TabBar.Item, {
     className: i()(p.row, {
-      [p.dragBefore]: null !== G && m < G,
-      [p.dragAfter]: null !== G && m > G
+      [p.dragBefore]: null !== j && m < j,
+      [p.dragAfter]: null !== j && m > j
     }),
     id: E.id,
     selectedItem: S,
@@ -117,7 +117,7 @@ function M(e) {
     "aria-label": E.name,
     clickableRef: e => {
       var t;
-      return v(j(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null))
+      return v(G(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null))
     },
     children: [n, null != x ? (0, a.jsx)(h.default, {
       className: p.lock,
@@ -143,11 +143,11 @@ function D(e) {
   } = (0, R.useScrolledToTop)(), {
     handleDragStart: D,
     handleDragReset: v,
-    handleDragComplete: G
-  } = (0, C.default)(o), j = l.useRef(null), U = l.useCallback(e => {
+    handleDragComplete: j
+  } = (0, C.default)(o), G = l.useRef(null), U = l.useCallback(e => {
     var t, s;
     let a = o.findIndex(t => t.id === e);
-    null === (s = j.current) || void 0 === s || null === (t = s.getScrollerNode()) || void 0 === t || t.scrollTo({
+    null === (s = G.current) || void 0 === s || null === (t = s.getScrollerNode()) || void 0 === t || t.scrollTo({
       top: Math.max((a - 2) * 34, 0)
     })
   }, [o]);
@@ -198,7 +198,7 @@ function D(e) {
         })]
       }), (0, a.jsx)(u.AdvancedScroller, {
         className: p.list,
-        ref: j,
+        ref: G,
         onScroll: A,
         children: (0, a.jsx)(u.TabBar, {
           selectedItem: s,
@@ -213,7 +213,7 @@ function D(e) {
             currentPosition: l,
             onDragStart: D,
             onDragReset: v,
-            onDragComplete: G,
+            onDragComplete: j,
             roleStyle: I
           }, e.id))
         })

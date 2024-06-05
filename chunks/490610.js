@@ -12,44 +12,44 @@ var a = n("735250"),
   f = n("777734"),
   E = n("976757"),
   h = n("981631"),
-  C = n("886722");
+  _ = n("886722");
 t.default = s.memo(function(e) {
   let {
     title: t,
     subtitle: n
   } = e, {
-    loaded: _,
+    loaded: C,
     clans: m,
     searchResult: S,
     searchCriteria: p
-  } = (0, d.useClanDiscoveryList)(20), I = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), g = s.useMemo(() => new Set(p.games), [p.games]), T = s.useCallback(e => {
+  } = (0, d.useClanDiscoveryList)(20), I = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), T = s.useMemo(() => new Set(p.games), [p.games]), g = s.useCallback(e => {
     var t;
     return (0, a.jsx)(u.default, {
       clan: e,
-      className: C.card,
+      className: _.card,
       affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, o.getClanDiscoveryAffinity)(e, p),
       traitsToHighlight: I,
       source: h.AnalyticsSections.DISCOVER_SEARCH,
-      prioritizedGameIds: g,
+      prioritizedGameIds: T,
       onlyAnimateIconOnHover: !0
     }, e.id)
-  }, [p, I, g]), A = s.useMemo(() => null != S && (0, E.isLoadedSearchResult)(S) ? m : [], [m, S]), N = s.useCallback(e => {
+  }, [p, I, T]), A = s.useMemo(() => null != S && (0, E.isLoadedSearchResult)(S) ? m : [], [m, S]), N = s.useCallback(e => {
     e && A.length > 0 && (0, r.trackClanDiscoveryViewed)(A.map(e => e.id), "top_picks", p)
   }, [A, p]);
-  return 0 !== m.length && _ ? (0, a.jsx)(i.VisibilitySensor, {
+  return 0 !== m.length && C ? (0, a.jsx)(i.VisibilitySensor, {
     onChange: N,
     threshold: .25,
     children: (0, a.jsxs)("div", {
-      className: C.previewListContainer,
+      className: _.previewListContainer,
       children: [(0, a.jsx)("div", {
-        className: C.previewListSection,
+        className: _.previewListSection,
         children: (0, a.jsx)(f.default, {
           title: t,
           subtitle: n
         })
       }), (0, a.jsx)("div", {
-        className: C.previewList,
-        children: A.map(e => T(e))
+        className: _.previewList,
+        children: A.map(e => g(e))
       })]
     })
   }) : null

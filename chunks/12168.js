@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return M
   },
   default: function() {
-    return R
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -29,8 +29,8 @@ var a = n("735250"),
   I = n("185923"),
   A = n("420212"),
   v = n("888863");
-let x = I.EmojiIntention.CHAT,
-  N = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(_.isNotNullish);
+let N = I.EmojiIntention.CHAT,
+  x = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(_.isNotNullish);
 
 function M(e) {
   let {
@@ -79,7 +79,7 @@ function M(e) {
   })
 }
 
-function y(e) {
+function R(e) {
   let {
     otherAccessories: t,
     isEmojiPickerExpanded: n,
@@ -101,7 +101,7 @@ function y(e) {
   })
 }
 
-function R(e) {
+function y(e) {
   let {
     channel: t,
     title: n,
@@ -113,10 +113,10 @@ function R(e) {
     emojiSearchProps: E,
     recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, R = (0, C.useUID)(), [L, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, y = (0, C.useUID)(), [L, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...x], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
-    intention: x
+    intention: N
   })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
   null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
   let D = e => {
@@ -131,12 +131,12 @@ function R(e) {
       D(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
     };
   return (0, a.jsxs)(u.Dialog, {
-    "aria-labelledby": R,
+    "aria-labelledby": y,
     children: [(0, a.jsx)(u.HeadingLevel, {
       forceLevel: 2,
       children: (0, a.jsx)(u.HiddenVisually, {
         children: (0, a.jsx)(u.H, {
-          id: R,
+          id: y,
           children: n
         })
       })
@@ -155,10 +155,10 @@ function R(e) {
         onSelectEmoji: L ? b : () => {},
         shouldHidePickerActions: !L,
         wrapper: "div",
-        pickerIntention: x,
+        pickerIntention: N,
         searchProps: {
           ...E,
-          accessory: (0, a.jsx)(y, {
+          accessory: (0, a.jsx)(R, {
             otherAccessories: null == E ? void 0 : E.accessory,
             isEmojiPickerExpanded: L,
             onSetExpanded: D,

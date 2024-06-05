@@ -4,8 +4,8 @@ l.r(a), l.d(a, {
     return t
   }
 }), l("47120");
-var t, i, n = l("735250"),
-  r = l("470079"),
+var t, i, r = l("735250"),
+  n = l("470079"),
   s = l("120356"),
   o = l.n(s),
   u = l("920906"),
@@ -21,12 +21,12 @@ let h = {
   0: v.activityCharacterWumpus,
   1: v.activityCharacterPhibi
 };
-a.default = r.memo(function(e) {
+a.default = n.memo(function(e) {
   let {
     activityName: a,
     activityCharacter: l = 0,
     showExampleButton: t = !1
-  } = e, [i, s] = r.useState(0), [S, I] = (0, u.useSpring)(() => ({
+  } = e, [i, s] = n.useState(0), [S, I] = (0, u.useSpring)(() => ({
     from: {
       rotate: "0deg"
     },
@@ -34,12 +34,12 @@ a.default = r.memo(function(e) {
       tension: 1e3,
       friction: 5
     }
-  })), A = r.useRef({
+  })), T = n.useRef({
     seconds: i,
     jitter: async () => {
       for (;;) {
         var e;
-        let a = (e = A.current.seconds, c.default.useReducedMotion ? 0 : Math.min(10, (e -= 5399) / 300 * 10));
+        let a = (e = T.current.seconds, c.default.useReducedMotion ? 0 : Math.min(10, (e -= 5399) / 300 * 10));
         I({
           rotate: "-".concat(a, "deg")
         }), await new Promise(e => setTimeout(e, 80)), I({
@@ -48,39 +48,39 @@ a.default = r.memo(function(e) {
       }
     }
   });
-  return r.useEffect(() => void(A.current.seconds = i)), r.useEffect(() => {
+  return n.useEffect(() => void(T.current.seconds = i)), n.useEffect(() => {
     let e = setInterval(() => {
-      s(e => (5399 === e && A.current.jitter(), ++e))
+      s(e => (5399 === e && T.current.jitter(), ++e))
     }, 1e3);
     return () => clearInterval(e)
-  }, []), (0, n.jsxs)(f.default, {
+  }, []), (0, r.jsxs)(f.default, {
     lastSection: !0,
     "aria-hidden": !0,
-    children: [(0, n.jsx)(d.Heading, {
+    children: [(0, r.jsx)(d.Heading, {
       className: v.fakeActivityTitle,
       variant: "eyebrow",
       children: m.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_TITLE
-    }), (0, n.jsxs)("div", {
+    }), (0, r.jsxs)("div", {
       className: v.fakeActivityLayout,
-      children: [(0, n.jsx)("div", {
+      children: [(0, r.jsx)("div", {
         className: o()(v.fakeActivityIcon, h[l]),
-        children: (0, n.jsx)(u.animated.img, {
+        children: (0, r.jsx)(u.animated.img, {
           className: v.fakeActivityPencil,
           src: 0 === l ? g : p,
           style: S
         })
-      }), (0, n.jsxs)("div", {
+      }), (0, r.jsxs)("div", {
         className: v.fakeActivityContent,
-        children: [(0, n.jsx)(d.Text, {
+        children: [(0, r.jsx)(d.Text, {
           variant: "text-sm/semibold",
           children: null != a ? a : m.default.Messages.USER_SETTINGS_USER_PROFILE
-        }), (0, n.jsx)(d.Text, {
+        }), (0, r.jsx)(d.Text, {
           variant: "text-sm/normal",
           children: m.default.Messages.PROFILE_CUSTOMIZATION_ACTIVITY_TIME.format({
             renderTimeHook(e, a) {
               let l = i % 60,
                 t = (i - l) / 60;
-              return (0, n.jsxs)("span", {
+              return (0, r.jsxs)("span", {
                 className: v.fakeActivityTimeValues,
                 children: [t.toString().padStart(2, "0"), ":", l.toString().padStart(2, "0")]
               }, a)
@@ -88,7 +88,7 @@ a.default = r.memo(function(e) {
           })
         })]
       })]
-    }), t && (0, n.jsx)(d.Button, {
+    }), t && (0, r.jsx)(d.Button, {
       className: v.button,
       color: v.buttonColor,
       size: d.Button.Sizes.SMALL,

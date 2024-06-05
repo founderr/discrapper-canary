@@ -20,9 +20,9 @@ function i(e) {
     description: d,
     tag: c,
     verificationForm: f
-  } = t, E = a.useMemo(() => null != f && f.formFields.some(e => !(0, s.isTermsFormField)(e)), [f]), h = a.useMemo(() => Array.from(u).filter(e => !l.ALL_TRAITS_SET.has(e) && !l.LANGUAGES_SET.has(e)), [u]), C = a.useCallback(() => {
+  } = t, E = a.useMemo(() => null != f && f.formFields.some(e => !(0, s.isTermsFormField)(e)), [f]), h = a.useMemo(() => Array.from(u).filter(e => !l.ALL_TRAITS_SET.has(e) && !l.LANGUAGES_SET.has(e)), [u]), _ = a.useCallback(() => {
     n(i + 1)
-  }, [i, n]), _ = a.useCallback(() => {
+  }, [i, n]), C = a.useCallback(() => {
     n(i - 1)
   }, [i, n]), m = a.useCallback(e => n(e), [n]), S = a.useMemo(() => {
     switch (i) {
@@ -44,9 +44,9 @@ function i(e) {
   }, [i, d.length, r.size, E, h.length, o, c.length]), p = 0 === i;
   return a.useMemo(() => ({
     onStepClick: m,
-    onNextClick: C,
-    onBackClick: _,
+    onNextClick: _,
+    onBackClick: C,
     isNextDisabled: S,
     isBackDisabled: p
-  }), [p, S, _, C, m])
+  }), [p, S, C, _, m])
 }

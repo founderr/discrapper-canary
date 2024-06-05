@@ -19,24 +19,24 @@ var a = n("735250"),
   f = n("603368"),
   E = n("284019"),
   h = n("689938"),
-  C = n("954834");
+  _ = n("954834");
 
-function _(e) {
+function C(e) {
   let {
     index: t,
     onClick: n,
     name: l,
     isActive: E,
-    animate: _,
+    animate: C,
     fillBackgroundColor: m,
     hasError: S
-  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), I = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), g = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(m, I.hex()), [m, I]), T = null != g, A = (0, r.useSpring)({
+  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), I = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), T = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(m, I.hex()), [m, I]), g = null != T, A = (0, r.useSpring)({
     transform: E ? "translateX(0%)" : "translateX(-100%)",
     config: {
       ...r.config.stiff,
       clamp: !0
     },
-    immediate: p || !_
+    immediate: p || !C
   }), N = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(u.Text, {
       variant: "text-sm/medium",
@@ -53,9 +53,9 @@ function _(e) {
     text: S ? N : l,
     "aria-label": S ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
     shouldShow: null != n,
-    tooltipStyle: g,
-    tooltipClassName: i()(C.progressStepTooltip, {
-      [C.progressStepTooltipCustomColors]: !S && null != g
+    tooltipStyle: T,
+    tooltipClassName: i()(_.progressStepTooltip, {
+      [_.progressStepTooltipCustomColors]: !S && null != T
     }),
     children: e => (0, a.jsxs)(u.Clickable, {
       ...e,
@@ -64,18 +64,18 @@ function _(e) {
       }),
       tabIndex: null == n ? -1 : void 0,
       onClick: n,
-      className: C.progressStepWrapper,
+      className: _.progressStepWrapper,
       children: [S && (0, a.jsx)(c.default, {
-        className: C.errorIcon
+        className: _.errorIcon
       }), (0, a.jsx)("div", {
-        className: C.progressStep,
+        className: _.progressStep,
         children: (0, a.jsx)(r.animated.div, {
           style: {
             ...A,
-            ...g
+            ...T
           },
-          className: i()(C.progressStepFill, {
-            [C.customProgressStepFill]: T
+          className: i()(_.progressStepFill, {
+            [_.customProgressStepFill]: g
           })
         })
       })]
@@ -95,14 +95,14 @@ function m(e) {
   } = e;
   return (0, a.jsx)(r.animated.div, {
     style: u,
-    className: i()(C.progressContainer, d),
+    className: i()(_.progressContainer, d),
     children: t.map(e => {
       let {
         index: t,
         name: i,
         hasError: r
       } = e;
-      return (0, a.jsx)(_, {
+      return (0, a.jsx)(C, {
         name: i,
         onClick: t <= s ? () => l(t) : void 0,
         isActive: t <= n,
@@ -127,7 +127,7 @@ function S(e) {
     nextButtonAnimationStyle: f
   } = e;
   return (0, a.jsxs)("div", {
-    className: i()(C.buttonsContainer, t),
+    className: i()(_.buttonsContainer, t),
     children: [(0, a.jsx)(u.Button, {
       look: u.Button.Looks.OUTLINED,
       size: u.Button.Sizes.MEDIUM,

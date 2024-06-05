@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), s("47120");
 var a = s("735250");
@@ -20,62 +20,62 @@ var n = s("512722"),
   _ = s("689938"),
   I = s("904014");
 
-function f(e) {
+function N(e) {
   let {
     subscription: t,
     withOverheadSeparator: s
   } = e, {
     analyticsLocations: n
-  } = (0, o.default)(), [f] = (0, S.useSubscriptionInvoicePreview)({
+  } = (0, o.default)(), [N] = (0, S.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
     renewal: !0,
     analyticsLocations: n,
     analyticsLocation: r.default.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
   });
-  if (null == f) return null;
-  let m = s ? I.finePrintWithOverheadSeparator : I.finePrint,
-    N = f.invoiceItems.find(e => {
+  if (null == N) return null;
+  let f = s ? I.finePrintWithOverheadSeparator : I.finePrint,
+    g = N.invoiceItems.find(e => {
       let {
         subscriptionPlanId: t
       } = e;
       return (0, u.isPremiumBaseSubscriptionPlan)(t)
     });
-  if (null == N) return null;
-  let g = N.subscriptionPlanId,
-    h = d.default.get(g);
-  l()(null != h, "Missing plan");
-  let C = (0, c.formatPrice)(f.total, f.currency),
-    O = "";
-  return h.interval === E.SubscriptionIntervalTypes.YEAR ? O = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
-    price: C,
+  if (null == g) return null;
+  let m = g.subscriptionPlanId,
+    C = d.default.get(m);
+  l()(null != C, "Missing plan");
+  let A = (0, c.formatPrice)(N.total, N.currency),
+    h = "";
+  return C.interval === E.SubscriptionIntervalTypes.YEAR ? h = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+    price: A,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : h.interval === E.SubscriptionIntervalTypes.MONTH && (O = 1 === h.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
-    price: C,
+  }) : C.interval === E.SubscriptionIntervalTypes.MONTH && (h = 1 === C.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+    price: A,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
   }) : _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
-    price: C,
+    price: A,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY,
-    intervalCount: h.intervalCount
+    intervalCount: C.intervalCount
   })), (0, a.jsx)(i.Text, {
     color: "text-muted",
-    className: m,
+    className: f,
     variant: "text-xs/normal",
-    children: O
+    children: h
   })
 }
 
-function m(e) {
+function f(e) {
   let {
     subscription: t,
     withOverheadSeparator: s
   } = e;
-  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(f, {
+  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(N, {
     subscription: t,
     withOverheadSeparator: s
   })

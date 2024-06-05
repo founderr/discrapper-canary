@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a = n("735250"),
-  l = n("470079"),
-  s = n("481060"),
+var s = n("735250"),
+  a = n("470079"),
+  l = n("481060"),
   i = n("836946"),
   r = n("808268"),
   o = n("740727"),
@@ -17,12 +17,12 @@ let c = e => {
       item: t,
       closePopout: n
     } = e;
-    return (0, a.jsx)(s.Menu, {
+    return (0, s.jsx)(l.Menu, {
       navId: "notification-actions",
       onClose: n,
       onSelect: n,
       "aria-label": d.default.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL,
-      children: (0, a.jsx)(s.MenuItem, {
+      children: (0, s.jsx)(l.MenuItem, {
         id: "delete",
         label: d.default.Messages.DELETE,
         icon: o.default,
@@ -32,26 +32,26 @@ let c = e => {
       })
     })
   },
-  f = l.memo(function(e) {
+  f = a.memo(function(e) {
     let {
       item: t
     } = e;
-    return (0, a.jsx)(s.Popout, {
-      renderPopout: e => (0, a.jsx)(c, {
+    return (0, s.jsx)(l.Popout, {
+      renderPopout: e => (0, s.jsx)(c, {
         ...e,
         item: t
       }),
       position: "bottom",
       align: "right",
-      animation: s.Popout.Animation.NONE,
+      animation: l.Popout.Animation.NONE,
       children: e => {
         let {
           onClick: t
         } = e;
-        return (0, a.jsx)(i.default, {
+        return (0, s.jsx)(i.default, {
           tooltip: d.default.Messages.MORE,
           color: i.CircleIconButtonColors.TERTIARY,
-          icon: (0, a.jsx)(r.default, {
+          icon: (0, s.jsx)(r.default, {
             height: 16,
             width: 16
           }),

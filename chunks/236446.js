@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return U
+    return b
   }
 }), n("47120");
 var s = n("735250"),
@@ -19,9 +19,9 @@ var s = n("735250"),
   _ = n("306453"),
   p = n("929809"),
   h = n("108427"),
-  g = n("390885"),
-  m = n("314897"),
-  T = n("896797"),
+  T = n("390885"),
+  g = n("314897"),
+  m = n("896797"),
   N = n("819570"),
   A = n("954824"),
   S = n("781428"),
@@ -36,7 +36,7 @@ var s = n("735250"),
   M = n("146722"),
   j = n("611273");
 o.default.initialize();
-class b extends a.PureComponent {
+class U extends a.PureComponent {
   componentDidMount() {
     (0, h.trackAppUIViewed)("guildTemplate"), !D.IS_APP_COMPATIBLE_BROWSER && A.default.launch("discord://" + O.Routes.GUILD_TEMPLATE(this.props.code), () => void 0)
   }
@@ -128,7 +128,7 @@ class b extends a.PureComponent {
           transitionTo: a,
           location: l,
           onRegister: () => {
-            (0, p.setNewUser)(x.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), g.default.flowStart(L.FlowType.ORGANIC_GUILD_TEMPLATES, L.RegistrationSteps.NUF_STARTED)
+            (0, p.setNewUser)(x.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), T.default.flowStart(L.FlowType.ORGANIC_GUILD_TEMPLATES, L.RegistrationSteps.NUF_STARTED)
           }
         });
       case R.GuildTemplateStates.EXPIRED:
@@ -154,14 +154,14 @@ class b extends a.PureComponent {
   }
 }
 
-function U(e) {
+function b(e) {
   let t = {
     guildTemplate: (0, o.useStateFromStores)([c.default], () => c.default.getGuildTemplate(e.code)),
     nativeAppState: (0, o.useStateFromStores)([d.default], () => d.default.getState(e.code)),
-    authenticated: (0, o.useStateFromStores)([m.default], () => m.default.isAuthenticated()),
-    defaultRoute: (0, o.useStateFromStores)([T.default], () => T.default.defaultRoute)
+    authenticated: (0, o.useStateFromStores)([g.default], () => g.default.isAuthenticated()),
+    defaultRoute: (0, o.useStateFromStores)([m.default], () => m.default.defaultRoute)
   };
-  return (0, s.jsx)(b, {
+  return (0, s.jsx)(U, {
     ...e,
     ...t
   })
@@ -174,7 +174,7 @@ function B(e) {
     form: n,
     handleSubmit: a
   } = (0, f.default)(t, !1);
-  g.default.flowStep(L.FlowType.ORGANIC_GUILD_TEMPLATES, L.CreateGuildSteps.GUILD_CREATE);
+  T.default.flowStep(L.FlowType.ORGANIC_GUILD_TEMPLATES, L.CreateGuildSteps.GUILD_CREATE);
   let l = (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(N.Title, {
       className: M.header,

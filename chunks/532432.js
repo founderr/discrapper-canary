@@ -28,26 +28,26 @@ function T(e) {
     sectionTitle: T,
     changeAvatarButtonText: _,
     guildId: I,
-    className: f,
-    disabled: m = !1,
-    isTryItOutFlow: N = !1,
-    forcedDivider: g,
-    withHighlight: h = !1
-  } = e, C = h ? r.default : i.Button;
+    className: N,
+    disabled: f = !1,
+    isTryItOutFlow: g = !1,
+    forcedDivider: m,
+    withHighlight: C = !1
+  } = e, A = C ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
-    className: f,
+    className: N,
     title: T,
     errors: s,
-    disabled: m,
-    forcedDivider: g,
+    disabled: f,
+    forcedDivider: m,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
-      children: [(0, a.jsx)(C, {
+      children: [(0, a.jsx)(A, {
         className: l()({
-          [S.buttonHighlighted]: h
+          [S.buttonHighlighted]: C
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, I, N, N ? E : void 0),
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, I, g, g ? E : void 0),
         children: null != _ ? _ : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,

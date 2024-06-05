@@ -5,8 +5,8 @@ var a = s("735250"),
   i = s("120356"),
   l = s.n(i),
   r = s("544891"),
-  o = s("780384"),
-  u = s("481060"),
+  u = s("780384"),
+  o = s("481060"),
   d = s("410030"),
   c = s("63063"),
   p = s("74538"),
@@ -38,16 +38,16 @@ t.default = function(e) {
       R(!0)
     }
     y(!1)
-  }, L = (0, d.default)(), x = (0, o.isThemeDark)(L) ? P : C, D = (0, m.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), b = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), U = (0, f.formatPrice)(b.amount, b.currency);
+  }, L = (0, d.default)(), x = (0, u.isThemeDark)(L) ? P : C, D = (0, m.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), b = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), U = (0, f.formatPrice)(b.amount, b.currency);
   return null == T ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(E.default, {
       premiumType: s,
       onClose: i
-    }), (0, a.jsx)(u.ModalContent, {
+    }), (0, a.jsx)(o.ModalContent, {
       className: N.body,
       children: (0, a.jsxs)("div", {
         className: N.confirmDiscountContent,
-        children: [(0, a.jsx)(u.Heading, {
+        children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/bold",
           children: I.default.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({
             percent: T.discount.amount
@@ -58,7 +58,7 @@ t.default = function(e) {
             alt: "",
             src: x,
             className: N.confirmDiscountIcon
-          }), (0, a.jsx)(u.Text, {
+          }), (0, a.jsx)(o.Text, {
             variant: "text-sm/medium",
             children: I.default.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
               percent: T.discount.amount,
@@ -68,7 +68,7 @@ t.default = function(e) {
           })]
         }), (0, a.jsx)("div", {
           className: N.confirmDiscountLegalese,
-          children: (0, a.jsx)(u.Text, {
+          children: (0, a.jsx)(o.Text, {
             variant: "text-xs/semibold",
             className: N.confirmDiscountLegaleseText,
             children: I.default.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
@@ -81,7 +81,7 @@ t.default = function(e) {
           })
         }), A && (0, a.jsx)("div", {
           className: N.redemptionFailedMessage,
-          children: (0, a.jsx)(u.Text, {
+          children: (0, a.jsx)(o.Text, {
             variant: "text-xs/semibold",
             className: N.redemptionFailedMessageCopy,
             children: I.default.Messages.CHURN_DISCOUNT_REDEMPTION_ERROR
@@ -91,12 +91,12 @@ t.default = function(e) {
             [N.confrimDiscountsButtonsError]: A,
             [N.confrimDiscountsButtonsNoError]: !A
           }),
-          children: [(0, a.jsx)(u.Button, {
-            look: u.ButtonLooks.LINK,
+          children: [(0, a.jsx)(o.Button, {
+            look: o.ButtonLooks.LINK,
             onClick: () => i(),
             children: I.default.Messages.CHURN_DISCOUNT_NEVERMIND
-          }), (0, a.jsx)(u.Button, {
-            size: u.ButtonSizes.SMALL,
+          }), (0, a.jsx)(o.Button, {
+            size: o.ButtonSizes.SMALL,
             submitting: M,
             onClick: () => g(T.id),
             children: I.default.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT

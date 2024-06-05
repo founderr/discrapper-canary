@@ -2,11 +2,11 @@
 n.r(t);
 var i = n("735250");
 n("470079");
-var a = n("481060"),
-  l = n("938278");
+var l = n("481060"),
+  a = n("938278");
 t.default = () => (0, i.jsx)("div", {
-  className: l.loadingWrapper,
-  children: (0, i.jsx)(a.Dots, {
+  className: a.loadingWrapper,
+  children: (0, i.jsx)(l.Dots, {
     dotRadius: 4,
     themed: !0
   })

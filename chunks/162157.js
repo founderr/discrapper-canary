@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   useCanEnableRaidAlerts: function() {
     return c
   },
@@ -7,41 +7,41 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("442837");
-n("467319");
-var i = n("496675"),
-  d = n("154285"),
-  l = n("655006"),
-  s = n("533244"),
-  o = n("487419"),
-  r = n("981631");
+var n = l("442837");
+l("467319");
+var a = l("496675"),
+  s = l("154285"),
+  i = l("655006"),
+  r = l("533244"),
+  o = l("487419"),
+  d = l("981631");
 
 function u(e) {
-  let t = (0, a.useStateFromStores)([i.default], () => (function(e) {
-      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default;
-      return t.can(r.Permissions.BAN_MEMBERS, e) || t.can(r.Permissions.KICK_MEMBERS, e) || t.can(r.Permissions.MANAGE_GUILD, e)
-    })(e, i.default), [e]),
-    n = (0, a.useStateFromStores)([o.default], () => null != e ? o.default.getGuildIncident(e.id) : null, [e]);
-  return !(null != n && (0, s.hasDetectedActivity)(n)) && t
+  let t = (0, n.useStateFromStores)([a.default], () => (function(e) {
+      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default;
+      return t.can(d.Permissions.BAN_MEMBERS, e) || t.can(d.Permissions.KICK_MEMBERS, e) || t.can(d.Permissions.MANAGE_GUILD, e)
+    })(e, a.default), [e]),
+    l = (0, n.useStateFromStores)([o.default], () => null != e ? o.default.getGuildIncident(e.id) : null, [e]);
+  return !(null != l && (0, r.hasDetectedActivity)(l)) && t
 }
 
 function c(e) {
   var t;
-  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : r.EMPTY_STRING_SNOWFLAKE_ID,
-    s = (0, a.useStateFromStores)([i.default], () => (function(e) {
-      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default;
-      return t.can(r.Permissions.MANAGE_GUILD, e)
-    })(e, i.default), [e]),
+  let l = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : d.EMPTY_STRING_SNOWFLAKE_ID,
+    r = (0, n.useStateFromStores)([a.default], () => (function(e) {
+      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default;
+      return t.can(d.Permissions.MANAGE_GUILD, e)
+    })(e, a.default), [e]),
     {
       enableRaidAlerts: o
-    } = l.RaidAlertExperiment.useExperiment({
-      guildId: n,
+    } = i.RaidAlertExperiment.useExperiment({
+      guildId: l,
       location: "4467c7_3"
     }, {
-      autoTrackExposure: s
+      autoTrackExposure: r
     }),
     {
       showAlertMode: u
-    } = (0, d.useGuildAlertModeEnabled)(n);
-  return s && (o || u)
+    } = (0, s.useGuildAlertModeEnabled)(l);
+  return r && (o || u)
 }

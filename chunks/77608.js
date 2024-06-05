@@ -28,13 +28,13 @@ function h(e) {
     label: f.default.Messages.QUESTS_CLAIMED
   }], h = s.useCallback(() => {
     window.open(u.default.getArticleURL(c.HelpdeskArticles.QUESTS_LEARN_MORE))
-  }, []), C = s.useCallback(e => {
+  }, []), _ = s.useCallback(e => {
     t(e)
   }, [t]);
   return (0, a.jsxs)(o.TabBar, {
     className: i()(E.container),
     selectedItem: n,
-    onItemSelect: e => C(e),
+    onItemSelect: e => _(e),
     type: "top",
     "aria-label": f.default.Messages.QUESTS,
     orientation: "horizontal",

@@ -14,27 +14,27 @@ var n = l("735250"),
   u = l("668781"),
   c = l("139387"),
   f = l("308063"),
-  m = l("208567"),
-  I = l("598077"),
+  I = l("208567"),
+  m = l("598077"),
   T = l("285952"),
-  N = l("259580"),
-  E = l("497309"),
-  S = l("768581"),
-  g = l("572004"),
-  p = l("709054"),
-  h = l("51144"),
-  _ = l("486199"),
+  E = l("259580"),
+  N = l("497309"),
+  _ = l("768581"),
+  S = l("572004"),
+  h = l("709054"),
+  g = l("51144"),
+  p = l("486199"),
   O = l("981631"),
   A = l("689938"),
   C = l("744272");
 let x = e => {
   if (null == e) return null;
-  let t = new I.default(e);
-  return h.default.getUserTag(t)
+  let t = new m.default(e);
+  return g.default.getUserTag(t)
 };
 
 function R(e, t) {
-  return null != t && /^data:/.test(t) ? t : (0, S.getUserAvatarURL)({
+  return null != t && /^data:/.test(t) ? t : (0, _.getUserAvatarURL)({
     id: e.id,
     avatar: t,
     discriminator: O.NON_USER_BOT_DISCRIMINATOR
@@ -46,17 +46,17 @@ function M(e) {
     id: t,
     webhook: l,
     editedWebhook: s,
-    channelOptions: I,
-    isExpanded: S,
-    isNew: h,
+    channelOptions: m,
+    isExpanded: _,
+    isNew: g,
     errors: M,
-    onToggleExpand: v
-  } = e, [L, j] = a.useState(!1), [P] = a.useState(new o.Timeout);
+    onToggleExpand: L
+  } = e, [v, j] = a.useState(!1), [P] = a.useState(new o.Timeout);
   a.useEffect(() => () => P.stop(), [P]);
   let b = a.useMemo(() => R(l, l.avatar), [l]),
     D = a.useCallback(() => {
       let e = "".concat((0, r.getAPIBaseURL)(!1)).concat(O.Endpoints.WEBHOOK_INTEGRATION(l.id, l.token));
-      (0, g.copy)(e)
+      (0, S.copy)(e)
     }, [l]),
     y = a.useCallback(() => {
       (0, d.openModal)(e => (0, n.jsx)(d.ConfirmModal, {
@@ -90,19 +90,19 @@ function M(e) {
     }, [l.guild_id, l.id, l.name]),
     G = [];
   null != l.user ? G.push({
-    icon: E.default,
+    icon: N.default,
     text: A.default.Messages.INTEGRATION_CREATED_USER_DATE.format({
       user: x(l.user),
-      timestamp: p.default.extractTimestamp(l.id)
+      timestamp: h.default.extractTimestamp(l.id)
     })
   }) : G.push({
-    icon: E.default,
+    icon: N.default,
     text: A.default.Messages.INTEGRATION_CREATED_DATE.format({
-      timestamp: p.default.extractTimestamp(l.id)
+      timestamp: h.default.extractTimestamp(l.id)
     })
   });
   let B = null;
-  return S && null != s && (B = (0, n.jsxs)("div", {
+  return _ && null != s && (B = (0, n.jsxs)("div", {
     className: C.body,
     children: [(0, n.jsx)(d.FormDivider, {
       className: C.topDivider
@@ -113,7 +113,7 @@ function M(e) {
         children: (0, n.jsxs)(T.default, {
           className: C.avatarWrapper,
           direction: T.default.Direction.VERTICAL,
-          children: [(0, n.jsx)(m.default, {
+          children: [(0, n.jsx)(I.default, {
             image: s.avatar,
             onChange: e => {
               c.default.updateWebhook({
@@ -153,7 +153,7 @@ function M(e) {
               title: A.default.Messages.CHANNEL,
               children: (0, n.jsx)(d.SearchableSelect, {
                 value: s.channel_id,
-                options: I,
+                options: m,
                 onChange: e => {
                   c.default.updateWebhook({
                     channelId: e
@@ -168,7 +168,7 @@ function M(e) {
         }), (0, n.jsxs)(T.default, {
           children: [(0, n.jsx)(d.Tooltip, {
             text: A.default.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL,
-            forceOpen: L,
+            forceOpen: v,
             color: d.TooltipColors.GREEN,
             disableTooltipPointerEvents: !0,
             children: e => {
@@ -207,22 +207,22 @@ function M(e) {
   })), (0, n.jsx)(d.Card, {
     editable: !0,
     id: t,
-    className: i()(C.card, h ? C.pulse : null),
+    className: i()(C.card, g ? C.pulse : null),
     children: (0, n.jsxs)(T.default, {
       direction: T.default.Direction.VERTICAL,
       children: [(0, n.jsx)(d.Clickable, {
         className: C.header,
-        "aria-expanded": S,
-        onClick: v,
+        "aria-expanded": _,
+        onClick: L,
         children: (0, n.jsxs)(T.default, {
           align: T.default.Align.CENTER,
-          children: [(0, n.jsx)(_.default, {
+          children: [(0, n.jsx)(p.default, {
             name: l.name,
             imageSrc: b,
             details: G
-          }), (0, n.jsx)(N.default, {
+          }), (0, n.jsx)(E.default, {
             className: C.expandIcon,
-            expanded: S,
+            expanded: _,
             "aria-hidden": !0
           })]
         })

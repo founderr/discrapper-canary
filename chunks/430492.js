@@ -109,35 +109,35 @@ t.default = function(e) {
     onClose: t,
     code: o,
     drop: I,
-    platform: f,
-    transitionState: m
-  } = e, N = (0, d.useUID)(), [g, h] = n.useState();
+    platform: N,
+    transitionState: f
+  } = e, g = (0, d.useUID)(), [m, C] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
       await (0, u.fetchCodePlatformAvailability)(I.dropsQuestId)
     })
   }, [I.dropsQuestId, o]);
-  let C = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
+  let A = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
   return (0, a.jsx)(i.ModalRoot, {
-    transitionState: m,
-    "aria-labelledby": N,
+    transitionState: f,
+    "aria-labelledby": g,
     children: (0, a.jsx)(a.Fragment, {
       children: (() => {
         if (null != o) return (0, a.jsx)(_, {
           bodyText: I.messages.claimTip(),
           onClose: t,
           copyInputTitle: E.default.Messages.DROPS_REDEMPTION_CODE_PLATFORM_TITLE.format({
-            platform: f
+            platform: N
           }),
           code: o
         });
         {
-          if (null === C) return (0, a.jsx)("div", {
+          if (null === A) return (0, a.jsx)("div", {
             className: T.spinnerContainer,
             children: (0, a.jsx)(i.Spinner, {})
           });
-          let e = C.length > 0,
-            n = 1 === C.length;
+          let e = A.length > 0,
+            n = 1 === A.length;
           return (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsxs)(i.ModalHeader, {
               separator: !1,
@@ -153,7 +153,7 @@ t.default = function(e) {
                 variant: "text-md/normal",
                 className: T.dropBodyText,
                 children: n ? E.default.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
-                  platform: (0, S.getPlatformLabel)(C[0])
+                  platform: (0, S.getPlatformLabel)(A[0])
                 }) : E.default.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
                   title: I.title
                 })
@@ -162,12 +162,12 @@ t.default = function(e) {
               }), (0, a.jsxs)(i.FormSection, {
                 className: T.dropFormSection,
                 children: [(0, a.jsx)(i.SingleSelect, {
-                  onChange: h,
-                  options: C.map(e => ({
+                  onChange: C,
+                  options: A.map(e => ({
                     value: e,
                     label: (0, S.getPlatformLabel)(e)
                   })),
-                  value: n ? C[0] : g,
+                  value: n ? A[0] : m,
                   isDisabled: !e,
                   className: e ? "" : T.selectDangerBorder,
                   look: e ? i.SelectLooks.FILLED : i.SelectLooks.CUSTOM
@@ -186,9 +186,9 @@ t.default = function(e) {
                     let {
                       default: e
                     } = await Promise.all([s.e("99387"), s.e("5004")]).then(s.bind(s, "233070"));
-                    return s => (void 0 !== g || n) && (0, a.jsx)(e, {
+                    return s => (void 0 !== m || n) && (0, a.jsx)(e, {
                       ...s,
-                      platform: void 0 === g ? C[0] : g,
+                      platform: void 0 === m ? A[0] : m,
                       code: o,
                       dropsQuestId: I.dropsQuestId,
                       closeParentModal: t,
@@ -196,7 +196,7 @@ t.default = function(e) {
                     })
                   })
                 },
-                disabled: void 0 === g && !n,
+                disabled: void 0 === m && !n,
                 children: E.default.Messages.UNLOCK_CODE
               }), e ? (0, a.jsx)(i.Button, {
                 onClick: t,

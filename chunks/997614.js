@@ -30,9 +30,9 @@ function T(e) {
   } = e, I = t.getGuildId(), {
     mute: A,
     suppress: v
-  } = (0, f.default)(t), x = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), N = A || v || x, M = (0, u.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: N
-  }), [y, R] = (0, o.useGetDismissibleContent)(M);
+  } = (0, f.default)(t), N = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), x = A || v || N, M = (0, u.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: x
+  }), [R, y] = (0, o.useGetDismissibleContent)(M);
 
   function L(e) {
     null != I && (0, r.openContextMenuLazy)(e, async () => {
@@ -64,9 +64,9 @@ function T(e) {
           guildId: I,
           channel: t,
           onClose: n,
-          gridNotice: y === i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(d.CustomCallSoundUpsell, {
+          gridNotice: R === i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(d.CustomCallSoundUpsell, {
             onClose: n,
-            markAsDismissed: R
+            markAsDismissed: y
           }),
           analyticsSource: "action bar button"
         })
@@ -77,10 +77,10 @@ function T(e) {
       label: function() {
         if (A) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (v) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (x) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
+        if (N) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
       }(),
       iconComponent: E.default,
-      disabled: N,
+      disabled: x,
       onContextMenu: L,
       ...e
     })

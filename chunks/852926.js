@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   getVoiceSettings: function() {
-    return C
+    return _
   },
   unlockOverlay: function() {
     return f
@@ -54,7 +54,7 @@ let E = async (e, t, n) => {
     }
   });
   return t
-}), C = e => (0, o.getVoiceSettingsWithShortcut)(e, e => {
+}), _ = e => (0, o.getVoiceSettingsWithShortcut)(e, e => {
   let t = "";
   return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, i.toString)(e.modeOptions.shortcut)), t
 })

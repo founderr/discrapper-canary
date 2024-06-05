@@ -1,21 +1,21 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   TWITCH_APPLICATION_ID_PREFIX: function() {
-    return l
+    return o
   },
   default: function() {
     return a
   }
 });
-var s = r("726542"),
-  i = r("973616"),
-  n = r("689938");
-let l = "twitch:";
-class a extends i.default {
+var i = n("726542"),
+  r = n("973616"),
+  s = n("689938");
+let o = "twitch:";
+class a extends r.default {
   getIconURL() {
-    return s.default.get("twitch").icon.lightPNG
+    return i.default.get("twitch").icon.lightPNG
   }
   constructor(e) {
-    super(e), this.id = "".concat(l).concat(e.url), this.name = n.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
+    super(e), this.id = "".concat(o).concat(e.url), this.name = s.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
   }
 }

@@ -15,24 +15,24 @@ var l = s("735250"),
   c = s("652463"),
   E = s("709243"),
   f = s("981631"),
-  _ = s("689938");
-let D = [E.GuildDeleteReasons.OTHER];
+  D = s("689938");
+let _ = [E.GuildDeleteReasons.OTHER];
 
 function m(e) {
   let {
     transitionState: t,
     onClose: m,
     guildId: T
-  } = e, L = (0, n.useLazyValue)(E.getGuildDeleteReasons);
+  } = e, C = (0, n.useLazyValue)(E.getGuildDeleteReasons);
   return a.useEffect(() => {
     d.default.track(f.AnalyticEvents.OPEN_MODAL, {
       type: "Guild Delete Report"
     })
   }, []), (0, l.jsx)(i.default, {
-    header: _.default.Messages.GUILD_DELETE_FEEDBACK_HEADER,
-    body: _.default.Messages.GUILD_DELETE_FEEDBACK_BODY,
-    problems: L,
-    feedbackProblems: D,
+    header: D.default.Messages.GUILD_DELETE_FEEDBACK_HEADER,
+    body: D.default.Messages.GUILD_DELETE_FEEDBACK_BODY,
+    problems: C,
+    feedbackProblems: _,
     onSubmit: function(e) {
       let {
         problem: t,
@@ -46,7 +46,7 @@ function m(e) {
           default: e
         } = await Promise.all([s.e("99387"), s.e("14466")]).then(s.bind(s, "729328"));
         return t => (0, l.jsx)(e, {
-          body: _.default.Messages.GUILD_DELETE_FEEDBACK_REPORT,
+          body: D.default.Messages.GUILD_DELETE_FEEDBACK_REPORT,
           ...t
         })
       })

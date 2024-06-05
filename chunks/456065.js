@@ -15,7 +15,7 @@ function E(e) {
 function h() {
   return !0
 }
-class C extends(a = r.default.Store) {
+class _ extends(a = r.default.Store) {
   initialize() {
     this.waitFor(d.default, u.default), this.syncWith([u.default], h)
   }
@@ -23,12 +23,12 @@ class C extends(a = r.default.Store) {
     return !!e.hasFeature(c.GuildFeatures.LINKED_TO_HUB) && !f && !0
   }
 }
-i = "HubLinkNoticeStore", (l = "displayName") in(s = C) ? Object.defineProperty(s, l, {
+i = "HubLinkNoticeStore", (l = "displayName") in(s = _) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new C(o.default, {
+}) : s[l] = i, t.default = new _(o.default, {
   CONNECTION_OPEN: function(e) {
     for (let t of e.guilds)
       if (E(t.id)) return !0;

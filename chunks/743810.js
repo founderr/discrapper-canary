@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   MENTION_PREV: function() {
-    return f
+    return I
   },
   UNREAD_NEXT: function() {
     return A
@@ -65,7 +65,7 @@ let c = (e, t) => {
       withVoiceChannels: !0
     }), !1)
   },
-  f = {
+  I = {
     binds: ["mod+shift+alt+up"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(-1, {

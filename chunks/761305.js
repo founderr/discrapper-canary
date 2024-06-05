@@ -23,7 +23,7 @@ function h(e, t, n) {
   }) : e[t] = n, e
 }
 r.default.initialize();
-class g extends(s = l.PureComponent) {
+class T extends(s = l.PureComponent) {
   componentDidMount() {
     let e = (0, E.default)(this.props.location),
       t = (0, i.parse)(this.props.location.search);
@@ -122,8 +122,8 @@ class g extends(s = l.PureComponent) {
     })
   }
 }
-h(g, "defaultProps", {
+h(T, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
 }), t.default = r.default.connectStores([c.default], () => ({
   defaultRoute: c.default.defaultRoute
-}))(g)
+}))(T)

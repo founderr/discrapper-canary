@@ -4,10 +4,10 @@ s.r(t), s.d(t, {
     return C
   },
   getLocalizedPricingBannerStrings: function() {
-    return p
+    return A
   },
   getLocalizedPricingNotice: function() {
-    return f
+    return E
   }
 }), s("47120"), s("653041");
 var n = s("217986"),
@@ -38,8 +38,8 @@ let c = new Set([u.CurrencyCodes.ARS, u.CurrencyCodes.CLP, u.CurrencyCodes.COP])
     [l.PaymentSourceTypes.CASH_APP]: () => o.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY,
     [l.PaymentSourceTypes.APPLE]: () => o.default.Messages.PAYMENT_SOURCE_APPLE
   },
-  E = [l.PaymentSourceTypes.EPS, l.PaymentSourceTypes.BANCONTACT, l.PaymentSourceTypes.IDEAL, l.PaymentSourceTypes.SOFORT, l.PaymentSourceTypes.GIROPAY, l.PaymentSourceTypes.SEPA_DEBIT, l.PaymentSourceTypes.PAYSAFE_CARD],
-  f = (e, t, s, n) => {
+  p = [l.PaymentSourceTypes.EPS, l.PaymentSourceTypes.BANCONTACT, l.PaymentSourceTypes.IDEAL, l.PaymentSourceTypes.SOFORT, l.PaymentSourceTypes.GIROPAY, l.PaymentSourceTypes.SEPA_DEBIT, l.PaymentSourceTypes.PAYSAFE_CARD],
+  E = (e, t, s, n) => {
     if (null == e) return "";
     let r = (0, a.getI18NCountryName)(e);
     if (t === u.CurrencyCodes.EUR) return s ? o.default.Messages.LOCALIZED_PRICING_NOTICE_GENERALIZED_PAYMENT_METHODS_PROMO.format({
@@ -53,72 +53,72 @@ let c = new Set([u.CurrencyCodes.ARS, u.CurrencyCodes.CLP, u.CurrencyCodes.COP])
       country: r
     })
   },
-  p = e => {
+  A = e => {
     let {
       localizedPricingPromo: t,
       subscription: s,
       forceSingleLine: n = !1,
-      userLocale: f
+      userLocale: E
     } = e, {
-      countryCode: p,
-      amount: A,
-      currency: _,
+      countryCode: A,
+      amount: _,
+      currency: m,
       paymentSourceTypes: P
-    } = t, N = 0 !== P.length, h = m(p), S = (0, i.formatPrice)(A, _, {
+    } = t, I = 0 !== P.length, S = f(A), h = (0, i.formatPrice)(_, m, {
       style: "currency",
-      currency: _,
+      currency: m,
       currencyDisplay: "symbol",
-      localeOverride: h
-    }), I = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
+      localeOverride: S
+    }), N = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
       helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-      currencyISOCode: _.toUpperCase(),
-      localizedPriceWithCurrencySymbol: S
+      currencyISOCode: m.toUpperCase(),
+      localizedPriceWithCurrencySymbol: h
     });
-    if (d.has(_) && (I = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
+    if (d.has(m) && (N = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-        localizedPriceWithCurrencySymbol: S
-      })), c.has(_) && (I = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
+        localizedPriceWithCurrencySymbol: h
+      })), c.has(m) && (N = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-        currencyISOCode: _.toUpperCase(),
-        localizedPriceWithCurrencySymbol: S
-      })), null != s && !s.hasPremiumNitroMonthly && (I = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
+        currencyISOCode: m.toUpperCase(),
+        localizedPriceWithCurrencySymbol: h
+      })), null != s && !s.hasPremiumNitroMonthly && (N = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
-        currencyISOCode: _.toUpperCase()
-      })), _ === u.CurrencyCodes.EUR && (I = n ? o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
-        country: (0, a.getI18NCountryName)(p),
-        currencyISOCode: _.toUpperCase(),
+        currencyISOCode: m.toUpperCase()
+      })), m === u.CurrencyCodes.EUR && (N = n ? o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
+        country: (0, a.getI18NCountryName)(A),
+        currencyISOCode: m.toUpperCase(),
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING)
       }) : o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE.format({
-        currencyISOCode: _.toUpperCase(),
+        currencyISOCode: m.toUpperCase(),
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING)
-      })), N) {
-      let e = E.filter(e => P.includes(e)),
-        t = [...e, ...P.filter(e => !E.includes(e))].slice(0, 2).map(e => {
+      })), I) {
+      let e = p.filter(e => P.includes(e)),
+        t = [...e, ...P.filter(e => !p.includes(e))].slice(0, 2).map(e => {
           var t, s;
           return null !== (s = null === (t = C[e]) || void 0 === t ? void 0 : t.call(C)) && void 0 !== s ? s : o.default.Messages.PAYMENT_SOURCE_UNKNOWN
         });
       P.length >= 3 && t.push(o.default.Messages.LOCALIZED_PRICING_MORE_NEW_WAYS_TO_PAY);
-      let s = new Intl.ListFormat(f, {
+      let s = new Intl.ListFormat(E, {
         style: "short",
         type: "conjunction"
       });
-      I = o.default.Messages.LOCALIZED_PRICING_PAYMENT_METHODS_PROMO.format({
+      N = o.default.Messages.LOCALIZED_PRICING_PAYMENT_METHODS_PROMO.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING),
         paymentMethods: s.format(t)
       })
     }
     return {
       localizedPricingBannerHeader: o.default.Messages.LOCALIZED_PRICING_BANNER_HEADER.format({
-        country: (0, a.getI18NCountryName)(p)
+        country: (0, a.getI18NCountryName)(A)
       }),
-      localizedPricingBannerBody: I,
+      localizedPricingBannerBody: N,
       localizedPricingBannerLinkOnly: o.default.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({
         helpCenterLink: r.default.getArticleURL(l.HelpdeskArticles.LOCALIZED_PRICING)
       }),
-      localizedPricingBannerSubNotif: N ? void 0 : o.default.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
+      localizedPricingBannerSubNotif: I ? void 0 : o.default.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
     }
   },
-  m = e => {
+  f = e => {
     let t = n.default.find(t => t.alpha2 === e);
     return null == t ? void 0 : t.localeForICU
   }

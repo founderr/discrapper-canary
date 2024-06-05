@@ -17,31 +17,31 @@ var s = n("442837"),
   f = n("699516"),
   E = n("546591"),
   h = n("819570"),
-  C = n("51144"),
-  _ = n("998502"),
+  _ = n("51144"),
+  C = n("998502"),
   m = n("620924"),
   S = n("332712"),
   p = n("81471"),
   I = n("689938"),
-  g = n("326486");
-let T = e => {
+  T = n("326486");
+let g = e => {
     let {
       userId: t
     } = e, n = (0, S.useMutualGuilds)(t);
     return null == n || 0 === n.length ? (0, a.jsx)(l.Text, {
-      className: g.mutualGuilds,
+      className: T.mutualGuilds,
       variant: "text-sm/normal",
       color: "text-muted",
       children: I.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS
     }) : (0, a.jsxs)("div", {
-      className: g.mutualGuildsContainer,
+      className: T.mutualGuildsContainer,
       children: [(0, a.jsx)(c.default, {
         guilds: n,
         maxGuilds: 3,
         size: h.GuildIcon.Sizes.SMOL,
         hideOverflowCount: !0
       }), (0, a.jsx)(l.Text, {
-        className: g.mutualGuilds,
+        className: T.mutualGuilds,
         variant: "text-sm/normal",
         color: "text-muted",
         children: I.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
@@ -50,7 +50,7 @@ let T = e => {
       })]
     })
   },
-  A = _.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+  A = C.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
 function N(e) {
   var t;
@@ -58,7 +58,7 @@ function N(e) {
     channel: n,
     otherUser: c,
     active: h
-  } = e, _ = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), S = (0, s.useStateFromStores)([f.default], () => null == c ? null : f.default.getNickname(c.id)), N = !_ && h, v = (0, m.useMessageRequestRelativeTimestampText)(n), {
+  } = e, C = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), S = (0, s.useStateFromStores)([f.default], () => null == c ? null : f.default.getNickname(c.id)), N = !C && h, v = (0, m.useMessageRequestRelativeTimestampText)(n), {
     avatarDecorationSrc: R
   } = (0, u.default)({
     user: c,
@@ -67,24 +67,24 @@ function N(e) {
   });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(A, {
-      className: g.avatar,
+      className: T.avatar,
       src: (0, d.getChannelIconURL)(n, 40, N),
       avatarDecoration: R,
       size: l.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : I.default.Messages.UNKNOWN_USER
     }), (0, a.jsxs)("div", {
-      className: g.userPreview,
+      className: T.userPreview,
       children: [(0, a.jsxs)("div", {
-        className: g.userContainerWithPreview,
+        className: T.userContainerWithPreview,
         children: [(0, a.jsx)(i.default, {
           nick: S,
           user: c,
           showAccountIdentifier: !0,
-          className: g.tagContainer,
-          usernameClass: g.username,
-          discriminatorClass: null != C.default.getGlobalName(c) ? g.globalName : g.discriminator
+          className: T.tagContainer,
+          usernameClass: T.username,
+          discriminatorClass: null != _.default.getGlobalName(c) ? T.globalName : T.discriminator
         }), (0, a.jsx)(l.Text, {
-          className: g.timestampWithPreview,
+          className: T.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",
           children: v
@@ -94,7 +94,7 @@ function N(e) {
           channel: n
         }),
         forceHover: h,
-        children: (0, a.jsx)(T, {
+        children: (0, a.jsx)(g, {
           userId: c.id
         })
       })]

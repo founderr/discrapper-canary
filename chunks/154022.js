@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("627845"),
   I = s("786761"),
   N = s("3148"),
-  g = s("739566"),
-  f = s("753206"),
+  f = s("739566"),
+  g = s("753206"),
   m = s("440849"),
   C = s("921801"),
   A = s("196051"),
@@ -136,10 +136,10 @@ function Q() {
         })]
       }), (0, a.jsx)("div", {
         className: y.previewMessage,
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(g.default, {
           compact: e,
           author: {
-            ...(0, g.getMessageAuthor)(t),
+            ...(0, f.getMessageAuthor)(t),
             colorString: "#DD80F4"
           },
           message: t

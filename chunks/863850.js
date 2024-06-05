@@ -10,15 +10,15 @@ var a = r("521464"),
   o = r("337309"),
   i = r("774375"),
   u = r("748024"),
-  l = r("692378"),
-  c = r("870271"),
+  c = r("692378"),
+  l = r("870271"),
   f = r("599295"),
   b = r("470079"),
   d = r.n(b),
   h = r("639519"),
   p = r.n(h),
-  g = r("949179"),
-  y = r("261411"),
+  y = r("949179"),
+  g = r("261411"),
   v = r("852153"),
   m = r("703205");
 
@@ -33,11 +33,11 @@ function O(e, t) {
   return r
 }
 
-function w(e) {
+function k(e) {
   for (var t = 1; t < arguments.length; t++) {
     var r = null != arguments[t] ? arguments[t] : {};
     t % 2 ? O(Object(r), !0).forEach(function(t) {
-      (0, l.default)(e, t, r[t])
+      (0, c.default)(e, t, r[t])
     }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : O(Object(r)).forEach(function(t) {
       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t))
     })
@@ -45,7 +45,7 @@ function w(e) {
   return e
 }
 
-function k(e) {
+function w(e) {
   return {
     expanded: !e.isCircular && e.shouldExpandNode(e.keyPath, e.data, e.level)
   }
@@ -71,17 +71,17 @@ var E = function(e) {
 
   function h(e) {
     var t;
-    return (0, a.default)(this, h), t = b.call(this, e), (0, l.default)((0, s.default)(t), "handleClick", function() {
+    return (0, a.default)(this, h), t = b.call(this, e), (0, c.default)((0, s.default)(t), "handleClick", function() {
       t.props.expandable && t.setState({
         expanded: !t.state.expanded
       })
-    }), t.state = k(e), t
+    }), t.state = w(e), t
   }
   return (0, n.default)(h, [{
     key: "UNSAFE_componentWillReceiveProps",
     value: function(e) {
-      var t = k(e);
-      k(this.props).expanded !== t.expanded && this.setState(t)
+      var t = w(e);
+      w(this.props).expanded !== t.expanded && this.setState(t)
     }
   }, {
     key: "shouldComponentUpdate",
@@ -103,7 +103,7 @@ var E = function(e) {
         o = e.createItemString,
         i = e.styling,
         u = e.collectionLimit,
-        l = e.keyPath,
+        c = e.keyPath,
         b = e.labelRenderer,
         h = e.expandable,
         p = this.state.expanded,
@@ -113,10 +113,10 @@ var E = function(e) {
             o = t.collectionLimit,
             i = t.circularCache,
             u = t.keyPath,
-            l = t.postprocessValue,
+            c = t.postprocessValue,
             b = t.sortObjectKeys,
             h = [];
-          return (0, y.default)(n, s, b, o, r, a).forEach(function(r) {
+          return (0, g.default)(n, s, b, o, r, a).forEach(function(r) {
             if (void 0 !== r.to) h.push(d().createElement(m.default, (0, f.default)({}, t, {
               key: "ItemRange--".concat(r.from, "-").concat(r.to),
               from: r.from,
@@ -128,23 +128,23 @@ var E = function(e) {
                 n = r.value,
                 s = -1 !== i.indexOf(n);
               h.push(d().createElement(v.default, (0, f.default)({}, t, {
-                postprocessValue: l,
+                postprocessValue: c,
                 collectionLimit: o,
                 key: "Node--".concat(a),
-                keyPath: [a].concat((0, c.default)(u)),
-                value: l(n),
-                circularCache: [].concat((0, c.default)(i), [n]),
+                keyPath: [a].concat((0, l.default)(u)),
+                value: c(n),
+                circularCache: [].concat((0, l.default)(i), [n]),
                 isCircular: s,
                 hideRoot: !1
               })))
             }
           }), h
-        }(w(w({}, this.props), {}, {
+        }(k(k({}, this.props), {}, {
           level: this.props.level + 1
         })) : null,
-        k = t(a, n, d().createElement("span", i("nestedNodeItemType", p), r), o(n, u), l),
-        E = [l, a, p, h];
-      return s ? d().createElement("li", i.apply(void 0, ["rootNode"].concat(E)), d().createElement("ul", i.apply(void 0, ["rootNodeChildren"].concat(E)), O)) : d().createElement("li", i.apply(void 0, ["nestedNode"].concat(E)), h && d().createElement(g.default, {
+        w = t(a, n, d().createElement("span", i("nestedNodeItemType", p), r), o(n, u), c),
+        E = [c, a, p, h];
+      return s ? d().createElement("li", i.apply(void 0, ["rootNode"].concat(E)), d().createElement("ul", i.apply(void 0, ["rootNodeChildren"].concat(E)), O)) : d().createElement("li", i.apply(void 0, ["nestedNode"].concat(E)), h && d().createElement(y.default, {
         styling: i,
         nodeType: a,
         expanded: p,
@@ -155,11 +155,11 @@ var E = function(e) {
         onClick: this.handleClick
       }), b.apply(void 0, E)), d().createElement("span", (0, f.default)({}, i.apply(void 0, ["nestedNodeItemString"].concat(E)), {
         onClick: this.handleClick
-      }), k), d().createElement("ul", i.apply(void 0, ["nestedNodeChildren"].concat(E)), O))
+      }), w), d().createElement("ul", i.apply(void 0, ["nestedNodeChildren"].concat(E)), O))
     }
   }]), h
 }(d().Component);
-(0, l.default)(E, "propTypes", {
+(0, c.default)(E, "propTypes", {
   getItemString: p().func.isRequired,
   nodeTypeIndicator: p().any,
   nodeType: p().string.isRequired,
@@ -175,7 +175,7 @@ var E = function(e) {
   sortObjectKeys: p().oneOfType([p().func, p().bool]),
   isCircular: p().bool,
   expandable: p().bool
-}), (0, l.default)(E, "defaultProps", {
+}), (0, c.default)(E, "defaultProps", {
   data: [],
   circularCache: [],
   level: 0,

@@ -1,72 +1,72 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   useProgressBarColors: function() {
     return m
   },
   useQuestBarCompletionAnimation: function() {
-    return T
+    return C
   },
   useQuestBarSubtitle: function() {
-    return h
+    return _
   },
   useQuestBarTitle: function() {
-    return f
+    return h
   }
-}), s("47120");
-var a = s("470079"),
-  n = s("920906"),
-  l = s("442837"),
-  i = s("410030"),
-  r = s("706454"),
-  o = s("930153"),
-  u = s("113434"),
-  d = s("918701"),
-  c = s("566078"),
-  E = s("46140"),
-  _ = s("689938");
+}), n("47120");
+var a = n("470079"),
+  s = n("920906"),
+  l = n("442837"),
+  i = n("410030"),
+  r = n("706454"),
+  o = n("930153"),
+  u = n("113434"),
+  d = n("918701"),
+  c = n("566078"),
+  f = n("46140"),
+  E = n("689938");
 
-function f(e) {
-  var t, s;
+function h(e) {
+  var t, n;
   let a = (0, l.useStateFromStores)([r.default], () => r.default.locale),
-    n = (0, d.calculatePercentComplete)({
+    s = (0, d.calculatePercentComplete)({
       quest: e,
-      location: E.QuestsExperimentLocations.QUESTS_BAR
+      location: f.QuestsExperimentLocations.QUESTS_BAR
     });
-  if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return _.default.Messages.QUESTS_COMPLETION_COMPLETE;
-  if ((null === (s = e.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && n > 0) {
-    let e = (0, o.formatPercent)(a, n, {
+  if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return E.default.Messages.QUESTS_COMPLETION_COMPLETE;
+  if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && s > 0) {
+    let e = (0, o.formatPercent)(a, s, {
       roundingMode: "floor"
     });
-    return _.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
+    return E.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
       percent: e
     })
   }
-  return _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
+  return E.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
 }
 
-function h(e, t) {
-  var s;
-  let n = (0, u.useQuestFormattedDate)(c.SharedQuestFields.build(e.config).rewardsExpireAt),
+function _(e, t) {
+  var n;
+  let s = (0, u.useQuestFormattedDate)(c.SharedQuestFields.build(e.config).rewardsExpireAt),
     l = a.useMemo(() => (0, d.calculatePercentComplete)({
       quest: e,
-      location: E.QuestsExperimentLocations.QUESTS_BAR
+      location: f.QuestsExperimentLocations.QUESTS_BAR
     }), [e]);
-  return (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null ? _.default.Messages.QUESTS_CLAIM_BY_DATE.format({
-    expirationDate: n
+  return (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null ? E.default.Messages.QUESTS_CLAIM_BY_DATE.format({
+    expirationDate: s
   }) : t ? (0, d.getQuestsInstructionsToWinReward)({
     quest: e,
-    location: E.QuestsExperimentLocations.QUESTS_BAR,
+    location: f.QuestsExperimentLocations.QUESTS_BAR,
     useV2Variants: !0
   }) : l > 0 ? (0, d.getContextualEntrypointHeading)({
     quest: e,
-    location: E.QuestsExperimentLocations.QUESTS_BAR
-  }) : _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
+    location: f.QuestsExperimentLocations.QUESTS_BAR
+  }) : E.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
 }
 
-function T() {
+function C() {
   let [{
     spring: e
-  }, t] = (0, n.useSpring)(() => ({
+  }, t] = (0, s.useSpring)(() => ({
     spring: 0
   }));
   return {
@@ -84,13 +84,13 @@ function T() {
 
 function m(e) {
   var t;
-  let s = null !== (t = (0, i.useThemeIndex)()) && void 0 !== t ? t : 0,
+  let n = null !== (t = (0, i.useThemeIndex)()) && void 0 !== t ? t : 0,
     a = "var(--green-330)",
-    n = ["var(--background-tertiary)", "var(--interactive-normal)"],
-    l = e ? n[s] : ["#828288", "#CBCDD4"][s];
+    s = ["var(--background-tertiary)", "var(--interactive-normal)"],
+    l = e ? s[n] : ["#828288", "#CBCDD4"][n];
   return {
     backgroundTop: l,
-    backgroundBottom: e ? n[s] : ["#535356", "#8B8C95"][s],
+    backgroundBottom: e ? s[n] : ["#535356", "#8B8C95"][n],
     foreground: a,
     glow: e ? a : "#C4C1D66E"
   }

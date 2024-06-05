@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return m
+    return I
   }
 });
 var n = l("735250");
@@ -16,7 +16,7 @@ var a = l("442837"),
   c = l("981631"),
   f = l("689938");
 
-function m(e, t) {
+function I(e, t) {
   let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.GuildSettingsSections.ROLES;
   return (0, a.useStateFromStores)([d.default], () => d.default.canImpersonateRole(e, t)) ? (0, n.jsx)(s.MenuItem, {
     id: "view-as-role",

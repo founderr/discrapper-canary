@@ -18,7 +18,7 @@ function d(e) {
     message: t,
     channel: n,
     compact: d
-  } = e, c = (0, a.default)(t), E = t.application, f = (0, l.useUsernameHook)({
+  } = e, c = (0, a.default)(t), f = t.application, E = (0, l.useUsernameHook)({
     user: t.author,
     channelId: n.id,
     guildId: n.guild_id,
@@ -31,9 +31,9 @@ function d(e) {
     timestamp: t.timestamp,
     compact: d,
     children: (0, o.getApplicationSubscriptionSystemMessageContent)({
-      application: E,
+      application: f,
       username: c.nick,
-      usernameHook: f(c)
+      usernameHook: E(c)
     })
   })
 }

@@ -14,14 +14,14 @@ var a = s("735250"),
   T = s("82142"),
   _ = s("246946"),
   I = s("509545"),
-  f = s("55563"),
-  m = s("15887"),
-  N = s("581874"),
-  g = s("285952"),
-  h = s("366695"),
-  C = s("259580"),
-  O = s("572004"),
-  A = s("669079"),
+  N = s("55563"),
+  f = s("15887"),
+  g = s("581874"),
+  m = s("285952"),
+  C = s("366695"),
+  A = s("259580"),
+  h = s("572004"),
+  O = s("669079"),
   p = s("296848"),
   R = s("474936"),
   x = s("689938"),
@@ -41,9 +41,9 @@ class L extends n.PureComponent {
   }
   get copyButtonText() {
     switch (this.state.copyMode) {
-      case N.CopyInputModes.SUCCESS:
+      case g.CopyInputModes.SUCCESS:
         return x.default.Messages.BILLING_GIFT_COPIED;
-      case N.CopyInputModes.ERROR:
+      case g.CopyInputModes.ERROR:
         return x.default.Messages.FAILED;
       default:
         return x.default.Messages.COPY
@@ -59,19 +59,19 @@ class L extends n.PureComponent {
     } = this.props, {
       copyMode: s
     } = this.state;
-    return (0, a.jsxs)(g.default, {
-      direction: g.default.Direction.VERTICAL,
+    return (0, a.jsxs)(m.default, {
+      direction: m.default.Direction.VERTICAL,
       className: M.giftCodeRow,
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, a.jsx)(g.default, {
         className: M.codeText,
-        value: (0, A.getGiftCodeURL)(t.code),
+        value: (0, O.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
         mode: s,
-        supportsCopy: O.SUPPORTS_COPY,
+        supportsCopy: h.SUPPORTS_COPY,
         hideMessage: e ? x.default.Messages.GIFT_INVENTORY_HIDDEN : null,
         onCopy: this.handleCopy,
-        buttonColor: N.default.ButtonColors.BRAND,
-        buttonLook: N.default.ButtonLooks.FILLED
+        buttonColor: g.default.ButtonColors.BRAND,
+        buttonLook: g.default.ButtonLooks.FILLED
       }), (0, a.jsxs)("div", {
         className: M.subTextRow,
         children: [null != t.expiresAt ? (0, a.jsxs)(n.Fragment, {
@@ -88,25 +88,25 @@ class L extends n.PureComponent {
   }
   constructor(...e) {
     super(...e), D(this, "_copyModeTimeout", new o.Timeout), D(this, "state", {
-      copyMode: N.CopyInputModes.DEFAULT
+      copyMode: g.CopyInputModes.DEFAULT
     }), D(this, "handleCopy", e => {
       let {
         giftCode: t,
         sku: s
       } = this.props;
-      (0, A.trackGiftCodeCopy)(t, s);
+      (0, O.trackGiftCodeCopy)(t, s);
       try {
-        (0, O.copy)(e), this.setState({
-          copyMode: N.CopyInputModes.SUCCESS
+        (0, h.copy)(e), this.setState({
+          copyMode: g.CopyInputModes.SUCCESS
         })
       } catch (e) {
         this.setState({
-          copyMode: N.CopyInputModes.ERROR
+          copyMode: g.CopyInputModes.ERROR
         })
       }
       this._copyModeTimeout.start(1e3, () => {
         this.setState({
-          copyMode: N.CopyInputModes.DEFAULT
+          copyMode: g.CopyInputModes.DEFAULT
         })
       })
     })
@@ -131,9 +131,9 @@ class P extends n.PureComponent {
     })
   }
   renderGenerateGiftCodeRow() {
-    return (0, a.jsxs)(g.default, {
-      justify: g.default.Justify.BETWEEN,
-      align: g.default.Align.CENTER,
+    return (0, a.jsxs)(m.default, {
+      justify: m.default.Justify.BETWEEN,
+      align: m.default.Align.CENTER,
       className: M.generateCodeRow,
       children: [(0, a.jsx)("div", {
         className: M.codeText,
@@ -165,26 +165,26 @@ class P extends n.PureComponent {
     } = this.props, {
       isOpen: c
     } = this.state;
-    return (0, a.jsxs)(m.default, {
+    return (0, a.jsxs)(f.default, {
       className: l,
       children: [(0, a.jsx)(d.Clickable, {
         onClick: this.handleToggleOpen,
         className: M.card,
         onMouseEnter: () => this.setIsHovered(!0),
         onMouseLeave: () => this.setIsHovered(!1),
-        children: (0, a.jsx)(m.default.Header, {
+        children: (0, a.jsx)(f.default.Header, {
           splashArtURL: t.getSplashURL(512),
           children: (0, a.jsxs)("div", {
             className: M.cardHeader,
-            children: [(0, a.jsxs)(g.default, {
-              align: g.default.Align.CENTER,
+            children: [(0, a.jsxs)(m.default, {
+              align: m.default.Align.CENTER,
               children: [null != u ? (0, a.jsx)(S.default, {
                 giftStyle: u,
                 className: M.seasonalGiftBox,
                 shouldAnimate: this.state.isHovered
-              }) : (0, a.jsx)(h.default, {
+              }) : (0, a.jsx)(C.default, {
                 game: t,
-                size: h.default.Sizes.MEDIUM,
+                size: C.default.Sizes.MEDIUM,
                 skuId: i.id
               }), (0, a.jsxs)("div", {
                 className: M.headerText,
@@ -195,13 +195,13 @@ class P extends n.PureComponent {
                   })
                 })]
               })]
-            }), (0, a.jsx)(C.default, {
-              direction: c ? C.default.Directions.UP : C.default.Directions.DOWN,
+            }), (0, a.jsx)(A.default, {
+              direction: c ? A.default.Directions.UP : A.default.Directions.DOWN,
               className: M.expandIcon
             })]
           })
         })
-      }), c ? (0, a.jsx)(m.default.Body, {
+      }), c ? (0, a.jsx)(f.default.Body, {
         children: r ? (0, a.jsx)(d.Spinner, {
           className: M.spinner
         }) : (0, a.jsxs)(n.Fragment, {
@@ -244,12 +244,12 @@ class P extends n.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([f.default, _.default, T.default, c.default, I.default, E.default], e => {
+t.default = r.default.connectStores([N.default, _.default, T.default, c.default, I.default, E.default], e => {
   let {
     skuId: t,
     subscriptionPlanId: s,
     giftStyle: a
-  } = e, n = f.default.get(t);
+  } = e, n = N.default.get(t);
   if (null == n) throw Error("SKU was unavailable while rendering gift.");
   let l = T.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
   return {

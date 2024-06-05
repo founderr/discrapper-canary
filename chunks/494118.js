@@ -15,17 +15,17 @@ var a = l("780384"),
   u = l("981631"),
   c = l("689938"),
   f = l("217955"),
-  m = l("893916"),
-  I = l("408942");
+  I = l("893916"),
+  m = l("408942");
 
 function T(e) {
   let {
     followedChannelWebhooks: t,
     editedWebhook: l,
     selectableWebhookChannels: T,
-    errors: N,
-    canNavigate: E
-  } = e, S = (0, i.default)();
+    errors: E,
+    canNavigate: N
+  } = e, _ = (0, i.default)();
   return (0, n.jsxs)(s.FormSection, {
     children: [(0, n.jsx)(s.FormText, {
       type: s.FormTextTypes.DESCRIPTION,
@@ -38,10 +38,10 @@ function T(e) {
       webhooks: t,
       editedWebhook: l,
       selectableWebhookChannels: T,
-      errors: N,
-      canNavigate: E
+      errors: E,
+      canNavigate: N
     }) : function(e, t) {
-      let l = (0, a.isThemeDark)(e) ? m : I;
+      let l = (0, a.isThemeDark)(e) ? I : m;
       return (0, n.jsxs)(r.default, {
         direction: r.default.Direction.VERTICAL,
         align: r.default.Align.CENTER,
@@ -58,6 +58,6 @@ function T(e) {
           children: c.default.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON
         })]
       })
-    }(S, () => open(o.default.getArticleURL(u.HelpdeskArticles.CHANNEL_FOLLOWING)))]
+    }(_, () => open(o.default.getArticleURL(u.HelpdeskArticles.CHANNEL_FOLLOWING)))]
   })
 }

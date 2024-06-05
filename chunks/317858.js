@@ -16,11 +16,11 @@ var a = n("470079"),
   f = n("340895"),
   E = n("358085"),
   h = n("998502"),
-  C = n("252618"),
-  _ = n("981631"),
+  _ = n("252618"),
+  C = n("981631"),
   m = n("689938");
 let S = new Set(["Blink", "Gecko", "WebKit"]),
-  p = _.NOOP;
+  p = C.NOOP;
 if (E.isPlatformEmbedded) p = e => h.default.setBadge(e);
 else if (S.has(r().layout)) {
   let e = new(l())({
@@ -28,7 +28,7 @@ else if (S.has(r().layout)) {
   });
   p = t => {
     try {
-      (0, C.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
+      (0, _.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
     } catch (e) {}
   }
 }
@@ -46,7 +46,7 @@ function I() {
   a.useEffect(() => {
     if (!e) return;
     let t = h.default.bounceDock("critical"),
-      n = (0, C.flashPageTitle)({
+      n = (0, _.flashPageTitle)({
         messages: [m.default.Messages.INCOMING_CALL],
         count: 50
       });

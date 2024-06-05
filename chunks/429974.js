@@ -13,16 +13,16 @@ var s = n("481060"),
   f = n("626135"),
   E = n("621853"),
   h = n("981631"),
-  C = n("616922");
-let _ = null;
+  _ = n("616922");
+let C = null;
 async function m(e) {
   var t, l, i, m;
   let {
     userId: S,
     section: p,
     guildId: I = h.ME,
-    channelId: g,
-    friendToken: T,
+    channelId: T,
+    friendToken: g,
     autoFocusNote: A,
     analyticsLocation: N
   } = e, v = c.default.getUser(S);
@@ -30,16 +30,16 @@ async function m(e) {
   let R = E.default.getUserProfile(S),
     O = u.default.getPrimaryActivity(S),
     L = u.default.getStatus(S),
-    P = u.default.isMobileOnline(S),
+    M = u.default.isMobileOnline(S),
     {
-      party: M,
-      assets: y,
-      application_id: D
+      party: P,
+      assets: x,
+      application_id: y
     } = null != O ? O : {},
-    x = null != D ? o.default.getApplication(D) : null,
-    b = P ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
+    D = null != y ? o.default.getApplication(y) : null,
+    b = M ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
     U = L === h.StatusTypes.ONLINE ? b : L;
-  _ = await (0, s.openModalLazy)(async () => {
+  C = await (0, s.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("824")]).then(n.bind(n, "304113"));
@@ -49,23 +49,23 @@ async function m(e) {
       user: v,
       autoFocusNote: A,
       guildId: I,
-      friendToken: T,
+      friendToken: g,
       initialSection: p,
-      channelId: g
+      channelId: T
     })
   }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
     guild_id: I !== h.ME ? I : null,
-    channel_id: g,
+    channel_id: T,
     other_user_id: S,
     application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
     application_name: null == O ? void 0 : O.name,
-    sku_id: null !== (i = null == x ? void 0 : x.primarySkuId) && void 0 !== i ? i : null,
+    sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
-    has_images: !!(null !== (m = null == y ? void 0 : y.large_image) && void 0 !== m ? m : null == y ? void 0 : y.small_image),
-    party_max: null == M ? void 0 : null === (t = M.size) || void 0 === t ? void 0 : t[1],
-    party_id: null == M ? void 0 : M.id,
-    party_platform: (0, C.isSpotifyParty)(null == M ? void 0 : M.id) ? h.PlatformTypes.SPOTIFY : null,
+    has_images: !!(null !== (m = null == x ? void 0 : x.large_image) && void 0 !== m ? m : null == x ? void 0 : x.small_image),
+    party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
+    party_id: null == P ? void 0 : P.id,
+    party_platform: (0, _.isSpotifyParty)(null == P ? void 0 : P.id) ? h.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(O),
     profile_user_status: U,
     profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,
@@ -75,7 +75,7 @@ async function m(e) {
 }
 
 function S() {
-  null != _ && (0, s.closeModal)(_), _ = null
+  null != C && (0, s.closeModal)(C), C = null
 }
 class p extends i.default {
   _initialize() {

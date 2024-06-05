@@ -20,8 +20,8 @@ var r = n("470079"),
   a = n("36459"),
   l = n("866894"),
   s = n("273504"),
-  T = n("981631");
-let d = {},
+  d = n("981631");
+let T = {},
   E = e => {
     let t = {
       [s.AutomodTriggerType.KEYWORD]: [],
@@ -51,12 +51,12 @@ let d = {},
         triggerType: a
       } = n, {
         rules: s
-      } = t(), T = null !== (r = s[i]) && void 0 !== r ? r : {}, d = null !== (o = T[a]) && void 0 !== o ? o : [], E = d.some(e => e.id === u), A = d.filter(e => (!(0, l.isDefaultRuleId)(e.id) || e.triggerType !== a) && !0), _ = E ? A.map(e => e.id === u ? n : e) : [...A, n];
+      } = t(), d = null !== (r = s[i]) && void 0 !== r ? r : {}, T = null !== (o = d[a]) && void 0 !== o ? o : [], E = T.some(e => e.id === u), A = T.filter(e => (!(0, l.isDefaultRuleId)(e.id) || e.triggerType !== a) && !0), _ = E ? A.map(e => e.id === u ? n : e) : [...A, n];
       e({
         rules: {
           ...s,
           [i]: {
-            ...T,
+            ...d,
             [a]: _
           }
         },
@@ -84,10 +84,10 @@ let d = {},
       if (function(e) {
           var t;
           let n = Date.now(),
-            r = null !== (t = d[e]) && void 0 !== t ? t : 0;
+            r = null !== (t = T[e]) && void 0 !== t ? t : 0;
           return n - r > 2e4
         }(n)) {
-        d[n] = Date.now();
+        T[n] = Date.now();
         try {
           let r = await (0, a.fetchAutomodRules)(n),
             o = E(r),
@@ -136,7 +136,7 @@ function O(e) {
   return A(t => {
     var n;
     return {
-      rulesByTriggerType: null !== (n = t.rules[null != e ? e : T.EMPTY_STRING_SNOWFLAKE_ID]) && void 0 !== n ? n : {},
+      rulesByTriggerType: null !== (n = t.rules[null != e ? e : d.EMPTY_STRING_SNOWFLAKE_ID]) && void 0 !== n ? n : {},
       updateRule: t.updateRule,
       removeRule: t.removeRule
     }

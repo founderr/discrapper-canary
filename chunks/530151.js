@@ -12,25 +12,25 @@ var a = n("735250"),
   f = n("481060"),
   E = n("570140"),
   h = n("239091"),
-  C = n("51025"),
-  _ = n("785547"),
+  _ = n("51025"),
+  C = n("785547"),
   m = n("730749"),
   S = n("112724"),
   p = n("812206"),
   I = n("44315"),
-  g = n("210887"),
-  T = n("283595"),
+  T = n("210887"),
+  g = n("283595"),
   A = n("417363"),
   N = n("941128"),
   v = n("451478"),
   R = n("285952"),
   O = n("366695"),
   L = n("366966"),
-  P = n("151011"),
-  M = n("774832"),
-  y = n("465670"),
-  D = n("786048"),
-  x = n("897353"),
+  M = n("151011"),
+  P = n("774832"),
+  x = n("465670"),
+  y = n("786048"),
+  D = n("897353"),
   b = n("424218"),
   U = n("780570"),
   j = n("353042"),
@@ -196,7 +196,7 @@ function z(e, t, n, a, s) {
   return null
 }
 
-function q(e) {
+function Q(e) {
   let {
     type: t,
     stage: n,
@@ -255,7 +255,7 @@ function q(e) {
   }
   throw Error("Invalid Dispatch stage")
 }
-let Q = {
+let q = {
   NAME: "name",
   PROGRESS: "progress",
   ACTIONS: "actions"
@@ -312,7 +312,7 @@ class Z extends s.PureComponent {
     } = this.props;
     return this.renderBody({
       message: k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-        remove: () => C.removeFinished(e.applicationId, e.branchId)
+        remove: () => _.removeFinished(e.applicationId, e.branchId)
       }),
       foregroundColor: (0, c.isThemeLight)(e.theme) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       percent: 100
@@ -401,7 +401,7 @@ class Z extends s.PureComponent {
       i = Math.floor(l);
     return this.renderBody({
       percent: l,
-      message: q({
+      message: Q({
         type: s,
         stage: a,
         percent: i,
@@ -453,7 +453,7 @@ class Z extends s.PureComponent {
         u = U.calculateProgressPercentage(null != r ? r : 0, l),
         d = e[e.length - 1] / t * 1e3,
         c = l - s,
-        f = q({
+        f = Q({
           type: i,
           stage: a,
           percent: Math.floor(o),
@@ -469,23 +469,23 @@ class Z extends s.PureComponent {
   }
 }
 let X = () => (0, a.jsx)(Y, {
-    icon: x.default,
+    icon: D.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-    onClick: () => C.resume()
+    onClick: () => _.resume()
   }),
   J = () => (0, a.jsx)(Y, {
-    icon: D.default,
+    icon: y.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-    onClick: () => C.pause()
+    onClick: () => _.pause()
   }),
   $ = e => {
     let {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: M.default,
+      icon: P.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-      onClick: () => C.moveUp(t.applicationId, t.branchId)
+      onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
   },
   ee = e => {
@@ -493,13 +493,13 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: y.default,
+      icon: x.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-      onClick: () => C.cancel(t.applicationId, t.branchId)
+      onClick: () => _.cancel(t.applicationId, t.branchId)
     })
   },
   et = [{
-    key: Q.NAME,
+    key: q.NAME,
     cellClassName: B.nameCell,
     render: e => (0, a.jsxs)(R.default, {
       align: R.default.Align.CENTER,
@@ -513,7 +513,7 @@ let X = () => (0, a.jsx)(Y, {
       })]
     })
   }, {
-    key: Q.PROGRESS,
+    key: q.PROGRESS,
     cellClassName: B.progressCell,
     headerCellClassName: B.progressCellHeader,
     bodyCellClassName: B.progressCellBody,
@@ -522,11 +522,11 @@ let X = () => (0, a.jsx)(Y, {
       cellProps: t
     })
   }, {
-    key: Q.ACTIONS,
+    key: q.ACTIONS,
     cellClassName: B.actionsCell,
     render(e, t) {
       let n, s;
-      return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(_.default, {
+      return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(C.default, {
         libraryApplication: e.libraryApplication,
         size: f.Button.Sizes.SMALL,
         className: B.gameActionButton,
@@ -558,7 +558,7 @@ class en extends s.PureComponent {
     } = this.props;
     e.forEach(e => {
       e.finished && E.default.wait(() => {
-        C.removeFinished(e.applicationId, e.branchId)
+        _.removeFinished(e.applicationId, e.branchId)
       })
     }), window.removeEventListener("resize", this.throttledUpdateHeight), this.isUnmounted = !0
   }
@@ -587,7 +587,7 @@ class en extends s.PureComponent {
           color: w.Color.BLUE_345,
           animate: s
         })]
-      }), (0, a.jsx)(P.default, {
+      }), (0, a.jsx)(M.default, {
         hasHeader: !1,
         columns: et,
         data: e,
@@ -643,18 +643,18 @@ function ea(e, t, n, a) {
       branchId: r,
       state: u,
       application: o,
-      libraryApplication: T.default.getLibraryApplication(i, r),
+      libraryApplication: g.default.getLibraryApplication(i, r),
       finished: t,
       index: l
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, g.default, v.default], () => {
+t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, T.default, v.default], () => {
   let e = ea(N.default.activeItems, !1, p.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, p.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
-    theme: g.default.theme
+    theme: T.default.theme
   }
 })((0, m.default)(en)))

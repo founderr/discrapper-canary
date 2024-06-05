@@ -26,11 +26,11 @@ var a = n("735250"),
   I = n("616286"),
   A = n("961048"),
   v = n("179424"),
-  x = n("786915"),
-  N = n("975146"),
+  N = n("786915"),
+  x = n("975146"),
   M = n("991617"),
-  y = n("606304"),
-  R = n("502568"),
+  R = n("606304"),
+  y = n("502568"),
   L = n("805009"),
   O = n("368666"),
   j = n("358221"),
@@ -46,7 +46,7 @@ function H(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, l = Date.now(), s = (0, d.useStateFromStores)([y.default, j.default], () => o()(y.default.getSpeakers()).map(e => j.default.getParticipant(t, e)).filter(e => null != e && e.type === U.ParticipantTypes.USER && e.speaking && !(0, g.default)(e)).sortBy(e => -y.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+  } = e, l = Date.now(), s = (0, d.useStateFromStores)([R.default, j.default], () => o()(R.default.getSpeakers()).map(e => j.default.getParticipant(t, e)).filter(e => null != e && e.type === U.ParticipantTypes.USER && e.speaking && !(0, g.default)(e)).sortBy(e => -R.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
   return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
     children: s.map((e, t) => (0, a.jsx)(c.Tooltip, {
       position: "bottom",
@@ -77,7 +77,7 @@ function B(e) {
     isChatOpen: r,
     exitFullScreen: o
   } = e, g = n.id, {
-    voiceParticipantsHidden: y,
+    voiceParticipantsHidden: R,
     selectedParticipant: L,
     userParticipantCount: w
   } = (0, d.useStateFromStoresObject)([j.default], () => ({
@@ -95,7 +95,7 @@ function B(e) {
   if (B) {
     let e = (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(L.id) : void 0,
       t = (null == L ? void 0 : L.type) === U.ParticipantTypes.ACTIVITY ? L.id : void 0;
-    Z.push((0, a.jsx)(x.default, {
+    Z.push((0, a.jsx)(N.default, {
       className: k.button,
       channel: n,
       applicationId: t,
@@ -104,7 +104,7 @@ function B(e) {
       analyticsLocation: n.type === F.ChannelTypes.GUILD_VOICE ? F.AnalyticsPages.GUILD_CHANNEL : F.AnalyticsPages.DM_CHANNEL
     }, "invite-button"))
   }
-  return y && Z.push((0, a.jsx)(H, {
+  return R && Z.push((0, a.jsx)(H, {
     channelId: g,
     guildId: n.guild_id
   }, "current-speaker")), Z.push((0, a.jsx)(h.default, {
@@ -119,7 +119,7 @@ function B(e) {
     participant: L,
     showQuality: !0,
     premiumIndicator: Y
-  }, "live-indicator"))), y && Z.push((0, a.jsx)(c.Popout, {
+  }, "live-indicator"))), R && Z.push((0, a.jsx)(c.Popout, {
     position: "bottom",
     renderPopout: () => (0, a.jsx)(T.default, {
       children: (0, a.jsx)(b.default, {
@@ -130,7 +130,7 @@ function B(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.createElement)(N.default, {
+      return (0, l.createElement)(x.default, {
         ...e,
         isActive: n,
         count: w,
@@ -177,7 +177,7 @@ function B(e) {
         className: k.lastButton
       })
     }
-  }, "more-options-popout")), !r && (Z.push((0, a.jsx)(R.default.Divider, {
+  }, "more-options-popout")), !r && (Z.push((0, a.jsx)(y.default.Divider, {
     className: k.divider
   }, "divider")), Z.push((0, a.jsx)(I.ChatButton, {
     channelId: n.id,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return N
   }
 }), n("653041");
 var a = n("735250"),
@@ -27,15 +27,15 @@ var a = n("735250"),
   A = n("981631"),
   v = n("853085");
 
-function x(e) {
+function N(e) {
   let {
     participants: t,
     onClick: n,
-    onDoubleClick: x,
-    onContextMenu: N,
+    onDoubleClick: N,
+    onContextMenu: x,
     channel: M,
-    className: y,
-    inCall: R,
+    className: R,
+    inCall: y,
     totalNumberOfParticipants: L,
     paused: O = !1
   } = e, j = (0, o.useAppContext)() === A.AppContext.POPOUT, P = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
@@ -63,9 +63,9 @@ function x(e) {
       className: v.tile,
       paused: O,
       onClick: n,
-      onDoubleClick: x,
-      onContextMenu: N,
-      inCall: R,
+      onDoubleClick: N,
+      onContextMenu: x,
+      inCall: y,
       width: t,
       inPopout: j
     }, e.id));
@@ -105,7 +105,7 @@ function x(e) {
     return null !== (n = null === (t = U[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : "empty-tile"
   }, [U]);
   return (0, a.jsx)(g.default, {
-    className: y,
+    className: R,
     keyExtractor: z,
     paddingTop: 64,
     paddingBottom: 64,

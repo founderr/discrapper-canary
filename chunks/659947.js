@@ -18,18 +18,18 @@ var a = s("735250"),
   T = s("107828"),
   _ = s("727785"),
   I = s("689938"),
-  f = s("158200");
+  N = s("158200");
 
-function m() {}
-let N = [_.AutocompleterResultTypes.VOICE_CHANNEL];
+function f() {}
+let g = [_.AutocompleterResultTypes.VOICE_CHANNEL];
 
-function g(e) {
+function m(e) {
   e.setOptions({
     voiceChannelGuildFilter: null
   }), e.setLimit(1 / 0)
 }
 
-function h(e) {
+function C(e) {
   let {
     height: t
   } = e;
@@ -40,25 +40,25 @@ function h(e) {
   })
 }
 
-function C() {
-  return (0, a.jsx)(h, {
+function A() {
+  return (0, a.jsx)(C, {
     height: 16
   }, "footer")
 }
 
-function O() {
-  return (0, a.jsx)(h, {
+function h() {
+  return (0, a.jsx)(C, {
     height: 8
   }, "header")
 }
 
-function A() {
+function O() {
   return (0, a.jsx)("div", {
-    className: f.voiceListSearchEmpty,
+    className: N.voiceListSearchEmpty,
     children: (0, a.jsx)(i.Text, {
       variant: "text-md/medium",
       color: "text-muted",
-      className: f.noVoiceChannelSelected,
+      className: N.noVoiceChannelSelected,
       children: I.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
     })
   })
@@ -85,11 +85,11 @@ function p(e) {
   }, []);
   return (0, a.jsx)(i.FormSection, {
     title: I.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
-    className: f.channelIdSection,
+    className: N.channelIdSection,
     children: (0, a.jsxs)(E.default, {
       align: E.default.Align.STRETCH,
       children: [(0, a.jsx)("div", {
-        className: f.selectedVoiceChannel,
+        className: N.selectedVoiceChannel,
         children: (0, a.jsx)(x, {
           channelId: d
         })
@@ -110,8 +110,8 @@ function R(e) {
     transitionState: t,
     onClose: s,
     onSelect: r
-  } = e, E = n.useId(), m = n.useRef(null), {
-    mouseFocusEnabled: h,
+  } = e, E = n.useId(), f = n.useRef(null), {
+    mouseFocusEnabled: C,
     enableMouseFocus: p,
     disableMouseFocus: R
   } = function() {
@@ -133,8 +133,8 @@ function R(e) {
     queryResults: D
   } = (0, o.default)({
     visible: !0,
-    autocompleterResultTypes: N,
-    autocompleterBeforeCreateSearchContext: g
+    autocompleterResultTypes: g,
+    autocompleterBeforeCreateSearchContext: m
   }), L = function(e) {
     let t = "" !== e,
       s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
@@ -150,7 +150,7 @@ function R(e) {
     return t ? null : s
   }(x), {
     focusedIndex: P,
-    setFocusedIndex: v
+    setFocusedIndex: b
   } = function(e) {
     let [t, s] = n.useState(0), a = n.useRef(e);
     return e !== a.current && 0 !== t && s(0), n.useEffect(() => void(a.current = e)), {
@@ -161,13 +161,13 @@ function R(e) {
   n.useEffect(() => {
     let {
       current: e
-    } = m;
+    } = f;
     !(null == e || e.isItemVisible(0, P, !0)) && e.scrollToIndex({
       section: 0,
       row: P
     })
   }, [P]);
-  let b = null != L ? L.length : D.length,
+  let v = null != L ? L.length : D.length,
     U = (() => {
       if (null != L) {
         var e;
@@ -177,14 +177,14 @@ function R(e) {
       if ((null == t ? void 0 : t.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
-    className: f.voiceModalContainer,
+    className: N.voiceModalContainer,
     onMouseMove: p,
     children: (0, a.jsxs)(i.ModalRoot, {
       transitionState: t,
       size: i.ModalSize.MEDIUM,
-      className: f.voiceModalRootContainer,
+      className: N.voiceModalRootContainer,
       children: [(0, a.jsx)("div", {
-        className: f.inputWrapper,
+        className: N.inputWrapper,
         children: (0, a.jsx)(i.TextInput, {
           value: x,
           onChange: M,
@@ -205,26 +205,26 @@ function R(e) {
                 break
               }
               case "arrowup":
-                0 === P ? v(b - 1) : v(P - 1);
+                0 === P ? b(v - 1) : b(P - 1);
                 break;
               case "arrowdown":
-                P >= b - 1 ? v(0) : v(P + 1)
+                P >= v - 1 ? b(0) : b(P + 1)
             }
           },
           placeholder: I.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
           role: "combobox",
           "aria-controls": E,
-          "aria-expanded": b > 0,
-          "aria-activedescendant": b > 0 && null != U ? U : void 0,
+          "aria-expanded": v > 0,
+          "aria-activedescendant": v > 0 && null != U ? U : void 0,
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === b && "" !== x && (0, a.jsx)(A, {}), (b > 0 || "" === x) && (0, a.jsx)(i.ListThin, {
+      }), 0 === v && "" !== x && (0, a.jsx)(O, {}), (v > 0 || "" === x) && (0, a.jsx)(i.ListThin, {
         innerId: E,
         innerRole: "listbox",
         "aria-label": I.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
-        ref: m,
-        sections: [b],
+        ref: f,
+        sections: [v],
         renderRow: function(e) {
           let {
             row: t
@@ -241,22 +241,22 @@ function R(e) {
             channel: n,
             category: l,
             focused: P === t,
-            onMouseEnter: () => h.current && v(t),
+            onMouseEnter: () => C.current && b(t),
             onClick: () => {
               r(n.id), s()
             },
-            onFocus: () => v(t),
+            onFocus: () => b(t),
             children: null != i ? (0, a.jsx)("div", {
-              className: f.guildName,
+              className: N.guildName,
               children: i.name
             }) : null
           }, n.id)
         },
-        renderListHeader: O,
-        renderFooter: C,
+        renderListHeader: h,
+        renderFooter: A,
         sectionHeight: 0,
         rowHeight: 34,
-        className: f.voiceChannelList,
+        className: N.voiceChannelList,
         listHeaderHeight: 8,
         footerHeight: 16
       })]
@@ -286,18 +286,18 @@ function x(e) {
   return null == s ? (0, a.jsx)(i.Text, {
     variant: "text-md/medium",
     color: "text-muted",
-    className: f.noVoiceChannelSelected,
+    className: N.noVoiceChannelSelected,
     children: I.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
   }) : (0, a.jsx)(T.Channel, {
     channel: s,
     id: s.id,
     category: n,
-    onClick: m,
-    onFocus: m,
-    onMouseEnter: m,
+    onClick: f,
+    onFocus: f,
+    onMouseEnter: f,
     focused: !1,
     children: null != r ? (0, a.jsx)("div", {
-      className: f.guildName,
+      className: N.guildName,
       children: r.name
     }) : null
   })

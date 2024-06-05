@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return g
   }
 }), s("47120");
 var a, n, l = s("735250"),
@@ -16,23 +16,23 @@ var a, n, l = s("735250"),
   T = s("153124"),
   _ = s("689938"),
   I = s("737646"),
-  f = s("611273");
-let m = /^\d+$|^$/;
+  N = s("611273");
+let f = /^\d+$|^$/;
 (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
 
-function N(e) {
+function g(e) {
   let {
     onClose: t,
     transitionState: s
   } = e, {
     authorizedApplicationId: a,
     authorizationError: n,
-    authorizing: N
+    authorizing: g
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     authorizedApplicationId: S.default.testModeApplicationId,
     authorizationError: S.default.error,
     authorizing: S.default.isFetchingAuthorization
-  })), [g, h] = i.useState(null != a ? a : ""), [C, O] = i.useState("8080"), [A, p] = i.useState("localhost"), R = (0, T.useUID)(), x = m.test(g);
+  })), [m, C] = i.useState(null != a ? a : ""), [A, h] = i.useState("8080"), [O, p] = i.useState("localhost"), R = (0, T.useUID)(), x = f.test(m);
   async function M() {
     u.resetError();
     let e = function(e, t, s) {
@@ -43,13 +43,13 @@ function N(e) {
         case "proxy":
           return (0, c.default)(s)
       }
-    }(A, C, g);
-    null != await u.authorizeAndSetTestModeApplication(g, e) && t()
+    }(O, A, m);
+    null != await u.authorizeAndSetTestModeApplication(m, e) && t()
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
-  let D = null != a && a === g,
+  let D = null != a && a === m,
     L = D ? function() {
-      u.reset(), h(""), p(null)
+      u.reset(), C(""), p(null)
     } : M;
   return (0, l.jsxs)(o.ModalRoot, {
     "aria-labelledby": R,
@@ -60,7 +60,7 @@ function N(e) {
       children: [(0, l.jsx)(o.FormTitle, {
         id: R,
         tag: "h1",
-        className: f.marginReset,
+        className: N.marginReset,
         children: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
       }), (0, l.jsx)(o.ModalCloseButton, {
         onClick: t
@@ -68,11 +68,11 @@ function N(e) {
     }), (0, l.jsxs)(o.ModalContent, {
       className: I.modalContent,
       children: [(0, l.jsx)(o.FormText, {
-        className: f.marginBottom20,
+        className: N.marginBottom20,
         type: o.FormText.Types.DESCRIPTION,
         children: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
       }), null == n ? null : (0, l.jsx)(o.FormErrorBlock, {
-        className: f.marginBottom20,
+        className: N.marginBottom20,
         children: n
       }), (0, l.jsx)("form", {
         onSubmit: e => {
@@ -86,20 +86,20 @@ function N(e) {
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
-              value: g,
+              value: m,
               maxLength: 19,
               error: x ? null : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
               onChange: function(e) {
-                h(e)
+                C(e)
               },
-              disabled: N
+              disabled: g
             })
           }), (0, l.jsx)(o.FormItem, {
             className: I.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
-              isDisabled: !x || "" === g,
-              value: A,
+              isDisabled: !x || "" === m,
+              value: O,
               options: [{
                 value: "localhost",
                 label: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
@@ -114,20 +114,20 @@ function N(e) {
               },
               placeholder: "URL Origin Type"
             })
-          }), "localhost" !== A ? null : (0, l.jsx)(o.FormItem, {
+          }), "localhost" !== O ? null : (0, l.jsx)(o.FormItem, {
             className: I.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
-              value: C,
+              value: A,
               maxLength: 5,
-              onChange: e => O(e),
-              disabled: N
+              onChange: e => h(e),
+              disabled: g
             })
           }), (0, l.jsx)(o.Button, {
-            submitting: N,
+            submitting: g,
             type: "submit",
-            disabled: !x || 0 === g.length || "localhost" === A && 0 === C.length,
+            disabled: !x || 0 === m.length || "localhost" === O && 0 === A.length,
             color: D ? o.Button.Colors.RED : o.Button.Colors.GREEN,
             children: D ? _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]

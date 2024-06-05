@@ -33,13 +33,13 @@ var a = s("735250"),
   M = s("480608"),
   D = s("243730"),
   v = s("130341"),
-  G = s("970129"),
-  j = s("712181"),
+  j = s("970129"),
+  G = s("712181"),
   U = s("203377"),
   P = s("981631"),
   b = s("689938"),
-  y = s("540356"),
-  B = s("793577");
+  B = s("540356"),
+  y = s("793577");
 let F = "DRAGGABLE_ROLE";
 
 function H(e) {
@@ -69,7 +69,7 @@ function H(e) {
       handleDragStart: h,
       handleDragReset: C,
       handleDragComplete: R
-    } = (0, j.default)(N),
+    } = (0, G.default)(N),
     x = l.useCallback(e => {
       var l;
       let {
@@ -103,11 +103,11 @@ function H(e) {
 
 function k() {
   return (0, a.jsxs)("div", {
-    className: y.emptyRoles,
+    className: B.emptyRoles,
     children: [(0, a.jsx)("div", {
-      className: B.dragSpacing
+      className: y.dragSpacing
     }), (0, a.jsx)(x.default, {}), (0, a.jsx)(u.Text, {
-      className: y.emptyRolesText,
+      className: B.emptyRolesText,
       variant: "text-md/semibold",
       color: "text-muted",
       children: b.default.Messages.ROLE_LIST_EMPTY
@@ -129,8 +129,8 @@ function w(e) {
     disableHover: M,
     disableDrag: D,
     setEditRoleId: v,
-    setSelectedSection: j
-  } = e, P = (0, G.useLockTooltip)(E, S, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
+    setSelectedSection: G
+  } = e, P = (0, j.useLockTooltip)(E, S, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
     type: F,
     item: () => (O(d.id), {
       id: d.id,
@@ -180,7 +180,7 @@ function w(e) {
   }, [E, d]), J = (0, T.useHasGuildRoleItems)(E, d);
   if (W) return (0, a.jsx)("div", {
     ref: z,
-    className: i()(y.roleRow, y.roleRowDragging)
+    className: i()(B.roleRow, B.roleRowDragging)
   });
 
   function q() {
@@ -188,13 +188,13 @@ function w(e) {
   }
 
   function $() {
-    q(), j(U.GuildSettingsRoleEditSections.MEMBERS)
+    q(), G(U.GuildSettingsRoleEditSections.MEMBERS)
   }
   return (0, a.jsxs)(u.Clickable, {
-    className: i()(y.roleRow, {
-      [y.roleRowDisableHover]: M,
-      [y.containerDragBefore]: null != Z && m < Z,
-      [y.containerDragAfter]: null != Z && m > Z
+    className: i()(B.roleRow, {
+      [B.roleRowDisableHover]: M,
+      [B.containerDragBefore]: null != Z && m < Z,
+      [B.containerDragAfter]: null != Z && m > Z
     }),
     onClick: q,
     onContextMenu: Q,
@@ -205,34 +205,34 @@ function w(e) {
       count: "".concat(x)
     }),
     children: [(0, a.jsx)("div", {
-      className: i()(y.dragIcon, B.dragSpacing, {
-        [y.dragIconHidden]: H || D
+      className: i()(B.dragIcon, y.dragSpacing, {
+        [B.dragIconHidden]: H || D
       }),
       onMouseEnter: () => w(!0),
       onMouseLeave: () => w(!1),
       children: (0, a.jsx)(g.default, {})
     }), (0, a.jsxs)("div", {
-      className: i()(y.roleNameContainer, B.roleNameSpacing),
+      className: i()(B.roleNameContainer, y.roleNameSpacing),
       children: [(null === (t = d.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? (0, a.jsx)(_.default, {
-        className: y.roleFlowerStar,
+        className: B.roleFlowerStar,
         color: d.colorString,
         size: 24
       }) : (0, a.jsx)(V, {
         guildId: E.id,
         role: d,
         size: 24,
-        className: y.roleIcon,
-        defaultIconClassName: y.shield
-      }), null != P ? (0, a.jsx)(G.default, {
-        className: y.lock,
+        className: B.roleIcon,
+        defaultIconClassName: B.shield
+      }), null != P ? (0, a.jsx)(j.default, {
+        className: B.lock,
         tooltipText: P
       }) : null, (0, a.jsx)(u.Text, {
-        className: y.roleName,
+        className: B.roleName,
         color: "header-primary",
         variant: "text-md/medium",
         children: d.name
       }), (null === (n = d.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null && (0, a.jsx)(f.default, {
-        className: y.subscriptionRoleIcon,
+        className: B.subscriptionRoleIcon,
         "aria-label": b.default.Messages.GUILD_ROLE_SUBSCRIPTION_PREMIUM_ROLE_ICON_LABEL
       }), (null === (o = d.tags) || void 0 === o ? void 0 : o.is_guild_product_role) === !0 && (0, a.jsx)(I.default, {})]
     }), (0, a.jsx)(u.Tooltip, {
@@ -243,22 +243,22 @@ function w(e) {
       position: "right",
       children: e => (0, a.jsxs)(u.Clickable, {
         ...e,
-        className: i()(y.memberCountContainer, B.memberSpacing),
+        className: i()(B.memberCountContainer, y.memberSpacing),
         onClick: $,
         children: [(0, a.jsx)(u.Text, {
           variant: "text-md/normal",
           color: "none",
           children: x
         }), (0, a.jsx)(L.default, {
-          className: y.person,
+          className: B.person,
           width: 20,
           height: 20
         })]
       })
     }), (0, a.jsxs)("div", {
-      className: i()(y.buttonsContainer, B.buttonsSpacing),
+      className: i()(B.buttonsContainer, y.buttonsSpacing),
       children: [(0, a.jsx)(N.default, {
-        className: i()(y.circleButton, y.editButton),
+        className: i()(B.circleButton, B.editButton),
         tooltip: H ? b.default.Messages.VIEW : b.default.Messages.EDIT,
         color: N.CircleIconButtonColors.SECONDARY,
         size: N.CircleIconButtonSizes.SIZE_36,
@@ -271,7 +271,7 @@ function w(e) {
         }),
         onClick: q
       }), (0, a.jsx)(N.default, {
-        className: y.circleButton,
+        className: B.circleButton,
         tooltip: b.default.Messages.MORE,
         color: N.CircleIconButtonColors.SECONDARY,
         size: N.CircleIconButtonSizes.SIZE_36,

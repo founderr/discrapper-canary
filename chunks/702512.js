@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   DROPS_GAMES: function() {
-    return E
+    return f
   },
   DROPS_PLATFORMS: function() {
     return a
@@ -46,7 +46,7 @@ let a = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
   },
   d = "YYYY-MM-DD HH:mm",
   c = "1022633972510752774",
-  E = {
+  f = {
     [r.FORTNITE]: {
       title: "Fortnite",
       gameSearchTerm: u[r.FORTNITE],

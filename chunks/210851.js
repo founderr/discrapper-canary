@@ -14,7 +14,7 @@ t.default = function(e) {
     initialValue: c,
     onFileChange: S,
     title: E
-  } = e, [T, _] = n.useState(null), [I, f] = n.useState(!1);
+  } = e, [T, _] = n.useState(null), [I, N] = n.useState(!1);
   return (0, a.jsxs)(i.FormItem, {
     children: [(0, a.jsx)(i.FormTitle, {
       tag: i.FormTitleTags.H5,
@@ -39,10 +39,10 @@ t.default = function(e) {
       placeholder: "Select an asset",
       onFileSelect: function(e) {
         if (_(null != e ? e : null), null == e) return;
-        f(!0);
+        N(!0);
         let t = new FileReader;
         t.onload = function() {
-          "string" == typeof t.result && (S(d, t.result), f(!1))
+          "string" == typeof t.result && (S(d, t.result), N(!1))
         }, t.onerror = function(e) {
           console.error(e)
         }, t.readAsDataURL(e)

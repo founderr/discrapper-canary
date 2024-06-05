@@ -13,8 +13,8 @@ var s = n("481060"),
   f = n("104494"),
   E = n("29920"),
   h = n("786397"),
-  C = n("248042"),
-  _ = n("318199"),
+  _ = n("248042"),
+  C = n("318199"),
   m = n("474936");
 
 function S(e, t, n) {
@@ -35,7 +35,7 @@ class I extends i.default {
   }
   constructor(...e) {
     super(...e), S(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
-      let l = (0, _.extractAnnouncementModalContent)({
+      let l = (0, C.extractAnnouncementModalContent)({
         content: e,
         isPreview: t
       });
@@ -67,13 +67,13 @@ class I extends i.default {
         userTrialOffer: n
       } : {}
     }), S(this, "mayShowAnnouncementModal", async () => {
-      if (await (0, C.maybeFetchActiveBogoPromotion)(), !d.ProcessArgs.isDisallowPopupsSet()) {
+      if (await (0, _.maybeFetchActiveBogoPromotion)(), !d.ProcessArgs.isDisallowPopupsSet()) {
         if (!(0, s.hasAnyModalOpen)() && c.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
           }).enabled) {
           for (let e of (await (0, E.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore())))
             if (this.maybeOpenServerDriveAnnouncementModal(e, !1)) break
-        }!(0, s.hasAnyModalOpen)() && await (0, C.isEligibleForBOGOAnnouncementModal)() && (0, s.openModalLazy)(async () => {
+        }!(0, s.hasAnyModalOpen)() && await (0, _.isEligibleForBOGOAnnouncementModal)() && (0, s.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("28614")]).then(n.bind(n, "868508"));

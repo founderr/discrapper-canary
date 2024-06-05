@@ -27,8 +27,8 @@ var i = l("442837"),
   x = l("182294"),
   U = l("602091"),
   A = l("231338"),
-  C = l("566483");
-let N = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+  N = l("566483");
+let C = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function R(e) {
   let {
@@ -37,8 +37,8 @@ function R(e) {
     activity: a,
     customStatusActivity: f,
     guildId: R,
-    channelId: h,
-    transitionState: P,
+    channelId: P,
+    transitionState: h,
     viewProfileItem: M,
     onClose: y
   } = e, {
@@ -60,7 +60,7 @@ function R(e) {
     trackUserProfileAction: G
   } = (0, E.useUserProfileAnalyticsContext)(), k = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), w = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [Y, H] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [A.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [A.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, P) ? [A.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [A.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
     children: [(0, s.jsx)(_.default, {
@@ -69,14 +69,14 @@ function R(e) {
       profileType: g.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
     }), (0, s.jsx)("div", {
-      className: C.inner,
+      className: N.inner,
       children: (0, s.jsxs)("div", {
         ...O,
-        children: [(0, s.jsx)(N, {
+        children: [(0, s.jsx)(C, {
           src: L,
           avatarDecoration: D,
           size: x.AvatarSizes.SIZE_120,
-          className: C.avatar,
+          className: N.avatar,
           status: Y,
           statusBackdropColor: (0, n.getStatusBackdropColor)(j),
           "aria-label": t.username,
@@ -97,7 +97,7 @@ function R(e) {
         }), (0, s.jsx)(v.UserProfileCustomStatusBubble, {
           statusActivity: f,
           profileType: g.UserProfileTypes.FULL_SIZE,
-          hasEntered: P === U.ModalTransitionState.ENTERED
+          hasEntered: h === U.ModalTransitionState.ENTERED
         })]
       })
     })]

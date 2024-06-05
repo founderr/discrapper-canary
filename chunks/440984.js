@@ -9,8 +9,8 @@ var a = s("735250"),
   i = s("442837"),
   l = s("780384"),
   r = s("481060"),
-  o = s("410030"),
-  u = s("607070"),
+  u = s("410030"),
+  o = s("607070"),
   d = s("530618"),
   c = s("74538"),
   p = s("937615"),
@@ -30,7 +30,7 @@ function P(e) {
     confettiCanvas: C,
     userWasChurned: h = !1,
     userDiscountOffer: T
-  } = e, A = (0, o.default)(), R = (0, l.isThemeDark)(A) ? I : N, M = n.useRef(null), [y, g] = n.useState(!1), L = (0, f.useChurnDiscountedPrice)(t, E.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), x = (0, c.getPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, p.formatPrice)(x.amount, x.currency), b = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+  } = e, A = (0, u.default)(), R = (0, l.isThemeDark)(A) ? I : N, M = n.useRef(null), [y, g] = n.useState(!1), L = (0, f.useChurnDiscountedPrice)(t, E.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), x = (0, c.getPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, p.formatPrice)(x.amount, x.currency), b = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   if (n.useEffect(() => {
       null != M.current && null != L && g(!0)
     }, [M, y, L]), null == T || null == L) return null;

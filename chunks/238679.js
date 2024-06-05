@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return h
   },
   subscribeToActivityInstanceConnectedParticipants: function() {
-    return C
+    return _
   }
 });
 var a = n("392711"),
@@ -58,7 +58,7 @@ let E = {
     }
   };
 
-function C(e) {
+function _(e) {
   let t = "EMBEDDED_ACTIVITY_UPDATE",
     n = () => {
       e(f())

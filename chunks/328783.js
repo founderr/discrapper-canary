@@ -20,13 +20,13 @@ t.default = n.memo(function(e) {
   } = e, s = n.useMemo(() => new Map(t.map(e => [e.id, e])), [t]), d = (0, l.useStateFromStores)([o.default], () => {
     var e;
     return (0, c.getUserClanData)(null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
-  }), f = n.useMemo(() => t.reduce((e, t) => {
+  }), N = n.useMemo(() => t.reduce((e, t) => {
     var s;
     return (null === (s = t.clan) || void 0 === s ? void 0 : s.tag) != null && e.push({
       label: t.name,
       value: t.id
     }), e
-  }, []), [t]), m = n.useCallback(e => {
+  }, []), [t]), f = n.useCallback(e => {
     var t, n;
     if (null == e) return null;
     let l = s.get(e.value);
@@ -40,12 +40,12 @@ t.default = n.memo(function(e) {
       guildIcon: l.icon,
       guildIconSize: 32
     })
-  }, [s]), N = n.useCallback(e => {
+  }, [s]), g = n.useCallback(e => {
     let t = e[0];
     return null == t ? null : (0, a.jsx)(a.Fragment, {
-      children: m(t)
+      children: f(t)
     })
-  }, [m]), g = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), h = n.useCallback(e => e === d, [d]), C = n.useCallback(e => e, []), O = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
+  }, [f]), m = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), C = n.useCallback(e => e === d, [d]), A = n.useCallback(e => e, []), h = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
   return (0, a.jsxs)(r.default, {
     title: T.default.Messages.CLANS,
     titleId: I,
@@ -56,13 +56,13 @@ t.default = n.memo(function(e) {
     }), (0, a.jsx)(i.Select, {
       className: _.select,
       optionClassName: _.selectPopout,
-      isSelected: h,
-      options: f,
-      select: g,
-      renderOptionValue: N,
-      renderOptionLabel: m,
-      serialize: C,
-      clear: O,
+      isSelected: C,
+      options: N,
+      select: m,
+      renderOptionValue: g,
+      renderOptionLabel: f,
+      serialize: A,
+      clear: h,
       clearable: null != d
     })]
   })

@@ -9,7 +9,7 @@ var s, a, l, i, r, o = n("442837"),
 (s = r || (r = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED", s[s.FAILED = 3] = "FAILED";
 let d = {},
   c = {};
-class E extends o.Store {
+class f extends o.Store {
   getMediaPostEmbed(e) {
     if (null != e) return d[e]
   }
@@ -21,12 +21,12 @@ class E extends o.Store {
     return d
   }
 }
-i = "MediaPostEmbedStore", (l = "displayName") in(a = E) ? Object.defineProperty(a, l, {
+i = "MediaPostEmbedStore", (l = "displayName") in(a = f) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new E(u.default, {
+}) : a[l] = i, t.default = new f(u.default, {
   CONNECTION_OPEN: function() {
     d = {}, c = {}
   },

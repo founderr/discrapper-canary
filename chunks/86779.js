@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("773603");
 var s, a, i = n("735250"),
-  l = n("470079"),
-  r = n("593473"),
+  r = n("470079"),
+  l = n("593473"),
   o = n("756647"),
   u = n("442837"),
   d = n("544891"),
@@ -15,54 +15,54 @@ var s, a, i = n("735250"),
   _ = n("626135"),
   p = n("70956"),
   T = n("970648"),
-  S = n("981631"),
-  A = n("415393");
-let I = "mweb_handoff_nonce",
+  I = n("981631"),
+  S = n("415393");
+let A = "mweb_handoff_nonce",
   N = "mweb_handoff_nonce_expiration",
   R = 1 * p.default.Millis.MINUTE;
 (a = s || (s = {})).NONCE_MISSING = "nonce_missing", a.NONCE_EXPIRED = "nonce_expired", a.NULL_HANDOFF_TOKEN = "deep_link_failed", a.HANDOFF_EXCHANGE = "handoff_exchange";
 let C = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
   O = new Set(["deep_link_failed"]),
   v = () => {
-    c.Storage.remove(I), c.Storage.remove(N)
+    c.Storage.remove(A), c.Storage.remove(N)
   };
 t.default = () => {
   let e = (0, u.useStateFromStores)([m.default], () => m.default.getFingerprint()),
     {
       fingerprint: t,
       handoff_token: n
-    } = (0, r.parse)(window.location.search),
+    } = (0, l.parse)(window.location.search),
     s = Array.isArray(t) ? t.length > 1 ? t[0] : null : t,
     a = null != s ? s : null !== e ? e : void 0;
-  l.useEffect(() => {
+  r.useEffect(() => {
     null !== s && e !== s && h.default.dispatch({
       type: "FINGERPRINT",
       fingerprint: s
     })
   }, [s, e]);
-  let [p, L] = l.useState(null), x = l.useCallback(e => {
-    L(e), _.default.track(S.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
+  let [p, L] = r.useState(null), x = r.useCallback(e => {
+    L(e), _.default.track(I.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
       reason: e,
       fingerprint: (0, o.maybeExtractId)(a)
     }, {
       fingerprint: a
     })
-  }, [L, a]), M = c.Storage.get(I);
-  if ("null" === n && null === p && x("deep_link_failed"), null != n && "null" !== n && null == M && null === p && x("nonce_missing"), l.useEffect(() => {
+  }, [L, a]), M = c.Storage.get(A);
+  if ("null" === n && null === p && x("deep_link_failed"), null != n && "null" !== n && null == M && null === p && x("nonce_missing"), r.useEffect(() => {
       if (null != M) {
         let e = c.Storage.get(N);
         (null == e || Date.now() >= e) && (x("nonce_expired"), v())
       }
-    }, [M, x]), l.useEffect(() => {
+    }, [M, x]), r.useEffect(() => {
       null != n && "null" !== n && null != M && null == p && d.HTTP.post({
-        url: S.Endpoints.HANDOFF_EXCHANGE,
+        url: I.Endpoints.HANDOFF_EXCHANGE,
         body: {
           key: M,
           handoff_token: n
         }
       }).then(e => E.default.loginToken(e.body.token, !1)).then(() => {
-        _.default.track(S.AnalyticEvents.LOGIN_SUCCESSFUL, {
-          source: S.LoginSuccessfulSources.MOBILE_WEB_HANDOFF,
+        _.default.track(I.AnalyticEvents.LOGIN_SUCCESSFUL, {
+          source: I.LoginSuccessfulSources.MOBILE_WEB_HANDOFF,
           is_new_user: !1,
           fingerprint: (0, o.maybeExtractId)(a)
         });
@@ -83,14 +83,14 @@ t.default = () => {
     if (C.has(p)) return g.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN
   })();
   return null != p && O.has(p) ? (0, i.jsx)("div", {
-    className: A.errorContainer,
+    className: S.errorContainer,
     children: (0, i.jsx)(f.Text, {
       color: "interactive-normal",
       variant: "text-sm/semibold",
       children: b
     })
   }) : (0, i.jsxs)("div", {
-    className: A.container,
+    className: S.container,
     children: [(0, i.jsx)(f.Text, {
       variant: "text-sm/semibold",
       children: b
@@ -98,22 +98,22 @@ t.default = () => {
       color: f.Button.Colors.BRAND_INVERTED,
       onClick: () => {
         let e = T.default.generateNonce();
-        c.Storage.set(I, e), c.Storage.set(N, Date.now() + R);
-        let t = new URL(S.MOBILE_WEB_HANDOFF_DEEP_LINK),
+        c.Storage.set(A, e), c.Storage.set(N, Date.now() + R);
+        let t = new URL(I.MOBILE_WEB_HANDOFF_DEEP_LINK),
           n = new URLSearchParams(window.location.search);
         n.delete("fingerprint"), n.delete("handoff_token");
         let s = new URLSearchParams;
-        s.set("redirect", encodeURIComponent(window.location.pathname + n.toString())), s.set("key", e), s.set("fingerprint", a), t.search = s.toString(), _.default.track(S.AnalyticEvents.DEEP_LINK_CLICKED, {
+        s.set("redirect", encodeURIComponent(window.location.pathname + n.toString())), s.set("key", e), s.set("fingerprint", a), t.search = s.toString(), _.default.track(I.AnalyticEvents.DEEP_LINK_CLICKED, {
           fingerprint: (0, o.maybeExtractId)(a),
           source: "mobile_web_handoff",
-          destination: S.MOBILE_WEB_HANDOFF_DEEP_LINK
+          destination: I.MOBILE_WEB_HANDOFF_DEEP_LINK
         }, {
           fingerprint: a,
           flush: !0
         }), window.location.href = t.toString()
       },
       children: (0, i.jsx)(f.Text, {
-        className: A.buttonText,
+        className: S.buttonText,
         variant: "text-sm/semibold",
         children: g.MOBILE_WEB_HANDOFF_BUTTON_TEXT
       })

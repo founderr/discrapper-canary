@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return N
   }
 });
 var a = s("735250");
@@ -20,7 +20,7 @@ var n = s("442837"),
   _ = s("689938"),
   I = s("417433");
 
-function f() {
+function N() {
   let e = (0, S.useGameSettingsTabs)(),
     t = (0, n.useStateFromStores)([o.default], () => o.default.getSubsection()),
     s = null != t ? t : e[0].id;

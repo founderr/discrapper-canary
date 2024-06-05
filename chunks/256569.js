@@ -95,29 +95,29 @@ function T(e) {
   }), {
     state: {
       value: v,
-      tags: G,
-      selections: j,
+      tags: j,
+      selections: G,
       isSelecting: U
     }
-  } = g, [P, b] = l.useState(!1), y = l.useCallback(() => {
+  } = g, [P, b] = l.useState(!1), B = l.useCallback(() => {
     var e;
     b(!1), M(), null === (e = f.current) || void 0 === e || e.focus({
       preventScroll: !0
     })
   }, [M]);
   l.useEffect(() => {
-    !P && n(G)
-  }, [n, G, P]), l.useEffect(() => {
+    !P && n(j)
+  }, [n, j, P]), l.useEffect(() => {
     !P && o(v)
   }, [o, v, P]);
-  let B = l.useCallback(function() {
+  let y = l.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      e && y(), b(!1)
-    }, [y]),
+      e && B(), b(!1)
+    }, [B]),
     F = l.useCallback(e => t => {
       if (t) {
         var s;
-        let t = j.includes(G[e]);
+        let t = G.includes(j[e]);
         null === (s = f.current) || void 0 === s || s.focus(), t ? A(e) : (p(e), setImmediate(() => {
           var e;
           null === (e = f.current) || void 0 === e || e.blur(), setTimeout(() => {
@@ -126,7 +126,7 @@ function T(e) {
           }, 16)
         }))
       } else A(e, !0), b(!0)
-    }, [p, A, j, G]);
+    }, [p, A, G, j]);
   return (0, a.jsxs)("div", {
     className: i()(E.mainContainer, T),
     ref: m,
@@ -134,17 +134,17 @@ function T(e) {
     onKeyUp: x,
     children: [(0, a.jsxs)(I, {
       ref: N,
-      onClick: y,
-      children: [G.map((e, t) => (0, a.jsx)(d.default, {
+      onClick: B,
+      children: [j.map((e, t) => (0, a.jsx)(d.default, {
         value: e,
         onChange: O(t),
-        onBlur: B,
+        onBlur: y,
         onFocus: F(t),
         onRemove: () => L(t),
-        isSelected: j.includes(e),
+        isSelected: G.includes(e),
         isSelecting: U,
         error: u[e],
-        forceShowErrorTooltip: !P && t === G.length - 1
+        forceShowErrorTooltip: !P && t === j.length - 1
       }, t)), (0, a.jsx)("input", {
         className: i()(E.mainTextInput, {
           [E.isEditingOtherNodes]: P
@@ -154,14 +154,14 @@ function T(e) {
         onKeyDownCapture: R,
         onPaste: h,
         onBlur: D,
-        placeholder: 0 === G.length ? _ : void 0,
+        placeholder: 0 === j.length ? _ : void 0,
         value: v
       })]
     }), null != S && (0, a.jsxs)(r.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
       className: E.maxTags,
-      children: [null !== (t = null == G ? void 0 : G.length) && void 0 !== t ? t : 0, "/", S]
+      children: [null !== (t = null == j ? void 0 : j.length) && void 0 !== t ? t : 0, "/", S]
     })]
   })
 }

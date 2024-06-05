@@ -16,7 +16,7 @@ function f(e, t, l) {
     writable: !0
   }) : e[t] = l, e
 }
-class m extends(n = i.PureComponent) {
+class I extends(n = i.PureComponent) {
   render() {
     let {
       scrollable: e,
@@ -38,13 +38,13 @@ class m extends(n = i.PureComponent) {
     })
   }
 }
-f(m, "defaultProps", {
+f(I, "defaultProps", {
   basis: 232,
   grow: 0,
   shrink: 0,
   className: c.sidebar
 });
-class I extends i.PureComponent {
+class m extends i.PureComponent {
   render() {
     let {
       className: e,
@@ -73,4 +73,4 @@ f(T, "defaultProps", {
   shrink: 1,
   grow: 1,
   basis: "auto"
-}), f(T, "Direction", u.default.Direction), f(T, "Justify", u.default.Justify), f(T, "Align", u.default.Align), f(T, "Wrap", u.default.Wrap), f(T, "Sidebar", m), f(T, "Content", I), t.default = T
+}), f(T, "Direction", u.default.Direction), f(T, "Justify", u.default.Justify), f(T, "Align", u.default.Align), f(T, "Wrap", u.default.Wrap), f(T, "Sidebar", I), f(T, "Content", m), t.default = T

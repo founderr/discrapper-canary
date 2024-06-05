@@ -19,23 +19,23 @@ function f(e) {
     integrations: t,
     editedIntegration: l,
     guild: f,
-    platformType: m,
-    labelText: I,
+    platformType: I,
+    labelText: m,
     descriptionText: T,
-    helpText: N,
-    canNavigate: E
-  } = e, S = r.default.get(m), g = a.useCallback(async e => {
-    E() && (await o.default.enableIntegration(f.id, e.type, e.id), i.default.startEditingIntegration(e.id))
-  }, [E, f.id]), p = a.useCallback(e => {
-    E() && (e.id === (null == l ? void 0 : l.id) && i.default.stopEditingIntegration(), o.default.disableIntegration(f.id, e.id))
-  }, [E, l, f.id]), h = a.useCallback(e => {
-    E() && (e === (null == l ? void 0 : l.id) ? i.default.stopEditingIntegration() : i.default.startEditingIntegration(e))
-  }, [E, l]);
+    helpText: E,
+    canNavigate: N
+  } = e, _ = r.default.get(I), S = a.useCallback(async e => {
+    N() && (await o.default.enableIntegration(f.id, e.type, e.id), i.default.startEditingIntegration(e.id))
+  }, [N, f.id]), h = a.useCallback(e => {
+    N() && (e.id === (null == l ? void 0 : l.id) && i.default.stopEditingIntegration(), o.default.disableIntegration(f.id, e.id))
+  }, [N, l, f.id]), g = a.useCallback(e => {
+    N() && (e === (null == l ? void 0 : l.id) ? i.default.stopEditingIntegration() : i.default.startEditingIntegration(e))
+  }, [N, l]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(d.default, {
-      name: I,
-      icon: null == S ? void 0 : S.icon.whiteSVG,
-      iconBackgroundColor: null == S ? void 0 : S.color,
+      name: m,
+      icon: null == _ ? void 0 : _.icon.whiteSVG,
+      iconBackgroundColor: null == _ ? void 0 : _.color,
       iconClassName: c.platformIcon,
       description: T,
       isHeader: !0
@@ -46,14 +46,14 @@ function f(e) {
       editedIntegration: l,
       guild: f,
       isExpanded: (null == l ? void 0 : l.id) === e.id,
-      onEnable: g,
-      onDisable: p,
-      onToggleExpand: () => h(e.id)
+      onEnable: S,
+      onDisable: h,
+      onToggleExpand: () => g(e.id)
     }, e.id)), (0, n.jsx)(s.Text, {
       className: c.helpText,
       color: "text-muted",
       variant: "text-sm/normal",
-      children: N
+      children: E
     })]
   })
 }

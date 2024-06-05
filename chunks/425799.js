@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), s("47120"), s("315314"), s("610138"), s("216116"), s("78328"), s("815648");
 var a = s("735250"),
@@ -18,22 +18,22 @@ var a = s("735250"),
   T = s("590259"),
   _ = s("301733"),
   I = s("334428"),
-  f = s("844593");
+  N = s("844593");
 
-function m() {
+function f() {
   let e = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     [t, s] = n.useState(!0),
-    [m, N] = n.useState([]),
-    g = n.useRef(null),
-    [h, C] = n.useState(!1),
-    [O, A] = n.useState(!1),
+    [f, g] = n.useState([]),
+    m = n.useRef(null),
+    [C, A] = n.useState(!1),
+    [h, O] = n.useState(!1),
     [p, R] = n.useState(!1),
     x = (0, r.isThemeDark)((0, u.default)());
   return null == e ? (0, a.jsx)("div", {}) : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: _.root,
       children: [(0, a.jsx)("img", {
-        src: h ? I : f,
+        src: C ? I : N,
         alt: "",
         width: 450
       }), t && (0, a.jsx)(S.ProfileEffect, {
@@ -43,12 +43,12 @@ function m() {
           description: "debug",
           accessibilityLabel: "debug",
           reducedMotionSrc: "",
-          effects: p ? (0, T.patchAndroid)(m) : m,
+          effects: p ? (0, T.patchAndroid)(f) : f,
           animationType: 0
         },
         profileEffectId: "debug"
       })]
-    }), O && (0, a.jsxs)("div", {
+    }), h && (0, a.jsxs)("div", {
       className: _.userProfilePreview,
       children: [(0, a.jsx)(c.default, {
         location: "ProfileEffectsPreviewToolPage",
@@ -66,7 +66,7 @@ function m() {
           description: "debug",
           accessibilityLabel: "debug",
           reducedMotionSrc: "",
-          effects: p ? (0, T.patchAndroid)(m) : m,
+          effects: p ? (0, T.patchAndroid)(f) : f,
           animationType: 0
         },
         profileEffectId: "debug"
@@ -78,20 +78,20 @@ function m() {
         children: "Dark Theme"
       }), (0, a.jsx)("input", {
         type: "checkbox",
-        checked: h,
+        checked: C,
         className: _.checkBox,
         onChange: () => {
-          C(!h)
+          A(!C)
         }
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/normal",
         children: "Show User Profile"
       }), (0, a.jsx)("input", {
         type: "checkbox",
-        checked: O,
+        checked: h,
         className: _.checkBox,
         onChange: () => {
-          A(!O)
+          O(!h)
         }
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/normal",
@@ -112,14 +112,14 @@ function m() {
           color: "always-white",
           children: "Click to upload image"
         }), (0, a.jsx)(d.default, {
-          ref: g,
+          ref: m,
           onChange: e => {
             let t = e.currentTarget.files[0],
               s = new FileReader;
             s.onload = async e => {
               if (null == e.target || "string" != typeof e.target.result) return;
-              let s = await (0, T.createLayer)(URL.createObjectURL(t), t, m.length);
-              N(e => [...e, s])
+              let s = await (0, T.createLayer)(URL.createObjectURL(t), t, f.length);
+              g(e => [...e, s])
             }, s.readAsDataURL(t)
           },
           multiple: !1
@@ -128,7 +128,7 @@ function m() {
         variant: "text-sm/semibold",
         children: "Make sure to upload the bottommost layer first!"
       })]
-    }), m.map((e, t) => (0, a.jsxs)("div", {
+    }), f.map((e, t) => (0, a.jsxs)("div", {
       style: {
         marginBottom: 8,
         color: x ? "white" : "black"
@@ -149,7 +149,7 @@ function m() {
           color: o.ButtonColors.RED,
           look: o.ButtonLooks.LINK,
           onClick: () => {
-            N(t => t.filter(t => t !== e))
+            g(t => t.filter(t => t !== e))
           },
           children: "Remove"
         })]
@@ -160,7 +160,7 @@ function m() {
         value: e.start,
         className: _.numberInput,
         onChange: e => {
-          N(s => {
+          g(s => {
             let a = [...s],
               n = s[t];
             return n.start = +e.target.value, a[t] = n, a
@@ -173,7 +173,7 @@ function m() {
         value: e.duration,
         className: _.numberInput,
         onChange: e => {
-          N(s => {
+          g(s => {
             let a = [...s],
               n = s[t];
             return n.duration = +e.target.value, a[t] = n, a
@@ -186,7 +186,7 @@ function m() {
         checked: e.loop,
         className: _.checkBox,
         onChange: e => {
-          N(s => {
+          g(s => {
             let a = [...s],
               n = s[t];
             return n.loop = e.target.checked, a[t] = n, a
@@ -200,7 +200,7 @@ function m() {
           value: e.loopDelay,
           className: _.checkBox,
           onChange: e => {
-            N(s => {
+            g(s => {
               let a = [...s],
                 n = s[t];
               return n.loopDelay = +e.target.value, a[t] = n, a
@@ -215,7 +215,7 @@ function m() {
         className: _.checkBox,
         disabled: !0,
         onChange: e => {
-          N(s => {
+          g(s => {
             let a = [...s],
               n = s[t];
             return n.zIndex = +e.target.value, a[t] = n, a
@@ -228,7 +228,7 @@ function m() {
         color: o.ButtonColors.RED,
         look: o.ButtonLooks.LINK,
         onClick: () => {
-          N([])
+          g([])
         },
         children: "Clear Assets"
       }), (0, a.jsx)(o.Button, {
@@ -240,7 +240,7 @@ function m() {
       }), (0, a.jsx)(o.Button, {
         color: o.ButtonColors.BRAND,
         onClick: () => {
-          navigator.clipboard.writeText((0, T.exportConfig)(m, "proto")), (0, o.showToast)((0, o.createToast)("Copied to clipboard!", o.ToastType.SUCCESS))
+          navigator.clipboard.writeText((0, T.exportConfig)(f, "proto")), (0, o.showToast)((0, o.createToast)("Copied to clipboard!", o.ToastType.SUCCESS))
         },
         children: "Export"
       })]

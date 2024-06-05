@@ -52,18 +52,18 @@ function A(e) {
     removeEditStateId: D
   } = h.useEditStateIds(I, t, {
     includeSoftDeleted: !0
-  }), [v, G] = l.useState({}), j = l.useMemo(() => {
+  }), [v, j] = l.useState({}), G = l.useMemo(() => {
     let e = p.map(e => {
       var t;
       return null !== (t = v[e]) && void 0 !== t ? t : e
     });
     return (0, r.uniq)(e)
   }, [p, v]), U = (e, t) => {
-    G(s => ({
+    j(s => ({
       ...s,
       [e]: t
     }))
-  }, P = (0, f.useGuildEligibleForTierTemplates)(t), b = (0, f.useUserEligibleForTierTemplates)(), y = l.useCallback(() => {
+  }, P = (0, f.useGuildEligibleForTierTemplates)(t), b = (0, f.useUserEligibleForTierTemplates)(), B = l.useCallback(() => {
     b && S.GuildRoleSubscriptionsTierTemplatesExperiment.trackExposure({
       guildId: t,
       location: "b2d9de_1"
@@ -81,13 +81,13 @@ function A(e) {
     }, {
       modalKey: O
     }) : A()
-  }, [t, M, A, n, b, P]), B = h.useHasChangesForEditStateIds(j), F = l.useCallback(() => j.forEach(h.clearEditState), [j]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
-  return l.useEffect(() => (k === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && y(), () => {
+  }, [t, M, A, n, b, P]), y = h.useHasChangesForEditStateIds(G), F = l.useCallback(() => G.forEach(h.clearEditState), [G]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
+  return l.useEffect(() => (k === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && B(), () => {
     (0, u.closeModal)(O)
-  }), [k, y]), (0, a.jsxs)(a.Fragment, {
+  }), [k, B]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: L.groupListings,
-      children: [j.map(e => (0, a.jsx)(C.default, {
+      children: [G.map(e => (0, a.jsx)(C.default, {
         guildId: t,
         initialEditStateId: e,
         allSubscriptionListings: N,
@@ -97,7 +97,7 @@ function A(e) {
         onBeforeDispatchNewListing: t => U(t.id, e),
         onAfterDispatchNewListing: () => D(e)
       }, e)), (0, a.jsxs)(u.Clickable, {
-        onClick: H ? void 0 : y,
+        onClick: H ? void 0 : B,
         className: i()(L.createTierButton, {
           [L.disabled]: H
         }),
@@ -113,7 +113,7 @@ function A(e) {
     }), (0, a.jsx)(d.TransitionGroup, {
       component: "div",
       className: L.contentRegion,
-      children: B && (0, a.jsx)(_.default, {
+      children: y && (0, a.jsx)(_.default, {
         children: (0, a.jsx)(c.default, {
           onReset: F
         })

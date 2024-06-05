@@ -92,11 +92,11 @@ t.default = e => {
     tag: E,
     badgeKind: C,
     badgePrimaryColor: g,
-    badgeSecondaryColor: x
+    badgeSecondaryColor: N
   } = (0, u.useStateFromStoresObject)([f.default], () => {
     var e;
     return null !== (e = f.default.getStateForGuild(t).progress) && void 0 !== e ? e : n
-  }), N = l.useMemo(() => (null == m ? void 0 : m.size) > 0 ? (0, h.formatSelectionList)(Array.from(m), _.MAX_TRAITS_TO_DISPLAY) : null, [m]);
+  }), x = l.useMemo(() => (null == m ? void 0 : m.size) > 0 ? (0, h.formatSelectionList)(Array.from(m), _.MAX_TRAITS_TO_DISPLAY) : null, [m]);
   return (0, a.jsxs)(p.default, {
     ...e,
     children: [(0, a.jsx)(A, {
@@ -104,7 +104,7 @@ t.default = e => {
       tag: E,
       badge: C,
       primaryColor: null != g ? g : S.CLAN_BADGE_PRIMARY_DEFAULT,
-      secondaryColor: null != x ? x : S.CLAN_BADGE_SECONDARY_DEFAULT
+      secondaryColor: null != N ? N : S.CLAN_BADGE_SECONDARY_DEFAULT
     }), (0, a.jsx)(d.Heading, {
       variant: "heading-xl/normal",
       color: "text-muted",
@@ -125,12 +125,12 @@ t.default = e => {
     }), (0, a.jsx)(v, {
       applicationIds: i,
       playstyle: r
-    }), null != N ? (0, a.jsx)(d.Text, {
+    }), null != x ? (0, a.jsx)(d.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       className: I.overviewText,
       children: T.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-        traits: N
+        traits: x
       })
     }) : null, (0, a.jsx)(d.Text, {
       variant: "text-sm/normal",

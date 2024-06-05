@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return y
   }
 });
 var a = n("735250"),
@@ -26,16 +26,16 @@ var a = n("735250"),
   I = n("979651"),
   A = n("502568"),
   v = n("664342"),
-  x = n("124368"),
-  N = n("981631"),
+  N = n("124368"),
+  x = n("981631"),
   M = n("689938"),
-  y = n("899091");
+  R = n("899091");
 
-function R(e) {
+function y(e) {
   let {
     channelId: t,
     baseChannelId: s,
-    channelViewSource: R = "Split View"
+    channelViewSource: y = "Split View"
   } = e, L = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), O = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(null == L ? void 0 : L.getGuildId())), j = (0, m.default)(L);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i().isEmpty(I.default.getVoiceStatesForChannel(e.id)));
@@ -43,7 +43,7 @@ function R(e) {
       t && null != e && (o.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, g.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
+      }), (0, g.transitionToThread)(e, N.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(L);
   let P = l.useRef(!1);
@@ -51,14 +51,14 @@ function R(e) {
       if (null == L || P.current) return;
       P.current = !0;
       let e = (0, f.collectThreadMetadata)(S.default.getChannel(L.id), !0);
-      (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
+      (0, c.trackWithMetadata)(x.AnalyticEvents.CHANNEL_OPENED, {
         ...e,
         ...(0, c.getChannelOpenedMetadata)(L.id),
-        channel_view: R
-      }), (0, h.trackClickstream)(N.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
+        channel_view: y
+      }), (0, h.trackClickstream)(x.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
         channelId: L.id
       })
-    }, [L, R]), null == L || null == O) return null;
+    }, [L, y]), null == L || null == O) return null;
   let D = (0, a.jsx)(v.default, {
     channel: L,
     baseChannelId: s
@@ -79,7 +79,7 @@ function R(e) {
           (0, u.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await n.e("40157").then(n.bind(n, "422200"));
+            } = await n.e("78650").then(n.bind(n, "422200"));
             return t => (0, a.jsx)(e, {
               ...t,
               channel: L
@@ -91,7 +91,7 @@ function R(e) {
         }
       })
     }), (0, a.jsx)("div", {
-      className: y.chat,
+      className: R.chat,
       children: (0, a.jsx)(p.default, {
         channel: L,
         guild: O,

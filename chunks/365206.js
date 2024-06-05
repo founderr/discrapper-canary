@@ -15,7 +15,7 @@ var a = n("120356"),
   d = n("689938"),
   c = n("6888");
 
-function E(e) {
+function f(e) {
   let {
     didSelfVote: t,
     label: n,
@@ -37,7 +37,7 @@ function E(e) {
   })
 }
 
-function f(e) {
+function E(e) {
   let {
     answer: t,
     isExpired: n,
@@ -60,7 +60,7 @@ function f(e) {
       isExpired: n,
       className: c.selectedIcon
     }), i && (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(E, {
+      children: [(0, s.jsx)(f, {
         didSelfVote: o,
         percentage: t.votesPercentage,
         label: t.votes,
@@ -90,7 +90,7 @@ function _(e) {
     }),
     myAvatarUrl: n,
     answersInteraction: a,
-    renderAnswerContent: e => (0, s.jsx)(f, {
+    renderAnswerContent: e => (0, s.jsx)(E, {
       answer: e,
       isExpired: t,
       myAvatarUrl: n,

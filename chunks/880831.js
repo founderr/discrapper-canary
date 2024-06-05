@@ -29,24 +29,24 @@ var a = n("735250"),
   I = n("512665"),
   A = n("768581"),
   v = n("70956"),
-  x = n("823379"),
-  N = n("792125"),
+  N = n("823379"),
+  x = n("792125"),
   M = n("981631"),
-  y = n("768760"),
-  R = n("588233");
+  R = n("768760"),
+  y = n("588233");
 let L = 10 * v.default.Millis.SECOND;
 
 function O(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), v = (0, p.useActiveKeywordFiltersCacheKey)(), x = l.useCallback(e => {
+  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), v = (0, p.useActiveKeywordFiltersCacheKey)(), N = l.useCallback(e => {
     "A" !== e.target.nodeName && (f.default.updateChatOpen(n.channel_id, !0), h.default.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
       flash: !0
     }))
-  }, [n.channel_id, n.id]), N = null != n.content && "" !== n.content ? (0, E.default)(n, {
+  }, [n.channel_id, n.id]), x = null != n.content && "" !== n.content ? (0, E.default)(n, {
     isInteracting: c,
     shouldFilterKeywords: null != v
   }).content : null, {
@@ -54,28 +54,28 @@ function O(e) {
     renderedContent: L,
     trailingIcon: O,
     leadingIcon: j
-  } = (0, I.renderSingleLineMessage)(n, N, s, R.messageContent, {
-    trailingIconClass: R.messageContentTrailingIcon,
-    leadingIconClass: R.messageContentLeadingIcon,
-    iconSize: y.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+  } = (0, I.renderSingleLineMessage)(n, x, s, y.messageContent, {
+    trailingIconClass: y.messageContentTrailingIcon,
+    leadingIconClass: y.messageContentLeadingIcon,
+    iconSize: R.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
   }), P = (0, g.getMessageStickers)(n), D = P.length > 0 ? P.map(e => (0, a.jsx)(S.default, {
-    className: R.sticker,
+    className: y.sticker,
     size: 128,
     sticker: e,
     isInteracting: c
   }, e.id)) : null;
   return (0, a.jsxs)(d.Clickable, {
-    className: R.toast,
+    className: y.toast,
     onMouseEnter: () => {
       _(!0)
     },
     onMouseLeave: () => {
       _(!1)
     },
-    onClick: x,
+    onClick: N,
     children: [(0, a.jsxs)("div", {
-      className: i()(R.messageContentWrapper, {
-        [R.mentioned]: n.mentioned
+      className: i()(y.messageContentWrapper, {
+        [y.mentioned]: n.mentioned
       }),
       children: [null != D ? null : j, null !== (t = null != L ? L : D) && void 0 !== t ? t : (0, a.jsx)("span", {
         children: M
@@ -87,7 +87,7 @@ function O(e) {
         userId: n.author.id,
         avatar: r.guildMemberAvatar
       }) : n.author.getAvatarURL(o, 32),
-      className: R.avatar
+      className: y.avatar
     })]
   })
 }
@@ -131,7 +131,7 @@ function j(e) {
     let E = null !== (t = h.current) && void 0 !== t ? t : r;
     return {
       toastsHidden: d,
-      toastMessages: (0, u.useStateFromStoresArray)([_.default], () => E.map(e => _.default.getMessage(n, e)), [n, E]).filter(x.isNotNullish)
+      toastMessages: (0, u.useStateFromStoresArray)([_.default], () => E.map(e => _.default.getMessage(n, e)), [n, E]).filter(N.isNotNullish)
     }
   }({
     channelId: t,
@@ -190,7 +190,7 @@ function j(e) {
       }
     });
   return (0, a.jsx)("div", {
-    className: i()(n, (0, N.getThemeClass)(M.ThemeTypes.DARK)),
+    className: i()(n, (0, x.getThemeClass)(M.ThemeTypes.DARK)),
     onMouseEnter: () => {
       d(!0)
     },
@@ -199,7 +199,7 @@ function j(e) {
     },
     children: S((e, t) => (0, a.jsx)(o.animated.div, {
       ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
-      className: R.toastWrapper,
+      className: y.toastWrapper,
       style: e,
       children: (0, a.jsx)(O, {
         message: t.message

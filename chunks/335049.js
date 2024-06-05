@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return L
+    return v
   }
 });
 var n = l("735250"),
@@ -14,25 +14,25 @@ var n = l("735250"),
   u = l("442837"),
   c = l("481060"),
   f = l("239091"),
-  m = l("895924"),
-  I = l("581364"),
+  I = l("895924"),
+  m = l("581364"),
   T = l("471445"),
-  N = l("518738"),
-  E = l("592125"),
-  S = l("271383"),
-  g = l("430824"),
-  p = l("246946"),
-  h = l("594174"),
-  _ = l("93879"),
+  E = l("518738"),
+  N = l("592125"),
+  _ = l("271383"),
+  S = l("430824"),
+  h = l("246946"),
+  g = l("594174"),
+  p = l("93879"),
   O = l("630641"),
   A = l("241820"),
   C = l("176278"),
   x = l("51144"),
   R = l("981631"),
   M = l("689938"),
-  v = l("958117");
+  L = l("958117");
 
-function L(e) {
+function v(e) {
   let {
     guild: t,
     id: s,
@@ -54,7 +54,7 @@ function L(e) {
     })
   }, [s]);
   switch (i) {
-    case m.ApplicationCommandPermissionType.CHANNEL:
+    case I.ApplicationCommandPermissionType.CHANNEL:
       return (0, n.jsx)(j, {
         guild: t,
         id: s,
@@ -62,7 +62,7 @@ function L(e) {
         lockTooltipText: d,
         openEntryContextMenu: c
       });
-    case m.ApplicationCommandPermissionType.ROLE:
+    case I.ApplicationCommandPermissionType.ROLE:
       return (0, n.jsx)(P, {
         guild: t,
         id: s,
@@ -70,7 +70,7 @@ function L(e) {
         lockTooltipText: d,
         openEntryContextMenu: c
       });
-    case m.ApplicationCommandPermissionType.USER:
+    case I.ApplicationCommandPermissionType.USER:
       return (0, n.jsx)(b, {
         guild: t,
         id: s,
@@ -88,41 +88,41 @@ function j(e) {
     isLocked: s,
     lockTooltipText: r,
     openEntryContextMenu: o
-  } = e, d = (0, I.allChannelsSentinel)(t.id), {
+  } = e, d = (0, m.allChannelsSentinel)(t.id), {
     icon: f,
-    name: m,
-    categoryName: N
-  } = (0, u.useStateFromStoresObject)([E.default], () => {
+    name: I,
+    categoryName: E
+  } = (0, u.useStateFromStoresObject)([N.default], () => {
     if (d === l) return {
       name: M.default.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
-      icon: _.default
+      icon: p.default
     };
-    let e = E.default.getChannel(l),
-      n = (null == e ? void 0 : e.parent_id) != null ? E.default.getChannel(e.parent_id) : null;
+    let e = N.default.getChannel(l),
+      n = (null == e ? void 0 : e.parent_id) != null ? N.default.getChannel(e.parent_id) : null;
     return {
       icon: null != e ? (0, T.getChannelIconComponent)(e, t) : null,
       name: null == e ? void 0 : e.name,
       categoryName: null == n ? void 0 : n.name
     }
-  }, [d, t, l]), S = a.useCallback(e => {
+  }, [d, t, l]), _ = a.useCallback(e => {
     l !== d && o(e)
   }, [d, l, o]);
-  return null == f || null == m ? null : (0, n.jsxs)("div", {
-    onContextMenu: S,
-    className: v.identifier,
+  return null == f || null == I ? null : (0, n.jsxs)("div", {
+    onContextMenu: _,
+    className: L.identifier,
     children: [(0, n.jsx)(f, {
       width: 20,
       height: 20,
-      className: i()(v.channelIcon, v.image)
+      className: i()(L.channelIcon, L.image)
     }), (0, n.jsx)(c.Text, {
-      className: v.roleName,
+      className: L.roleName,
       color: "header-primary",
       variant: "text-md/normal",
-      children: m
-    }), null != N ? (0, n.jsxs)(c.Text, {
-      className: v.tag,
+      children: I
+    }), null != E ? (0, n.jsxs)(c.Text, {
+      className: L.tag,
       variant: "text-sm/normal",
-      children: ["(", N, ")"]
+      children: ["(", E, ")"]
     }) : null, s ? (0, n.jsx)(D, {
       tooltipText: r
     }) : null]
@@ -135,39 +135,39 @@ function P(e) {
     guild: s,
     id: r,
     isLocked: o,
-    lockTooltipText: m
-  } = e, I = (0, u.useStateFromStores)([g.default], () => g.default.getRole(s.id, r)), T = (0, N.useRoleIcon)({
+    lockTooltipText: I
+  } = e, m = (0, u.useStateFromStores)([S.default], () => S.default.getRole(s.id, r)), T = (0, E.useRoleIcon)({
     guildId: s.id,
     roleId: r,
     size: 24
-  }), E = a.useCallback(e => {
-    null != s && null != I && (0, f.openContextMenuLazy)(e, async () => {
+  }), N = a.useCallback(e => {
+    null != s && null != m && (0, f.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await l.e("14486").then(l.bind(l, "786746"));
       return t => (0, n.jsx)(e, {
         ...t,
         guild: s,
-        role: I
+        role: m
       })
     })
-  }, [s, I]);
-  return (null == I ? void 0 : I.name) == null ? null : (0, n.jsxs)("div", {
-    onContextMenu: E,
-    className: v.identifier,
+  }, [s, m]);
+  return (null == m ? void 0 : m.name) == null ? null : (0, n.jsxs)("div", {
+    onContextMenu: N,
+    className: L.identifier,
     children: [null != T ? (0, n.jsx)(C.default, {
-      className: i()(v.__invalid_icon, v.image),
+      className: i()(L.__invalid_icon, L.image),
       ...T
     }) : (0, n.jsx)(A.default, {
-      className: i()(v.shield, v.image),
-      color: null !== (t = I.colorString) && void 0 !== t ? t : (0, d.int2hex)(R.DEFAULT_ROLE_COLOR)
+      className: i()(L.shield, L.image),
+      color: null !== (t = m.colorString) && void 0 !== t ? t : (0, d.int2hex)(R.DEFAULT_ROLE_COLOR)
     }), (0, n.jsx)(c.Text, {
-      className: v.roleName,
+      className: L.roleName,
       color: "header-primary",
       variant: "text-md/normal",
-      children: I.name
+      children: m.name
     }), o ? (0, n.jsx)(D, {
-      tooltipText: m
+      tooltipText: I
     }) : null]
   })
 }
@@ -179,25 +179,25 @@ function b(e) {
     isLocked: a,
     lockTooltipText: s,
     openEntryContextMenu: i
-  } = e, r = (0, u.useStateFromStores)([h.default], () => h.default.getUser(l)), o = (0, u.useStateFromStores)([S.default], () => {
+  } = e, r = (0, u.useStateFromStores)([g.default], () => g.default.getUser(l)), o = (0, u.useStateFromStores)([_.default], () => {
     var e;
-    return null === (e = S.default.getMember(t.id, l)) || void 0 === e ? void 0 : e.nick
-  }, [t.id, l]), d = (0, u.useStateFromStores)([p.default], () => p.default.hidePersonalInformation);
+    return null === (e = _.default.getMember(t.id, l)) || void 0 === e ? void 0 : e.nick
+  }, [t.id, l]), d = (0, u.useStateFromStores)([h.default], () => h.default.hidePersonalInformation);
   return null == r ? null : (0, n.jsxs)("div", {
     onContextMenu: i,
-    className: v.identifier,
+    className: L.identifier,
     children: [(0, n.jsx)(c.Avatar, {
-      className: v.image,
+      className: L.image,
       src: r.getAvatarURL(t.id, 24),
       "aria-label": r.username,
       size: c.AvatarSizes.SIZE_24
     }), (0, n.jsx)(c.Text, {
-      className: v.roleName,
+      className: L.roleName,
       color: "header-primary",
       variant: "text-md/normal",
       children: null != o ? o : r.username
     }), d ? null : (0, n.jsx)(c.Text, {
-      className: v.tag,
+      className: L.tag,
       variant: "text-sm/normal",
       children: x.default.getUserTag(r)
     }), a ? (0, n.jsx)(D, {
@@ -213,7 +213,7 @@ function D(e) {
   return (0, n.jsx)(c.Tooltip, {
     text: t,
     children: e => (0, n.jsx)("div", {
-      className: v.lockIcon,
+      className: L.lockIcon,
       ...e,
       children: (0, n.jsx)(O.default, {
         width: 16,

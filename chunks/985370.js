@@ -25,15 +25,15 @@ t.default = e => {
     cancelTimers: S
   } = (0, d.default)(200, 300), [_, T] = l.useState(!1), I = (0, r.useStateFromStores)([f.default], () => f.default.effectCooldownEndTime), A = l.useMemo(() => null != I ? (I.getTime() - Date.now()) / 1e3 : 0, [I]), {
     seconds: v
-  } = (0, u.default)(null != I ? I : new Date), x = v > 0, N = l.useCallback(e => {
-    if ("focus" !== e.type) !_ && !x && C()
-  }, [_, x, C]), M = l.useCallback(() => {
+  } = (0, u.default)(null != I ? I : new Date), N = v > 0, x = l.useCallback(e => {
+    if ("focus" !== e.type) !_ && !N && C()
+  }, [_, N, C]), M = l.useCallback(() => {
     !_ && g()
-  }, [g, _]), y = l.useCallback((e, t) => {
+  }, [g, _]), R = l.useCallback((e, t) => {
     S(), T(!_), (!s || _) && (null == t || t(e))
-  }, [S, _, s]), R = s || _;
+  }, [S, _, s]), y = s || _;
   return (0, a.jsx)(o.Popout, {
-    shouldShow: R,
+    shouldShow: y,
     animationPosition: "bottom",
     position: "bottom",
     align: "center",
@@ -46,7 +46,7 @@ t.default = e => {
         closePopout: n
       } = e;
       return (0, a.jsx)(h.default, {
-        isHovered: R,
+        isHovered: y,
         channel: t,
         closePopout: n,
         onMouseEnter: C,
@@ -66,14 +66,14 @@ t.default = e => {
         className: i()(p.controlButton, n),
         onKeyDown: e => {
           var t, n;
-          return t = e, n = l, void(t.keyCode === m.KeyboardKeys.ENTER && t.keyCode === m.KeyboardKeys.SPACE && y(t, n))
+          return t = e, n = l, void(t.keyCode === m.KeyboardKeys.ENTER && t.keyCode === m.KeyboardKeys.SPACE && R(t, n))
         },
         onClick: e => {
-          y(e, t)
+          R(e, t)
         },
-        onMouseEnter: N,
+        onMouseEnter: x,
         onMouseLeave: M,
-        isActive: R
+        isActive: y
       })
     }
   })

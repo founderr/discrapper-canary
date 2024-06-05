@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var i = n("735250");
+var r = n("735250");
 n("470079");
-var r = n("113039");
+var i = n("113039");
 
-function s(e, t) {
+function a(e, t) {
   let {
     message: n
   } = e;
-  return (0, i.jsx)(r.default, {
+  return (0, r.jsx)(i.default, {
     message: n,
     content: t
   })

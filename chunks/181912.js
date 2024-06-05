@@ -21,7 +21,7 @@ function p(e) {
     n = h.default.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
     p = (0, l.getChannelIconURL)(e),
     {
-      trackView: E,
+      trackView: g,
       trackClick: m
     } = (0, u.makeAnalyticsTrackers)(f.OverlayNotificationType.IncomingCall, {
       notif_type: f.OverlayNotificationType.IncomingCall,
@@ -39,7 +39,7 @@ function p(e) {
     confirmText: h.default.Messages.JOIN_CALL,
     cancelText: h.default.Messages.DECLINE,
     onNotificationShow: () => {
-      E()
+      g()
     },
     onConfirmClick: () => {
       a.default.callPrivateChannel(e.id), m("join"), a.default.track(c.AnalyticEvents.VOICE_CHANNEL_SELECTED, {

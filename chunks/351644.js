@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return U
+    return H
   }
 }), l("653041"), l("47120");
 var n = l("735250"),
@@ -14,24 +14,24 @@ var n = l("735250"),
   u = l("780384"),
   c = l("481060"),
   f = l("37234"),
-  m = l("410030"),
-  I = l("726542"),
+  I = l("410030"),
+  m = l("726542"),
   T = l("132871"),
-  N = l("147890"),
-  E = l("231757"),
-  S = l("553795"),
-  g = l("496675"),
-  p = l("285952"),
-  h = l("6048"),
-  _ = l("497309"),
+  E = l("147890"),
+  N = l("231757"),
+  _ = l("553795"),
+  S = l("496675"),
+  h = l("285952"),
+  g = l("6048"),
+  p = l("497309"),
   O = l("759222"),
   A = l("202597"),
   C = l("626135"),
   x = l("768581"),
   R = l("63063"),
   M = l("709054"),
-  v = l("51144"),
-  L = l("585835"),
+  L = l("51144"),
+  v = l("585835"),
   j = l("997787"),
   P = l("981631"),
   b = l("689938"),
@@ -44,7 +44,7 @@ function k(e, t) {
   return t.includes(e)
 }
 
-function H(e) {
+function U(e) {
   let {
     query: t,
     setQuery: l
@@ -53,8 +53,8 @@ function H(e) {
   }, [l]);
   return (0, n.jsx)("div", {
     className: D.searchContainer,
-    children: (0, n.jsx)(h.default, {
-      size: h.default.Sizes.MEDIUM,
+    children: (0, n.jsx)(g.default, {
+      size: g.default.Sizes.MEDIUM,
       query: t,
       onChange: s,
       onClear: () => l(""),
@@ -64,32 +64,32 @@ function H(e) {
   })
 }
 
-function U(e) {
+function H(e) {
   let {
     guild: t,
     channel: l,
     applicationIntegrations: s,
     builtInIntegrations: r,
-    customWebhooks: h,
-    followedChannelWebhooks: U,
+    customWebhooks: g,
+    followedChannelWebhooks: H,
     isLoading: F,
-    canCreateWebhook: W,
-    onManageBuiltIn: w,
+    canCreateWebhook: w,
+    onManageBuiltIn: W,
     onManageCustomWebhooks: V,
-    onManageFollowedChannels: Y,
-    onManageApplication: K
-  } = e, z = (0, m.default)(), [Z, q] = a.useState(""), {
-    isFetchingConnections: J,
-    accounts: X
-  } = (0, d.useStateFromStoresObject)([S.default], () => ({
-    isFetchingConnections: S.default.isFetching(),
-    accounts: S.default.getAccounts()
+    onManageFollowedChannels: K,
+    onManageApplication: Y
+  } = e, z = (0, I.default)(), [Z, q] = a.useState(""), {
+    isFetchingConnections: X,
+    accounts: J
+  } = (0, d.useStateFromStoresObject)([_.default], () => ({
+    isFetchingConnections: _.default.isFetching(),
+    accounts: _.default.getAccounts()
   }), []), {
     canManageWebhooks: Q,
     canManageGuild: $
-  } = (0, d.useStateFromStoresObject)([g.default], () => ({
-    canManageWebhooks: null != t && g.default.can(P.Permissions.MANAGE_WEBHOOKS, t) || null != l && g.default.can(P.Permissions.MANAGE_WEBHOOKS, l),
-    canManageGuild: null != t && null == l && g.default.can(P.Permissions.MANAGE_GUILD, t)
+  } = (0, d.useStateFromStoresObject)([S.default], () => ({
+    canManageWebhooks: null != t && S.default.can(P.Permissions.MANAGE_WEBHOOKS, t) || null != l && S.default.can(P.Permissions.MANAGE_WEBHOOKS, l),
+    canManageGuild: null != t && null == l && S.default.can(P.Permissions.MANAGE_GUILD, t)
   }), [t, l]), {
     availableTwitchIntegrations: ee,
     availableYoutubeIntegrations: et,
@@ -107,18 +107,18 @@ function U(e) {
     showTwitchCard: ea,
     showYoutubeCard: es
   } = a.useMemo(() => {
-    if (J || !$) return {
+    if (X || !$) return {
       showTwitchCard: !1,
       showYoutubeCard: !1
     };
     let e = null == t ? void 0 : t.hasFeature(P.GuildFeatures.COMMUNITY),
-      l = X.filter(e => e.type === P.PlatformTypes.TWITCH).length > 0,
-      n = X.filter(e => e.type === P.PlatformTypes.YOUTUBE).length > 0;
+      l = J.filter(e => e.type === P.PlatformTypes.TWITCH).length > 0,
+      n = J.filter(e => e.type === P.PlatformTypes.YOUTUBE).length > 0;
     return {
       showTwitchCard: ee > 0 || !l && e,
       showYoutubeCard: et > 0 || !n && e
     }
-  }, [J, $, t, X, ee, et]), ei = Object.values(s).length, er = a.useMemo(() => {
+  }, [X, $, t, J, ee, et]), ei = Object.values(s).length, er = a.useMemo(() => {
     let e = ei > 100 ? k : o();
     return Object.values(s).filter(t => {
       var l, n, a;
@@ -129,12 +129,12 @@ function U(e) {
     })
   }, [s, ei, Z]), eo = (0, d.useStateFromStores)([j.default], () => {
     if (null != t) return er.find(e => j.default.canShowOverviewTooltip(t.id, e.integration.id))
-  }, [er, t]), ed = a.useMemo(() => void 0 !== eo ? [eo, ...er.filter(e => e.integration.id !== eo.integration.id)] : er, [er, eo]), eu = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), [ec, ef] = a.useState(!1), em = a.useRef(0), eI = () => {
-    ef(!0), clearTimeout(em.current), em.current = setTimeout(() => {
+  }, [er, t]), ed = a.useMemo(() => void 0 !== eo ? [eo, ...er.filter(e => e.integration.id !== eo.integration.id)] : er, [er, eo]), eu = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), [ec, ef] = a.useState(!1), eI = a.useRef(0), em = () => {
+    ef(!0), clearTimeout(eI.current), eI.current = setTimeout(() => {
       ef(!1)
     }, 200)
   };
-  a.useEffect(() => (window.addEventListener("scroll", eI, !0), () => window.removeEventListener("scroll", eI)));
+  a.useEffect(() => (window.addEventListener("scroll", em, !0), () => window.removeEventListener("scroll", em)));
   let eT = ed.map(e => {
       let l = !eu && e.integration.id === (null == eo ? void 0 : eo.integration.id);
       return function(e, t, l, a, s) {
@@ -144,17 +144,17 @@ function U(e) {
           integration: o
         } = t, d = [];
         return null != o.user ? d.push({
-          icon: _.default,
+          icon: p.default,
           text: b.default.Messages.INTEGRATION_ADDED_USER_DATE.format({
             timestamp: M.default.extractTimestamp(o.id),
-            user: v.default.getUserTag(o.user)
+            user: L.default.getUserTag(o.user)
           })
         }) : d.push({
-          icon: _.default,
+          icon: p.default,
           text: b.default.Messages.INTEGRATION_ADDED_DATE.format({
             timestamp: M.default.extractTimestamp(o.id)
           })
-        }), (0, n.jsx)(L.default, {
+        }), (0, n.jsx)(v.default, {
           name: r.name,
           imageSrc: null !== (i = r.getIconURL(48)) && void 0 !== i ? i : x.DEFAULT_AVATARS["0"],
           integration: t,
@@ -164,7 +164,7 @@ function U(e) {
             l(r.id), C.default.track(P.AnalyticEvents.APP_MANAGE_CTA_CLICKED, {
               application_id: r.id,
               guild_id: null == e ? void 0 : e.id,
-              is_admin: null != e ? g.default.can(P.Permissions.ADMINISTRATOR, e) : void 0
+              is_admin: null != e ? S.default.can(P.Permissions.ADMINISTRATOR, e) : void 0
             })
           },
           details: d,
@@ -172,16 +172,16 @@ function U(e) {
           isScrolling: a,
           canShowMigrationTooltip: s
         }, "integration-".concat(o.id))
-      }(t, e, K, ec, l)
+      }(t, e, Y, ec, l)
     }),
-    eN = (0, n.jsx)("div", {
+    eE = (0, n.jsx)("div", {
       className: D.footerImage
     });
   0 === eT.length && $ && (eT = function(e, t, l) {
     let a = (0, u.isThemeDark)(e) ? G : B,
-      s = (0, n.jsxs)(p.default, {
-        direction: p.default.Direction.VERTICAL,
-        align: p.default.Align.CENTER,
+      s = (0, n.jsxs)(h.default, {
+        direction: h.default.Direction.VERTICAL,
+        align: h.default.Align.CENTER,
         className: D.emptyStateWrapper,
         children: [(0, n.jsx)("img", {
           alt: "",
@@ -215,7 +215,7 @@ function U(e) {
             variant: "text-sm/normal",
             children: b.default.Messages.INTEGRATIONS_OVERVIEW_NO_APPLICATIONS_APP_DIRECTORY_CTA.format({
               handleGoToAppDirectory: () => {
-                (0, N.goToAppDirectory)({
+                (0, E.goToAppDirectory)({
                   guildId: l,
                   entrypoint: {
                     name: T.ApplicationDirectoryEntrypointNames.GUILD_INTEGRATION_SETTINGS
@@ -227,29 +227,29 @@ function U(e) {
         })
       });
     return t > 0 ? s : i
-  }(z, ei, null == t ? void 0 : t.id), eN = null);
-  let eE = R.default.getArticleURL(P.HelpdeskArticles.INTEGRATIONS),
-    eS = null != l ? b.default.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : b.default.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
-    eg = [];
+  }(z, ei, null == t ? void 0 : t.id), eE = null);
+  let eN = R.default.getArticleURL(P.HelpdeskArticles.INTEGRATIONS),
+    e_ = null != l ? b.default.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : b.default.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
+    eS = [];
   if (Q) {
-    var ep, eh, e_, eO, eA;
+    var eh, eg, ep, eO, eA;
     let e;
-    if (eg.push((ep = h.length, eh = W, e_ = V, e = ep > 0 ? b.default.Messages.INTEGRATIONS_WEBHOOKS_BUTTON : b.default.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON, (0, n.jsx)(L.default, {
+    if (eS.push((eh = g.length, eg = w, ep = V, e = eh > 0 ? b.default.Messages.INTEGRATIONS_WEBHOOKS_BUTTON : b.default.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON, (0, n.jsx)(v.default, {
         name: b.default.Messages.INTEGRATIONS_WEBHOOKS,
         icon: A.default,
         buttonText: e,
-        buttonDisabled: !eh,
-        onButtonClick: e_,
-        hasNextSection: ep > 0,
+        buttonDisabled: !eg,
+        onButtonClick: ep,
+        hasNextSection: eh > 0,
         details: [{
           text: b.default.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({
-            count: ep
+            count: eh
           })
         }]
       }, "webhooks"))), (null == l ? void 0 : l.type) !== P.ChannelTypes.GUILD_VOICE && ((null == l ? void 0 : l.type) == null || !P.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type))) {
       ;
       let e, t;
-      eg.push((eO = U.length, eA = Y, eO > 0 ? (e = b.default.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON, t = eA) : (e = b.default.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON, t = () => open(R.default.getArticleURL(P.HelpdeskArticles.CHANNEL_FOLLOWING))), (0, n.jsx)(L.default, {
+      eS.push((eO = H.length, eA = K, eO > 0 ? (e = b.default.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON, t = eA) : (e = b.default.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON, t = () => open(R.default.getArticleURL(P.HelpdeskArticles.CHANNEL_FOLLOWING))), (0, n.jsx)(v.default, {
         name: b.default.Messages.INTEGRATIONS_CHANNEL_FOLLOWING,
         icon: O.default,
         buttonText: e,
@@ -263,15 +263,15 @@ function U(e) {
       }, "channels-followed")))
     }
   }
-  return ea && eg.push(function(e, t, l) {
+  return ea && eS.push(function(e, t, l) {
     let a, s, i;
-    let r = I.default.get(P.PlatformTypes.TWITCH);
+    let r = m.default.get(P.PlatformTypes.TWITCH);
     return e > 0 ? (a = b.default.Messages.INTEGRATIONS_TWITCH_BUTTON, s = b.default.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({
       count: t
-    }), i = () => l(P.PlatformTypes.TWITCH)) : (a = b.default.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON, s = b.default.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY, i = () => (0, E.default)({
+    }), i = () => l(P.PlatformTypes.TWITCH)) : (a = b.default.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON, s = b.default.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY, i = () => (0, N.default)({
       platformType: P.PlatformTypes.TWITCH,
       location: "Integration Settings"
-    })), (0, n.jsx)(L.default, {
+    })), (0, n.jsx)(v.default, {
       name: b.default.Messages.INTEGRATIONS_TWITCH,
       icon: r.icon.whiteSVG,
       iconBackgroundColor: r.color,
@@ -283,15 +283,15 @@ function U(e) {
         text: s
       }]
     }, "integrations-twitch")
-  }(ee, el, w)), es && eg.push(function(e, t, l) {
+  }(ee, el, W)), es && eS.push(function(e, t, l) {
     let a, s, i;
-    let r = I.default.get(P.PlatformTypes.YOUTUBE);
+    let r = m.default.get(P.PlatformTypes.YOUTUBE);
     return e > 0 ? (a = b.default.Messages.INTEGRATIONS_YOUTUBE_BUTTON, s = b.default.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({
       count: t
-    }), i = () => l(P.PlatformTypes.YOUTUBE)) : (a = b.default.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON, s = b.default.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY, i = () => (0, E.default)({
+    }), i = () => l(P.PlatformTypes.YOUTUBE)) : (a = b.default.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON, s = b.default.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY, i = () => (0, N.default)({
       platformType: P.PlatformTypes.YOUTUBE,
       location: "Integration Settings"
-    })), (0, n.jsx)(L.default, {
+    })), (0, n.jsx)(v.default, {
       name: b.default.Messages.INTEGRATIONS_YOUTUBE,
       icon: r.icon.whiteSVG,
       iconBackgroundColor: r.color,
@@ -303,31 +303,31 @@ function U(e) {
         text: s
       }]
     }, "integrations-youtube")
-  }(et, en, w)), (0, n.jsxs)(c.FormSection, {
-    className: i()(null != eN ? D.footerPlaceholder : null),
+  }(et, en, W)), (0, n.jsxs)(c.FormSection, {
+    className: i()(null != eE ? D.footerPlaceholder : null),
     children: [(0, n.jsx)(c.FormText, {
       type: c.FormTextTypes.DESCRIPTION,
-      children: eS.format({
-        helpdeskArticle: eE
+      children: e_.format({
+        helpdeskArticle: eN
       })
     }), (0, n.jsx)(c.FormDivider, {
       className: D.divider
-    }), F || J || null == t ? (0, n.jsx)(c.Spinner, {
+    }), F || X || null == t ? (0, n.jsx)(c.Spinner, {
       className: D.__invalid_spinner,
       type: c.Spinner.Type.SPINNING_CIRCLE
     }) : (0, n.jsxs)(n.Fragment, {
-      children: [eg, $ ? (0, n.jsxs)(n.Fragment, {
-        children: [eg.length > 0 ? (0, n.jsx)(c.FormDivider, {
+      children: [eS, $ ? (0, n.jsxs)(n.Fragment, {
+        children: [eS.length > 0 ? (0, n.jsx)(c.FormDivider, {
           className: D.divider
         }) : null, (0, n.jsx)(c.Heading, {
           variant: "heading-md/semibold",
           className: D.sectionHeader,
           children: b.default.Messages.INTEGRATIONS_APPLICATION_SECTION
-        }), ei > 4 ? (0, n.jsx)(H, {
+        }), ei > 4 ? (0, n.jsx)(U, {
           query: Z,
           setQuery: q
         }) : null, eT]
-      }) : null, eN]
+      }) : null, eE]
     })]
   })
 }

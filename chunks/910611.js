@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return L
   },
   renderTitle: function() {
-    return N
+    return x
   },
   renderTopic: function() {
-    return y
+    return R
   }
 });
 var a = n("735250"),
@@ -32,9 +32,9 @@ var a = n("735250"),
   I = n("217314"),
   A = n("981631"),
   v = n("689938"),
-  x = n("19340");
+  N = n("19340");
 
-function N(e) {
+function x(e) {
   let {
     channel: t,
     channelName: n,
@@ -46,9 +46,9 @@ function N(e) {
     handleParentClick: C,
     handleParentContextMenu: g,
     renderFollowButton: _
-  } = e, N = (0, d.default)(t, r), {
+  } = e, x = (0, d.default)(t, r), {
     prefix: M,
-    level: y
+    level: R
   } = function(e, t) {
     var n, a;
     switch (e) {
@@ -92,7 +92,7 @@ function N(e) {
   switch (t.type) {
     case A.ChannelTypes.DM:
       return (0, a.jsx)(I.default, {
-        level: y,
+        level: R,
         channel: t,
         handleClick: m,
         handleContextMenu: E
@@ -109,7 +109,7 @@ function N(e) {
             size: o.AvatarSizes.SIZE_24,
             facepileSizeOverride: o.AvatarSizes.SIZE_32,
             experimentLocation: "header_bar",
-            className: x.avatar
+            className: N.avatar
           })
         }), (0, a.jsx)(S.default, {
           channel: t
@@ -120,8 +120,8 @@ function N(e) {
     case A.ChannelTypes.GUILD_FORUM:
     case A.ChannelTypes.GUILD_MEDIA:
       return (0, a.jsxs)(l.Fragment, {
-        children: [R(N, t.type === A.ChannelTypes.GUILD_ANNOUNCEMENT ? v.default.Messages.NEWS_CHANNEL : v.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
-          level: y,
+        children: [y(x, t.type === A.ChannelTypes.GUILD_ANNOUNCEMENT ? v.default.Messages.NEWS_CHANNEL : v.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
+          level: R,
           onContextMenu: E,
           onClick: m,
           children: L
@@ -129,8 +129,8 @@ function N(e) {
       });
     case A.ChannelTypes.GUILD_VOICE:
       return (0, a.jsxs)(l.Fragment, {
-        children: [R(N, v.default.Messages.VOICE_CHANNEL), (0, a.jsx)(T.default.Title, {
-          level: y,
+        children: [y(x, v.default.Messages.VOICE_CHANNEL), (0, a.jsx)(T.default.Title, {
+          level: R,
           onContextMenu: E,
           onClick: m,
           children: L
@@ -138,8 +138,8 @@ function N(e) {
       });
     case A.ChannelTypes.GUILD_STAGE_VOICE:
       return (0, a.jsxs)(l.Fragment, {
-        children: [R(N, v.default.Messages.STAGE_CHANNEL), (0, a.jsx)(T.default.Title, {
-          level: y,
+        children: [y(x, v.default.Messages.STAGE_CHANNEL), (0, a.jsx)(T.default.Title, {
+          level: R,
           onContextMenu: E,
           onClick: m,
           children: L
@@ -152,24 +152,24 @@ function N(e) {
       if (!f && null != s) {
         let e = (0, d.default)(s, r);
         O = (0, a.jsxs)(l.Fragment, {
-          children: [R(e, v.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
-            level: y,
+          children: [y(e, v.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
+            level: R,
             onContextMenu: g,
             onClick: C,
-            className: i()(x.parentChannelName, x.cursorPointer),
+            className: i()(N.parentChannelName, N.cursorPointer),
             children: (0, u.computeChannelName)(s, p.default, h.default)
           }), (0, a.jsx)(T.default.Caret, {})]
         })
       }
       let j = (null == s ? void 0 : s.type) != null && A.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type);
       return (0, a.jsxs)(l.Fragment, {
-        children: [O, R(j ? null : N, v.default.Messages.THREAD), (0, a.jsx)(T.default.Title, {
-          level: y,
+        children: [O, y(j ? null : x, v.default.Messages.THREAD), (0, a.jsx)(T.default.Title, {
+          level: R,
           onContextMenu: E,
           onClick: m,
           className: i()({
-            [x.cursorPointer]: f,
-            [x.forumPostTitle]: j
+            [N.cursorPointer]: f,
+            [N.forumPostTitle]: j
           }),
           children: L
         })]
@@ -179,12 +179,12 @@ function N(e) {
         guildName: n
       }) : n;
       return (0, a.jsxs)(l.Fragment, {
-        children: [null !== N ? (0, a.jsx)(T.default.Icon, {
-          iconClassName: x.__invalid_icon,
-          icon: N,
+        children: [null !== x ? (0, a.jsx)(T.default.Icon, {
+          iconClassName: N.__invalid_icon,
+          icon: x,
           "aria-hidden": !0
         }) : null, (0, a.jsxs)(T.default.Title, {
-          level: y,
+          level: R,
           onContextMenu: E,
           onClick: m,
           children: [null != M ? (0, a.jsxs)(o.HiddenVisually, {
@@ -205,7 +205,7 @@ let M = e => {
   }) : null
 };
 
-function y(e, t) {
+function R(e, t) {
   switch (e.type) {
     case A.ChannelTypes.DM:
       return (0, a.jsxs)(a.Fragment, {
@@ -229,10 +229,10 @@ function y(e, t) {
   }
 }
 
-function R(e, t) {
+function y(e, t) {
   return (0, a.jsxs)(a.Fragment, {
     children: [null !== e && (0, a.jsx)(T.default.Icon, {
-      iconClassName: x.__invalid_icon,
+      iconClassName: N.__invalid_icon,
       icon: e,
       "aria-hidden": !0
     }), (0, a.jsx)(o.HiddenVisually, {
@@ -248,19 +248,19 @@ function L(e) {
     caretPosition: l = "left"
   } = e;
   return (0, r.useStateFromStores)([m.default], () => m.default.getGuildId()) !== A.FAVORITES || null == t ? null : (0, a.jsxs)("div", {
-    className: x.guildBreadcrumbContainer,
+    className: N.guildBreadcrumbContainer,
     children: ["left" === l && (0, a.jsx)(T.default.Caret, {
       direction: "left"
     }), (0, a.jsx)(C.default, {
       guild: t,
       size: C.default.Sizes.SMALLER,
-      className: x.guildBreadcrumbIcon,
+      className: N.guildBreadcrumbIcon,
       active: !0
     }), (0, a.jsx)(T.default.Title, {
       onClick: () => {
         (0, f.transitionToGuild)(t.id, n.id)
       },
-      className: i()(x.parentChannelName, x.cursorPointer),
+      className: i()(N.parentChannelName, N.cursorPointer),
       children: t.name
     }), "right" === l && (0, a.jsx)(T.default.Caret, {
       direction: "right"

@@ -2,12 +2,12 @@
 r.r(t);
 var s = r("735250");
 r("470079");
-var n = r("325767");
+var i = r("325767");
 t.default = e => {
   let {
     className: t,
     backgroundColor: r,
-    backgroundCircleSize: i,
+    backgroundCircleSize: n,
     ...l
   } = e;
   return (0, s.jsxs)("svg", {
@@ -19,11 +19,11 @@ t.default = e => {
       overflow: "visible"
     },
     xmlns: "http://www.w3.org/2000/svg",
-    ...(0, n.default)({
+    ...(0, i.default)({
       ...l
     }),
     children: [(0, s.jsx)("circle", {
-      r: null != i ? i : "40%",
+      r: null != n ? n : "40%",
       cx: "50%",
       cy: "50%",
       className: r

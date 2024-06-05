@@ -1,94 +1,94 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   acknowledgeUserOffer: function() {
-    return h
+    return p
   },
   fetchUserOffer: function() {
-    return c
+    return u
   }
 });
-var i = n("544891"),
-  a = n("704215"),
-  l = n("570140"),
-  s = n("605236"),
-  o = n("675478"),
-  r = n("295226"),
-  d = n("424082"),
-  u = n("981631");
-async function c() {
+var a = r("544891"),
+  n = r("704215"),
+  i = r("570140"),
+  l = r("605236"),
+  o = r("675478"),
+  s = r("295226"),
+  c = r("424082"),
+  d = r("981631");
+async function u() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     {
       annualDiscountsEnabled: t
-    } = (0, d.getAnnualDiscountsExperimentConfig)("PremiumManager"),
-    n = t && r.default.shouldFetchAnnualOffer();
+    } = (0, c.getAnnualDiscountsExperimentConfig)("PremiumManager"),
+    r = t && s.default.shouldFetchAnnualOffer();
   if (e) {
-    l.default.dispatch({
+    i.default.dispatch({
       type: "BILLING_USER_OFFER_FETCH_START"
     });
     try {
-      var c, h, p;
-      let e = await i.HTTP.post({
-          url: u.Endpoints.USER_OFFER
+      var u, p, m;
+      let e = await a.HTTP.post({
+          url: d.Endpoints.USER_OFFER
         }),
-        t = null !== (c = e.body.user_trial_offer) && void 0 !== c ? c : null,
-        r = null !== (h = e.body.user_discount) && void 0 !== h ? h : null,
-        d = null !== (p = e.body.user_discount_offer) && void 0 !== p ? p : null;
-      return null == t && (0, s.isDismissibleContentDismissed)(a.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.removeDismissedContent)(a.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), l.default.dispatch({
+        t = null !== (u = e.body.user_trial_offer) && void 0 !== u ? u : null,
+        s = null !== (p = e.body.user_discount) && void 0 !== p ? p : null,
+        c = null !== (m = e.body.user_discount_offer) && void 0 !== m ? m : null;
+      return null == t && (0, l.isDismissibleContentDismissed)(n.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.removeDismissedContent)(n.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), i.default.dispatch({
         type: "BILLING_USER_OFFER_FETCH_SUCCESS",
         userTrialOffer: t,
-        userDiscount: r,
-        userDiscountOffer: d
-      }), null == t && n && f(), {
+        userDiscount: s,
+        userDiscountOffer: c
+      }), null == t && r && h(), {
         userTrialOffer: t,
-        userDiscount: r,
-        userDiscountOffer: d
+        userDiscount: s,
+        userDiscountOffer: c
       }
     } catch (e) {
-      l.default.dispatch({
+      i.default.dispatch({
         type: "BILLING_USER_OFFER_FETCH_FAIL"
       })
     }
   }
-  n && f()
+  r && h()
 }
-async function f() {
+async function h() {
   try {
     var e;
-    let t = await i.HTTP.post({
-        url: u.Endpoints.ANNUAL_USER_OFFER
+    let t = await a.HTTP.post({
+        url: d.Endpoints.ANNUAL_USER_OFFER
       }),
-      n = null !== (e = t.body.user_discount_offer) && void 0 !== e ? e : null;
-    null != n && (p(n), l.default.dispatch({
+      r = null !== (e = t.body.user_discount_offer) && void 0 !== e ? e : null;
+    null != r && (m(r), i.default.dispatch({
       type: "BILLING_ANNUAL_USER_OFFER_FETCH_SUCCESS",
-      userDiscountOffer: n
+      userDiscountOffer: r
     }))
   } catch (e) {
-    l.default.dispatch({
+    i.default.dispatch({
       type: "BILLING_ANNUAL_USER_OFFER_FETCH_FAIL"
     })
   }
 }
 
-function h(e, t) {
-  let n = null != e && null == e.expires_at ? e.id : void 0,
-    a = null != t && null == t.expires_at ? t.id : void 0;
-  if (void 0 !== n || void 0 !== a) return i.HTTP.post({
-    url: u.Endpoints.USER_OFFER_ACKNOWLEDGED,
+function p(e, t) {
+  let r = null != e && null == e.expires_at ? e.id : void 0,
+    n = null != t && null == t.expires_at ? t.id : void 0;
+  if (void 0 !== r || void 0 !== n) return a.HTTP.post({
+    url: d.Endpoints.USER_OFFER_ACKNOWLEDGED,
     body: {
-      user_trial_offer_id: n,
-      user_discount_offer_id: a
+      user_trial_offer_id: r,
+      user_discount_offer_id: n
     },
     oldFormErrors: !0
   }).then(e => {
-    var t, n, i;
-    l.default.dispatch({
+    var t, r, a;
+    i.default.dispatch({
       type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
       userTrialOffer: null !== (t = e.body.user_trial_offer) && void 0 !== t ? t : null,
-      userDiscount: null !== (n = e.body.user_discount) && void 0 !== n ? n : null,
-      userDiscountOffer: null !== (i = e.body.user_discount_offer) && void 0 !== i ? i : null
+      userDiscount: null !== (r = e.body.user_discount) && void 0 !== r ? r : null,
+      userDiscountOffer: null !== (a = e.body.user_discount_offer) && void 0 !== a ? a : null
     })
   }).catch(e => {
-    404 === e.status && l.default.dispatch({
+    404 === e.status && i.default.dispatch({
       type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
       userTrialOffer: null,
       userDiscount: null,
@@ -96,10 +96,10 @@ function h(e, t) {
     })
   })
 }
-async function p(e) {
+async function m(e) {
   if (null != e && null == e.applied_at) try {
-    await i.HTTP.post({
-      url: u.Endpoints.USER_OFFER_REDEEM,
+    await a.HTTP.post({
+      url: d.Endpoints.USER_OFFER_REDEEM,
       body: {
         user_discount_offer_id: e.id
       }

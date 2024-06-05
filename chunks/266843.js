@@ -37,7 +37,7 @@ function d(e) {
   } = e, [n, i] = s.useState(t), [o, u] = s.useState(!1), d = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), c = s.useCallback(() => {
     i(e => !e), u(!0)
   }, []), {
-    expansionSpring: E
+    expansionSpring: f
   } = (0, a.useSpring)({
     expansionSpring: n ? 1 : 0,
     config: {
@@ -48,7 +48,7 @@ function d(e) {
     onRest: () => u(!1)
   });
   return {
-    expansionSpring: E,
+    expansionSpring: f,
     isAnimating: o,
     isExpanded: n,
     toggleExpanded: c

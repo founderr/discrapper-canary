@@ -16,7 +16,7 @@ t.default = function(e) {
     code: S,
     outboundPromotion: E,
     transitionState: T
-  } = e, [_, I] = n.useState(null), f = (0, o.useUID)();
+  } = e, [_, I] = n.useState(null), N = (0, o.useUID)();
   return n.useEffect(() => {
     null == S && (0, d.claimOutboundPromotion)(E.id).then(e => s(e)).catch(e => {
       var t;
@@ -24,7 +24,7 @@ t.default = function(e) {
     })
   }, [S, E.id, s]), (0, a.jsx)(l.ModalRoot, {
     transitionState: T,
-    "aria-labelledby": f,
+    "aria-labelledby": N,
     children: null != _ ? (0, a.jsx)(r.DropsModalClaimErrorBody, {
       onClose: t,
       errorCode: _

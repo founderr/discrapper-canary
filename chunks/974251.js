@@ -22,11 +22,11 @@ var a = n("735250"),
   I = n("79390"),
   A = n("628566"),
   v = n("665906"),
-  x = n("695346"),
-  N = n("433355"),
+  N = n("695346"),
+  x = n("433355"),
   M = n("819640"),
-  y = n("375954"),
-  R = n("496675"),
+  R = n("375954"),
+  y = n("496675"),
   L = n("885110"),
   O = n("151785"),
   j = n("627553"),
@@ -48,17 +48,17 @@ t.default = l.memo(function(e) {
       className: z,
       channel: K,
       draftType: Z,
-      editorTextContent: X,
-      setValue: q,
-      canOnlyUseTextCommands: J
+      editorTextContent: q,
+      setValue: X,
+      canOnlyUseTextCommands: Q
     } = e,
-    Q = (0, h.useAppContext)(),
+    J = (0, h.useAppContext)(),
     $ = l.useRef(null),
     ee = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
     et = (0, r.useStateFromStores)([g.default], () => g.default.getSettings().clipsEnabled),
     en = (0, r.useStateFromStores)([g.default], () => g.default.getLastClipsSession()),
     ea = (0, r.useStateFromStoresArray)([g.default], () => g.default.getNewClipIds()),
-    el = (0, r.useStateFromStores)([N.default], () => null == N.default.getCurrentSidebarChannelId(K.id)),
+    el = (0, r.useStateFromStores)([x.default], () => null == x.default.getCurrentSidebarChannelId(K.id)),
     {
       showClipsHeaderEntrypoint: es
     } = C.ClipsExperiment.useExperiment({
@@ -73,7 +73,7 @@ t.default = l.memo(function(e) {
     [ed, ec] = l.useState(null),
     ef = (0, C.useEnableClips)() && (et || eu),
     eh = K.isPrivate(),
-    em = (0, r.useStateFromStores)([R.default], () => eh || R.default.can(H.Permissions.ATTACH_FILES, K) && R.default.can(H.Permissions.SEND_MESSAGES, K)),
+    em = (0, r.useStateFromStores)([y.default], () => eh || y.default.can(H.Permissions.ATTACH_FILES, K) && y.default.can(H.Permissions.SEND_MESSAGES, K)),
     ep = (0, f.default)(en);
   (null == ep ? void 0 : ep.newClipIds.length) !== (null == en ? void 0 : en.newClipIds.length) && (null !== (t = null == en ? void 0 : en.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ed && ei && el && !er && !es && !eo && ec("recentClips");
   let eE = (e, t, n) => {
@@ -82,7 +82,7 @@ t.default = l.memo(function(e) {
         showLargeMessageDialog: n
       }), D.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
     },
-    eC = (0, r.useStateFromStores)([y.default], () => y.default.hasCurrentUserSentMessageSinceAppStart());
+    eC = (0, r.useStateFromStores)([R.default], () => R.default.hasCurrentUserSentMessageSinceAppStart());
 
   function eg() {
     (0, d.openModalLazy)(async () => {
@@ -108,12 +108,12 @@ t.default = l.memo(function(e) {
   });
   let eS = (0, v.useCanStartPublicThread)(K),
     e_ = (0, v.useCanStartPrivateThread)(K),
-    eT = !x.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
-    eI = (0, r.useStateFromStores)([R.default, A.default], () => (0, E.canUseApplicationCommands)(R.default, A.default, J, K)),
+    eT = !N.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
+    eI = (0, r.useStateFromStores)([y.default, A.default], () => (0, E.canUseApplicationCommands)(y.default, A.default, Q, K)),
     eA = (0, I.useCanPostPollsInChannel)(null != K ? K : void 0),
     ev = (0, d.useRedesignIconContext)().enabled,
-    ex = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
-    eN = null !== (s = null == ea ? void 0 : ea.length) && void 0 !== s ? s : 0,
+    eN = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
+    ex = null !== (s = null == ea ? void 0 : ea.length) && void 0 !== s ? s : 0,
     eM = (0, k.default)({
       canAttachFiles: em,
       canStartThreads: eS || e_,
@@ -122,24 +122,24 @@ t.default = l.memo(function(e) {
       canUseApplicationCommands: eI,
       channel: K,
       activities: ee,
-      newClipsCount: eN,
+      newClipsCount: ex,
       canPostPolls: eA,
-      canLaunchActivities: ex,
-      appContext: Q
+      canLaunchActivities: eN,
+      appContext: J
     });
   if (0 === eM.length) return null;
-  let ey = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
-    eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || ey;
+  let eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
+    ey = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eR;
   Y = ev ? (0, a.jsx)(u.CirclePlusIcon, {
     className: W.__invalid_attachButtonIcon,
     colorClass: W.attachButtonPlus
-  }) : eR ? (0, a.jsx)(P.default, {
+  }) : ey ? (0, a.jsx)(P.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonPlay,
     background: W.attachButtonPlus,
     width: 24,
     height: 24
-  }) : eN > 0 ? (0, a.jsx)(j.default, {
+  }) : ex > 0 ? (0, a.jsx)(j.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonClip,
     background: W.attachButtonPlus,
@@ -186,8 +186,8 @@ t.default = l.memo(function(e) {
               return null === (e = $.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
             },
             draftType: Z,
-            editorTextContent: X,
-            setValue: q,
+            editorTextContent: q,
+            setValue: X,
             openClips: eg
           });
         default:

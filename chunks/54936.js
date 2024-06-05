@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   OperatingSystemSection: function() {
-    return T
+    return m
   }
 }), n("411104");
 var s = n("735250");
@@ -14,8 +14,8 @@ var a = n("120356"),
   u = n("723851"),
   d = n("981631"),
   c = n("689938"),
-  E = n("318073");
-let f = {
+  f = n("318073");
+let E = {
   [d.OperatingSystems.WINDOWS]: {
     icon: u.default,
     getLabel: () => c.default.Messages.WINDOWS
@@ -34,7 +34,7 @@ function _(e) {
   let {
     operatingSystem: t,
     className: n
-  } = e, a = f[t];
+  } = e, a = E[t];
   if (null == a) throw Error("Unexpected operating system: ".concat(t));
   let l = a.icon;
   return (0, s.jsx)(i.Tooltip, {
@@ -45,17 +45,17 @@ function _(e) {
     })
   })
 }
-let T = e => {
+let m = e => {
   let {
     systems: t,
     className: n,
     iconClassName: a
   } = e;
   return (0, s.jsx)("div", {
-    className: l()(E.OSSection, n),
+    className: l()(f.OSSection, n),
     children: t.map(e => (0, s.jsx)(_, {
       operatingSystem: e,
-      className: l()(E.purchaseUnitOperatingSystem, a)
+      className: l()(f.purchaseUnitOperatingSystem, a)
     }, e))
   })
 }

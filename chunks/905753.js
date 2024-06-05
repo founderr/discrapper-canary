@@ -4,17 +4,17 @@ l.r(t), l("47120");
 var i, r, o, d, u = l("442837"),
   c = l("570140"),
   f = l("581364"),
-  m = l("399860");
-let I = {},
+  I = l("399860");
+let m = {},
   T = {},
-  N = !1;
+  E = !1;
 
-function E() {
-  n = void 0, I = {}, T = {}, a = void 0, s = void 0, N = !1
+function N() {
+  n = void 0, m = {}, T = {}, a = void 0, s = void 0, E = !1
 }
-class S extends(i = u.default.Store) {
+class _ extends(i = u.default.Store) {
   getApplicationPermissions() {
-    return I
+    return m
   }
   getCommands() {
     return T
@@ -29,32 +29,32 @@ class S extends(i = u.default.Store) {
     return s
   }
   isUnavailable() {
-    return N
+    return E
   }
   getApplicationId() {
     return n
   }
 }
-d = "IntegrationPermissionStore", (o = "displayName") in(r = S) ? Object.defineProperty(r, o, {
+d = "IntegrationPermissionStore", (o = "displayName") in(r = _) ? Object.defineProperty(r, o, {
   value: d,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[o] = d, t.default = new S(c.default, {
-  LOGOUT: E,
+}) : r[o] = d, t.default = new _(c.default, {
+  LOGOUT: N,
   INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function(e) {
     let {
       applicationId: t
     } = e;
     if (t !== n) return !1;
-    N = !0
+    E = !0
   },
-  INTEGRATION_PERMISSION_SETTINGS_CLEAR: E,
+  INTEGRATION_PERMISSION_SETTINGS_CLEAR: N,
   INTEGRATION_PERMISSION_SETTINGS_INIT: function(e) {
     let {
       applicationId: t
     } = e;
-    E(), n = t
+    N(), n = t
   },
   INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: function(e) {
     let {
@@ -64,14 +64,14 @@ d = "IntegrationPermissionStore", (o = "displayName") in(r = S) ? Object.defineP
     } = e;
     if (t !== n) return !1;
     if (l === n) {
-      I = (0, m.keyPermissions)(a);
+      m = (0, I.keyPermissions)(a);
       return
     }
     let s = T[l];
     if (null == s) return !1;
     T[l] = {
       ...s,
-      permissions: (0, m.keyPermissions)(a)
+      permissions: (0, I.keyPermissions)(a)
     }
   },
   INTEGRATION_PERMISSION_SETTINGS_EDIT: function(e) {
@@ -97,7 +97,7 @@ d = "IntegrationPermissionStore", (o = "displayName") in(r = S) ? Object.defineP
       applicationId: t
     } = e;
     if (t !== n) return !1;
-    N = !0
+    E = !0
   },
   INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS: function(e) {
     let {
@@ -116,7 +116,7 @@ d = "IntegrationPermissionStore", (o = "displayName") in(r = S) ? Object.defineP
             applicationId: e.application_id
           }),
           l = s[e.id];
-        null != l && (t.permissions = (0, m.keyPermissions)(l)), i[e.id] = t
+        null != l && (t.permissions = (0, I.keyPermissions)(l)), i[e.id] = t
       } T = i
   }
 })

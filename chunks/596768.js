@@ -1,17 +1,17 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return I
+    return R
   }
 }), r("47120");
 var a = r("735250"),
-  i = r("470079"),
-  n = r("120356"),
-  l = r.n(n),
+  n = r("470079"),
+  i = r("120356"),
+  l = r.n(i),
   o = r("658722"),
-  c = r.n(o),
-  s = r("913527"),
-  d = r.n(s),
+  s = r.n(o),
+  c = r("913527"),
+  d = r.n(c),
   u = r("442837"),
   h = r("481060"),
   p = r("570140"),
@@ -23,13 +23,13 @@ var a = r("735250"),
   x = r("120816"),
   k = r("31336"),
   v = r("257785"),
-  j = r("484036"),
-  w = r("681619"),
-  S = r("621060"),
-  T = r("689938"),
+  S = r("484036"),
+  C = r("681619"),
+  T = r("621060"),
+  j = r("689938"),
   N = r("457501"),
-  C = r("277513");
-let _ = [{
+  w = r("277513");
+let E = [{
     key: "id",
     cellClassName: N.eventColumn,
     render(e) {
@@ -57,7 +57,7 @@ let _ = [{
       return t.toLocaleString()
     }
   }],
-  E = [{
+  _ = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -65,16 +65,16 @@ let _ = [{
         loggedTrigger: {
           experimentId: t,
           descriptor: r,
-          exposureType: i,
-          excluded: n,
+          exposureType: n,
+          excluded: i,
           timestamp: o,
-          location: c,
-          previouslyTracked: s
+          location: s,
+          previouslyTracked: c
         }
       } = e, u = d()(o);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(y.default, {
-          className: l()(C.headerBar, N.subPanelHeaderBar),
+          className: l()(w.headerBar, N.subPanelHeaderBar),
           children: [(0, a.jsx)(y.default.Icon, {
             icon: g.default,
             tooltip: t
@@ -113,22 +113,22 @@ let _ = [{
           }), (0, a.jsx)(v.Property, {
             name: "Exposure type",
             children: (0, a.jsx)("code", {
-              children: i
+              children: n
             })
           }), (0, a.jsx)(v.Property, {
             name: "Excluded",
             children: (0, a.jsx)(v.BooleanPropertyValue, {
-              value: n
+              value: i
             })
           }), (0, a.jsx)(v.Property, {
             name: "Previously tracked",
             children: (0, a.jsx)(v.BooleanPropertyValue, {
-              value: s
+              value: c
             })
           }), (0, a.jsx)(v.Property, {
             name: "Location",
             children: (0, a.jsx)("code", {
-              children: c
+              children: s
             })
           })]
         })]
@@ -136,13 +136,13 @@ let _ = [{
     }
   }];
 
-function I() {
-  let [e, t] = i.useState(""), r = i.useRef(null), n = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = i.useMemo(() => n.filter(t => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [n, e]), [s, d] = i.useState(void 0), g = o.find(e => e.key === s), {
+function R() {
+  let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), g = o.find(e => e.key === c), {
     TabBar: y,
     renderSelectedTab: b
-  } = (0, S.default)({
-    tabs: E
-  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), I = i.useCallback(e => {
+  } = (0, T.default)({
+    tabs: _
+  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), R = n.useCallback(e => {
     p.default.dispatch({
       type: "SET_TRACK_TRIGGERS",
       enabled: e
@@ -150,7 +150,7 @@ function I() {
   }, []);
   return (0, a.jsxs)("div", {
     ref: r,
-    className: l()(C.panel, N.panel),
+    className: l()(w.panel, N.panel),
     children: [(0, a.jsxs)("div", {
       className: N.toolbar,
       children: [(0, a.jsx)("div", {
@@ -158,7 +158,7 @@ function I() {
         className: N.triggersEnable,
         children: (0, a.jsx)(h.Switch, {
           checked: v,
-          onChange: I,
+          onChange: R,
           className: N.__invalid_toolbarSwitch
         })
       }), (0, a.jsx)(h.Button, {
@@ -167,9 +167,9 @@ function I() {
         size: h.Button.Sizes.ICON,
         onClick: k.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
-          title: T.default.Messages.CLEAR,
+          title: j.default.Messages.CLEAR,
           children: (0, a.jsx)(f.default, {
-            "aria-label": T.default.Messages.CLEAR
+            "aria-label": j.default.Messages.CLEAR
           })
         })
       }), (0, a.jsx)(m.default, {
@@ -181,13 +181,13 @@ function I() {
       })]
     }), (0, a.jsx)(h.ScrollerThin, {
       className: N.tableContainer,
-      children: (0, a.jsx)(w.default, {
-        columns: _,
+      children: (0, a.jsx)(C.default, {
+        columns: E,
         data: o,
-        selectedRowKey: s,
+        selectedRowKey: c,
         onClickRow: d
       })
-    }), null != g && (0, a.jsxs)(j.default, {
+    }), null != g && (0, a.jsxs)(S.default, {
       className: N.subPanel,
       minHeight: 100,
       initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,

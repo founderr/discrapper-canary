@@ -23,8 +23,8 @@ let x = new Set,
   M = [],
   D = C.GuildSettingsRoleEditSections.DISPLAY,
   v = !1,
-  G = new Set,
-  j = new Map,
+  j = new Set,
+  G = new Map,
   U = new Map;
 
 function P() {
@@ -59,21 +59,21 @@ function b(e) {
     section: t
   } = e;
   if (null != a || t !== R.GuildSettingsSections.ROLES) return !1;
-  y()
+  B()
 }
 
-function y() {
+function B() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   a = h.default.getProps().guild, O = !1, p = !1, n = void 0, x.clear(), L = R.FormStates.OPEN, M = [...A = null != a ? c()(f.default.getRoles(a.id)).values().sortBy(e => {
     let {
       position: t
     } = e;
     return t
-  }).reverse().value() : []], v = !1, e && (U.clear(), j.forEach((e, t) => {
+  }).reverse().value() : []], v = !1, e && (U.clear(), G.forEach((e, t) => {
     U.set(t, [...e])
   }))
 }
-let B = c().debounce(() => {
+let y = c().debounce(() => {
   let e = !1;
   p && !(p = P().length > 0) && (e = !0), [...x].forEach(t => {
     c().isEqual(H(t), function(e) {
@@ -84,7 +84,7 @@ let B = c().debounce(() => {
         return s === e
       })
     }(t)) && (x.delete(t), e = !0)
-  }), 0 === x.size && (O = !1), v && c().isEqual(j, U) && (e = !0, v = !1), e && V.emitChange()
+  }), 0 === x.size && (O = !1), v && c().isEqual(G, U) && (e = !0, v = !1), e && V.emitChange()
 }, 500);
 
 function F(e, t) {
@@ -94,7 +94,7 @@ function F(e, t) {
     ...e,
     ...t
   };
-  A[s] = a, A = [...A], O = !0, x.add(a.id), B()
+  A[s] = a, A = [...A], O = !0, x.add(a.id), y()
 }
 
 function H(e) {
@@ -152,7 +152,7 @@ class w extends(i = I.default.Store) {
     return Array.from(x)
   }
   get editedRoleIdsForConfigurations() {
-    return G
+    return j
   }
   get roles() {
     return A
@@ -186,7 +186,7 @@ d = "GuildSettingsRolesStore", (o = "displayName") in(r = w) ? Object.defineProp
   writable: !0
 }) : r[o] = d;
 let V = new w(T.default, __OVERLAY__ ? {} : {
-  GUILD_SETTINGS_ROLES_INIT: () => y(),
+  GUILD_SETTINGS_ROLES_INIT: () => B(),
   GUILD_SETTINGS_INIT: b,
   GUILD_SETTINGS_SET_SECTION: b,
   GUILD_SETTINGS_ROLES_SORT_UPDATE: function(e) {
@@ -194,7 +194,7 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
       roles: t
     } = e;
     if (null != A && t.length !== A.length) return !1;
-    A = t.map(e => H(e)).filter(N.isNotNullish), p = !0, B()
+    A = t.map(e => H(e)).filter(N.isNotNullish), p = !0, y()
   },
   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function(e) {
     let {
@@ -287,7 +287,7 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
         F(t, t);
         return
       }
-      A = [...A, t], B()
+      A = [...A, t], y()
     }
   },
   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function(e) {
@@ -296,9 +296,9 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
       roleConnectionConfigurations: s
     } = e, a = H(t);
     if (null == a) return !1;
-    let l = j.get(a.id);
+    let l = G.get(a.id);
     if (c().isEqual(l, s)) return !1;
-    U.set(a.id, s), j.set(a.id, s), B()
+    U.set(a.id, s), G.set(a.id, s), y()
   },
   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function(e) {
     let {
@@ -306,15 +306,15 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
       roleConnectionConfigurations: s
     } = e, a = H(t);
     if (null == a) return !1;
-    v = !0, G.add(a.id), U.set(a.id, s), B()
+    v = !0, j.add(a.id), U.set(a.id, s), y()
   },
   GUILD_SETTINGS_CLOSE: function() {
-    a = null, M = A = [], j.clear(), x.clear(), U.clear(), G = new Set, O = !1, p = !1, v = !1, L = R.FormStates.CLOSED
+    a = null, M = A = [], G.clear(), x.clear(), U.clear(), j = new Set, O = !1, p = !1, v = !1, L = R.FormStates.CLOSED
   },
   GUILD_ROLE_CREATE: k,
   GUILD_ROLE_UPDATE: k,
   GUILD_ROLE_DELETE: function(e) {
-    return G.has(e.roleId) && (G.delete(e.roleId), j.delete(e.roleId), U.delete(e.roleId), v = !1), k(e)
+    return j.has(e.roleId) && (j.delete(e.roleId), G.delete(e.roleId), U.delete(e.roleId), v = !1), k(e)
   },
   GUILD_SETTINGS_ROLES_SUBMITTING: function() {
     L = R.FormStates.SUBMITTING
@@ -326,7 +326,7 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
     L = R.FormStates.OPEN, n = t
   },
   GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function() {
-    y(!1)
+    B(!1)
   },
   GUILD_SETTINGS_ROLES_EDIT_SECTION_UPDATE: function(e) {
     let {

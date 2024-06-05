@@ -17,34 +17,34 @@ var i = s("120356"),
   T = s("285952"),
   _ = s("153124"),
   I = s("626135"),
-  f = s("63063"),
-  m = s("210887"),
-  N = s("981631"),
-  g = s("689938"),
-  h = s("611273");
-let C = s("775322"),
-  O = s("853453"),
-  A = (0, _.uid)();
+  N = s("63063"),
+  f = s("210887"),
+  g = s("981631"),
+  m = s("689938"),
+  C = s("611273");
+let A = s("775322"),
+  h = s("853453"),
+  O = (0, _.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
 let p = {
-  page: N.AnalyticsPages.USER_SETTINGS,
-  section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+  page: g.AnalyticsPages.USER_SETTINGS,
+  section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
 };
 
 function R(e) {
   let t = e.currentTarget;
-  I.default.track(N.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  I.default.track(g.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
-      page: N.AnalyticsPages.USER_SETTINGS,
-      section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+      page: g.AnalyticsPages.USER_SETTINGS,
+      section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
     }
   })
 }
 
 function x() {
-  let e = (0, o.useStateFromStores)([m.default], () => m.default.theme),
+  let e = (0, o.useStateFromStores)([f.default], () => f.default.theme),
     {
       noiseCancellation: t,
       noiseSuppression: s,
@@ -59,25 +59,25 @@ function x() {
   if (!a && !n) return null;
   let i = [];
   return n && i.push({
-    name: g.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_KRISP,
+    name: m.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_KRISP,
     value: 2
   }), a && i.push({
-    name: g.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_STANDARD,
+    name: m.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_STANDARD,
     value: 1
   }), i.push({
-    name: g.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DISABLED,
+    name: m.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DISABLED,
     value: 0
   }), (0, l.jsxs)(u.FormSection, {
-    className: h.marginBottom20,
+    className: C.marginBottom20,
     children: [(0, l.jsx)(u.FormTitle, {
-      id: A,
+      id: O,
       tag: u.FormTitleTags.H3,
-      className: h.marginBottom8,
-      children: g.default.Messages.NOISE_SUPPRESSION
+      className: C.marginBottom8,
+      children: m.default.Messages.NOISE_SUPPRESSION
     }), (0, l.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
-      className: h.marginBottom8,
-      children: g.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION
+      className: C.marginBottom8,
+      children: m.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION
     }), (0, l.jsx)(u.RadioGroup, {
       options: i,
       onChange: e => {
@@ -85,18 +85,18 @@ function x() {
       },
       value: t ? 2 : s ? 1 : 0
     }), n && (0, l.jsx)(u.FormNotice, {
-      className: h.marginBottom8,
+      className: C.marginBottom8,
       type: u.FormNoticeTypes.PRIMARY,
       imageData: {
-        src: (0, d.isThemeLight)(e) ? C : O,
+        src: (0, d.isThemeLight)(e) ? A : h,
         width: 70,
         height: 40
       },
       align: T.default.Align.CENTER,
       body: (0, l.jsx)(u.Anchor, {
-        href: f.default.getArticleURL(N.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: N.default.getArticleURL(g.HelpdeskArticles.NOISE_SUPPRESSION),
         onClick: R,
-        children: g.default.Messages.LEARN_MORE
+        children: m.default.Messages.LEARN_MORE
       })
     }), (0, l.jsx)(u.FormDivider, {})]
   })
@@ -124,46 +124,46 @@ function M() {
   })), {
     hasEchoCancellation: _,
     hasNoiseSuppression: I,
-    hasAutomaticGainControl: f
+    hasAutomaticGainControl: N
   } = (0, o.useStateFromStoresObject)([S.default], () => ({
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), m = _ || I || f, C = e === N.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), f = _ || I || N, A = e === g.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
-    className: h.marginBottom20,
-    title: g.default.Messages.FORM_LABEL_VOICE_PROCESSING,
-    children: [m && (0, l.jsx)(u.FormText, {
-      className: h.marginBottom20,
+    className: C.marginBottom20,
+    title: m.default.Messages.FORM_LABEL_VOICE_PROCESSING,
+    children: [f && (0, l.jsx)(u.FormText, {
+      className: C.marginBottom20,
       type: u.FormText.Types.DESCRIPTION,
-      children: g.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
+      children: m.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
     }), (0, l.jsx)(u.FormSwitch, {
-      className: r()(h.marginTop8, h.marginBottom20),
+      className: r()(C.marginTop8, C.marginBottom20),
       value: s,
       onChange: e => c.default.setEchoCancellation(e, {
-        page: N.AnalyticsPages.USER_SETTINGS,
-        section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: g.AnalyticsPages.USER_SETTINGS,
+        section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       disabled: _,
-      children: g.default.Messages.ECHO_CANCELLATION
+      children: m.default.Messages.ECHO_CANCELLATION
     }), (0, l.jsx)(x, {}), d && (0, l.jsx)(u.FormSwitch, {
       value: i,
       onChange: t => c.default.setMode(e, {
         vadUseKrisp: t
       }),
-      note: g.default.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
-      disabled: !C,
-      children: g.default.Messages.ADVANCED_VOICE_ACTIVITY
+      note: m.default.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
+      disabled: !A,
+      children: m.default.Messages.ADVANCED_VOICE_ACTIVITY
     }), T && (0, l.jsx)(u.FormSwitch, {
       className: "",
       value: a,
       onChange: e => c.default.setAutomaticGainControl(e, {
-        page: N.AnalyticsPages.USER_SETTINGS,
-        section: N.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: g.AnalyticsPages.USER_SETTINGS,
+        section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
-      note: g.default.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
-      disabled: f,
-      children: g.default.Messages.AUTOMATIC_GAIN_CONTROL
+      note: m.default.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
+      disabled: N,
+      children: m.default.Messages.AUTOMATIC_GAIN_CONTROL
     })]
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return g
   }
 });
 var a = s("735250");
@@ -19,12 +19,12 @@ var n = s("410575"),
   T = s("206339"),
   _ = s("726985"),
   I = s("981631"),
-  f = s("46140"),
-  m = s("313026");
+  N = s("46140"),
+  f = s("313026");
 
-function N() {
+function g() {
   let e = (0, u.useIsEligibleForQuests)({
-      location: f.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+      location: N.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
     {
       enabled: t
@@ -38,8 +38,8 @@ function N() {
     children: [!s && (0, a.jsxs)(a.Fragment, {
       children: [t && (0, a.jsx)(d.default, {
         location: l.default.USER_SETTINGS_GIFT_INVENTORY,
-        className: m.giftNitro,
-        imageClassName: m.giftNitroImage,
+        className: f.giftNitro,
+        imageClassName: f.giftNitroImage,
         textContainerOverrideStyles: {
           padding: "32px",
           width: "360px"

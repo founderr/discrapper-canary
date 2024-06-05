@@ -26,11 +26,11 @@ var a = n("735250"),
   I = n("348600"),
   A = n("566620"),
   v = n("480906"),
-  x = n("11778"),
-  N = n("127255"),
+  N = n("11778"),
+  x = n("127255"),
   M = n("5200"),
-  y = n("558317"),
-  R = n("403404"),
+  R = n("558317"),
+  y = n("403404"),
   L = n("701488"),
   O = n("981631"),
   j = n("689938"),
@@ -61,33 +61,33 @@ let w = "vc-activities-".concat((0, o.v4)()),
       autoTrackExposure: !0
     }), {
       enableTuneInMiniShelfBanner: Y
-    } = x.ExperimentTuneInMiniShelfBanner.useExperiment({
+    } = N.ExperimentTuneInMiniShelfBanner.useExperiment({
       location: "ActivitiesMiniShelf"
     }, {
       autoTrackExposure: !0
     }), z = (0, u.useStateFromStores)([C.default], () => C.default.getState().theme), K = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: Z,
-      guild_id: X
+      guild_id: q
     } = n;
     l.useEffect(() => {
       T.default.track(O.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
         channel_id: Z,
-        guild_id: X
+        guild_id: q
       })
-    }, [Z, X]), l.useEffect(() => {
+    }, [Z, q]), l.useEffect(() => {
       !s && o()
     }, [o, s]);
-    let q = (0, f.useAppContext)(),
-      {
-        analyticsLocations: J
-      } = (0, p.default)(m.default.ACTIVITIES_MINI_SHELF),
+    let X = (0, f.useAppContext)(),
       {
         analyticsLocations: Q
-      } = (0, p.default)([...J, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      $ = q === O.AppContext.POPOUT,
+      } = (0, p.default)(m.default.ACTIVITIES_MINI_SHELF),
+      {
+        analyticsLocations: J
+      } = (0, p.default)([...Q, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
+      $ = X === O.AppContext.POPOUT,
       ee = (0, c.useAnalyticsContext)(),
       et = function(e, t) {
-        return (0, N.default)({
+        return (0, x.default)({
           guildId: e,
           channel: t
         }).slice(0, 5)
@@ -98,14 +98,14 @@ let w = "vc-activities-".concat((0, o.v4)()),
     }, []);
     let en = l.useCallback(() => {
         var e;
-        (0, R.default)({
+        (0, y.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
           locationObject: ee.location,
           openInPopout: $,
-          analyticsLocations: J
+          analyticsLocations: Q
         }), H(), B()
-      }, [ee, J, n, B, H, $]),
+      }, [ee, Q, n, B, H, $]),
       ea = l.useCallback(e => {
         k(), T.default.track(O.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
@@ -126,7 +126,7 @@ let w = "vc-activities-".concat((0, o.v4)()),
           [P.clickableBannerReducedMotion]: K
         }),
         onClick: () => {
-          B(), o(), (0, E.transitionTo)(O.Routes.ACTIVITY_DETAILS(L.TUNE_IN_APPLICATION_ID), void 0, void 0, Q)
+          B(), o(), (0, E.transitionTo)(O.Routes.ACTIVITY_DETAILS(L.TUNE_IN_APPLICATION_ID), void 0, void 0, J)
         },
         children: [(0, a.jsx)("img", {
           alt: j.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TUNE_IN_POSTER_ALT,
@@ -140,7 +140,7 @@ let w = "vc-activities-".concat((0, o.v4)()),
           [P.clickableBannerReducedMotion]: K
         }),
         onClick: () => {
-          B(), o(), (0, E.transitionTo)(O.Routes.ACTIVITY_DETAILS(L.DEATH_BY_AI_APPLICATION_ID), void 0, void 0, Q)
+          B(), o(), (0, E.transitionTo)(O.Routes.ACTIVITY_DETAILS(L.DEATH_BY_AI_APPLICATION_ID), void 0, void 0, J)
         },
         children: [(0, a.jsx)("img", {
           alt: j.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_DEATH_BY_AI_POSTER,
@@ -151,7 +151,7 @@ let w = "vc-activities-".concat((0, o.v4)()),
         })]
       }) : null;
     return (0, a.jsx)(p.AnalyticsLocationProvider, {
-      value: J,
+      value: Q,
       children: (0, a.jsx)(g.default, {
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,
@@ -194,7 +194,7 @@ let w = "vc-activities-".concat((0, o.v4)()),
                 })]
               })]
             }), (0, a.jsx)(p.AnalyticsLocationProvider, {
-              value: Q,
+              value: J,
               children: el
             }), (0, a.jsxs)("div", {
               className: P.activityContainer,
@@ -212,7 +212,7 @@ let w = "vc-activities-".concat((0, o.v4)()),
                 }),
                 children: (0, a.jsx)("div", {
                   className: P.wumpusRocketInnerContainer,
-                  children: (0, a.jsx)(y.default, {
+                  children: (0, a.jsx)(R.default, {
                     className: P.wumpusRocket
                   })
                 })

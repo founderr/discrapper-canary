@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("999382"),
   D = s("84613"),
   v = s("740903"),
-  G = s("981631"),
-  j = s("689938"),
+  j = s("981631"),
+  G = s("689938"),
   U = s("409353");
 
 function P(e, t, s) {
@@ -62,7 +62,7 @@ function b(e) {
     if (null != n) {
       m(null), I(!0);
       try {
-        await E.default.unbanUser(n.id, i.id), d(), L.default.track(G.AnalyticEvents.GUILD_BAN_REMOVED, {
+        await E.default.unbanUser(n.id, i.id), d(), L.default.track(j.AnalyticEvents.GUILD_BAN_REMOVED, {
           ...(0, S.collectGuildAnalyticsMetadata)(n.id),
           target_user_id: i.id,
           reason: r.reason,
@@ -96,10 +96,10 @@ function b(e) {
       children: [(0, a.jsx)(u.Text, {
         className: U.reasonHeader,
         variant: "text-xs/normal",
-        children: j.default.Messages.BAN_REASON
+        children: G.default.Messages.BAN_REASON
       }), (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
-        children: null != r.reason && "" !== r.reason ? r.reason : j.default.Messages.NO_BAN_REASON
+        children: null != r.reason && "" !== r.reason ? r.reason : G.default.Messages.NO_BAN_REASON
       }), null != T ? (0, a.jsx)(u.Text, {
         className: U.error,
         color: "text-danger",
@@ -113,15 +113,15 @@ function b(e) {
         look: u.Button.Looks.LINK,
         color: u.Button.Colors.RED,
         submitting: c,
-        children: j.default.Messages.REVOKE_BAN
+        children: G.default.Messages.REVOKE_BAN
       }), (0, a.jsx)(u.Button, {
         onClick: d,
-        children: j.default.Messages.DONE
+        children: G.default.Messages.DONE
       })]
     })]
   })
 }
-class y extends l.PureComponent {
+class B extends l.PureComponent {
   render() {
     let {
       user: e,
@@ -180,7 +180,7 @@ class y extends l.PureComponent {
     })
   }
 }
-let B = l.forwardRef(function(e, t) {
+let y = l.forwardRef(function(e, t) {
   let {
     guild: s,
     sortedBans: n,
@@ -199,7 +199,7 @@ let B = l.forwardRef(function(e, t) {
     }, "spinner");
     let l = n[e],
       o = null == i ? void 0 : i.get(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "");
-    if (null != l && null != o) return (0, a.jsx)(y, {
+    if (null != l && null != o) return (0, a.jsx)(B, {
       user: l,
       ban: o,
       hideDiscriminator: r,
@@ -221,7 +221,7 @@ function F(e) {
     guildId: t,
     storedSearchQuery: s
   } = e, [n, i] = l.useState(null != s ? s : ""), [r, o] = l.useState(!1), d = l.useCallback(() => {
-    A.default.setSection(G.GuildSettingsSections.SAFETY), (0, D.setSafetyPage)(v.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
+    A.default.setSection(j.GuildSettingsSections.SAFETY), (0, D.setSafetyPage)(v.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
   }, []), c = l.useCallback(e => {
     i(e), 0 === e.trim().length && A.default.setSearchQuery(e)
   }, []), _ = l.useCallback(() => {
@@ -243,13 +243,13 @@ function F(e) {
   }, [I]);
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
-    title: j.default.Messages.BANS_HEADER_NEW,
+    title: G.default.Messages.BANS_HEADER_NEW,
     children: [(0, a.jsx)("div", {
       className: U.settingsHeader,
       children: (0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
         className: U.description,
-        children: j.default.Messages.BANS_HINT.format({
+        children: G.default.Messages.BANS_HINT.format({
           onModerationClick: d
         })
       })
@@ -258,8 +258,8 @@ function F(e) {
       children: [(0, a.jsx)(C.default, {
         className: U.searchBar,
         query: null != n ? n : "",
-        placeholder: j.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
-        "aria-label": j.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
+        placeholder: G.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
+        "aria-label": G.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
         onChange: c,
         onKeyDown: T,
         onClear: _,
@@ -272,7 +272,7 @@ function F(e) {
         disabled: r,
         submitting: r,
         className: U.searchButton,
-        children: j.default.Messages.SEARCH
+        children: G.default.Messages.SEARCH
       })]
     })]
   }, "bans-header")
@@ -283,7 +283,7 @@ function H() {
   let {
     guild: n,
     searchQuery: c
-  } = (0, d.useStateFromStores)([M.default], () => M.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, I.default)(_), f = _ !== S, [N] = (0, d.useStateFromStores)([M.default], () => M.default.getBans(), [], O.isVersionEqual), C = null !== (e = null == N ? void 0 : N.size) && void 0 !== e ? e : 0, R = (0, T.default)(), x = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : G.EMPTY_STRING_SNOWFLAKE_ID, L = l.useRef(null), p = l.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
+  } = (0, d.useStateFromStores)([M.default], () => M.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, I.default)(_), f = _ !== S, [N] = (0, d.useStateFromStores)([M.default], () => M.default.getBans(), [], O.isVersionEqual), C = null !== (e = null == N ? void 0 : N.size) && void 0 !== e ? e : 0, R = (0, T.default)(), x = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_SNOWFLAKE_ID, L = l.useRef(null), p = l.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
     if (null == t || 0 === e.trim().length) return !1;
     let [
       [s], a
@@ -297,35 +297,35 @@ function H() {
       null != e && p(t)(e) && a.push(e)
     }
     return a
-  }, [p]), D = l.useMemo(() => A(N, c, C), [N, A, c, C]), v = null != N, P = D.length % 1e3 == 0 && D.length > 0 && v, b = 0 === D.length, [y, H] = l.useState({
+  }, [p]), D = l.useMemo(() => A(N, c, C), [N, A, c, C]), v = null != N, P = D.length % 1e3 == 0 && D.length > 0 && v, b = 0 === D.length, [B, H] = l.useState({
     currentPage: 1,
     pageSize: 100
   });
   l.useEffect(() => {
-    f && 1 !== y.currentPage && H(e => ({
+    f && 1 !== B.currentPage && H(e => ({
       ...e,
       currentPage: 1
     }))
-  }, [f, y.currentPage]);
+  }, [f, B.currentPage]);
   let k = l.useCallback(e => {
       E.default.fetchGuildBansBatch(x, 1e3, e)
     }, [x]),
-    w = l.useMemo(() => o().chunk(D, y.pageSize), [y.pageSize, D]),
+    w = l.useMemo(() => o().chunk(D, B.pageSize), [B.pageSize, D]),
     V = l.useCallback(e => {
       var t, s, a;
-      null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * y.pageSize > D.length && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, k(Y.current)), (null != w[e - 1] || P) && H(t => ({
+      null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > D.length && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, k(Y.current)), (null != w[e - 1] || P) && H(t => ({
         ...t,
         currentPage: e
       }))
-    }, [y.pageSize, D, P, w, k, _]),
+    }, [B.pageSize, D, P, w, k, _]),
     Y = l.useRef(null);
   l.useEffect(() => {
     k(Y.current)
   }, [k]);
   let W = l.useMemo(() => {
     var e;
-    return null !== (e = w[y.currentPage - 1]) && void 0 !== e ? e : []
-  }, [w, y.currentPage]);
+    return null !== (e = w[B.currentPage - 1]) && void 0 !== e ? e : []
+  }, [w, B.currentPage]);
   return null == n ? null : (0, a.jsxs)("div", {
     className: i()(U.container),
     children: [(0, a.jsx)(F, {
@@ -333,7 +333,7 @@ function H() {
       storedSearchQuery: c
     }), (0, a.jsxs)("div", {
       className: i()(U.scrollerContainer),
-      children: [!b && (0, a.jsx)(B, {
+      children: [!b && (0, a.jsx)(y, {
         guild: n,
         bans: N,
         sortedBans: W,
@@ -347,20 +347,20 @@ function H() {
           width: 256,
           height: 212
         }), (0, a.jsx)(h.EmptyStateText, {
-          note: j.default.Messages.BANS_NO_USERS_BANNED,
+          note: G.default.Messages.BANS_NO_USERS_BANNED,
           style: {
             maxWidth: 300
           },
-          children: j.default.Messages.NO_BANS
+          children: G.default.Messages.NO_BANS
         })]
       })]
     }), (0, a.jsx)("div", {
       className: i()(U.__invalid_paginationContainer),
       children: (0, a.jsx)(u.Paginator, {
         className: i()(U.paginationInput),
-        totalCount: D.length + (P ? y.pageSize : 0),
-        pageSize: y.pageSize,
-        currentPage: y.currentPage,
+        totalCount: D.length + (P ? B.pageSize : 0),
+        pageSize: B.pageSize,
+        currentPage: B.currentPage,
         onPageChange: V,
         maxVisiblePages: 9
       })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 }), n("47120");
 var a = n("836560"),
@@ -24,10 +24,10 @@ function c(e, t, n) {
 let f = 10 * r.default.Millis.SECOND,
   E = new Map,
   h = new Set,
-  C = (e, t, n) => {
+  _ = (e, t, n) => {
     n([u.default.CLOSE, t], e)
   };
-class _ extends a.EventEmitter {
+class C extends a.EventEmitter {
   routeEvent(e, t, n, a) {
     if (!Array.isArray(n)) {
       console.warn("[PostMessageTransport] Protocol error: event data should be an Array!");
@@ -105,7 +105,7 @@ class _ extends a.EventEmitter {
         null != a ? this.disconnectSocket(a, {
           code: e.code,
           message: e.message
-        }, !0) : C(t, {
+        }, !0) : _(t, {
           code: e.code,
           message: e.message
         }, n)
@@ -152,7 +152,7 @@ class _ extends a.EventEmitter {
           frameId: i,
           version: Number(t.v),
           logger: this.logger,
-          postClose: C,
+          postClose: _,
           encoding: null !== (r = t.encoding) && void 0 !== r ? r : "json"
         })
       } catch (e) {

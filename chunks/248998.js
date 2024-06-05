@@ -29,16 +29,16 @@ function E(e) {
       hideDescriptionUntilUnlock: _,
       onAction: I
     } = n,
-    f = _ && !i,
-    m = i ? "header-primary" : "text-muted",
-    N = i ? "header-secondary" : "text-muted",
-    g = r()(s),
-    h = null != I && i,
-    C = h ? o.Clickable : "div";
-  return (0, a.jsxs)(C, {
-    className: l()(S.container, h && S.actionable),
+    N = _ && !i,
+    f = i ? "header-primary" : "text-muted",
+    g = i ? "header-secondary" : "text-muted",
+    m = r()(s),
+    C = null != I && i,
+    A = C ? o.Clickable : "div";
+  return (0, a.jsxs)(A, {
+    className: l()(S.container, C && S.actionable),
     onClick: () => {
-      h && I()
+      C && I()
     },
     children: [(0, a.jsx)("div", {
       className: S.iconContainer,
@@ -53,15 +53,15 @@ function E(e) {
         variant: "text-xxs/semibold",
         color: "text-muted",
         className: S.unlocked,
-        children: (0, d.calendarFormat)(g)
+        children: (0, d.calendarFormat)(m)
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
-        color: m,
+        color: f,
         children: E()
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
-        color: N,
-        children: f ? "?????" : T()
+        color: g,
+        children: N ? "?????" : T()
       })]
     })]
   })

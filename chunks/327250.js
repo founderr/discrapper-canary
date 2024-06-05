@@ -27,11 +27,11 @@ var l = n("120356"),
   I = n("974029"),
   A = n("789695"),
   v = n("465670"),
-  x = n("754424"),
-  N = n("877410"),
+  N = n("754424"),
+  x = n("877410"),
   M = n("572004"),
-  y = n("5192"),
-  R = n("51144"),
+  R = n("5192"),
+  y = n("51144"),
   L = n("991570"),
   O = n("981631"),
   j = n("689938"),
@@ -64,7 +64,7 @@ function D(e) {
         children: (0, a.jsx)(r.Text, {
           variant: "text-lg/medium",
           children: (0, a.jsx)(r.NameWithRole, {
-            name: y.default.getName(l, null, t),
+            name: R.default.getName(l, null, t),
             color: r.tokens.colors.HEADER_PRIMARY.css
           })
         })
@@ -73,7 +73,7 @@ function D(e) {
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "text-normal",
-          children: R.default.getUserTag(t)
+          children: y.default.getUserTag(t)
         })
       })]
     }), (0, a.jsx)("div", {
@@ -127,13 +127,13 @@ function U(e) {
     canKickUser: null != p && C.default.canManageUser(O.Permissions.KICK_MEMBERS, l, p),
     canBanUser: null != p && C.default.canManageUser(O.Permissions.BAN_MEMBERS, l, p),
     canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, C.default])
-  }), [l, p]), y = (0, d.isMemberCommunicationDisabled)(s), {
-    analyticsLocations: R,
+  }), [l, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
+    analyticsLocations: y,
     newestAnalyticsLocation: L
   } = (0, u.default)(), D = (0, h.useTrackModerationAction)(m, {
     targetUserId: l.id,
     location: L,
-    locations: R
+    locations: y
   });
   return (0, a.jsxs)("div", {
     className: P.bottomRow,
@@ -172,7 +172,7 @@ function U(e) {
           })
         })
       },
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, a.jsx)(x.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
@@ -216,7 +216,7 @@ function U(e) {
         backgroundColor: t
       },
       onClick: () => {
-        y ? (0, c.openEnableCommunication)(s.guildId, s.userId, R) : (0, c.openDisableCommunication)(s.guildId, s.userId, R)
+        R ? (0, c.openEnableCommunication)(s.guildId, s.userId, y) : (0, c.openDisableCommunication)(s.guildId, s.userId, y)
       },
       children: [(0, a.jsx)(A.default, {
         width: 22,
@@ -225,7 +225,7 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y ? j.default.Messages.REMOVE : j.default.Messages.TIMEOUT_USER
+        children: R ? j.default.Messages.REMOVE : j.default.Messages.TIMEOUT_USER
       })]
     }), (0, a.jsxs)(b, {
       "aria-label": j.default.Messages.COPY_ID,
@@ -236,7 +236,7 @@ function U(e) {
         D(h.ModerationActionType.COPY_ID), (0, M.copy)(l.id)
       },
       disabled: !M.SUPPORTS_COPY,
-      children: [(0, a.jsx)(x.default, {
+      children: [(0, a.jsx)(N.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css

@@ -13,7 +13,7 @@ function i(e) {
 }
 
 function r(e, t) {
-  let [n, r] = s.useState(t), [o, u] = s.useState(i(n)), d = s.useRef(o), c = s.useRef(null), E = s.useCallback(e => {
+  let [n, r] = s.useState(t), [o, u] = s.useState(i(n)), d = s.useRef(o), c = s.useRef(null), f = s.useCallback(e => {
     r(t => {
       let n = {
           ...t,
@@ -29,15 +29,15 @@ function r(e, t) {
         emojiPicker: t,
         emojiBurstPicker: n
       } = e;
-      return E({
+      return f({
         emojiPicker: t,
         emojiBurstPicker: n
       })
     };
     return a.ComponentDispatch.subscribeKeyed(l.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e, t), () => void a.ComponentDispatch.unsubscribeKeyed(l.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e, t)
-  }, [e, E]), {
+  }, [e, f]), {
     popouts: n,
-    setPopout: E,
+    setPopout: f,
     selected: o
   }
 }

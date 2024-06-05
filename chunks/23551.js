@@ -20,9 +20,9 @@ t.default = e => {
     className: n,
     innerClassName: _,
     onConnect: I
-  } = e, f = (0, o.default)(), m = d.default.get((0, u.useLegacyPlatformType)(s));
+  } = e, N = (0, o.default)(), f = d.default.get((0, u.useLegacyPlatformType)(s));
   return (0, a.jsx)(r.Tooltip, {
-    text: m.name,
+    text: f.name,
     children: e => {
       let {
         onMouseEnter: o,
@@ -38,7 +38,7 @@ t.default = e => {
             type: "button",
             disabled: t,
             style: {
-              backgroundImage: "url('".concat((0, i.isThemeDark)(f) ? m.icon.darkSVG : m.icon.lightSVG, "')")
+              backgroundImage: "url('".concat((0, i.isThemeDark)(N) ? f.icon.darkSVG : f.icon.lightSVG, "')")
             },
             onClick: null != I ? I : () => (function(e) {
               let t = d.default.get(e);
@@ -51,7 +51,7 @@ t.default = e => {
                 platform_type: t.type
               })
             })(s),
-            "aria-label": m.name
+            "aria-label": f.name
           })
         })
       })

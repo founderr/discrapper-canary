@@ -1,177 +1,177 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return g
+    return m
   }
-}), a("653041");
-var l = a("735250");
-a("470079");
-var s = a("442837"),
-  n = a("481060"),
-  i = a("594174"),
-  r = a("104259"),
-  d = a("185403"),
-  o = a("988951"),
-  u = a("311888"),
-  c = a("63063"),
-  E = a("5192"),
-  f = a("431328"),
-  h = a("501655"),
-  _ = a("659972"),
-  N = a("981631"),
-  S = a("765305"),
-  x = a("689938"),
-  T = a("562035");
+}), n("653041");
+var a = n("735250");
+n("470079");
+var l = n("442837"),
+  s = n("481060"),
+  i = n("594174"),
+  r = n("104259"),
+  d = n("185403"),
+  u = n("988951"),
+  o = n("311888"),
+  c = n("63063"),
+  E = n("5192"),
+  _ = n("431328"),
+  f = n("501655"),
+  S = n("659972"),
+  T = n("981631"),
+  h = n("765305"),
+  N = n("689938"),
+  g = n("562035");
 
 function v(e) {
   let {
     icon: t
   } = e;
-  return (0, l.jsx)("div", {
-    className: T.iconContainer,
-    children: (0, l.jsx)(t, {
+  return (0, a.jsx)("div", {
+    className: g.iconContainer,
+    children: (0, a.jsx)(t, {
       width: 24,
       height: 24
     })
   })
 }
 
-function m(e) {
+function I(e) {
   let {
     icon: t,
-    text: a
+    text: n
   } = e;
-  return (0, l.jsxs)("div", {
-    className: T.listItemContainer,
-    children: [(0, l.jsx)("div", {
-      className: T.listItemIconContainer,
+  return (0, a.jsxs)("div", {
+    className: g.listItemContainer,
+    children: [(0, a.jsx)("div", {
+      className: g.listItemIconContainer,
       children: t
-    }), (0, l.jsx)(n.Text, {
-      className: T.listItemText,
+    }), (0, a.jsx)(s.Text, {
+      className: g.listItemText,
       variant: "text-md/normal",
       color: "header-secondary",
-      children: a
+      children: n
     })]
   })
 }
 
-function C(e) {
+function x(e) {
   var t;
   let {
-    guild: a,
-    channel: n,
+    guild: n,
+    channel: s,
     stageData: r
-  } = e, d = (0, s.useStateFromStores)([i.default], () => i.default.getCurrentUser(), []), o = {
+  } = e, d = (0, l.useStateFromStores)([i.default], () => i.default.getCurrentUser(), []), u = {
     id: "1337",
-    guild_id: a.id,
-    channel_id: n.id,
+    guild_id: n.id,
+    channel_id: s.id,
     topic: r.topic,
     description: r.description,
-    privacy_level: null !== (t = r.privacyLevel) && void 0 !== t ? t : S.GuildScheduledEventPrivacyLevel.PUBLIC
-  }, u = (0, f.useStageParticipants)(n.id, h.StageChannelParticipantNamedIndex.SPEAKER), c = (0, f.useStageParticipantsCount)(n.id, h.StageChannelParticipantNamedIndex.AUDIENCE), N = u.slice(0, 5);
-  return null == N.find(e => {
+    privacy_level: null !== (t = r.privacyLevel) && void 0 !== t ? t : h.GuildScheduledEventPrivacyLevel.PUBLIC
+  }, o = (0, _.useStageParticipants)(s.id, f.StageChannelParticipantNamedIndex.SPEAKER), c = (0, _.useStageParticipantsCount)(s.id, f.StageChannelParticipantNamedIndex.AUDIENCE), T = o.slice(0, 5);
+  return null == T.find(e => {
     var t;
     return (null === (t = e.user) || void 0 === t ? void 0 : t.id) === (null == d ? void 0 : d.id)
-  }) && N.push({
+  }) && T.push({
     user: d,
-    userNick: E.default.getName(a.id, n.id, d)
-  }), (0, l.jsx)("div", {
-    className: T.previewCardContainer,
-    children: (0, l.jsx)("div", {
-      className: T.previewCard,
-      children: (0, l.jsx)(_.default, {
-        guild: a,
-        stageInstance: o,
+    userNick: E.default.getName(n.id, s.id, d)
+  }), (0, a.jsx)("div", {
+    className: g.previewCardContainer,
+    children: (0, a.jsx)("div", {
+      className: g.previewCard,
+      children: (0, a.jsx)(S.default, {
+        guild: n,
+        stageInstance: u,
         showGuildPopout: !1,
         setShowGuildPopout: () => {},
-        source: _.StageDiscoveryRecommendationSource.UNSPECIFIED,
-        speakers: N,
-        speakerCount: u.length,
+        source: S.StageDiscoveryRecommendationSource.UNSPECIFIED,
+        speakers: T,
+        speakerCount: o.length,
         audienceCount: Math.max(1337, c),
-        channelName: n.name
+        channelName: s.name
       })
     })
   })
 }
 
-function g(e) {
+function m(e) {
   let {
     guild: t,
-    channel: a,
-    stageData: s,
+    channel: n,
+    stageData: l,
     headerId: i,
     loading: E,
-    onNext: f,
-    onCancel: h,
-    onBack: _
+    onNext: _,
+    onCancel: f,
+    onBack: S
   } = e;
-  return null == t || null == a || null == s ? null : (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(C, {
+  return null == t || null == n || null == l ? null : (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(x, {
       guild: t,
-      channel: a,
-      stageData: s
-    }), (0, l.jsxs)(n.ModalContent, {
-      className: T.container,
-      children: [(0, l.jsxs)("div", {
-        className: T.header,
-        children: [(0, l.jsx)(n.Heading, {
+      channel: n,
+      stageData: l
+    }), (0, a.jsxs)(s.ModalContent, {
+      className: g.container,
+      children: [(0, a.jsxs)("div", {
+        className: g.header,
+        children: [(0, a.jsx)(s.Heading, {
           id: i,
-          className: T.__invalid_title,
+          className: g.__invalid_title,
           variant: "heading-xl/semibold",
-          children: x.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE
-        }), (0, l.jsx)(n.Text, {
-          className: T.subtitle,
+          children: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE
+        }), (0, a.jsx)(s.Text, {
+          className: g.subtitle,
           color: "header-secondary",
           variant: "text-sm/normal",
-          children: x.default.Messages.START_STAGE_PUBLIC_PREVIEW_SUBTITLE
+          children: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SUBTITLE
         })]
-      }), (0, l.jsxs)("div", {
-        className: T.__invalid_list,
-        children: [(0, l.jsx)(m, {
-          icon: (0, l.jsx)(v, {
+      }), (0, a.jsxs)("div", {
+        className: g.__invalid_list,
+        children: [(0, a.jsx)(I, {
+          icon: (0, a.jsx)(v, {
             icon: r.default
           }),
-          text: x.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
-        }), (0, l.jsx)(m, {
-          icon: (0, l.jsx)(v, {
-            icon: o.default
+          text: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
+        }), (0, a.jsx)(I, {
+          icon: (0, a.jsx)(v, {
+            icon: u.default
           }),
-          text: x.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
-        }), (0, l.jsx)(m, {
-          icon: (0, l.jsx)(v, {
+          text: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
+        }), (0, a.jsx)(I, {
+          icon: (0, a.jsx)(v, {
             icon: d.default
           }),
-          text: x.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
-        }), (0, l.jsx)(m, {
-          icon: (0, l.jsx)(u.default, {
-            className: T.badgeIconBackground,
-            foreground: T.badgeIconForeground,
+          text: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
+        }), (0, a.jsx)(I, {
+          icon: (0, a.jsx)(o.default, {
+            className: g.badgeIconBackground,
+            foreground: g.badgeIconForeground,
             width: 40,
             height: 40
           }),
-          text: x.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({
-            articleURL: c.default.getArticleURL(N.HelpdeskArticles.STAGE_CHANNEL_GUIDELINES)
+          text: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({
+            articleURL: c.default.getArticleURL(T.HelpdeskArticles.STAGE_CHANNEL_GUIDELINES)
           })
         })]
       })]
-    }), (0, l.jsxs)(n.ModalFooter, {
-      children: [(0, l.jsx)(n.Button, {
-        color: n.Button.Colors.GREEN,
-        onClick: f,
-        submitting: E,
-        children: x.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
-      }), (0, l.jsx)(n.Button, {
-        color: n.Button.Colors.PRIMARY,
-        className: T.cancelButton,
-        onClick: h,
-        children: x.default.Messages.CANCEL
-      }), (0, l.jsx)(n.Button, {
-        look: n.Button.Looks.LINK,
-        color: n.Button.Colors.LINK,
-        className: T.backButton,
+    }), (0, a.jsxs)(s.ModalFooter, {
+      children: [(0, a.jsx)(s.Button, {
+        color: s.Button.Colors.GREEN,
         onClick: _,
-        size: n.Button.Sizes.MIN,
-        children: x.default.Messages.BACK
+        submitting: E,
+        children: N.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
+      }), (0, a.jsx)(s.Button, {
+        color: s.Button.Colors.PRIMARY,
+        className: g.cancelButton,
+        onClick: f,
+        children: N.default.Messages.CANCEL
+      }), (0, a.jsx)(s.Button, {
+        look: s.Button.Looks.LINK,
+        color: s.Button.Colors.LINK,
+        className: g.backButton,
+        onClick: S,
+        size: s.Button.Sizes.MIN,
+        children: N.default.Messages.BACK
       })]
     })]
   })

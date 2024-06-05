@@ -29,8 +29,8 @@ t.default = function(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [h]);
-  let C = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion),
-    _ = (0, l.useSpring)({
+  let _ = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion),
+    C = (0, l.useSpring)({
       from: {
         opacity: 0
       },
@@ -39,7 +39,7 @@ t.default = function(e) {
       },
       config: E,
       delay: 500,
-      immediate: C
+      immediate: _
     });
   return (0, a.jsxs)("div", {
     className: f.container,
@@ -53,8 +53,8 @@ t.default = function(e) {
       })
     }), (0, a.jsx)(l.animated.div, {
       style: {
-        opacity: _.opacity,
-        transform: _.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
+        opacity: C.opacity,
+        transform: C.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
       },
       className: f.contentWrapper,
       children: (0, a.jsx)(r.Scroller, {

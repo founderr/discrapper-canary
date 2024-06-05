@@ -34,10 +34,10 @@ function A(e) {
     (0, d.fetchStickerPack)("847199849233514549", !0)
   }, []);
   let v = (0, r.useStateFromStores)([m.default, h.default], () => !!i()(m.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
-    x = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-    N = null !== (t = C.default.useName(x)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
+    N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+    x = null !== (t = C.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
     M = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(I)),
-    y = l.useCallback(async () => {
+    R = l.useCallback(async () => {
       if (null == s || "" === s) try {
         await u.default.sendGreetMessage(n.id, I), E.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
           channel_id: n.id,
@@ -49,8 +49,8 @@ function A(e) {
         !e.ok && 429 === e.status && A(_.default.Messages.RATE_LIMITED)
       }
     }, [n.id, n.type, s]),
-    R = _.default.Messages.WAVE_TO.format({
-      username: N
+    y = _.default.Messages.WAVE_TO.format({
+      username: x
     }),
     L = null != s && "" !== s ? (0, a.jsx)(o.Text, {
       className: T.error,
@@ -63,14 +63,14 @@ function A(e) {
     children: [(0, a.jsxs)(o.Clickable, {
       className: null != s && "" !== s ? T.compactButtonDisabled : T.compactButton,
       "aria-label": _.default.Messages.SEND_WAVE,
-      onClick: y,
+      onClick: R,
       children: [(0, a.jsx)(f.default, {
         sticker: M,
         size: 24
       }), (0, a.jsx)(o.Text, {
         className: T.text,
         variant: "text-md/medium",
-        children: R
+        children: y
       })]
     }), L]
   }) : (0, a.jsxs)("div", {
@@ -80,9 +80,9 @@ function A(e) {
       size: 160
     }), (0, a.jsx)(o.Button, {
       className: T.button,
-      onClick: y,
+      onClick: R,
       disabled: !!s,
-      children: R
+      children: y
     }), L]
   })
 }

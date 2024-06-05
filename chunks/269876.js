@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return C
   }
 }), s("47120");
 var a = s("735250"),
@@ -18,18 +18,18 @@ var a = s("735250"),
   T = s("153124"),
   _ = s("65154"),
   I = s("689938"),
-  f = s("689641"),
-  m = s("961047"),
-  N = s("611273");
-let g = (0, T.uid)();
+  N = s("689641"),
+  f = s("961047"),
+  g = s("611273");
+let m = (0, T.uid)();
 
-function h() {
+function C() {
   let [e, t] = n.useState(-100), [s, l] = n.useState(!1), {
-    threshold: h,
-    autoThreshold: C
+    threshold: C,
+    autoThreshold: A
   } = (0, r.useStateFromStoresObject)([E.default], () => E.default.getModeOptions()), {
-    inputMode: O,
-    automaticVADSupported: A,
+    inputMode: h,
+    automaticVADSupported: O,
     isEnabled: p
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
@@ -42,7 +42,7 @@ function h() {
   }
 
   function x(e, t) {
-    S.default.setMode(O, {
+    S.default.setMode(h, {
       threshold: e,
       autoThreshold: t
     })
@@ -56,22 +56,22 @@ function h() {
     }
   }, []);
   let M = (0, a.jsx)("section", {
-    className: i()(f.inputSensitivityToggle, f.manual),
+    className: i()(N.inputSensitivityToggle, N.manual),
     children: (0, a.jsx)(c.Slider, {
-      initialValue: h + 100,
+      initialValue: C + 100,
       onValueRender: e => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-      onValueChange: e => x(-((100 - e) * 1), C),
+      onValueChange: e => x(-((100 - e) * 1), A),
       barStyles: {
         background: u.default.unsafe_rawColors.GREEN_360.css
       },
       fillStyles: {
         background: u.default.unsafe_rawColors.YELLOW_300.css
       },
-      "aria-labelledby": g,
+      "aria-labelledby": m,
       children: (0, a.jsxs)("div", {
-        className: i()(f.sliderBar, f.microphone, f.inputSensitivityBar),
+        className: i()(N.sliderBar, N.microphone, N.inputSensitivityBar),
         children: [(0, a.jsx)("div", {
-          className: i()(f.fill, f.inputSensitivityBarFill),
+          className: i()(N.fill, N.inputSensitivityBarFill),
           style: {
             width: e + 100 + "%"
           }
@@ -81,48 +81,48 @@ function h() {
       })
     })
   });
-  return C && (M = (0, a.jsxs)("section", {
-    className: f.inputSensitivityToggle,
+  return A && (M = (0, a.jsxs)("section", {
+    className: N.inputSensitivityToggle,
     children: [(0, a.jsx)("div", {
-      className: f.inputSensitivitySlider,
+      className: N.inputSensitivitySlider,
       children: (0, a.jsx)("div", {
-        className: i()(f.inputSensitivityBar, f.sliderBar, {
-          [f.speaking]: s
+        className: i()(N.inputSensitivityBar, N.sliderBar, {
+          [N.speaking]: s
         })
       })
     }), (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: N.marginBottom8,
+      className: g.marginBottom8,
       children: I.default.Messages.FORM_HELP_AUTOMATIC_VAD
     })]
   })), (0, a.jsxs)(c.FormItem, {
-    className: f.sensitivity,
+    className: N.sensitivity,
     children: [(0, a.jsx)(c.FormTitle, {
-      id: g,
+      id: m,
       tag: c.FormTitleTags.H5,
-      className: N.marginBottom8,
+      className: g.marginBottom8,
       children: I.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
-      children: [A && (0, a.jsx)(T.UID, {
+      children: [O && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
-          className: i()(m.horizontal, N.marginBottom4),
+          className: i()(f.horizontal, g.marginBottom4),
           children: [(0, a.jsx)(c.FormTitle, {
             tag: c.FormTitleTags.H3,
-            className: N.marginReset,
+            className: g.marginReset,
             children: (0, a.jsx)("label", {
               htmlFor: e,
               children: I.default.Messages.FORM_LABEL_AUTOMATIC_VAD
             })
           }), (0, a.jsx)(c.Switch, {
             id: e,
-            checked: C,
-            onChange: e => x(h, e)
+            checked: A,
+            onChange: e => x(C, e)
           })]
         })
       }), M]
     }), !p && (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: i()(f.inputDisabledWarning, N.marginBottom8),
+      className: i()(N.inputDisabledWarning, g.marginBottom8),
       children: I.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
         onEnableClick: S.default.enable
       })

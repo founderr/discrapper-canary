@@ -18,14 +18,14 @@ var a = s("735250"),
   T = s("136097"),
   _ = s("605236"),
   I = s("246946"),
-  f = s("594174"),
-  m = s("460562"),
-  N = s("465670"),
-  g = s("736921"),
-  h = s("169278"),
-  C = s("823379"),
-  O = s("981631"),
-  A = s("921944"),
+  N = s("594174"),
+  f = s("460562"),
+  g = s("465670"),
+  m = s("736921"),
+  C = s("169278"),
+  A = s("823379"),
+  h = s("981631"),
+  O = s("921944"),
   p = s("689938"),
   R = s("663563");
 
@@ -34,22 +34,22 @@ function x() {
   let {
     currentSession: t,
     otherSessions: s
-  } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), i = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), [c, m] = n.useState(!1);
+  } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), i = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), [c, f] = n.useState(!1);
   n.useEffect(() => {
     (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
-      dismissAction: A.ContentDismissActionType.AUTO
+      dismissAction: O.ContentDismissActionType.AUTO
     }), (0, E.fetchAuthSessions)();
-    let e = setTimeout(() => m(!0), 500);
+    let e = setTimeout(() => f(!0), 500);
     return () => {
       clearTimeout(e), (0, E.clearAuthSessions)()
     }
   }, []);
-  let N = () => {
+  let g = () => {
       o.HTTP.post({
-        url: O.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
+        url: h.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
-    [g, h] = n.useState(new Set);
+    [m, C] = n.useState(new Set);
   return l ? (0, a.jsx)(S.default, {}) : (e = null == t && 0 === s.length ? c ? (0, a.jsx)("div", {
     className: R.loading,
     children: (0, a.jsx)(u.Spinner, {})
@@ -71,17 +71,17 @@ function x() {
         className: R.otherSessions,
         children: [s.map(e => (0, a.jsx)(M, {
           session: e,
-          useChecks: g.size > 0,
-          checked: g.has(e.id_hash),
+          useChecks: m.size > 0,
+          checked: m.has(e.id_hash),
           setChecked: t => {
-            let s = new Set(g);
-            t ? s.add(e.id_hash) : s.delete(e.id_hash), h(s)
+            let s = new Set(m);
+            t ? s.add(e.id_hash) : s.delete(e.id_hash), C(s)
           }
         }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(D, {})]
       })]
     }), s.length > 0 ? (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H5,
-      title: g.size > 0 ? p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+      title: m.size > 0 ? p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
       children: [(0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
         children: p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
@@ -91,10 +91,10 @@ function x() {
         size: u.Button.Sizes.SMALL,
         className: R.logOutAllButton,
         onClick: () => {
-          g.size > 0 ? (0, E.logOutSessions)(Array.from(g)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
+          m.size > 0 ? (0, E.logOutSessions)(Array.from(m)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
         },
-        children: g.size > 0 ? p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
-          count: g.size
+        children: m.size > 0 ? p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
+          count: m.size
         }) : p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
       })]
     }) : null]
@@ -126,7 +126,7 @@ function x() {
           return (0, a.jsx)(u.Button, {
             size: u.Button.Sizes.SMALL,
             color: u.Button.Colors.PRIMARY,
-            onClick: N,
+            onClick: g,
             onMouseEnter: t,
             onMouseLeave: s,
             children: "Trigger Suspicious Sessions Notification"
@@ -145,33 +145,33 @@ function M(e) {
     setChecked: c,
     checked: S,
     useChecks: _
-  } = e, I = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, f = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
-    text: m,
-    icon: O
+  } = e, I = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, N = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
+    text: f,
+    icon: h
   } = function(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
       case null:
       case void 0:
       case "":
         return {
-          text: p.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: h.default
+          text: p.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: C.default
         };
       case "ios":
       case "android":
         return {
-          text: e, icon: g.default
+          text: e, icon: m.default
         };
       default:
         return {
-          text: e, icon: h.default
+          text: e, icon: C.default
         }
     }
-  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, T.formatDate)(o.approx_last_used_time), x = [m, f].filter(C.isNotNullish), M = [I, A].filter(C.isNotNullish), D = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
+  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), O = d ? null : (0, T.formatDate)(o.approx_last_used_time), x = [f, N].filter(A.isNotNullish), M = [I, O].filter(A.isNotNullish), D = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
   return (0, a.jsxs)("div", {
     className: i()(R.session, d ? R.currentSession : null),
     children: [(0, a.jsx)("div", {
       className: R.sessionIcon,
-      children: (0, a.jsx)(O, {
+      children: (0, a.jsx)(h, {
         width: D,
         height: D
       })
@@ -216,7 +216,7 @@ function M(e) {
         e.shiftKey ? null == c || c(!0) : (0, E.logOutSessions)(o.id_hash)
       },
       "aria-label": p.default.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
-      children: (0, a.jsx)(N.default, {})
+      children: (0, a.jsx)(g.default, {})
     })]
   }, o.id_hash)
 }
@@ -226,7 +226,7 @@ function D() {
     className: i()(R.session, R.legacySession),
     children: [(0, a.jsx)("div", {
       className: R.sessionIcon,
-      children: (0, a.jsx)(m.default, {
+      children: (0, a.jsx)(f.default, {
         width: "32",
         height: "32"
       })
@@ -245,7 +245,7 @@ function D() {
         color: "text-muted",
         children: (0, a.jsx)("span", {
           children: p.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
-            onClick: () => c.default.setSection(O.UserSettingsSections.ACCOUNT)
+            onClick: () => c.default.setSection(h.UserSettingsSections.ACCOUNT)
           })
         })
       })]

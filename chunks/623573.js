@@ -10,8 +10,8 @@ s.r(t), s.d(t, {
 var a, n, i = s("735250"),
   l = s("470079"),
   r = s("160612"),
-  o = s("120356"),
-  u = s.n(o),
+  u = s("120356"),
+  o = s.n(u),
   d = s("442837"),
   c = s("481060"),
   p = s("570140"),
@@ -623,7 +623,7 @@ function z(e) {
     },
     onStepChange: () => {},
     header: (0, i.jsxs)("div", {
-      className: u()(v.modalTitle, O.flex, O.justifyBetween, O.alignCenter),
+      className: o()(v.modalTitle, O.flex, O.justifyBetween, O.alignCenter),
       children: [(0, i.jsx)(c.FormTitle, {
         tag: c.FormTitleTags.H4,
         children: U.default.Messages.PAYMENT_SOURCES_ADD

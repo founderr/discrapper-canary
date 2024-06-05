@@ -12,7 +12,7 @@ var a = n("413135"),
   f = n("981631");
 let E = o.default.requireModule("discord_rpc").RPCIPC,
   h = new r.default("RPCServer:IPC"),
-  C = {
+  _ = {
     HANDSHAKE: 0,
     FRAME: 1,
     CLOSE: 2,
@@ -20,7 +20,7 @@ let E = o.default.requireModule("discord_rpc").RPCIPC,
     PONG: 4
   };
 
-function _(e, t) {
+function C(e, t) {
   null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : e._didHandshake = t
 }
 
@@ -34,7 +34,7 @@ function S(e) {
       try {
         I(e)
       } catch (t) {
-        e.end(p(C.CLOSE, {
+        e.end(p(_.CLOSE, {
           code: 1003,
           message: t.message
         })), e.destroy()
@@ -54,7 +54,7 @@ function S(e) {
       }, e => {
         throw a(), e
       });
-    return e.write(p(C.PING, i().uniqueId())), s.then(t, n)
+    return e.write(p(_.PING, i().uniqueId())), s.then(t, n)
   })
 }
 
@@ -72,35 +72,35 @@ function I(e) {
   let n = a.Buffer.from(t),
     s = n.readInt32LE(0),
     l = n.readInt32LE(4);
-  if (!Object.values(C).includes(s) || l < 0) throw Error("protocol error");
+  if (!Object.values(_).includes(s) || l < 0) throw Error("protocol error");
   if (null == (t = e.read(l))) throw Error("data size does not match what was received");
   let i = JSON.parse((n = a.Buffer.from(t)).toString());
   switch (s) {
-    case C.PING:
-      e.emit("ping", i), e.write(p(C.PONG, i));
+    case _.PING:
+      e.emit("ping", i), e.write(p(_.PONG, i));
       break;
-    case C.PONG:
+    case _.PONG:
       e.emit("pong", i);
       break;
-    case C.HANDSHAKE:
+    case _.HANDSHAKE:
       if (m(e)) throw Error("already did handshake");
-      _(e, !0), e.emit("handshake", i);
+      C(e, !0), e.emit("handshake", i);
       break;
-    case C.FRAME:
+    case _.FRAME:
       if (!m(e)) throw Error("did not handshake");
       e.emit("request", i);
       break;
-    case C.CLOSE:
+    case _.CLOSE:
       e.end(), e.destroy()
   }
   I(e)
 }
-class g extends d.default {
+class T extends d.default {
   send(e) {
-    h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(C.FRAME, e))
+    h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(_.FRAME, e))
   }
   close(e, t) {
-    this.socket.end(p(C.CLOSE, {
+    this.socket.end(p(_.CLOSE, {
       code: e,
       message: t
     })), this.socket.destroy()
@@ -115,13 +115,13 @@ class g extends d.default {
     }) : a[s] = l, this.socket = e
   }
 }
-class T extends s.EventEmitter {
+class g extends s.EventEmitter {
   handleConnection(e) {
-    _(e, !1), e.pause(), e.on("readable", () => {
+    C(e, !1), e.pause(), e.on("readable", () => {
       try {
         I(e)
       } catch (t) {
-        e.end(p(C.CLOSE, {
+        e.end(p(_.CLOSE, {
           code: f.RPCCloseCodes.CLOSE_UNSUPPORTED,
           message: t.message
         })), e.destroy()
@@ -131,9 +131,9 @@ class T extends s.EventEmitter {
       let a = t.client_id,
         s = +t.v;
       try {
-        n = new g(e, s, "json")
+        n = new T(e, s, "json")
       } catch (t) {
-        e.end(p(C.CLOSE, {
+        e.end(p(_.CLOSE, {
           code: t.code,
           message: t.message
         })), e.destroy();
@@ -164,4 +164,4 @@ class T extends s.EventEmitter {
     })
   }
 }
-t.default = new T
+t.default = new g

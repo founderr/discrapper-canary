@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return A
   }
 }), s("411104"), s("757143");
 var a, n = s("654861"),
@@ -17,11 +17,11 @@ var a, n = s("654861"),
   T = s("70956"),
   _ = s("358085"),
   I = s("399002"),
-  f = s("369541"),
-  m = s("981631"),
-  N = s("65154");
+  N = s("369541"),
+  f = s("981631"),
+  g = s("65154");
 
-function g(e, t, s) {
+function m(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -29,8 +29,8 @@ function g(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let h = /^https/.test((a = "https:", "https:")) ? "wss:" : "ws:";
-class C extends i.EventEmitter {
+let C = /^https/.test((a = "https:", "https:")) ? "wss:" : "ws:";
+class A extends i.EventEmitter {
   connect() {
     this._backoff.cancel();
     let e = this._socket = new c.default(this._endpoint);
@@ -55,13 +55,13 @@ class C extends i.EventEmitter {
     }, t)
   }
   startClientToServerSpeedTest(e) {
-    this.state === m.RTCConnectionStates.RTC_CONNECTED && (this._speedTestParams = e, this._speedTestDirection = f.SpeedTestDirections.CLIENT_TO_SERVER, this._setSpeedTestState(f.SpeedTestStates.STARTING_RECEIVER), this._speedTest(f.SpeedTestOpcodes.CLIENT_TO_SERVER_START, {}))
+    this.state === f.RTCConnectionStates.RTC_CONNECTED && (this._speedTestParams = e, this._speedTestDirection = N.SpeedTestDirections.CLIENT_TO_SERVER, this._setSpeedTestState(N.SpeedTestStates.STARTING_RECEIVER), this._speedTest(N.SpeedTestOpcodes.CLIENT_TO_SERVER_START, {}))
   }
   startServerToClientSpeedTest(e) {
     let t = this._connection;
-    this.state === m.RTCConnectionStates.RTC_CONNECTED && null != t && (this._speedTestParams = e, this._speedTestDirection = f.SpeedTestDirections.SERVER_TO_CLIENT, this._setSpeedTestState(f.SpeedTestStates.STARTING_RECEIVER), t.startSpeedTestReceiver(() => {
+    this.state === f.RTCConnectionStates.RTC_CONNECTED && null != t && (this._speedTestParams = e, this._speedTestDirection = N.SpeedTestDirections.SERVER_TO_CLIENT, this._setSpeedTestState(N.SpeedTestStates.STARTING_RECEIVER), t.startSpeedTestReceiver(() => {
       var e, t, s;
-      this._setSpeedTestState(f.SpeedTestStates.SENDING), this._speedTest(f.SpeedTestOpcodes.SERVER_TO_CLIENT_START, {
+      this._setSpeedTestState(N.SpeedTestStates.SENDING), this._speedTest(N.SpeedTestOpcodes.SERVER_TO_CLIENT_START, {
         cluster_size: null === (e = this._speedTestParams) || void 0 === e ? void 0 : e.clusterSize,
         cluster_interval_ms: null === (t = this._speedTestParams) || void 0 === t ? void 0 : t.clusterIntervalMs,
         num_clusters: null === (s = this._speedTestParams) || void 0 === s ? void 0 : s.numClusters
@@ -69,10 +69,10 @@ class C extends i.EventEmitter {
     }, -1))
   }
   stopClientToServerSpeedTest() {
-    this._speedTest(f.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), null != this._connection && this._connection.stopSpeedTestSender()
+    this._speedTest(N.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), null != this._connection && this._connection.stopSpeedTestSender()
   }
   stopServerToClientSpeedTest() {
-    this._speedTest(f.SpeedTestOpcodes.SERVER_TO_CLIENT_END, {}), null != this._connection && this._connection.stopSpeedTestReceiver(() => {})
+    this._speedTest(N.SpeedTestOpcodes.SERVER_TO_CLIENT_END, {}), null != this._connection && this._connection.stopSpeedTestReceiver(() => {})
   }
   getNetworkOverhead() {
     return this._networkOverhead
@@ -84,14 +84,14 @@ class C extends i.EventEmitter {
     this._speedTestState = e, this.emit("speed-test-state", e)
   }
   _completeSpeedTests(e, t) {
-    this._speedTestState = f.SpeedTestStates.COMPLETED, this.emit("speed-test-completed", e, t)
+    this._speedTestState = N.SpeedTestStates.COMPLETED, this.emit("speed-test-completed", e, t)
   }
   _speedTest(e, t) {
     let s = this._socket;
     null != s && s.speedTest(e, t)
   }
   _handleConnecting(e) {
-    null != this._endpoint && this.logger.info("Connecting to RTC server ".concat(this._endpoint, ", rtc-connection-id: ").concat(this._rtcConnectionId)), this.setState(m.RTCConnectionStates.CONNECTING)
+    null != this._endpoint && this.logger.info("Connecting to RTC server ".concat(this._endpoint, ", rtc-connection-id: ").concat(this._rtcConnectionId)), this.setState(f.RTCConnectionStates.CONNECTING)
   }
   _handleConnect(e) {
     let t = this.token;
@@ -100,7 +100,7 @@ class C extends i.EventEmitter {
       this.logger.info("Connected to RTC server.");
       let s = [{
         rid: "100",
-        type: N.MediaTypes.TEST,
+        type: g.MediaTypes.TEST,
         quality: 100
       }];
       e.identify({
@@ -111,7 +111,7 @@ class C extends i.EventEmitter {
         maxSecureFramesVersion: E.default.getSupportedSecureFramesProtocolVersion(this.rtcServerId),
         video: !1,
         streamParameters: s
-      }), this.setState(m.RTCConnectionStates.AUTHENTICATING)
+      }), this.setState(f.RTCConnectionStates.AUTHENTICATING)
     }
   }
   _handleDisconnect(e, t, s, a) {
@@ -125,7 +125,7 @@ class C extends i.EventEmitter {
       let e = this._connection;
       this._connection = null, e.destroy()
     }
-    this.setState(m.RTCConnectionStates.DISCONNECTED, {
+    this.setState(f.RTCConnectionStates.DISCONNECTED, {
       willReconnect: n
     })
   }
@@ -133,7 +133,7 @@ class C extends i.EventEmitter {
     this.emit("resuming")
   }
   _handleReady(e, t, s, a, n, l, i) {
-    this.setState(m.RTCConnectionStates.RTC_CONNECTING), this.mediaEnginePort = s, this.mediaEngineAddress = t;
+    this.setState(f.RTCConnectionStates.RTC_CONNECTING), this.mediaEnginePort = s, this.mediaEngineAddress = t;
     let r = E.default.getMediaEngine().speedTester(this.userId, {
       ssrc: n,
       address: t,
@@ -151,23 +151,23 @@ class C extends i.EventEmitter {
   _handleClientDisconnect(e) {}
   _handleCodecs(e, t) {
     let s = this._connection;
-    null != s && null != this.protocol ? (s.setCodecs(null != e && "" !== e ? e : N.Codecs.OPUS, "TEST"), this.emit("ready")) : this.logger.warn("Cannot set codecs on connection with protocol:", this.protocol)
+    null != s && null != this.protocol ? (s.setCodecs(null != e && "" !== e ? e : g.Codecs.OPUS, "TEST"), this.emit("ready")) : this.logger.warn("Cannot set codecs on connection with protocol:", this.protocol)
   }
   _handleSpeedTest(e, t) {
     let s = this._connection;
     if (null != s && null != e) {
-      if (this._speedTestState === f.SpeedTestStates.STARTING_RECEIVER && this._speedTestDirection === f.SpeedTestDirections.CLIENT_TO_SERVER && e === f.SpeedTestOpcodes.CLIENT_TO_SERVER_START) {
+      if (this._speedTestState === N.SpeedTestStates.STARTING_RECEIVER && this._speedTestDirection === N.SpeedTestDirections.CLIENT_TO_SERVER && e === N.SpeedTestOpcodes.CLIENT_TO_SERVER_START) {
         var a;
-        this._setSpeedTestState(f.SpeedTestStates.SENDING), s.startSpeedTestSender((e, t) => {
-          this._speedTest(f.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), this._setSpeedTestState(f.SpeedTestStates.AWAITING_RESULTS)
+        this._setSpeedTestState(N.SpeedTestStates.SENDING), s.startSpeedTestSender((e, t) => {
+          this._speedTest(N.SpeedTestOpcodes.CLIENT_TO_SERVER_END, {}), this._setSpeedTestState(N.SpeedTestStates.AWAITING_RESULTS)
         }, this._speedTestParams.clusterSize, this._speedTestParams.clusterIntervalMs, this._speedTestParams.numClusters)
       }
-      if (this._speedTestState === f.SpeedTestStates.AWAITING_RESULTS && this._speedTestDirection === f.SpeedTestDirections.CLIENT_TO_SERVER && e === f.SpeedTestOpcodes.CLIENT_TO_SERVER_END) {
+      if (this._speedTestState === N.SpeedTestStates.AWAITING_RESULTS && this._speedTestDirection === N.SpeedTestDirections.CLIENT_TO_SERVER && e === N.SpeedTestOpcodes.CLIENT_TO_SERVER_END) {
         let e = t.results,
           s = (0, I.speedTestSummary)(e, this._speedTestParams, null !== (a = this._networkOverhead) && void 0 !== a ? a : 0);
         this._speedTestDirection = null, this._speedTestParams = null, this._completeSpeedTests(e, s)
       }
-      this._speedTestState === f.SpeedTestStates.SENDING && this._speedTestDirection === f.SpeedTestDirections.SERVER_TO_CLIENT && e === f.SpeedTestOpcodes.SERVER_TO_CLIENT_END && (this._setSpeedTestState(f.SpeedTestStates.AWAITING_RESULTS), s.stopSpeedTestReceiver((e, t) => {
+      this._speedTestState === N.SpeedTestStates.SENDING && this._speedTestDirection === N.SpeedTestDirections.SERVER_TO_CLIENT && e === N.SpeedTestOpcodes.SERVER_TO_CLIENT_END && (this._setSpeedTestState(N.SpeedTestStates.AWAITING_RESULTS), s.stopSpeedTestReceiver((e, t) => {
         var s;
         let a = (0, I.speedTestSummary)(t, this._speedTestParams, null !== (s = this._networkOverhead) && void 0 !== s ? s : 0);
         this._speedTestDirection = null, this._speedTestParams = null, this._completeSpeedTests(t, a)
@@ -205,25 +205,25 @@ class C extends i.EventEmitter {
     if (this.logger.info("RTC media connection state change: ".concat(this.state, " => ").concat(s)), e !== this._socket) return;
     let a = this.state;
     switch (s) {
-      case N.ConnectionStates.DISCONNECTED:
-        this.setState(m.RTCConnectionStates.RTC_DISCONNECTED);
+      case g.ConnectionStates.DISCONNECTED:
+        this.setState(f.RTCConnectionStates.RTC_DISCONNECTED);
         break;
-      case N.ConnectionStates.CONNECTING:
-        this.setState(m.RTCConnectionStates.RTC_CONNECTING);
+      case g.ConnectionStates.CONNECTING:
+        this.setState(f.RTCConnectionStates.RTC_CONNECTING);
         break;
-      case N.ConnectionStates.CONNECTED:
-        this.setState(m.RTCConnectionStates.RTC_CONNECTED);
+      case g.ConnectionStates.CONNECTED:
+        this.setState(f.RTCConnectionStates.RTC_CONNECTED);
         break;
-      case N.ConnectionStates.NO_ROUTE:
-        this.setState(m.RTCConnectionStates.NO_ROUTE);
+      case g.ConnectionStates.NO_ROUTE:
+        this.setState(f.RTCConnectionStates.NO_ROUTE);
         break;
-      case N.ConnectionStates.ICE_CHECKING:
-        this.setState(m.RTCConnectionStates.ICE_CHECKING);
+      case g.ConnectionStates.ICE_CHECKING:
+        this.setState(f.RTCConnectionStates.ICE_CHECKING);
         break;
-      case N.ConnectionStates.DTLS_CONNECTING:
-        this.setState(m.RTCConnectionStates.DTLS_CONNECTING)
+      case g.ConnectionStates.DTLS_CONNECTING:
+        this.setState(f.RTCConnectionStates.DTLS_CONNECTING)
     }
-    a === m.RTCConnectionStates.RTC_CONNECTING && this.state === m.RTCConnectionStates.RTC_DISCONNECTED ? this.reconnect() : this.state === m.RTCConnectionStates.NO_ROUTE && this._backoff.fail(this.reconnect)
+    a === f.RTCConnectionStates.RTC_CONNECTING && this.state === f.RTCConnectionStates.RTC_DISCONNECTED ? this.reconnect() : this.state === f.RTCConnectionStates.NO_ROUTE && this._backoff.fail(this.reconnect)
   }
   _handleMediaEnginePing(e, t) {
     this.emit("ping", t)
@@ -242,14 +242,14 @@ class C extends i.EventEmitter {
     endpoint: a,
     token: n
   }) {
-    super(), g(this, "userId", void 0), g(this, "sessionId", void 0), g(this, "rtcServerId", void 0), g(this, "_endpoint", void 0), g(this, "hostname", void 0), g(this, "mediaEnginePort", void 0), g(this, "mediaEngineAddress", void 0), g(this, "token", void 0), g(this, "protocol", void 0), g(this, "state", void 0), g(this, "_socket", void 0), g(this, "_connection", void 0), g(this, "_destroyed", void 0), g(this, "_speedTestState", void 0), g(this, "_speedTestDirection", void 0), g(this, "_speedTestParams", void 0), g(this, "_rtcConnectionId", void 0), g(this, "_backoff", void 0), g(this, "logger", void 0), g(this, "_networkOverhead", void 0), g(this, "reconnect", () => {
+    super(), m(this, "userId", void 0), m(this, "sessionId", void 0), m(this, "rtcServerId", void 0), m(this, "_endpoint", void 0), m(this, "hostname", void 0), m(this, "mediaEnginePort", void 0), m(this, "mediaEngineAddress", void 0), m(this, "token", void 0), m(this, "protocol", void 0), m(this, "state", void 0), m(this, "_socket", void 0), m(this, "_connection", void 0), m(this, "_destroyed", void 0), m(this, "_speedTestState", void 0), m(this, "_speedTestDirection", void 0), m(this, "_speedTestParams", void 0), m(this, "_rtcConnectionId", void 0), m(this, "_backoff", void 0), m(this, "logger", void 0), m(this, "_networkOverhead", void 0), m(this, "reconnect", () => {
       let e = this._socket;
       null != e && (e.close(), e.connect())
-    }), this._rtcConnectionId = (0, o.v4)(), this.logger = new S.default("RTCSpeedTestRTCConnection(".concat(s, ")")), this.userId = e, this.sessionId = t, this.rtcServerId = s, this.mediaEnginePort = null, this.mediaEngineAddress = null, this._speedTestState = null, this._speedTestDirection = null, this._speedTestParams = null, this.state = m.RTCConnectionStates.AWAITING_ENDPOINT, this._socket = null, this.token = n, this._destroyed = !1, this._connection = null, this._backoff = new d.default(1 * T.default.Millis.SECOND, 10 * T.default.Millis.SECOND), a = "".concat(h, "//").concat(a), (0, _.isAndroid)() && (a = (a = a.replace(".gg", ".media")).replace(":80", ":443"));
+    }), this._rtcConnectionId = (0, o.v4)(), this.logger = new S.default("RTCSpeedTestRTCConnection(".concat(s, ")")), this.userId = e, this.sessionId = t, this.rtcServerId = s, this.mediaEnginePort = null, this.mediaEngineAddress = null, this._speedTestState = null, this._speedTestDirection = null, this._speedTestParams = null, this.state = f.RTCConnectionStates.AWAITING_ENDPOINT, this._socket = null, this.token = n, this._destroyed = !1, this._connection = null, this._backoff = new d.default(1 * T.default.Millis.SECOND, 10 * T.default.Millis.SECOND), a = "".concat(C, "//").concat(a), (0, _.isAndroid)() && (a = (a = a.replace(".gg", ".media")).replace(":80", ":443"));
     let {
       hostname: l,
       port: i
     } = r.parse(a), u = null != i ? parseInt(i) : NaN;
-    null != l && (80 === u || 443 === u) && (a = "".concat(h, "//").concat(l)), this._endpoint = a + "/", this.hostname = l, this._networkOverhead = null
+    null != l && (80 === u || 443 === u) && (a = "".concat(C, "//").concat(l)), this._endpoint = a + "/", this.hostname = l, this._networkOverhead = null
   }
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return D
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -16,46 +16,46 @@ var a = n("735250"),
   f = n("481060"),
   E = n("239091"),
   h = n("586902"),
-  C = n("512384"),
-  _ = n("484459"),
+  _ = n("512384"),
+  C = n("484459"),
   m = n("103575"),
   S = n("314897"),
   p = n("131951"),
   I = n("836946"),
-  g = n("381238"),
-  T = n("779863"),
+  T = n("381238"),
+  g = n("779863"),
   A = n("729285"),
   N = n("150954"),
   v = n("51144"),
   R = n("524484"),
   O = n("689938"),
   L = n("164159");
-let P = {
+let M = {
     offset: 2
   },
-  M = {
+  P = {
     serverDeaf: {
-      icon: g.default,
+      icon: T.default,
       colorize: !0,
       getStatus: () => O.default.Messages.SERVER_DEAFENED
     },
     serverMute: {
-      icon: T.default,
+      icon: g.default,
       colorize: !0,
       getStatus: () => O.default.Messages.SERVER_MUTED
     },
     deaf: {
-      icon: g.default,
+      icon: T.default,
       colorize: !1,
       getStatus: () => O.default.Messages.VOICE_CHANNEL_DEAFENED
     },
     mute: {
-      icon: T.default,
+      icon: g.default,
       colorize: !1,
       getStatus: () => O.default.Messages.VOICE_CHANNEL_MUTED
     }
   },
-  y = {
+  x = {
     serverDeaf: {
       icon: o.HeadphonesDenyIcon,
       colorize: !0,
@@ -83,7 +83,7 @@ let P = {
     }
   };
 
-function D(e) {
+function y(e) {
   var t, s;
   let {
     channel: l,
@@ -93,11 +93,11 @@ function D(e) {
     deaf: c,
     serverMute: S,
     serverDeaf: I
-  } = e, g = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), T = (0, h.default)({
+  } = e, T = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), D = null != u ? u : v.default.getName(o), {
-    icon: x,
+  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : v.default.getName(o), {
+    icon: D,
     colorize: b,
     getStatus: U
   } = null !== (s = function(e) {
@@ -108,21 +108,21 @@ function D(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? y.serverDeaf : M.serverDeaf;
-    if (n) return i ? y.deaf : M.deaf;
-    if (a) return i ? y.serverMute : M.serverMute;
-    else if (l) return i ? y.localMute : M.mute;
-    else if (s) return i ? y.mute : M.mute
+    if (t) return i ? x.serverDeaf : P.serverDeaf;
+    if (n) return i ? x.deaf : P.deaf;
+    if (a) return i ? x.serverMute : P.serverMute;
+    else if (l) return i ? x.localMute : P.mute;
+    else if (s) return i ? x.mute : P.mute
   }({
     serverDeaf: I,
     deaf: c,
     serverMute: S,
     mute: d,
-    localMute: g
+    localMute: T
   })) && void 0 !== s ? s : {}, j = null != U ? O.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
-    userName: D,
+    userName: y,
     status: U()
-  }) : D;
+  }) : y;
 
   function G(e) {
     null != A ? (0, E.openContextMenuLazy)(e, async () => {
@@ -148,7 +148,7 @@ function D(e) {
     })
   }
   return (0, a.jsx)(f.Popout, {
-    preload: () => (0, _.maybeFetchUserProfileForPopout)(o.id, o.getAvatarURL(A, 80), {
+    preload: () => (0, C.maybeFetchUserProfileForPopout)(o.id, o.getAvatarURL(A, 80), {
       guildId: A,
       channelId: l.id
     }),
@@ -167,18 +167,18 @@ function D(e) {
         ...e,
         className: L.avatarContainer,
         onContextMenu: G,
-        focusProps: P,
-        children: (0, a.jsx)(C.default, {
+        focusProps: M,
+        children: (0, a.jsx)(_.default, {
           shakeLocation: R.ShakeLocation.VOICE_USER,
-          isShaking: T,
+          isShaking: g,
           children: (0, a.jsx)("div", {
             className: i()(L.avatar, {
-              [L.speaking]: T
+              [L.speaking]: g
             }),
             style: {
               backgroundImage: "url(".concat(N, ")")
             },
-            children: null != x ? (0, a.jsx)(x, {
+            children: null != D ? (0, a.jsx)(D, {
               className: i()(L.avatarIconOverlay, {
                 [L.avatarIconRed]: b
               }),
@@ -194,7 +194,7 @@ function D(e) {
   })
 }
 
-function x(e) {
+function D(e) {
   let {
     voiceStates: t,
     channel: n,
@@ -209,8 +209,8 @@ function x(e) {
       width: 16,
       height: 16
     }),
-    focusProps: P
-  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, C] = function(e, t) {
+    focusProps: M
+  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
     let n = [];
     for (let a of e) {
       if (a.user.id !== t) {
@@ -221,21 +221,21 @@ function x(e) {
       }
     }
     return [n, !1]
-  }(t, E), _ = C && o ? t : h;
-  return _.length <= 0 ? null : (0, a.jsx)(f.ScrollerThin, {
+  }(t, E), C = _ && o ? t : h;
+  return C.length <= 0 ? null : (0, a.jsx)(f.ScrollerThin, {
     className: i()(L.scroller, l),
     fade: !0,
     children: (0, a.jsxs)("div", {
       className: L.voiceUsers,
       role: "group",
       "aria-label": O.default.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
-      children: [_.map(e => {
+      children: [C.map(e => {
         let {
           user: t,
           nick: s,
           voiceState: l
         } = e;
-        return t.id !== E ? (0, a.jsx)(D, {
+        return t.id !== E ? (0, a.jsx)(y, {
           channel: n,
           user: t,
           nick: s,
@@ -245,7 +245,7 @@ function x(e) {
           serverMute: l.mute,
           serverDeaf: l.deaf
         }, t.id) : null
-      }), C ? c : null]
+      }), _ ? c : null]
     })
   })
 }

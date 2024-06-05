@@ -1,48 +1,48 @@
 "use strict";
-s.r(t);
-var a = s("735250"),
-  n = s("470079"),
-  l = s("481060"),
-  i = s("497505"),
-  r = s("918701"),
-  o = s("644646"),
-  u = s("472144"),
-  d = s("569379"),
-  c = s("46140"),
-  E = s("481900");
+n.r(t);
+var a = n("735250"),
+  s = n("470079"),
+  l = n("481060"),
+  i = n("497505"),
+  r = n("918701"),
+  o = n("644646"),
+  u = n("472144"),
+  d = n("569379"),
+  c = n("46140"),
+  f = n("481900");
 t.default = e => {
   let {
     quest: t,
-    progressBarRef: s,
-    isExpanded: _
-  } = e, f = n.useMemo(() => (0, r.calculatePercentComplete)({
+    progressBarRef: n,
+    isExpanded: E
+  } = e, h = s.useMemo(() => (0, r.calculatePercentComplete)({
     quest: t,
     location: c.QuestsExperimentLocations.QUESTS_BAR
-  }), [t]), h = (0, d.useQuestBarTitle)(t), T = (0, d.useQuestBarSubtitle)(t, _);
+  }), [t]), _ = (0, d.useQuestBarTitle)(t), C = (0, d.useQuestBarSubtitle)(t, E);
   return (0, a.jsxs)("div", {
-    className: E.questProgressWrapper,
+    className: f.questProgressWrapper,
     children: [(0, a.jsx)(u.default, {
-      percentComplete: f,
+      percentComplete: h,
       size: 42,
       strokeWidth: 3,
-      progressBarRef: s,
+      progressBarRef: n,
       children: (0, a.jsx)(o.default, {
-        className: E.questProgressRewardTile,
+        className: f.questProgressRewardTile,
         quest: t,
         questContent: i.QuestContent.QUEST_BAR,
         autoplay: !1
       })
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsx)(l.Text, {
-        className: E.questProgressHint,
+        className: f.questProgressHint,
         color: "header-primary",
         variant: "text-sm/semibold",
-        children: h
+        children: _
       }), (0, a.jsx)(l.Text, {
-        className: E.questProgressHint,
+        className: f.questProgressHint,
         color: "text-muted",
         variant: "text-xs/normal",
-        children: T
+        children: C
       })]
     })]
   })

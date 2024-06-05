@@ -34,8 +34,8 @@ function C(e) {
     return null === (e = E.default.getSubscriptionListing(s)) || void 0 === e ? void 0 : e.image_asset
   }), [R, x] = T.useName(s), [L, O] = T.usePriceTier(s), [p, A] = T.useDescription(s), [M, D] = T.useImage(s, 1024), {
     imageCTA: v,
-    imageAriaLabel: G,
-    setFilename: j
+    imageAriaLabel: j,
+    setFilename: G
   } = (0, S.default)(C), U = l.useMemo(() => {
     var e;
     return null !== (e = null == t ? void 0 : t.map(e => ({
@@ -45,11 +45,11 @@ function C(e) {
   }, [t]);
 
   function P(e, t) {
-    null != t && j(t.name), D(e)
+    null != t && G(t.name), D(e)
   }
   let b = (0, _.useRoleSubscriptionSettingsDisabled)(),
-    y = (0, d.useUID)(),
     B = (0, d.useUID)(),
+    y = (0, d.useUID)(),
     F = (0, d.useUID)();
   return (0, a.jsxs)(f.default, {
     title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BASIC_INFO_SECTION_TITLE,
@@ -60,14 +60,14 @@ function C(e) {
         className: h.formSplitHalf,
         children: (0, a.jsx)(i.FormSection, {
           title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_TITLE,
-          titleId: y,
+          titleId: B,
           disabled: b,
           children: (0, a.jsx)(i.TextInput, {
             placeholder: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_PLACEHOLDER,
             value: R,
             inputClassName: g.formInput,
             onChange: x,
-            "aria-labelledby": y,
+            "aria-labelledby": B,
             disabled: b
           })
         })
@@ -75,7 +75,7 @@ function C(e) {
         className: h.formSplitHalf,
         children: (0, a.jsx)(i.FormSection, {
           title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_TITLE,
-          titleId: B,
+          titleId: y,
           disabled: b,
           children: (0, a.jsx)(i.SingleSelect, {
             options: U,
@@ -86,7 +86,7 @@ function C(e) {
             onChange: O,
             maxVisibleItems: 5,
             look: i.SelectLooks.CUSTOM,
-            "aria-labelledby": B
+            "aria-labelledby": y
           })
         })
       })]
@@ -122,7 +122,7 @@ function C(e) {
         }), (0, a.jsx)(u.default, {
           onChange: P,
           buttonCTA: v,
-          "aria-label": G,
+          "aria-label": j,
           disabled: b,
           look: i.Button.Looks.OUTLINED,
           color: i.Button.Colors.PRIMARY
@@ -136,7 +136,7 @@ function C(e) {
         className: h.iconUploader,
         imageClassName: h.tierSymbolUploaderInner,
         onChange: P,
-        "aria-label": G,
+        "aria-label": j,
         disabled: b
       })]
     })]

@@ -6,20 +6,20 @@ r.r(t), r.d(t, {
 }), r("47120");
 var a = r("735250");
 r("470079");
-var i = r("346652"),
-  n = r("692547"),
+var n = r("346652"),
+  i = r("692547"),
   l = r("410030"),
   o = r("68588"),
-  c = r("981631"),
-  s = r("277513");
+  s = r("981631"),
+  c = r("277513");
 let d = {
-  base00: n.default.colors.BACKGROUND_SECONDARY.css,
-  base03: n.default.colors.TEXT_WARNING.css,
-  base07: n.default.colors.TEXT_NORMAL.css,
-  base08: n.default.colors.TEXT_MUTED.css,
-  base09: n.default.colors.TEXT_POSITIVE.css,
-  base0B: n.default.colors.TEXT_WARNING.css,
-  base0D: n.default.colors.TEXT_BRAND.css
+  base00: i.default.colors.BACKGROUND_SECONDARY.css,
+  base03: i.default.colors.TEXT_WARNING.css,
+  base07: i.default.colors.TEXT_NORMAL.css,
+  base08: i.default.colors.TEXT_MUTED.css,
+  base09: i.default.colors.TEXT_POSITIVE.css,
+  base0B: i.default.colors.TEXT_WARNING.css,
+  base0D: i.default.colors.TEXT_BRAND.css
 };
 
 function u(e) {
@@ -31,7 +31,7 @@ let h = u(d),
   p = u(d);
 
 function m(e) {
-  return c.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
+  return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
     type: o.default.Types.TEXT,
     children: () => (0, a.jsx)(a.Fragment, {
       children: e
@@ -44,8 +44,8 @@ function g(e) {
     data: t
   } = e, r = (0, l.default)();
   return (0, a.jsx)("div", {
-    className: s.inspectorWrapper,
-    children: (0, a.jsx)(i.JSONTree, {
+    className: c.inspectorWrapper,
+    children: (0, a.jsx)(n.JSONTree, {
       data: t,
       theme: "light" === r ? p : h,
       invertTheme: !1,

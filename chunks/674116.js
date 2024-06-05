@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("153124"),
   I = s("63063"),
   N = s("358085"),
-  g = s("894939"),
-  f = s("321499"),
+  f = s("894939"),
+  g = s("321499"),
   m = s("710808"),
   C = s("625205"),
   A = s("325808"),
@@ -127,7 +127,7 @@ function B() {
       })
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_CALL_SOUNDS,
-      children: (0, a.jsx)(g.default, {})
+      children: (0, a.jsx)(f.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_VIDEO,
       children: (0, a.jsx)(p.default, {})
@@ -141,7 +141,7 @@ function B() {
         }),
         children: [(0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_CODECS,
-          children: (0, a.jsx)(f.default, {})
+          children: (0, a.jsx)(g.default, {})
         }), (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
           children: (0, a.jsx)(R.default, {})

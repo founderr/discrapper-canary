@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return N
   }
 }), l("653041");
 var n = l("735250"),
@@ -14,27 +14,27 @@ var n = l("735250"),
   u = l("259580"),
   c = l("316949"),
   f = l("768581"),
-  m = l("486199"),
-  I = l("981631"),
+  I = l("486199"),
+  m = l("981631"),
   T = l("689938"),
-  N = l("615635");
+  E = l("615635");
 
-function E(e) {
+function N(e) {
   let {
     webhook: t,
     editedWebhook: l,
-    channelOptions: E,
-    isExpanded: S,
-    errors: g,
-    onToggleExpand: p
-  } = e, h = a.useMemo(() => {
+    channelOptions: N,
+    isExpanded: _,
+    errors: S,
+    onToggleExpand: h
+  } = e, g = a.useMemo(() => {
     var e, l;
     return e = t, null != (l = t.avatar) && /^data:/.test(l) ? l : (0, f.getUserAvatarURL)({
       id: e.id,
       avatar: l,
-      discriminator: I.NON_USER_BOT_DISCRIMINATOR
+      discriminator: m.NON_USER_BOT_DISCRIMINATOR
     })
-  }, [t]), _ = a.useCallback(() => {
+  }, [t]), p = a.useCallback(() => {
     (0, s.openModal)(e => (0, n.jsx)(s.ConfirmModal, {
       ...e,
       header: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_TITLE.format({
@@ -61,20 +61,20 @@ function E(e) {
     text: t.source_channel.name
   }), O.push({
     text: (0, n.jsx)("span", {
-      className: N.guildSource,
+      className: E.guildSource,
       children: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_GUILD_SOURCE.format({
         guildHook: () => (0, n.jsx)("span", {
-          className: N.sourceName,
+          className: E.sourceName,
           children: t.source_guild.name
         }, t.id)
       })
     }, "guild-source")
   }));
   let A = null;
-  return S && null != l && (A = (0, n.jsxs)("div", {
-    className: N.body,
+  return _ && null != l && (A = (0, n.jsxs)("div", {
+    className: E.body,
     children: [(0, n.jsx)(s.FormDivider, {
-      className: N.topDivider
+      className: E.topDivider
     }), (0, n.jsx)(d.default, {
       children: (0, n.jsxs)(d.default, {
         direction: d.default.Direction.VERTICAL,
@@ -91,7 +91,7 @@ function E(e) {
                   })
                 },
                 maxLength: 80,
-                error: g.name
+                error: S.name
               })
             })
           }), (0, n.jsx)(d.default.Child, {
@@ -100,7 +100,7 @@ function E(e) {
               title: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DEST_CHANNEL,
               children: (0, n.jsx)(s.SingleSelect, {
                 value: l.channel_id,
-                options: E,
+                options: N,
                 onChange: e => {
                   r.default.updateWebhook({
                     channelId: e
@@ -110,14 +110,14 @@ function E(e) {
             })
           })]
         }), (0, n.jsx)(s.FormDivider, {
-          className: N.bottomDivider
+          className: E.bottomDivider
         }), (0, n.jsx)(d.default, {
           children: (0, n.jsx)(s.Button, {
-            onClick: _,
+            onClick: p,
             size: s.Button.Sizes.SMALL,
             color: s.Button.Colors.RED,
             look: s.Button.Looks.LINK,
-            className: N.removeButton,
+            className: E.removeButton,
             children: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE
           })
         })]
@@ -125,23 +125,23 @@ function E(e) {
     })]
   })), (0, n.jsx)(s.Card, {
     editable: !0,
-    className: N.card,
+    className: E.card,
     children: (0, n.jsxs)(d.default, {
       direction: d.default.Direction.VERTICAL,
       children: [(0, n.jsx)(s.Clickable, {
-        className: N.header,
-        "aria-expanded": S,
-        onClick: p,
+        className: E.header,
+        "aria-expanded": _,
+        onClick: h,
         children: (0, n.jsxs)(d.default, {
           align: d.default.Align.CENTER,
-          children: [(0, n.jsx)(m.default, {
+          children: [(0, n.jsx)(I.default, {
             name: t.name,
-            imageSrc: h,
-            detailsClassName: N.__invalid_description,
+            imageSrc: g,
+            detailsClassName: E.__invalid_description,
             details: O
           }), (0, n.jsx)(u.default, {
-            className: N.expandIcon,
-            expanded: S,
+            className: E.expandIcon,
+            expanded: _,
             "aria-hidden": !0
           })]
         })

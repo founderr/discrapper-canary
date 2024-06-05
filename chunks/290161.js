@@ -12,9 +12,9 @@ var i = n("735250"),
   f = n("367207"),
   h = n("241890"),
   p = n("672752"),
-  E = n("153850"),
+  g = n("153850"),
   m = n("806519"),
-  g = n("649561"),
+  E = n("649561"),
   S = n("631553"),
   v = n("981631");
 n("792295"), n("308765"), l.default.initialize();
@@ -23,12 +23,12 @@ t.default = function() {
     f.default.terminate(), d.default.terminate()
   }), []), (0, i.jsxs)(a.Fragment, {
     children: [(0, i.jsx)(u.default, {}), (0, i.jsx)(c.default, {
-      children: (0, i.jsxs)(g.default, {
+      children: (0, i.jsxs)(E.default, {
         children: [(0, i.jsx)(m.MaskLibrary, {}), (0, i.jsx)(p.default, {}), (0, i.jsx)(r.AppWindowContextProvider, {
           appContext: v.AppContext.OVERLAY,
           renderWindow: window,
-          children: (0, i.jsxs)(E.AppLayerProvider, {
-            children: [(0, i.jsx)(S.default, {}), (0, i.jsx)(s.Modals, {}), (0, i.jsx)(o.default, {}), (0, i.jsx)(E.AppLayerContainer, {})]
+          children: (0, i.jsxs)(g.AppLayerProvider, {
+            children: [(0, i.jsx)(S.default, {}), (0, i.jsx)(s.Modals, {}), (0, i.jsx)(o.default, {}), (0, i.jsx)(g.AppLayerContainer, {})]
           })
         })]
       })

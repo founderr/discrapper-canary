@@ -1,18 +1,18 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
 var n = a("735250");
 a("470079");
 var r = a("249849"),
-  i = a("907561"),
-  s = a("689938"),
+  s = a("907561"),
+  i = a("689938"),
   l = a("444816");
 let o = ["#2d456e", "#395788", "#486ead", "#4f7ac2", "#5989d9", "#729bdd", "#96b3e3", "#b5c9e9", "#e0e0e2"],
-  d = ["#f7931e"],
-  c = [.05, .09, .15, .2, .25, .33, .44, .57, .95],
+  c = ["#f7931e"],
+  d = [.05, .09, .15, .2, .25, .33, .44, .57, .95],
   u = [{
     base: 4,
     tint: 1
@@ -47,42 +47,42 @@ let o = ["#2d456e", "#395788", "#486ead", "#4f7ac2", "#5989d9", "#729bdd", "#96b
     tint: 5
   }];
 
-function E(e) {
+function h(e) {
   let {
     width: t,
     height: a,
-    primaryTintColor: E,
-    secondaryTintColor: h,
-    ...T
+    primaryTintColor: h,
+    secondaryTintColor: E,
+    ...p
   } = e, {
-    primaryColorsTransformed: _,
-    secondaryColorsTransformed: C
+    primaryColorsTransformed: C,
+    secondaryColorsTransformed: T
   } = (0, r.getTransformedBadgeColors)({
     primaryBaseColors: o,
-    primaryTintColor: E,
-    primaryTintLuminances: c,
+    primaryTintColor: h,
+    primaryTintLuminances: d,
     primaryLuminanceWeights: u,
-    secondaryBaseColors: d,
-    secondaryTintColor: h,
+    secondaryBaseColors: c,
+    secondaryTintColor: E,
     secondaryTintLuminances: f,
     secondaryLuminanceWeights: m
   }), {
-    styleContent: x,
-    containerId: p
-  } = (0, i.useClanBannerStyleInjection)(_, C);
+    styleContent: _,
+    containerId: x
+  } = (0, s.useClanBannerStyleInjection)(C, T);
   return (0, n.jsxs)("svg", {
-    ...T,
-    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
+    ...p,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
     height: a,
-    viewBox: "0 0 ".concat(i.CLAN_BANNER_WIDTH, " ").concat(i.CLAN_BANNER_HEIGHT),
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
     children: [(0, n.jsx)("defs", {
       children: (0, n.jsx)("style", {
-        children: x
+        children: _
       })
     }), (0, n.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
-      id: p
+      id: x
     })]
   })
 }

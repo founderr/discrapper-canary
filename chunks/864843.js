@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return m
   }
 });
 var n = l("735250"),
@@ -15,7 +15,7 @@ var n = l("735250"),
   c = l("689938"),
   f = l("541940");
 
-function m(e) {
+function I(e) {
   let {
     listing: t
   } = e, l = (0, d.isApplicationGuildSubscription)(t.sku_flags);
@@ -34,41 +34,41 @@ function m(e) {
   }) : null
 }
 
-function I(e) {
+function m(e) {
   var t;
   let {
     guildId: l,
     applicationId: d,
     applicationPrimarySkuId: c,
-    analyticsLocation: I,
+    analyticsLocation: m,
     onComplete: T,
-    forcesTransitionToGuild: N
+    forcesTransitionToGuild: E
   } = e, {
-    listingsLoaded: E
+    listingsLoaded: N
   } = (0, o.useFetchListingsForApplication)(d, c), {
-    entitlementsLoaded: S
+    entitlementsLoaded: _
   } = (0, o.useFetchEntitlementsForGuild)({
     guildId: l
   }), {
-    subscriptionGroupListing: g
-  } = (0, o.useActiveSubscriptionListingForApplication)(d, l), p = (0, r.default)();
+    subscriptionGroupListing: S
+  } = (0, o.useActiveSubscriptionListingForApplication)(d, l), h = (0, r.default)();
   a.useEffect(() => {
-    p && i.fetchSubscriptions()
-  }, [p]);
-  let h = null == g ? void 0 : g.id,
-    _ = null == g ? void 0 : null === (t = g.subscription_listings) || void 0 === t ? void 0 : t.filter(e => e.published);
-  return E && (null == l || S) ? null == h || null == _ || 0 === _.length ? null : (0, n.jsx)("div", {
+    h && i.fetchSubscriptions()
+  }, [h]);
+  let g = null == S ? void 0 : S.id,
+    p = null == S ? void 0 : null === (t = S.subscription_listings) || void 0 === t ? void 0 : t.filter(e => e.published);
+  return N && (null == l || _) ? null == g || null == p || 0 === p.length ? null : (0, n.jsx)("div", {
     className: f.container,
-    children: _.map(e => (0, n.jsxs)(a.Fragment, {
-      children: [(0, n.jsx)(m, {
+    children: p.map(e => (0, n.jsxs)(a.Fragment, {
+      children: [(0, n.jsx)(I, {
         listing: e
       }), (0, n.jsx)(u.default, {
         listing: e,
         guildId: l,
-        groupListingId: h,
-        analyticsLocation: I,
+        groupListingId: g,
+        analyticsLocation: m,
         onComplete: T,
-        forcesTransitionToGuild: N
+        forcesTransitionToGuild: E
       })]
     }, e.id))
   }) : (0, n.jsx)("div", {

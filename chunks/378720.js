@@ -1,23 +1,23 @@
 "use strict";
-l.r(t), l.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return s
+    return o
   }
 });
-var r = l("735250");
-l("470079");
-var n = l("120356"),
-  a = l.n(n),
-  u = l("272573");
+var a = r("735250");
+r("470079");
+var n = r("120356"),
+  i = r.n(n),
+  l = r("272573");
 
-function s(e) {
+function o(e) {
   let {
     children: t,
-    tag: l,
+    tag: r,
     className: n
   } = e;
-  return l = null != l ? l : "h3", (0, r.jsx)(l, {
-    className: a()(u.title, n),
+  return r = null != r ? r : "h3", (0, a.jsx)(r, {
+    className: i()(l.title, n),
     children: t
   })
 }

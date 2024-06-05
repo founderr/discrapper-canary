@@ -14,24 +14,24 @@ var n = l("735250"),
   u = l("481060"),
   c = l("749210"),
   f = l("367907"),
-  m = l("895924"),
-  I = l("581364"),
+  I = l("895924"),
+  m = l("581364"),
   T = l("929507"),
-  N = l("997787"),
-  E = l("970731"),
-  S = l("314897"),
-  g = l("430824"),
-  p = l("594174"),
-  h = l("740727"),
-  _ = l("626135"),
+  E = l("997787"),
+  N = l("970731"),
+  _ = l("314897"),
+  S = l("430824"),
+  h = l("594174"),
+  g = l("740727"),
+  p = l("626135"),
   O = l("5192"),
   A = l("709054"),
   C = l("360606"),
   x = l("905753"),
   R = l("399860"),
   M = l("335049"),
-  v = l("617012"),
-  L = l("981631"),
+  L = l("617012"),
+  v = l("981631"),
   j = l("689938"),
   P = l("150038");
 
@@ -43,24 +43,24 @@ function b(e) {
     noneSelectedText: r,
     overwrites: f,
     hasAccessToMutatePermissions: T
-  } = e, E = (0, d.useStateFromStores)([g.default], () => g.default.getGuild(s));
-  i()(null != E, "");
-  let S = (0, d.useStateFromStores)([g.default], () => g.default.getRoles(s)),
-    [h, _] = a.useState(new Set),
+  } = e, N = (0, d.useStateFromStores)([S.default], () => S.default.getGuild(s));
+  i()(null != N, "");
+  let _ = (0, d.useStateFromStores)([S.default], () => S.default.getRoles(s)),
+    [g, p] = a.useState(new Set),
     M = a.useMemo(() => {
       var e;
-      let t = (0, I.allChannelsSentinel)(s);
-      let l = (e = S, o()(e).sortBy(e => e.position).reduce((e, t, l) => (e[t.id] = l, e), {}));
+      let t = (0, m.allChannelsSentinel)(s);
+      let l = (e = _, o()(e).sortBy(e => e.position).reduce((e, t, l) => (e[t.id] = l, e), {}));
       return Object.values(f).filter(e => e.canRead).sort((e, n) => {
         let a = e.type - n.type;
         if (0 !== a) return a;
         switch (e.type) {
-          case m.ApplicationCommandPermissionType.USER:
+          case I.ApplicationCommandPermissionType.USER:
             return function(e, t, l) {
               let n = Number(e.canWrite) - Number(t.canWrite);
               if (0 !== n) return n;
-              let a = p.default.getUser(e.id),
-                s = p.default.getUser(t.id);
+              let a = h.default.getUser(e.id),
+                s = h.default.getUser(t.id);
               if (null != a && null != s) {
                 let e = O.default.getName(l, void 0, a),
                   t = O.default.getName(l, void 0, s);
@@ -68,14 +68,14 @@ function b(e) {
               }
               return A.default.compare(e.id, t.id)
             }(e, n, s);
-          case m.ApplicationCommandPermissionType.ROLE:
+          case I.ApplicationCommandPermissionType.ROLE:
             return function(e, t, l, n) {
               if (e.id === l) return -1;
               if (t.id === l) return 1;
               let a = n[e.id];
               return a > n[t.id] ? -1 : 1
             }(e, n, s, l);
-          case m.ApplicationCommandPermissionType.CHANNEL:
+          case I.ApplicationCommandPermissionType.CHANNEL:
             return function(e, t, l) {
               if (e.id === l) return -1;
               if (t.id === l) return 1;
@@ -84,11 +84,11 @@ function b(e) {
             }(e, n, t)
         }
       })
-    }, [s, f, S]),
-    v = a.useCallback((e, t) => {
+    }, [s, f, _]),
+    L = a.useCallback((e, t) => {
       l({}, [(0, R.toPermissionKey)(e, t)])
     }, [l]),
-    L = a.useCallback((e, t, n) => {
+    v = a.useCallback((e, t, n) => {
       let a = (0, R.toPermissionKey)(e, t);
       null != f[a] && l({
         [a]: {
@@ -99,21 +99,21 @@ function b(e) {
       }, [])
     }, [l, f]);
   a.useEffect(() => {
-    let e = Object.values(f).filter(e => e.type === m.ApplicationCommandPermissionType.USER && !e.canRead && !h.has(e.id)).map(e => e.id);
-    0 !== e.length && (c.default.requestMembersById(s, e, !1), _(t => new Set([...t, ...e])))
-  }, [s, f, h, _]);
+    let e = Object.values(f).filter(e => e.type === I.ApplicationCommandPermissionType.USER && !e.canRead && !g.has(e.id)).map(e => e.id);
+    0 !== e.length && (c.default.requestMembersById(s, e, !1), p(t => new Set([...t, ...e])))
+  }, [s, f, g, p]);
   let j = (0, d.useStateFromStores)([x.default], () => x.default.getApplicationId()),
     b = (0, d.useStateFromStores)([C.default], () => null == j ? void 0 : C.default.integrations.find(e => {
       var t;
       return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === j
     })),
-    y = (0, d.useStateFromStores)([N.default], () => void 0 !== b && N.default.canShowToggleTooltip(b.id));
+    y = (0, d.useStateFromStores)([E.default], () => void 0 !== b && E.default.canShowToggleTooltip(b.id));
   return (0, n.jsx)(a.Fragment, {
     children: M.length > 0 ? M.map(e => (0, n.jsx)(D, {
-      guild: E,
+      guild: N,
       commandId: t,
-      onChange: t => L(e.id, e.type, t),
-      onRemove: () => v(e.id, e.type),
+      onChange: t => v(e.id, e.type, t),
+      onRemove: () => L(e.id, e.type),
       overwrite: e,
       integration: b,
       canShowMigrationTooltip: y,
@@ -136,27 +136,27 @@ function D(e) {
       commandId: o,
       onChange: d,
       onRemove: c,
-      overwrite: N,
-      integration: g,
-      canShowMigrationTooltip: p,
-      hasAccessToMutatePermissions: h
+      overwrite: E,
+      integration: S,
+      canShowMigrationTooltip: h,
+      hasAccessToMutatePermissions: g
     } = e,
-    O = N.id === r.id || N.id === (0, I.allChannelsSentinel)(r.id),
-    A = null == g ? void 0 : null === (l = g.application) || void 0 === l ? void 0 : null === (t = l.bot) || void 0 === t ? void 0 : t.username,
-    C = !N.canWrite || !h,
-    x = S.default.getId();
-  h ? !N.canWrite && (N.type === m.ApplicationCommandPermissionType.USER ? i = N.id === x ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : N.type === m.ApplicationCommandPermissionType.ROLE && (i = j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : i = null != o ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
-  let R = p && null != g && N.id === r.id && void 0 !== A && !N.permission;
+    O = E.id === r.id || E.id === (0, m.allChannelsSentinel)(r.id),
+    A = null == S ? void 0 : null === (l = S.application) || void 0 === l ? void 0 : null === (t = l.bot) || void 0 === t ? void 0 : t.username,
+    C = !E.canWrite || !g,
+    x = _.default.getId();
+  g ? !E.canWrite && (E.type === I.ApplicationCommandPermissionType.USER ? i = E.id === x ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : E.type === I.ApplicationCommandPermissionType.ROLE && (i = j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : i = null != o ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
+  let R = h && null != S && E.id === r.id && void 0 !== A && !E.permission;
   a.useEffect(() => {
     if (R) {
       var e;
-      _.default.track(L.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
+      p.default.track(v.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
         ...(0, f.collectGuildAnalyticsMetadata)(r.id),
-        application_id: null == g ? void 0 : null === (e = g.application) || void 0 === e ? void 0 : e.id,
+        application_id: null == S ? void 0 : null === (e = S.application) || void 0 === e ? void 0 : e.id,
         location: "toggle"
       })
     }
-  }, [r.id, null == g ? void 0 : null === (s = g.application) || void 0 === s ? void 0 : s.id, R]);
+  }, [r.id, null == S ? void 0 : null === (s = S.application) || void 0 === s ? void 0 : s.id, R]);
   let b = (0, n.jsx)(u.Tooltip, {
       tooltipClassName: P.tooltip,
       text: i,
@@ -165,11 +165,11 @@ function D(e) {
       hideOnClick: !1,
       children: e => (0, n.jsx)("div", {
         ...e,
-        children: (0, n.jsx)(v.default, {
+        children: (0, n.jsx)(L.default, {
           isDisabled: C,
-          currentValue: N.permission,
+          currentValue: E.permission,
           onChange: R ? e => {
-            T.default.dismissToggleTooltip(r.id, g), d(e)
+            T.default.dismissToggleTooltip(r.id, S), d(e)
           } : d
         })
       })
@@ -177,9 +177,9 @@ function D(e) {
     D = (0, n.jsx)(u.Popout, {
       renderPopout: () => (0, n.jsx)(u.Clickable, {
         onClick: e => {
-          e.stopPropagation(), T.default.dismissToggleTooltip(r.id, g)
+          e.stopPropagation(), T.default.dismissToggleTooltip(r.id, S)
         },
-        children: (0, n.jsx)(E.default, {
+        children: (0, n.jsx)(N.default, {
           className: P.tooltip,
           content: j.default.Messages.COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP.format({
             botName: A,
@@ -191,7 +191,7 @@ function D(e) {
       position: "bottom",
       align: "center",
       animation: u.Popout.Animation.TRANSLATE,
-      onRequestClose: () => T.default.dismissToggleTooltip(r.id, g),
+      onRequestClose: () => T.default.dismissToggleTooltip(r.id, S),
       shouldShow: R,
       closeOnScroll: !0,
       children: () => b
@@ -202,8 +202,8 @@ function D(e) {
       className: P.entryName,
       children: (0, n.jsx)(M.default, {
         guild: r,
-        id: N.id,
-        type: N.type,
+        id: E.id,
+        type: E.type,
         isLocked: C,
         lockTooltipText: i
       })
@@ -212,11 +212,11 @@ function D(e) {
       children: [(0, n.jsx)(y, {
         commandId: o,
         isSentinel: O,
-        isDisabled: !h,
+        isDisabled: !g,
         onRemove: c
       }), D]
     })]
-  }, N.id)
+  }, E.id)
 }
 
 function y(e) {
@@ -232,7 +232,7 @@ function y(e) {
       className: P.removeContainer,
       "aria-label": j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSION_ENTRY_REMOVE_ARIA_LABEL,
       onClick: s,
-      children: (0, n.jsx)(h.default, {
+      children: (0, n.jsx)(g.default, {
         width: 24,
         height: 24,
         className: P.removeIcon

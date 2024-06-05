@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("735250"),
-  a = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
+  s = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   u = n("442837"),
   r = n("780384"),
   o = n("481060"),
@@ -15,20 +15,20 @@ var l = n("735250"),
   d = n("906732"),
   S = n("963249"),
   p = n("639119"),
-  m = n("165583"),
-  E = n("263954"),
+  E = n("165583"),
+  _ = n("263954"),
   P = n("706454"),
-  _ = n("285952"),
-  f = n("642113"),
-  I = n("709586"),
+  m = n("285952"),
+  I = n("642113"),
+  f = n("709586"),
   T = n("761374"),
   M = n("363138"),
-  A = n("626135"),
-  N = n("930153"),
-  C = n("74538"),
-  y = n("937615"),
-  R = n("981631"),
-  L = n("474936"),
+  N = n("626135"),
+  A = n("930153"),
+  L = n("74538"),
+  R = n("937615"),
+  y = n("981631"),
+  C = n("474936"),
   h = n("689938"),
   U = n("17726");
 
@@ -38,27 +38,27 @@ function g(e) {
   } = e, n = (0, u.useStateFromStores)([P.default], () => P.default.locale);
   return (0, l.jsxs)("div", {
     className: U.perksList,
-    children: [(0, l.jsx)(E.default, {
-      icon: I.default,
+    children: [(0, l.jsx)(_.default, {
+      icon: f.default,
       iconClassName: U.perkIconGuild,
       description: h.default.Messages.PREMIUM_UPSELL_FEATURE_FREE_GUILD_SUBSCRIPTION.format({
-        numFreeGuildSubscriptions: L.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
+        numFreeGuildSubscriptions: C.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
       })
-    }), (0, l.jsx)(E.default, {
-      icon: I.default,
+    }), (0, l.jsx)(_.default, {
+      icon: f.default,
       iconClassName: U.perkIconGuild,
       description: h.default.Messages.PREMIUM_UPSELL_FEATURE_GUILD_SUBSCRIPTION_DISCOUNT.format({
-        percent: (0, N.formatPercent)(n, L.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+        percent: (0, A.formatPercent)(n, C.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
       })
-    }), t ? (0, l.jsx)(E.default, {
-      icon: f.default,
+    }), t ? (0, l.jsx)(_.default, {
+      icon: I.default,
       iconClassName: U.perkIconChatPerks,
       description: h.default.Messages.PREMIUM_UPSELL_FEATURE_CHAT_PERKS
-    }) : null, (0, l.jsx)(E.default, {
+    }) : null, (0, l.jsx)(_.default, {
       icon: T.default,
       iconClassName: U.perkIconStream,
       description: h.default.Messages.PREMIUM_UPSELL_FEATURE_STREAM
-    }), (0, l.jsx)(E.default, {
+    }), (0, l.jsx)(_.default, {
       icon: M.default,
       iconClassName: U.perkIconUpload,
       description: h.default.Messages.PREMIUM_UPSELL_FEATURE_UPLOAD
@@ -70,72 +70,72 @@ function O(e) {
   var t;
   let {
     premiumSubscriptionPlan: n,
-    onClose: s,
+    onClose: a,
     onBack: u,
-    onSkip: E,
+    onSkip: _,
     onSubscriptionConfirmation: P,
-    analyticsLocation: f,
-    analyticsSourceLocation: I,
+    analyticsLocation: I,
+    analyticsSourceLocation: f,
     priceOptions: T
   } = e, {
     analyticsLocations: M,
-    sourceAnalyticsLocations: N
+    sourceAnalyticsLocations: A
   } = (0, d.default)(c.default.GUILD_BOOSTING_PREMIUM_UPSELL), {
     theme: O
-  } = (0, o.useThemeContext)(), b = (0, r.isThemeLight)(O) ? o.Button.Colors.PRIMARY : o.Button.Colors.WHITE, x = null == n || null == n.premiumSubscriptionType, D = C.default.getPrice(L.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, !1, T), v = (0, y.formatPrice)(D.amount, D.currency), j = (0, p.usePremiumTrialOffer)(), B = null == j ? void 0 : j.trial_id, k = (null == j ? void 0 : null === (t = j.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === L.PremiumSubscriptionSKUs.TIER_2;
-  return a.useEffect(() => {
-    A.default.track(R.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: L.PremiumUpsellTypes.GUILD_PREMIUM_UPSELL_MODAL,
-      location_stack: N
+  } = (0, o.useThemeContext)(), b = (0, r.isThemeLight)(O) ? o.Button.Colors.PRIMARY : o.Button.Colors.WHITE, D = null == n || null == n.premiumSubscriptionType, x = L.default.getPrice(C.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, !1, T), B = (0, R.formatPrice)(x.amount, x.currency), k = (0, p.usePremiumTrialOffer)(), j = null == k ? void 0 : k.trial_id, v = (null == k ? void 0 : null === (t = k.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_2;
+  return s.useEffect(() => {
+    N.default.track(y.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: C.PremiumUpsellTypes.GUILD_PREMIUM_UPSELL_MODAL,
+      location_stack: A
     })
-  }, [N]), (0, l.jsxs)(l.Fragment, {
+  }, [A]), (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(o.ModalContent, {
       className: U.content,
       children: [(0, l.jsx)(o.ModalCloseButton, {
-        onClick: s,
+        onClick: a,
         className: U.closeButton
-      }), k && (0, l.jsx)(m.PremiumTrialGradientBadge, {
+      }), v && (0, l.jsx)(E.PremiumTrialGradientBadge, {
         className: U.premiumTrialBadge
       }), (0, l.jsx)("div", {
         className: i()(U.upsellImage, {
-          [U.upsellImageWithTrialOffer]: k
+          [U.upsellImageWithTrialOffer]: v
         })
       }), (0, l.jsx)("div", {
         className: U.bodyText,
-        children: null != B ? h.default.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT_TRIAL_VARIANT : h.default.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT.format({
-          monthlyPrice: v
+        children: null != j ? h.default.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT_TRIAL_VARIANT : h.default.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT.format({
+          monthlyPrice: B
         })
       }), (0, l.jsx)(g, {
-        shouldUpsellFromNoneTier: x
+        shouldUpsellFromNoneTier: D
       })]
     }), (0, l.jsxs)(o.ModalFooter, {
-      align: _.default.Align.CENTER,
-      justify: _.default.Justify.END,
+      align: m.default.Align.CENTER,
+      justify: m.default.Justify.END,
       children: [(0, l.jsxs)("div", {
         className: U.footerRight,
         children: [(0, l.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: b,
-          onClick: E,
+          onClick: _,
           children: h.default.Messages.PREMIUM_UPSELL_CONTINUE_TO_BOOSTS
         }), (0, l.jsx)(o.Button, {
           color: o.Button.Colors.GREEN,
           type: "submit",
           onClick: () => {
-            s(), (0, S.default)({
+            a(), (0, S.default)({
               initialPlanId: null,
-              subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: M,
               analyticsObject: {
-                ...f,
-                section: R.AnalyticsSections.PREMIUM_GUILD_PURCHASE_MODAL
+                ...I,
+                section: y.AnalyticsSections.PREMIUM_GUILD_PURCHASE_MODAL
               },
-              analyticsSourceLocation: I,
+              analyticsSourceLocation: f,
               onSubscriptionConfirmation: P,
-              trialId: B
+              trialId: j
             })
           },
-          children: null != B ? h.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : h.default.Messages.PREMIUM_UPSELL_UPGRADE
+          children: null != j ? h.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : h.default.Messages.PREMIUM_UPSELL_UPGRADE
         })]
       }), (0, l.jsx)("div", {
         className: U.backStep,

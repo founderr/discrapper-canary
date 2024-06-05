@@ -11,8 +11,8 @@ var l = n("836560"),
   f = n("998502"),
   E = n("996106"),
   h = n("901077"),
-  C = n("76238"),
-  _ = n("852926"),
+  _ = n("76238"),
+  C = n("852926"),
   m = n("186901"),
   S = n("981631"),
   p = n("413135").Buffer;
@@ -32,8 +32,8 @@ try {
     a = f.default.requireModule("erlpack")
   } catch (e) {}
 }
-let g = f.default.requireModule("discord_rpc").RPCWebSocket,
-  T = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+let T = f.default.requireModule("discord_rpc").RPCWebSocket,
+  g = window.GLOBAL_ENV.MARKETING_ENDPOINT,
   A = new d.default("RPCServer:WSS"),
   N = [];
 
@@ -76,7 +76,7 @@ function L(e, t, n, a) {
     message: a
   }, n)
 }
-class P extends C.default {
+class M extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
       binary: !0
@@ -95,7 +95,7 @@ class P extends C.default {
     this._socket = e
   }
 }
-class M extends C.default {
+class P extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
@@ -109,7 +109,7 @@ class M extends C.default {
     this._sendCallback = e, this._closeCallback = t
   }
 }
-class y extends l.EventEmitter {
+class x extends l.EventEmitter {
   handleRequest(e, t) {
     let [n, a] = v(e.url).split("?"), s = v(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
@@ -128,10 +128,10 @@ class y extends l.EventEmitter {
             protocol: a,
             host: s
           } = o.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
-          a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", T), t.writeHead(301), t.end()
+          a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        u = new M(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
-      if (l)(0, _.validateSocketClient)(u, v(e.headers).origin, n.get("client_id")).then(() => {
+        u = new P(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+      if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
         e.on("data", e => n += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, n))
       }).catch(e => {
@@ -155,14 +155,14 @@ class y extends l.EventEmitter {
     let s = new URLSearchParams(v(e.upgradeReq).url.split("?")[1]),
       l = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
     try {
-      a = new P(e, Number(s.get("v")), null !== (n = s.get("encoding")) && void 0 !== n ? n : "json")
+      a = new M(e, Number(s.get("v")), null !== (n = s.get("encoding")) && void 0 !== n ? n : "json")
     } catch (t) {
       e.close(t.code, t.message);
       return
     }
     A.info("Socket Opened: ".concat(a.id)), e.on("error", e => A.error("WS Error: ".concat(e.message))), e.on("close", (e, t) => {
       A.info("Socket Closed: ".concat(a.id, ", code ").concat(e, ", message ").concat(t)), r().remove(N, e => e === a), this.emit("disconnect", a)
-    }), (0, _.validateSocketClient)(a, l, s.get("client_id")).then(() => {
+    }), (0, C.validateSocketClient)(a, l, s.get("client_id")).then(() => {
       N.push(a), e.on("message", e => this.handleMessage(a, e)), this.emit("connect", a)
     }).catch(e => {
       let {
@@ -187,14 +187,14 @@ class y extends l.EventEmitter {
     var e;
     super();
     let t = 0;
-    (s = g.http.createServer()).on("error", e => {
+    (s = T.http.createServer()).on("error", e => {
       A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => R(++t), 1e3)
     }), s.on("request", this.handleRequest.bind(this)), R(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s
     };
-    new g.ws.Server(n).on("connection", e => this.handleConnection(e))
+    new T.ws.Server(n).on("connection", e => this.handleConnection(e))
   }
 }
-t.default = new y
+t.default = new x

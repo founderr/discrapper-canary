@@ -22,11 +22,11 @@ var a = n("735250"),
   I = n("206295"),
   A = n("91140"),
   v = n("297781"),
-  x = n("591853"),
-  N = n("265048"),
+  N = n("591853"),
+  x = n("265048"),
   M = n("981631"),
-  y = n("689938");
-let R = {
+  R = n("689938");
+let y = {
   [s.PlatformType.DESKTOP]: null,
   [s.PlatformType.XBOX]: E.default,
   [s.PlatformType.PLAYSTATION]: p.default
@@ -44,7 +44,7 @@ t.default = e => {
     details: j,
     gameTitle: P,
     activity: D
-  } = (0, N.useGamingContentData)(n), {
+  } = (0, x.useGamingContentData)(n), {
     primaryColor: b,
     secondaryColor: U
   } = (0, I.default)(E), F = (0, r.useStateFromStores)([m.default], () => m.default.locale), {
@@ -75,14 +75,14 @@ t.default = e => {
     })
   }, [E, t, B, n, F, W, G, V, b, U, O]);
   if (null == O) return null;
-  let K = null != n.extra.platform ? R[n.extra.platform] : null,
+  let K = null != n.extra.platform ? y[n.extra.platform] : null,
     Z = (0, a.jsx)(v.BadgesContainer, {
       location: v.BadgeLocation.POPOUT,
       children: A.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
         entry: n
       }, t))
     }),
-    X = null == w ? (0, a.jsx)(x.PopoutContent, {
+    q = null == w ? (0, a.jsx)(N.PopoutContent, {
       thumbnailSrc: E,
       thumbnailTitle: L,
       channel: t,
@@ -91,39 +91,39 @@ t.default = e => {
         width: 16,
         height: 16
       }) : null,
-      userDescription: (0, S.isEntryActive)(n) ? y.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : y.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+      userDescription: (0, S.isEntryActive)(n) ? R.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : R.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: P,
       subtitle: j,
       badges: Z,
       entry: n
-    }) : (0, a.jsx)(x.StreamingPopoutContent, {
+    }) : (0, a.jsx)(N.StreamingPopoutContent, {
       channel: t,
       streamPreviewSrc: w,
       title: n.extra.game_name,
       badges: Z,
-      userDescription: y.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
+      userDescription: R.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
       entry: n,
       stream: k
     }),
-    q = (0, u.default)(D, M.ActivityFlags.JOIN) || (0, d.default)(D) ? (0, a.jsx)(f.default, {
+    X = (0, u.default)(D, M.ActivityFlags.JOIN) || (0, d.default)(D) ? (0, a.jsx)(f.default, {
       activity: D,
       user: O,
-      ButtonComponent: e => (0, a.jsx)(x.PrimaryActionButton, {
+      ButtonComponent: e => (0, a.jsx)(N.PrimaryActionButton, {
         IconComponent: i.EyeIcon,
         ...e
       })
     }) : null,
-    J = (0, c.default)(D) ? (0, a.jsx)(h.default, {
+    Q = (0, c.default)(D) ? (0, a.jsx)(h.default, {
       activity: D,
-      ButtonComponent: e => (0, a.jsx)(x.PrimaryActionButton, {
+      ButtonComponent: e => (0, a.jsx)(N.PrimaryActionButton, {
         IconComponent: i.EyeIcon,
         ...e
       })
     }) : null,
-    Q = null != q || null != J;
-  return (0, a.jsxs)(x.Popout, {
-    children: [X, (0, a.jsx)(x.PopoutInteractionsContainer, {
-      children: null != H ? (0, a.jsx)(x.VoiceChannelPopoutReactor, {
+    J = null != X || null != Q;
+  return (0, a.jsxs)(N.Popout, {
+    children: [q, (0, a.jsx)(N.PopoutInteractionsContainer, {
+      children: null != H ? (0, a.jsx)(N.VoiceChannelPopoutReactor, {
         closePopout: p,
         user: O,
         channel: t,
@@ -133,7 +133,7 @@ t.default = e => {
         requestId: s,
         voiceChannel: H,
         isStreaming: null != w
-      }) : Q ? (0, a.jsxs)(x.PrimaryActionPopoutReactor, {
+      }) : J ? (0, a.jsxs)(N.PrimaryActionPopoutReactor, {
         header: null,
         closePopout: p,
         user: O,
@@ -142,8 +142,8 @@ t.default = e => {
         reactionImageAltText: (0, T.getContentAltText)(n, O),
         entry: n,
         requestId: s,
-        children: [q, J]
-      }) : (0, a.jsx)(x.PopoutReactor, {
+        children: [X, Q]
+      }) : (0, a.jsx)(N.PopoutReactor, {
         closePopout: p,
         user: O,
         channel: t,

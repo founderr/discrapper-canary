@@ -26,16 +26,16 @@ var s = l("735250"),
   x = l("740021"),
   U = l("228168"),
   A = l("981631"),
-  C = l("689938"),
-  N = l("61007");
+  N = l("689938"),
+  C = l("61007");
 
 function R(e) {
   let {
     user: t,
     guildId: l,
     channelId: R,
-    messageId: h,
-    roleId: P,
+    messageId: P,
+    roleId: h,
     friendToken: M,
     initialSection: y,
     autoFocusNote: j,
@@ -53,8 +53,8 @@ function R(e) {
     userId: t.id,
     guildId: D,
     channelId: R,
-    messageId: h,
-    roleId: P
+    messageId: P,
+    roleId: h
   }), [k, w] = i.useState(D), Y = (0, I.default)(t.id), H = (0, I.default)(t.id, D), V = null == k ? Y : H, {
     activity: W,
     customStatusActivity: z
@@ -73,8 +73,8 @@ function R(e) {
     })
   })), Z = i.createRef(), K = (0, o.default)(Z), Q = () => (null == H ? void 0 : H.guildId) == null ? null : (null == V ? void 0 : V.guildId) != null ? (0, s.jsx)(n.MenuItem, {
     id: "view-main-profile",
-    label: C.default.Messages.VIEW_MAIN_PROFILE,
-    subtext: C.default.Messages.AKA_DISPLAY_NAME.format({
+    label: N.default.Messages.VIEW_MAIN_PROFILE,
+    subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
       displayName: f.default.getName(void 0, void 0, t)
     }),
     action: () => {
@@ -85,8 +85,8 @@ function R(e) {
     }
   }) : (0, s.jsx)(n.MenuItem, {
     id: "view-server-profile",
-    label: C.default.Messages.VIEW_SERVER_PROFILE,
-    subtext: C.default.Messages.AKA_DISPLAY_NAME.format({
+    label: N.default.Messages.VIEW_SERVER_PROFILE,
+    subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
       displayName: f.default.getName(D, R, t)
     }),
     action: () => {
@@ -103,13 +103,13 @@ function R(e) {
       userId: t.id,
       guildId: D,
       channelId: R,
-      messageId: h,
-      roleId: P,
+      messageId: P,
+      roleId: h,
       children: (0, s.jsxs)(n.ModalRoot, {
         transitionState: F,
-        className: N.root,
+        className: C.root,
         hideShadow: !0,
-        "aria-label": C.default.Messages.USER_PROFILE_MODAL,
+        "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, s.jsxs)(m.default, {
           user: t,
           displayProfile: V,

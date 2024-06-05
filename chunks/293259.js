@@ -26,11 +26,11 @@ var s = l("735250"),
   x = l("204197"),
   U = l("735336"),
   A = l("520978"),
-  C = l("184325"),
-  N = l("652853"),
+  N = l("184325"),
+  C = l("652853"),
   R = l("225714"),
-  h = l("228168"),
-  P = l("981631"),
+  P = l("228168"),
+  h = l("981631"),
   M = l("231338"),
   y = l("689938"),
   j = l("155614");
@@ -50,7 +50,7 @@ function O(e) {
     onClose: w
   } = e, Y = (0, a.useStateFromStores)([m.default], () => m.default.getRelationshipType(p.id)), H = (0, a.useStateFromStores)([I.default], () => I.default.isMobileOnline(p.id)), V = (0, a.useStateFromStores)([I.default], () => I.default.getStatus(p.id)), W = (0, a.useStateFromStores)([g.default], () => g.default.getUserProfile(p.id)), z = (0, a.useStateFromStores)([E.default], () => E.default.getId() === p.id), {
     theme: Z
-  } = (0, N.useUserProfileThemeContext)(), {
+  } = (0, C.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
   } = (0, T.useUserProfileAnalyticsContext)(), {
     avatarSrc: Q,
@@ -88,7 +88,7 @@ function O(e) {
         context: {
           location: "User Profile"
         },
-        type: P.RelationshipTypes.BLOCKED
+        type: h.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -107,7 +107,7 @@ function O(e) {
       displayProfile: t,
       onClose: $,
       user: p,
-      profileType: h.UserProfileTypes.MODAL,
+      profileType: P.UserProfileTypes.MODAL,
       hasProfileEffect: k
     }), (0, s.jsxs)("div", {
       className: j.header,
@@ -134,13 +134,13 @@ function O(e) {
             className: j.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, s.jsx)(C.default, {
+        }) : (0, s.jsx)(N.default, {
           user: p,
           className: j.badgeList,
           guildId: O,
-          size: C.BadgeSizes.SIZE_24,
+          size: N.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: C.BadgeSizes.SIZE_18,
+          shrinkToSize: N.BadgeSizes.SIZE_18,
           onBadgeClick: w
         }), (0, s.jsxs)("div", {
           className: j.relationshipButtons,

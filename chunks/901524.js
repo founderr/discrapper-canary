@@ -13,9 +13,9 @@ var i = l("120356"),
   u = l("465670"),
   c = l("377087"),
   f = l("689938"),
-  m = l("977873");
+  I = l("977873");
 (n = a || (a = {})).DENY = "DENY", n.PASSTHROUGH = "PASSTHROUGH", n.ALLOW = "ALLOW";
-let I = Object.keys(a);
+let m = Object.keys(a);
 
 function T(e) {
   let {
@@ -29,11 +29,11 @@ function T(e) {
     labelledBy: n
   });
   return (0, s.jsx)("div", {
-    className: r()(m.group, {
-      [m.disabled]: a
+    className: r()(I.group, {
+      [I.disabled]: a
     }),
     ...i,
-    children: I.map(e => (0, s.jsx)(N, {
+    children: m.map(e => (0, s.jsx)(E, {
       type: e,
       isSelected: t === e,
       onSelect: e => {
@@ -43,29 +43,29 @@ function T(e) {
   })
 }
 
-function N(e) {
+function E(e) {
   let t, l, n, {
     type: a,
     onSelect: i,
-    isSelected: I
+    isSelected: m
   } = e;
   switch (a) {
     case "DENY":
-      n = f.default.Messages.PERMISSION_OVERRIDE_DENY, t = u.default, l = m.deny;
+      n = f.default.Messages.PERMISSION_OVERRIDE_DENY, t = u.default, l = I.deny;
       break;
     case "ALLOW":
-      n = f.default.Messages.PERMISSION_OVERRIDE_ALLOW, t = d.default, l = m.allow;
+      n = f.default.Messages.PERMISSION_OVERRIDE_ALLOW, t = d.default, l = I.allow;
       break;
     default:
-      n = f.default.Messages.PERMISSION_OVERRIDE_PASSTHROUGH, t = c.default, l = m.passthrough
+      n = f.default.Messages.PERMISSION_OVERRIDE_PASSTHROUGH, t = c.default, l = I.passthrough
   }
   let T = (0, o.useRadioItem)({
-    isSelected: I,
+    isSelected: m,
     label: n
   });
   return (0, s.jsx)(o.Clickable, {
-    className: r()(m.item, l, {
-      [m.selected]: I
+    className: r()(I.item, l, {
+      [I.selected]: m
     }),
     onClick: () => i(a),
     ...T,

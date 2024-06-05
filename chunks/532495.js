@@ -19,14 +19,14 @@ var n = s("512722"),
   T = s("126631"),
   _ = s("433411"),
   I = s("532432"),
-  f = s("349177"),
-  m = s("872736"),
-  N = s("134795"),
-  g = s("610966"),
-  h = s("513901"),
-  C = s("451392"),
-  O = s("906364"),
-  A = s("676934"),
+  N = s("349177"),
+  f = s("872736"),
+  g = s("134795"),
+  m = s("610966"),
+  C = s("513901"),
+  A = s("451392"),
+  h = s("906364"),
+  O = s("676934"),
   p = s("350327"),
   R = s("621853"),
   x = s("318661"),
@@ -34,11 +34,11 @@ var n = s("512722"),
   D = s("25990"),
   L = s("594174"),
   P = s("74538"),
-  v = s("689938"),
-  b = s("741129");
+  b = s("689938"),
+  v = s("741129");
 
 function U() {
-  var e, t, s, n, U, j, F, G;
+  var e, t, s, n, U, j, G, F;
   let B = (0, i.useStateFromStores)([L.default], () => {
       let e = L.default.getCurrentUser();
       return l()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
@@ -47,9 +47,9 @@ function U() {
     {
       pendingAvatar: V,
       pendingGlobalName: H,
-      pendingBanner: k,
-      pendingBio: w,
-      pendingPronouns: Y,
+      pendingBanner: Y,
+      pendingBio: k,
+      pendingPronouns: w,
       pendingAccentColor: W,
       pendingThemeColors: K,
       errors: z
@@ -64,7 +64,7 @@ function U() {
     Q = (0, S.useGuildAutomodProfileQuarantineErrors)(),
     q = P.default.canUsePremiumProfileCustomization(B),
     X = (0, E.showRemoveAvatar)(V, B.avatar),
-    Z = (0, E.showRemoveBanner)(k, null == y ? void 0 : y.banner),
+    Z = (0, E.showRemoveBanner)(Y, null == y ? void 0 : y.banner),
     J = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
     location: J + " auto on",
@@ -84,58 +84,58 @@ function U() {
     en = (0, d.default)("user_profile"),
     el = (0, u.useCurrentUserAvailableClans)();
   return (0, a.jsxs)("div", {
-    className: b.sectionsContainer,
-    children: [(0, a.jsx)(f.default, {
+    className: v.sectionsContainer,
+    children: [(0, a.jsx)(N.default, {
       placeholder: B.username,
       errors: et,
       currentGlobalName: B.globalName,
       pendingGlobalName: H,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(O.default, {
-      sectionTitle: v.default.Messages.USER_SETTINGS_PRONOUNS,
+    }), (0, a.jsx)(h.default, {
+      sectionTitle: b.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: z.pronouns,
       onPronounsChange: p.setPendingPronouns,
-      pendingPronouns: Y,
-      currentPronouns: null !== (F = null == y ? void 0 : y.pronouns) && void 0 !== F ? F : ""
+      pendingPronouns: w,
+      currentPronouns: null !== (G = null == y ? void 0 : y.pronouns) && void 0 !== G ? G : ""
     }, "pronouns"), (0, a.jsx)(I.default, {
       onAvatarChange: r.setPendingAvatar,
       showRemoveAvatarButton: X,
       errors: z.avatar,
-      sectionTitle: v.default.Messages.USER_SETTINGS_AVATAR,
+      sectionTitle: b.default.Messages.USER_SETTINGS_AVATAR,
       forcedDivider: !0
     }, "avatar"), (0, a.jsx)(_.default, {
       user: B,
-      sectionTitle: v.default.Messages.USER_SETTINGS_AVATAR_DECORATION
-    }, "decoration"), (0, a.jsx)(h.default, {
+      sectionTitle: b.default.Messages.USER_SETTINGS_AVATAR_DECORATION
+    }, "decoration"), (0, a.jsx)(C.default, {
       user: B,
-      sectionTitle: v.default.Messages.USER_SETTINGS_PROFILE_EFFECT
+      sectionTitle: b.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), q ? (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, a.jsx)(g.default, {
         showRemoveBannerButton: Z,
         errors: z.banner,
         onBannerChange: p.setPendingBanner,
         forcedDivider: !0
-      }, "banner"), (0, a.jsx)(C.default, {
+      }, "banner"), (0, a.jsx)(A.default, {
         user: B,
         pendingAvatar: V,
         pendingColors: K,
         onThemeColorsChange: p.setPendingThemeColors,
         forcedDivider: !0
       })]
-    }) : (0, a.jsx)(g.default, {
+    }) : (0, a.jsx)(m.default, {
       user: B,
       savedUserColor: null == y ? void 0 : y.accentColor,
       pendingColor: W,
       setPendingAccentColor: p.setPendingAccentColor
     }, "color"), (0, a.jsx)(T.default, {
-      sectionTitle: v.default.Messages.USER_SETTINGS_ABOUT_ME,
+      sectionTitle: b.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: es,
       onBioChange: e => (0, E.setNewPendingUserBio)(e, null == y ? void 0 : y.bio),
-      pendingBio: w,
-      currentBio: null !== (G = null == y ? void 0 : y.bio) && void 0 !== G ? G : ""
+      pendingBio: k,
+      currentBio: null !== (F = null == y ? void 0 : y.bio) && void 0 !== F ? F : ""
     }, "bio"), en && el.length > 0 && (0, a.jsx)(c.default, {
       availableClans: el
-    }), ea && (0, a.jsx)(A.default, {}), null != ee && (0, a.jsx)(m.default, {
+    }), ea && (0, a.jsx)(O.default, {}), null != ee && (0, a.jsx)(f.default, {
       legacyUsername: ee
     }, "legacy_username")]
   })

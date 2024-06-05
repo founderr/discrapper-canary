@@ -38,11 +38,11 @@ function S(e) {
     onClose: T,
     analyticsLocation: I,
     className: A
-  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), x = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, N = (0, o.default)(S);
-  let M = null == (n = x) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
-    y = (0, c.default)(M),
+  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), N = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, x = (0, o.default)(S);
+  let M = null == (n = N) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
+    R = (0, c.default)(M),
     {
-      reducedMotion: R
+      reducedMotion: y
     } = l.useContext(r.AccessibilityPreferencesContext),
     L = l.useCallback(e => {
       null != v && (0, f.openGuildMemberModViewSidebar)(_, S, v.baseChannelId, {
@@ -54,14 +54,14 @@ function S(e) {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          if (x === E.ModViewPanel.INFO) return T();
+          if (N === E.ModViewPanel.INFO) return T();
           return L(E.ModViewPanel.INFO)
         }
       }
-    }), [T, x, L]);
+    }), [T, N, L]);
   l.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
-  let j = (0, s.useTransition)(x, {
-    immediate: N !== S,
+  let j = (0, s.useTransition)(N, {
+    immediate: x !== S,
     value: 0,
     from: {
       value: 1
@@ -93,11 +93,11 @@ function S(e) {
           backfaceVisibility: "hidden",
           width: "100%",
           height: "100%",
-          ...R.enabled ? {
+          ...y.enabled ? {
             opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to(e => 1 - Math.abs(e))
           } : {
-            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", y)),
-            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g("right", y))
+            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", R)),
+            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g("right", R))
           }
         },
         children: function(e) {

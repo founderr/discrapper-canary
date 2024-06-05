@@ -29,60 +29,60 @@ var a = s("735250"),
   M = s("359380"),
   D = s("308083"),
   v = s("981631"),
-  G = s("231338"),
-  j = s("689938"),
+  j = s("231338"),
+  G = s("689938"),
   U = s("943303");
 let P = e => [{
     section: E.SectionTypes.HEADER,
-    label: j.default.Messages.CLAN_SETTINGS_BASIC_INFO
+    label: G.default.Messages.CLAN_SETTINGS_BASIC_INFO
   }, {
     section: D.ClanSetupSteps.GAMES,
-    label: j.default.Messages.CLAN_SETTTINGS_SELECT_GAMES,
+    label: G.default.Messages.CLAN_SETTTINGS_SELECT_GAMES,
     hasError: (null == e ? void 0 : e.gameApplicationIds) != null
   }, {
     section: D.ClanSetupSteps.PLAYSTYLE,
-    label: j.default.Messages.CLAN_SETTTINGS_SELECT_PLAYSTYLE,
+    label: G.default.Messages.CLAN_SETTTINGS_SELECT_PLAYSTYLE,
     hasError: (null == e ? void 0 : e.playstyle) != null
   }, {
     section: E.SectionTypes.DIVIDER
   }, {
     section: E.SectionTypes.HEADER,
-    label: j.default.Messages.CLAN_SETTINGS_PERSONALITY_INFO
+    label: G.default.Messages.CLAN_SETTINGS_PERSONALITY_INFO
   }, {
     section: D.ClanSetupSteps.UTILITY_TRAITS,
-    label: j.default.Messages.CLAN_SETTINGS_SELECT_TRAITS
+    label: G.default.Messages.CLAN_SETTINGS_SELECT_TRAITS
   }, {
     section: D.ClanSetupSteps.INTERESTS,
-    label: j.default.Messages.CLAN_SETTINGS_SELECT_INTERESTS,
+    label: G.default.Messages.CLAN_SETTINGS_SELECT_INTERESTS,
     hasError: (null == e ? void 0 : e.interests) != null
   }, {
     section: D.ClanSetupSteps.DESCRIPTION,
-    label: j.default.Messages.CLAN_SETTINGS_WRITE_DESCRIPTION,
+    label: G.default.Messages.CLAN_SETTINGS_WRITE_DESCRIPTION,
     hasError: (null == e ? void 0 : e.description) != null || (null == e ? void 0 : e.wildcardDescriptors) != null
   }, {
     section: E.SectionTypes.DIVIDER
   }, {
     section: E.SectionTypes.HEADER,
-    label: j.default.Messages.CLAN_SETTINGS_CUSTOMIZE_IDENTITY
+    label: G.default.Messages.CLAN_SETTINGS_CUSTOMIZE_IDENTITY
   }, {
     section: D.ClanSetupSteps.CUSTOMIZE_TAG_BADGE,
-    label: j.default.Messages.CLAN_SETTINGS_CLAN_BADGE,
+    label: G.default.Messages.CLAN_SETTINGS_CLAN_BADGE,
     hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
   }, {
     section: D.ClanSetupSteps.CUSTOMIZE_BANNER,
-    label: j.default.Messages.CLAN_SETTINGS_CLAN_PROFILE,
+    label: G.default.Messages.CLAN_SETTINGS_CLAN_PROFILE,
     hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
   }, {
     section: E.SectionTypes.DIVIDER
   }, {
     section: D.ClanSetupSteps.MEMBER_APPLICATION,
-    label: j.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP,
+    label: G.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP,
     hasError: (null == e ? void 0 : e.verificationForm) != null
   }, {
     section: E.SectionTypes.DIVIDER
   }, {
     section: E.SectionTypes.CUSTOM,
-    label: j.default.Messages.CLAN_SETTINGS_DISABLE_CLAN,
+    label: G.default.Messages.CLAN_SETTINGS_DISABLE_CLAN,
     element: b
   }],
   b = e => {
@@ -101,7 +101,7 @@ let P = e => [{
     return (0, a.jsxs)(o.TabBar.Item, {
       selectedItem: !1,
       className: U.deleteItem,
-      "aria-label": j.default.Messages.CLAN_SETTINGS_DISABLE_CLAN,
+      "aria-label": G.default.Messages.CLAN_SETTINGS_DISABLE_CLAN,
       onClick: () => {
         if (i) {
           S.ComponentDispatch.dispatch(v.ComponentActions.EMPHASIZE_NOTICE);
@@ -112,14 +112,14 @@ let P = e => [{
           } = await Promise.resolve().then(s.bind(s, "481060"));
           return t => (0, a.jsx)(e, {
             ...t,
-            header: j.default.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_TITLE,
-            confirmText: j.default.Messages.CONFIRM,
-            cancelText: j.default.Messages.CANCEL,
+            header: G.default.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_TITLE,
+            confirmText: G.default.Messages.CONFIRM,
+            cancelText: G.default.Messages.CANCEL,
             loading: r,
             onConfirm: u,
             children: (0, a.jsx)(o.Text, {
               variant: "text-md/normal",
-              children: j.default.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_BODY
+              children: G.default.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_BODY
             })
           })
         })
@@ -131,14 +131,14 @@ let P = e => [{
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: "status-danger",
-        children: j.default.Messages.CLAN_SETTINGS_DISABLE_CLAN
+        children: G.default.Messages.CLAN_SETTINGS_DISABLE_CLAN
       })]
     })
   },
-  y = e => {
+  B = e => {
     let {
       isErrorVisible: t
-    } = e, s = (0, o.useToken)(o.tokens.colors.HEADER_PRIMARY, G.ThemeTypes.DARK), l = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, G.ThemeTypes.DARK);
+    } = e, s = (0, o.useToken)(o.tokens.colors.HEADER_PRIMARY, j.ThemeTypes.DARK), l = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, j.ThemeTypes.DARK);
     return t ? (0, a.jsxs)("div", {
       className: U.tooltipContents,
       children: [(0, a.jsx)(T.default, {
@@ -149,13 +149,13 @@ let P = e => [{
           style: {
             color: s.hex()
           },
-          children: j.default.Messages.CLAN_SUBMIT_ERROR_TITLE
+          children: G.default.Messages.CLAN_SUBMIT_ERROR_TITLE
         }), (0, a.jsx)(o.Text, {
           variant: "text-xs/normal",
           style: {
             color: l.hex()
           },
-          children: j.default.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
+          children: G.default.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
         })]
       })]
     }) : null
@@ -164,9 +164,9 @@ t.default = e => {
   let {
     guildId: t,
     onClose: s
-  } = e, [I, G] = l.useState(D.ClanSetupSteps.GAMES), {
+  } = e, [I, j] = l.useState(D.ClanSetupSteps.GAMES), {
     initialSettings: b,
-    settings: B,
+    settings: y,
     errors: F,
     submitting: H,
     dirty: k
@@ -181,7 +181,7 @@ t.default = e => {
       dirty: t.dirty
     }
   }), w = l.useCallback(e => {
-    k ? S.ComponentDispatch.dispatch(v.ComponentActions.EMPHASIZE_NOTICE) : G(e)
+    k ? S.ComponentDispatch.dispatch(v.ComponentActions.EMPHASIZE_NOTICE) : j(e)
   }, [k]), V = (0, g.useDefaultGameIdForClan)(t, "ClanSettingsModal"), Y = (0, h.useFullScreenModalAnimationStyle)(), W = l.useCallback(e => {
     "Escape" === e.key && (e.stopPropagation(), s())
   }, [s]);
@@ -208,9 +208,9 @@ t.default = e => {
       k ? S.ComponentDispatch.dispatch(v.ComponentActions.EMPHASIZE_NOTICE) : s()
     }, [k, s]),
     J = async () => {
-      await (0, f.saveClanSettings)(t, B), (0, m.trackSettingsSaved)(t)
+      await (0, f.saveClanSettings)(t, y), (0, m.trackSettingsSaved)(t)
     }, q = l.useMemo(() => null != F && Object.values(F).some(e => null != e), [F]);
-  if (null == B) return null;
+  if (null == y) return null;
   let $ = P(F);
   return (0, a.jsxs)(n.animated.div, {
     style: Y,
@@ -218,11 +218,11 @@ t.default = e => {
     children: [(0, a.jsx)(o.Tooltip, {
       color: o.Tooltip.Colors.GREY,
       tooltipClassName: U.tooltip,
-      text: (0, a.jsx)(y, {
+      text: (0, a.jsx)(B, {
         isErrorVisible: q
       }),
       position: "left",
-      "aria-label": null != q ? j.default.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+      "aria-label": null != q ? G.default.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
       shouldShow: q,
       forceOpen: q,
       children: e => (0, a.jsx)(u.default, {
@@ -264,7 +264,7 @@ t.default = e => {
                     children: [e.label, e.hasError && (0, a.jsx)(o.Tooltip, {
                       color: o.Tooltip.Colors.GREY,
                       position: "right",
-                      text: j.default.Messages.CLAN_SUBMIT_ERROR_TITLE,
+                      text: G.default.Messages.CLAN_SUBMIT_ERROR_TITLE,
                       children: e => (0, a.jsx)(T.default, {
                         ...e,
                         className: U.errorIcon
@@ -283,53 +283,53 @@ t.default = e => {
               case D.ClanSetupSteps.GAMES:
                 var e;
                 return (0, a.jsx)(x.default, {
-                  title: j.default.Messages.CLAN_SETUP_GAMES_TITLE,
-                  description: j.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
+                  title: G.default.Messages.CLAN_SETUP_GAMES_TITLE,
+                  description: G.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
                   handleUpdate: z,
-                  gameApplicationIds: null !== (e = B.gameApplicationIds) && void 0 !== e ? e : new Set,
+                  gameApplicationIds: null !== (e = y.gameApplicationIds) && void 0 !== e ? e : new Set,
                   requiredGameId: null != V ? V : void 0,
                   error: F.gameApplicationIds,
                   inSettings: !0
                 });
               case D.ClanSetupSteps.PLAYSTYLE:
                 return (0, a.jsx)(p.default, {
-                  title: j.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
-                  description: j.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
+                  title: G.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
+                  description: G.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
                   handleUpdate: K,
-                  playstyle: B.playstyle,
+                  playstyle: y.playstyle,
                   error: F.playstyle
                 });
               case D.ClanSetupSteps.UTILITY_TRAITS:
                 return (0, a.jsx)(M.default, {
                   guildId: t,
-                  title: j.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
-                  description: j.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
+                  title: G.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
+                  description: G.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
                   handleUpdate: Z,
-                  progress: B,
+                  progress: y,
                   requiredGameId: null != V ? V : void 0
                 });
               case D.ClanSetupSteps.INTERESTS:
                 return (0, a.jsx)(L.default, {
                   guildId: t,
                   handleUpdate: X,
-                  progress: B,
+                  progress: y,
                   error: F.interests
                 });
               case D.ClanSetupSteps.DESCRIPTION:
                 return (0, a.jsx)(R.default, {
                   guildId: t,
                   handleUpdate: X,
-                  progress: B,
+                  progress: y,
                   errors: F
                 });
               case D.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
                 return (0, a.jsx)(A.default, {
                   handleUpdate: X,
-                  tag: B.tag,
+                  tag: y.tag,
                   error: F.tag,
-                  badge: B.badgeKind,
-                  primaryColor: B.badgePrimaryColor,
-                  secondaryColor: B.badgeSecondaryColor,
+                  badge: y.badgeKind,
+                  primaryColor: y.badgePrimaryColor,
+                  secondaryColor: y.badgeSecondaryColor,
                   furthestStep: D.ClanSetupSteps.CUSTOMIZE_TAG_BADGE,
                   inSettings: !0
                 });
@@ -342,7 +342,7 @@ t.default = e => {
                 return (0, a.jsx)(C.default, {
                   guildId: t,
                   handleUpdate: X,
-                  progress: B
+                  progress: y
                 });
               default:
                 return null

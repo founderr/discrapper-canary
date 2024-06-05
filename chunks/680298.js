@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return m
   }
 });
 var n = l("735250"),
@@ -14,69 +14,69 @@ var n = l("735250"),
   u = l("507893"),
   c = l("399860"),
   f = l("689938"),
-  m = l("514719");
+  I = l("514719");
 
-function I(e) {
+function m(e) {
   let {
     applicationIcon: t,
-    applicationName: I,
+    applicationName: m,
     canNavigate: T,
-    command: N,
-    guildId: E
-  } = e, S = a.useMemo(() => {
+    command: E,
+    guildId: N
+  } = e, _ = a.useMemo(() => {
     var e;
-    return 0 !== Object.keys(null !== (e = N.permissions) && void 0 !== e ? e : {}).length
-  }, [N.permissions]), g = a.useCallback(() => {
-    null != N && T() && (0, s.openModalLazy)(async () => {
+    return 0 !== Object.keys(null !== (e = E.permissions) && void 0 !== e ? e : {}).length
+  }, [E.permissions]), S = a.useCallback(() => {
+    null != E && T() && (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([l.e("99387"), l.e("78786")]).then(l.bind(l, "50474"));
       return l => (0, n.jsx)(e, {
         applicationIcon: t,
-        applicationId: N.applicationId,
-        applicationName: I,
-        command: N,
-        guildId: E,
+        applicationId: E.applicationId,
+        applicationName: m,
+        command: E,
+        guildId: N,
         ...l
       })
     })
-  }, [t, I, T, N, E]), p = a.useCallback(e => {
+  }, [t, m, T, E, N]), h = a.useCallback(e => {
     (0, i.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await l.e("5396").then(l.bind(l, "731646"));
       return t => (0, n.jsx)(e, {
         ...t,
-        id: N.id,
+        id: E.id,
         label: f.default.Messages.COPY_ID_COMMAND
       })
     })
-  }, [N]), h = N.type === r.ApplicationCommandType.CHAT ? o.default : d.default, _ = (0, c.commandName)(N.type, N.displayName);
+  }, [E]), g = E.type === r.ApplicationCommandType.CHAT ? o.default : d.default, p = (0, c.commandName)(E.type, E.displayName);
   return (0, n.jsxs)(s.Clickable, {
-    onClick: g,
-    className: m.item,
-    onContextMenu: p,
+    onClick: S,
+    className: I.item,
+    onContextMenu: h,
     children: [(0, n.jsxs)("div", {
-      className: m.identifier,
-      children: [(0, n.jsx)(h, {
-        className: m.icon,
+      className: I.identifier,
+      children: [(0, n.jsx)(g, {
+        className: I.icon,
         width: 24,
         height: 24
       }), (0, n.jsx)(s.Text, {
         variant: "text-md/normal",
-        children: _
+        children: p
       })]
     }), (0, n.jsx)("div", {
-      className: m.statusContainer,
-      children: S ? (0, n.jsxs)("div", {
-        className: m.statusLine,
+      className: I.statusContainer,
+      children: _ ? (0, n.jsxs)("div", {
+        className: I.statusLine,
         children: [(0, n.jsx)(s.Text, {
           variant: "text-md/normal",
           children: f.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_STATUS_HAS_OVERRIDES
         }), (0, n.jsx)(u.default, {
           height: 18,
           width: 18,
-          className: m.statusIcon
+          className: I.statusIcon
         })]
       }) : null
     })]

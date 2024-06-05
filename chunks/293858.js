@@ -5,13 +5,13 @@ s.r(t), s.d(t, {
   }
 });
 var n = s("735250"),
-  i = s("470079"),
+  l = s("470079"),
   r = s("512722"),
-  l = s.n(r),
+  i = s.n(r),
   a = s("881602"),
   o = s("317269"),
-  C = s("669079"),
-  u = s("296848"),
+  u = s("669079"),
+  C = s("296848"),
   d = s("987209"),
   c = s("598"),
   p = s("614277"),
@@ -21,19 +21,19 @@ function f(e) {
   var t, s;
   let r, {
       handleClose: f,
-      planGroup: x,
-      onSubscriptionConfirmation: E,
+      planGroup: E,
+      onSubscriptionConfirmation: x,
       renderPurchaseConfirmation: L,
-      postSuccessGuild: S,
-      followupSKUInfo: I
+      postSuccessGuild: m,
+      followupSKUInfo: S
     } = e,
     {
-      activeSubscription: m,
+      activeSubscription: I,
       paymentSources: h,
       paymentSourceId: P,
       selectedPlan: M,
-      selectedSkuId: T,
-      step: N,
+      selectedSkuId: N,
+      step: T,
       updatedSubscription: A,
       startingPremiumSubscriptionPlanIdRef: j
     } = (0, c.usePaymentContext)(),
@@ -45,30 +45,30 @@ function f(e) {
       isSendingMessage: U,
       sendGiftMessage: b
     } = (0, d.useGiftContext)();
-  l()(null != M, "Expected plan to selected"), l()(null != T, "Expected selectedSkuId"), l()(null != N, "Step should be set");
-  let v = i.useCallback(() => {
-    f(), null == E || E()
-  }, [f, E]);
-  return i.useEffect(() => {
-    if (!(!R || null == g || null == y || O || U || (0, C.shouldShowCustomGiftExperience)(g))) a.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
+  i()(null != M, "Expected plan to selected"), i()(null != N, "Expected selectedSkuId"), i()(null != T, "Step should be set");
+  let v = l.useCallback(() => {
+    f(), null == x || x()
+  }, [f, x]);
+  return l.useEffect(() => {
+    if (!(!R || null == g || null == y || O || U || (0, u.shouldShowCustomGiftExperience)(g))) a.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
     }).enabled && b({
-      onSubscriptionConfirmation: E
+      onSubscriptionConfirmation: x
     })
-  }, [b, R, g, y, O, U, E]), r = null != L ? L(M, v, A) : R ? (0, n.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
+  }, [b, R, g, y, O, U, x]), r = null != L ? L(M, v, A) : R ? (0, n.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
     planId: M.id,
     onClose: v
   }) : j.current === M.id ? (0, n.jsx)(o.default, {
     planId: M.id,
-    postSuccessGuild: S,
+    postSuccessGuild: m,
     onClose: v,
     paymentSourceType: null === (t = h[null != P ? P : ""]) || void 0 === t ? void 0 : t.type
   }) : (0, n.jsx)(o.default, {
-    followupSKUInfo: I,
+    followupSKUInfo: S,
     startingPremiumSubscriptionPlanId: j.current,
     planId: M.id,
     onClose: v,
-    isDowngrade: null != m && (0, u.subscriptionCanDowngrade)(m, M.id, x),
+    isDowngrade: null != I && (0, C.subscriptionCanDowngrade)(I, M.id, E),
     paymentSourceType: null === (s = h[null != P ? P : ""]) || void 0 === s ? void 0 : s.type
   }), (0, n.jsx)(n.Fragment, {
     children: (0, n.jsxs)(p.PaymentPortalBody, {

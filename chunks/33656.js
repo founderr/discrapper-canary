@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return g
   }
 }), s("724458");
 var a = s("735250"),
@@ -18,9 +18,9 @@ var a = s("735250"),
   T = s("726985"),
   _ = s("689938"),
   I = s("63057"),
-  f = s("611273");
+  N = s("611273");
 
-function m(e) {
+function f(e) {
   let {
     label: t,
     onChange: s,
@@ -35,7 +35,7 @@ function m(e) {
   })
 }
 
-function N() {
+function g() {
   let e = (0, r.useStateFromStores)([u.default], () => u.default.getSubsection()),
     t = n.createRef(),
     {
@@ -49,8 +49,8 @@ function N() {
       null == t || null === (s = t.current) || void 0 === s || s.scrollIntoView(!0)
     }
   }, [l, t, e]);
-  let N = E.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1),
-    g = {
+  let g = E.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1),
+    m = {
       [E.EmailCategories.COMMUNICATION]: T.WebSetting.NOTIFICATIONS_EMAILS_COMMUNICATION,
       [E.EmailCategories.SOCIAL]: T.WebSetting.NOTIFICATIONS_EMAILS_SOCIAL,
       [E.EmailCategories.UPDATES_AND_ANNOUNCEMENTS]: T.WebSetting.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -62,7 +62,7 @@ function N() {
     children: [(0, a.jsx)("div", {
       ref: t
     }), (0, a.jsxs)(o.FormSection, {
-      className: i()(f.marginTop40),
+      className: i()(N.marginTop40),
       tag: o.FormTitleTags.H1,
       title: _.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
       children: [E.EmailCategoriesList.map(e => {
@@ -70,7 +70,7 @@ function N() {
           category: t,
           label: n,
           subLabel: l
-        } = e, i = g[t], r = (0, a.jsx)(m, {
+        } = e, i = m[t], r = (0, a.jsx)(f, {
           label: n(),
           subLabel: l(),
           enabled: s[t],
@@ -87,7 +87,7 @@ function N() {
         setting: T.WebSetting.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
         children: [(0, a.jsx)(o.Button, {
           className: I.marketingUnsubscribeButton,
-          disabled: !N,
+          disabled: !g,
           look: o.ButtonLooks.LINK,
           color: o.ButtonColors.LINK,
           onClick: c.updateMarketingEmailSettings,
@@ -96,7 +96,7 @@ function N() {
           type: o.FormTextTypes.DESCRIPTION,
           children: _.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
         }), (0, a.jsx)(o.FormDivider, {
-          className: i()(f.marginTop40, f.marginBottom40)
+          className: i()(N.marginTop40, N.marginBottom40)
         })]
       })]
     })]

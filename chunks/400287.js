@@ -26,8 +26,8 @@ function N() {
     s = S.UseRichChatInput.useSetting(),
     n = S.RenderSpoilers.useSetting(),
     N = S.UseThreadSidebar.useSetting(),
-    g = S.ViewImageDescriptions.useSetting(),
-    f = S.ConvertEmoticons.useSetting(),
+    f = S.ViewImageDescriptions.useSetting(),
+    g = S.ConvertEmoticons.useSetting(),
     m = S.InlineAttachmentMedia.useSetting(),
     C = S.InlineEmbedMedia.useSetting(),
     A = S.RenderEmbeds.useSetting(),
@@ -58,7 +58,7 @@ function N() {
         children: _.default.Messages.INLINE_ATTACHMENT_MEDIA
       }), (0, a.jsx)(i.FormSwitch, {
         className: l()(I.marginTop8, I.marginBottom20),
-        value: g,
+        value: f,
         note: _.default.Messages.IMAGE_DESCRIPTION_HELP,
         onChange: S.ViewImageDescriptions.updateSetting,
         children: _.default.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
@@ -86,7 +86,7 @@ function N() {
         children: _.default.Messages.RENDER_REACTIONS
       }), (0, a.jsx)(i.FormSwitch, {
         className: I.marginBottom40,
-        value: f,
+        value: g,
         note: d.default.parse(_.default.Messages.CONVERT_EMOTICONS_HELP),
         onChange: S.ConvertEmoticons.updateSetting,
         children: _.default.Messages.CONVERT_EMOTICONS

@@ -1,13 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
   useSubmittedGuildJoinRequestTotal: function() {
-    return i
+    return s
   }
 });
 var n = a("442837"),
   r = a("826581");
 
-function i(e) {
+function s(e) {
   let {
     guildId: t
   } = e;

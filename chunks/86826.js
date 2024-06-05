@@ -18,10 +18,10 @@ t.default = function(e) {
     color: f,
     animate: E,
     gradientStopColor: h,
-    getHistoricalTotalBytes: C
-  } = e, _ = (0, i.useColorValue)(f).hex, m = null === (t = (0, i.useColorValue)(h)) || void 0 === t ? void 0 : t.hex;
+    getHistoricalTotalBytes: _
+  } = e, C = (0, i.useColorValue)(f).hex, m = null === (t = (0, i.useColorValue)(h)) || void 0 === t ? void 0 : t.hex;
   return (0, a.jsx)(u.default, {
-    getHistoricalTotalBytes: C,
+    getHistoricalTotalBytes: _,
     children: (e, t, i) => {
       var u;
       return (0, a.jsx)("div", {
@@ -49,7 +49,7 @@ t.default = function(e) {
               maxValue: Math.max(Math.max.apply(null, e), 1e3),
               className: c.sparkChart,
               updateInterval: t,
-              color: _,
+              color: C,
               gradientStopColor: m,
               numUpdatesToShow: i,
               animate: E,

@@ -31,19 +31,19 @@ function _(e) {
     originalFriendingEnabled: x = !1,
     improvedFriendingEnabled: U = !1,
     trackUserProfileAction: A,
-    viewProfileItem: C,
-    onClose: N
+    viewProfileItem: N,
+    onClose: C
   } = e, {
     newestAnalyticsLocation: R
   } = (0, r.default)();
 
-  function h(e) {
+  function P(e) {
     A({
       action: "SEND_MESSAGE"
-    }), a.default.openPrivateChannel(t.id, !1, !1, e), N()
+    }), a.default.openPrivateChannel(t.id, !1, !1, e), C()
   }
 
-  function P(e) {
+  function h(e) {
     A({
       action: "PRESS_OPTIONS"
     }), (0, n.openContextMenuLazy)(e, async () => {
@@ -60,8 +60,8 @@ function _(e) {
         onCopyId: () => A({
           action: "COPY_USER_ID"
         }),
-        onMessage: () => h("User Profile Modal Header Buttons - Context Menu"),
-        viewProfileItem: C,
+        onMessage: () => P("User Profile Modal Header Buttons - Context Menu"),
+        viewProfileItem: N,
         user: t,
         isCurrentUser: _,
         guildId: v
@@ -90,7 +90,7 @@ function _(e) {
         friendToken: p
       })
     } catch (e) {
-      N()
+      C()
     }
   }
 
@@ -114,7 +114,7 @@ function _(e) {
         type: I.RelationshipTypes.BLOCKED
       })
     } catch (e) {
-      N()
+      C()
     }
   }
 
@@ -132,33 +132,33 @@ function _(e) {
         relationshipType: g,
         onAddFriend: y,
         onIgnoreFriend: j,
-        onSendMessage: () => h("User Profile Modal Header Buttons - Send Message Button"),
+        onSendMessage: () => P("User Profile Modal Header Buttons - Send Message Button"),
         originalFriendingEnabled: x,
         improvedFriendingEnabled: U
       }), _ && (0, s.jsx)(c.default, {
         user: t,
         guildId: v,
         profileType: E.UserProfileTypes.FULL_SIZE,
-        onClose: N
+        onClose: C
       }), !t.isNonUserBot() && x ? (0, s.jsx)(i.Clickable, {
         focusProps: {
           offset: {
             left: 8
           }
         },
-        onClick: P,
+        onClick: h,
         children: (0, s.jsx)(d.default, {
           className: m.additionalActionsIcon
         })
       }) : null]
     }), !x && !U && (T ? (0, s.jsx)(f.default, {
       user: t,
-      onClose: N
+      onClose: C
     }) : (0, s.jsx)(c.default, {
       user: t,
       guildId: v,
       profileType: E.UserProfileTypes.FULL_SIZE,
-      onClose: N
+      onClose: C
     }))]
   })
 }

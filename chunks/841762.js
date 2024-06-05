@@ -1,61 +1,61 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return d
+    return o
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  l = n.n(s),
-  o = n("481060"),
-  u = n("420019");
+}), a("47120");
+var s = a("735250"),
+  n = a("470079"),
+  i = a("120356"),
+  l = a.n(i),
+  r = a("481060"),
+  u = a("420019");
 
-function a(e) {
+function c(e) {
   let {
     alt: t,
-    ...n
-  } = e, [s, l] = r.useState(!0);
-  return (0, i.jsxs)(i.Fragment, {
-    children: [s && (0, i.jsx)(o.Spinner, {
-      type: o.Spinner.Type.LOW_MOTION,
+    ...a
+  } = e, [i, l] = n.useState(!0);
+  return (0, s.jsxs)(s.Fragment, {
+    children: [i && (0, s.jsx)(r.Spinner, {
+      type: r.Spinner.Type.LOW_MOTION,
       className: u.loader
-    }), (0, i.jsx)("img", {
-      ...n,
+    }), (0, s.jsx)("img", {
+      ...a,
       alt: t,
       onLoad: () => l(!1)
     })]
   })
 }
 
-function d(e) {
+function o(e) {
   let {
     src: t,
-    backgroundSrc: n,
-    alt: r,
-    aspectRatio: s,
-    className: o,
-    imageChildClassName: d,
-    ...c
+    backgroundSrc: a,
+    alt: n,
+    aspectRatio: i,
+    className: r,
+    imageChildClassName: o,
+    ...d
   } = e;
-  return (0, i.jsxs)("div", {
-    className: l()(u.container, o),
-    children: [(0, i.jsx)("img", {
-      src: n,
-      alt: r,
+  return (0, s.jsxs)("div", {
+    className: l()(u.container, r),
+    children: [(0, s.jsx)("img", {
+      src: a,
+      alt: n,
       className: u.backgroundImage
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: u.backgroundImageFilter
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       style: {
-        aspectRatio: s
+        aspectRatio: i
       },
       className: u.imageContainer,
-      children: (0, i.jsx)(a, {
+      children: (0, s.jsx)(c, {
         src: t,
-        alt: r,
-        className: l()(u.image, d),
-        ...c
+        alt: n,
+        className: l()(u.image, o),
+        ...d
       })
     })]
   })

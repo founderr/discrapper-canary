@@ -1,19 +1,19 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   fetchConsents: function() {
     return u
   },
   setConsents: function() {
     return d
   }
-}), s("411104");
-var a = s("544891"),
-  n = s("570140"),
-  l = s("981631"),
-  i = s("689938");
+}), n("411104");
+var a = n("544891"),
+  s = n("570140"),
+  l = n("981631"),
+  i = n("689938");
 
 function r(e) {
-  return null != e && null != e.body && n.default.dispatch({
+  return null != e && null != e.body && s.default.dispatch({
     type: "UPDATE_CONSENTS",
     consents: {
       ...e.body

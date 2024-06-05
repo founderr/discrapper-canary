@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageForward: function() {
-    return E
+    return f
   }
 });
 var s = n("933557"),
@@ -22,19 +22,19 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class E {
+class f {
   getForwardInfo() {
-    var e, t, n, c, E, f;
+    var e, t, n, c, f, E;
     let {
       snapshotIndex: _,
-      parentMessage: T,
-      messageSnapshot: m
-    } = this, I = (0, u.calendarFormatCompact)(m.message.timestamp), N = a.default.getChannel(null === (e = T.messageReference) || void 0 === e ? void 0 : e.channel_id), p = a.default.getChannel(this.parentMessage.channel_id);
-    if (null != N && null != p && N.guild_id === p.guild_id) {
-      if (!i.default.can(N.accessPermissions, N)) return {
+      parentMessage: m,
+      messageSnapshot: T
+    } = this, I = (0, u.calendarFormatCompact)(T.message.timestamp), p = a.default.getChannel(null === (e = m.messageReference) || void 0 === e ? void 0 : e.channel_id), h = a.default.getChannel(this.parentMessage.channel_id);
+    if (null != p && null != h && p.guild_id === h.guild_id) {
+      if (!i.default.can(p.accessPermissions, p)) return {
         snapshotIndex: _
       };
-      let e = (0, s.computeChannelName)(N, o.default, r.default, !0);
+      let e = (0, s.computeChannelName)(p, o.default, r.default, !0);
       return {
         snapshotIndex: _,
         footerInfo: {
@@ -47,20 +47,20 @@ class E {
         }
       }
     }
-    if ((null === (t = m.guild) || void 0 === t ? void 0 : t.name) == null) return {
+    if ((null === (t = T.guild) || void 0 === t ? void 0 : t.name) == null) return {
       snapshotIndex: _
     };
-    let S = null === (n = T.messageReference) || void 0 === n ? void 0 : n.guild_id,
-      C = null != S ? l.default.getGuild(S) : null,
-      A = null !== (E = null == C ? void 0 : C.name) && void 0 !== E ? E : null === (c = m.guild) || void 0 === c ? void 0 : c.name;
+    let N = null === (n = m.messageReference) || void 0 === n ? void 0 : n.guild_id,
+      S = null != N ? l.default.getGuild(N) : null,
+      C = null !== (f = null == S ? void 0 : S.name) && void 0 !== f ? f : null === (c = T.guild) || void 0 === c ? void 0 : c.name;
     return {
       snapshotIndex: _,
       footerInfo: {
-        originLabel: A,
-        originIconUrl: null !== (f = null == C ? void 0 : C.getIconURL(16, !1)) && void 0 !== f ? f : void 0,
+        originLabel: C,
+        originIconUrl: null !== (E = null == S ? void 0 : S.getIconURL(16, !1)) && void 0 !== E ? E : void 0,
         timestampLabel: I,
         accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
-          origin: A,
+          origin: C,
           timestamp: I
         })
       }
