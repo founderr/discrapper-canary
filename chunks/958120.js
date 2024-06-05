@@ -60,11 +60,11 @@ function L(e) {
       onOpenProfile: () => M({
         autoFocusNote: !1
       }),
-      guildId: null == v ? void 0 : v.id,
       usernameIcon: t.hasAvatarForGuild(null == v ? void 0 : v.id) && (0, i.jsx)(A.default, {
         user: t,
         nickname: w
       }),
+      nickname: w,
       pronouns: null == L ? void 0 : L.pronouns,
       tags: (0, i.jsx)(E.default, {
         displayProfile: L,

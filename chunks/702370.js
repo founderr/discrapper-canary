@@ -296,6 +296,7 @@ let en = e => {
         forProfileEffectModal: null != C,
         disabledInputs: !0,
         hideExampleButton: !0,
+        hideCustomStatus: !0,
         hideFakeActivity: r || u,
         hideBioSection: r,
         hideMemberStatusSection: r,

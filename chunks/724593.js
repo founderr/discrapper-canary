@@ -21,36 +21,39 @@ function I(e) {
   let {
     user: t,
     isHovering: n,
-    onOpenProfile: r
+    disabled: r,
+    onOpenProfile: I
   } = e, {
-    trackUserProfileAction: I
+    trackUserProfileAction: T
   } = (0, u.useUserProfileAnalyticsContext)(), {
-    note: T
-  } = (0, d.default)(t.id), f = () => {
-    I({
+    note: f
+  } = (0, d.default)(t.id), S = () => {
+    T({
       action: "PRESS_ADD_NOTE"
-    }), r()
+    }), null == I || I()
   };
-  return null == T || "" === T ? (0, i.jsx)(_.default, {
+  return null == f || "" === f ? (0, i.jsx)(_.default, {
     text: c.default.Messages.ADD_NOTE,
     "aria-label": c.default.Messages.ADD_NOTE,
     icon: o.PaperPlusIcon,
-    onClick: f,
-    color: E.color,
-    look: l.Button.Looks.BLANK,
-    className: s()(E.button, {
-      [E.visible]: n
-    })
-  }) : (0, i.jsx)(_.default, {
-    text: T,
-    "aria-label": T,
-    icon: a.PaperIcon,
-    onClick: f,
+    onClick: S,
     color: E.color,
     look: l.Button.Looks.BLANK,
     className: s()(E.button, {
       [E.visible]: n
     }),
-    tooltipClassName: E.tooltip
+    disabled: r
+  }) : (0, i.jsx)(_.default, {
+    text: f,
+    "aria-label": f,
+    icon: a.PaperIcon,
+    onClick: S,
+    color: E.color,
+    look: l.Button.Looks.BLANK,
+    className: s()(E.button, {
+      [E.visible]: n
+    }),
+    tooltipClassName: E.tooltip,
+    disabled: r
   })
 }

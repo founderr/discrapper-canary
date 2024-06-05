@@ -1,168 +1,141 @@
 "use strict";
 l.r(a), l.d(a, {
   default: function() {
-    return b
+    return E
   }
 });
 var t = l("735250");
 l("470079");
 var i = l("120356"),
-  n = l.n(i),
-  r = l("442837"),
+  r = l.n(i),
+  n = l("442837"),
   s = l("481060"),
   o = l("680295"),
   u = l("318661"),
   d = l("721987"),
-  c = l("502762"),
-  f = l("138394"),
-  m = l("790711"),
-  v = l("19836"),
-  p = l("538564"),
-  g = l("319300"),
-  h = l("584045"),
-  S = l("204197"),
-  I = l("271383"),
-  A = l("158776"),
-  y = l("246946"),
-  T = l("51144"),
-  x = l("414666"),
-  P = l("654904"),
-  E = l("985425"),
-  j = l("813454"),
-  N = l("981631"),
-  U = l("228168"),
-  C = l("455108");
+  c = l("438163"),
+  f = l("502762"),
+  m = l("204197"),
+  v = l("158776"),
+  p = l("654904"),
+  g = l("985425"),
+  h = l("813454"),
+  S = l("826646"),
+  I = l("981631"),
+  T = l("228168"),
+  A = l("455108");
 
-function b(e) {
-  var a;
+function E(e) {
   let {
-    user: l,
-    guild: i,
-    canUsePremiumCustomization: b,
-    onUpsellClick: w,
-    onBannerChange: M,
-    pendingAccentColor: _,
-    pendingBanner: k,
-    pendingBio: B,
-    pendingPronouns: R,
-    pendingAvatar: O,
-    pendingAvatarDecoration: z,
-    pendingNickname: L,
-    pendingGlobalName: F,
-    pendingThemeColors: D,
-    pendingProfileEffectId: G,
-    avatarClassName: W,
-    activityName: Z,
-    activityCharacter: H,
-    isTryItOutFlow: V = !1,
-    disabledInputs: Y = !1,
-    hideExampleButton: K = !1,
-    hideFakeActivity: X = !1,
-    hideBioSection: q = !1,
-    forProfileEffectModal: J = !1,
-    hideMemberStatusSection: Q = !0,
-    bodyClassName: $
-  } = e, ee = (0, r.useStateFromStores)([I.default], () => null == i ? null : I.default.getMember(i.id, l.id)), ea = (0, r.useStateFromStores)([A.default], () => A.default.findActivity(l.id, e => e.type === N.ActivityTypes.CUSTOM_STATUS)), el = (0, r.useStateFromStores)([y.default], () => y.default.hidePersonalInformation), et = (0, u.default)(l.id, null == i ? void 0 : i.id), {
-    avatarSrc: ei,
-    avatarDecorationSrc: en
-  } = (0, S.default)({
-    user: l,
-    guildId: null == i ? void 0 : i.id,
-    avatarDecorationOverride: z,
-    avatarOverride: O,
+    user: a,
+    guild: l,
+    canUsePremiumCustomization: i,
+    onUpsellClick: E,
+    onBannerChange: y,
+    pendingAccentColor: P,
+    pendingBanner: x,
+    pendingBio: j,
+    pendingPronouns: U,
+    pendingAvatar: C,
+    pendingAvatarDecoration: N,
+    pendingNickname: b,
+    pendingGlobalName: w,
+    pendingThemeColors: _,
+    pendingProfileEffectId: M,
+    avatarClassName: B,
+    isTryItOutFlow: R = !1,
+    disabledInputs: k = !1,
+    hideCustomStatus: O = !1,
+    hideBioSection: z = !1,
+    hideExampleButton: F = !1,
+    forProfileEffectModal: L = !1
+  } = e, D = (0, n.useStateFromStores)([v.default], () => v.default.findActivity(a.id, e => {
+    let {
+      type: a
+    } = e;
+    return a === I.ActivityTypes.CUSTOM_STATUS
+  })), G = (0, u.default)(a.id, null == l ? void 0 : l.id), {
+    avatarSrc: Z,
+    avatarDecorationSrc: W
+  } = (0, m.default)({
+    user: a,
+    guildId: null == l ? void 0 : l.id,
+    avatarDecorationOverride: N,
+    avatarOverride: C,
     size: s.AvatarSizes.SIZE_80,
     showPending: !0
-  }), er = null == et ? void 0 : et.getPreviewBanner(k, !1), es = (0, P.getPreviewProfileEffectId)({
-    pendingProfileEffectId: G,
-    displayProfile: et
+  }), H = null == G ? void 0 : G.getPreviewBanner(x, !1), V = (0, p.getPreviewProfileEffectId)({
+    pendingProfileEffectId: M,
+    displayProfile: G
   }), {
-    theme: eo,
-    primaryColor: eu
+    theme: Y,
+    primaryColor: X
   } = (0, d.default)({
-    user: l,
-    displayProfile: et,
-    pendingThemeColors: D,
-    isPreview: b
-  }), ed = null !== (a = (0, P.getPreviewNickname)(L, null == ee ? void 0 : ee.nick)) && void 0 !== a ? a : (0, P.getPreviewDisplayName)(F, T.default.getName(l));
-  return (0, t.jsxs)(c.default, {
-    user: l,
-    displayProfile: et,
-    profileType: U.UserProfileTypes.BITE_SIZE,
-    pendingThemeColors: D,
-    pendingProfileEffectId: es,
-    className: n()(C.container, {
-      [C.profileEffectPreview]: J
+    user: a,
+    displayProfile: G,
+    pendingThemeColors: _,
+    isPreview: i
+  });
+  return (0, t.jsxs)(f.default, {
+    user: a,
+    displayProfile: G,
+    profileType: T.UserProfileTypes.BITE_SIZE,
+    pendingThemeColors: _,
+    pendingProfileEffectId: V,
+    className: r()(A.container, {
+      [A.profileEffectPreview]: L
     }),
-    forceShowPremium: b,
-    children: [null != es && (0, t.jsx)(o.default, {
-      profileEffectId: es
-    }), (0, t.jsxs)(s.HeadingLevel, {
-      children: [(0, t.jsx)(j.default, {
-        displayProfile: et,
-        canUsePremiumCustomization: b,
-        previewAvatar: ei,
-        previewBanner: er,
-        previewPrimaryColor: eu,
-        previewProfileEffectId: es,
-        pendingAccentColor: _,
-        isTryItOutFlow: V,
-        disabledInputs: Y,
-        forProfileEffectModal: J,
-        onBannerChange: M,
-        onUpsellClick: () => null == w ? void 0 : w({
-          object: N.AnalyticsObjects.EDIT_PROFILE_BANNER
+    forceShowPremium: i,
+    children: [(0, t.jsxs)("header", {
+      className: A.header,
+      children: [(0, t.jsx)(h.default, {
+        displayProfile: G,
+        canUsePremiumCustomization: i,
+        previewAvatar: Z,
+        previewBanner: H,
+        previewPrimaryColor: X,
+        previewProfileEffectId: V,
+        pendingAccentColor: P,
+        isTryItOutFlow: R,
+        disabledInputs: k,
+        forProfileEffectModal: L,
+        onBannerChange: y,
+        onUpsellClick: () => null == E ? void 0 : E({
+          object: I.AnalyticsObjects.EDIT_PROFILE_BANNER
         })
-      }), (0, t.jsx)(E.default, {
-        user: l,
-        guild: i,
-        displayProfile: et,
-        canUsePremiumCustomization: b,
-        previewAvatar: ei,
-        previewAvatarDecoration: en,
-        previewTheme: eo,
-        previewPrimaryColor: eu,
-        className: W,
-        disabledInputs: Y,
-        isTryItOutFlow: V,
-        onUpsellClick: () => null == w ? void 0 : w({
-          object: N.AnalyticsObjects.AVATAR
+      }), (0, t.jsx)(g.default, {
+        user: a,
+        guild: l,
+        displayProfile: G,
+        canUsePremiumCustomization: i,
+        previewAvatar: Z,
+        previewAvatarDecoration: W,
+        previewTheme: Y,
+        previewPrimaryColor: X,
+        className: B,
+        disabledInputs: k,
+        isTryItOutFlow: R,
+        onUpsellClick: () => null == E ? void 0 : E({
+          object: I.AnalyticsObjects.AVATAR
         })
-      }), function() {
-        let e = null == et ? void 0 : et.getPreviewBio(B);
-        return (0, t.jsxs)(c.default.Overlay, {
-          className: n()(C.body, $),
-          children: [(0, t.jsx)(h.default, {
-            isTryItOut: V,
-            user: l,
-            nickname: null != ed ? ed : l.username,
-            pronouns: null != R ? R : null == et ? void 0 : et.pronouns,
-            usernameIcon: (() => {
-              if (!!(null != ee) && null !== O) {
-                if (!(null == ee.avatar && null == O)) return (0, t.jsx)(m.default, {
-                  user: l,
-                  nickname: ed
-                })
-              }
-            })()
-          }), !J && (0, t.jsx)(p.default, {
-            customStatusActivity: ea
-          }), (0, t.jsx)(f.default, {}), !q && (0, t.jsx)(v.default, {
-            isUsingGuildBio: null == e ? void 0 : e.isUsingGuildValue,
-            guild: i,
-            bio: null == e ? void 0 : e.value,
-            hidePersonalInformation: el,
-            lastSection: X,
-            lineClamp: J ? 3 : void 0
-          }), !Q && (0, t.jsx)(g.default, {
-            userId: l.id,
-            guildId: null == i ? void 0 : i.id
-          }), !X && (0, t.jsx)(x.default, {
-            activityName: Z,
-            activityCharacter: H,
-            showExampleButton: null == i && !K
-          })]
-        })
-      }()]
+      }), !O && (0, t.jsx)(c.UserProfileCustomStatusBubble, {
+        profileType: T.UserProfileTypes.BITE_SIZE,
+        statusActivity: D
+      })]
+    }), (0, t.jsx)(S.default, {
+      user: a,
+      displayProfile: G,
+      guild: l,
+      pendingAvatar: C,
+      pendingNickname: b,
+      pendingGlobalName: w,
+      pendingBio: j,
+      pendingPronouns: U,
+      isTryItOutFlow: R,
+      hideBioSection: z,
+      hideExampleButton: F
+    }), null != V && (0, t.jsx)(o.default, {
+      profileEffectId: V
     })]
   })
 }

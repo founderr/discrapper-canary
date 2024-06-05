@@ -19,15 +19,18 @@ function u(e) {
     compact: r,
     className: u,
     innerClassName: d,
-    ..._
-  } = e, c = null != n ? (0, i.jsx)(n, {
+    disabled: _ = !1,
+    ...c
+  } = e, E = null != n ? (0, i.jsx)(n, {
     width: 16,
     height: 16,
     color: "currentColor"
   }) : null;
   return r ? (0, i.jsx)(o.TooltipContainer, {
     text: t,
-    "aria-label": _["aria-label"],
+    "aria-label": c["aria-label"],
+    shouldShow: !_,
+    disableTooltipPointerEvents: _,
     children: (0, i.jsx)(a.Button, {
       className: s()(l.compactButton, u),
       innerClassName: s()(l.compactButtonInner, d),
@@ -35,8 +38,9 @@ function u(e) {
       look: a.Button.Looks.FILLED,
       size: a.Button.Sizes.NONE,
       grow: !1,
-      ..._,
-      children: c
+      disabled: _,
+      ...c,
+      children: E
     })
   }) : (0, i.jsxs)(a.Button, {
     className: u,
@@ -44,7 +48,8 @@ function u(e) {
     color: s()(a.ButtonColors.PRIMARY, l.color),
     look: a.Button.Looks.FILLED,
     size: a.Button.Sizes.SMALL,
-    ..._,
-    children: [c, t]
+    disabled: _,
+    ...c,
+    children: [E, t]
   })
 }

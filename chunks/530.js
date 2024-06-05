@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return _
   }
 });
 var i = n("735250");
@@ -10,71 +10,71 @@ var r = n("120356"),
   s = n.n(r),
   a = n("481060"),
   o = n("129861"),
-  l = n("5192"),
-  u = n("228168"),
-  d = n("689938"),
-  _ = n("660120");
+  l = n("228168"),
+  u = n("689938"),
+  d = n("660120");
 
-function c(e) {
+function _(e) {
   let {
     user: t,
     profileType: n,
-    guildId: r,
-    channelId: c,
-    usernameIcon: E,
-    tags: I,
-    nicknameIcons: T,
-    pronouns: f,
-    className: S,
-    onOpenProfile: h,
-    nicknameVariant: A = "heading-lg/bold",
-    pronounsVariant: m = "text-sm/medium"
-  } = e, N = {
-    [_.biteSize]: n === u.UserProfileTypes.BITE_SIZE,
-    [_.fullSize]: n === u.UserProfileTypes.FULL_SIZE,
-    [_.panel]: n === u.UserProfileTypes.PANEL
-  }, p = e => null == h ? e : (0, i.jsx)(a.Clickable, {
-    onClick: h,
-    className: _.clickableUsername,
+    usernameIcon: r,
+    tags: _,
+    nickname: c,
+    nicknameIcons: E,
+    pronouns: I,
+    className: T,
+    isTryItOut: f,
+    onOpenProfile: S,
+    nicknameVariant: h = "heading-lg/bold",
+    pronounsVariant: A = "text-sm/medium"
+  } = e, m = {
+    [d.biteSize]: n === l.UserProfileTypes.BITE_SIZE,
+    [d.fullSize]: n === l.UserProfileTypes.FULL_SIZE,
+    [d.panel]: n === l.UserProfileTypes.PANEL
+  }, N = e => null == S ? e : (0, i.jsx)(a.Clickable, {
+    onClick: S,
+    className: d.clickableUsername,
     children: e
   });
   return (0, i.jsxs)("div", {
-    className: s()(_.container, S),
+    className: s()(d.container, T),
     children: [(0, i.jsxs)("div", {
-      className: _.usernameRow,
-      children: [p((0, i.jsx)(a.Heading, {
-        className: s()(_.nickname, N),
-        variant: A,
-        children: l.default.getName(r, c, t)
-      })), null != T && (0, i.jsx)("div", {
-        className: _.nicknameIcons,
-        children: T
+      className: d.usernameRow,
+      children: [N((0, i.jsx)(a.Heading, {
+        className: s()(d.nickname, m),
+        variant: h,
+        children: c
+      })), null != E && (0, i.jsx)("div", {
+        className: d.nicknameIcons,
+        children: E
       })]
     }), (0, i.jsxs)("div", {
-      className: s()(_.tags, N),
-      children: [p((0, i.jsx)(o.default, {
+      className: s()(d.tags, m),
+      children: [N((0, i.jsx)(o.default, {
         user: t,
-        usernameIcon: E,
+        usernameIcon: r,
         forceUsername: !0,
-        className: _.userTag,
-        usernameClass: _.userTagUsername,
-        discriminatorClass: _.userTagDiscriminator
-      })), null != f && f.length > 0 && (0, i.jsxs)(i.Fragment, {
+        forcePomelo: f,
+        className: d.userTag,
+        usernameClass: d.userTagUsername,
+        discriminatorClass: d.userTagDiscriminator
+      })), null != I && I.length > 0 && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
           "aria-hidden": "true",
-          className: _.dotSpacer
+          className: d.dotSpacer
         }), (0, i.jsx)(a.TooltipContainer, {
-          className: _.pronounsTooltip,
-          text: d.default.Messages.USER_PROFILE_PRONOUNS,
-          delay: u.USER_PROFILE_TOOLTIP_DELAY,
+          className: d.pronounsTooltip,
+          text: u.default.Messages.USER_PROFILE_PRONOUNS,
+          delay: l.USER_PROFILE_TOOLTIP_DELAY,
           children: (0, i.jsx)(a.Text, {
-            variant: m,
-            className: _.pronouns,
+            variant: A,
+            className: d.pronouns,
             color: "header-primary",
-            children: f
+            children: I
           })
         })]
-      }), I]
+      }), _]
     })]
   })
 }

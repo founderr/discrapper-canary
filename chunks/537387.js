@@ -19,12 +19,15 @@ function l(e) {
     innerClassName: l,
     tooltipDelay: u,
     tooltipClassName: d,
-    ..._
+    disabled: _ = !1,
+    ...c
   } = e;
   return (0, i.jsx)(a.TooltipContainer, {
     tooltipClassName: d,
     text: n,
     delay: u,
+    shouldShow: !_,
+    disableTooltipPointerEvents: _,
     children: (0, i.jsx)(a.Button, {
       className: s()(o.button, r),
       innerClassName: s()(o.buttonInner, l),
@@ -33,7 +36,8 @@ function l(e) {
       size: a.Button.Sizes.NONE,
       grow: !1,
       "aria-label": n,
-      ..._,
+      disabled: _,
+      ...c,
       children: (0, i.jsx)(t, {
         width: 16,
         height: 16,
