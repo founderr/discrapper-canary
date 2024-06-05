@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   closeCollectiblesShopProductDetailsModal: function() {
     return i
   },
@@ -7,9 +7,9 @@ a.r(t), a.d(t, {
     return n
   }
 });
-var s = a("735250");
-a("470079");
-var l = a("481060");
+var a = s("735250");
+s("470079");
+var l = s("481060");
 let r = "collectibles shop product details modal",
   n = e => {
     let {
@@ -22,9 +22,9 @@ let r = "collectibles shop product details modal",
     (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([a.e("99387"), a.e("4934"), a.e("36848")]).then(a.bind(a, "702370"));
-      return a => (0, s.jsx)(e, {
-        ...a,
+      } = await Promise.all([s.e("99387"), s.e("4934"), s.e("36848")]).then(s.bind(s, "702370"));
+      return s => (0, a.jsx)(e, {
+        ...s,
         product: t,
         category: n,
         analyticsSource: i,

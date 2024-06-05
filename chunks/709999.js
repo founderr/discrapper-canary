@@ -35,8 +35,8 @@ var a = s("735250"),
   B = s("624377"),
   M = s("390698"),
   D = s("813083"),
-  w = s("680942"),
-  F = s("558060"),
+  F = s("680942"),
+  w = s("558060"),
   H = s("237031"),
   U = s("616066"),
   W = s("216541"),
@@ -152,7 +152,7 @@ t.default = function(e) {
       variant: "text-md/semibold",
       className: z.priceTag,
       children: K.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
-    }) : (0, a.jsx)(F.default, {
+    }) : (0, a.jsx)(w.default, {
       product: t,
       discount: er,
       isPremiumUser: ea,
@@ -160,7 +160,7 @@ t.default = function(e) {
     }),
     ev = () => en ? null : ei ? (0, a.jsx)(Z, {
       onClick: eb
-    }) : (0, a.jsx)(w.default, {
+    }) : (0, a.jsx)(F.default, {
       product: t,
       returnRef: q,
       isGiftEasterEggEnabled: _,

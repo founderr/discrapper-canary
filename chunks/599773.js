@@ -1,4 +1,4 @@
-var s = a("118666");
+var a = s("118666");
 e.exports = function(e) {
-  return "function" == typeof e ? e : s
+  return "function" == typeof e ? e : a
 }

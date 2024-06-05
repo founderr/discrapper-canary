@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   COLLECTIBLES_HEADERS: function() {
     return L
   },
@@ -7,25 +7,25 @@ a.r(t), a.d(t, {
     return T
   }
 });
-var s = a("180650"),
-  l = a("44315"),
-  r = a("981631"),
-  n = a("689938"),
-  i = a("994745"),
-  o = a("341364"),
-  c = a("763542"),
-  u = a("354873"),
-  d = a("525071"),
-  f = a("737140"),
-  C = a("194349"),
-  p = a("523569"),
-  m = a("55817"),
-  g = a("696228"),
-  E = a("202796"),
-  h = a("570593"),
-  b = a("199546"),
-  x = a("613540"),
-  S = a("769411");
+var a = s("180650"),
+  l = s("44315"),
+  r = s("981631"),
+  n = s("689938"),
+  i = s("994745"),
+  o = s("341364"),
+  c = s("763542"),
+  u = s("354873"),
+  d = s("525071"),
+  f = s("737140"),
+  C = s("194349"),
+  p = s("523569"),
+  m = s("55817"),
+  g = s("696228"),
+  E = s("202796"),
+  h = s("570593"),
+  b = s("199546"),
+  x = s("613540"),
+  S = s("769411");
 let v = {
     MOST_POPULAR: () => n.default.Messages.MOST_POPULAR,
     NEW_RELEASE: () => n.default.Messages.APPLICATION_STORE_NEW_RELEASE,
@@ -47,7 +47,7 @@ let v = {
     },
     cta: {
       label: I.TAKE_ME_THERE,
-      categorySkuId: s.CollectiblesCategorySkuId.ANIME_V2
+      categorySkuId: a.CollectiblesCategorySkuId.ANIME_V2
     }
   }, {
     backgroundStaticSrc: S,
@@ -60,7 +60,7 @@ let v = {
     },
     cta: {
       label: I.TAKE_ME_THERE,
-      categorySkuId: s.CollectiblesCategorySkuId.GALAXY
+      categorySkuId: a.CollectiblesCategorySkuId.GALAXY
     }
   }, {
     backgroundStaticSrc: h,
@@ -72,7 +72,7 @@ let v = {
     },
     cta: {
       label: I.TAKE_ME_THERE,
-      categorySkuId: s.CollectiblesCategorySkuId.DISXCORE
+      categorySkuId: a.CollectiblesCategorySkuId.DISXCORE
     }
   }, {
     backgroundStaticSrc: m,
@@ -84,14 +84,14 @@ let v = {
     },
     cta: {
       label: I.TAKE_ME_THERE,
-      categorySkuId: s.CollectiblesCategorySkuId.CYBERPUNK
+      categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
     }
   }],
   T = (e, t) => {
     let {
-      overflowSrcStatic: a,
-      overflowSrcAnimated: s,
+      overflowSrcStatic: s,
+      overflowSrcAnimated: a,
       overflowSrcAnimatedBackground: l
     } = e;
-    return null == a ? [] : t || null == s ? [a] : null == l ? [s] : [l, s]
+    return null == s ? [] : t || null == a ? [s] : null == l ? [a] : [l, a]
   }

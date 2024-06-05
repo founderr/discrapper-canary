@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   useCollectiblesUnifiedProductCatalogExperiment: function() {
     return l
   }
 });
-let s = (0, a("818083").createExperiment)({
+let a = (0, s("818083").createExperiment)({
     kind: "user",
     id: "2024-04_collectibles_unified_product_catalog",
     label: "Collectibles Unified Product Catalog",
@@ -19,6 +19,6 @@ let s = (0, a("818083").createExperiment)({
       }
     }]
   }),
-  l = e => s.useExperiment({
+  l = e => a.useExperiment({
     location: e
   })

@@ -1,24 +1,24 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   SlideCarousel: function() {
     return v
   }
-}), a("47120");
-var s, l, r = a("735250"),
-  n = a("470079"),
-  i = a.n(n),
-  o = a("120356"),
-  c = a.n(o),
-  u = a("954955"),
-  d = a.n(u),
-  f = a("717888"),
-  C = a.n(f),
-  p = a("82923"),
-  m = a("481060"),
-  g = a("570140"),
-  E = a("259580"),
-  h = a("689938"),
-  b = a("816124");
+}), s("47120");
+var a, l, r = s("735250"),
+  n = s("470079"),
+  i = s.n(n),
+  o = s("120356"),
+  c = s.n(o),
+  u = s("954955"),
+  d = s.n(u),
+  f = s("717888"),
+  C = s.n(f),
+  p = s("82923"),
+  m = s("481060"),
+  g = s("570140"),
+  E = s("259580"),
+  h = s("689938"),
+  b = s("816124");
 let x = {
   mass: 1,
   tension: 200,
@@ -27,12 +27,12 @@ let x = {
   easing: p.default.Easing.bezier(.15, 0, .25, 1),
   duration: 1600
 };
-(l = s || (s = {})).GO_TO_SLIDE = "GO_TO_SLIDE", l.NEXT = "NEXT", l.PREVIOUS = "PREVIOUS";
+(l = a || (a = {})).GO_TO_SLIDE = "GO_TO_SLIDE", l.NEXT = "NEXT", l.PREVIOUS = "PREVIOUS";
 let S = e => {
     let {
       currentSlideIndex: t,
-      numSlides: a,
-      onNext: s,
+      numSlides: s,
+      onNext: a,
       onPrevious: l,
       onIndicatorClick: n,
       className: i,
@@ -51,7 +51,7 @@ let S = e => {
         })
       }), (0, r.jsx)("div", {
         className: b.paginationIndicatorContainer,
-        children: C()(a, e => (0, r.jsx)(m.Button, {
+        children: C()(s, e => (0, r.jsx)(m.Button, {
           look: m.Button.Looks.BLANK,
           size: m.Button.Sizes.NONE,
           onClick: () => n(e),
@@ -70,7 +70,7 @@ let S = e => {
       }), (0, r.jsx)(m.Button, {
         look: m.Button.Looks.BLANK,
         className: u,
-        onClick: s,
+        onClick: a,
         "aria-label": h.default.Messages.PAGINATION_NEXT,
         children: (0, r.jsx)(E.default, {
           className: b.paginationButtonIcon,
@@ -82,8 +82,8 @@ let S = e => {
   v = e => {
     let {
       items: t,
-      renderItem: a,
-      onIntentionalChange: s,
+      renderItem: s,
+      onIntentionalChange: a,
       onChangeItem: l,
       className: o,
       controlsClassName: u,
@@ -103,9 +103,9 @@ let S = e => {
     let N = i().useCallback(() => L(!0), []),
       _ = i().useCallback(() => L(!1), []),
       y = i().useCallback(e => (t.length + h + e) % t.length, [t, h]),
-      j = i().useCallback(d()((e, a, r) => {
-        null != r && (null == s || s(t[e], a, e, r)), null == l || l(t[e], a, e), v(e)
-      }, 1e3), [t, s, l]);
+      j = i().useCallback(d()((e, s, r) => {
+        null != r && (null == a || a(t[e], s, e, r)), null == l || l(t[e], s, e), v(e)
+      }, 1e3), [t, a, l]);
     return (0, n.useEffect)(() => {
       if (!p && !I && null != C) {
         let e = y(1),
@@ -124,7 +124,7 @@ let S = e => {
           id: String(t),
           children: (0, r.jsx)("div", {
             className: c()(b.carousel),
-            children: a(e, t)
+            children: s(e, t)
           })
         }, String(t)))
       }), t.length > 1 && (0, r.jsx)(S, {

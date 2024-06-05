@@ -130,10 +130,10 @@ r = this, n = function() {
     };
     return {
       headers: function() {
-        return t === l.WithinHeaders ? n : {}
+        return t === h.WithinHeaders ? n : {}
       },
       queryParameters: function() {
-        return t === l.WithinQueryParameters ? n : {}
+        return t === h.WithinQueryParameters ? n : {}
       }
     }
   }
@@ -170,14 +170,14 @@ r = this, n = function() {
     }), t
   }
 
-  function h(t) {
+  function l(t) {
     for (var e = arguments.length, r = Array(e > 1 ? e - 1 : 0), n = 1; n < e; n++) r[n - 1] = arguments[n];
     var i = 0;
     return t.replace(/%s/g, function() {
       return encodeURIComponent(r[i++])
     })
   }
-  var l = {
+  var h = {
     WithinQueryParameters: 0,
     WithinHeaders: 1
   };
@@ -224,7 +224,7 @@ r = this, n = function() {
     v = "POST";
 
   function y(t, r, n, a) {
-    var s, o, u, c, h, l, f = [],
+    var s, o, u, c, l, h, f = [],
       d = function(t, r) {
         if ("GET" !== t.method && (void 0 !== t.data || void 0 !== r.data)) return JSON.stringify(Array.isArray(t.data) ? t.data : e(e({}, t.data), r.data))
       }(n, a),
@@ -310,8 +310,8 @@ r = this, n = function() {
           return e = t, r = c, (i = (n = e).status, n.isTimedOut || (s = (a = n).isTimedOut, o = a.status, !s && 0 == ~~o) || 2 != ~~(i / 100) && 4 != ~~(i / 100)) ? r.onRetry(e) : 2 == ~~(e.status / 100) ? r.onSuccess(e) : r.onFail(e)
         })
       };
-    return (h = t.hostsCache, Promise.all((l = r).map(function(t) {
-      return h.get(t, function() {
+    return (l = t.hostsCache, Promise.all((h = r).map(function(t) {
+      return l.get(t, function() {
         return Promise.resolve(p(t))
       })
     })).then(function(t) {
@@ -330,7 +330,7 @@ r = this, n = function() {
         },
         statelessHosts: n.length > 0 ? n.map(function(t) {
           return m(t)
-        }) : l
+        }) : h
       }
     })).then(function(t) {
       return S(i(t.statelessHosts).reverse(), t.getTimeout)
@@ -346,8 +346,8 @@ r = this, n = function() {
       o = t.timeouts,
       u = t.userAgent,
       c = t.hosts,
-      h = t.queryParameters,
-      l = {
+      l = t.queryParameters,
+      h = {
         hostsCache: e,
         logger: r,
         requester: i,
@@ -356,14 +356,14 @@ r = this, n = function() {
         timeouts: o,
         userAgent: u,
         headers: t.headers,
-        queryParameters: h,
+        queryParameters: l,
         hosts: c.map(function(t) {
           return m(t)
         }),
         read: function(t, e) {
-          var r = f(e, l.timeouts.read),
+          var r = f(e, h.timeouts.read),
             i = function() {
-              return y(l, l.hosts.filter(function(t) {
+              return y(h, h.hosts.filter(function(t) {
                 return 0 != (t.accept & d.Read)
               }), t, r)
             };
@@ -372,16 +372,16 @@ r = this, n = function() {
             request: t,
             mappedRequestOptions: r,
             transporter: {
-              queryParameters: l.queryParameters,
-              headers: l.headers
+              queryParameters: h.queryParameters,
+              headers: h.headers
             }
           };
-          return l.responsesCache.get(a, function() {
-            return l.requestsCache.get(a, function() {
-              return l.requestsCache.set(a, i()).then(function(t) {
-                return Promise.all([l.requestsCache.delete(a), t])
+          return h.responsesCache.get(a, function() {
+            return h.requestsCache.get(a, function() {
+              return h.requestsCache.set(a, i()).then(function(t) {
+                return Promise.all([h.requestsCache.delete(a), t])
               }, function(t) {
-                return Promise.all([l.requestsCache.delete(a), Promise.reject(t)])
+                return Promise.all([h.requestsCache.delete(a), Promise.reject(t)])
               }).then(function(t) {
                 var e = n(t, 2);
                 return e[0], e[1]
@@ -389,23 +389,23 @@ r = this, n = function() {
             })
           }, {
             miss: function(t) {
-              return l.responsesCache.set(a, t)
+              return h.responsesCache.set(a, t)
             }
           })
         },
         write: function(t, e) {
-          return y(l, l.hosts.filter(function(t) {
+          return y(h, h.hosts.filter(function(t) {
             return 0 != (t.accept & d.Write)
-          }), t, f(e, l.timeouts.write))
+          }), t, f(e, h.timeouts.write))
         }
       };
-    return l
+    return h
   }
 
   function x(t) {
     return Object.keys(t).map(function(e) {
       var r;
-      return h("%s=%s", e, (r = t[e], "[object Object]" === Object.prototype.toString.call(r) || "[object Array]" === Object.prototype.toString.call(r) ? JSON.stringify(t[e]) : t[e]))
+      return l("%s=%s", e, (r = t[e], "[object Object]" === Object.prototype.toString.call(r) || "[object Array]" === Object.prototype.toString.call(r) ? JSON.stringify(t[e]) : t[e]))
     }).join("&")
   }
 
@@ -438,7 +438,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.write({
           method: g,
-          path: h("2/abtests/%s", e)
+          path: l("2/abtests/%s", e)
         }, r)
       }
     },
@@ -446,7 +446,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: "GET",
-          path: h("2/abtests/%s", e)
+          path: l("2/abtests/%s", e)
         }, r)
       }
     },
@@ -462,7 +462,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.write({
           method: v,
-          path: h("2/abtests/%s/stop", e)
+          path: l("2/abtests/%s/stop", e)
         }, r)
       }
     },
@@ -500,7 +500,7 @@ r = this, n = function() {
         var a = i || {},
           s = a.queryParameters,
           c = r(a, ["queryParameters"]),
-          h = e({
+          l = e({
             acl: n
           }, void 0 !== s ? {
             queryParameters: s
@@ -508,7 +508,7 @@ r = this, n = function() {
         return u(t.transporter.write({
           method: v,
           path: "1/keys",
-          data: h
+          data: l
         }, c), function(e, r) {
           return o(function(n) {
             return B(t)(e.key, r).catch(function(t) {
@@ -547,7 +547,7 @@ r = this, n = function() {
       return function(e, r) {
         return u(t.transporter.write({
           method: v,
-          path: h("/1/dictionaries/%s/batch", e),
+          path: l("/1/dictionaries/%s/batch", e),
           data: {
             clearExistingDictionaryEntries: !0,
             requests: {
@@ -564,7 +564,7 @@ r = this, n = function() {
       return function(e, r, n) {
         return u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/operation", e),
+          path: l("1/indexes/%s/operation", e),
           data: {
             operation: "copy",
             destination: r
@@ -608,7 +608,7 @@ r = this, n = function() {
       return function(e, r) {
         return u(t.transporter.write({
           method: g,
-          path: h("1/keys/%s", e)
+          path: l("1/keys/%s", e)
         }, r), function(r, n) {
           return o(function(r) {
             return B(t)(e, n).then(r).catch(function(t) {
@@ -630,7 +630,7 @@ r = this, n = function() {
         });
         return u(t.transporter.write({
           method: v,
-          path: h("/1/dictionaries/%s/batch", e),
+          path: l("/1/dictionaries/%s/batch", e),
           data: {
             clearExistingDictionaryEntries: !1,
             requests: i
@@ -644,7 +644,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: "GET",
-          path: h("1/keys/%s", e)
+          path: l("1/keys/%s", e)
         }, r)
       }
     },
@@ -652,7 +652,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: "GET",
-          path: h("1/task/%s", e.toString())
+          path: l("1/task/%s", e.toString())
         }, r)
       }
     },
@@ -684,7 +684,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: "GET",
-          path: h("1/clusters/mapping/%s", e)
+          path: l("1/clusters/mapping/%s", e)
         }, r)
       }
     },
@@ -745,7 +745,7 @@ r = this, n = function() {
       return function(e, r, n) {
         return u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/operation", e),
+          path: l("1/indexes/%s/operation", e),
           data: {
             operation: "move",
             destination: r
@@ -840,7 +840,7 @@ r = this, n = function() {
         });
         return u(t.transporter.write({
           method: v,
-          path: h("/1/dictionaries/%s/batch", e),
+          path: l("/1/dictionaries/%s/batch", e),
           data: {
             clearExistingDictionaryEntries: !0,
             requests: i
@@ -854,7 +854,7 @@ r = this, n = function() {
       return function(e, r) {
         return u(t.transporter.write({
           method: v,
-          path: h("1/keys/%s/restore", e)
+          path: l("1/keys/%s/restore", e)
         }, r), function(r, n) {
           return o(function(r) {
             return B(t)(e, n).catch(function(t) {
@@ -875,7 +875,7 @@ r = this, n = function() {
         });
         return u(t.transporter.write({
           method: v,
-          path: h("/1/dictionaries/%s/batch", e),
+          path: l("/1/dictionaries/%s/batch", e),
           data: {
             clearExistingDictionaryEntries: !1,
             requests: i
@@ -889,7 +889,7 @@ r = this, n = function() {
       return function(e, r, n) {
         return t.transporter.read({
           method: v,
-          path: h("/1/dictionaries/%s/search", e),
+          path: l("/1/dictionaries/%s/search", e),
           data: {
             query: r
           },
@@ -897,7 +897,7 @@ r = this, n = function() {
         }, n)
       }
     },
-    th = function(t) {
+    tl = function(t) {
       return function(e, r) {
         return t.transporter.read({
           method: v,
@@ -908,7 +908,7 @@ r = this, n = function() {
         }, r)
       }
     },
-    tl = function(t) {
+    th = function(t) {
       return function(e, r) {
         return u(t.transporter.write({
           method: "PUT",
@@ -925,10 +925,10 @@ r = this, n = function() {
           a = n || {},
           s = a.queryParameters,
           c = r(a, ["queryParameters"]),
-          l = ["acl", "indexes", "referers", "restrictSources", "queryParameters", "description", "maxQueriesPerIPPerHour", "maxHitsPerQuery"];
+          h = ["acl", "indexes", "referers", "restrictSources", "queryParameters", "description", "maxQueriesPerIPPerHour", "maxHitsPerQuery"];
         return u(t.transporter.write({
           method: "PUT",
-          path: h("1/keys/%s", e),
+          path: l("1/keys/%s", e),
           data: s ? {
             queryParameters: s
           } : {}
@@ -937,7 +937,7 @@ r = this, n = function() {
             return B(t)(e, n).then(function(t) {
               var e;
               return (e = t, Object.keys(i).filter(function(t) {
-                return -1 !== l.indexOf(t)
+                return -1 !== h.indexOf(t)
               }).every(function(t) {
                 if (Array.isArray(e[t]) && Array.isArray(i[t])) {
                   var r = e[t];
@@ -965,7 +965,7 @@ r = this, n = function() {
       return function(e, r) {
         return u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/batch", t.indexName),
+          path: l("1/indexes/%s/batch", t.indexName),
           data: {
             requests: e
           }
@@ -984,7 +984,7 @@ r = this, n = function() {
           request: function(e) {
             return t.transporter.read({
               method: v,
-              path: h("1/indexes/%s/browse", t.indexName),
+              path: l("1/indexes/%s/browse", t.indexName),
               data: e
             }, r)
           }
@@ -1067,7 +1067,7 @@ r = this, n = function() {
       return function(e) {
         return u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/clear", t.indexName)
+          path: l("1/indexes/%s/clear", t.indexName)
         }, e), function(e, r) {
           return tZ(t)(e.taskID, r)
         })
@@ -1080,7 +1080,7 @@ r = this, n = function() {
           a = f(r(n, ["forwardToReplicas"]));
         return i && (a.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/rules/clear", t.indexName)
+          path: l("1/indexes/%s/rules/clear", t.indexName)
         }, a), function(e, r) {
           return tZ(t)(e.taskID, r)
         })
@@ -1093,7 +1093,7 @@ r = this, n = function() {
           a = f(r(n, ["forwardToReplicas"]));
         return i && (a.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/synonyms/clear", t.indexName)
+          path: l("1/indexes/%s/synonyms/clear", t.indexName)
         }, a), function(e, r) {
           return tZ(t)(e.taskID, r)
         })
@@ -1103,7 +1103,7 @@ r = this, n = function() {
       return function(e, r) {
         return u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/deleteByQuery", t.indexName),
+          path: l("1/indexes/%s/deleteByQuery", t.indexName),
           data: e
         }, r), function(e, r) {
           return tZ(t)(e.taskID, r)
@@ -1114,7 +1114,7 @@ r = this, n = function() {
       return function(e) {
         return u(t.transporter.write({
           method: g,
-          path: h("1/indexes/%s", t.indexName)
+          path: l("1/indexes/%s", t.indexName)
         }, e), function(e, r) {
           return tZ(t)(e.taskID, r)
         })
@@ -1148,7 +1148,7 @@ r = this, n = function() {
           s = f(r(i, ["forwardToReplicas"]));
         return a && (s.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
           method: g,
-          path: h("1/indexes/%s/rules/%s", t.indexName, e)
+          path: l("1/indexes/%s/rules/%s", t.indexName, e)
         }, s), function(e, r) {
           return tZ(t)(e.taskID, r)
         })
@@ -1161,7 +1161,7 @@ r = this, n = function() {
           s = f(r(i, ["forwardToReplicas"]));
         return a && (s.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
           method: g,
-          path: h("1/indexes/%s/synonyms/%s", t.indexName, e)
+          path: l("1/indexes/%s/synonyms/%s", t.indexName, e)
         }, s), function(e, r) {
           return tZ(t)(e.taskID, r)
         })
@@ -1181,7 +1181,7 @@ r = this, n = function() {
       return function(e, r, n) {
         return t.transporter.read({
           method: v,
-          path: h("1/answers/%s/prediction", t.indexName),
+          path: l("1/answers/%s/prediction", t.indexName),
           data: {
             query: e,
             queryLanguages: r
@@ -1196,10 +1196,10 @@ r = this, n = function() {
           o = s.query,
           u = s.paginate,
           c = r(s, ["query", "paginate"]),
-          h = 0;
+          l = 0;
         return function r() {
           return tH(t)(o || "", e(e({}, c), {}, {
-            page: h
+            page: l
           })).then(function(t) {
             for (var e = 0, a = Object.entries(t.hits); e < a.length; e++) {
               var s = n(a[e], 2),
@@ -1208,10 +1208,10 @@ r = this, n = function() {
               if (i(c)) return {
                 object: c,
                 position: parseInt(o, 10),
-                page: h
+                page: l
               }
             }
-            if (h++, !1 === u || h >= t.nbPages) throw {
+            if (l++, !1 === u || l >= t.nbPages) throw {
               name: "ObjectNotFoundError",
               message: "Object not found."
             };
@@ -1224,7 +1224,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: "GET",
-          path: h("1/indexes/%s/%s", t.indexName, e)
+          path: l("1/indexes/%s/%s", t.indexName, e)
         }, r)
       }
     },
@@ -1264,7 +1264,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: "GET",
-          path: h("1/indexes/%s/rules/%s", t.indexName, e)
+          path: l("1/indexes/%s/rules/%s", t.indexName, e)
         }, r)
       }
     },
@@ -1272,7 +1272,7 @@ r = this, n = function() {
       return function(e) {
         return t.transporter.read({
           method: "GET",
-          path: h("1/indexes/%s/settings", t.indexName),
+          path: l("1/indexes/%s/settings", t.indexName),
           data: {
             getVersion: 2
           }
@@ -1283,7 +1283,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: "GET",
-          path: h("1/indexes/%s/synonyms/%s", t.indexName, e)
+          path: l("1/indexes/%s/synonyms/%s", t.indexName, e)
         }, r)
       }
     },
@@ -1312,13 +1312,13 @@ r = this, n = function() {
       return function(a, s) {
         var o = s || {},
           c = o.safe,
-          l = o.autoGenerateObjectIDIfNotExist,
+          h = o.autoGenerateObjectIDIfNotExist,
           f = o.batchSize,
           d = r(o, ["safe", "autoGenerateObjectIDIfNotExist", "batchSize"]),
           p = function(e, r, n, i) {
             return u(t.transporter.write({
               method: v,
-              path: h("1/indexes/%s/operation", e),
+              path: l("1/indexes/%s/operation", e),
               data: {
                 operation: n,
                 destination: r
@@ -1340,7 +1340,7 @@ r = this, n = function() {
           }));
         return b.push(x), u((c ? x.wait(d) : x).then(function() {
           var t = y(a, e(e({}, d), {}, {
-            autoGenerateObjectIDIfNotExist: l,
+            autoGenerateObjectIDIfNotExist: h,
             batchSize: f
           }));
           return b.push(t), c ? t.wait(d) : t
@@ -1399,8 +1399,8 @@ r = this, n = function() {
           o = a ? t0.AddObject : t0.UpdateObject;
         if (o === t0.UpdateObject) {
           var c = !0,
-            h = !1,
-            l = void 0;
+            l = !1,
+            h = void 0;
           try {
             for (var f, d = e[Symbol.iterator](); !(c = (f = d.next()).done); c = !0)
               if (void 0 === f.value.objectID) return u(Promise.reject({
@@ -1408,12 +1408,12 @@ r = this, n = function() {
                 message: "All objects must have an unique objectID (like a primary key) to be valid. Algolia is also able to generate objectIDs automatically but *it's not recommended*. To do it, use the `{'autoGenerateObjectIDIfNotExist': true}` option."
               }))
           } catch (t) {
-            h = !0, l = t
+            l = !0, h = t
           } finally {
             try {
               c || null == d.return || d.return()
             } finally {
-              if (h) throw l
+              if (l) throw h
             }
           }
         }
@@ -1433,7 +1433,7 @@ r = this, n = function() {
           o = f(r(i, ["forwardToReplicas", "clearExistingRules"]));
         return a && (o.queryParameters.forwardToReplicas = 1), s && (o.queryParameters.clearExistingRules = 1), u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/rules/batch", t.indexName),
+          path: l("1/indexes/%s/rules/batch", t.indexName),
           data: e
         }, o), function(e, r) {
           return tZ(t)(e.taskID, r)
@@ -1454,7 +1454,7 @@ r = this, n = function() {
           c = f(r(i, ["forwardToReplicas", "clearExistingSynonyms", "replaceExistingSynonyms"]));
         return a && (c.queryParameters.forwardToReplicas = 1), (o || s) && (c.queryParameters.replaceExistingSynonyms = 1), u(t.transporter.write({
           method: v,
-          path: h("1/indexes/%s/synonyms/batch", t.indexName),
+          path: l("1/indexes/%s/synonyms/batch", t.indexName),
           data: e
         }, c), function(e, r) {
           return tZ(t)(e.taskID, r)
@@ -1465,7 +1465,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: v,
-          path: h("1/indexes/%s/query", t.indexName),
+          path: l("1/indexes/%s/query", t.indexName),
           data: {
             query: e
           },
@@ -1477,7 +1477,7 @@ r = this, n = function() {
       return function(e, r, n) {
         return t.transporter.read({
           method: v,
-          path: h("1/indexes/%s/facets/%s/query", t.indexName, e),
+          path: l("1/indexes/%s/facets/%s/query", t.indexName, e),
           data: {
             facetQuery: r
           },
@@ -1489,7 +1489,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: v,
-          path: h("1/indexes/%s/rules/search", t.indexName),
+          path: l("1/indexes/%s/rules/search", t.indexName),
           data: {
             query: e
           }
@@ -1500,7 +1500,7 @@ r = this, n = function() {
       return function(e, r) {
         return t.transporter.read({
           method: v,
-          path: h("1/indexes/%s/synonyms/search", t.indexName),
+          path: l("1/indexes/%s/synonyms/search", t.indexName),
           data: {
             query: e
           }
@@ -1514,7 +1514,7 @@ r = this, n = function() {
           s = f(r(i, ["forwardToReplicas"]));
         return a && (s.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
           method: "PUT",
-          path: h("1/indexes/%s/settings", t.indexName),
+          path: l("1/indexes/%s/settings", t.indexName),
           data: e
         }, s), function(e, r) {
           return tZ(t)(e.taskID, r)
@@ -1528,7 +1528,7 @@ r = this, n = function() {
           return (i = t, function(t, e) {
             return i.transporter.read({
               method: "GET",
-              path: h("1/indexes/%s/task/%s", i.indexName, t.toString())
+              path: l("1/indexes/%s/task/%s", i.indexName, t.toString())
             }, e)
           })(e, r).then(function(t) {
             return "published" !== t.status ? n() : void 0
@@ -1565,7 +1565,7 @@ r = this, n = function() {
         }, n)
       }
     },
-    t3 = function(t) {
+    t4 = function(t) {
       return function(r, n) {
         return t2(t)(r.map(function(t) {
           return e(e({}, t), {}, {
@@ -1575,7 +1575,7 @@ r = this, n = function() {
         }), n)
       }
     },
-    t4 = function(t) {
+    t3 = function(t) {
       return function(r, n) {
         return t2(t)(r.map(function(t) {
           return e(e({}, t), {}, {
@@ -1649,7 +1649,7 @@ r = this, n = function() {
     };
 
   function t5(t, r, o) {
-    var u, h, f, p, m, g, v, y, x, _, P, E, ty = {
+    var u, l, f, p, m, g, v, y, x, _, P, E, ty = {
         appId: t,
         apiKey: r,
         timeouts: {
@@ -1771,7 +1771,7 @@ r = this, n = function() {
           caches: [(u = {
             key: "".concat("4.23.3", "-").concat(t)
           }, f = "algoliasearch-client-js-".concat(u.key), p = function() {
-            return void 0 === h && (h = u.localStorage || window.localStorage), h
+            return void 0 === l && (l = u.localStorage || window.localStorage), l
           }, m = function() {
             return JSON.parse(p().getItem(f) || "{}")
           }, g = function(t) {
@@ -1848,7 +1848,7 @@ r = this, n = function() {
               getPersonalizationStrategy: I,
               setPersonalizationStrategy: j
             }
-          })).region || "us", i = s(l.WithinHeaders, r.appId, r.apiKey), a = b(e(e({
+          })).region || "us", i = s(h.WithinHeaders, r.appId, r.apiKey), a = b(e(e({
             hosts: [{
               url: "personalization.".concat(n, ".algolia.com")
             }]
@@ -1888,7 +1888,7 @@ r = this, n = function() {
         assignUserID: q,
         assignUserIDs: R,
         getUserID: W,
-        searchUserIDs: th,
+        searchUserIDs: tl,
         listUserIDs: Z,
         getTopUserIDs: $,
         removeUserID: ta,
@@ -1900,7 +1900,7 @@ r = this, n = function() {
         replaceDictionaryEntries: ts,
         saveDictionaryEntries: tu,
         searchDictionaryEntries: tc,
-        setDictionarySettings: tl,
+        setDictionarySettings: th,
         waitAppTask: td,
         customRequest: M,
         initIndex: function(t) {
@@ -1961,7 +1961,7 @@ r = this, n = function() {
                 stopABTest: D,
                 deleteABTest: S
               }
-            })).region || "us", i = s(l.WithinHeaders, r.appId, r.apiKey), a = b(e(e({
+            })).region || "us", i = s(h.WithinHeaders, r.appId, r.apiKey), a = b(e(e({
               hosts: [{
                 url: "analytics.".concat(n, ".algolia.com")
               }]
@@ -1983,14 +1983,14 @@ r = this, n = function() {
           }
         },
         getRecommendations: t2,
-        getFrequentlyBoughtTogether: t3,
+        getFrequentlyBoughtTogether: t4,
         getLookingSimilar: t6,
         getRecommendedForYou: t9,
-        getRelatedProducts: t4,
+        getRelatedProducts: t3,
         getTrendingFacets: t8,
         getTrendingItems: t7
       }
-    })).appId, P = s(void 0 !== x.authMode ? x.authMode : l.WithinHeaders, _, x.apiKey), c({
+    })).appId, P = s(void 0 !== x.authMode ? x.authMode : h.WithinHeaders, _, x.apiKey), c({
       transporter: E = b(e(e({
         hosts: [{
           url: "".concat(_, "-dsn.algolia.net"),

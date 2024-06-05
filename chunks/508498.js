@@ -1,22 +1,22 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   useCollectiblesShopRouting: function() {
     return u
   }
-}), a("610138"), a("216116"), a("78328"), a("815648"), a("47120");
-var s, l, r = a("470079"),
-  n = a("613828"),
-  i = a("37234"),
-  o = a("703656"),
-  c = a("981631");
+}), s("610138"), s("216116"), s("78328"), s("815648"), s("47120");
+var a, l, r = s("470079"),
+  n = s("613828"),
+  i = s("37234"),
+  o = s("703656"),
+  c = s("981631");
 
 function u() {
   let {
     search: e
-  } = (0, n.useLocation)(), t = (0, n.useParams)(), a = r.useMemo(() => new URLSearchParams(e), [e]).get("source"), s = null != a ? parseInt(a, 10) : null;
+  } = (0, n.useLocation)(), t = (0, n.useParams)(), s = r.useMemo(() => new URLSearchParams(e), [e]).get("source"), a = null != s ? parseInt(s, 10) : null;
   return {
     onClose: r.useCallback(() => {
-      if (0 === s) {
+      if (0 === a) {
         (0, o.back)(), (0, i.pushLayer)(c.Layers.USER_SETTINGS);
         return
       }
@@ -24,8 +24,8 @@ function u() {
         (0, o.back)();
         return
       }(0, o.transitionTo)(c.Routes.APP)
-    }, [s]),
-    source: s,
+    }, [a]),
+    source: a,
     ...t
   }
-}(l = s || (s = {}))[l.SETTINGS = 0] = "SETTINGS", l[l.CHANGELOG = 1] = "CHANGELOG", l[l.DM_LIST = 2] = "DM_LIST"
+}(l = a || (a = {}))[l.SETTINGS = 0] = "SETTINGS", l[l.CHANGELOG = 1] = "CHANGELOG", l[l.DM_LIST = 2] = "DM_LIST"

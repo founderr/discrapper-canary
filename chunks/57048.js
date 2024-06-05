@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("199902"),
-  a = n("158776"),
-  l = n("699516"),
+  l = n("158776"),
+  a = n("699516"),
   r = n("626135"),
   u = n("981631");
 let o = e => {
@@ -17,17 +17,17 @@ let o = e => {
       displayProfile: t,
       isMobile: n,
       loadDurationMs: i,
-      activity: a,
-      customStatusActivity: l,
+      activity: l,
+      customStatusActivity: a,
       status: o
     } = e;
     r.default.track(u.AnalyticEvents.DM_PROFILE_VIEWED, {
       has_mobile_indicator: n,
-      has_activity: null != a && (null == a ? void 0 : a.type) !== u.ActivityTypes.CUSTOM_STATUS,
-      has_game_activity: (null == a ? void 0 : a.type) === u.ActivityTypes.PLAYING,
+      has_activity: null != l && (null == l ? void 0 : l.type) !== u.ActivityTypes.CUSTOM_STATUS,
+      has_game_activity: (null == l ? void 0 : l.type) === u.ActivityTypes.PLAYING,
       load_duration_ms: i,
       profile_user_status: o,
-      has_custom_status: null != l,
+      has_custom_status: null != a,
       has_profile_effect: null != t.profileEffectId,
       ...d(t)
     })
@@ -43,14 +43,14 @@ let o = e => {
     if (null == e) return {};
     let n = e.userId,
       r = null != i.default.getAnyStreamForUser(n),
-      o = a.default.findActivity(n, e => {
+      o = l.default.findActivity(n, e => {
         let {
           type: t
         } = e;
         return r ? t === u.ActivityTypes.PLAYING : t !== u.ActivityTypes.CUSTOM_STATUS
       }),
       s = null == o ? void 0 : o.assets,
-      d = l.default.isFriend(n);
+      d = a.default.isFriend(n);
     return {
       has_images: !!(null !== (t = null == s ? void 0 : s.large_image) && void 0 !== t ? t : null == s ? void 0 : s.small_image),
       is_friend: d,

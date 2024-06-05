@@ -10,17 +10,17 @@ l.r(t), l.d(t, {
     return d
   }
 }), l("724458"), l("653041");
-var a = l("476326"),
+var i = l("476326"),
   n = l("403182"),
-  i = l("74538"),
+  a = l("74538"),
   s = l("474936"),
   r = l("689938");
 
 function o(e, t) {
   let l = n.sizeString(n.maxFileSize(t));
-  return i.default.isPremium(e, s.PremiumTypes.TIER_2) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+  return a.default.isPremium(e, s.PremiumTypes.TIER_2) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
     maxSize: l
-  }) : i.default.isPremium(e, s.PremiumTypes.TIER_1) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({
+  }) : a.default.isPremium(e, s.PremiumTypes.TIER_1) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({
     maxSize: l
   }) : r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
     maxSize: l
@@ -32,5 +32,5 @@ function u(e, t) {
 }
 
 function d(e) {
-  return e.reduce((e, t) => (t.item.platform === a.UploadPlatform.WEB && e.push(t.item.file), e), [])
+  return e.reduce((e, t) => (t.item.platform === i.UploadPlatform.WEB && e.push(t.item.file), e), [])
 }

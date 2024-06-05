@@ -1,41 +1,41 @@
 "use strict";
-l.r(t);
-var n, u = l("442837"),
-  a = l("433517"),
-  i = l("570140"),
-  r = l("981631");
+n.r(t);
+var i, l = n("442837"),
+  a = n("433517"),
+  r = n("570140"),
+  u = n("981631");
 
-function o(e, t, l) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: l,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = l, e
+  }) : e[t] = n, e
 }
-let d = {
+let s = {
     lastViewedPath: null,
     lastViewedNonVoicePath: null
   },
-  s = d,
+  d = s,
   c = "LAST_VIEWED_PATH";
-class f extends(n = u.default.PersistedStore) {
+class f extends(i = l.default.PersistedStore) {
   initialize() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d;
-    s = null != e ? e : d
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s;
+    d = null != e ? e : s
   }
   get defaultRoute() {
-    return r.Routes.ME
+    return u.Routes.ME
   }
   get lastNonVoiceRoute() {
     var e;
-    return null !== (e = s.lastViewedNonVoicePath) && void 0 !== e ? e : r.Routes.ME
+    return null !== (e = d.lastViewedNonVoicePath) && void 0 !== e ? e : u.Routes.ME
   }
   get fallbackRoute() {
-    return r.Routes.ME
+    return u.Routes.ME
   }
   getState() {
-    return s
+    return d
   }
 }
 o(f, "displayName", "DefaultRouteStore"), o(f, "persistKey", "DefaultRouteStore"), o(f, "migrations", [() => {
@@ -43,17 +43,17 @@ o(f, "displayName", "DefaultRouteStore"), o(f, "persistKey", "DefaultRouteStore"
   return a.Storage.remove(c), {
     lastViewedPath: e
   }
-}]), t.default = new f(i.default, {
+}]), t.default = new f(r.default, {
   SAVE_LAST_ROUTE: function(e) {
     let {
       path: t
     } = e;
-    return s.lastViewedPath = t, !0
+    return d.lastViewedPath = t, !0
   },
   SAVE_LAST_NON_VOICE_ROUTE: function(e) {
     let {
       path: t
     } = e;
-    return s.lastViewedNonVoicePath = t, !0
+    return d.lastViewedNonVoicePath = t, !0
   }
 })
