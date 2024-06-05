@@ -4,37 +4,37 @@ s.r(t), s.d(t, {
     return i
   },
   openCollectiblesShopProductDetailsModal: function() {
-    return n
+    return r
   }
 });
 var a = s("735250");
 s("470079");
 var l = s("481060");
-let r = "collectibles shop product details modal",
-  n = e => {
+let n = "collectibles shop product details modal",
+  r = e => {
     let {
       product: t,
-      category: n,
+      category: r,
       analyticsSource: i,
       analyticsLocations: o,
-      returnRef: c
+      returnRef: u
     } = e;
     (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("4934"), s.e("36848")]).then(s.bind(s, "702370"));
+      } = await Promise.all([s.e("99387"), s.e("2026")]).then(s.bind(s, "702370"));
       return s => (0, a.jsx)(e, {
         ...s,
         product: t,
-        category: n,
+        category: r,
         analyticsSource: i,
         analyticsLocations: o,
-        returnRef: c
+        returnRef: u
       })
     }, {
-      modalKey: r
+      modalKey: n
     })
   },
   i = () => {
-    (0, l.closeModal)(r)
+    (0, l.closeModal)(n)
   }

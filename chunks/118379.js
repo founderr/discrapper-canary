@@ -2,6 +2,6 @@
 n.r(t);
 var a = n("663993");
 t.default = (0, a.makeLazy)({
-  createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("93521"), n.e("18249")]).then(n.bind(n, "838819")),
+  createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("12013"), n.e("6416"), n.e("43906"), n.e("32776"), n.e("95900"), n.e("4934"), n.e("87624"), n.e("43331"), n.e("30006")]).then(n.bind(n, "838819")),
   webpackId: "838819"
 })
