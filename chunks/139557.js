@@ -11,8 +11,6 @@ e.exports = {
   logo: "logo__1a825",
   logoAndDescriptionContainer: "logoAndDescriptionContainer__5ad27",
   overflowImage: "overflowImage_b382c8",
-  overflowSlideAnimator: "overflowSlideAnimator__4428d",
-  overflowSlideAnimatorContainer: "overflowSlideAnimatorContainer__57bdc",
   paginationButton: "paginationButton__51441",
   paginationControls: "paginationControls_f5f6d3"
 }
