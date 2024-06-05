@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return N
   }
 });
 var a = s("735250");
@@ -12,157 +12,177 @@ var n = s("120356"),
   r = s("100527"),
   o = s("906732"),
   d = s("454585"),
-  u = s("626135"),
-  c = s("695346"),
-  S = s("981631"),
-  E = s("689938"),
-  T = s("611273");
+  u = s("921801"),
+  c = s("626135"),
+  S = s("695346"),
+  E = s("726985"),
+  T = s("981631"),
+  _ = s("689938"),
+  I = s("611273");
 
-function _() {
-  let e = c.ExpressionSuggestionsEnabled.useSetting(),
-    t = c.IncludeStickersInAutocomplete.useSetting(),
-    s = c.UseRichChatInput.useSetting(),
-    n = c.RenderSpoilers.useSetting(),
-    _ = c.UseThreadSidebar.useSetting(),
-    I = c.ViewImageDescriptions.useSetting(),
-    f = c.ConvertEmoticons.useSetting(),
-    m = c.InlineAttachmentMedia.useSetting(),
-    N = c.InlineEmbedMedia.useSetting(),
-    g = c.RenderEmbeds.useSetting(),
-    h = c.RenderReactions.useSetting(),
+function N() {
+  let e = S.ExpressionSuggestionsEnabled.useSetting(),
+    t = S.IncludeStickersInAutocomplete.useSetting(),
+    s = S.UseRichChatInput.useSetting(),
+    n = S.RenderSpoilers.useSetting(),
+    N = S.UseThreadSidebar.useSetting(),
+    g = S.ViewImageDescriptions.useSetting(),
+    f = S.ConvertEmoticons.useSetting(),
+    m = S.InlineAttachmentMedia.useSetting(),
+    C = S.InlineEmbedMedia.useSetting(),
+    A = S.RenderEmbeds.useSetting(),
+    h = S.RenderReactions.useSetting(),
     {
-      analyticsLocations: C
+      analyticsLocations: O
     } = (0, o.default)(r.default.TEXT_AND_IMAGES);
   return (0, a.jsxs)(i.FormSection, {
     tag: i.FormTitleTags.H1,
-    title: E.default.Messages.CHAT,
-    children: [(0, a.jsx)(i.FormTitle, {
-      className: T.marginBottom8,
-      children: E.default.Messages.INLINE_MEDIA_LABEL
-    }), (0, a.jsx)(i.FormSwitch, {
-      className: l()(T.marginTop8, T.marginBottom20),
-      value: N,
-      onChange: c.InlineEmbedMedia.updateSetting,
-      children: E.default.Messages.INLINE_EMBED_MEDIA
-    }), (0, a.jsx)(i.FormSwitch, {
-      className: l()(T.marginTop8, T.marginBottom20),
-      value: m,
-      note: E.default.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
-        maxSize: 10
-      }),
-      onChange: c.InlineAttachmentMedia.updateSetting,
-      children: E.default.Messages.INLINE_ATTACHMENT_MEDIA
-    }), (0, a.jsx)(i.FormSwitch, {
-      className: l()(T.marginTop8, T.marginBottom20),
-      value: I,
-      note: E.default.Messages.IMAGE_DESCRIPTION_HELP,
-      onChange: c.ViewImageDescriptions.updateSetting,
-      children: E.default.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
-    }), (0, a.jsx)(i.FormTitle, {
-      className: T.marginBottom8,
-      children: E.default.Messages.RENDER_EMBEDS_LABEL
-    }), (0, a.jsx)(i.FormSwitch, {
-      className: l()(T.marginTop8, T.marginBottom40),
-      value: g,
-      onChange: c.RenderEmbeds.updateSetting,
-      children: E.default.Messages.RENDER_EMBEDS
-    }), (0, a.jsx)(i.FormTitle, {
-      className: T.marginBottom8,
-      children: E.default.Messages.EMOJI
-    }), (0, a.jsx)(i.FormSwitch, {
-      className: l()(T.marginTop8, T.marginBottom20),
-      value: h,
-      onChange: c.RenderReactions.updateSetting,
-      children: E.default.Messages.RENDER_REACTIONS
-    }), (0, a.jsx)(i.FormSwitch, {
-      className: T.marginBottom40,
-      value: f,
-      note: d.default.parse(E.default.Messages.CONVERT_EMOTICONS_HELP),
-      onChange: c.ConvertEmoticons.updateSetting,
-      children: E.default.Messages.CONVERT_EMOTICONS
-    }), (0, a.jsxs)(i.FormSection, {
-      className: T.marginBottom8,
+    title: _.default.Messages.CHAT,
+    children: [(0, a.jsxs)(u.Subsetting, {
+      setting: E.WebSetting.CHAT_INLINE_MEDIA,
       children: [(0, a.jsx)(i.FormTitle, {
-        className: T.marginBottom8,
-        children: E.default.Messages.STICKERS_AUTO_PLAY_HEADING
+        className: I.marginBottom8,
+        children: _.default.Messages.INLINE_MEDIA_LABEL
       }), (0, a.jsx)(i.FormSwitch, {
-        className: l()(T.marginTop8, T.marginBottom20),
-        value: e,
-        note: E.default.Messages.AUTO_SUGGEST_STICKERS_DESCRIPTION,
-        onChange: t => {
-          u.default.track(S.AnalyticEvents.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
-            enabled: !e,
-            location: {
-              section: S.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
-            },
-            location_stack: C
-          }), c.ExpressionSuggestionsEnabled.updateSetting(!e)
-        },
-        children: E.default.Messages.AUTO_SUGGEST_STICKERS
+        className: l()(I.marginTop8, I.marginBottom20),
+        value: C,
+        onChange: S.InlineEmbedMedia.updateSetting,
+        children: _.default.Messages.INLINE_EMBED_MEDIA
       }), (0, a.jsx)(i.FormSwitch, {
-        className: T.marginBottom40,
-        value: t,
-        note: E.default.Messages.INCLUDE_STICKER_RESULTS_IN_AUTOCOMPLETE,
-        onChange: e => {
-          u.default.track(S.AnalyticEvents.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
-            enabled: e,
-            location: {
-              section: S.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
-            },
-            location_stack: C
-          }), c.IncludeStickersInAutocomplete.updateSetting(e)
-        },
-        children: E.default.Messages.STICKERS_IN_AUTOCOMPLETE
+        className: l()(I.marginTop8, I.marginBottom20),
+        value: m,
+        note: _.default.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
+          maxSize: 10
+        }),
+        onChange: S.InlineAttachmentMedia.updateSetting,
+        children: _.default.Messages.INLINE_ATTACHMENT_MEDIA
+      }), (0, a.jsx)(i.FormSwitch, {
+        className: l()(I.marginTop8, I.marginBottom20),
+        value: g,
+        note: _.default.Messages.IMAGE_DESCRIPTION_HELP,
+        onChange: S.ViewImageDescriptions.updateSetting,
+        children: _.default.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
       })]
-    }), (0, a.jsxs)(i.FormSection, {
-      className: T.marginBottom8,
+    }), (0, a.jsxs)(u.Subsetting, {
+      setting: E.WebSetting.CHAT_EMBEDS,
       children: [(0, a.jsx)(i.FormTitle, {
-        className: T.marginBottom8,
-        children: E.default.Messages.FORM_LABEL_USE_RICH_CHAT_BOX
+        className: I.marginBottom8,
+        children: _.default.Messages.RENDER_EMBEDS_LABEL
       }), (0, a.jsx)(i.FormSwitch, {
-        className: T.marginTop8,
-        value: s,
-        onChange: e => {
-          u.default.track(S.AnalyticEvents.PREVIEW_MARKDOWN_TOGGLED, {
-            enabled: e,
-            location: {
-              section: S.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
-            }
-          }), c.UseRichChatInput.updateSetting(e)
-        },
-        children: E.default.Messages.PREVIEW_MARKDOWN_DESCRIPTION
+        className: l()(I.marginTop8, I.marginBottom40),
+        value: A,
+        onChange: S.RenderEmbeds.updateSetting,
+        children: _.default.Messages.RENDER_EMBEDS
       })]
-    }), (0, a.jsxs)(i.FormSection, {
-      className: T.marginBottom40,
+    }), (0, a.jsxs)(u.Subsetting, {
+      setting: E.WebSetting.CHAT_EMOJI,
       children: [(0, a.jsx)(i.FormTitle, {
-        className: T.marginBottom8,
-        children: E.default.Messages.THREADS
+        className: I.marginBottom8,
+        children: _.default.Messages.EMOJI
       }), (0, a.jsx)(i.FormSwitch, {
-        className: T.marginTop8,
-        value: _,
-        onChange: c.UseThreadSidebar.updateSetting,
-        children: E.default.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
+        className: l()(I.marginTop8, I.marginBottom20),
+        value: h,
+        onChange: S.RenderReactions.updateSetting,
+        children: _.default.Messages.RENDER_REACTIONS
+      }), (0, a.jsx)(i.FormSwitch, {
+        className: I.marginBottom40,
+        value: f,
+        note: d.default.parse(_.default.Messages.CONVERT_EMOTICONS_HELP),
+        onChange: S.ConvertEmoticons.updateSetting,
+        children: _.default.Messages.CONVERT_EMOTICONS
       })]
-    }), (0, a.jsxs)(i.FormItem, {
-      title: E.default.Messages.SHOW_SPOILER_CONTENT,
-      children: [(0, a.jsx)(i.FormText, {
-        type: i.FormText.Types.DESCRIPTION,
-        className: T.marginBottom8,
-        children: E.default.Messages.SHOW_SPOILER_CONTENT_HELP
-      }), (0, a.jsx)(i.RadioGroup, {
-        options: [{
-          name: E.default.Messages.SHOW_SPOILER_ON_CLICK,
-          value: S.SpoilerRenderSetting.ON_CLICK
-        }, {
-          name: E.default.Messages.SHOW_SPOILER_ON_SERVERS_I_MOD,
-          value: S.SpoilerRenderSetting.IF_MODERATOR
-        }, {
-          name: E.default.Messages.SHOW_SPOILER_ALWAYS,
-          value: S.SpoilerRenderSetting.ALWAYS
-        }],
-        onChange: e => c.RenderSpoilers.updateSetting(e.value),
-        value: n
+    }), (0, a.jsx)(u.Subsetting, {
+      setting: E.WebSetting.CHAT_STICKERS,
+      children: (0, a.jsxs)(i.FormSection, {
+        className: I.marginBottom8,
+        children: [(0, a.jsx)(i.FormTitle, {
+          className: I.marginBottom8,
+          children: _.default.Messages.STICKERS_AUTO_PLAY_HEADING
+        }), (0, a.jsx)(i.FormSwitch, {
+          className: l()(I.marginTop8, I.marginBottom20),
+          value: e,
+          note: _.default.Messages.AUTO_SUGGEST_STICKERS_DESCRIPTION,
+          onChange: t => {
+            c.default.track(T.AnalyticEvents.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+              enabled: !e,
+              location: {
+                section: T.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
+              },
+              location_stack: O
+            }), S.ExpressionSuggestionsEnabled.updateSetting(!e)
+          },
+          children: _.default.Messages.AUTO_SUGGEST_STICKERS
+        }), (0, a.jsx)(i.FormSwitch, {
+          className: I.marginBottom40,
+          value: t,
+          note: _.default.Messages.INCLUDE_STICKER_RESULTS_IN_AUTOCOMPLETE,
+          onChange: e => {
+            c.default.track(T.AnalyticEvents.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
+              enabled: e,
+              location: {
+                section: T.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
+              },
+              location_stack: O
+            }), S.IncludeStickersInAutocomplete.updateSetting(e)
+          },
+          children: _.default.Messages.STICKERS_IN_AUTOCOMPLETE
+        })]
+      })
+    }), (0, a.jsxs)(u.Subsetting, {
+      setting: E.WebSetting.CHAT_TEXT_BOX,
+      children: [(0, a.jsxs)(i.FormSection, {
+        className: I.marginBottom8,
+        children: [(0, a.jsx)(i.FormTitle, {
+          className: I.marginBottom8,
+          children: _.default.Messages.FORM_LABEL_USE_RICH_CHAT_BOX
+        }), (0, a.jsx)(i.FormSwitch, {
+          className: I.marginTop8,
+          value: s,
+          onChange: e => {
+            c.default.track(T.AnalyticEvents.PREVIEW_MARKDOWN_TOGGLED, {
+              enabled: e,
+              location: {
+                section: T.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
+              }
+            }), S.UseRichChatInput.updateSetting(e)
+          },
+          children: _.default.Messages.PREVIEW_MARKDOWN_DESCRIPTION
+        })]
+      }), (0, a.jsxs)(i.FormSection, {
+        className: I.marginBottom40,
+        children: [(0, a.jsx)(i.FormTitle, {
+          className: I.marginBottom8,
+          children: _.default.Messages.THREADS
+        }), (0, a.jsx)(i.FormSwitch, {
+          className: I.marginTop8,
+          value: N,
+          onChange: S.UseThreadSidebar.updateSetting,
+          children: _.default.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
+        })]
       })]
+    }), (0, a.jsx)(u.Subsetting, {
+      setting: E.WebSetting.CHAT_SPOILERS,
+      children: (0, a.jsxs)(i.FormItem, {
+        title: _.default.Messages.SHOW_SPOILER_CONTENT,
+        children: [(0, a.jsx)(i.FormText, {
+          type: i.FormText.Types.DESCRIPTION,
+          className: I.marginBottom8,
+          children: _.default.Messages.SHOW_SPOILER_CONTENT_HELP
+        }), (0, a.jsx)(i.RadioGroup, {
+          options: [{
+            name: _.default.Messages.SHOW_SPOILER_ON_CLICK,
+            value: T.SpoilerRenderSetting.ON_CLICK
+          }, {
+            name: _.default.Messages.SHOW_SPOILER_ON_SERVERS_I_MOD,
+            value: T.SpoilerRenderSetting.IF_MODERATOR
+          }, {
+            name: _.default.Messages.SHOW_SPOILER_ALWAYS,
+            value: T.SpoilerRenderSetting.ALWAYS
+          }],
+          onChange: e => S.RenderSpoilers.updateSetting(e.value),
+          value: n
+        })]
+      })
     })]
   })
 }
