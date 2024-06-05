@@ -26,6 +26,7 @@ e.exports = {
   embedLink: "embedLink_e542f5",
   embedMargin: "embedMargin__99b82",
   embedMedia: "embedMedia__4e169",
+  embedPlaystation: "embedPlaystation__3a28e",
   embedProvider: "embedProvider_f3e807",
   embedSpotify: "embedSpotify__13fe9",
   embedSuppressButton: "embedSuppressButton__5aae1",
