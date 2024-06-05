@@ -26,8 +26,8 @@ var a = s("735250"),
   x = s("981631"),
   _ = s("302800"),
   N = s("689938"),
-  b = s("894775");
-let L = {
+  L = s("894775");
+let b = {
     xMin: -100,
     xMax: 100,
     yMin: -150,
@@ -62,21 +62,21 @@ function R(e) {
   let k = l.useRef(null),
     [B] = t.items,
     {
-      analyticsLocations: D
+      analyticsLocations: F
     } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD, d.default.COLLECTIBLES_LIGHTNING_CHECKOUT),
     {
-      buttonColors: F
+      buttonColors: D
     } = (0, E.default)(t.styles),
     U = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     H = (0, _.getCustomConfettiDisplayOptions)(t.skuId),
     [w, G] = l.useState(!1),
     [W, Y] = l.useState(!1),
-    V = null != F ? {
-      background: (0, p.getBackgroundGradient)(F, 90),
-      color: F.text.toHslString()
+    V = null != D ? {
+      background: (0, p.getBackgroundGradient)(D, 90),
+      color: D.text.toHslString()
     } : void 0,
     K = (0, g.default)({
-      analyticsLocations: D
+      analyticsLocations: F
     }),
     z = {
       onPurchaseComplete: () => {
@@ -93,17 +93,17 @@ function R(e) {
     };
   return (0, a.jsxs)("div", {
     ref: k,
-    className: b.container,
+    className: L.container,
     children: [W && (0, a.jsxs)("div", {
-      className: b.cardDetails,
+      className: L.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: b.productName,
+        className: L.productName,
         children: N.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
       }), (0, a.jsx)("div", {
-        className: b.innerBlur,
+        className: L.innerBlur,
         children: (0, a.jsx)(o.Text, {
-          className: b.description,
+          className: L.description,
           variant: "text-md/normal",
           children: N.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
         })
@@ -111,24 +111,24 @@ function R(e) {
         onClick: () => {
           O(), (0, I.default)({
             skuId: t.skuId,
-            analyticsLocations: D,
+            analyticsLocations: F,
             returnRef: k
           })
         },
         children: N.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
     }), !W && (w ? (0, a.jsxs)("div", {
-      className: b.cardDetails,
+      className: L.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: b.productName,
+        className: L.productName,
         children: N.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
           itemName: t.name
         })
       }), (0, a.jsx)("div", {
-        className: b.innerBlur,
+        className: L.innerBlur,
         children: (0, a.jsx)(o.Text, {
-          className: b.description,
+          className: L.description,
           variant: "text-xs/normal",
           children: N.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
@@ -138,21 +138,21 @@ function R(e) {
           if (A(), (0, u.popLayer)(), K(), (null == B ? void 0 : B.type) === r.CollectiblesItemType.AVATAR_DECORATION) {
             (0, C.openAvatarDecorationModal)({
               initialSelectedDecoration: B,
-              analyticsLocations: D
+              analyticsLocations: F
             });
             return
           }(null == B ? void 0 : B.type) === r.CollectiblesItemType.PROFILE_EFFECT && (0, h.openProfileEffectModal)({
             initialSelectedEffectId: B.id,
-            analyticsLocations: D
+            analyticsLocations: F
           })
         },
         children: N.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, a.jsxs)("div", {
-      className: b.cardDetails,
+      className: L.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: b.productName,
+        className: L.productName,
         children: t.name
       }), (0, a.jsx)(S.PaymentContextProvider, {
         loadId: j,
@@ -169,7 +169,7 @@ function R(e) {
     })), !W && w && !(null != H) && !U && (0, a.jsx)(m.default, {
       confettiTarget: k.current,
       customConfettiCanvas: M,
-      speedValues: L,
+      speedValues: b,
       numBursts: 4,
       particlesPerBurst: 100,
       offsetXPercentageMax: 100,

@@ -1,57 +1,57 @@
 "use strict";
-l.r(a), l.d(a, {
+t.r(a), t.d(a, {
   default: function() {
     return I
   }
 });
-var t = l("735250");
-l("470079");
-var i = l("442837"),
-  r = l("954138"),
-  n = l("979264"),
-  s = l("741308"),
-  o = l("724593"),
-  u = l("530"),
-  d = l("993409"),
-  c = l("790711"),
-  f = l("67152"),
-  m = l("271383"),
-  v = l("246946"),
-  p = l("654904"),
-  g = l("228168"),
-  h = l("689938"),
-  S = l("493069");
+var l = t("735250");
+t("470079");
+var i = t("442837"),
+  r = t("954138"),
+  n = t("979264"),
+  s = t("741308"),
+  o = t("724593"),
+  u = t("530"),
+  d = t("993409"),
+  c = t("790711"),
+  f = t("67152"),
+  m = t("271383"),
+  v = t("246946"),
+  p = t("654904"),
+  g = t("228168"),
+  h = t("689938"),
+  S = t("493069");
 
 function I(e) {
   var a;
   let {
-    user: l,
+    user: t,
     displayProfile: I,
     guild: T,
-    pendingAvatar: A,
-    pendingNickname: E,
-    pendingGlobalName: y,
-    pendingBio: P,
+    pendingAvatar: P,
+    pendingNickname: A,
+    pendingGlobalName: E,
+    pendingBio: y,
     pendingPronouns: x,
     isTryItOutFlow: j,
     hideBioSection: U,
-    hideExampleButton: C
-  } = e, N = (0, i.useStateFromStores)([m.default], () => null == T ? null : m.default.getMember(T.id, l.id)), b = (0, i.useStateFromStores)([v.default], () => v.default.hidePersonalInformation), w = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), _ = null == I ? void 0 : null === (a = I.getPreviewBio(P)) || void 0 === a ? void 0 : a.value, M = null != x ? x : null == I ? void 0 : I.pronouns, B = (0, p.getPreviewName)({
-    pendingNickname: E,
-    pendingGlobalName: y,
-    user: l,
-    guildMember: N
+    hideExampleButton: N
+  } = e, C = (0, i.useStateFromStores)([m.default], () => null == T ? null : m.default.getMember(T.id, t.id)), b = (0, i.useStateFromStores)([v.default], () => v.default.hidePersonalInformation), w = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), _ = null == I ? void 0 : null === (a = I.getPreviewBio(y)) || void 0 === a ? void 0 : a.value, M = null != x ? x : null == I ? void 0 : I.pronouns, B = (0, p.getPreviewName)({
+    pendingNickname: A,
+    pendingGlobalName: E,
+    user: t,
+    guildMember: C
   });
-  return (0, t.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: S.body,
-    children: [(0, t.jsx)(u.default, {
-      user: l,
+    children: [(0, l.jsx)(u.default, {
+      user: t,
       profileType: g.UserProfileTypes.BITE_SIZE,
       usernameIcon: (() => {
-        if (!(null != N)) return;
-        if (null !== A) {
-          if (!(null == N.avatar && null == A)) return (0, t.jsx)(c.default, {
-            user: l,
+        if (!(null != C)) return;
+        if (null !== P) {
+          if (!(null == C.avatar && null == P)) return (0, l.jsx)(c.default, {
+            user: t,
             nickname: B
           })
         }
@@ -59,24 +59,24 @@ function I(e) {
       nickname: B,
       pronouns: M,
       isTryItOut: j,
-      tags: (0, t.jsx)(s.default, {
+      tags: (0, l.jsx)(s.default, {
         displayProfile: I,
         profileType: g.UserProfileTypes.BITE_SIZE
       }),
-      nicknameIcons: (0, t.jsx)(o.default, {
-        user: l,
+      nicknameIcons: (0, l.jsx)(o.default, {
+        user: t,
         isHovering: !0,
         disabled: !0
       })
-    }), w && (0, t.jsx)(n.default, {
-      userId: l.id,
+    }), w && (0, l.jsx)(n.default, {
+      userId: t.id,
       inline: !1
-    }), !U && null != _ && "" !== _ && (0, t.jsx)(f.default, {
-      user: l,
+    }), !U && null != _ && "" !== _ && (0, l.jsx)(f.default, {
+      user: t,
       bio: _,
       hidePersonalInformation: b,
       disableViewFullBio: !0
-    }), !C && (0, t.jsx)(d.default, {
+    }), !N && (0, l.jsx)(d.default, {
       text: h.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON
     })]
   })

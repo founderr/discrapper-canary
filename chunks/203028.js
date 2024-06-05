@@ -53,7 +53,7 @@ function C(e) {
     }
   }(t), {
     subtitle: I,
-    icon: T
+    icon: g
   } = function(e) {
     var t;
     let {
@@ -61,12 +61,12 @@ function C(e) {
       partiedMembers: d,
       voiceChannels: C,
       currentActivities: m
-    } = e, S = s.length, p = d.length - S, I = m[0], T = null == I ? void 0 : I.activity, g = null == I ? void 0 : I.startedPlayingTime, A = {
-      name: null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : ""
+    } = e, S = s.length, p = d.length - S, I = m[0], g = null == I ? void 0 : I.activity, T = null == I ? void 0 : I.startedPlayingTime, A = {
+      name: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : ""
     };
-    if ((0, i.default)(T) && null != T) return {
+    if ((0, i.default)(g) && null != g) return {
       subtitle: (0, a.jsx)(u.default, {
-        start: g,
+        start: T,
         location: u.default.Locations.ACTIVITY_FEED_NEW,
         messageProps: A
       }),
@@ -76,15 +76,15 @@ function C(e) {
       let {
         game: e
       } = I;
-      if (null == T) return {
+      if (null == g) return {
         subtitle: null,
         icon: null
       };
-      let t = c.createHeader(T);
+      let t = c.createHeader(g);
       if (null != t) return t;
-      switch (T.type) {
+      switch (g.type) {
         case h.ActivityTypes.PLAYING:
-          if ((0, o.default)(T)) return {
+          if ((0, o.default)(g)) return {
             subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
             icon: (0, a.jsx)(f.default.Header.Icon, {
               src: f.default.Header.Icon.Src.XBOX
@@ -92,7 +92,7 @@ function C(e) {
           };
           return {
             subtitle: (0, a.jsx)(u.default, {
-              start: g,
+              start: T,
               location: u.default.Locations.ACTIVITY_FEED_NEW,
               messageProps: A
             }), icon: null != e ? (0, a.jsx)(f.default.Header.Icon, {
@@ -107,7 +107,7 @@ function C(e) {
           };
         case h.ActivityTypes.LISTENING:
           let s;
-          return s = (0, r.default)(T) ? (0, a.jsx)(f.default.Header.Icon, {
+          return s = (0, r.default)(g) ? (0, a.jsx)(f.default.Header.Icon, {
             src: f.default.Header.Icon.Src.SPOTIFY
           }) : null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
             src: e.getIconURL(E.ICON_SIZE)
@@ -115,7 +115,7 @@ function C(e) {
             src: n("211827")
           }), {
             subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
-              name: T.name
+              name: g.name
             }),
             icon: s
           };
@@ -186,7 +186,7 @@ function C(e) {
     guildId: null == m ? void 0 : m.id,
     title: p,
     subtitle: I,
-    icon: T,
+    icon: g,
     onContextMenu: e => s(e, S.user)
   })
 }

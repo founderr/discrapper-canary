@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return s
   },
   getCountdownDisplayOptions: function() {
-    return T
+    return g
   },
   getCustomConfettiDisplayOptions: function() {
     return A
@@ -72,14 +72,14 @@ let I = {
       assetIds: ["a_e72e44eeea89e92dc02c9bec8b02d158", "a_492f6b54b761c0a14d9dbc9c98aaa0f5", "a_46750412a18f4988de71f4cf14991b38"]
     }
   },
-  T = e => (0, r.match)(e).with(o.CollectiblesCategorySkuId.SHY, () => ({
+  g = e => (0, r.match)(e).with(o.CollectiblesCategorySkuId.SHY, () => ({
     label: () => d.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
     backgroundColor: "rgba(255, 70, 85, 1)",
     boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
     labelColor: "rgba(15, 25, 35, 1)",
     iconSrc: m
   })).otherwise(() => null),
-  g = {
+  T = {
     SHY: {
       confettiAssetSrc: h,
       style: {
@@ -88,4 +88,4 @@ let I = {
       }
     }
   },
-  A = e => (0, r.match)(e).with("1220513977683935373", () => g.SHY).with("1220432647453409384", () => g.SHY).with("1220432697718083614", () => g.SHY).otherwise(() => null)
+  A = e => (0, r.match)(e).with("1220513977683935373", () => T.SHY).with("1220432647453409384", () => T.SHY).with("1220432697718083614", () => T.SHY).otherwise(() => null)

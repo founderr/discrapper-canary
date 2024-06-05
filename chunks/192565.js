@@ -41,7 +41,7 @@ function I(e) {
     handleClanUpdate: s.useCallback(t => r.updateClanSetup(e, t), [e])
   }
 }
-let T = {
+let g = {
   [S.ClanSetupSteps.GAMES]: function(e) {
     let {
       guildId: t
@@ -172,12 +172,12 @@ let T = {
   }
 };
 
-function g(e) {
+function T(e) {
   return e.currentStep.toString()
 }
 
 function A(e) {
-  let t = T[e.currentStep];
+  let t = g[e.currentStep];
   return (0, a.jsx)(t, {
     guildId: e.guildId
   })
@@ -197,6 +197,6 @@ function N(e) {
     currentStep: i,
     items: r,
     renderItem: A,
-    getItemKey: g
+    getItemKey: T
   })
 }

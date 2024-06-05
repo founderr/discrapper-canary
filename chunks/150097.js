@@ -36,8 +36,8 @@ var f = n("569471"),
   S = n("699516"),
   C = n("944486"),
   A = n("914010"),
-  p = n("885110"),
-  h = n("9156"),
+  h = n("885110"),
+  p = n("9156"),
   O = n("594174"),
   y = n("630388"),
   m = n("5192"),
@@ -51,7 +51,7 @@ function U(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (t.hasFlag(D.UserFlags.SPAMMER) || n.isManaged()) return !1;
   let i = n.getGuildId();
-  return !(null != i && u.default.isLurking(i) || !l.ignoreSameUser && t.id === e.id || S.default.isBlocked(t.id) || !l.ignoreStatus && p.default.getStatus() === D.StatusTypes.DND || _.FocusMode.getSetting() || !l.ignoreNoMessagesSetting && h.default.allowNoMessages(n)) && !0
+  return !(null != i && u.default.isLurking(i) || !l.ignoreSameUser && t.id === e.id || S.default.isBlocked(t.id) || !l.ignoreStatus && h.default.getStatus() === D.StatusTypes.DND || _.FocusMode.getSetting() || !l.ignoreNoMessagesSetting && p.default.allowNoMessages(n)) && !0
 }
 
 function L(e, t) {
@@ -83,9 +83,9 @@ function L(e, t) {
     }))
   } {
     let t = !T.GUILD_VOCAL_CHANNEL_TYPES.has(a.type) || I.default.getChannelId() === a.id;
-    if (h.default.allowAllMessages(a) && t) return !0;
-    let n = h.default.isSuppressEveryoneEnabled(a.getGuildId()),
-      l = h.default.isSuppressRolesEnabled(a.getGuildId());
+    if (p.default.allowAllMessages(a) && t) return !0;
+    let n = p.default.isSuppressEveryoneEnabled(a.getGuildId()),
+      l = p.default.isSuppressRolesEnabled(a.getGuildId());
     return (0, o.isRawMessageMentioned)({
       rawMessage: e,
       userId: u.id,
@@ -102,7 +102,7 @@ function F(e, t) {
   e.type === D.MessageTypes.THREAD_STARTER_MESSAGE && (l = g.default.getChannel(null == l ? void 0 : l.parent_id));
   let i = O.default.getCurrentUser(),
     a = O.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
-  return !(null == l || null == i || null == a || l.isManaged() || a.hasFlag(D.UserFlags.SPAMMER) || S.default.isBlocked(a.id) || a.id === i.id || p.default.getStatus() === D.StatusTypes.DND || _.FocusMode.getSetting() || h.default.allowNoMessages(l)) && !0
+  return !(null == l || null == i || null == a || l.isManaged() || a.hasFlag(D.UserFlags.SPAMMER) || S.default.isBlocked(a.id) || a.id === i.id || h.default.getStatus() === D.StatusTypes.DND || _.FocusMode.getSetting() || p.default.allowNoMessages(l)) && !0
 }
 
 function P(e, t) {
@@ -113,7 +113,7 @@ function P(e, t) {
   return !(null == t || null == i || null == a || !U(i, a, t, {
     ignoreStatus: l,
     ignoreNoMessagesSetting: !0
-  }) || h.default.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id)) && (!!n || C.default.getChannelId(A.default.getGuildId()) !== t.id) && h.default.getNewForumThreadsCreated(t)
+  }) || p.default.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id)) && (!!n || C.default.getChannelId(A.default.getGuildId()) !== t.id) && p.default.getNewForumThreadsCreated(t)
 }
 let w = (e, t, n) => "".concat(e, " (").concat((0, l.computeChannelName)(t, O.default, S.default, !0)).concat(null != n ? ", ".concat((0, l.computeChannelName)(n, O.default, S.default)) : "", ")");
 

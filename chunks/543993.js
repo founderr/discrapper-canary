@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("727637"),
   p = n("100527"),
   I = n("906732"),
-  T = n("521868"),
-  g = n("299206"),
+  g = n("521868"),
+  T = n("299206"),
   A = n("440051"),
   N = n("734934"),
   v = n("158238"),
@@ -295,8 +295,8 @@ function eo(e) {
     eS = (0, N.useFocusModeEnabled)(),
     ep = eE === et.StatusTypes.DND,
     eI = (0, $.useMultiAccountMenuItems)(),
-    eT = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, es.menuItemFocused),
-    eg = (0, g.default)({
+    eg = (0, g.useCustomStatusMenuItem)(null != n ? n : void 0, es.menuItemFocused),
+    eT = (0, T.default)({
       id: t.id,
       label: ea.default.Messages.COPY_ID_USER,
       showIconFirst: !0,
@@ -425,7 +425,7 @@ function eo(e) {
                     children: d.isMobile ? void 0 : eh
                   }, "status-picker")
                 }), (0, a.jsx)(h.MenuGroup, {
-                  children: eT
+                  children: eg
                 })]
               }), (0, a.jsxs)(h.Menu, {
                 navId: "account",
@@ -451,7 +451,7 @@ function eo(e) {
                     children: eI
                   })
                 }), (0, a.jsx)(h.MenuGroup, {
-                  children: eg
+                  children: eT
                 })]
               })]
             })]

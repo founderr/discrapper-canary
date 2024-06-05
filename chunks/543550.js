@@ -25,13 +25,13 @@ var a = n("735250"),
   S = n("490610"),
   p = n("981631"),
   I = n("689938"),
-  T = n("424023");
-let g = (e, t) => {
+  g = n("424023");
+let T = (e, t) => {
   switch (e) {
     case h.ClanDiscoveryGame.GENSHIN:
-      return t === p.ThemeTypes.DARK ? T.genshinUpsellBackgroundImageDark : T.genshinUpsellBackgroundImageLight;
+      return t === p.ThemeTypes.DARK ? g.genshinUpsellBackgroundImageDark : g.genshinUpsellBackgroundImageLight;
     case h.ClanDiscoveryGame.VALORANT:
-      return t === p.ThemeTypes.DARK ? T.valorantUpsellBackgroundImageDark : T.valorantUpsellBackgroundImageLight
+      return t === p.ThemeTypes.DARK ? g.valorantUpsellBackgroundImageDark : g.valorantUpsellBackgroundImageLight
   }
 };
 
@@ -45,28 +45,28 @@ function A() {
       }), n(h.ClanDiscoveryUserScreens.USER_ONBOARDING)
     }, [n]),
     f = (0, u.default)(),
-    E = s.useMemo(() => g(e, f), [e, f]),
+    E = s.useMemo(() => T(e, f), [e, f]),
     _ = s.useMemo(() => {
       switch (e) {
         case h.ClanDiscoveryGame.GENSHIN:
-          return f === p.ThemeTypes.DARK ? T.genshinOnboardingBackgroundImageDark : T.genshinOnboardingBackgroundImageLight;
+          return f === p.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
         case h.ClanDiscoveryGame.VALORANT:
-          return f === p.ThemeTypes.DARK ? T.valorantOnboardingBackgroundImageDark : T.valorantOnboardingBackgroundImageLight
+          return f === p.ThemeTypes.DARK ? g.valorantOnboardingBackgroundImageDark : g.valorantOnboardingBackgroundImageLight
       }
     }, [e, f]);
   switch (t) {
     case h.ClanDiscoveryUserScreens.USER_UPSELL:
       return (0, a.jsx)("div", {
-        className: T.container,
+        className: g.container,
         children: (0, a.jsx)(o.ScrollerThin, {
-          className: T.upsellScroller,
+          className: g.upsellScroller,
           fade: !0,
           children: (0, a.jsxs)("div", {
-            className: i()(E, T.userUpsell),
+            className: i()(E, g.userUpsell),
             children: [(0, a.jsx)("div", {
-              className: T.backgroundImageBlur
+              className: g.backgroundImageBlur
             }), (0, a.jsxs)("div", {
-              className: T.backgroundImageContent,
+              className: g.backgroundImageContent,
               children: [(0, a.jsx)(m.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(m.default, {
                 selectedGame: e,
                 onClick: l
@@ -77,13 +77,13 @@ function A() {
       });
     case h.ClanDiscoveryUserScreens.USER_ONBOARDING:
       return (0, a.jsx)("div", {
-        className: T.container,
+        className: g.container,
         children: (0, a.jsxs)("div", {
-          className: i()(_, T.userOnboarding),
+          className: i()(_, g.userOnboarding),
           children: [(0, a.jsx)("div", {
-            className: T.backgroundImageBlur
+            className: g.backgroundImageBlur
           }), (0, a.jsx)("div", {
-            className: T.backgroundImageContent,
+            className: g.backgroundImageContent,
             children: (0, a.jsx)(C.default, {
               selectedGame: e,
               setScreen: n
@@ -108,19 +108,19 @@ function N() {
     }),
     d = s.useMemo(() => l.filter(e => !(0, E.isGuildAClan)(e)), [l]),
     c = (0, u.default)(),
-    C = s.useMemo(() => g(t, c), [t, c]),
+    C = s.useMemo(() => T(t, c), [t, c]),
     m = !e && n;
   return 0 === l.length ? null : (0, a.jsx)("div", {
-    className: T.container,
+    className: g.container,
     children: (0, a.jsxs)(o.ScrollerNone, {
-      className: T.upsellScroller,
+      className: g.upsellScroller,
       fade: !0,
       children: [(0, a.jsxs)("div", {
-        className: i()(C, T.adminUpsell),
+        className: i()(C, g.adminUpsell),
         children: [(0, a.jsx)("div", {
-          className: T.backgroundImageBlur
+          className: g.backgroundImageBlur
         }), (0, a.jsx)("div", {
-          className: T.backgroundImageContent,
+          className: g.backgroundImageContent,
           children: (0, a.jsx)(_.default, {
             isBrowseButtonVisible: m,
             selectedGame: t,

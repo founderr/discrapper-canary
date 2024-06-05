@@ -22,8 +22,8 @@ var a = s("735250"),
   x = s("300284"),
   _ = s("876917"),
   N = s("642619"),
-  b = s("210887"),
-  L = s("725808"),
+  L = s("210887"),
+  b = s("725808"),
   v = s("794358"),
   R = s("466111"),
   A = s("26290"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   M = s("724994"),
   k = s("624377"),
   B = s("390698"),
-  D = s("813083"),
-  F = s("680942"),
+  F = s("813083"),
+  D = s("680942"),
   U = s("558060"),
   H = s("237031"),
   w = s("616066"),
@@ -93,7 +93,7 @@ t.default = function(e) {
   } = (0, k.default)(t.styles), ea = P.default.canUseCollectibles(s), el = (0, y.getFormattedPriceForCollectiblesProduct)(t, ea, !1), en = l.useMemo(() => (0, y.getProductDiscount)(t, ea), [t, ea]), er = (0, y.isPremiumCollectiblesProduct)(t), ei = (0, y.isFreeCollectiblesProduct)(t), {
     isPurchased: eo,
     isPartiallyPurchased: eu
-  } = (0, M.useProductPurchaseState)(t), [ec, ed] = (0, d.useStateFromStoresArray)([j.default], () => [j.default.isClaiming === t.skuId, null != j.default.isClaiming && j.default.isClaiming !== t.skuId]), ef = (0, d.useStateFromStores)([b.default], () => (0, C.isThemeDark)(b.default.theme)), eC = (0, y.isProductNew)(t.skuId);
+  } = (0, M.useProductPurchaseState)(t), [ec, ed] = (0, d.useStateFromStoresArray)([j.default], () => [j.default.isClaiming === t.skuId, null != j.default.isClaiming && j.default.isClaiming !== t.skuId]), ef = (0, d.useStateFromStores)([L.default], () => (0, C.isThemeDark)(L.default.theme)), eC = (0, y.isProductNew)(t.skuId);
   l.useEffect(() => {
     let {
       current: e
@@ -160,7 +160,7 @@ t.default = function(e) {
     }),
     ex = () => er ? null : ei ? (0, a.jsx)(Z, {
       onClick: eS
-    }) : (0, a.jsx)(F.default, {
+    }) : (0, a.jsx)(D.default, {
       product: t,
       returnRef: q,
       isGiftEasterEggEnabled: v,
@@ -254,7 +254,7 @@ t.default = function(e) {
         })).otherwise(() => null)
       }), eo ? (0, a.jsx)("div", {
         className: K.checkmarkWrapper,
-        children: (0, a.jsx)(L.default, {
+        children: (0, a.jsx)(b.default, {
           width: 38,
           height: 38,
           className: K.checkmark
@@ -279,7 +279,7 @@ t.default = function(e) {
             children: e_()
           })]
         })]
-      }), (0, a.jsx)(D.default, {
+      }), (0, a.jsx)(F.default, {
         category: n,
         className: K.limitedTimeBadge,
         display: "card"

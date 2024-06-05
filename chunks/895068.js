@@ -20,8 +20,8 @@ var a, s, l = n("735250"),
   S = n("207796"),
   p = n("777734"),
   I = n("976757"),
-  T = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  T = n("689938"),
   A = n("886722");
 
 function N(e) {
@@ -65,13 +65,13 @@ function N(e) {
       section: "top_picks",
       items: s.slice(0, D),
       sectionHeight: 24,
-      header: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-      subtitle: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+      header: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+      subtitle: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
     }, {
       section: "other_guilds",
       items: s.slice(D),
       sectionHeight: 24,
-      header: g.default.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+      header: T.default.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
     }], [s, D]),
     k = i.useMemo(() => new Set(v.games), [v.games]),
     B = i.useCallback((e, t, n, a) => {
@@ -85,7 +85,7 @@ function N(e) {
         traitsToHighlight: R,
         className: A.card,
         style: n,
-        source: T.AnalyticsSections.DISCOVER_SEARCH,
+        source: g.AnalyticsSections.DISCOVER_SEARCH,
         prioritizedGameIds: k,
         onlyAnimateIconOnHover: !0
       }, a)

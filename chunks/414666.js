@@ -1,22 +1,22 @@
 "use strict";
-l.r(a), l.d(a, {
+t.r(a), t.d(a, {
   FakeActivityCharacter: function() {
-    return t
+    return l
   }
-}), l("47120");
-var t, i, r = l("735250"),
-  n = l("470079"),
-  s = l("120356"),
-  o = l.n(s),
-  u = l("920906"),
-  d = l("481060"),
-  c = l("607070"),
-  f = l("659101"),
-  m = l("689938"),
-  v = l("427503"),
-  p = l("508840"),
-  g = l("576909");
-(i = t || (t = {}))[i.WUMPUS = 0] = "WUMPUS", i[i.PHIBI = 1] = "PHIBI";
+}), t("47120");
+var l, i, r = t("735250"),
+  n = t("470079"),
+  s = t("120356"),
+  o = t.n(s),
+  u = t("920906"),
+  d = t("481060"),
+  c = t("607070"),
+  f = t("659101"),
+  m = t("689938"),
+  v = t("427503"),
+  p = t("508840"),
+  g = t("576909");
+(i = l || (l = {}))[i.WUMPUS = 0] = "WUMPUS", i[i.PHIBI = 1] = "PHIBI";
 let h = {
   0: v.activityCharacterWumpus,
   1: v.activityCharacterPhibi
@@ -24,8 +24,8 @@ let h = {
 a.default = n.memo(function(e) {
   let {
     activityName: a,
-    activityCharacter: l = 0,
-    showExampleButton: t = !1
+    activityCharacter: t = 0,
+    showExampleButton: l = !1
   } = e, [i, s] = n.useState(0), [S, I] = (0, u.useSpring)(() => ({
     from: {
       rotate: "0deg"
@@ -63,10 +63,10 @@ a.default = n.memo(function(e) {
     }), (0, r.jsxs)("div", {
       className: v.fakeActivityLayout,
       children: [(0, r.jsx)("div", {
-        className: o()(v.fakeActivityIcon, h[l]),
+        className: o()(v.fakeActivityIcon, h[t]),
         children: (0, r.jsx)(u.animated.img, {
           className: v.fakeActivityPencil,
-          src: 0 === l ? g : p,
+          src: 0 === t ? g : p,
           style: S
         })
       }), (0, r.jsxs)("div", {
@@ -78,17 +78,17 @@ a.default = n.memo(function(e) {
           variant: "text-sm/normal",
           children: m.default.Messages.PROFILE_CUSTOMIZATION_ACTIVITY_TIME.format({
             renderTimeHook(e, a) {
-              let l = i % 60,
-                t = (i - l) / 60;
+              let t = i % 60,
+                l = (i - t) / 60;
               return (0, r.jsxs)("span", {
                 className: v.fakeActivityTimeValues,
-                children: [t.toString().padStart(2, "0"), ":", l.toString().padStart(2, "0")]
+                children: [l.toString().padStart(2, "0"), ":", t.toString().padStart(2, "0")]
               }, a)
             }
           })
         })]
       })]
-    }), t && (0, r.jsx)(d.Button, {
+    }), l && (0, r.jsx)(d.Button, {
       className: v.button,
       color: v.buttonColor,
       size: d.Button.Sizes.SMALL,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   LOGO_SIZE: function() {
-    return L
+    return b
   },
   default: function() {
     return P
@@ -29,8 +29,8 @@ var a = s("735250"),
   x = s("215023"),
   _ = s("474936"),
   N = s("689938"),
-  b = s("897246");
-let L = (0, m.getLogoSize)(96),
+  L = s("897246");
+let b = (0, m.getLogoSize)(96),
   v = {
     [i.CollectiblesCategorySkuId.DISXCORE]: {
       left: () => s("136648"),
@@ -91,7 +91,7 @@ let L = (0, m.getLogoSize)(96),
       children: N.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
         getPremium: e => (0, a.jsx)(u.Clickable, {
           innerRef: n,
-          className: b.getPremiumHook,
+          className: L.getPremiumHook,
           onClick: () => {
             (0, d.default)({
               subscriptionTier: _.PremiumSubscriptionSKUs.TIER_2,
@@ -127,24 +127,24 @@ function A(e) {
     outlineColor: null != C ? C.border.toHslString() : void 0
   };
   return (0, a.jsxs)("div", {
-    className: r()(b.condensedBannerContainer),
+    className: r()(L.condensedBannerContainer),
     children: [(0, a.jsx)("img", {
       src: d,
       style: E,
-      className: b.condensedBannerImage,
+      className: L.condensedBannerImage,
       alt: ""
     }), null != f && (0, a.jsx)("img", {
       src: f,
-      className: r()(b.overflowImage, {
-        [b.overflowImageLeft]: c
+      className: r()(L.overflowImage, {
+        [L.overflowImageLeft]: c
       }),
       alt: ""
     }), (0, a.jsx)("img", {
-      className: r()(b.condensedCategoryLogo, {
-        [b.condensedCategoryLogoLeft]: !c
+      className: r()(L.condensedCategoryLogo, {
+        [L.condensedCategoryLogoLeft]: !c
       }),
       src: (0, m.getCollectiblesAssetURL)(i.logo, {
-        size: L
+        size: b
       }),
       alt: i.name,
       style: {
@@ -152,8 +152,8 @@ function A(e) {
       }
     }), (0, a.jsx)(S.default, {
       category: i,
-      className: r()(b.limitedTimeBadge, {
-        [b.limitedTimeBadgeLeft]: c
+      className: r()(L.limitedTimeBadge, {
+        [L.limitedTimeBadgeLeft]: c
       }),
       display: "banner"
     })]
@@ -179,30 +179,30 @@ function P(e) {
     index: c
   }) : (0, a.jsxs)(h.default, {
     asset: l.banner,
-    className: r()(b.shopBanner, n),
+    className: r()(L.shopBanner, n),
     style: null != d ? {
       background: "".concat((0, I.getBackgroundGradient)(d), " border-box border-box"),
       outlineColor: d.border.toHslString()
     } : void 0,
     children: [(0, a.jsxs)("div", {
-      className: b.discordLogo,
+      className: L.discordLogo,
       children: [(0, a.jsx)(C.default, {
-        className: b.discordIcon
+        className: L.discordIcon
       }), (0, a.jsx)(E.default, {
-        className: b.discordWordmark
+        className: L.discordWordmark
       })]
     }), (0, a.jsx)("img", {
-      className: b.categoryLogo,
+      className: L.categoryLogo,
       src: (0, m.getCollectiblesAssetURL)(l.logo, {
-        size: L
+        size: b
       }),
       alt: l.name,
       style: {
         maxWidth: null === (s = x.categoryBannerOverrides[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
       }
     }), (0, a.jsx)(u.Text, {
-      className: r()(b.summary, {
-        [b.blackSummary]: f
+      className: r()(L.summary, {
+        [L.blackSummary]: f
       }),
       variant: "text-md/normal",
       children: l.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(R, {
@@ -210,7 +210,7 @@ function P(e) {
       }) : l.summary
     }), !o && (0, a.jsx)(S.default, {
       category: l,
-      className: b.limitedTimeBadge,
+      className: L.limitedTimeBadge,
       display: "banner"
     })]
   })

@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return N
   },
   getOverflowImages: function() {
-    return b
+    return L
   }
 });
 var a = s("180650"),
@@ -87,7 +87,7 @@ let x = {
       categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
     }
   }],
-  b = (e, t) => {
+  L = (e, t) => {
     let {
       overflowSrcStatic: s,
       overflowSrcAnimated: a,

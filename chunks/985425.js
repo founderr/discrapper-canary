@@ -1,24 +1,24 @@
 "use strict";
-l.r(a), l.d(a, {
+t.r(a), t.d(a, {
   default: function() {
     return S
   }
 });
-var t = l("735250");
-l("470079");
-var i = l("120356"),
-  r = l.n(i),
-  n = l("442837"),
-  s = l("481060"),
-  o = l("239091"),
-  u = l("906732"),
-  d = l("1585"),
-  c = l("158776"),
-  f = l("586791"),
-  m = l("998502"),
-  v = l("654904"),
-  p = l("486324"),
-  g = l("783779");
+var l = t("735250");
+t("470079");
+var i = t("120356"),
+  r = t.n(i),
+  n = t("442837"),
+  s = t("481060"),
+  o = t("239091"),
+  u = t("906732"),
+  d = t("1585"),
+  c = t("158776"),
+  f = t("586791"),
+  m = t("998502"),
+  v = t("654904"),
+  p = t("486324"),
+  g = t("783779");
 let h = m.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 
 function S(e) {
@@ -29,26 +29,26 @@ function S(e) {
     canUsePremiumCustomization: S,
     previewAvatar: I,
     previewAvatarDecoration: T,
-    previewTheme: A,
-    previewPrimaryColor: E,
-    className: y,
-    disabledInputs: P,
+    previewTheme: P,
+    previewPrimaryColor: A,
+    className: E,
+    disabledInputs: y,
     isTryItOutFlow: x,
     onUpsellClick: j
   } = e, {
     analyticsLocations: U
-  } = (0, u.default)(), C = (0, n.useStateFromStores)([c.default], () => c.default.getStatus(a.id));
-  return (0, t.jsxs)(s.Clickable, {
-    "aria-disabled": P,
-    onClick: P ? void 0 : e => {
+  } = (0, u.default)(), N = (0, n.useStateFromStores)([c.default], () => c.default.getStatus(a.id));
+  return (0, l.jsxs)(s.Clickable, {
+    "aria-disabled": y,
+    onClick: y ? void 0 : e => {
       if (!(null == i || (null == m ? void 0 : m.canUsePremiumProfileCustomization) || S)) {
         null == j || j();
         return
       }(0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await l.e("34627").then(l.bind(l, "445924"));
-        return () => (0, t.jsx)(e, {
+        } = await t.e("34627").then(t.bind(t, "445924"));
+        return () => (0, l.jsx)(e, {
           changeAvatarAction: () => (0, v.handleOpenSelectImageModal)(p.UploadTypes.AVATAR, null == i ? void 0 : i.id, x),
           changeDecorationAction: () => {
             (0, d.openAvatarDecorationModal)({
@@ -61,20 +61,20 @@ function S(e) {
       })
     },
     className: r()(g.avatar, {
-      [g.clickable]: !P
+      [g.clickable]: !y
     }),
-    children: [(0, t.jsx)(h, {
+    children: [(0, l.jsx)(h, {
       src: I,
       avatarDecoration: T,
-      imageClassName: r()(y, {
-        [g.overlay]: !P
+      imageClassName: r()(E, {
+        [g.overlay]: !y
       }),
       size: s.AvatarSizes.SIZE_80,
       "aria-label": a.username,
-      status: C,
+      status: N,
       statusTooltip: !1,
-      statusBackdropColor: null != E ? (0, s.getStatusBackdropColor)(A) : void 0
-    }), !P && (0, t.jsx)(f.default, {
+      statusBackdropColor: null != A ? (0, s.getStatusBackdropColor)(P) : void 0
+    }), !y && (0, l.jsx)(f.default, {
       className: g.editPencil,
       color: "white"
     })]

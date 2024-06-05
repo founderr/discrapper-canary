@@ -1,24 +1,24 @@
 "use strict";
-l.r(a);
-var t = l("735250");
-l("470079");
-var i = l("920906"),
-  r = l("399606"),
-  n = l("607070");
+t.r(a);
+var l = t("735250");
+t("470079");
+var i = t("920906"),
+  r = t("399606"),
+  n = t("607070");
 a.default = e => {
   let {
     children: a,
-    initTranslate3d: l
+    initTranslate3d: t
   } = e, s = (0, r.useStateFromStores)([n.default], () => n.default.useReducedMotion), o = (0, i.useSpring)({
     immediate: s,
     from: {
-      transform: l
+      transform: t
     },
     to: {
       transform: "translate3d(0, 0, 0)"
     }
   });
-  return (0, t.jsx)(i.animated.div, {
+  return (0, l.jsx)(i.animated.div, {
     style: o,
     children: a
   })

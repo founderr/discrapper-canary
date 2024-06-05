@@ -26,8 +26,8 @@ t.default = (0, c.default)(e => {
     guildId: S,
     channelId: p,
     prompt: I,
-    disableGuildSelect: T,
-    disclosures: g,
+    disableGuildSelect: g,
+    disclosures: T,
     integrationType: A
   } = e, N = "OAuth2Authorize_".concat(n, "_").concat(S, "_").concat(p), v = null != A ? null == o ? void 0 : o.get(A) : void 0, R = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : i.default.getApplication(n);
   return new Promise((e, t) => {
@@ -44,7 +44,7 @@ t.default = (0, c.default)(e => {
       authorizations: o,
       clientId: n,
       scopes: null != u ? u : [],
-      disclosures: null != g ? g : [],
+      disclosures: null != T ? T : [],
       callback: i,
       responseType: E,
       redirectUri: h,
@@ -55,7 +55,7 @@ t.default = (0, c.default)(e => {
       guildId: S,
       channelId: p,
       prompt: I,
-      disableGuildSelect: "boolean" == typeof T ? T : "true" === T,
+      disableGuildSelect: "boolean" == typeof g ? g : "true" === g,
       integrationType: A
     }), {
       modalKey: N,
