@@ -22,15 +22,15 @@ function d(e) {
     avatarOverride: E
   } = e, [I, T] = i.useState(!1), f = (0, r.useStateFromStores)([s.default], () => s.default.useReducedMotion), S = (0, r.useStateFromStores)([l.default], () => l.default.isFocused()) && (I || !f && !c), {
     pendingAvatar: h
-  } = (0, u.default)({}), A = (0, r.useStateFromStores)([o.default], () => null != n && null != t ? o.default.getMember(n, t.id) : null), m = i.useMemo(() => null != t ? (0, a.getPreviewAvatar)(_ ? null != E ? E : h : void 0, A, t, {
+  } = (0, u.default)({}), A = void 0 !== E ? E : _ ? h : void 0, m = (0, r.useStateFromStores)([o.default], () => null != n && null != t ? o.default.getMember(n, t.id) : null), N = i.useMemo(() => null != t ? (0, a.getPreviewAvatar)(A, m, t, {
     canAnimate: S,
     size: d
-  }) : void 0, [_, h, A, t, S, d, E]), N = i.useCallback(() => T(!0), []);
+  }) : void 0, [A, m, t, S, d]), p = i.useCallback(() => T(!0), []);
   return {
-    avatarSrc: m,
+    avatarSrc: N,
     isAvatarAnimating: S,
     eventHandlers: {
-      onMouseEnter: N,
+      onMouseEnter: p,
       onMouseLeave: i.useCallback(() => T(!1), [])
     }
   }

@@ -96684,7 +96684,7 @@ html .invoiceCancelRow__6ff3e {
     padding-bottom: 10px;
     margin: 32px 0 20px;
     font-weight: 500;
-    font-size: 16px
+    font-size: 1rem
 }
 
 .viewAllGamesButton__34838 {
@@ -96704,7 +96704,7 @@ html .invoiceCancelRow__6ff3e {
 
 .viewAllGames__76b00,
 .viewAllNitroGames_a65ce4 {
-    font-size: 16px;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -96761,7 +96761,7 @@ html .invoiceCancelRow__6ff3e {
     padding-bottom: 10px;
     margin: 32px 0 20px;
     font-weight: 500;
-    font-size: 16px
+    font-size: 1rem
 }
 
 .headerBar__3337a {
