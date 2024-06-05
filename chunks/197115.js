@@ -44,15 +44,16 @@ t.default = function(e) {
     giftMessage: V,
     overrideDisabledButtonText: x,
     shinyButtonClassName: F,
-    ...H
-  } = e, Y = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), j = (0, a.useStateFromStores)([f.default], () => f.default.isFocused()), W = (0, a.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), {
-    analyticsLocations: K
-  } = (0, u.default)(), z = e => {
-    if (e.preventDefault(), null == Y) {
+    onClickOverride: H,
+    ...Y
+  } = e, j = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), W = (0, a.useStateFromStores)([f.default], () => f.default.isFocused()), K = (0, a.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), {
+    analyticsLocations: z
+  } = (0, u.default)(), Z = e => {
+    if (e.preventDefault(), null == j) {
       (0, c.transitionTo)(p.Routes.LOGIN);
       return
     }
-    if (null == R || R(e), (null == W ? void 0 : W.status) === p.SubscriptionStatusTypes.ACCOUNT_HOLD) {
+    if (null == R || R(e), (null == K ? void 0 : K.status) === p.SubscriptionStatusTypes.ACCOUNT_HOLD) {
       (0, d.trackPremiumSettingsPaneOpened)(), l.default.open(p.UserSettingsSections.PREMIUM), null == b || b(!1);
       return
     }! function(e) {
@@ -123,14 +124,14 @@ t.default = function(e) {
         giftMessage: T
       })
     }({
-      isClaimed: Y.isClaimed(),
-      isVerified: Y.verified,
+      isClaimed: j.isClaimed(),
+      isVerified: j.verified,
       isGift: t,
       subscriptionTier: r,
       trialId: v,
       postSuccessGuild: U,
       onSubscribeModalClose: b,
-      analyticsLocations: K,
+      analyticsLocations: z,
       premiumModalAnalyticsLocation: G,
       applicationId: B,
       giftMessage: V
@@ -141,8 +142,8 @@ t.default = function(e) {
     className: L,
     innerClassName: C.premiumSubscribeButton,
     color: o.Button.Colors.BRAND_INVERTED,
-    onClick: z,
-    ...H,
+    onClick: null != H ? H : Z,
+    ...Y,
     children: [w && (0, i.jsx)(A.default, {
       className: C.premiumIcon
     }), (0, i.jsx)("span", {
@@ -155,8 +156,8 @@ t.default = function(e) {
     className: L,
     innerClassName: C.giftButton,
     color: o.Button.Colors.PRIMARY,
-    onClick: z,
-    ...H,
+    onClick: null != H ? H : Z,
+    ...Y,
     children: [(0, i.jsx)(h.default, {
       className: C.giftIcon
     }), (0, i.jsx)("span", {
@@ -164,13 +165,13 @@ t.default = function(e) {
       children: null != M ? M : O.default.Messages.PREMIUM_GIFTING_BUTTON
     })]
   });
-  let Z = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
-    X = null != W ? (0, m.getPremiumPlanItem)(W) : null,
-    Q = null != X ? m.default.getPremiumType(X.planId) : null == Y ? void 0 : Y.premiumType,
-    q = r === N.PremiumSubscriptionSKUs.TIER_2 && null != Q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(Q);
-  q && (Z = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
-  let J = null != W && W.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !q,
-    $ = J ? null != x ? x : function(e) {
+  let X = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
+    Q = null != K ? (0, m.getPremiumPlanItem)(K) : null,
+    q = null != Q ? m.default.getPremiumType(Q.planId) : null == j ? void 0 : j.premiumType,
+    J = r === N.PremiumSubscriptionSKUs.TIER_2 && null != q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(q);
+  J && (X = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
+  let $ = null != K && K.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(K.planId) && !J,
+    ee = $ ? null != x ? x : function(e) {
       let {
         ctaSubscriptionSkuId: t,
         currentPremiumType: n
@@ -188,32 +189,32 @@ t.default = function(e) {
       }
     }({
       ctaSubscriptionSkuId: r,
-      currentPremiumType: Q
+      currentPremiumType: q
     }) : null;
 
-  function ee(e) {
+  function et(e) {
     var t, n;
     return (0, i.jsxs)(S.default, {
-      disabled: J,
-      onClick: z,
+      disabled: $,
+      onClick: null != H ? H : Z,
       innerClassName: C.premiumSubscribeButton,
       color: r === N.PremiumSubscriptionSKUs.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
       size: g,
       className: F,
       wrapperClassName: L,
-      pauseAnimation: !j || k,
-      ...H,
+      pauseAnimation: !W || k,
+      ...Y,
       ...e,
       children: [w && (0, i.jsx)(A.default, {
         className: s()(C.premiumIcon, P)
       }), (0, i.jsx)("span", {
         className: s()(C.buttonText, y),
-        children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : M) && void 0 !== n ? n : Z
+        children: null !== (n = null !== (t = null == ee ? void 0 : ee.disabledButtonText) && void 0 !== t ? t : M) && void 0 !== n ? n : X
       })]
     })
   }
-  return (null == $ ? void 0 : $.disabledButtonTooltipText) != null ? (0, i.jsx)(o.Tooltip, {
-    text: $.disabledButtonTooltipText,
-    children: ee
-  }) : ee()
+  return (null == ee ? void 0 : ee.disabledButtonTooltipText) != null ? (0, i.jsx)(o.Tooltip, {
+    text: ee.disabledButtonTooltipText,
+    children: et
+  }) : et()
 }

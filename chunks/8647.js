@@ -15,15 +15,16 @@ var r = s("120356"),
   T = s("474936"),
   I = s("981631"),
   R = s("689938"),
-  f = s("500810");
+  f = s("90502");
 t.default = function(e) {
   let {
-    isFullscreen: t
+    isFullscreen: t,
+    buttonClassName: s
   } = e, {
-    promotion: s
-  } = (0, E.useBogoPromotion)(), r = (0, n.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription());
+    promotion: r
+  } = (0, E.useBogoPromotion)(), S = (0, n.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription());
   if (!(0, c.useIsEligibleForBogoPromotion)()) return null;
-  let S = new Date(s.endDate);
+  let A = new Date(r.endDate);
   return (0, a.jsx)("div", {
     className: i()(f.banner, {
       [f.bannerFullscreen]: t
@@ -34,17 +35,17 @@ t.default = function(e) {
         children: [(0, a.jsx)(l.Heading, {
           variant: "display-sm",
           color: "always-white",
-          children: null == r ? R.default.Messages.BOGO_BUY_HEADLINE : R.default.Messages.BOGO_UPGRADE_HEADLINE
+          children: null == S ? R.default.Messages.BOGO_BUY_HEADLINE : R.default.Messages.BOGO_UPGRADE_HEADLINE
         }), (0, a.jsx)(l.Text, {
           className: f.countdown,
           variant: "text-sm/medium",
           children: (0, a.jsx)(d.default, {
-            endDate: S
+            endDate: A
           })
         }), (0, a.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "always-white",
-          children: null == r ? R.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
+          children: null == S ? R.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
             helpCenterLink: u.default.getArticleURL(I.HelpdeskArticles.SUMMER_2023_BOGO)
           }) : R.default.Messages.BOGO_PERKS_SUBTITLE_SUB_FORMATTED.format({
             helpCenterLink: u.default.getArticleURL(I.HelpdeskArticles.SUMMER_2023_BOGO)
@@ -54,7 +55,7 @@ t.default = function(e) {
         buttonText: R.default.Messages.BOGO_CLAIM_OFFER,
         buttonTextClassName: f.subscribeButtonText,
         subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-        className: f.subscribeButton,
+        className: null != s ? s : f.subscribeButton,
         forceInverted: !0
       })]
     })

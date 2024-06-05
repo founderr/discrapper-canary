@@ -25,6 +25,7 @@ e.exports = {
   premiumTierCardsContainer: "premiumTierCardsContainer__686eb",
   premiumTierCardsContainerFullscreen: "premiumTierCardsContainerFullscreen_c5e38a premiumTierCardsContainer__686eb",
   premiumTierCardsContainerSettings: "premiumTierCardsContainerSettings_d53fe4 premiumTierCardsContainer__686eb",
+  promoBannerContainer: "promoBannerContainer__31ea9",
   roundedSubscribeButton: "roundedSubscribeButton__6cab1",
   scroller: "scroller__49aa3",
   settingsContainer: "settingsContainer__79255",

@@ -18,19 +18,20 @@ t.default = e => {
   let s, r, {
       title: I,
       titleClassName: R,
-      perkImage: f,
-      isCarousel: S,
-      onCtaClick: A,
-      perkComponent: m,
-      subtitle: N = "",
-      descriptionCta: p = "",
-      cardVariant: g,
-      subtitleClassName: C
+      buttonClassName: f,
+      perkImage: S,
+      isCarousel: A,
+      onCtaClick: m,
+      perkComponent: N,
+      subtitle: p = "",
+      descriptionCta: g = "",
+      cardVariant: C,
+      subtitleClassName: P
     } = e,
-    P = (0, o.useCardVariantsInfo)(g),
-    O = (0, l.useFreeBoostUserTenureReward)(),
-    M = (null == O ? void 0 : O.nitroTenureStatus) === d.NitroRewardStatus.REDEEMABLE;
-  switch (null == O ? void 0 : O.nitroTenureStatus) {
+    O = (0, o.useCardVariantsInfo)(C),
+    M = (0, l.useFreeBoostUserTenureReward)(),
+    h = (null == M ? void 0 : M.nitroTenureStatus) === d.NitroRewardStatus.REDEEMABLE;
+  switch (null == M ? void 0 : M.nitroTenureStatus) {
     case d.NitroRewardStatus.REDEEMABLE:
       s = T, r = "unlocked icon";
       break;
@@ -49,33 +50,34 @@ t.default = e => {
     }), (0, a.jsx)(u.default, {
       title: I,
       shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-      cardVariantStyleInfo: P,
+      cardVariantStyleInfo: O,
       titleClassName: R,
-      subtitle: N,
-      subtitleClassName: C
-    }), null != f && (0, a.jsx)("img", {
-      src: f,
+      subtitle: p,
+      subtitleClassName: P
+    }), null != S && (0, a.jsx)("img", {
+      src: S,
       alt: "",
       className: i()({
-        [c.cardImage]: !S,
-        [c.carouselCardImage]: S
+        [c.cardImage]: !A,
+        [c.carouselCardImage]: A
       })
-    }), null != m && (0, a.jsx)(a.Fragment, {
+    }), null != N && (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)("div", {
         className: c.cardIllustrationNoHover,
         children: [(0, a.jsx)("div", {
           className: c.cardComponent,
-          children: m
-        }), 0 !== p.length && null != A && (0, a.jsx)(n.Button, {
-          disabled: !M,
+          children: N
+        }), 0 !== g.length && null != m && (0, a.jsx)(n.Button, {
+          className: f,
+          disabled: !h,
           fullWidth: !0,
-          onClick: A,
+          onClick: m,
           children: (0, a.jsxs)("div", {
-            className: null == P ? void 0 : null === (t = P.descriptionCta) || void 0 === t ? void 0 : t.className,
+            className: null == O ? void 0 : null === (t = O.descriptionCta) || void 0 === t ? void 0 : t.className,
             children: [(0, a.jsx)("img", {
               alt: r,
               src: s
-            }), p]
+            }), g]
           })
         })]
       })

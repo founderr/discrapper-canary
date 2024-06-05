@@ -1,10 +1,14 @@
 "use strict";
 e.exports = {
   button: "button__042a5",
+  buttonShine: "buttonShine__5059e",
   description: "description__6c7b5",
   fileSize: "fileSize_dd3b5f",
+  premiumSubscribeButton: "premiumSubscribeButton_be0c9f",
   price: "price__64dda",
   priceWrapper: "priceWrapper__6f72a",
+  subButton: "subButton__93b65",
+  subscribeButtonText: "subscribeButtonText__817ee",
   text: "text__19f0b",
   tier0: "tier0__5ceac",
   tier0Description: "tier0Description__54bdc",

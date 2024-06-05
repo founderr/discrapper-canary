@@ -21,40 +21,43 @@ t.default = e => {
   let {
     title: r,
     titleClassName: f = "",
-    subtitle: S = "",
-    description: A = "",
-    descriptionCta: m = "",
-    isPremiumGetCta: N,
-    onCtaClick: p,
-    cardVariant: g
-  } = e, C = (0, d.usePremiumTrialOffer)(), P = null == C ? void 0 : C.subscription_trial, O = (0, u.usePremiumDiscountOffer)(), M = (0, l.formatTrialCtaIntervalDuration)({
-    intervalType: null == P ? void 0 : P.interval,
-    intervalCount: null == P ? void 0 : P.interval_count
-  }), h = (0, o.useResponseOnUserState)({
+    buttonClassName: S = "",
+    subtitle: A = "",
+    description: m = "",
+    descriptionCta: N = "",
+    isPremiumGetCta: p,
+    onCtaClick: g,
+    cardVariant: C
+  } = e, P = (0, d.usePremiumTrialOffer)(), O = null == P ? void 0 : P.subscription_trial, M = (0, u.usePremiumDiscountOffer)(), h = (0, l.formatTrialCtaIntervalDuration)({
+    intervalType: null == O ? void 0 : O.interval,
+    intervalCount: null == O ? void 0 : O.interval_count
+  }), L = (0, o.useResponseOnUserState)({
     defaultResponse: I.default.Messages.PREMIUM_SETTINGS_GET,
     onNonTier2Subscriber: I.default.Messages.BILLING_SWITCH_PLAN_UPGRADE,
-    onTier2TrialOffer: M,
-    onTier0TrialOffer: M,
+    onTier2TrialOffer: h,
+    onTier0TrialOffer: h,
     onDiscountOffer: I.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-      percent: null == O ? void 0 : O.discount.amount
+      percent: null == M ? void 0 : M.discount.amount
     })
-  }), L = (0, c.useCardVariantsInfo)(g);
+  }), x = (0, c.useCardVariantsInfo)(C);
   return (0, a.jsxs)("div", {
-    className: i()(R.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
+    className: i()(R.cardDescription, null == x ? void 0 : null === (t = x.description) || void 0 === t ? void 0 : t.className),
     children: [(0, a.jsx)(_.default, {
       title: r,
-      cardVariantStyleInfo: L,
+      cardVariantStyleInfo: x,
       titleClassName: f,
-      subtitle: S,
-      description: A
-    }), N && (0, a.jsx)(E.default, {
+      subtitle: A,
+      description: m
+    }), p && (0, a.jsx)(E.default, {
+      className: S,
       subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-      buttonText: h,
+      buttonText: L,
       color: n.Button.Colors.GREEN,
       look: n.Button.Looks.FILLED
-    }), 0 !== m.length && (null == (s = null == L ? void 0 : L.descriptionCta) ? void 0 : s.hideOnHoverComponent) !== !0 && null != p && (0, a.jsx)(n.Button, {
-      onClick: p,
-      children: m
+    }), 0 !== N.length && (null == (s = null == x ? void 0 : x.descriptionCta) ? void 0 : s.hideOnHoverComponent) !== !0 && null != g && (0, a.jsx)(n.Button, {
+      className: S,
+      onClick: g,
+      children: N
     })]
   })
 }

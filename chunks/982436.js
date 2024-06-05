@@ -15,6 +15,7 @@ e.exports = {
   fullscreenSparkleStar4: "fullscreenSparkleStar4__696e7 sparkleStar_b659d5",
   fullscreenTextContainer: "fullscreenTextContainer_d5d21c",
   header: "header__63457",
+  modifiedDescription: "modifiedDescription_f3e913",
   settingsContainer: "settingsContainer__35e25",
   settingsSparkleStar1: "settingsSparkleStar1__5418f sparkleStar_b659d5",
   settingsSparkleStar2: "settingsSparkleStar2_aaeabf sparkleStar_b659d5",

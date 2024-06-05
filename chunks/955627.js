@@ -31,6 +31,7 @@ e.exports = {
   purpleGradient: "purpleGradient__82d4b",
   reducedMotion: "reducedMotion__6b806",
   rotateCard: "rotateCard_fa0e1b",
+  roundedButton: "roundedButton__95800",
   topCover: "topCover_bed28d",
   ultraFlipCard: "ultraFlipCard__5476a"
 }
