@@ -191,7 +191,7 @@ class b {
     }
     let n = [],
       i = [],
-      r = this.rows.findIndex(e => "GROUP" === e.type && e.id === g.StatusTypes.OFFLINE);
+      r = this.rows.findIndex(e => null != e && "GROUP" === e.type && e.id === g.StatusTypes.OFFLINE);
     if (r < 0) {
       this.experimentalGroups = [], this.experimentalRows = [];
       return
