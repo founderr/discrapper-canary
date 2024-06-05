@@ -86,6 +86,7 @@ let b = l.memo(e => {
   })
 });
 b.displayName = "ConnectedVoiceUser";
+let U = [];
 t.default = function(e) {
   let {
     allowPreviews: t = !0,
@@ -100,15 +101,15 @@ t.default = function(e) {
     withGuildIcon: E = !1,
     className: g,
     children: _
-  } = e, [T, v] = l.useState(null), [N, x] = l.useState(!1), M = l.useRef(null), y = (0, C.useEnsureSyncedChannelVoiceStates)(s.id, u), L = l.useRef(new o.DelayedCall(50, () => {
+  } = e, [T, v] = l.useState(null), [N, x] = l.useState(!1), M = l.useRef(null), y = (0, C.useEnsureSyncedChannelVoiceStates)(s.id, null != u ? u : U), L = l.useRef(new o.DelayedCall(50, () => {
     v(M.current), M.current = null
   })), P = l.useRef(new o.DelayedCall(175, () => {
     v(null)
-  })), U = l.useCallback(e => {
+  })), F = l.useCallback(e => {
     t && (x(!0), P.current.cancel(), M.current = e, L.current.delay())
-  }, [t]), F = l.useCallback(e => {
+  }, [t]), w = l.useCallback(e => {
     t && (L.current.cancel(), T === e && (x(!1), P.current.delay()))
-  }, [t, T]), w = (0, r.useStateFromStoresArray)([A.default], () => {
+  }, [t, T]), k = (0, r.useStateFromStoresArray)([A.default], () => {
     if (d) return [];
     let e = new Set;
     return null == y || y.forEach(t => {
@@ -120,8 +121,8 @@ t.default = function(e) {
       })
     }), Array.from(e)
   });
-  (0, f.default)(w);
-  let k = (() => {
+  (0, f.default)(k);
+  let H = (() => {
     if (null == y || 0 === y.length) return null;
     let e = (d && y.length > c + 1 ? y.slice(0, c) : y).map(e => {
       var t;
@@ -143,8 +144,8 @@ t.default = function(e) {
         channel: s,
         collapsed: d,
         canDrag: n && I.default.can(j.Permissions.MOVE_MEMBERS, s),
-        showPreview: U,
-        hidePreview: F,
+        showPreview: F,
+        hidePreview: w,
         previewIsOpen: N,
         shouldShowPreview: T === l.id,
         tabIndex: h,
@@ -158,12 +159,12 @@ t.default = function(e) {
       numUsers: y.length - c
     })), e
   })();
-  return null == k && null == _ ? null : (0, a.jsxs)(R.VoiceUserList, {
+  return null == H && null == _ ? null : (0, a.jsxs)(R.VoiceUserList, {
     className: i()(g, D.list, {
       [D.collapsed]: d,
       [D.withGuildIcon]: E
     }),
     collapsed: d,
-    children: [k, _]
+    children: [H, _]
   })
 }

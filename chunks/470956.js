@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useEnsureSyncedChannelParticipants: function() {
-    return c
+    return d
   },
   useEnsureSyncedChannelVoiceStates: function() {
-    return d
+    return u
   }
 }), n("47120");
 var a = n("470079"),
@@ -12,14 +12,13 @@ var a = n("470079"),
   s = n("442837"),
   i = n("413523"),
   r = n("878884"),
-  o = n("19780"),
-  u = n("413402");
+  o = n("413402");
 
-function d(e, t) {
-  let n = (0, u.useIsRTCVoiceStateDesyncExperimentEnabled)(),
-    i = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getChannelId() === e && n ? r.default.desyncedVoiceStates : null);
+function u(e, t) {
+  let n = (0, o.useIsRTCVoiceStateDesyncExperimentEnabled)(),
+    i = (0, s.useStateFromStores)([r.default], () => n ? r.default.getDesyncedVoiceStates(e) : null);
   return a.useMemo(() => (function(e, t) {
-    if (!(0, u.isRTCVoiceStateDesyncExperimentEnabled)() || null == e || 0 === e.length) return t;
+    if (!(0, o.isRTCVoiceStateDesyncExperimentEnabled)() || null == e || 0 === e.length) return t;
     let n = null != t ? [...t] : [];
     return e.forEach(e => {
       n.splice((0, l.sortedIndexBy)(n, e, e => {
@@ -32,14 +31,16 @@ function d(e, t) {
   })(i, t), [i, t])
 }
 
-function c(e, t) {
-  let n = (0, u.useIsRTCVoiceStateDesyncExperimentEnabled)(),
-    d = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getChannelId() === e && n ? r.default.desyncedParticipants : null);
+function d(e, t) {
+  let n = function(e) {
+    let t = (0, o.useIsRTCVoiceStateDesyncExperimentEnabled)();
+    return (0, s.useStateFromStores)([r.default], () => t ? r.default.getDesyncedParticipants(e) : null)
+  }(e);
   return a.useMemo(() => (function(e, t) {
-    if (!(0, u.isRTCVoiceStateDesyncExperimentEnabled)() || null == e || 0 === e.length) return t;
+    if (!(0, o.isRTCVoiceStateDesyncExperimentEnabled)() || null == e || 0 === e.length) return t;
     let n = [...t];
     return e.forEach(e => {
       n.splice((0, l.sortedIndexBy)(n, e, e => (0, i.sortKey)(e)), 0, e)
     }), n
-  })(d, t), [d, t])
+  })(n, t), [n, t])
 }

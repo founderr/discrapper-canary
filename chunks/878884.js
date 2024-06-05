@@ -19,7 +19,9 @@ function m(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p {
+let p = [],
+  E = [];
+class C {
   values() {
     return this.cachedValues(this.version)
   }
@@ -30,7 +32,8 @@ class p {
     this.data.get(e) !== t && (this.data.set(e, t), this.version++)
   }
   delete(e) {
-    this.data.delete(e) && this.version++
+    let t = this.data.delete(e);
+    return t && this.version++, t
   }
   clear() {
     0 !== this.data.size && (this.data.clear(), this.version++)
@@ -39,45 +42,51 @@ class p {
     m(this, "version", 0), m(this, "data", new Map), m(this, "cachedValues", void 0), this.cachedValues = (0, r.cachedFunction)(e => Array.from(this.data.values()))
   }
 }
-let E = new p,
-  C = new p,
-  g = null;
-class S extends(a = l.default.Store) {
+let g = new C,
+  S = new C,
+  _ = null;
+
+function T(e) {
+  let t = g.delete(e),
+    n = S.delete(e);
+  return t || n
+}
+class I extends(a = l.default.Store) {
   initialize() {
     this.waitFor(d.default, u.default)
   }
   get desyncedVoiceStatesCount() {
-    return E.size()
+    return g.size()
   }
-  get desyncedVoiceStates() {
-    return E.values()
+  getDesyncedVoiceStates(e) {
+    return e !== _ ? p : g.values()
   }
-  get desyncedParticipants() {
-    return C.values()
+  getDesyncedParticipants(e) {
+    return e !== _ ? E : S.values()
   }
 }
-m(S, "displayName", "RTCConnectionDesyncStore"), t.default = new S(s.default, {
+m(I, "displayName", "RTCConnectionDesyncStore"), t.default = new I(s.default, {
   CONNECTION_OPEN: function() {
-    E.clear(), C.clear()
+    g.clear(), S.clear()
   },
   RTC_CONNECTION_STATE: function(e) {
     let {
       state: t,
       channelId: n
     } = e;
-    if (t !== f.RTCConnectionStates.DISCONNECTED && g === n) return !1;
-    g = n, E.clear(), C.clear()
+    if (t !== f.RTCConnectionStates.DISCONNECTED && _ === n) return !1;
+    _ = n, g.clear(), S.clear()
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
     } = e;
-    return null != g && t.reduce((e, t) => {
+    return null != _ && t.reduce((e, t) => {
       let {
         userId: n,
         channelId: a
       } = t;
-      return null != a && a === g ? (E.delete(n), C.delete(n), !0) : e
+      return null != a && a === _ && !!T(n) || e
     }, !1)
   },
   RTC_CONNECTION_FLAGS: function(e) {
@@ -86,19 +95,19 @@ m(S, "displayName", "RTCConnectionDesyncStore"), t.default = new S(s.default, {
       guildId: n,
       channelId: a
     } = e, l = d.default.getVoiceStateForUser(t);
-    if ((null == l ? void 0 : l.channelId) === a && a === g) return !1;
-    let s = new i.default({
+    if ((null == l ? void 0 : l.channelId) === a && a === _) return !1;
+    let s = u.default.getUser(t);
+    if (null == s) return !1;
+    let r = new i.default({
         userId: t,
         channelId: a
       }),
-      r = (0, c.makeSortedVoiceState)(s, null != n ? n : f.ME, t);
-    E.set(t, r);
-    let m = u.default.getUser(t);
-    if (null == m) return;
+      m = (0, c.makeSortedVoiceState)(r, null != n ? n : f.ME, t);
+    g.set(t, m);
     let p = {
       type: h.ParticipantTypes.USER,
-      user: m,
-      id: m.id,
+      user: s,
+      id: s.id,
       streamId: null,
       voiceState: new i.default({
         userId: t,
@@ -109,15 +118,15 @@ m(S, "displayName", "RTCConnectionDesyncStore"), t.default = new S(s.default, {
       lastSpoke: 0,
       soundsharing: !1,
       ringing: !1,
-      userNick: o.default.getName(n, a, m),
+      userNick: o.default.getName(n, a, s),
       localVideoDisabled: !1
     };
-    C.set(t, p)
+    S.set(t, p)
   },
   RTC_CONNECTION_CLIENT_DISCONNECT: function(e) {
     let {
       userId: t
     } = e;
-    E.delete(t)
+    return T(t)
   }
 })
