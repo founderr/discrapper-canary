@@ -1,53 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   FrecencyUserSettingsActionCreators: function() {
-    return O
-  },
-  PreloadedUserSettingsActionCreators: function() {
-    return p
-  },
-  UserSettingsActionCreatorsByType: function() {
     return C
   },
+  PreloadedUserSettingsActionCreators: function() {
+    return O
+  },
+  UserSettingsActionCreatorsByType: function() {
+    return R
+  },
   UserSettingsDelay: function() {
-    return f.UserSettingsDelay
+    return S.UserSettingsDelay
   },
   addDismissedContent: function() {
-    return L
-  },
-  checkAllDismissedContents: function() {
-    return M
-  },
-  clearDismissedContents: function() {
-    return D
-  },
-  removeDismissedContent: function() {
     return v
   },
+  checkAllDismissedContents: function() {
+    return y
+  },
+  clearDismissedContents: function() {
+    return M
+  },
+  removeDismissedContent: function() {
+    return D
+  },
   updateUserChannelSettings: function() {
-    return g
+    return L
   },
   updateUserGuildSettings: function() {
-    return R
+    return g
   }
 }), n("411104"), n("47120"), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
 var i = n("512722"),
   r = n.n(i),
   s = n("259443"),
   a = n("544891"),
-  o = n("377108"),
-  l = n("524437"),
-  u = n("433517"),
-  d = n("570140"),
-  _ = n("70956"),
-  c = n("915486"),
-  E = n("262847"),
-  I = n("581883"),
-  T = n("48481"),
-  f = n("526761"),
-  S = n("981631");
+  o = n("704215"),
+  l = n("377108"),
+  u = n("524437"),
+  d = n("433517"),
+  _ = n("570140"),
+  c = n("70956"),
+  E = n("915486"),
+  I = n("262847"),
+  T = n("581883"),
+  f = n("48481"),
+  S = n("526761"),
+  h = n("981631");
 
-function h(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -55,16 +56,16 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = "UserSettingsProtoLastWriteTimes",
-  m = Date.now();
-d.default.subscribe("CONNECTION_OPEN", () => {
+let m = "UserSettingsProtoLastWriteTimes",
+  N = Date.now();
+_.default.subscribe("CONNECTION_OPEN", () => {
   Date.now()
-}), d.default.subscribe("CONNECTION_CLOSED", () => {
+}), _.default.subscribe("CONNECTION_CLOSED", () => {
   Date.now()
 }), "undefined" != typeof document && (document.addEventListener("mousedown", () => {}), document.addEventListener("keydown", () => {}));
-class N {
+class p {
   getEditInfo() {
-    return I.default.getFullState()[this.type]
+    return T.default.getFullState()[this.type]
   }
   getCurrentValue() {
     return this.getEditInfo().proto
@@ -75,23 +76,23 @@ class N {
     if (null == i) throw Error("Unknown proto field name ".concat(String(e)));
     let r = i.T(),
       s = this.getCurrentValue()[e],
-      a = null != s ? r.fromBinary(r.toBinary(s), T.BINARY_READ_OPTIONS) : r.create();
+      a = null != s ? r.fromBinary(r.toBinary(s), f.BINARY_READ_OPTIONS) : r.create();
     if (!1 === t(a)) return;
     let o = this.ProtoClass.create();
-    o[e] = a, __OVERLAY__ ? d.default.dispatch({
+    o[e] = a, __OVERLAY__ ? _.default.dispatch({
       type: "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
       settings: {
         type: this.type,
         proto: o
       },
       delaySeconds: n,
-      jitter: n === f.UserSettingsDelay.AUTOMATED || n === f.UserSettingsDelay.DAILY,
+      jitter: n === S.UserSettingsDelay.AUTOMATED || n === S.UserSettingsDelay.DAILY,
       partial: !0,
       resetEditInfo: !1,
       local: !0
     }) : (this.logger.log("Updating ".concat(String(e), " with delay ").concat(n)), this.markDirty(o, {
       delaySeconds: n,
-      jitter: n === f.UserSettingsDelay.AUTOMATED || n === f.UserSettingsDelay.DAILY
+      jitter: n === S.UserSettingsDelay.AUTOMATED || n === S.UserSettingsDelay.DAILY
     }))
   }
   markDirty(e, t) {
@@ -103,7 +104,7 @@ class N {
       timeout: i.timeout
     };
     if (!i.loaded) throw Error("Cannot edit user settings proto because we have not yet loaded the stored version from the DB");
-    !1 !== t.dispatch && d.default.dispatch({
+    !1 !== t.dispatch && _.default.dispatch({
       type: "USER_SETTINGS_PROTO_UPDATE",
       settings: {
         type: this.type,
@@ -114,13 +115,13 @@ class N {
     });
     let a = null !== (n = t.delaySeconds) && void 0 !== n ? n : 0;
     if (null != s.timeout && a < i.timeoutDelay && !i.rateLimited && (clearTimeout(s.timeout), s.timeout = void 0), null == s.timeout) {
-      let e = a * _.default.Millis.SECOND;
-      t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.default.Millis.SECOND))), this.logger.log("Scheduling save from markDirty"), s.timeout = setTimeout(this.persistChanges, e), s.timeoutDelay = a
+      let e = a * c.default.Millis.SECOND;
+      t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * c.default.Millis.SECOND))), this.logger.log("Scheduling save from markDirty"), s.timeout = setTimeout(this.persistChanges, e), s.timeoutDelay = a
     }
-    null != t.cleanup && (s.cleanupFuncs = [...i.cleanupFuncs, ...t.cleanup]), null == i.protoToSave ? s.protoToSave = e : s.protoToSave = (0, T.mergeTopLevelFields)(this.ProtoClass, i.protoToSave, e), this.dispatchChanges(s)
+    null != t.cleanup && (s.cleanupFuncs = [...i.cleanupFuncs, ...t.cleanup]), null == i.protoToSave ? s.protoToSave = e : s.protoToSave = (0, f.mergeTopLevelFields)(this.ProtoClass, i.protoToSave, e), this.dispatchChanges(s)
   }
   dispatchChanges(e) {
-    d.default.dispatch({
+    _.default.dispatch({
       type: "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO",
       settings: {
         changes: e,
@@ -130,12 +131,12 @@ class N {
   }
   saveLastSendTime() {
     var e;
-    let t = null !== (e = u.Storage.get(A)) && void 0 !== e ? e : {};
-    t[this.type] = Date.now(), u.Storage.set(A, t)
+    let t = null !== (e = d.Storage.get(m)) && void 0 !== e ? e : {};
+    t[this.type] = Date.now(), d.Storage.set(m, t)
   }
   async loadIfNecessary(e) {
     if (__OVERLAY__) {
-      d.default.dispatch({
+      _.default.dispatch({
         type: "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY",
         settingsType: this.type
       });
@@ -154,8 +155,8 @@ class N {
             settings: t
           }
         } = await a.HTTP.get({
-          url: S.Endpoints.USER_SETTINGS_PROTO(this.type)
-        }), n = (0, T.b64ToProto)(this.ProtoClass, t);
+          url: h.Endpoints.USER_SETTINGS_PROTO(this.type)
+        }), n = (0, f.b64ToProto)(this.ProtoClass, t);
         if (null == n) {
           this.dispatchChanges({
             loading: !1,
@@ -163,13 +164,13 @@ class N {
           });
           return
         }
-        let i = E.default[this.type],
+        let i = I.default[this.type],
           {
             proto: r,
             isDirty: s,
             cleanupFuncs: o
-          } = (0, T.runMigrations)(n, i);
-        return await d.default.dispatch({
+          } = (0, f.runMigrations)(n, i);
+        return await _.default.dispatch({
           type: "USER_SETTINGS_PROTO_UPDATE",
           settings: {
             type: this.type,
@@ -189,7 +190,7 @@ class N {
     r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Marking dirty due to migrates"), r()(null == this.getEditInfo().editInfo.offlineEditDataVersion, "offline changes are not supported with migrations"), this.markDirty(e, {
       cleanup: t,
       dispatch: !1,
-      delaySeconds: f.UserSettingsDelay.AUTOMATED,
+      delaySeconds: S.UserSettingsDelay.AUTOMATED,
       jitter: !0
     })
   }
@@ -219,7 +220,7 @@ class N {
     })
   }
   constructor(e, t) {
-    h(this, "ProtoClass", void 0), h(this, "type", void 0), h(this, "logger", void 0), h(this, "beforeSendCallbacks", void 0), h(this, "lastSendTime", void 0), h(this, "persistChanges", void 0), this.ProtoClass = e, this.type = t, this.beforeSendCallbacks = [], this.lastSendTime = 0, this.persistChanges = async () => {
+    A(this, "ProtoClass", void 0), A(this, "type", void 0), A(this, "logger", void 0), A(this, "beforeSendCallbacks", void 0), A(this, "lastSendTime", void 0), A(this, "persistChanges", void 0), this.ProtoClass = e, this.type = t, this.beforeSendCallbacks = [], this.lastSendTime = 0, this.persistChanges = async () => {
       r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Persisting proto");
       let {
         editInfo: e
@@ -234,7 +235,7 @@ class N {
         } = t;
         return n(e.protoToSave)
       });
-      let t = (0, T.protoToB64)(this.ProtoClass, e.protoToSave);
+      let t = (0, f.protoToB64)(this.ProtoClass, e.protoToSave);
       if (null == t || "" === t) {
         this.logger.log("Not persisting proto because there is nothing to change");
         return
@@ -244,16 +245,16 @@ class N {
         let {
           body: n
         } = await a.HTTP.patch({
-          url: S.Endpoints.USER_SETTINGS_PROTO(this.type),
+          url: h.Endpoints.USER_SETTINGS_PROTO(this.type),
           body: {
             settings: t,
             required_data_version: e.offlineEditDataVersion
           }
         });
         n.out_of_date && this.logger.log("Proto was out of date, discarding changes"), this.getEditInfo().editInfo.cleanupFuncs.forEach(e => e());
-        let i = (0, T.b64ToProto)(this.ProtoClass, n.settings);
+        let i = (0, f.b64ToProto)(this.ProtoClass, n.settings);
         if (null == i) return;
-        d.default.dispatch({
+        _.default.dispatch({
           type: "USER_SETTINGS_PROTO_UPDATE",
           settings: {
             proto: i,
@@ -267,56 +268,56 @@ class N {
         var n, i;
         if (429 === e.status) {
           this.logger.log("Rate limited, scheduling retry");
-          let t = setTimeout(this.persistChanges, Math.min(30 * _.default.Millis.SECOND, (null !== (i = e.body.retry_after) && void 0 !== i ? i : 60) * _.default.Millis.SECOND));
+          let t = setTimeout(this.persistChanges, Math.min(30 * c.default.Millis.SECOND, (null !== (i = e.body.retry_after) && void 0 !== i ? i : 60) * c.default.Millis.SECOND));
           this.dispatchChanges({
             rateLimited: !0,
             timeout: t
           })
-        } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === S.AbortCodes.INVALID_USER_SETTINGS_DATA) throw this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e;
+        } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === h.AbortCodes.INVALID_USER_SETTINGS_DATA) throw this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e;
         else throw this.logger.log("Unknown user settings error"), e
       }
     }, this.logger = new s.Logger(this.ProtoClass.typeName)
   }
 }
-let p = new N(l.PreloadedUserSettings, f.UserSettingsTypes.PRELOADED_USER_SETTINGS),
-  O = new N(o.FrecencyUserSettings, f.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
-  C = {
-    [f.UserSettingsTypes.PRELOADED_USER_SETTINGS]: p,
-    [f.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: O
+let O = new p(u.PreloadedUserSettings, S.UserSettingsTypes.PRELOADED_USER_SETTINGS),
+  C = new p(l.FrecencyUserSettings, S.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+  R = {
+    [S.UserSettingsTypes.PRELOADED_USER_SETTINGS]: O,
+    [S.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: C
   };
 
-function R(e, t, n) {
-  return p.updateAsync("guilds", n => (0, T.mutateUserGuildSettingsInternal)(n, e, t), n)
+function g(e, t, n) {
+  return O.updateAsync("guilds", n => (0, f.mutateUserGuildSettingsInternal)(n, e, t), n)
 }
 
-function g(e, t, n, i) {
-  return R(e, e => (0, T.mutateUserChannelSettingsInternal)(e, t, n), i)
-}
-
-function L(e) {
-  return p.updateAsync("userContent", t => {
-    if ((0, c.hasBit)(t.dismissedContents, e)) return !1;
-    t.dismissedContents = (0, c.addBit)(t.dismissedContents, e)
-  }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
+function L(e, t, n, i) {
+  return g(e, e => (0, f.mutateUserChannelSettingsInternal)(e, t, n), i)
 }
 
 function v(e) {
-  return p.updateAsync("userContent", t => {
-    if (!(0, c.hasBit)(t.dismissedContents, e)) return !1;
-    t.dismissedContents = (0, c.removeBit)(t.dismissedContents, e)
-  }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  return O.updateAsync("userContent", t => {
+    if ((0, E.hasBit)(t.dismissedContents, e)) return !1;
+    t.dismissedContents = (0, E.addBit)(t.dismissedContents, e)
+  }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function D() {
-  return p.updateAsync("userContent", e => {
-    e.dismissedContents = new Uint8Array
-  }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
+function D(e) {
+  return O.updateAsync("userContent", t => {
+    if (!(0, E.hasBit)(t.dismissedContents, e)) return !1;
+    t.dismissedContents = (0, E.removeBit)(t.dismissedContents, e)
+  }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function M() {
-  return p.updateAsync("userContent", e => {
+  return O.updateAsync("userContent", e => {
+    e.dismissedContents = new Uint8Array
+  }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
+}
+
+function y() {
+  return O.updateAsync("userContent", e => {
     let t = new Uint8Array;
-    for (let e of Object.keys(l.DismissibleContent)) t = (0, c.addBit)(t, l.DismissibleContent[e]);
+    for (let e of Object.keys(o.DismissibleContent)) t = (0, E.addBit)(t, o.DismissibleContent[e]);
     e.dismissedContents = t
-  }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
