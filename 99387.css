@@ -10928,6 +10928,10 @@ span.clanTag_f4aadc {
     padding-bottom: 0
 }
 
+.autocompleteTop_afe414 {
+    z-index: 1001
+}
+
 .scroller__3fc84 {
     padding-bottom: 8px;
     display: flex;
@@ -50045,8 +50049,8 @@ div:has(>div>.modal__06f49) {
 }
 
 .name__4eb92 {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 500;
     flex: 1 1 auto
 }
