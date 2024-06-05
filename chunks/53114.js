@@ -265,6 +265,9 @@ class f extends a.default {
         duration_paused: I(this.paused.totalDuration() / 1e3),
         duration_zero_receivers: I(this.zeroReceivers.totalDuration() / 1e3),
         duration_video_stopped: I(this.videoStopped.totalDuration() / 1e3),
+        duration_hq_simulcast_stream_encoded: I(this.hqSimulcastStreamEncoded.totalDuration() / 1e3),
+        duration_lq_simulcast_stream_encoded: I(this.lqSimulcastStreamEncoded.totalDuration() / 1e3),
+        duration_both_simulcast_streams_encoded: I(this.bothSimulcastStreamsEncoded.totalDuration() / 1e3),
         fps_percentile1: s.percentiles[1],
         fps_percentile5: s.percentiles[5],
         fps_percentile10: s.percentiles[10],
@@ -365,13 +368,13 @@ class f extends a.default {
         receivers: d
       }), t.rtp.outbound.filter(e => "video" === e.type).forEach(t => {
         if (null != t) {
-          var i, r, s, a, o, u, d, E, I;
-          let T = t.ssrc,
-            f = this.outboundStats[T];
-          if (null == f && (console.warn("Unknown outbound video stream with SSRC: ".concat(T)), f = new c.OutboundStats(this.timestampProducer), this.outboundStats[T] = f), null == f.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (i = t.frameRateInput) && void 0 !== i ? i : 0) > 0) && (f.timeToFirstFrame = Math.max(0, e - f.startTime)), !this.videoStopped.value) {
-            f.appendAndIncrementStats(c.RawVideoStats.parseOutboundStats(t, e)), f.encoderCodec !== c.CodecTypes.UNKNOWN && _.add(f.encoderCodec);
-            let i = null === (r = n.find(e => e.ssrc === T)) || void 0 === r ? void 0 : r.maxBitrate;
-            f.appendTargetRates(null === (s = n.find(e => e.ssrc === T)) || void 0 === s ? void 0 : s.maxFrameRate, null !== (o = t.bitrateTarget) && void 0 !== o ? o : Math.min(null !== (a = l.availableOutgoingBitrate) && void 0 !== a ? a : 0, null != i ? i : 0), i), f.averageEncodeTime = null !== (u = t.averageEncodeTime) && void 0 !== u ? u : 0, f.framesDroppedRateLimiter = null !== (d = t.framesDroppedRateLimiter) && void 0 !== d ? d : null, f.framesDroppedEncoderQueue = null !== (E = t.framesDroppedEncoderQueue) && void 0 !== E ? E : null, f.framesDroppedCongestionWindow = null !== (I = t.framesDroppedCongestionWindow) && void 0 !== I ? I : null
+          var i, r, s, a, o, u, d, E, I, T, f;
+          let S = t.ssrc,
+            h = this.outboundStats[S];
+          if (null == h && (console.warn("Unknown outbound video stream with SSRC: ".concat(S)), h = new c.OutboundStats(this.timestampProducer), this.outboundStats[S] = h), null == h.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (i = t.frameRateInput) && void 0 !== i ? i : 0) > 0) && (h.timeToFirstFrame = Math.max(0, e - h.startTime)), !this.videoStopped.value) {
+            h.appendAndIncrementStats(c.RawVideoStats.parseOutboundStats(t, e)), h.encoderCodec !== c.CodecTypes.UNKNOWN && _.add(h.encoderCodec);
+            let i = null === (r = n.find(e => e.ssrc === S)) || void 0 === r ? void 0 : r.maxBitrate;
+            h.appendTargetRates(null === (s = n.find(e => e.ssrc === S)) || void 0 === s ? void 0 : s.maxFrameRate, null !== (o = t.bitrateTarget) && void 0 !== o ? o : Math.min(null !== (a = l.availableOutgoingBitrate) && void 0 !== a ? a : 0, null != i ? i : 0), i), h.averageEncodeTime = null !== (u = t.averageEncodeTime) && void 0 !== u ? u : 0, h.framesDroppedRateLimiter = null !== (d = t.framesDroppedRateLimiter) && void 0 !== d ? d : null, h.framesDroppedEncoderQueue = null !== (E = t.framesDroppedEncoderQueue) && void 0 !== E ? E : null, h.framesDroppedCongestionWindow = null !== (I = t.framesDroppedCongestionWindow) && void 0 !== I ? I : null, this.hqSimulcastStreamEncoded.value = null !== (T = t.hqSimulcastStreamEncoded) && void 0 !== T && T, this.lqSimulcastStreamEncoded.value = null !== (f = t.lqSimulcastStreamEncoded) && void 0 !== f && f, this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value
           }
         }
       }), !this.paused.value && s().forEach(t.rtp.inbound, (t, n) => {
@@ -397,12 +400,12 @@ class f extends a.default {
     this.videoEffectDuration.value = (null == t ? void 0 : t.type) === "video" && null != t.filter
   }
   constructor(e, t = l.TimeStampProducer) {
-    super(), E(this, "connection", void 0), E(this, "timestampProducer", void 0), E(this, "networkQuality", void 0), E(this, "paused", void 0), E(this, "pausedCount", void 0), E(this, "zeroReceivers", void 0), E(this, "videoStopped", void 0), E(this, "videoEffectDuration", void 0), E(this, "outboundStats", void 0), E(this, "inboundStats", void 0), E(this, "streamStart", void 0), E(this, "streamEnd", void 0), E(this, "symmetricCodecUpdates", void 0), E(this, "asymmetricCodecUpdates", void 0), E(this, "statCollectionPausedUsers", void 0), E(this, "sampleStats", void 0), this.connection = e, this.timestampProducer = t, this.networkQuality = new _.default, this.pausedCount = 0, this.outboundStats = {}, this.inboundStats = {}, this.symmetricCodecUpdates = 0, this.asymmetricCodecUpdates = 0, this.statCollectionPausedUsers = new Set, this.sampleStats = e => {
+    super(), E(this, "connection", void 0), E(this, "timestampProducer", void 0), E(this, "networkQuality", void 0), E(this, "paused", void 0), E(this, "pausedCount", void 0), E(this, "zeroReceivers", void 0), E(this, "videoStopped", void 0), E(this, "videoEffectDuration", void 0), E(this, "hqSimulcastStreamEncoded", void 0), E(this, "lqSimulcastStreamEncoded", void 0), E(this, "bothSimulcastStreamsEncoded", void 0), E(this, "outboundStats", void 0), E(this, "inboundStats", void 0), E(this, "streamStart", void 0), E(this, "streamEnd", void 0), E(this, "symmetricCodecUpdates", void 0), E(this, "asymmetricCodecUpdates", void 0), E(this, "statCollectionPausedUsers", void 0), E(this, "sampleStats", void 0), this.connection = e, this.timestampProducer = t, this.networkQuality = new _.default, this.pausedCount = 0, this.outboundStats = {}, this.inboundStats = {}, this.symmetricCodecUpdates = 0, this.asymmetricCodecUpdates = 0, this.statCollectionPausedUsers = new Set, this.sampleStats = e => {
       if (null == e) return;
       let t = this.timestampProducer.now();
       if (this.networkQuality.incrementNetworkStats(t), this.updateSystemResourceStats(), this.updateVideoEffectStats(e), null == e) return;
       let n = this.connection.getStreamParameters();
       this.receivedStats(t, e, n)
-    }, this.paused = new T(!1, t), this.zeroReceivers = new T(!1, t), this.videoStopped = new T(!1, t), this.videoEffectDuration = new T(!1, t)
+    }, this.paused = new T(!1, t), this.zeroReceivers = new T(!1, t), this.videoStopped = new T(!1, t), this.videoEffectDuration = new T(!1, t), this.hqSimulcastStreamEncoded = new T(!1, t), this.lqSimulcastStreamEncoded = new T(!1, t), this.bothSimulcastStreamsEncoded = new T(!1, t)
   }
 }

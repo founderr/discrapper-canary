@@ -94,7 +94,9 @@ function l(e, t) {
     encryptFailureCount: e.encryptFailureCount,
     encryptDuration: e.encryptDuration,
     encryptAttempts: e.encryptAttempts,
-    encryptMaxAttempts: e.encryptMaxAttempts
+    encryptMaxAttempts: e.encryptMaxAttempts,
+    hqSimulcastStreamEncoded: e.hqSimulcastStreamEncoded,
+    lqSimulcastStreamEncoded: e.lqSimulcastStreamEncoded
   }
 }
 
