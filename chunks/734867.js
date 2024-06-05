@@ -3,6 +3,7 @@ e.exports = {
   filterError: "filterError_ff4f9f",
   poster: "poster_dc3c22",
   posterBackground: "posterBackground__54400",
+  posterClickable: "posterClickable_e5fa19",
   posterDivider: "posterDivider__89a65",
   posterText: "posterText__0b223",
   posterTextParent: "posterTextParent__1d5cd",
