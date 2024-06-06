@@ -21,19 +21,22 @@ s.default = e => {
       onClose: a,
       sourceAnalyticsLocations: r
     } = e,
-    [p, h] = i.useState(1),
+    [h, p] = i.useState(1),
     [_, R] = i.useState(new Set),
+    [E, j] = i.useState(new Map),
     {
-      analyticsLocations: j
+      analyticsLocations: L
     } = (0, d.default)([...r, C.default.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
-  switch (p) {
+  switch (h) {
     case 1:
       s = (0, l.jsx)(u.default, {
         onShare: async e => {
           try {
             o.default.track(x.AnalyticEvents.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, {
-              location_stack: j
-            }), await (0, c.createReferralTrials)(e.map(e => e.id)), h(2), R(new Set(e))
+              location_stack: L
+            });
+            let s = await (0, c.createReferralTrials)(e.map(e => e.id));
+            p(2), R(new Set(e)), j(s)
           } catch {}
         },
         onClose: a
@@ -42,6 +45,7 @@ s.default = e => {
     case 2:
       s = (0, l.jsx)(f.default, {
         selectedUsers: _,
+        trialCreationResult: E,
         onClose: a
       });
       break;

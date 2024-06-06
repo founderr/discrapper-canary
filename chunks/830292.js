@@ -6,6 +6,8 @@ e.exports = {
   displayName: "displayName__727e9",
   displayNameClickableContainer: "displayNameClickableContainer_b45e25",
   displayNameTooltip: "displayNameTooltip__94aaf",
+  errorDisplayName: "errorDisplayName_ad51fd",
+  erroredAvatar: "erroredAvatar_d9fc6f",
   headerIcon: "headerIcon__02f5b",
   heading: "heading__4546c",
   referredUserRowBody: "referredUserRowBody__8b754",
