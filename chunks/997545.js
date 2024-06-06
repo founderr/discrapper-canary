@@ -481,15 +481,18 @@ class L extends E.default {
         framerate: n
       },
       s = this.videoQualityManager.getQuality();
-    (!T.VideoQuality.equals(r, s.capture) || s.bitrateMax !== i) && (this.videoQualityManager.setGoliveQuality({
-      capture: r,
-      encode: r,
-      bitrateMax: i
-    }), this.videoStreamParameters.length > 0 && (this.videoStreamParameters[0].maxResolution = {
-      type: 0 === e && 0 === t ? O.ResolutionTypes.SOURCE : O.ResolutionTypes.FIXED,
-      width: e,
-      height: t
-    }, this.videoStreamParameters[0].maxFrameRate = n, this.videoStreamParameters[0].maxBitrate = i), this.emit(f.BaseConnectionEvent.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[0].ssrc, g(this.videoStreamParameters[0].ssrc), this.videoStreamParameters), this.conn.setTransportOptions(this.applyQualityConstraints().constraints))
+    if (!T.VideoQuality.equals(r, s.capture) || s.bitrateMax !== i) {
+      this.videoQualityManager.setGoliveQuality({
+        capture: r,
+        encode: r,
+        bitrateMax: i
+      });
+      let s = this.videoStreamParameters.findIndex(e => 100 === e.quality); - 1 === s && (s = 0), this.videoStreamParameters.length > 0 && (this.videoStreamParameters[s].maxResolution = {
+        type: 0 === e && 0 === t ? O.ResolutionTypes.SOURCE : O.ResolutionTypes.FIXED,
+        width: e,
+        height: t
+      }, this.videoStreamParameters[s].maxFrameRate = n, this.videoStreamParameters[s].maxBitrate = i), this.emit(f.BaseConnectionEvent.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[s].ssrc, g(this.videoStreamParameters[s].ssrc), this.videoStreamParameters), this.conn.setTransportOptions(this.applyQualityConstraints().constraints)
+    }
   }
   setOnDesktopEncodingOptionsSet(e) {
     this.onDesktopEncodingOptionsSet = e
