@@ -119,7 +119,7 @@ t.default = r.forwardRef(function(e, t) {
     onChangeEnd: em,
     updateState: eh
   }), ep = r.useCallback((e, t) => {
-    let n = E.getOptionValues(eN, e),
+    let n = E.getOptionValues(eN, e, y.id),
       i = E.validateOptionValues(e, y.guild_id, y.id, n, t);
     return {
       values: n,

@@ -190,7 +190,7 @@ function g(e, t, n, d) {
                     let D = null;
                     return null != R ? (h.SlateTransforms.selectCommandOption(e, R.optionName), D = R.optionName) : null != g ? (h.SlateTransforms.selectCommandOption(e, g.optionName, !1), D = g.optionName) : h.SlateTransforms.resetSelectionToEnd(e), null == g && v(e, d), D
                   }(t, s, n),
-                  i = T.getOptionValues(t, f);
+                  i = T.getOptionValues(t, f, s.id);
                 return D({
                   guildId: s.guild_id,
                   channelId: s.id,
@@ -281,7 +281,7 @@ function g(e, t, n, d) {
                   })
                 }), !0)
               }(t, f) && v(t, f);
-              let e = T.getOptionValues(t, f),
+              let e = T.getOptionValues(t, f, s.id),
                 n = A.EditorUtils.above(t, {
                   match: e => A.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                   mode: "lowest"

@@ -73,11 +73,11 @@ let I = (e, t, n) => ({
     if (null == i) return [];
     let r = a.default.getActiveCommand(t.id),
       s = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find(e => e.name === i[0].optionName);
-    return null == s ? [] : o.optionToValues(e, s, i[0])
+    return null == s ? [] : o.optionToValues(e, s, i[0], t.id)
   },
   getCommandOptionValues() {
     let n = a.default.getActiveCommand(t.id);
-    return null == n ? {} : o.getOptionValues(e, n)
+    return null == n ? {} : o.getOptionValues(e, n, t.id)
   },
   insertText(n) {
     let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
