@@ -31,19 +31,11 @@ t.default = () => {
     fetchPolicy: "cache-and-network"
   }), s = (0, d.useExpiredQuestsMap)(), f = (0, o.useIsEligibleForConcurrentQuests)({
     location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
-  }), g = n.useRef(!0), m = n.useRef([]), C = n.useRef([]);
+  }), [g, m] = n.useState(!0), [C, A] = n.useState([]), [h, O] = n.useState([]), p = n.useMemo(() => g ? t ? "unsorted" : "pending_sort" : "sorted", [g, t]);
   n.useEffect(() => {
-    g.current = !0
+    m(!0)
   }, [t, s]), n.useEffect(() => {
-    let e = new Set(m.current);
-    for (let [t, a] of s)
-      if (a && e.has(t)) {
-        g.current = !0;
-        break
-      }
-  }, [s]), n.useEffect(() => {
-    if (g.current) {
-      g.current = !1;
+    if ("pending_sort" === p) {
       let {
         sortedQuestIds: t,
         sections: a
@@ -104,20 +96,18 @@ t.default = () => {
         let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
         return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
       }));
-      m.current = t, C.current = a
+      A(t), O(a), m(!1)
     }
-  }, [e, s]);
-  let A = C.current,
-    h = m.current,
-    O = A.every(e => {
-      let {
-        questIds: t
-      } = e;
-      return t.length > 0
-    });
-  return t ? (0, a.jsx)(i.Spinner, {
+  }, [e, s, p]);
+  let R = h.every(e => {
+    let {
+      questIds: t
+    } = e;
+    return t.length > 0
+  });
+  return t || "sorted" !== p ? (0, a.jsx)(i.Spinner, {
     className: I.spinner
-  }) : 0 === h.length ? null : (0, a.jsx)(i.FormSection, {
+  }) : 0 === C.length ? null : (0, a.jsx)(i.FormSection, {
     className: I.questsContainer,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsxs)("div", {
@@ -138,7 +128,7 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: I.divider
-      }), f ? A.map((e, t, s) => {
+      }), f ? h.map((e, t, s) => {
         let {
           location: n,
           questIds: l,
@@ -153,7 +143,7 @@ t.default = () => {
         }, 0);
         return (0, a.jsxs)("section", {
           className: I.questsListContainer,
-          children: [O && (0, a.jsx)(i.Text, {
+          children: [R && (0, a.jsx)(i.Text, {
             variant: "text-xs/semibold",
             color: "header-secondary",
             className: I.sectionHeader,
@@ -162,10 +152,10 @@ t.default = () => {
             questId: e,
             location: n,
             contentPosition: t + o,
-            initiallyExpanded: !O
+            initiallyExpanded: !R
           }, e))]
         }, n)
-      }) : h.map((e, t) => (0, a.jsx)(S.QuestsCardWrapper, {
+      }) : C.map((e, t) => (0, a.jsx)(S.QuestsCardWrapper, {
         questId: e,
         location: u.QuestContent.GIFT_INVENTORY_FOR_YOU,
         contentPosition: t
