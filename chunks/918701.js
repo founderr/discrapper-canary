@@ -195,13 +195,19 @@ function M(e) {
     dismissedQuestContent: e.dismissed_quest_content,
     progress: function(e) {
       let t = {};
-      for (let [n, i] of Object.entries(e)) t[n] = {
-        eventName: i.event_name,
-        value: i.value,
-        updatedAt: i.updated_at,
-        completedAt: i.completed_at,
-        unsavedProgress: i.unsaved_progress
-      };
+      for (let [i, r] of Object.entries(e)) {
+        var n;
+        t[i] = {
+          eventName: r.event_name,
+          value: r.value,
+          updatedAt: r.updated_at,
+          completedAt: r.completed_at,
+          heartbeat: null == (n = r.heartbeat) ? null : {
+            lastBeatAt: n.last_beat_at,
+            expiresAt: n.expires_at
+          }
+        }
+      }
       return t
     }(e.progress)
   }
@@ -663,11 +669,11 @@ let eh = (i = [s.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, s.FirstPartyQuestTaskTyp
     }
   }, eh).exhaustive(),
   em = (e, t) => {
-    var n;
-    let i = null == e ? void 0 : e.progress[t];
-    if ((null == i ? void 0 : null === (n = i.unsavedProgress) || void 0 === n ? void 0 : n.expires) == null) return !1;
-    let r = new Date(i.unsavedProgress.expires).valueOf();
-    return !isNaN(r) && r > Date.now()
+    var n, i;
+    let r = null == e ? void 0 : null === (i = e.progress[t]) || void 0 === i ? void 0 : null === (n = i.heartbeat) || void 0 === n ? void 0 : n.expiresAt;
+    if (null == r) return !1;
+    let s = new Date(r).valueOf();
+    return !isNaN(s) && s > Date.now()
   },
   eN = e => (0, r.match)(e).with({
     config: {
