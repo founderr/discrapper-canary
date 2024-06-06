@@ -17,12 +17,12 @@ var i = n("735250"),
   E = n("220082"),
   I = n("240991"),
   T = n("465670"),
-  f = n("605403"),
-  S = n("768581"),
-  h = n("585483"),
-  A = n("499254"),
-  m = n("660090"),
-  N = n("14770"),
+  f = n("768581"),
+  S = n("585483"),
+  h = n("499254"),
+  A = n("660090"),
+  m = n("14770"),
+  N = n("390905"),
   p = n("981631"),
   O = n("689079"),
   C = n("689938"),
@@ -35,12 +35,12 @@ function L(e) {
     command: n,
     section: s
   } = e, a = r.useCallback(() => {
-    A.dismissAppLauncherPopup(), u.setActiveCommand({
+    h.dismissAppLauncherPopup(), u.setActiveCommand({
       channelId: t.id,
       command: n,
       section: s,
       location: _.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-    }), h.ComponentDispatch.dispatch(p.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+    }), S.ComponentDispatch.dispatch(p.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: t.id
     })
   }, [t, n, s]);
@@ -65,7 +65,7 @@ function v(e) {
     appDetail: u
   } = e, {
     filterSection: _,
-    commandsByActiveSection: h
+    commandsByActiveSection: S
   } = d.useDiscovery(s, {
     commandType: l.ApplicationCommandType.CHAT
   }, {
@@ -73,27 +73,30 @@ function v(e) {
     limit: O.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   }), {
-    commands: p
-  } = (0, m.default)({
+    sortOrder: p,
+    setSortOrder: v,
+    commands: D,
+    canSort: M
+  } = (0, A.default)({
     sectionId: u.id,
-    commandsByActiveSection: h
+    commandsByActiveSection: S
   });
   r.useEffect(() => {
     _(u.id)
   }, [u.id, _]);
-  let v = S.default.getApplicationIconSource({
+  let y = f.default.getApplicationIconSource({
       id: u.id,
       icon: u.icon,
       bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,
       botIconFirst: !0
     }),
-    D = r.useCallback(() => {
-      A.dismissAppDetail()
+    P = r.useCallback(() => {
+      h.dismissAppDetail()
     }, []),
-    M = (0, o.useToken)(o.tokens.colors.BG_BASE_PRIMARY).hex(),
-    y = (0, E.default)("number" == typeof v ? "" : null == v ? void 0 : v.uri, null != M ? M : ""),
-    P = (0, c.getIconComponent)(u),
-    U = r.useMemo(() => {
+    U = (0, o.useToken)(o.tokens.colors.BG_BASE_PRIMARY).hex(),
+    b = (0, E.default)("number" == typeof y ? "" : null == y ? void 0 : y.uri, null != U ? U : ""),
+    G = (0, c.getIconComponent)(u),
+    w = r.useMemo(() => {
       var e, t;
       return (0, I.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
     }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
@@ -103,11 +106,11 @@ function v(e) {
     children: [(0, i.jsx)("div", {
       className: R.headerWhenSideCard,
       style: {
-        backgroundColor: y
+        backgroundColor: b
       },
       children: (0, i.jsx)(o.Clickable, {
         "aria-label": C.default.Messages.CLOSE,
-        onClick: D,
+        onClick: P,
         className: R.headerCloseButton,
         children: (0, i.jsx)(T.default, {})
       })
@@ -115,7 +118,7 @@ function v(e) {
       className: R.contentContainer,
       children: [(0, i.jsxs)("div", {
         className: R.appIcon,
-        children: [(0, i.jsx)(P, {
+        children: [(0, i.jsx)(G, {
           channel: s,
           section: u,
           width: 72,
@@ -132,23 +135,22 @@ function v(e) {
           className: a()(R.__invalid_appDescription, g.markup),
           variant: "text-sm/medium",
           lineClamp: 3,
-          children: U
+          children: w
         })]
-      }), (0, i.jsx)(N.default, {
-        commands: p,
+      }), (0, i.jsx)(m.default, {
+        commands: D,
         channel: s
       }), (0, i.jsxs)("div", {
         className: R.commandListHeader,
         children: [(0, i.jsx)(o.Heading, {
           variant: "text-md/medium",
-          children: "All Commands"
-        }), (0, i.jsxs)(o.Text, {
-          className: R.sortSelector,
-          variant: "text-md/medium",
-          children: ["Popular", (0, i.jsx)(f.default, {})]
+          children: C.default.Messages.APP_LAUNCHER_ALL_COMMANDS_HEADER
+        }), M && (0, i.jsx)(N.default, {
+          sortOrder: p,
+          onSortOptionClick: v
         })]
       }), (0, i.jsx)("ul", {
-        children: p.map(e => (0, i.jsx)(L, {
+        children: D.map(e => (0, i.jsx)(L, {
           channel: s,
           command: e,
           section: u
