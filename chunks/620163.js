@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   getConfig: function() {
-    return eG
+    return eF
   }
 }), s("653041");
 var a = s("735250");
@@ -15,1186 +15,1192 @@ var n = s("990547"),
   u = s("809206"),
   c = s("230711"),
   S = s("493544"),
-  E = s("782568"),
-  T = s("163379"),
-  _ = s("703288"),
-  I = s("574755"),
-  N = s("425799"),
-  f = s("377171"),
-  g = s("621628"),
-  m = s("18438"),
-  C = s("778825"),
-  A = s("351780"),
-  h = s("231765"),
-  O = s("837741"),
-  p = s("804545"),
-  R = s("813732"),
-  x = s("398140"),
-  M = s("564344"),
-  D = s("977156"),
-  L = s("652380"),
-  P = s("171156"),
-  b = s("906467"),
-  v = s("131951"),
-  U = s("25990"),
-  j = s("87086"),
-  G = s("759231"),
-  F = s("26290"),
-  B = s("626135"),
-  y = s("49012"),
-  V = s("358085"),
-  H = s("392735"),
-  k = s("61160"),
-  Y = s("604227"),
-  w = s("38915"),
-  W = s("498639"),
-  K = s("748717"),
-  z = s("419636"),
-  Q = s("35426"),
-  q = s("799071"),
-  X = s("601433"),
-  Z = s("154022"),
-  J = s("393681"),
-  $ = s("309739"),
-  ee = s("64914"),
-  et = s("501348"),
-  es = s("795594"),
-  ea = s("443702"),
-  en = s("920914"),
-  el = s("177508"),
-  ei = s("956699"),
-  er = s("54942"),
-  eo = s("15780"),
-  ed = s("293389"),
-  eu = s("88624"),
-  ec = s("387747"),
-  eS = s("389650"),
-  eE = s("649157"),
-  eT = s("593648"),
-  e_ = s("327885"),
-  eI = s("595242"),
-  eN = s("301121"),
-  ef = s("207874"),
-  eg = s("463153"),
-  em = s("36192"),
-  eC = s("338345"),
-  eA = s("400287"),
-  eh = s("554042"),
-  eO = s("200645"),
-  ep = s("287490"),
-  eR = s("168308"),
-  ex = s("277329"),
-  eM = s("674116"),
-  eD = s("726985"),
-  eL = s("981631"),
-  eP = s("46140"),
-  eb = s("689938"),
-  ev = s("442691");
-let eU = () => {
+  E = s("579806"),
+  T = s("782568"),
+  _ = s("163379"),
+  I = s("703288"),
+  N = s("574755"),
+  f = s("425799"),
+  g = s("377171"),
+  m = s("621628"),
+  C = s("18438"),
+  A = s("778825"),
+  h = s("351780"),
+  O = s("231765"),
+  p = s("837741"),
+  R = s("804545"),
+  x = s("813732"),
+  M = s("398140"),
+  D = s("564344"),
+  L = s("977156"),
+  P = s("652380"),
+  b = s("171156"),
+  v = s("906467"),
+  U = s("131951"),
+  j = s("25990"),
+  G = s("87086"),
+  F = s("759231"),
+  B = s("26290"),
+  y = s("626135"),
+  V = s("49012"),
+  H = s("358085"),
+  k = s("392735"),
+  Y = s("61160"),
+  w = s("604227"),
+  W = s("38915"),
+  K = s("498639"),
+  z = s("748717"),
+  Q = s("419636"),
+  q = s("35426"),
+  X = s("799071"),
+  Z = s("601433"),
+  J = s("154022"),
+  $ = s("393681"),
+  ee = s("309739"),
+  et = s("64914"),
+  es = s("501348"),
+  ea = s("795594"),
+  en = s("443702"),
+  el = s("920914"),
+  ei = s("177508"),
+  er = s("956699"),
+  eo = s("54942"),
+  ed = s("15780"),
+  eu = s("293389"),
+  ec = s("88624"),
+  eS = s("387747"),
+  eE = s("389650"),
+  eT = s("649157"),
+  e_ = s("593648"),
+  eI = s("327885"),
+  eN = s("595242"),
+  ef = s("301121"),
+  eg = s("207874"),
+  em = s("463153"),
+  eC = s("36192"),
+  eA = s("338345"),
+  eh = s("400287"),
+  eO = s("554042"),
+  ep = s("200645"),
+  eR = s("287490"),
+  ex = s("168308"),
+  eM = s("277329"),
+  eD = s("674116"),
+  eL = s("726985"),
+  eP = s("981631"),
+  eb = s("46140"),
+  ev = s("689938"),
+  eU = s("442691");
+let ej = () => {
     let e = "Settings list view",
       t = [l.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE, l.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE];
-    return O.BrandRefreshPerksExperiment.getCurrentConfig({
+    return p.BrandRefreshPerksExperiment.getCurrentConfig({
       location: e
-    }).enabled && t.push(l.DismissibleContent.BRAND_REFRESH_NEW_BADGE), p.PrideMonthPerksExperiment.getCurrentConfig({
+    }).enabled && t.push(l.DismissibleContent.BRAND_REFRESH_NEW_BADGE), R.PrideMonthPerksExperiment.getCurrentConfig({
       location: e
     }).enabled && t.push(l.DismissibleContent.PRIDE_ICONS_APPEARANCE_BADGE), t
   },
-  ej = eO.default,
-  eG = e => {
+  eG = ep.default,
+  eF = e => {
     let {
       unseenGiftCount: t,
-      showPrepaidPaymentPastDueWarning: O,
-      impressionSource: p,
-      numOfPendingFamilyRequests: eG,
-      isOverlaySupported: eF,
-      isClipsBetaTagShowing: eB = !1,
-      shouldMergeGameSettings: ey,
-      isUserSettingsSearchEnabled: eV,
-      isKeywordFilteringEnabled: eH,
-      isStaff: ek,
-      isInappropriateConversationWarningEnabled: eY
+      showPrepaidPaymentPastDueWarning: p,
+      impressionSource: R,
+      numOfPendingFamilyRequests: eF,
+      isOverlaySupported: eB,
+      isClipsBetaTagShowing: ey = !1,
+      shouldMergeGameSettings: eV,
+      isUserSettingsSearchEnabled: eH,
+      isKeywordFilteringEnabled: ek,
+      isStaff: eY,
+      isInappropriateConversationWarningEnabled: ew
     } = e;
     return Object.freeze({
-      [eD.WebSetting.SEARCH_BAR]: {
-        section: S.SectionTypes.CUSTOM,
-        element: ef.default,
-        predicate: () => eV
-      },
-      [eD.WebSetting.SEARCH_NO_RESULTS]: {
+      [eL.WebSetting.SEARCH_BAR]: {
         section: S.SectionTypes.CUSTOM,
         element: eg.default,
+        predicate: () => eH
+      },
+      [eL.WebSetting.SEARCH_NO_RESULTS]: {
+        section: S.SectionTypes.CUSTOM,
+        element: em.default,
+        predicate: () => eH
+      },
+      [eL.WebSetting.ACCOUNT]: {
+        section: eP.UserSettingsSections.ACCOUNT,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_MY_ACCOUNT,
+        label: ev.default.Messages.USER_SETTINGS_MY_ACCOUNT,
+        ariaLabel: ev.default.Messages.USER_SETTINGS_MY_ACCOUNT,
+        element: $.default
+      },
+      [eL.WebSetting.ACCOUNT_PROFILE]: {
+        searchableTitle: ev.default.Messages.PROFILE,
+        parent: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT
+      },
+      [eL.WebSetting.ACCOUNT_DISPLAY_NAME]: {
+        searchableTitle: ev.default.Messages.DISPLAY_NAME,
+        section: eP.UserSettingsSections.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_PROFILE
+      },
+      [eL.WebSetting.ACCOUNT_PHONE_NUMBER]: {
+        searchableTitle: ev.default.Messages.CHANGE_PHONE_NUMBER,
+        section: eP.UserSettingsSections.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_PROFILE
+      },
+      [eL.WebSetting.ACCOUNT_USERNAME]: {
+        searchableTitle: ev.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_USERNAME_TITLE,
+        section: eP.UserSettingsSections.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_PROFILE
+      },
+      [eL.WebSetting.ACCOUNT_EMAIL]: {
+        searchableTitle: ev.default.Messages.CHANGE_EMAIL,
+        section: eP.UserSettingsSections.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_PROFILE
+      },
+      [eL.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION]: {
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_CHANGE_PASSWORD]: {
+        searchableTitle: ev.default.Messages.CHANGE_PASSWORD,
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_CONFIRM_PASSWORD]: {
+        searchableTitle: ev.default.Messages.FORM_LABEL_CONFIRM_PASSWORD,
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION]: {
+        searchableTitle: ev.default.Messages.SETTINGS_TWO_FA,
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_ENABLE_2FA]: {
+        searchableTitle: ev.default.Messages.TWO_FA_ENABLE,
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_REMOVE_2FA]: {
+        searchableTitle: ev.default.Messages.TWO_FA_REMOVE,
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_VIEW_BACKUP_CODES]: {
+        searchableTitle: ev.default.Messages.TWO_FA_BACKUP_CODE,
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_SMS_BACKUP]: {
+        searchableTitle: ev.default.Messages.MFA_SMS_AUTH,
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_SECURITY_KEYS]: {
+        searchableTitle: ev.default.Messages.TWO_FA_WEBAUTHN_REGISTER,
+        section: eL.WebSetting.ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
+      },
+      [eL.WebSetting.ACCOUNT_REMOVAL]: {
+        section: eP.UserSettingsSections.ACCOUNT,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_SECTION,
+        parent: eL.WebSetting.ACCOUNT
+      },
+      [eL.WebSetting.ACCOUNT_DISABLE_ACCOUNT]: {
+        section: eP.UserSettingsSections.ACCOUNT,
+        searchableTitle: ev.default.Messages.DISABLE_ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_REMOVAL
+      },
+      [eL.WebSetting.ACCOUNT_DELETE_ACCOUNT]: {
+        section: eP.UserSettingsSections.ACCOUNT,
+        searchableTitle: ev.default.Messages.DELETE_ACCOUNT,
+        parent: eL.WebSetting.ACCOUNT_DISABLE_ACCOUNT
+      },
+      [eL.WebSetting.GAMES]: {
+        section: eP.UserSettingsSections.GAMES,
+        searchableTitle: ev.default.Messages.GAMES,
+        label: ev.default.Messages.GAMES,
+        ariaLabel: ev.default.Messages.GAMES,
+        element: eM.default,
         predicate: () => eV
       },
-      [eD.WebSetting.ACCOUNT]: {
-        section: eL.UserSettingsSections.ACCOUNT,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_MY_ACCOUNT,
-        label: eb.default.Messages.USER_SETTINGS_MY_ACCOUNT,
-        ariaLabel: eb.default.Messages.USER_SETTINGS_MY_ACCOUNT,
-        element: J.default
-      },
-      [eD.WebSetting.ACCOUNT_PROFILE]: {
-        searchableTitle: eb.default.Messages.PROFILE,
-        parent: eD.WebSetting.ACCOUNT,
-        section: eL.UserSettingsSections.ACCOUNT
-      },
-      [eD.WebSetting.ACCOUNT_DISPLAY_NAME]: {
-        searchableTitle: eb.default.Messages.DISPLAY_NAME,
-        section: eL.UserSettingsSections.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_PROFILE
-      },
-      [eD.WebSetting.ACCOUNT_PHONE_NUMBER]: {
-        searchableTitle: eb.default.Messages.CHANGE_PHONE_NUMBER,
-        section: eL.UserSettingsSections.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_PROFILE
-      },
-      [eD.WebSetting.ACCOUNT_USERNAME]: {
-        searchableTitle: eb.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_USERNAME_TITLE,
-        section: eL.UserSettingsSections.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_PROFILE
-      },
-      [eD.WebSetting.ACCOUNT_EMAIL]: {
-        searchableTitle: eb.default.Messages.CHANGE_EMAIL,
-        section: eL.UserSettingsSections.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_PROFILE
-      },
-      [eD.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION]: {
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_CHANGE_PASSWORD]: {
-        searchableTitle: eb.default.Messages.CHANGE_PASSWORD,
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_CONFIRM_PASSWORD]: {
-        searchableTitle: eb.default.Messages.FORM_LABEL_CONFIRM_PASSWORD,
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION]: {
-        searchableTitle: eb.default.Messages.SETTINGS_TWO_FA,
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_ENABLE_2FA]: {
-        searchableTitle: eb.default.Messages.TWO_FA_ENABLE,
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_REMOVE_2FA]: {
-        searchableTitle: eb.default.Messages.TWO_FA_REMOVE,
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_VIEW_BACKUP_CODES]: {
-        searchableTitle: eb.default.Messages.TWO_FA_BACKUP_CODE,
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_SMS_BACKUP]: {
-        searchableTitle: eb.default.Messages.MFA_SMS_AUTH,
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_SECURITY_KEYS]: {
-        searchableTitle: eb.default.Messages.TWO_FA_WEBAUTHN_REGISTER,
-        section: eD.WebSetting.ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
-      },
-      [eD.WebSetting.ACCOUNT_REMOVAL]: {
-        section: eL.UserSettingsSections.ACCOUNT,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_SECTION,
-        parent: eD.WebSetting.ACCOUNT
-      },
-      [eD.WebSetting.ACCOUNT_DISABLE_ACCOUNT]: {
-        section: eL.UserSettingsSections.ACCOUNT,
-        searchableTitle: eb.default.Messages.DISABLE_ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_REMOVAL
-      },
-      [eD.WebSetting.ACCOUNT_DELETE_ACCOUNT]: {
-        section: eL.UserSettingsSections.ACCOUNT,
-        searchableTitle: eb.default.Messages.DELETE_ACCOUNT,
-        parent: eD.WebSetting.ACCOUNT_DISABLE_ACCOUNT
-      },
-      [eD.WebSetting.GAMES]: {
-        section: eL.UserSettingsSections.GAMES,
-        searchableTitle: eb.default.Messages.GAMES,
-        label: eb.default.Messages.GAMES,
-        ariaLabel: eb.default.Messages.GAMES,
-        element: ex.default,
-        predicate: () => ey
-      },
-      [eD.WebSetting.PROFILE_CUSTOMIZATION]: {
-        section: eL.UserSettingsSections.PROFILE_CUSTOMIZATION,
+      [eL.WebSetting.PROFILE_CUSTOMIZATION]: {
+        section: eP.UserSettingsSections.PROFILE_CUSTOMIZATION,
         type: S.ContentTypes.WIDE,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_PROFILES,
-        label: eb.default.Messages.USER_SETTINGS_PROFILES,
-        ariaLabel: eb.default.Messages.USER_SETTINGS_PROFILES,
-        element: M.default,
-        newIndicator: (0, a.jsx)(F.PremiumBadge, {
-          text: eb.default.Messages.NEW
+        searchableTitle: ev.default.Messages.USER_SETTINGS_PROFILES,
+        label: ev.default.Messages.USER_SETTINGS_PROFILES,
+        ariaLabel: ev.default.Messages.USER_SETTINGS_PROFILES,
+        element: D.default,
+        newIndicator: (0, a.jsx)(B.PremiumBadge, {
+          text: ev.default.Messages.NEW
         }),
         notice: {
-          stores: [U.default, C.default],
-          element: x.default
+          stores: [j.default, A.default],
+          element: M.default
         },
         onSettingsClose: () => {
           o.default.wait(() => {
-            (0, m.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eL.UserSettingsSections.PROFILE_CUSTOMIZATION)
+            (0, C.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eP.UserSettingsSections.PROFILE_CUSTOMIZATION)
           })
         }
       },
-      [eD.WebSetting.PROFILE_DISPLAY_NAME]: {
-        section: eL.UserSettingsSections.PROFILE_CUSTOMIZATION,
-        searchableTitle: eb.default.Messages.DISPLAY_NAME,
-        parent: eD.WebSetting.PROFILE_CUSTOMIZATION
+      [eL.WebSetting.PROFILE_DISPLAY_NAME]: {
+        section: eP.UserSettingsSections.PROFILE_CUSTOMIZATION,
+        searchableTitle: ev.default.Messages.DISPLAY_NAME,
+        parent: eL.WebSetting.PROFILE_CUSTOMIZATION
       },
-      [eD.WebSetting.PROFILE_SERVER_PROFILES]: {
-        section: eL.UserSettingsSections.PROFILE_CUSTOMIZATION,
-        searchableTitle: eb.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY,
-        parent: eD.WebSetting.PROFILE_CUSTOMIZATION
+      [eL.WebSetting.PROFILE_SERVER_PROFILES]: {
+        section: eP.UserSettingsSections.PROFILE_CUSTOMIZATION,
+        searchableTitle: ev.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY,
+        parent: eL.WebSetting.PROFILE_CUSTOMIZATION
       },
-      [eD.WebSetting.PRIVACY_AND_SAFETY]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.PRIVACY_AND_SAFETY,
-        label: eb.default.Messages.PRIVACY_AND_SAFETY,
-        ariaLabel: eb.default.Messages.PRIVACY_AND_SAFETY,
-        element: eN.default
+      [eL.WebSetting.PRIVACY_AND_SAFETY]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.PRIVACY_AND_SAFETY,
+        label: ev.default.Messages.PRIVACY_AND_SAFETY,
+        ariaLabel: ev.default.Messages.PRIVACY_AND_SAFETY,
+        element: ef.default
       },
-      [eD.WebSetting.PRIVACY_SENSITIVE_MEDIA]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY
+      [eL.WebSetting.PRIVACY_SENSITIVE_MEDIA]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY
       },
-      [eD.WebSetting.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.SETTINGS_DM_SPAM_FILTER,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY
+      [eL.WebSetting.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.SETTINGS_DM_SPAM_FILTER,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY
       },
-      [eD.WebSetting.PRIVACY_SERVER_PRIVACY]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.USER_DM_SETTINGS_TITLE,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY
+      [eL.WebSetting.PRIVACY_SERVER_PRIVACY]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.USER_DM_SETTINGS_TITLE,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY
       },
-      [eD.WebSetting.PRIVACY_DATA_PRIVACY]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.SETTINGS_DATA_PRIVACY_CONTROLS,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY
+      [eL.WebSetting.PRIVACY_DATA_PRIVACY]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.SETTINGS_DATA_PRIVACY_CONTROLS,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY
       },
-      [eD.WebSetting.PRIVACY_STAFF_ONLY]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY,
-        predicate: () => ek
-      },
-      [eD.WebSetting.PRIVACY_ACCOUNT_STANDING]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY
-      },
-      [eD.WebSetting.PRIVACY_KEYWORD_FILTER]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.USER_KEYWORD_FILTERS_DESCRIPTION,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY,
-        predicate: () => eH
-      },
-      [eD.WebSetting.PRIVACY_KEYWORD_FILTER_PROFANITY]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE,
-        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER,
-        predicate: () => eH
-      },
-      [eD.WebSetting.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE,
-        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER,
-        predicate: () => eH
-      },
-      [eD.WebSetting.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
-        parent: eD.WebSetting.PRIVACY_KEYWORD_FILTER,
-        predicate: () => eH
-      },
-      [eD.WebSetting.PRIVACY_TERMS_POLICY]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_PRIVACY_TERMS_SEARCHABLE,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY
-      },
-      [eD.WebSetting.PRIVACY_SAFETY_ALERTS]: {
-        section: eL.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eb.default.Messages.SAFETY_ALERTS_SETTING_TITLE,
-        parent: eD.WebSetting.PRIVACY_AND_SAFETY,
+      [eL.WebSetting.PRIVACY_STAFF_ONLY]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY,
         predicate: () => eY
       },
-      [eD.WebSetting.PRIVACY_FAMILY_CENTER]: {
-        section: eL.UserSettingsSections.FAMILY_CENTER,
-        searchableTitle: eb.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
-        label: eb.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
-        ariaLabel: eb.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
-        element: er.default,
-        badgeCount: eG,
-        newIndicator: (0, a.jsx)(F.TextBadge, {
-          text: eb.default.Messages.NEW,
-          color: f.default.BG_BRAND
+      [eL.WebSetting.PRIVACY_ACCOUNT_STANDING]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [eL.WebSetting.PRIVACY_KEYWORD_FILTER]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_DESCRIPTION,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY,
+        predicate: () => ek
+      },
+      [eL.WebSetting.PRIVACY_KEYWORD_FILTER_PROFANITY]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE,
+        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
+        predicate: () => ek
+      },
+      [eL.WebSetting.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE,
+        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
+        predicate: () => ek
+      },
+      [eL.WebSetting.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
+        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
+        predicate: () => ek
+      },
+      [eL.WebSetting.PRIVACY_TERMS_POLICY]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_PRIVACY_TERMS_SEARCHABLE,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY
+      },
+      [eL.WebSetting.PRIVACY_SAFETY_ALERTS]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.SAFETY_ALERTS_SETTING_TITLE,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY,
+        predicate: () => ew
+      },
+      [eL.WebSetting.PRIVACY_FAMILY_CENTER]: {
+        section: eP.UserSettingsSections.FAMILY_CENTER,
+        searchableTitle: ev.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
+        label: ev.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
+        ariaLabel: ev.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
+        element: eo.default,
+        badgeCount: eF,
+        newIndicator: (0, a.jsx)(B.TextBadge, {
+          text: ev.default.Messages.NEW,
+          color: g.default.BG_BRAND
         }),
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.FAMILY_CENTER_NEW_BADGE]
       },
-      [eD.WebSetting.AUTHORIZED_APPS]: {
-        section: eL.UserSettingsSections.AUTHORIZED_APPS,
-        searchableTitle: eb.default.Messages.AUTHORIZED_APPS,
-        label: eb.default.Messages.AUTHORIZED_APPS,
-        element: es.default
+      [eL.WebSetting.AUTHORIZED_APPS]: {
+        section: eP.UserSettingsSections.AUTHORIZED_APPS,
+        searchableTitle: ev.default.Messages.AUTHORIZED_APPS,
+        label: ev.default.Messages.AUTHORIZED_APPS,
+        element: ea.default
       },
-      [eD.WebSetting.SESSIONS]: {
-        section: eL.UserSettingsSections.SESSIONS,
-        searchableTitle: eb.default.Messages.AUTH_SESSIONS,
-        label: eb.default.Messages.AUTH_SESSIONS,
-        ariaLabel: eb.default.Messages.AUTH_SESSIONS,
-        element: em.default,
+      [eL.WebSetting.SESSIONS]: {
+        section: eP.UserSettingsSections.SESSIONS,
+        searchableTitle: ev.default.Messages.AUTH_SESSIONS,
+        label: ev.default.Messages.AUTH_SESSIONS,
+        ariaLabel: ev.default.Messages.AUTH_SESSIONS,
+        element: eC.default,
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.AUTH_SESSIONS_NEW],
-        predicate: () => H.default.getCurrentConfig({
+        predicate: () => k.default.getCurrentConfig({
           location: "9f7d84_1"
         }, {
           autoTrackExposure: !1
         }).showSettings
       },
-      [eD.WebSetting.CONNECTIONS]: {
-        section: eL.UserSettingsSections.CONNECTIONS,
-        searchableTitle: eb.default.Messages.CONNECTIONS,
-        label: eb.default.Messages.CONNECTIONS,
-        ariaLabel: eb.default.Messages.CONNECTIONS,
-        element: en.default,
+      [eL.WebSetting.CONNECTIONS]: {
+        section: eP.UserSettingsSections.CONNECTIONS,
+        searchableTitle: ev.default.Messages.CONNECTIONS,
+        label: ev.default.Messages.CONNECTIONS,
+        ariaLabel: ev.default.Messages.CONNECTIONS,
+        element: el.default,
         impressionName: n.ImpressionNames.USER_SETTINGS_CONNECTIONS,
         impressionProperties: {
-          source: p
+          source: R
         },
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION]
       },
-      [eD.WebSetting.CONNECTIONS_CONNECTED_ACCOUNTS]: {
-        section: eL.UserSettingsSections.CONNECTIONS,
-        searchableTitle: eb.default.Messages.CONNECTED_ACCOUNTS,
-        parent: eD.WebSetting.CONNECTIONS,
-        element: en.default
+      [eL.WebSetting.CONNECTIONS_CONNECTED_ACCOUNTS]: {
+        section: eP.UserSettingsSections.CONNECTIONS,
+        searchableTitle: ev.default.Messages.CONNECTED_ACCOUNTS,
+        parent: eL.WebSetting.CONNECTIONS,
+        element: el.default
       },
-      [eD.WebSetting.CLIPS]: {
-        section: eL.UserSettingsSections.CLIPS,
-        searchableTitle: eb.default.Messages.CLIPS,
-        label: eb.default.Messages.CLIPS,
-        ariaLabel: eb.default.Messages.CLIPS,
-        icon: eB ? (0, a.jsx)(_.default, {}) : void 0,
-        element: I.default,
-        predicate: () => !ey
+      [eL.WebSetting.CLIPS]: {
+        section: eP.UserSettingsSections.CLIPS,
+        searchableTitle: ev.default.Messages.CLIPS,
+        label: ev.default.Messages.CLIPS,
+        ariaLabel: ev.default.Messages.CLIPS,
+        icon: ey ? (0, a.jsx)(I.default, {}) : void 0,
+        element: N.default,
+        predicate: () => !eV
       },
-      [eD.WebSetting.FRIEND_REQUESTS]: {
-        section: eL.UserSettingsSections.FRIEND_REQUESTS,
-        searchableTitle: eb.default.Messages.FRIEND_REQUESTS,
-        label: eb.default.Messages.FRIEND_REQUESTS,
-        element: eo.default
+      [eL.WebSetting.FRIEND_REQUESTS]: {
+        section: eP.UserSettingsSections.FRIEND_REQUESTS,
+        searchableTitle: ev.default.Messages.FRIEND_REQUESTS,
+        label: ev.default.Messages.FRIEND_REQUESTS,
+        element: ed.default
       },
-      [eD.WebSetting.PREMIUM]: {
-        section: eL.UserSettingsSections.PREMIUM,
-        ariaLabel: eb.default.Messages.PREMIUM,
-        searchableTitle: eb.default.Messages.PREMIUM,
-        label: eb.default.Messages.PREMIUM,
-        element: K.default,
-        className: ev.premiumTab
+      [eL.WebSetting.PREMIUM]: {
+        section: eP.UserSettingsSections.PREMIUM,
+        ariaLabel: ev.default.Messages.PREMIUM,
+        searchableTitle: ev.default.Messages.PREMIUM,
+        label: ev.default.Messages.PREMIUM,
+        element: z.default,
+        className: eU.premiumTab
       },
-      [eD.WebSetting.GUILD_BOOSTING]: {
-        section: eL.UserSettingsSections.GUILD_BOOSTING,
-        searchableTitle: eb.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
-        label: eb.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
-        element: eI.default
+      [eL.WebSetting.GUILD_BOOSTING]: {
+        section: eP.UserSettingsSections.GUILD_BOOSTING,
+        searchableTitle: ev.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
+        label: ev.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
+        element: eN.default
       },
-      [eD.WebSetting.SUBSCRIPTIONS]: {
-        section: eL.UserSettingsSections.SUBSCRIPTIONS,
-        ariaLabel: eb.default.Messages.SUBSCRIPTIONS_TITLE,
-        searchableTitle: eb.default.Messages.SUBSCRIPTIONS_TITLE,
-        label: eb.default.Messages.SUBSCRIPTIONS_TITLE,
-        element: R.default,
-        icon: O ? (0, a.jsx)(G.default, {
+      [eL.WebSetting.SUBSCRIPTIONS]: {
+        section: eP.UserSettingsSections.SUBSCRIPTIONS,
+        ariaLabel: ev.default.Messages.SUBSCRIPTIONS_TITLE,
+        searchableTitle: ev.default.Messages.SUBSCRIPTIONS_TITLE,
+        label: ev.default.Messages.SUBSCRIPTIONS_TITLE,
+        element: x.default,
+        icon: p ? (0, a.jsx)(F.default, {
           width: 16,
           height: 16,
           color: i.default.unsafe_rawColors.YELLOW_300.css
         }) : null
       },
-      [eD.WebSetting.SUBSCRIPTIONS_CREDITS]: {
-        section: eL.UserSettingsSections.SUBSCRIPTIONS,
-        searchableTitle: eb.default.Messages.BILLING_SUBSCRIPTION_CREDIT,
-        parent: eD.WebSetting.SUBSCRIPTIONS
+      [eL.WebSetting.SUBSCRIPTIONS_CREDITS]: {
+        section: eP.UserSettingsSections.SUBSCRIPTIONS,
+        searchableTitle: ev.default.Messages.BILLING_SUBSCRIPTION_CREDIT,
+        parent: eL.WebSetting.SUBSCRIPTIONS
       },
-      [eD.WebSetting.GIFT_INVENTORY]: {
-        section: eL.UserSettingsSections.INVENTORY,
-        searchableTitle: eb.default.Messages.GIFT_INVENTORY,
-        label: eb.default.Messages.GIFT_INVENTORY,
-        element: ec.default,
-        ariaLabel: eb.default.Messages.GIFT_INVENTORY,
+      [eL.WebSetting.GIFT_INVENTORY]: {
+        section: eP.UserSettingsSections.INVENTORY,
+        searchableTitle: ev.default.Messages.GIFT_INVENTORY,
+        label: ev.default.Messages.GIFT_INVENTORY,
+        element: eS.default,
+        ariaLabel: ev.default.Messages.GIFT_INVENTORY,
         badgeCount: t
       },
-      [eD.WebSetting.GIFT_INVENTORY_QUESTS]: {
-        section: eL.UserSettingsSections.INVENTORY,
-        searchableTitle: eb.default.Messages.QUESTS,
-        parent: eD.WebSetting.GIFT_INVENTORY
+      [eL.WebSetting.GIFT_INVENTORY_QUESTS]: {
+        section: eP.UserSettingsSections.INVENTORY,
+        searchableTitle: ev.default.Messages.QUESTS,
+        parent: eL.WebSetting.GIFT_INVENTORY
       },
-      [eD.WebSetting.BILLING]: {
-        section: eL.UserSettingsSections.BILLING,
-        searchableTitle: eb.default.Messages.BILLING,
-        label: eb.default.Messages.BILLING,
-        ariaLabel: eb.default.Messages.BILLING,
-        element: ea.default
+      [eL.WebSetting.BILLING]: {
+        section: eP.UserSettingsSections.BILLING,
+        searchableTitle: ev.default.Messages.BILLING,
+        label: ev.default.Messages.BILLING,
+        ariaLabel: ev.default.Messages.BILLING,
+        element: en.default
       },
-      [eD.WebSetting.BILLING_PAYMENT_METHODS]: {
-        section: eL.UserSettingsSections.BILLING,
-        searchableTitle: eb.default.Messages.BILLING_PAYMENT_SOURCES,
-        parent: eD.WebSetting.BILLING
+      [eL.WebSetting.BILLING_PAYMENT_METHODS]: {
+        section: eP.UserSettingsSections.BILLING,
+        searchableTitle: ev.default.Messages.BILLING_PAYMENT_SOURCES,
+        parent: eL.WebSetting.BILLING
       },
-      [eD.WebSetting.BILLING_TRANSACTION_HISTORY]: {
-        section: eL.UserSettingsSections.BILLING,
-        searchableTitle: eb.default.Messages.BILLING_PAYMENT_HISTORY,
-        parent: eD.WebSetting.BILLING
+      [eL.WebSetting.BILLING_TRANSACTION_HISTORY]: {
+        section: eP.UserSettingsSections.BILLING,
+        searchableTitle: ev.default.Messages.BILLING_PAYMENT_HISTORY,
+        parent: eL.WebSetting.BILLING
       },
-      [eD.WebSetting.APPEARANCE]: {
-        section: eL.UserSettingsSections.APPEARANCE,
-        searchableTitle: eb.default.Messages.APPEARANCE,
-        label: eb.default.Messages.APPEARANCE,
-        ariaLabel: eb.default.Messages.APPEARANCE,
-        element: et.default,
-        newIndicator: (0, a.jsx)(F.PremiumBadge, {
-          text: eb.default.Messages.NEW
+      [eL.WebSetting.APPEARANCE]: {
+        section: eP.UserSettingsSections.APPEARANCE,
+        searchableTitle: ev.default.Messages.APPEARANCE,
+        label: ev.default.Messages.APPEARANCE,
+        ariaLabel: ev.default.Messages.APPEARANCE,
+        element: es.default,
+        newIndicator: (0, a.jsx)(B.PremiumBadge, {
+          text: ev.default.Messages.NEW
         }),
-        newIndicatorDismissibleContentTypes: eU()
+        newIndicatorDismissibleContentTypes: ej()
       },
-      [eD.WebSetting.APPEARANCE_THEME]: {
-        section: eL.UserSettingsSections.APPEARANCE,
-        searchableTitle: eb.default.Messages.THEME,
-        parent: eD.WebSetting.APPEARANCE
+      [eL.WebSetting.APPEARANCE_THEME]: {
+        section: eP.UserSettingsSections.APPEARANCE,
+        searchableTitle: ev.default.Messages.THEME,
+        parent: eL.WebSetting.APPEARANCE
       },
-      [eD.WebSetting.APPEARANCE_COLOR]: {
-        section: eL.UserSettingsSections.APPEARANCE,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE,
-        parent: eD.WebSetting.APPEARANCE_THEME
+      [eL.WebSetting.APPEARANCE_COLOR]: {
+        section: eP.UserSettingsSections.APPEARANCE,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE,
+        parent: eL.WebSetting.APPEARANCE_THEME
       },
-      [eD.WebSetting.APPEARANCE_ICON]: {
-        section: eL.UserSettingsSections.APPEARANCE,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
-        parent: eD.WebSetting.APPEARANCE_THEME
+      [eL.WebSetting.APPEARANCE_ICON]: {
+        section: eP.UserSettingsSections.APPEARANCE,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
+        parent: eL.WebSetting.APPEARANCE_THEME
       },
-      [eD.WebSetting.APPEARANCE_MESSAGE_DISPLAY_COMPACT]: {
-        section: eL.UserSettingsSections.APPEARANCE,
-        searchableTitle: eb.default.Messages.MESSAGE_DISPLAY_MODE_LABEL,
-        parent: eD.WebSetting.APPEARANCE
+      [eL.WebSetting.APPEARANCE_MESSAGE_DISPLAY_COMPACT]: {
+        section: eP.UserSettingsSections.APPEARANCE,
+        searchableTitle: ev.default.Messages.MESSAGE_DISPLAY_MODE_LABEL,
+        parent: eL.WebSetting.APPEARANCE
       },
-      [eD.WebSetting.APPEARANCE_SCALING_SPACING]: {
-        section: eL.UserSettingsSections.APPEARANCE,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL,
-        parent: eD.WebSetting.APPEARANCE
+      [eL.WebSetting.APPEARANCE_SCALING_SPACING]: {
+        section: eP.UserSettingsSections.APPEARANCE,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL,
+        parent: eL.WebSetting.APPEARANCE
       },
-      [eD.WebSetting.ACCESSIBILITY]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY,
-        label: eb.default.Messages.ACCESSIBILITY,
-        ariaLabel: eb.default.Messages.ACCESSIBILITY,
-        element: Z.default
+      [eL.WebSetting.ACCESSIBILITY]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY,
+        label: ev.default.Messages.ACCESSIBILITY,
+        ariaLabel: ev.default.Messages.ACCESSIBILITY,
+        element: J.default
       },
-      [eD.WebSetting.ACCESSIBILITY_SATURATION]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_SATURATION]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_LINK_DECORATIONS]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY_SETTINGS_ALWAYS_SHOW_LINK_DECORATIONS_LABEL,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_LINK_DECORATIONS]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_SETTINGS_ALWAYS_SHOW_LINK_DECORATIONS_LABEL,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_ROLE_STYLE]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_ROLE_STYLE]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_TAGS]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY_SETTINGS_TAGS_TITLE,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_TAGS]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_SETTINGS_TAGS_TITLE,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_SYNC_PROFILE_THEME]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_LABEL,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_SYNC_PROFILE_THEME]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_LABEL,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_CONTRAST]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_CONTRAST]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_REDUCED_MOTION]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_REDUCED_MOTION]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_STICKERS]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.STICKERS_AUTO_PLAY_HEADING,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_STICKERS]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.STICKERS_AUTO_PLAY_HEADING,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_MESSAGES]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_MESSAGES]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.ACCESSIBILITY_TEXT_TO_SPEECH]: {
-        section: eL.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: eb.default.Messages.FORM_LABEL_TTS,
-        parent: eD.WebSetting.ACCESSIBILITY
+      [eL.WebSetting.ACCESSIBILITY_TEXT_TO_SPEECH]: {
+        section: eP.UserSettingsSections.ACCESSIBILITY,
+        searchableTitle: ev.default.Messages.FORM_LABEL_TTS,
+        parent: eL.WebSetting.ACCESSIBILITY
       },
-      [eD.WebSetting.VOICE_AND_VIDEO]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.VOICE_AND_VIDEO,
-        label: eb.default.Messages.VOICE_AND_VIDEO,
-        ariaLabel: eb.default.Messages.VOICE_AND_VIDEO,
-        element: eM.default,
-        predicate: () => v.default.isSupported()
+      [eL.WebSetting.VOICE_AND_VIDEO]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.VOICE_AND_VIDEO,
+        label: ev.default.Messages.VOICE_AND_VIDEO,
+        ariaLabel: ev.default.Messages.VOICE_AND_VIDEO,
+        element: eD.default,
+        predicate: () => U.default.isSupported()
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_DEVICES]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_INPUT_DEVICE,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_DEVICES]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_INPUT_DEVICE,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_VOLUME_CONTROLS]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_INPUT_VOLUME,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_VOLUME_CONTROLS]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_INPUT_VOLUME,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_MIC_TEST]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_MIC_TEST]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_TROUBLESHOOTING]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_SEARCHABLE,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_TROUBLESHOOTING]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_SEARCHABLE,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_INPUT_MODE]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_INPUT_MODE,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_INPUT_MODE]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_INPUT_MODE,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_SENSITIVITY]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_INPUT_SENSITIVTY,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_SENSITIVITY]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_INPUT_SENSITIVTY,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_SOUNDBOARD]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.SOUNDBOARD,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_SOUNDBOARD]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.SOUNDBOARD,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_CALL_SOUNDS]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.CALL_SOUNDS_SETTINGS,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_CALL_SOUNDS]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.CALL_SOUNDS_SETTINGS,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_VIDEO]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.VIDEO_SETTINGS,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_VIDEO]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.VIDEO_SETTINGS,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_ADVANCED]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.SETTINGS_ADVANCED,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_ADVANCED]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.SETTINGS_ADVANCED,
+        parent: eL.WebSetting.VOICE_AND_VIDEO
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_ADVANCED_CODECS]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
-        parent: eD.WebSetting.VOICE_AND_VIDEO_ADVANCED
+      [eL.WebSetting.VOICE_AND_VIDEO_ADVANCED_CODECS]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
+        parent: eL.WebSetting.VOICE_AND_VIDEO_ADVANCED
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_ADVANCED_PROCESSING]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_VOICE_PROCESSING,
-        parent: eD.WebSetting.VOICE_AND_VIDEO_ADVANCED
+      [eL.WebSetting.VOICE_AND_VIDEO_ADVANCED_PROCESSING]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_VOICE_PROCESSING,
+        parent: eL.WebSetting.VOICE_AND_VIDEO_ADVANCED
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_ADVANCED_QOS]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_QOS,
-        parent: eD.WebSetting.VOICE_AND_VIDEO_ADVANCED
+      [eL.WebSetting.VOICE_AND_VIDEO_ADVANCED_QOS]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_QOS,
+        parent: eL.WebSetting.VOICE_AND_VIDEO_ADVANCED
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_ADVANCED_ATTENUATION]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_ATTENUATION,
-        parent: eD.WebSetting.VOICE_AND_VIDEO_ADVANCED
+      [eL.WebSetting.VOICE_AND_VIDEO_ADVANCED_ATTENUATION]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_ATTENUATION,
+        parent: eL.WebSetting.VOICE_AND_VIDEO_ADVANCED
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_SUBSYSTEM,
-        parent: eD.WebSetting.VOICE_AND_VIDEO_ADVANCED
+      [eL.WebSetting.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_SUBSYSTEM,
+        parent: eL.WebSetting.VOICE_AND_VIDEO_ADVANCED
       },
-      [eD.WebSetting.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
-        section: eL.UserSettingsSections.VOICE,
-        searchableTitle: eb.default.Messages.RESET_VOICE_SETTINGS,
-        parent: eD.WebSetting.VOICE_AND_VIDEO
+      [eL.WebSetting.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
+        section: eP.UserSettingsSections.VOICE,
+        searchableTitle: ev.default.Messages.RESET_VOICE_SETTINGS,
+        parent: eL.WebSetting.VOICE_AND_VIDEO,
+        predicate: () => H.isPlatformEmbedded && null != E.default.fileManager.readLogFiles
       },
-      [eD.WebSetting.POGGERMODE]: {
-        section: eL.UserSettingsSections.POGGERMODE,
-        searchableTitle: eb.default.Messages.POGGERMODE,
-        label: eb.default.Messages.POGGERMODE,
-        ariaLabel: eb.default.Messages.POGGERMODE,
-        element: h.default,
-        predicate: () => A.default.settingsVisible,
+      [eL.WebSetting.POGGERMODE]: {
+        section: eP.UserSettingsSections.POGGERMODE,
+        searchableTitle: ev.default.Messages.POGGERMODE,
+        label: ev.default.Messages.POGGERMODE,
+        ariaLabel: ev.default.Messages.POGGERMODE,
+        element: O.default,
+        predicate: () => h.default.settingsVisible,
         icon: (0, a.jsx)("img", {
           alt: "",
           src: s("542156"),
-          className: ev.poggermodeIcon
+          className: eU.poggermodeIcon
         })
       },
-      [eD.WebSetting.CHAT]: {
-        section: eL.UserSettingsSections.TEXT,
-        searchableTitle: eb.default.Messages.CHAT,
-        label: eb.default.Messages.CHAT,
-        ariaLabel: eb.default.Messages.CHAT,
-        element: eA.default
+      [eL.WebSetting.CHAT]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.CHAT,
+        label: ev.default.Messages.CHAT,
+        ariaLabel: ev.default.Messages.CHAT,
+        element: eh.default
       },
-      [eD.WebSetting.CHAT_INLINE_MEDIA]: {
-        section: eL.UserSettingsSections.TEXT,
-        searchableTitle: eb.default.Messages.INLINE_MEDIA_LABEL,
-        parent: eD.WebSetting.CHAT
+      [eL.WebSetting.CHAT_INLINE_MEDIA]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.INLINE_MEDIA_LABEL,
+        parent: eL.WebSetting.CHAT
       },
-      [eD.WebSetting.CHAT_EMBEDS]: {
-        section: eL.UserSettingsSections.TEXT,
-        searchableTitle: eb.default.Messages.RENDER_EMBEDS_LABEL,
-        parent: eD.WebSetting.CHAT
+      [eL.WebSetting.CHAT_EMBEDS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.RENDER_EMBEDS_LABEL,
+        parent: eL.WebSetting.CHAT
       },
-      [eD.WebSetting.CHAT_EMOJI]: {
-        section: eL.UserSettingsSections.TEXT,
-        searchableTitle: eb.default.Messages.EMOJI,
-        parent: eD.WebSetting.CHAT
+      [eL.WebSetting.CHAT_EMOJI]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.EMOJI,
+        parent: eL.WebSetting.CHAT
       },
-      [eD.WebSetting.CHAT_STICKERS]: {
-        section: eL.UserSettingsSections.TEXT,
-        searchableTitle: eb.default.Messages.STICKERS_AUTO_PLAY_HEADING,
-        parent: eD.WebSetting.CHAT
+      [eL.WebSetting.CHAT_STICKERS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.STICKERS_AUTO_PLAY_HEADING,
+        parent: eL.WebSetting.CHAT
       },
-      [eD.WebSetting.CHAT_TEXT_BOX]: {
-        section: eL.UserSettingsSections.TEXT,
-        searchableTitle: eb.default.Messages.FORM_LABEL_USE_RICH_CHAT_BOX,
-        parent: eD.WebSetting.CHAT
+      [eL.WebSetting.CHAT_TEXT_BOX]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.FORM_LABEL_USE_RICH_CHAT_BOX,
+        parent: eL.WebSetting.CHAT
       },
-      [eD.WebSetting.CHAT_SPOILERS]: {
-        section: eL.UserSettingsSections.TEXT,
-        searchableTitle: eb.default.Messages.SHOW_SPOILER_CONTENT,
-        parent: eD.WebSetting.CHAT
+      [eL.WebSetting.CHAT_SPOILERS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.SHOW_SPOILER_CONTENT,
+        parent: eL.WebSetting.CHAT
       },
-      [eD.WebSetting.NOTIFICATIONS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.NOTIFICATIONS,
-        label: eb.default.Messages.NOTIFICATIONS,
-        ariaLabel: eb.default.Messages.NOTIFICATIONS,
-        element: eT.default
+      [eL.WebSetting.NOTIFICATIONS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.NOTIFICATIONS,
+        label: ev.default.Messages.NOTIFICATIONS,
+        ariaLabel: ev.default.Messages.NOTIFICATIONS,
+        element: e_.default
       },
-      [eD.WebSetting.NOTIFICATIONS_ENABLE_DESKTOP]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_ENABLE_DESKTOP]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
+      [eL.WebSetting.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "Mention on all messages",
-        parent: eD.WebSetting.NOTIFICATIONS
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_UNREAD_MESSAGE_BADGE]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_UNREAD_MESSAGE_BADGE]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_UNREAD_SETTINGS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_UNREAD_SETTINGS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
+      [eL.WebSetting.NOTIFICATIONS_NEW_SETTINGS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "New Notification Settings (Advancd, Staff Only)",
-        parent: eD.WebSetting.NOTIFICATIONS,
+        parent: eL.WebSetting.NOTIFICATIONS,
         predicate: () => !1
       },
-      [eD.WebSetting.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
+      [eL.WebSetting.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "Restore most recent snapshot",
-        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
+        parent: eL.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
         predicate: () => !1
       },
-      [eD.WebSetting.NOTIFICATIONS_LAUNCH_MIGRATION]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
+      [eL.WebSetting.NOTIFICATIONS_LAUNCH_MIGRATION]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "Launch Migration",
-        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
+        parent: eL.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
         predicate: () => !1
       },
-      [eD.WebSetting.NOTIFICATIONS_TOGGLE_NEW_SYSTEM]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
+      [eL.WebSetting.NOTIFICATIONS_TOGGLE_NEW_SYSTEM]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: "Toggle new system on/off",
-        parent: eD.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
+        parent: eL.WebSetting.NOTIFICATIONS_NEW_SETTINGS,
         predicate: () => !1
       },
-      [eD.WebSetting.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_TEXT_TO_SPEECH]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.FORM_LABEL_TTS,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_TEXT_TO_SPEECH]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.FORM_LABEL_TTS,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER,
-        parent: eD.WebSetting.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS
+      [eL.WebSetting.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER,
+        parent: eL.WebSetting.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS
       },
-      [eD.WebSetting.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER,
-        parent: eD.WebSetting.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS
+      [eL.WebSetting.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER,
+        parent: eL.WebSetting.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS
       },
-      [eD.WebSetting.NOTIFICATIONS_SOUNDS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.SOUNDS,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_SOUNDS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.SOUNDS,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_EMAILS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
-        parent: eD.WebSetting.NOTIFICATIONS
+      [eL.WebSetting.NOTIFICATIONS_EMAILS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
+        parent: eL.WebSetting.NOTIFICATIONS
       },
-      [eD.WebSetting.NOTIFICATIONS_EMAILS_COMMUNICATION]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
-        parent: eD.WebSetting.NOTIFICATIONS_EMAILS
+      [eL.WebSetting.NOTIFICATIONS_EMAILS_COMMUNICATION]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
+        parent: eL.WebSetting.NOTIFICATIONS_EMAILS
       },
-      [eD.WebSetting.NOTIFICATIONS_EMAILS_SOCIAL]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
-        parent: eD.WebSetting.NOTIFICATIONS_EMAILS
+      [eL.WebSetting.NOTIFICATIONS_EMAILS_SOCIAL]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
+        parent: eL.WebSetting.NOTIFICATIONS_EMAILS
       },
-      [eD.WebSetting.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
-        parent: eD.WebSetting.NOTIFICATIONS_EMAILS
+      [eL.WebSetting.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
+        parent: eL.WebSetting.NOTIFICATIONS_EMAILS
       },
-      [eD.WebSetting.NOTIFICATIONS_EMAILS_TIPS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
-        parent: eD.WebSetting.NOTIFICATIONS_EMAILS
+      [eL.WebSetting.NOTIFICATIONS_EMAILS_TIPS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
+        parent: eL.WebSetting.NOTIFICATIONS_EMAILS
       },
-      [eD.WebSetting.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
-        parent: eD.WebSetting.NOTIFICATIONS_EMAILS
+      [eL.WebSetting.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
+        parent: eL.WebSetting.NOTIFICATIONS_EMAILS
       },
-      [eD.WebSetting.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS]: {
-        section: eL.UserSettingsSections.NOTIFICATIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING,
-        parent: eD.WebSetting.NOTIFICATIONS_EMAILS
+      [eL.WebSetting.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS]: {
+        section: eP.UserSettingsSections.NOTIFICATIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING,
+        parent: eL.WebSetting.NOTIFICATIONS_EMAILS
       },
-      [eD.WebSetting.KEYBINDS]: {
-        section: eL.UserSettingsSections.KEYBINDS,
-        searchableTitle: eb.default.Messages.KEYBINDS,
-        label: eb.default.Messages.KEYBINDS,
-        element: eS.default
-      },
-      [eD.WebSetting.LANGUAGE]: {
-        section: eL.UserSettingsSections.LOCALE,
-        searchableTitle: eb.default.Messages.LANGUAGE,
-        label: eb.default.Messages.LANGUAGE,
+      [eL.WebSetting.KEYBINDS]: {
+        section: eP.UserSettingsSections.KEYBINDS,
+        searchableTitle: ev.default.Messages.KEYBINDS,
+        label: ev.default.Messages.KEYBINDS,
         element: eE.default
       },
-      [eD.WebSetting.WINDOW_SETTINGS]: {
-        section: eL.UserSettingsSections.WINDOWS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
-        label: eb.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
-        element: eO.default,
-        predicate: () => V.isPlatformEmbedded && (0, V.isWindows)()
+      [eL.WebSetting.LANGUAGE]: {
+        section: eP.UserSettingsSections.LOCALE,
+        searchableTitle: ev.default.Messages.LANGUAGE,
+        label: ev.default.Messages.LANGUAGE,
+        element: eT.default
       },
-      [eD.WebSetting.LINUX_SETTINGS]: {
-        section: eL.UserSettingsSections.LINUX,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
-        label: eb.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
-        element: ej,
-        predicate: () => V.isPlatformEmbedded && (0, V.isLinux)()
+      [eL.WebSetting.WINDOW_SETTINGS]: {
+        section: eP.UserSettingsSections.WINDOWS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
+        label: ev.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
+        element: ep.default,
+        predicate: () => H.isPlatformEmbedded && (0, H.isWindows)()
       },
-      [eD.WebSetting.STREAMER_MODE]: {
-        section: eL.UserSettingsSections.STREAMER_MODE,
-        searchableTitle: eb.default.Messages.STREAMER_MODE,
-        label: eb.default.Messages.STREAMER_MODE,
-        ariaLabel: eb.default.Messages.STREAMER_MODE,
-        element: eC.default
+      [eL.WebSetting.LINUX_SETTINGS]: {
+        section: eP.UserSettingsSections.LINUX,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
+        label: ev.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
+        element: eG,
+        predicate: () => H.isPlatformEmbedded && (0, H.isLinux)()
       },
-      [eD.WebSetting.STREAMER_MODE_HIDE_PERSONAL_INFORMATION]: {
-        section: eL.UserSettingsSections.STREAMER_MODE,
-        searchableTitle: eb.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL,
-        parent: eD.WebSetting.STREAMER_MODE
+      [eL.WebSetting.STREAMER_MODE]: {
+        section: eP.UserSettingsSections.STREAMER_MODE,
+        searchableTitle: ev.default.Messages.STREAMER_MODE,
+        label: ev.default.Messages.STREAMER_MODE,
+        ariaLabel: ev.default.Messages.STREAMER_MODE,
+        element: eA.default
       },
-      [eD.WebSetting.STREAMER_MODE_HIDE_INVITE_LINKS]: {
-        section: eL.UserSettingsSections.STREAMER_MODE,
-        searchableTitle: eb.default.Messages.HIDE_INSTANT_INVITES_LABEL,
-        parent: eD.WebSetting.STREAMER_MODE
+      [eL.WebSetting.STREAMER_MODE_HIDE_PERSONAL_INFORMATION]: {
+        section: eP.UserSettingsSections.STREAMER_MODE,
+        searchableTitle: ev.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL,
+        parent: eL.WebSetting.STREAMER_MODE
       },
-      [eD.WebSetting.STREAMER_MODE_DISABLE_SOUNDS]: {
-        section: eL.UserSettingsSections.STREAMER_MODE,
-        searchableTitle: eb.default.Messages.FORM_LABEL_MOBILE_NOTIFICATIONS_SOUND_DISABLE,
-        parent: eD.WebSetting.STREAMER_MODE
+      [eL.WebSetting.STREAMER_MODE_HIDE_INVITE_LINKS]: {
+        section: eP.UserSettingsSections.STREAMER_MODE,
+        searchableTitle: ev.default.Messages.HIDE_INSTANT_INVITES_LABEL,
+        parent: eL.WebSetting.STREAMER_MODE
       },
-      [eD.WebSetting.STREAMER_MODE_DISABLE_NOTIFICATIONS]: {
-        section: eL.UserSettingsSections.STREAMER_MODE,
-        searchableTitle: eb.default.Messages.DISABLE_NOTIFICATIONS_LABEL,
-        parent: eD.WebSetting.STREAMER_MODE
+      [eL.WebSetting.STREAMER_MODE_DISABLE_SOUNDS]: {
+        section: eP.UserSettingsSections.STREAMER_MODE,
+        searchableTitle: ev.default.Messages.FORM_LABEL_MOBILE_NOTIFICATIONS_SOUND_DISABLE,
+        parent: eL.WebSetting.STREAMER_MODE
       },
-      [eD.WebSetting.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE]: {
-        section: eL.UserSettingsSections.STREAMER_MODE,
-        searchableTitle: eb.default.Messages.HIDE_WINDOW_FROM_STREAM_LABEL,
-        parent: eD.WebSetting.STREAMER_MODE
+      [eL.WebSetting.STREAMER_MODE_DISABLE_NOTIFICATIONS]: {
+        section: eP.UserSettingsSections.STREAMER_MODE,
+        searchableTitle: ev.default.Messages.DISABLE_NOTIFICATIONS_LABEL,
+        parent: eL.WebSetting.STREAMER_MODE
       },
-      [eD.WebSetting.SPEED_TEST]: {
-        section: eL.UserSettingsSections.SPEED_TEST,
+      [eL.WebSetting.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE]: {
+        section: eP.UserSettingsSections.STREAMER_MODE,
+        searchableTitle: ev.default.Messages.HIDE_WINDOW_FROM_STREAM_LABEL,
+        parent: eL.WebSetting.STREAMER_MODE,
+        predicate: () => {
+          var e, t, s;
+          return null !== (s = null === E.default || void 0 === E.default ? void 0 : null === (t = E.default.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== s && s
+        }
+      },
+      [eL.WebSetting.SPEED_TEST]: {
+        section: eP.UserSettingsSections.SPEED_TEST,
         searchableTitle: "Speed Test",
         label: "Speed Test",
-        element: Q.default,
-        predicate: () => P.default.isSupported() && k.default.getCurrentConfig({
+        element: q.default,
+        predicate: () => b.default.isSupported() && Y.default.getCurrentConfig({
           location: "9f7d84_2"
         }).showSettings
       },
-      [eD.WebSetting.SETTINGS_ADVANCED]: {
-        section: eL.UserSettingsSections.ADVANCED,
-        searchableTitle: eb.default.Messages.SETTINGS_ADVANCED,
-        label: eb.default.Messages.SETTINGS_ADVANCED,
-        ariaLabel: eb.default.Messages.SETTINGS_ADVANCED,
-        element: ee.default
+      [eL.WebSetting.SETTINGS_ADVANCED]: {
+        section: eP.UserSettingsSections.ADVANCED,
+        searchableTitle: ev.default.Messages.SETTINGS_ADVANCED,
+        label: ev.default.Messages.SETTINGS_ADVANCED,
+        ariaLabel: ev.default.Messages.SETTINGS_ADVANCED,
+        element: et.default
       },
-      [eD.WebSetting.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
-        section: eL.UserSettingsSections.ADVANCED,
-        searchableTitle: eb.default.Messages.DEVELOPER_MODE,
-        parent: eD.WebSetting.SETTINGS_ADVANCED
+      [eL.WebSetting.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
+        section: eP.UserSettingsSections.ADVANCED,
+        searchableTitle: ev.default.Messages.DEVELOPER_MODE,
+        parent: eL.WebSetting.SETTINGS_ADVANCED
       },
-      [eD.WebSetting.SETTINGS_ADVANCED_HARDWARE_ACCELERATION]: {
-        section: eL.UserSettingsSections.ADVANCED,
-        searchableTitle: eb.default.Messages.HARDWARE_ACCELERATION,
-        parent: eD.WebSetting.SETTINGS_ADVANCED
+      [eL.WebSetting.SETTINGS_ADVANCED_HARDWARE_ACCELERATION]: {
+        section: eP.UserSettingsSections.ADVANCED,
+        searchableTitle: ev.default.Messages.HARDWARE_ACCELERATION,
+        parent: eL.WebSetting.SETTINGS_ADVANCED
       },
-      [eD.WebSetting.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY]: {
-        section: eL.UserSettingsSections.ADVANCED,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_SHOW_LIBRARY,
-        parent: eD.WebSetting.SETTINGS_ADVANCED
+      [eL.WebSetting.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY]: {
+        section: eP.UserSettingsSections.ADVANCED,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_SHOW_LIBRARY,
+        parent: eL.WebSetting.SETTINGS_ADVANCED
       },
-      [eD.WebSetting.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
-        section: eL.UserSettingsSections.ADVANCED,
-        searchableTitle: eb.default.Messages.DEVELOPER_APPLICATION_TEST_MODE,
-        parent: eD.WebSetting.SETTINGS_ADVANCED,
-        predicate: () => b.default.isDeveloper
+      [eL.WebSetting.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
+        section: eP.UserSettingsSections.ADVANCED,
+        searchableTitle: ev.default.Messages.DEVELOPER_APPLICATION_TEST_MODE,
+        parent: eL.WebSetting.SETTINGS_ADVANCED,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_HOME_AUTO_NAV,
-        parent: eD.WebSetting.SETTINGS_ADVANCED
+      [eL.WebSetting.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_HOME_AUTO_NAV,
+        parent: eL.WebSetting.SETTINGS_ADVANCED
       },
-      [eD.WebSetting.ACTIVITY_PRIVACY]: {
-        section: eL.UserSettingsSections.ACTIVITY_PRIVACY,
-        searchableTitle: eb.default.Messages.ACTIVITY_PRIVACY,
-        label: eb.default.Messages.ACTIVITY_PRIVACY,
-        ariaLabel: eb.default.Messages.ACTIVITY_PRIVACY,
-        element: $.default,
-        predicate: () => !ey
+      [eL.WebSetting.ACTIVITY_PRIVACY]: {
+        section: eP.UserSettingsSections.ACTIVITY_PRIVACY,
+        searchableTitle: ev.default.Messages.ACTIVITY_PRIVACY,
+        label: ev.default.Messages.ACTIVITY_PRIVACY,
+        ariaLabel: ev.default.Messages.ACTIVITY_PRIVACY,
+        element: ee.default,
+        predicate: () => !eV
       },
-      [eD.WebSetting.ACTIVITY_PRIVACY_STATUS]: {
-        section: eL.UserSettingsSections.ACTIVITY_PRIVACY,
-        searchableTitle: eb.default.Messages.ACTIVITY_STATUS,
-        parent: eD.WebSetting.ACTIVITY_PRIVACY
+      [eL.WebSetting.ACTIVITY_PRIVACY_STATUS]: {
+        section: eP.UserSettingsSections.ACTIVITY_PRIVACY,
+        searchableTitle: ev.default.Messages.ACTIVITY_STATUS,
+        parent: eL.WebSetting.ACTIVITY_PRIVACY
       },
-      [eD.WebSetting.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
-        section: eL.UserSettingsSections.ACTIVITY_PRIVACY,
-        searchableTitle: eb.default.Messages.ACTIVITY_PARTY_PRIVACY,
-        parent: eD.WebSetting.ACTIVITY_PRIVACY
+      [eL.WebSetting.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
+        section: eP.UserSettingsSections.ACTIVITY_PRIVACY,
+        searchableTitle: ev.default.Messages.ACTIVITY_PARTY_PRIVACY,
+        parent: eL.WebSetting.ACTIVITY_PRIVACY
       },
-      [eD.WebSetting.REGISTERED_GAMES]: {
-        section: eL.UserSettingsSections.REGISTERED_GAMES,
-        searchableTitle: eb.default.Messages.REGISTERED_GAMES,
-        label: eb.default.Messages.REGISTERED_GAMES,
-        element: ed.default,
-        predicate: () => !ey && (0, eR.shouldShowRegisteredGamesSettings)()
+      [eL.WebSetting.REGISTERED_GAMES]: {
+        section: eP.UserSettingsSections.REGISTERED_GAMES,
+        searchableTitle: ev.default.Messages.REGISTERED_GAMES,
+        label: ev.default.Messages.REGISTERED_GAMES,
+        element: eu.default,
+        predicate: () => !eV && (0, ex.shouldShowRegisteredGamesSettings)()
       },
-      [eD.WebSetting.OVERLAY]: {
-        section: eL.UserSettingsSections.OVERLAY,
-        searchableTitle: eb.default.Messages.OVERLAY,
-        label: eb.default.Messages.OVERLAY,
-        element: e_.default,
-        predicate: () => !ey && eF
+      [eL.WebSetting.OVERLAY]: {
+        section: eP.UserSettingsSections.OVERLAY,
+        searchableTitle: ev.default.Messages.OVERLAY,
+        label: ev.default.Messages.OVERLAY,
+        element: eI.default,
+        predicate: () => !eV && eB
       },
-      [eD.WebSetting.CHANGELOG]: {
+      [eL.WebSetting.CHANGELOG]: {
         section: "changelog",
-        onClick: () => (0, T.openChangelog)(!0),
-        searchableTitle: eb.default.Messages.WHATS_NEW,
-        label: eb.default.Messages.WHATS_NEW
+        onClick: () => (0, _.openChangelog)(!0),
+        searchableTitle: ev.default.Messages.WHATS_NEW,
+        label: ev.default.Messages.WHATS_NEW
       },
-      [eD.WebSetting.MERCHANDISE]: {
+      [eL.WebSetting.MERCHANDISE]: {
         section: "merchandise",
         onClick: () => {
           let e = "https://discordmerch.com/Dsktopprm";
-          B.default.track(eL.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, y.handleClick)({
+          y.default.track(eP.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, V.handleClick)({
             href: e,
             shouldConfirm: !0,
             onConfirm: () => {
-              B.default.track(eL.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
+              y.default.track(eP.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, T.default)(e)
             }
           })
         },
-        searchableTitle: eb.default.Messages.MERCHANDISE,
-        label: eb.default.Messages.MERCHANDISE,
-        ariaLabel: eb.default.Messages.MERCHANDISE
+        searchableTitle: ev.default.Messages.MERCHANDISE,
+        label: ev.default.Messages.MERCHANDISE,
+        ariaLabel: ev.default.Messages.MERCHANDISE
       },
-      [eD.WebSetting.HYPESQUAD]: {
-        section: eL.UserSettingsSections.HYPESQUAD_ONLINE,
-        searchableTitle: eb.default.Messages.USER_SETTINGS_HYPESQUAD,
-        label: eb.default.Messages.USER_SETTINGS_HYPESQUAD,
-        element: eu.default
+      [eL.WebSetting.HYPESQUAD]: {
+        section: eP.UserSettingsSections.HYPESQUAD_ONLINE,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_HYPESQUAD,
+        label: ev.default.Messages.USER_SETTINGS_HYPESQUAD,
+        element: ec.default
       },
-      [eD.WebSetting.EXPERIMENTS]: {
-        section: eL.UserSettingsSections.EXPERIMENTS,
+      [eL.WebSetting.EXPERIMENTS]: {
+        section: eP.UserSettingsSections.EXPERIMENTS,
         searchableTitle: "Experiments",
         label: "Experiments",
-        element: ep.default,
-        predicate: () => b.default.isDeveloper
+        element: eR.default,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Developer Options",
         label: "Developer Options",
         ariaLabel: "Developer Options",
-        element: ei.default,
-        predicate: () => b.default.isDeveloper
+        element: er.default,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_FLAGS]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_FLAGS]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Developer Options Flags",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_TRACING_REQUESTS]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_TRACING_REQUESTS]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Tracing Requests",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_FORCED_CANARY]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_FORCED_CANARY]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Forced Canary",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Gateway Events To Console",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Rpc Events Commands",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Analytics Events Logging",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Source Maps",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Analytics Debugger View",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Idle Status Indicator",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Accessibility Auditing",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Preview Unpublished Collections",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Override Client Side",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_FLAGS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Override Client Side Premium Type",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Override Client Side Account Created Data",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Open Overlay",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_RESET_SOCKET]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_RESET_SOCKET]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Reset Socket",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_CLEAR_CACHES]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_CLEAR_CACHES]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Clear Caches",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_CRASHES]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_CRASHES]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Crashes",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_SURVEY_OVERRIDE]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_SURVEY_OVERRIDE]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Survey Override",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Changelog Override",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DEVELOPER_OPTIONS_BUILD_OVERRIDE]: {
-        section: eL.UserSettingsSections.DEVELOPER_OPTIONS,
+      [eL.WebSetting.DEVELOPER_OPTIONS_BUILD_OVERRIDE]: {
+        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
         searchableTitle: "Build Override",
-        parent: eD.WebSetting.DEVELOPER_OPTIONS,
-        predicate: () => b.default.isDeveloper
+        parent: eL.WebSetting.DEVELOPER_OPTIONS,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.HOTSPOT_OPTIONS]: {
-        section: eL.UserSettingsSections.HOTSPOT_OPTIONS,
+      [eL.WebSetting.HOTSPOT_OPTIONS]: {
+        section: eP.UserSettingsSections.HOTSPOT_OPTIONS,
         searchableTitle: "Hotspot Options",
         label: "Hotspot Options",
-        element: w.default,
-        predicate: () => b.default.isDeveloper
+        element: W.default,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.DISMISSIBLE_CONTENT_OPTIONS]: {
-        section: eL.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
+      [eL.WebSetting.DISMISSIBLE_CONTENT_OPTIONS]: {
+        section: eP.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
         searchableTitle: "Dismissible Contents",
         label: "Dismissible Contents",
-        element: g.default,
-        predicate: () => b.default.isDeveloper
+        element: m.default,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.PAYMENT_FLOW_MODALS]: {
-        section: eL.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
+      [eL.WebSetting.PAYMENT_FLOW_MODALS]: {
+        section: eP.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
         searchableTitle: "Payment Flow Modals",
         label: "Payment Flow Modals",
-        element: W.default,
-        predicate: () => b.default.isDeveloper
+        element: K.default,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.TEXT_PLAYGROUND]: {
-        section: eL.UserSettingsSections.TEXT_PLAYGROUND,
+      [eL.WebSetting.TEXT_PLAYGROUND]: {
+        section: eP.UserSettingsSections.TEXT_PLAYGROUND,
         searchableTitle: "Text Playground",
         label: "Text Playground",
-        element: eh.default,
-        predicate: () => (0, X.shouldShowTextPlayground)() || b.default.isDeveloper
+        element: eO.default,
+        predicate: () => (0, Z.shouldShowTextPlayground)() || v.default.isDeveloper
       },
-      [eD.WebSetting.DESIGN_SYSTEMS]: {
-        section: eL.UserSettingsSections.DESIGN_SYSTEMS,
+      [eL.WebSetting.DESIGN_SYSTEMS]: {
+        section: eP.UserSettingsSections.DESIGN_SYSTEMS,
         searchableTitle: "Design Systems",
         label: "Design Systems",
-        element: el.default,
-        predicate: () => b.default.isDeveloper
+        element: ei.default,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.TEXT_COMPONENTS]: {
-        section: eL.UserSettingsSections.TEXT_COMPONENT,
+      [eL.WebSetting.TEXT_COMPONENTS]: {
+        section: eP.UserSettingsSections.TEXT_COMPONENT,
         searchableTitle: "Text Components",
         label: "Text Components",
-        element: q.default,
-        predicate: () => (0, X.shouldShowTextPlayground)() || b.default.isDeveloper
+        element: X.default,
+        predicate: () => (0, Z.shouldShowTextPlayground)() || v.default.isDeveloper
       },
-      [eD.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL]: {
-        section: eL.UserSettingsSections.PROFILE_EFFECTS_PREVIEW_TOOL,
+      [eL.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL]: {
+        section: eP.UserSettingsSections.PROFILE_EFFECTS_PREVIEW_TOOL,
         searchableTitle: "Profile Effects Preview Tool",
         label: "Profile Effects Preview Tool",
-        element: N.default,
-        predicate: () => b.default.isDeveloper
+        element: f.default,
+        predicate: () => v.default.isDeveloper
       },
-      [eD.WebSetting.QUEST_PREVIEW_TOOL]: {
-        section: eL.UserSettingsSections.QUEST_PREVIEW_TOOL,
+      [eL.WebSetting.QUEST_PREVIEW_TOOL]: {
+        section: eP.UserSettingsSections.QUEST_PREVIEW_TOOL,
         searchableTitle: "Quest Preview Tool",
         label: "Quest Preview Tool",
-        element: L.default,
-        predicate: () => (0, D.isQuestPreviewToolEnabled)({
-          location: eP.QuestsExperimentLocations.QUEST_PREVIEW_TOOL
+        element: P.default,
+        predicate: () => (0, L.isQuestPreviewToolEnabled)({
+          location: eb.QuestsExperimentLocations.QUEST_PREVIEW_TOOL
         })
       },
-      [eD.WebSetting.LOGOUT]: {
+      [eL.WebSetting.LOGOUT]: {
         section: "logout",
         onClick: () => {
           (0, r.openModal)(e => (0, a.jsx)(r.ConfirmModal, {
-            header: eb.default.Messages.LOGOUT,
-            confirmText: eb.default.Messages.LOGOUT,
-            cancelText: eb.default.Messages.CANCEL,
+            header: ev.default.Messages.LOGOUT,
+            confirmText: ev.default.Messages.LOGOUT,
+            cancelText: ev.default.Messages.CANCEL,
             onCancel: e.onClose,
             onConfirm: () => d.default.logout(),
             ...e,
             children: (0, a.jsx)(r.Text, {
               variant: "text-md/normal",
-              children: eb.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
+              children: ev.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
             })
           }))
         },
-        label: eb.default.Messages.LOGOUT,
-        ariaLabel: eb.default.Messages.LOGOUT,
-        icon: (0, a.jsx)(j.default, {
+        label: ev.default.Messages.LOGOUT,
+        ariaLabel: ev.default.Messages.LOGOUT,
+        icon: (0, a.jsx)(G.default, {
           width: 16,
           height: 16
         })
       },
-      [eD.WebSetting.SOCIAL_LINKS]: {
+      [eL.WebSetting.SOCIAL_LINKS]: {
         section: S.SectionTypes.CUSTOM,
-        element: z.default
+        element: Q.default
       },
-      [eD.WebSetting.CLIENT_DEBUG_INFO]: {
+      [eL.WebSetting.CLIENT_DEBUG_INFO]: {
         section: S.SectionTypes.CUSTOM,
-        element: Y.default
+        element: w.default
       }
     })
   }
