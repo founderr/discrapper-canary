@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return I
   }
 });
 var i = n("735250");
@@ -11,26 +11,27 @@ var r = n("442837"),
   a = n("906732"),
   o = n("199902"),
   l = n("158776"),
-  u = n("785717"),
-  d = n("221292"),
-  _ = n("981631"),
-  c = n("10268");
+  u = n("594174"),
+  d = n("785717"),
+  _ = n("221292"),
+  c = n("981631"),
+  E = n("10268");
 
-function E(e) {
+function I(e) {
   let {
     user: t,
     guild: n,
-    channelId: E,
-    onClose: I
+    channelId: I,
+    onClose: T
   } = e, {
-    analyticsLocations: T,
-    newestAnalyticsLocation: f
+    analyticsLocations: f,
+    newestAnalyticsLocation: S
   } = (0, a.default)(), {
-    trackUserProfileAction: S,
-    ...h
-  } = (0, u.useUserProfileAnalyticsContext)(), {
-    isApplicationStreaming: A,
-    activity: m
+    trackUserProfileAction: h,
+    ...A
+  } = (0, d.useUserProfileAnalyticsContext)(), m = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
+    isApplicationStreaming: N,
+    activity: p
   } = (0, r.useStateFromStoresObject)([o.default, l.default], () => {
     let e = null != o.default.getAnyStreamForUser(t.id);
     return {
@@ -39,38 +40,39 @@ function E(e) {
         let {
           type: t
         } = e;
-        return t === _.ActivityTypes.PLAYING
+        return t === c.ActivityTypes.PLAYING
       }) : l.default.findActivity(t.id, e => {
         let {
           type: t
         } = e;
-        return t !== _.ActivityTypes.CUSTOM_STATUS
+        return t !== c.ActivityTypes.CUSTOM_STATUS
       })
     }
   });
   return (0, i.jsx)(s.default, {
     type: s.UserActivityTypes.BITE_SIZE_POPOUT,
-    activity: m,
-    className: c.activity,
-    source: f,
+    activity: p,
+    className: E.activity,
+    source: S,
     user: t,
     guildId: null == n ? void 0 : n.id,
-    channelId: E,
-    onOpenGameProfile: I,
+    channelId: I,
+    onOpenGameProfile: T,
     onAction: () => {
-      S({
+      h({
         action: "JOIN_ACTIVITY"
-      }), (0, d.trackUserProfileActivityJoined)({
-        activityType: A ? _.ActivityTypes.STREAMING : null == m ? void 0 : m.type,
-        activityName: null == m ? void 0 : m.name,
-        activityPlatform: null == m ? void 0 : m.platform,
-        activitySessionId: null == m ? void 0 : m.session_id,
-        applicationId: null == m ? void 0 : m.application_id,
-        analyticsLocations: T,
-        ...h
-      }), null == I || I()
+      }), (0, _.trackUserProfileActivityJoined)({
+        activityType: N ? c.ActivityTypes.STREAMING : null == p ? void 0 : p.type,
+        activityName: null == p ? void 0 : p.name,
+        activityPlatform: null == p ? void 0 : p.platform,
+        activitySessionId: null == p ? void 0 : p.session_id,
+        applicationId: null == p ? void 0 : p.application_id,
+        analyticsLocations: f,
+        ...A
+      }), null == T || T()
     },
-    actionColor: c.buttonColor,
+    showActions: t.id !== (null == m ? void 0 : m.id),
+    actionColor: E.buttonColor,
     showChannelDetails: !0
   })
 }

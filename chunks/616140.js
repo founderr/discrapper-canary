@@ -24,8 +24,8 @@ var s = l("735250"),
   T = l("988246"),
   g = l("834534"),
   x = l("228168"),
-  U = l("981631"),
-  A = l("689938"),
+  A = l("981631"),
+  U = l("689938"),
   N = l("773386");
 let C = e => {
   var t, l;
@@ -36,22 +36,22 @@ let C = e => {
     let {
       type: t
     } = e;
-    return t !== U.ActivityTypes.CUSTOM_STATUS
+    return t !== A.ActivityTypes.CUSTOM_STATUS
   })), c = null === (t = (0, I.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualFriends) || void 0 === t ? void 0 : t.length, f = null === (l = (0, m.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualGuilds) || void 0 === l ? void 0 : l.length, S = [{
     section: x.UserProfileSections.USER_INFO,
-    text: A.default.Messages.USER_PROFILE_ABOUT_ME
+    text: U.default.Messages.USER_PROFILE_ABOUT_ME
   }];
   return (null != o || null != r) && S.push({
     section: x.UserProfileSections.ACTIVITY,
-    text: A.default.Messages.USER_PROFILE_ACTIVITY
+    text: U.default.Messages.USER_PROFILE_ACTIVITY
   }), s.id !== (null == i ? void 0 : i.id) && (S.push({
     section: x.UserProfileSections.MUTUAL_FRIENDS,
-    text: (0, a.match)(c).with(void 0, () => A.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => A.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => A.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+    text: (0, a.match)(c).with(void 0, () => U.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => U.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => U.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: e
     }))
   }), S.push({
     section: x.UserProfileSections.MUTUAL_GUILDS,
-    text: (0, a.match)(f).with(void 0, () => A.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => A.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => A.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+    text: (0, a.match)(f).with(void 0, () => U.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => U.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => U.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: e
     }))
   })), S
@@ -67,6 +67,7 @@ function R(e) {
     onClose: o
   } = e;
   return t === x.UserProfileSections.ACTIVITY ? (0, s.jsx)(_.default, {
+    showActions: (null == i ? void 0 : i.id) !== l.id,
     user: l,
     type: S.Types.SIMPLIFIED_PROFILE
   }) : t === x.UserProfileSections.MUTUAL_FRIENDS ? (0, s.jsx)(v.default, {
@@ -96,7 +97,7 @@ function h(e) {
   } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = C({
     user: a,
     currentUser: _
-  }), [g, U] = i.useState(S), [A, h] = i.useState(null !== (l = null === (t = p.find(e => {
+  }), [g, A] = i.useState(S), [U, h] = i.useState(null !== (l = null === (t = p.find(e => {
     let {
       section: t
     } = e;
@@ -105,7 +106,7 @@ function h(e) {
     m({
       action: "PRESS_SECTION",
       section: e
-    }), h(e), U(!1)
+    }), h(e), A(!1)
   }, [m, h]);
   return null == _ ? null : v ? (0, s.jsx)("div", {
     className: N.container,
@@ -115,7 +116,7 @@ function h(e) {
     children: [(0, s.jsx)(o.TabBar, {
       className: N.tabBar,
       type: "top",
-      selectedItem: A,
+      selectedItem: U,
       onItemSelect: P,
       children: p.map(e => {
         let {
@@ -133,7 +134,7 @@ function h(e) {
         }, t)
       })
     }), (0, s.jsx)(R, {
-      section: A,
+      section: U,
       user: a,
       currentUser: _,
       displayProfile: u,
