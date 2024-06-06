@@ -21,8 +21,8 @@ var a = s("735250"),
   T = s("197115"),
   x = s("300284"),
   _ = s("876917"),
-  N = s("642619"),
-  L = s("210887"),
+  L = s("642619"),
+  N = s("210887"),
   b = s("725808"),
   R = s("794358"),
   v = s("466111"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   M = s("724994"),
   k = s("624377"),
   B = s("390698"),
-  F = s("813083"),
-  D = s("680942"),
+  D = s("813083"),
+  F = s("680942"),
   U = s("558060"),
   H = s("237031"),
   w = s("616066"),
@@ -93,7 +93,7 @@ t.default = function(e) {
   } = (0, k.default)(t.styles), ea = P.default.canUseCollectibles(s), el = (0, y.getFormattedPriceForCollectiblesProduct)(t, ea, !1), en = l.useMemo(() => (0, y.getProductDiscount)(t, ea), [t, ea]), er = (0, y.isPremiumCollectiblesProduct)(t), ei = (0, y.isFreeCollectiblesProduct)(t), {
     isPurchased: eo,
     isPartiallyPurchased: eu
-  } = (0, M.useProductPurchaseState)(t), [ec, ed] = (0, d.useStateFromStoresArray)([j.default], () => [j.default.isClaiming === t.skuId, null != j.default.isClaiming && j.default.isClaiming !== t.skuId]), ef = (0, d.useStateFromStores)([L.default], () => (0, C.isThemeDark)(L.default.theme)), eC = (0, y.isProductNew)(t.skuId);
+  } = (0, M.useProductPurchaseState)(t), [ec, ed] = (0, d.useStateFromStoresArray)([j.default], () => [j.default.isClaiming === t.skuId, null != j.default.isClaiming && j.default.isClaiming !== t.skuId]), ef = (0, d.useStateFromStores)([N.default], () => (0, C.isThemeDark)(N.default.theme)), eC = (0, y.isProductNew)(t.skuId);
   l.useEffect(() => {
     let {
       current: e
@@ -118,7 +118,7 @@ t.default = function(e) {
         });
         return
       }
-      t.type === c.CollectiblesItemType.PROFILE_EFFECT && (0, N.openProfileEffectModal)({
+      t.type === c.CollectiblesItemType.PROFILE_EFFECT && (0, L.openProfileEffectModal)({
         initialSelectedEffectId: et.id,
         analyticsLocations: X
       })
@@ -160,7 +160,7 @@ t.default = function(e) {
     }),
     ex = () => er ? null : ei ? (0, a.jsx)(Z, {
       onClick: eh
-    }) : (0, a.jsx)(D.default, {
+    }) : (0, a.jsx)(F.default, {
       product: t,
       returnRef: q,
       isGiftEasterEggEnabled: R,
@@ -202,7 +202,7 @@ t.default = function(e) {
         }), ex()]
       })
     },
-    eN = ef ? "0 0 15px 1px ".concat(f.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
+    eL = ef ? "0 0 15px 1px ".concat(f.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
   return (0, y.isBundleProduct)(t) && null != en && en.discountPercentage < 0 ? null : (0, a.jsx)(E.FocusRing, {
     children: (0, a.jsxs)(E.Clickable, {
       innerRef: q,
@@ -214,7 +214,7 @@ t.default = function(e) {
       style: null != es ? {
         backgroundColor: ef ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
-        boxShadow: ee ? eN : "none"
+        boxShadow: ee ? eL : "none"
       } : void 0,
       id: "shop-item-".concat(t.skuId),
       children: [er && (0, a.jsx)(E.Tooltip, {
@@ -279,7 +279,7 @@ t.default = function(e) {
             children: e_()
           })]
         })]
-      }), (0, a.jsx)(F.default, {
+      }), (0, a.jsx)(D.default, {
         category: n,
         className: K.limitedTimeBadge,
         display: "card"

@@ -12,13 +12,13 @@ var a = n("735250"),
   f = n("777734"),
   E = n("976757"),
   h = n("981631"),
-  _ = n("886722");
+  C = n("886722");
 t.default = s.memo(function(e) {
   let {
     title: t,
     subtitle: n
   } = e, {
-    loaded: C,
+    loaded: _,
     clans: m,
     searchResult: S,
     searchCriteria: p
@@ -26,7 +26,7 @@ t.default = s.memo(function(e) {
     var t;
     return (0, a.jsx)(u.default, {
       clan: e,
-      className: _.card,
+      className: C.card,
       affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, o.getClanDiscoveryAffinity)(e, p),
       traitsToHighlight: I,
       source: h.AnalyticsSections.DISCOVER_SEARCH,
@@ -36,19 +36,19 @@ t.default = s.memo(function(e) {
   }, [p, I, g]), A = s.useMemo(() => null != S && (0, E.isLoadedSearchResult)(S) ? m : [], [m, S]), N = s.useCallback(e => {
     e && A.length > 0 && (0, r.trackClanDiscoveryViewed)(A.map(e => e.id), "top_picks", p)
   }, [A, p]);
-  return 0 !== m.length && C ? (0, a.jsx)(i.VisibilitySensor, {
+  return 0 !== m.length && _ ? (0, a.jsx)(i.VisibilitySensor, {
     onChange: N,
     threshold: .25,
     children: (0, a.jsxs)("div", {
-      className: _.previewListContainer,
+      className: C.previewListContainer,
       children: [(0, a.jsx)("div", {
-        className: _.previewListSection,
+        className: C.previewListSection,
         children: (0, a.jsx)(f.default, {
           title: t,
           subtitle: n
         })
       }), (0, a.jsx)("div", {
-        className: _.previewList,
+        className: C.previewList,
         children: A.map(e => T(e))
       })]
     })

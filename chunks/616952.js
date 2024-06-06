@@ -8,8 +8,8 @@ var s = n("735250");
 n("470079");
 var a = n("882037"),
   i = n("853268"),
-  r = n("689938"),
-  l = n("611273");
+  l = n("689938"),
+  r = n("611273");
 
 function o() {
   let {
@@ -18,9 +18,9 @@ function o() {
   } = (0, a.usePromoEmailConsentStore)();
   return e ? (0, s.jsx)(i.default, {
     value: t,
-    subText: r.default.Messages.PROMOTIONAL_EMAIL_OPT_IN_CONSENT,
+    subText: l.default.Messages.PROMOTIONAL_EMAIL_OPT_IN_CONSENT,
     onChange: a.setPromoEmailConsentChecked,
-    marginTopStyle: l.marginTop8,
+    marginTopStyle: r.marginTop8,
     muted: !0
   }) : null
 }

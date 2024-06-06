@@ -37,13 +37,13 @@ function _(e) {
     newestAnalyticsLocation: R
   } = (0, r.default)();
 
-  function P(e) {
+  function h(e) {
     A({
       action: "SEND_MESSAGE"
     }), a.default.openPrivateChannel(t.id, !1, !1, e), C()
   }
 
-  function h(e) {
+  function P(e) {
     A({
       action: "PRESS_OPTIONS"
     }), (0, n.openContextMenuLazy)(e, async () => {
@@ -60,7 +60,7 @@ function _(e) {
         onCopyId: () => A({
           action: "COPY_USER_ID"
         }),
-        onMessage: () => P("User Profile Modal Header Buttons - Context Menu"),
+        onMessage: () => h("User Profile Modal Header Buttons - Context Menu"),
         viewProfileItem: N,
         user: t,
         isCurrentUser: _,
@@ -132,7 +132,7 @@ function _(e) {
         relationshipType: g,
         onAddFriend: y,
         onIgnoreFriend: j,
-        onSendMessage: () => P("User Profile Modal Header Buttons - Send Message Button"),
+        onSendMessage: () => h("User Profile Modal Header Buttons - Send Message Button"),
         originalFriendingEnabled: x,
         improvedFriendingEnabled: U
       }), _ && (0, s.jsx)(c.default, {
@@ -146,7 +146,7 @@ function _(e) {
             left: 8
           }
         },
-        onClick: h,
+        onClick: P,
         children: (0, s.jsx)(d.default, {
           className: m.additionalActionsIcon
         })

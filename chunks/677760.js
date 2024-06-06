@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return U
+    return b
   }
 }), n("47120");
 var s, a, l = n("735250"),
@@ -17,9 +17,9 @@ var s, a, l = n("735250"),
   _ = n("701190"),
   p = n("819570"),
   h = n("626135"),
-  T = n("768581"),
-  g = n("823379"),
-  m = n("264229"),
+  g = n("768581"),
+  m = n("823379"),
+  T = n("264229"),
   N = n("230224"),
   A = n("617730"),
   S = n("258356"),
@@ -52,7 +52,7 @@ let x = e => {
     case v.InviteStates.RESOLVING:
       return 0;
     default:
-      (0, g.assertNever)(n)
+      (0, m.assertNever)(n)
   }
 };
 
@@ -167,7 +167,7 @@ function j(e) {
     guild: s
   } = null != t ? t : {}, a = {};
   if ((null == s ? void 0 : s.splash) != null) {
-    let e = T.default.getGuildSplashURL({
+    let e = g.default.getGuildSplashURL({
       id: s.id,
       splash: s.splash
     });
@@ -187,7 +187,7 @@ function j(e) {
   })
 }
 
-function U(e) {
+function b(e) {
   let {
     inviteKey: t,
     transitionTo: n
@@ -207,7 +207,7 @@ function U(e) {
       ! function(e, t, n) {
         var s, a, l;
         null == e || e.preventDefault(), h.default.track(v.AnalyticEvents.INVITE_APP_OPENED, {
-          invite_code: (0, m.parseInviteCodeFromInviteKey)(t),
+          invite_code: (0, T.parseInviteCodeFromInviteKey)(t),
           guild_id: null == n ? void 0 : null === (s = n.guild) || void 0 === s ? void 0 : s.id,
           channel_id: null == n ? void 0 : null === (a = n.channel) || void 0 === a ? void 0 : a.id,
           inviter_id: null == n ? void 0 : null === (l = n.inviter) || void 0 === l ? void 0 : l.id

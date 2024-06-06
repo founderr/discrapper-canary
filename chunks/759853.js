@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("887024"),
-  i = n("920906"),
-  r = n("442837"),
-  o = n("110924"),
-  u = n("607070"),
-  d = n("819640"),
-  c = n("569379"),
-  f = n("675654"),
-  E = n("977524"),
-  h = n("197857");
-let _ = ["#51BC9D"];
+s.r(t), s("47120");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("887024"),
+  i = s("920906"),
+  r = s("442837"),
+  o = s("110924"),
+  u = s("607070"),
+  d = s("819640"),
+  c = s("569379"),
+  E = s("675654"),
+  _ = s("977524"),
+  f = s("197857");
+let h = ["#51BC9D"];
 t.default = e => {
   var t;
   let {
-    quest: n,
-    progressBarRef: C,
-    isExpanded: m
+    quest: s,
+    progressBarRef: m,
+    isExpanded: C
   } = e, {
-    completionSpring: S,
-    startCompletionAnimation: p
-  } = (0, c.useQuestBarCompletionAnimation)(), I = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, g = s.useRef(!1), T = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), A = s.useRef(null), N = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), v = (0, o.default)(N), [R, O] = s.useState(null), [L, M] = s.useState(null), P = s.useRef(new l.Environment({
+    completionSpring: T,
+    startCompletionAnimation: g
+  } = (0, c.useQuestBarCompletionAnimation)(), A = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = n.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = n.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), R = (0, o.default)(I), [v, x] = n.useState(null), [M, L] = n.useState(null), O = n.useRef(new l.Environment({
     gravity: 0,
     wind: 0
-  })), x = (0, l.useConfettiCannon)(R, L), y = s.useCallback(() => {
-    if (T) return;
-    let e = C.current,
-      t = A.current;
-    if (null != t && null != e && x.isReady) {
-      var n, a, s, l;
+  })), y = (0, l.useConfettiCannon)(v, M), D = n.useCallback(() => {
+    if (N) return;
+    let e = m.current,
+      t = S.current;
+    if (null != t && null != e && y.isReady) {
+      var s, a, n, l;
       let {
         x: i,
         y: r
@@ -38,16 +38,16 @@ t.default = e => {
         x: o,
         y: u
       } = t.getBoundingClientRect();
-      x.createMultipleConfetti((n = i - o, a = r - u, s = e.clientHeight, l = e.clientWidth, {
-        ...f.COMMON_CONFETTI_BASE_CONFIG,
+      y.createMultipleConfetti((s = i - o, a = r - u, n = e.clientHeight, l = e.clientWidth, {
+        ...E.COMMON_CONFETTI_BASE_CONFIG,
         position: {
           type: "static-random",
           minValue: {
-            x: n,
+            x: s,
             y: a
           },
           maxValue: {
-            x: n + s,
+            x: s + n,
             y: a + l
           }
         },
@@ -78,34 +78,34 @@ t.default = e => {
         }
       }), 100)
     }
-  }, [C, A, x, T]), D = (0, o.default)(m);
-  return (s.useEffect(() => {
-    I && m && !D && (p(), y())
-  }, [m, I, p, y, D]), s.useEffect(() => {
-    I && !N && v && setTimeout(() => {
-      p(), y()
+  }, [m, S, y, N]), b = (0, o.default)(C);
+  return (n.useEffect(() => {
+    A && C && !b && (g(), D())
+  }, [C, A, g, D, b]), n.useEffect(() => {
+    A && !I && R && setTimeout(() => {
+      g(), D()
     }, 200)
-  }, [I, v, N, p, y]), s.useEffect(() => {
-    x.isReady && (!g.current && I && (p(), y()), g.current = I)
-  }, [I, g, y, p, x]), T) ? null : (0, a.jsxs)("div", {
-    className: E.wrapper,
+  }, [A, R, I, g, D]), n.useEffect(() => {
+    y.isReady && (!p.current && A && (g(), D()), p.current = A)
+  }, [A, p, D, g, y]), N) ? null : (0, a.jsxs)("div", {
+    className: _.wrapper,
     "aria-hidden": "true",
-    ref: A,
+    ref: S,
     children: [(0, a.jsx)(i.animated.div, {
-      className: E.background,
+      className: _.background,
       style: {
-        opacity: S
+        opacity: T
       }
     }), (0, a.jsx)(l.ConfettiCanvas, {
-      ref: O,
-      className: E.confetti,
-      environment: P.current
+      ref: x,
+      className: _.confetti,
+      environment: O.current
     }), (0, a.jsx)(l.SpriteCanvas, {
-      ref: M,
-      sprites: [h],
-      colors: _,
-      spriteWidth: f.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-      spriteHeight: f.COMMON_CONFETTI_MAX_SPRITE_SIZE
+      ref: L,
+      sprites: [f],
+      colors: h,
+      spriteWidth: E.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+      spriteHeight: E.COMMON_CONFETTI_MAX_SPRITE_SIZE
     })]
   })
 }

@@ -36,7 +36,7 @@ function T(e) {
     onActivityItemSelected: I,
     imageBackground: A,
     activityAction: v,
-    labelType: N
+    labelType: x
   } = (0, f.default)({
     channel: n,
     activityItem: a,
@@ -45,7 +45,7 @@ function T(e) {
     onActivityItemSelected: l,
     embeddedActivitiesManager: p.default,
     assetNames: S
-  }), [x, M] = i.useState(!1), R = i.useCallback(() => {
+  }), [N, M] = i.useState(!1), R = i.useCallback(() => {
     M(!0)
   }, [M]), y = i.useCallback(() => {
     M(!1)
@@ -55,10 +55,10 @@ function T(e) {
       className: g.badgeContainer,
       children: (0, s.jsx)(m.default, {
         name: a.application.name,
-        labelType: N
+        labelType: x
       })
     })
-  }), [a.application.name, N]), O = i.useMemo(() => {
+  }), [a.application.name, x]), j = i.useMemo(() => {
     switch (v) {
       case f.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
@@ -105,7 +105,7 @@ function T(e) {
         value: 0
       },
       to: {
-        value: x ? 1 : 0
+        value: N ? 1 : 0
       },
       children: e => {
         let {
@@ -125,7 +125,7 @@ function T(e) {
               applicationName: a.application.name,
               imageClassName: g.activitySuggestionImage,
               imageNotFoundClassName: g.brokenImageIconWrapper
-            }), L, O]
+            }), L, j]
           })
         })
       }

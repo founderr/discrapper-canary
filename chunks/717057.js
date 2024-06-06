@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return j
   }
 }), n("47120");
 var a = n("735250"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("380365"),
   A = n("979264"),
   v = n("620929"),
-  N = n("284019"),
-  x = n("308083"),
+  x = n("284019"),
+  N = n("308083"),
   M = n("981631"),
   R = n("689938"),
   y = n("946984");
@@ -54,7 +54,7 @@ function L(e) {
         clanBadge: s.badge.imageHash,
         clanTag: s.tag,
         textVariant: "heading-lg/semibold",
-        badgeSize: x.ClanTagBadgeSize.SIZE_24,
+        badgeSize: N.ClanTagBadgeSize.SIZE_24,
         className: y.clanTagChiplet
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsx)(c.Heading, {
@@ -89,14 +89,14 @@ function L(e) {
   })
 }
 
-function O(e) {
+function j(e) {
   var t;
   let {
     guildId: n,
     onClose: s,
     onAccept: r,
     ...o
-  } = e, C = (0, E.useUID)(), T = (0, S.useClanInfo)(n), A = (0, S.useIsFetchingClanInfo)(), [v, x] = l.useState(!0), [O, j] = l.useState(!1), P = l.useCallback(() => {
+  } = e, C = (0, E.useUID)(), T = (0, S.useClanInfo)(n), A = (0, S.useIsFetchingClanInfo)(), [v, N] = l.useState(!0), [j, O] = l.useState(!1), P = l.useCallback(() => {
     r(), s()
   }, [r, s]);
   l.useEffect(() => {
@@ -106,18 +106,18 @@ function O(e) {
       v && (0, g.adoptClanIdentity)(n, v, M.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), P()
     }, [n, P, v]),
     b = l.useCallback(() => {
-      j(!0)
+      O(!0)
     }, []),
     U = (0, d.useStateFromStores)([m.default], () => m.default.getGuild(n)),
     F = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()),
     w = (0, d.useStateFromStores)([h.default], () => null != F ? h.default.getMember(n, F.id) : null),
     k = (0, f.default)(),
     H = (0, _.useBrandColor)(null == T ? void 0 : null === (t = T.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .7]),
-    B = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+    G = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
       theme: k,
       saturation: 1
     }).hex(),
-    G = (0, _.getClanRadialBackgroundStyle)(H, B, "top center");
+    B = (0, _.getClanRadialBackgroundStyle)(H, G, "top center");
   return null == U || null == F || null == w || null == T ? null : (0, a.jsx)(c.ModalRoot, {
     ...o,
     transitionState: o.transitionState,
@@ -126,7 +126,7 @@ function O(e) {
     size: c.ModalSize.DYNAMIC,
     children: (0, a.jsxs)(c.ModalContent, {
       className: y.content,
-      style: G,
+      style: B,
       children: [(0, a.jsxs)("div", {
         className: y.infoSide,
         children: [(0, a.jsxs)("div", {
@@ -147,7 +147,7 @@ function O(e) {
         }), (0, a.jsx)(I.default, {
           guildId: n,
           isTagAdopted: v,
-          onChangeUseTag: x
+          onChangeUseTag: N
         })]
       }), (0, a.jsx)("div", {
         className: y.scrollMainContainer,
@@ -156,12 +156,12 @@ function O(e) {
           clanInfo: T,
           onSignCharter: b
         })
-      }), (0, a.jsx)(N.default, {
+      }), (0, a.jsx)(x.default, {
         onClick: D,
         color: c.Button.Colors.BRAND,
         themeColor: H,
         fullWidth: !1,
-        className: i()(y.ctaButton, O ? y.ctaButtonSigned : null),
+        className: i()(y.ctaButton, j ? y.ctaButtonSigned : null),
         children: (0, a.jsxs)("div", {
           className: y.ctaButtonInner,
           children: [(0, a.jsx)(c.Text, {

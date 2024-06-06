@@ -18,12 +18,12 @@ let T = !1,
   I = "",
   A = 0,
   v = [],
-  N = !1,
-  x = new Set,
+  x = !1,
+  N = new Set,
   M = null;
 
 function R() {
-  I = "", A = 0, v = [], x = new Set, T = !1, M = null
+  I = "", A = 0, v = [], N = new Set, T = !1, M = null
 }
 
 function y(e) {
@@ -40,7 +40,7 @@ function L() {
       return null == n ? e : (e.push({
         user: n
       }), e)
-    }, []).sort(j)
+    }, []).sort(O)
   }(e), !0;
   let t = null != e ? e.recipients : [];
   return null != a && a.setQuery(I, {
@@ -64,13 +64,13 @@ function L() {
   }()), !1
 }
 
-function O() {
+function j() {
   if (!T) return !1;
-  let e = N;
-  return (N = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
+  let e = x;
+  return (x = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
 }
 
-function j(e, t) {
+function O(e, t) {
   return (0, m.stripDiacritics)(p.default.getName(e.user).toLocaleLowerCase()).localeCompare((0, m.stripDiacritics)(p.default.getName(t.user).toLocaleLowerCase()))
 }
 
@@ -94,7 +94,7 @@ function D() {
 
 function b(e) {
   if (e.key !== _.NEW_GROUP_DM_POPOUT_ID) return !1;
-  T = !0, O(), a = D(), M = null, y("")
+  T = !0, j(), a = D(), M = null, y("")
 }
 
 function U(e) {
@@ -107,16 +107,16 @@ function F() {
 }
 class w extends(l = d.default.Store) {
   initialize() {
-    this.waitFor(S.default, E.default, g.default), this.syncWith([S.default, E.default], L), this.syncWith([g.default], O)
+    this.waitFor(S.default, E.default, g.default), this.syncWith([S.default, E.default], L), this.syncWith([g.default], j)
   }
   getResults() {
     return v
   }
   hasFriends() {
-    return N
+    return x
   }
   getSelectedUsers() {
-    return x
+    return N
   }
   getQuery() {
     return I
@@ -125,9 +125,9 @@ class w extends(l = d.default.Store) {
     return {
       query: I,
       selectedRow: A,
-      selectedUsers: x,
+      selectedUsers: N,
       results: v,
-      hasFriends: N
+      hasFriends: x
     }
   }
 }
@@ -153,7 +153,7 @@ let k = new w(c.default, {
   MODAL_PUSH: b,
   SHOW_ACTION_SHEET: b,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    T = !0, O(), a = D(), M = e.channelId, y("")
+    T = !0, j(), a = D(), M = e.channelId, y("")
   },
   MODAL_POP: U,
   HIDE_ACTION_SHEET: U,
@@ -168,13 +168,13 @@ let k = new w(c.default, {
     let {
       userId: t
     } = e;
-    x.add(t), x = new Set(x)
+    N.add(t), N = new Set(N)
   },
   PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function(e) {
     let {
       userId: t
     } = e;
-    x.delete(t), x = new Set(x)
+    N.delete(t), N = new Set(N)
   }
 });
 t.default = k

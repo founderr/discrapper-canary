@@ -29,8 +29,8 @@ var s = l("735250"),
   N = l("184325"),
   C = l("652853"),
   R = l("225714"),
-  P = l("228168"),
-  h = l("981631"),
+  h = l("228168"),
+  P = l("981631"),
   M = l("231338"),
   y = l("689938"),
   j = l("155614");
@@ -88,7 +88,7 @@ function O(e) {
         context: {
           location: "User Profile"
         },
-        type: h.RelationshipTypes.BLOCKED
+        type: P.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -107,7 +107,7 @@ function O(e) {
       displayProfile: t,
       onClose: $,
       user: p,
-      profileType: P.UserProfileTypes.MODAL,
+      profileType: h.UserProfileTypes.MODAL,
       hasProfileEffect: k
     }), (0, s.jsxs)("div", {
       className: j.header,

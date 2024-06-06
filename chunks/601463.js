@@ -21,8 +21,8 @@ function c(e) {
     sidebarWidth: f,
     windowWidth: E,
     transition: h,
-    brandPrimaryColor: _
-  } = e, C = s.useMemo(() => (E - f) / 2, [f, E]);
+    brandPrimaryColor: C
+  } = e, _ = s.useMemo(() => (E - f) / 2, [f, E]);
   return (0, a.jsxs)("div", {
     className: d.sidebarContent,
     children: [h((e, t) => t && (0, a.jsx)(l.animated.div, {
@@ -30,12 +30,12 @@ function c(e) {
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)")),
-        width: C
+        width: _
       },
       children: (0, a.jsxs)("div", {
         className: d.sidebarLeftDecoration,
         style: {
-          width: C
+          width: _
         },
         children: [(0, a.jsx)(i.Heading, {
           variant: "heading-xxl/medium",
@@ -53,7 +53,7 @@ function c(e) {
         canSignCharter: null != c,
         onSignCharter: () => null == c ? void 0 : c(!n),
         signHintPosition: r.SignHintPosition.RIGHT,
-        primaryColor: _,
+        primaryColor: C,
         className: d.charterScroll,
         fullHeight: !0
       })

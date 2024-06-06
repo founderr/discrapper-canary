@@ -20,9 +20,9 @@ var i = s("120356"),
   f = s("409813"),
   x = s("614223"),
   E = s("48175"),
-  m = s("474936"),
-  L = s("689938"),
-  S = s("385231");
+  L = s("474936"),
+  S = s("689938"),
+  m = s("385231");
 
 function I(e) {
   let {
@@ -34,9 +34,9 @@ function I(e) {
     activeSubscription: l,
     startedPaymentFlowWithPaymentSourcesRef: C,
     setSelectedPlanId: d,
-    priceOptions: L
+    priceOptions: S
   } = (0, _.usePaymentContext)(), {
-    isGift: S
+    isGift: m
   } = (0, p.useGiftContext)(), I = (0, u.usePremiumTrialOffer)(i);
   (0, o.useAnnualDiscountExperiment)("PremiumPaymentSKUSelectStep", null == I);
   let P = (0, a.useIsInPremiumOfferExperience)();
@@ -55,7 +55,7 @@ function I(e) {
       n(s);
       let u = f.Step.PLAN_SELECT,
         C = (0, c.getPremiumSkuIdForSubscription)(t);
-      (C === m.PremiumSubscriptionSKUs.TIER_1 || C === m.PremiumSubscriptionSKUs.TIER_2) && s === m.PremiumSubscriptionSKUs.TIER_0 && !r && (u = f.Step.WHAT_YOU_LOSE);
+      (C === L.PremiumSubscriptionSKUs.TIER_1 || C === L.PremiumSubscriptionSKUs.TIER_2) && s === L.PremiumSubscriptionSKUs.TIER_0 && !r && (u = f.Step.WHAT_YOU_LOSE);
       let d = (0, E.isInTrialRedemption)({
           userTrialOffer: l,
           isGift: r,
@@ -77,15 +77,15 @@ function I(e) {
       newSkuId: e,
       setSelectedSkuId: r,
       handleStepChange: t,
-      isGift: S,
+      isGift: m,
       userTrialOffer: I,
       startedPaymentFlowWithPaymentSources: C.current,
       setSelectedPlanId: d
     }),
     onClose: s,
-    isGift: S,
+    isGift: m,
     inOfferExperience: P,
-    priceOptions: L
+    priceOptions: S
   })
 }
 
@@ -99,21 +99,21 @@ function h(e) {
   } = e;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(l.ModalHeader, {
-      className: S.skuSelectModalHeader,
+      className: m.skuSelectModalHeader,
       separator: !1,
       children: [(0, n.jsx)(l.FormTitle, {
         tag: l.FormTitleTags.H4,
-        children: L.default.Messages.BILLING_STEP_SELECT_PLAN
+        children: S.default.Messages.BILLING_STEP_SELECT_PLAN
       }), (0, n.jsx)(l.ModalCloseButton, {
         onClick: s
       })]
     }), (0, n.jsxs)(l.ModalContent, {
-      className: r()(S.skuSelectModalContent, {
-        [S.modalPadding]: a
+      className: r()(m.skuSelectModalContent, {
+        [m.modalPadding]: a
       }),
       children: [(0, n.jsx)(C.default, {
         fromBoostCancelModal: !1,
-        className: S.legacyPricingNotice
+        className: m.legacyPricingNotice
       }), (0, n.jsx)(d.default, {
         onSelectSku: e => t((0, c.castPremiumSubscriptionAsSkuId)(e)),
         isGift: i,

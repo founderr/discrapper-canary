@@ -45,10 +45,10 @@ function R(e) {
     isNewChannel: P,
     muted: G,
     resolvedUnreadSetting: U
-  } = e, w = (0, a.useStateFromStores)([m.default], () => m.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
+  } = e, w = (0, a.useStateFromStores)([m.default], () => m.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
     channel: n,
     locked: F,
-    video: H || V,
+    video: V || H,
     selected: R
   }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), K = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
     var e, t;
@@ -80,7 +80,7 @@ function R(e) {
   let z = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0;
   return null != O && O && k ? (0, l.jsx)(N.default, {
     userCount: z,
-    video: H || V,
+    video: V || H,
     channel: n
   }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(C.TextBadge, {
     text: v.default.Messages.LIVE,

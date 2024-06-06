@@ -34,8 +34,8 @@ function R(e) {
     user: t,
     guildId: l,
     channelId: R,
-    messageId: P,
-    roleId: h,
+    messageId: h,
+    roleId: P,
     friendToken: M,
     initialSection: y,
     autoFocusNote: j,
@@ -53,8 +53,8 @@ function R(e) {
     userId: t.id,
     guildId: D,
     channelId: R,
-    messageId: P,
-    roleId: h
+    messageId: h,
+    roleId: P
   }), [k, w] = i.useState(D), Y = (0, I.default)(t.id), H = (0, I.default)(t.id, D), V = null == k ? Y : H, {
     activity: W,
     customStatusActivity: z
@@ -103,8 +103,8 @@ function R(e) {
       userId: t.id,
       guildId: D,
       channelId: R,
-      messageId: P,
-      roleId: h,
+      messageId: h,
+      roleId: P,
       children: (0, s.jsxs)(n.ModalRoot, {
         transitionState: F,
         className: C.root,

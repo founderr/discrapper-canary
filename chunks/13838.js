@@ -12,8 +12,8 @@ var a = n("392711"),
   f = n("131951"),
   E = n("19780"),
   h = n("594174"),
-  _ = n("979651"),
-  C = n("996106"),
+  C = n("979651"),
+  _ = n("996106"),
   m = n("914946"),
   S = n("238679"),
   p = n("452426"),
@@ -33,10 +33,10 @@ function v(e) {
     },
     socket: a
   } = e, s = d.default.getChannel(n);
-  if (null == s || !(0, m.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
+  if (null == s || !(0, m.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new _.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(n));
-  if (s.isNSFW() && (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default({
+  if (s.isNSFW() && (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new _.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
 }
@@ -50,7 +50,7 @@ function O(e) {
       channel_id: t
     }
   } = e;
-  if (null != t && null == d.default.getChannel(t)) throw new C.default({
+  if (null != t && null == d.default.getChannel(t)) throw new _.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(t))
 }
@@ -66,7 +66,7 @@ let L = {
           guild_id: t
         }
       } = e;
-      if (null == c.default.getGuild(t)) throw new C.default({
+      if (null == c.default.getGuild(t)) throw new _.default({
         errorCode: A.RPCErrors.INVALID_GUILD
       }, "Invalid guild id: ".concat(t));
       return e => {
@@ -101,7 +101,7 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == d.default.getChannel(t)) throw new C.default({
+      if (null == d.default.getChannel(t)) throw new _.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
@@ -111,7 +111,7 @@ let L = {
         } = e, l = d.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(_.default.getVoiceStatesForChannel(l.id));
+          r = Object.values(C.default.getVoiceStatesForChannel(l.id));
         return n && s().differenceBy(r, n, e => {
           let {
             userId: t
@@ -134,7 +134,7 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == d.default.getChannel(t)) throw new C.default({
+      if (null == d.default.getChannel(t)) throw new _.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
@@ -144,7 +144,7 @@ let L = {
         } = e, l = d.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(_.default.getVoiceStatesForChannel(l.id));
+          r = Object.values(C.default.getVoiceStatesForChannel(l.id));
         return s().differenceBy(n, r, e => {
           let {
             userId: t
@@ -167,7 +167,7 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == d.default.getChannel(t)) throw new C.default({
+      if (null == d.default.getChannel(t)) throw new _.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
@@ -177,7 +177,7 @@ let L = {
         } = e, l = d.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(_.default.getVoiceStatesForChannel(l.id)).map(e => (0, m.transformVoiceState)(i, l.id, e));
+          r = Object.values(C.default.getVoiceStatesForChannel(l.id)).map(e => (0, m.transformVoiceState)(i, l.id, e));
         return s().differenceWith(r, n, s().isEqual).forEach(e => a(e)), r
       }
     }

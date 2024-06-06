@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return L
   },
   default: function() {
-    return j
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -29,32 +29,32 @@ var a = n("735250"),
   I = n("512665"),
   A = n("768581"),
   v = n("70956"),
-  N = n("823379"),
-  x = n("792125"),
+  x = n("823379"),
+  N = n("792125"),
   M = n("981631"),
   R = n("768760"),
   y = n("588233");
 let L = 10 * v.default.Millis.SECOND;
 
-function O(e) {
+function j(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), v = (0, p.useActiveKeywordFiltersCacheKey)(), N = l.useCallback(e => {
+  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), v = (0, p.useActiveKeywordFiltersCacheKey)(), x = l.useCallback(e => {
     "A" !== e.target.nodeName && (f.default.updateChatOpen(n.channel_id, !0), h.default.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
       flash: !0
     }))
-  }, [n.channel_id, n.id]), x = null != n.content && "" !== n.content ? (0, E.default)(n, {
+  }, [n.channel_id, n.id]), N = null != n.content && "" !== n.content ? (0, E.default)(n, {
     isInteracting: c,
     shouldFilterKeywords: null != v
   }).content : null, {
     contentPlaceholder: M,
     renderedContent: L,
-    trailingIcon: O,
-    leadingIcon: j
-  } = (0, I.renderSingleLineMessage)(n, x, s, y.messageContent, {
+    trailingIcon: j,
+    leadingIcon: O
+  } = (0, I.renderSingleLineMessage)(n, N, s, y.messageContent, {
     trailingIconClass: y.messageContentTrailingIcon,
     leadingIconClass: y.messageContentLeadingIcon,
     iconSize: R.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
@@ -72,14 +72,14 @@ function O(e) {
     onMouseLeave: () => {
       _(!1)
     },
-    onClick: N,
+    onClick: x,
     children: [(0, a.jsxs)("div", {
       className: i()(y.messageContentWrapper, {
         [y.mentioned]: n.mentioned
       }),
-      children: [null != D ? null : j, null !== (t = null != L ? L : D) && void 0 !== t ? t : (0, a.jsx)("span", {
+      children: [null != D ? null : O, null !== (t = null != L ? L : D) && void 0 !== t ? t : (0, a.jsx)("span", {
         children: M
-      }), null != D ? null : O]
+      }), null != D ? null : j]
     }), (0, a.jsx)("img", {
       alt: "",
       src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, A.getGuildMemberAvatarURLSimple)({
@@ -92,7 +92,7 @@ function O(e) {
   })
 }
 
-function j(e) {
+function O(e) {
   let {
     channelId: t,
     className: n
@@ -131,7 +131,7 @@ function j(e) {
     let E = null !== (t = h.current) && void 0 !== t ? t : r;
     return {
       toastsHidden: d,
-      toastMessages: (0, u.useStateFromStoresArray)([_.default], () => E.map(e => _.default.getMessage(n, e)), [n, E]).filter(N.isNotNullish)
+      toastMessages: (0, u.useStateFromStoresArray)([_.default], () => E.map(e => _.default.getMessage(n, e)), [n, E]).filter(x.isNotNullish)
     }
   }({
     channelId: t,
@@ -190,7 +190,7 @@ function j(e) {
       }
     });
   return (0, a.jsx)("div", {
-    className: i()(n, (0, x.getThemeClass)(M.ThemeTypes.DARK)),
+    className: i()(n, (0, N.getThemeClass)(M.ThemeTypes.DARK)),
     onMouseEnter: () => {
       d(!0)
     },
@@ -201,7 +201,7 @@ function j(e) {
       ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
       className: y.toastWrapper,
       style: e,
-      children: (0, a.jsx)(O, {
+      children: (0, a.jsx)(j, {
         message: t.message
       })
     }))

@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
     return o
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("120356"),
-  s = n.n(r),
-  i = n("354676"),
-  l = n("255451");
+var s = r("735250");
+r("470079");
+var n = r("120356"),
+  l = r.n(n),
+  i = r("354676"),
+  a = r("255451");
 
 function o(e) {
   let {
     copy: t,
-    className: n
+    className: r
   } = e;
-  return (0, a.jsxs)("div", {
-    className: s()(l.badgeContainer, n),
-    children: [(0, a.jsx)("div", {
-      className: l.newBadge,
+  return (0, s.jsxs)("div", {
+    className: l()(a.badgeContainer, r),
+    children: [(0, s.jsx)("div", {
+      className: a.newBadge,
       children: t
-    }), (0, a.jsx)("span", {
-      className: s()(l.star, l.starLeft),
-      children: (0, a.jsx)(i.default, {
+    }), (0, s.jsx)("span", {
+      className: l()(a.star, a.starLeft),
+      children: (0, s.jsx)(i.default, {
         width: "10",
         height: "10"
       })
-    }), (0, a.jsx)("span", {
-      className: s()(l.star, l.starRight),
-      children: (0, a.jsx)(i.default, {
+    }), (0, s.jsx)("span", {
+      className: l()(a.star, a.starRight),
+      children: (0, s.jsx)(i.default, {
         width: "13",
         height: "13"
       })

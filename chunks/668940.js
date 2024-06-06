@@ -13,8 +13,8 @@ var s = n("442837"),
   f = n("709158"),
   E = n("683301"),
   h = n("150192"),
-  _ = n("889010"),
-  C = n("488905"),
+  C = n("889010"),
+  _ = n("488905"),
   m = n("347137"),
   S = n("731455"),
   p = n("689938");
@@ -48,9 +48,9 @@ let I = e => {
       (0, i.selectCategory)(e, !0), d.default.closeSidebar(), t && (0, i.clearSearch)()
     };
     return (0, a.jsxs)(l.Scroller, {
-      children: [(0, a.jsx)(C.DiscoverySidebarHeader, {
+      children: [(0, a.jsx)(_.DiscoverySidebarHeader, {
         text: p.default.Messages.DISCOVER
-      }), (0, a.jsx)(_.default, {
+      }), (0, a.jsx)(C.default, {
         categories: m,
         handleCategorySelect: g,
         currentCategoryId: e,

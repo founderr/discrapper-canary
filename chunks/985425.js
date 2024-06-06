@@ -34,28 +34,28 @@ function I(e) {
     previewPrimaryColor: E,
     className: y,
     disabledInputs: x,
-    isTryItOutFlow: U,
-    onUpsellClick: j
+    isTryItOutFlow: j,
+    onUpsellClick: U
   } = e, {
     analyticsLocations: N
-  } = (0, d.default)(), C = (0, n.useStateFromStores)([f.default], () => f.default.getStatus(a.id)), b = null == i || (null == v ? void 0 : v.canUsePremiumProfileCustomization) || I, w = b ? m.default : s.NitroWheelIcon;
+  } = (0, d.default)(), C = (0, n.useStateFromStores)([f.default], () => f.default.getStatus(a.id)), b = null == i || (null == v ? void 0 : v.canUsePremiumProfileCustomization) || I, _ = b ? m.default : s.NitroWheelIcon;
   return (0, l.jsxs)(o.Clickable, {
     "aria-disabled": x,
     onClick: x ? void 0 : e => {
       if (!b) {
-        null == j || j();
+        null == U || U();
         return
       }(0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await t.e("34627").then(t.bind(t, "445924"));
         return () => (0, l.jsx)(e, {
-          changeAvatarAction: () => (0, p.handleOpenSelectImageModal)(h.UploadTypes.AVATAR, null == i ? void 0 : i.id, U),
+          changeAvatarAction: () => (0, p.handleOpenSelectImageModal)(h.UploadTypes.AVATAR, null == i ? void 0 : i.id, j),
           changeDecorationAction: () => {
             (0, c.openAvatarDecorationModal)({
               guild: null == i ? void 0 : i,
               analyticsLocations: N,
-              isTryItOutFlow: U
+              isTryItOutFlow: j
             })
           }
         })
@@ -75,7 +75,7 @@ function I(e) {
       status: C,
       statusTooltip: !1,
       statusBackdropColor: null != E ? (0, o.getStatusBackdropColor)(P) : void 0
-    }), !x && (0, l.jsx)(w, {
+    }), !x && (0, l.jsx)(_, {
       className: g.overlayIcon,
       width: 20,
       height: 20,

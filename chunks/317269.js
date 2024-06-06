@@ -22,9 +22,9 @@ var n = s("735250"),
   f = s("74538"),
   x = s("741245"),
   E = s("474936"),
-  m = s("981631"),
-  L = s("689938"),
-  S = s("889158");
+  L = s("981631"),
+  S = s("689938"),
+  m = s("889158");
 
 function I(e) {
   var t, s;
@@ -36,47 +36,47 @@ function I(e) {
     [C, d] = (0, a.useStateFromStoresArray)([p.default], () => [p.default.get(o), p.default.get(r)]);
   if (l()(null != C && null != d, "Missing startingPlan or newPlan"), t = o, s = r, E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS.indexOf(t) < E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS.indexOf(s)) switch (r) {
       case E.SubscriptionPlans.PREMIUM_MONTH_TIER_1:
-        i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1, m.DELAYED_PAYMENTS.has(null != u ? u : m.PaymentSourceTypes.UNKNOWN) && (i = L.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
+        i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1, L.DELAYED_PAYMENTS.has(null != u ? u : L.PaymentSourceTypes.UNKNOWN) && (i = S.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
         break;
       case E.SubscriptionPlans.PREMIUM_MONTH_TIER_2:
-        i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH, m.DELAYED_PAYMENTS.has(null != u ? u : m.PaymentSourceTypes.UNKNOWN) && (i = L.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
+        i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH, L.DELAYED_PAYMENTS.has(null != u ? u : L.PaymentSourceTypes.UNKNOWN) && (i = S.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
         break;
       case E.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
-        i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR, m.DELAYED_PAYMENTS.has(null != u ? u : m.PaymentSourceTypes.UNKNOWN) && (i = L.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
+        i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR, L.DELAYED_PAYMENTS.has(null != u ? u : L.PaymentSourceTypes.UNKNOWN) && (i = S.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
         break;
       case E.SubscriptionPlans.PREMIUM_YEAR_TIER_2:
-        i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format({
+        i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format({
           numFreeGuildSubscriptions: E.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
-        }), m.DELAYED_PAYMENTS.has(null != u ? u : m.PaymentSourceTypes.UNKNOWN) && (i = L.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format({
+        }), L.DELAYED_PAYMENTS.has(null != u ? u : L.PaymentSourceTypes.UNKNOWN) && (i = S.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format({
           numFreeGuildSubscriptions: E.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
         }));
         break;
       case E.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2:
       case E.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
-        i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
+        i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
         break;
       case E.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
       case E.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
-        i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+        i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
         break;
       default:
         throw Error("Unexpected planId: ".concat(r))
-    } else if (C.skuId === E.PremiumSubscriptionSKUs.TIER_2 && d.skuId === E.PremiumSubscriptionSKUs.TIER_1) i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
+    } else if (C.skuId === E.PremiumSubscriptionSKUs.TIER_2 && d.skuId === E.PremiumSubscriptionSKUs.TIER_1) i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
     else switch (d.skuId) {
       case E.PremiumSubscriptionSKUs.TIER_0:
-        i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+        i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
         break;
       case E.PremiumSubscriptionSKUs.TIER_1:
-        i = L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
+        i = S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
         break;
       case E.PremiumSubscriptionSKUs.TIER_2:
-        i = 1 !== C.intervalCount ? L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH : L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
+        i = 1 !== C.intervalCount ? S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH : S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
         break;
       default:
         throw Error("Unexpected skuId: ".concat(d.skuId))
     }
   return (0, n.jsx)("div", {
-    className: S.text,
+    className: m.text,
     children: i
   })
 }
@@ -103,16 +103,16 @@ function h(e) {
       applicationId: e,
       id: t
     } = h;
-    (0, u.fetchPublishedSKU)(e, t).catch(m.NOOP_NULL)
+    (0, u.fetchPublishedSKU)(e, t).catch(L.NOOP_NULL)
   }, [h, A]);
   let R = e => {
-    if (e.skuId === E.PremiumSubscriptionSKUs.TIER_0) return m.DELAYED_PAYMENTS.has(null != N ? N : m.PaymentSourceTypes.UNKNOWN) ? L.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_0;
-    if (e.skuId === E.PremiumSubscriptionSKUs.TIER_1) return m.DELAYED_PAYMENTS.has(null != N ? N : m.PaymentSourceTypes.UNKNOWN) ? L.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1;
-    return m.DELAYED_PAYMENTS.has(null != N ? N : m.PaymentSourceTypes.UNKNOWN) ? L.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format() : C ? L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_NO_PAYMENT_TRIAL : L.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2
+    if (e.skuId === E.PremiumSubscriptionSKUs.TIER_0) return L.DELAYED_PAYMENTS.has(null != N ? N : L.PaymentSourceTypes.UNKNOWN) ? S.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_0;
+    if (e.skuId === E.PremiumSubscriptionSKUs.TIER_1) return L.DELAYED_PAYMENTS.has(null != N ? N : L.PaymentSourceTypes.UNKNOWN) ? S.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1;
+    return L.DELAYED_PAYMENTS.has(null != N ? N : L.PaymentSourceTypes.UNKNOWN) ? S.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format() : C ? S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_NO_PAYMENT_TRIAL : S.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2
   };
   if (null != A) t = (0, n.jsx)("div", {
-    className: S.text,
-    children: L.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BLURB_IAP.format({
+    className: m.text,
+    children: S.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BLURB_IAP.format({
       skuName: A.name
     })
   });
@@ -124,11 +124,11 @@ function h(e) {
     let e = p.default.get(r);
     l()(null != e, "Missing plan"), t = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)("div", {
-        className: S.text,
+        className: m.text,
         children: R(e)
       }), (0, n.jsx)("div", {
-        className: S.text,
-        children: L.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI.format({
+        className: m.text,
+        children: S.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI.format({
           guildName: M.name
         })
       })]
@@ -136,20 +136,20 @@ function h(e) {
   } else {
     let e = p.default.get(r);
     l()(null != e, "Missing plan"), t = (0, n.jsx)("div", {
-      className: S.text,
+      className: m.text,
       children: R(e)
     })
   }
   let g = f.default.getPremiumType(r);
-  return l()(null != g, "premium type should not be null in purchase confirmation"), s = null != A ? L.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format({
+  return l()(null != g, "premium type should not be null in purchase confirmation"), s = null != A ? S.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format({
     skuName: A.name
-  }) : P ? L.default.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON : null != M ? L.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI_CTA : L.default.Messages.PREMIUM_UPGRADE_DONE_BUTTON, (0, n.jsxs)("div", {
-    className: S.confirmation,
+  }) : P ? S.default.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON : null != M ? S.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI_CTA : S.default.Messages.PREMIUM_UPGRADE_DONE_BUTTON, (0, n.jsxs)("div", {
+    className: m.confirmation,
     children: [(0, n.jsx)(x.default, {
-      className: S.banner,
+      className: m.banner,
       theme: j,
       premiumType: g,
-      type: m.DELAYED_PAYMENTS.has(null != N ? N : m.PaymentSourceTypes.UNKNOWN) ? x.default.Types.PREMIUM_PAYMENT_STARTED : null != d ? x.default.Types.PREMIUM_UPDATED : x.default.Types.PREMIUM_ACTIVATED
+      type: L.DELAYED_PAYMENTS.has(null != N ? N : L.PaymentSourceTypes.UNKNOWN) ? x.default.Types.PREMIUM_PAYMENT_STARTED : null != d ? x.default.Types.PREMIUM_UPDATED : x.default.Types.PREMIUM_ACTIVATED
     }), t, T ? null : (0, n.jsx)(o.Button, {
       onClick: c,
       children: s

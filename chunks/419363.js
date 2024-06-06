@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   cancelAll: function() {
     return r
   },
@@ -10,26 +10,26 @@ n.r(t), n.d(t, {
     return i
   },
   supported: function() {
-    return s
+    return n
   }
-}), n("757143");
-var a = n("441729");
-let s = null != window.speechSynthesis;
+}), s("757143");
+var a = s("441729");
+let n = null != window.speechSynthesis;
 
 function l(e, t) {
-  let n = e.replace(/(https?:\/\/[^\s]+)/g, e => {
+  let s = e.replace(/(https?:\/\/[^\s]+)/g, e => {
     let t = e.match(/^https?:\/\/(?:www\.)?([^/?#]+)(?:[/?#]|$)/i);
     return null != t ? t[1] : ""
   });
-  null != t && n.length > t && (n = (n = n.substring(0, t)).substring(0, Math.min(n.length, n.lastIndexOf(" "))));
-  let s = new SpeechSynthesisUtterance(n);
-  return s.rate = a.default.speechRate, s
+  null != t && s.length > t && (s = (s = s.substring(0, t)).substring(0, Math.min(s.length, s.lastIndexOf(" "))));
+  let n = new SpeechSynthesisUtterance(s);
+  return n.rate = a.default.speechRate, n
 }
 
 function i(e, t) {
-  s && (e.voice = t, speechSynthesis.speak(e))
+  n && (e.voice = t, speechSynthesis.speak(e))
 }
 
 function r() {
-  s && speechSynthesis.cancel()
+  n && speechSynthesis.cancel()
 }

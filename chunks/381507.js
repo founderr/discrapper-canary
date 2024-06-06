@@ -26,7 +26,7 @@ t.default = () => {
     f = (0, l.useTheme)(),
     x = (0, i.isThemeLight)(f),
     E = o.default.getName(e),
-    m = x ? C.default : d.default;
+    L = x ? C.default : d.default;
   return null == e ? null : (0, n.jsxs)("div", {
     className: _.attributionBannerContainer,
     children: [(0, n.jsx)("div", {
@@ -43,7 +43,7 @@ t.default = () => {
       children: p.default.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({
         userName: E
       })
-    }), (0, n.jsx)(m, {
+    }), (0, n.jsx)(L, {
       className: _.bannerIcon
     })]
   })

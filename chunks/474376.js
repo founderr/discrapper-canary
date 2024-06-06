@@ -17,8 +17,8 @@ var s = n("442837"),
   f = n("626135"),
   E = n("51144"),
   h = n("480387"),
-  _ = n("726745"),
-  C = n("251423"),
+  C = n("726745"),
+  _ = n("251423"),
   m = n("383832"),
   S = n("981631"),
   p = n("689938"),
@@ -29,7 +29,7 @@ function g() {
     t = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation),
     {
       multiAccountUsers: n
-    } = (0, C.useMultiAccountUsers)(),
+    } = (0, _.useMultiAccountUsers)(),
     g = t => {
       t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
@@ -40,7 +40,7 @@ function g() {
     T = n.map(n => {
       let s = new r.default(n),
         o = s.id === (null == e ? void 0 : e.id),
-        u = n.tokenStatus === _.MultiAccountTokenStatus.INVALID,
+        u = n.tokenStatus === C.MultiAccountTokenStatus.INVALID,
         f = t ? null : "#".concat(s.discriminator);
       return (0, a.jsx)(l.MenuItem, {
         id: s.id,

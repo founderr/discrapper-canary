@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("44136"),
   A = n("981631"),
   v = n("65154"),
-  N = n("689938"),
-  x = n("61707");
+  x = n("689938"),
+  N = n("61707");
 let M = o.AvatarSizes.SIZE_80,
   R = o.AvatarSizes.SIZE_40;
 
@@ -39,8 +39,8 @@ function y(e) {
     width: o,
     paused: y,
     selected: L,
-    fit: O,
-    onVideoResize: j,
+    fit: j,
+    onVideoResize: O,
     blocked: P,
     noVideoRender: D = !1,
     pulseSpeakingIndicator: b = !1
@@ -48,38 +48,38 @@ function y(e) {
     user: w,
     streamId: k,
     speaking: H
-  } = t, B = w.id === F, G = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = H && (W || V), q = o < 124 ? R : M, {
-    avatarSrc: X,
-    avatarDecorationSrc: Q
+  } = t, G = w.id === F, B = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(x.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = H && (W || V), X = o < 124 ? R : M, {
+    avatarSrc: q,
+    avatarDecorationSrc: J
   } = (0, m.default)({
     user: w,
     guildId: n.guild_id,
-    size: q,
+    size: X,
     animateOnHover: !Z
-  }), J = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
+  }), Q = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (l.useEffect(() => {
-    n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === w.id && u.default.selectParticipant(n.id, null)
-  }, [G]), s && !Y && !D && G && !L && null != U && C.default.supports(v.Features.VIDEO)) ? (0, a.jsx)(_.default, {
-    onResize: j,
-    wrapperClassName: x.videoWrapper,
-    className: x.content,
-    mirror: B,
+    n.isGuildStageVoice() && !B && (null == Q ? void 0 : Q.id) === w.id && u.default.selectParticipant(n.id, null)
+  }, [B]), s && !Y && !D && B && !L && null != U && C.default.supports(v.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+    onResize: O,
+    wrapperClassName: N.videoWrapper,
+    className: N.content,
+    mirror: G,
     streamId: k,
     videoComponent: U,
-    fit: O,
+    fit: j,
     paused: y,
     videoSpinnerContext: w.id === F ? d.VideoSpinnerContext.SELF_VIDEO : d.VideoSpinnerContext.REMOTE_VIDEO,
     userId: w.id
   }, k) : (0, a.jsx)("div", {
-    className: i()(x.content, {
-      [x.blockedAvatar]: P
+    className: i()(N.content, {
+      [N.blockedAvatar]: P
     }),
     children: (0, a.jsx)(S.default, {
       "aria-label": K,
-      src: X,
-      avatarDecoration: Q,
+      src: q,
+      avatarDecoration: J,
       backgroundSrc: w.getAvatarURL(n.guild_id, 80),
-      size: q,
+      size: X,
       pulseSpeakingIndicator: b,
       speaking: H,
       userId: w.id

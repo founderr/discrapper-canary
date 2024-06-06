@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("359380"),
   E = n("480222"),
   h = n("207796"),
-  _ = n("316553"),
-  C = n("689938");
+  C = n("316553"),
+  _ = n("689938");
 let m = {
     mass: 1,
     tension: 280,
@@ -28,8 +28,8 @@ let m = {
       return (0, a.jsx)(E.default, {
         onClose: n,
         children: (0, a.jsx)(c.default, {
-          title: C.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-          description: C.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+          title: _.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+          description: _.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
           handleUpdate: t,
           playstyle: e
         })
@@ -37,7 +37,7 @@ let m = {
     },
     [h.ClanDiscoveryMode.TRAITS]: function() {
       let e = (0, h.useClanDiscoveryUIStore)(e => e.game, i.default),
-        t = (0, _.useDiscoveryGameApplicationId)({
+        t = (0, C.useDiscoveryGameApplicationId)({
           selectedGame: e
         }),
         [n, l] = s.useState(new Set(h.useClanDiscoveryUIStore.getState().selectedTraits)),
@@ -47,8 +47,8 @@ let m = {
       return (0, a.jsx)(E.default, {
         onClose: r,
         children: (0, a.jsx)(f.default, {
-          title: C.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-          description: C.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+          title: _.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+          description: _.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
           handleUpdate: l,
           interests: n,
           requiredGameId: t,
@@ -58,7 +58,7 @@ let m = {
     },
     [h.ClanDiscoveryMode.GAMES]: function() {
       let e = (0, h.useClanDiscoveryUIStore)(e => e.game, i.default),
-        t = (0, _.useDiscoveryGameApplicationId)({
+        t = (0, C.useDiscoveryGameApplicationId)({
           selectedGame: e
         }),
         [n, l] = s.useState(new Set(h.useClanDiscoveryUIStore.getState().selectedGames)),
@@ -68,8 +68,8 @@ let m = {
       return (0, a.jsx)(E.default, {
         onClose: r,
         children: (0, a.jsx)(d.default, {
-          title: C.default.Messages.CLAN_DISCOVERY_GAME_TITLE,
-          description: C.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+          title: _.default.Messages.CLAN_DISCOVERY_GAME_TITLE,
+          description: _.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
           requiredGameId: t,
           handleUpdate: l,
           gameApplicationIds: n

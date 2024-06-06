@@ -45,14 +45,14 @@ var l = n("735250"),
   w = n("733880"),
   B = n("465670"),
   F = n("887208"),
-  H = n("709054"),
-  V = n("998502"),
+  V = n("709054"),
+  H = n("998502"),
   k = n("788307"),
   Y = n("960670"),
   K = n("981631"),
   W = n("689938"),
   z = n("577245");
-let Z = V.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
+let Z = H.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
   X = {
     offset: {
       top: 2,
@@ -149,15 +149,15 @@ function $(e) {
     isMobile: j,
     lastOnlineTimestamp: B,
     "aria-posinset": F,
-    "aria-setsize": H
-  } = e, [V, J] = a.useState(!1), $ = a.useRef(null), ee = a.useRef(null), {
+    "aria-setsize": V
+  } = e, [H, J] = a.useState(!1), $ = a.useRef(null), ee = a.useRef(null), {
     avatarSrc: et,
     avatarDecorationSrc: en,
     eventHandlers: el
   } = (0, R.default)({
     user: c,
     size: h.AvatarSizes.SIZE_32,
-    animateOnHover: !(r || V)
+    animateOnHover: !(r || H)
   }), ea = (0, f.useStateFromStores)([b.default], () => b.default.isChannelMuted(t.getGuildId(), t.id)), es = (0, f.useStateFromStores)([O.default], () => O.default.getMentionCount(t.id) > 0), ei = (0, _.default)(t), er = (0, f.useStateFromStores)([N.default], () => N.default.isFavorite(t.id)), eo = null != T && T.length > 0, {
     isRecentlyOnlineShowable: eu,
     isRecentlyOnlineTrackable: ed
@@ -252,7 +252,7 @@ function $(e) {
         ...e,
         activities: T,
         applicationStream: M,
-        animate: V,
+        animate: H,
         hideTooltip: !0,
         user: c
       });
@@ -327,7 +327,7 @@ function $(e) {
         onMouseLeave: eh,
         onMouseDown: ep,
         onContextMenu: eE,
-        "aria-setsize": H,
+        "aria-setsize": V,
         "aria-posinset": F,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(z.interactive, {
@@ -409,7 +409,7 @@ t.default = e => {
       isRecentlyOnlineEnabled: u
     }
   }, [t, d, i, u]), h = (0, f.useStateFromStores)([j.default, D.default], () => {
-    if (t.isMultiUserDM()) return !!r && H.default.keys(D.default.getTypingUsers(t.id)).some(e => {
+    if (t.isMultiUserDM()) return !!r && V.default.keys(D.default.getTypingUsers(t.id)).some(e => {
       var t;
       return e !== (null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });

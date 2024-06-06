@@ -1,42 +1,42 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return S
+    return T
   }
 }), r("47120");
 var a = r("735250");
 r("470079");
-var n = r("120356"),
-  i = r.n(n),
+var i = r("120356"),
+  n = r.n(i),
   l = r("392711"),
   o = r.n(l),
-  s = r("876215"),
-  c = r("442837"),
+  c = r("876215"),
+  s = r("442837"),
   d = r("481060"),
   u = r("570140"),
   h = r("681619"),
   p = r("682864"),
-  m = r("71585"),
-  g = r("146282"),
+  g = r("71585"),
+  m = r("146282"),
   f = r("789086"),
   y = r("206583"),
   b = r("475549"),
   x = r("277513");
 let k = [{
   key: "type",
-  cellClassName: i()(b.cell, b.cellType),
+  cellClassName: n()(b.cell, b.cellType),
   render(e) {
     let {
       type: t
     } = e;
     return (0, a.jsx)(d.Text, {
       variant: "text-md/semibold",
-      children: s.ContentInventoryEntryType[t]
+      children: c.ContentInventoryEntryType[t]
     })
   }
 }, {
   key: "count",
-  cellClassName: i()(b.cell, b.cellCount),
+  cellClassName: n()(b.cell, b.cellCount),
   render(e) {
     let {
       entries: t
@@ -64,8 +64,8 @@ let k = [{
 function v(e) {
   var t, r;
   let {
-    type: n
-  } = e, i = (0, c.useStateFromStores)([g.default], () => g.default.getFilters()), l = null !== (r = null == i ? void 0 : null === (t = i.types) || void 0 === t ? void 0 : t.has(n)) && void 0 !== r && r;
+    type: i
+  } = e, n = (0, s.useStateFromStores)([m.default], () => m.default.getFilters()), l = null !== (r = null == n ? void 0 : null === (t = n.types) || void 0 === t ? void 0 : t.has(i)) && void 0 !== r && r;
   return (0, a.jsx)(d.Checkbox, {
     value: l,
     onClick: function() {
@@ -75,18 +75,18 @@ function v(e) {
       }) : u.default.dispatch({
         type: "CONTENT_INVENTORY_SET_FILTERS",
         filters: {
-          types: new Set([n])
+          types: new Set([i])
         }
       })
     }
   })
 }
 
-function S() {
+function T() {
   var e;
-  let t = (0, c.useStateFromStores)([g.default], () => g.default.getFeed(y.ContentInventoryFeedKey.GLOBAL_FEED)),
-    r = (0, c.useStateFromStores)([g.default], () => g.default.getDebugImpressionCappingDisabled()),
-    n = (0, c.useStateFromStores)([m.default], () => m.default.getDebugFastImpressionCappingEnabled()),
+  let t = (0, s.useStateFromStores)([m.default], () => m.default.getFeed(y.ContentInventoryFeedKey.GLOBAL_FEED)),
+    r = (0, s.useStateFromStores)([m.default], () => m.default.getDebugImpressionCappingDisabled()),
+    i = (0, s.useStateFromStores)([g.default], () => g.default.getDebugFastImpressionCappingEnabled()),
     l = function(e) {
       let t = o().groupBy(e, e => e.content_type);
       return Object.keys(t).map(e => {
@@ -98,12 +98,12 @@ function S() {
         }
       })
     }(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
-    s = (0, c.useStateFromStores)([g.default], () => {
+    c = (0, s.useStateFromStores)([m.default], () => {
       var e;
-      return (null === (e = g.default.getFeedState(y.ContentInventoryFeedKey.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0
+      return (null === (e = m.default.getFeedState(y.ContentInventoryFeedKey.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0
     });
   return (0, a.jsx)("div", {
-    className: i()(x.panel),
+    className: n()(x.panel),
     children: (0, a.jsxs)(d.ScrollerThin, {
       className: b.content,
       children: [(0, a.jsxs)(d.FormSection, {
@@ -121,7 +121,7 @@ function S() {
               type: "CONTENT_INVENTORY_MANUAL_REFRESH"
             })
           },
-          submitting: s,
+          submitting: c,
           children: "Refresh Now"
         })]
       }), (0, a.jsxs)(d.FormSection, {
@@ -164,7 +164,7 @@ function S() {
               type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING"
             })
           },
-          children: n ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping"
+          children: i ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping"
         })]
       }), false]
     })

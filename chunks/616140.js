@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return P
+    return h
   }
 }), l("653041"), l("627341"), l("47120");
 var s = l("735250"),
@@ -83,7 +83,7 @@ function R(e) {
   })
 }
 
-function P(e) {
+function h(e) {
   var t, l;
   let {
     user: a,
@@ -96,17 +96,17 @@ function P(e) {
   } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = C({
     user: a,
     currentUser: _
-  }), [g, U] = i.useState(S), [A, P] = i.useState(null !== (l = null === (t = p.find(e => {
+  }), [g, U] = i.useState(S), [A, h] = i.useState(null !== (l = null === (t = p.find(e => {
     let {
       section: t
     } = e;
     return t === d
-  })) || void 0 === t ? void 0 : t.section) && void 0 !== l ? l : x.UserProfileSections.USER_INFO), h = i.useCallback(e => {
+  })) || void 0 === t ? void 0 : t.section) && void 0 !== l ? l : x.UserProfileSections.USER_INFO), P = i.useCallback(e => {
     m({
       action: "PRESS_SECTION",
       section: e
-    }), P(e), U(!1)
-  }, [m, P]);
+    }), h(e), U(!1)
+  }, [m, h]);
   return null == _ ? null : v ? (0, s.jsx)("div", {
     className: N.container,
     children: (0, s.jsx)(T.default, {})
@@ -116,7 +116,7 @@ function P(e) {
       className: N.tabBar,
       type: "top",
       selectedItem: A,
-      onItemSelect: h,
+      onItemSelect: P,
       children: p.map(e => {
         let {
           section: t,

@@ -11,8 +11,8 @@ var i = n("756647"),
   f = n("533307"),
   E = n("447543"),
   h = n("962220"),
-  _ = n("703656"),
-  C = n("314897"),
+  C = n("703656"),
+  _ = n("314897"),
   m = n("594174"),
   S = n("626135"),
   p = n("585483"),
@@ -44,12 +44,12 @@ function v(e, t) {
       if (null == n) throw new T.default({
         errorCode: N.RPCErrors.INVALID_INVITE
       }, "Invalid invite id: ".concat(t));
-      return C.default.isAuthenticated() ? o.default.dispatch({
+      return _.default.isAuthenticated() ? o.default.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: n,
         code: t,
         context: N.AppContext.APP
-      }) : (0, _.replaceWith)(N.Routes.INVITE(t)), {
+      }) : (0, C.replaceWith)(N.Routes.INVITE(t)), {
         invite: n,
         code: t
       }
@@ -130,28 +130,28 @@ function v(e, t) {
       } = e;
       switch (g.default.focus(), t) {
         case A.RPCDeepLinks.USER_SETTINGS:
-          null != n && ((0, _.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), v(n.fingerprint, "settings"));
+          null != n && ((0, C.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), v(n.fingerprint, "settings"));
           break;
         case A.RPCDeepLinks.CHANGELOG:
-          null != n && ((0, _.replaceWith)(I.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
+          null != n && ((0, C.replaceWith)(I.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
           break;
         case A.RPCDeepLinks.LIBRARY:
-          (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && v(n.fingerprint, "library");
+          (0, C.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && v(n.fingerprint, "library");
           break;
         case A.RPCDeepLinks.STORE_HOME:
-          (0, _.replaceWith)(N.Routes.APPLICATION_STORE), null != n && v(n.fingerprint, "store");
+          (0, C.replaceWith)(N.Routes.APPLICATION_STORE), null != n && v(n.fingerprint, "store");
           break;
         case A.RPCDeepLinks.STORE_LISTING:
-          null != n && ((0, _.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, "store"));
+          null != n && ((0, C.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, "store"));
           break;
         case A.RPCDeepLinks.PICK_GUILD_SETTINGS:
-          null != n && ((0, _.replaceWith)({
+          null != n && ((0, C.replaceWith)({
             pathname: N.Routes.PICK_GUILD_SETTINGS(n.section, n.subsection),
             search: n.search
           }), v(n.fingerprint, "guild_settings"));
           break;
         case A.RPCDeepLinks.CHANNEL:
-          null != n && ((0, _.replaceWith)({
+          null != n && ((0, C.replaceWith)({
             pathname: N.Routes.CHANNEL(n.guildId, n.channelId, n.messageId),
             search: n.search
           }), v(n.fingerprint, "channel"))

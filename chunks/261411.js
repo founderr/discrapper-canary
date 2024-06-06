@@ -34,8 +34,8 @@ function s(e, t, r) {
     })
   };
   else {
-    var i, u, c = 0,
-      l = [],
+    var i, u, l = 0,
+      c = [],
       f = !0,
       b = "function" == typeof t.set,
       d = function(e, t) {
@@ -95,23 +95,23 @@ function s(e, t, r) {
     try {
       for (d.s(); !(u = d.n()).done;) {
         var h = u.value;
-        if (c > s) {
+        if (l > s) {
           f = !1;
           break
         }
-        a <= c && (b && Array.isArray(h) ? "string" == typeof h[0] || "number" == typeof h[0] ? l.push({
+        a <= l && (b && Array.isArray(h) ? "string" == typeof h[0] || "number" == typeof h[0] ? c.push({
           key: h[0],
           value: h[1]
-        }) : l.push({
-          key: "[entry ".concat(c, "]"),
+        }) : c.push({
+          key: "[entry ".concat(l, "]"),
           value: {
             "[key]": h[0],
             "[value]": h[1]
           }
-        }) : l.push({
-          key: c,
+        }) : c.push({
+          key: l,
           value: h
-        })), c++
+        })), l++
       }
     } catch (e) {
       d.e(e)
@@ -120,7 +120,7 @@ function s(e, t, r) {
     }
     i = {
       hasMore: !f,
-      entries: l
+      entries: c
     }
   }
   return i
@@ -136,20 +136,20 @@ function o(e, t, r) {
 }
 
 function i(e, t, r, n) {
-  var i, u, c, l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+  var i, u, l, c = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
     f = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1 / 0,
     b = s.bind(null, e, t, r);
   if (!n) return b().entries;
   var d = f < 1 / 0;
-  var h = Math.min(f - l, (i = e, u = t, "Object" === i ? Object.keys(u).length : "Array" === i ? u.length : 1 / 0));
+  var h = Math.min(f - c, (i = e, u = t, "Object" === i ? Object.keys(u).length : "Array" === i ? u.length : 1 / 0));
   if ("Iterable" !== e) {
-    if (h <= n || n < 7) return b(l, f).entries
-  } else if (h <= n && !d) return b(l, f).entries;
+    if (h <= n || n < 7) return b(c, f).entries
+  } else if (h <= n && !d) return b(c, f).entries;
   if ("Iterable" === e) {
-    var p = b(l, l + n - 1),
-      y = p.hasMore,
-      g = p.entries;
-    c = y ? [].concat((0, a.default)(g), (0, a.default)(o(l + n, l + 2 * n - 1, n))) : g
-  } else c = d ? o(l, f, n) : [].concat((0, a.default)(b(0, n - 5).entries), (0, a.default)(o(n - 4, h - 5, n)), (0, a.default)(b(h - 4, h - 1).entries));
-  return c
+    var p = b(c, c + n - 1),
+      g = p.hasMore,
+      y = p.entries;
+    l = g ? [].concat((0, a.default)(y), (0, a.default)(o(c + n, c + 2 * n - 1, n))) : y
+  } else l = d ? o(c, f, n) : [].concat((0, a.default)(b(0, n - 5).entries), (0, a.default)(o(n - 4, h - 5, n)), (0, a.default)(b(h - 4, h - 1).entries));
+  return l
 }

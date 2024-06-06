@@ -23,12 +23,12 @@ function f(e) {
     user: E,
     hasSingleMessageRequest: h
   } = e, {
-    channelId: _
+    channelId: C
   } = (0, o.useMessageRequestSidebarState)();
   return (0, a.jsx)(u.default, {
     index: t,
     className: n,
-    isFocused: _ === f.id,
+    isFocused: C === f.id,
     channel: f,
     user: E,
     onClick: e => {

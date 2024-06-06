@@ -45,9 +45,9 @@ function g(e) {
     scrollToStart: v.NOOP_PROMISE,
     scrollToEnd: v.NOOP_PROMISE,
     wrap: !0
-  }), R = U.length, P = 0 === R ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
+  }), R = U.length, h = 0 === R ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
     numRoles: R
-  }), h = U.map(e => {
+  }), P = U.map(e => {
     var i;
     return (0, s.jsx)(I.default, {
       role: e,
@@ -67,10 +67,10 @@ function g(e) {
         } = e;
         return (0, s.jsxs)("div", {
           className: T.root,
-          "aria-label": P,
+          "aria-label": h,
           ref: t,
           ...l,
-          children: [h, A && (0, s.jsx)(_.default, {
+          children: [P, A && (0, s.jsx)(_.default, {
             guild: r,
             guildMember: u,
             highestRole: f,

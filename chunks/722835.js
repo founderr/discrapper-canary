@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("872810"),
@@ -17,16 +17,16 @@ var a = n("872810"),
   E = n("74299"),
   h = n("989941");
 
-function _() {
+function C() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   if (!(0, E.default)(o.default) || null != l.default.getCurrentUserActiveStream()) return !1;
   let t = (0, h.default)(s.default, c.default);
   if (null == t || t.isLauncher && !e) return !1;
   let n = d.default.getVoiceChannelId(),
-    _ = i.default.getChannel(n);
-  if (null == _) return !1;
-  let C = _.getGuildId();
-  return !!(0, f.canStreamInChannel)(_, r.default, u.default, !1) && ((0, a.startStream)(C, _.id, {
+    C = i.default.getChannel(n);
+  if (null == C) return !1;
+  let _ = C.getGuildId();
+  return !!(0, f.canStreamInChannel)(C, r.default, u.default, !1) && ((0, a.startStream)(_, C.id, {
     pid: t.pid
   }), !0)
 }

@@ -136,8 +136,8 @@ t.default = function(e) {
   } = e, {
     size: v
   } = u.AvatarSizeSpecs[p], {
-    statusCoords: N,
-    frontAvatarOffsetPx: x,
+    statusCoords: x,
+    frontAvatarOffsetPx: N,
     frontAvatarSizePx: M,
     backAvatarSizePx: R
   } = l.useMemo(() => {
@@ -180,8 +180,8 @@ t.default = function(e) {
       }), (0, a.jsx)("div", {
         style: {
           position: "absolute",
-          top: x,
-          left: x
+          top: N,
+          left: N
         },
         children: (0, a.jsx)(C, {
           src: m,
@@ -191,7 +191,7 @@ t.default = function(e) {
         })
       })]
     }), (0, a.jsx)(E, {
-      statusCoords: N,
+      statusCoords: x,
       status: _,
       isTyping: S
     })]

@@ -5,27 +5,27 @@ r.r(t), r.d(t, {
   }
 }), r("47120");
 var a = r("735250"),
-  n = r("470079"),
-  i = r("120356"),
-  l = r.n(i),
+  i = r("470079"),
+  n = r("120356"),
+  l = r.n(n),
   o = r("347469"),
-  s = r("870904");
+  c = r("870904");
 
-function c(e) {
+function s(e) {
   let {
     resizableNode: t,
     minHeight: r,
-    onResize: n
-  } = e, i = (0, o.default)({
+    onResize: i
+  } = e, n = (0, o.default)({
     minDimension: r,
     resizableDomNodeRef: t,
-    onElementResize: n,
+    onElementResize: i,
     orientation: o.ResizeOrientation.VERTICAL_TOP,
     usePointerEvents: !0
   });
   return (0, a.jsx)("div", {
-    onPointerDown: i,
-    className: s.resizeHandle
+    onPointerDown: n,
+    className: c.resizeHandle
   })
 }
 
@@ -33,22 +33,22 @@ function d(e) {
   let {
     children: t,
     className: r,
-    initialHeight: i,
+    initialHeight: n,
     minHeight: o
-  } = e, d = n.useRef(null), [u, h] = n.useState(i);
+  } = e, d = i.useRef(null), [u, h] = i.useState(n);
   return (0, a.jsxs)("div", {
     ref: d,
-    className: s.container,
+    className: c.container,
     style: {
       minHeight: o,
       height: u
     },
-    children: [(0, a.jsx)(c, {
+    children: [(0, a.jsx)(s, {
       resizableNode: d,
       minHeight: o,
       onResize: h
     }), (0, a.jsx)("div", {
-      className: l()(s.subPanelContent, r),
+      className: l()(c.subPanelContent, r),
       children: t
     })]
   })

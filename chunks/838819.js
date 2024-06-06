@@ -21,8 +21,8 @@ var a = s("735250"),
   T = s("479446"),
   x = s("981632"),
   _ = s("290026"),
-  N = s("819640"),
-  L = s("594174"),
+  L = s("819640"),
+  N = s("594174"),
   b = s("682864"),
   R = s("626135"),
   v = s("74538"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   M = s("223143"),
   k = s("298228"),
   B = s("937510"),
-  F = s("853748"),
-  D = s("426171"),
+  D = s("853748"),
+  F = s("426171"),
   U = s("823941"),
   H = s("752053"),
   w = s("963102"),
@@ -64,7 +64,7 @@ function ea(e) {
     isPremiumUser: r,
     isGiftEasterEggEnabled: i,
     lightningCheckoutEnabled: o
-  } = e, c = (0, u.useStateFromStores)([L.default], () => L.default.getCurrentUser());
+  } = e, c = (0, u.useStateFromStores)([N.default], () => N.default.getCurrentUser());
   return null == c || 0 === t.length ? null : (0, a.jsxs)("div", {
     children: [null != l ? (0, a.jsx)(f.Text, {
       className: es.itemTypeTitle,
@@ -170,7 +170,7 @@ function en(e) {
       isGiftEasterEggEnabled: i,
       lightningCheckoutEnabled: d,
       includeBundles: p
-    }), null != h && null != t.unpublishedAt && (0, a.jsx)(F.CollectiblesCountdown, {
+    }), null != h && null != t.unpublishedAt && (0, a.jsx)(D.CollectiblesCountdown, {
       unpublishedAt: t.unpublishedAt,
       isVisible: g,
       displayOptions: h,
@@ -186,10 +186,10 @@ t.default = function(e) {
     analyticsLocations: n
   } = (0, u.useStateFromStoresObject)([P.default], () => P.default.getAnalytics()), {
     analyticsLocations: i
-  } = (0, m.default)([...n, p.default.COLLECTIBLES_SHOP]), E = (0, u.useStateFromStores)([N.default], () => N.default.getLayers().includes(Q.Layers.COLLECTIBLES_SHOP)), T = (0, d.useHasAnyModalOpen)(), {
+  } = (0, m.default)([...n, p.default.COLLECTIBLES_SHOP]), E = (0, u.useStateFromStores)([L.default], () => L.default.getLayers().includes(Q.Layers.COLLECTIBLES_SHOP)), T = (0, d.useHasAnyModalOpen)(), {
     onClose: x
-  } = (0, Y.useCollectiblesShopRouting)(), b = (0, u.useStateFromStores)([L.default], () => L.default.getCurrentUser()), O = v.default.canUseCollectibles(b), j = (0, S.default)("shop_disable_cache"), B = (0, S.default)("shop_include_unpublished"), {
-    categories: F,
+  } = (0, Y.useCollectiblesShopRouting)(), b = (0, u.useStateFromStores)([N.default], () => N.default.getCurrentUser()), O = v.default.canUseCollectibles(b), j = (0, S.default)("shop_disable_cache"), B = (0, S.default)("shop_include_unpublished"), {
+    categories: D,
     isFetchingCategories: U,
     error: W
   } = (0, M.default)({
@@ -197,13 +197,13 @@ t.default = function(e) {
     includeUnpublished: B
   });
   (0, _.useReloadProfileEffectWhenConfigsAreMissing)();
-  let K = (0, k.usePurchasedCategoriesSort)(F),
+  let K = (0, k.usePurchasedCategoriesSort)(D),
     q = (0, I.useLightningCheckoutExperimentEnabled)(),
     et = (0, y.useShopBundleEnabled)("CollectiblesShop"),
     ea = l.useRef(null),
     [el, er] = l.useState(!1);
-  (0, D.useProductDetailsDeepLinking)({
-    categories: F,
+  (0, F.useProductDetailsDeepLinking)({
+    categories: D,
     isFetchingCategories: U,
     isLayer: E,
     initialItemCardRef: ea
@@ -235,10 +235,10 @@ t.default = function(e) {
     !t && (0, C.setHomeLink)(Q.Routes.COLLECTIBLES_SHOP)
   }, [t]), l.useEffect(() => () => {
     (0, A.setCollectiblesCategoryItemsViewed)({
-      categories: [...F.values()],
+      categories: [...D.values()],
       itemTypes: [o.CollectiblesItemType.AVATAR_DECORATION, o.CollectiblesItemType.PROFILE_EFFECT]
     })
-  }, [F]), l.useEffect(() => {
+  }, [D]), l.useEffect(() => {
     if (!t || E || T) return;
     let e = e => {
       e.key === J.KeyboardEventKey.Escape && x()
@@ -267,7 +267,7 @@ t.default = function(e) {
     {
       setCategoryRef: eC,
       handleScrollToCategory: eE
-    } = (0, D.useCategoryDeepLinking)(eo.current),
+    } = (0, F.useCategoryDeepLinking)(eo.current),
     {
       condensedBannersAndDynamicHeadersEnabled: ep
     } = (0, Z.useCollectiblesCondensedBannersExperiment)({

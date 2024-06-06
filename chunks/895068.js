@@ -14,8 +14,8 @@ var a, s, l = n("735250"),
   f = n("393903"),
   E = n("638730"),
   h = n("970606"),
-  _ = n("945124"),
-  C = n("231467"),
+  C = n("945124"),
+  _ = n("231467"),
   m = n("931515"),
   S = n("207796"),
   p = n("777734"),
@@ -33,23 +33,23 @@ function N(e) {
     clans: s,
     searchResult: N,
     searchCriteria: v
-  } = (0, m.useClanDiscoveryList)(), R = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), O = (0, c.default)(N), [L, M] = i.useState(0), P = i.useMemo(() => ({
+  } = (0, m.useClanDiscoveryList)(), R = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), O = (0, c.default)(N), [L, P] = i.useState(0), M = i.useMemo(() => ({
     height: L
-  }), [L]), x = (0, r.useSpring)({
+  }), [L]), y = (0, r.useSpring)({
     opacity: L > 0 ? 1 : 0,
     config: r.config.stiff
-  }), y = Math.min(null != t ? t : 1024, 2e3), D = i.useMemo(() => {
-    let e = y / 256,
-      t = y / 376,
-      n = y / e,
-      a = y / t;
+  }), D = Math.min(null != t ? t : 1024, 2e3), x = i.useMemo(() => {
+    let e = D / 256,
+      t = D / 376,
+      n = D / e,
+      a = D / t;
     return a > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
-  }, [y]), b = i.useCallback(e => {
+  }, [D]), b = i.useCallback(e => {
     if (null == e) {
-      M(0);
+      P(0);
       return
     }
-    M(e.getBoundingClientRect().y + 16 + 400 + 40 + 4)
+    P(e.getBoundingClientRect().y + 16 + 400 + 40 + 4)
   }, []), U = (0, f.useResizeObserver)(b), j = i.useCallback(() => {
     b(U.current)
   }, [b, U]), G = (0, E.useThrottledFunction)(j, 10, [j], {
@@ -63,25 +63,25 @@ function N(e) {
   }, [j, n, N]);
   let w = i.useMemo(() => null == s ? [] : [{
       section: "top_picks",
-      items: s.slice(0, D),
+      items: s.slice(0, x),
       sectionHeight: 24,
       header: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
       subtitle: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
     }, {
       section: "other_guilds",
-      items: s.slice(D),
+      items: s.slice(x),
       sectionHeight: 24,
       header: T.default.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
-    }], [s, D]),
+    }], [s, x]),
     k = i.useMemo(() => new Set(v.games), [v.games]),
     B = i.useCallback((e, t, n, a) => {
       var s;
       let {
         items: i
       } = w[e], r = i[t];
-      return (0, l.jsx)(C.default, {
+      return (0, l.jsx)(_.default, {
         clan: r,
-        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, _.getClanDiscoveryAffinity)(r, v),
+        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, C.getClanDiscoveryAffinity)(r, v),
         traitsToHighlight: R,
         className: A.card,
         style: n,
@@ -114,8 +114,8 @@ function N(e) {
       children: [(0, l.jsx)(r.animated.div, {
         className: A.masonryListGradient,
         style: {
-          ...x,
-          ...P
+          ...y,
+          ...M
         }
       }), (0, l.jsx)(d.MasonryList, {
         className: A.masonryList,
@@ -125,7 +125,7 @@ function N(e) {
           } = e;
           return t.length
         }),
-        columns: D,
+        columns: x,
         sectionGutter: 80,
         itemGutter: 16,
         paddingHorizontal: 32,

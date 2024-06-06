@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("481060"),
   E = n("570140"),
   h = n("239091"),
-  _ = n("51025"),
-  C = n("785547"),
+  C = n("51025"),
+  _ = n("785547"),
   m = n("730749"),
   S = n("112724"),
   p = n("812206"),
@@ -26,11 +26,11 @@ var a = n("735250"),
   R = n("285952"),
   O = n("366695"),
   L = n("366966"),
-  M = n("151011"),
-  P = n("774832"),
-  x = n("465670"),
-  y = n("786048"),
-  D = n("897353"),
+  P = n("151011"),
+  M = n("774832"),
+  y = n("465670"),
+  D = n("786048"),
+  x = n("897353"),
   b = n("424218"),
   U = n("780570"),
   j = n("353042"),
@@ -196,7 +196,7 @@ function z(e, t, n, a, s) {
   return null
 }
 
-function Q(e) {
+function q(e) {
   let {
     type: t,
     stage: n,
@@ -255,7 +255,7 @@ function Q(e) {
   }
   throw Error("Invalid Dispatch stage")
 }
-let q = {
+let Q = {
   NAME: "name",
   PROGRESS: "progress",
   ACTIONS: "actions"
@@ -312,7 +312,7 @@ class Z extends s.PureComponent {
     } = this.props;
     return this.renderBody({
       message: k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-        remove: () => _.removeFinished(e.applicationId, e.branchId)
+        remove: () => C.removeFinished(e.applicationId, e.branchId)
       }),
       foregroundColor: (0, c.isThemeLight)(e.theme) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       percent: 100
@@ -401,7 +401,7 @@ class Z extends s.PureComponent {
       i = Math.floor(l);
     return this.renderBody({
       percent: l,
-      message: Q({
+      message: q({
         type: s,
         stage: a,
         percent: i,
@@ -453,7 +453,7 @@ class Z extends s.PureComponent {
         u = U.calculateProgressPercentage(null != r ? r : 0, l),
         d = e[e.length - 1] / t * 1e3,
         c = l - s,
-        f = Q({
+        f = q({
           type: i,
           stage: a,
           percent: Math.floor(o),
@@ -469,23 +469,23 @@ class Z extends s.PureComponent {
   }
 }
 let X = () => (0, a.jsx)(Y, {
-    icon: D.default,
+    icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-    onClick: () => _.resume()
+    onClick: () => C.resume()
   }),
   J = () => (0, a.jsx)(Y, {
-    icon: y.default,
+    icon: D.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-    onClick: () => _.pause()
+    onClick: () => C.pause()
   }),
   $ = e => {
     let {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: P.default,
+      icon: M.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-      onClick: () => _.moveUp(t.applicationId, t.branchId)
+      onClick: () => C.moveUp(t.applicationId, t.branchId)
     })
   },
   ee = e => {
@@ -493,13 +493,13 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: x.default,
+      icon: y.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-      onClick: () => _.cancel(t.applicationId, t.branchId)
+      onClick: () => C.cancel(t.applicationId, t.branchId)
     })
   },
   et = [{
-    key: q.NAME,
+    key: Q.NAME,
     cellClassName: B.nameCell,
     render: e => (0, a.jsxs)(R.default, {
       align: R.default.Align.CENTER,
@@ -513,7 +513,7 @@ let X = () => (0, a.jsx)(Y, {
       })]
     })
   }, {
-    key: q.PROGRESS,
+    key: Q.PROGRESS,
     cellClassName: B.progressCell,
     headerCellClassName: B.progressCellHeader,
     bodyCellClassName: B.progressCellBody,
@@ -522,11 +522,11 @@ let X = () => (0, a.jsx)(Y, {
       cellProps: t
     })
   }, {
-    key: q.ACTIONS,
+    key: Q.ACTIONS,
     cellClassName: B.actionsCell,
     render(e, t) {
       let n, s;
-      return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(C.default, {
+      return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(_.default, {
         libraryApplication: e.libraryApplication,
         size: f.Button.Sizes.SMALL,
         className: B.gameActionButton,
@@ -558,7 +558,7 @@ class en extends s.PureComponent {
     } = this.props;
     e.forEach(e => {
       e.finished && E.default.wait(() => {
-        _.removeFinished(e.applicationId, e.branchId)
+        C.removeFinished(e.applicationId, e.branchId)
       })
     }), window.removeEventListener("resize", this.throttledUpdateHeight), this.isUnmounted = !0
   }
@@ -587,7 +587,7 @@ class en extends s.PureComponent {
           color: w.Color.BLUE_345,
           animate: s
         })]
-      }), (0, a.jsx)(M.default, {
+      }), (0, a.jsx)(P.default, {
         hasHeader: !1,
         columns: et,
         data: e,

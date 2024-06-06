@@ -30,11 +30,11 @@ let A = l.memo(function(e) {
     baseMessage: n,
     referencedMessage: A,
     channel: v,
-    compact: N = !1,
-    referencedUsernameProfile: x,
+    compact: x = !1,
+    referencedUsernameProfile: N,
     referencedAvatarProfile: M,
     setPopout: R
-  } = e, y = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, g.useNullableMessageAuthor)(y), O = (0, u.useActiveKeywordFiltersCacheKey)(), j = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
+  } = e, y = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, g.useNullableMessageAuthor)(y), j = (0, u.useActiveKeywordFiltersCacheKey)(), O = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
     if (null == y) return null;
     let e = (0, r.default)(y);
     if (e.type === T.MessageTypes.USER_JOIN) {
@@ -66,7 +66,7 @@ let A = l.memo(function(e) {
       let t = {
           formatInline: !0,
           allowLinks: !0,
-          shouldFilterKeywords: null != O
+          shouldFilterKeywords: null != j
         },
         n = e.isFirstMessageInForumPost(v) ? {
           ...t,
@@ -76,13 +76,13 @@ let A = l.memo(function(e) {
         } : {
           ...t,
           formatInline: !0,
-          allowHeading: j,
-          allowList: j
+          allowHeading: O,
+          allowList: O
         };
       return (0, C.default)(e, n).content
     }
     return null
-  }, [y, L, v, j, O]), D = (0, s.useStateFromStores)([m.default], () => null != y && m.default.isBlocked(y.author.id), [y]), b = (0, _.useContextMenuUser)(null == y ? void 0 : y.author.id, v.id), U = (0, _.useClickReply)(n, y, D), F = (0, _.useClickReferencedMessageAuthorUsername)(y, v, x, R), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, R), k = l.useCallback(() => R({
+  }, [y, L, v, O, j]), D = (0, s.useStateFromStores)([m.default], () => null != y && m.default.isBlocked(y.author.id), [y]), b = (0, _.useContextMenuUser)(null == y ? void 0 : y.author.id, v.id), U = (0, _.useClickReply)(n, y, D), F = (0, _.useClickReferencedMessageAuthorUsername)(y, v, N, R), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, R), k = l.useCallback(() => R({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
   }), [R]), H = (0, g.useNullableMessageAuthor)(n);
@@ -93,10 +93,10 @@ let A = l.memo(function(e) {
     baseAuthor: H,
     referencedMessage: A,
     content: P,
-    compact: N,
+    compact: x,
     isReplyAuthorBlocked: D,
     showAvatarPopout: M,
-    showUsernamePopout: x,
+    showUsernamePopout: N,
     renderPopout: S.default,
     onClickAvatar: w,
     onClickUsername: F,

@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("486622"),
   E = n("376191"),
   h = n("86203"),
-  _ = n("689938"),
-  C = n("24037");
+  C = n("689938"),
+  _ = n("24037");
 
 function m(e) {
   let {
@@ -25,7 +25,7 @@ function m(e) {
     user: n,
     channel: m
   } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), p = s.useCallback(() => {
-    (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
+    (0, i.showToast)((0, i.createToast)(C.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
   }, []), I = s.useCallback(() => {
@@ -44,15 +44,15 @@ function m(e) {
     onError: p
   }), R = A || N, O = R || v;
   return (0, a.jsxs)("div", {
-    className: C.container,
+    className: _.container,
     children: [(0, a.jsx)(E.default, {
       otherUser: n,
       channel: m,
       active: t
     }), (0, a.jsxs)("div", {
-      className: C.actions,
+      className: _.actions,
       children: [(0, a.jsx)(i.Button, {
-        className: C.button,
+        className: _.button,
         color: i.ButtonColors.PRIMARY,
         size: i.Button.Sizes.SMALL,
         onClick: e => {
@@ -60,9 +60,9 @@ function m(e) {
         },
         disabled: O,
         submitting: R,
-        children: _.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
+        children: C.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }), (0, a.jsx)(h.default, {
-        className: C.button,
+        className: _.button,
         channel: m,
         buttonSize: i.Button.Sizes.SMALL
       })]

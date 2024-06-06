@@ -28,7 +28,7 @@ var a = s("735250"),
   T = s("981631"),
   x = s("689938"),
   _ = s("834042");
-let N = e => {
+let L = e => {
     let {
       children: t,
       style: s,
@@ -46,7 +46,7 @@ let N = e => {
       children: t
     })
   },
-  L = e => {
+  N = e => {
     let {
       children: t,
       className: s,
@@ -94,7 +94,7 @@ function R(e) {
     skuPricePreviewsById: k
   } = (0, g.usePaymentContext)(), {
     analyticsLocations: B
-  } = (0, f.default)(), [F, D] = l.useState(!1), U = l.useRef(null), H = k[R], w = null != H ? H[I.id] : null, G = null != w ? (0, m.formatPrice)(null == w ? void 0 : w.amount, null == w ? void 0 : w.currency) : null, W = l.useMemo(() => ({
+  } = (0, f.default)(), [D, F] = l.useState(!1), U = l.useRef(null), H = k[R], w = null != H ? H[I.id] : null, G = null != w ? (0, m.formatPrice)(null == w ? void 0 : w.amount, null == w ? void 0 : w.currency) : null, W = l.useMemo(() => ({
     ...A,
     load_id: b,
     payment_type: T.PurchaseTypeToAnalyticsPaymentType[T.PurchaseTypes.ONE_TIME],
@@ -115,7 +115,7 @@ function R(e) {
         isGift: v,
         paymentSource: I,
         loadId: b
-      }), D(!1), t()
+      }), F(!1), t()
     } catch (t) {
       let e = t instanceof c.BillingError ? t : new c.BillingError(t);
       e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && s(t)
@@ -124,7 +124,7 @@ function R(e) {
     E.default.track(T.AnalyticEvents.PAYMENT_FLOW_STEP, {
       ...W,
       to_step: e
-    }), e === S.Step.CONFIRM && (D(!1), t()), O(e)
+    }), e === S.Step.CONFIRM && (F(!1), t()), O(e)
   }, [W, O, t]);
   return (0, C.usePaymentStepForAuthentication)(P, y, V), (0, a.jsxs)("div", {
     className: _.reviewContainer,
@@ -146,19 +146,19 @@ function R(e) {
           paidURL: p.default.getArticleURL(T.HelpdeskArticles.PAID_TERMS)
         })
       })
-    }), (0, a.jsx)(N, {
+    }), (0, a.jsx)(L, {
       className: _.buyButton,
-      submitting: F,
+      submitting: D,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
-        D(!0), await Y()
+        F(!0), await Y()
       },
       children: null !== G ? x.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: G
       }) : (0, a.jsx)(i.Spinner, {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
-    }), !F && (0, a.jsx)(L, {
+    }), !D && (0, a.jsx)(N, {
       className: _.reviewButton,
       onClick: () => {
         n(), (0, h.default)({

@@ -26,16 +26,16 @@ function E(e) {
     handleClose: s
   } = e, i = (0, o.default)(), {
     activeSubscription: E,
-    selectedSkuId: m,
-    setSelectedPlanId: L,
-    startedPaymentFlowWithPaymentSourcesRef: S
+    selectedSkuId: L,
+    setSelectedPlanId: S,
+    startedPaymentFlowWithPaymentSourcesRef: m
   } = (0, c.usePaymentContext)(), {
     isGift: I
   } = (0, d.useGiftContext)(), h = null != E ? (0, C.getPremiumPlanItem)(E) : null, P = null != h ? (0, C.getDisplayPremiumType)(h.planId) : null, T = null != h ? (0, C.getPremiumType)(h.planId) : null, M = (0, _.inOneStepSubscriptionCheckout)({
     isTrial: !1,
     isGift: I,
-    selectedSkuId: m,
-    startedPaymentFlowWithPaymentSources: S.current
+    selectedSkuId: L,
+    startedPaymentFlowWithPaymentSources: m.current
   });
   return r()(null != T, "Expected premium type"), (0, n.jsx)(u.default, {
     premiumType: T,
@@ -47,7 +47,7 @@ function E(e) {
       className: x.whatYouLoseButtonContainer,
       children: [(0, n.jsx)(a.Button, {
         onClick: () => {
-          M ? (L((0, _.getDefaultPlanOneStepCheckout)(m, E)), t(p.Step.REVIEW)) : t(p.Step.PLAN_SELECT)
+          M ? (S((0, _.getDefaultPlanOneStepCheckout)(L, E)), t(p.Step.REVIEW)) : t(p.Step.PLAN_SELECT)
         },
         children: f.default.Messages.CONTINUE
       }), (0, n.jsx)(a.Button, {

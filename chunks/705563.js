@@ -40,8 +40,8 @@ function g(e) {
       guildId: null == t ? void 0 : t.id,
       maxMembers: null == t ? void 0 : t.maxMembers
     }
-  }), v = (0, l.useStateFromStores)([r.default], () => null != I ? r.default.getMemberCount(I) : 0), N = null != A && (null != v ? v : 0) >= A, {
-    approveRequest: x,
+  }), v = (0, l.useStateFromStores)([r.default], () => null != I ? r.default.getMemberCount(I) : 0), x = null != A && (null != v ? v : 0) >= A, {
+    approveRequest: N,
     rejectRequest: M,
     submitting: R
   } = (0, m.useJoinRequestButtonActions)(null == _ ? void 0 : _.guildId, null == _ ? void 0 : _.userId);
@@ -49,14 +49,14 @@ function g(e) {
     className: C.buttons,
     children: [(0, a.jsx)(s.Tooltip, {
       text: E.default.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
-      shouldShow: N,
+      shouldShow: x,
       children: e => (0, a.jsx)(s.Button, {
         ...e,
         color: s.Button.Colors.GREEN,
         submitting: R,
-        onClick: x,
+        onClick: N,
         size: s.ButtonSizes.SMALL,
-        disabled: N,
+        disabled: x,
         children: E.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
       })
     }), (0, a.jsx)(s.Button, {

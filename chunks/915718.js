@@ -26,14 +26,14 @@ var a = n("735250"),
   I = n("131951"),
   A = n("699516"),
   v = n("594174"),
-  N = n("979651"),
-  x = n("125015"),
+  x = n("979651"),
+  N = n("125015"),
   M = n("119828"),
   R = n("502568"),
   y = n("810090"),
   L = n("585483"),
-  O = n("63063"),
-  j = n("981631"),
+  j = n("63063"),
+  O = n("981631"),
   P = n("921944"),
   D = n("65154"),
   b = n("689938"),
@@ -49,10 +49,10 @@ function F(e, t, n) {
 }
 class w extends l.PureComponent {
   componentDidMount() {
-    L.ComponentDispatch.subscribe(j.ComponentActions.CALL_START, this.handleVoiceClick)
+    L.ComponentDispatch.subscribe(O.ComponentActions.CALL_START, this.handleVoiceClick)
   }
   componentWillUnmount() {
-    L.ComponentDispatch.unsubscribe(j.ComponentActions.CALL_START, this.handleVoiceClick)
+    L.ComponentDispatch.unsubscribe(O.ComponentActions.CALL_START, this.handleVoiceClick)
   }
   renderVideoCallButton() {
     let e, t;
@@ -64,11 +64,11 @@ class w extends l.PureComponent {
       channel: o,
       mode: u
     } = this.props;
-    if (n || l && u === j.ChannelModes.VOICE) return null;
+    if (n || l && u === O.ChannelModes.VOICE) return null;
     let d = o.isManaged(),
       c = null,
       f = !1;
-    return I.default.supports(D.Features.VIDEO) ? i ? (c = b.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === j.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? b.default.Messages.CONNECT : b.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? b.default.Messages.CONNECT : b.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = b.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
+    return I.default.supports(D.Features.VIDEO) ? i ? (c = b.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === O.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? b.default.Messages.CONNECT : b.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? b.default.Messages.CONNECT : b.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = b.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
       icon: M.default,
       onClick: t,
       disabled: f || s,
@@ -95,7 +95,7 @@ class w extends l.PureComponent {
       E = !1;
     s ? (m = h ? b.default.Messages.VOICE_UNAVAILABLE : b.default.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (m = b.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : m = l ? h ? b.default.Messages.CONNECT : b.default.Messages.JOIN_VOICE_CALL : h ? b.default.Messages.CONNECT : b.default.Messages.START_VOICE_CALL;
     let g = (0, a.jsx)(R.default.Icon, {
-      icon: x.default,
+      icon: N.default,
       onClick: this.handleVoiceClick,
       disabled: E,
       tooltip: m,
@@ -139,7 +139,7 @@ class w extends l.PureComponent {
                   color: "always-white",
                   children: b.default.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
                 }), (0, a.jsx)(r.Anchor, {
-                  href: O.default.getArticleURL(j.HelpdeskArticles.ACTIVITIES),
+                  href: j.default.getArticleURL(O.HelpdeskArticles.ACTIVITIES),
                   children: b.default.Messages.LEARN_MORE
                 })]
               }),
@@ -198,7 +198,7 @@ class w extends l.PureComponent {
 function k(e) {
   let {
     channel: t
-  } = e, n = (0, E.default)(), r = (0, s.useStateFromStores)([h.default], () => h.default.getMode(t.id)), o = (0, s.useStateFromStores)([N.default], () => N.default.isInChannel(t.id)), u = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
+  } = e, n = (0, E.default)(), r = (0, s.useStateFromStores)([h.default], () => h.default.getMode(t.id)), o = (0, s.useStateFromStores)([x.default], () => x.default.isInChannel(t.id)), u = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     callActive: m,
     callUnavailable: p
   } = (0, s.useStateFromStoresObject)([_.default], () => ({
@@ -208,14 +208,14 @@ function k(e) {
     notFriend: g,
     isBlocked: S
   } = (0, s.useStateFromStoresObject)([A.default], () => ({
-    notFriend: t.type === j.ChannelTypes.DM && null != C && !A.default.isFriend(C),
-    isBlocked: t.type === j.ChannelTypes.DM && null != C && A.default.isBlocked(C)
-  })), I = (0, s.useStateFromStores)([v.default], () => v.default.getUser(C)), x = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), y = (0, s.useStateFromStores)([T.default], () => T.default.hasLayers());
+    notFriend: t.type === O.ChannelTypes.DM && null != C && !A.default.isFriend(C),
+    isBlocked: t.type === O.ChannelTypes.DM && null != C && A.default.isBlocked(C)
+  })), I = (0, s.useStateFromStores)([v.default], () => v.default.getUser(C)), N = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), y = (0, s.useStateFromStores)([T.default], () => T.default.hasLayers());
   R && !y && M.push(i.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP);
-  let [L, O] = l.useState(!1);
+  let [L, j] = l.useState(!1);
   return (l.useEffect(() => {
     let e = setTimeout(() => {
-      O(!0)
+      j(!0)
     }, 250);
     return () => clearTimeout(e)
   }, []), n || (null == I ? void 0 : I.bot)) ? null : (0, a.jsx)(w, {
@@ -226,7 +226,7 @@ function k(e) {
     callUnavailable: p,
     notFriend: g,
     isBlocked: S,
-    appContext: x,
+    appContext: N,
     canShowTooltip: L,
     canShowActivityGdmTooltip: R,
     dismissibleContentTypes: M,

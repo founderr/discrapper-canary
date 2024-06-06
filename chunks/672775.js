@@ -27,8 +27,8 @@ function r(e) {
     progress: n,
     updateCurrentStep: r
   }), {
-    currentStep: _,
-    furthestStep: C,
+    currentStep: C,
+    furthestStep: _,
     brandPrimaryColor: m
   } = n;
   return (0, a.jsxs)("div", {
@@ -37,8 +37,8 @@ function r(e) {
       animationStyle: o,
       className: u,
       steps: t,
-      currentStepIndex: _,
-      furthestStepIndex: C,
+      currentStepIndex: C,
+      furthestStepIndex: _,
       onStepClick: d,
       stepFillColor: m
     }), (0, a.jsx)(l.ClanSetupProgressButtons, {

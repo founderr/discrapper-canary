@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("984370"),
   E = n("792125"),
   h = n("709158"),
-  _ = n("678935"),
-  C = n("563442"),
+  C = n("678935"),
+  _ = n("563442"),
   m = n("981631"),
   S = n("689938"),
   p = n("233269");
@@ -40,8 +40,8 @@ t.default = function(e) {
     }), (0, a.jsx)(u.ScrollerNone, {
       className: p.scroller,
       fade: !0,
-      children: (0, a.jsx)(C.default, {
-        children: (0, a.jsx)(_.default, {})
+      children: (0, a.jsx)(_.default, {
+        children: (0, a.jsx)(C.default, {})
       })
     })]
   }) : null

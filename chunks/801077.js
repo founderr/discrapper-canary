@@ -34,8 +34,8 @@ var l, a, s, i, r = n("392711"),
   w = n("823379"),
   B = n("981631");
 let F = !1,
-  H = !1,
-  V = [],
+  V = !1,
+  H = [],
   k = [],
   Y = {},
   K = {},
@@ -159,15 +159,15 @@ function en(e, t, n) {
     })
   }
   let F = 1 === g.length,
-    H = [],
-    V = new Set,
+    V = [],
+    H = new Set,
     k = new Set;
   for (let e of t) {
     let n = ee(e.id),
       l = x.default.getChannel(n),
       a = null != l ? l.getGuildId() : null,
       s = O.default.getGuild(a);
-    if (k.has(a) && V.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, F = !0);
+    if (k.has(a) && H.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, F = !0);
     else {
       let e = o()(U.default.getVoiceStatesForChannel(l.id)).map(e => {
         let {
@@ -175,7 +175,7 @@ function en(e, t, n) {
         } = e;
         return G.default.getUser(t)
       }).filter(w.isNotNullish).orderBy([et], ["desc"]).value();
-      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), F ? !k.has(a) && (d = null) : (d = s, F = !0), k.add(a), V.add(n), H.push({
+      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), F ? !k.has(a) && (d = null) : (d = s, F = !0), k.add(a), H.add(n), V.push({
         channel: l,
         guild: s,
         members: e
@@ -184,7 +184,7 @@ function en(e, t, n) {
   }
   return {
     id: n,
-    voiceChannels: H,
+    voiceChannels: V,
     isSpotifyActivity: P,
     priorityMembers: g.map(e => ({
       user: e,
@@ -208,7 +208,7 @@ let ea = o().throttle(() => {
   ! function() {
     var e;
     if (!el()) return;
-    W.clear(), k = (V = (function(e) {
+    W.clear(), k = (H = (function(e) {
       let t = Z(),
         n = en.bind(null, t);
       return o()(e).mapValues(n)
@@ -228,7 +228,7 @@ let ea = o().throttle(() => {
         let e = Array.from(W);
         g.default.fetchApplications(e), e.forEach(e => z.add(e)), W.clear()
       }
-    }(), H = !0
+    }(), V = !0
   }(), er.emitChange()
 }, 1e3);
 
@@ -240,7 +240,7 @@ class ei extends(l = u.default.Store) {
     this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(_.default, O.default, E.default, G.default, P.default)
   }
   get currentActivityParties() {
-    return V
+    return H
   }
   get nowPlayingCards() {
     return k
@@ -249,7 +249,7 @@ class ei extends(l = u.default.Store) {
     return F
   }
   get loaded() {
-    return H
+    return V
   }
 }
 i = "NowPlayingViewStore", (s = "displayName") in(a = ei) ? Object.defineProperty(a, s, {
@@ -260,7 +260,7 @@ i = "NowPlayingViewStore", (s = "displayName") in(a = ei) ? Object.definePropert
 }) : a[s] = i;
 let er = new ei(d.default, {
   LOGOUT: function() {
-    F = !1, V = [], k = [], W.clear()
+    F = !1, H = [], k = [], W.clear()
   },
   NOW_PLAYING_MOUNTED: function() {
     F = !0, ea()

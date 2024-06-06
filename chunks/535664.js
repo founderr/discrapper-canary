@@ -1,13 +1,13 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   updateClientCreatedAtOverride: function() {
-    return i
+    return l
   },
   updateClientPremiumTypeOverride: function() {
     return n
   }
 });
-var a = r("570140");
+var a = s("570140");
 let n = (e, t) => {
     a.default.dispatch({
       type: "SET_PREMIUM_TYPE_OVERRIDE",
@@ -17,7 +17,7 @@ let n = (e, t) => {
       user: t
     })
   },
-  i = e => {
+  l = e => {
     a.default.dispatch({
       type: "SET_CREATED_AT_OVERRIDE",
       createdAt: e

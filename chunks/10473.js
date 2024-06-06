@@ -21,7 +21,7 @@ let d = [],
     status: "unloaded"
   },
   h = {};
-class _ extends(a = i.default.Store) {
+class C extends(a = i.default.Store) {
   getSearchResult(e) {
     let t = h[l().v3(JSON.stringify(e))];
     return null == t || t.loadedAt < Date.now() - o.default.Millis.HOUR ? E : t
@@ -36,7 +36,7 @@ class _ extends(a = i.default.Store) {
     return f
   }
 }
-u(_, "displayName", "ClanDiscoveryStore"), u(_, "persistKey", "ClanDiscoveryStore"), t.default = new _(r.default, {
+u(C, "displayName", "ClanDiscoveryStore"), u(C, "persistKey", "ClanDiscoveryStore"), t.default = new C(r.default, {
   FETCH_STATIC_CLAN_LIST_START: function() {
     f = !0
   },

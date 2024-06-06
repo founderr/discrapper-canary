@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("410575"),
   E = n("3570"),
   h = n("237919"),
-  _ = n("957657"),
-  C = n("665307"),
+  C = n("957657"),
+  _ = n("665307"),
   m = n("530151"),
   S = n("981631"),
   p = n("186901"),
@@ -50,7 +50,7 @@ class T extends s.PureComponent {
       })
     });
     return (0, a.jsxs)(s.Fragment, {
-      children: [(0, a.jsx)(_.default, {
+      children: [(0, a.jsx)(C.default, {
         currentRoute: S.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
       }), e ? null : t, (0, a.jsxs)(r.AdvancedScrollerAuto, {
@@ -58,7 +58,7 @@ class T extends s.PureComponent {
         ref: this._scrollerRef,
         children: [e ? t : null, (0, a.jsx)(f.default, {
           section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,
-          children: (0, a.jsx)(C.default, {
+          children: (0, a.jsx)(_.default, {
             stickyHeader: !e,
             scrollToRow: this.scrollToRow
           })

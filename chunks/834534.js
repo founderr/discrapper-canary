@@ -36,9 +36,9 @@ function C(e) {
     autoFocusNote: C,
     className: R
   } = e, {
-    theme: P
+    theme: h
   } = (0, p.useUserProfileThemeContext)(), {
-    trackUserProfileAction: h
+    trackUserProfileAction: P
   } = (0, E.useUserProfileAnalyticsContext)(), M = null == a ? void 0 : a.guildId, y = (0, o.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
     recentGames: j,
     isFetching: F,
@@ -80,7 +80,7 @@ function C(e) {
         connectedAccounts: B,
         className: N.connections,
         userId: t.id,
-        theme: P,
+        theme: h,
         locale: b
       })
     }), (0, s.jsx)(v.default, {
@@ -89,7 +89,7 @@ function C(e) {
         userId: t.id,
         className: N.note,
         autoFocus: C,
-        onUpdate: () => h({
+        onUpdate: () => P({
           action: "SET_NOTE"
         })
       })

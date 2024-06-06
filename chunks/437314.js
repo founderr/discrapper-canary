@@ -23,7 +23,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a || (a = {})).SECTION_NO_RESULTS = "SECTION_NO_RESULTS";
-let _ = Object.freeze({
+let C = Object.freeze({
     SECTION_ALL: {
       lightSrc: n("900933"),
       darkSrc: n("67764"),
@@ -85,10 +85,10 @@ let _ = Object.freeze({
       })
     }
   }),
-  C = e => {
+  _ = e => {
     let {
       theme: t
-    } = e, n = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = _.SECTION_ALL;
+    } = e, n = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = C.SECTION_ALL;
     return (0, s.jsx)(l.Fragment, {
       children: (0, s.jsxs)(d.default, {
         theme: t,
@@ -115,17 +115,17 @@ class m extends l.PureComponent {
       switch (e) {
         case c.FriendsSections.ADD_FRIEND:
         case c.FriendsSections.ALL:
-          return _.SECTION_ALL;
+          return C.SECTION_ALL;
         case c.FriendsSections.ONLINE:
-          return _.SECTION_ONLINE;
+          return C.SECTION_ONLINE;
         case c.FriendsSections.PENDING:
-          return _.SECTION_PENDING;
+          return C.SECTION_PENDING;
         case c.FriendsSections.SUGGESTIONS:
-          return _.SECTION_SUGGESTIONS;
+          return C.SECTION_SUGGESTIONS;
         case c.FriendsSections.BLOCKED:
-          return _.SECTION_BLOCKED;
+          return C.SECTION_BLOCKED;
         case "SECTION_NO_RESULTS":
-          return _.SECTION_NO_RESULTS;
+          return C.SECTION_NO_RESULTS;
         default:
           throw Error("FriendsEmptyState: Invalid empty state")
       }
@@ -133,7 +133,7 @@ class m extends l.PureComponent {
     return e === c.FriendsSections.ADD_FRIEND ? (0, s.jsx)(i.default.div, {
       className: E.friendsEmpty,
       style: a,
-      children: (0, s.jsx)(C, {
+      children: (0, s.jsx)(_, {
         theme: n
       })
     }) : (0, s.jsx)(i.default.div, {

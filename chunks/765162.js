@@ -1,7 +1,7 @@
 "use strict";
 r.r(t);
 var a = r("319301");
-let n = {
+let i = {
   figma: {
     category: "embeds"
   }
@@ -9,7 +9,7 @@ let n = {
 t.default = (0, a.defineColorTokens)({
   "embed-title": {
     name: "header-primary",
-    meta: n
+    meta: i
   },
   "embed-background": {
     light: {
@@ -24,7 +24,7 @@ t.default = (0, a.defineColorTokens)({
     midnight: {
       color: "plum.23"
     },
-    meta: n
+    meta: i
   },
   "embed-background-alternate": {
     dark: {
@@ -33,6 +33,6 @@ t.default = (0, a.defineColorTokens)({
     light: {
       color: "primary.200"
     },
-    meta: n
+    meta: i
   }
 })

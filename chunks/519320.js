@@ -1,40 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   logVoiceMessagePlaybackEnded: function() {
-    return o
+    return s
   },
   logVoiceMessagePlaybackFailed: function() {
     return u
   },
   logVoiceMessagePlaybackStarted: function() {
-    return r
+    return o
   }
 });
-var s, a, l = n("626135"),
-  i = n("981631");
+var r, i, a = n("626135"),
+  l = n("981631");
 
-function r(e, t, n, s) {
-  l.default.track(i.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, {
+function o(e, t, n, r) {
+  a.default.track(l.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, {
     message_id: e,
     total_duration_secs: t,
     start_duration_secs: Math.min(null != t ? t : n, n),
-    sender_user_id: s
+    sender_user_id: r
   })
 }
 
-function o(e, t, n, s, a) {
-  l.default.track(i.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, {
+function s(e, t, n, r, i) {
+  a.default.track(l.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, {
     message_id: e,
     total_duration_secs: t,
     end_duration_secs: Math.min(null != t ? t : n, n),
-    sender_user_id: s,
-    duration_listening_secs: a
+    sender_user_id: r,
+    duration_listening_secs: i
   })
 }
 
 function u(e, t) {
-  l.default.track(i.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
+  a.default.track(l.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
     message_id: e,
     error_message: t
   })
-}(s = a || (a = {})).SENT = "sent", s.CANCELLED_DURATION = "cancelled_duration", s.CANCELLED_USER_REQUESTED = "cancelled_user_requested", s.CANCELLED_GESTURE_CONFLICT = "cancelled_gesture_conflict", s.CANCELLED_ON_BACKGROUND = "cancelled_on_background"
+}(r = i || (i = {})).SENT = "sent", r.CANCELLED_DURATION = "cancelled_duration", r.CANCELLED_USER_REQUESTED = "cancelled_user_requested", r.CANCELLED_GESTURE_CONFLICT = "cancelled_gesture_conflict", r.CANCELLED_ON_BACKGROUND = "cancelled_on_background"

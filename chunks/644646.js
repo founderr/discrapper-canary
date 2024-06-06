@@ -63,7 +63,7 @@ t.default = function(e) {
     })
   });
   return null == m ? (0, i.jsx)("div", {
-    className: a()(t, A.questRewardTile),
+    className: a()(A.questRewardTile, t),
     children: L
   }) : (0, i.jsxs)(l.Clickable, {
     className: a()(A.questRewardTile, A.questRewardTileInteractive, t),

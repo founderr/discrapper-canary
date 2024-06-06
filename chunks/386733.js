@@ -7,23 +7,23 @@ var a = s("735250"),
   l = s("442837"),
   o = s("481060"),
   u = s("232567"),
-  d = s("100527"),
-  c = s("906732"),
+  c = s("100527"),
+  d = s("906732"),
   _ = s("204197"),
   E = s("598077"),
-  T = s("594174"),
-  I = s("976644"),
-  R = s("626135"),
+  R = s("594174"),
+  T = s("976644"),
+  S = s("626135"),
   f = s("63063"),
-  S = s("276444"),
+  I = s("276444"),
   m = s("520540"),
-  A = s("197115"),
-  N = s("119269"),
-  p = s("981631"),
-  g = s("689938"),
+  p = s("197115"),
+  A = s("119269"),
+  N = s("981631"),
+  M = s("689938"),
   C = s("847548"),
-  P = s("691766");
-let O = e => {
+  g = s("691766");
+let P = e => {
     let {
       userRecord: t,
       placement: s
@@ -45,7 +45,7 @@ let O = e => {
       children: s
     });
     return (0, a.jsx)(o.Tooltip, {
-      text: g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
+      text: M.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
       shouldShow: !n,
       tooltipContentClassName: C.unsentTooltipContent,
       children: e => (0, a.jsx)("div", {
@@ -55,7 +55,7 @@ let O = e => {
       })
     })
   },
-  M = e => {
+  O = e => {
     let {
       numSentReferrals: t,
       placement: s
@@ -72,78 +72,78 @@ let O = e => {
       })]
     })
   },
-  h = e => {
+  x = e => {
     let {
       userRecords: t
     } = e, s = t.length, r = s < 1 ? null : t[0], i = s < 2 ? null : t[1], n = s < 3 ? null : t[2];
     return (0, a.jsxs)("div", {
       className: C.userAvatarProgressBarContainer,
-      children: [(0, a.jsx)(O, {
+      children: [(0, a.jsx)(P, {
         userRecord: r,
         placement: 1
-      }), (0, a.jsx)(M, {
+      }), (0, a.jsx)(O, {
         numSentReferrals: s,
         placement: 1
-      }), (0, a.jsx)(O, {
+      }), (0, a.jsx)(P, {
         userRecord: i,
         placement: 2
-      }), (0, a.jsx)(M, {
+      }), (0, a.jsx)(O, {
         numSentReferrals: s,
         placement: 2
-      }), (0, a.jsx)(O, {
+      }), (0, a.jsx)(P, {
         userRecord: n,
         placement: 3
       })]
     })
   },
-  L = (e, t, s, a) => e ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({
+  b = (e, t, s, a) => e ? M.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({
     helpdeskArticle: a
-  }) : t ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
+  }) : t ? M.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
     numFriends: 3 - s,
     helpdeskArticle: a
-  }) : g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
+  }) : M.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
     numFriends: 3,
     helpdeskArticle: a
   });
 t.default = e => {
   let {
     isInSettings: t = !1
-  } = e, i = (0, l.useStateFromStoresArray)([S.default], () => S.default.getSentUserIds()), _ = (0, l.useStateFromStoresArray)([T.default], () => i.map(e => T.default.getUser(e)).filter(e => null != e)), O = r.useMemo(() => _.map(e => new E.default(e)), [_]), {
-    subscriberHomeVariant: M
+  } = e, i = (0, l.useStateFromStoresArray)([I.default], () => I.default.getSentUserIds()), _ = (0, l.useStateFromStoresArray)([R.default], () => i.map(e => R.default.getUser(e)).filter(e => null != e)), P = r.useMemo(() => _.map(e => new E.default(e)), [_]), {
+    subscriberHomeVariant: O
   } = m.ReferralProgramSender.useExperiment({
     location: "ReferralProgramProgressBar"
   }, {
     autoTrackExposure: !1
-  }), x = M === m.SubscriberHomeVariant.VARIANT_2;
+  }), h = O === m.SubscriberHomeVariant.VARIANT_2;
   r.useEffect(() => {
     i.forEach(e => {
       (0, u.getUser)(e)
     })
   }, [i]);
-  let b = i.length,
-    D = 3 === b,
-    v = f.default.getArticleURL(p.HelpdeskArticles.REFERRAL_PROGRAM),
-    U = D ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+  let D = i.length,
+    L = 3 === D,
+    v = f.default.getArticleURL(N.HelpdeskArticles.REFERRAL_PROGRAM),
+    U = L ? M.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : M.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     {
-      analyticsLocations: j
-    } = (0, c.default)(d.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-    G = r.useRef(null),
-    [B, y] = r.useState(!1),
-    k = () => {
-      if (null != G.current) {
+      analyticsLocations: B
+    } = (0, d.default)(c.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+    j = r.useRef(null),
+    [G, k] = r.useState(!1),
+    H = () => {
+      if (null != j.current) {
         let {
           clientWidth: e
-        } = G.current;
-        y(e <= 568)
+        } = j.current;
+        k(e <= 568)
       }
     };
-  r.useEffect(() => (k(), window.addEventListener("resize", k), () => {
-    window.removeEventListener("resize", k)
+  r.useEffect(() => (H(), window.addEventListener("resize", H), () => {
+    window.removeEventListener("resize", H)
   }), []);
-  let H = (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(N.default, {
-      percentage: b / 3 * 100,
-      progressCircleVariation: N.ProgressCircleVariation.NITRO_LOGO,
+  let W = (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(A.default, {
+      percentage: D / 3 * 100,
+      progressCircleVariation: A.ProgressCircleVariation.NITRO_LOGO,
       iconClassName: n()({
         [C.referralProgressBarIcon]: !t,
         [C.referralProgressBarIconSettings]: t
@@ -154,38 +154,38 @@ t.default = e => {
         variant: t ? "heading-xl/extrabold" : "heading-xxl/extrabold",
         className: C.expandedProgressBarHeader,
         children: U
-      }), (0, a.jsx)(h, {
-        userRecords: O
+      }), (0, a.jsx)(x, {
+        userRecords: P
       }), (0, a.jsx)(o.Text, {
         variant: t ? "text-sm/normal" : "text-lg/medium",
-        children: L(D, b > 0, i.length, v)
+        children: b(L, D > 0, i.length, v)
       }), (0, a.jsxs)("div", {
         className: n()(C.expandedProgressBarButtonContainer, {
-          [C.expandedProgressBarButtonContainerMinLayout]: B && !t,
-          [C.expandedProgressBarButtonContainerLayout]: !B && !t
+          [C.expandedProgressBarButtonContainerMinLayout]: G && !t,
+          [C.expandedProgressBarButtonContainerLayout]: !G && !t
         }),
-        children: [!t && !x && (0, a.jsx)(A.default, {
+        children: [!t && !h && (0, a.jsx)(p.default, {
           color: o.ButtonColors.CUSTOM,
-          buttonText: g.default.Messages.GIFT_NITRO,
+          buttonText: M.default.Messages.GIFT_NITRO,
           className: n()(C.expandedProgressBarGiftingCTA, {
-            [C.expandedProgressBarGiftingCTAMinLayout]: B && !t,
-            [C.expandedProgressBarGiftingCTALayout]: !B && !t
+            [C.expandedProgressBarGiftingCTAMinLayout]: G && !t,
+            [C.expandedProgressBarGiftingCTALayout]: !G && !t
           }),
           look: o.ButtonLooks.OUTLINED,
           isGift: !0
-        }), (0, a.jsx)(I.default, {
+        }), (0, a.jsx)(T.default, {
           className: C.expandedProgressBarSelectFriendsCTA,
           color: o.ButtonColors.CUSTOM,
           onClick: () => {
-            R.default.track(p.AnalyticEvents.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
-              location_stack: j
+            S.default.track(N.AnalyticEvents.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+              location_stack: B
             }), (0, o.openModalLazy)(async () => {
               let {
                 default: e
               } = await Promise.all([s.e("99387"), s.e("47435")]).then(s.bind(s, "204387"));
               return t => (0, a.jsx)(e, {
                 ...t,
-                sourceAnalyticsLocations: j
+                sourceAnalyticsLocations: B
               })
             })
           },
@@ -193,27 +193,27 @@ t.default = e => {
           children: (0, a.jsxs)("div", {
             className: C.expandedProgressBarSelectFriendsCTAInner,
             children: [(0, a.jsx)("img", {
-              src: P,
+              src: g,
               alt: "",
               className: C.expandedProgressBarSelectFriendsIcon
-            }), D ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
+            }), L ? M.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : M.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
           })
         })]
       })]
     })]
   });
-  return (0, a.jsx)(c.AnalyticsLocationProvider, {
-    value: j,
+  return (0, a.jsx)(d.AnalyticsLocationProvider, {
+    value: B,
     children: (0, a.jsx)("div", {
-      ref: G,
+      ref: j,
       className: n()({
         [C.expandedProgressBarContainer]: !t,
         [C.expandedProgressBarContainerSettingsPage]: t,
-        [C.expandedProgressBarContainerVariant1]: !x && !t,
-        [C.expandedProgressBarContainerVariant2]: x && !t,
+        [C.expandedProgressBarContainerVariant1]: !h && !t,
+        [C.expandedProgressBarContainerVariant2]: h && !t,
         [C.allReferralsSentBorder]: 3 === i.length
       }),
-      children: H
+      children: W
     })
   })
 }

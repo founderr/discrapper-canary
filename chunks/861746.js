@@ -21,8 +21,8 @@ var a = s("735250"),
   T = s("906732"),
   x = s("1585"),
   _ = s("125988"),
-  N = s("377171"),
-  L = s("74179"),
+  L = s("377171"),
+  N = s("74179"),
   b = s("107091"),
   R = s("197115"),
   v = s("300284"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   M = s("794358"),
   k = s("466111"),
   B = s("26290"),
-  F = s("626135"),
-  D = s("74538"),
+  D = s("626135"),
+  F = s("74538"),
   U = s("998502"),
   H = s("335131"),
   w = s("1870"),
@@ -104,7 +104,7 @@ t.default = function(e) {
     analyticsLocations: eu
   } = (0, T.default)(I.default.COLLECTIBLES_SHOP_CARD), ec = l.useRef(null), ed = l.useRef(null), ef = (0, S.default)(ec), {
     defaultPaymentSource: eC
-  } = (0, L.default)({
+  } = (0, N.default)({
     isGift: !1,
     activeSubscription: null
   }), [eE, ep] = l.useState(!1), em = ef || eE, [eg] = t.items, {
@@ -119,9 +119,9 @@ t.default = function(e) {
   }), {
     backgroundColors: eT,
     buttonColors: ex
-  } = (0, V.default)(t.styles), e_ = l.useMemo(() => D.default.canUseCollectibles(s), [s]), eN = (0, G.getFormattedPriceForCollectiblesProduct)(t, e_, !1), eL = l.useMemo(() => (0, G.getProductDiscount)(t, e_), [t, e_]), eb = (0, G.isPremiumCollectiblesProduct)(t), eR = (0, G.isFreeCollectiblesProduct)(t), {
+  } = (0, V.default)(t.styles), e_ = l.useMemo(() => F.default.canUseCollectibles(s), [s]), eL = (0, G.getFormattedPriceForCollectiblesProduct)(t, e_, !1), eN = l.useMemo(() => (0, G.getProductDiscount)(t, e_), [t, e_]), eb = (0, G.isPremiumCollectiblesProduct)(t), eR = (0, G.isFreeCollectiblesProduct)(t), {
     isPurchased: ev
-  } = (0, Y.useProductPurchaseState)(t), [eA, eP] = (0, f.useStateFromStoresArray)([w.default], () => [w.default.isClaiming === t.skuId, null != w.default.isClaiming && w.default.isClaiming !== t.skuId]), eO = (0, f.useStateFromStores)([O.default], () => (0, E.isThemeDark)(O.default.theme)), ej = (0, G.isProductNew)(t.skuId), ey = (0, W.useCollectiblesHoverPreviewExperiment)("CollectiblesShopTallCard"), [eM, ek] = l.useState(!1), eB = l.useRef(null), eF = l.useRef(new i.Environment), [eD, eU] = l.useState(!1), [eH, ew] = l.useState(null), eG = ev || eD, eW = (0, v.default)({
+  } = (0, Y.useProductPurchaseState)(t), [eA, eP] = (0, f.useStateFromStoresArray)([w.default], () => [w.default.isClaiming === t.skuId, null != w.default.isClaiming && w.default.isClaiming !== t.skuId]), eO = (0, f.useStateFromStores)([O.default], () => (0, E.isThemeDark)(O.default.theme)), ej = (0, G.isProductNew)(t.skuId), ey = (0, W.useCollectiblesHoverPreviewExperiment)("CollectiblesShopTallCard"), [eM, ek] = l.useState(!1), eB = l.useRef(null), eD = l.useRef(new i.Environment), [eF, eU] = l.useState(!1), [eH, ew] = l.useState(null), eG = ev || eF, eW = (0, v.default)({
     analyticsLocations: eu
   }), eY = l.useRef(null), eV = l.useMemo(() => ({
     sku_id: t.skuId,
@@ -177,7 +177,7 @@ t.default = function(e) {
       children: ee.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
     }) : (0, a.jsx)(X.default, {
       product: t,
-      discount: eL,
+      discount: eN,
       isPremiumUser: e_,
       className: et.priceTag
     }),
@@ -216,7 +216,7 @@ t.default = function(e) {
           className: et.purchaseButton,
           ...e,
           children: eb ? ee.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : ee.default.Messages.COLLECTIBLES_PURCHASE.format({
-            price: eN
+            price: eL
           })
         }), e$()]
       })
@@ -274,14 +274,14 @@ t.default = function(e) {
         paymentSource: eC,
         itemPreview: e0(),
         onPurchaseComplete: () => {
-          eU(!0), F.default.track($.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
+          eU(!0), D.default.track($.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
             ...eV,
             load_id: U.current
           })
         },
         onUse: e7,
         onError: e => {
-          ew(e), F.default.track($.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+          ew(e), D.default.track($.AnalyticEvents.PAYMENT_FLOW_FAILED, {
             ...eV,
             load_id: U.current
           })
@@ -310,7 +310,7 @@ t.default = function(e) {
     e4 = () => {
       U.current = (0, c.v4)(), ew(null), ek(!0), ep(!0), m.default.dispatch({
         type: "LIGHTNING_CHECKOUT_OPEN"
-      }), F.default.track($.AnalyticEvents.PAYMENT_FLOW_STARTED, {
+      }), D.default.track($.AnalyticEvents.PAYMENT_FLOW_STARTED, {
         ...eV,
         load_id: U.current
       })
@@ -318,7 +318,7 @@ t.default = function(e) {
     e7 = l.useCallback(() => {
       ek(!1), ep(!1), m.default.dispatch({
         type: "LIGHTNING_CHECKOUT_CLOSE"
-      }), F.default.track($.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      }), D.default.track($.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         ...eV,
         load_id: U.current
       })
@@ -333,7 +333,7 @@ t.default = function(e) {
       boxShadow: "0px 4px 50px 0px " + ex.primary.toHexString()
     } : {},
     e9 = eM && eH ? {
-      boxShadow: "0px 4px 50px 0px " + (eO ? N.default.WHITE : N.default.BLACK)
+      boxShadow: "0px 4px 50px 0px " + (eO ? L.default.WHITE : L.default.BLACK)
     } : e3;
   return l.useEffect(() => {
     if (eM) {
@@ -374,7 +374,7 @@ t.default = function(e) {
           children: [(0, a.jsx)(i.ConfettiCanvas, {
             ref: eB,
             className: et.confettiCanvas,
-            environment: eF.current
+            environment: eD.current
           }), (0, a.jsxs)(p.Clickable, {
             innerRef: ec,
             className: r()(et.shopCard, et.shopCardAnimation),
@@ -392,7 +392,7 @@ t.default = function(e) {
               children: (0, a.jsx)(y.default, {
                 width: 16,
                 height: 16,
-                color: eO ? N.default.WHITE : N.default.BLACK
+                color: eO ? L.default.WHITE : L.default.BLACK
               })
             }), eG && !eM && (0, a.jsx)("div", {
               className: et.checkmarkWrapper,

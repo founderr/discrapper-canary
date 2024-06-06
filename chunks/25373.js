@@ -34,13 +34,13 @@ function P(e) {
     pendingBanner: E,
     pendingBio: y,
     pendingPronouns: x,
-    pendingAvatar: U,
-    pendingAvatarDecoration: j,
+    pendingAvatar: j,
+    pendingAvatarDecoration: U,
     pendingNickname: N,
     pendingGlobalName: C,
     pendingThemeColors: b,
-    pendingProfileEffectId: w,
-    avatarClassName: _,
+    pendingProfileEffectId: _,
+    avatarClassName: w,
     isTryItOutFlow: M = !1,
     disabledInputs: B = !1,
     hideCustomStatus: R = !1,
@@ -58,12 +58,12 @@ function P(e) {
   } = (0, m.default)({
     user: a,
     guildId: null == t ? void 0 : t.id,
-    avatarDecorationOverride: j,
-    avatarOverride: U,
+    avatarDecorationOverride: U,
+    avatarOverride: j,
     size: s.AvatarSizes.SIZE_80,
     showPending: !0
   }), W = (0, p.getPreviewProfileEffectId)({
-    pendingProfileEffectId: w,
+    pendingProfileEffectId: _,
     displayProfile: F
   }), {
     theme: Z,
@@ -108,7 +108,7 @@ function P(e) {
         previewAvatarDecoration: G,
         previewTheme: Z,
         previewPrimaryColor: H,
-        className: _,
+        className: w,
         disabledInputs: B,
         isTryItOutFlow: M,
         onUpsellClick: () => null == P ? void 0 : P({
@@ -122,7 +122,7 @@ function P(e) {
       user: a,
       displayProfile: F,
       guild: t,
-      pendingAvatar: U,
+      pendingAvatar: j,
       pendingNickname: N,
       pendingGlobalName: C,
       pendingBio: y,

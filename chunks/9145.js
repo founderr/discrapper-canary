@@ -26,14 +26,14 @@ var a = n("735250"),
   I = n("110456"),
   A = n("602623"),
   v = n("585483"),
-  N = n("792125"),
-  x = n("51144"),
+  x = n("792125"),
+  N = n("51144"),
   M = n("566620"),
   R = n("317381"),
   y = n("619915"),
   L = n("952561"),
-  O = n("563218"),
-  j = n("719296"),
+  j = n("563218"),
+  O = n("719296"),
   P = n("651612"),
   D = n("918559"),
   b = n("981631"),
@@ -50,10 +50,10 @@ function H(e) {
   let {
     maxHeight: s,
     connectedChannelId: H,
-    renderExternalHeader: B
-  } = e, G = (0, L.default)(), V = (0, r.useStateFromStoresArray)([R.default], () => null != H ? R.default.getEmbeddedActivitiesForChannel(H) : [], [H]), W = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(H)), Y = (0, y.useEmbeddedApps)(V), z = (0, y.useEmbeddedAppsWithPresence)(Y), K = l.useCallback(() => {
+    renderExternalHeader: G
+  } = e, B = (0, L.default)(), V = (0, r.useStateFromStoresArray)([R.default], () => null != H ? R.default.getEmbeddedActivitiesForChannel(H) : [], [H]), W = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(H)), Y = (0, y.useEmbeddedApps)(V), z = (0, y.useEmbeddedAppsWithPresence)(Y), K = l.useCallback(() => {
     (0, M.updateActivityPanelMode)(D.ActivityPanelModes.PIP)
-  }, []), Z = l.useRef(null), q = (0, r.useStateFromStores)([R.default], () => R.default.getFocusedLayout()), X = q !== D.FocusedActivityLayouts.NO_CHAT, [Q, J] = l.useState(null !== (t = p.default.activityPanelHeight) && void 0 !== t ? t : s), $ = l.useCallback(e => {
+  }, []), Z = l.useRef(null), X = (0, r.useStateFromStores)([R.default], () => R.default.getFocusedLayout()), q = X !== D.FocusedActivityLayouts.NO_CHAT, [J, Q] = l.useState(null !== (t = p.default.activityPanelHeight) && void 0 !== t ? t : s), $ = l.useCallback(e => {
     d.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -81,7 +81,7 @@ function H(e) {
       t = et.height;
     ea ? ((t = et.width / D.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > et.height && (e = (t = et.height) * D.LANDSCAPE_ACTIVITY_ASPECT_RATIO), es = (et.height - t) / 2) : ((e = Math.min(et.height * D.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > et.width && (t = (e = et.width) / D.LANDSCAPE_ACTIVITY_ASPECT_RATIO), el = (et.width - e) / 2)
   }
-  let er = z.get(null !== (n = null == G ? void 0 : G.id) && void 0 !== n ? n : ""),
+  let er = z.get(null !== (n = null == B ? void 0 : B.id) && void 0 !== n ? n : ""),
     eo = (0, r.useStateFromStores)([_.default], () => _.default.getChannelId()),
     eu = (0, r.useStateFromStoresArray)([S.default], () => {
       var e;
@@ -116,15 +116,15 @@ function H(e) {
           height: t
         } : a
       }, [o, e, n, t])
-    }(X, Q, s);
-  if (null == G) return null;
+    }(q, J, s);
+  if (null == B) return null;
   let ef = [];
   null != er && (ef = Array.from(er.embeddedActivity.userIds).map(e => T.default.getUser(e)).filter(e => null != e && void 0 !== e));
   let eh = (e, t) => {
     var n;
     if (null == e || void 0 === e || void 0 === t) return null;
     let l = ed.get(e.id),
-      s = null !== (n = null == l ? void 0 : l.nick) && void 0 !== n ? n : x.default.getName(e);
+      s = null !== (n = null == l ? void 0 : l.nick) && void 0 !== n ? n : N.default.getName(e);
     return (0, a.jsx)(u.TooltipContainer, {
       text: s,
       position: "bottom",
@@ -136,18 +136,18 @@ function H(e) {
     }, e.id)
   };
   return (0, a.jsxs)("div", {
-    className: i()(F.wrapper, k[q], (0, N.getThemeClass)(b.ThemeTypes.DARK)),
+    className: i()(F.wrapper, k[X], (0, x.getThemeClass)(b.ThemeTypes.DARK)),
     ref: Z,
     style: ec,
-    children: [null == B ? void 0 : B(), (0, a.jsxs)("div", {
+    children: [null == G ? void 0 : G(), (0, a.jsxs)("div", {
       className: F.activityPanelContainer,
-      children: [X ? null : (0, a.jsx)("div", {
+      children: [q ? null : (0, a.jsx)("div", {
         className: F.header,
         children: (0, a.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
           className: F.headerTitle,
-          children: null == G ? void 0 : G.name
+          children: null == B ? void 0 : B.name
         })
       }), (0, a.jsx)("div", {
         className: i()(F.activityContainer, {
@@ -160,9 +160,9 @@ function H(e) {
           paddingBottom: es
         },
         ref: ee,
-        children: (0, a.jsx)(O.default, {
+        children: (0, a.jsx)(j.default, {
           className: F.iframe,
-          embedId: (0, j.default)(H, G.id)
+          embedId: (0, O.default)(H, B.id)
         })
       }), null != eo ? (0, a.jsxs)("div", {
         className: F.footer,
@@ -181,7 +181,7 @@ function H(e) {
           }), (0, a.jsx)("div", {
             className: F.leaveButtonContainer,
             children: (0, a.jsx)(C.default, {
-              applicationId: G.id,
+              applicationId: B.id,
               channelId: H,
               centerButton: !0,
               color: "red",
@@ -198,14 +198,14 @@ function H(e) {
           className: F.flex
         })]
       }) : null]
-    }), X ? (0, a.jsx)(h.default, {
+    }), q ? (0, a.jsx)(h.default, {
       minHeight: 480,
       maxHeight: s,
       resizableNode: Z,
       onResize: e => {
         v.ComponentDispatch.dispatch(b.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0
-        }), J(e)
+        }), Q(e)
       },
       onResizeEnd: e => {
         v.ComponentDispatch.dispatch(b.ComponentActions.MANUAL_IFRAME_RESIZING, {

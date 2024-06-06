@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("920906"),
-  o = n("442837"),
-  u = n("461920"),
-  d = n("207532"),
-  c = n("481060"),
-  f = n("230711"),
-  E = n("393238"),
-  h = n("607070"),
-  _ = n("113434"),
-  C = n("918701"),
-  m = n("46140"),
-  S = n("981631"),
-  p = n("689938"),
-  I = n("700898");
+s.r(t), s("47120");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("120356"),
+  i = s.n(l),
+  r = s("920906"),
+  o = s("442837"),
+  u = s("461920"),
+  d = s("207532"),
+  c = s("481060"),
+  E = s("230711"),
+  _ = s("393238"),
+  f = s("607070"),
+  h = s("113434"),
+  m = s("918701"),
+  C = s("46140"),
+  T = s("981631"),
+  g = s("689938"),
+  A = s("700898");
 
-function g(e) {
+function p(e) {
   let {
     children: t,
-    isComplete: n,
-    hasNextStep: s
+    isComplete: s,
+    hasNextStep: n
   } = e;
   return (0, a.jsxs)("li", {
-    className: i()(I.stepWrapper, {
-      [I.stepWrapperComplete]: n
+    className: i()(A.stepWrapper, {
+      [A.stepWrapperComplete]: s
     }, {
-      [I.stepWrapperWithNextStep]: s
+      [A.stepWrapperWithNextStep]: n
     }),
     children: [(0, a.jsxs)("div", {
-      className: I.stepIndicator,
+      className: A.stepIndicator,
       children: [(0, a.jsx)("div", {
-        className: I.stepIconWrapper,
-        children: n && (0, a.jsx)(u.CheckmarkBoldIcon, {
-          className: I.stepIcon,
+        className: A.stepIconWrapper,
+        children: s && (0, a.jsx)(u.CheckmarkBoldIcon, {
+          className: A.stepIcon,
           color: c.tokens.colors.WHITE
         })
-      }), s && (0, a.jsx)("div", {
-        className: I.stepConnector
+      }), n && (0, a.jsx)("div", {
+        className: A.stepConnector
       })]
     }), (0, a.jsx)(c.Text, {
-      className: I.stepContent,
+      className: A.stepContent,
       color: "text-muted",
       variant: "text-xs/medium",
       children: t
@@ -53,36 +53,36 @@ function g(e) {
 t.default = function(e) {
   let {
     onContentHeightChange: t,
-    quest: n
-  } = e, [l, i] = s.useState(!1);
-  (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion);
+    quest: s
+  } = e, [l, i] = n.useState(!1);
+  (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion);
   let {
     xboxAndPlaystationAccounts: u
-  } = (0, _.useConnectedAccounts)(), T = s.useMemo(() => {
-    let e = (0, C.getQuestTaskDetails)({
-        quest: n,
-        location: m.QuestsExperimentLocations.QUESTS_BAR
+  } = (0, h.useConnectedAccounts)(), N = n.useMemo(() => {
+    let e = (0, m.getQuestTaskDetails)({
+        quest: s,
+        location: C.QuestsExperimentLocations.QUESTS_BAR
       }),
       t = u.length > 0,
-      a = t && (0, C.isQuestProgressingOnConsole)(n),
-      s = a && e.progressSeconds >= e.targetSeconds;
+      a = t && (0, m.isQuestProgressingOnConsole)(s),
+      n = a && e.progressSeconds >= e.targetSeconds;
     return [{
-      content: p.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT,
+      content: g.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT,
       isComplete: t
     }, {
-      content: p.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME,
+      content: g.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME,
       isComplete: a
     }, {
-      content: p.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
+      content: g.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
         numMinutes: e.targetMinutes
       }),
-      isComplete: s
+      isComplete: n
     }]
-  }, [u, n]), {
-    ref: A,
-    height: N = 0
-  } = (0, E.default)(), {
-    expansionSpring: v
+  }, [u, s]), {
+    ref: S,
+    height: I = 0
+  } = (0, _.default)(), {
+    expansionSpring: R
   } = (0, r.useSpring)({
     to: {
       expansionSpring: l ? 1 : 0
@@ -96,49 +96,49 @@ t.default = function(e) {
   });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: I.wrapper,
+      className: A.wrapper,
       children: [(0, a.jsxs)(c.Clickable, {
-        className: I.headingWrapper,
+        className: A.headingWrapper,
         onClick: () => {
-          t(l ? -1 * N : N), i(!l)
+          t(l ? -1 * I : I), i(!l)
         },
         children: [(0, a.jsx)(c.Heading, {
-          className: I.heading,
+          className: A.heading,
           variant: "text-xs/medium",
-          children: p.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
+          children: g.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
         }), (0, a.jsx)(d.ChevronLargeDownIcon, {
-          className: I.headingChevron,
+          className: A.headingChevron,
           style: {
             transform: "rotate(".concat(l ? 180 : 0, "deg)")
           }
         })]
       }), (0, a.jsx)(r.animated.div, {
-        className: I.stepsWrapperAnimated,
+        className: A.stepsWrapperAnimated,
         style: {
-          height: v.to({
+          height: R.to({
             range: [0, 1],
-            output: [0, N]
+            output: [0, I]
           })
         },
         children: (0, a.jsx)("div", {
-          ref: A,
+          ref: S,
           children: (0, a.jsx)("ul", {
-            className: I.stepsWrapperStatic,
-            children: T.map((e, t) => (0, a.jsx)(g, {
+            className: A.stepsWrapperStatic,
+            children: N.map((e, t) => (0, a.jsx)(p, {
               isComplete: e.isComplete,
-              hasNextStep: t < T.length - 1,
+              hasNextStep: t < N.length - 1,
               children: e.content
             }, t))
           })
         })
       })]
     }), 0 === u.length && (0, a.jsx)("div", {
-      className: I.ctaWrapper,
+      className: A.ctaWrapper,
       children: (0, a.jsx)(c.Button, {
         fullWidth: !0,
-        onClick: () => f.default.open(S.UserSettingsSections.CONNECTIONS),
+        onClick: () => E.default.open(T.UserSettingsSections.CONNECTIONS),
         size: c.Button.Sizes.SMALL,
-        children: p.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+        children: g.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
       })
     })]
   })

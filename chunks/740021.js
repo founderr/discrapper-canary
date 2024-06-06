@@ -37,8 +37,8 @@ function R(e) {
     activity: a,
     customStatusActivity: f,
     guildId: R,
-    channelId: P,
-    transitionState: h,
+    channelId: h,
+    transitionState: P,
     viewProfileItem: M,
     onClose: y
   } = e, {
@@ -60,7 +60,7 @@ function R(e) {
     trackUserProfileAction: G
   } = (0, E.useUserProfileAnalyticsContext)(), k = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), w = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [Y, H] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, P) ? [A.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [A.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [A.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [A.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
     children: [(0, s.jsx)(_.default, {
@@ -97,7 +97,7 @@ function R(e) {
         }), (0, s.jsx)(v.UserProfileCustomStatusBubble, {
           statusActivity: f,
           profileType: g.UserProfileTypes.FULL_SIZE,
-          hasEntered: h === U.ModalTransitionState.ENTERED
+          hasEntered: P === U.ModalTransitionState.ENTERED
         })]
       })
     })]

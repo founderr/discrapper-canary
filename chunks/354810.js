@@ -34,8 +34,8 @@ function I(e) {
     theme: I
   } = (0, E.useUserProfileThemeContext)(), A = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
     avatarSrc: v,
-    eventHandlers: N,
-    avatarDecorationSrc: x
+    eventHandlers: x,
+    avatarDecorationSrc: N
   } = (0, h.default)({
     user: t,
     size: T,
@@ -71,10 +71,10 @@ function I(e) {
       profileType: C.UserProfileTypes.PANEL,
       animateOnHover: !f
     }), (0, a.jsx)("div", {
-      ...N,
+      ...x,
       children: (0, a.jsx)(_, {
         src: v,
-        avatarDecoration: x,
+        avatarDecoration: N,
         size: T,
         className: S.avatar,
         status: M ? r.StatusTypes.UNKNOWN : R,

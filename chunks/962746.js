@@ -27,13 +27,13 @@ var l = t("735250"),
   E = t("318661"),
   y = t("943217"),
   x = t("793397"),
-  U = t("502762"),
-  j = t("347949"),
+  j = t("502762"),
+  U = t("347949"),
   N = t("155916"),
   C = t("138394"),
   b = t("131640"),
-  w = t("790711"),
-  _ = t("19836"),
+  _ = t("790711"),
+  w = t("19836"),
   M = t("538564"),
   B = t("319300"),
   R = t("584045"),
@@ -90,13 +90,13 @@ function er(e) {
     isTryItOutFlow: eE = !1,
     disabledInputs: ey = !1,
     hideExampleButton: ex = !1,
-    hideFakeActivity: eU = !1,
-    hideCustomStatus: ej = !1,
+    hideFakeActivity: ej = !1,
+    hideCustomStatus: eU = !1,
     hideBioSection: eN = !1,
     hideRecentGames: eC = !1,
     forProfileEffectModal: eb = !1,
-    hideMemberStatusSection: ew = !0,
-    bodyClassName: e_,
+    hideMemberStatusSection: e_ = !0,
+    bodyClassName: ew,
     slideInAvatarDecoration: eM = !1,
     useLargeBanner: eB = !1
   } = e, eR = i.useRef(null), [eO, ek] = i.useState(!1), ez = z.GifAutoPlay.getSetting(), {
@@ -203,7 +203,7 @@ function er(e) {
     if (!!H.isAnimatedImageURL(e)) new Image().src = null != e ? e : ""
   }, [eG, ez]);
   let ao = null == er;
-  return (0, l.jsxs)(U.default, {
+  return (0, l.jsxs)(j.default, {
     forceShowPremium: en,
     user: K,
     displayProfile: eG,
@@ -355,8 +355,8 @@ function er(e) {
         forProfileEffectModal: eb
       }), function() {
         let e = null == eG ? void 0 : eG.getPreviewBio(ef);
-        return (0, l.jsxs)(U.default.Overlay, {
-          className: n()(ea.body, e_),
+        return (0, l.jsxs)(j.default.Overlay, {
+          className: n()(ea.body, ew),
           children: [(0, l.jsx)(R.default, {
             isTryItOut: eE,
             user: K,
@@ -364,27 +364,27 @@ function er(e) {
             pronouns: null != em ? em : null == eG ? void 0 : eG.pronouns,
             usernameIcon: (() => {
               if (!!(null != eH) && null !== ev) {
-                if (!(null == eH.avatar && null == ev)) return (0, l.jsx)(w.default, {
+                if (!(null == eH.avatar && null == ev)) return (0, l.jsx)(_.default, {
                   user: K,
                   nickname: e9
                 })
               }
             })()
-          }), !ej && (0, l.jsx)(M.default, {
+          }), !eU && (0, l.jsx)(M.default, {
             customStatusActivity: e7
-          }), (0, l.jsx)(C.default, {}), !eN && (0, l.jsx)(_.default, {
+          }), (0, l.jsx)(C.default, {}), !eN && (0, l.jsx)(w.default, {
             isUsingGuildBio: null == e ? void 0 : e.isUsingGuildValue,
             guild: er,
             bio: null == e ? void 0 : e.value,
             hidePersonalInformation: e5,
-            lastSection: eU,
+            lastSection: ej,
             lineClamp: eb ? 3 : void 0
-          }), !eC && as && (0, l.jsx)(j.UserProfileRecentGamesSection, {
+          }), !eC && as && (0, l.jsx)(U.UserProfileRecentGamesSection, {
             userId: K.id
-          }), !ew && (0, l.jsx)(B.default, {
+          }), !e_ && (0, l.jsx)(B.default, {
             userId: K.id,
             guildId: null == er ? void 0 : er.id
-          }), !eU && (0, l.jsx)(X.default, {
+          }), !ej && (0, l.jsx)(X.default, {
             activityName: eA,
             activityCharacter: eP,
             showExampleButton: null == er && !ex

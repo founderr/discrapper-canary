@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return u
   },
   isKeywordParseableString: function() {
-    return d
+    return T
   },
   sortKeywords: function() {
     return l
@@ -40,6 +40,6 @@ function s(e) {
   return e.join(", ")
 }
 
-function d(e) {
+function T(e) {
   return e.includes("\n") || e.includes(",")
 }

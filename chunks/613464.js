@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,29 +27,29 @@ var a = n("735250"),
   A = n("228168"),
   v = n("30262");
 
-function N(e) {
+function x(e) {
   let {
     userId: t,
     guildId: n,
     onClose: s,
-    className: N,
-    infoPanelClassName: x,
+    className: x,
+    infoPanelClassName: N,
     style: M
-  } = e, R = (0, _.useCanAccessGuildMemberModView)(n), y = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [O, j] = l.useState(null == y || null == L), P = (0, d.default)(L), D = l.useRef(null), {
+  } = e, R = (0, _.useCanAccessGuildMemberModView)(n), y = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [j, O] = l.useState(null == y || null == L), P = (0, d.default)(L), D = l.useRef(null), {
     analyticsLocations: b
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW), U = (0, E.default)(t, n);
   return (l.useEffect(() => {
     !R && s()
   }, [R, s]), l.useEffect(() => {
-    null != P && null == L && !O && s()
-  }, [O, L, s, P]), l.useEffect(() => {
-    null != y && null != L && j(!1)
+    null != P && null == L && !j && s()
+  }, [j, L, s, P]), l.useEffect(() => {
+    null != y && null != L && O(!1)
   }, [y, L]), l.useEffect(() => {
     let e = null == L;
-    return !O && e && (D.current = window.setTimeout(s, 500)), () => {
+    return !j && e && (D.current = window.setTimeout(s, 500)), () => {
       null != D.current && window.clearTimeout(D.current)
     }
-  }, [O, L, s]), (0, c.useSubscribeGuildMembers)({
+  }, [j, L, s]), (0, c.useSubscribeGuildMembers)({
     [n]: [t]
   }), l.useEffect(() => {
     (async function e() {
@@ -57,19 +57,19 @@ function N(e) {
         guildId: n,
         dispatchWait: !0
       })];
-      await Promise.all(e), j(!1)
+      await Promise.all(e), O(!1)
     })()
-  }, [n, t]), R) ? O || null == y || null == L ? (0, a.jsx)("div", {
-    className: i()(v.sidebarContianer, v.loadingContainer, N),
+  }, [n, t]), R) ? j || null == y || null == L ? (0, a.jsx)("div", {
+    className: i()(v.sidebarContianer, v.loadingContainer, x),
     style: M,
     children: (0, a.jsx)(o.Spinner, {
       animated: !0,
-      type: O ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
+      type: j ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
     })
   }) : (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: b,
     children: (0, a.jsx)("div", {
-      className: i()(v.sidebarContianer, N),
+      className: i()(v.sidebarContianer, x),
       style: M,
       children: (0, a.jsx)(C.default, {
         user: y,
@@ -87,7 +87,7 @@ function N(e) {
             userId: t,
             guildId: n,
             onClose: s,
-            className: x
+            className: N
           })]
         })
       })

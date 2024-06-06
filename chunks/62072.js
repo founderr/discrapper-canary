@@ -22,17 +22,17 @@ var a = n("470079"),
   I = n("901461"),
   A = n("432376"),
   v = n("996861"),
-  N = n("981631");
+  x = n("981631");
 
-function x(e) {
-  return E.default.can(N.Permissions.MANAGE_MESSAGES, e)
+function N(e) {
+  return E.default.can(x.Permissions.MANAGE_MESSAGES, e)
 }
 t.default = function(e, t, n) {
   let M = a.useRef(n);
   return M.current = n, a.useCallback(n => {
-    var a, R, y, L, O;
+    var a, R, y, L, j;
     if (!M.current || n.target !== n.currentTarget) return;
-    let j = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
+    let O = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
       D = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
       b = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
@@ -43,25 +43,25 @@ t.default = function(e, t, n) {
     let k = d.default.getId();
     switch (n.key.toLowerCase()) {
       case "backspace":
-        j && (x(w) || F.canDeleteOwnMessage(k)) && (n.preventDefault(), (0, v.deleteMessage)(w, F, n));
+        O && (N(w) || F.canDeleteOwnMessage(k)) && (n.preventDefault(), (0, v.deleteMessage)(w, F, n));
         break;
       case "c":
         ((0, S.isMac)() ? b : D) && C.SUPPORTS_COPY && (n.preventDefault(), (0, C.copy)(F.content));
         break;
       case "e":
-        if (j) {
+        if (O) {
           ;
           if (a = k, R = w, y = F, !R.isSystemDM() && (0, T.default)(y, a)) n.preventDefault(), (0, v.editMessage)(w, F)
         }
         break;
       case "p":
-        if (j || U) {
+        if (O || U) {
           ;
-          if (L = w, O = F, !L.isSystemDM() && !(0, I.default)(O) && (x(L) || L.isPrivate())) n.preventDefault(), (0, v.pinMessage)(w, F, n)
+          if (L = w, j = F, !L.isSystemDM() && !(0, I.default)(j) && (N(L) || L.isPrivate())) n.preventDefault(), (0, v.pinMessage)(w, F, n)
         }
         break;
       case "+":
-        (j || U) && function(e) {
+        (O || U) && function(e) {
           let t = null == e.guild_id || m.default.canChatInGuild(e.guild_id),
             n = u.RenderReactions.getSetting(),
             {
@@ -70,31 +70,31 @@ t.default = function(e, t, n) {
               channel: e,
               canChat: t,
               renderReactions: n,
-              canAddNewReactions: t && E.default.can(N.Permissions.ADD_REACTIONS, e),
+              canAddNewReactions: t && E.default.can(x.Permissions.ADD_REACTIONS, e),
               isLurking: null != e.guild_id && s.default.isLurking(e.guild_id),
               isGuest: null != e.guild_id && h.default.isCurrentUserGuest(e.guild_id),
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
             });
           return !a && n
-        }(w) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(N.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, F.id, {
+        }(w) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(x.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, F.id, {
           emojiPicker: !0
         }));
         break;
       case "r":
-        (j || U) && (0, i.canReplyToMessage)(w, F) && (n.preventDefault(), (0, v.replyToMessage)(w, F, n));
+        (O || U) && (0, i.canReplyToMessage)(w, F) && (n.preventDefault(), (0, v.replyToMessage)(w, F, n));
         break;
       case "t":
-        if (j && (0, r.computeCanStartPublicThread)(w, F)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(w, F, "Message Shortcut");
-        else if (F.hasFlag(N.MessageFlags.HAS_THREAD)) {
+        if (O && (0, r.computeCanStartPublicThread)(w, F)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(w, F, "Message Shortcut");
+        else if (F.hasFlag(x.MessageFlags.HAS_THREAD)) {
           let e = c.default.getChannel(_.default.castMessageIdAsChannelId(F.id));
-          null != e && (j || U) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, U))
+          null != e && (O || U) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, U))
         }
         break;
       case "enter":
         P && (n.preventDefault(), (0, v.markMessageUnread)(w, F));
         break;
       case "escape":
-        f.default.isEditing(w.id, F.id) ? l.default.endEditMessage(w.id) : g.ComponentDispatch.dispatch(N.ComponentActions.TEXTAREA_FOCUS)
+        f.default.isEditing(w.id, F.id) ? l.default.endEditMessage(w.id) : g.ComponentDispatch.dispatch(x.ComponentActions.TEXTAREA_FOCUS)
     }
   }, [e, t])
 }

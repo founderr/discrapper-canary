@@ -1,28 +1,28 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("569379"),
-  l = n("956506");
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("569379"),
+  l = s("956506");
 t.default = e => {
   let {
     progressBarRef: t,
-    percentComplete: n,
+    percentComplete: s,
     size: i = 42,
     strokeWidth: r = 3,
     glowBlur: o = .4,
     children: u
-  } = e, d = (0, s.useProgressBarColors)(n > 0), c = i / 2, f = i / 2 - r / 2, E = 2 * Math.PI * f, h = E - n * E, _ = {
-    strokeDasharray: "".concat(E, " ").concat(E),
-    strokeDashoffset: h
-  }, C = {
+  } = e, d = (0, n.useProgressBarColors)(s > 0), c = i / 2, E = i / 2 - r / 2, _ = 2 * Math.PI * E, f = _ - s * _, h = {
+    strokeDasharray: "".concat(_, " ").concat(_),
+    strokeDashoffset: f
+  }, m = {
     boxShadow: "0 0 30px 0px ".concat(d.glow)
   };
   return (0, a.jsxs)("div", {
     className: l.outer,
     children: [(0, a.jsx)("div", {
       className: l.inner,
-      style: C,
+      style: m,
       ref: t,
       children: u
     }), (0, a.jsxs)("svg", {
@@ -63,7 +63,7 @@ t.default = e => {
       }), (0, a.jsx)("circle", {
         strokeWidth: r,
         fill: "transparent",
-        r: f,
+        r: E,
         cx: c,
         cy: c,
         stroke: "url(#linear)"
@@ -71,11 +71,11 @@ t.default = e => {
         className: l.progress,
         strokeWidth: r,
         fill: "transparent",
-        r: f,
+        r: E,
         cx: c,
         cy: c,
         stroke: d.foreground,
-        style: _
+        style: h
       })]
     })]
   })

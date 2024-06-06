@@ -10,8 +10,8 @@ var a, s, l = n("735250"),
   f = n("607070"),
   E = n("963202"),
   h = n("353093"),
-  _ = n("931515"),
-  C = n("807933"),
+  C = n("931515"),
+  _ = n("807933"),
   m = n("702646"),
   S = n("207796"),
   p = n("543550"),
@@ -37,7 +37,7 @@ let T = {
       delay: 500,
       immediate: n,
       onRest: () => u(!1)
-    }), _ = (0, S.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), A = (0, S.useClanDiscoveryUIStore)(e => e.started, o.default), {
+    }), C = (0, S.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), A = (0, S.useClanDiscoveryUIStore)(e => e.started, o.default), {
       guilds: N
     } = (0, E.useClanPrepilotExperimentForAllGuilds)({
       location: "ClanDiscoveryAdminContainer",
@@ -47,7 +47,7 @@ let T = {
     } = (0, E.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer");
     switch (i.useEffect(() => {
         let e = N.length > 0;
-        if (e && !R && _ === S.ClanDiscoveryUserScreens.USER_UPSELL) {
+        if (e && !R && C === S.ClanDiscoveryUserScreens.USER_UPSELL) {
           (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.ADMIN_UPSELL);
           return
         }
@@ -59,7 +59,7 @@ let T = {
           (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.GET_STARTED), S.useClanDiscoveryUIStore.getState().setUserUpsellScreen(S.ClanDiscoveryUserScreens.USER_UPSELL);
           return
         }
-      }, [v.length, N.length, A, R, a, _]), a) {
+      }, [v.length, N.length, A, R, a, C]), a) {
       case S.ClanDiscoveryMode.ADMIN_UPSELL:
         return (0, l.jsx)(p.ClanDiscoveryAdminContainer, {});
       case S.ClanDiscoveryMode.GET_STARTED:
@@ -89,7 +89,7 @@ let T = {
             })
           }), (0, l.jsx)("div", {
             className: g.selectors,
-            children: (0, l.jsx)(C.default, {
+            children: (0, l.jsx)(_.default, {
               mode: a
             })
           })]
@@ -99,7 +99,7 @@ let T = {
 t.default = i.memo(function() {
   let {
     loading: e
-  } = (0, _.useAutoFetchClanDiscoveryResults)(), {
+  } = (0, C.useAutoFetchClanDiscoveryResults)(), {
     ref: t,
     width: n
   } = (0, c.default)();

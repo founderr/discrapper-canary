@@ -30,8 +30,8 @@ function h(e) {
   let h = (0, o.useDropsExperiment)(n);
   if (null == h) return null;
   let {
-    body: _,
-    imgSrc: C,
+    body: C,
+    imgSrc: _,
     imgStyle: m
   } = E(h.drop, h.config.streamLengthRequirement), S = () => {
     t(d.ContentDismissActionType.DISMISS)
@@ -39,7 +39,7 @@ function h(e) {
   return (0, a.jsxs)("div", {
     className: f.container,
     children: [(0, a.jsx)("img", {
-      src: C,
+      src: _,
       alt: "",
       className: m
     }), (0, a.jsx)(l.Clickable, {
@@ -58,7 +58,7 @@ function h(e) {
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
       className: f.subTitle,
-      children: _
+      children: C
     }), (0, a.jsx)(l.Button, {
       color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,

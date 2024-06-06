@@ -13,7 +13,7 @@ var a = n("735250"),
   E = n("689938"),
   h = n("262090");
 
-function _() {
+function C() {
   return (0, a.jsxs)(l.Switch, {
     children: [(0, a.jsx)(r.default, {
       path: f.Routes.APPLICATION_LIBRARY_SETTINGS,
@@ -44,6 +44,6 @@ t.default = s.memo(function() {
     className: h.container,
     children: [(0, a.jsx)(o.AppPageTitle, {
       location: E.default.Messages.LIBRARY
-    }), (0, a.jsx)(_, {})]
+    }), (0, a.jsx)(C, {})]
   })
 })

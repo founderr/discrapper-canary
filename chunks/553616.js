@@ -69,11 +69,11 @@ for (var i in o)
     if (!("labels" in o[i])) throw Error("missing channel labels property: " + i);
     if (o[i].labels.length !== o[i].channels) throw Error("channel and label counts mismatch: " + i);
     var u = o[i].channels,
-      c = o[i].labels;
+      l = o[i].labels;
     delete o[i].channels, delete o[i].labels, Object.defineProperty(o[i], "channels", {
       value: u
     }), Object.defineProperty(o[i], "labels", {
-      value: c
+      value: l
     })
   } o.rgb.hsl = function(e) {
   var t, r, a, n = e[0] / 255,
@@ -81,18 +81,18 @@ for (var i in o)
     o = e[2] / 255,
     i = Math.min(n, s, o),
     u = Math.max(n, s, o),
-    c = u - i;
-  return u === i ? t = 0 : n === u ? t = (s - o) / c : s === u ? t = 2 + (o - n) / c : o === u && (t = 4 + (n - s) / c), (t = Math.min(60 * t, 360)) < 0 && (t += 360), a = (i + u) / 2, [t, 100 * (r = u === i ? 0 : a <= .5 ? c / (u + i) : c / (2 - u - i)), 100 * a]
+    l = u - i;
+  return u === i ? t = 0 : n === u ? t = (s - o) / l : s === u ? t = 2 + (o - n) / l : o === u && (t = 4 + (n - s) / l), (t = Math.min(60 * t, 360)) < 0 && (t += 360), a = (i + u) / 2, [t, 100 * (r = u === i ? 0 : a <= .5 ? l / (u + i) : l / (2 - u - i)), 100 * a]
 }, o.rgb.hsv = function(e) {
   var t, r, a, n, s, o = e[0] / 255,
     i = e[1] / 255,
     u = e[2] / 255,
-    c = Math.max(o, i, u),
-    l = c - Math.min(o, i, u),
+    l = Math.max(o, i, u),
+    c = l - Math.min(o, i, u),
     f = function(e) {
-      return (c - e) / 6 / l + .5
+      return (l - e) / 6 / c + .5
     };
-  return 0 === l ? n = s = 0 : (s = l / c, t = f(o), r = f(i), a = f(u), o === c ? n = a - r : i === c ? n = 1 / 3 + t - a : u === c && (n = 2 / 3 + r - t), n < 0 ? n += 1 : n > 1 && (n -= 1)), [360 * n, 100 * s, 100 * c]
+  return 0 === c ? n = s = 0 : (s = c / l, t = f(o), r = f(i), a = f(u), o === l ? n = a - r : i === l ? n = 1 / 3 + t - a : u === l && (n = 2 / 3 + r - t), n < 0 ? n += 1 : n > 1 && (n -= 1)), [360 * n, 100 * s, 100 * l]
 }, o.rgb.hwb = function(e) {
   var t = e[0],
     r = e[1],
@@ -111,9 +111,9 @@ o.rgb.keyword = function(e) {
   var s = 1 / 0;
   for (var o in a)
     if (a.hasOwnProperty(o)) {
-      var i, u, c = a[o];
-      var l = (i = e, u = c, Math.pow(i[0] - u[0], 2) + Math.pow(i[1] - u[1], 2) + Math.pow(i[2] - u[2], 2));
-      l < s && (s = l, t = o)
+      var i, u, l = a[o];
+      var c = (i = e, u = l, Math.pow(i[0] - u[0], 2) + Math.pow(i[1] - u[1], 2) + Math.pow(i[2] - u[2], 2));
+      c < s && (s = c, t = o)
     } return t
 }, o.keyword.rgb = function(e) {
   return a[e]
@@ -134,7 +134,7 @@ o.rgb.keyword = function(e) {
     u = e[2] / 100;
   if (0 === i) return [s = 255 * u, s, s];
   r = u < .5 ? u * (1 + i) : u + i - u * i, t = 2 * u - r, n = [0, 0, 0];
-  for (var c = 0; c < 3; c++)(a = o + -(1 / 3 * (c - 1))) < 0 && a++, a > 1 && a--, s = 6 * a < 1 ? t + (r - t) * 6 * a : 2 * a < 1 ? r : 3 * a < 2 ? t + (r - t) * (2 / 3 - a) * 6 : t, n[c] = 255 * s;
+  for (var l = 0; l < 3; l++)(a = o + -(1 / 3 * (l - 1))) < 0 && a++, a > 1 && a--, s = 6 * a < 1 ? t + (r - t) * 6 * a : 2 * a < 1 ? r : 3 * a < 2 ? t + (r - t) * (2 / 3 - a) * 6 : t, n[l] = 255 * s;
   return n
 }, o.hsl.hsv = function(e) {
   var t, r = e[0],
@@ -173,29 +173,29 @@ o.rgb.keyword = function(e) {
   return a = (2 - s) * o, t = (2 - s) * i, r = (r = s * i / (t <= 1 ? t : 2 - t)) || 0, [n, 100 * r, 100 * (a /= 2)]
 }, o.hwb.rgb = function(e) {
   var t, r, a, n, s, o, i, u = e[0] / 360,
-    c = e[1] / 100,
-    l = e[2] / 100,
-    f = c + l;
-  switch (f > 1 && (c /= f, l /= f), t = Math.floor(6 * u), r = 1 - l, a = 6 * u - t, (1 & t) != 0 && (a = 1 - a), n = c + a * (r - c), t) {
+    l = e[1] / 100,
+    c = e[2] / 100,
+    f = l + c;
+  switch (f > 1 && (l /= f, c /= f), t = Math.floor(6 * u), r = 1 - c, a = 6 * u - t, (1 & t) != 0 && (a = 1 - a), n = l + a * (r - l), t) {
     default:
     case 6:
     case 0:
-      s = r, o = n, i = c;
+      s = r, o = n, i = l;
       break;
     case 1:
-      s = n, o = r, i = c;
+      s = n, o = r, i = l;
       break;
     case 2:
-      s = c, o = r, i = n;
+      s = l, o = r, i = n;
       break;
     case 3:
-      s = c, o = n, i = r;
+      s = l, o = n, i = r;
       break;
     case 4:
-      s = n, o = c, i = r;
+      s = n, o = l, i = r;
       break;
     case 5:
-      s = r, o = c, i = n
+      s = r, o = l, i = n
   }
   return [255 * s, 255 * o, 255 * i]
 }, o.cmyk.rgb = function(e) {
@@ -221,8 +221,8 @@ o.rgb.keyword = function(e) {
   t = s / 500 + (r = (n + 16) / 116), a = r - o / 200;
   var i = Math.pow(r, 3),
     u = Math.pow(t, 3),
-    c = Math.pow(a, 3);
-  return r = (i > .008856 ? i : (r - 16 / 116) / 7.787) * 100, [t = (u > .008856 ? u : (t - 16 / 116) / 7.787) * 95.047, r, a = (c > .008856 ? c : (a - 16 / 116) / 7.787) * 108.883]
+    l = Math.pow(a, 3);
+  return r = (i > .008856 ? i : (r - 16 / 116) / 7.787) * 100, [t = (u > .008856 ? u : (t - 16 / 116) / 7.787) * 95.047, r, a = (l > .008856 ? l : (a - 16 / 116) / 7.787) * 108.883]
 }, o.lab.lch = function(e) {
   var t, r = e[0],
     a = e[1],

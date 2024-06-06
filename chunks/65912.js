@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useAutomodEditingRuleActions: function() {
-    return g
+    return N
   },
   useAutomodEditingRuleState: function() {
-    return N
+    return g
   }
 });
 var r = n("392711"),
@@ -14,8 +14,8 @@ var r = n("392711"),
   a = n("823379"),
   l = n("539573"),
   s = n("236413"),
-  d = n("85960"),
-  T = n("36459"),
+  T = n("85960"),
+  d = n("36459"),
   E = n("422303"),
   A = n("866894"),
   _ = n("981631"),
@@ -65,7 +65,7 @@ let I = Object.freeze({
       }), null;
       try {
         var r, o, i;
-        (0, s.isRuleKeywordFilter)(t) && (t.triggerMetadata.keywordFilter = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])), t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (o = t.triggerMetadata.allowList) && void 0 !== o ? o : []))), (0, s.isRuleDefaultKeywordListFilter)(t) && (t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : []))), (0, d.validateRuleByTriggerConfigOrThrow)(t, n), (0, s.validateRuleBeforeSaveOrThrow)(t)
+        (0, s.isRuleKeywordFilter)(t) && (t.triggerMetadata.keywordFilter = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])), t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (o = t.triggerMetadata.allowList) && void 0 !== o ? o : []))), (0, s.isRuleDefaultKeywordListFilter)(t) && (t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : []))), (0, T.validateRuleByTriggerConfigOrThrow)(t, n), (0, s.validateRuleBeforeSaveOrThrow)(t)
       } catch (t) {
         return t instanceof l.InvalidKeywordError ? e({
           errorMessage: c.default.Messages.GUILD_AUTOMOD_KEYWORD_GENERIC_SAVE_ERROR,
@@ -83,7 +83,7 @@ let I = Object.freeze({
           isLoading: !0
         });
         let n = null;
-        return n = (0, s.isBackendPersistedRule)(t) && !(0, A.isDefaultRuleId)(t.id) ? await (0, T.updateAutomodRule)(t) : await (0, T.createAutomodRule)(t), e({
+        return n = (0, s.isBackendPersistedRule)(t) && !(0, A.isDefaultRuleId)(t.id) ? await (0, d.updateAutomodRule)(t) : await (0, d.createAutomodRule)(t), e({
           ...I
         }), n
       } catch (t) {
@@ -109,7 +109,7 @@ let I = Object.freeze({
     }
   }));
 
-function g() {
+function N() {
   return O(e => ({
     hasChanges: e.hasChanges,
     editingRule: e.editingRule,
@@ -121,7 +121,7 @@ function g() {
   }))
 }
 
-function N() {
+function g() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
     t = O(e => ({
       hasChanges: e.hasChanges,

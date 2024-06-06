@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("321488"),
   E = n("417183"),
   h = n("170245"),
-  _ = n("981631"),
-  C = n("689938"),
+  C = n("981631"),
+  _ = n("689938"),
   m = n("860030");
 
 function S(e) {
@@ -40,7 +40,7 @@ function S(e) {
     })
   }, A = e => {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
-  }, N = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
+  }, N = S === C.StatusTypes.OFFLINE ? C.StatusTypes.UNKNOWN : S;
   return (0, a.jsx)(E.default, {
     isFocused: p,
     user: t,
@@ -54,13 +54,13 @@ function S(e) {
         children: [(0, a.jsx)(f.default, {
           icon: u.default,
           actionType: f.default.ActionTypes.ACCEPT,
-          tooltip: C.default.Messages.FRIEND_REQUEST_ACCEPT,
+          tooltip: _.default.Messages.FRIEND_REQUEST_ACCEPT,
           onClick: T,
           shouldHighlight: e
         }), (0, a.jsx)(f.default, {
           icon: d.default,
           actionType: f.default.ActionTypes.DENY,
-          tooltip: C.default.Messages.FRIEND_REQUEST_IGNORE,
+          tooltip: _.default.Messages.FRIEND_REQUEST_IGNORE,
           onClick: A,
           shouldHighlight: e
         })]

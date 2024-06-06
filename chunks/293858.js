@@ -23,9 +23,9 @@ function f(e) {
       handleClose: f,
       planGroup: x,
       onSubscriptionConfirmation: E,
-      renderPurchaseConfirmation: m,
-      postSuccessGuild: L,
-      followupSKUInfo: S
+      renderPurchaseConfirmation: L,
+      postSuccessGuild: S,
+      followupSKUInfo: m
     } = e,
     {
       activeSubscription: I,
@@ -42,29 +42,29 @@ function f(e) {
       giftRecipient: g,
       giftCode: y,
       hasSentMessage: O,
-      isSendingMessage: b,
-      sendGiftMessage: U
+      isSendingMessage: U,
+      sendGiftMessage: b
     } = (0, d.useGiftContext)();
   l()(null != T, "Expected plan to selected"), l()(null != M, "Expected selectedSkuId"), l()(null != N, "Step should be set");
   let v = i.useCallback(() => {
     f(), null == E || E()
   }, [f, E]);
   return i.useEffect(() => {
-    if (!(!R || null == g || null == y || O || b || (0, u.shouldShowCustomGiftExperience)(g))) a.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
+    if (!(!R || null == g || null == y || O || U || (0, u.shouldShowCustomGiftExperience)(g))) a.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
-    }).enabled && U({
+    }).enabled && b({
       onSubscriptionConfirmation: E
     })
-  }, [U, R, g, y, O, b, E]), r = null != m ? m(T, v, j) : R ? (0, n.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
+  }, [b, R, g, y, O, U, E]), r = null != L ? L(T, v, j) : R ? (0, n.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
     planId: T.id,
     onClose: v
   }) : A.current === T.id ? (0, n.jsx)(o.default, {
     planId: T.id,
-    postSuccessGuild: L,
+    postSuccessGuild: S,
     onClose: v,
     paymentSourceType: null === (t = h[null != P ? P : ""]) || void 0 === t ? void 0 : t.type
   }) : (0, n.jsx)(o.default, {
-    followupSKUInfo: S,
+    followupSKUInfo: m,
     startingPremiumSubscriptionPlanId: A.current,
     planId: T.id,
     onClose: v,

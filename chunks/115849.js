@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("657682"),
   E = n("981631"),
   h = n("420212"),
-  _ = n("689938"),
-  C = n("909759"),
+  C = n("689938"),
+  _ = n("909759"),
   m = n("611273");
 let S = {
     canSend: !1,
@@ -80,7 +80,7 @@ function A() {
         }
       }).then(() => l({
         type: "SUCCESS",
-        text: _.default.Messages.ADD_FRIEND_SUCCESS.format({
+        text: C.default.Messages.ADD_FRIEND_SUCCESS.format({
           discordTag: n
         })
       }), e => {
@@ -95,22 +95,22 @@ function A() {
     children: [(0, a.jsx)(u.FormText, {
       id: I,
       type: u.FormText.Types.DESCRIPTION,
-      children: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
+      children: C.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
     }), (0, a.jsx)(u.FocusRing, {
       focusTarget: e,
       ringTarget: t,
-      ringClassName: C.ring,
+      ringClassName: _.ring,
       children: (0, a.jsxs)("div", {
         ref: t,
-        className: i()(C.addFriendInputWrapper, {
-          [C.success]: A,
-          [C.error]: N
+        className: i()(_.addFriendInputWrapper, {
+          [_.success]: A,
+          [_.error]: N
         }),
         children: [(0, a.jsx)(u.TextInput, {
           id: p,
           inputRef: e,
-          className: C.addFriendInput,
-          inputClassName: C.input,
+          className: _.addFriendInput,
+          inputClassName: _.input,
           onKeyPress: t => {
             let n = t.currentTarget.value;
             if (t.key !== h.KeyboardEventKey.Enter && n.includes("#")) {
@@ -141,19 +141,19 @@ function A() {
           autoComplete: "off",
           name: "add-friend",
           "data-lpignore": !0,
-          placeholder: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-          "aria-label": _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
+          placeholder: C.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
+          "aria-label": C.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-invalid": null != N || void 0,
           "aria-describedby": null != N ? g : I
         }), null != c && (0, a.jsx)("div", {
-          className: C.addFriendHint,
+          className: _.addFriendHint,
           "aria-hidden": !0,
           children: c
         }), (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           disabled: !r,
           type: "submit",
-          children: _.default.Messages.ADD_FRIEND_BUTTON
+          children: C.default.Messages.ADD_FRIEND_BUTTON
         })]
       })
     }), null != N && (0, a.jsx)(u.FormText, {

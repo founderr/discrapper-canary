@@ -25,11 +25,11 @@ function C(e) {
     onAcceptSuccess: n,
     onRejectSuccess: l,
     onError: C
-  } = e, g = (0, m.default)(), [S, _] = a.useState(!1), [T, I] = a.useState(!1), [A, v] = a.useState(!1), [N, x] = a.useState(!1), [M, R] = a.useState(!1), y = S || T || A, L = a.useCallback(async e => {
+  } = e, g = (0, m.default)(), [S, _] = a.useState(!1), [T, I] = a.useState(!1), [A, v] = a.useState(!1), [x, N] = a.useState(!1), [M, R] = a.useState(!1), y = S || T || A, L = a.useCallback(async e => {
     if (!y) {
       _(!0);
       try {
-        await (0, f.acceptMessageRequest)(e), x(!0), null == n || n()
+        await (0, f.acceptMessageRequest)(e), N(!0), null == n || n()
       } catch (t) {
         let e = new i.APIError(t);
         null == C || C(e)
@@ -37,7 +37,7 @@ function C(e) {
         _(!1)
       }
     }
-  }, [y, n, C]), O = a.useCallback(async e => {
+  }, [y, n, C]), j = a.useCallback(async e => {
     if (!y) {
       I(!0);
       try {
@@ -49,7 +49,7 @@ function C(e) {
         I(!1)
       }
     }
-  }, [y, l, C]), j = a.useCallback(async e => {
+  }, [y, l, C]), O = a.useCallback(async e => {
     if (y) return;
     I(!0);
     let t = s()(e, p.BATCH_REJECT_LIMIT);
@@ -122,13 +122,13 @@ function C(e) {
   }, [L]);
   return {
     acceptMessageRequest: g ? P : L,
-    rejectMessageRequest: O,
-    rejectAll: j,
+    rejectMessageRequest: j,
+    rejectAll: O,
     markAsNotSpam: D,
     isAcceptLoading: S,
     isRejectLoading: T,
     isUserProfileLoading: A,
-    isOptimisticAccepted: N,
+    isOptimisticAccepted: x,
     isOptimisticRejected: M
   }
 }

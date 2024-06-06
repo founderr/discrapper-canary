@@ -25,8 +25,8 @@ var a = s("735250"),
   T = s("329067"),
   x = s("981631"),
   _ = s("302800"),
-  N = s("689938"),
-  L = s("894775");
+  L = s("689938"),
+  N = s("894775");
 let b = {
     xMin: -100,
     xMax: 100,
@@ -62,21 +62,21 @@ function v(e) {
   let k = l.useRef(null),
     [B] = t.items,
     {
-      analyticsLocations: F
+      analyticsLocations: D
     } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD, d.default.COLLECTIBLES_LIGHTNING_CHECKOUT),
     {
-      buttonColors: D
+      buttonColors: F
     } = (0, E.default)(t.styles),
     U = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     H = (0, _.getCustomConfettiDisplayOptions)(t.skuId),
     [w, G] = l.useState(!1),
     [W, Y] = l.useState(!1),
-    V = null != D ? {
-      background: (0, p.getBackgroundGradient)(D, 90),
-      color: D.text.toHslString()
+    V = null != F ? {
+      background: (0, p.getBackgroundGradient)(F, 90),
+      color: F.text.toHslString()
     } : void 0,
     K = (0, g.default)({
-      analyticsLocations: F
+      analyticsLocations: D
     }),
     z = {
       onPurchaseComplete: () => {
@@ -93,44 +93,44 @@ function v(e) {
     };
   return (0, a.jsxs)("div", {
     ref: k,
-    className: L.container,
+    className: N.container,
     children: [W && (0, a.jsxs)("div", {
-      className: L.cardDetails,
+      className: N.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: L.productName,
-        children: N.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
+        className: N.productName,
+        children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
       }), (0, a.jsx)("div", {
-        className: L.innerBlur,
+        className: N.innerBlur,
         children: (0, a.jsx)(o.Text, {
-          className: L.description,
+          className: N.description,
           variant: "text-md/normal",
-          children: N.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
+          children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
         })
       }), (0, a.jsx)(o.Button, {
         onClick: () => {
           O(), (0, I.default)({
             skuId: t.skuId,
-            analyticsLocations: F,
+            analyticsLocations: D,
             returnRef: k
           })
         },
-        children: N.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
+        children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
     }), !W && (w ? (0, a.jsxs)("div", {
-      className: L.cardDetails,
+      className: N.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: L.productName,
-        children: N.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
+        className: N.productName,
+        children: L.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
           itemName: t.name
         })
       }), (0, a.jsx)("div", {
-        className: L.innerBlur,
+        className: N.innerBlur,
         children: (0, a.jsx)(o.Text, {
-          className: L.description,
+          className: N.description,
           variant: "text-xs/normal",
-          children: N.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
+          children: L.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
       }), (0, a.jsx)(R, {
         style: V,
@@ -138,21 +138,21 @@ function v(e) {
           if (A(), (0, u.popLayer)(), K(), (null == B ? void 0 : B.type) === r.CollectiblesItemType.AVATAR_DECORATION) {
             (0, C.openAvatarDecorationModal)({
               initialSelectedDecoration: B,
-              analyticsLocations: F
+              analyticsLocations: D
             });
             return
           }(null == B ? void 0 : B.type) === r.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
             initialSelectedEffectId: B.id,
-            analyticsLocations: F
+            analyticsLocations: D
           })
         },
-        children: N.default.Messages.COLLECTIBLES_USE_NOW
+        children: L.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, a.jsxs)("div", {
-      className: L.cardDetails,
+      className: N.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: L.productName,
+        className: N.productName,
         children: t.name
       }), (0, a.jsx)(h.PaymentContextProvider, {
         loadId: j,

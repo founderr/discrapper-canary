@@ -10,8 +10,8 @@ var a, s, l = n("735250"),
   f = n("438139"),
   E = n("2052"),
   h = n("726542"),
-  _ = n("638880"),
-  C = n("655922"),
+  C = n("638880"),
+  _ = n("655922"),
   m = n("122810"),
   S = n("833664"),
   p = n("503438"),
@@ -24,11 +24,11 @@ var a, s, l = n("735250"),
   R = n("933557"),
   O = n("102172"),
   L = n("871118"),
-  M = n("849171"),
-  P = n("314897"),
-  x = n("592125"),
-  y = n("594174"),
-  D = n("368874"),
+  P = n("849171"),
+  M = n("314897"),
+  y = n("592125"),
+  D = n("594174"),
+  x = n("368874"),
   b = n("366695"),
   U = n("366966"),
   j = n("446753"),
@@ -43,8 +43,8 @@ var a, s, l = n("735250"),
   W = n("599706"),
   K = n("981631"),
   z = n("689938"),
-  Q = n("691970");
-let q = {
+  q = n("691970");
+let Q = {
     SMALL: 64,
     LARGE: 160
   },
@@ -52,7 +52,7 @@ let q = {
   X = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     return (0, l.jsx)(c.Text, {
-      className: o()(Q.textContent, t),
+      className: o()(q.textContent, t),
       variant: "text-sm/semibold",
       children: e
     })
@@ -60,7 +60,7 @@ let q = {
   J = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     return (0, l.jsx)(c.Text, {
-      className: o()(Q.textContent, t),
+      className: o()(q.textContent, t),
       variant: "text-xs/normal",
       children: e
     })
@@ -70,7 +70,7 @@ let q = {
       message: t
     } = e;
     return (0, l.jsx)("div", {
-      className: Q.__invalid_timestamp,
+      className: q.__invalid_timestamp,
       children: t
     })
   }),
@@ -79,7 +79,7 @@ let q = {
       children: t
     } = e;
     return (0, l.jsx)("section", {
-      className: Q.section,
+      className: q.section,
       children: t
     })
   };
@@ -97,7 +97,7 @@ class et extends i.Component {
       start: n.start,
       end: n.end,
       location: U.default.Locations.USER_ACTIVITY,
-      className: Q.__invalid_playTime
+      className: q.__invalid_playTime
     }))
   }
   render() {
@@ -113,26 +113,26 @@ class et extends i.Component {
     } = this.props;
     return (0, l.jsx)(ee, {
       children: (0, l.jsxs)("div", {
-        className: Q.activitySection,
+        className: q.activitySection,
         children: [null != a && 0 !== Object.keys(a).length ? (0, l.jsxs)("div", {
-          className: Q.activitySectionAssets,
+          className: q.activitySectionAssets,
           children: [(0, l.jsx)("img", {
             alt: null !== (e = a.large_text) && void 0 !== e ? e : "",
-            src: u(r, a.large_image, [q.LARGE, q.LARGE]),
-            className: o()(Q.largeImage, {
-              [Q.largeImageMask]: null != a.small_image
+            src: u(r, a.large_image, [Q.LARGE, Q.LARGE]),
+            className: o()(q.largeImage, {
+              [q.largeImageMask]: null != a.small_image
             })
           }), null != a.small_image ? (0, l.jsx)("img", {
             alt: null !== (t = a.small_text) && void 0 !== t ? t : "",
-            src: u(r, a.small_image, [q.SMALL, q.SMALL]),
-            className: Q.smallImage
+            src: u(r, a.small_image, [Q.SMALL, Q.SMALL]),
+            className: q.smallImage
           }) : null]
         }) : (0, l.jsx)("div", {
-          className: Q.activitySectionAssets,
+          className: q.activitySectionAssets,
           children: (0, l.jsx)("img", {
             alt: "",
             src: n("211827"),
-            className: Q.largeImage
+            className: q.largeImage
           })
         }), (0, l.jsxs)("div", {
           children: [X(null != s && "" !== s ? s : z.default.Messages.USER_ACTIVITY_HEADER_PLAYING), null != i ? J(i) : null, this.renderTimePlayed()]
@@ -150,21 +150,21 @@ let en = e => {
   switch (n) {
     case "XBOX":
       t = (0, l.jsx)(k.default, {
-        className: Q.headerIcon,
+        className: q.headerIcon,
         color: d.default.unsafe_rawColors.PRIMARY_300.css
       });
       break;
     case "SPOTIFY":
       t = (0, l.jsx)(w.default, {
-        className: Q.headerIcon,
+        className: q.headerIcon,
         color: d.default.unsafe_rawColors.SPOTIFY.css
       });
       break;
     case "MULTIPLE":
       t = (0, l.jsx)("div", {
-        className: Q.multipleIconWrapper,
+        className: q.multipleIconWrapper,
         children: (0, l.jsx)(G.default, {
-          className: o()(Q.headerIcon, Q.multipleIcon),
+          className: o()(q.headerIcon, q.multipleIcon),
           color: d.default.unsafe_rawColors.PRIMARY_300.css
         })
       });
@@ -173,12 +173,12 @@ let en = e => {
       t = (0, l.jsx)("img", {
         src: null != n ? n : void 0,
         alt: "",
-        className: Q.headerIcon
+        className: q.headerIcon
       })
   }
   return null != a || null != s ? (0, l.jsx)(c.Clickable, {
     onClick: a,
-    className: o()(null != a ? Q.clickableIcon : ""),
+    className: o()(null != a ? q.clickableIcon : ""),
     onContextMenu: s,
     children: t
   }) : t
@@ -194,23 +194,23 @@ let ea = e => {
     guildId: r
   } = e;
   return (0, l.jsxs)("header", {
-    className: null != s ? Q.headerFull : Q.headerSimple,
+    className: null != s ? q.headerFull : q.headerSimple,
     children: [(0, l.jsx)(c.Avatar, {
       src: t.user.getAvatarURL(r, 32),
       "aria-label": t.user.username,
       size: c.AvatarSizes.SIZE_32,
-      className: Q.headerAvatar,
+      className: q.headerAvatar,
       status: t.status,
       onContextMenu: i
     }), (0, l.jsxs)("div", {
-      className: Q.__invalid_headerDetails,
+      className: q.__invalid_headerDetails,
       children: [(0, l.jsx)(c.Text, {
-        className: o()(Q.textContent),
+        className: o()(q.textContent),
         variant: "text-md/semibold",
         children: n
       }), (0, l.jsx)(c.Text, {
         color: "header-secondary",
-        className: Q.textContent,
+        className: q.textContent,
         variant: "text-sm/normal",
         children: a
       })]
@@ -226,7 +226,7 @@ let es = e => {
   } = e;
   return (0, l.jsx)(c.FocusRing, {
     children: (0, l.jsx)(j.default, {
-      className: o()(n, Q.wrapper),
+      className: o()(n, q.wrapper),
       padded: !0,
       ...a,
       children: t
@@ -240,7 +240,7 @@ es.Header = ea, es.Body = e => {
   return (0, l.jsx)(j.default, {
     inset: !0,
     padded: !1,
-    className: Q.body,
+    className: q.body,
     children: t
   })
 }, es.Separator = e => {
@@ -249,8 +249,8 @@ es.Header = ea, es.Body = e => {
     className: n
   } = e;
   return (0, l.jsx)("div", {
-    className: o()(Q.separator, {
-      [Q.inset]: t
+    className: o()(q.separator, {
+      [q.inset]: t
     }, n)
   })
 }, es.VoiceSection = e => {
@@ -265,7 +265,7 @@ es.Header = ea, es.Body = e => {
   } = e, E = i.useRef(null), h = (0, R.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
-      className: Q.voiceSection,
+      className: q.voiceSection,
       ref: E,
       onContextMenu: e => f(e, s),
       children: [(0, l.jsx)(c.Clickable, {
@@ -273,24 +273,24 @@ es.Header = ea, es.Body = e => {
         "aria-hidden": !0,
         tabIndex: -1,
         children: (0, l.jsxs)("div", {
-          className: Q.voiceSectionAssets,
+          className: q.voiceSectionAssets,
           children: [null != a.getIconURL(32) ? (0, l.jsx)("img", {
             alt: "",
             src: null !== (t = a.getIconURL(32)) && void 0 !== t ? t : void 0,
-            className: o()(Q.voiceSectionGuildImage, Q.largeImageMask)
+            className: o()(q.voiceSectionGuildImage, q.largeImageMask)
           }) : (0, l.jsx)("div", {
-            className: Q.voiceSectionNoGuildImageWrapper,
+            className: q.voiceSectionNoGuildImageWrapper,
             children: (0, l.jsx)("div", {
-              className: Q.voiceSectionNoGuildImage,
+              className: q.voiceSectionNoGuildImage,
               style: {
                 fontSize: null !== (n = Z[a.acronym.length]) && void 0 !== n ? n : Z[Z.length - 1]
               },
               children: a.acronym
             })
           }), (0, l.jsx)("div", {
-            className: Q.voiceSectionIconWrapper,
+            className: q.voiceSectionIconWrapper,
             children: (0, l.jsx)(B.default, {
-              className: Q.voiceSectionIcon
+              className: q.voiceSectionIcon
             })
           })]
         })
@@ -300,8 +300,8 @@ es.Header = ea, es.Body = e => {
           ringTarget: E
         },
         children: (0, l.jsxs)("div", {
-          className: Q.voiceSectionDetails,
-          children: [X(a.toString(), Q.voiceSectionText), J(h, Q.voiceSectionText)]
+          className: q.voiceSectionDetails,
+          children: [X(a.toString(), q.voiceSectionText), J(h, q.voiceSectionText)]
         })
       }), (0, l.jsx)(W.default, {
         partySize: u,
@@ -319,11 +319,11 @@ es.Header = ea, es.Body = e => {
   } = e;
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
-      className: Q.gameSection,
+      className: q.gameSection,
       children: [null != t ? (0, l.jsx)("img", {
         alt: "",
         src: t,
-        className: Q.gameSectionIcon
+        className: q.gameSectionIcon
       }) : null, (0, l.jsxs)("div", {
         children: [X(n), J(z.default.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
           memberCount: a.totalSize
@@ -340,11 +340,11 @@ es.Header = ea, es.Body = e => {
   } = e;
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
-      className: Q.xboxSection,
+      className: q.xboxSection,
       children: [(0, l.jsx)(k.default, {
-        className: Q.xboxSectionIcon
+        className: q.xboxSectionIcon
       }), (0, l.jsxs)("div", {
-        className: Q.__invalid_xboxSectionDetails,
+        className: q.__invalid_xboxSectionDetails,
         children: [X(t), J(z.default.Messages.GAME_FEED_ACTIVITY_PLAYING_XBOX)]
       })]
     })
@@ -365,17 +365,17 @@ es.Header = ea, es.Body = e => {
   } = e;
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
-      className: Q.spotifySection,
+      className: q.spotifySection,
       children: [null != n ? (0, l.jsxs)("div", {
-        className: Q.activitySectionAssets,
+        className: q.activitySectionAssets,
         children: [(0, l.jsx)("img", {
           alt: null !== (t = n.large_text) && void 0 !== t ? t : "",
-          src: f(i, n.large_image, [q.LARGE, q.LARGE]),
-          className: o()(Q.largeImage, Q.borderRadius0, {
-            [Q.largeImageMask]: null != n.small_image
+          src: f(i, n.large_image, [Q.LARGE, Q.LARGE]),
+          className: o()(q.largeImage, q.borderRadius0, {
+            [q.largeImageMask]: null != n.small_image
           })
         }), c ? null : (0, l.jsx)(w.default, {
-          className: Q.smallImage,
+          className: q.smallImage,
           color: d.default.unsafe_rawColors.SPOTIFY.css
         })]
       }) : (0, l.jsx)("div", {}), (0, l.jsxs)("div", {
@@ -401,21 +401,21 @@ es.Header = ea, es.Body = e => {
       application_id: E
     } = a;
   if (null != f && (0, I.default)(a)) {
-    var _;
-    t = (0, l.jsx)(D.default, {
-      className: Q.twitchSectionPreviewWrapper,
+    var C;
+    t = (0, l.jsx)(x.default, {
+      className: q.twitchSectionPreviewWrapper,
       aspectRatio: 16 / 9,
       children: (0, l.jsxs)(c.Clickable, {
-        href: (0, C.default)(a),
+        href: (0, _.default)(a),
         tag: "a",
         target: "_blank",
         children: [(0, l.jsx)("img", {
-          alt: null !== (_ = f.large_text) && void 0 !== _ ? _ : "",
+          alt: null !== (C = f.large_text) && void 0 !== C ? C : "",
           src: i(E, f.large_image, [900, 500]),
-          className: Q.twitchSectionPreview
+          className: q.twitchSectionPreview
         }), (0, l.jsx)("img", {
           src: n("497726"),
-          className: Q.twitchSectionPlayButton,
+          className: q.twitchSectionPlayButton,
           alt: ""
         })]
       })
@@ -424,19 +424,19 @@ es.Header = ea, es.Body = e => {
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: o()({
-        [Q.twitchSectionSimple]: null == s,
-        [Q.twitchSectionFull]: null != s
+        [q.twitchSectionSimple]: null == s,
+        [q.twitchSectionFull]: null != s
       }),
       children: [(0, l.jsx)("img", {
         alt: "",
         src: h.default.get(K.PlatformTypes.TWITCH).icon.lightSVG,
-        className: Q.twitchSectionIcon
+        className: q.twitchSectionIcon
       }), (0, l.jsxs)("div", {
         children: [X(u), null != d ? J(d) : null]
       }), null != s ? (0, l.jsx)(c.Avatar, {
         src: s.getAvatarURL(r, 24),
         "aria-label": s.username,
-        className: Q.twitchSectionAvatar,
+        className: q.twitchSectionAvatar,
         size: c.AvatarSizes.SIZE_24
       }) : null]
     }), t]
@@ -449,30 +449,30 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
-    className: Q.applicationStreamingPreviewWrapper,
+    className: q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(L.default, {
       stream: i,
-      className: Q.applicationStreamingPreviewSize
+      className: q.applicationStreamingPreviewSize
     }), (0, l.jsx)("div", {
-      className: Q.applicationStreamingHoverWrapper,
+      className: q.applicationStreamingHoverWrapper,
       children: (0, l.jsx)("div", {
-        className: Q.applicationStreamingHoverText,
+        className: q.applicationStreamingHoverText,
         children: (0, O.getStreamCTAString)(E)
       })
     })]
-  }), _ = null !== (n = null === (t = (0, g.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
+  }), C = null !== (n = null === (t = (0, g.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
-      className: Q.applicationStreamingSection,
+      className: q.applicationStreamingSection,
       children: [(0, l.jsx)(c.Avatar, {
         size: c.AvatarSizes.SIZE_32,
         src: s.getAvatarURL(o, 32),
         "aria-label": s.username,
-        className: Q.applicationStreamingAvatar
+        className: q.applicationStreamingAvatar
       }), (0, l.jsxs)("div", {
-        children: [X(Y.default.getName(s)), J(_)]
+        children: [X(Y.default.getName(s)), J(C)]
       }), (0, l.jsx)(F.default, {
         size: F.default.Sizes.SMALL
       })]
@@ -491,8 +491,8 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
-    C = (0, E.useAnalyticsContext)(),
+  let h = (0, u.useStateFromStoresArray)([D.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : D.default.getUser(e)).filter(V.isNotNullish)),
+    _ = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m
     } = (0, N.default)();
@@ -505,19 +505,19 @@ es.Header = ea, es.Body = e => {
     I = (0, H.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
-      className: Q.embeddedActivityTopRow,
+      className: q.embeddedActivityTopRow,
       children: [(0, l.jsx)(b.default, {
         game: S,
         size: b.default.Sizes.XSMALL,
-        className: Q.embeddedActivityIcon
+        className: q.embeddedActivityIcon
       }), (0, l.jsx)("div", {
-        className: Q.embeddedActivityName,
+        className: q.embeddedActivityName,
         children: (0, l.jsx)(c.Text, {
           variant: "text-sm/semibold",
           children: S.name
         })
       }), null != p ? (0, l.jsx)("div", {
-        className: Q.embeddedActivityTimeElapsed,
+        className: q.embeddedActivityTimeElapsed,
         children: (0, l.jsx)(c.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
@@ -527,27 +527,27 @@ es.Header = ea, es.Body = e => {
         })
       }) : null]
     }), (0, l.jsxs)("div", {
-      className: Q.embeddedActivityPlayerContainer,
+      className: q.embeddedActivityPlayerContainer,
       children: [null != I ? (0, l.jsx)("img", {
         src: I,
         alt: S.name,
-        className: Q.embeddedActivityImage
+        className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
-        className: Q.embeddedActivityImageOverlay,
-        children: [(0, l.jsx)(M.Avatars, {
+        className: q.embeddedActivityImageOverlay,
+        children: [(0, l.jsx)(P.Avatars, {
           users: h,
           guildId: a,
           channelId: n.id
         }), (0, l.jsx)("div", {
-          className: Q.embeddedActivityJoinWrapper,
+          className: q.embeddedActivityJoinWrapper,
           children: (0, l.jsx)(c.Button, {
             size: c.Button.Sizes.SMALL,
             onClick: e => {
-              e.stopPropagation(), (0, _.default)({
+              e.stopPropagation(), (0, C.default)({
                 applicationId: f,
                 currentEmbeddedApplication: r,
                 activityChannelId: n.id,
-                locationObject: C.location,
+                locationObject: _.location,
                 embeddedActivitiesManager: A.default,
                 analyticsLocations: m
               })

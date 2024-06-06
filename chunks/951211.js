@@ -34,8 +34,8 @@ function I(e) {
     hasClips: I,
     channel: A,
     activities: v,
-    newClipsCount: N,
-    canPostPolls: x,
+    newClipsCount: x,
+    canPostPolls: N,
     canLaunchActivities: M,
     appContext: R
   } = e, y = [];
@@ -51,13 +51,13 @@ function I(e) {
     type: "CLIPS",
     icon: c.default,
     display: T.default.Messages.CLIPS_SHARE_A_CLIP,
-    badgeVal: N,
+    badgeVal: x,
     badgeColor: r.default.BG_BRAND
   }), n && y.push({
     type: "CREATE_THREAD",
     icon: S.default,
     display: T.default.Messages.CREATE_THREAD
-  }), x && y.push({
+  }), N && y.push({
     type: "POLL",
     icon: E.default,
     display: T.default.Messages.CREATE_POLL

@@ -24,8 +24,8 @@ var a, n, i, l = s("735250"),
   T = s("240864"),
   A = s("942833"),
   R = s("400916"),
-  M = s("916001"),
-  y = s("539290"),
+  y = s("916001"),
+  M = s("539290"),
   g = s("336197"),
   L = s("307643"),
   x = s("378233"),
@@ -196,7 +196,7 @@ function eE(e) {
         color: "header-secondary",
         className: ei.guildProductBenefitLabel,
         children: en.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED
-      }), (0, l.jsx)(M.default, {
+      }), (0, l.jsx)(y.default, {
         role: o
       })]
     })]
@@ -579,9 +579,9 @@ class e_ extends(n = r.PureComponent) {
     return e.isGuildProductPurchase ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: ei.sectionDivider
-      }), e.isSoftDeletedProduct ? (0, l.jsx)(y.default, {
+      }), e.isSoftDeletedProduct ? (0, l.jsx)(M.default, {
         className: ei.warningBlock,
-        buttonPosition: y.WarningBlockButtonPosition.RIGHT,
+        buttonPosition: M.WarningBlockButtonPosition.RIGHT,
         notice: en.default.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
         ctaLabel: en.default.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
         onClick: () => (0, N.default)(er(s))

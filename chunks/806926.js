@@ -35,7 +35,7 @@ function p(e) {
     onClose: N
   } = e, C = (0, i.useStateFromStores)([a.default], () => a.default.getRelationshipType(t.id)), {
     originalFriendingEnabled: R,
-    improvedFriendingEnabled: P
+    improvedFriendingEnabled: h
   } = (0, o.useSimplifiedProfileFriendingExperiment)({
     location: "SimplifiedUserProfileModalBody"
   });
@@ -55,7 +55,7 @@ function p(e) {
         profileType: I.UserProfileTypes.FULL_SIZE,
         onClose: N
       })
-    }), (P || R) && C === m.RelationshipTypes.PENDING_INCOMING && (0, s.jsx)(f.default.Overlay, {
+    }), (h || R) && C === m.RelationshipTypes.PENDING_INCOMING && (0, s.jsx)(f.default.Overlay, {
       className: v.banner,
       children: (0, s.jsx)(c.default, {
         user: t,
