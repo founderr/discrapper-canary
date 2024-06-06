@@ -27,7 +27,7 @@ t.default = e => {
     location: "GiftNitro"
   }, {
     autoTrackExposure: f
-  }), A = S && f;
+  }), m = S && f;
   return (0, a.jsx)(l.AnalyticsLocationProvider, {
     value: R,
     children: (0, a.jsxs)("div", {
@@ -38,10 +38,10 @@ t.default = e => {
         children: [(0, a.jsx)(n.Heading, {
           variant: "heading-lg/extrabold",
           className: c.heading,
-          children: A ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.default.Messages.GIFT_NITRO
+          children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.default.Messages.GIFT_NITRO
         }), (0, a.jsx)(n.Text, {
           variant: "text-sm/medium",
-          children: A ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+          children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
         }), (0, a.jsx)(u.default, {
           isGift: !0,
           className: c.giftCardButton,
@@ -52,7 +52,7 @@ t.default = e => {
           premiumModalAnalyticsLocation: I
         })]
       }), (0, a.jsx)("img", {
-        src: A ? E : _,
+        src: m ? E : _,
         className: i()(c.bannerImage, s),
         alt: "gift nitro banner"
       })]

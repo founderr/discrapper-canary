@@ -16,8 +16,8 @@ var a = s("735250"),
   R = s("78839"),
   f = s("74538"),
   S = s("775412"),
-  A = s("104494"),
-  m = s("639119"),
+  m = s("104494"),
+  A = s("639119"),
   N = s("230916"),
   p = s("248042"),
   g = s("823188"),
@@ -28,9 +28,9 @@ var a = s("735250"),
   h = s("689938"),
   L = s("243794"),
   x = s("102655"),
-  v = s("768236"),
-  b = s("314907"),
-  D = s("826701");
+  b = s("768236"),
+  D = s("314907"),
+  v = s("826701");
 let U = e => {
     let {
       isLightTheme: t
@@ -54,7 +54,7 @@ let U = e => {
         premiumType: s
       } = e,
       r = (0, c.default)();
-    t = s === M.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(r) ? x : v : (0, o.isThemeDark)(r) ? b : D;
+    t = s === M.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(r) ? x : b : (0, o.isThemeDark)(r) ? D : v;
     let i = (0, f.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
@@ -128,9 +128,9 @@ t.default = e => {
   let s, {
       className: i,
       hideCTAs: x = !1,
-      headingOverride: v,
-      hidePill: b = !1,
-      selectedPlanColumnClassName: D,
+      headingOverride: b,
+      hidePill: D = !1,
+      selectedPlanColumnClassName: v,
       selectedPlanTier: k = M.PremiumTypes.TIER_2
     } = e,
     {
@@ -150,11 +150,11 @@ t.default = e => {
     V = (0, o.isThemeLight)(K),
     Y = (0, l.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
     z = (0, f.isPremiumExactly)(Y, M.PremiumTypes.TIER_2),
-    X = (0, m.usePremiumTrialOffer)(),
-    Q = null == X ? void 0 : null === (t = X.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-    J = (0, S.useCurrentPremiumTrialTier)(),
-    Z = (0, A.usePremiumDiscountOffer)(),
-    q = null != Z && (0, A.discountOfferHasTier)(Z, M.PremiumSubscriptionSKUs.TIER_2),
+    J = (0, A.usePremiumTrialOffer)(),
+    X = null == J ? void 0 : null === (t = J.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+    Q = (0, S.useCurrentPremiumTrialTier)(),
+    Z = (0, m.usePremiumDiscountOffer)(),
+    q = null != Z && (0, m.discountOfferHasTier)(Z, M.PremiumSubscriptionSKUs.TIER_2),
     $ = (0, N.useDiscountedPrice)(M.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
     ee = "".concat($, "/").concat((0, f.getIntervalStringAsNoun)(M.SubscriptionIntervalTypes.MONTH)),
     et = (0, f.getDefaultPrice)(M.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
@@ -186,7 +186,7 @@ t.default = e => {
   }) : ea.push({
     label: null,
     column1: (0, a.jsxs)(a.Fragment, {
-      children: [Q === M.PremiumSubscriptionSKUs.TIER_2 || er ? (0, a.jsx)(O.default, {
+      children: [X === M.PremiumSubscriptionSKUs.TIER_2 || er ? (0, a.jsx)(O.default, {
         className: L.button,
         subscriptionTier: M.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1,
@@ -197,13 +197,13 @@ t.default = e => {
         className: L.button,
         subscriptionTier: M.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1
-      }), J === M.PremiumTypes.TIER_2 || null != Q ? null : (0, a.jsx)(P.default, {
+      }), Q === M.PremiumTypes.TIER_2 || null != X ? null : (0, a.jsx)(P.default, {
         className: L.button,
         subscriptionTier: M.PremiumSubscriptionSKUs.TIER_0
       })]
     }),
     column2: (0, a.jsxs)(a.Fragment, {
-      children: [Q === M.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(O.default, {
+      children: [X === M.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(O.default, {
         className: L.button,
         subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
@@ -215,22 +215,22 @@ t.default = e => {
         subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         isEligibleForBogoPromotion: er
-      }), J === M.PremiumTypes.TIER_0 || null != Q ? null : (0, a.jsx)(P.default, {
+      }), Q === M.PremiumTypes.TIER_0 || null != X ? null : (0, a.jsx)(P.default, {
         className: L.button,
         subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2
       })]
     }),
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
-    buttonsRow: null == Q
-  }), s = b ? null : null != Q || null != J ? (0, a.jsx)(g.PremiumPillWithSparkles, {
-    text: null != Q ? h.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : h.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
+    buttonsRow: null == X
+  }), s = D ? null : null != X || null != Q ? (0, a.jsx)(g.PremiumPillWithSparkles, {
+    text: null != X ? h.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : h.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: L.freeTrialPillWithSparkles,
-    colorOptions: Q === M.PremiumSubscriptionSKUs.TIER_0 ? V ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : V ? z ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+    colorOptions: X === M.PremiumSubscriptionSKUs.TIER_0 ? V ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : V ? z ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
   }) : er ? (0, a.jsx)(U, {
     isLightTheme: V
   }) : (0, a.jsx)(j, {});
-  let en = Q === M.PremiumSubscriptionSKUs.TIER_0 || J === M.PremiumTypes.TIER_0 || k === M.PremiumTypes.TIER_0;
+  let en = X === M.PremiumSubscriptionSKUs.TIER_0 || Q === M.PremiumTypes.TIER_0 || k === M.PremiumTypes.TIER_0;
   return (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: H,
     children: (0, a.jsxs)("div", {
@@ -239,11 +239,11 @@ t.default = e => {
       children: [(0, a.jsx)(u.Heading, {
         className: n()(L.titleText, L.__invalid_textColor),
         variant: "heading-xxl/extrabold",
-        children: null != v ? v : h.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+        children: null != b ? b : h.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
       }), (0, a.jsxs)("div", {
         className: L.tableWrapper,
         children: [(0, a.jsx)("div", {
-          className: n()(D, {
+          className: n()(v, {
             [L.tier0ColumnOuter]: en,
             [L.tier2ColumnOuter]: !en
           }),

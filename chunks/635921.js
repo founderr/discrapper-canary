@@ -17,8 +17,8 @@ var r = s("120356"),
   R = s("105759"),
   f = s("248042"),
   S = s("422034"),
-  A = s("206127"),
-  m = s("710220"),
+  m = s("206127"),
+  A = s("710220"),
   N = s("318747"),
   p = s("409100"),
   g = s("474936"),
@@ -75,7 +75,7 @@ function L(e) {
   let {
     variant: t = "text-lg/normal",
     withBottomMargin: s = !0
-  } = e, r = (0, A.useCheapestMonthlyPrice)();
+  } = e, r = (0, m.useCheapestMonthlyPrice)();
   return (0, a.jsx)(l.Text, {
     variant: t,
     color: "always-white",
@@ -93,12 +93,12 @@ t.default = e => {
     className: s,
     buttonClassName: r,
     subscriptionTier: d,
-    hideSparkles: A,
+    hideSparkles: m,
     hideSubscribeAndGiftButton: p,
     entrypoint: x
   } = e, {
-    analyticsLocations: v
-  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), b = (0, E.useHasActiveTrial)(), D = (0, _.useIsInPremiumOfferExperience)(), U = (0, f.useIsEligibleForBogoPromotion)(), j = (0, n.useStateFromStores)([c.default], () => c.default.affinities), G = (0, R.default)(), {
+    analyticsLocations: b
+  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), D = (0, E.useHasActiveTrial)(), v = (0, _.useIsInPremiumOfferExperience)(), U = (0, f.useIsEligibleForBogoPromotion)(), j = (0, n.useStateFromStores)([c.default], () => c.default.affinities), G = (0, R.default)(), {
     enabled: B
   } = I.ReferralProgramRecipient.useExperiment({
     location: O
@@ -108,7 +108,7 @@ t.default = e => {
     location: O
   });
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
-    value: v,
+    value: b,
     children: (0, a.jsxs)("div", {
       className: i()(P.container, s, {
         [P.settingsContainer]: !t,
@@ -121,7 +121,7 @@ t.default = e => {
           variant: t ? "display-lg" : "display-md",
           color: "always-white",
           children: H ? C.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V2 : C.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
-        }), y ? (0, a.jsx)(m.default, {
+        }), y ? (0, a.jsx)(A.default, {
           referrer: G
         }) : k ? (0, a.jsx)("div", {
           className: i()(P.affinityDescription),
@@ -137,14 +137,14 @@ t.default = e => {
           })
         }) : p ? null : (0, a.jsx)(M, {
           subscriptionTier: d,
-          inOfferExperience: D,
-          inTrial: b,
+          inOfferExperience: v,
+          inTrial: D,
           buttonClassName: r
         }), k && !y && (0, a.jsx)(L, {
           variant: "text-md/normal",
           withBottomMargin: !1
         })]
-      }), !(D || A) && (0, a.jsx)(h, {
+      }), !(v || m) && (0, a.jsx)(h, {
         isFullscreen: t
       })]
     })

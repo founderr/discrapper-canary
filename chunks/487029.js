@@ -20,8 +20,8 @@ var l = n("735250"),
   C = n("174470"),
   g = n("549771"),
   E = n("964398"),
-  _ = n("409673"),
-  S = n("710111"),
+  S = n("409673"),
+  _ = n("710111"),
   I = n("599046");
 
 function N(e) {
@@ -32,13 +32,13 @@ function N(e) {
     height: T,
     keepOpen: A,
     interactive: L = !0,
-    analyticsSource: x,
-    onClose: v
+    analyticsSource: v,
+    onClose: x
   } = e, R = function(e) {
     let [t, n] = (0, i.useStateFromStoresArray)([m.default], () => [m.default.getSounds(), m.default.getFavorites()]);
     return a.useMemo(() => {
       let l = [],
-        a = [...e, S.DEFAULT_SOUND_GUILD_ID],
+        a = [...e, _.DEFAULT_SOUND_GUILD_ID],
         s = (e, a) => {
           var s, i;
           for (let r of null !== (i = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => f.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : []) {
@@ -51,20 +51,20 @@ function N(e) {
   }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, C.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
-    (0, p.playSound)(e, n.id, j), v()
-  }, [j, n.id, v]);
+    (0, p.playSound)(e, n.id, j), x()
+  }, [j, n.id, x]);
   a.useEffect(() => {
     h.maybeFetchSoundboardSounds(), d.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []), a.useEffect(() => {
-    0 === R.length && 0 === M.length && v()
-  }, [R.length, M, v]), a.useEffect(() => () => {
+    0 === R.length && 0 === M.length && x()
+  }, [R.length, M, x]), a.useEffect(() => () => {
     let e = y.current;
     !A && null != e && P(e)
   }, [A, P]), (0, u.default)({
     type: s.ImpressionTypes.POPOUT,
     name: s.ImpressionNames.SOUNDBOARD_POPOUT,
     properties: {
-      source: x,
+      source: v,
       guild_id: t,
       media_session_id: b
     }
@@ -87,7 +87,7 @@ function N(e) {
       let t = R[e];
       null != t && P(t)
     }, [R, P]),
-    B = a.useMemo(() => R.map(e => (0, l.jsx)(_.default, {
+    B = a.useMemo(() => R.map(e => (0, l.jsx)(S.default, {
       interactive: L,
       className: I.soundButton,
       sound: e,

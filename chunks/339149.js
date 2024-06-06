@@ -19,8 +19,8 @@ var l, a = n("735250"),
   C = n("941128"),
   g = n("366966"),
   E = n("943461"),
-  _ = n("780570"),
-  S = n("353042"),
+  S = n("780570"),
+  _ = n("353042"),
   I = n("981631"),
   N = n("689938"),
   T = n("151067");
@@ -86,7 +86,7 @@ let L = {
     })
   }
 };
-class x extends s.PureComponent {
+class v extends s.PureComponent {
   renderText() {
     let {
       state: e,
@@ -94,7 +94,7 @@ class x extends s.PureComponent {
     } = this.props;
     if (e.type === I.LocalDispatchApplicationStates.UPDATING || e.type === I.LocalDispatchApplicationStates.REPAIRING || e.type === I.LocalDispatchApplicationStates.INSTALLING) {
       if (t) return N.default.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
-      if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(S.default, {
+      if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(_.default, {
         getHistoricalTotalBytes: p.default.getHistoricalTotalBytesWritten,
         updateInterval: 5e3,
         children: this.renderProgressBody
@@ -134,7 +134,7 @@ class x extends s.PureComponent {
     })
   }
 }
-class v extends(l = s.PureComponent) {
+class x extends(l = s.PureComponent) {
   componentWillAppear(e) {
     this.state.animationScale.setValue(1), e()
   }
@@ -156,7 +156,7 @@ class v extends(l = s.PureComponent) {
       firstState: t,
       isPaused: n
     } = this.props;
-    return null == e || null == t ? N.default.Messages.LIBRARY : (0, a.jsx)(x, {
+    return null == e || null == t ? N.default.Messages.LIBRARY : (0, a.jsx)(v, {
       application: e,
       state: t,
       isPaused: n
@@ -204,7 +204,7 @@ class v extends(l = s.PureComponent) {
     })
   }
 }
-A(v, "defaultProps", {
+A(x, "defaultProps", {
   strokeSize: f.ProgressCircle.StrokeSizes.MEDIUM
 });
 
@@ -223,9 +223,9 @@ t.default = u.default.connectStores([C.default, p.default, h.default], () => {
     {
       total: n,
       progress: l
-    } = _.getCombinedProgress(t);
+    } = S.getCombinedProgress(t);
   return {
-    percent: _.calculateProgressPercentage(l, n),
+    percent: S.calculateProgressPercentage(l, n),
     isPaused: C.default.paused,
     firstApplication: e.length > 0 ? h.default.getApplication(e[0].applicationId) : null,
     firstState: t.length > 0 ? t[0] : null
@@ -237,10 +237,10 @@ t.default = u.default.connectStores([C.default, p.default, h.default], () => {
   } = e;
   return t ? (0, a.jsx)(c.TransitionGroup, {
     component: s.Fragment,
-    children: n.percent > 0 && n.percent < 100 ? (0, a.jsx)(v, {
+    children: n.percent > 0 && n.percent < 100 ? (0, a.jsx)(x, {
       ...n
     }) : null
-  }) : (0, a.jsx)(v, {
+  }) : (0, a.jsx)(x, {
     ...n
   })
 })

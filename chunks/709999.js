@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("642619"),
   L = s("210887"),
   b = s("725808"),
-  v = s("794358"),
-  R = s("466111"),
+  R = s("794358"),
+  v = s("466111"),
   A = s("26290"),
   P = s("74538"),
   O = s("335131"),
@@ -73,7 +73,7 @@ let z = e => {
       innerClassName: K.previewButtonInner,
       "aria-label": V.default.Messages.PREVIEW,
       ...s,
-      children: (0, a.jsx)(v.default, {
+      children: (0, a.jsx)(R.default, {
         width: 24,
         height: 24
       })
@@ -85,7 +85,7 @@ t.default = function(e) {
     user: s,
     category: n,
     onMount: i,
-    isGiftEasterEggEnabled: v
+    isGiftEasterEggEnabled: R
   } = e, {
     analyticsLocations: X
   } = (0, S.default)(g.default.COLLECTIBLES_SHOP_CARD), q = l.useRef(null), Q = (0, m.default)(q), [$, J] = l.useState(!1), ee = Q || $, [et] = t.items, {
@@ -163,7 +163,7 @@ t.default = function(e) {
     }) : (0, a.jsx)(D.default, {
       product: t,
       returnRef: q,
-      isGiftEasterEggEnabled: v,
+      isGiftEasterEggEnabled: R,
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
@@ -224,7 +224,7 @@ t.default = function(e) {
         children: e => (0, a.jsx)(A.TextBadge, {
           ...e,
           className: K.premiumWheelBadge,
-          text: (0, a.jsx)(R.default, {
+          text: (0, a.jsx)(v.default, {
             className: K.premiumWheel
           })
         })

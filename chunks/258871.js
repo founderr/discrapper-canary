@@ -16,8 +16,8 @@ var l = n("735250"),
   C = n("147754"),
   g = n("688438"),
   E = n("981631"),
-  _ = n("689938");
-let S = [{
+  S = n("689938");
+let _ = [{
   key: "EVENTS",
   renderIcon: e => (0, l.jsx)(h.default, {
     className: e
@@ -26,9 +26,9 @@ let S = [{
     let {
       numEvents: t
     } = e;
-    return t > 0 ? _.default.Messages.GUILD_EVENTS_PLURAL.format({
+    return t > 0 ? S.default.Messages.GUILD_EVENTS_PLURAL.format({
       number: t
-    }) : _.default.Messages.GUILD_EVENTS
+    }) : S.default.Messages.GUILD_EVENTS
   },
   handler: e => (0, r.openModalLazy)(async () => {
     let {
@@ -44,14 +44,14 @@ let S = [{
   renderIcon: e => (0, l.jsx)(m.default, {
     className: e
   }),
-  getName: () => _.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
+  getName: () => S.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
   handler: (e, t) => (0, c.transitionToGuild)(e.id, t.id)
 }, {
   key: "ADD_SERVERS",
   renderIcon: e => (0, l.jsx)(p.default, {
     className: e
   }),
-  getName: () => _.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
+  getName: () => S.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
   handler: (e, t) => (0, r.openModalLazy)(async () => {
     let {
       default: a
@@ -68,7 +68,7 @@ let S = [{
   renderIcon: e => (0, l.jsx)(i.GroupPlusIcon, {
     className: e
   }),
-  getName: () => _.default.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
+  getName: () => S.default.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
   handler: (e, t) => (0, r.openModalLazy)(async () => {
     let {
       default: a
@@ -103,7 +103,7 @@ t.default = e => {
     numEvents: i.length
   }), [i.length]), m = (0, g.useHubUnreadCount)(n);
   return (0, l.jsx)(l.Fragment, {
-    children: S.map(e => {
+    children: _.map(e => {
       let {
         key: a,
         getName: s,

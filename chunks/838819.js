@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("819640"),
   L = s("594174"),
   b = s("682864"),
-  v = s("626135"),
-  R = s("74538"),
+  R = s("626135"),
+  v = s("74538"),
   A = s("335131"),
   P = s("328347"),
   O = s("280773"),
@@ -188,7 +188,7 @@ t.default = function(e) {
     analyticsLocations: i
   } = (0, m.default)([...n, p.default.COLLECTIBLES_SHOP]), E = (0, u.useStateFromStores)([N.default], () => N.default.getLayers().includes(Q.Layers.COLLECTIBLES_SHOP)), T = (0, d.useHasAnyModalOpen)(), {
     onClose: x
-  } = (0, Y.useCollectiblesShopRouting)(), b = (0, u.useStateFromStores)([L.default], () => L.default.getCurrentUser()), O = R.default.canUseCollectibles(b), j = (0, S.default)("shop_disable_cache"), B = (0, S.default)("shop_include_unpublished"), {
+  } = (0, Y.useCollectiblesShopRouting)(), b = (0, u.useStateFromStores)([L.default], () => L.default.getCurrentUser()), O = v.default.canUseCollectibles(b), j = (0, S.default)("shop_disable_cache"), B = (0, S.default)("shop_include_unpublished"), {
     categories: F,
     isFetchingCategories: U,
     error: W
@@ -214,11 +214,11 @@ t.default = function(e) {
     scrollHandler: eu
   } = (0, g.usePageScrollPosition)(Q.AnalyticEvents.COLLECTIBLES_SHOP_SCROLLED, s);
   l.useEffect(() => {
-    v.default.track(Q.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
+    R.default.track(Q.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
       location_stack: i,
       source: s,
       page_session_id: ei
-    }), !O && v.default.track(Q.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    }), !O && R.default.track(Q.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: ee.PremiumUpsellTypes.COLLECTIBLES_SHOP,
       location_stack: i
     })

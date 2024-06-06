@@ -18,30 +18,30 @@ t.default = a.memo(function(e) {
   let {
     guildNode: t,
     lowerBadge: n
-  } = e, g = t.id, E = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(g)), _ = (0, i.useCurrentUserGuildBadgeStatus)(g), S = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), I = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(g)), N = (0, o.default)(e => e.guildId), T = (0, m.default)(g), {
+  } = e, g = t.id, E = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(g)), S = (0, i.useCurrentUserGuildBadgeStatus)(g), _ = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), I = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(g)), N = (0, o.default)(e => e.guildId), T = (0, m.default)(g), {
     badge: A,
     unread: L
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
     badge: d.default.getMentionCount(g),
     unread: d.default.hasUnread(g)
-  })), x = (0, r.useShouldShowInvitesDisabledNotif)(E) && 0 === A, v = a.useMemo(() => null != n ? n : x ? (0, l.jsx)("div", {
+  })), v = (0, r.useShouldShowInvitesDisabledNotif)(E) && 0 === A, x = a.useMemo(() => null != n ? n : v ? (0, l.jsx)("div", {
     className: C.pauseBackground,
     children: (0, l.jsx)(h.default, {
       className: C.pause,
       width: 10,
       height: 10
     })
-  }) : null, [n, x]);
+  }) : null, [n, v]);
   return (0, l.jsx)(p.default, {
     ...e,
     guild: E,
     unavailable: I,
-    animatable: S,
+    animatable: _,
     selected: N === g,
     badge: A,
-    lowerBadge: v,
+    lowerBadge: x,
     unread: L,
     mediaState: T,
-    guildJoinRequestStatus: _
+    guildJoinRequestStatus: S
   })
 })

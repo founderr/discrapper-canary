@@ -16,8 +16,8 @@ var a = s("735250"),
   R = s("342414"),
   f = s("487980"),
   S = s("391110"),
-  A = s("71363"),
-  m = s("781800"),
+  m = s("71363"),
+  A = s("781800"),
   N = s("981631"),
   p = s("263763"),
   g = s("865215");
@@ -52,7 +52,7 @@ t.default = () => {
             className: p.perksDiscoverability,
             noBackground: !0,
             leftAlignHeaders: !0,
-            showAllPerksButton: (0, a.jsx)(m.default, {
+            showAllPerksButton: (0, a.jsx)(A.default, {
               setIsAllPerksVisible: s,
               previousComponent: S.NitroLandingPages.HOME
             })
@@ -83,7 +83,7 @@ t.default = () => {
           })]
         })
       })
-    }), (0, a.jsx)(A.default, {
+    }), (0, a.jsx)(m.default, {
       isAllPerksVisible: t,
       setIsAllPerksVisible: s,
       previousComponent: S.NitroLandingPages.HOME

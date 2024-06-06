@@ -24,7 +24,7 @@ t.default = function(e) {
     promotion: r
   } = (0, E.useBogoPromotion)(), S = (0, n.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription());
   if (!(0, c.useIsEligibleForBogoPromotion)()) return null;
-  let A = new Date(r.endDate);
+  let m = new Date(r.endDate);
   return (0, a.jsx)("div", {
     className: i()(f.banner, {
       [f.bannerFullscreen]: t
@@ -40,7 +40,7 @@ t.default = function(e) {
           className: f.countdown,
           variant: "text-sm/medium",
           children: (0, a.jsx)(d.default, {
-            endDate: A
+            endDate: m
           })
         }), (0, a.jsx)(l.Text, {
           variant: "text-sm/medium",

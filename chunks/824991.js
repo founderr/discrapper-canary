@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanUpsellButton: function() {
-    return _
+    return S
   },
   ClanUpsellInviteByline: function() {
     return C
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return g
   },
   default: function() {
-    return S
+    return _
   }
 });
 var l = n("735250"),
@@ -72,7 +72,7 @@ function E(e) {
   })
 }
 
-function _(e) {
+function S(e) {
   let {
     onClick: t
   } = e;
@@ -91,7 +91,7 @@ function _(e) {
   })
 }
 
-function S(e) {
+function _(e) {
   let {
     guild: t,
     markAsDismissed: n,
@@ -107,7 +107,7 @@ function S(e) {
     C = a.useCallback(() => (0, l.jsx)(E, {
       message: m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
     }), []),
-    S = a.useCallback(() => (0, l.jsx)(g, {
+    _ = a.useCallback(() => (0, l.jsx)(g, {
       title: i
     }), [i]),
     I = a.useCallback(() => {
@@ -116,14 +116,14 @@ function S(e) {
         location: r.default.GUILD_CHANNEL_LIST
       }), (0, u.transitionTo)(f.Routes.GUILD_DISCOVERY)
     }, [t.id]),
-    N = a.useCallback(() => (0, l.jsx)(_, {
+    N = a.useCallback(() => (0, l.jsx)(S, {
       onClick: I
     }), [I]);
   return (0, l.jsx)(o.default, {
     className: p.notice,
     guild: t,
     onDismissed: () => n(h.ContentDismissActionType.DISMISS),
-    title: S,
+    title: _,
     message: C,
     cta: N,
     trackingSource: f.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,

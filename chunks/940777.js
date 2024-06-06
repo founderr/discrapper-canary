@@ -20,15 +20,15 @@ var l = n("735250"),
   C = n("905423"),
   g = n("199902"),
   E = n("592125"),
-  _ = n("944486"),
-  S = n("979651"),
+  S = n("944486"),
+  _ = n("979651"),
   I = n("898140"),
   N = n("880080"),
   T = n("15434"),
   A = n("709054"),
   L = n("853856"),
-  x = n("593214"),
-  v = n("919755"),
+  v = n("593214"),
+  x = n("919755"),
   R = n("110977"),
   M = n("603274"),
   y = n("981631"),
@@ -47,7 +47,7 @@ function j() {
     {
       favoriteAdded: t,
       clearFavoriteAdded: s
-    } = (0, x.useFavoriteAdded)(),
+    } = (0, v.useFavoriteAdded)(),
     [j, P] = a.useState(!1),
     {
       favoriteServerMuted: G,
@@ -56,15 +56,15 @@ function j() {
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
     })),
-    w = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(y.FAVORITES)),
+    w = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(y.FAVORITES)),
     B = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
     F = (0, C.default)(e => e.guildId) === y.FAVORITES,
     {
       badge: H,
       unread: V
-    } = (0, v.default)(U),
+    } = (0, x.default)(U),
     k = function(e) {
-      let t = (0, o.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()),
+      let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
         n = null != t && null != e[t],
         l = (0, o.useStateFromStores)([g.default], () => {
           if (!n) return !1;
@@ -72,7 +72,7 @@ function j() {
           return null != t && null != e[t.channelId]
         }),
         a = (0, o.useStateFromStores)([g.default], () => g.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
-        s = (0, o.useStateFromStores)([S.default], () => n && null != t && S.default.hasVideo(t), [n, t]),
+        s = (0, o.useStateFromStores)([_.default], () => n && null != t && _.default.hasVideo(t), [n, t]),
         i = (0, o.useStateFromStoresArray)([f.default], () => A.default.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
         r = (0, o.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
           let {
@@ -94,8 +94,8 @@ function j() {
         activity: p
       })
     }(U),
-    W = H > 0 ? (0, p.renderMentionBadge)(H) : null,
-    Y = a.useCallback(() => {
+    Y = H > 0 ? (0, p.renderMentionBadge)(H) : null,
+    K = a.useCallback(() => {
       s()
     }, [s]);
   return (0, l.jsxs)(h.ListItem, {
@@ -105,12 +105,12 @@ function j() {
       unread: V && !G,
       className: D.pill
     }), (0, l.jsx)(M.default, {
-      onShow: Y,
+      onShow: K,
       children: (0, l.jsx)(R.FavoriteAddedTooltip, {
         children: (0, l.jsx)(u.BlobMask, {
           selected: F || j,
           upperBadge: k,
-          lowerBadge: W,
+          lowerBadge: Y,
           children: (0, l.jsx)(T.default, {
             ...e,
             ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({

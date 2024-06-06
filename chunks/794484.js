@@ -16,7 +16,7 @@ var a = s("735250"),
   R = s("75077"),
   f = s("320319"),
   S = s("766752");
-let A = e => {
+let m = e => {
   let {
     showAllPerksButton: t,
     leftAlignHeaders: s,
@@ -47,7 +47,7 @@ t.default = e => {
   let {
     className: s,
     variant: i = I.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY,
-    noBackground: m = !1,
+    noBackground: A = !1,
     leftAlignHeaders: N = !1,
     showAllPerksButton: p,
     headerClassname: g,
@@ -56,26 +56,26 @@ t.default = e => {
   r.useLayoutEffect(() => {
     h((0, T.shouldScrollToMarketingMomentContent)())
   }, []), (0, _.useClearNewBadge)(), (0, T.useDismissWhatsNewCardDCs)();
-  let v = (0, d.useGetMarketingPageNonSubPerkTileOrderExperiment)({
+  let b = (0, d.useGetMarketingPageNonSubPerkTileOrderExperiment)({
       location: I.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY
     }),
-    b = i === I.PerksDiscoverabilityCardSection.WHATS_NEW,
-    D = (0, c.useClearTenureBadge)();
+    D = i === I.PerksDiscoverabilityCardSection.WHATS_NEW,
+    v = (0, c.useClearTenureBadge)();
   r.useEffect(() => {
-    b && !L && D()
-  }, [D, b, L]), r.useEffect(() => {
+    D && !L && v()
+  }, [v, D, L]), r.useEffect(() => {
     let e = P.current;
-    if (null == e || !L || !b) return;
+    if (null == e || !L || !D) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
         behavior: "smooth"
-      }), b && D()
+      }), D && v()
     });
     return () => {
-      cancelAnimationFrame(t), b && D()
+      cancelAnimationFrame(t), D && v()
     }
-  }, [P, L, b, D]);
-  let U = (0, R.usePerksDiscoverabilityStrings)(b),
+  }, [P, L, D, v]);
+  let U = (0, R.usePerksDiscoverabilityStrings)(D),
     j = (0, E.default)(),
     G = (0, R.useIsPremiumSubscriber)(),
     B = (0, R.getFilteredPerksDiscoverabilityCards)({
@@ -84,7 +84,7 @@ t.default = e => {
       shopMarketingVariation: x,
       isFullScreen: C,
       showTenureCard: null == O ? void 0 : O.showCard,
-      tileOrderVariant: v,
+      tileOrderVariant: b,
       isPremiumSubscriber: G
     }),
     y = B.some(e => null != e.pillText),
@@ -101,7 +101,7 @@ t.default = e => {
         [S.centerAlignSection]: !N,
         [S.leftAlignSection]: N
       }, s),
-      children: [(0, a.jsx)(A, {
+      children: [(0, a.jsx)(m, {
         showAllPerksButton: p,
         leftAlignHeaders: N,
         title: U.title,
@@ -112,7 +112,7 @@ t.default = e => {
         className: n()(S.subtitle, {
           [S.subtitle]: null == p || N,
           [S.subtitleWithButton]: null != p && !N,
-          [S.fullWidth]: b || N,
+          [S.fullWidth]: D || N,
           [S.moreSubtitleMargin]: y,
           [S.leftAlignSubtitle]: N,
           [S.centerAlignSubtitle]: !N
@@ -129,7 +129,7 @@ t.default = e => {
         children: B.map((e, t) => (0, a.jsx)(f.default, {
           confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? k : void 0,
           ...e,
-          forceShadow: m
+          forceShadow: A
         }, "".concat(e.name, "_").concat(t)))
       })]
     })]

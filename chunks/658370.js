@@ -22,8 +22,8 @@ t.default = e => {
     title: r,
     titleClassName: f = "",
     buttonClassName: S = "",
-    subtitle: A = "",
-    description: m = "",
+    subtitle: m = "",
+    description: A = "",
     descriptionCta: N = "",
     isPremiumGetCta: p,
     onCtaClick: g,
@@ -46,8 +46,8 @@ t.default = e => {
       title: r,
       cardVariantStyleInfo: x,
       titleClassName: f,
-      subtitle: A,
-      description: m
+      subtitle: m,
+      description: A
     }), p && (0, a.jsx)(E.default, {
       className: S,
       subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,

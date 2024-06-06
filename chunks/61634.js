@@ -20,15 +20,15 @@ var l = n("470079"),
   C = n("199902"),
   g = n("314897"),
   E = n("592125"),
-  _ = n("650774"),
-  S = n("430824"),
+  S = n("650774"),
+  _ = n("430824"),
   I = n("496675"),
   N = n("944486"),
   T = n("9156"),
   A = n("979651"),
   L = n("709054"),
-  x = n("510601"),
-  v = n("901621"),
+  v = n("510601"),
+  x = n("901621"),
   R = n("981631");
 let M = [];
 
@@ -46,13 +46,13 @@ function O(e) {
       a = l.useRef(new o.Timeout),
       {
         shouldSubscribeToGuildMemberUpdates: i
-      } = x.default.useExperiment({
+      } = v.default.useExperiment({
         location: "useGuildMediaState"
       }, {
         autoTrackExposure: !1
       }),
-      d = (0, r.useStateFromStores)([_.default], () => {
-        let t = _.default.getMemberCount(e);
+      d = (0, r.useStateFromStores)([S.default], () => {
+        let t = S.default.getMemberCount(e);
         return null == t || t > 1e3
       }),
       c = (0, r.useStateFromStoresObject)([A.default], () => {
@@ -76,17 +76,17 @@ function O(e) {
       a.current.stop(), (0, u.unsubscribeMembers)(e, Array.from(n.current))
     }, [e])
   }(e, n);
-  let i = (0, v.default)(e),
+  let i = (0, x.default)(e),
     R = (0, r.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForGuild(e)),
     O = (0, d.useIsActivitiesInTextEnabled)(null === (t = R[0]) || void 0 === t ? void 0 : t.channelId, !1, "GuildMediaState"),
     {
       guildHasVoice: D,
       guildHasVideo: b,
       selectedVoiceChannelHasVideo: j
-    } = (0, r.useStateFromStoresObject)([A.default, E.default, I.default, S.default, N.default], () => {
+    } = (0, r.useStateFromStoresObject)([A.default, E.default, I.default, _.default, N.default], () => {
       var t;
       let l = N.default.getVoiceChannelId(),
-        a = null === (t = S.default.getGuild(e)) || void 0 === t ? void 0 : t.afkChannelId,
+        a = null === (t = _.default.getGuild(e)) || void 0 === t ? void 0 : t.afkChannelId,
         s = A.default.getUsersWithVideo(e),
         i = A.default.getVoiceStates(e),
         r = (() => {
@@ -115,15 +115,15 @@ function O(e) {
       d = !1,
       f = !1,
       g = !1,
-      _ = !1,
-      S = !1;
+      S = !1,
+      _ = !1;
     if (!o && n) return {
       audio: u,
       video: g,
-      screenshare: _,
+      screenshare: S,
       liveStage: f,
       activeEvent: d,
-      activity: S,
+      activity: _,
       gaming: i,
       isCurrentUserConnected: !1
     };
@@ -132,8 +132,8 @@ function O(e) {
         return null != t && I.default.can(h.JOIN_VOCAL_CHANNEL_PERMISSIONS, t)
       }),
       A = o && null !== (s = null === (l = E.default.getChannel(r)) || void 0 === l ? void 0 : l.isGuildStageVoice()) && void 0 !== s && s,
-      x = !!o && null != C.default.getActiveStreamForUser(P, e),
-      v = C.default.getAllApplicationStreams().some(t => t.guildId === e),
+      v = !!o && null != C.default.getActiveStreamForUser(P, e),
+      x = C.default.getAllApplicationStreams().some(t => t.guildId === e),
       M = o && j,
       y = (() => {
         if (O) return R.length > 0;
@@ -144,13 +144,13 @@ function O(e) {
         return !1
       })(),
       G = c.default.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, _ = x, S = G) : (u = D, d = null != a, f = T, g = b, _ = v, S = y), {
+    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, S = v, _ = G) : (u = D, d = null != a, f = T, g = b, S = x, _ = y), {
       audio: u,
       video: g,
-      screenshare: _,
+      screenshare: S,
       liveStage: f,
       activeEvent: d,
-      activity: S,
+      activity: _,
       gaming: i,
       isCurrentUserConnected: o || A
     }

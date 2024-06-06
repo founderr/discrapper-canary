@@ -16,8 +16,8 @@ var a = s("735250"),
   R = s("626135"),
   f = s("63063"),
   S = s("276444"),
-  A = s("520540"),
-  m = s("197115"),
+  m = s("520540"),
+  A = s("197115"),
   N = s("119269"),
   p = s("981631"),
   g = s("689938"),
@@ -110,20 +110,20 @@ t.default = e => {
     isInSettings: t = !1
   } = e, i = (0, l.useStateFromStoresArray)([S.default], () => S.default.getSentUserIds()), _ = (0, l.useStateFromStoresArray)([T.default], () => i.map(e => T.default.getUser(e)).filter(e => null != e)), O = r.useMemo(() => _.map(e => new E.default(e)), [_]), {
     subscriberHomeVariant: M
-  } = A.ReferralProgramSender.useExperiment({
+  } = m.ReferralProgramSender.useExperiment({
     location: "ReferralProgramProgressBar"
   }, {
     autoTrackExposure: !1
-  }), x = M === A.SubscriberHomeVariant.VARIANT_2;
+  }), x = M === m.SubscriberHomeVariant.VARIANT_2;
   r.useEffect(() => {
     i.forEach(e => {
       (0, u.getUser)(e)
     })
   }, [i]);
-  let v = i.length,
-    b = 3 === v,
-    D = f.default.getArticleURL(p.HelpdeskArticles.REFERRAL_PROGRAM),
-    U = b ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+  let b = i.length,
+    D = 3 === b,
+    v = f.default.getArticleURL(p.HelpdeskArticles.REFERRAL_PROGRAM),
+    U = D ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     {
       analyticsLocations: j
     } = (0, c.default)(d.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
@@ -142,7 +142,7 @@ t.default = e => {
   }), []);
   let H = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(N.default, {
-      percentage: v / 3 * 100,
+      percentage: b / 3 * 100,
       progressCircleVariation: N.ProgressCircleVariation.NITRO_LOGO,
       iconClassName: n()({
         [C.referralProgressBarIcon]: !t,
@@ -158,13 +158,13 @@ t.default = e => {
         userRecords: O
       }), (0, a.jsx)(o.Text, {
         variant: t ? "text-sm/normal" : "text-lg/medium",
-        children: L(b, v > 0, i.length, D)
+        children: L(D, b > 0, i.length, v)
       }), (0, a.jsxs)("div", {
         className: n()(C.expandedProgressBarButtonContainer, {
           [C.expandedProgressBarButtonContainerMinLayout]: B && !t,
           [C.expandedProgressBarButtonContainerLayout]: !B && !t
         }),
-        children: [!t && !x && (0, a.jsx)(m.default, {
+        children: [!t && !x && (0, a.jsx)(A.default, {
           color: o.ButtonColors.CUSTOM,
           buttonText: g.default.Messages.GIFT_NITRO,
           className: n()(C.expandedProgressBarGiftingCTA, {
@@ -196,7 +196,7 @@ t.default = e => {
               src: P,
               alt: "",
               className: C.expandedProgressBarSelectFriendsIcon
-            }), b ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
+            }), D ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
           })
         })]
       })]

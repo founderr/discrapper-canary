@@ -20,8 +20,8 @@ var a = s("735250"),
   R = s("663993"),
   f = s("628123"),
   S = s("703656"),
-  A = s("108427"),
-  m = s("911314"),
+  m = s("108427"),
+  A = s("911314"),
   N = s("429899"),
   p = s("843445"),
   g = s("981631"),
@@ -49,7 +49,7 @@ class L extends r.PureComponent {
   componentDidMount() {
     (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, S.getHistory)().listen(e => {
       e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
-    }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), I.default.disable(), I.default.setLayout(E.APPLICATION_STORE_LAYOUT), I.default.enable(), (0, A.trackAppUIViewed)("application_store")
+    }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), I.default.disable(), I.default.setLayout(E.APPLICATION_STORE_LAYOUT), I.default.enable(), (0, m.trackAppUIViewed)("application_store")
   }
   componentWillUnmount() {
     null != this.stopListeningToHistory && this.stopListeningToHistory(), I.default.disable(), I.default.setLayout(T.DEFAULT_LAYOUT), I.default.enable()
@@ -113,7 +113,7 @@ class L extends r.PureComponent {
         render: () => (0, a.jsx)(d.default, {
           page: g.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
-          children: (0, a.jsx)(m.default, {})
+          children: (0, a.jsx)(A.default, {})
         })
       }), (0, a.jsx)(n.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),

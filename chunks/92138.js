@@ -20,6 +20,6 @@ var f = n("981631"),
   S = n("689938");
 (0, l.setUpdateRules)(d.default), (0, s.UserDefenses)(S.default, r, _.default), o.default.Emitter.injectBatchEmitChanges(a.batchUpdates), o.default.PersistedStore.disableWrites = __OVERLAY__, o.default.initialize();
 let h = window.GLOBAL_ENV.RELEASE_CHANNEL;
-new T.default().log("[BUILD INFO] Release Channel: ".concat(h, ", Build Number: ").concat("299540", ", Version Hash: ").concat("d3c316194dee45ff1bc7d98633d8a1d6fd5766b1")), i.default.setTags({
+new T.default().log("[BUILD INFO] Release Channel: ".concat(h, ", Build Number: ").concat("299575", ", Version Hash: ").concat("8d79a3edb09c14fa8d020061d780b70ad8fc6fff")), i.default.setTags({
   appContext: f.CURRENT_APP_CONTEXT
 }), c.default.initBasic(), E.default.init(), u.FocusRingManager.init(), I.init()

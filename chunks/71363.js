@@ -16,8 +16,8 @@ var a = s("735250"),
   R = s("915296"),
   f = s("103433"),
   S = s("166021"),
-  A = s("32173"),
-  m = s("391110"),
+  m = s("32173"),
+  A = s("391110"),
   N = s("75077"),
   p = s("981631"),
   g = s("689938"),
@@ -31,21 +31,21 @@ t.default = e => {
       isFullScreen: h
     } = e,
     L = r.useRef(null),
-    x = Object.entries((0, A.default)()).reduce((e, t) => {
+    x = Object.entries((0, m.default)()).reduce((e, t) => {
       let [s, a] = t;
       return !1 !== a.canReveal && "upcomingDropUntimed" !== a.name && (e[s] = a), e
     }, {}),
-    v = (0, R.useGetMarketingPageNonSubPerkTileOrderExperiment)({
-      location: m.NitroLandingPages.SEE_ALL
+    b = (0, R.useGetMarketingPageNonSubPerkTileOrderExperiment)({
+      location: A.NitroLandingPages.SEE_ALL
     }),
     {
-      analyticsLocations: b
+      analyticsLocations: D
     } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-    [D, U] = r.useState(!1),
+    [v, U] = r.useState(!1),
     j = (0, E.default)("perks-discoverability"),
     G = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion),
     B = (0, N.useIsPremiumSubscriber)();
-  return v === R.TileOrderVariant.DEFAULT ? (t = g.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE, s = g.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD) : (t = g.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD, s = g.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (0, a.jsx)(u.AdvancedScrollerAuto, {
+  return b === R.TileOrderVariant.DEFAULT ? (t = g.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE, s = g.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD) : (t = g.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD, s = g.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (0, a.jsx)(u.AdvancedScrollerAuto, {
     className: n()(C.allPerksScroller, {
       [C.open]: i,
       [C.openCloseReduceMotion]: G
@@ -54,12 +54,12 @@ t.default = e => {
     children: (0, a.jsx)("div", {
       className: C.container,
       children: (0, a.jsxs)(_.AnalyticsLocationProvider, {
-        value: b,
+        value: D,
         children: [(0, a.jsx)(f.default, {
           className: C.heroHeading,
           onBackClick: () => {
             O(!1), I.default.track(p.AnalyticEvents.NITRO_HOME_NAVIGATION, {
-              current_component: m.NitroLandingPages.SEE_ALL,
+              current_component: A.NitroLandingPages.SEE_ALL,
               next_component: M,
               interaction_component: "Back Button"
             })
@@ -75,13 +75,13 @@ t.default = e => {
             className: C.cardCarousel,
             cards: (0, N.getFilteredPerksDiscoverabilityCards)({
               perksCards: x,
-              variant: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW,
+              variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW,
               shopMarketingVariation: j,
-              tileOrderVariant: v,
+              tileOrderVariant: b,
               isPremiumSubscriber: B,
               isFullScreen: h
             }),
-            cardType: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW
+            cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW
           }), (0, a.jsx)(u.Heading, {
             variant: "heading-xxl/extrabold",
             color: "header-primary",
@@ -91,13 +91,13 @@ t.default = e => {
             className: C.cardCarousel,
             cards: (0, N.getFilteredPerksDiscoverabilityCards)({
               perksCards: x,
-              variant: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW,
+              variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW,
               shopMarketingVariation: j,
-              tileOrderVariant: v,
+              tileOrderVariant: b,
               isPremiumSubscriber: B,
               isFullScreen: h
             }),
-            cardType: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW
+            cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW
           }), (0, a.jsx)(u.Heading, {
             variant: "heading-xxl/extrabold",
             color: "header-primary",
@@ -107,20 +107,20 @@ t.default = e => {
             className: C.cardCarousel,
             cards: (0, N.getFilteredPerksDiscoverabilityCards)({
               perksCards: x,
-              variant: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
+              variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
               shopMarketingVariation: j,
-              tileOrderVariant: v,
+              tileOrderVariant: b,
               isPremiumSubscriber: B,
               isFullScreen: h
             }),
-            cardType: m.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW
+            cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW
           })]
         }), (0, a.jsx)("div", {
           className: C.footerSpacing
         }), (0, a.jsx)(o.VisibilitySensor, {
           onChange: e => {
-            e && !D && (I.default.track(p.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-              location_stack: b
+            e && !v && (I.default.track(p.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+              location_stack: D
             }), U(!0))
           },
           children: (0, a.jsx)("div", {

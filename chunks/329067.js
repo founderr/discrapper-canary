@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return R
   },
   useLightningCheckoutEligibility: function() {
     return b
@@ -75,15 +75,15 @@ function b() {
   }
 }
 
-function v(e) {
+function R(e) {
   let {
     onPurchaseComplete: t,
     onError: s,
     onReviewPurchase: n,
     paymentSource: I,
     loadId: b,
-    skuId: v,
-    isGift: R = !1,
+    skuId: R,
+    isGift: v = !1,
     baseAnalyticsData: A
   } = e, {
     step: P,
@@ -94,7 +94,7 @@ function v(e) {
     skuPricePreviewsById: k
   } = (0, g.usePaymentContext)(), {
     analyticsLocations: B
-  } = (0, f.default)(), [F, D] = l.useState(!1), U = l.useRef(null), H = k[v], w = null != H ? H[I.id] : null, G = null != w ? (0, m.formatPrice)(null == w ? void 0 : w.amount, null == w ? void 0 : w.currency) : null, W = l.useMemo(() => ({
+  } = (0, f.default)(), [F, D] = l.useState(!1), U = l.useRef(null), H = k[R], w = null != H ? H[I.id] : null, G = null != w ? (0, m.formatPrice)(null == w ? void 0 : w.amount, null == w ? void 0 : w.currency) : null, W = l.useMemo(() => ({
     ...A,
     load_id: b,
     payment_type: T.PurchaseTypeToAnalyticsPaymentType[T.PurchaseTypes.ONE_TIME],
@@ -109,10 +109,10 @@ function v(e) {
   let Y = async () => {
     await E.default.track(T.AnalyticEvents.PAYMENT_FLOW_COMPLETED, W), r()(null != w, "skuPricePreview can't be null"), r()(null != M, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(M.id, v, {
+      await (0, o.purchaseSKU)(M.id, R, {
         expectedAmount: w.amount,
         expectedCurrency: w.currency,
-        isGift: R,
+        isGift: v,
         paymentSource: I,
         loadId: b
       }), D(!1), t()
@@ -162,7 +162,7 @@ function v(e) {
       className: _.reviewButton,
       onClick: () => {
         n(), (0, h.default)({
-          skuId: v,
+          skuId: R,
           analyticsLocations: B,
           returnRef: U
         })

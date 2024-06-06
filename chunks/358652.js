@@ -25,7 +25,7 @@ function E(e) {
   } = e, n = c.default.getChannel(t);
   return !!(null != n && (0, u.isPrivate)(n.type)) && C()
 }
-class _ extends(l = r.default.Store) {
+class S extends(l = r.default.Store) {
   initialize() {
     this.waitFor(m.default, c.default, h.default, f.default)
   }
@@ -33,12 +33,12 @@ class _ extends(l = r.default.Store) {
     return p
   }
 }
-i = "PrivateChannelReadStateStore", (s = "displayName") in(a = _) ? Object.defineProperty(a, s, {
+i = "PrivateChannelReadStateStore", (s = "displayName") in(a = S) ? Object.defineProperty(a, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i, t.default = new _(o.default, {
+}) : a[s] = i, t.default = new S(o.default, {
   CONNECTION_OPEN: g,
   OVERLAY_INITIALIZE: g,
   MESSAGE_CREATE: E,

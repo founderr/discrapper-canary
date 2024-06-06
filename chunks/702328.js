@@ -16,8 +16,8 @@ var a = s("735250"),
   R = s("74538"),
   f = s("140465"),
   S = s("730314"),
-  A = s("91802"),
-  m = s("104494"),
+  m = s("91802"),
+  A = s("104494"),
   N = s("639119"),
   p = s("8647"),
   g = s("568126"),
@@ -28,9 +28,9 @@ var a = s("735250"),
   h = s("498765"),
   L = s("635921"),
   x = s("177839"),
-  v = s("794484"),
-  b = s("392521"),
-  D = s("349803"),
+  b = s("794484"),
+  D = s("392521"),
+  v = s("349803"),
   U = s("179984"),
   j = s("409100"),
   G = s("391110"),
@@ -68,21 +68,21 @@ let V = e => {
     } = e;
     return t ? (0, a.jsxs)("div", {
       className: n()(F.whatsNewSectionBackground),
-      children: [(0, a.jsx)(v.default, {
+      children: [(0, a.jsx)(b.default, {
         variant: G.PerksDiscoverabilityCardSection.WHATS_NEW,
         isFullScreen: t
-      }), (0, a.jsx)(v.default, {
+      }), (0, a.jsx)(b.default, {
         isFullScreen: t,
         showAllPerksButton: t ? (0, a.jsx)(y.default, {
           setIsAllPerksVisible: r,
           previousComponent: G.NitroLandingPages.MARKETING
         }) : void 0
-      }), s ? (0, a.jsx)(b.default, {
+      }), s ? (0, a.jsx)(D.default, {
         className: F.pdSparklesTop,
-        variant: b.SparkleVariants.TOP
-      }) : null, s ? (0, a.jsx)(b.default, {
+        variant: D.SparkleVariants.TOP
+      }) : null, s ? (0, a.jsx)(D.default, {
         className: F.pdSparklesBottom,
-        variant: b.SparkleVariants.BOTTOM
+        variant: D.SparkleVariants.BOTTOM
       }) : null]
     }) : null
   };
@@ -93,7 +93,7 @@ t.default = e => {
     entrypoint: i
   } = e, {
     bucket: h
-  } = (0, S.usePremiumTierCardsExperiment)("PremiumMarketingHome"), x = h > 0, v = r.useRef(null), [b, y] = r.useState(!1), [X, Q] = r.useState(!1), [J, Z] = r.useState(!1), [q, $] = r.useState(!1), ee = (0, l.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), et = null != ee ? (0, R.getPremiumPlanItem)(ee) : null, es = null != et ? R.default.getSkuIdForPlan(et.planId) : null, ea = null !== es && es !== k.PremiumSubscriptionSKUs.TIER_2 ? k.PremiumSubscriptionSKUs.TIER_2 : null, er = (0, A.useLocalizedPromoQuery)(), ei = null != er, [en, el] = r.useState(!1), eo = (0, m.usePremiumDiscountOffer)(), eu = (0, N.usePremiumTrialOffer)(), ed = null == eu ? void 0 : null === (t = eu.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ec = (0, f.useIsInPremiumOfferExperience)(), e_ = (0, P.useIsEligibleForBogoPromotion)(), {
+  } = (0, S.usePremiumTierCardsExperiment)("PremiumMarketingHome"), x = h > 0, b = r.useRef(null), [D, y] = r.useState(!1), [J, X] = r.useState(!1), [Q, Z] = r.useState(!1), [q, $] = r.useState(!1), ee = (0, l.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), et = null != ee ? (0, R.getPremiumPlanItem)(ee) : null, es = null != et ? R.default.getSkuIdForPlan(et.planId) : null, ea = null !== es && es !== k.PremiumSubscriptionSKUs.TIER_2 ? k.PremiumSubscriptionSKUs.TIER_2 : null, er = (0, m.useLocalizedPromoQuery)(), ei = null != er, [en, el] = r.useState(!1), eo = (0, A.usePremiumDiscountOffer)(), eu = (0, N.usePremiumTrialOffer)(), ed = null == eu ? void 0 : null === (t = eu.subscription_trial) || void 0 === t ? void 0 : t.sku_id, ec = (0, f.useIsInPremiumOfferExperience)(), e_ = (0, P.useIsEligibleForBogoPromotion)(), {
     analyticsLocations: eE
   } = (0, _.default)(c.default.PREMIUM_MARKETING), eT = "PremiumMarketingHome";
   (0, d.useTriggerDebuggingAA)({
@@ -111,7 +111,7 @@ t.default = e => {
         [F.premiumTierCardsContainerFullscreen]: s
       }),
       children: (0, a.jsx)(o.VisibilitySensor, {
-        onChange: e => Q(e),
+        onChange: e => X(e),
         threshold: .1,
         active: !0,
         children: (0, a.jsx)(O.default, {
@@ -230,13 +230,13 @@ t.default = e => {
         }) : null]
       }), (0, a.jsx)("div", {
         className: s ? F.footerSpacingFullscreen : F.footerSpacing
-      }), (0, a.jsx)(D.default, {
-        isVisible: !b && !X && q,
+      }), (0, a.jsx)(v.default, {
+        isVisible: !D && !J && q,
         isFullscreen: s,
         subscriptionTier: ea
       }), (0, a.jsx)(o.VisibilitySensor, {
         onChange: e => {
-          e && !J && (I.default.track(H.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+          e && !Q && (I.default.track(H.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
             location_stack: eE
           }), Z(!0))
         },
@@ -254,7 +254,7 @@ t.default = e => {
   return s ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(u.AdvancedScrollerAuto, {
       className: F.scroller,
-      ref: v,
+      ref: b,
       children: eR
     }), (0, a.jsx)(B.default, {
       previousComponent: G.NitroLandingPages.MARKETING,

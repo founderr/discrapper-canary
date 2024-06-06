@@ -16,10 +16,10 @@ var a = s("735250"),
   R = s("826026"),
   f = s("626135"),
   S = s("881100"),
-  A = s("981631"),
-  m = s("689938"),
+  m = s("981631"),
+  A = s("689938"),
   N = s("35962");
-let p = e => e ? m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE,
+let p = e => e ? A.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : A.default.Messages.PREMIUM_MARKETING_PERKS_TITLE,
   g = e => {
     let {
       isShowingAll: t,
@@ -28,7 +28,7 @@ let p = e => e ? m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : m
     return (0, a.jsxs)(o.Clickable, {
       onClick: s,
       className: N.customButton,
-      children: [t ? m.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : m.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(R.default, {
+      children: [t ? A.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : A.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(R.default, {
         className: N.arrow
       }) : (0, a.jsx)(I.default, {
         className: N.arrow
@@ -84,7 +84,7 @@ t.default = e => {
     styles: N
   }), E = (0, l.useStateFromStores)([u.default], () => u.default.useReducedMotion), {
     analyticsLocations: I
-  } = (0, c.default)(), R = (0, T.useIsRemixANitroPerk)(), m = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, R ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
+  } = (0, c.default)(), R = (0, T.useIsRemixANitroPerk)(), A = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, R ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
   return (0, a.jsxs)("div", {
     className: n()(N.perksContainer, t, {
       [N.partiallyHidden]: s && !i,
@@ -99,7 +99,7 @@ t.default = e => {
       className: n()(N.perkCardContainer, {
         [N.perkCardContainerExpanded]: i
       }),
-      children: m.map(e => null != e && (0, a.jsx)(C, {
+      children: A.map(e => null != e && (0, a.jsx)(C, {
         ...e
       }, e.title))
     }), s && (0, a.jsxs)(a.Fragment, {
@@ -110,7 +110,7 @@ t.default = e => {
         }),
         children: (0, a.jsx)(g, {
           onClick: () => {
-            f.default.track(A.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+            f.default.track(m.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
               location_stack: I,
               was_expanded: i
             }), d(!i)

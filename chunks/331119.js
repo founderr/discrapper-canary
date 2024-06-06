@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   CannibalizationModelDataCollection: function() {
-    return l
+    return a
   }
 });
-let l = (0, n("818083").createExperiment)({
+let a = (0, s("818083").createExperiment)({
   kind: "user",
   id: "2023-11_cannibalization_model_data_collection",
   label: "Cannibalization Model Data Collection",

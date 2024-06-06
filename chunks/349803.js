@@ -20,7 +20,7 @@ t.default = function(e) {
     isVisible: r,
     isFullscreen: R,
     subscriptionTier: f
-  } = e, S = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, A = (0, u.usePremiumDiscountOffer)(), m = (0, u.discountOfferHasTier)(A, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = (0, n.useSpring)({
+  } = e, S = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), A = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = (0, n.useSpring)({
     transform: r ? "translateY(-100%)" : "translateY(0%)",
     opacity: r ? 1 : 0,
     config: {
@@ -42,7 +42,7 @@ t.default = function(e) {
       children: [(0, a.jsx)(_.default, {
         className: I.button,
         shinyButtonClassName: I.shinyButton,
-        subscriptionTier: null !== (s = null != f ? f : null == S ? void 0 : S.sku_id) && void 0 !== s ? s : m,
+        subscriptionTier: null !== (s = null != f ? f : null == S ? void 0 : S.sku_id) && void 0 !== s ? s : A,
         premiumModalAnalyticsLocation: g,
         isPersistentCTA: !0
       }), (0, a.jsx)(c.default, {

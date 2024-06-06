@@ -21,21 +21,21 @@ t.default = e => {
       isFullscreen: f = !1,
       textColor: S
     } = e,
-    A = (0, c.useIsInPremiumOfferExperience)();
+    m = (0, c.useIsInPremiumOfferExperience)();
   if (null == r) return null;
-  let m = null != r ? d.default.getPremiumPlanItem(r) : null;
-  if (d.default.isBoostOnlySubscription(r) ? t = T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != m && (t = d.default.getDisplayPremiumType(m.planId)), null == t) return null;
+  let A = null != r ? d.default.getPremiumPlanItem(r) : null;
+  if (d.default.isBoostOnlySubscription(r) ? t = T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != A && (t = d.default.getDisplayPremiumType(A.planId)), null == t) return null;
   let N = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
-    p = (null != m ? d.default.getSkuIdForPlan(m.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
-  return s = null != S ? S : A || f ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
+    p = (null != A ? d.default.getSkuIdForPlan(A.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
+  return s = null != S ? S : m || f ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
     className: i()(I.container, R, {
       [I.lightTextLink]: f,
-      [I.centerText]: A
+      [I.centerText]: m
     }),
     type: n.Card.Types.CUSTOM,
     children: [(0, a.jsx)(o.default, {
       className: i()(I.icon, {
-        [I.lightThemeColorOnly]: A || f
+        [I.lightThemeColorOnly]: m || f
       })
     }), (0, a.jsx)(n.Text, {
       variant: "text-sm/medium",

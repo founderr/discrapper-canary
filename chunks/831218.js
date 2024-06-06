@@ -13,15 +13,15 @@ var l, a, s, i = n("735250"),
   C = n("367907"),
   g = n("453542"),
   E = n("762914"),
-  _ = n("702321"),
-  S = n("518311"),
+  S = n("702321"),
+  _ = n("518311"),
   I = n("355298"),
   N = n("869404"),
   T = n("333984"),
   A = n("210887"),
   L = n("592125"),
-  x = n("158776"),
-  v = n("55589"),
+  v = n("158776"),
+  x = n("55589"),
   R = n("153124"),
   M = n("908773"),
   y = n("151827"),
@@ -278,10 +278,10 @@ class U extends(a = r.Component) {
       let s = Math.round((t.offsetHeight - 44 * a) / 44),
         i = s > n.length ? n.slice(0, s + 1) : n,
         o = i.map(e => null != l[e] ? l[e].getRecipientId() : null),
-        u = n.some(e => (0, _.default)(e)),
+        u = n.some(e => (0, S.default)(e)),
         d = {
           num_users_visible: i.length,
-          num_users_visible_with_mobile_indicator: o.filter(e => null != e && x.default.isMobileOnline(e)).length
+          num_users_visible_with_mobile_indicator: o.filter(e => null != e && v.default.isMobileOnline(e)).length
         };
       this.hasReportedAnalytics = !0, C.default.trackWithMetadata(D.AnalyticEvents.DM_LIST_VIEWED, {
         ...d,
@@ -341,7 +341,7 @@ class U extends(a = r.Component) {
         children: [(0, i.jsx)("span", {
           className: j.headerText,
           children: b.default.Messages.DIRECT_MESSAGES
-        }), (0, i.jsx)(S.default, {
+        }), (0, i.jsx)(_.default, {
           tooltip: b.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
@@ -367,8 +367,8 @@ t.default = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, s = r.Children.count(l), o = L.default.getMutablePrivateChannels(), u = (0, N.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, I.default, T.default], () => {
-    let e = v.default.getPrivateChannelIds(),
+  } = e, s = r.Children.count(l), o = L.default.getMutablePrivateChannels(), u = (0, N.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([x.default, I.default, T.default], () => {
+    let e = x.default.getPrivateChannelIds(),
       t = (0, N.filterOutMessageRequestsAndSpamById)(e, [I.default, T.default]);
     return (0, E.filterBroadcastingGDMs)(t)
   }, []), h = (0, c.useStateFromStoresObject)([p.default, A.default, L.default], () => ({
@@ -395,7 +395,7 @@ t.default = e => {
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), _ = r.useCallback(() => new Promise(e => {
+  }), []), S = r.useCallback(() => new Promise(e => {
     let t = m.current;
     if (null == t) return e();
     t.scrollToBottom({
@@ -403,16 +403,16 @@ t.default = e => {
         requestAnimationFrame(() => setTimeout(e, 100))
       }
     })
-  }), []), S = (0, R.useUID)(), x = (0, d.default)({
-    id: "private-channels-".concat(S),
+  }), []), _ = (0, R.useUID)(), v = (0, d.default)({
+    id: "private-channels-".concat(_),
     isEnabled: h.keyboardModeEnabled,
     scrollToStart: g,
-    scrollToEnd: _,
+    scrollToEnd: S,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
     setFocus: C
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
-    navigator: x,
+    navigator: v,
     children: (0, i.jsx)(U, {
       channels: u,
       privateChannelIds: f,

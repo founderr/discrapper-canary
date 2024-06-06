@@ -16,21 +16,21 @@ var a = s("735250"),
   R = s("733789"),
   f = s("4962"),
   S = s("689938"),
-  A = s("472824");
-class m extends r.Component {
+  m = s("472824");
+class A extends r.Component {
   renderReasons(e, t, s) {
     return 0 === e.length && 0 === t.length ? null : (0, a.jsx)("div", {
-      className: A.section,
+      className: m.section,
       children: (0, a.jsxs)("div", {
-        className: A.sectionContent,
+        className: m.sectionContent,
         children: [e.map(e => (0, a.jsx)("div", {
-          className: A.unit,
+          className: m.unit,
           children: (0, a.jsx)(R.default, {
             reason: e,
             hidePersonalInformation: s
           })
         }, e.type)), t.map(e => (0, a.jsx)("div", {
-          className: A.unit,
+          className: m.unit,
           children: (0, a.jsx)(T.default, {
             reason: e
           })
@@ -58,13 +58,13 @@ class m extends r.Component {
     if (0 === e.length && 0 === t.length && null == s.staffNotes) return null;
     let l = this.getReviewToRender();
     return (0, a.jsxs)("div", {
-      className: n()(A.root, i),
+      className: n()(m.root, i),
       children: [(0, a.jsx)("div", {
-        className: A.header,
+        className: m.header,
         children: S.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
       }), this.renderReasons(e, t, r), null != l ? (0, a.jsx)(f.default, {
         data: l,
-        className: A.review
+        className: m.review
       }) : null]
     })
   }
@@ -78,4 +78,4 @@ t.default = l.default.connectStores([_.default, d.default, E.default, o.default,
     nonSocialReasons: (0, I.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
     hidePersonalInformation: u.default.hidePersonalInformation
   }
-})(m)
+})(A)

@@ -27,17 +27,17 @@ function f(e) {
     trailing: C,
     showUnread: g = !1,
     ...E
-  } = e, _ = (0, i.useListItem)(n), S = null !== (t = (0, r.getNodeText)(m)) && void 0 !== t ? t : "";
+  } = e, S = (0, i.useListItem)(n), _ = null !== (t = (0, r.getNodeText)(m)) && void 0 !== t ? t : "";
   return (0, l.jsx)("li", {
     children: (0, l.jsxs)(o.ClickableContainer, {
       ...E,
       buttonProps: {
-        ..._,
+        ...S,
         id: n,
         role: "button"
       },
       tag: "div",
-      "aria-label": S,
+      "aria-label": _,
       focusProps: {
         offset: {
           top: 1,

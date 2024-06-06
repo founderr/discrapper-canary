@@ -14,7 +14,7 @@ let T = !1,
 function f(e) {
   let t = !1;
   return e.forEach(e => {
-    t = !1 !== A(e) || t
+    t = !1 !== m(e) || t
   }), t
 }
 
@@ -29,7 +29,7 @@ function S(e) {
   }, delete R[e], !0
 }
 
-function A(e) {
+function m(e) {
   let {
     user: t,
     activities: s
@@ -68,13 +68,13 @@ function A(e) {
   }), r
 }
 
-function m() {
+function A() {
   let e = !1;
   if (!c.default.needsRefresh() && !T) {
     let t;
     I = {}, R = {}, t = !1, d.default.getUserIds().forEach(e => {
       let s = _.default.getUser(e);
-      null != s && (t = A({
+      null != s && (t = m({
         user: s,
         activities: d.default.getActivities(e)
       }) || t)
@@ -84,7 +84,7 @@ function m() {
 }
 class N extends(n = l.default.Store) {
   initialize() {
-    this.waitFor(c.default), this.syncWith([c.default], m)
+    this.waitFor(c.default), this.syncWith([c.default], A)
   }
   get games() {
     return I
@@ -127,7 +127,7 @@ i = "NowPlayingStore", (r = "displayName") in(a = N) ? Object.defineProperty(a, 
     let {
       updates: t
     } = e;
-    return t.map(e => A(e)).some(e => e)
+    return t.map(e => m(e)).some(e => e)
   },
   PRESENCES_REPLACE: function(e) {
     let {

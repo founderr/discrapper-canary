@@ -16,8 +16,8 @@ var a = s("735250"),
   R = s("224336"),
   f = s("730749"),
   S = s("666743"),
-  A = s("115130"),
-  m = s("812206"),
+  m = s("115130"),
+  A = s("812206"),
   N = s("252618"),
   p = s("100159"),
   g = s("646288"),
@@ -28,9 +28,9 @@ var a = s("735250"),
   h = s("496675"),
   L = s("525395"),
   x = s("558314"),
-  v = s("580130"),
-  b = s("55563"),
-  D = s("551428"),
+  b = s("580130"),
+  D = s("55563"),
+  v = s("551428"),
   U = s("695103"),
   j = s("451478"),
   G = s("378720"),
@@ -45,9 +45,9 @@ var a = s("735250"),
   V = s("937615"),
   Y = s("73346"),
   z = s("3570"),
-  X = s("689796"),
-  Q = s("15470"),
-  J = s("506648"),
+  J = s("689796"),
+  X = s("15470"),
+  Q = s("506648"),
   Z = s("449275"),
   q = s("445986"),
   $ = s("119520"),
@@ -258,7 +258,7 @@ class e_ extends r.PureComponent {
     })
   }
   renderFeatures(e) {
-    return (0, a.jsx)(J.default, {
+    return (0, a.jsx)(Q.default, {
       sku: e
     })
   }
@@ -280,7 +280,7 @@ class e_ extends r.PureComponent {
         children: eu.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
         })
-      }), (0, a.jsx)(R.default, {}), (0, a.jsx)(Q.default, {
+      }), (0, a.jsx)(R.default, {}), (0, a.jsx)(X.default, {
         applicationId: e.id,
         blurb: t.summary,
         description: i,
@@ -290,7 +290,7 @@ class e_ extends r.PureComponent {
     })
   }
   renderApplicationContentRating(e) {
-    return (0, a.jsx)(X.default, {
+    return (0, a.jsx)(J.default, {
       sku: e,
       className: ed.contentRating
     })
@@ -574,7 +574,7 @@ class e_ extends r.PureComponent {
     })
   }
 }
-t.default = (0, f.default)((0, S.default)(l.default.connectStores([x.default, O.default, P.default, j.default, D.default, b.default, U.default, A.default, m.default, L.default, M.default, v.default], e => {
+t.default = (0, f.default)((0, S.default)(l.default.connectStores([x.default, O.default, P.default, j.default, v.default, D.default, U.default, m.default, A.default, L.default, M.default, b.default], e => {
   let t, s, a, {
     inputSkuId: r,
     applicationId: i,
@@ -584,21 +584,21 @@ t.default = (0, f.default)((0, S.default)(l.default.connectStores([x.default, O.
   } = e;
   if (null == i) {
     if (null == r) throw Error("Needs applicationId or skuId");
-    t = r, null != (i = null != (s = b.default.get(r)) ? s.applicationId : null) && (a = m.default.getApplication(i))
+    t = r, null != (i = null != (s = D.default.get(r)) ? s.applicationId : null) && (a = A.default.getApplication(i))
   } else if (null == r) {
     if (null == i) throw Error("Needs applicationId or skuId");
-    null != (a = m.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
+    null != (a = A.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? D.default.get(t) : null
   }(null == s ? void 0 : s.flags) != null && (0, K.hasFlag)(s.flags, el.SKUFlags.STICKER_PACK) && (s = null);
-  let u = null != i && (U.default.inTestModeForApplication(i) || A.default.inDevModeForApplication(i));
+  let u = null != i && (U.default.inTestModeForApplication(i) || m.default.inDevModeForApplication(i));
   return {
     skuId: t,
-    application: null != i ? m.default.getApplication(i) : null,
-    isFetchingEntitlements: null != i && v.default.applicationIdsFetching.has(i),
-    didFetchEntitlements: null != i && v.default.applicationIdsFetched.has(i),
+    application: null != i ? A.default.getApplication(i) : null,
+    isFetchingEntitlements: null != i && b.default.applicationIdsFetching.has(i),
+    didFetchEntitlements: null != i && b.default.applicationIdsFetched.has(i),
     shouldFetchStatistics: l && null != i && L.default.shouldFetchStatisticsForApplication(i),
     sku: s,
     isFocused: j.default.isFocused(),
-    storeListing: D.default.getStoreListing({
+    storeListing: v.default.getStoreListing({
       storeListingId: n,
       skuId: t,
       channelId: null != o ? o.id : null,

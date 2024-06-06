@@ -42,7 +42,7 @@ class S extends r.PureComponent {
     })
   }
 }
-let A = e => [{
+let m = e => [{
   key: I.default.Messages.APPLICATION_STORE_SPECS_OS,
   value: e.operating_system_version
 }, {
@@ -73,7 +73,7 @@ let A = e => [{
   key: I.default.Messages.APPLICATION_STORE_SPECS_NOTES,
   value: e.notes
 }];
-class m extends r.PureComponent {
+class A extends r.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       systemRequirements: s
@@ -114,7 +114,7 @@ class m extends r.PureComponent {
   }
   renderRequirementsSection(e, t) {
     if (null == e) return null;
-    let s = A(e).map((e, t) => {
+    let s = m(e).map((e, t) => {
       let s = null != e.value ? e.value.trim() : null;
       return null == s || 0 === s.length ? null : (0, a.jsxs)("div", {
         className: R.requirement,
@@ -171,4 +171,4 @@ class m extends r.PureComponent {
     }
   }
 }
-t.default = m
+t.default = A

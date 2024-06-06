@@ -20,8 +20,8 @@ t.default = e => {
       titleClassName: R,
       buttonClassName: f,
       perkImage: S,
-      isCarousel: A,
-      onCtaClick: m,
+      isCarousel: m,
+      onCtaClick: A,
       perkComponent: N,
       subtitle: p = "",
       descriptionCta: g = "",
@@ -58,8 +58,8 @@ t.default = e => {
       src: S,
       alt: "",
       className: i()({
-        [c.cardImage]: !A,
-        [c.carouselCardImage]: A
+        [c.cardImage]: !m,
+        [c.carouselCardImage]: m
       })
     }), null != N && (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)("div", {
@@ -67,11 +67,11 @@ t.default = e => {
         children: [(0, a.jsx)("div", {
           className: c.cardComponent,
           children: N
-        }), 0 !== g.length && null != m && (0, a.jsx)(n.Button, {
+        }), 0 !== g.length && null != A && (0, a.jsx)(n.Button, {
           className: f,
           disabled: !h,
           fullWidth: !0,
-          onClick: m,
+          onClick: A,
           children: (0, a.jsxs)("div", {
             className: null == O ? void 0 : null === (t = O.descriptionCta) || void 0 === t ? void 0 : t.className,
             children: [(0, a.jsx)("img", {

@@ -23,8 +23,8 @@ t.default = function(e) {
   (0, c.useTrackLocalizedPricingPromoImpression)(I.AnalyticsSections.SETTINGS_PREMIUM_BANNER, r);
   let S = (0, n.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
     {
-      localizedPricingBannerHeader: A,
-      localizedPricingBannerBody: m
+      localizedPricingBannerHeader: m,
+      localizedPricingBannerBody: A
     } = (0, d.getLocalizedPricingBannerStrings)({
       localizedPricingPromo: t,
       subscription: S,
@@ -41,14 +41,14 @@ t.default = function(e) {
     }), (0, a.jsx)(l.Heading, {
       className: R.bannerHeading,
       variant: "heading-xl/semibold",
-      children: A
+      children: m
     }), (0, a.jsx)("div", {
       className: R.textContainer,
       children: (0, a.jsx)(l.Text, {
         color: "none",
         variant: "text-md/normal",
         className: R.bannerBody,
-        children: m
+        children: A
       })
     }), (0, a.jsxs)("div", {
       className: R.ctaButtonContainer,

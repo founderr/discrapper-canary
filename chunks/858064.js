@@ -85,19 +85,19 @@ function E(e) {
     partnerGame: c
   } = e, E = (0, d.useDropsExperiment)(c);
   (0, d.useFetchInitialDropProgress)(c);
-  let _ = (0, a.useStateFromStores)([r.default], () => r.default.getId());
+  let S = (0, a.useStateFromStores)([r.default], () => r.default.getId());
   if (null == E) return null;
   let {
-    streamLengthRequirement: S,
+    streamLengthRequirement: _,
     viewerCountRequirement: I
   } = E.config, N = E.drop, {
     header: T,
     body: A,
     imgSrc: L,
-    imgStyle: x
-  } = C(n, N, S), v = () => {
+    imgStyle: v
+  } = C(n, N, _), x = () => {
     u.default.track(h.AnalyticEvents.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
-      user_id: _,
+      user_id: S,
       drops_quest_id: N.dropsQuestId,
       game_id: N.dropsGameId,
       game_name: N.title.toLowerCase(),
@@ -111,7 +111,7 @@ function E(e) {
     children: [(0, l.jsx)("img", {
       src: L,
       alt: "",
-      className: x
+      className: v
     }), (0, l.jsx)(s.Clickable, {
       className: p.__invalid_buttonClose,
       "aria-label": m.default.Messages.CLOSE,
@@ -128,7 +128,7 @@ function E(e) {
       variant: "heading-md/extrabold",
       children: T
     }), n === f.TooltipActions.TRACK_PROGRESS ? (0, l.jsx)(g, {
-      streamLengthRequirement: S,
+      streamLengthRequirement: _,
       viewerCountRequirement: I
     }) : (0, l.jsx)(s.Text, {
       variant: "text-sm/medium",
@@ -139,7 +139,7 @@ function E(e) {
         color: s.Button.Colors.BRAND_INVERTED,
         fullWidth: !0,
         onClick: () => {
-          t(), i.default.open(h.UserSettingsSections.INVENTORY), v()
+          t(), i.default.open(h.UserSettingsSections.INVENTORY), x()
         },
         children: m.default.Messages.REDEEM
       }), (0, l.jsx)(s.Button, {
@@ -155,7 +155,7 @@ function E(e) {
       color: s.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
-        t(), i.default.open(h.UserSettingsSections.INVENTORY), v()
+        t(), i.default.open(h.UserSettingsSections.INVENTORY), x()
       },
       children: m.default.Messages.LEARN_MORE
     }), (0, l.jsx)("div", {

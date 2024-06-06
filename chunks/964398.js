@@ -105,24 +105,24 @@ t.default = a.memo(function(e) {
     itemWidth: C,
     itemHeight: g,
     showDeadZoneIndicator: E,
-    activeItem: _,
-    onItemSelect: S,
+    activeItem: S,
+    onItemSelect: _,
     onItemAction: I,
     interactive: N = !0,
     children: T
-  } = e, A = a.useRef(null), L = a.useRef([]), x = a.useRef(!1), v = a.useRef(null), [R, M] = a.useState(0), [y, O] = a.useState({
+  } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, M] = a.useState(0), [y, O] = a.useState({
     x: 0,
     y: 0
   }), D = Math.abs(y.x) + Math.abs(y.y) > 0, b = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), P = a.useCallback((e, t) => {
-    v.current = t, S(h * e + t)
-  }, [S]), G = a.useCallback(() => {
-    v.current = null, S(null)
-  }, [S]), U = a.useCallback(e => {
-    G(), x.current = e
+    x.current = t, _(h * e + t)
+  }, [_]), G = a.useCallback(() => {
+    x.current = null, _(null)
+  }, [_]), U = a.useCallback(e => {
+    G(), v.current = e
   }, [G]), w = a.useCallback((e, t, n) => {
-    if (x.current) {
+    if (v.current) {
       O({
         x: 0,
         y: 0
@@ -142,7 +142,7 @@ t.default = a.memo(function(e) {
       y: (s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y)) / 2
     })
   }, []), B = a.useCallback(e => {
-    null != v.current && (e.preventDefault(), e.stopPropagation(), null == I || I(h * R + v.current))
+    null != x.current && (e.preventDefault(), e.stopPropagation(), null == I || I(h * R + x.current))
   }, [I, R]), F = a.useMemo(() => (0, s.throttle)(e => {
     if (null == A.current) return;
     let l = A.current.getBoundingClientRect(),
@@ -155,8 +155,8 @@ t.default = a.memo(function(e) {
         x: e.clientX,
         y: e.clientY
       };
-    if (w(i, s, Math.max(t, n)), x.current) {
-      null != _ && G();
+    if (w(i, s, Math.max(t, n)), v.current) {
+      null != S && G();
       return
     }
     let r = (0, o.extendLineSegment)(s, i, Math.max(t, n));
@@ -170,10 +170,10 @@ t.default = a.memo(function(e) {
       }
     }
     G()
-  }, 16), [_, w, G, P, R, n, t]), H = a.useCallback(e => {
+  }, 16), [S, w, G, P, R, n, t]), H = a.useCallback(e => {
     if (!N) return;
     let t = R + (e.deltaY > 0 ? 1 : -1);
-    t >= 0 && t < b.length && (null != v.current && (b[t].length > v.current ? P(t, v.current) : G()), M(t))
+    t >= 0 && t < b.length && (null != x.current && (b[t].length > x.current ? P(t, x.current) : G()), M(t))
   }, [N, R, b, P, G]), V = a.useMemo(() => b[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
