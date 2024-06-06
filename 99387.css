@@ -24991,6 +24991,7 @@ div.profileThemedContainer__6e645 {
 }
 
 .header__34f87 {
+    position: relative;
     z-index: 2;
     min-height: calc(45px + var(--custom-user-banner-banner-height-panel))
 }
