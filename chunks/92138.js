@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("319322"), n("743606");
 var i = n("960048");
-n("789876"), n("643191"), n("323716"), n("716578"), n("314897"), n("828695"), n("450795"), n("208258"), n("528224");
+n("789876"), n("643191"), n("323716"), n("716578"), n("314897"), n("353926"), n("450795"), n("208258"), n("528224");
 var r = n("213919"),
   s = n("902866"),
   a = n("731965"),
@@ -20,6 +20,6 @@ var f = n("981631"),
   S = n("689938");
 (0, l.setUpdateRules)(d.default), (0, s.UserDefenses)(S.default, r, _.default), o.default.Emitter.injectBatchEmitChanges(a.batchUpdates), o.default.PersistedStore.disableWrites = __OVERLAY__, o.default.initialize();
 let h = window.GLOBAL_ENV.RELEASE_CHANNEL;
-new T.default().log("[BUILD INFO] Release Channel: ".concat(h, ", Build Number: ").concat("299372", ", Version Hash: ").concat("ab2c22eb0e2cea5a32366e5410eb8ad35f7ee327")), i.default.setTags({
+new T.default().log("[BUILD INFO] Release Channel: ".concat(h, ", Build Number: ").concat("299419", ", Version Hash: ").concat("5519e2c253ca91d05b8dfcb5566e94714c5d5474")), i.default.setTags({
   appContext: f.CURRENT_APP_CONTEXT
 }), c.default.initBasic(), E.default.init(), u.FocusRingManager.init(), I.init()

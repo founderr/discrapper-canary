@@ -7,11 +7,11 @@ var s = n("735250"),
   r = n("893776"),
   u = n("232567"),
   o = n("129293"),
-  d = n("185625"),
-  c = n("551549"),
-  f = n("108427"),
-  E = n("314897"),
-  I = n("828695"),
+  d = n("353926"),
+  c = n("185625"),
+  f = n("551549"),
+  E = n("108427"),
+  I = n("314897"),
   _ = n("819570"),
   p = n("981631"),
   h = n("689938"),
@@ -20,7 +20,7 @@ l.default.initialize();
 t.default = e => {
   let {
     location: t
-  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), g = (0, l.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), m = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [N, A] = a.useState(!1), [S, v] = a.useState(h.default.Messages.AUTHORIZING), [C, O] = a.useState(!0), R = e => {
+  } = e, n = (0, l.useStateFromStores)([I.default], () => I.default.isAuthenticated()), g = (0, l.useStateFromStores)([d.default], () => d.default.hasLoadedExperiments), m = (0, f.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [N, A] = a.useState(!1), [S, v] = a.useState(h.default.Messages.AUTHORIZING), [C, O] = a.useState(!0), R = e => {
     switch (e) {
       case p.AbortCodes.INVALID_FORM_BODY:
       case p.AbortCodes.DSA_RSL_REPORT_NOT_FOUND:
@@ -49,7 +49,7 @@ t.default = e => {
     let e = async e => {
       var t, n;
       try {
-        let n = null != e ? await (0, d.submitReportSecondLook)(e) : void 0;
+        let n = null != e ? await (0, c.submitReportSecondLook)(e) : void 0;
         null != n ? v(h.default.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : R(null === (t = n.body) || void 0 === t ? void 0 : t.code)
       } catch (e) {
         R(null === (n = e.body) || void 0 === n ? void 0 : n.code)
@@ -57,7 +57,7 @@ t.default = e => {
         A(!1)
       }
     };
-    A(!0), e((0, o.default)(t)), (0, f.trackAppUIViewed)("report_second_look")
+    A(!0), e((0, o.default)(t)), (0, E.trackAppUIViewed)("report_second_look")
   }, [t]), m && !C && (0, s.jsxs)(_.default, {
     children: [(0, s.jsx)(_.Title, {
       className: T.marginBottom8,

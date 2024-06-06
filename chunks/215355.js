@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("470079"), n("902704");
 var i = n("433517"),
-  r = n("159626"),
-  s = n("893638"),
-  a = n("828695"),
+  r = n("353926"),
+  s = n("159626"),
+  a = n("893638"),
   o = n("57132");
 let l = {
     mergeTabs: !1,
@@ -17,7 +17,7 @@ let l = {
   },
   u = !1,
   d = l,
-  _ = (0, r.default)({
+  _ = (0, s.default)({
     kind: "user",
     id: "2024-04_merged_tabs",
     label: "Mobile Redesign - Merge Tabs Last Stand Experiment",
@@ -107,12 +107,12 @@ let l = {
   });
 
 function c(e, t) {
-  var n, r;
+  var n, s;
   let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : !(0, o.isInMainTabsExperiment)(),
     E = !!c || (null == t ? void 0 : t.disable);
-  return a.default.hasLoadedExperiments || E ? (0, s.getMergedExperimentConfigs)(_.existingUsers, _.newUsers, e, {
+  return r.default.hasLoadedExperiments || E ? (0, a.getMergedExperimentConfigs)(_.existingUsers, _.newUsers, e, {
     ...t,
     disable: E,
-    autoTrackExposure: !c && (null === (r = null == t ? void 0 : t.autoTrackExposure) || void 0 === r || r)
+    autoTrackExposure: !c && (null === (s = null == t ? void 0 : t.autoTrackExposure) || void 0 === s || s)
   }) : (!u && (d = null !== (n = i.Storage.get("--merged-tabs-experiment-cached-config")) && void 0 !== n ? n : l, u = !0), d)
 }

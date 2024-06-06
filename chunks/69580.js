@@ -42,12 +42,12 @@ var i, r, s = n("735250"),
   p = n("728345"),
   O = n("979200"),
   C = n("560067"),
-  R = n("341298"),
-  g = n("703656"),
-  L = n("973616"),
-  v = n("598077"),
-  D = n("314897"),
-  M = n("828695"),
+  R = n("353926"),
+  g = n("341298"),
+  L = n("703656"),
+  v = n("973616"),
+  D = n("598077"),
+  M = n("314897"),
   y = n("700785"),
   P = n("591759"),
   U = n("807675"),
@@ -133,7 +133,7 @@ function ee(e) {
 
 function et(e) {
   var t, n, i, r, o;
-  let l, f, S, N, C, R, {
+  let l, f, S, N, C, g, {
       clientId: W,
       responseType: J,
       redirectUri: $,
@@ -161,16 +161,16 @@ function et(e) {
     } = e,
     eN = null != ed ? null == es ? void 0 : es.get(ed) : void 0,
     ep = (0, u.useLocation)(),
-    eO = (0, I.useStateFromStores)([M.default], () => M.default.hasLoadedExperiments);
+    eO = (0, I.useStateFromStores)([R.default], () => R.default.hasLoadedExperiments);
   a.useEffect(() => {
-    D.default.isAuthenticated() && !eO && A.default.getExperiments()
+    M.default.isAuthenticated() && !eO && A.default.getExperiments()
   }, [eO]);
-  let [eC, eR] = a.useState(null), [eg, eL] = a.useState(null), [ev, eD] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eC ? void 0 : eC.guilds, [eU, eb] = a.useState(null != el ? el : null), [eG, ew] = a.useState(null != eu ? eu : null), [ek, eB] = a.useState(y.NONE), eV = a.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new v.default(eC.user) : null, [null == eC ? void 0 : eC.user]), ex = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [eF, eH] = a.useState(null), eY = a.useMemo(() => {
+  let [eC, eR] = a.useState(null), [eg, eL] = a.useState(null), [ev, eD] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eC ? void 0 : eC.guilds, [eU, eb] = a.useState(null != el ? el : null), [eG, ew] = a.useState(null != eu ? eu : null), [ek, eB] = a.useState(y.NONE), eV = a.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new D.default(eC.user) : null, [null == eC ? void 0 : eC.user]), ex = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [eF, eH] = a.useState(null), eY = a.useMemo(() => {
     var e;
     return null == eN && null == ed && (null !== (e = null == ea ? void 0 : ea.length) && void 0 !== e ? e : 0) === 0 && null == $
   }, [eN, null == ea ? void 0 : ea.length, $, ed]), [ej, eW] = a.useState(null);
   a.useEffect(() => {
-    eY && p.default.fetchApplication(W).then(e => eW(L.default.createFromServer(e)))
+    eY && p.default.fetchApplication(W).then(e => eW(v.default.createFromServer(e)))
   }, [W, eY]);
   let eK = a.useMemo(() => {
       var e, t;
@@ -221,7 +221,7 @@ function et(e) {
       }
     };
     if (null == em) {
-      if (!D.default.isAuthenticated()) {
+      if (!M.default.isAuthenticated()) {
         (0, b.logoutWithRedirect)(ep);
         return
       }
@@ -271,7 +271,7 @@ function et(e) {
             host: e,
             path: n
           } = d.parse(t.location);
-          P.default.isDiscordHostname(e) && n === Z.Routes.OAUTH2_AUTHORIZED ? (0, g.transitionTo)(Z.Routes.OAUTH2_AUTHORIZED, {
+          P.default.isDiscordHostname(e) && n === Z.Routes.OAUTH2_AUTHORIZED ? (0, L.transitionTo)(Z.Routes.OAUTH2_AUTHORIZED, {
             state: {
               application: null == eC ? void 0 : eC.application,
               guild: ex
@@ -285,7 +285,7 @@ function et(e) {
     }, [eh, eE, eS, null == eC ? void 0 : eC.application, ex, eA, W, ez, J, $, ee, et, en, ei, eX, ek, eU, eF, eG, eq]),
     e2 = a.useRef(!1),
     e3 = a.useCallback(async () => {
-      if (!D.default.isAuthenticated()) {
+      if (!M.default.isAuthenticated()) {
         (0, b.logoutWithRedirect)(ep);
         return
       }
@@ -435,7 +435,7 @@ function et(e) {
     showLogout: ec || !1,
     location: ep,
     isTrustedName: eI
-  })), e8 && (R = (0, s.jsxs)("div", {
+  })), e8 && (g = (0, s.jsxs)("div", {
     className: Q.footer,
     children: [null != f ? (0, s.jsx)(T.Button, {
       look: T.Button.Looks.LINK,
@@ -460,7 +460,7 @@ function et(e) {
   })), {
     header: C,
     body: l,
-    footer: R,
+    footer: g,
     nextStep: S,
     appDetails: N,
     sendAuthorize: e1
@@ -501,7 +501,7 @@ function en(e, t) {
 }
 
 function ei(e, t) {
-  if ((0, R.isMidjourneyOnboardingFlow)("create-guild-and-oauth2-modal")) {
+  if ((0, g.isMidjourneyOnboardingFlow)("create-guild-and-oauth2-modal")) {
     C.default.openCreateGuildModal({
       onSuccess: n => er({
         ...e,

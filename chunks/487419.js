@@ -2,10 +2,10 @@
 n.r(t), n("47120");
 var i, r, s, a, o = n("442837"),
   l = n("570140"),
-  u = n("581883"),
-  d = n("430824"),
-  _ = n("496675"),
-  c = n("983620"),
+  u = n("353926"),
+  d = n("581883"),
+  _ = n("430824"),
+  c = n("496675"),
   E = n("709054"),
   I = n("154285"),
   T = n("533244");
@@ -14,8 +14,8 @@ let f = {},
 
 function h() {
   var e;
-  let t = null !== (e = u.default.getGuildsProto()) && void 0 !== e ? e : {},
-    n = d.default.getGuilds(),
+  let t = null !== (e = d.default.getGuildsProto()) && void 0 !== e ? e : {},
+    n = _.default.getGuilds(),
     i = E.default.keys(n);
   for (let e of (S = {}, i))(0, I.getGuildAlertModeEnabled)(e).showAlertMode && (S[e] = {
     guildId: e,
@@ -34,7 +34,7 @@ function A(e) {
 }
 class m extends(i = o.default.Store) {
   initialize() {
-    this.waitFor(u.default, d.default, _.default, c.default), this.syncWith([u.default, d.default, _.default, c.default], h)
+    this.waitFor(d.default, _.default, c.default, u.default), this.syncWith([d.default, _.default, c.default, u.default], h)
   }
   getGuildIncident(e) {
     return f[e]

@@ -7,11 +7,11 @@ var s = n("735250"),
   r = n("481060"),
   u = n("893776"),
   o = n("232567"),
-  d = n("82554"),
-  c = n("726521"),
-  f = n("185625"),
-  E = n("314897"),
-  I = n("828695"),
+  d = n("353926"),
+  c = n("82554"),
+  f = n("726521"),
+  E = n("185625"),
+  I = n("314897"),
   _ = n("819570"),
   p = n("63063"),
   h = n("981631"),
@@ -39,10 +39,10 @@ let N = e => {
     })
   }, u = e => {
     let t = async () => {
-      await (0, f.sendUnauthenticatedReportPincode)(a, e)
-    }, i = async t => await (0, f.verifyUnauthenticatedReport)(a, e, t), u = e => {
+      await (0, E.sendUnauthenticatedReportPincode)(a, e)
+    }, i = async t => await (0, E.verifyUnauthenticatedReport)(a, e, t), u = e => {
       let t = null == e ? void 0 : e.token;
-      a === d.UnauthenticatedReportNames.MESSAGE ? (0, c.showUnauthenticatedReportModalForMessage)(t) : a === d.UnauthenticatedReportNames.USER && (0, c.showUnauthenticatedReportModalForUser)(t)
+      a === c.UnauthenticatedReportNames.MESSAGE ? (0, f.showUnauthenticatedReportModalForMessage)(t) : a === c.UnauthenticatedReportNames.USER && (0, f.showUnauthenticatedReportModalForUser)(t)
     };
     t(), (0, r.openModalLazy)(async () => {
       let {
@@ -72,18 +72,18 @@ let N = e => {
   })
 };
 t.default = () => {
-  let [e, t] = a.useState(!0), [n, l] = a.useState(!1), c = (0, i.useStateFromStores)([E.default], () => E.default.isAuthenticated()), A = (0, i.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), S = () => {
-    (0, f.getDsaExperiment)().then(() => {
+  let [e, t] = a.useState(!0), [n, l] = a.useState(!1), f = (0, i.useStateFromStores)([I.default], () => I.default.isAuthenticated()), A = (0, i.useStateFromStores)([d.default], () => d.default.hasLoadedExperiments), S = () => {
+    (0, E.getDsaExperiment)().then(() => {
       t(!1), l(!0)
     }).catch(() => {
       t(!1), l(!1)
     })
   };
   return a.useEffect(() => {
-    c ? (t(!0), o.fetchCurrentUser({
+    f ? (t(!0), o.fetchCurrentUser({
       withAnalyticsToken: !0
     }).then(() => S()).catch(() => t(!1))) : S()
-  }, [c]), a.useEffect(() => {
+  }, [f]), a.useEffect(() => {
     (async () => {
       !A && (await u.default.getLocationMetadata(), u.default.getExperiments())
     })()
@@ -102,10 +102,10 @@ t.default = () => {
       className: g.container,
       children: [(0, s.jsx)(N, {
         title: T.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
-        menuType: d.UnauthenticatedReportNames.MESSAGE
+        menuType: c.UnauthenticatedReportNames.MESSAGE
       }), (0, s.jsx)(N, {
         title: T.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
-        menuType: d.UnauthenticatedReportNames.USER
+        menuType: c.UnauthenticatedReportNames.USER
       })]
     })]
   })

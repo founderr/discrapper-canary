@@ -32,8 +32,8 @@ var l = t("735250"),
   N = t("155916"),
   C = t("138394"),
   b = t("131640"),
-  w = t("790711"),
-  _ = t("19836"),
+  _ = t("790711"),
+  w = t("19836"),
   M = t("538564"),
   B = t("319300"),
   R = t("584045"),
@@ -95,8 +95,8 @@ function er(e) {
     hideBioSection: eN = !1,
     hideRecentGames: eC = !1,
     forProfileEffectModal: eb = !1,
-    hideMemberStatusSection: ew = !0,
-    bodyClassName: e_,
+    hideMemberStatusSection: e_ = !0,
+    bodyClassName: ew,
     slideInAvatarDecoration: eM = !1,
     useLargeBanner: eB = !1
   } = e, eR = i.useRef(null), [ek, eO] = i.useState(!1), ez = z.GifAutoPlay.getSetting(), {
@@ -356,7 +356,7 @@ function er(e) {
       }), function() {
         let e = null == eG ? void 0 : eG.getPreviewBio(ef);
         return (0, l.jsxs)(j.default.Overlay, {
-          className: n()(ea.body, e_),
+          className: n()(ea.body, ew),
           children: [(0, l.jsx)(R.default, {
             isTryItOut: eE,
             user: K,
@@ -364,7 +364,7 @@ function er(e) {
             pronouns: null != em ? em : null == eG ? void 0 : eG.pronouns,
             usernameIcon: (() => {
               if (!!(null != eH) && null !== ev) {
-                if (!(null == eH.avatar && null == ev)) return (0, l.jsx)(w.default, {
+                if (!(null == eH.avatar && null == ev)) return (0, l.jsx)(_.default, {
                   user: K,
                   nickname: e9
                 })
@@ -372,7 +372,7 @@ function er(e) {
             })()
           }), !eU && (0, l.jsx)(M.default, {
             customStatusActivity: e2
-          }), (0, l.jsx)(C.default, {}), !eN && (0, l.jsx)(_.default, {
+          }), (0, l.jsx)(C.default, {}), !eN && (0, l.jsx)(w.default, {
             isUsingGuildBio: null == e ? void 0 : e.isUsingGuildValue,
             guild: er,
             bio: null == e ? void 0 : e.value,
@@ -381,7 +381,7 @@ function er(e) {
             lineClamp: eb ? 3 : void 0
           }), !eC && as && (0, l.jsx)(U.UserProfileRecentGamesSection, {
             userId: K.id
-          }), !ew && (0, l.jsx)(B.default, {
+          }), !e_ && (0, l.jsx)(B.default, {
             userId: K.id,
             guildId: null == er ? void 0 : er.id
           }), !ej && (0, l.jsx)(X.default, {

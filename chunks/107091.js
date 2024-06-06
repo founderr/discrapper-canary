@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return R
   }
 }), s("47120");
 var a = s("735250"),
@@ -33,7 +33,7 @@ let b = {
     yMin: -150,
     yMax: 0
   },
-  R = e => {
+  v = e => {
     let {
       children: t,
       ...s
@@ -46,11 +46,11 @@ let b = {
     })
   };
 
-function v(e) {
+function R(e) {
   let {
     product: t,
     paymentSource: s,
-    onPurchaseComplete: v,
+    onPurchaseComplete: R,
     onUse: A,
     onError: P,
     onReviewPurchase: O,
@@ -80,7 +80,7 @@ function v(e) {
     }),
     z = {
       onPurchaseComplete: () => {
-        G(!0), v()
+        G(!0), R()
       },
       onError: e => {
         P(e), Y(!0)
@@ -132,7 +132,7 @@ function v(e) {
           variant: "text-xs/normal",
           children: N.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
-      }), (0, a.jsx)(R, {
+      }), (0, a.jsx)(v, {
         style: V,
         onClick: () => {
           if (A(), (0, u.popLayer)(), K(), (null == B ? void 0 : B.type) === r.CollectiblesItemType.AVATAR_DECORATION) {

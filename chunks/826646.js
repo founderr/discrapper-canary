@@ -36,7 +36,7 @@ function I(e) {
     isTryItOutFlow: j,
     hideBioSection: U,
     hideExampleButton: N
-  } = e, C = (0, i.useStateFromStores)([m.default], () => null == T ? null : m.default.getMember(T.id, t.id)), b = (0, i.useStateFromStores)([v.default], () => v.default.hidePersonalInformation), w = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), _ = null == I ? void 0 : null === (a = I.getPreviewBio(y)) || void 0 === a ? void 0 : a.value, M = null != x ? x : null == I ? void 0 : I.pronouns, B = (0, p.getPreviewName)({
+  } = e, C = (0, i.useStateFromStores)([m.default], () => null == T ? null : m.default.getMember(T.id, t.id)), b = (0, i.useStateFromStores)([v.default], () => v.default.hidePersonalInformation), _ = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), w = null == I ? void 0 : null === (a = I.getPreviewBio(y)) || void 0 === a ? void 0 : a.value, M = null != x ? x : null == I ? void 0 : I.pronouns, B = (0, p.getPreviewName)({
     pendingNickname: A,
     pendingGlobalName: E,
     user: t,
@@ -68,12 +68,12 @@ function I(e) {
         isHovering: !0,
         disabled: !0
       })
-    }), w && (0, l.jsx)(n.default, {
+    }), _ && (0, l.jsx)(n.default, {
       userId: t.id,
       inline: !1
-    }), !U && null != _ && "" !== _ && (0, l.jsx)(f.default, {
+    }), !U && null != w && "" !== w && (0, l.jsx)(f.default, {
       user: t,
-      bio: _,
+      bio: w,
       hidePersonalInformation: b,
       disableViewFullBio: !0
     }), !N && (0, l.jsx)(d.default, {

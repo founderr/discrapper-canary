@@ -16,20 +16,20 @@ var l = a("735250"),
   g = a("923029"),
   _ = a("213557"),
   I = a("252618"),
-  x = a("688465"),
-  S = a("276438"),
-  v = a("642101"),
-  C = a("931261"),
-  N = a("333323"),
-  p = a("647341"),
-  T = a("984370"),
-  A = a("359110"),
-  j = a("14091"),
-  M = a("6025"),
-  D = a("897473"),
-  F = a("900157"),
-  L = a("433355"),
-  R = a("828695"),
+  x = a("353926"),
+  S = a("688465"),
+  v = a("276438"),
+  C = a("642101"),
+  N = a("931261"),
+  p = a("333323"),
+  T = a("647341"),
+  A = a("984370"),
+  j = a("359110"),
+  M = a("14091"),
+  D = a("6025"),
+  F = a("897473"),
+  L = a("900157"),
+  R = a("433355"),
   b = a("430824"),
   G = a("496675"),
   O = a("768119"),
@@ -71,7 +71,7 @@ let er = 936,
         tooltip: en.default.Messages.REFRESH,
         icon: H.default,
         onClick: function() {
-          (0, S.fetchGuildFeed)({
+          (0, v.fetchGuildFeed)({
             guildId: e.id,
             refresh: !0,
             flushSeenItems: () => {
@@ -80,24 +80,24 @@ let er = 936,
             }
           })
         }
-      })), a && n.push((0, l.jsx)(p.default, {
+      })), a && n.push((0, l.jsx)(T.default, {
         guildId: e.id
       })), n
     }(t, a);
-    return (0, l.jsxs)(T.default, {
+    return (0, l.jsxs)(A.default, {
       channelId: ea.StaticChannelRoute.GUILD_HOME,
       guildId: t.id,
       className: i()(ei.title, es.background),
       innerClassname: es.headerBarInner,
       toolbar: n,
-      children: [(0, l.jsx)(T.default.Icon, {
+      children: [(0, l.jsx)(A.default.Icon, {
         icon: y.default,
         "aria-hidden": !0
-      }), (0, l.jsxs)(T.default.Title, {
+      }), (0, l.jsxs)(A.default.Title, {
         children: [(0, l.jsx)(u.HiddenVisually, {
           children: t.name
         }), en.default.Messages.GUILD_HOME]
-      }), (0, l.jsx)(x.default, {})]
+      }), (0, l.jsx)(S.default, {})]
     })
   }),
   eo = n.memo(function(e) {
@@ -153,14 +153,14 @@ function ec(e) {
       pageWidth: a,
       onSidebarResize: n
     } = e,
-    s = (0, r.useStateFromStores)([L.default], () => L.default.getSidebarState(ea.StaticChannelRoute.GUILD_HOME));
+    s = (0, r.useStateFromStores)([R.default], () => R.default.getSidebarState(ea.StaticChannelRoute.GUILD_HOME));
   if (null == s) return null;
   let i = a - et.CHANNEL_SIDEBAR_WIDTH - 552;
-  return s.type === D.SidebarType.VIEW_THREAD ? t = (0, l.jsx)(F.default, {
+  return s.type === F.SidebarType.VIEW_THREAD ? t = (0, l.jsx)(L.default, {
     channelId: s.channelId,
     baseChannelId: ea.StaticChannelRoute.GUILD_HOME,
     channelViewSource: "Home View"
-  }) : s.type === D.SidebarType.VIEW_CHANNEL && (t = (0, l.jsx)(_.default, {
+  }) : s.type === F.SidebarType.VIEW_CHANNEL && (t = (0, l.jsx)(_.default, {
     channelId: s.channelId,
     baseChannelId: ea.StaticChannelRoute.GUILD_HOME,
     channelViewSource: "Home View"
@@ -206,9 +206,9 @@ let eh = (0, c.default)(function(e) {
       guild: t,
       width: a,
       height: s
-    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [g, _] = n.useState(!1), [x, S] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
-      ref: D
-    } = (0, f.default)(), [F, R] = n.useState(el.GuildFeedRenderMode.SEGMENTED_READ), b = (0, m.default)(el.COLLAPSED_SIZE_MEDIA_QUERY), G = n.useRef(!1), {
+    } = e, o = t.id, c = (0, r.useStateFromStores)([R.default], () => R.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [g, _] = n.useState(!1), [x, S] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), v = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = v || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
+      ref: j
+    } = (0, f.default)(), [F, L] = n.useState(el.GuildFeedRenderMode.SEGMENTED_READ), b = (0, m.default)(el.COLLAPSED_SIZE_MEDIA_QUERY), G = n.useRef(!1), {
       hasNewHeader: y
     } = V.GuildHomeHeaderRedesignExperiment.useExperiment({
       guildId: o,
@@ -221,7 +221,7 @@ let eh = (0, c.default)(function(e) {
     n.useEffect(() => {
       G.current = !1
     }, [o]), n.useEffect(() => {
-      null == v.default.getLoadId(o) && M.default.closeChannelSidebar(ea.StaticChannelRoute.GUILD_HOME)
+      null == C.default.getLoadId(o) && D.default.closeChannelSidebar(ea.StaticChannelRoute.GUILD_HOME)
     }, [o]), (0, X.default)(o), n.useLayoutEffect(() => {
       var e, t;
       let a = W.default.getSavedScrollPosition(o);
@@ -273,7 +273,7 @@ let eh = (0, c.default)(function(e) {
           guild: t,
           seenManagerRef: z
         }), (0, l.jsxs)("div", {
-          ref: D,
+          ref: j,
           className: ei.content,
           children: [(0, l.jsx)(d.ListNavigatorProvider, {
             navigator: A,
@@ -328,7 +328,7 @@ let eh = (0, c.default)(function(e) {
                           children: en.default.Messages.GUILD_FEED_TITLE
                         }), (0, l.jsx)(em, {
                           renderMode: F,
-                          setRenderMode: R
+                          setRenderMode: L
                         })]
                       }),
                       children: (0, l.jsx)(J.default, {
@@ -342,7 +342,7 @@ let eh = (0, c.default)(function(e) {
                 })
               }
             })
-          }), C && null != E && (0, l.jsx)(j.default, {
+          }), v && null != E && (0, l.jsx)(M.default, {
             searchId: E
           })]
         })]
@@ -354,11 +354,11 @@ let eh = (0, c.default)(function(e) {
       }) : null]
     })
   }),
-  eE = (0, c.default)(N.default);
+  eE = (0, c.default)(p.default);
 t.default = function(e) {
   let {
     guildId: t
-  } = e, a = (0, r.useStateFromStores)([b.default], () => b.default.getGuild(t), [t]), s = (0, Y.default)(), i = (0, r.useStateFromStores)([R.default], () => R.default.hasLoadedExperiments), d = (0, C.useCanSeeOnboardingHome)(t);
+  } = e, a = (0, r.useStateFromStores)([b.default], () => b.default.getGuild(t), [t]), s = (0, Y.default)(), i = (0, r.useStateFromStores)([x.default], () => x.default.hasLoadedExperiments), d = (0, N.useCanSeeOnboardingHome)(t);
   return (n.useLayoutEffect(() => {
     (0, P.ensureGuildHomeSession)(t)
   }, [t]), n.useEffect(() => {
@@ -371,7 +371,7 @@ t.default = function(e) {
         messageId: l
       } = s;
       if (!a) {
-        (0, A.transitionToMessage)(t, l);
+        (0, j.transitionToMessage)(t, l);
         return
       }
       e = el.GuildHomeLandingSource.HIGHLIGHTS

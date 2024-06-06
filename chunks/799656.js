@@ -4,14 +4,14 @@
     a("470079");
     var n = a("613828"),
       c = a("442837"),
-      i = a("314897"),
-      o = a("828695"),
+      i = a("353926"),
+      o = a("314897"),
       r = a("981631");
-    t.default = c.default.connectStores([o.default, i.default], () => {
-      let e = i.default.getToken();
+    t.default = c.default.connectStores([i.default, o.default], () => {
+      let e = o.default.getToken();
       return {
         token: e,
-        hasLoadedExperiments: null != e || o.default.hasLoadedExperiments
+        hasLoadedExperiments: null != e || i.default.hasLoadedExperiments
       }
     })(e => {
       let {
