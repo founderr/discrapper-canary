@@ -33,45 +33,43 @@ function O(e) {
     guildId: C,
     profileType: R,
     pendingBanner: g,
-    overrideBannerWidth: L,
-    children: v,
-    animateOnHover: D = !1,
-    hasProfileEffect: M = !1,
-    canUsePremiumCustomization: y = !1
-  } = e, P = y || S.default.isPremiumAtLeast(null == O ? void 0 : O.premiumType, N.PremiumTypes.TIER_2), [U, b] = r.useState(!1), G = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), w = E.GifAutoPlay.getSetting(), {
-    bannerSrc: k,
-    status: B
+    children: L,
+    animateOnHover: v = !1,
+    hasProfileEffect: D = !1,
+    canUsePremiumCustomization: M = !1
+  } = e, y = M || S.default.isPremiumAtLeast(null == O ? void 0 : O.premiumType, N.PremiumTypes.TIER_2), [P, U] = r.useState(!1), b = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), G = E.GifAutoPlay.getSetting(), {
+    bannerSrc: w,
+    status: k
   } = (0, h.default)({
     displayProfile: O,
     pendingBanner: g,
     size: (0, m.getUserBannerSize)(R),
-    canAnimate: D || !w ? U : G
-  }), V = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), x = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), F = (0, o.hex2int)((0, _.default)(s.getAvatarURL(C, x), V, !1)), H = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : F).hsl;
+    canAnimate: v || !G ? P : b
+  }), B = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), V = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), x = (0, o.hex2int)((0, _.default)(s.getAvatarURL(C, V), B, !1)), F = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : x).hsl;
   return (0, i.jsx)(A.default, {
-    isPremium: P,
+    isPremium: y,
     hasThemeColors: null !== (n = null == O ? void 0 : O.canEditThemes) && void 0 !== n && n,
     profileType: R,
-    hasBanner: null != k,
-    hasProfileEffect: M,
-    overrideBannerWidth: L,
+    hasBanner: null != w,
+    hasProfileEffect: D,
     children: (0, i.jsxs)("div", {
       className: a()(p.banner, p.divider, (0, m.getUserBannerStyles)({
         profileType: R,
         user: {
-          hasBanner: null != k,
-          isPremium: P,
-          hasProfileEffect: M
+          hasBanner: null != w,
+          isPremium: y,
+          hasProfileEffect: D
         }
       })),
-      onMouseMove: () => b(!0),
-      onMouseLeave: () => b(!1),
+      onMouseMove: () => U(!0),
+      onMouseLeave: () => U(!1),
       style: {
-        backgroundImage: null != k ? "url(".concat(k, ")") : void 0,
-        backgroundColor: B !== h.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : H
+        backgroundImage: null != w ? "url(".concat(w, ")") : void 0,
+        backgroundColor: k !== h.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : F
       },
-      children: [!w && (0, f.isAnimatedImageURL)(k) && (0, i.jsx)(T.default, {
+      children: [!G && (0, f.isAnimatedImageURL)(w) && (0, i.jsx)(T.default, {
         className: p.gifTag
-      }), v]
+      }), L]
     })
   })
 }

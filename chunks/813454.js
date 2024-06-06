@@ -26,34 +26,32 @@ function m(e) {
     hasProfileEffect: h,
     isTryItOutFlow: g,
     disabledInputs: S,
-    forProfileEffectModal: I,
-    onUpsellClick: T
-  } = e, A = v || (null == t ? void 0 : t.canUsePremiumProfileCustomization), P = A ? s.default : i.NitroWheelIcon;
+    onUpsellClick: I
+  } = e, T = v || (null == t ? void 0 : t.canUsePremiumProfileCustomization), A = T ? s.default : i.NitroWheelIcon;
   return (0, l.jsx)(n.default, {
     user: a,
     displayProfile: t,
     guildId: m,
     profileType: d.UserProfileTypes.BITE_SIZE,
     pendingBanner: p,
-    overrideBannerWidth: I ? 280 : void 0,
     hasProfileEffect: h,
     canUsePremiumCustomization: v,
     children: !S && (0, l.jsxs)(r.Clickable, {
       onClick: () => {
-        if (!A) {
-          null == T || T();
+        if (!T) {
+          null == I || I();
           return
         }(0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, m, g)
       },
       className: f.clickable,
-      children: [(0, l.jsx)(P, {
+      children: [(0, l.jsx)(A, {
         width: 16,
         height: 16,
         color: "white"
       }), (0, l.jsx)(r.Heading, {
         variant: "text-sm/medium",
         color: "always-white",
-        children: A ? c.default.Messages.CHANGE_BANNER : c.default.Messages.USER_SETTINGS_UNLOCK_BANNER
+        children: T ? c.default.Messages.CHANGE_BANNER : c.default.Messages.USER_SETTINGS_UNLOCK_BANNER
       })]
     })
   })
