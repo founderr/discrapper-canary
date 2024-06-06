@@ -260,7 +260,7 @@ class g extends(r = o.Component) {
       quality: d,
       state: e ? p.ImageReadyStates.ERROR : this.state.readyState,
       data_saving_mode: I.default.dataSavingMode,
-      low_quality_image_mode: I.default.lowQualityImageMode,
+      low_quality_image_mode: I.default.dataSavingMode,
       trigger: n,
       size: a,
       connection_type: T.default.getType(),
