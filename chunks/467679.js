@@ -56,7 +56,7 @@ let c = e => {
     children: e => (0, i.jsx)(a.CheckmarkSmallBoldIcon, {
       ...e,
       className: _.botTagVerified,
-      color: l.tokens.colors.WHITE
+      color: l.tokens.unsafe_rawColors.WHITE_500
     })
   })), t = r === u.BotTagTypes.AI ? _.botTagAI : n ? _.botTagInvert : _.botTagRegular;
   let p = e => (0, i.jsxs)("span", {
