@@ -2,28 +2,25 @@
 n.r(t);
 var a = n("735250"),
   l = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
-  r = n("442837"),
-  o = n("481060"),
-  u = n("160620"),
-  d = n("499254"),
-  c = n("541099"),
-  f = n("957825"),
-  h = n("752862");
+  s = n("442837"),
+  i = n("481060"),
+  r = n("160620"),
+  o = n("499254"),
+  u = n("541099"),
+  d = n("752862");
 t.default = l.memo(l.forwardRef(function(e, t) {
-  let n = (0, r.useStateFromStores)([c.default], () => c.default.shouldShowPopup()),
-    s = l.useCallback(() => {
-      n ? d.dismissAppLauncherPopup() : d.showAppLauncherPopup()
+  let n = (0, s.useStateFromStores)([u.default], () => u.default.shouldShowPopup()),
+    c = l.useCallback(() => {
+      n ? o.dismissAppLauncherPopup() : o.showAppLauncherPopup()
     }, [n]);
-  return (0, a.jsx)(o.Tooltip, {
+  return (0, a.jsx)(i.Tooltip, {
     text: "Use an App",
     children: e => (0, a.jsx)("div", {
       ref: t,
       ...e,
-      className: i()(f.CHAT_INPUT_BUTTON_CLASSNAME, h.buttonContainer),
-      children: (0, a.jsx)(u.default, {
-        onClick: s,
+      className: d.buttonContainer,
+      children: (0, a.jsx)(r.default, {
+        onClick: c,
         tabIndex: 0,
         focusProps: {
           offset: {
