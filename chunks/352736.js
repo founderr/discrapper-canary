@@ -1,207 +1,235 @@
 "use strict";
-a.r(t);
-var s = a("25209"),
-  n = a("97797"),
-  E = a("35125"),
-  l = a("786761"),
-  _ = a("739566"),
-  r = a("499401"),
-  u = a("693912"),
-  M = a("23750"),
-  S = a("314897"),
-  i = a("592125"),
-  T = a("430824"),
-  d = a("594174"),
-  N = a("5192"),
-  I = a("709054"),
-  o = a("981631"),
-  O = a("689938");
-let A = {
-    "234395307759108106": "https://groovy.bot/commands",
-    "365975655608745985": "https://www.pokecord.com/getting-started",
-    "512412940897484800": "http://jameslantz.net/smilebot"
+s.r(t);
+var a, E, n = s("25209"),
+  _ = s("97797"),
+  l = s("35125"),
+  u = s("786761"),
+  M = s("739566"),
+  r = s("499401"),
+  S = s("693912"),
+  i = s("23750"),
+  d = s("314897"),
+  A = s("592125"),
+  N = s("430824"),
+  O = s("594174"),
+  T = s("5192"),
+  g = s("709054"),
+  I = s("981631"),
+  o = s("689938");
+let f = {
+  "234395307759108106": "https://groovy.bot/commands",
+  "365975655608745985": "https://www.pokecord.com/getting-started",
+  "512412940897484800": "http://jameslantz.net/smilebot"
+};
+(a = E || (E = {})).NORMAL = "NORMAL", a.CLAN = "CLAN";
+let c = () => [o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012_HOOK, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013_HOOK],
+  C = () => [o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012, o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013],
+  L = () => [o.default.Messages.CLAN_WELCOME_MESSAGE_0_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_1_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_2_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_3_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_4_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_5_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_6_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_7_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_8_HOOK, o.default.Messages.CLAN_WELCOME_MESSAGE_9_HOOK],
+  G = () => [o.default.Messages.CLAN_WELCOME_MESSAGE_0, o.default.Messages.CLAN_WELCOME_MESSAGE_1, o.default.Messages.CLAN_WELCOME_MESSAGE_2, o.default.Messages.CLAN_WELCOME_MESSAGE_3, o.default.Messages.CLAN_WELCOME_MESSAGE_4, o.default.Messages.CLAN_WELCOME_MESSAGE_5, o.default.Messages.CLAN_WELCOME_MESSAGE_6, o.default.Messages.CLAN_WELCOME_MESSAGE_7, o.default.Messages.CLAN_WELCOME_MESSAGE_8, o.default.Messages.CLAN_WELCOME_MESSAGE_9],
+  R = e => {
+    switch (e) {
+      case "NORMAL":
+      default:
+        return c();
+      case "CLAN":
+        return L()
+    }
   },
-  g = () => [O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012_HOOK, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013_HOOK],
-  f = () => [O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012, O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013];
+  m = e => {
+    switch (e) {
+      case "NORMAL":
+      default:
+        return C();
+      case "CLAN":
+        return G()
+    }
+  };
 
-function c(e) {
-  let t = f(),
-    a = I.default.extractTimestamp(e) % t.length;
-  return t[a]
+function U(e, t) {
+  let s = m(t),
+    a = g.default.extractTimestamp(e) % s.length;
+  return s[a]
 }
 
-function R(e) {
-  return (0, s.astToString)(O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
+function D(e) {
+  return (0, n.astToString)(o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
     username: e,
-    usernameOnClick: o.NOOP
+    usernameOnClick: I.NOOP
   }))
 }
 
-function C(e, t) {
-  let a = i.default.getChannel(t);
-  return null == a || null == T.default.getGuild(a.getGuildId()) ? R(e) : (0, s.astToString)(O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
+function p(e, t) {
+  let s = A.default.getChannel(t);
+  return null == s || null == N.default.getGuild(s.getGuildId()) ? D(e) : (0, n.astToString)(o.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
     username: e,
-    usernameOnClick: o.NOOP
+    usernameOnClick: I.NOOP
   }))
+}
+
+function h(e) {
+  var t;
+  return (null === (t = N.default.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(I.GuildFeatures.CLAN)) ? "CLAN" : "NORMAL"
 }
 t.default = {
   stringify: function(e, t) {
-    var a, I, A, g;
-    let f = null === (a = e.mentions) || void 0 === a ? void 0 : a[0],
-      G = null != f && "string" != typeof f ? d.default.getUser(f.id) : void 0,
-      L = e.channel_id,
-      m = N.default.getName(null, L, e.author);
+    var s, a, E, g;
+    let f = null === (s = e.mentions) || void 0 === s ? void 0 : s[0],
+      c = null != f && "string" != typeof f ? O.default.getUser(f.id) : void 0,
+      C = e.channel_id,
+      L = T.default.getName(null, C, e.author);
     switch (e.type) {
-      case o.MessageTypes.RECIPIENT_ADD:
-        if (null == G) return;
-        return (0, s.astToString)(O.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD.astFormat({
-          username: m,
-          usernameOnClick: o.NOOP,
-          otherUsername: N.default.getName(null, L, G),
-          otherUsernameOnClick: o.NOOP
+      case I.MessageTypes.RECIPIENT_ADD:
+        if (null == c) return;
+        return (0, n.astToString)(o.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD.astFormat({
+          username: L,
+          usernameOnClick: I.NOOP,
+          otherUsername: T.default.getName(null, C, c),
+          otherUsernameOnClick: I.NOOP
         }));
-      case o.MessageTypes.RECIPIENT_REMOVE:
-        if (null == G) return;
-        let U = e.author;
-        if (null == U || U.id === G.id) return (0, s.astToString)(O.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF.astFormat({
-          username: m,
-          usernameOnClick: o.NOOP
+      case I.MessageTypes.RECIPIENT_REMOVE:
+        if (null == c) return;
+        let G = e.author;
+        if (null == G || G.id === c.id) return (0, n.astToString)(o.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF.astFormat({
+          username: L,
+          usernameOnClick: I.NOOP
         }));
-        return (0, s.astToString)(O.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE.astFormat({
-          username: m,
-          usernameOnClick: o.NOOP,
-          otherUsername: N.default.getName(null, L, G),
-          otherUsernameOnClick: o.NOOP
+        return (0, n.astToString)(o.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE.astFormat({
+          username: L,
+          usernameOnClick: I.NOOP,
+          otherUsername: T.default.getName(null, C, c),
+          otherUsernameOnClick: I.NOOP
         }));
-      case o.MessageTypes.CALL:
+      case I.MessageTypes.CALL:
         let {
-          call: D
+          call: R
         } = e;
-        if (null != D && -1 === D.participants.indexOf(S.default.getId())) return (0, s.astToString)(O.default.Messages.SYSTEM_MESSAGE_CALL_STARTED.astFormat({
-          username: m,
-          usernameOnClick: o.NOOP
+        if (null != R && -1 === R.participants.indexOf(d.default.getId())) return (0, n.astToString)(o.default.Messages.SYSTEM_MESSAGE_CALL_STARTED.astFormat({
+          username: L,
+          usernameOnClick: I.NOOP
         }));
         return;
-      case o.MessageTypes.CHANNEL_NAME_CHANGE:
-        return (0, s.astToString)((t.isForumPost() ? O.default.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE : O.default.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE).astFormat({
-          username: m,
-          usernameOnClick: o.NOOP,
+      case I.MessageTypes.CHANNEL_NAME_CHANGE:
+        return (0, n.astToString)((t.isForumPost() ? o.default.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE : o.default.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE).astFormat({
+          username: L,
+          usernameOnClick: I.NOOP,
           channelName: e.content
         }));
-      case o.MessageTypes.CHANNEL_ICON_CHANGE:
-        return (0, s.astToString)(O.default.Messages.SYSTEM_MESSAGE_CHANNEL_ICON_CHANGE.astFormat({
-          username: m,
-          usernameOnClick: o.NOOP
+      case I.MessageTypes.CHANNEL_ICON_CHANGE:
+        return (0, n.astToString)(o.default.Messages.SYSTEM_MESSAGE_CHANNEL_ICON_CHANGE.astFormat({
+          username: L,
+          usernameOnClick: I.NOOP
         }));
-      case o.MessageTypes.CHANNEL_PINNED_MESSAGE:
-        return (0, s.astToString)(O.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA.astFormat({
-          username: m,
-          usernameOnClick: o.NOOP
+      case I.MessageTypes.CHANNEL_PINNED_MESSAGE:
+        return (0, n.astToString)(o.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA.astFormat({
+          username: L,
+          usernameOnClick: I.NOOP
         }));
-      case o.MessageTypes.USER_JOIN:
-        return (0, s.astToString)(c(e.id).astFormat({
-          username: m,
-          usernameOnClick: o.NOOP
+      case I.MessageTypes.USER_JOIN:
+        let m = h(t.guild_id);
+        return (0, n.astToString)(U(e.id, m).astFormat({
+          username: L,
+          usernameOnClick: I.NOOP
         }));
-      case o.MessageTypes.GUILD_BOOST:
-        return R(m);
-      case o.MessageTypes.GUILD_BOOST_TIER_1:
-      case o.MessageTypes.GUILD_BOOST_TIER_2:
-      case o.MessageTypes.GUILD_BOOST_TIER_3:
-        return C(m, L);
-      case o.MessageTypes.GUILD_INVITE_REMINDER:
-        return O.default.Messages.SYSTEM_MESSAGE_INVITE_NOTIFICATION;
-      case o.MessageTypes.THREAD_STARTER_MESSAGE:
-        return O.default.Messages.THREAD_STARTER_MESSAGE_NOTIFICATION.format({
-          username: m,
+      case I.MessageTypes.GUILD_BOOST:
+        return D(L);
+      case I.MessageTypes.GUILD_BOOST_TIER_1:
+      case I.MessageTypes.GUILD_BOOST_TIER_2:
+      case I.MessageTypes.GUILD_BOOST_TIER_3:
+        return p(L, C);
+      case I.MessageTypes.GUILD_INVITE_REMINDER:
+        return o.default.Messages.SYSTEM_MESSAGE_INVITE_NOTIFICATION;
+      case I.MessageTypes.THREAD_STARTER_MESSAGE:
+        return o.default.Messages.THREAD_STARTER_MESSAGE_NOTIFICATION.format({
+          username: L,
           threadName: t.name
         });
-      case o.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE:
-        if (e instanceof M.default) return null;
-        return (0, s.astToString)((0, E.getRoleSubscriptionPurchaseSystemMessageContentMobile)({
-          username: m,
+      case I.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE:
+        if (e instanceof i.default) return null;
+        return (0, n.astToString)((0, l.getRoleSubscriptionPurchaseSystemMessageContentMobile)({
+          username: L,
           guildId: t.guild_id,
           roleSubscriptionData: e.role_subscription_data
         }));
-      case o.MessageTypes.PURCHASE_NOTIFICATION:
-        if (e instanceof M.default || (null === (A = e.purchase_notification) || void 0 === A ? void 0 : null === (I = A.guild_product_purchase) || void 0 === I ? void 0 : I.product_name) == null) return null;
-        return (0, s.astToString)((0, n.getGuildProductPurchaseSystemMessageContentMobile)({
-          username: m,
+      case I.MessageTypes.PURCHASE_NOTIFICATION:
+        if (e instanceof i.default || (null === (E = e.purchase_notification) || void 0 === E ? void 0 : null === (a = E.guild_product_purchase) || void 0 === a ? void 0 : a.product_name) == null) return null;
+        return (0, n.astToString)((0, _.getGuildProductPurchaseSystemMessageContentMobile)({
+          username: L,
           productName: e.purchase_notification.guild_product_purchase.product_name
         }));
-      case o.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
-        if (e instanceof M.default) return null;
-        let p = (0, _.getMessageAuthor)((0, l.createMessageRecord)(e));
-        return (0, s.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
+      case I.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
+        if (e instanceof i.default) return null;
+        let H = (0, M.getMessageAuthor)((0, u.createMessageRecord)(e));
+        return (0, n.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
           application: e.application,
-          username: p.nick
+          username: H.nick
         }));
-      case o.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED:
-        if (e instanceof M.default) return null;
-        return (0, s.astToString)((0, u.getPrivateChannelIntegrationAddedSystemMessageASTContent)({
+      case I.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED:
+        if (e instanceof i.default) return null;
+        return (0, n.astToString)((0, S.getPrivateChannelIntegrationAddedSystemMessageASTContent)({
           application: e.application,
-          username: (0, _.getMessageAuthor)((0, l.createMessageRecord)(e)).nick
+          username: (0, M.getMessageAuthor)((0, u.createMessageRecord)(e)).nick
         }));
-      case o.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED:
-        if (e instanceof M.default) return null;
-        return (0, s.astToString)((0, u.getPrivateChannelIntegrationRemovedSystemMessageASTContent)({
+      case I.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED:
+        if (e instanceof i.default) return null;
+        return (0, n.astToString)((0, S.getPrivateChannelIntegrationRemovedSystemMessageASTContent)({
           application: e.application,
-          username: (0, _.getMessageAuthor)((0, l.createMessageRecord)(e)).nick
+          username: (0, M.getMessageAuthor)((0, u.createMessageRecord)(e)).nick
         }));
-      case o.MessageTypes.AUTO_MODERATION_ACTION:
+      case I.MessageTypes.AUTO_MODERATION_ACTION:
         if (null === (g = e.embeds) || void 0 === g ? void 0 : g.some(e => {
             let {
               type: t
             } = e;
-            return t === o.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION
+            return t === I.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION
           })) return function(e) {
-          let t = i.default.getChannel(e);
+          let t = A.default.getChannel(e);
           if (null == t) return null;
-          let a = T.default.getGuild(t.getGuildId());
-          return null == a ? null : (0, s.astToString)(O.default.Messages.GUILD_SERVER_RAID_ALERT_NOTIFICATION.astFormat({
-            guildName: a.name
+          let s = N.default.getGuild(t.getGuildId());
+          return null == s ? null : (0, n.astToString)(o.default.Messages.GUILD_SERVER_RAID_ALERT_NOTIFICATION.astFormat({
+            guildName: s.name
           }))
-        }(L);
+        }(C);
         return e.content;
-      case o.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED:
-        return function(e, t, a) {
-          let n = i.default.getChannel(t);
-          if (null == n) return null;
-          let E = T.default.getGuild(n.getGuildId());
-          return null == E ? null : (0, s.astToString)(O.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
+      case I.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED:
+        return function(e, t, s) {
+          let a = A.default.getChannel(t);
+          if (null == a) return null;
+          let E = N.default.getGuild(a.getGuildId());
+          return null == E ? null : (0, n.astToString)(o.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
             username: e,
             guildName: E.name,
-            time: "" !== a ? new Date(a).toLocaleString(O.default.getLocale(), {
+            time: "" !== s ? new Date(s).toLocaleString(o.default.getLocale(), {
               hour: "numeric",
               minute: "2-digit"
             }) : ""
           }))
-        }(m, L, e.content);
-      case o.MessageTypes.GUILD_INCIDENT_ALERT_MODE_DISABLED:
+        }(L, C, e.content);
+      case I.MessageTypes.GUILD_INCIDENT_ALERT_MODE_DISABLED:
         return function(e, t) {
-          let a = i.default.getChannel(t);
-          if (null == a) return null;
-          let n = T.default.getGuild(a.getGuildId());
-          return null == n ? null : (0, s.astToString)(O.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
+          let s = A.default.getChannel(t);
+          if (null == s) return null;
+          let a = N.default.getGuild(s.getGuildId());
+          return null == a ? null : (0, n.astToString)(o.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
             username: e,
-            guildName: n.name
+            guildName: a.name
           }))
-        }(m, L);
+        }(L, C);
       default:
         return e.content
     }
   },
-  getSystemMessageUserJoin: function(e) {
-    let t = g(),
-      a = I.default.extractTimestamp(e) % t.length;
-    return t[a]
+  getSystemMessageUserJoin: function(e, t) {
+    let s = R(t),
+      a = g.default.extractTimestamp(e) % s.length;
+    return s[a]
   },
-  getSystemMessageUserJoinMobile: c,
+  getSystemMessageUserJoinMobile: U,
   getSystemMessageBotJoin: function(e) {
-    return null == A[e] ? null : O.default.Messages.SYSTEM_MESSAGE_GUILD_BOT_JOIN.format({
+    return null == f[e] ? null : o.default.Messages.SYSTEM_MESSAGE_GUILD_BOT_JOIN.format({
       learnOnClick: {
-        onClick: () => window.open(A[e])
+        onClick: () => window.open(f[e])
       }
     })
-  }
+  },
+  getWelcomeMessageKind: h
 }

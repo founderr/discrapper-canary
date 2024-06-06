@@ -14,15 +14,16 @@ function r(e) {
   let {
     message: t,
     usernameHook: r,
-    compact: o
-  } = e, u = (0, a.default)(t), d = r(u), c = i.default.getSystemMessageUserJoin(t.id).format({
-    username: u.nick,
-    usernameHook: d
+    compact: o,
+    guildId: u
+  } = e, d = (0, a.default)(t), c = r(d), f = i.default.getWelcomeMessageKind(u), E = i.default.getSystemMessageUserJoin(t.id, f).format({
+    username: d.nick,
+    usernameHook: c
   });
   return (0, s.jsx)(l.default, {
     icon: n("570111"),
     timestamp: t.timestamp,
     compact: o,
-    children: c
+    children: E
   })
 }

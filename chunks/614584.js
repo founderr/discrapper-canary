@@ -37,10 +37,13 @@ let A = l.memo(function(e) {
   } = e, y = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, g.useNullableMessageAuthor)(y), O = (0, u.useActiveKeywordFiltersCacheKey)(), j = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
     if (null == y) return null;
     let e = (0, r.default)(y);
-    if (e.type === T.MessageTypes.USER_JOIN) return (0, i.astToString)(E.default.getSystemMessageUserJoin(e.id).astFormat({
-      username: null != L ? L.nick : e.author.username,
-      usernameHook: e => e
-    }));
+    if (e.type === T.MessageTypes.USER_JOIN) {
+      let t = E.default.getWelcomeMessageKind(v.guild_id);
+      return (0, i.astToString)(E.default.getSystemMessageUserJoin(e.id, t).astFormat({
+        username: null != L ? L.nick : e.author.username,
+        usernameHook: e => e
+      }))
+    }
     if (e.type === T.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, o.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
       username: null != L ? L.nick : e.author.username,
       guildId: null == v ? void 0 : v.guild_id,

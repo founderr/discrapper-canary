@@ -306,6 +306,7 @@ let eR = Object.freeze({
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(ef.default, {
         message: t,
+        guildId: a.guild_id,
         compact: n,
         usernameHook: r
       }), (0, s.jsx)(D.WelcomeCTAContainer, {
