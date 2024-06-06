@@ -41211,8 +41211,8 @@ div.profileThemedContainer__6e645 {
 .errorState_c6cca2 {
     padding: 20px 20px 40px;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     text-align: center
 }
 
@@ -41274,7 +41274,7 @@ div.profileThemedContainer__6e645 {
 
 .confirmChannelName_a42e11 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: .875rem;
     margin-left: 8px;
     color: var(--header-primary)
 }
@@ -41282,7 +41282,7 @@ div.profileThemedContainer__6e645 {
 .lastActiveTimestamp_d49b9c {
     margin-left: 8px;
     color: var(--text-muted);
-    font-size: 12px;
+    font-size: .75rem;
     margin-top: 2px
 }
 
@@ -73122,8 +73122,8 @@ html .invoiceCancelRow_aa7946 {
 
 .bodyText_fa331b {
     color: var(--interactive-normal);
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 500;
     margin-bottom: 16px
 }
@@ -73170,8 +73170,8 @@ html .invoiceCancelRow_aa7946 {
 }
 
 .trialCheckboxLabel__7d1e0 {
-    font-size: 14px;
-    line-height: 18px
+    font-size: .875rem;
+    line-height: 1.125rem
 }
 
 .loader_acb69b {
@@ -89876,7 +89876,7 @@ html .invoiceCancelRow__6ff3e {
 }
 
 .title__63238 {
-    font-size: 17px
+    font-size: 1.0625rem
 }
 
 .developerResources__8ef1d:hover {
@@ -89907,8 +89907,8 @@ html .invoiceCancelRow__6ff3e {
 }
 
 .backHeader_cff6da {
-    font-size: 17px;
-    line-height: 24px;
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
     color: var(--interactive-normal)
 }
 

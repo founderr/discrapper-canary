@@ -405,7 +405,7 @@ function X(e) {
       s = (0, i.jsx)(v.default, {
         premiumType: y,
         titleText: Y.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
-        subtitleText: A ? Y.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD : Y.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
+        subtitleText: A ? Y.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2 : Y.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
         subtitleClassName: A ? H.subtitleSection : void 0,
         subtitleIcon: A && (0, i.jsx)("div", {
           className: H.subtitleIcon,

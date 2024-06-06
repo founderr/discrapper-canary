@@ -37,22 +37,26 @@ function m() {
     i = (0, I.getTenureRewardEntitlement)([f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH, f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS], t),
     a = l.default.getCurrentUser();
   if (!(0, d.isPremiumExactly)(a, T.PremiumTypes.TIER_2) && null == n) {
-    s.default.dispatch({
+    null != a && s.default.dispatch({
       type: "USER_TENURE_REWARD_STATUS_RESET"
     });
     return
   }
-  if (!!(0, c.isUserEligibleForNitroTenureRewardCard)({
+  if ((0, c.isUserEligibleForNitroTenureRewardCard)({
       location: "tenure_reward_manager"
-    }))
-    if ((E.default.getFetchState() !== E.FetchState.FETCHED || !0 === e || function() {
-        var e;
-        let t = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
-        return null != t && null != t.redeemable_at && 0 >= r()(t.redeemable_at).diff(r().utc(), "seconds")
-      }() || function() {
-        let e = E.default.getState();
-        return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 12096e5
-      }()) && null == i) N();
+    })) {
+    if ((!0 === e || function(e) {
+        if (E.default.getFetchState() !== E.FetchState.FETCHED) return !0;
+        let t = (0, I.getFreeBoostTenureRewardStatus)();
+        return null != t && null != e && e.id !== t.user_id || function() {
+          let e = E.default.getState();
+          return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 12096e5
+        }() || function() {
+          var e;
+          let t = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
+          return null != t && null != t.redeemable_at && 0 >= r()(t.redeemable_at).diff(r().utc(), "seconds")
+        }()
+      }(a)) && null == i) N();
     else {
       let e = u.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION);
       if (null == e) return;
@@ -62,6 +66,7 @@ function m() {
         tenureRewardIds: t
       })
     }
+  }
 }
 async function N() {
   !h && (h = !0, await _.syncUserTenureRewardStatus(), h = !1, s.default.wait(() => (function() {
