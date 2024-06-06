@@ -4,7 +4,7 @@ l.r(t), l.d(t, {
     return a
   },
   MENU_DATE_FORMAT: function() {
-    return T
+    return S
   },
   default: function() {
     return A
@@ -24,8 +24,8 @@ var a, s, n = l("735250"),
   _ = l("981631"),
   M = l("689938"),
   h = l("114198");
-let T = "MMM Do, YYYY",
-  S = u()("2015-05-15").local(),
+let S = "MMM Do, YYYY",
+  T = u()("2015-05-15").local(),
   x = (0, C.makeLazy)({
     createPromise: () => Promise.resolve().then(l.bind(l, "575535")),
     webpackId: "575535"
@@ -41,7 +41,7 @@ function A(e) {
     selectedOption: i,
     isCustomDateRange: d,
     menuName: C,
-    onClose: T,
+    onClose: S,
     onSelectDateOption: A,
     onToggleCustomDateRange: p,
     onSelectStartDate: g,
@@ -102,9 +102,9 @@ function A(e) {
       date: l
     });
     return null
-  }(), v = o.useCallback(() => {
+  }(), j = o.useCallback(() => {
     R(!0), p()
-  }, [p]), j = o.useCallback(e => {
+  }, [p]), v = o.useCallback(e => {
     g(e)
   }, [g]), D = o.useCallback(e => {
     L(e)
@@ -113,7 +113,7 @@ function A(e) {
   }, [a, s, A]);
   return (0, n.jsx)(c.Menu, {
     navId: "member-safety-guild-member-".concat(C, "-menu"),
-    onClose: T,
+    onClose: S,
     "aria-label": M.default.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
     onSelect: _.NOOP,
     children: (0, n.jsx)(c.MenuGroup, {
@@ -144,9 +144,9 @@ function A(e) {
               ...e,
               calendarClassName: h.calendar,
               value: d && null != a ? u()(a) : void 0,
-              onSelect: j,
+              onSelect: v,
               maxDate: u()().local(),
-              minDate: S
+              minDate: T
             })
           })
         }), (0, n.jsx)(c.MenuItem, {
@@ -162,7 +162,7 @@ function A(e) {
               value: d && null != s ? u()(s) : void 0,
               onSelect: D,
               maxDate: u()().local(),
-              minDate: d && null != a ? u()(a) : S
+              minDate: d && null != a ? u()(a) : T
             })
           })
         })]
@@ -182,7 +182,7 @@ function A(e) {
           }, "option-".concat(t))
         }), (0, n.jsx)(c.MenuSeparator, {}), (0, n.jsx)(c.MenuItem, {
           id: "guild-member-".concat(C, "-custom-option}"),
-          action: v,
+          action: j,
           render: e => (0, n.jsxs)("div", {
             className: r()(h.otherDatesContainer, {
               [h.focused]: e.isFocused

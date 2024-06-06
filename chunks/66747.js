@@ -16,8 +16,8 @@ var a = l("735250"),
   _ = l("715903"),
   M = l("69882"),
   h = l("189357"),
-  T = l("493892"),
-  S = l("433355"),
+  S = l("493892"),
+  T = l("433355"),
   x = l("430824"),
   A = l("496675"),
   p = l("594174"),
@@ -27,8 +27,8 @@ var a = l("735250"),
   H = l("789695"),
   R = l("621113"),
   I = l("964309"),
-  v = l("203893"),
-  j = l("729285"),
+  j = l("203893"),
+  v = l("729285"),
   D = l("777288"),
   b = l("5192"),
   O = l("709054"),
@@ -92,14 +92,14 @@ let K = s.memo(function(e) {
           color: C.default.colors.TEXT_DANGER.css
         })
       }
-    }), (0, T.isSpammer)(t.userId) && (0, a.jsx)(c.Tooltip, {
+    }), (0, S.isSpammer)(t.userId) && (0, a.jsx)(c.Tooltip, {
       text: J.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(v.default, {
+        return (0, a.jsx)(j.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -195,7 +195,7 @@ let W = s.memo(function(e) {
             onClick: m,
             onMouseEnter: t,
             onMouseLeave: l,
-            children: (0, a.jsx)(j.default, {
+            children: (0, a.jsx)(v.default, {
               className: o()(q.addRoleIcon),
               width: 16,
               height: 16
@@ -337,16 +337,16 @@ let ee = s.memo(function(e) {
       selectedUserIds: f,
       addUsers: _,
       removeUser: M
-    } = (0, P.default)(t.guildId), T = (0, y.useCanAccessBulkBanningFeature)(t.guildId), S = (0, y.useCanBulkBanUser)(t.guildId, T, t.userId), p = (0, h.useCanAccessGuildMemberModView)(t.guildId), g = (0, u.useStateFromStores)([U.default], () => {
+    } = (0, P.default)(t.guildId), S = (0, y.useCanAccessBulkBanningFeature)(t.guildId), T = (0, y.useCanBulkBanUser)(t.guildId, S, t.userId), p = (0, h.useCanAccessGuildMemberModView)(t.guildId), g = (0, u.useStateFromStores)([U.default], () => {
       var e;
       return null !== (e = U.default.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e ? e : F.OrderBy.ORDER_BY_UNSPECIFIED
     }, [t.guildId], d()), L = s.useCallback(e => {
-      e.stopPropagation(), e.preventDefault(), null != t && S && (f.has(t.userId) ? M(t.userId) : _([t.userId]))
-    }, [_, S, t, M, f]), N = g === F.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, H = g === F.OrderBy.ORDER_BY_USER_ID_ASC || g === F.OrderBy.ORDER_BY_USER_ID_DESC;
+      e.stopPropagation(), e.preventDefault(), null != t && T && (f.has(t.userId) ? M(t.userId) : _([t.userId]))
+    }, [_, T, t, M, f]), N = g === F.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, H = g === F.OrderBy.ORDER_BY_USER_ID_ASC || g === F.OrderBy.ORDER_BY_USER_ID_DESC;
     return (0, a.jsxs)(a.Fragment, {
-      children: [T && (0, a.jsx)(c.Tooltip, {
+      children: [S && (0, a.jsx)(c.Tooltip, {
         tooltipClassName: q.disabledActionTooltip,
-        shouldShow: !S,
+        shouldShow: !T,
         text: J.default.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
         children: e => (0, a.jsx)("td", {
           ...e,
@@ -357,7 +357,7 @@ let ee = s.memo(function(e) {
               children: (0, a.jsx)(c.Checkbox, {
                 type: c.Checkbox.Types.INVERTED,
                 value: f.has(t.userId),
-                disabled: !S
+                disabled: !T
               })
             })
           })
@@ -473,7 +473,7 @@ t.default = s.memo(function(e) {
     isLoading: c = !1,
     isHoldingAdvancedInfoKey: m = !1,
     compact: E = !1
-  } = e, f = (0, u.useStateFromStores)([S.default], () => S.default.getGuildSidebarState(l), [l]), _ = (null == f ? void 0 : f.details.userId) === t, M = (0, u.useStateFromStores)([U.default], () => U.default.getEnhancedMember(l, t), [l, t]), h = (0, Z.useHighestRole)(M), T = (0, u.useStateFromStores)([p.default], () => p.default.getUser(t), [t]), x = (0, Z.useContextMenuModerateUser)(null != M ? M : void 0), A = s.useCallback(e => {
+  } = e, f = (0, u.useStateFromStores)([T.default], () => T.default.getGuildSidebarState(l), [l]), _ = (null == f ? void 0 : f.details.userId) === t, M = (0, u.useStateFromStores)([U.default], () => U.default.getEnhancedMember(l, t), [l, t]), h = (0, Z.useHighestRole)(M), S = (0, u.useStateFromStores)([p.default], () => p.default.getUser(t), [t]), x = (0, Z.useContextMenuModerateUser)(null != M ? M : void 0), A = s.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), x(e)
   }, [x]), g = s.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), null != M && (null == r || r(M))
@@ -490,7 +490,7 @@ t.default = s.memo(function(e) {
     onContextMenu: A,
     children: (0, a.jsx)(et, {
       member: M,
-      user: T,
+      user: S,
       highestRole: h,
       isHoldingAdvancedInfoKey: m,
       onOpenModerationMenu: A,

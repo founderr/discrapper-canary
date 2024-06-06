@@ -16,8 +16,8 @@ var l = a("120356"),
   _ = a("819570"),
   u = a("507957"),
   d = a("875307"),
-  i = a("837748"),
-  L = a("58346"),
+  L = a("837748"),
+  i = a("58346"),
   T = a("689938"),
   M = a("129991"),
   c = a("611273");
@@ -85,11 +85,11 @@ function f(e) {
       children: l
     })]
   });
-  if (a.state === L.GuildTemplateStates.RESOLVING) return (0, t.jsx)("div", {
+  if (a.state === i.GuildTemplateStates.RESOLVING) return (0, t.jsx)("div", {
     className: M.container,
     children: (0, t.jsx)(E.Spinner, {})
   });
-  let C = (0, i.default)(a.code).header;
+  let C = (0, L.default)(a.code).header;
   if (!r) return (0, t.jsxs)("div", {
     className: M.container,
     children: [(0, t.jsx)(_.Title, {

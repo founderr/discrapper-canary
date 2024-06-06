@@ -24,19 +24,19 @@ var a = s("735250"),
   x = s("674563"),
   L = s("829857"),
   O = s("689938"),
-  p = s("378934");
+  A = s("378934");
 
-function A(e) {
+function p(e) {
   let {
     onCreateTeamClick: t,
     isGuildOwner: s
   } = e;
   return (0, a.jsx)("div", {
-    className: p.selectTeamContainer,
+    className: A.selectTeamContainer,
     children: (0, a.jsx)(i.Button, {
       disabled: !s,
       onClick: t,
-      className: p.enableTicketingButton,
+      className: A.enableTicketingButton,
       fullWidth: !0,
       children: O.default.Messages.GUILD_MONETIZATION_ENABLE_CREATE_TEAM
     })
@@ -66,9 +66,9 @@ function M(e) {
   };
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: p.selectTeamContainer,
+      className: A.selectTeamContainer,
       children: [(0, a.jsx)(i.SingleSelect, {
-        className: p.teamSelect,
+        className: A.teamSelect,
         options: T,
         placeholder: O.default.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
         value: r,
@@ -77,13 +77,13 @@ function M(e) {
         "aria-label": O.default.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
       }), (0, a.jsx)(i.Button, {
         onClick: S,
-        className: p.enableTicketingButton,
+        className: A.enableTicketingButton,
         submitting: c,
         disabled: null == r || I || !n,
         children: O.default.Messages.GUILD_MONETIZATION_ENABLE_CTA
       })]
     }), null != E && (0, a.jsx)(i.Text, {
-      className: p.error,
+      className: A.error,
       variant: "text-sm/normal",
       children: E.getAnyErrorMessage()
     })]
@@ -115,14 +115,14 @@ t.default = e => {
   }) : e, [v, d]);
   return C ? (0, a.jsx)(i.Spinner, {}) : (0, a.jsxs)(a.Fragment, {
     children: [!d && (0, a.jsx)(g.default, {
-      className: p.nonOwnerNotice,
+      className: A.nonOwnerNotice,
       children: O.default.Messages.GUILD_MONETIZATION_ENABLE_NON_OWNER_WARNING
     }), (0, a.jsxs)(i.FormSection, {
       title: O.default.Messages.GUILD_MONETIZATION_ENABLE_HEADER,
       disabled: !d,
       children: [(0, a.jsx)(i.FormText, {
         type: i.FormText.Types.DESCRIPTION,
-        className: p.description,
+        className: A.description,
         disabled: !d,
         children: O.default.Messages.GUILD_MONETIZATION_ENABLE_DESCRIPTION.format({
           onCreateTeamHook: j
@@ -131,13 +131,13 @@ t.default = e => {
         guild: t,
         eligibleTeams: x,
         isGuildOwner: d
-      }) : (0, a.jsx)(A, {
+      }) : (0, a.jsx)(p, {
         onCreateTeamClick: v,
         isGuildOwner: d
       })]
     }), (0, a.jsx)(i.FormSection, {
       title: O.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
-      className: p.selfDemonetization,
+      className: A.selfDemonetization,
       children: (0, a.jsx)(h.default, {
         guildId: t.id,
         allPeriods: []

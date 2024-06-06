@@ -31,15 +31,15 @@ function m(e) {
   } = (0, E.useEditStateContext)(), h = (0, r.useStateFromStores)([c.default], () => c.default.getSubscriptionListing(m)), C = null == h ? void 0 : h.id, R = (0, _.default)(N), x = l.useMemo(() => {
     var e;
     return null != R && null != h && (null !== (e = R[h.role_id]) && void 0 !== e ? e : 0)
-  }, [R, h]), L = 0 === x, O = null == C, p = null !== (t = null == h ? void 0 : h.archived) && void 0 !== t && t, {
-    deleteSubscriptionListing: A,
+  }, [R, h]), L = 0 === x, O = null == C, A = null !== (t = null == h ? void 0 : h.archived) && void 0 !== t && t, {
+    deleteSubscriptionListing: p,
     submitting: M
   } = (0, u.useDeleteSubscriptionListing)(), {
     archiveSubscriptionListing: D,
     submitting: v
   } = (0, u.useArchiveSubscriptionListing)(), j = () => {
     let e = async () => {
-      if (!!O || (i()(null != g, "group listing doesnt exist"), i()(null != C, "subscription listing doesnt exist"), !!await A(N, g, C))) null == n || n()
+      if (!!O || (i()(null != g, "group listing doesnt exist"), i()(null != C, "subscription listing doesnt exist"), !!await p(N, g, C))) null == n || n()
     };
     (0, o.openModalLazy)(async () => {
       let {
@@ -65,7 +65,7 @@ function m(e) {
   } = (0, d.useShouldRestrictUpdatingCreatorMonetizationSettings)(N);
   return null == h ? null : (0, a.jsx)(I.default, {
     title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
-    children: p ? (0, a.jsxs)(o.FormSection, {
+    children: A ? (0, a.jsxs)(o.FormSection, {
       title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
       disabled: !G,
       children: [(0, a.jsx)(o.FormText, {

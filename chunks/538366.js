@@ -24,7 +24,7 @@ function x(e) {
     guildId: x,
     tagFilter: C,
     channel: _
-  } = e, p = (0, c.useCanManageChannel)(_), T = (0, r.useCanStartThread)(_), S = _.isMediaChannel(), E = n.useCallback(() => {
+  } = e, T = (0, c.useCanManageChannel)(_), p = (0, r.useCanStartThread)(_), S = _.isMediaChannel(), E = n.useCallback(() => {
     (0, m.trackForumUpsellModalViewed)(), (0, l.openModalLazy)(async () => {
       let {
         default: e
@@ -34,7 +34,7 @@ function x(e) {
         guildId: x
       })
     })
-  }, [x]), N = C.size > 0, M = T || p, A = !N && p && !S, v = n.useCallback(() => A ? E() : T ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, A, T]);
+  }, [x]), N = C.size > 0, M = p || T, A = !N && T && !S, v = n.useCallback(() => A ? E() : p ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, A, p]);
   return (0, s.jsxs)("div", {
     className: g.container,
     children: [(0, s.jsxs)("div", {

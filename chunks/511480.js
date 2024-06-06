@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("183023"),
   L = s("984933"),
   O = s("496675"),
-  p = s("699516"),
-  A = s("594174"),
+  A = s("699516"),
+  p = s("594174"),
   M = s("987134"),
   D = s("768581"),
   v = s("900849"),
@@ -38,8 +38,8 @@ var a = s("735250"),
   U = s("450474"),
   P = s("354051"),
   b = s("347604"),
-  B = s("203377"),
-  y = s("981631"),
+  y = s("203377"),
+  B = s("981631"),
   F = s("731455"),
   H = s("689938"),
   k = s("612247");
@@ -112,7 +112,7 @@ class Y extends l.PureComponent {
       isGuildAdmin: t
     } = this.props;
     if (null == e) return;
-    let s = e.hasFeature(y.GuildFeatures.DISCOVERABLE);
+    let s = e.hasFeature(B.GuildFeatures.DISCOVERABLE);
     return (0, a.jsxs)(r.FormSection, {
       className: k.twoColumnFormSection,
       children: [(0, a.jsxs)("div", {
@@ -244,7 +244,7 @@ class Y extends l.PureComponent {
       }), null != u && u.isDiscoverable() && (0, a.jsx)(x.CustomGuildEmojiPopout, {
         expressionSourceGuild: u,
         node: E,
-        closePopout: y.NOOP,
+        closePopout: B.NOOP,
         nonce: (0, n.v4)(),
         demoMode: !0
       })]
@@ -339,8 +339,8 @@ class Y extends l.PureComponent {
         tags: t.keywords,
         onRemoveTag: this.handleRemoveKeyword,
         onAddTag: this.handleAddKeyword,
-        maxTags: B.MAX_KEYWORDS,
-        maxTaxLength: B.MAX_KEYWORD_LENGTH,
+        maxTags: y.MAX_KEYWORDS,
+        maxTaxLength: y.MAX_KEYWORD_LENGTH,
         disabled: !e
       }), (null == s ? void 0 : s.keywords) != null ? (0, a.jsx)(r.Text, {
         color: "text-danger",
@@ -395,7 +395,7 @@ class Y extends l.PureComponent {
     }), w(this, "checkForLowerMemberCountReqEnabled", e => {
       let {
         isGuildAdmin: t
-      } = this.props, s = e.hasFeature(y.GuildFeatures.COMMUNITY), {
+      } = this.props, s = e.hasFeature(B.GuildFeatures.COMMUNITY), {
         enableLowerMemberCountReq: a
       } = T.DiscoveryRequirementsM2Experiment.getCurrentConfig({
         guildId: e.id,
@@ -411,7 +411,7 @@ class Y extends l.PureComponent {
       } = this.props;
       if (null == e) return;
       let t = new Set(e.features);
-      e.hasFeature(y.GuildFeatures.DISCOVERABLE) ? t.delete(y.GuildFeatures.DISCOVERABLE) : t.add(y.GuildFeatures.DISCOVERABLE), j.default.updateGuild({
+      e.hasFeature(B.GuildFeatures.DISCOVERABLE) ? t.delete(B.GuildFeatures.DISCOVERABLE) : t.add(B.GuildFeatures.DISCOVERABLE), j.default.updateGuild({
         features: t
       })
     }), w(this, "handleEnableDiscovery", async () => {
@@ -461,7 +461,7 @@ class Y extends l.PureComponent {
       } = this.props, {
         keywords: a
       } = s;
-      if ((null == t ? void 0 : t.id) != null) !(a.length >= B.MAX_KEYWORDS) && S.updateGuildKeywords(t.id, [...a, e])
+      if ((null == t ? void 0 : t.id) != null) !(a.length >= y.MAX_KEYWORDS) && S.updateGuildKeywords(t.id, [...a, e])
     }), w(this, "handleToggleEmojiDiscoverability", () => {
       let {
         guild: e,
@@ -473,20 +473,20 @@ class Y extends l.PureComponent {
     })
   }
 }
-t.default = i.default.connectStores([G.default, O.default, _.default, L.default, f.default, A.default, p.default], () => {
+t.default = i.default.connectStores([G.default, O.default, _.default, L.default, f.default, p.default, A.default], () => {
   let {
     guild: e,
     errors: t,
     submitting: s,
     guildMetadata: a
-  } = G.default.getProps(), l = O.default.can(y.Permissions.MANAGE_GUILD, e), n = O.default.can(y.Permissions.ADMINISTRATOR, e), i = null != e ? _.default.getDiscoveryChecklist(e.id) : null, r = null != e ? L.default.getChannels(e.id) : null, o = [];
+  } = G.default.getProps(), l = O.default.can(B.Permissions.MANAGE_GUILD, e), n = O.default.can(B.Permissions.ADMINISTRATOR, e), i = null != e ? _.default.getDiscoveryChecklist(e.id) : null, r = null != e ? L.default.getChannels(e.id) : null, o = [];
   null != r && r[0, L.GUILD_SELECTABLE_CHANNELS_KEY].forEach(e => {
     let {
       channel: t
     } = e;
-    t.type === y.ChannelTypes.GUILD_TEXT && o.push({
+    t.type === B.ChannelTypes.GUILD_TEXT && o.push({
       value: t.id,
-      label: (0, u.computeChannelName)(t, A.default, p.default, !0)
+      label: (0, u.computeChannelName)(t, p.default, A.default, !0)
     })
   });
   let d = f.default.getPrimaryCategories().map(e => {

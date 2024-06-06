@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return T
+    return S
   }
 });
 var a = l("735250"),
@@ -21,17 +21,17 @@ var a = l("735250"),
   M = l("391649"),
   h = l("293749");
 
-function T(e) {
+function S(e) {
   let {
     guild: t,
     onSubmit: n
-  } = e, i = (0, d.useStateFromStores)([E.default], () => E.default.getMembersCountByGuildId(t.id, c.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), T = (0, d.useStateFromStores)([E.default], () => {
+  } = e, i = (0, d.useStateFromStores)([E.default], () => E.default.getMembersCountByGuildId(t.id, c.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), S = (0, d.useStateFromStores)([E.default], () => {
     let e = E.default.getNewMemberTimestamp(t.id);
     return r()(e).format("h:mm A")
-  }, [t.id]), S = (0, d.useStateFromStores)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), x = s.useCallback(() => {
+  }, [t.id]), T = (0, d.useStateFromStores)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), x = s.useCallback(() => {
     (0, f.refreshMemberSafetyTimestamp)(t.id), null == n || n()
   }, [t.id, n]), A = s.useCallback(() => {
-    S ? x() : (0, u.openModalLazy)(async () => {
+    T ? x() : (0, u.openModalLazy)(async () => {
       let {
         default: e
       } = await l.e("24478").then(l.bind(l, "319481"));
@@ -40,7 +40,7 @@ function T(e) {
         onConfirm: x
       })
     })
-  }, [x, S]), p = new Intl.NumberFormat(_.default.getLocale()).format(i), g = (0, m.useCanAccessInviteCodeFeature)(t.id), L = (0, m.useCanAccessBulkBanningFeature)(t.id), N = s.useMemo(() => 1 + (g ? 1 : 0) + (L ? 1 : 0), [g, L]);
+  }, [x, T]), p = new Intl.NumberFormat(_.default.getLocale()).format(i), g = (0, m.useCanAccessInviteCodeFeature)(t.id), L = (0, m.useCanAccessBulkBanningFeature)(t.id), N = s.useMemo(() => 1 + (g ? 1 : 0) + (L ? 1 : 0), [g, L]);
   return 0 === i ? null : (0, a.jsxs)("tr", {
     className: o()(h.newMembersNotice),
     onClick: A,
@@ -51,7 +51,7 @@ function T(e) {
         color: "always-white",
         children: _.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
           count: p,
-          date: T
+          date: S
         })
       })
     }), (0, a.jsx)("td", {

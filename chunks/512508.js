@@ -20,8 +20,8 @@ var a, s, n, o, i, r, d = l("735250"),
   _ = l("481060"),
   M = l("461745"),
   h = l("933557"),
-  T = l("471445"),
-  S = l("518738"),
+  S = l("471445"),
+  T = l("518738"),
   x = l("439170"),
   A = l("592125"),
   p = l("430824"),
@@ -31,8 +31,8 @@ var a, s, n, o, i, r, d = l("735250"),
   H = l("176278"),
   R = l("689938"),
   I = l("93459");
-let v = (0, N.uid)(),
-  j = (0, N.uid)(),
+let j = (0, N.uid)(),
+  v = (0, N.uid)(),
   D = "text-sm/medium";
 
 function b(e) {
@@ -83,7 +83,7 @@ let F = u.memo(function(e) {
   } = e, {
     id: n,
     name: o
-  } = l.record, i = (0, S.useRoleIcon)({
+  } = l.record, i = (0, T.useRoleIcon)({
     guildId: a,
     roleId: n,
     size: 16
@@ -112,7 +112,7 @@ function y(e) {
     channel: t,
     row: l,
     className: a
-  } = e, s = null != t.parent_id, n = (0, T.getChannelIconComponent)(t);
+  } = e, s = null != t.parent_id, n = (0, S.getChannelIconComponent)(t);
   return (0, d.jsxs)("div", {
     className: c()(I.rowLabel, I.channelLabel, {
       [I.hasParent]: s
@@ -160,19 +160,19 @@ function w(e) {
     }), t.forEach(e => {
       e in l && (a[e] = B(l[e]))
     }), a
-  })(s, n, m), [s, n, m]), T = u.useMemo(() => Object.keys(h), [h]), [S, x] = u.useState(""), [g, L] = u.useState(!1), [N, H] = u.useState(!1), [D, F] = u.useState(!1), y = u.useRef(null), {
+  })(s, n, m), [s, n, m]), S = u.useMemo(() => Object.keys(h), [h]), [T, x] = u.useState(""), [g, L] = u.useState(!1), [N, H] = u.useState(!1), [D, F] = u.useState(!1), y = u.useRef(null), {
     sections: w,
     sectionCounts: k
   } = u.useMemo(() => {
-    let e = "" !== S ? a.filter(e => E()(S, e.display.toLocaleLowerCase())) : a,
-      t = "" !== S ? l.filter(e => E()(S, e.display.toLocaleLowerCase())) : l,
+    let e = "" !== T ? a.filter(e => E()(T, e.display.toLocaleLowerCase())) : a,
+      t = "" !== T ? l.filter(e => E()(T, e.display.toLocaleLowerCase())) : l,
       s = [],
       n = [];
     return s[0] = e, n[0] = e.length, s[1] = t, n[1] = t.length, {
       sections: s,
       sectionCounts: n
     }
-  }, [S, a, l]), P = u.useCallback(e => {
+  }, [T, a, l]), P = u.useCallback(e => {
     let t = Object.values(e),
       l = t.filter(e => {
         let {
@@ -231,13 +231,13 @@ function w(e) {
         })
       }, s.id)
     }, [t, G, w]),
-    q = u.useMemo(() => T.map(e => {
+    q = u.useMemo(() => S.map(e => {
       var l, a;
       return l = h[e], a = t, {
         ...l.tag,
         label: U(l.row, a, I.noIndent)
       }
-    }), [h, T, t]);
+    }), [h, S, t]);
   return (0, d.jsxs)("div", {
     className: c()(I.searchContainer, C),
     children: [(0, d.jsxs)("div", {
@@ -246,10 +246,10 @@ function w(e) {
         tags: q,
         maxHeight: 98,
         size: M.default.Sizes.MEDIUM,
-        query: S,
+        query: T,
         ref: y,
         onRemoveTag: e => {
-          let t = T[e],
+          let t = S[e],
             {
               [t]: l,
               ...a
@@ -260,10 +260,10 @@ function w(e) {
           x(e.trim().toLocaleLowerCase())
         },
         placeholder: null != i ? i : R.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
-        sections: [T.length],
+        sections: [S.length],
         inputProps: {
-          "aria-labelledby": v,
-          "aria-controls": j,
+          "aria-labelledby": j,
+          "aria-controls": v,
           "aria-expanded": D,
           onFocus: e => Y(!0, 2, e),
           onBlur: e => Y(!1, 2, e)
@@ -310,7 +310,7 @@ function w(e) {
           },
           role: void 0,
           innerRole: "listbox",
-          innerId: j,
+          innerId: v,
           innerAriaOrientation: "vertical"
         })
       })]

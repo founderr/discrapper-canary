@@ -28,7 +28,7 @@ t.default = function(e) {
     memberCount: x,
     presenceCount: L,
     className: O
-  } = e, p = (0, d.default)(), [A, M] = l.useState(!1);
+  } = e, A = (0, d.default)(), [p, M] = l.useState(!1);
   if (null == n || C) return (0, a.jsx)("div", {
     className: i()(O, S.card, S.cardPlaceholder, {
       [S.cardSmall]: h,
@@ -41,19 +41,19 @@ t.default = function(e) {
     id: n.id,
     splash: n.discoverySplash,
     size: 240 * (0, u.getDevicePixelRatio)()
-  }), j = (0, r.isThemeDark)(p) ? f : m, G = null !== (t = _.default.getGuildIconURL({
+  }), j = (0, r.isThemeDark)(A) ? f : m, G = null !== (t = _.default.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 40
-  })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, B = null;
-  if (null != G) B = (0, a.jsx)("img", {
+  })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, y = null;
+  if (null != G) y = (0, a.jsx)("img", {
     src: G,
     alt: "",
     className: S.avatar
   });
   else {
     let e = (0, I.getAcronym)(n.name);
-    B = (0, a.jsx)("div", {
+    y = (0, a.jsx)("div", {
       className: S.defaultIcon,
       children: (0, a.jsx)(o.Text, {
         className: S.acronym,
@@ -69,7 +69,7 @@ t.default = function(e) {
     className: i()(O, S.card, {
       [S.cardSmall]: h,
       [S.cardDisabled]: g,
-      [S.splashLoaded]: A
+      [S.splashLoaded]: p
     }),
     children: [(0, a.jsxs)("div", {
       className: S.cardHeader,
@@ -93,7 +93,7 @@ t.default = function(e) {
               mask: E.default.Masks.SQUIRCLE,
               width: 40,
               height: 40,
-              children: null != B ? B : null
+              children: null != y ? y : null
             })
           })
         })

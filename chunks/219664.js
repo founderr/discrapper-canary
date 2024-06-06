@@ -16,8 +16,8 @@ var s = a("735250"),
   x = a("255269"),
   C = a("524444"),
   _ = a("695346"),
-  p = a("433355"),
-  T = a("592125"),
+  T = a("433355"),
+  p = a("592125"),
   S = a("496675"),
   E = a("332475"),
   N = a("730845"),
@@ -29,13 +29,13 @@ var s = a("735250"),
   O = a("109590"),
   R = a("368844"),
   b = a("73315"),
-  L = a("404616"),
-  F = a("510060"),
+  F = a("404616"),
+  L = a("510060"),
   P = a("983200"),
   y = a("196255"),
   D = a("858543"),
-  w = a("482062"),
-  U = a("883728"),
+  U = a("482062"),
+  w = a("883728"),
   k = a("710352"),
   H = a("981631"),
   B = a("689938"),
@@ -52,7 +52,7 @@ function V(e) {
     gridCoords: f,
     gridSectionBoundaries: g,
     observePostVisibilityAnalytics: C
-  } = e, E = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(a.parent_id)), N = a.id, M = n.useRef(null), A = (0, o.useStateFromStores)([p.default], () => p.default.getCurrentSidebarChannelId(a.parent_id) === a.id), {
+  } = e, E = (0, o.useStateFromStores)([p.default], () => p.default.getChannel(a.parent_id)), N = a.id, M = n.useRef(null), A = (0, o.useStateFromStores)([T.default], () => T.default.getCurrentSidebarChannelId(a.parent_id) === a.id), {
     firstMessage: v,
     loaded: b
   } = (0, O.useFirstForumPostMessage)(a), {
@@ -69,7 +69,7 @@ function V(e) {
   } = (0, j.useForumPostReadStates)(a), X = n.useRef(null), {
     handleLeftClick: Z,
     handleRightClick: Q
-  } = (0, U.default)({
+  } = (0, w.default)({
     facepileRef: X,
     goToThread: l,
     channel: a
@@ -82,14 +82,14 @@ function V(e) {
     ee = _.RenderSpoilers.useSetting(),
     et = (0, x.default)(ee, J),
     ea = (0, R.useForumPostMediaThumbnail)(v, E, !1),
-    [es, en] = (0, F.getFrameDimensions)(h.width - 2 * F.IMAGE_PADDING),
+    [es, en] = (0, L.getFrameDimensions)(h.width - 2 * L.IMAGE_PADDING),
     el = (0, j.useLastActiveTimestamp)(a, i.ThreadSortOrder.CREATION_DATE, k.ForumTimestampFormats.POSTED_DURATION_AGO),
-    er = (0, L.useHighlightedChannelName)(a),
+    er = (0, F.useHighlightedChannelName)(a),
     ei = (null == v ? void 0 : v.blocked) || null == (null != c ? c : P),
     {
       onFocus: eo,
       ...eu
-    } = (0, w.useForumGridItem)({
+    } = (0, U.useForumGridItem)({
       id: t,
       row: f.row,
       column: f.column,
@@ -146,7 +146,7 @@ function V(e) {
           className: G.title,
           color: K ? "header-primary" : "text-muted",
           style: {
-            width: "".concat(h.width - 2 * F.GRID_POST_CONTROLS_MARGIN, "px")
+            width: "".concat(h.width - 2 * L.GRID_POST_CONTROLS_MARGIN, "px")
           },
           children: er
         })
@@ -202,7 +202,7 @@ function z(e) {
       className: G.controlsGroup,
       children: [(0, s.jsx)("div", {
         className: G.messageCountContainer,
-        children: (0, s.jsx)(L.MessageCount, {
+        children: (0, s.jsx)(F.MessageCount, {
           channel: t,
           iconSize: 16,
           showReadState: !0
@@ -213,7 +213,7 @@ function z(e) {
           children: "•"
         }), (0, s.jsxs)("div", {
           className: G.typing,
-          children: [(0, s.jsx)(L.Facepile, {
+          children: [(0, s.jsx)(F.Facepile, {
             channel: t,
             userIds: l,
             facepileRef: a
@@ -232,10 +232,10 @@ function z(e) {
       }) : null]
     }), (0, s.jsxs)("div", {
       className: G.controlsGroup,
-      children: [r || null == n ? null : (0, s.jsx)(L.DefaultReaction, {
+      children: [r || null == n ? null : (0, s.jsx)(F.DefaultReaction, {
         firstMessage: n,
         channel: t
-      }), null == n ? null : (0, s.jsx)(L.MostUsedReaction, {
+      }), null == n ? null : (0, s.jsx)(F.MostUsedReaction, {
         firstMessage: n,
         channel: t
       })]
@@ -253,7 +253,7 @@ t.default = n.memo(function(e) {
     gridCoords: u,
     gridSectionBoundaries: d,
     observePostVisibilityAnalytics: c
-  } = e, m = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(a));
+  } = e, m = (0, o.useStateFromStores)([p.default], () => p.default.getChannel(a));
   return null == m ? null : (0, s.jsx)(V, {
     id: t,
     channel: m,
@@ -291,9 +291,9 @@ let W = e => e.preventDefault(),
       imageContainerStyles: C,
       containerWidth: l,
       containerHeight: i
-    }), p = (0, h.useShouldRedactExplicitContentForForum)(), T = n.useMemo(() => x.map((e, t) => {
+    }), T = (0, h.useShouldRedactExplicitContentForForum)(), p = n.useMemo(() => x.map((e, t) => {
       var n;
-      let [l, i] = (0, g.getForumPostShouldObscure)(e, !a, p), h = (0, g.getObscuredAlt)(i), x = {
+      let [l, i] = (0, g.getForumPostShouldObscure)(e, !a, T), h = (0, g.getObscuredAlt)(i), x = {
         ..._[t],
         src: e.src,
         width: e.width,
@@ -301,14 +301,14 @@ let W = e => e.preventDefault(),
         alt: null != e.alt && l ? h : e.alt,
         onClick: W,
         shouldRenderAccessory: !c && !d
-      }, T = (0, f.isAnimatedImageUrl)(e.src) ? "".concat(e.src, "?format=png") : e.src, S = o && !l ? e.src : T;
+      }, p = (0, f.isAnimatedImageUrl)(e.src) ? "".concat(e.src, "?format=png") : e.src, S = o && !l ? e.src : p;
       return (0, s.jsxs)("div", {
         className: G.bodyMediaFrame,
         style: C[t],
         children: [u ? (0, s.jsx)(m.default, {
           ...x,
           src: S,
-          backgroundSrc: T,
+          backgroundSrc: p,
           aspectRatio: x.maxWidth / x.maxHeight,
           alt: null !== (n = x.alt) && void 0 !== n ? n : "",
           className: r()(G.mediaPostContainer, {
@@ -337,7 +337,7 @@ let W = e => e.preventDefault(),
           })
         })]
       }, e.src)
-    }), [o, c, d, a, C, _, x, u, p]);
+    }), [o, c, d, a, C, _, x, u, T]);
     return (0, s.jsxs)("div", {
       className: G.bodyMedia,
       style: {
@@ -345,7 +345,7 @@ let W = e => e.preventDefault(),
         height: i
       },
       children: [(0, s.jsx)(s.Fragment, {
-        children: T
+        children: p
       }), (c || d) && (0, s.jsxs)("div", {
         className: G.mediaIconsRow,
         children: [d && (0, s.jsx)(A.default, {
@@ -392,7 +392,7 @@ function q(e) {
     isFirstMessageLoaded: l,
     containerWidth: i,
     hasUnreads: o
-  } = e, [u, c] = (0, F.getFrameDimensions)(i - 2 * F.IMAGE_PADDING), {
+  } = e, [u, c] = (0, L.getFrameDimensions)(i - 2 * L.IMAGE_PADDING), {
     content: m
   } = (0, j.useForumPostFirstMessageMarkup)({
     firstMessage: a,

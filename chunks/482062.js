@@ -51,17 +51,17 @@ function h(e) {
         null === (t = document.querySelector(e)) || void 0 === t || t.focus()
       }
     }, []),
-    p = n.useCallback(e => {
+    T = n.useCallback(e => {
       u.current = e;
       let a = (0, i.createSelector)(e, o),
         s = (0, i.getItemId)(e);
       C(a, s), (0, l.notifyFocusSubscribers)(t, s, !0)
     }, [t, C]),
-    [T, S] = n.useState(!1),
-    E = n.useRef(T);
+    [p, S] = n.useState(!1),
+    E = n.useRef(p);
   n.useLayoutEffect(() => {
-    E.current = T
-  }, [T]), n.useLayoutEffect(() => {
+    E.current = p
+  }, [p]), n.useLayoutEffect(() => {
     let e = f.current;
     if (null != e) return e.addEventListener("focusin", a), e.addEventListener("focusout", s), e.addEventListener("focus", n), e.addEventListener("scroll", l, {
       passive: !0
@@ -88,7 +88,7 @@ function h(e) {
     function l() {
       h.current = !0
     }
-  }, [t, C, _, p, x]);
+  }, [t, C, _, T, x]);
   let N = n.useCallback(e => {
       var t, a;
       if (!g.current) return;
@@ -100,17 +100,17 @@ function h(e) {
       if (null == h) return;
       let C = parseInt(null !== (t = h.getAttribute("data-grid-section")) && void 0 !== t ? t : ""),
         _ = parseInt(h.getAttribute("aria-rowindex")),
-        T = parseInt(h.getAttribute("aria-colindex"));
+        p = parseInt(h.getAttribute("aria-colindex"));
       switch (c.has(e.key) && (e.stopPropagation(), e.preventDefault()), e.key) {
         case r.Keys.RIGHT: {
           let e = x(m({
             section: C,
             row: _,
-            column: T + 1
+            column: p + 1
           }));
           if (null != e) {
             let t = e.getAttribute(o);
-            null != t && p(t)
+            null != t && T(t)
           }
           return
         }
@@ -118,11 +118,11 @@ function h(e) {
           let e = x(m({
             section: C,
             row: _,
-            column: T - 1
+            column: p - 1
           }));
           if (null != e) {
             let t = e.getAttribute(o);
-            null != t && p(t)
+            null != t && T(t)
           }
           return
         }
@@ -130,15 +130,15 @@ function h(e) {
           let e = x(m({
             section: C,
             row: _ + 1,
-            column: T
+            column: p
           }));
           if (null == e && (e = x(m({
               section: C + 1,
               row: 0,
-              column: T
+              column: p
             }))), null != e) {
             let t = e.getAttribute(o);
-            null != t && p(t)
+            null != t && T(t)
           }
           return
         }
@@ -149,20 +149,20 @@ function h(e) {
             null == (e = x(m({
               section: C - 1,
               row: t,
-              column: T
+              column: p
             }))) && (e = x(m({
               section: C - 1,
               row: t - 1,
-              column: T
+              column: p
             })))
           } else e = x(m({
             section: C,
             row: _ - 1,
-            column: T
+            column: p
           }));
           if (null != e) {
             let t = e.getAttribute(o);
-            null != t && p(t)
+            null != t && T(t)
           }
           return
         }
@@ -178,7 +178,7 @@ function h(e) {
           }
         }
       }
-    }, [x, p]),
+    }, [x, T]),
     M = n.useCallback(e => {
       let a = null != e ? (0, i.createListItemId)(t, e) : null;
       u.current = a

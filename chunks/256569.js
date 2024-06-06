@@ -84,8 +84,8 @@ function T(e) {
     handleContainerKeyUp: x,
     handleRemoveTag: L,
     handleTagChangeEvent: O,
-    handleSelectTag: p,
-    handleUnselectTag: A,
+    handleSelectTag: A,
+    handleUnselectTag: p,
     handleResetTagSelections: M,
     handleInputBlurEvent: D
   } = (0, c.useChipletStateHandlers)(g, {
@@ -99,7 +99,7 @@ function T(e) {
       selections: G,
       isSelecting: U
     }
-  } = g, [P, b] = l.useState(!1), B = l.useCallback(() => {
+  } = g, [P, b] = l.useState(!1), y = l.useCallback(() => {
     var e;
     b(!1), M(), null === (e = f.current) || void 0 === e || e.focus({
       preventScroll: !0
@@ -110,23 +110,23 @@ function T(e) {
   }, [n, j, P]), l.useEffect(() => {
     !P && o(v)
   }, [o, v, P]);
-  let y = l.useCallback(function() {
+  let B = l.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      e && B(), b(!1)
-    }, [B]),
+      e && y(), b(!1)
+    }, [y]),
     F = l.useCallback(e => t => {
       if (t) {
         var s;
         let t = G.includes(j[e]);
-        null === (s = f.current) || void 0 === s || s.focus(), t ? A(e) : (p(e), setImmediate(() => {
+        null === (s = f.current) || void 0 === s || s.focus(), t ? p(e) : (A(e), setImmediate(() => {
           var e;
           null === (e = f.current) || void 0 === e || e.blur(), setTimeout(() => {
             var e;
             return null === (e = m.current) || void 0 === e ? void 0 : e.focus()
           }, 16)
         }))
-      } else A(e, !0), b(!0)
-    }, [p, A, G, j]);
+      } else p(e, !0), b(!0)
+    }, [A, p, G, j]);
   return (0, a.jsxs)("div", {
     className: i()(E.mainContainer, T),
     ref: m,
@@ -134,11 +134,11 @@ function T(e) {
     onKeyUp: x,
     children: [(0, a.jsxs)(I, {
       ref: N,
-      onClick: B,
+      onClick: y,
       children: [j.map((e, t) => (0, a.jsx)(d.default, {
         value: e,
         onChange: O(t),
-        onBlur: y,
+        onBlur: B,
         onFocus: F(t),
         onRemove: () => L(t),
         isSelected: G.includes(e),

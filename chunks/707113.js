@@ -1,69 +1,69 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return T
   }
 });
-var l = n("735250"),
-  a = n("470079"),
+var a = n("735250"),
+  l = n("470079"),
   s = n("120356"),
   i = n.n(s),
-  u = n("920906"),
-  r = n("399606"),
-  o = n("481060"),
-  d = n("201070"),
+  d = n("920906"),
+  o = n("399606"),
+  r = n("481060"),
+  u = n("201070"),
   c = n("893966"),
   f = n("472596"),
-  h = n("598948"),
-  m = n("428936"),
-  S = n("41586"),
-  g = n("464004");
+  E = n("598948"),
+  _ = n("428936"),
+  h = n("41586"),
+  I = n("464004");
 
-function x(e) {
+function S(e) {
   let {
     guild: t
-  } = e, n = (0, d.useIsMakingRequest)(t.id), a = (0, u.useSpring)({
+  } = e, n = (0, u.useIsMakingRequest)(t.id), l = (0, d.useSpring)({
     height: n ? 3 : 0,
-    config: u.config.stiff
+    config: d.config.stiff
   });
-  return (0, l.jsx)("div", {
-    className: g.loaderContainer,
-    children: (0, l.jsx)(u.animated.div, {
-      className: g.loaderBar,
-      style: a
+  return (0, a.jsx)("div", {
+    className: I.loaderContainer,
+    children: (0, a.jsx)(d.animated.div, {
+      className: I.loaderBar,
+      style: l
     })
   })
 }
 
-function E(e) {
+function T(e) {
   let {
     guild: t,
     className: n,
     onPageChange: s,
-    onMemberSelect: u
-  } = e, E = t.id, T = (0, r.useStateFromStores)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(E), [E]), p = (0, d.useIsMakingRequest)(E), C = (0, d.useIsStillIndexing)(E), b = a.useCallback(e => {
-    null != e && (null == u || u(e))
-  }, [u]), A = (0, f.getSearchState)(C, p, T), I = a.useRef(null), M = a.useRef(null), N = a.useCallback(() => {
+    onMemberSelect: d
+  } = e, T = t.id, A = (0, o.useStateFromStores)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(T), [T]), N = (0, u.useIsMakingRequest)(T), x = (0, u.useIsStillIndexing)(T), m = l.useCallback(e => {
+    null != e && (null == d || d(e))
+  }, [d]), g = (0, f.getSearchState)(x, N, A), C = l.useRef(null), R = l.useRef(null), M = l.useCallback(() => {
     var e;
-    null === (e = I.current) || void 0 === e || e.resetSearchText()
+    null === (e = C.current) || void 0 === e || e.resetSearchText()
   }, []);
-  return (0, l.jsx)("div", {
-    className: i()(g.mainTableContainer, n),
-    children: (0, l.jsxs)(o.AdvancedScroller, {
-      className: i()(g.horizatonalScroller),
-      ref: M,
+  return (0, a.jsx)("div", {
+    className: i()(I.mainTableContainer, n),
+    children: (0, a.jsxs)(r.AdvancedScroller, {
+      className: i()(I.horizatonalScroller),
+      ref: R,
       orientation: "horizontal",
-      children: [(0, l.jsx)(S.default, {
+      children: [(0, a.jsx)(h.default, {
         guild: t,
-        ref: I
-      }), (0, l.jsx)(x, {
+        ref: C
+      }), (0, a.jsx)(S, {
         guild: t
-      }), (0, l.jsx)(h.default, {
+      }), (0, a.jsx)(E.default, {
         guild: t,
-        onSelectRow: b,
-        searchState: A,
-        onResetForNewMembers: N
-      }), A !== f.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(m.default, {
+        onSelectRow: m,
+        searchState: g,
+        onResetForNewMembers: M
+      }), g !== f.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(_.default, {
         guildId: t.id,
         onPageChange: s
       })]

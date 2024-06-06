@@ -32,7 +32,7 @@ function C(e) {
   } = (0, I.useEditStateContext)(), C = (0, n.useStateFromStores)([E.default], () => {
     var e;
     return null === (e = E.default.getSubscriptionListing(s)) || void 0 === e ? void 0 : e.image_asset
-  }), [R, x] = T.useName(s), [L, O] = T.usePriceTier(s), [p, A] = T.useDescription(s), [M, D] = T.useImage(s, 1024), {
+  }), [R, x] = T.useName(s), [L, O] = T.usePriceTier(s), [A, p] = T.useDescription(s), [M, D] = T.useImage(s, 1024), {
     imageCTA: v,
     imageAriaLabel: j,
     setFilename: G
@@ -48,8 +48,8 @@ function C(e) {
     null != t && G(t.name), D(e)
   }
   let b = (0, _.useRoleSubscriptionSettingsDisabled)(),
-    B = (0, d.useUID)(),
     y = (0, d.useUID)(),
+    B = (0, d.useUID)(),
     F = (0, d.useUID)();
   return (0, a.jsxs)(f.default, {
     title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BASIC_INFO_SECTION_TITLE,
@@ -60,14 +60,14 @@ function C(e) {
         className: h.formSplitHalf,
         children: (0, a.jsx)(i.FormSection, {
           title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_TITLE,
-          titleId: B,
+          titleId: y,
           disabled: b,
           children: (0, a.jsx)(i.TextInput, {
             placeholder: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_PLACEHOLDER,
             value: R,
             inputClassName: g.formInput,
             onChange: x,
-            "aria-labelledby": B,
+            "aria-labelledby": y,
             disabled: b
           })
         })
@@ -75,7 +75,7 @@ function C(e) {
         className: h.formSplitHalf,
         children: (0, a.jsx)(i.FormSection, {
           title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_TITLE,
-          titleId: y,
+          titleId: B,
           disabled: b,
           children: (0, a.jsx)(i.SingleSelect, {
             options: U,
@@ -86,7 +86,7 @@ function C(e) {
             onChange: O,
             maxVisibleItems: 5,
             look: i.SelectLooks.CUSTOM,
-            "aria-labelledby": y
+            "aria-labelledby": B
           })
         })
       })]
@@ -98,11 +98,11 @@ function C(e) {
       disabled: b,
       children: (0, a.jsx)(i.TextArea, {
         placeholder: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_PLACEHOLDER,
-        value: p,
+        value: A,
         rows: 2,
         autosize: !0,
         className: g.formInput,
-        onChange: A,
+        onChange: p,
         "aria-labelledby": F,
         disabled: b
       })

@@ -34,8 +34,8 @@ var a = s("735250"),
   x = s("594174"),
   L = s("474333"),
   O = s("93879"),
-  p = s("518896"),
-  A = s("614149"),
+  A = s("518896"),
+  p = s("614149"),
   M = s("837886"),
   D = s("626135"),
   v = s("63063"),
@@ -44,8 +44,8 @@ var a = s("735250"),
   U = s("999382"),
   P = s("2150"),
   b = s("181339"),
-  B = s("193544"),
-  y = s("717251"),
+  y = s("193544"),
+  B = s("717251"),
   F = s("981631"),
   H = s("689938"),
   k = s("55973");
@@ -86,10 +86,10 @@ function w(e) {
           variant: "text-sm/normal",
           children: H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_DESCRIPTION
         })]
-      }), (0, a.jsx)(y.default, {
+      }), (0, a.jsx)(B.default, {
         title: (0, a.jsxs)("div", {
           className: k.settingsRowHeader,
-          children: [(0, a.jsx)(p.default, {
+          children: [(0, a.jsx)(A.default, {
             width: 20,
             height: 20
           }), (0, a.jsx)(d.Text, {
@@ -159,10 +159,10 @@ function w(e) {
         children: H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ENABLE_TIP.format({
           onClick: R
         })
-      }) : null, r ? (0, a.jsx)(y.default, {
+      }) : null, r ? (0, a.jsx)(B.default, {
         title: (0, a.jsxs)("div", {
           className: k.settingsRowHeader,
-          children: [(0, a.jsx)(A.default, {
+          children: [(0, a.jsx)(p.default, {
             width: 20,
             height: 20
           }), (0, a.jsx)(d.Text, {
@@ -231,7 +231,7 @@ function V(e) {
         variant: "text-sm/normal",
         children: H.default.Messages.FORM_HELP_VERIFICATION_LEVEL.format()
       })]
-    }), (0, a.jsx)(B.default, {
+    }), (0, a.jsx)(y.default, {
       changeTitle: H.default.Messages.FORM_LABEL_VERIFICATION_LEVEL_CHANGE,
       value: null == r ? void 0 : r.value,
       options: i,
@@ -284,7 +284,7 @@ function Y(e) {
             helpdeskArticle: v.default.getArticleURL(F.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
           })
         })]
-      }), (0, a.jsx)(B.default, {
+      }), (0, a.jsx)(y.default, {
         changeTitle: H.default.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER_CHANGE,
         value: null == E ? void 0 : E.value,
         options: c,

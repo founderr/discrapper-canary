@@ -21,11 +21,11 @@ function f(e) {
   let {
     guildId: t,
     onPageChange: l
-  } = e, [n, f] = s.useTransition(), _ = (0, i.useStateFromStores)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), M = (0, i.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), h = (0, u.useIsMakingRequest)(t), T = s.useMemo(() => d.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
+  } = e, [n, f] = s.useTransition(), _ = (0, i.useStateFromStores)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), M = (0, i.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), h = (0, u.useIsMakingRequest)(t), S = s.useMemo(() => d.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
     value: e,
     label: Number(e).toLocaleString()
-  })), []), S = new Intl.NumberFormat(m.default.getLocale()).format(_), x = m.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
-    count: h ? "..." : S
+  })), []), T = new Intl.NumberFormat(m.default.getLocale()).format(_), x = m.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
+    count: h ? "..." : T
   }), A = _ > M.pageSize || h, p = _ > d.PAGINATION_PAGE_SIZE_OPTIONS["0"];
   return (0, a.jsxs)("div", {
     className: o()(E.paginationContainer),
@@ -39,7 +39,7 @@ function f(e) {
         }), (0, a.jsx)(r.Select, {
           "aria-label": x,
           className: E.pageSizeInput,
-          options: T,
+          options: S,
           isSelected: e => e === M.pageSize,
           select: e => {
             f(() => {

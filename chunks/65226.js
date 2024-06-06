@@ -44,9 +44,9 @@ function S(e) {
     null == g || g.blur()
   }, O = e => {
     g = e
-  }, p = () => {
-    N(!0)
   }, A = () => {
+    N(!0)
+  }, p = () => {
     N(!1), null != f && E.isEmpty(f) && R()
   }, M = e => {
     if (null == f) return;
@@ -66,8 +66,8 @@ function S(e) {
         className: T.searchBar,
         children: [(0, a.jsx)(n.Editor, {
           ref: O,
-          onBlur: A,
-          onFocus: p,
+          onBlur: p,
+          onFocus: A,
           handleReturn: D,
           handleBeforeInput: M,
           handlePastedText: v,

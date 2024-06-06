@@ -4,9 +4,9 @@ s.r(t), s.d(t, {
     return p
   }
 });
-var l = s("735250");
+var i = s("735250");
 s("470079");
-var i = s("399606"),
+var l = s("399606"),
   r = s("481060"),
   a = s("607070"),
   n = s("357352"),
@@ -19,16 +19,16 @@ var i = s("399606"),
   f = s("629481"),
   h = s("981631"),
   S = s("689938"),
-  L = s("525799");
+  x = s("525799");
 
-function x() {
+function I() {
   let e = o.GifAutoPlay.useSetting(),
     t = (0, C.useIsWindowFocused)(),
-    s = (0, i.useStateFromStores)([a.default], () => a.default.useReducedMotion),
+    s = (0, l.useStateFromStores)([a.default], () => a.default.useReducedMotion),
     r = t && e && !s ? (0, n.getAssetCDNUrl)("server_products/storefront/question-mark.gif") : (0, n.getAssetCDNUrl)("server_products/storefront/question-mark.png");
-  return (0, l.jsxs)("div", {
-    className: L.previewListingCard,
-    children: [(0, l.jsx)(d.default, {
+  return (0, i.jsxs)("div", {
+    className: x.previewListingCard,
+    children: [(0, i.jsx)(d.default, {
       role: void 0,
       ctaComponent: null,
       imageUrl: (0, n.getAssetCDNUrl)("server_products/storefront/preview-thumbnail.png"),
@@ -47,20 +47,20 @@ function x() {
       thumbnailHeight: 197,
       cardWidth: 332,
       descriptionTextVariant: "text-xs/normal"
-    }), (0, l.jsx)("img", {
-      className: L.questionMark,
+    }), (0, i.jsx)("img", {
+      className: x.questionMark,
       alt: "",
       src: r
     })]
   })
 }
 
-function I() {
-  return (0, l.jsxs)("div", {
-    className: L.learnMoreTipContainer,
-    children: [(0, l.jsx)(u.default, {
-      className: L.infoCircle
-    }), (0, l.jsx)(r.Text, {
+function L() {
+  return (0, i.jsxs)("div", {
+    className: x.learnMoreTipContainer,
+    children: [(0, i.jsx)(u.default, {
+      className: x.infoCircle
+    }), (0, i.jsx)(r.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       children: S.default.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
@@ -74,14 +74,14 @@ function p(e) {
   let {
     guildId: t
   } = e;
-  return (0, l.jsxs)("div", {
-    className: L.previewContentContainer,
-    children: [(0, l.jsxs)("div", {
-      className: L.previewContent,
-      children: [(0, l.jsx)(x, {}), (0, l.jsx)(_.default, {
+  return (0, i.jsxs)("div", {
+    className: x.previewContentContainer,
+    children: [(0, i.jsxs)("div", {
+      className: x.previewContent,
+      children: [(0, i.jsx)(I, {}), (0, i.jsx)(_.default, {
         guildId: t,
         showCTA: !0
       })]
-    }), (0, l.jsx)(I, {})]
+    }), (0, i.jsx)(L, {})]
   })
 }

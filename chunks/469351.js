@@ -26,8 +26,8 @@ var a, l, n = s("735250"),
   x = s("310800"),
   L = s("833695"),
   O = s("981631"),
-  p = s("176505"),
-  A = s("689938"),
+  A = s("176505"),
+  p = s("689938"),
   M = s("594567");
 
 function D(e) {
@@ -53,43 +53,43 @@ function D(e) {
       roles: t,
       initialTab: "guild_products",
       returnToSection: O.GuildSettingsSections.GUILD_PRODUCTS
-    }), (0, m.transitionTo)(O.Routes.CHANNEL(l.id, p.StaticChannelRoute.GUILD_SHOP))
+    }), (0, m.transitionTo)(O.Routes.CHANNEL(l.id, A.StaticChannelRoute.GUILD_SHOP))
   }, [l]);
   if (!a || j) return (0, n.jsx)(d.Spinner, {});
   if (null == l) return null;
   let b = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(d.FormTitle, {
         tag: d.FormTitleTags.H1,
-        children: A.default.Messages.GUILD_PRODUCTS_TITLE
+        children: p.default.Messages.GUILD_PRODUCTS_TITLE
       }), (0, n.jsx)(d.FormText, {
         type: d.FormText.Types.DESCRIPTION,
-        children: A.default.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
+        children: p.default.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
           monetizationPolicyLink: h.default.getArticleURL(O.HelpdeskArticles.CREATOR_POLICY),
           serverProductsSupportLink: h.default.getCreatorSupportArticleURL(O.HelpdeskArticles.SERVER_PRODUCTS)
         })
       })]
     }),
-    B = (0, n.jsxs)(d.TabBar, {
+    y = (0, n.jsxs)(d.TabBar, {
       type: "top",
       look: "brand",
       className: M.tabBar,
-      "aria-label": A.default.Messages.GUILD_PRODUCTS_TITLE,
+      "aria-label": p.default.Messages.GUILD_PRODUCTS_TITLE,
       selectedItem: G,
       onItemSelect: U,
       children: [(0, n.jsx)(E.default, {
         id: "basic_info",
-        disabledTooltip: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+        disabledTooltip: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
         disabled: !s,
-        children: A.default.Messages.GUILD_PRODUCTS_BASIC_INFO_SECTION
+        children: p.default.Messages.GUILD_PRODUCTS_BASIC_INFO_SECTION
       }), (0, n.jsx)(E.default, {
         id: "manage_listings",
-        disabledTooltip: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+        disabledTooltip: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
         disabled: !s,
-        children: A.default.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
+        children: p.default.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
       }), v ? (0, n.jsx)(d.TabBar.Item, {
         id: "payment",
         className: M.tabBarItem,
-        children: A.default.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
+        children: p.default.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
       }) : null, s ? (0, n.jsx)("div", {
         className: M.previewButton,
         children: (0, n.jsx)(d.Button, {
@@ -97,11 +97,11 @@ function D(e) {
           color: d.Button.Colors.PRIMARY,
           size: d.Button.Sizes.SMALL,
           look: d.Button.Looks.OUTLINED,
-          children: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
+          children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
         })
       }) : null]
     }),
-    y = (0, r.match)(G).with("basic_info", () => (0, n.jsx)(R.default, {
+    B = (0, r.match)(G).with("basic_info", () => (0, n.jsx)(R.default, {
       guildId: t
     })).with("manage_listings", () => (0, n.jsx)(x.default, {
       guildId: t
@@ -110,7 +110,7 @@ function D(e) {
     })).exhaustive(),
     F = a ? (0, n.jsx)(d.TabBar.Panel, {
       id: G,
-      children: y
+      children: B
     }) : (0, n.jsx)(d.Spinner, {});
   return (0, n.jsxs)(c.CreatorMonetizationSettingsDisabledContextProvider, {
     guildId: t,
@@ -118,7 +118,7 @@ function D(e) {
       guild: l
     }), (0, n.jsx)("div", {
       className: M.tabBarContainer,
-      children: B
+      children: y
     }), F]
   })
 }(l = a || (a = {})).MANAGE_LISTINGS = "manage_listings", l.PAYMENT = "payment", l.BASIC_INFO = "basic_info"

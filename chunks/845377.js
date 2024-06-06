@@ -82,19 +82,19 @@ t.default = e => {
     failedItemsOnly: d = !1
   } = e, [E, S] = (0, c.useStateFromStoresArray)([I.default], () => [I.default.getDiscoveryChecklist(n), I.default.isLoading()], [n]), {
     nsfwProperties: f
-  } = null != E ? E : {}, O = null == t ? void 0 : t.hasFeature(h.GuildFeatures.PARTNERED), p = null == f ? void 0 : f.channels_banned_keywords, A = (0, c.useStateFromStores)([T.default], () => {
+  } = null != E ? E : {}, O = null == t ? void 0 : t.hasFeature(h.GuildFeatures.PARTNERED), A = null == f ? void 0 : f.channels_banned_keywords, p = (0, c.useStateFromStores)([T.default], () => {
     var e, s, a;
-    if (null == p) return [];
+    if (null == A) return [];
     let l = null !== (s = (null !== (e = T.default.getChannels(t.id)) && void 0 !== e ? e : {})[T.GUILD_SELECTABLE_CHANNELS_KEY]) && void 0 !== s ? s : [],
       n = null !== (a = null == l ? void 0 : l.map(e => e.channel).reduce((e, t) => ({
         ...e,
         [t.id]: t
       }), {})) && void 0 !== a ? a : {};
-    return null == p ? [] : Object.entries(p).map(e => {
+    return null == A ? [] : Object.entries(A).map(e => {
       let [t, s] = e;
       return [n[t], s]
     })
-  }, [t.id, p], L);
+  }, [t.id, A], L);
   if (S || null == E) return (0, a.jsxs)("div", {
     className: i()(R.container, R.loaderContainer, r),
     children: [(0, a.jsx)(_.Heading, {
@@ -210,9 +210,9 @@ t.default = e => {
               children: e
             }, t)
           })
-        }) : null, A.length > 0 ? (0, a.jsx)("div", {
+        }) : null, p.length > 0 ? (0, a.jsx)("div", {
           className: R.indent,
-          children: A.map(e => {
+          children: p.map(e => {
             let [t, s] = e;
             return null != t ? (0, a.jsxs)(_.Text, {
               color: "text-muted",

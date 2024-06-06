@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("434404"),
   L = s("999382"),
   O = s("450474"),
-  p = s("190287"),
-  A = s("981631"),
+  A = s("190287"),
+  p = s("981631"),
   M = s("731455"),
   D = s("689938"),
   v = s("845978");
@@ -79,8 +79,8 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
     let {
       canManageGuild: U
     } = (0, n.useStateFromStoresObject)([f.default], () => ({
-      canManageGuild: f.default.can(A.Permissions.MANAGE_GUILD, s)
-    })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), B = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [y, F] = l.useState([!0]), [H, k] = l.useState(!0), [w, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
+      canManageGuild: f.default.can(p.Permissions.MANAGE_GUILD, s)
+    })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), y = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [B, F] = l.useState([!0]), [H, k] = l.useState(!0), [w, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
       let t = Object.entries(M.ALLOWED_SOCIAL_LINKS_DOMAINS).filter(e => !Y.includes(e[1].presentation)).map(e => ({
         label: e[1].presentation,
         value: e[0]
@@ -171,7 +171,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       es = (e, t) => {
         let a = [...b.socialLinks],
           l = [...Y],
-          n = [...y];
+          n = [...B];
         l[t] = e, a[t] = M.ALLOWED_SOCIAL_LINKS_DOMAINS[e].baseUrl, n[t] = !0, F(n), W(l), k(n.every(e => !0 === e)), c.updateGuildDiscoveryMetadataSocialLinks(s.id, a)
       },
       ea = (e, t) => {
@@ -183,7 +183,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       el = e => {
         let t = [...w];
         t.splice(e, 1), V(t);
-        let a = [...y];
+        let a = [...B];
         a.splice(e, 1), F(a);
         let l = [...Y];
         l.splice(e, 1), W(l);
@@ -255,11 +255,11 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     children: [D.default.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({
                       discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT
                     }), " ", D.default.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({
-                      learnMoreURL: R.default.getArticleURL(A.HelpdeskArticles.SERVER_WEB_PAGES)
+                      learnMoreURL: R.default.getArticleURL(p.HelpdeskArticles.SERVER_WEB_PAGES)
                     })]
                   }), (() => {
-                    if (!b.isPublished || null == B) return;
-                    let e = j + B;
+                    if (!b.isPublished || null == y) return;
+                    let e = j + y;
                     return (0, a.jsx)(a.Fragment, {
                       children: (0, a.jsxs)(r.FormSection, {
                         className: v.noDividerFormSection,
@@ -391,7 +391,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         children: D.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_DESCRIPTION
                       }), (0, a.jsx)("div", {
                         className: v.reasonToJoin,
-                        children: (0, a.jsx)(p.default, {
+                        children: (0, a.jsx)(A.default, {
                           reasonMinLength: 10,
                           reasonMaxLength: 128,
                           guildId: s.id,
@@ -461,7 +461,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           placeholder: D.default.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_HINT,
                           maxLength: 150,
                           disabled: !U
-                        }, "link-" + t), y[t] ? (0, a.jsx)(g.default, {
+                        }, "link-" + t), B[t] ? (0, a.jsx)(g.default, {
                           className: b.isPublished ? v.validationButtonMax : v.validationButtonMin,
                           color: i.default.unsafe_rawColors.GREEN_230.css,
                           width: 20,

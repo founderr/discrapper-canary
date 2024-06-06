@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("946724"),
   L = s("130341"),
   O = s("95242"),
-  p = s("420966"),
-  A = s("566476"),
+  A = s("420966"),
+  p = s("566476"),
   M = s("203377"),
   D = s("981631"),
   v = s("689938"),
@@ -128,7 +128,7 @@ function P(e) {
         ...e,
         className: j.memberRow,
         onContextMenu: f,
-        children: [(0, a.jsx)(A.default, {
+        children: [(0, a.jsx)(p.default, {
           className: j.memberDetails,
           avatarURL: t.avatarURL,
           name: t.name,
@@ -184,7 +184,7 @@ function b(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     guildId: t,
     roleId: s,
@@ -236,7 +236,7 @@ function B(e) {
   })
 }
 
-function y(e) {
+function B(e) {
   let {
     query: t,
     setQuery: s,
@@ -274,7 +274,7 @@ function F(e) {
   } = (0, O.default)(0), {
     scrolledToTop: T,
     handleScroll: S
-  } = (0, p.useScrolledToTop)(), m = n.managed || d, N = (0, L.useGuildRoleMembers)(t.id, n.id), g = (0, r.useStateFromStores)([C.default], () => {
+  } = (0, A.useScrolledToTop)(), m = n.managed || d, N = (0, L.useGuildRoleMembers)(t.id, n.id), g = (0, r.useStateFromStores)([C.default], () => {
     var e, s;
     return null !== (s = null === (e = C.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[n.id]) && void 0 !== s ? s : 0
   }) > N.length, R = () => {
@@ -304,12 +304,12 @@ function F(e) {
           className: i()(G.header, {
             [G.stickyHeaderElevated]: !T
           }),
-          children: [(0, a.jsx)(p.default, {
+          children: [(0, a.jsx)(A.default, {
             guild: t,
             role: n,
             selectedSection: M.GuildSettingsRoleEditSections.MEMBERS,
             setSelectedSection: u
-          }), (0, a.jsx)(y, {
+          }), (0, a.jsx)(B, {
             query: c,
             setQuery: E,
             locked: m,
@@ -321,7 +321,7 @@ function F(e) {
           }) : null]
         })
       })
-    }), (0, a.jsx)(B, {
+    }), (0, a.jsx)(y, {
       headerHeight: _ + 8,
       query: c,
       guildId: t.id,

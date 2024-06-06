@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("470079"),
-  a = n("941028");
+var a = n("470079"),
+  l = n("941028");
 
 function s(e) {
-  l.useEffect(() => (a.subscribeToMemberUpdates(e), () => {
-    a.unsubscribeFromMemberUpdates(e)
+  a.useEffect(() => (l.subscribeToMemberUpdates(e), () => {
+    l.unsubscribeFromMemberUpdates(e)
   }), [e])
 }

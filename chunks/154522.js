@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildProductCardGrid: function() {
-    return L
+    return x
   }
 });
-var l = s("735250"),
-  i = s("470079"),
+var i = s("735250"),
+  l = s("470079"),
   r = s("120356"),
   a = s.n(r),
   n = s("392711"),
@@ -19,46 +19,46 @@ var l = s("735250"),
   h = s("689938"),
   S = s("204982");
 
-function L(e) {
+function x(e) {
   let {
     guildId: t,
     productId: s
   } = e, {
     listingsLoaded: r
-  } = (0, c.useFetchGuildProductListingsForGuild)(t), n = (0, c.useGuildProductsForGuild)(t), L = i.useRef(null), {
-    sortOption: x
-  } = (0, _.useGuildProductsSortOptionContext)(), I = i.useMemo(() => (function(e, t) {
-    let s, l;
+  } = (0, c.useFetchGuildProductListingsForGuild)(t), n = (0, c.useGuildProductsForGuild)(t), x = l.useRef(null), {
+    sortOption: I
+  } = (0, _.useGuildProductsSortOptionContext)(), L = l.useMemo(() => (function(e, t) {
+    let s, i;
     switch (t) {
       case f.GuildProductSortOptions.NAME:
-        s = e => e.name.toLowerCase(), l = "asc";
+        s = e => e.name.toLowerCase(), i = "asc";
         break;
       case f.GuildProductSortOptions.PRICE_ASC:
-        s = "price_tier", l = "asc";
+        s = "price_tier", i = "asc";
         break;
       case f.GuildProductSortOptions.PRICE_DESC:
-        s = "price_tier", l = "desc";
+        s = "price_tier", i = "desc";
         break;
       case f.GuildProductSortOptions.NEWEST_ARRIVALS:
-        s = "published_at", l = "desc";
+        s = "published_at", i = "desc";
         break;
       default:
         return e
     }
-    return d().orderBy(e, [s], [l])
-  })(n, x), [n, x]);
-  return r ? (0, l.jsx)("ul", {
+    return d().orderBy(e, [s], [i])
+  })(n, I), [n, I]);
+  return r ? (0, i.jsx)("ul", {
     className: S.cardContainer,
     "aria-label": h.default.Messages.GUILD_SHOP_PRODUCTS_A11Y_LABEL,
-    children: I.map(e => (0, l.jsx)("li", {
+    children: L.map(e => (0, i.jsx)("li", {
       className: S.card,
-      children: (0, l.jsx)("div", {
+      children: (0, i.jsx)("div", {
         className: a()(S.cardContent, {
           [S.selectedCard]: e.id === s
         }),
-        ref: e.id === s ? L : void 0,
+        ref: e.id === s ? x : void 0,
         onLoad: () => {
-          let t = L.current;
+          let t = x.current;
           null != t && e.id === s && (t.scrollIntoView({
             behavior: "smooth",
             block: "center"
@@ -66,7 +66,7 @@ function L(e) {
             t.classList.remove(S.selectedCard)
           }, 2e3))
         },
-        children: (0, l.jsx)(C.GuildProductListingPublicCard, {
+        children: (0, i.jsx)(C.GuildProductListingPublicCard, {
           guildProductListing: e,
           guildId: t,
           location: u.default.GUILD_SHOP_PAGE,
@@ -81,5 +81,5 @@ function L(e) {
         }, e.id)
       }, e.id)
     }, e.id))
-  }) : (0, l.jsx)(o.Spinner, {})
+  }) : (0, i.jsx)(o.Spinner, {})
 }

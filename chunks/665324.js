@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("15385"),
   L = s("465670"),
   O = s("84017"),
-  p = s("185403"),
-  A = s("632184"),
+  A = s("185403"),
+  p = s("632184"),
   M = s("768581"),
   D = s("267642"),
   v = s("358085"),
@@ -38,8 +38,8 @@ var a = s("735250"),
   U = s("981631"),
   P = s("710111"),
   b = s("689938"),
-  B = s("438927");
-let y = v.isPlatformEmbedded || "Safari" !== o().name && "Firefox" !== o().name;
+  y = s("438927");
+let B = v.isPlatformEmbedded || "Safari" !== o().name && "Firefox" !== o().name;
 
 function F() {
   let e = (0, d.useStateFromStores)([j.default], () => j.default.getProps().guild);
@@ -57,7 +57,7 @@ function H(e) {
     children: t
   } = e;
   return (0, a.jsx)(c.Heading, {
-    className: B.tableHeader,
+    className: y.tableHeader,
     variant: "heading-sm/semibold",
     color: "header-secondary",
     children: t
@@ -81,7 +81,7 @@ function k(e) {
         currentBoostLevel: t
       }),
       children: e => (0, a.jsx)(c.Clickable, {
-        className: B.boostingIconWrapper,
+        className: y.boostingIconWrapper,
         onClick: () => {
           var e;
           return e = l, void(0, T.openGuildBoostingMarketingModal)({
@@ -117,7 +117,7 @@ let w = e => {
     return (0, a.jsx)(c.Popout, {
       shouldShow: i,
       renderPopout: e => (0, a.jsx)(c.Dialog, {
-        className: B.browserUnsupportedDialog,
+        className: y.browserUnsupportedDialog,
         onMouseEnter: d,
         onMouseLeave: E,
         children: t(e)
@@ -165,7 +165,7 @@ function Y(e) {
     null === (e = o.current) || void 0 === e || e.pause()
   }, []);
   if (i) return (0, a.jsx)(c.Spinner, {});
-  let x = y ? (0, a.jsx)(c.Button, {
+  let x = B ? (0, a.jsx)(c.Button, {
     onClick: function() {
       (0, c.openModalLazy)(async () => {
         let {
@@ -183,17 +183,17 @@ function Y(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)(c.Text, {
-        className: B.helpText,
+        className: y.helpText,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: b.default.Messages.GUILD_SETTINGS_SOUNDBOARD_DESCRIPTION
       }), (0, a.jsx)("div", {
-        className: B.buttons,
+        className: y.buttons,
         children: !h && x
       })]
     }), h ? (0, a.jsxs)(R.default, {
       theme: u,
-      className: B.empty,
+      className: y.empty,
       children: [(0, a.jsx)(R.EmptyStateImage, {
         darkSrc: s("458601"),
         lightSrc: s("673557"),
@@ -201,14 +201,14 @@ function Y(e) {
         height: 212
       }), (0, a.jsx)(R.EmptyStateText, {
         note: b.default.Messages.NO_SOUNDS,
-        noteClassName: B.emptyText,
+        noteClassName: y.emptyText,
         children: b.default.Messages.NO_SOUNDS_TITLE
       }), x]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.FormDivider, {
-        className: B.divider
+        className: y.divider
       }), (0, a.jsx)(c.Heading, {
-        className: B.tableTitle,
+        className: y.tableTitle,
         variant: "heading-md/bold",
         color: "header-primary",
         children: (0, a.jsx)(k, {
@@ -221,9 +221,9 @@ function Y(e) {
         numSounds: n.length,
         isOutOfSlots: 0 === _
       }), (0, a.jsxs)("div", {
-        className: B.soundTable,
+        className: y.soundTable,
         children: [(0, a.jsxs)("div", {
-          className: B.tableHeaders,
+          className: y.tableHeaders,
           children: [(0, a.jsx)(H, {
             children: b.default.Messages.EMOJI
           }), (0, a.jsx)(H, {
@@ -274,40 +274,40 @@ function W(e) {
       await (0, E.getUser)(m)
     }
   }, [h, m]), (0, a.jsxs)("div", {
-    className: i()(B.row, {
-      [B.active]: n
+    className: i()(y.row, {
+      [y.active]: n
     }),
     children: [D ? (0, a.jsx)(_.default, {
       emojiId: N,
       emojiName: g,
-      className: B.emoji
+      className: y.emoji
     }) : (0, a.jsx)(O.default, {
-      className: B.emoji
+      className: y.emoji
     }), (0, a.jsx)(c.Clickable, {
       onClick: () => {
         !v && r(t)
       },
-      className: B.soundName,
+      className: y.soundName,
       children: (0, a.jsxs)(c.Text, {
         variant: "text-sm/normal",
-        className: B.soundName,
-        children: [I, " ", (0, a.jsx)(A.default, {
-          className: B.soundPreviewIcon
+        className: y.soundName,
+        children: [I, " ", (0, a.jsx)(p.default, {
+          className: y.soundPreviewIcon
         })]
       })
     }), null != h && (0, a.jsxs)(c.Text, {
-      className: B.uploaderName,
+      className: y.uploaderName,
       variant: "text-sm/normal",
       children: [(0, a.jsx)(c.Avatar, {
         "aria-label": null == h ? void 0 : h.username,
         size: c.AvatarSizes.SIZE_24,
-        className: B.uploaderAvatar,
+        className: y.uploaderAvatar,
         src: (0, M.getUserAvatarURL)(h, !1, 24)
       }), null == h ? void 0 : h.username]
     }), x ? (0, a.jsxs)("div", {
-      className: B.soundEditContainer,
+      className: y.soundEditContainer,
       children: [(0, a.jsx)(c.Clickable, {
-        className: B.soundUpdate,
+        className: y.soundUpdate,
         onClick: function(e) {
           e.stopPropagation(), (0, c.openModalLazy)(async () => {
             let {
@@ -321,11 +321,11 @@ function W(e) {
           })
         },
         "aria-label": b.default.Messages.EDIT,
-        children: (0, a.jsx)(p.default, {
-          className: B.soundEditIcon
+        children: (0, a.jsx)(A.default, {
+          className: y.soundEditIcon
         })
       }), (0, a.jsx)(c.Clickable, {
-        className: B.soundRemove,
+        className: y.soundRemove,
         onClick: function(e) {
           e.stopPropagation(), (0, c.openModal)(e => (0, a.jsx)(c.ConfirmModal, {
             header: b.default.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_TITLE.format({
@@ -345,7 +345,7 @@ function W(e) {
         },
         "aria-label": b.default.Messages.REMOVE,
         children: (0, a.jsx)(L.default, {
-          className: B.soundEditIcon
+          className: y.soundEditIcon
         })
       })]
     }) : null]

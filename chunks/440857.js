@@ -20,8 +20,8 @@ var a = l("735250"),
   _ = l("626135"),
   M = l("910693"),
   h = l("241559"),
-  T = l("256003"),
-  S = l("981631"),
+  S = l("256003"),
+  T = l("981631"),
   x = l("689938"),
   A = l("621747");
 
@@ -31,10 +31,10 @@ function p(e) {
   } = e, p = (0, h.useCanAccessBulkBanningFeature)(t), {
     selectedUserIds: g,
     clearSelection: L
-  } = (0, T.default)(t), N = g.size > 0, H = async (e, t, l, a) => {
+  } = (0, S.default)(t), N = g.size > 0, H = async (e, t, l, a) => {
     try {
       let s = await d.default.banMultipleUsers(e, t, l, a);
-      (0, r.showToast)((0, r.createToast)(x.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, r.ToastType.SUCCESS)), _.default.track(S.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
+      (0, r.showToast)((0, r.createToast)(x.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, r.ToastType.SUCCESS)), _.default.track(T.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
         ...(0, C.collectGuildAnalyticsMetadata)(e),
         action_type: M.ModerationActionType.BAN,
         target_user_ids: [...g],
@@ -67,7 +67,7 @@ function p(e) {
       className: A.clearButton,
       children: x.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
     })]
-  }), v = (0, a.jsxs)("span", {
+  }), j = (0, a.jsxs)("span", {
     className: A.buttonContainer,
     children: [(0, a.jsx)(E.default, {
       width: 20,
@@ -83,7 +83,7 @@ function p(e) {
     children: N && (0, a.jsx)(m.default, {
       children: (0, a.jsx)(u.default, {
         onSave: () => {
-          _.default.track(S.AnalyticEvents.BULK_MODERATION_ACTION_STARTED, {
+          _.default.track(T.AnalyticEvents.BULK_MODERATION_ACTION_STARTED, {
             ...(0, C.collectGuildAnalyticsMetadata)(t),
             action_type: M.ModerationActionType.BAN,
             target_user_ids: [...g],
@@ -102,7 +102,7 @@ function p(e) {
             })
           })
         },
-        onSaveText: v,
+        onSaveText: j,
         onSaveButtonColor: r.ButtonColors.RED,
         message: I
       })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return A
   }
 });
 var a = s("735250"),
@@ -29,12 +29,12 @@ var a = s("735250"),
   L = s("689938"),
   O = s("22401");
 
-function p(e) {
+function A(e) {
   let {
     guildId: t
   } = e, s = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(t)), {
     analyticsLocations: n
-  } = (0, u.default)(d.default.GUILD_SETTINGS_MEMBERS_PAGE), p = !1 == !!(null == s ? void 0 : s.hasFeature(x.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), A = (0, r.useStateFromStores)([I.default], () => I.default.getEstimatedMemberSearchCountByGuildId(t), [t]), M = l.useCallback(e => {
+  } = (0, u.default)(d.default.GUILD_SETTINGS_MEMBERS_PAGE), A = !1 == !!(null == s ? void 0 : s.hasFeature(x.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), p = (0, r.useStateFromStores)([I.default], () => I.default.getEstimatedMemberSearchCountByGuildId(t), [t]), M = l.useCallback(e => {
     null != e && (0, E.openUserProfileModal)({
       userId: e.userId,
       guildId: e.guildId,
@@ -48,7 +48,7 @@ function p(e) {
     null === (e = D.current) || void 0 === e || e.resetSearchText()
   }, []);
   if (null == s) return null;
-  let j = (0, N.getSearchState)(!1, !1, A);
+  let j = (0, N.getSearchState)(!1, !1, p);
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
     value: n,
     children: (0, a.jsx)("div", {
@@ -73,7 +73,7 @@ function p(e) {
                   guild: s
                 }), (0, a.jsx)(S.default, {
                   guild: s
-                }), p ? (0, a.jsxs)("div", {
+                }), A ? (0, a.jsxs)("div", {
                   className: i()(O.mainTableContainer),
                   children: [(0, a.jsx)(C.default, {
                     guild: s,

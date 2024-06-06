@@ -32,7 +32,7 @@ let E = (e, n, u) => (0, a.jsx)(l.MenuItem, {
     action: () => (0, l.openModalLazy)(async () => {
       let {
         default: s
-      } = await Promise.all([t.e("99387"), t.e("7654"), t.e("92893")]).then(t.bind(t, "560114"));
+      } = await Promise.all([t.e("99387"), t.e("7654"), t.e("61939")]).then(t.bind(t, "560114"));
       return t => (0, a.jsx)(s, {
         ...t,
         guild: n,

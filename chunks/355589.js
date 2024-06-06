@@ -16,8 +16,8 @@ var s = a("735250"),
   x = a("607070"),
   C = a("447003"),
   _ = a("605436"),
-  p = a("621516"),
-  T = a("430824"),
+  T = a("621516"),
+  p = a("430824"),
   S = a("263704"),
   E = a("465670"),
   N = a("110456"),
@@ -29,13 +29,13 @@ var s = a("735250"),
   O = a("26290"),
   R = a("585483"),
   b = a("70956"),
-  L = a("709054"),
-  F = a("961675"),
+  F = a("709054"),
+  L = a("961675"),
   P = a("883429"),
   y = a("993259"),
   D = a("109434"),
-  w = a("456269"),
-  U = a("228392"),
+  U = a("456269"),
+  w = a("228392"),
   k = a("432771"),
   H = a("538366"),
   B = a("470623"),
@@ -62,7 +62,7 @@ let Y = {
     borderRadius: 10
   },
   q = e => {
-    (0, U.trackForumOnboardingClicked)({
+    (0, w.trackForumOnboardingClicked)({
       onboardingCTA: e
     })
   };
@@ -137,7 +137,7 @@ let Q = e => {
     name: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_TITLE,
     description: t ? z.default.Messages.MEDIA_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_DESCRIPTION : z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_DESCRIPTION.format({
       onClick: e => {
-        null != n && (e.preventDefault(), e.stopPropagation(), (0, U.trackForumUpsellModalViewed)(), (0, h.openModalLazy)(async () => {
+        null != n && (e.preventDefault(), e.stopPropagation(), (0, w.trackForumUpsellModalViewed)(), (0, h.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([a.e("99387"), a.e("18417")]).then(a.bind(a, "740696"));
@@ -155,7 +155,7 @@ let Q = e => {
   }),
   et = (e, t) => n.useCallback(() => (t(!1), P.default.hideAdminOnboarding(e, !0)), [e, t]),
   ea = e => {
-    let t = L.default.extractTimestamp(e);
+    let t = F.default.extractTimestamp(e);
     return o()().isBefore(o()(t).add(o().duration(15, "days")))
   },
   es = (e, t, a) => {
@@ -181,7 +181,7 @@ let Q = e => {
       canManageChannel: s,
       guildId: l,
       channel: r
-    } = e, i = (0, m.useStateFromStores)([T.default], () => null != l ? T.default.getRoles(l) : void 0), o = n.useCallback(() => {
+    } = e, i = (0, m.useStateFromStores)([p.default], () => null != l ? p.default.getRoles(l) : void 0), o = n.useCallback(() => {
       R.ComponentDispatch.dispatch(V.ComponentActions.REMEASURE_TARGET)
     }, []);
     n.useEffect(() => {
@@ -258,9 +258,9 @@ let Q = e => {
       channel: l,
       hasAnyThread: r,
       handleHide: i
-    } = e, [o, u] = n.useState(!1), d = (0, k.isOnboardingDismissed)(l.id), f = (0, m.useStateFromStores)([F.default], () => F.default.hasHidden(l.id)), g = function(e, t, l, r) {
+    } = e, [o, u] = n.useState(!1), d = (0, k.isOnboardingDismissed)(l.id), f = (0, m.useStateFromStores)([L.default], () => L.default.hasHidden(l.id)), g = function(e, t, l, r) {
       let i = null == e ? void 0 : e.id,
-        o = (0, m.useStateFromStores)([T.default], () => null != i ? T.default.getRoles(i) : void 0);
+        o = (0, m.useStateFromStores)([p.default], () => null != i ? p.default.getRoles(i) : void 0);
       return n.useMemo(() => {
         let n = new Z,
           i = (null == t ? void 0 : t.isMediaChannel()) === !0;
@@ -355,7 +355,7 @@ t.default = e => {
     }
   }), {
     tagFilter: i
-  } = (0, D.useForumChannelStore)(a.id), o = (0, m.useStateFromStores)([T.default], () => T.default.getGuild(a.getGuildId())), c = (0, w.useCanManageChannel)(a), {
+  } = (0, D.useForumChannelStore)(a.id), o = (0, m.useStateFromStores)([p.default], () => p.default.getGuild(a.getGuildId())), c = (0, U.useCanManageChannel)(a), {
     transitions: f,
     setVisible: g
   } = ei(), x = eo(l), C = em(), _ = et(a.id, g), {
@@ -368,7 +368,7 @@ t.default = e => {
     channel: a,
     hasAnyThread: t,
     handleHide: _
-  }), b = !M && !N, L = (0, B.useForumPostComposerStoreApi)(), F = a.isMediaChannel(), P = e => L.getState().setOnboardingExpanded(e);
+  }), b = !M && !N, F = (0, B.useForumPostComposerStoreApi)(), L = a.isMediaChannel(), P = e => F.getState().setOnboardingExpanded(e);
   return (el(R, b, _), er({
     isAllDone: R,
     isVisible: b,
@@ -377,7 +377,7 @@ t.default = e => {
     channel: a
   }), es(N, M, g), n.useEffect(() => {
     (!t || !b) && P(!0)
-  }, []), null == o) ? null : b && c ? F ? t ? null : (0, s.jsx)(p.default, {
+  }, []), null == o) ? null : b && c ? L ? t ? null : (0, s.jsx)(T.default, {
     channel: a
   }) : (0, s.jsx)(s.Fragment, {
     children: f((e, t) => t ? (0, s.jsx)(u.animated.div, {

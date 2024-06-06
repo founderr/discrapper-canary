@@ -31,8 +31,8 @@ var a = s("735250"),
   x = s("314897"),
   L = s("592125"),
   O = s("984933"),
-  p = s("430824"),
-  A = s("976644"),
+  A = s("430824"),
+  p = s("976644"),
   M = s("93879"),
   D = s("263704"),
   v = s("465670"),
@@ -41,8 +41,8 @@ var a = s("735250"),
   U = s("709586"),
   P = s("151785"),
   b = s("931468"),
-  B = s("768581"),
-  y = s("700785"),
+  y = s("768581"),
+  B = s("700785"),
   F = s("434404"),
   H = s("999382"),
   k = s("8426"),
@@ -117,16 +117,16 @@ function ee(e) {
     onDragStart: C,
     onDragComplete: R,
     onDragReset: x
-  } = e, O = (0, r.useStateFromStores)([L.default], () => L.default.getChannel(T.channelId)), A = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(I)), {
+  } = e, O = (0, r.useStateFromStores)([L.default], () => L.default.getChannel(T.channelId)), p = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(I)), {
     customEmoji: D,
     unicodeEmoji: v
-  } = (0, f.default)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (n = T.emoji) || void 0 === n ? void 0 : n.name), U = null == T.emoji || null != D || null != v, P = B.default.getNewMemberActionIconURL({
+  } = (0, f.default)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (n = T.emoji) || void 0 === n ? void 0 : n.name), U = null == T.emoji || null != D || null != v, P = y.default.getNewMemberActionIconURL({
     channelId: T.channelId,
     icon: T.icon
   }), b = null;
   null != O && (0, m.isChannelValidForNewMemberAction)(O) ? !U && (b = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : b = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
   let {
-    drag: y,
+    drag: B,
     dragSourcePosition: F,
     drop: H,
     setIsDraggable: w
@@ -154,7 +154,7 @@ function ee(e) {
       })
     })
   }, [I, T, S, g, h, V]);
-  if (null == O || null == A) return null;
+  if (null == O || null == p) return null;
   let W = null !== (c = (0, E.getChannelIconComponent)(O)) && void 0 !== c ? c : M.default;
   return (0, a.jsxs)("div", {
     className: i()(Z.actionItemContainer),
@@ -164,7 +164,7 @@ function ee(e) {
         [Z.dropIndicatorAfter]: null != F && S > F,
         [Z.actionItemError]: null != b
       }),
-      ref: e => y(H(e)),
+      ref: e => B(H(e)),
       children: [(0, a.jsx)("div", {
         className: Z.dragContainer,
         onMouseEnter: () => w(!0),
@@ -366,7 +366,7 @@ function en(e) {
   var t;
   let {
     guildId: n
-  } = e, i = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(n)), o = null !== (t = null == i ? void 0 : i.hasFeature(V.GuildFeatures.BANNER)) && void 0 !== t && t, u = l.useCallback((e, t) => {
+  } = e, i = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(n)), o = null !== (t = null == i ? void 0 : i.hasFeature(V.GuildFeatures.BANNER)) && void 0 !== t && t, u = l.useCallback((e, t) => {
     if (null != n) {
       if (null == e || void 0 === t) {
         F.default.updateGuild({
@@ -410,7 +410,7 @@ function en(e) {
   if (null == i) return null;
   let _ = (0, a.jsx)(h.default, {
     image: i.homeHeader,
-    makeURL: e => null != e ? B.default.getGuildHomeHeaderURL({
+    makeURL: e => null != e ? y.default.getGuildHomeHeaderURL({
       id: i.id,
       homeHeader: e
     }) : null,
@@ -475,7 +475,7 @@ function en(e) {
           variant: "text-sm/normal",
           color: "header-secondary",
           children: K.default.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
-        }), (0, a.jsxs)(A.default, {
+        }), (0, a.jsxs)(p.default, {
           className: Z.upsellButton,
           innerClassName: Z.upsellButtonInner,
           color: d.Button.Colors.GREEN,
@@ -512,14 +512,14 @@ function ei(e) {
     onDragComplete: u,
     onDragStart: c,
     onDragReset: E
-  } = e, I = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(t)), {
+  } = e, I = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(t)), {
     title: T,
     channelId: S,
     description: f
   } = n, N = L.default.getChannel(S), g = null;
   (null == N || !(0, m.isChannelValidForResourceChannel)(N)) && (g = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
   let h = null == f || 0 === f.length,
-    C = B.default.getResourceChannelIconURL({
+    C = y.default.getResourceChannelIconURL({
       channelId: n.channelId,
       icon: n.icon
     }),
@@ -527,7 +527,7 @@ function ei(e) {
       drag: R,
       dragSourcePosition: x,
       drop: O,
-      setIsDraggable: A
+      setIsDraggable: p
     } = (0, _.default)({
       type: "RESOURCE_CHANNEL",
       optionId: n.channelId,
@@ -572,8 +572,8 @@ function ei(e) {
       ref: e => R(O(e)),
       children: [(0, a.jsx)("div", {
         className: Z.dragContainer,
-        onMouseEnter: () => A(!0),
-        onMouseLeave: () => A(!1),
+        onMouseEnter: () => p(!0),
+        onMouseLeave: () => p(!1),
         children: (0, a.jsx)(j.default, {
           className: Z.dragIcon
         })
@@ -664,10 +664,10 @@ function er(e) {
 function eo(e) {
   let {
     guildId: t
-  } = e, s = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(t)), n = (0, r.useStateFromStoresArray)([w.default], () => {
+  } = e, s = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(t)), n = (0, r.useStateFromStoresArray)([w.default], () => {
     var e, t;
     return null !== (t = null === (e = w.default.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== t ? t : []
-  }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && y.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !y.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {
+  }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && B.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !B.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {
     let e = o.map(e => e.channel.id);
     (0, k.dismissSuggestedChannels)(t, e)
   }, [t, o]);

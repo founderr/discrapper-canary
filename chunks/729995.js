@@ -104,9 +104,9 @@ function L(e) {
     children: [(0, a.jsx)(O, {
       guildId: t,
       handlePreview: f
-    }), (0, a.jsx)(p, {}), (0, a.jsxs)("div", {
+    }), (0, a.jsx)(A, {}), (0, a.jsxs)("div", {
       className: x.content,
-      children: [(0, a.jsx)(A, {
+      children: [(0, a.jsx)(p, {
         guildId: t,
         handleOnboardingToggle: E
       }), g]
@@ -169,7 +169,7 @@ function O(e) {
   })
 }
 
-function p() {
+function A() {
   let e = "• ";
   return (0, a.jsxs)("div", {
     className: x.notice,
@@ -196,7 +196,7 @@ function p() {
   })
 }
 
-function A(e) {
+function p(e) {
   let {
     guildId: t,
     handleOnboardingToggle: s

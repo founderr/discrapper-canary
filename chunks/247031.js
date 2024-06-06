@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return B
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("372454"),
   L = s("999382"),
   O = s("84613"),
-  p = s("740903"),
-  A = s("1080"),
+  A = s("740903"),
+  p = s("1080"),
   M = s("981631"),
   D = s("689938"),
   v = s("939056"),
@@ -192,7 +192,7 @@ class b extends l.PureComponent {
     })
   }
   handleModerationClick() {
-    R.default.setSection(M.GuildSettingsSections.SAFETY), (0, O.setSafetyPage)(p.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
+    R.default.setSection(M.GuildSettingsSections.SAFETY), (0, O.setSafetyPage)(A.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
   }
   handleQueryChange(e) {
     R.default.setSearchQuery(e)
@@ -306,7 +306,7 @@ class b extends l.PureComponent {
     })
   }
 }
-let B = o.default.connectStores([L.default, I.default, T.default], () => {
+let y = o.default.connectStores([L.default, I.default, T.default], () => {
   let {
     bans: e,
     guild: t,
@@ -321,7 +321,7 @@ let B = o.default.connectStores([L.default, I.default, T.default], () => {
   }
 })(b);
 
-function y() {
+function B() {
   var e;
   let {
     guild: t
@@ -333,5 +333,5 @@ function y() {
   }, {
     autoTrackExposure: !0
   });
-  return s ? (0, a.jsx)(A.default, {}) : (0, a.jsx)(B, {})
+  return s ? (0, a.jsx)(p.default, {}) : (0, a.jsx)(y, {})
 }

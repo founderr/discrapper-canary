@@ -17,9 +17,9 @@ t.default = e => {
     guild: t,
     transitionState: l,
     onClose: n
-  } = e, [f, _] = s.useState(7), [M, h] = s.useState(null), [T, S] = s.useState([]), x = s.useCallback(async () => {
-    h(null), h(await d.default.updateEstimate(t.id, f, T))
-  }, [f, t.id, T]);
+  } = e, [f, _] = s.useState(7), [M, h] = s.useState(null), [S, T] = s.useState([]), x = s.useCallback(async () => {
+    h(null), h(await d.default.updateEstimate(t.id, f, S))
+  }, [f, t.id, S]);
   s.useEffect(() => {
     x()
   }, [x]);
@@ -73,14 +73,14 @@ t.default = e => {
         title: m.default.Messages.PRUNE_WITH_ROLES,
         children: (0, a.jsx)(r.SearchableSelect, {
           multi: !0,
-          value: T,
-          onChange: e => S(e),
+          value: S,
+          onChange: e => T(e),
           options: A
         })
       }), (0, a.jsx)(r.FormText, {
         type: r.FormText.Types.DESCRIPTION,
         className: E.spacing,
-        children: T.length > 0 ? m.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
+        children: S.length > 0 ? m.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
           members: M,
           days: f
         }) : m.default.Messages.FORM_HELP_LAST_SEEN_1.format({
@@ -91,7 +91,7 @@ t.default = e => {
     }), (0, a.jsxs)(r.ModalFooter, {
       children: [(0, a.jsx)(r.Button, {
         onClick: () => {
-          d.default.prune(t.id, f, T), n()
+          d.default.prune(t.id, f, S), n()
         },
         children: m.default.Messages.PRUNE
       }), (0, a.jsx)(r.Button, {

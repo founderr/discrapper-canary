@@ -32,13 +32,13 @@ var a = s("735250"),
   L = s("689938"),
   O = s("212723");
 
-function p(e) {
+function A(e) {
   let {
     guild: t,
     isExpanded: s,
     selectedChannelId: n,
     className: r
-  } = e, T = (0, _.useCanEnableRaidAlerts)(t), f = t.canHaveRaidActivityAlerts(), [m, N] = l.useState(f), g = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(n), [n]), C = (0, c.default)(g), p = async () => {
+  } = e, T = (0, _.useCanEnableRaidAlerts)(t), f = t.canHaveRaidActivityAlerts(), [m, N] = l.useState(f), g = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(n), [n]), C = (0, c.default)(g), A = async () => {
     N(!m);
     try {
       var e;
@@ -81,13 +81,13 @@ function p(e) {
       })]
     }), (0, a.jsx)(R.default, {
       checked: m,
-      onChange: p,
+      onChange: A,
       disabled: !T || null == n
     })]
   })
 }
 
-function A(e) {
+function p(e) {
   var t;
   let {
     guild: s,
@@ -160,14 +160,14 @@ function M(e) {
     guild: n
   } = e, [i, r] = l.useState(!1), o = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null, [d, u] = l.useState(null != o ? o : null !== (s = null == n ? void 0 : n.publicUpdatesChannelId) && void 0 !== s ? s : null);
   return (0, a.jsx)(T.default, {
-    renderHeader: (0, a.jsx)(p, {
+    renderHeader: (0, a.jsx)(A, {
       isExpanded: i,
       guild: n,
       selectedChannelId: d
     }),
     isExpanded: i,
     onExpand: () => r(!i),
-    children: (0, a.jsx)(A, {
+    children: (0, a.jsx)(p, {
       guild: n,
       selectedChannelId: d,
       setSelectedChannelId: u
@@ -181,12 +181,12 @@ function D(e) {
     guild: n
   } = e, i = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null, [r, o] = l.useState(null != i ? i : null !== (s = null == n ? void 0 : n.publicUpdatesChannelId) && void 0 !== s ? s : null);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(p, {
+    children: [(0, a.jsx)(A, {
       isExpanded: !0,
       guild: n,
       selectedChannelId: r,
       className: O.noPadding
-    }), (0, a.jsx)(A, {
+    }), (0, a.jsx)(p, {
       guild: n,
       selectedChannelId: r,
       setSelectedChannelId: o,

@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("770436"),
   L = s("65226"),
   O = s("689938"),
-  p = s("233324"),
-  A = s("84885");
+  A = s("233324"),
+  p = s("84885");
 let M = s("74773"),
   D = s("210657");
 
@@ -60,14 +60,14 @@ function v(e) {
         return (0, a.jsx)("div", {
           ref: l,
           ...r,
-          className: p.listContainer,
+          className: A.listContainer,
           children: null == t ? void 0 : t.map(e => {
             let t = n === e.id,
               l = i === e.id;
             return (0, a.jsx)(x.default, {
               guildId: s,
               ref: t ? o : l ? u : null,
-              className: p.row,
+              className: A.row,
               onHeaderClick: c,
               onContentClick: E,
               log: e,
@@ -111,11 +111,11 @@ function j() {
       theme: N.default.theme,
       hide: h.default.enabled
     }
-  }), [B, y] = l.useState({
+  }), [y, B] = l.useState({
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(B), V = (0, T.default)(F), Y = () => {
+  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(y), V = (0, T.default)(F), Y = () => {
     var e;
     return (null === (e = k.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
   };
@@ -139,15 +139,15 @@ function j() {
     K = (0, I.default)(null, () => {
       let {
         expandedId: s
-      } = B;
-      null == s || H ? null != s && (H = !1) : (e = null, t = null, y(e => ({
+      } = y;
+      null == s || H ? null != s && (H = !1) : (e = null, t = null, B(e => ({
         ...e,
         expandedId: null,
         lastExpandedId: null
       })), z = W())
     });
   l.useEffect(() => {
-    B.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
+    y.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
   }, []);
   let Z = () => {
       let e = k.current;
@@ -164,12 +164,12 @@ function j() {
     X = s => {
       let {
         expandedId: a
-      } = B;
-      a !== s.id ? (H = !0, y(e => ({
+      } = y;
+      a !== s.id ? (H = !0, B(e => ({
         ...e,
         expandedId: null == s ? void 0 : s.id,
         lastExpandedId: a
-      })), z = W()) : (e = null, t = null, null != a && (z = W()), y(e => ({
+      })), z = W()) : (e = null, t = null, null != a && (z = W()), B(e => ({
         ...e,
         expandedId: null,
         lastExpandedId: null
@@ -187,34 +187,34 @@ function j() {
     },
     ee = () => (0, a.jsx)(E.Spinner, {
       type: E.Spinner.Type.SPINNING_CIRCLE,
-      className: p.spinner
+      className: A.spinner
     });
   return (0, a.jsx)("div", {
     ref: K,
-    className: A.customColumn,
+    className: p.customColumn,
     children: (0, a.jsx)("div", {
-      className: A.customContainer,
+      className: p.customContainer,
       children: (0, a.jsx)(E.AdvancedScrollerAuto, {
-        className: i()(A.customScroller, p.scroller),
+        className: i()(p.customScroller, A.scroller),
         onScroll: () => {
           Y() && J()
         },
         ref: k,
         children: (0, a.jsxs)("div", {
-          className: p.content,
+          className: A.content,
           children: [(0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)("div", {
-              className: p.customHeader,
+              className: A.customHeader,
               children: (0, a.jsx)(E.FormTitle, {
                 tag: E.FormTitleTags.H1,
-                className: p.formTitle,
+                className: A.formTitle,
                 children: O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
               })
             }), (0, a.jsx)(E.FormDivider, {
-              className: p.divider
+              className: A.divider
             })]
           }), (0, a.jsx)(L.GuildAuditLogSearch, {
-            className: p.__invalid_search
+            className: A.__invalid_search
           }), (() => {
             if (b) return (0, a.jsx)(_.default, {});
             if (d || r) return ee();
@@ -223,7 +223,7 @@ function j() {
                 t = j ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
               return (0, a.jsxs)(C.default, {
                 theme: P,
-                className: p.__invalid_empty,
+                className: A.__invalid_empty,
                 children: [(0, a.jsx)(C.EmptyStateImage, {
                   darkSrc: M,
                   lightSrc: D,
@@ -241,7 +241,7 @@ function j() {
             let {
               expandedId: e,
               lastExpandedId: t
-            } = B;
+            } = y;
             return (0, a.jsx)(v, {
               logs: F,
               guildId: s,
@@ -256,7 +256,7 @@ function j() {
           })(), (() => {
             if (x && G && !b) return (0, a.jsx)(E.Button, {
               color: E.Button.Colors.PRIMARY,
-              className: p.__invalid_loadMore,
+              className: A.__invalid_loadMore,
               onClick: J,
               children: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
             })

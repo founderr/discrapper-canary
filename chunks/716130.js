@@ -97,7 +97,7 @@ function h(e) {
   }))], {
     handleDragStart: L,
     handleDragReset: O,
-    handleDragComplete: p
+    handleDragComplete: A
   } = (0, c.default)(x, e => {
     let t = e.findIndex(e => "separator" === e.id),
       s = e.slice(0, t).map(e => ({
@@ -141,7 +141,7 @@ function h(e) {
         dragIndex: t,
         onPromptDragStart: L,
         onPromptDragReset: O,
-        onPromptDragComplete: p
+        onPromptDragComplete: A
       }, e.id))]
     }), (0, a.jsx)(g, {
       guild: u,
@@ -155,7 +155,7 @@ function h(e) {
         dragIndex: t + C.length + 1,
         onPromptDragStart: L,
         onPromptDragReset: O,
-        onPromptDragComplete: p
+        onPromptDragComplete: A
       }, e.id)), h.length < f.MAX_NUM_PROMPTS ? (0, a.jsxs)(o.Clickable, {
         className: N.addPrompt,
         onClick: () => (0, I.editGuildOnboardingPrompts)(u, [...h, (0, f.getEmptyPrompt)(!1)], !1),

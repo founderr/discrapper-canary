@@ -4,26 +4,26 @@ a.r(t), a.d(t, {
     return r
   }
 });
-var n = a("735250");
+var l = a("735250");
 a("470079");
-var i = a("481060"),
-  l = a("132871"),
+var n = a("481060"),
+  i = a("132871"),
   s = a("147890"),
-  u = a("912527"),
-  d = a("689938");
+  d = a("912527"),
+  u = a("689938");
 
 function r(e) {
-  return (0, n.jsx)(i.MenuItem, {
+  return (0, l.jsx)(n.MenuItem, {
     id: "application-directory",
-    label: (0, n.jsx)(n.Fragment, {
-      children: d.default.Messages.APP_DIRECTORY
+    label: (0, l.jsx)(l.Fragment, {
+      children: u.default.Messages.APP_DIRECTORY
     }),
-    icon: u.default,
+    icon: d.default,
     action: () => {
       (0, s.goToAppDirectory)({
         guildId: e.id,
         entrypoint: {
-          name: l.ApplicationDirectoryEntrypointNames.GUILD_HEADER_POPOUT
+          name: i.ApplicationDirectoryEntrypointNames.GUILD_HEADER_POPOUT
         }
       })
     }

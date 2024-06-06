@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return B
   }
 });
 var a = s("735250");
@@ -29,8 +29,8 @@ var l = s("442837"),
   x = s("903773"),
   L = s("822531"),
   O = s("909656"),
-  p = s("210591"),
-  A = s("927731"),
+  A = s("210591"),
+  p = s("927731"),
   M = s("798680"),
   D = s("509026"),
   v = s("981631"),
@@ -74,12 +74,12 @@ function b(e) {
       completed: u
     }]
   }];
-  return (0, a.jsx)(p.default, {
+  return (0, a.jsx)(A.default, {
     children: E
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     application: t
   } = e, {
@@ -103,7 +103,7 @@ function B(e) {
   }) : null
 }
 
-function y(e) {
+function B(e) {
   let t, {
       guild: s,
       application: n
@@ -142,7 +142,7 @@ function F(e) {
     N = (0, m.useGroupListingsFetchContext)(),
     g = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
     x = (0, C.default)(s.id),
-    p = s.isOwner(g),
+    A = s.isOwner(g),
     G = () => {
       let e = I.default.getRole(s.id, s.getEveryoneRoleId());
       if (null == e) return;
@@ -165,7 +165,7 @@ function F(e) {
       });
       break;
     case M.TabBarSection.TIERS:
-      t = (0, a.jsx)(A.default, {
+      t = (0, a.jsx)(p.default, {
         guildId: s.id
       });
       break;
@@ -194,7 +194,7 @@ function F(e) {
         children: U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DESCRIPTION
       }), (0, a.jsx)(R.default, {
         guild: s
-      }), d && (0, a.jsx)(B, {
+      }), d && (0, a.jsx)(y, {
         application: r
       }), (0, a.jsxs)("div", {
         className: P.tabBarContainer,
@@ -220,7 +220,7 @@ function F(e) {
             disabledTooltip: U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
             disabled: !d,
             children: U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_EMOJI
-          }), p ? (0, a.jsx)(n.TabBar.Item, {
+          }), A ? (0, a.jsx)(n.TabBar.Item, {
             className: P.__invalid_tabBarItem,
             id: M.TabBarSection.PAYMENT,
             children: U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT

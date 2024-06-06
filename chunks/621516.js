@@ -16,8 +16,8 @@ var s = a("735250"),
   x = a("406074"),
   C = a("434404"),
   _ = a("430824"),
-  p = a("976644"),
-  T = a("682864"),
+  T = a("976644"),
+  p = a("682864"),
   S = a("974029"),
   E = a("465670"),
   N = a("41542"),
@@ -29,8 +29,8 @@ var s = a("735250"),
   O = a("689938"),
   R = a("11777"),
   b = a("906739"),
-  L = a("965358"),
-  F = a("420196"),
+  F = a("965358"),
+  L = a("420196"),
   P = a("433075");
 
 function y(e) {
@@ -81,7 +81,7 @@ function D(e) {
       color: "header-primary",
       "aria-hidden": !0,
       children: a
-    }), (0, s.jsx)(T.default, {
+    }), (0, s.jsx)(p.default, {
       size: 10
     }), (0, s.jsx)(A.default, {
       className: R.video,
@@ -89,7 +89,7 @@ function D(e) {
       autoPlay: !0,
       loop: !0,
       muted: !0
-    }), (0, s.jsx)(T.default, {
+    }), (0, s.jsx)(p.default, {
       size: 10
     }), (0, s.jsx)("div", {
       className: R.footer,
@@ -128,18 +128,18 @@ t.default = e => {
   var t, a;
   let {
     channel: l
-  } = e, S = (0, c.default)(), E = (0, u.isThemeDark)(S), A = (0, o.useStateFromStores)([_.default], () => _.default.getGuild(l.guild_id)), w = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), U = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
+  } = e, S = (0, c.default)(), E = (0, u.isThemeDark)(S), A = (0, o.useStateFromStores)([_.default], () => _.default.getGuild(l.guild_id)), U = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), w = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
     guildId: l.guild_id,
     channelId: l.id
   }), {
     transitions: H,
     setVisible: B
-  } = (0, I.useShowAnimation)(w), G = n.useCallback(() => {
+  } = (0, I.useShowAnimation)(U), G = n.useCallback(() => {
     B(!1), f.default.hideAdminOnboarding(l.id, !0)
   }, [l, B]);
   n.useEffect(() => {
-    !(0, g.isOnboardingDismissed)(l.id) && B(!U)
-  }, [l, B, U]);
+    !(0, g.isOnboardingDismissed)(l.id) && B(!w)
+  }, [l, B, w]);
   let V = n.useMemo(() => [O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG, O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG, O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG, O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG], []),
     z = n.useMemo(() => [O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG, O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG, O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG, O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG], []),
     W = () => {
@@ -206,13 +206,13 @@ t.default = e => {
               variant: "heading-lg/semibold",
               color: "header-primary",
               children: X
-            }), (0, s.jsx)(T.default, {
+            }), (0, s.jsx)(p.default, {
               size: 8
             }), (0, s.jsx)(d.Text, {
               variant: "text-md/normal",
               color: "text-muted",
               children: q
-            }), (0, s.jsx)(T.default, {
+            }), (0, s.jsx)(p.default, {
               size: 16
             }), (0, s.jsxs)(d.Clickable, {
               onClick: () => open(v.default.getCreatorSupportArticleURL(j.HelpdeskArticles.MEDIA_CHANNEL)),
@@ -227,7 +227,7 @@ t.default = e => {
                 height: 16,
                 className: R.helpCenterLinkIcon
               })]
-            }), (0, s.jsx)(T.default, {
+            }), (0, s.jsx)(p.default, {
               size: 16
             }), (0, s.jsx)("div", {
               className: R.mediaChannelTagsContainer,
@@ -246,11 +246,11 @@ t.default = e => {
             children: (0, s.jsxs)("div", {
               className: R.contentImageContainer,
               children: [(0, s.jsx)("img", {
-                src: E ? F : P,
+                src: E ? L : P,
                 alt: "",
                 className: r()(R.previewEmbedImage, R.secondaryImage)
               }), (0, s.jsx)("img", {
-                src: E ? b : L,
+                src: E ? b : F,
                 alt: "",
                 className: R.previewEmbedImage
               })]
@@ -265,19 +265,19 @@ t.default = e => {
                 "aria-label": "",
                 children: "\uD83D\uDD25"
               })]
-            }), (0, s.jsx)(T.default, {
+            }), (0, s.jsx)(p.default, {
               size: 10
             }), (0, s.jsx)(d.Heading, {
               variant: "heading-lg/semibold",
               color: "header-primary",
               children: O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_TITLE
-            }), (0, s.jsx)(T.default, {
+            }), (0, s.jsx)(p.default, {
               size: 8
             }), (0, s.jsx)(d.Text, {
               variant: "text-md/normal",
               color: "text-muted",
               children: O.default.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_SUBTITLE
-            }), (0, s.jsx)(T.default, {
+            }), (0, s.jsx)(p.default, {
               size: 16
             }), (0, s.jsx)("div", {
               className: R.mediaChannelTagsContainer,
@@ -287,11 +287,11 @@ t.default = e => {
                 className: R.mediaChannelTag,
                 children: e
               }, e))
-            }), (0, s.jsx)(T.default, {
+            }), (0, s.jsx)(p.default, {
               size: 16
-            }), 0 === k.length && (0, s.jsx)(p.default, {
+            }), 0 === k.length && (0, s.jsx)(T.default, {
               size: d.Button.Sizes.MEDIUM,
-              pauseAnimation: w,
+              pauseAnimation: U,
               onClick: W,
               className: R.addChannelButton,
               color: d.Button.Colors.CUSTOM,

@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return O
   },
   EditIntangibleBenefitModal: function() {
-    return p
+    return A
   }
 }), s("47120");
 var a = s("735250"),
@@ -102,13 +102,13 @@ function L(e) {
     onDelete: c,
     transitionState: E,
     onClose: _
-  } = e, I = (0, m.useUID)(), S = (0, m.useUID)(), g = (0, m.useUID)(), [h, L] = l.useState(null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : ""), [O, p] = l.useState(() => ({
+  } = e, I = (0, m.useUID)(), S = (0, m.useUID)(), g = (0, m.useUID)(), [h, L] = l.useState(null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : ""), [O, A] = l.useState(() => ({
     id: null == n ? void 0 : n.emoji_id,
     name: null == n ? void 0 : n.emoji_name
-  })), A = d && "" !== h && (null != O.id || null != O.name);
+  })), p = d && "" !== h && (null != O.id || null != O.name);
   return (0, a.jsx)("form", {
     onSubmit: function(e) {
-      e.preventDefault(), A && (u({
+      e.preventDefault(), p && (u({
         description: h,
         emojiId: O.id,
         emojiName: O.name
@@ -149,7 +149,7 @@ function L(e) {
           children: (0, a.jsx)(x, {
             guildId: s,
             emojiData: O,
-            onSelectEmoji: p,
+            onSelectEmoji: A,
             "aria-labelledby": g
           })
         })]
@@ -159,7 +159,7 @@ function L(e) {
           className: R.primaryButtons,
           children: [(0, a.jsx)(o.Button, {
             type: "submit",
-            disabled: !A,
+            disabled: !p,
             children: null == n ? C.default.Messages.ADD : C.default.Messages.SAVE
           }), null != c && (0, a.jsx)(o.Button, {
             look: o.Button.Looks.BLANK,
@@ -232,7 +232,7 @@ function O(e) {
   })
 }
 
-function p(e) {
+function A(e) {
   var t;
   let {
     initialData: s,

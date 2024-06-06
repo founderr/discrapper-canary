@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return p
+    return T
   }
 });
 var s = a("735250");
@@ -22,7 +22,7 @@ var n = a("120356"),
   C = a("861186"),
   _ = a("504764");
 
-function p(e) {
+function T(e) {
   let {
     onDismiss: t
   } = e;

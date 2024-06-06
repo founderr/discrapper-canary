@@ -34,7 +34,7 @@ var a, l = s("735250"),
   L = s("657478"),
   O = s("611273");
 
-function p(e, t, s) {
+function A(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -42,7 +42,7 @@ function p(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class A extends(a = u.default.Store) {
+class p extends(a = u.default.Store) {
   getTemplate() {
     let e = C.default.getProps().guild;
     if (null == e) return null;
@@ -54,26 +54,26 @@ class A extends(a = u.default.Store) {
     return null != e && null != this.name && "" !== this.name && (this.name.trim() !== e.name || this.description.trim() !== e.description)
   }
   constructor(...e) {
-    super(...e), p(this, "name", ""), p(this, "description", ""), p(this, "error", null), p(this, "reset", () => {
+    super(...e), A(this, "name", ""), A(this, "description", ""), A(this, "error", null), A(this, "reset", () => {
       let e = this.getTemplate();
       if (null != e) {
         var t, s;
         this.name = null !== (t = e.name) && void 0 !== t ? t : this.name, this.description = null !== (s = e.description) && void 0 !== s ? s : this.description
       } else this.name = "", this.description = "";
       this.emitChange()
-    }), p(this, "setName", e => {
+    }), A(this, "setName", e => {
       this.name = e, this.emitChange()
-    }), p(this, "setDescription", e => {
+    }), A(this, "setDescription", e => {
       this.description = e, this.emitChange()
-    }), p(this, "setError", e => {
+    }), A(this, "setError", e => {
       this.error = e, this.emitChange()
-    }), p(this, "save", async () => {
+    }), A(this, "save", async () => {
       await f.default.updateGuildTemplate(C.default.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange()
     })
   }
 }
-p(A, "displayName", "GuildSettingsTemplateMetadataStore_");
-let M = new A(_.default);
+A(p, "displayName", "GuildSettingsTemplateMetadataStore_");
+let M = new p(_.default);
 
 function D() {
   let [e, t] = n.useState(!1), s = async () => {
@@ -277,7 +277,7 @@ function b(e) {
     guild: t,
     guildTemplate: s
   } = e;
-  return null == s ? (0, l.jsx)(B, {
+  return null == s ? (0, l.jsx)(y, {
     guild: t
   }) : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(E.FormItem, {
@@ -294,7 +294,7 @@ function b(e) {
       children: x.default.Messages.GUILD_TEMPLATES_UNSYNCED_WARNING
     }), (0, l.jsxs)("div", {
       className: r()(O.marginTop20, L.buttonContainer),
-      children: [s.isDirty && (0, l.jsx)(y, {
+      children: [s.isDirty && (0, l.jsx)(B, {
         guild: t,
         guildTemplate: s
       }), (0, l.jsxs)("div", {
@@ -315,7 +315,7 @@ function b(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   var t;
   let {
     guild: s
@@ -337,7 +337,7 @@ function B(e) {
   })
 }
 
-function y(e) {
+function B(e) {
   let {
     guild: t,
     guildTemplate: s

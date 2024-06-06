@@ -28,9 +28,9 @@ function d(e) {
   let {
     headerId: s,
     guildTemplate: a
-  } = e, d = a.code, i = u[d];
-  if (null != i) {
-    var L;
+  } = e, d = a.code, L = u[d];
+  if (null != L) {
+    var i;
     let {
       header: e,
       description: u,
@@ -39,7 +39,7 @@ function d(e) {
     return (0, t.jsxs)("div", {
       children: [(0, t.jsx)("img", {
         className: _.image,
-        src: i,
+        src: L,
         alt: ""
       }), (0, t.jsx)(l.Title, {
         className: _.header,
@@ -49,7 +49,7 @@ function d(e) {
         children: u
       }), a.state === r.GuildTemplateStates.RESOLVED ? (0, t.jsx)(E.UsagePill, {
         className: _.usagePill,
-        count: null !== (L = a.usageCount) && void 0 !== L ? L : 0,
+        count: null !== (i = a.usageCount) && void 0 !== i ? i : 0,
         verifiedName: T
       }) : null]
     })

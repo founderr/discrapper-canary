@@ -23,8 +23,8 @@ var s = a("735250"),
   x = a("703558"),
   C = a("117530"),
   _ = a("180277"),
-  p = a("585483"),
-  T = a("127654"),
+  T = a("585483"),
+  p = a("127654"),
   S = a("228392"),
   E = a("981631"),
   N = a("518095");
@@ -72,9 +72,9 @@ function j(e) {
       className: N.fileInput,
       ref: c,
       onChange: e => {
-        null == l || l(), (0, T.promptToUpload)(e.currentTarget.files, m, x.DraftType.FirstThreadMessage, {
+        null == l || l(), (0, p.promptToUpload)(e.currentTarget.files, m, x.DraftType.FirstThreadMessage, {
           requireConfirm: !0
-        }), p.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), e.currentTarget.value = null
+        }), T.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), e.currentTarget.value = null
       },
       multiple: m.rateLimitPerUser <= 0,
       tabIndex: -1,

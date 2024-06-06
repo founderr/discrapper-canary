@@ -37,7 +37,7 @@ function L(e) {
     disableAutofocus: u,
     promptIndex: g,
     dragIndex: L,
-    includeCount: A,
+    includeCount: p,
     singleColumn: M,
     onPromptDragComplete: D,
     onPromptDragStart: v,
@@ -46,8 +46,8 @@ function L(e) {
     dropdownsAllowed: G
   } = (0, E.useOnboardingDropdownExperiment)(s.id), U = (0, r.useStateFromStores)([f.default], () => f.default.editedDefaultChannelIds), P = G ? h.DROPDOWN_MAX_NUM_OPTIONS : h.MULTIPLE_CHOICE_MAX_NUM_OPTIONS, {
     drag: b,
-    dragSourcePosition: B,
-    drop: y,
+    dragSourcePosition: y,
+    drop: B,
     setIsDraggable: F
   } = (0, d.default)({
     type: "ONBOARDING_PROMPT_CARD",
@@ -74,11 +74,11 @@ function L(e) {
       onBlur: () => Y(!1),
       onMouseLeave: () => Y(!1),
       className: i()(R.container, {
-        [R.dropIndicatorBefore]: null != B && g < B,
-        [R.dropIndicatorAfter]: null != B && g > B,
+        [R.dropIndicatorBefore]: null != y && g < y,
+        [R.dropIndicatorAfter]: null != y && g > y,
         [R.containerFocused]: V
       }),
-      ref: e => b(y(e)),
+      ref: e => b(B(e)),
       children: [(0, a.jsx)("div", {
         className: R.dragContainer,
         onMouseEnter: () => F(!0),
@@ -124,11 +124,11 @@ function L(e) {
       onFocus: () => Y(!0),
       onBlur: () => Y(!1),
       className: i()(R.container, {
-        [R.dropIndicatorBefore]: null != B && g < B,
-        [R.dropIndicatorAfter]: null != B && g > B,
+        [R.dropIndicatorBefore]: null != y && g < y,
+        [R.dropIndicatorAfter]: null != y && g > y,
         [R.containerFocused]: V
       }),
-      ref: e => b(y(e)),
+      ref: e => b(B(e)),
       children: [(0, a.jsx)("div", {
         className: R.dragContainer,
         onMouseEnter: () => F(!0),
@@ -168,7 +168,7 @@ function L(e) {
           count: n.options.length,
           total: P
         })
-      }), (0, a.jsx)(p, {
+      }), (0, a.jsx)(A, {
         guild: s,
         prompt: n,
         promptIndex: g,
@@ -203,7 +203,7 @@ function L(e) {
             children: (0, a.jsx)(o.Text, {
               variant: "text-sm/normal",
               color: "interactive-normal",
-              children: A ? C.default.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({
+              children: p ? C.default.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({
                 count: Z
               }) : C.default.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL
             })
@@ -269,7 +269,7 @@ function O(e) {
   })
 }
 
-function p(e) {
+function A(e) {
   let {
     guild: t,
     prompt: s,

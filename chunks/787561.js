@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("54842"),
   L = s("981631"),
   O = s("731455"),
-  p = s("689938"),
-  A = s("592218"),
+  A = s("689938"),
+  p = s("592218"),
   M = s("922905");
 let D = "dismissedCommunityFeaturesUpsell",
   v = () => {
@@ -43,7 +43,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       guild: R.default.getGuild(),
       errors: R.default.getErrors()
     })), n = Object.keys(l), i = n.length > 0 ? n[0] : null;
-    if ("rules_channel_id" === i) e = p.default.Messages.GUILD_RULES_INVALID_CHANNEL;
+    if ("rules_channel_id" === i) e = A.default.Messages.GUILD_RULES_INVALID_CHANNEL;
     else e = null != i ? l[i] : void 0;
     return (0, a.jsx)(c.default, {
       submitting: s,
@@ -90,29 +90,29 @@ let D = "dismissedCommunityFeaturesUpsell",
       } catch {}
     };
     return i && !N ? null : (0, a.jsxs)("div", {
-      className: A.upsellContainer,
+      className: p.upsellContainer,
       children: [(0, a.jsxs)("div", {
-        className: A.upsellContent,
+        className: p.upsellContent,
         children: [(0, a.jsx)("img", {
           src: M,
           alt: "",
           width: 60,
-          className: A.upsellImage
+          className: p.upsellImage
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsx)(u.Heading, {
             variant: "heading-md/semibold",
-            className: A.upsellHeader,
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_HEADER
+            className: p.upsellHeader,
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_HEADER
           }), (0, a.jsx)(u.Text, {
             variant: "text-sm/normal",
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BODY
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BODY
           })]
         })]
       }), (0, a.jsx)(u.Button, {
-        "aria-label": p.default.Messages.CLOSE,
+        "aria-label": A.default.Messages.CLOSE,
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
-        className: A.upsellClose,
+        className: p.upsellClose,
         onClick: () => {
           d.Storage.set(D, !0), c(!0)
         },
@@ -121,35 +121,35 @@ let D = "dismissedCommunityFeaturesUpsell",
           height: 24
         })
       }), (0, a.jsxs)("div", {
-        className: A.upsellFooter,
+        className: p.upsellFooter,
         children: [N && (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           onClick: g,
-          className: A.upsellButton,
-          children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ADMIN_SERVER
+          className: p.upsellButton,
+          children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ADMIN_SERVER
         }), s ? null : (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           onClick: () => {
             C.default.setSection(L.GuildSettingsSections.ONBOARDING)
           },
-          className: A.upsellButton,
-          children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ONBOARDING
+          className: p.upsellButton,
+          children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ONBOARDING
         }), t ? null : (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           onClick: () => {
             C.default.setSection(L.GuildSettingsSections.DISCOVERY)
           },
-          className: A.upsellButton,
+          className: p.upsellButton,
           color: u.Button.Colors.PRIMARY,
-          children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_DISCOVERY
+          children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_DISCOVERY
         }), (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           onClick: () => {
             C.default.setSection(L.GuildSettingsSections.ANALYTICS)
           },
-          className: A.upsellButton,
+          className: p.upsellButton,
           color: u.Button.Colors.PRIMARY,
-          children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ANALYTICS
+          children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ANALYTICS
         })]
       })]
     })
@@ -226,68 +226,68 @@ let D = "dismissedCommunityFeaturesUpsell",
       b = () => {
         t.features.has(L.GuildFeatures.DISCOVERABLE) && t.features.has(L.GuildFeatures.PARTNERED) ? (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
           ...e,
-          header: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
-          confirmText: p.default.Messages.CONFIRM,
-          cancelText: p.default.Messages.NEVERMIND,
+          header: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
+          confirmText: A.default.Messages.CONFIRM,
+          cancelText: A.default.Messages.NEVERMIND,
           onConfirm: x,
           children: (0, a.jsx)(u.Text, {
             variant: "text-sm/normal",
-            children: p.default.Messages.GUILD_SETTINGS_PARTNER_AND_DISCOVERY_DISABLE_PUBLIC_CONFIRM_TEXT
+            children: A.default.Messages.GUILD_SETTINGS_PARTNER_AND_DISCOVERY_DISABLE_PUBLIC_CONFIRM_TEXT
           })
         })) : t.features.has(L.GuildFeatures.DISCOVERABLE) ? (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
           ...e,
-          header: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
-          confirmText: p.default.Messages.CONFIRM,
-          cancelText: p.default.Messages.NEVERMIND,
+          header: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
+          confirmText: A.default.Messages.CONFIRM,
+          cancelText: A.default.Messages.NEVERMIND,
           onConfirm: x,
           children: (0, a.jsx)(u.Text, {
             variant: "text-sm/normal",
-            children: p.default.Messages.GUILD_SETTINGS_DISCOVERY_DISABLE_PUBLIC_CONFIRM_TEXT
+            children: A.default.Messages.GUILD_SETTINGS_DISCOVERY_DISABLE_PUBLIC_CONFIRM_TEXT
           })
         })) : t.features.has(L.GuildFeatures.PARTNERED) ? (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
           ...e,
-          header: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
-          confirmText: p.default.Messages.CONFIRM,
-          cancelText: p.default.Messages.NEVERMIND,
+          header: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
+          confirmText: A.default.Messages.CONFIRM,
+          cancelText: A.default.Messages.NEVERMIND,
           onConfirm: x,
           children: (0, a.jsx)(u.Text, {
             variant: "text-sm/normal",
-            children: p.default.Messages.GUILD_SETTINGS_PARTNER_DISABLE_PUBLIC_CONFIRM_TEXT
+            children: A.default.Messages.GUILD_SETTINGS_PARTNER_DISABLE_PUBLIC_CONFIRM_TEXT
           })
         })) : t.features.has(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) && !t.features.has(L.GuildFeatures.CLAN) ? (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
           ...e,
-          header: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
+          header: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
           confirmButtonColor: u.Button.Colors.BRAND,
-          confirmText: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_MEMBER_VERIFICATION_CONFIRM,
-          cancelText: p.default.Messages.NEVERMIND,
+          confirmText: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_MEMBER_VERIFICATION_CONFIRM,
+          cancelText: A.default.Messages.NEVERMIND,
           onConfirm: h,
           children: (0, a.jsx)(u.Text, {
             variant: "text-sm/normal",
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_MEMBER_VERIFICATION
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_MEMBER_VERIFICATION
           })
         })) : x()
       };
     return (0, a.jsxs)(u.FormSection, {
-      title: p.default.Messages.GUILD_SETTINGS_COMMUNITY,
+      title: A.default.Messages.GUILD_SETTINGS_COMMUNITY,
       tag: u.FormTitleTags.H1,
       children: [I ? (0, a.jsx)(j, {
         discoveryEnabled: t.features.has(L.GuildFeatures.DISCOVERABLE),
         onboardingEnabled: t.features.has(L.GuildFeatures.GUILD_ONBOARDING),
         guild: t
       }) : null, (0, a.jsxs)(u.FormSection, {
-        className: i()(A.twoColumnFormSection, A.firstSection),
+        className: i()(p.twoColumnFormSection, p.firstSection),
         children: [(0, a.jsxs)("div", {
-          className: A.descriptionColumn,
+          className: p.descriptionColumn,
           children: [(0, a.jsx)(u.FormTitle, {
-            className: A.formTitle,
-            children: p.default.Messages.FORM_LABEL_DISCOVERY_RULES_CHANNEL
+            className: p.formTitle,
+            children: A.default.Messages.FORM_LABEL_DISCOVERY_RULES_CHANNEL
           }), (0, a.jsx)(u.FormText, {
             type: u.FormTextTypes.DESCRIPTION,
-            className: A.__invalid_formDescription,
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_RULES_CHANNEL_HELP
+            className: p.__invalid_formDescription,
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_RULES_CHANNEL_HELP
           })]
         }), (0, a.jsx)("div", {
-          className: A.selectColumn,
+          className: p.selectColumn,
           children: (0, a.jsx)(u.SearchableSelect, {
             value: t.rulesChannelId,
             options: f,
@@ -296,21 +296,21 @@ let D = "dismissedCommunityFeaturesUpsell",
           })
         })]
       }), (0, a.jsx)(u.FormDivider, {
-        className: A.divider
+        className: p.divider
       }), (0, a.jsxs)(u.FormSection, {
-        className: i()(A.twoColumnFormSection, A.firstSection),
+        className: i()(p.twoColumnFormSection, p.firstSection),
         children: [(0, a.jsxs)("div", {
-          className: A.descriptionColumn,
+          className: p.descriptionColumn,
           children: [(0, a.jsx)(u.FormTitle, {
-            className: A.formTitle,
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE
+            className: p.formTitle,
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE
           }), (0, a.jsx)(u.FormText, {
             type: u.FormTextTypes.DESCRIPTION,
-            className: A.__invalid_formDescription,
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_HELP
+            className: p.__invalid_formDescription,
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_HELP
           })]
         }), (0, a.jsx)("div", {
-          className: A.selectColumn,
+          className: p.selectColumn,
           children: (0, a.jsx)(u.SearchableSelect, {
             value: t.publicUpdatesChannelId,
             options: f,
@@ -319,22 +319,22 @@ let D = "dismissedCommunityFeaturesUpsell",
           })
         })]
       }), (0, a.jsx)(u.FormDivider, {
-        className: A.divider
+        className: p.divider
       }), S && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(u.FormSection, {
-          className: i()(A.twoColumnFormSection, A.firstSection),
+          className: i()(p.twoColumnFormSection, p.firstSection),
           children: [(0, a.jsxs)("div", {
-            className: A.descriptionColumn,
+            className: p.descriptionColumn,
             children: [(0, a.jsx)(u.FormTitle, {
-              className: A.formTitle,
-              children: p.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
+              className: p.formTitle,
+              children: A.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
             }), (0, a.jsx)(u.FormText, {
               type: u.FormTextTypes.DESCRIPTION,
-              className: A.__invalid_formDescription,
-              children: p.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_DESCRIPTION
+              className: p.__invalid_formDescription,
+              children: A.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_DESCRIPTION
             })]
           }), (0, a.jsx)("div", {
-            className: A.selectColumn,
+            className: p.selectColumn,
             children: (0, a.jsx)(u.SearchableSelect, {
               value: t.safetyAlertsChannelId,
               options: f,
@@ -343,22 +343,22 @@ let D = "dismissedCommunityFeaturesUpsell",
             })
           })]
         }), (0, a.jsx)(u.FormDivider, {
-          className: A.divider
+          className: p.divider
         })]
       }), (0, a.jsxs)(u.FormSection, {
-        className: A.twoColumnFormSection,
+        className: p.twoColumnFormSection,
         children: [(0, a.jsxs)("div", {
-          className: A.descriptionColumn,
+          className: p.descriptionColumn,
           children: [(0, a.jsx)(u.FormTitle, {
-            className: A.formTitle,
-            children: p.default.Messages.FORM_LABEL_SERVER_LANGUAGE
+            className: p.formTitle,
+            children: A.default.Messages.FORM_LABEL_SERVER_LANGUAGE
           }), (0, a.jsx)(u.FormText, {
             type: u.FormTextTypes.DESCRIPTION,
-            className: A.__invalid_formDescription,
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_LOCALE_HELP
+            className: p.__invalid_formDescription,
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_LOCALE_HELP
           })]
         }), (0, a.jsx)("div", {
-          className: A.selectColumn,
+          className: p.selectColumn,
           children: (0, a.jsx)(u.SearchableSelect, {
             value: t.preferredLocale,
             options: c,
@@ -367,49 +367,49 @@ let D = "dismissedCommunityFeaturesUpsell",
           })
         })]
       }), (0, a.jsx)(u.FormDivider, {
-        className: A.divider
+        className: p.divider
       }), (() => {
         var e;
         if (null != t) return (0, a.jsxs)(u.FormSection, {
           children: [(0, a.jsx)(u.FormTitle, {
-            className: A.formTitle,
-            children: p.default.Messages.FORM_LABEL_SERVER_DESCRIPTION
+            className: p.formTitle,
+            children: A.default.Messages.FORM_LABEL_SERVER_DESCRIPTION
           }), (0, a.jsx)(u.FormText, {
-            className: A.description,
+            className: p.description,
             type: u.FormTextTypes.DESCRIPTION,
-            children: p.default.Messages.FORM_HELP_SERVER_DESCRIPTION
+            children: A.default.Messages.FORM_HELP_SERVER_DESCRIPTION
           }), (0, a.jsx)(u.TextArea, {
             value: null !== (e = t.description) && void 0 !== e ? e : "",
-            placeholder: p.default.Messages.SERVER_DESCIPTION_EMPTY,
+            placeholder: A.default.Messages.SERVER_DESCIPTION_EMPTY,
             onChange: P,
             maxLength: 120,
             disabled: !s
           })]
         })
       })(), (0, a.jsx)(u.FormDivider, {
-        className: A.divider
+        className: p.divider
       }), (0, a.jsxs)(u.FormSection, {
-        className: A.twoColumnFormSection,
+        className: p.twoColumnFormSection,
         children: [(0, a.jsxs)("div", {
-          className: A.descriptionColumn,
+          className: p.descriptionColumn,
           children: [(0, a.jsx)(u.FormTitle, {
-            className: A.formTitle,
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY
+            className: p.formTitle,
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY
           }), (0, a.jsx)(u.FormText, {
             type: u.FormTextTypes.DESCRIPTION,
-            className: A.__invalid_formDescription,
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY_DESCRIPTION
+            className: p.__invalid_formDescription,
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY_DESCRIPTION
           })]
         }), (0, a.jsx)(u.Tooltip, {
-          text: n ? null : p.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
-          "aria-label": n ? void 0 : p.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+          text: n ? null : A.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+          "aria-label": n ? void 0 : A.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
           children: e => (0, a.jsx)(u.Button, {
             size: u.Button.Sizes.SMALL,
             onClick: b,
             color: u.Button.Colors.RED,
             disabled: !n,
             ...e,
-            children: p.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY
+            children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_COMMUNITY
           })
         })]
       })]

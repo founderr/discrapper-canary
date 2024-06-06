@@ -31,8 +31,8 @@ var a = s("735250"),
   x = s("890477"),
   L = s("688465"),
   O = s("807582"),
-  p = s("48217"),
-  A = s("26323"),
+  A = s("48217"),
+  p = s("26323"),
   M = s("859802"),
   D = s("744178"),
   v = s("35125"),
@@ -41,8 +41,8 @@ var a = s("735250"),
   U = s("884858"),
   P = s("516129"),
   b = s("813197"),
-  B = s("208567"),
-  y = s("592125"),
+  y = s("208567"),
+  B = s("592125"),
   F = s("324067"),
   H = s("650774"),
   k = s("496675"),
@@ -108,7 +108,7 @@ function eg(e) {
     value: e.id,
     label: (0, C.computeChannelName)(e, V.default, w.default),
     channel: e,
-    category: y.default.getChannel(e.parent_id)
+    category: B.default.getChannel(e.parent_id)
   }
 }
 let eh = () => {
@@ -226,7 +226,7 @@ class eC extends l.PureComponent {
         justify: Y.default.Justify.BETWEEN,
         children: [(0, a.jsxs)(Y.default.Child, {
           wrap: !0,
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(y.default, {
             showIcon: !0,
             name: e.name,
             image: e.icon,
@@ -865,7 +865,7 @@ class eC extends l.PureComponent {
       if (null != l && null != e) {
         if ("image/gif" !== l || s.hasFeature(es.GuildFeatures.ANIMATED_BANNER)) {
           if (!s.hasFeature(es.GuildFeatures.BANNER)) {
-            n.object = es.AnalyticsObjects.IMAGE_CROPPING_MODAL, (0, p.openGuildBannerUpsellModal)({
+            n.object = es.AnalyticsObjects.IMAGE_CROPPING_MODAL, (0, A.openGuildBannerUpsellModal)({
               guild: s,
               analyticsLocations: a,
               analyticsLocation: n,
@@ -875,7 +875,7 @@ class eC extends l.PureComponent {
             return
           }
         } else {
-          n.object = es.AnalyticsObjects.GIF_CROPPING_MODAL, (0, p.openGuildBannerUpsellModal)({
+          n.object = es.AnalyticsObjects.GIF_CROPPING_MODAL, (0, A.openGuildBannerUpsellModal)({
             guild: s,
             analyticsLocations: a,
             analyticsLocation: n,
@@ -901,7 +901,7 @@ class eC extends l.PureComponent {
         },
         guild_id: null == l ? void 0 : l.id,
         location_stack: n
-      }), (0, A.default)({
+      }), (0, p.default)({
         analyticsLocations: n,
         analyticsSourceLocation: {
           section: t,

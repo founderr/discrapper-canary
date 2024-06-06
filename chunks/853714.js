@@ -24,8 +24,8 @@ var a = s("735250"),
   x = s("594174"),
   L = s("186095"),
   O = s("158010"),
-  p = s("274730"),
-  A = s("823379"),
+  A = s("274730"),
+  p = s("823379"),
   M = s("51144"),
   D = s("987707"),
   v = s("999382"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   U = s("981631"),
   P = s("689938"),
   b = s("949157"),
-  B = s("84885"),
-  y = s("661781");
+  y = s("84885"),
+  B = s("661781");
 
 function F(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -319,11 +319,11 @@ class w extends l.PureComponent {
       isLoading: s
     } = this.props;
     return (0, a.jsx)("div", {
-      className: B.customColumn,
+      className: y.customColumn,
       children: (0, a.jsx)("div", {
-        className: B.customContainer,
+        className: y.customContainer,
         children: (0, a.jsx)(E.AdvancedScrollerAuto, {
-          className: i()(B.customScroller, b.scroller),
+          className: i()(y.customScroller, b.scroller),
           onScroll: this.handleOnScroll,
           ref: this.handleSetScrollerRef,
           children: (0, a.jsx)("div", {
@@ -411,7 +411,7 @@ class w extends l.PureComponent {
         moderators: r
       } = this.props;
       if (l) return null;
-      let o = p.ACTION_FILTER_ITEMS(),
+      let o = A.ACTION_FILTER_ITEMS(),
         d = null !== (e = o.find(e => {
           let {
             value: t
@@ -441,7 +441,7 @@ class w extends l.PureComponent {
       return (0, a.jsxs)("div", {
         className: b.quickSelect,
         children: [(0, a.jsx)(S.default, {
-          popoutClassName: i()(b.selectFilterPopout, y.elevationBorderHigh),
+          popoutClassName: i()(b.selectFilterPopout, B.elevationBorderHigh),
           items: c,
           renderItem: this.renderUserQuickSelectItem,
           renderValue: this.renderUserQuickSelectValue,
@@ -456,7 +456,7 @@ class w extends l.PureComponent {
         }), (0, a.jsx)(S.default, {
           placeholder: P.default.Messages.SEARCH_ACTIONS,
           label: P.default.Messages.GUILD_SETTINGS_FILTER_ACTION,
-          popoutClassName: i()(b.selectFilterPopout, y.elevationBorderLow),
+          popoutClassName: i()(b.selectFilterPopout, B.elevationBorderLow),
           items: o,
           renderItem: this.renderActionQuickSelectItem,
           renderValue: this.renderActionQuickSelectValue,
@@ -530,14 +530,14 @@ t.default = c.default.connectStores([D.default, v.default, C.default, m.default,
   return {
     guildId: e,
     guild: t,
-    moderators: D.default.userIds.map(e => x.default.getUser(e)).filter(A.isNotNullish),
+    moderators: D.default.userIds.map(e => x.default.getUser(e)).filter(p.isNotNullish),
     isInitialLoading: D.default.isInitialLoading,
     isLoading: D.default.isLoading,
     isLoadingNextPage: D.default.isLoadingNextPage,
     showLoadMore: D.default.groupedFetchCount > 2,
     hasError: D.default.hasError,
     hasOlderLogs: D.default.hasOlderLogs,
-    logs: null != s && null != t ? p.transformLogs(s, t) : [],
+    logs: null != s && null != t ? A.transformLogs(s, t) : [],
     actionFilter: D.default.actionFilter,
     userIdFilter: D.default.userIdFilter,
     theme: m.default.theme,

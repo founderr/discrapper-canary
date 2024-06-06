@@ -30,8 +30,8 @@ t.default = e => {
   l.useEffect(() => {
     E.fetchDiscoverableGuilds([x, L])
   }, [x, L]);
-  let [O, p] = (0, o.useStateFromStoresArray)([_.default], () => [_.default.getGuild(x), _.default.getGuild(L)], [x, L]), {
-    canEnableDiscovery: A,
+  let [O, A] = (0, o.useStateFromStoresArray)([_.default], () => [_.default.getGuild(x), _.default.getGuild(L)], [x, L]), {
+    canEnableDiscovery: p,
     isPendingSuccess: M
   } = (0, o.useStateFromStoresObject)([u.default], () => ({
     canEnableDiscovery: u.default.passesChecklist(t.id),
@@ -39,7 +39,7 @@ t.default = e => {
   }), [t.id]), [D, v] = (0, o.useStateFromStoresArray)([S.default], () => [null, S.default.getMemberCount(t.id)], [t.id]), j = l.useCallback(() => {
     null != s && s()
   }, [s]), G = null;
-  return n ? M ? G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !A && (G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
+  return n ? M ? G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !p && (G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
     className: g.container,
     children: [(0, a.jsx)("img", {
       alt: "",
@@ -63,8 +63,8 @@ t.default = e => {
         className: g.placeholderCard,
         disabled: !0,
         small: !0,
-        loading: null == p,
-        guild: p
+        loading: null == A,
+        guild: A
       })]
     }), (0, a.jsx)(d.Heading, {
       className: g.header,
@@ -99,7 +99,7 @@ t.default = e => {
         className: g.enableButton,
         color: d.Button.Colors.BRAND,
         size: d.Button.Sizes.LARGE,
-        disabled: !A || !n,
+        disabled: !p || !n,
         onClick: j,
         children: N.default.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
       })

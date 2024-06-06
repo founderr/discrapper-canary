@@ -20,8 +20,8 @@ var a = l("735250"),
   _ = l("910693"),
   M = l("893966"),
   h = l("527379"),
-  T = l("285173"),
-  S = l("689938"),
+  S = l("285173"),
+  T = l("689938"),
   x = l("462983"),
   A = l("391649");
 let p = new Set;
@@ -43,7 +43,7 @@ function g(e) {
           children: [(0, a.jsx)("div", {
             className: o()(x.labelBackground, l && x.selected)
           }), (0, a.jsx)(E.ComboboxItem.Label, {
-            children: (0, a.jsx)(T.default, {
+            children: (0, a.jsx)(S.default, {
               className: o()(A.roleTooltipItem),
               role: s,
               guildId: t
@@ -72,7 +72,7 @@ function g(e) {
   }, [d, R]);
   return (0, a.jsx)(E.ComboboxPopout, {
     className: o()(x.rolePopout),
-    placeholder: S.default.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
+    placeholder: T.default.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
     value: d,
     onChange: I,
     onClose: () => {

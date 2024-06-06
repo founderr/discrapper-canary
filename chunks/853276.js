@@ -107,9 +107,9 @@ function T(e) {
     ref: L,
     width: O = 0
   } = (0, d.default)(R), {
-    ref: p,
-    width: A = 0
-  } = (0, d.default)(R), M = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [D, v] = l.useState(g), j = l.useRef(null), G = O > A ? O : A;
+    ref: A,
+    width: p = 0
+  } = (0, d.default)(R), M = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [D, v] = l.useState(g), j = l.useRef(null), G = O > p ? O : p;
   l.useEffect(() => {
     g ? (v(!0), j.current = setTimeout(() => {
       v(!1), j.current = null
@@ -132,17 +132,17 @@ function T(e) {
       let s = t.trim().length <= 0;
       E.NEXT_CHIP_INPUT_KEY.has(e.key) ? (e.preventDefault(), e.stopPropagation(), P(!0)) : "Backspace" === e.key && s && (e.preventDefault(), e.stopPropagation(), P(!0))
     }, [P, t]),
-    B = l.useCallback(e => {
+    y = l.useCallback(e => {
       let t = e.metaKey || e.ctrlKey;
       T(t), t ? e.preventDefault() : x(!0), e.stopPropagation()
     }, [T]),
-    y = l.useCallback(e => {
+    B = l.useCallback(e => {
       S()
     }, [S]);
   return (0, a.jsx)("div", {
     className: _.chipletFlexContainer,
     children: (0, a.jsxs)("div", {
-      ref: p,
+      ref: A,
       className: i()(_.chipletContainer, {
         [_.isEditing]: R,
         [_.smallBlink]: !R && !M,
@@ -153,7 +153,7 @@ function T(e) {
       children: [(0, a.jsxs)(o.Clickable, {
         tag: "div",
         onBlur: () => P(!1),
-        onClick: B,
+        onClick: y,
         ignoreKeyPress: !0,
         onMouseEnter: () => v(!0),
         onMouseLeave: () => v(!1),
@@ -184,7 +184,7 @@ function T(e) {
         })]
       }), !R && (0, a.jsx)(o.Clickable, {
         className: _.closeIconContainer,
-        onClick: y,
+        onClick: B,
         children: (0, a.jsx)(c.default, {
           className: _.closeIcon,
           width: 12,

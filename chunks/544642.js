@@ -4,20 +4,20 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var u = n("735250");
+var a = n("735250");
 n("470079");
 var l = n("481060"),
-  a = n("37234"),
-  i = n("191471"),
-  d = n("981631"),
-  r = n("689938");
+  i = n("37234"),
+  u = n("191471"),
+  r = n("981631"),
+  d = n("689938");
 
 function s(e, t) {
-  return t === d.AppContext.POPOUT ? null : (0, u.jsx)(l.MenuItem, {
+  return t === r.AppContext.POPOUT ? null : (0, a.jsx)(l.MenuItem, {
     id: "report-raid",
-    label: r.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
+    label: d.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
     action: () => {
-      (0, a.popLayer)(), (0, i.openReportRaidModal)(e)
+      (0, i.popLayer)(), (0, u.openReportRaidModal)(e)
     }
   })
 }

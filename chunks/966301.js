@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildSettingsOnboardingPromptsNotice: function() {
-    return A
+    return p
   },
   default: function() {
     return O
@@ -116,13 +116,13 @@ function O(e) {
   let {
     saveOnClose: t
   } = e, s = (0, n.useStateFromStores)([I.default], () => I.default.getGuild());
-  return null == s ? null : (0, a.jsx)(p, {
+  return null == s ? null : (0, a.jsx)(A, {
     guild: s,
     saveOnClose: t
   })
 }
 
-function p(e) {
+function A(e) {
   let {
     guild: t,
     saveOnClose: s
@@ -187,7 +187,7 @@ function p(e) {
   })
 }
 
-function A() {
+function p() {
   let e = (0, n.useStateFromStores)([I.default], () => I.default.getGuild()),
     t = (0, n.useStateFromStores)([m.default], () => m.default.submitting);
   return null == e ? null : (0, a.jsx)(r.default, {

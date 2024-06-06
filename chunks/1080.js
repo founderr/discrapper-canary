@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("154921"),
   L = s("626135"),
   O = s("136015"),
-  p = s("51144"),
-  A = s("434404"),
+  A = s("51144"),
+  p = s("434404"),
   M = s("999382"),
   D = s("84613"),
   v = s("740903"),
@@ -82,7 +82,7 @@ function b(e) {
       children: [(0, a.jsx)(x.default, {
         size: x.default.Sizes.SIZE_24,
         className: U.userUsername,
-        children: p.default.getUserTag(i, {
+        children: A.default.getUserTag(i, {
           mode: "username",
           identifiable: o ? "never" : "always"
         })
@@ -121,13 +121,13 @@ function b(e) {
     })]
   })
 }
-class B extends l.PureComponent {
+class y extends l.PureComponent {
   render() {
     let {
       user: e,
       hideDiscriminator: t,
       guild: s
-    } = this.props, l = p.default.getGlobalName(e);
+    } = this.props, l = A.default.getGlobalName(e);
     return (0, a.jsxs)(u.Clickable, {
       className: i()(U.bannedUser),
       onClick: this.handleShowModal,
@@ -139,7 +139,7 @@ class B extends l.PureComponent {
         className: U.bannedUserAvatar
       }), (0, a.jsxs)("div", {
         className: U.username,
-        children: [p.default.getUserTag(e, {
+        children: [A.default.getUserTag(e, {
           mode: "username",
           identifiable: t ? "never" : "always"
         }), !t && !e.isPomelo() && (0, a.jsxs)("span", {
@@ -180,7 +180,7 @@ class B extends l.PureComponent {
     })
   }
 }
-let y = l.forwardRef(function(e, t) {
+let B = l.forwardRef(function(e, t) {
   let {
     guild: s,
     sortedBans: n,
@@ -199,7 +199,7 @@ let y = l.forwardRef(function(e, t) {
     }, "spinner");
     let l = n[e],
       o = null == i ? void 0 : i.get(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "");
-    if (null != l && null != o) return (0, a.jsx)(B, {
+    if (null != l && null != o) return (0, a.jsx)(y, {
       user: l,
       ban: o,
       hideDiscriminator: r,
@@ -221,20 +221,20 @@ function F(e) {
     guildId: t,
     storedSearchQuery: s
   } = e, [n, i] = l.useState(null != s ? s : ""), [r, o] = l.useState(!1), d = l.useCallback(() => {
-    A.default.setSection(j.GuildSettingsSections.SAFETY), (0, D.setSafetyPage)(v.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
+    p.default.setSection(j.GuildSettingsSections.SAFETY), (0, D.setSafetyPage)(v.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
   }, []), c = l.useCallback(e => {
-    i(e), 0 === e.trim().length && A.default.setSearchQuery(e)
+    i(e), 0 === e.trim().length && p.default.setSearchQuery(e)
   }, []), _ = l.useCallback(() => {
-    i(""), A.default.setSearchQuery("")
+    i(""), p.default.setSearchQuery("")
   }, []), I = l.useCallback(async () => {
     if (0 === n.trim().length) {
-      A.default.setSearchQuery(n), o(!1);
+      p.default.setSearchQuery(n), o(!1);
       return
     }
     if (!r) try {
       o(!0);
       let [e, s] = (0, m.splitQuery)(n), a = e[0];
-      A.default.setSearchQuery(n), await E.default.searchGuildBans(t, a, s), o(!1)
+      p.default.setSearchQuery(n), await E.default.searchGuildBans(t, a, s), o(!1)
     } catch (e) {
       o(!1)
     }
@@ -283,49 +283,49 @@ function H() {
   let {
     guild: n,
     searchQuery: c
-  } = (0, d.useStateFromStores)([M.default], () => M.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, I.default)(_), f = _ !== S, [N] = (0, d.useStateFromStores)([M.default], () => M.default.getBans(), [], O.isVersionEqual), C = null !== (e = null == N ? void 0 : N.size) && void 0 !== e ? e : 0, R = (0, T.default)(), x = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_SNOWFLAKE_ID, L = l.useRef(null), p = l.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
+  } = (0, d.useStateFromStores)([M.default], () => M.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, I.default)(_), f = _ !== S, [N] = (0, d.useStateFromStores)([M.default], () => M.default.getBans(), [], O.isVersionEqual), C = null !== (e = null == N ? void 0 : N.size) && void 0 !== e ? e : 0, R = (0, T.default)(), x = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_SNOWFLAKE_ID, L = l.useRef(null), A = l.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
     if (null == t || 0 === e.trim().length) return !1;
     let [
       [s], a
     ] = (0, m.splitQuery)(e);
     return !!a.includes(t.id) || null != s && (!!(t.username.toLowerCase().includes(s.toLowerCase()) || null != t.globalName && t.globalName.toLowerCase().includes(s.toLowerCase())) || !1)
-  }, []), A = l.useCallback((e, t, s) => {
+  }, []), p = l.useCallback((e, t, s) => {
     if (null == e || 0 === s) return [];
     let a = [];
     for (let s of e.keys()) {
       let e = g.default.getUser(s);
-      null != e && p(t)(e) && a.push(e)
+      null != e && A(t)(e) && a.push(e)
     }
     return a
-  }, [p]), D = l.useMemo(() => A(N, c, C), [N, A, c, C]), v = null != N, P = D.length % 1e3 == 0 && D.length > 0 && v, b = 0 === D.length, [B, H] = l.useState({
+  }, [A]), D = l.useMemo(() => p(N, c, C), [N, p, c, C]), v = null != N, P = D.length % 1e3 == 0 && D.length > 0 && v, b = 0 === D.length, [y, H] = l.useState({
     currentPage: 1,
     pageSize: 100
   });
   l.useEffect(() => {
-    f && 1 !== B.currentPage && H(e => ({
+    f && 1 !== y.currentPage && H(e => ({
       ...e,
       currentPage: 1
     }))
-  }, [f, B.currentPage]);
+  }, [f, y.currentPage]);
   let k = l.useCallback(e => {
       E.default.fetchGuildBansBatch(x, 1e3, e)
     }, [x]),
-    w = l.useMemo(() => o().chunk(D, B.pageSize), [B.pageSize, D]),
+    w = l.useMemo(() => o().chunk(D, y.pageSize), [y.pageSize, D]),
     V = l.useCallback(e => {
       var t, s, a;
-      null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > D.length && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, k(Y.current)), (null != w[e - 1] || P) && H(t => ({
+      null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * y.pageSize > D.length && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, k(Y.current)), (null != w[e - 1] || P) && H(t => ({
         ...t,
         currentPage: e
       }))
-    }, [B.pageSize, D, P, w, k, _]),
+    }, [y.pageSize, D, P, w, k, _]),
     Y = l.useRef(null);
   l.useEffect(() => {
     k(Y.current)
   }, [k]);
   let W = l.useMemo(() => {
     var e;
-    return null !== (e = w[B.currentPage - 1]) && void 0 !== e ? e : []
-  }, [w, B.currentPage]);
+    return null !== (e = w[y.currentPage - 1]) && void 0 !== e ? e : []
+  }, [w, y.currentPage]);
   return null == n ? null : (0, a.jsxs)("div", {
     className: i()(U.container),
     children: [(0, a.jsx)(F, {
@@ -333,7 +333,7 @@ function H() {
       storedSearchQuery: c
     }), (0, a.jsxs)("div", {
       className: i()(U.scrollerContainer),
-      children: [!b && (0, a.jsx)(y, {
+      children: [!b && (0, a.jsx)(B, {
         guild: n,
         bans: N,
         sortedBans: W,
@@ -358,9 +358,9 @@ function H() {
       className: i()(U.__invalid_paginationContainer),
       children: (0, a.jsx)(u.Paginator, {
         className: i()(U.paginationInput),
-        totalCount: D.length + (P ? B.pageSize : 0),
-        pageSize: B.pageSize,
-        currentPage: B.currentPage,
+        totalCount: D.length + (P ? y.pageSize : 0),
+        pageSize: y.pageSize,
+        currentPage: y.currentPage,
         onPageChange: V,
         maxVisiblePages: 9
       })

@@ -16,8 +16,8 @@ var s = a("735250"),
   x = a("185403"),
   C = a("456269"),
   _ = a("470623"),
-  p = a("981631"),
-  T = a("689938"),
+  T = a("981631"),
+  p = a("689938"),
   S = a("411900"),
   E = a("946278");
 t.default = n.memo(function(e) {
@@ -43,7 +43,7 @@ t.default = n.memo(function(e) {
   }, [M, l]);
   let O = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     [R, b] = n.useState(!M),
-    L = (0, i.useSpring)({
+    F = (0, i.useSpring)({
       opacity: M ? 1 : 0,
       maxHeight: M ? 500 : 0,
       config: {
@@ -53,7 +53,7 @@ t.default = n.memo(function(e) {
       onRest: () => b(!M)
     });
   return null != t.topic && t.topic.length > 0 ? (0, s.jsx)(i.animated.div, {
-    style: L,
+    style: F,
     className: R ? S.hiddenVisually : void 0,
     children: (0, s.jsxs)("div", {
       className: S.container,
@@ -65,9 +65,9 @@ t.default = n.memo(function(e) {
           children: [(0, s.jsx)(h.default, {
             width: 20,
             height: 20
-          }), T.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, s.jsx)(u.Clickable, {
+          }), p.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, s.jsx)(u.Clickable, {
             onClick: () => {
-              d.default.open(t.id, void 0, p.ChannelSettingsSubsections.TOPIC)
+              d.default.open(t.id, void 0, T.ChannelSettingsSubsections.TOPIC)
             },
             tag: "span",
             className: S.clickable,
@@ -77,7 +77,7 @@ t.default = n.memo(function(e) {
             })
           })]
         }), (0, s.jsx)(u.Clickable, {
-          "aria-label": T.default.Messages.CLOSE,
+          "aria-label": p.default.Messages.CLOSE,
           className: S.clickable,
           onClick: () => {
             N.getState().setGuidelinesOpen(!1)
@@ -128,7 +128,7 @@ t.default = n.memo(function(e) {
                 variant: "text-sm/semibold",
                 color: "text-brand",
                 className: S.showMoreText,
-                children: [T.default.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(g.default, {
+                children: [p.default.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(g.default, {
                   className: S.showMoreIcon
                 })]
               })

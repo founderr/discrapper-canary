@@ -35,7 +35,7 @@ function E(e) {
     spring: _
   }, M] = (0, i.useSpring)(() => ({
     spring: 0
-  })), h = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), T = (0, u.useToken)(d.default.colors.CONTROL_BRAND_FOREGROUND).hex(), S = s.useCallback(() => {
+  })), h = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), S = (0, u.useToken)(d.default.colors.CONTROL_BRAND_FOREGROUND).hex(), T = s.useCallback(() => {
     M({
       spring: 1,
       config: c
@@ -46,11 +46,11 @@ function E(e) {
     })
   }, [M]);
   s.useEffect(() => {
-    if (null != t && null != f) !n(t, f) && S()
-  }, [S, t, f, n]);
+    if (null != t && null != f) !n(t, f) && T()
+  }, [T, t, f, n]);
   let x = null == _ ? void 0 : _.to({
       range: [0, 1],
-      output: ["".concat(h, "00"), "".concat(T, "27")]
+      output: ["".concat(h, "00"), "".concat(S, "27")]
     }),
     A = null != r ? {
       ...r,

@@ -1,133 +1,133 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return A
+    return E
   }
-}), a("47120");
-var s = a("735250"),
-  d = a("470079"),
-  l = a("120356"),
-  n = a.n(l),
-  i = a("831209"),
-  o = a("481060"),
-  r = a("367907"),
-  u = a("177862"),
-  c = a("465670"),
-  _ = a("630641"),
-  E = a("981631"),
-  I = a("689938"),
-  D = a("818823");
+}), l("47120");
+var n = l("735250"),
+  a = l("470079"),
+  s = l("120356"),
+  i = l.n(s),
+  r = l("831209"),
+  o = l("481060"),
+  d = l("367907"),
+  u = l("177862"),
+  c = l("465670"),
+  f = l("630641"),
+  I = l("981631"),
+  m = l("689938"),
+  T = l("818823");
 
-function A(e) {
+function E(e) {
   let {
     guildId: t,
-    transitionState: a,
-    onClose: l
-  } = e, [A, N] = d.useState([]), [T, h] = d.useState(), R = [{
-    text: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_DM_SPAM,
+    transitionState: l,
+    onClose: s
+  } = e, [E, N] = a.useState([]), [_, S] = a.useState(), h = [{
+    text: m.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_DM_SPAM,
     value: u.RaidLockdownFeedbackType.DM_SPAM
   }, {
-    text: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_MENTION_SPAM,
+    text: m.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_MENTION_SPAM,
     value: u.RaidLockdownFeedbackType.MENTION_SPAM
   }, {
-    text: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANNEL_SPAM,
+    text: m.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANNEL_SPAM,
     value: u.RaidLockdownFeedbackType.CHANNEL_SPAM
   }, {
-    text: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUS_NEW_MEMBERS,
+    text: m.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUS_NEW_MEMBERS,
     value: u.RaidLockdownFeedbackType.SUS_NEW_MEMBERS
   }, {
-    text: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANGING_SETTINGS,
+    text: m.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_CHANGING_SETTINGS,
     value: u.RaidLockdownFeedbackType.CHANGING_SETTINGS
   }, {
-    text: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_OTHER,
+    text: m.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_OTHER,
     value: u.RaidLockdownFeedbackType.OTHER
   }];
 
-  function L(e) {
-    A.includes(e) ? N(t => t.filter(t => t !== e)) : N(t => [...t, e])
+  function g(e) {
+    E.includes(e) ? N(t => t.filter(t => t !== e)) : N(t => [...t, e])
   }
-  return null == t ? (l(), null) : (0, s.jsxs)(o.ModalRoot, {
-    transitionState: a,
+  return null == t ? (s(), null) : (0, n.jsxs)(o.ModalRoot, {
+    transitionState: l,
     size: o.ModalSize.MEDIUM,
-    children: [(0, s.jsx)(o.ModalHeader, {
+    children: [(0, n.jsx)(o.ModalHeader, {
       separator: !0,
-      children: (0, s.jsxs)("div", {
-        className: D.headerContainer,
-        children: [(0, s.jsxs)("div", {
-          className: D.headerText,
-          children: [(0, s.jsx)(_.default, {
-            color: i.default.INTERACTIVE_NORMAL,
+      children: (0, n.jsxs)("div", {
+        className: T.headerContainer,
+        children: [(0, n.jsxs)("div", {
+          className: T.headerText,
+          children: [(0, n.jsx)(f.default, {
+            color: r.default.INTERACTIVE_NORMAL,
             width: 16,
             height: 16
-          }), (0, s.jsx)(o.Heading, {
+          }), (0, n.jsx)(o.Heading, {
             color: "header-primary",
             variant: "heading-md/semibold",
-            children: I.default.Messages.GUILD_SERVER_LOCKDOWN_FEEDBACK_DESCRIPTION
+            children: m.default.Messages.GUILD_SERVER_LOCKDOWN_FEEDBACK_DESCRIPTION
           })]
-        }), (0, s.jsx)(o.Clickable, {
-          onClick: l,
-          children: (0, s.jsx)(c.default, {
-            className: D.closeIcon,
+        }), (0, n.jsx)(o.Clickable, {
+          onClick: s,
+          children: (0, n.jsx)(c.default, {
+            className: T.closeIcon,
             width: 16,
             height: 16
           })
         })]
       })
-    }), (0, s.jsx)(o.ModalContent, {
-      children: (0, s.jsx)("div", {
-        className: D.options,
-        children: R.map(e => {
+    }), (0, n.jsx)(o.ModalContent, {
+      children: (0, n.jsx)("div", {
+        className: T.options,
+        children: h.map(e => {
           let {
             text: t,
-            value: a
+            value: l
           } = e;
-          return (0, s.jsxs)("div", {
-            className: n()(D.optionContainer, {
-              [D.optionContainerOther]: a === u.RaidLockdownFeedbackType.OTHER
+          return (0, n.jsxs)("div", {
+            className: i()(T.optionContainer, {
+              [T.optionContainerOther]: l === u.RaidLockdownFeedbackType.OTHER
             }),
-            children: [(0, s.jsxs)(o.Clickable, {
-              className: D.optionText,
-              onClick: () => L(a),
-              children: [(0, s.jsx)("div", {
-                children: (0, s.jsx)(o.Checkbox, {
+            children: [(0, n.jsxs)(o.Clickable, {
+              className: T.optionText,
+              onClick: () => g(l),
+              children: [(0, n.jsx)("div", {
+                children: (0, n.jsx)(o.Checkbox, {
                   type: o.Checkbox.Types.INVERTED,
                   size: 20,
-                  value: A.includes(a),
-                  onChange: () => L(a)
+                  value: E.includes(l),
+                  onChange: () => g(l)
                 })
-              }), (0, s.jsx)(o.Text, {
+              }), (0, n.jsx)(o.Text, {
                 variant: "text-md/medium",
-                color: A.includes(a) ? "interactive-active" : "interactive-normal",
+                color: E.includes(l) ? "interactive-active" : "interactive-normal",
                 children: t
               })]
-            }), a === u.RaidLockdownFeedbackType.OTHER && A.includes(u.RaidLockdownFeedbackType.OTHER) && (0, s.jsx)("div", {
-              className: D.textboxContainer,
-              children: (0, s.jsx)(o.TextArea, {
-                className: D.serverLockdownReasonText,
-                placeholder: I.default.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_MODAL_OTHER_REASON_PLACEHOLDER,
-                onChange: e => h(e),
-                value: T,
+            }), l === u.RaidLockdownFeedbackType.OTHER && E.includes(u.RaidLockdownFeedbackType.OTHER) && (0, n.jsx)("div", {
+              className: T.textboxContainer,
+              children: (0, n.jsx)(o.TextArea, {
+                className: T.serverLockdownReasonText,
+                placeholder: m.default.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_MODAL_OTHER_REASON_PLACEHOLDER,
+                onChange: e => S(e),
+                value: _,
                 rows: 2,
                 autoFocus: !0,
                 flex: !0
               })
             })]
-          }, a)
+          }, l)
         })
       })
-    }), (0, s.jsx)(o.ModalFooter, {
-      children: (0, s.jsx)(o.Button, {
+    }), (0, n.jsx)(o.ModalFooter, {
+      children: (0, n.jsx)(o.Button, {
         onClick: function() {
-          (0, r.trackWithMetadata)(E.AnalyticEvents.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-            raid_lockdown_feedback_type: A,
-            raid_lockdown_feedback_other_reason: T,
+          (0, d.trackWithMetadata)(I.AnalyticEvents.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+            raid_lockdown_feedback_type: E,
+            raid_lockdown_feedback_other_reason: _,
             guild_id: t
-          }), l()
+          }), s()
         },
         color: o.Button.Colors.BRAND,
         look: o.Button.Looks.FILLED,
         submitting: !1,
-        children: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUBMIT
+        children: m.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUBMIT
       })
     })]
   })

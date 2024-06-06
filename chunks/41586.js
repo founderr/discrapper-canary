@@ -16,8 +16,8 @@ var a = l("735250"),
   _ = l("102560"),
   M = l("210887"),
   h = l("496675"),
-  T = l("6048"),
-  S = l("910693"),
+  S = l("6048"),
+  T = l("910693"),
   x = l("588215"),
   A = l("893966"),
   p = l("527379"),
@@ -33,12 +33,12 @@ let R = s.forwardRef(function(e, t) {
       ...e,
       guild: l
     }))
-  }, [l, d]), I = (0, c.useStateFromStores)([A.default], () => A.default.getSearchStateByGuildId(l.id), [l.id], u()), v = (0, S.useTrackMemberSearchUsed)(l.id), [j, D] = s.useState(I.query), b = null != I.selectedSort && I.selectedSort !== x.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && I.selectedSort !== x.OrderBy.ORDER_BY_UNSPECIFIED, O = s.useCallback(e => {
+  }, [l, d]), I = (0, c.useStateFromStores)([A.default], () => A.default.getSearchStateByGuildId(l.id), [l.id], u()), j = (0, T.useTrackMemberSearchUsed)(l.id), [v, D] = s.useState(I.query), b = null != I.selectedSort && I.selectedSort !== x.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && I.selectedSort !== x.OrderBy.ORDER_BY_UNSPECIFIED, O = s.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && v(), (0, p.updateSearchState)(l.id, {
+    t.length > 0 && j(), (0, p.updateSearchState)(l.id, {
       query: t
     })
-  }, [l.id, v]), B = s.useCallback(r()(O, 300), [O]), V = s.useCallback(e => {
+  }, [l.id, j]), B = s.useCallback(r()(O, 300), [O]), V = s.useCallback(e => {
     D(e), B(e)
   }, [B]), F = s.useCallback(() => {
     D(""), O("")
@@ -62,9 +62,9 @@ let R = s.forwardRef(function(e, t) {
       className: o()(H.searchInput),
       children: (0, a.jsx)("div", {
         className: o()(H.searchHeader),
-        children: (0, a.jsx)(T.default, {
+        children: (0, a.jsx)(S.default, {
           className: H.searchBar,
-          query: j,
+          query: v,
           placeholder: N.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
           onChange: V,
           onClear: F,

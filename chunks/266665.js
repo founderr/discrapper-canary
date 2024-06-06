@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("203377"),
   L = s("981631"),
   O = s("689938"),
-  p = s("272197");
-let A = "DRAGGABLE_ROLE";
+  A = s("272197");
+let p = "DRAGGABLE_ROLE";
 
 function M(e) {
   var t, l;
@@ -50,7 +50,7 @@ function M(e) {
     M = null == x && !O,
     D = (null === (t = E.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
     [, v] = (0, r.useDrag)({
-      type: A,
+      type: p,
       item: () => (N(E.id), {
         id: E.id,
         position: m
@@ -68,7 +68,7 @@ function M(e) {
     [{
       dragSourcePosition: j
     }, G] = (0, r.useDrop)({
-      accept: A,
+      accept: p,
       canDrop: () => M,
       collect: e => {
         let t = e.getItem();
@@ -86,7 +86,7 @@ function M(e) {
   return n = D ? (0, a.jsx)(T.default, {
     size: 12,
     color: E.colorString,
-    className: p.verifiedRoleIcon
+    className: A.verifiedRoleIcon
   }) : "dot" === R ? (0, a.jsx)(u.RoleDot, {
     color: U,
     background: !1,
@@ -94,9 +94,9 @@ function M(e) {
   }) : (0, a.jsx)(u.RoleCircle, {
     color: U
   }), (0, a.jsxs)(u.TabBar.Item, {
-    className: i()(p.row, {
-      [p.dragBefore]: null !== j && m < j,
-      [p.dragAfter]: null !== j && m > j
+    className: i()(A.row, {
+      [A.dragBefore]: null !== j && m < j,
+      [A.dragAfter]: null !== j && m > j
     }),
     id: E.id,
     selectedItem: S,
@@ -120,7 +120,7 @@ function M(e) {
       return v(G(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null))
     },
     children: [n, null != x ? (0, a.jsx)(h.default, {
-      className: p.lock,
+      className: A.lock,
       tooltipText: x
     }) : null, (0, a.jsx)(u.Text, {
       variant: "text-sm/medium",
@@ -139,7 +139,7 @@ function D(e) {
     setSelectedSection: r
   } = e, o = (0, d.useStateFromStores)([g.default], () => g.default.roles), c = (0, d.useStateFromStores)([S.default], () => S.default.getHighestRole(t)), I = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [T, h] = l.useState(o.length), {
     scrolledToTop: L,
-    handleScroll: A
+    handleScroll: p
   } = (0, R.useScrolledToTop)(), {
     handleDragStart: D,
     handleDragReset: v,
@@ -160,20 +160,20 @@ function D(e) {
     E.default.createRole(t.id), r(x.GuildSettingsRoleEditSections.DISPLAY)
   };
   return (0, a.jsx)(f.default.Sidebar, {
-    className: p.sidebar,
+    className: A.sidebar,
     children: (0, a.jsxs)("div", {
-      className: p.container,
+      className: A.container,
       children: [(0, a.jsxs)("div", {
-        className: i()(p.titleContainer, {
-          [p.titleElevated]: !L
+        className: i()(A.titleContainer, {
+          [A.titleElevated]: !L
         }),
         children: [(0, a.jsxs)(u.Clickable, {
-          className: p.title,
+          className: A.title,
           onClick: () => n(null),
           children: [(0, a.jsx)(m.default, {
             direction: m.default.Directions.LEFT
           }), (0, a.jsx)(u.Text, {
-            className: p.titleText,
+            className: A.titleText,
             variant: "text-md/semibold",
             color: "none",
             children: O.default.Messages.BACK
@@ -182,12 +182,12 @@ function D(e) {
           position: "top",
           "aria-label": O.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
           text: (0, a.jsx)(u.Text, {
-            className: p.tooltip,
+            className: A.tooltip,
             variant: "text-sm/normal",
             children: O.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
           }),
           children: e => (0, a.jsx)(u.Clickable, {
-            className: p.addRole,
+            className: A.addRole,
             ...e,
             onClick: P,
             children: (0, a.jsx)(N.default, {
@@ -197,9 +197,9 @@ function D(e) {
           })
         })]
       }), (0, a.jsx)(u.AdvancedScroller, {
-        className: p.list,
+        className: A.list,
         ref: G,
-        onScroll: A,
+        onScroll: p,
         children: (0, a.jsx)(u.TabBar, {
           selectedItem: s,
           onItemSelect: e => n(e),

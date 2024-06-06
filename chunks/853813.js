@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return A
   }
 });
 var a = s("735250"),
@@ -29,12 +29,12 @@ var a = s("735250"),
   L = s("981631"),
   O = s("408965");
 
-function p(e) {
+function A(e) {
   let t, {
       editRoleId: s,
       setEditRoleId: n,
-      selectedSection: p,
-      setSelectedSection: A
+      selectedSection: A,
+      setSelectedSection: p
     } = e,
     M = (0, r.useStateFromStores)([S.default], () => S.default.guild, []);
   i()(null != M, "guildId cannot be null here");
@@ -54,7 +54,7 @@ function p(e) {
     P = (0, r.useStateFromStores)([f.default], () => f.default.getProps().integrations);
   if (l.useEffect(() => {
       var e, t;
-      let a = (0, m.getSectionAnalyticsName)(p),
+      let a = (0, m.getSectionAnalyticsName)(A),
         l = null !== (t = null === (e = T.default.getRoleMemberCount(M.id)) || void 0 === e ? void 0 : e[s]) && void 0 !== t ? t : 0;
       _.default.track(L.AnalyticEvents.ROLE_PAGE_VIEWED, {
         tab_opened: a,
@@ -66,17 +66,17 @@ function p(e) {
         role_num_members: l,
         ...(0, d.collectGuildAnalyticsMetadata)(M.id)
       })
-    }, [p, M.id, null == D ? void 0 : D.id]), l.useEffect(() => {
+    }, [A, M.id, null == D ? void 0 : D.id]), l.useEffect(() => {
       (null == D ? void 0 : D.id) != null && (0, c.fetchRoleConnectionsConfiguration)(M.id, D.id)
     }, [M.id, null == D ? void 0 : D.id]), null == D) return null;
-  switch (p) {
+  switch (A) {
     case x.GuildSettingsRoleEditSections.DISPLAY:
       t = (0, a.jsx)(g.default, {
         guild: M,
         role: D,
         locked: G,
         highestRole: j,
-        setSelectedSection: A
+        setSelectedSection: p
       });
       break;
     case x.GuildSettingsRoleEditSections.PERMISSIONS:
@@ -84,7 +84,7 @@ function p(e) {
         guild: M,
         role: D,
         locked: G,
-        setSelectedSection: A,
+        setSelectedSection: p,
         initialSearchQuery: v
       });
       break;
@@ -93,7 +93,7 @@ function p(e) {
         guild: M,
         role: D,
         locked: G,
-        setSelectedSection: A,
+        setSelectedSection: p,
         integrations: null != P ? P : void 0
       });
       break;
@@ -102,11 +102,11 @@ function p(e) {
         guild: M,
         role: D,
         locked: G,
-        setSelectedSection: A
+        setSelectedSection: p
       });
       break;
     default:
-      (0, I.assertNever)(p)
+      (0, I.assertNever)(A)
   }
   return (0, a.jsxs)(o.FormSection, {
     className: O.page,
@@ -114,7 +114,7 @@ function p(e) {
       guild: M,
       currentRoleId: s,
       setCurrentRoleId: n,
-      setSelectedSection: A
+      setSelectedSection: p
     }), (0, a.jsx)("div", {
       className: O.contentContainer,
       ref: U,

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return v
+    return j
   }
 }), l("47120");
 var a = l("735250"),
@@ -20,8 +20,8 @@ var a = l("735250"),
   _ = l("241559"),
   M = l("893966"),
   h = l("256003"),
-  T = l("170323"),
-  S = l("434368"),
+  S = l("170323"),
+  T = l("434368"),
   x = l("42170"),
   A = l("123846"),
   p = l("42551"),
@@ -65,19 +65,19 @@ function R(e) {
 }
 let I = "member-safety-force-show-signals-tooltip";
 
-function v(e) {
+function j(e) {
   let {
     guildId: t,
     currentPagedMembers: l
   } = e, n = (0, d.useStateFromStores)([M.default], () => M.default.getSearchStateByGuildId(t), [t], r()), i = (0, d.useStateFromStores)([m.default, c.default], () => m.default.can(g.Permissions.MANAGE_GUILD, c.default.getGuild(t)), [t]), {
     selectedUserIds: E,
-    addUsers: v,
-    clearSelection: j
+    addUsers: j,
+    clearSelection: v
   } = (0, h.default)(t), D = n.requireUnusualDmActivity || n.requireCommunicationDisabled || n.requireUnusualAccountActivity || n.requireUsernameQuarantined, b = n.selectedRoleIds.size > 0, O = null != n.selectedJoinDateOption.afterDate, B = n.selectedSort === f.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, V = null != n.selectedAccountAgeOption.afterDate, F = n.selectedSort === f.OrderBy.ORDER_BY_USER_ID_ASC || n.selectedSort === f.OrderBy.ORDER_BY_USER_ID_DESC, y = null != n.selectedSourceInviteCode && "" !== n.selectedSourceInviteCode, U = null != n.selectedJoinSourceType, w = y || U, [k, P] = s.useState(null == u.Storage.get(I, null)), Z = s.useCallback(() => {
     u.Storage.set(I, Date.now()), P(!1)
   }, []), Y = (0, _.useCanAccessBulkBanningFeature)(t), G = s.useMemo(() => l.filter(e => (0, _.canBulkBanUser)(t, Y, e)), [Y, l, t]), J = G.length > 0, q = 0 === G.filter(e => !E.has(e)).length, K = s.useCallback(() => {
-    J && (q ? j() : v(G))
-  }, [J, q, j, v, G]);
+    J && (q ? v() : j(G))
+  }, [J, q, v, j, G]);
   return (0, a.jsx)("thead", {
     children: (0, a.jsxs)("tr", {
       className: N.tableHeaderRow,
@@ -128,7 +128,7 @@ function v(e) {
           position: "bottom",
           spacing: 4,
           align: "left",
-          renderPopout: () => (0, a.jsx)(T.default, {
+          renderPopout: () => (0, a.jsx)(S.default, {
             guildId: t,
             onClose: g.NOOP
           }),
@@ -223,7 +223,7 @@ function v(e) {
             let {
               closePopout: l
             } = e;
-            return (0, a.jsx)(S.default, {
+            return (0, a.jsx)(T.default, {
               guildId: t,
               onClose: l
             })
