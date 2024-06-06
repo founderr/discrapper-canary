@@ -10135,6 +10135,37 @@ span.clanTag_f4aadc {
     color: var(--primary-500)
 }
 
+.container_e5e00c {
+    background-color: var(--background-primary);
+    box-shadow: var(--elevation-medium);
+    border-radius: var(--radius-sm);
+    width: 180px
+}
+
+.clearText__5b2a7 {
+    color: var(--text-link)
+}
+
+.sortDropdown__757b3 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 32px;
+    background-color: var(--background-secondary-alt);
+    border-radius: var(--radius-xxl);
+    padding: 8px 8px 8px 12px
+}
+
+.sortDropdownInner__58619 {
+    display: flex;
+    align-items: center;
+    color: var(--interactive-normal)
+}
+
+.sortIconMargin__2f422 {
+    margin-right: 4px
+}
+
 .container__7b73b {
     display: flex;
     flex-direction: column;
@@ -41222,8 +41253,8 @@ div.profileThemedContainer__6e645 {
 .errorState_c6cca2 {
     padding: 20px 20px 40px;
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     text-align: center
 }
 
@@ -41285,7 +41316,7 @@ div.profileThemedContainer__6e645 {
 
 .confirmChannelName_a42e11 {
     font-weight: 500;
-    font-size: .875rem;
+    font-size: 14px;
     margin-left: 8px;
     color: var(--header-primary)
 }
@@ -41293,7 +41324,7 @@ div.profileThemedContainer__6e645 {
 .lastActiveTimestamp_d49b9c {
     margin-left: 8px;
     color: var(--text-muted);
-    font-size: .75rem;
+    font-size: 12px;
     margin-top: 2px
 }
 
