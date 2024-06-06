@@ -128044,6 +128044,7 @@ div:has(>div>.container__8ab05) {
     color: var(--text-link)
 }
 
+.errorDisplayName_ad51fd,
 .userName__0813c {
     color: var(--text-muted)
 }
@@ -128051,6 +128052,10 @@ div:has(>div>.container__8ab05) {
 .closeButtonContainer_ad4e5e:hover,
 .displayNameClickableContainer_b45e25:hover {
     cursor: pointer
+}
+
+.erroredAvatar_d9fc6f {
+    opacity: .5
 }
 
 .learnMoreLink__1aa2f {
