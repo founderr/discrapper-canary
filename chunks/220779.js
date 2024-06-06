@@ -78,9 +78,7 @@ function p(e) {
   } = e, [T, S] = r.useState(""), [h, N] = r.useState((0, _.toRichValue)("")), p = () => {
     S(""), N((0, _.toRichValue)(""))
   }, O = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT, C = r.useRef(null);
-  return o && (O.emojis = {
-    button: !0
-  }), (0, i.jsx)(c.default, {
+  return (0, i.jsx)(c.default, {
     ref: C,
     placeholder: t,
     className: a()(A.replyInput, I),
@@ -91,7 +89,12 @@ function p(e) {
     onChange: (e, t, n) => {
       S(t), N(n)
     },
-    type: O,
+    type: o ? {
+      ...O,
+      emojis: {
+        button: !0
+      }
+    } : O,
     textValue: T,
     richValue: h,
     onSubmit: e => {

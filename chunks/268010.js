@@ -41,18 +41,18 @@ t.default = e => {
   } = (0, h.useWatchContentData)(n), {
     primaryColor: A,
     secondaryColor: v
-  } = (0, f.default)(T), N = (0, s.useStateFromStores)([o.default], () => o.default.locale), x = l.useCallback(e => {
+  } = (0, f.default)(T), x = (0, s.useStateFromStores)([o.default], () => o.default.locale), N = l.useCallback(e => {
     if (null != _ && null != T) return (0, c.generateWatchContentImage)({
       entry: n,
       mediaImageSrc: T,
       avatarSrc: _.getAvatarURL(t.guild_id, 128),
       description: C(n, t, _),
-      timestamp: (0, d.formatEntryTimestamp)(n, N),
+      timestamp: (0, d.formatEntryTimestamp)(n, x),
       episodeDescription: I,
       colors: [A, v],
       channelId: e
     })
-  }, [t, n, I, N, T, A, v, _]);
+  }, [t, n, I, x, T, A, v, _]);
   return null == _ ? null : (0, a.jsxs)(p.Popout, {
     children: [(0, a.jsx)(p.PopoutContent, {
       thumbnailSrc: T,
@@ -73,11 +73,11 @@ t.default = e => {
         }, t))
       })
     }), (0, a.jsx)(p.PopoutInteractionsContainer, {
-      children: (0, a.jsx)(p.PopoutReactor, {
+      children: (0, a.jsx)(p.Reactor, {
         closePopout: S,
         user: _,
         channel: t,
-        generateReactionImage: x,
+        generateReactionImage: N,
         reactionImageAltText: g(n, _),
         entry: n,
         requestId: u

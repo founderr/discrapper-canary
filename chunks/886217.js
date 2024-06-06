@@ -41,8 +41,8 @@ t.default = e => {
     provider: T,
     image_url: I
   } = n.extra.media, A = n.extra.artist.name, v = (0, i.useStateFromStores)([r.default], () => r.default.getUser(n.author_id)), {
-    primaryColor: N,
-    secondaryColor: x
+    primaryColor: x,
+    secondaryColor: N
   } = (0, f.default)(I), M = (0, d.getAggregateRange)(n), R = l.useCallback(() => {
     if (null == v || !(0, o.isIn)(M, h.ALLOWED_RANGES)) return;
     let e = g(n, t, v, M);
@@ -52,10 +52,10 @@ t.default = e => {
       mediaImageSrc: I,
       artist: A,
       description: e,
-      colors: [N, x],
+      colors: [x, N],
       badges: (0, c.getTopArtistImageBadges)(n)
     })
-  }, [I, A, t, n, N, M, x, v]);
+  }, [I, A, t, n, x, M, N, v]);
   return null != v && (0, o.isIn)(M, h.ALLOWED_RANGES) ? (0, a.jsxs)(p.Popout, {
     children: [(0, a.jsx)(p.PopoutContent, {
       thumbnailSrc: I,
@@ -74,7 +74,7 @@ t.default = e => {
         }, t))
       })
     }), (0, a.jsx)(p.PopoutInteractionsContainer, {
-      children: (0, a.jsx)(p.PopoutReactor, {
+      children: (0, a.jsx)(p.Reactor, {
         closePopout: u,
         user: v,
         channel: t,
