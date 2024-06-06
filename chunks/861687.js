@@ -705,7 +705,8 @@ class eo extends _.default {
     !G.default.supports(ei.Features.NATIVE_PING) && this._handlePing(e)
   }
   _handlePing(e) {
-    if (void 0 !== e) {
+    var t;
+    if (null === (t = this._socket) || void 0 === t || t.sendHeartbeatIfOverdue(), void 0 !== e) {
       for (this._pings.push({
           time: Date.now(),
           value: e
