@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   COLLECTIBLES_HEADERS: function() {
-    return N
+    return L
   },
   getOverflowImages: function() {
-    return L
+    return N
   }
 });
 var a = s("180650"),
@@ -34,7 +34,8 @@ let x = {
   _ = {
     TAKE_ME_THERE: () => r.default.Messages.TAKE_ME_THERE
   },
-  N = [{
+  L = [{
+    id: "category_anime",
     backgroundStaticSrc: f,
     backgroundVideoSrc: i,
     overflowSrcStatic: d,
@@ -50,6 +51,7 @@ let x = {
       categorySkuId: a.CollectiblesCategorySkuId.ANIME_V2
     }
   }, {
+    id: "category_galaxy",
     backgroundStaticSrc: T,
     backgroundVideoSrc: h,
     logoSrc: I,
@@ -63,6 +65,7 @@ let x = {
       categorySkuId: a.CollectiblesCategorySkuId.GALAXY
     }
   }, {
+    id: "category_disxcore",
     backgroundStaticSrc: S,
     overflowSrcStatic: g,
     logoSrc: m,
@@ -75,6 +78,7 @@ let x = {
       categorySkuId: a.CollectiblesCategorySkuId.DISXCORE
     }
   }, {
+    id: "category_cyberpunk",
     backgroundStaticSrc: p,
     backgroundVideoSrc: C,
     logoSrc: E,
@@ -87,7 +91,7 @@ let x = {
       categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
     }
   }],
-  L = (e, t) => {
+  N = (e, t) => {
     let {
       overflowSrcStatic: s,
       overflowSrcAnimated: a,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   SlideCarousel: function() {
-    return _
+    return L
   }
 }), s("47120");
 var a, l, n = s("735250"),
@@ -18,9 +18,10 @@ var a, l, n = s("735250"),
   m = s("481060"),
   g = s("451478"),
   S = s("259580"),
-  h = s("689938"),
-  I = s("816124");
-let T = {
+  h = s("305271"),
+  I = s("689938"),
+  T = s("816124");
+let x = {
   mass: 1,
   tension: 200,
   friction: 30,
@@ -29,7 +30,7 @@ let T = {
   duration: 1600
 };
 (l = a || (a = {})).GO_TO_SLIDE = "GO_TO_SLIDE", l.NEXT = "NEXT", l.PREVIOUS = "PREVIOUS";
-let x = e => {
+let _ = e => {
     let {
       currentSlideIndex: t,
       numSlides: s,
@@ -38,33 +39,33 @@ let x = e => {
       onIndicatorClick: r,
       className: i,
       paginationButtonClassName: o
-    } = e, c = u()(I.paginationButton, o);
+    } = e, c = u()(T.paginationButton, o);
     return (0, n.jsxs)("div", {
-      className: u()(I.controls, i),
+      className: u()(T.controls, i),
       children: [(0, n.jsx)(m.Button, {
         look: m.Button.Looks.FILLED,
         color: m.Button.Colors.PRIMARY,
         className: c,
         onClick: l,
-        "aria-label": h.default.Messages.PAGINATION_PREVIOUS,
+        "aria-label": I.default.Messages.PAGINATION_PREVIOUS,
         children: (0, n.jsx)(S.default, {
           direction: S.default.Directions.LEFT
         })
       }), (0, n.jsx)("div", {
-        className: I.paginationIndicatorContainer,
+        className: T.paginationIndicatorContainer,
         children: C()(s, e => (0, n.jsx)(m.Button, {
           look: m.Button.Looks.BLANK,
           size: m.Button.Sizes.NONE,
           onClick: () => r(e),
-          className: u()(I.paginationIndicatorButton, {
-            [I.selected]: e === t
+          className: u()(T.paginationIndicatorButton, {
+            [T.selected]: e === t
           }),
-          "aria-label": h.default.Messages.PAGINATION_SLIDE_LABEL.format({
+          "aria-label": I.default.Messages.PAGINATION_SLIDE_LABEL.format({
             pageNumber: e + 1
           }),
           children: (0, n.jsx)("div", {
-            className: u()(I.paginationIndicator, {
-              [I.selected]: e === t
+            className: u()(T.paginationIndicator, {
+              [T.selected]: e === t
             })
           })
         }, "slide-indicator-".concat(e)))
@@ -73,64 +74,71 @@ let x = e => {
         color: m.Button.Colors.PRIMARY,
         className: c,
         onClick: a,
-        "aria-label": h.default.Messages.PAGINATION_NEXT,
+        "aria-label": I.default.Messages.PAGINATION_NEXT,
         children: (0, n.jsx)(S.default, {
           direction: S.default.Directions.RIGHT
         })
       })]
     })
   },
-  _ = e => {
+  L = e => {
     let {
-      items: t,
-      renderItem: s,
-      onIntentionalChange: a,
-      onChangeItem: l,
-      className: o,
-      controlsClassName: c,
-      paginationButtonClassName: f,
-      springConfig: C,
-      delay: E,
-      initialPaused: S = !1,
-      unidirectional: h = !1
-    } = e, [_, N] = (0, r.useState)(0), [L, b] = (0, r.useState)(!1), [R, v] = (0, r.useState)(!1), A = i().useCallback(() => v(!0), []), P = i().useCallback(() => v(!1), []), O = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), j = null != E && !S && !R && O, y = i().useCallback(e => (t.length + _ + e) % t.length, [t, _]), M = i().useCallback(d()((e, s, n) => {
-      null != n && (null == a || a(t[e], s, e, n)), b("GO_TO_SLIDE" === n), null == l || l(t[e], s, e), N(e)
-    }, 500), [t, a, l]);
+      carouselId: t,
+      items: s = [],
+      renderItem: a,
+      getItemId: l,
+      onIntentionalChange: o,
+      onChangeItem: c,
+      className: f,
+      controlsClassName: C,
+      paginationButtonClassName: E,
+      springConfig: S,
+      analyticsLocations: I,
+      delay: L,
+      initialPaused: N = !1,
+      unidirectional: b = !1
+    } = e, {
+      trackSlideView: R
+    } = (0, h.useSlideCarouselAnalytics)(t, I), [v, A] = (0, r.useState)(0), [P, O] = (0, r.useState)(!1), [j, y] = (0, r.useState)(!1), M = i().useCallback(() => y(!0), []), k = i().useCallback(() => y(!1), []), B = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), D = null != L && !N && !j && B, F = i().useCallback(e => (s.length + v + e) % s.length, [s, v]), U = i().useCallback(d()((e, t, a) => {
+      null != a && (null == o || o(s[e], t, e, a)), O("GO_TO_SLIDE" === a), null == c || c(s[e], t, e), A(e)
+    }, 500), [s, o, c]);
     return (0, r.useEffect)(() => {
-      if (j) {
-        let e = y(1),
-          t = setInterval(() => M(e, _), E);
+      R(v, l(v))
+    }, [R, v, l]), (0, r.useEffect)(() => {
+      if (D) {
+        let e = F(1),
+          t = setInterval(() => U(e, v), L);
         return () => clearInterval(t)
       }
-    }, [j, E, _, y, M]), (0, n.jsxs)("div", {
-      className: u()(I.carouselContainer, o),
-      onMouseEnter: A,
-      onMouseLeave: P,
+    }, [D, L, v, F, U]), (0, n.jsxs)("div", {
+      className: u()(T.carouselContainer, f),
+      onMouseEnter: M,
+      onMouseLeave: k,
       children: [(0, n.jsx)(m.Slides, {
-        activeSlide: String(_),
-        springConfig: null != C ? C : T,
-        directionOverride: h && !L ? "forwards" : void 0,
+        activeSlide: String(v),
+        springConfig: null != S ? S : x,
+        directionOverride: b && !P ? "forwards" : void 0,
         fadeInOut: !0,
-        children: t.map((e, t) => (0, n.jsx)(m.Slide, {
+        children: s.map((e, t) => (0, n.jsx)(m.Slide, {
           id: String(t),
           children: (0, n.jsx)("div", {
-            className: u()(I.carousel),
-            children: s(e, t)
+            className: u()(T.carousel),
+            children: a(e, t)
           })
         }, String(t)))
-      }), t.length > 1 && (0, n.jsx)(x, {
-        className: c,
-        paginationButtonClassName: f,
-        currentSlideIndex: _,
-        numSlides: t.length,
+      }), s.length > 1 && (0, n.jsx)(_, {
+        className: C,
+        paginationButtonClassName: E,
+        currentSlideIndex: v,
+        numSlides: s.length,
         onNext: () => {
-          M(y(1), _, "NEXT")
+          U(F(1), v, "NEXT")
         },
         onPrevious: () => {
-          M(y(11), _, "PREVIOUS")
+          U(F(-1), v, "PREVIOUS")
         },
         onIndicatorClick: e => {
-          M(e, _, "GO_TO_SLIDE")
+          U(e, v, "GO_TO_SLIDE")
         }
       })]
     })
