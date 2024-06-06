@@ -108956,6 +108956,12 @@ div:has(>div>.container__8ab05) {
     gap: 4px
 }
 
+.headerWarning__71305 {
+    margin-right: 8px;
+    margin-bottom: 24px;
+    width: auto
+}
+
 .container_ca070b {
     background-color: var(--background-secondary);
     padding: 12px 16px

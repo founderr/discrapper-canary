@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   MemberApplicationsListRow: function() {
-    return m
+    return M
   },
   MemberApplicationsListRowPlaceholder: function() {
-    return M
+    return A
   }
 }), s("47120"), s("411104");
 var a = s("735250"),
@@ -16,16 +16,16 @@ var a = s("735250"),
   o = s("481060"),
   d = s("239091"),
   c = s("598077"),
-  E = s("263704"),
-  I = s("465670"),
+  I = s("263704"),
+  E = s("465670"),
   T = s("808268"),
   f = s("768581"),
-  R = s("693546"),
-  _ = s("246364"),
+  _ = s("693546"),
+  R = s("246364"),
   S = s("689938"),
   N = s("858347");
 
-function A(e) {
+function m(e) {
   let {
     icon: t,
     onClick: s,
@@ -49,45 +49,46 @@ function A(e) {
   })
 }
 
-function m(e) {
+function M(e) {
   let {
     applicationStatus: t,
     guild: i,
     guildJoinRequest: r,
-    className: m,
-    onClick: M
-  } = e, [C, h] = l.useState(null), {
+    className: M,
+    onClick: A,
+    atMaxMemberCapacity: C
+  } = e, [h, x] = l.useState(null), {
     user: p,
-    createdAt: x
+    createdAt: g
   } = r;
   if (null == p) throw Error("Missing user on this guild join request!");
-  let g = l.useMemo(() => new c.default(p), [p]),
-    P = f.default.getUserAvatarURL(g),
-    j = t === _.GuildJoinRequestApplicationStatuses.SUBMITTED,
-    v = l.useCallback(async (e, t) => {
+  let P = l.useMemo(() => new c.default(p), [p]),
+    j = f.default.getUserAvatarURL(P),
+    v = t === R.GuildJoinRequestApplicationStatuses.SUBMITTED,
+    O = l.useCallback(async (e, t) => {
       let {
         guildId: s,
         userId: a
       } = e;
-      if (null == C) {
-        h(t);
+      if (null == h) {
+        x(t);
         try {
-          await R.default.updateGuildJoinRequest(s, a, t)
+          await _.default.updateGuildJoinRequest(s, a, t)
         } catch (e) {
-          (0, o.showToast)((0, o.createToast)(S.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE)), h(null)
+          (0, o.showToast)((0, o.createToast)(S.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE)), x(null)
         }
       }
-    }, [C]),
-    O = async () => {
-      await v(r, _.GuildJoinRequestApplicationStatuses.APPROVED)
-    }, G = async () => {
-      await v(r, _.GuildJoinRequestApplicationStatuses.REJECTED)
+    }, [h]),
+    G = async () => {
+      await O(r, R.GuildJoinRequestApplicationStatuses.APPROVED)
+    }, L = async () => {
+      await O(r, R.GuildJoinRequestApplicationStatuses.REJECTED)
     };
   return (0, a.jsxs)(o.Clickable, {
-    className: n()(N.container, m),
-    onClick: M,
+    className: n()(N.container, M),
+    onClick: A,
     children: [(0, a.jsx)(o.Avatar, {
-      src: P,
+      src: j,
       size: o.AvatarSizes.SIZE_40,
       "aria-label": p.username,
       className: N.__invalid_spacer
@@ -101,21 +102,21 @@ function m(e) {
         className: N.createdAt,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: u()(x).format("lll")
+        children: u()(g).format("lll")
       })]
-    }), j && (0, a.jsx)(A, {
-      icon: E.default,
-      onClick: O,
-      submitting: C === _.GuildJoinRequestApplicationStatuses.APPROVED,
-      disabled: null != C && C !== _.GuildJoinRequestApplicationStatuses.APPROVED
-    }), j && (0, a.jsx)(A, {
+    }), v && !C && (0, a.jsx)(m, {
       icon: I.default,
       onClick: G,
-      submitting: C === _.GuildJoinRequestApplicationStatuses.REJECTED,
-      disabled: null != C && C !== _.GuildJoinRequestApplicationStatuses.REJECTED
+      submitting: h === R.GuildJoinRequestApplicationStatuses.APPROVED,
+      disabled: null != h && h !== R.GuildJoinRequestApplicationStatuses.APPROVED
+    }), v && (0, a.jsx)(m, {
+      icon: E.default,
+      onClick: L,
+      submitting: h === R.GuildJoinRequestApplicationStatuses.REJECTED,
+      disabled: null != h && h !== R.GuildJoinRequestApplicationStatuses.REJECTED
     }), (0, a.jsx)(o.Clickable, {
       className: n()(N.overflowMenuContainer, {
-        [N.disabled]: null != C
+        [N.disabled]: null != h
       }),
       onClick: e => {
         (0, d.openContextMenuLazy)(e, async () => {
@@ -125,7 +126,7 @@ function m(e) {
           return t => (0, a.jsx)(e, {
             ...t,
             guild: i,
-            user: g
+            user: P
           })
         }, {
           position: "bottom",
@@ -140,7 +141,7 @@ function m(e) {
   })
 }
 
-function M() {
+function A() {
   return (0, a.jsxs)("div", {
     className: N.placeholder,
     children: [(0, a.jsx)("div", {
