@@ -370,29 +370,32 @@ function ef(e) {
           height: 20,
           color: f.default.colors.ICON_PRIMARY
         })
-      }), (0, a.jsx)(N.ReplyInput, {
-        placeholder: ei.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: L ? em : "@".concat(ep)
-        }),
-        onEnter: eS,
-        setEditorRef: e => P(e),
-        channel: L ? t : void 0,
-        showEmojiButton: null != eT,
-        renderAttachButton: b ? () => (0, a.jsx)(_.Tooltip, {
-          text: eE,
-          children: e => (0, a.jsx)(_.Clickable, {
-            ...e,
-            className: er.shareToChannelButton,
-            onClick: () => j(e => !e),
-            children: L ? (0, a.jsx)(g.TextIcon, {
-              width: 20,
-              height: 20
-            }) : (0, a.jsx)(h.AtIcon, {
-              width: 20,
-              height: 20
+      }), (0, a.jsx)("div", {
+        className: er.replyInputWrapper,
+        children: (0, a.jsx)(N.ReplyInput, {
+          placeholder: ei.default.Messages.TEXTAREA_PLACEHOLDER.format({
+            channel: L ? em : "@".concat(ep)
+          }),
+          onEnter: eS,
+          setEditorRef: e => P(e),
+          channel: L ? t : void 0,
+          showEmojiButton: null != eT,
+          renderAttachButton: b ? () => (0, a.jsx)(_.Tooltip, {
+            text: eE,
+            children: e => (0, a.jsx)(_.Clickable, {
+              ...e,
+              className: er.shareToChannelButton,
+              onClick: () => j(e => !e),
+              children: L ? (0, a.jsx)(g.TextIcon, {
+                width: 20,
+                height: 20
+              }) : (0, a.jsx)(h.AtIcon, {
+                width: 20,
+                height: 20
+              })
             })
-          })
-        }) : void 0
+          }) : void 0
+        })
       })]
     }), !1 === ec && (0, a.jsxs)("div", {
       className: er.primaryActionPopoutActionButtons,

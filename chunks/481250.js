@@ -47,27 +47,27 @@ let C = {
 };
 
 function v(e, t, a, n, v) {
-  return e.map(e => {
-    var D, E;
-    let R = [];
-    for (let t of Object.keys(e).sort((e, t) => {
+  return e.map((D, E) => {
+    var R, T;
+    let F = [];
+    for (let e of Object.keys(D).sort((e, t) => {
         let a = C[e],
           r = C[t];
         if (a !== r) return void 0 === a ? 1 : void 0 === r ? -1 : a - r;
         return d.graphs[e] !== d.graphs[t] ? d.graphs[e] ? 1 : -1 : e > t ? 1 : -1
       })) {
-      let a = e[t];
-      !f.hidden[t] && void 0 !== a && R.push((0, r.jsx)(f.Item, {
+      let t = D[e];
+      !f.hidden[e] && void 0 !== t && F.push((0, r.jsx)(f.Item, {
         section: n,
-        label: t,
-        value: a
-      }, t))
+        label: e,
+        value: t
+      }, e))
     }
     return (0, r.jsxs)(l.FormSection, {
       className: g.marginBottom40,
-      title: e.type,
+      title: D.type,
       titleClassName: h.sectionHeader,
-      children: ["video" === e.type && null != a && null != n && null != v && function(e, t, a, n) {
+      children: ["video" === D.type && null != a && null != n && null != v && function(e, t, a, n) {
         let l = n.get(t, a, e.ssrc);
         return null != l ? (0, r.jsx)("div", {
           className: i()(h.videoWrapper, g.marginBottom40),
@@ -79,7 +79,7 @@ function v(e, t, a, n, v) {
             userId: a
           })
         }) : null
-      }(e, a, n, v), S(R), "video" === e.type && null != a && null != n && null != v && (D = n, E = t, (0, r.jsx)(c.default, {
+      }(D, a, n, v), S(F), "video" === D.type && E === e.length - 1 && null != a && null != n && null != v && (R = n, T = t, (0, r.jsx)(c.default, {
         className: g.marginBottom20,
         children: (0, r.jsxs)(c.default.Child, {
           basis: "100%",
@@ -88,9 +88,9 @@ function v(e, t, a, n, v) {
             className: g.marginBottom8,
             children: "Simulcast Override"
           }), (0, r.jsx)(l.SingleSelect, {
-            value: d.default.getSimulcastDebugOverride(D, E),
+            value: d.default.getSimulcastDebugOverride(R, T),
             onChange: e => {
-              s.setSimulcastDebugOverride(D, E, e)
+              s.setSimulcastDebugOverride(R, T, e)
             },
             options: Object.values(p.SimulcastOverrideQuality).map(e => ({
               value: e,
@@ -99,6 +99,6 @@ function v(e, t, a, n, v) {
           })]
         })
       }))]
-    }, "".concat(e.type, " + ").concat(e.ssrc))
+    }, "".concat(D.type, " + ").concat(D.ssrc))
   })
 }

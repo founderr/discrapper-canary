@@ -25585,6 +25585,10 @@ img.thumbnail__18ece {
     gap: 8px
 }
 
+.replyInputWrapper_e0889b {
+    flex-grow: 1
+}
+
 .primaryActionPopoutMessageCloseIcon__4400d {
     display: flex;
     justify-content: center;
