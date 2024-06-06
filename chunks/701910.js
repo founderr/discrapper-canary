@@ -10,7 +10,7 @@ var s = n("734741"),
   l = n("673591"),
   i = n("689938");
 let r = () => {
-  let e = (0, s.useShouldShowAppStylesBadge)(),
+  let e = (0, s.useShouldShowServerProfileBadge)(),
     t = i.default.Messages.NEW;
   return e && (t = i.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SO_NEW_BADGE), (0, a.jsx)(l.default, {
     copy: t

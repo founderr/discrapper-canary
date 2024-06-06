@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
   useDismissWhatsNewCardDCs: function() {
     return M
   },
-  useShouldShowAppStylesBadge: function() {
-    return A
+  useShouldShowServerProfileBadge: function() {
+    return C
   },
   useShouldShowWhatsNewBadge: function() {
     return O
@@ -148,13 +148,13 @@ let R = "getWhatsNewBadgeCount",
     let e = A(),
       t = p(),
       s = C();
-    return e ? d.June2024NewAppStylesWhatsNewCardExperiment.trackExposure({
+    return s ? E.ServerProfilesExperiment.trackExposure({
       location: f
-    }) : (t && _.ReferralProgramWhatsNewCardExperiment.trackExposure({
+    }) : e ? d.June2024NewAppStylesWhatsNewCardExperiment.trackExposure({
       location: f
-    }), s && E.ServerProfilesExperiment.trackExposure({
+    }) : t && _.ReferralProgramWhatsNewCardExperiment.trackExposure({
       location: f
-    })), e || t || s
+    }), e || t || s
   },
   M = () => {
     let e = A(),
