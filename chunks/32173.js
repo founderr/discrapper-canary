@@ -13,8 +13,8 @@ var n = s("399606"),
   d = s("100527"),
   c = s("906732"),
   _ = s("779618"),
-  E = s("335131"),
-  T = s("300284"),
+  E = s("300284"),
+  T = s("703656"),
   I = s("547972"),
   R = s("131951"),
   f = s("78839"),
@@ -91,7 +91,7 @@ t.default = () => {
     location: eo
   }, {
     autoTrackExposure: !1
-  }), eA = (0, T.default)({
+  }), eA = (0, E.default)({
     scrollPosition: b.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), eN = () => {
@@ -100,10 +100,7 @@ t.default = () => {
       analyticsLocations: e
     })
   }, ep = () => {
-    (0, E.openCollectiblesShop)({
-      analyticsLocations: e,
-      analyticsSource: d.default.PREMIUM_MARKETING_PERK_CARD
-    })
+    (0, T.transitionTo)(x.Routes.COLLECTIBLES_SHOP)
   }, eg = () => {
     o.default.open(x.UserSettingsSections.APPEARANCE, null, {
       scrollPosition: b.AppearanceScrollPositions.CUSTOM_APP_ICONS

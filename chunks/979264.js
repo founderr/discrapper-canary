@@ -54,7 +54,7 @@ let m = r.memo(function(e) {
       badgeClassName: u,
       onClick: d,
       onMouseEnter: _,
-      textVariant: c = "text-xs/medium",
+      textVariant: c = "text-xs/semibold",
       textColor: E = "text-normal",
       badgeSize: f = S.ClanTagBadgeSize.SIZE_12,
       inline: h = !0
