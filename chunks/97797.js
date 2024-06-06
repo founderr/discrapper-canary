@@ -1,20 +1,20 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   getGuildProductPurchaseSystemMessageContentMobile: function() {
-    return n
+    return E
   }
 });
-var s = a("689938");
+var a = s("689938");
 
-function n(e) {
+function E(e) {
   let {
     username: t,
-    usernameOnClickHandler: a,
-    productName: n
+    usernameOnClickHandler: s,
+    productName: E
   } = e;
-  return s.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE_MOBILE.astFormat({
+  return a.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE_MOBILE.astFormat({
     username: t,
-    usernameHook: a,
-    productName: n
+    usernameHook: s,
+    productName: E
   })
 }

@@ -1,112 +1,112 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   getPrivateChannelIntegrationAddedSystemMessageASTContent: function() {
-    return r
-  },
-  getPrivateChannelIntegrationAddedSystemMessageContent: function() {
-    return l
-  },
-  getPrivateChannelIntegrationRemovedSystemMessageASTContent: function() {
     return u
   },
-  getPrivateChannelIntegrationRemovedSystemMessageContent: function() {
+  getPrivateChannelIntegrationAddedSystemMessageContent: function() {
     return _
+  },
+  getPrivateChannelIntegrationRemovedSystemMessageASTContent: function() {
+    return M
+  },
+  getPrivateChannelIntegrationRemovedSystemMessageContent: function() {
+    return l
   }
 });
-var s = a("63063"),
-  n = a("981631"),
-  E = a("689938");
-
-function l(e) {
-  let {
-    application: t,
-    username: a,
-    usernameHook: l = n.NOOP,
-    applicationNameHook: _ = n.NOOP
-  } = e;
-  return null != t ? E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
-    username: a,
-    otherUsername: t.name,
-    usernameHook: l,
-    otherUsernameHook: _,
-    helpCenterLink: s.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
-  }) : E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
-    username: a,
-    usernameHook: l,
-    helpCenterLink: s.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
-  })
-}
+var a = s("63063"),
+  E = s("981631"),
+  n = s("689938");
 
 function _(e) {
   let {
     application: t,
-    username: a,
-    usernameHook: l = n.NOOP,
-    applicationNameHook: _ = n.NOOP
+    username: s,
+    usernameHook: _ = E.NOOP,
+    applicationNameHook: l = E.NOOP
   } = e;
-  return null != t ? E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
-    username: a,
+  return null != t ? n.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
+    username: s,
     otherUsername: t.name,
-    usernameHook: l,
-    otherUsernameHook: _,
-    helpCenterLink: s.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
-  }) : E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
-    username: a,
-    usernameHook: l,
-    helpCenterLink: s.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+    usernameHook: _,
+    otherUsernameHook: l,
+    helpCenterLink: a.default.getArticleURL(E.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+  }) : n.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
+    username: s,
+    usernameHook: _,
+    helpCenterLink: a.default.getArticleURL(E.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
   })
 }
 
-function r(e) {
+function l(e) {
   let {
     application: t,
-    username: a,
-    usernameOnClick: l,
-    applicationNameOnClick: _,
-    medium: r
+    username: s,
+    usernameHook: _ = E.NOOP,
+    applicationNameHook: l = E.NOOP
   } = e;
-  return null != t ? E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
-    username: a,
+  return null != t ? n.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
+    username: s,
     otherUsername: t.name,
-    usernameOnClick: l,
-    otherUsernameOnClick: _,
-    medium: r,
-    helpCenterLink: {
-      url: s.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
-    }
-  }) : E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
-    username: a,
-    usernameOnClick: l,
-    medium: r,
-    helpCenterLink: {
-      url: s.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
-    }
+    usernameHook: _,
+    otherUsernameHook: l,
+    helpCenterLink: a.default.getArticleURL(E.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+  }) : n.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
+    username: s,
+    usernameHook: _,
+    helpCenterLink: a.default.getArticleURL(E.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
   })
 }
 
 function u(e) {
   let {
     application: t,
-    username: a,
-    usernameOnClick: l,
-    applicationNameOnClick: _,
-    medium: r
+    username: s,
+    usernameOnClick: _,
+    applicationNameOnClick: l,
+    medium: u
   } = e;
-  return null != t ? E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
-    username: a,
+  return null != t ? n.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
+    username: s,
     otherUsername: t.name,
-    usernameOnClick: l,
-    otherUsernameOnClick: _,
-    medium: r,
+    usernameOnClick: _,
+    otherUsernameOnClick: l,
+    medium: u,
     helpCenterLink: {
-      url: s.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+      url: a.default.getArticleURL(E.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
     }
-  }) : E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
-    username: a,
-    usernameOnClick: l,
-    medium: r,
+  }) : n.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
+    username: s,
+    usernameOnClick: _,
+    medium: u,
     helpCenterLink: {
-      url: s.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+      url: a.default.getArticleURL(E.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+    }
+  })
+}
+
+function M(e) {
+  let {
+    application: t,
+    username: s,
+    usernameOnClick: _,
+    applicationNameOnClick: l,
+    medium: u
+  } = e;
+  return null != t ? n.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
+    username: s,
+    otherUsername: t.name,
+    usernameOnClick: _,
+    otherUsernameOnClick: l,
+    medium: u,
+    helpCenterLink: {
+      url: a.default.getArticleURL(E.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+    }
+  }) : n.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
+    username: s,
+    usernameOnClick: _,
+    medium: u,
+    helpCenterLink: {
+      url: a.default.getArticleURL(E.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
     }
   })
 }

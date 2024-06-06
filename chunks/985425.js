@@ -18,8 +18,8 @@ var i = t("120356"),
   m = t("998502"),
   v = t("654904"),
   p = t("486324"),
-  g = t("783779");
-let h = m.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+  h = t("783779");
+let g = m.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 
 function S(e) {
   let {
@@ -34,15 +34,15 @@ function S(e) {
     className: E,
     disabledInputs: y,
     isTryItOutFlow: x,
-    onUpsellClick: j
+    onUpsellClick: U
   } = e, {
-    analyticsLocations: U
+    analyticsLocations: j
   } = (0, u.default)(), N = (0, n.useStateFromStores)([c.default], () => c.default.getStatus(a.id));
   return (0, l.jsxs)(s.Clickable, {
     "aria-disabled": y,
     onClick: y ? void 0 : e => {
       if (!(null == i || (null == m ? void 0 : m.canUsePremiumProfileCustomization) || S)) {
-        null == j || j();
+        null == U || U();
         return
       }(0, o.openContextMenuLazy)(e, async () => {
         let {
@@ -53,21 +53,21 @@ function S(e) {
           changeDecorationAction: () => {
             (0, d.openAvatarDecorationModal)({
               guild: null == i ? void 0 : i,
-              analyticsLocations: U,
+              analyticsLocations: j,
               isTryItOutFlow: x
             })
           }
         })
       })
     },
-    className: r()(g.avatar, {
-      [g.clickable]: !y
+    className: r()(h.avatar, {
+      [h.clickable]: !y
     }),
-    children: [(0, l.jsx)(h, {
+    children: [(0, l.jsx)(g, {
       src: I,
       avatarDecoration: T,
       imageClassName: r()(E, {
-        [g.overlay]: !y
+        [h.overlay]: !y
       }),
       size: s.AvatarSizes.SIZE_80,
       "aria-label": a.username,
@@ -75,7 +75,7 @@ function S(e) {
       statusTooltip: !1,
       statusBackdropColor: null != A ? (0, s.getStatusBackdropColor)(P) : void 0
     }), !y && (0, l.jsx)(f.default, {
-      className: g.editPencil,
+      className: h.editPencil,
       color: "white"
     })]
   })

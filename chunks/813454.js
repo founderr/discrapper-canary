@@ -23,8 +23,8 @@ function f(e) {
     canUsePremiumCustomization: m,
     pendingBanner: v,
     hasProfileEffect: p,
-    isTryItOutFlow: g,
-    disabledInputs: h,
+    isTryItOutFlow: h,
+    disabledInputs: g,
     forProfileEffectModal: S,
     onUpsellClick: I
   } = e, T = m || (null == t ? void 0 : t.canUsePremiumProfileCustomization);
@@ -37,12 +37,12 @@ function f(e) {
     overrideBannerWidth: S ? 280 : void 0,
     hasProfileEffect: p,
     canUsePremiumCustomization: m,
-    children: !h && (0, l.jsxs)(i.Clickable, {
+    children: !g && (0, l.jsxs)(i.Clickable, {
       onClick: () => {
         if (!T) {
           null == I || I();
           return
-        }(0, s.handleOpenSelectImageModal)(o.UploadTypes.BANNER, f, g)
+        }(0, s.handleOpenSelectImageModal)(o.UploadTypes.BANNER, f, h)
       },
       className: c.clickable,
       children: [T && (0, l.jsx)(n.default, {

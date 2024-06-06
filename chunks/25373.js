@@ -18,8 +18,8 @@ var i = t("120356"),
   m = t("204197"),
   v = t("158776"),
   p = t("654904"),
-  g = t("985425"),
-  h = t("813454"),
+  h = t("985425"),
+  g = t("813454"),
   S = t("826646"),
   I = t("981631"),
   T = t("228168"),
@@ -34,8 +34,8 @@ function A(e) {
     pendingBanner: E,
     pendingBio: y,
     pendingPronouns: x,
-    pendingAvatar: j,
-    pendingAvatarDecoration: U,
+    pendingAvatar: U,
+    pendingAvatarDecoration: j,
     pendingNickname: N,
     pendingGlobalName: C,
     pendingThemeColors: b,
@@ -44,8 +44,8 @@ function A(e) {
     isTryItOutFlow: M = !1,
     disabledInputs: B = !1,
     hideCustomStatus: R = !1,
-    hideBioSection: k = !1,
-    hideExampleButton: O = !1,
+    hideBioSection: O = !1,
+    hideExampleButton: k = !1,
     forProfileEffectModal: z = !1
   } = e, L = (0, n.useStateFromStores)([v.default], () => v.default.findActivity(a.id, e => {
     let {
@@ -58,8 +58,8 @@ function A(e) {
   } = (0, m.default)({
     user: a,
     guildId: null == t ? void 0 : t.id,
-    avatarDecorationOverride: U,
-    avatarOverride: j,
+    avatarDecorationOverride: j,
+    avatarOverride: U,
     size: s.AvatarSizes.SIZE_80,
     showPending: !0
   }), Z = (0, p.getPreviewProfileEffectId)({
@@ -86,7 +86,7 @@ function A(e) {
     forceShowPremium: i,
     children: [(0, l.jsxs)("header", {
       className: P.header,
-      children: [(0, l.jsx)(h.default, {
+      children: [(0, l.jsx)(g.default, {
         user: a,
         displayProfile: F,
         guildId: null == t ? void 0 : t.id,
@@ -99,7 +99,7 @@ function A(e) {
         onUpsellClick: () => null == A ? void 0 : A({
           object: I.AnalyticsObjects.EDIT_PROFILE_BANNER
         })
-      }), (0, l.jsx)(g.default, {
+      }), (0, l.jsx)(h.default, {
         user: a,
         guild: t,
         displayProfile: F,
@@ -122,14 +122,14 @@ function A(e) {
       user: a,
       displayProfile: F,
       guild: t,
-      pendingAvatar: j,
+      pendingAvatar: U,
       pendingNickname: N,
       pendingGlobalName: C,
       pendingBio: y,
       pendingPronouns: x,
       isTryItOutFlow: M,
-      hideBioSection: k,
-      hideExampleButton: O
+      hideBioSection: O,
+      hideExampleButton: k
     }), null != Z && (0, l.jsx)(o.default, {
       profileEffectId: Z
     })]
