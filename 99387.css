@@ -36933,6 +36933,28 @@ img.thumbnail__18ece {
     gap: 4px
 }
 
+.copiable_ebb5c8 {
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-round);
+    color: var(--interactive-normal);
+    opacity: 0;
+    transition: opacity var(--custom-button-transition-duration)ease
+}
+
+.copiable_ebb5c8:hover {
+    color: var(--interactive-hover)
+}
+
+.copiable_ebb5c8:active {
+    color: var(--interactive-active)
+}
+
+.copiable_ebb5c8.visible_e86454,
+.copiable_ebb5c8:focus-visible {
+    opacity: 1
+}
+
 .body_cdd5b8 {
     padding: 0 16px 16px;
     gap: 16px;
