@@ -57,10 +57,13 @@ function z(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: B.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(Q, {}), (0, a.jsx)(C.Subsetting, {
+    children: [(0, a.jsx)("div", {
+      className: V.marginBottom20,
+      children: (0, a.jsx)(Q, {})
+    }), (0, a.jsxs)(C.Subsetting, {
       setting: U.WebSetting.ACCESSIBILITY_SATURATION,
-      children: (0, a.jsx)(q, {})
-    }), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(C.Subsetting, {
+      children: [(0, a.jsx)(q, {}), (0, a.jsx)(u.FormDivider, {})]
+    }), (0, a.jsx)(C.Subsetting, {
       setting: U.WebSetting.ACCESSIBILITY_LINK_DECORATIONS,
       children: (0, a.jsx)(X, {})
     }), (0, a.jsx)(C.Subsetting, {
@@ -84,12 +87,11 @@ function z(e) {
     }), (0, a.jsx)(C.Subsetting, {
       setting: U.WebSetting.ACCESSIBILITY_MESSAGES,
       children: (0, a.jsx)(ea, {})
-    }), (0, a.jsx)(C.Subsetting, {
+    }), (0, a.jsxs)(C.Subsetting, {
       setting: U.WebSetting.ACCESSIBILITY_TEXT_TO_SPEECH,
-      children: (0, a.jsx)(en, {})
-    }), (0, a.jsx)(u.FormDivider, {
-      className: V.marginBottom20
+      children: [(0, a.jsx)(en, {}), (0, a.jsx)(u.FormDivider, {})]
     }), (0, a.jsx)(u.Text, {
+      className: V.marginTop20,
       variant: "text-md/normal",
       children: B.default.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
         onAppearanceClick() {

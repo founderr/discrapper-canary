@@ -258,76 +258,80 @@ let ej = () => {
       },
       [eL.WebSetting.PRIVACY_AND_SAFETY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: ev.default.Messages.PRIVACY_AND_SAFETY,
         label: ev.default.Messages.PRIVACY_AND_SAFETY,
         ariaLabel: ev.default.Messages.PRIVACY_AND_SAFETY,
         element: ef.default
       },
+      [eL.WebSetting.PRIVACY_USER_SETTINGS]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.PRIVACY_AND_SAFETY,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY
+      },
       [eL.WebSetting.PRIVACY_SENSITIVE_MEDIA]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS
       },
       [eL.WebSetting.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.SETTINGS_DM_SPAM_FILTER,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS
       },
       [eL.WebSetting.PRIVACY_SERVER_PRIVACY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_DM_SETTINGS_TITLE,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS
       },
       [eL.WebSetting.PRIVACY_DATA_PRIVACY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.SETTINGS_DATA_PRIVACY_CONTROLS,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS
       },
       [eL.WebSetting.PRIVACY_STAFF_ONLY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY,
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
         predicate: () => eY
-      },
-      [eL.WebSetting.PRIVACY_ACCOUNT_STANDING]: {
-        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: ev.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_DESCRIPTION,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY,
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
         predicate: () => ek
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_PROFANITY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE,
-        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
         predicate: () => ek
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE,
-        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
         predicate: () => ek
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
-        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
         predicate: () => ek
       },
       [eL.WebSetting.PRIVACY_TERMS_POLICY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_SETTINGS_PRIVACY_TERMS_SEARCHABLE,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS
       },
       [eL.WebSetting.PRIVACY_SAFETY_ALERTS]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.SAFETY_ALERTS_SETTING_TITLE,
-        parent: eL.WebSetting.PRIVACY_AND_SAFETY,
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
         predicate: () => ew
+      },
+      [eL.WebSetting.PRIVACY_ACCOUNT_STANDING]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: ev.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
+        parent: eL.WebSetting.PRIVACY_AND_SAFETY
       },
       [eL.WebSetting.PRIVACY_FAMILY_CENTER]: {
         section: eP.UserSettingsSections.FAMILY_CENTER,
@@ -520,7 +524,7 @@ let ej = () => {
       },
       [eL.WebSetting.ACCESSIBILITY_SYNC_PROFILE_THEME]: {
         section: eP.UserSettingsSections.ACCESSIBILITY,
-        searchableTitle: ev.default.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_LABEL,
+        searchableTitle: ev.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE,
         parent: eL.WebSetting.ACCESSIBILITY
       },
       [eL.WebSetting.ACCESSIBILITY_CONTRAST]: {
