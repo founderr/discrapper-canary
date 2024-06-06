@@ -6,6 +6,7 @@ e.exports = {
   buttonContainer: "buttonContainer_ff1010",
   buttons: "buttons__7ecff",
   channelTextArea: "channelTextArea__648e5",
+  channelTextAreaContainer: "channelTextAreaContainer__37a67",
   channelTextAreaDisabled: "channelTextAreaDisabled_d0f0e8",
   disabledButtonWrapper: "disabledButtonWrapper__30b08",
   emojiButton: "emojiButton_b63c38 button__493d9",

@@ -8,8 +8,8 @@ var a = n("735250"),
   l = n("470079"),
   s = n("120356"),
   i = n.n(s),
-  r = n("481060"),
-  o = n("944581"),
+  r = n("912920"),
+  o = n("481060"),
   u = n("689938"),
   d = n("766972");
 
@@ -30,9 +30,9 @@ function c(e) {
   function C() {
     p(!1)
   }
-  return (0, a.jsx)(r.Button, {
-    look: r.Button.Looks.BLANK,
-    size: r.Button.Sizes.NONE,
+  return (0, a.jsx)(o.Button, {
+    look: o.Button.Looks.BLANK,
+    size: o.Button.Sizes.NONE,
     tabIndex: t,
     className: i()(d.activityButton, n),
     onClick: s,
@@ -45,8 +45,8 @@ function c(e) {
     "aria-expanded": c,
     "aria-controls": f,
     focusProps: h,
-    children: (0, a.jsx)(o.default, {
-      className: i()(d.rocket, m ? d.rocketHovered : d.rocketUnhovered)
+    children: (0, a.jsx)(r.AppsIcon, {
+      className: i()(m ? d.iconHovered : d.iconUnhovered)
     })
   })
 }

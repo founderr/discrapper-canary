@@ -61,7 +61,7 @@ t.default = r.memo(function(e) {
       className: p.positionLayer,
       targetRef: t,
       position: "top",
-      align: "left",
+      align: "right",
       spacing: 8,
       autoInvert: !0,
       children: e => {
@@ -78,15 +78,15 @@ t.default = r.memo(function(e) {
             ref: R,
             children: [(0, i.jsx)("div", {
               className: p.resizeHandle
-            }), (0, i.jsxs)("div", {
+            }), (0, i.jsx)("div", {
               className: p.contentWrapper,
-              children: [(0, i.jsx)(A.default, {
-                channel: n,
-                isAppDetailPresent: null != U
-              }), null != U ? (0, i.jsx)(h.default, {
+              children: null != U ? (0, i.jsx)(h.default, {
                 channel: n,
                 appDetail: U
-              }, U.id) : null]
+              }, U.id) : (0, i.jsx)(A.default, {
+                channel: n,
+                isAppDetailPresent: null != U
+              })
             })]
           }) : null
         })

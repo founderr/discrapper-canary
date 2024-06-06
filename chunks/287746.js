@@ -423,7 +423,14 @@ class eP extends l.PureComponent {
       editorTextContent: this.state.textValue,
       setValue: this.handleSetValue,
       canOnlyUseTextCommands: e
-    })), ey(this, "renderAppLauncherButton", () => (0, a.jsx)(L.default, {})), ey(this, "renderApplicationCommandIcon", (e, t, n) => (0, a.jsx)(O.default, {
+    })), ey(this, "renderAppLauncherButton", e => {
+      let {
+        ref: t
+      } = e;
+      return (0, a.jsx)(L.default, {
+        ref: t
+      })
+    }), ey(this, "renderApplicationCommandIcon", (e, t, n) => (0, a.jsx)(O.default, {
       className: n,
       command: e,
       section: t,

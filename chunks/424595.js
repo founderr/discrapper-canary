@@ -11,18 +11,19 @@ var a = n("735250"),
   c = n("541099"),
   f = n("957825"),
   h = n("752862");
-t.default = l.memo(function() {
-  let e = (0, r.useStateFromStores)([c.default], () => c.default.shouldShowPopup()),
-    t = l.useCallback(() => {
-      e ? d.dismissAppLauncherPopup() : d.showAppLauncherPopup()
-    }, [e]);
+t.default = l.memo(l.forwardRef(function(e, t) {
+  let n = (0, r.useStateFromStores)([c.default], () => c.default.shouldShowPopup()),
+    s = l.useCallback(() => {
+      n ? d.dismissAppLauncherPopup() : d.showAppLauncherPopup()
+    }, [n]);
   return (0, a.jsx)(o.Tooltip, {
     text: "Use an App",
     children: e => (0, a.jsx)("div", {
+      ref: t,
       ...e,
       className: i()(f.CHAT_INPUT_BUTTON_CLASSNAME, h.buttonContainer),
       children: (0, a.jsx)(u.default, {
-        onClick: t,
+        onClick: s,
         tabIndex: 0,
         focusProps: {
           offset: {
@@ -35,4 +36,4 @@ t.default = l.memo(function() {
       })
     })
   })
-})
+}))
