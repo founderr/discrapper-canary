@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return C
   }
 });
 var s = l("735250"),
@@ -11,95 +11,99 @@ var s = l("735250"),
   o = l("442837"),
   r = l("481060"),
   u = l("666520"),
-  d = l("169559"),
-  c = l("369077"),
-  f = l("761174"),
-  S = l("706454"),
-  E = l("246946"),
-  I = l("785717"),
-  m = l("648067"),
-  _ = l("588822"),
-  v = l("900927"),
-  p = l("652853"),
-  T = l("335191"),
-  g = l("347949"),
-  x = l("988246"),
-  U = l("689938"),
-  A = l("921152");
+  d = l("580552"),
+  c = l("169559"),
+  f = l("369077"),
+  S = l("761174"),
+  E = l("706454"),
+  I = l("246946"),
+  m = l("785717"),
+  _ = l("648067"),
+  v = l("588822"),
+  p = l("900927"),
+  T = l("652853"),
+  g = l("335191"),
+  x = l("347949"),
+  U = l("988246"),
+  A = l("689938"),
+  N = l("921152");
 
-function N(e) {
+function C(e) {
   var t;
   let {
     user: l,
     displayProfile: a,
-    autoFocusNote: N = !1,
-    scrollToConnections: C = !1
+    autoFocusNote: C = !1,
+    scrollToConnections: R = !1
   } = e, {
-    trackUserProfileAction: R
-  } = (0, I.useUserProfileAnalyticsContext)(), P = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
-    theme: h
-  } = (0, p.useUserProfileThemeContext)(), M = (0, o.useStateFromStores)([S.default], () => S.default.locale), y = (0, f.useIsUserRecentGamesEnabled)({
+    trackUserProfileAction: h
+  } = (0, m.useUserProfileAnalyticsContext)(), P = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), {
+    theme: M
+  } = (0, T.useUserProfileThemeContext)(), y = (0, o.useStateFromStores)([E.default], () => E.default.locale), j = (0, S.useIsUserRecentGamesEnabled)({
     userId: l.id,
     location: "28tk0bf_3"
-  }), j = (0, d.default)("user_profile"), F = (0, m.default)(l.id), L = i.useRef(null);
+  }), F = (0, c.default)("user_profile"), L = (null == a ? void 0 : a.bio) != null && (null == a ? void 0 : a.bio) !== "" || (0, d.default)(l.id), O = (0, _.default)(l.id), D = i.useRef(null);
   return (i.useLayoutEffect(() => {
-    if (C) {
+    if (R) {
       var e;
-      null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
+      null == D || null === (e = D.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [C]), P) ? (0, s.jsx)(x.default, {}) : (0, s.jsxs)(r.ScrollerThin, {
+  }, [R]), P) ? (0, s.jsx)(U.default, {}) : (0, s.jsxs)(r.ScrollerThin, {
     fade: !0,
-    className: A.infoScroller,
+    className: N.infoScroller,
     children: [(0, s.jsxs)("div", {
-      className: A.userInfoSection,
-      children: [(null == a ? void 0 : a.bio) != null && (null == a ? void 0 : a.bio) !== "" && (0, s.jsxs)(s.Fragment, {
+      className: N.userInfoSection,
+      children: [L && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(r.Heading, {
           variant: "eyebrow",
-          className: A.userInfoSectionHeader,
-          children: U.default.Messages.USER_PROFILE_ABOUT_ME
-        }), (0, s.jsx)(_.default, {
-          className: A.userInfoText,
-          userBio: null !== (t = null == a ? void 0 : a.bio) && void 0 !== t ? t : ""
+          className: N.userInfoSectionHeader,
+          children: A.default.Messages.USER_PROFILE_ABOUT_ME
+        }), (0, s.jsx)(v.default, {
+          className: N.userInfoText,
+          userBio: null !== (t = null == a ? void 0 : a.bio) && void 0 !== t ? t : "",
+          userId: l.id
         })]
       }), (0, s.jsxs)("div", {
         children: [(0, s.jsx)(r.Heading, {
           variant: "eyebrow",
-          className: A.userInfoSectionHeader,
-          children: U.default.Messages.USER_PROFILE_MEMBER_SINCE
-        }), (0, s.jsx)(v.default, {
+          className: N.userInfoSectionHeader,
+          children: A.default.Messages.USER_PROFILE_MEMBER_SINCE
+        }), (0, s.jsx)(p.default, {
           userId: l.id,
-          textClassName: A.userInfoText
+          textClassName: N.userInfoText
         })]
-      }), j && (0, s.jsx)("div", {
-        className: A.clans,
+      }), F && (0, s.jsx)("div", {
+        className: N.clans,
         children: (0, s.jsx)("div", {
-          className: A.userInfoText,
-          children: (0, s.jsx)(c.UserProfileClanContainer, {
+          className: N.userInfoText,
+          children: (0, s.jsx)(f.UserProfileClanContainer, {
             userId: l.id
           })
         })
-      }), y && (0, s.jsx)(g.UserProfileRecentGamesContainer, {
+      }), j && (0, s.jsx)(x.UserProfileRecentGamesContainer, {
         userId: l.id,
         maxItems: 6,
-        containerClassName: n()(A.userInfoText, A.recentGames)
-      }), (0, s.jsx)(r.Heading, {
-        variant: "eyebrow",
-        className: A.userInfoSectionHeader,
-        children: U.default.Messages.NOTE
-      }), (0, s.jsx)(u.default, {
-        userId: l.id,
-        autoFocus: N,
-        className: A.note,
-        onUpdate: () => R({
-          action: "SET_NOTE"
-        })
+        containerClassName: n()(N.userInfoText, N.recentGames)
+      }), !l.isNonUserBot() && (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)(r.Heading, {
+          variant: "eyebrow",
+          className: N.userInfoSectionHeader,
+          children: A.default.Messages.NOTE
+        }), (0, s.jsx)(u.default, {
+          userId: l.id,
+          autoFocus: C,
+          className: N.note,
+          onUpdate: () => h({
+            action: "SET_NOTE"
+          })
+        })]
       })]
-    }), (0, s.jsx)(T.ConnectedUserAccounts, {
-      ref: L,
-      connectedAccounts: F,
-      theme: h,
-      locale: M,
-      className: A.userInfoSection,
+    }), (0, s.jsx)(g.ConnectedUserAccounts, {
+      ref: D,
+      connectedAccounts: O,
+      theme: M,
+      locale: y,
+      className: N.userInfoSection,
       userId: l.id
     })]
   })

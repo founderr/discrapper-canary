@@ -95,7 +95,7 @@ t.default = (0, s.default)((0, i.default)(function(e) {
     }), (0, a.jsxs)(u.MenuGroup, {
       children: [!eh && (0, a.jsxs)(a.Fragment, {
         children: [w && z, Q, !ev && ea, w && X, w && Z, J]
-      }), $]
+      }), (0, _.default)(n.id) && z, $]
     }), !eh && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(u.MenuGroup, {
         children: o && en
