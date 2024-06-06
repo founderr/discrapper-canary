@@ -421,7 +421,7 @@ let eR = Object.freeze({
       null != l && (0, r.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("39285"), n.e("53466"), n.e("40157")]).then(n.bind(n, "422200"));
+        } = await Promise.all([n.e("99387"), n.e("39285"), n.e("53466"), n.e("78650")]).then(n.bind(n, "422200"));
         return t => (0, s.jsx)(e, {
           ...t,
           channel: l
@@ -654,7 +654,8 @@ let eR = Object.freeze({
   },
   [eN.MessageTypes.VOICE_HANGOUT_INVITE]: void 0,
   [eN.MessageTypes.POLL_RESULT]: C.default,
-  [eN.MessageTypes.CHANGELOG]: void 0
+  [eN.MessageTypes.CHANGELOG]: void 0,
+  [eN.MessageTypes.NITRO_NOTIFICATION]: void 0
 });
 t.default = a.memo(function(e) {
   let {
