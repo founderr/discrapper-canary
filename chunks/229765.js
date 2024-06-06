@@ -39,6 +39,7 @@ function c() {
 }
 async function f(e) {
   var t, n, a;
+  if ("loaded" === r.default.getSearchResult(e).status) return;
   let l = s().v3(JSON.stringify(e)),
     o = r.default.getStaticClans();
   let u = await (t = o, n = l, a = e, new Promise(e => {
