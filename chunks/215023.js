@@ -38,6 +38,10 @@ let d = {
     },
     [u.CollectiblesCategorySkuId.SHY]: {
       addGradient: !1
+    },
+    [u.CollectiblesCategorySkuId.ARCADE]: {
+      logoMaxWidth: "35%",
+      addGradient: !1
     }
   },
   _ = "1225876188074082374",
