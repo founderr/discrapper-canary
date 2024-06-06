@@ -11,71 +11,80 @@ var i = t("120356"),
   n = t("442837"),
   s = t("873706"),
   o = t("481060"),
-  u = t("239091"),
-  d = t("906732"),
-  c = t("1585"),
-  f = t("158776"),
-  m = t("586791"),
-  v = t("998502"),
+  u = t("906732"),
+  d = t("1585"),
+  c = t("158776"),
+  f = t("586791"),
+  m = t("998502"),
+  v = t("445924"),
   p = t("654904"),
   h = t("486324"),
   g = t("783779");
-let S = v.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
+let S = m.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
 function I(e) {
   let {
     user: a,
-    guild: i,
-    displayProfile: v,
-    canUsePremiumCustomization: I,
-    previewAvatar: T,
-    previewAvatarDecoration: A,
-    previewTheme: P,
+    guild: t,
+    displayProfile: i,
+    canUsePremiumCustomization: m,
+    previewAvatar: I,
+    previewAvatarDecoration: T,
+    previewTheme: A,
     previewPrimaryColor: E,
-    className: y,
+    className: P,
     disabledInputs: x,
-    isTryItOutFlow: j,
-    onUpsellClick: U
+    isTryItOutFlow: y,
+    onUpsellClick: N
   } = e, {
-    analyticsLocations: N
-  } = (0, d.default)(), C = (0, n.useStateFromStores)([f.default], () => f.default.getStatus(a.id)), b = null == i || (null == v ? void 0 : v.canUsePremiumProfileCustomization) || I, _ = b ? m.default : s.NitroWheelIcon;
-  return (0, l.jsxs)(o.Clickable, {
-    "aria-disabled": x,
-    onClick: x ? void 0 : e => {
-      if (!b) {
-        null == U || U();
-        return
-      }(0, u.openContextMenuLazy)(e, async () => {
-        let {
-          default: e
-        } = await t.e("34627").then(t.bind(t, "445924"));
-        return () => (0, l.jsx)(e, {
-          changeAvatarAction: () => (0, p.handleOpenSelectImageModal)(h.UploadTypes.AVATAR, null == i ? void 0 : i.id, j),
-          changeDecorationAction: () => {
-            (0, c.openAvatarDecorationModal)({
-              guild: null == i ? void 0 : i,
-              analyticsLocations: N,
-              isTryItOutFlow: j
-            })
-          }
-        })
+    analyticsLocations: j
+  } = (0, u.default)(), C = (0, n.useStateFromStores)([c.default], () => c.default.getStatus(a.id)), U = null == t || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || m, b = (0, l.jsx)(S, {
+    src: I,
+    avatarDecoration: T,
+    imageClassName: r()(P, {
+      [g.overlay]: !x
+    }),
+    size: o.AvatarSizes.SIZE_80,
+    "aria-label": a.username,
+    status: C,
+    statusTooltip: !1,
+    statusBackdropColor: null != E ? (0, o.getStatusBackdropColor)(A) : void 0
+  });
+  return x ? (0, l.jsx)("div", {
+    className: g.avatar,
+    children: b
+  }) : U ? (0, l.jsx)(o.Popout, {
+    renderPopout: e => {
+      let {
+        closePopout: a
+      } = e;
+      return (0, l.jsx)(v.default, {
+        className: g.menu,
+        onClose: a,
+        onChangeAvatar: () => (0, p.handleOpenSelectImageModal)(h.UploadTypes.AVATAR, null == t ? void 0 : t.id, y),
+        onChangeAvatarDecoration: () => {
+          (0, d.openAvatarDecorationModal)({
+            guild: null == t ? void 0 : t,
+            analyticsLocations: j,
+            isTryItOutFlow: y
+          })
+        }
       })
     },
-    className: r()(g.avatar, {
-      [g.clickable]: !x
-    }),
-    children: [(0, l.jsx)(S, {
-      src: T,
-      avatarDecoration: A,
-      imageClassName: r()(y, {
-        [g.overlay]: !x
-      }),
-      size: o.AvatarSizes.SIZE_80,
-      "aria-label": a.username,
-      status: C,
-      statusTooltip: !1,
-      statusBackdropColor: null != E ? (0, o.getStatusBackdropColor)(P) : void 0
-    }), !x && (0, l.jsx)(_, {
+    children: e => (0, l.jsxs)(o.Clickable, {
+      ...e,
+      className: r()(g.avatar, g.clickable),
+      children: [b, (0, l.jsx)(f.default, {
+        className: g.overlayIcon,
+        width: 20,
+        height: 20,
+        color: "white"
+      })]
+    })
+  }) : (0, l.jsxs)(o.Clickable, {
+    onClick: N,
+    className: r()(g.avatar, g.clickable),
+    children: [b, (0, l.jsx)(s.NitroWheelIcon, {
       className: g.overlayIcon,
       width: 20,
       height: 20,
