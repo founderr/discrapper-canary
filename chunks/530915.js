@@ -42,12 +42,12 @@ let x = e => {
     return (0, n.jsxs)("div", {
       className: u()(I.controls, i),
       children: [(0, n.jsx)(m.Button, {
-        look: m.Button.Looks.BLANK,
+        look: m.Button.Looks.FILLED,
+        color: m.Button.Colors.PRIMARY,
         className: c,
         onClick: l,
         "aria-label": h.default.Messages.PAGINATION_PREVIOUS,
         children: (0, n.jsx)(S.default, {
-          className: I.paginationButtonIcon,
           direction: S.default.Directions.LEFT
         })
       }), (0, n.jsx)("div", {
@@ -69,12 +69,12 @@ let x = e => {
           })
         }, "slide-indicator-".concat(e)))
       }), (0, n.jsx)(m.Button, {
-        look: m.Button.Looks.BLANK,
+        look: m.Button.Looks.FILLED,
+        color: m.Button.Colors.PRIMARY,
         className: c,
         onClick: a,
         "aria-label": h.default.Messages.PAGINATION_NEXT,
         children: (0, n.jsx)(S.default, {
-          className: I.paginationButtonIcon,
           direction: S.default.Directions.RIGHT
         })
       })]
@@ -93,7 +93,7 @@ let x = e => {
       delay: E,
       initialPaused: S = !1,
       unidirectional: h = !1
-    } = e, [_, N] = (0, r.useState)(0), [L, b] = (0, r.useState)(!1), [v, R] = (0, r.useState)(!1), A = i().useCallback(() => R(!0), []), P = i().useCallback(() => R(!1), []), O = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), j = null != E && !S && !v && O, y = i().useCallback(e => (t.length + _ + e) % t.length, [t, _]), M = i().useCallback(d()((e, s, n) => {
+    } = e, [_, N] = (0, r.useState)(0), [L, b] = (0, r.useState)(!1), [R, v] = (0, r.useState)(!1), A = i().useCallback(() => v(!0), []), P = i().useCallback(() => v(!1), []), O = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), j = null != E && !S && !R && O, y = i().useCallback(e => (t.length + _ + e) % t.length, [t, _]), M = i().useCallback(d()((e, s, n) => {
       null != n && (null == a || a(t[e], s, e, n)), b("GO_TO_SLIDE" === n), null == l || l(t[e], s, e), N(e)
     }, 500), [t, a, l]);
     return (0, r.useEffect)(() => {
