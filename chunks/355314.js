@@ -1,77 +1,107 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return C
   }
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("442837"),
-  l = n("481060"),
-  u = n("310752"),
-  d = n("594174"),
-  _ = n("424218"),
-  c = n("74538"),
-  E = n("790527"),
-  I = n("474936"),
-  T = n("981631"),
-  f = n("731994"),
-  S = n("689938"),
-  h = n("241614");
+  s = n("442837"),
+  a = n("481060"),
+  o = n("310752"),
+  l = n("174609"),
+  u = n("703656"),
+  d = n("210887"),
+  _ = n("594174"),
+  c = n("626135"),
+  E = n("424218"),
+  I = n("74538"),
+  T = n("104494"),
+  f = n("639119"),
+  S = n("631771"),
+  h = n("790527"),
+  A = n("474936"),
+  m = n("981631"),
+  N = n("731994"),
+  p = n("689938"),
+  O = n("241614");
 
-function A(e) {
+function C(e) {
   let {
     onClose: t,
     ...n
-  } = e, s = (0, o.useStateFromStores)([d.default], () => d.default.getCurrentUser()), A = (0, i.jsx)(u.default, {
-    icons: f.DEFAULT_FILE_UPLOAD_ICONS
-  }), m = S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE, N = r.useMemo(() => {
-    let e = c.default.getUserMaxFileSize(s),
-      t = (0, _.formatSize)(e / 1024, {
+  } = e, C = (0, s.useStateFromStores)([_.default], () => _.default.getCurrentUser()), R = (0, s.useStateFromStores)([d.default], () => d.default.theme), g = (0, f.usePremiumTrialOffer)(), L = (0, T.usePremiumDiscountOffer)(), v = null != g || null != L, {
+    enabled: D
+  } = S.DesktopFileUploadUpsellExperiment.useExperiment({
+    location: "File Upload Roadblock"
+  }, {
+    autoTrackExposure: !v,
+    disable: v
+  }), M = R === m.ThemeTypes.LIGHT ? "light" : "dark", y = D ? (0, i.jsx)("img", {
+    className: O.updatedArt,
+    alt: "File Upload Nitro Perk",
+    src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(M, ".png")
+  }) : (0, i.jsx)(o.default, {
+    icons: N.DEFAULT_FILE_UPLOAD_ICONS
+  }), P = r.useMemo(() => {
+    let e = I.default.getUserMaxFileSize(C),
+      t = (0, E.formatSize)(e / 1024, {
         useKibibytes: !0
       }),
-      n = S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+      n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
         maxSize: t
       });
-    switch (null == s ? void 0 : s.premiumType) {
-      case I.PremiumTypes.TIER_0:
-        n = S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
+    switch (null == C ? void 0 : C.premiumType) {
+      case A.PremiumTypes.TIER_0:
+        n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
           maxSize: t
         });
         break;
-      case I.PremiumTypes.TIER_1:
-        n = S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
+      case A.PremiumTypes.TIER_1:
+        n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
           maxSize: t
         })
     }
     return n
-  }, [s]), p = (0, i.jsxs)("div", {
-    className: h.body,
+  }, [C]), U = D ? p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE, b = D ? (0, i.jsx)("div", {
+    className: O.body,
+    children: (0, i.jsx)(a.Text, {
+      variant: "text-sm/medium",
+      children: U
+    })
+  }) : (0, i.jsxs)("div", {
+    className: O.body,
     children: [(0, i.jsx)("span", {
-      children: N
-    }), (0, i.jsx)(l.Text, {
+      children: P
+    }), (0, i.jsx)(a.Text, {
       variant: "text-md/medium",
-      children: m
+      children: U
     })]
   });
-  return (0, i.jsx)(E.default, {
-    artElement: A,
-    artContainerClassName: a()(h.artContainer),
+  return (0, i.jsx)(h.default, {
+    artElement: y,
+    artContainerClassName: D ? O.updatedArtContainer : O.artContainer,
     enableArtBoxShadow: !1,
-    type: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
-    title: S.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    body: p,
-    context: S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
-      maxSize: S.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
+    type: A.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
+    title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    body: b,
+    context: p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+      maxSize: p.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
     }),
-    glowUp: m,
+    glowUp: U,
     analyticsLocation: {
-      section: T.AnalyticsSections.FILE_UPLOAD_POPOUT
+      section: m.AnalyticsSections.FILE_UPLOAD_POPOUT
     },
     onClose: t,
-    subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
+    subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
+    secondaryCTA: D ? p.default.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
+    onSecondaryClick: D ? function() {
+      (0, l.default)(), t(), c.default.track(m.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+        location_section: m.AnalyticsSections.FILE_UPLOAD_UPSELL_MODAL,
+        location_object: m.AnalyticsObjects.NAVIGATION_LINK
+      }), (0, u.transitionTo)(m.Routes.APPLICATION_STORE)
+    } : void 0,
+    showEnhancedUpsell: D,
     ...n
   })
 }
