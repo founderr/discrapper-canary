@@ -1,7 +1,7 @@
 "use strict";
 t.r(a), t.d(a, {
   default: function() {
-    return A
+    return P
   }
 });
 var l = t("735250");
@@ -23,14 +23,14 @@ var i = t("120356"),
   S = t("826646"),
   I = t("981631"),
   T = t("228168"),
-  P = t("455108");
+  A = t("455108");
 
-function A(e) {
+function P(e) {
   let {
     user: a,
     guild: t,
     canUsePremiumCustomization: i,
-    onUpsellClick: A,
+    onUpsellClick: P,
     pendingBanner: E,
     pendingBio: y,
     pendingPronouns: x,
@@ -39,8 +39,8 @@ function A(e) {
     pendingNickname: N,
     pendingGlobalName: C,
     pendingThemeColors: b,
-    pendingProfileEffectId: _,
-    avatarClassName: w,
+    pendingProfileEffectId: w,
+    avatarClassName: _,
     isTryItOutFlow: M = !1,
     disabledInputs: B = !1,
     hideCustomStatus: R = !1,
@@ -62,11 +62,11 @@ function A(e) {
     avatarOverride: U,
     size: s.AvatarSizes.SIZE_80,
     showPending: !0
-  }), Z = (0, p.getPreviewProfileEffectId)({
-    pendingProfileEffectId: _,
+  }), W = (0, p.getPreviewProfileEffectId)({
+    pendingProfileEffectId: w,
     displayProfile: F
   }), {
-    theme: W,
+    theme: Z,
     primaryColor: H
   } = (0, d.default)({
     user: a,
@@ -79,24 +79,24 @@ function A(e) {
     displayProfile: F,
     profileType: T.UserProfileTypes.BITE_SIZE,
     pendingThemeColors: b,
-    pendingProfileEffectId: Z,
-    className: r()(P.container, {
-      [P.profileEffectPreview]: z
+    pendingProfileEffectId: W,
+    className: r()(A.container, {
+      [A.profileEffectPreview]: z
     }),
     forceShowPremium: i,
     children: [(0, l.jsxs)("header", {
-      className: P.header,
+      className: A.header,
       children: [(0, l.jsx)(g.default, {
         user: a,
         displayProfile: F,
         guildId: null == t ? void 0 : t.id,
         canUsePremiumCustomization: i,
         pendingBanner: E,
-        hasProfileEffect: null != Z,
+        hasProfileEffect: null != W,
         isTryItOutFlow: M,
         disabledInputs: B,
         forProfileEffectModal: z,
-        onUpsellClick: () => null == A ? void 0 : A({
+        onUpsellClick: () => null == P ? void 0 : P({
           object: I.AnalyticsObjects.EDIT_PROFILE_BANNER
         })
       }), (0, l.jsx)(h.default, {
@@ -106,12 +106,12 @@ function A(e) {
         canUsePremiumCustomization: i,
         previewAvatar: D,
         previewAvatarDecoration: G,
-        previewTheme: W,
+        previewTheme: Z,
         previewPrimaryColor: H,
-        className: w,
+        className: _,
         disabledInputs: B,
         isTryItOutFlow: M,
-        onUpsellClick: () => null == A ? void 0 : A({
+        onUpsellClick: () => null == P ? void 0 : P({
           object: I.AnalyticsObjects.AVATAR
         })
       }), !R && (0, l.jsx)(c.UserProfileCustomStatusBubble, {
@@ -130,8 +130,8 @@ function A(e) {
       isTryItOutFlow: M,
       hideBioSection: O,
       hideExampleButton: k
-    }), null != Z && (0, l.jsx)(o.default, {
-      profileEffectId: Z
+    }), null != W && (0, l.jsx)(o.default, {
+      profileEffectId: W
     })]
   })
 }

@@ -23,8 +23,8 @@ var a = n("735250"),
   I = n("126982"),
   _ = n("981631"),
   x = n("302800"),
-  N = n("231338"),
-  P = n("257450");
+  P = n("231338"),
+  N = n("257450");
 
 function A(e) {
   let {
@@ -54,20 +54,20 @@ function A(e) {
       hideConfetti: null != k
     }),
     options: {
-      bodyClassName: P.modalOverrideBody,
-      sliderBodyClassName: P.modalOverrideSliderBody
+      bodyClassName: N.modalOverrideBody,
+      sliderBodyClassName: N.modalOverrideSliderBody
     }
   }], [j, F, k]);
   return (0, a.jsxs)(d.AnalyticsLocationProvider, {
     value: j,
     children: [(0, a.jsx)(i.ConfettiCanvas, {
       ref: D,
-      className: P.confettiCanvas,
+      className: N.confettiCanvas,
       environment: R.current
     }), null != k && (0, a.jsx)("img", {
       src: k.confettiAssetSrc,
-      className: r()(P.customConfetti, {
-        [P.hidden]: !G
+      className: r()(N.customConfetti, {
+        [N.hidden]: !G
       }),
       style: k.style,
       alt: "",
@@ -79,7 +79,7 @@ function A(e) {
       skuIDs: [v],
       isGift: O,
       activeSubscription: null,
-      purchaseType: N.PurchaseTypes.ONE_TIME,
+      purchaseType: P.PurchaseTypes.ONE_TIME,
       children: (0, a.jsx)(u.GiftContextProvider, {
         isGift: O,
         giftRecipient: g,

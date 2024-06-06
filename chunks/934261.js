@@ -20,47 +20,47 @@ var a = l("442837"),
   I = l("594174");
 l("612418");
 var P = l("74538"),
-  v = l("689938"),
-  S = l("951969");
-let _ = e => {
+  S = l("689938"),
+  v = l("951969");
+let x = e => {
     var t;
     let {
       effectIsOwned: l,
       pendingProfileEffectRecord: r,
       product: o,
       purchase: c
-    } = e, d = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), f = (0, a.useStateFromStores)([i.default], () => i.default.getProduct(null == r ? void 0 : r.skuId)), m = (0, a.useStateFromStores)([E.default], () => E.default.locale), h = P.default.canUseCollectibles(d), p = (0, u.isPremiumCollectiblesPurchase)(c), g = (0, u.isPremiumCollectiblesProduct)(o), C = x(!h && p, g, h);
+    } = e, d = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), f = (0, a.useStateFromStores)([i.default], () => i.default.getProduct(null == r ? void 0 : r.skuId)), m = (0, a.useStateFromStores)([E.default], () => E.default.locale), h = P.default.canUseCollectibles(d), p = (0, u.isPremiumCollectiblesPurchase)(c), g = (0, u.isPremiumCollectiblesProduct)(o), C = _(!h && p, g, h);
     return null != r ? (0, s.jsx)("div", {
-      className: l ? S.effectDescriptionNoGradient : S.effectDescriptionBorderWithGradient,
+      className: l ? v.effectDescriptionNoGradient : v.effectDescriptionBorderWithGradient,
       children: (0, s.jsxs)("div", {
-        className: S.effectDescriptionContainer,
+        className: v.effectDescriptionContainer,
         children: [(0, s.jsx)(n.Text, {
           color: "header-primary",
           variant: "text-sm/semibold",
-          className: S.effectName,
+          className: v.effectName,
           children: null !== (t = null == c ? void 0 : c.name) && void 0 !== t ? t : null == f ? void 0 : f.name
         }), (0, s.jsx)(n.Text, {
           color: "text-normal",
           variant: "text-sm/normal",
-          className: S.effectDescription,
+          className: v.effectDescription,
           children: null != c ? c.summary : C
         }), null != c && (0, s.jsxs)(n.Text, {
           variant: "text-xxs/normal",
           color: "text-muted",
-          className: S.effectPurchasedAt,
-          children: [v.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
+          className: v.effectPurchasedAt,
+          children: [S.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
             date: c.purchasedAt.toLocaleDateString(m, {
               month: "long",
               year: "numeric"
             })
           }), p && (0, s.jsxs)(s.Fragment, {
-            children: [(0, s.jsx)("br", {}), v.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
+            children: [(0, s.jsx)("br", {}), S.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
           })]
         })]
       })
     }) : null
   },
-  x = (e, t, l) => e ? v.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && l ? v.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !l ? v.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : v.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM;
+  _ = (e, t, l) => e ? S.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && l ? S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !l ? S.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : S.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM;
 t.default = e => {
   var t;
   let {
@@ -71,8 +71,8 @@ t.default = e => {
     purchase: E,
     guild: I
   } = e, {
-    pendingGlobalName: v,
-    pendingNickname: x,
+    pendingGlobalName: S,
+    pendingNickname: _,
     pendingPronouns: A,
     pendingBio: N,
     pendingBanner: R,
@@ -88,8 +88,8 @@ t.default = e => {
   })), U = P.default.isPremium(l), L = (0, h.default)(l.id), F = !!(null == L ? void 0 : L.getPreviewBio(N).value), b = p.UseLegacyChatInput.useSetting() && null != N ? d.default.parse(void 0, N).content : N, y = P.default.canUsePremiumProfileCustomization(l), w = (null == L ? void 0 : L.canUsePremiumProfileCustomization) || y, D = {
     user: l,
     guild: I,
-    pendingGlobalName: v,
-    pendingNickname: x,
+    pendingGlobalName: S,
+    pendingNickname: _,
     pendingPronouns: A,
     pendingBio: b,
     pendingBanner: R,
@@ -106,7 +106,7 @@ t.default = e => {
     onBannerChange: m.setPendingBanner
   };
   return (0, s.jsxs)("div", {
-    className: w ? S.previewContainerWithTheme : S.previewContainerWithoutTheme,
+    className: w ? v.previewContainerWithTheme : v.previewContainerWithoutTheme,
     children: [(0, s.jsx)(f.default, {
       ...D,
       location: "ProfileEffectPreview",
@@ -114,7 +114,7 @@ t.default = e => {
       forProfileEffectModal: !0,
       hideCustomStatus: !0,
       hideRecentGames: !0
-    }), !1, (0, s.jsx)(_, {
+    }), !1, (0, s.jsx)(x, {
       effectIsOwned: i,
       pendingProfileEffectRecord: n,
       product: u,

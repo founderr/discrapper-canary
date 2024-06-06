@@ -55,10 +55,10 @@ function _(e) {
     giftMessageError: T,
     isSendingMessage: m
   } = (0, S.useGiftContext)(), _ = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), x = l.useRef(null), {
-    selectedSkuId: N
-  } = (0, C.usePaymentContext)(), P = (0, i.useStateFromStores)([d.default], () => d.default.getProduct(N)), {
+    selectedSkuId: P
+  } = (0, C.usePaymentContext)(), N = (0, i.useStateFromStores)([d.default], () => d.default.getProduct(P)), {
     confettiColors: A
-  } = (0, u.default)(null == P ? void 0 : P.styles);
+  } = (0, u.default)(null == N ? void 0 : N.styles);
   return t ? (0, a.jsxs)("div", {
     ref: x,
     children: [(0, a.jsx)(p.default, {
@@ -72,7 +72,7 @@ function _(e) {
     }), !e.hideConfetti && !_ && (0, a.jsx)(c.default, {
       confettiTarget: x.current,
       confettiCanvas: e.confettiCanvas,
-      sprites: (0, E.getConfettiSprites)(null == P ? void 0 : P.categorySkuId),
+      sprites: (0, E.getConfettiSprites)(null == N ? void 0 : N.categorySkuId),
       colors: null == A ? void 0 : A.map(e => e.toHexString())
     })]
   }) : (0, a.jsx)(I, {

@@ -27,7 +27,7 @@ function S(e) {
     onComplete: T,
     analyticsLocations: m,
     analyticsObject: I
-  } = e, _ = !1, x = (0, l.v4)(), N = e => {
+  } = e, _ = !1, x = (0, l.v4)(), P = e => {
     t = e
   };
   (0, s.openModalLazy)(async () => e => {
@@ -50,7 +50,7 @@ function S(e) {
         _ = !0, null == T || T()
       },
       returnRef: l,
-      onStepChange: N
+      onStepChange: P
     })
   }, {
     modalKey: E,

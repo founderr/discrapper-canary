@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s("47120"), s("411104");
-var a = s("735250"),
-  i = s("470079"),
+var i = s("735250"),
+  a = s("470079"),
   l = s("120356"),
   n = s.n(l),
   r = s("979554"),
@@ -26,9 +26,9 @@ var a = s("735250"),
   _ = s("283595"),
   y = s("594174"),
   N = s("509545"),
-  M = s("55563"),
-  O = s("366695"),
-  b = s("153124"),
+  b = s("55563"),
+  M = s("366695"),
+  O = s("153124"),
   G = s("626135"),
   j = s("176354"),
   F = s("669079"),
@@ -36,8 +36,8 @@ var a = s("735250"),
   P = s("51144"),
   D = s("902653"),
   k = s("479446"),
-  U = s("715627"),
-  w = s("981632"),
+  w = s("715627"),
+  U = s("981632"),
   H = s("474936"),
   B = s("981631"),
   z = s("689938"),
@@ -58,8 +58,8 @@ let q = e => {
       openedGift: t
     } = e, {
       createMultipleConfettiAt: s
-    } = i.useContext(E.ConfettiCannonContext);
-    return i.useEffect(() => {
+    } = a.useContext(E.ConfettiCannonContext);
+    return a.useEffect(() => {
       t && s(window.innerWidth / 2, window.innerHeight / 4)
     }, [s, t]), null
   },
@@ -68,26 +68,26 @@ let q = e => {
       step: t,
       soundId: s
     } = e;
-    return i.useEffect(() => {
+    return a.useEffect(() => {
       var e;
       if (t !== B.GiftCodeModalStates.CONFIRM) return;
-      let a = A.default.getSoundById(s);
-      (0, D.playGiftSound)(s, null !== (e = null == a ? void 0 : a.volume) && void 0 !== e ? e : 1)
+      let i = A.default.getSoundById(s);
+      (0, D.playGiftSound)(s, null !== (e = null == i ? void 0 : i.volume) && void 0 !== e ? e : 1)
     }, [t, s]), null
   };
-class K extends i.Component {
+class K extends a.Component {
   componentDidMount() {
     let {
       application: e,
       sku: t,
       customGiftMessage: s,
-      giftCode: a,
-      emojiName: i
+      giftCode: i,
+      emojiName: a
     } = this.props;
     null == e && null != t && g.default.fetchApplication(t.applicationId);
-    let l = null != s || null != a.giftStyle,
-      n = (0, C.isCollectiblesGiftCode)(a),
-      r = null != i ? j.default.getURL(i) : void 0;
+    let l = null != s || null != i.giftStyle,
+      n = (0, C.isCollectiblesGiftCode)(i),
+      r = null != a ? j.default.getURL(a) : void 0;
     this.setState({
       isCustomGift: l,
       isCollectiblesGift: n,
@@ -101,12 +101,12 @@ class K extends i.Component {
       accepting: t,
       giftCode: s
     } = this.props, {
-      error: a,
-      accepted: i,
+      error: i,
+      accepted: a,
       opened: l,
       isCustomGift: n
     } = this.state;
-    return (0, F.getStep)(e, s, a, i, t, l, n)
+    return (0, F.getStep)(e, s, i, a, t, l, n)
   }
   get buttonText() {
     return (0, F.getButtonText)(this.step, this.props.giftCode, this.state.isCustomGift)
@@ -117,8 +117,8 @@ class K extends i.Component {
       opened: t,
       accepted: s
     } = this.state, {
-      giftCode: a,
-      subscriptionPlan: i,
+      giftCode: i,
+      subscriptionPlan: a,
       collectiblesItemType: l
     } = this.props;
     if (e && this.step === B.GiftCodeModalStates.ERROR) return z.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
@@ -127,7 +127,7 @@ class K extends i.Component {
         recipientDisplayName: P.default.getName(y.default.getCurrentUser())
       });
       {
-        let e = y.default.getUser(a.userId),
+        let e = y.default.getUser(i.userId),
           t = P.default.getName(e);
         return l === r.CollectiblesItemType.AVATAR_DECORATION ? z.default.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_DECORATION.format({
           sender: t
@@ -135,7 +135,7 @@ class K extends i.Component {
           sender: t
         }) : z.default.Messages.GIFT_SUBSCRIPTION_INFO.format({
           sender: t,
-          timeInterval: (null == i ? void 0 : i.interval) === H.SubscriptionIntervalTypes.MONTH ? z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH : z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+          timeInterval: (null == a ? void 0 : a.interval) === H.SubscriptionIntervalTypes.MONTH ? z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH : z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
         })
       }
     }
@@ -153,11 +153,11 @@ class K extends i.Component {
       sku: e,
       accepting: t,
       libraryApplication: s,
-      subscriptionPlan: a
+      subscriptionPlan: i
     } = this.props;
     if (null == e) return null;
     let {
-      error: i,
+      error: a,
       accepted: l,
       isCustomGift: n,
       opened: r
@@ -166,11 +166,11 @@ class K extends i.Component {
       step: this.step,
       sku: e,
       libraryApplication: s,
-      error: i,
+      error: a,
       accepted: l,
       accepting: t,
       onGoToLibrary: this.handleGoToLibrary,
-      subscriptionPlan: a
+      subscriptionPlan: i
     })
   }
   get errorMessage() {
@@ -179,9 +179,9 @@ class K extends i.Component {
       accepting: t
     } = this.props, {
       error: s,
-      accepted: a
+      accepted: i
     } = this.state;
-    return (0, F.getErrorMessage)(e, s, a, t, this.handleGoToLibrary)
+    return (0, F.getErrorMessage)(e, s, i, t, this.handleGoToLibrary)
   }
   get handleClick() {
     let {
@@ -206,18 +206,18 @@ class K extends i.Component {
       giftCode: e,
       customGiftMessage: t,
       emojiName: s,
-      soundId: a
+      soundId: i
     } = this.props, {
-      isCustomGift: i
+      isCustomGift: a
     } = this.state;
     G.default.track(B.AnalyticEvents.GIFT_ACCEPT_STEP, {
       to_step: this.step,
-      has_custom_message: i,
-      is_custom_message_edited: i && t !== z.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE,
+      has_custom_message: a,
+      is_custom_message_edited: a && t !== z.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE,
       gift_style: e.giftStyle,
       gift_code: e.code,
       emoji_name: s,
-      sound_id: a
+      sound_id: i
     })
   }
   render() {
@@ -225,7 +225,7 @@ class K extends i.Component {
       application: e,
       accepting: t,
       onClose: s,
-      giftCode: i,
+      giftCode: a,
       headerId: l,
       transitionState: r,
       useReducedMotion: o,
@@ -234,91 +234,91 @@ class K extends i.Component {
       emojiName: f,
       soundId: p,
       isThemeDark: h
-    } = this.props, m = y.default.getUser(i.userId), {
+    } = this.props, m = y.default.getUser(a.userId), {
       isCustomGift: g,
       isCollectiblesGift: S,
       accepted: C,
       opened: I,
       emojiURL: v
-    } = this.state, E = y.default.getCurrentUser(), x = this.step === B.GiftCodeModalStates.ERROR, A = (null == i ? void 0 : i.userId) != null && null != E && (null == E ? void 0 : E.id) != null && i.userId === E.id;
+    } = this.state, E = y.default.getCurrentUser(), x = this.step === B.GiftCodeModalStates.ERROR, A = (null == a ? void 0 : a.userId) != null && null != E && (null == E ? void 0 : E.id) != null && a.userId === E.id;
     switch (this.step) {
       case B.GiftCodeModalStates.ERROR:
-        null == d || d(i, !1);
+        null == d || d(a, !1);
         break;
       case B.GiftCodeModalStates.SUCCESS:
-        null == d || d(i, !0)
+        null == d || d(a, !0)
     }
-    return (0, a.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       ref: this.modalRef,
-      children: [(0, a.jsxs)(u.ModalRoot, {
+      children: [(0, i.jsxs)(u.ModalRoot, {
         transitionState: r,
         size: u.ModalSize.SMALL,
         className: V.modal,
         "aria-labelledby": l,
-        children: [null != i.giftStyle && !g && !S && (0, a.jsx)(w.default, {
+        children: [null != a.giftStyle && !g && !S && (0, i.jsx)(U.default, {
           defaultAnimationState: this.getDefaultAnimationStatus(),
           idleAnimationState: this.getIdleAnimationStatus(),
-          giftStyle: i.giftStyle,
+          giftStyle: a.giftStyle,
           className: V.seasonalGiftIcon
-        }), (0, a.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: g ? void 0 : V.backSplash
-        }), (0, a.jsxs)(u.ModalContent, {
+        }), (0, i.jsxs)(u.ModalContent, {
           className: n()({
             [V.content]: !g,
             [V.contentCustomGift]: g
           }),
-          children: [!S && (0, a.jsx)(u.ModalCloseButton, {
+          children: [!S && (0, i.jsx)(u.ModalCloseButton, {
             onClick: s,
             className: V.closeButton
-          }), !S && (null == i.giftStyle || g && C) && (0, a.jsx)(O.default, {
-            size: O.default.Sizes.LARGE,
+          }), !S && (null == a.giftStyle || g && C) && (0, i.jsx)(M.default, {
+            size: M.default.Sizes.LARGE,
             game: e,
-            skuId: i.skuId
-          }), x && (0, a.jsx)("img", {
+            skuId: a.skuId
+          }), x && (0, i.jsx)("img", {
             alt: "",
             src: h ? Y : W
-          }), (0, a.jsxs)(u.Heading, {
+          }), (0, i.jsxs)(u.Heading, {
             id: l,
             className: n()({
               [V.customGiftHeader]: g && !C,
               [V.header]: !g || C
             }),
             variant: "heading-sm/semibold",
-            children: [(0, a.jsx)("div", {
+            children: [(0, i.jsx)("div", {
               className: n()({
                 [V.customGiftHeaderText]: g
               }),
               children: this.firstHeaderText
-            }), (0, a.jsx)("div", {
+            }), (0, i.jsx)("div", {
               children: this.secondHeaderText
             })]
-          }), !(g && !C) && (0, a.jsx)(u.Text, {
+          }), !(g && !C) && (0, i.jsx)(u.Text, {
             className: V.body,
             variant: "text-sm/normal",
             children: this.bodyText
-          }), g && !S && null != i.giftStyle && !C && (0, a.jsx)(w.default, {
+          }), g && !S && null != a.giftStyle && !C && (0, i.jsx)(U.default, {
             defaultAnimationState: this.getDefaultAnimationStatus(),
             idleAnimationState: this.getIdleAnimationStatus(),
             className: V.giftAnimation,
-            giftStyle: i.giftStyle
-          }), this.state.opened && !x && (0, a.jsx)(T.default, {
-            giftCode: i
-          }), x && (0, a.jsx)(u.Text, {
+            giftStyle: a.giftStyle
+          }), this.state.opened && !x && (0, i.jsx)(T.default, {
+            giftCode: a
+          }), x && (0, i.jsx)(u.Text, {
             className: V.body,
             variant: "text-md/normal",
             children: this.errorMessage
-          }), g && this.state.opened && !this.state.accepted && !x && null != c && "" !== c && !A && (0, a.jsxs)(a.Fragment, {
-            children: [(0, a.jsx)(u.FormTitle, {
+          }), g && this.state.opened && !this.state.accepted && !x && null != c && "" !== c && !A && (0, i.jsxs)(i.Fragment, {
+            children: [(0, i.jsx)(u.FormTitle, {
               children: z.default.Messages.GIFT_SENDER_INFO.format({
                 sender: P.default.getName(m)
               })
-            }), (0, a.jsx)(u.Heading, {
+            }), (0, i.jsx)(u.Heading, {
               id: l,
               className: V.customMessage,
               variant: "heading-sm/bold",
               children: c
             })]
-          }), (0, a.jsx)(u.Button, {
+          }), (0, i.jsx)(u.Button, {
             submitting: t,
             onClick: () => {
               this.trackStepAnalytics(), this.handleClick()
@@ -326,14 +326,14 @@ class K extends i.Component {
             children: this.buttonText
           })]
         })]
-      }), null != i.giftStyle && !o && this.step !== B.GiftCodeModalStates.ERROR && (0, a.jsx)(a.Fragment, {
-        children: !C && !t && I && (null == f || null == v ? (0, a.jsx)(q, {
+      }), null != a.giftStyle && !o && this.step !== B.GiftCodeModalStates.ERROR && (0, i.jsx)(i.Fragment, {
+        children: !C && !t && I && (null == f || null == v ? (0, i.jsx)(q, {
           openedGift: I && !C && !t
-        }) : (0, a.jsx)(U.default, {
+        }) : (0, i.jsx)(w.default, {
           confettiTarget: this.modalRef.current,
           emojiURL: v
         }))
-      }), !C && !t && I && null != p && (0, a.jsx)(J, {
+      }), !C && !t && I && null != p && (0, i.jsx)(J, {
         soundId: p,
         step: this.step
       })]
@@ -348,7 +348,7 @@ class K extends i.Component {
       isCollectiblesGift: !1,
       step: void 0,
       emojiURL: void 0
-    }), Z(this, "modalRef", i.createRef()), Z(this, "handleOpen", () => {
+    }), Z(this, "modalRef", a.createRef()), Z(this, "handleOpen", () => {
       this.setState({
         opened: !0
       })
@@ -391,35 +391,35 @@ class K extends i.Component {
     })
   }
 }
-let Q = o.default.connectStores([_.default, M.default, S.default, R.default, N.default, p.default], e => {
+let Q = o.default.connectStores([_.default, b.default, S.default, R.default, N.default, p.default], e => {
   let {
     giftCode: t
-  } = e, s = M.default.get(t.skuId), a = null != s ? S.default.getApplication(s.applicationId) : null, i = p.default.useReducedMotion;
+  } = e, s = b.default.get(t.skuId), i = null != s ? S.default.getApplication(s.applicationId) : null, a = p.default.useReducedMotion;
   return {
     sku: s,
     libraryApplication: null != s && (null == t ? void 0 : t.entitlementBranches) != null ? (0, F.firstLibraryApplicationForGiftCode)(t.entitlementBranches, s, _.default) : null,
-    application: a,
+    application: i,
     subscriptionPlan: null != t.subscriptionPlanId ? (0, L.getOrFetchSubscriptionPlan)(t.subscriptionPlanId) : null,
     accepting: R.default.getIsAccepting(t.code),
-    useReducedMotion: i
+    useReducedMotion: a
   }
 })(K);
 t.default = e => {
   var t;
   let {
     channelContext: s,
-    code: i,
+    code: a,
     customGiftMessage: l,
     emojiName: n,
     soundId: r,
     onClose: u,
     ...c
-  } = e, p = (0, b.useUID)(), g = (0, o.useStateFromStores)([R.default], () => R.default.get(i)), S = (0, f.default)(), {
+  } = e, p = (0, O.useUID)(), g = (0, o.useStateFromStores)([R.default], () => R.default.get(a)), S = (0, f.default)(), {
     analyticsLocations: C
   } = (0, m.default)(h.default.GIFT_CODE_MODAL), {
     product: T
   } = (0, I.useFetchCollectiblesProduct)(null == g ? void 0 : g.skuId);
-  return null == g ? null : (0, a.jsx)(Q, {
+  return null == g ? null : (0, i.jsx)(Q, {
     ...c,
     customGiftMessage: l,
     channelContext: s,

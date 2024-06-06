@@ -28,16 +28,16 @@ function S(e) {
     displayProfile: S,
     guild: I,
     pendingAvatar: T,
-    pendingNickname: P,
-    pendingGlobalName: A,
+    pendingNickname: A,
+    pendingGlobalName: P,
     pendingBio: E,
     pendingPronouns: y,
     isTryItOutFlow: x,
     hideBioSection: U,
     hideExampleButton: j
-  } = e, N = (0, i.useStateFromStores)([f.default], () => null == I ? null : f.default.getMember(I.id, t.id)), C = (0, i.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), b = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), _ = null == S ? void 0 : null === (a = S.getPreviewBio(E)) || void 0 === a ? void 0 : a.value, w = null != y ? y : null == S ? void 0 : S.pronouns, M = (0, v.getPreviewName)({
-    pendingNickname: P,
-    pendingGlobalName: A,
+  } = e, N = (0, i.useStateFromStores)([f.default], () => null == I ? null : f.default.getMember(I.id, t.id)), C = (0, i.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), b = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), w = null == S ? void 0 : null === (a = S.getPreviewBio(E)) || void 0 === a ? void 0 : a.value, _ = null != y ? y : null == S ? void 0 : S.pronouns, M = (0, v.getPreviewName)({
+    pendingNickname: A,
+    pendingGlobalName: P,
     user: t,
     guildMember: N
   });
@@ -56,7 +56,7 @@ function S(e) {
         }
       })(),
       nickname: M,
-      pronouns: w,
+      pronouns: _,
       isTryItOut: x,
       tags: (0, l.jsx)(s.default, {
         displayProfile: S,
@@ -65,9 +65,9 @@ function S(e) {
     }), b && (0, l.jsx)(n.default, {
       userId: t.id,
       inline: !1
-    }), !U && null != _ && "" !== _ && (0, l.jsx)(c.default, {
+    }), !U && null != w && "" !== w && (0, l.jsx)(c.default, {
       user: t,
-      bio: _,
+      bio: w,
       hidePersonalInformation: C,
       disableViewFullBio: !0
     }), !j && (0, l.jsx)(u.default, {

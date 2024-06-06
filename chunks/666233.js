@@ -10,8 +10,8 @@ var l = s("442837"),
   o = s("186078"),
   d = s("73880"),
   c = s("196345"),
-  E = s("707592"),
-  I = s("689938");
+  I = s("707592"),
+  E = s("689938");
 t.default = function(e) {
   let {
     formFields: t,
@@ -21,7 +21,7 @@ t.default = function(e) {
   return null == (0, l.useStateFromStores)([i.default], () => null != s ? s : i.default.getCurrentUser()) ? null : (0, a.jsxs)(a.Fragment, {
     children: [T && (0, a.jsx)(u.RequirementRenderer, {
       icon: n.default,
-      text: I.default.Messages.MEMBER_VERIFICATION_FORM_PASSED_REQUIREMENTS,
+      text: E.default.Messages.MEMBER_VERIFICATION_FORM_PASSED_REQUIREMENTS,
       meetsRequirement: !0
     }), t.map((e, t) => (function(e, t) {
       switch (e.field_type) {
@@ -30,7 +30,7 @@ t.default = function(e) {
             formField: e
           }, t);
         case r.VerificationFormFieldTypes.TEXT_INPUT:
-          return (0, a.jsx)(E.DisabledTextInputFormField, {
+          return (0, a.jsx)(I.DisabledTextInputFormField, {
             formField: e
           }, t);
         case r.VerificationFormFieldTypes.PARAGRAPH:

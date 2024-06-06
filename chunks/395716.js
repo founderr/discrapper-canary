@@ -16,11 +16,11 @@ var a = s("735250"),
 function c(e) {
   let {
     joinRequest: t
-  } = e, [s, c] = l.useState(!1), E = (0, i.useStateFromStores)([u.default], () => u.default.getChannel(t.interviewChannelId)), I = l.useCallback(() => {
+  } = e, [s, c] = l.useState(!1), I = (0, i.useStateFromStores)([u.default], () => u.default.getChannel(t.interviewChannelId)), E = l.useCallback(() => {
     (0, n.showToast)((0, n.createToast)(d.default.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE))
   }, []), T = l.useCallback(async () => {
-    if (null != E) {
-      r.default.selectPrivateChannel(E.id);
+    if (null != I) {
+      r.default.selectPrivateChannel(I.id);
       return
     }
     if (!s) {
@@ -28,12 +28,12 @@ function c(e) {
       try {
         await o.default.createOrEnterJoinRequestInterview(t.joinRequestId)
       } catch {
-        I()
+        E()
       } finally {
         c(!1)
       }
     }
-  }, [E, t.joinRequestId, I, s]);
+  }, [I, t.joinRequestId, E, s]);
   return (0, a.jsx)(n.Button, {
     color: n.Button.Colors.BRAND,
     submitting: s,

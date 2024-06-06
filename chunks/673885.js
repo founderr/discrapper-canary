@@ -14,8 +14,8 @@ var l = s("120356"),
   o = s("768581"),
   d = s("51144"),
   c = s("981631"),
-  E = s("689938"),
-  I = s("313602");
+  I = s("689938"),
+  E = s("313602");
 
 function T(e) {
   let {
@@ -25,12 +25,12 @@ function T(e) {
   } = e, {
     username: T
   } = t, f = o.default.getUserAvatarURL(t), {
-    analyticsLocations: R
-  } = (0, r.default)(), _ = () => {
+    analyticsLocations: _
+  } = (0, r.default)(), R = () => {
     (0, u.openUserProfileModal)({
       userId: t.id,
       guildId: s,
-      sourceAnalyticsLocations: R,
+      sourceAnalyticsLocations: _,
       analyticsLocation: {
         section: c.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
         object: c.AnalyticsObjects.JOIN_REQUEST
@@ -38,24 +38,24 @@ function T(e) {
     })
   };
   return (0, a.jsxs)("div", {
-    className: i()(I.container, l),
+    className: i()(E.container, l),
     children: [(0, a.jsx)(n.Anchor, {
-      onClick: _,
+      onClick: R,
       children: (0, a.jsx)(n.Avatar, {
         src: f,
         size: n.AvatarSizes.SIZE_80,
         "aria-label": T,
-        className: I.avatar
+        className: E.avatar
       })
     }), (0, a.jsx)("div", {
-      className: I.username,
+      className: E.username,
       children: (0, a.jsx)(n.Heading, {
         variant: "heading-lg/semibold",
         children: d.default.getFormattedName(t)
       })
     }), (0, a.jsx)(n.Anchor, {
-      onClick: _,
-      children: E.default.Messages.VIEW_PROFILE
+      onClick: R,
+      children: I.default.Messages.VIEW_PROFILE
     })]
   })
 }

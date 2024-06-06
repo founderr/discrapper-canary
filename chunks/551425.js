@@ -1,8 +1,8 @@
 "use strict";
 s.r(t);
-var a = s("735250");
+var i = s("735250");
 s("470079");
-var i = s("979554"),
+var a = s("979554"),
   l = s("442837"),
   n = s("481060"),
   r = s("1585"),
@@ -17,7 +17,7 @@ let p = n.AvatarSizes.SIZE_152,
     let {
       item: t
     } = e, s = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
-      avatarDecorationSrc: i,
+      avatarDecorationSrc: a,
       avatarPlaceholderSrc: r,
       eventHandlers: d
     } = (0, o.default)({
@@ -25,13 +25,13 @@ let p = n.AvatarSizes.SIZE_152,
       avatarDecorationOverride: t,
       size: h
     });
-    return (0, a.jsx)("div", {
+    return (0, i.jsx)("div", {
       className: f.avatarDecorationPreview,
-      children: (0, a.jsx)(n.Avatar, {
+      children: (0, i.jsx)(n.Avatar, {
         ...d,
         "aria-label": t.label,
         src: r,
-        avatarDecoration: i,
+        avatarDecoration: a,
         size: p
       })
     })
@@ -40,9 +40,9 @@ let p = n.AvatarSizes.SIZE_152,
     let {
       item: t
     } = e;
-    return (0, a.jsx)("div", {
+    return (0, i.jsx)("div", {
       className: f.profileEffectPreview,
-      children: (0, a.jsx)(d.default, {
+      children: (0, i.jsx)(d.default, {
         isHovering: !0,
         profileEffectId: null == t ? void 0 : t.id
       })
@@ -52,10 +52,10 @@ t.default = e => {
   let {
     giftCode: t
   } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getProduct(t.skuId)), n = null == s ? void 0 : s.items[0];
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(null == n ? void 0 : n.type) === i.CollectiblesItemType.AVATAR_DECORATION && (0, a.jsx)(m, {
+  return (0, i.jsxs)(i.Fragment, {
+    children: [(null == n ? void 0 : n.type) === a.CollectiblesItemType.AVATAR_DECORATION && (0, i.jsx)(m, {
       item: n
-    }), (null == n ? void 0 : n.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(g, {
+    }), (null == n ? void 0 : n.type) === a.CollectiblesItemType.PROFILE_EFFECT && (0, i.jsx)(g, {
       item: n
     })]
   })

@@ -24,7 +24,7 @@ var l = n("442837"),
   I = n("170754");
 let _ = {
   key: C.Step.GIFT_CUSTOMIZATION,
-  renderStep: e => (0, a.jsx)(N, {
+  renderStep: e => (0, a.jsx)(P, {
     ...e
   }),
   options: {
@@ -55,7 +55,7 @@ function x(e) {
   })
 }
 
-function N(e) {
+function P(e) {
   let {
     handleStepChange: t,
     handleClose: n
@@ -63,8 +63,8 @@ function N(e) {
     customGiftMessage: u = "",
     setCustomGiftMessage: C,
     giftRecipientError: _,
-    validatingGiftRecipient: N,
-    giftRecipient: P
+    validatingGiftRecipient: P,
+    giftRecipient: N
   } = (0, E.useGiftContext)(), {
     selectedSkuId: A,
     selectedSkuPricePreview: h
@@ -105,8 +105,8 @@ function N(e) {
         children: (0, a.jsx)(x, {
           onStepChange: t,
           onBackClick: n,
-          disabled: null != _ || null == P || P.id === (null == v ? void 0 : v.id) || u.length > T.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
-          loading: N
+          disabled: null != _ || null == N || N.id === (null == v ? void 0 : v.id) || u.length > T.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
+          loading: P
         })
       })
     })]
