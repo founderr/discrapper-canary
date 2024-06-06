@@ -1,7 +1,7 @@
 "use strict";
 a.r(s), a.d(s, {
   default: function() {
-    return O
+    return U
   }
 }), a("47120");
 var t = a("735250"),
@@ -12,104 +12,109 @@ var t = a("735250"),
   _ = a.n(r),
   u = a("866442"),
   d = a("692547"),
-  i = a("481060"),
-  L = a("893776"),
-  T = a("232567"),
-  M = a("820160"),
-  c = a("594174"),
-  C = a("259580"),
-  o = a("93879"),
-  A = a("632184"),
-  f = a("350566"),
-  I = a("837748"),
-  R = a("971401"),
-  S = a("306453"),
-  m = a("981631"),
-  D = a("689938"),
-  N = a("273459");
+  L = a("481060"),
+  i = a("893776"),
+  T = a("37234"),
+  M = a("232567"),
+  c = a("820160"),
+  C = a("594174"),
+  o = a("259580"),
+  A = a("93879"),
+  f = a("632184"),
+  I = a("350566"),
+  R = a("837748"),
+  S = a("971401"),
+  m = a("306453"),
+  D = a("981631"),
+  N = a("689938"),
+  O = a("273459");
 
-function O(e) {
+function U(e) {
   let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     [a, n] = l.useState(""),
     [E, r] = l.useState(null),
     [_, u] = l.useState(null),
-    d = (0, I.default)(e.code);
+    d = (0, R.default)(e.code);
   l.useEffect(() => {
     (async function e() {
-      let e = c.default.getCurrentUser();
+      let e = C.default.getCurrentUser();
       if (null == e) try {
-        e = await (0, T.fetchCurrentUser)()
+        e = await (0, M.fetchCurrentUser)()
       } catch (e) {
-        L.default.verifySSOToken(null)
+        i.default.verifySSOToken(null)
       }
       null != e && n(d.defaultName.format({
         username: e.username
       }))
     })()
   }, [d.defaultName]);
-  (0, R.default)(e);
-  let C = (0, t.jsxs)(t.Fragment, {
-      children: [s ? (0, t.jsx)(S.default, {
+  (0, S.default)(e);
+  let o = (0, t.jsxs)(t.Fragment, {
+      children: [s ? (0, t.jsx)(m.default, {
         guildTemplate: e
       }) : null, (0, t.jsx)("div", {
-        className: N.icon,
-        children: (0, t.jsx)(M.default, {
+        className: O.icon,
+        children: (0, t.jsx)(c.default, {
           icon: E,
           onChange: r
         })
-      }), (0, t.jsx)(i.FormItem, {
+      }), (0, t.jsx)(L.FormItem, {
         title: d.nameLabel,
-        children: (0, t.jsx)(i.TextInput, {
+        children: (0, t.jsx)(L.TextInput, {
           type: "text",
           value: a,
           maxLength: 100,
           onChange: n,
           error: null == _ ? void 0 : _.name
         })
-      }), (0, t.jsx)(i.Text, {
+      }), (0, t.jsx)(L.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        className: N.guidelines,
+        className: O.guidelines,
         children: d.terms.format({
-          guidelinesURL: m.MarketingURLs.GUIDELINES
+          guidelinesURL: D.MarketingURLs.GUIDELINES
         })
       })]
     }),
-    o = e.serializedSourceGuild.roles.filter(e => "@everyone" !== e.name);
+    A = e.serializedSourceGuild.roles.filter(e => "@everyone" !== e.name);
   return {
-    form: C,
+    form: o,
     preview: (0, t.jsxs)(t.Fragment, {
       children: [(0, t.jsx)("div", {
-        className: N.divider
-      }), (0, t.jsxs)(i.FormItem, {
-        className: N.previewSection,
-        title: D.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
-        children: [(0, t.jsx)(U, {
+        className: O.divider
+      }), (0, t.jsxs)(L.FormItem, {
+        className: O.previewSection,
+        title: N.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
+        children: [(0, t.jsx)(g, {
           channels: e.serializedSourceGuild.channels
-        }), (0, t.jsxs)(i.Text, {
+        }), (0, t.jsxs)(L.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          className: N.protip,
+          className: O.protip,
           children: [(0, t.jsxs)("span", {
-            className: N.protipText,
-            children: [D.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
-          }), " ", D.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_TIP]
+            className: O.protipText,
+            children: [N.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
+          }), " ", N.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_TIP]
         })]
-      }), o.length > 0 ? (0, t.jsx)(t.Fragment, {
-        children: (0, t.jsx)(i.FormItem, {
-          className: N.previewSection,
-          title: D.default.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
-          children: (0, t.jsx)(g, {
-            roles: o
+      }), A.length > 0 ? (0, t.jsx)(t.Fragment, {
+        children: (0, t.jsx)(L.FormItem, {
+          className: O.previewSection,
+          title: N.default.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
+          children: (0, t.jsx)(p, {
+            roles: A
           })
         })
       }) : null]
     }),
-    handleSubmit: () => f.default.acceptGuildTemplate(e.code, a, E).catch(e => u(e))
+    handleSubmit: () => {
+      I.default.acceptGuildTemplate(e.code, a, E).then(() => {
+        (0, L.closeAllModals)(), (0, T.popAllLayers)()
+      }).catch(e => u(e))
+    }
   }
 }
 
-function U(e) {
+function g(e) {
   let {
     channels: s
   } = e, a = _()(s).sortBy(e => null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id).map(e => {
@@ -117,55 +122,55 @@ function U(e) {
       let {
         type: s
       } = e;
-      return s === m.ChannelTypes.GUILD_VOICE ? A.default : s === m.ChannelTypes.GUILD_CATEGORY ? C.default : o.default
+      return s === D.ChannelTypes.GUILD_VOICE ? f.default : s === D.ChannelTypes.GUILD_CATEGORY ? o.default : A.default
     }(e);
     return (0, t.jsxs)("div", {
-      className: E()(N.channel, {
-        [N.category]: e.type === m.ChannelTypes.GUILD_CATEGORY
+      className: E()(O.channel, {
+        [O.category]: e.type === D.ChannelTypes.GUILD_CATEGORY
       }),
       children: [(0, t.jsx)(s, {
-        className: N.channelIcon
-      }), (0, t.jsx)(i.Text, {
-        className: N.channelText,
+        className: O.channelIcon
+      }), (0, t.jsx)(L.Text, {
+        className: O.channelText,
         variant: "text-sm/normal",
         children: e.name
       })]
     }, e.id)
   }).value();
   return (0, t.jsx)("div", {
-    className: N.channelsWrapper,
+    className: O.channelsWrapper,
     children: a
   })
 }
 a("418757");
 
-function g(e) {
+function p(e) {
   let {
     roles: s
-  } = e, a = s.slice().reverse().map(e => (0, t.jsx)(p, {
+  } = e, a = s.slice().reverse().map(e => (0, t.jsx)(h, {
     role: e
   }, e.id));
   return (0, t.jsx)("ul", {
-    className: N.rolesWrapper,
+    className: O.rolesWrapper,
     children: a
   })
 }
 
-function p(e) {
+function h(e) {
   var s;
   let {
     role: a
   } = e, l = null == a.color ? d.default.unsafe_rawColors.PRIMARY_300.css : (0, u.int2hex)(a.color);
   return (0, t.jsxs)("li", {
-    className: N.role,
+    className: O.role,
     style: {
       borderColor: null !== (s = (0, u.hex2rgb)(l, .6)) && void 0 !== s ? s : void 0
     },
-    children: [(0, t.jsx)(i.RoleCircle, {
-      className: N.roleCircle,
+    children: [(0, t.jsx)(L.RoleCircle, {
+      className: O.roleCircle,
       color: l
     }), (0, t.jsx)("div", {
-      className: N.roleName,
+      className: O.roleName,
       children: a.name
     })]
   })
