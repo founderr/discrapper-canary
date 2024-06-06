@@ -25,13 +25,23 @@ let s = (0, i.createExperiment)({
   id: "2024-05_clientside_recently_online_desktop",
   label: "Recently Online Clientside Desktop",
   defaultConfig: {
+    allowPrioritySubscriptions: !1,
     isRecentlyOnlineEnabled: !1,
     maxRecentMs: -1
   },
   treatments: [{
+    id: 0,
+    label: "Control",
+    config: {
+      allowPrioritySubscriptions: !0,
+      isRecentlyOnlineEnabled: !1,
+      maxRecentMs: -1
+    }
+  }, {
     id: 1,
     label: "Enabled: 1h",
     config: {
+      allowPrioritySubscriptions: !0,
       isRecentlyOnlineEnabled: !0,
       maxRecentMs: 36e5
     }
@@ -39,6 +49,7 @@ let s = (0, i.createExperiment)({
     id: 2,
     label: "Enabled: 4h",
     config: {
+      allowPrioritySubscriptions: !0,
       isRecentlyOnlineEnabled: !0,
       maxRecentMs: 144e5
     }
@@ -46,6 +57,7 @@ let s = (0, i.createExperiment)({
     id: 3,
     label: "Enabled: 48h",
     config: {
+      allowPrioritySubscriptions: !0,
       isRecentlyOnlineEnabled: !0,
       maxRecentMs: 1728e5
     }

@@ -185,50 +185,53 @@ class b {
   }
   syncRecentlyOfflineList() {
     var e, t;
-    if (!(0, T.isGuildEligibleForRecentlyOnlineExperiment)(this.guildId) || this.rows.length >= 99) {
+    let {
+      isRecentlyOnlineUIEnabled: n
+    } = (0, T.getGuildEligibilityForRecentlyOnlineExperiment)(this.guildId);
+    if (!n || this.rows.length >= 99) {
       this.experimentalGroups = [], this.experimentalRows = [];
       return
     }
-    let n = [],
-      i = [],
-      r = this.rows.findIndex(e => null != e && "GROUP" === e.type && e.id === g.StatusTypes.OFFLINE);
-    if (r < 0) {
+    let i = [],
+      r = [],
+      s = this.rows.findIndex(e => null != e && "GROUP" === e.type && e.id === g.StatusTypes.OFFLINE);
+    if (s < 0) {
       this.experimentalGroups = [], this.experimentalRows = [];
       return
     }
-    let s = [];
-    for (let e = 0; e < r; e++) s.push(this.rows[e]);
-    for (let e = r; e < this.rows.length; e++) {
+    let a = [];
+    for (let e = 0; e < s; e++) a.push(this.rows[e]);
+    for (let e = s; e < this.rows.length; e++) {
       let t = this.rows[e];
       if (null != t && "MEMBER" === t.type) {
         if (t.status === g.StatusTypes.OFFLINE && null != t.lastOnlineTimestamp) {
           let e = {
             ...t
           };
-          n.push(e)
-        } else(t.status === g.StatusTypes.OFFLINE || t.status === g.StatusTypes.INVISIBLE) && i.push({
+          i.push(e)
+        } else(t.status === g.StatusTypes.OFFLINE || t.status === g.StatusTypes.INVISIBLE) && r.push({
           ...t
         })
       }
     }
-    n.sort((e, t) => {
+    i.sort((e, t) => {
       var n, i;
       return (null !== (n = t.lastOnlineTimestamp) && void 0 !== n ? n : 0) - (null !== (i = e.lastOnlineTimestamp) && void 0 !== i ? i : 0)
     });
-    let a = [...this.groups];
-    if (a = a.filter(e => e.id !== g.StatusTypes.OFFLINE), n.length > 0) {
-      let t = a[a.length - 1],
-        i = null != t ? (null !== (e = t.index) && void 0 !== e ? e : 0) + t.count + 1 : 0,
-        r = y(this.guildId, "recently-online", n.length, i);
-      a.push(r), s.push(r), s.push(...n)
+    let o = [...this.groups];
+    if (o = o.filter(e => e.id !== g.StatusTypes.OFFLINE), i.length > 0) {
+      let t = o[o.length - 1],
+        n = null != t ? (null !== (e = t.index) && void 0 !== e ? e : 0) + t.count + 1 : 0,
+        r = y(this.guildId, "recently-online", i.length, n);
+      o.push(r), a.push(r), a.push(...i)
     }
-    if (i.length > 0) {
-      let e = a[a.length - 1],
+    if (r.length > 0) {
+      let e = o[o.length - 1],
         n = null != e ? (null !== (t = e.index) && void 0 !== t ? t : 0) + e.count + 1 : 0,
-        r = y(this.guildId, g.StatusTypes.OFFLINE, i.length, n);
-      a.push(r), s.push(r), s.push(...i)
+        i = y(this.guildId, g.StatusTypes.OFFLINE, r.length, n);
+      o.push(i), a.push(i), a.push(...r)
     }
-    this.experimentalGroups = a, this.experimentalRows = s
+    this.experimentalGroups = o, this.experimentalRows = a
   }
   constructor(e, t) {
     v(this, "guildId", void 0), v(this, "listId", void 0), v(this, "ownerId", void 0), v(this, "rows", []), v(this, "experimentalRows", []), v(this, "groups", []), v(this, "experimentalGroups", []), v(this, "members", {}), v(this, "version", 0), this.guildId = e, this.listId = t, this.updateOwnerId()

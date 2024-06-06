@@ -34,7 +34,7 @@ function M(e, t) {
   let n = {};
   D.forEach(r => {
     var s;
-    r !== L.default.getGuildId() && r !== C.default.getGuildId() && r !== (null === (s = m.default.getChannel(g.default.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && !(0, T.isGuildEligibleForRecentlyOnlineExperiment)(r) && (null == i || i.guildId !== r) && (D.clearWithoutFlushing(r, e), t && (n[r] = D.get(r)))
+    r !== L.default.getGuildId() && r !== C.default.getGuildId() && r !== (null === (s = m.default.getChannel(g.default.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && !(0, T.getGuildEligibilityForRecentlyOnlineExperiment)(r).shouldPrioritizeSubscription && (null == i || i.guildId !== r) && (D.clearWithoutFlushing(r, e), t && (n[r] = D.get(r)))
   }), !u().isEmpty(n) && _.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: n
@@ -58,7 +58,7 @@ function U(e) {
     type: t
   } = e;
   "CONNECTION_OPEN" === t && M(!0, !1), Object.keys(O.default.getGuilds()).forEach(e => {
-    (0, T.isGuildEligibleForRecentlyOnlineExperiment)(e) && P(e, h.EVERYONE_CHANNEL_ID, c.DEFAULT_RANGES)
+    (0, T.getGuildEligibilityForRecentlyOnlineExperiment)(e).shouldPrioritizeSubscription && P(e, h.EVERYONE_CHANNEL_ID, c.DEFAULT_RANGES)
   });
   let n = L.default.getGuildId();
   null != n && y(n, g.default.getChannelId(n));
