@@ -108,7 +108,7 @@ let U = u.default.connectStores([S.default, C.default], e => {
       mentions: S.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  H = u.default.connectStores([C.default, S.default], e => {
+  V = u.default.connectStores([C.default, S.default], e => {
     let {
       user: t
     } = e, n = C.default.getDMFromUserId(t.id);
@@ -117,7 +117,7 @@ let U = u.default.connectStores([S.default, C.default], e => {
     }
   })(T.User);
 
-function V(e, t, n) {
+function H(e, t, n) {
   return (0, a.jsx)(d.Tooltip, {
     text: n,
     children: e => (0, a.jsx)("span", {
@@ -224,10 +224,10 @@ class k extends s.PureComponent {
       }),
       type: N.default.Types.INLINE,
       children: O.default.Messages.QUICKSWITCHER_PROTIP.format({
-        userSymbolHook: (e, t) => V(t, m.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-        textChannelSymbolHook: (e, t) => V(t, m.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-        voiceChannelSymbolHook: (e, t) => V(t, m.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-        guildSymbolHook: (e, t) => V(t, m.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+        userSymbolHook: (e, t) => H(t, m.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+        textChannelSymbolHook: (e, t) => H(t, m.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+        voiceChannelSymbolHook: (e, t) => H(t, m.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+        guildSymbolHook: (e, t) => H(t, m.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
         helpdeskArticle: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
       })
     })
@@ -284,7 +284,7 @@ class k extends s.PureComponent {
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("7654"), n.e("33053"), n.e("46136"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("96151"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("7654"), n.e("33053"), n.e("46136"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("67526"), n.e("90144"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
             return n => (0, a.jsx)(e, {
               ...n,
               guild: t.record,
@@ -484,7 +484,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case m.AutocompleterResultTypes.USER:
-          return (0, a.jsx)(H, {
+          return (0, a.jsx)(V, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
