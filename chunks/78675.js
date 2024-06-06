@@ -32,7 +32,7 @@ function O(e) {
     displayProfile: O,
     guildId: C,
     profileType: R,
-    overrideBannerSrc: g,
+    pendingBanner: g,
     overrideBannerWidth: L,
     children: v,
     animateOnHover: D = !1,
@@ -43,7 +43,7 @@ function O(e) {
     status: B
   } = (0, h.default)({
     displayProfile: O,
-    overrideBannerSrc: g,
+    pendingBanner: g,
     size: (0, m.getUserBannerSize)(R),
     canAnimate: D || !w ? U : G
   }), V = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), x = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), F = (0, o.hex2int)((0, _.default)(s.getAvatarURL(C, x), V, !1)), H = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : F).hsl;

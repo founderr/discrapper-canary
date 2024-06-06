@@ -21,8 +21,8 @@ function f(e) {
     displayProfile: t,
     guildId: f,
     canUsePremiumCustomization: m,
-    previewBanner: v,
-    previewProfileEffectId: p,
+    pendingBanner: v,
+    hasProfileEffect: p,
     isTryItOutFlow: g,
     disabledInputs: h,
     forProfileEffectModal: S,
@@ -33,9 +33,9 @@ function f(e) {
     displayProfile: t,
     guildId: f,
     profileType: u.UserProfileTypes.BITE_SIZE,
-    overrideBannerSrc: null != v ? v : void 0,
+    pendingBanner: v,
     overrideBannerWidth: S ? 280 : void 0,
-    hasProfileEffect: null != p,
+    hasProfileEffect: p,
     canUsePremiumCustomization: m,
     children: !h && (0, l.jsxs)(i.Clickable, {
       onClick: () => {

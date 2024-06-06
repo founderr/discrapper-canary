@@ -39,8 +39,8 @@ function A(e) {
     pendingNickname: N,
     pendingGlobalName: C,
     pendingThemeColors: b,
-    pendingProfileEffectId: w,
-    avatarClassName: _,
+    pendingProfileEffectId: _,
+    avatarClassName: w,
     isTryItOutFlow: M = !1,
     disabledInputs: B = !1,
     hideCustomStatus: R = !1,
@@ -62,12 +62,12 @@ function A(e) {
     avatarOverride: j,
     size: s.AvatarSizes.SIZE_80,
     showPending: !0
-  }), Z = null == F ? void 0 : F.getPreviewBanner(E, !1), W = (0, p.getPreviewProfileEffectId)({
-    pendingProfileEffectId: w,
+  }), Z = (0, p.getPreviewProfileEffectId)({
+    pendingProfileEffectId: _,
     displayProfile: F
   }), {
-    theme: H,
-    primaryColor: V
+    theme: W,
+    primaryColor: H
   } = (0, d.default)({
     user: a,
     displayProfile: F,
@@ -79,7 +79,7 @@ function A(e) {
     displayProfile: F,
     profileType: T.UserProfileTypes.BITE_SIZE,
     pendingThemeColors: b,
-    pendingProfileEffectId: W,
+    pendingProfileEffectId: Z,
     className: r()(P.container, {
       [P.profileEffectPreview]: z
     }),
@@ -91,8 +91,8 @@ function A(e) {
         displayProfile: F,
         guildId: null == t ? void 0 : t.id,
         canUsePremiumCustomization: i,
-        previewBanner: Z,
-        previewProfileEffectId: W,
+        pendingBanner: E,
+        hasProfileEffect: null != Z,
         isTryItOutFlow: M,
         disabledInputs: B,
         forProfileEffectModal: z,
@@ -106,9 +106,9 @@ function A(e) {
         canUsePremiumCustomization: i,
         previewAvatar: D,
         previewAvatarDecoration: G,
-        previewTheme: H,
-        previewPrimaryColor: V,
-        className: _,
+        previewTheme: W,
+        previewPrimaryColor: H,
+        className: w,
         disabledInputs: B,
         isTryItOutFlow: M,
         onUpsellClick: () => null == A ? void 0 : A({
@@ -130,8 +130,8 @@ function A(e) {
       isTryItOutFlow: M,
       hideBioSection: k,
       hideExampleButton: O
-    }), null != W && (0, l.jsx)(o.default, {
-      profileEffectId: W
+    }), null != Z && (0, l.jsx)(o.default, {
+      profileEffectId: Z
     })]
   })
 }

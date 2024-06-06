@@ -16,11 +16,8 @@ function l(e) {
     displayProfile: t,
     size: n,
     canAnimate: i,
-    overrideBannerSrc: r
-  } = e, l = a.GifAutoPlay.getSetting(), u = null != r ? r : null == t ? void 0 : t.getBannerURL({
-    size: n,
-    canAnimate: i
-  }), [d, _] = (0, s.useState)((null == t ? void 0 : t.banner) == null ? 2 : 0);
+    pendingBanner: r
+  } = e, l = a.GifAutoPlay.getSetting(), u = null == t ? void 0 : t.getPreviewBanner(r, i, n), [d, _] = (0, s.useState)((null == t ? void 0 : t.banner) == null ? 2 : 0);
   return (0, s.useEffect)(() => {
     if (null == u || 0 !== d) return;
     _(1);
@@ -28,10 +25,7 @@ function l(e) {
     e.src = u, e.onload = () => _(2)
   }, [u, d]), (0, s.useEffect)(() => {
     if (l) return;
-    let e = null != r ? r : null == t ? void 0 : t.getBannerURL({
-      size: n,
-      canAnimate: !0
-    });
+    let e = null == t ? void 0 : t.getPreviewBanner(r, !0, n);
     if (null != e && !!(0, o.isAnimatedImageURL)(e)) new Image().src = e
   }, [l, t, n, r]), {
     bannerSrc: u,
