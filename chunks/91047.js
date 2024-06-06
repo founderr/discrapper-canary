@@ -109,7 +109,7 @@ function o(e, t, a) {
   null != a && (0, n.openContextMenuLazy)(e, async () => {
     let {
       default: e
-    } = await l.e("50331").then(l.bind(l, "158195"));
+    } = await Promise.all([l.e("99387"), l.e("50331")]).then(l.bind(l, "158195"));
     return t => (0, i.jsx)(e, {
       ...t,
       guildId: a
