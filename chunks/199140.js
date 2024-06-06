@@ -14,8 +14,8 @@ var l = a("470079"),
   n = a("442837"),
   s = a("433517"),
   i = a("607070"),
-  d = a("642101"),
-  r = a("828695"),
+  d = a("353926"),
+  r = a("642101"),
   u = a("626135"),
   o = a("859802"),
   c = a("601410"),
@@ -24,7 +24,7 @@ var l = a("470079"),
   h = a("689938");
 
 function E() {
-  let e = l.useMemo(() => r.default.getExperimentBucket(o.GuildHomeFeedbackExperiment.definition.id), []),
+  let e = l.useMemo(() => d.default.getUserExperimentBucket(o.GuildHomeFeedbackExperiment.definition.id), []),
     [t, a] = l.useState(!1),
     n = l.useMemo(() => s.Storage.get(f.GUILD_FEED_FEEDBACK_LAST_SEEN), [t]);
   return {
@@ -66,7 +66,7 @@ function _(e) {
   let {
     guildId: t,
     guildFeedItem: a,
-    setOnDismissFeedback: r
+    setOnDismissFeedback: d
   } = e, [o, h] = l.useState(), [E, _] = l.useState(new Set), [I, x] = l.useState(), [S, v] = l.useState(!1), [C, N] = l.useState(!1), [p, T] = l.useState(!1), A = l.useCallback(e => {
     h(e), T(!0), v(!1), setTimeout(() => {
       T(!1)
@@ -86,7 +86,7 @@ function _(e) {
         selectedRating: n = null,
         selectedReasons: s = null,
         userFeedback: i = null
-      } = e, r = Array.from(null != s ? s : []);
+      } = e, d = Array.from(null != s ? s : []);
       u.default.track(m.AnalyticEvents.HOME_FEEDBACK_SUBMITTED, {
         guild_id: t,
         home_session_id: c.default.getHomeSessionId(t),
@@ -94,10 +94,10 @@ function _(e) {
         feed_item_position: 0,
         dismissed: l,
         report_name: "feed_item_feedback",
-        load_id: d.default.getLoadId(t),
+        load_id: r.default.getLoadId(t),
         rating: n,
-        reason_codes: r,
-        reason_descriptions: r.map(e => {
+        reason_codes: d,
+        reason_descriptions: d.map(e => {
           var t;
           return null !== (t = g(e)) && void 0 !== t ? t : ""
         }),
@@ -112,8 +112,8 @@ function _(e) {
       userFeedback: I
     })
   }, [t, a, o, E, I]), F = l.useCallback(() => {
-    s.Storage.set(f.GUILD_FEED_FEEDBACK_LAST_SEEN, Date.now()), null == r || r(!0), !C && D(!0)
-  }, [D, r, C]), L = l.useCallback(() => {
+    s.Storage.set(f.GUILD_FEED_FEEDBACK_LAST_SEEN, Date.now()), null == d || d(!0), !C && D(!0)
+  }, [D, d, C]), L = l.useCallback(() => {
     D(!1), N(!0), s.Storage.set(f.GUILD_FEED_FEEDBACK_LAST_SEEN, Date.now())
   }, [D]), R = l.useMemo(() => E.size > 0 && (!E.has(f.GuildFeedFeedbackReason.OTHER) || null != I && "" !== I), [E, I]), b = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion), G = l.useRef(!1);
   return l.useEffect(() => () => {

@@ -3,12 +3,12 @@ s.r(t), s("47120");
 var a = s("392711"),
   n = s.n(a),
   l = s("492435"),
-  i = s("828695"),
+  i = s("353926"),
   r = s("987338");
 
 function o(e) {
   for (let t of e) {
-    let e = i.default.getEligibleExperiment(t);
+    let e = i.default.getUserExperimentDescriptor(t);
     if (null != e) return [t, e]
   }
   return null
@@ -16,7 +16,7 @@ function o(e) {
 t.default = {
   getFirstEligibleUserExperiment: o,
   isInExperimentBucket: function(e, t) {
-    return i.default.getExperimentBucket(e) === t
+    return i.default.getUserExperimentBucket(e) === t
   },
   experimentDescriptorEquals: function(e, t) {
     if (null == e && null == t || e === t) return !0;
