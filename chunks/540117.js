@@ -1,13 +1,13 @@
     "use strict";
     t.r(a);
     var d = t("735250"),
-      n = t("470079"),
-      c = t("120356"),
-      i = t.n(c),
+      c = t("470079"),
+      n = t("120356"),
+      i = t.n(n),
       f = t("715702"),
       o = t("796163"),
       r = t("961047");
-    class l extends n.Component {
+    class l extends c.Component {
       render() {
         return (0, d.jsx)("div", {
           className: i()(o.app, r.vertical),

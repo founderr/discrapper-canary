@@ -30,8 +30,8 @@ function p(e) {
     displayProfile: T,
     initialSection: g,
     autoFocusNote: x,
-    friendToken: U,
-    transitionState: A,
+    friendToken: A,
+    transitionState: U,
     onClose: N
   } = e, C = (0, i.useStateFromStores)([a.default], () => a.default.getRelationshipType(t.id)), {
     originalFriendingEnabled: R,
@@ -61,11 +61,11 @@ function p(e) {
         user: t,
         guildId: l,
         channelId: p,
-        friendToken: U
+        friendToken: A
       })
     }), (0, s.jsxs)(f.default.Overlay, {
       className: v.overlay,
-      children: [A === _.ModalTransitionState.ENTERED && (0, s.jsx)(u.default, {
+      children: [U === _.ModalTransitionState.ENTERED && (0, s.jsx)(u.default, {
         onTooltipClose: N
       }), (0, s.jsx)(E.default, {
         user: t,

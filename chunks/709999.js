@@ -18,9 +18,9 @@ var a = s("735250"),
   S = s("906732"),
   h = s("1585"),
   I = s("333867"),
-  T = s("197115"),
-  x = s("300284"),
-  _ = s("876917"),
+  _ = s("197115"),
+  T = s("300284"),
+  x = s("876917"),
   L = s("642619"),
   N = s("210887"),
   b = s("725808"),
@@ -106,7 +106,7 @@ t.default = function(e) {
   }, []), l.useEffect(() => {
     null == i || i(q)
   }, [i]);
-  let eE = (0, x.default)({
+  let eE = (0, T.default)({
       analyticsLocations: X
     }),
     ep = l.useRef(null),
@@ -136,7 +136,7 @@ t.default = function(e) {
     eh = eg(g.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eI = () => (0, a.jsx)("div", {
       className: K.hoverUpsellContainer,
-      children: (0, a.jsx)(T.default, {
+      children: (0, a.jsx)(_.default, {
         fullWidth: !0,
         className: K.__invalid_premiumSubscribeButton,
         disabled: ed,
@@ -145,7 +145,7 @@ t.default = function(e) {
         subscriptionTier: Y.PremiumSubscriptionSKUs.TIER_2
       })
     }),
-    eT = () => eo || eu ? (0, a.jsx)(B.AlreadyOwned, {
+    e_ = () => eo || eu ? (0, a.jsx)(B.AlreadyOwned, {
       className: K.priceTag,
       isPartiallyPurchased: eu
     }) : er ? (0, a.jsx)(E.Text, {
@@ -158,7 +158,7 @@ t.default = function(e) {
       isPremiumUser: ea,
       className: K.priceTag
     }),
-    ex = () => er ? null : ei ? (0, a.jsx)(Z, {
+    eT = () => er ? null : ei ? (0, a.jsx)(Z, {
       onClick: eh
     }) : (0, a.jsx)(F.default, {
       product: t,
@@ -167,7 +167,7 @@ t.default = function(e) {
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
-    e_ = () => {
+    ex = () => {
       if (er && !ea && !ei) return eI();
       let e = er ? {
         submitting: ec,
@@ -199,7 +199,7 @@ t.default = function(e) {
           children: er ? V.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : V.default.Messages.COLLECTIBLES_PURCHASE.format({
             price: el
           })
-        }), ex()]
+        }), eT()]
       })
     },
     eL = ef ? "0 0 15px 1px ".concat(f.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
@@ -232,7 +232,7 @@ t.default = function(e) {
         className: K.preview,
         children: (0, u.match)(t.type).with(c.CollectiblesItemType.PROFILE_EFFECT, () => (0, a.jsx)("div", {
           className: K.profileEffectShopPreview,
-          children: (0, a.jsx)(_.default, {
+          children: (0, a.jsx)(x.default, {
             isHovering: ee,
             profileEffectId: et.id,
             isPurchased: eo,
@@ -273,10 +273,10 @@ t.default = function(e) {
           className: K.detailsWrapper,
           children: [(0, a.jsx)("div", {
             className: eu ? void 0 : K.innerBlur,
-            children: eT()
+            children: e_()
           }), (0, a.jsx)("div", {
             className: K.innerHover,
-            children: e_()
+            children: ex()
           })]
         })]
       }), (0, a.jsx)(D.default, {

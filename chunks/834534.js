@@ -24,8 +24,8 @@ var s = l("735250"),
   T = l("335191"),
   g = l("347949"),
   x = l("351707"),
-  U = l("228168"),
-  A = l("689938"),
+  A = l("228168"),
+  U = l("689938"),
   N = l("363175");
 
 function C(e) {
@@ -61,21 +61,21 @@ function C(e) {
       currentUser: l,
       guild: y
     }), (0, s.jsx)(v.default, {
-      title: A.default.Messages.USER_PROFILE_MEMBER_SINCE,
+      title: U.default.Messages.USER_PROFILE_MEMBER_SINCE,
       children: (0, s.jsx)(_.default, {
         userId: t.id,
         guildId: null == a ? void 0 : a.guildId,
-        tooltipDelay: U.USER_PROFILE_TOOLTIP_DELAY
+        tooltipDelay: A.USER_PROFILE_TOOLTIP_DELAY
       })
     }), D && !F && O.length > 0 && (0, s.jsx)(v.default, {
-      title: A.default.Messages.LAST_PLAYED_GAMES,
+      title: U.default.Messages.LAST_PLAYED_GAMES,
       children: (0, s.jsx)(g.UserProfileRecentGames, {
         userId: t.id,
         recentGames: O,
         currentUserApplicationIds: L
       })
     }), B.length > 0 && (0, s.jsx)(v.default, {
-      title: A.default.Messages.CONNECTIONS,
+      title: U.default.Messages.CONNECTIONS,
       children: (0, s.jsx)(T.ConnectedUserAccounts, {
         connectedAccounts: B,
         className: N.connections,
@@ -84,7 +84,7 @@ function C(e) {
         locale: b
       })
     }), (0, s.jsx)(v.default, {
-      title: A.default.Messages.NOTE,
+      title: U.default.Messages.NOTE,
       children: (0, s.jsx)(u.default, {
         userId: t.id,
         className: N.note,

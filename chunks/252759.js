@@ -4,10 +4,10 @@
         return f
       },
       StreamDirectorActionType: function() {
-        return n
+        return c
       }
     });
-    var d, n, c = t("75834");
+    var d, c, n = t("75834");
 
     function i(e, a, t) {
       return a in e ? Object.defineProperty(e, a, {
@@ -16,10 +16,10 @@
         configurable: !0,
         writable: !0
       }) : e[a] = t, e
-    }(d = n || (n = {})).STREAM = "stream", d.PAUSE = "pause", d.STOP = "stop";
+    }(d = c || (c = {})).STREAM = "stream", d.PAUSE = "pause", d.STOP = "stop";
     class f {
       onStreamBegin(e, a) {
-        let t = (0, c.getInitialStreamTarget)(e, a);
+        let t = (0, n.getInitialStreamTarget)(e, a);
         null == t || null == t.windowHandle ? this.callback({
           type: "stop"
         }) : this._stream(t)
@@ -42,7 +42,7 @@
         return (null === (a = this.application) || void 0 === a ? void 0 : a.windowHandle) != null ? this.onCaptureEnd(e, this.application.windowHandle) : this._stop()
       }
       _update(e) {
-        let a = (0, c.getStreamTarget)(e, this.application);
+        let a = (0, n.getStreamTarget)(e, this.application);
         if (null != a) return null == a.windowHandle ? this._pause() : this._stream(a);
         this._stop()
       }

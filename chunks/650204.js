@@ -1,6 +1,6 @@
     "use strict";
     t.r(a), t("610138"), t("216116"), t("78328"), t("815648"), t("47120"), t("177593");
-    var d, n, c, i, f, o = t("735250");
+    var d, c, n, i, f, o = t("735250");
     t("92138"), t("470079");
     var r = t("202226"),
       l = t("512722"),
@@ -47,7 +47,7 @@
           throw E.default.captureCrash(e), e
         })
       });
-      let e = null === (n = (c = D.default.remoteApp).getVersion) || void 0 === n ? void 0 : n.call(c),
+      let e = null === (c = (n = D.default.remoteApp).getVersion) || void 0 === c ? void 0 : c.call(n),
         a = null === (i = (f = D.default.remoteApp).getBuildNumber) || void 0 === i ? void 0 : i.call(f),
         t = {};
       null != D.default.remoteApp.getModuleVersions && (t = D.default.remoteApp.getModuleVersions()), E.default.setExtra({
@@ -71,8 +71,8 @@
           e.cancel(), O.default.setFocused(!0), (0, v.focus)(window, !0)
         }), O.default.on("MAIN_WINDOW_PATH", function(e, a, t) {
           var d;
-          let n = null != t ? new URLSearchParams(t) : null;
-          (null === (d = j[a]) || void 0 === d || !d.call(j, n)) && (0, w.transitionTo)(a)
+          let c = null != t ? new URLSearchParams(t) : null;
+          (null === (d = j[a]) || void 0 === d || !d.call(j, c)) && (0, w.transitionTo)(a)
         }), O.default.on("MAIN_WINDOW_HIDDEN", () => {
           (0, v.hidden)(window)
         })

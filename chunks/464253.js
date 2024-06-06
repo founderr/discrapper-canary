@@ -1,8 +1,8 @@
     "use strict";
     t.r(a), t("411104");
     var d = t("570140"),
-      n = t("846027"),
-      c = t("872810"),
+      c = t("846027"),
+      n = t("872810"),
       i = t("710845"),
       f = t("252759"),
       o = t("361291"),
@@ -77,9 +77,9 @@
           t = o.default.getState();
         switch (e.type) {
           case f.StreamDirectorActionType.STREAM:
-            if (null != a && (0, c.setStreamPaused)(a, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
+            if (null != a && (0, n.setStreamPaused)(a, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
               let a = e.sourceId.split(":")[1];
-              n.default.setGoLiveSource({
+              c.default.setGoLiveSource({
                 cameraSettings: {
                   videoDeviceGuid: a,
                   audioDeviceGuid: e.audioSourceId
@@ -93,7 +93,7 @@
               })
             } else {
               var d;
-              n.default.setGoLiveSource({
+              c.default.setGoLiveSource({
                 desktopSettings: {
                   sourceId: e.sourceId,
                   sound: null === (d = e.sound) || void 0 === d || d
@@ -108,7 +108,7 @@
             }
             break;
           case f.StreamDirectorActionType.PAUSE:
-            null != a && (0, c.setStreamPaused)(a, !0);
+            null != a && (0, n.setStreamPaused)(a, !0);
             break;
           case f.StreamDirectorActionType.STOP:
             null != a && (0, b.default)(a);
@@ -119,7 +119,7 @@
       }
       _onCapturePaused(e) {
         let a = r.default.getCurrentUserActiveStream();
-        null != a && (0, c.setStreamPaused)(a, e)
+        null != a && (0, n.setStreamPaused)(a, e)
       }
       _onCaptureEnded() {
         switch (this.mode) {
@@ -140,8 +140,8 @@
             streamType: a,
             guildId: t,
             channelId: d,
-            pid: n,
-            sourceId: c,
+            pid: c,
+            sourceId: n,
             audioSourceId: f,
             sound: o
           } = e, r = l.default.getId(), b = (0, s.encodeStreamKey)({
@@ -150,7 +150,7 @@
             channelId: d,
             ownerId: r
           });
-          null == n != (null == c) ? (null != n && this._onStreamApplication(b, n), null != c && this._onStreamDirectSource(b, c, f, o)) : new i.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(n, ", source-id: ").concat(c, ")"))
+          null == c != (null == n) ? (null != c && this._onStreamApplication(b, c), null != n && this._onStreamDirectSource(b, n, f, o)) : new i.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(c, ", source-id: ").concat(n, ")"))
         }), d.default.subscribe("STREAM_DELETE", e => {
           let {
             streamKey: a

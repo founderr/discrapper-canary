@@ -24,8 +24,8 @@ var s = l("735250"),
   T = l("652853"),
   g = l("335191"),
   x = l("347949"),
-  U = l("988246"),
-  A = l("689938"),
+  A = l("988246"),
+  U = l("689938"),
   N = l("921152");
 
 function C(e) {
@@ -48,7 +48,7 @@ function C(e) {
       var e;
       null == D || null === (e = D.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [R]), P) ? (0, s.jsx)(U.default, {}) : (0, s.jsxs)(r.ScrollerThin, {
+  }, [R]), P) ? (0, s.jsx)(A.default, {}) : (0, s.jsxs)(r.ScrollerThin, {
     fade: !0,
     className: N.infoScroller,
     children: [(0, s.jsxs)("div", {
@@ -57,7 +57,7 @@ function C(e) {
         children: [(0, s.jsx)(r.Heading, {
           variant: "eyebrow",
           className: N.userInfoSectionHeader,
-          children: A.default.Messages.USER_PROFILE_ABOUT_ME
+          children: U.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, s.jsx)(v.default, {
           className: N.userInfoText,
           userBio: null !== (t = null == a ? void 0 : a.bio) && void 0 !== t ? t : "",
@@ -67,7 +67,7 @@ function C(e) {
         children: [(0, s.jsx)(r.Heading, {
           variant: "eyebrow",
           className: N.userInfoSectionHeader,
-          children: A.default.Messages.USER_PROFILE_MEMBER_SINCE
+          children: U.default.Messages.USER_PROFILE_MEMBER_SINCE
         }), (0, s.jsx)(p.default, {
           userId: l.id,
           textClassName: N.userInfoText
@@ -88,7 +88,7 @@ function C(e) {
         children: [(0, s.jsx)(r.Heading, {
           variant: "eyebrow",
           className: N.userInfoSectionHeader,
-          children: A.default.Messages.NOTE
+          children: U.default.Messages.NOTE
         }), (0, s.jsx)(u.default, {
           userId: l.id,
           autoFocus: C,

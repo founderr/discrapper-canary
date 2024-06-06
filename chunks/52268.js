@@ -19,14 +19,14 @@ var s = l("735250"),
   I = l("26290"),
   P = l("74538"),
   S = l("731896"),
-  v = l("528439"),
-  x = l("981631"),
-  _ = l("689938"),
+  x = l("528439"),
+  _ = l("981631"),
+  v = l("689938"),
   A = l("20070"),
   N = l("223223"),
   R = l("97045");
-let T = () => 80,
-  M = e => {
+let M = () => 80,
+  T = e => {
     let {
       children: t,
       className: l,
@@ -54,7 +54,7 @@ let T = () => 80,
     } = e, E = (0, S.useProfileEffectPreset)(n.id), g = (0, o.useStateFromStores)([f.default], () => {
       let e = f.default.getProduct(n.skuId);
       return (0, m.isPremiumCollectiblesProduct)(e)
-    }), x = (0, m.isProductNew)(n.skuId), T = a.useRef(null), {
+    }), _ = (0, m.isProductNew)(n.skuId), M = a.useRef(null), {
       accessibilityLabel: j,
       thumbnailPreviewSrc: O,
       title: U
@@ -62,10 +62,10 @@ let T = () => 80,
       updatedOnAllSurfaces: L
     } = (0, h.useSimplifiedProfileExperiment)({
       location: "ProfileEffectPresetItem"
-    }), F = P.default.canUseCollectibles(l), b = i === v.Section.PREMIUM_PURCHASE && !F;
-    return (0, s.jsxs)(M, {
+    }), F = P.default.canUseCollectibles(l), b = i === x.Section.PREMIUM_PURCHASE && !F;
+    return (0, s.jsxs)(T, {
       className: b && !c ? A.decorationGridItemChurned : void 0,
-      innerRef: null != r ? r : T,
+      innerRef: null != r ? r : M,
       isSelected: c,
       ...d,
       children: [(0, s.jsx)("img", {
@@ -76,14 +76,14 @@ let T = () => 80,
         className: A.presetEffectImg,
         src: O,
         alt: U
-      }), i === v.Section.PURCHASE || i === v.Section.PREMIUM_PURCHASE && F ? null : x ? (0, s.jsx)(I.PremiumBadge, {
+      }), i === x.Section.PURCHASE || i === x.Section.PREMIUM_PURCHASE && F ? null : _ ? (0, s.jsx)(I.PremiumBadge, {
         className: A.newBadge,
         text: (0, s.jsxs)("div", {
           className: A.newBadgeText,
           children: [(0, s.jsx)(C.default, {
             width: 12,
             height: 12
-          }), _.default.Messages.NEW]
+          }), v.default.Messages.NEW]
         })
       }) : (0, s.jsx)(I.IconBadge, {
         icon: g ? () => (0, s.jsx)(p.default, {
@@ -107,8 +107,8 @@ t.default = e => {
     onSelect: r,
     onClose: u
   } = e, o = () => {
-    u(), (0, d.pushLayer)(x.Layers.COLLECTIBLES_SHOP)
-  }, f = (0, v.default)(), m = null != a;
+    u(), (0, d.pushLayer)(_.Layers.COLLECTIBLES_SHOP)
+  }, f = (0, x.default)(), m = null != a;
   return (0, s.jsx)("section", {
     children: (0, s.jsx)(c.MasonryList, {
       fade: !0,
@@ -129,7 +129,7 @@ t.default = e => {
           section: p,
           items: C
         } = f[e];
-        return (0, i.match)(C[u]).with(v.NONE_ITEM, () => (0, s.jsxs)(M, {
+        return (0, i.match)(C[u]).with(x.NONE_ITEM, () => (0, s.jsxs)(T, {
           style: {
             ...d
           },
@@ -140,9 +140,9 @@ t.default = e => {
           }), (0, s.jsx)(c.Text, {
             variant: "text-xs/normal",
             color: "header-primary",
-            children: null != l ? _.default.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : _.default.Messages.NONE
+            children: null != l ? v.default.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : v.default.Messages.NONE
           })]
-        }, h)).with(v.SHOP_ITEM, () => (0, s.jsxs)(M, {
+        }, h)).with(x.SHOP_ITEM, () => (0, s.jsxs)(T, {
           style: d,
           onSelect: o,
           children: [(0, s.jsx)(E.default, {
@@ -150,7 +150,7 @@ t.default = e => {
           }), (0, s.jsx)(c.Text, {
             variant: "text-xs/normal",
             color: "header-primary",
-            children: _.default.Messages.COLLECTIBLES_SHOP
+            children: v.default.Messages.COLLECTIBLES_SHOP
           })]
         }, h)).otherwise(e => {
           let l = a === e.id;
@@ -185,7 +185,7 @@ t.default = e => {
         var l, s;
         return null !== (s = null === (l = f[e].items[t]) || void 0 === l ? void 0 : l.id) && void 0 !== s ? s : null
       },
-      getItemHeight: T,
+      getItemHeight: M,
       removeEdgeItemGutters: !0
     })
   })

@@ -5,8 +5,8 @@
       }
     });
     var d = t("735250"),
-      n = t("470079"),
-      c = t("470716"),
+      c = t("470079"),
+      n = t("470716"),
       i = t("613828"),
       f = t("304445"),
       o = t("703656");
@@ -15,7 +15,7 @@
       let {
         children: a
       } = e;
-      return n.useEffect(() => (f.default.initialize(), () => f.default.cleanup()), []), (0, d.jsx)(c.HelmetProvider, {
+      return c.useEffect(() => (f.default.initialize(), () => f.default.cleanup()), []), (0, d.jsx)(n.HelmetProvider, {
         children: (0, d.jsx)(i.Router, {
           history: (0, o.getHistory)(),
           children: a

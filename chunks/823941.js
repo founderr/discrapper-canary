@@ -25,9 +25,9 @@ var a = s("735250"),
   S = s("141011"),
   h = s("813083"),
   I = s("372654"),
-  T = s("994896"),
-  x = s("215023"),
-  _ = s("474936"),
+  _ = s("994896"),
+  T = s("215023"),
+  x = s("474936"),
   L = s("689938"),
   N = s("897246");
 let b = (0, m.getLogoSize)(96),
@@ -94,7 +94,7 @@ let b = (0, m.getLogoSize)(96),
           className: N.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: _.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: x.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: s,
               returnRef: n
             })
@@ -148,7 +148,7 @@ function A(e) {
       }),
       alt: i.name,
       style: {
-        maxWidth: null === (l = x.categoryBannerOverrides[i.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
+        maxWidth: null === (l = T.categoryBannerOverrides[i.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
       }
     }), (0, a.jsx)(h.default, {
       category: i,
@@ -169,9 +169,9 @@ function P(e) {
     index: c = 0
   } = e, {
     backgroundColors: d
-  } = (0, g.default)(l.styles), f = !!(null === (t = x.categoryBannerOverrides[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+  } = (0, g.default)(l.styles), f = !!(null === (t = T.categoryBannerOverrides[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
     condensedBannersEnabled: p
-  } = (0, T.useCollectiblesCondensedBannersExperiment)({
+  } = (0, _.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
   });
   return p ? (0, a.jsx)(A, {
@@ -198,7 +198,7 @@ function P(e) {
       }),
       alt: l.name,
       style: {
-        maxWidth: null === (s = x.categoryBannerOverrides[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
+        maxWidth: null === (s = T.categoryBannerOverrides[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
       }
     }), (0, a.jsx)(u.Text, {
       className: r()(N.summary, {

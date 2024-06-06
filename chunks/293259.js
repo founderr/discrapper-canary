@@ -24,8 +24,8 @@ var s = l("735250"),
   T = l("785717"),
   g = l("621853"),
   x = l("204197"),
-  U = l("735336"),
-  A = l("520978"),
+  A = l("735336"),
+  U = l("520978"),
   N = l("184325"),
   C = l("652853"),
   R = l("225714"),
@@ -103,7 +103,7 @@ function O(e) {
   }
   return (0, s.jsxs)("header", {
     className: B,
-    children: [(0, s.jsx)(U.default, {
+    children: [(0, s.jsx)(A.default, {
       displayProfile: t,
       onClose: $,
       user: p,
@@ -144,7 +144,7 @@ function O(e) {
           onBadgeClick: w
         }), (0, s.jsxs)("div", {
           className: j.relationshipButtons,
-          children: [(null == W ? void 0 : W.application) != null && (0, s.jsx)(A.default, {
+          children: [(null == W ? void 0 : W.application) != null && (0, s.jsx)(U.default, {
             className: j.applicationInstallButton,
             application: W.application
           }), (0, s.jsx)(R.default, {

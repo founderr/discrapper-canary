@@ -18,9 +18,9 @@ var a = s("735250"),
   S = s("580747"),
   h = s("605236"),
   I = s("51855"),
-  T = s("479446"),
-  x = s("981632"),
-  _ = s("290026"),
+  _ = s("479446"),
+  T = s("981632"),
+  x = s("290026"),
   L = s("819640"),
   N = s("594174"),
   b = s("682864"),
@@ -155,8 +155,8 @@ function en(e) {
       style: {
         left: "".concat(m.current, "%")
       },
-      children: (0, a.jsx)(x.default, {
-        idleAnimationState: T.AnimationState.IDLE,
+      children: (0, a.jsx)(T.default, {
+        idleAnimationState: _.AnimationState.IDLE,
         giftStyle: ee.PremiumGiftStyles.BOX
       })
     }), (0, a.jsx)(U.default, {
@@ -186,8 +186,8 @@ t.default = function(e) {
     analyticsLocations: n
   } = (0, u.useStateFromStoresObject)([P.default], () => P.default.getAnalytics()), {
     analyticsLocations: i
-  } = (0, m.default)([...n, p.default.COLLECTIBLES_SHOP]), E = (0, u.useStateFromStores)([L.default], () => L.default.getLayers().includes(Q.Layers.COLLECTIBLES_SHOP)), T = (0, d.useHasAnyModalOpen)(), {
-    onClose: x
+  } = (0, m.default)([...n, p.default.COLLECTIBLES_SHOP]), E = (0, u.useStateFromStores)([L.default], () => L.default.getLayers().includes(Q.Layers.COLLECTIBLES_SHOP)), _ = (0, d.useHasAnyModalOpen)(), {
+    onClose: T
   } = (0, Y.useCollectiblesShopRouting)(), b = (0, u.useStateFromStores)([N.default], () => N.default.getCurrentUser()), O = v.default.canUseCollectibles(b), j = (0, S.default)("shop_disable_cache"), B = (0, S.default)("shop_include_unpublished"), {
     categories: D,
     isFetchingCategories: U,
@@ -196,7 +196,7 @@ t.default = function(e) {
     noCache: j,
     includeUnpublished: B
   });
-  (0, _.useReloadProfileEffectWhenConfigsAreMissing)();
+  (0, x.useReloadProfileEffectWhenConfigsAreMissing)();
   let K = (0, k.usePurchasedCategoriesSort)(D),
     q = (0, I.useLightningCheckoutExperimentEnabled)(),
     et = (0, y.useShopBundleEnabled)("CollectiblesShop"),
@@ -239,12 +239,12 @@ t.default = function(e) {
       itemTypes: [o.CollectiblesItemType.AVATAR_DECORATION, o.CollectiblesItemType.PROFILE_EFFECT]
     })
   }, [D]), l.useEffect(() => {
-    if (!t || E || T) return;
+    if (!t || E || _) return;
     let e = e => {
-      e.key === J.KeyboardEventKey.Escape && x()
+      e.key === J.KeyboardEventKey.Escape && T()
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
-  }, [t, E, T, x]);
+  }, [t, E, _, T]);
   let ed = l.useCallback(() => {
       (0, A.fetchCollectiblesCategories)({
         noCache: j,
@@ -285,7 +285,7 @@ t.default = function(e) {
         children: [(0, a.jsx)(w.CollectiblesShopHeaderBar, {
           isFullScreen: t,
           isLayer: E,
-          onClose: x
+          onClose: T
         }), (0, a.jsx)("div", {
           className: es.pageWrapper,
           children: (0, a.jsxs)("main", {

@@ -1,28 +1,30 @@
 "use strict";
-s.r(a);
-var t = s("735250");
-s("470079");
-var n = s("481060"),
-  c = s("239091"),
-  l = s("689938");
+t.r(a);
+var l = t("735250");
+t("470079");
+var i = t("481060"),
+  r = t("689938");
 a.default = e => {
   let {
-    changeAvatarAction: a,
-    changeDecorationAction: s
+    onChangeAvatar: a,
+    onChangeAvatarDecoration: t,
+    onClose: n,
+    className: s
   } = e;
-  return (0, t.jsxs)(n.Menu, {
-    onClose: c.closeContextMenu,
-    onSelect: c.closeContextMenu,
+  return (0, l.jsxs)(i.Menu, {
+    className: s,
+    onClose: n,
+    onSelect: void 0,
     navId: "user-settings-change-avatar",
-    "aria-label": l.default.Messages.USER_SETTINGS_CHANGE_AVATAR,
-    children: [(0, t.jsx)(n.MenuItem, {
-      action: a,
+    "aria-label": r.default.Messages.AVATAR_ACTIONS_MENU_LABEL,
+    children: [(0, l.jsx)(i.MenuItem, {
       id: "change-avatar",
-      label: l.default.Messages.USER_SETTINGS_CHANGE_AVATAR
-    }), (0, t.jsx)(n.MenuItem, {
-      action: s,
+      action: a,
+      label: r.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+    }), (0, l.jsx)(i.MenuItem, {
       id: "change-avatar-decoration",
-      label: l.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+      action: t,
+      label: r.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
     })]
   })
 }

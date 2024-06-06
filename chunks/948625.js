@@ -25,13 +25,13 @@ var a = s("180650"),
   S = s("570593"),
   h = s("199546"),
   I = s("613540"),
-  T = s("769411");
-let x = {
+  _ = s("769411");
+let T = {
     MOST_POPULAR: () => r.default.Messages.MOST_POPULAR,
     NEW_RELEASE: () => r.default.Messages.APPLICATION_STORE_NEW_RELEASE,
     NITRO_EXCLUSIVE: () => r.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE
   },
-  _ = {
+  x = {
     TAKE_ME_THERE: () => r.default.Messages.TAKE_ME_THERE
   },
   L = [{
@@ -44,24 +44,24 @@ let x = {
     logoSrc: o,
     textColor: (0, l.getColor)(n.Color.BLACK_500),
     badge: {
-      label: x.MOST_POPULAR
+      label: T.MOST_POPULAR
     },
     cta: {
-      label: _.TAKE_ME_THERE,
+      label: x.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.ANIME_V2
     }
   }, {
     id: "category_galaxy",
-    backgroundStaticSrc: T,
+    backgroundStaticSrc: _,
     backgroundVideoSrc: h,
     logoSrc: I,
     textColor: (0, l.getColor)(n.Color.WHITE_100),
     badge: {
-      label: x.NEW_RELEASE,
+      label: T.NEW_RELEASE,
       date: new Date
     },
     cta: {
-      label: _.TAKE_ME_THERE,
+      label: x.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.GALAXY
     }
   }, {
@@ -71,10 +71,10 @@ let x = {
     logoSrc: m,
     textColor: (0, l.getColor)(n.Color.WHITE_100),
     badge: {
-      label: x.NITRO_EXCLUSIVE
+      label: T.NITRO_EXCLUSIVE
     },
     cta: {
-      label: _.TAKE_ME_THERE,
+      label: x.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.DISXCORE
     }
   }, {
@@ -84,10 +84,10 @@ let x = {
     logoSrc: E,
     textColor: (0, l.getColor)(n.Color.WHITE_100),
     badge: {
-      label: x.MOST_POPULAR
+      label: T.MOST_POPULAR
     },
     cta: {
-      label: _.TAKE_ME_THERE,
+      label: x.TAKE_ME_THERE,
       categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
     }
   }],

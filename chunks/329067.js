@@ -25,9 +25,9 @@ var a = s("735250"),
   S = s("409813"),
   h = s("333867"),
   I = s("74179"),
-  T = s("981631"),
-  x = s("689938"),
-  _ = s("834042");
+  _ = s("981631"),
+  T = s("689938"),
+  x = s("834042");
 let L = e => {
     let {
       children: t,
@@ -71,7 +71,7 @@ function b() {
     activeSubscription: null
   });
   return {
-    userIsEligible: null !== e && !T.REDIRECTED_PAYMENT_SOURCES.has(e.type)
+    userIsEligible: null !== e && !_.REDIRECTED_PAYMENT_SOURCES.has(e.type)
   }
 }
 
@@ -97,7 +97,7 @@ function R(e) {
   } = (0, f.default)(), [D, F] = l.useState(!1), U = l.useRef(null), H = k[R], w = null != H ? H[I.id] : null, G = null != w ? (0, m.formatPrice)(null == w ? void 0 : w.amount, null == w ? void 0 : w.currency) : null, W = l.useMemo(() => ({
     ...A,
     load_id: b,
-    payment_type: T.PurchaseTypeToAnalyticsPaymentType[T.PurchaseTypes.ONE_TIME],
+    payment_type: _.PurchaseTypeToAnalyticsPaymentType[_.PurchaseTypes.ONE_TIME],
     price: null == w ? void 0 : w.amount,
     currency: null == w ? void 0 : w.currency
   }), [A, w, b]);
@@ -107,7 +107,7 @@ function R(e) {
     y === C.PaymentAuthenticationState.ERROR && s(j)
   }, [s, j, y]);
   let Y = async () => {
-    await E.default.track(T.AnalyticEvents.PAYMENT_FLOW_COMPLETED, W), r()(null != w, "skuPricePreview can't be null"), r()(null != M, "application can't be null");
+    await E.default.track(_.AnalyticEvents.PAYMENT_FLOW_COMPLETED, W), r()(null != w, "skuPricePreview can't be null"), r()(null != M, "application can't be null");
     try {
       await (0, o.purchaseSKU)(M.id, R, {
         expectedAmount: w.amount,
@@ -121,13 +121,13 @@ function R(e) {
       e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && s(t)
     }
   }, V = l.useCallback(e => {
-    E.default.track(T.AnalyticEvents.PAYMENT_FLOW_STEP, {
+    E.default.track(_.AnalyticEvents.PAYMENT_FLOW_STEP, {
       ...W,
       to_step: e
     }), e === S.Step.CONFIRM && (F(!1), t()), O(e)
   }, [W, O, t]);
   return (0, C.usePaymentStepForAuthentication)(P, y, V), (0, a.jsxs)("div", {
-    className: _.reviewContainer,
+    className: x.reviewContainer,
     children: [(0, a.jsx)(i.FormSection, {
       children: (0, a.jsx)(i.FormItem, {
         children: (0, a.jsx)(u.default, {
@@ -140,26 +140,26 @@ function R(e) {
         })
       })
     }), (0, a.jsx)("div", {
-      className: _.legalTerms,
+      className: x.legalTerms,
       children: (0, a.jsx)("p", {
-        children: x.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
-          paidURL: p.default.getArticleURL(T.HelpdeskArticles.PAID_TERMS)
+        children: T.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
+          paidURL: p.default.getArticleURL(_.HelpdeskArticles.PAID_TERMS)
         })
       })
     }), (0, a.jsx)(L, {
-      className: _.buyButton,
+      className: x.buyButton,
       submitting: D,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
         F(!0), await Y()
       },
-      children: null !== G ? x.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
+      children: null !== G ? T.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: G
       }) : (0, a.jsx)(i.Spinner, {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
     }), !D && (0, a.jsx)(N, {
-      className: _.reviewButton,
+      className: x.reviewButton,
       onClick: () => {
         n(), (0, h.default)({
           skuId: R,
@@ -167,7 +167,7 @@ function R(e) {
           returnRef: U
         })
       },
-      children: x.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
+      children: T.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
     })]
   })
 }

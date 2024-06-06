@@ -29,17 +29,17 @@ function S(e) {
     guild: I,
     pendingAvatar: T,
     pendingNickname: A,
-    pendingGlobalName: P,
-    pendingBio: E,
-    pendingPronouns: y,
-    isTryItOutFlow: x,
-    hideBioSection: j,
-    hideExampleButton: U
-  } = e, N = (0, i.useStateFromStores)([f.default], () => null == I ? null : f.default.getMember(I.id, t.id)), C = (0, i.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), b = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), _ = null == S ? void 0 : null === (a = S.getPreviewBio(E)) || void 0 === a ? void 0 : a.value, w = null != y ? y : null == S ? void 0 : S.pronouns, M = (0, v.getPreviewName)({
+    pendingGlobalName: E,
+    pendingBio: P,
+    pendingPronouns: x,
+    isTryItOutFlow: y,
+    hideBioSection: N,
+    hideExampleButton: j
+  } = e, C = (0, i.useStateFromStores)([f.default], () => null == I ? null : f.default.getMember(I.id, t.id)), U = (0, i.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), b = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), _ = null == S ? void 0 : null === (a = S.getPreviewBio(P)) || void 0 === a ? void 0 : a.value, M = null != x ? x : null == S ? void 0 : S.pronouns, w = (0, v.getPreviewName)({
     pendingNickname: A,
-    pendingGlobalName: P,
+    pendingGlobalName: E,
     user: t,
-    guildMember: N
+    guildMember: C
   });
   return (0, l.jsxs)("div", {
     className: g.body,
@@ -49,17 +49,17 @@ function S(e) {
         user: t,
         profileType: p.UserProfileTypes.BITE_SIZE,
         usernameIcon: (() => {
-          if (!(null != N)) return;
+          if (!(null != C)) return;
           if (null !== T) {
-            if (!(null == N.avatar && null == T)) return (0, l.jsx)(d.default, {
+            if (!(null == C.avatar && null == T)) return (0, l.jsx)(d.default, {
               user: t,
-              nickname: M
+              nickname: w
             })
           }
         })(),
-        nickname: M,
-        pronouns: w,
-        isTryItOut: x,
+        nickname: w,
+        pronouns: M,
+        isTryItOut: y,
         tags: (0, l.jsx)(s.default, {
           displayProfile: S,
           profileType: p.UserProfileTypes.BITE_SIZE
@@ -67,12 +67,12 @@ function S(e) {
       }), b && (0, l.jsx)(n.default, {
         userId: t.id,
         inline: !1
-      }), !j && null != _ && "" !== _ && (0, l.jsx)(c.default, {
+      }), !N && null != _ && "" !== _ && (0, l.jsx)(c.default, {
         user: t,
         bio: _,
-        hidePersonalInformation: C
+        hidePersonalInformation: U
       })]
-    }), !U && (0, l.jsx)(u.default, {
+    }), !j && (0, l.jsx)(u.default, {
       text: h.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON
     })]
   })

@@ -5,12 +5,12 @@
       }
     }), t("315314"), t("610138"), t("216116"), t("78328"), t("815648"), t("47120");
     var d = t("593473"),
-      n = t("591759");
-    let c = e => {
+      c = t("591759");
+    let n = e => {
         if (null == e || "" === e) return null;
         try {
           let a = new URL(e);
-          return n.default.isDiscordHostname(a.hostname) || window.location.host === a.host ? a : null
+          return c.default.isDiscordHostname(a.hostname) || window.location.host === a.host ? a : null
         } catch (e) {
           return null
         }
@@ -18,7 +18,7 @@
       i = e => {
         let a = (0, d.parse)(e);
         return {
-          desktop: c(a.desktop_link),
-          mobile: c(a.mobile_link)
+          desktop: n(a.desktop_link),
+          mobile: n(a.mobile_link)
         }
       }

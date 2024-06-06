@@ -24,8 +24,8 @@ var s = l("735250"),
   T = l("221292"),
   g = l("621853"),
   x = l("318661"),
-  U = l("726059"),
-  A = l("162267"),
+  A = l("726059"),
+  U = l("162267"),
   N = l("484404"),
   C = l("502762"),
   R = l("62154"),
@@ -47,7 +47,7 @@ function L(e) {
   } = e, c = (0, a.useStateFromStores)([g.default], () => {
     var e, t;
     return (null === (t = g.default.getUserProfile(i.id)) || void 0 === t ? void 0 : null === (e = t.application) || void 0 === e ? void 0 : e.id) != null
-  }), f = null === (t = (0, U.default)(i.id, !i.bot && !o).mutualFriends) || void 0 === t ? void 0 : t.length, E = null === (l = (0, A.default)(i.id, !i.bot && !o).mutualGuilds) || void 0 === l ? void 0 : l.length;
+  }), f = null === (t = (0, A.default)(i.id, !i.bot && !o).mutualFriends) || void 0 === t ? void 0 : t.length, E = null === (l = (0, U.default)(i.id, !i.bot && !o).mutualGuilds) || void 0 === l ? void 0 : l.length;
   return (0, s.jsx)("div", {
     className: F.tabBarContainer,
     children: (0, s.jsxs)(n.TabBar, {
@@ -88,8 +88,8 @@ function O(e) {
   var t, l;
   let {
     user: g,
-    guildId: U,
-    channelId: A,
+    guildId: A,
+    channelId: U,
     messageId: O,
     roleId: D,
     friendToken: b,
@@ -102,7 +102,7 @@ function O(e) {
     analyticsLocations: W
   } = (0, f.default)([...w, c.default.PROFILE_MODAL]);
   (0, u.useSubscribeGuildMembers)({
-    [U]: [H.id]
+    [A]: [H.id]
   });
   let z = (0, a.useStateFromStores)([I.default], () => null != I.default.getAnyStreamForUser(H.id)),
     Z = (0, a.useStateFromStores)([_.default], () => _.default.findActivity(H.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
@@ -119,21 +119,21 @@ function O(e) {
         action: "PRESS_SECTION",
         layout: "MODAL",
         userId: H.id,
-        guildId: U,
-        channelId: A,
+        guildId: A,
+        channelId: U,
         messageId: O,
         roleId: D,
         analyticsLocations: W
       }), Q(!0), q(e)
-    }, [H.id, U, A, O, D, W]),
+    }, [H.id, A, U, O, D, W]),
     ei = null == V ? void 0 : V.profileEffectId;
   return (0, s.jsx)(f.AnalyticsLocationProvider, {
     value: W,
     children: (0, s.jsx)(p.UserProfileAnalyticsProvider, {
       layout: "MODAL",
       userId: H.id,
-      guildId: U,
-      channelId: A,
+      guildId: A,
+      channelId: U,
       messageId: O,
       roleId: D,
       children: (0, s.jsx)(o.default, {
@@ -155,8 +155,8 @@ function O(e) {
               friendToken: b,
               onClose: Y,
               isStreaming: (0, d.default)(Z),
-              guildId: U,
-              channelId: A,
+              guildId: A,
+              channelId: U,
               hasProfileEffect: null != ei
             }), (0, s.jsxs)(C.default.Overlay, {
               className: F.overlay,

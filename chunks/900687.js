@@ -29,8 +29,8 @@ function _(e) {
     canDM: T,
     relationshipType: g,
     originalFriendingEnabled: x = !1,
-    improvedFriendingEnabled: U = !1,
-    trackUserProfileAction: A,
+    improvedFriendingEnabled: A = !1,
+    trackUserProfileAction: U,
     viewProfileItem: N,
     onClose: C
   } = e, {
@@ -38,13 +38,13 @@ function _(e) {
   } = (0, r.default)();
 
   function h(e) {
-    A({
+    U({
       action: "SEND_MESSAGE"
     }), a.default.openPrivateChannel(t.id, !1, !1, e), C()
   }
 
   function P(e) {
-    A({
+    U({
       action: "PRESS_OPTIONS"
     }), (0, n.openContextMenuLazy)(e, async () => {
       let {
@@ -57,7 +57,7 @@ function _(e) {
         onRemoveFriend: M,
         onBlock: F,
         onReport: L,
-        onCopyId: () => A({
+        onCopyId: () => U({
           action: "COPY_USER_ID"
         }),
         onMessage: () => h("User Profile Modal Header Buttons - Context Menu"),
@@ -70,7 +70,7 @@ function _(e) {
   }
 
   function M() {
-    A({
+    U({
       action: "REMOVE_FRIEND"
     }), o.default.removeFriend(t.id, {
       location: R
@@ -79,7 +79,7 @@ function _(e) {
 
   function y() {
     try {
-      A({
+      U({
         action: "SEND_FRIEND_REQUEST"
       }), o.default.addRelationship({
         userId: t.id,
@@ -95,7 +95,7 @@ function _(e) {
   }
 
   function j() {
-    A({
+    U({
       action: "IGNORE_FRIEND_REQUEST"
     }), o.default.cancelFriendRequest(t.id, {
       location: R
@@ -104,7 +104,7 @@ function _(e) {
 
   function F() {
     try {
-      A({
+      U({
         action: "BLOCK"
       }), o.default.addRelationship({
         userId: t.id,
@@ -119,13 +119,13 @@ function _(e) {
   }
 
   function L() {
-    A({
+    U({
       action: "REPORT"
     }), (0, u.showReportModalForUser)(t, "@me" === v ? void 0 : v)
   }
   return (0, s.jsxs)("div", {
     className: m.buttons,
-    children: [(x || U) && (0, s.jsxs)(s.Fragment, {
+    children: [(x || A) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(S.default, {
         user: t,
         isCurrentUser: _,
@@ -134,7 +134,7 @@ function _(e) {
         onIgnoreFriend: j,
         onSendMessage: () => h("User Profile Modal Header Buttons - Send Message Button"),
         originalFriendingEnabled: x,
-        improvedFriendingEnabled: U
+        improvedFriendingEnabled: A
       }), _ && (0, s.jsx)(c.default, {
         user: t,
         guildId: v,
@@ -151,7 +151,7 @@ function _(e) {
           className: m.additionalActionsIcon
         })
       }) : null]
-    }), !x && !U && (T ? (0, s.jsx)(f.default, {
+    }), !x && !A && (T ? (0, s.jsx)(f.default, {
       user: t,
       onClose: C
     }) : (0, s.jsx)(c.default, {

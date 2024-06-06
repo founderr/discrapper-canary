@@ -22,9 +22,9 @@ var a = s("735250"),
   S = s("642619"),
   h = s("598"),
   I = s("333867"),
-  T = s("329067"),
-  x = s("981631"),
-  _ = s("302800"),
+  _ = s("329067"),
+  T = s("981631"),
+  x = s("302800"),
   L = s("689938"),
   N = s("894775");
 let b = {
@@ -68,7 +68,7 @@ function v(e) {
       buttonColors: F
     } = (0, E.default)(t.styles),
     U = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
-    H = (0, _.getCustomConfettiDisplayOptions)(t.skuId),
+    H = (0, x.getCustomConfettiDisplayOptions)(t.skuId),
     [w, G] = l.useState(!1),
     [W, Y] = l.useState(!1),
     V = null != F ? {
@@ -157,12 +157,12 @@ function v(e) {
       }), (0, a.jsx)(h.PaymentContextProvider, {
         loadId: j,
         stepConfigs: [],
-        applicationId: x.COLLECTIBLES_APPLICATION_ID,
+        applicationId: T.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: x.PurchaseTypes.ONE_TIME,
-        children: (0, a.jsx)(T.default, {
+        purchaseType: T.PurchaseTypes.ONE_TIME,
+        children: (0, a.jsx)(_.default, {
           ...z
         })
       })]

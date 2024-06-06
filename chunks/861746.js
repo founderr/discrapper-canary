@@ -18,9 +18,9 @@ var a = s("735250"),
   S = s("727637"),
   h = s("607070"),
   I = s("100527"),
-  T = s("906732"),
-  x = s("1585"),
-  _ = s("125988"),
+  _ = s("906732"),
+  T = s("1585"),
+  x = s("125988"),
   L = s("377171"),
   N = s("74179"),
   b = s("107091"),
@@ -57,7 +57,7 @@ var a = s("735250"),
 let ea = U.default.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   el = p.AvatarSizes.SIZE_152,
   en = p.AvatarSizes.SIZE_120,
-  er = (0, x.getDecorationSizeForAvatarSize)(el),
+  er = (0, T.getDecorationSizeForAvatarSize)(el),
   ei = e => {
     let {
       children: t,
@@ -102,7 +102,7 @@ t.default = function(e) {
     isGiftEasterEggEnabled: M
   } = e, U = l.useRef(null), {
     analyticsLocations: eu
-  } = (0, T.default)(I.default.COLLECTIBLES_SHOP_CARD), ec = l.useRef(null), ed = l.useRef(null), ef = (0, S.default)(ec), {
+  } = (0, _.default)(I.default.COLLECTIBLES_SHOP_CARD), ec = l.useRef(null), ed = l.useRef(null), ef = (0, S.default)(ec), {
     defaultPaymentSource: eC
   } = (0, N.default)({
     isGift: !1,
@@ -111,15 +111,15 @@ t.default = function(e) {
     avatarDecorationSrc: eS,
     eventHandlers: eh,
     avatarPlaceholderSrc: eI
-  } = (0, _.default)({
+  } = (0, x.default)({
     user: s,
     avatarDecorationOverride: (null == eg ? void 0 : eg.type) === d.CollectiblesItemType.AVATAR_DECORATION ? eg : void 0,
     size: er,
     animateOnHover: !em
   }), {
-    backgroundColors: eT,
-    buttonColors: ex
-  } = (0, V.default)(t.styles), e_ = l.useMemo(() => F.default.canUseCollectibles(s), [s]), eL = (0, G.getFormattedPriceForCollectiblesProduct)(t, e_, !1), eN = l.useMemo(() => (0, G.getProductDiscount)(t, e_), [t, e_]), eb = (0, G.isPremiumCollectiblesProduct)(t), eR = (0, G.isFreeCollectiblesProduct)(t), {
+    backgroundColors: e_,
+    buttonColors: eT
+  } = (0, V.default)(t.styles), ex = l.useMemo(() => F.default.canUseCollectibles(s), [s]), eL = (0, G.getFormattedPriceForCollectiblesProduct)(t, ex, !1), eN = l.useMemo(() => (0, G.getProductDiscount)(t, ex), [t, ex]), eb = (0, G.isPremiumCollectiblesProduct)(t), eR = (0, G.isFreeCollectiblesProduct)(t), {
     isPurchased: ev
   } = (0, Y.useProductPurchaseState)(t), [eA, eP] = (0, f.useStateFromStoresArray)([w.default], () => [w.default.isClaiming === t.skuId, null != w.default.isClaiming && w.default.isClaiming !== t.skuId]), eO = (0, f.useStateFromStores)([O.default], () => (0, E.isThemeDark)(O.default.theme)), ej = (0, G.isProductNew)(t.skuId), ey = (0, W.useCollectiblesHoverPreviewExperiment)("CollectiblesShopTallCard"), [eM, ek] = l.useState(!1), eB = l.useRef(null), eD = l.useRef(new i.Environment), [eF, eU] = l.useState(!1), [eH, ew] = l.useState(null), eG = ev || eF, eW = (0, v.default)({
     analyticsLocations: eu
@@ -128,7 +128,7 @@ t.default = function(e) {
     location: $.AnalyticsLocations.COLLECTIBLES_LIGHTNING_CHECKOUT
   }), [t]), eK = () => {
     if ((0, g.popLayer)(), eW(), (null == eg ? void 0 : eg.type) === d.CollectiblesItemType.AVATAR_DECORATION) {
-      (0, x.openAvatarDecorationModal)({
+      (0, T.openAvatarDecorationModal)({
         initialSelectedDecoration: eg,
         analyticsLocations: eu
       });
@@ -178,7 +178,7 @@ t.default = function(e) {
     }) : (0, a.jsx)(X.default, {
       product: t,
       discount: eN,
-      isPremiumUser: e_,
+      isPremiumUser: ex,
       className: et.priceTag
     }),
     e$ = () => eb ? null : eR ? (0, a.jsx)(eo, {
@@ -191,7 +191,7 @@ t.default = function(e) {
       tooltipDelay: 250
     }),
     eJ = () => {
-      if (eb && !e_ && !eR) return eq();
+      if (eb && !ex && !eR) return eq();
       let e = eb ? {
         submitting: eA,
         submittingStartedLabel: ee.default.Messages.COLLECTIBLES_COLLECTING,
@@ -324,13 +324,13 @@ t.default = function(e) {
       })
     }, [ek, eV]),
     e2 = eO ? "0 0 15px 1px ".concat(C.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)",
-    e8 = null != eT ? {
+    e8 = null != e_ ? {
       backgroundColor: eO ? "var(--background-floating)" : "var(--background-secondary)",
       borderColor: "var(--chat-border)",
       boxShadow: em ? e2 : "none"
     } : void 0,
-    e3 = null != ex && eM ? {
-      boxShadow: "0px 4px 50px 0px " + ex.primary.toHexString()
+    e3 = null != eT && eM ? {
+      boxShadow: "0px 4px 50px 0px " + eT.primary.toHexString()
     } : {},
     e9 = eM && eH ? {
       boxShadow: "0px 4px 50px 0px " + (eO ? L.default.WHITE : L.default.BLACK)

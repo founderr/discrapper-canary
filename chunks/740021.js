@@ -25,8 +25,8 @@ var i = l("442837"),
   T = l("900687"),
   g = l("228168"),
   x = l("182294"),
-  U = l("602091"),
-  A = l("231338"),
+  A = l("602091"),
+  U = l("231338"),
   N = l("566483");
 let C = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
@@ -60,7 +60,7 @@ function R(e) {
     trackUserProfileAction: G
   } = (0, E.useUserProfileAnalyticsContext)(), k = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), w = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [Y, H] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [A.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [A.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [U.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [U.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
     children: [(0, s.jsx)(_.default, {
@@ -97,7 +97,7 @@ function R(e) {
         }), (0, s.jsx)(v.UserProfileCustomStatusBubble, {
           statusActivity: f,
           profileType: g.UserProfileTypes.FULL_SIZE,
-          hasEntered: P === U.ModalTransitionState.ENTERED
+          hasEntered: P === A.ModalTransitionState.ENTERED
         })]
       })
     })]

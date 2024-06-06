@@ -5,8 +5,8 @@
       }
     }), t("47120");
     var d = t("735250"),
-      n = t("470079"),
-      c = t("664751"),
+      c = t("470079"),
+      n = t("664751"),
       i = t("266067"),
       f = t("613828"),
       o = t("990547"),
@@ -126,7 +126,7 @@
     function Z(e, a) {
       return a ? e.filter(e => !X.has(e)) : e
     }
-    class Q extends n.Component {
+    class Q extends c.Component {
       componentDidMount() {
         N.default.cleanupDisplaySleep(), O.default.initialize()
       }
@@ -138,7 +138,7 @@
         let {
           isAuthenticated: a,
           migrationStatus: t,
-          skipsSettingDefaultPageTitle: n
+          skipsSettingDefaultPageTitle: c
         } = this.props;
         return e = t === I.MigrationStatus.IN_PROGRESS ? null : C.IS_APP_COMPATIBLE_BROWSER ? v.isPlatformEmbedded ? (0, d.jsxs)(f.Switch, {
           children: [(0, d.jsx)(f.Route, {
@@ -225,13 +225,13 @@
             render: () => {
               var e, a, t;
               let d = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                n = (0, c.parse)((null !== (t = window.location.search) && void 0 !== t ? t : "").substr(1)),
-                i = null === (a = n.referring_location) || void 0 === a ? void 0 : a.toString();
+                c = (0, n.parse)((null !== (t = window.location.search) && void 0 !== t ? t : "").substr(1)),
+                i = null === (a = c.referring_location) || void 0 === a ? void 0 : a.toString();
               return ("iOS" === d || "Android" === d) && S.default.track(R.AnalyticEvents.DOWNLOAD_APP, {
                 platform: d,
                 ptb: !1,
                 released: !0,
-                has_e_mail: "true" === n.has_e_mail,
+                has_e_mail: "true" === c.has_e_mail,
                 referring_location: i,
                 qr_code: !0
               }), window.location.href = (0, A.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
@@ -241,18 +241,18 @@
             render: () => {
               var e, a;
               let t = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                n = (0, w.getOpenAppFromEmailDestinations)(null !== (a = window.location.search) && void 0 !== a ? a : "");
+                c = (0, w.getOpenAppFromEmailDestinations)(null !== (a = window.location.search) && void 0 !== a ? a : "");
               if ("iOS" !== t && "Android" !== t) return (0, d.jsx)(f.Redirect, {
-                to: null != n.desktop ? "".concat(n.desktop.pathname).concat(n.desktop.search) : R.Routes.APP
+                to: null != c.desktop ? "".concat(c.desktop.pathname).concat(c.desktop.search) : R.Routes.APP
               });
               {
-                let e = (0, A.getMobileDownloadLink)("app_open_from_email", t, n.mobile),
+                let e = (0, A.getMobileDownloadLink)("app_open_from_email", t, c.mobile),
                   a = (0, l.parseDynamicLink)(e);
                 null != a && S.default.track(R.AnalyticEvents.DEEP_LINK_CLICKED, {
                   fingerprint: (0, s.maybeExtractId)(a.fingerprint),
                   attempt_id: a.attemptId,
                   source: a.utmSource,
-                  destination: null != n.mobile ? n.mobile.toString() : null
+                  destination: null != c.mobile ? c.mobile.toString() : null
                 }), window.location.href = e
               }
             }
@@ -282,7 +282,7 @@
             component: L
           })
         }), (0, d.jsxs)(E.default, {
-          skipsSettingDefaultPageTitle: n,
+          skipsSettingDefaultPageTitle: c,
           children: [e, v.isPlatformEmbedded && (t === I.MigrationStatus.NOT_STARTED || t === I.MigrationStatus.IN_PROGRESS) && !0 !== u.Storage.get(r.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, d.jsx)(g.default, {}) : null]
         })
       }
