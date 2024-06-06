@@ -40,7 +40,7 @@ function f(e, t) {
       computedPermissions: C,
       hasBaseAccessPermissions: R,
       hasSendMessagesPermission: g
-    } = A(E);
+    } = A(E, e instanceof u.ChannelRecordBase && e.isThread());
   return {
     context: E,
     userId: S,
@@ -76,40 +76,40 @@ function S(e, t) {
     S = (0, s.useStateFromStores)([o.default], () => o.default.isViewingRoles(r));
   return i.useMemo(() => {
     let {
-      computedPermissions: e,
-      hasBaseAccessPermissions: i,
-      hasSendMessagesPermission: r
-    } = A(n);
+      computedPermissions: i,
+      hasBaseAccessPermissions: r,
+      hasSendMessagesPermission: s
+    } = A(n, e instanceof u.ChannelRecordBase && e.isThread());
     return {
       context: n,
       userId: E,
       roleIds: f,
       commandType: t,
       isImpersonating: S,
-      computedPermissions: e,
-      hasBaseAccessPermissions: i,
-      hasSendMessagesPermission: r,
+      computedPermissions: i,
+      hasBaseAccessPermissions: r,
+      hasSendMessagesPermission: s,
       allowNsfw: h(n, T, a)
     }
-  }, [t, n, S, f, E, T, a])
+  }, [t, n, S, f, E, T, a, e])
 }
 
 function h(e, t, n) {
   return !!t && (!(e instanceof u.ChannelRecordBase) || (null != e.guild_id ? e.nsfw : n))
 }
 
-function A(e) {
-  let t;
+function A(e, t) {
+  let n, i;
   if (e instanceof u.ChannelRecordBase && e.isPrivate()) return {
     computedPermissions: r.deserialize(0),
     hasBaseAccessPermissions: !0,
     hasSendMessagesPermission: !0
   };
-  let n = E.default.computePermissions(e);
-  return t = !!r.has(n, T.Permissions.ADMINISTRATOR) || (e instanceof u.ChannelRecordBase ? r.has(n, T.Permissions.VIEW_CHANNEL) && r.has(n, T.Permissions.USE_APPLICATION_COMMANDS) : r.has(n, T.Permissions.VIEW_CHANNEL)), {
-    computedPermissions: n,
-    hasBaseAccessPermissions: t,
-    hasSendMessagesPermission: r.has(n, T.Permissions.SEND_MESSAGES)
+  let s = E.default.computePermissions(e);
+  return r.has(s, T.Permissions.ADMINISTRATOR) ? (n = !0, i = !0) : e instanceof u.ChannelRecordBase ? (n = r.has(s, T.Permissions.VIEW_CHANNEL) && r.has(s, T.Permissions.USE_APPLICATION_COMMANDS), i = t ? r.has(s, T.Permissions.SEND_MESSAGES_IN_THREADS) : r.has(s, T.Permissions.SEND_MESSAGES)) : (n = r.has(s, T.Permissions.VIEW_CHANNEL), i = !0), {
+    computedPermissions: s,
+    hasBaseAccessPermissions: n,
+    hasSendMessagesPermission: i
   }
 }
 

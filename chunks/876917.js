@@ -1,51 +1,57 @@
 "use strict";
 s.r(t), s("47120");
-var a = s("735250"),
-  i = s("470079"),
+var i = s("735250"),
+  a = s("470079"),
   l = s("120356"),
   n = s.n(l),
-  r = s("802433"),
-  o = s("680295"),
-  d = s("942023"),
-  u = s("241822");
+  r = s("447452"),
+  o = s("802433"),
+  d = s("680295"),
+  u = s("942023"),
+  c = s("241822"),
+  f = s("500215");
 t.default = e => {
   let {
     profileEffectId: t,
     isHovering: s,
     forCollectedModal: l = !1,
-    isPurchased: c,
-    removeSetHeight: f = !1
-  } = e, p = l ? 250 : .1, [h, m] = i.useState(!0);
-  return (i.useEffect(() => {
-    if (!0 !== l) m(!1);
+    isPurchased: p,
+    removeSetHeight: h = !1
+  } = e, {
+    updatedOnAllSurfaces: m
+  } = (0, r.useSimplifiedProfileExperiment)({
+    location: "ProfileEffectShopPreview"
+  }), g = l ? 250 : .1, [S, C] = a.useState(!0);
+  return (a.useEffect(() => {
+    if (!0 !== l) C(!1);
     else {
       let e = setTimeout(() => {
-        m(!1)
-      }, p);
+        C(!1)
+      }, g);
       return () => {
         clearTimeout(e)
       }
     }
-  }, [p, l]), null != t) ? (0, a.jsxs)("div", {
-    className: n()(d.previewContainer, {
-      [d.previewContainerAnimation]: l,
-      [d.previewContainerSetHeight]: !f
+  }, [g, l]), null != t) ? (0, i.jsxs)("div", {
+    className: n()(u.previewContainer, {
+      [u.previewContainerAnimation]: l,
+      [u.previewContainerSetHeight]: !h
     }),
-    children: [(0, a.jsx)("img", {
-      src: u,
+    children: [(0, i.jsx)("img", {
+      src: m ? f : c,
       alt: " ",
-      className: l ? d.previewForCollected : d.preview,
+      className: l ? u.previewForCollected : u.preview,
       "aria-hidden": !0
-    }), !h && (0, a.jsx)("div", {
-      className: c ? d.purchasedEffect : void 0,
-      children: (0, a.jsx)(o.default, {
+    }), !S && (0, i.jsx)("div", {
+      className: p ? u.purchasedEffect : void 0,
+      children: (0, i.jsx)(d.default, {
         profileEffectId: t,
         useThumbnail: !0,
         autoPlay: l,
-        restartMethod: r.RestartMethod.FromStart,
+        restartMethod: o.RestartMethod.FromStart,
         resetOnHover: !0,
         isHovering: s,
-        introDelay: p,
+        introDelay: g,
         useOpacityOnHover: !1,
         shopPreview: !0
       })
