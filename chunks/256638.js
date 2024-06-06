@@ -48,7 +48,7 @@ var s = n("735250"),
   w = n("859428"),
   H = n("963249"),
   V = n("774276"),
-  Y = n("748770"),
+  Y = n("14335"),
   K = n("246965"),
   W = n("272008"),
   z = n("523255"),
@@ -608,23 +608,7 @@ let eS = a.memo(function() {
         })
       });
     case ef.NoticeTypes.OUTBOUND_PROMOTION:
-      return (0, s.jsxs)(ei.default, {
-        color: ei.NoticeColors.PREMIUM_TIER_2,
-        children: [(0, s.jsx)(ei.NoticeCloseButton, {
-          noticeType: ef.NoticeTypes.OUTBOUND_PROMOTION,
-          onClick: () => {
-            Y.default.dismissOutboundPromotionNotice()
-          }
-        }), (0, s.jsx)(el.default, {
-          className: eI.premiumIcon
-        }), eT.default.Messages.OUTBOUND_PROMOTION_NOTICE, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
-          noticeType: ef.NoticeTypes.OUTBOUND_PROMOTION,
-          onClick: () => {
-            er.default.track(ef.AnalyticEvents.OUTBOUND_PROMOTION_NOTICE_CLICKED), C.default.open(ef.UserSettingsSections.INVENTORY), Y.default.dismissOutboundPromotionNotice()
-          },
-          children: eT.default.Messages.TAKE_ME_THERE
-        })]
-      });
+      return (0, s.jsx)(Y.default, {});
     case ef.NoticeTypes.VIEWING_ROLES:
       return (0, s.jsx)(k.default, {});
     case ef.NoticeTypes.PREMIUM_UNCANCEL:

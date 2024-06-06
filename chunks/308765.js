@@ -193,7 +193,7 @@ let r = {
     inlineRequire: () => n("736401").default
   },
   PromotionsManager: {
-    actions: ["POST_CONNECTION_OPEN"],
+    actions: ["POST_CONNECTION_OPEN", "EXPERIMENTS_FETCH_SUCCESS"],
     inlineRequire: () => n("349540").default
   },
   RelationshipManager: {
