@@ -21,39 +21,36 @@ function I(e) {
   let {
     user: t,
     isHovering: n,
-    disabled: r,
-    onOpenProfile: I
+    onOpenProfile: r
   } = e, {
-    trackUserProfileAction: T
+    trackUserProfileAction: I
   } = (0, u.useUserProfileAnalyticsContext)(), {
-    note: f
-  } = (0, d.default)(t.id), S = () => {
-    T({
+    note: T
+  } = (0, d.default)(t.id), f = () => {
+    I({
       action: "PRESS_ADD_NOTE"
-    }), null == I || I()
+    }), null == r || r()
   };
-  return null == f || "" === f ? (0, i.jsx)(_.default, {
+  return null == T || "" === T ? (0, i.jsx)(_.default, {
     text: c.default.Messages.ADD_NOTE,
     "aria-label": c.default.Messages.ADD_NOTE,
     icon: o.PaperPlusIcon,
-    onClick: S,
+    onClick: f,
     color: E.color,
     look: l.Button.Looks.BLANK,
     className: s()(E.button, {
       [E.visible]: n
-    }),
-    disabled: r
+    })
   }) : (0, i.jsx)(_.default, {
-    text: f,
-    "aria-label": f,
+    text: T,
+    "aria-label": T,
     icon: a.PaperIcon,
-    onClick: S,
+    onClick: f,
     color: E.color,
     look: l.Button.Looks.BLANK,
     className: s()(E.button, {
       [E.visible]: n
     }),
-    tooltipClassName: E.tooltip,
-    disabled: r
+    tooltipClassName: E.tooltip
   })
 }

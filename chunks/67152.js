@@ -15,20 +15,19 @@ t.default = r.memo(function(e) {
     user: t,
     onClose: n,
     bio: E,
-    hidePersonalInformation: I,
-    disableViewFullBio: T
+    hidePersonalInformation: I
   } = e, {
-    guildId: f,
-    channelId: S,
-    messageId: h,
-    roleId: A
+    guildId: T,
+    channelId: f,
+    messageId: S,
+    roleId: h
   } = (0, o.useUserProfileAnalyticsContext)(), {
-    analyticsLocations: m
-  } = (0, a.default)(), [N, p] = r.useState(!1);
+    analyticsLocations: A
+  } = (0, a.default)(), [m, N] = r.useState(!1);
   return I || null == E || "" === E ? null : (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
       ref: e => {
-        null != e && p(e.scrollHeight - e.clientHeight > 1)
+        null != e && N(e.scrollHeight - e.clientHeight > 1)
       },
       className: c.descriptionClamp,
       children: (0, i.jsx)(l.default, {
@@ -36,7 +35,7 @@ t.default = r.memo(function(e) {
         setLineClamp: !1,
         textColor: "header-primary"
       })
-    }), N && (0, i.jsx)(s.Button, {
+    }), m && (0, i.jsx)(s.Button, {
       look: s.Button.Looks.BLANK,
       size: s.Button.Sizes.NONE,
       className: c.viewFullBio,
@@ -44,17 +43,16 @@ t.default = r.memo(function(e) {
       onClick: () => {
         null == n || n(), (0, u.openUserProfileModal)({
           userId: t.id,
-          guildId: null != f ? f : void 0,
-          channelId: null != S ? S : void 0,
-          messageId: null != h ? h : void 0,
-          roleId: null != A ? A : void 0,
+          guildId: null != T ? T : void 0,
+          channelId: null != f ? f : void 0,
+          messageId: null != S ? S : void 0,
+          roleId: null != h ? h : void 0,
           analyticsLocation: {
             section: d.AnalyticsSections.BITE_SIZE_PROFILE_POPOUT
           },
-          sourceAnalyticsLocations: m
+          sourceAnalyticsLocations: A
         })
       },
-      disabled: T,
       children: (0, i.jsx)(s.Text, {
         variant: "text-xs/normal",
         color: "none",

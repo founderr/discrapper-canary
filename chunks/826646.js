@@ -33,9 +33,9 @@ function S(e) {
     pendingBio: E,
     pendingPronouns: y,
     isTryItOutFlow: x,
-    hideBioSection: U,
-    hideExampleButton: j
-  } = e, N = (0, i.useStateFromStores)([f.default], () => null == I ? null : f.default.getMember(I.id, t.id)), C = (0, i.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), b = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), w = null == S ? void 0 : null === (a = S.getPreviewBio(E)) || void 0 === a ? void 0 : a.value, _ = null != y ? y : null == S ? void 0 : S.pronouns, M = (0, v.getPreviewName)({
+    hideBioSection: j,
+    hideExampleButton: U
+  } = e, N = (0, i.useStateFromStores)([f.default], () => null == I ? null : f.default.getMember(I.id, t.id)), C = (0, i.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), b = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), _ = null == S ? void 0 : null === (a = S.getPreviewBio(E)) || void 0 === a ? void 0 : a.value, w = null != y ? y : null == S ? void 0 : S.pronouns, M = (0, v.getPreviewName)({
     pendingNickname: A,
     pendingGlobalName: P,
     user: t,
@@ -43,34 +43,36 @@ function S(e) {
   });
   return (0, l.jsxs)("div", {
     className: g.body,
-    children: [(0, l.jsx)(o.default, {
-      user: t,
-      profileType: p.UserProfileTypes.BITE_SIZE,
-      usernameIcon: (() => {
-        if (!(null != N)) return;
-        if (null !== T) {
-          if (!(null == N.avatar && null == T)) return (0, l.jsx)(d.default, {
-            user: t,
-            nickname: M
-          })
-        }
-      })(),
-      nickname: M,
-      pronouns: _,
-      isTryItOut: x,
-      tags: (0, l.jsx)(s.default, {
-        displayProfile: S,
-        profileType: p.UserProfileTypes.BITE_SIZE
-      })
-    }), b && (0, l.jsx)(n.default, {
-      userId: t.id,
-      inline: !1
-    }), !U && null != w && "" !== w && (0, l.jsx)(c.default, {
-      user: t,
-      bio: w,
-      hidePersonalInformation: C,
-      disableViewFullBio: !0
-    }), !j && (0, l.jsx)(u.default, {
+    children: [(0, l.jsxs)("div", {
+      className: g.content,
+      children: [(0, l.jsx)(o.default, {
+        user: t,
+        profileType: p.UserProfileTypes.BITE_SIZE,
+        usernameIcon: (() => {
+          if (!(null != N)) return;
+          if (null !== T) {
+            if (!(null == N.avatar && null == T)) return (0, l.jsx)(d.default, {
+              user: t,
+              nickname: M
+            })
+          }
+        })(),
+        nickname: M,
+        pronouns: w,
+        isTryItOut: x,
+        tags: (0, l.jsx)(s.default, {
+          displayProfile: S,
+          profileType: p.UserProfileTypes.BITE_SIZE
+        })
+      }), b && (0, l.jsx)(n.default, {
+        userId: t.id,
+        inline: !1
+      }), !j && null != _ && "" !== _ && (0, l.jsx)(c.default, {
+        user: t,
+        bio: _,
+        hidePersonalInformation: C
+      })]
+    }), !U && (0, l.jsx)(u.default, {
       text: h.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON
     })]
   })
