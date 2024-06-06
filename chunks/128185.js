@@ -114,7 +114,8 @@ function p(e) {
       className: C.carousel,
       renderItem: u,
       controlsClassName: C.paginationControls,
-      paginationButtonClassName: C.paginationButton
+      paginationButtonClassName: C.paginationButton,
+      unidirectional: !0
     })
   })
 }

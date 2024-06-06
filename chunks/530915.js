@@ -89,25 +89,27 @@ let x = e => {
       className: o,
       controlsClassName: c,
       paginationButtonClassName: f,
-      delay: C,
-      initialPaused: E = !1,
-      springConfig: S
-    } = e, [h, _] = (0, r.useState)(0), [N, L] = (0, r.useState)(!1), b = i().useCallback(() => L(!0), []), R = i().useCallback(() => L(!1), []), v = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), A = null != C && !E && !N && v, P = i().useCallback(e => (t.length + h + e) % t.length, [t, h]), O = i().useCallback(d()((e, s, n) => {
-      null != n && (null == a || a(t[e], s, e, n)), null == l || l(t[e], s, e), _(e)
+      springConfig: C,
+      delay: E,
+      initialPaused: S = !1,
+      unidirectional: h = !1
+    } = e, [_, N] = (0, r.useState)(0), [L, b] = (0, r.useState)(!1), [v, R] = (0, r.useState)(!1), A = i().useCallback(() => R(!0), []), P = i().useCallback(() => R(!1), []), O = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), j = null != E && !S && !v && O, y = i().useCallback(e => (t.length + _ + e) % t.length, [t, _]), M = i().useCallback(d()((e, s, n) => {
+      null != n && (null == a || a(t[e], s, e, n)), b("GO_TO_SLIDE" === n), null == l || l(t[e], s, e), N(e)
     }, 500), [t, a, l]);
     return (0, r.useEffect)(() => {
-      if (A) {
-        let e = P(1),
-          t = setInterval(() => O(e, h), C);
+      if (j) {
+        let e = y(1),
+          t = setInterval(() => M(e, _), E);
         return () => clearInterval(t)
       }
-    }, [A, C, h, P, O]), (0, n.jsxs)("div", {
+    }, [j, E, _, y, M]), (0, n.jsxs)("div", {
       className: u()(I.carouselContainer, o),
-      onMouseEnter: b,
-      onMouseLeave: R,
+      onMouseEnter: A,
+      onMouseLeave: P,
       children: [(0, n.jsx)(m.Slides, {
-        activeSlide: String(h),
-        springConfig: null != S ? S : T,
+        activeSlide: String(_),
+        springConfig: null != C ? C : T,
+        directionOverride: h && !L ? "forwards" : void 0,
         fadeInOut: !0,
         children: t.map((e, t) => (0, n.jsx)(m.Slide, {
           id: String(t),
@@ -119,16 +121,16 @@ let x = e => {
       }), t.length > 1 && (0, n.jsx)(x, {
         className: c,
         paginationButtonClassName: f,
-        currentSlideIndex: h,
+        currentSlideIndex: _,
         numSlides: t.length,
         onNext: () => {
-          O(P(1), h, "NEXT")
+          M(y(1), _, "NEXT")
         },
         onPrevious: () => {
-          O(P(11), h, "PREVIOUS")
+          M(y(11), _, "PREVIOUS")
         },
         onIndicatorClick: e => {
-          O(e, h, "GO_TO_SLIDE")
+          M(e, _, "GO_TO_SLIDE")
         }
       })]
     })
