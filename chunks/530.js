@@ -46,7 +46,7 @@ function _(e) {
         variant: h,
         children: c
       })), null != E && (0, i.jsx)("div", {
-        className: d.nicknameIcons,
+        className: s()(d.nicknameIcons, m),
         children: E
       })]
     }), (0, i.jsxs)("div", {
