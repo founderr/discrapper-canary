@@ -17378,6 +17378,7 @@ e.exports = Object.freeze({
   QUESTS_MEMBERS_LIST_GAME_TILE_ALT: "A game tile displaying {gameTitle}, published by {gamePublisher}.",
   QUESTS_REWARD_AVATAR_DECORATION_HEADER: "Congratulations!",
   QUESTS_REWARD_AVATAR_DECORATION_BODY: "{decorationName} is now yours FOR-EV-ERRRR! You can use it anytime on your profile page.",
+  QUESTS_REWARD_SPONSORED_BY: "Sponsored by {publisherName}",
   QUESTS_VIEW_COLLECTIBLE: "View Deco",
   QUEST_AVAILABLE: "Quest Available",
   QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE: "No Quest progress yet",
