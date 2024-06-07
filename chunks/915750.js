@@ -2,6 +2,9 @@
 n.r(t), n.d(t, {
   QuestContentImpressionTrackerInner: function() {
     return f
+  },
+  getQuestContentImpressionTrackerKey: function() {
+    return I
   }
 });
 var i = n("735250"),
@@ -105,7 +108,7 @@ function f(e) {
       r = (n || o || u) && i,
       s = (n || o) && !i || u;
     (r || s) && null != l.current && l.current.stop(), r && (l.current = new E(e.questOrQuests, e.questContent, e.questContentPosition, u, e.trackGuildAndChannelMetadata), l.current.start())
-  }, [a, t, l, o, n, e.questOrQuests, e.questContent, e.questContentPosition, e.trackGuildAndChannelMetadata, u]), (0, i.jsx)(r.Fragment, {
+  }, [a, t, l, o, n, e.questOrQuests, e.questContent, e.questContentPosition, e.trackGuildAndChannelMetadata, u]), (0, i.jsx)(i.Fragment, {
     children: e.children(s)
-  }, I(e.questOrQuests, e.questContent))
+  })
 }

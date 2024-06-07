@@ -47,5 +47,5 @@ function c(e) {
   };
   return (0, i.jsx)(u.QuestContentImpressionTrackerInner, {
     ...l
-  })
+  }, (0, u.getQuestContentImpressionTrackerKey)(e.questOrQuests, e.questContent))
 }
