@@ -196,6 +196,7 @@ t.default = function() {
               })
             })]
           }), (0, a.jsx)(p.default, {
+            showGradient: !0,
             className: B.promoNitroButton,
             subscriptionTier: G.PremiumSubscriptionSKUs.TIER_2,
             buttonText: F.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
