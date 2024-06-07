@@ -42,7 +42,7 @@ function j(e, t) {
   (0, h.openContextMenuLazy)(e, async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("7654"), n.e("33053"), n.e("46136"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("96151"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("7654"), n.e("33053"), n.e("46136"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("67526"), n.e("90144"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
     return n => (0, l.jsx)(e, {
       ...n,
       guild: t
@@ -57,8 +57,8 @@ t.default = a.memo(function(e) {
     onDragStart: w,
     onDragEnd: B,
     route: F,
-    guild: H,
-    animatable: V,
+    guild: V,
+    animatable: H,
     selected: k = !1,
     unread: Y = !1,
     mediaState: K,
@@ -112,14 +112,14 @@ t.default = a.memo(function(e) {
       })
     }, [$, F]),
     eC = a.useCallback(() => {
-      if (null != F || null == H || W || !Q) return;
-      let e = (0, p.getChannelIdForGuildTransition)(H.id);
-      null != e && f.default.preload(H.id, e)
-    }, [F, H, W, Q]),
+      if (null != F || null == V || W || !Q) return;
+      let e = (0, p.getChannelIdForGuildTransition)(V.id);
+      null != e && f.default.preload(V.id, e)
+    }, [F, V, W, Q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
     eE = a.useCallback(e => {
-      null != H && !eg && Z(e, H)
-    }, [H, Z, eg]),
+      null != V && !eg && Z(e, V)
+    }, [V, Z, eg]),
     eS = a.useCallback(e => {
       if ("ArrowLeft" === e.key && null != ee) {
         var t;
@@ -136,9 +136,9 @@ t.default = a.memo(function(e) {
     eI = a.useCallback(e => {
       null == U || U($, e)
     }, [$, U]);
-  if (null == H) return null;
+  if (null == V) return null;
   let eN = ef || ed ? (0, l.jsx)(A.default, {
-      guild: H,
+      guild: V,
       show: ef,
       active: k,
       onAnimationStart: function() {
@@ -149,10 +149,10 @@ t.default = a.memo(function(e) {
       }
     }) : (0, l.jsx)(N.default, {
       ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-        guildName: H.toString(),
+        guildName: V.toString(),
         mentions: z
       }),
-      name: H.toString(),
+      name: V.toString(),
       onClick: ep,
       onMouseEnter: function() {
         q || eo(!0)
@@ -163,7 +163,7 @@ t.default = a.memo(function(e) {
       onMouseDown: eC,
       onContextMenu: eE,
       onKeyDown: eS,
-      icon: H.getIconURL(96, eu && V),
+      icon: V.getIconURL(96, eu && H),
       selected: k || eu,
       ...ei,
       role: "treeitem"
@@ -172,7 +172,7 @@ t.default = a.memo(function(e) {
       children: (0, l.jsx)(x.default, {})
     }) : (0, l.jsx)("div", {
       ref: X ? es : void 0,
-      "data-dnd-name": H.toString(),
+      "data-dnd-name": V.toString(),
       className: i()(D.blobContainer, {
         [D.sorting]: q,
         [D.wobble]: ef,
@@ -194,12 +194,12 @@ t.default = a.memo(function(e) {
       unread: !ea && Y,
       className: D.pill
     }), (0, l.jsx)(v.default, {
-      guild: H,
+      guild: V,
       disabled: q,
       isDragging: ea,
       children: eT
     }), X ? (0, l.jsx)(L.default, {
-      name: H.name,
+      name: V.name,
       targetNode: G,
       onDragOverChanged: e_
     }) : null]
