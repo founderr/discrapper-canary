@@ -110,8 +110,8 @@ t.default = function(e) {
     code: o,
     drop: I,
     platform: N,
-    transitionState: f
-  } = e, g = (0, d.useUID)(), [m, C] = n.useState();
+    transitionState: g
+  } = e, f = (0, d.useUID)(), [m, C] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
       await (0, u.fetchCodePlatformAvailability)(I.dropsQuestId)
@@ -119,8 +119,8 @@ t.default = function(e) {
   }, [I.dropsQuestId, o]);
   let A = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
   return (0, a.jsx)(i.ModalRoot, {
-    transitionState: f,
-    "aria-labelledby": g,
+    transitionState: g,
+    "aria-labelledby": f,
     children: (0, a.jsx)(a.Fragment, {
       children: (() => {
         if (null != o) return (0, a.jsx)(_, {

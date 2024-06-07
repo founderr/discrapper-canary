@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 });
 var a = s("735250");
@@ -20,12 +20,12 @@ var n = s("120356"),
   _ = s("981631"),
   I = s("689938"),
   N = s("247763"),
-  f = s("611273");
+  g = s("611273");
 
-function g() {
+function f() {
   var e, t, n;
   let {
-    enabled: g,
+    enabled: f,
     autoToggle: m,
     hideInstantInvites: C,
     hidePersonalInformation: A,
@@ -38,13 +38,13 @@ function g() {
     o.default.update({
       [e]: t
     })
-  }, x = null !== (n = null === u.default || void 0 === u.default ? void 0 : null === (t = u.default.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
+  }, M = null !== (n = null === u.default || void 0 === u.default ? void 0 : null === (t = u.default.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
   return (0, a.jsxs)(r.FormSection, {
     className: N.container,
     tag: r.FormTitleTags.H1,
     title: I.default.Messages.STREAMER_MODE,
     children: [(0, a.jsx)(r.FormNotice, {
-      className: f.marginBottom40,
+      className: g.marginBottom40,
       iconClassName: N.noticeIcon,
       type: r.FormNoticeTypes.PRIMARY,
       imageData: {
@@ -58,7 +58,7 @@ function g() {
         streamkitURL: _.MarketingURLs.STREAMKIT
       })
     }), (0, a.jsx)(r.FormSwitch, {
-      value: g,
+      value: f,
       onChange: e => R("enabled", e),
       note: I.default.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
         onClick: () => {
@@ -74,7 +74,7 @@ function g() {
         children: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
       })
     })(), (0, a.jsx)(r.FormTitle, {
-      className: l()(f.marginTop40, f.marginBottom8),
+      className: l()(g.marginTop40, g.marginBottom8),
       children: I.default.Messages.OPTIONS
     }), (0, a.jsx)(c.Subsetting, {
       setting: T.WebSetting.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
@@ -108,7 +108,7 @@ function g() {
         note: I.default.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
         children: I.default.Messages.DISABLE_NOTIFICATIONS_LABEL
       })
-    }), x && (0, a.jsx)(c.Subsetting, {
+    }), M && (0, a.jsx)(c.Subsetting, {
       setting: T.WebSetting.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
       children: (0, a.jsx)(r.FormSwitch, {
         value: p,

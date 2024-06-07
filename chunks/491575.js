@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("607070"),
   E = n("317858"),
   h = n("635395"),
-  C = n("5560"),
-  _ = n("451478"),
+  _ = n("5560"),
+  C = n("451478"),
   m = n("585483"),
   S = n("145604"),
   p = n("718813"),
@@ -26,7 +26,7 @@ t.default = s.memo(function() {
         duration: n,
         intensity: a
       } = t;
-      if (f.default.useReducedMotion || !_.default.isFocused()) return;
+      if (f.default.useReducedMotion || !C.default.isFocused()) return;
       let {
         current: s
       } = e;
@@ -40,6 +40,6 @@ t.default = s.memo(function() {
     children: [(0, a.jsx)(p.default, {
       className: g.layers,
       children: (0, a.jsx)(o.default, {})
-    }), (0, a.jsx)(h.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(S.default, {}), (0, a.jsx)(C.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {})]
+    }), (0, a.jsx)(h.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(S.default, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {})]
   })
 })

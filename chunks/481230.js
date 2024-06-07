@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var s = n("913527"),
   a = n.n(s),
   i = n("990547"),
-  l = n("570140"),
-  r = n("479531"),
+  r = n("570140"),
+  l = n("479531"),
   o = n("771308"),
   u = n("314897"),
   d = n("626135"),
@@ -49,7 +49,7 @@ function m(e) {
     promoEmailConsent: N = null,
     usedUsernameSuggestion: R = null
   } = e;
-  return l.default.dispatch({
+  return r.default.dispatch({
     type: "REGISTER",
     birthday: A ? T : null
   }), null != T && ((0, f.default)(T, h.AnalyticsSections.REGISTER), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
@@ -88,7 +88,7 @@ function m(e) {
       }
     }
   }).then(e => {
-    l.default.dispatch({
+    r.default.dispatch({
       type: "REGISTER_SUCCESS",
       token: e.body.token
     }), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
@@ -96,8 +96,8 @@ function m(e) {
       action: E.AgeGateAnalyticAction.AGE_GATE_SUCCESS
     })
   }, e => {
-    let t = new r.default(e);
-    throw l.default.dispatch({
+    let t = new l.default(e);
+    throw r.default.dispatch({
       type: "REGISTER_FAILURE",
       error: t
     }), null != t.getFieldErrors("date_of_birth") && o.preventUnderageRegistration(E.AgeGateSource.REGISTER), d.default.track(h.AnalyticEvents.REGISTER_SUBMIT_ERRORED, {

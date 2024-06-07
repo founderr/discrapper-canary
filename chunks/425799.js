@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("47120"), s("315314"), s("610138"), s("216116"), s("78328"), s("815648");
 var a = s("735250"),
@@ -20,15 +20,15 @@ var a = s("735250"),
   I = s("334428"),
   N = s("844593");
 
-function f() {
+function g() {
   let e = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     [t, s] = n.useState(!0),
-    [f, g] = n.useState([]),
+    [g, f] = n.useState([]),
     m = n.useRef(null),
     [C, A] = n.useState(!1),
     [h, O] = n.useState(!1),
     [p, R] = n.useState(!1),
-    x = (0, r.isThemeDark)((0, u.default)());
+    M = (0, r.isThemeDark)((0, u.default)());
   return null == e ? (0, a.jsx)("div", {}) : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: _.root,
@@ -43,7 +43,7 @@ function f() {
           description: "debug",
           accessibilityLabel: "debug",
           reducedMotionSrc: "",
-          effects: p ? (0, T.patchAndroid)(f) : f,
+          effects: p ? (0, T.patchAndroid)(g) : g,
           animationType: 0
         },
         profileEffectId: "debug"
@@ -66,7 +66,7 @@ function f() {
           description: "debug",
           accessibilityLabel: "debug",
           reducedMotionSrc: "",
-          effects: p ? (0, T.patchAndroid)(f) : f,
+          effects: p ? (0, T.patchAndroid)(g) : g,
           animationType: 0
         },
         profileEffectId: "debug"
@@ -118,8 +118,8 @@ function f() {
               s = new FileReader;
             s.onload = async e => {
               if (null == e.target || "string" != typeof e.target.result) return;
-              let s = await (0, T.createLayer)(URL.createObjectURL(t), t, f.length);
-              g(e => [...e, s])
+              let s = await (0, T.createLayer)(URL.createObjectURL(t), t, g.length);
+              f(e => [...e, s])
             }, s.readAsDataURL(t)
           },
           multiple: !1
@@ -128,10 +128,10 @@ function f() {
         variant: "text-sm/semibold",
         children: "Make sure to upload the bottommost layer first!"
       })]
-    }), f.map((e, t) => (0, a.jsxs)("div", {
+    }), g.map((e, t) => (0, a.jsxs)("div", {
       style: {
         marginBottom: 8,
-        color: x ? "white" : "black"
+        color: M ? "white" : "black"
       },
       children: [(0, a.jsxs)("div", {
         style: {
@@ -149,7 +149,7 @@ function f() {
           color: o.ButtonColors.RED,
           look: o.ButtonLooks.LINK,
           onClick: () => {
-            g(t => t.filter(t => t !== e))
+            f(t => t.filter(t => t !== e))
           },
           children: "Remove"
         })]
@@ -160,7 +160,7 @@ function f() {
         value: e.start,
         className: _.numberInput,
         onChange: e => {
-          g(s => {
+          f(s => {
             let a = [...s],
               n = s[t];
             return n.start = +e.target.value, a[t] = n, a
@@ -173,7 +173,7 @@ function f() {
         value: e.duration,
         className: _.numberInput,
         onChange: e => {
-          g(s => {
+          f(s => {
             let a = [...s],
               n = s[t];
             return n.duration = +e.target.value, a[t] = n, a
@@ -186,7 +186,7 @@ function f() {
         checked: e.loop,
         className: _.checkBox,
         onChange: e => {
-          g(s => {
+          f(s => {
             let a = [...s],
               n = s[t];
             return n.loop = e.target.checked, a[t] = n, a
@@ -200,7 +200,7 @@ function f() {
           value: e.loopDelay,
           className: _.checkBox,
           onChange: e => {
-            g(s => {
+            f(s => {
               let a = [...s],
                 n = s[t];
               return n.loopDelay = +e.target.value, a[t] = n, a
@@ -215,7 +215,7 @@ function f() {
         className: _.checkBox,
         disabled: !0,
         onChange: e => {
-          g(s => {
+          f(s => {
             let a = [...s],
               n = s[t];
             return n.zIndex = +e.target.value, a[t] = n, a
@@ -228,7 +228,7 @@ function f() {
         color: o.ButtonColors.RED,
         look: o.ButtonLooks.LINK,
         onClick: () => {
-          g([])
+          f([])
         },
         children: "Clear Assets"
       }), (0, a.jsx)(o.Button, {
@@ -240,7 +240,7 @@ function f() {
       }), (0, a.jsx)(o.Button, {
         color: o.ButtonColors.BRAND,
         onClick: () => {
-          navigator.clipboard.writeText((0, T.exportConfig)(f, "proto")), (0, o.showToast)((0, o.createToast)("Copied to clipboard!", o.ToastType.SUCCESS))
+          navigator.clipboard.writeText((0, T.exportConfig)(g, "proto")), (0, o.showToast)((0, o.createToast)("Copied to clipboard!", o.ToastType.SUCCESS))
         },
         children: "Export"
       })]

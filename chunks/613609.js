@@ -12,12 +12,12 @@ var a = n("735250"),
   f = n("650233"),
   E = n("981631"),
   h = n("756286"),
-  C = n("84854");
+  _ = n("84854");
 t.default = e => {
   let {
     guildId: t,
     inviteCode: n
-  } = e, [_, m] = s.useState(h.WaveStates.INITIAL), [S, p] = s.useState(null != n);
+  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, p] = s.useState(null != n);
   s.useEffect(() => {
     null != n && i.default.resolveInvite(n, "Hub").finally(() => p(!1))
   }, [n]);
@@ -31,17 +31,17 @@ t.default = e => {
     }, []),
     A = (0, c.getArtForPath)();
   return (0, a.jsx)("div", {
-    className: C.page,
+    className: _.page,
     children: (0, a.jsxs)(d.default, {
       embedded: !0,
       splash: A,
-      waveState: _,
+      waveState: C,
       showLogo: !1,
       updateWaveState: T,
       children: [(0, a.jsx)("div", {
-        className: C.dragRegion
+        className: _.dragRegion
       }), (0, a.jsx)("div", {
-        className: C.contentWrapper,
+        className: _.contentWrapper,
         children: !S && (0, a.jsx)(f.HubEmailConnectionModalView, {
           invite: I
         })

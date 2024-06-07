@@ -26,8 +26,8 @@ var a, n = s("735250"),
   T = s("74538"),
   A = s("807160"),
   R = s("474936"),
-  y = s("231338"),
-  M = s("689938"),
+  M = s("231338"),
+  y = s("689938"),
   g = s("961988"),
   L = s("511700");
 
@@ -103,13 +103,13 @@ class b extends(a = i.PureComponent) {
       className: g.externalRow,
       children: [(0, n.jsx)("div", {
         className: g.externalRowHeader,
-        children: M.default.Messages.BILLING_EXTERNAL_HEADER.format({
-          paymentGatewayName: y.PaymentGatewayToFriendlyName[e.paymentGateway]
+        children: y.default.Messages.BILLING_EXTERNAL_HEADER.format({
+          paymentGatewayName: M.PaymentGatewayToFriendlyName[e.paymentGateway]
         })
       }), (0, n.jsx)("div", {
         className: g.externalRowBody,
-        children: M.default.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
-          paymentGatewayName: y.PaymentGatewayToFriendlyName[e.paymentGateway],
+        children: y.default.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
+          paymentGatewayName: M.PaymentGatewayToFriendlyName[e.paymentGateway],
           billingHistoryLink: (0, T.getExternalSubscriptionMethodUrl)(e.paymentGateway, "BILLING_HISTORY")
         })
       })]
@@ -132,13 +132,13 @@ class b extends(a = i.PureComponent) {
             className: g.paymentRowHeader,
             children: [(0, n.jsx)("div", {
               className: L.date,
-              children: M.default.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
+              children: y.default.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
             }), (0, n.jsx)("div", {
               className: g.paymentRowHeaderDescription,
-              children: M.default.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
+              children: y.default.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
             }), (0, n.jsx)("div", {
               className: L.amount,
-              children: M.default.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
+              children: y.default.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
             })]
           })
         }), (0, n.jsx)(D, {

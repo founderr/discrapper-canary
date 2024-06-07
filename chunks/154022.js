@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("627845"),
   I = s("786761"),
   N = s("3148"),
-  f = s("739566"),
-  g = s("753206"),
+  g = s("739566"),
+  f = s("753206"),
   m = s("440849"),
   C = s("921801"),
   A = s("196051"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   O = s("285952"),
   p = s("153124"),
   R = s("786048"),
-  x = s("897353"),
-  M = s("626135"),
+  M = s("897353"),
+  x = s("626135"),
   D = s("63063"),
   L = s("695346"),
   P = s("263937"),
@@ -43,8 +43,8 @@ var a = s("735250"),
   y = s("572965"),
   V = s("611273"),
   H = s("328756");
-let k = (0, p.uid)(),
-  Y = (0, p.uid)(),
+let Y = (0, p.uid)(),
+  k = (0, p.uid)(),
   w = (0, p.uid)(),
   W = o().debounce(e => {
     (0, E.setSaturation)(e)
@@ -138,10 +138,10 @@ function Q() {
         })]
       }), (0, a.jsx)("div", {
         className: y.previewMessage,
-        children: (0, a.jsx)(g.default, {
+        children: (0, a.jsx)(f.default, {
           compact: e,
           author: {
-            ...(0, f.getMessageAuthor)(t),
+            ...(0, g.getMessageAuthor)(t),
             colorString: "#DD80F4"
           },
           message: t
@@ -162,17 +162,17 @@ function q() {
   return (0, a.jsxs)(u.FormSection, {
     className: V.marginTop20,
     children: [(0, a.jsx)(u.FormTitle, {
-      id: k,
+      id: Y,
       className: V.marginBottom8,
       children: B.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
     }), (0, a.jsx)(u.FormText, {
-      id: Y,
+      id: k,
       type: u.FormText.Types.DESCRIPTION,
       className: V.marginBottom20,
       children: B.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
     }), (0, a.jsx)(u.Slider, {
-      "aria-labelledby": k,
-      "aria-describedby": Y,
+      "aria-labelledby": Y,
+      "aria-describedby": k,
       markers: j.Accessibility.SATURATION_INCREMENTS,
       equidistant: !0,
       stickToMarkers: !0,
@@ -412,7 +412,7 @@ function ea() {
       value: t,
       note: B.default.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
       onChange: e => {
-        M.default.track(j.AnalyticEvents.LEGACY_CHAT_INPUT_TOGGLED, {
+        x.default.track(j.AnalyticEvents.LEGACY_CHAT_INPUT_TOGGLED, {
           enabled: e,
           location: {
             section: j.AnalyticsSections.SETTINGS_ACCESSIBILITY
@@ -460,7 +460,7 @@ function en() {
             children: [s ? (0, a.jsx)(R.default, {
               width: 24,
               height: 24
-            }) : (0, a.jsx)(x.default, {
+            }) : (0, a.jsx)(M.default, {
               width: 24,
               height: 24
             }), (0, a.jsx)("span", {

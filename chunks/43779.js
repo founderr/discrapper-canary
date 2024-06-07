@@ -21,7 +21,7 @@ function h(e) {
     quest: t,
     location: n,
     questContent: h
-  } = e, C = o.SharedQuestFields.build(t.config).defaultReward.messages.name, _ = (0, r.getQuestsInstructionsToWinReward)({
+  } = e, _ = o.SharedQuestFields.build(t.config).defaultReward.messages.name, C = (0, r.getQuestsInstructionsToWinReward)({
     quest: t,
     location: n,
     useV2Variants: !0
@@ -33,8 +33,8 @@ function h(e) {
     color: "text-brand",
     tag: "span",
     className: E.header,
-    children: C
-  }), [C]);
+    children: _
+  }), [_]);
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsxs)("div", {
@@ -70,11 +70,11 @@ function h(e) {
               rewardHook: g
             })
           })
-        }), null != _ ? (0, a.jsx)(l.Text, {
+        }), null != C ? (0, a.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
           className: E.description,
-          children: _
+          children: C
         }) : null]
       })]
     }), I ? (0, a.jsx)(c.default, {

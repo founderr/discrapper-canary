@@ -1,36 +1,36 @@
 "use strict";
 n.r(t);
-var i = n("735250");
+var a = n("735250");
 n("470079");
-var a = n("120356"),
-  s = n.n(a),
-  l = n("481060"),
+var l = n("120356"),
+  s = n.n(l),
+  i = n("481060"),
   r = n("918701"),
-  u = n("644646"),
-  o = n("456030");
+  o = n("644646"),
+  u = n("456030");
 t.default = function(e) {
   let {
     className: t,
     autoplay: n,
-    quest: a,
+    quest: l,
     questContent: d,
     questExperimentLocation: c
   } = e, f = (0, r.getQuestsInstructionsToWinReward)({
-    quest: a,
+    quest: l,
     location: c
   });
-  return (0, i.jsxs)("div", {
-    className: s()(o.wrapper, t),
+  return (0, a.jsxs)("div", {
+    className: s()(u.wrapper, t),
     style: {
-      color: a.config.colors.primary
+      color: l.config.colors.primary
     },
-    children: [(0, i.jsx)(u.default, {
+    children: [(0, a.jsx)(o.default, {
       autoplay: n,
-      className: o.rewardTile,
-      quest: a,
+      className: u.rewardTile,
+      quest: l,
       questContent: d
-    }), (0, i.jsx)(l.Text, {
-      className: o.instructions,
+    }), (0, a.jsx)(i.Text, {
+      className: u.instructions,
       variant: "text-sm/normal",
       color: "text-normal",
       children: f

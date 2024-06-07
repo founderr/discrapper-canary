@@ -37,7 +37,7 @@ function S(e) {
       }
       n()
     },
-    x = () => {
+    N = () => {
       m.default.endEvent(_.id, _.guild_id)
     };
   return A ? (0, a.jsx)(s.Popout, {
@@ -54,7 +54,7 @@ function S(e) {
           children: (0, a.jsx)(s.MenuItem, {
             id: "end-voice-event",
             color: "danger",
-            action: x,
+            action: N,
             label: C.default.Messages.END_EVENT,
             icon: f.default
           })

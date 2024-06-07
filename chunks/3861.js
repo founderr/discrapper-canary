@@ -28,29 +28,29 @@ t.default = (0, r.default)(e => {
     onContextMenuParticipant: I,
     onFullscreenParticipant: A,
     channel: v,
-    hasConnectPermission: x,
-    className: N,
+    hasConnectPermission: N,
+    className: x,
     inCall: M,
     showParticipants: R = !0,
     paused: y = !1,
     width: L,
-    height: j,
-    idle: O,
+    height: O,
+    idle: j,
     mode: P,
     popoutWindow: D,
     awaitingRemoteSessionInfo: b
   } = e;
   l.useEffect(() => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
-  }, [L, j]);
+  }, [L, O]);
   let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.some(e => (0, o.isActivityParticipantCurrentUserCurrentSession)(e))), [n, r]);
   if ((null == b ? void 0 : b.channelId) === v.id) return (0, a.jsx)(h.default, {
-    height: j
+    height: O
   });
   if ((null == v ? void 0 : v.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
     channel: v,
     participants: t,
-    hasConnectPermission: x
+    hasConnectPermission: N
   });
   if (P === C.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
     guildId: v.guild_id,
@@ -87,9 +87,9 @@ t.default = (0, r.default)(e => {
     filteredParticipants: U,
     participants: t,
     popoutWindow: D,
-    className: N,
-    idle: O,
-    height: j,
+    className: x,
+    idle: j,
+    height: O,
     width: L,
     layout: _,
     inCall: M,

@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("921801"),
   I = s("607018"),
   N = s("778764"),
-  f = s("314897"),
-  g = s("325067"),
+  g = s("314897"),
+  f = s("325067"),
   m = s("594174"),
   C = s("285952"),
   A = s("572004"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   O = s("714565"),
   p = s("202858"),
   R = s("726985"),
-  x = s("981631"),
-  M = s("815660"),
+  M = s("981631"),
+  x = s("815660"),
   D = s("689938"),
   L = s("493087"),
   P = s("611273");
@@ -85,7 +85,7 @@ class U extends n.PureComponent {
     } = this.state, {
       currentUser: n,
       togglingSMS: l
-    } = this.props, i = null != n.phone, r = n.hasFlag(x.UserFlags.MFA_SMS);
+    } = this.props, i = null != n.phone, r = n.hasFlag(M.UserFlags.MFA_SMS);
     if (i || r) {
       let e = s ? n.phone : this.maskPhoneNumber(n.phone);
       t = (0, a.jsxs)(o.FormText, {
@@ -278,7 +278,7 @@ class U extends n.PureComponent {
       ...t,
       ...e
     }), {
-      modalKey: M.PHONE_VERIFICATION_MODAL_KEY
+      modalKey: x.PHONE_VERIFICATION_MODAL_KEY
     })
   }
   constructor(...e) {
@@ -297,7 +297,7 @@ class U extends n.PureComponent {
         onConfirm: () => d.default.disable()
       })
     }), b(this, "generateBackupCodes", async () => {
-      let e = g.default.getVerificationKey();
+      let e = f.default.getVerificationKey();
       await d.default.confirmViewBackupCodes(e, !0)
     }), b(this, "sendMFABackupCodesVerificationKeyEmail", () => {
       (0, o.openModal)(e => (0, a.jsx)(E.default, {
@@ -363,9 +363,9 @@ class U extends n.PureComponent {
 function j(e) {
   let t = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser());
   i()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
-  let s = (0, r.useStateFromStoresObject)([g.default, f.default], () => ({
-    togglingSMS: g.default.togglingSMS,
-    hasTOTPEnabled: f.default.hasTOTPEnabled()
+  let s = (0, r.useStateFromStoresObject)([f.default, g.default], () => ({
+    togglingSMS: f.default.togglingSMS,
+    hasTOTPEnabled: g.default.hasTOTPEnabled()
   }));
   return (0, a.jsx)(U, {
     currentUser: t,

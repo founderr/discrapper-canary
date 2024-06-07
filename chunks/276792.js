@@ -17,8 +17,8 @@ var s = n("704215"),
   f = n("823188"),
   E = n("474936"),
   h = n("981631"),
-  C = n("689938"),
-  _ = n("715588"),
+  _ = n("689938"),
+  C = n("715588"),
   m = n("74316");
 
 function S(e) {
@@ -31,7 +31,7 @@ function S(e) {
     isLightTheme: T
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
-  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : C.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
@@ -45,34 +45,34 @@ function S(e) {
       e && N()
     }
   }), L = "" !== S.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
-    className: _.termsApplyAnchor,
+    className: C.termsApplyAnchor,
     href: c.default.getArticleURL(S.helpArticleId),
     children: (0, a.jsx)(i.Heading, {
       variant: "heading-md/normal",
-      className: _.termsApplyBodyText,
-      children: C.default.Messages.BOGO_TERMS_APPLY
+      className: C.termsApplyBodyText,
+      children: _.default.Messages.BOGO_TERMS_APPLY
     })
-  }) : void 0, P = {
+  }) : void 0, M = {
     type: "video",
     src: T ? S.heroArtVideoLinkLightTheme : S.videoLink
   };
-  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (P = {
+  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (M = {
     type: "image",
     src: T ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
   });
-  let M = T ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-    y = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
+  let P = T ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+    x = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
       text: S.modalTopPill,
-      className: _.modalTopPill,
-      colorOptions: M
+      className: C.modalTopPill,
+      colorOptions: P
     }) : void 0;
   return {
     renderModalProps: p,
     header: S.header,
-    modalTopExtra: y,
+    modalTopExtra: x,
     subHeader: S.subheader,
     subHeaderExtra: L,
-    heroArt: P,
+    heroArt: M,
     featureCards: S.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
@@ -83,8 +83,8 @@ function S(e) {
     button: () => {
       let e = Date.now();
       return (0, a.jsxs)(u.default, {
-        className: _.buttonWide,
-        innerClassName: _.innerButton,
+        className: C.buttonWide,
+        innerClassName: C.innerButton,
         color: i.Button.Colors.GREEN,
         size: i.Button.Sizes.SMALL,
         onClick: () => {
@@ -97,7 +97,7 @@ function S(e) {
         },
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: _.nitroIconSubHeader,
+          className: C.nitroIconSubHeader,
           src: m
         }), v]
       })

@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return m
+    return g
   }
 }), r("47120");
 var a = r("735250"),
-  i = r("470079"),
-  n = r("848246"),
+  n = r("470079"),
+  i = r("848246"),
   l = r("442837"),
   o = r("481060"),
-  c = r("570140"),
-  s = r("485731"),
+  s = r("570140"),
+  c = r("485731"),
   d = r("594174"),
   u = r("246992"),
   h = r("416495");
@@ -21,7 +21,7 @@ let p = [{
     label: "Available: true",
     value: !0
   }],
-  g = [{
+  m = [{
     label: "No Override",
     value: !1
   }, {
@@ -29,10 +29,10 @@ let p = [{
     value: !0
   }];
 
-function m() {
+function g() {
   let e = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
-    [t, r] = i.useState(!1),
-    [m, f] = i.useState(!1);
+    [t, r] = n.useState(!1),
+    [g, f] = n.useState(!1);
   return (0, a.jsxs)("div", {
     className: h.container,
     children: [(0, a.jsx)(o.FormSection, {
@@ -52,21 +52,21 @@ function m() {
       className: h.formElement,
       tag: o.FormTitleTags.H3,
       children: (0, a.jsx)(o.SingleSelect, {
-        options: g,
-        value: m,
+        options: m,
+        value: g,
         onChange: e => {
           f(e)
         },
         popoutLayerContext: u.devToolsLayerContext
       })
     }), (0, a.jsx)(o.Button, {
-      onClick: () => void(c.default.dispatch({
+      onClick: () => void(s.default.dispatch({
         type: "PREMIUM_PERKS_DEMO_OVERRIDE",
-        perkType: n.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
+        perkType: i.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
         user: e,
         available: t,
-        activateSuccess: m
-      }), (0, s.hqStreamingSetEnabled)(!1), (0, s.hqStreamingPopoutDismissed)(!1), (0, s.hqStreamingFrameAnimationPlayed)(!1), (0, s.hqStreamingUnlockAnimationPlayed)(!1)),
+        activateSuccess: g
+      }), (0, c.hqStreamingSetEnabled)(!1), (0, c.hqStreamingPopoutDismissed)(!1), (0, c.hqStreamingFrameAnimationPlayed)(!1), (0, c.hqStreamingUnlockAnimationPlayed)(!1)),
       children: "Update"
     })]
   })

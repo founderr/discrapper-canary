@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -26,7 +26,7 @@ function N(e, t) {
   }))
 }
 
-function f() {
+function g() {
   let e = (0, r.useStateFromStoresObject)([u.default], () => u.default.getAllExperimentOverrideDescriptors()),
     t = (0, r.useStateFromStoresObject)([u.default], () => u.default.getRegisteredExperiments()),
     [s, l] = n.useState(""),
@@ -40,7 +40,7 @@ function f() {
       onChange: l,
       onClear: () => l("")
     }), i.length > 0 ? i.map(t => {
-      let s = t.experiment.type === _.ExperimentTypes.GUILD ? m : g;
+      let s = t.experiment.type === _.ExperimentTypes.GUILD ? m : f;
       return (0, a.jsx)(s, {
         experiment: t.experiment,
         experimentId: t.id,
@@ -56,13 +56,13 @@ function f() {
   })
 }
 
-function g(e) {
+function f(e) {
   var t;
   let {
     experiment: s,
     experimentId: l,
     overrideDescriptor: c
-  } = e, [S, E] = n.useState(null != c), [T, f] = n.useState(!1), g = n.useCallback(() => {
+  } = e, [S, E] = n.useState(null != c), [T, g] = n.useState(!1), f = n.useCallback(() => {
     E(e => !e)
   }, []), m = (0, r.useStateFromStores)([u.default], () => u.default.getUserExperimentDescriptor(l)), C = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedUserExperiment(l)), A = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(_.ExperimentTypes.USER, l), e => {
     let [t, s] = e;
@@ -71,7 +71,7 @@ function g(e) {
     let [t, s] = e;
     return "".concat(new Date(s).toLocaleString(), " (").concat(t, ")")
   })), h = (0, a.jsx)(o.Clickable, {
-    onClick: g,
+    onClick: f,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
       className: I.title,
@@ -149,7 +149,7 @@ function g(e) {
         className: I.debugButton,
         size: o.Button.Sizes.SMALL,
         look: o.Button.Looks.BLANK,
-        onClick: () => f(!0),
+        onClick: () => g(!0),
         children: "More Details \xbb"
       })]
     }), (0, a.jsx)(o.FormDivider, {
@@ -168,7 +168,7 @@ function m(e) {
     experiment: t,
     experimentId: s,
     overrideDescriptor: l
-  } = e, [S, E] = n.useState(null != l), [T, f] = n.useState(!1), g = n.useCallback(() => {
+  } = e, [S, E] = n.useState(null != l), [T, g] = n.useState(!1), f = n.useCallback(() => {
     E(e => !e)
   }, []), m = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedGuildExperiment(s)), C = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(_.ExperimentTypes.GUILD, s), e => {
     let [t, s] = e;
@@ -188,7 +188,7 @@ function m(e) {
     }
     return [a, i()(t).keys().map(Number).sort().map(e => "".concat(t[e], " guilds in bucket ").concat(e)).join(", ")]
   }), O = (0, a.jsx)(o.Clickable, {
-    onClick: g,
+    onClick: f,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
       className: I.title,
@@ -274,7 +274,7 @@ function m(e) {
         className: I.debugButton,
         size: o.Button.Sizes.SMALL,
         look: o.Button.Looks.BLANK,
-        onClick: () => f(!0),
+        onClick: () => g(!0),
         children: "More Details \xbb"
       })]
     }), (0, a.jsx)(o.FormDivider, {

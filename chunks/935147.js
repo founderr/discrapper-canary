@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("165583"),
   I = s("197115"),
   N = s("350327"),
-  f = s("318661"),
-  g = s("996073"),
+  g = s("318661"),
+  f = s("996073"),
   m = s("25990"),
   C = s("466111"),
   A = s("626135"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   O = s("589266"),
   p = s("296810"),
   R = s("433411"),
-  x = s("532432"),
-  M = s("504983"),
+  M = s("532432"),
+  x = s("504983"),
   D = s("134795"),
   L = s("513901"),
   P = s("451392"),
@@ -46,8 +46,8 @@ function F(e) {
   } = e, {
     reducedMotion: V
   } = n.useContext(i.AccessibilityPreferencesContext), H = h.default.isPremium(y), {
-    pendingAvatar: k,
-    pendingBanner: Y,
+    pendingAvatar: Y,
+    pendingBanner: k,
     pendingThemeColors: w,
     pendingPronouns: W,
     pendingBio: K,
@@ -66,8 +66,8 @@ function F(e) {
       errors: t
     }
   }), J = (0, c.default)(X), $ = (0, S.default)(Z), ee = n.useRef(null);
-  (0, g.default)(ee, U.ProfileCustomizationScrollPositions.TRY_IT_OUT);
-  let et = (0, f.default)(y.id),
+  (0, f.default)(ee, U.ProfileCustomizationScrollPositions.TRY_IT_OUT);
+  let et = (0, g.default)(y.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
     {
       analyticsLocations: ea,
@@ -94,10 +94,10 @@ function F(e) {
     autoTrackExposure: !1
   }), (0, a.jsx)(u.AnalyticsLocationProvider, {
     value: ea,
-    children: (0, a.jsxs)(M.default, {
+    children: (0, a.jsxs)(x.default, {
       ref: ee,
       className: G.tryItOutSection,
-      type: M.FeatureBorderTypes.PREMIUM,
+      type: x.FeatureBorderTypes.PREMIUM,
       isShown: !0,
       hasBackground: !0,
       children: [(0, a.jsx)(p.default, {
@@ -114,12 +114,12 @@ function F(e) {
           onBannerChange: N.setTryItOutBanner,
           pendingPronouns: W,
           pendingBio: K,
-          pendingBanner: null !== (B = null != q ? q : Y) && void 0 !== B ? B : s("466045"),
-          pendingAvatar: null != Q ? Q : k,
+          pendingBanner: null !== (B = null != q ? q : k) && void 0 !== B ? B : s("466045"),
+          pendingAvatar: null != Q ? Q : Y,
           pendingThemeColors: null != z ? z : w,
           pendingAvatarDecoration: J,
           pendingProfileEffectId: $,
-          avatarClassName: null != Q || null != k || V.enabled ? void 0 : G.spinningAvatar,
+          avatarClassName: null != Q || null != Y || V.enabled ? void 0 : G.spinningAvatar,
           canUsePremiumCustomization: !0,
           isTryItOutFlow: !0,
           hideExampleButton: !0,
@@ -139,7 +139,7 @@ function F(e) {
           }), (0, a.jsx)(P.default, {
             className: G.customizationSection,
             user: y,
-            pendingAvatar: null != Q ? Q : k,
+            pendingAvatar: null != Q ? Q : Y,
             pendingColors: null != z ? z : w,
             onThemeColorsChange: N.setTryItOutThemeColors,
             showPremiumIcon: !1,
@@ -150,7 +150,7 @@ function F(e) {
             showRemoveBannerButton: null != q,
             onBannerChange: N.setTryItOutBanner,
             showPremiumIcon: !1
-          }), (0, a.jsx)(x.default, {
+          }), (0, a.jsx)(M.default, {
             className: G.customizationSection,
             isTryItOutFlow: !0,
             onAvatarChange: N.setTryItOutAvatar,

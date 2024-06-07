@@ -170,11 +170,11 @@ t.default = a.memo(function(e) {
       }
     }
     G()
-  }, 16), [S, w, G, P, R, n, t]), V = a.useCallback(e => {
+  }, 16), [S, w, G, P, R, n, t]), H = a.useCallback(e => {
     if (!N) return;
     let t = R + (e.deltaY > 0 ? 1 : -1);
     t >= 0 && t < b.length && (null != x.current && (b[t].length > x.current ? P(t, x.current) : G()), M(t))
-  }, [N, R, b, P, G]), H = a.useMemo(() => b[R].map((e, a) => {
+  }, [N, R, b, P, G]), V = a.useMemo(() => b[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
     let i = m(s.x, t, C),
@@ -194,7 +194,7 @@ t.default = a.memo(function(e) {
   return (0, l.jsx)(r.Clickable, {
     className: d.chatWheelMouseInput,
     onMouseMove: F,
-    onWheel: V,
+    onWheel: H,
     onClick: B,
     children: (0, l.jsxs)("div", {
       ref: A,
@@ -274,7 +274,7 @@ t.default = a.memo(function(e) {
           className: d.paginationHint,
           children: u.default.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null]
-      }), H]
+      }), V]
     })
   })
 })

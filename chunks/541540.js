@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("47120"), s("411104");
 var a = s("735250"),
@@ -135,7 +135,7 @@ class N extends n.Component {
   }
 }
 
-function f() {
+function g() {
   let e = n.useContext(c.AnalyticsContext),
     t = (0, l.useStateFromStores)([d.default], () => d.default.enabled);
   return (0, a.jsx)(N, {

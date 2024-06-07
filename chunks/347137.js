@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("702428"),
   E = n("709158"),
   h = n("683301"),
-  C = n("360048"),
-  _ = n("296386"),
+  _ = n("360048"),
+  C = n("296386"),
   m = n("150192"),
   S = n("889010"),
   p = n("488905"),
@@ -50,11 +50,11 @@ t.default = function() {
     (0, r.selectCategory)(e, !0), c.default.closeSidebar(), t && (0, r.clearSearch)()
   };
   return s.useEffect(() => {
-    (0, _.maybeFetchGuildDiscoveryCategories)(!1, !0)
+    (0, C.maybeFetchGuildDiscoveryCategories)(!1, !0)
   }, [e]), (0, a.jsxs)(l.Scroller, {
     children: [(0, a.jsx)(p.DiscoverySidebarHeader, {
       text: g.default.Messages.DISCOVER
-    }), (0, a.jsx)(C.default, {
+    }), (0, a.jsx)(_.default, {
       avatar: (0, a.jsx)(u.default, {}),
       name: g.default.Messages.CLANS,
       focusProps: {

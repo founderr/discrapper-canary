@@ -19,7 +19,7 @@ var a = s("735250"),
   _ = s("293810"),
   I = s("689938"),
   N = s("504110");
-let f = e => {
+let g = e => {
     let [t, s] = n.useState(!1), [a, l] = n.useState(null);
     return {
       cancelSubscription: async t => {
@@ -35,24 +35,24 @@ let f = e => {
       submitting: t
     }
   },
-  g = e => {
+  f = e => {
     var t;
     let {
       transitionState: s,
       groupListing: n,
       guildId: l,
       listing: o,
-      subscription: g,
+      subscription: f,
       onClose: m
     } = e, C = (0, c.useUID)(), A = (0, E.useSubscriptionsSettings)(l), h = (null == A ? void 0 : null === (t = A.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, S.getAssetURL)(A.cover_image_asset.application_id, A.cover_image_asset, 440) : void 0, {
       analyticsLocations: O
     } = (0, u.default)(d.default.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL), {
       cancelSubscription: p,
       error: R,
-      submitting: x
-    } = f(O), M = async () => {
-      await p(g.id) && m()
-    }, D = o.role_benefits.benefits.filter(e => e.ref_type === _.GuildRoleSubscriptionBenefitTypes.CHANNEL), L = o.role_benefits.benefits.filter(e => e.ref_type === _.GuildRoleSubscriptionBenefitTypes.INTANGIBLE), P = i()(g.currentPeriodEnd).format("MMMM Do, YYYY"), b = I.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
+      submitting: M
+    } = g(O), x = async () => {
+      await p(f.id) && m()
+    }, D = o.role_benefits.benefits.filter(e => e.ref_type === _.GuildRoleSubscriptionBenefitTypes.CHANNEL), L = o.role_benefits.benefits.filter(e => e.ref_type === _.GuildRoleSubscriptionBenefitTypes.INTANGIBLE), P = i()(f.currentPeriodEnd).format("MMMM Do, YYYY"), b = I.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
       numChannels: D.length,
       numAdditionalBenefits: L.length,
       subscriptionEndDate: P
@@ -93,8 +93,8 @@ let f = e => {
         className: N.footer,
         children: [(0, a.jsx)(r.Button, {
           color: r.Button.Colors.RED,
-          onClick: M,
-          submitting: x,
+          onClick: x,
+          submitting: M,
           children: I.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
         }), (0, a.jsx)(r.Button, {
           look: r.Button.Looks.LINK,
@@ -107,7 +107,7 @@ let f = e => {
     })
   },
   m = e => {
-    (0, r.openModal)(t => (0, a.jsx)(g, {
+    (0, r.openModal)(t => (0, a.jsx)(f, {
       ...t,
       ...e
     }))

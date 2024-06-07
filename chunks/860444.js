@@ -1,7 +1,7 @@
 "use strict";
 r.r(t);
 var a = r("319301");
-let i = {
+let n = {
   figma: {
     ignore: !0
   }
@@ -16,7 +16,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.500",
       opacity: .8
     },
-    meta: i
+    meta: n
   },
   "profile-gradient-overlay": {
     dark: {
@@ -27,7 +27,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.500",
       opacity: .6
     },
-    meta: i
+    meta: n
   },
   "profile-gradient-section-box": {
     dark: {
@@ -38,7 +38,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.500",
       opacity: .45
     },
-    meta: i
+    meta: n
   },
   "profile-gradient-card-background": {
     dark: {
@@ -49,7 +49,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.500",
       opacity: .7
     },
-    meta: i
+    meta: n
   },
   "profile-gradient-message-input-border": {
     dark: {
@@ -60,7 +60,7 @@ t.default = (0, a.defineColorTokens)({
       color: "primary.430",
       opacity: .24
     },
-    meta: i
+    meta: n
   },
   "profile-gradient-note-background": {
     dark: {
@@ -71,7 +71,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.500",
       opacity: .3
     },
-    meta: i
+    meta: n
   },
   "profile-gradient-profile-body-background-hover": {
     dark: {
@@ -82,7 +82,7 @@ t.default = (0, a.defineColorTokens)({
       color: "black.500",
       opacity: .08
     },
-    meta: i
+    meta: n
   },
   "profile-gradient-role-pill-background": {
     dark: {
@@ -93,7 +93,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.500",
       opacity: .5
     },
-    meta: i
+    meta: n
   },
   "profile-gradient-role-pill-border": {
     dark: {
@@ -104,6 +104,6 @@ t.default = (0, a.defineColorTokens)({
       color: "primary.660",
       opacity: .2
     },
-    meta: i
+    meta: n
   }
 })

@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("853197"),
   I = s("430492"),
   N = s("688465"),
-  f = s("594174"),
-  g = s("55935"),
+  g = s("594174"),
+  f = s("55935"),
   m = s("702512"),
   C = s("689938"),
   A = s("193225");
@@ -41,8 +41,8 @@ function O(e) {
     title: u,
     endDate: I,
     dropsQuestId: N,
-    assets: f,
-    articleUrl: g
+    assets: g,
+    articleUrl: f
   } = t, m = (0, _.getDropByQuestId)(N);
   if (null == m) return null;
   let h = () => {
@@ -64,7 +64,7 @@ function O(e) {
             className: A.promotionIcon,
             children: (0, a.jsx)("img", {
               alt: "",
-              src: f.iconSrc,
+              src: g.iconSrc,
               className: A.promotionIconImage
             })
           }), (0, a.jsxs)("div", {
@@ -98,7 +98,7 @@ function O(e) {
       className: A.dropCriteria,
       children: [(0, a.jsx)("img", {
         alt: "",
-        src: f.rewardSrc,
+        src: g.rewardSrc,
         className: A.dropRewardImage
       }), (0, a.jsx)("div", {
         ref: i,
@@ -113,7 +113,7 @@ function O(e) {
         variant: "text-sm/normal",
         className: A.dropLearnMore,
         children: C.default.Messages.DROPS_LEARN_MORE.format({
-          faqUrl: g
+          faqUrl: f
         })
       })]
     })]
@@ -125,7 +125,7 @@ function p(e) {
     drop: t,
     code: s,
     platform: l
-  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, g.dateFormat)(o()(t.endDate), "LL"), E = C.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, f.dateFormat)(o()(t.endDate), "LL"), E = C.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: S
   }), T = u ? C.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : C.default.Messages.PROMOTION_CARD_ACTION_CLAIM, _ = n.useCallback(() => d(!1), []);
   return (0, a.jsxs)(a.Fragment, {
@@ -177,7 +177,7 @@ t.default = function(e) {
   let {
     dropsOptedOut: s,
     dropsStatuses: n
-  } = e, l = [], i = [], r = (0, u.useStateFromStores)([f.default], () => f.default.getCurrentUser()), d = !1;
+  } = e, l = [], i = [], r = (0, u.useStateFromStores)([g.default], () => g.default.getCurrentUser()), d = !1;
   if (null == n) return null;
   for (let e of Object.keys(n)) {
     let t = (0, _.getDropByQuestId)(e);

@@ -20,8 +20,8 @@ var n = s("512722"),
   _ = s("433411"),
   I = s("532432"),
   N = s("349177"),
-  f = s("872736"),
-  g = s("134795"),
+  g = s("872736"),
+  f = s("134795"),
   m = s("610966"),
   C = s("513901"),
   A = s("451392"),
@@ -29,8 +29,8 @@ var n = s("512722"),
   O = s("676934"),
   p = s("350327"),
   R = s("621853"),
-  x = s("318661"),
-  M = s("619914"),
+  M = s("318661"),
+  x = s("619914"),
   D = s("25990"),
   L = s("594174"),
   P = s("74538"),
@@ -47,8 +47,8 @@ function U() {
     {
       pendingAvatar: V,
       pendingGlobalName: H,
-      pendingBanner: k,
-      pendingBio: Y,
+      pendingBanner: Y,
+      pendingBio: k,
       pendingPronouns: w,
       pendingAccentColor: W,
       pendingThemeColors: K,
@@ -64,7 +64,7 @@ function U() {
     Q = (0, S.useGuildAutomodProfileQuarantineErrors)(),
     q = P.default.canUsePremiumProfileCustomization(B),
     X = (0, E.showRemoveAvatar)(V, B.avatar),
-    Z = (0, E.showRemoveBanner)(k, null == y ? void 0 : y.banner),
+    Z = (0, E.showRemoveBanner)(Y, null == y ? void 0 : y.banner),
     J = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
     location: J + " auto on",
@@ -73,11 +73,11 @@ function U() {
     location: J + " auto off",
     autoTrackExposure: !1
   });
-  let $ = (0, x.default)(B.id),
+  let $ = (0, M.default)(B.id),
     ee = null == $ ? void 0 : $.getLegacyUsername(),
     et = (null !== (s = null === (e = z.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? z.global_name : null !== (n = null == Q ? void 0 : Q.nick) && void 0 !== n ? n : [],
     es = (null !== (U = null === (t = z.bio) || void 0 === t ? void 0 : t.length) && void 0 !== U ? U : 0) > 0 ? z.bio : null !== (j = null == Q ? void 0 : Q.bio) && void 0 !== j ? j : [],
-    ea = (0, M.useUserIsRecentGamesExperimentEnabled)({
+    ea = (0, x.useUserIsRecentGamesExperimentEnabled)({
       location: "28tk0bf_7",
       autoTrackExposure: !0
     }),
@@ -110,7 +110,7 @@ function U() {
       user: B,
       sectionTitle: b.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), q ? (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(f.default, {
         showRemoveBannerButton: Z,
         errors: z.banner,
         onBannerChange: p.setPendingBanner,
@@ -131,11 +131,11 @@ function U() {
       sectionTitle: b.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: es,
       onBioChange: e => (0, E.setNewPendingUserBio)(e, null == y ? void 0 : y.bio),
-      pendingBio: Y,
+      pendingBio: k,
       currentBio: null !== (F = null == y ? void 0 : y.bio) && void 0 !== F ? F : ""
     }, "bio"), en && el.length > 0 && (0, a.jsx)(c.default, {
       availableClans: el
-    }), ea && (0, a.jsx)(O.default, {}), null != ee && (0, a.jsx)(f.default, {
+    }), ea && (0, a.jsx)(O.default, {}), null != ee && (0, a.jsx)(g.default, {
       legacyUsername: ee
     }, "legacy_username")]
   })

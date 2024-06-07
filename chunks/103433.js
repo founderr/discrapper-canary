@@ -8,7 +8,7 @@ var r = s("120356"),
   l = s("481060"),
   o = s("689938"),
   u = s("829075"),
-  c = s("505944");
+  d = s("505944");
 t.default = e => {
   let {
     className: t,
@@ -18,7 +18,7 @@ t.default = e => {
     className: i()(u.container, t),
     "data-testid": "all-perks-hero-header",
     children: [(0, a.jsx)("img", {
-      src: c,
+      src: d,
       alt: "",
       className: u.headerArt
     }), (0, a.jsxs)("div", {

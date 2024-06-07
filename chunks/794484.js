@@ -7,15 +7,15 @@ var a = s("735250"),
   l = s("887024"),
   o = s("481060"),
   u = s("410154"),
-  c = s("915296"),
-  d = s("314684"),
+  d = s("915296"),
+  c = s("314684"),
   _ = s("565626"),
   E = s("32173"),
-  R = s("734741"),
-  T = s("391110"),
-  S = s("75077"),
+  T = s("734741"),
+  I = s("391110"),
+  R = s("75077"),
   f = s("320319"),
-  I = s("766752");
+  S = s("766752");
 let m = e => {
   let {
     showAllPerksButton: t,
@@ -25,19 +25,19 @@ let m = e => {
   } = e, n = (0, a.jsx)(o.Heading, {
     variant: "heading-xxl/extrabold",
     color: "header-primary",
-    className: null != i ? i : I.heading,
+    className: null != i ? i : S.heading,
     children: r
   });
   return null == t ? n : s ? (0, a.jsxs)("div", {
-    className: I.sectionHeader,
+    className: S.sectionHeader,
     children: [n, null != t && (0, a.jsx)("div", {
-      className: I.showAllPerksButton,
+      className: S.showAllPerksButton,
       children: t
     })]
   }) : (0, a.jsx)("div", {
-    className: I.container,
+    className: S.container,
     children: (0, a.jsx)("div", {
-      className: I.sectionHeaderSeeAll,
+      className: S.sectionHeaderSeeAll,
       children: n
     })
   })
@@ -46,90 +46,90 @@ t.default = e => {
   var t;
   let {
     className: s,
-    variant: i = T.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY,
-    noBackground: p = !1,
-    leftAlignHeaders: A = !1,
-    showAllPerksButton: N,
-    headerClassname: M,
+    variant: i = I.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY,
+    noBackground: A = !1,
+    leftAlignHeaders: N = !1,
+    showAllPerksButton: p,
+    headerClassname: g,
     isFullScreen: C = !0
-  } = e, g = r.useRef(null), P = (0, d.useFreeBoostUserTenureReward)(), [O, x] = r.useState(!1), b = (0, _.useShouldScrollToWhatsNew)(P) || O, h = (0, u.default)("perks-discoverability");
+  } = e, P = r.useRef(null), O = (0, c.useFreeBoostUserTenureReward)(), [M, h] = r.useState(!1), L = (0, _.useShouldScrollToWhatsNew)(O) || M, x = (0, u.default)("perks-discoverability");
   r.useLayoutEffect(() => {
-    x((0, R.shouldScrollToMarketingMomentContent)())
-  }, []), (0, _.useClearNewBadge)(), (0, R.useDismissWhatsNewCardDCs)();
-  let D = (0, c.useGetMarketingPageNonSubPerkTileOrderExperiment)({
-      location: T.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY
+    h((0, T.shouldScrollToMarketingMomentContent)())
+  }, []), (0, _.useClearNewBadge)(), (0, T.useDismissWhatsNewCardDCs)();
+  let b = (0, d.useGetMarketingPageNonSubPerkTileOrderExperiment)({
+      location: I.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY
     }),
-    L = i === T.PerksDiscoverabilityCardSection.WHATS_NEW,
-    v = (0, d.useClearTenureBadge)();
+    v = i === I.PerksDiscoverabilityCardSection.WHATS_NEW,
+    D = (0, c.useClearTenureBadge)();
   r.useEffect(() => {
-    L && !b && v()
-  }, [v, L, b]), r.useEffect(() => {
-    let e = g.current;
-    if (null == e || !b || !L) return;
+    v && !L && D()
+  }, [D, v, L]), r.useEffect(() => {
+    let e = P.current;
+    if (null == e || !L || !v) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
         behavior: "smooth"
-      }), L && v()
+      }), v && D()
     });
     return () => {
-      cancelAnimationFrame(t), L && v()
+      cancelAnimationFrame(t), v && D()
     }
-  }, [g, b, L, v]);
-  let U = (0, S.usePerksDiscoverabilityStrings)(L),
-    B = (0, E.default)(),
-    j = (0, S.useIsPremiumSubscriber)(),
-    G = (0, S.getFilteredPerksDiscoverabilityCards)({
-      perksCards: B,
+  }, [P, L, v, D]);
+  let U = (0, R.usePerksDiscoverabilityStrings)(v),
+    j = (0, E.default)(),
+    G = (0, R.useIsPremiumSubscriber)(),
+    B = (0, R.getFilteredPerksDiscoverabilityCards)({
+      perksCards: j,
       variant: i,
-      shopMarketingVariation: h,
+      shopMarketingVariation: x,
       isFullScreen: C,
-      showTenureCard: null == P ? void 0 : P.showCard,
-      tileOrderVariant: D,
-      isPremiumSubscriber: j
+      showTenureCard: null == O ? void 0 : O.showCard,
+      tileOrderVariant: b,
+      isPremiumSubscriber: G
     }),
-    k = G.some(e => null != e.pillText),
-    [H, W] = r.useState(null),
-    y = r.useRef(new l.Environment);
+    y = B.some(e => null != e.pillText),
+    [k, H] = r.useState(null),
+    F = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(null == B ? void 0 : null === (t = B.freeBoost) || void 0 === t ? void 0 : t.name) === E.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
-      ref: W,
-      className: I.confettiCanvas,
-      environment: y.current
+    children: [(null == j ? void 0 : null === (t = j.freeBoost) || void 0 === t ? void 0 : t.name) === E.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
+      ref: H,
+      className: S.confettiCanvas,
+      environment: F.current
     }), (0, a.jsxs)("div", {
-      ref: g,
-      className: n()(I.section, {
-        [I.centerAlignSection]: !A,
-        [I.leftAlignSection]: A
+      ref: P,
+      className: n()(S.section, {
+        [S.centerAlignSection]: !N,
+        [S.leftAlignSection]: N
       }, s),
       children: [(0, a.jsx)(m, {
-        showAllPerksButton: N,
-        leftAlignHeaders: A,
+        showAllPerksButton: p,
+        leftAlignHeaders: N,
         title: U.title,
-        headerClassname: M
+        headerClassname: g
       }), (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
-        className: n()(I.subtitle, {
-          [I.subtitle]: null == N || A,
-          [I.subtitleWithButton]: null != N && !A,
-          [I.fullWidth]: L || A,
-          [I.moreSubtitleMargin]: k,
-          [I.leftAlignSubtitle]: A,
-          [I.centerAlignSubtitle]: !A
+        className: n()(S.subtitle, {
+          [S.subtitle]: null == p || N,
+          [S.subtitleWithButton]: null != p && !N,
+          [S.fullWidth]: v || N,
+          [S.moreSubtitleMargin]: y,
+          [S.leftAlignSubtitle]: N,
+          [S.centerAlignSubtitle]: !N
         }),
         children: U.subtitle
-      }), !A && null != N && (0, a.jsx)("div", {
-        className: n()(I.showAllPerksButtonCenter),
-        children: N
+      }), !N && null != p && (0, a.jsx)("div", {
+        className: n()(S.showAllPerksButtonCenter),
+        children: p
       }), (0, a.jsx)("div", {
         className: n()({
-          [I.cardContainer]: C,
-          [I.cardContainerNarrowWidth]: !C
+          [S.cardContainer]: C,
+          [S.cardContainerNarrowWidth]: !C
         }),
-        children: G.map((e, t) => (0, a.jsx)(f.default, {
-          confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? H : void 0,
+        children: B.map((e, t) => (0, a.jsx)(f.default, {
+          confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? k : void 0,
           ...e,
-          forceShadow: p
+          forceShadow: A
         }, "".concat(e.name, "_").concat(t)))
       })]
     })]

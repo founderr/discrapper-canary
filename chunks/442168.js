@@ -42,7 +42,7 @@ function g(e) {
   l.useEffect(() => () => {
     (0, u.dismissSaveClipAnimation)(T)
   }, [T]);
-  let x = () => {
+  let N = () => {
       var e;
       let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
       return null == t || n ? m : {
@@ -52,7 +52,7 @@ function g(e) {
         left: t.left
       }
     },
-    N = e => {
+    x = e => {
       let t = null == _ ? void 0 : _.getBoundingClientRect();
       if (v.current = t, e.timestamp !== I || null == t || n) return m;
       let {
@@ -86,12 +86,12 @@ function g(e) {
         position: "fixed",
         visibility: "hidden",
         opacity: 1,
-        ...g.enabled ? N(e) : x()
+        ...g.enabled ? x(e) : N()
       }),
       enter: e => [{
         opacity: 1,
         visibility: "visible",
-        ...N(e)
+        ...x(e)
       }],
       leave: {
         opacity: 0,

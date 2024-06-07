@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return M
+    return x
   }
 });
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("89057"),
   I = s("921801"),
   N = s("246946"),
-  f = s("594174"),
-  g = s("351402"),
+  g = s("594174"),
+  f = s("351402"),
   m = s("853872"),
   C = s("78839"),
   A = s("706454"),
@@ -28,7 +28,7 @@ var a = s("735250"),
   O = s("981631"),
   p = s("689938"),
   R = s("499937");
-class x extends n.PureComponent {
+class M extends n.PureComponent {
   componentDidMount() {
     d.default.wait(() => {
       u.fetchPaymentSources(), u.fetchSubscriptions()
@@ -88,10 +88,10 @@ class x extends n.PureComponent {
   }
 }
 
-function M() {
-  let e = (0, r.useStateFromStoresObject)([A.default, g.default, m.default, f.default, N.default, C.default], () => {
+function x() {
+  let e = (0, r.useStateFromStoresObject)([A.default, f.default, m.default, g.default, N.default, C.default], () => {
     let e = C.default.getPremiumTypeSubscription(),
-      t = f.default.getCurrentUser();
+      t = g.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
       locale: A.default.locale,
       hide: N.default.enabled,
@@ -100,12 +100,12 @@ function M() {
       premiumSubscription: e,
       defaultPaymentSourceId: m.default.defaultPaymentSourceId,
       paymentSources: m.default.paymentSources,
-      syncing: g.default.isSyncing,
-      isRemovingPaymentSource: g.default.isRemovingPaymentSource,
-      isUpdatingPaymentSource: g.default.isUpdatingPaymentSource
+      syncing: f.default.isSyncing,
+      isRemovingPaymentSource: f.default.isRemovingPaymentSource,
+      isUpdatingPaymentSource: f.default.isUpdatingPaymentSource
     }
   });
-  return (0, a.jsx)(x, {
+  return (0, a.jsx)(M, {
     ...e
   })
 }

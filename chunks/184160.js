@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumPaymentWhatYouLoseStep: function() {
-    return E
+    return x
   }
 });
 var n = s("735250");
@@ -18,24 +18,24 @@ var i = s("512722"),
   p = s("409813"),
   _ = s("614223"),
   f = s("689938"),
-  x = s("570729");
+  m = s("570729");
 
-function E(e) {
+function x(e) {
   let {
     handleStepChange: t,
     handleClose: s
   } = e, i = (0, o.default)(), {
-    activeSubscription: E,
-    selectedSkuId: L,
-    setSelectedPlanId: S,
-    startedPaymentFlowWithPaymentSourcesRef: m
+    activeSubscription: x,
+    selectedSkuId: E,
+    setSelectedPlanId: L,
+    startedPaymentFlowWithPaymentSourcesRef: S
   } = (0, c.usePaymentContext)(), {
     isGift: I
-  } = (0, d.useGiftContext)(), h = null != E ? (0, C.getPremiumPlanItem)(E) : null, P = null != h ? (0, C.getDisplayPremiumType)(h.planId) : null, T = null != h ? (0, C.getPremiumType)(h.planId) : null, M = (0, _.inOneStepSubscriptionCheckout)({
+  } = (0, d.useGiftContext)(), h = null != x ? (0, C.getPremiumPlanItem)(x) : null, P = null != h ? (0, C.getDisplayPremiumType)(h.planId) : null, T = null != h ? (0, C.getPremiumType)(h.planId) : null, M = (0, _.inOneStepSubscriptionCheckout)({
     isTrial: !1,
     isGift: I,
-    selectedSkuId: L,
-    startedPaymentFlowWithPaymentSources: m.current
+    selectedSkuId: E,
+    startedPaymentFlowWithPaymentSources: S.current
   });
   return r()(null != T, "Expected premium type"), (0, n.jsx)(u.default, {
     premiumType: T,
@@ -44,10 +44,10 @@ function E(e) {
       subscriptionName: P
     }),
     footer: (0, n.jsxs)("div", {
-      className: x.whatYouLoseButtonContainer,
+      className: m.whatYouLoseButtonContainer,
       children: [(0, n.jsx)(a.Button, {
         onClick: () => {
-          M ? (S((0, _.getDefaultPlanOneStepCheckout)(L, E)), t(p.Step.REVIEW)) : t(p.Step.PLAN_SELECT)
+          M ? (L((0, _.getDefaultPlanOneStepCheckout)(E, x)), t(p.Step.REVIEW)) : t(p.Step.PLAN_SELECT)
         },
         children: f.default.Messages.CONTINUE
       }), (0, n.jsx)(a.Button, {

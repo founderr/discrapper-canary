@@ -16,15 +16,15 @@ t.default = function(e) {
     user: f,
     lastOnlineTimestamp: E,
     experimentLocation: h = "status_text"
-  } = e, C = n.length > 0, {
-    isRecentlyOnlineShowable: _,
+  } = e, _ = n.length > 0, {
+    isRecentlyOnlineShowable: C,
     isRecentlyOnlineTrackable: m
   } = (0, i.getRecentlyOnlineStrategy)(E);
   if (s.useEffect(() => {
-      m && !C && i.default.trackExposure({
+      m && !_ && i.default.trackExposure({
         location: h
       })
-    }, [m, C, h]), C) return (0, a.jsx)(l.default, {
+    }, [m, _, h]), _) return (0, a.jsx)(l.default, {
     className: u.activity,
     textClassName: u.text,
     emojiClassName: u.customStatusEmoji,
@@ -33,7 +33,7 @@ t.default = function(e) {
     animate: t,
     user: f
   });
-  if (!_) return (0, a.jsx)("div", {
+  if (!C) return (0, a.jsx)("div", {
     className: u.text,
     children: (0, o.humanizeStatus)(c)
   });

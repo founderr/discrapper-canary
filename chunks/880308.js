@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   useFetchDeveloperActivityShelfItems: function() {
-    return c
+    return u
   }
 });
 var i = n("470079"),
-  s = n("442837"),
-  u = n("695346"),
+  r = n("442837"),
+  s = n("695346"),
   a = n("115130"),
-  l = n("566620"),
-  r = n("782769");
+  o = n("566620"),
+  l = n("782769");
 
-function c() {
-  let e = (0, r.useIsActivitiesEnabledForCurrentPlatform)(),
-    t = u.DeveloperMode.getSetting(),
-    n = (0, s.useStateFromStores)([a.default], () => a.default.getFetchState(), []);
+function u() {
+  let e = (0, l.useIsActivitiesEnabledForCurrentPlatform)(),
+    t = s.DeveloperMode.getSetting(),
+    n = (0, r.useStateFromStores)([a.default], () => a.default.getFetchState(), []);
   return i.useEffect(() => {
-    e && t && null == n && (0, l.fetchDeveloperApplications)()
+    e && t && null == n && (0, o.fetchDeveloperApplications)()
   }, [e, n, t]), null
 }

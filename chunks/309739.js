@@ -20,9 +20,9 @@ var n = s("481060"),
   _ = s("981631"),
   I = s("689938"),
   N = s("471599"),
-  f = s("611273");
+  g = s("611273");
 
-function g() {
+function f() {
   let e = E.ShowCurrentGame.useSetting(),
     t = E.DefaultGuildsActivityRestricted.useSetting(),
     s = c.isPlatformEmbedded ? I.default.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : I.default.Messages.SHOW_CURRENT_ACTIVITY_DESC,
@@ -48,10 +48,10 @@ function g() {
   return (0, a.jsx)(o.Subsetting, {
     setting: T.WebSetting.ACTIVITY_PRIVACY_STATUS,
     children: (0, a.jsxs)(n.FormSection, {
-      className: f.marginBottom40,
+      className: g.marginBottom40,
       children: [(0, a.jsx)(n.FormTitle, {
         tag: n.FormTitleTags.H5,
-        className: f.marginBottom8,
+        className: g.marginBottom8,
         children: I.default.Messages.ACTIVITY_STATUS
       }), (0, a.jsx)(n.FormSwitch, {
         value: e,
@@ -76,10 +76,10 @@ function m() {
   return (0, a.jsx)(o.Subsetting, {
     setting: T.WebSetting.ACTIVITY_PRIVACY_RICH_PRESENCE,
     children: (0, a.jsxs)(n.FormSection, {
-      className: f.marginBottom40,
+      className: g.marginBottom40,
       children: [(0, a.jsx)(n.FormTitle, {
         tag: n.FormTitleTags.H5,
-        className: f.marginBottom8,
+        className: g.marginBottom8,
         children: I.default.Messages.ACTIVITY_PARTY_PRIVACY
       }), (0, a.jsx)(n.FormSwitch, {
         value: e,
@@ -98,16 +98,16 @@ function m() {
 
 function C() {
   return (0, a.jsxs)(n.FormSection, {
-    className: f.marginBottom40,
+    className: g.marginBottom40,
     children: [(0, a.jsxs)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: f.marginBottom8,
+      className: g.marginBottom8,
       children: [I.default.Messages.BROADCASTING_SETTINGS, (0, a.jsx)(i.default, {
         className: N.betaTag
       })]
     }), (0, a.jsx)(n.FormText, {
       type: n.FormText.Types.DESCRIPTION,
-      className: f.marginBottom20,
+      className: g.marginBottom20,
       children: I.default.Messages.BROADCASTING_SETTINGS_DESCRIPTION
     }), (0, a.jsx)(n.FormItem, {
       children: (0, a.jsx)(n.Button, {
@@ -121,7 +121,7 @@ function C() {
 
 function A() {
   return (0, a.jsx)(n.FormSection, {
-    className: f.marginBottom40,
+    className: g.marginBottom40,
     children: (0, a.jsx)(n.FormNotice, {
       type: n.FormNotice.Types.PRIMARY,
       body: I.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
@@ -147,6 +147,6 @@ function h(e) {
     className: t,
     tag: n.FormTitleTags.H1,
     title: s ? I.default.Messages.ACTIVITY_PRIVACY : null,
-    children: [(0, a.jsx)(g, {}), (0, a.jsx)(m, {}), i && (0, a.jsx)(C, {}), (0, a.jsx)(A, {})]
+    children: [(0, a.jsx)(f, {}), (0, a.jsx)(m, {}), i && (0, a.jsx)(C, {}), (0, a.jsx)(A, {})]
   })
 }

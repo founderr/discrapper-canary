@@ -26,9 +26,9 @@ function T(e) {
     opacity: 0
   }), N = (0, d.useToken)(T).spring({
     opacity: .1
-  }), f = (0, d.useToken)(T).spring({
-    opacity: 0
   }), g = (0, d.useToken)(T).spring({
+    opacity: 0
+  }), f = (0, d.useToken)(T).spring({
     opacity: 1
   }), m = e => {
     e.finished && (null == l || l())
@@ -56,7 +56,7 @@ function T(e) {
       immediate: _,
       to: [{
         backgroundColor: N,
-        borderColor: g
+        borderColor: f
       }],
       config: {
         duration: O,
@@ -66,8 +66,8 @@ function T(e) {
       delay: h,
       immediate: _,
       to: [{
-        backgroundColor: f,
-        borderColor: f
+        backgroundColor: g,
+        borderColor: g
       }],
       config: {
         duration: O,

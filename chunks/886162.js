@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return _
   }
 }), n("47120");
 var a = n("735250"),
@@ -17,18 +17,18 @@ var a = n("735250"),
   E = n("689938"),
   h = n("573352");
 
-function C(e) {
+function _(e) {
   let {
     transitionState: t
-  } = e, C = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [_, m] = s.useState(!1), S = (0, c.useUID)();
+  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [C, m] = s.useState(!1), S = (0, c.useUID)();
   async function p() {
-    return m(!0), C === f.UserRequiredActions.AGREEMENTS && m(await (0, o.acceptAgreements)()), null
+    return m(!0), _ === f.UserRequiredActions.AGREEMENTS && m(await (0, o.acceptAgreements)()), null
   }
   return (0, u.default)({
     type: l.ImpressionTypes.VIEW,
     name: l.ImpressionNames.USER_AGREEMENTS,
     properties: {
-      required_action: C
+      required_action: _
     }
   }, {}, []), (0, a.jsxs)(r.ModalRoot, {
     "aria-labelledby": S,
@@ -44,7 +44,7 @@ function C(e) {
     }), (0, a.jsxs)(r.ModalContent, {
       children: [(0, a.jsx)(r.Text, {
         variant: "text-md/normal",
-        children: C === f.UserRequiredActions.AGREEMENTS ? E.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+        children: _ === f.UserRequiredActions.AGREEMENTS ? E.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
       }), (0, a.jsxs)("div", {
         className: h.container,
         children: [(0, a.jsxs)("ul", {
@@ -78,7 +78,7 @@ function C(e) {
       })]
     }), (0, a.jsx)(r.ModalFooter, {
       children: (0, a.jsx)(r.Button, {
-        submitting: _,
+        submitting: C,
         onClick: p,
         color: r.Button.Colors.GREEN,
         children: E.default.Messages.AGREE

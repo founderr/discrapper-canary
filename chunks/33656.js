@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 }), s("724458");
 var a = s("735250"),
@@ -20,7 +20,7 @@ var a = s("735250"),
   I = s("63057"),
   N = s("611273");
 
-function f(e) {
+function g(e) {
   let {
     label: t,
     onChange: s,
@@ -35,7 +35,7 @@ function f(e) {
   })
 }
 
-function g() {
+function f() {
   let e = (0, r.useStateFromStores)([u.default], () => u.default.getSubsection()),
     t = n.createRef(),
     {
@@ -49,7 +49,7 @@ function g() {
       null == t || null === (s = t.current) || void 0 === s || s.scrollIntoView(!0)
     }
   }, [l, t, e]);
-  let g = E.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1),
+  let f = E.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1),
     m = {
       [E.EmailCategories.COMMUNICATION]: T.WebSetting.NOTIFICATIONS_EMAILS_COMMUNICATION,
       [E.EmailCategories.SOCIAL]: T.WebSetting.NOTIFICATIONS_EMAILS_SOCIAL,
@@ -70,7 +70,7 @@ function g() {
           category: t,
           label: n,
           subLabel: l
-        } = e, i = m[t], r = (0, a.jsx)(f, {
+        } = e, i = m[t], r = (0, a.jsx)(g, {
           label: n(),
           subLabel: l(),
           enabled: s[t],
@@ -87,7 +87,7 @@ function g() {
         setting: T.WebSetting.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
         children: [(0, a.jsx)(o.Button, {
           className: I.marketingUnsubscribeButton,
-          disabled: !g,
+          disabled: !f,
           look: o.ButtonLooks.LINK,
           color: o.ButtonColors.LINK,
           onClick: c.updateMarketingEmailSettings,

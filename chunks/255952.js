@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("246133"),
   E = n("383832"),
   h = n("474376"),
-  C = n("695346"),
-  _ = n("293273"),
+  _ = n("695346"),
+  C = n("293273"),
   m = n("696202"),
   S = n("881201"),
   p = n("626135"),
@@ -49,7 +49,7 @@ function v(e) {
   let {
     customStatus: t
   } = e, n = e => {
-    e.stopPropagation(), C.CustomStatusSetting.updateSetting(void 0)
+    e.stopPropagation(), _.CustomStatusSetting.updateSetting(void 0)
   };
   return null != t ? (0, a.jsx)("div", {
     "aria-label": T.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
@@ -217,8 +217,8 @@ let O = e => {
   })
 };
 t.default = (0, d.default)(e => {
-  let t = (0, r.useStateFromStores)([_.default], () => _.default.getCustomStatusActivity()),
-    n = C.StatusSetting.useSetting();
+  let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
+    n = _.StatusSetting.useSetting();
   return (0, a.jsx)(O, {
     ...e,
     customStatus: t,

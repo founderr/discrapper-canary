@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("410030"),
   I = s("960359"),
   N = s("730417"),
-  f = s("524347"),
-  g = s("454585"),
+  g = s("524347"),
+  f = s("454585"),
   m = s("163684"),
   C = s("178100"),
   A = s("518638"),
@@ -24,8 +24,8 @@ var a = s("735250"),
   O = s("454982"),
   p = s("197115"),
   R = s("504983"),
-  x = s("703656"),
-  M = s("594174"),
+  M = s("703656"),
+  x = s("594174"),
   D = s("580130"),
   L = s("669079"),
   P = s("74538"),
@@ -49,26 +49,26 @@ function y(e) {
     T = () => c(e => !e),
     I = (0, _.default)(),
     N = (0, A.getPromotionImageURL)(s.id, I),
-    f = null != l,
-    m = (0, C.default)(s, f);
-  f && d ? t = F.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
+    g = null != l,
+    m = (0, C.default)(s, g);
+  g && d ? t = F.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
     endDate: m,
     onClickDetails: T
-  }) : f && !d ? t = F.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_UNEXPANDED_BODY.format({
+  }) : g && !d ? t = F.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_UNEXPANDED_BODY.format({
     endDate: m,
     onClickDetails: T
-  }) : !f && d ? t = F.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_EXPANDED_BODY.format({
+  }) : !g && d ? t = F.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_EXPANDED_BODY.format({
     endDate: m,
     onClickDetails: T
-  }) : !f && !d && (t = F.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_UNEXPANDED_BODY.format({
+  }) : !g && !d && (t = F.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_UNEXPANDED_BODY.format({
     endDate: m,
     onClickDetails: T
   }));
-  let h = f ? F.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : F.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
+  let h = g ? F.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : F.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
     p = n.useCallback(() => E(!1), []),
     {
       outboundTitle: R,
-      outboundTermsAndConditions: x
+      outboundTermsAndConditions: M
     } = s;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -107,7 +107,7 @@ function y(e) {
         className: B.promotionLegalese,
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: g.default.parse(x, !1, {
+        children: f.default.parse(M, !1, {
           allowLinks: !0
         })
       })]
@@ -131,13 +131,13 @@ t.default = function() {
       } = e;
       return null == t
     }),
-    l = (0, d.useStateFromStores)([M.default], () => P.default.isPremium(M.default.getCurrentUser())),
+    l = (0, d.useStateFromStores)([x.default], () => P.default.isPremium(x.default.getCurrentUser())),
     r = o().groupBy(t, e => (0, L.makeComboId)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
-    [_, g] = n.useState(!1),
-    C = (0, d.useStateFromStores)([f.default], () => f.default.userStatus);
+    [_, f] = n.useState(!1),
+    C = (0, d.useStateFromStores)([g.default], () => g.default.userStatus);
   n.useEffect(() => {
     c.default.wait(() => {
-      (0, S.fetchGiftableEntitlements)().then(() => g(!0))
+      (0, S.fetchGiftableEntitlements)().then(() => f(!0))
     })
   }, []);
   let A = (0, N.useAnyDropsEnabled)();
@@ -150,12 +150,12 @@ t.default = function() {
     V = null != C || !A,
     {
       promotionsLoaded: H,
-      activeOutboundPromotions: k,
-      claimedEndedOutboundPromotions: Y,
+      activeOutboundPromotions: Y,
+      claimedEndedOutboundPromotions: k,
       claimedOutboundPromotionCodeMap: w,
       addClaimedOutboundPromotionCode: W
     } = (0, h.useOutboundPromotions)(),
-    K = k.length + Y.length > 0,
+    K = Y.length + k.length > 0,
     z = m.OutboundPromoDesktopUpsellExperiment.useExperiment({
       location: "EntitlementGifts"
     }, {
@@ -179,7 +179,7 @@ t.default = function() {
           } = e;
           return t === G.SubscriptionPlans.PREMIUM_YEAR_TIER_2
         }),
-        c = k.length + Y.length > 0,
+        c = Y.length + k.length > 0,
         S = z ? (0, a.jsxs)("div", {
           className: B.promoHeaderContainer,
           children: [(0, a.jsxs)("div", {
@@ -191,7 +191,7 @@ t.default = function() {
               className: B.promoDescription,
               children: F.default.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_GIFTS_DESCRIPTION.format({
                 onClick: () => {
-                  (0, E.popLayer)(), (0, x.transitionTo)(j.Routes.APPLICATION_STORE)
+                  (0, E.popLayer)(), (0, M.transitionTo)(j.Routes.APPLICATION_STORE)
                 }
               })
             })]
@@ -216,7 +216,7 @@ t.default = function() {
           }),
           children: [S, c ? (0, a.jsx)(u.FormDivider, {
             className: B.divider
-          }) : null, Y.map(e => {
+          }) : null, k.map(e => {
             let {
               code: t,
               promotion: s
@@ -227,7 +227,7 @@ t.default = function() {
               addClaimedOutboundPromotionCode: W,
               disabled: !l
             }, s.id)
-          }), k.map(e => (0, a.jsx)(y, {
+          }), Y.map(e => (0, a.jsx)(y, {
             outboundPromotion: e,
             code: w[e.id],
             addClaimedOutboundPromotionCode: W,

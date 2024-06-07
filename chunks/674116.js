@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("153124"),
   I = s("63063"),
   N = s("358085"),
-  f = s("894939"),
-  g = s("321499"),
+  g = s("894939"),
+  f = s("321499"),
   m = s("710808"),
   C = s("625205"),
   A = s("325808"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   O = s("546997"),
   p = s("167540"),
   R = s("803567"),
-  x = s("269876"),
-  M = s("976758"),
+  M = s("269876"),
+  x = s("976758"),
   D = s("526761"),
   L = s("726985"),
   P = s("981631"),
@@ -66,7 +66,7 @@ function B() {
     legacyAudioSubsystemSupported: y,
     experimentalAudioSubsystemSupported: V,
     qosSupported: H,
-    attenuationSupported: k
+    attenuationSupported: Y
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
     qosEnabled: E.default.getQoS(),
@@ -80,13 +80,13 @@ function B() {
     experimentalAudioSubsystemSupported: E.default.supports(b.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
     qosSupported: E.default.supports(b.Features.QOS),
     attenuationSupported: E.default.supports(b.Features.ATTENUATION)
-  })), Y = (0, r.useStateFromStores)([T.default], () => T.default.getSubsection()), w = n.createRef(), W = N.isPlatformEmbedded && B && null != c.default.fileManager.readLogFiles;
+  })), k = (0, r.useStateFromStores)([T.default], () => T.default.getSubsection()), w = n.createRef(), W = N.isPlatformEmbedded && B && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
-    if (Y === D.SOUNDBOARD_SUBSECTION) {
+    if (k === D.SOUNDBOARD_SUBSECTION) {
       var e;
       null == w || null === (e = w.current) || void 0 === e || e.scrollIntoView(), u.default.clearSubsection()
     }
-  }, [w, Y]), (0, a.jsxs)(o.FormSection, {
+  }, [w, k]), (0, a.jsxs)(o.FormSection, {
     tag: o.FormTitleTags.H1,
     title: v.default.Messages.VOICE_SETTINGS,
     children: [(0, a.jsx)(S.Subsetting, {
@@ -94,7 +94,7 @@ function B() {
       children: (0, a.jsx)(C.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-      children: (0, a.jsx)(M.default, {})
+      children: (0, a.jsx)(x.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_MIC_TEST,
       children: (0, a.jsx)(h.default, {})
@@ -114,7 +114,7 @@ function B() {
       children: (0, a.jsx)(A.default, {})
     }), (0, a.jsxs)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_SENSITIVITY,
-      children: [e === b.InputModes.VOICE_ACTIVITY && (0, a.jsx)(x.default, {}), (0, a.jsx)(o.FormDivider, {
+      children: [e === b.InputModes.VOICE_ACTIVITY && (0, a.jsx)(M.default, {}), (0, a.jsx)(o.FormDivider, {
         className: U.marginBottom40
       })]
     }), (0, a.jsx)(S.Subsetting, {
@@ -127,7 +127,7 @@ function B() {
       })
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_CALL_SOUNDS,
-      children: (0, a.jsx)(f.default, {})
+      children: (0, a.jsx)(g.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_VIDEO,
       children: (0, a.jsx)(p.default, {})
@@ -141,7 +141,7 @@ function B() {
         }),
         children: [(0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_CODECS,
-          children: (0, a.jsx)(g.default, {})
+          children: (0, a.jsx)(f.default, {})
         }), (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
           children: (0, a.jsx)(R.default, {})
@@ -157,7 +157,7 @@ function B() {
               children: v.default.Messages.FORM_CHECKBOX_QOS
             })
           })
-        }), k && (0, a.jsx)(S.Subsetting, {
+        }), Y && (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
           children: (0, a.jsxs)(o.FormSection, {
             className: U.marginBottom20,

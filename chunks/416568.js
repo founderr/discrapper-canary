@@ -38,8 +38,8 @@ var l = n("735250"),
   w = n("474109"),
   B = n("741616"),
   F = n("187835"),
-  V = n("162050"),
-  H = n("118122"),
+  H = n("162050"),
+  V = n("118122"),
   k = n("193154"),
   Y = n("602147"),
   K = n("773182"),
@@ -253,7 +253,7 @@ function eu(e) {
           }),
           ref: ey.scrollerRef,
           onScroll: ey.handleScroll,
-          children: [(0, l.jsx)(W.HomeButton, {}), eU ? (0, l.jsx)(L.default, {}) : null, (0, l.jsx)(V.default, {}), (0, l.jsx)(z.default, {
+          children: [(0, l.jsx)(W.HomeButton, {}), eU ? (0, l.jsx)(L.default, {}) : null, (0, l.jsx)(H.default, {}), (0, l.jsx)(z.default, {
             isOnHubVerificationRoute: ej
           }), (0, l.jsx)(B.default, {}), ew, g.map(e => (0, l.jsx)($.default, {
             guildId: e
@@ -286,7 +286,7 @@ function eu(e) {
                   return null
               }
             })
-          }), eB, n ? null : (0, l.jsx)(H.default, {
+          }), eB, n ? null : (0, l.jsx)(V.default, {
             disableTooltip: f.length > 0,
             lastTargetNode: eG[eG.length - 1]
           }), n || eg || eS ? null : (0, l.jsx)(Y.default, {

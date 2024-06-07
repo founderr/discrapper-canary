@@ -17,8 +17,8 @@ var a, n, l = s("735250"),
   _ = s("374649"),
   I = s("431369"),
   N = s("55610"),
-  f = s("653798"),
-  g = s("311821"),
+  g = s("653798"),
+  f = s("311821"),
   m = s("42818"),
   C = s("314884"),
   A = s("509545"),
@@ -26,8 +26,8 @@ var a, n, l = s("735250"),
   O = s("285952"),
   p = s("267642"),
   R = s("74538"),
-  x = s("937615"),
-  M = s("518062"),
+  M = s("937615"),
+  x = s("518062"),
   D = s("474936"),
   L = s("231338"),
   P = s("689938"),
@@ -155,11 +155,11 @@ function j(e) {
     }),
     H = y || V ? B.total - G.total : -G.total,
     {
-      interval: k,
-      intervalCount: Y
+      interval: Y,
+      intervalCount: k
     } = L;
   return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(M.default, {
+    children: [(0, l.jsx)(x.default, {
       onClose: S
     }), (0, l.jsxs)(u.ModalContent, {
       className: b.body,
@@ -167,18 +167,18 @@ function j(e) {
         children: P.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_PREVIEW.format({
           endDate: B.subscriptionPeriodStart
         })
-      }), (0, l.jsxs)(f.PremiumInvoiceTable, {
+      }), (0, l.jsxs)(g.PremiumInvoiceTable, {
         className: b.invoiceTable,
-        children: [(0, l.jsx)(f.PremiumInvoiceTableHeader, {
+        children: [(0, l.jsx)(g.PremiumInvoiceTableHeader, {
           children: P.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES
-        }), (0, l.jsx)(f.PremiumInvoiceTableRow, {
+        }), (0, l.jsx)(g.PremiumInvoiceTableRow, {
           label: P.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({
             subscriptionCount: 1
           }),
-          value: (0, x.formatRate)((0, x.formatPrice)(H, n.currency), k, Y),
+          value: (0, M.formatRate)((0, M.formatPrice)(H, n.currency), Y, k),
           className: b.invoiceCancelRow
         }), null != F && F.length > 0 ? (0, l.jsxs)("div", {
-          children: [(0, l.jsx)(f.PremiumInvoiceTableDivider, {}), (0, l.jsx)(m.SubscriptionInvoiceFooter, {
+          children: [(0, l.jsx)(g.PremiumInvoiceTableDivider, {}), (0, l.jsx)(m.SubscriptionInvoiceFooter, {
             premiumSubscription: n,
             renewalInvoice: B,
             isUpdate: !0
@@ -199,7 +199,7 @@ function j(e) {
           }
         },
         children: P.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON
-      }), (0, l.jsx)(g.default, {
+      }), (0, l.jsx)(f.default, {
         onClick: o
       })]
     })]

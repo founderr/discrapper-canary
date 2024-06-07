@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("283595"),
   I = s("186095"),
   N = s("797717"),
-  f = s("546591"),
-  g = s("794358"),
+  g = s("546591"),
+  f = s("794358"),
   m = s("880008"),
   C = s("795295"),
   A = s("169278"),
@@ -24,8 +24,8 @@ var a = s("735250"),
   O = s("507957"),
   p = s("626135"),
   R = s("251625"),
-  x = s("358085"),
-  M = s("210887"),
+  M = s("358085"),
+  x = s("210887"),
   D = s("981631"),
   L = s("689938"),
   P = s("159618"),
@@ -33,10 +33,10 @@ var a = s("735250"),
   v = s("961047"),
   U = s("164149"),
   j = s("611273");
-let G = r.default.connectStores([M.default], () => ({
-    theme: M.default.theme
+let G = r.default.connectStores([x.default], () => ({
+    theme: x.default.theme
   }))(I.default),
-  F = (0, x.isWindows)();
+  F = (0, M.isWindows)();
 
 function B(e) {
   let {
@@ -83,7 +83,7 @@ function y(e) {
     rawGame: s,
     nowPlaying: l = !1,
     isOverride: E
-  } = e, I = (0, r.useStateFromStoresObject)([T.default, S.default, _.default], () => (0, S.transformForGameSettings)(s)), [R, x] = n.useState(!1), [M, b] = n.useState(null !== (t = I.name) && void 0 !== t ? t : "???"), j = i()(v.flexCenter, {
+  } = e, I = (0, r.useStateFromStoresObject)([T.default, S.default, _.default], () => (0, S.transformForGameSettings)(s)), [R, M] = n.useState(!1), [x, b] = n.useState(null !== (t = I.name) && void 0 !== t ? t : "???"), j = i()(v.flexCenter, {
     [P.game]: !l,
     [P.activeGame]: l,
     [U.card]: !l,
@@ -95,7 +95,7 @@ function y(e) {
   }
 
   function B() {
-    I.name !== M && u.default.editName(I, M)
+    I.name !== x && u.default.editName(I, x)
   }
 
   function y(e) {
@@ -114,7 +114,7 @@ function y(e) {
       game_name: I.name
     }), (0, d.showToast)((0, d.createToast)(L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({
       gameName: I.name
-    }), d.ToastType.SUCCESS)), x(!0)
+    }), d.ToastType.SUCCESS)), M(!0)
   }
   return (0, a.jsxs)("div", {
     className: j,
@@ -143,7 +143,7 @@ function y(e) {
         className: i()(P.gameName, P.gameNameInput),
         type: "text",
         maxLength: 128,
-        value: M,
+        value: x,
         onBlur: B,
         onKeyDown: y,
         onChange: e => b(e.target.value)
@@ -157,7 +157,7 @@ function y(e) {
           when: t
         })), (0, a.jsx)("div", {
           className: P.lastPlayed,
-          children: (0, a.jsx)(f.default, {
+          children: (0, a.jsx)(g.default, {
             hoverText: null != s && "" !== s ? s.toUpperCase() : "",
             children: e
           })
@@ -190,7 +190,7 @@ function y(e) {
     }), function() {
       let {
         detectable: e
-      } = I, t = e ? (0, a.jsx)(g.default, {
+      } = I, t = e ? (0, a.jsx)(f.default, {
         className: P.toggleIconOn,
         foreground: P.fill,
         width: 24,
@@ -300,7 +300,7 @@ function H(e) {
     }), t]
   })
 }
-let k = (0, R.cachedFunction)(function() {
+let Y = (0, R.cachedFunction)(function() {
   for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
   return new Set(t.map(e => e.exePath))
 });
@@ -313,7 +313,7 @@ t.default = function(e) {
     overrideExePaths: u
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     runningGame: S.default.getVisibleGame(),
-    overrideExePaths: k(...S.default.getOverrides())
+    overrideExePaths: Y(...S.default.getOverrides())
   }));
   return n.useEffect(() => ((0, E.watchCandidateGames)(), E.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",

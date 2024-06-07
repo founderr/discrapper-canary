@@ -1,57 +1,57 @@
 "use strict";
 
-function s(e) {
+function n(e) {
   let t = "==".slice(0, (4 - e.length % 4) % 4),
-    n = atob(e.replace(/-/g, "+").replace(/_/g, "/") + t),
-    s = new ArrayBuffer(n.length),
-    r = new Uint8Array(s);
-  for (let e = 0; e < n.length; e++) r[e] = n.charCodeAt(e);
-  return s
+    s = atob(e.replace(/-/g, "+").replace(/_/g, "/") + t),
+    n = new ArrayBuffer(s.length),
+    a = new Uint8Array(n);
+  for (let e = 0; e < s.length; e++) a[e] = s.charCodeAt(e);
+  return n
 }
 
-function r(e) {
+function a(e) {
   let t = new Uint8Array(e),
-    n = "";
-  for (let e of t) n += String.fromCharCode(e);
-  return btoa(n).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "")
+    s = "";
+  for (let e of t) s += String.fromCharCode(e);
+  return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "")
 }
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   create: function() {
-    return N
+    return g
   },
   get: function() {
-    return g
+    return x
   }
 });
-var a = "copy",
-  o = "convert";
+var l = "copy",
+  r = "convert";
 
-function i(e, t, n) {
-  if (t === a) return n;
-  if (t === o) return e(n);
-  if (t instanceof Array) return n.map(n => i(e, t[0], n));
+function i(e, t, s) {
+  if (t === l) return s;
+  if (t === r) return e(s);
+  if (t instanceof Array) return s.map(s => i(e, t[0], s));
   if (t instanceof Object) {
-    let s = {};
-    for (let [r, a] of Object.entries(t)) {
-      if (a.derive) {
-        let e = a.derive(n);
-        void 0 !== e && (n[r] = e)
+    let n = {};
+    for (let [a, l] of Object.entries(t)) {
+      if (l.derive) {
+        let e = l.derive(s);
+        void 0 !== e && (s[a] = e)
       }
-      if (!(r in n)) {
-        if (a.required) throw Error(`Missing key: ${r}`);
+      if (!(a in s)) {
+        if (l.required) throw Error(`Missing key: ${a}`);
         continue
       }
-      if (null == n[r]) {
-        s[r] = null;
+      if (null == s[a]) {
+        n[a] = null;
         continue
       }
-      s[r] = i(e, a.schema, n[r])
+      n[a] = i(e, l.schema, s[a])
     }
-    return s
+    return n
   }
 }
 
-function l(e, t) {
+function o(e, t) {
   return {
     required: !0,
     schema: e,
@@ -66,90 +66,90 @@ function u(e) {
   }
 }
 
-function c(e) {
+function d(e) {
   return {
     required: !1,
     schema: e
   }
 }
-var d = {
-    type: u(a),
-    id: u(o),
-    transports: c(a)
-  },
-  h = {
-    appid: c(a),
-    appidExclude: c(a),
-    credProps: c(a)
+var c = {
+    type: u(l),
+    id: u(r),
+    transports: d(l)
   },
   f = {
-    appid: c(a),
-    appidExclude: c(a),
-    credProps: c(a)
+    appid: d(l),
+    appidExclude: d(l),
+    credProps: d(l)
   },
-  p = {
+  h = {
+    appid: d(l),
+    appidExclude: d(l),
+    credProps: d(l)
+  },
+  _ = {
     publicKey: u({
-      rp: u(a),
+      rp: u(l),
       user: u({
-        id: u(o),
-        name: u(a),
-        displayName: u(a)
+        id: u(r),
+        name: u(l),
+        displayName: u(l)
       }),
-      challenge: u(o),
-      pubKeyCredParams: u(a),
-      timeout: c(a),
-      excludeCredentials: c([d]),
-      authenticatorSelection: c(a),
-      attestation: c(a),
-      extensions: c(h)
+      challenge: u(r),
+      pubKeyCredParams: u(l),
+      timeout: d(l),
+      excludeCredentials: d([c]),
+      authenticatorSelection: d(l),
+      attestation: d(l),
+      extensions: d(f)
     }),
-    signal: c(a)
+    signal: d(l)
   },
-  C = {
-    type: u(a),
-    id: u(a),
-    rawId: u(o),
-    authenticatorAttachment: c(a),
+  m = {
+    type: u(l),
+    id: u(l),
+    rawId: u(r),
+    authenticatorAttachment: d(l),
     response: u({
-      clientDataJSON: u(o),
-      attestationObject: u(o),
-      transports: l(a, e => {
+      clientDataJSON: u(r),
+      attestationObject: u(r),
+      transports: o(l, e => {
         var t;
         return (null == (t = e.getTransports) ? void 0 : t.call(e)) || []
       })
     }),
-    clientExtensionResults: l(f, e => e.getClientExtensionResults())
+    clientExtensionResults: o(h, e => e.getClientExtensionResults())
   },
-  m = {
-    mediation: c(a),
+  E = {
+    mediation: d(l),
     publicKey: u({
-      challenge: u(o),
-      timeout: c(a),
-      rpId: c(a),
-      allowCredentials: c([d]),
-      userVerification: c(a),
-      extensions: c(h)
+      challenge: u(r),
+      timeout: d(l),
+      rpId: d(l),
+      allowCredentials: d([c]),
+      userVerification: d(l),
+      extensions: d(f)
     }),
-    signal: c(a)
+    signal: d(l)
   },
-  x = {
-    type: u(a),
-    id: u(a),
-    rawId: u(o),
-    authenticatorAttachment: c(a),
+  p = {
+    type: u(l),
+    id: u(l),
+    rawId: u(r),
+    authenticatorAttachment: d(l),
     response: u({
-      clientDataJSON: u(o),
-      authenticatorData: u(o),
-      signature: u(o),
-      userHandle: u(o)
+      clientDataJSON: u(r),
+      authenticatorData: u(r),
+      signature: u(r),
+      userHandle: u(r)
     }),
-    clientExtensionResults: l(f, e => e.getClientExtensionResults())
+    clientExtensionResults: o(h, e => e.getClientExtensionResults())
   };
-async function N(e) {
-  let t = await navigator.credentials.create(i(s, p, e));
-  return i(r, C, t)
-}
 async function g(e) {
-  let t = await navigator.credentials.get(i(s, m, e));
-  return i(r, x, t)
+  let t = await navigator.credentials.create(i(n, _, e));
+  return i(a, m, t)
+}
+async function x(e) {
+  let t = await navigator.credentials.get(i(n, E, e));
+  return i(a, p, t)
 }

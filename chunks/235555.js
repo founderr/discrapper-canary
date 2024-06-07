@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("831506"),
   E = n("699516"),
   h = n("594174"),
-  C = n("643126"),
-  _ = n("823379"),
+  _ = n("643126"),
+  C = n("823379"),
   m = n("689938");
 
 function S(e, t, n) {
@@ -37,7 +37,7 @@ class p extends s.PureComponent {
       host: t,
       party: n
     } = this.props;
-    return this.hasParty(n) && null != e ? (0, a.jsx)(C.default, {
+    return this.hasParty(n) && null != e ? (0, a.jsx)(_.default, {
       currentUser: e,
       host: t,
       party: n,
@@ -78,7 +78,7 @@ t.default = r.default.connectStores([c.default, h.default, E.default, f.default]
     l = [];
   if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
     var r;
-    l = i()(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(_.isNotNullish).orderBy([t => null == e || e.id === t.id, e => E.default.isFriend(e.id)], ["desc", "desc"]).value()
+    l = i()(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(C.isNotNullish).orderBy([t => null == e || e.id === t.id, e => E.default.isFriend(e.id)], ["desc", "desc"]).value()
   }
   return {
     currentUser: s,

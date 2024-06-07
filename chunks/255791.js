@@ -10,7 +10,7 @@ var a, s, l, i, r = n("442837"),
 let h = {
   MAX_MEMBER_COUNT: new Set
 };
-class C extends(a = r.default.Store) {
+class _ extends(a = r.default.Store) {
   initialize() {
     var e;
     this.waitFor(f.default, c.default, d.default), this.syncWith([f.default, c.default, d.default], E.NOOP), o.Storage.remove(E.ChannelNoticeTypes.MAX_MEMBER_COUNT_100), o.Storage.remove(E.ChannelNoticeTypes.MAX_MEMBER_COUNT_250), e = new Set(o.Storage.get(E.ChannelNoticeTypes.MAX_MEMBER_COUNT)), h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set
@@ -23,12 +23,12 @@ class C extends(a = r.default.Store) {
     return !e.hasFeature(E.GuildFeatures.CLAN) && !h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(e.id) && a && e.maxMembers > 0 && e.maxMembers - n <= 1e4
   }
 }
-i = "MaxMemberCountChannelNoticeStore", (l = "displayName") in(s = C) ? Object.defineProperty(s, l, {
+i = "MaxMemberCountChannelNoticeStore", (l = "displayName") in(s = _) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new C(u.default, {
+}) : s[l] = i, t.default = new _(u.default, {
   MAX_MEMBER_COUNT_NOTICE_DISMISS: function(e) {
     let t = e.guildId;
     if (!h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(t)) return h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].add(t), o.Storage.set(E.ChannelNoticeTypes.MAX_MEMBER_COUNT, h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT]), !0

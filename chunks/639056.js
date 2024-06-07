@@ -16,9 +16,9 @@ var n = s("120356"),
   _ = s("393411"),
   I = s("474936"),
   N = s("689938"),
-  f = s("697466");
+  g = s("697466");
 
-function g(e) {
+function f(e) {
   let {
     user: t,
     planId: s,
@@ -28,37 +28,37 @@ function g(e) {
   if (null == r || T.default.getInterval(s).intervalType !== I.SubscriptionIntervalTypes.MONTH) return null;
   let S = null != u ? u.skuId : null,
     _ = r.skuId === S,
-    g = T.default.getDisplayName(s);
+    f = T.default.getDisplayName(s);
   return (0, a.jsxs)("div", {
-    className: f.accountCreditRow,
+    className: g.accountCreditRow,
     children: [(0, a.jsx)("div", {
       className: l()({
-        [f.iconBackgroundTier0]: r.skuId === I.PremiumSubscriptionSKUs.TIER_0,
-        [f.iconBackgroundTier1]: r.skuId === I.PremiumSubscriptionSKUs.TIER_1,
-        [f.iconBackgroundTier2]: r.skuId === I.PremiumSubscriptionSKUs.TIER_2
+        [g.iconBackgroundTier0]: r.skuId === I.PremiumSubscriptionSKUs.TIER_0,
+        [g.iconBackgroundTier1]: r.skuId === I.PremiumSubscriptionSKUs.TIER_1,
+        [g.iconBackgroundTier2]: r.skuId === I.PremiumSubscriptionSKUs.TIER_2
       }),
       children: (0, a.jsx)(E.default, {
-        className: f.icon
+        className: g.icon
       })
     }), (0, a.jsxs)("div", {
-      className: f.rowDetails,
+      className: g.rowDetails,
       children: [(0, a.jsx)(d.Heading, {
         variant: "heading-md/semibold",
         children: N.default.Messages.PREMIUM_SUBSCRIPTION_CREDIT.format({
-          planName: g
+          planName: f
         })
       }), t.hasFreePremium() || null != i && i.isPurchasedExternally ? null : (0, a.jsx)(d.Heading, {
-        className: f.rowApplied,
+        className: g.rowApplied,
         variant: "heading-sm/semibold",
         color: "header-secondary",
         children: _ && null != i ? N.default.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_ON.format({
           date: i.currentPeriodEnd
         }) : N.default.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_MISMATCHED_PLAN.format({
-          planName: g
+          planName: f
         })
       })]
     }), (0, a.jsx)(d.Text, {
-      className: f.rowCreditCount,
+      className: g.rowCreditCount,
       variant: "text-md/semibold",
       children: N.default.Messages.PREMIUM_SUBSCRIPTION_CREDIT_COUNT_MONTHS.format({
         count: n
@@ -80,8 +80,8 @@ t.default = function(e) {
   }).groupBy(e => e.subscriptionPlanId).value(), i = (0, o.useStateFromStores)([S.default], () => S.default.getPremiumSubscription()), c = (0, o.useStateFromStores)([S.default], () => null == S.default.getPremiumTypeSubscription()), E = Object.keys(n).some(e => e === I.SubscriptionPlans.PREMIUM_MONTH_TIER_1), T = (0, o.useStateFromStores)([u.default], () => u.default.getCurrentUser());
   return null == T ? null : (0, a.jsxs)("div", {
     children: [(0, a.jsx)("div", {
-      className: l()(t, f.premiumSubscriptionAccountCredit),
-      children: Object.keys(n).map(e => (0, a.jsx)(g, {
+      className: l()(t, g.premiumSubscriptionAccountCredit),
+      children: Object.keys(n).map(e => (0, a.jsx)(f, {
         planId: e,
         count: n[e].length,
         userPremiumSubscription: i,
@@ -89,7 +89,7 @@ t.default = function(e) {
       }, e))
     }), E && c && (0, a.jsxs)("div", {
       children: [(0, a.jsx)(d.Text, {
-        className: f.tier1AccountCreditHeader,
+        className: g.tier1AccountCreditHeader,
         variant: "text-md/normal",
         children: N.default.Messages.PREMIUM_TIER_1_ACCOUNT_CREDIT_HEADER
       }), (0, a.jsx)(_.Tier1AccountCreditBanner, {})]

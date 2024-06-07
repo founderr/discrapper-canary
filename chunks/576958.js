@@ -21,7 +21,7 @@ function d(e) {
     title: d,
     showViewAll: p,
     onViewOne: m,
-    onViewAll: f
+    onViewAll: _
   } = e;
   return (0, l.jsxs)("div", {
     className: i,
@@ -33,7 +33,7 @@ function d(e) {
       }), p ? (0, l.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.LINK,
-        onClick: f,
+        onClick: _,
         children: o.default.Messages.APP_DIRECTORY_LISTING_VIEW_ALL_BUTTON
       }) : null]
     }) : null, (0, l.jsx)("ul", {

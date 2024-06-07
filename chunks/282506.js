@@ -12,8 +12,8 @@ var s = n("570140"),
   f = n("131951"),
   E = n("366050"),
   h = n("19780"),
-  C = n("944486"),
-  _ = n("914010"),
+  _ = n("944486"),
+  C = n("914010"),
   m = n("979651"),
   S = n("981631"),
   p = n("65154");
@@ -30,7 +30,7 @@ function g() {
     t = a === e;
   return function() {
     let e = h.default.getChannelId(),
-      t = C.default.getChannelId();
+      t = _.default.getChannelId();
     if (!f.default.supports(p.Features.VIDEO) || o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)) return !0;
     let n = u.default.getAllActiveStreams().length > 0,
       a = null != e && Object.values(m.default.getVideoVoiceStatesForChannel(e)).some(e => {
@@ -53,10 +53,10 @@ function g() {
 }
 class T extends i.default {
   _initialize() {
-    C.default.addChangeListener(g), _.default.addChangeListener(g), h.default.addChangeListener(g), m.default.addChangeListener(g), c.default.addChangeListener(g), u.default.addChangeListener(g), o.default.addChangeListener(g), f.default.addChangeListener(g), r.default.addChangeListener(g)
+    _.default.addChangeListener(g), C.default.addChangeListener(g), h.default.addChangeListener(g), m.default.addChangeListener(g), c.default.addChangeListener(g), u.default.addChangeListener(g), o.default.addChangeListener(g), f.default.addChangeListener(g), r.default.addChangeListener(g)
   }
   _terminate() {
-    C.default.removeChangeListener(g), _.default.removeChangeListener(g), h.default.removeChangeListener(g), m.default.removeChangeListener(g), c.default.removeChangeListener(g), u.default.removeChangeListener(g), o.default.removeChangeListener(g), f.default.removeChangeListener(g), r.default.removeChangeListener(g)
+    _.default.removeChangeListener(g), C.default.removeChangeListener(g), h.default.removeChangeListener(g), m.default.removeChangeListener(g), c.default.removeChangeListener(g), u.default.removeChangeListener(g), o.default.removeChangeListener(g), f.default.removeChangeListener(g), r.default.removeChangeListener(g)
   }
 }
 t.default = new T

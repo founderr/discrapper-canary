@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("23551"),
   I = s("468026"),
   N = s("410030"),
-  f = s("726542"),
-  g = s("122021"),
+  g = s("726542"),
+  f = s("122021"),
   m = s("275759"),
   C = s("231757"),
   A = s("323588"),
@@ -24,8 +24,8 @@ var a = s("735250"),
   O = s("553795"),
   p = s("430824"),
   R = s("771845"),
-  x = s("246946"),
-  M = s("186095"),
+  M = s("246946"),
+  x = s("186095"),
   D = s("797717"),
   L = s("346656"),
   P = s("465670"),
@@ -39,8 +39,8 @@ var a = s("735250"),
   y = s("494620"),
   V = s("205266"),
   H = s("216153"),
-  k = s("981631"),
-  Y = s("856651"),
+  Y = s("981631"),
+  k = s("856651"),
   w = s("921944"),
   W = s("689938"),
   K = s("220301"),
@@ -84,7 +84,7 @@ let Q = e => {
           color: "header-primary",
           children: l.guild.toString()
         }), (0, a.jsx)(c.Anchor, {
-          href: null === (s = f.default.get(l.type)) || void 0 === s ? void 0 : null === (t = s.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(s, l.account),
+          href: null === (s = g.default.get(l.type)) || void 0 === s ? void 0 : null === (t = s.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(s, l.account),
           children: (0, a.jsx)(c.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
@@ -111,18 +111,18 @@ function q(e) {
     } = e,
     [h, O] = n.useState(T.friendSync),
     [p, R] = n.useState(T.visibility),
-    [x, M] = n.useState(T.metadataVisibility),
+    [M, x] = n.useState(T.metadataVisibility),
     [L, b] = n.useState(T.showActivity),
     [j, F] = n.useState(null),
     [w, z] = n.useState(null),
     [q, X] = n.useState(!1),
     [Z, J] = n.useState([]),
-    $ = (0, g.useLegacyPlatformType)(T.type),
-    ee = f.default.get($);
+    $ = (0, f.useLegacyPlatformType)(T.type),
+    ee = g.default.get($);
   n.useEffect(() => {
-    O(T.friendSync), R(T.visibility), M(T.metadataVisibility), b(T.showActivity)
+    O(T.friendSync), R(T.visibility), x(T.metadataVisibility), b(T.showActivity)
   }, [T]), n.useEffect(() => {
-    !1 !== T.verified && (null != j && (R(j), E.default.setVisibility(T.type, T.id, j), F(null)), null != w && (M(w), E.default.setMetadataVisibility(T.type, T.id, w), z(null)))
+    !1 !== T.verified && (null != j && (R(j), E.default.setVisibility(T.type, T.id, j), F(null)), null != w && (x(w), E.default.setMetadataVisibility(T.type, T.id, w), z(null)))
   }, [T]);
 
   function et() {
@@ -133,7 +133,7 @@ function q(e) {
   }
 
   function es() {
-    let e = f.default.get(T.type),
+    let e = g.default.get(T.type),
       t = W.default.Messages.DISCONNECT_ACCOUNT_BODY;
     (0, B.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
       children: [t, (0, a.jsx)(y.default, {
@@ -179,7 +179,7 @@ function q(e) {
       });
       return
     }
-    M(s), E.default.setMetadataVisibility(T.type, T.id, s)
+    x(s), E.default.setMetadataVisibility(T.type, T.id, s)
   }
 
   function el(e) {
@@ -193,11 +193,11 @@ function q(e) {
     className: K.connection,
     children: [function(e) {
       var t;
-      let s = f.default.get(e.type),
-        n = f.default.get($),
-        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[Y.MetadataFields.TWITTER_VERIFIED],
+      let s = g.default.get(e.type),
+        n = g.default.get($),
+        l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[k.MetadataFields.TWITTER_VERIFIED],
         i = null;
-      return s.type === k.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
+      return s.type === Y.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
         text: W.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
         children: e => (0, a.jsx)(D.default, {
           ...e,
@@ -245,34 +245,34 @@ function q(e) {
           })
         })]
       })
-    }(T), (t = T).twoWayLink ? null : t.type === k.PlatformTypes.XBOX ? (0, a.jsx)("div", {
+    }(T), (t = T).twoWayLink ? null : t.type === Y.PlatformTypes.XBOX ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
       children: (0, a.jsx)(H.XboxTwoWayLinkUpsell, {})
-    }) : t.type === k.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
+    }) : t.type === Y.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
       children: (0, a.jsx)(V.PlayStationTwoWayLinkUpsell, {})
     }) : null, function(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, m.getCreatedAtDate)(s[Y.MetadataFields.CREATED_AT], N);
+        l = (0, m.getCreatedAtDate)(s[k.MetadataFields.CREATED_AT], N);
       switch (e.type) {
-        case k.PlatformTypes.REDDIT:
+        case Y.PlatformTypes.REDDIT:
           n = (0, A.generateRedditMetadataItems)(s, K.metadataItem);
           break;
-        case k.PlatformTypes.STEAM:
+        case Y.PlatformTypes.STEAM:
           n = (0, A.generateSteamMetadataItems)(s, K.metadataItem);
           break;
-        case k.PlatformTypes.TWITTER:
+        case Y.PlatformTypes.TWITTER:
           n = (0, A.generateTwitterMetadataItems)(s, K.metadataItem);
           break;
-        case k.PlatformTypes.EBAY:
+        case Y.PlatformTypes.EBAY:
           n = (0, A.generateEbayMetadataItems)(s, K.metadataItem);
           break;
-        case k.PlatformTypes.PAYPAL:
+        case Y.PlatformTypes.PAYPAL:
           n = (0, A.generatePaypalMetadataItems)(s, K.metadataItem);
           break;
-        case k.PlatformTypes.TIKTOK:
+        case Y.PlatformTypes.TIKTOK:
           n = (0, A.generateTikTokMetadataItems)(s, K.metadataItem)
       }
       null !== l && (null == n && (n = []), null == n || n.push((0, a.jsx)(c.Text, {
@@ -286,7 +286,7 @@ function q(e) {
       let i = Z.includes(e.id),
         r = W.default.Messages.REFRESH;
       if (null == n || 0 === n.length) {
-        if (!0 !== f.default.get(e.type).hasMetadata) return null;
+        if (!0 !== g.default.get(e.type).hasMetadata) return null;
         n = [(0, a.jsx)(U.TextBadge, {
           className: K.connectionMetadataUpsellTag,
           text: W.default.Messages.NEW
@@ -294,7 +294,7 @@ function q(e) {
           variant: "text-xs/normal",
           className: K.connectionMetadataUpsellDescription,
           children: W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-            helpdeskUrl: G.default.getArticleURL(k.HelpdeskArticles.CONNECTION_DETAILS)
+            helpdeskUrl: G.default.getArticleURL(Y.HelpdeskArticles.CONNECTION_DETAILS)
           })
         }, "label")], r = W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS
       }
@@ -316,7 +316,7 @@ function q(e) {
         className: K.metadataContainer,
         children: n
       })
-    }(T), (s = ee, k.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
+    }(T), (s = ee, Y.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: h,
@@ -325,7 +325,7 @@ function q(e) {
         variant: "text-sm/semibold",
         children: W.default.Messages.SYNC_FRIENDS
       })
-    })), k.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
+    })), Y.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: L,
@@ -336,10 +336,10 @@ function q(e) {
           platform: s.name
         })
       })
-    })), (null === (l = f.default.get(T.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
+    })), (null === (l = g.default.get(T.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: 1 === x,
+      value: 1 === M,
       onChange: en,
       disabled: 1 !== p || null == T.metadata,
       children: (0, a.jsx)(c.Text, {
@@ -406,7 +406,7 @@ function X() {
       variant: "text-xs/normal",
       color: "header-secondary",
       children: W.default.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
-        privacyPolicyUrl: k.MarketingURLs.PRIVACY
+        privacyPolicyUrl: Y.MarketingURLs.PRIVACY
       })
     }), (0, a.jsx)(Z, {})]
   })
@@ -414,10 +414,10 @@ function X() {
 
 function Z() {
   function e(e) {
-    let t = f.default.get(e);
+    let t = g.default.get(e);
     (0, C.default)({
       platformType: t.type
-    }), j.default.track(k.AnalyticEvents.ACCOUNT_LINK_STEP, {
+    }), j.default.track(Y.AnalyticEvents.ACCOUNT_LINK_STEP, {
       previous_step: "desktop connections",
       current_step: "desktop oauth",
       platform_type: t.type
@@ -430,7 +430,7 @@ function Z() {
       onComplete: e
     })
   }
-  let s = (0, g.usePlatforms)(),
+  let s = (0, f.usePlatforms)(),
     n = (0, c.useRedesignIconContext)().enabled ? 24 : 18;
   return (0, a.jsxs)("div", {
     className: K.connectionsContainer,
@@ -478,19 +478,19 @@ function J(e) {
   return t = n ? (0, a.jsx)(c.Spinner, {
     className: z.marginTop20,
     type: c.Spinner.Type.SPINNING_CIRCLE
-  }) : 0 === l.length ? (0, a.jsxs)(M.default, {
+  }) : 0 === l.length ? (0, a.jsxs)(x.default, {
     className: z.marginTop40,
     theme: i,
-    children: [(0, a.jsx)(M.EmptyStateImage, {
+    children: [(0, a.jsx)(x.EmptyStateImage, {
       darkSrc: s("703152"),
       lightSrc: s("548617"),
       width: 230,
       height: 220
-    }), (0, a.jsx)(M.EmptyStateText, {
+    }), (0, a.jsx)(x.EmptyStateText, {
       note: W.default.Messages.CONNECTED_ACCOUNTS_NONE,
       children: W.default.Messages.CONNECTED_ACCOUNTS_NONE_TITLE
     })]
-  }) : l.filter(e => f.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(q, {
+  }) : l.filter(e => g.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(q, {
     theme: i,
     account: e,
     locale: r,
@@ -507,7 +507,7 @@ function J(e) {
   })
 }
 t.default = () => {
-  let e = (0, r.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
+  let e = (0, r.useStateFromStores)([M.default], () => M.default.hidePersonalInformation),
     t = (0, r.useStateFromStores)([O.default], () => O.default.isFetching()),
     s = (0, r.useStateFromStores)([O.default], () => O.default.getAccounts()),
     l = (0, N.default)();

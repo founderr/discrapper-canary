@@ -51,8 +51,8 @@ function x(e) {
   } = e, {
     id: B,
     name: F,
-    children: V
-  } = t, [H, k] = a.useState(!1), [Y, K] = a.useState(!1), W = H || Y;
+    children: H
+  } = t, [V, k] = a.useState(!1), [Y, K] = a.useState(!1), W = V || Y;
   a.useEffect(() => {
     D && k(!1)
   }, [D]);
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
-  }, [P, d]), Q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = V.length * (L + v), et = (0, o.useTransition)(!z && d, {
+  }, [P, d]), Q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = H.length * (L + v), et = (0, o.useTransition)(!z && d, {
     from: {
       height: 0
     },
@@ -90,7 +90,7 @@ function x(e) {
   }), en = a.useCallback(e => null == n ? void 0 : n(B, e), [n, B]), el = (0, l.jsxs)(S.ListItem, {
     children: [(0, l.jsx)(h.default, {
       disabled: z || d,
-      hovered: H,
+      hovered: V,
       selected: s,
       unread: R,
       className: T.pill
@@ -147,7 +147,7 @@ function x(e) {
         },
         className: N.__invalid_expandedGuilds,
         role: "group",
-        children: V.map(U)
+        children: H.map(U)
       }, a)
     }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
       name: Q,

@@ -17,15 +17,15 @@ var s = n("120356"),
   f = n("63063"),
   E = n("13140"),
   h = n("435064"),
-  C = n("39604"),
-  _ = n("356659"),
+  _ = n("39604"),
+  C = n("356659"),
   m = n("981631"),
   S = n("332325"),
   p = n("689938"),
   I = n("668202");
 
 function g(e) {
-  (0, o.default)(S.GameSettingsTab.CLIPS), (0, C.dismissClipsUserEducation)(e)
+  (0, o.default)(S.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
 function T() {
@@ -47,7 +47,7 @@ function T() {
   })
 }
 let A = {
-  [_.ClipsUserEducationType.Error]: {
+  [C.ClipsUserEducationType.Error]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.PRIMARY,
@@ -62,22 +62,22 @@ let A = {
     },
     containerClass: I.container
   },
-  [_.ClipsUserEducationType.Disabled]: {
+  [C.ClipsUserEducationType.Disabled]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => g(_.ClipsUserEducationType.Disabled),
+    ctaOnClick: () => g(C.ClipsUserEducationType.Disabled),
     containerClass: I.container
   },
-  [_.ClipsUserEducationType.Enabled]: {
+  [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND_INVERTED,
     bodyCopy: () => (0, a.jsx)(T, {}),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => g(_.ClipsUserEducationType.Enabled),
+    ctaOnClick: () => g(C.ClipsUserEducationType.Enabled),
     containerClass: l()(I.container, I.containerEnabled)
   }
 };
@@ -91,7 +91,7 @@ function N() {
     decoupledClipsEnabled: h.default.getSettings().decoupledClipsEnabled,
     clipsError: h.default.getLastClipsError()
   }));
-  let s = (e = t, null != n ? _.ClipsUserEducationType.Error : e ? _.ClipsUserEducationType.Enabled : _.ClipsUserEducationType.Disabled),
+  let s = (e = t, null != n ? C.ClipsUserEducationType.Error : e ? C.ClipsUserEducationType.Enabled : C.ClipsUserEducationType.Disabled),
     {
       bodyCopy: l,
       buttonCopy: o,
@@ -108,7 +108,7 @@ function N() {
       variant: "text-sm/medium",
       children: l()
     }), (0, a.jsx)(r.Button, {
-      onClick: () => (0, C.dismissClipsUserEducation)(s),
+      onClick: () => (0, _.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,
       look: r.Button.Looks.BLANK,
       className: I.buttonClose,

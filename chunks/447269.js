@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   APPLICATION_STORE_LAYOUT: function() {
-    return l
+    return n
   }
 });
-var n = s("817718"),
-  a = s("612226"),
-  r = s("981631");
-let l = {
-  ...a.DEFAULT_LAYOUT,
-  [r.KeybindActions.CAROUSEL_NEXT]: n.CAROUSEL_NEXT,
-  [r.KeybindActions.CAROUSEL_PREV]: n.CAROUSEL_PREV
+var a = s("817718"),
+  r = s("612226"),
+  i = s("981631");
+let n = {
+  ...r.DEFAULT_LAYOUT,
+  [i.KeybindActions.CAROUSEL_NEXT]: a.CAROUSEL_NEXT,
+  [i.KeybindActions.CAROUSEL_PREV]: a.CAROUSEL_PREV
 }

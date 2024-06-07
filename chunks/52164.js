@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("47120");
 var a = s("735250");
@@ -33,15 +33,15 @@ function N(e) {
     analyticsLocation: r.default.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
   });
   if (null == N) return null;
-  let f = s ? I.finePrintWithOverheadSeparator : I.finePrint,
-    g = N.invoiceItems.find(e => {
+  let g = s ? I.finePrintWithOverheadSeparator : I.finePrint,
+    f = N.invoiceItems.find(e => {
       let {
         subscriptionPlanId: t
       } = e;
       return (0, u.isPremiumBaseSubscriptionPlan)(t)
     });
-  if (null == g) return null;
-  let m = g.subscriptionPlanId,
+  if (null == f) return null;
+  let m = f.subscriptionPlanId,
     C = d.default.get(m);
   l()(null != C, "Missing plan");
   let A = (0, c.formatPrice)(N.total, N.currency),
@@ -64,13 +64,13 @@ function N(e) {
     intervalCount: C.intervalCount
   })), (0, a.jsx)(i.Text, {
     color: "text-muted",
-    className: f,
+    className: g,
     variant: "text-xs/normal",
     children: h
   })
 }
 
-function f(e) {
+function g(e) {
   let {
     subscription: t,
     withOverheadSeparator: s

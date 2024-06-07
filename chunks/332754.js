@@ -13,8 +13,8 @@ var s = n("481060"),
   f = n("374023"),
   E = n("886162"),
   h = n("981631"),
-  C = n("815660"),
-  _ = n("231338");
+  _ = n("815660"),
+  C = n("231338");
 let m = "AGREEMENTS_MODAL_KEY";
 t.default = {
   init() {
@@ -29,11 +29,11 @@ t.default = {
       ...e
     }), {
       modalKey: m,
-      onCloseRequest: _.NOOP_NULL
+      onCloseRequest: C.NOOP_NULL
     }) : null == t && ((0, d.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(m) && (0, s.closeModal)(m)))
   },
   handleAuthenticationStoreChanged() {
-    null == o.default.getId() && ((0, d.closeFullScreenLayer)("verification"), (0, s.closeModal)(m), (0, s.closeModal)(r.PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY), (0, s.closeModal)(r.EMAIL_VERIFICATION_MODAL_KEY), (0, s.closeModal)(C.PHONE_VERIFICATION_MODAL_KEY))
+    null == o.default.getId() && ((0, d.closeFullScreenLayer)("verification"), (0, s.closeModal)(m), (0, s.closeModal)(r.PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY), (0, s.closeModal)(r.EMAIL_VERIFICATION_MODAL_KEY), (0, s.closeModal)(_.PHONE_VERIFICATION_MODAL_KEY))
   },
   handleCurrentUserUpdate(e) {
     let {

@@ -1,109 +1,109 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   promptToUpload: function() {
-    return O
+    return x
   },
   showUploadFileSizeExceededError: function() {
-    return h
+    return A
   }
-}), i("653041"), i("47120"), i("411104");
-var l = i("475179"),
-  a = i("166459"),
-  s = i("966390"),
-  n = i("531643"),
-  o = i("476326"),
-  r = i("367907"),
-  d = i("358221"),
-  u = i("117530"),
-  c = i("594174"),
-  _ = i("626135"),
-  f = i("403182"),
-  m = i("74538"),
-  E = i("979956"),
-  p = i("981631"),
-  A = i("959517"),
-  T = i("474936"),
-  g = i("689938");
+}), l("653041"), l("47120"), l("411104");
+var i = l("475179"),
+  n = l("166459"),
+  a = l("966390"),
+  s = l("531643"),
+  r = l("476326"),
+  o = l("367907"),
+  u = l("358221"),
+  d = l("117530"),
+  c = l("594174"),
+  f = l("626135"),
+  m = l("403182"),
+  _ = l("74538"),
+  p = l("979956"),
+  E = l("981631"),
+  M = l("959517"),
+  g = l("474936"),
+  h = l("689938");
 
-function h(e, t) {
-  let i = c.default.getCurrentUser(),
-    l = e.getGuildId(),
-    a = f.maxFileSize(l),
-    s = [],
-    o = 0,
-    d = 0,
+function A(e, t) {
+  let l = c.default.getCurrentUser(),
+    i = e.getGuildId(),
+    n = m.maxFileSize(i),
+    a = [],
+    r = 0,
     u = 0,
-    _ = [];
-  for (let e of t) u += 1, o += e.size, s.push(e.size), e.size > d && (d = e.size), null != e.type ? _.push(e.type) : _.push("unknown");
-  if (d > a) {
-    (0, r.trackWithMetadata)(p.AnalyticEvents.FILE_SIZE_LIMIT_EXCEEDED, {
+    d = 0,
+    f = [];
+  for (let e of t) d += 1, r += e.size, a.push(e.size), e.size > u && (u = e.size), null != e.type ? f.push(e.type) : f.push("unknown");
+  if (u > n) {
+    (0, o.trackWithMetadata)(E.AnalyticEvents.FILE_SIZE_LIMIT_EXCEEDED, {
       channel_id: e.id,
-      guild_id: l,
-      user_individual_file_size_limit: a,
-      pre_compression_file_sizes: s,
-      pre_compression_aggregate_file_size: o,
-      num_attachments: u,
-      error_type: A.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
-      attachment_mimetypes: _
-    }), (0, n.openUploadError)({
-      title: g.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-      help: (0, E.getErrorHelp)(i, l),
-      showPremiumUpsell: !(0, m.isPremiumExactly)(i, T.PremiumTypes.TIER_2),
-      fileSize: d
+      guild_id: i,
+      user_individual_file_size_limit: n,
+      pre_compression_file_sizes: a,
+      pre_compression_aggregate_file_size: r,
+      num_attachments: d,
+      error_type: M.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
+      attachment_mimetypes: f
+    }), (0, s.openUploadError)({
+      title: h.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+      help: (0, p.getErrorHelp)(l, i),
+      showPremiumUpsell: !(0, _.isPremiumExactly)(l, g.PremiumTypes.TIER_2),
+      fileSize: u
     });
     return
-  }(0, n.openUploadError)({
-    title: g.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    help: g.default.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
-      maxSize: f.sizeString(f.getMaxRequestSize())
+  }(0, s.openUploadError)({
+    title: h.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    help: h.default.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
+      maxSize: m.sizeString(m.getMaxRequestSize())
     })
   })
 }
 
-function O(e, t, i) {
+function x(e, t, l) {
   let {
-    filesMetadata: r,
+    filesMetadata: o,
     requireConfirm: c = !0,
-    showLargeMessageDialog: f = !1,
-    isThumbnail: m = !1
+    showLargeMessageDialog: m = !1,
+    isThumbnail: _ = !1
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (e.length < 1) return;
-  if (null != r && r.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
-  let A = t.getGuildId();
-  if ((0, E.filesExceedUploadLimits)(e, A)) {
-    h(t, e);
+  if (null != o && o.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
+  let M = t.getGuildId();
+  if ((0, p.filesExceedUploadLimits)(e, M)) {
+    A(t, e);
     return
   }
-  if (u.default.getUploadCount(t.id, i) + e.length > p.MAX_UPLOAD_COUNT) {
-    (0, n.openUploadError)({
-      title: g.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-      help: g.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
-        limit: p.MAX_UPLOAD_COUNT
+  if (d.default.getUploadCount(t.id, l) + e.length > E.MAX_UPLOAD_COUNT) {
+    (0, s.openUploadError)({
+      title: h.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+      help: h.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+        limit: E.MAX_UPLOAD_COUNT
       })
-    }), _.default.track(p.AnalyticEvents.UPLOAD_FILE_LIMIT_ERROR, {
-      existing_count: u.default.getUploadCount(t.id, i),
+    }), f.default.track(E.AnalyticEvents.UPLOAD_FILE_LIMIT_ERROR, {
+      existing_count: d.default.getUploadCount(t.id, l),
       new_count: e.length
     });
     return
   }
-  if ((t.type === p.ChannelTypes.GUILD_VOICE || t.type === p.ChannelTypes.GUILD_STAGE_VOICE) && !d.default.getChatOpen(t.id) && l.default.updateChatOpen(t.id, !0), c) {
-    let l = Array.from(e).map((e, t) => ({
+  if ((t.type === E.ChannelTypes.GUILD_VOICE || t.type === E.ChannelTypes.GUILD_STAGE_VOICE) && !u.default.getChatOpen(t.id) && i.default.updateChatOpen(t.id, !0), c) {
+    let i = Array.from(e).map((e, t) => ({
       file: e,
-      platform: o.UploadPlatform.WEB,
-      isThumbnail: m,
-      ...null == r ? void 0 : r[t]
+      platform: r.UploadPlatform.WEB,
+      isThumbnail: _,
+      ...null == o ? void 0 : o[t]
     }));
-    a.default.addFiles({
-      files: l,
+    n.default.addFiles({
+      files: i,
       channelId: t.id,
-      showLargeMessageDialog: f,
-      draftType: i
+      showLargeMessageDialog: m,
+      draftType: l
     })
-  } else s.default.instantBatchUpload({
+  } else a.default.instantBatchUpload({
     channelId: t.id,
     files: e,
-    draftType: i,
-    isThumbnail: m,
-    filesMetadata: r
+    draftType: l,
+    isThumbnail: _,
+    filesMetadata: o
   })
 }

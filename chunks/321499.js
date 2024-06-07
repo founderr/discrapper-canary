@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("996073"),
   I = s("526761"),
   N = s("65154"),
-  f = s("689938"),
-  g = s("611273");
+  g = s("689938"),
+  f = s("611273");
 let m = s("651714"),
   C = s("297166");
 
@@ -31,11 +31,11 @@ function A() {
     experimentalEncoders: c.default.getExperimentalEncoders()
   }));
   return "stable" !== E.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
-    className: i()(g.marginTop8, g.marginBottom20),
+    className: i()(f.marginTop8, f.marginBottom20),
     value: e,
     onChange: e => u.default.setExperimentalEncoders(e),
     disabled: !1,
-    children: f.default.Messages.EXPERIMENTAL_ENCODERS
+    children: g.default.Messages.EXPERIMENTAL_ENCODERS
   }) : null
 }
 
@@ -53,10 +53,10 @@ function h() {
     E = n.useRef(null);
   return (0, _.default)(E, I.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
-      className: g.marginBottom20,
-      title: f.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
+      className: f.marginBottom20,
+      title: g.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
       children: (0, a.jsx)(d.FormNotice, {
-        className: g.marginBottom20,
+        className: f.marginBottom20,
         type: d.FormNoticeTypes.PRIMARY,
         imageData: {
           src: (0, o.isThemeLight)(e) ? m : C,
@@ -64,29 +64,29 @@ function h() {
           height: 40
         },
         align: S.default.Align.CENTER,
-        body: f.default.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
+        body: g.default.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
       })
     }), l && (0, a.jsxs)(d.FormSection, {
-      className: g.marginBottom20,
-      title: f.default.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
+      className: f.marginBottom20,
+      title: g.default.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
       children: [(0, a.jsx)(d.FormSwitch, {
-        className: i()(g.marginTop8, g.marginBottom20),
+        className: i()(f.marginTop8, f.marginBottom20),
         value: t,
         onChange: e => u.default.setOpenH264(e),
         disabled: !1,
-        note: f.default.Messages.FORM_HELP_OPEN_H264,
-        children: f.default.Messages.USER_SETTINGS_VOICE_OPEN_H264
+        note: g.default.Messages.FORM_HELP_OPEN_H264,
+        children: g.default.Messages.USER_SETTINGS_VOICE_OPEN_H264
       }), (0, a.jsx)("div", {
         style: {
           scrollMarginTop: "48px"
         },
         ref: E
       }), (0, a.jsx)(d.FormSwitch, {
-        className: i()(g.marginTop8, g.marginBottom20),
+        className: i()(f.marginTop8, f.marginBottom20),
         value: s,
         onChange: e => u.default.setHardwareH264(e),
-        note: f.default.Messages.FORM_HELP_HARDWARE_H264,
-        children: f.default.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
+        note: g.default.Messages.FORM_HELP_HARDWARE_H264,
+        children: g.default.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
       }), (0, a.jsx)(A, {})]
     })]
   })

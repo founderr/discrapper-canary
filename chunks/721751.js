@@ -3,8 +3,8 @@ let s;
 n.r(t), n("47120");
 var a = n("735250"),
   i = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
+  r = n("120356"),
+  l = n.n(r),
   o = n("873546"),
   u = n("442837"),
   d = n("481060"),
@@ -34,16 +34,16 @@ function L(e) {
     children: t
   } = e;
   switch (function() {
-      let [e, t] = i.useState(!1), [n, a] = i.useState(!1), l = h.default.useExperiment({
+      let [e, t] = i.useState(!1), [n, a] = i.useState(!1), r = h.default.useExperiment({
         location: "authWrapper"
       }, {
         autoTrackExposure: !1
-      }), r = (0, u.useStateFromStores)([E.default], () => E.default.hasLoadedExperiments);
+      }), l = (0, u.useStateFromStores)([E.default], () => E.default.hasLoadedExperiments);
       return ((0, c.default)(() => {
-        !r && a(!0)
-      }, 300), void 0 !== s) ? s : !n && r ? (!e && (h.default.trackExposure({
+        !l && a(!0)
+      }, 300), void 0 !== s) ? s : !n && l ? (!e && (h.default.trackExposure({
         location: "authWrapper"
-      }), t(!0)), v(l.isWelcomeRefreshEnabled ? "refresh" : "legacy")) : n ? v("legacy") : "loading"
+      }), t(!0)), v(r.isWelcomeRefreshEnabled ? "refresh" : "legacy")) : n ? v("legacy") : "loading"
     }()) {
     case "refresh":
       return (0, a.jsxs)(a.Fragment, {
@@ -102,7 +102,7 @@ class x extends i.Component {
         children: null != e ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(m.default, {
             show: !0,
-            className: r()(S.logo)
+            className: l()(S.logo)
           }), (0, a.jsx)(_.Splash, {
             splash: e,
             children: t

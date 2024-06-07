@@ -4,17 +4,17 @@ n.r(t), n.d(t, {
     return s
   }
 }), n("47120");
-var i = n("470079"),
-  a = n("295141");
+var a = n("470079"),
+  l = n("295141");
 let s = () => {
-  let [e, t] = i.useState(!1), [n, s] = i.useState(null);
+  let [e, t] = a.useState(!1), [n, s] = a.useState(null);
   return {
     loading: e,
     error: n,
-    getTrialPurchaseEligibility: i.useCallback(async (e, n, i) => {
+    getTrialPurchaseEligibility: a.useCallback(async (e, n, a) => {
       t(!0), s(null);
       try {
-        return await (0, a.getGuildRoleSubscriptionTrialEligibility)(e, n, i)
+        return await (0, l.getGuildRoleSubscriptionTrialEligibility)(e, n, a)
       } catch (e) {
         s(e)
       } finally {

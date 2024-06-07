@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i = n("689938");
-let a = ["a", "b", "c", "d"],
+var a = n("689938");
+let l = ["a", "b", "c", "d"],
   s = e => e;
 
-function l(e, t) {
+function i(e, t) {
   let n = {},
-    i = Math.min(e.length, a.length);
-  for (let s = 0; s < i; ++s) n[a[s]] = (n, i) => t(e[s], i);
+    a = Math.min(e.length, l.length);
+  for (let s = 0; s < a; ++s) n[l[s]] = (n, a) => t(e[s], a);
   return n
 }
 class r {
@@ -28,20 +28,20 @@ class r {
       case 1:
         return e(this.items[0], "");
       case 2:
-        return i.default.Messages.GENERIC_FORMATTED_LIST_TWO.format(l(this.items, e));
+        return a.default.Messages.GENERIC_FORMATTED_LIST_TWO.format(i(this.items, e));
       case 3:
-        return i.default.Messages.GENERIC_FORMATTED_LIST_THREE.format(l(this.items, e));
+        return a.default.Messages.GENERIC_FORMATTED_LIST_THREE.format(i(this.items, e));
       default:
-        return i.default.Messages.GENERIC_FORMATTED_LIST_FOUR.format(l(this.items, e))
+        return a.default.Messages.GENERIC_FORMATTED_LIST_FOUR.format(i(this.items, e))
     }
   }
   constructor(e) {
-    var t, n, i;
-    t = this, i = void 0, (n = "items") in t ? Object.defineProperty(t, n, {
-      value: i,
+    var t, n, a;
+    t = this, a = void 0, (n = "items") in t ? Object.defineProperty(t, n, {
+      value: a,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = i, this.items = e
+    }) : t[n] = a, this.items = e
   }
 }

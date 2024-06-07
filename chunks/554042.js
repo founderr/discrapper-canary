@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("865427"),
   I = s("358085"),
   N = s("210887"),
-  f = s("981631"),
-  g = s("689938"),
+  g = s("981631"),
+  f = s("689938"),
   m = s("307723");
 let C = [{
   label: "Latin alphabet",
@@ -75,11 +75,11 @@ function h() {
     })
   }, []);
   let R = I.isPlatformEmbedded ? s : e,
-    x = (0, r.useStateFromStores)([T.default], () => {
+    M = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
       return (0, _.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    [M, D] = A("playground-overrideText", null),
+    [x, D] = A("playground-overrideText", null),
     [L, P] = A("playground-defaultText", C[0].value),
     b = n.useCallback(e => {
       let t = C.find(t => {
@@ -108,7 +108,7 @@ function h() {
               display: "inline-block"
             },
             children: ["Zoom: ", R, "%"]
-          }), null != x ? (0, a.jsxs)(d.Text, {
+          }), null != M ? (0, a.jsxs)(d.Text, {
             tag: "div",
             variant: "heading-lg/bold",
             style: {
@@ -116,7 +116,7 @@ function h() {
               marginLeft: "1em"
             },
             color: "header-secondary",
-            children: ["(", x.id, ")"]
+            children: ["(", M.id, ")"]
           }) : null]
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.SingleSelect, {
@@ -130,7 +130,7 @@ function h() {
             className: m.input,
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
-              value: null != M ? M : "",
+              value: null != x ? x : "",
               onChange: b
             })
           })
@@ -140,11 +140,11 @@ function h() {
             className: m.theme,
             orientation: "horizontal",
             options: [{
-              name: g.default.Messages.THEME_DARK,
-              value: f.ThemeTypes.DARK
+              name: f.default.Messages.THEME_DARK,
+              value: g.ThemeTypes.DARK
             }, {
-              name: g.default.Messages.THEME_LIGHT,
-              value: f.ThemeTypes.LIGHT
+              name: f.default.Messages.THEME_LIGHT,
+              value: g.ThemeTypes.LIGHT
             }],
             onChange: e => {
               (0, c.saveClientTheme)({
@@ -198,7 +198,7 @@ function h() {
             }) : null]
           }, e), O.map(t => {
             var s;
-            let n = null !== (s = "custom" === L ? M : L) && void 0 !== s ? s : "";
+            let n = null !== (s = "custom" === L ? x : L) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {
               className: m.textSample,
               children: (0, a.jsxs)("div", {

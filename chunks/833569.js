@@ -28,8 +28,8 @@ var a, n, i = s("735250"),
   T = s("122289"),
   A = s("63063"),
   R = s("74538"),
-  y = s("937615"),
-  M = s("374649"),
+  M = s("937615"),
+  y = s("374649"),
   g = s("140465"),
   L = s("314684"),
   x = s("653798"),
@@ -116,7 +116,7 @@ function V(e) {
           })
       }
   }
-  let y = s.items.some(e => {
+  let M = s.items.some(e => {
       let {
         planId: t
       } = e;
@@ -127,7 +127,7 @@ function V(e) {
       } = e;
       return !w.PREMIUM_PLANS.has(t)
     })) != null,
-    M = y ? (0, i.jsx)(m.Button, {
+    y = M ? (0, i.jsx)(m.Button, {
       onClick: () => n(3),
       children: Y.default.Messages.NEXT
     }) : (0, i.jsx)(m.Button, {
@@ -180,7 +180,7 @@ function V(e) {
       })]
     }), (0, i.jsxs)(m.ModalFooter, {
       justify: C.default.Justify.START,
-      children: [M, g]
+      children: [y, g]
     })]
   })
 }
@@ -191,7 +191,7 @@ function K(e) {
     premiumSubscription: a
   } = e, {
     analyticsLocations: n
-  } = (0, I.default)(), [l] = (0, M.useSubscriptionInvoicePreview)({
+  } = (0, I.default)(), [l] = (0, y.useSubscriptionInvoicePreview)({
     subscriptionId: a.id,
     items: (0, R.getItemsWithoutPremiumPlanItem)(null !== (s = null === (t = a.renewalMutations) || void 0 === t ? void 0 : t.items) && void 0 !== s ? s : a.items),
     renewal: !0,
@@ -211,7 +211,7 @@ function K(e) {
       className: H.renewalInvoiceDate,
       children: 0 !== l.total ? Y.default.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE_WITH_CHARGE.format({
         renewalDate: l.subscriptionPeriodStart,
-        rate: (0, y.formatRate)((0, y.formatPrice)(l.total, l.currency), u, o)
+        rate: (0, M.formatRate)((0, M.formatPrice)(l.total, l.currency), u, o)
       }) : Y.default.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({
         renewalDate: l.subscriptionPeriodStart
       })
@@ -315,14 +315,14 @@ function X(e) {
     [N, P] = l.useState(null),
     C = (0, L.useFreeBoostUserTenureReward)(),
     A = (null == C ? void 0 : C.showCard) === !0,
-    y = null === (t = (0, R.getPremiumPlanItem)(a)) || void 0 === t ? void 0 : t.planId,
-    M = null != y ? R.default.getPremiumType(y) : null;
-  c()(null != M, "Should not be cancelling Nitro without premiumType");
+    M = null === (t = (0, R.getPremiumPlanItem)(a)) || void 0 === t ? void 0 : t.planId,
+    y = null != M ? R.default.getPremiumType(M) : null;
+  c()(null != y, "Should not be cancelling Nitro without premiumType");
   let x = (0, _.default)();
   l.useEffect(() => {
     h.default.track(F.AnalyticEvents.CANCELLATION_FLOW_STARTED, Z(a))
   }, [a]);
-  let O = M === w.PremiumTypes.TIER_0 || M === w.PremiumTypes.TIER_1 || M === w.PremiumTypes.TIER_2;
+  let O = y === w.PremiumTypes.TIER_0 || y === w.PremiumTypes.TIER_1 || y === w.PremiumTypes.TIER_2;
   null == p && (p = O ? 1 : 2);
   let {
     analyticsLocations: B
@@ -359,7 +359,7 @@ function X(e) {
     case 6:
       s = (0, i.jsx)(U.PremiumSubscriptionPauseModalSelect, {
         premiumSubscription: a,
-        premiumType: M,
+        premiumType: y,
         setStep: W,
         onClose: () => $(j),
         pauseDuration: J,
@@ -394,7 +394,7 @@ function X(e) {
       }
       s = (0, i.jsx)(U.PremiumSubscriptionPauseModalConfirm, {
         premiumSubscription: a,
-        premiumType: M,
+        premiumType: y,
         setStep: W,
         onClose: () => $(j),
         analyticsLocation: d,
@@ -403,7 +403,7 @@ function X(e) {
       break;
     case 1:
       s = (0, i.jsx)(v.default, {
-        premiumType: M,
+        premiumType: y,
         titleText: Y.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
         subtitleText: A ? Y.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2 : Y.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
         subtitleClassName: A ? H.subtitleSection : void 0,
@@ -441,7 +441,7 @@ function X(e) {
     case 2:
       s = (0, i.jsx)(V, {
         premiumSubscription: a,
-        premiumType: M,
+        premiumType: y,
         setStep: W,
         onClose: () => $(j),
         whatYouLoseExperienceEnabled: O,
@@ -451,7 +451,7 @@ function X(e) {
     case 3:
       s = (0, i.jsx)(z, {
         premiumSubscription: a,
-        premiumType: M,
+        premiumType: y,
         onBack: () => W(2),
         onClose: () => $(j),
         analyticsLocation: d
@@ -460,7 +460,7 @@ function X(e) {
     case 4:
       s = (0, i.jsx)(D.default, {
         premiumSubscription: a,
-        premiumType: M,
+        premiumType: y,
         onClose: () => $(j),
         onConfirm: () => W(5),
         userDiscountOffer: et
@@ -469,7 +469,7 @@ function X(e) {
     case 5:
       s = (0, i.jsx)(b.PremiumSubscritionDiscountAppliedModal, {
         premiumSubscription: a,
-        premiumType: M,
+        premiumType: y,
         onClose: () => $(j),
         confettiCanvas: N,
         userDiscountOffer: et

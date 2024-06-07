@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("735250"),
@@ -16,13 +16,13 @@ var a = n("735250"),
   f = n("260889"),
   E = n("981631"),
   h = n("674563"),
-  C = n("689938");
+  _ = n("689938");
 
-function _(e) {
+function C(e) {
   let {
     party: t,
     close: n,
-    onSelect: _
+    onSelect: C
   } = e, m = (0, u.default)(t), S = (0, f.default)(t), p = (0, c.default)(t), I = (0, d.default)(t), g = (0, r.default)(t), T = (0, o.default)(t);
   return s.useEffect(() => {
     let e = t.currentActivities.filter(e => {
@@ -36,8 +36,8 @@ function _(e) {
   }, []), (0, a.jsxs)(l.Menu, {
     navId: "now-playing-menu",
     onClose: n,
-    "aria-label": C.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
-    onSelect: _,
+    "aria-label": _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    onSelect: C,
     children: [m, (0, a.jsxs)(l.MenuGroup, {
       children: [S, p]
     }), (0, a.jsx)(l.MenuGroup, {

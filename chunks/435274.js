@@ -2,15 +2,15 @@
 r.r(t);
 var a = r("735250");
 r("470079");
-var i = r("960259"),
-  n = r("202229"),
+var n = r("960259"),
+  i = r("202229"),
   l = r("325767");
-t.default = (0, i.replaceIcon)(function(e) {
+t.default = (0, n.replaceIcon)(function(e) {
   let {
     width: t = 16,
     height: r = 16,
-    color: i = "currentColor",
-    foreground: n,
+    color: n = "currentColor",
+    foreground: i,
     ...o
   } = e;
   return (0, a.jsx)("svg", {
@@ -19,11 +19,11 @@ t.default = (0, i.replaceIcon)(function(e) {
     height: r,
     viewBox: "0 0 18 20",
     children: (0, a.jsx)("path", {
-      className: n,
-      fill: i,
+      className: i,
+      fill: n,
       d: "M15,15H3V13H15Zm0-4H3V9H15Zm0-4H3V5H15ZM0,20l1.5-1.5L3,20l1.5-1.5L6,20l1.5-1.5L9,20l1.5-1.5L12,20l1.5-1.5L15,20l1.5-1.5L18,20V0L16.5,1.5,15,0,13.5,1.5,12,0,10.5,1.5,9,0,7.5,1.5,6,0,4.5,1.5,3,0,1.5,1.5,0,0Z"
     })
   })
-}, n.ReceiptIcon, void 0, {
+}, i.ReceiptIcon, void 0, {
   size: 16
 })

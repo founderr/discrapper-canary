@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return M
+    return x
   }
 }), s("653041");
 var a, n, l = s("735250");
@@ -18,8 +18,8 @@ var i = s("120356"),
   _ = s("153124"),
   I = s("626135"),
   N = s("63063"),
-  f = s("210887"),
-  g = s("981631"),
+  g = s("210887"),
+  f = s("981631"),
   m = s("689938"),
   C = s("611273");
 let A = s("775322"),
@@ -27,24 +27,24 @@ let A = s("775322"),
   O = (0, _.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
 let p = {
-  page: g.AnalyticsPages.USER_SETTINGS,
-  section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+  page: f.AnalyticsPages.USER_SETTINGS,
+  section: f.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
 };
 
 function R(e) {
   let t = e.currentTarget;
-  I.default.track(g.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  I.default.track(f.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
-      page: g.AnalyticsPages.USER_SETTINGS,
-      section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+      page: f.AnalyticsPages.USER_SETTINGS,
+      section: f.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
     }
   })
 }
 
-function x() {
-  let e = (0, o.useStateFromStores)([f.default], () => f.default.theme),
+function M() {
+  let e = (0, o.useStateFromStores)([g.default], () => g.default.theme),
     {
       noiseCancellation: t,
       noiseSuppression: s,
@@ -94,7 +94,7 @@ function x() {
       },
       align: T.default.Align.CENTER,
       body: (0, l.jsx)(u.Anchor, {
-        href: N.default.getArticleURL(g.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: N.default.getArticleURL(f.HelpdeskArticles.NOISE_SUPPRESSION),
         onClick: R,
         children: m.default.Messages.LEARN_MORE
       })
@@ -102,7 +102,7 @@ function x() {
   })
 }
 
-function M() {
+function x() {
   let {
     inputMode: e,
     inputDeviceId: t,
@@ -129,11 +129,11 @@ function M() {
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), f = _ || I || N, A = e === g.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), g = _ || I || N, A = e === f.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
     className: C.marginBottom20,
     title: m.default.Messages.FORM_LABEL_VOICE_PROCESSING,
-    children: [f && (0, l.jsx)(u.FormText, {
+    children: [g && (0, l.jsx)(u.FormText, {
       className: C.marginBottom20,
       type: u.FormText.Types.DESCRIPTION,
       children: m.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
@@ -141,12 +141,12 @@ function M() {
       className: r()(C.marginTop8, C.marginBottom20),
       value: s,
       onChange: e => c.default.setEchoCancellation(e, {
-        page: g.AnalyticsPages.USER_SETTINGS,
-        section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: f.AnalyticsPages.USER_SETTINGS,
+        section: f.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       disabled: _,
       children: m.default.Messages.ECHO_CANCELLATION
-    }), (0, l.jsx)(x, {}), d && (0, l.jsx)(u.FormSwitch, {
+    }), (0, l.jsx)(M, {}), d && (0, l.jsx)(u.FormSwitch, {
       value: i,
       onChange: t => c.default.setMode(e, {
         vadUseKrisp: t
@@ -158,8 +158,8 @@ function M() {
       className: "",
       value: a,
       onChange: e => c.default.setAutomaticGainControl(e, {
-        page: g.AnalyticsPages.USER_SETTINGS,
-        section: g.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: f.AnalyticsPages.USER_SETTINGS,
+        section: f.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       note: m.default.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
       disabled: N,

@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("376644"),
   E = n("481060"),
   h = n("963202"),
-  C = n("105671"),
-  _ = n("92373"),
+  _ = n("105671"),
+  C = n("92373"),
   m = n("207796"),
   S = n("308083"),
   p = n("689938"),
@@ -28,11 +28,11 @@ function g(e) {
     onClick: u,
     isActive: d,
     autoWidth: c = !1
-  } = e, [f, h] = s.useState(!1), [C, _] = s.useState(!1), S = m.useClanDiscoveryUIStore.getState().mode, p = S === m.ClanDiscoveryMode.GAMES || S === m.ClanDiscoveryMode.PLAYSTYLE || S === m.ClanDiscoveryMode.TRAITS;
+  } = e, [f, h] = s.useState(!1), [_, C] = s.useState(!1), S = m.useClanDiscoveryUIStore.getState().mode, p = S === m.ClanDiscoveryMode.GAMES || S === m.ClanDiscoveryMode.PLAYSTYLE || S === m.ClanDiscoveryMode.TRAITS;
   s.useEffect(() => {
-    p && (h(!1), _(!1))
+    p && (h(!1), C(!1))
   }, [p]);
-  let g = d && (C || f),
+  let g = d && (_ || f),
     T = s.useMemo(() => (0, a.jsxs)(E.Clickable, {
       className: I.tooltipContentWrapper,
       onClick: u,
@@ -68,10 +68,10 @@ function g(e) {
       color: E.ButtonColors.CUSTOM,
       onClick: u,
       onMouseEnter: () => {
-        _(!0)
+        C(!0)
       },
       onMouseLeave: () => {
-        _(!1)
+        C(!1)
       },
       children: [t, (0, a.jsxs)("div", {
         className: I.filterPillText,
@@ -94,12 +94,12 @@ function T() {
     n = s.useCallback(() => {
       (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GAMES)
     }, []),
-    l = null !== (e = (0, C.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
+    l = null !== (e = (0, _.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
     i = t.slice(0, 3),
     o = t.length - 3,
     d = (0, a.jsx)("div", {
       className: I.gamesTooltip,
-      children: i.map((e, t) => (0, a.jsx)(_.default, {
+      children: i.map((e, t) => (0, a.jsx)(C.default, {
         applicationId: e,
         otherGamesCount: 2 === t && o > 0 ? o + 1 : void 0
       }, e))

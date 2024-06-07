@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("150063"),
   E = n("45114"),
   h = n("230711"),
-  C = n("112724"),
-  _ = n("183126"),
+  _ = n("112724"),
+  C = n("183126"),
   m = n("607070"),
   S = n("209613"),
   p = n("325708"),
@@ -26,11 +26,11 @@ var a = n("735250"),
   R = n("359110"),
   O = n("6025"),
   L = n("897473"),
-  P = n("108427"),
-  M = n("970731"),
-  y = n("210887"),
-  D = n("433355"),
-  x = n("592125"),
+  M = n("108427"),
+  P = n("970731"),
+  x = n("210887"),
+  y = n("433355"),
+  D = n("592125"),
   b = n("819640"),
   U = n("916187"),
   j = n("151827"),
@@ -45,8 +45,8 @@ var a = n("735250"),
   W = n("922409"),
   K = n("899740"),
   z = n("177033"),
-  q = n("355350"),
-  Q = n("307947"),
+  Q = n("355350"),
+  q = n("307947"),
   Z = n("96479"),
   X = n("480874"),
   J = n("687683"),
@@ -62,7 +62,7 @@ function el() {
     t = (0, K.useMessageRequestsCount)(),
     n = (0, z.default)(),
     l = (0, V.useListHasSingleMessageRequest)(),
-    u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
+    u = (0, C.useIsRejectAllMessageRequestsEnabled)(),
     d = n.length > 0 ? null == n ? void 0 : n[0].channel.id : null,
     f = (0, k.useIsNewMessageRequestHomeCountEnabled)({
       location: "message-request-page-web"
@@ -74,7 +74,7 @@ function el() {
       (0, c.showToast)((0, c.createToast)(en.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: C
+      rejectAll: _
     } = (0, Y.useMessageRequestActions)({
       onError: h
     }),
@@ -83,8 +83,8 @@ function el() {
       channelId: p
     } = (0, W.useMessageRequestSidebarState)(),
     I = s.useCallback(() => {
-      C(n.map(e => e.channel.id))
-    }, [n, C]),
+      _(n.map(e => e.channel.id))
+    }, [n, _]),
     g = s.useCallback(e => {
       var t, s;
       let {
@@ -125,7 +125,7 @@ function el() {
     }, "title"), [t, I, u]);
   return (n.length !== t && v.default.increment({
     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
-  }), 0 === n.length) ? (0, a.jsx)(Q.default, {
+  }), 0 === n.length) ? (0, a.jsx)(q.default, {
     section: J.MessageRequestSections.REQUESTS
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: m,
@@ -164,7 +164,7 @@ function ei(e) {
   let {
     pageWidth: t,
     onSidebarResize: n
-  } = e, s = (0, u.useStateFromStores)([D.default], () => D.default.getSidebarState(D.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
+  } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== L.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - $.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(p.default, {
@@ -173,7 +173,7 @@ function ei(e) {
     onWidthChange: n,
     children: (0, a.jsx)(I.default, {
       channel: l,
-      baseChannelId: D.MESSAGE_REQUESTS_BASE_CHANNEL_ID
+      baseChannelId: y.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
   })
 }
@@ -181,14 +181,14 @@ let er = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(M.default, {
+    return (0, a.jsx)(P.default, {
       header: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: ea.messageRequestCoachmark,
       onClick: () => t(ee.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: M.CaretPosition.TOP_CENTER,
+      caretPosition: P.CaretPosition.TOP_CENTER,
       headerClassName: ea.__invalid_header
     })
   },
@@ -208,7 +208,7 @@ let er = function(e) {
         if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
           renderPopout: () => t ? (0, a.jsx)(er, {
             markAsDismissed: r
-          }) : (0, a.jsx)(M.default, {
+          }) : (0, a.jsx)(P.default, {
             header: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: en.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -220,7 +220,7 @@ let er = function(e) {
               })
             },
             markAsDismissed: r,
-            caretPosition: M.CaretPosition.TOP_CENTER,
+            caretPosition: P.CaretPosition.TOP_CENTER,
             headerClassName: ea.__invalid_header
           }),
           position: "bottom",
@@ -241,39 +241,39 @@ function eu(e) {
   } = e;
   return t === J.MessageRequestSections.SPAM ? (0, a.jsx)(X.default, {}) : (0, a.jsx)(el, {})
 }
-let ed = (0, C.default)(function(e) {
+let ed = (0, _.default)(function(e) {
   let {
     width: t
   } = e, n = (0, K.useMessageRequestsCount)();
   s.useEffect(() => {
-    f.setHomeLink($.Routes.MESSAGE_REQUESTS), (0, P.trackAppUIViewed)("message-requests"), G.default.track($.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
+    f.setHomeLink($.Routes.MESSAGE_REQUESTS), (0, M.trackAppUIViewed)("message-requests"), G.default.track($.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
     }), v.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let l = (0, u.useStateFromStores)([y.default], () => y.default.theme),
-    r = (0, q.useSpamMessageRequestCount)(),
+  let l = (0, u.useStateFromStores)([x.default], () => x.default.theme),
+    r = (0, Q.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
-    h = (0, u.useStateFromStores)([D.default], () => {
-      let e = D.default.getSidebarState(D.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
+    h = (0, u.useStateFromStores)([y.default], () => {
+      let e = y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
       return null != e && e.type === L.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
-    C = null == h ? void 0 : h.channelId,
-    _ = null != h,
-    m = (0, F.useIsEitherTypeOfMessageRequest)(C),
-    S = (0, B.useHasUserRepliedInChannel)(C);
+    _ = null == h ? void 0 : h.channelId,
+    C = null != h,
+    m = (0, F.useIsEitherTypeOfMessageRequest)(_),
+    S = (0, B.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != C && !m && S && _ && ((0, R.transitionToChannel)(C), O.default.closeChannelSidebar(D.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
-  }, [C, S, _, m]);
+    null != _ && !m && S && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+  }, [_, S, C, m]);
   let [p, I] = s.useState(J.MessageRequestSections.REQUESTS);
   return (0, g.usePageTitle)({
     location: en.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i()(es.chat, ea.container, {
-        [es.threadSidebarOpen]: _,
-        [es.threadSidebarFloating]: _ && d
+        [es.threadSidebarOpen]: C,
+        [es.threadSidebarFloating]: C && d
       }),
       children: [(0, a.jsxs)(N.default, {
         className: (0, w.getThemeClass)(l),
@@ -311,7 +311,7 @@ let ed = (0, C.default)(function(e) {
           section: p
         })
       })]
-    }), _ && (0, a.jsx)(ei, {
+    }), C && (0, a.jsx)(ei, {
       pageWidth: t,
       onSidebarResize: (e, t) => {
         E(t)

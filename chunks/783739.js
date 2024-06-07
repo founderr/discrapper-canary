@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("74538"),
   I = s("296533"),
   N = s("901750"),
-  f = s("112863"),
-  g = s("701157"),
+  g = s("112863"),
+  f = s("701157"),
   m = s("912152"),
   C = s("615603"),
   A = s("474936"),
@@ -29,7 +29,7 @@ var a = s("735250"),
 function O(e) {
   let {
     premiumSubscription: t
-  } = e, s = (0, l.useStateFromStores)([T.default], () => T.default.boostSlots), O = n.useMemo(() => Object.values(s), [s]), p = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()), R = _.default.isPremium(p, A.PremiumTypes.TIER_2), x = (0, l.useStateFromStores)([c.default], () => c.default.affinities), M = (0, l.useStateFromStores)([S.default], () => S.default.getFlattenedGuildIds()), D = x.length > 0 || M.length > 0, L = O.length > 0, P = n.useMemo(() => O.some(e => null != e.premiumGuildSubscription), [O]), b = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUserAppliedBoosts()), v = (null == t ? void 0 : t.isPausedOrPausePending) === !0;
+  } = e, s = (0, l.useStateFromStores)([T.default], () => T.default.boostSlots), O = n.useMemo(() => Object.values(s), [s]), p = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()), R = _.default.isPremium(p, A.PremiumTypes.TIER_2), M = (0, l.useStateFromStores)([c.default], () => c.default.affinities), x = (0, l.useStateFromStores)([S.default], () => S.default.getFlattenedGuildIds()), D = M.length > 0 || x.length > 0, L = O.length > 0, P = n.useMemo(() => O.some(e => null != e.premiumGuildSubscription), [O]), b = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUserAppliedBoosts()), v = (null == t ? void 0 : t.isPausedOrPausePending) === !0;
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(i.BlockedPaymentsWarning, {
       className: h.blockedPaymentsWarning
@@ -43,7 +43,7 @@ function O(e) {
       isUserPremiumTier2: R,
       hasGuildAffinitiesOrInGuild: D,
       subscriptionIsPausedOrPausePending: v
-    }), !D && (0, a.jsx)(f.default, {}), (null == t ? void 0 : t.isPaused) ? (0, a.jsx)(I.GuildBoostingSettingsPausedAppliedBoosts, {
+    }), !D && (0, a.jsx)(g.default, {}), (null == t ? void 0 : t.isPaused) ? (0, a.jsx)(I.GuildBoostingSettingsPausedAppliedBoosts, {
       appliedGuildBoosts: b,
       premiumSubscription: t
     }) : (0, a.jsx)(I.default, {
@@ -51,7 +51,7 @@ function O(e) {
       premiumSubscription: t
     }), (0, a.jsx)(C.default, {
       guildBoostSlots: O
-    }), (0, a.jsx)(g.default, {
+    }), (0, a.jsx)(f.default, {
       hasAppliedGuildBoosts: P,
       subscriptionIsPausedOrPausePending: v
     }), (0, a.jsx)(d.default, {

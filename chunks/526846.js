@@ -26,14 +26,14 @@ var a = n("735250"),
   I = n("348600"),
   A = n("566620"),
   v = n("11778"),
-  x = n("127255"),
-  N = n("5200"),
+  N = n("127255"),
+  x = n("5200"),
   M = n("558317"),
   R = n("403404"),
   y = n("701488"),
   L = n("981631"),
-  j = n("689938"),
-  O = n("492880"),
+  O = n("689938"),
+  j = n("492880"),
   P = n("587952"),
   D = n("736733"),
   b = n("175045");
@@ -48,11 +48,11 @@ let U = "vc-activities-".concat((0, o.v4)()),
       onClick: k,
       className: H
     } = e, {
-      enabled: G
+      enabled: B
     } = I.BirthdayActivitiesExperiment.useExperiment({
       location: "8009ca_3"
     }), {
-      enableTuneInMiniShelfBanner: B
+      enableTuneInMiniShelfBanner: G
     } = v.ExperimentTuneInMiniShelfBanner.useExperiment({
       location: "ActivitiesMiniShelf"
     }, {
@@ -74,12 +74,12 @@ let U = "vc-activities-".concat((0, o.v4)()),
         analyticsLocations: Z
       } = (0, p.default)(m.default.ACTIVITIES_MINI_SHELF),
       {
-        analyticsLocations: X
+        analyticsLocations: q
       } = (0, p.default)([...Z, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      q = K === L.AppContext.POPOUT,
-      J = (0, c.useAnalyticsContext)(),
-      Q = function(e, t) {
-        return (0, x.default)({
+      X = K === L.AppContext.POPOUT,
+      Q = (0, c.useAnalyticsContext)(),
+      J = function(e, t) {
+        return (0, N.default)({
           guildId: e,
           channel: t
         }).slice(0, 5)
@@ -93,39 +93,39 @@ let U = "vc-activities-".concat((0, o.v4)()),
         (0, R.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-          locationObject: J.location,
-          openInPopout: q,
+          locationObject: Q.location,
+          openInPopout: X,
           analyticsLocations: Z
         }), w(), k()
-      }, [J, Z, n, k, w, q]),
+      }, [Q, Z, n, k, w, X]),
       ee = l.useCallback(e => {
         F(), T.default.track(L.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
       }, [F, n]),
-      et = G ? (0, a.jsxs)(r.Link, {
+      et = B ? (0, a.jsxs)(r.Link, {
         to: L.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
-          alt: j.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
+          alt: O.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
           src: "light" === V ? P : D,
-          className: O.poster
+          className: j.poster
         }), (0, a.jsx)("div", {
-          className: O.posterDivider
+          className: j.posterDivider
         })]
-      }) : B ? (0, a.jsxs)(d.Clickable, {
-        className: i()(O.clickableBanner, {
-          [O.clickableBannerReducedMotion]: W
+      }) : G ? (0, a.jsxs)(d.Clickable, {
+        className: i()(j.clickableBanner, {
+          [j.clickableBannerReducedMotion]: W
         }),
         onClick: () => {
-          k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(y.TUNE_IN_APPLICATION_ID), void 0, void 0, X)
+          k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(y.TUNE_IN_APPLICATION_ID), void 0, void 0, q)
         },
         children: [(0, a.jsx)("img", {
-          alt: j.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TUNE_IN_POSTER_ALT,
+          alt: O.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TUNE_IN_POSTER_ALT,
           src: b,
-          className: O.poster
+          className: j.poster
         }), (0, a.jsx)("div", {
-          className: O.posterDivider
+          className: j.posterDivider
         })]
       }) : null;
     return (0, a.jsx)(p.AnalyticsLocationProvider, {
@@ -140,58 +140,58 @@ let U = "vc-activities-".concat((0, o.v4)()),
             children: (0, a.jsx)(d.HiddenVisually, {
               children: (0, a.jsx)(d.H, {
                 id: U,
-                children: j.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                children: O.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
               })
             })
           }), (0, a.jsxs)("div", {
-            className: O.container,
+            className: j.container,
             onMouseEnter: ee,
             onMouseLeave: w,
             children: [(0, a.jsxs)("div", {
-              className: O.titleContainer,
+              className: j.titleContainer,
               children: [(0, a.jsxs)("div", {
-                className: O.titleLeft,
+                className: j.titleLeft,
                 children: [(0, a.jsx)(_.default, {
-                  className: O.titleLeftIcon,
+                  className: j.titleLeftIcon,
                   color: "var(--interactive-active)"
                 }), (0, a.jsx)(d.Text, {
                   variant: "eyebrow",
-                  children: j.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                  children: O.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                 })]
               }), (0, a.jsxs)(d.Clickable, {
-                className: O.titleRight,
+                className: j.titleRight,
                 onClick: $,
                 children: [(0, a.jsx)(d.Text, {
                   variant: "eyebrow",
-                  children: j.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                  children: O.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                 }), (0, a.jsx)(S.default, {
                   width: 12,
                   height: 12,
                   color: "var(--interactive-active)",
-                  className: O.titleRightIcon
+                  className: j.titleRightIcon
                 })]
               })]
             }), (0, a.jsx)(p.AnalyticsLocationProvider, {
-              value: X,
+              value: q,
               children: et
             }), (0, a.jsxs)("div", {
-              className: O.activityContainer,
-              children: [Q.map(e => (0, a.jsx)(N.ActivitySuggestion, {
+              className: j.activityContainer,
+              children: [J.map(e => (0, a.jsx)(x.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
                 onClick: () => {
                   o(), k()
                 },
-                aspectRatio: N.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
-                animatedDivClass: O.activitySuggestion
+                aspectRatio: x.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
+                animatedDivClass: j.activitySuggestion
               }, e.application.id)), (0, a.jsx)("div", {
-                className: i()(O.wumpusRocketOuterContainer, {
-                  [O.wumpusReducedMotion]: W
+                className: i()(j.wumpusRocketOuterContainer, {
+                  [j.wumpusReducedMotion]: W
                 }),
                 children: (0, a.jsx)("div", {
-                  className: O.wumpusRocketInnerContainer,
+                  className: j.wumpusRocketInnerContainer,
                   children: (0, a.jsx)(M.default, {
-                    className: O.wumpusRocket
+                    className: j.wumpusRocket
                   })
                 })
               })]

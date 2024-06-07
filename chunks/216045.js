@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return M
+    return x
   }
 });
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("475977"),
   I = s("957730"),
   N = s("589266"),
-  f = s("296810"),
-  g = s("935147"),
+  g = s("296810"),
+  f = s("935147"),
   m = s("350327"),
   C = s("246946"),
   A = s("25990"),
@@ -28,9 +28,9 @@ var a = s("735250"),
   O = s("74538"),
   p = s("695346"),
   R = s("265159"),
-  x = s("532495");
+  M = s("532495");
 
-function M() {
+function x() {
   let e = (0, r.useStateFromStores)([h.default], () => {
     let e = h.default.getCurrentUser();
     return i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
@@ -42,7 +42,7 @@ function M() {
     {
       pendingAvatar: s,
       pendingBanner: l,
-      pendingBio: M,
+      pendingBio: x,
       pendingPronouns: D,
       pendingGlobalName: L,
       pendingAccentColor: P,
@@ -57,7 +57,7 @@ function M() {
         errors: t
       }
     }),
-    j = p.UseLegacyChatInput.useSetting() && null != M ? I.default.parse(void 0, M).content : M,
+    j = p.UseLegacyChatInput.useSetting() && null != x ? I.default.parse(void 0, x).content : x,
     G = O.default.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: F
@@ -87,15 +87,15 @@ function M() {
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
     value: F,
     children: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(g.default, {
         profilePreview: (0, a.jsx)(N.default, {
           ...B,
           location: "UserSettingsProfileCustomization",
           pendingThemeColors: v,
           pendingAccentColor: P
         }),
-        children: (0, a.jsx)(x.default, {})
-      }), !O.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(g.default, {
+        children: (0, a.jsx)(M.default, {})
+      }), !O.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(f.default, {
         user: e
       })]
     })

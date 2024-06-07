@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return N
   }
 }), n("653041");
 var a = n("735250"),
@@ -27,18 +27,18 @@ var a = n("735250"),
   A = n("981631"),
   v = n("853085");
 
-function x(e) {
+function N(e) {
   let {
     participants: t,
     onClick: n,
-    onDoubleClick: x,
-    onContextMenu: N,
+    onDoubleClick: N,
+    onContextMenu: x,
     channel: M,
     className: R,
     inCall: y,
     totalNumberOfParticipants: L,
-    paused: j = !1
-  } = e, O = (0, o.useAppContext)() === A.AppContext.POPOUT, P = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
+    paused: O = !1
+  } = e, j = (0, o.useAppContext)() === A.AppContext.POPOUT, P = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
     dismissedActivityEntryPointTileChannel: D
   } = (0, T.useChannelCallVideoGridStore)(), b = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(M.id), [M]), U = (0, p.useEnsureSyncedChannelParticipants)(M.id, t), F = l.useCallback(() => {
     T.useChannelCallVideoGridStore.setState({
@@ -53,21 +53,21 @@ function x(e) {
   let w = (0, i.useStateFromStores)([C.default], () => M.isPrivate() || (0, m.canViewInviteModal)(C.default, P, M), [P, M]),
     k = (null == P ? void 0 : P.afkChannelId) === M.id,
     H = M.userLimit <= 0 || M.userLimit > 1,
-    G = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(M.id).length <= 0),
-    B = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
+    B = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(M.id).length <= 0),
+    G = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
     V = (0, d.useEmbeddedActivityLaunchability)(M.id) !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
     W = null != D && D === M.id,
     Y = U.map(e => t => (0, a.jsx)(_.default, {
       participant: e,
       channel: M,
       className: v.tile,
-      paused: j,
+      paused: O,
       onClick: n,
-      onDoubleClick: x,
-      onContextMenu: N,
+      onDoubleClick: N,
+      onContextMenu: x,
       inCall: y,
       width: t,
-      inPopout: O
+      inPopout: j
     }, e.id));
   (0, c.default)({
     type: s.ImpressionTypes.VIEW,
@@ -80,23 +80,23 @@ function x(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != P && !k && (!(b >= 2) || !G || V || B || W ? H && 1 === b && w && (G && !V ? Y.push(e => (0, a.jsx)(S.ActivityEntryPointTile, {
+  }, []), null != P && !k && (!(b >= 2) || !B || V || G || W ? H && 1 === b && w && (B && !V ? Y.push(e => (0, a.jsx)(S.ActivityEntryPointTile, {
     channel: M,
     guild: P,
     width: e,
-    inPopout: O,
+    inPopout: j,
     handleClose: F,
     userParticipantCount: b
   })) : Y.push(e => (0, a.jsx)(I.default, {
     width: e,
     channel: M,
     guild: P,
-    inPopout: O
+    inPopout: j
   }))) : Y.push(e => (0, a.jsx)(S.ActivityEntryPointTile, {
     channel: M,
     guild: P,
     width: e,
-    inPopout: O,
+    inPopout: j,
     handleClose: F,
     userParticipantCount: b
   })));

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return M
   }
 }), n("47120");
 var a = n("392711"),
@@ -16,8 +16,8 @@ var a = n("392711"),
   f = n("158776"),
   E = n("19780"),
   h = n("699516"),
-  C = n("944486"),
-  _ = n("800599"),
+  _ = n("944486"),
+  C = n("800599"),
   m = n("594174"),
   S = n("979651"),
   p = n("626135"),
@@ -38,7 +38,7 @@ function L(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class P {
+class M {
   loadServer() {
     for (let e of (g.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
     for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
@@ -97,7 +97,7 @@ class P {
     if (0 === this.rpcServer.subscriptions.length) return;
     let t = 0 !== e.speakingFlags ? v.RPCEvents.SPEAKING_START : v.RPCEvents.SPEAKING_STOP;
     if (e.context === O.MediaEngineContextTypes.DEFAULT) {
-      let n = C.default.getVoiceChannelId();
+      let n = _.default.getVoiceChannelId();
       if (null != n) {
         let a = o.default.getChannel(n);
         if (null == a) return;
@@ -285,7 +285,7 @@ class P {
       } = e;
       if (null != t) return;
       let a = h.default.getRelationshipType(n);
-      a === v.RelationshipTypes.NONE && _.default.getUserAffinitiesUserIds().has(n) && (a = v.RelationshipTypes.IMPLICIT), a !== v.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, T.transformRelationship)(a, n))
+      a === v.RelationshipTypes.NONE && C.default.getUserAffinitiesUserIds().has(n) && (a = v.RelationshipTypes.IMPLICIT), a !== v.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, T.transformRelationship)(a, n))
     })
   }
   handlePresencesReplace() {

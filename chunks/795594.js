@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("689773"),
   I = s("481060"),
   N = s("384275"),
-  f = s("230711"),
-  g = s("497321"),
+  g = s("230711"),
+  f = s("497321"),
   m = s("468026"),
   C = s("566620"),
   A = s("317381"),
@@ -24,8 +24,8 @@ var a = s("735250"),
   O = s("713938"),
   p = s("881998"),
   R = s("246946"),
-  x = s("186095"),
-  M = s("285952"),
+  M = s("186095"),
+  x = s("285952"),
   D = s("6048"),
   L = s("950463"),
   P = s("507893"),
@@ -40,9 +40,9 @@ var a = s("735250"),
   V = s("611273");
 let H = u.default.connectStores([U.default], () => ({
   theme: U.default.theme
-}))(x.default);
+}))(M.default);
 
-function k(e) {
+function Y(e) {
   let {
     application: t
   } = e;
@@ -55,12 +55,12 @@ function k(e) {
       variant: "text-sm/medium",
       children: B.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
         applicationName: t.name,
-        onConnectionPress: () => f.default.setSection(F.AnalyticsSections.SETTINGS_CONNECTIONS)
+        onConnectionPress: () => g.default.setSection(F.AnalyticsSections.SETTINGS_CONNECTIONS)
       })
     })]
   })
 }
-let Y = e => {
+let k = e => {
     let {
       disclosure: t
     } = e;
@@ -124,7 +124,7 @@ let Y = e => {
               id: s.id,
               icon: s.icon
             }),
-            t = null != e ? (0, a.jsx)(M.default.Child, {
+            t = null != e ? (0, a.jsx)(x.default.Child, {
               className: y.appAvatar,
               grow: 0,
               children: (0, a.jsx)("img", {
@@ -132,17 +132,17 @@ let Y = e => {
                 alt: ""
               })
             }) : null;
-          return (0, a.jsxs)(M.default, {
+          return (0, a.jsxs)(x.default, {
             className: i()(y.__invalid_header, V.marginBottom20),
-            children: [(0, a.jsxs)(M.default, {
+            children: [(0, a.jsxs)(x.default, {
               className: y.headerInfo,
-              children: [t, (0, a.jsx)(M.default.Child, {
+              children: [t, (0, a.jsx)(x.default.Child, {
                 children: (0, a.jsx)(I.Heading, {
                   variant: "text-sm/semibold",
                   children: s.name
                 })
               })]
-            }), (0, a.jsx)(M.default.Child, {
+            }), (0, a.jsx)(x.default.Child, {
               wrap: !0,
               grow: 0,
               children: (0, a.jsx)(I.Button, {
@@ -215,7 +215,7 @@ let Y = e => {
                 let n = (0, h.getTextForDisclosure)(t);
                 return null != n ? (0, a.jsxs)("li", {
                   className: i()(y.permission, V.marginTop8),
-                  children: [(0, a.jsx)(Y, {
+                  children: [(0, a.jsx)(k, {
                     disclosure: t
                   }), (0, a.jsx)(I.FormText, {
                     children: n
@@ -224,7 +224,7 @@ let Y = e => {
               })]
             })
           })
-        })(), c && (0, a.jsx)(k, {
+        })(), c && (0, a.jsx)(Y, {
           application: s
         })]
       })
@@ -269,12 +269,12 @@ t.default = () => {
     }),
     T = (e, t) => (0, a.jsxs)(H, {
       className: y.__invalid_marginTop20,
-      children: [(0, a.jsx)(x.EmptyStateImage, {
+      children: [(0, a.jsx)(M.EmptyStateImage, {
         darkSrc: s("701972"),
         lightSrc: s("818658"),
         width: 380,
         height: 282
-      }), (0, a.jsx)(x.EmptyStateText, {
+      }), (0, a.jsx)(M.EmptyStateText, {
         note: e,
         children: t
       })]
@@ -283,7 +283,7 @@ t.default = () => {
       let e = r.trim().toLowerCase();
       return "" === e || null == t ? t : t.length < 100 ? t.filter(t => o()(e, t.application.name.toLowerCase())) : t.filter(t => t.application.name.toLowerCase().includes(e))
     }, [t, r]);
-  return e ? (0, a.jsx)(g.default, {}) : (0, a.jsx)(I.FormSection, {
+  return e ? (0, a.jsx)(f.default, {}) : (0, a.jsx)(I.FormSection, {
     tag: I.FormTitleTags.H1,
     title: B.default.Messages.AUTHORIZED_APPS,
     children: (0, a.jsx)(I.HeadingLevel, {

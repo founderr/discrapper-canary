@@ -19,25 +19,25 @@ var a = n("735250"),
 function h(e) {
   let {
     guild: t
-  } = e, n = (0, d.useUnseenEndedApplicationSubscriptionEntitlements)(t), h = () => (0, u.dismissApplicationSubscriptionExpirationNotice)(t.id), C = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), _ = (0, l.useStateFromStoresArray)([i.default], () => {
+  } = e, n = (0, d.useUnseenEndedApplicationSubscriptionEntitlements)(t), h = () => (0, u.dismissApplicationSubscriptionExpirationNotice)(t.id), _ = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), C = (0, l.useStateFromStoresArray)([i.default], () => {
     let e = [];
-    for (let t of C) {
+    for (let t of _) {
       let n = i.default.getApplication(t);
       null != n && e.push(n)
     }
     return e
-  }, [C]);
-  if (0 === _.length) return null;
+  }, [_]);
+  if (0 === C.length) return null;
   let m = "";
-  return m = 1 === _.length ? f.default.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-    a: _[0].name
-  }) : 2 === _.length ? f.default.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-    a: _[0].name,
-    b: _[1].name
-  }) : 3 === _.length ? f.default.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-    a: _[0].name,
-    b: _[1].name,
-    c: _[2].name
+  return m = 1 === C.length ? f.default.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+    a: C[0].name
+  }) : 2 === C.length ? f.default.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+    a: C[0].name,
+    b: C[1].name
+  }) : 3 === C.length ? f.default.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+    a: C[0].name,
+    b: C[1].name,
+    c: C[2].name
   }) : f.default.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, a.jsx)(r.default, {
     guild: t,
     onDismissed: h,

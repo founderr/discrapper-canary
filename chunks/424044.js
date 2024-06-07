@@ -15,12 +15,12 @@ var s = n("735250"),
   _ = n("819570"),
   p = n("981631"),
   h = n("689938"),
-  g = n("611273");
+  T = n("611273");
 l.default.initialize();
 t.default = e => {
   let {
     location: t
-  } = e, n = (0, l.useStateFromStores)([I.default], () => I.default.isAuthenticated()), m = (0, l.useStateFromStores)([d.default], () => d.default.hasLoadedExperiments), T = (0, f.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [N, A] = a.useState(!1), [S, v] = a.useState(h.default.Messages.AUTHORIZING), [C, O] = a.useState(!0), R = e => {
+  } = e, n = (0, l.useStateFromStores)([I.default], () => I.default.isAuthenticated()), g = (0, l.useStateFromStores)([d.default], () => d.default.hasLoadedExperiments), m = (0, f.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [N, A] = a.useState(!1), [S, v] = a.useState(h.default.Messages.AUTHORIZING), [C, O] = a.useState(!0), R = e => {
     switch (e) {
       case p.AbortCodes.INVALID_FORM_BODY:
       case p.AbortCodes.DSA_RSL_REPORT_NOT_FOUND:
@@ -44,8 +44,8 @@ t.default = e => {
       withAnalyticsToken: !0
     }).then(() => O(!1)).catch(() => O(!1))) : O(!1)
   }, [n]), a.useEffect(() => {
-    !m && !T && r.default.getExperiments()
-  }, [m, T]), a.useEffect(() => {
+    !g && !m && r.default.getExperiments()
+  }, [g, m]), a.useEffect(() => {
     let e = async e => {
       var t, n;
       try {
@@ -58,9 +58,9 @@ t.default = e => {
       }
     };
     A(!0), e((0, o.default)(t)), (0, E.trackAppUIViewed)("report_second_look")
-  }, [t]), T && !C && (0, s.jsxs)(_.default, {
+  }, [t]), m && !C && (0, s.jsxs)(_.default, {
     children: [(0, s.jsx)(_.Title, {
-      className: g.marginBottom8,
+      className: T.marginBottom8,
       children: S
     }), N && (0, s.jsx)(i.Spinner, {})]
   })

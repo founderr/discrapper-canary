@@ -22,13 +22,13 @@ var a = n("735250"),
   I = n("919394"),
   A = n("438226"),
   v = n("206295"),
-  x = n("91140"),
-  N = n("297781"),
+  N = n("91140"),
+  x = n("297781"),
   M = n("591853"),
   R = n("265048"),
   y = n("981631"),
   L = n("689938");
-let j = {
+let O = {
   [s.PlatformType.DESKTOP]: null,
   [s.PlatformType.XBOX]: C.default,
   [s.PlatformType.PLAYSTATION]: E.default
@@ -41,7 +41,7 @@ t.default = e => {
     closePopout: E
   } = e, {
     iconUrl: C,
-    iconTitle: O,
+    iconTitle: j,
     user: P,
     details: D,
     gameTitle: b,
@@ -51,9 +51,9 @@ t.default = e => {
     secondaryColor: w
   } = (0, v.default)(C), k = (0, o.useStateFromStores)([p.default], () => p.default.locale), {
     streamPreviewUrl: H,
-    stream: G
+    stream: B
   } = (0, _.default)(n), {
-    displayParticipants: B,
+    displayParticipants: G,
     participant1: V,
     participant2: W,
     numOtherParticipants: Y
@@ -68,24 +68,24 @@ t.default = e => {
     return (0, I.generateGamingContentImage)({
       entry: n,
       applicationImageSrc: C,
-      avatarSrcs: B.map(e => e.getAvatarURL(t.guild_id, 128)),
+      avatarSrcs: G.map(e => e.getAvatarURL(t.guild_id, 128)),
       description: a,
       timestamp: (0, T.formatEntryTimestamp)(n, k),
       colors: [F, w],
       channelId: e
     })
-  }, [C, t, B, n, k, Y, V, W, F, w, P]);
+  }, [C, t, G, n, k, Y, V, W, F, w, P]);
   if (null == P) return null;
-  let Z = null != n.extra.platform ? j[n.extra.platform] : null,
-    X = (0, a.jsx)(N.BadgesContainer, {
-      location: N.BadgeLocation.POPOUT,
-      children: x.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
+  let Z = null != n.extra.platform ? O[n.extra.platform] : null,
+    q = (0, a.jsx)(x.BadgesContainer, {
+      location: x.BadgeLocation.POPOUT,
+      children: N.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
         entry: n
       }, t))
     }),
-    q = null == H ? (0, a.jsx)(M.PopoutContent, {
+    X = null == H ? (0, a.jsx)(M.PopoutContent, {
       thumbnailSrc: C,
-      thumbnailTitle: O,
+      thumbnailTitle: j,
       channel: t,
       headerIcons: null != Z ? (0, a.jsx)(Z, {
         color: z.hex(),
@@ -95,18 +95,18 @@ t.default = e => {
       userDescription: (0, T.isEntryActive)(n) ? L.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : L.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: b,
       subtitle: D,
-      badges: X,
+      badges: q,
       entry: n
     }) : (0, a.jsx)(M.StreamingPopoutContent, {
       channel: t,
       streamPreviewSrc: H,
       title: n.extra.game_name,
-      badges: X,
+      badges: q,
       userDescription: L.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
       entry: n,
-      stream: G
+      stream: B
     }),
-    J = (0, d.default)(U, y.ActivityFlags.JOIN) || (0, c.default)(U) ? (0, a.jsx)(h.default, {
+    Q = (0, d.default)(U, y.ActivityFlags.JOIN) || (0, c.default)(U) ? (0, a.jsx)(h.default, {
       activity: U,
       user: P,
       ButtonComponent: e => (0, a.jsx)(M.PrimaryActionButton, {
@@ -114,7 +114,7 @@ t.default = e => {
         ...e
       })
     }) : null,
-    Q = [J, (0, f.default)(U) ? (0, a.jsx)(m.default, {
+    J = [Q, (0, f.default)(U) ? (0, a.jsx)(m.default, {
       activity: U,
       ButtonComponent: e => (0, a.jsx)(M.PrimaryActionButton, {
         IconComponent: i.EyeIcon,
@@ -122,7 +122,7 @@ t.default = e => {
       })
     }) : null].filter(g.isNotNullish);
   return (0, a.jsxs)(M.Popout, {
-    children: [q, (0, a.jsx)(M.PopoutInteractionsContainer, {
+    children: [X, (0, a.jsx)(M.PopoutInteractionsContainer, {
       children: (0, a.jsx)(M.Reactor, {
         closePopout: E,
         user: P,
@@ -131,7 +131,7 @@ t.default = e => {
         reactionImageAltText: (0, A.getContentAltText)(n, P),
         entry: n,
         requestId: s,
-        buttons: Q
+        buttons: J
       })
     })]
   })

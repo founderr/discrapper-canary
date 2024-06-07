@@ -15,17 +15,17 @@ var a, n, l, i, r = s("735250"),
   _ = s("301822"),
   I = s("206895"),
   N = s("692437"),
-  f = s("783539"),
-  g = s("585483"),
+  g = s("783539"),
+  f = s("585483"),
   m = s("557177"),
   C = s("57562"),
   A = s("955204"),
   h = s("64078"),
   O = s("351780"),
-  p = s("954794"),
+  p = s("533662"),
   R = s("112843"),
-  x = s("524484"),
-  M = s("981631"),
+  M = s("524484"),
+  x = s("981631"),
   D = s("689938"),
   L = s("855658");
 let P = {
@@ -40,32 +40,32 @@ let P = {
   j = (0, d.range)(1, 26);
 (l = a || (a = {}))[l.CONFETTI = 0] = "CONFETTI", l[l.SHAKE = 1] = "SHAKE", (i = n || (n = {}))[i.USER_SETTINGS = 0] = "USER_SETTINGS", i[i.ACHIEVEMENT_LIST = 1] = "ACHIEVEMENT_LIST";
 let G = () => [{
-    location: x.ConfettiLocation.CHAT_INPUT,
+    location: M.ConfettiLocation.CHAT_INPUT,
     title: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED,
     description: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
   }, {
-    location: x.ConfettiLocation.REACTION,
+    location: M.ConfettiLocation.REACTION,
     title: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_REACTION_ENABLED,
     description: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_REACTION_ENABLED_DESCRIPTION
   }, {
-    location: x.ConfettiLocation.MEMBER_USER,
+    location: M.ConfettiLocation.MEMBER_USER,
     title: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_MEMBER_USER_ENABLED,
     description: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_MEMBER_USER_ENABLED_DESCRIPTION
   }, {
-    location: x.ConfettiLocation.CALL_TILE,
+    location: M.ConfettiLocation.CALL_TILE,
     title: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED,
     description: D.default.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED_DESCRIPTION
   }],
   F = () => [{
-    location: x.ShakeLocation.CHAT_INPUT,
+    location: M.ShakeLocation.CHAT_INPUT,
     title: D.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED,
     description: D.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
   }, {
-    location: x.ShakeLocation.VOICE_USER,
+    location: M.ShakeLocation.VOICE_USER,
     title: D.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_VOICE_USER_ENABLED,
     description: D.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_VOICE_USER_ENABLED_DESCRIPTION
   }, {
-    location: x.ShakeLocation.MENTION,
+    location: M.ShakeLocation.MENTION,
     title: D.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_MENTION_ENABLED,
     description: D.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_MENTION_ENABLED_DESCRIPTION
   }];
@@ -207,7 +207,7 @@ function H(e) {
   })
 }
 
-function k(e) {
+function Y(e) {
   let {
     settings: {
       enabled: t,
@@ -260,7 +260,7 @@ function k(e) {
   })
 }
 
-function Y(e) {
+function k(e) {
   let {
     settings: {
       enabled: t,
@@ -351,7 +351,7 @@ function W(e) {
       className: L.achievementContainer,
       children: [(0, r.jsx)("div", {
         className: L.achievementIconContainer,
-        children: (0, r.jsx)(f.default, {
+        children: (0, r.jsx)(g.default, {
           color: c.default.unsafe_rawColors.ORANGE_345.css
         })
       }), (0, r.jsxs)("div", {
@@ -396,7 +396,7 @@ function z(e) {
   let c = e => {
       if (e.enabled && !1 === a.enabled) {
         var t;
-        s(!0), (0, m.playSound)("poggermode_enabled"), g.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        s(!0), (0, m.playSound)("poggermode_enabled"), f.ComponentDispatch.dispatch(x.ComponentActions.SHAKE_APP, {
           duration: 2e3,
           intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : a.shakeIntensity
         })
@@ -411,7 +411,7 @@ function z(e) {
       let l = d(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
       if (1 === t && l) {
         var r;
-        g.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        f.ComponentDispatch.dispatch(x.ComponentActions.SHAKE_APP, {
           duration: 1e3,
           intensity: null !== (r = e.shakeIntensity) && void 0 !== r ? r : a.shakeIntensity
         })
@@ -433,10 +433,10 @@ function z(e) {
       updateSettings: E
     }), (0, r.jsx)(W, {
       onChangePage: t
-    }), (0, r.jsx)(k, {
+    }), (0, r.jsx)(Y, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(Y, {
+    }), (0, r.jsx)(k, {
       settings: a,
       updateSettings: E
     }), (0, r.jsx)(H, {

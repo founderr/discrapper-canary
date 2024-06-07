@@ -27,8 +27,8 @@ var a = s("735250"),
   T = s("296848"),
   A = s("374649"),
   R = s("981631"),
-  y = s("689938"),
-  M = s("581339"),
+  M = s("689938"),
+  y = s("581339"),
   g = s("961047");
 
 function L(e) {
@@ -89,12 +89,12 @@ function L(e) {
     return (0, a.jsx)(d.Anchor, {
       href: t,
       useDefaultUnderlineStyles: !1,
-      className: M.externalLink,
+      className: y.externalLink,
       children: (0, a.jsx)(d.Button, {
         fullWidth: !0,
         look: d.Button.Looks.FILLED,
         color: d.Button.Colors.PRIMARY,
-        children: y.default.Messages.BILLING_MANAGE_BILLING
+        children: M.default.Messages.BILLING_MANAGE_BILLING
       })
     })
   })(t);
@@ -104,7 +104,7 @@ function L(e) {
     look: d.Button.Looks.FILLED,
     color: i ? d.Button.Colors.BRAND : d.Button.Colors.PRIMARY,
     onClick: Z,
-    children: y.default.Messages.BILLING_ADD_PAYMENT_METHOD
+    children: M.default.Messages.BILLING_ADD_PAYMENT_METHOD
   });
   else {
     let e = P.default.get(t.planIdForCurrencies);
@@ -115,7 +115,7 @@ function L(e) {
         let e = t.paymentSourceId;
         return (0, a.jsx)(E.default, {
           prependOption: null == e ? {
-            label: y.default.Messages.ATTACH_PAYMENT_SOURCE_PROMPT_OPTION,
+            label: M.default.Messages.ATTACH_PAYMENT_SOURCE_PROMPT_OPTION,
             value: null
           } : null,
           className: r,
@@ -130,11 +130,11 @@ function L(e) {
       })(), null != t.paymentSourceId ? (0, a.jsx)(m.CurrencyWrapper, {
         currencies: s,
         children: (0, a.jsxs)("div", {
-          className: l()(M.currency, g.flex, g.alignCenter),
+          className: l()(y.currency, g.flex, g.alignCenter),
           children: [(0, a.jsx)("div", {
-            children: y.default.Messages.PAYMENT_CURRENCY_PAYING_IN
+            children: M.default.Messages.PAYMENT_CURRENCY_PAYING_IN
           }), (0, a.jsx)(m.default, {
-            className: M.currencyDropdown,
+            className: y.currencyDropdown,
             selectedCurrency: F,
             currencies: s,
             onChange: e => {

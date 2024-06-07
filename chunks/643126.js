@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("103575"),
   E = n("285952"),
   h = n("409216"),
-  C = n("465670"),
-  _ = n("87888"),
+  _ = n("465670"),
+  C = n("87888"),
   m = n("63063"),
   S = n("976401"),
   p = n("333454"),
@@ -60,7 +60,7 @@ class R extends s.PureComponent {
     return this.isHost() ? null : (0, a.jsx)(S.default, {
       tooltipText: T.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
-      icon: C.default
+      icon: _.default
     })
   }
   renderHelpIcon() {
@@ -69,7 +69,7 @@ class R extends s.PureComponent {
       onClick: () => {
         window.open(m.default.getArticleURL(g.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
-      icon: _.default
+      icon: C.default
     }) : null
   }
   render() {

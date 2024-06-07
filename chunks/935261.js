@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("735250");
@@ -18,7 +18,7 @@ var s = n("120356"),
   E = n("689938"),
   h = n("106161");
 
-function C(e) {
+function _(e) {
   let {
     platform: t
   } = e;
@@ -29,7 +29,7 @@ function C(e) {
   }) : null
 }
 
-function _(e) {
+function C(e) {
   let {
     voiceState: t,
     awaitingRemoteSessionInfo: n
@@ -38,14 +38,14 @@ function _(e) {
     return null === (e = o.default.getSessionById(null !== (n = null == t ? void 0 : t.sessionId) && void 0 !== n ? n : "")) || void 0 === e ? void 0 : e.clientInfo.os
   }), d = null != s ? s : u;
   if (null == d || !f.GAME_CONSOLE_SESSIONS.has(d)) return null;
-  let _ = null != n,
-    m = _ ? d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.default.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_REMOTE_CONNECTED.format() : E.default.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
+  let C = null != n,
+    m = C ? d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.default.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === f.GameConsoleTypes.XBOX ? E.default.Messages.XBOX_REMOTE_CONNECTED.format() : E.default.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
   return (0, a.jsxs)("div", {
-    className: l()(h.root, _ ? h.connecting : h.connected),
-    children: [(0, a.jsx)(C, {
+    className: l()(h.root, C ? h.connecting : h.connected),
+    children: [(0, a.jsx)(_, {
       platform: d
     }), (0, a.jsx)(r.Text, {
-      color: _ ? "header-primary" : "always-white",
+      color: C ? "header-primary" : "always-white",
       variant: "text-xs/medium",
       children: m
     })]

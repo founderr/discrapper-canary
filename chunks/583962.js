@@ -93,8 +93,8 @@ t.default = e => {
       config: b,
       immediate: P
     },
-    [F, V] = (0, r.useSpring)(() => B),
-    H = () => {
+    [F, H] = (0, r.useSpring)(() => B),
+    V = () => {
       (0, p.trackWithMetadata)(v.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: v.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
@@ -144,10 +144,10 @@ t.default = e => {
             right: 4
           }
         },
-        onClick: H,
+        onClick: V,
         onMouseEnter: () => {
           var t;
-          null === (t = e.onMouseEnter) || void 0 === t || t.call(e), V(B)
+          null === (t = e.onMouseEnter) || void 0 === t || t.call(e), H(B)
         },
         className: i()(R.container, {
           [R.containerWithMargin]: n

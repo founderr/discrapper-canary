@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return eg
+    return ef
   }
 }), s("47120"), s("733860"), s("773603");
 var a, n, l = s("735250"),
@@ -17,8 +17,8 @@ var a, n, l = s("735250"),
   _ = s("481060"),
   I = s("570140"),
   N = s("668781"),
-  f = s("409700"),
-  g = s("809206"),
+  g = s("409700"),
+  f = s("809206"),
   m = s("230711"),
   C = s("241420"),
   A = s("651530"),
@@ -26,8 +26,8 @@ var a, n, l = s("735250"),
   O = s("294602"),
   p = s("778825"),
   R = s("856768"),
-  x = s("592204"),
-  M = s("712950"),
+  M = s("592204"),
+  x = s("712950"),
   D = s("610697"),
   L = s("880257"),
   P = s("16703"),
@@ -41,8 +41,8 @@ var a, n, l = s("735250"),
   y = s("430824"),
   V = s("663389"),
   H = s("594174"),
-  k = s("285952"),
-  Y = s("153124"),
+  Y = s("285952"),
+  k = s("153124"),
   w = s("626135"),
   W = s("63063"),
   K = s("78451"),
@@ -383,9 +383,9 @@ function eN(e) {
     body: t
   })
 }
-class ef extends i.PureComponent {
+class eg extends i.PureComponent {
   componentDidMount() {
-    (0, f.fetchConsents)(), (0, g.getHarvestStatus)().then(e => {
+    (0, g.fetchConsents)(), (0, f.getHarvestStatus)().then(e => {
       let t = {
         requestingHarvest: !1,
         currentHarvestRequest: e.body
@@ -713,7 +713,7 @@ class ef extends i.PureComponent {
           date: S()(a.created_at).add(en.REQUEST_DATA_LIMIT_DAYS, "days").format("MMMM Do YYYY")
         })
       })
-    }), r = null), null != r && (r = (0, l.jsx)(k.default, {
+    }), r = null), null != r && (r = (0, l.jsx)(Y.default, {
       children: r
     })), (0, l.jsxs)(i.Fragment, {
       children: [(0, l.jsx)(_.FormDivider, {
@@ -846,7 +846,7 @@ class ef extends i.PureComponent {
         })]
       }), (0, l.jsx)(_.TabBar.Panel, {
         id: n,
-        "aria-labelledby": (0, Y.uid)(),
+        "aria-labelledby": (0, k.uid)(),
         className: o()(er.contentPanel, {
           [er.contentPanelNagbar]: d
         }),
@@ -873,18 +873,18 @@ class ef extends i.PureComponent {
         body: ei.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
         confirmText: ei.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
         cancelText: ei.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-        onConfirm: () => (0, f.setConsents)([], [en.Consents.USAGE_STATISTICS]).catch(eN)
-      }) : (0, f.setConsents)([en.Consents.USAGE_STATISTICS], []).catch(eN)
+        onConfirm: () => (0, g.setConsents)([], [en.Consents.USAGE_STATISTICS]).catch(eN)
+      }) : (0, g.setConsents)([en.Consents.USAGE_STATISTICS], []).catch(eN)
     }), ed(this, "handlePersonalizationChange", () => {
       this.props.personalization ? eI({
         header: ei.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
         confirmText: ei.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
         cancelText: ei.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
         onConfirm: () => {
-          (0, f.setConsents)([], [en.Consents.PERSONALIZATION]).catch(eN)
+          (0, g.setConsents)([], [en.Consents.PERSONALIZATION]).catch(eN)
         },
         body: ei.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
-      }) : (0, f.setConsents)([en.Consents.PERSONALIZATION], []).catch(eN)
+      }) : (0, g.setConsents)([en.Consents.PERSONALIZATION], []).catch(eN)
     }), ed(this, "handleDataDownloadRequest", () => {
       var e;
       e = {
@@ -899,7 +899,7 @@ class ef extends i.PureComponent {
           this.setState({
             requestingHarvest: !0
           }, () => {
-            (0, g.requestHarvest)(e).then(e => {
+            (0, f.requestHarvest)(e).then(e => {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
               }), N.default.show({
@@ -937,7 +937,7 @@ class ef extends i.PureComponent {
   }
 }
 
-function eg() {
+function ef() {
   let e = (0, E.useStateFromStores)([H.default], () => {
       let e = H.default.getCurrentUser();
       return u()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
@@ -950,19 +950,19 @@ function eg() {
     s = (0, E.useStateFromStores)([b.default], () => b.default.getFetchError()),
     a = (0, E.useStateFromStores)([V.default], () => V.default.getSubsection()),
     n = (0, A.useIsEligibleForExplicitMediaRedaction)(),
-    i = (0, x.useIsEligibleForKeywordFiltering)({
+    i = (0, M.useIsEligibleForKeywordFiltering)({
       location: "web_user_privacy_and_safety_settings"
     }),
     {
       hasSearchResults: r,
       searchResults: o
     } = (0, $.useSettingSearchResults)(),
-    d = (0, M.useKeywordFilterSettings)(),
+    d = (0, x.useKeywordFilterSettings)(),
     c = (0, L.default)(),
     S = (0, q.useServerPrivacySettingsInUserSettingsEnabled)({
       location: "user_settings_privacy_safety"
     });
-  return (0, l.jsx)(ef, {
+  return (0, l.jsx)(eg, {
     currentUser: e,
     defaultGuildsRestricted: X.DefaultGuildsRestricted.useSetting(),
     nonSpamRetrainingOptIn: X.NonSpamRetrainingOptIn.useSetting(),

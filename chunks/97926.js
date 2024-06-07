@@ -29,9 +29,9 @@ t.default = () => {
     isFetchingCurrentQuests: t
   } = (0, d.useQuests)({
     fetchPolicy: "cache-and-network"
-  }), s = (0, d.useExpiredQuestsMap)(), f = (0, o.useIsEligibleForConcurrentQuests)({
+  }), s = (0, d.useExpiredQuestsMap)(), g = (0, o.useIsEligibleForConcurrentQuests)({
     location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
-  }), [g, m] = n.useState(!0), [C, A] = n.useState([]), [h, O] = n.useState([]), p = n.useMemo(() => g ? t ? "unsorted" : "pending_sort" : "sorted", [g, t]);
+  }), [f, m] = n.useState(!0), [C, A] = n.useState([]), [h, O] = n.useState([]), p = n.useMemo(() => f ? t ? "unsorted" : "pending_sort" : "sorted", [f, t]);
   n.useEffect(() => {
     m(!0)
   }, [t, s]), n.useEffect(() => {
@@ -65,14 +65,14 @@ t.default = () => {
             if (_ && !o) return -1;
             if (I && !S) return 1;
             let N = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
-              f = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
-            if (N && f) return 0;
+              g = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
+            if (N && g) return 0;
             if (N) return -1;
-            if (f) return 1;
-            let g = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
+            if (g) return 1;
+            let f = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
               m = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-            if (g && !_ && !o && m && !I && !S) return 0;
-            if (g && !_ && !o) return -1;
+            if (f && !_ && !o && m && !I && !S) return 0;
+            if (f && !_ && !o) return -1;
             if (m && !I && !S) return 1;
             let C = o && d,
               A = S && T;
@@ -112,7 +112,7 @@ t.default = () => {
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsxs)("div", {
         className: I.questsHeading,
-        children: [f && (0, a.jsx)(l.QuestsIcon, {
+        children: [g && (0, a.jsx)(l.QuestsIcon, {
           className: I.questsIcon
         }), (0, a.jsx)(i.Heading, {
           variant: "heading-md/semibold",
@@ -128,7 +128,7 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: I.divider
-      }), f ? h.map((e, t, s) => {
+      }), g ? h.map((e, t, s) => {
         let {
           location: n,
           questIds: l,

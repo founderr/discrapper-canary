@@ -27,7 +27,7 @@ var a = n("735250"),
   A = n("689938"),
   v = n("486754");
 
-function x(e) {
+function N(e) {
   let {
     action: t
   } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(t.channelId)), l = (0, c.default)(n, !0);
@@ -46,7 +46,7 @@ function x(e) {
   })
 }
 
-function N(e) {
+function x(e) {
   var t;
   let {
     channelId: n,
@@ -74,20 +74,20 @@ function M(e) {
   } = e, {
     channelAction: E,
     completed: T
-  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, y = (0, u.useToken)(u.tokens.colors.WHITE), [L, j] = l.useState(!1), [O] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
+  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, y = (0, u.useToken)(u.tokens.colors.WHITE), [L, O] = l.useState(!1), [j] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
   l.useEffect(() => {
-    T ? r.default.timing(O, {
+    T ? r.default.timing(j, {
       toValue: 0,
       duration: M ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: R ? 0 : 500
-    }).start(() => j(!0)) : r.default.timing(O, {
+    }).start(() => O(!0)) : r.default.timing(j, {
       toValue: 1,
       duration: M ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [T, O, R, M]), l.useEffect(() => {
+  }, [T, j, R, M]), l.useEffect(() => {
     T && L && r.default.timing(P, {
       toValue: 1,
       duration: M ? 0 : 350,
@@ -110,7 +110,7 @@ function M(e) {
       children: (0, a.jsxs)(u.Clickable, {
         className: i()(v.banner, v.clickable),
         onClick: D,
-        children: [(0, a.jsx)(N, {
+        children: [(0, a.jsx)(x, {
           channelId: I.channelId,
           emojiId: null === (t = I.emoji) || void 0 === t ? void 0 : t.id,
           emojiName: null == I ? void 0 : null === (n = I.emoji) || void 0 === n ? void 0 : n.name
@@ -122,7 +122,7 @@ function M(e) {
             children: A.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
               step: I.title
             })
-          }), (0, a.jsx)(x, {
+          }), (0, a.jsx)(N, {
             action: I
           })]
         }), (0, a.jsx)("div", {
@@ -138,12 +138,12 @@ function M(e) {
     }) : (0, a.jsxs)(r.default.div, {
       className: v.banner,
       style: {
-        marginBottom: O.interpolate({
+        marginBottom: j.interpolate({
           inputRange: [0, 1],
           outputRange: [-60, 0]
         })
       },
-      children: [(0, a.jsx)(N, {
+      children: [(0, a.jsx)(x, {
         channelId: E.channelId,
         emojiId: null === (s = E.emoji) || void 0 === s ? void 0 : s.id,
         emojiName: null == E ? void 0 : null === (c = E.emoji) || void 0 === c ? void 0 : c.name

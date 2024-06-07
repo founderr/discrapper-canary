@@ -22,7 +22,7 @@ function h(e) {
     guild: t,
     markAsDismissed: n
   } = e, h = (0, o.getNumberOfAppliedBoostsNeededForTier)(t, u.BoostedGuildTiers.TIER_2), {
-    analyticsLocations: C
+    analyticsLocations: _
   } = (0, l.default)(s.default.GUILD_BANNER_NOTICE);
   return (0, a.jsx)(i.default, {
     guild: t,
@@ -34,7 +34,7 @@ function h(e) {
     type: u.ChannelNoticeTypes.GUILD_BANNER,
     image: E,
     onClick: () => (0, r.default)({
-      analyticsLocations: C,
+      analyticsLocations: _,
       analyticsSourceLocation: {
         section: u.AnalyticsSections.CHANNEL_NOTICE,
         object: u.AnalyticsObjects.SERVER_BANNER_TOOLTIP

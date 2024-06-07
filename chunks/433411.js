@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 });
 var a = s("735250"),
@@ -20,13 +20,13 @@ var a = s("735250"),
   I = s("689938"),
   N = s("35071");
 
-function f(e) {
+function g(e) {
   let {
     user: t,
     guild: s,
     className: l,
     sectionTitle: E,
-    forcedDivider: f = !1,
+    forcedDivider: g = !1,
     withTutorial: m = !1,
     isTryItOutFlow: C = !1
   } = e, {
@@ -35,18 +35,18 @@ function f(e) {
     userAvatarDecoration: O,
     guildAvatarDecoration: p,
     pendingAvatarDecoration: R,
-    pendingErrors: x
-  } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), M = (0, c.default)("enable_avatar_decoration_uploads"), D = n.useCallback(() => (0, u.openAvatarDecorationModal)({
+    pendingErrors: M
+  } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), x = (0, c.default)("enable_avatar_decoration_uploads"), D = n.useCallback(() => (0, u.openAvatarDecorationModal)({
     analyticsLocations: A,
     isTryItOutFlow: C,
     guild: s
   }), [A, C, s]), L = C || void 0 !== R ? null != R : (h ? p : O) != null, P = m ? S.default : r.Button;
   return (0, a.jsxs)(_.default, {
     className: l,
-    forcedDivider: f,
+    forcedDivider: g,
     hasBackground: !0,
     title: E,
-    errors: x,
+    errors: M,
     children: [(0, a.jsxs)("div", {
       className: N.buttonsContainer,
       children: [(0, a.jsx)(P, {
@@ -66,12 +66,12 @@ function f(e) {
         },
         children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? I.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : I.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
-    }), t.isStaff() && M && (0, a.jsx)(g, {
+    }), t.isStaff() && x && (0, a.jsx)(f, {
       user: t
     })]
   })
 }
-let g = e => {
+let f = e => {
   let {
     user: t
   } = e;

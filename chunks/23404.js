@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("808268"),
   E = n("617136"),
   h = n("272008"),
-  C = n("113434"),
-  _ = n("569984"),
+  _ = n("113434"),
+  C = n("569984"),
   m = n("497505"),
   S = n("918701"),
   p = n("566078"),
@@ -27,11 +27,11 @@ var a = n("735250"),
   O = n("689938"),
   L = n("758895");
 
-function P(e) {
+function M(e) {
   var t;
   let {
     quest: n
-  } = e, s = (0, C.useQuestFormattedDate)(n.config.expiresAt), l = (0, C.useQuestFormattedDate)(p.SharedQuestFields.build(n.config).rewardsExpireAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? R.ThemeTypes.DARK : R.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), l = (0, _.useQuestFormattedDate)(p.SharedQuestFields.build(n.config).rewardsExpireAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? R.ThemeTypes.DARK : R.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
     className: L.heading,
     children: [(0, a.jsx)("img", {
@@ -62,7 +62,7 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(o.id), [o]), [p, M] = s.useState(!1), y = s.useCallback(() => M(!0), []), D = s.useCallback(() => M(!1), []), x = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [p, P] = s.useState(!1), x = s.useCallback(() => P(!0), []), y = s.useCallback(() => P(!1), []), D = s.useCallback(e => {
     e.stopPropagation()
   }, []), b = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -84,7 +84,7 @@ t.default = function(e) {
   }, [o]), G = (0, A.useHandleClaimQuestsReward)({
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
-  }), w = (0, C.useIsQuestExpired)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  }), w = (0, _.useIsQuestExpired)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
   return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || w || F || !(0, S.shouldShowSocialEntrypoints)(o) ? null : (0, a.jsx)(I.QuestContentImpressionTrackerWeb, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
@@ -97,15 +97,15 @@ t.default = function(e) {
         className: i()(L.wrapper, {
           [L.wrapperQuestAccepted]: k
         }),
-        onClick: x,
-        onKeyPress: x,
-        onFocus: y,
-        onMouseEnter: y,
-        onBlur: D,
-        onMouseLeave: D,
+        onClick: D,
+        onKeyPress: D,
+        onFocus: x,
+        onMouseEnter: x,
+        onBlur: y,
+        onMouseLeave: y,
         children: [(0, a.jsxs)("div", {
           className: L.utils,
-          children: [k ? (0, a.jsx)(P, {
+          children: [k ? (0, a.jsx)(M, {
             quest: o
           }) : (0, a.jsx)(g.default, {
             textOpacity: .5
@@ -123,7 +123,7 @@ t.default = function(e) {
             })
           })]
         }), !k && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(P, {
+          children: [(0, a.jsx)(M, {
             quest: o
           }), (0, a.jsx)(u.Text, {
             className: L.instructions,

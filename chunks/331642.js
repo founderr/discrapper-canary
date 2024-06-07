@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("706667"),
   I = s("792165"),
   N = s("409673"),
-  f = s("603074"),
-  g = s("689938"),
+  g = s("603074"),
+  f = s("689938"),
   m = s("152951");
 
 function C(e) {
@@ -40,7 +40,7 @@ function C(e) {
         closePopout: t
       } = e;
       return (0, a.jsx)(r.Dialog, {
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(g.default, {
           suppressPlaySound: !0,
           shouldShowUpsell: !1,
           guildId: null,
@@ -57,7 +57,7 @@ function C(e) {
       onClick: () => {
         i(!s)
       },
-      text: g.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
+      text: f.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
       children: (0, a.jsx)(u.default, {
         className: m.secondaryIcon
       })
@@ -70,7 +70,7 @@ function A(e) {
     sound: t
   } = e, {
     previewSound: s
-  } = (0, _.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? g.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : g.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+  } = (0, _.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? f.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : f.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
     emojiName: t.emojiName,
     soundName: t.name
   });
@@ -106,7 +106,7 @@ function h(e) {
         variant: "text-xs/medium",
         color: "header-primary",
         className: m.soundText,
-        children: null == t ? g.default.Messages.NONE : s ? g.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
+        children: null == t ? f.default.Messages.NONE : s ? f.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
           soundName: t.name,
           subtextHook: T
         }) : t.name
@@ -121,7 +121,7 @@ function h(e) {
         onSelect: n
       }), l && !s && (0, a.jsx)(N.SecondaryActionButton, {
         onClick: () => n(null),
-        text: g.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
+        text: f.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
         children: (0, a.jsx)(S.default, {
           color: i.default.unsafe_rawColors.RED_400.css,
           className: m.secondaryIcon

@@ -18,7 +18,7 @@ t.default = function(e) {
     status: f,
     isMobile: E,
     className: h
-  } = e, C = (0, i.useStateFromStores)([u.default], () => u.default.getNickname(t.id));
+  } = e, _ = (0, i.useStateFromStores)([u.default], () => u.default.getNickname(t.id));
   return (0, a.jsxs)("div", {
     className: l()(d.userInfo, h, {
       [d.hovered]: n
@@ -33,7 +33,7 @@ t.default = function(e) {
       className: d.text,
       children: [(0, a.jsx)(r.default, {
         user: t,
-        nick: C,
+        nick: _,
         botClass: d.botTag,
         className: l()(d.discordTag, {
           [d.alignPomelo]: t.isPomelo()

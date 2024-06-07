@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,20 +19,20 @@ var a = s("735250"),
   _ = s("654904"),
   I = s("981631"),
   N = s("689938"),
-  f = s("395495");
+  g = s("395495");
 
-function g(e) {
+function f(e) {
   let {
     onChange: t,
     onClose: s,
     color: l,
-    suggestedColors: g,
+    suggestedColors: f,
     disabled: m,
     label: C,
     colorPickerMiddle: A,
     colorPickerFooter: h,
     showEyeDropper: O
-  } = e, p = n.useRef(null), R = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), x = d.default.colors.BACKGROUND_ACCENT.css, M = (0, _.isColorDark)(l), D = (0, o.int2hex)(l), L = D === R ? x : D, P = (0, S.getColor)(M ? I.Color.WHITE_500 : I.Color.PRIMARY_530), b = (0, c.default)(A), v = (0, c.default)(h), [U, j] = n.useState((0, r.v4)());
+  } = e, p = n.useRef(null), R = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), M = d.default.colors.BACKGROUND_ACCENT.css, x = (0, _.isColorDark)(l), D = (0, o.int2hex)(l), L = D === R ? M : D, P = (0, S.getColor)(x ? I.Color.WHITE_500 : I.Color.PRIMARY_530), b = (0, c.default)(A), v = (0, c.default)(h), [U, j] = n.useState((0, r.v4)());
   return n.useEffect(() => {
     (b !== A || v !== h) && j((0, r.v4)())
   }, [h, A, v, b]), (0, a.jsx)(u.Popout, {
@@ -41,7 +41,7 @@ function g(e) {
       ...e,
       value: l,
       onChange: t,
-      suggestedColors: g,
+      suggestedColors: f,
       middle: A,
       footer: h,
       showEyeDropper: O
@@ -54,8 +54,8 @@ function g(e) {
       } = e;
       return (0, a.jsxs)("div", {
         ref: p,
-        className: i()(f.colorSwatch, {
-          [f.disabled]: m
+        className: i()(g.colorSwatch, {
+          [g.disabled]: m
         }),
         children: [(0, a.jsx)(u.Clickable, {
           ...s,
@@ -65,13 +65,13 @@ function g(e) {
             backgroundColor: D,
             borderColor: L
           },
-          className: f.swatch,
+          className: g.swatch,
           "aria-label": N.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
           focusProps: {
             ringTarget: p
           },
           children: (0, a.jsx)(T.default, {
-            className: f.editPencilIcon,
+            className: g.editPencilIcon,
             width: 14,
             height: 14,
             color: P

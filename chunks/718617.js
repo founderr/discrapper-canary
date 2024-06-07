@@ -38,8 +38,8 @@ function S(e) {
     onClose: T,
     analyticsLocation: I,
     className: A
-  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), x = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, N = (0, o.default)(S);
-  let M = null == (n = x) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
+  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), N = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, x = (0, o.default)(S);
+  let M = null == (n = N) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
     R = (0, c.default)(M),
     {
       reducedMotion: y
@@ -49,19 +49,19 @@ function S(e) {
         modViewPanel: e
       })
     }, [v, _, S]),
-    j = l.useMemo(() => ({
+    O = l.useMemo(() => ({
       [C.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          if (x === E.ModViewPanel.INFO) return T();
+          if (N === E.ModViewPanel.INFO) return T();
           return L(E.ModViewPanel.INFO)
         }
       }
-    }), [T, x, L]);
-  l.useEffect(() => (u.default.enable(), u.default.enableTemp(j), () => u.default.disableTemp()), [j]);
-  let O = (0, s.useTransition)(x, {
-    immediate: N !== S,
+    }), [T, N, L]);
+  l.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
+  let j = (0, s.useTransition)(N, {
+    immediate: x !== S,
     value: 0,
     from: {
       value: 1
@@ -80,7 +80,7 @@ function S(e) {
       flex: 1,
       overflow: "hidden"
     },
-    children: O((e, t, n) => {
+    children: j((e, t, n) => {
       var l, i, r;
       let {
         key: o

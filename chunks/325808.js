@@ -20,8 +20,8 @@ var n = s("120356"),
   _ = s("962100"),
   I = s("981631"),
   N = s("689938"),
-  f = s("917439"),
-  g = s("611273");
+  g = s("917439"),
+  f = s("611273");
 let m = !T.isPlatformEmbedded,
   C = (0, E.uid)();
 
@@ -58,18 +58,18 @@ function O(e) {
     } = (0, i.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
   return t = T.isPlatformEmbedded || s !== I.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    className: l()(f.pttToolsMessage, g.marginBottom8),
+    className: l()(g.pttToolsMessage, f.marginBottom8),
     children: N.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
       onClick: () => d.default.setSection(I.UserSettingsSections.KEYBINDS)
     })
   }) : (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    className: l()(f.pttToolsMessage, f.pttToolsWarning, g.marginBottom8),
+    className: l()(g.pttToolsMessage, g.pttToolsWarning, f.marginBottom8),
     children: N.default.Messages.PTT_LIMITED_WARNING.format({
       onDownloadClick: () => (0, _.openDownloadAppsModal)("Help Text PTT")
     })
   }), (0, a.jsxs)("div", {
-    className: f.pttTools,
+    className: g.pttTools,
     children: [(0, a.jsxs)(S.default, {
       children: [(0, a.jsx)(S.default.Child, {
         basis: "50%",
@@ -88,7 +88,7 @@ function O(e) {
           children: [(0, a.jsx)(r.FormTitle, {
             id: C,
             tag: r.FormTitleTags.H5,
-            className: g.marginBottom8,
+            className: f.marginBottom8,
             children: N.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
           }), (0, a.jsx)(r.Slider, {
             initialValue: E,
@@ -117,7 +117,7 @@ function p() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormItem, {
       title: N.default.Messages.FORM_LABEL_INPUT_MODE,
-      className: g.marginBottom20,
+      className: f.marginBottom20,
       children: (0, a.jsx)(r.RadioGroup, {
         onChange: A,
         options: t,

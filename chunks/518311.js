@@ -25,14 +25,14 @@ var a, l = n("735250"),
   I = n("194359"),
   A = n("425493"),
   v = n("461745"),
-  x = n("40851"),
-  N = n("367907"),
+  N = n("40851"),
+  x = n("367907"),
   M = n("762914"),
   R = n("43267"),
   y = n("933557"),
   L = n("366980"),
-  j = n("703656"),
-  O = n("131704"),
+  O = n("703656"),
+  j = n("131704"),
   P = n("592125"),
   D = n("341165"),
   b = n("544610"),
@@ -41,18 +41,18 @@ var a, l = n("735250"),
   w = n("699516"),
   k = n("246946"),
   H = n("594174"),
-  G = n("285952"),
-  B = n("153124"),
+  B = n("285952"),
+  G = n("153124"),
   V = n("917885"),
   W = n("502568"),
   Y = n("626135"),
   z = n("572004"),
   K = n("585483"),
   Z = n("823379"),
-  X = n("709054"),
-  q = n("51144"),
-  J = n("73752"),
-  Q = n("575464"),
+  q = n("709054"),
+  X = n("51144"),
+  Q = n("73752"),
+  J = n("575464"),
   $ = n("981631"),
   ee = n("689938"),
   et = n("93923"),
@@ -67,18 +67,18 @@ function el(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let es = (0, B.uid)(),
-  ei = (0, B.uid)();
+let es = (0, G.uid)(),
+  ei = (0, G.uid)();
 
 function er(e) {
   let {
     className: t,
     children: n
   } = e;
-  return (0, l.jsxs)(G.default, {
-    align: G.default.Align.CENTER,
-    justify: G.default.Justify.CENTER,
-    direction: G.default.Direction.VERTICAL,
+  return (0, l.jsxs)(B.default, {
+    align: B.default.Align.CENTER,
+    justify: B.default.Justify.CENTER,
+    direction: B.default.Direction.VERTICAL,
     className: r()(et.errorState, t),
     children: [(0, l.jsx)("div", {
       className: r()(et.errorStateIcon, ea.marginBottom20)
@@ -96,7 +96,7 @@ let eo = e => {
     });
     return (0, l.jsx)(p.Clickable, {
       onClick: () => {
-        (0, j.transitionToGuild)($.ME, n.id), a()
+        (0, O.transitionToGuild)($.ME, n.id), a()
       },
       children: (0, l.jsxs)("div", {
         className: et.confirmChannelItemContainer,
@@ -109,7 +109,7 @@ let eo = e => {
           children: s
         }), (0, l.jsx)("span", {
           className: et.lastActiveTimestamp,
-          children: c()(X.default.extractTimestamp(i)).fromNow()
+          children: c()(q.default.extractTimestamp(i)).fromNow()
         })]
       })
     })
@@ -139,7 +139,7 @@ let eo = e => {
           var n, a;
           let l = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
             s = null !== (a = t.lastMessageId) && void 0 !== a ? a : t.id;
-          return X.default.compare(s, l)
+          return q.default.compare(s, l)
         }).map(e => (0, l.jsx)(eo, {
           onClose: a.onClose,
           channel: e
@@ -153,7 +153,7 @@ class ed extends(a = s.PureComponent) {
       channel: e
     } = this.props;
     E.default.wait(() => T.default.open(null == e ? void 0 : e.id));
-    let t = (0, N.collectChannelAnalyticsMetadata)(e);
+    let t = (0, x.collectChannelAnalyticsMetadata)(e);
     null != e ? e.isDM() ? Y.default.track($.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
@@ -188,7 +188,7 @@ class ed extends(a = s.PureComponent) {
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
     let {
       inviteMaxAgeSeconds: t
-    } = J.default.getCurrentConfig({
+    } = Q.default.getCurrentConfig({
       location: "5326c5_1"
     }, {
       autoTrackExposure: !1
@@ -275,8 +275,8 @@ class ed extends(a = s.PureComponent) {
     let o = [];
     return i.forEach(e => {
       let t = H.default.getUser(e);
-      null != t && o.push(q.default.getName(t))
-    }), (0, l.jsxs)(G.default, {
+      null != t && o.push(X.default.getName(t))
+    }), (0, l.jsxs)(B.default, {
       className: r()(et.searchBar, ea.marginTop20),
       children: [(0, l.jsx)(v.default, {
         ref: this.searchBarRef,
@@ -306,8 +306,8 @@ class ed extends(a = s.PureComponent) {
     let e = null != this.scrollerRef.current && this.state.separator,
       t = this.isNotFriends() ? ee.default.Messages.GROUP_DM_ADD_FRIENDS : ee.default.Messages.GROUP_DM_HEADER;
     return (0, l.jsxs)(p.ModalHeader, {
-      direction: G.default.Direction.VERTICAL,
-      align: G.default.Align.STRETCH,
+      direction: B.default.Direction.VERTICAL,
+      align: B.default.Align.STRETCH,
       className: et.__invalid_header,
       separator: e,
       children: [f.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(p.Heading, {
@@ -408,12 +408,12 @@ class ed extends(a = s.PureComponent) {
         tag: "h5",
         className: ea.marginBottom8,
         children: ee.default.Messages.GROUP_DM_INVITE_LINK_TITLE
-      }), (0, l.jsxs)(G.default, {
+      }), (0, l.jsxs)(B.default, {
         className: r()(en.input, {
           [en.success]: a
         }),
-        justify: G.default.Justify.BETWEEN,
-        align: G.default.Align.CENTER,
+        justify: B.default.Justify.BETWEEN,
+        align: B.default.Align.CENTER,
         children: [i.length > 0 ? (0, l.jsx)(p.TextInput, {
           className: et.copyInput,
           name: "invite",
@@ -463,8 +463,8 @@ class ed extends(a = s.PureComponent) {
     if (null != n) return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)("div", {
         className: et.footerSeparator
-      }), (0, l.jsx)(G.default, {
-        direction: G.default.Direction.VERTICAL,
+      }), (0, l.jsx)(B.default, {
+        direction: B.default.Direction.VERTICAL,
         className: et.footer,
         children: n
       })]
@@ -482,7 +482,7 @@ class ed extends(a = s.PureComponent) {
   }
   handleAddFriend(e) {
     this.props.onClose(), I.default.sendRequest({
-      discordTag: q.default.getUserTag(e, {
+      discordTag: X.default.getUserTag(e, {
         identifiable: "always"
       }),
       context: {
@@ -540,7 +540,7 @@ class ed extends(a = s.PureComponent) {
         user: u,
         comparator: d
       } = o, c = s.has(u.id);
-      return (0, l.jsx)(Q.default, {
+      return (0, l.jsx)(J.default, {
         row: n,
         user: u,
         hideDiscriminator: r,
@@ -587,7 +587,7 @@ class ed extends(a = s.PureComponent) {
       } = this.props;
       t.has(e) ? T.default.removeUser(e) : (T.default.addUser(e), n.length > 0 && T.default.clear(null == a ? void 0 : a.id)), this.forceFocus()
     }), el(this, "handleAddFriendNavigation", () => {
-      (0, j.transitionTo)($.Routes.FRIENDS), S.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, O.transitionTo)($.Routes.FRIENDS), S.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
     }), el(this, "handleScroll", () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({
@@ -649,7 +649,7 @@ class ed extends(a = s.PureComponent) {
     })
   }
 }
-el(ed, "contextType", x.default);
+el(ed, "contextType", N.default);
 let ec = h.default.connectStores([b.default, D.default, k.default], e => {
   let t, {
     channel: n
@@ -700,7 +700,7 @@ function ef(e) {
 
 function eh(e) {
   let t = em(e);
-  return new Set(u()(P.default.getMutablePrivateChannels()).values().filter(e => (0, O.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
+  return new Set(u()(P.default.getMutablePrivateChannels()).values().filter(e => (0, j.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
 }
 
 function em(e) {

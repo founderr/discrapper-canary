@@ -20,8 +20,8 @@ var a = s("735250"),
   I = s("689938"),
   N = s("158200");
 
-function f() {}
-let g = [_.AutocompleterResultTypes.VOICE_CHANNEL];
+function g() {}
+let f = [_.AutocompleterResultTypes.VOICE_CHANNEL];
 
 function m(e) {
   e.setOptions({
@@ -90,7 +90,7 @@ function p(e) {
       align: E.default.Align.STRETCH,
       children: [(0, a.jsx)("div", {
         className: N.selectedVoiceChannel,
-        children: (0, a.jsx)(x, {
+        children: (0, a.jsx)(M, {
           channelId: d
         })
       }), (0, a.jsx)(E.default.Child, {
@@ -110,7 +110,7 @@ function R(e) {
     transitionState: t,
     onClose: s,
     onSelect: r
-  } = e, E = n.useId(), f = n.useRef(null), {
+  } = e, E = n.useId(), g = n.useRef(null), {
     mouseFocusEnabled: C,
     enableMouseFocus: p,
     disableMouseFocus: R
@@ -128,12 +128,12 @@ function R(e) {
       disableMouseFocus: s
     }
   }(), {
-    query: x,
-    updateQuery: M,
+    query: M,
+    updateQuery: x,
     queryResults: D
   } = (0, o.default)({
     visible: !0,
-    autocompleterResultTypes: g,
+    autocompleterResultTypes: f,
     autocompleterBeforeCreateSearchContext: m
   }), L = function(e) {
     let t = "" !== e,
@@ -148,7 +148,7 @@ function R(e) {
         return s
       }, [t]);
     return t ? null : s
-  }(x), {
+  }(M), {
     focusedIndex: P,
     setFocusedIndex: b
   } = function(e) {
@@ -157,11 +157,11 @@ function R(e) {
       focusedIndex: t,
       setFocusedIndex: s
     }
-  }(x);
+  }(M);
   n.useEffect(() => {
     let {
       current: e
-    } = f;
+    } = g;
     !(null == e || e.isItemVisible(0, P, !0)) && e.scrollToIndex({
       section: 0,
       row: P
@@ -186,8 +186,8 @@ function R(e) {
       children: [(0, a.jsx)("div", {
         className: N.inputWrapper,
         children: (0, a.jsx)(i.TextInput, {
-          value: x,
-          onChange: M,
+          value: M,
+          onChange: x,
           onKeyDown: function(e) {
             R();
             let t = e.key.toLowerCase();
@@ -219,11 +219,11 @@ function R(e) {
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === v && "" !== x && (0, a.jsx)(O, {}), (v > 0 || "" === x) && (0, a.jsx)(i.ListThin, {
+      }), 0 === v && "" !== M && (0, a.jsx)(O, {}), (v > 0 || "" === M) && (0, a.jsx)(i.ListThin, {
         innerId: E,
         innerRole: "listbox",
         "aria-label": I.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
-        ref: f,
+        ref: g,
         sections: [v],
         renderRow: function(e) {
           let {
@@ -264,7 +264,7 @@ function R(e) {
   })
 }
 
-function x(e) {
+function M(e) {
   let {
     channelId: t
   } = e, {
@@ -292,9 +292,9 @@ function x(e) {
     channel: s,
     id: s.id,
     category: n,
-    onClick: f,
-    onFocus: f,
-    onMouseEnter: f,
+    onClick: g,
+    onFocus: g,
+    onMouseEnter: g,
     focused: !1,
     children: null != r ? (0, a.jsx)("div", {
       className: N.guildName,

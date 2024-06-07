@@ -166,18 +166,18 @@ function B(e) {
     channel: D,
     inviter: U,
     target_application: B
-  } = m, F = null != m.stage_instance, V = null == m.guild && null == m.channel && null != m.inviter;
+  } = m, F = null != m.stage_instance, H = null == m.guild && null == m.channel && null != m.inviter;
   if (null != B) t = null == L ? void 0 : L.name, n = p.default.createFromServer(B).getCoverImageURL(1024);
   else if (null != L) t = L.name, n = v.default.getGuildSplashURL({
     id: L.id,
     splash: L.splash
   });
   else if ((null == (t = D.name) || "" === t) && null != U && (t = U.username), null == t) throw Error("no name for group DM invite");
-  let H = (0, h.isAtGuildCapAndNonPremium)(),
+  let V = (0, h.isAtGuildCapAndNonPremium)(),
     k = F ? b.default.Messages.INSTANT_INVITE_ACCEPT_STAGE : b.default.Messages.INVITE_MODAL_BUTTON.format({
       guildName: t
     });
-  return V && (k = b.default.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, l.jsx)(c.AnalyticsLocationProvider, {
+  return H && (k = b.default.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, l.jsx)(c.AnalyticsLocationProvider, {
     value: T,
     children: (0, l.jsxs)(o.ModalRoot, {
       size: o.ModalSize.DYNAMIC,
@@ -208,8 +208,8 @@ function B(e) {
                 guild: L
               })
             }) : null, (0, l.jsxs)("div", {
-              children: [H ? (0, l.jsx)(G, {}) : null, null == B ? (0, l.jsx)(o.Tooltip, {
-                text: H ? b.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
+              children: [V ? (0, l.jsx)(G, {}) : null, null == B ? (0, l.jsx)(o.Tooltip, {
+                text: V ? b.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                 position: "bottom",
                 children: e => {
                   let {
@@ -220,11 +220,11 @@ function B(e) {
                     size: _.Button.Sizes.LARGE,
                     onClick: A,
                     submitting: I,
-                    disabled: H,
+                    disabled: V,
                     color: F ? _.Button.Colors.GREEN : _.Button.Colors.BRAND,
                     onMouseEnter: t,
                     onMouseLeave: n,
-                    children: H ? b.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
+                    children: V ? b.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
                   })
                 }
               }) : (0, l.jsxs)("div", {

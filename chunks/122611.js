@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("360453"),
   E = n("377743"),
   h = n("834743"),
-  C = n("862099"),
-  _ = n("704631"),
+  _ = n("862099"),
+  C = n("704631"),
   m = n("819792"),
   S = n("919285"),
   p = n("118470"),
@@ -26,20 +26,20 @@ var a = n("735250"),
   R = n("8521"),
   O = n("760326"),
   L = n("536687"),
-  P = n("652785"),
-  M = n("981631"),
-  y = n("921944");
+  M = n("652785"),
+  P = n("981631"),
+  x = n("921944");
 
-function D(e) {
+function y(e) {
   e.stopPropagation()
 }
 
-function x(e) {
+function D(e) {
   var t;
   let {
     guild: n
-  } = e, [f, C] = s.useState(null !== (t = r.Storage.get(P.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), m = e => {
-    r.Storage.set(P.LAST_HIDDEN_CHANNEL_NOTICE, e), C(e)
+  } = e, [f, _] = s.useState(null !== (t = r.Storage.get(M.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), m = e => {
+    r.Storage.set(M.LAST_HIDDEN_CHANNEL_NOTICE, e), _(e)
   }, {
     defaultGameId: S,
     enableClanCreation: p
@@ -47,27 +47,27 @@ function x(e) {
     guild: n,
     location: "ChannelNoticesGuard",
     includeConverted: !1
-  }), I = (0, l.useStateFromStoresArray)(P.CHANNEL_NOTICE_STORES, () => P.CHANNEL_NOTICES.filter(e => {
+  }), I = (0, l.useStateFromStoresArray)(M.CHANNEL_NOTICE_STORES, () => M.CHANNEL_NOTICES.filter(e => {
     let {
       type: t,
       store: a
     } = e;
-    if (t === M.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
+    if (t === P.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
     return null == a ? void 0 : a.channelNoticePredicate(n, f)
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(c.default, {
     contentTypes: I,
-    groupName: y.DismissibleContentGroupName.CHANNEL_NOTICES,
+    groupName: x.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        m(Date.now()), s(y.ContentDismissActionType.UNKNOWN)
+        m(Date.now()), s(x.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
-            return (0, a.jsx)(_.default, {
+            return (0, a.jsx)(C.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -99,7 +99,7 @@ function x(e) {
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, a.jsx)(d.default, {
               guild: n,
-              markAsDismissed: () => s(y.ContentDismissActionType.UNKNOWN)
+              markAsDismissed: () => s(x.ContentDismissActionType.UNKNOWN)
             });
           case i.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
             return (0, a.jsx)(u.default, {
@@ -112,7 +112,7 @@ function x(e) {
         }
       })();
       return null == r ? null : (0, a.jsx)("div", {
-        onContextMenu: D,
+        onContextMenu: y,
         children: r
       })
     }
@@ -136,7 +136,7 @@ t.default = e => {
         guild: t
       });
     case L.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
-      return (0, a.jsx)(C.default, {
+      return (0, a.jsx)(_.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.GUILD_MFA_WARNING:
@@ -160,7 +160,7 @@ t.default = e => {
         guild: t
       })
   }
-  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(x, {
+  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(D, {
     guild: e.guild
   })
 }

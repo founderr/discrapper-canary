@@ -30,7 +30,7 @@ function h(e) {
   })
 }
 
-function C() {
+function _() {
   return (0, a.jsx)(h, {
     tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
@@ -39,7 +39,7 @@ function C() {
   })
 }
 
-function _(e) {
+function C(e) {
   let {
     channel: t
   } = e;
@@ -75,9 +75,9 @@ function S(e) {
   let {
     channel: t
   } = e, n = (0, r.default)();
-  return t.isGuildStageVoice() ? (0, a.jsx)(_, {
+  return t.isGuildStageVoice() ? (0, a.jsx)(C, {
     channel: t
-  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(C, {}) : (0, a.jsx)(m, {
+  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(_, {}) : (0, a.jsx)(m, {
     channel: t
   })
 }

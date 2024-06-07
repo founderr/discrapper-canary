@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,16 +19,16 @@ var a = s("735250"),
   _ = s("981631"),
   I = s("689938"),
   N = s("688725");
-let f = {
+let g = {
   width: 387,
   height: 218
 };
 
-function g(e) {
+function f(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, g = E.default.getCameraComponent(), [m, C] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), A = n.useRef(!1), h = n.useRef(m), O = (0, o.useAnalyticsContext)(), p = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, f = E.default.getCameraComponent(), [m, C] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), A = n.useRef(!1), h = n.useRef(m), O = (0, o.useAnalyticsContext)(), p = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
     A.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(h.current))
   }, []), (0, a.jsx)(S.default, {
@@ -42,10 +42,10 @@ function g(e) {
       className: N.cameraWrapper,
       children: (0, a.jsxs)("div", {
         className: N.camera,
-        children: [(0, a.jsx)(g, {
+        children: [(0, a.jsx)(f, {
           deviceId: e,
-          width: f.width,
-          height: f.height,
+          width: g.width,
+          height: g.height,
           disabled: !t
         }), (0, a.jsx)(S.FilterLoadingIndicator, {})]
       })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return Y
+    return k
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("721383"),
   I = s("612226"),
   N = s("714338"),
-  f = s("924557"),
-  g = s("74299"),
+  g = s("924557"),
+  f = s("74299"),
   m = s("131951"),
   C = s("556296"),
   A = s("808506"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   O = s("285952"),
   p = s("474333"),
   R = s("63063"),
-  x = s("358085"),
-  M = s("13140"),
+  M = s("358085"),
+  x = s("13140"),
   D = s("210887"),
   L = s("659947"),
   P = s("981631"),
@@ -62,7 +62,7 @@ class H extends n.PureComponent {
   renderMessage() {
     let {
       keybind: e
-    } = this.props, t = M.toString(e.shortcut);
+    } = this.props, t = x.toString(e.shortcut);
     return N.default.hasBind(t) ? (0, a.jsx)(c.FormText, {
       className: U.keybindMessage,
       type: c.FormTextTypes.DESCRIPTION,
@@ -176,7 +176,7 @@ class H extends n.PureComponent {
     })
   }
 }
-class k extends n.PureComponent {
+class Y extends n.PureComponent {
   componentDidMount() {
     S.default.enableAll(!1)
   }
@@ -223,10 +223,10 @@ class k extends n.PureComponent {
     }), n.push({
       value: P.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
       label: v.default.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
-    })), t && (0, x.isWindows)() && n.push({
+    })), t && (0, M.isWindows)() && n.push({
       value: P.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING,
       label: v.default.Messages.KEYBIND_TOGGLE_GO_LIVE_STREAMING
-    }), (0, x.isDesktop)() && (n.push({
+    }), (0, M.isDesktop)() && (n.push({
       value: P.GlobalKeybindActions.NAVIGATE_BACK,
       label: v.default.Messages.KEYBIND_NAVIGATE_BACK
     }, {
@@ -264,7 +264,7 @@ class k extends n.PureComponent {
       [P.GlobalKeybindActions.TOGGLE_VOICE_MODE]: v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
       [P.GlobalKeybindActions.TOGGLE_STREAMER_MODE]: v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
     };
-    return e && (a[P.GlobalKeybindActions.TOGGLE_OVERLAY] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY, a[P.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK), t && (0, x.isWindows)() && (a[P.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, x.isDesktop)() && (a[P.GlobalKeybindActions.NAVIGATE_BACK] = v.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK, a[P.GlobalKeybindActions.NAVIGATE_FORWARD] = v.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD, a[P.GlobalKeybindActions.SOUNDBOARD] = (0, x.isWindows)() ? v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD, a[P.GlobalKeybindActions.SOUNDBOARD_HOLD] = (0, x.isWindows)() ? v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD, s && (a[P.GlobalKeybindActions.SAVE_CLIP] = v.default.Messages.CLIPS_KEYBIND_DESCRIPTION)), a
+    return e && (a[P.GlobalKeybindActions.TOGGLE_OVERLAY] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY, a[P.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK), t && (0, M.isWindows)() && (a[P.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING] = v.default.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, M.isDesktop)() && (a[P.GlobalKeybindActions.NAVIGATE_BACK] = v.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK, a[P.GlobalKeybindActions.NAVIGATE_FORWARD] = v.default.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD, a[P.GlobalKeybindActions.SOUNDBOARD] = (0, M.isWindows)() ? v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD, a[P.GlobalKeybindActions.SOUNDBOARD_HOLD] = (0, M.isWindows)() ? v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : v.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD, s && (a[P.GlobalKeybindActions.SAVE_CLIP] = v.default.Messages.CLIPS_KEYBIND_DESCRIPTION)), a
   }
   renderKeybinds(e) {
     return e.map(e => (0, a.jsx)("div", {
@@ -294,7 +294,7 @@ class k extends n.PureComponent {
       children: [(0, a.jsx)(c.FormSection, {
         tag: c.FormTitleTags.H1,
         title: v.default.Messages.KEYBINDS,
-        children: x.isPlatformEmbedded ? (0, a.jsxs)(a.Fragment, {
+        children: M.isPlatformEmbedded ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)(O.default, {
             justify: O.default.Justify.BETWEEN,
             className: G.marginBottom20,
@@ -387,16 +387,16 @@ class k extends n.PureComponent {
   }
 }
 
-function Y() {
+function k() {
   let e = (0, d.useStateFromStores)([C.default], () => C.default.getState()),
-    t = (0, d.useStateFromStores)([m.default], () => (0, g.default)(m.default)),
+    t = (0, d.useStateFromStores)([m.default], () => (0, f.default)(m.default)),
     s = (0, d.useStateFromStores)([A.default], () => A.default.isSupported()),
-    n = (0, f.useEnableClips)();
-  return (0, a.jsx)(k, {
+    n = (0, g.useEnableClips)();
+  return (0, a.jsx)(Y, {
     keybinds: e,
     canGoLive: t,
     overlaySupported: s,
-    allowSoundboard: (0, x.isWindows)(),
+    allowSoundboard: (0, M.isWindows)(),
     enableClips: n
   })
 }

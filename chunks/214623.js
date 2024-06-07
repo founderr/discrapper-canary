@@ -1,33 +1,33 @@
 "use strict";
-r.r(t);
-var s = r("735250");
-r("470079");
-var n = r("960259"),
-  l = r("739683");
-t.default = (0, n.replaceIcon)(function(e) {
+n.r(t);
+var a = n("735250");
+n("470079");
+var r = n("960259"),
+  s = n("739683");
+t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 16,
-    height: r = 16,
-    color: n = "currentColor",
-    className: l,
+    height: n = 16,
+    color: r = "currentColor",
+    className: s,
     foreground: i
   } = e;
-  return (0, s.jsx)("svg", {
-    className: l,
+  return (0, a.jsx)("svg", {
+    className: s,
     width: t,
-    height: r,
+    height: n,
     viewBox: "0 0 16 16",
-    children: (0, s.jsxs)("g", {
+    children: (0, a.jsxs)("g", {
       fill: "none",
-      children: [(0, s.jsx)("path", {
+      children: [(0, a.jsx)("path", {
         d: "M-4-4h24v24H-4z"
-      }), (0, s.jsx)("path", {
+      }), (0, a.jsx)("path", {
         className: i,
-        fill: n,
+        fill: r,
         d: "M14.994 1.006C13.858-.257 11.904-.3 10.72.89L8.637 2.975l-.696-.697-1.387 1.388 5.557 5.557 1.387-1.388-.697-.697 1.964-1.964c1.13-1.13 1.3-2.985.23-4.168zm-13.25 10.25c-.225.224-.408.48-.55.764L.02 14.37l1.39 1.39 2.35-1.174c.283-.14.54-.33.765-.55l4.808-4.808-2.776-2.776-4.813 4.803z"
       })]
     })
   })
-}, l.EyeDropperIcon, void 0, {
+}, s.EyeDropperIcon, void 0, {
   size: 16
 })

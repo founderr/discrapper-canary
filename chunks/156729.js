@@ -14,8 +14,8 @@ var a, n = s("735250"),
   _ = s("351402"),
   I = s("823379"),
   N = s("464179"),
-  f = s("211667"),
-  g = s("244526"),
+  g = s("211667"),
+  f = s("244526"),
   m = s("689938"),
   C = s("374728");
 
@@ -84,7 +84,7 @@ class O extends(a = l.PureComponent) {
         className: C.sectionHeader,
         variant: "text-sm/normal",
         children: m.default.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
-      }), (0, n.jsx)(f.default, {
+      }), (0, n.jsx)(g.default, {
         expirationDate: s,
         onCardInfoChange: this.handleExpirationDateUpdate,
         error: this.props.updateError
@@ -163,7 +163,7 @@ class O extends(a = l.PureComponent) {
         noValidate: !0,
         children: [this.renderError(), (0, n.jsxs)("div", {
           className: C.__invalid_paymentSection,
-          children: [(0, n.jsx)(g.default, {
+          children: [(0, n.jsx)(f.default, {
             paymentSource: e,
             isDefault: t,
             isForSubscription: l,

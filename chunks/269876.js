@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("65154"),
   I = s("689938"),
   N = s("689641"),
-  f = s("961047"),
-  g = s("611273");
+  g = s("961047"),
+  f = s("611273");
 let m = (0, T.uid)();
 
 function C() {
@@ -41,7 +41,7 @@ function C() {
     t(e), l((s & _.SpeakingFlags.VOICE) === _.SpeakingFlags.VOICE)
   }
 
-  function x(e, t) {
+  function M(e, t) {
     S.default.setMode(h, {
       threshold: e,
       autoThreshold: t
@@ -55,12 +55,12 @@ function C() {
       E.default.getMediaEngine().removeListener(o.MediaEngineEvent.VoiceActivity, R), e.stop()
     }
   }, []);
-  let M = (0, a.jsx)("section", {
+  let x = (0, a.jsx)("section", {
     className: i()(N.inputSensitivityToggle, N.manual),
     children: (0, a.jsx)(c.Slider, {
       initialValue: C + 100,
       onValueRender: e => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-      onValueChange: e => x(-((100 - e) * 1), A),
+      onValueChange: e => M(-((100 - e) * 1), A),
       barStyles: {
         background: u.default.unsafe_rawColors.GREEN_360.css
       },
@@ -81,7 +81,7 @@ function C() {
       })
     })
   });
-  return A && (M = (0, a.jsxs)("section", {
+  return A && (x = (0, a.jsxs)("section", {
     className: N.inputSensitivityToggle,
     children: [(0, a.jsx)("div", {
       className: N.inputSensitivitySlider,
@@ -92,7 +92,7 @@ function C() {
       })
     }), (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: g.marginBottom8,
+      className: f.marginBottom8,
       children: I.default.Messages.FORM_HELP_AUTOMATIC_VAD
     })]
   })), (0, a.jsxs)(c.FormItem, {
@@ -100,15 +100,15 @@ function C() {
     children: [(0, a.jsx)(c.FormTitle, {
       id: m,
       tag: c.FormTitleTags.H5,
-      className: g.marginBottom8,
+      className: f.marginBottom8,
       children: I.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
       children: [O && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
-          className: i()(f.horizontal, g.marginBottom4),
+          className: i()(g.horizontal, f.marginBottom4),
           children: [(0, a.jsx)(c.FormTitle, {
             tag: c.FormTitleTags.H3,
-            className: g.marginReset,
+            className: f.marginReset,
             children: (0, a.jsx)("label", {
               htmlFor: e,
               children: I.default.Messages.FORM_LABEL_AUTOMATIC_VAD
@@ -116,13 +116,13 @@ function C() {
           }), (0, a.jsx)(c.Switch, {
             id: e,
             checked: A,
-            onChange: e => x(C, e)
+            onChange: e => M(C, e)
           })]
         })
-      }), M]
+      }), x]
     }), !p && (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: i()(N.inputDisabledWarning, g.marginBottom8),
+      className: i()(N.inputDisabledWarning, f.marginBottom8),
       children: I.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
         onEnableClick: S.default.enable
       })

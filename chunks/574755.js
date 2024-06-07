@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("779618"),
   I = s("39604"),
   N = s("703288"),
-  f = s("491758"),
-  g = s("183632"),
+  g = s("491758"),
+  f = s("183632"),
   m = s("689938"),
   C = s("477716"),
   A = s("151501"),
@@ -38,26 +38,26 @@ function O(e) {
     autoTrackExposure: !1
   }), {
     analyticsLocations: R
-  } = (0, o.default)(), x = (0, E.useEnableClips)(), {
-    viewerClipsEnabled: M
+  } = (0, o.default)(), M = (0, E.useEnableClips)(), {
+    viewerClipsEnabled: x
   } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()), D = (0, _.default)(S.default);
   return n.useEffect(() => {
     (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
   }), (0, a.jsxs)(o.AnalyticsLocationProvider, {
     value: R,
-    children: [(x || s) && (0, a.jsx)(r.FormSection, {
+    children: [(M || s) && (0, a.jsx)(r.FormSection, {
       className: t,
       tag: r.FormTitleTags.H1,
       title: s ? (0, a.jsxs)("div", {
         className: C.headerContainer,
         children: [m.default.Messages.CLIPS, (0, a.jsx)(N.default, {})]
       }) : null,
-      children: x && (0, a.jsxs)("form", {
+      children: M && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {})]
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(f.default, {})]
       })
-    }), x && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: s || x ? h.marginTop20 : t,
+    }), M && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
+      className: s || M ? h.marginTop20 : t,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: A.formItem,
@@ -70,7 +70,7 @@ function O(e) {
       }), p && D && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: A.formItem,
-        value: M,
+        value: x,
         note: m.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => I.updateViewerClipsEnabled({
           enabled: e,

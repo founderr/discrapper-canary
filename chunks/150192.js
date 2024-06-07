@@ -1,96 +1,96 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   areDiscoveryCategoriesEqual: function() {
-    return E
+    return h
   }
-}), a("653041"), a("47120");
-var n, r, i, s, l = a("392711"),
-  o = a.n(l),
-  d = a("442837"),
-  c = a("570140"),
-  u = a("823379"),
-  f = a("731455"),
-  m = a("689938");
+}), n("653041"), n("47120");
+var a, r, s, i, l = n("392711"),
+  o = n.n(l),
+  c = n("442837"),
+  d = n("570140"),
+  u = n("823379"),
+  f = n("731455"),
+  m = n("689938");
 
-function E(e, t) {
+function h(e, t) {
   return o().isEqual(e.map(e => [e.categoryId, e.name]), t.map(e => [e.categoryId, e.name]))
 }
-let h = null,
-  T = [],
-  _ = [],
-  C = {};
-class x extends(n = d.default.Store) {
+let E = null,
+  p = [],
+  C = [],
+  T = {};
+class _ extends(a = c.default.Store) {
   getPrimaryCategories() {
-    return T
+    return p
   }
   getDiscoveryCategories() {
-    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => _.find(t => t.categoryId === e)).filter(u.isNotNullish);
+    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => C.find(t => t.categoryId === e)).filter(u.isNotNullish);
     return [{
       categoryId: f.DISCOVERY_ALL_CATEGORIES_ID,
       name: m.default.Messages.HOME
     }, ...e]
   }
   getClanDiscoveryCategories() {
-    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => _.find(t => t.categoryId === e)).filter(u.isNotNullish);
+    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => C.find(t => t.categoryId === e)).filter(u.isNotNullish);
     return [{
       categoryId: f.DISCOVERY_ALL_CATEGORIES_ID,
       name: m.default.Messages.COMMUNITIES
     }, ...e]
   }
   getAllCategories() {
-    return _
+    return C
   }
   getFetchedLocale() {
-    return h
+    return E
   }
   getCategoryName(e) {
-    return e === f.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.HOME : C[e]
+    return e === f.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.HOME : T[e]
   }
 }
-s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = x) ? Object.defineProperty(r, i, {
-  value: s,
+i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, t.default = new x(c.default, {
+}) : r[s] = i, t.default = new _(d.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
-        categories: a,
-        locale: n
+        categories: n,
+        locale: a
       } = e,
       r = [],
-      i = [];
-    if (a.sort((e, t) => e.name < t.name ? -1 : 1).forEach(e => {
+      s = [];
+    if (n.sort((e, t) => e.name < t.name ? -1 : 1).forEach(e => {
         let {
-          id: a,
-          name: n,
-          is_primary: s
+          id: n,
+          name: a,
+          is_primary: i
         } = e;
-        if (a !== f.DEFAULT_DISCOVERY_CATEGORY_ID) {
-          if (a === f.OTHER_DISCOVERY_CATEGORY_ID) {
+        if (n !== f.DEFAULT_DISCOVERY_CATEGORY_ID) {
+          if (n === f.OTHER_DISCOVERY_CATEGORY_ID) {
             t = {
-              categoryId: a,
-              name: n
+              categoryId: n,
+              name: a
             };
             return
-          }!0 === s && r.push({
-            categoryId: a,
-            name: n
-          }), i.push({
-            categoryId: a,
-            name: n
-          }), C[a] = n
+          }!0 === i && r.push({
+            categoryId: n,
+            name: a
+          }), s.push({
+            categoryId: n,
+            name: a
+          }), T[n] = a
         }
       }), null != t) {
       let {
         categoryId: e,
-        name: a
+        name: n
       } = t;
       r.push({
         categoryId: e,
-        name: a
-      }), C[e] = a
+        name: n
+      }), T[e] = n
     }
-    h = n, T = r, _ = i
+    E = a, p = r, C = s
   }
 })

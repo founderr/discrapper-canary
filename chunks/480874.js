@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("797614"),
   E = n("151827"),
   h = n("626135"),
-  C = n("26373"),
-  _ = n("486622"),
+  _ = n("26373"),
+  C = n("486622"),
   m = n("922409"),
   S = n("727813"),
   p = n("355350"),
@@ -32,23 +32,23 @@ function R() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, p.useSpamMessageRequestCount)(),
-    l = (0, C.useListHasSingleSpamMessageRequest)(),
+    l = (0, _.useListHasSingleSpamMessageRequest)(),
     R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     O = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
     } = (0, m.useMessageRequestSidebarState)(),
-    P = s.useCallback(() => {
+    M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: M
-    } = (0, _.useMessageRequestActions)({
-      onError: P
+      rejectAll: P
+    } = (0, C.useMessageRequestActions)({
+      onError: M
     }),
-    y = s.useCallback(() => {
-      M(t.map(e => e.channel.id))
-    }, [t, M]);
+    x = s.useCallback(() => {
+      P(t.map(e => e.channel.id))
+    }, [t, P]);
   s.useEffect(() => {
     h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
@@ -56,7 +56,7 @@ function R() {
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let D = s.useCallback(e => {
+  let y = s.useCallback(e => {
       var n, s;
       let {
         row: r
@@ -72,7 +72,7 @@ function R() {
         hasSingleMessageRequest: l
       }, d)
     }, [t, l, L]),
-    x = s.useCallback(() => (0, a.jsxs)(E.default, {
+    D = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: v.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
@@ -84,7 +84,7 @@ function R() {
           tag: "span",
           children: "•"
         }), (0, a.jsx)(u.Button, {
-          onClick: y,
+          onClick: x,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -93,7 +93,7 @@ function R() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, R]);
+    }, "message-requests-spam-title"), [n, x, R]);
   return 0 === t.length ? (0, a.jsx)(I.default, {
     section: T.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
@@ -117,8 +117,8 @@ function R() {
           paddingBottom: 24,
           sectionHeight: T.LIST_SECTION_HEIGHT,
           rowHeight: T.LIST_ROW_HEIGHT,
-          renderSection: x,
-          renderRow: D,
+          renderSection: D,
+          renderRow: y,
           sections: [t.length],
           chunkSize: 30,
           fade: !0,

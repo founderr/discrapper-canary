@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("116061"),
   E = n("549080"),
   h = n("481060"),
-  C = n("232567"),
-  _ = n("2052"),
+  _ = n("232567"),
+  C = n("2052"),
   m = n("393238"),
   S = n("727637"),
   p = n("100527"),
@@ -30,11 +30,11 @@ var a = n("735250"),
   R = n("680295"),
   O = n("785717"),
   L = n("318661"),
-  P = n("741308"),
-  M = n("549546"),
-  y = n("681837"),
-  D = n("502762"),
-  x = n("530"),
+  M = n("741308"),
+  P = n("549546"),
+  x = n("681837"),
+  y = n("502762"),
+  D = n("530"),
   b = n("564440"),
   U = n("796214"),
   j = n("171368"),
@@ -49,8 +49,8 @@ var a = n("735250"),
   W = n("594174"),
   K = n("26290"),
   z = n("626135"),
-  q = n("70956"),
-  Q = n("5192"),
+  Q = n("70956"),
+  q = n("5192"),
   Z = n("51144"),
   X = n("246133"),
   J = n("474376"),
@@ -60,19 +60,19 @@ var a = n("735250"),
   en = n("689938"),
   ea = n("476002");
 let es = [{
-  duration: 30 * q.default.Millis.MINUTE,
+  duration: 30 * Q.default.Millis.MINUTE,
   label: () => en.default.Messages.MUTE_DURATION_30_MINUTES
 }, {
-  duration: q.default.Millis.HOUR,
+  duration: Q.default.Millis.HOUR,
   label: () => en.default.Messages.MUTE_DURATION_1_HOUR
 }, {
-  duration: 3 * q.default.Millis.HOUR,
+  duration: 3 * Q.default.Millis.HOUR,
   label: () => en.default.Messages.MUTE_DURATION_3_HOURS
 }, {
-  duration: 8 * q.default.Millis.HOUR,
+  duration: 8 * Q.default.Millis.HOUR,
   label: () => en.default.Messages.MUTE_DURATION_8_HOURS
 }, {
-  duration: q.default.Millis.DAY,
+  duration: Q.default.Millis.DAY,
   label: () => en.default.Messages.MUTE_DURATION_24_HOURS
 }, {
   duration: void 0,
@@ -161,9 +161,9 @@ function er(e) {
     guildId: l,
     isApplicationStreaming: r,
     onClose: o,
-    onSelect: C,
+    onSelect: _,
     closePopout: F
-  } = e, H = __OVERLAY__, W = (0, L.default)(t.id, l), q = (0, _.useAnalyticsContext)(), {
+  } = e, H = __OVERLAY__, W = (0, L.default)(t.id, l), Q = (0, C.useAnalyticsContext)(), {
     analyticsLocations: X
   } = (0, I.default)(p.default.ACCOUNT_PROFILE_POPOUT), er = (0, O.useTrackUserProfileAction)({
     layout: "SIMPLIFIED_ACCOUNT_POPOUT",
@@ -258,7 +258,7 @@ function er(e) {
         children: c
       }, "quiet-mode") : null]
     })
-  }(eu, q), {
+  }(eu, Q), {
     ref: ec
   } = (0, m.default)(), ef = (0, S.default)(ec);
   s.useEffect(() => {
@@ -270,7 +270,7 @@ function er(e) {
       is_streaming: r,
       application_name: null != eo ? eo.name : void 0,
       profile_has_nitro_customization: (null == W ? void 0 : W.banner) != null,
-      location: q.location,
+      location: Q.location,
       has_profile_effect: (null == W ? void 0 : W.profileEffectId) != null
     })
   }, []);
@@ -283,8 +283,8 @@ function er(e) {
       })
     },
     eh = (0, N.useFocusModeEnabled)(),
-    eC = eu === ee.StatusTypes.DND,
-    e_ = (0, J.useMultiAccountMenuItems)(),
+    e_ = eu === ee.StatusTypes.DND,
+    eC = (0, J.useMultiAccountMenuItems)(),
     em = (0, g.useCustomStatusMenuItem)(null != n ? n : void 0, ea.menuItemFocused),
     eS = (0, T.default)({
       id: t.id,
@@ -302,7 +302,7 @@ function er(e) {
       children: (0, a.jsx)("div", {
         className: ea.popoutContainer,
         ref: ec,
-        children: (0, a.jsxs)(D.default, {
+        children: (0, a.jsxs)(y.default, {
           className: ea.themeContainer,
           user: t,
           displayProfile: W,
@@ -318,24 +318,24 @@ function er(e) {
             onOpenProfile: H ? void 0 : eE
           }), (0, a.jsxs)("div", {
             className: ea.body,
-            children: [(0, a.jsx)(x.default, {
+            children: [(0, a.jsx)(D.default, {
               user: t,
               className: ea.username,
               profileType: et.UserProfileTypes.BITE_SIZE,
-              nickname: Q.default.getName(null, null, t),
+              nickname: q.default.getName(null, null, t),
               onOpenProfile: () => eE({
                 autoFocusNote: !1
               }),
               pronouns: null == W ? void 0 : W.pronouns,
-              tags: (0, a.jsx)(P.default, {
+              tags: (0, a.jsx)(M.default, {
                 displayProfile: W,
                 profileType: et.UserProfileTypes.BITE_SIZE,
                 onClose: o
               }),
               nicknameIcons: (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(y.default, {
+                children: [(0, a.jsx)(x.default, {
                   userId: t.id
-                }), (0, a.jsx)(M.default, {
+                }), (0, a.jsx)(P.default, {
                   user: t,
                   isHovering: ef
                 })]
@@ -356,7 +356,7 @@ function er(e) {
                 hideScroller: !0,
                 className: ea.menu,
                 onClose: o,
-                onSelect: C,
+                onSelect: _,
                 children: [(0, a.jsx)(h.MenuGroup, {
                   children: (0, a.jsx)(h.MenuItem, {
                     id: "status-picker",
@@ -366,7 +366,7 @@ function er(e) {
                         alignItems: "center",
                         justifyContent: "space-between"
                       },
-                      children: [(0, Z.humanizeStatus)(eu), eh || eC ? (0, a.jsx)(f.BellSlashIcon, {
+                      children: [(0, Z.humanizeStatus)(eu), eh || e_ ? (0, a.jsx)(f.BellSlashIcon, {
                         width: 12,
                         height: 12
                       }) : null]
@@ -420,7 +420,7 @@ function er(e) {
                 hideScroller: !0,
                 className: ea.menu,
                 onClose: o,
-                onSelect: C,
+                onSelect: _,
                 children: [(0, a.jsx)(h.MenuGroup, {
                   children: (0, a.jsx)(h.MenuItem, {
                     id: "switch-account",
@@ -435,7 +435,7 @@ function er(e) {
                         analyticsLocations: X
                       }), (0, $.default)()
                     },
-                    children: e_
+                    children: eC
                   })
                 }), (0, a.jsx)(h.MenuGroup, {
                   children: eS
@@ -459,18 +459,18 @@ function eo(e) {
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, c.useStateFromStores)([W.default], () => W.default.getUser(t), [t]), d = (0, c.useStateFromStores)([H.default], () => H.default.getCustomStatusActivity()), [f, E] = s.useState(!1), h = null != u ? u : n, _ = (0, c.useStateFromStores)([F.default], () => null != h && null != F.default.getAnyStreamForUser(h.id));
+  } = e, u = (0, c.useStateFromStores)([W.default], () => W.default.getUser(t), [t]), d = (0, c.useStateFromStores)([H.default], () => H.default.getCustomStatusActivity()), [f, E] = s.useState(!1), h = null != u ? u : n, C = (0, c.useStateFromStores)([F.default], () => null != h && null != F.default.getAnyStreamForUser(h.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {
-      "string" == typeof t && (await (0, C.getUser)(t), E(!0))
+      "string" == typeof t && (await (0, _.getUser)(t), E(!0))
     }
   }, [u, t]), null == h) ? (f && o()(null != h, "Unexpected missing user"), null) : (0, a.jsx)(er, {
     closePopout: i,
     user: h,
     customStatus: d,
     guildId: l,
-    isApplicationStreaming: _,
+    isApplicationStreaming: C,
     onClose: i,
     onSelect: r
   })

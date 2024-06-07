@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return M
+    return x
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("331642"),
   I = s("474333"),
   N = s("466111"),
-  f = s("632184"),
-  g = s("63063"),
+  g = s("632184"),
+  f = s("63063"),
   m = s("581883"),
   C = s("918257"),
   A = s("981631"),
@@ -29,7 +29,7 @@ var a = s("735250"),
   p = s("976130"),
   R = s("611273");
 
-function x(e) {
+function M(e) {
   return (0, l.useStateFromStores)([S.default], () => {
     if (null == e) return null;
     let {
@@ -40,10 +40,10 @@ function x(e) {
   })
 }
 
-function M() {
+function x() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(h.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), f = x(r), m = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, L = m && null != r && null == f;
+  } = (0, o.default)(), [t, s] = n.useState(h.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = M(r), m = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), x = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, L = m && null != r && null == g;
   n.useEffect(() => {
     L && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
@@ -75,7 +75,7 @@ function M() {
       variant: "text-sm/medium",
       color: "header-secondary",
       children: O.default.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
-        helpdeskArticle: g.default.getArticleURL(A.HelpdeskArticles.SOUNDBOARD)
+        helpdeskArticle: f.default.getArticleURL(A.HelpdeskArticles.SOUNDBOARD)
       })
     }), (0, a.jsx)(d.default, {
       guildId: t,
@@ -96,8 +96,8 @@ function M() {
       }),
       forcedDivider: !0,
       children: [(0, a.jsx)(_.default, {
-        sound: f,
-        isGlobal: M,
+        sound: g,
+        isGlobal: x,
         onSelect: s => {
           null == s ? (0, E.removeCustomJoinSound)(t, e) : (0, E.updateCustomJoinSound)(t, s, e)
         }
@@ -116,7 +116,7 @@ function D(e) {
   } = e, s = (0, l.useStateFromStores)([m.default], () => {
     var e, s, a;
     return null === (a = m.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
-  }), n = x(s);
+  }), n = M(s);
   if (null == s || null == n) return null;
   let {
     emojiId: o,
@@ -128,7 +128,7 @@ function D(e) {
       emojiId: o,
       emojiName: d,
       className: p.pillIcon
-    }) : (0, a.jsx)(f.default, {
+    }) : (0, a.jsx)(g.default, {
       className: p.pillIcon
     }), (0, a.jsx)(i.Text, {
       className: p.pillText,

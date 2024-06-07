@@ -1,7 +1,7 @@
 "use strict";
 r.r(t);
 var a = r("319301");
-let i = {
+let n = {
   figma: {
     category: "misc"
   }
@@ -10,17 +10,17 @@ t.default = (0, a.defineColorTokens)({
   "activity-card-background": {
     dark: "primary.700",
     light: "white.500",
-    meta: i
+    meta: n
   },
   "logo-primary": {
     dark: "white.500",
     light: "brand.500",
-    meta: i
+    meta: n
   },
   "focus-primary": {
     dark: "blue.345",
     light: "blue.345",
-    meta: i
+    meta: n
   },
   "android-navigation-scrim-background": {
     dark: {
@@ -31,7 +31,7 @@ t.default = (0, a.defineColorTokens)({
       color: "primary.100",
       opacity: .5
     },
-    meta: i
+    meta: n
   },
   "bug-reporter-modal-submitting-background": {
     dark: {
@@ -42,7 +42,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.500",
       opacity: .6
     },
-    meta: i
+    meta: n
   },
   "forum-post-extra-media-count-container-background": {
     dark: {
@@ -53,7 +53,7 @@ t.default = (0, a.defineColorTokens)({
       color: "primary.160",
       opacity: .8
     },
-    meta: i
+    meta: n
   },
   "forum-post-tag-background": {
     dark: {
@@ -64,7 +64,7 @@ t.default = (0, a.defineColorTokens)({
       color: "primary.160",
       opacity: .9
     },
-    meta: i
+    meta: n
   },
   "live-stage-tile-border": {
     dark: {
@@ -75,7 +75,7 @@ t.default = (0, a.defineColorTokens)({
       color: "primary.430",
       opacity: .15
     },
-    meta: i
+    meta: n
   },
   "user-profile-header-overflow-background": {
     dark: {
@@ -86,7 +86,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.200",
       opacity: .5
     },
-    meta: i
+    meta: n
   },
   "display-banner-overflow-background": {
     dark: {
@@ -97,7 +97,7 @@ t.default = (0, a.defineColorTokens)({
       color: "white.200",
       opacity: .5
     },
-    meta: i
+    meta: n
   },
   "info-box-background": {
     dark: {
@@ -108,7 +108,7 @@ t.default = (0, a.defineColorTokens)({
       color: "blue.345",
       opacity: .1
     },
-    meta: i
+    meta: n
   },
   "home-card-resting-border": {
     dark: "transparent",

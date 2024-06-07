@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return M
+    return x
   }
 });
 var a = s("735250");
@@ -20,8 +20,8 @@ var n = s("512722"),
   _ = s("658785"),
   I = s("556296"),
   N = s("808506"),
-  f = s("237997"),
-  g = s("739563"),
+  g = s("237997"),
+  f = s("739563"),
   m = s("626135");
 s("63063");
 var C = s("13140"),
@@ -32,7 +32,7 @@ let p = R(null);
 
 function R(e) {
   var t;
-  let s = f.default.getNotificationPositionMode(),
+  let s = g.default.getNotificationPositionMode(),
     a = s !== A.OverlayNotificationPositions.DISABLED,
     n = I.default.getOverlayKeybind(),
     l = I.default.getOverlayChatKeybind();
@@ -40,15 +40,15 @@ function R(e) {
     enabled: N.default.enabled,
     notifications_enabled: a,
     notifications_position: a ? s : null,
-    text_notifications_mode: f.default.getTextChatNotificationMode(),
+    text_notifications_mode: g.default.getTextChatNotificationMode(),
     hotkey: null != n ? (0, C.toString)(n.shortcut) : null,
     text_activation_hotkey: null != l ? (0, C.toString)(l.shortcut) : null,
-    text_opacity_slider: f.default.getTextWidgetOpacity(),
+    text_opacity_slider: g.default.getTextWidgetOpacity(),
     old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : N.default.enabled
   }
 }
 
-function x(e) {
+function M(e) {
   let {
     children: t,
     title: s
@@ -60,7 +60,7 @@ function x(e) {
   })
 }
 
-function M(e) {
+function x(e) {
   let {
     className: t,
     showHeader: s = !0
@@ -72,18 +72,18 @@ function M(e) {
     legacyEnabled: N.default.legacyEnabled
   })), {
     avatarSizeMode: C,
-    displayNameMode: M,
+    displayNameMode: x,
     displayUserMode: D,
     notificationPositionMode: L,
     textChatNotificationMode: P,
     shouldShowKeybindIndicators: b
-  } = (0, o.useStateFromStoresObject)([f.default], () => ({
-    avatarSizeMode: f.default.getAvatarSizeMode(),
-    displayNameMode: f.default.getDisplayNameMode(),
-    displayUserMode: f.default.getDisplayUserMode(),
-    notificationPositionMode: f.default.getNotificationPositionMode(),
-    textChatNotificationMode: f.default.getTextChatNotificationMode(),
-    shouldShowKeybindIndicators: f.default.showKeybindIndicators
+  } = (0, o.useStateFromStoresObject)([g.default], () => ({
+    avatarSizeMode: g.default.getAvatarSizeMode(),
+    displayNameMode: g.default.getDisplayNameMode(),
+    displayUserMode: g.default.getDisplayUserMode(),
+    notificationPositionMode: g.default.getNotificationPositionMode(),
+    textChatNotificationMode: g.default.getTextChatNotificationMode(),
+    shouldShowKeybindIndicators: g.default.showKeybindIndicators
   })), v = (0, o.useStateFromStores)([I.default], () => I.default.getOverlayKeybind()), {
     showKeybindIndicators: U
   } = _.default.useExperiment({
@@ -157,7 +157,7 @@ function M(e) {
             }
           })
         })]
-      }), (0, a.jsx)(x, {
+      }), (0, a.jsx)(M, {
         title: h.default.Messages.FORM_LABEL_AVATAR_SIZE,
         children: (0, a.jsx)(d.RadioGroup, {
           options: [{
@@ -175,7 +175,7 @@ function M(e) {
           },
           value: C
         })
-      }), (0, a.jsx)(x, {
+      }), (0, a.jsx)(M, {
         title: h.default.Messages.FORM_LABEL_DISPLAY_NAMES,
         children: (0, a.jsx)(d.RadioGroup, {
           options: [{
@@ -194,9 +194,9 @@ function M(e) {
             } = e;
             return c.default.setDisplayNameMode(t)
           },
-          value: M
+          value: x
         })
-      }), (0, a.jsx)(x, {
+      }), (0, a.jsx)(M, {
         title: h.default.Messages.FORM_LABEL_DISPLAY_USERS,
         children: (0, a.jsx)(d.RadioGroup, {
           options: [{
@@ -214,7 +214,7 @@ function M(e) {
           },
           value: D
         })
-      }), U && (0, a.jsx)(x, {
+      }), U && (0, a.jsx)(M, {
         children: (0, a.jsx)(d.FormSwitch, {
           value: b,
           onChange: e => c.default.setShowKeybindIndicators(e),
@@ -226,16 +226,16 @@ function M(e) {
       tag: d.FormTitleTags.H1,
       title: h.default.Messages.OVERLAY_NOTIFICATIONS_SETTINGS,
       className: O.notificationSection,
-      children: [(0, a.jsx)(x, {
+      children: [(0, a.jsx)(M, {
         title: h.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
         children: (0, a.jsx)("div", {
           className: O.notificationSettings,
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(f.default, {
             position: L,
             onChange: (e, t) => c.default.setNotificationPositionMode(t)
           })
         })
-      }), (0, a.jsx)(x, {
+      }), (0, a.jsx)(M, {
         children: (0, a.jsx)(d.FormSwitch, {
           value: L !== A.OverlayNotificationPositions.DISABLED && P === A.OverlayNotificationTextChatTypes.ENABLED,
           disabled: L === A.OverlayNotificationPositions.DISABLED,

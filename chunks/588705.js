@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("735250"),
   a = n("470079"),
   i = n("442837"),
-  l = n("481060"),
-  r = n("726745"),
+  r = n("481060"),
+  l = n("726745"),
   o = n("973616"),
   u = n("131704"),
   d = n("601964"),
@@ -27,7 +27,7 @@ var s = n("735250"),
 let N = () => (0, s.jsxs)(a.Fragment, {
     children: [(0, s.jsx)(g.Avatar, {
       src: null,
-      size: l.AvatarSizes.DEPRECATED_SIZE_100,
+      size: r.AvatarSizes.DEPRECATED_SIZE_100,
       className: A.avatar
     }), (0, s.jsx)(g.SubTitle, {
       children: S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN
@@ -50,7 +50,7 @@ let N = () => (0, s.jsxs)(a.Fragment, {
     });
     if (null != n) return (0, s.jsx)(g.Avatar, {
       src: null != n ? n.getAvatarURL(void 0, 80) : null,
-      size: l.AvatarSizes.SIZE_80,
+      size: r.AvatarSizes.SIZE_80,
       className: i ? A.compactAvatar : A.avatar
     });
     if (null != t) return (0, s.jsx)(m.default, {
@@ -78,9 +78,9 @@ t.default = e => {
     {
       currentUser: L,
       multiAccounts: x
-    } = (0, i.useStateFromStoresObject)([r.default, f.default], () => ({
+    } = (0, i.useStateFromStoresObject)([l.default, f.default], () => ({
       currentUser: f.default.getCurrentUser(),
-      multiAccounts: r.default.getUsers()
+      multiAccounts: l.default.getUsers()
     }));
   if (null == m) return null;
   let M = null != m.guild ? new d.default(m.guild) : null,
@@ -109,7 +109,7 @@ t.default = e => {
       children: [(0, s.jsx)(g.GuildIcon, {
         guild: M,
         size: g.GuildIcon.Sizes.SMALL
-      }), (0, s.jsx)(l.Text, {
+      }), (0, s.jsx)(r.Text, {
         tag: "span",
         variant: "text-lg/normal",
         color: "header-primary",
@@ -125,7 +125,7 @@ t.default = e => {
       username: e
     }), a = b.name, null != b.icon && (n = (0, s.jsx)(g.ChannelIcon, {
       channel: b,
-      size: l.AvatarSizes.SIZE_32
+      size: r.AvatarSizes.SIZE_32
     }))) : (P = S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM, a = e)
   } else if (null != D) {
     let e = _.default.getFormattedName(D, !0);

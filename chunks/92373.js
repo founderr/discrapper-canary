@@ -1,76 +1,76 @@
 "use strict";
-a.r(t);
-var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
-  l = a("183249"),
-  o = a("824385"),
-  d = a("481060"),
-  c = a("442837"),
-  u = a("210753"),
-  f = a("77498"),
-  m = a("441674"),
-  E = a("689938"),
-  h = a("75387");
+n.r(t);
+var a = n("735250"),
+  r = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  l = n("183249"),
+  o = n("824385"),
+  c = n("481060"),
+  d = n("442837"),
+  u = n("210753"),
+  f = n("77498"),
+  m = n("441674"),
+  h = n("689938"),
+  E = n("75387");
 t.default = function(e) {
   let {
     applicationId: t,
-    imageContainerClassName: a,
-    onClick: i,
-    selected: T,
-    locked: _ = !1,
-    otherGamesCount: C = 0
-  } = e, x = (0, d.useToken)(d.tokens.colors.WHITE), {
-    isFetching: p,
-    coverImageUrl: I
+    imageContainerClassName: n,
+    onClick: s,
+    selected: p,
+    locked: C = !1,
+    otherGamesCount: T = 0
+  } = e, _ = (0, c.useToken)(c.tokens.colors.WHITE), {
+    isFetching: x,
+    coverImageUrl: g
   } = (0, u.useDetectableGameSupplementalData)(t, {
     coverImageHeight: 336,
     coverImageWidth: 252
-  }), g = (0, c.useStateFromStores)([f.default], () => {
-    var e, a;
-    return null !== (a = null === (e = f.default.getDetectableGame(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
+  }), I = (0, d.useStateFromStores)([f.default], () => {
+    var e, n;
+    return null !== (n = null === (e = f.default.getDetectableGame(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : ""
   }), N = r.useCallback(() => {
-    null == i || i(t)
-  }, [t, i]), A = r.useMemo(() => p ? null : null == I ? (0, n.jsx)("div", {
-    className: h.gameUnknownImage,
-    children: (0, n.jsx)(l.UnknownGameIcon, {
+    null == s || s(t)
+  }, [t, s]), v = r.useMemo(() => x ? null : null == g ? (0, a.jsx)("div", {
+    className: E.gameUnknownImage,
+    children: (0, a.jsx)(l.UnknownGameIcon, {
       height: 32,
       width: 32
     })
-  }) : (0, n.jsx)("img", {
-    className: h.gameImage,
-    alt: g,
-    src: I
-  }), [I, p, g]);
-  return (0, n.jsxs)("div", {
-    className: h.selectedGame,
-    children: [(0, n.jsxs)(d.Clickable, {
+  }) : (0, a.jsx)("img", {
+    className: E.gameImage,
+    alt: I,
+    src: g
+  }), [g, x, I]);
+  return (0, a.jsxs)("div", {
+    className: E.selectedGame,
+    children: [(0, a.jsxs)(c.Clickable, {
       onClick: N,
-      className: s()(a, p ? h.gameImageLoading : void 0, h.gameImageBackground),
-      children: [T && (0, n.jsx)("div", {
-        className: h.checkBackground,
-        children: (0, n.jsx)(m.default, {
-          backgroundColor: x.hex(),
-          className: s()(h.selectedGameCheck, {
-            [h.selectedGameCheckLocked]: _
+      className: i()(n, x ? E.gameImageLoading : void 0, E.gameImageBackground),
+      children: [p && (0, a.jsx)("div", {
+        className: E.checkBackground,
+        children: (0, a.jsx)(m.default, {
+          backgroundColor: _.hex(),
+          className: i()(E.selectedGameCheck, {
+            [E.selectedGameCheckLocked]: C
           })
         })
-      }), A, C > 0 && (0, n.jsx)("div", {
-        className: h.remainingGame,
-        children: (0, n.jsx)(d.Text, {
+      }), v, T > 0 && (0, a.jsx)("div", {
+        className: E.remainingGame,
+        children: (0, a.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "always-white",
-          children: E.default.Messages.COUNT_REMAINING.format({
-            count: C
+          children: h.default.Messages.COUNT_REMAINING.format({
+            count: T
           })
         })
       })]
-    }), (0, n.jsxs)(d.Text, {
-      className: h.gameName,
+    }), (0, a.jsxs)(c.Text, {
+      className: E.gameName,
       variant: "text-xs/normal",
       color: "header-primary",
-      children: [g, _ && (0, n.jsx)(o.LockIcon, {
+      children: [I, C && (0, a.jsx)(o.LockIcon, {
         width: 12,
         height: 12
       })]

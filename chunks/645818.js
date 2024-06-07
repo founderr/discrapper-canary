@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("271322"),
   E = n("981631"),
   h = n("689938");
-let C = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
-  _ = Object.freeze({
+let _ = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
+  C = Object.freeze({
     [E.CloudSyncStateTypes.DONE]: u.default,
     [E.CloudSyncStateTypes.PLANNING]: u.default,
     [E.CloudSyncStateTypes.PREPARING]: u.default,
@@ -84,13 +84,13 @@ class m extends s.PureComponent {
     } = this.props, s = null == e ? {
       type: E.CloudSyncStateTypes.DONE
     } : e, l = this.getIsRecentlySynced(), i = {};
-    (C.has(s.type) || l) && (i.gradientConfig = {
+    (_.has(s.type) || l) && (i.gradientConfig = {
       id: t.id,
       startColor: "rgba(199, 208, 240, 1)",
       stopColor: "rgba(114, 137, 218, 1)",
       stop: this.getStop(s, l)
     });
-    let o = l ? d.default : _[s.type];
+    let o = l ? d.default : C[s.type];
     return (0, a.jsx)(r.Tooltip, {
       text: this.getTooltip(s, l),
       children: e => (0, a.jsx)(o, {

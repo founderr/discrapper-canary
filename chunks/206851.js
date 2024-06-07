@@ -1,18 +1,18 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
-var n = a("735250");
-a("470079");
-var r = a("249849"),
-  i = a("907561"),
-  s = a("689938"),
-  l = a("924936");
+var a = n("735250");
+n("470079");
+var r = n("249849"),
+  s = n("907561"),
+  i = n("689938"),
+  l = n("924936");
 let o = ["#1e349e", "#4d61de", "#7887e2", "#92a6e4"],
-  d = ["#fc6e4e"],
-  c = [.05, .15, .26, .4],
+  c = ["#fc6e4e"],
+  d = [.05, .15, .26, .4],
   u = [{
     base: 8,
     tint: 1
@@ -32,42 +32,42 @@ let o = ["#1e349e", "#4d61de", "#7887e2", "#92a6e4"],
     tint: 1
   }];
 
-function E(e) {
+function h(e) {
   let {
     width: t,
-    height: a,
-    primaryTintColor: E,
-    secondaryTintColor: h,
-    ...T
+    height: n,
+    primaryTintColor: h,
+    secondaryTintColor: E,
+    ...p
   } = e, {
-    primaryColorsTransformed: _,
-    secondaryColorsTransformed: C
+    primaryColorsTransformed: C,
+    secondaryColorsTransformed: T
   } = (0, r.getTransformedBadgeColors)({
     primaryBaseColors: o,
-    primaryTintColor: E,
-    primaryTintLuminances: c,
+    primaryTintColor: h,
+    primaryTintLuminances: d,
     primaryLuminanceWeights: u,
-    secondaryBaseColors: d,
-    secondaryTintColor: h,
+    secondaryBaseColors: c,
+    secondaryTintColor: E,
     secondaryTintLuminances: f,
     secondaryLuminanceWeights: m
   }), {
-    styleContent: x,
-    containerId: p
-  } = (0, i.useClanBannerStyleInjection)(_, C);
-  return (0, n.jsxs)("svg", {
-    ...T,
-    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
+    styleContent: _,
+    containerId: x
+  } = (0, s.useClanBannerStyleInjection)(C, T);
+  return (0, a.jsxs)("svg", {
+    ...p,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
-    height: a,
-    viewBox: "0 0 ".concat(i.CLAN_BANNER_WIDTH, " ").concat(i.CLAN_BANNER_HEIGHT),
-    children: [(0, n.jsx)("defs", {
-      children: (0, n.jsx)("style", {
-        children: x
+    height: n,
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
+    children: [(0, a.jsx)("defs", {
+      children: (0, a.jsx)("style", {
+        children: _
       })
-    }), (0, n.jsx)("use", {
+    }), (0, a.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
-      id: p
+      id: x
     })]
   })
 }

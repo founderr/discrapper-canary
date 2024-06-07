@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("456799"),
   I = s("210851"),
   N = s("602683"),
-  f = s("916028"),
-  g = s("15033"),
+  g = s("916028"),
+  f = s("15033"),
   m = s("899457"),
   C = s("975266");
 
@@ -53,7 +53,7 @@ function R() {
     progress: {}
   }
 }
-let x = {
+let M = {
   id: "1193992107035983872",
   preview: !0,
   config: {
@@ -103,9 +103,9 @@ let x = {
   targetedContent: []
 };
 
-function M() {
+function x() {
   var e, t, s;
-  let [i, A] = n.useState(x), [M, D] = n.useState(m.UserState.UNENROLLED), [L, P] = n.useState([]), [b, v] = n.useState(!1), [U, j] = n.useState(null);
+  let [i, A] = n.useState(M), [x, D] = n.useState(m.UserState.UNENROLLED), [L, P] = n.useState([]), [b, v] = n.useState(!1), [U, j] = n.useState(null);
   let G = (s = i.config, (0, l.match)(s).with({
     configVersion: 1
   }, e => ({
@@ -240,7 +240,7 @@ function M() {
       children: "Quest Preview Tool"
     }), (0, a.jsx)("div", {
       className: C.fields,
-      children: (0, a.jsx)(f.default, {
+      children: (0, a.jsx)(g.default, {
         onSelect: function(e) {
           j(e), null != e && A(e)
         },
@@ -347,7 +347,7 @@ function M() {
       className: C.fields,
       children: (0, a.jsx)("div", {
         className: C.fullWidthField,
-        children: (0, a.jsx)(g.default, {
+        children: (0, a.jsx)(f.default, {
           onChange: function(e) {
             var t, s;
             A({
@@ -456,7 +456,7 @@ function M() {
               })
           }
         },
-        value: M
+        value: x
       })]
     }), (0, a.jsx)(r.Heading, {
       variant: "heading-lg/bold",
@@ -561,7 +561,7 @@ class D extends n.Component {
           children: e.message
         })
       })]
-    }) : (0, a.jsx)(M, {}, t)
+    }) : (0, a.jsx)(x, {}, t)
   }
   constructor(...e) {
     super(...e), A(this, "state", {

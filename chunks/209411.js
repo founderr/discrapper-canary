@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("735250"),
   a = n("470079"),
   i = n("593473"),
-  l = n("266067"),
-  r = n("442837"),
+  r = n("266067"),
+  l = n("442837"),
   o = n("893776"),
   u = n("899742"),
   d = n("743142"),
@@ -22,7 +22,7 @@ function m(e) {
   let t = a.useCallback(t => {
       if (function(e) {
           var t;
-          let n = (0, l.matchPath)(e, {
+          let n = (0, r.matchPath)(e, {
             path: E.Routes.CHANNEL(":guildId", ":channelId")
           });
           return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === g.StaticChannelRoute.ROLE_SUBSCRIPTIONS || !1
@@ -35,7 +35,7 @@ function m(e) {
     {
       isAuthenticated: n,
       loginStatus: m
-    } = (0, r.useStateFromStoresObject)([f.default], () => ({
+    } = (0, l.useStateFromStoresObject)([f.default], () => ({
       isAuthenticated: f.default.isAuthenticated(),
       loginStatus: f.default.getLoginStatus()
     })),

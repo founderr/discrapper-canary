@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildBoostingSettingsPausedAppliedBoosts: function() {
-    return M
+    return x
   },
   default: function() {
     return D
@@ -22,8 +22,8 @@ var a = s("735250"),
   _ = s("267642"),
   I = s("709054"),
   N = s("357956"),
-  f = s("275909"),
-  g = s("300037"),
+  g = s("275909"),
+  f = s("300037"),
   m = s("981631"),
   C = s("474936"),
   A = s("689938"),
@@ -104,18 +104,18 @@ function p(e) {
     hasCancelableGuildBoostSlot: d,
     showAltText: c,
     isLastGuildBoostSlot: S
-  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), g = n.useMemo(() => null != I && I > new Date, [I]), m = (0, _.isGuildBoostSlotCanceled)(s);
+  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), f = n.useMemo(() => null != I && I > new Date, [I]), m = (0, _.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
     className: h.boostContainer,
     children: [(0, a.jsxs)("div", {
       className: h.boostInnerContainer,
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(g.default, {
         isCanceled: m,
-        hasCooldown: g,
+        hasCooldown: f,
         useReducedMotion: E
       }), (0, a.jsx)("div", {
         className: h.boostDescriptionContainer,
-        children: null != I && g && !m ? (0, a.jsx)(N.default, {
+        children: null != I && f && !m ? (0, a.jsx)(N.default, {
           className: h.boostDescriptionInnerContainer,
           cooldown: I.getTime()
         }) : (0, a.jsx)(O, {
@@ -162,7 +162,7 @@ function R(e) {
   } = e, o = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
   return (0, a.jsxs)("div", {
     className: h.appliedBoostContainer,
-    children: [(0, a.jsx)(g.default, {
+    children: [(0, a.jsx)(f.default, {
       guildId: t,
       boostingVariant: !1
     }), s.map((e, t) => (0, a.jsx)(p, {
@@ -176,7 +176,7 @@ function R(e) {
   })
 }
 
-function x(e) {
+function M(e) {
   let {
     guildId: t,
     appliedGuildBoosts: s,
@@ -197,7 +197,7 @@ function x(e) {
   }, n);
   return (0, a.jsxs)("div", {
     className: h.appliedBoostContainer,
-    children: [(0, a.jsx)(g.default, {
+    children: [(0, a.jsx)(f.default, {
       guildId: t,
       boostingVariant: !1
     }), s.map((e, t) => (0, a.jsx)(p, {
@@ -211,7 +211,7 @@ function x(e) {
   })
 }
 
-function M(e) {
+function x(e) {
   let {
     appliedGuildBoosts: t,
     premiumSubscription: s
@@ -226,7 +226,7 @@ function M(e) {
     className: h.wrapper,
     children: [(0, a.jsx)("div", {
       className: h.container,
-      children: I.default.keys(l).map(e => (0, a.jsx)(x, {
+      children: I.default.keys(l).map(e => (0, a.jsx)(M, {
         guildId: e,
         premiumSubscription: s,
         appliedGuildBoosts: l[e]

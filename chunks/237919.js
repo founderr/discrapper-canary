@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("490983"),
   E = n("799777"),
   h = n("6048"),
-  C = n("5967"),
-  _ = n("346329"),
+  _ = n("5967"),
+  C = n("346329"),
   m = n("981631"),
   S = n("689938"),
   p = n("803844");
@@ -101,8 +101,8 @@ class g extends s.Component {
         searchBarRef: l
       } = this;
       if (a || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-      let i = null === (t = (0, C.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      if (!(i !== l.inputRef.current && (0, C.isInputLikeElement)(i))) switch (e.which) {
+      let i = null === (t = (0, _.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      if (!(i !== l.inputRef.current && (0, _.isInputLikeElement)(i))) switch (e.which) {
         case m.KeyboardKeys.ESCAPE:
           e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
           break;
@@ -112,7 +112,7 @@ class g extends s.Component {
             let t = s.find(e => e.key === n);
             if (null == t) return;
             let a = t.libraryApplication;
-            _.performDefaultLibraryApplicationAction(a, {
+            C.performDefaultLibraryApplicationAction(a, {
               analyticsParams: {
                 source: m.AnalyticsLocations.APPLICATION_LIBRARY,
                 location: {

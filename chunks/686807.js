@@ -1,53 +1,53 @@
 "use strict";
-i.r(s), i.d(s, {
+s.r(t), s.d(t, {
   default: function() {
-    return N
+    return o
   }
 });
-var n = i("735250");
-i("470079");
-var t = i("481060"),
-  E = i("201895"),
-  r = i("471445"),
-  S = i("908434"),
-  o = i("823379"),
-  _ = i("303737"),
-  l = i("293810"),
-  a = i("689938"),
-  I = i("262129");
+var E = s("735250");
+s("470079");
+var _ = s("481060"),
+  a = s("201895"),
+  n = s("471445"),
+  T = s("908434"),
+  i = s("823379"),
+  A = s("303737"),
+  u = s("293810"),
+  l = s("689938"),
+  I = s("262129");
 
-function u(e) {
+function r(e) {
   let {
-    channelId: s
-  } = e, i = (0, _.useChannelWithTemplateFallback)(s);
-  if (null == i) return (0, n.jsx)(n.Fragment, {
-    children: "[".concat(a.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
+    channelId: t
+  } = e, s = (0, A.useChannelWithTemplateFallback)(t);
+  if (null == s) return (0, E.jsx)(E.Fragment, {
+    children: "[".concat(l.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
   });
-  let o = i.isMediaChannel() ? S.default : (0, r.getSimpleChannelIconComponent)(i.type);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(t.HiddenVisually, {
-      children: (0, E.default)({
-        channel: i
+  let i = s.isMediaChannel() ? T.default : (0, n.getSimpleChannelIconComponent)(s.type);
+  return (0, E.jsxs)(E.Fragment, {
+    children: [(0, E.jsx)(_.HiddenVisually, {
+      children: (0, a.default)({
+        channel: s
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, E.jsxs)("div", {
       "aria-hidden": !0,
-      children: [null != o && (0, n.jsx)(o, {
+      children: [null != i && (0, E.jsx)(i, {
         className: I.icon,
         "aria-hidden": !0
-      }), i.name]
+      }), s.name]
     })]
   })
 }
 
-function N(e) {
+function o(e) {
   switch (e.ref_type) {
-    case l.GuildRoleSubscriptionBenefitTypes.CHANNEL:
-      return (0, n.jsx)(u, {
+    case u.GuildRoleSubscriptionBenefitTypes.CHANNEL:
+      return (0, E.jsx)(r, {
         channelId: e.ref_id
       });
-    case l.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:
+    case u.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:
       return e.name;
     default:
-      (0, o.assertNever)(e)
+      (0, i.assertNever)(e)
   }
 }

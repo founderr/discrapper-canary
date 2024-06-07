@@ -17,8 +17,8 @@ var a, n, l = s("735250"),
   _ = s("906732"),
   I = s("431369"),
   N = s("210887"),
-  f = s("78839"),
-  g = s("285952"),
+  g = s("78839"),
+  f = s("285952"),
   m = s("74538"),
   C = s("689938"),
   A = s("625699");
@@ -50,7 +50,7 @@ function O(e) {
       className: A.body,
       children: C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_DESCRIPTION
     }), (0, l.jsxs)(c.ModalFooter, {
-      justify: g.default.Justify.START,
+      justify: f.default.Justify.START,
       children: [(0, l.jsx)(c.Button, {
         onClick: async () => {
           try {
@@ -113,9 +113,9 @@ function R(e) {
       analyticsLocations: r
     } = (0, _.default)(T.default.GUILD_BOOST_UNCANCELLATION_MODAL);
   i.useEffect(() => {
-    !f.default.hasFetchedSubscriptions() && (0, S.fetchSubscriptions)()
+    !g.default.hasFetchedSubscriptions() && (0, S.fetchSubscriptions)()
   }, []);
-  let o = (0, d.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()),
+  let o = (0, d.useStateFromStores)([g.default], () => g.default.getPremiumTypeSubscription()),
     [u, E] = i.useState(1);
   if (null == o) t = (0, l.jsx)(c.ModalContent, {
     children: (0, l.jsx)(c.Spinner, {})

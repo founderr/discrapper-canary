@@ -1,5 +1,5 @@
     "use strict";
-    t.r(a), t.d(a, {
+    a.r(t), a.d(t, {
       failMigration: function() {
         return c
       },
@@ -10,7 +10,7 @@
         return n
       }
     });
-    var d = t("570140");
+    var d = a("570140");
 
     function n() {
       d.default.wait(() => d.default.dispatch({

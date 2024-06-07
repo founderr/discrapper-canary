@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("47120");
 var a = s("735250"),
@@ -23,22 +23,22 @@ let _ = (0, u.uid)(),
   }),
   N = (0, u.uid)();
 
-function f(e) {
+function g(e) {
   let {
     sectionTitle: t,
     errors: s,
     onBioChange: d,
     pendingBio: u,
-    placeholder: f,
-    currentBio: g,
+    placeholder: g,
+    currentBio: f,
     disabled: m = !1
-  } = e, [C, A] = n.useState(null != u ? u : g), [h, O] = n.useState((0, r.toRichValue)(C)), p = n.useRef(!1);
+  } = e, [C, A] = n.useState(null != u ? u : f), [h, O] = n.useState((0, r.toRichValue)(C)), p = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
-      let e = (0, r.toRichValue)(g);
-      A(g), O(e)
+      let e = (0, r.toRichValue)(f);
+      A(f), O(e)
     }
-  }, [u, g]), (0, a.jsxs)(c.default, {
+  }, [u, f]), (0, a.jsxs)(c.default, {
     title: t,
     titleId: _,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
@@ -52,7 +52,7 @@ function f(e) {
       onChange: function(e, t, s) {
         t !== C && (A(t), O(s), d(t))
       },
-      placeholder: f,
+      placeholder: g,
       channel: I,
       textValue: C,
       richValue: h,

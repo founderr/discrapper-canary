@@ -1,22 +1,22 @@
 "use strict";
 n.r(t);
-var a, s, o, r, i = n("392711"),
+var s, a, r, o, i = n("392711"),
   l = n.n(i),
   d = n("213919"),
   c = n("442837"),
   u = n("570140");
 let f = !1,
   E = [],
-  _ = "",
   p = "",
+  _ = "",
   h = !1,
   A = {
     viewNonce: "",
     regenerateNonce: ""
   };
-class T extends(r = c.default.Store) {
+class C extends(o = c.default.Store) {
   getVerificationKey() {
-    return _
+    return p
   }
   getBackupCodes() {
     return E
@@ -28,18 +28,18 @@ class T extends(r = c.default.Store) {
     return A
   }
   get emailToken() {
-    return p
+    return _
   }
   get hasSeenBackupPrompt() {
     return h
   }
 }
-o = "MFAStore", (s = "displayName") in(a = T) ? Object.defineProperty(a, s, {
-  value: o,
+r = "MFAStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = o, t.default = new T(u.default, {
+}) : s[a] = r, t.default = new C(u.default, {
   MFA_ENABLE_SUCCESS: function(e) {
     let {
       token: t,
@@ -51,7 +51,7 @@ o = "MFAStore", (s = "displayName") in(a = T) ? Object.defineProperty(a, s, {
     let {
       token: t
     } = e;
-    p = t
+    _ = t
   },
   MFA_DISABLE_SUCCESS: function(e) {
     let {
@@ -73,7 +73,7 @@ o = "MFAStore", (s = "displayName") in(a = T) ? Object.defineProperty(a, s, {
       codes: t,
       key: n
     } = e;
-    E = l().sortBy(t, "code"), _ = n
+    E = l().sortBy(t, "code"), p = n
   },
   MFA_SEND_VERIFICATION_KEY: function(e) {
     let {

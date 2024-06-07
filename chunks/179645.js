@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var a, s = n("442837"),
+var s, a = n("442837"),
   l = n("570140");
 
 function i(e, t, n) {
@@ -12,7 +12,7 @@ function i(e, t, n) {
   }) : e[t] = n, e
 }
 let r = null;
-class o extends(a = s.default.PersistedStore) {
+class u extends(s = a.default.PersistedStore) {
   initialize(e) {
     var t;
     r = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null
@@ -26,7 +26,7 @@ class o extends(a = s.default.PersistedStore) {
     }
   }
 }
-i(o, "displayName", "NewUserStore"), i(o, "persistKey", "nuf"), t.default = new o(l.default, {
+i(u, "displayName", "NewUserStore"), i(u, "persistKey", "nuf"), t.default = new u(l.default, {
   NUF_NEW_USER: function(e) {
     let {
       newUserType: t

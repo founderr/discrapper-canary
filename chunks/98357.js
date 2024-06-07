@@ -1,14 +1,14 @@
 "use strict";
 r.r(t), r.d(t, {
   toggle: function() {
-    return n
+    return i
   }
 });
 var a = r("570140"),
-  i = r("432877");
+  n = r("432877");
 
-function n(e, t) {
-  let r = "boolean" == typeof t ? t : !i.default.get(e);
+function i(e, t) {
+  let r = "boolean" == typeof t ? t : !n.default.get(e);
   a.default.dispatch({
     type: "DEV_TOOLS_DEV_SETTING_SET",
     toggle: e,

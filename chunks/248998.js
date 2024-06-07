@@ -30,8 +30,8 @@ function E(e) {
       onAction: I
     } = n,
     N = _ && !i,
-    f = i ? "header-primary" : "text-muted",
-    g = i ? "header-secondary" : "text-muted",
+    g = i ? "header-primary" : "text-muted",
+    f = i ? "header-secondary" : "text-muted",
     m = r()(s),
     C = null != I && i,
     A = C ? o.Clickable : "div";
@@ -56,11 +56,11 @@ function E(e) {
         children: (0, d.calendarFormat)(m)
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
-        color: f,
+        color: g,
         children: E()
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
-        color: g,
+        color: f,
         children: N ? "?????" : T()
       })]
     })]

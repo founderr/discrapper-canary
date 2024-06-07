@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s("47120");
-var n = s("735250"),
-  a = s("470079"),
-  r = s("558381"),
-  l = s("613311");
-class i extends a.Component {
+var a = s("735250"),
+  r = s("470079"),
+  i = s("558381"),
+  n = s("613311");
+class l extends r.Component {
   componentDidMount() {
     this.fetchStoreListing()
   }
@@ -13,37 +13,37 @@ class i extends a.Component {
       skuId: e,
       applicationId: t,
       slug: s,
-      storeListingId: a,
-      pageSize: r,
-      location: i
+      storeListingId: r,
+      pageSize: i,
+      location: l
     } = this.props;
-    return (0, n.jsx)(l.default, {
+    return (0, a.jsx)(n.default, {
       inputSkuId: e,
       applicationId: t,
       fetchStoreListing: this.fetchStoreListing,
       slug: s,
-      storeListingId: a,
-      location: i,
-      pageSize: r
+      storeListingId: r,
+      location: l,
+      pageSize: i
     })
   }
   constructor(...e) {
-    var t, s, n;
-    super(...e), t = this, s = "fetchStoreListing", n = e => {
+    var t, s, a;
+    super(...e), t = this, s = "fetchStoreListing", a = e => {
       let {
         storeListingId: t,
         skuId: s,
-        applicationId: n
-      } = this.props, a = null != e ? e : s;
-      if (null != t) return (0, r.fetchStoreListingById)(t);
-      if (null != a) return (0, r.fetchStoreListingForSku)(a);
-      if (null != n) return (0, r.fetchStoreListingForApplication)(n)
+        applicationId: a
+      } = this.props, r = null != e ? e : s;
+      if (null != t) return (0, i.fetchStoreListingById)(t);
+      if (null != r) return (0, i.fetchStoreListingForSku)(r);
+      if (null != a) return (0, i.fetchStoreListingForApplication)(a)
     }, s in t ? Object.defineProperty(t, s, {
-      value: n,
+      value: a,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[s] = n
+    }) : t[s] = a
   }
 }
-t.default = i
+t.default = l

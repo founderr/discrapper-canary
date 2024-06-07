@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return D
   },
   UserSettingsAppearanceClientThemes: function() {
-    return M
+    return x
   }
 });
 var a = s("735250"),
@@ -22,8 +22,8 @@ var a = s("735250"),
   _ = s("104494"),
   I = s("639119"),
   N = s("165583"),
-  f = s("197115"),
-  g = s("504983"),
+  g = s("197115"),
+  f = s("504983"),
   m = s("626135"),
   C = s("981631"),
   A = s("921944"),
@@ -31,13 +31,13 @@ var a = s("735250"),
   O = s("689938"),
   p = s("922844"),
   R = s("611273");
-let x = () => {
+let M = () => {
     (0, T.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIENT_THEMES_SPARKLE_PREVIEW, {
       dismissAction: A.ContentDismissActionType.PRIMARY,
       forceTrack: !0
     }), (0, c.openEditor)(), (0, o.popLayer)()
   },
-  M = () => {
+  x = () => {
     var e, t;
     let {
       analyticsLocations: s
@@ -52,19 +52,19 @@ let x = () => {
         type: E.ThemeSelectionGroupType.SETTINGS,
         children: [(0, a.jsx)(E.default.Basic, {
           className: p.basicThemeSelectors
-        }), (0, a.jsxs)(g.default, {
+        }), (0, a.jsxs)(f.default, {
           className: p.featureBorder,
           isShown: i,
-          type: g.FeatureBorderTypes.PREMIUM,
+          type: f.FeatureBorderTypes.PREMIUM,
           children: [(0, a.jsx)(E.default.Gradient, {
             disabled: i,
             renderCTAButtons: () => !i || o ? null : (0, a.jsxs)("div", {
               className: p.tryItOutButtons,
               children: [(0, a.jsx)(r.Button, {
                 color: r.Button.Colors.PRIMARY,
-                onClick: () => x(),
+                onClick: () => M(),
                 children: O.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
-              }), (0, a.jsx)(f.default, {
+              }), (0, a.jsx)(g.default, {
                 subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
                 buttonText: T ? O.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                   percent: null == c ? void 0 : c.discount.amount
@@ -76,7 +76,7 @@ let x = () => {
             children: [(0, a.jsx)(r.Button, {
               className: p.previewThemeButtonWide,
               color: r.Button.Colors.PRIMARY,
-              onClick: () => x(),
+              onClick: () => M(),
               children: O.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
             }), (0, a.jsx)("div", {
               className: p.premiumTier2Divider
@@ -93,6 +93,6 @@ let x = () => {
   },
   D = () => (0, l.useStateFromStores)([S.default], () => S.default.isPreview) ? null : (0, a.jsx)(r.Button, {
     size: r.ButtonSizes.SMALL,
-    onClick: () => x(),
+    onClick: () => M(),
     children: O.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE
   })

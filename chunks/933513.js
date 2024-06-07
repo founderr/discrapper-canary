@@ -1,10 +1,10 @@
     "use strict";
 
     function d(e) {
-      let a = null == e ? void 0 : e.activeElement;
-      return ["INPUT", "TEXTAREA"].includes(null == a ? void 0 : a.tagName) || (null == a ? void 0 : a.isContentEditable)
+      let t = null == e ? void 0 : e.activeElement;
+      return ["INPUT", "TEXTAREA"].includes(null == t ? void 0 : t.tagName) || (null == t ? void 0 : t.isContentEditable)
     }
-    t.r(a), t.d(a, {
+    a.r(t), a.d(t, {
       default: function() {
         return d
       }

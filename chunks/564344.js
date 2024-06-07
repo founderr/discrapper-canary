@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("839469"),
   I = s("25990"),
   N = s("594174"),
-  f = s("585483"),
-  g = s("16703"),
+  g = s("585483"),
+  f = s("16703"),
   m = s("785145"),
   C = s("981631"),
   A = s("526761"),
@@ -33,12 +33,12 @@ function R() {
     location: "profile_customization_auto"
   });
   let e = (0, l.useStateFromStores)([c.default], () => c.default.getGuild()),
-    t = (0, g.default)(),
+    t = (0, f.default)(),
     s = (0, l.useStateFromStores)([c.default, I.default], () => c.default.showNotice() || I.default.showNotice()),
     R = null != e ? e : t,
-    x = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()),
+    M = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()),
     {
-      subsection: M,
+      subsection: x,
       setSubsection: D
     } = (0, m.default)(),
     {
@@ -50,22 +50,22 @@ function R() {
     } = (0, _.useSettingSearchResults)();
 
   function v(t) {
-    if (M !== t) {
+    if (x !== t) {
       if (s) {
-        f.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
+        g.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
           duration: 300,
           intensity: r.SHAKE_INTENSITY_DEFAULT
-        }), f.ComponentDispatch.dispatch(C.ComponentActions.EMPHASIZE_NOTICE);
+        }), g.ComponentDispatch.dispatch(C.ComponentActions.EMPHASIZE_NOTICE);
         return
       }
       t === A.ProfileCustomizationSubsection.GUILD && null == e && null != R && (0, u.initGuildIdentitySettings)(R, L), D(t)
     }
   }
   n.useEffect(() => {
-    null != x && (0, E.default)(x.id, x.getAvatarURL(null == R ? void 0 : R.id, 80), {
+    null != M && (0, E.default)(M.id, M.getAvatarURL(null == R ? void 0 : R.id, 80), {
       guildId: null == R ? void 0 : R.id
     })
-  }, [null == R ? void 0 : R.id, x]);
+  }, [null == R ? void 0 : R.id, M]);
   let U = !0;
   return P && b.includes(h.WebSetting.PROFILE_SERVER_PROFILES) && 1 === b.length && (v(A.ProfileCustomizationSubsection.GUILD), U = !1), (0, a.jsx)(o.AnalyticsLocationProvider, {
     value: L,
@@ -78,7 +78,7 @@ function R() {
         className: p.tabBar,
         type: "top",
         look: "brand",
-        selectedItem: M,
+        selectedItem: x,
         onItemSelect: v,
         children: [U ? (0, a.jsx)(i.TabBar.Item, {
           className: p.tabBarItem,
@@ -89,7 +89,7 @@ function R() {
           id: A.ProfileCustomizationSubsection.GUILD,
           children: O.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
         }, A.ProfileCustomizationSubsection.GUILD)]
-      }), M === A.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
+      }), x === A.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
         selectedGuild: R
       }) : (0, a.jsx)(T.default, {})]
     })

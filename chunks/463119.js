@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("515753"),
   E = n("410030"),
   h = n("607070"),
-  C = n("100527"),
-  _ = n("906732"),
+  _ = n("100527"),
+  C = n("906732"),
   m = n("821982"),
   S = n("377171"),
   p = n("633302"),
@@ -30,7 +30,7 @@ var a = n("735250"),
   R = n("981631"),
   O = n("689938"),
   L = n("858666");
-let P = e => {
+let M = e => {
     let {
       color: t
     } = e;
@@ -40,7 +40,7 @@ let P = e => {
       text: O.default.Messages.NEW
     })
   },
-  M = e => {
+  P = e => {
     let {
       selected: t,
       locationState: n,
@@ -48,9 +48,9 @@ let P = e => {
       onMouseLeave: i,
       children: o,
       ...u
-    } = e, d = (0, r.useListItem)("shop"), c = C.default.HOME_PAGE_SHOP_TAB, {
+    } = e, d = (0, r.useListItem)("shop"), c = _.default.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: E
-    } = (0, _.default)(c), h = s.useCallback(() => (0, A.openCollectiblesShop)({
+    } = (0, C.default)(c), h = s.useCallback(() => (0, A.openCollectiblesShop)({
       openInLayer: !1,
       analyticsSource: c,
       analyticsLocations: E
@@ -69,7 +69,7 @@ let P = e => {
       children: o
     })
   },
-  y = s.memo(function(e) {
+  x = s.memo(function(e) {
     let {
       displayOptions: t,
       assetId: n
@@ -98,18 +98,18 @@ let P = e => {
       })]
     })
   }),
-  D = e => {
+  y = e => {
     let {
       selected: t,
       locationState: n,
       displayOptions: l
-    } = e, [r, o] = s.useState(0), [c, f] = s.useState(!1), h = (0, E.default)(), C = l.entrypointDecorationAssets, _ = s.useCallback(e => {
+    } = e, [r, o] = s.useState(0), [c, f] = s.useState(!1), h = (0, E.default)(), _ = l.entrypointDecorationAssets, C = s.useCallback(e => {
       o(e => (e + 1) % l.assetIds.length), f(!0), null == e || e()
     }, [l.assetIds]), m = s.useCallback(e => {
       f(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
-      text: (0, a.jsx)(y, {
+      text: (0, a.jsx)(x, {
         displayOptions: l,
         assetId: l.assetIds[r]
       }),
@@ -119,27 +119,27 @@ let P = e => {
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsxs)(M, {
+      children: e => (0, a.jsxs)(P, {
         className: null != l.entryPointClassName ? (0, T.getClass)(L, l.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
         ...e,
-        onMouseEnter: () => _(e.onMouseEnter),
+        onMouseEnter: () => C(e.onMouseEnter),
         onMouseLeave: () => m(e.onMouseLeave),
-        children: [null != C && (0, a.jsx)("img", {
-          src: (0, u.isThemeDark)(h) ? C.srcDark : C.srcLight,
+        children: [null != _ && (0, a.jsx)("img", {
+          src: (0, u.isThemeDark)(h) ? _.srcDark : _.srcLight,
           className: i()(L.marketingButtonImage, {
             [L.marketingButtonImageHovered]: c
           }),
           alt: "",
           "aria-hidden": !0
-        }), (0, a.jsx)(P, {
+        }), (0, a.jsx)(M, {
           color: l.badgeColor
         })]
       })
     })
   },
-  x = e => {
+  D = e => {
     let {
       selected: t,
       locationState: n,
@@ -162,11 +162,11 @@ let P = e => {
       delay: 100,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsx)(M, {
+      children: e => (0, a.jsx)(P, {
         selected: t,
         locationState: n,
         ...e,
-        children: (0, a.jsx)(P, {
+        children: (0, a.jsx)(M, {
           color: l.badgeColor
         })
       })
@@ -181,19 +181,19 @@ let P = e => {
     } = (0, N.default)();
     if (null != s) switch (s.type) {
       case v.CollectiblesMarketingVariant.TOOLTIP:
-        return (0, a.jsx)(x, {
+        return (0, a.jsx)(D, {
           selected: t,
           locationState: n,
           displayOptions: s
         });
       case v.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(D, {
+        return (0, a.jsx)(y, {
           selected: t,
           locationState: n,
           displayOptions: s
         })
     }
-    return (0, a.jsx)(M, {
+    return (0, a.jsx)(P, {
       selected: t,
       locationState: n
     })

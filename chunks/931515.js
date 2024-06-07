@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useAutoFetchClanDiscoveryResults: function() {
-    return C
+    return _
   },
   useClanDiscoveryList: function() {
-    return _
+    return C
   }
 });
 var a = n("470079"),
@@ -20,7 +20,7 @@ var a = n("470079"),
   E = n("976757"),
   h = n("308083");
 
-function C() {
+function _() {
   let e = (0, f.useClanDiscoveryUIStore)(e => e.setGame, i.default),
     t = (0, f.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default),
     n = (0, f.useClanDiscoveryUIStore)(e => e.selectedGames, i.default),
@@ -29,9 +29,9 @@ function C() {
       location: "clan_discovery"
     }),
     {
-      defaultGameId: C
+      defaultGameId: _
     } = (0, u.useClanPilotExperiment)("clan_discovery"),
-    _ = null != E ? E : C,
+    C = null != E ? E : _,
     m = function() {
       let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery());
       return a.useEffect(() => {
@@ -40,8 +40,8 @@ function C() {
     }(),
     S = (0, r.useStateFromStores)([c.default], () => c.default.isLoading());
   return a.useEffect(() => {
-    !(n.length > 0) && (_ === h.VALORANT_ID ? (e(f.ClanDiscoveryGame.VALORANT), t([_])) : _ === h.GENSHIN_ID && (e(f.ClanDiscoveryGame.GENSHIN), t([_])))
-  }, [e, t, _, n]), a.useEffect(() => {
+    !(n.length > 0) && (C === h.VALORANT_ID ? (e(f.ClanDiscoveryGame.VALORANT), t([C])) : C === h.GENSHIN_ID && (e(f.ClanDiscoveryGame.GENSHIN), t([C])))
+  }, [e, t, C, n]), a.useEffect(() => {
     m && (0, d.searchClanDiscovery)(s)
   }, [s, m]), a.useEffect(() => {
     o.default.getDetectableGames()
@@ -50,7 +50,7 @@ function C() {
   }
 }
 
-function _() {
+function C() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
     t = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, l()),
     n = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery()),

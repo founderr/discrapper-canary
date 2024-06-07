@@ -14,10 +14,10 @@ var s, a = n("735250"),
   _ = n("626135"),
   p = n("981631"),
   h = n("689938"),
-  g = n("88197"),
-  m = n("611273");
+  T = n("88197"),
+  g = n("611273");
 
-function T(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,12 +34,12 @@ class N extends(s = l.PureComponent) {
     return (0, a.jsxs)(I.default, {
       children: [(0, a.jsx)(I.Image, {
         src: n("375673"),
-        className: r()(g.image, m.marginBottom20)
+        className: r()(T.image, g.marginBottom20)
       }), (0, a.jsx)(I.Title, {
-        className: m.marginBottom8,
+        className: g.marginBottom8,
         children: h.default.Messages.VERFICATION_EXPIRED
       }), (0, a.jsx)(I.SubTitle, {
-        className: m.marginBottom40,
+        className: g.marginBottom40,
         children: h.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
       }), (0, a.jsx)(I.Button, {
         onClick: this.handleLogin,
@@ -51,9 +51,9 @@ class N extends(s = l.PureComponent) {
     return (0, a.jsxs)(I.default, {
       children: [(0, a.jsx)(I.Image, {
         src: n("73962"),
-        className: r()(g.image, m.marginBottom20)
+        className: r()(T.image, g.marginBottom20)
       }), (0, a.jsx)(I.Title, {
-        className: m.marginBottom40,
+        className: g.marginBottom40,
         children: h.default.Messages.VERIFICATION_VERIFIED
       }), (0, a.jsx)(I.Button, {
         onClick: this.handleOpenApp,
@@ -65,12 +65,12 @@ class N extends(s = l.PureComponent) {
     return (0, a.jsxs)(I.default, {
       children: [(0, a.jsx)(I.Image, {
         src: n("892235"),
-        className: r()(g.image, m.marginBottom20)
+        className: r()(T.image, g.marginBottom20)
       }), (0, a.jsx)(I.Title, {
-        className: m.marginBottom8,
+        className: g.marginBottom8,
         children: h.default.Messages.VERIFICATION_VERIFYING
       }), (0, a.jsx)(I.SubTitle, {
-        className: m.marginBottom40,
+        className: g.marginBottom40,
         children: h.default.Messages.ACTION_MAY_TAKE_A_MOMENT
       }), (0, a.jsx)(I.Button, {
         submitting: !0,
@@ -86,15 +86,15 @@ class N extends(s = l.PureComponent) {
     return e ? this.renderVerifyFailed() : t ? this.renderVerifySucceeded() : this.renderVerifying()
   }
   constructor(...e) {
-    super(...e), T(this, "handleVerify", () => {
+    super(...e), m(this, "handleVerify", () => {
       let e = (0, d.default)(this.props.location);
       null != e && o.default.verify(e)
-    }), T(this, "handleLogin", () => {
+    }), m(this, "handleLogin", () => {
       let {
         transitionTo: e
       } = this.props;
       e(p.Routes.LOGIN)
-    }), T(this, "handleOpenApp", () => {
+    }), m(this, "handleOpenApp", () => {
       let {
         verifyingUserId: e
       } = this.props;
@@ -104,7 +104,7 @@ class N extends(s = l.PureComponent) {
     })
   }
 }
-T(N, "defaultProps", {
+m(N, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
 }), t.default = u.default.connectStores([E.default], () => ({
   verifyFailed: E.default.didVerifyFail(),

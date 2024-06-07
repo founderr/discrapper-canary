@@ -19,8 +19,8 @@ var a = s("735250"),
   _ = s("981631"),
   I = s("474936"),
   N = s("689938"),
-  f = s("772866"),
-  g = s("611273");
+  g = s("772866"),
+  f = s("611273");
 let m = () => {
     r.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
@@ -36,11 +36,11 @@ let m = () => {
         location_stack: e
       })
     }, []), (0, a.jsxs)("div", {
-      className: f.selectionGroup,
+      className: g.selectionGroup,
       children: [(0, a.jsx)(S.default, {
         disabled: t,
         renderCTAButtons: () => (0, a.jsxs)("div", {
-          className: f.tryItOutButtons,
+          className: g.tryItOutButtons,
           children: [(0, a.jsx)(i.Button, {
             color: t ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
             onClick: () => m(),
@@ -51,7 +51,7 @@ let m = () => {
           }) : null]
         })
       }), (0, a.jsx)(i.FormDivider, {
-        className: g.marginTop20
+        className: f.marginTop20
       })]
     })
   }

@@ -1,52 +1,52 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   IconSizes: function() {
-    return I
+    return h
   },
   IconTypes: function() {
-    return n
+    return a
   }
-}), a("757143");
-var n, r, s, i = a("735250"),
-  l = a("470079"),
-  o = a("120356"),
-  u = a.n(o),
-  c = a("956732");
+}), r("757143");
+var a, n, i, l = r("735250"),
+  o = r("470079"),
+  s = r("120356"),
+  c = r.n(s),
+  d = r("956732");
 
-function d(e, t, a) {
+function u(e, t, r) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
-}(s = n || (n = {})).UNKNOWN = "unknown", s.VISA = "visa", s.DISCOVER = "discover", s.MASTERCARD = "mastercard", s.AMEX = "amex", s.PAYPAL = "paypal", s.PAYMENT_REQUEST = "paymentRequest", s.G_PAY = "gPay", s.DINERS = "diners", s.JCB = "jcb", s.UNIONPAY = "unionpay", s.SOFORT = "sofort", s.PRZELEWY24 = "przelewy24", s.GIROPAY = "giropay", s.PAYSAFECARD = "paysafecard", s.GCASH = "gcash", s.GRABPAY = "grabpay", s.MOMO_WALLET = "momo_wallet", s.VENMO = "venmo", s.KAKAOPAY = "kakaopay", s.GOPAY_WALLET = "gopay_wallet", s.BANCONTACT = "bancontact", s.EPS = "eps", s.IDEAL = "ideal", s.CASH_APP = "cash_app", s.APPLE = "apple";
-let I = {
-  SMALL: c.cardIconSmall,
-  MEDIUM: c.cardIconMedium,
-  LARGE: c.cardIconLarge,
-  XLARGE: c.cardIconXLarge
+  }) : e[t] = r, e
+}(i = a || (a = {})).UNKNOWN = "unknown", i.VISA = "visa", i.DISCOVER = "discover", i.MASTERCARD = "mastercard", i.AMEX = "amex", i.PAYPAL = "paypal", i.PAYMENT_REQUEST = "paymentRequest", i.G_PAY = "gPay", i.DINERS = "diners", i.JCB = "jcb", i.UNIONPAY = "unionpay", i.SOFORT = "sofort", i.PRZELEWY24 = "przelewy24", i.GIROPAY = "giropay", i.PAYSAFECARD = "paysafecard", i.GCASH = "gcash", i.GRABPAY = "grabpay", i.MOMO_WALLET = "momo_wallet", i.VENMO = "venmo", i.KAKAOPAY = "kakaopay", i.GOPAY_WALLET = "gopay_wallet", i.BANCONTACT = "bancontact", i.EPS = "eps", i.IDEAL = "ideal", i.CASH_APP = "cash_app", i.APPLE = "apple";
+let h = {
+  SMALL: d.cardIconSmall,
+  MEDIUM: d.cardIconMedium,
+  LARGE: d.cardIconLarge,
+  XLARGE: d.cardIconXLarge
 };
-class _ extends(r = l.PureComponent) {
+class p extends(n = o.PureComponent) {
   static getType(e) {
-    return null == e ? "unknown" : n[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown"
+    return null == e ? "unknown" : a[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown"
   }
   render() {
     let {
       flipped: e,
       type: t,
-      className: a,
-      size: n
+      className: r,
+      size: a
     } = this.props;
-    return (0, i.jsx)("div", {
-      className: u()(n, c[t], a, {
-        [c.flipped]: e
+    return (0, l.jsx)("div", {
+      className: c()(a, d[t], r, {
+        [d.flipped]: e
       }),
       children: t
     })
   }
 }
-d(_, "Types", n), d(_, "Sizes", I), d(_, "defaultProps", {
-  size: I.SMALL,
+u(p, "Types", a), u(p, "Sizes", h), u(p, "defaultProps", {
+  size: h.SMALL,
   flipped: !1
-}), t.default = _
+}), t.default = p

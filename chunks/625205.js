@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 }), s("47120");
 var a = s("735250");
@@ -20,13 +20,13 @@ var n = s("392711"),
   _ = s("65154"),
   I = s("689938"),
   N = s("623378"),
-  f = s("611273");
+  g = s("611273");
 
-function g() {
+function f() {
   let e, t;
   let n = (0, i.useStateFromStores)([E.default], () => E.default.theme),
     {
-      canSetInputDevice: g,
+      canSetInputDevice: f,
       canSetOutputDevice: m,
       inputDeviceId: C,
       outputDeviceId: A
@@ -38,23 +38,23 @@ function g() {
     })),
     h = (0, i.useStateFromStores)([c.default], () => c.default.getInputDevices()),
     O = (0, i.useStateFromStores)([c.default], () => c.default.getOutputDevices());
-  !g && (e = (0, a.jsx)(o.FormText, {
+  !f && (e = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
-    className: f.marginTop8,
+    className: g.marginTop8,
     children: I.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Input Devices")
     })
   })), !m && (t = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
-    className: f.marginTop8,
+    className: g.marginTop8,
     children: I.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Output Devices")
     })
   }));
   let p = l()(h).values().first(),
     R = null != p ? p.disabled : null != e,
-    x = l()(O).values().first(),
-    M = null != x ? x.disabled : null != t;
+    M = l()(O).values().first(),
+    x = null != M ? M.disabled : null != t;
 
   function D(e) {
     let t, {
@@ -82,12 +82,12 @@ function g() {
     return D(e[0])
   }
   return (0, a.jsxs)(S.default, {
-    className: f.marginBottom20,
+    className: g.marginBottom20,
     children: [(0, a.jsxs)(S.default.Child, {
       basis: "50%",
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
-        className: f.marginBottom8,
+        className: g.marginBottom8,
         children: I.default.Messages.FORM_LABEL_INPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: C,
@@ -110,7 +110,7 @@ function g() {
       basis: "50%",
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
-        className: f.marginBottom8,
+        className: g.marginBottom8,
         children: I.default.Messages.FORM_LABEL_OUTPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: A,
@@ -125,7 +125,7 @@ function g() {
             label: s
           }
         }),
-        isDisabled: M,
+        isDisabled: x,
         renderOptionValue: L,
         renderOptionLabel: D
       }), t]

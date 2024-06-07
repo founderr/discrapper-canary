@@ -15,9 +15,9 @@ var s = n("735250"),
   _ = n("267394"),
   p = n("761305"),
   h = n("698177"),
-  g = n("353926"),
-  m = n("409059"),
-  T = n("962220"),
+  T = n("353926"),
+  g = n("409059"),
+  m = n("962220"),
   N = n("637776"),
   A = n("264229"),
   S = n("677760"),
@@ -31,8 +31,8 @@ var s = n("735250"),
   P = n("625054"),
   M = n("645499"),
   j = n("320830"),
-  b = n("721751"),
-  U = n("718182"),
+  U = n("721751"),
+  b = n("718182"),
   B = n("223543"),
   G = n("73906"),
   y = n("299852"),
@@ -59,7 +59,7 @@ let $ = (0, j.default)(H.default),
   es = (0, j.default)(F.default),
   ea = (0, j.default)(S.default),
   el = (0, j.default)(W.default),
-  ei = (0, j.default)(U.default),
+  ei = (0, j.default)(b.default),
   er = (0, j.default)(B.default),
   eu = (0, j.default)(Z.default),
   eo = (0, j.default)(h.default),
@@ -71,7 +71,7 @@ let $ = (0, j.default)(H.default),
   e_ = (0, j.default)(K.default),
   ep = (0, j.default)(X.default),
   eh = (0, j.default)(z.default);
-class eg extends a.PureComponent {
+class eT extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     var n;
     let {
@@ -154,7 +154,7 @@ class eg extends a.PureComponent {
       load_time: P.default.getTimeSinceNavigationStart()
     }, {
       flush: !0
-    }), T.default.resolveGuildTemplate(e), T.default.openNativeAppModal(e))
+    }), m.default.resolveGuildTemplate(e), m.default.openNativeAppModal(e))
   }
   resolveGiftCode() {
     let {
@@ -171,7 +171,7 @@ class eg extends a.PureComponent {
     } = this.state, {
       inviteKey: n
     } = this.props;
-    return (0, s.jsxs)(b.default, {
+    return (0, s.jsxs)(U.default, {
       splash: e,
       children: [(0, s.jsx)(I.default, {
         path: q.Routes.LOGIN_HANDOFF,
@@ -343,7 +343,7 @@ class eg extends a.PureComponent {
     }) : t[n] = s
   }
 }
-t.default = u.default.connectStores([v.default, O.default, C.default, g.default, m.default], e => {
+t.default = u.default.connectStores([v.default, O.default, C.default, T.default, g.default], e => {
   var t, n, s;
   let {
     match: a,
@@ -356,7 +356,7 @@ t.default = u.default.connectStores([v.default, O.default, C.default, g.default,
     guildTemplateCode: d,
     gift: null != o ? C.default.get(o) : null,
     invite: null != u ? O.default.getInvite(u) : null,
-    guildTemplate: null != d ? m.default.getGuildTemplate(d) : null,
-    hasLoadedExperiments: g.default.hasLoadedExperiments
+    guildTemplate: null != d ? g.default.getGuildTemplate(d) : null,
+    hasLoadedExperiments: T.default.hasLoadedExperiments
   }
-})(eg)
+})(eT)

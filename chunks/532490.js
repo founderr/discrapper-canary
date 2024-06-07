@@ -32,18 +32,18 @@ t.default = i.memo(function(e) {
     animationDelayMs: I = 1e3,
     signHintButtonText: A,
     signHintHelperText: v,
-    signHintPosition: x = "left",
-    className: N,
+    signHintPosition: N = "left",
+    className: x,
     fullHeight: M
-  } = e, R = i.useRef(null), [y, L] = i.useState(!1), j = i.useCallback(e => {
+  } = e, R = i.useRef(null), [y, L] = i.useState(!1), O = i.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null == r || r(), L(!0)
-  }, [r]), [O, P] = i.useState(!1), [D, b] = i.useState(!1), U = i.useRef(null), F = i.useCallback(e => {
+  }, [r]), [j, P] = i.useState(!1), [D, b] = i.useState(!1), U = i.useRef(null), F = i.useCallback(e => {
     e && (U.current = setTimeout(() => {
       b(!0)
     }, I))
-  }, [I]), w = (0, h.useIsVisible)(F), k = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion), H = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()), [G, B] = (0, u.useSpring)(() => {
+  }, [I]), w = (0, h.useIsVisible)(F), k = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion), H = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()), [B, G] = (0, u.useSpring)(() => {
     var e, t;
-    return e = x, t = k, "left" === e ? {
+    return e = N, t = k, "left" === e ? {
       right: t ? 68 : 0,
       config: u.config.stiff
     } : {
@@ -58,8 +58,8 @@ t.default = i.memo(function(e) {
     }
   }));
   i.useEffect(() => {
-    if (D) B({
-      ..."left" === x ? {
+    if (D) G({
+      ..."left" === N ? {
         right: 68,
         config: u.config.stiff
       } : {
@@ -74,32 +74,32 @@ t.default = i.memo(function(e) {
       opacity: 0,
       top: 0
     })
-  }, [D, y, x]), i.useEffect(() => () => {
+  }, [D, y, N]), i.useEffect(() => () => {
     null != U.current && clearTimeout(U.current)
   }, []);
-  let Y = o()(T.signHintAnimationContainer, O && T.noDisplay, "left" === x ? T.signTextLeft : T.signTextRight),
+  let Y = o()(T.signHintAnimationContainer, j && T.noDisplay, "left" === N ? T.signTextLeft : T.signTextRight),
     z = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY),
     K = (0, c.useToken)(c.tokens.colors.BG_BRAND),
     Z = null != n ? n : K.hex(),
-    X = (0, C.getClanPrimaryButtonStyles)(Z, z.hex()),
+    q = (0, C.getClanPrimaryButtonStyles)(Z, z.hex()),
     {
-      height: q = 87,
-      ref: J
+      height: X = 87,
+      ref: Q
     } = (0, f.default)(l),
-    Q = (0, u.useTransition)(l, {
+    J = (0, u.useTransition)(l, {
       from: {
         opacity: 0,
         height: 0
       },
       enter: {
         opacity: 1,
-        height: null != q ? q : 87
+        height: null != X ? X : 87
       },
       config: u.config.stiff,
       immediate: k
     });
   return (0, s.jsx)("div", {
-    className: o()(T.container, N),
+    className: o()(T.container, x),
     ref: w,
     children: (0, s.jsx)(g.default, {
       fullHeight: M,
@@ -112,13 +112,13 @@ t.default = i.memo(function(e) {
             className: T.scrollContentContainer,
             children: a
           })
-        }), Q((e, n) => n && (0, s.jsx)(u.animated.div, {
+        }), J((e, n) => n && (0, s.jsx)(u.animated.div, {
           className: T.signatureBlockContainer,
           style: e,
           children: (0, s.jsx)("div", {
-            ref: J,
+            ref: Q,
             children: (0, s.jsxs)(c.Clickable, {
-              onClick: j,
+              onClick: O,
               className: o()(T.signatureBlock, {
                 [T.clickable]: null != r
               }),
@@ -128,7 +128,7 @@ t.default = i.memo(function(e) {
                 children: (0, s.jsxs)(u.animated.div, {
                   className: Y,
                   style: {
-                    ...G,
+                    ...B,
                     ...V
                   },
                   children: [(0, s.jsx)("div", {
@@ -141,13 +141,13 @@ t.default = i.memo(function(e) {
                         var t;
                         null === (t = R.current) || void 0 === t || t.scrollIntoView({
                           behavior: "smooth"
-                        }), j(e)
+                        }), O(e)
                       },
                       children: [(0, s.jsx)("div", {
                         className: o()(T.signCarot, {
-                          [T.signCarotCustomColors]: null != X
+                          [T.signCarotCustomColors]: null != q
                         }),
-                        style: null != X ? X : {
+                        style: null != q ? q : {
                           borderColor: Z
                         }
                       }), null != A ? A : _.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA]

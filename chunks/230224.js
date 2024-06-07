@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return L
   },
   LARGE_SERVER_MEMBER_THRESHOLD: function() {
-    return m
+    return g
   },
   isDirectInvite: function() {
     return S
@@ -40,9 +40,9 @@ var s = n("735250"),
   _ = n("981631"),
   p = n("888592"),
   h = n("689938"),
-  g = n("940986");
-let m = 100,
-  T = e => {
+  T = n("940986");
+let g = 100,
+  m = e => {
     var t, n;
     let s = {
       onlineCount: null !== (t = e.approximate_presence_count) && void 0 !== t ? t : 0,
@@ -58,8 +58,8 @@ let m = 100,
   S = e => null == e.channel && null == e.guild && null != e.inviter,
   v = e => {
     var t;
-    let n = T(e);
-    return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > m
+    let n = m(e);
+    return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > g
   },
   C = e => e.state === _.InviteStates.ACCEPTED,
   O = e => {
@@ -76,19 +76,19 @@ let m = 100,
       application: a
     } = e;
     if (null != a) return (0, s.jsx)(u.default, {
-      className: g.appIcon,
+      className: T.appIcon,
       game: a,
-      size: g.appIconSize
+      size: T.appIconSize
     });
     if (null != n) return (0, s.jsx)(d.Avatar, {
       src: n.getAvatarURL(void 0, 100),
       size: r.AvatarSizes.DEPRECATED_SIZE_100,
-      className: g.avatar
+      className: T.avatar
     });
     if (null != t) return (0, s.jsx)(d.GuildIcon, {
       guild: t,
       size: d.GuildIcon.Sizes.LARGER,
-      className: g.guildIcon,
+      className: T.guildIcon,
       animate: !0
     });
     else return null
@@ -100,9 +100,9 @@ function L(e) {
     invite: n,
     textClassName: a,
     className: l
-  } = e, r = T(n);
+  } = e, r = m(n);
   return null == r || R(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(d.ActivityCount, {
-    className: i()(g.activityCount, l),
+    className: i()(T.activityCount, l),
     online: r.onlineCount,
     total: r.memberCount,
     textClassName: a,
@@ -126,15 +126,15 @@ function D(e) {
     username: E.default.getFormattedName(t.inviter)
   }));
   return (0, s.jsxs)("div", {
-    className: g.inviteJoinContainer,
+    className: T.inviteJoinContainer,
     children: [null != l && (0, s.jsx)("div", {
-      className: g.inviterIconWrapper,
+      className: T.inviterIconWrapper,
       children: (0, s.jsx)(d.Avatar, {
         src: l,
         size: r.AvatarSizes.SIZE_24
       })
     }), (0, s.jsx)(d.SubTitle, {
-      className: g.__invalid_inviteJoinSubTitle,
+      className: T.__invalid_inviteJoinSubTitle,
       children: i
     })]
   })
@@ -152,17 +152,17 @@ function P(e) {
     guild: i,
     size: d.GuildIcon.Sizes.SMALL
   })), n = i.name, null != f && (n = f.name, a = (0, s.jsxs)("div", {
-    className: g.inviteJoinContainer,
+    className: T.inviteJoinContainer,
     children: [(0, s.jsx)(d.SubTitle, {
-      className: g.appIn,
+      className: T.appIn,
       children: h.default.Messages.EMBEDDED_ACTIVITIES_INVITE_IN
     }), (0, s.jsxs)("div", {
-      className: g.guildContainer,
+      className: T.guildContainer,
       children: [(0, s.jsx)(d.GuildIcon, {
         guild: i,
         size: d.GuildIcon.Sizes.SMALL
       }), (0, s.jsx)(c.default, {
-        className: g.appGuildName,
+        className: T.appGuildName,
         color: c.default.Colors.CUSTOM,
         tag: "span",
         size: c.default.Sizes.SIZE_24,
@@ -182,7 +182,7 @@ function P(e) {
     n = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
       username: e
     }), a = (0, s.jsx)(d.SubTitle, {
-      className: g.directInviteSubTitle,
+      className: T.directInviteSubTitle,
       children: h.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION.format({
         username: e
       })
@@ -190,10 +190,10 @@ function P(e) {
   }
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)(d.Title, {
-      className: g.title,
+      className: T.title,
       children: [null != i ? (0, s.jsx)(o.default, {
         guild: i,
-        className: g.guildBadge,
+        className: T.guildBadge,
         tooltipPosition: "left"
       }) : null, t, n]
     }), a]

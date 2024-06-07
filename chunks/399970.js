@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 }), s("47120");
 var a, n, l = s("735250"),
@@ -17,23 +17,23 @@ var a, n, l = s("735250"),
   _ = s("689938"),
   I = s("737646"),
   N = s("611273");
-let f = /^\d+$|^$/;
+let g = /^\d+$|^$/;
 (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
 
-function g(e) {
+function f(e) {
   let {
     onClose: t,
     transitionState: s
   } = e, {
     authorizedApplicationId: a,
     authorizationError: n,
-    authorizing: g
+    authorizing: f
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     authorizedApplicationId: S.default.testModeApplicationId,
     authorizationError: S.default.error,
     authorizing: S.default.isFetchingAuthorization
-  })), [m, C] = i.useState(null != a ? a : ""), [A, h] = i.useState("8080"), [O, p] = i.useState("localhost"), R = (0, T.useUID)(), x = f.test(m);
-  async function M() {
+  })), [m, C] = i.useState(null != a ? a : ""), [A, h] = i.useState("8080"), [O, p] = i.useState("localhost"), R = (0, T.useUID)(), M = g.test(m);
+  async function x() {
     u.resetError();
     let e = function(e, t, s) {
       if (null == e) return null;
@@ -50,7 +50,7 @@ function g(e) {
   let D = null != a && a === m,
     L = D ? function() {
       u.reset(), C(""), p(null)
-    } : M;
+    } : x;
   return (0, l.jsxs)(o.ModalRoot, {
     "aria-labelledby": R,
     transitionState: s,
@@ -88,17 +88,17 @@ function g(e) {
             children: (0, l.jsx)(o.TextInput, {
               value: m,
               maxLength: 19,
-              error: x ? null : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+              error: M ? null : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
               onChange: function(e) {
                 C(e)
               },
-              disabled: g
+              disabled: f
             })
           }), (0, l.jsx)(o.FormItem, {
             className: I.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
-              isDisabled: !x || "" === m,
+              isDisabled: !M || "" === m,
               value: O,
               options: [{
                 value: "localhost",
@@ -122,12 +122,12 @@ function g(e) {
               value: A,
               maxLength: 5,
               onChange: e => h(e),
-              disabled: g
+              disabled: f
             })
           }), (0, l.jsx)(o.Button, {
-            submitting: g,
+            submitting: f,
             type: "submit",
-            disabled: !x || 0 === m.length || "localhost" === O && 0 === A.length,
+            disabled: !M || 0 === m.length || "localhost" === O && 0 === A.length,
             color: D ? o.Button.Colors.RED : o.Button.Colors.GREEN,
             children: D ? _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]

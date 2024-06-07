@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return eQ
+    return eq
   }
 }), n("47120"), n("653041");
 var a = n("735250"),
@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("128951"),
   E = n("952826"),
   h = n("400354"),
-  C = n("652844"),
-  _ = n("789639"),
+  _ = n("652844"),
+  C = n("789639"),
   m = n("481060"),
   S = n("355467"),
   p = n("239091"),
@@ -30,11 +30,11 @@ var a = n("735250"),
   R = n("586902"),
   O = n("515550"),
   L = n("1585"),
-  P = n("304761"),
-  M = n("865427"),
-  y = n("571250"),
-  D = n("628581"),
-  x = n("55311"),
+  M = n("304761"),
+  P = n("865427"),
+  x = n("571250"),
+  y = n("628581"),
+  D = n("55311"),
   b = n("575175"),
   U = n("64220"),
   j = n("377171"),
@@ -49,8 +49,8 @@ var a = n("735250"),
   W = n("60762"),
   K = n("258609"),
   z = n("278464"),
-  q = n("917112"),
-  Q = n("443669"),
+  Q = n("917112"),
+  q = n("443669"),
   Z = n("332473"),
   X = n("240504"),
   J = n("804545"),
@@ -70,8 +70,8 @@ var a = n("735250"),
   ef = n("879815"),
   eE = n("294629"),
   eh = n("314897"),
-  eC = n("592125"),
-  e_ = n("819640"),
+  e_ = n("592125"),
+  eC = n("819640"),
   em = n("131951"),
   eS = n("19780"),
   ep = n("885110"),
@@ -84,11 +84,11 @@ var a = n("735250"),
   eR = n("826026"),
   eO = n("937482"),
   eL = n("87888"),
-  eP = n("976401"),
-  eM = n("333454"),
-  ey = n("864441"),
-  eD = n("26290"),
-  ex = n("626135"),
+  eM = n("976401"),
+  eP = n("333454"),
+  ex = n("864441"),
+  ey = n("26290"),
+  eD = n("626135"),
   eb = n("768581"),
   eU = n("572004"),
   ej = n("70956"),
@@ -111,7 +111,7 @@ function eW(e, t, n) {
 }
 let eK = ek.default.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
   ez = 30 * ej.default.Millis.DAY;
-class eq extends s.PureComponent {
+class eQ extends s.PureComponent {
   get isCopiedStreakGodlike() {
     let {
       copiedStreak: e
@@ -165,12 +165,12 @@ class eq extends s.PureComponent {
     })), (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: eY.panelTitleContainer,
-        children: (0, a.jsx)(ey.default, {
+        children: (0, a.jsx)(ex.default, {
           children: r
         })
       }), (0, a.jsx)("div", {
         className: eY.panelSubtextContainer,
-        children: (0, a.jsx)(eM.default, {
+        children: (0, a.jsx)(eP.default, {
           children: null != e ? e : s
         })
       })]
@@ -264,7 +264,7 @@ class eq extends s.PureComponent {
             className: i()(eY.nameTag, {
               [eY.canCopy]: eU.SUPPORTS_COPY
             }),
-            children: r ? (0, a.jsx)(eP.default, {
+            children: r ? (0, a.jsx)(eM.default, {
               tooltipText: null,
               icon: d.isShown ? ev.default : eR.default,
               role: "switch",
@@ -324,7 +324,7 @@ class eq extends s.PureComponent {
           serverMute: l,
           suppress: r,
           awaitingRemote: s,
-          tooltipText: d ? eV.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, D.default)(n, l, r, s),
+          tooltipText: d ? eV.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, y.default)(n, l, r, s),
           tooltipColor: d ? m.TooltipColors.GREEN : void 0,
           tooltipForceOpen: d || void 0,
           onMouseEnter: this.handleMouseEnterMute,
@@ -469,7 +469,7 @@ class eq extends s.PureComponent {
       let {
         serverDeaf: e
       } = this.props;
-      (0, x.default)(e)
+      (0, D.default)(e)
     }), eW(this, "handleOpenAccountSettings", () => {
       this.handleOpenSettings()
     }), eW(this, "handleOpenSettings", function() {
@@ -484,7 +484,7 @@ class eq extends s.PureComponent {
       null != t && (0, p.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("49368"), n.e("19503"), n.e("15972"), n.e("12013"), n.e("6416"), n.e("43906"), n.e("32776"), n.e("95900"), n.e("33053"), n.e("8016"), n.e("46136"), n.e("68136"), n.e("76540"), n.e("22646"), n.e("4934"), n.e("87624"), n.e("36861"), n.e("43331"), n.e("18824"), n.e("30419"), n.e("35522"), n.e("5528"), n.e("31649"), n.e("2535")]).then(n.bind(n, "923422"));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("49368"), n.e("19503"), n.e("15972"), n.e("12013"), n.e("6416"), n.e("43906"), n.e("32776"), n.e("95900"), n.e("33053"), n.e("8016"), n.e("46136"), n.e("68136"), n.e("76540"), n.e("22646"), n.e("4934"), n.e("87624"), n.e("44517"), n.e("43331"), n.e("18824"), n.e("35522"), n.e("30419"), n.e("5528"), n.e("31649"), n.e("2535")]).then(n.bind(n, "923422"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: t,
@@ -543,7 +543,7 @@ class eq extends s.PureComponent {
       (0, eU.copy)(ew.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
-      })), ex.default.track(eB.AnalyticEvents.TEXT_COPIED, {
+      })), eD.default.track(eB.AnalyticEvents.TEXT_COPIED, {
         type: "User Tag"
       });
       let a = {
@@ -601,7 +601,7 @@ class eq extends s.PureComponent {
         };
         return (0, a.jsx)("div", {
           className: eY.accountProfilePopoutWrapper,
-          children: (0, a.jsx)(Q.default, {
+          children: (0, a.jsx)(q.default, {
             location: "StatusPickerPopout",
             ...e
           })
@@ -621,7 +621,7 @@ class eq extends s.PureComponent {
   }
 }
 
-function eQ() {
+function eq() {
   var e, t;
   let n = (0, r.useStateFromStores)([eg.default], () => eg.default.getCurrentUser()),
     l = (0, F.useShowEligibilityEnrollmentTooltip)(eH.PartnerGame.FORTNITE),
@@ -641,30 +641,30 @@ function eQ() {
       decoration: "never"
     }),
     h = (0, r.useStateFromStores)([eI.default], () => eI.default.hidePersonalInformation),
-    C = (0, r.useStateFromStores)([eS.default, eC.default], () => {
+    _ = (0, r.useStateFromStores)([eS.default, e_.default], () => {
       let e = eS.default.getChannelId();
-      return null != e ? eC.default.getChannel(e) : null
+      return null != e ? e_.default.getChannel(e) : null
     }),
     {
-      mute: _,
+      mute: C,
       selfMute: p,
       suppress: I
-    } = (0, eE.default)(C),
+    } = (0, eE.default)(_),
     {
       selfDeaf: g,
       deaf: T
-    } = (0, ef.default)(C),
-    O = (0, r.useStateFromStores)([P.default], () => {
+    } = (0, ef.default)(_),
+    O = (0, r.useStateFromStores)([M.default], () => {
       var e;
-      return (0, M.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, P.probablyHasBuildOverride)() ? null === (e = M.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     L = (0, r.useStateFromStores)([eT.default], () => eT.default.getPremiumTypeSubscription()),
-    y = (0, r.useStateFromStores)([em.default], () => em.default.getEverSpeakingWhileMuted()),
-    D = (0, r.useStateFromStores)([e_.default], () => e_.default.hasLayers()),
-    x = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || D || eG.ProcessArgs.isDisallowPopupsSet(),
+    x = (0, r.useStateFromStores)([em.default], () => em.default.getEverSpeakingWhileMuted()),
+    y = (0, r.useStateFromStores)([eC.default], () => eC.default.hasLayers()),
+    D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eG.ProcessArgs.isDisallowPopupsSet(),
     b = (0, Z.useIsEligibleForPomelo)();
   s.useEffect(() => {
-    q.default.trackExposure({
+    Q.default.trackExposure({
       location: "08bd40_3"
     })
   });
@@ -673,14 +673,14 @@ function eQ() {
       isPopupEnabled: j,
       isJoinedTagButtonEnabled: w,
       isTaglessAccountPanelEnabled: B
-    } = q.default.useExperiment({
+    } = Q.default.useExperiment({
       location: "08bd40_4"
     }, {
       autoTrackExposure: !1
     }),
     Y = (0, r.useStateFromStores)([H.default], () => H.default.isCurrentQuestCompleted),
     W = (0, r.useStateFromStores)([H.default], () => H.default.currentDropQuestGameTitle),
-    Q = (0, z.useIsHomeSelected)(),
+    q = (0, z.useIsHomeSelected)(),
     ee = (0, N.useIsDmSpamFilterCoachmarkEnabled)(),
     ea = (0, et.useCanSeeSafetyEducationBlockMuteCoachmark)(),
     es = (0, A.useIsSafetyConsumerEducationBlockMuteBucket)(),
@@ -731,23 +731,23 @@ function eQ() {
       avatar: [],
       settings: []
     };
-  return !x && (eA && ev.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (ev.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (t = (0, V.getDrop)(eH.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && ev.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), Q && ee && ev.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), ea && (1 === es ? ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ec && ev.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), er && ev.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eN && ev.settings.push(o.DismissibleContent.PRIDE_ICONS_COACHMARK), eo && ev.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eq, {
+  return !D && (eA && ev.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (ev.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (t = (0, V.getDrop)(eH.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && ev.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), q && ee && ev.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), ea && (1 === es ? ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ec && ev.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), er && ev.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eN && ev.settings.push(o.DismissibleContent.PRIDE_ICONS_COACHMARK), eo && ev.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eQ, {
     currentUser: n,
     customStatusActivity: u,
     dismissibleContents: ev,
     userTag: E,
     hidePrivateData: h,
-    occluded: x,
+    occluded: D,
     premiumSubscription: L,
     selfDeaf: g,
     selfMute: p,
     serverDeaf: T,
-    serverMute: _,
+    serverMute: C,
     showRichProfilePopup: j,
     showTagAsButton: w,
     showTaglessAccountPanel: B,
     speaking: f,
-    speakingWhileMuted: y,
+    speakingWhileMuted: x,
     status: c,
     streaming: d,
     suppress: I,
@@ -763,17 +763,17 @@ function eZ(e) {
     isEligibleForPomelo: n,
     onClick: s,
     onContextMenu: l
-  } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = eO.default, u = (0, _.useSettingsLottie)();
+  } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = eO.default, u = (0, C.useSettingsLottie)();
   return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eL.default, {
     width: 9,
     height: 9,
     className: eY.hasBuildOverride,
     "aria-hidden": !0
-  }) : n && (r = (0, a.jsx)(eD.CircleBadge, {
+  }) : n && (r = (0, a.jsx)(ey.CircleBadge, {
     color: j.default.STATUS_DANGER,
     className: eY.hasBuildOverride,
     "aria-hidden": !0
-  })), (0, a.jsx)(eP.default, {
+  })), (0, a.jsx)(eM.default, {
     tooltipText: null != t ? eV.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
     }) : eV.default.Messages.USER_SETTINGS,
@@ -799,12 +799,12 @@ function eX(e) {
     onMouseLeave: f,
     onClick: E,
     onContextMenu: h
-  } = e, _ = t || l || n, {
+  } = e, C = t || l || n, {
     Component: S,
     play: p,
     events: I
-  } = (0, C.useMicrophoneLottie)(_ ? "unmute" : "mute"), g = n || l ? c.MicrophoneDenyIcon : S;
-  return s.useEffect(() => () => p(), [_, p]), (0, a.jsx)(eP.default, {
+  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), g = n || l ? c.MicrophoneDenyIcon : S;
+  return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eM.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
@@ -818,14 +818,14 @@ function eX(e) {
       size: "custom",
       width: 20,
       height: 20,
-      color: _ ? m.tokens.colors.STATUS_DANGER : "currentColor"
+      color: C ? m.tokens.colors.STATUS_DANGER : "currentColor"
     }),
-    iconForeground: _ ? eY.strikethrough : null,
+    iconForeground: C ? eY.strikethrough : null,
     onClick: E,
     onContextMenu: h,
     role: "switch",
     "aria-label": eV.default.Messages.MUTE,
-    "aria-checked": _,
+    "aria-checked": C,
     disabled: i
   })
 }
@@ -842,14 +842,14 @@ function eJ(e) {
     play: f,
     events: {
       onMouseEnter: E,
-      onMouseLeave: C
+      onMouseLeave: _
     }
-  } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), _ = n ? d.HeadphonesDenyIcon : c;
-  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eP.default, {
-    tooltipText: (0, y.default)(t, n, l),
+  } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
+  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eM.default, {
+    tooltipText: (0, x.default)(t, n, l),
     onMouseEnter: E,
-    onMouseLeave: C,
-    icon: (0, a.jsx)(_, {
+    onMouseLeave: _,
+    icon: (0, a.jsx)(C, {
       size: "custom",
       width: 20,
       height: 20,

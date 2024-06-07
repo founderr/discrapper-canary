@@ -15,8 +15,8 @@ var a = s("735250"),
   _ = s("37234"),
   I = s("821849"),
   N = s("230711"),
-  f = s("497321"),
-  g = s("634894"),
+  g = s("497321"),
+  f = s("634894"),
   m = s("410030"),
   C = s("100527"),
   A = s("906732"),
@@ -24,8 +24,8 @@ var a = s("735250"),
   O = s("15640"),
   p = s("89057"),
   R = s("703656"),
-  x = s("246946"),
-  M = s("78839"),
+  M = s("246946"),
+  x = s("78839"),
   D = s("586576"),
   L = s("483444"),
   P = s("626135"),
@@ -39,8 +39,8 @@ var a = s("735250"),
   y = s("197115"),
   V = s("823188"),
   H = s("504865"),
-  k = s("179984"),
-  Y = s("386733"),
+  Y = s("179984"),
+  k = s("386733"),
   w = s("487980"),
   W = s("474936"),
   K = s("981631"),
@@ -52,7 +52,7 @@ var a = s("735250"),
 
 function J() {
   var e, t, s;
-  let n = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
+  let n = (0, d.useStateFromStores)([x.default], () => x.default.getPremiumTypeSubscription()),
     {
       bucket: l
     } = (0, G.usePremiumTierCardsExperiment)("PremiumMarketingHome"),
@@ -64,9 +64,9 @@ function J() {
     } = (0, j.getAnnualDiscountsExperimentConfig)("PremiumManagementSettings"),
     I = (0, m.default)();
   if (null == n || null == n.planIdFromItems) return null;
-  let f = null != n.trialId,
-    g = n.planIdFromItems === W.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-    C = u || f,
+  let g = null != n.trialId,
+    f = n.planIdFromItems === W.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+    C = u || g,
     A = null != n.trialEndsAt ? o()(n.trialEndsAt).diff(o()(), "d") : 0,
     h = W.SubscriptionPlanInfo[n.planIdFromItems],
     O = b.default.formatPriceString(b.default.getDefaultPrice(h.id), h.interval);
@@ -90,20 +90,20 @@ function J() {
         className: Q.modifiedSubHeader,
         children: z.default.Messages.PREMIUM_TIER_2_SUBHEADER
       }), C ? (0, a.jsxs)(a.Fragment, {
-        children: [(f || !g) && (0, a.jsx)(V.PremiumPillWithSparkles, {
-          text: f ? z.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : z.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
+        children: [(g || !f) && (0, a.jsx)(V.PremiumPillWithSparkles, {
+          text: g ? z.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : z.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
           className: Q.topRimPill,
           colorOptions: (0, c.isThemeDark)(I) ? V.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : V.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL
-        }), (f || !g) && (0, a.jsx)("div", {
+        }), (g || !f) && (0, a.jsx)("div", {
           className: Q.rimGlowTier2
         }), (0, a.jsx)(S.Heading, {
           variant: "heading-md/normal",
           color: "always-white",
           className: Q.trialHeader,
-          children: f ? z.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
+          children: g ? z.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
             remainingTime: A,
             price: O
-          }) : g ? z.default.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
+          }) : f ? z.default.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
             percent: null !== (e = null == E ? void 0 : E.percentage) && void 0 !== e ? e : T,
             regularPrice: O
           }) : z.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
@@ -222,18 +222,18 @@ t.default = function() {
     {
       analyticsLocations: t
     } = (0, A.default)(C.default.PREMIUM_SETTINGS),
-    s = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
-    l = (0, d.useStateFromStores)([M.default], () => M.default.hasFetchedSubscriptions()),
+    s = (0, d.useStateFromStores)([x.default], () => x.default.getPremiumTypeSubscription()),
+    l = (0, d.useStateFromStores)([x.default], () => x.default.hasFetchedSubscriptions()),
     i = (0, O.useSubscriptionPlansLoaded)(),
     [r, o] = n.useState(!0),
     c = (0, F.useLocalizedPromoQuery)(),
     _ = null == c ? void 0 : c.countryCode,
-    N = (0, d.useStateFromStores)([x.default], () => x.default.enabled),
+    N = (0, d.useStateFromStores)([M.default], () => M.default.enabled),
     m = "PremiumManagementSettings";
-  (0, g.useTriggerDebuggingAA)({
+  (0, f.useTriggerDebuggingAA)({
     location: m + " auto on",
     autoTrackExposure: !0
-  }), (0, g.useTriggerDebuggingAA)({
+  }), (0, f.useTriggerDebuggingAA)({
     location: m + " auto off",
     autoTrackExposure: !1
   }), (0, B.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
@@ -244,7 +244,7 @@ t.default = function() {
     })
   }, [_, N, e]);
   let [L, b] = n.useState(!1);
-  if (N) return (0, a.jsx)(f.default, {});
+  if (N) return (0, a.jsx)(g.default, {});
   if (e) return (0, a.jsx)(p.BlockedPaymentsContentSettings, {});
   if ((!l || null == s || !i) && !r) return (0, a.jsx)(D.default, {
     title: z.default.Messages.REDIRECTED_CALLBACK_ERROR,
@@ -257,9 +257,9 @@ t.default = function() {
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
         className: Q.__invalid_container,
-        children: [(0, a.jsx)(J, {}), R && (0, a.jsx)(Y.default, {
+        children: [(0, a.jsx)(J, {}), R && (0, a.jsx)(k.default, {
           isInSettings: !0
-        }), (0, a.jsx)($, {}), (0, a.jsx)(k.default, {
+        }), (0, a.jsx)($, {}), (0, a.jsx)(Y.default, {
           className: Q.__invalid_planComparisonTable,
           hideCTAs: !0,
           headingOverride: z.default.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
