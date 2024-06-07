@@ -43,7 +43,9 @@ class _ extends o.default {
   update() {
     if (void 0 === this.userId || null === this.userId) return;
     let e = this.videoStreams.length > 1,
-      t = {},
+      t = {
+        any: 0
+      },
       n = [];
     if (e) {
       let e = this.getQualityConfig();
