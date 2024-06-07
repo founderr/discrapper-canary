@@ -1,13 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
-  dismissAppDetail: function() {
-    return o
-  },
   dismissAppLauncherPopup: function() {
     return s
-  },
-  showAppDetail: function() {
-    return a
   },
   showAppLauncherPopup: function() {
     return r
@@ -24,18 +18,5 @@ function r() {
 function s() {
   i.default.dispatch({
     type: "APP_LAUNCHER_DISMISS_POPUP"
-  })
-}
-
-function a(e) {
-  i.default.dispatch({
-    type: "APP_LAUNCHER_SHOW_APP_DETAIL",
-    application: e
-  })
-}
-
-function o() {
-  i.default.dispatch({
-    type: "APP_LAUNCHER_DISMISS_APP_DETAIL"
   })
 }

@@ -3,20 +3,16 @@ n.r(t);
 var i, r, s, a, o = n("442837"),
   l = n("570140");
 let u = {
-  showPopup: !1,
-  application: null
+  showPopup: !1
 };
 
 function d() {
-  return u.showPopup = !1, u.application = null, !0
+  return u.showPopup = !1, !0
 }
 class _ extends(a = o.default.Store) {
   initialize() {}
   shouldShowPopup() {
     return u.showPopup
-  }
-  getCurrentApplication() {
-    return u.application
   }
 }
 s = "AppLauncherStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
@@ -29,15 +25,6 @@ s = "AppLauncherStore", (r = "displayName") in(i = _) ? Object.defineProperty(i,
     return u.showPopup = !0, !0
   },
   APP_LAUNCHER_DISMISS_POPUP: d,
-  APP_LAUNCHER_SHOW_APP_DETAIL: function(e) {
-    let {
-      application: t
-    } = e;
-    return u.application = t, !0
-  },
-  APP_LAUNCHER_DISMISS_APP_DETAIL: function() {
-    return u.application = null, !0
-  },
   CONNECTION_OPEN: d,
   LOGOUT: d,
   CHANNEL_SELECT: d,

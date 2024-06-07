@@ -1,91 +1,139 @@
 "use strict";
-n.r(t);
+n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
   s = n("120356"),
   a = n.n(s),
   o = n("374470"),
-  l = n("442837"),
-  u = n("952265"),
-  d = n("481060"),
-  _ = n("410575"),
-  c = n("40851"),
-  E = n("153850"),
-  I = n("585483"),
-  T = n("5967"),
-  f = n("499254"),
-  S = n("541099"),
-  h = n("173790"),
-  A = n("361917"),
-  m = n("314734"),
-  N = n("981631"),
-  p = n("175323");
+  l = n("952265"),
+  u = n("481060"),
+  d = n("410575"),
+  _ = n("40851"),
+  c = n("153850"),
+  E = n("585483"),
+  I = n("5967"),
+  T = n("499254"),
+  f = n("695676"),
+  S = n("173790"),
+  h = n("361917"),
+  A = n("314734"),
+  m = n("981631"),
+  N = n("175323");
 t.default = r.memo(function(e) {
-  let {
-    positionTargetRef: t,
-    channel: n,
-    closeOnModalOuterClick: s = !1,
-    parentModalKey: O
-  } = e, C = r.useRef(null), R = r.useRef(null), {
-    renderWindow: g,
-    windowDispatch: L
-  } = r.useContext(c.default), v = null != O, D = (0, u.useIsModalAtTop)(null != O ? O : ""), M = () => {
-    f.dismissAppLauncherPopup()
-  }, y = r.useCallback(e => {
-    var t;
-    if (!v && (0, u.hasAnyModalOpen)() || v && !(D && s)) return;
-    let {
-      target: n
-    } = e;
-    if ((0, o.isElement)(n) && null != n.closest("." + m.APP_LAUNCHER_ELEMENT_CLASSNAME)) return;
-    for (;
-      (0, o.isElement)(n);) {
-      if (n === R.current) return;
-      n = n.parentNode
-    }
-    M();
-    let i = null === (t = (0, T.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-    (null == i || "BODY" === i.tagName) && I.ComponentDispatch.dispatchToLastSubscribed(N.ComponentActions.TEXTAREA_FOCUS)
-  }, [s, D, v]), P = r.useCallback(() => {
-    M()
-  }, []);
-  r.useLayoutEffect(() => (g.addEventListener("mousedown", y), g.addEventListener("contextmenu", y), L.subscribe(N.ComponentActions.POPOUT_CLOSE, P), () => {
-    g.removeEventListener("mousedown", y), g.removeEventListener("contextmenu", y), L.unsubscribe(N.ComponentActions.POPOUT_CLOSE, P)
-  }), [P, y, g, L]), (0, d.useFocusLock)(C), r.useEffect(() => {
-    (!v && (0, u.hasAnyModalOpen)() || v && !D) && M()
+  let t, {
+      positionTargetRef: n,
+      channel: s,
+      closeOnModalOuterClick: p = !1,
+      parentModalKey: O
+    } = e,
+    C = r.useRef(null),
+    R = r.useRef(null),
+    {
+      renderWindow: g,
+      windowDispatch: L
+    } = r.useContext(_.default),
+    v = null != O,
+    D = (0, l.useIsModalAtTop)(null != O ? O : ""),
+    M = () => {
+      T.dismissAppLauncherPopup()
+    },
+    y = r.useCallback(e => {
+      var t;
+      if (!v && (0, l.hasAnyModalOpen)() || v && !(D && p)) return;
+      let {
+        target: n
+      } = e;
+      if ((0, o.isElement)(n) && null != n.closest("." + A.APP_LAUNCHER_ELEMENT_CLASSNAME)) return;
+      for (;
+        (0, o.isElement)(n);) {
+        if (n === R.current) return;
+        n = n.parentNode
+      }
+      M();
+      let i = null === (t = (0, I.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      (null == i || "BODY" === i.tagName) && E.ComponentDispatch.dispatchToLastSubscribed(m.ComponentActions.TEXTAREA_FOCUS)
+    }, [p, D, v]),
+    P = r.useCallback(() => {
+      M()
+    }, []);
+  r.useLayoutEffect(() => (g.addEventListener("mousedown", y), g.addEventListener("contextmenu", y), L.subscribe(m.ComponentActions.POPOUT_CLOSE, P), () => {
+    g.removeEventListener("mousedown", y), g.removeEventListener("contextmenu", y), L.unsubscribe(m.ComponentActions.POPOUT_CLOSE, P)
+  }), [P, y, g, L]), (0, u.useFocusLock)(C), r.useEffect(() => {
+    (!v && (0, l.hasAnyModalOpen)() || v && !D) && M()
   }, [D, v]);
-  let U = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentApplication());
-  return (0, i.jsx)(_.default, {
-    section: N.AnalyticsSections.EXPRESSION_PICKER,
-    children: (0, i.jsx)(E.AppReferencePositionLayer, {
-      className: p.positionLayer,
-      targetRef: t,
+  let {
+    history: U,
+    setHistory: b,
+    currentView: G,
+    pushHistory: w,
+    goBack: k
+  } = function() {
+    let [e, t] = r.useState([{
+      type: f.HistoryItemType.HOME
+    }]), n = e[e.length - 1];
+    return {
+      history: e,
+      setHistory: t,
+      currentView: n,
+      pushHistory: n => {
+        t([...e, n])
+      },
+      goBack: () => {
+        if (0 === e.length) return;
+        let n = [...e];
+        n.pop(), t(n)
+      }
+    }
+  }();
+  switch (null == G ? void 0 : G.type) {
+    case f.HistoryItemType.HOME:
+      t = (0, i.jsx)(h.default, {
+        channel: s
+      });
+      break;
+    case f.HistoryItemType.APPLICATION:
+      t = (0, i.jsx)(S.default, {
+        channel: s,
+        application: G.application
+      });
+      break;
+    default:
+      t = null
+  }
+  return (0, i.jsx)(d.default, {
+    section: m.AnalyticsSections.EXPRESSION_PICKER,
+    children: (0, i.jsx)(c.AppReferencePositionLayer, {
+      className: N.positionLayer,
+      targetRef: n,
       position: "top",
       align: "right",
       spacing: 8,
       autoInvert: !0,
       children: e => {
         let {
-          isPositioned: t
+          isPositioned: n
         } = e;
         return (0, i.jsx)("section", {
-          className: a()(p.positionContainer),
+          className: a()(N.positionContainer),
           ref: C,
           role: "dialog",
           "aria-label": "Application Launcher",
-          children: t ? (0, i.jsxs)("div", {
-            className: p.drawerSizingWrapper,
+          children: n ? (0, i.jsxs)("div", {
+            className: N.drawerSizingWrapper,
             ref: R,
             children: [(0, i.jsx)("div", {
-              className: p.resizeHandle
+              className: N.resizeHandle
             }), (0, i.jsx)("div", {
-              className: p.contentWrapper,
-              children: null != U ? (0, i.jsx)(h.default, {
-                channel: n,
-                application: U
-              }, U.id) : (0, i.jsx)(A.default, {
-                channel: n,
-                isAppDetailPresent: null != U
+              className: N.contentWrapper,
+              children: (0, i.jsx)(f.AppLauncherHistoryContext.Provider, {
+                value: {
+                  history: U,
+                  setHistory: b,
+                  currentView: G,
+                  pushHistory: w,
+                  goBack: k
+                },
+                children: t
               })
             })]
           }) : null

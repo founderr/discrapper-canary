@@ -8,7 +8,7 @@ e.exports = {
   commandName: "commandName__4e8c4",
   container: "container__1b5d1",
   contentContainer: "contentContainer_f3b1f3",
-  headerCloseButton: "headerCloseButton__3e4f8",
-  headerWhenSideCard: "headerWhenSideCard__431a1",
+  header: "header__99f5c",
+  headerBackButton: "headerBackButton__4cb87",
   sortSelector: "sortSelector__963cb"
 }
