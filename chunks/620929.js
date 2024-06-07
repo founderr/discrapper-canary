@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CharterScrollGameSection: function() {
-    return v
+    return x
   }
 });
 var a = n("735250"),
@@ -57,7 +57,7 @@ function A(e) {
   })
 }
 
-function v(e) {
+function x(e) {
   let {
     applicationIds: t,
     playstyle: n,
@@ -92,11 +92,11 @@ t.default = e => {
     tag: E,
     badgeKind: C,
     badgePrimaryColor: g,
-    badgeSecondaryColor: N
+    badgeSecondaryColor: v
   } = (0, u.useStateFromStoresObject)([f.default], () => {
     var e;
     return null !== (e = f.default.getStateForGuild(t).progress) && void 0 !== e ? e : n
-  }), x = l.useMemo(() => (null == m ? void 0 : m.size) > 0 ? (0, h.formatSelectionList)(Array.from(m), _.MAX_TRAITS_TO_DISPLAY) : null, [m]);
+  }), N = l.useMemo(() => (null == m ? void 0 : m.size) > 0 ? (0, h.formatSelectionList)(Array.from(m), _.MAX_TRAITS_TO_DISPLAY) : null, [m]);
   return (0, a.jsxs)(p.default, {
     ...e,
     children: [(0, a.jsx)(A, {
@@ -104,7 +104,7 @@ t.default = e => {
       tag: E,
       badge: C,
       primaryColor: null != g ? g : S.CLAN_BADGE_PRIMARY_DEFAULT,
-      secondaryColor: null != N ? N : S.CLAN_BADGE_SECONDARY_DEFAULT
+      secondaryColor: null != v ? v : S.CLAN_BADGE_SECONDARY_DEFAULT
     }), (0, a.jsx)(d.Heading, {
       variant: "heading-xl/normal",
       color: "text-muted",
@@ -122,15 +122,15 @@ t.default = e => {
       children: T.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
         date: o()().format("MMMM YYYY")
       })
-    }), (0, a.jsx)(v, {
+    }), (0, a.jsx)(x, {
       applicationIds: i,
       playstyle: r
-    }), null != x ? (0, a.jsx)(d.Text, {
+    }), null != N ? (0, a.jsx)(d.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       className: I.overviewText,
       children: T.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-        traits: x
+        traits: N
       })
     }) : null, (0, a.jsx)(d.Text, {
       variant: "text-sm/normal",

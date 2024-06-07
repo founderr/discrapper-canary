@@ -96,19 +96,19 @@ let M = a.memo(function(e) {
       ...B
     } = (0, r.useListItem)(s.id),
     F = a.useRef(null),
-    H = a.useRef(null),
-    V = (0, l.jsxs)("li", {
+    V = a.useRef(null),
+    H = (0, l.jsxs)("li", {
       className: t,
       "data-dnd-name": s.name,
       children: [(0, l.jsx)(u.FocusRing, {
         focusTarget: F,
-        ringTarget: H,
+        ringTarget: V,
         offset: {
           left: 4,
           right: 4
         },
         children: (0, l.jsxs)("div", {
-          ref: H,
+          ref: V,
           className: i()(x.iconVisibility, x.wrapper, {
             [x.collapsed]: D,
             [x.muted]: O,
@@ -175,7 +175,7 @@ let M = a.memo(function(e) {
         })
       }), y]
     });
-  return null != E && null != f ? E(f(V)) : V
+  return null != E && null != f ? E(f(H)) : H
 });
 t.default = (0, f.makeChannelSortable)(M);
 let y = a.memo(function(e) {

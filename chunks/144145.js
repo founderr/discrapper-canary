@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("841784"),
   E = n("802856"),
   h = n("594190"),
-  _ = n("592745"),
-  C = n("553795"),
+  C = n("592745"),
+  _ = n("553795"),
   m = n("757266"),
   S = n("283595"),
   p = n("417363"),
@@ -34,7 +34,7 @@ function R(e) {
   } = e, n = t.length > 1, R = function(e) {
     let {
       currentActivities: t
-    } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
+    } = e, n = (0, l.useStateFromStores)([_.default], () => _.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
       let {
         activity: t
       } = e;
@@ -51,7 +51,7 @@ function R(e) {
     let {
       currentActivities: t
     } = e, n = s.useContext(I.AnalyticsContext);
-    return (0, l.useStateFromStoresArray)([h.default, S.default, _.default, p.default, m.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
+    return (0, l.useStateFromStoresArray)([h.default, S.default, C.default, p.default, m.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
       let {
         activity: t,
         game: a
@@ -62,13 +62,13 @@ function R(e) {
         canJoin: null != t && (0, c.default)(t, A.ActivityFlags.JOIN) && t.type === A.ActivityTypes.PLAYING,
         canPlay: (0, g.isLaunchable)({
           LibraryApplicationStore: S.default,
-          LaunchableGameStore: _.default,
+          LaunchableGameStore: C.default,
           DispatchApplicationStore: p.default,
           ConnectedAppsStore: m.default,
           applicationId: a.id,
           branchId: null != s ? s.branchId : null
         }),
-        isLaunching: _.default.launchingGames.has(a.id),
+        isLaunching: C.default.launchingGames.has(a.id),
         isRunning: h.default.getRunningVerifiedApplicationIds().includes(a.id),
         location: n.location
       }

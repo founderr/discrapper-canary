@@ -21,14 +21,14 @@ var a = n("735250"),
   T = n("561308"),
   I = n("919394"),
   A = n("438226"),
-  v = n("206295"),
-  N = n("91140"),
-  x = n("297781"),
+  x = n("206295"),
+  v = n("91140"),
+  N = n("297781"),
   M = n("591853"),
   R = n("265048"),
   y = n("981631"),
   L = n("689938");
-let O = {
+let j = {
   [s.PlatformType.DESKTOP]: null,
   [s.PlatformType.XBOX]: C.default,
   [s.PlatformType.PLAYSTATION]: E.default
@@ -41,7 +41,7 @@ t.default = e => {
     closePopout: E
   } = e, {
     iconUrl: C,
-    iconTitle: j,
+    iconTitle: O,
     user: P,
     details: D,
     gameTitle: b,
@@ -49,11 +49,11 @@ t.default = e => {
   } = (0, R.useGamingContentData)(n), {
     primaryColor: F,
     secondaryColor: w
-  } = (0, v.default)(C), k = (0, o.useStateFromStores)([p.default], () => p.default.locale), {
+  } = (0, x.default)(C), k = (0, o.useStateFromStores)([p.default], () => p.default.locale), {
     streamPreviewUrl: H,
-    stream: B
+    stream: G
   } = (0, _.default)(n), {
-    displayParticipants: G,
+    displayParticipants: B,
     participant1: V,
     participant2: W,
     numOtherParticipants: Y
@@ -68,24 +68,24 @@ t.default = e => {
     return (0, I.generateGamingContentImage)({
       entry: n,
       applicationImageSrc: C,
-      avatarSrcs: G.map(e => e.getAvatarURL(t.guild_id, 128)),
+      avatarSrcs: B.map(e => e.getAvatarURL(t.guild_id, 128)),
       description: a,
       timestamp: (0, T.formatEntryTimestamp)(n, k),
       colors: [F, w],
       channelId: e
     })
-  }, [C, t, G, n, k, Y, V, W, F, w, P]);
+  }, [C, t, B, n, k, Y, V, W, F, w, P]);
   if (null == P) return null;
-  let Z = null != n.extra.platform ? O[n.extra.platform] : null,
-    q = (0, a.jsx)(x.BadgesContainer, {
-      location: x.BadgeLocation.POPOUT,
-      children: N.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
+  let Z = null != n.extra.platform ? j[n.extra.platform] : null,
+    X = (0, a.jsx)(N.BadgesContainer, {
+      location: N.BadgeLocation.POPOUT,
+      children: v.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
         entry: n
       }, t))
     }),
-    X = null == H ? (0, a.jsx)(M.PopoutContent, {
+    q = null == H ? (0, a.jsx)(M.PopoutContent, {
       thumbnailSrc: C,
-      thumbnailTitle: j,
+      thumbnailTitle: O,
       channel: t,
       headerIcons: null != Z ? (0, a.jsx)(Z, {
         color: z.hex(),
@@ -95,18 +95,18 @@ t.default = e => {
       userDescription: (0, T.isEntryActive)(n) ? L.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : L.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: b,
       subtitle: D,
-      badges: q,
+      badges: X,
       entry: n
     }) : (0, a.jsx)(M.StreamingPopoutContent, {
       channel: t,
       streamPreviewSrc: H,
       title: n.extra.game_name,
-      badges: q,
+      badges: X,
       userDescription: L.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
       entry: n,
-      stream: B
+      stream: G
     }),
-    Q = (0, d.default)(U, y.ActivityFlags.JOIN) || (0, c.default)(U) ? (0, a.jsx)(h.default, {
+    J = (0, d.default)(U, y.ActivityFlags.JOIN) || (0, c.default)(U) ? (0, a.jsx)(h.default, {
       activity: U,
       user: P,
       ButtonComponent: e => (0, a.jsx)(M.PrimaryActionButton, {
@@ -114,7 +114,7 @@ t.default = e => {
         ...e
       })
     }) : null,
-    J = [Q, (0, f.default)(U) ? (0, a.jsx)(m.default, {
+    Q = [J, (0, f.default)(U) ? (0, a.jsx)(m.default, {
       activity: U,
       ButtonComponent: e => (0, a.jsx)(M.PrimaryActionButton, {
         IconComponent: i.EyeIcon,
@@ -122,7 +122,7 @@ t.default = e => {
       })
     }) : null].filter(g.isNotNullish);
   return (0, a.jsxs)(M.Popout, {
-    children: [X, (0, a.jsx)(M.PopoutInteractionsContainer, {
+    children: [q, (0, a.jsx)(M.PopoutInteractionsContainer, {
       children: (0, a.jsx)(M.Reactor, {
         closePopout: E,
         user: P,
@@ -131,7 +131,7 @@ t.default = e => {
         reactionImageAltText: (0, A.getContentAltText)(n, P),
         entry: n,
         requestId: s,
-        buttons: J
+        buttons: Q
       })
     })]
   })

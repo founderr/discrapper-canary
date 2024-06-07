@@ -42,21 +42,21 @@ t.default = e => {
     gameTitle: I
   } = (0, m.useGamingContentData)(n), {
     primaryColor: A,
-    secondaryColor: v
-  } = (0, d.default)(g), N = (0, o.getEntryDuration)(n), x = (0, o.getAggregateRange)(n), M = l.useCallback(e => {
-    if (null != _ && null != N && null != x && (0, c.isAllowedRange)(x)) return (0, u.generateGamingContentImage)({
+    secondaryColor: x
+  } = (0, d.default)(g), v = (0, o.getEntryDuration)(n), N = (0, o.getAggregateRange)(n), M = l.useCallback(e => {
+    if (null != _ && null != v && null != N && (0, c.isAllowedRange)(N)) return (0, u.generateGamingContentImage)({
       entry: n,
       applicationImageSrc: g,
       avatarSrcs: [_.getAvatarURL(t.guild_id, 128)],
-      description: E(n, t, _, x),
+      description: E(n, t, _, N),
       timestamp: p.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
-        hours: Math.round(N / i.default.Seconds.HOUR)
+        hours: Math.round(v / i.default.Seconds.HOUR)
       }),
-      colors: [A, v],
+      colors: [A, x],
       channelId: e
     })
-  }, [g, t, N, n, A, x, v, _]);
-  return null != _ && null != N && null != x && (0, c.isAllowedRange)(x) ? (0, a.jsxs)(h.Popout, {
+  }, [g, t, v, n, A, N, x, _]);
+  return null != _ && null != v && null != N && (0, c.isAllowedRange)(N) ? (0, a.jsxs)(h.Popout, {
     children: [(0, a.jsx)(h.PopoutContent, {
       thumbnailSrc: g,
       thumbnailTitle: S,

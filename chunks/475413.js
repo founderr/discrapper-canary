@@ -13,8 +13,8 @@ var s = n("481060"),
   f = n("305342"),
   E = n("726324"),
   h = n("981631"),
-  _ = n("689938"),
-  C = n("82205");
+  C = n("689938"),
+  _ = n("82205");
 t.default = e => {
   var t, n;
   let {
@@ -33,14 +33,14 @@ t.default = e => {
   } = i.useEditStateIds(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : null, m.id);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(E.default, {
-      title: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
+      title: C.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
         serverName: m.toString()
       }),
       description: null != g ? g : null,
       coverImageAsset: null !== (n = null == I ? void 0 : I.cover_image_asset) && void 0 !== n ? n : null,
       guild: m,
       children: [null != S ? (0, a.jsx)(u.default, {
-        className: C.pendingPlanChangeNotice,
+        className: _.pendingPlanChangeNotice,
         groupListingId: S.id,
         subscription: p
       }) : null, (0, a.jsx)(d.default, {

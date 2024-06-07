@@ -44,8 +44,8 @@ var l, a = n("735250"),
   w = n("906817"),
   B = n("429122"),
   F = n("285573"),
-  H = n("519358"),
-  V = n("910595"),
+  V = n("519358"),
+  H = n("910595"),
   k = n("466935"),
   Y = n("120818"),
   K = n("61642"),
@@ -515,7 +515,7 @@ class eo extends(l = s.PureComponent) {
               withMargin: s.length > 1
             }, et.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR);
           case et.ChannelListCommunityRow.GUILD_HOME:
-            return (0, a.jsx)(V.default, {
+            return (0, a.jsx)(H.default, {
               guild: l,
               selected: r === ea.StaticChannelRoute.GUILD_HOME
             }, et.ChannelListCommunityRow.GUILD_HOME);
@@ -544,7 +544,7 @@ class eo extends(l = s.PureComponent) {
               guild: l
             });
           case et.ChannelListCommunityRow.CHANNELS_AND_ROLES:
-            return (0, a.jsx)(H.GuildBrowseChannelsRow, {
+            return (0, a.jsx)(V.GuildBrowseChannelsRow, {
               guild: l,
               selected: r === ea.StaticChannelRoute.CHANNEL_BROWSER || r === ea.StaticChannelRoute.CUSTOMIZE_COMMUNITY
             }, et.ChannelListCommunityRow.CHANNELS_AND_ROLES);

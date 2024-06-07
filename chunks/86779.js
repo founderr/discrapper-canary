@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("773603");
 var s, a, i = n("735250"),
-  r = n("470079"),
-  l = n("593473"),
+  l = n("470079"),
+  r = n("593473"),
   o = n("756647"),
   u = n("442837"),
   d = n("544891"),
@@ -31,16 +31,16 @@ t.default = () => {
     {
       fingerprint: t,
       handoff_token: n
-    } = (0, l.parse)(window.location.search),
+    } = (0, r.parse)(window.location.search),
     s = Array.isArray(t) ? t.length > 1 ? t[0] : null : t,
     a = null != s ? s : null !== e ? e : void 0;
-  r.useEffect(() => {
+  l.useEffect(() => {
     null !== s && e !== s && h.default.dispatch({
       type: "FINGERPRINT",
       fingerprint: s
     })
   }, [s, e]);
-  let [p, L] = r.useState(null), x = r.useCallback(e => {
+  let [p, L] = l.useState(null), x = l.useCallback(e => {
     L(e), _.default.track(I.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
       reason: e,
       fingerprint: (0, o.maybeExtractId)(a)
@@ -48,12 +48,12 @@ t.default = () => {
       fingerprint: a
     })
   }, [L, a]), M = c.Storage.get(A);
-  if ("null" === n && null === p && x("deep_link_failed"), null != n && "null" !== n && null == M && null === p && x("nonce_missing"), r.useEffect(() => {
+  if ("null" === n && null === p && x("deep_link_failed"), null != n && "null" !== n && null == M && null === p && x("nonce_missing"), l.useEffect(() => {
       if (null != M) {
         let e = c.Storage.get(N);
         (null == e || Date.now() >= e) && (x("nonce_expired"), v())
       }
-    }, [M, x]), r.useEffect(() => {
+    }, [M, x]), l.useEffect(() => {
       null != n && "null" !== n && null != M && null == p && d.HTTP.post({
         url: I.Endpoints.HANDOFF_EXCHANGE,
         body: {

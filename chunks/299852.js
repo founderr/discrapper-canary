@@ -14,9 +14,9 @@ var s, a = n("735250"),
   _ = n("981631"),
   p = n("930441"),
   h = n("689938"),
-  T = n("611273");
+  g = n("611273");
 
-function g(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -25,7 +25,7 @@ function g(e, t, n) {
   }) : e[t] = n, e
 }
 r.default.initialize();
-class m extends(s = l.PureComponent) {
+class T extends(s = l.PureComponent) {
   componentDidMount() {
     let e = (0, d.default)(this.props.location),
       t = (0, i.parse)(this.props.location.search);
@@ -69,16 +69,16 @@ class m extends(s = l.PureComponent) {
     });
     return (0, a.jsxs)(I.default, {
       children: [(0, a.jsx)(I.Title, {
-        className: T.marginBottom8,
+        className: g.marginBottom8,
         children: h.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
       }), (0, a.jsx)(I.SubTitle, {
         children: l
       }), (0, a.jsx)(I.Button, {
-        className: T.marginTop20,
+        className: g.marginTop20,
         onClick: () => s(n),
         children: h.default.Messages.CONTINUE_TO_WEBAPP
       }), (0, a.jsx)(I.Button, {
-        className: T.marginTop8,
+        className: g.marginTop8,
         color: I.Button.Colors.LINK,
         look: I.Button.Looks.LINK,
         onClick: () => s(_.Routes.SETTINGS("notifications", p.EMAILS_SUBSECTION)),
@@ -102,14 +102,14 @@ class m extends(s = l.PureComponent) {
       children: [(0, a.jsx)(I.Avatar, {
         src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
         size: o.AvatarSizes.DEPRECATED_SIZE_100,
-        className: T.marginBottom20
+        className: g.marginBottom20
       }), (0, a.jsx)(I.Title, {
-        className: T.marginBottom8,
+        className: g.marginBottom8,
         children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
       }), (0, a.jsx)(I.SubTitle, {
         children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY
       }), (0, a.jsx)(I.Button, {
-        className: T.marginTop40,
+        className: g.marginTop40,
         onClick: () => t(e),
         children: h.default.Messages.CONTINUE_TO_WEBAPP
       })]
@@ -123,14 +123,14 @@ class m extends(s = l.PureComponent) {
     return (0, a.jsxs)(I.default, {
       children: [(0, a.jsx)(I.Image, {
         src: n("105020"),
-        className: T.marginBottom20
+        className: g.marginBottom20
       }), (0, a.jsx)(I.Title, {
-        className: T.marginBottom8,
+        className: g.marginBottom8,
         children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
       }), (0, a.jsx)(I.SubTitle, {
         children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
       }), (0, a.jsx)(I.Button, {
-        className: T.marginTop40,
+        className: g.marginTop40,
         onClick: () => t(e),
         children: h.default.Messages.CONTINUE_TO_WEBAPP
       })]
@@ -144,7 +144,7 @@ class m extends(s = l.PureComponent) {
     return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError()
   }
   constructor(...e) {
-    super(...e), g(this, "state", {
+    super(...e), m(this, "state", {
       busy: !0,
       success: !1,
       user: null,
@@ -152,8 +152,8 @@ class m extends(s = l.PureComponent) {
     })
   }
 }
-g(m, "defaultProps", {
+m(T, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
 }), t.default = r.default.connectStores([E.default], () => ({
   defaultRoute: E.default.defaultRoute
-}))(m)
+}))(T)

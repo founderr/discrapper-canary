@@ -1,7 +1,7 @@
 "use strict";
-var r, i;
-n.r(e), n.d(e, {
+var i, a;
+n.r(t), n.d(t, {
   ContentInventoryAuthorType: function() {
-    return r
+    return i
   }
-}), (i = r || (r = {}))[i.AUTHOR_TYPE_UNSPECIFIED = 0] = "AUTHOR_TYPE_UNSPECIFIED", i[i.USER = 1] = "USER"
+}), (a = i || (i = {}))[a.AUTHOR_TYPE_UNSPECIFIED = 0] = "AUTHOR_TYPE_UNSPECIFIED", a[a.USER = 1] = "USER"

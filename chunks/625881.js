@@ -26,9 +26,9 @@ t.default = function(e) {
     onClose: i,
     onConfirm: h,
     userDiscountOffer: T
-  } = e, [A, R] = n.useState(!1), [M, y] = n.useState(!1), g = async e => {
+  } = e, [A, R] = n.useState(!1), [y, M] = n.useState(!1), g = async e => {
     try {
-      y(!0), R(!1), await r.HTTP.post({
+      M(!0), R(!1), await r.HTTP.post({
         url: S.Endpoints.USER_OFFER_REDEEM,
         body: {
           user_discount_offer_id: e
@@ -37,7 +37,7 @@ t.default = function(e) {
     } catch (e) {
       R(!0)
     }
-    y(!1)
+    M(!1)
   }, L = (0, d.default)(), x = (0, u.isThemeDark)(L) ? P : C, D = (0, m.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), b = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), U = (0, f.formatPrice)(b.amount, b.currency);
   return null == T ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(E.default, {
@@ -97,7 +97,7 @@ t.default = function(e) {
             children: I.default.Messages.CHURN_DISCOUNT_NEVERMIND
           }), (0, a.jsx)(o.Button, {
             size: o.ButtonSizes.SMALL,
-            submitting: M,
+            submitting: y,
             onClick: () => g(T.id),
             children: I.default.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
           })]

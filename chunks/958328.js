@@ -1,23 +1,23 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return S
+    return T
   }
 });
 var a = r("735250");
 r("470079");
-var n = r("120356"),
-  i = r.n(n),
+var i = r("120356"),
+  n = r.n(i),
   l = r("149765"),
   o = r("442837"),
-  s = r("481060"),
-  c = r("933557"),
+  c = r("481060"),
+  s = r("933557"),
   d = r("592125"),
   u = r("430824"),
   h = r("496675"),
   p = r("944486"),
-  m = r("914010"),
-  g = r("263704"),
+  g = r("914010"),
+  m = r("263704"),
   f = r("465670"),
   y = r("233608"),
   b = r("71080"),
@@ -28,9 +28,9 @@ function v(e) {
   let {
     title: t,
     can: r
-  } = e, n = r ? g.default : f.default, l = (0, a.jsx)("div", {
-    className: i()(x.iconOuter, r ? x.iconCheck : x.iconCross),
-    children: (0, a.jsx)(n, {
+  } = e, i = r ? m.default : f.default, l = (0, a.jsx)("div", {
+    className: n()(x.iconOuter, r ? x.iconCheck : x.iconCross),
+    children: (0, a.jsx)(i, {
       className: x.icon
     })
   });
@@ -38,7 +38,7 @@ function v(e) {
     className: x.scope,
     children: [l, (0, a.jsx)("div", {
       className: x.scopeInner,
-      children: (0, a.jsx)(s.Text, {
+      children: (0, a.jsx)(c.Text, {
         variant: "text-md/normal",
         children: t
       })
@@ -46,52 +46,52 @@ function v(e) {
   })
 }
 
-function S() {
+function T() {
   let e = (0, o.useStateFromStores)([p.default], () => p.default.getChannelId()),
-    t = (0, o.useStateFromStores)([m.default], () => m.default.getGuildId()),
+    t = (0, o.useStateFromStores)([g.default], () => g.default.getGuildId()),
     r = (0, o.useStateFromStores)([d.default], () => d.default.getChannel(e)),
-    n = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(t)),
-    g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
-    f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(n)),
-    S = (0, c.default)(r, !0),
-    C = null != r ? (0, b.getChannelPermissionSpecMap)(r, !1, !0) : null,
-    j = null != n ? y.default.getGuildPermissionSpecMap(n) : null,
-    T = Object.values(null != C ? C : {}).map(e => {
+    i = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(t)),
+    m = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
+    f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(i)),
+    T = (0, s.default)(r, !0),
+    S = null != r ? (0, b.getChannelPermissionSpecMap)(r, !1, !0) : null,
+    j = null != i ? y.default.getGuildPermissionSpecMap(i) : null,
+    w = Object.values(null != S ? S : {}).map(e => {
       let {
         title: t,
         flag: r
-      } = e, n = l.has(g, r);
+      } = e, i = l.has(m, r);
       return (0, a.jsx)(v, {
         title: t,
-        can: n
+        can: i
       }, t)
     }),
-    N = Object.values(null != j ? j : {}).map(e => {
+    E = Object.values(null != j ? j : {}).map(e => {
       let {
         title: t,
         flag: r
-      } = e, n = l.has(f, r);
+      } = e, i = l.has(f, r);
       return (0, a.jsx)(v, {
         title: t,
-        can: n
+        can: i
       }, t)
     });
   return (0, a.jsx)("div", {
-    className: i()(k.panel, x.panel),
+    className: n()(k.panel, x.panel),
     children: (0, a.jsxs)("div", {
       className: x.panelInner,
       children: [(0, a.jsxs)("section", {
         className: x.section,
-        children: [(0, a.jsx)(s.Heading, {
+        children: [(0, a.jsx)(c.Heading, {
           variant: "heading-md/semibold",
-          children: null != S ? "Permissions in ".concat(S) : "No channel selected"
-        }), T]
+          children: null != T ? "Permissions in ".concat(T) : "No channel selected"
+        }), w]
       }), (0, a.jsxs)("section", {
         className: x.section,
-        children: [(0, a.jsx)(s.Heading, {
+        children: [(0, a.jsx)(c.Heading, {
           variant: "heading-md/semibold",
-          children: null != n ? "Permissions in ".concat(n.name) : "No guild selected"
-        }), N]
+          children: null != i ? "Permissions in ".concat(i.name) : "No guild selected"
+        }), E]
       })]
     })
   })

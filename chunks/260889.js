@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("735250"),
@@ -17,10 +17,10 @@ var a = n("735250"),
   E = n("981631"),
   h = n("689938");
 
-function _(e) {
+function C(e) {
   let t = s.useContext(f.AnalyticsContext),
     n = e.voiceChannels[0],
-    _ = (0, l.useStateFromStores)([d.default], () => null != n && d.default.can(E.Permissions.CONNECT, n.channel));
+    C = (0, l.useStateFromStores)([d.default], () => null != n && d.default.can(E.Permissions.CONNECT, n.channel));
   return null == n ? null : [(0, a.jsx)(i.MenuItem, {
     id: "join-voice",
     action: function() {
@@ -35,7 +35,7 @@ function _(e) {
       })
     },
     label: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_JOIN_CHANNEL,
-    disabled: !_
+    disabled: !C
   }, "join-voice"), (0, a.jsx)(i.MenuItem, {
     id: "goto-server",
     action: function() {

@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("430824"),
   I = n("979651"),
   A = n("502568"),
-  v = n("664342"),
-  N = n("124368"),
-  x = n("981631"),
+  x = n("664342"),
+  v = n("124368"),
+  N = n("981631"),
   M = n("689938"),
   R = n("899091");
 
@@ -36,14 +36,14 @@ function y(e) {
     channelId: t,
     baseChannelId: s,
     channelViewSource: y = "Split View"
-  } = e, L = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), O = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(null == L ? void 0 : L.getGuildId())), j = (0, m.default)(L);
+  } = e, L = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), j = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(null == L ? void 0 : L.getGuildId())), O = (0, m.default)(L);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i().isEmpty(I.default.getVoiceStatesForChannel(e.id)));
     l.useEffect(() => {
       t && null != e && (o.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, g.transitionToThread)(e, N.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
+      }), (0, g.transitionToThread)(e, v.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(L);
   let P = l.useRef(!1);
@@ -51,15 +51,15 @@ function y(e) {
       if (null == L || P.current) return;
       P.current = !0;
       let e = (0, f.collectThreadMetadata)(S.default.getChannel(L.id), !0);
-      (0, c.trackWithMetadata)(x.AnalyticEvents.CHANNEL_OPENED, {
+      (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
         ...e,
         ...(0, c.getChannelOpenedMetadata)(L.id),
         channel_view: y
-      }), (0, h.trackClickstream)(x.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
+      }), (0, h.trackClickstream)(N.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
         channelId: L.id
       })
-    }, [L, y]), null == L || null == O) return null;
-  let D = (0, a.jsx)(v.default, {
+    }, [L, y]), null == L || null == j) return null;
+  let D = (0, a.jsx)(x.default, {
     channel: L,
     baseChannelId: s
   });
@@ -72,8 +72,8 @@ function y(e) {
       "aria-label": M.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, C.renderTitle)({
         channel: L,
-        channelName: j,
-        guild: O,
+        channelName: O,
+        guild: j,
         inSidebar: !0,
         handleContextMenu: function(e) {
           (0, u.openContextMenuLazy)(e, async () => {
@@ -94,7 +94,7 @@ function y(e) {
       className: R.chat,
       children: (0, a.jsx)(p.default, {
         channel: L,
-        guild: O,
+        guild: j,
         chatInputType: E.ChatInputTypes.SIDEBAR
       }, t)
     })]

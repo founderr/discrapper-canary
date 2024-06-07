@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return v
   }
 });
 var a = n("735250"),
@@ -25,28 +25,28 @@ var a = n("735250"),
   T = n("981631"),
   I = n("187393");
 let A = m.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
-  v = r.AvatarSizes.SIZE_80;
+  x = r.AvatarSizes.SIZE_80;
 
-function N(e) {
+function v(e) {
   let {
     user: t,
     displayProfile: n,
     channel: i,
     isHovering: m,
-    onOpenProfile: N
+    onOpenProfile: v
   } = e, {
-    theme: x
+    theme: N
   } = (0, S.useUserProfileThemeContext)(), {
     analyticsLocations: M
   } = (0, d.default)(u.default.AVATAR), {
     trackUserProfileAction: R
   } = (0, p.useUserProfileAnalyticsContext)(), y = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
     avatarSrc: L,
-    eventHandlers: O,
-    avatarDecorationSrc: j
+    eventHandlers: j,
+    avatarDecorationSrc: O
   } = (0, E.default)({
     user: t,
-    size: v,
+    size: x,
     animateOnHover: !m
   }), P = l.useMemo(() => (0, c.shouldDisableUserPresenceInChannel)(t, i.id), [t, i.id]), {
     status: D,
@@ -79,21 +79,21 @@ function N(e) {
       profileType: _.UserProfileTypes.PANEL,
       animateOnHover: !m
     }), (0, a.jsx)(r.Clickable, {
-      ...O,
+      ...j,
       className: I.clickable,
       onClick: () => {
         R({
           action: "PRESS_VIEW_PROFILE",
           analyticsLocations: M
-        }), null == N || N()
+        }), null == v || v()
       },
       children: (0, a.jsx)(A, {
         src: L,
-        avatarDecoration: j,
-        size: v,
+        avatarDecoration: O,
+        size: x,
         imageClassName: I.overlay,
         status: P ? r.StatusTypes.UNKNOWN : D,
-        statusBackdropColor: y && !P ? (0, r.getStatusBackdropColor)(x) : void 0,
+        statusBackdropColor: y && !P ? (0, r.getStatusBackdropColor)(N) : void 0,
         "aria-label": t.username,
         isMobile: U,
         statusTooltip: !0,

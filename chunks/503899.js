@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return l
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("325767");
+var a = s("735250");
+s("470079");
+var n = s("325767");
 
 function l(e) {
   let {
     width: t = 18,
-    height: n = 18,
+    height: s = 18,
     color: l = "currentColor",
     ...i
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, s.default)(i),
+    ...(0, n.default)(i),
     width: t,
-    height: n,
+    height: s,
     viewBox: "0 0 18 18",
     children: [(0, a.jsx)("path", {
       fill: l,

@@ -31,10 +31,10 @@ function A(e) {
     transitionState: n,
     onClose: A
   } = e, {
-    analyticsLocations: v
+    analyticsLocations: x
   } = (0, u.default)(), {
-    fetched: N,
-    applicationsShelf: x,
+    fetched: v,
+    applicationsShelf: N,
     installedIntegrations: M
   } = (0, C.usePrivateChannelIntegrationState)({
     channelId: t
@@ -89,7 +89,7 @@ function A(e) {
           })]
         }), (0, a.jsx)("div", {
           className: _.applicationRowContainer,
-          children: N ? x.map(e => {
+          children: v ? N.map(e => {
             if (null != M.find(t => t.application.id === e.id)) return null;
             let n = null != e.description ? (0, d.parseBioReact)(e.description) : null,
               l = m.default.getApplicationIconURL({
@@ -147,7 +147,7 @@ function A(e) {
                 (0, h.openUserProfileModal)({
                   channelId: t,
                   userId: o.id,
-                  sourceAnalyticsLocations: v,
+                  sourceAnalyticsLocations: x,
                   analyticsLocation: {
                     section: g.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
                   }

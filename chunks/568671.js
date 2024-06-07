@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return c
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("626135"),
-  i = n("503899"),
-  r = n("292352"),
-  o = n("981631"),
-  u = n("689938"),
-  d = n("277886");
+var a = s("735250");
+s("470079");
+var n = s("481060"),
+  l = s("626135"),
+  i = s("503899"),
+  r = s("292352"),
+  o = s("981631"),
+  u = s("689938"),
+  d = s("277886");
 
 function c() {
-  return (0, a.jsxs)(s.Button, {
+  return (0, a.jsxs)(n.Button, {
     innerClassName: d.qrCodeButtonContent,
-    size: s.Button.Sizes.LARGE,
+    size: n.Button.Sizes.LARGE,
     onClick: () => {
-      (0, s.openModalLazy)(async () => {
+      (0, n.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("49368"), n.e("90688")]).then(n.bind(n, "978305"));
+        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("49368"), s.e("90688")]).then(s.bind(s, "978305"));
         return t => (0, a.jsx)(e, {
           ...t
         })

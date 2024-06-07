@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("207796"),
   E = n("436137"),
   h = n("316553"),
-  _ = n("559469"),
-  C = n("689938"),
+  C = n("559469"),
+  _ = n("689938"),
   m = n("531612");
 let S = {
     mass: 1,
@@ -85,19 +85,19 @@ t.default = s.memo(function(e) {
     onClick: n
   } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), O = (0, h.useDiscoveryGameApplicationId)({
     selectedGame: t
-  }), L = (0, _.useFakeDiscoveryUpsellClans)(O), M = (0, l.useSpring)({
+  }), L = (0, C.useFakeDiscoveryUpsellClans)(O), P = (0, l.useSpring)({
     ref: g,
     ...p
-  }), P = (0, l.useSpring)({
+  }), M = (0, l.useSpring)({
     ref: T,
     ...p
-  }), x = (0, l.useSpring)({
+  }), y = (0, l.useSpring)({
     ref: A,
     ...p
-  }), y = (0, l.useSpring)({
+  }), D = (0, l.useSpring)({
     ref: N,
     ...p
-  }), D = (0, l.useSpring)({
+  }), x = (0, l.useSpring)({
     ref: v,
     ...p
   }), b = (0, l.useSpring)({
@@ -120,9 +120,9 @@ t.default = s.memo(function(e) {
   let [U, j] = s.useMemo(() => {
     switch (t) {
       case f.ClanDiscoveryGame.GENSHIN:
-        return [C.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, C.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
+        return [_.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, _.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
       case f.ClanDiscoveryGame.VALORANT:
-        return [C.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, C.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
+        return [_.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, _.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
     }
   }, [t]);
   return (0, a.jsxs)("div", {
@@ -133,35 +133,35 @@ t.default = s.memo(function(e) {
         className: m.cards,
         children: [(0, a.jsx)(l.animated.div, {
           className: m.clanCardOuterContainer,
-          style: I ? void 0 : y,
+          style: I ? void 0 : D,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[0],
             className: m.clanCardOuterLeft
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
-          style: I ? void 0 : P,
+          style: I ? void 0 : M,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[1],
             className: m.clanCardInnerLeft
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardCenterContainer,
-          style: I ? void 0 : M,
+          style: I ? void 0 : P,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[4],
             className: m.clanCardCenter
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
-          style: I ? void 0 : x,
+          style: I ? void 0 : y,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[2],
             className: m.clanCardInnerRight
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardOuterContainer,
-          style: I ? void 0 : D,
+          style: I ? void 0 : x,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[3],
             className: m.clanCardOuterRight
@@ -183,7 +183,7 @@ t.default = s.memo(function(e) {
         children: j
       }), (0, a.jsx)(E.default, {
         onClick: n,
-        children: C.default.Messages.CHECK_IT_OUT
+        children: _.default.Messages.CHECK_IT_OUT
       })]
     })]
   })

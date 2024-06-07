@@ -61,7 +61,7 @@ function f(e) {
   })
 }
 
-function m(e) {
+function x(e) {
   let {
     onClick: t,
     isGift: s,
@@ -105,7 +105,7 @@ t.default = function(e) {
       shouldUseModifiedTierCards: C,
       isPremium: null != u,
       subscriptionTier: d.PremiumSubscriptionSKUs.TIER_2
-    }), (0, n.jsx)(m, {
+    }), (0, n.jsx)(x, {
       onClick: () => t(d.PremiumSubscriptionSKUs.TIER_0),
       isGift: s,
       priceOptions: r,

@@ -7,14 +7,14 @@ t.r(i), t.d(i, {
 var l = t("735250");
 t("470079");
 var n = t("120356"),
-  a = t.n(n),
-  s = t("692547"),
-  r = t("481060");
+  s = t.n(n),
+  r = t("692547"),
+  a = t("481060");
 t("651711");
-var c = t("696202"),
-  o = t("551556");
+var o = t("696202"),
+  d = t("551556");
 t("689938");
-var d = t("859888");
+var c = t("859888");
 t("347157"), t("177266");
 let u = e => {
   let {
@@ -22,38 +22,38 @@ let u = e => {
     description: t,
     checked: n,
     actionLabel: u,
-    actionHandler: h
-  } = e, f = null;
-  return f = n ? (0, l.jsx)(o.default, {
+    actionHandler: f
+  } = e, h = null;
+  return h = n ? (0, l.jsx)(d.default, {
     width: 20,
     height: 20
-  }) : (0, l.jsx)(c.default, {
-    color: s.default.unsafe_rawColors.RED_400.css,
+  }) : (0, l.jsx)(o.default, {
+    color: r.default.unsafe_rawColors.RED_400.css,
     width: 20,
     height: 20
   }), (0, l.jsxs)("div", {
-    className: d.checklistItem,
+    className: c.checklistItem,
     children: [(0, l.jsx)("div", {
-      className: d.checklistIcon,
-      children: f
+      className: c.checklistIcon,
+      children: h
     }), (0, l.jsxs)("div", {
-      className: a()(d.__invalid_checklistText, n && d.ineligibleRow),
-      children: [(0, l.jsx)(r.Heading, {
+      className: s()(c.__invalid_checklistText, n && c.ineligibleRow),
+      children: [(0, l.jsx)(a.Heading, {
         variant: "heading-md/semibold",
-        className: d.checklistItemName,
+        className: c.checklistItemName,
         children: i
-      }), (0, l.jsx)(r.Text, {
+      }), (0, l.jsx)(a.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
         children: t
       })]
     }), null != u && (0, l.jsx)("div", {
-      className: d.eligibilityActionContainer,
-      children: (0, l.jsx)(r.Button, {
-        className: d.eligibilityActionButton,
-        look: r.ButtonLooks.OUTLINED,
-        color: r.ButtonColors.PRIMARY,
-        onClick: h,
+      className: c.eligibilityActionContainer,
+      children: (0, l.jsx)(a.Button, {
+        className: c.eligibilityActionButton,
+        look: a.ButtonLooks.OUTLINED,
+        color: a.ButtonColors.PRIMARY,
+        onClick: f,
         grow: !0,
         children: u
       })

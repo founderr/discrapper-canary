@@ -21,15 +21,15 @@ var a = n("735250"),
   T = n("158776"),
   I = n("246946"),
   A = n("979651"),
-  v = n("5192"),
-  N = n("51144"),
-  x = n("342656"),
+  x = n("5192"),
+  v = n("51144"),
+  N = n("342656"),
   M = n("785717"),
   R = n("221292"),
   y = n("318661"),
   L = n("57048"),
-  O = n("726059"),
-  j = n("162267"),
+  j = n("726059"),
+  O = n("162267"),
   P = n("502762"),
   D = n("171368"),
   b = n("944546"),
@@ -38,18 +38,18 @@ var a = n("735250"),
   w = n("347949"),
   k = n("240328"),
   H = n("436478"),
-  B = n("138394"),
-  G = n("248345"),
+  G = n("138394"),
+  B = n("248345"),
   V = n("19836"),
   W = n("538564"),
   Y = n("319300"),
   z = n("591600"),
   K = n("584045"),
   Z = n("664202"),
-  q = n("520858"),
-  X = n("772056"),
-  Q = n("747711"),
-  J = n("228168"),
+  X = n("520858"),
+  q = n("772056"),
+  J = n("747711"),
+  Q = n("228168"),
   $ = n("981631"),
   ee = n("689938"),
   et = n("235892");
@@ -109,13 +109,13 @@ t.default = e => {
         return t === $.ActivityTypes.HANG_STATUS
       }) : null
     }
-  }), e_ = null != em || null != eS || eE, eT = null !== (t = v.default.getNickname(null, s.id, n)) && void 0 !== t ? t : N.default.getName(n), eI = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), {
+  }), e_ = null != em || null != eS || eE, eT = null !== (t = x.default.getNickname(null, s.id, n)) && void 0 !== t ? t : v.default.getName(n), eI = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), {
     mutualFriends: eA,
-    isFetching: ev
-  } = (0, O.default)(n.id, !n.bot), {
-    mutualGuilds: eN,
     isFetching: ex
-  } = (0, j.default)(n.id, !n.bot), eM = !n.bot && null != eA && eA.length > 0, eR = !n.bot && null != eN && eN.length > 0, ey = (0, Z.useShouldShowUserPopoutCollectiblesUpsell)({
+  } = (0, j.default)(n.id, !n.bot), {
+    mutualGuilds: ev,
+    isFetching: eN
+  } = (0, O.default)(n.id, !n.bot), eM = !n.bot && null != eA && eA.length > 0, eR = !n.bot && null != ev && ev.length > 0, ey = (0, Z.useShouldShowUserPopoutCollectiblesUpsell)({
     popoutUser: n,
     source: H.UserPopoutUpsellSource.PROFILE_PANEL
   }), eL = (0, u.default)();
@@ -131,7 +131,7 @@ t.default = e => {
       status: eg
     })
   }, [er, eC, em, ep, eg]);
-  let eO = null == eN ? void 0 : eN.map(e => {
+  let ej = null == ev ? void 0 : ev.map(e => {
       let {
         guild: t,
         nick: l
@@ -144,7 +144,7 @@ t.default = e => {
         onSelect: () => (0, p.transitionToGuild)(t.id)
       }, t.id)
     }),
-    ej = null == eA ? void 0 : eA.map(e => {
+    eO = null == eA ? void 0 : eA.map(e => {
       let {
         key: t,
         user: n,
@@ -165,7 +165,7 @@ t.default = e => {
         }
       }, t)
     }),
-    eP = eo.map(e => (0, a.jsx)(q.default, {
+    eP = eo.map(e => (0, a.jsx)(X.default, {
       channel: s,
       integration: e
     }, e.application.id)),
@@ -176,7 +176,7 @@ t.default = e => {
     ew = n.bot || eF,
     {
       enabled: ek
-    } = (0, x.useProfileMutualsExperiment)({
+    } = (0, N.useProfileMutualsExperiment)({
       autoTrackExposure: !0,
       location: d.default.PROFILE,
       disable: ew
@@ -198,7 +198,7 @@ t.default = e => {
         children: (0, a.jsxs)(P.default, {
           user: n,
           displayProfile: er,
-          profileType: J.UserProfileTypes.PANEL,
+          profileType: Q.UserProfileTypes.PANEL,
           themeOverride: eL,
           children: [ey.shouldShow && (0, a.jsx)(k.default, {
             user: n,
@@ -207,7 +207,7 @@ t.default = e => {
             isInSidebar: !0,
             ...ey
           }, n.id), (0, a.jsxs)(o.ScrollerNone, {
-            children: [(0, a.jsx)(Q.default, {
+            children: [(0, a.jsx)(J.default, {
               user: n,
               displayProfile: er,
               channel: s,
@@ -222,7 +222,7 @@ t.default = e => {
               }), (0, a.jsx)(W.default, {
                 customStatusActivity: ep,
                 animate: en
-              }), (0, a.jsx)(B.default, {}), (0, a.jsx)(V.default, {
+              }), (0, a.jsx)(G.default, {}), (0, a.jsx)(V.default, {
                 bio: null == er ? void 0 : er.bio,
                 hidePersonalInformation: eI,
                 animateOnHover: !0,
@@ -234,14 +234,14 @@ t.default = e => {
               }), !n.isSystemUser() && (0, a.jsxs)(a.Fragment, {
                 children: [(0, a.jsx)(Y.default, {
                   userId: n.id
-                }), (0, a.jsx)(B.default, {})]
+                }), (0, a.jsx)(G.default, {})]
               }), !n.isSystemUser() && (0, a.jsx)(z.default, {
                 user: n,
                 setNote: !1
               })]
             }), e_ ? (0, a.jsx)(P.default.Overlay, {
               className: et.overlay,
-              children: (0, a.jsx)(G.default, {
+              children: (0, a.jsx)(B.default, {
                 activity: null != em || eE ? em : eS,
                 user: n,
                 channelId: s.id,
@@ -256,14 +256,14 @@ t.default = e => {
               userId: n.id
             }), (eR || eM) && (0, a.jsxs)(P.default.Overlay, {
               className: et.profilePanelConnections,
-              children: [eR ? (0, a.jsx)(X.default, {
+              children: [eR ? (0, a.jsx)(q.default, {
                 className: et.mutualGuildsList,
                 header: ee.default.Messages.MUTUAL_GUILDS_COUNT.format({
-                  count: eN.length
+                  count: ev.length
                 }),
-                isLoadingHeader: ex,
-                loadingContentsCount: eN.length,
-                itemType: X.ListType.MutualGuildList,
+                isLoadingHeader: eN,
+                loadingContentsCount: ev.length,
+                itemType: q.ListType.MutualGuildList,
                 onExpand: () => {
                   (0, R.trackUserProfileAction)({
                     action: "PRESS_SECTION",
@@ -274,17 +274,17 @@ t.default = e => {
                     analyticsLocations: es
                   })
                 },
-                children: eO
-              }) : null, eM ? (0, a.jsx)(X.default, {
+                children: ej
+              }) : null, eM ? (0, a.jsx)(q.default, {
                 className: i()(et.mutualFriendsList, {
                   [et.mutualFriendsDivider]: eR
                 }),
                 header: ee.default.Messages.MUTUAL_FRIENDS_COUNT.format({
                   count: eA.length
                 }),
-                isLoadingHeader: ev,
+                isLoadingHeader: ex,
                 loadingContentsCount: eA.length,
-                itemType: X.ListType.MutualFriendsList,
+                itemType: q.ListType.MutualFriendsList,
                 onExpand: () => {
                   (0, R.trackUserProfileAction)({
                     action: "PRESS_SECTION",
@@ -295,17 +295,17 @@ t.default = e => {
                     analyticsLocations: es
                   })
                 },
-                children: ej
+                children: eO
               }) : null]
             }), ed && (0, a.jsx)(P.default.Overlay, {
               className: i()(et.profilePanelConnections, et.appListThemedContainer),
-              children: (0, a.jsxs)(X.default, {
+              children: (0, a.jsxs)(q.default, {
                 header: eP.length > 0 ? ee.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
                   count: eP.length
                 }) : ee.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
                 isLoadingContents: !eu,
                 isLoadingHeader: !1,
-                itemType: X.ListType.AppsList,
+                itemType: q.ListType.AppsList,
                 children: [eP, ec.length > 0 && (0, a.jsxs)("div", {
                   className: et.appButtonContainer,
                   children: [0 === eo.length && (0, a.jsx)(o.Text, {

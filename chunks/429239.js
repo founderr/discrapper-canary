@@ -134,15 +134,15 @@ t.default = function(e) {
     className: I,
     ...A
   } = e, {
-    size: v
+    size: x
   } = u.AvatarSizeSpecs[p], {
-    statusCoords: N,
-    frontAvatarOffsetPx: x,
+    statusCoords: v,
+    frontAvatarOffsetPx: N,
     frontAvatarSizePx: M,
     backAvatarSizePx: R
   } = l.useMemo(() => {
     var e;
-    let t = "".concat(v, "-").concat(S);
+    let t = "".concat(x, "-").concat(S);
     return null !== (e = h[t]) && void 0 !== e ? e : function(e, t, n) {
       let a = u.AvatarSizeSpecs[e],
         l = a.size / (c.DIAGONAL_FACEPILE_AVATAR_PROPORTION + c.DIAGONAL_FACEPILE_MASK_OFFSET),
@@ -157,12 +157,12 @@ t.default = function(e) {
         };
       return h[n] = o, o
     }(p, S, t)
-  }, [v, S, p]);
+  }, [x, S, p]);
   let y = (t = null != _, n = S, s = p, n ? g[s].typing : t ? g[s].status : g[s].default);
   return (0, a.jsxs)("div", {
     style: {
-      width: v,
-      height: v,
+      width: x,
+      height: x,
       ...T
     },
     "aria-label": A["aria-label"],
@@ -170,8 +170,8 @@ t.default = function(e) {
     className: i()(f.container, I),
     children: [(0, a.jsxs)(d.default, {
       mask: y,
-      height: v,
-      width: v,
+      height: x,
+      width: x,
       children: [(0, a.jsx)("img", {
         src: o,
         alt: "",
@@ -180,8 +180,8 @@ t.default = function(e) {
       }), (0, a.jsx)("div", {
         style: {
           position: "absolute",
-          top: x,
-          left: x
+          top: N,
+          left: N
         },
         children: (0, a.jsx)(C, {
           src: m,
@@ -191,7 +191,7 @@ t.default = function(e) {
         })
       })]
     }), (0, a.jsx)(E, {
-      statusCoords: N,
+      statusCoords: v,
       status: _,
       isTyping: S
     })]

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   showMFASuccessModal: function() {
-    return p
+    return _
   }
 }), n("411104"), n("47120");
-var s = n("735250"),
-  a = n("470079"),
-  r = n("283693"),
-  o = n("481060"),
+var a = n("735250"),
+  s = n("470079"),
+  o = n("283693"),
+  r = n("481060"),
   i = n("816814"),
   l = n("837651"),
   d = n("200483"),
@@ -18,15 +18,15 @@ function f(e) {
   let {
     onError: t,
     onSuccess: n,
-    PasswordConfirm: o,
+    PasswordConfirm: r,
     ...l
-  } = e, [d, f] = a.useState("");
-  return (0, s.jsx)(o, {
+  } = e, [d, f] = s.useState("");
+  return (0, a.jsx)(r, {
     ...l,
     handleSubmit: e => i.default.enableMFAStart(e),
     onError: e => {
-      var s;
-      if (("object" == typeof(s = e) && null != s && (0, r.hasOwnProperty)(s, "code") && "number" == typeof s.code ? s.code : 0) === c.AbortCodes.MFA_INVALID_SECRET) n(d), l.onClose();
+      var a;
+      if (("object" == typeof(a = e) && null != a && (0, o.hasOwnProperty)(a, "code") && "number" == typeof a.code ? a.code : 0) === c.AbortCodes.MFA_INVALID_SECRET) n(d), l.onClose();
       else t(e)
     },
     onPasswordChange: f,
@@ -38,8 +38,8 @@ function f(e) {
 
 function E(e, t) {
   return new Promise(n => {
-    (0, o.openModalLazy)(async () => a => (0, s.jsx)(l.default, {
-      ...a,
+    (0, r.openModalLazy)(async () => s => (0, a.jsx)(l.default, {
+      ...s,
       password: e,
       emailToken: t,
       handleEnableMFASuccess: n
@@ -47,14 +47,14 @@ function E(e, t) {
   })
 }
 
-function p() {
+function _() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   return new Promise(t => {
-    (0, o.openModalLazy)(async () => {
+    (0, r.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([n.e("49237"), n.e("99387"), n.e("76540"), n.e("95422")]).then(n.bind(n, "628908"));
-      return n => (0, s.jsx)(t, {
+      return n => (0, a.jsx)(t, {
         ...n,
         isTotp: e
       })
@@ -64,28 +64,28 @@ function p() {
     })
   })
 }
-async function _() {
+async function p() {
   let e = await new Promise((e, t) => {
-    (0, o.openModalLazy)(async () => {
+    (0, r.openModalLazy)(async () => {
       let {
-        default: a
+        default: s
       } = await Promise.all([n.e("99387"), n.e("24642")]).then(n.bind(n, "279837"));
-      return n => (0, s.jsx)(f, {
+      return n => (0, a.jsx)(f, {
         ...n,
         onSuccess: e,
         onError: t,
-        PasswordConfirm: a
+        PasswordConfirm: s
       })
     })
   });
   if ((0, d.isMfaEmailVerificationEnabled)()) {
     var t;
-    let a = await (t = e, new Promise(e => {
-      (0, o.openModalLazy)(async () => {
+    let s = await (t = e, new Promise(e => {
+      (0, r.openModalLazy)(async () => {
         let {
-          default: a
+          default: s
         } = await Promise.all([n.e("99387"), n.e("94566")]).then(n.bind(n, "965072"));
-        return n => (0, s.jsx)(a, {
+        return n => (0, a.jsx)(s, {
           ...n,
           onFormSubmit: async e => await i.default.verifyEmailCode(e),
           onResend: async () => {
@@ -97,10 +97,10 @@ async function _() {
         })
       })
     }));
-    await E(e, null == a ? void 0 : a.token)
+    await E(e, null == s ? void 0 : s.token)
   } else await E(e);
-  await p()
+  await _()
 }
 t.default = {
-  enableMFA: _
+  enableMFA: p
 }

@@ -24,19 +24,19 @@ var a = n("735250"),
 t.default = e => {
   var t;
   let {
-    channel: v,
-    guild: N
+    channel: x,
+    guild: v
   } = e, {
-    currentCategoryId: x,
+    currentCategoryId: N,
     directoryEntries: M,
     categoryCounts: R,
     allEntriesCount: y,
     isLoading: L
   } = (0, s.useStateFromStoresObject)([p.default], () => {
-    let e = p.default.getCurrentCategoryId(v.id),
-      t = p.default.getDirectoryEntries(v.id, e === T.DirectoryEntryCategories.ALL ? null : e),
-      n = p.default.getDirectoryCategoryCounts(v.id),
-      a = p.default.getDirectoryAllEntriesCount(v.id);
+    let e = p.default.getCurrentCategoryId(x.id),
+      t = p.default.getDirectoryEntries(x.id, e === T.DirectoryEntryCategories.ALL ? null : e),
+      n = p.default.getDirectoryCategoryCounts(x.id),
+      a = p.default.getDirectoryAllEntriesCount(x.id);
     return {
       currentCategoryId: e,
       directoryEntries: t,
@@ -46,101 +46,101 @@ t.default = e => {
     }
   });
   l.useEffect(() => () => {
-    let e = d.default.lastMessageId(v.id);
+    let e = d.default.lastMessageId(x.id);
     null != e && r.default.wait(() => {
-      (0, o.ack)(v.id, !0, !0, e)
+      (0, o.ack)(x.id, !0, !0, e)
     })
-  }, [v.id]);
-  let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), x) : null, [M, x]),
+  }, [x.id]);
+  let j = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), N) : null, [M, N]),
     {
-      mostRecentQuery: j,
+      mostRecentQuery: O,
       searchFetching: P,
       searchResults: D
     } = (0, s.useStateFromStoresObject)([m.default], () => {
       let {
         mostRecentQuery: e,
         fetching: t
-      } = m.default.getSearchState(v.id);
+      } = m.default.getSearchState(x.id);
       return {
         mostRecentQuery: e,
         searchFetching: t,
-        searchResults: m.default.getSearchResults(v.id, e)
+        searchResults: m.default.getSearchResults(x.id, e)
       }
     }),
-    [b, U] = l.useState(j),
-    F = "" !== j,
+    [b, U] = l.useState(O),
+    F = "" !== O,
     {
       showHubEventsList: w
     } = u.default.useExperiment({
-      guildId: null !== (t = N.id) && void 0 !== t ? t : "",
+      guildId: null !== (t = v.id) && void 0 !== t ? t : "",
       location: "6f7fb0_1"
     }, {
       autoTrackExposure: !1
     });
   l.useEffect(() => {
-    h.fetchDirectoryEntries(v.id), h.fetchDirectoryCounts(v.id), w && f.fetchDirectoryEntries(v.id), U(j)
-  }, [v.id]), l.useEffect(() => {
+    h.fetchDirectoryEntries(x.id), h.fetchDirectoryCounts(x.id), w && f.fetchDirectoryEntries(x.id), U(O)
+  }, [x.id]), l.useEffect(() => {
     c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_CHANNEL_VIEWED, {
-      directory_channel_id: v.id,
-      directory_guild_id: N.id,
-      primary_category_id: x
+      directory_channel_id: x.id,
+      directory_guild_id: v.id,
+      primary_category_id: N
     })
-  }, [v.id, N.id, x]);
-  let k = (0, E.useCanCreateOrAddGuildInDirectory)(v) ? () => {
+  }, [x.id, v.id, N]);
+  let k = (0, E.useCanCreateOrAddGuildInDirectory)(x) ? () => {
       (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("79764")]).then(n.bind(n, "533202"));
         return t => (0, a.jsx)(e, {
           ...t,
-          directoryGuildName: N.name,
-          directoryGuildId: N.id,
-          directoryChannelId: v.id,
-          currentCategoryId: x === T.DirectoryEntryCategories.ALL ? null : x
+          directoryGuildName: v.name,
+          directoryGuildId: v.id,
+          directoryChannelId: x.id,
+          currentCategoryId: N === T.DirectoryEntryCategories.ALL ? null : N
         })
       })
     } : void 0,
     H = e => {
-      0 !== b.trim().length && e.charCode === I.KeyboardKeys.ENTER && (h.searchDirectoryEntries(v.id, b), c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
-        directory_channel_id: v.id,
-        directory_guild_id: N.id
+      0 !== b.trim().length && e.charCode === I.KeyboardKeys.ENTER && (h.searchDirectoryEntries(x.id, b), c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
+        directory_channel_id: x.id,
+        directory_guild_id: v.id
       }))
     },
-    B = () => {
-      U(""), h.clearDirectorySearch(v.id)
+    G = () => {
+      U(""), h.clearDirectorySearch(x.id)
     };
   return F ? (0, a.jsx)(_.default, {
     searchQuery: b,
     setSearchQuery: U,
-    mostRecentQuery: j,
+    mostRecentQuery: O,
     handleSearchKeyPress: H,
-    handleClearSearch: B,
+    handleClearSearch: G,
     handleCreateOrAddGuild: k,
     searchResults: D,
     searchFetching: P
-  }) : null == O && null == x ? (0, a.jsx)("div", {
+  }) : null == j && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
     children: (0, a.jsx)(i.Spinner, {
       className: A.spinner
     })
-  }) : (null == O ? void 0 : O.length) === 0 && null == x ? (0, a.jsx)("div", {
+  }) : (null == j ? void 0 : j.length) === 0 && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
     children: (0, a.jsx)(C.default, {
-      guild: N,
+      guild: v,
       onAddGuild: k
     })
   }) : (0, a.jsx)(g.default, {
-    channel: v,
+    channel: x,
     searchQuery: b,
     setSearchQuery: U,
     handleSearchKeyPress: H,
-    handleClearSearch: B,
+    handleClearSearch: G,
     handleCreateOrAddGuild: k,
-    currentCategoryId: x,
+    currentCategoryId: N,
     handleSelectCategory: e => {
-      h.selectDirectoryCategory(v.id, e)
+      h.selectDirectoryCategory(x.id, e)
     },
-    directoryEntries: O,
+    directoryEntries: j,
     categoryCounts: R,
     allEntriesCount: y,
     isLoading: L

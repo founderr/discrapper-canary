@@ -1,88 +1,88 @@
 "use strict";
 n.r(t), n.d(t, {
   capitalizeText: function() {
-    return T
+    return A
   },
   getAppealSignalDisplayText: function() {
-    return m
+    return N
   },
   getAttachmentFilename: function() {
-    return f
+    return S
   },
   getClassificationExpiration: function() {
-    return h
+    return C
   },
   getClassificationRelativeIncidentTime: function() {
-    return c
+    return a
   },
   getRequestReviewErrorFromCode: function() {
-    return p
+    return L
   },
   isFlaggedContentEmpty: function() {
-    return _
+    return u
   },
   isGuildClassification: function() {
-    return I
+    return T
   },
   parseMessageEmbedForProps: function() {
-    return E
+    return _
   }
 }), n("724458");
-var s = n("913527"),
-  a = n.n(s),
-  l = n("118139"),
-  i = n("531441"),
-  r = n("800530"),
-  o = n("981631"),
-  u = n("959517"),
-  d = n("689938");
+var i = n("913527"),
+  E = n.n(i),
+  r = n("118139"),
+  o = n("531441"),
+  l = n("800530"),
+  s = n("981631"),
+  I = n("959517"),
+  c = n("689938");
 
-function c(e) {
-  return a()().to(a()(e))
+function a(e) {
+  return E()().to(E()(e))
 }
 
-function f(e) {
+function S(e) {
   var t, n;
-  return (0, l.isImageFile)(e.filename) || (0, l.isVideoFile)(e.filename) ? "".concat(u.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
-}
-
-function E(e) {
-  var t, n, s, a;
-  if (null == e.fields) return;
-  let l = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
-  return {
-    header: null !== (t = l[r.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
-    icon: l[r.SafetySystemNotificationEmbedKeys.ICON_TYPE],
-    body: null !== (n = l[r.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
-    ctas: (null !== (s = l[r.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== s ? s : "").split(",").filter(e => "" !== e),
-    timestamp: parseFloat(null !== (a = l[r.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== a ? a : 0),
-    theme: l[r.SafetySystemNotificationEmbedKeys.THEME],
-    learn_more_link: l[r.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
-    classification_id: l[r.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
-  }
+  return (0, r.isImageFile)(e.filename) || (0, r.isVideoFile)(e.filename) ? "".concat(I.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
 }
 
 function _(e) {
-  if (e.type === i.ContentIdType.MESSAGE) return "" === e.content && 0 === e.attachments.length;
+  var t, n, i, E;
+  if (null == e.fields) return;
+  let r = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
+  return {
+    header: null !== (t = r[l.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
+    icon: r[l.SafetySystemNotificationEmbedKeys.ICON_TYPE],
+    body: null !== (n = r[l.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
+    ctas: (null !== (i = r[l.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== i ? i : "").split(",").filter(e => "" !== e),
+    timestamp: parseFloat(null !== (E = r[l.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== E ? E : 0),
+    theme: r[l.SafetySystemNotificationEmbedKeys.THEME],
+    learn_more_link: r[l.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
+    classification_id: r[l.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
+  }
+}
+
+function u(e) {
+  if (e.type === o.ContentIdType.MESSAGE) return "" === e.content && 0 === e.attachments.length;
   return !0
 }
-let m = e => ({
-    [r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
-    [r.AppealIngestionSignal.TOO_STRICT_UNFAIR]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
-    [r.AppealIngestionSignal.DONT_AGREE_PENALTY]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
-    [r.AppealIngestionSignal.SOMETHING_ELSE]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
+let N = e => ({
+    [l.AppealIngestionSignal.DIDNT_VIOLATE_POLICY]: c.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
+    [l.AppealIngestionSignal.TOO_STRICT_UNFAIR]: c.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
+    [l.AppealIngestionSignal.DONT_AGREE_PENALTY]: c.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
+    [l.AppealIngestionSignal.SOMETHING_ELSE]: c.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
   })[e],
-  T = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
+  A = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
 
-function I(e) {
+function T(e) {
   return null != e && null != e.guild_metadata
 }
-let p = e => {
-  if (e === o.AbortCodes.DSA_APPEAL_REQUEST_DEFLECTION) return d.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
-  return d.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
+let L = e => {
+  if (e === s.AbortCodes.DSA_APPEAL_REQUEST_DEFLECTION) return c.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
+  return c.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
 };
 
-function h(e) {
+function C(e) {
   let t = e.max_expiration_time;
   if (null == t) return null;
   try {

@@ -31,8 +31,8 @@ function _(e) {
     let e = I ? E.FocusedActivityLayouts.NO_CHAT : E.FocusedActivityLayouts.RESIZABLE;
     (0, m.updateFocusedActivityLayout)(e)
   }, [I]), {
-    unreadCount: v,
-    mentionCount: N
+    unreadCount: x,
+    mentionCount: v
   } = function(e) {
     let t = (0, i.useStateFromStores)([f.default], () => !(0, s.isEmpty)(f.default.getTypingUsers(e)), [e]),
       {
@@ -47,22 +47,22 @@ function _(e) {
       mentionCount: a,
       isTyping: t
     }
-  }(t), x = l.useCallback(() => {
+  }(t), N = l.useCallback(() => {
     var e;
     null === (e = T.current) || void 0 === e || e.focus()
   }, []);
   (0, h.useComponentAction)({
     event: C.ComponentActions.FOCUS_CHAT_BUTTON,
-    handler: x
+    handler: N
   });
   let M = I ? g.default.Messages.HIDE_CHAT : g.default.Messages.SHOW_CHAT,
     R = [M];
-  N > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
-    mentionCount: N
-  })), v > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+  v > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+    mentionCount: v
+  })), x > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
   let y = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
-    L = N > 0 ? N : v,
-    O = L > 0;
+    L = v > 0 ? v : x,
+    j = L > 0;
   return (0, a.jsxs)("div", {
     className: S.wrapper,
     children: [(0, a.jsx)(d.CenterControlButton, {
@@ -75,8 +75,8 @@ function _(e) {
       themeable: !0,
       className: n,
       ..._
-    }), O ? (0, a.jsx)(u.default, {
-      hasMentions: N > 0,
+    }), j ? (0, a.jsx)(u.default, {
+      hasMentions: v > 0,
       truncatedCount: L > 99 ? "99+" : L,
       className: S.badge
     }) : null]

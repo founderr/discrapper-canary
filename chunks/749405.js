@@ -21,13 +21,13 @@ function h(e) {
     active: t,
     user: n,
     channel: h
-  } = e, _ = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
+  } = e, C = (0, u.useListHasSingleMessageRequest)(), _ = s.useCallback(() => {
     (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
   }, []), m = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), S = s.useCallback(() => {
-    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
-  }, [h.id, _]), {
+    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), C && (0, i.transitionToChannel)(h.id)
+  }, [h.id, C]), {
     acceptMessageRequest: p,
     rejectMessageRequest: I,
     isAcceptLoading: g,
@@ -39,7 +39,7 @@ function h(e) {
     user: n,
     onAcceptSuccess: S,
     onRejectSuccess: m,
-    onError: C
+    onError: _
   }), R = g || T || A || N || v;
   return (0, a.jsxs)("div", {
     className: E.container,

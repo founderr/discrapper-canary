@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("26290"),
   E = n("626135"),
   h = n("321488"),
-  _ = n("417183"),
-  C = n("170245"),
+  C = n("417183"),
+  _ = n("170245"),
   m = n("981631"),
   S = n("689938"),
   p = n("615808");
@@ -42,7 +42,7 @@ function I(e) {
       }
     })
   }, R = I === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : I, O = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
-  return (0, a.jsx)(_.default, {
+  return (0, a.jsx)(C.default, {
     isFocused: g,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
@@ -81,7 +81,7 @@ function I(e) {
       });
       return (0, a.jsxs)("div", {
         className: p.listItemContents,
-        children: [(0, a.jsx)(C.default, {
+        children: [(0, a.jsx)(_.default, {
           user: t,
           hovered: e,
           showAccountIdentifier: !0,

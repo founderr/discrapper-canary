@@ -19,8 +19,8 @@ var a = n("735250"),
   f = n("963202"),
   E = n("353093"),
   h = n("207796"),
-  _ = n("497189"),
-  C = n("304231"),
+  C = n("497189"),
+  _ = n("304231"),
   m = n("526282"),
   S = n("490610"),
   p = n("981631"),
@@ -46,7 +46,7 @@ function A() {
     }, [n]),
     f = (0, u.default)(),
     E = s.useMemo(() => T(e, f), [e, f]),
-    _ = s.useMemo(() => {
+    C = s.useMemo(() => {
       switch (e) {
         case h.ClanDiscoveryGame.GENSHIN:
           return f === p.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
@@ -79,12 +79,12 @@ function A() {
       return (0, a.jsx)("div", {
         className: g.container,
         children: (0, a.jsxs)("div", {
-          className: i()(_, g.userOnboarding),
+          className: i()(C, g.userOnboarding),
           children: [(0, a.jsx)("div", {
             className: g.backgroundImageBlur
           }), (0, a.jsx)("div", {
             className: g.backgroundImageContent,
-            children: (0, a.jsx)(C.default, {
+            children: (0, a.jsx)(_.default, {
               selectedGame: e,
               setScreen: n
             })
@@ -108,7 +108,7 @@ function N() {
     }),
     d = s.useMemo(() => l.filter(e => !(0, E.isGuildAClan)(e)), [l]),
     c = (0, u.default)(),
-    C = s.useMemo(() => T(t, c), [t, c]),
+    _ = s.useMemo(() => T(t, c), [t, c]),
     m = !e && n;
   return 0 === l.length ? null : (0, a.jsx)("div", {
     className: g.container,
@@ -116,12 +116,12 @@ function N() {
       className: g.upsellScroller,
       fade: !0,
       children: [(0, a.jsxs)("div", {
-        className: i()(C, g.adminUpsell),
+        className: i()(_, g.adminUpsell),
         children: [(0, a.jsx)("div", {
           className: g.backgroundImageBlur
         }), (0, a.jsx)("div", {
           className: g.backgroundImageContent,
-          children: (0, a.jsx)(_.default, {
+          children: (0, a.jsx)(C.default, {
             isBrowseButtonVisible: m,
             selectedGame: t,
             eligibleGuilds: d,

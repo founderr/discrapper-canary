@@ -12,9 +12,9 @@ var a = n("243814"),
   f = n("452426"),
   E = n("736045"),
   h = n("186901"),
-  _ = n("231338");
+  C = n("231338");
 t.default = {
-  [_.RPCCommands.GET_SOUNDBOARD_SOUNDS]: {
+  [C.RPCCommands.GET_SOUNDBOARD_SOUNDS]: {
     scope: {
       [h.RPC_SCOPE_CONFIG.ANY]: [a.OAuth2Scopes.RPC, h.RPC_LOCAL_SCOPE]
     },
@@ -25,7 +25,7 @@ t.default = {
       return e.forEach(e => e.forEach(e => t.push((0, r.soundboardSoundToAPI)(e)))), t
     }
   },
-  [_.RPCCommands.PLAY_SOUNDBOARD_SOUND]: {
+  [C.RPCCommands.PLAY_SOUNDBOARD_SOUND]: {
     scope: {
       [h.RPC_SCOPE_CONFIG.ALL]: [a.OAuth2Scopes.RPC, a.OAuth2Scopes.RPC_VOICE_WRITE]
     },
@@ -46,15 +46,15 @@ t.default = {
         f = (0, E.default)(),
         h = null != r && null != a && (0, o.canUseSoundboardSound)(a, r, f);
       if (null == f) throw new c.default({
-        errorCode: _.RPCErrors.INVALID_CHANNEL
+        errorCode: C.RPCErrors.INVALID_CHANNEL
       }, "Invalid Channel.");
       if (h) {
         if ((0, u.default)(f)) null != r && (0, o.playSound)(r, f.id, [s.default.RPC]);
         else throw new c.default({
-          errorCode: _.RPCErrors.INVALID_PERMISSIONS
+          errorCode: C.RPCErrors.INVALID_PERMISSIONS
         }, "Invalid Permissions.")
       } else throw new c.default({
-        errorCode: _.RPCErrors.INVALID_SOUND
+        errorCode: C.RPCErrors.INVALID_SOUND
       }, "Invalid Sound.")
     }
   }

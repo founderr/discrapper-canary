@@ -21,9 +21,9 @@ var a = n("735250"),
   T = n("74538"),
   I = n("557457"),
   A = n("475674"),
-  v = n("981631"),
-  N = n("474936"),
-  x = n("689938"),
+  x = n("981631"),
+  v = n("474936"),
+  N = n("689938"),
   M = n("909143");
 let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   y = {
@@ -34,10 +34,10 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     opacity: 1,
     transform: "translate3d(0%, 0, 0)"
   },
-  O = {
+  j = {
     opacity: 0
   },
-  j = {
+  O = {
     opacity: 1
   },
   P = {
@@ -61,20 +61,20 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         didTrackUpsellViewed: R,
         setDidTrackUpsellViewed: y,
         className: L,
-        premiumIndicator: O
+        premiumIndicator: j
       } = e,
-      j = (0, I.getMaxQuality)(r),
+      O = (0, I.getMaxQuality)(r),
       {
         analyticsLocations: P
       } = (0, m.default)(),
       D = null != (0, A.default)(r);
     try {
-      t = (0, I.isPremiumFPS)(j)
+      t = (0, I.isPremiumFPS)(O)
     } catch (e) {
       t = !1
     }
     try {
-      s = (0, I.isPremiumResolution)(j)
+      s = (0, I.isPremiumResolution)(O)
     } catch (e) {
       s = !1
     }
@@ -83,7 +83,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         location: U
       } = (0, h.useAnalyticsContext)(),
       F = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      w = o && !T.default.isPremium(F, N.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
+      w = o && !T.default.isPremium(F, v.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
       k = l.useCallback(() => {
         w && b && (0, f.openModalLazy)(async () => {
           let {
@@ -96,15 +96,15 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         })
       }, [w, b, U]);
     if (l.useEffect(() => {
-        !R && b && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-          type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
+        !R && b && (_.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+          type: v.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: P
         }), y(!0))
-      }, [t, s, b, R, y, P]), null == j) return null;
+      }, [t, s, b, R, y, P]), null == O) return null;
     let H = (0, a.jsx)(f.Tooltip, {
-      text: D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+      text: D ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
       color: f.Tooltip.Colors.GREY,
       children: e => (0, a.jsxs)(f.Clickable, {
@@ -117,16 +117,16 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
           className: M.premiumStreamIcon
         }) : null, (0, a.jsx)("span", {
           className: M.qualityResolution,
-          children: (0, I.getResolutionText)(j.maxResolution)
+          children: (0, I.getResolutionText)(O.maxResolution)
         }), (0, a.jsx)("span", {
-          children: (0, I.getFPSText)(j.maxFrameRate)
+          children: (0, I.getFPSText)(O.maxFrameRate)
         })]
       })
     });
     return (0, a.jsx)(g.TextBadge, {
       text: H,
       className: i()(L, M.qualityIndicatorBadge, {
-        [M.qualityIndicatorBadgePremium]: O
+        [M.qualityIndicatorBadgePremium]: j
       }),
       color: d.default.unsafe_rawColors.PRIMARY_500.css,
       shape: c
@@ -150,10 +150,10 @@ t.default = e => {
   }, [t]);
   let _ = (0, r.useTransition)(C, {
       enter: {
-        from: E.enabled ? O : y,
-        to: E.enabled ? j : L
+        from: E.enabled ? j : y,
+        to: E.enabled ? O : L
       },
-      leave: E.enabled ? O : y,
+      leave: E.enabled ? j : y,
       config: b
     }),
     T = (0, r.useSpring)({

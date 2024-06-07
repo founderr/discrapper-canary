@@ -1,26 +1,26 @@
     "use strict";
-    a.r(t);
-    var d = a("735250");
-    a("470079");
-    var n = a("613828"),
-      c = a("442837"),
-      i = a("353926"),
-      o = a("314897"),
-      r = a("981631");
-    t.default = c.default.connectStores([i.default, o.default], () => {
-      let e = o.default.getToken();
+    t.r(a);
+    var d = t("735250");
+    t("470079");
+    var n = t("613828"),
+      c = t("442837"),
+      i = t("353926"),
+      f = t("314897"),
+      o = t("981631");
+    a.default = c.default.connectStores([i.default, f.default], () => {
+      let e = f.default.getToken();
       return {
         token: e,
         hasLoadedExperiments: null != e || i.default.hasLoadedExperiments
       }
     })(e => {
       let {
-        hasLoadedExperiments: t,
-        token: a
+        hasLoadedExperiments: a,
+        token: t
       } = e;
-      return null != a ? (0, d.jsx)(n.Redirect, {
-        to: r.Routes.APP
-      }) : t ? (0, d.jsx)(n.Redirect, {
-        to: r.Routes.DEFAULT_LOGGED_OUT
+      return null != t ? (0, d.jsx)(n.Redirect, {
+        to: o.Routes.APP
+      }) : a ? (0, d.jsx)(n.Redirect, {
+        to: o.Routes.DEFAULT_LOGGED_OUT
       }) : null
     })

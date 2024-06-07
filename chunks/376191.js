@@ -17,8 +17,8 @@ var s = n("442837"),
   f = n("699516"),
   E = n("546591"),
   h = n("819570"),
-  _ = n("51144"),
-  C = n("998502"),
+  C = n("51144"),
+  _ = n("998502"),
   m = n("620924"),
   S = n("332712"),
   p = n("81471"),
@@ -50,7 +50,7 @@ let T = e => {
       })]
     })
   },
-  A = C.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+  A = _.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
 function N(e) {
   var t;
@@ -58,7 +58,7 @@ function N(e) {
     channel: n,
     otherUser: c,
     active: h
-  } = e, C = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), S = (0, s.useStateFromStores)([f.default], () => null == c ? null : f.default.getNickname(c.id)), N = !C && h, v = (0, m.useMessageRequestRelativeTimestampText)(n), {
+  } = e, _ = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), S = (0, s.useStateFromStores)([f.default], () => null == c ? null : f.default.getNickname(c.id)), N = !_ && h, v = (0, m.useMessageRequestRelativeTimestampText)(n), {
     avatarDecorationSrc: R
   } = (0, u.default)({
     user: c,
@@ -82,7 +82,7 @@ function N(e) {
           showAccountIdentifier: !0,
           className: g.tagContainer,
           usernameClass: g.username,
-          discriminatorClass: null != _.default.getGlobalName(c) ? g.globalName : g.discriminator
+          discriminatorClass: null != C.default.getGlobalName(c) ? g.globalName : g.discriminator
         }), (0, a.jsx)(l.Text, {
           className: g.timestampWithPreview,
           color: "text-muted",

@@ -23,8 +23,8 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = {},
-  C = _,
+let C = {},
+  _ = C,
   m = !1,
   S = {},
   p = {},
@@ -58,10 +58,10 @@ function v(e, t, n) {
 }
 class R extends(a = i.default.DeviceSettingsStore) {
   initialize(e) {
-    this.waitFor(c.default, u.default), C = null != e ? e : _
+    this.waitFor(c.default, u.default), _ = null != e ? e : C
   }
   getUserAgnosticState() {
-    return C
+    return _
   }
   get initialized() {
     return m
@@ -142,7 +142,7 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
     delete I[t]
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-    I = {}, C = {
+    I = {}, _ = {
       neverShowModal: !0
     }
   }

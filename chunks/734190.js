@@ -77,8 +77,8 @@ t.default = a.memo(function(e) {
       })
     })
   }, [t.id]), F = null == D ? 0 : D.length, {
-    role: H,
-    ...V
+    role: V,
+    ...H
   } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
     channelName: t.name,
     mentionCount: P
@@ -88,7 +88,7 @@ t.default = a.memo(function(e) {
     channelName: t.name
   });
   return (0, l.jsxs)("li", {
-    role: H,
+    role: V,
     className: i()(v.containerDefault, {
       [v.selected]: s
     }),
@@ -119,7 +119,7 @@ t.default = a.memo(function(e) {
         children: [!j || G || s ? null : (0, l.jsx)("div", {
           className: i()(x.unread, x.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
-          ...V,
+          ...H,
           innerRef: k,
           className: x.link,
           onClick: U,

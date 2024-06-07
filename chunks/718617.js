@@ -38,30 +38,30 @@ function S(e) {
     onClose: T,
     analyticsLocation: I,
     className: A
-  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), N = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, x = (0, o.default)(S);
-  let M = null == (n = N) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
+  } = e, x = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), v = null !== (t = null == x ? void 0 : x.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, N = (0, o.default)(S);
+  let M = null == (n = v) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
     R = (0, c.default)(M),
     {
       reducedMotion: y
     } = l.useContext(r.AccessibilityPreferencesContext),
     L = l.useCallback(e => {
-      null != v && (0, f.openGuildMemberModViewSidebar)(_, S, v.baseChannelId, {
+      null != x && (0, f.openGuildMemberModViewSidebar)(_, S, x.baseChannelId, {
         modViewPanel: e
       })
-    }, [v, _, S]),
-    O = l.useMemo(() => ({
+    }, [x, _, S]),
+    j = l.useMemo(() => ({
       [C.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          if (N === E.ModViewPanel.INFO) return T();
+          if (v === E.ModViewPanel.INFO) return T();
           return L(E.ModViewPanel.INFO)
         }
       }
-    }), [T, N, L]);
-  l.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
-  let j = (0, s.useTransition)(N, {
-    immediate: x !== S,
+    }), [T, v, L]);
+  l.useEffect(() => (u.default.enable(), u.default.enableTemp(j), () => u.default.disableTemp()), [j]);
+  let O = (0, s.useTransition)(v, {
+    immediate: N !== S,
     value: 0,
     from: {
       value: 1
@@ -80,7 +80,7 @@ function S(e) {
       flex: 1,
       overflow: "hidden"
     },
-    children: j((e, t, n) => {
+    children: O((e, t, n) => {
       var l, i, r;
       let {
         key: o

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -26,19 +26,19 @@ var a = n("735250"),
 let I = 16 / 9,
   A = 8 + C.PARTICIPANTS_HEIGHT;
 
-function v(e) {
+function x(e) {
   let t, {
       onSelectParticipant: n,
       onContextMenuParticipant: s,
-      onFullscreenParticipant: v,
-      participants: N,
-      filteredParticipants: x,
+      onFullscreenParticipant: x,
+      participants: v,
+      filteredParticipants: N,
       popoutWindow: M,
       inCall: R,
       channel: y,
       selectedParticipant: L,
-      showParticipants: O = !0,
-      className: j,
+      showParticipants: j = !0,
+      className: O,
       paused: P,
       width: D,
       height: b,
@@ -48,25 +48,25 @@ function v(e) {
     w = null != M,
     k = c.default.getVideoComponent(),
     H = d.default.getId(),
-    [B, G] = l.useState(null),
+    [G, B] = l.useState(null),
     [V, W] = l.useState(!0),
     [Y, z] = l.useState(!1),
     K = L.type === S.ParticipantTypes.ACTIVITY,
     Z = !K && null != L.streamId,
-    q = Z && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : I,
-    X = b <= 2 * A + 144,
-    Q = O && !X,
-    J = (0, o.default)(Q),
+    X = Z && null != G && G.width > 0 && G.height > 0 ? G.width / G.height : I,
+    q = b <= 2 * A + 144,
+    J = j && !q,
+    Q = (0, o.default)(J),
     $ = U === g.ChannelLayouts.MINIMUM || U === g.ChannelLayouts.NORMAL,
-    ee = !X && (!$ || K),
+    ee = !q && (!$ || K),
     et = (0, h.default)(ee, 100),
     en = 0;
-  (K || Q) && (en += 72), K && !Q && (ee ? en += 48 : en += 8), Q && (en += .5 * A + 8);
+  (K || J) && (en += 72), K && !J && (ee ? en += 48 : en += 8), J && (en += .5 * A + 8);
   let ea = b - 2 * en,
-    el = ea * q,
-    es = Math.floor(Math.min(D, el) / q),
-    ei = b > D / q + 72 + A + 8;
-  t = Q || K ? Q ? -16 : -8 : 40 + Math.max(0, 72 - (b - es) / 2), l.useEffect(() => {
+    el = ea * X,
+    es = Math.floor(Math.min(D, el) / X),
+    ei = b > D / X + 72 + A + 8;
+  t = J || K ? J ? -16 : -8 : 40 + Math.max(0, 72 - (b - es) / 2), l.useEffect(() => {
     let e = setTimeout(() => {
       W(!1)
     }, 250);
@@ -75,8 +75,8 @@ function v(e) {
     }
   }, []);
   let er = (0, r.useSpring)({
-      value: Q ? 1 : 0,
-      delay: ei || !Q ? 0 : 100,
+      value: J ? 1 : 0,
+      delay: ei || !J ? 0 : 100,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -88,7 +88,7 @@ function v(e) {
       }
     }),
     eo = (0, r.useSpring)({
-      value: Q ? 1 : 0,
+      value: J ? 1 : 0,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -100,7 +100,7 @@ function v(e) {
         ...r.config.stiff,
         clamp: !0
       },
-      immediate: J === Q && eo.value.idle && !et
+      immediate: Q === J && eo.value.idle && !et
     }),
     ed = (0, r.useSpring)({
       value: t,
@@ -127,15 +127,15 @@ function v(e) {
       }
     }),
     ef = l.useCallback(e => {
-      G(e), W(!1)
+      B(e), W(!1)
     }, []),
-    eh = Q || P ? [] : (0, E.getPipParticipants)(N, L, H),
+    eh = J || P ? [] : (0, E.getPipParticipants)(v, L, H),
     {
       visibleParticipants: em,
       participantTileWidth: ep
-    } = (0, C.useVisibleParticipants)(D, x);
+    } = (0, C.useVisibleParticipants)(D, N);
   return (0, a.jsxs)("div", {
-    className: i()(T.root, _.flexCenter, j),
+    className: i()(T.root, _.flexCenter, O),
     children: [(0, a.jsxs)("div", {
       className: T.tileWrapper,
       style: {
@@ -154,7 +154,7 @@ function v(e) {
           children: (0, a.jsx)("div", {
             className: i()(_.videoSizer),
             style: {
-              aspectRatio: q
+              aspectRatio: X
             },
             children: ec((e, t, l) => {
               let {
@@ -173,7 +173,7 @@ function v(e) {
                   width: D,
                   participant: t,
                   onClick: n,
-                  onDoubleClick: v,
+                  onDoubleClick: x,
                   onContextMenu: s,
                   onVideoResize: ef,
                   inCall: R,
@@ -191,7 +191,7 @@ function v(e) {
           },
           children: (0, a.jsx)(u.default, {
             channelId: y.id,
-            isParticipantsOpen: O,
+            isParticipantsOpen: j,
             isVertical: !0
           })
         }) : null]
@@ -206,12 +206,12 @@ function v(e) {
           channel: y,
           onClick: n,
           onContextMenu: s,
-          onDoubleClick: v,
+          onDoubleClick: x,
           participants: em,
           participantTileWidth: ep,
           selectedParticipantId: L.id,
           inCall: R,
-          paused: P || Y || !O,
+          paused: P || Y || !j,
           popoutWindow: M
         })
       })]

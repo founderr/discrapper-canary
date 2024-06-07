@@ -38,16 +38,16 @@ function _(e) {
   if (null == t) return null;
   let p = null != t.guild ? new r.default(t.guild) : null,
     h = null != t.channel ? (0, i.createChannelRecordFromInvite)(t.channel) : null,
-    T = null != t.target_application ? new l.default(t.target_application) : null,
-    g = _ || null == t.inviter ? null : new u.default(t.inviter),
-    m = !(null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != p && p.hasFeature(c.GuildFeatures.COMMUNITY)) && null != g && (0, o.isGroupInvite)(t),
+    g = null != t.target_application ? new l.default(t.target_application) : null,
+    m = _ || null == t.inviter ? null : new u.default(t.inviter),
+    T = !(null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != p && p.hasFeature(c.GuildFeatures.COMMUNITY)) && null != m && (0, o.isGroupInvite)(t),
     N = I(t),
     A = {
       invite: t,
-      user: g,
+      user: m,
       guild: p,
       channel: h,
-      application: T
+      application: g
     };
   return (0, o.isEnhancedCommunityInvite)(t) ? (0, s.jsx)(d.default, {
     invite: t,
@@ -57,15 +57,15 @@ function _(e) {
   }) : (0, s.jsxs)("div", {
     className: E.container,
     children: [(0, s.jsx)(o.InviteDestinationIcon, {
-      application: T,
+      application: g,
       guild: p,
-      user: m || (0, o.isDirectInvite)(t) ? g : null
+      user: T || (0, o.isDirectInvite)(t) ? m : null
     }), (0, o.isDirectInvite)(t) ? null : (0, s.jsx)(o.InviteJoinContext, {
       ...A,
-      showBigUserIcon: m
+      showBigUserIcon: T
     }), (0, s.jsx)(o.InviteHeader, {
       ...A,
-      showBigUserIcon: m
+      showBigUserIcon: T
     }), (0, s.jsx)(o.InviteMemberCounts, {
       ...A
     }), (0, s.jsx)(a.Button, {

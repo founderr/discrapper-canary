@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return _
   }
 }), n("47120");
 var a = n("735250");
@@ -17,16 +17,16 @@ var s = n("512722"),
   f = n("358924"),
   E = n("817915"),
   h = n("981631"),
-  _ = n("689938");
+  C = n("689938");
 
-function C(e) {
+function _(e) {
   let {
     party: t,
     onUserContextMenu: s
   } = e, {
-    priorityMembers: C,
+    priorityMembers: _,
     guildContext: m
-  } = t, S = C[0], p = function(e) {
+  } = t, S = _[0], p = function(e) {
     let {
       priorityMembers: t,
       partiedMembers: n
@@ -40,12 +40,12 @@ function C(e) {
       case 1:
         return l;
       case 2:
-        return _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
+        return C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
           user1: l,
           user2: i
         });
       default:
-        return _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
+        return C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
           user1: l,
           user2: i,
           extras: n.length - 2
@@ -59,7 +59,7 @@ function C(e) {
     let {
       priorityMembers: s,
       partiedMembers: d,
-      voiceChannels: C,
+      voiceChannels: _,
       currentActivities: m
     } = e, S = s.length, p = d.length - S, I = m[0], g = null == I ? void 0 : I.activity, T = null == I ? void 0 : I.startedPlayingTime, A = {
       name: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : ""
@@ -85,7 +85,7 @@ function C(e) {
       switch (g.type) {
         case h.ActivityTypes.PLAYING:
           if ((0, o.default)(g)) return {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
+            subtitle: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
             icon: (0, a.jsx)(f.default.Header.Icon, {
               src: f.default.Header.Icon.Src.XBOX
             })
@@ -101,7 +101,7 @@ function C(e) {
           };
         case h.ActivityTypes.STREAMING:
           return {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH, icon: null != e && null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
+            subtitle: C.default.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH, icon: null != e && null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
               src: e.getIconURL(E.ICON_SIZE)
             }) : null
           };
@@ -114,26 +114,26 @@ function C(e) {
           }) : (0, a.jsx)(f.default.Header.Icon, {
             src: n("211827")
           }), {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
+            subtitle: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
               name: g.name
             }),
             icon: s
           };
         case h.ActivityTypes.WATCHING:
           return {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING, icon: null != e && null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
+            subtitle: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING, icon: null != e && null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
               src: e.getIconURL(E.ICON_SIZE)
             }) : null
           };
         default:
           return {
-            subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL, icon: null
+            subtitle: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL, icon: null
           }
       }
     }
     if (0 === m.length) {
-      if (C.length > 0) return {
-        subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
+      if (_.length > 0) return {
+        subtitle: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
         icon: null
       };
       let e = m[0];
@@ -146,7 +146,7 @@ function C(e) {
           if (null != e) return e
         }
         if (null != t && t.type === h.ActivityTypes.LISTENING) return {
-          subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
+          subtitle: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
           icon: (0, a.jsx)(f.default.Header.Icon, {
             src: f.default.Header.Icon.Src.SPOTIFY
           })
@@ -175,7 +175,7 @@ function C(e) {
       }
     }
     return {
-      subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_MULTIPLE_GAMES,
+      subtitle: C.default.Messages.ACTIVITY_FEED_NOW_PLAYING_MULTIPLE_GAMES,
       icon: (0, a.jsx)(f.default.Header.Icon, {
         src: f.default.Header.Icon.Src.MULTIPLE
       })

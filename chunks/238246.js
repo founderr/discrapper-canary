@@ -20,15 +20,15 @@ var a, l = n("735250"),
   T = n("168551"),
   I = n("597952"),
   A = n("628123"),
-  v = n("151851"),
-  N = n("587061"),
-  x = n("392358"),
+  x = n("151851"),
+  v = n("587061"),
+  N = n("392358"),
   M = n("892254"),
   R = n("706454"),
   y = n("210887"),
   L = n("740492"),
-  O = n("451478"),
-  j = n("153850"),
+  j = n("451478"),
+  O = n("153850"),
   P = n("806519"),
   D = n("358085"),
   b = n("792125"),
@@ -37,9 +37,9 @@ var a, l = n("735250"),
   w = n("928518"),
   k = n("981631"),
   H = n("689938"),
-  B = n("622209");
+  G = n("622209");
 
-function G(e, t, n) {
+function B(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -139,7 +139,7 @@ class V extends(a = s.Component) {
       guestWindow: S,
       clientThemesClassName: _,
       contentClassName: T
-    } = this.props, N = (0, D.getPlatform)(), x = r()(p, {
+    } = this.props, v = (0, D.getPlatform)(), N = r()(p, {
       "mouse-mode": o,
       "reduce-motion": c,
       "full-motion": !c,
@@ -155,7 +155,7 @@ class V extends(a = s.Component) {
             children: (0, l.jsx)("div", {
               "data-popout-root": !0,
               ref: this.rootRef,
-              className: r()((0, b.getThemeClass)(e), (0, I.default)(), x, _),
+              className: r()((0, b.getThemeClass)(e), (0, I.default)(), N, _),
               children: (0, l.jsx)(f.FocusRingScope, {
                 containerRef: this.rootRef,
                 children: (0, l.jsx)(E.default, {
@@ -163,19 +163,19 @@ class V extends(a = s.Component) {
                     children: [(0, l.jsx)(P.MaskLibrary, {}), (0, l.jsx)(m.AppWindowContextProvider, {
                       appContext: k.AppContext.POPOUT,
                       renderWindow: S,
-                      children: (0, l.jsxs)(j.AppLayerProvider, {
+                      children: (0, l.jsxs)(O.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
-                          className: B.popout,
-                          children: [g && null != N ? (0, l.jsx)(v.default, {
+                          className: G.popout,
+                          children: [g && null != v ? (0, l.jsx)(x.default, {
                             focused: n,
-                            type: N,
+                            type: v,
                             windowKey: i,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
-                            className: r()(B.content, T),
+                            className: r()(G.content, T),
                             children: s
                           })]
-                        }), (0, l.jsx)(f.Modals, {}), (0, l.jsx)(h.default, {}), (0, l.jsx)(j.AppLayerContainer, {})]
+                        }), (0, l.jsx)(f.Modals, {}), (0, l.jsx)(h.default, {}), (0, l.jsx)(O.AppLayerContainer, {})]
                       })
                     })]
                   })
@@ -188,19 +188,19 @@ class V extends(a = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), G(this, "rootRef", s.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
+    super(...e), B(this, "rootRef", s.createRef()), B(this, "_cleanupWindowActionCreators", void 0), B(this, "warnPopoutClose", e => {
       this.props.connectedToEmbeddedActivity && !L.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = H.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, D.isPlatformEmbedded && (0, g.default)(() => {
         w.default.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && U.default.close(this.props.windowKey)
       }))
-    }), G(this, "handleBlur", () => {
+    }), B(this, "handleBlur", () => {
       var e, t;
       null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t)
-    }), G(this, "handleContextMenu", e => {
+    }), B(this, "handleContextMenu", e => {
       e.preventDefault()
     })
   }
 }
-G(V, "defaultProps", {
+B(V, "defaultProps", {
   withTitleBar: !0
 });
 let W = s.forwardRef(function(e, t) {
@@ -212,7 +212,7 @@ let W = s.forwardRef(function(e, t) {
     focused: w.default.getWindowFocused(e.windowKey)
   }));
   u()(null != n, "Missing guestWindow reference");
-  let s = (0, c.useStateFromStores)([O.default], () => O.default.isFocused()),
+  let s = (0, c.useStateFromStores)([j.default], () => j.default.isFocused()),
     {
       locale: i,
       theme: r
@@ -238,14 +238,14 @@ let W = s.forwardRef(function(e, t) {
       systemForcedColors: p.default.systemForcedColors,
       useForcedColors: p.default.useForcedColors
     })),
-    v = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
-  (0, N.default)(n, !1);
-  let M = (0, x.default)(n, a),
+    x = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
+  (0, v.default)(n, !1);
+  let M = (0, N.default)(n, a),
     {
       analyticsLocations: L
     } = (0, _.default)(S.default.POPOUT_WINDOW),
     {
-      clientThemesClassName: j,
+      clientThemesClassName: O,
       clientThemesCSS: P
     } = (0, T.default)();
   return null == n ? null : (0, l.jsx)(f.DnDProvider, {
@@ -266,10 +266,10 @@ let W = s.forwardRef(function(e, t) {
         keyboardModeEnabled: h,
         mouseModeEnabled: M,
         reducedMotionEnabled: m,
-        connectedToEmbeddedActivity: v,
+        connectedToEmbeddedActivity: x,
         fontScaleClass: E,
         saturation: g,
-        clientThemesClassName: j,
+        clientThemesClassName: O,
         clientThemesCSS: P
       })
     })

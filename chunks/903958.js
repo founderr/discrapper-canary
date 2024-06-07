@@ -9,7 +9,7 @@ var n, a = s("735250"),
   c = s("451478"),
   d = s("122185");
 
-function C(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -17,7 +17,7 @@ function C(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class p extends(n = r.PureComponent) {
+class C extends(n = r.PureComponent) {
   async componentDidMount() {
     let {
       importData: e,
@@ -76,23 +76,23 @@ class p extends(n = r.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), C(this, "animationRef", null), C(this, "animation", void 0), C(this, "currentScene", this.props.nextScene), C(this, "isUnmounted", !1), C(this, "handleLoopComplete", () => {
+    super(...e), f(this, "animationRef", null), f(this, "animation", void 0), f(this, "currentScene", this.props.nextScene), f(this, "isUnmounted", !1), f(this, "handleLoopComplete", () => {
       let {
         onSceneComplete: e,
         nextScene: t
       } = this.props;
       null != e && e(this.currentScene), this.playScene(t)
-    }), C(this, "handleComplete", () => {
+    }), f(this, "handleComplete", () => {
       let {
         onSceneComplete: e
       } = this.props;
       null != e && e(this.currentScene)
-    }), C(this, "handleEnterFrame", e => {
+    }), f(this, "handleEnterFrame", e => {
       let {
         onEnterFrame: t
       } = this.props;
       null == t || t(this.currentScene, e)
-    }), C(this, "handleSetRef", e => {
+    }), f(this, "handleSetRef", e => {
       this.animationRef = e;
       let {
         animationRef: t
@@ -101,7 +101,7 @@ class p extends(n = r.PureComponent) {
     })
   }
 }
-C(p, "defaultProps", {
+f(C, "defaultProps", {
   pauseWhileUnfocused: !0,
   pause: !1
 });
@@ -111,7 +111,7 @@ t.default = e => {
     ignoreReducedMotion: s = !1,
     ...n
   } = e, r = (0, u.useStateFromStores)([c.default], () => c.default.isFocused()), i = (0, u.useStateFromStores)([o.default], () => o.default.useReducedMotion);
-  return (0, a.jsx)(p, {
+  return (0, a.jsx)(C, {
     ...n,
     isWindowFocused: r,
     useReducedMotion: i && !s,

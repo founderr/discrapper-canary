@@ -28,8 +28,8 @@ var a, n, i = s("735250"),
   T = s("285952"),
   A = s("358085"),
   R = s("622999"),
-  M = s("462566"),
-  y = s("801937"),
+  y = s("462566"),
+  M = s("801937"),
   g = s("282164"),
   L = s("738342"),
   x = s("228666"),
@@ -297,7 +297,7 @@ class V extends l.PureComponent {
         }
       },
       payment_type: {
-        renderBody: () => (0, i.jsx)(y.default, {
+        renderBody: () => (0, i.jsx)(M.default, {
           allowStripeRequestPayments: !A.isPlatformEmbedded,
           onChooseType: this.handleChooseType,
           onStripePaymentMethodReceived: this.handleStripePaymentMethod
@@ -334,7 +334,7 @@ class V extends l.PureComponent {
             children: [t ? (0, i.jsx)(c.FormErrorBlock, {
               className: v.errorBlock,
               children: U.default.Messages.BILLING_ERROR_SECTION_CARD
-            }) : null, (0, i.jsx)(M.default, {
+            }) : null, (0, i.jsx)(y.default, {
               onCardInfoChange: this.handleCardInfoChange,
               error: t ? e : null
             })]

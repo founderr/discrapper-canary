@@ -26,15 +26,15 @@ class E extends i.default {
         voiceStates: l
       } = e, i = r.default.getId(), E = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, h = l.find(e => e.userId === i && e.sessionId === E);
       if (null == h) return;
-      let _ = h.channelId;
-      if (null == _) {
+      let C = h.channelId;
+      if (null == C) {
         (0, s.hasModalOpen)(f) && (0, s.closeModal)(f);
         return
       }
-      let C = o.default.getChannel(_);
-      if (!(null == C ? void 0 : C.isGuildStageVoice())) return;
+      let _ = o.default.getChannel(C);
+      if (!(null == _ ? void 0 : _.isGuildStageVoice())) return;
       let m = (0, d.getAudienceRequestToSpeakState)(h) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-      if (null != C && m) {
+      if (null != _ && m) {
         if ((0, s.hasModalOpen)(f)) return;
         (0, s.openModalLazy)(async () => {
           let {
@@ -42,7 +42,7 @@ class E extends i.default {
           } = await Promise.all([n.e("99387"), n.e("13878")]).then(n.bind(n, "113140"));
           return t => (0, a.jsx)(e, {
             ...t,
-            channel: C
+            channel: _
           })
         }, {
           modalKey: f,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
 }), n("789020"), n("47120");
 var a = n("735250"),
@@ -45,9 +45,9 @@ function I(e) {
     id: o
   } = t, {
     id: u
-  } = n, m = t.getGuildId(), E = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(m), [m]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, I = null != E && E.hasFeature(S.GuildFeatures.NEWS), v = g && I, {
-    editingMessage: N,
-    editingTextValue: x,
+  } = n, m = t.getGuildId(), E = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(m), [m]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, I = null != E && E.hasFeature(S.GuildFeatures.NEWS), x = g && I, {
+    editingMessage: v,
+    editingTextValue: N,
     editingRichValue: M
   } = (0, s.useStateFromStoresObject)([c.default], () => ({
     editingMessage: c.default.getEditingMessage(o),
@@ -56,20 +56,20 @@ function I(e) {
   }), [o]), R = (0, s.useStateFromStores)([d.default], () => d.default.getId()), y = l.useCallback((e, n, a) => {
     let {
       content: l
-    } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null;
-    return v && (o === R || s) && null != N && (0, C.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
+    } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != v && null != v.author ? v.author.id : null;
+    return x && (o === R || s) && null != v && (0, C.hasFlag)(v.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
       content: l
     }), Promise.resolve()
-  }, [N, v, R, t]), L = l.useCallback(e => (0, l.createElement)(A, {
+  }, [v, x, R, t]), L = l.useCallback(e => (0, l.createElement)(A, {
     ...e,
     className: _.channelTextArea,
     key: u
   }), [u]);
-  return null != x && null != M ? (0, a.jsx)(p.default, {
+  return null != N && null != M ? (0, a.jsx)(p.default, {
     ref: void 0,
     channel: t,
     message: n,
-    textValue: x,
+    textValue: N,
     richValue: M,
     onCancel: i.default.endEditMessage,
     onChange: i.default.updateEditMessage,
@@ -112,7 +112,7 @@ function A(e) {
   }, s.id)
 }
 
-function v(e, t, n) {
+function x(e, t, n) {
   let {
     message: l,
     channel: s

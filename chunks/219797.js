@@ -1,47 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   AudioComponentForMessageAttachment: function() {
-    return S
+    return v
   },
   GenericFileComponentForMessageAttachment: function() {
-    return A
+    return M
   },
   ImageComponentForMessageAttachment: function() {
     return h
   },
   MosaicItemFooterForMessageAttachment: function() {
-    return M
+    return P
   },
   PlaintextFilePreviewForMessageAttachment: function() {
-    return g
+    return S
   },
   VideoComponentForMessageAttachment: function() {
-    return N
+    return A
   },
   VoiceMessageAudioComponentForMessageAttachment: function() {
-    return C
+    return I
   }
 }), n("789020");
-var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
-  i = n("993365"),
-  r = n("981729"),
-  o = n("543651"),
+var r = n("735250"),
+  i = n("470079"),
+  a = n("442837"),
+  l = n("993365"),
+  o = n("981729"),
+  s = n("543651"),
   u = n("519320"),
-  d = n("592125"),
-  c = n("529653"),
+  c = n("592125"),
+  d = n("529653"),
   f = n("52824"),
-  E = n("630388"),
+  m = n("630388"),
   _ = n("591759"),
-  m = n("524444"),
-  T = n("981631"),
-  I = n("689938"),
-  p = n("978577");
+  g = n("524444"),
+  p = n("981631"),
+  C = n("689938"),
+  E = n("978577");
 
 function h(e) {
   let t = e.item.originalItem;
-  return (0, m.renderImageComponent)({
+  return (0, g.renderImageComponent)({
     ...e,
     alt: t.description,
     src: (0, f.getBestEffortSrcUrl)({
@@ -54,25 +54,25 @@ function h(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let t = e.item.originalItem,
-    n = a.useCallback(() => {
+    n = i.useCallback(() => {
       var e;
-      return (0, E.hasFlag)(null !== (e = t.flags) && void 0 !== e ? e : 0, T.MessageAttachmentFlags.IS_CLIP) ? (0, s.jsxs)(r.TooltipContainer, {
-        text: I.default.Messages.CLIPS_BETA_TAG_HOVER,
-        className: p.clipPill,
-        children: [(0, s.jsx)(c.default, {}), (0, s.jsx)(i.Text, {
+      return (0, m.hasFlag)(null !== (e = t.flags) && void 0 !== e ? e : 0, p.MessageAttachmentFlags.IS_CLIP) ? (0, r.jsxs)(o.TooltipContainer, {
+        text: C.default.Messages.CLIPS_BETA_TAG_HOVER,
+        className: E.clipPill,
+        children: [(0, r.jsx)(d.default, {}), (0, r.jsx)(l.Text, {
           variant: "text-xs/semibold",
           color: "always-white",
-          children: I.default.Messages.CLIP_TAG
+          children: C.default.Messages.CLIP_TAG
         })]
       }) : null
     }, [t]),
-    l = _.default.toURLSafe(t.proxy_url);
-  return null == l ? null : (l.searchParams.append("format", "jpeg"), (0, m.renderVideoComponent)({
+    a = _.default.toURLSafe(t.proxy_url);
+  return null == a ? null : (a.searchParams.append("format", "jpeg"), (0, g.renderVideoComponent)({
     ...e,
     alt: t.description,
-    poster: l.toString(),
+    poster: a.toString(),
     fileSize: t.size,
     fileName: t.filename,
     src: t.url,
@@ -82,9 +82,9 @@ function N(e) {
   }))
 }
 
-function S(e) {
+function v(e) {
   let t = e.item.originalItem;
-  return (0, m.renderAudioComponent)({
+  return (0, g.renderAudioComponent)({
     ...e,
     fileSize: t.size,
     fileName: t.filename,
@@ -92,36 +92,36 @@ function S(e) {
   })
 }
 
-function C(e) {
+function I(e) {
   let {
     message: t,
     item: n
-  } = e, s = n.originalItem, l = a.useCallback((e, n, a) => {
-    var l;
-    (0, u.logVoiceMessagePlaybackStarted)(t.id, null !== (l = s.duration_secs) && void 0 !== l ? l : null, n, t.author.id)
-  }, [t, s.duration_secs]), i = a.useCallback((e, n) => {
+  } = e, r = n.originalItem, a = i.useCallback((e, n, i) => {
     var a;
-    (0, u.logVoiceMessagePlaybackEnded)(t.id, null !== (a = s.duration_secs) && void 0 !== a ? a : null, e, t.author.id, n)
-  }, [t, s.duration_secs]), r = a.useCallback(e => {
+    (0, u.logVoiceMessagePlaybackStarted)(t.id, null !== (a = r.duration_secs) && void 0 !== a ? a : null, n, t.author.id)
+  }, [t, r.duration_secs]), l = i.useCallback((e, n) => {
+    var i;
+    (0, u.logVoiceMessagePlaybackEnded)(t.id, null !== (i = r.duration_secs) && void 0 !== i ? i : null, e, t.author.id, n)
+  }, [t, r.duration_secs]), o = i.useCallback(e => {
     var n;
     (0, u.logVoiceMessagePlaybackFailed)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null)
   }, [t]);
-  return (0, m.renderVoiceMessageAudioComponent)({
+  return (0, g.renderVoiceMessageAudioComponent)({
     ...e,
-    fileSize: s.size,
-    fileName: s.filename,
-    src: s.url,
-    durationSecs: s.duration_secs,
-    waveform: s.waveform,
-    onPlay: l,
-    onPause: i,
-    onError: r
+    fileSize: r.size,
+    fileName: r.filename,
+    src: r.url,
+    durationSecs: r.duration_secs,
+    waveform: r.waveform,
+    onPlay: a,
+    onPause: l,
+    onError: o
   })
 }
 
-function g(e) {
+function S(e) {
   let t = e.item.originalItem;
-  return (0, m.renderPlaintextFilePreview)({
+  return (0, g.renderPlaintextFilePreview)({
     ...e,
     url: t.url,
     fileName: t.filename,
@@ -130,9 +130,9 @@ function g(e) {
   })
 }
 
-function A(e) {
+function M(e) {
   let t = e.item.originalItem;
-  return (0, m.renderGenericFileComponent)({
+  return (0, g.renderGenericFileComponent)({
     ...e,
     url: t.url,
     fileName: t.filename,
@@ -140,38 +140,38 @@ function A(e) {
   })
 }
 
-function M(e) {
-  if ("CLIP" === e.item.type) return (0, s.jsx)(R, {
+function P(e) {
+  if ("CLIP" === e.item.type) return (0, r.jsx)(k, {
     attachment: e.item.originalItem,
     message: e.message
   });
   return null
 }
 
-function R(e) {
+function k(e) {
   var t;
   let {
     attachment: n,
-    message: a
-  } = e, i = a.channel_id, r = (0, l.useStateFromStores)([d.default], () => {
+    message: i
+  } = e, l = i.channel_id, o = (0, a.useStateFromStores)([c.default], () => {
     var e;
-    return null === (e = d.default.getBasicChannel(i)) || void 0 === e ? void 0 : e.guild_id
+    return null === (e = c.default.getBasicChannel(l)) || void 0 === e ? void 0 : e.guild_id
   }), {
     clip_created_at: u,
-    clip_participants: c,
+    clip_participants: d,
     title: f,
-    application: E
+    application: m
   } = n;
-  return (0, s.jsx)(o.default, {
+  return (0, r.jsx)(s.default, {
     createdAt: null != u ? Date.parse(u) : void 0,
-    participantIds: null !== (t = null == c ? void 0 : c.map(e => {
+    participantIds: null !== (t = null == d ? void 0 : d.map(e => {
       let {
         id: t
       } = e;
       return t
     })) && void 0 !== t ? t : [],
-    applicationId: null == E ? void 0 : E.id,
+    applicationId: null == m ? void 0 : m.id,
     title: f,
-    guildId: r
+    guildId: o
   })
 }

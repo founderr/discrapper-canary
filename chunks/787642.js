@@ -16,29 +16,29 @@ var a = n("735250"),
   f = n("768581"),
   E = n("125631"),
   h = n("981631"),
-  _ = n("689938"),
-  C = n("385702");
+  C = n("689938"),
+  _ = n("385702");
 
 function m(e, t, n) {
   return (0, a.jsxs)("button", {
-    className: C.container,
+    className: _.container,
     onClick: n,
     children: ["function" == typeof e ? (0, a.jsx)("div", {
-      className: C.icon,
+      className: _.icon,
       children: (0, a.jsx)(e, {
-        className: C.__invalid_iconInner,
+        className: _.__invalid_iconInner,
         color: l.tokens.colors.WHITE.css
       })
     }) : (0, a.jsx)("img", {
-      className: C.icon,
+      className: _.icon,
       alt: "",
       src: e
     }), (0, a.jsx)(l.Text, {
-      className: C.text,
+      className: _.text,
       variant: "text-md/medium",
       children: t
     }), (0, a.jsx)(E.default, {
-      className: C.arrow
+      className: _.arrow
     })]
   }, t)
 }
@@ -52,21 +52,21 @@ function S() {
     };
   return (0, a.jsxs)(s.Fragment, {
     children: [(0, a.jsx)("header", {
-      className: C.header,
+      className: _.header,
       children: (0, a.jsx)(l.FormTitle, {
         tag: "h2",
-        className: C.title,
-        children: _.default.Messages.ADD_FRIEND_MAKE_FRIENDS
+        className: _.title,
+        children: C.default.Messages.ADD_FRIEND_MAKE_FRIENDS
       })
     }), (0, a.jsxs)("div", {
-      className: C.grid,
+      className: _.grid,
       children: [e.map(e => m(f.default.getGuildIconURL({
         id: e.id,
         icon: e.icon,
         size: 240
       }), e.name, () => {
         t(e.id)
-      })), m(d.default, _.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+      })), m(d.default, C.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
         (0, i.clearSearch)(), c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(h.Routes.GUILD_DISCOVERY)
       })]
     })]

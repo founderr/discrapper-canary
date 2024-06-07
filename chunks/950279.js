@@ -1,72 +1,72 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
-  l = n("481060"),
-  o = n("364083"),
-  c = n("92373"),
-  d = n("308083"),
-  u = n("689938"),
-  f = n("706351"),
-  m = n("661926");
+a.r(t), a("47120");
+var n = a("735250"),
+  r = a("470079"),
+  i = a("120356"),
+  s = a.n(i),
+  l = a("481060"),
+  o = a("364083"),
+  d = a("92373"),
+  c = a("308083"),
+  u = a("689938"),
+  f = a("706351"),
+  m = a("661926");
 t.default = e => {
   let {
     title: t,
-    description: n,
-    handleUpdate: s,
-    gameApplicationIds: h,
-    error: E,
-    requiredGameId: p,
-    inSettings: C
+    description: a,
+    handleUpdate: i,
+    gameApplicationIds: E,
+    error: h,
+    requiredGameId: T,
+    inSettings: _
   } = e, {
-    options: T,
-    matchSorterOptions: _
+    options: C,
+    matchSorterOptions: x
   } = (0, o.useClanSetupGameSelectableSearch)();
   r.useEffect(() => {
-    if (!C && null != p && !h.has(p) && T.length > 0) {
-      let e = new Set(h);
-      e.add(p), s(e)
+    if (!_ && null != T && !E.has(T) && C.length > 0) {
+      let e = new Set(E);
+      e.add(T), i(e)
     }
-  }, [T.length, p, C]);
-  let x = r.useMemo(() => Array.from(h), [h]),
-    g = r.useCallback(e => {
+  }, [C.length, T, _]);
+  let p = r.useMemo(() => Array.from(E), [E]),
+    I = r.useCallback(e => {
       let t = new Set(e);
-      (null == p || t.has(p)) && s(t)
-    }, [s, p]);
-  return (0, a.jsxs)("div", {
-    className: i()(m.slideContent, f.container),
-    children: [(0, a.jsx)(l.Heading, {
+      (null == T || t.has(T)) && i(t)
+    }, [i, T]);
+  return (0, n.jsxs)("div", {
+    className: s()(m.slideContent, f.container),
+    children: [(0, n.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
       className: m.title,
       children: t
-    }), (0, a.jsx)(l.Text, {
+    }), (0, n.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: m.subtitle,
-      children: n
-    }), (0, a.jsx)("div", {
+      children: a
+    }), (0, n.jsx)("div", {
       className: f.inputContainer,
-      children: (0, a.jsx)(l.FormItem, {
-        error: E,
-        children: (0, a.jsx)(l.SearchableSelect, {
+      children: (0, n.jsx)(l.FormItem, {
+        error: h,
+        children: (0, n.jsx)(l.SearchableSelect, {
           multi: !0,
           hidePills: !0,
-          wrapperClassName: i()(m.input, f.input),
-          options: T,
-          value: x,
+          wrapperClassName: s()(m.input, f.input),
+          options: C,
+          value: p,
           placeholder: u.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-          onChange: g,
-          isDisabled: h.size === d.MAX_NUM_SELECTED_GAMES,
-          matchSorterOptions: _,
+          onChange: I,
+          isDisabled: E.size === c.MAX_NUM_SELECTED_GAMES,
+          matchSorterOptions: x,
           clearQueryOnSelect: !0,
           customPillContainerClassName: f.pills,
-          renderCustomPill: e => (0, a.jsx)(c.default, {
+          renderCustomPill: e => (0, n.jsx)(d.default, {
             applicationId: e.value,
-            imageContainerClassName: e.value !== p ? f.clickableGame : f.defaultGame,
+            imageContainerClassName: e.value !== T ? f.clickableGame : f.defaultGame,
             selected: !0,
-            locked: e.value === p
+            locked: e.value === T
           }, e.value)
         })
       })

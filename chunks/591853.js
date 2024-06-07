@@ -41,15 +41,15 @@ var u = n("194048"),
   T = n("493683"),
   I = n("475179"),
   A = n("287734"),
-  v = n("872810"),
-  N = n("607070"),
-  x = n("220779"),
+  x = n("872810"),
+  v = n("607070"),
+  N = n("220779"),
   M = n("201133"),
   R = n("605236"),
   y = n("543241"),
   L = n("318374"),
-  O = n("258609"),
-  j = n("102172"),
+  j = n("258609"),
+  O = n("102172"),
   P = n("871118"),
   D = n("359110"),
   b = n("12168"),
@@ -58,18 +58,18 @@ var u = n("194048"),
   w = n("496675"),
   k = n("699516"),
   H = n("9156"),
-  B = n("979651"),
-  G = n("938475"),
+  G = n("979651"),
+  B = n("938475"),
   V = n("346656"),
   W = n("682864"),
   Y = n("409216"),
   z = n("368666"),
   K = n("626135"),
   Z = n("768581"),
-  q = n("5192"),
-  X = n("192918"),
-  Q = n("22211"),
-  J = n("571243"),
+  X = n("5192"),
+  q = n("192918"),
+  J = n("22211"),
+  Q = n("571243"),
   $ = n("69259"),
   ee = n("206295"),
   et = n("111386"),
@@ -138,12 +138,12 @@ function ef(e) {
     reactionImageAltText: i,
     closePopout: r,
     entry: A,
-    requestId: v,
-    buttons: N = [],
+    requestId: x,
+    buttons: v = [],
     header: y
-  } = e, [L, O] = l.useState(!1), [j, P] = l.useState(null), b = (0, d.useStateFromStores)([w.default], () => w.default.can(es.Permissions.SEND_MESSAGES, t)), B = (0, J.useIsEligibleForMemberlistOneClickReply)({
+  } = e, [L, j] = l.useState(!1), [O, P] = l.useState(null), b = (0, d.useStateFromStores)([w.default], () => w.default.can(es.Permissions.SEND_MESSAGES, t)), G = (0, Q.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [W, z] = l.useState(!1), [Z, X] = l.useState(!1), {
+  }), [W, z] = l.useState(!1), [Z, q] = l.useState(!1), {
     voiceBar: ee,
     joinVoiceButton: en
   } = function(e) {
@@ -154,7 +154,7 @@ function ef(e) {
     } = e, {
       streamPreviewUrl: i,
       channel: r
-    } = (0, Q.default)(n), o = (0, d.useStateFromStores)([F.default], () => null != r ? F.default.getGuild(r.guild_id) : void 0), c = (0, d.useStateFromStoresArray)([G.default], () => null != r ? G.default.getVoiceStatesForChannel(r) : [], [r]), h = l.useMemo(() => {
+    } = (0, J.default)(n), o = (0, d.useStateFromStores)([F.default], () => null != r ? F.default.getGuild(r.guild_id) : void 0), c = (0, d.useStateFromStoresArray)([B.default], () => null != r ? B.default.getVoiceStatesForChannel(r) : [], [r]), h = l.useMemo(() => {
       for (let e of c) {
         let t = U.default.getDMFromUserId(e.user.id),
           n = null != t && H.default.isChannelMuted(null, t),
@@ -263,16 +263,16 @@ function ef(e) {
   }({
     channel: t,
     entry: A,
-    requestId: v
-  }), eo = null != en && 0 === N.length ? [en] : N, eu = eo.length > 0, ed = eo.length >= 2, [ec, ef] = l.useState(!eu), em = "#".concat(t.name), ep = q.default.getName(t.guild_id, t.id, n), eE = L ? ei.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ei.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, eC = async e => {
+    requestId: x
+  }), eo = null != en && 0 === v.length ? [en] : v, eu = eo.length > 0, ed = eo.length >= 2, [ec, ef] = l.useState(!eu), em = "#".concat(t.name), ep = X.default.getName(t.guild_id, t.id, n), eE = L ? ei.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ei.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, eC = async e => {
     if (null != e) {
       if (K.default.track(es.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: el.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
           channel_id: t.id,
           guild_id: t.guild_id
-        }), B) {
+        }), G) {
         let l;
-        if ((0, R.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), z(!0), X(!1), L) l = t;
+        if ((0, R.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), z(!0), q(!1), L) l = t;
         else {
           var a;
           let e = await T.default.getOrEnsurePrivateChannel(n.id);
@@ -282,18 +282,18 @@ function ef(e) {
           reply: ":".concat(e.name, ":"),
           sendToChannel: l,
           onComplete: () => {
-            X(!0), setTimeout(() => {
+            q(!0), setTimeout(() => {
               z(!1), r()
             }, 600)
           },
           interactionType: el.ContentInventoryInteractionTypes.REACTION_EMOJI_REACT_SENT
         })
       }
-      ef(!0), null != j && (j.insertEmoji(e, !1, !1), j.focus())
+      ef(!0), null != O && (O.insertEmoji(e, !1, !1), O.focus())
     }
   }, eS = async e => {
     let a;
-    if (B && (0, R.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), L) a = t;
+    if (G && (0, R.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), L) a = t;
     else {
       let e = await T.default.openPrivateChannel(n.id, !1, !1),
         t = U.default.getChannel(e);
@@ -331,7 +331,7 @@ function ef(e) {
       entry: A,
       channelId: t.id,
       guildId: t.guild_id,
-      requestId: v,
+      requestId: x,
       destinationChannelId: l.id,
       destinationGuildId: l.guild_id
     }), null == r || r()
@@ -344,13 +344,13 @@ function ef(e) {
       sent: Z,
       shown: W,
       className: er.toastContainer
-    }), null != eT ? eT : B ? (0, a.jsx)(et.default, {
+    }), null != eT ? eT : G ? (0, a.jsx)(et.default, {
       children: (0, a.jsxs)("div", {
         className: er.emojiHotrailShareToChannel,
         children: [(0, a.jsx)(eh, {
           channel: t,
           onClickSuggestion: eC
-        }), (0, a.jsx)(x.ReactionPickerButton, {
+        }), (0, a.jsx)(N.ReactionPickerButton, {
           onSelectEmoji: eC
         })]
       })
@@ -372,7 +372,7 @@ function ef(e) {
         })
       }), (0, a.jsx)("div", {
         className: er.replyInputWrapper,
-        children: (0, a.jsx)(x.ReplyInput, {
+        children: (0, a.jsx)(N.ReplyInput, {
           placeholder: ei.default.Messages.TEXTAREA_PLACEHOLDER.format({
             channel: L ? em : "@".concat(ep)
           }),
@@ -385,7 +385,7 @@ function ef(e) {
             children: e => (0, a.jsx)(_.Clickable, {
               ...e,
               className: er.shareToChannelButton,
-              onClick: () => O(e => !e),
+              onClick: () => j(e => !e),
               children: L ? (0, a.jsx)(g.TextIcon, {
                 width: 20,
                 height: 20
@@ -426,7 +426,7 @@ let eh = e => {
   l.useEffect(() => {
     i(!0)
   }, []);
-  let r = !!N.default.keyboardModeEnabled && !s,
+  let r = !!v.default.keyboardModeEnabled && !s,
     o = (0, y.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
       emoji: e,
       url: e.url
@@ -478,7 +478,7 @@ function em(e) {
     participant1: u,
     participant2: d,
     numOtherParticipants: c
-  } = (0, X.default)(s, 3);
+  } = (0, q.default)(s, 3);
   return (0, a.jsxs)("div", {
     className: er.popoutContentHeader,
     children: [(0, a.jsxs)("div", {
@@ -497,8 +497,8 @@ function em(e) {
         variant: "heading-sm/normal",
         className: er.popoutTextSecondary,
         children: n.format({
-          user1: q.default.getName(r, t.id, u),
-          user2: q.default.getName(r, t.id, d),
+          user1: X.default.getName(r, t.id, u),
+          user2: X.default.getName(r, t.id, d),
           countOthers: c,
           nameHook: (e, t) => (0, a.jsx)(_.Text, {
             variant: "text-sm/medium",
@@ -589,7 +589,7 @@ function eC(e) {
     badges: n,
     stream: s,
     ...i
-  } = e, r = (0, d.useStateFromStores)([U.default], () => U.default.getChannel(null == s ? void 0 : s.channelId)), [o] = l.useMemo(() => (0, j.canWatchStream)(r, B.default, F.default, w.default, O.default), [r]);
+  } = e, r = (0, d.useStateFromStores)([U.default], () => U.default.getChannel(null == s ? void 0 : s.channelId)), [o] = l.useMemo(() => (0, O.canWatchStream)(r, G.default, F.default, w.default, j.default), [r]);
   return null == s ? null : (0, a.jsxs)(eu, {
     className: er.streamingPopoutHero,
     children: [(0, a.jsx)(em, {
@@ -601,7 +601,7 @@ function eC(e) {
       size: 16
     }), (0, a.jsx)(ep, {
       onClick: o ? () => {
-        A.default.selectVoiceChannel(s.channelId), (0, v.watchStreamAndTransitionToStream)(s)
+        A.default.selectVoiceChannel(s.channelId), (0, x.watchStreamAndTransitionToStream)(s)
       } : void 0,
       children: (0, a.jsxs)("div", {
         style: {

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildDiscoveryMenuPopout: function() {
-    return C
+    return _
   },
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("735250");
@@ -21,18 +21,18 @@ var s = n("442837"),
   E = n("981631"),
   h = n("689938");
 
-function _(e) {
+function C(e) {
   let {
     guild: t,
     shiftId: n,
-    onSelect: _,
-    closePopout: C,
+    onSelect: C,
+    closePopout: _,
     "aria-label": m
   } = e, S = (0, r.default)({
     id: t.id,
     label: h.default.Messages.COPY_ID_GUILD,
     shiftId: n,
-    onSuccess: C
+    onSuccess: _
   }), p = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), I = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, p)), {
     canSeeInAppReportingButtons: g
   } = f.DiscoveryInAppReportingExperiment.useExperiment({
@@ -40,10 +40,10 @@ function _(e) {
   }, {
     autoTrackExposure: !1
   }), T = () => {
-    (0, i.closeContextMenu)(), null == C || C()
+    (0, i.closeContextMenu)(), null == _ || _()
   };
   return (0, a.jsxs)(l.Menu, {
-    onSelect: _,
+    onSelect: C,
     navId: "guild-discovery-context-menu",
     "aria-label": null != m ? m : h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: i.closeContextMenu,
@@ -62,7 +62,7 @@ function _(e) {
     })]
   })
 }
-let C = e => {
+let _ = e => {
   let {
     guild: t,
     children: n,
@@ -80,7 +80,7 @@ let C = e => {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(_, {
+      return (0, a.jsx)(C, {
         guild: t,
         closePopout: n
       })

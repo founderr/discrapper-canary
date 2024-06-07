@@ -12,8 +12,8 @@ var a = n("735250"),
   f = n("703656"),
   E = n("592125"),
   h = n("131951"),
-  _ = n("974029"),
-  C = n("621113"),
+  C = n("974029"),
+  _ = n("621113"),
   m = n("51144"),
   S = n("321488"),
   p = n("417183"),
@@ -129,12 +129,12 @@ class L extends s.PureComponent {
         }), (0, a.jsxs)("div", {
           className: v.actions,
           children: [(0, a.jsx)(S.default, {
-            icon: _.default,
+            icon: C.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
           }), (0, a.jsx)(S.default, {
-            icon: C.default,
+            icon: _.default,
             tooltip: N.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
             shouldHighlight: t

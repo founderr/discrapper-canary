@@ -1,41 +1,41 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("457153"),
-  l = n("254197"),
-  i = n("685689");
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("457153"),
+  l = s("254197"),
+  i = s("685689");
 t.default = function(e) {
   let {
     expandedContentRef: t,
-    expansionSpring: n,
+    expansionSpring: s,
     isExpanded: r,
     isExpansionAnimationComplete: o,
     onCtxMenuOpened: u,
     onCtxMenuClosed: d,
     onCtxMenuSelection: c,
-    onContentHeightChange: f,
-    quest: E,
-    useReducedMotion: h
+    onContentHeightChange: E,
+    quest: _,
+    useReducedMotion: f
   } = e;
   return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(s.default, {
+    children: [(0, a.jsx)(n.default, {
       className: i.content,
-      expansionSpring: n,
+      expansionSpring: s,
       isExpanded: r,
       isExpansionAnimationComplete: o,
-      quest: E,
-      useReducedMotion: h
+      quest: _,
+      useReducedMotion: f
     }), (0, a.jsx)(l.default, {
       className: i.content,
       onCtxMenuOpen: u,
       onCtxMenuClose: d,
       onCtxMenuSelect: c,
-      onContentHeightChange: f,
+      onContentHeightChange: E,
       isExpanded: r,
       isExpansionAnimationComplete: o,
-      quest: E,
-      useReducedMotion: h,
+      quest: _,
+      useReducedMotion: f,
       ref: t
     })]
   })

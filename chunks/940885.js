@@ -34,16 +34,16 @@ function g(e) {
     isFetching: I
   } = (0, o.default)(t.id, !t.bot), {
     mutualGuilds: A,
-    isFetching: v
-  } = (0, u.default)(t.id, !t.bot), N = !t.bot && null != T && T.length > 0, x = !t.bot && null != A && A.length > 0;
-  return N || x ? (0, a.jsxs)(c.default.Overlay, {
+    isFetching: x
+  } = (0, u.default)(t.id, !t.bot), v = !t.bot && null != T && T.length > 0, N = !t.bot && null != A && A.length > 0;
+  return v || N ? (0, a.jsxs)(c.default.Overlay, {
     className: C.overlay,
-    children: [x && (0, a.jsx)(p.default, {
+    children: [N && (0, a.jsx)(p.default, {
       className: C.list,
       header: E.default.Messages.MUTUAL_GUILDS_COUNT.format({
         count: A.length
       }),
-      isLoadingHeader: v,
+      isLoadingHeader: x,
       loadingContentsCount: A.length,
       itemType: p.ListType.MutualGuildList,
       onExpand: () => S({
@@ -63,9 +63,9 @@ function g(e) {
           onSelect: () => (0, i.transitionToGuild)(n.id)
         }, n.id)
       })
-    }), x && N && (0, a.jsx)(d.default, {
+    }), N && v && (0, a.jsx)(d.default, {
       className: C.divider
-    }), N && (0, a.jsx)(p.default, {
+    }), v && (0, a.jsx)(p.default, {
       className: C.list,
       header: E.default.Messages.MUTUAL_FRIENDS_COUNT.format({
         count: T.length

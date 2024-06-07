@@ -4,31 +4,31 @@ r.r(t), r.d(t, {
     return d
   },
   Properties: function() {
-    return s
+    return c
   },
   Property: function() {
-    return c
+    return s
   }
 });
 var a = r("735250");
 r("470079");
-var n = r("120356"),
-  i = r.n(n),
+var i = r("120356"),
+  n = r.n(i),
   l = r("481060"),
   o = r("277513");
 
-function s(e) {
+function c(e) {
   let {
     className: t,
     children: r
   } = e;
   return (0, a.jsx)("dl", {
-    className: i()(o.properties, t),
+    className: n()(o.properties, t),
     children: r
   })
 }
 
-function c(e) {
+function s(e) {
   let {
     name: t,
     children: r

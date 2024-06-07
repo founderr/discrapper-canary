@@ -71,18 +71,18 @@ class c extends(a = l.PureComponent) {
         E = a.getContext("2d"),
         h = this.maxValue;
       E.strokeStyle = i, E.lineWidth = u;
-      let _ = a.height - E.lineWidth,
-        C = E.createLinearGradient(0, 0, 0, _);
-      if (null != c) C.addColorStop(0, c);
+      let C = a.height - E.lineWidth,
+        _ = E.createLinearGradient(0, 0, 0, C);
+      if (null != c) _.addColorStop(0, c);
       else {
         let {
           r: e,
           g: t,
           b: n
         } = o.hexToRgb(i);
-        C.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"))
+        _.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"))
       }
-      C.addColorStop(1, this.fillColor), E.fillStyle = C;
+      _.addColorStop(1, this.fillColor), E.fillStyle = _;
       let m = s.length >= r ? r : s.length;
       E.setTransform(1, 0, 0, -1, 0, a.height), E.clearRect(0, 0, a.width, a.height), E.translate(0, .5 * E.lineWidth);
       let S = Math.floor(a.width / (m - 3)),
@@ -92,7 +92,7 @@ class c extends(a = l.PureComponent) {
       s.forEach((e, a) => {
         t = {
           x: I,
-          y: _ * e / h
+          y: C * e / h
         }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + p, n.y, t.x - p, t.y, t.x, t.y), n = t, I += S
       }), E.stroke(), E.lineTo(I - S, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
     })

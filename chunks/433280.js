@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("735250");
@@ -18,11 +18,11 @@ var s = n("990547"),
   E = n("842265"),
   h = n("217110");
 
-function _(e) {
+function C(e) {
   let {
     guildId: t,
     markAsDismissed: n
-  } = e, _ = (0, l.useStateFromStores)([u.default, d.default], () => {
+  } = e, C = (0, l.useStateFromStores)([u.default, d.default], () => {
     let e = d.default.getCurrentUser(),
       n = u.default.getGuild(t);
     return (null == n ? void 0 : n.isOwner(e)) === !0
@@ -32,7 +32,7 @@ function _(e) {
     name: s.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
     properties: {
       guild_id: t,
-      is_owner: _
+      is_owner: C
     }
   }), (0, a.jsx)("div", {
     className: E.container,

@@ -1,10 +1,10 @@
 "use strict";
-s.r(t), s.d(t, {
+r.r(t), r.d(t, {
   usePremiumTierCardsExperiment: function() {
-    return r
+    return n
   }
 });
-let a = (0, s("818083").createExperiment)({
+let s = (0, r("818083").createExperiment)({
   kind: "user",
   id: "2024-05_premium_tier_cards_experiment",
   label: "Test tier card position and content modifications",
@@ -43,17 +43,17 @@ let a = (0, s("818083").createExperiment)({
   }]
 });
 
-function r(e) {
+function n(e) {
   let {
     enabled: t,
-    bucket: s
-  } = a.useExperiment({
+    bucket: r
+  } = s.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0
   });
   return {
     enabled: t,
-    bucket: s
+    bucket: r
   }
 }

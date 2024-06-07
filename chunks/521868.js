@@ -23,11 +23,11 @@ function h(e, t) {
       trackUserProfileAction: h
     } = (0, u.useUserProfileAnalyticsContext)();
 
-  function _(e) {
+  function C(e) {
     e.stopPropagation(), d.CustomStatusSetting.updateSetting(void 0)
   }
 
-  function C() {
+  function _() {
     h({
       action: "PRESS_SET_CUSTOM_STATUS"
     }), (0, i.openModalLazy)(async () => {
@@ -60,14 +60,14 @@ function h(e, t) {
       showIconFirst: !0,
       hint: e => (0, a.jsx)(i.Clickable, {
         ...e,
-        onClick: _,
+        onClick: C,
         tabIndex: -1,
         children: (0, a.jsx)(c.default, {
           width: 18,
           height: 18
         })
       }),
-      action: C
+      action: _
     })
   }
   return (0, a.jsx)(i.MenuItem, {
@@ -77,7 +77,7 @@ function h(e, t) {
     icon: e => (0, a.jsx)("div", {
       className: l()(E.customEmojiPlaceholder, e)
     }),
-    action: C,
+    action: _,
     showIconFirst: !0
   })
 }

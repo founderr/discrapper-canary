@@ -42,8 +42,8 @@ var l = n("735250"),
   w = n("981631"),
   B = n("474936"),
   F = n("871465"),
-  H = n("689938"),
-  V = n("471155");
+  V = n("689938"),
+  H = n("471155");
 let k = {
   origin: {
     x: -16,
@@ -77,16 +77,16 @@ function Y(e) {
       v(null), D(0), clearTimeout(L)
     };
   if (null == n) return null;
-  let X = H.default.Messages.DIRECT_MESSAGES;
-  T && (X = r.Storage.get(w.DISCODO_STORAGE_KEY) ? H.default.Messages.DISCODO_ENABLED : H.default.Messages.DISCODO_DISABLED), K.length > 0 && h.default.trackExposure({
+  let X = V.default.Messages.DIRECT_MESSAGES;
+  T && (X = r.Storage.get(w.DISCODO_STORAGE_KEY) ? V.default.Messages.DISCODO_ENABLED : V.default.Messages.DISCODO_DISABLED), K.length > 0 && h.default.trackExposure({
     location: "home_button"
   });
   let q = null;
   !t && p ? q = (0, l.jsx)(u.default, {
-    className: V.downloadProgress,
+    className: H.downloadProgress,
     determineOwnVisibility: !1
   }) : W && (q = (0, l.jsx)(R.default, {
-    className: V.broadcastBadge
+    className: H.broadcastBadge
   }));
   let Q = t || I || S,
     J = (0, l.jsx)(o.BlobMask, {
@@ -108,7 +108,7 @@ function Y(e) {
           }
         },
         selected: Q,
-        ariaLabel: H.default.Messages.DIRECT_MESSAGES,
+        ariaLabel: V.default.Messages.DIRECT_MESSAGES,
         ...z,
         to: {
           pathname: m,
@@ -141,7 +141,7 @@ function Y(e) {
       children: () => J
     }) : null;
   return (0, l.jsx)("div", {
-    className: V.tutorialContainer,
+    className: H.tutorialContainer,
     onMouseEnter: () => {
       B(!0)
     },
@@ -158,7 +158,7 @@ function Y(e) {
         children: [(0, l.jsx)(M.default, {
           selected: t,
           hovered: I,
-          className: V.pill
+          className: H.pill
         }), null != $ ? $ : (0, l.jsx)(G.default, {
           color: o.Tooltip.Colors.PRIMARY,
           hideOnClick: !0,

@@ -24,9 +24,9 @@ t.default = () => {
       animateOnHover: !0
     }),
     f = (0, l.useTheme)(),
-    m = (0, i.isThemeLight)(f),
-    x = o.default.getName(e),
-    E = m ? C.default : d.default;
+    x = (0, i.isThemeLight)(f),
+    E = o.default.getName(e),
+    L = x ? C.default : d.default;
   return null == e ? null : (0, n.jsxs)("div", {
     className: _.attributionBannerContainer,
     children: [(0, n.jsx)("div", {
@@ -41,9 +41,9 @@ t.default = () => {
       variant: "text-xs/bold",
       className: _.bannerHeader,
       children: p.default.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({
-        userName: x
+        userName: E
       })
-    }), (0, n.jsx)(E, {
+    }), (0, n.jsx)(L, {
       className: _.bannerIcon
     })]
   })

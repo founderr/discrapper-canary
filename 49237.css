@@ -10437,9 +10437,7 @@ html.decorate-links .lowSaturationUnderline_a62e4d {
 }
 
 .is-mobile .authBox__6f336 .discordLogo__037bb {
-    display: block;
-    position: absolute;
-    top: 16px
+    display: block
 }
 
 @media(max-width:830px) {

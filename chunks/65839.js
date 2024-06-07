@@ -132,14 +132,14 @@ t.default = e => {
     currentCategoryId: h,
     handleSelectCategory: _,
     categoryCounts: T,
-    allEntriesCount: v,
-    isLoading: N
-  } = e, x = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(t.getGuildId()));
-  return null != x && x.hasFeature(E.GuildFeatures.SHARD) ? (0, a.jsx)(A, {
-    guild: x,
+    allEntriesCount: x,
+    isLoading: v
+  } = e, N = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(t.getGuildId()));
+  return null != N && N.hasFeature(E.GuildFeatures.SHARD) ? (0, a.jsx)(A, {
+    guild: N,
     directoryEntries: n,
     handleCreateOrAddGuild: s,
-    isLoading: N
+    isLoading: v
   }) : (0, a.jsx)("div", {
     className: g.pageContainer,
     children: (0, a.jsxs)(o.AdvancedScrollerAuto, {
@@ -162,7 +162,7 @@ t.default = e => {
           children: [(0, a.jsx)(o.TabBar.Item, {
             className: S.tabBarItem,
             id: p.DirectoryEntryCategories.ALL,
-            children: "".concat(C.default.Messages.DIRECTORY_CATEGORY_ALL, " (").concat(v, ")")
+            children: "".concat(C.default.Messages.DIRECTORY_CATEGORY_ALL, " (").concat(x, ")")
           }, p.DirectoryEntryCategories.ALL), (0, p.getHubCategories)(t.id).map(e => {
             let {
               value: t,
@@ -175,7 +175,7 @@ t.default = e => {
             }, t)
           })]
         })
-      }), N && null == n ? (0, a.jsx)(o.Spinner, {
+      }), v && null == n ? (0, a.jsx)(o.Spinner, {
         className: g.spinner
       }) : null == n ? void 0 : n.map((e, t) => (0, a.jsxs)(l.Fragment, {
         children: [void 0 !== e.header ? (0, a.jsx)(o.Text, {

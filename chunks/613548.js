@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return G
   }
 }), n("653041");
 var a = n("735250"),
@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("390322"),
   I = n("616286"),
   A = n("961048"),
-  v = n("179424"),
-  N = n("786915"),
-  x = n("975146"),
+  x = n("179424"),
+  v = n("786915"),
+  N = n("975146"),
   M = n("991617"),
   R = n("606304"),
   y = n("502568"),
   L = n("805009"),
-  O = n("368666"),
-  j = n("358221"),
+  j = n("368666"),
+  O = n("358221"),
   P = n("887012"),
   D = n("444253"),
   b = n("355827"),
@@ -46,7 +46,7 @@ function H(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, l = Date.now(), s = (0, d.useStateFromStores)([R.default, j.default], () => o()(R.default.getSpeakers()).map(e => j.default.getParticipant(t, e)).filter(e => null != e && e.type === U.ParticipantTypes.USER && e.speaking && !(0, g.default)(e)).sortBy(e => -R.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+  } = e, l = Date.now(), s = (0, d.useStateFromStores)([R.default, O.default], () => o()(R.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === U.ParticipantTypes.USER && e.speaking && !(0, g.default)(e)).sortBy(e => -R.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
   return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
     children: s.map((e, t) => (0, a.jsx)(c.Tooltip, {
       position: "bottom",
@@ -68,7 +68,7 @@ function H(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   let {
     inPopout: t,
     channel: n,
@@ -80,22 +80,22 @@ function B(e) {
     voiceParticipantsHidden: R,
     selectedParticipant: L,
     userParticipantCount: w
-  } = (0, d.useStateFromStoresObject)([j.default], () => ({
-    selectedParticipant: j.default.getSelectedParticipant(g),
-    voiceParticipantsHidden: j.default.getVoiceParticipantsHidden(g),
-    userParticipantCount: j.default.getUserParticipantCount(g)
-  }), [g]), B = (0, P.default)(n), {
-    available: G,
+  } = (0, d.useStateFromStoresObject)([O.default], () => ({
+    selectedParticipant: O.default.getSelectedParticipant(g),
+    voiceParticipantsHidden: O.default.getVoiceParticipantsHidden(g),
+    userParticipantCount: O.default.getUserParticipantCount(g)
+  }), [g]), G = (0, P.default)(n), {
+    available: B,
     activated: V,
     hqStreamingState: W
-  } = (0, E.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), Y = G && V && W.hqStreamingIsEnabled, {
+  } = (0, E.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), Y = B && V && W.hqStreamingIsEnabled, {
     preventIdle: z,
     allowIdle: K
   } = (0, _.usePreventIdle)("popup"), Z = [];
-  if (B) {
+  if (G) {
     let e = (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(L.id) : void 0,
       t = (null == L ? void 0 : L.type) === U.ParticipantTypes.ACTIVITY ? L.id : void 0;
-    Z.push((0, a.jsx)(N.default, {
+    Z.push((0, a.jsx)(v.default, {
       className: k.button,
       channel: n,
       applicationId: t,
@@ -114,7 +114,7 @@ function B(e) {
     className: k.button,
     participant: L
   }, "warning")), Z.push((0, a.jsx)(p.default, {
-    size: O.default.Sizes.LARGE,
+    size: j.default.Sizes.LARGE,
     className: k.button,
     participant: L,
     showQuality: !0,
@@ -130,7 +130,7 @@ function B(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.createElement)(x.default, {
+      return (0, l.createElement)(N.default, {
         ...e,
         isActive: n,
         count: w,
@@ -138,7 +138,7 @@ function B(e) {
         className: k.button
       })
     }
-  }, "call-members-popout")), i && Z.push(null != L ? (0, a.jsx)(v.default, {
+  }, "call-members-popout")), i && Z.push(null != L ? (0, a.jsx)(x.default, {
     className: k.button,
     channelId: g
   }, "deselect-participant") : (0, a.jsx)(M.default, {

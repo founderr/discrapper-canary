@@ -2,14 +2,14 @@
 
 function a(e) {
   let t;
-  let n = !1;
+  let s = !1;
   return function() {
-    for (var a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
-    return !n && (n = !0, t = e(...s)), t
+    for (var a = arguments.length, n = Array(a), l = 0; l < a; l++) n[l] = arguments[l];
+    return !s && (s = !0, t = e(...n)), t
   }
 }
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   callOnce: function() {
     return a
   }
-}), n("47120")
+}), s("47120")

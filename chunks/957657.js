@@ -16,7 +16,7 @@ t.default = s.memo(function(e) {
   let {
     currentRoute: t,
     renderToolbar: n
-  } = e, d = s.useContext(u.AnalyticsContext), _ = h || t === c.Routes.APPLICATION_LIBRARY_SETTINGS;
+  } = e, d = s.useContext(u.AnalyticsContext), C = h || t === c.Routes.APPLICATION_LIBRARY_SETTINGS;
   return (0, a.jsxs)(i.default, {
     className: E.libraryHeader,
     toolbar: null == n ? void 0 : n(),
@@ -42,7 +42,7 @@ t.default = s.memo(function(e) {
       children: [(0, a.jsx)(l.TabBar.Item, {
         id: c.Routes.APPLICATION_LIBRARY,
         children: f.default.Messages.APPLICATION_LIBRARY_MY_GAMES
-      }), _ ? (0, a.jsx)(l.TabBar.Item, {
+      }), C ? (0, a.jsx)(l.TabBar.Item, {
         id: c.Routes.APPLICATION_LIBRARY_SETTINGS,
         children: f.default.Messages.SETTINGS
       }) : null]

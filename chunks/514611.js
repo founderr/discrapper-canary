@@ -11,8 +11,8 @@ var a, s = n("735250"),
   f = n("879484"),
   E = n("26580"),
   h = n("206887"),
-  _ = n("134432"),
-  C = n("695346"),
+  C = n("134432"),
+  _ = n("695346"),
   m = n("768581"),
   S = n("900849"),
   p = n("940627"),
@@ -58,13 +58,13 @@ class L extends(a = l.PureComponent) {
       name: R,
       description: O,
       presenceCount: L,
-      memberCount: M,
-      keywords: P
-    } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
+      memberCount: P,
+      keywords: M
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
-      size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != y ? y : this.getDefaultSplashURL(a, x), b = m.default.getGuildIconURL({
+      size: 300 * (0, C.getDevicePixelRatio)()
+    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -88,7 +88,7 @@ class L extends(a = l.PureComponent) {
     c.DiscoveryInAppReportingExperiment.trackExposure({
       location: "de1ef6_4"
     });
-    let G = C.DeveloperMode.getSetting();
+    let G = _.DeveloperMode.getSetting();
     return (0, s.jsx)(o.VisibilitySensor, {
       active: !N,
       onChange: this.setIsVisible,
@@ -117,10 +117,10 @@ class L extends(a = l.PureComponent) {
               children: [(0, s.jsx)("div", {
                 className: A.splash,
                 children: (0, s.jsx)("img", {
-                  src: D,
+                  src: x,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !x
+                    [A.splashImageHeight]: !y
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
@@ -170,8 +170,8 @@ class L extends(a = l.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: O
-              }), U && null != P && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: P,
+              }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: M,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: S.AnalyticsContexts.POPULAR
@@ -188,7 +188,7 @@ class L extends(a = l.PureComponent) {
                       membersOnline: L
                     })
                   })]
-                }), null != M && (0, s.jsxs)("div", {
+                }), null != P && (0, s.jsxs)("div", {
                   className: A.memberCount,
                   children: [(0, s.jsx)("div", {
                     className: A.dotOffline
@@ -196,7 +196,7 @@ class L extends(a = l.PureComponent) {
                     variant: "text-xs/normal",
                     color: "header-secondary",
                     children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-                      count: M
+                      count: P
                     })
                   })]
                 })]

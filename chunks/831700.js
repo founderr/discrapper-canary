@@ -43,8 +43,8 @@ var a = n("120356"),
   w = n("934415"),
   B = n("98597"),
   F = n("648501"),
-  H = n("473403"),
-  V = n("830993"),
+  V = n("473403"),
+  H = n("830993"),
   k = n("653577"),
   Y = n("207055"),
   K = n("981631"),
@@ -182,7 +182,7 @@ class q extends B.default {
                 onContextMenu: c,
                 ...f
               } = o;
-              return (0, l.jsxs)(H.default, {
+              return (0, l.jsxs)(V.default, {
                 className: Z.iconVisibility,
                 iconClassName: s()({
                   [Z.iconLive]: I
@@ -319,7 +319,7 @@ class q extends B.default {
       } = this.state;
       if (r && !n && !a && !o) {
         let n = M.ActivityRestrictedGuilds.getSetting().includes(i.id);
-        return (0, l.jsx)(V.default, {
+        return (0, l.jsx)(H.default, {
           onAction: this.closePopout,
           guild: i,
           channel: e,

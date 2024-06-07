@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("729285"),
   I = n("360048"),
   A = n("151827"),
-  v = n("626135"),
-  N = n("768581"),
-  x = n("585483"),
+  x = n("626135"),
+  v = n("768581"),
+  N = n("585483"),
   M = n("233870"),
   R = n("51144"),
   y = n("998502"),
   L = n("276264"),
-  O = n("981631"),
-  j = n("689938"),
+  j = n("981631"),
+  O = n("689938"),
   P = n("895294"),
   D = n("67431");
 let b = y.default.getEnableHardwareAcceleration();
@@ -74,7 +74,7 @@ function U(e) {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
-      x.ComponentDispatch.dispatchToLastSubscribed(O.ComponentActions.INSERT_TEXT, {
+      N.ComponentDispatch.dispatchToLastSubscribed(j.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), u.default.startTyping(l.id)
@@ -83,7 +83,7 @@ function U(e) {
       user: t,
       currentUser: _,
       isOwner: t.id === l.ownerId,
-      ownerTooltipText: j.default.Messages.GROUP_OWNER,
+      ownerTooltipText: O.default.Messages.GROUP_OWNER,
       shouldAnimateStatus: b,
       isTyping: h,
       status: d,
@@ -114,7 +114,7 @@ function F(e) {
         integration: i
       })
     })
-  }, [i, u]), c = i.application.bot, f = N.default.getApplicationIconURL({
+  }, [i, u]), c = i.application.bot, f = v.default.getApplicationIconURL({
     id: i.application.id,
     icon: i.application.icon,
     bot: null === (t = i.application) || void 0 === t ? void 0 : t.bot,
@@ -189,12 +189,12 @@ function w(e) {
               isRecentlyOnlineTrackable: r
             } = (0, h.getRecentlyOnlineStrategy)(t);
           e[i.id] = {
-            status: null !== (l = E.default.getStatus(i.id)) && void 0 !== l ? l : O.StatusTypes.OFFLINE,
+            status: null !== (l = E.default.getStatus(i.id)) && void 0 !== l ? l : j.StatusTypes.OFFLINE,
             activities: null !== (s = E.default.getActivities(i.id)) && void 0 !== s ? s : [],
             lastOnlineTimestamp: n ? t : void 0
           }, r && (a.current = !0)
         } else e[i.id] = {
-          status: O.StatusTypes.OFFLINE,
+          status: j.StatusTypes.OFFLINE,
           activities: []
         }
       }
@@ -215,7 +215,7 @@ function w(e) {
         shouldTrackRecentlyOnlineExposure: a.current,
         listItems: e
       };
-      let l = [O.StatusTypes.OFFLINE, O.StatusTypes.INVISIBLE, null, void 0],
+      let l = [j.StatusTypes.OFFLINE, j.StatusTypes.INVISIBLE, null, void 0],
         i = [],
         r = [],
         o = [];
@@ -231,8 +231,8 @@ function w(e) {
     location: "private_channel_recipients"
   });
   let {
-    installedIntegrations: N,
-    applicationsShelf: x,
+    installedIntegrations: v,
+    applicationsShelf: N,
     fetched: R,
     appsInGDMEnabled: y,
     availableApplications: L
@@ -246,7 +246,7 @@ function w(e) {
         channelId: t.id
       })
   }, [o, g, t.id]), l.useEffect(() => {
-    v.default.track(O.AnalyticEvents.MEMBER_LIST_VIEWED, {
+    x.default.track(j.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id
@@ -262,7 +262,7 @@ function w(e) {
         fade: !0,
         children: [(0, a.jsxs)(A.default, {
           className: D.membersGroup,
-          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(g.length, " "), b ? (0, a.jsx)(_.default, {
+          children: ["".concat(O.default.Messages.MEMBERS, "—").concat(g.length, " "), b ? (0, a.jsx)(_.default, {
             className: D.__invalid_decorator,
             type: _.default.Types.STAFF_ONLY_DM
           }) : null]
@@ -272,11 +272,11 @@ function w(e) {
           activities: e.activities,
           lastOnlineTimestamp: e.lastOnlineTimestamp,
           channel: t
-        }, e.user.id)), y && (N.length > 0 || R && x.length > 0) && (0, a.jsxs)(a.Fragment, {
+        }, e.user.id)), y && (v.length > 0 || R && N.length > 0) && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(A.default, {
             className: D.membersGroup,
-            children: "".concat(j.default.Messages.APPS, "—").concat(N.length)
-          }), N.map(e => (0, a.jsx)(F, {
+            children: "".concat(O.default.Messages.APPS, "—").concat(v.length)
+          }), v.map(e => (0, a.jsx)(F, {
             integration: e,
             channel: t
           }, e.application.id)), L.length > 0 && (0, a.jsx)(I.default, {
@@ -299,7 +299,7 @@ function w(e) {
                 height: 18
               })
             }),
-            name: j.default.Messages.PRIVATE_CHANNEL_ADD_APPS
+            name: O.default.Messages.PRIVATE_CHANNEL_ADD_APPS
           })]
         })]
       })

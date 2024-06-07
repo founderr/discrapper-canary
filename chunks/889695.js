@@ -44,12 +44,12 @@ function R(e) {
   } = (0, c.useStateFromStoresObject)([_.default], () => ({
     impersonateType: _.default.getImpersonateType(t),
     viewingRoles: _.default.getViewingRoles(t)
-  })), M = R === C.ImpersonateType.SERVER_SHOP, b = (0, c.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [O, A] = (0, d.useMultiSelect)(null == N ? [] : h.default.keys(N)), x = i.useRef(l);
+  })), O = R === C.ImpersonateType.SERVER_SHOP, b = (0, c.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [M, A] = (0, d.useMultiSelect)(null == N ? [] : h.default.keys(N)), L = i.useRef(l);
   i.useEffect(() => {
     let e = {},
-      t = x.current;
+      t = L.current;
     if (null != t && null != R) {
-      for (let t of O) {
+      for (let t of M) {
         let n = o[t];
         null != n && (e[t] = n)
       }(0, E.updateImpersonating)(t.id, {
@@ -57,12 +57,12 @@ function R(e) {
         roles: e
       })
     }
-  }, [O, R, o]);
-  let L = null != l && null != n && null != b ? u()(o).filter(e => -1 !== b.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
+  }, [M, R, o]);
+  let x = null != l && null != n && null != b ? u()(o).filter(e => -1 !== b.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
     P = i.useMemo(() => null != l && null != n ? Object.values(o).filter(e => e.id !== l.id).filter(e => {
       var t;
-      return !M || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
-    }).filter(e => (null == L ? void 0 : L.id) === e.id || g.isRoleHigher(l, n.id, L, e)) : [], [l, n, M, L, o]);
+      return !O || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
+    }).filter(e => (null == x ? void 0 : x.id) === e.id || g.isRoleHigher(l, n.id, x, e)) : [], [l, n, O, x, o]);
   if (null == n || null == l || null == b) return null;
   let w = {};
   return (b.roles.forEach(e => {
@@ -75,7 +75,7 @@ function R(e) {
     className: T.container,
     children: (0, r.jsx)(d.Combobox, {
       placeholder: m.default.Messages.SEARCH_ROLES,
-      value: O,
+      value: M,
       onChange: A,
       autoFocus: !0,
       children: e => {

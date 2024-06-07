@@ -41,11 +41,11 @@ function A(e) {
   }
   let R = S.default.get(t.planId);
   u()(null != R, "Missing subscriptionPlan");
-  let M = (0, P.getPrice)(t.planId, !1, !1, {
+  let y = (0, P.getPrice)(t.planId, !1, !1, {
       paymentSourceId: t.paymentSourceId,
       currency: t.currency
     }),
-    y = (0, C.formatRate)((0, C.formatPrice)(M.amount, M.currency), R.interval, R.intervalCount);
+    M = (0, C.formatRate)((0, C.formatPrice)(y.amount, y.currency), R.interval, R.intervalCount);
   return (0, a.jsxs)(c.ModalRoot, {
     transitionState: n,
     "aria-label": h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
@@ -62,11 +62,11 @@ function A(e) {
       className: T.modalBody,
       children: (0, _.isNoneSubscription)(t.planId) ? h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
         downgradedPlan: P.default.getDisplayName(s.planId),
-        existingRate: y
+        existingRate: M
       }) : h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
         existingPlan: P.default.getDisplayName(t.planId),
         downgradedPlan: P.default.getDisplayName(s.planId),
-        existingRate: y
+        existingRate: M
       })
     }), (0, a.jsxs)(c.ModalFooter, {
       children: [(0, a.jsx)(c.Button, {

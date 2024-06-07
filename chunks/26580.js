@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoveryTagStyle: function() {
-    return C
+    return _
   },
   DiscoveryTags: function() {
     return m
@@ -64,7 +64,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  _ = e => {
+  C = e => {
     let {
       className: t,
       count: n
@@ -83,7 +83,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       })
     })
   },
-  C = {
+  _ = {
     DEFAULT: c.tagDefault,
     LIGHT: c.tagLight,
     ALT: c.tagAlt
@@ -93,7 +93,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       tags: t,
       onTagClick: n,
       className: l,
-      discoveryTagStyle: r = C.DEFAULT,
+      discoveryTagStyle: r = _.DEFAULT,
       hideOverflow: u = !1,
       guildId: d,
       section: h
@@ -121,7 +121,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
         onClick: () => n(e),
         hide: null != p && t >= p,
         text: e
-      }, e)), !u && null != p && p < g.length && (0, a.jsx)(_, {
+      }, e)), !u && null != p && p < g.length && (0, a.jsx)(C, {
         className: r,
         onTagClick: n,
         tags: g.slice(p),
