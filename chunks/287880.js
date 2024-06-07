@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   encodeTotpSecret: function() {
-    return f
+    return E
   },
   encodeTotpSecretAsUrl: function() {
-    return E
+    return f
   },
   generateTotpSecret: function() {
     return u
@@ -27,11 +27,11 @@ function u() {
   return t = (e = 20, i.getRandomValues(new Uint8Array(20))), r.encode(t).toString("utf8").replace(/=/g, "").toLowerCase().replace(/(\w{4})/g, "$1 ").trim()
 }
 
-function f(e) {
+function E(e) {
   return e.replace(/[\s._-]+/g, "").toUpperCase()
 }
 
-function E(e, t) {
+function f(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "Discord";
-  return "otpauth://totp/".concat(encodeURI(n), ":").concat(encodeURI(e), "?secret=").concat(f(t), "&issuer=").concat(encodeURIComponent(n))
+  return "otpauth://totp/".concat(encodeURI(n), ":").concat(encodeURI(e), "?secret=").concat(E(t), "&issuer=").concat(encodeURIComponent(n))
 }

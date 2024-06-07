@@ -9,8 +9,8 @@
       r = t("992774"),
       l = t("649754"),
       s = t("376398"),
-      b = t("846519"),
-      u = t("570140"),
+      u = t("846519"),
+      b = t("570140"),
       p = t("710845"),
       h = t("314897"),
       m = t("358085"),
@@ -20,7 +20,7 @@
       g = t("981631"),
       O = t("65154");
     let T = {},
-      S = new b.Timeout,
+      S = new u.Timeout,
       A = !1,
       w = window.document.createElement("canvas");
     w.width = 512, w.height = 288;
@@ -107,7 +107,7 @@
           })
         }(t);
         let n = w.toDataURL("image/jpeg");
-        if (u.default.dispatch({
+        if (b.default.dispatch({
             type: "STREAM_PREVIEW_FETCH_SUCCESS",
             streamKey: a,
             previewURL: n
@@ -134,7 +134,7 @@
     }
     a.default = {
       init() {
-        u.default.subscribe("CONNECTION_OPEN", N), u.default.subscribe("LOGOUT", N), u.default.subscribe("STREAM_DELETE", N), u.default.subscribe("RTC_CONNECTION_VIDEO", e => {
+        b.default.subscribe("CONNECTION_OPEN", N), b.default.subscribe("LOGOUT", N), b.default.subscribe("STREAM_DELETE", N), b.default.subscribe("RTC_CONNECTION_VIDEO", e => {
           let {
             guildId: a,
             channelId: t,
@@ -143,7 +143,7 @@
             context: i
           } = e;
           !(null == c || i !== O.MediaEngineContextTypes.STREAM || n !== h.default.getId() || __OVERLAY__) && (N(), d = c, R(c, a, t, n))
-        }), u.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
+        }), b.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
           let {
             videoState: a
           } = e;

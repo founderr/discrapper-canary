@@ -17,17 +17,17 @@ function d(e) {
     platformType: n,
     authToken: t,
     onContinue: d,
-    onError: u,
-    onClose: C
-  } = e, c = n === r.PlatformTypes.PLAYSTATION_STAGING ? s.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID : s.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, T = n === r.PlatformTypes.PLAYSTATION_STAGING ? o.ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING : o.ConsoleAuthorizationRedirectURIs.PLAYSTATION;
+    onError: c,
+    onClose: u
+  } = e, C = n === r.PlatformTypes.PLAYSTATION_STAGING ? s.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID : s.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, T = n === r.PlatformTypes.PLAYSTATION_STAGING ? o.ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING : o.ConsoleAuthorizationRedirectURIs.PLAYSTATION;
   return (0, i.jsx)(a.TwoWayLinkDiscordConsent, {
     platformType: n,
-    clientId: c,
+    clientId: C,
     scopes: l.PLAYSTATION_CLIENT_SCOPES,
     authToken: t,
     onContinue: d,
-    onError: u,
-    onClose: C,
+    onError: c,
+    onClose: u,
     redirectUri: T
   })
 }

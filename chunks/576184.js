@@ -57,7 +57,7 @@ class x extends a.Component {
     })
   }
 }
-class g extends a.Component {
+class b extends a.Component {
   componentDidMount() {
     u.default.launch("discord://" + this.props.location.pathname, e => {
       new c.default("UnsupportedBrowser").log("discord://", e)
@@ -85,4 +85,4 @@ class g extends a.Component {
     })
   }
 }
-s.default = g
+s.default = b

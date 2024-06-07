@@ -14,13 +14,13 @@ var a = n("735250"),
   c = n("981631"),
   u = n("689938");
 
-function f(e) {
+function E(e) {
   let {
     onError: t,
     onSuccess: n,
     PasswordConfirm: r,
     ...l
-  } = e, [d, f] = s.useState("");
+  } = e, [d, E] = s.useState("");
   return (0, a.jsx)(r, {
     ...l,
     handleSubmit: e => i.default.enableMFAStart(e),
@@ -29,14 +29,14 @@ function f(e) {
       if (("object" == typeof(a = e) && null != a && (0, o.hasOwnProperty)(a, "code") && "number" == typeof a.code ? a.code : 0) === c.AbortCodes.MFA_INVALID_SECRET) n(d), l.onClose();
       else t(e)
     },
-    onPasswordChange: f,
+    onPasswordChange: E,
     title: u.default.Messages.TWO_FA_ENABLE,
     actionText: u.default.Messages.CONTINUE,
     skipErrorMsgAbortCode: c.AbortCodes.MFA_INVALID_SECRET
   })
 }
 
-function E(e, t) {
+function f(e, t) {
   return new Promise(n => {
     (0, r.openModalLazy)(async () => s => (0, a.jsx)(l.default, {
       ...s,
@@ -70,7 +70,7 @@ async function p() {
       let {
         default: s
       } = await Promise.all([n.e("99387"), n.e("24642")]).then(n.bind(n, "279837"));
-      return n => (0, a.jsx)(f, {
+      return n => (0, a.jsx)(E, {
         ...n,
         onSuccess: e,
         onError: t,
@@ -97,8 +97,8 @@ async function p() {
         })
       })
     }));
-    await E(e, null == s ? void 0 : s.token)
-  } else await E(e);
+    await f(e, null == s ? void 0 : s.token)
+  } else await f(e);
   await _()
 }
 t.default = {

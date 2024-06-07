@@ -10,8 +10,8 @@ var l = t("735250"),
   r = t("651711"),
   a = t("434404"),
   o = t("202858"),
-  d = t("587431"),
-  c = t("400842"),
+  c = t("587431"),
+  d = t("400842"),
   u = t("271267"),
   f = t("981631"),
   h = t("689938"),
@@ -58,7 +58,7 @@ function b(e) {
   }), [v, x]), m = (0, r.default)(i, b);
   return null != h ? (0, l.jsx)("div", {
     className: g.paddedContainer,
-    children: (0, l.jsx)(d.default, {
+    children: (0, l.jsx)(c.default, {
       children: h.message
     })
   }) : null == m || t ? (0, l.jsx)("div", {
@@ -66,7 +66,7 @@ function b(e) {
     children: (0, l.jsx)(s.Spinner, {})
   }) : (0, l.jsx)("div", {
     children: m.map((e, i) => (0, l.jsxs)(n.Fragment, {
-      children: [(0, l.jsx)(c.ChecklistItem, {
+      children: [(0, l.jsx)(d.ChecklistItem, {
         name: e.checked ? e.checkedLabel : e.uncheckedLabel,
         description: e.description,
         checked: e.checked,

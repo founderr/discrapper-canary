@@ -183,8 +183,8 @@ function ee(e) {
     eA !== y.PaymentAuthenticationState.PENDING && eY !== N.Step.CONFIRM && null != ed && (ew !== Q && eW(Q), !Q.includes(eY) && eY !== N.Step.PREMIUM_UPSELL && eq(N.Step.REVIEW)), eY === N.Step.ADD_PAYMENT_STEPS && ew !== Z && eW(Z), eZ && eY !== N.Step.PLAN_SELECT && eH(N.Step.PLAN_SELECT)
   }, [eY, eq, eZ, eA, er, ed, ew]), (0, y.usePaymentStepForAuthentication)(eY, eA, eq), (0, N.usePurchaseStateForStep)(eY, eV, eK);
   let e$ = a.useRef(null),
-    [e0, e3] = (0, P.default)(!1, 500),
-    [e1, e4] = a.useState(null),
+    [e0, e1] = (0, P.default)(!1, 500),
+    [e3, e4] = a.useState(null),
     [e5, e2] = a.useState([]),
     [e7, e8] = a.useState(!1);
   a.useEffect(() => {
@@ -222,7 +222,7 @@ function ee(e) {
   if (eo) t = (0, s.jsx)(T.BlockedPaymentsContentModal, {
     onClose: eQ
   });
-  else if (ec && ep && eB && null != e1 && "" !== e1) {
+  else if (ec && ep && eB && null != e3 && "" !== e3) {
     if (null == er ? void 0 : er.isPausedOrPausePending) t = (0, s.jsx)(S.ModalContent, {
       children: (0, s.jsx)("p", {
         className: X.copy,
@@ -236,12 +236,12 @@ function ee(e) {
       })
     });
     else if (eY === N.Step.PREMIUM_UPSELL) {
-      u()(null != eE, "Missing nextPremiumSubscriptionPlan"), u()(e1, "Currency not defined");
+      u()(null != eE, "Missing nextPremiumSubscriptionPlan"), u()(e3, "Currency not defined");
       let e = null != eM ? {
         paymentSourceId: eM,
-        currency: e1
+        currency: e3
       } : {
-        currency: e1
+        currency: e3
       };
       t = (0, s.jsx)(H.default, {
         premiumSubscriptionPlan: eE,
@@ -255,12 +255,12 @@ function ee(e) {
       })
     } else {
       let e, n, l, a;
-      u()(e1, "Currency not defined");
+      u()(e3, "Currency not defined");
       let r = null != eM ? {
         paymentSourceId: eM,
-        currency: e1
+        currency: e3
       } : {
-        currency: e1
+        currency: e3
       };
       switch (eY) {
         case N.Step.PLAN_SELECT:
@@ -386,7 +386,7 @@ function ee(e) {
               onClick: () => {
                 null != e$.current && (e$.current.scrollIntoView({
                   behavior: "smooth"
-                }), e3(!0))
+                }), e1(!0))
               },
               type: "submit",
               children: J.default.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT

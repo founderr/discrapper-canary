@@ -3,8 +3,8 @@ s.r(t);
 var l, n, a = s("735250");
 s("470079");
 var r = s("481060"),
-  c = s("285952"),
-  i = s("979672");
+  i = s("285952"),
+  c = s("979672");
 (l = n || (n = {})).UPGRADE = "UPGRADE", l.CANCEL = "CANCEL", l.UNVERIFIED = "UNVERIFIED", l.UNCLAIMED = "UNCLAIMED", l.GRANDFATHERED = "GRANDFATHERED";
 let o = {
     UPGRADE: "imageUpgrade",
@@ -29,13 +29,13 @@ u.Header = e => {
     onClose: s
   } = e;
   return (0, a.jsxs)(r.ModalHeader, {
-    justify: c.default.Justify.BETWEEN,
+    justify: i.default.Justify.BETWEEN,
     separator: !1,
     children: [(0, a.jsx)(r.FormTitle, {
       tag: r.FormTitleTags.H4,
       children: t
     }), null != s ? (0, a.jsx)(r.ModalCloseButton, {
-      className: i.__invalid_closeIcon,
+      className: c.__invalid_closeIcon,
       onClick: s
     }) : null]
   })
@@ -46,9 +46,9 @@ u.Header = e => {
   } = e;
   return (0, a.jsxs)(r.ModalContent, {
     children: [(0, a.jsx)("div", {
-      className: i[o[s]]
+      className: c[o[s]]
     }), (0, a.jsx)("div", {
-      className: i.message,
+      className: c.message,
       children: t
     })]
   })
@@ -59,12 +59,12 @@ u.Header = e => {
     secondary: l
   } = e;
   return (0, a.jsx)(r.ModalFooter, {
-    children: (0, a.jsxs)(c.default, {
-      justify: c.default.Justify.END,
+    children: (0, a.jsxs)(i.default, {
+      justify: i.default.Justify.END,
       children: [null != l ? (0, a.jsx)(r.Button, {
         onClick: l.onClick,
         look: r.Button.Looks.LINK,
-        innerClassName: i.secondaryButton,
+        innerClassName: c.secondaryButton,
         children: l.label
       }) : null, null != t ? (0, a.jsx)(r.Button, {
         onClick: t.onClick,

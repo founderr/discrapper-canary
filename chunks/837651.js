@@ -9,8 +9,8 @@ var a = n("735250"),
   d = n("285952"),
   c = n("277390"),
   u = n("287880"),
-  f = n("689938"),
-  E = n("225576");
+  E = n("689938"),
+  f = n("225576");
 
 function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,13 +28,13 @@ let p = e => {
     children: r
   } = e;
   return (0, a.jsxs)(d.default, {
-    className: E.spacing,
+    className: f.spacing,
     children: [(0, a.jsx)(d.default, {
       grow: 0,
       shrink: 0,
       basis: "156px",
       justify: d.default.Justify.CENTER,
-      className: E.image,
+      className: f.image,
       children: t
     }), (0, a.jsx)(d.default, {
       direction: d.default.Direction.VERTICAL,
@@ -42,7 +42,7 @@ let p = e => {
       children: (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.FormTitle, {
           tag: "h5",
-          className: E.headerSpacing,
+          className: f.headerSpacing,
           children: n
         }), (0, a.jsx)(o.FormText, {
           type: o.FormText.Types.DESCRIPTION,
@@ -65,11 +65,11 @@ class h extends s.PureComponent {
     } = this.state, h = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, A = (0, u.encodeTotpSecretAsUrl)(null != h ? h : "", r), T = (0, a.jsx)("form", {
       onSubmit: this.handleActivate,
       children: (0, a.jsxs)(d.default, {
-        className: E.inputContainer,
+        className: f.inputContainer,
         align: d.default.Align.START,
         children: [(0, a.jsx)(o.TextInput, {
           value: i,
-          className: E.input,
+          className: f.input,
           placeholder: "000 000",
           maxLength: 7,
           autoComplete: "one-time-code",
@@ -82,7 +82,7 @@ class h extends s.PureComponent {
           children: (0, a.jsx)(o.Button, {
             type: "submit",
             submitting: _,
-            children: f.default.Messages.TWO_FA_ACTIVATE
+            children: E.default.Messages.TWO_FA_ACTIVATE
           })
         })]
       })
@@ -90,7 +90,7 @@ class h extends s.PureComponent {
     return (0, a.jsxs)(o.ModalRoot, {
       transitionState: t,
       size: o.ModalSize.DYNAMIC,
-      className: E.customWidth,
+      className: f.customWidth,
       children: [(0, a.jsxs)(o.ModalHeader, {
         separator: !1,
         children: [(0, a.jsxs)(d.default.Child, {
@@ -98,11 +98,11 @@ class h extends s.PureComponent {
           shrink: 1,
           children: [(0, a.jsx)(o.Heading, {
             variant: "heading-lg/semibold",
-            children: f.default.Messages.TWO_FA_ENABLE
+            children: E.default.Messages.TWO_FA_ENABLE
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
-            className: E.subHeader,
-            children: f.default.Messages.TWO_FA_ENABLE_SUBHEADER
+            className: f.subHeader,
+            children: E.default.Messages.TWO_FA_ENABLE_SUBHEADER
           })]
         }), (0, a.jsx)(d.default.Child, {
           grow: 0,
@@ -118,41 +118,41 @@ class h extends s.PureComponent {
             width: 100,
             height: 100
           }),
-          label: f.default.Messages.TWO_FA_DOWNLOAD_APP_LABEL,
-          text: f.default.Messages.TWO_FA_DOWNLOAD_APP_BODY.format({
+          label: E.default.Messages.TWO_FA_DOWNLOAD_APP_LABEL,
+          text: E.default.Messages.TWO_FA_DOWNLOAD_APP_BODY.format({
             googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en",
             authyURL: "https://www.authy.com/"
           })
         }), (0, a.jsx)(o.FormDivider, {
-          className: E.divider
+          className: f.divider
         }), (0, a.jsx)(p, {
           image: (0, a.jsx)(c.default, {
             text: A
           }),
-          label: f.default.Messages.TWO_FA_QR_LABEL,
-          text: f.default.Messages.TWO_FA_QR_BODY,
+          label: E.default.Messages.TWO_FA_QR_LABEL,
+          text: E.default.Messages.TWO_FA_QR_BODY,
           children: (0, a.jsxs)("div", {
-            className: E.topSpacing,
+            className: f.topSpacing,
             children: [(0, a.jsx)(o.FormTitle, {
               tag: "h5",
-              className: E.headerSpacing,
-              children: f.default.Messages.TWO_FA_KEY
+              className: f.headerSpacing,
+              children: E.default.Messages.TWO_FA_KEY
             }), (0, a.jsx)(o.Text, {
               variant: "text-md/normal",
-              className: E.secret,
+              className: f.secret,
               selectable: !0,
               children: r
             })]
           })
         }), (0, a.jsx)(o.FormDivider, {
-          className: E.divider
+          className: f.divider
         }), (0, a.jsx)(p, {
           image: (0, a.jsx)("img", {
             alt: "",
             src: n("308777")
           }),
-          label: f.default.Messages._TWO_FA_LOGIN_LABEL,
-          text: f.default.Messages.TWO_FA_LOGIN_BODY,
+          label: E.default.Messages._TWO_FA_LOGIN_LABEL,
+          text: E.default.Messages.TWO_FA_LOGIN_BODY,
           children: T
         })]
       })]

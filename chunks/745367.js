@@ -11,10 +11,10 @@ var s = n("481060"),
   r = n("779341"),
   a = n("642566"),
   l = n("742699"),
-  d = n("686494"),
-  C = n("573703"),
-  c = n("798930"),
-  u = n("981631"),
+  C = n("686494"),
+  d = n("573703"),
+  u = n("798930"),
+  c = n("981631"),
   L = n("112109");
 
 function f(e) {
@@ -30,7 +30,7 @@ function f(e) {
     handleAuthToken: h,
     expectedCallbackState: p,
     callbackData: O
-  } = (0, i.useTwoWayLinkModalSlideManager)(f, u.PlatformTypes.CRUNCHYROLL);
+  } = (0, i.useTwoWayLinkModalSlideManager)(f, c.PlatformTypes.CRUNCHYROLL);
   return (0, o.jsx)(s.ModalRoot, {
     className: L.modal,
     transitionState: t,
@@ -39,14 +39,14 @@ function f(e) {
       activeSlide: N,
       width: 408,
       children: [(0, o.jsx)(s.Slide, {
-        id: c.TwoWayLinkModalSlideTypes.LANDING,
+        id: u.TwoWayLinkModalSlideTypes.LANDING,
         children: (0, o.jsx)(l.default, {
           onContinue: T,
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: c.TwoWayLinkModalSlideTypes.PRE_CONNECT,
-        children: (0, o.jsx)(d.default, {
+        id: u.TwoWayLinkModalSlideTypes.PRE_CONNECT,
+        children: (0, o.jsx)(C.default, {
           isWaitingForConnection: !1,
           onWaitingForConnection: _,
           onAuthToken: h,
@@ -54,8 +54,8 @@ function f(e) {
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: c.TwoWayLinkModalSlideTypes.PRE_CONNECT_WAITING,
-        children: (0, o.jsx)(d.default, {
+        id: u.TwoWayLinkModalSlideTypes.PRE_CONNECT_WAITING,
+        children: (0, o.jsx)(C.default, {
           isWaitingForConnection: !0,
           expectedCallbackState: p,
           onAuthToken: h,
@@ -63,7 +63,7 @@ function f(e) {
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: c.TwoWayLinkModalSlideTypes.DISCORD_CONSENT,
+        id: u.TwoWayLinkModalSlideTypes.DISCORD_CONSENT,
         children: (0, o.jsx)(r.default, {
           authToken: O,
           onContinue: T,
@@ -71,14 +71,14 @@ function f(e) {
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: c.TwoWayLinkModalSlideTypes.ERROR,
+        id: u.TwoWayLinkModalSlideTypes.ERROR,
         children: (0, o.jsx)(a.default, {
           onContinue: T,
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: c.TwoWayLinkModalSlideTypes.SUCCESS,
-        children: (0, o.jsx)(C.default, {
+        id: u.TwoWayLinkModalSlideTypes.SUCCESS,
+        children: (0, o.jsx)(d.default, {
           onClose: n
         })
       })]

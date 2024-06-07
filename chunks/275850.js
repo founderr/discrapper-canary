@@ -15,15 +15,15 @@ var n = a("735250"),
   d = a("912454"),
   I = a("759231"),
   _ = a("63063"),
-  f = a("981631"),
-  T = a("231338"),
+  T = a("981631"),
+  f = a("231338"),
   p = a("689938"),
   P = a("885651");
 let m = "***@***.***",
   E = new c.CreditCardSourceRecord({
     id: "new_payment_source_id",
     brand: d.default.Types.UNKNOWN,
-    type: f.PaymentSourceTypes.CARD
+    type: T.PaymentSourceTypes.CARD
   });
 
 function A(e) {
@@ -148,8 +148,8 @@ function A(e) {
       }
     }),
     h = r.useMemo(() => S.find(e => e.id === A), [S, A]);
-  let B = (t = v, a = h, s = null, t && null != a && !a.canRedeemTrial() ? s = p.default.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID : t && null != a && a.hasFlag(T.PaymentSourceFlags.NEW) && (s = p.default.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({
-    helpDeskArticle: _.default.getArticleURL(f.HelpdeskArticles.PAYMENT_AUTHORIZATION_CHARGE)
+  let B = (t = v, a = h, s = null, t && null != a && !a.canRedeemTrial() ? s = p.default.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID : t && null != a && a.hasFlag(f.PaymentSourceFlags.NEW) && (s = p.default.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({
+    helpDeskArticle: _.default.getArticleURL(T.HelpdeskArticles.PAYMENT_AUTHORIZATION_CHARGE)
   })), s);
   return (0, n.jsxs)(n.Fragment, {
     children: [O ? (0, n.jsx)(o.Button, {

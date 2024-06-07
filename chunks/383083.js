@@ -7,8 +7,8 @@ i.encode = function(e) {
     r = 0,
     a = 0;
   for (var o = new l(8 * (t = Math.floor((i = e).length / 5), i.length % 5 == 0 ? t : t + 1)); n < e.length;) {
-    var d = e[n];
-    r > 3 ? (a = (a = d & 255 >> r) << (r = (r + 5) % 8) | (n + 1 < e.length ? e[n + 1] : 0) >> 8 - r, n++) : (a = d >> 8 - (r + 5) & 31, 0 == (r = (r + 5) % 8) && n++), o[s] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt(a), s++
+    var c = e[n];
+    r > 3 ? (a = (a = c & 255 >> r) << (r = (r + 5) % 8) | (n + 1 < e.length ? e[n + 1] : 0) >> 8 - r, n++) : (a = c >> 8 - (r + 5) & 31, 0 == (r = (r + 5) % 8) && n++), o[s] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt(a), s++
   }
   for (n = s; n < o.length; n++) o[n] = 61;
   return o
@@ -18,8 +18,8 @@ i.encode = function(e) {
     r = 0;
   !l.isBuffer(e) && (e = new l(e));
   for (var a = new l(Math.ceil(5 * e.length / 8)), o = 0; o < e.length && 61 != e[o]; o++) {
-    var d = e[o] - 48;
-    if (d < n.length) s = n[d], t <= 3 ? 0 == (t = (t + 5) % 8) ? (i |= s, a[r] = i, r++, i = 0) : i |= 255 & s << 8 - t : (i |= 255 & s >>> (t = (t + 5) % 8), a[r] = i, r++, i = 255 & s << 8 - t);
+    var c = e[o] - 48;
+    if (c < n.length) s = n[c], t <= 3 ? 0 == (t = (t + 5) % 8) ? (i |= s, a[r] = i, r++, i = 0) : i |= 255 & s << 8 - t : (i |= 255 & s >>> (t = (t + 5) % 8), a[r] = i, r++, i = 255 & s << 8 - t);
     else throw Error("Invalid input - it is not base32 encoded string")
   }
   return a.slice(0, r)

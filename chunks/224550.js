@@ -13,9 +13,9 @@ var r = a("858987"),
   I = a("689938"),
   _ = a("291225");
 t.default = function(e) {
-  let t, a, f;
+  let t, a, T;
   let {
-    subscriptionPlan: T,
+    subscriptionPlan: f,
     isGift: p,
     isEmbeddedIAP: P,
     renewalInvoice: m,
@@ -30,11 +30,11 @@ t.default = function(e) {
   let b = null == e.planGroup ? [] : e.planGroup;
   if (null != m) {
     let e = l.default.getIntervalForInvoice(m);
-    t = e.intervalType, a = e.intervalCount, f = (0, o.formatRate)((0, o.formatPrice)(m.total, m.currency), t, a)
-  } else null != T && (t = T.interval, a = T.intervalCount);
+    t = e.intervalType, a = e.intervalCount, T = (0, o.formatRate)((0, o.formatPrice)(m.total, m.currency), t, a)
+  } else null != f && (t = f.interval, a = f.intervalCount);
   let v = (0, r.getReviewConfirmButtonLabel)({
       purchaseType: S || c.PurchaseTypes.SUBSCRIPTION,
-      plan: T,
+      plan: f,
       premiumSubscription: null == M ? null : M,
       isGift: !!p,
       planGroup: b,
@@ -43,8 +43,8 @@ t.default = function(e) {
     L = "",
     C = "";
   if (P) {
-    if (null != f && (null == m ? void 0 : m.subscriptionPeriodEnd) != null) L = I.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL.format({
-      rate: f,
+    if (null != T && (null == m ? void 0 : m.subscriptionPeriodEnd) != null) L = I.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL.format({
+      rate: T,
       renewalDate: m.subscriptionPeriodEnd
     });
     else switch (t) {
@@ -69,7 +69,7 @@ t.default = function(e) {
     primaryText: v,
     paidURL: c.MarketingURLs.PAID_TERMS
   }), L = N === c.SKUProductLines.COLLECTIBLES ? p ? I.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : I.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT : I.default.Messages.ONE_TIME_PURCHASE_FINE_PRINT;
-  else if (null == T || p) switch (p && (C = I.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+  else if (null == f || p) switch (p && (C = I.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
       primaryText: v,
       paidURL: c.MarketingURLs.PAID_TERMS
     })), t) {
@@ -90,7 +90,7 @@ t.default = function(e) {
     let e;
     let n = (0, r.getReviewConfirmButtonLabel)({
       purchaseType: c.PurchaseTypes.SUBSCRIPTION,
-      plan: T,
+      plan: f,
       premiumSubscription: null == M ? null : M,
       isGift: !1,
       planGroup: b,
@@ -100,7 +100,7 @@ t.default = function(e) {
       let e = Error("Missing base rate for legal fine print");
       (0, s.captureBillingException)(e, {
         tags: {
-          planId: T.id
+          planId: f.id
         }
       })
     }
@@ -110,7 +110,7 @@ t.default = function(e) {
       paidURL: c.MarketingURLs.PAID_TERMS,
       contactLink: c.MarketingURLs.CONTACT,
       helpdeskArticle: i.default.getArticleURL(c.HelpdeskArticles.BILLING)
-    }) : null != M && (0, u.subscriptionCanDowngrade)(M, T.id, b) ? I.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
+    }) : null != M && (0, u.subscriptionCanDowngrade)(M, f.id, b) ? I.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
       primaryText: n,
       rate: e,
       paidURL: c.MarketingURLs.PAID_TERMS,

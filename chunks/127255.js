@@ -1,40 +1,40 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return f
   }
-}), i("789020"), i("47120"), i("653041");
-var l = i("470079"),
-  n = i("442837"),
-  a = i("630388"),
-  d = i("115130"),
-  u = i("844797"),
-  r = i("694312"),
-  o = i("405625"),
-  c = i("664097"),
-  s = i("981631");
+}), l("789020"), l("47120"), l("653041");
+var i = l("470079"),
+  n = l("442837"),
+  a = l("630388"),
+  u = l("115130"),
+  d = l("844797"),
+  r = l("694312"),
+  o = l("405625"),
+  s = l("664097"),
+  c = l("981631");
 
 function f(e) {
   let {
     guildId: t,
-    enableFilter: i = !1,
+    enableFilter: l = !1,
     channel: f
   } = e, {
     filter: p
-  } = (0, n.useStateFromStoresObject)([d.default], () => ({
-    filter: d.default.getFilter()
-  })), v = (0, r.useActivityShelfData)(t), E = (0, o.default)(v), A = (0, c.useDeveloperActivityShelfItems)(), m = (0, u.useIsActivityInTextChannel)(f);
-  return l.useMemo(() => {
+  } = (0, n.useStateFromStoresObject)([u.default], () => ({
+    filter: u.default.getFilter()
+  })), v = (0, r.useActivityShelfData)(t), E = (0, o.default)(v), A = (0, s.useDeveloperActivityShelfItems)(), m = (0, d.useIsActivityInTextChannel)(f);
+  return i.useMemo(() => {
     function e(e) {
-      return !!(!i || "" === p || e.application.name.toLowerCase().includes(p.toLowerCase())) || !1
+      return !!(!l || "" === p || e.application.name.toLowerCase().includes(p.toLowerCase())) || !1
     }
 
     function t(e) {
-      return !m || (0, a.hasFlag)(e.application.flags, s.ApplicationFlags.EMBEDDED_RELEASED)
+      return !m || (0, a.hasFlag)(e.application.flags, c.ApplicationFlags.EMBEDDED_RELEASED)
     }
-    let l = [...A].filter(e).filter(t),
-      n = new Set(l.map(e => e.application.id));
-    for (let i of E) !n.has(i.application.id) && e(i) && t(i) && l.push(i);
-    return l
-  }, [A, i, p, E, m])
+    let i = [...A].filter(e).filter(t),
+      n = new Set(i.map(e => e.application.id));
+    for (let l of E) !n.has(l.application.id) && e(l) && t(l) && i.push(l);
+    return i
+  }, [A, l, p, E, m])
 }

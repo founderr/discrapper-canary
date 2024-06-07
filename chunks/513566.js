@@ -9,8 +9,8 @@
       r = t("287734"),
       l = t("317770"),
       s = t("829750"),
-      b = t("189771"),
-      u = t("67844"),
+      u = t("189771"),
+      b = t("67844"),
       p = t("173507"),
       h = t("592125"),
       m = t("131951"),
@@ -63,7 +63,7 @@
             d = m.default.isVideoEnabled(),
             n = m.default.isVideoAvailable(),
             c = h.default.getChannel(e),
-            i = null == c || (0, b.getVideoPermission)(c),
+            i = null == c || (0, u.getVideoPermission)(c),
             {
               reachedLimit: f,
               limit: o
@@ -71,7 +71,7 @@
               reachedLimit: void 0,
               limit: void 0
             },
-            r = (0, u.getVideoButtonLabel)({
+            r = (0, b.getVideoButtonLabel)({
               enabled: d,
               join: !1,
               channel: c,

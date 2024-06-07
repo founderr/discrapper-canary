@@ -12,9 +12,9 @@ var n = t("120356"),
   a = t("481060");
 t("651711");
 var o = t("696202"),
-  d = t("551556");
+  c = t("551556");
 t("689938");
-var c = t("859888");
+var d = t("859888");
 t("347157"), t("177266");
 let u = e => {
   let {
@@ -24,7 +24,7 @@ let u = e => {
     actionLabel: u,
     actionHandler: f
   } = e, h = null;
-  return h = n ? (0, l.jsx)(d.default, {
+  return h = n ? (0, l.jsx)(c.default, {
     width: 20,
     height: 20
   }) : (0, l.jsx)(o.default, {
@@ -32,15 +32,15 @@ let u = e => {
     width: 20,
     height: 20
   }), (0, l.jsxs)("div", {
-    className: c.checklistItem,
+    className: d.checklistItem,
     children: [(0, l.jsx)("div", {
-      className: c.checklistIcon,
+      className: d.checklistIcon,
       children: h
     }), (0, l.jsxs)("div", {
-      className: s()(c.__invalid_checklistText, n && c.ineligibleRow),
+      className: s()(d.__invalid_checklistText, n && d.ineligibleRow),
       children: [(0, l.jsx)(a.Heading, {
         variant: "heading-md/semibold",
-        className: c.checklistItemName,
+        className: d.checklistItemName,
         children: i
       }), (0, l.jsx)(a.Text, {
         color: "interactive-normal",
@@ -48,9 +48,9 @@ let u = e => {
         children: t
       })]
     }), null != u && (0, l.jsx)("div", {
-      className: c.eligibilityActionContainer,
+      className: d.eligibilityActionContainer,
       children: (0, l.jsx)(a.Button, {
-        className: c.eligibilityActionButton,
+        className: d.eligibilityActionButton,
         look: a.ButtonLooks.OUTLINED,
         color: a.ButtonColors.PRIMARY,
         onClick: f,

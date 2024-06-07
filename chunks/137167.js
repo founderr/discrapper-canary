@@ -9,8 +9,8 @@ var l = a("735250"),
   n = a("392711"),
   r = a("442837"),
   i = a("381499"),
-  o = a("481060"),
-  d = a("367907"),
+  d = a("481060"),
+  o = a("367907"),
   u = a("971628"),
   c = a("695346"),
   S = a("675478"),
@@ -44,7 +44,7 @@ function D(e) {
     var e;
     null == p || p();
     let [t, a] = en();
-    d.default.trackWithMetadata(h.AnalyticEvents.BROADCAST_SETTINGS_UPDATED, {
+    o.default.trackWithMetadata(h.AnalyticEvents.BROADCAST_SETTINGS_UPDATED, {
       auto_broadcast: j,
       broadcast_to_all_friends: U,
       num_allowed_users_in_broadcast: a.length,
@@ -102,40 +102,40 @@ function D(e) {
     return [a, (0, g.sanitizeAllowedUserIds)(Array.from(t))]
   }
   return s.useEffect(() => {
-    d.default.trackWithMetadata(h.AnalyticEvents.OPEN_MODAL, {
+    o.default.trackWithMetadata(h.AnalyticEvents.OPEN_MODAL, {
       type: V ? "Start Broadcast" : "Update Broadcast"
     })
   }, [V]), s.useEffect(() => {
     (0, n.chunk)(K, 100).forEach(e => {
       T.default.requestMembers(e, L.trim())
     })
-  }, [K, L]), (0, l.jsxs)(o.ModalRoot, {
+  }, [K, L]), (0, l.jsxs)(d.ModalRoot, {
     transitionState: D,
-    children: [(0, l.jsx)(o.Heading, {
+    children: [(0, l.jsx)(d.Heading, {
       variant: "heading-xl/semibold",
       className: v.header,
       children: t
-    }), (0, l.jsx)(o.ModalCloseButton, {
+    }), (0, l.jsx)(d.ModalCloseButton, {
       onClick: M,
       className: v.close
-    }), (0, l.jsxs)(o.ModalContent, {
+    }), (0, l.jsxs)(d.ModalContent, {
       className: v.content,
       paddingFix: !1,
-      children: [(0, l.jsx)(o.Text, {
+      children: [(0, l.jsx)(d.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         className: v.description,
         children: I.default.Messages.BROADCASTING_DESCRIPTION
-      }), (0, l.jsx)(o.FormTitle, {
-        tag: o.FormTitleTags.H5,
+      }), (0, l.jsx)(d.FormTitle, {
+        tag: d.FormTitleTags.H5,
         className: v.title,
         children: I.default.Messages.BROADCASTING_SETTINGS_MODAL_AUDIENCE_TITLE
       }), (0, l.jsxs)("div", {
         className: v.switch,
-        children: [(0, l.jsx)(o.Text, {
+        children: [(0, l.jsx)(d.Text, {
           variant: "text-sm/normal",
           children: I.default.Messages.BROADCASTING_SETTINGS_MODAL_FRIENDS
-        }), (0, l.jsx)(o.Switch, {
+        }), (0, l.jsx)(d.Switch, {
           checked: U,
           onChange: e => {
             O(e)
@@ -175,22 +175,22 @@ function D(e) {
           ea(""), H(e), k(!1)
         },
         maxCount: E.BROADCASTING_MAX_ALLOWED_GUILD_IDS
-      }), (0, l.jsx)(o.FormTitle, {
-        tag: o.FormTitleTags.H5,
+      }), (0, l.jsx)(d.FormTitle, {
+        tag: d.FormTitleTags.H5,
         className: v.title,
         children: I.default.Messages.BROADCASTING_SETTINGS_MODAL_BEHAVIOR_TITLE
       }), (0, l.jsxs)("div", {
         className: v.switch,
-        children: [(0, l.jsx)(o.Text, {
+        children: [(0, l.jsx)(d.Text, {
           variant: "text-sm/normal",
           children: I.default.Messages.AUTO_BROADCAST_TOGGLE
-        }), (0, l.jsx)(o.Switch, {
+        }), (0, l.jsx)(d.Switch, {
           checked: j,
           onChange: B
         })]
       })]
-    }), (0, l.jsx)(o.ModalFooter, {
-      children: (0, l.jsx)(o.Button, {
+    }), (0, l.jsx)(d.ModalFooter, {
+      children: (0, l.jsx)(d.Button, {
         disabled: Q,
         onClick: function() {
           if (!Q) {

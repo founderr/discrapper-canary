@@ -17,9 +17,9 @@ function d(e) {
     platformType: n,
     isWaitingForConnection: t,
     onWaitingForConnection: d,
-    expectedCallbackState: u,
-    onAuthToken: C,
-    onError: c,
+    expectedCallbackState: c,
+    onAuthToken: u,
+    onError: C,
     onClose: T
   } = e, S = t ? (0, i.jsx)("img", {
     src: l,
@@ -31,18 +31,18 @@ function d(e) {
     width: "180",
     height: "111",
     alt: ""
-  }), f = t ? a.default.Messages.CONSOLE_PRECONNECT_TITLE_WAITING : a.default.Messages.PS_PRECONNECT_TITLE, P = t ? a.default.Messages.PS_PRECONNECT_BODY_WAITING : a.default.Messages.PS_PRECONNECT_BODY;
+  }), P = t ? a.default.Messages.CONSOLE_PRECONNECT_TITLE_WAITING : a.default.Messages.PS_PRECONNECT_TITLE, f = t ? a.default.Messages.PS_PRECONNECT_BODY_WAITING : a.default.Messages.PS_PRECONNECT_BODY;
   return (0, i.jsx)(o.TwoWayLinkPreConnect, {
     platformType: n,
     isWaitingForConnection: t,
     onWaitingForConnection: d,
-    expectedCallbackState: u,
-    onAuthToken: C,
-    onError: c,
+    expectedCallbackState: c,
+    onAuthToken: u,
+    onError: C,
     onClose: T,
     img: S,
-    title: f,
-    body: P,
+    title: P,
+    body: f,
     redirectDestination: s.PLAYSTATION_LINK_DEST_ORIGIN
   })
 }

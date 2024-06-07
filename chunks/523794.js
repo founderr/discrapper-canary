@@ -30,11 +30,11 @@ function L(e) {
     } = e,
     p = n.default.getGuild(L.guild_id),
     O = null !== (t = null == p ? void 0 : p.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-    m = !!(null == p ? void 0 : p.isCommunity()),
-    C = I.default.Messages.STAGE_FULL_TITLE,
-    f = m ? O < S.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == p ? void 0 : p.premiumTier) !== S.BoostedGuildTiers.TIER_3 && O <= S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
+    f = !!(null == p ? void 0 : p.isCommunity()),
+    m = I.default.Messages.STAGE_FULL_TITLE,
+    C = f ? O < S.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == p ? void 0 : p.premiumTier) !== S.BoostedGuildTiers.TIER_3 && O <= S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
     B = o.default.can(E.MODERATE_STAGE_CHANNEL_PERMISSIONS, L);
-  i = m && (null == p ? void 0 : p.premiumTier) === S.BoostedGuildTiers.TIER_3 ? O <= S.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED ? I.default.Messages.STAGE_FULL_BOOST_MORE_BODY : I.default.Messages.STAGE_FULL_MAX_BODY : f ? I.default.Messages.STAGE_FULL_BODY : I.default.Messages.STAGE_FULL_MAX_BODY;
+  i = f && (null == p ? void 0 : p.premiumTier) === S.BoostedGuildTiers.TIER_3 ? O <= S.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED ? I.default.Messages.STAGE_FULL_BOOST_MORE_BODY : I.default.Messages.STAGE_FULL_MAX_BODY : C ? I.default.Messages.STAGE_FULL_BODY : I.default.Messages.STAGE_FULL_MAX_BODY;
   let U = () => {
       g(), r.default.track(S.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
         guild_id: L.guild_id,
@@ -53,7 +53,7 @@ function L(e) {
   }), (0, s.jsxs)(a.ModalRoot, {
     size: a.ModalSize.SMALL,
     transitionState: A,
-    "aria-label": C,
+    "aria-label": m,
     children: [(0, s.jsxs)(a.ModalHeader, {
       justify: d.default.Justify.END,
       separator: !1,
@@ -67,14 +67,14 @@ function L(e) {
       className: M.content,
       children: [(0, s.jsx)(a.Heading, {
         variant: "heading-xl/bold",
-        children: C
+        children: m
       }), (0, s.jsx)(a.Text, {
         variant: "text-md/medium",
         children: i
       })]
     }), (0, s.jsx)(a.ModalFooter, {
       className: M.footer,
-      children: f ? (0, s.jsxs)(s.Fragment, {
+      children: C ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(a.Button, {
           look: a.ButtonLooks.LINK,
           className: M.noThanksButton,

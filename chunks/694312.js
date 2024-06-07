@@ -1,48 +1,48 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   useActivityShelfData: function() {
     return f
   }
-}), i("47120");
-var l = i("470079"),
-  n = i("442837"),
-  a = i("835473"),
-  d = i("594174"),
-  u = i("695103"),
-  r = i("823379"),
-  o = i("358085"),
-  c = i("317381"),
-  s = i("761122");
+}), l("47120");
+var i = l("470079"),
+  n = l("442837"),
+  a = l("835473"),
+  u = l("594174"),
+  d = l("695103"),
+  r = l("823379"),
+  o = l("358085"),
+  s = l("317381"),
+  c = l("761122");
 
 function f(e) {
-  let t = (0, n.useStateFromStores)([d.default], d.default.getCurrentUser),
-    i = (0, n.useStateFromStoresArray)([c.default], () => c.default.getShelfActivities(e)),
-    f = (0, n.useStateFromStores)([u.default], () => u.default.testModeEmbeddedApplicationId),
-    p = i.map(e => e.application_id),
+  let t = (0, n.useStateFromStores)([u.default], u.default.getCurrentUser),
+    l = (0, n.useStateFromStoresArray)([s.default], () => s.default.getShelfActivities(e)),
+    f = (0, n.useStateFromStores)([d.default], () => d.default.testModeEmbeddedApplicationId),
+    p = l.map(e => e.application_id),
     v = null != f ? [f, ...p] : p,
     E = (0, a.default)(v),
-    A = l.useMemo(() => E.filter(r.isNotNullish), [E]),
-    m = l.useMemo(() => null != f && A.length > 0 && A[0].id === f && null != A[0].embeddedActivityConfig ? [{
+    A = i.useMemo(() => E.filter(r.isNotNullish), [E]),
+    m = i.useMemo(() => null != f && A.length > 0 && A[0].id === f && null != A[0].embeddedActivityConfig ? [{
       activity: A[0].embeddedActivityConfig,
       application: A[0]
     }] : [], [A, f]),
-    y = l.useMemo(() => i.map(e => {
+    y = i.useMemo(() => l.map(e => {
       let t = A.find(t => t.id === e.application_id);
       return null == t ? null : {
         activity: e,
         application: t
       }
-    }).filter(r.isNotNullish), [i, A]);
-  return l.useMemo(() => [...m, ...y].filter(e => {
+    }).filter(r.isNotNullish), [l, A]);
+  return i.useMemo(() => [...m, ...y].filter(e => {
     var t;
     let {
-      activity: i
+      activity: l
     } = e;
-    return (null !== (t = i.supported_platforms) && void 0 !== t ? t : []).includes((0, s.default)((0, o.getOS)()))
+    return (null !== (t = l.supported_platforms) && void 0 !== t ? t : []).includes((0, c.default)((0, o.getOS)()))
   }).filter(e => {
     let {
-      activity: i
+      activity: l
     } = e;
-    return !i.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null
+    return !l.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null
   }), [null == t ? void 0 : t.nsfwAllowed, y, m])
 }

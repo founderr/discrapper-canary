@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return m
   },
   PremiumInvoiceTable: function() {
-    return T
+    return f
   },
   PremiumInvoiceTableDivider: function() {
     return E
@@ -34,15 +34,15 @@ var r = a("120356"),
   d = a("104494"),
   I = a("474936"),
   _ = a("689938"),
-  f = a("975007");
+  T = a("975007");
 
-function T(e) {
+function f(e) {
   let {
     children: t,
     className: a
   } = e;
   return (0, n.jsx)("div", {
-    className: s()(f.table, a),
+    className: s()(T.table, a),
     children: t
   })
 }
@@ -52,7 +52,7 @@ function p(e) {
     children: t
   } = e;
   return (0, n.jsx)("div", {
-    className: f.header,
+    className: T.header,
     children: t
   })
 }
@@ -64,12 +64,12 @@ function P(e) {
     className: r
   } = e;
   return (0, n.jsxs)("div", {
-    className: s()(f.row, r),
+    className: s()(T.row, r),
     children: [(0, n.jsx)("div", {
-      className: f.rowLabel,
+      className: T.rowLabel,
       children: t
     }), (0, n.jsx)("div", {
-      className: f.rowAmount,
+      className: T.rowAmount,
       children: a
     })]
   })
@@ -81,7 +81,7 @@ function m(e) {
     value: a,
     discounts: r,
     originalAmount: s,
-    interval: T,
+    interval: f,
     currency: p,
     className: m,
     intervalCount: E,
@@ -92,7 +92,7 @@ function m(e) {
     return (0, n.jsx)(l.Text, {
       variant: "eyebrow",
       color: "always-white",
-      className: f.annualPlanOptionDiscount,
+      className: T.annualPlanOptionDiscount,
       children: _.default.Messages.BILLING_PLAN_SELECTION_DISCOUNT.format({
         discount: t
       })
@@ -102,10 +102,10 @@ function m(e) {
     children: [(0, n.jsx)(P, {
       label: t,
       value: b ? (0, n.jsx)("div", {
-        className: f.annualDiscountValues,
+        className: T.annualDiscountValues,
         children: (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsxs)("div", {
-            className: f.annualPlanDiscountPriceSection,
+            className: T.annualPlanDiscountPriceSection,
             children: [C(), a]
           }), (0, n.jsx)(l.Text, {
             variant: "text-md/normal",
@@ -117,16 +117,16 @@ function m(e) {
         })
       }) : (0, n.jsxs)(n.Fragment, {
         children: [a, null != v ? (0, n.jsxs)("div", {
-          className: f.rowPercentDiscount,
+          className: T.rowPercentDiscount,
           children: ["-", v, "%"]
         }) : null]
       }),
       className: m
     }), null != v ? (0, n.jsxs)("div", {
-      className: f.rowDiscountOriginalPrice,
-      children: ["(", null != T && null != E ? (0, c.formatRate)(y, T, E) : y, ")"]
+      className: T.rowDiscountOriginalPrice,
+      children: ["(", null != f && null != E ? (0, c.formatRate)(y, f, E) : y, ")"]
     }) : null, null != R ? (0, n.jsx)("div", {
-      className: f.entitlementDiscountRow,
+      className: T.entitlementDiscountRow,
       children: _.default.Messages.BILLING_INVOICE_SUBSCRIPTION_CREDIT_APPLIED
     }) : null]
   })
@@ -139,10 +139,10 @@ function E(e) {
     negativeMarginBottom: r = !1
   } = e;
   return (0, n.jsx)("div", {
-    className: s()(f.divider, {
-      [f.dividerExtended]: t,
-      [f.negativeMarginTop]: a,
-      [f.negativeMarginBottom]: r
+    className: s()(T.divider, {
+      [T.dividerExtended]: t,
+      [T.negativeMarginTop]: a,
+      [T.negativeMarginBottom]: r
     })
   })
 }
@@ -154,12 +154,12 @@ function A(e) {
     className: r
   } = e;
   return (0, n.jsxs)("div", {
-    className: s()(f.totalRow, r),
+    className: s()(T.totalRow, r),
     children: [(0, n.jsx)("div", {
-      className: f.totalLabel,
+      className: T.totalLabel,
       children: t
     }), (0, n.jsx)("div", {
-      className: f.totalAmount,
+      className: T.totalAmount,
       children: a
     })]
   })
@@ -171,7 +171,7 @@ function S(e) {
     className: a
   } = e;
   return (0, n.jsx)("div", {
-    className: s()(f.finePrint, a),
+    className: s()(T.finePrint, a),
     children: t
   })
 }

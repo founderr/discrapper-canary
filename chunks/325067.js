@@ -5,8 +5,8 @@ var a, s, o, r, i = n("392711"),
   d = n("213919"),
   c = n("442837"),
   u = n("570140");
-let f = !1,
-  E = [],
+let E = !1,
+  f = [],
   _ = "",
   p = "",
   h = !1,
@@ -19,10 +19,10 @@ class T extends(r = c.default.Store) {
     return _
   }
   getBackupCodes() {
-    return E
+    return f
   }
   get togglingSMS() {
-    return f
+    return E
   }
   getNonces() {
     return A
@@ -45,7 +45,7 @@ o = "MFAStore", (s = "displayName") in(a = T) ? Object.defineProperty(a, s, {
       token: t,
       codes: n
     } = e;
-    void 0 !== t && d.setToken(t), E = n
+    void 0 !== t && d.setToken(t), f = n
   },
   MFA_ENABLE_EMAIL_TOKEN: function(e) {
     let {
@@ -60,20 +60,20 @@ o = "MFAStore", (s = "displayName") in(a = T) ? Object.defineProperty(a, s, {
     d.setToken(t)
   },
   MFA_SMS_TOGGLE: function() {
-    f = !0
+    E = !0
   },
   MFA_SMS_TOGGLE_COMPLETE: function() {
-    f = !1
+    E = !1
   },
   MFA_CLEAR_BACKUP_CODES: function() {
-    E = []
+    f = []
   },
   MFA_VIEW_BACKUP_CODES: function(e) {
     let {
       codes: t,
       key: n
     } = e;
-    E = l().sortBy(t, "code"), _ = n
+    f = l().sortBy(t, "code"), _ = n
   },
   MFA_SEND_VERIFICATION_KEY: function(e) {
     let {

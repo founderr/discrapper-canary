@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return P
   }
 }), n("789020");
-var r = n("735250"),
-  a = n("470079"),
+var a = n("735250"),
+  r = n("470079"),
   s = n("442837"),
   l = n("131388"),
   i = n("171246"),
@@ -28,12 +28,12 @@ function P(e) {
     selectedSku: A,
     selectedStoreListing: C,
     application: N
-  } = (0, c.usePaymentContext)(), T = (0, l.default)(E.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), m = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(null == P ? void 0 : P.guild_id)), O = a.useCallback(() => t(f.Step.REVIEW), [t]);
+  } = (0, c.usePaymentContext)(), T = (0, l.default)(E.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), m = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(null == P ? void 0 : P.guild_id)), O = r.useCallback(() => t(f.Step.REVIEW), [t]);
   if (null == A) return null;
   let p = (0, i.isApplicationUserSubscription)(A.flags);
-  return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(I.PaymentPortalBody, {
-      children: T ? (0, r.jsx)(o.BenefitsConfirmationLite, {
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(I.PaymentPortalBody, {
+      children: T ? (0, a.jsx)(o.BenefitsConfirmationLite, {
         confirmCta: S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
         onConfirm: O,
         onCancel: n,
@@ -44,7 +44,7 @@ function P(e) {
           guildName: null == m ? void 0 : m.name
         }),
         showOpenDiscord: !1
-      }) : (0, r.jsx)(u.BenefitsConfirmation, {
+      }) : (0, a.jsx)(u.BenefitsConfirmation, {
         icon: null == C ? void 0 : C.thumbnail,
         storeListingBenefits: null == C ? void 0 : C.benefits,
         application: null != N ? N : void 0,
@@ -56,8 +56,8 @@ function P(e) {
           applicationName: null == N ? void 0 : N.name
         }) : S.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
       })
-    }), !T && (0, r.jsx)(I.PaymentPortalFooter, {
-      children: (0, r.jsx)(_.default, {
+    }), !T && (0, a.jsx)(I.PaymentPortalFooter, {
+      children: (0, a.jsx)(_.default, {
         onBack: n,
         backText: S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CANCEL_BUTTON,
         onPrimary: O,

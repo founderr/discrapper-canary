@@ -10,8 +10,8 @@ var s = a("120356"),
   n = a.n(s),
   r = a("481060"),
   i = a("971628"),
-  o = a("86813"),
-  d = a("826026"),
+  d = a("86813"),
+  o = a("826026"),
   u = a("689938"),
   c = a("187955");
 
@@ -69,7 +69,7 @@ function S(e) {
         children: [(0, l.jsx)(r.Heading, {
           variant: "text-sm/normal",
           children: a
-        }), f ? (0, l.jsx)(d.default, {}) : (0, l.jsx)(o.default, {})]
+        }), f ? (0, l.jsx)(o.default, {}) : (0, l.jsx)(d.default, {})]
       })
     }
   })

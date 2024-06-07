@@ -394,7 +394,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     tx = A.AppLauncherDesktopExperiment.useExperiment({
       location: "chat_input"
     }, {
-      autoTrackExposure: !1
+      autoTrackExposure: !0
     }).enabled,
     tF = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
   (0, Z.useHereMentionCallback)(th, ey.guild_id, ey.id);

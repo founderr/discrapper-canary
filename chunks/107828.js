@@ -1,7 +1,7 @@
 "use strict";
 n.r(s), n.d(s, {
   Application: function() {
-    return S
+    return R
   },
   Channel: function() {
     return L
@@ -13,13 +13,13 @@ n.r(s), n.d(s, {
     return T
   },
   Header: function() {
-    return D
+    return S
   },
   Link: function() {
-    return b
+    return D
   },
   User: function() {
-    return R
+    return b
   }
 }), n("47120");
 var t, a = n("735250"),
@@ -382,7 +382,7 @@ class U extends r.Component {
     })
   }
 }
-class R extends r.Component {
+class b extends r.Component {
   renderIcon() {
     let {
       user: e
@@ -474,7 +474,7 @@ class R extends r.Component {
     })
   }
 }
-class S extends r.Component {
+class R extends r.Component {
   renderContent() {
     let {
       children: e,
@@ -514,7 +514,7 @@ class S extends r.Component {
     })
   }
 }
-class D extends r.Component {
+class S extends r.Component {
   render() {
     return (0, a.jsx)("div", {
       className: j.__invalid_resultDefault,
@@ -528,7 +528,7 @@ class D extends r.Component {
     })
   }
 }
-class b extends r.Component {
+class D extends r.Component {
   renderContent() {
     let e, s;
     let {

@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return P
   },
   getReviewConfirmButtonLabel: function() {
-    return T
+    return f
   }
 });
 var n = a("735250");
@@ -19,9 +19,9 @@ var r = a("512722"),
   d = a("231338"),
   I = a("689938"),
   _ = a("66471"),
-  f = a("74316");
+  T = a("74316");
 
-function T(e) {
+function f(e) {
   let {
     purchaseType: t,
     plan: a,
@@ -65,7 +65,7 @@ function P(e) {
     selectedPlan: R,
     hasAcceptedTerms: M,
     purchaseType: b
-  } = (0, l.usePaymentContext)(), v = T({
+  } = (0, l.usePaymentContext)(), v = f({
     purchaseType: b,
     plan: R,
     premiumSubscription: d,
@@ -98,7 +98,7 @@ function P(e) {
     children: [(0, n.jsx)("img", {
       alt: "",
       className: _.nitroIcon,
-      src: f
+      src: T
     }), v]
   });
   else if (!M) return (0, n.jsx)(i.Tooltip, {

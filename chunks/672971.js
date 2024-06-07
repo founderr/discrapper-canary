@@ -11,8 +11,8 @@ var n = a("735250"),
   d = a("850840"),
   I = a("63063"),
   _ = a("74538"),
-  f = a("981631"),
-  T = a("474936"),
+  T = a("981631"),
+  f = a("474936"),
   p = a("689938"),
   P = a("426370");
 
@@ -37,8 +37,8 @@ class E extends r.Component {
     return (null == e.eulaId || t.hasAcceptedEULA) && (!e.showWithdrawalWaiver || t.hasAcceptedWithdrawalWaiver)
   }
   formatInterval(e) {
-    if (e === T.SubscriptionIntervalTypes.YEAR) return p.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR;
-    if (e === T.SubscriptionIntervalTypes.MONTH) return p.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH;
+    if (e === f.SubscriptionIntervalTypes.YEAR) return p.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR;
+    if (e === f.SubscriptionIntervalTypes.MONTH) return p.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH;
     throw Error("Invalid interval type: ".concat(e))
   }
   render() {
@@ -50,7 +50,7 @@ class E extends r.Component {
       disabled: l,
       className: u,
       checkboxClassname: d,
-      checkboxLabelClassname: T,
+      checkboxLabelClassname: f,
       finePrint: m,
       showPricingLink: E,
       showWithdrawalWaiver: A,
@@ -102,7 +102,7 @@ class E extends r.Component {
           disabled: l,
           className: i()(P.checkbox, d),
           children: (0, n.jsx)("div", {
-            className: i()(P.checkboxLabel, T),
+            className: i()(P.checkboxLabel, f),
             children: p.default.Messages.BILLING_ONLINE_PURCHASE_WAIVER_CHECKBOX
           })
         }), (0, n.jsx)("div", {
@@ -112,7 +112,7 @@ class E extends r.Component {
       }) : null, E && (0, n.jsxs)("div", {
         className: P.finePrint,
         children: ["*", p.default.Messages.BILLING_HOW_PRICING_WORKS.format({
-          documentationLink: I.default.getArticleURL(f.HelpdeskArticles.LOCALIZED_PRICING)
+          documentationLink: I.default.getArticleURL(T.HelpdeskArticles.LOCALIZED_PRICING)
         })]
       }), S && null != R && (0, n.jsx)(c.Text, {
         variant: "text-xs/medium",
@@ -120,8 +120,8 @@ class E extends r.Component {
         children: p.default.Messages.BILLING_TRIAL_LEGAL_COPY_V2.format({
           buttonText: (0, _.getBillingReviewSubheader)(null, R),
           interval: this.formatInterval(null == R ? void 0 : R.interval),
-          cancelSubscriptionArticle: I.default.getArticleURL(f.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
-          paidServiceTermsArticle: I.default.getArticleURL(f.HelpdeskArticles.PAID_TERMS)
+          cancelSubscriptionArticle: I.default.getArticleURL(T.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
+          paidServiceTermsArticle: I.default.getArticleURL(T.HelpdeskArticles.PAID_TERMS)
         })
       }), N && null != R && (0, n.jsx)(c.Text, {
         variant: "text-xs/medium",
@@ -129,8 +129,8 @@ class E extends r.Component {
         children: p.default.Messages.BILLING_DISCOUNT_LEGAL_COPY.format({
           buttonText: (0, _.getBillingReviewSubheader)(null, R),
           interval: this.formatInterval(null == R ? void 0 : R.interval),
-          cancelSubscriptionArticle: I.default.getArticleURL(f.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
-          paidServiceTermsArticle: I.default.getArticleURL(f.HelpdeskArticles.PAID_TERMS)
+          cancelSubscriptionArticle: I.default.getArticleURL(T.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
+          paidServiceTermsArticle: I.default.getArticleURL(T.HelpdeskArticles.PAID_TERMS)
         })
       })]
     }) : null

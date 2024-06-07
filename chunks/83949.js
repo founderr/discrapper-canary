@@ -1,7 +1,7 @@
     "use strict";
     t.r(a), t.d(a, {
       default: function() {
-        return b
+        return u
       }
     });
     var d = t("470079"),
@@ -18,7 +18,7 @@
       return null == e ? void 0 : null === (a = e._state) || void 0 === a ? void 0 : a.lastTestTimestamp
     }
 
-    function b() {
+    function u() {
       return d.useEffect(() => {
         window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== c.Storage.get(n.DOMAIN_MIGRATION_SUCCESS_KEY) && o.default.supportsFeature(l.NativeFeatures.USER_DATA_CACHE) && (r.migrate(), i.default.userDataCache.getCached().then(e => {
           if (null == e) {
@@ -34,15 +34,15 @@
             t = 0 !== a.length,
             d = null != e.token,
             o = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-            b = null == o || null == s(o) || s(o) <= s(c.Storage.get("RTCRegionStore"));
-          t && d && !b && (c.Storage.clear(), a.forEach(a => {
+            u = null == o || null == s(o) || s(o) <= s(c.Storage.get("RTCRegionStore"));
+          t && d && !u && (c.Storage.clear(), a.forEach(a => {
             let t = e[a];
             try {
               c.Storage.set(a, JSON.parse(t))
             } catch (e) {}
           })), f.default.track(l.AnalyticEvents.DOMAIN_MIGRATED, {
             success: !0,
-            current_is_newer: b,
+            current_is_newer: u,
             has_data: t
           }, {
             flush: !0

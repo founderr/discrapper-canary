@@ -8,17 +8,17 @@
       l = t("570140");
     (d = f || (f = {}))[d.NOT_STARTED = 0] = "NOT_STARTED", d[d.IN_PROGRESS = 1] = "IN_PROGRESS", d[d.FAILED = 2] = "FAILED", d[d.SKIPPED = 3] = "SKIPPED";
     let s = 0;
-    class b extends(o = r.default.Store) {
+    class u extends(o = r.default.Store) {
       getMigrationStatus() {
         return s
       }
     }
-    i = "DomainMigrationStore", (c = "displayName") in(n = b) ? Object.defineProperty(n, c, {
+    i = "DomainMigrationStore", (c = "displayName") in(n = u) ? Object.defineProperty(n, c, {
       value: i,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : n[c] = i, a.default = new b(l.default, {
+    }) : n[c] = i, a.default = new u(l.default, {
       DOMAIN_MIGRATION_START: function() {
         s = 1
       },

@@ -4,9 +4,9 @@ var l = s("735250"),
   n = s("470079"),
   a = s("481060"),
   r = s("233787"),
-  c = s("689938");
+  i = s("689938");
 
-function i(e, t, s) {
+function c(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -21,31 +21,31 @@ class o extends n.Component {
     } = this.props;
     return (0, l.jsxs)(r.default, {
       transitionState: e,
-      "aria-label": c.default.Messages.PREMIUM_NOT_CLAIMED,
+      "aria-label": i.default.Messages.PREMIUM_NOT_CLAIMED,
       children: [(0, l.jsx)(r.default.Header, {
-        children: c.default.Messages.PREMIUM_NOT_CLAIMED
+        children: i.default.Messages.PREMIUM_NOT_CLAIMED
       }), (0, l.jsx)(r.default.Content, {
         type: r.default.Types.UNCLAIMED,
-        children: c.default.Messages.PREMIUM_NOT_CLAIMED_BODY
+        children: i.default.Messages.PREMIUM_NOT_CLAIMED_BODY
       }), (0, l.jsx)(r.default.Footer, {
         secondary: {
           onClick: this.cancel,
-          label: c.default.Messages.NEVERMIND
+          label: i.default.Messages.NEVERMIND
         },
         primary: {
           onClick: this.claimAccount,
-          label: c.default.Messages.CLAIM_ACCOUNT
+          label: i.default.Messages.CLAIM_ACCOUNT
         }
       })]
     })
   }
   constructor(...e) {
-    super(...e), i(this, "cancel", () => {
+    super(...e), c(this, "cancel", () => {
       let {
         onClose: e
       } = this.props;
       null == e || e()
-    }), i(this, "claimAccount", () => {
+    }), c(this, "claimAccount", () => {
       let {
         onClose: e
       } = this.props;

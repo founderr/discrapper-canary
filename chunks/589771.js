@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("47120");
-var r = n("735250"),
-  a = n("470079"),
+var a = n("735250"),
+  r = n("470079"),
   s = n("89057"),
   l = n("509545"),
   i = n("74538"),
@@ -33,14 +33,14 @@ function c(e) {
     setSubscriptionMetadataRequest: O
   } = (0, o.usePaymentContext)(), {
     isGift: p
-  } = (0, u.useGiftContext)(), [R, L] = a.useState(!S || !P || A);
-  return (a.useEffect(() => {
+  } = (0, u.useGiftContext)(), [R, L] = r.useState(!S || !P || A);
+  return (r.useEffect(() => {
     L(!S || !P || A)
-  }, [A, P, S]), a.useEffect(() => {
+  }, [A, P, S]), r.useEffect(() => {
     null != c && O({
       guild_id: c
     })
-  }, [c, O]), a.useEffect(() => {
+  }, [c, O]), r.useEffect(() => {
     T(n);
     let e = null != n ? l.default.get(n) : null;
     !R && !I && (f(t => {
@@ -53,7 +53,7 @@ function c(e) {
         currency: m.currency
       }
     }), null != e && (N(null == e ? void 0 : e.skuId), E(t)))
-  }, [I, n, p, R, m, C, f, T, N, E, t]), R) ? (0, r.jsx)(d.default, {}) : I ? (0, r.jsx)(s.BlockedPaymentsContentModal, {
+  }, [I, n, p, R, m, C, f, T, N, E, t]), R) ? (0, a.jsx)(d.default, {}) : I ? (0, a.jsx)(s.BlockedPaymentsContentModal, {
     onClose: _
   }) : null
 }

@@ -1,39 +1,39 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return c
+    return s
   }
-}), i("47120");
-var l = i("735250"),
-  n = i("470079"),
-  a = i("481060"),
-  d = i("911969"),
-  u = i("26290"),
-  r = i("689938"),
-  o = i("530438");
+}), l("47120");
+var i = l("735250"),
+  n = l("470079"),
+  a = l("481060"),
+  u = l("911969"),
+  d = l("26290"),
+  r = l("689938"),
+  o = l("530438");
 
-function c(e) {
+function s(e) {
   let {
     name: t,
-    labelType: i,
-    collapsed: c = !1,
-    showTooltip: s = !1
-  } = e, f = i === d.EmbeddedActivityLabelTypes.NEW ? r.default.Messages.NEW : r.default.Messages.UPDATED, p = i === d.EmbeddedActivityLabelTypes.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [v, E] = n.useState(c ? "" : f);
+    labelType: l,
+    collapsed: s = !1,
+    showTooltip: c = !1
+  } = e, f = l === u.EmbeddedActivityLabelTypes.NEW ? r.default.Messages.NEW : r.default.Messages.UPDATED, p = l === u.EmbeddedActivityLabelTypes.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [v, E] = n.useState(s ? "" : f);
   if (n.useEffect(() => {
-      c ? E("") : i === d.EmbeddedActivityLabelTypes.NEW ? E(r.default.Messages.NEW) : i === d.EmbeddedActivityLabelTypes.UPDATED && E(r.default.Messages.UPDATED)
-    }, [c, i]), i === d.EmbeddedActivityLabelTypes.NONE) return null;
-  let A = (0, l.jsx)(u.TextBadge, {
+      s ? E("") : l === u.EmbeddedActivityLabelTypes.NEW ? E(r.default.Messages.NEW) : l === u.EmbeddedActivityLabelTypes.UPDATED && E(r.default.Messages.UPDATED)
+    }, [s, l]), l === u.EmbeddedActivityLabelTypes.NONE) return null;
+  let A = (0, i.jsx)(d.TextBadge, {
     className: p,
     disableColor: !0,
-    text: (0, l.jsx)("span", {
+    text: (0, i.jsx)("span", {
       children: v
     })
   });
-  if (!s) return A;
+  if (!c) return A;
   let m = r.default.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
     activity: t
   });
-  return (0, l.jsx)(a.TooltipContainer, {
+  return (0, i.jsx)(a.TooltipContainer, {
     text: m,
     tooltipContentClassName: o.tooltip,
     children: A

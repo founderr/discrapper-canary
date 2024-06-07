@@ -24,8 +24,8 @@ var l = a("470079"),
   n = a.n(s),
   r = a("442837"),
   i = a("461745"),
-  o = a("971628"),
-  d = a("695346"),
+  d = a("971628"),
+  o = a("695346"),
   u = a("314897"),
   c = a("592125"),
   S = a("650774"),
@@ -106,16 +106,16 @@ function M(e) {
         s = (0, r.useStateFromStoresArray)([A.default], () => A.default.getFriendIDs()),
         n = I(t),
         i = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-        o = (0, r.useStateFromStores)([f.default], () => f.default.getMemberVersion()),
-        d = l.useMemo(() => {
+        d = (0, r.useStateFromStores)([f.default], () => f.default.getMemberVersion()),
+        o = l.useMemo(() => {
           let e = new Set(s);
           return n.forEach(t => {
             f.default.getMemberIds(t.id).forEach(t => {
               !e.has(t) && !A.default.isBlocked(t) && e.add(t)
             })
           }), e
-        }, [n, s, o]);
-      return D((0, r.useStateFromStoresArray)([_.default], () => [...d].map(e => _.default.getUser(e)), [d]).filter(e => null != e && !e.bot && e.id !== i).sort((e, t) => {
+        }, [n, s, d]);
+      return D((0, r.useStateFromStoresArray)([_.default], () => [...o].map(e => _.default.getUser(e)), [o]).filter(e => null != e && !e.bot && e.id !== i).sort((e, t) => {
         let a = c.default.getChannel(c.default.getDMFromUserId(null == e ? void 0 : e.id)),
           l = c.default.getChannel(c.default.getDMFromUserId(null == t ? void 0 : t.id));
         return g.default.compare(null == a ? void 0 : a.lastMessageId, null == l ? void 0 : l.lastMessageId) > 0 ? -1 : 1
@@ -125,14 +125,14 @@ function M(e) {
 }
 
 function p() {
-  let e = d.BroadcastAllowedGuildIds.useSetting(),
-    t = d.BroadcastAllowedUserIds.useSetting(),
+  let e = o.BroadcastAllowedGuildIds.useSetting(),
+    t = o.BroadcastAllowedUserIds.useSetting(),
     a = {},
     l = {};
   return v(e).forEach(e => {
-    a[(0, o.getFullRowId)(e)] = x(e)
+    a[(0, d.getFullRowId)(e)] = x(e)
   }), t.length > 0 && D(t.map(e => _.default.getUser(e)).filter(e => null != e)).map(e => {
-    l[(0, o.getFullRowId)(e)] = x(e)
+    l[(0, d.getFullRowId)(e)] = x(e)
   }), {
     [h.RowType.GUILD]: a,
     [h.RowType.USER]: l

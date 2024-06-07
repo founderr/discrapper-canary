@@ -38,8 +38,8 @@ l.default = e => {
     [j, B] = (0, d.useStateFromStoresArray)([C.default], () => [C.default.isModifyingAppliedBoost, C.default.applyBoostError]),
     [G, v] = r.useState(""),
     [D, T] = r.useState(L[0]),
-    [O, b] = r.useState(!1),
-    [y, P] = r.useState(a),
+    [O, y] = r.useState(!1),
+    [b, P] = r.useState(a),
     [A, F] = r.useState(null != s ? s : p.slice(0, 1)),
     k = r.useMemo(() => null == A ? [] : A.map(e => {
       let {
@@ -114,24 +114,24 @@ l.default = e => {
       },
       CONFIRM: {
         body() {
-          if (null == y) return null;
+          if (null == b) return null;
           let e = A.filter(e => (0, _.isGuildBoostSlotCanceled)(e)).length,
             l = A.length,
             t = k.length;
           return H ? (0, n.jsx)(M.default.TransferBody, {
             fromGuilds: k,
-            toGuild: y,
+            toGuild: b,
             blurb: R.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_TRANSFER_BLURB.format({
               slotCount: l,
               guildCount: t
             }),
             imageClass: N.transferConfirmImage,
             error: O ? B : null,
-            onDismissError: () => b(!1),
+            onDismissError: () => y(!1),
             slotCount: l,
             canceledCount: e
           }) : (0, n.jsx)(M.default.ApplyBody, {
-            guild: y,
+            guild: b,
             blurb: R.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_BLURB,
             warning: R.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_COOLDOWN_WARNING.format({
               days: U.GUILD_BOOST_APPLY_COOLDOWN_DAYS,
@@ -139,7 +139,7 @@ l.default = e => {
             }),
             imageClass: N.confirmImage,
             error: O ? B : null,
-            onDismissError: () => b(!1),
+            onDismissError: () => y(!1),
             slotCount: l,
             canceledCount: e
           })
@@ -148,7 +148,7 @@ l.default = e => {
           let e = A.length,
             l = "CONFIRM" === L[0] ? w : () => T(L[L.indexOf(D) - 1]),
             t = async () => {
-              if (null != y && (null == A ? void 0 : A.length) !== 0) {
+              if (null != b && (null == A ? void 0 : A.length) !== 0) {
                 o()(!A.some(e => e.isOnCooldown()), "Cannot use a premium guild subscription slot while on cooldown");
                 try {
                   await Promise.all(A.map(e => {
@@ -156,14 +156,14 @@ l.default = e => {
                       premiumGuildSubscription: l
                     } = e;
                     return null != l ? (0, c.unapplyFromGuild)(l.guildId, l.id) : Promise.resolve()
-                  })), await (0, c.applyToGuild)(y.id, A.map(e => {
+                  })), await (0, c.applyToGuild)(b.id, A.map(e => {
                     let {
                       id: l
                     } = e;
                     return l
                   })), T("SUCCESS")
                 } catch (e) {
-                  b(!0)
+                  y(!0)
                 }
               }
             };
@@ -186,7 +186,7 @@ l.default = e => {
       },
       SUCCESS: {
         body: () => (0, n.jsx)(x.GuildBoostingConfirmation, {
-          guild: y,
+          guild: b,
           isTransfer: H,
           guildBoostQuantity: A.length,
           onClose: w

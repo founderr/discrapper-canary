@@ -20,8 +20,8 @@ var n, l, r = a("735250"),
   m = a("153124"),
   v = a("626135"),
   g = a("63063"),
-  T = a("771308"),
-  b = a("758119"),
+  b = a("771308"),
+  T = a("758119"),
   G = a("13430"),
   y = a("723359"),
   M = a("981631"),
@@ -36,14 +36,14 @@ function O(e) {
 
   function w() {
     let e = null == s ? void 0 : s.getGuildId();
-    E.default.nsfwReturnToSafety(e), (0, b.closeAgeGateModal)(n)
+    E.default.nsfwReturnToSafety(e), (0, T.closeAgeGateModal)(n)
   }
   async function U() {
     i()(null != u, "Cannot submit null birthday.");
     try {
-      return S(null), k(!0), await (0, T.submitDateOfBirth)(u, n)
+      return S(null), k(!0), await (0, b.submitDateOfBirth)(u, n)
     } catch (t) {
-      if (null != t.body && null != t.body.date_of_birth)(0, b.openFailureAgeGateModal)(n, t.body.date_of_birth);
+      if (null != t.body && null != t.body.date_of_birth)(0, T.openFailureAgeGateModal)(n, t.body.date_of_birth);
       else {
         var e;
         (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? S(x.default.Messages.USER_SETTINGS_UPDATE_FAILURE) : S(null == t ? void 0 : t.body.message), k(!1)
@@ -64,7 +64,7 @@ function O(e) {
     null == await U() && I(0)
   }
   o.useEffect(() => {
-    null != l && null != l.nsfwAllowed && (0, b.openSuccessAgeGateModal)(n)
+    null != l && null != l.nsfwAllowed && (0, T.openSuccessAgeGateModal)(n)
   }), o.useEffect(() => {
     v.default.track(M.AnalyticEvents.AGE_GATE_ACTION, {
       source: n,

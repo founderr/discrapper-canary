@@ -12,9 +12,9 @@ var o = t("481060"),
   r = t("42338"),
   l = t("569932"),
   d = t("555638"),
-  u = t("42011"),
-  C = t("798930"),
-  c = t("112109");
+  c = t("42011"),
+  u = t("798930"),
+  C = t("112109");
 
 function T(e) {
   let {
@@ -23,8 +23,8 @@ function T(e) {
     analyticsLocation: T,
     platformType: S
   } = e, {
-    slide: f,
-    gotoNext: P,
+    slide: P,
+    gotoNext: f,
     gotoError: N,
     handleWaitingForConnection: A,
     handleAuthToken: L,
@@ -32,21 +32,21 @@ function T(e) {
     callbackData: p
   } = (0, s.useTwoWayLinkModalSlideManager)(T, S);
   return (0, i.jsx)(o.ModalRoot, {
-    className: c.modal,
+    className: C.modal,
     transitionState: n,
     disableTrack: !0,
     children: (0, i.jsxs)(o.Slides, {
-      activeSlide: f,
+      activeSlide: P,
       width: 408,
       children: [(0, i.jsx)(o.Slide, {
-        id: C.TwoWayLinkModalSlideTypes.LANDING,
+        id: u.TwoWayLinkModalSlideTypes.LANDING,
         children: (0, i.jsx)(l.PlayStationLinkLanding, {
           platformType: S,
-          onContinue: P,
+          onContinue: f,
           onClose: t
         })
       }), (0, i.jsx)(o.Slide, {
-        id: C.TwoWayLinkModalSlideTypes.PRE_CONNECT,
+        id: u.TwoWayLinkModalSlideTypes.PRE_CONNECT,
         children: (0, i.jsx)(d.PlayStationLinkPreConnect, {
           platformType: S,
           isWaitingForConnection: !1,
@@ -56,7 +56,7 @@ function T(e) {
           onClose: t
         })
       }), (0, i.jsx)(o.Slide, {
-        id: C.TwoWayLinkModalSlideTypes.PRE_CONNECT_WAITING,
+        id: u.TwoWayLinkModalSlideTypes.PRE_CONNECT_WAITING,
         children: (0, i.jsx)(d.PlayStationLinkPreConnect, {
           platformType: S,
           isWaitingForConnection: !0,
@@ -66,23 +66,23 @@ function T(e) {
           onClose: t
         })
       }), (0, i.jsx)(o.Slide, {
-        id: C.TwoWayLinkModalSlideTypes.DISCORD_CONSENT,
+        id: u.TwoWayLinkModalSlideTypes.DISCORD_CONSENT,
         children: (0, i.jsx)(a.PlayStationLinkDiscordConsent, {
           platformType: S,
           authToken: p,
-          onContinue: P,
+          onContinue: f,
           onError: N,
           onClose: t
         })
       }), (0, i.jsx)(o.Slide, {
-        id: C.TwoWayLinkModalSlideTypes.ERROR,
+        id: u.TwoWayLinkModalSlideTypes.ERROR,
         children: (0, i.jsx)(r.PlayStationLinkError, {
-          onContinue: P,
+          onContinue: f,
           onClose: t
         })
       }), (0, i.jsx)(o.Slide, {
-        id: C.TwoWayLinkModalSlideTypes.SUCCESS,
-        children: (0, i.jsx)(u.PlayStationLinkSuccess, {
+        id: u.TwoWayLinkModalSlideTypes.SUCCESS,
+        children: (0, i.jsx)(c.PlayStationLinkSuccess, {
           onClose: t
         })
       })]
