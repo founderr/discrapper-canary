@@ -29,10 +29,11 @@ function T(e) {
     user: t,
     displayProfile: n,
     channelId: T,
-    isHovering: I
+    isHovering: I,
+    onOpenProfile: A
   } = e, {
-    trackUserProfileAction: A
-  } = (0, o.useUserProfileAnalyticsContext)(), v = (0, l.useStateFromStores)([i.default], () => i.default.hidePersonalInformation);
+    trackUserProfileAction: v
+  } = (0, o.useUserProfileAnalyticsContext)(), N = (0, l.useStateFromStores)([i.default], () => i.default.hidePersonalInformation);
   return (0, a.jsxs)("div", {
     className: _.body,
     children: [(0, a.jsx)(E.default, {
@@ -40,6 +41,7 @@ function T(e) {
       profileType: g.UserProfileTypes.PANEL,
       nickname: r.default.getName(null, T, t),
       pronouns: null == n ? void 0 : n.pronouns,
+      onOpenProfile: A,
       tags: (0, a.jsx)(u.default, {
         displayProfile: n,
         profileType: g.UserProfileTypes.PANEL
@@ -52,7 +54,7 @@ function T(e) {
       channelId: T
     }), (0, a.jsxs)(p.default.Overlay, {
       className: _.overlay,
-      children: [!v && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== "" && (0, a.jsx)(m.default, {
+      children: [!N && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== "" && (0, a.jsx)(m.default, {
         title: S.default.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: "header-primary",
         children: (0, a.jsx)(d.default, {
@@ -73,7 +75,7 @@ function T(e) {
         children: (0, a.jsx)(s.default, {
           userId: t.id,
           className: _.note,
-          onUpdate: () => A({
+          onUpdate: () => v({
             action: "SET_NOTE"
           })
         }, "note")

@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
-  avatar: "avatar__2c095",
-  header: "header__34f87"
+  clickable: "clickable__41ac4",
+  header: "header__34f87",
+  overlay: "overlay__2c5ed"
 }

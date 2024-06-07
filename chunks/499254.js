@@ -30,7 +30,7 @@ function s() {
 function a(e) {
   i.default.dispatch({
     type: "APP_LAUNCHER_SHOW_APP_DETAIL",
-    appDetail: e
+    application: e
   })
 }
 

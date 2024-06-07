@@ -23,8 +23,8 @@ function E(e) {
   } = e, I = (0, l.getIconComponent)(E), T = r.useMemo(() => {
     var e, t;
     return (0, u.parseBioReactWithoutScrolling)(null !== (t = null === (e = E.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
-  }, [null === (t = E.application) || void 0 === t ? void 0 : t.description]), f = (0, s.useStateFromStores)([_.default], () => _.default.getCurrentAppDetail()), S = r.useCallback(e => {
-    e.stopPropagation(), (null == f ? void 0 : f.id) === E.id ? d.dismissAppDetail() : d.showAppDetail(E)
+  }, [null === (t = E.application) || void 0 === t ? void 0 : t.description]), f = (0, s.useStateFromStores)([_.default], () => _.default.getCurrentApplication()), S = r.useCallback(e => {
+    e.stopPropagation(), (null == f ? void 0 : f.id) === E.id ? d.dismissAppDetail() : null != E.application && d.showAppDetail(E.application)
   }, [E, f]);
   return (0, i.jsxs)("li", {
     className: c.application,

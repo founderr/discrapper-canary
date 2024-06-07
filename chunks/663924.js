@@ -15,7 +15,7 @@ var i = n("735250"),
   T = n("5967"),
   f = n("499254"),
   S = n("541099"),
-  h = n("481370"),
+  h = n("173790"),
   A = n("361917"),
   m = n("314734"),
   N = n("981631"),
@@ -54,7 +54,7 @@ t.default = r.memo(function(e) {
   }), [P, y, g, L]), (0, d.useFocusLock)(C), r.useEffect(() => {
     (!v && (0, u.hasAnyModalOpen)() || v && !D) && M()
   }, [D, v]);
-  let U = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentAppDetail());
+  let U = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentApplication());
   return (0, i.jsx)(_.default, {
     section: N.AnalyticsSections.EXPRESSION_PICKER,
     children: (0, i.jsx)(E.AppReferencePositionLayer, {
@@ -82,7 +82,7 @@ t.default = r.memo(function(e) {
               className: p.contentWrapper,
               children: null != U ? (0, i.jsx)(h.default, {
                 channel: n,
-                appDetail: U
+                application: U
               }, U.id) : (0, i.jsx)(A.default, {
                 channel: n,
                 isAppDetailPresent: null != U

@@ -10135,18 +10135,18 @@ span.clanTag_f4aadc {
     color: var(--primary-500)
 }
 
-.container_e5e00c {
+.container__2f171 {
     background-color: var(--background-primary);
     box-shadow: var(--elevation-medium);
     border-radius: var(--radius-sm);
     width: 180px
 }
 
-.clearText__5b2a7 {
+.clearText__6ee28 {
     color: var(--text-link)
 }
 
-.sortDropdown__757b3 {
+.sortDropdown_ef809d {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -10156,24 +10156,24 @@ span.clanTag_f4aadc {
     padding: 8px 8px 8px 12px
 }
 
-.sortDropdownInner__58619 {
+.sortDropdownInner__9ca6a {
     display: flex;
     align-items: center;
     color: var(--interactive-normal)
 }
 
-.sortIconMargin__2f422 {
+.sortIconMargin__4f3f5 {
     margin-right: 4px
 }
 
-.container__7b73b {
+.container__1b5d1 {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-base-primary);
     overflow-y: auto
 }
 
-.headerWhenSideCard__74c6c {
+.headerWhenSideCard__431a1 {
     height: 58px;
     flex-shrink: 0;
     display: flex;
@@ -10181,22 +10181,22 @@ span.clanTag_f4aadc {
     align-items: center
 }
 
-.headerCloseButton_d793f6 {
+.headerCloseButton__3e4f8 {
     margin-right: var(--spacing-16);
     z-index: 1;
     cursor: pointer
 }
 
-.contentContainer_d17a62 {
+.contentContainer_f3b1f3 {
     padding: 0 var(--spacing-16)var(--spacing-16)
 }
 
-.appIcon__28528 {
+.appIcon__19c1c {
     margin-top: -40px;
     margin-bottom: var(--spacing-4)
 }
 
-.appIconBorderThingy_ae30b7 {
+.appIconBorderThingy__58fc5 {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -10206,32 +10206,32 @@ span.clanTag_f4aadc {
     box-shadow: var(--elevation-low)
 }
 
-.appName_ebbaf1 {
+.appName_f469db {
     margin-bottom: var(--spacing-8)
 }
 
-.commandListHeader__7a030 {
+.commandListHeader_ccebe1 {
     display: flex;
     justify-content: space-between;
     margin-top: var(--spacing-24)
 }
 
-.sortSelector_afb34f {
+.sortSelector__963cb {
     display: flex;
     align-items: center
 }
 
-.command__50216 {
+.command__90161 {
     padding: 8px 12px;
     border-radius: var(--radius-sm)
 }
 
-.command__50216:hover {
+.command__90161:hover {
     cursor: pointer;
     background-color: var(--bg-mod-subtle)
 }
 
-.commandName__449f8 {
+.commandName__4e8c4 {
     margin-bottom: var(--spacing-4)
 }
 
