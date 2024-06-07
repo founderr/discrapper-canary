@@ -27,43 +27,43 @@ function l(e) {
     getSectionHeight: d,
     chunkSize: _ = 250,
     getScrollerState: c,
-    itemGutter: E,
-    removeEdgeItemGutters: I,
-    sectionGutter: T,
-    padding: f,
-    paddingVertical: S,
-    paddingHorizontal: h,
-    dir: A
-  } = e, m = (0, s.default)(), N = (0, i.useRef)(o), [p] = (0, i.useState)(() => new r.default), {
-    offsetWidth: O
-  } = c(), {
-    dirty: C,
-    chunkStart: R,
-    chunkEnd: g,
-    forceUpdateOnChunkChange: L
+    maxBufferWidth: E,
+    itemGutter: I,
+    removeEdgeItemGutters: T,
+    sectionGutter: f,
+    padding: S,
+    paddingVertical: h,
+    paddingHorizontal: A,
+    dir: m
+  } = e, N = (0, s.default)(), p = (0, i.useRef)(o), [O] = (0, i.useState)(() => new r.default), C = c(), R = Math.min(null != E ? E : 1 / 0, C.offsetWidth), g = null != E ? Math.max(0, C.offsetWidth - E) : 0, {
+    dirty: L,
+    chunkStart: v,
+    chunkEnd: D,
+    forceUpdateOnChunkChange: M
   } = (0, a.default)({
     chunkSize: _,
     getScrollerState: c,
-    forceUpdate: m
+    forceUpdate: N
   });
-  return N.current = (0, i.useMemo)(() => C > 0 ? N.current : (p.mergeProps({
+  return p.current = (0, i.useMemo)(() => L > 0 ? p.current : (O.mergeProps({
     sections: t,
     columns: n,
     getItemKey: l,
     getItemHeight: u,
     getSectionHeight: d,
-    bufferWidth: O,
-    itemGutter: E,
-    removeEdgeItemGutters: I,
-    sectionGutter: T,
-    padding: f,
-    paddingVertical: S,
-    paddingHorizontal: h,
-    dir: A
-  }), p.computeVisibleSections(Math.max(0, R * _), g * _), p.getState()), [C, p, t, n, l, u, d, R, g, _, E, I, T, f, S, h, O, A]), {
-    ...N.current,
-    masonryComputer: p,
-    forceUpdateOnChunkChange: L,
-    forceUpdate: m
+    bufferWidth: R,
+    itemGutter: I,
+    removeEdgeItemGutters: T,
+    sectionGutter: f,
+    padding: S,
+    paddingVertical: h,
+    paddingHorizontal: A,
+    marginLeft: g / 2,
+    dir: m
+  }), O.computeVisibleSections(Math.max(0, v * _), D * _), O.getState()), [L, O, t, n, l, u, d, v, D, _, I, T, f, S, h, A, R, m]), {
+    ...p.current,
+    masonryComputer: O,
+    forceUpdateOnChunkChange: M,
+    forceUpdate: N
   }
 }

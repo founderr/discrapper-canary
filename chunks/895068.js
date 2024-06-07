@@ -137,7 +137,8 @@ function N(e) {
         getItemKey: (e, t) => w[e].items[t].id,
         getItemHeight: () => 400,
         chunkSize: 24,
-        onScroll: G
+        onScroll: G,
+        maxContentWidth: 2e3
       })]
     })
   }) : null
