@@ -4,29 +4,29 @@ n.r(t), n.d(t, {
     return l
   },
   startStageInstance: function() {
-    return s
+    return a
   },
   updateStageInstance: function() {
-    return a
+    return r
   }
 });
 var i = n("544891"),
-  r = n("981631");
-async function s(e, t, n, s, a) {
+  s = n("981631");
+async function a(e, t, n, a, r) {
   return (await i.HTTP.post({
-    url: r.Endpoints.STAGE_INSTANCES,
+    url: s.Endpoints.STAGE_INSTANCES,
     body: {
       channel_id: e,
       topic: t,
       privacy_level: n,
-      guild_scheduled_event_id: a,
-      send_start_notification: s
+      guild_scheduled_event_id: r,
+      send_start_notification: a
     }
   })).body
 }
-async function a(e, t, n) {
+async function r(e, t, n) {
   return (await i.HTTP.patch({
-    url: r.Endpoints.STAGE_INSTANCE(e),
+    url: s.Endpoints.STAGE_INSTANCE(e),
     body: {
       topic: t,
       privacy_level: n
@@ -35,5 +35,5 @@ async function a(e, t, n) {
 }
 
 function l(e) {
-  return i.HTTP.del(r.Endpoints.STAGE_INSTANCE(e))
+  return i.HTTP.del(s.Endpoints.STAGE_INSTANCE(e))
 }

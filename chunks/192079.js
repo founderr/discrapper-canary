@@ -4,29 +4,29 @@ n.r(t), n.d(t, {
     return f
   },
   getStageChannelMetadata: function() {
-    return p
+    return L
   },
   summarizeUsernamesParticipating: function() {
     return d
   }
 }), n("724458"), n("47120"), n("392711");
 var i = n("19780"),
-  r = n("5192"),
-  s = n("700785"),
-  a = n("427679"),
+  s = n("5192"),
+  a = n("700785"),
+  r = n("427679"),
   l = n("157925"),
   u = n("981631"),
   o = n("71080"),
   c = n("689938");
 
 function d(e, t, n, i) {
-  let s = t[0],
-    a = r.default.getName(e, n, s),
+  let a = t[0],
+    r = s.default.getName(e, n, a),
     l = null != i ? i : t.length;
-  return 1 === l && null != s ? a : null == s ? c.default.Messages.SPEAKING_COUNT.format({
+  return 1 === l && null != a ? r : null == a ? c.default.Messages.SPEAKING_COUNT.format({
     count: l
   }) : c.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
-    name: a,
+    name: r,
     count: l - 1
   })
 }
@@ -45,14 +45,14 @@ function f(e, t) {
   return null
 }
 
-function p(e) {
-  let t = a.default.getStageInstanceByChannel(e.id);
+function L(e) {
+  let t = r.default.getStageInstanceByChannel(e.id);
   return {
     channel_id: e.id,
     guild_id: e.guild_id,
     topic: null == t ? void 0 : t.topic,
     media_session_id: i.default.getMediaSessionId(),
-    request_to_speak_state: s.canEveryoneRole(u.Permissions.REQUEST_TO_SPEAK, e) ? l.RequestToSpeakPermissionStates.EVERYONE : l.RequestToSpeakPermissionStates.NO_ONE,
+    request_to_speak_state: a.canEveryoneRole(u.Permissions.REQUEST_TO_SPEAK, e) ? l.RequestToSpeakPermissionStates.EVERYONE : l.RequestToSpeakPermissionStates.NO_ONE,
     stage_instance_id: null == t ? void 0 : t.id
   }
 }

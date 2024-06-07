@@ -37,14 +37,14 @@ let g = e => {
       tooltipColor: x,
       tooltipPosition: k = "bottom",
       tooltipDisabled: v,
-      hideOnClick: C = !0,
-      role: S,
+      hideOnClick: S = !0,
+      role: C,
       "aria-label": j,
       "aria-hidden": T,
       "aria-checked": N,
       "aria-expanded": w,
       "aria-haspopup": E
-    } = e, L = (0, a.jsx)(g, {
+    } = e, _ = (0, a.jsx)(g, {
       x: 0,
       y: 0,
       width: 24,
@@ -53,12 +53,12 @@ let g = e => {
       foreground: null != u ? u : void 0,
       background: null != h ? h : void 0,
       color: d
-    }), _ = j;
-    return null == _ && "string" == typeof b && (_ = b), (0, a.jsx)(c.Tooltip, {
+    }), P = j;
+    return null == P && "string" == typeof b && (P = b), (0, a.jsx)(c.Tooltip, {
       text: b,
       color: x,
       position: k,
-      hideOnClick: C,
+      hideOnClick: S,
       shouldShow: !v,
       children: e => {
         let {
@@ -97,8 +97,8 @@ let g = e => {
             [m.clickable]: !o && null != f,
             [m.selected]: i
           }),
-          role: S,
-          "aria-label": _,
+          role: C,
+          "aria-label": P,
           "aria-hidden": T,
           "aria-checked": N,
           "aria-haspopup": E,
@@ -106,8 +106,8 @@ let g = e => {
           tabIndex: o || null == f ? -1 : 0,
           children: [s ? (0, a.jsx)(p.default, {
             mask: p.default.Masks.HEADER_BAR_BADGE,
-            children: L
-          }) : L, s ? (0, a.jsx)("span", {
+            children: _
+          }) : _, s ? (0, a.jsx)("span", {
             className: m.iconBadge
           }) : null, n]
         })

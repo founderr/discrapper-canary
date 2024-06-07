@@ -24,18 +24,18 @@ var a = r("735250"),
   k = r("432877");
 r("381996");
 var v = r("392750"),
-  C = r("926976"),
-  S = r("592197"),
+  S = r("926976"),
+  C = r("592197"),
   j = r("860337"),
   T = r("789654"),
   N = r("691867"),
   w = r("916790"),
   E = r("912072"),
-  L = r("246992"),
-  _ = r("442954"),
-  P = r("702904"),
-  A = r("248526"),
-  R = r("958328"),
+  _ = r("246992"),
+  P = r("442954"),
+  A = r("702904"),
+  R = r("248526"),
+  L = r("958328"),
   O = r("514866"),
   M = r("678639"),
   I = r("351930"),
@@ -70,7 +70,7 @@ function Y() {
       let e = [{
         id: "analytics",
         name: "Analytics",
-        render: () => (0, a.jsx)(C.default, {})
+        render: () => (0, a.jsx)(S.default, {})
       }, {
         id: "triggers",
         name: "Triggers",
@@ -91,7 +91,7 @@ function Y() {
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(A.default, {})
+        render: () => (0, a.jsx)(R.default, {})
       })), p.default.isDeveloper && e.push({
         id: "clans",
         name: "Clans",
@@ -119,11 +119,11 @@ function Y() {
       }), e.push({
         id: "permissions",
         name: "Permissions",
-        render: () => (0, a.jsx)(R.default, {})
+        render: () => (0, a.jsx)(L.default, {})
       }), e.push({
         id: "modals",
         name: "Modals",
-        render: () => (0, a.jsx)(_.default, {})
+        render: () => (0, a.jsx)(P.default, {})
       }), e.push({
         id: "affinity",
         name: "Affinity",
@@ -139,7 +139,7 @@ function Y() {
       }), e.push({
         id: "payments",
         name: "Payments",
-        render: () => (0, a.jsx)(P.default, {})
+        render: () => (0, a.jsx)(A.default, {})
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
@@ -147,7 +147,7 @@ function Y() {
       }), e.push({
         id: "billing",
         name: "Billing",
-        render: () => (0, a.jsx)(S.default, {})
+        render: () => (0, a.jsx)(C.default, {})
       })), e
     }, []),
     {
@@ -169,7 +169,7 @@ function Y() {
     properties: {
       panel: l
     }
-  }), (0, a.jsxs)(L.DevToolsLayerProvider, {
+  }), (0, a.jsxs)(_.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(y.default, {
       className: H.headerBar,
       toolbar: (0, a.jsx)(y.default.Icon, {
@@ -183,7 +183,7 @@ function Y() {
       }), (0, a.jsx)(y.default.Title, {
         children: "DevTools"
       })]
-    }), (0, a.jsx)(r, {}), i(), (0, a.jsx)(L.DevToolsLayerContainer, {
+    }), (0, a.jsx)(r, {}), i(), (0, a.jsx)(_.DevToolsLayerContainer, {
       className: U.layerContainer
     })]
   })

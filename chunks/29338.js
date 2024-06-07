@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), r("47120");
 var a = r("735250");
@@ -82,7 +82,7 @@ function v(e) {
   })
 }
 
-function C() {
+function S() {
   var e;
   let t = (0, c.useStateFromStores)([g.default], () => g.default.getFeed(y.ContentInventoryFeedKey.GLOBAL_FEED)),
     r = (0, c.useStateFromStores)([g.default], () => g.default.getDebugImpressionCappingDisabled()),

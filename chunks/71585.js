@@ -14,9 +14,9 @@ function u(t, e, n) {
 let a = () => ({
     itemImpressions: []
   }),
-  E = a(),
-  s = new Set,
+  s = a(),
   l = new Set,
+  E = new Set,
   T = 0,
   d = !1,
   c = !1;
@@ -24,41 +24,41 @@ let a = () => ({
 function f() {
   let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   if (!t && Date.now() < T) return;
-  E.itemImpressions.length > 1e3 && (E.itemImpressions = []);
+  s.itemImpressions.length > 1e3 && (s.itemImpressions = []);
   let e = 0,
     n = Date.now() - 2592e5;
-  for (let t = 0; t < E.itemImpressions.length; t++) {
-    let [r, i] = E.itemImpressions[t];
+  for (let t = 0; t < s.itemImpressions.length; t++) {
+    let [r, i] = s.itemImpressions[t];
     if (i < n) e = t + 1;
     else break
   }
-  e > 0 && (E.itemImpressions = E.itemImpressions.slice(e));
+  e > 0 && (s.itemImpressions = s.itemImpressions.slice(e));
   let r = c ? 1e3 : 576e5,
     i = new Set,
     o = new Set,
     u = Date.now() - r,
     a = null;
-  for (let [t, e] of E.itemImpressions) e < u ? i.add(t) : null == a && (a = e + r), o.add(t);
-  s = i, l = o, T = null != a ? a : 1 / 0, d = !0
+  for (let [t, e] of s.itemImpressions) e < u ? i.add(t) : null == a && (a = e + r), o.add(t);
+  l = i, E = o, T = null != a ? a : 1 / 0, d = !0
 }
 class _ extends(r = i.default.PersistedStore) {
   initialize(t) {
-    E = {
-      ...E,
+    s = {
+      ...s,
       ...null != t ? t : {}
     }
   }
   getState() {
-    return E
+    return s
   }
   getImpressionCappedItemIds() {
-    return f(), s
+    return f(), l
   }
   getDebugFastImpressionCappingEnabled() {
     return c
   }
   reset() {
-    E = a()
+    s = a()
   }
 }
 u(_, "displayName", "ContentInventoryPersistedStore"), u(_, "persistKey", "ContentInventoryPersistedStore"), e.default = new _(o.default, {
@@ -69,14 +69,14 @@ u(_, "displayName", "ContentInventoryPersistedStore"), u(_, "persistKey", "Conte
     !d && f();
     let n = Date.now(),
       r = !1;
-    for (let t of e) !l.has(t) && (E.itemImpressions.push([t, n]), r = !0);
+    for (let t of e) !E.has(t) && (s.itemImpressions.push([t, n]), r = !0);
     return f(r), r
   },
   CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function() {
-    E.itemImpressions = [], f(!0)
+    s.itemImpressions = [], f(!0)
   },
   CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function() {
-    return console.log("Item impressions:", E.itemImpressions), !1
+    return console.log("Item impressions:", s.itemImpressions), !1
   },
   CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: function() {
     c = !c

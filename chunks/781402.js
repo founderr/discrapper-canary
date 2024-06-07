@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return s
   }
 });
 var i = n("470079");
 
-function r() {
+function s() {
   let e = (0, i.createContext)(void 0);
   return {
     Provider: ({
       initialStore: t,
       createStore: n,
-      children: r
+      children: s
     }) => {
-      let s = (0, i.useRef)();
-      return !s.current && (t && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !n && (n = () => t)), s.current = n()), (0, i.createElement)(e.Provider, {
-        value: s.current
-      }, r)
+      let a = (0, i.useRef)();
+      return !a.current && (t && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !n && (n = () => t)), a.current = n()), (0, i.createElement)(e.Provider, {
+        value: a.current
+      }, s)
     },
     useStore: (t, n = Object.is) => {
-      let r = (0, i.useContext)(e);
-      if (!r) throw Error("Seems like you have not used zustand provider as an ancestor.");
-      return r(t, n)
+      let s = (0, i.useContext)(e);
+      if (!s) throw Error("Seems like you have not used zustand provider as an ancestor.");
+      return s(t, n)
     },
     useStoreApi: () => {
       let t = (0, i.useContext)(e);

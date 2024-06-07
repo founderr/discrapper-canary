@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return C
+    return S
   }
 });
 var a = r("735250");
@@ -46,17 +46,17 @@ function v(e) {
   })
 }
 
-function C() {
+function S() {
   let e = (0, o.useStateFromStores)([p.default], () => p.default.getChannelId()),
     t = (0, o.useStateFromStores)([m.default], () => m.default.getGuildId()),
     r = (0, o.useStateFromStores)([d.default], () => d.default.getChannel(e)),
     n = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(t)),
     g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
     f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(n)),
-    C = (0, c.default)(r, !0),
-    S = null != r ? (0, b.getChannelPermissionSpecMap)(r, !1, !0) : null,
+    S = (0, c.default)(r, !0),
+    C = null != r ? (0, b.getChannelPermissionSpecMap)(r, !1, !0) : null,
     j = null != n ? y.default.getGuildPermissionSpecMap(n) : null,
-    T = Object.values(null != S ? S : {}).map(e => {
+    T = Object.values(null != C ? C : {}).map(e => {
       let {
         title: t,
         flag: r
@@ -84,7 +84,7 @@ function C() {
         className: x.section,
         children: [(0, a.jsx)(s.Heading, {
           variant: "heading-md/semibold",
-          children: null != C ? "Permissions in ".concat(C) : "No channel selected"
+          children: null != S ? "Permissions in ".concat(S) : "No channel selected"
         }), T]
       }), (0, a.jsxs)("section", {
         className: x.section,

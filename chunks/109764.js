@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return _
+    return c
   }
 });
-var a = n("735250");
-n("470079");
-var i = n("852229"),
-  s = n("399606"),
-  l = n("481060"),
-  u = n("228392"),
-  r = n("592125"),
-  o = n("934415"),
-  d = n("981631"),
-  c = n("689938");
+var n = a("735250");
+a("470079");
+var u = a("852229"),
+  r = a("399606"),
+  i = a("481060"),
+  s = a("228392"),
+  d = a("592125"),
+  l = a("934415"),
+  o = a("981631"),
+  f = a("689938");
 
-function _(e, t, n) {
-  let _ = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(e.parent_id));
-  return (0, a.jsx)(l.MenuItem, {
+function c(e, t, a) {
+  let c = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(e.parent_id));
+  return (0, n.jsx)(i.MenuItem, {
     id: "channel-copy-link",
-    label: c.default.Messages.COPY_LINK,
+    label: f.default.Messages.COPY_LINK,
     action: () => {
-      e.isForumPost() && (0, u.trackForumPostLinkCopied)({
+      e.isForumPost() && (0, s.trackForumPostLinkCopied)({
         postId: e.id,
         location: {
-          section: d.AnalyticsSections.CONTEXT_MENU
+          section: o.AnalyticsSections.CONTEXT_MENU
         }
-      }), (0, i.copy)((0, o.getChannelLinkToCopy)(e, _, t, n))
+      }), (0, u.copy)((0, l.getChannelLinkToCopy)(e, c, t, a))
     }
   })
 }

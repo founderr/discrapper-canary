@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return P
+    return A
   }
 }), r("47120");
 var a = r("735250"),
@@ -23,8 +23,8 @@ var a = r("735250"),
   x = r("257785"),
   k = r("484036"),
   v = r("681619"),
-  C = r("621060"),
-  S = r("689938"),
+  S = r("621060"),
+  C = r("689938"),
   j = r("457501"),
   T = r("277513");
 let N = [{
@@ -74,7 +74,7 @@ function E(e) {
     })]
   })
 }
-let L = [{
+let _ = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -132,10 +132,10 @@ let L = [{
       })
     }
   }],
-  _ = {
+  P = {
     events: {
       label: "Events",
-      filter: e => Object.entries(_).filter(e => {
+      filter: e => Object.entries(P).filter(e => {
         let [t] = e;
         return "events" !== t
       }).map(t => {
@@ -159,13 +159,13 @@ let L = [{
     }
   };
 
-function P() {
+function A() {
   let e = n.useRef(null),
     t = (0, c.useStateFromStores)([y.default], () => y.default.loggedEvents),
-    [r, i] = n.useState(Object.keys(_)),
+    [r, i] = n.useState(Object.keys(P)),
     o = t.filter(e => {
       for (let t of r)
-        if (_[t].filter(e)) return !0;
+        if (P[t].filter(e)) return !0;
       return !1
     }),
     [s, u] = n.useState(void 0),
@@ -173,8 +173,8 @@ function P() {
     {
       TabBar: p,
       renderSelectedTab: g
-    } = (0, C.default)({
-      tabs: L
+    } = (0, S.default)({
+      tabs: _
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
@@ -187,16 +187,16 @@ function P() {
         size: d.Button.Sizes.ICON,
         onClick: b.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
-          title: S.default.Messages.CLEAR,
+          title: C.default.Messages.CLEAR,
           children: (0, a.jsx)(m.default, {
-            "aria-label": S.default.Messages.CLEAR
+            "aria-label": C.default.Messages.CLEAR
           })
         })
       }), (0, a.jsx)("div", {
         className: j.toolbarDivider
       }), (0, a.jsx)("div", {
         className: j.filters,
-        children: Object.entries(_).map(e => {
+        children: Object.entries(P).map(e => {
           let [t, n] = e;
           return (0, a.jsx)(d.Clickable, {
             className: l()(j.filter, r.includes(t) && j.activeFilter),

@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return S
+    return C
   }
 }), r("47120");
 var a = r("735250"),
@@ -82,7 +82,7 @@ let k = [{
     }
   }];
 
-function C(e) {
+function S(e) {
   let {
     store: t,
     initialHeight: r
@@ -110,7 +110,7 @@ function C(e) {
   })
 }
 
-function S() {
+function C() {
   let e = n.useRef(null),
     [t, r] = n.useState(""),
     i = o.Store.getAll(),
@@ -147,7 +147,7 @@ function S() {
         selectedRowKey: u,
         onClickRow: h
       })
-    }), null != p && (0, a.jsx)(C, {
+    }), null != p && (0, a.jsx)(S, {
       store: p,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]

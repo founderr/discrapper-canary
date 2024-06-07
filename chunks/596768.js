@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return _
+    return P
   }
 }), r("47120");
 var a = r("735250"),
@@ -23,8 +23,8 @@ var a = r("735250"),
   x = r("120816"),
   k = r("31336"),
   v = r("257785"),
-  C = r("484036"),
-  S = r("681619"),
+  S = r("484036"),
+  C = r("681619"),
   j = r("621060"),
   T = r("689938"),
   N = r("457501"),
@@ -57,7 +57,7 @@ let E = [{
       return t.toLocaleString()
     }
   }],
-  L = [{
+  _ = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -136,13 +136,13 @@ let E = [{
     }
   }];
 
-function _() {
+function P() {
   let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), g = o.find(e => e.key === c), {
     TabBar: y,
     renderSelectedTab: b
   } = (0, j.default)({
-    tabs: L
-  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), _ = n.useCallback(e => {
+    tabs: _
+  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), P = n.useCallback(e => {
     p.default.dispatch({
       type: "SET_TRACK_TRIGGERS",
       enabled: e
@@ -158,7 +158,7 @@ function _() {
         className: N.triggersEnable,
         children: (0, a.jsx)(h.Switch, {
           checked: v,
-          onChange: _,
+          onChange: P,
           className: N.__invalid_toolbarSwitch
         })
       }), (0, a.jsx)(h.Button, {
@@ -181,13 +181,13 @@ function _() {
       })]
     }), (0, a.jsx)(h.ScrollerThin, {
       className: N.tableContainer,
-      children: (0, a.jsx)(S.default, {
+      children: (0, a.jsx)(C.default, {
         columns: E,
         data: o,
         selectedRowKey: c,
         onClickRow: d
       })
-    }), null != g && (0, a.jsxs)(C.default, {
+    }), null != g && (0, a.jsxs)(S.default, {
       className: N.subPanel,
       minHeight: 100,
       initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,
