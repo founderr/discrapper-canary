@@ -25,7 +25,7 @@ let c = e => {
   switch (r) {
     case u.BotTagTypes.SYSTEM_DM:
     case u.BotTagTypes.OFFICIAL:
-      E = !0, h = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, S = d.default.Messages.SYSTEM_DM_TAG_SYSTEM;
+      E = !0, h = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP_OFFICIAL, S = d.default.Messages.SYSTEM_DM_TAG_OFFICIAL;
       break;
     case u.BotTagTypes.SERVER:
       S = d.default.Messages.BOT_TAG_SERVER;
