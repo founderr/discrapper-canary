@@ -1,92 +1,67 @@
 "use strict";
-n.r(t), n("47120"), n("724458");
-var a, l = n("442837"),
-  s = n("570140"),
-  i = n("189786"),
-  r = n("251625"),
-  o = n("5192"),
-  u = n("594174"),
-  d = n("979651"),
-  c = n("938475"),
-  f = n("981631"),
-  h = n("354459");
+n.r(t), n("724458"), n("47120");
+var a, l, s, i, r = n("442837"),
+  o = n("570140"),
+  u = n("635384"),
+  d = n("189786"),
+  c = n("5192"),
+  f = n("594174"),
+  h = n("979651"),
+  m = n("938475"),
+  p = n("981631"),
+  E = n("354459");
+let C = [],
+  g = [],
+  S = new u.default,
+  _ = new u.default,
+  T = null;
 
-function m(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
-}
-let p = [],
-  E = [];
-class C {
-  values() {
-    return this.cachedValues(this.version)
-  }
-  size() {
-    return this.data.size
-  }
-  set(e, t) {
-    this.data.get(e) !== t && (this.data.set(e, t), this.version++)
-  }
-  delete(e) {
-    let t = this.data.delete(e);
-    return t && this.version++, t
-  }
-  clear() {
-    0 !== this.data.size && (this.data.clear(), this.version++)
-  }
-  constructor() {
-    m(this, "version", 0), m(this, "data", new Map), m(this, "cachedValues", void 0), this.cachedValues = (0, r.cachedFunction)(e => Array.from(this.data.values()))
-  }
-}
-let g = new C,
-  S = new C,
-  _ = null;
-
-function T(e) {
-  let t = g.delete(e),
-    n = S.delete(e);
+function I(e) {
+  let t = S.delete(e),
+    n = _.delete(e);
   return t || n
 }
-class I extends(a = l.default.Store) {
+class A extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(d.default, u.default)
+    this.waitFor(h.default, f.default)
   }
   get desyncedVoiceStatesCount() {
-    return g.size()
+    return S.size()
   }
   getDesyncedVoiceStates(e) {
-    return e !== _ ? p : g.values()
+    return e !== T ? C : S.values()
   }
   getDesyncedParticipants(e) {
-    return e !== _ ? E : S.values()
+    return e !== T ? g : _.values()
   }
 }
-m(I, "displayName", "RTCConnectionDesyncStore"), t.default = new I(s.default, {
+i = "RTCConnectionDesyncStore", (s = "displayName") in(l = A) ? Object.defineProperty(l, s, {
+  value: i,
+  enumerable: !0,
+  configurable: !0,
+  writable: !0
+}) : l[s] = i, t.default = new A(o.default, {
   CONNECTION_OPEN: function() {
-    g.clear(), S.clear()
+    S.clear(), _.clear()
   },
   RTC_CONNECTION_STATE: function(e) {
     let {
       state: t,
       channelId: n
     } = e;
-    if (t !== f.RTCConnectionStates.DISCONNECTED && _ === n) return !1;
-    _ = n, g.clear(), S.clear()
+    if (t !== p.RTCConnectionStates.DISCONNECTED && T === n) return !1;
+    T = n, S.clear(), _.clear()
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
     } = e;
-    return null != _ && t.reduce((e, t) => {
+    return null != T && t.reduce((e, t) => {
       let {
         userId: n,
         channelId: a
       } = t;
-      return null != a && a === _ && !!T(n) || e
+      return null != a && a === T && !!I(n) || e
     }, !1)
   },
   RTC_CONNECTION_FLAGS: function(e) {
@@ -94,22 +69,22 @@ m(I, "displayName", "RTCConnectionDesyncStore"), t.default = new I(s.default, {
       userId: t,
       guildId: n,
       channelId: a
-    } = e, l = d.default.getVoiceStateForUser(t);
-    if ((null == l ? void 0 : l.channelId) === a && a === _) return !1;
-    let s = u.default.getUser(t);
+    } = e, l = h.default.getVoiceStateForUser(t);
+    if ((null == l ? void 0 : l.channelId) === a && a === T) return !1;
+    let s = f.default.getUser(t);
     if (null == s) return !1;
-    let r = new i.default({
+    let i = new d.default({
         userId: t,
         channelId: a
       }),
-      m = (0, c.makeSortedVoiceState)(r, null != n ? n : f.ME, t);
-    g.set(t, m);
-    let p = {
-      type: h.ParticipantTypes.USER,
+      r = (0, m.makeSortedVoiceState)(i, null != n ? n : p.ME, t);
+    S.set(t, r);
+    let o = {
+      type: E.ParticipantTypes.USER,
       user: s,
       id: s.id,
       streamId: null,
-      voiceState: new i.default({
+      voiceState: new d.default({
         userId: t,
         channelId: a
       }),
@@ -118,15 +93,15 @@ m(I, "displayName", "RTCConnectionDesyncStore"), t.default = new I(s.default, {
       lastSpoke: 0,
       soundsharing: !1,
       ringing: !1,
-      userNick: o.default.getName(n, a, s),
+      userNick: c.default.getName(n, a, s),
       localVideoDisabled: !1
     };
-    S.set(t, p)
+    _.set(t, o)
   },
   RTC_CONNECTION_CLIENT_DISCONNECT: function(e) {
     let {
       userId: t
     } = e;
-    return T(t)
+    return I(t)
   }
 })

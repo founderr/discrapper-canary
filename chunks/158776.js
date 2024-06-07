@@ -221,7 +221,7 @@ a = "PresenceStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
       guilds: t,
       presences: n
     } = e, i = f.default.getId();
-    m = {}, C = {}, N = {
+    m = {}, C = {}, R = {}, N = {
       [i]: N[i]
     }, p = {
       [i]: p[i]

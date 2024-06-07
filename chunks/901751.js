@@ -52,7 +52,7 @@ let C = 1 * E.default.Millis.MINUTE,
 function D() {
   let e = u.default.getStreamerActiveStreamMetadata();
   if ((null == e ? void 0 : e.id) == null) return null;
-  let t = _.default.getGameById(e.id);
+  let t = _.default.getDetectableGame(e.id);
   if ((null == t ? void 0 : t.id) == null) return null;
   let n = (0, f.getQuestByApplicationId)(T.default.quests, t.id);
   return null != n && P(n) ? n : null

@@ -16,7 +16,7 @@ function d(e) {
   return (0, s.useStateFromStores)([i.default], () => {
     let t = l()(e).map(e => {
       var t;
-      return null === (t = i.default.getGameById(e)) || void 0 === t ? void 0 : t.name
+      return null === (t = i.default.getDetectableGame(e)) || void 0 === t ? void 0 : t.name
     }).filter(r.isNotNullish).value();
     return (0, o.formatSelectionList)(t, u.MAX_GAMES_TO_DISPLAY)
   })

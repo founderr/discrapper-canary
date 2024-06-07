@@ -29,7 +29,7 @@ t.default = function(e) {
     coverImageWidth: 252
   }), g = (0, c.useStateFromStores)([f.default], () => {
     var e, a;
-    return null !== (a = null === (e = f.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
+    return null !== (a = null === (e = f.default.getDetectableGame(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
   }), N = r.useCallback(() => {
     null == i || i(t)
   }, [t, i]), A = r.useMemo(() => p ? null : null == I ? (0, n.jsx)("div", {

@@ -17,7 +17,7 @@ function d(e) {
 }
 
 function c() {
-  let e = (0, s.useStateFromStoresArray)([l.default], () => l.default.games),
+  let e = (0, s.useStateFromStores)([l.default], () => l.default.games),
     t = n.useMemo(() => i()(e).map(e => ({
       value: e.id,
       label: e.name
