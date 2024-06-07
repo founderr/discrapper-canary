@@ -4,6 +4,5 @@ e.exports = {
   fullscreenWrapper: "fullscreenWrapper_e8ee4a",
   innerWrapper: "innerWrapper_fd8553",
   invisible: "invisible__9177d",
-  shinyButton: "shinyButton_afe496",
   wrapper: "wrapper__98245"
 }

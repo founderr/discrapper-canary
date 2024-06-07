@@ -37,17 +37,18 @@ function f(e) {
     isGift: s,
     priceOptions: i,
     shouldUseModifiedTierCards: l,
-    subscriptionTier: a
+    isPremium: a,
+    subscriptionTier: o
   } = e;
   return (0, n.jsx)(r.Clickable, {
-    onClick: l ? c.NOOP_NULL : t,
-    style: l ? void 0 : {
+    onClick: l && !a ? c.NOOP_NULL : t,
+    style: l && !a ? void 0 : {
       cursor: "pointer"
     },
     children: (0, n.jsx)(C.Tier2Card, {
       className: p.tier2MarketingCard,
-      ctaButton: l ? (0, n.jsx)(_, {
-        subscriptionTier: a,
+      ctaButton: l && !a ? (0, n.jsx)(_, {
+        subscriptionTier: o,
         onClick: t
       }) : void 0,
       showWumpus: !l,
@@ -60,23 +61,24 @@ function f(e) {
   })
 }
 
-function x(e) {
+function m(e) {
   let {
     onClick: t,
     isGift: s,
     priceOptions: i,
     shouldUseModifiedTierCards: l,
-    subscriptionTier: a
+    isPremium: a,
+    subscriptionTier: o
   } = e;
   return (0, n.jsx)(r.Clickable, {
-    onClick: l ? c.NOOP_NULL : t,
-    style: l ? void 0 : {
+    onClick: l && !a ? c.NOOP_NULL : t,
+    style: l && !a ? void 0 : {
       cursor: "pointer"
     },
     children: (0, n.jsx)(C.Tier0Card, {
       className: p.tier0MarketingCard,
-      ctaButton: l ? (0, n.jsx)(_, {
-        subscriptionTier: a,
+      ctaButton: l && !a ? (0, n.jsx)(_, {
+        subscriptionTier: o,
         onClick: t
       }) : void 0,
       showWumpus: !l,
@@ -94,19 +96,21 @@ t.default = function(e) {
     priceOptions: r
   } = e, {
     bucket: o
-  } = (0, a.usePremiumTierCardsExperiment)("PremiumMarketingHome"), u = (0, i.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()), C = o > 0 && null === u;
+  } = (0, a.usePremiumTierCardsExperiment)("PremiumMarketingHome"), u = (0, i.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()), C = o > 0;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(f, {
       onClick: () => t(d.PremiumSubscriptionSKUs.TIER_2),
       isGift: s,
       priceOptions: r,
       shouldUseModifiedTierCards: C,
+      isPremium: null != u,
       subscriptionTier: d.PremiumSubscriptionSKUs.TIER_2
-    }), (0, n.jsx)(x, {
+    }), (0, n.jsx)(m, {
       onClick: () => t(d.PremiumSubscriptionSKUs.TIER_0),
       isGift: s,
       priceOptions: r,
       shouldUseModifiedTierCards: C,
+      isPremium: null != u,
       subscriptionTier: d.PremiumSubscriptionSKUs.TIER_0
     })]
   })

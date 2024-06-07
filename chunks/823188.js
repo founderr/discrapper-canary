@@ -613,6 +613,7 @@ function ec(e) {
           showYearlyPrice: s,
           priceOptions: d,
           textVariant: i ? "heading-lg/normal" : void 0,
+          shouldUseModifiedCopy: i,
           className: et.modifiedPrice
         })]
       }), (0, _.jsx)("div", {
