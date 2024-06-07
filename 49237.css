@@ -10509,7 +10509,9 @@ html.decorate-links .lowSaturationUnderline_a62e4d {
 }
 
 .is-mobile .authBox__6f336 .discordLogo__037bb {
-    display: block
+    display: block;
+    position: absolute;
+    top: 16px
 }
 
 @media(max-width:830px) {
@@ -23333,7 +23335,7 @@ h6.title_c2a544 {
 }
 
 .markdown__8e519 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

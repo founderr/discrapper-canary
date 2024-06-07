@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
   isMessageDataEdit: function() {
     return L
   }
-}), n("47120");
+}), n("653041"), n("47120");
 var i, r, s, a, o = n("512722"),
   l = n.n(o),
   u = n("261470"),
@@ -17,8 +17,9 @@ var i, r, s, a, o = n("512722"),
   _ = n("911969"),
   c = n("367907"),
   E = n("710845"),
-  I = n("432877"),
-  T = n("873741"),
+  I = n("432877");
+n("893233");
+var T = n("873741"),
   f = n("314897"),
   S = n("866960"),
   h = n("70956"),
@@ -60,7 +61,19 @@ class M extends m.default {
   }
   cancelRequest(e) {
     var t;
-    null === (t = this.requests.get(e)) || void 0 === t || t.abort(), this.requests.delete(e), this.cancelQueueMetricTimers(e)
+    this.logger.log("Cancel message send: ", e), null === (t = this.requests.get(e)) || void 0 === t || t.abort(), this.requests.delete(e), this.cancelQueueMetricTimers(e)
+  }
+  cancelPendingSendRequests(e) {
+    let t = [],
+      n = [];
+    for (; this.queue.length > 0;) {
+      let i = this.queue.shift(),
+        {
+          message: r
+        } = i;
+      0 === r.type && r.message.channelId === e ? t.push(r.message) : n.push(i)
+    }
+    return this.queue.push(...n), this.logger.log("Cancel pending send requests", t.length), t
   }
   startQueueMetricTimers(e) {
     let t = D.map(e => setTimeout(() => {
@@ -138,12 +151,12 @@ class M extends m.default {
       }
     }, _);
     else {
-      let t = {
+      let t;
+      t = {
         timeout: 60 * h.default.Millis.SECOND,
         retries: 3,
         backoff: new u.default
-      };
-      d.HTTP.post({
+      }, d.HTTP.post({
         url: O.Endpoints.MESSAGES(i),
         body: l,
         context: n,

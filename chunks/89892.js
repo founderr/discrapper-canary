@@ -408,8 +408,10 @@ class S {
       L = null;
     if ((m || N) && null == p && this.ready) L = this.merge(g, m, !0);
     else {
-      let e = this._array.filter(e => e.state === c.MessageStates.SENDING);
-      L = this.reset(g), !(e.length > 0) || m || N || (null == p ? void 0 : p.messageId) != null || (null == p ? void 0 : p.offset) != null ? I.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (I.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), L = L.merge(e))
+      let e = this._array.filter(e => e.state === c.MessageStates.SENDING),
+        t = this._array.filter(e => e.state === c.MessageStates.SEND_FAILED),
+        n = e.length > 0 || t.length > 0;
+      L = this.reset(g), !n || m || N || (null == p ? void 0 : p.messageId) != null || (null == p ? void 0 : p.offset) != null ? I.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (t.length > 0 && (I.info("loadComplete: merging with SEND_FAILED messages for channelId=".concat(this.channelId)), L = L.merge(t)), e.length > 0 && (I.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), L = L.merge(e)))
     }
     return L = L.mutate({
       ready: !0,
