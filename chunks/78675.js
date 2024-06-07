@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return N
   }
 }), n("47120");
 var i = n("735250"),
@@ -18,58 +18,56 @@ var i = n("735250"),
   I = n("451478"),
   T = n("311715"),
   f = n("768581"),
-  S = n("74538"),
-  h = n("888778"),
-  A = n("943217"),
-  m = n("793397"),
-  N = n("474936"),
-  p = n("214572");
+  S = n("888778"),
+  h = n("943217"),
+  A = n("793397"),
+  m = n("214572");
 
-function O(e) {
-  var t, n;
+function N(e) {
+  var t;
   let {
-    user: s,
-    displayProfile: O,
-    guildId: C,
-    profileType: R,
-    pendingBanner: g,
-    children: L,
-    animateOnHover: v = !1,
-    hasProfileEffect: D = !1,
-    canUsePremiumCustomization: M = !1
-  } = e, y = M || S.default.isPremiumAtLeast(null == O ? void 0 : O.premiumType, N.PremiumTypes.TIER_2), [P, U] = r.useState(!1), b = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), G = E.GifAutoPlay.getSetting(), {
-    bannerSrc: w,
-    status: k
-  } = (0, h.default)({
-    displayProfile: O,
-    pendingBanner: g,
-    size: (0, m.getUserBannerSize)(R),
-    canAnimate: v || !G ? P : b
-  }), B = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), V = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), x = (0, o.hex2int)((0, _.default)(s.getAvatarURL(C, V), B, !1)), F = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : x).hsl;
-  return (0, i.jsx)(A.default, {
-    isPremium: y,
-    hasThemeColors: null !== (n = null == O ? void 0 : O.canEditThemes) && void 0 !== n && n,
-    profileType: R,
-    hasBanner: null != w,
-    hasProfileEffect: D,
+    user: n,
+    displayProfile: s,
+    guildId: N,
+    profileType: p,
+    pendingBanner: O,
+    children: C,
+    animateOnHover: R = !1,
+    hasProfileEffect: g = !1,
+    canUsePremiumCustomization: L = !1
+  } = e, v = L || (null == s ? void 0 : s.canUsePremiumProfileCustomization) || !1, [D, M] = r.useState(!1), y = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), P = E.GifAutoPlay.getSetting(), {
+    bannerSrc: U,
+    status: b
+  } = (0, S.default)({
+    displayProfile: s,
+    pendingBanner: O,
+    size: (0, A.getUserBannerSize)(p),
+    canAnimate: R || !P ? D : y
+  }), G = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), w = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), k = (0, o.hex2int)((0, _.default)(n.getAvatarURL(N, w), G, !1)), B = (0, c.default)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : k).hsl;
+  return (0, i.jsx)(h.default, {
+    isPremium: v,
+    hasThemeColors: v,
+    profileType: p,
+    hasBanner: null != U,
+    hasProfileEffect: g,
     children: (0, i.jsxs)("div", {
-      className: a()(p.banner, p.divider, (0, m.getUserBannerStyles)({
-        profileType: R,
+      className: a()(m.banner, m.divider, (0, A.getUserBannerStyles)({
+        profileType: p,
         user: {
-          hasBanner: null != w,
-          isPremium: y,
-          hasProfileEffect: D
+          hasBanner: null != U,
+          isPremium: v,
+          hasProfileEffect: g
         }
       })),
-      onMouseMove: () => U(!0),
-      onMouseLeave: () => U(!1),
+      onMouseMove: () => M(!0),
+      onMouseLeave: () => M(!1),
       style: {
-        backgroundImage: null != w ? "url(".concat(w, ")") : void 0,
-        backgroundColor: k !== h.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : F
+        backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
+        backgroundColor: b !== S.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : B
       },
-      children: [!G && (0, f.isAnimatedImageURL)(w) && (0, i.jsx)(T.default, {
-        className: p.gifTag
-      }), L]
+      children: [!P && (0, f.isAnimatedImageURL)(U) && (0, i.jsx)(T.default, {
+        className: m.gifTag
+      }), C]
     })
   })
 }

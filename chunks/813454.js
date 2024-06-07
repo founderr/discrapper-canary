@@ -27,7 +27,7 @@ function m(e) {
     isTryItOutFlow: g,
     disabledInputs: S,
     onUpsellClick: I
-  } = e, T = v || (null == t ? void 0 : t.canUsePremiumProfileCustomization), A = T ? s.default : i.NitroWheelIcon;
+  } = e, T = v || (null == t ? void 0 : t.canUsePremiumProfileCustomization) || !1, A = T ? s.default : i.NitroWheelIcon;
   return (0, l.jsx)(n.default, {
     user: a,
     displayProfile: t,
