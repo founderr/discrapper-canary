@@ -97,6 +97,12 @@ let h = {
       }
     }, {
       disableTrack: t !== A.PerksDiscoverabilityCardTypes.FREE_BOOST || null == H
+    }), (0, E.default)({
+      type: o.ImpressionTypes.VIEW,
+      name: o.ImpressionNames.PERK_DISCOVERABILITY_CARD,
+      properties: {
+        name: t
+      }
     }), s) ? t === A.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
       className: n()(b.flipCardContainer, {
         [b.forceShadow]: m
