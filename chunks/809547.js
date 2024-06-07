@@ -15,9 +15,11 @@ function E(e) {
     guildId: n,
     page: i,
     categoryId: r,
-    integrationType: s
+    integrationType: s,
+    minUserInstallCommandCount: a,
+    excludeAppsWithCustomInstallUrl: o
   } = e;
-  return "query:'".concat(t, "' guildId:").concat(n, " page:").concat(i, " categoryId:").concat(r, " integrationType:").concat(s)
+  return "query:'".concat(t, "' guildId:").concat(n, " page:").concat(i, " categoryId:").concat(r, " integrationType:").concat(s, " minUserInstallCommandCount:").concat(a, " excludeAppsWithCustomInstallUrl:").concat(o)
 }(i = o || (o = {}))[i.FETCHING = 0] = "FETCHING", i[i.FETCHED = 1] = "FETCHED", i[i.ERROR = 2] = "ERROR";
 let I = new(d())({
     max: 20
@@ -30,15 +32,19 @@ class f extends(l = _.default.Store) {
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: s
-    } = e, a = E({
+      integrationType: s,
+      minUserInstallCommandCount: a,
+      excludeAppsWithCustomInstallUrl: o
+    } = e, l = E({
       query: t,
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: s
+      integrationType: s,
+      minUserInstallCommandCount: a,
+      excludeAppsWithCustomInstallUrl: o
     });
-    return I.get(a)
+    return I.get(l)
   }
   getFetchState(e) {
     let {
@@ -46,14 +52,18 @@ class f extends(l = _.default.Store) {
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: s
+      integrationType: s,
+      minUserInstallCommandCount: a,
+      excludeAppsWithCustomInstallUrl: o
     } = e;
     return T[E({
       query: t,
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: s
+      integrationType: s,
+      minUserInstallCommandCount: a,
+      excludeAppsWithCustomInstallUrl: o
     })]
   }
 }
@@ -69,17 +79,21 @@ a = "ApplicationDirectorySearchStore", (s = "displayName") in(r = f) ? Object.de
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: s
-    } = e, a = E({
+      integrationType: s,
+      minUserInstallCommandCount: a,
+      excludeAppsWithCustomInstallUrl: o
+    } = e, l = E({
       query: t,
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: s
+      integrationType: s,
+      minUserInstallCommandCount: a,
+      excludeAppsWithCustomInstallUrl: o
     });
     T = {
       ...T,
-      [a]: 0
+      [l]: 0
     }
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS: function(e) {
@@ -89,20 +103,24 @@ a = "ApplicationDirectorySearchStore", (s = "displayName") in(r = f) ? Object.de
       page: i,
       categoryId: r,
       result: s,
-      integrationType: a
-    } = e, o = E({
+      integrationType: a,
+      minUserInstallCommandCount: o,
+      excludeAppsWithCustomInstallUrl: l
+    } = e, u = E({
       query: t,
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: a
+      integrationType: a,
+      minUserInstallCommandCount: o,
+      excludeAppsWithCustomInstallUrl: l
     });
-    I.set(o, {
+    I.set(u, {
       lastFetchTimeMs: Date.now(),
       ...s
     }), T = {
       ...T,
-      [o]: 1
+      [u]: 1
     }
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function(e) {
@@ -111,17 +129,21 @@ a = "ApplicationDirectorySearchStore", (s = "displayName") in(r = f) ? Object.de
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: s
-    } = e, a = E({
+      integrationType: s,
+      minUserInstallCommandCount: a,
+      excludeAppsWithCustomInstallUrl: o
+    } = e, l = E({
       query: t,
       guildId: n,
       page: i,
       categoryId: r,
-      integrationType: s
+      integrationType: s,
+      minUserInstallCommandCount: a,
+      excludeAppsWithCustomInstallUrl: o
     });
     T = {
       ...T,
-      [a]: 2
+      [l]: 2
     }
   }
 })

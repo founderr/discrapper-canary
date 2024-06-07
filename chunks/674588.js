@@ -180,15 +180,17 @@ async function A(e) {
   } = e, {
     page: u,
     categoryId: _,
-    integrationType: c
-  } = null != o ? o : {}, I = Date.now(), T = d.default.getFetchState({
+    integrationType: c,
+    minUserInstallCommandCount: I,
+    excludeAppsWithCustomInstallUrl: T
+  } = null != o ? o : {}, f = Date.now(), S = d.default.getFetchState({
     query: n,
     guildId: i,
     page: u,
     categoryId: _,
     integrationType: c
   }), {
-    lastFetchTimeMs: f
+    lastFetchTimeMs: h
   } = null !== (t = d.default.getSearchResults({
     query: n,
     guildId: i,
@@ -196,15 +198,17 @@ async function A(e) {
     categoryId: _,
     integrationType: c
   })) && void 0 !== t ? t : {};
-  if (T !== d.FetchState.FETCHING) {
-    if (null == f || !(f + 6e5 > I)) {
+  if (S !== d.FetchState.FETCHING) {
+    if (null == h || !(h + 6e5 > f)) {
       s.default.dispatch({
         type: "APPLICATION_DIRECTORY_FETCH_SEARCH",
         query: n,
         guildId: i,
         page: u,
         categoryId: _,
-        integrationType: c
+        integrationType: c,
+        minUserInstallCommandCount: I,
+        excludeAppsWithCustomInstallUrl: T
       });
       try {
         let e = await r.HTTP.get({
@@ -215,7 +219,9 @@ async function A(e) {
             page: u,
             category_id: _,
             locale: a.default.locale,
-            integration_type: c
+            integration_type: c,
+            min_user_install_command_count: I,
+            exclude_apps_with_custom_install_url: T
           }
         });
         s.default.dispatch({
@@ -232,7 +238,9 @@ async function A(e) {
             totalPages: e.body.num_pages,
             type: e.body.type,
             loadId: e.body.load_id
-          }
+          },
+          minUserInstallCommandCount: I,
+          excludeAppsWithCustomInstallUrl: T
         }), null == l || l(e.body.result_count)
       } catch (e) {
         s.default.dispatch({
@@ -241,7 +249,9 @@ async function A(e) {
           guildId: i,
           page: u,
           categoryId: _,
-          integrationType: c
+          integrationType: c,
+          minUserInstallCommandCount: I,
+          excludeAppsWithCustomInstallUrl: T
         })
       }
     }
