@@ -110,7 +110,7 @@ function er(e) {
     avatarOverride: ev,
     size: d.AvatarSizes.SIZE_80,
     showPending: !0
-  }), eG = (0, P.default)(K.id, null == er ? void 0 : er.id), eW = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eZ = (0, m.default)(), eH = (0, o.useStateFromStores)([L.default], () => null == er ? null : L.default.getMember(er.id, K.id)), eV = null != er, eK = null === (a = (0, P.default)(K.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eX = null == eG ? void 0 : eG.profileEffectId, eY = eV && null == eI ? eI !== eX && null !== eI ? eX : eK : eI, eq = void 0 === ev ? K.getAvatarURL(void 0, 80) : ev, eJ = (0, h.default)(eq, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), eQ = null == eG ? void 0 : eG.getPreviewThemeColors(eS), e$ = null !== (r = null == eQ ? void 0 : eQ[0]) && void 0 !== r ? r : null == eG ? void 0 : eG.primaryColor, e0 = eW ? eZ : (0, E.getProfileTheme)(e$), e4 = (0, I.default)(null !== (y = null != ed ? ed : e$) && void 0 !== y ? y : (0, s.hex2int)(eJ)).hsl, e1 = (0, o.useStateFromStores)([G.default], () => G.default.isFocused()), e6 = null == eG ? void 0 : eG.getPreviewBanner(ec, ez ? e1 : eO), e8 = null != e6 || null != eY, e9 = eR || null != eY, e7 = (0, Y.getPreviewName)({
+  }), eG = (0, P.default)(K.id, null == er ? void 0 : er.id), eW = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eZ = (0, m.default)(), eH = (0, o.useStateFromStores)([L.default], () => null == er ? null : L.default.getMember(er.id, K.id)), eV = null != er, eK = null === (a = (0, P.default)(K.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eX = null == eG ? void 0 : eG.profileEffectId, eY = eV && null == eI ? eI !== eX && null !== eI ? eX : eK : eI, eq = void 0 === ev ? K.getAvatarURL(void 0, 80) : ev, eJ = (0, h.default)(eq, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), eQ = null == eG ? void 0 : eG.getPreviewThemeColors(eS), e$ = null !== (r = null == eQ ? void 0 : eQ[0]) && void 0 !== r ? r : null == eG ? void 0 : eG.primaryColor, e0 = eW ? eZ : (0, E.getProfileTheme)(e$), e1 = (0, I.default)(null !== (y = null != ed ? ed : e$) && void 0 !== y ? y : (0, s.hex2int)(eJ)).hsl, e4 = (0, o.useStateFromStores)([G.default], () => G.default.isFocused()), e6 = null == eG ? void 0 : eG.getPreviewBanner(ec, ez ? e4 : eO), e8 = null != e6 || null != eY, e9 = eR || null != eY, e7 = (0, Y.getPreviewName)({
     pendingNickname: eh,
     pendingGlobalName: eg,
     user: K,
@@ -232,7 +232,7 @@ function er(e) {
             makeURL: () => e6,
             onChange: ai,
             imageStyle: {
-              backgroundColor: e4
+              backgroundColor: e1
             },
             imageClassName: n()(e8 ? ea.bannerUploaderInnerSquare : ea.bannerUploaderInnerSquareEmpty),
             hint: ee.default.Messages.CHANGE_BANNER,
@@ -246,7 +246,7 @@ function er(e) {
         }) : (0, l.jsx)("div", {
           className: e9 ? ea.bannerUploaderInnerSquare : ea.bannerNormal,
           style: {
-            backgroundColor: e4
+            backgroundColor: e1
           },
           children: ex ? null : (0, l.jsx)(d.Clickable, {
             onClick: () => null == es ? void 0 : es({
