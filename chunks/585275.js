@@ -1,8 +1,8 @@
     "use strict";
     let d;
     t.r(a), t("242167"), t("970173"), t("520712"), t("268111"), t("941497"), t("32026"), t("480839"), t("744285"), t("492257"), t("873817"), t("411104"), t("773603");
-    var c = t("512722"),
-      n = t.n(c),
+    var n = t("512722"),
+      c = t.n(n),
       i = t("392711"),
       f = t.n(i),
       o = t("544891"),
@@ -47,33 +47,33 @@
           let t = 0;
           return ((0, m.isPlatformEmbedded) ? function(e, a) {
             let t = (0, r.getVoiceEngine)(),
-              c = (null == t ? void 0 : t.getNextVideoOutputFrame) != null;
-            return new Promise((n, i) => {
+              n = (null == t ? void 0 : t.getNextVideoOutputFrame) != null;
+            return new Promise((c, i) => {
               let f = e => {
                 try {
-                  null != e && a(e) && n(e)
+                  null != e && a(e) && c(e)
                 } catch (e) {
                   i(e)
                 }
               };
-              c ? t.getNextVideoOutputFrame(e).then(f, a => {
+              n ? t.getNextVideoOutputFrame(e).then(f, a => {
                 if (d === e) throw a
               }) : l.default.addSink(e, T, f)
             }).finally(() => {
-              !c && l.default.removeSink(e, T)
+              !n && l.default.removeSink(e, T)
             })
           } : function(e, a) {
             let t = (0, s.getVideoStream)(e);
             if (null == t) return Promise.resolve(new ImageData(0, 0));
             let {
               width: d,
-              height: c
-            } = t.getVideoTracks()[0].getSettings(), n = document.createElement("video"), i = document.createElement("canvas");
-            n.width = i.width = null != d ? d : 512, n.height = i.height = null != c ? c : 288, n.srcObject = t, n.play();
+              height: n
+            } = t.getVideoTracks()[0].getSettings(), c = document.createElement("video"), i = document.createElement("canvas");
+            c.width = i.width = null != d ? d : 512, c.height = i.height = null != n ? n : 288, c.srcObject = t, c.play();
             let f = i.getContext("2d");
             return new Promise((e, t) => {
-              n.ontimeupdate = () => {
-                null == f || f.drawImage(n, 0, 0, i.width, i.height);
+              c.ontimeupdate = () => {
+                null == f || f.drawImage(c, 0, 0, i.width, i.height);
                 let d = null == f ? void 0 : f.getImageData(0, 0, i.width, i.height);
                 try {
                   null != d && a(d) && e(d)
@@ -82,7 +82,7 @@
                 }
               }
             }).finally(() => {
-              n.ontimeupdate = null, n.removeAttribute("srcObject"), n.load()
+              c.ontimeupdate = null, c.removeAttribute("srcObject"), c.load()
             })
           })(e, e => {
             if (new Uint32Array(e.data.buffer).some(e => 0 !== e)) return !0;
@@ -96,25 +96,25 @@
           let a = 512 / e.width,
             t = Math.min(a, 288 / e.height),
             d = e.width * t,
-            c = e.height * t;
-          w.width = d, w.height = c;
-          let n = window.document.createElement("canvas"),
-            i = n.getContext("2d");
-          n.width = e.width, n.height = e.height;
+            n = e.height * t;
+          w.width = d, w.height = n;
+          let c = window.document.createElement("canvas"),
+            i = c.getContext("2d");
+          c.width = e.width, c.height = e.height;
           let f = new ImageData(e.data, e.width, e.height);
           return null == i || i.putImageData(f, 0, 0), new Promise(a => {
-            null == v || v.drawImage(n, 0, 0, e.width, e.height, 0, 0, d, c), a()
+            null == v || v.drawImage(c, 0, 0, e.width, e.height, 0, 0, d, n), a()
           })
         }(t);
-        let c = w.toDataURL("image/jpeg");
+        let n = w.toDataURL("image/jpeg");
         if (u.default.dispatch({
             type: "STREAM_PREVIEW_FETCH_SUCCESS",
             streamKey: a,
-            previewURL: c
+            previewURL: n
           }), m.isPlatformEmbedded) {
           let e = h.default.getToken();
-          n()(null != e, "Auth token was null while sending screenshot."), await _.default.makeChunkedRequest(g.Endpoints.STREAM_PREVIEW(a), {
-            thumbnail: c
+          c()(null != e, "Auth token was null while sending screenshot."), await _.default.makeChunkedRequest(g.Endpoints.STREAM_PREVIEW(a), {
+            thumbnail: n
           }, {
             method: "POST",
             token: e
@@ -122,7 +122,7 @@
         } else await o.HTTP.post({
           url: g.Endpoints.STREAM_PREVIEW(a),
           body: {
-            thumbnail: c
+            thumbnail: n
           },
           oldFormErrors: !0
         })
@@ -138,11 +138,11 @@
           let {
             guildId: a,
             channelId: t,
-            userId: c,
-            streamId: n,
+            userId: n,
+            streamId: c,
             context: i
           } = e;
-          !(null == n || i !== O.MediaEngineContextTypes.STREAM || c !== h.default.getId() || __OVERLAY__) && (N(), d = n, R(n, a, t, c))
+          !(null == c || i !== O.MediaEngineContextTypes.STREAM || n !== h.default.getId() || __OVERLAY__) && (N(), d = c, R(c, a, t, n))
         }), u.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
           let {
             videoState: a

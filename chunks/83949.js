@@ -5,8 +5,8 @@
       }
     });
     var d = t("470079"),
-      c = t("719711"),
-      n = t("433517"),
+      n = t("719711"),
+      c = t("433517"),
       i = t("579806"),
       f = t("626135"),
       o = t("998502"),
@@ -20,7 +20,7 @@
 
     function b() {
       return d.useEffect(() => {
-        window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.Storage.get(c.DOMAIN_MIGRATION_SUCCESS_KEY) && o.default.supportsFeature(l.NativeFeatures.USER_DATA_CACHE) && (r.migrate(), i.default.userDataCache.getCached().then(e => {
+        window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== c.Storage.get(n.DOMAIN_MIGRATION_SUCCESS_KEY) && o.default.supportsFeature(l.NativeFeatures.USER_DATA_CACHE) && (r.migrate(), i.default.userDataCache.getCached().then(e => {
           if (null == e) {
             r.failMigration(), f.default.track(l.AnalyticEvents.DOMAIN_MIGRATED, {
               success: !1,
@@ -34,11 +34,11 @@
             t = 0 !== a.length,
             d = null != e.token,
             o = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-            b = null == o || null == s(o) || s(o) <= s(n.Storage.get("RTCRegionStore"));
-          t && d && !b && (n.Storage.clear(), a.forEach(a => {
+            b = null == o || null == s(o) || s(o) <= s(c.Storage.get("RTCRegionStore"));
+          t && d && !b && (c.Storage.clear(), a.forEach(a => {
             let t = e[a];
             try {
-              n.Storage.set(a, JSON.parse(t))
+              c.Storage.set(a, JSON.parse(t))
             } catch (e) {}
           })), f.default.track(l.AnalyticEvents.DOMAIN_MIGRATED, {
             success: !0,
@@ -46,7 +46,7 @@
             has_data: t
           }, {
             flush: !0
-          }), n.Storage.set(c.DOMAIN_MIGRATION_SUCCESS_KEY, !0), i.default.userDataCache.deleteCache(), r.finishMigration()
+          }), c.Storage.set(n.DOMAIN_MIGRATION_SUCCESS_KEY, !0), i.default.userDataCache.deleteCache(), r.finishMigration()
         }))
       }, []), null
     }

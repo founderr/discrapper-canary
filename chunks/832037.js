@@ -2,15 +2,15 @@
     t.r(a);
     var d = t("735250");
     t("470079");
-    var c = t("481060"),
-      n = t("204623"),
+    var n = t("481060"),
+      c = t("204623"),
       i = t("155221");
     a.default = {
-      App: () => (0, d.jsx)(c.DnDProvider, {
+      App: () => (0, d.jsx)(n.DnDProvider, {
         children: (0, d.jsx)(i.default, {})
       }),
-      Overlay: () => (0, d.jsx)(c.DnDProvider, {
+      Overlay: () => (0, d.jsx)(n.DnDProvider, {
         children: (0, d.jsx)(i.Overlay, {})
       }),
-      OutdatedClient: n.default
+      OutdatedClient: c.default
     }

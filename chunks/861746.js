@@ -324,17 +324,17 @@ t.default = function(e) {
       })
     }, [ek, eV]),
     e2 = eO ? "0 0 15px 1px ".concat(C.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)",
-    e8 = null != e_ ? {
+    e3 = null != e_ ? {
       backgroundColor: eO ? "var(--background-floating)" : "var(--background-secondary)",
       borderColor: "var(--chat-border)",
       boxShadow: em ? e2 : "none"
     } : void 0,
-    e3 = null != eT && eM ? {
+    e8 = null != eT && eM ? {
       boxShadow: "0px 4px 50px 0px " + eT.primary.toHexString()
     } : {},
     e9 = eM && eH ? {
       boxShadow: "0px 4px 50px 0px " + (eO ? L.default.WHITE : L.default.BLACK)
-    } : e3;
+    } : e8;
   return l.useEffect(() => {
     if (eM) {
       u()(null !== ec.current, "cardRef can not be null");
@@ -380,7 +380,7 @@ t.default = function(e) {
             className: r()(et.shopCard, et.shopCardAnimation),
             onBlur: () => ep(!1),
             onClick: eZ,
-            style: e8,
+            style: e3,
             id: "shop-item-".concat(t.skuId),
             "aria-hidden": !0,
             children: [eM && (0, a.jsx)(p.Button, {

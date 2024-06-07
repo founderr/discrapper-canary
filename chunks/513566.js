@@ -1,9 +1,9 @@
     "use strict";
     t.r(a), t("47120");
     var d = t("348327"),
-      c = t.n(d),
-      n = t("392711"),
-      i = t.n(n),
+      n = t.n(d),
+      c = t("392711"),
+      i = t.n(c),
       f = t("570140"),
       o = t("846027"),
       r = t("287734"),
@@ -36,7 +36,7 @@
         this.isSupported && (f.default.unsubscribe("AUDIO_SET_MODE", this.handleViewUpdate), f.default.unsubscribe("VOICE_CHANNEL_SELECT", this.handleViewUpdate), f.default.unsubscribe("START_SESSION", this.handleViewUpdate), f.default.unsubscribe("CONNECTION_OPEN", this.handleViewUpdate), f.default.unsubscribe("CONNECTION_CLOSED", this.handleViewUpdate), f.default.unsubscribe("CALL_CREATE", this.handleViewUpdate), f.default.unsubscribe("CALL_UPDATE", this.handleViewUpdate), f.default.unsubscribe("CALL_DELETE", this.handleViewUpdate), f.default.unsubscribe("CHANNEL_DELETE", this.handleViewUpdate), f.default.unsubscribe("VOICE_STATE_UPDATES", this.handleViewUpdate), f.default.unsubscribe("AUDIO_TOGGLE_SELF_MUTE", this.handleViewUpdate), f.default.unsubscribe("AUDIO_TOGGLE_SELF_DEAF", this.handleViewUpdate), f.default.unsubscribe("AUDIO_TOGGLE_LOCAL_MUTE", this.handleViewUpdate), f.default.unsubscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleViewUpdate))
       }
       setThumbarButtons(e) {
-        !c()(this.prevButtons, e) && (this.prevButtons = e, I.default.setThumbarButtons(e))
+        !n()(this.prevButtons, e) && (this.prevButtons = e, I.default.setThumbarButtons(e))
       }
       constructor(...e) {
         super(...e), T(this, "callbackActions", {
@@ -61,21 +61,21 @@
           let a = m.default.isSelfMute(),
             t = m.default.isSelfDeaf(),
             d = m.default.isVideoEnabled(),
-            c = m.default.isVideoAvailable(),
-            n = h.default.getChannel(e),
-            i = null == n || (0, b.getVideoPermission)(n),
+            n = m.default.isVideoAvailable(),
+            c = h.default.getChannel(e),
+            i = null == c || (0, b.getVideoPermission)(c),
             {
               reachedLimit: f,
               limit: o
-            } = null != n ? (0, s.getChannelVideoLimit)(n) : {
+            } = null != c ? (0, s.getChannelVideoLimit)(c) : {
               reachedLimit: void 0,
               limit: void 0
             },
             r = (0, u.getVideoButtonLabel)({
               enabled: d,
               join: !1,
-              channel: n,
-              cameraUnavailable: !c,
+              channel: c,
+              cameraUnavailable: !n,
               hasPermission: i,
               channelLimit: o,
               channelLimitReached: f
@@ -84,7 +84,7 @@
             name: I.ThumbarButtonName.VIDEO,
             active: !d,
             tooltip: r,
-            flags: c ? [] : ["disabled"]
+            flags: n ? [] : ["disabled"]
           }, {
             name: I.ThumbarButtonName.MUTE,
             active: a,

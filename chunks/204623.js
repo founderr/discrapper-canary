@@ -5,9 +5,9 @@
       }
     }), t("47120");
     var d = t("735250"),
-      c = t("470079"),
-      n = t("525654"),
-      i = t.n(n),
+      n = t("470079"),
+      c = t("525654"),
+      i = t.n(c),
       f = t("470716"),
       o = t("442837"),
       r = t("946188"),
@@ -26,7 +26,7 @@
     let T = o.default.connectStores([b.default], () => ({
       focused: b.default.isFocused()
     }))(I.default);
-    class S extends c.PureComponent {
+    class S extends n.PureComponent {
       getPlatform() {
         var e;
         let a = null === (e = i().os) || void 0 === e ? void 0 : e.family;
@@ -55,7 +55,7 @@
             onClick: this.handleDownload,
             children: O.default.Messages.DOWNLOAD
           });
-        return (0, d.jsxs)(c.Fragment, {
+        return (0, d.jsxs)(n.Fragment, {
           children: [(0, d.jsx)(f.Helmet, {
             children: (0, d.jsx)("html", {
               className: (0, _.getThemeClass)(g.ThemeTypes.DARK)
