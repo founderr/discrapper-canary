@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return P
   },
   useDefaultUserSettingsSections: function() {
-    return M
+    return x
   },
   useGenerateUserSettingsSections: function() {
     return p
@@ -31,8 +31,8 @@ var a = s("470079"),
   _ = s("663389"),
   I = s("594174"),
   N = s("202527"),
-  f = s("620163"),
-  g = s("295545"),
+  g = s("620163"),
+  f = s("295545"),
   m = s("168308"),
   C = s("839469"),
   A = s("726985"),
@@ -89,14 +89,14 @@ function p() {
     shouldMergeGameSettings: R
   } = N.GameSettingsMergeExperiment.useExperiment({
     location: "settings"
-  }), x = (0, g.useIsEligibleForUserSettingsSearchDesktop)({
+  }), M = (0, f.useIsEligibleForUserSettingsSearchDesktop)({
     location: "settings"
-  }), M = (0, u.useIsEligibleForKeywordFiltering)({
+  }), x = (0, u.useIsEligibleForKeywordFiltering)({
     location: "settings"
   }), D = (t = !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()), t), L = (0, T.useIsEligibleForInappropriateConversationWarning)({
     location: "settings"
   });
-  return (0, f.getConfig)({
+  return (0, g.getConfig)({
     unseenGiftCount: s,
     showPrepaidPaymentPastDueWarning: a,
     impressionSource: i,
@@ -104,8 +104,8 @@ function p() {
     isOverlaySupported: A,
     isClipsBetaTagShowing: O === l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
     shouldMergeGameSettings: R,
-    isUserSettingsSearchEnabled: x,
-    isKeywordFilteringEnabled: M,
+    isUserSettingsSearchEnabled: M,
+    isKeywordFilteringEnabled: x,
     isStaff: D,
     isInappropriateConversationWarningEnabled: L
   })
@@ -114,37 +114,46 @@ function p() {
 function R(e) {
   let {
     searchResults: t
-  } = (0, C.useSettingSearchResults)(), s = p(), a = s[e], n = Object.fromEntries(Object.entries(s).filter(e => {
-    let [t, s] = e;
-    return s.section === a.section
-  })), l = Object.fromEntries(Object.entries(n).filter(e => {
-    let [t, {
-      parent: s,
-      section: n
-    }] = e;
-    return null != s && n === a.section
-  }).map(e => {
-    let [t, {
-      parent: s
-    }] = e;
-    return [t, s]
-  })), i = new Set, r = e => {
-    if (i.has(e)) return;
-    let t = n[e];
-    if (null == t) return;
-    i.add(e);
-    let s = t.parent;
-    null != s && r(s)
-  }, o = e => {
-    if (!i.has(e))
-      for (let t of (i.add(e), Object.entries(l).filter(t => {
-          let [s, a] = t;
-          return a === e
-        }).map(e => {
-          let [t] = e;
-          return t
-        }))) o(t)
-  };
+  } = (0, C.useSettingSearchResults)(), s = p();
+  if (!(0, f.useIsEligibleForUserSettingsSearchDesktop)({
+      location: "settings"
+    })) return new Set;
+  let a = s[e],
+    n = Object.fromEntries(Object.entries(s).filter(e => {
+      let [t, s] = e;
+      return s.section === a.section
+    })),
+    l = Object.fromEntries(Object.entries(n).filter(e => {
+      let [t, {
+        parent: s,
+        section: n
+      }] = e;
+      return null != s && n === a.section
+    }).map(e => {
+      let [t, {
+        parent: s
+      }] = e;
+      return [t, s]
+    })),
+    i = new Set,
+    r = e => {
+      if (i.has(e)) return;
+      let t = n[e];
+      if (null == t) return;
+      i.add(e);
+      let s = t.parent;
+      null != s && r(s)
+    },
+    o = e => {
+      if (!i.has(e))
+        for (let t of (i.add(e), Object.entries(l).filter(t => {
+            let [s, a] = t;
+            return a === e
+          }).map(e => {
+            let [t] = e;
+            return t
+          }))) o(t)
+    };
   for (let e of t.filter(e => e in n))
     if (null != n[e].element && null == n[e].parent) {
       i.clear();
@@ -153,7 +162,7 @@ function R(e) {
   return i
 }
 
-function x(e, t, s) {
+function M(e, t, s) {
   let a = [],
     n = L(t),
     l = function(e, t) {
@@ -187,7 +196,7 @@ function x(e, t, s) {
   }), a
 }
 
-function M() {
+function x() {
   let e = p(),
     {
       shouldMergeGameSettings: t
@@ -195,7 +204,7 @@ function M() {
       location: "settings"
     }),
     s = a.useMemo(() => O(t), [t]);
-  return a.useMemo(() => x(s, e), [s, e])
+  return a.useMemo(() => M(s, e), [s, e])
 }
 
 function D(e) {
@@ -216,7 +225,7 @@ function D(e) {
         }).flat(1), A.WebSetting.SEARCH_NO_RESULTS]
       }], [t])
     }();
-  return a.useMemo(() => x(s, t, new Set(e)), [s, t, e])
+  return a.useMemo(() => M(s, t, new Set(e)), [s, t, e])
 }
 
 function L(e) {

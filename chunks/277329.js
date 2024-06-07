@@ -23,7 +23,7 @@ var n = s("442837"),
 function N() {
   let e = (0, S.useGameSettingsTabs)(),
     t = (0, n.useStateFromStores)([o.default], () => o.default.getSubsection()),
-    s = null != t ? t : e[0].id;
+    s = null != t && e.some(e => e.id === t) ? t : e[0].id;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.Heading, {
       className: I.heading,

@@ -20,8 +20,8 @@ var n = s("990547"),
   _ = s("163379"),
   I = s("703288"),
   N = s("574755"),
-  f = s("425799"),
-  g = s("377171"),
+  g = s("425799"),
+  f = s("377171"),
   m = s("621628"),
   C = s("18438"),
   A = s("778825"),
@@ -29,8 +29,8 @@ var n = s("990547"),
   O = s("231765"),
   p = s("837741"),
   R = s("804545"),
-  x = s("813732"),
-  M = s("398140"),
+  M = s("813732"),
+  x = s("398140"),
   D = s("564344"),
   L = s("977156"),
   P = s("652380"),
@@ -44,8 +44,8 @@ var n = s("990547"),
   y = s("626135"),
   V = s("49012"),
   H = s("358085"),
-  k = s("392735"),
-  Y = s("61160"),
+  Y = s("392735"),
+  k = s("61160"),
   w = s("604227"),
   W = s("38915"),
   K = s("498639"),
@@ -74,8 +74,8 @@ var n = s("990547"),
   e_ = s("593648"),
   eI = s("327885"),
   eN = s("595242"),
-  ef = s("301121"),
-  eg = s("207874"),
+  eg = s("301121"),
+  ef = s("207874"),
   em = s("463153"),
   eC = s("36192"),
   eA = s("338345"),
@@ -83,8 +83,8 @@ var n = s("990547"),
   eO = s("554042"),
   ep = s("200645"),
   eR = s("287490"),
-  ex = s("168308"),
-  eM = s("277329"),
+  eM = s("168308"),
+  ex = s("277329"),
   eD = s("674116"),
   eL = s("726985"),
   eP = s("981631"),
@@ -111,14 +111,14 @@ let ej = () => {
       isClipsBetaTagShowing: ey = !1,
       shouldMergeGameSettings: eV,
       isUserSettingsSearchEnabled: eH,
-      isKeywordFilteringEnabled: ek,
-      isStaff: eY,
+      isKeywordFilteringEnabled: eY,
+      isStaff: ek,
       isInappropriateConversationWarningEnabled: ew
     } = e;
     return Object.freeze({
       [eL.WebSetting.SEARCH_BAR]: {
         section: S.SectionTypes.CUSTOM,
-        element: eg.default,
+        element: ef.default,
         predicate: () => eH
       },
       [eL.WebSetting.SEARCH_NO_RESULTS]: {
@@ -223,8 +223,28 @@ let ej = () => {
         searchableTitle: ev.default.Messages.GAMES,
         label: ev.default.Messages.GAMES,
         ariaLabel: ev.default.Messages.GAMES,
-        element: eM.default,
+        element: ex.default,
         predicate: () => eV
+      },
+      [eL.WebSetting.GAMES_MY_GAMES]: {
+        section: eP.UserSettingsSections.GAMES,
+        searchableTitle: ev.default.Messages.MY_GAMES,
+        parent: eL.WebSetting.GAMES
+      },
+      [eL.WebSetting.GAMES_CLIPS]: {
+        section: eP.UserSettingsSections.GAMES,
+        searchableTitle: ev.default.Messages.CLIPS,
+        parent: eL.WebSetting.GAMES
+      },
+      [eL.WebSetting.GAMES_OVERLAY]: {
+        section: eP.UserSettingsSections.GAMES,
+        searchableTitle: ev.default.Messages.OVERLAY,
+        parent: eL.WebSetting.GAMES
+      },
+      [eL.WebSetting.GAMES_ACTIVITY_PRIVACY]: {
+        section: eP.UserSettingsSections.GAMES,
+        searchableTitle: ev.default.Messages.ACTIVITY_PRIVACY,
+        parent: eL.WebSetting.GAMES
       },
       [eL.WebSetting.PROFILE_CUSTOMIZATION]: {
         section: eP.UserSettingsSections.PROFILE_CUSTOMIZATION,
@@ -238,7 +258,7 @@ let ej = () => {
         }),
         notice: {
           stores: [j.default, A.default],
-          element: M.default
+          element: x.default
         },
         onSettingsClose: () => {
           o.default.wait(() => {
@@ -260,7 +280,7 @@ let ej = () => {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         label: ev.default.Messages.PRIVACY_AND_SAFETY,
         ariaLabel: ev.default.Messages.PRIVACY_AND_SAFETY,
-        element: ef.default
+        element: eg.default
       },
       [eL.WebSetting.PRIVACY_USER_SETTINGS]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
@@ -291,31 +311,31 @@ let ej = () => {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
-        predicate: () => eY
+        predicate: () => ek
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_DESCRIPTION,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
-        predicate: () => ek
+        predicate: () => eY
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_PROFANITY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
-        predicate: () => ek
+        predicate: () => eY
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
-        predicate: () => ek
+        predicate: () => eY
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: ev.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
-        predicate: () => ek
+        predicate: () => eY
       },
       [eL.WebSetting.PRIVACY_TERMS_POLICY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
@@ -342,7 +362,7 @@ let ej = () => {
         badgeCount: eF,
         newIndicator: (0, a.jsx)(B.TextBadge, {
           text: ev.default.Messages.NEW,
-          color: g.default.BG_BRAND
+          color: f.default.BG_BRAND
         }),
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.FAMILY_CENTER_NEW_BADGE]
       },
@@ -359,7 +379,7 @@ let ej = () => {
         ariaLabel: ev.default.Messages.AUTH_SESSIONS,
         element: eC.default,
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.AUTH_SESSIONS_NEW],
-        predicate: () => k.default.getCurrentConfig({
+        predicate: () => Y.default.getCurrentConfig({
           location: "9f7d84_1"
         }, {
           autoTrackExposure: !1
@@ -417,7 +437,7 @@ let ej = () => {
         ariaLabel: ev.default.Messages.SUBSCRIPTIONS_TITLE,
         searchableTitle: ev.default.Messages.SUBSCRIPTIONS_TITLE,
         label: ev.default.Messages.SUBSCRIPTIONS_TITLE,
-        element: x.default,
+        element: M.default,
         icon: p ? (0, a.jsx)(F.default, {
           width: 16,
           height: 16,
@@ -879,7 +899,7 @@ let ej = () => {
         searchableTitle: "Speed Test",
         label: "Speed Test",
         element: q.default,
-        predicate: () => b.default.isSupported() && Y.default.getCurrentConfig({
+        predicate: () => b.default.isSupported() && k.default.getCurrentConfig({
           location: "9f7d84_2"
         }).showSettings
       },
@@ -939,7 +959,7 @@ let ej = () => {
         searchableTitle: ev.default.Messages.REGISTERED_GAMES,
         label: ev.default.Messages.REGISTERED_GAMES,
         element: eu.default,
-        predicate: () => !eV && (0, ex.shouldShowRegisteredGamesSettings)()
+        predicate: () => !eV && (0, eM.shouldShowRegisteredGamesSettings)()
       },
       [eL.WebSetting.OVERLAY]: {
         section: eP.UserSettingsSections.OVERLAY,
@@ -1163,7 +1183,7 @@ let ej = () => {
         section: eP.UserSettingsSections.PROFILE_EFFECTS_PREVIEW_TOOL,
         searchableTitle: "Profile Effects Preview Tool",
         label: "Profile Effects Preview Tool",
-        element: f.default,
+        element: g.default,
         predicate: () => v.default.isDeveloper
       },
       [eL.WebSetting.QUEST_PREVIEW_TOOL]: {
