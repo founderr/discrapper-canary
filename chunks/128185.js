@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   CollectiblesShopHeaderCarousel: function() {
-    return S
+    return h
   }
 }), s("47120");
 var a = s("735250"),
@@ -13,119 +13,127 @@ var a = s("735250"),
   u = s("906732"),
   c = s("44315"),
   d = s("810090"),
-  f = s("328347"),
-  C = s("530915"),
-  E = s("948625"),
-  p = s("981631"),
-  m = s("139557");
+  f = s("626135"),
+  C = s("328347"),
+  E = s("530915"),
+  p = s("948625"),
+  m = s("981631"),
+  g = s("139557");
 
-function g(e) {
-  var t, s, n;
+function S(e) {
+  var t, s;
   let {
-    config: i,
-    handleScrollToCategory: o,
+    config: n,
+    index: i,
+    handleCTAClick: o,
     text: u,
     reducedMotion: f = !1
-  } = e, C = l.useMemo(() => (0, E.getOverflowImages)(i, f), [i, f]), g = l.useCallback(() => {
-    var e;
-    (null === (e = i.cta) || void 0 === e ? void 0 : e.categorySkuId) != null && o(i.cta.categorySkuId)
-  }, [null === (t = i.cta) || void 0 === t ? void 0 : t.categorySkuId, o]);
+  } = e, C = l.useMemo(() => (0, p.getOverflowImages)(n, f), [n, f]);
   return (0, a.jsxs)("div", {
-    className: m.headerContainer,
+    className: g.headerContainer,
     children: [(0, a.jsxs)("div", {
-      className: m.headerInnerContainer,
-      children: [null == i.backgroundVideoSrc || f ? (0, a.jsx)("img", {
-        src: i.backgroundStaticSrc,
+      className: g.headerInnerContainer,
+      children: [null == n.backgroundVideoSrc || f ? (0, a.jsx)("img", {
+        src: n.backgroundStaticSrc,
         alt: "",
-        className: m.headerAsset
+        className: g.headerAsset
       }) : (0, a.jsx)(d.default, {
         autoPlay: !0,
         muted: !0,
         loop: !0,
         playsInline: !0,
         responsive: !0,
-        className: m.headerAsset,
+        className: g.headerAsset,
         children: (0, a.jsx)("source", {
-          src: i.backgroundVideoSrc,
+          src: n.backgroundVideoSrc,
           type: "video/mp4"
         })
       }), (0, a.jsxs)("div", {
-        className: m.headerContent,
+        className: g.headerContent,
         style: {
-          color: null !== (s = i.textColor) && void 0 !== s ? s : (0, c.getColor)(p.Color.WHITE_100)
+          color: null !== (t = n.textColor) && void 0 !== t ? t : (0, c.getColor)(m.Color.WHITE_100)
         },
         children: [(0, a.jsx)("div", {
-          className: m.badgeContainer,
+          className: g.badgeContainer,
           style: {
-            visibility: null != i.badge ? "visible" : "hidden"
+            visibility: null != n.badge ? "visible" : "hidden"
           },
-          children: null != i.badge && (0, a.jsx)(r.Text, {
+          children: null != n.badge && (0, a.jsx)(r.Text, {
             variant: "text-xs/bold",
-            className: m.badge,
-            children: i.badge.label()
+            className: g.badge,
+            children: n.badge.label()
           })
         }), (0, a.jsxs)("div", {
-          className: m.logoAndDescriptionContainer,
-          children: [null != i.logoSrc && (0, a.jsx)("img", {
-            src: i.logoSrc,
+          className: g.logoAndDescriptionContainer,
+          children: [null != n.logoSrc && (0, a.jsx)("img", {
+            src: n.logoSrc,
             alt: "",
-            className: m.logo
-          }), (null != i.description || null != u) && (0, a.jsx)(r.Text, {
+            className: g.logo
+          }), (null != n.description || null != u) && (0, a.jsx)(r.Text, {
             variant: "text-md/medium",
             color: "currentColor",
-            children: null !== (n = i.description) && void 0 !== n ? n : u
+            children: null !== (s = n.description) && void 0 !== s ? s : u
           })]
         }), (0, a.jsx)("div", {
-          children: null != i.cta && (0, a.jsx)(r.Button, {
-            onClick: g,
-            children: i.cta.label()
+          children: null != n.cta && (0, a.jsx)(r.Button, {
+            onClick: () => o(n, i),
+            children: n.cta.label()
           })
         })]
       })]
     }), C.map((e, t) => (0, a.jsx)("img", {
       src: e,
-      className: m.overflowImage,
+      className: g.overflowImage,
       alt: ""
     }, t))]
   })
 }
 
-function S(e) {
+function h(e) {
   let {
     categories: t,
     handleScrollToCategory: s
   } = e, {
     analyticsLocations: r
-  } = (0, n.useStateFromStoresObject)([f.default], () => f.default.getAnalytics()), {
+  } = (0, n.useStateFromStoresObject)([C.default], () => C.default.getAnalytics()), {
     analyticsLocations: c
-  } = (0, u.default)([...r, o.default.COLLECTIBLES_SHOP_HEADER_CAROUSEL]), d = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion), p = l.useMemo(() => {
+  } = (0, u.default)([...r, o.default.COLLECTIBLES_SHOP_HEADER_CAROUSEL]), d = l.useCallback((e, t) => {
+    let a = e.cta;
+    f.default.track(m.AnalyticEvents.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
+      location_stack: c,
+      slide_id: e.id,
+      slide_index: t,
+      sku_id: null == a ? void 0 : a.categorySkuId
+    }), (null == a ? void 0 : a.categorySkuId) != null && s(a.categorySkuId)
+  }, [c, s]), h = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion), I = l.useMemo(() => {
     let e = {};
     for (let s of t) e[s.skuId] = s.summary;
     return e
-  }, [t]), S = l.useCallback(e => {
-    var t;
-    let l = null === (t = e.cta) || void 0 === t ? void 0 : t.categorySkuId,
-      n = null != l ? p[l] : void 0;
-    return (0, a.jsx)(g, {
+  }, [t]), _ = l.useCallback((e, t) => {
+    var s;
+    let l = null === (s = e.cta) || void 0 === s ? void 0 : s.categorySkuId,
+      n = null != l ? I[l] : void 0;
+    return (0, a.jsx)(S, {
       config: e,
       text: n,
-      handleScrollToCategory: s,
-      reducedMotion: d
+      handleCTAClick: d,
+      reducedMotion: h,
+      index: t
     })
-  }, [p, s, d]), h = l.useCallback(e => {
+  }, [I, d, h]), T = l.useCallback(e => {
     var t;
-    return null === (t = E.COLLECTIBLES_HEADERS[e]) || void 0 === t ? void 0 : t.id
+    return null === (t = p.COLLECTIBLES_HEADERS[e]) || void 0 === t ? void 0 : t.id
   }, []);
   return (0, a.jsx)("div", {
-    className: m.carouselContainer,
-    children: (0, a.jsx)(C.SlideCarousel, {
+    className: g.carouselContainer,
+    children: (0, a.jsx)(E.SlideCarousel, {
       carouselId: "collectibles_shop_header_carousel",
-      className: m.carousel,
-      items: E.COLLECTIBLES_HEADERS,
-      renderItem: S,
-      getItemId: h,
-      controlsClassName: m.paginationControls,
-      paginationButtonClassName: m.paginationButton,
+      className: g.carousel,
+      items: p.COLLECTIBLES_HEADERS,
+      renderItem: _,
+      getItemId: T,
+      controlsClassName: g.paginationControls,
+      paginationButtonClassName: g.paginationButton,
       delay: 6e3,
       analyticsLocations: c,
       unidirectional: !0
