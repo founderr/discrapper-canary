@@ -275,11 +275,11 @@ class y extends l.PureComponent {
 function L(e) {
   let {
     searchId: t
-  } = e;
+  } = e, n = (0, u.useStateFromStoresObject)([E.default], () => E.default.getResultsState(t), [t]);
   return (0, a.jsx)(y, {
     searchId: t,
+    search: n,
     ...(0, u.useStateFromStoresObject)([E.default], () => ({
-      search: E.default.getResultsState(t),
       searchAnalyticsId: E.default.getAnalyticsId(t),
       searchType: E.default.getSearchType()
     }), [t]),
