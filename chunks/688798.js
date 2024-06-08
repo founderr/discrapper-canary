@@ -34,25 +34,27 @@ async function R(e) {
   let t = I.LastReceivedChangelogId.getSetting(),
     n = f.default.extractTimestamp(e);
   if (t >= e || r()().diff(n, "days") > 30) return;
-  let i = await o.default.getOrEnsurePrivateChannel(N.SYSTEM_UPDATES_USER_ID);
-  if (null == i) return;
+  let i = await (0, c.fetchEmailSettings)();
+  if (!(null == i ? void 0 : i.categories[O.EmailCategories.UPDATES_AND_ANNOUNCEMENTS])) return;
+  let s = await o.default.getOrEnsurePrivateChannel(N.SYSTEM_UPDATES_USER_ID);
+  if (null == s) return;
   await l.default.fetchMessages({
-    channelId: i,
+    channelId: s,
     limit: 1
   });
-  let s = T.default.getLastMessage(i);
-  if (null == s) return;
-  let a = (0, _.default)({
-    ...s,
-    channelId: i,
+  let a = T.default.getLastMessage(s);
+  if (null == a) return;
+  let u = (0, _.default)({
+    ...a,
+    channelId: s,
     messageReference: void 0,
     poll: void 0,
-    changelogId: s.changelogId
+    changelogId: a.changelogId
   });
-  l.default.receiveMessage(i, {
-    ...a,
+  l.default.receiveMessage(s, {
+    ...u,
     state: p.MessageStates.SENT,
-    channel_id: i
+    channel_id: s
   }, !0, {})
 }
 class g extends d.default {
@@ -79,21 +81,20 @@ class g extends d.default {
           config: n.body,
           latestChangelogId: r
         }), null == r) return;
-      let o = await (0, c.fetchEmailSettings)();
-      if (t && (null == o ? void 0 : o.categories[O.EmailCategories.UPDATES_AND_ANNOUNCEMENTS])) {
+      if (t) {
         (0, u.getUser)(N.SYSTEM_UPDATES_USER_ID), R(r);
         return
       }
       if (!0 !== i[r].show_on_startup) return;
-      let l = h.default.lastSeenChangelogId(),
-        d = h.default.lastSeenChangelogDate();
-      if (null != l && 0 >= f.default.compare(r, l)) return;
-      let _ = await a.default.fetchChangelog(r, E.default.locale);
-      if (null != _) {
-        if (null == d || null == h.default.lastSeenChangelogDate()) {
-          a.default.markChangelogAsSeen(r, _.date);
+      let o = h.default.lastSeenChangelogId(),
+        l = h.default.lastSeenChangelogDate();
+      if (null != o && 0 >= f.default.compare(r, o)) return;
+      let d = await a.default.fetchChangelog(r, E.default.locale);
+      if (null != d) {
+        if (null == l || null == h.default.lastSeenChangelogDate()) {
+          a.default.markChangelogAsSeen(r, d.date);
           return
-        }!h.default.isLocked() && new Date(_.date) > new Date(d) && (0, m.openChangelog)()
+        }!h.default.isLocked() && new Date(d.date) > new Date(l) && (0, m.openChangelog)()
       }
     })
   }
