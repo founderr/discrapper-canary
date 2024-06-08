@@ -27,7 +27,7 @@ let T = {
   friction: 30,
   clamp: !0,
   easing: E.default.Easing.bezier(.15, 0, .25, 1),
-  duration: 1600
+  duration: 1e3
 };
 (l = a || (a = {})).GO_TO_SLIDE = "GO_TO_SLIDE", l.NEXT = "NEXT", l.PREVIOUS = "PREVIOUS";
 let x = e => {
@@ -102,7 +102,7 @@ let x = e => {
       trackPagination: v
     } = (0, h.useSlideCarouselAnalytics)(t, b), [A, P] = (0, r.useState)(0), [O, j] = (0, r.useState)(!1), [y, M] = (0, r.useState)(!1), k = i().useCallback(() => M(!0), []), B = i().useCallback(() => M(!1), []), D = (0, p.useStateFromStores)([g.default], () => g.default.isFocused()), F = null != I && !L && !y && D, U = i().useCallback(e => (s.length + A + e) % s.length, [s, A]), H = i().useCallback(d()((e, t, a) => {
       null != a && (null == o || o(s[e], t, e, a), v(e, A, l(e), l(t))), j("GO_TO_SLIDE" === a), null == c || c(s[e], t, e), P(e)
-    }, 500), [s, o, c]);
+    }, 200), [s, o, c]);
     return (0, r.useEffect)(() => {
       R(A, l(A))
     }, [R, A, l]), (0, r.useEffect)(() => {
