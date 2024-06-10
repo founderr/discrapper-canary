@@ -158,7 +158,7 @@ function k(e) {
   } = e, _ = (0, s.useStateFromStores)([v.default], () => null != v.default.getGuild(l.id), [l.id]), {
     startTime: y,
     endTime: M
-  } = (0, x.default)(t.id, h), k = (0, N.default)(t.guild_id, t.id, h), P = i.useCallback(e => {
+  } = (0, x.default)(t, h), k = (0, N.default)(t.guild_id, t.id, h), P = i.useCallback(e => {
     e.stopPropagation(), null != t && (0, d.transitionToGuildFromEventInvite)(t)
   }, [t]), U = (0, S.default)(h, t.id), V = (0, I.default)(t);
   i.useEffect(() => {

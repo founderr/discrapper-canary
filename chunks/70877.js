@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return O
   }
 });
 var l = n("735250");
@@ -20,64 +20,65 @@ var u = n("360963"),
   T = n("924301"),
   S = n("79874"),
   N = n("236373"),
-  g = n("854698"),
-  I = n("765305"),
+  I = n("854698"),
+  g = n("765305"),
   v = n("981631"),
   m = n("689938");
 let M = "YYYYMMDDTHHmmss",
   D = "YYYY-MM-DDTHH:mm:ss",
-  O = /RRULE:.*/;
+  h = /RRULE:.*/;
 
-function h(e, t, n, u) {
-  var d, h, p;
+function O(e, t, n, u) {
+  var d, O, p;
   let R;
   let A = (0, r.useStateFromStores)([T.default], () => T.default.isActive(e)),
-    {
-      startTime: C,
-      endTime: L
-    } = (0, S.default)(null != e ? e : "", u),
-    G = (0, r.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
-    P = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
-  if (A || null == G) return null;
-  R = G.entity_type === I.GuildScheduledEventEntityTypes.EXTERNAL ? G.entity_metadata.location : null != n && null != P ? m.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
+    C = (0, S.useEventScheduleById)(null != e ? e : "", u),
+    L = (0, r.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
+    G = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
+  if (A || null == C || null == L) return null;
+  R = L.entity_type === g.GuildScheduledEventEntityTypes.EXTERNAL ? L.entity_metadata.location : null != n && null != G ? m.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
     channelName: n.name,
-    guildName: P.name
+    guildName: G.name
   }) : m.default.Messages.NOTIFICATION_TITLE_DISCORD;
-  let y = s()(G.scheduled_start_time),
-    U = null != G.scheduled_end_time ? s()(G.scheduled_end_time) : y,
-    V = null != G.description && "" !== G.description ? c.default.unparse(G.description, null !== (d = null == n ? void 0 : n.id) && void 0 !== d ? d : v.EMPTY_STRING_SNOWFLAKE_ID, !0) : "",
-    x = (0, N.recurrenceRuleFromServer)(G.recurrence_rule),
-    b = null != x ? (0, g.getRRule)(x) : null,
-    w = null !== (h = s()(C)) && void 0 !== h ? h : y,
-    F = null !== (p = s()(null != L ? L : C)) && void 0 !== p ? p : y,
-    j = () => {
+  let y = s()(L.scheduled_start_time),
+    P = null != L.scheduled_end_time ? s()(L.scheduled_end_time) : y,
+    U = null != L.description && "" !== L.description ? c.default.unparse(L.description, null !== (d = null == n ? void 0 : n.id) && void 0 !== d ? d : v.EMPTY_STRING_SNOWFLAKE_ID, !0) : "",
+    V = (0, N.recurrenceRuleFromServer)(L.recurrence_rule),
+    x = null != V ? (0, I.getRRule)(V) : null,
+    {
+      startTime: b,
+      endTime: w
+    } = C,
+    F = null !== (O = s()(b)) && void 0 !== O ? O : y,
+    j = null !== (p = s()(null != w ? w : b)) && void 0 !== p ? p : y,
+    H = () => {
       let e = a()();
       e.createEvent({
         start: y,
-        end: U,
-        summary: G.name,
-        description: V,
+        end: P,
+        summary: L.name,
+        description: U,
         location: R,
-        repeating: b
+        repeating: x
       }), _.isPlatformEmbedded ? E.default.fileManager.saveWithDialog(e.toString(), "discord-event.ics") : window.open(e.toURL(), "_blank")
     };
   return (0, l.jsxs)(o.MenuItem, {
     id: m.default.Messages.ADD_TO_CALENDAR,
     label: m.default.Messages.ADD_TO_CALENDAR,
-    action: j,
+    action: H,
     children: [(0, l.jsx)(o.MenuItem, {
       id: m.default.Messages.ADD_TO_GOOGLE_CALENDAR,
       label: m.default.Messages.ADD_TO_GOOGLE_CALENDAR,
       action: () => {
         var e;
-        let t = null == b ? void 0 : b.toString(),
+        let t = null == x ? void 0 : x.toString(),
           n = {
-            text: G.name,
-            dates: "".concat(y.format(M), "/").concat(U.format(M)),
-            details: V,
+            text: L.name,
+            dates: "".concat(y.format(M), "/").concat(P.format(M)),
+            details: U,
             action: "TEMPLATE",
             location: R,
-            recur: null != t ? null === (e = O.exec(t)) || void 0 === e ? void 0 : e[0] : void 0
+            recur: null != t ? null === (e = h.exec(t)) || void 0 === e ? void 0 : e[0] : void 0
           },
           l = "https://calendar.google.com/calendar/render?".concat((0, i.stringify)(n));
         window.open(l, "_blank")
@@ -85,17 +86,17 @@ function h(e, t, n, u) {
     }), (0, l.jsx)(o.MenuItem, {
       id: m.default.Messages.DOWNLOAD_ICS,
       label: m.default.Messages.DOWNLOAD_ICS,
-      action: j
+      action: H
     }), (0, l.jsx)(o.MenuItem, {
       id: m.default.Messages.ADD_TO_YAHOO,
       label: m.default.Messages.ADD_TO_YAHOO,
       action: () => {
         let e = {
             v: 60,
-            title: G.name,
-            st: w.format(M),
-            et: F.format(M),
-            desc: V,
+            title: L.name,
+            st: F.format(M),
+            et: j.format(M),
+            desc: U,
             in_loc: R
           },
           t = "https://calendar.yahoo.com/?".concat((0, i.stringify)(e));
@@ -108,10 +109,10 @@ function h(e, t, n, u) {
         let e = {
             path: "/calendar/action/compose",
             rru: "addevent",
-            startdt: w.format(D),
-            enddt: F.format(D),
-            subject: G.name,
-            body: V,
+            startdt: F.format(D),
+            enddt: j.format(D),
+            subject: L.name,
+            body: U,
             location: R,
             allday: !1
           },

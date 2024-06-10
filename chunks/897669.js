@@ -19,7 +19,7 @@ function f(e) {
   let {
     guildEvent: t,
     recurrenceId: n
-  } = e, f = (0, r.default)(t.id, n), h = (0, i.default)(n, t.id);
+  } = e, f = (0, r.default)(t, n), h = (0, i.default)(n, t.id);
   if (null == t) return null;
   let m = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, o.getRecurrenceStatus)(h, f.startTime, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
   return (0, a.jsxs)(a.Fragment, {

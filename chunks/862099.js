@@ -188,7 +188,7 @@ function J(e) {
   } = e, s = (0, H.getLocationFromEvent)(n), r = null != s ? (0, w.guildEventDetailsParser)(s, !0) : null, u = (0, H.getChannelFromEvent)(n), f = (0, c.getChannelIconComponent)(u), {
     startTime: E,
     endTime: h
-  } = (0, B.default)(n.id), {
+  } = (0, B.default)(n), {
     startDateTimeString: C,
     upcomingEvent: _,
     diffMinutes: m

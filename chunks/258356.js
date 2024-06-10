@@ -35,7 +35,7 @@ function E(e) {
       headerVariant: "heading-md/medium",
       descriptionClassName: f.__invalid_channelDescription,
       guildId: n.guild_id,
-      guildEventId: n.id,
+      guildEvent: n,
       eventPreview: n
     }), null != r && (0, s.jsx)("div", {
       className: f.channelInfo,

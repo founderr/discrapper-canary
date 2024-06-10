@@ -36,11 +36,11 @@ function T(e) {
     privacy_level: I
   } = i, A = (0, r.useStateFromStores)([v.default], () => v.default.getChannel(i.channel_id), [i]), j = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(_), [_]), {
     canManageGuildEvent: k
-  } = (0, u.useManageResourcePermissions)(null != A ? A : j), G = k(i), L = (0, r.useStateFromStores)([d.default], () => d.default.isLurking(_), [_]), R = i.entity_type === x.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [w, b] = a.useState(R), [M, {
+  } = (0, u.useManageResourcePermissions)(null != A ? A : j), L = k(i), G = (0, r.useStateFromStores)([d.default], () => d.default.isLurking(_), [_]), R = i.entity_type === x.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [w, b] = a.useState(R), [M, {
     loading: P,
     error: O
   }] = (0, m.default)();
-  if (!G) return null;
+  if (!L) return null;
   let V = I === x.GuildScheduledEventPrivacyLevel.PUBLIC ? N.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : N.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
     U = () => {
       null == T || T(), p(), (0, o.setIsOnStartStageScreen)(!1)
@@ -64,11 +64,11 @@ function T(e) {
           description: null !== (n = i.description) && void 0 !== n ? n : void 0,
           imageSource: (0, C.default)(i),
           isActive: !1,
-          isUserLurking: L,
+          isUserLurking: G,
           speakers: [],
           speakerCount: 0,
           rsvped: !0,
-          guildEventId: i.id
+          guildEvent: i
         })
       }), (0, l.jsx)(c.Text, {
         color: "header-secondary",

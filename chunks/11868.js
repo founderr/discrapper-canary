@@ -204,7 +204,7 @@ let G = (e, l) => n => {
           descriptionClassName: k.eventDescription,
           guildId: n.guild_id,
           creator: h,
-          guildEventId: n.id,
+          guildEvent: n,
           eventPreview: n,
           recurrenceId: m
         }), (0, t.jsxs)("div", {

@@ -24,8 +24,8 @@ function c(e) {
     isRecurrenceItem: T
   } = e, {
     canManageGuildEvent: S
-  } = (0, d.useManageResourcePermissions)(null != f ? f : c), N = (0, u.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(t)), g = S(N), I = (0, o.default)(), v = (0, i.default)(_, null == N ? void 0 : N.id), m = (0, r.default)(t, _);
-  if (!g || null == N) return null;
+  } = (0, d.useManageResourcePermissions)(null != f ? f : c), N = (0, u.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(t)), I = S(N), g = (0, o.default)(), v = (0, i.default)(_, null == N ? void 0 : N.id), m = (0, r.useEventScheduleById)(t, _);
+  if (!I || null == m || null == N) return null;
   let M = null != N.recurrence_rule && !T,
     D = e => {
       (null == _ || e) && !T ? (0, a.openModalLazy)(async () => {
@@ -37,7 +37,7 @@ function c(e) {
           guildScheduledEventId: t,
           guildId: c.id
         })
-      }, I) : null != _ && (0, a.openModalLazy)(async () => {
+      }, g) : null != _ && (0, a.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("27919")]).then(n.bind(n, "379038"));
@@ -46,7 +46,7 @@ function c(e) {
           guildEvent: N,
           recurrenceId: _
         })
-      }, I)
+      }, g)
     };
   return (0, l.jsx)(a.MenuItem, {
     id: E.default.Messages.EDIT_EVENT,

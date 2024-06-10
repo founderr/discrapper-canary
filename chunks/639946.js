@@ -39,7 +39,7 @@ function u(e) {
     children: [(0, s.jsx)(l.GuildEventStatus, {
       className: r.statusContainer,
       guildId: n.guild_id,
-      guildEventId: n.id,
+      guildEvent: n,
       eventPreview: n
     }), (0, s.jsx)(l.GuildEventDetails, {
       name: n.name,
