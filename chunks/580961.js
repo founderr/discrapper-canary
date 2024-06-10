@@ -6,5 +6,6 @@ e.exports = {
   launchIcon: "launchIcon__1a9a6",
   loading: "loading__41f89",
   premium: "premium__0b60b",
+  shopIcon: "shopIcon__9ac3e",
   textEmoji: "textEmoji_d5e341"
 }

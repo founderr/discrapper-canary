@@ -84,7 +84,8 @@ function I(e) {
           disabled: t.disabled,
           url: t.url,
           label: t.label,
-          emoji: e
+          emoji: e,
+          skuId: t.sku_id
         }
       }
       case i.ComponentType.STRING_SELECT:
