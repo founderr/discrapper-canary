@@ -41,8 +41,8 @@ var l = s("735250"),
   H = s("724994"),
   W = s("328456"),
   z = s("390698"),
-  G = s("141011"),
-  V = s("426171"),
+  V = s("141011"),
+  G = s("426171"),
   Y = s("224068"),
   K = s("813083"),
   X = s("823941"),
@@ -152,8 +152,8 @@ let er = e => {
       analyticsLocations: p
     }), D = (0, I.default)(), b = (0, u.isThemeDark)(D), M = (0, U.isPremiumCollectiblesProduct)(i), j = (0, U.extractPriceByPurchaseTypes)(i, es.PriceSetAssignmentPurchaseTypes.DEFAULT), B = (null == j ? void 0 : j.amount) === 0, {
       firstAvatarDecoration: R,
-      firstProfileEffect: G
-    } = (0, W.useShopProductItems)(i), V = a.useMemo(() => (0, U.getProductDiscount)(i, v), [i, v]), X = a.useCallback(() => {
+      firstProfileEffect: V
+    } = (0, W.useShopProductItems)(i), G = a.useMemo(() => (0, U.getProductDiscount)(i, v), [i, v]), X = a.useCallback(() => {
       if (f(), (0, m.popLayer)(), N(), null != R) {
         (0, h.openAvatarDecorationModal)({
           initialSelectedDecoration: R,
@@ -161,11 +161,11 @@ let er = e => {
         });
         return
       }
-      null != G && (0, O.openProfileEffectModal)({
-        initialSelectedEffectId: G.id,
+      null != V && (0, O.openProfileEffectModal)({
+        initialSelectedEffectId: V.id,
         analyticsLocations: p
       })
-    }, [p, R, G, f, N]);
+    }, [p, R, V, f, N]);
     a.useEffect(() => {
       if (null != R) return (0, C.setPendingAvatarDecoration)(R), () => (0, C.setPendingAvatarDecoration)(void 0)
     }, [R]);
@@ -224,7 +224,7 @@ let er = e => {
             children: ei.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
           }) : (0, l.jsx)(q.default, {
             product: i,
-            discount: V,
+            discount: G,
             isPremiumUser: v,
             className: v ? en.priceTag : en.priceTagContainer,
             nitroUpsell: !v
@@ -305,7 +305,6 @@ let er = e => {
         hideFakeActivity: r || u,
         hideBioSection: r && !E,
         hideMemberStatusSection: r,
-        hideRecentGames: !0,
         useLargeBanner: !0
       }), r && (0, l.jsx)(eC, {
         user: s
@@ -369,7 +368,7 @@ t.default = e => {
   } = e, I = (0, d.useStateFromStores)([M.default], () => M.default.getCurrentUser()), {
     analyticsLocations: h
   } = (0, L.default)([...E, f.default.COLLECTIBLES_SHOP_DETAILS_MODAL]);
-  (0, V.useProductDetailsLinkableRoute)(r);
+  (0, G.useProductDetailsLinkableRoute)(r);
   let [T] = r.items;
   return (a.useEffect(() => {
     let e = (null == T ? void 0 : T.type) === o.CollectiblesItemType.AVATAR_DECORATION ? "avatar decoration" : "profile effect";
@@ -397,7 +396,7 @@ t.default = e => {
           onClose: n
         }), (0, l.jsxs)("div", {
           className: r.type === o.CollectiblesItemType.AVATAR_DECORATION ? en.collectiblePreviewsContainerWithChat : en.collectiblePreviewsContainerNoChat,
-          children: [(0, l.jsx)(G.default, {
+          children: [(0, l.jsx)(V.default, {
             asset: null !== (s = u.pdpBg) && void 0 !== s ? s : r.banner,
             addGradient: null === (t = et.categoryBannerOverrides[u.skuId]) || void 0 === t ? void 0 : t.addGradient,
             size: (0, Q.getAssetSizeByHeight)(540),

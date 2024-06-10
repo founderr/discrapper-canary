@@ -1,95 +1,75 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return x
   }
 });
-var s = l("735250"),
-  i = l("470079"),
-  a = l("120356"),
-  n = l.n(a),
-  o = l("442837"),
-  r = l("481060"),
-  u = l("666520"),
-  d = l("761174"),
-  c = l("32966"),
-  f = l("706454"),
-  S = l("430824"),
-  E = l("785717"),
-  I = l("648067"),
-  m = l("588822"),
-  _ = l("900927"),
-  v = l("678738"),
-  p = l("652853"),
-  T = l("335191"),
-  g = l("347949"),
-  x = l("351707"),
-  A = l("228168"),
-  U = l("689938"),
-  N = l("363175");
+var s = l("735250");
+l("470079");
+var i = l("120356"),
+  a = l.n(i),
+  n = l("442837"),
+  o = l("481060"),
+  r = l("666520"),
+  u = l("706454"),
+  d = l("430824"),
+  c = l("785717"),
+  f = l("648067"),
+  S = l("588822"),
+  E = l("900927"),
+  I = l("678738"),
+  m = l("652853"),
+  _ = l("335191"),
+  v = l("351707"),
+  p = l("228168"),
+  T = l("689938"),
+  g = l("363175");
 
-function C(e) {
+function x(e) {
   let {
     user: t,
     currentUser: l,
-    displayProfile: a,
-    autoFocusNote: C,
-    className: R
+    displayProfile: i,
+    autoFocusNote: x,
+    className: A
   } = e, {
-    theme: h
-  } = (0, p.useUserProfileThemeContext)(), {
-    trackUserProfileAction: P
-  } = (0, E.useUserProfileAnalyticsContext)(), M = null == a ? void 0 : a.guildId, y = (0, o.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
-    recentGames: j,
-    isFetching: F,
-    currentUserApplicationIds: L
-  } = (0, c.useUserRecentGames)(t.id), O = i.useMemo(() => {
-    var e;
-    return null !== (e = null == j ? void 0 : j.slice(0, 6)) && void 0 !== e ? e : []
-  }, [j]), D = (0, d.useIsUserRecentGamesEnabled)({
-    location: "SimplifiedUserProfileModalInfo",
-    userId: t.id
-  }), b = (0, o.useStateFromStores)([f.default], () => f.default.locale), B = (0, I.default)(t.id);
-  return (0, s.jsxs)(r.ScrollerThin, {
+    theme: N
+  } = (0, m.useUserProfileThemeContext)(), {
+    trackUserProfileAction: C
+  } = (0, c.useUserProfileAnalyticsContext)(), U = null == i ? void 0 : i.guildId, R = (0, n.useStateFromStores)([d.default], () => null != U ? d.default.getGuild(U) : null), h = (0, n.useStateFromStores)([u.default], () => u.default.locale), P = (0, f.default)(t.id);
+  return (0, s.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: n()(N.scroller, R),
-    children: [(null == a ? void 0 : a.bio) != null && (null == a ? void 0 : a.bio) !== "" && (0, s.jsx)(m.default, {
-      userBio: a.bio,
+    className: a()(g.scroller, A),
+    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, s.jsx)(S.default, {
+      userBio: i.bio,
       setLineClamp: !1
-    }), null != y && (0, s.jsx)(x.default, {
+    }), null != R && (0, s.jsx)(v.default, {
       user: t,
       currentUser: l,
-      guild: y
-    }), (0, s.jsx)(v.default, {
-      title: U.default.Messages.USER_PROFILE_MEMBER_SINCE,
-      children: (0, s.jsx)(_.default, {
+      guild: R
+    }), (0, s.jsx)(I.default, {
+      title: T.default.Messages.USER_PROFILE_MEMBER_SINCE,
+      children: (0, s.jsx)(E.default, {
         userId: t.id,
-        guildId: null == a ? void 0 : a.guildId,
-        tooltipDelay: A.USER_PROFILE_TOOLTIP_DELAY
+        guildId: null == i ? void 0 : i.guildId,
+        tooltipDelay: p.USER_PROFILE_TOOLTIP_DELAY
       })
-    }), D && !F && O.length > 0 && (0, s.jsx)(v.default, {
-      title: U.default.Messages.LAST_PLAYED_GAMES,
-      children: (0, s.jsx)(g.UserProfileRecentGames, {
+    }), P.length > 0 && (0, s.jsx)(I.default, {
+      title: T.default.Messages.CONNECTIONS,
+      children: (0, s.jsx)(_.ConnectedUserAccounts, {
+        connectedAccounts: P,
+        className: g.connections,
         userId: t.id,
-        recentGames: O,
-        currentUserApplicationIds: L
+        theme: N,
+        locale: h
       })
-    }), B.length > 0 && (0, s.jsx)(v.default, {
-      title: U.default.Messages.CONNECTIONS,
-      children: (0, s.jsx)(T.ConnectedUserAccounts, {
-        connectedAccounts: B,
-        className: N.connections,
+    }), (0, s.jsx)(I.default, {
+      title: T.default.Messages.NOTE,
+      children: (0, s.jsx)(r.default, {
         userId: t.id,
-        theme: h,
-        locale: b
-      })
-    }), (0, s.jsx)(v.default, {
-      title: U.default.Messages.NOTE,
-      children: (0, s.jsx)(u.default, {
-        userId: t.id,
-        className: N.note,
-        autoFocus: C,
-        onUpdate: () => P({
+        className: g.note,
+        autoFocus: x,
+        onUpdate: () => C({
           action: "SET_NOTE"
         })
       })

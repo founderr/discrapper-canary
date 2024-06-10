@@ -38,7 +38,7 @@ let A = e => {
       className: x.avatarDecoration
     })
   },
-  h = e => {
+  v = e => {
     var t;
     let {
       profileEffect: n
@@ -96,7 +96,6 @@ t.default = e => {
           canUsePremiumCustomization: !0,
           onAvatarChange: I.NOOP,
           onBannerChange: I.NOOP,
-          hideRecentGames: !0,
           disabledInputs: !0
         }),
         align: "center",
@@ -117,7 +116,7 @@ t.default = e => {
       }),
       children: [P.type === r.CollectiblesItemType.AVATAR_DECORATION && (0, a.jsx)(A, {
         avatarDecoration: P
-      }), P.type === r.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(h, {
+      }), P.type === r.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(v, {
         profileEffect: P
       }), (0, a.jsxs)("div", {
         className: x.previewTextContainer,
