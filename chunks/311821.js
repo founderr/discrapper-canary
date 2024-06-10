@@ -1,17 +1,31 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("689938"),
-  a = n("905194");
+a.r(t), a.d(t, {
+  PaymentModalAnchor: function() {
+    return o
+  }
+});
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  r = a("689938"),
+  l = a("905194");
+let o = e => {
+  let {
+    onClick: t,
+    children: a
+  } = e;
+  return (0, n.jsx)(s.Anchor, {
+    onClick: t,
+    className: l.link,
+    children: a
+  })
+};
 t.default = e => {
   let {
     onClick: t
   } = e;
-  return (0, i.jsx)(s.Anchor, {
+  return (0, n.jsx)(o, {
     onClick: t,
-    className: a.link,
-    children: l.default.Messages.BACK
+    children: r.default.Messages.BACK
   })
 }
