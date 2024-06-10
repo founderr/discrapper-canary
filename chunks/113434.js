@@ -192,17 +192,15 @@ function D(e) {
 function M(e, t) {
   let n = (0, S.useIsEligibleForQuestPlaytime)({
       location: t
-    }),
-    i = O.default.Messages.QUESTS_STREAM_TASK;
-  (0, f.hasVariant)(e, N.QuestVariants.IN_HOUSE_CONSOLE_QUEST) ? i = O.default.Messages.QUESTS_IN_HOUSE_TASK: n && (0, f.hasPlayOnDesktopTask)({
-    quest: e
-  }) && (i = O.default.Messages.QUESTS_PLAY_TASK);
-  let r = (0, f.getQuestTaskDetails)({
-    quest: e,
-    location: t
-  }).targetMinutes;
-  return i.format({
-    minutes: r,
+    }) && (0, f.hasPlayOnDesktopTask)({
+      quest: e
+    }) ? O.default.Messages.QUESTS_PLAY_TASK : O.default.Messages.QUESTS_STREAM_TASK,
+    i = (0, f.getQuestTaskDetails)({
+      quest: e,
+      location: t
+    }).targetMinutes;
+  return n.format({
+    minutes: i,
     gameTitle: e.config.messages.gameTitle
   })
 }
