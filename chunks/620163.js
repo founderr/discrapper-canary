@@ -932,7 +932,7 @@ let ej = () => {
         predicate: () => v.default.isDeveloper
       },
       [eL.WebSetting.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME]: {
-        section: eP.UserSettingsSections.DEVELOPER_OPTIONS,
+        section: eP.UserSettingsSections.ADVANCED,
         searchableTitle: ev.default.Messages.USER_SETTINGS_HOME_AUTO_NAV,
         parent: eL.WebSetting.SETTINGS_ADVANCED
       },
