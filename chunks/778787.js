@@ -42,10 +42,11 @@ class c extends l.default {
       }, t => (e.push(s.default.fromServer(t)), e)).with({
         type: r.CollectiblesItemType.PROFILE_EFFECT
       }, t => (e.push(u.default.fromServer(t)), e)).otherwise(() => e), []),
-      bundledProducts: null == E ? void 0 : E.map(a.default.fromServer)
+      bundledProducts: null == E ? void 0 : E.map(a.default.fromServer),
+      googleSkuIds: I.google_sku_ids
     })
   }
   constructor(e) {
-    super(e), _(this, "prices", void 0), _(this, "type", void 0), _(this, "premiumType", void 0), _(this, "items", void 0), _(this, "categorySkuId", void 0), _(this, "bundledProducts", void 0), this.summary = e.summary, this.type = e.type, this.premiumType = e.premiumType, this.items = e.items, this.categorySkuId = e.categorySkuId, this.prices = e.prices, this.bundledProducts = e.bundledProducts
+    super(e), _(this, "prices", void 0), _(this, "type", void 0), _(this, "premiumType", void 0), _(this, "items", void 0), _(this, "categorySkuId", void 0), _(this, "bundledProducts", void 0), _(this, "googleSkuIds", void 0), this.summary = e.summary, this.type = e.type, this.premiumType = e.premiumType, this.items = e.items, this.categorySkuId = e.categorySkuId, this.prices = e.prices, this.bundledProducts = e.bundledProducts, this.googleSkuIds = e.googleSkuIds
   }
 }
