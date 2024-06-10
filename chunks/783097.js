@@ -22,4 +22,4 @@ function o(e) {
   } = e;
   return a(n) && (0, i.hasFlag)(null !== (t = n.flags) && void 0 !== t ? t : 0, r.ApplicationFlags.EMBEDDED)
 }
-s.BuiltInSectionId.BUILT_IN
+n("689938"), s.BuiltInSectionId.BUILT_IN
