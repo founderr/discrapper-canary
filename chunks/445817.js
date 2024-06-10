@@ -28,14 +28,14 @@ function f(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, f = E.default.getCameraComponent(), [m, C] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), A = n.useRef(!1), h = n.useRef(m), O = (0, o.useAnalyticsContext)(), p = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, f = E.default.getCameraComponent(), [m, C] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), A = n.useRef(!1), O = n.useRef(m), h = (0, o.useAnalyticsContext)(), p = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
-    A.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(h.current))
+    A.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(O.current))
   }, []), (0, a.jsx)(S.default, {
     selectedBackgroundOption: m,
     onSelectBackgroundOption: e => {
-      A.current = !0, h.current = e, C(e), (0, c.applyBackgroundOptionLive)(e, {
-        location: O.location
+      A.current = !0, O.current = e, C(e), (0, c.applyBackgroundOptionLive)(e, {
+        location: h.location
       }).catch(_.NOOP)
     },
     renderCamera: e => t ? (0, a.jsx)("div", {

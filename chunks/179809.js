@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("771845"),
   h = n("880080"),
   m = n("624138"),
-  p = n("727258"),
-  C = n("199540"),
+  C = n("727258"),
+  p = n("199540"),
   g = n("40153"),
   E = n("252686"),
   S = n("682662"),
@@ -41,8 +41,8 @@ function x(e) {
     defaultFolderName: M,
     useCircleMask: y = !1,
     draggable: O = !1,
-    sorting: D = !1,
-    onDragStart: b,
+    sorting: b = !1,
+    onDragStart: D,
     onDragEnd: j,
     onExpandCollapse: P,
     onContextMenu: G,
@@ -54,14 +54,14 @@ function x(e) {
     children: V
   } = t, [H, k] = a.useState(!1), [Y, K] = a.useState(!1), W = H || Y;
   a.useEffect(() => {
-    D && k(!1)
-  }, [D]);
+    b && k(!1)
+  }, [b]);
   let [{
     dragging: z
   }, Z] = (0, r.useDrag)({
-    type: p.GuildsNodeType.FOLDER,
-    item: () => (null == b || b(), {
-      type: p.GuildsNodeType.FOLDER,
+    type: C.GuildsNodeType.FOLDER,
+    item: () => (null == D || D(), {
+      type: C.GuildsNodeType.FOLDER,
       nodeId: t.id
     }),
     end() {
@@ -96,7 +96,7 @@ function x(e) {
       className: T.pill
     }), (0, l.jsx)(_.default, {
       text: Q,
-      disabled: D,
+      disabled: b,
       selected: s,
       disableWrapper: !0,
       children: (0, l.jsx)("div", {
@@ -105,11 +105,11 @@ function x(e) {
           [T.wobble]: !z && Y && !d
         }),
         "data-dnd-name": Q,
-        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
+        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(p.default, {
           folderNode: t,
           expanded: d,
           forceCircular: y,
-          sorting: D,
+          sorting: b,
           mediaState: m,
           mentionCount: x,
           tooltipName: Q,

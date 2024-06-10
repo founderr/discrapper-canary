@@ -89,7 +89,7 @@ let em = () => (0, a.jsx)("div", {
     renderLoader: em
   }),
   eI = (0, d.makeLazy)({
-    createPromise: () => Promise.all([n.e("99387"), n.e("51373")]).then(n.bind(n, "231588")),
+    createPromise: () => Promise.all([n.e("99387"), n.e("60493")]).then(n.bind(n, "231588")),
     webpackId: "231588",
     name: "GuildHomePage",
     renderLoader: em

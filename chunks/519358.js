@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("22082"),
   h = n("703656"),
   m = n("306680"),
-  p = n("648414"),
-  C = n("26290"),
+  C = n("648414"),
+  p = n("26290"),
   g = n("709054"),
   E = n("540126"),
   S = n("434479"),
@@ -37,9 +37,9 @@ function L(e) {
     if (null == n) return !1;
     let l = g.default.extractTimestamp(n);
     return null != e && e > l
-  }), D = a.useCallback(() => {
+  }), b = a.useCallback(() => {
     (0, h.transitionTo)(_.Routes.CHANNEL(t.id, v ? I.StaticChannelRoute.CUSTOMIZE_COMMUNITY : I.StaticChannelRoute.CHANNEL_BROWSER))
-  }, [t.id, v]), b = a.useCallback(e => {
+  }, [t.id, v]), D = a.useCallback(e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -50,19 +50,19 @@ function L(e) {
       })
     })
   }, [t]), j = null;
-  return (!x || M || y) && !L && !O && (j = (0, l.jsx)(C.TextBadge, {
+  return (!x || M || y) && !L && !O && (j = (0, l.jsx)(p.TextBadge, {
     color: r.default.unsafe_rawColors.BRAND_260.css,
     text: T.default.Messages.NEW,
     className: A.newChannel
   })), (0, l.jsx)(S.BasicChannelRow, {
     id: "channels-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(p.default, {
+    renderIcon: e => (0, l.jsx)(C.default, {
       className: e
     }),
     text: v ? T.default.Messages.CHANNELS_AND_ROLES : T.default.Messages.CHANNEL_BROWSER_TITLE,
     selected: L,
-    onClick: D,
-    onContextMenu: b,
+    onClick: b,
+    onContextMenu: D,
     trailing: j
   })
 }

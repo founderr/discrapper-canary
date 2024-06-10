@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("792766"),
   h = n("451603"),
   m = n("885714"),
-  p = n("973616"),
-  C = n("594174"),
+  C = n("973616"),
+  p = n("594174"),
   g = n("285952"),
   E = n("672752"),
   S = n("153124"),
@@ -33,8 +33,8 @@ var l = n("735250"),
   M = n("379164"),
   y = n("590965"),
   O = n("981631"),
-  D = n("474936"),
-  b = n("689938"),
+  b = n("474936"),
+  D = n("689938"),
   j = n("379189"),
   P = n("611273");
 
@@ -45,7 +45,7 @@ function G() {
   } = (0, c.default)(d.default.PREMIUM_UPSELL_TOOLTIP);
   return a.useEffect(() => {
     L.default.track(O.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: D.PremiumUpsellTypes.GUILD_CAP_INLINE_INVITE_MODAL,
+      type: b.PremiumUpsellTypes.GUILD_CAP_INLINE_INVITE_MODAL,
       location: {
         page: O.AnalyticsPages.NATIVE_INVITE_MODAL
       },
@@ -70,10 +70,10 @@ function G() {
       color: E.GradientCssUrls.PREMIUM_TIER_2
     }), (0, l.jsx)("span", {
       className: j.experimentUpsellText,
-      children: b.default.Messages.GUILD_CAP_UPSELL_TOOLTIP
+      children: D.default.Messages.GUILD_CAP_UPSELL_TOOLTIP
     }), (0, l.jsx)("span", {
       className: j.experimentGetNitro,
-      children: b.default.Messages.GUILD_CAP_UPSELL_GET_NITRO
+      children: D.default.Messages.GUILD_CAP_UPSELL_GET_NITRO
     })]
   })
 }
@@ -117,15 +117,15 @@ function w(e) {
           id: n,
           variant: "heading-xl/semibold",
           color: "header-primary",
-          children: b.default.Messages.INVITE_MODAL_ERROR_INVALID_TITLE
+          children: D.default.Messages.INVITE_MODAL_ERROR_INVALID_TITLE
         }), (0, l.jsx)("div", {
           className: j.errorBody,
-          children: b.default.Messages.INVITE_MODAL_ERROR_INVALID_BODY
+          children: D.default.Messages.INVITE_MODAL_ERROR_INVALID_BODY
         }), (0, l.jsx)(_.Button, {
           size: _.Button.Sizes.LARGE,
           onClick: () => M.default.close(),
           color: _.Button.Colors.BRAND,
-          children: b.default.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
+          children: D.default.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
         })]
       })
     })
@@ -136,9 +136,9 @@ function B(e) {
   let t, n, {
     transitionState: s
   } = e;
-  (0, r.useStateFromStores)([C.default], () => {
+  (0, r.useStateFromStores)([p.default], () => {
     var e;
-    return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
+    return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });
   let {
     invite: m,
@@ -163,21 +163,21 @@ function B(e) {
   }
   let {
     guild: L,
-    channel: D,
+    channel: b,
     inviter: U,
     target_application: B
   } = m, F = null != m.stage_instance, V = null == m.guild && null == m.channel && null != m.inviter;
-  if (null != B) t = null == L ? void 0 : L.name, n = p.default.createFromServer(B).getCoverImageURL(1024);
+  if (null != B) t = null == L ? void 0 : L.name, n = C.default.createFromServer(B).getCoverImageURL(1024);
   else if (null != L) t = L.name, n = v.default.getGuildSplashURL({
     id: L.id,
     splash: L.splash
   });
-  else if ((null == (t = D.name) || "" === t) && null != U && (t = U.username), null == t) throw Error("no name for group DM invite");
+  else if ((null == (t = b.name) || "" === t) && null != U && (t = U.username), null == t) throw Error("no name for group DM invite");
   let H = (0, h.isAtGuildCapAndNonPremium)(),
-    k = F ? b.default.Messages.INSTANT_INVITE_ACCEPT_STAGE : b.default.Messages.INVITE_MODAL_BUTTON.format({
+    k = F ? D.default.Messages.INSTANT_INVITE_ACCEPT_STAGE : D.default.Messages.INVITE_MODAL_BUTTON.format({
       guildName: t
     });
-  return V && (k = b.default.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, l.jsx)(c.AnalyticsLocationProvider, {
+  return V && (k = D.default.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, l.jsx)(c.AnalyticsLocationProvider, {
     value: T,
     children: (0, l.jsxs)(o.ModalRoot, {
       size: o.ModalSize.DYNAMIC,
@@ -209,7 +209,7 @@ function B(e) {
               })
             }) : null, (0, l.jsxs)("div", {
               children: [H ? (0, l.jsx)(G, {}) : null, null == B ? (0, l.jsx)(o.Tooltip, {
-                text: H ? b.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
+                text: H ? D.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                 position: "bottom",
                 children: e => {
                   let {
@@ -224,7 +224,7 @@ function B(e) {
                     color: F ? _.Button.Colors.GREEN : _.Button.Colors.BRAND,
                     onMouseEnter: t,
                     onMouseLeave: n,
-                    children: H ? b.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
+                    children: H ? D.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
                   })
                 }
               }) : (0, l.jsxs)("div", {
@@ -233,13 +233,13 @@ function B(e) {
                   size: _.Button.Sizes.LARGE,
                   onClick: A,
                   submitting: I,
-                  children: b.default.Messages.PLAY
+                  children: D.default.Messages.PLAY
                 }), (0, l.jsx)(_.Button, {
                   color: _.Button.Colors.PRIMARY,
                   size: _.Button.Sizes.LARGE,
                   onClick: A,
                   submitting: I,
-                  children: b.default.Messages.SPECTATE
+                  children: D.default.Messages.SPECTATE
                 })]
               }), (0, l.jsx)(g.default, {
                 justify: g.default.Justify.CENTER,
@@ -251,7 +251,7 @@ function B(e) {
                     M.default.close()
                   },
                   color: _.Button.Colors.TRANSPARENT,
-                  children: b.default.Messages.INIVTE_MODAL_NO_THANKS
+                  children: D.default.Messages.INIVTE_MODAL_NO_THANKS
                 })
               })]
             })]

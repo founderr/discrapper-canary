@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return h
   }
 });
 var a = n("735250"),
@@ -16,21 +16,21 @@ var a = n("735250"),
   f = n("496675"),
   E = n("250690"),
   M = n("768581"),
-  m = n("585483"),
-  g = n("176354"),
-  S = n("981631"),
-  I = n("185923"),
-  p = n("689938");
+  g = n("585483"),
+  m = n("176354"),
+  v = n("981631"),
+  p = n("185923"),
+  S = n("689938");
 
-function v(e, t) {
+function h(e, t) {
   let {
     reducedMotion: n
-  } = i.useContext(s.AccessibilityPreferencesContext), v = (0, d.useIsActiveChannelOrUnarchivableThread)(t), h = (0, l.useStateFromStores)([f.default], () => (t.isPrivate() || f.default.can(S.Permissions.ADD_REACTIONS, t)) && v, [t, v]), A = (0, u.useEmojiInPriorityOrder)(t.getGuildId());
-  if (!c.RenderReactions.getSetting() || !h || e.type === S.MessageTypes.GUILD_INVITE_REMINDER) return null;
-  let _ = A.filter(e => !g.default.isEmojiFilteredOrLocked({
+  } = i.useContext(s.AccessibilityPreferencesContext), h = (0, d.useIsActiveChannelOrUnarchivableThread)(t), I = (0, l.useStateFromStores)([f.default], () => (t.isPrivate() || f.default.can(v.Permissions.ADD_REACTIONS, t)) && h, [t, h]), A = (0, u.useEmojiInPriorityOrder)(t.getGuildId());
+  if (!c.RenderReactions.getSetting() || !I || e.type === v.MessageTypes.GUILD_INVITE_REMINDER) return null;
+  let _ = A.filter(e => !m.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
-    intention: I.EmojiIntention.REACTION
+    intention: p.EmojiIntention.REACTION
   })).slice(0, 12).map((i, l) => {
     var u, d, c;
     return (0, a.jsx)(s.MenuItem, {
@@ -46,7 +46,7 @@ function v(e, t) {
           id: i.id,
           animated: i.animated && (!n.enabled || a),
           size: 18
-        }) : g.default.getURL(null !== (t = i.optionallyDiverseSequence) && void 0 !== t ? t : "")
+        }) : m.default.getURL(null !== (t = i.optionallyDiverseSequence) && void 0 !== t ? t : "")
       },
       action: () => {
         (0, r.addReaction)(t.id, e.id, (0, o.toReactionEmoji)(i), void 0)
@@ -56,9 +56,9 @@ function v(e, t) {
   });
   return (0, a.jsx)(s.MenuItem, {
     id: "add-reaction",
-    label: p.default.Messages.ADD_REACTION,
+    label: S.default.Messages.ADD_REACTION,
     action: () => {
-      m.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
+      g.ComponentDispatch.dispatchKeyed(v.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
         emojiPicker: !0
       })
     },
@@ -67,10 +67,10 @@ function v(e, t) {
       children: [_, (0, a.jsx)(s.MenuSeparator, {}), (0, a.jsx)(s.MenuItem, {
         color: "default",
         id: "other-reactions",
-        label: p.default.Messages.VIEW_MORE,
+        label: S.default.Messages.VIEW_MORE,
         icon: E.default,
         action: () => {
-          m.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
+          g.ComponentDispatch.dispatchKeyed(v.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
             emojiPicker: !0
           })
         }

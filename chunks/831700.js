@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("888651"),
   h = n("619915"),
   m = n("339340"),
-  p = n("201895"),
-  C = n("718589"),
+  C = n("201895"),
+  p = n("718589"),
   g = n("933557"),
   E = n("557135"),
   S = n("873696"),
@@ -34,8 +34,8 @@ var a = n("120356"),
   M = n("695346"),
   y = n("592125"),
   O = n("430824"),
-  D = n("607744"),
-  b = n("496675"),
+  b = n("607744"),
+  D = n("496675"),
   j = n("306680"),
   P = n("9156"),
   G = n("979651"),
@@ -203,7 +203,7 @@ class q extends B.default {
                 },
                 connectDragPreview: g,
                 isFavoriteSuggestion: A,
-                "aria-label": (0, p.default)({
+                "aria-label": (0, C.default)({
                   channel: e,
                   unread: a,
                   mentionCount: r,
@@ -211,7 +211,7 @@ class q extends B.default {
                   embeddedActivitiesCount: N.length,
                   isSubscriptionGated: T
                 }),
-                "aria-describedby": (0, C.default)({
+                "aria-describedby": (0, p.default)({
                   channel: e,
                   embeddedApps: N
                 }),
@@ -389,18 +389,18 @@ function J(e) {
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
-  })), c = (0, i.useStateFromStores)([P.default], () => P.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([y.default, D.default, b.default], () => {
+  })), c = (0, i.useStateFromStores)([P.default], () => P.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([y.default, b.default, D.default], () => {
     let e = y.default.getChannel(n.parent_id),
-      l = D.default.getCheck(n.guild_id);
+      l = b.default.getCheck(n.guild_id);
     return {
-      canManageChannel: b.default.can(K.Permissions.MANAGE_CHANNELS, n),
-      canReorderChannel: !0 !== a && (t.id === W.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(K.Permissions.MANAGE_CHANNELS, e) : b.default.can(K.Permissions.MANAGE_CHANNELS, t))),
-      canMoveMembers: b.default.can(K.Permissions.MOVE_MEMBERS, n),
-      locked: !b.default.can(K.Permissions.CONNECT, n),
-      bypassLimit: b.default.can(K.Permissions.MOVE_MEMBERS, n),
+      canManageChannel: D.default.can(K.Permissions.MANAGE_CHANNELS, n),
+      canReorderChannel: !0 !== a && (t.id === W.FAVORITES_RAW_GUILD_ID || (null != e ? D.default.can(K.Permissions.MANAGE_CHANNELS, e) : D.default.can(K.Permissions.MANAGE_CHANNELS, t))),
+      canMoveMembers: D.default.can(K.Permissions.MOVE_MEMBERS, n),
+      locked: !D.default.can(K.Permissions.CONNECT, n),
+      bypassLimit: D.default.can(K.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), m = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), p = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
+  }), m = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), C = (0, h.default)(n), p = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
     isSubscriptionGated: S,
     needSubscriptionToAccess: I
   } = (0, T.default)(n.id), N = (0, _.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
@@ -422,8 +422,8 @@ function J(e) {
     enableActivities: !0
   }), U = x && null == O;
   return (0, l.jsx)(Q, {
-    channelName: C,
-    embeddedApps: p,
+    channelName: p,
+    embeddedApps: C,
     embeddedActivityType: K.ActivityTypes.PLAYING,
     video: m,
     hasActiveEvent: null != E,

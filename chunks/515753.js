@@ -19,8 +19,8 @@ var l = n("735250"),
   f = n("442837"),
   h = n("481060"),
   m = n("493683"),
-  p = n("239091"),
-  C = n("420660"),
+  C = n("239091"),
+  p = n("420660"),
   g = n("702321"),
   E = n("201895"),
   S = n("43267"),
@@ -36,8 +36,8 @@ var l = n("735250"),
   M = n("199902"),
   y = n("158776"),
   O = n("306680"),
-  D = n("111583"),
-  b = n("9156"),
+  b = n("111583"),
+  D = n("9156"),
   j = n("594174"),
   P = n("467679"),
   G = n("514342"),
@@ -91,8 +91,8 @@ class J extends a.Component {
       locationState: d,
       onClick: f,
       className: m,
-      role: p,
-      "aria-posinset": C,
+      role: C,
+      "aria-posinset": p,
       "aria-setsize": g,
       ...E
     } = this.props;
@@ -101,12 +101,12 @@ class J extends a.Component {
         [z.fullWidth]: c.isMobile
       }, m),
       onClick: f,
-      role: p,
+      role: C,
       focusProps: {
         within: !0,
         ...X
       },
-      "aria-posinset": C,
+      "aria-posinset": p,
       "aria-setsize": g,
       children: (0, l.jsx)(h.Interactive, {
         as: "div",
@@ -145,7 +145,7 @@ function $(e) {
     activities: T,
     applicationStream: M,
     isTyping: y,
-    status: D,
+    status: b,
     isMobile: j,
     lastOnlineTimestamp: B,
     "aria-posinset": F,
@@ -158,10 +158,10 @@ function $(e) {
     user: c,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(r || H)
-  }), ea = (0, f.useStateFromStores)([b.default], () => b.default.isChannelMuted(t.getGuildId(), t.id)), es = (0, f.useStateFromStores)([O.default], () => O.default.getMentionCount(t.id) > 0), ei = (0, _.default)(t), er = (0, f.useStateFromStores)([N.default], () => N.default.isFavorite(t.id)), eo = null != T && T.length > 0, {
+  }), ea = (0, f.useStateFromStores)([D.default], () => D.default.isChannelMuted(t.getGuildId(), t.id)), es = (0, f.useStateFromStores)([O.default], () => O.default.getMentionCount(t.id) > 0), ei = (0, _.default)(t), er = (0, f.useStateFromStores)([N.default], () => N.default.isFavorite(t.id)), eo = null != T && T.length > 0, {
     isRecentlyOnlineShowable: eu,
     isRecentlyOnlineTrackable: ed
-  } = (0, L.getRecentlyOnlineStrategy)(B), ec = !eo && D === K.StatusTypes.OFFLINE && null != B;
+  } = (0, L.getRecentlyOnlineStrategy)(B), ec = !eo && b === K.StatusTypes.OFFLINE && null != B;
   a.useEffect(() => {
     ed && ec && L.default.trackExposure({
       location: "private_channel"
@@ -177,10 +177,10 @@ function $(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
       null != e && (e.preventDefault(), e.stopPropagation()), m.default.closePrivateChannel(t.id, r, n)
     },
-    ep = () => {
+    eC = () => {
       m.default.preload(K.ME, t.id)
     },
-    eC = e => {
+    ep = e => {
       e.stopPropagation()
     },
     eg = e => {
@@ -190,7 +190,7 @@ function $(e) {
       }
     },
     eE = e => {
-      t.isMultiUserDM() ? (0, p.openContextMenuLazy)(e, async () => {
+      t.isMultiUserDM() ? (0, C.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -201,7 +201,7 @@ function $(e) {
         })
       }, {
         noBlurEvent: !0
-      }) : (0, p.openContextMenuLazy)(e, async () => {
+      }) : (0, C.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("36441"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -272,18 +272,18 @@ function $(e) {
         recipients: t.recipients,
         size: e,
         isTyping: y,
-        status: D
+        status: b
       }) : (0, l.jsx)(Z, {
         ...el,
         src: (0, S.getChannelIconURL)(t),
         "aria-hidden": !0,
         size: e,
-        status: y ? K.StatusTypes.ONLINE : D,
+        status: y ? K.StatusTypes.ONLINE : b,
         isTyping: y
       });
       o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
       let n = null;
-      return !c.isSystemUser() && (n = (0, C.default)(T) ? K.StatusTypes.STREAMING : D), (0, l.jsx)(Z, {
+      return !c.isSystemUser() && (n = (0, p.default)(T) ? K.StatusTypes.STREAMING : b), (0, l.jsx)(Z, {
         ...el,
         size: h.AvatarSizes.SIZE_32,
         src: et,
@@ -325,7 +325,7 @@ function $(e) {
         ref: ee,
         onMouseEnter: ef,
         onMouseLeave: eh,
-        onMouseDown: ep,
+        onMouseDown: eC,
         onContextMenu: eE,
         "aria-setsize": V,
         "aria-posinset": F,
@@ -366,7 +366,7 @@ function $(e) {
           }), er ? (0, l.jsx)(Q, {}) : null, (0, l.jsx)(q, {
             "aria-label": eN ? W.default.Messages.LEAVE_GROUP_DM : W.default.Messages.CLOSE_DM,
             onClick: eN ? eS : em,
-            onMouseDown: eC
+            onMouseDown: ep
           })]
         })
       })
@@ -408,12 +408,12 @@ t.default = e => {
       isMobile: null != d && y.default.isMobileOnline(d),
       isRecentlyOnlineEnabled: u
     }
-  }, [t, d, i, u]), h = (0, f.useStateFromStores)([j.default, D.default], () => {
-    if (t.isMultiUserDM()) return !!r && V.default.keys(D.default.getTypingUsers(t.id)).some(e => {
+  }, [t, d, i, u]), h = (0, f.useStateFromStores)([j.default, b.default], () => {
+    if (t.isMultiUserDM()) return !!r && V.default.keys(b.default.getTypingUsers(t.id)).some(e => {
       var t;
       return e !== (null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
-    if (null != s) return D.default.isTyping(t.id, t.getRecipientId());
+    if (null != s) return b.default.isTyping(t.id, t.getRecipientId());
     return !1
   }, [t, s, r]);
   return t.isMultiUserDM() ? (0, l.jsx)($, {

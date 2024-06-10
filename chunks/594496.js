@@ -25,8 +25,8 @@ var n = s("512722"),
   m = s("466111"),
   C = s("74538"),
   A = s("51144"),
-  h = s("18438"),
-  O = s("778825"),
+  O = s("18438"),
+  h = s("778825"),
   p = s("52597"),
   R = s("430131"),
   M = s("133484"),
@@ -49,7 +49,7 @@ function L(e) {
     pendingThemeColors: B,
     errors: y,
     guild: V
-  } = (0, i.useStateFromStoresObject)([O.default], () => {
+  } = (0, i.useStateFromStoresObject)([h.default], () => {
     let {
       pendingAvatar: e,
       pendingNickname: t,
@@ -57,7 +57,7 @@ function L(e) {
       pendingPronouns: a,
       pendingBanner: n,
       pendingThemeColors: l
-    } = O.default.getAllPending();
+    } = h.default.getAllPending();
     return {
       pendingAvatar: e,
       pendingNickname: t,
@@ -65,8 +65,8 @@ function L(e) {
       pendingBio: s,
       pendingPronouns: a,
       pendingThemeColors: l,
-      errors: O.default.getErrors(),
-      guild: O.default.getGuild()
+      errors: h.default.getErrors(),
+      guild: h.default.getGuild()
     }
   }), H = null != P ? P : V;
   l()(null != H, "guild should not be null");
@@ -112,7 +112,7 @@ function L(e) {
           })]
         }),
         showRemoveAvatarButton: K,
-        onAvatarChange: e => Z(e, null == k ? void 0 : k.avatar, h.setPendingAvatar),
+        onAvatarChange: e => Z(e, null == k ? void 0 : k.avatar, O.setPendingAvatar),
         errors: null == y ? void 0 : y.avatar,
         guildId: H.id,
         disabled: !W
@@ -143,7 +143,7 @@ function L(e) {
       }, "effect"), (0, a.jsx)(E.default, {
         showRemoveBannerButton: z,
         errors: null == y ? void 0 : y.banner,
-        onBannerChange: e => Z(e, null == w ? void 0 : w.banner, h.setPendingBanner),
+        onBannerChange: e => Z(e, null == w ? void 0 : w.banner, O.setPendingBanner),
         guildId: null == H ? void 0 : H.id,
         disabled: !W
       }, "banner"), (0, a.jsx)(_.default, {

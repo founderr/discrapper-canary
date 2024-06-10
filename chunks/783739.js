@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return h
   }
 });
 var a = s("735250"),
@@ -24,15 +24,15 @@ var a = s("735250"),
   m = s("912152"),
   C = s("615603"),
   A = s("474936"),
-  h = s("388095");
+  O = s("388095");
 
-function O(e) {
+function h(e) {
   let {
     premiumSubscription: t
-  } = e, s = (0, l.useStateFromStores)([T.default], () => T.default.boostSlots), O = n.useMemo(() => Object.values(s), [s]), p = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()), R = _.default.isPremium(p, A.PremiumTypes.TIER_2), M = (0, l.useStateFromStores)([c.default], () => c.default.affinities), x = (0, l.useStateFromStores)([S.default], () => S.default.getFlattenedGuildIds()), D = M.length > 0 || x.length > 0, L = O.length > 0, P = n.useMemo(() => O.some(e => null != e.premiumGuildSubscription), [O]), b = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUserAppliedBoosts()), v = (null == t ? void 0 : t.isPausedOrPausePending) === !0;
+  } = e, s = (0, l.useStateFromStores)([T.default], () => T.default.boostSlots), h = n.useMemo(() => Object.values(s), [s]), p = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()), R = _.default.isPremium(p, A.PremiumTypes.TIER_2), M = (0, l.useStateFromStores)([c.default], () => c.default.affinities), x = (0, l.useStateFromStores)([S.default], () => S.default.getFlattenedGuildIds()), D = M.length > 0 || x.length > 0, L = h.length > 0, P = n.useMemo(() => h.some(e => null != e.premiumGuildSubscription), [h]), b = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUserAppliedBoosts()), v = (null == t ? void 0 : t.isPausedOrPausePending) === !0;
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(i.BlockedPaymentsWarning, {
-      className: h.blockedPaymentsWarning
+      className: O.blockedPaymentsWarning
     }), (0, a.jsx)(N.default, {
       hasGuildBoostSlots: L,
       hasAppliedGuildBoosts: P,
@@ -50,18 +50,18 @@ function O(e) {
       guildBoostSlots: s,
       premiumSubscription: t
     }), (0, a.jsx)(C.default, {
-      guildBoostSlots: O
+      guildBoostSlots: h
     }), (0, a.jsx)(f.default, {
       hasAppliedGuildBoosts: P,
       subscriptionIsPausedOrPausePending: v
     }), (0, a.jsx)(d.default, {
-      className: h.tierComparisonTable,
+      className: O.tierComparisonTable,
       hideHeading: !0,
       hideTier0: !0
     }), (0, a.jsx)(r.default, {
-      cardClassName: h.boosterRecognitionCard
+      cardClassName: O.boosterRecognitionCard
     }), (0, a.jsx)(o.default, {
-      className: h.faq
+      className: O.faq
     })]
   })
 }

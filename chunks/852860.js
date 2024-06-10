@@ -23,16 +23,16 @@ t.default = function(e) {
     disabled: N,
     saveButtonTooltip: p
   } = e, C = a.useRef(null), [{
-    spring: _
-  }, x] = (0, n.useSpring)(() => ({
+    spring: x
+  }, _] = (0, n.useSpring)(() => ({
     spring: 0
   }));
   a.useEffect(() => {
     function e() {
-      x({
+      _({
         spring: 1,
         config: n.config.gentle
-      }), x({
+      }), _({
         spring: 0,
         config: n.config.gentle,
         delay: 1e3
@@ -41,23 +41,23 @@ t.default = function(e) {
     return o.ComponentDispatch.subscribe(d.ComponentActions.EMPHASIZE_NOTICE, e), () => {
       o.ComponentDispatch.unsubscribe(d.ComponentActions.EMPHASIZE_NOTICE, e)
     }
-  }, [x]);
-  let M = _.to({
+  }, [_]);
+  let M = x.to({
       range: [0, 1],
       output: [(0, r.useToken)(i.default.colors.TEXT_NORMAL).hex(), (0, r.useToken)(i.default.unsafe_rawColors.WHITE_500).hex()]
     }),
-    I = _.to({
+    R = x.to({
       range: [0, 1],
       output: [(0, r.useToken)(i.default.colors.BACKGROUND_FLOATING).hex(), (0, r.useToken)(i.default.colors.STATUS_DANGER).hex()]
     }),
-    R = _.to({
+    I = x.to({
       range: [0, 1],
       output: [(0, r.useToken)(i.default.colors.TEXT_DANGER).hex(), (0, r.useToken)(i.default.unsafe_rawColors.WHITE_500).hex()]
     });
   return (0, s.jsx)(n.animated.div, {
     className: c.container,
     style: {
-      backgroundColor: I
+      backgroundColor: R
     },
     children: (0, s.jsx)("div", {
       className: c.flexContainer,
@@ -69,7 +69,7 @@ t.default = function(e) {
           children: (0, s.jsx)(n.animated.div, {
             className: c.message,
             style: {
-              color: null != h ? R : M
+              color: null != h ? I : M
             },
             children: null !== (t = null != h ? h : l) && void 0 !== t ? t : u.default.Messages.SETTINGS_NOTICE_MESSAGE
           })

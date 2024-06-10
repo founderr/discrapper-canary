@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return p
   },
   UserProfileClanRow: function() {
-    return h
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -29,7 +29,7 @@ var u = s("594174"),
   C = s("689938"),
   A = s("407020");
 
-function h(e) {
+function O(e) {
   let {
     className: t,
     clanTag: s,
@@ -88,7 +88,7 @@ function h(e) {
   })
 }
 
-function O(e) {
+function h(e) {
   let {
     userClanTag: t,
     userClanBadge: s,
@@ -100,7 +100,7 @@ function O(e) {
   } = e, g = (0, T.useCurrentUserAvailableClanIds)(), f = (0, r.useStateFromStores)([u.default], () => {
     var e;
     return (0, E.getUserClanData)(null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
-  }), O = n.useMemo(() => {
+  }), h = n.useMemo(() => {
     if (l !== f) {
       if (g.has(l)) return () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
@@ -134,11 +134,11 @@ function O(e) {
       className: A.header,
       variant: "eyebrow",
       children: C.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
-    }), (0, a.jsx)(h, {
+    }), (0, a.jsx)(O, {
       className: A.profileContainer,
       clanTag: t,
       clanBadge: s,
-      onTagClick: O,
+      onTagClick: h,
       guildName: i,
       guildId: l,
       guildIcon: _,
@@ -163,7 +163,7 @@ function p(e) {
     userId: t
   });
   if (null == n || null == i || null == r) return null;
-  let u = (0, a.jsx)(O, {
+  let u = (0, a.jsx)(h, {
     userClanTag: n,
     userClanBadge: l,
     guildId: i,

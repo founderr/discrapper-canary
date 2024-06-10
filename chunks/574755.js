@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return h
   }
 });
 var a = s("735250"),
@@ -24,13 +24,13 @@ var a = s("735250"),
   m = s("689938"),
   C = s("477716"),
   A = s("151501"),
-  h = s("611273");
+  O = s("611273");
 
-function O(e) {
+function h(e) {
   let {
     className: t,
     showHeader: s = !0
-  } = e, O = c.ClipsAllowVoiceRecording.useSetting(), {
+  } = e, h = c.ClipsAllowVoiceRecording.useSetting(), {
     enableViewerClipping: p
   } = u.default.useExperiment({
     location: "Clips Settings"
@@ -57,11 +57,11 @@ function O(e) {
         children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(f.default, {})]
       })
     }), M && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: s || M ? h.marginTop20 : t,
+      className: s || M ? O.marginTop20 : t,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: A.formItem,
-        value: O,
+        value: h,
         note: m.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => I.updateAllowVoiceRecording({
           allowVoiceRecording: e

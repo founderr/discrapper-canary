@@ -14,8 +14,8 @@ var l, a, s = n("735250"),
   f = n.n(c),
   h = n("748780"),
   m = n("442837"),
-  p = n("215569"),
-  C = n("481060"),
+  C = n("215569"),
+  p = n("481060"),
   g = n("612226"),
   E = n("951483"),
   S = n("714338"),
@@ -59,7 +59,7 @@ function y(e) {
 }
 let O = 1e3 / 60;
 
-function D() {
+function b() {
   let e = [g.KeybindGroup.MESSAGE, g.KeybindGroup.NAVIGATION, g.KeybindGroup.VOICE_AND_VIDEO, g.KeybindGroup.CHAT, g.KeybindGroup.MISCELLANEOUS];
   return (0, s.jsx)("div", {
     className: v.keyboardShortcutList,
@@ -70,10 +70,10 @@ function D() {
       return (0, s.jsxs)("div", {
         className: v.keyboardShortcutSection,
         children: [(0, s.jsxs)("div", {
-          children: [(0, s.jsx)(C.Heading, {
+          children: [(0, s.jsx)(p.Heading, {
             variant: "heading-lg/semibold",
             children: n
-          }), null != l && (0, s.jsx)(C.Text, {
+          }), null != l && (0, s.jsx)(p.Text, {
             className: v.keybindGroupDescription,
             variant: "text-sm/normal",
             children: l
@@ -84,12 +84,12 @@ function D() {
             var n;
             return (null === (n = e.predicate) || void 0 === n ? void 0 : n.call(e)) === !1 ? null : (0, s.jsxs)("div", {
               className: o()(v.keybindGroup),
-              children: [(0, s.jsx)(C.Text, {
+              children: [(0, s.jsx)(p.Text, {
                 variant: "text-sm/normal",
                 children: e.description
               }), (0, s.jsx)("div", {
                 className: "keybind-shortcuts",
-                children: e.binds.map(e => (0, s.jsx)(C.KeyCombo, {
+                children: e.binds.map(e => (0, s.jsx)(p.KeyCombo, {
                   className: v.keybindKey,
                   shortcut: e
                 }, e))
@@ -101,7 +101,7 @@ function D() {
     })
   })
 }
-class b extends i.PureComponent {
+class D extends i.PureComponent {
   componentDidMount() {
     this.lastInputedKeys = [], I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
       capture: !0
@@ -126,12 +126,12 @@ class b extends i.PureComponent {
     return (0, s.jsxs)(h.default.div, {
       className: v.keyboardShortcutsModal,
       style: this.getStyles(),
-      children: [(0, s.jsxs)(C.H, {
+      children: [(0, s.jsxs)(p.H, {
         className: v.modalTitle,
         children: [(0, s.jsx)("div", {
           className: v.content,
           children: L.default.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
-        }), (0, s.jsx)(C.KeyCombo, {
+        }), (0, s.jsx)(p.KeyCombo, {
           shortcut: "mod+/"
         })]
       }), (0, s.jsx)("div", {
@@ -160,11 +160,11 @@ class b extends i.PureComponent {
           className: v.right,
           children: "right"
         })]
-      }), (0, s.jsx)(C.AdvancedScrollerAuto, {
+      }), (0, s.jsx)(p.AdvancedScrollerAuto, {
         ref: this.scrollerRef,
         fade: !0,
-        children: (0, s.jsx)(C.HeadingLevel, {
-          children: (0, s.jsx)(D, {})
+        children: (0, s.jsx)(p.HeadingLevel, {
+          children: (0, s.jsx)(b, {})
         })
       })]
     })
@@ -308,7 +308,7 @@ function j(e) {
       let e = setTimeout(() => u(!1), 500);
       return () => clearTimeout(e)
     }
-  }, [r]), (0, s.jsx)(C.Clickable, {
+  }, [r]), (0, s.jsx)(p.Clickable, {
     onClick: d,
     className: o()(v.arrow, l, {
       [v.active]: t || r
@@ -322,18 +322,18 @@ function P(e) {
     transitionState: t,
     onClose: n
   } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, m.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled);
-  return (0, s.jsx)(C.ModalRoot, {
+  return (0, s.jsx)(p.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
     }),
-    size: C.ModalSize.DYNAMIC,
+    size: p.ModalSize.DYNAMIC,
     "aria-label": L.default.Messages.KEYBINDS,
     transitionState: t,
-    children: (0, s.jsx)(p.TransitionGroup, {
+    children: (0, s.jsx)(C.TransitionGroup, {
       component: "div",
       children: l ? (0, s.jsx)(T.default, {
         onClose: n
-      }, "raging-demo") : (0, s.jsx)(b, {
+      }, "raging-demo") : (0, s.jsx)(D, {
         content: r,
         keyboardModeEnabled: u,
         activateRagingDemon: function() {

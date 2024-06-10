@@ -1,44 +1,44 @@
 "use strict";
-i.r(s), i.d(s, {
+n.r(t), n.d(t, {
   canCurrentUserManageAutomod: function() {
-    return _
+    return d
   },
   canCurrentUserManageMessageFilters: function() {
-    return o
+    return r
   },
   useCanCurrentUserManageAutomod: function() {
-    return l
+    return o
   },
   useIsUserProfileRuleEnabled: function() {
-    return a
+    return c
   }
 });
-var n = i("442837"),
-  t = i("430824"),
-  E = i("496675"),
-  r = i("981631");
-let S = function(e) {
-  let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.default,
-    i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.default,
-    n = s.getGuild(e);
-  return null != n && i.can(r.Permissions.MANAGE_GUILD, n)
+var u = n("442837"),
+  l = n("430824"),
+  i = n("496675"),
+  a = n("981631");
+let s = function(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.default,
+    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.default,
+    u = t.getGuild(e);
+  return null != u && n.can(a.Permissions.MANAGE_GUILD, u)
 };
 
+function r(e) {
+  return null != e && s(e)
+}
+
+function d(e) {
+  return s(e)
+}
+
 function o(e) {
-  return null != e && S(e)
+  return (0, u.useStateFromStores)([l.default, i.default], () => s(e, l.default, i.default), [e])
 }
 
-function _(e) {
-  return S(e)
-}
-
-function l(e) {
-  return (0, n.useStateFromStores)([t.default, E.default], () => S(e, t.default, E.default), [e])
-}
-
-function a(e) {
-  return (0, n.useStateFromStores)([t.default], () => {
-    let s = t.default.getGuild(e);
-    return (null == s ? void 0 : s.hasFeature(r.GuildFeatures.COMMUNITY)) || !1
+function c(e) {
+  return (0, u.useStateFromStores)([l.default], () => {
+    let t = l.default.getGuild(e);
+    return (null == t ? void 0 : t.hasFeature(a.GuildFeatures.COMMUNITY)) || !1
   }, [e])
 }

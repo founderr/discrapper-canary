@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("594174"),
   C = s("626135"),
   A = s("63063"),
-  h = s("74538"),
-  O = s("18438"),
+  O = s("74538"),
+  h = s("18438"),
   p = s("778825"),
   R = s("856607"),
   M = s("594496"),
@@ -37,7 +37,7 @@ function P() {
   C.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
     location_page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
     location_object: D.AnalyticsObjects.BADGE
-  }), (0, O.closeGuildIdentitySettings)(), u.default.open(D.UserSettingsSections.PREMIUM)
+  }), (0, h.closeGuildIdentitySettings)(), u.default.open(D.UserSettingsSections.PREMIUM)
 }
 
 function b(e) {
@@ -77,7 +77,7 @@ function v(e) {
     ...p.default.getAllPending(),
     source: p.default.getSource()
   }));
-  if (n.useEffect(() => () => d.default.wait(O.resetAllPending), []), n.useEffect(() => {
+  if (n.useEffect(() => () => d.default.wait(h.resetAllPending), []), n.useEffect(() => {
       null != H && E.default.trackWithMetadata(D.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
         destination_pane: D.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
@@ -85,13 +85,13 @@ function v(e) {
       })
     }, [H]), C) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let Y = h.default.canUsePremiumProfileCustomization(l),
+  let Y = O.default.canUsePremiumProfileCustomization(l),
     k = {
       user: l,
       guild: t,
       canUsePremiumCustomization: Y,
-      onAvatarChange: O.setPendingAvatar,
-      onBannerChange: O.setPendingBanner,
+      onAvatarChange: h.setPendingAvatar,
+      onBannerChange: h.setPendingBanner,
       onUpsellClick: b,
       pendingAvatar: v,
       pendingAvatarDecoration: U,
@@ -115,7 +115,7 @@ function v(e) {
       children: [(0, a.jsx)(x.default, {
         guildId: t.id,
         onChange: e => {
-          null != e && (0, O.setCurrentGuild)(e)
+          null != e && (0, h.setCurrentGuild)(e)
         }
       }), (0, a.jsx)(N.default, {
         previewTitle: L.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({

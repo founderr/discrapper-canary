@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("736921"),
   C = s("169278"),
   A = s("823379"),
-  h = s("981631"),
-  O = s("921944"),
+  O = s("981631"),
+  h = s("921944"),
   p = s("689938"),
   R = s("663563");
 
@@ -37,7 +37,7 @@ function M() {
   } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), i = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), [c, g] = n.useState(!1);
   n.useEffect(() => {
     (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
-      dismissAction: O.ContentDismissActionType.AUTO
+      dismissAction: h.ContentDismissActionType.AUTO
     }), (0, E.fetchAuthSessions)();
     let e = setTimeout(() => g(!0), 500);
     return () => {
@@ -46,7 +46,7 @@ function M() {
   }, []);
   let f = () => {
       o.HTTP.post({
-        url: h.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
+        url: O.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
     [m, C] = n.useState(new Set);
@@ -147,7 +147,7 @@ function x(e) {
     useChecks: _
   } = e, I = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, N = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
     text: g,
-    icon: h
+    icon: O
   } = function(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
       case null:
@@ -166,12 +166,12 @@ function x(e) {
           text: e, icon: C.default
         }
     }
-  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), O = d ? null : (0, T.formatDate)(o.approx_last_used_time), M = [g, N].filter(A.isNotNullish), x = [I, O].filter(A.isNotNullish), D = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
+  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), h = d ? null : (0, T.formatDate)(o.approx_last_used_time), M = [g, N].filter(A.isNotNullish), x = [I, h].filter(A.isNotNullish), D = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
   return (0, a.jsxs)("div", {
     className: i()(R.session, d ? R.currentSession : null),
     children: [(0, a.jsx)("div", {
       className: R.sessionIcon,
-      children: (0, a.jsx)(h, {
+      children: (0, a.jsx)(O, {
         width: D,
         height: D
       })
@@ -245,7 +245,7 @@ function D() {
         color: "text-muted",
         children: (0, a.jsx)("span", {
           children: p.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
-            onClick: () => c.default.setSection(h.UserSettingsSections.ACCOUNT)
+            onClick: () => c.default.setSection(O.UserSettingsSections.ACCOUNT)
           })
         })
       })]

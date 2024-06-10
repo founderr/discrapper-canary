@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("163684"),
   C = s("178100"),
   A = s("518638"),
-  h = s("725727"),
-  O = s("454982"),
+  O = s("725727"),
+  h = s("454982"),
   p = s("197115"),
   R = s("504983"),
   M = s("703656"),
@@ -64,7 +64,7 @@ function y(e) {
     endDate: m,
     onClickDetails: T
   }));
-  let h = g ? F.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : F.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
+  let O = g ? F.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : F.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
     p = n.useCallback(() => E(!1), []),
     {
       outboundTitle: R,
@@ -101,7 +101,7 @@ function y(e) {
           size: u.Button.Sizes.SMALL,
           onClick: () => E(!0),
           disabled: !0 === o,
-          children: h
+          children: O
         })]
       }), d && (0, a.jsx)(u.Text, {
         className: B.promotionLegalese,
@@ -112,7 +112,7 @@ function y(e) {
         })
       })]
     }), S && (0, a.jsx)(u.Modal, {
-      renderModal: e => (0, a.jsx)(O.default, {
+      renderModal: e => (0, a.jsx)(h.default, {
         ...e,
         onClose: p,
         onClaim: r,
@@ -146,7 +146,7 @@ t.default = function() {
       await (0, I.fetchDropsUserStatus)()
     })
   }, [A]);
-  let O = b.DropsOptedOut.useSetting(),
+  let h = b.DropsOptedOut.useSetting(),
     V = null != C || !A,
     {
       promotionsLoaded: H,
@@ -154,7 +154,7 @@ t.default = function() {
       claimedEndedOutboundPromotions: k,
       claimedOutboundPromotionCodeMap: w,
       addClaimedOutboundPromotionCode: W
-    } = (0, h.useOutboundPromotions)(),
+    } = (0, O.useOutboundPromotions)(),
     K = Y.length + k.length > 0,
     z = m.OutboundPromoDesktopUpsellExperiment.useExperiment({
       location: "EntitlementGifts"
@@ -167,7 +167,7 @@ t.default = function() {
   }
   return _ && H && V ? (0, a.jsxs)(a.Fragment, {
     children: [A ? (0, a.jsx)(U.default, {
-      dropsOptedOut: O,
+      dropsOptedOut: h,
       dropsStatuses: C
     }) : null, function() {
       var e;

@@ -26,7 +26,7 @@ function g() {
     [g, f] = n.useState([]),
     m = n.useRef(null),
     [C, A] = n.useState(!1),
-    [h, O] = n.useState(!1),
+    [O, h] = n.useState(!1),
     [p, R] = n.useState(!1),
     M = (0, r.isThemeDark)((0, u.default)());
   return null == e ? (0, a.jsx)("div", {}) : (0, a.jsxs)(a.Fragment, {
@@ -48,7 +48,7 @@ function g() {
         },
         profileEffectId: "debug"
       })]
-    }), h && (0, a.jsxs)("div", {
+    }), O && (0, a.jsxs)("div", {
       className: _.userProfilePreview,
       children: [(0, a.jsx)(c.default, {
         location: "ProfileEffectsPreviewToolPage",
@@ -88,10 +88,10 @@ function g() {
         children: "Show User Profile"
       }), (0, a.jsx)("input", {
         type: "checkbox",
-        checked: h,
+        checked: O,
         className: _.checkBox,
         onChange: () => {
-          O(!h)
+          h(!O)
         }
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/normal",

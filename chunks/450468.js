@@ -22,13 +22,13 @@ var a, n, l = s("735250"),
   m = s("74538"),
   C = s("689938"),
   A = s("625699");
-async function h(e, t, s, a) {
+async function O(e, t, s, a) {
   await (0, E.uncancelGuildBoostSlot)(s), await (0, S.updateSubscription)(e, {
     items: (0, m.getItemsFromNewAdditionalPlans)(e, t)
   }, a)
 }
 
-function O(e) {
+function h(e) {
   let {
     premiumSubscription: t,
     guildBoostSlotId: s,
@@ -56,7 +56,7 @@ function O(e) {
           try {
             S(!0);
             let e = (0, I.calculateAdditionalPlansWithPremiumGuildAdjustment)(t, 1);
-            o()((0, m.getNumPremiumGuildSubscriptions)(e) <= (0, m.getNumPremiumGuildSubscriptions)(t.additionalPlans), "Uncanceling should not increase the number of guild subscriptions"), await h(t, e, s, T), a()
+            o()((0, m.getNumPremiumGuildSubscriptions)(e) <= (0, m.getNumPremiumGuildSubscriptions)(t.additionalPlans), "Uncanceling should not increase the number of guild subscriptions"), await O(t, e, s, T), a()
           } catch (e) {
             S(!1)
           }
@@ -122,7 +122,7 @@ function R(e) {
   });
   else switch (u) {
     case 1:
-      t = (0, l.jsx)(O, {
+      t = (0, l.jsx)(h, {
         premiumSubscription: o,
         guildBoostSlotId: s,
         onNext: () => E(2),

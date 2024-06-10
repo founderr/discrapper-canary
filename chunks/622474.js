@@ -20,9 +20,9 @@ var a = s("735250"),
   m = s("702512"),
   C = s("689938"),
   A = s("193225");
-let h = "YYYY-MM-DD HH:mm";
+let O = "YYYY-MM-DD HH:mm";
 
-function O(e) {
+function h(e) {
   let {
     drop: t,
     enrolled: s,
@@ -45,7 +45,7 @@ function O(e) {
     articleUrl: f
   } = t, m = (0, _.getDropByQuestId)(N);
   if (null == m) return null;
-  let h = () => {
+  let O = () => {
     (0, T.enrollDropsUser)(N).then(() => {
       S.default.wait(async () => {
         await (0, T.fetchDropsUserStatus)()
@@ -87,7 +87,7 @@ function O(e) {
             className: A.promotionCardButton,
             color: c.Button.Colors.BRAND,
             size: c.Button.Sizes.SMALL,
-            onClick: h,
+            onClick: O,
             disabled: s && !l,
             ...e,
             children: s ? C.default.Messages.REDEEM : C.default.Messages.DROPS_GIFT_INVENTORY_ENROLL
@@ -203,14 +203,14 @@ t.default = function(e) {
         autoTrackExposure: !1
       }).dropsEnabled) continue;
     d = !0;
-    let T = o()(t.endDate, h),
+    let T = o()(t.endDate, O),
       I = o()();
     c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible ? I < T && l.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
       experiment: S
-    }) : (null != s.code || null != s.completed_at) && I < o()(t.finalClaimDate, h) && i.push({
+    }) : (null != s.code || null != s.completed_at) && I < o()(t.finalClaimDate, O) && i.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
@@ -243,7 +243,7 @@ t.default = function(e) {
         s = null != e.dropsStatus.enrolled_at,
         n = null != e.dropsStatus.completed_at;
       return null != t ? (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(O, {
+        children: [(0, a.jsx)(h, {
           drop: {
             ...t
           },

@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return w
   },
   getChannelItemClassName: function() {
-    return b
+    return D
   },
   isChannelItemDisabled: function() {
-    return D
+    return b
   }
 });
 var l, a, s, i, r = n("735250"),
@@ -24,8 +24,8 @@ var l, a, s, i, r = n("735250"),
   f = n("115850"),
   h = n("481060"),
   m = n("787014"),
-  p = n("924301"),
-  C = n("159300"),
+  C = n("924301"),
+  p = n("159300"),
   g = n("152376"),
   E = n("427679"),
   S = n("155409"),
@@ -42,11 +42,11 @@ var l, a, s, i, r = n("735250"),
   y = n("689938"),
   O = n("513285");
 
-function D(e, t, n) {
+function b(e, t, n) {
   return null != t && !!t && !(0, R.areTypesInSameSection)(n, e.type)
 }
 
-function b(e, t) {
+function D(e, t) {
   return null == t ? O.containerDefault : e > t ? O.containerDragAfter : O.containerDragBefore
 }
 
@@ -99,7 +99,7 @@ function P(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), m = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), _ = (0, c.useStateFromStores)([T.default], () => (0, C.canViewInviteModal)(T.default, u, t, m)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
+  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), m = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([C.default], () => C.default.getActiveEventByChannel(t.id), [t.id]), _ = (0, c.useStateFromStores)([T.default], () => (0, p.canViewInviteModal)(T.default, u, t, m)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
   if (a || !_) return null;
 
   function L() {
@@ -108,7 +108,7 @@ function P(e) {
       (0, h.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([n.e("99387"), n.e("7654"), n.e("61939")]).then(n.bind(n, "560114"));
+        } = await Promise.all([n.e("99387"), n.e("7654"), n.e("92893")]).then(n.bind(n, "560114"));
         return n => (0, r.jsx)(l, {
           ...n,
           guild: u,
@@ -216,7 +216,7 @@ class w extends(i = o.PureComponent) {
       position: e,
       sortingPosition: t
     } = this.props;
-    return b(e, t)
+    return D(e, t)
   }
   isDisabled() {
     let {
@@ -224,7 +224,7 @@ class w extends(i = o.PureComponent) {
       sorting: t,
       sortingType: n
     } = this.props;
-    return D(e, t, n)
+    return b(e, t, n)
   }
 }
 s = {

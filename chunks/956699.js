@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("865427"),
   C = s("758182"),
   A = s("802098"),
-  h = s("663993"),
-  O = s("38618"),
+  O = s("663993"),
+  h = s("38618"),
   p = s("921801"),
   R = s("906467"),
   M = s("857192"),
@@ -553,7 +553,7 @@ class X extends n.Component {
   renderPayloadBlock() {
     let e = JSON.stringify(this.generatePayload(), null, 2),
       t = () => e,
-      n = (0, a.jsx)(h.LazyLibrary, {
+      n = (0, a.jsx)(O.LazyLibrary, {
         createPromise: () => Promise.resolve().then(s.bind(s, "364964")),
         webpackId: "364964",
         renderFallback: t,
@@ -779,7 +779,7 @@ function J() {
         setting: F.WebSetting.DEVELOPER_OPTIONS_RESET_SOCKET,
         children: (0, a.jsx)(S.Button, {
           onClick: () => {
-            O.default.getSocket().close(), O.default.getSocket().connect()
+            h.default.getSocket().close(), h.default.getSocket().connect()
           },
           children: "Reset Socket"
         })

@@ -28,9 +28,9 @@ function A(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let h = ["svg", "png", "gif", "webp"],
-  O = [...h, "jpg", "jpeg"],
-  p = Array.from(new Set([...O, "gif", "mp4", "webm"]));
+let O = ["svg", "png", "gif", "webp"],
+  h = [...O, "jpg", "jpeg"],
+  p = Array.from(new Set([...h, "gif", "mp4", "webm"]));
 
 function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -283,13 +283,13 @@ function x() {
         title: "Game Tile Asset",
         assetKey: "gameTile",
         onFileChange: F,
-        filters: O,
+        filters: h,
         initialValue: i.config.assets.gameTile
       }), (0, a.jsx)(I.default, {
         title: "Logotype",
         assetKey: "logotype",
         onFileChange: F,
-        filters: h,
+        filters: O,
         initialValue: i.config.assets.logotype
       }), (0, a.jsx)(I.default, {
         title: "Quest Bar Hero Asset",

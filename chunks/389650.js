@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("131951"),
   C = s("556296"),
   A = s("808506"),
-  h = s("186095"),
-  O = s("285952"),
+  O = s("186095"),
+  h = s("285952"),
   p = s("474333"),
   R = s("63063"),
   M = s("358085"),
@@ -57,7 +57,7 @@ function B(e) {
 let y = o()((0, I.getDefaultLayoutContent)()).filter(e => e.description !== v.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
   V = d.default.connectStores([D.default], () => ({
     theme: D.default.theme
-  }))(h.default);
+  }))(O.default);
 class H extends n.PureComponent {
   renderMessage() {
     let {
@@ -90,17 +90,17 @@ class H extends n.PureComponent {
       managed: e,
       enabled: t
     } = this.props.keybind;
-    return (0, a.jsxs)(O.default, {
-      direction: O.default.Direction.VERTICAL,
+    return (0, a.jsxs)(h.default, {
+      direction: h.default.Direction.VERTICAL,
       className: i()(U.keybindGroup, j.card),
       children: [!e && (0, a.jsx)(E.default, {
         "aria-label": v.default.Messages.REMOVE_KEYBIND,
         className: U.removeKeybind,
         onClick: this.handleDeleteKeybind,
         look: E.default.Looks.FILLED
-      }), (0, a.jsxs)(O.default, {
+      }), (0, a.jsxs)(h.default, {
         className: G.marginBottom8,
-        children: [(0, a.jsx)(O.default.Child, {
+        children: [(0, a.jsx)(h.default.Child, {
           basis: "45%",
           children: (0, a.jsx)(c.FormItem, {
             title: v.default.Messages.USER_SETTINGS_KEYBINDS_ACTION,
@@ -112,7 +112,7 @@ class H extends n.PureComponent {
               isDisabled: e
             })
           })
-        }), (0, a.jsx)(O.default.Child, {
+        }), (0, a.jsx)(h.default.Child, {
           basis: "45%",
           children: (0, a.jsx)(c.FormItem, {
             title: v.default.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
@@ -122,7 +122,7 @@ class H extends n.PureComponent {
               onChange: this.handleShortcutChange
             })
           })
-        }), (0, a.jsx)(O.default.Child, {
+        }), (0, a.jsx)(h.default.Child, {
           grow: 0,
           shrink: 0,
           children: (0, a.jsx)(c.FormItem, {
@@ -139,7 +139,7 @@ class H extends n.PureComponent {
             })
           })
         })]
-      }), (0, a.jsx)(O.default.Child, {
+      }), (0, a.jsx)(h.default.Child, {
         children: this.renderMessage()
       }), this.renderExtraSettings()]
     })
@@ -279,7 +279,7 @@ class Y extends n.PureComponent {
   renderEmpty(e) {
     if (0 === e.length) return (0, a.jsx)(V, {
       className: G.marginTop60,
-      children: (0, a.jsx)(h.EmptyStateImage, {
+      children: (0, a.jsx)(O.EmptyStateImage, {
         darkSrc: s("572279"),
         lightSrc: s("871803"),
         width: 320,
@@ -295,16 +295,16 @@ class Y extends n.PureComponent {
         tag: c.FormTitleTags.H1,
         title: v.default.Messages.KEYBINDS,
         children: M.isPlatformEmbedded ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsxs)(O.default, {
-            justify: O.default.Justify.BETWEEN,
+          children: [(0, a.jsxs)(h.default, {
+            justify: h.default.Justify.BETWEEN,
             className: G.marginBottom20,
-            children: [(0, a.jsx)(O.default.Child, {
+            children: [(0, a.jsx)(h.default.Child, {
               grow: 0,
               children: (0, a.jsx)(p.default, {
                 messageType: p.HelpMessageTypes.WARNING,
                 children: v.default.Messages.ADD_KEYBIND_WARNING
               })
-            }), (0, a.jsx)(O.default.Child, {
+            }), (0, a.jsx)(h.default.Child, {
               wrap: !0,
               grow: 0,
               children: (0, a.jsx)(c.Button, {

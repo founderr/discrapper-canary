@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("285952"),
   C = s("366695"),
   A = s("259580"),
-  h = s("572004"),
-  O = s("669079"),
+  O = s("572004"),
+  h = s("669079"),
   p = s("296848"),
   R = s("474936"),
   M = s("689938"),
@@ -64,10 +64,10 @@ class L extends n.PureComponent {
       className: x.giftCodeRow,
       children: [(0, a.jsx)(f.default, {
         className: x.codeText,
-        value: (0, O.getGiftCodeURL)(t.code),
+        value: (0, h.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
         mode: s,
-        supportsCopy: h.SUPPORTS_COPY,
+        supportsCopy: O.SUPPORTS_COPY,
         hideMessage: e ? M.default.Messages.GIFT_INVENTORY_HIDDEN : null,
         onCopy: this.handleCopy,
         buttonColor: f.default.ButtonColors.BRAND,
@@ -94,9 +94,9 @@ class L extends n.PureComponent {
         giftCode: t,
         sku: s
       } = this.props;
-      (0, O.trackGiftCodeCopy)(t, s);
+      (0, h.trackGiftCodeCopy)(t, s);
       try {
-        (0, h.copy)(e), this.setState({
+        (0, O.copy)(e), this.setState({
           copyMode: f.CopyInputModes.SUCCESS
         })
       } catch (e) {

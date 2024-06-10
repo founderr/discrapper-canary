@@ -16,8 +16,8 @@ t.default = a.forwardRef(function(e, t) {
   let {
     body: n,
     header: s,
-    artClassName: p,
-    headerClassName: C,
+    artClassName: C,
+    headerClassName: p,
     contentClassName: g,
     tryItText: E,
     dismissText: S,
@@ -33,8 +33,8 @@ t.default = a.forwardRef(function(e, t) {
     align: M = "center",
     art: y,
     isPremiumEarlyAccess: O = !1,
-    maxWidth: D = 280
-  } = e, b = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
+    maxWidth: b = 280
+  } = e, D = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
     ref: G,
     width: U
   } = (0, o.default)();
@@ -47,26 +47,26 @@ t.default = a.forwardRef(function(e, t) {
   return a.useEffect(() => {
     var e, t;
     let n = (null !== (t = null === (e = G.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-    !j && n > D && P(!0)
-  }, [j, U, G, D]), a.useEffect(() => {
+    !j && n > b && P(!0)
+  }, [j, U, G, b]), a.useEffect(() => {
     (0, u.requestMarkDismissibleContentAsShown)(x)
   }, [x]), (0, l.jsx)("div", {
     className: N,
     ref: t,
     children: (0, l.jsxs)("div", {
       className: i()(m.content, g, {
-        [m.contentNoArt]: null == p || T,
+        [m.contentNoArt]: null == C || T,
         [m.contentPremium]: A || O
       }),
       children: [(0, l.jsxs)("div", {
-        className: i()(p, T ? m.artInline : m.artAbsolute),
+        className: i()(C, T ? m.artInline : m.artAbsolute),
         children: [v && (0, l.jsx)(d.default, {
           className: m.gifTag
         }), y]
       }), (0, l.jsxs)("div", {
         className: m.body,
         children: [(0, l.jsxs)(r.Heading, {
-          className: i()(A ? m.headerWithPremiumIcon : m.header, C),
+          className: i()(A ? m.headerWithPremiumIcon : m.header, p),
           variant: "heading-md/bold",
           color: "always-white",
           children: [A && !O ? (0, l.jsx)(c.default, {
@@ -93,7 +93,7 @@ t.default = a.forwardRef(function(e, t) {
         children: null != _ ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {
             className: m.button,
-            size: b,
+            size: D,
             onClick: e => {
               null == I || I(e), _(e), w(f.ContentDismissActionType.PRIMARY)
             },
@@ -101,7 +101,7 @@ t.default = a.forwardRef(function(e, t) {
             children: null != E ? E : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, l.jsx)(r.Button, {
             className: m.button,
-            size: b,
+            size: D,
             onClick: e => {
               null == I || I(e), w(f.ContentDismissActionType.DISMISS)
             },

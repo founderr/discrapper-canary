@@ -45,7 +45,7 @@ t.default = n.memo(function(e) {
     return null == t ? null : (0, a.jsx)(a.Fragment, {
       children: g(t)
     })
-  }, [g]), m = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), C = n.useCallback(e => e === d, [d]), A = n.useCallback(e => e, []), h = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
+  }, [g]), m = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), C = n.useCallback(e => e === d, [d]), A = n.useCallback(e => e, []), O = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
   return (0, a.jsxs)(r.default, {
     title: T.default.Messages.CLANS,
     titleId: I,
@@ -62,7 +62,7 @@ t.default = n.memo(function(e) {
       renderOptionValue: f,
       renderOptionLabel: g,
       serialize: A,
-      clear: h,
+      clear: O,
       clearable: null != d
     })]
   })

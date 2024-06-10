@@ -25,13 +25,13 @@ var a = s("735250"),
   C = s("689938"),
   A = s("865156");
 
-function h(e) {
+function O(e) {
   let {
     transitionState: t,
     onClose: i,
     ticket: o,
     challenge: c
-  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [h, O] = n.useState(!0), [p, R] = n.useState(f.WebAuthnScreens.INIT), [M, x] = n.useState(""), [D, L] = n.useState(null), P = async () => {
+  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [O, h] = n.useState(!0), [p, R] = n.useState(f.WebAuthnScreens.INIT), [M, x] = n.useState(""), [D, L] = n.useState(null), P = async () => {
     let e;
     R(f.WebAuthnScreens.REGISTER);
     let t = T.isPlatformEmbedded && I.default.supportsFeature(m.NativeFeatures.WEBAUTHN) ? I.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
@@ -135,7 +135,7 @@ function h(e) {
                 className: A.input,
                 value: E,
                 onChange: e => {
-                  g(e), O(0 === e.length)
+                  g(e), h(0 === e.length)
                 },
                 autoFocus: !0,
                 minLength: 1
@@ -145,7 +145,7 @@ function h(e) {
             className: A.footer,
             children: [(0, a.jsx)(r.Button, {
               type: "submit",
-              disabled: h,
+              disabled: O,
               children: C.default.Messages.TWO_FA_WEBAUTHN_REGISTER_FINISH
             }), (0, a.jsx)(r.Button, {
               look: r.Button.Looks.LINK,
@@ -162,7 +162,7 @@ function h(e) {
   })
 }
 
-function O(e) {
+function h(e) {
   let {
     onSelect: t,
     credential: n
@@ -223,7 +223,7 @@ function p() {
         name: e.name,
         className: A.credentialItem,
         onContextMenu: t => {
-          (0, o.openContextMenu)(t, t => (0, a.jsx)(O, {
+          (0, o.openContextMenu)(t, t => (0, a.jsx)(h, {
             ...t,
             credential: e
           }))
@@ -233,7 +233,7 @@ function p() {
           color: r.Button.Colors.TRANSPARENT,
           size: r.Button.Sizes.ICON,
           onClick: t => {
-            (0, o.openContextMenu)(t, t => (0, a.jsx)(O, {
+            (0, o.openContextMenu)(t, t => (0, a.jsx)(h, {
               ...t,
               credential: e
             }))
@@ -255,7 +255,7 @@ function p() {
               ticket: t,
               challenge: s
             } = e;
-            (0, r.openModal)(e => (0, a.jsx)(h, {
+            (0, r.openModal)(e => (0, a.jsx)(O, {
               ...e,
               ticket: t,
               challenge: s

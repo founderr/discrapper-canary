@@ -30,12 +30,12 @@ function f(e) {
     disabled: m,
     label: C,
     colorPickerMiddle: A,
-    colorPickerFooter: h,
-    showEyeDropper: O
-  } = e, p = n.useRef(null), R = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), M = d.default.colors.BACKGROUND_ACCENT.css, x = (0, _.isColorDark)(l), D = (0, o.int2hex)(l), L = D === R ? M : D, P = (0, S.getColor)(x ? I.Color.WHITE_500 : I.Color.PRIMARY_530), b = (0, c.default)(A), v = (0, c.default)(h), [U, j] = n.useState((0, r.v4)());
+    colorPickerFooter: O,
+    showEyeDropper: h
+  } = e, p = n.useRef(null), R = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), M = d.default.colors.BACKGROUND_ACCENT.css, x = (0, _.isColorDark)(l), D = (0, o.int2hex)(l), L = D === R ? M : D, P = (0, S.getColor)(x ? I.Color.WHITE_500 : I.Color.PRIMARY_530), b = (0, c.default)(A), v = (0, c.default)(O), [U, j] = n.useState((0, r.v4)());
   return n.useEffect(() => {
-    (b !== A || v !== h) && j((0, r.v4)())
-  }, [h, A, v, b]), (0, a.jsx)(u.Popout, {
+    (b !== A || v !== O) && j((0, r.v4)())
+  }, [O, A, v, b]), (0, a.jsx)(u.Popout, {
     positionKey: U,
     renderPopout: e => (0, a.jsx)(E.CustomColorPicker, {
       ...e,
@@ -43,8 +43,8 @@ function f(e) {
       onChange: t,
       suggestedColors: f,
       middle: A,
-      footer: h,
-      showEyeDropper: O
+      footer: O,
+      showEyeDropper: h
     }),
     onRequestClose: s,
     children: e => {

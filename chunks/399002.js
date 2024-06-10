@@ -84,15 +84,15 @@ function c(e, t, s) {
   let m = null != T && null != _ ? (_ - T) / 1e3 : 0,
     C = 1 - u / d,
     A = 8 * c / m,
-    h = 8 * S / m,
-    O = g.getReport([50, 95, 99]);
+    O = 8 * S / m,
+    h = g.getReport([50, 95, 99]);
   return {
     payloadBandwidth: A,
-    networkBandwidth: h,
+    networkBandwidth: O,
     loss: C,
-    iatP50: O.percentiles[50],
-    iatP95: O.percentiles[95],
-    iatP99: O.percentiles[99],
+    iatP50: h.percentiles[50],
+    iatP95: h.percentiles[95],
+    iatP99: h.percentiles[99],
     iatMax: null != f ? f : 0
   }
 }

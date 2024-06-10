@@ -23,8 +23,8 @@ var i = s("120356"),
   m = s("689938"),
   C = s("611273");
 let A = s("775322"),
-  h = s("853453"),
-  O = (0, _.uid)();
+  O = s("853453"),
+  h = (0, _.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
 let p = {
   page: f.AnalyticsPages.USER_SETTINGS,
@@ -70,7 +70,7 @@ function M() {
   }), (0, l.jsxs)(u.FormSection, {
     className: C.marginBottom20,
     children: [(0, l.jsx)(u.FormTitle, {
-      id: O,
+      id: h,
       tag: u.FormTitleTags.H3,
       className: C.marginBottom8,
       children: m.default.Messages.NOISE_SUPPRESSION
@@ -88,7 +88,7 @@ function M() {
       className: C.marginBottom8,
       type: u.FormNoticeTypes.PRIMARY,
       imageData: {
-        src: (0, d.isThemeLight)(e) ? A : h,
+        src: (0, d.isThemeLight)(e) ? A : O,
         width: 70,
         height: 40
       },

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -55,14 +55,14 @@ function A(e, t) {
   }, [e, s]), [s, a]
 }
 
-function h() {
+function O() {
   let [e, t] = n.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
     platformZoom: s,
     theme: l
   } = (0, r.useStateFromStoresObject)([N.default, E.default], () => ({
     theme: N.default.theme,
     platformZoom: E.default.zoom
-  })), [o, h] = n.useState("upright"), O = ["normal", "medium", "semibold", "bold", "extrabold"], p = new Map([
+  })), [o, O] = n.useState("upright"), h = ["normal", "medium", "semibold", "bold", "extrabold"], p = new Map([
     ["normal", 400],
     ["medium", 500],
     ["semibold", 600],
@@ -169,7 +169,7 @@ function h() {
               value: "mono"
             }],
             onChange: e => {
-              h(e.value)
+              O(e.value)
             },
             value: o
           })
@@ -179,7 +179,7 @@ function h() {
         })]
       }), (0, a.jsxs)("div", {
         className: m.textGrid,
-        children: [(0, a.jsx)("div", {}), O.map(e => (0, a.jsx)("div", {
+        children: [(0, a.jsx)("div", {}), h.map(e => (0, a.jsx)("div", {
           className: m.columnHeading,
           children: (0, a.jsx)(d.Heading, {
             variant: "eyebrow",
@@ -196,7 +196,7 @@ function h() {
               color: "text-muted",
               children: ["(", e * R / 100, ")"]
             }) : null]
-          }, e), O.map(t => {
+          }, e), h.map(t => {
             var s;
             let n = null !== (s = "custom" === L ? x : L) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {

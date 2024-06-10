@@ -11,8 +11,8 @@ var l, a = n("735250"),
   f = n("43267"),
   h = n("933557"),
   m = n("93687"),
-  p = n("266076"),
-  C = n("199902"),
+  C = n("266076"),
+  p = n("199902"),
   g = n("19780"),
   E = n("306680"),
   S = n("944486"),
@@ -40,7 +40,7 @@ let O = {
   tension: 600
 };
 
-function D(e) {
+function b(e) {
   switch (e) {
     case "height":
     case "opacity":
@@ -55,7 +55,7 @@ function D(e) {
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
   }
 }
-class b extends(l = s.PureComponent) {
+class D extends(l = s.PureComponent) {
   componentWillEnter(e) {
     let {
       controller: t
@@ -65,7 +65,7 @@ class b extends(l = s.PureComponent) {
       height: 1,
       opacity: 1,
       scale: 1,
-      config: D
+      config: b
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -79,7 +79,7 @@ class b extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: D
+      config: b
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -93,7 +93,7 @@ class b extends(l = s.PureComponent) {
       height: 0,
       opacity: 0,
       scale: 0,
-      config: D
+      config: b
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -133,15 +133,15 @@ class b extends(l = s.PureComponent) {
       isGDMFacepileEnabled: h
     } = this.props, {
       hovered: m,
-      animating: C
+      animating: p
     } = this.state, g = e.isMultiUserDM() && null == e.icon && h;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(L.ListItem, {
         children: [(0, a.jsx)(N.default, {
-          hovered: !C && m,
-          selected: !C && n,
-          unread: !C && f,
+          hovered: !p && m,
+          selected: !p && n,
+          unread: !p && f,
           className: M.pill
         }), (0, a.jsx)(v.default, {
           text: null != t ? t : "",
@@ -171,7 +171,7 @@ class b extends(l = s.PureComponent) {
                 onContextMenu: this.handleContextMenu,
                 icon: g ? void 0 : this.getChannelIcon(),
                 backgroundStyle: g ? "on-hover" : "always",
-                children: g ? (0, a.jsx)(p.default, {
+                children: g ? (0, a.jsx)(C.default, {
                   channel: e,
                   size: u.AvatarSizes.SIZE_48,
                   facepileSizeOverride: u.AvatarSizes.SIZE_32,
@@ -194,7 +194,7 @@ class b extends(l = s.PureComponent) {
         scale: 0,
         height: 0,
         opacity: 0,
-        config: D
+        config: b
       })
     }), y(this, "handleContextMenu", e => {
       let {
@@ -222,7 +222,7 @@ class b extends(l = s.PureComponent) {
     })
   }
 }
-y(b, "defaultProps", {
+y(D, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -232,7 +232,7 @@ y(b, "defaultProps", {
     l = (0, h.default)(e.channel),
     s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
     i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
-    r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
+    r = (0, o.useStateFromStores)([p.default], () => p.default.getAllApplicationStreamsForChannel(n).length > 0),
     u = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
     {
@@ -242,10 +242,10 @@ y(b, "defaultProps", {
     }, {
       autoTrackExposure: !1
     }),
-    p = s === n,
+    C = s === n,
     _ = !1,
     I = !1;
-  return p && (_ = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
+  return C && (_ = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(D, {
     ...e,
     ref: t,
     channelName: l,
@@ -255,7 +255,7 @@ y(b, "defaultProps", {
     audio: _,
     video: I,
     stream: r,
-    isCurrentUserInThisDMCall: p,
+    isCurrentUserInThisDMCall: C,
     isGDMFacepileEnabled: f
   })
 })

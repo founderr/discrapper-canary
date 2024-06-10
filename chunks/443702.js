@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("853872"),
   C = s("78839"),
   A = s("706454"),
-  h = s("726985"),
-  O = s("981631"),
+  O = s("726985"),
+  h = s("981631"),
   p = s("689938"),
   R = s("499937");
 class M extends n.PureComponent {
@@ -35,7 +35,7 @@ class M extends n.PureComponent {
     })
   }
   handleRedemptionRedirect() {
-    c.default.setSection(O.UserSettingsSections.INVENTORY)
+    c.default.setSection(h.UserSettingsSections.INVENTORY)
   }
   render() {
     let {
@@ -54,17 +54,17 @@ class M extends n.PureComponent {
         className: R.syncing,
         children: (0, a.jsx)(o.Spinner, {})
       }) : (0, a.jsx)(I.Subsetting, {
-        setting: h.WebSetting.BILLING_PAYMENT_METHODS,
+        setting: O.WebSetting.BILLING_PAYMENT_METHODS,
         children: (0, a.jsx)(T.default, {
           paymentSources: s,
           defaultPaymentSourceId: n,
-          premiumSubscriptionPaymentSourceId: null != i && i.status !== O.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
+          premiumSubscriptionPaymentSourceId: null != i && i.status !== h.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
           locale: l,
           removing: r,
           submitting: d
         })
       }), (0, a.jsx)(I.Subsetting, {
-        setting: h.WebSetting.BILLING_TRANSACTION_HISTORY,
+        setting: O.WebSetting.BILLING_TRANSACTION_HISTORY,
         children: (0, a.jsx)("div", {
           className: R.paymentHistory,
           children: (0, a.jsxs)(o.HeadingLevel, {

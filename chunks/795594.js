@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("468026"),
   C = s("566620"),
   A = s("317381"),
-  h = s("979200"),
-  O = s("713938"),
+  O = s("979200"),
+  h = s("713938"),
   p = s("881998"),
   R = s("246946"),
   M = s("186095"),
@@ -198,7 +198,7 @@ let k = e => {
           })
         })(), (() => {
           let e = [];
-          for (let s of t) e.push((0, O.getScopeName)(s, t)), s === d.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(B.default.Messages.SCOPE_DM_YOU);
+          for (let s of t) e.push((0, h.getScopeName)(s, t)), s === d.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(B.default.Messages.SCOPE_DM_YOU);
           if (e.length > 0 || null != l && l.length > 0) return (0, a.jsx)(I.FormItem, {
             faded: !0,
             title: B.default.Messages.PERMISSIONS,
@@ -212,7 +212,7 @@ let k = e => {
                   children: e
                 })]
               }, t)), null == l ? void 0 : l.map((t, s) => {
-                let n = (0, h.getTextForDisclosure)(t);
+                let n = (0, O.getTextForDisclosure)(t);
                 return null != n ? (0, a.jsxs)("li", {
                   className: i()(y.permission, V.marginTop8),
                   children: [(0, a.jsx)(k, {

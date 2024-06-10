@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("709054"),
   h = n("208049"),
   m = n("763296"),
-  p = n("242291"),
-  C = n("174470"),
+  C = n("242291"),
+  p = n("174470"),
   g = n("549771"),
   E = n("964398"),
   S = n("409673"),
@@ -48,10 +48,10 @@ function N(e) {
         };
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
     }, [t, n, e])
-  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, C.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
+  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, p.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, b] = a.useState(void 0), D = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
-    (0, p.playSound)(e, n.id, j), x()
+    (0, C.playSound)(e, n.id, j), x()
   }, [j, n.id, x]);
   a.useEffect(() => {
     h.maybeFetchSoundboardSounds(), d.FrecencyUserSettingsActionCreators.loadIfNecessary()
@@ -66,13 +66,13 @@ function N(e) {
     properties: {
       source: v,
       guild_id: t,
-      media_session_id: b
+      media_session_id: D
     }
   }, {
     disableTrack: !L
   });
   let G = a.useCallback(e => {
-      y.current = e, D(null == e ? void 0 : e.soundId)
+      y.current = e, b(null == e ? void 0 : e.soundId)
     }, []),
     U = a.useCallback(e => {
       if (null == e) {

@@ -45,13 +45,13 @@ function N(e) {
     C = d.default.get(m);
   l()(null != C, "Missing plan");
   let A = (0, c.formatPrice)(N.total, N.currency),
-    h = "";
-  return C.interval === E.SubscriptionIntervalTypes.YEAR ? h = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+    O = "";
+  return C.interval === E.SubscriptionIntervalTypes.YEAR ? O = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
     price: A,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : C.interval === E.SubscriptionIntervalTypes.MONTH && (h = 1 === C.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+  }) : C.interval === E.SubscriptionIntervalTypes.MONTH && (O = 1 === C.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
     price: A,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
@@ -66,7 +66,7 @@ function N(e) {
     color: "text-muted",
     className: g,
     variant: "text-xs/normal",
-    children: h
+    children: O
   })
 }
 

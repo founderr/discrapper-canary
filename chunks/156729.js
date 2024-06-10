@@ -27,10 +27,10 @@ function A(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let h = {
+let O = {
   IS_DEFAULT: "isDefault"
 };
-class O extends(a = l.PureComponent) {
+class h extends(a = l.PureComponent) {
   componentWillUnmount() {
     c.default.wait(() => {
       (0, S.clearUpdatePaymentSourceError)(), (0, S.clearRemovePaymentSourceError)()
@@ -180,9 +180,9 @@ class O extends(a = l.PureComponent) {
             }) : m.default.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
           })]
         }), this.renderCardExpirationSection(), this.renderBillingAddressSection(), (0, n.jsx)(u.Checkbox, {
-          name: h.IS_DEFAULT,
+          name: O.IS_DEFAULT,
           value: i,
-          onChange: (e, t) => this.handleFieldChange(t, h.IS_DEFAULT),
+          onChange: (e, t) => this.handleFieldChange(t, O.IS_DEFAULT),
           type: u.Checkbox.Types.INVERTED,
           className: C.defaultSection,
           children: (0, n.jsx)(u.Text, {
@@ -270,11 +270,11 @@ class O extends(a = l.PureComponent) {
     }
   }
 }
-A(O, "defaultProps", {
+A(h, "defaultProps", {
   onDelete: () => {},
   onSubmit: () => {},
   onCancel: () => {}
 }), t.default = d.default.connectStores([_.default], () => ({
   updateError: _.default.editSourceError,
   removeError: _.default.removeSourceError
-}))(O)
+}))(h)

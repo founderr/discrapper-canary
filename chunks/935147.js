@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("25990"),
   C = s("466111"),
   A = s("626135"),
-  h = s("74538"),
-  O = s("589266"),
+  O = s("74538"),
+  h = s("589266"),
   p = s("296810"),
   R = s("433411"),
   M = s("532432"),
@@ -45,7 +45,7 @@ function F(e) {
     user: y
   } = e, {
     reducedMotion: V
-  } = n.useContext(i.AccessibilityPreferencesContext), H = h.default.isPremium(y), {
+  } = n.useContext(i.AccessibilityPreferencesContext), H = O.default.isPremium(y), {
     pendingAvatar: Y,
     pendingBanner: k,
     pendingThemeColors: w,
@@ -107,7 +107,7 @@ function F(e) {
             className: G.premiumIcon
           }), j.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
-        profilePreview: (0, a.jsx)(O.default, {
+        profilePreview: (0, a.jsx)(h.default, {
           location: "TryOutPremiumSection",
           user: y,
           onAvatarChange: N.setTryItOutAvatar,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -25,9 +25,9 @@ var a = s("735250"),
   C = s("689938"),
   A = s("485767");
 
-function h() {
-  let [e] = n.useState(() => I.default.getEnableHardwareAcceleration()), t = N.DisableGamesTab.useSetting(), s = N.DeveloperMode.useSetting(), h = N.DisableHomeAutoNav.useSetting(), {
-    hasLibraryApplication: O,
+function O() {
+  let [e] = n.useState(() => I.default.getEnableHardwareAcceleration()), t = N.DisableGamesTab.useSetting(), s = N.DeveloperMode.useSetting(), O = N.DisableHomeAutoNav.useSetting(), {
+    hasLibraryApplication: h,
     testModeApplicationId: p
   } = (0, l.useStateFromStoresObject)([c.default, u.default], () => ({
     hasLibraryApplication: u.default.hasLibraryApplication(),
@@ -74,7 +74,7 @@ function h() {
         note: C.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
         children: C.default.Messages.HARDWARE_ACCELERATION
       })
-    }), O && (0, a.jsx)(d.Subsetting, {
+    }), h && (0, a.jsx)(d.Subsetting, {
       setting: f.WebSetting.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
       children: (0, a.jsx)(r.FormSwitch, {
         value: !t,
@@ -93,7 +93,7 @@ function h() {
     }), (0, a.jsx)(d.Subsetting, {
       setting: f.WebSetting.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME,
       children: (0, a.jsx)(r.FormSwitch, {
-        value: !h,
+        value: !O,
         note: C.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
           helpCenterLink: T.default.getArticleURL(m.HelpdeskArticles.GUILD_HOME)
         }),

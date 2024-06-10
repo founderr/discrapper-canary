@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("880008"),
   C = s("795295"),
   A = s("169278"),
-  h = s("931003"),
-  O = s("507957"),
+  O = s("931003"),
+  h = s("507957"),
   p = s("626135"),
   R = s("251625"),
   M = s("358085"),
@@ -132,7 +132,7 @@ function y(e) {
             size: 18,
             color: o.default.unsafe_rawColors.BRAND_500.css,
             ...e,
-            children: (0, a.jsx)(O.default, {
+            children: (0, a.jsx)(h.default, {
               width: 18,
               height: 18,
               color: o.default.unsafe_rawColors.WHITE_500.css
@@ -230,7 +230,7 @@ function y(e) {
       } = I, s = e ? (0, a.jsx)(A.default, {
         className: P.toggleIconOn,
         foreground: P.fill
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(O.default, {
         className: P.toggleIconOff,
         foreground: P.fill
       }), n = t ? (0, a.jsx)(d.Tooltip, {

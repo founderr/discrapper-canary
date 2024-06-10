@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("332473"),
   C = s("921801"),
   A = s("290421"),
-  h = s("318661"),
-  O = s("80132"),
+  O = s("318661"),
+  h = s("80132"),
   p = s("735336"),
   R = s("204197"),
   M = s("25990"),
@@ -57,7 +57,7 @@ function w(e) {
   }, [o.username]);
   let C = !o.isClaimed(),
     A = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || C,
-    h = A ? H.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+    O = A ? H.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
     className: i()(Y.field, r),
     children: [(0, a.jsx)("div", {
@@ -103,7 +103,7 @@ function w(e) {
         })
       })
     }), (0, a.jsx)(c.Tooltip, {
-      text: h,
+      text: O,
       children: e => (0, a.jsx)(c.Button, {
         ...e,
         disabled: A,
@@ -399,7 +399,7 @@ function Z() {
       let e = x.default.getCurrentUser();
       return o()(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e
     }),
-    s = (0, h.default)(t.id),
+    s = (0, O.default)(t.id),
     n = (0, A.default)(s),
     l = U.StatusSetting.useSetting(),
     i = (0, d.useStateFromStores)([M.default], () => M.default.getErrors()),
@@ -438,7 +438,7 @@ function Z() {
           }), (0, a.jsx)(q, {
             user: t
           })]
-        }), (0, a.jsx)(O.default, {
+        }), (0, a.jsx)(h.default, {
           badges: n,
           className: Y.badgeList,
           badgeClassName: Y.badge

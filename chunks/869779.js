@@ -23,15 +23,15 @@ var s = l("735250"),
   N = l("533947"),
   p = l("277053"),
   C = l("388610"),
-  _ = l("592125"),
-  x = l("496675"),
+  x = l("592125"),
+  _ = l("496675"),
   M = l("699516"),
-  I = l("594174"),
-  R = l("740727"),
+  R = l("594174"),
+  I = l("740727"),
   A = l("585483"),
   O = l("787263"),
-  L = l("975316"),
-  v = l("428813"),
+  v = l("975316"),
+  L = l("428813"),
   j = l("2147"),
   y = l("856606"),
   b = l("981631"),
@@ -96,7 +96,7 @@ class w extends a.PureComponent {
           canManageWebhooks: u
         } = e, h = (0, f.getChannelIconComponent)(t), {
           GUILD_CATEGORY: g
-        } = b.ChannelTypes, S = T.THREAD_CHANNEL_TYPES.has(t.type), _ = t.type === g ? D.default.Messages.DELETE_CATEGORY : S ? t.isForumPost() ? D.default.Messages.DELETE_FORUM_POST : D.default.Messages.DELETE_THREAD : D.default.Messages.DELETE_CHANNEL;
+        } = b.ChannelTypes, S = T.THREAD_CHANNEL_TYPES.has(t.type), x = t.type === g ? D.default.Messages.DELETE_CATEGORY : S ? t.isForumPost() ? D.default.Messages.DELETE_FORUM_POST : D.default.Messages.DELETE_THREAD : D.default.Messages.DELETE_CHANNEL;
         return [{
           section: c.SectionTypes.HEADER,
           label: null != t ? (0, s.jsxs)(s.Fragment, {
@@ -104,13 +104,13 @@ class w extends a.PureComponent {
               width: 12,
               height: 12,
               className: F.channelIcon
-            }) : null, (0, m.computeChannelName)(t, I.default, M.default), null != l ? (0, s.jsx)(i.Text, {
+            }) : null, (0, m.computeChannelName)(t, R.default, M.default), null != l ? (0, s.jsx)(i.Text, {
               tag: "span",
               variant: "text-xs/semibold",
               color: "header-secondary",
               lineClamp: 1,
               className: F.category,
-              children: (0, m.computeChannelName)(l, I.default, M.default)
+              children: (0, m.computeChannelName)(l, R.default, M.default)
             }) : null]
           }) : D.default.Messages.CHANNEL_SETTINGS
         }, {
@@ -134,17 +134,17 @@ class w extends a.PureComponent {
         }, {
           section: b.ChannelSettingsSections.INSTANT_INVITES,
           label: D.default.Messages.INVITES,
-          element: v.default,
+          element: L.default,
           type: c.ContentTypes.CUSTOM,
           predicate: () => t.type !== g && n && !S
         }, {
           section: b.ChannelSettingsSections.INTEGRATIONS,
           label: D.default.Messages.INTEGRATIONS_OVERVIEW,
           ariaLabel: D.default.Messages.INTEGRATIONS_OVERVIEW,
-          element: L.default,
+          element: v.default,
           notice: {
             stores: [N.default],
-            element: L.ChannelSettingsIntegrationsNotice
+            element: v.ChannelSettingsIntegrationsNotice
           },
           predicate: () => !!u && T.GUILD_WEBHOOK_CHANNEL_TYPES.has(t.type)
         }, {
@@ -158,9 +158,9 @@ class w extends a.PureComponent {
               }), (0, d.popLayer)()
             })
           },
-          label: _,
-          ariaLabel: _,
-          icon: (0, s.jsx)(R.default, {
+          label: x,
+          ariaLabel: x,
+          icon: (0, s.jsx)(I.default, {
             width: 16,
             height: 16
           }),
@@ -186,11 +186,11 @@ function U() {
     canManageChannels: u,
     canManageRoles: c,
     canManageWebhooks: h
-  } = (0, n.useStateFromStoresObject)([x.default], () => ({
-    canManageChannels: x.default.can(b.Permissions.MANAGE_CHANNELS, e),
-    canManageRoles: null != e && x.default.can(b.Permissions.MANAGE_ROLES, e),
-    canManageWebhooks: null != e && x.default.can(b.Permissions.MANAGE_WEBHOOKS, e)
-  })), m = (0, n.useStateFromStores)([_.default], () => _.default.getChannel(null == e ? void 0 : e.parent_id));
+  } = (0, n.useStateFromStoresObject)([_.default], () => ({
+    canManageChannels: _.default.can(b.Permissions.MANAGE_CHANNELS, e),
+    canManageRoles: null != e && _.default.can(b.Permissions.MANAGE_ROLES, e),
+    canManageWebhooks: null != e && _.default.can(b.Permissions.MANAGE_WEBHOOKS, e)
+  })), m = (0, n.useStateFromStores)([x.default], () => x.default.getChannel(null == e ? void 0 : e.parent_id));
   return (0, s.jsx)(w, {
     channel: e,
     category: m,

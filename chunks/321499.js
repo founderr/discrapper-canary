@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return O
   }
 });
 var a = s("735250"),
@@ -39,7 +39,7 @@ function A() {
   }) : null
 }
 
-function h() {
+function O() {
   let e = (0, r.useStateFromStores)([T.default], () => T.default.theme),
     {
       openH264: t,

@@ -19,15 +19,15 @@ var s = l("735250"),
   N = l("146085"),
   p = l("192079"),
   C = l("277053"),
-  _ = l("271383"),
-  x = l("430824"),
+  x = l("271383"),
+  _ = l("430824"),
   M = l("496675"),
-  I = l("594174"),
-  R = l("467679"),
+  R = l("594174"),
+  I = l("467679"),
   A = l("285952"),
   O = l("474333"),
-  L = l("696202"),
-  v = l("630641"),
+  v = l("696202"),
+  L = l("630641"),
   j = l("241820"),
   y = l("170039"),
   b = l("417622"),
@@ -36,11 +36,11 @@ var s = l("735250"),
   P = l("605436"),
   w = l("27544"),
   U = l("415236"),
-  H = l("182905"),
-  B = l("71080"),
+  B = l("182905"),
+  H = l("71080"),
   G = l("981631"),
-  V = l("231338"),
-  k = l("689938"),
+  k = l("231338"),
+  V = l("689938"),
   W = l("974665");
 
 function Y(e) {
@@ -61,9 +61,9 @@ function Y(e) {
         } = e,
         p = !1;
       switch (S) {
-        case B.AudienceSelectorSections.ROLES:
+        case H.AudienceSelectorSections.ROLES:
           var C;
-          g = (E = l[N]).rowType === B.RowType.ROLE && (null === (C = E.tags) || void 0 === C ? void 0 : C.guild_connections) === null ? (0, s.jsx)(f.default, {
+          g = (E = l[N]).rowType === H.RowType.ROLE && (null === (C = E.tags) || void 0 === C ? void 0 : C.guild_connections) === null ? (0, s.jsx)(f.default, {
             className: W.shield,
             color: E.colorString,
             size: 20
@@ -83,7 +83,7 @@ function Y(e) {
             })]
           }), p = E.disabled;
           break;
-        case B.AudienceSelectorSections.MEMBERS:
+        case H.AudienceSelectorSections.MEMBERS:
           E = a[N], c = (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(o.Avatar, {
               src: E.avatarURL,
@@ -93,7 +93,7 @@ function Y(e) {
               className: W.rowLabel,
               variant: "text-sm/normal",
               children: E.name
-            }), E.bot && (0, s.jsx)(R.default, {
+            }), E.bot && (0, s.jsx)(I.default, {
               verified: E.verifiedBot,
               className: W.rowBotTag
             }), null != E.nickname && (0, s.jsx)(o.Text, {
@@ -108,7 +108,7 @@ function Y(e) {
           E = null
       }
       if (null == E) return null;
-      let _ = !p && null == n && null != E.id;
+      let x = !p && null == n && null != E.id;
       return (0, s.jsxs)(A.default, {
         justify: A.default.Justify.BETWEEN,
         align: A.default.Align.CENTER,
@@ -122,29 +122,29 @@ function Y(e) {
           color: "text-muted",
           variant: "text-xs/normal",
           children: P.getRowTypeLabel(E.rowType)
-        }), E.rowType !== B.RowType.EMPTY_STATE && (0, s.jsx)(o.TooltipContainer, {
+        }), E.rowType !== H.RowType.EMPTY_STATE && (0, s.jsx)(o.TooltipContainer, {
           className: W.removeIconContainer,
           text: null != n ? n : r(E.rowType, E.disabled),
           children: (0, s.jsx)(o.Clickable, {
             onClick: () => {
               var e, l, s;
-              return _ && null != E && (e = E.id, l = E.name, s = E.rowType, void d.default.show({
-                title: k.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
-                body: k.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
+              return x && null != E && (e = E.id, l = E.name, s = E.rowType, void d.default.show({
+                title: V.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
+                body: V.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
                   name: l
                 }),
-                cancelText: k.default.Messages.CANCEL,
+                cancelText: V.default.Messages.CANCEL,
                 onConfirm: () => (function(e, l) {
                   if (t.isGuildStageVoice()) {
-                    let s = (0, T.removeModeratorOverwrite)(e, l === B.RowType.ROLE ? m.PermissionOverwriteType.ROLE : m.PermissionOverwriteType.MEMBER, t);
+                    let s = (0, T.removeModeratorOverwrite)(e, l === H.RowType.ROLE ? m.PermissionOverwriteType.ROLE : m.PermissionOverwriteType.MEMBER, t);
                     (0, T.isEmptyOverwrite)(s) ? u.default.clearPermissionOverwrite(t.id, s.id): (0, h.savePermissionUpdates)(t.id, [s])
                   } else u.default.clearPermissionOverwrite(t.id, e)
                 })(e, s)
               }))
             },
-            "aria-disabled": !_,
-            "aria-label": k.default.Messages.REMOVE,
-            children: (0, s.jsx)(L.default, {
+            "aria-disabled": !x,
+            "aria-label": V.default.Messages.REMOVE,
+            children: (0, s.jsx)(v.default, {
               className: i()(W.removeIcon, {
                 [W.disabledRemoveIcon]: p || n
               })
@@ -159,13 +159,13 @@ function Y(e) {
         section: t
       } = e;
       switch (t) {
-        case B.AudienceSelectorSections.ROLES:
+        case H.AudienceSelectorSections.ROLES:
           return (0, s.jsx)(Z, {
-            title: k.default.Messages.ROLES
+            title: V.default.Messages.ROLES
           }, "roles-title");
-        case B.AudienceSelectorSections.MEMBERS:
+        case H.AudienceSelectorSections.MEMBERS:
           return (0, s.jsx)(Z, {
-            title: k.default.Messages.MEMBERS
+            title: V.default.Messages.MEMBERS
           }, "members-title")
       }
     },
@@ -178,7 +178,7 @@ function z(e) {
     guild: t,
     channel: a,
     permissionUpdates: n
-  } = e, d = (0, r.useStateFromStores)([x.default], () => x.default.getRoles(t.id)), u = P.getExistingRolesRowWithPermissionDisabled(t, d, a, N.MODERATE_STAGE_CHANNEL_PERMISSIONS, n), c = (0, r.useStateFromStores)([_.default], () => P.getExistingMembersRows(_.default.getMemberIds(t.id), a, t, N.MODERATE_STAGE_CHANNEL_PERMISSIONS, n)), h = (0, T.useCanUpdateStageChannelModerators)(a.id);
+  } = e, d = (0, r.useStateFromStores)([_.default], () => _.default.getRoles(t.id)), u = P.getExistingRolesRowWithPermissionDisabled(t, d, a, N.MODERATE_STAGE_CHANNEL_PERMISSIONS, n), c = (0, r.useStateFromStores)([x.default], () => P.getExistingMembersRows(x.default.getMemberIds(t.id), a, t, N.MODERATE_STAGE_CHANNEL_PERMISSIONS, n)), h = (0, T.useCanUpdateStageChannelModerators)(a.id);
 
   function m() {
     (0, o.openModalLazy)(async () => {
@@ -194,8 +194,8 @@ function z(e) {
   return (0, s.jsxs)("div", {
     className: i()(W.settingCard, W.active),
     children: [(0, s.jsx)(U.default, {
-      label: k.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_TITLE,
-      description: k.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_DESCRIPTION,
+      label: V.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_TITLE,
+      description: V.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_DESCRIPTION,
       icon: (0, s.jsx)(y.default, {
         className: W.cardIcon,
         height: 20,
@@ -211,9 +211,9 @@ function z(e) {
         children: [(0, s.jsx)(o.FormTitle, {
           tag: "h5",
           className: W.folderTitle,
-          children: k.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_LABEL
+          children: V.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_LABEL
         }), (0, s.jsx)(o.Tooltip, {
-          text: k.default.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
+          text: V.default.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
           shouldShow: !h,
           children: e => (0, s.jsx)(o.Button, {
             ...e,
@@ -221,14 +221,14 @@ function z(e) {
             color: o.Button.Colors.BRAND,
             onClick: m,
             disabled: !h,
-            children: k.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+            children: V.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
           })
         })]
       }), (0, s.jsx)(Y, {
         channel: a,
         roles: u,
         members: c,
-        disabledReason: h ? null : k.default.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
+        disabledReason: h ? null : V.default.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
         getRemoveTooltipHint: p.getRemoveModeratorTooltipHint
       })]
     })]
@@ -242,10 +242,10 @@ function K(e) {
     isPrivateGuildChannel: n,
     roles: d,
     members: u
-  } = e, c = (0, r.useStateFromStores)([M.default], () => M.default.can(V.Permissions.ADMINISTRATOR, t)), h = F.canEveryoneRole(V.Permissions.VIEW_CHANNEL, t), m = F.canEveryoneRole(V.Permissions.ADMINISTRATOR, t);
+  } = e, c = (0, r.useStateFromStores)([M.default], () => M.default.can(k.Permissions.ADMINISTRATOR, t)), h = F.canEveryoneRole(k.Permissions.VIEW_CHANNEL, t), m = F.canEveryoneRole(k.Permissions.ADMINISTRATOR, t);
   async function f() {
     let e = a.accessPermissions,
-      i = I.default.getCurrentUser();
+      i = R.default.getCurrentUser();
     if (!n && null != await (0, g.getBlockForChannelAlteration)(t.id, a.id)) {
       (0, o.openModalLazy)(async () => {
         let {
@@ -254,11 +254,11 @@ function K(e) {
         return l => (0, s.jsx)(e, {
           ...l,
           confirmButtonColor: o.ButtonColors.BRAND,
-          header: k.default.Messages.CANNOT_PRIVATIZE_CHANNEL,
-          confirmText: k.default.Messages.OKAY,
+          header: V.default.Messages.CANNOT_PRIVATIZE_CHANNEL,
+          confirmText: V.default.Messages.OKAY,
           children: (0, s.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: k.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING_PRIVATE.format({
+            children: V.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING_PRIVATE.format({
               onClick: () => {
                 S.default.open(t.id, G.GuildSettingsSections.ONBOARDING), l.onClose()
               }
@@ -271,17 +271,17 @@ function K(e) {
     P.toggleChannelEveryonePermission(a, e, n), !n && null != i && !c && P.grantUserChannelAccess(a, e)
   }
   let E = {
-    title: k.default.Messages.PRIVATE_CHANNEL,
-    subtitle: k.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION,
-    formLabel: k.default.Messages.FORM_LABEL_CHANNEL_PERMISSIONS
+    title: V.default.Messages.PRIVATE_CHANNEL,
+    subtitle: V.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION,
+    formLabel: V.default.Messages.FORM_LABEL_CHANNEL_PERMISSIONS
   };
-  return a.isCategory() ? (E.title = k.default.Messages.PRIVATE_CATEGORY, E.subtitle = k.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION, E.formLabel = k.default.Messages.FORM_LABEL_CATEGORY_PERMISSIONS) : a.type === G.ChannelTypes.GUILD_VOICE && (E.subtitle = k.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE), (0, s.jsxs)("div", {
+  return a.isCategory() ? (E.title = V.default.Messages.PRIVATE_CATEGORY, E.subtitle = V.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION, E.formLabel = V.default.Messages.FORM_LABEL_CATEGORY_PERMISSIONS) : a.type === G.ChannelTypes.GUILD_VOICE && (E.subtitle = V.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE), (0, s.jsxs)("div", {
     className: i()(W.settingCard, {
       [W.active]: n
     }),
     children: [(0, s.jsx)(U.default, {
       description: E.subtitle,
-      icon: (0, s.jsx)(v.default, {
+      icon: (0, s.jsx)(L.default, {
         className: W.cardIcon,
         height: 20,
         width: 20
@@ -296,13 +296,13 @@ function K(e) {
         className: W.adminWarning,
         children: (0, s.jsx)(O.default, {
           messageType: O.HelpMessageTypes.WARNING,
-          children: k.default.Messages.CHANNEL_PERMISSIONS_EVERYONE_IS_ADMIN_WARNING
+          children: V.default.Messages.CHANNEL_PERMISSIONS_EVERYONE_IS_ADMIN_WARNING
         })
       }), !h && !m && !n && (0, s.jsx)("div", {
         className: W.adminWarning,
         children: (0, s.jsx)(O.default, {
           messageType: O.HelpMessageTypes.WARNING,
-          children: k.default.Messages.CHANNEL_PERMISSIONS_EVERYONE_CAN_NOT_VIEW_WARNING
+          children: V.default.Messages.CHANNEL_PERMISSIONS_EVERYONE_CAN_NOT_VIEW_WARNING
         })
       }), n && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsxs)(A.default, {
@@ -328,7 +328,7 @@ function K(e) {
                 })
               })
             },
-            children: k.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+            children: V.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
           })]
         }), (0, s.jsx)(Y, {
           channel: a,
@@ -355,7 +355,7 @@ function Z(e) {
     })]
   })
 }
-t.default = r.default.connectStores([C.default, M.default, _.default, x.default], () => {
+t.default = r.default.connectStores([C.default, M.default, x.default, _.default], () => {
   let e;
   let t = C.default.channel,
     l = C.default.category,
@@ -364,10 +364,10 @@ t.default = r.default.connectStores([C.default, M.default, _.default, x.default]
     n = {},
     i = !1;
   if (null != t) {
-    e = x.default.getGuild(t.getGuildId());
-    let l = _.default.getMemberIds(null == e ? void 0 : e.id);
+    e = _.default.getGuild(t.getGuildId());
+    let l = x.default.getMemberIds(null == e ? void 0 : e.id);
     if (null != e) {
-      let r = x.default.getRoles(e.id);
+      let r = _.default.getRoles(e.id);
       n = C.default.editedPermissionIds.reduce((e, t) => {
         let l = C.default.getPermissionOverwrite(t);
         return null != l && (e[t] = l), e
@@ -375,7 +375,7 @@ t.default = r.default.connectStores([C.default, M.default, _.default, x.default]
     }
   }
   return {
-    canSyncChannel: null != l && M.default.can(V.Permissions.MANAGE_ROLES, l),
+    canSyncChannel: null != l && M.default.can(k.Permissions.MANAGE_ROLES, l),
     category: l,
     channel: t,
     filteredMembers: a,
@@ -396,11 +396,11 @@ t.default = r.default.connectStores([C.default, M.default, _.default, x.default]
     isPrivateGuildChannel: h,
     locked: m,
     permissionUpdates: f
-  } = e, [g, S] = a.useState(!F.canEveryoneRole(V.Permissions.SEND_MESSAGES, i));
+  } = e, [g, S] = a.useState(!F.canEveryoneRole(k.Permissions.SEND_MESSAGES, i));
   if (null == i || null == u) return null;
 
   function T() {
-    P.toggleChannelEveryonePermission(i, V.Permissions.SEND_MESSAGES, g), S(!g)
+    P.toggleChannelEveryonePermission(i, k.Permissions.SEND_MESSAGES, g), S(!g)
   }
 
   function N() {
@@ -426,26 +426,26 @@ t.default = r.default.connectStores([C.default, M.default, _.default, x.default]
     })
   }
   let p = {
-    title: k.default.Messages.CHANNEL_PERMISSIONS,
-    subtitle: k.default.Messages.CHANNEL_PERMISSIONS_SUBTITLE
+    title: V.default.Messages.CHANNEL_PERMISSIONS,
+    subtitle: V.default.Messages.CHANNEL_PERMISSIONS_SUBTITLE
   };
-  return i.isCategory() && (p.title = k.default.Messages.CATEGORY_SETTINGS, p.subtitle = k.default.Messages.CATEGORY_PERMISSIONS_SUBTITLE), (0, s.jsxs)(s.Fragment, {
+  return i.isCategory() && (p.title = V.default.Messages.CATEGORY_SETTINGS, p.subtitle = V.default.Messages.CATEGORY_PERMISSIONS_SUBTITLE), (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(o.FormTitle, {
       tag: "h1",
       children: p.title
     }), (0, s.jsx)(o.FormText, {
       children: p.subtitle
-    }), null != n && t ? m ? (0, s.jsx)(H.default, {
+    }), null != n && t ? m ? (0, s.jsx)(B.default, {
       canSync: !1,
       icon: b.default,
-      noticeText: k.default.Messages.CHANNEL_LOCKED_TO_CATEGORY.format({
+      noticeText: V.default.Messages.CHANNEL_LOCKED_TO_CATEGORY.format({
         categoryName: n.name
       })
-    }) : (0, s.jsx)(H.default, {
-      buttonText: k.default.Messages.SYNC_NOW,
+    }) : (0, s.jsx)(B.default, {
+      buttonText: V.default.Messages.SYNC_NOW,
       canSync: !0,
       icon: D.default,
-      noticeText: k.default.Messages.PERMISSIONS_UNSYNCED.format({
+      noticeText: V.default.Messages.PERMISSIONS_UNSYNCED.format({
         categoryName: n.name
       }),
       onClick: N

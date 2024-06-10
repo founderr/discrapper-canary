@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("703656"),
   C = s("853872"),
   A = s("346656"),
-  h = s("755596"),
-  O = s("682864"),
+  O = s("755596"),
+  h = s("682864"),
   p = s("153124"),
   R = s("86813"),
   M = s("41542"),
@@ -103,10 +103,10 @@ let y = e => {
           submitting: n,
           children: F.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_RESTART_SUBSCRIPTION
         }) : (0, a.jsxs)(a.Fragment, {
-          children: [!t && !l && (0, a.jsx)(h.default, {
+          children: [!t && !l && (0, a.jsx)(O.default, {
             label: F.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CHANGE_TIER,
             onClick: o
-          }), (0, a.jsx)(h.default, {
+          }), (0, a.jsx)(O.default, {
             label: F.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CANCEL,
             onClick: i
           })]
@@ -124,7 +124,7 @@ t.default = e => {
     expanded: T,
     handleToggleExpanded: g,
     subscriptionInfo: f
-  } = (0, D.default)(t), [C, h] = n.useState(!1), M = (0, p.useUID)(), {
+  } = (0, D.default)(t), [C, O] = n.useState(!1), M = (0, p.useUID)(), {
     analyticsLocations: Y
   } = (0, _.default)(), {
     shouldHideGuildPurchaseEntryPoints: k
@@ -143,9 +143,9 @@ t.default = e => {
     },
     z = async () => {
       try {
-        h(!0), await u.resubscribeToSubscription(t, Y), (0, v.openModal)()
+        O(!0), await u.resubscribeToSubscription(t, Y), (0, v.openModal)()
       } finally {
-        h(!1)
+        O(!1)
       }
     }, {
       isCancelled: Q,
@@ -252,7 +252,7 @@ t.default = e => {
           label: F.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBER_SINCE,
           value: Z
         })]
-      }), (0, a.jsx)(O.default, {
+      }), (0, a.jsx)(h.default, {
         size: 16
       }), !Q && !w && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.FormTitle, {

@@ -32,26 +32,26 @@ function g(e) {
     className: m,
     showPremiumIcon: C = !0,
     showResetThemeButton: A = !1,
-    forcedDivider: h
-  } = e, O = (0, c.default)(t.id, f), {
+    forcedDivider: O
+  } = e, h = (0, c.default)(t.id, f), {
     primaryColor: p,
     secondaryColor: R
   } = (0, S.default)({
     user: t,
-    displayProfile: O,
+    displayProfile: h,
     pendingThemeColors: n,
     isPreview: !0
   }), M = E.default.canUsePremiumProfileCustomization(t), x = null != s ? s : t.getAvatarURL(f, 80), D = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), L = (0, u.useAvatarColors)(x, D, !1);
   if (null == p || null == R) return null;
   let P = e => {
-    i(r()(e, null == O ? void 0 : O.themeColors) ? void 0 : e)
+    i(r()(e, null == h ? void 0 : h.themeColors) ? void 0 : e)
   };
   return (0, a.jsx)(_.default, {
     title: I.default.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !M && !g,
     className: l()(N.__invalid_profileThemesSection, m),
     showPremiumIcon: C,
-    forcedDivider: h,
+    forcedDivider: O,
     children: (0, a.jsxs)("div", {
       className: N.sectionContainer,
       children: [(0, a.jsx)("div", {

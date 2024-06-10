@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return O
   }
 }), s("47120");
 var a = s("735250");
@@ -132,7 +132,7 @@ function A() {
   })
 }
 
-function h(e) {
+function O(e) {
   let {
     className: t,
     showHeader: s = !0

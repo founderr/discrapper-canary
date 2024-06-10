@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return h
   }
 }), s("47120"), s("518263"), s("970173"), s("520712"), s("268111"), s("941497"), s("32026"), s("480839"), s("744285"), s("492257"), s("873817"), s("733860");
 var a = s("735250"),
@@ -45,7 +45,7 @@ function A(e) {
   })
 }
 
-function h(e) {
+function O(e) {
   let {
     items: t,
     dismissedContents: s,
@@ -60,7 +60,7 @@ function h(e) {
   })
 }
 
-function O() {
+function h() {
   var e;
   let t = (0, f.default)(e => e.recentlyShown),
     {
@@ -75,7 +75,7 @@ function O() {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     })) && void 0 !== e ? e : new Uint8Array,
-    [O, p] = function(e, t) {
+    [h, p] = function(e, t) {
       let [s, a] = n.useState(() => {
         let s = d.Storage.get(e);
         return null != s ? s : t
@@ -93,8 +93,8 @@ function O() {
       })
     },
     M = t.map(e => o.DismissibleContent[e]),
-    x = O.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !M.includes(e)),
-    D = Object.keys(o.DismissibleContent).filter(e => !M.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    x = h.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !M.includes(e)),
+    D = Object.keys(o.DismissibleContent).filter(e => !M.includes(e)).filter(e => !h.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
@@ -143,7 +143,7 @@ function O() {
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recently Shown"
           })
-        }), (0, a.jsx)(h, {
+        }), (0, a.jsx)(O, {
           items: M,
           dismissedContents: A,
           handleChange: R
@@ -154,7 +154,7 @@ function O() {
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recent Overrides"
           })
-        }), (0, a.jsx)(h, {
+        }), (0, a.jsx)(O, {
           items: x,
           dismissedContents: A,
           handleChange: R
@@ -164,7 +164,7 @@ function O() {
         children: (0, a.jsx)(u.FormTitle, {
           children: "Available Dismissible Contents"
         })
-      }), (0, a.jsx)(h, {
+      }), (0, a.jsx)(O, {
         items: D,
         dismissedContents: A,
         handleChange: R

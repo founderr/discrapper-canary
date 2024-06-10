@@ -18,7 +18,7 @@ t.default = e => {
     handleRightClick: e => (0, s.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([i.e("99387"), i.e("39285"), i.e("53466"), i.e("19213")]).then(i.bind(i, "422200"));
+      } = await Promise.all([i.e("99387"), i.e("39285"), i.e("48800"), i.e("19213")]).then(i.bind(i, "422200"));
       return t => (0, n.jsx)(e, {
         ...t,
         channel: o

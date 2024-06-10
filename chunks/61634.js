@@ -16,8 +16,8 @@ var l = n("470079"),
   f = n("554747"),
   h = n("146085"),
   m = n("427679"),
-  p = n("131704"),
-  C = n("199902"),
+  C = n("131704"),
+  p = n("199902"),
   g = n("314897"),
   E = n("592125"),
   S = n("650774"),
@@ -80,8 +80,8 @@ function O(e) {
     R = (0, r.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForGuild(e)),
     O = (0, d.useIsActivitiesInTextEnabled)(null === (t = R[0]) || void 0 === t ? void 0 : t.channelId, !1, "GuildMediaState"),
     {
-      guildHasVoice: D,
-      guildHasVideo: b,
+      guildHasVoice: b,
+      guildHasVideo: D,
       selectedVoiceChannelHasVideo: j
     } = (0, r.useStateFromStoresObject)([A.default, E.default, I.default, _.default, N.default], () => {
       var t;
@@ -107,7 +107,7 @@ function O(e) {
       }
     }, [e, n]),
     P = g.default.getId();
-  return (0, r.useStateFromStoresObject)([N.default, C.default, m.default, E.default, I.default, c.default], () => {
+  return (0, r.useStateFromStoresObject)([N.default, p.default, m.default, E.default, I.default, c.default], () => {
     var t, l, s;
     let r = N.default.getVoiceChannelId(),
       o = (null === (t = E.default.getChannel(r)) || void 0 === t ? void 0 : t.guild_id) === e,
@@ -132,19 +132,19 @@ function O(e) {
         return null != t && I.default.can(h.JOIN_VOCAL_CHANNEL_PERMISSIONS, t)
       }),
       A = o && null !== (s = null === (l = E.default.getChannel(r)) || void 0 === l ? void 0 : l.isGuildStageVoice()) && void 0 !== s && s,
-      v = !!o && null != C.default.getActiveStreamForUser(P, e),
-      x = C.default.getAllApplicationStreams().some(t => t.guildId === e),
+      v = !!o && null != p.default.getActiveStreamForUser(P, e),
+      x = p.default.getAllApplicationStreams().some(t => t.guildId === e),
       M = o && j,
       y = (() => {
         if (O) return R.length > 0;
         for (let e of R) {
           let t = E.default.getChannel(e.channelId);
-          if (null != t && (0, p.isVoiceChannel)(t.type)) return !0
+          if (null != t && (0, C.isVoiceChannel)(t.type)) return !0
         }
         return !1
       })(),
       G = c.default.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, S = v, _ = G) : (u = D, d = null != a, f = T, g = b, S = x, _ = y), {
+    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, S = v, _ = G) : (u = b, d = null != a, f = T, g = D, S = x, _ = y), {
       audio: u,
       video: g,
       screenshare: S,
@@ -154,5 +154,5 @@ function O(e) {
       gaming: i,
       isCurrentUserConnected: o || A
     }
-  }, [P, R, i, a, e, O, n, b, D, j])
+  }, [P, R, i, a, e, O, n, D, b, j])
 }

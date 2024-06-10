@@ -24,15 +24,15 @@ var a = s("735250"),
   m = s("350327"),
   C = s("246946"),
   A = s("25990"),
-  h = s("594174"),
-  O = s("74538"),
+  O = s("594174"),
+  h = s("74538"),
   p = s("695346"),
   R = s("265159"),
   M = s("532495");
 
 function x() {
-  let e = (0, r.useStateFromStores)([h.default], () => {
-    let e = h.default.getCurrentUser();
+  let e = (0, r.useStateFromStores)([O.default], () => {
+    let e = O.default.getCurrentUser();
     return i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
   });
   n.useEffect(() => {
@@ -58,7 +58,7 @@ function x() {
       }
     }),
     j = p.UseLegacyChatInput.useSetting() && null != x ? I.default.parse(void 0, x).content : x,
-    G = O.default.canUsePremiumProfileCustomization(e),
+    G = h.default.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: F
     } = (0, T.default)(E.default.PROFILE),
@@ -95,7 +95,7 @@ function x() {
           pendingAccentColor: P
         }),
         children: (0, a.jsx)(M.default, {})
-      }), !O.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(f.default, {
+      }), !h.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(f.default, {
         user: e
       })]
     })

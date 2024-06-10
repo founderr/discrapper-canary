@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("785145"),
   C = s("981631"),
   A = s("526761"),
-  h = s("726985"),
-  O = s("689938"),
+  O = s("726985"),
+  h = s("689938"),
   p = s("347620");
 
 function R() {
@@ -67,12 +67,12 @@ function R() {
     })
   }, [null == R ? void 0 : R.id, M]);
   let U = !0;
-  return P && b.includes(h.WebSetting.PROFILE_SERVER_PROFILES) && 1 === b.length && (v(A.ProfileCustomizationSubsection.GUILD), U = !1), (0, a.jsx)(o.AnalyticsLocationProvider, {
+  return P && b.includes(O.WebSetting.PROFILE_SERVER_PROFILES) && 1 === b.length && (v(A.ProfileCustomizationSubsection.GUILD), U = !1), (0, a.jsx)(o.AnalyticsLocationProvider, {
     value: L,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsx)(i.Heading, {
         variant: "heading-lg/semibold",
-        children: O.default.Messages.USER_SETTINGS_PROFILES
+        children: h.default.Messages.USER_SETTINGS_PROFILES
       }),
       children: [(0, a.jsxs)(i.TabBar, {
         className: p.tabBar,
@@ -83,11 +83,11 @@ function R() {
         children: [U ? (0, a.jsx)(i.TabBar.Item, {
           className: p.tabBarItem,
           id: A.ProfileCustomizationSubsection.USER_PROFILE,
-          children: O.default.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
+          children: h.default.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
         }, A.ProfileCustomizationSubsection.USER_PROFILE) : null, (0, a.jsx)(i.TabBar.Item, {
           className: p.tabBarItem,
           id: A.ProfileCustomizationSubsection.GUILD,
-          children: O.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
+          children: h.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
         }, A.ProfileCustomizationSubsection.GUILD)]
       }), x === A.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
         selectedGuild: R

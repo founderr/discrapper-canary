@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("87484"),
   C = s("197115"),
   A = s("911367"),
-  h = s("430824"),
-  O = s("78839"),
+  O = s("430824"),
+  h = s("78839"),
   p = s("981631"),
   R = s("474936"),
   M = s("913754");
@@ -42,7 +42,7 @@ function x(e) {
   })
 }
 t.default = function() {
-  let [e, t] = n.useState(R.PremiumSubscriptionSKUs.TIER_2), [s, I] = n.useState(null), [N] = (0, i.useStateFromStoresArray)([h.default], () => [h.default.getGuilds()]), [D] = (0, i.useStateFromStoresArray)([O.default], () => [O.default.getPremiumSubscription()]);
+  let [e, t] = n.useState(R.PremiumSubscriptionSKUs.TIER_2), [s, I] = n.useState(null), [N] = (0, i.useStateFromStoresArray)([O.default], () => [O.default.getGuilds()]), [D] = (0, i.useStateFromStoresArray)([h.default], () => [h.default.getPremiumSubscription()]);
   (0, A.useFetchProfileEffects)();
   let L = Object.values(N).map(e => ({
       value: e,

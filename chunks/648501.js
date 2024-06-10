@@ -17,8 +17,8 @@ var a = n("442837"),
   f = n("430824"),
   h = n("496675"),
   m = n("306680"),
-  p = n("979651"),
-  C = n("26290"),
+  C = n("979651"),
+  p = n("26290"),
   g = n("968358"),
   E = n("790901"),
   S = n("714794"),
@@ -39,13 +39,13 @@ function R(e) {
     isChannelCollapsed: M,
     voiceStates: y,
     enableConnectedUserLimit: O,
-    enableActivities: D,
-    isSubscriptionGated: b,
+    enableActivities: b,
+    isSubscriptionGated: D,
     needSubscriptionToAccess: j,
     isNewChannel: P,
     muted: G,
     resolvedUnreadSetting: U
-  } = e, w = (0, a.useStateFromStores)([m.default], () => m.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
+  } = e, w = (0, a.useStateFromStores)([m.default], () => m.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([C.default], () => C.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
     channel: n,
     locked: F,
     video: V || H,
@@ -57,10 +57,10 @@ function R(e) {
   if ((0, S.default)(w)) return (0, l.jsx)(T.default, {
     mentionsCount: w
   });
-  if ((0, u.showPremiumChannelIconButton)(b)) return (0, l.jsx)(u.default, {
+  if ((0, u.showPremiumChannelIconButton)(D)) return (0, l.jsx)(u.default, {
     locked: j
   });
-  if (P) return (0, l.jsx)(C.TextBadge, {
+  if (P) return (0, l.jsx)(p.TextBadge, {
     text: v.default.Messages.NEW,
     color: s.default.unsafe_rawColors.BRAND_260.css,
     className: x.newChannel
@@ -69,23 +69,23 @@ function R(e) {
     variant: "text-xs/semibold",
     color: "text-brand",
     children: v.default.Messages.CHANNEL_NEW_POSTS_LABEL.format({
-      count: (0, C.getBadgeCountString)(Y)
+      count: (0, p.getBadgeCountString)(Y)
     })
   });
   if (!G && n.isForumLikeChannel() && null != K && K > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-muted",
-    children: (0, C.getBadgeCountString)(K)
+    children: (0, p.getBadgeCountString)(K)
   });
   let z = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0;
   return null != O && O && k ? (0, l.jsx)(N.default, {
     userCount: z,
     video: V || H,
     channel: n
-  }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(C.TextBadge, {
+  }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(p.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
-  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {
+  }) : null != b && b && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {
     embeddedApps: B,
     muted: G
   }) : null

@@ -25,8 +25,8 @@ var n = s("512722"),
   m = s("610966"),
   C = s("513901"),
   A = s("451392"),
-  h = s("906364"),
-  O = s("350327"),
+  O = s("906364"),
+  h = s("350327"),
   p = s("621853"),
   R = s("318661"),
   M = s("25990"),
@@ -85,10 +85,10 @@ function b() {
       currentGlobalName: G.globalName,
       pendingGlobalName: y,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(h.default, {
+    }), (0, a.jsx)(O.default, {
       sectionTitle: L.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: W.pronouns,
-      onPronounsChange: O.setPendingPronouns,
+      onPronounsChange: h.setPendingPronouns,
       pendingPronouns: Y,
       currentPronouns: null !== (U = null == F ? void 0 : F.pronouns) && void 0 !== U ? U : ""
     }, "pronouns"), (0, a.jsx)(I.default, {
@@ -107,20 +107,20 @@ function b() {
       children: [(0, a.jsx)(f.default, {
         showRemoveBannerButton: q,
         errors: W.banner,
-        onBannerChange: O.setPendingBanner,
+        onBannerChange: h.setPendingBanner,
         forcedDivider: !0
       }, "banner"), (0, a.jsx)(A.default, {
         user: G,
         pendingAvatar: B,
         pendingColors: w,
-        onThemeColorsChange: O.setPendingThemeColors,
+        onThemeColorsChange: h.setPendingThemeColors,
         forcedDivider: !0
       })]
     }) : (0, a.jsx)(m.default, {
       user: G,
       savedUserColor: null == F ? void 0 : F.accentColor,
       pendingColor: k,
-      setPendingAccentColor: O.setPendingAccentColor
+      setPendingAccentColor: h.setPendingAccentColor
     }, "color"), (0, a.jsx)(T.default, {
       sectionTitle: L.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: ee,

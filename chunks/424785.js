@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("201895"),
   h = n("305325"),
   m = n("281956"),
-  p = n("66999"),
-  C = n("506936"),
+  C = n("66999"),
+  p = n("506936"),
   g = n("359110"),
   E = n("922482"),
   S = n("431328"),
@@ -34,8 +34,8 @@ var a = n("120356"),
   M = n("306680"),
   y = n("9156"),
   O = n("979651"),
-  D = n("514342"),
-  b = n("974029"),
+  b = n("514342"),
+  D = n("974029"),
   j = n("934415"),
   P = n("98597"),
   G = n("648501"),
@@ -112,8 +112,8 @@ class K extends P.default {
       canReorderChannel: c,
       canMoveMembers: h,
       stageInstance: m,
-      isSubscriptionGated: p,
-      needSubscriptionToAccess: C,
+      isSubscriptionGated: C,
+      needSubscriptionToAccess: p,
       unread: g,
       resolvedUnreadSetting: E,
       mentionCount: S,
@@ -165,8 +165,8 @@ class K extends P.default {
                 unread: g,
                 mentionCount: S,
                 userCount: N,
-                isSubscriptionGated: p,
-                needSubscriptionToAccess: C
+                isSubscriptionGated: C,
+                needSubscriptionToAccess: p
               }),
               ...u,
               children: [_ && this.renderAcceptSuggestionButton(), _ && this.renderRemoveSuggestionButton(), !_ && this.renderOpenChatButton(), !_ && this.renderInviteButton(), !_ && this.renderEditButton(), !_ && this.renderChannelInfo()]
@@ -220,8 +220,8 @@ class K extends P.default {
       } = this.props, {
         shouldShowGuildVerificationPopout: t
       } = this.state;
-      if (t) return (0, l.jsx)(C.default, {
-        type: C.GuildVerificationPopoutTypes.VOICE,
+      if (t) return (0, l.jsx)(p.default, {
+        type: p.GuildVerificationPopoutTypes.VOICE,
         guildId: e.guild_id,
         closePopout: this.closeGuildVerificationPopout
       });
@@ -251,7 +251,7 @@ class K extends P.default {
             onMouseLeave: i,
             onFocus: u,
             onBlur: d,
-            children: (0, l.jsx)(b.default, {
+            children: (0, l.jsx)(D.default, {
               width: 16,
               height: 16,
               className: H.actionIcon
@@ -267,7 +267,7 @@ class K extends P.default {
     }), Y(this, "renderSubtitle", () => {
       var e;
       let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
-      return null == t ? null : (0, l.jsx)(D.default, {
+      return null == t ? null : (0, l.jsx)(b.default, {
         children: t
       })
     })
@@ -297,10 +297,10 @@ function z(e) {
       bypassLimit: R.default.can(B.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), m = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, S.useStageParticipantsCount)(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), m = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), p = (0, S.useStageParticipantsCount)(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, p.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
+  } = (0, C.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), b = (0, G.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
@@ -308,11 +308,11 @@ function z(e) {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,
     enableConnectedUserLimit: O || n.userLimit > 0 && n.userLimit < B.MAX_STAGE_VOICE_USER_LIMIT
-  }), b = e.connected && null == D;
+  }), D = e.connected && null == b;
   return (0, l.jsx)(W, {
     categoryCollapsed: f,
     connectAction: h,
-    numAudience: C,
+    numAudience: p,
     stageInstance: m,
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,
@@ -320,8 +320,8 @@ function z(e) {
     ...c,
     ...e,
     isFavoriteSuggestion: s && !v,
-    forceShowButtons: b,
-    channelInfo: D,
+    forceShowButtons: D,
+    channelInfo: b,
     resolvedUnreadSetting: d
   })
 }

@@ -25,8 +25,8 @@ var l = n("735250"),
   f = n("350810"),
   h = n("110924"),
   m = n("100527"),
-  p = n("970606"),
-  C = n("963202"),
+  C = n("970606"),
+  p = n("963202"),
   g = n("824991"),
   E = n("243778"),
   S = n("863249"),
@@ -48,8 +48,8 @@ function x(e) {
     onClick: d,
     children: h,
     isEligibleForUpsell: m = !0,
-    withInviteIcon: p = !0
-  } = e, C = (0, r.useLocation)(), [S, _] = (0, E.useSelectedDismissibleContent)([s], A.DismissibleContentGroupName.SIDEBAR), L = S !== s, x = (0, f.default)(), R = m && !x && !L && C.pathname !== N.Routes.GUILD_DISCOVERY;
+    withInviteIcon: C = !0
+  } = e, p = (0, r.useLocation)(), [S, _] = (0, E.useSelectedDismissibleContent)([s], A.DismissibleContentGroupName.SIDEBAR), L = S !== s, x = (0, f.default)(), R = m && !x && !L && p.pathname !== N.Routes.GUILD_DISCOVERY;
   a.useEffect(() => {
     R && u()
   }, [R, u]);
@@ -91,7 +91,7 @@ function x(e) {
             })
           }), (0, l.jsxs)("div", {
             className: v.popoutContent,
-            children: [p && (0, l.jsx)(g.ClanUpsellInviteByline, {}), (0, l.jsx)(g.ClanUpsellTitle, {
+            children: [C && (0, l.jsx)(g.ClanUpsellInviteByline, {}), (0, l.jsx)(g.ClanUpsellTitle, {
               title: t
             }), (0, l.jsx)(g.ClanUpsellMessage, {
               message: n
@@ -122,11 +122,11 @@ function R(e) {
     defaultGameId: t,
     children: n
   } = e, s = a.useCallback(() => {
-    (0, p.trackClanUserInviteViewed)({
+    (0, C.trackClanUserInviteViewed)({
       location: m.default.GUILDS_LIST
     })
   }, []), i = a.useCallback(() => {
-    (0, p.trackClanUserInviteClicked)({
+    (0, C.trackClanUserInviteClicked)({
       location: m.default.GUILDS_LIST
     })
   }, []), [r, o] = a.useMemo(() => {
@@ -157,15 +157,15 @@ function M(e) {
     children: n
   } = e, {
     guilds: s
-  } = (0, C.useClanPrepilotExperimentForAllGuilds)({
+  } = (0, p.useClanPrepilotExperimentForAllGuilds)({
     location: "GuildsBarClanAdminUpsellPopout",
     includeConverted: !1
   }), i = s.length > 0, r = a.useCallback(() => {
-    (0, p.trackClanAdminInviteViewed)({
+    (0, C.trackClanAdminInviteViewed)({
       location: m.default.GUILDS_LIST
     })
   }, []), o = a.useCallback(() => {
-    (0, p.trackClanAdminInviteClicked)({
+    (0, C.trackClanAdminInviteClicked)({
       location: m.default.GUILDS_LIST
     })
   }, []), [u, c] = a.useMemo(() => {

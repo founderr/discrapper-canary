@@ -46,13 +46,13 @@ function A() {
   }, "footer")
 }
 
-function h() {
+function O() {
   return (0, a.jsx)(C, {
     height: 8
   }, "header")
 }
 
-function O() {
+function h() {
   return (0, a.jsx)("div", {
     className: N.voiceListSearchEmpty,
     children: (0, a.jsx)(i.Text, {
@@ -219,7 +219,7 @@ function R(e) {
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === v && "" !== M && (0, a.jsx)(O, {}), (v > 0 || "" === M) && (0, a.jsx)(i.ListThin, {
+      }), 0 === v && "" !== M && (0, a.jsx)(h, {}), (v > 0 || "" === M) && (0, a.jsx)(i.ListThin, {
         innerId: E,
         innerRole: "listbox",
         "aria-label": I.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
@@ -252,7 +252,7 @@ function R(e) {
             }) : null
           }, n.id)
         },
-        renderListHeader: h,
+        renderListHeader: O,
         renderFooter: A,
         sectionHeight: 0,
         rowHeight: 34,

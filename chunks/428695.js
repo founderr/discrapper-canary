@@ -12,14 +12,14 @@ var l = n("735250"),
   f = n("981631"),
   h = n("689938"),
   m = n("53116");
-let p = (0, r.debounce)(u.default.trackWithMetadata, 500);
+let C = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
     guild: t,
     title: n,
     message: s,
     image: r,
-    type: C,
+    type: p,
     imageStyles: g,
     imageMarginX: E,
     imageMarginTop: S,
@@ -33,20 +33,20 @@ t.default = function(e) {
     className: x
   } = e;
   a.useEffect(() => {
-    p(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
-      notice_type: C,
+    C(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+      notice_type: p,
       guild_id: t.id
     })
-  }, [t.id, C]);
+  }, [t.id, p]);
   let R = null;
   "function" == typeof A ? R = A() : null != A && (R = (0, l.jsx)(o.Button, {
     className: m.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
-      null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      null != p && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         source: _,
         guild_id: t.id,
-        notice_type: C
+        notice_type: p
       }), null == T || T()
     },
     fullWidth: !0,
@@ -79,7 +79,7 @@ t.default = function(e) {
     children: [!0 === I ? null : (0, l.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
-          notice_type: C
+          notice_type: p
         }), null == N || N()
       },
       className: m.close,

@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("710808"),
   C = s("625205"),
   A = s("325808"),
-  h = s("823087"),
-  O = s("546997"),
+  O = s("823087"),
+  h = s("546997"),
   p = s("167540"),
   R = s("803567"),
   M = s("269876"),
@@ -97,7 +97,7 @@ function B() {
       children: (0, a.jsx)(x.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_MIC_TEST,
-      children: (0, a.jsx)(h.default, {})
+      children: (0, a.jsx)(O.default, {})
     }), (0, a.jsxs)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_TROUBLESHOOTING,
       children: [(0, a.jsx)(o.FormText, {
@@ -217,7 +217,7 @@ function B() {
             })]
           })
         }), N.isPlatformEmbedded && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(O.default, {}), (0, a.jsx)(o.FormSection, {
+          children: [(0, a.jsx)(h.default, {}), (0, a.jsx)(o.FormSection, {
             className: U.marginBottom20,
             title: v.default.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,
             children: (0, a.jsx)(o.FormSwitch, {

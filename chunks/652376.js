@@ -20,15 +20,15 @@ function u(e) {
     f = !1,
     h = !1,
     m = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId()),
-    p = null === (t = (0, s.default)()) || void 0 === t ? void 0 : t.guild_id,
-    C = null != p && u.includes(p),
+    C = null === (t = (0, s.default)()) || void 0 === t ? void 0 : t.guild_id,
+    p = null != C && u.includes(C),
     g = (0, a.useStateFromStores)([o.default], () => null != m && o.default.hasVideo(m), [m]),
     E = (0, a.useStateFromStores)([i.default], () => i.default.getCurrentUserActiveStream());
   return d && (c = !g, f = g, h = null != E && null != E.guildId && u.includes(E.guildId)), l.useMemo(() => ({
     audio: c,
     video: f,
     screenshare: h,
-    liveStage: C,
+    liveStage: p,
     isCurrentUserConnected: d
-  }), [c, f, h, C, d])
+  }), [c, f, h, p, d])
 }

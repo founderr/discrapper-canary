@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("410030"),
   C = s("100527"),
   A = s("906732"),
-  h = s("211242"),
-  O = s("15640"),
+  O = s("211242"),
+  h = s("15640"),
   p = s("89057"),
   R = s("703656"),
   M = s("246946"),
@@ -68,8 +68,8 @@ function J() {
     f = n.planIdFromItems === W.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
     C = u || g,
     A = null != n.trialEndsAt ? o()(n.trialEndsAt).diff(o()(), "d") : 0,
-    h = W.SubscriptionPlanInfo[n.planIdFromItems],
-    O = b.default.formatPriceString(b.default.getDefaultPrice(h.id), h.interval);
+    O = W.SubscriptionPlanInfo[n.planIdFromItems],
+    h = b.default.formatPriceString(b.default.getDefaultPrice(O.id), O.interval);
   return (0, a.jsxs)("div", {
     className: i()(Q.tierCard, {
       [Q.withTier2Rim]: C
@@ -102,20 +102,20 @@ function J() {
           className: Q.trialHeader,
           children: g ? z.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
             remainingTime: A,
-            price: O
+            price: h
           }) : f ? z.default.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
             percent: null !== (e = null == E ? void 0 : E.percentage) && void 0 !== e ? e : T,
-            regularPrice: O
+            regularPrice: h
           }) : z.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
             percent: null !== (t = null == E ? void 0 : E.percentage) && void 0 !== t ? t : W.DISCOUNT_PERCENTAGE_FALLBACK,
-            regularPrice: O,
+            regularPrice: h,
             numMonths: null !== (s = null == E ? void 0 : E.duration) && void 0 !== s ? s : W.DISCOUNT_DURATION_FALLBACK
           })
         })]
       }) : (0, a.jsx)(H.default, {
         variant: r ? "heading-lg/normal" : void 0,
         subscriptionTier: W.PremiumSubscriptionSKUs.TIER_2,
-        interval: h.interval,
+        interval: O.interval,
         shouldUseModifiedCopy: r
       }), (0, a.jsx)(V.Tier2FeatureItems, {
         featureSet: r ? V.Tier2FeatureSet.MODIFIED : void 0
@@ -218,13 +218,13 @@ function $() {
   })
 }
 t.default = function() {
-  let e = (0, h.useBlockedPaymentsConfig)(),
+  let e = (0, O.useBlockedPaymentsConfig)(),
     {
       analyticsLocations: t
     } = (0, A.default)(C.default.PREMIUM_SETTINGS),
     s = (0, d.useStateFromStores)([x.default], () => x.default.getPremiumTypeSubscription()),
     l = (0, d.useStateFromStores)([x.default], () => x.default.hasFetchedSubscriptions()),
-    i = (0, O.useSubscriptionPlansLoaded)(),
+    i = (0, h.useSubscriptionPlansLoaded)(),
     [r, o] = n.useState(!0),
     c = (0, F.useLocalizedPromoQuery)(),
     _ = null == c ? void 0 : c.countryCode,

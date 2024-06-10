@@ -17,8 +17,8 @@ var a = n("442837"),
   f = n("153124"),
   h = n("436088"),
   m = n("51144"),
-  p = n("603592"),
-  C = n("674552"),
+  C = n("603592"),
+  p = n("674552"),
   g = n("689938");
 
 function E() {
@@ -37,7 +37,7 @@ function E() {
     }),
     T = null == n ? void 0 : n.isBroadcastChannel(),
     A = T && E === (null == n ? void 0 : n.id);
-  return T && N ? (0, l.jsx)(p.default, {
+  return T && N ? (0, l.jsx)(C.default, {
     id: t,
     onClick: () => {
       T && null != n && i.default.selectPrivateChannel(n.id)
@@ -52,6 +52,6 @@ function E() {
       src: null == _ ? void 0 : _.getAvatarURL(null, 16),
       "aria-label": I
     }),
-    lowerBadge: S > 0 ? (0, C.renderMentionBadge)(S) : null
+    lowerBadge: S > 0 ? (0, p.renderMentionBadge)(S) : null
   }) : null
 }

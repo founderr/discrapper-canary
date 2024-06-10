@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return y
   },
   ReadonlyCategoryChannel: function() {
-    return b
+    return D
   },
   VoiceChannelCategory: function() {
-    return D
+    return b
   },
   VoiceChannelCategoryButton: function() {
     return O
@@ -25,8 +25,8 @@ var l = n("735250"),
   f = n("146773"),
   h = n("680089"),
   m = n("430824"),
-  p = n("496675"),
-  C = n("9156"),
+  C = n("496675"),
+  p = n("9156"),
   g = n("514342"),
   E = n("696202"),
   S = n("605403"),
@@ -53,13 +53,13 @@ let M = a.memo(function(e) {
       hideIcon: M,
       children: y
     } = e,
-    O = (0, o.useStateFromStores)([C.default], () => C.default.isChannelMuted(s.getGuildId(), s.id)),
-    D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
-    b = (0, o.useStateFromStores)([p.default], () => p.default.can(L.Permissions.MANAGE_CHANNELS, s));
+    O = (0, o.useStateFromStores)([p.default], () => p.default.isChannelMuted(s.getGuildId(), s.id)),
+    b = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
+    D = (0, o.useStateFromStores)([C.default], () => C.default.can(L.Permissions.MANAGE_CHANNELS, s));
   t = null != A ? T > A ? x.containerDragAfter : x.containerDragBefore : x.containerDefault;
   let j = a.useCallback(() => {
-      D ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
-    }, [s.id, D]),
+      b ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
+    }, [s.id, b]),
     P = a.useCallback(e => {
       if ("null" !== s.id) {
         let t = m.default.getGuild(s.getGuildId());
@@ -110,7 +110,7 @@ let M = a.memo(function(e) {
         children: (0, l.jsxs)("div", {
           ref: V,
           className: i()(x.iconVisibility, x.wrapper, {
-            [x.collapsed]: D,
+            [x.collapsed]: b,
             [x.muted]: O,
             [x.clickable]: !0
           }),
@@ -124,7 +124,7 @@ let M = a.memo(function(e) {
             "aria-label": v.default.Messages.CATEGORY_A11Y_LABEL.format({
               categoryName: s.name
             }),
-            "aria-expanded": !D,
+            "aria-expanded": !b,
             focusProps: {
               enabled: !1
             },
@@ -139,7 +139,7 @@ let M = a.memo(function(e) {
           }), (0, l.jsx)("div", {
             onClick: R,
             className: x.children,
-            children: b && !I ? (0, l.jsx)(u.Tooltip, {
+            children: D && !I ? (0, l.jsx)(u.Tooltip, {
               text: v.default.Messages.CREATE_CHANNEL,
               children: e => {
                 let {
@@ -240,7 +240,7 @@ let y = a.memo(function(e) {
       })]
     })
   }),
-  D = a.memo(function(e) {
+  b = a.memo(function(e) {
     let {
       category: t,
       channel: n
@@ -262,7 +262,7 @@ let y = a.memo(function(e) {
       }
     })
   }),
-  b = a.memo(function(e) {
+  D = a.memo(function(e) {
     let {
       channel: t
     } = e;

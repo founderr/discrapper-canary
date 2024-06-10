@@ -70,7 +70,7 @@ function f(e) {
   }).map(e => {
     let [t, s] = e;
     return "".concat(new Date(s).toLocaleString(), " (").concat(t, ")")
-  })), h = (0, a.jsx)(o.Clickable, {
+  })), O = (0, a.jsx)(o.Clickable, {
     onClick: f,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
@@ -92,7 +92,7 @@ function f(e) {
   return S ? (0, a.jsxs)("div", {
     className: I.group,
     children: [(0, a.jsxs)(o.FormSection, {
-      children: [h, (0, a.jsxs)("div", {
+      children: [O, (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.FormItem, {
           title: "Bucket Override",
           children: (0, a.jsx)(o.SingleSelect, {
@@ -158,7 +158,7 @@ function f(e) {
   }) : (0, a.jsx)("div", {
     className: I.group,
     children: (0, a.jsx)(o.FormSection, {
-      children: h
+      children: O
     })
   })
 }
@@ -176,7 +176,7 @@ function m(e) {
   }).map(e => {
     let [t, s] = e;
     return "".concat(new Date(s).toLocaleString(), " (").concat(t, ")")
-  })), [A, h] = (0, r.useStateFromStoresArray)([c.default, u.default], () => {
+  })), [A, O] = (0, r.useStateFromStoresArray)([c.default, u.default], () => {
     let e = i().sortBy(i().values(c.default.getGuilds()), e => e.name.toLowerCase()),
       t = {},
       a = [];
@@ -187,7 +187,7 @@ function m(e) {
       !(i in t) && (t[i] = 0), t[i]++, a.push("".concat(l.name, ": ").concat(i))
     }
     return [a, i()(t).keys().map(Number).sort().map(e => "".concat(t[e], " guilds in bucket ").concat(e)).join(", ")]
-  }), O = (0, a.jsx)(o.Clickable, {
+  }), h = (0, a.jsx)(o.Clickable, {
     onClick: f,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
@@ -209,7 +209,7 @@ function m(e) {
   return S ? (0, a.jsxs)("div", {
     className: I.group,
     children: [(0, a.jsxs)(o.FormSection, {
-      children: [O, (0, a.jsxs)("div", {
+      children: [h, (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.FormItem, {
           title: "Bucket Override",
           children: (0, a.jsx)(o.SingleSelect, {
@@ -231,7 +231,7 @@ function m(e) {
         className: I.description,
         children: [(0, a.jsxs)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
-          children: ["Current Assignments: ", h]
+          children: ["Current Assignments: ", O]
         }), null == m ? (0, a.jsx)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -283,7 +283,7 @@ function m(e) {
   }) : (0, a.jsx)("div", {
     className: I.group,
     children: (0, a.jsx)(o.FormSection, {
-      children: O
+      children: h
     })
   })
 }

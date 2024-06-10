@@ -32,11 +32,11 @@ function g(e) {
     placeholder: g,
     currentBio: f,
     disabled: m = !1
-  } = e, [C, A] = n.useState(null != u ? u : f), [h, O] = n.useState((0, r.toRichValue)(C)), p = n.useRef(!1);
+  } = e, [C, A] = n.useState(null != u ? u : f), [O, h] = n.useState((0, r.toRichValue)(C)), p = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
       let e = (0, r.toRichValue)(f);
-      A(f), O(e)
+      A(f), h(e)
     }
   }, [u, f]), (0, a.jsxs)(c.default, {
     title: t,
@@ -50,12 +50,12 @@ function g(e) {
       innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
-        t !== C && (A(t), O(s), d(t))
+        t !== C && (A(t), h(s), d(t))
       },
       placeholder: g,
       channel: I,
       textValue: C,
-      richValue: h,
+      richValue: O,
       type: i.ChatInputTypes.PROFILE_BIO_INPUT,
       onBlur: () => {
         p.current = !1

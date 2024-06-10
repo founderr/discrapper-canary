@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("619915"),
   h = n("201895"),
   m = n("873696"),
-  p = n("66999"),
-  C = n("22082"),
+  C = n("66999"),
+  p = n("22082"),
   g = n("665906"),
   E = n("592125"),
   S = n("430824"),
@@ -35,7 +35,7 @@ var a = n("120356"),
   y = n("647086"),
   O = n("513285");
 
-function D(e, t, n) {
+function b(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,7 +43,7 @@ function D(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class b extends L.default {
+class D extends L.default {
   componentWillUnmount() {
     this.resetTextChannelPopoutTimers()
   }
@@ -71,8 +71,8 @@ class b extends L.default {
       mentionCount: d,
       connectChannelDropTarget: c,
       connectChannelDragSource: f,
-      connectDragPreview: p,
-      canReorderChannel: C,
+      connectDragPreview: C,
+      canReorderChannel: p,
       isSubscriptionGated: g,
       isFavoriteSuggestion: E,
       subtitle: S,
@@ -108,7 +108,7 @@ class b extends L.default {
           subtitleColor: null == v ? void 0 : v.color,
           onMouseDown: this.handleMouseDown,
           onContextMenu: this.handleContextMenu,
-          connectDragPreview: C ? p : null,
+          connectDragPreview: p ? C : null,
           isFavoriteSuggestion: E,
           channelTypeOverride: _ ? M.ChannelTypes.GUILD_TEXT : void 0,
           resolvedUnreadSetting: N,
@@ -123,13 +123,13 @@ class b extends L.default {
         })
       })
     });
-    return C ? c(f(R)) : R
+    return p ? c(f(R)) : R
   }
   constructor(...e) {
-    super(...e), D(this, "state", {
+    super(...e), b(this, "state", {
       shouldShowThreadsPopout: !1,
       shouldShowActivities: !1
-    }), D(this, "enterTimer", 0), D(this, "exitTimer", 0), D(this, "handleMouseEnter", () => {
+    }), b(this, "enterTimer", 0), b(this, "exitTimer", 0), b(this, "handleMouseEnter", () => {
       (this.props.canShowThreadPreviewForUser || null != this.props.embeddedApps) && (this.resetTextChannelPopoutTimers(), this.enterTimer = setTimeout(() => {
         null != this.props.embeddedApps && this.props.embeddedApps.length > 0 ? this.setState({
           shouldShowActivities: !0
@@ -137,7 +137,7 @@ class b extends L.default {
           shouldShowThreadsPopout: !0
         })
       }, 200))
-    }), D(this, "handleMouseLeave", () => {
+    }), b(this, "handleMouseLeave", () => {
       this.resetTextChannelPopoutTimers(), this.exitTimer = setTimeout(() => {
         this.state.shouldShowActivities && this.setState({
           shouldShowActivities: !1
@@ -145,23 +145,23 @@ class b extends L.default {
           shouldShowThreadsPopout: !1
         })
       }, 250)
-    }), D(this, "handleThreadsPopoutClose", () => {
+    }), b(this, "handleThreadsPopoutClose", () => {
       this.resetTextChannelPopoutTimers(), this.setState({
         shouldShowThreadsPopout: !1
       })
-    }), D(this, "handleActivitiesPopoutClose", () => {
+    }), b(this, "handleActivitiesPopoutClose", () => {
       this.resetTextChannelPopoutTimers(), this.setState({
         shouldShowActivities: !1
       })
-    }), D(this, "handleClosePopout", () => {
+    }), b(this, "handleClosePopout", () => {
       this.state.shouldShowActivities && this.handleActivitiesPopoutClose(), this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose()
-    }), D(this, "handleMouseDown", () => {
+    }), b(this, "handleMouseDown", () => {
       this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
       let {
         channel: e
       } = this.props, t = e.getGuildId();
       o.default.preload(null != t ? t : M.ME, e.id)
-    }), D(this, "renderPopout", e => {
+    }), b(this, "renderPopout", e => {
       let {
         channel: t,
         sorting: n,
@@ -176,7 +176,7 @@ class b extends L.default {
         ...e,
         channel: this.props.channel
       })
-    }), D(this, "handleContextMenu", e => {
+    }), b(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props;
@@ -222,7 +222,7 @@ class b extends L.default {
     })
   }
 }
-let j = (0, d.makeChannelSortable)(b);
+let j = (0, d.makeChannelSortable)(D);
 
 function P(e) {
   let {
@@ -245,13 +245,13 @@ function P(e) {
       canManageChannel: _.default.can(M.Permissions.MANAGE_CHANNELS, t),
       canReorderChannel: !0 !== a && (n.id === y.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(M.Permissions.MANAGE_CHANNELS, e) : _.default.can(M.Permissions.MANAGE_CHANNELS, n)))
     }
-  }), A = (0, i.useStateFromStores)([C.default], () => C.default.shouldIndicateNewChannel(n.id, t.id)), {
+  }), A = (0, i.useStateFromStores)([p.default], () => p.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,
     isSubscriptionGated: x
-  } = (0, p.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
+  } = (0, C.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
     let e = T.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
-  }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), b = (0, v.default)({
+  }, [t]), b = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), D = (0, v.default)({
     channel: t,
     isChannelCollapsed: !1,
     isChannelSelected: o,
@@ -259,7 +259,7 @@ function P(e) {
     needSubscriptionToAccess: L,
     isNewChannel: A,
     muted: r,
-    enableActivities: D,
+    enableActivities: b,
     resolvedUnreadSetting: m
   }), P = (0, f.default)(t);
   return (0, l.jsx)(j, {
@@ -273,10 +273,10 @@ function P(e) {
     isNewChannel: A && e.canBeNewChannel,
     isFavoriteSuggestion: s && !R,
     canShowThreadPreviewForUser: O,
-    channelInfo: b,
+    channelInfo: D,
     embeddedApps: P,
     resolvedUnreadSetting: m,
-    hasChannelInfo: null != b,
-    enableActivities: D
+    hasChannelInfo: null != D,
+    enableActivities: b
   })
 }

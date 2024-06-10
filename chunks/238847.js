@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("255078"),
   C = s("853872"),
   A = s("346656"),
-  h = s("474333"),
-  O = s("755596"),
+  O = s("474333"),
+  h = s("755596"),
   p = s("682864"),
   R = s("153124"),
   M = s("86813"),
@@ -101,7 +101,7 @@ let G = e => {
           onClick: l,
           submitting: n,
           children: U.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_RESTART
-        }) : (0, a.jsx)(O.default, {
+        }) : (0, a.jsx)(h.default, {
           label: U.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CANCEL,
           onClick: s
         })
@@ -119,7 +119,7 @@ t.default = e => {
     handleToggleExpanded: g,
     subscriptionInfo: f,
     application: C
-  } = (0, b.default)(t), O = (0, R.useUID)(), [x, y] = n.useState(!1), {
+  } = (0, b.default)(t), h = (0, R.useUID)(), [x, y] = n.useState(!1), {
     analyticsLocations: V
   } = (0, T.default)();
   if (null == r || null == l || null == f) return null;
@@ -224,7 +224,7 @@ t.default = e => {
           }), (0, a.jsx)(c.Clickable, {
             onClick: s(g),
             "aria-label": U.default.Messages.APPLICATION_SUBSCRIPTION_TOGGLE_SECTION_LABEL,
-            "aria-controls": O,
+            "aria-controls": h,
             "aria-expanded": E,
             focusProps: {
               ringTarget: t
@@ -238,11 +238,11 @@ t.default = e => {
         })
       }
     }), E ? (0, a.jsxs)("div", {
-      id: O,
+      id: h,
       children: [(0, a.jsx)("div", {
         className: j.divider
-      }), w ? (0, a.jsx)(h.default, {
-        messageType: h.HelpMessageTypes.WARNING,
+      }), w ? (0, a.jsx)(O.default, {
+        messageType: O.HelpMessageTypes.WARNING,
         className: j.deletedHelpMessage,
         children: U.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_DELETED_WARNING
       }) : null, (0, a.jsx)(N.default, {

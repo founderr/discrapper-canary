@@ -19,13 +19,13 @@ var n = i("735250"),
   p = i("481060"),
   g = i("980568"),
   T = i("560768"),
-  v = i("812206"),
-  S = i("243778"),
+  S = i("812206"),
+  v = i("243778"),
   E = i("843693"),
   R = i("246642"),
   I = i("921227"),
-  C = i("314897"),
-  N = i("430824"),
+  N = i("314897"),
+  C = i("430824"),
   _ = i("496675"),
   x = i("699516"),
   O = i("885110"),
@@ -108,7 +108,7 @@ function z(e) {
     channel: t,
     guild: i
   } = e;
-  return (0, n.jsx)(S.default, {
+  return (0, n.jsx)(v.default, {
     contentTypes: [],
     children: e => {
       let {
@@ -154,17 +154,17 @@ class W extends a.PureComponent {
       channel: m,
       isThreadCreation: g,
       renderDots: T,
-      poggermodeEnabled: v,
-      isComboing: S
+      poggermodeEnabled: S,
+      isComboing: v
     } = this.props, {
       rateLimitPerUser: E
-    } = m, I = M.default.getCurrentUser(), C = N.default.getGuild(t), _ = E > 0, O = g ? [] : r()(o).keys().filter(e => e !== (null == I ? void 0 : I.id)).reject(e => x.default.isBlocked(e)).map(e => M.default.getUser(e)).filter(w.isNotNullish).map(e => F.default.getName(t, this.props.channel.id, e)).value();
-    if (0 === O.length && !_ && !S) return a && null != i ? (0, n.jsx)(G, {
+    } = m, I = M.default.getCurrentUser(), N = C.default.getGuild(t), _ = E > 0, O = g ? [] : r()(o).keys().filter(e => e !== (null == I ? void 0 : I.id)).reject(e => x.default.isBlocked(e)).map(e => M.default.getUser(e)).filter(w.isNotNullish).map(e => F.default.getName(t, this.props.channel.id, e)).value();
+    if (0 === O.length && !_ && !v) return a && null != i ? (0, n.jsx)(G, {
       activity: i,
       isFocused: s
     }) : (0, n.jsx)(z, {
       channel: m,
-      guild: C
+      guild: N
     });
     let j = "",
       A = null,
@@ -217,7 +217,7 @@ class W extends a.PureComponent {
     }) : B.default.Messages.SEVERAL_USERS_TYPING, (0, n.jsxs)("div", {
       className: l()(k.typing, {
         "stop-animation": !s,
-        [k.isComboing]: v && S
+        [k.isComboing]: S && v
       }, u),
       children: [(0, n.jsxs)("div", {
         className: k.typingDots,
@@ -239,7 +239,7 @@ class W extends a.PureComponent {
           ...e,
           children: [j, A]
         })
-      }), v && S && (0, n.jsx)(R.default, {
+      }), S && v && (0, n.jsx)(R.default, {
         channelId: m.id
       })]
     })
@@ -270,7 +270,7 @@ function K(e) {
     channel: t,
     isThreadCreation: i = !1,
     ...a
-  } = e, s = (0, f.useStateFromStores)([O.default], () => O.default.findActivity(e => null != e.application_id)), l = (0, f.useStateFromStores)([E.default, C.default], () => E.default.getUserCombo(C.default.getId(), t.id)), o = (0, f.useStateFromStores)([I.default, v.default], () => (0, T.default)(t, s, I.default, v.default)), r = (0, f.useStateFromStores)([j.default], () => j.default.getSlowmodeCooldownGuess(t.id, i ? j.SlowmodeType.CreateThread : j.SlowmodeType.SendMessage)), u = (0, f.useStateFromStores)([_.default], () => i ? _.default.can(D.Permissions.MANAGE_THREADS, t) : _.default.can(D.Permissions.MANAGE_CHANNELS, t) || _.default.can(D.Permissions.MANAGE_MESSAGES, t)), d = {
+  } = e, s = (0, f.useStateFromStores)([O.default], () => O.default.findActivity(e => null != e.application_id)), l = (0, f.useStateFromStores)([E.default, N.default], () => E.default.getUserCombo(N.default.getId(), t.id)), o = (0, f.useStateFromStores)([I.default, S.default], () => (0, T.default)(t, s, I.default, S.default)), r = (0, f.useStateFromStores)([j.default], () => j.default.getSlowmodeCooldownGuess(t.id, i ? j.SlowmodeType.CreateThread : j.SlowmodeType.SendMessage)), u = (0, f.useStateFromStores)([_.default], () => i ? _.default.can(D.Permissions.MANAGE_THREADS, t) : _.default.can(D.Permissions.MANAGE_CHANNELS, t) || _.default.can(D.Permissions.MANAGE_MESSAGES, t)), d = {
     ...a,
     baseTextColor: (0, p.useToken)(m.default.colors.INTERACTIVE_NORMAL).hex(),
     activeTextColor: (0, p.useToken)(m.default.colors.INTERACTIVE_NORMAL).hex(),

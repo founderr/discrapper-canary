@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -83,7 +83,7 @@ function A(e) {
   })
 }
 
-function h(e) {
+function O(e) {
   let {
     sound: t,
     isGlobal: s,

@@ -37,7 +37,7 @@ function p(e) {
         guildId: t.guild_id
       })
     })
-  }, [t, n]), _ = a.useCallback(e => {
+  }, [t, n]), x = a.useCallback(e => {
     n && (0, d.openModalLazy)(async () => {
       let {
         default: a
@@ -50,9 +50,9 @@ function p(e) {
       })
     })
   }, [n, t]), {
-    handleDragStart: x,
+    handleDragStart: _,
     handleDragReset: M,
-    handleDragComplete: I
+    handleDragComplete: R
   } = (0, h.default)(t.availableTags, e => {
     (0, u.updateChannel)({
       availableTags: e
@@ -64,10 +64,10 @@ function p(e) {
       tag: e,
       availableTags: t.availableTags,
       canManageChannels: n,
-      onTagClick: _,
-      onDragComplete: I,
+      onTagClick: x,
+      onDragComplete: R,
       onDragReset: M,
-      onDragStart: x
+      onDragStart: _
     }, e.id)) : null, E ? (0, s.jsx)(d.Clickable, {
       onClick: p,
       className: i()(N.addTags, {

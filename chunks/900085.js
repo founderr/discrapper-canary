@@ -15,8 +15,8 @@ var l, a = n("735250"),
   f = n("134616"),
   h = n("714338"),
   m = n("212819"),
-  p = n("14429"),
-  C = n("592125"),
+  C = n("14429"),
+  p = n("592125"),
   g = n("888369"),
   E = n("430824"),
   S = n("306680"),
@@ -32,9 +32,9 @@ var l, a = n("735250"),
   M = n("670512"),
   y = n("981631"),
   O = n("689938"),
-  D = n("216921");
+  b = n("216921");
 
-function b(e, t, n) {
+function D(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -46,12 +46,12 @@ let j = {
     bottom: 10
   },
   P = () => (0, a.jsxs)("div", {
-    className: D.emptyState,
+    className: b.emptyState,
     children: [(0, a.jsx)("div", {
-      className: D.emptyStateNote,
+      className: b.emptyStateNote,
       children: O.default.Messages.QUICKSWITCHER_EMPTY_TEXT
     }), (0, a.jsx)("div", {
-      className: D.emptyStateCTA,
+      className: b.emptyStateCTA,
       children: (0, a.jsx)(d.Anchor, {
         href: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
         children: O.default.Messages.QUICKSWITCHER_EMPTY_CTA
@@ -64,23 +64,23 @@ class G extends(l = s.Component) {
     return (0, a.jsx)(T.Channel, {
       ...this.props,
       children: (0, a.jsx)("div", {
-        className: D.miscContainer,
+        className: b.miscContainer,
         children: null != e ? e.name : null
       })
     })
   }
 }
-b(G, "defaultProps", {
+D(G, "defaultProps", {
   unread: !1
 });
-let U = u.default.connectStores([S.default, C.default], e => {
+let U = u.default.connectStores([S.default, p.default], e => {
     let {
       channel: t
     } = e;
     return {
       unread: S.default.hasUnread(t.id),
       mentions: S.default.getMentionCount(t.id),
-      category: C.default.getChannel(t.parent_id)
+      category: p.default.getChannel(t.parent_id)
     }
   })(G),
   w = u.default.connectStores([I.default], e => {
@@ -108,10 +108,10 @@ let U = u.default.connectStores([S.default, C.default], e => {
       mentions: S.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  V = u.default.connectStores([C.default, S.default], e => {
+  V = u.default.connectStores([p.default, S.default], e => {
     let {
       user: t
-    } = e, n = C.default.getDMFromUserId(t.id);
+    } = e, n = p.default.getDMFromUserId(t.id);
     return {
       mentions: null != n ? S.default.getMentionCount(n) : 0
     }
@@ -122,7 +122,7 @@ function H(e, t, n) {
     text: n,
     children: e => (0, a.jsx)("span", {
       ...e,
-      className: D.autocompleteQuerySymbol,
+      className: b.autocompleteQuerySymbol,
       children: t
     })
   }, e)
@@ -168,7 +168,7 @@ class k extends s.PureComponent {
     } = this.state, l = t.length > 0 && "" !== n;
     return (0, a.jsx)(d.FocusRing, {
       children: (0, a.jsx)("input", {
-        className: D.input,
+        className: b.input,
         "aria-label": O.default.Messages.QUICK_SWITCHER,
         ref: this.inputRef,
         type: "text",
@@ -204,7 +204,7 @@ class k extends s.PureComponent {
       rowHeight: 34,
       paddingBottom: j.bottom,
       sections: [t.length],
-      className: D.scroller,
+      className: b.scroller,
       renderRow: this.renderRow,
       renderSection: this.renderSection
     })
@@ -219,8 +219,8 @@ class k extends s.PureComponent {
   }
   renderProtip() {
     return (0, a.jsx)(N.default, {
-      className: r()(D.protip, {
-        [D.hasContent]: this.state.query.length > 0
+      className: r()(b.protip, {
+        [b.hasContent]: this.state.query.length > 0
       }),
       type: N.default.Types.INLINE,
       children: O.default.Messages.QUICKSWITCHER_PROTIP.format({
@@ -248,36 +248,36 @@ class k extends s.PureComponent {
       "aria-label": O.default.Messages.QUICK_SWITCHER,
       size: d.ModalSize.DYNAMIC,
       transitionState: this.props.transitionState,
-      className: r()(D.container, o.isMobile && D.mobileContainer),
+      className: r()(b.container, o.isMobile && b.mobileContainer),
       fullscreenOnMobile: !1,
       children: (0, a.jsxs)("div", {
-        className: r()(D.quickswitcher, o.isMobile && D.mobileQuickswitcher),
+        className: r()(b.quickswitcher, o.isMobile && b.mobileQuickswitcher),
         onMouseMove: this.handleMouseMove,
         children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
       })
     })
   }
   constructor(...e) {
-    super(...e), b(this, "scrollerRef", s.createRef()), b(this, "inputRef", s.createRef()), b(this, "_listId", (0, A.uid)()), b(this, "state", {
+    super(...e), D(this, "scrollerRef", s.createRef()), D(this, "inputRef", s.createRef()), D(this, "_listId", (0, A.uid)()), D(this, "state", {
       query: this.props.query,
       mouseFocusDisabled: !0
-    }), b(this, "handleInputChange", () => {
+    }), D(this, "handleInputChange", () => {
       let {
         current: e
       } = this.inputRef;
       null != e && this.search(e.value)
-    }), b(this, "handleMouseMove", () => {
+    }), D(this, "handleMouseMove", () => {
       let {
         mouseFocusDisabled: e
       } = this.state;
       !1 !== e && this.setState({
         mouseFocusDisabled: !1
       })
-    }), b(this, "focusResult", e => {
+    }), D(this, "focusResult", e => {
       !this.state.mouseFocusDisabled && (0, x.selectResult)(this.props.results.indexOf(e))
-    }), b(this, "selectResult", e => {
+    }), D(this, "selectResult", e => {
       (0, x.switchToResult)(e, this.props.queryMode === m.AutocompleterResultTypes.TEXT_CHANNEL)
-    }), b(this, "handleContextMenu", e => {
+    }), D(this, "handleContextMenu", e => {
       let t = this.props.results[this.props.selectedIndex];
       switch (t.type) {
         case m.AutocompleterResultTypes.GUILD:
@@ -332,7 +332,7 @@ class k extends s.PureComponent {
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
-                } = await n.e("40157").then(n.bind(n, "422200"));
+                } = await n.e("78650").then(n.bind(n, "422200"));
                 return t => (0, a.jsx)(e, {
                   ...t,
                   channel: l,
@@ -387,7 +387,7 @@ class k extends s.PureComponent {
             })
           })
       }
-    }), b(this, "handleKeyDown", e => {
+    }), D(this, "handleKeyDown", e => {
       let {
         mouseFocusDisabled: t,
         query: n
@@ -433,14 +433,14 @@ class k extends s.PureComponent {
           return
       }
       e.preventDefault(), (0, x.selectResult)(s)
-    }), b(this, "renderRow", e => {
+    }), D(this, "renderRow", e => {
       let {
         row: t
       } = e, n = this.props.results[t], {
         selectedIndex: l
       } = this.props, {
         showScores: s
-      } = p.default.getCurrentConfig({
+      } = C.default.getCurrentConfig({
         location: "62f4be_1"
       }, {
         autoTrackExposure: !1

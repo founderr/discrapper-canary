@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return O
   }
 }), s("47120");
 var a = s("735250"),
@@ -43,12 +43,12 @@ function A(e) {
   }))
 }
 
-function h() {
+function O() {
   let [e, t] = n.useState(!1), {
     aecDumpSupported: s,
     debugLogging: d,
-    aecDumpEnabled: h,
-    supportsConnectionReplay: O
+    aecDumpEnabled: O,
+    supportsConnectionReplay: h
   } = (0, l.useStateFromStoresObject)([c.default], () => ({
     aecDumpSupported: c.default.isAecDumpSupported(),
     debugLogging: c.default.getDebugLogging(),
@@ -57,7 +57,7 @@ function h() {
   })), p = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), R = (0, l.useStateFromStores)([E.default], () => {
     var e, t;
     return null !== (t = null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
-  }), M = ("canary" === I.default.releaseChannel || "development" === I.default.releaseChannel) && R && O;
+  }), M = ("canary" === I.default.releaseChannel || "development" === I.default.releaseChannel) && R && h;
   async function x() {
     t(!0);
     try {
@@ -100,7 +100,7 @@ function h() {
     className: m.marginBottom40,
     title: f.default.Messages.FORM_LABEL_DEBUG,
     children: [s && (0, a.jsx)(i.FormSwitch, {
-      value: h,
+      value: O,
       onChange: e => r.default.setAecDump(e),
       note: f.default.Messages.FORM_HELP_AEC_DUMP,
       children: f.default.Messages.FORM_CHECKBOX_AEC_DUMP

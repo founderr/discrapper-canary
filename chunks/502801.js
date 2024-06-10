@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return F
   }
 }), n("653041"), n("47120");
 var l = n("735250"),
@@ -16,14 +16,14 @@ var l = n("735250"),
   _ = n("100527"),
   c = n("906732"),
   C = n("933557"),
-  S = n("471445"),
-  T = n("734307"),
+  T = n("471445"),
+  S = n("734307"),
   A = n("359110"),
   I = n("210887"),
   f = n("131704"),
   L = n("699516"),
-  D = n("944486"),
-  N = n("914010"),
+  N = n("944486"),
+  D = n("914010"),
   h = n("800599"),
   U = n("594174"),
   R = n("186095"),
@@ -69,9 +69,9 @@ function y(e) {
     guildId: t,
     selectedChannelId: n,
     onSelectChannelId: a
-  } = e, d = (0, r.useStateFromStores)([D.default], () => D.default.getChannelId()), {
+  } = e, d = (0, r.useStateFromStores)([N.default], () => N.default.getChannelId()), {
     guildChannels: o
-  } = (0, r.useStateFromStoresObject)([T.default], () => T.default.getGuildWithoutChangingCommunityRows(t)), s = i.useMemo(() => {
+  } = (0, r.useStateFromStoresObject)([S.default], () => S.default.getGuildWithoutChangingCommunityRows(t)), s = i.useMemo(() => {
     let e = [];
     return o.forEachChannel(t => {
       !1 !== (0, G.canAttachClipsToChannel)(t.id) && ((0, f.isGuildSelectableChannelType)(t.type) || (0, f.isGuildVocalChannelType)(t.type)) && e.push(t)
@@ -95,7 +95,7 @@ function y(e) {
         } = e;
         if (t > 0) return null;
         let u = s[i],
-          r = (0, S.getChannelIconComponent)(u);
+          r = (0, T.getChannelIconComponent)(u);
         return null == r ? null : (0, l.jsx)(j, {
           channel: u,
           ChannelIcon: r,
@@ -111,7 +111,7 @@ function y(e) {
   })
 }
 
-function F(e) {
+function B(e) {
   let {
     friends: t,
     searchQuery: n,
@@ -169,16 +169,16 @@ function F(e) {
   })
 }
 
-function B(e) {
+function F(e) {
   let {
     clip: t,
     editMetadata: n,
     transitionState: a,
     onClose: s
-  } = e, [C, S] = i.useState(""), [T, I] = i.useState(!1), [f, D] = i.useState(null), R = (0, r.useStateFromStoresArray)([L.default], () => L.default.getFriendIDs()), P = (0, r.useStateFromStoresArray)([h.default, U.default], () => R.map(e => U.default.getUser(e)).filter(O.isNotNullish).sort((e, t) => {
+  } = e, [C, T] = i.useState(""), [S, I] = i.useState(!1), [f, N] = i.useState(null), R = (0, r.useStateFromStoresArray)([L.default], () => L.default.getFriendIDs()), P = (0, r.useStateFromStoresArray)([h.default, U.default], () => R.map(e => U.default.getUser(e)).filter(O.isNotNullish).sort((e, t) => {
     var n, l, i, a;
     return (null !== (i = null === (n = h.default.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== i ? i : 0) - (null !== (a = null === (l = h.default.getUserAffinity(e.id)) || void 0 === l ? void 0 : l.affinity) && void 0 !== a ? a : 0)
-  }), [R]), m = (0, r.useStateFromStores)([N.default], () => N.default.getGuildId()), {
+  }), [R]), m = (0, r.useStateFromStores)([D.default], () => D.default.getGuildId()), {
     analyticsLocations: G
   } = (0, c.default)(_.default.CLIPS_SHARE_MODAL);
   async function M(e) {
@@ -216,32 +216,32 @@ function B(e) {
     }), (0, l.jsx)(g.default, {
       className: x.searchBar,
       query: C,
-      onChange: S,
+      onChange: T,
       size: g.default.Sizes.MEDIUM,
       onClear: function() {
-        S("")
+        T("")
       },
       placeholder: H.default.Messages.INVITE_SEARCH_FOR_FRIENDS
     }), (0, l.jsx)("div", {
       className: u()(x.divider, x.topDivider)
-    }), (0, l.jsx)(F, {
+    }), (0, l.jsx)(B, {
       searchQuery: C,
       friends: P,
       onShareClip: v,
-      disabled: T
+      disabled: S
     }), null != m && (0, l.jsx)(y, {
       guildId: m,
       selectedChannelId: f,
-      onSelectChannelId: D
+      onSelectChannelId: N
     }), (0, l.jsxs)(E.ModalFooter, {
       children: [(0, l.jsx)(E.Button, {
         disabled: null == f,
-        submitting: T,
+        submitting: S,
         color: E.Button.Colors.BRAND,
         onClick: () => M(),
         children: H.default.Messages.CLIPS_EDIT_SHARE_CLIP
       }), (0, l.jsx)(E.Button, {
-        submitting: T,
+        submitting: S,
         look: E.ButtonLooks.LINK,
         onClick: s,
         color: E.ButtonColors.PRIMARY,

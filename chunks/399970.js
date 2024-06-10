@@ -32,7 +32,7 @@ function f(e) {
     authorizedApplicationId: S.default.testModeApplicationId,
     authorizationError: S.default.error,
     authorizing: S.default.isFetchingAuthorization
-  })), [m, C] = i.useState(null != a ? a : ""), [A, h] = i.useState("8080"), [O, p] = i.useState("localhost"), R = (0, T.useUID)(), M = g.test(m);
+  })), [m, C] = i.useState(null != a ? a : ""), [A, O] = i.useState("8080"), [h, p] = i.useState("localhost"), R = (0, T.useUID)(), M = g.test(m);
   async function x() {
     u.resetError();
     let e = function(e, t, s) {
@@ -43,7 +43,7 @@ function f(e) {
         case "proxy":
           return (0, c.default)(s)
       }
-    }(O, A, m);
+    }(h, A, m);
     null != await u.authorizeAndSetTestModeApplication(m, e) && t()
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
@@ -99,7 +99,7 @@ function f(e) {
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
               isDisabled: !M || "" === m,
-              value: O,
+              value: h,
               options: [{
                 value: "localhost",
                 label: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
@@ -114,20 +114,20 @@ function f(e) {
               },
               placeholder: "URL Origin Type"
             })
-          }), "localhost" !== O ? null : (0, l.jsx)(o.FormItem, {
+          }), "localhost" !== h ? null : (0, l.jsx)(o.FormItem, {
             className: I.inputWrapper,
             title: _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
               value: A,
               maxLength: 5,
-              onChange: e => h(e),
+              onChange: e => O(e),
               disabled: f
             })
           }), (0, l.jsx)(o.Button, {
             submitting: f,
             type: "submit",
-            disabled: !M || 0 === m.length || "localhost" === O && 0 === A.length,
+            disabled: !M || 0 === m.length || "localhost" === h && 0 === A.length,
             color: D ? o.Button.Colors.RED : o.Button.Colors.GREEN,
             children: D ? _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : _.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]

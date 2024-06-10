@@ -44,11 +44,11 @@ function A(e) {
   }), o.default.setMode(t)
 }
 
-function h(e) {
+function O(e) {
   return e >= 1e3 ? (e /= 1e3, "".concat(e.toFixed(2), "s")) : "".concat(e.toFixed(0), " ms")
 }
 
-function O(e) {
+function h(e) {
   let t, {
       inputMode: s
     } = e,
@@ -95,7 +95,7 @@ function O(e) {
             onValueChange: e => o.default.setMode(s, {
               delay: e
             }),
-            onValueRender: h,
+            onValueRender: O,
             maxValue: I.MAX_PTT_RELEASE_DELAY,
             "aria-labelledby": C
           })]
@@ -123,7 +123,7 @@ function p() {
         options: t,
         value: e
       })
-    }), e === I.InputModes.PUSH_TO_TALK && (0, a.jsx)(O, {
+    }), e === I.InputModes.PUSH_TO_TALK && (0, a.jsx)(h, {
       inputMode: e
     })]
   })

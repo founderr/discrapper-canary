@@ -157,7 +157,7 @@ class e9 extends l.PureComponent {
     o()(null != t, "Missing channel in Channel.openChannelContextMenu"), (0, C.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await n.e("40157").then(n.bind(n, "422200"));
+      } = await n.e("78650").then(n.bind(n, "422200"));
       return n => (0, a.jsx)(e, {
         ...n,
         channel: t

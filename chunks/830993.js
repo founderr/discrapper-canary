@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("430824"),
   h = n("496675"),
   m = n("158776"),
-  p = n("979651"),
-  C = n("823379"),
+  C = n("979651"),
+  p = n("823379"),
   g = n("355363"),
   E = n("737592"),
   S = n("561788"),
@@ -32,7 +32,7 @@ function L(e) {
   let {
     channel: f,
     guild: h,
-    onAction: p,
+    onAction: C,
     voiceStates: g,
     isChannelSelected: S,
     shouldShowSettingNudge: _
@@ -53,7 +53,7 @@ function L(e) {
   }(f, g);
   let I = (0, o.default)(f),
     L = Array.from((0, o.useEmbeddedAppsWithPresence)(I).values()),
-    x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
+    x = null !== (t = null == g ? void 0 : g.filter(p.isNotNullish)) && void 0 !== t ? t : [],
     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
     M = (0, s.useStateFromStores)([m.default], () => {
       let e = {};
@@ -84,7 +84,7 @@ function L(e) {
         embeddedApp: e,
         presenceActivity: null !== (n = e.presenceActivity) && void 0 !== n ? n : void 0,
         channel: f,
-        onAction: p
+        onAction: C
       }, t)
     }), M.map((e, t) => {
       let {
@@ -95,7 +95,7 @@ function L(e) {
         presenceActivity: a,
         channel: f,
         members: n,
-        onAction: p
+        onAction: C
       }, t)
     }), _ && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
@@ -129,7 +129,7 @@ function v(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: a
-  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), o = (0, g.default)({
+  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), o = (0, g.default)({
     channel: t,
     locked: i,
     video: r,

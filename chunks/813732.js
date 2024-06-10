@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("681833"),
   C = s("856888"),
   A = s("921801"),
-  h = s("246946"),
-  O = s("663389"),
+  O = s("246946"),
+  h = s("663389"),
   p = s("351402"),
   R = s("853872"),
   M = s("78839"),
@@ -87,12 +87,12 @@ t.default = function() {
     S = (0, r.useStateFromStores)([M.default], () => M.default.hasFetchedSubscriptions()),
     x = (0, r.useStateFromStores)([p.default], () => p.default.isBusy),
     D = (0, N.useSubscriptionPlansLoaded)(),
-    L = (0, r.useStateFromStores)([O.default], () => O.default.getSubsection());
+    L = (0, r.useStateFromStores)([h.default], () => h.default.getSubsection());
   return (n.useEffect(() => (d.default.wait(() => {
     (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
   }), function() {
     T.default.clearSubsection()
-  }), []), h.default.enabled) ? (0, a.jsx)(_.default, {}) : S && D ? L === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(f.default, {
+  }), []), O.default.enabled) ? (0, a.jsx)(_.default, {}) : S && D ? L === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(f.default, {
     onGoBack: () => T.default.clearSubsection()
   }) : L === B.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(C.default, {
     onGoBack: () => T.default.clearSubsection()

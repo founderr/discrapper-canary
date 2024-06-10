@@ -60,11 +60,11 @@ function g(e) {
     itemType: N,
     locked: p,
     lockTooltip: C,
-    showContextMenu: _,
-    theme: x,
+    showContextMenu: x,
+    theme: _,
     roleStyle: M,
-    "aria-label": I
-  } = e, R = a.useCallback(e => {
+    "aria-label": R
+  } = e, I = a.useCallback(e => {
     (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -84,7 +84,7 @@ function g(e) {
     selectedItem: S,
     onItemSelect: T,
     itemType: N,
-    "aria-label": null != C ? "".concat(I, ", ").concat(C) : I,
+    "aria-label": null != C ? "".concat(R, ", ").concat(C) : R,
     children: (0, s.jsxs)("div", {
       className: f.roleContent,
       children: ["dot" === M ? (0, s.jsx)(o.RoleDot, {
@@ -97,7 +97,7 @@ function g(e) {
         className: f.roleCircle
       }), function() {
         if (!p) return null;
-        let e = (0, r.isThemeDark)(x) ? l("27377") : l("514811");
+        let e = (0, r.isThemeDark)(_) ? l("27377") : l("514811");
         return (0, s.jsx)(o.Tooltip, {
           text: C,
           color: o.Tooltip.Colors.RED,
@@ -109,9 +109,9 @@ function g(e) {
         })
       }(), (0, s.jsx)("div", {
         className: f.roleInner,
-        onContextMenu: R,
+        onContextMenu: I,
         children: h
-      }), _ && null != i ? (0, s.jsx)(E, {
+      }), x && null != i ? (0, s.jsx)(E, {
         guild: u,
         role: i
       }) : null]

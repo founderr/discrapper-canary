@@ -31,7 +31,7 @@ t.default = () => {
     fetchPolicy: "cache-and-network"
   }), s = (0, d.useExpiredQuestsMap)(), g = (0, o.useIsEligibleForConcurrentQuests)({
     location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
-  }), [f, m] = n.useState(!0), [C, A] = n.useState([]), [h, O] = n.useState([]), p = n.useMemo(() => f ? t ? "unsorted" : "pending_sort" : "sorted", [f, t]);
+  }), [f, m] = n.useState(!0), [C, A] = n.useState([]), [O, h] = n.useState([]), p = n.useMemo(() => f ? t ? "unsorted" : "pending_sort" : "sorted", [f, t]);
   n.useEffect(() => {
     m(!0)
   }, [t, s]), n.useEffect(() => {
@@ -96,10 +96,10 @@ t.default = () => {
         let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
         return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
       }));
-      A(t), O(a), m(!1)
+      A(t), h(a), m(!1)
     }
   }, [e, s, p]);
-  let R = h.every(e => {
+  let R = O.every(e => {
     let {
       questIds: t
     } = e;
@@ -128,7 +128,7 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: I.divider
-      }), g ? h.map((e, t, s) => {
+      }), g ? O.map((e, t, s) => {
         let {
           location: n,
           questIds: l,

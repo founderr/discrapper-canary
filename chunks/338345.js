@@ -29,8 +29,8 @@ function f() {
     autoToggle: m,
     hideInstantInvites: C,
     hidePersonalInformation: A,
-    disableSounds: h,
-    disableNotifications: O,
+    disableSounds: O,
+    disableNotifications: h,
     enableContentProtection: p
   } = (0, i.useStateFromStoresObject)([S.default], () => ({
     ...S.default.getSettings()
@@ -102,7 +102,7 @@ function f() {
       }), (0, a.jsx)(c.Subsetting, {
         setting: T.WebSetting.STREAMER_MODE_DISABLE_SOUNDS,
         children: (0, a.jsx)(r.FormSwitch, {
-          value: h,
+          value: O,
           onChange: e => R("disableSounds", e),
           note: I.default.Messages.DISABLE_SOUNDS_DESCRIPTION,
           children: I.default.Messages.DISABLE_SOUNDS_LABEL
@@ -110,7 +110,7 @@ function f() {
       }), (0, a.jsx)(c.Subsetting, {
         setting: T.WebSetting.STREAMER_MODE_DISABLE_NOTIFICATIONS,
         children: (0, a.jsx)(r.FormSwitch, {
-          value: O,
+          value: h,
           onChange: e => R("disableNotifications", e),
           note: I.default.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
           children: I.default.Messages.DISABLE_NOTIFICATIONS_LABEL

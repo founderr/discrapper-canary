@@ -37,13 +37,13 @@ var n = i("735250"),
   p = i("738619"),
   g = i("393238"),
   T = i("963374"),
-  v = i("118139"),
-  S = i("169525"),
+  S = i("118139"),
+  v = i("169525"),
   E = i("566006"),
   R = i("255269"),
   I = i("937889"),
-  C = i("443877"),
-  N = i("524444"),
+  N = i("443877"),
+  C = i("524444"),
   _ = i("287151"),
   x = i("695346"),
   O = i("433355"),
@@ -90,8 +90,8 @@ t.default = a.memo(function(e) {
     channel: f,
     isOpen: p,
     messageCount: T,
-    firstMessage: v,
-    content: S,
+    firstMessage: S,
+    content: v,
     media: E
   } = function(e) {
     let {
@@ -126,18 +126,18 @@ t.default = a.memo(function(e) {
   }), {
     ref: R,
     height: I
-  } = (0, g.default)(), C = (0, K.useForumPostComposerStore)(e => e.setCardHeight);
+  } = (0, g.default)(), N = (0, K.useForumPostComposerStore)(e => e.setCardHeight);
   a.useEffect(() => {
-    null != I && C(t, I)
-  }, [I, C, t]), a.useEffect(() => {
+    null != I && N(t, I)
+  }, [I, N, t]), a.useEffect(() => {
     null == s || s(R.current, t)
   }, [R, s, t]);
-  let N = a.useRef(null),
+  let C = a.useRef(null),
     {
       handleLeftClick: _,
       handleRightClick: x
     } = (0, q.default)({
-      facepileRef: N,
+      facepileRef: C,
       goToThread: i,
       channel: f
     }),
@@ -178,8 +178,8 @@ t.default = a.memo(function(e) {
       children: [(0, n.jsx)(m.HeadingLevel, {
         children: (0, n.jsx)(es, {
           channel: f,
-          firstMessage: v,
-          content: S,
+          firstMessage: S,
+          content: v,
           hasMediaAttachment: null != E,
           containerWidth: d
         })
@@ -187,11 +187,11 @@ t.default = a.memo(function(e) {
         enabled: !y,
         children: (0, n.jsx)(er, {
           channel: f,
-          firstMessage: v,
-          facepileRef: N
+          firstMessage: S,
+          facepileRef: C
         })
       })]
-    }), (null == v ? void 0 : v.blocked) || null == E ? null : (0, n.jsx)(em, {
+    }), (null == S ? void 0 : S.blocked) || null == E ? null : (0, n.jsx)(em, {
       channel: f,
       firstMedia: E
     })]
@@ -408,7 +408,7 @@ function ed(e) {
     disableReactionCreates: l,
     isLurking: o,
     isPendingMember: r
-  } = (0, C.default)(i);
+  } = (0, N.default)(i);
   return null == s || l ? null : (0, n.jsx)(_.Reaction, {
     className: et.updateReactionButton,
     message: t,
@@ -436,7 +436,7 @@ function ec(e) {
     disableReactionUpdates: l,
     isLurking: o,
     isPendingMember: r
-  } = (0, C.default)(a);
+  } = (0, N.default)(a);
   return null == s ? null : (0, n.jsx)(_.Reaction, {
     className: et.updateReactionButton,
     message: i,
@@ -499,13 +499,13 @@ function em(e) {
       firstMedia: s
     } = e,
     o = (0, h.useStateFromStores)([b.default], () => b.default.isFocused()),
-    r = (0, v.isAnimatedImageUrl)(s.src),
+    r = (0, S.isAnimatedImageUrl)(s.src),
     u = x.GifAutoPlay.useSetting(),
-    [d, c] = (0, S.useShouldObscure)({
+    [d, c] = (0, v.useShouldObscure)({
       media: s,
       channel: a
     }),
-    f = (0, S.getObscuredAlt)(c),
+    f = (0, v.getObscuredAlt)(c),
     {
       src: p,
       width: g,
@@ -529,7 +529,7 @@ function em(e) {
           [et.obscured]: d,
           [et.thumbnailOverride]: !0
         })
-      }) : (0, N.renderImageComponent)({
+      }) : (0, C.renderImageComponent)({
         src: p,
         maxHeight: t,
         maxWidth: i,

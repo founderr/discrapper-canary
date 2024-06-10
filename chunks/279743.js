@@ -38,7 +38,7 @@ function T(e) {
       backgroundColor: I,
       borderColor: I
     }
-  })), h = S + 200 + 200, O = _ ? 0 : 200;
+  })), O = S + 200 + 200, h = _ ? 0 : 200;
   return n.useEffect(() => {
     A({
       reset: !0,
@@ -48,7 +48,7 @@ function T(e) {
         borderColor: I
       },
       config: {
-        duration: O,
+        duration: h,
         easing: o.default.Easing.ease
       }
     }), A({
@@ -59,18 +59,18 @@ function T(e) {
         borderColor: f
       }],
       config: {
-        duration: O,
+        duration: h,
         easing: o.default.Easing.ease
       }
     }), A({
-      delay: h,
+      delay: O,
       immediate: _,
       to: [{
         backgroundColor: g,
         borderColor: g
       }],
       config: {
-        duration: O,
+        duration: h,
         easing: o.default.Easing.ease
       },
       onRest: m

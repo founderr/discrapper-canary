@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("779618"),
   C = s("39604"),
   A = s("442334"),
-  h = s("356659"),
-  O = s("981631"),
+  O = s("356659"),
+  h = s("981631"),
   p = s("37113"),
   R = s("526761"),
   M = s("689938"),
@@ -43,7 +43,7 @@ function P() {
       clipsQuality: b
     } = (0, r.useStateFromStoresObject)([g.default], () => g.default.getSettings()),
     v = (0, r.useStateFromStores)([g.default], () => g.default.getHardwareClassification()),
-    U = (0, r.useStateFromStores)([I.default], () => I.default.getKeybindForAction(O.GlobalKeybindActions.SAVE_CLIP, !0)),
+    U = (0, r.useStateFromStores)([I.default], () => I.default.getKeybindForAction(h.GlobalKeybindActions.SAVE_CLIP, !0)),
     {
       enableDecoupledGameClipping: j
     } = S.default.useExperiment({
@@ -62,17 +62,17 @@ function P() {
   i()(null != U, "Save clip keybind unset");
   let B = (0, r.useStateFromStores)([E.default], () => E.default.locale),
     y = n.useMemo(() => [{
-      value: h.ClipsLengthSettings.SECONDS_30,
+      value: O.ClipsLengthSettings.SECONDS_30,
       label: M.default.Messages.CLIPS_LENGTH_SECONDS.format({
         count: 30
       })
     }, {
-      value: h.ClipsLengthSettings.MINUTES_1,
+      value: O.ClipsLengthSettings.MINUTES_1,
       label: M.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 1
       })
     }, {
-      value: h.ClipsLengthSettings.MINUTES_2,
+      value: O.ClipsLengthSettings.MINUTES_2,
       label: M.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 2
       })
@@ -130,7 +130,7 @@ function P() {
         look: T.InfoBoxLooks.WARNING,
         className: D.formItem,
         children: M.default.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
-          onClick: () => u.default.open(O.UserSettingsSections.VOICE, null, {
+          onClick: () => u.default.open(h.UserSettingsSections.VOICE, null, {
             scrollPosition: R.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })

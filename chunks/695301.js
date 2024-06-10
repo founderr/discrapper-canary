@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("451478"),
   h = n("291082"),
   m = n("61634"),
-  p = n("325257"),
-  C = n("640651");
+  C = n("325257"),
+  p = n("640651");
 t.default = a.memo(function(e) {
   let {
     guildNode: t,
@@ -25,14 +25,14 @@ t.default = a.memo(function(e) {
     badge: d.default.getMentionCount(g),
     unread: d.default.hasUnread(g)
   })), v = (0, r.useShouldShowInvitesDisabledNotif)(E) && 0 === A, x = a.useMemo(() => null != n ? n : v ? (0, l.jsx)("div", {
-    className: C.pauseBackground,
+    className: p.pauseBackground,
     children: (0, l.jsx)(h.default, {
-      className: C.pause,
+      className: p.pause,
       width: 10,
       height: 10
     })
   }) : null, [n, v]);
-  return (0, l.jsx)(p.default, {
+  return (0, l.jsx)(C.default, {
     ...e,
     guild: E,
     unavailable: I,

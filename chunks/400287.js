@@ -31,9 +31,9 @@ function N() {
     m = S.InlineAttachmentMedia.useSetting(),
     C = S.InlineEmbedMedia.useSetting(),
     A = S.RenderEmbeds.useSetting(),
-    h = S.RenderReactions.useSetting(),
+    O = S.RenderReactions.useSetting(),
     {
-      analyticsLocations: O
+      analyticsLocations: h
     } = (0, o.default)(r.default.TEXT_AND_IMAGES);
   return (0, a.jsxs)(i.FormSection, {
     tag: i.FormTitleTags.H1,
@@ -81,7 +81,7 @@ function N() {
         children: _.default.Messages.EMOJI
       }), (0, a.jsx)(i.FormSwitch, {
         className: l()(I.marginTop8, I.marginBottom20),
-        value: h,
+        value: O,
         onChange: S.RenderReactions.updateSetting,
         children: _.default.Messages.RENDER_REACTIONS
       }), (0, a.jsx)(i.FormSwitch, {
@@ -108,7 +108,7 @@ function N() {
               location: {
                 section: T.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
               },
-              location_stack: O
+              location_stack: h
             }), S.ExpressionSuggestionsEnabled.updateSetting(!e)
           },
           children: _.default.Messages.AUTO_SUGGEST_STICKERS
@@ -122,7 +122,7 @@ function N() {
               location: {
                 section: T.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
               },
-              location_stack: O
+              location_stack: h
             }), S.IncludeStickersInAutocomplete.updateSetting(e)
           },
           children: _.default.Messages.STICKERS_IN_AUTOCOMPLETE

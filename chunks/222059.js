@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("67212"),
   h = n("770471"),
   m = n("292584"),
-  p = n("835865"),
-  C = n("456541"),
+  C = n("835865"),
+  p = n("456541"),
   g = n("143614"),
   E = n("544803"),
   S = n("899740"),
@@ -33,8 +33,8 @@ var l = n("735250"),
   M = n("880080"),
   y = n("26290"),
   O = n("15434"),
-  D = n("780570"),
-  b = n("557177"),
+  b = n("780570"),
+  D = n("557177"),
   j = n("278464"),
   P = n("682662"),
   G = n("662146"),
@@ -63,18 +63,18 @@ function Y(e) {
     user: n,
     badge: f,
     link: m,
-    showProgressBadge: p
-  } = e, S = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [I, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, D] = a.useState(0), [j, B] = a.useState(!1), {
+    showProgressBadge: C
+  } = e, S = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [I, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, b] = a.useState(0), [j, B] = a.useState(!1), {
     canViewBroadcasts: Y
   } = h.default.useExperiment({
     location: "home_button_no_track"
   }, {
     autoTrackExposure: !1
   }), K = (0, g.default)(), W = K.length > 0 && Y;
-  (0, C.useTrackNewBroadcastDetected)();
+  (0, p.useTrackNewBroadcastDetected)();
   let z = (0, s.useTreeItem)("home"),
     Z = () => {
-      v(null), D(0), clearTimeout(L)
+      v(null), b(0), clearTimeout(L)
     };
   if (null == n) return null;
   let X = V.default.Messages.DIRECT_MESSAGES;
@@ -82,7 +82,7 @@ function Y(e) {
     location: "home_button"
   });
   let q = null;
-  !t && p ? q = (0, l.jsx)(u.default, {
+  !t && C ? q = (0, l.jsx)(u.default, {
     className: H.downloadProgress,
     determineOwnVisibility: !1
   }) : W && (q = (0, l.jsx)(R.default, {
@@ -99,10 +99,10 @@ function Y(e) {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
         onClick: () => {
-          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(Z, 500)), D(x + 1), 15 === x)) {
+          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(Z, 500)), b(x + 1), 15 === x)) {
             Z();
             let e = !r.Storage.get(w.DISCODO_STORAGE_KEY);
-            r.Storage.set(w.DISCODO_STORAGE_KEY, e), e && r.Storage.set(F.CUSTOM_NOTIFICATION_SOUNDS_DISCODO_STORAGE_KEY, !0), e ? (0, b.playSound)("discodo") : (0, b.playSound)("user_leave"), A(!0), setTimeout(() => {
+            r.Storage.set(w.DISCODO_STORAGE_KEY, e), e && r.Storage.set(F.CUSTOM_NOTIFICATION_SOUNDS_DISCODO_STORAGE_KEY, !0), e ? (0, D.playSound)("discodo") : (0, D.playSound)("user_leave"), A(!0), setTimeout(() => {
               A(!1)
             }, 1e3)
           }
@@ -178,8 +178,8 @@ function K() {
         {
           total: t,
           progress: n
-        } = D.getCombinedProgress(e),
-        l = D.calculateProgressPercentage(n, t);
+        } = b.getCombinedProgress(e),
+        l = b.calculateProgressPercentage(n, t);
       return l > 0 && l < 100
     }),
     n = (0, i.useStateFromStores)([m.default], () => m.default.getUserIdsToValidate()),
@@ -194,12 +194,12 @@ function K() {
     })),
     c = o + d,
     h = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
-    C = (0, S.useNewMessageRequestsCount)(),
-    g = s + c + C,
-    E = g === c && c > 0 && s + C === 0;
+    p = (0, S.useNewMessageRequestsCount)(),
+    g = s + c + p,
+    E = g === c && c > 0 && s + p === 0;
   a.useEffect(() => {
     n.length > 0 && (0, f.fetchBroadcasterBuckets)()
-  }, [n]), (0, p.default)();
+  }, [n]), (0, C.default)();
   let _ = L.default.getHomeLink();
   return E && (_ = w.Routes.APPLICATION_STORE), (0, l.jsx)(Y, {
     selected: e,

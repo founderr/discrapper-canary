@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("944486"),
   h = n("305878"),
   m = n("104259"),
-  p = n("729285"),
-  C = n("147754"),
+  C = n("729285"),
+  p = n("147754"),
   g = n("688438"),
   E = n("981631"),
   S = n("689938");
@@ -48,7 +48,7 @@ let _ = [{
   handler: (e, t) => (0, c.transitionToGuild)(e.id, t.id)
 }, {
   key: "ADD_SERVERS",
-  renderIcon: e => (0, l.jsx)(p.default, {
+  renderIcon: e => (0, l.jsx)(C.default, {
     className: e
   }),
   getName: () => S.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
@@ -72,7 +72,7 @@ let _ = [{
   handler: (e, t) => (0, r.openModalLazy)(async () => {
     let {
       default: a
-    } = await Promise.all([n.e("99387"), n.e("7654"), n.e("61939")]).then(n.bind(n, "560114"));
+    } = await Promise.all([n.e("99387"), n.e("7654"), n.e("92893")]).then(n.bind(n, "560114"));
     return n => (0, l.jsx)(a, {
       ...n,
       guild: e,
@@ -87,14 +87,14 @@ t.default = e => {
     channel: n
   } = e, i = (0, o.default)(t.id);
   a.useEffect(() => {
-    C.default.trackExposure({
+    p.default.trackExposure({
       guildId: t.id,
       location: "543af8_1"
     })
   }, [t.id]);
   let {
     showHubEventsList: r
-  } = C.default.useExperiment({
+  } = p.default.useExperiment({
     guildId: t.id,
     location: "543af8_2"
   }, {

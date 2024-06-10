@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("3148"),
   C = s("739566"),
   A = s("753206"),
-  h = s("837741"),
-  O = s("804545"),
+  O = s("837741"),
+  h = s("804545"),
   p = s("921801"),
   R = s("594174"),
   M = s("285952"),
@@ -357,12 +357,12 @@ function Z() {
     i = "UserSettingsAppearance",
     {
       enabled: d
-    } = (0, h.useBrandRefreshPerksExperiment)({
+    } = (0, O.useBrandRefreshPerksExperiment)({
       location: i
     }),
     {
       enabled: u
-    } = (0, O.usePrideMonthPerksExperiment)({
+    } = (0, h.usePrideMonthPerksExperiment)({
       location: i
     });
   n.useEffect(() => {

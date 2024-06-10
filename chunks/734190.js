@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("569471"),
   h = n("488131"),
   m = n("592125"),
-  p = n("306680"),
-  C = n("979651"),
+  C = n("306680"),
+  p = n("979651"),
   g = n("938475"),
   E = n("514342"),
   S = n("714794"),
@@ -55,12 +55,12 @@ t.default = a.memo(function(e) {
     isSelectedVoice: R,
     isLast: y,
     withGuildIcon: O
-  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
+  } = e, b = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), D = (0, o.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: P
-  } = (0, o.useStateFromStoresObject)([p.default], () => ({
-    unread: p.default.hasUnread(t.id),
-    mentionCount: p.default.getMentionCount(t.id)
+  } = (0, o.useStateFromStoresObject)([C.default], () => ({
+    unread: C.default.hasUnread(t.id),
+    mentionCount: C.default.getMentionCount(t.id)
   })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
@@ -70,13 +70,13 @@ t.default = a.memo(function(e) {
     null != a && (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await n.e("40157").then(n.bind(n, "422200"));
+      } = await n.e("78650").then(n.bind(n, "422200"));
       return t => (0, l.jsx)(e, {
         ...t,
         channel: a
       })
     })
-  }, [t.id]), F = null == D ? 0 : D.length, {
+  }, [t.id]), F = null == b ? 0 : b.length, {
     role: V,
     ...H
   } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
@@ -137,7 +137,7 @@ t.default = a.memo(function(e) {
               className: x.children,
               children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
                 userCount: F,
-                video: b,
+                video: D,
                 channel: t
               }) : null, (0, S.default)(P) ? (0, l.jsx)(I.default, {
                 mentionsCount: P
@@ -150,7 +150,7 @@ t.default = a.memo(function(e) {
       channel: t,
       collapsed: !R,
       collapsedMax: 6,
-      voiceStates: D,
+      voiceStates: b,
       location: T.AnalyticsLocations.GUILD_CHANNEL_LIST
     })]
   })

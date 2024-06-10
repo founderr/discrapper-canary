@@ -9,13 +9,13 @@ a("470079");
 var u = a("442837"),
   r = a("481060"),
   i = a("569471"),
-  s = a("346479"),
-  d = a("723170"),
+  d = a("346479"),
+  s = a("723170"),
   l = a("124368"),
   o = a("689938");
 
 function f(e) {
-  let t = (0, d.useThreadNotificationSetting)(e);
+  let t = (0, s.useThreadNotificationSetting)(e);
   return (0, u.useStateFromStores)([i.default], () => i.default.hasJoined(e.id)) ? (0, n.jsx)(r.MenuItem, {
     id: "thread-notifications",
     label: o.default.Messages.NOTIFICATION_SETTINGS,
@@ -28,7 +28,7 @@ function f(e) {
         group: "thread-notifications",
         id: "".concat(u),
         label: i,
-        action: () => s.default.setNotificationSettings(e, {
+        action: () => d.default.setNotificationSettings(e, {
           flags: u
         }),
         checked: u === t

@@ -28,8 +28,8 @@ function C() {
     threshold: C,
     autoThreshold: A
   } = (0, r.useStateFromStoresObject)([E.default], () => E.default.getModeOptions()), {
-    inputMode: h,
-    automaticVADSupported: O,
+    inputMode: O,
+    automaticVADSupported: h,
     isEnabled: p
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
@@ -42,7 +42,7 @@ function C() {
   }
 
   function M(e, t) {
-    S.default.setMode(h, {
+    S.default.setMode(O, {
       threshold: e,
       autoThreshold: t
     })
@@ -103,7 +103,7 @@ function C() {
       className: f.marginBottom8,
       children: I.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
-      children: [O && (0, a.jsx)(T.UID, {
+      children: [h && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
           className: i()(g.horizontal, f.marginBottom4),
           children: [(0, a.jsx)(c.FormTitle, {

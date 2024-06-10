@@ -20,8 +20,8 @@ var a, n, l, i, r = s("735250"),
   m = s("557177"),
   C = s("57562"),
   A = s("955204"),
-  h = s("64078"),
-  O = s("351780"),
+  O = s("64078"),
+  h = s("351780"),
   p = s("954794"),
   R = s("112843"),
   M = s("524484"),
@@ -385,7 +385,7 @@ function z(e) {
   let {
     onChangePage: t,
     setShowEnableAnimation: s
-  } = e, a = (0, u.useStateFromStoresObject)([O.default], () => O.default.getState()), [n, l] = o.useState({
+  } = e, a = (0, u.useStateFromStoresObject)([h.default], () => h.default.getState()), [n, l] = o.useState({
     x: 0,
     y: 0
   }), i = (0, R.default)();
@@ -403,7 +403,7 @@ function z(e) {
       }
     },
     E = (e, t) => {
-      if (c(e), (0, h.updatePoggermodeSettings)(e), null == t) return;
+      if (c(e), (0, O.updatePoggermodeSettings)(e), null == t) return;
       let s = d(a.confettiEnabled, e.confettiEnabled, a.enabled, e.enabled);
       0 === t && s && i.fire(n.x, n.y, {
         settings: e

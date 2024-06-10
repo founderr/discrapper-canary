@@ -31,8 +31,8 @@ function g(e) {
     isTryItOutFlow: C = !1
   } = e, {
     analyticsLocations: A
-  } = (0, o.default)(), h = null != s, {
-    userAvatarDecoration: O,
+  } = (0, o.default)(), O = null != s, {
+    userAvatarDecoration: h,
     guildAvatarDecoration: p,
     pendingAvatarDecoration: R,
     pendingErrors: M
@@ -40,7 +40,7 @@ function g(e) {
     analyticsLocations: A,
     isTryItOutFlow: C,
     guild: s
-  }), [A, C, s]), L = C || void 0 !== R ? null != R : (h ? p : O) != null, P = m ? S.default : r.Button;
+  }), [A, C, s]), L = C || void 0 !== R ? null != R : (O ? p : h) != null, P = m ? S.default : r.Button;
   return (0, a.jsxs)(_.default, {
     className: l,
     forcedDivider: g,

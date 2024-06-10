@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("734934"),
   C = s("223683"),
   A = s("312400"),
-  h = s("115345"),
-  O = s("392888"),
+  O = s("115345"),
+  h = s("392888"),
   p = s("921801"),
   R = s("657254"),
   M = s("470647"),
@@ -506,7 +506,7 @@ function J() {
         value: s,
         disabled: l || s,
         note: "Turns on the new notification system",
-        onChange: () => (0, O.openMigrationModal)(!0),
+        onChange: () => (0, h.openMigrationModal)(!0),
         children: Y.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
     }) : null, null]
@@ -515,14 +515,14 @@ function J() {
 async function $(e) {
   e(!0);
   let t = await (0, C.listSnapshots)();
-  0 === t.length ? await (0, h.revertToOldSystem)() : c.default.show({
+  0 === t.length ? await (0, O.revertToOldSystem)() : c.default.show({
     title: Y.default.Messages.CONFIRM,
     body: Y.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
       date: new Date(t[t.length - 1].recorded_at)
     }),
     cancelText: Y.default.Messages.CANCEL,
     confirmText: Y.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_ACTION,
-    onConfirm: h.revertToOldSystem
+    onConfirm: O.revertToOldSystem
   }), e(!1)
 }
 

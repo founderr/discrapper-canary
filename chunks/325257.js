@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("493683"),
   h = n("239091"),
   m = n("153867"),
-  p = n("35225"),
-  C = n("703656"),
+  C = n("35225"),
+  p = n("703656"),
   g = n("769654"),
   E = n("271383"),
   S = n("771845"),
@@ -29,8 +29,8 @@ var l = n("735250"),
   M = n("674552"),
   y = n("981631"),
   O = n("689938"),
-  D = n("634165");
-let b = {
+  b = n("634165");
+let D = {
   analyticsSource: {
     page: y.AnalyticsPages.GUILD_CHANNEL,
     section: y.AnalyticsSections.CHANNEL_LIST,
@@ -101,19 +101,19 @@ t.default = a.memo(function(e) {
     [ef, eh] = a.useState(!1),
     [em] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
   a.useEffect(() => () => em.cancel(), [em]);
-  let ep = a.useCallback(() => {
+  let eC = a.useCallback(() => {
       if (null != F) {
-        (0, C.transitionTo)(F, {
-          state: b
+        (0, p.transitionTo)(F, {
+          state: D
         });
         return
       }(0, g.transitionToGuild)($, {
-        state: b
+        state: D
       })
     }, [$, F]),
-    eC = a.useCallback(() => {
+    ep = a.useCallback(() => {
       if (null != F || null == V || W || !Q) return;
-      let e = (0, p.getChannelIdForGuildTransition)(V.id);
+      let e = (0, C.getChannelIdForGuildTransition)(V.id);
       null != e && f.default.preload(V.id, e)
     }, [F, V, W, Q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
@@ -153,14 +153,14 @@ t.default = a.memo(function(e) {
         mentions: z
       }),
       name: V.toString(),
-      onClick: ep,
+      onClick: eC,
       onMouseEnter: function() {
         q || eo(!0)
       },
       onMouseLeave: function() {
         q || eo(!1)
       },
-      onMouseDown: eC,
+      onMouseDown: ep,
       onContextMenu: eE,
       onKeyDown: eS,
       icon: V.getIconURL(96, eu && H),
@@ -173,10 +173,10 @@ t.default = a.memo(function(e) {
     }) : (0, l.jsx)("div", {
       ref: X ? es : void 0,
       "data-dnd-name": V.toString(),
-      className: i()(D.blobContainer, {
-        [D.sorting]: q,
-        [D.wobble]: ef,
-        [D.selected]: ef || k
+      className: i()(b.blobContainer, {
+        [b.sorting]: q,
+        [b.wobble]: ef,
+        [b.selected]: ef || k
       }),
       children: (0, l.jsx)(c.BlobMask, {
         selected: ef || k || eu,
@@ -192,7 +192,7 @@ t.default = a.memo(function(e) {
       hovered: !ea && eu,
       selected: !ea && k,
       unread: !ea && Y,
-      className: D.pill
+      className: b.pill
     }), (0, l.jsx)(v.default, {
       guild: V,
       disabled: q,

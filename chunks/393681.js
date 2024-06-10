@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("303172"),
   C = s("921801"),
   A = s("484459"),
-  h = s("430824"),
-  O = s("325067"),
+  O = s("430824"),
+  h = s("325067"),
   p = s("246946"),
   R = s("594174"),
   M = s("285952"),
@@ -282,7 +282,7 @@ class W extends n.PureComponent {
       {
         currentUser: t
       } = this.props,
-      s = h.default.getGuilds();
+      s = O.default.getGuilds();
     if (L.default.keys(s).filter(e => s[e].ownerId === t.id).length > 0) {
       this.setState({
         shouldRenderOwnedGuildsModal: !0
@@ -313,7 +313,7 @@ t.default = () => {
       let e = R.default.getCurrentUser();
       return o()(null != e, "ConnectedUserAccountSettings: currentUser cannot be undefined"), e
     }),
-    t = (0, d.useStateFromStores)([O.default], () => O.default.getBackupCodes()),
+    t = (0, d.useStateFromStores)([h.default], () => h.default.getBackupCodes()),
     s = (0, d.useStateFromStores)([p.default], () => p.default.hidePersonalInformation),
     {
       hasSearchResults: n,

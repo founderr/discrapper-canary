@@ -10,8 +10,8 @@ var l, a, s, i, r, o, u = n("392711"),
   f = n("570140"),
   h = n("220444"),
   m = n("565799"),
-  p = n("501655"),
-  C = n("569471"),
+  C = n("501655"),
+  p = n("569471"),
   g = n("592125"),
   E = n("430824"),
   S = n("306680"),
@@ -36,7 +36,7 @@ let v = {
 
 function y(e) {
   let t = g.default.getChannel(e);
-  return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? C.default.isMuted(t.id) : I.default.isChannelMuted(t.getGuildId(), t.id)) && (0, h.getHasImportantUnread)(t)
+  return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? p.default.isMuted(t.id) : I.default.isChannelMuted(t.getGuildId(), t.id)) && (0, h.getHasImportantUnread)(t)
 }
 
 function O(e) {
@@ -49,11 +49,11 @@ function O(e) {
   return (!l || !a) && S.default.getMentionCount(e) > 0
 }
 
-function D(e) {
-  return !I.default.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? m.default.getMutableParticipants(e.id, p.StageChannelParticipantNamedIndex.SPEAKER).length > 0 : N.default.getVoiceStatesForChannel(e).length > 0)
+function b(e) {
+  return !I.default.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? m.default.getMutableParticipants(e.id, C.StageChannelParticipantNamedIndex.SPEAKER).length > 0 : N.default.getVoiceStatesForChannel(e).length > 0)
 }
 
-function b(e) {
+function D(e) {
   var t, n, l;
   let {
     guildChannels: a
@@ -67,19 +67,19 @@ function b(e) {
     f = !0,
     h = !1,
     m = a.getCategoryFromSection(a.voiceChannelsSectionNumber),
-    p = null !== (n = null == m ? void 0 : m.getShownChannelIds()) && void 0 !== n ? n : [],
-    [C, g, E] = a.getSlicedChannels(s);
+    C = null !== (n = null == m ? void 0 : m.getShownChannelIds()) && void 0 !== n ? n : [],
+    [p, g, E] = a.getSlicedChannels(s);
   for (let e = 0; e < g.length; e++) {
     let t = g[e];
-    if ((y(t.id) || d().some(t.threadIds, y)) && (f = !1), (O(t.id) || d().some(t.threadIds, O)) && (c = !1), p.includes(t.id) && (h = !0), !f && !c && h) break
+    if ((y(t.id) || d().some(t.threadIds, y)) && (f = !1), (O(t.id) || d().some(t.threadIds, O)) && (c = !1), C.includes(t.id) && (h = !0), !f && !c && h) break
   }
   let _ = 0,
     I = !1,
     N = 0,
     T = !1;
   if (f || c)
-    for (let e = C.length - 1; e >= 0; e--) {
-      let t = C[e];
+    for (let e = p.length - 1; e >= 0; e--) {
+      let t = p[e];
       (y(t.id) || d().some(t.threadIds, y)) && (null == r && (r = t.id), I = !0), (O(t.id) || d().some(t.threadIds, O)) && (null == i && (i = t.id), _ += S.default.getMentionCount(t.id) + d().sumBy(t.threadIds, S.default.getMentionCount))
     }
   if (f || c)
@@ -90,12 +90,12 @@ function b(e) {
     }
   let L = null,
     x = null,
-    b = null !== (l = null == m ? void 0 : m.getChannelRecords()) && void 0 !== l ? l : [];
+    D = null !== (l = null == m ? void 0 : m.getChannelRecords()) && void 0 !== l ? l : [];
   c && N > 0 ? L = {
     mode: "mentions",
     mentionCount: N,
     targetChannelId: o
-  } : !h && d().some(b, D) ? L = {
+  } : !h && d().some(D, b) ? L = {
     mode: "voice-channels",
     mentionCount: 0,
     targetChannelId: null
@@ -119,7 +119,7 @@ function b(e) {
     bottomBar: P && null != L ? L : v
   }, !0
 }
-let j = d().throttle(b, 200);
+let j = d().throttle(D, 200);
 
 function P(e) {
   let {
@@ -163,7 +163,7 @@ function B(e) {
 }
 class F extends(a = c.default.Store) {
   initialize() {
-    this.waitFor(A.default, S.default, I.default, C.default, N.default, _.default, E.default)
+    this.waitFor(A.default, S.default, I.default, p.default, N.default, _.default, E.default)
   }
   getUnreadStateForGuildId(e) {
     var t;
@@ -181,7 +181,7 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = F) ? Object.defineProp
       guildId: t,
       channelIds: n
     } = e, l = E.default.getGuild(t);
-    return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && null != n && !d().isEqual(M[t], n) && (M[t] = n, b(t))
+    return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && null != n && !d().isEqual(M[t], n) && (M[t] = n, D(t))
   },
   BULK_ACK: function(e) {
     let {

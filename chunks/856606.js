@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   ChannelSettingsPermissionsNotice: function() {
-    return V
+    return k
   },
   default: function() {
     return Z
@@ -26,15 +26,15 @@ var s = l("735250"),
   N = l("607070"),
   p = l("146085"),
   C = l("598077"),
-  _ = l("277053"),
-  x = l("388610"),
+  x = l("277053"),
+  _ = l("388610"),
   M = l("271383"),
-  I = l("430824"),
-  R = l("496675"),
+  R = l("430824"),
+  I = l("496675"),
   A = l("594174"),
   O = l("568987"),
-  L = l("442313"),
-  v = l("823379"),
+  v = l("442313"),
+  L = l("823379"),
   j = l("892880"),
   y = l("63063"),
   b = l("5192"),
@@ -43,20 +43,20 @@ var s = l("735250"),
   P = l("51144"),
   w = l("257017"),
   U = l("188857"),
-  H = l("981631"),
-  B = l("689938"),
+  B = l("981631"),
+  H = l("689938"),
   G = l("513243");
-let V = o.default.connectStores([_.default, x.default], () => {
-  let e = x.default.getChannel();
+let k = o.default.connectStores([x.default, _.default], () => {
+  let e = _.default.getChannel();
   return {
-    submitting: _.default.formState === H.FormStates.SUBMITTING,
+    submitting: x.default.formState === B.FormStates.SUBMITTING,
     onReset() {
       (0, m.init)()
     },
     onSave() {
       if (null == e) return;
-      let t = _.default.editedPermissionIds.reduce((e, t) => {
-        let l = _.default.getPermissionOverwrite(t);
+      let t = x.default.editedPermissionIds.reduce((e, t) => {
+        let l = x.default.getPermissionOverwrite(t);
         return null != l && e.push(l), e
       }, []);
       (0, m.savePermissionUpdates)(e.id, t)
@@ -64,10 +64,10 @@ let V = o.default.connectStores([_.default, x.default], () => {
   }
 })(g.default);
 
-function k(e) {
+function V(e) {
   let {
     overwrite: t
-  } = e, l = (0, o.useStateFromStores)([_.default], () => _.default.channel), a = (0, o.useStateFromStores)([I.default], () => null != l ? I.default.getGuild(l.getGuildId()) : null), n = (0, o.useStateFromStores)([I.default], () => null != a ? I.default.getRoles(a.id) : void 0);
+  } = e, l = (0, o.useStateFromStores)([x.default], () => x.default.channel), a = (0, o.useStateFromStores)([R.default], () => null != l ? R.default.getGuild(l.getGuildId()) : null), n = (0, o.useStateFromStores)([R.default], () => null != a ? R.default.getRoles(a.id) : void 0);
   if (null == l || null == a || null == t) return null;
   let {
     guild_id: i,
@@ -76,7 +76,7 @@ function k(e) {
     id: f
   } = t, g = () => {
     var e;
-    if (null == I.default.getGuild(i) || null == n) return "";
+    if (null == R.default.getGuild(i) || null == n) return "";
     let t = n[f],
       l = A.default.getUser(f),
       s = null !== (e = null == l ? void 0 : l.username) && void 0 !== e ? e : "";
@@ -94,7 +94,7 @@ function k(e) {
       case "DENY":
         n = r.add(n, e)
     }
-    if (R.default.can(e, l, {
+    if (I.default.can(e, l, {
         [f]: {
           ...t,
           allow: a,
@@ -107,9 +107,9 @@ function k(e) {
         let l = A.default.getUser(t.id);
         null != l && (e = P.default.getName(l))
       } else if (t.type === S.PermissionOverwriteType.ROLE) {
-        let s = I.default.getGuild(l.getGuildId());
+        let s = R.default.getGuild(l.getGuildId());
         if (null != s) {
-          let l = I.default.getRole(s.id, t.id);
+          let l = R.default.getRole(s.id, t.id);
           null != l && (e = l.name)
         }
       }
@@ -118,22 +118,22 @@ function k(e) {
   }, N = () => {
     let e = g();
     c.default.show({
-      title: B.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
-      body: B.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
+      title: H.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
+      body: H.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
         name: e
       }),
-      cancelText: B.default.Messages.CANCEL,
+      cancelText: H.default.Messages.CANCEL,
       onConfirm: () => h.default.clearPermissionOverwrite(d, f)
     })
   }, C = e => {
-    let t = R.default.can(H.Permissions.ADMINISTRATOR, a) || R.default.can(H.Permissions.MANAGE_ROLES, l, void 0, void 0, !0);
-    return l.isGuildStageVoice() && p.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e) ? B.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.equals(e, H.Permissions.MANAGE_ROLES) || t) && (null == e || R.default.can(e, a) || t)) && B.default.Messages.HELP_MISSING_PERMISSION
-  }, x = f === i, M = l.isForumLikeChannel() && r.has(t.deny, H.Permissions.SEND_MESSAGES), O = r.has(t.deny, H.Permissions.SEND_MESSAGES), v = r.has(t.deny, H.Permissions.READ_MESSAGE_HISTORY), j = D.default.generateChannelPermissionSpec(i, l, x, {
+    let t = I.default.can(B.Permissions.ADMINISTRATOR, a) || I.default.can(B.Permissions.MANAGE_ROLES, l, void 0, void 0, !0);
+    return l.isGuildStageVoice() && p.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e) ? H.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.equals(e, B.Permissions.MANAGE_ROLES) || t) && (null == e || I.default.can(e, a) || t)) && H.default.Messages.HELP_MISSING_PERMISSION
+  }, _ = f === i, M = l.isForumLikeChannel() && r.has(t.deny, B.Permissions.SEND_MESSAGES), O = r.has(t.deny, B.Permissions.SEND_MESSAGES), L = r.has(t.deny, B.Permissions.READ_MESSAGE_HISTORY), j = D.default.generateChannelPermissionSpec(i, l, _, {
     createPostsDisabled: M,
     sendMessagesDisabled: O,
-    readMessageHistoryDisabled: v
+    readMessageHistoryDisabled: L
   });
-  return (0, s.jsxs)(L.default.Content, {
+  return (0, s.jsxs)(v.default.Content, {
     className: G.layoutStyle,
     children: [j.map((e, l) => (0, s.jsx)(E.default, {
       spec: e,
@@ -146,7 +146,7 @@ function k(e) {
       look: u.Button.Looks.OUTLINED,
       color: u.Button.Colors.RED,
       onClick: N,
-      children: B.default.Messages.REMOVE_ROLE_OR_USER.format({
+      children: H.default.Messages.REMOVE_ROLE_OR_USER.format({
         name: g()
       })
     })]
@@ -201,12 +201,12 @@ function z(e) {
     onClose: n,
     onSelect: r,
     position: d
-  } = e, u = (0, o.useStateFromStores)([I.default], () => I.default.getRoles(t.id)), c = (0, o.useStateFromStoresArray)([M.default], () => M.default.getMemberIds(t.id));
+  } = e, u = (0, o.useStateFromStores)([R.default], () => R.default.getRoles(t.id)), c = (0, o.useStateFromStoresArray)([M.default], () => M.default.getMemberIds(t.id));
   return (0, s.jsx)(O.default, {
-    label: B.default.Messages.OVERWRITE_AUTOCOMPLETE_LABEL,
-    placeholder: B.default.Messages.OVERWRITE_AUTOCOMPLETE_PLACEHOLDER,
-    "aria-label": B.default.Messages.OVERWRITE_AUTOCOMPLETE_A11Y_LABEL,
-    sections: [B.default.Messages.ROLES, B.default.Messages.MEMBERS],
+    label: H.default.Messages.OVERWRITE_AUTOCOMPLETE_LABEL,
+    placeholder: H.default.Messages.OVERWRITE_AUTOCOMPLETE_PLACEHOLDER,
+    "aria-label": H.default.Messages.OVERWRITE_AUTOCOMPLETE_A11Y_LABEL,
+    sections: [H.default.Messages.ROLES, H.default.Messages.MEMBERS],
     onRenderResult: e => {
       if (Y(e)) {
         let t;
@@ -223,7 +223,7 @@ function z(e) {
         user: e
       })
     },
-    onFilterResults: (e, t) => 0 === t ? i()(u).filter(t => null == a[t.id] && e(t.name)).sortBy(e => -e.position).value() : i()(c).map(A.default.getUser).filter(v.isNotNullish).filter(e => !e.isClyde()).filter(t => null == a[t.id] && e(t.username.toLowerCase())).sortBy(e => e.username.toLowerCase()).value(),
+    onFilterResults: (e, t) => 0 === t ? i()(u).filter(t => null == a[t.id] && e(t.name)).sortBy(e => -e.position).value() : i()(c).map(A.default.getUser).filter(L.isNotNullish).filter(e => !e.isClyde()).filter(t => null == a[t.id] && e(t.username.toLowerCase())).sortBy(e => e.username.toLowerCase()).value(),
     onQueryChange: e => {
       j.default.requestMembers(t.id, e, 20)
     },
@@ -240,19 +240,19 @@ function K() {
     channel: e,
     permissionOverwrites: t,
     selectedOverwriteId: n
-  } = (0, o.useStateFromStoresObject)([_.default], () => _.default), r = null == e ? void 0 : e.getGuildId(), {
+  } = (0, o.useStateFromStoresObject)([x.default], () => x.default), r = null == e ? void 0 : e.getGuildId(), {
     guild: c,
     guildRoles: E
-  } = (0, o.useStateFromStoresObject)([I.default], () => {
-    let e = null != r ? I.default.getGuild(r) : void 0,
-      t = null != e ? I.default.getRoles(e.id) : void 0;
+  } = (0, o.useStateFromStoresObject)([R.default], () => {
+    let e = null != r ? R.default.getGuild(r) : void 0,
+      t = null != e ? R.default.getRoles(e.id) : void 0;
     return {
       guild: e,
       guildRoles: t
     }
   }, [r]), g = (0, U.default)(r, t), p = (0, T.default)(), C = (0, o.useStateFromStores)([N.default], () => N.default.roleStyle);
   if (null == c || null == E || null == e || null == t) return null;
-  let x = l => {
+  let _ = l => {
       let {
         position: a,
         closePopout: n
@@ -275,7 +275,7 @@ function K() {
       }).then(() => (0, m.selectPermission)(t))
     };
   null != t && null == t[c.id] && (t[c.id] = F.makeEveryoneOverwrite(c.id));
-  let R = i()(t).filter(e => e.type === S.PermissionOverwriteType.ROLE).map(e => E[e.id]).filter(v.isNotNullish).sortBy(e => -e.position).map(e => (0, s.jsx)(f.default, {
+  let I = i()(t).filter(e => e.type === S.PermissionOverwriteType.ROLE).map(e => E[e.id]).filter(L.isNotNullish).sortBy(e => -e.position).map(e => (0, s.jsx)(f.default, {
       theme: p,
       roleStyle: C,
       id: e.id,
@@ -309,7 +309,7 @@ function K() {
         })
       }, "".concat(n, "-").concat(e.id))
     }).value();
-  return (0, s.jsx)(L.default.Sidebar, {
+  return (0, s.jsx)(v.default.Sidebar, {
     className: G.layoutStyle,
     scrollable: !0,
     children: (0, s.jsxs)(u.TabBar, {
@@ -319,7 +319,7 @@ function K() {
       children: [(() => {
         let e = (0, d.isThemeDark)(p) ? l("521715") : l("299603");
         return (0, s.jsx)(u.Popout, {
-          renderPopout: x,
+          renderPopout: _,
           position: "bottom",
           autoInvert: !1,
           children: t => (0, s.jsx)(u.TabBar.Header, {
@@ -327,7 +327,7 @@ function K() {
             children: (0, s.jsxs)("div", {
               className: G.sidebarHeaderDefault,
               children: [(0, s.jsxs)("span", {
-                children: [B.default.Messages.ROLES, "/", B.default.Messages.MEMBERS]
+                children: [H.default.Messages.ROLES, "/", H.default.Messages.MEMBERS]
               }), (0, s.jsx)("img", {
                 alt: "",
                 className: G.sidebarHeader,
@@ -336,7 +336,7 @@ function K() {
             })
           })
         })
-      })(), R, A, (0, s.jsxs)(a.Fragment, {
+      })(), I, A, (0, s.jsxs)(a.Fragment, {
         children: [(0, s.jsx)(u.TabBar.Separator, {
           style: {
             marginTop: 20,
@@ -345,9 +345,9 @@ function K() {
         }), (0, s.jsx)(u.FormText, {
           type: u.FormTextTypes.DESCRIPTION,
           children: (0, s.jsx)(u.Anchor, {
-            href: y.default.getArticleURL(H.HelpdeskArticles.PERMISSIONS_TUTORIAL),
+            href: y.default.getArticleURL(B.HelpdeskArticles.PERMISSIONS_TUTORIAL),
             target: "_blank",
-            children: B.default.Messages.PERMISSION_HELPDESK
+            children: H.default.Messages.PERMISSION_HELPDESK
           })
         })]
       })]
@@ -360,12 +360,12 @@ function Z() {
     channel: e,
     permissionOverwrites: t,
     selectedOverwriteId: l
-  } = (0, o.useStateFromStoresObject)([_.default], () => _.default);
-  if (null == (0, o.useStateFromStores)([I.default], () => null != e ? I.default.getGuild(e.getGuildId()) : null) || null == e || null == t || null == l) return null;
+  } = (0, o.useStateFromStoresObject)([x.default], () => x.default);
+  if (null == (0, o.useStateFromStores)([R.default], () => null != e ? R.default.getGuild(e.getGuildId()) : null) || null == e || null == t || null == l) return null;
   let a = t[l];
-  return (0, s.jsxs)(L.default, {
+  return (0, s.jsxs)(v.default, {
     className: G.container,
-    children: [(0, s.jsx)(K, {}), (0, s.jsx)(k, {
+    children: [(0, s.jsx)(K, {}), (0, s.jsx)(V, {
       overwrite: a
     })]
   })

@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("581883"),
   C = s("918257"),
   A = s("981631"),
-  h = s("710111"),
-  O = s("689938"),
+  O = s("710111"),
+  h = s("689938"),
   p = s("976130"),
   R = s("611273");
 
@@ -36,14 +36,14 @@ function M(e) {
       guildId: t,
       soundId: s
     } = e;
-    return S.default.getSound(t === h.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? h.DEFAULT_SOUND_GUILD_ID : t, s)
+    return S.default.getSound(t === O.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? O.DEFAULT_SOUND_GUILD_ID : t, s)
   })
 }
 
 function x() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(h.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = M(r), m = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), x = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, L = m && null != r && null == g;
+  } = (0, o.default)(), [t, s] = n.useState(O.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = M(r), m = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), x = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, L = m && null != r && null == g;
   n.useEffect(() => {
     L && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
@@ -63,33 +63,33 @@ function x() {
     className: p.container,
     tag: i.FormTitleTags.H1,
     titleClassName: R.__invalid_marginBottom16,
-    title: O.default.Messages.SOUNDBOARD,
+    title: h.default.Messages.SOUNDBOARD,
     children: [(0, a.jsx)(C.default, {}), (0, a.jsx)(i.FormDivider, {
       className: p.callSoundsDivider
     }), (0, a.jsx)(i.Heading, {
       variant: "text-md/medium",
       color: "header-primary",
       className: p.callSoundsTitle,
-      children: O.default.Messages.CALL_SOUNDS_SETTINGS
+      children: h.default.Messages.CALL_SOUNDS_SETTINGS
     }), (0, a.jsx)(i.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
-      children: O.default.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
+      children: h.default.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
         helpdeskArticle: f.default.getArticleURL(A.HelpdeskArticles.SOUNDBOARD)
       })
     }), (0, a.jsx)(d.default, {
       guildId: t,
       className: p.guildSelector,
       globalOption: {
-        label: O.default.Messages.CALL_SOUNDS_SETTINGS_GLOBAL_GUILD_SEARCH,
-        value: h.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID
+        label: h.default.Messages.CALL_SOUNDS_SETTINGS_GLOBAL_GUILD_SEARCH,
+        value: O.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID
       },
-      onChange: e => s(null == e ? h.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : e.id),
+      onChange: e => s(null == e ? O.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : e.id),
       renderOptionSuffix: P,
       hideDivider: !0
     }), (0, a.jsxs)(u.default, {
       className: R.marginTop20,
-      title: O.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
+      title: h.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
         nitroWheelHook: () => (0, a.jsx)(N.default, {
           className: p.nitroWheel
         })
@@ -104,7 +104,7 @@ function x() {
       }), L && (0, a.jsx)(I.default, {
         className: p.notice,
         messageType: I.HelpMessageTypes.WARNING,
-        children: O.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
+        children: h.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
       })]
     })]
   })

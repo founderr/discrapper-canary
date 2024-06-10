@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("275759"),
   C = s("231757"),
   A = s("323588"),
-  h = s("605236"),
-  O = s("553795"),
+  O = s("605236"),
+  h = s("553795"),
   p = s("430824"),
   R = s("771845"),
   M = s("246946"),
@@ -54,10 +54,10 @@ let Q = e => {
       isJoining: i,
       joinErrorMessage: o,
       showJoinErrorMessage: d
-    } = (0, r.useStateFromStoresObject)([O.default], () => ({
-      isJoining: O.default.isJoining(l.id),
-      joinErrorMessage: "" === O.default.joinErrorMessage(l.id) ? W.default.Messages.ERROR : O.default.joinErrorMessage(l.id),
-      showJoinErrorMessage: void 0 !== O.default.joinErrorMessage(l.id)
+    } = (0, r.useStateFromStoresObject)([h.default], () => ({
+      isJoining: h.default.isJoining(l.id),
+      joinErrorMessage: "" === h.default.joinErrorMessage(l.id) ? W.default.Messages.ERROR : h.default.joinErrorMessage(l.id),
+      showJoinErrorMessage: void 0 !== h.default.joinErrorMessage(l.id)
     }), [l.id]),
     u = null != (0, r.useStateFromStores)([p.default], () => p.default.getGuild(l.guild.id), [l.guild.id]);
   return !u && (n = (0, a.jsx)(c.Button, {
@@ -109,7 +109,7 @@ function q(e) {
       theme: _,
       locale: N
     } = e,
-    [h, O] = n.useState(T.friendSync),
+    [O, h] = n.useState(T.friendSync),
     [p, R] = n.useState(T.visibility),
     [M, x] = n.useState(T.metadataVisibility),
     [L, b] = n.useState(T.showActivity),
@@ -120,7 +120,7 @@ function q(e) {
     $ = (0, f.useLegacyPlatformType)(T.type),
     ee = g.default.get($);
   n.useEffect(() => {
-    O(T.friendSync), R(T.visibility), x(T.metadataVisibility), b(T.showActivity)
+    h(T.friendSync), R(T.visibility), x(T.metadataVisibility), b(T.showActivity)
   }, [T]), n.useEffect(() => {
     !1 !== T.verified && (null != j && (R(j), E.default.setVisibility(T.type, T.id, j), F(null)), null != w && (x(w), E.default.setMetadataVisibility(T.type, T.id, w), z(null)))
   }, [T]);
@@ -183,7 +183,7 @@ function q(e) {
   }
 
   function el(e) {
-    O(e), E.default.setFriendSync(T.type, T.id, e)
+    h(e), E.default.setFriendSync(T.type, T.id, e)
   }
 
   function ei(e) {
@@ -319,7 +319,7 @@ function q(e) {
     }(T), (s = ee, Y.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: h,
+      value: O,
       onChange: el,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
@@ -392,7 +392,7 @@ function q(e) {
 
 function X() {
   return n.useEffect(() => () => {
-    (0, h.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
+    (0, O.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
       dismissAction: w.ContentDismissActionType.AUTO
     })
   }, []), (0, a.jsxs)("div", {
@@ -508,8 +508,8 @@ function J(e) {
 }
 t.default = () => {
   let e = (0, r.useStateFromStores)([M.default], () => M.default.hidePersonalInformation),
-    t = (0, r.useStateFromStores)([O.default], () => O.default.isFetching()),
-    s = (0, r.useStateFromStores)([O.default], () => O.default.getAccounts()),
+    t = (0, r.useStateFromStores)([h.default], () => h.default.isFetching()),
+    s = (0, r.useStateFromStores)([h.default], () => h.default.getAccounts()),
     l = (0, N.default)();
   (0, r.useStateFromStores)([R.default], () => R.default.getFlattenedGuildIds());
   let i = (0, r.useStateFromStores)([F.default], () => F.default.locale);

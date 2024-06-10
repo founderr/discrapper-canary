@@ -30,8 +30,8 @@ function m(e) {
     sectionTitle: m,
     forcedDivider: C = !1,
     withTutorial: A = !1,
-    showBorder: h = !1,
-    isTryItOutFlow: O = !1,
+    showBorder: O = !1,
+    isTryItOutFlow: h = !1,
     initialSelectedEffectId: p
   } = e, R = (0, E.useGlobalOrGuildIdentityProfileEffect)(t, s), M = S.default.canUsePremiumProfileCustomization(t), {
     analyticsLocations: x
@@ -50,14 +50,14 @@ function m(e) {
     })
   }, [M, x]);
   let b = null != s,
-    v = O || void 0 !== D ? null != D : null != R,
+    v = h || void 0 !== D ? null != D : null != R,
     U = A ? u.default : r.Button;
   return (0, a.jsx)(T.default, {
     forcedDivider: C,
     borderType: _.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
     title: m,
-    showBorder: h,
+    showBorder: O,
     errors: L,
     className: l,
     children: (0, a.jsxs)("div", {

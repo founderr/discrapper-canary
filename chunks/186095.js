@@ -30,8 +30,8 @@ function C(e, t, n) {
   }) : e[t] = n, e
 }
 let {
-  Provider: S,
-  Consumer: T
+  Provider: T,
+  Consumer: S
 } = a.createContext(s.ThemeTypes.DARK);
 class A extends a.PureComponent {
   render() {
@@ -44,7 +44,7 @@ class A extends a.PureComponent {
       offsetY: u,
       style: E
     } = this.props;
-    return (0, i.jsx)(T, {
+    return (0, i.jsx)(S, {
       children: s => (0, i.jsx)(o.default.Child, {
         grow: 0,
         className: r()(_.image, c.marginBottom40),
@@ -89,7 +89,7 @@ class f extends(l = a.PureComponent) {
       className: n,
       style: l
     } = this.props;
-    return (0, i.jsx)(S, {
+    return (0, i.jsx)(T, {
       value: t,
       children: (0, i.jsx)(o.default, {
         direction: o.default.Direction.VERTICAL,

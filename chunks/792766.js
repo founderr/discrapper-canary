@@ -102,9 +102,9 @@ t.default = e => {
     guild: i,
     isCard: o = !1,
     isEmbed: I = !1,
-    onClick: T
-  } = e, R = a.useMemo(() => null == i ? null : i instanceof d.default ? i : new d.default(i), [i]);
-  if (null == l || null == R) return null;
+    onClick: R
+  } = e, T = a.useMemo(() => null == i ? null : i instanceof d.default ? i : new d.default(i), [i]);
+  if (null == l || null == T) return null;
   let {
     topic: A,
     speaker_count: g,
@@ -145,7 +145,7 @@ t.default = e => {
         width: 20,
         height: 20,
         children: (0, n.jsx)(u.default, {
-          guild: R,
+          guild: T,
           size: u.default.Sizes.MINI,
           active: !0
         })
@@ -153,7 +153,7 @@ t.default = e => {
         color: "header-secondary",
         className: h.__invalid_label,
         variant: "text-sm/normal",
-        children: R.name
+        children: T.name
       })]
     }), (0, n.jsx)(f.default, {
       size: o || I ? f.default.Sizes.SIZE_16 : f.default.Sizes.SIZE_20,
@@ -169,7 +169,7 @@ t.default = e => {
         className: h.speakers,
         children: [N.map(e => (0, n.jsx)(p, {
           speaker: e,
-          guildId: R.id,
+          guildId: T.id,
           isEmbed: I
         }, e.user.id)), y > 0 ? (0, n.jsxs)("div", {
           className: h.speaker,
@@ -191,7 +191,7 @@ t.default = e => {
         }) : null]
       }), I && (0, n.jsx)(r.Button, {
         color: r.Button.Colors.GREEN,
-        onClick: T,
+        onClick: R,
         className: h.joinButton,
         children: m.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
       })]

@@ -1,56 +1,56 @@
 "use strict";
-a.r(t);
-var l = a("735250"),
-  n = a("470079"),
-  s = a("399606"),
-  i = a("481060"),
-  d = a("904245"),
-  r = a("368844"),
-  u = a("249842"),
-  o = a("838367"),
-  c = a("6025"),
-  f = a("592125"),
-  m = a("375954"),
-  h = a("496675"),
-  E = a("760053"),
-  g = a("768581"),
-  _ = a("526120"),
-  I = a("825334"),
-  x = a("981631"),
-  S = a("689938"),
-  v = a("253533");
-let C = n.memo(function(e) {
+t.r(l);
+var a = t("735250"),
+  n = t("470079"),
+  s = t("399606"),
+  i = t("481060"),
+  d = t("904245"),
+  r = t("368844"),
+  u = t("249842"),
+  o = t("838367"),
+  c = t("6025"),
+  f = t("592125"),
+  m = t("375954"),
+  h = t("496675"),
+  g = t("760053"),
+  x = t("768581"),
+  C = t("526120"),
+  v = t("825334"),
+  I = t("981631"),
+  S = t("689938"),
+  N = t("253533");
+let j = n.memo(function(e) {
     let {
-      guild: t
-    } = e, a = (0, s.useStateFromStores)([o.default], () => o.default.getGuild(t.id), [t]);
+      guild: l
+    } = e, t = (0, s.useStateFromStores)([o.default], () => o.default.getGuild(l.id), [l]);
     return n.useEffect(() => {
-      null == a && (0, u.fetchGuildForPopout)(t.id)
-    }, [t.id, a]), (0, l.jsx)("div", {
-      className: v.sidebarCardWrapper,
-      children: (0, l.jsxs)("div", {
-        className: v.sidebarCard,
-        children: [(0, l.jsx)(i.Heading, {
-          className: v.sidebarCardHeader,
+      null == t && (0, u.fetchGuildForPopout)(l.id)
+    }, [l.id, t]), (0, a.jsx)("div", {
+      className: N.sidebarCardWrapper,
+      children: (0, a.jsxs)("div", {
+        className: N.sidebarCard,
+        children: [(0, a.jsx)(i.Heading, {
+          className: N.sidebarCardHeader,
           variant: "heading-md/bold",
           color: "header-primary",
           children: S.default.Messages.GUILD_HOME_ABOUT
-        }), (0, l.jsx)(i.Text, {
-          className: v.guildDescription,
+        }), (0, a.jsx)(i.Text, {
+          className: N.guildDescription,
           variant: "text-md/normal",
           color: "text-normal",
-          children: t.description
-        }), (0, l.jsx)("div", {
-          className: v.guildInfo,
-          children: (null == a ? void 0 : a.memberCount) != null && (null == a ? void 0 : a.presenceCount) != null && (0, l.jsxs)(l.Fragment, {
-            children: [(0, l.jsx)("div", {
-              className: v.dotOnline
-            }), (0, l.jsx)(i.Text, {
-              className: v.guildInfoText,
+          children: l.description
+        }), (0, a.jsx)("div", {
+          className: N.guildInfo,
+          children: (null == t ? void 0 : t.memberCount) != null && (null == t ? void 0 : t.presenceCount) != null && (0, a.jsxs)(a.Fragment, {
+            children: [(0, a.jsx)("div", {
+              className: N.dotOnline
+            }), (0, a.jsx)(i.Text, {
+              className: N.guildInfoText,
               variant: "text-xs/normal",
               color: "text-muted",
               children: S.default.Messages.GUILD_ONBOARDING_HOME_GUILD_MEMBERS_RATIO.format({
-                online: null == a ? void 0 : a.presenceCount,
-                total: null == a ? void 0 : a.memberCount
+                online: null == t ? void 0 : t.presenceCount,
+                total: null == t ? void 0 : t.memberCount
               })
             })]
           })
@@ -58,72 +58,72 @@ let C = n.memo(function(e) {
       })
     })
   }),
-  N = e => {
+  p = e => {
     let {
-      channelId: t,
-      title: a,
+      channelId: l,
+      title: t,
       icon: u
-    } = e, o = (0, s.useStateFromStores)([f.default], () => f.default.getChannel(t)), I = (0, s.useStateFromStores)([m.default], () => m.default.getMessages(t)), S = (0, s.useStateFromStores)([h.default], () => h.default.can(x.Permissions.VIEW_CHANNEL, o)), C = I.first(), N = (0, r.useForumPostMediaProperties)(C, !1), p = (null == N ? void 0 : N.length) > 0 ? N[0] : null, T = null != o && null == C && !I.loadingMore && !I.ready && !I.hasFetched && S;
+    } = e, o = (0, s.useStateFromStores)([f.default], () => f.default.getChannel(l)), v = (0, s.useStateFromStores)([m.default], () => m.default.getMessages(l)), S = (0, s.useStateFromStores)([h.default], () => h.default.can(I.Permissions.VIEW_CHANNEL, o)), j = v.first(), p = (0, r.useForumPostMediaProperties)(j, !1), E = (null == p ? void 0 : p.length) > 0 ? p[0] : null, _ = null != o && null == j && !v.loadingMore && !v.ready && !v.hasFetched && S;
     n.useEffect(() => {
-      T && d.default.fetchMessages({
-        channelId: t,
-        after: t,
+      _ && d.default.fetchMessages({
+        channelId: l,
+        after: l,
         limit: 5
       })
-    }, [t, T]);
-    let A = e => {
-      null != o && (e.shiftKey ? (0, _.selectHomeResourceChannel)(o.guild_id, o.id) : c.default.openResourceChannelAsSidebar({
+    }, [l, _]);
+    let M = e => {
+      null != o && (e.shiftKey ? (0, C.selectHomeResourceChannel)(o.guild_id, o.id) : c.default.openResourceChannelAsSidebar({
         guildId: o.guild_id,
         channelId: o.id
       }))
     };
-    return (0, l.jsx)(i.Clickable, {
-      className: v.resourceChannel,
-      onClick: e => A(e),
-      children: (0, l.jsxs)(l.Fragment, {
+    return (0, a.jsx)(i.Clickable, {
+      className: N.resourceChannel,
+      onClick: e => M(e),
+      children: (0, a.jsxs)(a.Fragment, {
         children: [(() => {
-          let e = g.default.getResourceChannelIconURL({
-            channelId: t,
+          let e = x.default.getResourceChannelIconURL({
+            channelId: l,
             icon: u
           });
-          return null != u && null != e ? (0, l.jsx)("img", {
+          return null != u && null != e ? (0, a.jsx)("img", {
             src: e,
-            className: v.resourceImage,
+            className: N.resourceImage,
             alt: "",
             "aria-hidden": !0
-          }) : null != p ? (0, l.jsx)("img", {
-            className: v.resourceImage,
-            src: p.src,
-            alt: p.alt
-          }) : (0, l.jsx)("div", {
-            className: v.placeholderImage,
-            children: (0, l.jsx)(E.default, {})
+          }) : null != E ? (0, a.jsx)("img", {
+            className: N.resourceImage,
+            src: E.src,
+            alt: E.alt
+          }) : (0, a.jsx)("div", {
+            className: N.placeholderImage,
+            children: (0, a.jsx)(g.default, {})
           })
-        })(), (0, l.jsx)(i.Text, {
-          className: v.guildInfoText,
+        })(), (0, a.jsx)(i.Text, {
+          className: N.guildInfoText,
           variant: "text-sm/semibold",
           color: "none",
-          children: a
+          children: t
         })]
       })
-    }, t)
+    }, l)
   },
-  p = n.memo(function(e) {
+  E = n.memo(function(e) {
     let {
-      guild: t
-    } = e, a = (0, I.default)(t.id);
-    return 0 === a.length ? null : (0, l.jsx)("div", {
-      className: v.sidebarCardWrapper,
-      children: (0, l.jsxs)("div", {
-        className: v.sidebarCard,
-        children: [(0, l.jsx)(i.Heading, {
-          className: v.sidebarCardHeader,
+      guild: l
+    } = e, t = (0, v.default)(l.id);
+    return 0 === t.length ? null : (0, a.jsx)("div", {
+      className: N.sidebarCardWrapper,
+      children: (0, a.jsxs)("div", {
+        className: N.sidebarCard,
+        children: [(0, a.jsx)(i.Heading, {
+          className: N.sidebarCardHeader,
           variant: "heading-md/bold",
           color: "header-primary",
           children: S.default.Messages.GUILD_HOME_RESOURCES
-        }), (0, l.jsx)("div", {
-          className: v.resourceChannelsList,
-          children: a.map(e => (0, l.jsx)(N, {
+        }), (0, a.jsx)("div", {
+          className: N.resourceChannelsList,
+          children: t.map(e => (0, a.jsx)(p, {
             channelId: e.channelId,
             title: e.title,
             icon: e.icon
@@ -132,18 +132,18 @@ let C = n.memo(function(e) {
       })
     })
   }),
-  T = n.memo(function(e) {
+  _ = n.memo(function(e) {
     let {
-      guild: t,
-      isNewMember: a
+      guild: l,
+      isNewMember: t
     } = e;
-    return (0, l.jsxs)("aside", {
-      className: v.sidebar,
-      children: [(0, l.jsx)(C, {
-        guild: t
-      }), a && (0, l.jsx)(p, {
-        guild: t
+    return (0, a.jsxs)("aside", {
+      className: N.sidebar,
+      children: [(0, a.jsx)(j, {
+        guild: l
+      }), t && (0, a.jsx)(E, {
+        guild: l
       })]
     })
   });
-t.default = T
+l.default = _

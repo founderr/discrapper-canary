@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("440849"),
   C = s("921801"),
   A = s("196051"),
-  h = s("441729"),
-  O = s("285952"),
+  O = s("441729"),
+  h = s("285952"),
   p = s("153124"),
   R = s("786048"),
   M = s("897353"),
@@ -426,7 +426,7 @@ function ea() {
 
 function en() {
   let e = L.EnableTTSCommand.useSetting(),
-    t = (0, d.useStateFromStores)([h.default], () => h.default.speechRate),
+    t = (0, d.useStateFromStores)([O.default], () => O.default.speechRate),
     [s, l] = n.useState(!1);
   return S.supported ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormItem, {
@@ -455,8 +455,8 @@ function en() {
               return
             }(0, A.speakText)(B.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => l(!0), () => l(!1)), l(!0)
           },
-          children: (0, a.jsxs)(O.default, {
-            align: O.default.Align.CENTER,
+          children: (0, a.jsxs)(h.default, {
+            align: h.default.Align.CENTER,
             children: [s ? (0, a.jsx)(R.default, {
               width: 24,
               height: 24

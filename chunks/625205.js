@@ -36,8 +36,8 @@ function f() {
       inputDeviceId: c.default.getInputDeviceId(),
       outputDeviceId: c.default.getOutputDeviceId()
     })),
-    h = (0, i.useStateFromStores)([c.default], () => c.default.getInputDevices()),
-    O = (0, i.useStateFromStores)([c.default], () => c.default.getOutputDevices());
+    O = (0, i.useStateFromStores)([c.default], () => c.default.getInputDevices()),
+    h = (0, i.useStateFromStores)([c.default], () => c.default.getOutputDevices());
   !f && (e = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
@@ -51,9 +51,9 @@ function f() {
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Output Devices")
     })
   }));
-  let p = l()(h).values().first(),
+  let p = l()(O).values().first(),
     R = null != p ? p.disabled : null != e,
-    M = l()(O).values().first(),
+    M = l()(h).values().first(),
     x = null != M ? M.disabled : null != t;
 
   function D(e) {
@@ -92,7 +92,7 @@ function f() {
       }), (0, a.jsx)(o.SingleSelect, {
         value: C,
         onChange: e => d.default.setInputDevice(e, "Settings"),
-        options: l().map(h, e => {
+        options: l().map(O, e => {
           let {
             id: t,
             name: s
@@ -115,7 +115,7 @@ function f() {
       }), (0, a.jsx)(o.SingleSelect, {
         value: A,
         onChange: e => d.default.setOutputDevice(e, "Settings"),
-        options: l().map(O, e => {
+        options: l().map(h, e => {
           let {
             id: t,
             name: s

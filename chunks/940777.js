@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("317381"),
   h = n("682662"),
   m = n("674552"),
-  p = n("593364"),
-  C = n("905423"),
+  C = n("593364"),
+  p = n("905423"),
   g = n("199902"),
   E = n("592125"),
   S = n("944486"),
@@ -33,8 +33,8 @@ var l = n("735250"),
   M = n("603274"),
   y = n("981631"),
   O = n("689938"),
-  D = n("561349");
-let b = {
+  b = n("561349");
+let D = {
   analyticsSource: {
     page: y.AnalyticsPages.GUILD_CHANNEL,
     section: y.AnalyticsSections.CHANNEL_LIST,
@@ -58,7 +58,7 @@ function j() {
     })),
     w = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(y.FAVORITES)),
     B = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
-    F = (0, C.default)(e => e.guildId) === y.FAVORITES,
+    F = (0, p.default)(e => e.guildId) === y.FAVORITES,
     {
       badge: V,
       unread: H
@@ -84,17 +84,17 @@ function j() {
         d = !1,
         c = !1,
         h = !1,
-        p = !1;
-      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = u), (0, m.renderMediaBadge)({
+        C = !1;
+      return n ? (d = !s, c = s, h = l, C = r) : (h = a, C = u), (0, m.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
         liveStage: !1,
         isCurrentUserConnected: n,
-        activity: p
+        activity: C
       })
     }(U),
-    Y = V > 0 ? (0, p.renderMentionBadge)(V) : null,
+    Y = V > 0 ? (0, C.renderMentionBadge)(V) : null,
     K = a.useCallback(() => {
       s()
     }, [s]);
@@ -103,7 +103,7 @@ function j() {
       selected: F,
       hovered: j,
       unread: H && !G,
-      className: D.pill
+      className: b.pill
     }), (0, l.jsx)(M.default, {
       onShow: K,
       children: (0, l.jsx)(R.FavoriteAddedTooltip, {
@@ -119,7 +119,7 @@ function j() {
             }),
             to: {
               pathname: y.Routes.CHANNEL(y.FAVORITES, w),
-              state: b
+              state: D
             },
             selected: F || j,
             onMouseEnter: () => P(!0),
@@ -138,11 +138,11 @@ function j() {
               })
             },
             children: (0, l.jsx)("div", {
-              className: i()(D.ring, {
-                [D.ringActive]: t
+              className: i()(b.ring, {
+                [b.ringActive]: t
               }),
               children: (0, l.jsx)(I.default, {
-                className: D.favoriteIcon,
+                className: b.favoriteIcon,
                 width: 20,
                 height: 20
               })

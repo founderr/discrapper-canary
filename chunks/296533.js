@@ -27,9 +27,9 @@ var a = s("735250"),
   m = s("981631"),
   C = s("474936"),
   A = s("689938"),
-  h = s("441083");
+  O = s("441083");
 
-function O(e) {
+function h(e) {
   let {
     guildTier: t,
     guildBoostSlot: s,
@@ -79,7 +79,7 @@ function O(e) {
     }
   });
   return o || t === m.BoostedGuildTiers.NONE ? (0, a.jsx)("div", {
-    className: h.boostDescriptionInnerContainer,
+    className: O.boostDescriptionInnerContainer,
     children: (0, a.jsx)(r.Text, {
       variant: "text-sm/medium",
       color: "text-muted",
@@ -87,7 +87,7 @@ function O(e) {
     })
   }) : S((e, t) => (0, a.jsx)(l.animated.div, {
     style: e,
-    className: h.boostDescriptionInnerContainer,
+    className: O.boostDescriptionInnerContainer,
     children: (0, a.jsx)(r.Text, {
       variant: "text-sm/medium",
       color: "text-muted",
@@ -106,19 +106,19 @@ function p(e) {
     isLastGuildBoostSlot: S
   } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), f = n.useMemo(() => null != I && I > new Date, [I]), m = (0, _.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
-    className: h.boostContainer,
+    className: O.boostContainer,
     children: [(0, a.jsxs)("div", {
-      className: h.boostInnerContainer,
+      className: O.boostInnerContainer,
       children: [(0, a.jsx)(g.default, {
         isCanceled: m,
         hasCooldown: f,
         useReducedMotion: E
       }), (0, a.jsx)("div", {
-        className: h.boostDescriptionContainer,
+        className: O.boostDescriptionContainer,
         children: null != I && f && !m ? (0, a.jsx)(N.default, {
-          className: h.boostDescriptionInnerContainer,
+          className: O.boostDescriptionInnerContainer,
           cooldown: I.getTime()
-        }) : (0, a.jsx)(O, {
+        }) : (0, a.jsx)(h, {
           guildTier: t,
           guildBoostSlot: s,
           showAltText: c,
@@ -142,12 +142,12 @@ function p(e) {
         children: e => (0, a.jsx)(r.Clickable, {
           ...e,
           "aria-label": A.default.Messages.MORE_OPTIONS,
-          className: h.boostSlotMenuIcon,
+          className: O.boostSlotMenuIcon,
           children: (0, a.jsx)(T.default, {})
         })
       })]
     }), !S && (0, a.jsx)("div", {
-      className: h.boostContainerSeparator
+      className: O.boostContainerSeparator
     })]
   })
 }
@@ -161,7 +161,7 @@ function R(e) {
     showAltText: r
   } = e, o = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
   return (0, a.jsxs)("div", {
-    className: h.appliedBoostContainer,
+    className: O.appliedBoostContainer,
     children: [(0, a.jsx)(f.default, {
       guildId: t,
       boostingVariant: !1
@@ -196,7 +196,7 @@ function M(e) {
     cooldown_ends_at: null
   }, n);
   return (0, a.jsxs)("div", {
-    className: h.appliedBoostContainer,
+    className: O.appliedBoostContainer,
     children: [(0, a.jsx)(f.default, {
       guildId: t,
       boostingVariant: !1
@@ -223,16 +223,16 @@ function x(e) {
     }), e
   }, [t]);
   return null == s || 0 === t.length ? null : (0, a.jsxs)("div", {
-    className: h.wrapper,
+    className: O.wrapper,
     children: [(0, a.jsx)("div", {
-      className: h.container,
+      className: O.container,
       children: I.default.keys(l).map(e => (0, a.jsx)(M, {
         guildId: e,
         premiumSubscription: s,
         appliedGuildBoosts: l[e]
       }, e))
     }), (0, a.jsx)("div", {
-      className: h.mainSeparator
+      className: O.mainSeparator
     })]
   })
 }
@@ -270,9 +270,9 @@ function D(e) {
   if (null == s || 0 === Object.keys(o).length) return null;
   let S = u > (0, d.getNumIncludedAndTenureRewardPremiumGuildSubscriptionSlots)(s, r);
   return (0, a.jsxs)("div", {
-    className: h.wrapper,
+    className: O.wrapper,
     children: [(0, a.jsx)("div", {
-      className: h.container,
+      className: O.container,
       children: I.default.keys(o).map(e => (0, a.jsx)(R, {
         guildId: e,
         guildBoostSlotRecords: o[e],
@@ -281,7 +281,7 @@ function D(e) {
         showAltText: l
       }, e))
     }), (0, a.jsx)("div", {
-      className: h.mainSeparator
+      className: O.mainSeparator
     })]
   })
 }

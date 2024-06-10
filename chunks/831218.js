@@ -9,8 +9,8 @@ var l, a, s, i = n("735250"),
   f = n("902704"),
   h = n("481060"),
   m = n("925549"),
-  p = n("607070"),
-  C = n("367907"),
+  C = n("607070"),
+  p = n("367907"),
   g = n("453542"),
   E = n("762914"),
   S = n("702321"),
@@ -26,8 +26,8 @@ var l, a, s, i = n("735250"),
   M = n("908773"),
   y = n("151827"),
   O = n("515753"),
-  D = n("981631"),
-  b = n("689938"),
+  b = n("981631"),
+  D = n("689938"),
   j = n("181235");
 
 function P(e, t, n) {
@@ -235,7 +235,7 @@ class U extends(a = r.Component) {
           children: l => (0, i.jsx)(h.List, {
             fade: !0,
             innerRole: s,
-            innerAriaLabel: b.default.Messages.DIRECT_MESSAGES,
+            innerAriaLabel: D.default.Messages.DIRECT_MESSAGES,
             innerTag: "ul",
             ref: e => {
               var t;
@@ -283,7 +283,7 @@ class U extends(a = r.Component) {
           num_users_visible: i.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && v.default.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, C.default.trackWithMetadata(D.AnalyticEvents.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, p.default.trackWithMetadata(b.AnalyticEvents.DM_LIST_VIEWED, {
         ...d,
         ...(0, g.getNowPlayingAnalytics)(),
         changelog_dm_visible: u
@@ -296,7 +296,7 @@ class U extends(a = r.Component) {
     }), P(this, "handleScroll", u()(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
-        null != e && m.default.updateChannelListScroll(D.ME, e.scrollTop)
+        null != e && m.default.updateChannelListScroll(b.ME, e.scrollTop)
       }
     }, 100)), P(this, "renderDM", (e, t) => {
       let {
@@ -340,9 +340,9 @@ class U extends(a = r.Component) {
         className: j.privateChannelsHeaderContainer,
         children: [(0, i.jsx)("span", {
           className: j.headerText,
-          children: b.default.Messages.DIRECT_MESSAGES
+          children: D.default.Messages.DIRECT_MESSAGES
         }), (0, i.jsx)(_.default, {
-          tooltip: b.default.Messages.CREATE_DM,
+          tooltip: D.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
           iconClassName: j.privateChannelRecipientsInviteButtonIcon,
@@ -371,11 +371,11 @@ t.default = e => {
     let e = x.default.getPrivateChannelIds(),
       t = (0, N.filterOutMessageRequestsAndSpamById)(e, [I.default, T.default]);
     return (0, E.filterBroadcastingGDMs)(t)
-  }, []), h = (0, c.useStateFromStoresObject)([p.default, A.default, L.default], () => ({
-    theme: A.default.darkSidebar ? D.ThemeTypes.DARK : n,
-    keyboardModeEnabled: p.default.keyboardModeEnabled,
+  }, []), h = (0, c.useStateFromStoresObject)([C.default, A.default, L.default], () => ({
+    theme: A.default.darkSidebar ? b.ThemeTypes.DARK : n,
+    keyboardModeEnabled: C.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(L.default.getPrivateChannelsVersion()) : L.default.getPrivateChannelsVersion()
-  })), m = r.useRef(null), C = r.useCallback(e => {
+  })), m = r.useRef(null), p = r.useCallback(e => {
     let t = m.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
@@ -409,7 +409,7 @@ t.default = e => {
     scrollToStart: g,
     scrollToEnd: S,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
-    setFocus: C
+    setFocus: p
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
     navigator: v,

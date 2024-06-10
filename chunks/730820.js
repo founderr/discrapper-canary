@@ -24,8 +24,8 @@ var a = s("735250"),
   m = s("594174"),
   C = s("285952"),
   A = s("572004"),
-  h = s("287880"),
-  O = s("714565"),
+  O = s("287880"),
+  h = s("714565"),
   p = s("202858"),
   R = s("726985"),
   M = s("981631"),
@@ -112,7 +112,7 @@ class U extends n.PureComponent {
       })
     });
     else {
-      let t = (0, O.getSMSBackupDisabledMessage)(n);
+      let t = (0, h.getSMSBackupDisabledMessage)(n);
       e = (0, a.jsxs)(C.default, {
         className: i ? "" : P.marginTop8,
         children: [(0, a.jsx)(o.Button, {
@@ -257,7 +257,7 @@ class U extends n.PureComponent {
     let {
       currentUser: e
     } = this.props;
-    return h.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
+    return O.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
       title: D.default.Messages.TWO_FA,
       children: (0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,

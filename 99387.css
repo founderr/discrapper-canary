@@ -59183,6 +59183,24 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     justify-content: center
 }
 
+.link__57d2e {
+    color: var(--interactive-active);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px
+}
+
+.body__86e3b {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.description__70f9c {
+    text-align: center;
+    margin-top: 8px
+}
+
 .errorBlockWrapper_d5170f {
     padding: 16px 16px 0
 }
@@ -69215,13 +69233,6 @@ html .invoiceCancelRow_ea36d3 {
 .spinner__324d1 {
     padding-top: 60px;
     padding-bottom: 44px
-}
-
-.link__57d2e {
-    color: var(--interactive-active);
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18px
 }
 
 .subscriptionCostRowAmount__6867d {
@@ -125264,6 +125275,18 @@ div:has(>div>.container__8ab05) {
     font-weight: 500;
     line-height: 20px;
     margin-bottom: 16px;
+    text-align: center
+}
+
+.redirectConfirmation__6027f {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 27px 32px 8px
+}
+
+.redirectBody__18fcf {
+    margin-top: 11px;
     text-align: center
 }
 

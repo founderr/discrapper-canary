@@ -22,10 +22,10 @@ t.default = e => {
     guild: n,
     closePopout: a,
     ctaRef: g
-  } = e, T = (0, d.useUID)(), [v, S] = l.useState(!1), E = (0, o.useStateFromStores)([h.default], () => h.default.isLurking(n.id), [n.id]);
+  } = e, T = (0, d.useUID)(), [S, v] = l.useState(!1), E = (0, o.useStateFromStores)([h.default], () => h.default.isLurking(n.id), [n.id]);
   l.useEffect(() => {
-    v && !E && a()
-  }, [v, E, a]);
+    S && !E && a()
+  }, [S, E, a]);
   let R = null,
     I = m.default.Messages.LURKER_MODE_POPOUT_UPSELL_BODY;
   switch (t) {
@@ -39,14 +39,14 @@ t.default = e => {
       return (0, c.assertNever)(t)
   }
   if (null == R) return null;
-  let C = async () => {
-    S(!0);
+  let N = async () => {
+    v(!0);
     try {
       await u.default.joinGuild(n.id, {
         source: f.JoinGuildSources.CHAT_INPUT_BLOCKER
       }), a()
     } catch {
-      S(!1)
+      v(!1)
     }
   };
   return (0, s.jsxs)(r.Dialog, {
@@ -70,8 +70,8 @@ t.default = e => {
         className: p.buttonContainer,
         children: [(0, s.jsx)(r.Button, {
           buttonRef: g,
-          onClick: C,
-          submitting: v,
+          onClick: N,
+          submitting: S,
           children: m.default.Messages.LURKER_MODE_POPOUT_JOIN
         }), (0, s.jsx)(r.Button, {
           onClick: a,
