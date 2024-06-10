@@ -135,50 +135,62 @@ t.default = e => {
           var t, n, s, a, l, i;
           let {
             quest: r,
-            locale: o,
-            isQuestExpired: u
-          } = e, d = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, c = d && (null === (n = r.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, f = (0, I.useQuestFormattedDate)(null === (s = r.userStatus) || void 0 === s ? void 0 : s.completedAt, {
+            location: o,
+            locale: d,
+            isQuestExpired: c
+          } = e, f = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, m = f && (null === (n = r.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, T = (0, M.isQuestCardInGiftInventory)(o), p = (0, I.useQuestFormattedDate)(null === (s = r.userStatus) || void 0 === s ? void 0 : s.completedAt, {
             year: "numeric",
             month: "long",
             day: "numeric"
-          }), m = (0, N.isTieredRewardCodeQuest)({
+          }), h = (0, N.isTieredRewardCodeQuest)({
             quest: r
-          }), T = S.SharedQuestFields.build(r.config).defaultReward.messages.nameWithArticle;
-          if (c) {
-            let e = m ? (0, N.getRewardCodeQuestReward)({
+          }), C = S.SharedQuestFields.build(r.config).defaultReward.messages.nameWithArticle;
+          if (m) {
+            let e = h ? (0, N.getRewardCodeQuestReward)({
                 quest: r,
                 idx: null === (a = r.userStatus) || void 0 === a ? void 0 : a.claimedTier
               }) : null,
               t = null !== (l = null == e ? void 0 : e.messages.nameWithArticle) && void 0 !== l ? l : null;
             return null != t ? x.default.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
               reward: t,
-              date: f
+              date: p
             }) : x.default.Messages.QUEST_REWARD_COMPLETED.format({
-              reward: T,
-              date: f
+              reward: C,
+              date: p
             })
           }
-          if (d) return m ? x.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
-            date: f
+          if (f) return h ? x.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
+            date: p
           }) : x.default.Messages.QUEST_REWARD_COMPLETED.format({
-            reward: T,
-            date: f
+            reward: C,
+            date: p
           });
-          let p = m ? (0, N.getRewardCodeQuestReward)({
+          let g = h ? (0, N.getRewardCodeQuestReward)({
             quest: r,
             idx: 0
           }) : null;
-          return u ? x.default.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
-            reward: null !== (i = null == p ? void 0 : p.messages.nameWithArticle) && void 0 !== i ? i : T
-          }) : null != p && null != p.approximateCount ? x.default.Messages.QUEST_REWARD_TIERED.format({
-            maxReward: p.messages.nameWithArticle,
-            maxRewardCount: (0, _.humanizeValue)(p.approximateCount, o),
+          return c ? x.default.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
+            reward: null !== (i = null == g ? void 0 : g.messages.nameWithArticle) && void 0 !== i ? i : C
+          }) : T && (0, N.hasVariant)(r, v.QuestVariants.MOBILE_CONSOLE_QUEST) ? x.default.Messages.QUEST_REWARD_MULTIPLATFORM.format({
+            gameTitle: r.config.messages.gameTitle,
+            reward: C,
+            streamingDurationRequirement: (0, N.getQuestTaskDetails)({
+              quest: r,
+              location: v.QuestsExperimentLocations.QUESTS_CARD
+            }).targetMinutes,
+            onClick: () => {
+              u.default.open(O.UserSettingsSections.CONNECTIONS)
+            }
+          }) : null != g && null != g.approximateCount ? x.default.Messages.QUEST_REWARD_TIERED.format({
+            maxReward: g.messages.nameWithArticle,
+            maxRewardCount: (0, _.humanizeValue)(g.approximateCount, d),
             helpCenterLink: E.default.getArticleURL(O.HelpdeskArticles.QUESTS_LEARN_MORE)
           }) : x.default.Messages.QUEST_REWARD.format({
-            reward: T
+            reward: C
           })
         }({
           quest: U,
+          location: j,
           locale: en,
           isQuestExpired: B
         })

@@ -51,8 +51,8 @@ var n = s("990547"),
   K = s("498639"),
   z = s("748717"),
   Q = s("419636"),
-  q = s("35426"),
-  X = s("799071"),
+  X = s("35426"),
+  q = s("799071"),
   Z = s("601433"),
   J = s("154022"),
   $ = s("393681"),
@@ -719,25 +719,80 @@ let ej = () => {
         searchableTitle: ev.default.Messages.INLINE_MEDIA_LABEL,
         parent: eL.WebSetting.CHAT
       },
+      [eL.WebSetting.CHAT_INLINE_MEDIA_LINKS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.INLINE_EMBED_MEDIA,
+        parent: eL.WebSetting.CHAT_INLINE_MEDIA
+      },
+      [eL.WebSetting.CHAT_INLINE_MEDIA_UPLOADS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.INLINE_ATTACHMENT_MEDIA,
+        parent: eL.WebSetting.CHAT_INLINE_MEDIA
+      },
+      [eL.WebSetting.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.IMAGE_DESCRIPTION,
+        parent: eL.WebSetting.CHAT_INLINE_MEDIA
+      },
       [eL.WebSetting.CHAT_EMBEDS]: {
         section: eP.UserSettingsSections.TEXT,
         searchableTitle: ev.default.Messages.RENDER_EMBEDS_LABEL,
         parent: eL.WebSetting.CHAT
+      },
+      [eL.WebSetting.CHAT_EMBEDS_LINK_PREVIEWS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.RENDER_EMBEDS,
+        parent: eL.WebSetting.CHAT_EMBEDS
       },
       [eL.WebSetting.CHAT_EMOJI]: {
         section: eP.UserSettingsSections.TEXT,
         searchableTitle: ev.default.Messages.EMOJI,
         parent: eL.WebSetting.CHAT
       },
+      [eL.WebSetting.CHAT_EMOJI_REACTIONS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.RENDER_REACTIONS,
+        parent: eL.WebSetting.CHAT_EMOJI
+      },
+      [eL.WebSetting.CHAT_EMOJI_EMOTICONS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.CONVERT_EMOTICONS,
+        parent: eL.WebSetting.CHAT_EMOJI
+      },
       [eL.WebSetting.CHAT_STICKERS]: {
         section: eP.UserSettingsSections.TEXT,
         searchableTitle: ev.default.Messages.STICKERS_AUTO_PLAY_HEADING,
         parent: eL.WebSetting.CHAT
       },
+      [eL.WebSetting.CHAT_STICKERS_SUGGESTIONS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.AUTO_SUGGEST_STICKERS,
+        parent: eL.WebSetting.CHAT_STICKERS
+      },
+      [eL.WebSetting.CHAT_STICKERS_AUTOCOMPLETE]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.STICKERS_IN_AUTOCOMPLETE,
+        parent: eL.WebSetting.CHAT_STICKERS
+      },
       [eL.WebSetting.CHAT_TEXT_BOX]: {
         section: eP.UserSettingsSections.TEXT,
         searchableTitle: ev.default.Messages.FORM_LABEL_USE_RICH_CHAT_BOX,
         parent: eL.WebSetting.CHAT
+      },
+      [eL.WebSetting.CHAT_TEXT_BOX_PREVIEW]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.PREVIEW_MARKDOWN_DESCRIPTION,
+        parent: eL.WebSetting.CHAT_TEXT_BOX
+      },
+      [eL.WebSetting.CHAT_THREADS]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.THREADS,
+        parent: eL.WebSetting.CHAT
+      },
+      [eL.WebSetting.CHAT_THREADS_SPLIT_VIEW]: {
+        section: eP.UserSettingsSections.TEXT,
+        searchableTitle: ev.default.Messages.USE_THREADS_SIDEBAR_DESCRIPTION,
+        parent: eL.WebSetting.CHAT_THREADS
       },
       [eL.WebSetting.CHAT_SPOILERS]: {
         section: eP.UserSettingsSections.TEXT,
@@ -941,7 +996,7 @@ let ej = () => {
         section: eP.UserSettingsSections.SPEED_TEST,
         searchableTitle: "Speed Test",
         label: "Speed Test",
-        element: q.default,
+        element: X.default,
         predicate: () => b.default.isSupported() && k.default.getCurrentConfig({
           location: "9f7d84_2"
         }).showSettings
@@ -1219,7 +1274,7 @@ let ej = () => {
         section: eP.UserSettingsSections.TEXT_COMPONENT,
         searchableTitle: "Text Components",
         label: "Text Components",
-        element: X.default,
+        element: q.default,
         predicate: () => (0, Z.shouldShowTextPlayground)() || v.default.isDeveloper
       },
       [eL.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL]: {
