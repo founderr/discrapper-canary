@@ -278,7 +278,9 @@ h = "QuestsStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
     let {
       user_status: t
     } = e;
-    L(t.quest_id, {
+    (0, C.getQuestLogger)({
+      location: R.QuestsExperimentLocations.QUESTS_STORE
+    }).log("Received user status update for ".concat(t.quest_id), t), L(t.quest_id, {
       userStatus: (0, O.questUserStatusFromServer)(t)
     }, {
       updateProgress: !0
