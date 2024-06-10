@@ -865,6 +865,16 @@ let ej = () => {
         ariaLabel: ev.default.Messages.STREAMER_MODE,
         element: eA.default
       },
+      [eL.WebSetting.STREAMER_MODE_INTEGRATIONS]: {
+        section: eP.UserSettingsSections.STREAMER_MODE,
+        searchableTitle: ev.default.Messages.USER_SETTINGS_STREAMER_NOTICE_TITLE,
+        parent: eL.WebSetting.STREAMER_MODE
+      },
+      [eL.WebSetting.STREAMER_MODE_ENABLE]: {
+        section: eP.UserSettingsSections.STREAMER_MODE,
+        searchableTitle: ev.default.Messages.ENABLE_STREAMER_MODE_LABEL,
+        parent: eL.WebSetting.STREAMER_MODE
+      },
       [eL.WebSetting.STREAMER_MODE_HIDE_PERSONAL_INFORMATION]: {
         section: eP.UserSettingsSections.STREAMER_MODE,
         searchableTitle: ev.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL,

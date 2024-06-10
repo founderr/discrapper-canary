@@ -63305,8 +63305,8 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .message__702f7 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -134309,6 +134309,10 @@ div.nagbar_c731ff {
     .container__78c67 .noticeIcon__61e6f {
         display: none
     }
+}
+
+.sectionLabel__7cc19:only-child {
+    display: none
 }
 
 .select_b6196c {

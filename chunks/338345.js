@@ -43,79 +43,87 @@ function f() {
     className: N.container,
     tag: r.FormTitleTags.H1,
     title: I.default.Messages.STREAMER_MODE,
-    children: [(0, a.jsx)(r.FormNotice, {
-      className: g.marginBottom40,
-      iconClassName: N.noticeIcon,
-      type: r.FormNoticeTypes.PRIMARY,
-      imageData: {
-        src: s("560264"),
-        width: 184,
-        height: 110,
-        position: r.FormNoticeImagePositions.RIGHT
-      },
-      title: I.default.Messages.USER_SETTINGS_STREAMER_NOTICE_TITLE,
-      body: I.default.Messages.USER_SETTINGS_STREAMER_NOTICE_BODY.format({
-        streamkitURL: _.MarketingURLs.STREAMKIT
+    children: [(0, a.jsx)(c.Subsetting, {
+      setting: T.WebSetting.STREAMER_MODE_INTEGRATIONS,
+      children: (0, a.jsx)(r.FormNotice, {
+        className: g.marginBottom40,
+        iconClassName: N.noticeIcon,
+        type: r.FormNoticeTypes.PRIMARY,
+        imageData: {
+          src: s("560264"),
+          width: 184,
+          height: 110,
+          position: r.FormNoticeImagePositions.RIGHT
+        },
+        title: I.default.Messages.USER_SETTINGS_STREAMER_NOTICE_TITLE,
+        body: I.default.Messages.USER_SETTINGS_STREAMER_NOTICE_BODY.format({
+          streamkitURL: _.MarketingURLs.STREAMKIT
+        })
       })
-    }), (0, a.jsx)(r.FormSwitch, {
-      value: f,
-      onChange: e => R("enabled", e),
-      note: I.default.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
-        onClick: () => {
-          d.default.setSection(_.UserSettingsSections.KEYBINDS)
-        }
-      }),
-      children: I.default.Messages.ENABLE_STREAMER_MODE_LABEL
-    }), (() => {
-      if (E.isPlatformEmbedded) return (0, a.jsx)(r.FormSwitch, {
-        value: m,
-        onChange: e => R("autoToggle", e),
-        note: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
-        children: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
-      })
-    })(), (0, a.jsx)(r.FormTitle, {
-      className: l()(g.marginTop40, g.marginBottom8),
-      children: I.default.Messages.OPTIONS
-    }), (0, a.jsx)(c.Subsetting, {
-      setting: T.WebSetting.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
-      children: (0, a.jsx)(r.FormSwitch, {
-        value: A,
-        onChange: e => R("hidePersonalInformation", e),
-        note: I.default.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
-        children: I.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL
-      })
-    }), (0, a.jsx)(c.Subsetting, {
-      setting: T.WebSetting.STREAMER_MODE_HIDE_INVITE_LINKS,
-      children: (0, a.jsx)(r.FormSwitch, {
-        value: C,
-        onChange: e => R("hideInstantInvites", e),
-        note: I.default.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
-        children: I.default.Messages.HIDE_INSTANT_INVITES_LABEL
-      })
-    }), (0, a.jsx)(c.Subsetting, {
-      setting: T.WebSetting.STREAMER_MODE_DISABLE_SOUNDS,
-      children: (0, a.jsx)(r.FormSwitch, {
-        value: h,
-        onChange: e => R("disableSounds", e),
-        note: I.default.Messages.DISABLE_SOUNDS_DESCRIPTION,
-        children: I.default.Messages.DISABLE_SOUNDS_LABEL
-      })
-    }), (0, a.jsx)(c.Subsetting, {
-      setting: T.WebSetting.STREAMER_MODE_DISABLE_NOTIFICATIONS,
-      children: (0, a.jsx)(r.FormSwitch, {
-        value: O,
-        onChange: e => R("disableNotifications", e),
-        note: I.default.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
-        children: I.default.Messages.DISABLE_NOTIFICATIONS_LABEL
-      })
-    }), M && (0, a.jsx)(c.Subsetting, {
-      setting: T.WebSetting.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
-      children: (0, a.jsx)(r.FormSwitch, {
-        value: p,
-        onChange: e => R("enableContentProtection", e),
-        note: I.default.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
-        children: I.default.Messages.HIDE_WINDOW_FROM_STREAM_LABEL
-      })
+    }), (0, a.jsxs)(c.Subsetting, {
+      setting: T.WebSetting.STREAMER_MODE_ENABLE,
+      children: [(0, a.jsx)(r.FormSwitch, {
+        value: f,
+        onChange: e => R("enabled", e),
+        note: I.default.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
+          onClick: () => {
+            d.default.setSection(_.UserSettingsSections.KEYBINDS)
+          }
+        }),
+        children: I.default.Messages.ENABLE_STREAMER_MODE_LABEL
+      }), (() => {
+        if (E.isPlatformEmbedded) return (0, a.jsx)(r.FormSwitch, {
+          value: m,
+          onChange: e => R("autoToggle", e),
+          note: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
+          children: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
+        })
+      })()]
+    }), (0, a.jsxs)("div", {
+      children: [(0, a.jsx)(r.FormTitle, {
+        className: l()(g.marginTop40, g.marginBottom8, N.sectionLabel),
+        children: I.default.Messages.OPTIONS
+      }), (0, a.jsx)(c.Subsetting, {
+        setting: T.WebSetting.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
+        children: (0, a.jsx)(r.FormSwitch, {
+          value: A,
+          onChange: e => R("hidePersonalInformation", e),
+          note: I.default.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
+          children: I.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL
+        })
+      }), (0, a.jsx)(c.Subsetting, {
+        setting: T.WebSetting.STREAMER_MODE_HIDE_INVITE_LINKS,
+        children: (0, a.jsx)(r.FormSwitch, {
+          value: C,
+          onChange: e => R("hideInstantInvites", e),
+          note: I.default.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
+          children: I.default.Messages.HIDE_INSTANT_INVITES_LABEL
+        })
+      }), (0, a.jsx)(c.Subsetting, {
+        setting: T.WebSetting.STREAMER_MODE_DISABLE_SOUNDS,
+        children: (0, a.jsx)(r.FormSwitch, {
+          value: h,
+          onChange: e => R("disableSounds", e),
+          note: I.default.Messages.DISABLE_SOUNDS_DESCRIPTION,
+          children: I.default.Messages.DISABLE_SOUNDS_LABEL
+        })
+      }), (0, a.jsx)(c.Subsetting, {
+        setting: T.WebSetting.STREAMER_MODE_DISABLE_NOTIFICATIONS,
+        children: (0, a.jsx)(r.FormSwitch, {
+          value: O,
+          onChange: e => R("disableNotifications", e),
+          note: I.default.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
+          children: I.default.Messages.DISABLE_NOTIFICATIONS_LABEL
+        })
+      }), M && (0, a.jsx)(c.Subsetting, {
+        setting: T.WebSetting.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
+        children: (0, a.jsx)(r.FormSwitch, {
+          value: p,
+          onChange: e => R("enableContentProtection", e),
+          note: I.default.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
+          children: I.default.Messages.HIDE_WINDOW_FROM_STREAM_LABEL
+        })
+      })]
     })]
   })
 }
