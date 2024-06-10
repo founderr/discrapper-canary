@@ -70974,10 +70974,13 @@ html .invoiceCancelRow_aa7946 {
 }
 
 .questProgressRewardTile_ce3d11 {
-    border-radius: 50%;
     box-shadow: var(--shadow-high);
     display: block;
-    flex: 1;
+    flex: 1
+}
+
+.questProgressRewardTile_ce3d11.questProgressRewardTile_ce3d11 {
+    border-radius: 50%;
     height: 32px;
     width: 32px
 }
