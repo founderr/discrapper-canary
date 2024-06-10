@@ -2,8 +2,8 @@
 a.r(t), a("47120");
 var n = a("735250"),
   s = a("470079"),
-  l = a("120356"),
-  r = a.n(l),
+  r = a("120356"),
+  l = a.n(r),
   o = a("481060"),
   i = a("285952"),
   u = a("282605");
@@ -63,7 +63,7 @@ class d extends s.PureComponent {
         values: t,
         onFieldChange: a,
         onFieldFocus: s,
-        onFieldBlur: l,
+        onFieldBlur: r,
         layout: i,
         ...u
       } = this.props, {
@@ -84,10 +84,10 @@ class d extends s.PureComponent {
         "aria-labelledby": m,
         onChange: a,
         onFocus: s,
-        onBlur: l
+        onBlur: r
       };
       return (0, n.jsx)(o.FormSection, {
-        className: r()(null == c ? void 0 : c(i)),
+        className: l()(null == c ? void 0 : c(i)),
         title: p(),
         titleId: m,
         children: d(f, u)
@@ -95,7 +95,7 @@ class d extends s.PureComponent {
     }), c(this, "renderFormRow", e => {
       let t = e.fields.map(this.renderFormSection);
       return (0, n.jsx)(i.default, {
-        className: r()(u.row, e.className),
+        className: l()(u.row, e.className),
         children: t
       }, e.fields.map(e => e.name).join(""))
     })

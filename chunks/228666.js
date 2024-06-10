@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var n = a("735250"),
   s = a("470079"),
-  l = a("442837"),
-  r = a("481060"),
+  r = a("442837"),
+  l = a("481060"),
   o = a("464179"),
   i = a("812169"),
   u = a("706454"),
@@ -25,7 +25,7 @@ let S = e => {
       paymentSourceType: f
     } = e,
     T = null != S && (null == S.code || (0, d.errorToStep)(S) === d.Steps.ADDRESS),
-    _ = (0, l.useStateFromStores)([u.default], () => u.default.locale);
+    _ = (0, r.useStateFromStores)([u.default], () => u.default.locale);
   switch (f) {
     case p.PaymentSourceTypes.CARD:
       t = "en-US" === _ ? 1 === (0, i.reducedPaymentInfoExperiment)().bucket ? o.default.Layouts.MODAL_US_REDUCED : o.default.Layouts.MODAL_US : o.default.Layouts.MODAL_INTL;
@@ -47,9 +47,9 @@ let S = e => {
     default:
       t = "en-US" === _ ? o.default.Layouts.MODAL_US : o.default.Layouts.MODAL_INTL
   }
-  let y = (0, l.useStateFromStores)([c.default], () => c.default.ipCountryCode);
-  return 0 === a.country.length && (a.country = null != y ? y : ""), (0, n.jsxs)(s.Fragment, {
-    children: [T ? (0, n.jsx)(r.FormErrorBlock, {
+  let N = (0, r.useStateFromStores)([c.default], () => c.default.ipCountryCode);
+  return 0 === a.country.length && (a.country = null != N ? N : ""), (0, n.jsxs)(s.Fragment, {
+    children: [T ? (0, n.jsx)(l.FormErrorBlock, {
       className: m.errorBlock,
       children: E.default.Messages.BILLING_ERROR_SECTION_ADDRESS
     }) : null, (0, n.jsx)(o.default, {

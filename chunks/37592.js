@@ -2,8 +2,8 @@
 a.r(t), a("47120");
 var n = a("735250"),
   s = a("470079"),
-  l = a("481060"),
-  r = a("710845"),
+  r = a("481060"),
+  l = a("710845"),
   o = a("285952"),
   i = a("912454"),
   u = a("358085"),
@@ -19,7 +19,7 @@ function E(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-let m = new r.default("PaymentRequest");
+let m = new l.default("PaymentRequest");
 class S extends s.Component {
   componentDidMount() {
     (0, c.getStripe)().then(e => {
@@ -30,25 +30,25 @@ class S extends s.Component {
     let {
       canMakePayment: e
     } = this.state;
-    if (null == e) return (0, n.jsx)(l.Button, {
+    if (null == e) return (0, n.jsx)(r.Button, {
       submitting: !0,
-      look: l.Button.Looks.FILLED
+      look: r.Button.Looks.FILLED
     });
-    if (!1 === e) return (0, n.jsx)(l.Button, {
+    if (!1 === e) return (0, n.jsx)(r.Button, {
       disabled: !0,
-      look: l.Button.Looks.FILLED,
+      look: r.Button.Looks.FILLED,
       children: p.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
     });
     let t = (0, u.isAndroidChrome)(),
       a = t ? p.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : p.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
       s = t ? i.default.Types.G_PAY : i.default.Types.PAYMENT_REQUEST,
       {
-        className: r,
+        className: l,
         iconClassName: c
       } = this.props;
-    return (0, n.jsx)(l.Button, {
+    return (0, n.jsx)(r.Button, {
       onClick: this.handleOnClick,
-      className: r,
+      className: l,
       children: (0, n.jsxs)(o.default, {
         align: o.default.Align.CENTER,
         children: [(0, n.jsx)(i.default, {

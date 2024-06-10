@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return u
+    return C
   }
 });
 var n = s("735250");
@@ -12,12 +12,12 @@ var i = s("120356"),
   a = s("559629"),
   o = s("398005");
 
-function u(e) {
+function C(e) {
   let {
     className: t,
     copy: s,
     bannerImage: i,
-    textColor: u = "always-white"
+    textColor: C = "always-white"
   } = e;
   return (0, n.jsxs)("div", {
     className: r()(o.bannerContainer, t),
@@ -31,7 +31,7 @@ function u(e) {
         className: o.giftIcon
       }), (0, n.jsx)(l.Heading, {
         className: o.textHeader,
-        color: u,
+        color: C,
         variant: "eyebrow",
         children: s
       })]

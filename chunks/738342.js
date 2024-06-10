@@ -4,8 +4,8 @@ a.r(t), a.d(t, {
     return S
   }
 }), a("47120");
-var n, s, l = a("735250"),
-  r = a("470079"),
+var n, s, r = a("735250"),
+  l = a("470079"),
   o = a("481060"),
   i = a("987134"),
   u = a("754103"),
@@ -18,14 +18,14 @@ function E(e) {
     onChange: t,
     billingAddressInfo: a,
     error: n
-  } = e, [s, i] = r.useState({}), [p, E] = r.useState({}), m = {
+  } = e, [s, i] = l.useState({}), [p, E] = l.useState({}), m = {
     email: {
       name: "email",
       title: () => c.default.Messages.EMAIL,
       autoComplete: "cc-name",
       placeholder: () => c.default.Messages.EMAIL,
       getClassNameForLayout: () => d.width100,
-      renderInput: e => (0, l.jsx)(o.TextInput, {
+      renderInput: e => (0, r.jsx)(o.TextInput, {
         ...e
       })
     },
@@ -35,7 +35,7 @@ function E(e) {
       autoComplete: "cc-name",
       placeholder: () => c.default.Messages.CREDIT_CARD_NAME,
       getClassNameForLayout: () => d.width100,
-      renderInput: e => (0, l.jsx)(o.TextInput, {
+      renderInput: e => (0, r.jsx)(o.TextInput, {
         ...e
       })
     }
@@ -44,7 +44,7 @@ function E(e) {
   }, {
     fields: [m.name]
   }];
-  return (0, l.jsx)(u.default, {
+  return (0, r.jsx)(u.default, {
     form: S,
     errors: p,
     formError: n,
@@ -145,12 +145,12 @@ function S(e) {
     error: n,
     billingAddressInfo: s,
     p24BankValue: o
-  } = e, [S, A] = r.useState(o), f = "p24Bank", T = [{
+  } = e, [S, A] = l.useState(o), f = "p24Bank", T = [{
     fields: [{
       name: f,
       title: () => c.default.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
       getClassNameForLayout: () => d.width100,
-      renderInput: e => (0, l.jsx)(i.default, {
+      renderInput: e => (0, r.jsx)(i.default, {
         maxMenuHeight: 190,
         menuPlacement: i.default.MenuPlacements.TOP,
         clearable: !1,
@@ -165,12 +165,12 @@ function S(e) {
       })
     }]
   }];
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(E, {
+  return (0, r.jsxs)(r.Fragment, {
+    children: [(0, r.jsx)(E, {
       error: n,
       billingAddressInfo: s,
       onChange: t
-    }), (0, l.jsx)(u.default, {
+    }), (0, r.jsx)(u.default, {
       className: p.p24Form,
       form: T,
       errors: {},

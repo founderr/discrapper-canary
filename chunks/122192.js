@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var n = a("735250"),
   s = a("470079"),
-  l = a("481060"),
-  r = a("462566");
+  r = a("481060"),
+  l = a("462566");
 a("285952");
 var o = a("603421"),
   i = a("689938"),
@@ -18,10 +18,10 @@ let c = e => {
     onCardInfoChange: a
   } = e, c = null != t && (null == t.code || (0, o.errorToStep)(t) === o.Steps.CREDIT_CARD_INFORMATION);
   return (0, n.jsxs)(s.Fragment, {
-    children: [c ? (0, n.jsx)(l.FormErrorBlock, {
+    children: [c ? (0, n.jsx)(r.FormErrorBlock, {
       className: u.errorBlock,
       children: i.default.Messages.BILLING_ERROR_SECTION_CARD
-    }) : null, (0, n.jsx)(r.default, {
+    }) : null, (0, n.jsx)(l.default, {
       onCardInfoChange: a,
       error: t
     })]

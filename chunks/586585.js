@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s, r, a = n("735250");
 n("470079");
-var l = n("481060"),
-  i = n("285952"),
+var i = n("481060"),
+  l = n("285952"),
   u = n("976644"),
   o = n("612853"),
   c = n("689938"),
@@ -25,24 +25,24 @@ let f = e => {
     primaryDisabled: C,
     primarySubmitting: E,
     onPrimary: P,
-    secondaryText: A,
-    onSecondary: N
+    secondaryText: S,
+    onSecondary: A
   } = e;
-  return (0, a.jsxs)(l.ModalFooter, {
-    justify: i.default.Justify.BETWEEN,
-    align: i.default.Align.CENTER,
+  return (0, a.jsxs)(i.ModalFooter, {
+    justify: l.default.Justify.BETWEEN,
+    align: l.default.Align.CENTER,
     children: [(() => {
       if (null == r || null == p) return null;
-      let e = 2 === r ? u.default : l.Button,
+      let e = 2 === r ? u.default : i.Button,
         t = {
           innerClassName: d.button,
           type: f,
           disabled: C,
           submitting: E,
-          color: 0 === r ? l.Button.Colors.BRAND : l.Button.Colors.GREEN,
+          color: 0 === r ? i.Button.Colors.BRAND : i.Button.Colors.GREEN,
           onClick: P
         };
-      return null != m ? (0, a.jsx)(l.Tooltip, {
+      return null != m ? (0, a.jsx)(i.Tooltip, {
         text: m,
         children: n => (0, a.jsxs)(e, {
           ...n,
@@ -57,15 +57,15 @@ let f = e => {
           className: d.primaryIcon
         }), p]
       })
-    })(), null == A ? null : (0, a.jsx)(l.Button, {
-      color: l.Button.Colors.PRIMARY,
-      look: l.Button.Looks.LINK,
-      onClick: N,
-      children: A
-    }), (0, a.jsx)(o.default, {}), null == t ? null : (0, a.jsx)(l.Button, {
+    })(), null == S ? null : (0, a.jsx)(i.Button, {
+      color: i.Button.Colors.PRIMARY,
+      look: i.Button.Looks.LINK,
+      onClick: A,
+      children: S
+    }), (0, a.jsx)(o.default, {}), null == t ? null : (0, a.jsx)(i.Button, {
       className: d.back,
-      color: l.Button.Colors.PRIMARY,
-      look: l.Button.Looks.LINK,
+      color: i.Button.Colors.PRIMARY,
+      look: i.Button.Looks.LINK,
       onClick: t,
       children: null != n ? n : c.default.Messages.BACK
     })]

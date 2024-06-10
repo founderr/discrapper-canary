@@ -2,8 +2,8 @@
 a.r(t);
 var n = a("735250"),
   s = a("470079"),
-  l = a("442837"),
-  r = a("481060"),
+  r = a("442837"),
+  l = a("481060"),
   o = a("873115"),
   i = a("618541"),
   u = a("975060"),
@@ -23,7 +23,7 @@ class E extends s.PureComponent {
       className: t,
       paypalClient: a
     } = this.props;
-    return (0, n.jsx)(r.FormSection, {
+    return (0, n.jsx)(l.FormSection, {
       className: t,
       title: d.default.Messages.PAYMENT_SOURCE_PAYPAL_ACCOUNT,
       children: (0, n.jsxs)("div", {
@@ -31,7 +31,7 @@ class E extends s.PureComponent {
         children: [(0, n.jsx)(c.default, {
           type: c.default.Types.PAYPAL,
           className: p.paypalIcon
-        }), (0, n.jsx)(r.TextInput, {
+        }), (0, n.jsx)(l.TextInput, {
           value: e,
           editable: !1,
           readOnly: !0,
@@ -42,7 +42,7 @@ class E extends s.PureComponent {
     })
   }
 }
-t.default = l.default.connectStores([i.default, u.default], () => ({
+t.default = r.default.connectStores([i.default, u.default], () => ({
   braintreeEmail: u.default.braintreeEmail,
   paypalClient: i.default.getPayPalClient()
 }))(E)

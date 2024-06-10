@@ -9,8 +9,8 @@ a.r(t), a.d(t, {
 }), a("411104");
 var n = a("175145"),
   s = a("544891"),
-  l = a("570140"),
-  r = a("355467"),
+  r = a("570140"),
+  l = a("355467"),
   o = a("987032"),
   i = a("559407"),
   u = a("122289"),
@@ -41,7 +41,7 @@ async function E() {
         },
         paymentMethodsResponse: t.body
       });
-    l.default.dispatch({
+    r.default.dispatch({
         type: "ADYEN_CREATE_CLIENT_SUCCESS",
         client: a
       }),
@@ -68,26 +68,26 @@ async function E() {
               data: t,
               isValid: a
             } = e;
-            if (a) l.default.dispatch({
+            if (a) r.default.dispatch({
               type: "ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS",
               data: t
             });
-            else throw (0, r.dispatchConfirmationError)("Cash App Pay setup attempt is not valid.")
+            else throw (0, l.dispatchConfirmationError)("Cash App Pay setup attempt is not valid.")
           },
           onError: e => {
             if ("CANCEL" !== e.name) {
               let t = "Payment declined by CashAppPay" !== e.message;
-              throw (0, r.dispatchConfirmationError)(e.message, t)
+              throw (0, l.dispatchConfirmationError)(e.message, t)
             }
           }
         }).mount("#".concat(i.CASH_APP_PAY_CONTAINER));
-        l.default.dispatch({
+        r.default.dispatch({
           type: "ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS",
           component: t
         })
       }(a)
   } catch (e) {
-    (0, u.captureBillingException)(e), l.default.dispatch({
+    (0, u.captureBillingException)(e), r.default.dispatch({
       type: "ADYEN_CREATE_CLIENT_FAIL"
     })
   }

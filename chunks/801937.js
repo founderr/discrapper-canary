@@ -2,8 +2,8 @@
 a.r(t), a("47120"), a("653041");
 var n = a("735250"),
   s = a("470079"),
-  l = a("120356"),
-  r = a.n(l),
+  r = a("120356"),
+  l = a.n(r),
   o = a("442837"),
   i = a("481060"),
   u = a("355467"),
@@ -17,8 +17,8 @@ var n = a("735250"),
   f = a("981631"),
   T = a("689938"),
   _ = a("588616"),
-  y = a("961047");
-let N = {
+  N = a("961047");
+let y = {
     [f.PaymentSourceTypes.CARD]: m.default.Types.UNKNOWN,
     [f.PaymentSourceTypes.PAYPAL]: m.default.Types.PAYPAL,
     [f.PaymentSourceTypes.SOFORT]: m.default.Types.SOFORT,
@@ -36,14 +36,14 @@ let N = {
     [f.PaymentSourceTypes.IDEAL]: m.default.Types.IDEAL,
     [f.PaymentSourceTypes.CASH_APP]: m.default.Types.CASH_APP
   },
-  P = [f.PaymentSourceTypes.CARD, f.PaymentSourceTypes.PAYPAL],
-  C = new Set(["DE", "BG", "CZ", "DK", "HU", "RO", "SE", "CH", "SI", "IE", "LV", "MT", "FR", "SK", "FI", "GR", "PT", "LU", "LT", "CY", "NO", "NL", "ES", "BE", "AT", "IT"]),
+  C = [f.PaymentSourceTypes.CARD, f.PaymentSourceTypes.PAYPAL],
+  P = new Set(["DE", "BG", "CZ", "DK", "HU", "RO", "SE", "CH", "SI", "IE", "LV", "MT", "FR", "SK", "FI", "GR", "PT", "LU", "LT", "CY", "NO", "NL", "ES", "BE", "AT", "IT"]),
   h = new Set(["BE", "NL", "DE", "ES", "AT", "IT"]),
   I = new Map([
     [f.PaymentSourceTypes.SOFORT, new Set(["ALL", ...h])],
     [f.PaymentSourceTypes.PRZELEWY24, new Set(["ALL", "PL"])],
     [f.PaymentSourceTypes.GIROPAY, new Set(["ALL", "DE"])],
-    [f.PaymentSourceTypes.PAYSAFE_CARD, new Set(["ALL", ...C])],
+    [f.PaymentSourceTypes.PAYSAFE_CARD, new Set(["ALL", ...P])],
     [f.PaymentSourceTypes.GCASH, new Set(["ALL", "PH"])],
     [f.PaymentSourceTypes.GRABPAY_MY, new Set(["ALL", "MY"])],
     [f.PaymentSourceTypes.MOMO_WALLET, new Set(["ALL", "VN"])],
@@ -59,7 +59,7 @@ let N = {
     [f.PaymentSourceTypes.PAYSAFE_CARD, new Set(["DE"])]
   ]);
 
-function b(e) {
+function O(e) {
   let {
     enabledPaymentTypes: t,
     forceCountryCode: a,
@@ -70,18 +70,18 @@ function b(e) {
     autoTrackExposure: !1
   }), s = null != e ? e : "ALL";
   n.length > 0 && null != a && null != e && (s = n.includes(e) ? e : a);
-  let l = new Set,
-    r = [];
+  let r = new Set,
+    l = [];
   return I.forEach((e, a) => {
-    t.includes(a) && (e.has(s) ? l.add(a) : r.push(a))
+    t.includes(a) && (e.has(s) ? r.add(a) : l.push(a))
   }), R.forEach((e, t) => {
-    e.has(s) && l.add(t)
+    e.has(s) && r.add(t)
   }), {
-    countryPaymentMethods: [...P, ...Array.from(l)],
-    remainingPaymentMethods: r
+    countryPaymentMethods: [...C, ...Array.from(r)],
+    remainingPaymentMethods: l
   }
 }
-class M extends s.PureComponent {
+class b extends s.PureComponent {
   componentDidMount() {
     (0, u.fetchIpCountryCode)()
   }
@@ -96,18 +96,18 @@ class M extends s.PureComponent {
   createPaymentButtons(e) {
     return e.map(e => {
       var t;
-      let a = N[e],
+      let a = y[e],
         s = (0, p.PAYMENT_SOURCE_NAMES)[e](),
-        l = null === (t = this.props.localizedPromo) || void 0 === t ? void 0 : t.paymentSourceTypes.includes(e);
+        r = null === (t = this.props.localizedPromo) || void 0 === t ? void 0 : t.paymentSourceTypes.includes(e);
       return (0, n.jsx)(i.Button, {
         onClick: () => this.props.onChooseType(e),
         className: _.button,
         children: (0, n.jsxs)("div", {
-          className: r()(y.flex, y.alignCenter),
+          className: l()(N.flex, N.alignCenter),
           children: [(0, n.jsx)(m.default, {
             className: _.buttonIcon,
             type: a
-          }), s, l && (0, n.jsx)(S.TextBadge, {
+          }), s, r && (0, n.jsx)(S.TextBadge, {
             text: T.default.Messages.NEW,
             className: _.newPaymentBadge,
             disableColor: !0
@@ -123,42 +123,42 @@ class M extends s.PureComponent {
       onChooseType: t,
       className: a,
       onStripePaymentMethodReceived: s,
-      allowStripeRequestPayments: l,
+      allowStripeRequestPayments: r,
       ipCountryCode: o,
       ipCountryCodeHasError: u,
       isEligibleForTrial: d = !1
-    } = this.props, p = l ? (0, n.jsx)(A.default, {
+    } = this.props, p = r ? (0, n.jsx)(A.default, {
       className: _.button,
       iconClassName: _.buttonIcon,
       paymentLabel: T.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_LABEL,
       onStripePaymentMethodReceived: s,
       onChooseType: t
     }) : null, E = [], m = [], S = void 0 === o;
-    if (u) E.push(...this.createPaymentButtons(b("ALL").countryPaymentMethods));
+    if (u) E.push(...this.createPaymentButtons(O("ALL").countryPaymentMethods));
     else {
       let {
         countryPaymentMethods: e,
         remainingPaymentMethods: t
-      } = b(o);
+      } = O(o);
       E.push(...this.createPaymentButtons(e)), m.push(...this.createPaymentButtons(t))
     }
     let f = (0, n.jsxs)("div", {
       children: [(0, n.jsxs)("div", {
-        className: r()(y.wrap, y.horizontal),
+        className: l()(N.wrap, N.horizontal),
         children: [E, p]
       }), (0, n.jsx)("div", {
-        className: m.length > 0 ? y.flex : _.hidden,
+        className: m.length > 0 ? N.flex : _.hidden,
         children: (0, n.jsxs)(i.Clickable, {
           onClick: () => this.toggleAllPayments(),
-          className: r()(y.flex, _.allPaymentsToggleButton),
+          className: l()(N.flex, _.allPaymentsToggleButton),
           children: [T.default.Messages.PAYMENTS_ALL_METHOD_BUTTON, (0, n.jsx)(c.default, {
             open: e
           })]
         })
       }), (0, n.jsx)("div", {
-        className: r()(y.wrap, y.horizontal, _.allPaymentsSection, {
+        className: l()(N.wrap, N.horizontal, _.allPaymentsSection, {
           [_.hidden]: !e,
-          [y.flex]: e
+          [N.flex]: e
         }),
         children: m
       })]
@@ -187,4 +187,4 @@ t.default = o.default.connectStores([E.default], () => ({
   ipCountryCode: E.default.ipCountryCode,
   ipCountryCodeHasError: E.default.ipCountryCodeHasError,
   localizedPromo: E.default.localizedPricingPromo
-}))(M)
+}))(b)

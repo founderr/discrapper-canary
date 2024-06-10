@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("411104");
-var r, u, i, a, l = n("442837"),
+var r, u, i, l, a = n("442837"),
   o = n("570140"),
   s = n("366939"),
   E = n("16084"),
@@ -53,7 +53,7 @@ function N(e) {
   if (!T || t.id !== f || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(t.status)) return !1;
   T = !1, I = null, f = null, o.default.wait(s.clearError), o.default.wait(E.clearPurchaseError)
 }
-class M extends(r = l.default.Store) {
+class M extends(r = a.default.Store) {
   get isAwaitingAuthentication() {
     return T
   }
@@ -64,12 +64,12 @@ class M extends(r = l.default.Store) {
     return f
   }
 }
-a = "PaymentAuthenticationStore", (i = "displayName") in(u = M) ? Object.defineProperty(u, i, {
-  value: a,
+l = "PaymentAuthenticationStore", (i = "displayName") in(u = M) ? Object.defineProperty(u, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : u[i] = a, t.default = new M(o.default, {
+}) : u[i] = l, t.default = new M(o.default, {
   BILLING_SUBSCRIPTION_UPDATE_START: C,
   PAYMENT_AUTHENTICATION_CLEAR_ERROR: C,
   PREMIUM_PAYMENT_ERROR_CLEAR: C,

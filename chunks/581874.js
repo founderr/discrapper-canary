@@ -9,8 +9,8 @@ var n, i = s("735250"),
   l = s("120356"),
   a = s.n(l),
   o = s("481060"),
-  u = s("153066"),
-  C = s("285952"),
+  C = s("153066"),
+  u = s("285952"),
   d = s("689938"),
   c = s("965804");
 
@@ -39,7 +39,7 @@ class f extends(n = r.PureComponent) {
       mode: n
     } = this.props, r = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
     return (0, i.jsx)("input", {
-      className: a()((0, u.getClass)(c, "input", n), {
+      className: a()((0, C.getClass)(c, "input", n), {
         [c.inputHidden]: e
       }),
       ref: this.inputRef,
@@ -73,17 +73,17 @@ class f extends(n = r.PureComponent) {
       focusTarget: this.inputRef,
       ringTarget: this.containerRef,
       children: (0, i.jsx)("div", {
-        className: a()((0, u.getClass)(c, "copyInput", s), r),
+        className: a()((0, C.getClass)(c, "copyInput", s), r),
         ref: this.containerRef,
-        children: (0, i.jsxs)(C.default, {
+        children: (0, i.jsxs)(u.default, {
           className: c.layout,
-          children: [(0, i.jsxs)(C.default, {
+          children: [(0, i.jsxs)(u.default, {
             className: c.inputWrapper,
             children: [this.renderInput(p), p ? (0, i.jsx)("div", {
               className: c.hiddenMessage,
               children: n
             }) : null]
-          }), (0, i.jsx)(C.default, {
+          }), (0, i.jsx)(u.default, {
             shrink: 1,
             grow: 0,
             style: {

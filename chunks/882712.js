@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   PurchaseTokenAuthState: function() {
-    return l
+    return a
   }
 });
-var r, u, i, a, l, o, s = n("442837"),
+var r, u, i, l, a, o, s = n("442837"),
   E = n("570140"),
   S = n("128069"),
   _ = n("38618");
-(r = l || (l = {}))[r.UNKNOWN = 0] = "UNKNOWN", r[r.PENDING = 1] = "PENDING", r[r.SUCCESS = 2] = "SUCCESS", r[r.ERROR = 3] = "ERROR";
+(r = a || (a = {}))[r.UNKNOWN = 0] = "UNKNOWN", r[r.PENDING = 1] = "PENDING", r[r.SUCCESS = 2] = "SUCCESS", r[r.ERROR = 3] = "ERROR";
 let d = 0,
   c = null,
   A = null;
@@ -34,12 +34,12 @@ class I extends(o = s.default.Store) {
     return A
   }
 }
-a = "PurchaseTokenAuthStore", (i = "displayName") in(u = I) ? Object.defineProperty(u, i, {
-  value: a,
+l = "PurchaseTokenAuthStore", (i = "displayName") in(u = I) ? Object.defineProperty(u, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : u[i] = a, t.default = new I(E.default, {
+}) : u[i] = l, t.default = new I(E.default, {
   SKU_PURCHASE_FAIL: T,
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: T,
   USER_PAYMENT_CLIENT_ADD: function(e) {

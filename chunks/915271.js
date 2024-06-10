@@ -2,8 +2,8 @@
 a.r(t);
 var n = a("735250"),
   s = a("470079"),
-  l = a("442837"),
-  r = a("481060"),
+  r = a("442837"),
+  l = a("481060"),
   o = a("873115"),
   i = a("618541"),
   u = a("975060"),
@@ -30,18 +30,18 @@ class E extends s.PureComponent {
         size: c.IconSizes.MEDIUM,
         className: p.venmoIcon
       }), s ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(r.Heading, {
+        children: [(0, n.jsx)(l.Heading, {
           variant: e.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
           className: p.connectionInstructions,
           children: d.default.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS.format({
             venmoUsername: e
           })
-        }), (0, n.jsx)(r.Text, {
+        }), (0, n.jsx)(l.Text, {
           variant: "text-md/medium",
           className: p.connectionInstructions,
           children: d.default.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS_INSTRUCTIONS
         })]
-      }) : (0, n.jsx)(r.Text, {
+      }) : (0, n.jsx)(l.Text, {
         variant: "text-md/medium",
         className: p.connectionInstructions,
         children: null == a ? d.default.Messages.PAYMENT_SOURCE_VENMO_LOADING : d.default.Messages.PAYMENT_SOURCE_VENMO_CONNECTION_INSTRUCTIONS
@@ -49,7 +49,7 @@ class E extends s.PureComponent {
     })
   }
 }
-t.default = l.default.connectStores([i.default, u.default], () => ({
+t.default = r.default.connectStores([i.default, u.default], () => ({
   venmoUsername: u.default.venmoUsername,
   venmoClient: i.default.getVenmoClient()
 }))(E)

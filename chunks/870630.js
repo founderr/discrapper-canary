@@ -2,8 +2,8 @@
 a.r(t), a("47120"), a("411104");
 var n = a("735250"),
   s = a("470079"),
-  l = a("160612"),
-  r = a("780384"),
+  r = a("160612"),
+  l = a("780384"),
   o = a("481060"),
   i = a("410030"),
   u = a("231338"),
@@ -27,14 +27,14 @@ t.default = function(e) {
       let t = window.getComputedStyle(e),
         n = window.getComputedStyle(e, "::placeholder"),
         s = t.getPropertyValue("font-family"),
-        l = t.getPropertyValue("font-weight"),
-        r = t.getPropertyValue("color"),
+        r = t.getPropertyValue("font-weight"),
+        l = t.getPropertyValue("color"),
         o = t.getPropertyValue("font-size");
       _({
         base: {
           fontFamily: s,
-          fontWeight: l,
-          color: r,
+          fontWeight: r,
+          color: l,
           fontSize: o,
           backgroundColor: t.getPropertyValue("background-color"),
           padding: "12px",
@@ -45,7 +45,7 @@ t.default = function(e) {
       })
     }, [a]), e.type) {
     case u.PaymentSourceTypes.PRZELEWY24: {
-      let s = (0, r.isThemeDark)(t) ? A : f,
+      let s = (0, l.isThemeDark)(t) ? A : f,
         {
           onNameChange: i,
           onEmailChange: u,
@@ -76,7 +76,7 @@ t.default = function(e) {
         }), (0, n.jsxs)(o.FormSection, {
           className: d.nonTopInputWrapper,
           title: c.default.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
-          children: [(0, n.jsx)(l.P24BankElement, {
+          children: [(0, n.jsx)(r.P24BankElement, {
             options: {
               value: E,
               style: T
@@ -98,7 +98,7 @@ t.default = function(e) {
         onEPSBankChange: i,
         epsBankValue: u,
         billingAddressInfo: m
-      } = e, S = (0, r.isThemeDark)(t) ? p : E;
+      } = e, S = (0, l.isThemeDark)(t) ? p : E;
       return (0, n.jsxs)("div", {
         className: d.body,
         children: [(0, n.jsx)(o.FormSection, {
@@ -113,7 +113,7 @@ t.default = function(e) {
         }), (0, n.jsxs)(o.FormSection, {
           className: d.nonTopInputWrapper,
           title: c.default.Messages.PAYMENT_SOURCE_EPS_BANK_LABEL,
-          children: [(0, n.jsx)(l.EpsBankElement, {
+          children: [(0, n.jsx)(r.EpsBankElement, {
             options: {
               value: u,
               style: T
@@ -135,7 +135,7 @@ t.default = function(e) {
         onIdealBankChange: i,
         idealBankValue: u,
         billingAddressInfo: p
-      } = e, E = (0, r.isThemeDark)(t) ? m : S;
+      } = e, E = (0, l.isThemeDark)(t) ? m : S;
       return (0, n.jsxs)("div", {
         className: d.body,
         children: [(0, n.jsx)(o.FormSection, {
@@ -150,7 +150,7 @@ t.default = function(e) {
         }), (0, n.jsxs)(o.FormSection, {
           className: d.nonTopInputWrapper,
           title: c.default.Messages.PAYMENT_SOURCE_IDEAL_BANK_LABEL,
-          children: [(0, n.jsx)(l.IdealBankElement, {
+          children: [(0, n.jsx)(r.IdealBankElement, {
             options: {
               value: u,
               style: T

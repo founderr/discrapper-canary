@@ -1,7 +1,7 @@
 "use strict";
 let r;
 n.r(t), n("47120"), n("411104");
-var u, i, a, l, o = n("442837"),
+var u, i, l, a, o = n("442837"),
   s = n("570140"),
   E = n("706454"),
   S = n("156570"),
@@ -69,12 +69,12 @@ class R extends(u = o.default.Store) {
     return null
   }
 }
-l = "StoreListingStore", (a = "displayName") in(i = R) ? Object.defineProperty(i, a, {
-  value: l,
+a = "StoreListingStore", (l = "displayName") in(i = R) ? Object.defineProperty(i, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = l, t.default = new R(s.default, {
+}) : i[l] = a, t.default = new R(s.default, {
   STORE_LISTINGS_FETCH_SUCCESS: function(e) {
     let {
       storeListings: t
