@@ -3,7 +3,6 @@ e.exports = {
   activityContainer: "activityContainer_b7a374",
   activitySuggestion: "activitySuggestion_cef3eb",
   clickableBanner: "clickableBanner__2b588",
-  clickableBannerReducedMotion: "clickableBannerReducedMotion__2bfbf",
   container: "container__79284",
   freeButtonLink: "freeButtonLink_a4894e",
   freeLeft: "freeLeft__973e2",

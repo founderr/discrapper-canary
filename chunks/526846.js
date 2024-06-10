@@ -114,9 +114,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
           className: O.posterDivider
         })]
       }) : B ? (0, a.jsxs)(d.Clickable, {
-        className: i()(O.clickableBanner, {
-          [O.clickableBannerReducedMotion]: W
-        }),
+        className: O.clickableBanner,
         onClick: () => {
           k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(y.TUNE_IN_APPLICATION_ID), void 0, void 0, X)
         },
