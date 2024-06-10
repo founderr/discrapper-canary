@@ -27,7 +27,7 @@ function E() {
         E = !0;
       if (Object.keys(l).length > 0) {
         let s = await (0, i.saveAccountChanges)(l);
-        E = E && null !== (t = null == s ? void 0 : s.ok) && void 0 !== t && t, (null == s ? void 0 : s.ok) ? (0, i.resetPendingAccountChanges)() : (null == s ? void 0 : null === (e = s.body) || void 0 === e ? void 0 : e.username) != null && (0, S.showInvalidUsernameToast)()
+        E = E && null !== (t = null == s ? void 0 : s.ok) && void 0 !== t && t, (null == s ? void 0 : s.ok) ? (0, i.resetPendingAccountChanges)() : (null == s ? void 0 : null === (e = s.body) || void 0 === e ? void 0 : e.username) != null ? (0, S.showInvalidUsernameToast)() : (0, c.showGenericProfileUpdateFailureToast)()
       }
       if (Object.keys(r).length > 0) {
         let e = await (0, d.saveProfileChanges)(r);
