@@ -724,9 +724,13 @@ function eG(e, t) {
 
 function ew(e) {
   if (null != e && null != e.joinedAt) {
-    if (e.joinedAt instanceof Date) isNaN(e.joinedAt.getTime());
-    else if ("string" == typeof e.joinedAt) isNaN(new Date(e.joinedAt).getTime());
-    else if ("number" == typeof e.joinedAt && !isNaN(e.joinedAt)) return e.joinedAt
+    if (e.joinedAt instanceof Date) {
+      let t = e.joinedAt.getTime();
+      if (!isNaN(t)) return t
+    } else if ("string" == typeof e.joinedAt) {
+      let t = new Date(e.joinedAt).getTime();
+      if (!isNaN(t)) return t
+    } else if ("number" == typeof e.joinedAt && !isNaN(e.joinedAt)) return e.joinedAt
   }
   return Date.now()
 }
