@@ -39,8 +39,8 @@ function g(e) {
     let i = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== null,
       a = (null === (s = t.tags) || void 0 === s ? void 0 : s.guild_connections) !== null;
     return i && !a ? 1 : !i && a ? -1 : 0
-  }), [x, d]), U = E && null != u, N = i.useMemo(() => "roles-".concat((0, a.v4)()), []), C = (0, n.default)({
-    id: N,
+  }), [x, d]), N = E && null != u, C = i.useMemo(() => "roles-".concat((0, a.v4)()), []), U = (0, n.default)({
+    id: C,
     isEnabled: !0,
     scrollToStart: v.NOOP_PROMISE,
     scrollToEnd: v.NOOP_PROMISE,
@@ -58,7 +58,7 @@ function g(e) {
     }, e.id)
   });
   return (0, s.jsx)(n.ListNavigatorProvider, {
-    navigator: C,
+    navigator: U,
     children: (0, s.jsx)(n.ListNavigatorContainer, {
       children: e => {
         let {
@@ -70,7 +70,7 @@ function g(e) {
           "aria-label": h,
           ref: t,
           ...l,
-          children: [P, U && (0, s.jsx)(_.default, {
+          children: [P, N && (0, s.jsx)(_.default, {
             guild: r,
             guildMember: u,
             highestRole: f,
@@ -97,7 +97,7 @@ function x(e) {
     });
     let i = null !== (s = null == I ? void 0 : I.filter(t => t !== e.id)) && void 0 !== s ? s : [];
     (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null ? r.default.unassignGuildRoleConnection(a.id, e.id) : u.default.updateMemberRoles(a.id, t.id, i, [], [e.id])
-  }, [I, a.id, t.id, n]), U = i.useCallback(e => {
+  }, [I, a.id, t.id, n]), N = i.useCallback(e => {
     n({
       action: "ADD_ROLE"
     });
@@ -113,7 +113,7 @@ function x(e) {
       userRoles: null != I ? I : [],
       highestRole: T,
       canManageRoles: x,
-      onAddRole: U,
+      onAddRole: N,
       onRemoveRole: A
     })
   })

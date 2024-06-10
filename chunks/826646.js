@@ -35,7 +35,7 @@ function S(e) {
     isTryItOutFlow: y,
     hideBioSection: N,
     hideExampleButton: j
-  } = e, C = (0, i.useStateFromStores)([f.default], () => null == I ? null : f.default.getMember(I.id, t.id)), U = (0, i.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), b = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), _ = null == S ? void 0 : null === (a = S.getPreviewBio(P)) || void 0 === a ? void 0 : a.value, M = null != x ? x : null == S ? void 0 : S.pronouns, w = (0, v.getPreviewName)({
+  } = e, C = (0, i.useStateFromStores)([f.default], () => null == I ? null : f.default.getMember(I.id, t.id)), U = (0, i.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), _ = (0, r.default)("SimplifiedProfileCustomizationPreviewBody"), b = null == S ? void 0 : null === (a = S.getPreviewBio(P)) || void 0 === a ? void 0 : a.value, M = null != x ? x : null == S ? void 0 : S.pronouns, w = (0, v.getPreviewName)({
     pendingNickname: A,
     pendingGlobalName: E,
     user: t,
@@ -64,12 +64,12 @@ function S(e) {
           displayProfile: S,
           profileType: p.UserProfileTypes.BITE_SIZE
         })
-      }), b && (0, l.jsx)(n.default, {
+      }), _ && (0, l.jsx)(n.default, {
         userId: t.id,
         inline: !1
-      }), !N && null != _ && "" !== _ && (0, l.jsx)(c.default, {
+      }), !N && null != b && "" !== b && (0, l.jsx)(c.default, {
         user: t,
-        bio: _,
+        bio: b,
         hidePersonalInformation: U
       })]
     }), !j && (0, l.jsx)(u.default, {

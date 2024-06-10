@@ -67,8 +67,8 @@ function P(e) {
     giftRecipient: N
   } = (0, E.useGiftContext)(), {
     selectedSkuId: A,
-    selectedSkuPricePreview: h
-  } = (0, S.usePaymentContext)(), v = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser());
+    selectedSkuPricePreview: v
+  } = (0, S.usePaymentContext)(), h = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser());
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(p.PaymentPortalBody, {
       children: (0, a.jsxs)("div", {
@@ -93,7 +93,7 @@ function P(e) {
             innerClassName: I.customGiftMessage
           }), (0, a.jsx)(r.default, {
             selectedSkuId: A,
-            selectedSkuPricePreview: h,
+            selectedSkuPricePreview: v,
             className: I.giftPreview
           })]
         })]
@@ -105,7 +105,7 @@ function P(e) {
         children: (0, a.jsx)(x, {
           onStepChange: t,
           onBackClick: n,
-          disabled: null != _ || null == N || N.id === (null == v ? void 0 : v.id) || u.length > T.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
+          disabled: null != _ || null == N || N.id === (null == h ? void 0 : h.id) || u.length > T.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
           loading: P
         })
       })

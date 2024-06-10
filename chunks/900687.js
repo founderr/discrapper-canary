@@ -30,21 +30,21 @@ function _(e) {
     relationshipType: g,
     originalFriendingEnabled: x = !1,
     improvedFriendingEnabled: A = !1,
-    trackUserProfileAction: U,
-    viewProfileItem: N,
-    onClose: C
+    trackUserProfileAction: N,
+    viewProfileItem: C,
+    onClose: U
   } = e, {
     newestAnalyticsLocation: R
   } = (0, r.default)();
 
   function h(e) {
-    U({
+    N({
       action: "SEND_MESSAGE"
-    }), a.default.openPrivateChannel(t.id, !1, !1, e), C()
+    }), a.default.openPrivateChannel(t.id, !1, !1, e), U()
   }
 
   function P(e) {
-    U({
+    N({
       action: "PRESS_OPTIONS"
     }), (0, n.openContextMenuLazy)(e, async () => {
       let {
@@ -56,12 +56,12 @@ function _(e) {
         relationshipType: g,
         onRemoveFriend: M,
         onBlock: F,
-        onReport: L,
-        onCopyId: () => U({
+        onReport: O,
+        onCopyId: () => N({
           action: "COPY_USER_ID"
         }),
         onMessage: () => h("User Profile Modal Header Buttons - Context Menu"),
-        viewProfileItem: N,
+        viewProfileItem: C,
         user: t,
         isCurrentUser: _,
         guildId: v
@@ -70,7 +70,7 @@ function _(e) {
   }
 
   function M() {
-    U({
+    N({
       action: "REMOVE_FRIEND"
     }), o.default.removeFriend(t.id, {
       location: R
@@ -79,7 +79,7 @@ function _(e) {
 
   function y() {
     try {
-      U({
+      N({
         action: "SEND_FRIEND_REQUEST"
       }), o.default.addRelationship({
         userId: t.id,
@@ -90,12 +90,12 @@ function _(e) {
         friendToken: p
       })
     } catch (e) {
-      C()
+      U()
     }
   }
 
   function j() {
-    U({
+    N({
       action: "IGNORE_FRIEND_REQUEST"
     }), o.default.cancelFriendRequest(t.id, {
       location: R
@@ -104,7 +104,7 @@ function _(e) {
 
   function F() {
     try {
-      U({
+      N({
         action: "BLOCK"
       }), o.default.addRelationship({
         userId: t.id,
@@ -114,12 +114,12 @@ function _(e) {
         type: I.RelationshipTypes.BLOCKED
       })
     } catch (e) {
-      C()
+      U()
     }
   }
 
-  function L() {
-    U({
+  function O() {
+    N({
       action: "REPORT"
     }), (0, u.showReportModalForUser)(t, "@me" === v ? void 0 : v)
   }
@@ -139,7 +139,7 @@ function _(e) {
         user: t,
         guildId: v,
         profileType: E.UserProfileTypes.FULL_SIZE,
-        onClose: C
+        onClose: U
       }), !t.isNonUserBot() && x ? (0, s.jsx)(i.Clickable, {
         focusProps: {
           offset: {
@@ -153,12 +153,12 @@ function _(e) {
       }) : null]
     }), !x && !A && (T ? (0, s.jsx)(f.default, {
       user: t,
-      onClose: C
+      onClose: U
     }) : (0, s.jsx)(c.default, {
       user: t,
       guildId: v,
       profileType: E.UserProfileTypes.FULL_SIZE,
-      onClose: C
+      onClose: U
     }))]
   })
 }

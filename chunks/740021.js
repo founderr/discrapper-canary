@@ -26,9 +26,9 @@ var i = l("442837"),
   g = l("228168"),
   x = l("182294"),
   A = l("602091"),
-  U = l("231338"),
-  N = l("566483");
-let C = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+  N = l("231338"),
+  C = l("566483");
+let U = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function R(e) {
   let {
@@ -44,8 +44,8 @@ function R(e) {
   } = e, {
     theme: j
   } = (0, p.useUserProfileThemeContext)(), F = (0, I.default)(t.id, R), {
-    avatarSrc: L,
-    eventHandlers: O,
+    avatarSrc: O,
+    eventHandlers: L,
     avatarDecorationSrc: D
   } = (0, m.default)({
     user: t,
@@ -60,7 +60,7 @@ function R(e) {
     trackUserProfileAction: G
   } = (0, E.useUserProfileAnalyticsContext)(), k = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), w = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [Y, H] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [U.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [U.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [N.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [N.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
     children: [(0, s.jsx)(_.default, {
@@ -69,14 +69,14 @@ function R(e) {
       profileType: g.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
     }), (0, s.jsx)("div", {
-      className: N.inner,
+      className: C.inner,
       children: (0, s.jsxs)("div", {
-        ...O,
-        children: [(0, s.jsx)(C, {
-          src: L,
+        ...L,
+        children: [(0, s.jsx)(U, {
+          src: O,
           avatarDecoration: D,
           size: x.AvatarSizes.SIZE_120,
-          className: N.avatar,
+          className: C.avatar,
           status: Y,
           statusBackdropColor: (0, n.getStatusBackdropColor)(j),
           "aria-label": t.username,

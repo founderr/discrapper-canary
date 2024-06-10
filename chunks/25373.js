@@ -37,8 +37,8 @@ function T(e) {
     pendingNickname: j,
     pendingGlobalName: C,
     pendingThemeColors: U,
-    pendingProfileEffectId: b,
-    avatarClassName: _,
+    pendingProfileEffectId: _,
+    avatarClassName: b,
     isTryItOutFlow: M = !1,
     disabledInputs: w = !1,
     hideCustomStatus: R = !1,
@@ -60,7 +60,7 @@ function T(e) {
     size: r.AvatarSizes.SIZE_80,
     showPending: !0
   }), D = (0, m.getPreviewProfileEffectId)({
-    pendingProfileEffectId: b,
+    pendingProfileEffectId: _,
     displayProfile: z
   }), {
     theme: G,
@@ -102,7 +102,7 @@ function T(e) {
         previewAvatarDecoration: F,
         previewTheme: G,
         previewPrimaryColor: W,
-        className: _,
+        className: b,
         disabledInputs: w,
         isTryItOutFlow: M,
         onUpsellClick: () => null == A ? void 0 : A({

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return O
+    return L
   }
 });
 var s = l("735250"),
@@ -25,9 +25,9 @@ var s = l("735250"),
   g = l("621853"),
   x = l("204197"),
   A = l("735336"),
-  U = l("520978"),
-  N = l("184325"),
-  C = l("652853"),
+  N = l("520978"),
+  C = l("184325"),
+  U = l("652853"),
   R = l("225714"),
   h = l("228168"),
   P = l("981631"),
@@ -35,13 +35,13 @@ var s = l("735250"),
   y = l("689938"),
   j = l("155614");
 let F = o.AvatarSizes.SIZE_120,
-  L = p.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
+  O = p.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
-function O(e) {
+function L(e) {
   let {
     displayProfile: t,
     user: p,
-    guildId: O,
+    guildId: L,
     channelId: D,
     friendToken: b,
     className: B,
@@ -50,7 +50,7 @@ function O(e) {
     onClose: w
   } = e, Y = (0, a.useStateFromStores)([m.default], () => m.default.getRelationshipType(p.id)), H = (0, a.useStateFromStores)([I.default], () => I.default.isMobileOnline(p.id)), V = (0, a.useStateFromStores)([I.default], () => I.default.getStatus(p.id)), W = (0, a.useStateFromStores)([g.default], () => g.default.getUserProfile(p.id)), z = (0, a.useStateFromStores)([E.default], () => E.default.getId() === p.id), {
     theme: Z
-  } = (0, C.useUserProfileThemeContext)(), {
+  } = (0, U.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
   } = (0, T.useUserProfileAnalyticsContext)(), {
     avatarSrc: Q,
@@ -96,7 +96,7 @@ function O(e) {
   }
 
   function es() {
-    let e = "@me" === O ? void 0 : O;
+    let e = "@me" === L ? void 0 : L;
     K({
       action: "REPORT"
     }), (0, f.showReportModalForUser)(p, e)
@@ -113,7 +113,7 @@ function O(e) {
       className: j.header,
       children: [(0, s.jsx)("div", {
         ...J,
-        children: (0, s.jsx)(L, {
+        children: (0, s.jsx)(O, {
           src: Q,
           avatarDecoration: q,
           size: F,
@@ -134,17 +134,17 @@ function O(e) {
             className: j.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, s.jsx)(N.default, {
+        }) : (0, s.jsx)(C.default, {
           user: p,
           className: j.badgeList,
-          guildId: O,
-          size: N.BadgeSizes.SIZE_24,
+          guildId: L,
+          size: C.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: N.BadgeSizes.SIZE_18,
+          shrinkToSize: C.BadgeSizes.SIZE_18,
           onBadgeClick: w
         }), (0, s.jsxs)("div", {
           className: j.relationshipButtons,
-          children: [(null == W ? void 0 : W.application) != null && (0, s.jsx)(U.default, {
+          children: [(null == W ? void 0 : W.application) != null && (0, s.jsx)(N.default, {
             className: j.applicationInstallButton,
             application: W.application
           }), (0, s.jsx)(R.default, {
@@ -200,7 +200,7 @@ function O(e) {
                   onMessage: () => et("User Profile Modal - Context Menu"),
                   user: p,
                   isCurrentUser: z,
-                  guildId: O
+                  guildId: L
                 })
               })
             },

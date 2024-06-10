@@ -38,7 +38,7 @@ function I(e) {
     onUpsellClick: N
   } = e, {
     analyticsLocations: j
-  } = (0, u.default)(), C = (0, n.useStateFromStores)([c.default], () => c.default.getStatus(a.id)), U = null == t || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || m, b = (0, l.jsx)(S, {
+  } = (0, u.default)(), C = (0, n.useStateFromStores)([c.default], () => c.default.getStatus(a.id)), U = null == t || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || m, _ = (0, l.jsx)(S, {
     src: I,
     avatarDecoration: T,
     imageClassName: r()(P, {
@@ -52,7 +52,7 @@ function I(e) {
   });
   return x ? (0, l.jsx)("div", {
     className: g.avatar,
-    children: b
+    children: _
   }) : U ? (0, l.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -74,7 +74,7 @@ function I(e) {
     children: e => (0, l.jsxs)(o.Clickable, {
       ...e,
       className: r()(g.avatar, g.clickable),
-      children: [b, (0, l.jsx)(f.default, {
+      children: [_, (0, l.jsx)(f.default, {
         className: g.overlayIcon,
         width: 20,
         height: 20,
@@ -84,7 +84,7 @@ function I(e) {
   }) : (0, l.jsxs)(o.Clickable, {
     onClick: N,
     className: r()(g.avatar, g.clickable),
-    children: [b, (0, l.jsx)(s.NitroWheelIcon, {
+    children: [_, (0, l.jsx)(s.NitroWheelIcon, {
       className: g.overlayIcon,
       width: 20,
       height: 20,

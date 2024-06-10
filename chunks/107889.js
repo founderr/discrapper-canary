@@ -25,9 +25,9 @@ var s = l("735250"),
   g = l("806926"),
   x = l("740021"),
   A = l("228168"),
-  U = l("981631"),
-  N = l("689938"),
-  C = l("61007");
+  N = l("981631"),
+  C = l("689938"),
+  U = l("61007");
 
 function R(e) {
   let {
@@ -40,11 +40,11 @@ function R(e) {
     initialSection: y,
     autoFocusNote: j,
     transitionState: F,
-    sourceAnalyticsLocations: L = [],
-    onClose: O
-  } = e, D = l === U.ME ? void 0 : l, {
+    sourceAnalyticsLocations: O = [],
+    onClose: L
+  } = e, D = l === N.ME ? void 0 : l, {
     analyticsLocations: b
-  } = (0, u.default)([...L, r.default.SIMPLIFIED_PROFILE_MODAL]), {
+  } = (0, u.default)([...O, r.default.SIMPLIFIED_PROFILE_MODAL]), {
     originalFriendingEnabled: B
   } = (0, S.useSimplifiedProfileFriendingExperiment)({
     location: "SimplifiedUserProfileModal"
@@ -63,18 +63,18 @@ function R(e) {
       let {
         type: t
       } = e;
-      return t !== U.ActivityTypes.CUSTOM_STATUS
+      return t !== N.ActivityTypes.CUSTOM_STATUS
     }),
     customStatusActivity: c.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t === U.ActivityTypes.CUSTOM_STATUS
+      return t === N.ActivityTypes.CUSTOM_STATUS
     })
   })), Z = i.createRef(), K = (0, o.default)(Z), Q = () => (null == H ? void 0 : H.guildId) == null ? null : (null == V ? void 0 : V.guildId) != null ? (0, s.jsx)(n.MenuItem, {
     id: "view-main-profile",
-    label: N.default.Messages.VIEW_MAIN_PROFILE,
-    subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
+    label: C.default.Messages.VIEW_MAIN_PROFILE,
+    subtext: C.default.Messages.AKA_DISPLAY_NAME.format({
       displayName: f.default.getName(void 0, void 0, t)
     }),
     action: () => {
@@ -85,8 +85,8 @@ function R(e) {
     }
   }) : (0, s.jsx)(n.MenuItem, {
     id: "view-server-profile",
-    label: N.default.Messages.VIEW_SERVER_PROFILE,
-    subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
+    label: C.default.Messages.VIEW_SERVER_PROFILE,
+    subtext: C.default.Messages.AKA_DISPLAY_NAME.format({
       displayName: f.default.getName(D, R, t)
     }),
     action: () => {
@@ -107,9 +107,9 @@ function R(e) {
       roleId: P,
       children: (0, s.jsxs)(n.ModalRoot, {
         transitionState: F,
-        className: C.root,
+        className: U.root,
         hideShadow: !0,
-        "aria-label": N.default.Messages.USER_PROFILE_MODAL,
+        "aria-label": C.default.Messages.USER_PROFILE_MODAL,
         children: [(0, s.jsxs)(m.default, {
           user: t,
           displayProfile: V,
@@ -121,7 +121,7 @@ function R(e) {
               user: t,
               guildId: D,
               channelId: R,
-              onClose: O
+              onClose: L
             })
           }) : (0, s.jsxs)(_.default, {
             profileType: A.UserProfileTypes.FULL_SIZE,
@@ -129,7 +129,7 @@ function R(e) {
               user: t,
               guildId: D,
               channelId: R,
-              onClose: O
+              onClose: L
             }), (0, s.jsx)(v.default, {
               profileType: A.UserProfileTypes.FULL_SIZE,
               user: t,
@@ -149,7 +149,7 @@ function R(e) {
             customStatusActivity: z,
             transitionState: F,
             viewProfileItem: Q(),
-            onClose: O
+            onClose: L
           }), (0, s.jsx)(g.default, {
             user: t,
             guildId: D,
@@ -159,7 +159,7 @@ function R(e) {
             autoFocusNote: j,
             friendToken: M,
             transitionState: F,
-            onClose: O
+            onClose: L
           })]
         }), (null == V ? void 0 : V.profileEffectId) != null && (0, s.jsx)(d.default, {
           profileEffectId: null == V ? void 0 : V.profileEffectId,
