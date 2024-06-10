@@ -9,8 +9,8 @@ n("470079");
 var a = n("442837"),
   i = n("481060"),
   u = n("434404"),
-  d = n("147754"),
-  s = n("939863"),
+  s = n("147754"),
+  d = n("939863"),
   r = n("430824"),
   o = n("496675"),
   c = n("305878"),
@@ -24,7 +24,7 @@ function v(e) {
     onClose: n
   } = e, {
     showHubEventsList: v
-  } = d.default.useExperiment({
+  } = s.default.useExperiment({
     guildId: t,
     location: "6597ca_1"
   }, {
@@ -38,7 +38,7 @@ function v(e) {
   }, [t, v]);
   return (0, l.jsxs)("div", {
     className: g.container,
-    children: [(0, l.jsx)(s.default, {
+    children: [(0, l.jsx)(d.default, {
       children: (0, l.jsx)("div", {
         className: g.circle,
         children: (0, l.jsx)(c.default, {

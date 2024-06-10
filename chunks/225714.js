@@ -26,10 +26,10 @@ function E(e) {
     onIgnoreFriend: I,
     onSendMessage: m,
     originalFriendingEnabled: _ = !1,
-    improvedFriendingEnabled: v = !1
+    improvedFriendingEnabled: p = !1
   } = e;
   if (t || i === c.RelationshipTypes.BLOCKED) return null;
-  if (v) return i === c.RelationshipTypes.FRIEND || l.bot ? (0, s.jsx)(d.default, {
+  if (p) return i === c.RelationshipTypes.FRIEND || l.bot ? (0, s.jsx)(d.default, {
     text: f.default.Messages.SEND_DM,
     icon: n.ChatIcon,
     color: a()(u.Button.Colors.PRIMARY, S.color),

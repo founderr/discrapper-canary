@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return v
   }
 });
 var s = l("735250"),
@@ -19,16 +19,16 @@ var s = l("735250"),
   I = l("221292"),
   m = l("981631"),
   _ = l("886140"),
-  v = l("305944");
+  p = l("305944");
 
-function p(e) {
+function v(e) {
   let {
     user: t,
     type: l,
     showActions: a
-  } = e, p = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), T = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => T.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [T]), x = i.useMemo(() => p ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, p]), A = i.useMemo(() => g.filter(e => e !== x), [x, g]), {
-    analyticsLocations: N,
-    newestAnalyticsLocation: C
+  } = e, v = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), T = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => T.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [T]), x = i.useMemo(() => v ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, v]), A = i.useMemo(() => g.filter(e => e !== x), [x, g]), {
+    analyticsLocations: C,
+    newestAnalyticsLocation: N
   } = (0, d.default)(), {
     trackUserProfileAction: U,
     ...R
@@ -39,12 +39,12 @@ function p(e) {
     }
   };
   return (0, s.jsxs)(r.ScrollerThin, {
-    className: v.listScroller,
+    className: p.listScroller,
     fade: !0,
-    children: [p ? (0, s.jsx)(u.default, {
+    children: [v ? (0, s.jsx)(u.default, {
       type: l,
       user: t,
-      source: C,
+      source: N,
       className: _.userProfileActivity,
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
       activity: x,
@@ -60,7 +60,7 @@ function p(e) {
           activityPlatform: null == x ? void 0 : x.platform,
           activitySessionId: null == x ? void 0 : x.session_id,
           applicationId: null == x ? void 0 : x.application_id,
-          analyticsLocations: N,
+          analyticsLocations: C,
           ...R
         })
       }
@@ -69,7 +69,7 @@ function p(e) {
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: C,
+      source: N,
       className: n()(_.userProfileActivity, l === S.Types.SIMPLIFIED_PROFILE && _.simplifiedProfileActivity),
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
       actionColor: _.actionColor,
@@ -84,7 +84,7 @@ function p(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: N,
+          analyticsLocations: C,
           ...R
         })
       }

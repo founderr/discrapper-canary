@@ -19,14 +19,14 @@ var s = l("735250"),
   I = l("199902"),
   m = l("314897"),
   _ = l("158776"),
-  v = l("594174"),
-  p = l("785717"),
+  p = l("594174"),
+  v = l("785717"),
   T = l("221292"),
   g = l("621853"),
   x = l("318661"),
   A = l("726059"),
-  N = l("162267"),
-  C = l("484404"),
+  C = l("162267"),
+  N = l("484404"),
   U = l("502762"),
   R = l("62154"),
   h = l("293259"),
@@ -47,7 +47,7 @@ function O(e) {
   } = e, c = (0, a.useStateFromStores)([g.default], () => {
     var e, t;
     return (null === (t = g.default.getUserProfile(i.id)) || void 0 === t ? void 0 : null === (e = t.application) || void 0 === e ? void 0 : e.id) != null
-  }), f = null === (t = (0, A.default)(i.id, !i.bot && !o).mutualFriends) || void 0 === t ? void 0 : t.length, E = null === (l = (0, N.default)(i.id, !i.bot && !o).mutualGuilds) || void 0 === l ? void 0 : l.length;
+  }), f = null === (t = (0, A.default)(i.id, !i.bot && !o).mutualFriends) || void 0 === t ? void 0 : t.length, E = null === (l = (0, C.default)(i.id, !i.bot && !o).mutualGuilds) || void 0 === l ? void 0 : l.length;
   return (0, s.jsx)("div", {
     className: F.tabBarContainer,
     children: (0, s.jsxs)(n.TabBar, {
@@ -89,7 +89,7 @@ function L(e) {
   let {
     user: g,
     guildId: A,
-    channelId: N,
+    channelId: C,
     messageId: L,
     roleId: D,
     friendToken: b,
@@ -98,7 +98,7 @@ function L(e) {
     transitionState: k,
     sourceAnalyticsLocations: w = [],
     onClose: Y
-  } = e, H = null !== (t = (0, a.useStateFromStores)([v.default], () => v.default.getUser(g.id))) && void 0 !== t ? t : g, V = (0, x.default)(null !== (l = H.id) && void 0 !== l ? l : ""), {
+  } = e, H = null !== (t = (0, a.useStateFromStores)([p.default], () => p.default.getUser(g.id))) && void 0 !== t ? t : g, V = (0, x.default)(null !== (l = H.id) && void 0 !== l ? l : ""), {
     analyticsLocations: W
   } = (0, f.default)([...w, c.default.PROFILE_MODAL]);
   (0, u.useSubscribeGuildMembers)({
@@ -120,20 +120,20 @@ function L(e) {
         layout: "MODAL",
         userId: H.id,
         guildId: A,
-        channelId: N,
+        channelId: C,
         messageId: L,
         roleId: D,
         analyticsLocations: W
       }), Q(!0), q(e)
-    }, [H.id, A, N, L, D, W]),
+    }, [H.id, A, C, L, D, W]),
     ei = null == V ? void 0 : V.profileEffectId;
   return (0, s.jsx)(f.AnalyticsLocationProvider, {
     value: W,
-    children: (0, s.jsx)(p.UserProfileAnalyticsProvider, {
+    children: (0, s.jsx)(v.UserProfileAnalyticsProvider, {
       layout: "MODAL",
       userId: H.id,
       guildId: A,
-      channelId: N,
+      channelId: C,
       messageId: L,
       roleId: D,
       children: (0, s.jsx)(o.default, {
@@ -156,11 +156,11 @@ function L(e) {
               onClose: Y,
               isStreaming: (0, d.default)(Z),
               guildId: A,
-              channelId: N,
+              channelId: C,
               hasProfileEffect: null != ei
             }), (0, s.jsxs)(U.default.Overlay, {
               className: F.overlay,
-              children: [k === n.ModalTransitionState.ENTERED && (0, s.jsx)(C.default, {
+              children: [k === n.ModalTransitionState.ENTERED && (0, s.jsx)(N.default, {
                 onTooltipClose: Y
               }), (0, s.jsxs)("div", {
                 className: F.body,

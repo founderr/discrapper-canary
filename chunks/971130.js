@@ -126,7 +126,7 @@ let T = (e, t) => null != e && r.default.isMember(e, t),
       }), i.numFriends++)
     }
   },
-  g = e => {
+  v = e => {
     let {
       query: t,
       rows: n,
@@ -148,7 +148,7 @@ let T = (e, t) => null != e && r.default.isMember(e, t),
       }), l.numChannels++
     })
   },
-  v = e => {
+  g = e => {
     let {
       query: t,
       omitUserIds: n,
@@ -262,10 +262,10 @@ function R(e) {
       rows: d,
       counts: o
     };
-    n === _.InviteTargetTypes.EMBEDDED_APPLICATION && g({
+    n === _.InviteTargetTypes.EMBEDDED_APPLICATION && v({
       ...e,
       inviteTargetType: n
-    }), v({
+    }), g({
       ...e,
       omitUserIds: l,
       shownUserIds: r

@@ -21,8 +21,8 @@ var i = n("735250"),
   S = n("585483"),
   h = n("499254"),
   A = n("660090"),
-  m = n("695676"),
-  N = n("176412"),
+  m = n("783097"),
+  N = n("695676"),
   p = n("870205"),
   O = n("442783"),
   C = n("981631"),
@@ -67,7 +67,7 @@ function M(e) {
     application: c
   } = e, {
     goBack: S
-  } = (0, m.useAppLauncherHistoryContext)(), {
+  } = (0, N.useAppLauncherHistoryContext)(), {
     filterSection: h,
     commandsByActiveSection: C,
     sectionDescriptors: M
@@ -103,7 +103,7 @@ function M(e) {
     x = null != y ? (0, E.getIconComponent)(y) : null,
     F = r.useMemo(() => {
       var e;
-      return (0, N.isRealApplication)(c) ? (0, T.parseBioReact)(null !== (e = c.description) && void 0 !== e ? e : "") : ""
+      return (0, m.isRealApplication)(c) ? (0, T.parseBioReact)(null !== (e = c.description) && void 0 !== e ? e : "") : ""
     }, [c]);
   return (0, i.jsxs)(l.ScrollerNone, {
     className: L.container,

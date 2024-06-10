@@ -8,8 +8,8 @@ var l, n, s = a("735250"),
   r = a("470079"),
   u = a("120356"),
   i = a.n(u),
-  d = a("913527"),
-  c = a.n(d),
+  c = a("913527"),
+  d = a.n(c),
   o = a("692547"),
   E = a("481060"),
   f = a("44315"),
@@ -65,14 +65,14 @@ function C(e) {
     eventType: l,
     className: n,
     endTime: u,
-    liveText: d,
+    liveText: c,
     textVariant: o = "text-sm/semibold",
     isNew: N,
     recurrenceRule: C,
     guildEventId: A,
     recurrenceId: I
   } = e, p = (0, f.useThemedColorValue)(D.ThemeColor.TEXT_BRAND), j = (0, f.useThemedColorValue)(D.ThemeColor.TEXT_POSITIVE), O = (0, f.useThemedColorValue)(D.ThemeColor.TEXT_DANGER);
-  null == d && (d = l === S.GuildScheduledEventEntityTypes.EXTERNAL ? g.default.Messages.STAGE_CHANNEL_HAPPENING_NOW : g.default.Messages.STAGE_CHANNEL_LIVE_NOW);
+  null == c && (c = l === S.GuildScheduledEventEntityTypes.EXTERNAL ? g.default.Messages.STAGE_CHANNEL_HAPPENING_NOW : g.default.Messages.STAGE_CHANNEL_LIVE_NOW);
   let G = (0, v.default)(I, A),
     [{
       startDateTimeString: M,
@@ -116,7 +116,7 @@ function C(e) {
         default:
           return t
       }
-    }(k, V, d, U, H),
+    }(k, V, c, U, H),
     {
       Icon: W,
       iconColor: y,
@@ -132,26 +132,26 @@ function C(e) {
           startDateTimeString: u
         } = e,
         i = T.default,
-        d = l,
-        c = "header-secondary";
+        c = l,
+        d = "header-secondary";
       switch (a) {
         case 3:
-          d = n, c = null != r ? void 0 : "text-positive";
+          c = n, d = null != r ? void 0 : "text-positive";
           break;
         case 4:
           i = m.default;
           break;
         case 2:
         case 1:
-          c = "text-brand", t = u;
+          d = "text-brand", t = u;
           break;
         case 5:
-          d = s
+          c = s
       }
       return {
         Icon: i,
-        iconColor: d.hex,
-        textColor: c,
+        iconColor: c.hex,
+        textColor: d,
         tooltipText: t
       }
     })({
@@ -168,7 +168,7 @@ function C(e) {
     F = g.default.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({
       recurrenceRule: e.toText()
     });
-    let a = c()(t);
+    let a = d()(t);
     F = function(e, t) {
       let a = t.toDate(),
         l = a.toLocaleString(g.default.getLocale(), {

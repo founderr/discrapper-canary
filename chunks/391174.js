@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
 var l = a("735250"),
@@ -10,14 +10,14 @@ var l = a("735250"),
   r = a.n(s),
   u = a("725436"),
   i = a("875150"),
-  d = a("946278");
+  c = a("946278");
 
-function c(e) {
+function d(e) {
   let {
     description: t,
     className: a,
     guildId: s,
-    truncate: c = !0
+    truncate: d = !0
   } = e, o = n.useMemo(() => (0, u.guildEventDetailsParser)(t, !0, {
     guildId: s,
     allowLinks: !0,
@@ -25,8 +25,8 @@ function c(e) {
     allowList: !0
   }), [t, s]);
   return (0, l.jsx)("div", {
-    className: r()(i.descriptionText, a, d.markup, {
-      [i.truncate]: c
+    className: r()(i.descriptionText, a, c.markup, {
+      [i.truncate]: d
     }),
     children: o
   })

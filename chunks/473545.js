@@ -24,13 +24,13 @@ function f(e) {
   } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isLurking(n), [n]), T = (0, u.useStateFromStores)([s.default], () => s.default.getId()), {
     rsvped: S,
     baseRsvp: N,
-    recurrenceRsvp: g
+    recurrenceRsvp: I
   } = (0, u.useStateFromStoresObject)([i.default], () => ({
     rsvped: i.default.isInterestedInEventRecurrence(t, f),
     baseRsvp: i.default.getRsvp(t, null, T),
     recurrenceRsvp: i.default.getRsvp(t, f, T)
-  }), [f, t, T]), I = (0, o.default)(f, t);
-  if (_ || (null == I ? void 0 : I.is_canceled)) return null;
+  }), [f, t, T]), g = (0, o.default)(f, t);
+  if (_ || (null == g ? void 0 : g.is_canceled)) return null;
   let v = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
       l = (null == N ? void 0 : N.response) === E.GuildScheduledEventUserResponses.INTERESTED ? E.GuildScheduledEventUserResponses.UNINTERESTED : E.GuildScheduledEventUserResponses.INTERESTED,
@@ -49,7 +49,7 @@ function f(e) {
       id: c.default.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES,
       label: c.default.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES,
       action: () => v(!0),
-      disabled: null != g
+      disabled: null != I
     })]
   })
 }
