@@ -35,6 +35,9 @@ n.r(t), n.d(t, {
   },
   getApplicationResolution: function() {
     return c
+  },
+  makeResolutionLabel: function() {
+    return A
   }
 }), n("411104");
 var i, r, s, a, o, l, u = n("981631"),
@@ -49,6 +52,8 @@ function c(e) {
       return 720;
     case 1080:
       return 1080;
+    case 1440:
+      return 1440;
     case 0:
       return 0;
     default:
@@ -179,8 +184,10 @@ function f(e, t) {
 }
 let S = [f(720), f(1080), f(1440), f(0, () => _.default.Messages.SCREENSHARE_SOURCE)],
   h = [f(720), f(1080), f(1440)],
-  A = e => "".concat(e, "p"),
-  m = [f(480, () => A(480)), f(720, () => A(720)), f(1080, () => A(1080)), f(1440, () => A(1440)), f(0, () => _.default.Messages.SCREENSHARE_SOURCE)],
+  A = e => 0 === e ? _.default.Messages.SCREENSHARE_SOURCE : _.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+    resolution: e
+  }),
+  m = [f(480, () => A(480)), f(720, () => A(720)), f(1080, () => A(1080)), f(1440, () => A(1440)), f(0, () => A(0))],
   N = [f(15), f(30), f(60)],
   p = [f(15, () => _.default.Messages.STREAM_FPS_OPTION.format({
     value: 15

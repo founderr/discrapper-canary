@@ -317,6 +317,7 @@ t.default = l.memo(function(e) {
             [K.cozyMessage]: !q,
             [K.mentioned]: g.mentioned,
             [K.ephemeral]: (0, x.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
+            [K.nitroMessage]: g.type === Y.MessageTypes.NITRO_NOTIFICATION,
             [K.systemMessage]: (0, M.default)(g),
             [K.groupStart]: !ee && (eH || g.type === Y.MessageTypes.REPLY),
             [K.selected]: eI,

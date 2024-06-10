@@ -185,6 +185,27 @@ let eA = {
         loggingName: n
       }))
     },
+    sendNitroSystemMessage(e, t, n) {
+      let i = (0, M.default)({
+        channelId: e,
+        nonce: n,
+        type: ed.MessageTypes.NITRO_NOTIFICATION,
+        content: t,
+        flags: ed.MessageFlags.EPHEMERAL,
+        author: {
+          id: ed.LOCAL_BOT_ID,
+          username: "Nitro Notification",
+          discriminator: ed.NON_USER_BOT_DISCRIMINATOR,
+          avatar: "nitro",
+          bot: !0
+        }
+      });
+      em.receiveMessage(e, {
+        ...i,
+        state: ed.MessageStates.SENT,
+        channel_id: e
+      }, !0)
+    },
     sendClydeError(e) {
       let t, n, i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         r = K.default.getChannel(e);

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getAutomodAvatarURL: function() {
-    return p
+    return O
   }
 });
 var i = n("526167"),
@@ -21,18 +21,20 @@ var i = n("526167"),
   S = n("910826"),
   h = n("307244"),
   A = n("669730"),
-  m = n("185672"),
-  N = n("235731");
+  m = n("666828"),
+  N = n("185672"),
+  p = n("235731");
 
-function p() {
+function O() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  return e ? N : r
+  return e ? p : r
 }
 t.default = {
   DEFAULT_AVATARS: [s, a, o, l, u, d],
   DEFAULT_GROUP_DM_AVATARS: [_, c, E, I, T, f, S, h],
   BOT_AVATARS: {
-    clyde: m
+    clyde: N,
+    nitro: m
   },
   DEFAULT_CHANNEL_ICON: A,
   canUseWebp: function() {

@@ -2,26 +2,36 @@
 n.r(t), n("411104"), n("47120");
 var l = n("735250");
 n("470079");
-var a = n("848246"),
-  s = n("481060"),
-  i = n("570140"),
-  r = n("317770"),
-  o = n("100527"),
-  u = n("963249"),
-  d = n("592125"),
-  c = n("594174"),
-  f = n("295226"),
-  h = n("74538"),
-  m = n("736871"),
-  p = n("351742"),
-  C = n("114064"),
-  g = n("937579"),
-  E = n("485731"),
-  S = n("841174"),
-  _ = n("11352"),
-  I = n("981631");
+var a = n("392711"),
+  s = n("848246"),
+  i = n("481060"),
+  r = n("570140"),
+  o = n("904245"),
+  u = n("317770"),
+  d = n("100527"),
+  c = n("358221"),
+  f = n("963249"),
+  h = n("592125"),
+  m = n("430824"),
+  p = n("594174"),
+  C = n("295226"),
+  g = n("74538"),
+  E = n("557457"),
+  S = n("736871"),
+  _ = n("6242"),
+  I = n("757692"),
+  N = n("351742"),
+  T = n("114064"),
+  A = n("937579"),
+  L = n("485731"),
+  v = n("841174"),
+  x = n("11352"),
+  R = n("981631"),
+  M = n("354459"),
+  y = n("37113"),
+  O = n("689938");
 
-function N(e, t, n) {
+function D(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -29,19 +39,19 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class T extends r.default {
+class b extends u.default {
   _initialize() {
-    __OVERLAY__ ? i.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (i.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), i.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), i.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), i.default.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), i.default.subscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal))
+    __OVERLAY__ ? r.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (r.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), r.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), r.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), r.default.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), r.default.subscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal), r.default.subscribe("MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", this.maybeShowHDStreamingViewerUpsellMessage), r.default.subscribe("VOICE_CHANNEL_SELECT", this.cleanupShowHDStreamingViewerUpsellMessage))
   }
   _terminate() {
-    __OVERLAY__ ? i.default.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (i.default.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), i.default.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), i.default.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), i.default.unsubscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), i.default.unsubscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal))
+    __OVERLAY__ ? r.default.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (r.default.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), r.default.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), r.default.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), r.default.unsubscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), r.default.unsubscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal), r.default.unsubscribe("MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", this.maybeShowHDStreamingViewerUpsellMessage), r.default.unsubscribe("VOICE_CHANNEL_SELECT", this.cleanupShowHDStreamingViewerUpsellMessage))
   }
   handleMessageLengthUpsell(e) {
     let {
       channel: t,
       content: a
     } = e;
-    (0, s.openModalLazy)(async () => {
+    (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await n.e("33184").then(n.bind(n, "465836"));
@@ -55,7 +65,7 @@ class T extends r.default {
   openPremiumPaymentModalInApp(e) {
     if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
     return new Promise((t, n) => {
-      (0, u.default)({
+      (0, f.default)({
         ...e,
         onClose: e => {
           e ? t() : n()
@@ -72,7 +82,7 @@ class T extends r.default {
       analyticsObject: a
     } = null != e ? e : {};
     return new Promise((e, s) => {
-      this._premiumPaymentModalCloseResolve = e, this._premiumPaymentModalCloseReject = s, i.default.dispatch({
+      this._premiumPaymentModalCloseResolve = e, this._premiumPaymentModalCloseReject = s, r.default.dispatch({
         type: "PREMIUM_PAYMENT_MODAL_OPEN",
         initialPlanId: t,
         subscriptionTier: n,
@@ -85,57 +95,79 @@ class T extends r.default {
     var t;
     let {
       inPerksDemosExperiment: n
-    } = m.default.getCurrentConfig({
+    } = S.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     }), {
       enabled: l
-    } = p.default.getCurrentConfig({
+    } = N.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     });
-    if (!n || !l || e.state !== I.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
-    let s = d.default.getChannel(e.channelId);
-    if (null == s || !(null === (t = C.default.getPerksDemos()) || void 0 === t ? void 0 : t[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
-    let r = C.default.getActivated()[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
-    r && i.default.dispatch({
+    if (!n || !l || e.state !== R.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
+    let a = h.default.getChannel(e.channelId);
+    if (null == a || !(null === (t = T.default.getPerksDemos()) || void 0 === t ? void 0 : t[s.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
+    let i = T.default.getActivated()[s.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
+    i && r.default.dispatch({
       type: "PREMIUM_PERKS_DEMO_COMPLETE",
-      perkType: a.EntitlementFeatureNames.STREAM_HIGH_QUALITY
-    }), r && E.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, S.default)(s.guild_id)
+      perkType: s.EntitlementFeatureNames.STREAM_HIGH_QUALITY
+    }), i && L.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, v.default)(a.guild_id)
   }
   constructor(...e) {
-    super(...e), N(this, "_premiumPaymentModalCloseResolve", null), N(this, "_premiumPaymentModalCloseReject", null), N(this, "_maybeFetchPremiumOffer", async () => {
-      let e = c.default.getCurrentUser();
+    super(...e), D(this, "_premiumPaymentModalCloseResolve", null), D(this, "_premiumPaymentModalCloseReject", null), D(this, "_lastStreamingChannelId", null), D(this, "_maybeFetchPremiumOffer", async () => {
+      let e = p.default.getCurrentUser();
       if (null != e && e.verified) {
-        let t = !(0, h.isPremium)(e) && f.default.shouldFetchOffer();
-        await (0, g.fetchUserOffer)(t)
+        let t = !(0, g.isPremium)(e) && C.default.shouldFetchOffer();
+        await (0, A.fetchUserOffer)(t)
       }
-      i.default.dispatch({
+      r.default.dispatch({
         type: "PREMIUM_MARKETING_DATA_READY"
       })
-    }), N(this, "_trackCustomNotificationSoundsExposure", () => {
-      _.CustomNotificationSoundExperiment.trackExposure({
+    }), D(this, "_trackCustomNotificationSoundsExposure", () => {
+      x.CustomNotificationSoundExperiment.trackExposure({
         location: "PremiumManager"
       })
-    }), N(this, "_handlePremiumPaymentModalOpen", e => {
-      (0, u.default)({
+    }), D(this, "_handlePremiumPaymentModalOpen", e => {
+      (0, f.default)({
         ...e,
-        analyticsLocations: [o.default.OVERLAY],
+        analyticsLocations: [d.default.OVERLAY],
         onClose: e => {
-          i.default.dispatch({
+          r.default.dispatch({
             type: "PREMIUM_PAYMENT_MODAL_CLOSE",
             didSucceed: e
           })
         }
       })
-    }), N(this, "_handlePremiumPaymentModalClose", e => {
+    }), D(this, "_handlePremiumPaymentModalClose", e => {
       let {
         didSucceed: t
       } = e;
       t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), this._premiumPaymentModalCloseResolve = null, this._premiumPaymentModalCloseReject = null
+    }), D(this, "maybeShowHDStreamingViewerUpsellMessage", e => {
+      let t = p.default.getCurrentUser();
+      (null == t ? void 0 : t.id) !== e.senderUserId && this._maybeSendViewerUpsellMessage(e.channelId, e.guildId, t)
+    }), D(this, "_maybeSendViewerUpsellMessage", (0, a.debounce)((e, t, n) => {
+      var l, a;
+      let s = c.default.getSelectedParticipant(e),
+        i = (0, I.canStreamParticipantSetting)(s, n),
+        {
+          sendNitroMessage: r
+        } = (0, _.getHDStreamingViewerExperimentConfig)(i),
+        u = null !== (a = null === (l = m.default.getGuild(t)) || void 0 === l ? void 0 : l.premiumTier) && void 0 !== a ? a : R.BoostedGuildTiers.NONE;
+      if (r && !(u >= R.BoostedGuildTiers.TIER_2) && (null == s ? void 0 : s.type) === M.ParticipantTypes.STREAM && (null == s ? void 0 : s.id) !== (null == n ? void 0 : n.id) && null != s.maxResolution && null != s.maxFrameRate && e !== this._lastStreamingChannelId) {
+        this._lastStreamingChannelId = e;
+        let t = O.default.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
+          nickname: s.userNick,
+          resolution: (0, y.makeResolutionLabel)(s.maxResolution.height),
+          fps: (0, E.getFPSText)(s.maxFrameRate)
+        });
+        o.default.sendNitroSystemMessage(e, t)
+      }
+    }, 200)), D(this, "cleanupShowHDStreamingViewerUpsellMessage", e => {
+      null == e.channelId && (this._lastStreamingChannelId = null)
     })
   }
 }
-t.default = new T
+t.default = new b

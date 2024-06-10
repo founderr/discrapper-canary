@@ -20,6 +20,7 @@ e.exports = {
   mentioned: "mentioned_fa6fd2",
   message: "message_ccca67",
   messageListItem: "messageListItem__050f9",
+  nitroMessage: "nitroMessage__255a2",
   quotedChatMessage: "quotedChatMessage_d0497b",
   replying: "replying__38514",
   selected: "selected_e3bc5d",
