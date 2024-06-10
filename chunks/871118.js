@@ -1,8 +1,5 @@
 "use strict";
 n.r(t), n.d(t, {
-  DefaultFallback: function() {
-    return p
-  },
   default: function() {
     return E
   }

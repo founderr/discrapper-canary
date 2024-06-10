@@ -1,35 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("653041");
 var l = n("399606"),
   a = n("897345"),
-  s = n("859802"),
-  i = n("697379"),
-  r = n("241559"),
-  o = n("563534"),
-  u = n("931261"),
-  d = n("460347"),
-  c = n("994592"),
-  f = n("265418"),
-  h = n("443063"),
-  m = n("981631");
+  s = n("697379"),
+  i = n("241559"),
+  r = n("563534"),
+  o = n("931261"),
+  u = n("460347"),
+  d = n("994592"),
+  c = n("265418"),
+  f = n("443063"),
+  h = n("981631");
 
-function p(e) {
-  let t = (0, s.useGuildHomeExperiment)(e),
-    n = (0, f.default)(e.id),
-    p = (0, i.useCanReviewGuildMemberApplications)(e.id),
-    C = (0, c.useShowRoleSubscriptionsInChannelList)(e.id),
-    g = (0, a.useGuildShopVisibleInGuild)(e),
-    E = (0, u.useCanSeeOnboardingHome)(e.id),
-    S = (0, l.useStateFromStores)([o.default], () => o.default.getNewMemberActions(e.id), [e.id]),
-    _ = (0, d.default)(e.id),
-    I = (0, r.useCanAccessMemberSafetyPage)(e.id),
-    N = [],
-    T = e.hasFeature(m.GuildFeatures.HUB),
-    A = e.hasFeature(m.GuildFeatures.COMMUNITY),
-    L = e.hasFeature(m.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
-  return T && N.push(h.ChannelListCommunityRow.GUILD_HUB_HEADER_OPTIONS), E && _ && null != S && S.length > 0 ? N.push(h.ChannelListCommunityRow.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && N.push(h.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR), !T && (t || E) && N.push(h.ChannelListCommunityRow.GUILD_HOME), n && N.push(h.ChannelListCommunityRow.GUILD_SCHEDULED_EVENTS), !T && A && N.push(h.ChannelListCommunityRow.CHANNELS_AND_ROLES), C && N.push(h.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS), g && N.push(h.ChannelListCommunityRow.GUILD_SHOP), p && N.push(h.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS), I && (A || L) && N.push(h.ChannelListCommunityRow.GUILD_MOD_DASH_MEMBER_SAFETY), N
+function m(e) {
+  let t = (0, c.default)(e.id),
+    n = (0, s.useCanReviewGuildMemberApplications)(e.id),
+    m = (0, d.useShowRoleSubscriptionsInChannelList)(e.id),
+    p = (0, a.useGuildShopVisibleInGuild)(e),
+    C = (0, o.useCanSeeOnboardingHome)(e.id),
+    g = (0, l.useStateFromStores)([r.default], () => r.default.getNewMemberActions(e.id), [e.id]),
+    E = (0, u.default)(e.id),
+    S = (0, i.useCanAccessMemberSafetyPage)(e.id),
+    _ = [],
+    I = e.hasFeature(h.GuildFeatures.HUB),
+    N = e.hasFeature(h.GuildFeatures.COMMUNITY),
+    T = e.hasFeature(h.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
+  return I && _.push(f.ChannelListCommunityRow.GUILD_HUB_HEADER_OPTIONS), C && E && null != g && g.length > 0 ? _.push(f.ChannelListCommunityRow.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && _.push(f.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR), !I && C && _.push(f.ChannelListCommunityRow.GUILD_HOME), t && _.push(f.ChannelListCommunityRow.GUILD_SCHEDULED_EVENTS), !I && N && _.push(f.ChannelListCommunityRow.CHANNELS_AND_ROLES), m && _.push(f.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS), p && _.push(f.ChannelListCommunityRow.GUILD_SHOP), n && _.push(f.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS), S && (N || T) && _.push(f.ChannelListCommunityRow.GUILD_MOD_DASH_MEMBER_SAFETY), _
 }

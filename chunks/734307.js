@@ -8,14 +8,14 @@ var l, i, a, u, r = n("392711"),
   _ = n("430198"),
   c = n("924301"),
   C = n("601070"),
-  S = n("569471"),
-  T = n("581883"),
+  T = n("569471"),
+  S = n("581883"),
   A = n("314897"),
   I = n("680089"),
   f = n("592125"),
   L = n("58468"),
-  D = n("77498"),
-  N = n("496675"),
+  N = n("77498"),
+  D = n("496675"),
   h = n("306680"),
   U = n("944486"),
   R = n("9156"),
@@ -65,11 +65,11 @@ function y(e) {
   return H.nonPositionalChannelIdUpdate(t)
 }
 
-function F() {
+function B() {
   return null != G && H.nonPositionalChannelIdUpdate(G)
 }
 
-function B(e) {
+function F(e) {
   let {
     channel: t
   } = e;
@@ -118,7 +118,7 @@ function K(e) {
 }
 class W extends(l = E.default.Store) {
   initialize() {
-    this.waitFor(C.default, A.default, I.default, f.default, L.default, s.default, D.default, _.default, c.default, S.default, N.default, h.default, U.default, R.default, T.default)
+    this.waitFor(C.default, A.default, I.default, f.default, L.default, s.default, N.default, _.default, c.default, T.default, D.default, h.default, U.default, R.default, S.default)
   }
   getGuild(e, t) {
     let n = H.getGuild(e, t);
@@ -207,8 +207,8 @@ u = "ChannelListStore", (a = "displayName") in(i = W) ? Object.defineProperty(i,
     } = e;
     return H.nonPositionalChannelIdUpdate(t)
   },
-  DRAWER_CLOSE: F,
-  DRAWER_OPEN: F,
+  DRAWER_CLOSE: B,
+  DRAWER_OPEN: B,
   EMBEDDED_ACTIVITY_UPDATE: function(e) {
     let {
       guildId: t,
@@ -239,7 +239,6 @@ u = "ChannelListStore", (a = "displayName") in(i = W) ? Object.defineProperty(i,
   GUILD_APPLICATIONS_FETCH_SUCCESS: Y,
   GUILD_CREATE: M,
   GUILD_DELETE: M,
-  GUILD_FEED_FETCH_SUCCESS: Y,
   GUILD_MEMBER_UPDATE: function(e) {
     let {
       guildId: t,
@@ -286,7 +285,7 @@ u = "ChannelListStore", (a = "displayName") in(i = W) ? Object.defineProperty(i,
   RECOMPUTE_READ_STATES: x,
   RESORT_THREADS: y,
   SET_RECENTLY_ACTIVE_COLLAPSED: x,
-  THREAD_CREATE: B,
+  THREAD_CREATE: F,
   THREAD_DELETE: function(e) {
     let {
       channel: t
@@ -296,7 +295,7 @@ u = "ChannelListStore", (a = "displayName") in(i = W) ? Object.defineProperty(i,
   THREAD_LIST_SYNC: j,
   THREAD_MEMBER_UPDATE: b,
   THREAD_MEMBERS_UPDATE: b,
-  THREAD_UPDATE: B,
+  THREAD_UPDATE: F,
   TRY_ACK: y,
   UPDATE_CHANNEL_DIMENSIONS: y,
   UPDATE_CHANNEL_LIST_SUBTITLES: function(e) {
@@ -349,5 +348,5 @@ u = "ChannelListStore", (a = "displayName") in(i = W) ? Object.defineProperty(i,
       of t) null != i && !l.has(i) && (H.nonPositionalChannelIdUpdate(i) && (n = !0), l.add(i)), null != e && !l.has(e) && (H.nonPositionalChannelIdUpdate(e) && (n = !0), l.add(e));
     return n
   },
-  WINDOW_FOCUS: F
+  WINDOW_FOCUS: B
 })

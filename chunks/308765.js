@@ -124,11 +124,6 @@ let r = {
     actions: ["WAIT_FOR_REMOTE_SESSION", "POST_CONNECTION_OPEN", "SESSIONS_REPLACE", "AUDIO_TOGGLE_SELF_DEAF", "AUDIO_TOGGLE_SELF_MUTE", "VOICE_STATE_UPDATES", "CONSOLE_COMMAND_UPDATE", "PASSIVE_UPDATE_V2", "REMOTE_SESSION_DISCONNECT"],
     inlineRequire: () => n("902304").default
   },
-  GuildHomeManager: {
-    actions: ["CHANNEL_PRELOAD"],
-    inlineRequire: () => n("657513").default,
-    neverLoadBeforeConnectionOpen: !0
-  },
   GuildScheduledEventManager: {
     actions: ["POST_CONNECTION_OPEN", "GUILD_DELETE", "GUILD_UNAVAILABLE", "INVITE_RESOLVE_SUCCESS", "CHANNEL_SELECT"],
     inlineRequire: () => n("897285").default,
@@ -164,7 +159,7 @@ let r = {
     inlineRequire: () => n("313298").default
   },
   MessageCodedLinkManager: {
-    actions: ["POST_CONNECTION_OPEN", "MESSAGE_UPDATE", "LOAD_MESSAGES_SUCCESS", "LOAD_MESSAGES_AROUND_SUCCESS", "LOAD_RECENT_MENTIONS_SUCCESS", "LOAD_PINNED_MESSAGES_SUCCESS", "SEARCH_FINISH", "MOD_VIEW_SEARCH_FINISH", "GUILD_FEED_FETCH_SUCCESS"],
+    actions: ["POST_CONNECTION_OPEN", "MESSAGE_UPDATE", "LOAD_MESSAGES_SUCCESS", "LOAD_MESSAGES_AROUND_SUCCESS", "LOAD_RECENT_MENTIONS_SUCCESS", "LOAD_PINNED_MESSAGES_SUCCESS", "SEARCH_FINISH", "MOD_VIEW_SEARCH_FINISH"],
     inlineRequire: () => n("891274").default
   },
   MessageManager: {

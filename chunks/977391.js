@@ -1,13 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
-  },
-  generateAttachmentSpec: function() {
-    return d
+    return c
   },
   generateMessageSpecs: function() {
-    return c
+    return d
   }
 }), n("411104"), n("653041"), n("47120");
 var a = n("735250"),
@@ -18,14 +15,7 @@ var a = n("735250"),
   o = n("981631"),
   u = n("630033");
 
-function d() {
-  return {
-    width: i().random(140, 400),
-    height: i().random(100, 320)
-  }
-}
-
-function c(e) {
+function d(e) {
   let {
     compact: t,
     messageGroups: n,
@@ -35,29 +25,32 @@ function c(e) {
     groupSpacing: u
   } = e;
   if (l > n) throw Error("generateMessageSpecs: too many attachments relative to messageGroups: ".concat(n, ", ").concat(l));
-  let c = s / o.Accessibility.FONT_SIZE_DEFAULT,
-    f = t ? r.HEIGHT_COMPACT_MESSAGE_START : r.HEIGHT_COZY_MESSAGE_START,
-    h = t ? r.HEIGHT_COMPACT_MESSAGE : r.HEIGHT_COZY_MESSAGE,
-    m = 0,
-    p = Array(n).fill(null).map(() => {
+  let d = s / o.Accessibility.FONT_SIZE_DEFAULT,
+    c = t ? r.HEIGHT_COMPACT_MESSAGE_START : r.HEIGHT_COZY_MESSAGE_START,
+    f = t ? r.HEIGHT_COMPACT_MESSAGE : r.HEIGHT_COZY_MESSAGE,
+    h = 0,
+    m = Array(n).fill(null).map(() => {
       let e = i().random(1, a);
-      return m += u * c + f * c + (e - 1) * h * c, e
+      return h += u * d + c * d + (e - 1) * f * d, e
     }),
-    E = p.map((e, t) => t),
-    C = [];
-  for (; C.length < l;) {
-    let e = d();
-    C.push([E.splice(i().random(0, E.length - 1), 1)[0], e]), m += e.height + r.HEIGHT_ATTACHMEMT_PADDING * c
+    p = m.map((e, t) => t),
+    E = [];
+  for (; E.length < l;) {
+    let e = {
+      width: i().random(140, 400),
+      height: i().random(100, 320)
+    };
+    E.push([p.splice(i().random(0, p.length - 1), 1)[0], e]), h += e.height + r.HEIGHT_ATTACHMEMT_PADDING * d
   }
   return {
-    messages: p,
-    attachmentSpecs: C,
-    totalHeight: m,
+    messages: m,
+    attachmentSpecs: E,
+    totalHeight: h,
     groupSpacing: u
   }
 }
 
-function f(e) {
+function c(e) {
   let {
     compact: t,
     messages: n,

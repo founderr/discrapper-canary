@@ -7,79 +7,76 @@ n.r(t), n.d(t, {
     return Y
   },
   getForumPostAuthor: function() {
-    return et
+    return ee
   },
   useAppliedTags: function() {
     return W
   },
   useAutomaticForumSearch: function() {
-    return em
+    return ec
   },
   useCanCreateForumChannel: function() {
     return z
   },
   useCanManageChannel: function() {
-    return el
+    return eu
   },
   useCanSearchForumPosts: function() {
-    return ed
+    return es
   },
   useCanViewArchivedPosts: function() {
-    return ef
+    return ed
   },
   useChannelTemplate: function() {
-    return ei
+    return ea
   },
   useDefaultReactionEmoji: function() {
-    return Z
+    return J
   },
   useExistingPin: function() {
     return B
   },
   useFacepileUsers: function() {
-    return X
+    return Q
   },
   useForumActiveThreadIds: function() {
-    return eS
+    return eg
   },
   useForumPostAuthor: function() {
-    return ee
+    return $
   },
   useForumPostFirstMessageMarkup: function() {
-    return eu
+    return en
   },
   useForumPostReadStates: function() {
-    return ea
+    return er
   },
   useForumSearchState: function() {
-    return ec
+    return ef
   },
   useLastActiveTimestamp: function() {
-    return q
+    return X
   },
   useLoadForumUnreadCounts: function() {
     return K
   },
   useMessageCount: function() {
-    return $
+    return Z
   },
   useMostUsedReaction: function() {
-    return J
-  },
-  useSomeAppliedTags: function() {
-    return Q
+    return q
   },
   useTypingUserIds: function() {
-    return en
+    return et
   },
   useUnreadThreadsCountForParent: function() {
-    return eg
+    return em
   },
   useVisibleAppliedForumTags: function() {
-    return es
+    return eo
   },
   useVisibleForumTags: function() {
-    return eo
+    return ei
   }
 }), n("47120"), n("724458");
 var u = n("470079"),
@@ -202,13 +199,7 @@ function W(e) {
   }, [t, null == e ? void 0 : e.appliedTags])
 }
 
-function Q(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-    n = W(e);
-  return u.useMemo(() => [n.slice(0, t), Math.max(0, n.length - t)], [n, t])
-}
-
-function X(e, t) {
+function Q(e, t) {
   let n = (0, i.useStateFromStoresArray)([N.default], () => t.map(e => N.default.getUser(e)).filter(b.isNotNullish));
   return u.useEffect(() => {
     n.forEach(t => {
@@ -217,7 +208,7 @@ function X(e, t) {
   }, []), n
 }
 
-function q(e, t) {
+function X(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : w.ForumTimestampFormats.DURATION_AGO,
     l = u.useMemo(() => y.default.extractTimestamp(e.id), [e.id]),
     r = (0, E.useLastMessageTimestamp)(e),
@@ -225,14 +216,14 @@ function q(e, t) {
   return u.useMemo(() => t === a.ThreadSortOrder.CREATION_DATE ? (0, E.getTimestampString)(l, i) : (0, E.getTimestampString)(r, i), [r, t, l, i])
 }
 
-function J(e) {
+function q(e) {
   return u.useMemo(() => {
     var t;
     return r().maxBy(null !== (t = null == e ? void 0 : e.reactions) && void 0 !== t ? t : [], e => Math.max(e.burst_count, e.count))
   }, [null == e ? void 0 : e.reactions])
 }
 
-function Z(e) {
+function J(e) {
   let t = null == e ? void 0 : e.defaultReactionEmoji,
     n = (0, i.useStateFromStores)([d.default], () => (null == t ? void 0 : t.emojiId) != null ? d.default.getUsableCustomEmojiById(t.emojiId) : null);
   return null == t ? null : null != t.emojiId && null != n ? {
@@ -246,7 +237,7 @@ function Z(e) {
   } : null
 }
 
-function $(e) {
+function Z(e) {
   let t = (0, i.useStateFromStores)([M.default], () => {
       var t;
       return null !== (t = M.default.getCount(e.id)) && void 0 !== t ? t : 0
@@ -270,7 +261,7 @@ function $(e) {
   }
 }
 
-function ee(e) {
+function $(e) {
   var t;
   let n = (0, i.useStateFromStores)([N.default], () => N.default.getUser(e.ownerId)),
     l = (0, i.useStateFromStores)([P.default], () => {
@@ -286,7 +277,7 @@ function ee(e) {
   }
 }
 
-function et(e) {
+function ee(e) {
   var t, n;
   let u = N.default.getUser(e.ownerId),
     l = null === (t = P.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage,
@@ -297,14 +288,14 @@ function et(e) {
   }
 }
 
-function en(e) {
+function et(e) {
   return (0, i.useStateFromStoresArray)([I.default, N.default, F.default], () => {
     let t = N.default.getCurrentUser();
     return r()(I.default.getTypingUsers(e.id)).keys().filter(e => e !== (null == t ? void 0 : t.id)).reject(e => F.default.isBlocked(e)).map(e => N.default.getUser(e)).filter(b.isNotNullish).map(e => e.id).value()
   })
 }
 
-function eu(e) {
+function en(e) {
   let {
     firstMessage: t,
     formatInline: n = !0,
@@ -330,27 +321,27 @@ function eu(e) {
   }
 }
 
-function el(e) {
+function eu(e) {
   return (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.MANAGE_CHANNELS, e))
 }
-let er = {
+let el = {
   isNew: !1,
   hasUnreads: !1
 };
 
-function ea(e) {
+function er(e) {
   return (0, i.useStateFromStoresObject)([C.default, A.default], () => {
     var t;
     let n = C.default.getGuild(null !== (t = e.getGuildId()) && void 0 !== t ? t : D.EMPTY_STRING_SNOWFLAKE_ID);
-    return null == n ? er : (0, j.getForumPostReadStates)(e, n, [A.default])
+    return null == n ? el : (0, j.getForumPostReadStates)(e, n, [A.default])
   })
 }
 
-function ei(e) {
+function ea(e) {
   return u.useMemo(() => null == e ? "" : null == e.template ? "" : e.template.trim(), [e])
 }
 
-function eo(e) {
+function ei(e) {
   let t = (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.MANAGE_THREADS, e));
   return u.useMemo(() => {
     var n;
@@ -359,9 +350,13 @@ function eo(e) {
   }, [t, null == e ? void 0 : e.availableTags])
 }
 
-function es(e, t) {
-  let n = eo((0, i.useStateFromStores)([_.default], () => _.default.getChannel(null == e ? void 0 : e.parent_id), [e]));
+function eo(e, t) {
+  let n = ei((0, i.useStateFromStores)([_.default], () => _.default.getChannel(null == e ? void 0 : e.parent_id), [e]));
   return u.useMemo(() => t.filter(e => n.includes(e)), [t, n])
+}
+
+function es(e) {
+  return (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.READ_MESSAGE_HISTORY, e))
 }
 
 function ed(e) {
@@ -369,10 +364,6 @@ function ed(e) {
 }
 
 function ef(e) {
-  return (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.READ_MESSAGE_HISTORY, e))
-}
-
-function ec(e) {
   let {
     channelId: t
   } = e;
@@ -383,15 +374,15 @@ function ec(e) {
   }))
 }
 
-function em(e, t) {
+function ec(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     {
       isSearchLoading: l,
       searchQuery: r
-    } = ec({
+    } = ef({
       channelId: e.id
     }),
-    a = ed(e),
+    a = es(e),
     i = u.useRef(null),
     o = u.useRef(new Set);
   u.useEffect(() => {
@@ -415,7 +406,7 @@ function em(e, t) {
   }, [a, e.guild_id, e.id, n, l, r, t])
 }
 
-function eg(e, t) {
+function em(e, t) {
   return (0, i.useStateFromStores)([S.default, A.default, _.default], () => {
     let n = _.default.getChannel(t);
     if (!(null == n ? void 0 : n.isForumLikeChannel())) return 0;
@@ -438,13 +429,13 @@ function eg(e, t) {
   })
 }
 
-function eS(e) {
+function eg(e) {
   let {
     channel: t,
     sortOrder: n,
     tagFilter: l,
     shouldAutomaticallyAck: r
-  } = e, a = (0, i.useStateFromStoresArray)([x.default], () => x.default.getThreadIds(t.id, n, l)), o = eg(t.guild_id, t.id), d = (0, i.useStateFromStores)([x.default], () => r && (o > 0 || x.default.getCanAckThreads()), [r, o]);
+  } = e, a = (0, i.useStateFromStoresArray)([x.default], () => x.default.getThreadIds(t.id, n, l)), o = em(t.guild_id, t.id), d = (0, i.useStateFromStores)([x.default], () => r && (o > 0 || x.default.getCanAckThreads()), [r, o]);
   return u.useEffect(() => {
     d && (0, s.ackChannel)(t)
   }, [t, d]), a

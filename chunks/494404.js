@@ -6,9 +6,6 @@ n.r(t), n.d(t, {
   Header: function() {
     return P
   },
-  ItemsPopout: function() {
-    return b
-  },
   default: function() {
     return F
   }

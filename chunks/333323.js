@@ -1,125 +1,124 @@
 "use strict";
-a.r(t), a.d(t, {
+t.r(l), t.d(l, {
   default: function() {
-    return O
+    return F
   }
-}), a("47120");
-var l = a("735250"),
-  n = a("470079"),
-  s = a("120356"),
-  i = a.n(s),
-  d = a("399606"),
-  r = a("481060"),
-  u = a("749210"),
-  o = a("131388"),
-  c = a("367907"),
-  f = a("644080"),
-  m = a("984370"),
-  h = a("6025"),
-  E = a("433355"),
-  g = a("308570"),
-  _ = a("626135"),
-  I = a("526120"),
-  x = a("563534"),
-  S = a("846121"),
-  v = a("460347"),
-  C = a("404488"),
-  N = a("605276"),
-  p = a("869764"),
-  T = a("919318"),
-  A = a("150512"),
-  j = a("981631"),
-  M = a("176505"),
-  D = a("369701"),
-  F = a("689938"),
-  L = a("253533"),
-  R = a("19340");
-let b = C.MIN_GUILD_HOME_PAGE_WIDTH + 300 + 64,
-  G = n.memo(function(e) {
+}), t("47120");
+var a = t("735250"),
+  n = t("470079"),
+  s = t("120356"),
+  i = t.n(s),
+  d = t("399606"),
+  r = t("481060"),
+  u = t("749210"),
+  o = t("131388"),
+  c = t("367907"),
+  f = t("644080"),
+  m = t("984370"),
+  h = t("6025"),
+  g = t("433355"),
+  x = t("308570"),
+  C = t("626135"),
+  v = t("526120"),
+  I = t("563534"),
+  S = t("846121"),
+  N = t("460347"),
+  j = t("404488"),
+  p = t("605276"),
+  E = t("869764"),
+  _ = t("919318"),
+  M = t("150512"),
+  b = t("981631"),
+  A = t("176505"),
+  T = t("689938"),
+  H = t("253533"),
+  R = t("19340");
+let L = j.MIN_GUILD_HOME_PAGE_WIDTH + 300 + 64,
+  D = n.memo(function(e) {
     let {
-      guild: t
+      guild: l
     } = e;
-    return (0, l.jsxs)(m.default, {
-      channelId: M.StaticChannelRoute.GUILD_HOME,
-      guildId: t.id,
-      className: i()(L.title, L.background),
-      innerClassname: L.headerBarInner,
-      children: [(0, l.jsx)(m.default.Icon, {
-        icon: g.default,
+    return (0, a.jsxs)(m.default, {
+      channelId: A.StaticChannelRoute.GUILD_HOME,
+      guildId: l.id,
+      className: i()(H.title, H.background),
+      innerClassname: H.headerBarInner,
+      children: [(0, a.jsx)(m.default.Icon, {
+        icon: x.default,
         "aria-hidden": !0
-      }), (0, l.jsxs)(m.default.Title, {
-        children: [(0, l.jsx)(r.HiddenVisually, {
-          children: t.name
-        }), F.default.Messages.SERVER_GUIDE]
+      }), (0, a.jsxs)(m.default.Title, {
+        children: [(0, a.jsx)(r.HiddenVisually, {
+          children: l.name
+        }), T.default.Messages.SERVER_GUIDE]
       })]
     })
   });
 
-function O(e) {
-  var t, a;
+function F(e) {
+  var l, t;
   let {
     guild: s,
     width: m
-  } = e, g = (0, d.useStateFromStores)([E.default], () => E.default.getSection(M.StaticChannelRoute.GUILD_HOME)), [F, O] = n.useState(!1), [y, H] = n.useState(j.DEFAULT_CHAT_SIDEBAR_WIDTH), k = g === j.ChannelSections.SIDEBAR_CHAT, U = (0, r.useFocusJumpSection)(), w = (0, d.useStateFromStores)([x.default], () => x.default.getSettings(s.id)), P = null == w ? void 0 : w.welcomeMessage, B = (0, v.default)(s.id), V = !B && (null !== (a = null == w ? void 0 : null === (t = w.resourceChannels) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0) === 0, W = (0, o.default)(D.COLLAPSED_SIZE_MEDIA_QUERY), K = m - j.CHANNEL_SIDEBAR_WIDTH - y, z = k && K < b || W || V;
+  } = e, x = (0, d.useStateFromStores)([g.default], () => g.default.getSection(A.StaticChannelRoute.GUILD_HOME)), [T, F] = n.useState(!1), [w, G] = n.useState(b.DEFAULT_CHAT_SIDEBAR_WIDTH), O = x === b.ChannelSections.SIDEBAR_CHAT, y = (0, r.useFocusJumpSection)(), U = (0, d.useStateFromStores)([I.default], () => I.default.getSettings(s.id)), k = null == U ? void 0 : U.welcomeMessage, B = (0, N.default)(s.id), P = !B && (null !== (t = null == U ? void 0 : null === (l = U.resourceChannels) || void 0 === l ? void 0 : l.length) && void 0 !== t ? t : 0) === 0, V = (0, o.default)("(max-width: 1300px)"), W = m - b.CHANNEL_SIDEBAR_WIDTH - w, z = O && W < L || V || P;
   return (n.useEffect(() => {
-    if (w === x.NO_SETTINGS)(0, I.fetchGuildHomeSettings)(s.id);
-    else if (null != w) {
-      var e, t, a, l, n;
-      _.default.track(j.AnalyticEvents.SERVER_GUIDE_VIEWED, {
+    if (U === I.NO_SETTINGS)(0, v.fetchGuildHomeSettings)(s.id);
+    else if (null != U) {
+      var e, l, t, a, n;
+      C.default.track(b.AnalyticEvents.SERVER_GUIDE_VIEWED, {
         ...(0, c.collectGuildAnalyticsMetadata)(s.id),
-        num_member_actions: null !== (a = null === (e = w.newMemberActions) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
-        num_member_actions_completed: Object.keys(null !== (l = S.default.getCompletedActions(s.id)) && void 0 !== l ? l : {}).length,
-        num_resource_channels: null !== (n = null === (t = w.resourceChannels) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0
+        num_member_actions: null !== (t = null === (e = U.newMemberActions) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0,
+        num_member_actions_completed: Object.keys(null !== (a = S.default.getCompletedActions(s.id)) && void 0 !== a ? a : {}).length,
+        num_resource_channels: null !== (n = null === (l = U.resourceChannels) || void 0 === l ? void 0 : l.length) && void 0 !== n ? n : 0
       })
     }
-  }, [s.id, w]), n.useEffect(() => () => {
-    h.default.closeChannelSidebar(M.StaticChannelRoute.GUILD_HOME)
+  }, [s.id, U]), n.useEffect(() => () => {
+    h.default.closeChannelSidebar(A.StaticChannelRoute.GUILD_HOME)
   }, []), n.useEffect(() => {
-    V && w !== x.NO_SETTINGS && u.default.escapeToDefaultChannel(s.id)
-  }, [s.id, V, w]), V) ? null : (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)("div", {
-      className: i()(R.chat, L.background, {
-        [R.threadSidebarOpen]: k,
-        [R.threadSidebarFloating]: k && F
+    P && U !== I.NO_SETTINGS && u.default.escapeToDefaultChannel(s.id)
+  }, [s.id, P, U]), P) ? null : (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsxs)("div", {
+      className: i()(R.chat, H.background, {
+        [R.threadSidebarOpen]: O,
+        [R.threadSidebarFloating]: O && T
       }),
-      children: [(0, l.jsx)(G, {
+      children: [(0, a.jsx)(D, {
         guild: s
-      }), (0, l.jsx)(r.AdvancedScrollerAuto, {
-        ...U,
-        children: (0, l.jsxs)("div", {
-          className: i()(L.homeContainer, {
-            [L.homeContainerCollapsed]: z
+      }), (0, a.jsx)(r.AdvancedScrollerAuto, {
+        ...y,
+        children: (0, a.jsxs)("div", {
+          className: i()(H.homeContainer, {
+            [H.homeContainerCollapsed]: z
           }),
-          children: [(0, l.jsx)("div", {
-            className: L.maxWidthWrapper,
-            children: (0, l.jsx)(f.default, {
+          children: [(0, a.jsx)("div", {
+            className: H.maxWidthWrapper,
+            children: (0, a.jsx)(f.default, {
               guild: s,
-              titleClassName: W ? L.emptyHeaderTitle : void 0
+              titleClassName: V ? H.emptyHeaderTitle : void 0
             })
-          }), (0, l.jsxs)("div", {
-            className: i()(L.homeContent, L.maxWidthWrapper),
-            children: [(0, l.jsxs)("div", {
-              className: L.mainContent,
-              children: [B && (0, l.jsx)(A.default, {
+          }), (0, a.jsxs)("div", {
+            className: i()(H.homeContent, H.maxWidthWrapper),
+            children: [(0, a.jsxs)("div", {
+              className: H.mainContent,
+              children: [B && (0, a.jsx)(M.default, {
                 guildId: s.id,
-                welcomeMessage: P
-              }), B && (0, l.jsx)(p.default, {
+                welcomeMessage: k
+              }), B && (0, a.jsx)(E.default, {
                 guildId: s.id
-              }), !B || z ? (0, l.jsx)(T.default, {
+              }), !B || z ? (0, a.jsx)(_.default, {
                 guild: s,
                 isNewMember: B
               }) : null]
-            }), z ? null : (0, l.jsx)(N.default, {
+            }), z ? null : (0, a.jsx)(p.default, {
               guild: s,
               isNewMember: B
             })]
           })]
         })
       })]
-    }), k ? (0, l.jsx)(C.default, {
+    }), O ? (0, a.jsx)(j.default, {
       pageWidth: m,
-      onSidebarResize: (e, t) => {
-        O(t), H(e)
+      onSidebarResize: (e, l) => {
+        F(l), G(e)
       }
     }) : null]
   })

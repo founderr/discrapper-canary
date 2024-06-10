@@ -3,9 +3,6 @@ n.r(t), n.d(t, {
   transitionToChannel: function() {
     return d
   },
-  transitionToMessage: function() {
-    return c
-  },
   transitionToThread: function() {
     return _
   }
@@ -29,11 +26,4 @@ function _(e, t, n) {
   r()(null != e.parent_id, "Thread must have a parent ID.");
   let i = (0, a.getGuildIdForGenericRedirect)(e);
   (0, l.transitionTo)(u.Routes.CHANNEL(i, e.id), n, t)
-}
-
-function c(e, t, n, i) {
-  let r = o.default.getChannel(e);
-  if (null == r) return;
-  let s = (0, a.getGuildIdForGenericRedirect)(r);
-  (0, l.transitionTo)(u.Routes.CHANNEL(s, r.id, t), n, i)
 }

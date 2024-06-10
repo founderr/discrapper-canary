@@ -1,133 +1,127 @@
 "use strict";
-a.r(t), a.d(t, {
-  useHomeHeader: function() {
-    return A
-  }
-});
-var l = a("735250"),
-  n = a("470079"),
-  s = a("120356"),
-  i = a.n(s),
-  d = a("442837"),
-  r = a("692547"),
-  u = a("481060"),
-  o = a("410030"),
-  c = a("637853"),
-  f = a("434404"),
-  m = a("159300"),
-  h = a("496675"),
-  E = a("705600"),
-  g = a("346656"),
-  _ = a("976644"),
-  I = a("709586"),
-  x = a("54264"),
-  S = a("768581"),
-  v = a("981631"),
-  C = a("689938"),
-  N = a("418304"),
-  p = a("63190"),
-  T = a("102219");
-let A = e => {
-  let t = n.useMemo(() => null == e ? null : S.default.getGuildHomeHeaderURL({
+t.r(l);
+var a = t("735250"),
+  n = t("470079"),
+  s = t("120356"),
+  i = t.n(s),
+  d = t("442837"),
+  r = t("692547"),
+  u = t("481060"),
+  o = t("410030"),
+  c = t("637853"),
+  f = t("434404"),
+  m = t("159300"),
+  h = t("496675"),
+  g = t("705600"),
+  x = t("346656"),
+  C = t("976644"),
+  v = t("709586"),
+  I = t("54264"),
+  S = t("768581"),
+  N = t("981631"),
+  j = t("689938"),
+  p = t("418304"),
+  E = t("63190"),
+  _ = t("102219");
+let M = e => {
+  let l = n.useMemo(() => null == e ? null : S.default.getGuildHomeHeaderURL({
     id: e.id,
     homeHeader: e.homeHeader
   }), [e]);
   return {
-    homeHeaderImage: t,
-    isHomeHeaderImageSet: null != t,
-    homeHeaderScroll: null != t ? 200 : 0
+    homeHeaderImage: l,
+    isHomeHeaderImageSet: null != l,
+    homeHeaderScroll: null != l ? 200 : 0
   }
 };
 
-function j(e) {
+function b(e) {
   let {
-    guild: t
-  } = e, a = () => {
-    f.default.open(t.id, v.GuildSettingsSections.ONBOARDING, void 0, v.GuildSettingsSubsections.SERVER_GUIDE)
+    guild: l
+  } = e, t = () => {
+    f.default.open(l.id, N.GuildSettingsSections.ONBOARDING, void 0, N.GuildSettingsSubsections.SERVER_GUIDE)
   };
-  return t.hasFeature(v.GuildFeatures.BANNER) ? (0, l.jsxs)(u.Button, {
-    className: N.editButton,
-    innerClassName: N.editButtonInner,
+  return l.hasFeature(N.GuildFeatures.BANNER) ? (0, a.jsxs)(u.Button, {
+    className: p.editButton,
+    innerClassName: p.editButtonInner,
     type: "button",
     size: u.Button.Sizes.MEDIUM,
     color: u.Button.Colors.BRAND,
-    onClick: a,
-    children: [(0, l.jsx)(x.default, {
+    onClick: t,
+    children: [(0, a.jsx)(I.default, {
       height: 16,
       width: 16,
       color: r.default.unsafe_rawColors.WHITE_500.css
-    }), C.default.Messages.EDIT_IMAGE]
-  }) : (0, l.jsxs)(_.default, {
+    }), j.default.Messages.EDIT_IMAGE]
+  }) : (0, a.jsxs)(C.default, {
     color: u.Button.Colors.GREEN,
-    className: N.editButton,
-    innerClassName: N.editButtonInner,
-    onClick: a,
-    children: [(0, l.jsx)(I.default, {
+    className: p.editButton,
+    innerClassName: p.editButtonInner,
+    onClick: t,
+    children: [(0, a.jsx)(v.default, {
       height: 16,
-      width: 16,
-      className: N.__invalid_premiumUpsellBadge
-    }), C.default.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA]
+      width: 16
+    }), j.default.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA]
   })
 }
-let M = n.memo(function(e) {
+let A = n.memo(function(e) {
   let {
-    guild: t,
+    guild: l,
     titleClassName: n
   } = e, {
     homeHeaderImage: s,
     isHomeHeaderImageSet: r
-  } = A(t), f = (0, c.useGuildOnboardingSettingsAvailable)(t.id), _ = (0, d.useStateFromStores)([h.default], () => (0, m.canViewInviteModal)(h.default, t)), I = (0, o.default)();
-  return (0, l.jsxs)("div", {
-    className: N.header,
-    children: [(0, l.jsxs)("div", {
-      className: N.headerArtWrapper,
-      children: [(0, l.jsx)("div", {
-        className: i()(N.headerArt, {
-          [N.headerArtPlaceholder]: !r
+  } = M(l), f = (0, c.useGuildOnboardingSettingsAvailable)(l.id), C = (0, d.useStateFromStores)([h.default], () => (0, m.canViewInviteModal)(h.default, l)), v = (0, o.default)();
+  return (0, a.jsxs)("div", {
+    className: p.header,
+    children: [(0, a.jsxs)("div", {
+      className: p.headerArtWrapper,
+      children: [(0, a.jsx)("div", {
+        className: i()(p.headerArt, {
+          [p.headerArtPlaceholder]: !r
         }),
         style: {
-          backgroundImage: "url(".concat(r ? s : "dark" === I ? p : T, ")")
+          backgroundImage: "url(".concat(r ? s : "dark" === v ? E : _, ")")
         }
-      }), f && (0, l.jsx)(j, {
-        guild: t
+      }), f && (0, a.jsx)(b, {
+        guild: l
       })]
-    }), (0, l.jsx)("div", {
-      className: N.titleWrapper,
-      children: (0, l.jsxs)("div", {
+    }), (0, a.jsx)("div", {
+      className: p.titleWrapper,
+      children: (0, a.jsxs)("div", {
         className: n,
-        children: [(0, l.jsx)(g.default, {
-          className: N.headerIcon,
-          guild: t,
-          size: g.default.Sizes.XLARGE,
+        children: [(0, a.jsx)(x.default, {
+          className: p.headerIcon,
+          guild: l,
+          size: x.default.Sizes.XLARGE,
           active: !0
-        }), (0, l.jsx)(u.HeadingLevel, {
-          children: (0, l.jsxs)("div", {
-            className: N.headerName,
-            children: [(0, l.jsx)(u.Heading, {
-              className: N.headerName,
+        }), (0, a.jsx)(u.HeadingLevel, {
+          children: (0, a.jsxs)("div", {
+            className: p.headerName,
+            children: [(0, a.jsx)(u.Heading, {
+              className: p.headerName,
               variant: "heading-xxl/bold",
-              children: t.name
-            }), (0, l.jsx)(E.default, {
+              children: l.name
+            }), (0, a.jsx)(g.default, {
               size: 24,
-              guild: t,
+              guild: l,
               tooltipPosition: "bottom",
-              tooltipColor: u.Tooltip.Colors.PRIMARY,
-              className: N.__invalid_guildBadge
-            }), _ && (0, l.jsx)(u.Button, {
-              className: N.inviteButton,
+              tooltipColor: u.Tooltip.Colors.PRIMARY
+            }), C && (0, a.jsx)(u.Button, {
+              className: p.inviteButton,
               size: u.Button.Sizes.MEDIUM,
               color: u.Button.Colors.PRIMARY,
               onClick: () => (0, u.openModalLazy)(async () => {
                 let {
                   default: e
-                } = await Promise.all([a.e("99387"), a.e("7654")]).then(a.bind(a, "560114"));
-                return a => (0, l.jsx)(e, {
-                  ...a,
-                  guild: t,
-                  source: v.InstantInviteSources.GUILD_HOME
+                } = await Promise.all([t.e("99387"), t.e("7654")]).then(t.bind(t, "560114"));
+                return t => (0, a.jsx)(e, {
+                  ...t,
+                  guild: l,
+                  source: N.InstantInviteSources.GUILD_HOME
                 })
               }),
-              children: C.default.Messages.INSTANT_INVITE
+              children: j.default.Messages.INSTANT_INVITE
             })]
           })
         })]
@@ -135,4 +129,4 @@ let M = n.memo(function(e) {
     })]
   })
 });
-t.default = M
+l.default = A

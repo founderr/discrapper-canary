@@ -4,93 +4,92 @@ var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
-  _ = n("900489"),
-  c = n("131704"),
-  E = n("592125");
-let I = {};
+  _ = n("131704"),
+  c = n("592125");
+let E = {};
 
-function T(e) {
+function I(e) {
   var t;
-  null === (t = e.threads) || void 0 === t || t.forEach(f)
+  null === (t = e.threads) || void 0 === t || t.forEach(T)
 }
 
-function f(e) {
-  if (!c.ALL_CHANNEL_TYPES.has(e.type)) return !1;
+function T(e) {
+  if (!_.ALL_CHANNEL_TYPES.has(e.type)) return !1;
   let t = function(e) {
-    if (!(e.id in I)) {
+    if (!(e.id in E)) {
       var t, n;
-      I[e.id] = {
+      E[e.id] = {
         guildId: e.guild_id,
         parentId: e.parent_id,
         memberCount: null !== (t = e.memberCount) && void 0 !== t ? t : 0,
         memberIdsPreview: null !== (n = e.memberIdsPreview) && void 0 !== n ? n : []
       }
     }
-    return I[e.id]
+    return E[e.id]
   }(e);
   null != e.memberCount && (t.memberCount = e.memberCount), null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview)
 }
 
-function S(e) {
+function f(e) {
   let {
     channel: t
   } = e;
-  return f(t)
+  return T(t)
 }
 
-function h(e) {
+function S(e) {
   let {
     threads: t
   } = e;
-  t.forEach(m)
+  t.forEach(A)
 }
 
-function A(e) {
+function h(e) {
   let t = !1;
   for (let n of e.messages)
-    for (let e of n) t = m(e.thread) || t;
+    for (let e of n) t = A(e.thread) || t;
   return e.threads.forEach(e => {
-    t = m(e) || t
+    t = A(e) || t
   }), t
 }
 
-function m(e) {
-  if (null != e && !(e.id in I)) {
-    let t = E.default.getChannel(e.id);
-    if (null != t) return f(t), !0
+function A(e) {
+  if (null != e && !(e.id in E)) {
+    let t = c.default.getChannel(e.id);
+    if (null != t) return T(t), !0
   }
   return !1
 }
-class N extends(i = u.default.Store) {
+class m extends(i = u.default.Store) {
   initialize() {
-    this.waitFor(E.default)
+    this.waitFor(c.default)
   }
   getMemberCount(e) {
     var t, n;
-    return null !== (n = null === (t = I[e]) || void 0 === t ? void 0 : t.memberCount) && void 0 !== n ? n : null
+    return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.memberCount) && void 0 !== n ? n : null
   }
   getMemberIdsPreview(e) {
     var t, n;
-    return null !== (n = null === (t = I[e]) || void 0 === t ? void 0 : t.memberIdsPreview) && void 0 !== n ? n : null
+    return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.memberIdsPreview) && void 0 !== n ? n : null
   }
   getInitialOverlayState() {
-    return I
+    return E
   }
 }
-a = "ThreadMembersStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+a = "ThreadMembersStore", (s = "displayName") in(r = m) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new N(d.default, {
+}) : r[s] = a, t.default = new m(d.default, {
   CONNECTION_OPEN: function(e) {
-    I = {}, e.guilds.forEach(T)
+    E = {}, e.guilds.forEach(I)
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       threadMembers: t
     } = e;
-    I = {
+    E = {
       ...t
     }
   },
@@ -98,55 +97,48 @@ a = "ThreadMembersStore", (s = "displayName") in(r = N) ? Object.defineProperty(
     let {
       guild: t
     } = e;
-    T(t)
+    I(t)
   },
   GUILD_DELETE: function(e) {
     var t;
     let {
       guild: n
     } = e;
-    t = n.id, I = l().omitBy(I, e => e.guildId === t)
+    t = n.id, E = l().omitBy(E, e => e.guildId === t)
   },
   CHANNEL_DELETE: function(e) {
     var t;
     let {
       channel: n
     } = e;
-    t = n.id, I = l().omitBy(I, e => e.parentId === t)
+    t = n.id, E = l().omitBy(E, e => e.parentId === t)
   },
-  THREAD_CREATE: S,
-  THREAD_UPDATE: S,
+  THREAD_CREATE: f,
+  THREAD_UPDATE: f,
   THREAD_LIST_SYNC: function(e) {
     let {
       threads: t
     } = e;
-    t.forEach(f)
+    t.forEach(T)
   },
   THREAD_MEMBERS_UPDATE: function(e) {
-    let t = I[e.id];
+    let t = E[e.id];
     if (null == t) return !1;
     null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), t.memberCount = e.memberCount
   },
-  SEARCH_FINISH: A,
-  MOD_VIEW_SEARCH_FINISH: A,
-  LOAD_THREADS_SUCCESS: h,
-  LOAD_ARCHIVED_THREADS_SUCCESS: h,
+  SEARCH_FINISH: h,
+  MOD_VIEW_SEARCH_FINISH: h,
+  LOAD_THREADS_SUCCESS: S,
+  LOAD_ARCHIVED_THREADS_SUCCESS: S,
   THREAD_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    delete I[t.id]
+    delete E[t.id]
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let t = !1;
-    for (let n of e.messages) t = m(n.thread) || t;
+    for (let n of e.messages) t = A(n.thread) || t;
     return t
-  },
-  GUILD_FEED_FETCH_SUCCESS: function(e) {
-    let {
-      data: t
-    } = e, n = !1;
-    for (let e of (0, _.getThreadsFromGuildFeedFetch)(t)) n = m(e) || n;
-    return n
   }
 })
