@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
-  getCheckoutRecoveryNagbar: function() {
+  isUserInCheckoutRecoveryNagbarExperiment: function() {
     return a
   }
 });
-let s = (0, n("818083").createExperiment)({
+let l = (0, n("818083").createExperiment)({
     kind: "user",
     id: "2024-06_checkout_recovery_nagbar_test",
     label: "Testing",
@@ -28,7 +28,7 @@ let s = (0, n("818083").createExperiment)({
   a = () => {
     let {
       enabled: e
-    } = s.getCurrentConfig({
+    } = l.getCurrentConfig({
       location: "checkout_recovery_nagbar_test"
     });
     return e

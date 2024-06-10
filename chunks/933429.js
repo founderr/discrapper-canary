@@ -33,8 +33,8 @@ var s, a, l, i, r = n("913527"),
   y = n("41776"),
   U = n("347649"),
   j = n("332473"),
-  b = n("616106"),
-  F = n("995598"),
+  b = n("30684"),
+  F = n("616106"),
   B = n("774276"),
   G = n("518638"),
   k = n("1844"),
@@ -519,7 +519,7 @@ let eV = [ev.NoticeTypes.QUARANTINED, ev.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [ev.NoticeTypes.PREMIUM_REACTIVATE]: {
-      predicate: () => !eH(ev.NoticeTypes.PREMIUM_REACTIVATE) && b.default.shouldShowReactivateNotice()
+      predicate: () => !eH(ev.NoticeTypes.PREMIUM_REACTIVATE) && F.default.shouldShowReactivateNotice()
     },
     [ev.NoticeTypes.LOCALIZED_PRICING]: {
       predicate: e => {
@@ -642,7 +642,7 @@ let eV = [ev.NoticeTypes.QUARANTINED, ev.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [ev.NoticeTypes.CHECKOUT_RECOVERY_NAGBAR]: {
-      predicate: () => (0, F.getCheckoutRecoveryNagbar)()
+      predicate: () => b.default.isEligibleForNagbar()
     }
   };
 
