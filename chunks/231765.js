@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return X
+    return q
   }
 }), s("47120");
 var a, n, l, i, r = s("735250"),
@@ -465,13 +465,13 @@ let Q = (e, t, s) => {
         return null
     }
   },
-  q = e => 0 === e ? I.SlideDirection.LEFT : I.SlideDirection.RIGHT;
+  X = e => 0 === e ? I.SlideDirection.LEFT : I.SlideDirection.RIGHT;
 
-function X() {
-  let [e, t] = o.useState(0), [s, a] = o.useState(q(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), d = n && !i;
+function q() {
+  let [e, t] = o.useState(0), [s, a] = o.useState(X(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), d = n && !i;
   return o.useEffect(() => {
     let t = setTimeout(() => {
-      a(q(e))
+      a(X(e))
     }, 500);
     return () => clearTimeout(t)
   }, [e]), o.useEffect(() => {

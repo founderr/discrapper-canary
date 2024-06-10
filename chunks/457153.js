@@ -25,12 +25,12 @@ t.default = function(e) {
     isExpansionAnimationComplete: p,
     quest: N,
     useReducedMotion: S
-  } = e, I = n.useRef(null), R = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, v = n.useMemo(() => (0, d.isAssetAnimated)(N.config.assets.questBarHero), [N]), x = (0, d.getQuestBarHeroAssetUrl)(N);
+  } = e, I = n.useRef(null), x = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, R = n.useMemo(() => (0, d.isAssetAnimated)(N.config.assets.questBarHero), [N]), v = (0, d.getQuestBarHeroAssetUrl)(N);
   return (0, a.jsxs)(r.animated.div, {
     "aria-hidden": A && p,
     className: i()(l, T.contentCollapsed, {
       [T.contentCollapsedExpanded]: A,
-      [T.contentCollapsedAccepted]: R
+      [T.contentCollapsedAccepted]: x
     }),
     style: {
       opacity: g.to({
@@ -47,7 +47,7 @@ t.default = function(e) {
         style: {
           backgroundColor: N.config.colors.primary
         }
-      }), v ? (0, a.jsx)(E.QuestsAsset, {
+      }), R ? (0, a.jsx)(E.QuestsAsset, {
         id: "QuestBarV2ContentExpanded_heroAnimated",
         children: e => (0, a.jsx)(u.default, {
           ref: e,
@@ -58,8 +58,8 @@ t.default = function(e) {
           className: T.heroAsset,
           controls: !1,
           children: (0, a.jsx)("source", {
-            src: x,
-            type: (0, d.getVideoAssetMimeType)(x)
+            src: v,
+            type: (0, d.getVideoAssetMimeType)(v)
           })
         })
       }) : (0, a.jsx)(E.QuestsAsset, {
@@ -68,10 +68,10 @@ t.default = function(e) {
           ref: e,
           alt: "",
           className: T.heroAsset,
-          src: x
+          src: v
         })
       })]
-    }), R ? (0, a.jsx)("div", {
+    }), x ? (0, a.jsx)("div", {
       className: T.postEnrollmentBackground,
       style: {
         backgroundImage: "linear-gradient(90deg, ".concat(m.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(m.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
@@ -87,7 +87,7 @@ t.default = function(e) {
       isExpanded: A
     }), (0, a.jsx)("div", {
       className: T.contentCollapsedWrapper,
-      children: R ? (0, a.jsx)(h.default, {
+      children: x ? (0, a.jsx)(h.default, {
         quest: N,
         progressBarRef: I,
         isExpanded: !1

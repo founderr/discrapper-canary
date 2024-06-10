@@ -99,7 +99,7 @@ let k = {
       id: "".concat(t)
     })]
   };
-class q extends n.Component {
+class X extends n.Component {
   renderZoomSlider() {
     return D.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
       className: H.marginTop20,
@@ -342,7 +342,7 @@ class q extends n.Component {
     })
   }
 }
-let X = e => {
+let q = e => {
   !(0, g.isDismissibleContentDismissed)(e) && (0, g.markDismissibleContentAsDismissed)(e, {
     dismissAction: F.ContentDismissActionType.AUTO,
     forceTrack: !0
@@ -366,7 +366,7 @@ function Z() {
       location: i
     });
   n.useEffect(() => {
-    X(o.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE), X(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK), d && X(o.DismissibleContent.BRAND_REFRESH_NEW_BADGE), u && X(o.DismissibleContent.PRIDE_ICONS_APPEARANCE_BADGE)
+    q(o.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE), q(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE), q(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK), d && q(o.DismissibleContent.BRAND_REFRESH_NEW_BADGE), u && q(o.DismissibleContent.PRIDE_ICONS_APPEARANCE_BADGE)
   }, []);
   let c = (0, r.useStateFromStoresObject)([L.default, P.default, _.default, R.default, N.default], () => {
     var e, t;
@@ -383,7 +383,7 @@ function Z() {
       gradientPreset: N.default.gradientPreset
     }
   });
-  return (0, a.jsx)(q, {
+  return (0, a.jsx)(X, {
     messageDisplayCompact: e,
     hideSimpleEmbedContent: t && s,
     clientTheme: l,

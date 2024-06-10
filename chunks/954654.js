@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return N
   },
   renderComponents: function() {
     return E
@@ -12,8 +12,8 @@ n("470079");
 var a = n("120356"),
   u = n.n(a),
   i = n("911969"),
-  o = n("970184"),
-  s = n("987106"),
+  s = n("970184"),
+  o = n("987106"),
   r = n("927057"),
   d = n("574597"),
   c = n("378975"),
@@ -33,7 +33,7 @@ function E(e) {
           renderComponents: E
         }, t);
       case i.ComponentType.BUTTON:
-        return (0, l.jsx)(s.default, {
+        return (0, l.jsx)(o.default, {
           ...e
         }, t);
       case i.ComponentType.STRING_SELECT:
@@ -70,7 +70,7 @@ function E(e) {
   })(e, t.toString()))
 }
 
-function h(e) {
+function N(e) {
   let {
     message: t
   } = e, {
@@ -80,7 +80,7 @@ function h(e) {
     className: u()([v.container, {
       [v.containerUikit]: t.isUIKitComponents()
     }]),
-    children: (0, l.jsx)(o.ComponentStateContextProvider, {
+    children: (0, l.jsx)(s.ComponentStateContextProvider, {
       message: t,
       children: E(n)
     })

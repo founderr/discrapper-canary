@@ -8,8 +8,8 @@ var l = n("735250"),
   a = n("470079"),
   u = n("481060"),
   i = n("911969"),
-  o = n("970184"),
-  s = n("293979"),
+  s = n("970184"),
+  o = n("293979"),
   r = n("834507");
 
 function d(e) {
@@ -24,17 +24,17 @@ function d(e) {
     required: S,
     value: C
   } = e, [v, E] = a.useState(null != C ? C : ""), {
-    state: h,
-    executeStateUpdate: N,
-    error: g
-  } = (0, o.useComponentState)(e, null != C ? {
+    state: N,
+    executeStateUpdate: h,
+    error: T
+  } = (0, s.useComponentState)(e, null != C ? {
     type: n,
     value: C
-  } : void 0), y = (0, s.useIsFirstTextInputInModal)(e.id);
+  } : void 0), I = (0, o.useIsFirstTextInputInModal)(e.id);
   a.useEffect(() => {
-    (null == h ? void 0 : h.type) === n && E(h.value)
-  }, [n, h]);
-  let T = {
+    (null == N ? void 0 : N.type) === n && E(N.value)
+  }, [n, N]);
+  let g = {
     name: c,
     value: v,
     placeholder: p,
@@ -42,29 +42,29 @@ function d(e) {
     maxLength: f,
     required: S,
     onChange: e => {
-      E(e), N({
+      E(e), h({
         type: n,
         value: e
       })
     },
-    autoFocus: y
+    autoFocus: I
   };
   switch (d) {
     case i.TextComponentStyle.SMALL:
       t = (0, l.jsx)(u.TextInput, {
-        ...T
+        ...g
       });
       break;
     case i.TextComponentStyle.PARAGRAPH:
       t = (0, l.jsx)(u.TextArea, {
-        ...T
+        ...g
       })
   }
   return (0, l.jsx)(u.FormItem, {
     title: c,
     required: S,
     className: r.formItem,
-    error: g,
+    error: T,
     children: t
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   QuestBar: function() {
-    return v
+    return R
   }
 }), s("47120");
 var a = s("735250"),
@@ -26,21 +26,21 @@ var a = s("735250"),
   N = s("448018"),
   S = s("46140"),
   I = s("981631"),
-  R = s("837955");
+  x = s("837955");
 
-function v(e) {
+function R(e) {
   var t, s, l;
   let {
     quest: f
-  } = e, v = (0, g.getQuestLogger)({
+  } = e, R = (0, g.getQuestLogger)({
     quest: f,
     location: S.QuestsExperimentLocations.QUESTS_BAR
-  }), x = (0, T.useIsEligibleForQuests)({
+  }), v = (0, T.useIsEligibleForQuests)({
     location: S.QuestsExperimentLocations.QUESTS_BAR
-  }), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([c.default], () => c.default.hasLayers()), O = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (0, u.default)(O), D = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.completedAt) != null, b = (0, u.default)(D), j = (null === (l = f.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, P = null != f.userStatus && (0, m.isDismissed)(f.userStatus, h.QuestContent.QUEST_BAR), U = (0, _.useIsQuestExpired)(f), {
+  }), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([c.default], () => c.default.hasLayers()), O = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (0, u.default)(O), D = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.completedAt) != null, b = (0, u.default)(D), j = (null === (l = f.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, U = null != f.userStatus && (0, m.isDismissed)(f.userStatus, h.QuestContent.QUEST_BAR), P = (0, _.useIsQuestExpired)(f), {
     hasError: G,
     isLoading: V
-  } = (0, p.useQuestsAssetsLoadState)(), B = x && !P && !j && !U && !V, H = n.useRef(B), {
+  } = (0, p.useQuestsAssetsLoadState)(), B = v && !U && !j && !P && !V, H = n.useRef(B), {
     primaryVariant: F,
     progressVariant: k
   } = C.QuestBarExperiment.useExperiment({
@@ -133,7 +133,7 @@ function v(e) {
   });
   return (n.useLayoutEffect(() => {
     D && !b && w.canCollapseOnBlur && ea()
-  }, [D, en, w.canCollapseOnBlur, ea, b]), x && (B || !J || V) && !G) ? (0, a.jsx)(A.QuestContentImpressionTrackerWeb, {
+  }, [D, en, w.canCollapseOnBlur, ea, b]), v && (B || !J || V) && !G) ? (0, a.jsx)(A.QuestContentImpressionTrackerWeb, {
     questOrQuests: f,
     questContent: w.trackingCtx.content,
     overrideVisibility: !L && B,
@@ -141,9 +141,9 @@ function v(e) {
       let e = w.component;
       return (0, a.jsx)(r.animated.div, {
         "aria-hidden": !B,
-        className: i()(R.wrapper, {
-          [R.wrapperInvisible]: !B,
-          [R.wrapperVisible]: B && J
+        className: i()(x.wrapper, {
+          [x.wrapperInvisible]: !B,
+          [x.wrapperVisible]: B && J
         }),
         style: {
           color: f.config.colors.secondary,
@@ -157,9 +157,9 @@ function v(e) {
           onMouseEnter: ed,
           onFocus: () => eo(),
           onBlur: eu,
-          className: i()(R.contentWrapper, {
-            [R.contentWrapperExpanded]: z,
-            [R.contentWrapperAccepted]: O
+          className: i()(x.contentWrapper, {
+            [x.contentWrapperExpanded]: z,
+            [x.contentWrapperAccepted]: O
           }),
           style: {
             backgroundColor: w.preEnrollmentBackgroundColor,
@@ -188,7 +188,7 @@ function v(e) {
         })
       })
     }
-  }) : (G ? v.log("Not rendered due to asset error") : !x && v.log("Not rendered due to ineligibility"), null)
+  }) : (G ? R.log("Not rendered due to asset error") : !v && R.log("Not rendered due to ineligibility"), null)
 }
 t.default = function(e) {
   let {
@@ -199,7 +199,7 @@ t.default = function(e) {
   });
   return null == s ? null : (0, a.jsx)(p.QuestsAssetContextProvider, {
     sentrySource: S.QuestsExperimentLocations.QUESTS_BAR,
-    children: (0, a.jsx)(v, {
+    children: (0, a.jsx)(R, {
       quest: s
     })
   }, s.id)

@@ -9,8 +9,8 @@ n("470079");
 var a = n("442837"),
   u = n("169525"),
   i = n("611170"),
-  o = n("128854"),
-  s = n("592125"),
+  s = n("128854"),
+  o = n("592125"),
   r = n("52824"),
   d = n("310043"),
   c = n("69750"),
@@ -22,30 +22,30 @@ var a = n("442837"),
 function C(e) {
   let {
     message: t
-  } = (0, f.useComponentStateContext)(), n = (0, a.useStateFromStores)([s.default], () => s.default.getChannel(null == t ? void 0 : t.channel_id)), {
+  } = (0, f.useComponentStateContext)(), n = (0, a.useStateFromStores)([o.default], () => o.default.getChannel(null == t ? void 0 : t.channel_id)), {
     shouldHideMediaOptions: C,
     shouldRedactExplicitContent: v,
     gifAutoPlay: E,
-    getGifFavButton: h,
-    getOnMediaItemContextMenu: N
-  } = (0, o.useMessageAccessoriesComponentContext)();
+    getGifFavButton: N,
+    getOnMediaItemContextMenu: h
+  } = (0, s.useMessageAccessoriesComponentContext)();
   if (null == t || null == n) return null;
-  let g = e.items.map(e => (0, p.carouselAssetFromMediaItem)(e.media, C, v)).filter(m.isNotNullish),
-    y = {
+  let T = e.items.map(e => (0, p.carouselAssetFromMediaItem)(e.media, C, v)).filter(m.isNotNullish),
+    I = {
       source: "Media Mosaic",
       guild_id: n.guild_id,
       channel_id: n.id,
       channel_type: n.type
     },
-    T = g.length > 1 ? (0, p.createMediaOnClickOverrides)(g, y) : {};
+    g = T.length > 1 ? (0, p.createMediaOnClickOverrides)(T, I) : {};
 
-  function I(e, t) {
+  function y(e, t) {
     let n = e.originalItem;
     return (0, u.getObscureReasonForUnfurledMediaItem)(n.media, t, n.spoiler)
   }
   let x = e.items.map(e => {
     let n = e.media,
-      l = null == N ? void 0 : N(n),
+      l = null == h ? void 0 : h(n),
       a = {
         message: t,
         item: {
@@ -60,14 +60,14 @@ function C(e) {
         },
         onContextMenu: l,
         autoPlayGif: E,
-        getObscureReason: I,
+        getObscureReason: y,
         renderImageComponent: i.renderImageComponentForGalleryItem,
         renderVideoComponent: i.renderVideoComponentForGalleryItem,
         renderAudioComponent: S.NOOP,
         renderPlaintextFilePreview: S.NOOP,
         renderGenericFileComponent: S.NOOP,
         renderMosaicItemFooter: S.NOOP,
-        gifFavoriteButton: h(n),
+        gifFavoriteButton: N(n),
         onPlay: (e, t, n) => {},
         canRemoveItem: !1,
         onRemoveItem: S.NOOP
@@ -76,7 +76,7 @@ function C(e) {
         proxyURL: n.proxyUrl,
         url: n.url
       });
-    return u in T && (a.onClick = T[u]), a
+    return u in g && (a.onClick = g[u]), a
   });
   return (0, l.jsx)("div", {
     children: (0, l.jsx)(d.default, {

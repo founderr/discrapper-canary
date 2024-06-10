@@ -149,8 +149,8 @@ t.default = e => {
       }
     }, {
       isCancelled: Q,
-      isPastDue: q,
-      subscriptionPrice: X,
+      isPastDue: X,
+      subscriptionPrice: q,
       memberSince: Z,
       nextRenewalDate: J,
       nextRenewalLabel: $,
@@ -163,7 +163,7 @@ t.default = e => {
         text: F.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
         color: r.default.BRAND_500
       });
-      if (q) return (0, a.jsx)(d.Tooltip, {
+      if (X) return (0, a.jsx)(d.Tooltip, {
         text: F.default.Messages.GUILD_ROLE_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
         children: e => (0, a.jsx)("div", {
           ...e,
@@ -245,7 +245,7 @@ t.default = e => {
           value: J
         }), (0, a.jsx)(y, {
           label: F.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_PRICE,
-          value: X,
+          value: q,
           showInfoIcon: ee,
           infoIconTooltipText: ee ? F.default.Messages.GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO : void 0
         }), (0, a.jsx)(y, {

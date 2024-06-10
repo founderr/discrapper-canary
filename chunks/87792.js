@@ -22,9 +22,9 @@ var a = s("735250"),
   N = s("240351"),
   S = s("792258"),
   I = s("657825"),
-  R = s("198952"),
-  v = s("329242"),
-  x = s("895328"),
+  x = s("198952"),
+  R = s("329242"),
+  v = s("895328"),
   M = s("292352"),
   L = s("981631"),
   O = s("689938"),
@@ -68,8 +68,8 @@ function b(e) {
     g(e => e + M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(_, "No text for action type");
-  let R = _.sectionHeader(u),
-    v = n.useCallback(e => {
+  let x = _.sectionHeader(u),
+    R = n.useCallback(e => {
       let {
         row: t
       } = e, s = r[t];
@@ -81,29 +81,29 @@ function b(e) {
         guildId: s.entity_id
       }, s.event_id) : void 0
     }, [r, _.timestampFormatter]),
-    x = n.useCallback(() => (0, a.jsxs)(a.Fragment, {
+    v = n.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: y.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: R
+        children: x
       }), void 0 !== _.sectionDescription ? (0, a.jsx)(o.Text, {
         className: y.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
         children: _.sectionDescription(null != l && l, p)
       }) : null]
-    }), [R, _, l, p]);
+    }), [x, _, l, p]);
   if (0 === r.length) return null;
   let L = r.slice(0, m);
   return (0, a.jsxs)("div", {
     className: y.actionSection,
-    children: [x(), (0, a.jsx)("div", {
+    children: [v(), (0, a.jsx)("div", {
       className: y.actions,
       style: {
         maxHeight: 65 * L.length
       },
-      children: L.map((e, t) => v({
+      children: L.map((e, t) => R({
         row: t
       }))
     }), L.length !== u ? (0, a.jsx)(o.Clickable, {
@@ -143,7 +143,7 @@ let j = () => {
       })]
     })
   },
-  P = e => {
+  U = e => {
     let {
       userId: t,
       subText: s,
@@ -151,12 +151,12 @@ let j = () => {
     } = e, l = (0, g.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
       className: y.accountRow,
-      children: [(0, a.jsx)(R.FamilyCenterAvatar, {
+      children: [(0, a.jsx)(x.FamilyCenterAvatar, {
         user: l,
         avatarSize: n
       }), (0, a.jsxs)("div", {
         className: y.headerText,
-        children: [(0, a.jsx)(v.default, {
+        children: [(0, a.jsx)(R.default, {
           user: l
         }), void 0 !== s ? (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
@@ -166,7 +166,7 @@ let j = () => {
       })]
     })
   },
-  U = () => {
+  P = () => {
     let e = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE),
       t = (0, r.useStateFromStores)([_.default], () => _.default.getSelectedTeenId()),
       {
@@ -176,7 +176,7 @@ let j = () => {
         label: e.id,
         value: e.id
       })),
-      i = n.useCallback(e => (0, a.jsx)(P, {
+      i = n.useCallback(e => (0, a.jsx)(U, {
         userId: e.value,
         avatarSize: o.AvatarSizes.SIZE_24
       }), []);
@@ -201,7 +201,7 @@ let j = () => {
     let {
       userId: t
     } = e, s = (0, A.default)(), n = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE), l = (0, f.getActivityWindowTimestampFormatter)(!!s), i = (0, p.useActivityWindowTimeStamp)(l);
-    return s && 1 !== n.length ? (0, a.jsx)(U, {}) : (0, a.jsx)(P, {
+    return s && 1 !== n.length ? (0, a.jsx)(P, {}) : (0, a.jsx)(U, {
       userId: t,
       subText: i
     })
@@ -240,7 +240,7 @@ t.default = e => {
             return (0, a.jsx)(b, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(x.default, {
+          }) : (0, a.jsx)(v.default, {
             className: y.emptyActivity,
             text: null != i ? i : ""
           })

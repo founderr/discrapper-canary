@@ -53,8 +53,8 @@ function F(e) {
     pendingBio: K,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
-    tryItOutBanner: q,
-    tryItOutAvatarDecoration: X,
+    tryItOutBanner: X,
+    tryItOutAvatarDecoration: q,
     tryItOutProfileEffectId: Z
   } = (0, l.useStateFromStoresObject)([m.default], () => {
     let e = m.default.getAllPending(),
@@ -65,7 +65,7 @@ function F(e) {
       ...s,
       errors: t
     }
-  }), J = (0, c.default)(X), $ = (0, S.default)(Z), ee = n.useRef(null);
+  }), J = (0, c.default)(q), $ = (0, S.default)(Z), ee = n.useRef(null);
   (0, f.default)(ee, U.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(y.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
@@ -114,7 +114,7 @@ function F(e) {
           onBannerChange: N.setTryItOutBanner,
           pendingPronouns: W,
           pendingBio: K,
-          pendingBanner: null !== (B = null != q ? q : k) && void 0 !== B ? B : s("466045"),
+          pendingBanner: null !== (B = null != X ? X : k) && void 0 !== B ? B : s("466045"),
           pendingAvatar: null != Q ? Q : Y,
           pendingThemeColors: null != z ? z : w,
           pendingAvatarDecoration: J,
@@ -147,7 +147,7 @@ function F(e) {
           }), (0, a.jsx)(D.default, {
             className: G.customizationSection,
             isTryItOutFlow: !0,
-            showRemoveBannerButton: null != q,
+            showRemoveBannerButton: null != X,
             onBannerChange: N.setTryItOutBanner,
             showPremiumIcon: !1
           }), (0, a.jsx)(M.default, {
@@ -175,7 +175,7 @@ function F(e) {
               children: j.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
             }), (0, a.jsx)(I.default, {
               onSubscribeModalClose: e => {
-                e && ((0, r.setPendingAvatar)(Q), (0, N.setPendingBanner)(q), (0, N.setPendingThemeColors)(z))
+                e && ((0, r.setPendingAvatar)(Q), (0, N.setPendingBanner)(X), (0, N.setPendingThemeColors)(z))
               },
               subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
               className: G.premiumSubscribeButton,

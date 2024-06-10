@@ -308,7 +308,7 @@ function Q() {
     })]
   })
 }
-class q extends n.PureComponent {
+class X extends n.PureComponent {
   handleDesktopChange(e) {
     let t = e ? V.DesktopNotificationTypes.ALL : V.DesktopNotificationTypes.NEVER;
     if (t !== V.DesktopNotificationTypes.NEVER) {
@@ -433,7 +433,7 @@ class q extends n.PureComponent {
     })
   }
 }
-let X = (0, _.createExperiment)({
+let q = (0, _.createExperiment)({
   kind: "user",
   id: "2024-01_mention_on_all_messages",
   label: "Mention on all messages",
@@ -450,7 +450,7 @@ let X = (0, _.createExperiment)({
 });
 
 function Z() {
-  let e = X.useExperiment({
+  let e = q.useExperiment({
       location: "settings"
     }, {
       autoTrackExposure: !1
@@ -528,7 +528,7 @@ async function $(e) {
 
 function ee(e) {
   let t = (0, m.useFocusModeEnabled)();
-  return (0, a.jsx)(q, {
+  return (0, a.jsx)(X, {
     ...e,
     focusMode: t
   })

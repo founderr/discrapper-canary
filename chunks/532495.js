@@ -62,13 +62,13 @@ function b() {
     K = (0, S.useGuildAutomodProfileQuarantineErrors)(),
     z = D.default.canUsePremiumProfileCustomization(G),
     Q = (0, E.showRemoveAvatar)(B, G.avatar),
-    q = (0, E.showRemoveBanner)(V, null == F ? void 0 : F.banner),
-    X = "DefaultCustomizationSections";
+    X = (0, E.showRemoveBanner)(V, null == F ? void 0 : F.banner),
+    q = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
-    location: X + " auto on",
+    location: q + " auto on",
     autoTrackExposure: !0
   }), (0, o.useTriggerDebuggingAA)({
-    location: X + " auto off",
+    location: q + " auto off",
     autoTrackExposure: !1
   });
   let Z = (0, R.default)(G.id),
@@ -105,7 +105,7 @@ function b() {
       sectionTitle: L.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), z ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(f.default, {
-        showRemoveBannerButton: q,
+        showRemoveBannerButton: X,
         errors: W.banner,
         onBannerChange: h.setPendingBanner,
         forcedDivider: !0

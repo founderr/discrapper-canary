@@ -101,7 +101,7 @@ let Q = e => {
   })
 };
 
-function q(e) {
+function X(e) {
   var t, s, l;
   let i, r, o, {
       onDisconnect: S,
@@ -115,7 +115,7 @@ function q(e) {
     [L, b] = n.useState(T.showActivity),
     [j, F] = n.useState(null),
     [w, z] = n.useState(null),
-    [q, X] = n.useState(!1),
+    [X, q] = n.useState(!1),
     [Z, J] = n.useState([]),
     $ = (0, f.useLegacyPlatformType)(T.type),
     ee = g.default.get($);
@@ -302,12 +302,12 @@ function q(e) {
         className: K.metadataRefreshButton,
         color: i ? c.Button.Colors.GREEN : c.Button.Colors.BRAND,
         size: c.Button.Sizes.SMALL,
-        submitting: q,
+        submitting: X,
         disabled: i,
         onClick: i ? void 0 : () => {
-          X(!0), E.default.refresh(e.type, e.id).finally(() => {
+          q(!0), E.default.refresh(e.type, e.id).finally(() => {
             setTimeout(() => {
-              Z.push(e.id), J(Z), X(!1)
+              Z.push(e.id), J(Z), q(!1)
             }, 2e3)
           })
         },
@@ -390,7 +390,7 @@ function q(e) {
   })
 }
 
-function X() {
+function q() {
   return n.useEffect(() => () => {
     (0, O.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
       dismissAction: w.ContentDismissActionType.AUTO
@@ -490,7 +490,7 @@ function J(e) {
       note: W.default.Messages.CONNECTED_ACCOUNTS_NONE,
       children: W.default.Messages.CONNECTED_ACCOUNTS_NONE_TITLE
     })]
-  }) : l.filter(e => g.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(q, {
+  }) : l.filter(e => g.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(X, {
     theme: i,
     account: e,
     locale: r,
@@ -519,7 +519,7 @@ t.default = () => {
     className: K.__invalid_connections,
     tag: c.FormTitleTags.H1,
     title: W.default.Messages.CONNECTIONS,
-    children: [(0, a.jsx)(X, {}), (0, a.jsx)(J, {
+    children: [(0, a.jsx)(q, {}), (0, a.jsx)(J, {
       fetching: t,
       accounts: s,
       theme: l,

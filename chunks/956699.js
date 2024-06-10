@@ -138,7 +138,7 @@ class Q extends n.Component {
     })
   }
 }
-class q extends n.Component {
+class X extends n.Component {
   async refreshBuildOverrides() {
     this.setState({
       loading: !0
@@ -421,14 +421,14 @@ class q extends n.Component {
       let {
         buildOverrides: e
       } = this.state;
-      (0, S.openModal)(t => (0, a.jsx)(X, {
+      (0, S.openModal)(t => (0, a.jsx)(q, {
         ...t,
         buildOverrides: e
       }))
     })
   }
 }
-class X extends n.Component {
+class q extends n.Component {
   isMobile() {
     var e;
     return z(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
@@ -1050,7 +1050,7 @@ function et() {
 class es extends n.PureComponent {
   render() {
     return (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)($, {}), (0, a.jsx)(J, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(q, {})]
+      children: [(0, a.jsx)($, {}), (0, a.jsx)(J, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(X, {})]
     })
   }
 }

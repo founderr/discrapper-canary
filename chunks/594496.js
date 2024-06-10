@@ -77,8 +77,8 @@ function L(e) {
     K = (0, d.showRemoveAvatar)(v, null == k ? void 0 : k.avatar),
     z = (0, d.showRemoveBanner)(j, null == w ? void 0 : w.banner),
     Q = (0, p.canResetThemeColors)(B, null == w ? void 0 : w.themeColors),
-    q = null !== (t = null == w ? void 0 : w.bio) && void 0 !== t ? t : "",
-    X = null !== (s = null == w ? void 0 : w.pronouns) && void 0 !== s ? s : "",
+    X = null !== (t = null == w ? void 0 : w.bio) && void 0 !== t ? t : "",
+    q = null !== (s = null == w ? void 0 : w.pronouns) && void 0 !== s ? s : "",
     Z = (e, t, s) => {
       s(null != e ? e : null != t ? null : void 0)
     };
@@ -94,10 +94,10 @@ function L(e) {
       sectionTitle: x.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: null == y ? void 0 : y.pronouns,
       onPronounsChange: e => {
-        (0, p.setNewPendingGuildIdentityPronouns)(e, X)
+        (0, p.setNewPendingGuildIdentityPronouns)(e, q)
       },
       pendingPronouns: F,
-      currentPronouns: X
+      currentPronouns: q
     }, "pronouns"), (0, a.jsxs)(M.default, {
       user: b,
       showOverlay: !W,
@@ -166,10 +166,10 @@ function L(e) {
             })
           })]
         }),
-        onBioChange: e => (0, p.setNewPendingGuildIdentityBio)(e, q),
+        onBioChange: e => (0, p.setNewPendingGuildIdentityBio)(e, X),
         errors: null !== (L = null == y ? void 0 : y.bio) && void 0 !== L ? L : null == Y ? void 0 : Y.bio,
         pendingBio: G,
-        currentBio: q,
+        currentBio: X,
         disabled: !W
       }, "about")]
     })]

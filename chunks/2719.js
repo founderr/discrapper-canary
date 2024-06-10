@@ -178,7 +178,7 @@ function W(e) {
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.PRIMARY,
       "aria-label": H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
-      onClick: X,
+      onClick: q,
       children: T ? H.default.Messages.DISAPPROVAL : H.default.Messages.EDIT
     })]
   })
@@ -356,7 +356,7 @@ function Q(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   let {
     user: t
   } = e, s = (0, I.default)({
@@ -389,7 +389,7 @@ function q(e) {
   }) : null
 }
 
-function X() {
+function q() {
   S.default.setSection(F.UserSettingsSections.PROFILE_CUSTOMIZATION)
 }
 
@@ -435,7 +435,7 @@ function Z() {
             user: t,
             className: Y.userTag,
             discriminatorClass: Y.discriminator
-          }), (0, a.jsx)(q, {
+          }), (0, a.jsx)(X, {
             user: t
           })]
         }), (0, a.jsx)(h.default, {
@@ -444,7 +444,7 @@ function Z() {
           badgeClassName: Y.badge
         })]
       }), (0, a.jsx)(c.Button, {
-        onClick: X,
+        onClick: q,
         size: c.Button.Sizes.SMALL,
         children: H.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
       })]

@@ -63,7 +63,7 @@ t.default = function() {
     [k, w] = n.useState(p.EMPTY_STRING_SNOWFLAKE_ID),
     [W, K] = n.useState(""),
     [z, Q] = n.useState(p.EMPTY_STRING_SNOWFLAKE_ID),
-    [q, X] = n.useState(p.EMPTY_STRING_SNOWFLAKE_ID);
+    [X, q] = n.useState(p.EMPTY_STRING_SNOWFLAKE_ID);
   return (0, a.jsx)(S.AnalyticsLocationProvider, {
     value: V,
     children: (0, a.jsxs)(r.FormSection, {
@@ -306,11 +306,11 @@ t.default = function() {
         className: M.formItem,
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "SKU ID",
-          value: q,
-          onChange: e => X(e)
+          value: X,
+          onChange: e => q(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, g.default)({
-            skuId: q,
+            skuId: X,
             analyticsLocations: V
           }),
           children: "Open Collectibles Payment Modal for SKU"

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 });
 var l = n("735250");
@@ -10,21 +10,21 @@ var a = n("114484"),
   u = n("970184"),
   i = n("596821");
 
-function o(e) {
+function s(e) {
   let {
     components: t,
     renderComponents: n
   } = e, {
-    message: o
+    message: s
   } = (0, u.useComponentStateContext)();
   return null == t || 0 === t.length ? null : (0, l.jsxs)("div", {
     className: i.container,
     children: [(0, l.jsx)("div", {
       className: i.children,
       children: n(t)
-    }), null != o ? (0, l.jsx)(a.default, {
+    }), null != s ? (0, l.jsx)(a.default, {
       className: i.error,
-      message: o,
+      message: s,
       component: e
     }) : null]
   })

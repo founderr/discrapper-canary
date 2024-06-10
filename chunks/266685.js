@@ -22,9 +22,9 @@ var a = s("735250"),
   N = s("340100"),
   S = s("611855"),
   I = s("644646"),
-  R = s("78826"),
-  v = s("670638"),
-  x = s("667105"),
+  x = s("78826"),
+  R = s("670638"),
+  v = s("667105"),
   M = s("46140"),
   L = s("689938"),
   O = s("96268");
@@ -35,16 +35,16 @@ let y = n.forwardRef(function(e, t) {
     isExpanded: y,
     isExpansionAnimationComplete: b,
     onCtxMenuOpen: j,
-    onCtxMenuClose: P,
-    onCtxMenuSelect: U,
+    onCtxMenuClose: U,
+    onCtxMenuSelect: P,
     quest: G,
     useReducedMotion: V
-  } = e, B = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(G.id), [G]), H = (0, m.useQuestFormattedDate)(G.config.expiresAt), F = p.SharedQuestFields.build(G.config), k = (0, m.useQuestFormattedDate)(F.rewardsExpireAt), w = n.useMemo(() => (0, g.isAssetAnimated)(G.config.assets.questBarHero), [G]), Q = (0, x.useHasLaunchedGame)(F.application.id), Y = n.useCallback(() => {
+  } = e, B = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(G.id), [G]), H = (0, m.useQuestFormattedDate)(G.config.expiresAt), F = p.SharedQuestFields.build(G.config), k = (0, m.useQuestFormattedDate)(F.rewardsExpireAt), w = n.useMemo(() => (0, g.isAssetAnimated)(G.config.assets.questBarHero), [G]), Q = (0, v.useHasLaunchedGame)(F.application.id), Y = n.useCallback(() => {
     (0, h.enrollInQuest)(G.id, {
       questContent: T.QuestContent.QUEST_BAR,
       questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [G]), q = (0, x.useHandleClaimQuestsReward)({
+  }, [G]), q = (0, v.useHandleClaimQuestsReward)({
     quest: G,
     location: T.QuestContent.QUEST_BAR
   }), W = n.useCallback(() => {
@@ -105,10 +105,10 @@ let y = n.forwardRef(function(e, t) {
               })
             })]
           })]
-        }), (0, a.jsx)(v.QuestsEntryContextMenuPopout, {
+        }), (0, a.jsx)(R.QuestsEntryContextMenuPopout, {
           onOpen: j,
-          onClose: P,
-          onSelect: U,
+          onClose: U,
+          onSelect: P,
           questContent: T.QuestContent.QUEST_BAR,
           quest: G,
           shouldShowDisclosure: !1,
@@ -148,10 +148,10 @@ let y = n.forwardRef(function(e, t) {
           className: O.utils,
           children: [(0, a.jsx)(S.default, {
             color: "always-white"
-          }), (0, a.jsx)(v.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(R.QuestsEntryContextMenuPopout, {
             onOpen: j,
-            onClose: P,
-            onSelect: U,
+            onClose: U,
+            onSelect: P,
             questContent: T.QuestContent.QUEST_BAR,
             quest: G,
             shouldShowDisclosure: !0,
@@ -200,7 +200,7 @@ let y = n.forwardRef(function(e, t) {
         style: {
           color: G.config.colors.secondary
         },
-        children: w ? (0, a.jsx)(R.QuestsAsset, {
+        children: w ? (0, a.jsx)(x.QuestsAsset, {
           id: "QuestBarContentExpanded_heroAnimated",
           children: e => (0, a.jsx)(E.default, {
             ref: e,
@@ -215,7 +215,7 @@ let y = n.forwardRef(function(e, t) {
               type: (0, g.getVideoAssetMimeType)(ee)
             })
           })
-        }) : (0, a.jsx)(R.QuestsAsset, {
+        }) : (0, a.jsx)(x.QuestsAsset, {
           id: "QuestBarContentExpanded_heroStatic",
           children: e => (0, a.jsx)("img", {
             ref: e,

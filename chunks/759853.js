@@ -22,10 +22,10 @@ t.default = e => {
   } = e, {
     completionSpring: T,
     startCompletionAnimation: g
-  } = (0, c.useQuestBarCompletionAnimation)(), A = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = n.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = n.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), R = (0, o.default)(I), [v, x] = n.useState(null), [M, L] = n.useState(null), O = n.useRef(new l.Environment({
+  } = (0, c.useQuestBarCompletionAnimation)(), A = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = n.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = n.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), x = (0, o.default)(I), [R, v] = n.useState(null), [M, L] = n.useState(null), O = n.useRef(new l.Environment({
     gravity: 0,
     wind: 0
-  })), y = (0, l.useConfettiCannon)(v, M), D = n.useCallback(() => {
+  })), y = (0, l.useConfettiCannon)(R, M), D = n.useCallback(() => {
     if (N) return;
     let e = m.current,
       t = S.current;
@@ -82,10 +82,10 @@ t.default = e => {
   return (n.useEffect(() => {
     A && C && !b && (g(), D())
   }, [C, A, g, D, b]), n.useEffect(() => {
-    A && !I && R && setTimeout(() => {
+    A && !I && x && setTimeout(() => {
       g(), D()
     }, 200)
-  }, [A, R, I, g, D]), n.useEffect(() => {
+  }, [A, x, I, g, D]), n.useEffect(() => {
     y.isReady && (!p.current && A && (g(), D()), p.current = A)
   }, [A, p, D, g, y]), N) ? null : (0, a.jsxs)("div", {
     className: _.wrapper,
@@ -97,7 +97,7 @@ t.default = e => {
         opacity: T
       }
     }), (0, a.jsx)(l.ConfettiCanvas, {
-      ref: x,
+      ref: v,
       className: _.confetti,
       environment: O.current
     }), (0, a.jsx)(l.SpriteCanvas, {

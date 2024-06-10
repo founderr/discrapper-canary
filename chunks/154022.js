@@ -62,10 +62,10 @@ function z(e) {
       children: (0, a.jsx)(Q, {})
     }), (0, a.jsxs)(C.Subsetting, {
       setting: U.WebSetting.ACCESSIBILITY_SATURATION,
-      children: [(0, a.jsx)(q, {}), (0, a.jsx)(u.FormDivider, {})]
+      children: [(0, a.jsx)(X, {}), (0, a.jsx)(u.FormDivider, {})]
     }), (0, a.jsx)(C.Subsetting, {
       setting: U.WebSetting.ACCESSIBILITY_LINK_DECORATIONS,
-      children: (0, a.jsx)(X, {})
+      children: (0, a.jsx)(q, {})
     }), (0, a.jsx)(C.Subsetting, {
       setting: U.WebSetting.ACCESSIBILITY_ROLE_STYLE,
       children: (0, a.jsx)(Z, {})
@@ -151,7 +151,7 @@ function Q() {
   })
 }
 
-function q() {
+function X() {
   let {
     saturation: e,
     desaturateUserColors: t
@@ -192,7 +192,7 @@ function q() {
   })
 }
 
-function X() {
+function q() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.alwaysShowLinkDecorations);
   return (0, a.jsx)(u.FormItem, {
     className: V.marginTop20,

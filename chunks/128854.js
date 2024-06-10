@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageAccessoriesComponentContextProvider: function() {
-    return o
+    return s
   },
   useMessageAccessoriesComponentContext: function() {
     return i
@@ -17,7 +17,7 @@ function i() {
   return e
 }
 
-function o(e) {
+function s(e) {
   let {
     children: t,
     ...n

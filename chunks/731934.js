@@ -23,7 +23,7 @@ var a = s("735250"),
   S = s("611273"),
   I = s("926895");
 
-function R(e) {
+function x(e) {
   let {
     header: t,
     description: s,
@@ -55,7 +55,7 @@ function R(e) {
   })
 }
 
-function v() {
+function R() {
   return (0, a.jsxs)("div", {
     className: i()(N.box, N.linkingBanner, N.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
@@ -81,15 +81,15 @@ function v() {
       })]
     }), (0, a.jsxs)("div", {
       className: N.steps,
-      children: [(0, a.jsx)(R, {
+      children: [(0, a.jsx)(x, {
         header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
         description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
         stepNumber: 1
-      }), (0, a.jsx)(R, {
+      }), (0, a.jsx)(x, {
         header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
         description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
         stepNumber: 2
-      }), (0, a.jsx)(R, {
+      }), (0, a.jsx)(x, {
         header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
         description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
         stepNumber: 3
@@ -98,7 +98,7 @@ function v() {
   })
 }
 
-function x() {
+function v() {
   let e = (0, f.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
     className: i()(N.box, N.linkingBanner),
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, _.default)();
   return (0, a.jsxs)("div", {
     className: N.container,
-    children: [e ? (0, a.jsx)(v, {}) : (0, a.jsx)(x, {}), (0, a.jsx)(L, {}), (0, a.jsx)(D, {}), (0, a.jsx)(O, {}), (0, a.jsx)(y, {})]
+    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(v, {}), (0, a.jsx)(L, {}), (0, a.jsx)(D, {}), (0, a.jsx)(O, {}), (0, a.jsx)(y, {})]
   })
 }

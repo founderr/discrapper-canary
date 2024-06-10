@@ -46,8 +46,8 @@ var a = s("735250"),
   K = s("981631"),
   z = s("689938"),
   Q = s("995953"),
-  q = s("881188"),
-  X = s("520314"),
+  X = s("881188"),
+  q = s("520314"),
   Z = s("434691");
 
 function J() {
@@ -155,7 +155,7 @@ function J() {
       children: (0, a.jsx)("img", {
         className: Q.tierImage,
         alt: "",
-        src: q
+        src: X
       })
     })]
   })
@@ -178,7 +178,7 @@ function $() {
     children: [s && (0, a.jsx)("img", {
       className: Q.seasonalGiftImage,
       alt: "",
-      src: X
+      src: q
     }), (0, a.jsx)("img", {
       className: Q.giftImage,
       style: {

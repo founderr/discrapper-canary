@@ -163,8 +163,8 @@ t.default = e => {
       subscriptionPlanPrice: K,
       subscribedSinceDate: z,
       currentPeriodEndDate: Q,
-      currentPeriodEndLabel: q
-    } = f, X = (0, L.isApplicationUserSubscription)(l.sku_flags), Z = (0, L.isApplicationGuildSubscription)(l.sku_flags), J = l.soft_deleted || null == C || (!Z || null == u) && !X, $ = () => k || w ? (0, a.jsx)(D.TextBadge, {
+      currentPeriodEndLabel: X
+    } = f, q = (0, L.isApplicationUserSubscription)(l.sku_flags), Z = (0, L.isApplicationGuildSubscription)(l.sku_flags), J = l.soft_deleted || null == C || (!Z || null == u) && !q, $ = () => k || w ? (0, a.jsx)(D.TextBadge, {
       text: U.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED
     }) : W ? (0, a.jsx)(c.Tooltip, {
       text: U.default.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
@@ -190,7 +190,7 @@ t.default = e => {
         className: j.guildIcon
       })]
     })
-  } else X && (ee = (0, a.jsx)(c.Text, {
+  } else q && (ee = (0, a.jsx)(c.Text, {
     variant: "text-sm/normal",
     className: j.tierName,
     children: U.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_PERSONAL_SUBSCRIPTION
@@ -252,7 +252,7 @@ t.default = e => {
       }), (0, a.jsxs)("div", {
         className: j.subscriptionInfoCards,
         children: [(0, a.jsx)(G, {
-          label: q,
+          label: X,
           value: U.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({
             timestamp: Q.getTime()
           })

@@ -17,8 +17,8 @@ var l = n("524846"),
   a = n("911969"),
   u = n("592125"),
   i = n("271383"),
-  o = n("430824"),
-  s = n("594174"),
+  s = n("430824"),
+  o = n("594174"),
   r = n("483360"),
   d = n("823379"),
   c = n("5192"),
@@ -30,9 +30,9 @@ function f(e, t, n) {
   let l = u.default.getChannel(n);
   if (null == l) return [];
   let i = e === a.ComponentType.USER_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
-    o = e === a.ComponentType.ROLE_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
+    s = e === a.ComponentType.ROLE_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
     {
-      users: s,
+      users: o,
       roles: d
     } = r.default.queryMentionResults({
       query: t,
@@ -40,13 +40,13 @@ function f(e, t, n) {
       canMentionEveryone: !1,
       canMentionHere: !1,
       canMentionUsers: i,
-      canMentionRoles: o,
+      canMentionRoles: s,
       includeAllGuildUsers: !0,
       includeNonMentionableRoles: !0,
       checkRecentlyTalkedOnEmptyQuery: !1,
       limit: 15
     }),
-    m = s.map(e => {
+    m = o.map(e => {
       var t;
       let a = c.default.getNickname(l.getGuildId(), n, e.user);
       return {
@@ -79,12 +79,12 @@ function S(e, t, n) {
 function C(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
   if (null == e) return;
-  let a = o.default.getGuild(t);
+  let a = s.default.getGuild(t);
   return e.map(e => {
     switch (e.type) {
       case l.SnowflakeSelectDefaultValueTypes.USER: {
         var t;
-        let n = s.default.getUser(e.id);
+        let n = o.default.getUser(e.id);
         if (null == n) return null;
         let l = null != a ? i.default.getNick(a.id, n.id) : void 0;
         return {
@@ -95,7 +95,7 @@ function C(e, t) {
       }
       case l.SnowflakeSelectDefaultValueTypes.ROLE: {
         if (null == a) return null;
-        let t = o.default.getRole(a.id, e.id);
+        let t = s.default.getRole(a.id, e.id);
         if (null == t) return null;
         return {
           type: p.SelectOptionType.ROLE,

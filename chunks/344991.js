@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var l, a, u = n("735250"),
   i = n("470079"),
-  o = n("120356"),
-  s = n.n(o),
+  s = n("120356"),
+  o = n.n(s),
   r = n("481060"),
   d = n("911969"),
   c = n("114484"),
@@ -41,55 +41,55 @@ function E(e) {
     queryOptions: n,
     renderIcon: l,
     renderOptionLabel: a,
-    defaultValues: o
+    defaultValues: s
   } = e, {
     type: E,
-    placeholder: h,
-    maxValues: N,
-    disabled: g
-  } = t, [y, T] = i.useState(!1), [I, x] = i.useState(!1), [O, j] = i.useState(new Map(null == o ? void 0 : o.map(e => [e.value, e]))), [L, _] = i.useState(new Set(O.keys())), [M, R] = i.useState(() => (null != o ? o : []).map(e => e.value)), [A, b] = i.useState(0);
+    placeholder: N,
+    maxValues: h,
+    disabled: T
+  } = t, [I, g] = i.useState(!1), [y, x] = i.useState(!1), [O, _] = i.useState(new Map(null == s ? void 0 : s.map(e => [e.value, e]))), [j, M] = i.useState(new Set(O.keys())), [L, R] = i.useState(() => (null != s ? s : []).map(e => e.value)), [A, b] = i.useState(0);
   i.useEffect(() => {
-    let e = (null != o ? o : []).map(e => e.value);
-    if (e.every(e => M.includes(e)) && M.every(t => e.includes(t))) return;
+    let e = (null != s ? s : []).map(e => e.value);
+    if (e.every(e => L.includes(e)) && L.every(t => e.includes(t))) return;
     R(e);
-    let t = new Map(null == o ? void 0 : o.map(e => [e.value, e]));
-    j(t), _(new Set(t.keys())), b(e => e + 1)
-  }, [o, M]);
+    let t = new Map(null == s ? void 0 : s.map(e => [e.value, e]));
+    _(t), M(new Set(t.keys())), b(e => e + 1)
+  }, [s, L]);
   let {
     state: U,
     executeStateUpdate: P,
-    visualState: w,
-    isDisabled: k,
+    visualState: k,
+    isDisabled: w,
     error: D
   } = (0, p.useComponentState)(t, {
     type: E,
     selectedOptions: Array.from(O.values())
-  }), G = w === m.ActionComponentState.LOADING;
+  }), B = k === m.ActionComponentState.LOADING;
   i.useEffect(() => {
     if ((null == U ? void 0 : U.type) === d.ComponentType.USER_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.ROLE_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.MENTIONABLE_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.CHANNEL_SELECT) {
       let e = new Map(U.selectedOptions.map(e => [e.value, e]));
-      j(e), _(new Set(e.keys()))
+      _(e), M(new Set(e.keys()))
     }
   }, [U]);
   let F = i.useCallback(() => {
     P({
       type: E,
       selectedOptions: Array.from(O.values())
-    }) && _(new Set(O.keys()))
+    }) && M(new Set(O.keys()))
   }, [P, E, O]);
   i.useEffect(() => {
-    if (!y && !I) !(O.size === L.size && Array.from(O.keys()).every(e => L.has(e))) && F()
-  }, [y, I, L, O, F]);
-  let V = 0 === O.size || y,
-    B = {
-      isDisabled: g || k,
+    if (!I && !y) !(O.size === j.size && Array.from(O.keys()).every(e => j.has(e))) && F()
+  }, [I, y, j, O, F]);
+  let G = 0 === O.size || I,
+    V = {
+      isDisabled: T || w,
       wrapperClassName: S.select,
       options: e => new Promise(t => {
         t(n(e))
       }),
-      placeholder: V ? null != h ? h : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
-      onClose: () => T(!1),
-      onOpen: () => T(!0),
+      placeholder: G ? null != N ? N : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
+      onClose: () => g(!1),
+      onOpen: () => g(!0),
       onBlur: () => x(!1),
       maxVisibleItems: 5,
       optionClassName: S.__invalid_selectOption,
@@ -107,31 +107,31 @@ function E(e) {
   return (0, u.jsxs)(i.Fragment, {
     children: [(0, u.jsxs)("div", {
       className: S.container,
-      children: [N > 1 ? (0, u.jsx)(r.SearchableSelect, {
+      children: [h > 1 ? (0, u.jsx)(r.SearchableSelect, {
         className: S.badges,
         value: Array.from(O.values()),
         onChange: e => {
-          !y && x(!0), j(new Map(e.map(e => [e.value, e])))
+          !I && x(!0), _(new Map(e.map(e => [e.value, e])))
         },
         multi: !0,
-        inputClassNames: s()({
+        inputClassNames: o()({
           [S.soloInput]: 0 === O.size,
           [S.inlineInput]: O.size > 0,
-          [S.hidden]: !V
+          [S.hidden]: !G
         }),
         closeOnSelect: !1,
         centerCaret: !0,
-        ...B
+        ...V
       }, A) : (0, u.jsx)(r.SearchableSelect, {
         className: (S.badges, S.singleSelect),
         value: [...O.values()][0],
-        onChange: e => j(null != e ? new Map([
+        onChange: e => _(null != e ? new Map([
           [e.value, e]
         ]) : new Map),
         clearable: !0,
         centerCaret: !0,
-        ...B
-      }, A), G ? (0, u.jsx)("div", {
+        ...V
+      }, A), B ? (0, u.jsx)("div", {
         className: S.loading,
         children: (0, u.jsx)(r.Dots, {
           dotRadius: 3.5,
