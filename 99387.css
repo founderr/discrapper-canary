@@ -71154,6 +71154,44 @@ html .invoiceCancelRow_aa7946 {
     padding: 0 12px 12px
 }
 
+.microphoneUnit__14665 {
+    margin-top: 16px;
+    border-top: 1px solid var(--divider-subtle);
+    display: flex;
+    flex-direction: column
+}
+
+.microphoneUnitHeader__11791 {
+    margin-top: 16px;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.warningCircle__7f604 {
+    color: var(--text-warning);
+    margin-right: 4px
+}
+
+.microphoneUnitRefreshIconWrapper__9b5ac {
+    cursor: pointer;
+    margin-left: auto
+}
+
+.microphoneUnitRefreshIcon__5e5fb {
+    color: var(--interactive-normal)
+}
+
+.microphoneUnitRefreshIcon__5e5fb:hover {
+    color: var(--interactive-hover)
+}
+
+.microphoneUnitBodyText__09248 {
+    margin-top: 8px
+}
+
 .headingWrapper_dfde31 {
     cursor: pointer;
     display: flex;
@@ -87697,7 +87735,7 @@ input::-webkit-inner-spin-button {
     padding-bottom: 10px;
     margin: 32px 0 20px;
     font-weight: 500;
-    font-size: 1rem
+    font-size: 16px
 }
 
 .viewAllGamesButton__34838 {
@@ -87717,7 +87755,7 @@ input::-webkit-inner-spin-button {
 
 .viewAllGames__76b00,
 .viewAllNitroGames_a65ce4 {
-    font-size: 1rem;
+    font-size: 16px;
     display: flex;
     align-items: center;
     cursor: pointer
@@ -87778,7 +87816,7 @@ input::-webkit-inner-spin-button {
     padding-bottom: 10px;
     margin: 32px 0 20px;
     font-weight: 500;
-    font-size: 1rem
+    font-size: 16px
 }
 
 .headerBar__3337a {

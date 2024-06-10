@@ -134,7 +134,7 @@ function g(e) {
         }), (0, s.jsx)(o.MenuItem, {
           id: "start",
           label: "Start heartbeat (cheatmode)",
-          action: () => (0, _.manualStartConsoleQuest)(e.quest.id, !0).catch(L)
+          action: () => (0, _.manuallyStartConsoleQuest)(e.quest.id, !0).catch(L)
         }), (0, s.jsx)(o.MenuItem, {
           id: "stop",
           label: "Stop heartbeat",

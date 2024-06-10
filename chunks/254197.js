@@ -22,9 +22,9 @@ var a = s("735250"),
   N = s("988303"),
   S = s("685613"),
   I = s("644646"),
-  R = s("78826"),
-  v = s("670638"),
-  x = s("667105"),
+  x = s("78826"),
+  R = s("670638"),
+  v = s("667105"),
   M = s("341907"),
   L = s("759853"),
   O = s("205511"),
@@ -32,12 +32,12 @@ var a = s("735250"),
   D = s("46140"),
   b = s("689938"),
   j = s("263094");
-let P = e => {
+let U = e => {
     let {
       quest: t,
       useReducedMotion: s,
       isExpanded: n
-    } = e, l = (0, x.useHandleClaimQuestsReward)({
+    } = e, l = (0, v.useHandleClaimQuestsReward)({
       quest: t,
       location: A.QuestContent.QUEST_BAR
     });
@@ -53,36 +53,37 @@ let P = e => {
       })
     })
   },
-  U = e => {
+  P = e => {
     let {
       quest: t,
-      isExpanded: s
-    } = e, [l, i] = n.useState(!1), [o, d] = n.useState(!1), E = n.useRef(new u.Timeout), f = n.useRef(new u.Timeout), h = (0, p.hasVariant)(t, D.QuestVariants.IN_HOUSE_CONSOLE_QUEST);
+      isExpanded: s,
+      hasMadeProgress: l
+    } = e, [i, o] = n.useState(!1), [d, E] = n.useState(!1), f = n.useRef(new u.Timeout), h = n.useRef(new u.Timeout), C = (0, p.hasVariant)(t, D.QuestVariants.IN_HOUSE_CONSOLE_QUEST) || l;
     n.useEffect(() => {
-      let e = f.current,
-        t = E.current;
+      let e = h.current,
+        t = f.current;
       return function() {
         e.stop(), t.stop()
       }
     }, []);
-    let C = () => {
-        let e = h ? 20 : 16;
+    let T = () => {
+        let e = C ? 20 : 16;
         return (0, a.jsx)(_.default, {
-          className: h ? j.copyIcon : void 0,
+          className: C ? j.copyIcon : void 0,
           width: e,
           height: e,
-          color: l ? r.default.GREEN_360 : "currentColor"
+          color: i ? r.default.GREEN_360 : "currentColor"
         })
       },
-      T = () => {
+      g = () => {
         (0, p.copyShareLink)(t.id, {
           content: A.QuestContent.QUEST_BAR_V2,
           ctaContent: m.QuestContentCTA.QUEST_BAR_COPY_LINK
-        }), i(!0), d(!0), f.current.start(500, () => d(!1)), E.current.start(600, () => i(!1))
+        }), o(!0), E(!0), h.current.start(500, () => E(!1)), f.current.start(600, () => o(!1))
       };
     return (0, a.jsxs)("div", {
       className: j.ctaContainer,
-      children: [!h && (0, a.jsx)(c.Button, {
+      children: [!C && (0, a.jsx)(c.Button, {
         className: j.flex,
         size: c.Button.Sizes.SMALL,
         onClick: () => (0, p.openGameLink)(t, {
@@ -91,27 +92,27 @@ let P = e => {
         }),
         children: b.default.Messages.QUESTS_PLAY_GAME
       }), (() => {
-        let e = l ? c.Tooltip.Colors.GREEN : c.Tooltip.Colors.PRIMARY,
-          t = l ? b.default.Messages.COPY_SUCCESS_1 : b.default.Messages.QUESTS_SHARE_LINK,
-          n = h && !l;
+        let e = i ? c.Tooltip.Colors.GREEN : c.Tooltip.Colors.PRIMARY,
+          t = i ? b.default.Messages.COPY_SUCCESS_1 : b.default.Messages.QUESTS_SHARE_LINK,
+          n = C && !i;
         return (0, a.jsx)(c.Tooltip, {
           hideOnClick: !1,
           shouldShow: !n,
-          forceOpen: o && s,
+          forceOpen: d && s,
           color: e,
           text: t,
           children: e => (0, a.jsxs)(c.Button, {
             ...e,
-            className: h ? j.iconButtonLarge : j.iconButton,
+            className: C ? j.iconButtonLarge : j.iconButton,
             innerClassName: j.iconButtonInner,
-            size: h ? c.Button.Sizes.SMALL : c.Button.Sizes.ICON,
+            size: C ? c.Button.Sizes.SMALL : c.Button.Sizes.ICON,
             color: c.Button.Colors.CUSTOM,
-            onClick: T,
-            children: [h && (0, a.jsx)(c.Text, {
-              color: l ? "status-positive" : "text-primary",
+            onClick: g,
+            children: [C && (0, a.jsx)(c.Text, {
+              color: i ? "status-positive" : "text-primary",
               variant: "text-sm/normal",
               children: b.default.Messages.COPY_LINK
-            }), C()]
+            }), T()]
           })
         })
       })()]
@@ -124,7 +125,7 @@ let P = e => {
       isExpanded: u,
       isExpansionAnimationComplete: E,
       onCtxMenuOpen: _,
-      onCtxMenuClose: x,
+      onCtxMenuClose: v,
       onCtxMenuSelect: G,
       onContentHeightChange: V,
       quest: B,
@@ -175,9 +176,9 @@ let P = e => {
             children: b.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
               expirationDate: w
             })
-          }), (0, a.jsx)(v.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(R.QuestsEntryContextMenuPopout, {
             onOpen: _,
-            onClose: x,
+            onClose: v,
             onSelect: G,
             questContent: A.QuestContent.QUEST_BAR,
             quest: B,
@@ -203,26 +204,28 @@ let P = e => {
           progressBarRef: F,
           isExpanded: !0
         }), (() => {
-          if (K) return (0, a.jsx)(P, {
+          if (K) return (0, a.jsx)(U, {
             quest: B,
             useReducedMotion: H,
             isExpanded: u
           });
-          if (X) return null;
           if ($) return (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(O.default, {
               onContentHeightChange: V,
               quest: B
-            }), (0, a.jsx)(U, {
+            }), (0, a.jsx)(P, {
               quest: B,
               useReducedMotion: H,
-              isExpanded: u
+              isExpanded: u,
+              hasMadeProgress: X
             })]
           });
-          return (0, a.jsx)(U, {
+          if (X) return null;
+          return (0, a.jsx)(P, {
             quest: B,
             useReducedMotion: H,
-            isExpanded: u
+            isExpanded: u,
+            hasMadeProgress: X
           })
         })()]
       }) : (0, a.jsxs)("div", {
@@ -252,9 +255,9 @@ let P = e => {
                   className: j.promotedBadgeIcon
                 })]
               })
-            }), (0, a.jsx)(v.QuestsEntryContextMenuPopout, {
+            }), (0, a.jsx)(R.QuestsEntryContextMenuPopout, {
               onOpen: _,
-              onClose: x,
+              onClose: v,
               onSelect: G,
               questContent: A.QuestContent.QUEST_BAR,
               quest: B,
@@ -298,7 +301,7 @@ let P = e => {
           })]
         }), (0, a.jsx)("div", {
           className: j.heroAssetWrapper,
-          children: Q ? (0, a.jsx)(R.QuestsAsset, {
+          children: Q ? (0, a.jsx)(x.QuestsAsset, {
             id: "QuestBarV2ContentExpanded_heroAnimated",
             children: e => (0, a.jsx)(h.default, {
               ref: e,
@@ -313,7 +316,7 @@ let P = e => {
                 type: (0, p.getVideoAssetMimeType)(ee)
               })
             })
-          }) : (0, a.jsx)(R.QuestsAsset, {
+          }) : (0, a.jsx)(x.QuestsAsset, {
             id: "QuestBarV2ContentExpanded_heroStatic",
             children: e => (0, a.jsx)("img", {
               ref: e,

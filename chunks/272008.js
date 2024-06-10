@@ -24,11 +24,11 @@ n.r(t), n.d(t, {
   fetchQuestRewardCode: function() {
     return p
   },
-  manualStartConsoleQuest: function() {
-    return T
-  },
   manualStopConsoleQuest: function() {
     return f
+  },
+  manuallyStartConsoleQuest: function() {
+    return T
   },
   optimisticallyUpdateQuestProgress: function() {
     return v
