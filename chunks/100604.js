@@ -1,20 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageForward: function() {
-    return f
+    return _
   }
 });
 var s = n("933557"),
-  a = n("592125"),
-  l = n("430824"),
-  i = n("496675"),
-  r = n("699516"),
-  o = n("594174"),
-  u = n("55935");
+  a = n("356264"),
+  l = n("592125"),
+  i = n("430824"),
+  r = n("496675"),
+  o = n("699516"),
+  u = n("594174"),
+  d = n("768581"),
+  c = n("55935");
 n("978003");
-var d = n("689938");
+var f = n("689938");
 
-function c(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -22,52 +24,66 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class f {
+class _ {
   getForwardInfo() {
     var e, t, n;
-    let {
-      snapshotIndex: c,
-      parentMessage: f,
-      messageSnapshot: E
-    } = this, _ = (0, u.calendarFormatCompact)(E.message.timestamp), m = a.default.getChannel(null === (e = f.messageReference) || void 0 === e ? void 0 : e.channel_id), T = a.default.getChannel(this.parentMessage.channel_id);
-    if (null != m && null != T && m.guild_id === T.guild_id) {
-      if (!i.default.can(m.accessPermissions, m)) return {
-        snapshotIndex: c
+    let E = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.default,
+      _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default,
+      m = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
+      T = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.default,
+      I = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.default,
+      p = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.default,
+      {
+        snapshotIndex: h,
+        parentMessage: N,
+        messageSnapshot: S
+      } = this,
+      C = (0, c.calendarFormatCompact)(S.message.timestamp),
+      g = E.getChannel(null === (e = N.messageReference) || void 0 === e ? void 0 : e.channel_id),
+      A = E.getChannel(this.parentMessage.channel_id);
+    if (null != g && null != A && g.guild_id === A.guild_id) {
+      if (!T.can(g.accessPermissions, g)) return {
+        snapshotIndex: h
       };
-      let e = (0, s.computeChannelName)(m, o.default, r.default, !0);
+      let e = (0, s.computeChannelName)(g, _, m, !0);
       return {
-        snapshotIndex: c,
+        snapshotIndex: h,
         footerInfo: {
           originLabel: e,
-          timestampLabel: _,
-          accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+          timestampLabel: C,
+          accessibilityLabel: f.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
             origin: e,
-            timestamp: _
+            timestamp: C
           })
         }
       }
     }
-    let I = null === (t = E.guild) || void 0 === t ? void 0 : t.id;
-    if (null == I) return {
-      snapshotIndex: c
+    let M = null === (t = S.guild) || void 0 === t ? void 0 : t.id;
+    if (null == M) return {
+      snapshotIndex: h
     };
-    let p = l.default.getGuild(I);
-    return null == p ? {
-      snapshotIndex: c
+    let R = null !== (n = I.getGuild(M)) && void 0 !== n ? n : p.getGuild(M);
+    return null == R ? {
+      snapshotIndex: h
     } : {
-      snapshotIndex: c,
+      snapshotIndex: h,
       footerInfo: {
-        originLabel: p.name,
-        originIconUrl: null !== (n = p.getIconURL(16, !1)) && void 0 !== n ? n : void 0,
-        timestampLabel: _,
-        accessibilityLabel: d.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
-          origin: p.name,
-          timestamp: _
+        originLabel: R.name,
+        originIconUrl: d.default.getGuildIconURL({
+          id: M,
+          size: 16,
+          icon: R.icon,
+          canAnimate: !1
+        }),
+        timestampLabel: C,
+        accessibilityLabel: f.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+          origin: R.name,
+          timestamp: C
         })
       }
     }
   }
   constructor(e, t, n) {
-    c(this, "parentMessage", void 0), c(this, "messageSnapshot", void 0), c(this, "snapshotIndex", void 0), this.parentMessage = e, this.messageSnapshot = t, this.snapshotIndex = n
+    E(this, "parentMessage", void 0), E(this, "messageSnapshot", void 0), E(this, "snapshotIndex", void 0), this.parentMessage = e, this.messageSnapshot = t, this.snapshotIndex = n
   }
 }
