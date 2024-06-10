@@ -25,8 +25,8 @@ n.r(t), n.d(t, {
 var r = n("544891"),
   u = n("570140"),
   i = n("881052"),
-  a = n("128069"),
-  l = n("34756"),
+  l = n("128069"),
+  a = n("34756"),
   o = n("115130"),
   s = n("55563"),
   E = n("695103"),
@@ -52,7 +52,7 @@ async function f(e) {
       throw u.default.dispatch({
         type: "SKU_FETCH_FAIL",
         skuId: e
-      }), new l.default("Failed to fetch SKU ".concat(e))
+      }), new a.default("Failed to fetch SKU ".concat(e))
     }
   }
 }
@@ -76,7 +76,7 @@ async function I(e, t) {
       throw u.default.dispatch({
         type: "SKU_FETCH_FAIL",
         skuId: t
-      }), new l.default("Failed to fetch SKU ".concat(t))
+      }), new a.default("Failed to fetch SKU ".concat(t))
     }
   }
 }
@@ -90,40 +90,42 @@ async function C(e) {
   }), n
 }
 async function P(e, t, n, r) {
-  let i;
-  let a = {
+  let a;
+  let s = {
     payment_source_id: n,
     gift: null == r ? void 0 : r.isGift
   };
-  (E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e)) && (a.test_mode = !0), u.default.dispatch({
+  (E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e)) && (s.test_mode = !0), u.default.dispatch({
     type: "SKU_PURCHASE_PREVIEW_FETCH",
     skuId: t
   });
   try {
-    i = await (0, c.httpGetWithCountryCodeQuery)({
+    a = await (0, c.httpGetWithCountryCodeQuery)({
       url: T.Endpoints.STORE_SKU_PURCHASE(t),
-      query: a,
+      query: s,
       oldFormErrors: !0
     }), u.default.dispatch({
       type: "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS",
       skuId: t,
       paymentSourceId: n,
-      price: i.body
+      price: a.body
     })
-  } catch (e) {
+  } catch (n) {
     u.default.dispatch({
       type: "SKU_PURCHASE_PREVIEW_FETCH_FAILURE",
       skuId: t
-    })
+    });
+    let e = n instanceof i.BillingError ? n : new i.BillingError(n);
+    if (e.code === l.ErrorCodes.BILLING_BUNDLE_ALREADY_PURCHASED || e.code === l.ErrorCodes.BILLING_BUNDLE_PARTIALLY_OWNED) throw e
   }
-  return i
+  return a
 }
 let R = {
   isGift: !1
 };
 async function N(e, t, n) {
   let {
-    paymentSource: l,
+    paymentSource: a,
     expectedAmount: s,
     expectedCurrency: c,
     analyticsLoadId: f,
@@ -148,14 +150,14 @@ async function N(e, t, n) {
     let e = {
       gift: I,
       sku_subscription_plan_id: P,
-      gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(l),
+      gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(a),
       load_id: N
     };
     if (U) e.test_mode = !0;
     else {
-      if (null != l && (e.payment_source_id = l.id, e.payment_source_token = await (0, A.createPaymentSourceToken)(l), T.ADYEN_PAYMENT_SOURCES.has(l.type))) {
-        let t = await (0, A.popupBridgeState)(l.type);
-        e.return_url = (0, r.getAPIBaseURL)() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(l.type, null != t ? t : "", "success")
+      if (null != a && (e.payment_source_id = a.id, e.payment_source_token = await (0, A.createPaymentSourceToken)(a), T.ADYEN_PAYMENT_SOURCES.has(a.type))) {
+        let t = await (0, A.popupBridgeState)(a.type);
+        e.return_url = (0, r.getAPIBaseURL)() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(a.type, null != t ? t : "", "success")
       }
       null != s && (e.expected_amount = s), null != c && (e.expected_currency = c), e.gift_info_options = C, null != M && (e.country_code = M), e.purchase_token = (0, d.getPurchaseToken)()
     }
@@ -179,18 +181,18 @@ async function N(e, t, n) {
     }
   } catch (r) {
     let n = r instanceof i.BillingError ? r : new i.BillingError(r);
-    if ((n.code === a.ErrorCodes.CONFIRMATION_REQUIRED || n.code === a.ErrorCodes.AUTHENTICATION_REQUIRED) && u.default.dispatch({
+    if ((n.code === l.ErrorCodes.CONFIRMATION_REQUIRED || n.code === l.ErrorCodes.AUTHENTICATION_REQUIRED) && u.default.dispatch({
         type: "SKU_PURCHASE_AWAIT_CONFIRMATION",
         skuId: t,
         isGift: I
-      }), n.code !== a.ErrorCodes.CONFIRMATION_REQUIRED) throw u.default.dispatch({
+      }), n.code !== l.ErrorCodes.CONFIRMATION_REQUIRED) throw u.default.dispatch({
       type: "SKU_PURCHASE_FAIL",
       applicationId: e,
       skuId: t,
       error: n
     }), n;
     if (!r.body.payment_id) throw (0, A.dispatchConfirmationError)("payment id cannot be null on redirected confirmations.");
-    return (0, A.handleConfirmation)(r.body, l)
+    return (0, A.handleConfirmation)(r.body, a)
   }
 }
 async function M() {
