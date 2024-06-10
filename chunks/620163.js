@@ -274,6 +274,11 @@ let ej = () => {
         searchableTitle: ev.default.Messages.DISPLAY_NAME,
         parent: eL.WebSetting.PROFILE_CUSTOMIZATION
       },
+      [eL.WebSetting.PROFILE_USER_PROFILE]: {
+        section: eP.UserSettingsSections.PROFILE_CUSTOMIZATION,
+        searchableTitle: ev.default.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE,
+        parent: eL.WebSetting.PROFILE_CUSTOMIZATION
+      },
       [eL.WebSetting.PROFILE_SERVER_PROFILES]: {
         section: eP.UserSettingsSections.PROFILE_CUSTOMIZATION,
         searchableTitle: ev.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY,

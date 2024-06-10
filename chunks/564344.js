@@ -66,8 +66,9 @@ function R() {
       guildId: null == R ? void 0 : R.id
     })
   }, [null == R ? void 0 : R.id, M]);
-  let U = !0;
-  return P && b.includes(O.WebSetting.PROFILE_SERVER_PROFILES) && 1 === b.length && (v(A.ProfileCustomizationSubsection.GUILD), U = !1), (0, a.jsx)(o.AnalyticsLocationProvider, {
+  let U = !0,
+    j = !0;
+  return P && 1 === b.length && (b.includes(O.WebSetting.PROFILE_SERVER_PROFILES) ? (v(A.ProfileCustomizationSubsection.GUILD), j = !1) : b.includes(O.WebSetting.PROFILE_USER_PROFILE) && (v(A.ProfileCustomizationSubsection.USER_PROFILE), U = !1)), (0, a.jsx)(o.AnalyticsLocationProvider, {
     value: L,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsx)(i.Heading, {
@@ -80,15 +81,15 @@ function R() {
         look: "brand",
         selectedItem: x,
         onItemSelect: v,
-        children: [U ? (0, a.jsx)(i.TabBar.Item, {
+        children: [j ? (0, a.jsx)(i.TabBar.Item, {
           className: p.tabBarItem,
           id: A.ProfileCustomizationSubsection.USER_PROFILE,
           children: h.default.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
-        }, A.ProfileCustomizationSubsection.USER_PROFILE) : null, (0, a.jsx)(i.TabBar.Item, {
+        }, A.ProfileCustomizationSubsection.USER_PROFILE) : null, U ? (0, a.jsx)(i.TabBar.Item, {
           className: p.tabBarItem,
           id: A.ProfileCustomizationSubsection.GUILD,
           children: h.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
-        }, A.ProfileCustomizationSubsection.GUILD)]
+        }, A.ProfileCustomizationSubsection.GUILD) : null]
       }), x === A.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
         selectedGuild: R
       }) : (0, a.jsx)(T.default, {})]
