@@ -171,6 +171,15 @@ function s(e, t, n) {
         offsetSize: i
       } = r(t(), s);
       return e >= n - i
+    },
+    getDistanceFromTop: () => Math.max(0, r(t(), s).scrollPosition),
+    getDistanceFromBottom() {
+      let {
+        scrollPosition: e,
+        scrollSize: n,
+        offsetSize: i
+      } = r(t(), s);
+      return Math.max(0, n - i - e)
     }
   }
 }
