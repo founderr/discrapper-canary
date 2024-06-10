@@ -81,8 +81,8 @@ function S(e) {
     pendingGlobalName: i,
     user: r,
     guildMember: s
-  } = e, a = "" === n ? null : null != n ? n : null == s ? void 0 : s.nick;
-  return null !== (t = null != a ? a : "" === i ? null : i) && void 0 !== t ? t : u.default.getName(r)
+  } = e, a = "" === n ? null : null != n ? n : null == s ? void 0 : s.nick, o = "" === i ? r.username : i;
+  return null !== (t = null != a ? a : o) && void 0 !== t ? t : u.default.getName(r)
 }
 
 function h(e) {
