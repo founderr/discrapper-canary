@@ -40,5 +40,5 @@ function o(e, t) {
   if (null == e || null == t) return !1;
   let n = s(e),
     i = (0, r.getPlatformName)();
-  return t.some(e => e.os === i && (null == n ? void 0 : n.startsWith(e.name)))
+  return t.some(e => e.os === i && (null == n ? void 0 : n.endsWith(e.name)))
 }
