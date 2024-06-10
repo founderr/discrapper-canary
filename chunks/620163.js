@@ -25,8 +25,8 @@ var n = s("990547"),
   m = s("621628"),
   C = s("18438"),
   A = s("778825"),
-  h = s("351780"),
-  O = s("231765"),
+  O = s("351780"),
+  h = s("231765"),
   p = s("837741"),
   R = s("804545"),
   M = s("813732"),
@@ -79,8 +79,8 @@ var n = s("990547"),
   em = s("463153"),
   eC = s("36192"),
   eA = s("338345"),
-  eh = s("400287"),
-  eO = s("554042"),
+  eO = s("400287"),
+  eh = s("554042"),
   ep = s("200645"),
   eR = s("287490"),
   eM = s("168308"),
@@ -113,7 +113,10 @@ let ej = () => {
       isUserSettingsSearchEnabled: eH,
       isKeywordFilteringEnabled: eY,
       isStaff: ek,
-      isInappropriateConversationWarningEnabled: ew
+      isInappropriateConversationWarningEnabled: ew,
+      paymentsBlocked: eW,
+      isEligibleForQuests: eK,
+      showGiftNitro: ez
     } = e;
     return Object.freeze({
       [eL.WebSetting.SEARCH_BAR]: {
@@ -299,7 +302,7 @@ let ej = () => {
       },
       [eL.WebSetting.PRIVACY_SERVER_PRIVACY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: ev.default.Messages.USER_DM_SETTINGS_TITLE,
+        searchableTitle: ev.default.Messages.USER_DM_SETTINGS,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS
       },
       [eL.WebSetting.PRIVACY_DATA_PRIVACY]: {
@@ -457,10 +460,35 @@ let ej = () => {
         ariaLabel: ev.default.Messages.GIFT_INVENTORY,
         badgeCount: t
       },
+      [eL.WebSetting.GIFT_NITRO]: {
+        section: eP.UserSettingsSections.INVENTORY,
+        searchableTitle: ev.default.Messages.GIFT_NITRO,
+        parent: eL.WebSetting.GIFT_INVENTORY,
+        predicate: () => !eW && ez
+      },
+      [eL.WebSetting.GIFT_CODE_REDEMPTION]: {
+        section: eP.UserSettingsSections.INVENTORY,
+        searchableTitle: ev.default.Messages.GIFT_INVENTORY_REDEEM_CODES,
+        parent: eL.WebSetting.GIFT_INVENTORY,
+        predicate: () => !eW
+      },
       [eL.WebSetting.GIFT_INVENTORY_QUESTS]: {
         section: eP.UserSettingsSections.INVENTORY,
         searchableTitle: ev.default.Messages.QUESTS,
-        parent: eL.WebSetting.GIFT_INVENTORY
+        parent: eL.WebSetting.GIFT_INVENTORY,
+        predicate: () => eK
+      },
+      [eL.WebSetting.GIFT_INVENTORY_LIST]: {
+        section: eP.UserSettingsSections.INVENTORY,
+        searchableTitle: ev.default.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED,
+        parent: eL.WebSetting.GIFT_INVENTORY,
+        predicate: () => !eW
+      },
+      [eL.WebSetting.GIFT_BLOCKED_PAYMENTS]: {
+        section: eP.UserSettingsSections.INVENTORY,
+        searchableTitle: ev.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER,
+        parent: eL.WebSetting.GIFT_INVENTORY,
+        predicate: () => eW
       },
       [eL.WebSetting.BILLING]: {
         section: eP.UserSettingsSections.BILLING,
@@ -666,8 +694,8 @@ let ej = () => {
         searchableTitle: ev.default.Messages.POGGERMODE,
         label: ev.default.Messages.POGGERMODE,
         ariaLabel: ev.default.Messages.POGGERMODE,
-        element: O.default,
-        predicate: () => h.default.settingsVisible,
+        element: h.default,
+        predicate: () => O.default.settingsVisible,
         icon: (0, a.jsx)("img", {
           alt: "",
           src: s("542156"),
@@ -679,7 +707,7 @@ let ej = () => {
         searchableTitle: ev.default.Messages.CHAT,
         label: ev.default.Messages.CHAT,
         ariaLabel: ev.default.Messages.CHAT,
-        element: eh.default
+        element: eO.default
       },
       [eL.WebSetting.CHAT_INLINE_MEDIA]: {
         section: eP.UserSettingsSections.TEXT,
@@ -1172,7 +1200,7 @@ let ej = () => {
         section: eP.UserSettingsSections.TEXT_PLAYGROUND,
         searchableTitle: "Text Playground",
         label: "Text Playground",
-        element: eO.default,
+        element: eh.default,
         predicate: () => (0, Z.shouldShowTextPlayground)() || v.default.isDeveloper
       },
       [eL.WebSetting.DESIGN_SYSTEMS]: {

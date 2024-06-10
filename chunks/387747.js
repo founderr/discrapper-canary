@@ -36,21 +36,27 @@ function f() {
     s = (0, i.useBlockedPaymentsConfig)();
   return (0, a.jsxs)(a.Fragment, {
     children: [!s && (0, a.jsxs)(a.Fragment, {
-      children: [t && (0, a.jsx)(d.default, {
-        location: l.default.USER_SETTINGS_GIFT_INVENTORY,
-        className: g.giftNitro,
-        imageClassName: g.giftNitroImage,
-        textContainerOverrideStyles: {
-          padding: "32px",
-          width: "360px"
-        },
-        analyticsLocation: {
-          page: I.AnalyticsPages.GIFTING_SETTINGS,
-          section: I.AnalyticsSections.GIFT_BANNER
-        }
-      }), (0, a.jsx)(n.default, {
-        section: I.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
-        children: (0, a.jsx)(E.default, {})
+      children: [t && (0, a.jsx)(S.Subsetting, {
+        setting: _.WebSetting.GIFT_NITRO,
+        children: (0, a.jsx)(d.default, {
+          location: l.default.USER_SETTINGS_GIFT_INVENTORY,
+          className: g.giftNitro,
+          imageClassName: g.giftNitroImage,
+          textContainerOverrideStyles: {
+            padding: "32px",
+            width: "360px"
+          },
+          analyticsLocation: {
+            page: I.AnalyticsPages.GIFTING_SETTINGS,
+            section: I.AnalyticsSections.GIFT_BANNER
+          }
+        })
+      }), (0, a.jsx)(S.Subsetting, {
+        setting: _.WebSetting.GIFT_CODE_REDEMPTION,
+        children: (0, a.jsx)(n.default, {
+          section: I.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
+          children: (0, a.jsx)(E.default, {})
+        })
       })]
     }), e && (0, a.jsx)(S.Subsetting, {
       setting: _.WebSetting.GIFT_INVENTORY_QUESTS,
@@ -58,9 +64,15 @@ function f() {
         section: I.AnalyticsSections.QUESTS,
         children: (0, a.jsx)(c.default, {})
       })
-    }), !s && (0, a.jsx)(n.default, {
-      section: I.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
-      children: (0, a.jsx)(T.default, {})
-    }), s && (0, a.jsx)(r.BlockedPaymentsContentSettings, {})]
+    }), !s && (0, a.jsx)(S.Subsetting, {
+      setting: _.WebSetting.GIFT_INVENTORY_LIST,
+      children: (0, a.jsx)(n.default, {
+        section: I.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+        children: (0, a.jsx)(T.default, {})
+      })
+    }), s && (0, a.jsx)(S.Subsetting, {
+      setting: _.WebSetting.GIFT_BLOCKED_PAYMENTS,
+      children: (0, a.jsx)(r.BlockedPaymentsContentSettings, {})
+    })]
   })
 }

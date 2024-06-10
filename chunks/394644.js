@@ -1,19 +1,19 @@
 "use strict";
 s.r(t), s.d(t, {
   getSearchableSettingsTitles: function() {
-    return P
+    return j
   },
   useDefaultUserSettingsSections: function() {
-    return x
+    return b
   },
   useGenerateUserSettingsSections: function() {
-    return p
-  },
-  useSearchUserSettingsSections: function() {
     return D
   },
+  useSearchUserSettingsSections: function() {
+    return v
+  },
   useViewableSettingsFilterFromSearch: function() {
-    return R
+    return L
   }
 }), s("639576"), s("536091"), s("47120"), s("653041");
 var a = s("470079"),
@@ -21,101 +21,116 @@ var a = s("470079"),
   l = s("704215"),
   i = s("493544"),
   r = s("634894"),
-  o = s("924557"),
-  d = s("706140"),
-  u = s("592204"),
-  c = s("631885"),
-  S = s("160913"),
-  E = s("725727"),
-  T = s("237292"),
-  _ = s("663389"),
-  I = s("594174"),
-  N = s("202527"),
-  g = s("620163"),
-  f = s("295545"),
-  m = s("168308"),
-  C = s("839469"),
-  A = s("726985"),
-  h = s("689938");
+  o = s("211242"),
+  d = s("924557"),
+  u = s("706140"),
+  c = s("592204"),
+  S = s("631885"),
+  E = s("223639"),
+  T = s("160913"),
+  _ = s("725727"),
+  I = s("977156"),
+  N = s("237292"),
+  g = s("663389"),
+  f = s("594174"),
+  m = s("202527"),
+  C = s("620163"),
+  A = s("295545"),
+  O = s("168308"),
+  h = s("839469"),
+  p = s("726985"),
+  R = s("46140"),
+  M = s("689938");
 
-function O(e) {
+function x(e) {
   let t = [{
-      header: h.default.Messages.USER_SETTINGS,
-      settings: [A.WebSetting.SEARCH_BAR, A.WebSetting.ACCOUNT, A.WebSetting.GAMES, A.WebSetting.PROFILE_CUSTOMIZATION, A.WebSetting.PRIVACY_AND_SAFETY, A.WebSetting.PRIVACY_FAMILY_CENTER, A.WebSetting.AUTHORIZED_APPS, A.WebSetting.SESSIONS, A.WebSetting.CONNECTIONS, A.WebSetting.CLIPS, A.WebSetting.FRIEND_REQUESTS]
+      header: M.default.Messages.USER_SETTINGS,
+      settings: [p.WebSetting.SEARCH_BAR, p.WebSetting.ACCOUNT, p.WebSetting.GAMES, p.WebSetting.PROFILE_CUSTOMIZATION, p.WebSetting.PRIVACY_AND_SAFETY, p.WebSetting.PRIVACY_FAMILY_CENTER, p.WebSetting.AUTHORIZED_APPS, p.WebSetting.SESSIONS, p.WebSetting.CONNECTIONS, p.WebSetting.CLIPS, p.WebSetting.FRIEND_REQUESTS]
     }, {
-      header: h.default.Messages.BILLING_SETTINGS,
+      header: M.default.Messages.BILLING_SETTINGS,
       divider: !0,
-      settings: [A.WebSetting.PREMIUM, A.WebSetting.GUILD_BOOSTING, A.WebSetting.SUBSCRIPTIONS, A.WebSetting.GIFT_INVENTORY, A.WebSetting.BILLING]
+      settings: [p.WebSetting.PREMIUM, p.WebSetting.GUILD_BOOSTING, p.WebSetting.SUBSCRIPTIONS, p.WebSetting.GIFT_INVENTORY, p.WebSetting.BILLING]
     }, {
-      header: h.default.Messages.APP_SETTINGS,
+      header: M.default.Messages.APP_SETTINGS,
       divider: !0,
-      settings: [A.WebSetting.APPEARANCE, A.WebSetting.ACCESSIBILITY, A.WebSetting.VOICE_AND_VIDEO, A.WebSetting.POGGERMODE, A.WebSetting.CHAT, A.WebSetting.NOTIFICATIONS, A.WebSetting.KEYBINDS, A.WebSetting.LANGUAGE, A.WebSetting.WINDOW_SETTINGS, A.WebSetting.LINUX_SETTINGS, A.WebSetting.STREAMER_MODE, A.WebSetting.SPEED_TEST, A.WebSetting.SETTINGS_ADVANCED]
-    }, {
-      divider: !0,
-      settings: [A.WebSetting.CHANGELOG, A.WebSetting.MERCHANDISE, A.WebSetting.HYPESQUAD, A.WebSetting.EXPERIMENTS, A.WebSetting.DEVELOPER_OPTIONS, A.WebSetting.HOTSPOT_OPTIONS, A.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, A.WebSetting.PAYMENT_FLOW_MODALS, A.WebSetting.DESIGN_SYSTEMS, A.WebSetting.TEXT_PLAYGROUND, A.WebSetting.TEXT_COMPONENTS, A.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, A.WebSetting.QUEST_PREVIEW_TOOL]
+      settings: [p.WebSetting.APPEARANCE, p.WebSetting.ACCESSIBILITY, p.WebSetting.VOICE_AND_VIDEO, p.WebSetting.POGGERMODE, p.WebSetting.CHAT, p.WebSetting.NOTIFICATIONS, p.WebSetting.KEYBINDS, p.WebSetting.LANGUAGE, p.WebSetting.WINDOW_SETTINGS, p.WebSetting.LINUX_SETTINGS, p.WebSetting.STREAMER_MODE, p.WebSetting.SPEED_TEST, p.WebSetting.SETTINGS_ADVANCED]
     }, {
       divider: !0,
-      settings: [A.WebSetting.LOGOUT]
+      settings: [p.WebSetting.CHANGELOG, p.WebSetting.MERCHANDISE, p.WebSetting.HYPESQUAD, p.WebSetting.EXPERIMENTS, p.WebSetting.DEVELOPER_OPTIONS, p.WebSetting.HOTSPOT_OPTIONS, p.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, p.WebSetting.PAYMENT_FLOW_MODALS, p.WebSetting.DESIGN_SYSTEMS, p.WebSetting.TEXT_PLAYGROUND, p.WebSetting.TEXT_COMPONENTS, p.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, p.WebSetting.QUEST_PREVIEW_TOOL]
     }, {
       divider: !0,
-      settings: [A.WebSetting.SOCIAL_LINKS, A.WebSetting.CLIENT_DEBUG_INFO]
+      settings: [p.WebSetting.LOGOUT]
+    }, {
+      divider: !0,
+      settings: [p.WebSetting.SOCIAL_LINKS, p.WebSetting.CLIENT_DEBUG_INFO]
     }],
     s = {
-      header: h.default.Messages.ACTIVITY_SETTINGS,
+      header: M.default.Messages.ACTIVITY_SETTINGS,
       divider: !0,
-      settings: [A.WebSetting.ACTIVITY_PRIVACY, A.WebSetting.REGISTERED_GAMES, A.WebSetting.OVERLAY]
+      settings: [p.WebSetting.ACTIVITY_PRIVACY, p.WebSetting.REGISTERED_GAMES, p.WebSetting.OVERLAY]
     };
   return e ? t : t.toSpliced(3, 0, s)
 }
 
-function p() {
+function D() {
   var e, t;
-  let s = (0, E.useUnseenOutboundPromotions)().length,
-    a = (0, S.useIsPrepaidPaymentPastDue)(),
-    i = (0, n.useStateFromStores)([_.default], () => _.default.getProps().impressionSource),
-    C = (0, c.usePendingRequestCount)(),
-    A = (0, m.useShouldShowOverlaySettings)(),
-    h = (0, o.useEnableClips)(),
-    [O] = (0, d.useGetDismissibleContent)(h ? [l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
-    p = "useGenerateUserSettingsSections";
+  let s = (0, _.useUnseenOutboundPromotions)().length,
+    a = (0, T.useIsPrepaidPaymentPastDue)(),
+    i = (0, n.useStateFromStores)([g.default], () => g.default.getProps().impressionSource),
+    h = (0, S.usePendingRequestCount)(),
+    p = (0, O.useShouldShowOverlaySettings)(),
+    M = (0, d.useEnableClips)(),
+    [x] = (0, u.useGetDismissibleContent)(M ? [l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+    D = "useGenerateUserSettingsSections";
   (0, r.useTriggerDebuggingAA)({
-    location: p + " auto on",
+    location: D + " auto on",
     autoTrackExposure: !0
   }), (0, r.useTriggerDebuggingAA)({
-    location: p + " auto off",
+    location: D + " auto off",
     autoTrackExposure: !1
   });
   let {
-    shouldMergeGameSettings: R
-  } = N.GameSettingsMergeExperiment.useExperiment({
+    shouldMergeGameSettings: L
+  } = m.GameSettingsMergeExperiment.useExperiment({
     location: "settings"
-  }), M = (0, f.useIsEligibleForUserSettingsSearchDesktop)({
+  }), P = (0, A.useIsEligibleForUserSettingsSearchDesktop)({
     location: "settings"
-  }), x = (0, u.useIsEligibleForKeywordFiltering)({
+  }), b = (0, c.useIsEligibleForKeywordFiltering)({
     location: "settings"
-  }), D = (t = !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()), t), L = (0, T.useIsEligibleForInappropriateConversationWarning)({
+  }), v = null !== (t = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t, U = (0, N.useIsEligibleForInappropriateConversationWarning)({
     location: "settings"
+  }), j = (0, o.useBlockedPaymentsConfig)(), G = (0, I.useIsEligibleForQuests)({
+    location: R.QuestsExperimentLocations.USER_SETTINGS_SEARCH_GIFT_INVENTORY
+  }), {
+    enabled: F
+  } = E.default.useExperiment({
+    location: "UserSettingsInventory"
+  }, {
+    autoTrackExposure: !0
   });
-  return (0, g.getConfig)({
+  return (0, C.getConfig)({
     unseenGiftCount: s,
     showPrepaidPaymentPastDueWarning: a,
     impressionSource: i,
-    numOfPendingFamilyRequests: C,
-    isOverlaySupported: A,
-    isClipsBetaTagShowing: O === l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
-    shouldMergeGameSettings: R,
-    isUserSettingsSearchEnabled: M,
-    isKeywordFilteringEnabled: x,
-    isStaff: D,
-    isInappropriateConversationWarningEnabled: L
+    numOfPendingFamilyRequests: h,
+    isOverlaySupported: p,
+    isClipsBetaTagShowing: x === l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
+    shouldMergeGameSettings: L,
+    isUserSettingsSearchEnabled: P,
+    isKeywordFilteringEnabled: b,
+    isStaff: v,
+    isInappropriateConversationWarningEnabled: U,
+    paymentsBlocked: j,
+    isEligibleForQuests: G,
+    showGiftNitro: F
   })
 }
 
-function R(e) {
+function L(e) {
   let {
     searchResults: t
-  } = (0, C.useSettingSearchResults)(), s = p();
-  if (!(0, f.useIsEligibleForUserSettingsSearchDesktop)({
+  } = (0, h.useSettingSearchResults)(), s = D();
+  if (!(0, A.useIsEligibleForUserSettingsSearchDesktop)({
       location: "settings"
     })) return new Set;
   let a = s[e],
@@ -162,9 +177,9 @@ function R(e) {
   return i
 }
 
-function M(e, t, s) {
+function P(e, t, s) {
   let a = [],
-    n = L(t),
+    n = U(t),
     l = function(e, t) {
       let s = new Map;
       return null != t && t.forEach(t => {
@@ -188,7 +203,7 @@ function M(e, t, s) {
         ...t[e],
         tabPredicate: () => {
           var t, a, n;
-          return null == s || (t = e, a = s, n = l, t === A.WebSetting.SEARCH_BAR || t === A.WebSetting.SEARCH_NO_RESULTS && 0 === a.size || n.has(t) || a.has(t))
+          return null == s || (t = e, a = s, n = l, t === p.WebSetting.SEARCH_BAR || t === p.WebSetting.SEARCH_NO_RESULTS && 0 === a.size || n.has(t) || a.has(t))
         },
         searchFilterCount: (null == s ? void 0 : s.has(e)) ? void 0 : l.get(e)
       })
@@ -196,47 +211,47 @@ function M(e, t, s) {
   }), a
 }
 
-function x() {
-  let e = p(),
+function b() {
+  let e = D(),
     {
       shouldMergeGameSettings: t
-    } = N.GameSettingsMergeExperiment.useExperiment({
+    } = m.GameSettingsMergeExperiment.useExperiment({
       location: "settings"
     }),
-    s = a.useMemo(() => O(t), [t]);
-  return a.useMemo(() => M(s, e), [s, e])
+    s = a.useMemo(() => x(t), [t]);
+  return a.useMemo(() => P(s, e), [s, e])
 }
 
-function D(e) {
-  let t = p(),
+function v(e) {
+  let t = D(),
     s = function() {
       let {
         shouldMergeGameSettings: e
-      } = N.GameSettingsMergeExperiment.useExperiment({
+      } = m.GameSettingsMergeExperiment.useExperiment({
         location: "settings"
-      }), t = O(e);
+      }), t = x(e);
       return a.useMemo(() => [{
-        header: h.default.Messages.USER_SETTINGS,
+        header: M.default.Messages.USER_SETTINGS,
         settings: [...t.map(e => {
           let {
             settings: t
           } = e;
           return t
-        }).flat(1), A.WebSetting.SEARCH_NO_RESULTS]
+        }).flat(1), p.WebSetting.SEARCH_NO_RESULTS]
       }], [t])
     }();
-  return a.useMemo(() => M(s, t, new Set(e)), [s, t, e])
+  return a.useMemo(() => P(s, t, new Set(e)), [s, t, e])
 }
 
-function L(e) {
+function U(e) {
   return new Map(Object.entries(e).filter(e => {
     let [t, s] = e;
     return s.section !== i.SectionTypes.CUSTOM && null != s.searchableTitle && (null == s.predicate || s.predicate())
   }))
 }
 
-function P(e) {
-  return Array.from(L(e).entries()).map(e => {
+function j(e) {
+  return Array.from(U(e).entries()).map(e => {
     let [t, s] = e;
     return [t, s.searchableTitle]
   })
