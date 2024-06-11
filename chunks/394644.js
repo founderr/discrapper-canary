@@ -152,7 +152,6 @@ function L(e) {
     })),
     l = new Set,
     r = e => {
-      if (l.has(e)) return;
       let t = n[e];
       if (null == t) return;
       l.add(e);
@@ -160,21 +159,22 @@ function L(e) {
       null != s && r(s)
     },
     o = e => {
-      if (!l.has(e))
-        for (let t of (l.add(e), Object.entries(i).filter(t => {
-            let [s, a] = t;
-            return a === e
-          }).map(e => {
-            let [t] = e;
-            return t
-          }))) o(t)
+      for (let t of (l.add(e), Object.entries(i).filter(t => {
+          let [s, a] = t;
+          return a === e
+        }).map(e => {
+          let [t] = e;
+          return t
+        }))) o(t)
     };
   for (let e of t.filter(e => e in n))
-    if (null != n[e].element && null == n[e].parent) {
-      l.clear();
-      break
-    } else Object.values(i).includes(e) && o(e), r(e);
-  return l
+    if (!l.has(e)) {
+      if (null != n[e].element && null == n[e].parent) {
+        l.clear();
+        break
+      }
+      Object.values(i).includes(e) && o(e), r(e)
+    } return l
 }
 
 function P(e, t) {

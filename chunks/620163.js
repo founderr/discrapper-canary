@@ -332,19 +332,19 @@ let eG = () => {
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_PROFANITY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eU.default.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE,
-        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
+        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
         predicate: () => ek
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eU.default.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE,
-        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
+        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
         predicate: () => ek
       },
       [eL.WebSetting.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eU.default.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
-        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
+        parent: eL.WebSetting.PRIVACY_KEYWORD_FILTER,
         predicate: () => ek
       },
       [eL.WebSetting.PRIVACY_TERMS_POLICY]: {
@@ -616,12 +616,12 @@ let eG = () => {
       },
       [eL.WebSetting.VOICE_AND_VIDEO_DEVICES]: {
         section: eP.UserSettingsSections.VOICE,
-        searchableTitle: eU.default.Messages.FORM_LABEL_INPUT_DEVICE + eU.default.Messages.FORM_LABEL_OUTPUT_DEVICE,
+        searchableTitle: "".concat(eU.default.Messages.FORM_LABEL_INPUT_DEVICE, " ").concat(eU.default.Messages.FORM_LABEL_OUTPUT_DEVICE),
         parent: eL.WebSetting.VOICE_AND_VIDEO
       },
       [eL.WebSetting.VOICE_AND_VIDEO_VOLUME_CONTROLS]: {
         section: eP.UserSettingsSections.VOICE,
-        searchableTitle: eU.default.Messages.FORM_LABEL_INPUT_VOLUME,
+        searchableTitle: "".concat(eU.default.Messages.FORM_LABEL_INPUT_VOLUME, " ").concat(eU.default.Messages.FORM_LABEL_OUTPUT_VOLUME),
         parent: eL.WebSetting.VOICE_AND_VIDEO
       },
       [eL.WebSetting.VOICE_AND_VIDEO_MIC_TEST]: {
