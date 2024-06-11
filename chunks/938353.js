@@ -383,14 +383,20 @@ class eX extends(s = l.Component) {
           });
         return l in m && (a.onClick = m[l]), a
       }),
-      h = i ? (0, a.jsx)(L.default, {
+      h = v.MessageForwardingExperiment.getCurrentConfig({
+        location: "MessageAccessories"
+      }, {
+        autoTrackExposure: !1
+      }).showInlineButtonOnHoverWeb,
+      N = i ? (0, a.jsx)(L.default, {
         messageId: e.id,
         channelId: s.id,
         targetKind: "media"
       }) : void 0;
     return (0, a.jsx)(ef.default, {
       items: p,
-      inlineForwardButton: h
+      inlineForwardButton: N,
+      inlineForwardButtonOnHover: h
     })
   }
   renderEmbeds(e) {
@@ -682,15 +688,22 @@ class eX extends(s = l.Component) {
           ...n
         })
       }, e.id);
-      return c ? (0, a.jsxs)("div", {
+      if (!c) return E;
+      let _ = v.MessageForwardingExperiment.getCurrentConfig({
+        location: "MessageAccessories"
+      }, {
+        autoTrackExposure: !1
+      }).showInlineButtonOnHoverWeb;
+      return (0, a.jsxs)("div", {
         className: eH.embedContainer,
         children: [E, (0, a.jsx)(L.default, {
+          className: _ ? eH.inlineForwardOnHover : void 0,
           messageId: s,
           channelId: l,
           targetKind: "embed",
           embedIndex: t
         })]
-      }) : E
+      })
     }), eY(this, "renderEmbedTitle", (e, t) => e.type === eG.MessageEmbedTypes.RICH ? k.default.parseEmbedTitle(t, !0, {
       channelId: this.props.channel.id
     }) : t), eY(this, "renderEmbedDescription", (e, t, n) => e.type === eG.MessageEmbedTypes.RICH ? k.default.parse(t, !0, {

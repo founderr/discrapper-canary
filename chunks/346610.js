@@ -10,21 +10,32 @@ let i = (0, n("818083").createExperiment)({
   label: "Message forwarding",
   defaultConfig: {
     canForwardMessages: !1,
-    hasInlineForwardButton: !1
+    hasInlineForwardButton: !1,
+    showInlineButtonOnHoverWeb: !1
   },
   treatments: [{
     id: 1,
     label: "Enabled",
     config: {
       canForwardMessages: !0,
-      hasInlineForwardButton: !1
+      hasInlineForwardButton: !1,
+      showInlineButtonOnHoverWeb: !1
     }
   }, {
     id: 2,
     label: "Enabled + inline forward button",
     config: {
       canForwardMessages: !0,
-      hasInlineForwardButton: !0
+      hasInlineForwardButton: !0,
+      showInlineButtonOnHoverWeb: !1
+    }
+  }, {
+    id: 3,
+    label: "Enabled + inline forward button + on hover web",
+    config: {
+      canForwardMessages: !0,
+      hasInlineForwardButton: !0,
+      showInlineButtonOnHoverWeb: !0
     }
   }]
 })

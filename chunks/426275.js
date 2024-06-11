@@ -16,25 +16,27 @@ var s = n("735250"),
 
 function f(e) {
   let {
-    channelId: t,
-    messageId: n,
-    targetKind: f,
-    embedIndex: E
-  } = e, _ = a.useCallback(() => {
-    let e = o.default.getMessage(t, n);
+    className: t,
+    channelId: n,
+    messageId: f,
+    targetKind: E,
+    embedIndex: _
+  } = e, m = a.useCallback(() => {
+    let e = o.default.getMessage(n, f);
     if (null == e) return;
-    let s = (0, u.getInlineForwardOptions)(e, {
-      targetKind: f,
-      embedIndex: E
+    let t = (0, u.getInlineForwardOptions)(e, {
+      targetKind: E,
+      embedIndex: _
     });
     (0, d.openForwardModal)({
-      channelId: t,
-      messageId: n,
+      channelId: n,
+      messageId: f,
       source: "message-actions",
-      forwardOptions: s
+      forwardOptions: t
     })
-  }, [t, E, n, f]);
+  }, [n, _, f, E]);
   return (0, s.jsx)(r.CircleIconButton, {
+    className: t,
     tooltip: c.default.Messages.MESSAGE_ACTION_FORWARD,
     color: r.CircleIconButtonColors.SECONDARY,
     icon: (0, s.jsx)(i.ArrowAngleRightUpIcon, {
@@ -42,6 +44,6 @@ function f(e) {
       height: 16,
       color: l.default.colors.INTERACTIVE_NORMAL
     }),
-    onClick: _
+    onClick: m
   })
 }
