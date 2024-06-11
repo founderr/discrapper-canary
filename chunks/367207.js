@@ -15,24 +15,26 @@ var a = n("392711"),
   m = n("430824"),
   C = n("594174"),
   p = n("295226"),
-  g = n("74538"),
-  E = n("557457"),
-  S = n("970645"),
-  _ = n("736871"),
-  I = n("6242"),
-  N = n("757692"),
-  T = n("351742"),
-  A = n("114064"),
-  L = n("937579"),
-  v = n("485731"),
-  x = n("841174"),
-  R = n("11352"),
-  M = n("981631"),
-  y = n("354459"),
-  O = n("37113"),
-  b = n("689938");
+  g = n("626135"),
+  E = n("74538"),
+  S = n("557457"),
+  _ = n("970645"),
+  I = n("736871"),
+  N = n("6242"),
+  T = n("757692"),
+  A = n("351742"),
+  L = n("114064"),
+  v = n("937579"),
+  x = n("485731"),
+  R = n("841174"),
+  M = n("11352"),
+  y = n("474936"),
+  O = n("981631"),
+  b = n("354459"),
+  D = n("37113"),
+  j = n("689938");
 
-function D(e, t, n) {
+function P(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -40,7 +42,7 @@ function D(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class j extends u.default {
+class G extends u.default {
   _initialize() {
     __OVERLAY__ ? r.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (r.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), r.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), r.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), r.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery), r.default.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), r.default.subscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal), r.default.subscribe("MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", this.maybeShowHDStreamingViewerUpsellMessage), r.default.subscribe("VOICE_CHANNEL_SELECT", this.cleanupShowHDStreamingViewerUpsellMessage))
   }
@@ -96,44 +98,44 @@ class j extends u.default {
     var t;
     let {
       inPerksDemosExperiment: n
-    } = _.default.getCurrentConfig({
+    } = I.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     }), {
       enabled: l
-    } = T.default.getCurrentConfig({
+    } = A.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     });
-    if (!n || !l || e.state !== M.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
+    if (!n || !l || e.state !== O.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
     let a = h.default.getChannel(e.channelId);
-    if (null == a || !(null === (t = A.default.getPerksDemos()) || void 0 === t ? void 0 : t[s.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
-    let i = A.default.getActivated()[s.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
+    if (null == a || !(null === (t = L.default.getPerksDemos()) || void 0 === t ? void 0 : t[s.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
+    let i = L.default.getActivated()[s.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
     i && r.default.dispatch({
       type: "PREMIUM_PERKS_DEMO_COMPLETE",
       perkType: s.EntitlementFeatureNames.STREAM_HIGH_QUALITY
-    }), i && v.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, x.default)(a.guild_id)
+    }), i && x.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, R.default)(a.guild_id)
   }
   constructor(...e) {
-    super(...e), D(this, "_premiumPaymentModalCloseResolve", null), D(this, "_premiumPaymentModalCloseReject", null), D(this, "_lastStreamingChannelId", null), D(this, "_maybeFetchPremiumOffer", async () => {
+    super(...e), P(this, "_premiumPaymentModalCloseResolve", null), P(this, "_premiumPaymentModalCloseReject", null), P(this, "_lastStreamingChannelId", null), P(this, "_maybeFetchPremiumOffer", async () => {
       let e = C.default.getCurrentUser();
       if (null != e && e.verified) {
-        let t = !(0, g.isPremium)(e) && p.default.shouldFetchOffer();
-        await (0, L.fetchUserOffer)(t)
+        let t = !(0, E.isPremium)(e) && p.default.shouldFetchOffer();
+        await (0, v.fetchUserOffer)(t)
       }
       r.default.dispatch({
         type: "PREMIUM_MARKETING_DATA_READY"
       })
-    }), D(this, "_maybeFetchCheckoutRecovery", async () => {
+    }), P(this, "_maybeFetchCheckoutRecovery", async () => {
       let e = C.default.getCurrentUser();
-      null != e && e.verified && !(0, g.isPremium)(e) && await (0, S.fetchCheckoutRecovery)()
-    }), D(this, "_trackCustomNotificationSoundsExposure", () => {
-      R.CustomNotificationSoundExperiment.trackExposure({
+      null != e && e.verified && !(0, E.isPremium)(e) && await (0, _.fetchCheckoutRecovery)()
+    }), P(this, "_trackCustomNotificationSoundsExposure", () => {
+      M.CustomNotificationSoundExperiment.trackExposure({
         location: "PremiumManager"
       })
-    }), D(this, "_handlePremiumPaymentModalOpen", e => {
+    }), P(this, "_handlePremiumPaymentModalOpen", e => {
       (0, f.default)({
         ...e,
         analyticsLocations: [d.default.OVERLAY],
@@ -144,34 +146,39 @@ class j extends u.default {
           })
         }
       })
-    }), D(this, "_handlePremiumPaymentModalClose", e => {
+    }), P(this, "_handlePremiumPaymentModalClose", e => {
       let {
         didSucceed: t
       } = e;
       t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), this._premiumPaymentModalCloseResolve = null, this._premiumPaymentModalCloseReject = null
-    }), D(this, "maybeShowHDStreamingViewerUpsellMessage", e => {
+    }), P(this, "maybeShowHDStreamingViewerUpsellMessage", e => {
       let t = C.default.getCurrentUser();
       (null == t ? void 0 : t.id) !== e.senderUserId && this._maybeSendViewerUpsellMessage(e.channelId, e.guildId, t)
-    }), D(this, "_maybeSendViewerUpsellMessage", (0, a.debounce)((e, t, n) => {
+    }), P(this, "_maybeSendViewerUpsellMessage", (0, a.debounce)((e, t, n) => {
       var l, a;
       let s = c.default.getSelectedParticipant(e),
-        i = (0, N.canStreamParticipantSetting)(s, n),
+        i = (0, T.canStreamParticipantSetting)(s, n),
         {
           sendNitroMessage: r
-        } = (0, I.getHDStreamingViewerExperimentConfig)(i),
-        u = null !== (a = null === (l = m.default.getGuild(t)) || void 0 === l ? void 0 : l.premiumTier) && void 0 !== a ? a : M.BoostedGuildTiers.NONE;
-      if (r && !(u >= M.BoostedGuildTiers.TIER_2) && (null == s ? void 0 : s.type) === y.ParticipantTypes.STREAM && (null == s ? void 0 : s.id) !== (null == n ? void 0 : n.id) && null != s.maxResolution && null != s.maxFrameRate && e !== this._lastStreamingChannelId) {
+        } = (0, N.getHDStreamingViewerExperimentConfig)(i),
+        u = null !== (a = null === (l = m.default.getGuild(t)) || void 0 === l ? void 0 : l.premiumTier) && void 0 !== a ? a : O.BoostedGuildTiers.NONE;
+      if (r && !(u >= O.BoostedGuildTiers.TIER_2) && (null == s ? void 0 : s.type) === b.ParticipantTypes.STREAM && (null == s ? void 0 : s.id) !== (null == n ? void 0 : n.id) && null != s.maxResolution && null != s.maxFrameRate && e !== this._lastStreamingChannelId) {
         this._lastStreamingChannelId = e;
-        let t = b.default.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
+        let n = j.default.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
           nickname: s.userNick,
-          resolution: (0, O.makeResolutionLabel)(s.maxResolution.height),
-          fps: (0, E.getFPSText)(s.maxFrameRate)
+          resolution: (0, D.makeResolutionLabel)(s.maxResolution.height),
+          fps: (0, S.getFPSText)(s.maxFrameRate)
         });
-        o.default.sendNitroSystemMessage(e, t)
+        o.default.sendNitroSystemMessage(e, n), g.default.track(O.AnalyticEvents.PREMIUM_UPSELL_MESSAGE_SENT, {
+          type: y.PremiumUpsellTypes.HD_STREAMING_VIEWER_UPSELL,
+          location_section: O.AnalyticsSections.TEXT_IN_VOICE,
+          location_object: O.AnalyticsObjects.MESSAGE,
+          guild_id: t
+        })
       }
-    }, 200)), D(this, "cleanupShowHDStreamingViewerUpsellMessage", e => {
+    }, 200)), P(this, "cleanupShowHDStreamingViewerUpsellMessage", e => {
       null == e.channelId && (this._lastStreamingChannelId = null)
     })
   }
 }
-t.default = new j
+t.default = new G
