@@ -26,15 +26,15 @@ var l = n("120356"),
   T = n("134483"),
   I = n("809244"),
   A = n("618158"),
-  x = n("366695"),
-  v = n("586791"),
+  v = n("366695"),
+  x = n("586791"),
   N = n("502568"),
   M = n("792125"),
   y = n("358221"),
   R = n("362721"),
   L = n("887012"),
-  j = n("613548"),
-  O = n("221888"),
+  O = n("613548"),
+  j = n("221888"),
   P = n("339340"),
   D = n("354459"),
   b = n("981631"),
@@ -49,7 +49,7 @@ function H(e) {
     channel: n
   } = e, l = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([y.default], () => y.default.getLayout(n.id, l));
   return (0, a.jsx)(A.default, {
-    children: (0, a.jsx)(O.default, {
+    children: (0, a.jsx)(j.default, {
       className: w.participants,
       participant: t,
       maxVisibleUsers: 5,
@@ -95,7 +95,7 @@ function B(e) {
   if ((null == l ? void 0 : l.type) === D.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(N.default.Divider, {
       className: w.divider
-    }), (0, a.jsx)(x.default, {
+    }), (0, a.jsx)(v.default, {
       game: n,
       className: w.activityIcon
     }), (0, a.jsx)(r.Text, {
@@ -147,12 +147,12 @@ function V(e) {
   } = (0, i.useStateFromStoresObject)([y.default], () => ({
     focusedParticipant: y.default.getSelectedParticipant(t.id),
     participantsOpen: y.default.getParticipantsOpen(t.id)
-  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), x = F.default.Messages.VOICE_CHANNEL;
-  t.isDM() ? x = F.default.Messages.DM : t.isGroupDM() && (x = F.default.Messages.GROUP_DM);
+  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), v = F.default.Messages.VOICE_CHANNEL;
+  t.isDM() ? v = F.default.Messages.DM : t.isGroupDM() && (v = F.default.Messages.GROUP_DM);
   let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
-    O = t.isGuildVoice() && u && null != L && L.length > 0,
+    j = t.isGuildVoice() && u && null != L && L.length > 0,
     H = (0, R.default)(t),
-    G = O ? (0, a.jsx)(r.Tooltip, {
+    G = j ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
@@ -171,7 +171,7 @@ function V(e) {
           children: _.default.parseVoiceChannelStatus(L, !0, {
             channelId: t.id
           })
-        }), H && (0, a.jsx)(v.default, {
+        }), H && (0, a.jsx)(x.default, {
           className: s()(w.pencilIcon, w.hoverable),
           width: 14,
           height: 14
@@ -199,7 +199,7 @@ function V(e) {
       transparent: !0,
       className: (0, M.getThemeClass)(U.ThemeTypes.DARK),
       childrenBottom: G,
-      toolbar: (0, a.jsx)(j.default, {
+      toolbar: (0, a.jsx)(O.default, {
         inPopout: o === b.AppContext.POPOUT,
         channel: t,
         appContext: o,
@@ -210,7 +210,7 @@ function V(e) {
       children: [null != I ? (0, a.jsx)(N.default.Icon, {
         icon: I,
         disabled: !0,
-        "aria-label": x
+        "aria-label": v
       }) : null, (0, a.jsx)(N.default.Title, {
         children: C
       }), (0, a.jsx)(S.HeaderGuildBreadcrumb, {

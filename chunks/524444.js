@@ -86,8 +86,8 @@ var i, r, s = n("735250"),
   w = n("465670"),
   k = n("839523"),
   B = n("626135"),
-  V = n("823379"),
-  x = n("589530"),
+  x = n("823379"),
+  V = n("589530"),
   F = n("709054"),
   H = n("981631"),
   Y = n("420212"),
@@ -100,10 +100,10 @@ let Z = {
     position: "top"
   },
   Q = e => t => {
-    null == e || e(t), (0, x.setVolume)(t)
+    null == e || e(t), (0, V.setVolume)(t)
   },
   X = e => t => {
-    null == e || e(t), (0, x.setMuted)(t)
+    null == e || e(t), (0, V.setMuted)(t)
   };
 
 function q(e) {
@@ -117,7 +117,7 @@ function q(e) {
     renderOverlayContent: u,
     ...d
   } = e, _ = Q(t), c = X(n);
-  return i = null == i ? x.getVolume : i, r = null == r ? x.getMuted : r, (0, s.jsxs)(a.Fragment, {
+  return i = null == i ? V.getVolume : i, r = null == r ? V.getMuted : r, (0, s.jsxs)(a.Fragment, {
     children: [(0, s.jsx)(M.default, {
       ...d,
       alt: o,
@@ -141,7 +141,7 @@ function J(e) {
     renderAdjacentContent: l,
     ...u
   } = e, d = Q(t), _ = X(i);
-  return n = null == n ? x.getVolume : n, (0, s.jsxs)(a.Fragment, {
+  return n = null == n ? V.getVolume : n, (0, s.jsxs)(a.Fragment, {
     children: [(0, s.jsx)(D.default, {
       ...u,
       onVolumeChange: d,
@@ -162,7 +162,7 @@ function $(e) {
     onMute: i,
     ...r
   } = e, a = Q(t), o = X(i);
-  return n = null == n ? x.getVolume : n, (0, s.jsx)(R.default, {
+  return n = null == n ? V.getVolume : n, (0, s.jsx)(R.default, {
     ...r,
     onVolumeChange: a,
     onMute: o,
@@ -281,7 +281,7 @@ let er = e => {
                 case 1:
                   return K.default.Messages.JUMP_BAR_VIEWING_REPLY;
                 default:
-                  return (0, V.assertNever)(e)
+                  return (0, x.assertNever)(e)
               }
             }(t)
           })
@@ -298,7 +298,7 @@ let er = e => {
                 case 1:
                   return K.default.Messages.JUMP_TO_ORIGINAL_MESSAGE;
                 default:
-                  return (0, V.assertNever)(e)
+                  return (0, x.assertNever)(e)
               }
             }(t), (0, s.jsx)(b.default, {
               className: z.barButtonIcon
@@ -422,14 +422,14 @@ function eo(e) {
       channel_type: r.type
     })
   }, [y, P, r.guild_id, r.id, r.type]);
-  let x = (0, c.useStateFromStores)([L.default], () => {
+  let V = (0, c.useStateFromStores)([L.default], () => {
       var e;
       return null !== (e = null == y ? void 0 : y.map(e => {
         var t;
         return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
           var t;
           return null !== (t = L.default.getUser(e)) && void 0 !== t ? t : null
-        }).filter(V.isNotNullish)
+        }).filter(x.isNotNullish)
       })) && void 0 !== e ? e : []
     }, [y], el),
     Y = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
@@ -524,10 +524,10 @@ function eo(e) {
   let ei = a.useMemo(() => (0, s.jsx)(O.default, {
       channel: r,
       summaries: y,
-      summariesMembers: x,
+      summariesMembers: V,
       selectTopic: ee,
       setOpen: et
-    }), [y, x, ee, et, r]),
+    }), [y, V, ee, et, r]),
     er = a.useCallback(() => {
       let e = g.default.ackMessageId(r.id);
       null != e ? I.default.jumpToMessage({
@@ -660,14 +660,14 @@ function eu(e) {
         return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
           var t;
           return null !== (t = L.default.getUser(e)) && void 0 !== t ? t : null
-        }).filter(V.isNotNullish)
+        }).filter(x.isNotNullish)
       })) && void 0 !== e ? e : []
     }, [v], el),
     y = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
     P = null == v ? void 0 : null === (t = v[y]) || void 0 === t ? void 0 : t.topic;
   null == P && null == T && (null == v ? void 0 : v.length) >= 1 && (P = null === (i = v[0]) || void 0 === i ? void 0 : i.topic);
   let G = a.useMemo(() => d().get(v, y - 1), [y, v]),
-    x = a.useMemo(() => d().get(v, y + 1), [y, v]),
+    V = a.useMemo(() => d().get(v, y + 1), [y, v]),
     F = a.useMemo(() => d().debounce(e => {
       var t;
       f(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
@@ -804,7 +804,7 @@ function eu(e) {
           "aria-label": K.default.Messages.SUMMARY_PILL_NEXT,
           onClick: $,
           className: l()(z.topicsPillCaret, z.topicsCaretLeft, {
-            [z.topicsPillCaretDisabled]: null == x
+            [z.topicsPillCaretDisabled]: null == V
           }),
           children: (0, s.jsx)(b.default, {
             width: 16,

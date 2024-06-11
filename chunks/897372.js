@@ -36,8 +36,8 @@ var r, i = n("147018"),
   F = c([].pop),
   B = c([].push),
   U = c("".replace),
-  Y = c([].shift),
-  j = c("".split),
+  j = c([].shift),
+  Y = c("".split),
   z = c("".slice),
   H = c("".toLowerCase),
   G = c([].unshift),
@@ -57,7 +57,7 @@ var r, i = n("147018"),
   ei = /(^|[^\u0000-\u0020])[\u0000-\u0020]+$/,
   ea = /[\t\n\r]/g,
   eo = function(e) {
-    var t, n, r, i, a, o, s, u = j(e, ".");
+    var t, n, r, i, a, o, s, u = Y(e, ".");
     if (u.length && "" === u[u.length - 1] && u.length--, (t = u.length) > 4) return e;
     for (r = 0, n = []; r < t; r++) {
       if ("" === (i = u[r])) return e;
@@ -418,7 +418,7 @@ eU.prototype = {
               else "file" === this.scheme && !this.path.length && eg(o) && (this.host && (this.host = ""), o = N(o, 0) + ":"), B(this.path, o)
             }
             if (o = "", "file" === this.scheme && (d === r || "?" === d || "#" === d))
-              for (; this.path.length > 1 && "" === this.path[0];) Y(this.path);
+              for (; this.path.length > 1 && "" === this.path[0];) j(this.path);
             "?" === d ? (this.query = "", i = eF) : "#" === d && (this.fragment = "", i = eB)
           } else o += eh(d, ef);
           break;
@@ -483,7 +483,7 @@ eU.prototype = {
     var e = this.scheme,
       t = this.port;
     if ("blob" === e) try {
-      return new eY(e.path[0]).origin
+      return new ej(e.path[0]).origin
     } catch (e) {
       return "null"
     }
@@ -569,13 +569,13 @@ eU.prototype = {
     this.query = this.searchParams.serialize() || null
   }
 };
-var eY = function(e) {
-    var t = f(this, ej),
+var ej = function(e) {
+    var t = f(this, eY),
       n = E(arguments.length, 1) > 1 ? arguments[1] : void 0,
       r = w(t, new eU(e, !1, n));
     !a && (t.href = r.serialize(), t.origin = r.getOrigin(), t.protocol = r.getProtocol(), t.username = r.getUsername(), t.password = r.getPassword(), t.host = r.getHost(), t.hostname = r.getHostname(), t.port = r.getPort(), t.pathname = r.getPathname(), t.search = r.getSearch(), t.searchParams = r.getSearchParams(), t.hash = r.getHash())
   },
-  ej = eY.prototype,
+  eY = ej.prototype,
   ez = function(e, t) {
     return {
       get: function() {
@@ -588,24 +588,24 @@ var eY = function(e) {
       enumerable: !0
     }
   };
-if (a && (d(ej, "href", ez("serialize", "setHref")), d(ej, "origin", ez("getOrigin")), d(ej, "protocol", ez("getProtocol", "setProtocol")), d(ej, "username", ez("getUsername", "setUsername")), d(ej, "password", ez("getPassword", "setPassword")), d(ej, "host", ez("getHost", "setHost")), d(ej, "hostname", ez("getHostname", "setHostname")), d(ej, "port", ez("getPort", "setPort")), d(ej, "pathname", ez("getPathname", "setPathname")), d(ej, "search", ez("getSearch", "setSearch")), d(ej, "searchParams", ez("getSearchParams")), d(ej, "hash", ez("getHash", "setHash"))), l(ej, "toJSON", function() {
+if (a && (d(eY, "href", ez("serialize", "setHref")), d(eY, "origin", ez("getOrigin")), d(eY, "protocol", ez("getProtocol", "setProtocol")), d(eY, "username", ez("getUsername", "setUsername")), d(eY, "password", ez("getPassword", "setPassword")), d(eY, "host", ez("getHost", "setHost")), d(eY, "hostname", ez("getHostname", "setHostname")), d(eY, "port", ez("getPort", "setPort")), d(eY, "pathname", ez("getPathname", "setPathname")), d(eY, "search", ez("getSearch", "setSearch")), d(eY, "searchParams", ez("getSearchParams")), d(eY, "hash", ez("getHash", "setHash"))), l(eY, "toJSON", function() {
     return T(this).serialize()
   }, {
     enumerable: !0
-  }), l(ej, "toString", function() {
+  }), l(eY, "toString", function() {
     return T(this).serialize()
   }, {
     enumerable: !0
   }), O) {
   var eH = O.createObjectURL,
     eG = O.revokeObjectURL;
-  eH && l(eY, "createObjectURL", u(eH, O)), eG && l(eY, "revokeObjectURL", u(eG, O))
+  eH && l(ej, "createObjectURL", u(eH, O)), eG && l(ej, "revokeObjectURL", u(eG, O))
 }
-y(eY, "URL"), i({
+y(ej, "URL"), i({
   global: !0,
   constructor: !0,
   forced: !o,
   sham: !a
 }, {
-  URL: eY
+  URL: ej
 })

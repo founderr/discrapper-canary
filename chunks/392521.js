@@ -109,7 +109,7 @@ let o = "premium_tier_2_gradient",
       }), R]
     })
   },
-  f = e => {
+  I = e => {
     let {
       className: t,
       fill: s,
@@ -145,7 +145,7 @@ t.default = e => {
   } = e, a = (0, l.default)(), r = (0, n.isThemeDark)(a) ? c : o, d = (0, n.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(u, ")");
   switch (s) {
     case 0:
-      return (0, i.jsx)(f, {
+      return (0, i.jsx)(I, {
         className: t,
         fill: d,
         gradient: r

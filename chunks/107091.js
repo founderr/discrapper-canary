@@ -16,10 +16,10 @@ var a = s("735250"),
   f = s("906732"),
   C = s("1585"),
   E = s("624377"),
-  p = s("372654"),
-  m = s("715627"),
-  g = s("300284"),
-  S = s("642619"),
+  m = s("372654"),
+  p = s("715627"),
+  S = s("300284"),
+  g = s("642619"),
   h = s("598"),
   I = s("333867"),
   _ = s("329067"),
@@ -33,7 +33,7 @@ let b = {
     yMin: -150,
     yMax: 0
   },
-  R = e => {
+  A = e => {
     let {
       children: t,
       ...s
@@ -51,14 +51,14 @@ function v(e) {
     product: t,
     paymentSource: s,
     onPurchaseComplete: v,
-    onUse: A,
+    onUse: R,
     onError: P,
     onReviewPurchase: O,
-    loadId: j,
-    baseAnalyticsData: y,
+    loadId: y,
+    baseAnalyticsData: j,
     confettiCanvas: M = null
   } = e;
-  j = null != j ? j : (0, n.v4)();
+  y = null != y ? y : (0, n.v4)();
   let k = l.useRef(null),
     [B] = t.items,
     {
@@ -70,12 +70,12 @@ function v(e) {
     U = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     H = (0, x.getCustomConfettiDisplayOptions)(t.skuId),
     [w, G] = l.useState(!1),
-    [W, Y] = l.useState(!1),
-    V = null != F ? {
-      background: (0, p.getBackgroundGradient)(F, 90),
+    [W, V] = l.useState(!1),
+    Y = null != F ? {
+      background: (0, m.getBackgroundGradient)(F, 90),
       color: F.text.toHslString()
     } : void 0,
-    K = (0, g.default)({
+    K = (0, S.default)({
       analyticsLocations: D
     }),
     z = {
@@ -83,13 +83,13 @@ function v(e) {
         G(!0), v()
       },
       onError: e => {
-        P(e), Y(!0)
+        P(e), V(!0)
       },
       onReviewPurchase: O,
       paymentSource: s,
       skuId: t.skuId,
-      loadId: j,
-      baseAnalyticsData: y
+      loadId: y,
+      baseAnalyticsData: j
     };
   return (0, a.jsxs)("div", {
     ref: k,
@@ -132,16 +132,16 @@ function v(e) {
           variant: "text-xs/normal",
           children: L.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
-      }), (0, a.jsx)(R, {
-        style: V,
+      }), (0, a.jsx)(A, {
+        style: Y,
         onClick: () => {
-          if (A(), (0, u.popLayer)(), K(), (null == B ? void 0 : B.type) === r.CollectiblesItemType.AVATAR_DECORATION) {
+          if (R(), (0, u.popLayer)(), K(), (null == B ? void 0 : B.type) === r.CollectiblesItemType.AVATAR_DECORATION) {
             (0, C.openAvatarDecorationModal)({
               initialSelectedDecoration: B,
               analyticsLocations: D
             });
             return
-          }(null == B ? void 0 : B.type) === r.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
+          }(null == B ? void 0 : B.type) === r.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
             initialSelectedEffectId: B.id,
             analyticsLocations: D
           })
@@ -155,7 +155,7 @@ function v(e) {
         className: N.productName,
         children: t.name
       }), (0, a.jsx)(h.PaymentContextProvider, {
-        loadId: j,
+        loadId: y,
         stepConfigs: [],
         applicationId: T.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
@@ -166,7 +166,7 @@ function v(e) {
           ...z
         })
       })]
-    })), !W && w && !(null != H) && !U && (0, a.jsx)(m.default, {
+    })), !W && w && !(null != H) && !U && (0, a.jsx)(p.default, {
       confettiTarget: k.current,
       customConfettiCanvas: M,
       speedValues: b,

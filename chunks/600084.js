@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("320781"),
   I = n("269203"),
   A = n("753898"),
-  x = n("734386"),
-  v = n("184279"),
+  v = n("734386"),
+  x = n("184279"),
   N = n("438306"),
   M = n("544142"),
   y = n("128557"),
   R = n("981631"),
   L = n("176505"),
-  j = n("689938"),
-  O = n("611273");
+  O = n("689938"),
+  j = n("611273");
 
 function P(e) {
   let {
@@ -50,7 +50,7 @@ function P(e) {
   else if (i) return (0, a.jsx)(y.default, {
     channel: n
   });
-  else if (l) return (0, a.jsx)(x.default, {
+  else if (l) return (0, a.jsx)(v.default, {
     channel: n
   });
   return (0, a.jsx)(N.default, {
@@ -66,7 +66,7 @@ function D(e) {
   } = e, d = (0, o.default)(n), {
     type: m
   } = n, p = (0, s.useStateFromStores)([C.default], () => n.isPrivate() ? C.default.getUser(n.getRecipientId()) : null), T = g.default.useUserTag(p), {
-    canManageRoles: x,
+    canManageRoles: v,
     canReadMessageHistory: N
   } = (0, s.useStateFromStoresObject)([E.default], () => ({
     canManageRoles: E.default.can(R.Permissions.MANAGE_ROLES, n),
@@ -82,20 +82,20 @@ function D(e) {
       m === R.ChannelTypes.DM && null == M && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
         withMutualGuilds: !0
       }))
-    }, [M, m, n, p]), n.isSystemDM()) return y ? (0, a.jsx)(v.default, {
+    }, [M, m, n, p]), n.isSystemDM()) return y ? (0, a.jsx)(x.default, {
     channel: n
   }) : (0, a.jsx)(A.default, {
     channel: n,
-    children: j.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
+    children: O.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
   if (m === R.ChannelTypes.DM) return (0, a.jsxs)(A.default, {
     channel: n,
     user: p,
     children: [null != p && (0, a.jsx)(i.Heading, {
       variant: "heading-xl/medium",
-      className: O.marginBottom20,
+      className: j.marginBottom20,
       children: T
-    }), j.default.Messages.BEGINNING_DM.format({
+    }), O.default.Messages.BEGINNING_DM.format({
       username: d
     }), (0, a.jsx)(S.default, {
       userId: n.getRecipientId(),
@@ -106,27 +106,27 @@ function D(e) {
   if (n.isMultiUserDM()) return n.isManaged() ? (0, a.jsxs)(_.default, {
     channelId: n.id,
     children: [(0, a.jsx)(_.EmptyMessageHeader, {
-      children: j.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
+      children: O.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: d
       })
     }), (0, a.jsx)(_.EmptyMessageBody, {
-      children: j.default.Messages.BEGINNING_GROUP_DM_MANAGED
+      children: O.default.Messages.BEGINNING_GROUP_DM_MANAGED
     })]
   }) : n.hasFlag(L.ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL) ? (0, a.jsx)(I.default, {
     channel: n
   }) : (0, a.jsx)(A.default, {
     channel: n,
-    children: j.default.Messages.BEGINNING_GROUP_DM.format({
+    children: O.default.Messages.BEGINNING_GROUP_DM.format({
       name: d
     })
   });
   return N ? (0, a.jsx)(P, {
     channel: n,
-    canManageRoles: x
+    canManageRoles: v
   }) : (0, a.jsx)(_.default, {
     channelId: n.id,
     children: (0, a.jsx)(_.EmptyMessageBody, {
-      children: j.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
+      children: O.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
         channelName: d
       })
     })

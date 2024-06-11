@@ -8,11 +8,11 @@ var l = i("470079"),
   s = i("442837"),
   u = i("172337"),
   a = i("101492"),
-  d = i("710091"),
-  n = i("496675"),
+  n = i("710091"),
+  d = i("496675"),
   r = i("689938");
 let o = {
-    "server-subscriptions-onboarding": d.default,
+    "server-subscriptions-onboarding": n.default,
     "server-subscriptions-finish-setting-up": a.default,
     "server-subscriptions-create-tier-from-template": u.default
   },
@@ -23,7 +23,7 @@ let o = {
     createGuildDescription: () => r.default.Messages.GUILD_SETTINGS_PICKER_DEFAULT_CREATE_DESCRIPTION,
     createGuildCta: () => r.default.Messages.CREATE_SERVER_BUTTON_CTA,
     canCreateGuild: !0,
-    useIsGuildSupported: () => (0, s.useStateFromStores)([n.default], () => e => n.default.canAccessGuildSettings(e), [], s.statesWillNeverBeEqual)
+    useIsGuildSupported: () => (0, s.useStateFromStores)([d.default], () => e => d.default.canAccessGuildSettings(e), [], s.statesWillNeverBeEqual)
   };
 
 function S(e) {

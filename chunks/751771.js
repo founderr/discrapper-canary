@@ -4,10 +4,10 @@ a.r(t), a("47120");
 var c, u, f, m, p = a("442837"),
   I = a("570140"),
   g = a("823385"),
-  T = a("823379"),
-  h = a("971130"),
-  N = a("709054"),
-  S = a("592125"),
+  h = a("823379"),
+  T = a("971130"),
+  S = a("709054"),
+  N = a("592125"),
   y = a("496675"),
   v = a("699516"),
   C = a("800599"),
@@ -20,10 +20,10 @@ let x = new Set,
 function R(e) {
   let t = new Set,
     a = null == l || d === E.InviteTargetTypes.EMBEDDED_APPLICATION ? void 0 : l.id,
-    i = (0, h.getMostRecentDMedUser)(x, a);
+    i = (0, T.getMostRecentDMedUser)(x, a);
   for (let e of (null != i && !v.default.isBlocked(i.id) && t.add(i.id), C.default.getUserAffinitiesUserIds())) t.add(e);
   let s = new Set;
-  return d === E.InviteTargetTypes.EMBEDDED_APPLICATION && g.default.getChannelHistory().map(e => S.default.getChannel(e)).filter(T.isNotNullish).filter(e => e.type === A.ChannelTypes.GUILD_TEXT).filter(e => y.default.can(A.Permissions.SEND_MESSAGES, e)).slice(0, 3).forEach(e => s.add(e.id)), (0, h.generateRowsForQuery)({
+  return d === E.InviteTargetTypes.EMBEDDED_APPLICATION && g.default.getChannelHistory().map(e => N.default.getChannel(e)).filter(h.isNotNullish).filter(e => e.type === A.ChannelTypes.GUILD_TEXT).filter(e => y.default.can(A.Permissions.SEND_MESSAGES, e)).slice(0, 3).forEach(e => s.add(e.id)), (0, T.generateRowsForQuery)({
     query: e,
     omitUserIds: x,
     suggestedUserIds: t,
@@ -82,8 +82,8 @@ m = "InviteSuggestionsStore", (f = "displayName") in(u = j) ? Object.definePrope
     } = e;
     l = null != c ? a : null, o = c, r = u, d = f;
     let m = v.default.getRelationships(),
-      p = N.default.keys(m).filter(e => m[e] === A.RelationshipTypes.BLOCKED),
-      I = (0, h.getUsersAlreadyJoined)({
+      p = S.default.keys(m).filter(e => m[e] === A.RelationshipTypes.BLOCKED),
+      I = (0, T.getUsersAlreadyJoined)({
         channel: o,
         applicationId: r,
         inviteTargetType: f
@@ -91,9 +91,9 @@ m = "InviteSuggestionsStore", (f = "displayName") in(u = j) ? Object.definePrope
     x = new Set([...t, ...p, ...I]), n = !1;
     let {
       rows: g,
-      counts: T
+      counts: h
     } = R("");
-    D(g), i = T, s = _.length
+    D(g), i = h, s = _.length
   },
   INVITE_SUGGESTIONS_SEARCH: function(e) {
     let {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return j
   }
 }), n("627494"), n("757143"), n("653041");
 var a = n("735250"),
@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("551228"),
   I = n("591853"),
   A = n("371991"),
-  x = n("410441"),
-  v = n("981631"),
+  v = n("410441"),
+  x = n("981631"),
   N = n("616922"),
   M = n("689938"),
   y = n("417094"),
@@ -43,7 +43,7 @@ let L = (e, t, n) => {
   }).replaceAll("*", "")
 };
 
-function j(e) {
+function O(e) {
   let {
     activity: t
   } = e, n = t.timestamps, s = (0, A.useTimestampTickedNow)(n), {
@@ -87,9 +87,9 @@ function j(e) {
   })
 }
 
-function O(e) {
+function j(e) {
   var t, n, u;
-  let A, y, O, {
+  let A, y, j, {
       channel: P,
       entry: D,
       requestId: b,
@@ -107,7 +107,7 @@ function O(e) {
       primaryColor: V,
       secondaryColor: W
     } = (0, _.default)(H),
-    Y = (0, r.useStateFromStores)([c.default, p.default], () => (null == F ? void 0 : F.type) === v.ActivityTypes.LISTENING && null != B ? (0, h.default)(c.default, p.default, B, F) : void 0, [F, B], o.default),
+    Y = (0, r.useStateFromStores)([c.default, p.default], () => (null == F ? void 0 : F.type) === x.ActivityTypes.LISTENING && null != B ? (0, h.default)(c.default, p.default, B, F) : void 0, [F, B], o.default),
     z = l.useCallback(() => {
       var e;
       if (null == P || null == B) return;
@@ -150,15 +150,15 @@ function O(e) {
       }
     }), y = () => {
       (0, d.openTrack)(F)
-    }, O = (0, f.default)(Y, N.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != P ? C.default.getNickname(P.guild_id, P.id, B) : void 0)
+    }, j = (0, f.default)(Y, N.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != P ? C.default.getNickname(P.guild_id, P.id, B) : void 0)
   }
   let X = (0, a.jsx)(I.PopoutContent, {
     thumbnailSrc: H,
     channel: P,
     entry: D,
-    headerIcons: (0, a.jsx)(x.default, {
+    headerIcons: (0, a.jsx)(v.default, {
       onClick: A,
-      "aria-label": O,
+      "aria-label": j,
       provider: w.media.provider
     }),
     userDescription: (0, g.isEntryActive)(D) ? M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
@@ -166,7 +166,7 @@ function O(e) {
     onClickTitle: y,
     subtitle: K,
     badges: null,
-    children: (null === (t = F.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, a.jsx)(j, {
+    children: (null === (t = F.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, a.jsx)(O, {
       activity: F
     })
   });

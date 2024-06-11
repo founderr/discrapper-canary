@@ -43,8 +43,8 @@ var i = n("735250"),
   w = n("944581"),
   k = n("632184"),
   B = n("170039"),
-  V = n("761374"),
-  x = n("602623"),
+  x = n("761374"),
+  V = n("602623"),
   F = n("624138"),
   H = n("510601"),
   Y = n("59688"),
@@ -123,7 +123,7 @@ function $(e, t, n) {
     className: Z.row,
     children: [(0, i.jsx)(e, {
       className: Z.activityIcon
-    }), (0, i.jsx)(x.default, {
+    }), (0, i.jsx)(V.default, {
       guildId: n,
       users: t,
       max: 6
@@ -164,7 +164,7 @@ function et(e) {
       className: Z.row,
       children: [(0, i.jsx)(B.default, {
         className: Z.activityIcon
-      }), (0, i.jsx)(x.default, {
+      }), (0, i.jsx)(V.default, {
         guildId: t,
         users: n,
         max: 3
@@ -181,7 +181,7 @@ function et(e) {
         })]
       })]
     })),
-    m = $(V.default, E, o),
+    m = $(x.default, E, o),
     N = $(w.default, I, o),
     {
       isMuted: p,

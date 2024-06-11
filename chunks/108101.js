@@ -52,9 +52,9 @@ e.exports = function e(t, n, O, M, A, k) {
   }) : y(t) && t.forEach(function(r, i) {
     R.set(i, e(r, n, O, i, t, k))
   });
-  var Y = L ? I ? p : f : I ? keysIn : x,
-    j = P ? void 0 : Y(t);
-  return i(j || t, function(r, i) {
-    j && (r = t[i = r]), a(R, i, e(r, n, O, i, t, k))
+  var j = L ? I ? p : f : I ? keysIn : x,
+    Y = P ? void 0 : j(t);
+  return i(Y || t, function(r, i) {
+    Y && (r = t[i = r]), a(R, i, e(r, n, O, i, t, k))
   }), R
 }

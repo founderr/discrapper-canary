@@ -111,8 +111,8 @@ t.default = function() {
           value: "[0-9]",
           description: "[0-9]"
         },
-        Y = /^[0-9a-f]/i,
-        j = {
+        j = /^[0-9a-f]/i,
+        Y = {
           type: "class",
           value: "[0-9a-f]i",
           description: "[0-9a-f]i"
@@ -392,7 +392,7 @@ t.default = function() {
 
       function ep() {
         var e;
-        return Y.test(t.charAt(X)) ? (e = t.charAt(X), X++) : (e = l, 0 === er && ei(j)), e
+        return j.test(t.charAt(X)) ? (e = t.charAt(X), X++) : (e = l, 0 === er && ei(Y)), e
       }
 
       function eh() {

@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("32173"),
   R = s("734741"),
   T = s("391110"),
-  f = s("75077"),
-  I = s("320319"),
+  I = s("75077"),
+  f = s("320319"),
   S = s("766752");
 let m = e => {
   let {
@@ -51,8 +51,8 @@ t.default = e => {
     leftAlignHeaders: A = !1,
     showAllPerksButton: M,
     headerClassname: C,
-    isFullScreen: N = !0
-  } = e, g = r.useRef(null), P = (0, d.useFreeBoostUserTenureReward)(), [O, x] = r.useState(!1), b = (0, _.useShouldScrollToWhatsNew)(P) || O, h = (0, u.default)("perks-discoverability");
+    isFullScreen: g = !0
+  } = e, N = r.useRef(null), P = (0, d.useFreeBoostUserTenureReward)(), [O, x] = r.useState(!1), b = (0, _.useShouldScrollToWhatsNew)(P) || O, h = (0, u.default)("perks-discoverability");
   r.useLayoutEffect(() => {
     x((0, R.shouldScrollToMarketingMomentContent)())
   }, []), (0, _.useClearNewBadge)(), (0, R.useDismissWhatsNewCardDCs)();
@@ -64,7 +64,7 @@ t.default = e => {
   r.useEffect(() => {
     L && !b && v()
   }, [v, L, b]), r.useEffect(() => {
-    let e = g.current;
+    let e = N.current;
     if (null == e || !b || !L) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
@@ -74,15 +74,15 @@ t.default = e => {
     return () => {
       cancelAnimationFrame(t), L && v()
     }
-  }, [g, b, L, v]);
-  let U = (0, f.usePerksDiscoverabilityStrings)(L),
+  }, [N, b, L, v]);
+  let U = (0, I.usePerksDiscoverabilityStrings)(L),
     B = (0, E.default)(),
-    j = (0, f.useIsPremiumSubscriber)(),
-    k = (0, f.getFilteredPerksDiscoverabilityCards)({
+    j = (0, I.useIsPremiumSubscriber)(),
+    k = (0, I.getFilteredPerksDiscoverabilityCards)({
       perksCards: B,
       variant: i,
       shopMarketingVariation: h,
-      isFullScreen: N,
+      isFullScreen: g,
       showTenureCard: null == P ? void 0 : P.showCard,
       tileOrderVariant: D,
       isPremiumSubscriber: j
@@ -96,7 +96,7 @@ t.default = e => {
       className: S.confettiCanvas,
       environment: y.current
     }), (0, a.jsxs)("div", {
-      ref: g,
+      ref: N,
       className: n()(S.section, {
         [S.centerAlignSection]: !A,
         [S.leftAlignSection]: A
@@ -123,10 +123,10 @@ t.default = e => {
         children: M
       }), (0, a.jsx)("div", {
         className: n()({
-          [S.cardContainer]: N,
-          [S.cardContainerNarrowWidth]: !N
+          [S.cardContainer]: g,
+          [S.cardContainerNarrowWidth]: !g
         }),
-        children: k.map((e, t) => (0, a.jsx)(I.default, {
+        children: k.map((e, t) => (0, a.jsx)(f.default, {
           confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? H : void 0,
           ...e,
           forceShadow: p

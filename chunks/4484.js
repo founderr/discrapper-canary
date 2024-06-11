@@ -40,8 +40,8 @@ t.default = r.forwardRef(function(e, t) {
     placeholder: w,
     required: k,
     textAreaPaddingClassName: B,
-    onChange: V,
-    onPaste: x,
+    onChange: x,
+    onPaste: V,
     onResize: F,
     onFocus: H,
     onBlur: Y,
@@ -175,13 +175,13 @@ t.default = r.forwardRef(function(e, t) {
   }), {
     handlePaste: eg,
     handleGlobalPaste: eL
-  } = (0, O.default)(eN, eS, x), ev = r.useCallback(e => {
+  } = (0, O.default)(eN, eS, V), ev = r.useCallback(e => {
     null == Q || Q()
   }, [Q]), eD = r.useCallback(e => {
-    e !== eI.current ? ef.current && (null == V || V(null, (0, f.toTextValue)(e, {
+    e !== eI.current ? ef.current && (null == x || x(null, (0, f.toTextValue)(e, {
       mode: "raw"
     }), e)) : ef.current && Q()
-  }, [Q, V]);
+  }, [Q, x]);
   r.useLayoutEffect(() => {
     eT.current && (eI.current = n, eh(eN, "parent", {
       value: n

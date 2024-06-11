@@ -349,8 +349,8 @@ let b = e => {
   },
   k = (0, C.default)([w, p.default]),
   B = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext"]),
-  V = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink", "subtext"]),
-  x = r().omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink", "subtext"]),
+  x = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink", "subtext"]),
+  V = r().omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink", "subtext"]),
   F = r().omit((0, C.default)([k, {
     inlineCode: {
       match(e, t, n) {
@@ -403,8 +403,8 @@ let z = (0, C.default)([{
 t.default = {
   RULES: k,
   CHANNEL_TOPIC_RULES: B,
-  VOICE_CHANNEL_STATUS_RULES: V,
-  EMBED_TITLE_RULES: x,
+  VOICE_CHANNEL_STATUS_RULES: x,
+  EMBED_TITLE_RULES: V,
   INLINE_REPLY_RULES: F,
   GUILD_VERIFICATION_FORM_RULES: H,
   GUILD_EVENT_RULES: j,

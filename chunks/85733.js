@@ -78,10 +78,10 @@ var r = n("478497"),
         B = "object" == typeof F && void 0 !== F.value ? F.value : D[F];
       if (!d || null !== B) {
         var U = b && f ? F.replace(/\./g, "%2E") : F,
-          Y = u(D) ? "function" == typeof a ? a(L, U) : L : L + (b ? "." + U : "[" + U + "]");
+          j = u(D) ? "function" == typeof a ? a(L, U) : L : L + (b ? "." + U : "[" + U + "]");
         w.set(t, M);
-        var j = r();
-        j.set(h, w), l(R, e(B, Y, a, o, s, c, d, f, "comma" === a && S && u(D) ? null : m, g, _, b, v, y, E, S, x, j))
+        var Y = r();
+        Y.set(h, w), l(R, e(B, j, a, o, s, c, d, f, "comma" === a && S && u(D) ? null : m, g, _, b, v, y, E, S, x, Y))
       }
     }
     return R

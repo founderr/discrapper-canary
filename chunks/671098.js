@@ -4,17 +4,17 @@ E.r(t), E.d(t, {
     return n
   }
 });
-var s = E("835913"),
-  _ = E("570140"),
-  a = E("675478"),
-  T = E("626135"),
+var _ = E("835913"),
+  s = E("570140"),
+  T = E("675478"),
+  a = E("626135"),
   A = E("981631");
 async function n(e, t) {
-  await (0, a.updateUserGuildSettings)(e, e => (e.guildRecentsDismissedAt = s.Timestamp.fromDate(new Date), !0), a.UserSettingsDelay.INFREQUENT_USER_ACTION), _.default.dispatch({
+  await (0, T.updateUserGuildSettings)(e, e => (e.guildRecentsDismissedAt = _.Timestamp.fromDate(new Date), !0), T.UserSettingsDelay.INFREQUENT_USER_ACTION), s.default.dispatch({
     type: "BULK_CLEAR_RECENTS",
     guildId: e,
     channelIds: t
-  }), T.default.track(A.AnalyticEvents.CHANNEL_LIST_UPDATED, {
+  }), a.default.track(A.AnalyticEvents.CHANNEL_LIST_UPDATED, {
     action_type: "recents_dismissed"
   })
 }

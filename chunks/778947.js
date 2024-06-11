@@ -46,8 +46,8 @@ var i = n("735250"),
   w = n("750858"),
   k = n("981631"),
   B = n("689938"),
-  V = n("822545"),
-  x = n("255963");
+  x = n("822545"),
+  V = n("255963");
 
 function F(e) {
   let {
@@ -73,14 +73,14 @@ function F(e) {
       onMouseLeave: d,
       src: t,
       "aria-hidden": !0,
-      className: a()(E, V.avatar, {
-        [V.compact]: r,
-        [V.clickable]: null != s,
-        [V.communicationDisabledOpacity]: c
+      className: a()(E, x.avatar, {
+        [x.compact]: r,
+        [x.clickable]: null != s,
+        [x.communicationDisabledOpacity]: c
       }),
       alt: " "
     }), null == n || r ? null : (0, i.jsx)("img", {
-      className: V.avatarDecoration,
+      className: x.avatarDecoration,
       src: n,
       alt: " ",
       "aria-hidden": !0
@@ -116,7 +116,7 @@ function H(e, t, n) {
       renderRemixTag: !0
     }), o && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("i", {
-        className: V.separator,
+        className: x.separator,
         children: ":"
       }), " "]
     })]
@@ -141,7 +141,7 @@ function Y(e) {
   } = e;
   return (0, i.jsxs)(i.Fragment, {
     children: [!l && n, (0, i.jsxs)(u.H, {
-      className: a()(V.header, I),
+      className: a()(x.header, I),
       "aria-describedby": E,
       "aria-labelledby": c,
       children: [d && l && (0, i.jsx)(b.default, {
@@ -160,7 +160,7 @@ function Y(e) {
         timestamp: t.timestamp,
         className: T
       }), null != S && S.length > 0 ? (0, i.jsx)("div", {
-        className: V.badgesContainer,
+        className: x.badgesContainer,
         children: S
       }) : null]
     })]
@@ -179,22 +179,22 @@ function W(e) {
     return null === (e = N.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince
   });
   return (0, i.jsx)(u.Tooltip, {
-    tooltipClassName: V.nitroAuthorBadgeTootip,
+    tooltipClassName: x.nitroAuthorBadgeTootip,
     shouldShow: null != r,
     text: B.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: r
     }),
     onTooltipShow: () => (0, p.default)(n.id),
     children: e => (0, i.jsx)(u.Clickable, {
-      className: V.nitroAuthorBadgeContainer,
+      className: x.nitroAuthorBadgeContainer,
       onClick: () => j(t),
       "aria-label": B.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
         date: r
       }),
       children: (0, i.jsx)("img", {
         alt: "",
-        className: V.nitroBadgeSvg,
-        src: x,
+        className: x.nitroBadgeSvg,
+        src: V,
         ...e
       })
     })
@@ -209,7 +209,7 @@ function K(e) {
     renderPopout: h,
     showTimestampOnHover: N,
     roleIcon: b,
-    subscribeToGroupId: x,
+    subscribeToGroupId: V,
     hideTimestamp: j,
     className: K,
     channel: z
@@ -240,8 +240,8 @@ function K(e) {
       id: G
     } = b, w = S ? 32 : 80, {
       avatarSrc: B,
-      avatarDecorationSrc: V,
-      eventHandlers: x
+      avatarDecorationSrc: x,
+      eventHandlers: V
     } = (0, O.default)({
       user: b,
       guildId: a,
@@ -278,9 +278,9 @@ function K(e) {
         position: o.isMobile ? "window_center" : "right",
         onRequestClose: R,
         children: e => F({
-          ...x,
+          ...V,
           avatarSrc: Y,
-          avatarDecorationSrc: V,
+          avatarDecorationSrc: x,
           compact: S,
           onClick: N,
           onContextMenu: m,
@@ -293,9 +293,9 @@ function K(e) {
     }) : (0, i.jsx)(_.AnalyticsLocationProvider, {
       value: D,
       children: F({
-        ...x,
+        ...V,
         avatarSrc: Y,
-        avatarDecorationSrc: V,
+        avatarDecorationSrc: x,
         compact: S,
         onClick: N,
         onContextMenu: m,
@@ -329,13 +329,13 @@ function K(e) {
       } = e;
       return (0, i.jsx)(D.default, {
         ...b,
-        className: V.roleIcon,
+        className: x.roleIcon,
         onClick: t
       })
     }
   }, "role-icon-children") : (!s || ee) && null != b ? (0, i.jsx)(D.default, {
     ...b,
-    className: V.roleIcon
+    className: x.roleIcon
   }, "role-icon-children") : null, en = (0, G.renderSystemTag)({
     message: t,
     channel: z,
@@ -360,7 +360,7 @@ function K(e) {
   let eu = {};
   eu[w.UsernameDecorationTypes.SYSTEM_TAG] = en, eu[w.UsernameDecorationTypes.BADGES] = ei;
   let ed = H(e, Z, eu),
-    e_ = (0, f.getMessageUsernameId)(t, x),
+    e_ = (0, f.getMessageUsernameId)(t, V),
     ec = (0, f.getMessageTimestampId)(t),
     eE = j ? "".concat(e_) : "".concat(e_, " ").concat(ec),
     eI = (null == n ? void 0 : n.state) === A.ReferencedMessageState.LOADED ? (0, f.getMessageReplyId)(t) : void 0;
@@ -375,17 +375,17 @@ function K(e) {
             ...e,
             width: 12,
             height: 12,
-            className: s ? V.compactCommunicationDisabled : V.communicationDisabled
+            className: s ? x.compactCommunicationDisabled : x.communicationDisabled
           }), (0, i.jsx)(u.HiddenVisually, {
             children: B.default.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
           })]
         })
       }), ed]
     }),
-    usernameSpanId: (0, f.getMessageUsernameId)(t, x),
-    usernameClassName: a()(V.headerText, {
-      [V.hasRoleIcon]: null != et,
-      [V.hasBadges]: null != en || el.length > 0
+    usernameSpanId: (0, f.getMessageUsernameId)(t, V),
+    usernameClassName: a()(x.headerText, {
+      [x.hasRoleIcon]: null != et,
+      [x.hasBadges]: null != en || el.length > 0
     }),
     compact: s,
     showTimestamp: !0 !== j,

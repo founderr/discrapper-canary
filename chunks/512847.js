@@ -70,7 +70,7 @@ function P() {
   }), null
 }
 
-function M() {
+function y() {
   return L([_.default, I.default, g.default, u.default], () => {
     let e = _.default.getChannel(g.default.getVoiceChannelId()),
       t = null == e ? void 0 : e.type,
@@ -104,7 +104,7 @@ function M() {
   }), null
 }
 
-function y() {
+function M() {
   return L([T.default], () => T.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
@@ -252,6 +252,6 @@ function G() {
 
 function w() {
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(P, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
+    children: [(0, a.jsx)(P, {}), (0, a.jsx)(y, {}), (0, a.jsx)(M, {}), (0, a.jsx)(D, {}), (0, a.jsx)(x, {}), (0, a.jsx)(U, {}), (0, a.jsx)(b, {}), (0, a.jsx)(j, {}), (0, a.jsx)(G, {})]
   })
 }

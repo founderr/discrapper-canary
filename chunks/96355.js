@@ -346,7 +346,7 @@ n = this, r = function(e) {
       for (a = t; a < n; a += r) o = G(a, e[a], e[a + 1], o);
     else
       for (a = n - r; a >= t; a -= r) o = G(a, e[a], e[a + 1], o);
-    return o && Y(o, o.next) && (V(o), o = o.next), o
+    return o && j(o, o.next) && (V(o), o = o.next), o
   }
 
   function I(e, t) {
@@ -354,7 +354,7 @@ n = this, r = function(e) {
     t || (t = e);
     var n, r = e;
     do
-      if (n = !1, r.steiner || !Y(r, r.next) && 0 !== U(r.prev, r, r.next)) r = r.next;
+      if (n = !1, r.steiner || !j(r, r.next) && 0 !== U(r.prev, r, r.next)) r = r.next;
       else {
         if (V(r), (r = t = r.prev) === r.next) return null;
         n = !0
@@ -410,7 +410,7 @@ n = this, r = function(e) {
           do {
             var i = r.prev,
               a = r.next.next;
-            !Y(i, a) && j(i, r, r.next, a) && z(i, a) && z(a, i) && (t.push(i.i / n), t.push(r.i / n), t.push(a.i / n), V(r), V(r.next), r = e = a), r = r.next
+            !j(i, a) && Y(i, r, r.next, a) && z(i, a) && z(a, i) && (t.push(i.i / n), t.push(r.i / n), t.push(a.i / n), V(r), V(r.next), r = e = a), r = r.next
           } while (r !== e);
           return r
         }(e, t, n), t, n, r, i, a, 2) : 2 === o && function(e, t, n, r, i, a) {
@@ -421,7 +421,7 @@ n = this, r = function(e) {
                   return e.next.i !== t.i && e.prev.i !== t.i && ! function(e, t) {
                     var n = e;
                     do {
-                      if (n.i !== e.i && n.next.i !== e.i && n.i !== t.i && n.next.i !== t.i && j(n, n.next, e, t)) return !0;
+                      if (n.i !== e.i && n.next.i !== e.i && n.i !== t.i && n.next.i !== t.i && Y(n, n.next, e, t)) return !0;
                       n = n.next
                     } while (n !== e);
                     return !1
@@ -463,12 +463,12 @@ n = this, r = function(e) {
     return (t.y - e.y) * (n.x - t.x) - (t.x - e.x) * (n.y - t.y)
   }
 
-  function Y(e, t) {
+  function j(e, t) {
     return e.x === t.x && e.y === t.y
   }
 
-  function j(e, t, n, r) {
-    return !!(Y(e, t) && Y(n, r) || Y(e, r) && Y(n, t)) || U(e, t, n) > 0 != U(e, t, r) > 0 && U(n, r, e) > 0 != U(n, r, t) > 0
+  function Y(e, t, n, r) {
+    return !!(j(e, t) && j(n, r) || j(e, r) && j(n, t)) || U(e, t, n) > 0 != U(e, t, r) > 0 && U(n, r, e) > 0 != U(n, r, t) > 0
   }
 
   function z(e, t) {
@@ -593,7 +593,7 @@ n = this, r = function(e) {
     void 0 === a && (a = !1);
     var o = A(e, r);
     o.length < t.length + 2 && M(o, t.length + 2 - o.length);
-    var s, u = ej(o, t.length),
+    var s, u = eY(o, t.length),
       c = t.map(function(e) {
         return A(e, r)
       }),
@@ -866,10 +866,10 @@ n = this, r = function(e) {
       F > 1 && (s *= Math.sqrt(F), u *= Math.sqrt(F));
       var B = (l = e, d = t, f = n, p = r, h = i, m = a, g = s, _ = u, b = N, y = (v = I) * (l - f) / 2 + b * (d - p) / 2, E = -b * (l - f) / 2 + v * (d - p) / 2, S = g * g, x = _ * _, w = y * y, (C = S * x - S * (T = E * E) - x * w) < 0 && (C = 0), C /= S * T + x * w, D = (C = Math.sqrt(C) * (h === m ? -1 : 1)) * g / _ * E, O = -(C * _) / g * y, k = o(1, 0, M = (y - D) / g, A = (E - O) / _), R = o(M, A, (-y - D) / g, (-E - O) / _), 0 === m && R > 0 && (R -= ed), 1 === m && R < 0 && (R += ed), [v * D - b * O + (l + f) / 2, b * D + v * O + (d + p) / 2, k, R]),
         U = [],
-        Y = B[2],
-        j = B[3],
-        z = Math.max(Math.ceil(Math.abs(j) / (ed / 4)), 1);
-      j /= z;
+        j = B[2],
+        Y = B[3],
+        z = Math.max(Math.ceil(Math.abs(Y) / (ed / 4)), 1);
+      Y /= z;
       for (var H = 0; H < z; H++) U.push(function(e, t) {
         var n = 4 / 3 * Math.tan(t / 4),
           r = Math.cos(e),
@@ -877,7 +877,7 @@ n = this, r = function(e) {
           a = Math.cos(e + t),
           o = Math.sin(e + t);
         return [r, i, r - i * n, i + r * n, a + o * n, o - a * n, a, o]
-      }(Y, j)), Y += j;
+      }(j, Y)), j += Y;
       return U.map(function(e) {
         for (var t = 0; t < e.length; t += 2) {
           var n = e[t + 0],
@@ -1220,10 +1220,10 @@ n = this, r = function(e) {
       F > 1 && (n *= Math.sqrt(F), r *= Math.sqrt(F));
       var B = (c = e, l = t, d = s, f = u, p = a, h = o, m = n, g = r, _ = N, y = (v = I) * (c - d) / 2 + _ * (l - f) / 2, E = -_ * (c - d) / 2 + v * (l - f) / 2, S = m * m, x = g * g, w = y * y, (C = S * x - S * (T = E * E) - x * w) < 0 && (C = 0), C /= S * T + x * w, D = (C = Math.sqrt(C) * (p === h ? -1 : 1)) * m / g * E, O = -(C * g) / m * y, k = b(1, 0, M = (y - D) / m, A = (E - O) / g), R = b(M, A, (-y - D) / m, (-E - O) / g), 0 === h && R > 0 && (R -= ex), 1 === h && R < 0 && (R += ex), [v * D - _ * O + (c + d) / 2, _ * D + v * O + (l + f) / 2, k, R]),
         U = [],
-        Y = B[2],
-        j = B[3],
-        z = Math.max(Math.ceil(Math.abs(j) / (ex / 4)), 1);
-      j /= z;
+        j = B[2],
+        Y = B[3],
+        z = Math.max(Math.ceil(Math.abs(Y) / (ex / 4)), 1);
+      Y /= z;
       for (var H = 0; H < z; H++) U.push(function(e, t) {
         var n = 4 / 3 * Math.tan(t / 4),
           r = Math.cos(e),
@@ -1231,7 +1231,7 @@ n = this, r = function(e) {
           a = Math.cos(e + t),
           o = Math.sin(e + t);
         return [r, i, r - i * n, i + r * n, a + o * n, o - a * n, a, o]
-      }(Y, j)), Y += j;
+      }(j, Y)), j += Y;
       return U.map(function(e) {
         for (var t = 0; t < e.length; t += 2) {
           var i = e[t + 0],
@@ -1500,7 +1500,7 @@ n = this, r = function(e) {
     eU = function(e, t) {
       return e < t ? -1 : e > t ? 1 : e >= t ? 0 : NaN
     },
-    eY = function(e) {
+    ej = function(e) {
       var t;
       return 1 === e.length && (t = e, e = function(e, n) {
         return eU(t(e), n)
@@ -1521,10 +1521,10 @@ n = this, r = function(e) {
         }
       }
     },
-    ej = (eY(eU).right, function(e, t) {
+    eY = (ej(eU).right, function(e, t) {
       var n, r, i, a;
       return function(e, t) {
-        for (var n = e.objects.triangles.geometries, r = eY(function(e) {
+        for (var n = e.objects.triangles.geometries, r = ej(function(e) {
             return e.area
           }).left; n.length > t;) ! function() {
           var t = n[0],

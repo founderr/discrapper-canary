@@ -20,15 +20,15 @@ var s = a("735250"),
   x = a("470623"),
   C = a("983200"),
   _ = a("153124"),
-  T = a("350722"),
-  p = a("586791"),
-  S = a("839811"),
+  p = a("350722"),
+  S = a("586791"),
+  T = a("839811"),
   E = a("185403"),
   N = a("740727"),
   M = a("810090"),
   A = a("127654"),
-  v = a("124252"),
-  I = a("689938"),
+  I = a("124252"),
+  v = a("689938"),
   j = a("382170");
 let O = [{
     name: "Media Post Thumbnail",
@@ -78,7 +78,7 @@ let F = e => {
     return {
       textAreaState: t
     }
-  }), C = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), _ = (0, v.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), F = null != _ && _.length > 0, L = n.useMemo(() => {
+  }), C = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), _ = (0, I.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), F = null != _ && _.length > 0, L = n.useMemo(() => {
     let e = (null == _ ? void 0 : _.length) > 1 ? 1.15 : 1;
     return {
       width: 153 * e,
@@ -116,7 +116,7 @@ let F = e => {
         disableSpoiler: !0
       })
     })
-  }, D = (0, s.jsx)(T.default, {
+  }, D = (0, s.jsx)(p.default, {
     color: d.ButtonColors.CUSTOM,
     className: r()(j.uploadFileInputContainer),
     innerClassName: j.uploadThumbnailContainer,
@@ -125,7 +125,7 @@ let F = e => {
     "aria-hidden": !0,
     filters: O,
     "aria-describedby": R,
-    "aria-label": F ? I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
+    "aria-label": F ? v.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : v.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
     children: F ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(b, {
         mediaAttachments: _,
@@ -138,20 +138,20 @@ let F = e => {
         children: [(0, s.jsx)(d.Text, {
           variant: "text-xs/medium",
           color: "header-secondary",
-          children: I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL
-        }), null == M && (0, s.jsx)(p.default, {
+          children: v.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL
+        }), null == M && (0, s.jsx)(S.default, {
           className: j.editIcon,
           width: 16,
           height: 16
         })]
       })]
     }) : (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(S.default, {
+      children: [(0, s.jsx)(T.default, {
         className: j.uploadIcon
       }), (0, s.jsx)(d.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL
+        children: v.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL
       })]
     })
   });
@@ -162,12 +162,12 @@ let F = e => {
       actions: (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(f.default, {
           className: j.action,
-          tooltip: I.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
+          tooltip: v.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
           onClick: y,
           children: (0, s.jsx)(E.default, {})
         }), (0, s.jsx)(f.default, {
           className: j.action,
-          tooltip: I.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
+          tooltip: v.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
           onClick: () => c.default.remove(l.id, M.id, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type),
           dangerous: !0,
           children: (0, s.jsx)(N.default, {})

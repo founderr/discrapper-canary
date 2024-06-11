@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return E
   },
   generateExplicitImageOptions: function() {
-    return f
+    return _
   },
   generateVerificationLevelOptions: function() {
     return c
@@ -30,15 +30,15 @@ function u(e) {
     description: e.desc,
     highlightColor: function(e) {
       switch (e) {
-        case _("PRIMARY_400"):
+        case I("PRIMARY_400"):
           return a.HighlightColors.ACCENT;
-        case _("GREEN_360"):
+        case I("GREEN_360"):
           return a.HighlightColors.GREEN;
-        case _("YELLOW_360"):
+        case I("YELLOW_360"):
           return a.HighlightColors.YELLOW;
-        case _("ORANGE_345"):
+        case I("ORANGE_345"):
           return a.HighlightColors.ORANGE;
-        case _("RED_400"):
+        case I("RED_400"):
           return a.HighlightColors.RED;
         default:
           return a.HighlightColors.NONE
@@ -62,26 +62,26 @@ function c() {
     name: r.default.Messages.VERIFICATION_LEVEL_LOW,
     desc: r.default.Messages.VERIFICATION_LEVEL_LOW_CRITERIA,
     value: i.VerificationLevels.LOW,
-    color: t ? void 0 : _("GREEN_360")
+    color: t ? void 0 : I("GREEN_360")
   }, {
     name: r.default.Messages.VERIFICATION_LEVEL_MEDIUM,
     desc: r.default.Messages.VERIFICATION_LEVEL_MEDIUM_CRITERIA.format({
       min: i.VerificationCriteria.ACCOUNT_AGE
     }),
     value: i.VerificationLevels.MEDIUM,
-    color: t ? void 0 : _("YELLOW_360")
+    color: t ? void 0 : I("YELLOW_360")
   }, {
     name: r.default.Messages.VERIFICATION_LEVEL_HIGH,
     desc: r.default.Messages.VERIFICATION_LEVEL_HIGH_CRITERIA.format({
       min: i.VerificationCriteria.MEMBER_AGE
     }),
     value: i.VerificationLevels.HIGH,
-    color: t ? void 0 : _("ORANGE_345")
+    color: t ? void 0 : I("ORANGE_345")
   }, {
     name: r.default.Messages.VERIFICATION_LEVEL_VERY_HIGH,
     desc: r.default.Messages.VERIFICATION_LEVEL_VERY_HIGH_CRITERIA,
     value: i.VerificationLevels.VERY_HIGH,
-    color: t ? void 0 : _("RED_400")
+    color: t ? void 0 : I("RED_400")
   }]
 }
 
@@ -91,21 +91,21 @@ function d() {
     name: r.default.Messages.EXPLICIT_CONTENT_FILTER_HIGH_V2,
     desc: r.default.Messages.EXPLICIT_CONTENT_FILTER_HIGH_DESCRIPTION_V2,
     value: i.GuildExplicitContentFilterTypes.ALL_MEMBERS,
-    color: _("RED_400")
+    color: I("RED_400")
   }, {
     name: r.default.Messages.EXPLICIT_CONTENT_FILTER_MEDIUM_V2,
     desc: r.default.Messages.EXPLICIT_CONTENT_FILTER_MEDIUM_DESCRIPTION_V2,
     value: i.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES,
     disabled: e,
     tooltipText: e ? r.default.Messages.TOOLTIP_COMMUNITY_FEATURE_DISABLED : null,
-    color: _("YELLOW_360")
+    color: I("YELLOW_360")
   }, {
     name: r.default.Messages.EXPLICIT_CONTENT_FILTER_DISABLED_V2,
     desc: r.default.Messages.EXPLICIT_CONTENT_FILTER_DISABLED_DESCRIPTION_V2,
     value: i.GuildExplicitContentFilterTypes.DISABLED,
     disabled: e,
     tooltipText: e ? r.default.Messages.TOOLTIP_COMMUNITY_FEATURE_DISABLED : null,
-    color: _("PRIMARY_400")
+    color: I("PRIMARY_400")
   }]
 }
 
@@ -114,39 +114,39 @@ function E() {
     name: r.default.Messages.USER_DM_SPAM_FILTER_FRIENDS_AND_NON_FRIENDS,
     desc: r.default.Messages.USER_DM_SPAM_FILTER_FRIENDS_AND_NON_FRIENDS_HELP,
     value: n.DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS,
-    color: _("GREEN_360")
+    color: I("GREEN_360")
   }, {
     name: r.default.Messages.USER_DM_SPAM_FILTER_NON_FRIENDS,
     desc: r.default.Messages.USER_DM_SPAM_FILTER_NON_FRIENDS_HELP,
     value: n.DmSpamFilterV2.NON_FRIENDS,
-    color: _("YELLOW_360")
+    color: I("YELLOW_360")
   }, {
     name: r.default.Messages.USER_DM_SPAM_FILTER_DISABLED,
     desc: r.default.Messages.USER_DM_SPAM_FILTER_DISABLED_HELP,
     value: n.DmSpamFilterV2.DISABLED,
-    color: _("RED_400")
+    color: I("RED_400")
   }]
 }
 
-function f() {
+function _() {
   return [{
     name: r.default.Messages.USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS_V2,
     desc: r.default.Messages.USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS_HELP_V2,
     value: o.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS,
-    color: _("GREEN_360")
+    color: I("GREEN_360")
   }, {
     name: r.default.Messages.USER_EXPLICIT_CONTENT_FILTER_NON_FRIENDS_V2,
     desc: r.default.Messages.USER_EXPLICIT_CONTENT_FILTER_NON_FRIENDS_HELP_V2,
     value: o.ExplicitContentFilterTypes.NON_FRIENDS,
-    color: _("YELLOW_360")
+    color: I("YELLOW_360")
   }, {
     name: r.default.Messages.USER_EXPLICIT_CONTENT_FILTER_DISABLED_V2,
     desc: r.default.Messages.USER_EXPLICIT_CONTENT_FILTER_DISABLED_HELP_V2,
     value: o.ExplicitContentFilterTypes.DISABLED,
-    color: _("RED_400")
+    color: I("RED_400")
   }]
 }
 
-function _(e) {
+function I(e) {
   return l.default.unsafe_rawColors[e].css
 }

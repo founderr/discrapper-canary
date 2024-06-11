@@ -26,8 +26,8 @@ var a = s("735250"),
   v = s("670638"),
   R = s("667105"),
   M = s("46140"),
-  O = s("689938"),
-  L = s("96268");
+  L = s("689938"),
+  O = s("96268");
 let y = n.forwardRef(function(e, t) {
   var s, l;
   let {
@@ -72,18 +72,18 @@ let y = n.forwardRef(function(e, t) {
   }, [G.config.colors.primary]);
   return (0, a.jsx)("div", {
     "aria-hidden": !ee,
-    className: i()(A, L.contentExpanded, {
-      [L.contentInteractable]: ee
+    className: i()(A, O.contentExpanded, {
+      [O.contentInteractable]: ee
     }),
     children: X ? (0, a.jsxs)("div", {
-      className: L.questAcceptedContent,
+      className: O.questAcceptedContent,
       ref: t,
       children: [(0, a.jsxs)("div", {
-        className: L.utils,
+        className: O.utils,
         children: [(0, a.jsxs)("div", {
-          className: L.questAcceptedContentHeading,
+          className: O.questAcceptedContentHeading,
           children: [(0, a.jsx)(I.default, {
-            className: L.questProgressRewardTile,
+            className: O.questProgressRewardTile,
             learnMoreStyle: "icon",
             quest: G,
             questContent: T.QuestContent.QUEST_BAR
@@ -96,12 +96,12 @@ let y = n.forwardRef(function(e, t) {
                 taskDetails: Z
               })
             }), (0, a.jsx)(d.Text, {
-              className: L.questAcceptedContentCopySubheading,
+              className: O.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
-              children: J ? O.default.Messages.QUESTS_CLAIM_BY_DATE.format({
+              children: J ? L.default.Messages.QUESTS_CLAIM_BY_DATE.format({
                 expirationDate: k
-              }) : O.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+              }) : L.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                 expirationDate: H
               })
             })]
@@ -116,23 +116,23 @@ let y = n.forwardRef(function(e, t) {
           showShareLink: !0,
           children: e => (0, a.jsx)(d.Clickable, {
             ...e,
-            className: L.submenuWrapper,
-            "aria-label": O.default.Messages.ACTIONS,
+            className: O.submenuWrapper,
+            "aria-label": L.default.Messages.ACTIONS,
             children: (0, a.jsx)(c.default, {
-              className: L.submenuIcon
+              className: O.submenuIcon
             })
           })
         })]
       }), J ? (0, a.jsx)(d.Button, {
-        className: i()(L.cta, L.ctaClaimReward),
+        className: i()(O.cta, O.ctaClaimReward),
         style: $ ? en : void 0,
         color: d.Button.Colors.CUSTOM,
         fullWidth: !0,
         onClick: q,
         size: d.Button.Sizes.NONE,
-        children: O.default.Messages.QUESTS_CLAIM_REWARD
+        children: L.default.Messages.QUESTS_CLAIM_REWARD
       }) : (0, a.jsx)(d.Text, {
-        className: L.description,
+        className: O.description,
         color: "always-white",
         variant: "text-xs/normal",
         children: es
@@ -143,10 +143,10 @@ let y = n.forwardRef(function(e, t) {
       })]
     }) : (0, a.jsxs)("div", {
       children: [(0, a.jsxs)("div", {
-        className: L.questPromoContent,
+        className: O.questPromoContent,
         ref: t,
         children: [(0, a.jsxs)("div", {
-          className: L.utils,
+          className: O.utils,
           children: [(0, a.jsx)(S.default, {
             color: "always-white"
           }), (0, a.jsx)(v.QuestsEntryContextMenuPopout, {
@@ -159,45 +159,45 @@ let y = n.forwardRef(function(e, t) {
             showShareLink: !0,
             children: e => (0, a.jsx)(d.Clickable, {
               ...e,
-              className: L.submenuWrapper,
-              "aria-label": O.default.Messages.ACTIONS,
+              className: O.submenuWrapper,
+              "aria-label": L.default.Messages.ACTIONS,
               children: (0, a.jsx)(c.default, {
-                className: L.submenuIcon
+                className: O.submenuIcon
               })
             })
           })]
         }), (0, a.jsxs)("div", {
-          className: L.details,
+          className: O.details,
           children: [(0, a.jsx)(I.default, {
-            className: L.rewardTile,
+            className: O.rewardTile,
             learnMoreStyle: "text",
             quest: G,
             questContent: T.QuestContent.QUEST_BAR
           }), (0, a.jsx)(d.Heading, {
-            className: L.title,
+            className: O.title,
             color: "always-white",
             variant: "heading-md/medium",
-            children: O.default.Messages.QUESTS_TITLE.format({
+            children: L.default.Messages.QUESTS_TITLE.format({
               questName: G.config.messages.questName
             })
           }), (0, a.jsx)(d.Text, {
-            className: L.description,
+            className: O.description,
             color: "always-white",
             variant: "text-sm/normal",
             children: es
           })]
         }), (0, a.jsx)(d.Button, {
-          className: L.cta,
+          className: O.cta,
           style: "1232852290197655573" !== G.id ? en : void 0,
           color: d.Button.Colors.CUSTOM,
           fullWidth: !0,
           onClick: ee ? Y : void 0,
           size: d.Button.Sizes.NONE,
           submitting: B,
-          children: O.default.Messages.QUESTS_ACCEPT_QUEST
+          children: L.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
-        className: L.heroAssetWrapper,
+        className: O.heroAssetWrapper,
         style: {
           color: G.config.colors.secondary
         },
@@ -209,7 +209,7 @@ let y = n.forwardRef(function(e, t) {
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: L.heroAsset,
+            className: O.heroAsset,
             controls: !1,
             children: (0, a.jsx)("source", {
               src: et,
@@ -221,7 +221,7 @@ let y = n.forwardRef(function(e, t) {
           children: e => (0, a.jsx)("img", {
             ref: e,
             alt: "",
-            className: L.heroAsset,
+            className: O.heroAsset,
             src: et
           })
         })
@@ -239,13 +239,13 @@ function D(e) {
     location: M.QuestsExperimentLocations.QUESTS_BAR,
     autoTrackExposure: !0
   }) ? (0, a.jsx)(d.Button, {
-    className: L.cta,
+    className: O.cta,
     style: t,
     color: d.Button.Colors.CUSTOM,
     fullWidth: !0,
     onClick: s,
     size: d.Button.Sizes.NONE,
-    children: O.default.Messages.QUESTS_GET_THIS_GAME
+    children: L.default.Messages.QUESTS_GET_THIS_GAME
   }) : null
 }
 t.default = y

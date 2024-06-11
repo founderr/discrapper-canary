@@ -17,12 +17,12 @@ var a = n("470079"),
 function E(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
     [E, _] = a.useState(!1),
-    [f, S] = a.useState(null),
-    T = a.useMemo(() => o.default.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
-    h = (0, d.useCanSendStageStartNotification)(e);
+    [S, T] = a.useState(null),
+    f = a.useMemo(() => o.default.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
+    N = (0, d.useCanSendStageStartNotification)(e);
   return {
     loading: E,
-    error: f,
+    error: S,
     onSave: async a => {
       let {
         topic: d,
@@ -30,12 +30,12 @@ function E(e, t) {
         sendStartNotification: E
       } = a;
       if (null != e && "" !== d && null != o) {
-        _(!0), S(null), null != n && (l.default.selectGuild(n), s.default.selectVoiceChannel(e.id));
+        _(!0), T(null), null != n && (l.default.selectGuild(n), s.default.selectVoiceChannel(e.id));
         try {
           let n;
-          null != T ? n = await u.editStage(e, d, o) : (n = await u.startStage(e, d, o, null != E && E), h && r.hideHotspot(c.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), t(n)
+          null != f ? n = await u.editStage(e, d, o) : (n = await u.startStage(e, d, o, null != E && E), N && r.hideHotspot(c.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), t(n)
         } catch (e) {
-          S(new i.APIError(e)), _(!1)
+          T(new i.APIError(e)), _(!1)
         }
       }
     }

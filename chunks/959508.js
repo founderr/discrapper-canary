@@ -37,7 +37,7 @@ function L(e) {
     disableAutofocus: u,
     promptIndex: g,
     dragIndex: L,
-    includeCount: p,
+    includeCount: A,
     singleColumn: M,
     onPromptDragComplete: D,
     onPromptDragStart: v,
@@ -168,7 +168,7 @@ function L(e) {
           count: n.options.length,
           total: P
         })
-      }), (0, a.jsx)(A, {
+      }), (0, a.jsx)(p, {
         guild: s,
         prompt: n,
         promptIndex: g,
@@ -203,7 +203,7 @@ function L(e) {
             children: (0, a.jsx)(o.Text, {
               variant: "text-sm/normal",
               color: "interactive-normal",
-              children: p ? C.default.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({
+              children: A ? C.default.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({
                 count: Z
               }) : C.default.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL
             })
@@ -269,7 +269,7 @@ function O(e) {
   })
 }
 
-function A(e) {
+function p(e) {
   let {
     guild: t,
     prompt: s,

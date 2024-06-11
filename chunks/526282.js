@@ -88,10 +88,10 @@ t.default = s.memo(function(e) {
   }), L = (0, C.useFakeDiscoveryUpsellClans)(O), P = (0, l.useSpring)({
     ref: g,
     ...p
-  }), M = (0, l.useSpring)({
+  }), y = (0, l.useSpring)({
     ref: T,
     ...p
-  }), y = (0, l.useSpring)({
+  }), M = (0, l.useSpring)({
     ref: A,
     ...p
   }), D = (0, l.useSpring)({
@@ -140,7 +140,7 @@ t.default = s.memo(function(e) {
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
-          style: I ? void 0 : M,
+          style: I ? void 0 : y,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[1],
             className: m.clanCardInnerLeft
@@ -154,7 +154,7 @@ t.default = s.memo(function(e) {
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
-          style: I ? void 0 : y,
+          style: I ? void 0 : M,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[2],
             className: m.clanCardInnerRight

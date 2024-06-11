@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return L
   }
 });
 var i = s("735250");
@@ -17,8 +17,8 @@ var l = s("399606"),
   C = s("506071"),
   _ = s("724598"),
   f = s("629481"),
-  h = s("981631"),
-  S = s("689938"),
+  S = s("981631"),
+  h = s("689938"),
   x = s("525799");
 
 function I() {
@@ -32,15 +32,15 @@ function I() {
       role: void 0,
       ctaComponent: null,
       imageUrl: (0, n.getAssetCDNUrl)("server_products/storefront/preview-thumbnail.png"),
-      name: S.default.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
-      description: S.default.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
-      formattedPrice: (0, c.formatPrice)(0, h.CurrencyCodes.USD, {
+      name: h.default.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
+      description: h.default.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
+      formattedPrice: (0, c.formatPrice)(0, S.CurrencyCodes.USD, {
         localeMatcher: "best fit",
         style: "currency",
         maximumSignificantDigits: 1
       }),
       shouldShowFullDescriptionButton: !1,
-      productType: S.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE,
+      productType: h.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE,
       onTapCard: () => null,
       hideRoleTag: !0,
       lineClamp: 3,
@@ -55,7 +55,7 @@ function I() {
   })
 }
 
-function L() {
+function p() {
   return (0, i.jsxs)("div", {
     className: x.learnMoreTipContainer,
     children: [(0, i.jsx)(u.default, {
@@ -63,14 +63,14 @@ function L() {
     }), (0, i.jsx)(r.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
-      children: S.default.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
+      children: h.default.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
         learnMoreLink: f.SERVER_SHOP_URL
       })
     })]
   })
 }
 
-function p(e) {
+function L(e) {
   let {
     guildId: t
   } = e;
@@ -82,6 +82,6 @@ function p(e) {
         guildId: t,
         showCTA: !0
       })]
-    }), (0, i.jsx)(L, {})]
+    }), (0, i.jsx)(p, {})]
   })
 }

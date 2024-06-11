@@ -30,18 +30,18 @@ function A(e) {
     user: l,
     displayProfile: A,
     autoFocusNote: x = !1,
-    scrollToConnections: N = !1
+    scrollToConnections: C = !1
   } = e, {
-    trackUserProfileAction: C
+    trackUserProfileAction: N
   } = (0, S.useUserProfileAnalyticsContext)(), U = (0, a.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
-    theme: h
-  } = (0, _.useUserProfileThemeContext)(), P = (0, a.useStateFromStores)([c.default], () => c.default.locale), R = (0, u.default)("user_profile"), M = (null == A ? void 0 : A.bio) != null && (null == A ? void 0 : A.bio) !== "" || (0, r.default)(l.id), j = (0, E.default)(l.id), y = i.useRef(null);
+    theme: P
+  } = (0, _.useUserProfileThemeContext)(), h = (0, a.useStateFromStores)([c.default], () => c.default.locale), R = (0, u.default)("user_profile"), M = (null == A ? void 0 : A.bio) != null && (null == A ? void 0 : A.bio) !== "" || (0, r.default)(l.id), j = (0, E.default)(l.id), y = i.useRef(null);
   return (i.useLayoutEffect(() => {
-    if (N) {
+    if (C) {
       var e;
       null == y || null === (e = y.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [N]), U) ? (0, s.jsx)(p.default, {}) : (0, s.jsxs)(n.ScrollerThin, {
+  }, [C]), U) ? (0, s.jsx)(p.default, {}) : (0, s.jsxs)(n.ScrollerThin, {
     fade: !0,
     className: g.infoScroller,
     children: [(0, s.jsxs)("div", {
@@ -82,7 +82,7 @@ function A(e) {
           userId: l.id,
           autoFocus: x,
           className: g.note,
-          onUpdate: () => C({
+          onUpdate: () => N({
             action: "SET_NOTE"
           })
         })]
@@ -90,8 +90,8 @@ function A(e) {
     }), (0, s.jsx)(v.ConnectedUserAccounts, {
       ref: y,
       connectedAccounts: j,
-      theme: h,
-      locale: P,
+      theme: P,
+      locale: h,
       className: g.userInfoSection,
       userId: l.id
     })]

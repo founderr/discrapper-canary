@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return V
+    return x
   }
 }), n("47120");
 var i = n("735250"),
@@ -44,12 +44,12 @@ function B(e) {
   e.stopPropagation()
 }
 
-function V(e) {
+function x(e) {
   let {
     user: t,
     guildId: n,
-    channelId: V,
-    messageId: x,
+    channelId: x,
+    messageId: V,
     roleId: F,
     setNote: H,
     closePopout: Y,
@@ -122,7 +122,7 @@ function V(e) {
       p.default.track(G.AnalyticEvents.OPEN_POPOUT, {
         type: "Profile Popout",
         guild_id: n,
-        channel_id: V,
+        channel_id: x,
         other_user_id: t.id,
         application_id: null != en ? en.application_id : void 0,
         application_name: null != en ? en.name : void 0,
@@ -152,8 +152,8 @@ function V(e) {
       layout: "POPOUT",
       userId: t.id,
       guildId: n,
-      channelId: V,
-      messageId: x,
+      channelId: x,
+      messageId: V,
       roleId: F,
       shouldTrackViewOnMount: null == ee || null != ee.fullProfileLoadedTimestamp,
       children: (0, i.jsx)(o.default, {
@@ -176,7 +176,7 @@ function V(e) {
               user: t,
               displayProfile: X,
               guildId: n,
-              channelId: V,
+              channelId: x,
               onClose: () => null == Y ? void 0 : Y(),
               isMobile: es,
               isStreaming: (0, c.default)(en),
@@ -200,7 +200,7 @@ function V(e) {
                 user: t,
                 guild: $,
                 guildMember: ee,
-                channelId: V,
+                channelId: x,
                 onClose: Y,
                 setNote: H,
                 canDM: ed,

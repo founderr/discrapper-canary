@@ -1,6 +1,6 @@
 "use strict";
-r.r(t);
-var n = r("965537");
+n.r(t);
+var r = n("965537");
 t.default = function(e) {
-  return "function" == typeof e ? e : n.default
+  return "function" == typeof e ? e : r.default
 }

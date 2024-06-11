@@ -1,23 +1,23 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return c
   }
 });
-var s = r("735250");
-r("470079");
-var n = r("120356"),
-  l = r.n(n),
-  i = r("248042"),
-  a = r("673591"),
-  o = r("591815");
+var r = s("735250");
+s("470079");
+var n = s("120356"),
+  i = s.n(n),
+  a = s("248042"),
+  l = s("673591"),
+  o = s("591815");
 
 function c(e) {
   let {
     isNitroTab: t = !1
-  } = e, r = (0, i.useIsEligibleForBogoPromotion)(), n = (0, i.getBOGOPillCopy)();
-  return r ? (0, s.jsx)(a.default, {
-    className: l()({
+  } = e, s = (0, a.useIsEligibleForBogoPromotion)(), n = (0, a.getBOGOPillCopy)();
+  return s ? (0, r.jsx)(l.default, {
+    className: i()({
       [o.nitroTabBadgeContainer]: t
     }),
     copy: n

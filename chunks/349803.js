@@ -18,8 +18,8 @@ t.default = function(e) {
   var t, s;
   let {
     isVisible: r,
-    isFullscreen: f,
-    subscriptionTier: I
+    isFullscreen: I,
+    subscriptionTier: f
   } = e, S = null === (t = (0, c.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), p = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, A = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), M = (0, n.useSpring)({
     transform: r ? "translateY(-100%)" : "translateY(0%)",
     opacity: r ? 1 : 0,
@@ -33,7 +33,7 @@ t.default = function(e) {
   };
   return (0, a.jsx)(n.animated.div, {
     className: i()(T.wrapper, {
-      [T.fullscreenWrapper]: f,
+      [T.fullscreenWrapper]: I,
       [T.invisible]: !r
     }),
     style: M,
@@ -41,7 +41,7 @@ t.default = function(e) {
       className: T.innerWrapper,
       children: [(0, a.jsx)(_.default, {
         className: T.button,
-        subscriptionTier: null !== (s = null != I ? I : null == S ? void 0 : S.sku_id) && void 0 !== s ? s : p,
+        subscriptionTier: null !== (s = null != f ? f : null == S ? void 0 : S.sku_id) && void 0 !== s ? s : p,
         premiumModalAnalyticsLocation: C,
         isPersistentCTA: !0
       }), (0, a.jsx)(d.default, {

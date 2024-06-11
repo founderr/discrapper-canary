@@ -9,8 +9,8 @@ t.r(s), t.d(s, {
 });
 var r, a, o, l, n = t("735250"),
   i = t("470079"),
-  d = t("253483"),
-  c = t("81834");
+  c = t("253483"),
+  d = t("81834");
 
 function u(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
@@ -41,7 +41,7 @@ class f extends(o = i.PureComponent) {
         backgroundColor: t.bgColor
       },
       className: e,
-      children: (0, n.jsx)(d.default, {
+      children: (0, n.jsx)(c.default, {
         value: s,
         level: "M",
         ...t
@@ -60,13 +60,13 @@ class E extends(l = i.PureComponent) {
       overlaySize: e
     } = this.props, s = C[null != e ? e : "SIZE_40"];
     return (0, n.jsxs)("div", {
-      className: c.qrCodeContainer,
+      className: d.qrCodeContainer,
       children: [(0, n.jsx)(f, {
         ...this.props
       }), (0, n.jsx)("div", {
-        className: c.qrCodeOverlay,
+        className: d.qrCodeOverlay,
         children: (0, n.jsx)("img", {
-          className: c[s],
+          className: d[s],
           src: _,
           alt: ""
         })

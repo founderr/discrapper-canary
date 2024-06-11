@@ -1,7 +1,7 @@
 "use strict";
-r.r(t);
-var n = r("478656");
+n.r(t);
+var r = n("478656");
 t.default = function(e, t) {
-  var r = t ? (0, n.default)(e.buffer) : e.buffer;
-  return new e.constructor(r, e.byteOffset, e.length)
+  var n = t ? (0, r.default)(e.buffer) : e.buffer;
+  return new e.constructor(n, e.byteOffset, e.length)
 }

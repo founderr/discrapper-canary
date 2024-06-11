@@ -1,10 +1,10 @@
 "use strict";
-r.r(t);
-var n = r("236933");
+n.r(t);
+var r = n("236933");
 t.default = function(e) {
-  var t = (0, n.default)(e, function(e) {
-      return 500 === r.size && r.clear(), e
+  var t = (0, r.default)(e, function(e) {
+      return 500 === n.size && n.clear(), e
     }),
-    r = t.cache;
+    n = t.cache;
   return t
 }

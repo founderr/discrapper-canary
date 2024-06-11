@@ -33,9 +33,9 @@ function N(e) {
     clans: s,
     searchResult: N,
     searchCriteria: v
-  } = (0, m.useClanDiscoveryList)(), R = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), O = (0, c.default)(N), [L, P] = i.useState(0), M = i.useMemo(() => ({
+  } = (0, m.useClanDiscoveryList)(), R = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), O = (0, c.default)(N), [L, P] = i.useState(0), y = i.useMemo(() => ({
     height: L
-  }), [L]), y = (0, r.useSpring)({
+  }), [L]), M = (0, r.useSpring)({
     opacity: L > 0 ? 1 : 0,
     config: r.config.stiff
   }), D = Math.min(null != t ? t : 1024, 2e3), x = i.useMemo(() => {
@@ -114,8 +114,8 @@ function N(e) {
       children: [(0, l.jsx)(r.animated.div, {
         className: A.masonryListGradient,
         style: {
-          ...y,
-          ...M
+          ...M,
+          ...y
         }
       }), (0, l.jsx)(d.MasonryList, {
         className: A.masonryList,

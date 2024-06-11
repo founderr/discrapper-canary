@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GoLiveButton: function() {
-    return ex
+    return ev
   },
   handleToggleVideo: function() {
     return eA
@@ -26,15 +26,15 @@ var a, l, s = n("735250"),
   T = n("596040"),
   I = n("100527"),
   A = n("906732"),
-  x = n("67212"),
-  v = n("757454"),
+  v = n("67212"),
+  x = n("757454"),
   N = n("158631"),
   M = n("709369"),
   y = n("552740"),
   R = n("358221"),
   L = n("887012"),
-  j = n("659580"),
-  O = n("793865"),
+  O = n("659580"),
+  j = n("793865"),
   P = n("575175"),
   D = n("258609"),
   b = n("446226"),
@@ -86,7 +86,7 @@ function eA(e, t) {
   e ? (0, eS.default)(n, t) : n()
 }
 
-function ex(e) {
+function ev(e) {
   let {
     channel: t,
     currentUser: n,
@@ -101,12 +101,12 @@ function ex(e) {
   } = (0, W.usePerksDemo)(f.EntitlementFeatureNames.STREAM_HIGH_QUALITY), g = null != d && c && p, _ = i.useRef(null), T = t.getGuildId(), I = i.useCallback(() => {
     if (null == a || a(), !l) return (0, eC.default)();
     (0, eg.default)(T, t.id, e_.AnalyticsPages.GUILD_CHANNEL)
-  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, N.default)(), R = (0, v.default)() && null != A, L = () => {
+  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, N.default)(), R = (0, x.default)() && null != A, L = () => {
     R && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
       channelId: t.id,
       pid: null == A ? void 0 : A.pid
-    }) : (0, x.startBroadcastForStream)((0, F.encodeStreamKey)(d), null == A ? void 0 : A.pid))
-  }, j = () => {
+    }) : (0, v.startBroadcastForStream)((0, F.encodeStreamKey)(d), null == A ? void 0 : A.pid))
+  }, O = () => {
     if (R) {
       (0, y.openStartBroadcastConfirmModal)(L);
       return
@@ -115,7 +115,7 @@ function ex(e) {
       I();
       return
     }(0, eC.default)()
-  }, O = () => {
+  }, j = () => {
     if (M) {
       (0, y.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
       return
@@ -142,7 +142,7 @@ function ex(e) {
       shouldShowTooltip: !t,
       premiumGlow: g && E.hqStreamingIsEnabled,
       buttonRef: _,
-      onClick: null != d ? O : j
+      onClick: null != d ? j : O
     })
   };
   return M ? P() : (0, s.jsxs)(s.Fragment, {
@@ -187,7 +187,7 @@ function ex(e) {
   })
 }
 
-function ev(e) {
+function ex(e) {
   let {
     channel: t
   } = e, n = t.getGuildId();
@@ -216,7 +216,7 @@ let eN = i.memo(function(e) {
     if (g) return "STREAM";
     if (null != _) return "EVENT";
     return "CALL"
-  }, [r, t, g, _]), [A, x] = i.useState(I()), v = (0, c.useSpring)({
+  }, [r, t, g, _]), [A, v] = i.useState(I()), x = (0, c.useSpring)({
     opacity: u ? .2 : 1,
     transform: u && !o.enabled ? "scale(0.7)" : "scale(1)",
     config: {
@@ -227,7 +227,7 @@ let eN = i.memo(function(e) {
       clamp: u
     },
     onRest: () => {
-      x(I()), d(!1)
+      v(I()), d(!1)
     }
   });
   i.useEffect(() => {
@@ -307,7 +307,7 @@ let eN = i.memo(function(e) {
         isShown: a
       } = t;
       return (0, s.jsx)(c.animated.div, {
-        style: v,
+        style: x,
         children: L(a, n)
       })
     }
@@ -378,7 +378,7 @@ t.default = function(e) {
     canGoLive: C
   } = (0, h.useStateFromStoresObject)([el.default], () => ({
     canGoLive: (0, w.default)(el.default)
-  })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), x = null != S, v = (0, h.useStateFromStores)([es.default], () => {
+  })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), v = null != S, x = (0, h.useStateFromStores)([es.default], () => {
     var e;
     return (null !== (e = null == S ? void 0 : S.channelId) && void 0 !== e ? e : es.default.getVoiceChannelId()) === t.id
   }), N = (0, L.default)(t, !0), M = (0, h.useStateFromStores)([_.default], () => {
@@ -390,7 +390,7 @@ t.default = function(e) {
   } = (0, ed.default)(t), {
     analyticsLocations: U
   } = (0, A.default)(I.default.VOICE_CONTROL_TRAY);
-  if (!v) return (0, s.jsx)(A.AnalyticsLocationProvider, {
+  if (!x) return (0, s.jsx)(A.AnalyticsLocationProvider, {
     value: U,
     children: (0, s.jsx)(eM, {
       channel: t,
@@ -415,13 +415,13 @@ t.default = function(e) {
         })
       }), (0, s.jsxs)("div", {
         className: o()(eI.wrapper, n),
-        children: [!x && (0, s.jsx)(m.Popout, {
+        children: [!v && (0, s.jsx)(m.Popout, {
           renderPopout: e => {
             let {
               closePopout: t
             } = e;
             return (0, s.jsx)(Z.default, {
-              children: (0, s.jsx)(O.default, {
+              children: (0, s.jsx)(j.default, {
                 onClose: t
               })
             })
@@ -449,9 +449,9 @@ t.default = function(e) {
               onPopoutClick: n
             })
           }
-        }), !x && (0, s.jsx)(ev, {
+        }), !v && (0, s.jsx)(ex, {
           channel: t
-        }), !x && (0, s.jsx)(ex, {
+        }), !v && (0, s.jsx)(ev, {
           channel: t,
           currentUser: i,
           exitFullScreen: l,
@@ -463,7 +463,7 @@ t.default = function(e) {
               closePopout: t
             } = e;
             return (0, s.jsx)(Z.default, {
-              children: (0, s.jsx)(j.default, {
+              children: (0, s.jsx)(O.default, {
                 onClose: t,
                 renderInputDevices: !0,
                 renderOutputDevices: !0,
@@ -482,7 +482,7 @@ t.default = function(e) {
             } = t;
             return (0, s.jsx)($.default, {
               centerButton: !0,
-              onPopoutClick: x ? null : n,
+              onPopoutClick: v ? null : n,
               className: eI.controlButton,
               selfMute: p,
               serverMute: E,
@@ -492,7 +492,7 @@ t.default = function(e) {
               onClick: () => (0, P.default)(E, f)
             })
           }
-        }), F && !x ? (0, s.jsx)("div", {
+        }), F && !v ? (0, s.jsx)("div", {
           className: eI.buttonContainer,
           children: (0, s.jsx)(em.default, {
             channel: t

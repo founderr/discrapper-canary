@@ -415,25 +415,25 @@ function U(e, t) {
   return n < 0 && (n += t), n
 }
 
-function Y(e, t, n, r) {
+function j(e, t, n, r) {
   let i = e.copy();
   switch (t) {
     case "era": {
       let t = e.calendar.getEras(),
         a = t.indexOf(e.era);
       if (a < 0) throw Error("Invalid era: " + e.era);
-      a = j(a, n, 0, t.length - 1, null == r ? void 0 : r.round), i.era = t[a], P(i);
+      a = Y(a, n, 0, t.length - 1, null == r ? void 0 : r.round), i.era = t[a], P(i);
       break
     }
     case "year":
       var a, o;
-      (null === (o = (a = i.calendar).isInverseEra) || void 0 === o ? void 0 : o.call(a, i)) && (n = -n), i.year = j(e.year, n, -1 / 0, 9999, null == r ? void 0 : r.round), i.year === -1 / 0 && (i.year = 1), i.calendar.balanceYearMonth && i.calendar.balanceYearMonth(i, e);
+      (null === (o = (a = i.calendar).isInverseEra) || void 0 === o ? void 0 : o.call(a, i)) && (n = -n), i.year = Y(e.year, n, -1 / 0, 9999, null == r ? void 0 : r.round), i.year === -1 / 0 && (i.year = 1), i.calendar.balanceYearMonth && i.calendar.balanceYearMonth(i, e);
       break;
     case "month":
-      i.month = j(e.month, n, 1, e.calendar.getMonthsInYear(e), null == r ? void 0 : r.round);
+      i.month = Y(e.month, n, 1, e.calendar.getMonthsInYear(e), null == r ? void 0 : r.round);
       break;
     case "day":
-      i.day = j(e.day, n, 1, e.calendar.getDaysInMonth(e), null == r ? void 0 : r.round);
+      i.day = Y(e.day, n, 1, e.calendar.getDaysInMonth(e), null == r ? void 0 : r.round);
       break;
     default:
       throw Error("Unsupported field " + t)
@@ -441,7 +441,7 @@ function Y(e, t, n, r) {
   return e.calendar.balanceDate && e.calendar.balanceDate(i), P(i), i
 }
 
-function j(e, t, n, r, i = !1) {
+function Y(e, t, n, r, i = !1) {
   if (i) {
     (e += Math.sign(t)) < n && (e = r);
     let i = Math.abs(t);
@@ -479,7 +479,7 @@ class V {
     return B(this, e)
   }
   cycle(e, t, n) {
-    return Y(this, e, t, n)
+    return j(this, e, t, n)
   }
   toDate(e) {
     return M(this, e)
@@ -523,7 +523,7 @@ class W {
       case "year":
       case "month":
       case "day":
-        return Y(this, e, t, n);
+        return j(this, e, t, n);
       default:
         return function(e, t, n, r) {
           let i = e.copy();
@@ -536,17 +536,17 @@ class W {
                 let e = t >= 12;
                 a = e ? 12 : 0, o = e ? 23 : 11
               }
-              i.hour = j(t, n, a, o, null == r ? void 0 : r.round);
+              i.hour = Y(t, n, a, o, null == r ? void 0 : r.round);
               break
             }
             case "minute":
-              i.minute = j(e.minute, n, 0, 59, null == r ? void 0 : r.round);
+              i.minute = Y(e.minute, n, 0, 59, null == r ? void 0 : r.round);
               break;
             case "second":
-              i.second = j(e.second, n, 0, 59, null == r ? void 0 : r.round);
+              i.second = Y(e.second, n, 0, 59, null == r ? void 0 : r.round);
               break;
             case "millisecond":
-              i.millisecond = j(e.millisecond, n, 0, 999, null == r ? void 0 : r.round);
+              i.millisecond = Y(e.millisecond, n, 0, 999, null == r ? void 0 : r.round);
               break;
             default:
               throw Error("Unsupported field " + t)

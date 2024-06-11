@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("430824"),
   I = n("979651"),
   A = n("502568"),
-  x = n("664342"),
-  v = n("124368"),
+  v = n("664342"),
+  x = n("124368"),
   N = n("981631"),
   M = n("689938"),
   y = n("899091");
@@ -36,14 +36,14 @@ function R(e) {
     channelId: t,
     baseChannelId: s,
     channelViewSource: R = "Split View"
-  } = e, L = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), j = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(null == L ? void 0 : L.getGuildId())), O = (0, m.default)(L);
+  } = e, L = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), O = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(null == L ? void 0 : L.getGuildId())), j = (0, m.default)(L);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i().isEmpty(I.default.getVoiceStatesForChannel(e.id)));
     l.useEffect(() => {
       t && null != e && (o.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, g.transitionToThread)(e, v.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
+      }), (0, g.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(L);
   let P = l.useRef(!1);
@@ -58,8 +58,8 @@ function R(e) {
       }), (0, h.trackClickstream)(N.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
         channelId: L.id
       })
-    }, [L, R]), null == L || null == j) return null;
-  let D = (0, a.jsx)(x.default, {
+    }, [L, R]), null == L || null == O) return null;
+  let D = (0, a.jsx)(v.default, {
     channel: L,
     baseChannelId: s
   });
@@ -72,14 +72,14 @@ function R(e) {
       "aria-label": M.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, C.renderTitle)({
         channel: L,
-        channelName: O,
-        guild: j,
+        channelName: j,
+        guild: O,
         inSidebar: !0,
         handleContextMenu: function(e) {
           (0, u.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await n.e("40157").then(n.bind(n, "422200"));
+            } = await n.e("78650").then(n.bind(n, "422200"));
             return t => (0, a.jsx)(e, {
               ...t,
               channel: L
@@ -94,7 +94,7 @@ function R(e) {
       className: y.chat,
       children: (0, a.jsx)(p.default, {
         channel: L,
-        guild: j,
+        guild: O,
         chatInputType: E.ChatInputTypes.SIDEBAR
       }, t)
     })]

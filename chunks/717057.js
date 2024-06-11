@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return j
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("532490"),
   I = n("380365"),
   A = n("979264"),
-  x = n("620929"),
-  v = n("284019"),
+  v = n("620929"),
+  x = n("284019"),
   N = n("308083"),
   M = n("981631"),
   y = n("689938"),
@@ -75,7 +75,7 @@ function L(e) {
             date: u
           })
         })]
-      }), (0, a.jsx)(x.CharterScrollGameSection, {
+      }), (0, a.jsx)(v.CharterScrollGameSection, {
         applicationIds: d,
         playstyle: s.playstyle,
         className: i()(R.charterBodyText, R.gameSection)
@@ -89,24 +89,24 @@ function L(e) {
   })
 }
 
-function j(e) {
+function O(e) {
   var t;
   let {
     guildId: n,
     onClose: s,
     onAccept: r,
     ...o
-  } = e, C = (0, E.useUID)(), T = (0, S.useClanInfo)(n), A = (0, S.useIsFetchingClanInfo)(), [x, N] = l.useState(!0), [j, O] = l.useState(!1), P = l.useCallback(() => {
+  } = e, C = (0, E.useUID)(), T = (0, S.useClanInfo)(n), A = (0, S.useIsFetchingClanInfo)(), [v, N] = l.useState(!0), [O, j] = l.useState(!1), P = l.useCallback(() => {
     r(), s()
   }, [r, s]);
   l.useEffect(() => {
     null == T && !A && P()
   }, [T, P, A]);
   let D = l.useCallback(() => {
-      x && (0, g.adoptClanIdentity)(n, x, M.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), P()
-    }, [n, P, x]),
+      v && (0, g.adoptClanIdentity)(n, v, M.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), P()
+    }, [n, P, v]),
     b = l.useCallback(() => {
-      O(!0)
+      j(!0)
     }, []),
     U = (0, d.useStateFromStores)([m.default], () => m.default.getGuild(n)),
     F = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()),
@@ -146,7 +146,7 @@ function j(e) {
           })]
         }), (0, a.jsx)(I.default, {
           guildId: n,
-          isTagAdopted: x,
+          isTagAdopted: v,
           onChangeUseTag: N
         })]
       }), (0, a.jsx)("div", {
@@ -156,12 +156,12 @@ function j(e) {
           clanInfo: T,
           onSignCharter: b
         })
-      }), (0, a.jsx)(v.default, {
+      }), (0, a.jsx)(x.default, {
         onClick: D,
         color: c.Button.Colors.BRAND,
         themeColor: H,
         fullWidth: !1,
-        className: i()(R.ctaButton, j ? R.ctaButtonSigned : null),
+        className: i()(R.ctaButton, O ? R.ctaButtonSigned : null),
         children: (0, a.jsxs)("div", {
           className: R.ctaButtonInner,
           children: [(0, a.jsx)(c.Text, {

@@ -15,13 +15,13 @@ var n = i("735250"),
   u = i("626135"),
   h = i("463571"),
   p = i("34674"),
-  f = i("132871"),
-  m = i("147890"),
+  m = i("132871"),
+  f = i("147890"),
   g = i("409425"),
   C = i("57716"),
-  x = i("981631"),
-  _ = i("689938"),
-  I = i("305319");
+  _ = i("981631"),
+  I = i("689938"),
+  x = i("305319");
 
 function v(e) {
   let {
@@ -33,53 +33,53 @@ function v(e) {
     ctaLabel: o,
     ctaLink: d,
     applicationId: u
-  } = e, p = "936929561302675456" === u, f = null == u ? (0, n.jsx)(c.Button, {
-    className: I.applicationCta,
+  } = e, p = "936929561302675456" === u, m = null == u ? (0, n.jsx)(c.Button, {
+    className: x.applicationCta,
     onClick: l,
     children: o
   }) : (0, n.jsx)(h.default, {
-    href: x.Routes.APPLICATION_DIRECTORY_PROFILE(u),
+    href: _.Routes.APPLICATION_DIRECTORY_PROFILE(u),
     children: (0, n.jsx)(c.Button, {
-      className: I.applicationCta,
+      className: x.applicationCta,
       onClick: l,
       children: o
     })
   });
   return (0, n.jsxs)("div", {
-    className: I.card,
+    className: x.card,
     children: [(0, n.jsx)("div", {
-      className: I.textContainer,
+      className: x.textContainer,
       children: (0, n.jsxs)("div", {
-        className: I.verticallyCenter,
+        className: x.verticallyCenter,
         children: [(0, n.jsx)(c.Text, {
-          className: I.collectionTitle,
+          className: x.collectionTitle,
           tag: "span",
           color: "header-secondary",
           variant: "heading-deprecated-12/semibold",
           children: t
         }), (0, n.jsxs)(c.Heading, {
-          className: I.applicationName,
+          className: x.applicationName,
           variant: "heading-xxl/medium",
           children: [i, " ", p && (0, n.jsx)(g.default, {})]
         }), (0, n.jsx)(c.Text, {
-          className: I.applicationDescription,
+          className: x.applicationDescription,
           variant: "text-md/normal",
           lineClamp: 3,
           children: a
-        }), null == d ? f : (0, n.jsx)(c.Anchor, {
+        }), null == d ? m : (0, n.jsx)(c.Anchor, {
           onClick: l,
           href: d,
           className: s()((0, c.getButtonStyle)({
             grow: !1
-          }), I.applicationCta),
+          }), x.applicationCta),
           children: o
         })]
       })
     }), (0, n.jsx)("div", {
-      className: I.imageContainer,
+      className: x.imageContainer,
       children: (0, n.jsx)("img", {
         alt: i,
-        className: I.image,
+        className: x.image,
         src: r
       })
     })]
@@ -96,7 +96,7 @@ function A(e) {
     }
   } = e, h = (0, C.default)({
     collection: t
-  }), [g, A] = a.useState(), N = (0, f.useApplicationDirectoryHistory)(e => e.guildId);
+  }), [g, A] = a.useState(), E = (0, m.useApplicationDirectoryHistory)(e => e.guildId);
   return a.useEffect(() => {
     let e = null == h ? void 0 : h.current;
     if (null == e) return;
@@ -110,23 +110,23 @@ function A(e) {
   }, [h]), (0, n.jsx)("article", {
     ref: h,
     className: s()({
-      [I.collectionBottomMargin]: c.length <= 1
+      [x.collectionBottomMargin]: c.length <= 1
     }),
     children: (0, n.jsx)(d.default, {
       aspectRatio: g,
       themedPagination: !0,
-      paginationClassName: I.paginationControls,
-      paginationArrowClassName: I.paginationArrow,
+      paginationClassName: x.paginationControls,
+      paginationArrowClassName: x.paginationArrow,
       items: c,
       onChangeItem: (e, t, n) => {
         let {
           application: a
         } = e;
-        null != a && u.default.track(x.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
+        null != a && u.default.track(_.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
           collection_id: i,
           offset: n,
           results: [a.id],
-          guild_id: N
+          guild_id: E
         })
       },
       renderItem: e => {
@@ -138,7 +138,7 @@ function A(e) {
           description: c,
           title: d,
           call_to_action_label: h,
-          call_to_action_url: f
+          call_to_action_url: m
         } = e;
         if (null == a) return;
         let g = (0, p.getCollectionItemAssetUrl)({
@@ -146,41 +146,41 @@ function A(e) {
           hash: a
         });
         if (o === r.ApplicationDirectoryCollectionItemType.APPLICATION && null != s) {
-          var C, I;
+          var C, x;
           return (0, n.jsx)(v, {
             collectionTitle: l,
             title: s.name,
-            description: null !== (I = null === (C = s.directory_entry) || void 0 === C ? void 0 : C.short_description) && void 0 !== I ? I : s.description,
+            description: null !== (x = null === (C = s.directory_entry) || void 0 === C ? void 0 : C.short_description) && void 0 !== x ? x : s.description,
             handleClick: () => {
-              u.default.track(x.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+              u.default.track(_.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: i,
                 application_id: s.id,
-                guild_id: N,
+                guild_id: E,
                 shown_mutual_guilds_count: void 0
-              }), (0, m.goToApplication)({
+              }), (0, f.goToApplication)({
                 applicationId: s.id
               })
             },
             imageSrc: g,
-            ctaLabel: _.default.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
+            ctaLabel: I.default.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
             applicationId: s.id
           })
         }
-        if (o === r.ApplicationDirectoryCollectionItemType.LINK && null != d && null != f && null != h) return (0, n.jsx)(v, {
+        if (o === r.ApplicationDirectoryCollectionItemType.LINK && null != d && null != m && null != h) return (0, n.jsx)(v, {
           collectionTitle: l,
           title: d,
           description: c,
           handleClick: () => {
-            u.default.track(x.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+            u.default.track(_.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
               collection_id: i,
-              link: f,
-              guild_id: N,
+              link: m,
+              guild_id: E,
               shown_mutual_guilds_count: void 0
             })
           },
           imageSrc: g,
           ctaLabel: h,
-          ctaLink: f
+          ctaLink: m
         })
       }
     })

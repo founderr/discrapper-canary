@@ -1,48 +1,48 @@
 "use strict";
 u.r(e), u.d(e, {
   deleteGuildProductListing: function() {
-    return c
+    return a
   },
   getGuildProductListing: function() {
-    return d
+    return c
   },
   getGuildProductListingsForGuild: function() {
-    return a
+    return o
   },
   requestDownloadUrl: function() {
     return s
   },
   updateGuildProductListing: function() {
-    return o
+    return d
   }
 });
 var r = u("544891"),
   n = u("881052"),
   i = u("73346"),
   l = u("981631");
-let o = async (t, e, u) => {
+let d = async (t, e, u) => {
   let {
     priceTier: i,
-    imageName: o,
-    createNewRole: c,
-    unlinkRole: a,
-    ...d
+    imageName: d,
+    createNewRole: a,
+    unlinkRole: o,
+    ...c
   } = u;
   try {
     return (await r.HTTP.patch({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
       body: {
-        ...d,
-        image_name: o,
+        ...c,
+        image_name: d,
         price_tier: i,
-        create_new_role: c,
-        unlink_role: a
+        create_new_role: a,
+        unlink_role: o
       }
     })).body
   } catch (t) {
     throw new n.APIError(t)
   }
-}, c = async (t, e) => {
+}, a = async (t, e) => {
   try {
     await r.HTTP.del({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e)
@@ -50,7 +50,7 @@ let o = async (t, e, u) => {
   } catch (t) {
     throw new n.APIError(t)
   }
-}, a = async t => {
+}, o = async t => {
   try {
     return (await (0, i.httpGetWithCountryCodeQuery)({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t)
@@ -58,7 +58,7 @@ let o = async (t, e, u) => {
   } catch (t) {
     throw new n.APIError(t)
   }
-}, d = async (t, e) => {
+}, c = async (t, e) => {
   try {
     return (await (0, i.httpGetWithCountryCodeQuery)({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e)

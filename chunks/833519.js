@@ -28,15 +28,15 @@ var a = n("735250"),
   T = n("592125"),
   I = n("131951"),
   A = n("451478"),
-  x = n("40300"),
-  v = n("167580"),
+  v = n("40300"),
+  x = n("167580"),
   N = n("368666"),
   M = n("685203"),
   y = n("112560"),
   R = n("442168"),
   L = n("822296"),
-  j = n("916771"),
-  O = n("792517"),
+  O = n("916771"),
+  j = n("792517"),
   P = n("979425"),
   D = n("651183"),
   b = n("623825"),
@@ -100,12 +100,12 @@ function V(e) {
     stream: X,
     width: D
   });
-  if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(j.default, {
+  if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(O.default, {
     selected: n,
     stream: X,
     width: D
   });
-  else if (t.type === F.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(O.default, {
+  else if (t.type === F.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(j.default, {
     selected: n,
     participant: t,
     width: D
@@ -118,7 +118,7 @@ function V(e) {
       streamerId: z.id,
       hasScreenMessage: null != ee,
       stream: Y
-    }) : null, (0, a.jsx)(x.default, {
+    }) : null, (0, a.jsx)(v.default, {
       onResize: s,
       wrapperClassName: H.videoWrapper,
       className: H.content,
@@ -163,7 +163,7 @@ function V(e) {
           })
         },
         isSmall: et,
-        children: (0, a.jsx)(v.default, {
+        children: (0, a.jsx)(x.default, {
           className: H.addStreamIcon
         })
       }) : null]

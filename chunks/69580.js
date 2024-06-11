@@ -56,8 +56,8 @@ var i, r, s = n("735250"),
   w = n("422559"),
   k = n("713938"),
   B = n("166148"),
-  V = n("807989"),
-  x = n("260430"),
+  x = n("807989"),
+  V = n("260430"),
   F = n("668185"),
   H = n("407546"),
   Y = n("41259"),
@@ -165,7 +165,7 @@ function et(e) {
   a.useEffect(() => {
     M.default.isAuthenticated() && !eO && A.default.getExperiments()
   }, [eO]);
-  let [eC, eR] = a.useState(null), [eg, eL] = a.useState(null), [ev, eD] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eC ? void 0 : eC.guilds, [eU, eb] = a.useState(null != el ? el : null), [eG, ew] = a.useState(null != eu ? eu : null), [ek, eB] = a.useState(y.NONE), eV = a.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new D.default(eC.user) : null, [null == eC ? void 0 : eC.user]), ex = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [eF, eH] = a.useState(null), eY = a.useMemo(() => {
+  let [eC, eR] = a.useState(null), [eg, eL] = a.useState(null), [ev, eD] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eC ? void 0 : eC.guilds, [eU, eb] = a.useState(null != el ? el : null), [eG, ew] = a.useState(null != eu ? eu : null), [ek, eB] = a.useState(y.NONE), ex = a.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new D.default(eC.user) : null, [null == eC ? void 0 : eC.user]), eV = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [eF, eH] = a.useState(null), eY = a.useMemo(() => {
     var e;
     return null == eN && null == ed && (null !== (e = null == ea ? void 0 : ea.length) && void 0 !== e ? e : 0) === 0 && null == $
   }, [eN, null == ea ? void 0 : ea.length, $, ed]), [ej, eW] = a.useState(null);
@@ -236,7 +236,7 @@ function et(e) {
       if (!e && !eE) {
         null != eS && (eS({
           application: null == eC ? void 0 : eC.application,
-          guild: ex
+          guild: eV
         }), null == eA || eA());
         return
       }
@@ -264,7 +264,7 @@ function et(e) {
         if (e && await (0, O.ackDisclosures)(W, eq), null != eS) eS({
           application: null == eC ? void 0 : eC.application,
           location: t.location,
-          guild: ex
+          guild: eV
         }), null == eA || eA();
         else if (null != t.location) {
           let {
@@ -274,7 +274,7 @@ function et(e) {
           P.default.isDiscordHostname(e) && n === Z.Routes.OAUTH2_AUTHORIZED ? (0, L.transitionTo)(Z.Routes.OAUTH2_AUTHORIZED, {
             state: {
               application: null == eC ? void 0 : eC.application,
-              guild: ex
+              guild: eV
             }
           }) : window.location = t.location
         } else ey(!1)
@@ -282,7 +282,7 @@ function et(e) {
         let e = t.body;
         (null == e ? void 0 : e.message) != null && "" !== e.message ? eD(Error(e.message)) : eD(e), eL(1), ey(!1)
       }
-    }, [eh, eE, eS, null == eC ? void 0 : eC.application, ex, eA, W, ez, J, $, ee, et, en, ei, eQ, ek, eU, eF, eG, eq]),
+    }, [eh, eE, eS, null == eC ? void 0 : eC.application, eV, eA, W, ez, J, $, ee, et, en, ei, eQ, ek, eU, eF, eG, eq]),
     e2 = a.useRef(!1),
     e3 = a.useCallback(async () => {
       if (!M.default.isAuthenticated()) {
@@ -372,7 +372,7 @@ function et(e) {
       }), e7 = !1, e5 = !1, e8 = ef;
       break;
     case 1:
-      if (null == eC || null == eV || null == eF) return {
+      if (null == eC || null == ex || null == eF) return {
         body: (0, s.jsx)(h.Spinner, {})
       };
       let e9 = null == ev || ev instanceof Error ? {} : ev,
@@ -380,7 +380,7 @@ function et(e) {
         tt = eF === _.ApplicationIntegrationType.GUILD_INSTALL && ez.includes(c.OAuth2Scopes.WEBHOOK_INCOMING),
         tn = tt || eF === _.ApplicationIntegrationType.GUILD_INSTALL && (ez.includes(c.OAuth2Scopes.BOT) || ez.includes(c.OAuth2Scopes.APPLICATIONS_COMMANDS));
       l = (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(x.default, {
+        children: [(0, s.jsx)(V.default, {
           application: eC.application,
           accountScopes: eZ,
           requestedScopes: ez,
@@ -399,7 +399,7 @@ function et(e) {
           selectedGuildId: eU,
           onChannelChange: ew
         }) : null]
-      }), ez.includes(c.OAuth2Scopes.BOT) && !E.equals(eQ, y.NONE) && (S = 2), e4.length > 1 && (f = 0), e6 = tn && null == ex || tt && null == eG;
+      }), ez.includes(c.OAuth2Scopes.BOT) && !E.equals(eQ, y.NONE) && (S = 2), e4.length > 1 && (f = 0), e6 = tn && null == eV || tt && null == eG;
       break;
     case 2:
       if (null == eC) return {
@@ -412,12 +412,12 @@ function et(e) {
         onPermissionsChange: (e, t) => {
           eB(n => e ? E.remove(n, t) : E.add(n, t))
         },
-        guild: ex
+        guild: eV
       }), f = 1
   }
   if (e7 && null != eC) {
     let e = null === (r = eC.bot) || void 0 === r ? void 0 : r.approximate_guild_count;
-    N = (0, s.jsx)(V.default, {
+    N = (0, s.jsx)(x.default, {
       application: eC.application,
       scopes: ez,
       disclosures: eq,
@@ -426,9 +426,9 @@ function et(e) {
       isEmbeddedFlow: eT
     })
   }
-  return e5 && null != eC && null != eV && (C = (0, s.jsx)(Y.default, {
+  return e5 && null != eC && null != ex && (C = (0, s.jsx)(Y.default, {
     id: q,
-    user: eV,
+    user: ex,
     application: eC.application,
     bot: eC.bot,
     accountScopes: eZ,

@@ -1,10 +1,10 @@
 "use strict";
-r.r(t);
-var n = r("177624"),
-  a = function() {
+n.r(t);
+var r = n("177624"),
+  i = function() {
     try {
-      var e = (0, n.default)(Object, "defineProperty");
+      var e = (0, r.default)(Object, "defineProperty");
       return e({}, "", {}), e
     } catch (e) {}
   }();
-t.default = a
+t.default = i

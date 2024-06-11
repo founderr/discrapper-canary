@@ -1,7 +1,7 @@
 "use strict";
-r.r(t);
+n.r(t);
 t.default = function(e, t) {
-  return function(r) {
-    return e(t(r))
+  return function(n) {
+    return e(t(n))
   }
 }

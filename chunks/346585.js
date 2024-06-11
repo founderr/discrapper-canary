@@ -1,40 +1,40 @@
 "use strict";
 r.r(t), r.d(t, {
   formatPomeloForEditing: function() {
-    return A
+    return g
   },
   formatUsernameLiveCheckValidation: function() {
-    return p
-  },
-  getDefaultPomelo: function() {
-    return L
-  },
-  getLocalizedForcedUUDate: function() {
     return I
   },
+  getDefaultPomelo: function() {
+    return m
+  },
+  getLocalizedForcedUUDate: function() {
+    return _
+  },
   getMemberSince: function() {
-    return E
+    return h
   },
   getUserAvatarURLForPomelo: function() {
-    return f
+    return R
   },
   shouldSkipToEditUsername: function() {
-    return g
+    return A
   }
 }), r("757143"), r("47120"), r("627341");
-var n = r("913527"),
-  a = r.n(n),
+var a = r("913527"),
+  n = r.n(a),
   i = r("278074"),
-  s = r("768581"),
-  o = r("709054"),
-  l = r("624138"),
+  o = r("768581"),
+  s = r("709054"),
+  u = r("624138"),
   c = r("219496"),
-  u = r("801461"),
+  l = r("801461"),
   d = r("689938");
 
-function f(e) {
+function R(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return s.default.getUserAvatarURL({
+  return o.default.getUserAvatarURL({
     id: e.id,
     avatar: e.avatar,
     bot: e.bot,
@@ -42,40 +42,40 @@ function f(e) {
   }, t, 80)
 }
 
-function L(e) {
-  let t = (0, l.stripDiacritics)(e.username).replace(u.dirtyChars, "").replace(u.coalescePeriods, ".").toLowerCase();
+function m(e) {
+  let t = (0, u.stripDiacritics)(e.username).replace(l.dirtyChars, "").replace(l.coalescePeriods, ".").toLowerCase();
   return "".concat(t).concat(e.discriminator).substring(0, 32)
 }
-let R = ["@", "#", ":"],
-  m = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
-  h = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
+let f = ["@", "#", ":"],
+  L = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
+  E = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
 
-function g(e) {
+function A(e) {
   var t, r;
-  let n = e.username.toLowerCase();
-  if ((t = n, r = u.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !r.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
-  for (let e of R)
-    if (n.includes(e)) return !0;
-  for (let e of h)
-    if (n === e.toLowerCase()) return !0;
-  for (let e of m)
-    if (n.includes(e.toLowerCase())) return !0;
+  let a = e.username.toLowerCase();
+  if ((t = a, r = l.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !r.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
+  for (let e of f)
+    if (a.includes(e)) return !0;
+  for (let e of E)
+    if (a === e.toLowerCase()) return !0;
+  for (let e of L)
+    if (a.includes(e.toLowerCase())) return !0;
   return !1
 }
 
-function A(e) {
+function g(e) {
   return e.toLowerCase().replace(/\s/g, "").replace("@", "")
 }
 
-function E(e) {
-  let t = o.default.extractTimestamp(e);
+function h(e) {
+  let t = s.default.extractTimestamp(e);
   try {
-    return a()(new Date(t)).format("MMM DD, YYYY")
+    return n()(new Date(t)).format("MMM DD, YYYY")
   } catch (e) {}
   return null
 }
 
-function p(e) {
+function I(e) {
   return (0, i.match)(e).with({
     rateLimited: !0
   }, () => ({
@@ -109,7 +109,7 @@ function p(e) {
   })).otherwise(() => void 0)
 }
 
-function I(e) {
+function _(e) {
   return new Date(2024, 2, 4).toLocaleDateString(e, {
     month: "long",
     day: "numeric",

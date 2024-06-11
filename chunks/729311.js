@@ -31,8 +31,8 @@ var a = s("735250"),
   x = s("889369"),
   L = s("570961"),
   O = s("208665"),
-  A = s("868814"),
-  p = s("974513"),
+  p = s("868814"),
+  A = s("974513"),
   M = s("2348"),
   D = s("353890"),
   v = s("716130"),
@@ -42,7 +42,7 @@ var a = s("735250"),
 function U(e) {
   let {
     guild: t
-  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([T.default], () => T.default.hasFetched(t.id)), d = (0, A.default)(t), S = (0, r.useStateFromStores)([x.default], () => x.default.editedDefaultChannelIds), f = d.filter(e => !S.has(e.id)), [N, C] = l.useState(!1);
+  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([T.default], () => T.default.hasFetched(t.id)), d = (0, p.default)(t), S = (0, r.useStateFromStores)([x.default], () => x.default.editedDefaultChannelIds), f = d.filter(e => !S.has(e.id)), [N, C] = l.useState(!1);
   l.useEffect(() => {
     !i && !n && (0, I.fetchTopReadChannels)(t.id)
   }, [t.id, i, n]);
@@ -177,7 +177,7 @@ function P(e) {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: j.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_SUBHEADER
-      }), (0, a.jsx)(p.AdvancedModeToggle, {
+      }), (0, a.jsx)(A.AdvancedModeToggle, {
         className: G.advancedModeToggle,
         guildId: s.id
       }), I ? null : (0, a.jsxs)(a.Fragment, {

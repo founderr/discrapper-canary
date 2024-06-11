@@ -24,15 +24,15 @@ var a, l = n("735250"),
   T = n("708690"),
   I = n("194359"),
   A = n("425493"),
-  x = n("461745"),
-  v = n("40851"),
+  v = n("461745"),
+  x = n("40851"),
   N = n("367907"),
   M = n("762914"),
   y = n("43267"),
   R = n("933557"),
   L = n("366980"),
-  j = n("703656"),
-  O = n("131704"),
+  O = n("703656"),
+  j = n("131704"),
   P = n("592125"),
   D = n("341165"),
   b = n("544610"),
@@ -96,7 +96,7 @@ let eo = e => {
     });
     return (0, l.jsx)(p.Clickable, {
       onClick: () => {
-        (0, j.transitionToGuild)($.ME, n.id), a()
+        (0, O.transitionToGuild)($.ME, n.id), a()
       },
       children: (0, l.jsxs)("div", {
         className: et.confirmChannelItemContainer,
@@ -278,13 +278,13 @@ class ed extends(a = s.PureComponent) {
       null != t && o.push(q.default.getName(t))
     }), (0, l.jsxs)(G.default, {
       className: r()(et.searchBar, ea.marginTop20),
-      children: [(0, l.jsx)(x.default, {
+      children: [(0, l.jsx)(v.default, {
         ref: this.searchBarRef,
         className: et.searchBarComponent,
         autoFocus: !0,
         placeholder: 0 === i.size ? ee.default.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
         disabled: this.isPartyFull(),
-        size: x.default.Sizes.MEDIUM,
+        size: v.default.Sizes.MEDIUM,
         query: t,
         selectedRow: s,
         sections: [null !== (e = null == a ? void 0 : a.length) && void 0 !== e ? e : 0],
@@ -587,7 +587,7 @@ class ed extends(a = s.PureComponent) {
       } = this.props;
       t.has(e) ? T.default.removeUser(e) : (T.default.addUser(e), n.length > 0 && T.default.clear(null == a ? void 0 : a.id)), this.forceFocus()
     }), el(this, "handleAddFriendNavigation", () => {
-      (0, j.transitionTo)($.Routes.FRIENDS), S.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, O.transitionTo)($.Routes.FRIENDS), S.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
     }), el(this, "handleScroll", () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({
@@ -649,7 +649,7 @@ class ed extends(a = s.PureComponent) {
     })
   }
 }
-el(ed, "contextType", v.default);
+el(ed, "contextType", x.default);
 let ec = h.default.connectStores([b.default, D.default, k.default], e => {
   let t, {
     channel: n
@@ -700,7 +700,7 @@ function ef(e) {
 
 function eh(e) {
   let t = em(e);
-  return new Set(u()(P.default.getMutablePrivateChannels()).values().filter(e => (0, O.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
+  return new Set(u()(P.default.getMutablePrivateChannels()).values().filter(e => (0, j.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
 }
 
 function em(e) {

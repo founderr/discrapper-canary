@@ -16,7 +16,7 @@ s.r(t), s.d(t, {
     return D
   },
   enableHomeSettings: function() {
-    return p
+    return A
   },
   reorderNewMemberActions: function() {
     return N
@@ -28,7 +28,7 @@ s.r(t), s.d(t, {
     return v
   },
   saveHomeSettings: function() {
-    return A
+    return p
   },
   updateNewMemberAction: function() {
     return f
@@ -188,7 +188,7 @@ async function O(e, t, s) {
   }
 }
 
-function A(e, t) {
+function p(e, t) {
   let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   if (!s && !E.default.hasChanges()) return Promise.resolve();
   let {
@@ -200,7 +200,7 @@ function A(e, t) {
   }), Promise.reject()) : (!a && null != t && (t.enabled = !0), M(e, t))
 }
 
-function p(e, t) {
+function A(e, t) {
   let s = o.default.getSettings(e);
   if (t && !(0, d.isSettingsValid)(s)) {
     r.default.show({

@@ -12,8 +12,8 @@ var n, a, s = i("735250"),
   d = i("153124"),
   c = i("823379"),
   h = i("41776"),
-  f = i("981631"),
-  m = i("689938"),
+  m = i("981631"),
+  f = i("689938"),
   p = i("19685");
 (a = n || (n = {}))[a.CHAT = 0] = "CHAT", a[a.REACTIONS = 1] = "REACTIONS";
 t.default = e => {
@@ -27,13 +27,13 @@ t.default = e => {
     S && !E && a()
   }, [S, E, a]);
   let R = null,
-    I = m.default.Messages.LURKER_MODE_POPOUT_UPSELL_BODY;
+    I = f.default.Messages.LURKER_MODE_POPOUT_UPSELL_BODY;
   switch (t) {
     case 0:
-      R = m.default.Messages.LURKER_MODE_POPOUT_CHAT_HEADER;
+      R = f.default.Messages.LURKER_MODE_POPOUT_CHAT_HEADER;
       break;
     case 1:
-      R = m.default.Messages.LURKER_MODE_POPOUT_REACTIONS_HEADER;
+      R = f.default.Messages.LURKER_MODE_POPOUT_REACTIONS_HEADER;
       break;
     default:
       return (0, c.assertNever)(t)
@@ -43,7 +43,7 @@ t.default = e => {
     v(!0);
     try {
       await u.default.joinGuild(n.id, {
-        source: f.JoinGuildSources.CHAT_INPUT_BLOCKER
+        source: m.JoinGuildSources.CHAT_INPUT_BLOCKER
       }), a()
     } catch {
       v(!1)
@@ -72,12 +72,12 @@ t.default = e => {
           buttonRef: g,
           onClick: N,
           submitting: S,
-          children: m.default.Messages.LURKER_MODE_POPOUT_JOIN
+          children: f.default.Messages.LURKER_MODE_POPOUT_JOIN
         }), (0, s.jsx)(r.Button, {
           onClick: a,
           look: r.Button.Looks.BLANK,
           className: p.cancel,
-          children: m.default.Messages.LURKER_MODE_POPOUT_CANCEL
+          children: f.default.Messages.LURKER_MODE_POPOUT_CANCEL
         })]
       })]
     })]

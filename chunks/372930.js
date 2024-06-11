@@ -1,7 +1,7 @@
 "use strict";
-r.r(t);
-var n = r("670097"),
-  a = r("370873");
+n.r(t);
+var r = n("670097"),
+  i = n("370873");
 t.default = function(e) {
-  return (0, a.default)(e) && (0, n.default)(e)
+  return (0, i.default)(e) && (0, r.default)(e)
 }

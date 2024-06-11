@@ -34,8 +34,8 @@ var a = s("735250"),
   x = s("594174"),
   L = s("474333"),
   O = s("93879"),
-  A = s("518896"),
-  p = s("614149"),
+  p = s("518896"),
+  A = s("614149"),
   M = s("837886"),
   D = s("626135"),
   v = s("63063"),
@@ -89,7 +89,7 @@ function w(e) {
       }), (0, a.jsx)(B.default, {
         title: (0, a.jsxs)("div", {
           className: k.settingsRowHeader,
-          children: [(0, a.jsx)(A.default, {
+          children: [(0, a.jsx)(p.default, {
             width: 20,
             height: 20
           }), (0, a.jsx)(d.Text, {
@@ -162,7 +162,7 @@ function w(e) {
       }) : null, r ? (0, a.jsx)(B.default, {
         title: (0, a.jsxs)("div", {
           className: k.settingsRowHeader,
-          children: [(0, a.jsx)(p.default, {
+          children: [(0, a.jsx)(A.default, {
             width: 20,
             height: 20
           }), (0, a.jsx)(d.Text, {

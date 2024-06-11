@@ -125,14 +125,14 @@ e.exports = function(e) {
       end: r(/"""/, e),
       contains: [P(e), F(e), B(e)]
     }),
-    Y = (e = "") => ({
+    j = (e = "") => ({
       begin: r(e, /"/),
       end: r(/"/, e),
       contains: [P(e), B(e)]
     }),
-    j = {
+    Y = {
       className: "string",
-      variants: [U(), U("#"), U("##"), U("###"), Y(), Y("#"), Y("##"), Y("###")]
+      variants: [U(), U("#"), U("##"), U("###"), j(), j("#"), j("##"), j("###")]
     },
     z = {
       match: r(/`/, v, /`/)
@@ -152,7 +152,7 @@ e.exports = function(e) {
           begin: /\(/,
           end: /\)/,
           keywords: S,
-          contains: [...R, L, j]
+          contains: [...R, L, Y]
         }]
       }
     },
@@ -201,7 +201,7 @@ e.exports = function(e) {
         match: r(v, /\s*:/),
         keywords: "_|0",
         relevance: 0
-      }, ..._, ...O, ...A, ...R, L, j, ...H, ...$, W]
+      }, ..._, ...O, ...A, ...R, L, Y, ...H, ...$, W]
     },
     Q = {
       begin: /</,
@@ -223,7 +223,7 @@ e.exports = function(e) {
           className: "params",
           match: v
         }]
-      }, ..._, ...O, ...R, L, j, ...$, W, q],
+      }, ..._, ...O, ...R, L, Y, ...$, W, q],
       endsParent: !0,
       illegal: /["']/
     },
@@ -246,10 +246,10 @@ e.exports = function(e) {
       keywords: [...d, ...l],
       end: /}/
     };
-  for (let e of j.variants) {
+  for (let e of Y.variants) {
     let t = e.contains.find(e => "interpol" === e.label);
     t.keywords = D;
-    let n = [...O, ...A, ...R, L, j, ...H];
+    let n = [...O, ...A, ...R, L, Y, ...H];
     t.contains = [...n, {
       begin: /\(/,
       end: /\)/,
@@ -286,6 +286,6 @@ e.exports = function(e) {
       end: /$/,
       contains: [..._],
       relevance: 0
-    }, ...O, ...A, ...R, L, j, ...H, ...$, W, q]
+    }, ...O, ...A, ...R, L, Y, ...H, ...$, W, q]
   }
 }

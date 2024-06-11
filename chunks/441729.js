@@ -1,67 +1,67 @@
 "use strict";
-n.r(t);
-var a, i = n("442837"),
-  l = n("570140");
+r.r(t);
+var a, i = r("442837"),
+  n = r("570140");
 
-function s(e, t, n) {
+function l(e, t, r) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = r, e
 }
-let u = {
+let o = {
     speechRate: 1,
     currentMessage: null
   },
-  r = u;
-class o extends(a = i.default.DeviceSettingsStore) {
+  c = o;
+class s extends(a = i.default.DeviceSettingsStore) {
   initialize(e) {
-    r = {
-      ...u,
+    c = {
+      ...o,
       ...null != e ? e : null
     }
   }
   isSpeakingMessage(e, t) {
     let {
-      currentMessage: n
-    } = r;
-    return null !== n && n.channelId === e && n.messageId === t
+      currentMessage: r
+    } = c;
+    return null !== r && r.channelId === e && r.messageId === t
   }
   get currentMessage() {
-    return r.currentMessage
+    return c.currentMessage
   }
   get speechRate() {
-    return r.speechRate
+    return c.speechRate
   }
   getUserAgnosticState() {
-    return r
+    return c
   }
 }
-s(o, "displayName", "TTSStore"), s(o, "persistKey", "TTSStore"), s(o, "migrations", []), t.default = new o(l.default, __OVERLAY__ ? {} : {
+l(s, "displayName", "TTSStore"), l(s, "persistKey", "TTSStore"), l(s, "migrations", []), t.default = new s(n.default, __OVERLAY__ ? {} : {
   SPEAKING_MESSAGE: function(e) {
     let {
       messageId: t,
-      channelId: n
+      channelId: r
     } = e;
-    r = {
-      ...r,
+    c = {
+      ...c,
       currentMessage: {
         messageId: t,
-        channelId: n
+        channelId: r
       }
     }
   },
   STOP_SPEAKING: function() {
-    r = {
-      ...r,
+    c = {
+      ...c,
       currentMessage: null
     }
   },
   SET_TTS_SPEECH_RATE: function(e) {
-    r = {
-      ...r,
+    c = {
+      ...c,
       speechRate: e.speechRate
     }
   }

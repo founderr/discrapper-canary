@@ -1,6 +1,6 @@
 "use strict";
-r.r(t);
-var n = r("177624"),
-  a = r("195168"),
-  o = (0, n.default)(a.default, "WeakMap");
-t.default = o
+n.r(t);
+var r = n("177624"),
+  i = n("195168"),
+  a = (0, r.default)(i.default, "WeakMap");
+t.default = a

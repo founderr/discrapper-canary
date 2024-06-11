@@ -11,7 +11,7 @@ var r, i = n("442837"),
   f = n("825829"),
   S = n("981631");
 
-function p(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,11 +19,11 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let g = {},
+let p = {},
   h = 0,
   E = {},
   _ = {},
-  C = (e, t) => {
+  I = (e, t) => {
     let n = (0, s.getFailedMessageId)(e),
       r = {
         id: n,
@@ -31,11 +31,11 @@ let g = {},
         messageData: e,
         errorMessage: (0, d.getAutomodErrorMessage)(e, t)
       };
-    g[n] = r, h++
+    p[n] = r, h++
   },
-  I = e => g[e],
+  C = e => p[e],
   m = e => {
-    null != g[e] && delete g[e], h++
+    null != p[e] && delete p[e], h++
   };
 
 function T(e) {
@@ -43,10 +43,10 @@ function T(e) {
     messageData: t,
     errorResponseBody: n
   } = e;
-  return C(t, n), !0
+  return I(t, n), !0
 }
 
-function v(e) {
+function R(e) {
   var t;
   let {
     channelId: n,
@@ -65,20 +65,20 @@ function v(e) {
     }, l);
   return null != s && _[i] !== s && (_[i] = s, !0)
 }
-class R extends(r = i.default.PersistedStore) {
+class v extends(r = i.default.PersistedStore) {
   initialize(e) {
-    this.waitFor(a.default), null != e && (g = e.automodFailedMessages, E = e.mentionRaidDetectionByGuild)
+    this.waitFor(a.default), null != e && (p = e.automodFailedMessages, E = e.mentionRaidDetectionByGuild)
   }
   getState() {
     return {
-      automodFailedMessages: g,
+      automodFailedMessages: p,
       mentionRaidDetectionByGuild: E,
       lastIncidentAlertMessage: _
     }
   }
   getMessage(e) {
     var t;
-    return null == e ? null : null !== (t = I(e)) && void 0 !== t ? t : null
+    return null == e ? null : null !== (t = C(e)) && void 0 !== t ? t : null
   }
   getMessagesVersion() {
     return h
@@ -92,12 +92,12 @@ class R extends(r = i.default.PersistedStore) {
     return null !== (t = _[e]) && void 0 !== t ? t : null
   }
 }
-p(R, "displayName", "GuildAutomodMessageStore"), p(R, "persistKey", "GuildAutomodMessages"), t.default = new R(l.default, {
+g(v, "displayName", "GuildAutomodMessageStore"), g(v, "persistKey", "GuildAutomodMessages"), t.default = new v(l.default, {
   CONNECTION_OPEN: function(e) {
-    return g = {}, h++, !0
+    return p = {}, h++, !0
   },
-  LOAD_MESSAGES_SUCCESS: v,
-  LOCAL_MESSAGES_LOADED: v,
+  LOAD_MESSAGES_SUCCESS: R,
+  LOCAL_MESSAGES_LOADED: R,
   MESSAGE_CREATE: function(e) {
     let {
       guildId: t,

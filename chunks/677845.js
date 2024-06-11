@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
 }), n("653041");
 var a = n("735250"),
@@ -25,20 +25,20 @@ var a = n("735250"),
   T = n("251564"),
   I = n("695492"),
   A = n("981631"),
-  x = n("853085");
+  v = n("853085");
 
-function v(e) {
+function x(e) {
   let {
     participants: t,
     onClick: n,
-    onDoubleClick: v,
+    onDoubleClick: x,
     onContextMenu: N,
     channel: M,
     className: y,
     inCall: R,
     totalNumberOfParticipants: L,
-    paused: j = !1
-  } = e, O = (0, o.useAppContext)() === A.AppContext.POPOUT, P = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
+    paused: O = !1
+  } = e, j = (0, o.useAppContext)() === A.AppContext.POPOUT, P = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
     dismissedActivityEntryPointTileChannel: D
   } = (0, T.useChannelCallVideoGridStore)(), b = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(M.id), [M]), U = (0, p.useEnsureSyncedChannelParticipants)(M.id, t), F = l.useCallback(() => {
     T.useChannelCallVideoGridStore.setState({
@@ -60,14 +60,14 @@ function v(e) {
     Y = U.map(e => t => (0, a.jsx)(_.default, {
       participant: e,
       channel: M,
-      className: x.tile,
-      paused: j,
+      className: v.tile,
+      paused: O,
       onClick: n,
-      onDoubleClick: v,
+      onDoubleClick: x,
       onContextMenu: N,
       inCall: R,
       width: t,
-      inPopout: O
+      inPopout: j
     }, e.id));
   (0, c.default)({
     type: s.ImpressionTypes.VIEW,
@@ -84,19 +84,19 @@ function v(e) {
     channel: M,
     guild: P,
     width: e,
-    inPopout: O,
+    inPopout: j,
     handleClose: F,
     userParticipantCount: b
   })) : Y.push(e => (0, a.jsx)(I.default, {
     width: e,
     channel: M,
     guild: P,
-    inPopout: O
+    inPopout: j
   }))) : Y.push(e => (0, a.jsx)(S.ActivityEntryPointTile, {
     channel: M,
     guild: P,
     width: e,
-    inPopout: O,
+    inPopout: j,
     handleClose: F,
     userParticipantCount: b
   })));

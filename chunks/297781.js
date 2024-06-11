@@ -68,15 +68,15 @@ var a, l, s = n("735250"),
   T = n("324992"),
   I = n("137443"),
   A = n("700287"),
-  x = n("71970"),
-  v = n("277758"),
+  v = n("71970"),
+  x = n("277758"),
   N = n("690172"),
   M = n("481060"),
   y = n("70956"),
   R = n("709054"),
   L = n("719247"),
-  j = n("22211"),
-  O = n("561308"),
+  O = n("22211"),
+  j = n("561308"),
   P = n("265048"),
   D = n("371991"),
   b = n("689938"),
@@ -124,7 +124,7 @@ function H(e) {
     entry: t
   } = e, {
     channel: n
-  } = (0, j.default)(t), {
+  } = (0, O.default)(t), {
     location: a
   } = w();
   return null == n || 1 === a ? null : (0, s.jsx)(k, {
@@ -140,7 +140,7 @@ function G(e) {
     defaultTextColor: n,
     defaultIconColor: a,
     location: l
-  } = w(), i = 0 === l, r = (0, O.isEntryActive)(t), o = i && r ? M.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
+  } = w(), i = 0 === l, r = (0, j.isEntryActive)(t), o = i && r ? M.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
     className: U.badgeContainer,
     children: [(0, s.jsx)(C.GameControllerIcon, {
@@ -222,7 +222,7 @@ function W(e) {
   } = e, {
     location: n
   } = w(), a = 0 === n ? M.tokens.colors.STATUS_POSITIVE : void 0;
-  return (0, O.isEntryNew)(t) ? (0, s.jsx)(k, {
+  return (0, j.isEntryNew)(t) ? (0, s.jsx)(k, {
     Icon: S.NewUserLargeIcon,
     text: b.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
     iconColor: a
@@ -235,14 +235,14 @@ function Y(e) {
   } = e, {
     location: n
   } = w();
-  if (!(0, O.isEntryMarathon)(t)) return null;
-  let a = (0, O.isEntryActive)(t),
+  if (!(0, j.isEntryMarathon)(t)) return null;
+  let a = (0, j.isEntryActive)(t),
     l = 0 === n,
-    i = l || a ? (0, O.getMarathonName)(t) : (0, O.getFullMarathonDescription)(t);
+    i = l || a ? (0, j.getMarathonName)(t) : (0, j.getFullMarathonDescription)(t);
   return (0, s.jsx)(k, {
     Icon: I.TimerIcon,
     text: i,
-    tooltipText: (0, O.getMarathonDurationStr)(t),
+    tooltipText: (0, j.getMarathonDurationStr)(t),
     showTooltip: l && !a
   })
 }
@@ -252,9 +252,9 @@ function z(e) {
     entry: t
   } = e, {
     location: n
-  } = w(), a = (0, O.getResurrectedEntryLastPlayTime)(t);
+  } = w(), a = (0, j.getResurrectedEntryLastPlayTime)(t);
   if (null == a) return null;
-  let l = (0, O.getFullResurrectedBadgeText)(a);
+  let l = (0, j.getFullResurrectedBadgeText)(a);
   return (0, s.jsx)(k, {
     Icon: T.RetryIcon,
     showTooltip: 0 === n,
@@ -268,8 +268,8 @@ function K(e) {
     entry: t
   } = e, {
     location: n
-  } = w(), a = (0, O.getStreakCount)(t);
-  return (0, O.isValidStreak)(t) ? (0, s.jsx)(k, {
+  } = w(), a = (0, j.getStreakCount)(t);
+  return (0, j.isValidStreak)(t) ? (0, s.jsx)(k, {
     Icon: E.FlashIcon,
     showTooltip: 0 === n,
     text: b.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
@@ -286,12 +286,12 @@ function Z(e) {
     entry: t
   } = e, {
     location: n
-  } = w(), a = (0, O.getEntryDuration)(t);
+  } = w(), a = (0, j.getEntryDuration)(t);
   if (null == a) return null;
   let l = 1 === n,
     i = l ? b.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : b.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
   return (0, s.jsx)(k, {
-    Icon: x.TrophyIcon,
+    Icon: v.TrophyIcon,
     text: (0, s.jsxs)(s.Fragment, {
       children: [b.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
         hours: Math.round(a / y.default.Seconds.HOUR)
@@ -306,7 +306,7 @@ function X(e) {
     entry: n
   } = e, {
     location: a
-  } = w(), l = null === (t = (0, O.getTrait)(n, c.ContentInventoryTraitType.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+  } = w(), l = null === (t = (0, j.getTrait)(n, c.ContentInventoryTraitType.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
   if (null == l) return null;
   let i = 1 === a ? b.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
     count: l
@@ -314,7 +314,7 @@ function X(e) {
     count: l
   });
   return (0, s.jsx)(k, {
-    Icon: x.TrophyIcon,
+    Icon: v.TrophyIcon,
     text: i
   })
 }
@@ -322,7 +322,7 @@ function X(e) {
 function q(e) {
   let {
     entry: t
-  } = e, n = (0, O.getTrendingType)(t);
+  } = e, n = (0, j.getTrendingType)(t);
   return null == n || n === f.TrendingType.TRENDING_TYPE_UNSPECIFIED ? null : (0, s.jsx)(k, {
     Icon: g.GlobeEarthIcon,
     text: b.default.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
@@ -348,7 +348,7 @@ function Q(e) {
   } = w();
   return (0, s.jsxs)("div", {
     className: U.badgeContainer,
-    children: [(0, s.jsx)(v.TvIcon, {
+    children: [(0, s.jsx)(x.TvIcon, {
       width: 12,
       height: 12,
       color: a

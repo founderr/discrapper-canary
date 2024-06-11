@@ -14,8 +14,8 @@ var n = i("735250"),
   d = i("912893"),
   c = i("153850"),
   h = i("768581"),
-  f = i("176354"),
-  m = i("675654"),
+  m = i("176354"),
+  f = i("675654"),
   p = i("680493");
 let g = [];
 
@@ -28,7 +28,7 @@ function T(e) {
   } = e, [v, E] = a.useState(0), [R, I] = a.useState(0), [N, C] = a.useState(null), {
     confettiCanvas: _
   } = a.useContext(u.ConfettiCannonContext), x = (0, s.useConfettiCannon)(_, N), O = a.useMemo(() => [{
-    src: null == i.id ? f.default.getURL(i.name) : h.default.getEmojiURL({
+    src: null == i.id ? m.default.getURL(i.name) : h.default.getEmojiURL({
       id: i.id,
       animated: !1,
       size: 22
@@ -78,7 +78,7 @@ function T(e) {
   });
   return a.useEffect(() => {
     v > 0 && R > 0 && x.createConfetti({
-      ...m.COMMON_CONFETTI_BASE_CONFIG,
+      ...f.COMMON_CONFETTI_BASE_CONFIG,
       position: {
         type: "static",
         value: {
@@ -92,8 +92,8 @@ function T(e) {
       ref: C,
       sprites: O,
       colors: g,
-      spriteWidth: m.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-      spriteHeight: m.COMMON_CONFETTI_MAX_SPRITE_SIZE
+      spriteWidth: f.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+      spriteHeight: f.COMMON_CONFETTI_MAX_SPRITE_SIZE
     }), (0, n.jsx)(c.default, {
       children: (0, n.jsx)(l.animated.div, {
         style: {

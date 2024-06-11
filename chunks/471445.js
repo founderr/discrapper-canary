@@ -46,8 +46,8 @@ var i = n("281956"),
   w = n("632184"),
   k = n("414896"),
   B = n("398856"),
-  V = n("170039"),
-  x = n("178695"),
+  x = n("170039"),
+  V = n("178695"),
   F = n("548420"),
   H = n("761374"),
   Y = n("435443"),
@@ -157,10 +157,10 @@ function Q(e, t) {
       if ((0, j.default)(e)) return g.default;
       else return R.default;
     case K.ChannelTypes.GUILD_STAGE_VOICE:
-      if (J) return (0, j.default)(e) ? C.default : x.default;
+      if (J) return (0, j.default)(e) ? C.default : V.default;
       if (z) return C.default;
-      if ((0, j.default)(e)) return x.default;
-      else return V.default;
+      if ((0, j.default)(e)) return V.default;
+      else return x.default;
     case K.ChannelTypes.GUILD_VOICE:
       if (q) return A.default;
       if (e.isNSFW()) return B.default;
@@ -204,7 +204,7 @@ function X(e) {
     case K.ChannelTypes.GUILD_MEDIA:
       return f.default;
     case K.ChannelTypes.GUILD_STAGE_VOICE:
-      return V.default;
+      return x.default;
     case K.ChannelTypes.GUILD_VOICE:
       return w.default;
     case K.ChannelTypes.GUILD_CATEGORY:

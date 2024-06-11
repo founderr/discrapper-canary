@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return v
   }
 }), n("653041");
 var a = n("735250");
@@ -16,14 +16,14 @@ var l = n("442837"),
   c = n("63063"),
   E = n("5192"),
   _ = n("431328"),
-  f = n("501655"),
-  S = n("659972"),
-  T = n("981631"),
-  h = n("765305"),
-  N = n("689938"),
+  S = n("501655"),
+  T = n("659972"),
+  f = n("981631"),
+  N = n("765305"),
+  h = n("689938"),
   g = n("562035");
 
-function v(e) {
+function I(e) {
   let {
     icon: t
   } = e;
@@ -36,7 +36,7 @@ function v(e) {
   })
 }
 
-function I(e) {
+function m(e) {
   let {
     icon: t,
     text: n
@@ -67,25 +67,25 @@ function x(e) {
     channel_id: s.id,
     topic: r.topic,
     description: r.description,
-    privacy_level: null !== (t = r.privacyLevel) && void 0 !== t ? t : h.GuildScheduledEventPrivacyLevel.PUBLIC
-  }, o = (0, _.useStageParticipants)(s.id, f.StageChannelParticipantNamedIndex.SPEAKER), c = (0, _.useStageParticipantsCount)(s.id, f.StageChannelParticipantNamedIndex.AUDIENCE), T = o.slice(0, 5);
-  return null == T.find(e => {
+    privacy_level: null !== (t = r.privacyLevel) && void 0 !== t ? t : N.GuildScheduledEventPrivacyLevel.PUBLIC
+  }, o = (0, _.useStageParticipants)(s.id, S.StageChannelParticipantNamedIndex.SPEAKER), c = (0, _.useStageParticipantsCount)(s.id, S.StageChannelParticipantNamedIndex.AUDIENCE), f = o.slice(0, 5);
+  return null == f.find(e => {
     var t;
     return (null === (t = e.user) || void 0 === t ? void 0 : t.id) === (null == d ? void 0 : d.id)
-  }) && T.push({
+  }) && f.push({
     user: d,
     userNick: E.default.getName(n.id, s.id, d)
   }), (0, a.jsx)("div", {
     className: g.previewCardContainer,
     children: (0, a.jsx)("div", {
       className: g.previewCard,
-      children: (0, a.jsx)(S.default, {
+      children: (0, a.jsx)(T.default, {
         guild: n,
         stageInstance: u,
         showGuildPopout: !1,
         setShowGuildPopout: () => {},
-        source: S.StageDiscoveryRecommendationSource.UNSPECIFIED,
-        speakers: T,
+        source: T.StageDiscoveryRecommendationSource.UNSPECIFIED,
+        speakers: f,
         speakerCount: o.length,
         audienceCount: Math.max(1337, c),
         channelName: s.name
@@ -94,7 +94,7 @@ function x(e) {
   })
 }
 
-function m(e) {
+function v(e) {
   let {
     guild: t,
     channel: n,
@@ -102,8 +102,8 @@ function m(e) {
     headerId: i,
     loading: E,
     onNext: _,
-    onCancel: f,
-    onBack: S
+    onCancel: S,
+    onBack: T
   } = e;
   return null == t || null == n || null == l ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(x, {
@@ -118,39 +118,39 @@ function m(e) {
           id: i,
           className: g.__invalid_title,
           variant: "heading-xl/semibold",
-          children: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE
+          children: h.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE
         }), (0, a.jsx)(s.Text, {
           className: g.subtitle,
           color: "header-secondary",
           variant: "text-sm/normal",
-          children: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SUBTITLE
+          children: h.default.Messages.START_STAGE_PUBLIC_PREVIEW_SUBTITLE
         })]
       }), (0, a.jsxs)("div", {
         className: g.__invalid_list,
-        children: [(0, a.jsx)(I, {
-          icon: (0, a.jsx)(v, {
+        children: [(0, a.jsx)(m, {
+          icon: (0, a.jsx)(I, {
             icon: r.default
           }),
-          text: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
-        }), (0, a.jsx)(I, {
-          icon: (0, a.jsx)(v, {
+          text: h.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
+        }), (0, a.jsx)(m, {
+          icon: (0, a.jsx)(I, {
             icon: u.default
           }),
-          text: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
-        }), (0, a.jsx)(I, {
-          icon: (0, a.jsx)(v, {
+          text: h.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
+        }), (0, a.jsx)(m, {
+          icon: (0, a.jsx)(I, {
             icon: d.default
           }),
-          text: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
-        }), (0, a.jsx)(I, {
+          text: h.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
+        }), (0, a.jsx)(m, {
           icon: (0, a.jsx)(o.default, {
             className: g.badgeIconBackground,
             foreground: g.badgeIconForeground,
             width: 40,
             height: 40
           }),
-          text: N.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({
-            articleURL: c.default.getArticleURL(T.HelpdeskArticles.STAGE_CHANNEL_GUIDELINES)
+          text: h.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({
+            articleURL: c.default.getArticleURL(f.HelpdeskArticles.STAGE_CHANNEL_GUIDELINES)
           })
         })]
       })]
@@ -159,19 +159,19 @@ function m(e) {
         color: s.Button.Colors.GREEN,
         onClick: _,
         submitting: E,
-        children: N.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
+        children: h.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
       }), (0, a.jsx)(s.Button, {
         color: s.Button.Colors.PRIMARY,
         className: g.cancelButton,
-        onClick: f,
-        children: N.default.Messages.CANCEL
+        onClick: S,
+        children: h.default.Messages.CANCEL
       }), (0, a.jsx)(s.Button, {
         look: s.Button.Looks.LINK,
         color: s.Button.Colors.LINK,
         className: g.backButton,
-        onClick: S,
+        onClick: T,
         size: s.Button.Sizes.MIN,
-        children: N.default.Messages.BACK
+        children: h.default.Messages.BACK
       })]
     })]
   })

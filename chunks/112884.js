@@ -6,31 +6,31 @@ a.r(t), a.d(t, {
 });
 var l = a("735250");
 a("470079");
-var n = a("481060"),
-  s = a("689938"),
-  i = a("733650");
+var i = a("481060"),
+  n = a("689938"),
+  s = a("733650");
 
 function r(e) {
   let {} = e;
   return (0, l.jsxs)("div", {
-    className: i.container,
+    className: s.container,
     children: [(0, l.jsxs)("div", {
-      className: i.content,
-      children: [(0, l.jsx)(n.Text, {
+      className: s.content,
+      children: [(0, l.jsx)(i.Text, {
         variant: "text-sm/semibold",
-        className: i.title,
-        children: s.default.Messages.APP_DIRECTORY_MUSIC_BANNER_TITLE
-      }), (0, l.jsx)(n.Heading, {
+        className: s.title,
+        children: n.default.Messages.APP_DIRECTORY_MUSIC_BANNER_TITLE
+      }), (0, l.jsx)(i.Heading, {
         variant: "heading-xxl/medium",
-        children: s.default.Messages.APP_DIRECTORY_MUSIC_BANNER_HEADER
-      }), (0, l.jsx)(n.Text, {
+        children: n.default.Messages.APP_DIRECTORY_MUSIC_BANNER_HEADER
+      }), (0, l.jsx)(i.Text, {
         variant: "text-md/normal",
-        children: s.default.Messages.APP_DIRECTORY_MUSIC_BANNER_CONTENT
+        children: n.default.Messages.APP_DIRECTORY_MUSIC_BANNER_CONTENT
       })]
     }), (0, l.jsx)("div", {
-      className: i.imageContainer,
+      className: s.imageContainer,
       children: (0, l.jsx)("img", {
-        className: i.image,
+        className: s.image,
         src: a("723067"),
         alt: ""
       })

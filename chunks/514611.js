@@ -59,12 +59,12 @@ class L extends(a = l.PureComponent) {
       description: O,
       presenceCount: L,
       memberCount: P,
-      keywords: M
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
+      keywords: y
+    } = t, M = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, C.getDevicePixelRatio)()
-    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
+    }), x = null != D ? D : this.getDefaultSplashURL(a, M), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -120,7 +120,7 @@ class L extends(a = l.PureComponent) {
                   src: x,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !y
+                    [A.splashImageHeight]: !M
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
@@ -170,8 +170,8 @@ class L extends(a = l.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: O
-              }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: M,
+              }), U && null != y && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: y,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: S.AnalyticsContexts.POPULAR

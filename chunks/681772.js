@@ -62,8 +62,8 @@ var r = n("793901"),
   F = n("464593"),
   B = n("770003"),
   U = n("182823"),
-  Y = n("470079"),
-  j = n("448302"),
+  j = n("470079"),
+  Y = n("448302"),
   z = n("602607"),
   H = n("275857"),
   G = n("706682"),
@@ -210,7 +210,7 @@ function J(e, t, n) {
     sensitivity: "base"
   }), {
     direction: s
-  } = (0, z.useLocale)(), u = t.selectionManager.disabledBehavior, c = (0, Y.useMemo)(() => r || new X({
+  } = (0, z.useLocale)(), u = t.selectionManager.disabledBehavior, c = (0, j.useMemo)(() => r || new X({
     collection: t.collection,
     disabledKeys: "selection" === u ? new Set : t.disabledKeys,
     ref: n,
@@ -226,11 +226,11 @@ function J(e, t, n) {
     id: l,
     keyboardDelegate: c
   }, t, n);
-  i && (d["aria-rowcount"] = t.collection.size + t.collection.headerRows.length), (0, j.tableNestedRows)() && "expandedKeys" in t && (d.role = "treegrid");
+  i && (d["aria-rowcount"] = t.collection.size + t.collection.headerRows.length), (0, Y.tableNestedRows)() && "expandedKeys" in t && (d.role = "treegrid");
   let {
     column: f,
     direction: p
-  } = t.sortDescriptor || {}, h = (0, z.useLocalizedStringFormatter)($(Z), "@react-aria/table"), m = (0, Y.useMemo)(() => {
+  } = t.sortDescriptor || {}, h = (0, z.useLocalizedStringFormatter)($(Z), "@react-aria/table"), m = (0, j.useMemo)(() => {
     var e;
     let n = null === (e = t.collection.columns.find(e => e.key === f)) || void 0 === e ? void 0 : e.textValue;
     return p && f ? h.format(`${p}Sort`, {
@@ -272,7 +272,7 @@ function ee(e, t, n) {
   s && (a = `${m.format("sortable")}`, p && h && (0, U.isAndroid)() && (a = `${a}, ${m.format(h)}`));
   let g = (0, U.useDescription)(a),
     _ = 0 === t.collection.size;
-  return (0, Y.useEffect)(() => {
+  return (0, j.useEffect)(() => {
     _ && t.selectionManager.focusedKey === o.key && t.selectionManager.setFocusedKey(null)
   }, [_, t.selectionManager, o.key]), {
     columnHeaderProps: {
@@ -311,9 +311,9 @@ function en(e, t, n) {
   } = (0, F.useGridRow)(e, t, n), {
     direction: s
   } = (0, z.useLocale)();
-  i && !((0, j.tableNestedRows)() && "expandedKeys" in t) ? a["aria-rowindex"] = r.index + 1 + t.collection.headerRows.length : delete a["aria-rowindex"];
+  i && !((0, Y.tableNestedRows)() && "expandedKeys" in t) ? a["aria-rowindex"] = r.index + 1 + t.collection.headerRows.length : delete a["aria-rowindex"];
   let u = {};
-  if ((0, j.tableNestedRows)() && "expandedKeys" in t) {
+  if ((0, Y.tableNestedRows)() && "expandedKeys" in t) {
     let e = t.keyMap.get(r.key);
     if (null != e) {
       var c, l, d;
@@ -346,7 +346,7 @@ function er(e, t, n) {
   } = e, a = {
     role: "row"
   };
-  return i && !((0, j.tableNestedRows)() && "expandedKeys" in t) && (a["aria-rowindex"] = r.index + 1), {
+  return i && !((0, Y.tableNestedRows)() && "expandedKeys" in t) && (a["aria-rowindex"] = r.index + 1), {
     rowProps: a
   }
 }

@@ -48,8 +48,8 @@ t.default = function(e) {
     user: w,
     currentUser: k,
     activities: B,
-    applicationStream: V,
-    status: x,
+    applicationStream: x,
+    status: V,
     shouldAnimateStatus: F = !1,
     isMobile: H,
     premiumSince: Y,
@@ -112,7 +112,7 @@ t.default = function(e) {
         textClassName: y.activityText,
         emojiClassName: y.activityEmoji,
         activities: B,
-        applicationStream: V,
+        applicationStream: x,
         animate: e_,
         hideEmoji: !t,
         hideTooltip: !0,
@@ -153,7 +153,7 @@ t.default = function(e) {
     }),
     ey = (e, t) => {
       let n = F ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.default)(B) ? L.StatusTypes.STREAMING : x;
+        r = (0, u.default)(B) ? L.StatusTypes.STREAMING : V;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eS,
@@ -188,7 +188,7 @@ t.default = function(e) {
         profileViewedAnalytics: eh
       })]
     }),
-    eU = x === L.StatusTypes.OFFLINE,
+    eU = V === L.StatusTypes.OFFLINE,
     eb = null != K;
   return null == w ? (0, i.jsx)(m.default, {
     avatarSize: l.AvatarSizes.SIZE_32,
@@ -197,7 +197,7 @@ t.default = function(e) {
     renderPopout: e => (0, i.jsx)(T.default, {
       quest: eN,
       memberListItemRef: ed,
-      applicationStream: V,
+      applicationStream: x,
       ...e,
       closePopout: () => em(!0)
     }),

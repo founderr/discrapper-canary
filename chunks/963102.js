@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   CollectiblesShopHeaderBar: function() {
-    return S
+    return g
   }
 });
 var a = s("735250"),
@@ -16,32 +16,32 @@ var a = s("735250"),
   f = s("792125"),
   C = s("335131"),
   E = s("994896"),
-  p = s("689938"),
-  m = s("424681");
+  m = s("689938"),
+  p = s("424681");
 
-function g(e) {
+function S(e) {
   let {
     isLayer: t,
     onClose: s,
     isFullScreen: n = !1
   } = e;
   return (0, a.jsxs)(u.default, {
-    className: r()(m.headerBar, {
-      [m.fullscreenHeaderBar]: n
+    className: r()(p.headerBar, {
+      [p.fullscreenHeaderBar]: n
     }),
-    innerClassname: m.shopLogoContainer,
+    innerClassname: p.shopLogoContainer,
     toolbar: n ? null : (0, a.jsx)(l.Fragment, {}),
     children: [(0, a.jsx)(d.default, {
-      className: m.shopLogo
+      className: p.shopLogo
     }), n && (0, a.jsx)(i.default, {
-      className: m.closeIcon,
+      className: p.closeIcon,
       closeAction: t ? C.closeCollectiblesShop : s,
       keybind: "ESC"
     })]
   })
 }
 
-function S(e) {
+function g(e) {
   let {
     isFullScreen: t,
     isLayer: s,
@@ -50,22 +50,22 @@ function S(e) {
     newShopLogoEnabled: d
   } = (0, E.useCollectiblesCondensedBannersExperiment)({
     location: "CollectiblesShop"
-  }), S = (0, o.default)();
-  return d ? (0, a.jsx)(g, {
+  }), g = (0, o.default)();
+  return d ? (0, a.jsx)(S, {
     isLayer: s,
     onClose: n,
     isFullScreen: t
   }) : (0, a.jsxs)(u.default, {
-    className: r()((0, f.getThemeClass)(S), m.headerBar, {
-      [m.fullscreenHeaderBar]: t
+    className: r()((0, f.getThemeClass)(g), p.headerBar, {
+      [p.fullscreenHeaderBar]: t
     }),
     toolbar: t ? null : (0, a.jsx)(l.Fragment, {}),
     children: [(0, a.jsx)(c.default, {
-      className: m.discordLogo
+      className: p.discordLogo
     }), (0, a.jsx)(u.default.Title, {
-      children: p.default.Messages.COLLECTIBLES_SHOP
+      children: m.default.Messages.COLLECTIBLES_SHOP
     }), t && (0, a.jsx)(i.default, {
-      className: m.closeIcon,
+      className: p.closeIcon,
       closeAction: s ? C.closeCollectiblesShop : n,
       keybind: "ESC"
     })]

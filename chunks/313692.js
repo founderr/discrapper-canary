@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -25,20 +25,20 @@ var a = n("735250"),
   T = n("991570"),
   I = n("50493"),
   A = n("806338"),
-  x = n("976335");
+  v = n("976335");
 
-function v(e) {
+function x(e) {
   var t, n;
   let {
     userId: s,
-    guildId: v,
+    guildId: x,
     location: N,
     className: M,
     onNavigate: y
-  } = e, R = l.useRef(null), L = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(v), [v]), j = l.useRef(0), [O, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, S.useServerMessageHistoryForUser)(s, v, {
-    addtionalQuery: O,
+  } = e, R = l.useRef(null), L = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(x), [x]), O = l.useRef(0), [j, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, S.useServerMessageHistoryForUser)(s, x, {
+    addtionalQuery: j,
     shouldDispatch: !0
-  }), b = (0, o.useStateFromStores)([C.default], () => C.default.getUser(s), [s]), U = (0, o.useStateFromStores)([E.default], () => E.default.getMember(v, s), [v, s]), F = (0, T.useProfileThemedPanelBackground)(s, v);
+  }), b = (0, o.useStateFromStores)([C.default], () => C.default.getUser(s), [s]), U = (0, o.useStateFromStores)([E.default], () => E.default.getMember(x, s), [x, s]), F = (0, T.useProfileThemedPanelBackground)(s, x);
   l.useLayoutEffect(() => {
     let e = null == L ? void 0 : L.details.scrollOffset;
     if (null != e) {
@@ -52,26 +52,26 @@ function v(e) {
   let w = l.useCallback(e => {
       if (null == L) return;
       let t = e.target.scrollTop;
-      j.current = t, (0, g.openGuildMemberModViewSidebar)(v, s, L.baseChannelId, {
+      O.current = t, (0, g.openGuildMemberModViewSidebar)(x, s, L.baseChannelId, {
         modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
-        additionalSearchQuery: O,
-        scrollOffset: j.current
+        additionalSearchQuery: j,
+        scrollOffset: O.current
       })
-    }, [v, s, L, O]),
+    }, [x, s, L, j]),
     k = (0, r.throttle)(w, 300),
     H = l.useCallback(e => {
       if (null == L) return;
       let t = {
-        ...O,
+        ...j,
         offset: 25 * e
       };
-      P(t), (0, g.openGuildMemberModViewSidebar)(v, s, L.baseChannelId, {
+      P(t), (0, g.openGuildMemberModViewSidebar)(x, s, L.baseChannelId, {
         modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
         additionalSearchQuery: t,
-        scrollOffset: j.current
+        scrollOffset: O.current
       })
-    }, [v, s, L, O]),
-    G = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
+    }, [x, s, L, j]),
+    G = null !== (n = null == j ? void 0 : j.offset) && void 0 !== n ? n : 0,
     B = (0, o.useStateFromStores)([c.default], () => {
       if (null == D.result) return [];
       let e = D.result.messages,
@@ -119,11 +119,11 @@ function v(e) {
       backgroundColor: F
     },
     children: [(0, a.jsx)(_.default, {
-      guildId: v,
+      guildId: x,
       userId: s,
       onNavigate: y
     }), (0, a.jsx)(u.AdvancedScroller, {
-      className: i()(x.innerContainer),
+      className: i()(v.innerContainer),
       ref: R,
       onScroll: k,
       children: (0, a.jsx)(m.default, {

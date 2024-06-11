@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return F
+    return O
   }
 }), l("47120");
 var s = l("735250"),
@@ -25,11 +25,11 @@ var s = l("735250"),
   g = l("318661"),
   A = l("726059"),
   x = l("162267"),
-  N = l("484404"),
-  C = l("502762"),
+  C = l("484404"),
+  N = l("502762"),
   U = l("62154"),
-  h = l("293259"),
-  P = l("725954"),
+  P = l("293259"),
+  h = l("725954"),
   R = l("228168"),
   M = l("981631"),
   j = l("689938"),
@@ -83,14 +83,14 @@ function L(e) {
   })
 }
 
-function F(e) {
+function O(e) {
   var t, l;
   let {
     user: T,
     guildId: A,
     channelId: x,
-    messageId: F,
-    roleId: O,
+    messageId: O,
+    roleId: F,
     friendToken: D,
     autoFocusNote: b,
     initialSection: B = R.UserProfileSections.USER_INFO,
@@ -105,8 +105,8 @@ function F(e) {
     showGuildProfile: !1,
     guildId: A,
     channelId: x,
-    messageId: F,
-    roleId: O
+    messageId: O,
+    roleId: F
   });
   (0, u.useSubscribeGuildMembers)({
     [A]: [Y.id]
@@ -135,8 +135,8 @@ function F(e) {
       userId: Y.id,
       guildId: A,
       channelId: x,
-      messageId: F,
-      roleId: O,
+      messageId: O,
+      roleId: F,
       showGuildProfile: !1,
       children: (0, s.jsx)(o.default, {
         section: M.AnalyticsSections.PROFILE_MODAL,
@@ -145,12 +145,12 @@ function F(e) {
           className: y.root,
           hideShadow: !0,
           "aria-label": j.default.Messages.USER_PROFILE_MODAL,
-          children: [(0, s.jsxs)(C.default, {
+          children: [(0, s.jsxs)(N.default, {
             user: Y,
             displayProfile: H,
             profileType: R.UserProfileTypes.MODAL,
             ref: et,
-            children: [(0, s.jsx)(h.default, {
+            children: [(0, s.jsx)(P.default, {
               className: y.topSection,
               displayProfile: H,
               user: Y,
@@ -160,13 +160,13 @@ function F(e) {
               guildId: A,
               channelId: x,
               hasProfileEffect: null != ei
-            }), (0, s.jsxs)(C.default.Overlay, {
+            }), (0, s.jsxs)(N.default.Overlay, {
               className: y.overlay,
-              children: [G === n.ModalTransitionState.ENTERED && (0, s.jsx)(N.default, {
+              children: [G === n.ModalTransitionState.ENTERED && (0, s.jsx)(C.default, {
                 onTooltipClose: w
               }), (0, s.jsxs)("div", {
                 className: y.body,
-                children: [(0, s.jsx)(P.default, {
+                children: [(0, s.jsx)(h.default, {
                   user: Y,
                   displayProfile: H
                 }), ee ? (0, s.jsx)(L, {

@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("651183"),
   I = n("618158"),
   A = n("390322"),
-  x = n("616286"),
-  v = n("961048"),
+  v = n("616286"),
+  x = n("961048"),
   N = n("179424"),
   M = n("786915"),
   y = n("975146"),
   R = n("991617"),
   L = n("606304"),
-  j = n("594174"),
-  O = n("502568"),
+  O = n("594174"),
+  j = n("502568"),
   P = n("805009"),
   D = n("368666"),
   b = n("358221"),
@@ -87,7 +87,7 @@ function W(e) {
     selectedParticipant: b.default.getSelectedParticipant(_),
     voiceParticipantsHidden: b.default.getVoiceParticipantsHidden(_),
     userParticipantCount: b.default.getUserParticipantCount(_)
-  }), [_]), W = (0, d.useStateFromStores)([j.default], () => j.default.getCurrentUser()), Y = (0, U.default)(n), {
+  }), [_]), W = (0, d.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Y = (0, U.default)(n), {
     available: z,
     activated: K,
     hqStreamingState: Z
@@ -173,16 +173,16 @@ function W(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.createElement)(v.default, {
+      return (0, l.createElement)(x.default, {
         ...e,
         key: "more-options",
         isActive: n,
         className: B.lastButton
       })
     }
-  }, "more-options-popout")), !r && (ee.push((0, a.jsx)(O.default.Divider, {
+  }, "more-options-popout")), !r && (ee.push((0, a.jsx)(j.default.Divider, {
     className: B.divider
-  }, "divider")), ee.push((0, a.jsx)(x.ChatButton, {
+  }, "divider")), ee.push((0, a.jsx)(v.ChatButton, {
     channelId: n.id,
     className: B.chatButtonSpacer,
     disabled: !0

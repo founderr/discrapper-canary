@@ -1,35 +1,35 @@
 "use strict";
-t.r(s), t("47120");
-var a = t("735250"),
-  l = t("470079"),
-  i = t("120356"),
-  n = t.n(i),
-  d = t("699581"),
-  r = t.n(d),
-  c = t("481060"),
-  o = t("808602"),
-  u = t("93879"),
-  h = t("689938"),
-  x = t("878163"),
-  N = t("351109");
+a.r(s), a("47120");
+var t = a("735250"),
+  l = a("470079"),
+  i = a("120356"),
+  n = a.n(i),
+  d = a("699581"),
+  r = a.n(d),
+  c = a("481060"),
+  o = a("808602"),
+  u = a("93879"),
+  h = a("689938"),
+  N = a("878163"),
+  x = a("351109");
 
 function I(e) {
   let {
     text: s,
-    className: t,
+    className: a,
     hidden: l
   } = e;
-  return (0, a.jsxs)("div", {
-    className: n()(t, x.tip, {
-      [x.hidden]: l
+  return (0, t.jsxs)("div", {
+    className: n()(a, N.tip, {
+      [N.hidden]: l
     }),
-    children: [(0, a.jsx)(c.Text, {
-      className: x.__invalid_tipText,
+    children: [(0, t.jsx)(c.Text, {
+      className: N.__invalid_tipText,
       variant: "text-sm/normal",
       color: "text-secondary",
       children: s
-    }), (0, a.jsx)("div", {
-      className: x.tipLine
+    }), (0, t.jsx)("div", {
+      className: N.tipLine
     })]
   })
 }
@@ -37,21 +37,21 @@ function I(e) {
 function T(e) {
   let {
     grey: s,
-    mention: t,
+    mention: a,
     name: l
   } = e;
-  return (0, a.jsxs)("div", {
-    className: n()(x.channel, {
-      [x.grey]: s,
-      [x.mention]: t
+  return (0, t.jsxs)("div", {
+    className: n()(N.channel, {
+      [N.grey]: s,
+      [N.mention]: a
     }),
-    children: [(0, a.jsx)(u.default, {
-      className: x.channelIcon,
+    children: [(0, t.jsx)(u.default, {
+      className: N.channelIcon,
       width: 16,
       height: 16
-    }), (0, a.jsx)(c.Text, {
+    }), (0, t.jsx)(c.Text, {
       variant: "text-md/medium",
-      className: x.channelName,
+      className: N.channelName,
       children: l
     })]
   })
@@ -68,116 +68,116 @@ s.default = l.forwardRef(function(e, s) {
       })
     }, 400)
   }, []);
-  return (0, a.jsxs)(c.Scroller, {
-    className: N.content,
-    children: [(0, a.jsxs)("div", {
-      className: N.header,
-      children: [(0, a.jsx)(o.default, {
+  return (0, t.jsxs)(c.Scroller, {
+    className: x.content,
+    children: [(0, t.jsxs)("div", {
+      className: x.header,
+      children: [(0, t.jsx)(o.default, {
         width: 40,
         height: 40
-      }), (0, a.jsx)(c.Heading, {
+      }), (0, t.jsx)(c.Heading, {
         variant: "heading-xl/semibold",
         color: "header-primary",
         children: h.default.Messages.NOTIF_MIGRATION_INTRO_TITLE
-      }), (0, a.jsx)(c.Text, {
-        className: N.__invalid_subtitle,
+      }), (0, t.jsx)(c.Text, {
+        className: x.__invalid_subtitle,
         variant: "text-md/normal",
         color: "header-secondary",
         children: h.default.Messages.NOTIF_MIGRATION_INTRO_SUB_TITLE
       })]
-    }), (0, a.jsxs)("div", {
-      className: x.container,
-      children: [(0, a.jsxs)("div", {
-        className: x.tabs,
-        children: [(0, a.jsx)("div", {
-          className: x.tabBackground,
+    }), (0, t.jsxs)("div", {
+      className: N.container,
+      children: [(0, t.jsxs)("div", {
+        className: N.tabs,
+        children: [(0, t.jsx)("div", {
+          className: N.tabBackground,
           style: {
             left: "before" === i ? 0 : "50%"
           }
-        }), (0, a.jsx)(c.Clickable, {
-          className: x.tab,
+        }), (0, t.jsx)(c.Clickable, {
+          className: N.tab,
           onClick: () => _("before"),
-          children: (0, a.jsx)(c.Text, {
+          children: (0, t.jsx)(c.Text, {
             variant: "text-sm/medium",
             color: "before" === i ? "header-primary" : "text-muted",
             children: h.default.Messages.NOTIF_MIGRATION_INTRO_BEFORE
           })
-        }), (0, a.jsx)(c.Clickable, {
-          className: x.tab,
+        }), (0, t.jsx)(c.Clickable, {
+          className: N.tab,
           onClick: () => _("after"),
-          children: (0, a.jsx)(c.Text, {
+          children: (0, t.jsx)(c.Text, {
             variant: "text-sm/medium",
             color: "after" === i ? "header-primary" : "text-muted",
             children: h.default.Messages.NOTIF_MIGRATION_INTRO_AFTER
           })
         })]
-      }), (0, a.jsxs)("div", {
-        className: x.previewContainer,
-        children: [(0, a.jsxs)("div", {
-          className: x.guilds,
-          children: [(0, a.jsx)("div", {
-            className: x.unreadGuild,
-            children: (0, a.jsx)("img", {
-              src: t("180681"),
+      }), (0, t.jsxs)("div", {
+        className: N.previewContainer,
+        children: [(0, t.jsxs)("div", {
+          className: N.guilds,
+          children: [(0, t.jsx)("div", {
+            className: N.unreadGuild,
+            children: (0, t.jsx)("img", {
+              src: a("180681"),
               width: 36,
               height: 36,
               alt: "Example Guild Icon"
             })
-          }), (0, a.jsx)("div", {
-            className: "after" === i ? x.guild : x.unreadGuild,
-            children: (0, a.jsx)("img", {
-              src: t("390115"),
+          }), (0, t.jsx)("div", {
+            className: "after" === i ? N.guild : N.unreadGuild,
+            children: (0, t.jsx)("img", {
+              src: a("390115"),
               width: 36,
               height: 36,
               alt: "Example Guild Icon"
             })
-          }), (0, a.jsx)("div", {
-            className: "after" === i ? x.guild : x.unreadGuild,
-            children: (0, a.jsx)("img", {
-              src: t("17840"),
+          }), (0, t.jsx)("div", {
+            className: "after" === i ? N.guild : N.unreadGuild,
+            children: (0, t.jsx)("img", {
+              src: a("17840"),
               width: 36,
               height: 36,
               alt: "Example Guild Icon"
             })
           })]
-        }), (0, a.jsxs)("div", {
-          className: x.channels,
-          children: [(0, a.jsx)(T, {
+        }), (0, t.jsxs)("div", {
+          className: N.channels,
+          children: [(0, t.jsx)(T, {
             mention: !0,
             name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
-          }), (0, a.jsx)(T, {
+          }), (0, t.jsx)(T, {
             name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
-          }), (0, a.jsx)(T, {
+          }), (0, t.jsx)(T, {
             grey: "after" === i,
             name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
-          }), (0, a.jsx)(T, {
+          }), (0, t.jsx)(T, {
             grey: "after" === i,
             name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
-          }), (0, a.jsx)(T, {
+          }), (0, t.jsx)(T, {
             name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
-          }), (0, a.jsx)(T, {
+          }), (0, t.jsx)(T, {
             grey: "after" === i,
             name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
-          }), (0, a.jsx)(T, {
+          }), (0, t.jsx)(T, {
             grey: "after" === i,
             name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
           })]
         })]
-      }), (0, a.jsx)(I, {
+      }), (0, t.jsx)(I, {
         hidden: d || "after" === i,
-        className: x.tipBefore1,
+        className: N.tipBefore1,
         text: h.default.Messages.NOTIF_MIGRATION_INTRO_TIP_BEFORE1
-      }), (0, a.jsx)(I, {
+      }), (0, t.jsx)(I, {
         hidden: d || "after" === i,
-        className: x.tipBefore2,
+        className: N.tipBefore2,
         text: h.default.Messages.NOTIF_MIGRATION_INTRO_TIP_BEFORE2
-      }), (0, a.jsx)(I, {
+      }), (0, t.jsx)(I, {
         hidden: d || "before" === i,
-        className: x.tipAfter1,
+        className: N.tipAfter1,
         text: h.default.Messages.NOTIF_MIGRATION_INTRO_TIP_AFTER1
-      }), (0, a.jsx)(I, {
+      }), (0, t.jsx)(I, {
         hidden: d || "before" === i,
-        className: x.tipAfter2,
+        className: N.tipAfter2,
         text: h.default.Messages.NOTIF_MIGRATION_INTRO_TIP_AFTER2
       })]
     })]

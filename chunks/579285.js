@@ -81,14 +81,14 @@ let C = (0, c.default)(function(e) {
     M(_ === c.length ? null : _), U(d)
   }, [f, y, c]);
   let B = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
-    V = (0, l.default)({
+    x = (0, l.default)({
       id: B,
       isEnabled: !0,
       scrollToStart: N.NOOP_PROMISE,
       scrollToEnd: N.NOOP_PROMISE,
       wrap: !0
     }),
-    x = 0 === c.length ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
+    V = 0 === c.length ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
       numRoles: c.length
     }),
     F = y.map((e, r) => {
@@ -106,7 +106,7 @@ let C = (0, c.default)(function(e) {
       }, e.id)
     });
   return (0, i.jsx)(l.ListNavigatorProvider, {
-    navigator: V,
+    navigator: x,
     children: (0, i.jsx)(l.ListNavigatorContainer, {
       children: e => {
         let {
@@ -115,7 +115,7 @@ let C = (0, c.default)(function(e) {
         } = e;
         return (0, i.jsxs)("div", {
           className: O.root,
-          "aria-label": x,
+          "aria-label": V,
           ref: t,
           ...n,
           children: [F, b && (0, i.jsx)(d.Clickable, {

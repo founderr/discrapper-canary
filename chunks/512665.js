@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return V
   },
   renderSingleLineMessage: function() {
-    return V
+    return x
   }
 });
 var i = n("735250"),
@@ -83,7 +83,7 @@ function B(e) {
   })
 }
 
-function V(e, t, n, r, s) {
+function x(e, t, n, r, s) {
   let a, o, l, _;
   let c = (0, T.default)(e),
     {
@@ -145,7 +145,7 @@ function V(e, t, n, r, s) {
   }
 }
 
-function x(e) {
+function V(e) {
   let t;
   let {
     repliedAuthor: n,
@@ -243,7 +243,7 @@ function x(e) {
           renderedContent: o,
           trailingIcon: l,
           leadingIcon: u
-        } = V(n.message, t, r, w.repliedTextContent, {
+        } = x(n.message, t, r, w.repliedTextContent, {
           trailingIconClass: w.repliedTextContentTrailingIcon,
           leadingIconClass: w.repliedTextContentLeadingIcon,
           iconSize: U.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE

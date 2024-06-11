@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return R
   },
   default: function() {
-    return V
+    return x
   },
   findCodedLink: function() {
     return H
   },
   parseQuestsEmbedCode: function() {
-    return x
+    return V
   },
   parseURLSafely: function() {
     return F
@@ -101,7 +101,7 @@ function B(e) {
   }
 }
 
-function V(e) {
+function x(e) {
   if (null == e) return [];
   let t = new Set,
     n = [],
@@ -159,13 +159,13 @@ function V(e) {
     null != T && o(I.CodedLinkType.GUILD_PRODUCT, "".concat(T[1], "-").concat(T[2]));
     let C = null == a ? void 0 : a.match(O);
     null != C && o(I.CodedLinkType.SERVER_SHOP, C[1]);
-    let R = x(e);
+    let R = V(e);
     null != R && o(I.CodedLinkType.QUESTS_EMBED, R)
   }
   return n
 }
 
-function x(e) {
+function V(e) {
   var t, n;
   let i = B(e),
     r = null == i ? void 0 : null === (t = i.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(C);
@@ -181,5 +181,5 @@ function F(e) {
 }
 
 function H(e) {
-  return V(e)[0]
+  return x(e)[0]
 }

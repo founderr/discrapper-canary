@@ -30,15 +30,15 @@ function N(e) {
   let {
     channel: t,
     baseChannelId: n
-  } = e, N = (0, p.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), O = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
+  } = e, N = (0, p.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), O = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), y = s.useCallback(() => {
     C.default.closeChannelSidebar(_.MESSAGE_REQUESTS_BASE_CHANNEL_ID), O && v && (0, h.transitionToChannel)(t.id), L && R && (0, h.transitionToChannel)(t.id)
-  }, [t.id, L, R, O, v]), y = s.useCallback(() => {
+  }, [t.id, L, R, O, v]), M = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(g.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
     markAsNotSpam: D
   } = (0, f.useMessageRequestActions)({
-    onAcceptSuccess: M,
-    onError: y
+    onAcceptSuccess: y,
+    onError: M
   });
   if (null == t || !t.isDM()) return null;
   let x = [(0, a.jsx)(S.default.Icon, {

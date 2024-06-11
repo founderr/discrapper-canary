@@ -38,29 +38,29 @@ function S(e) {
     onClose: T,
     analyticsLocation: I,
     className: A
-  } = e, x = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), v = null !== (t = null == x ? void 0 : x.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, N = (0, o.default)(S);
-  let M = null == (n = v) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
+  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), x = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, N = (0, o.default)(S);
+  let M = null == (n = x) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
     y = (0, c.default)(M),
     {
       reducedMotion: R
     } = l.useContext(r.AccessibilityPreferencesContext),
     L = l.useCallback(e => {
-      null != x && (0, f.openGuildMemberModViewSidebar)(_, S, x.baseChannelId, {
+      null != v && (0, f.openGuildMemberModViewSidebar)(_, S, v.baseChannelId, {
         modViewPanel: e
       })
-    }, [x, _, S]),
-    j = l.useMemo(() => ({
+    }, [v, _, S]),
+    O = l.useMemo(() => ({
       [C.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          if (v === E.ModViewPanel.INFO) return T();
+          if (x === E.ModViewPanel.INFO) return T();
           return L(E.ModViewPanel.INFO)
         }
       }
-    }), [T, v, L]);
-  l.useEffect(() => (u.default.enable(), u.default.enableTemp(j), () => u.default.disableTemp()), [j]);
-  let O = (0, s.useTransition)(v, {
+    }), [T, x, L]);
+  l.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
+  let j = (0, s.useTransition)(x, {
     immediate: N !== S,
     value: 0,
     from: {
@@ -80,7 +80,7 @@ function S(e) {
       flex: 1,
       overflow: "hidden"
     },
-    children: O((e, t, n) => {
+    children: j((e, t, n) => {
       var l, i, r;
       let {
         key: o

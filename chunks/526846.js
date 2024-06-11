@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("626135"),
   I = n("348600"),
   A = n("566620"),
-  x = n("11778"),
-  v = n("127255"),
+  v = n("11778"),
+  x = n("127255"),
   N = n("5200"),
   M = n("558317"),
   y = n("403404"),
   R = n("701488"),
   L = n("981631"),
-  j = n("689938"),
-  O = n("492880"),
+  O = n("689938"),
+  j = n("492880"),
   P = n("587952"),
   D = n("736733"),
   b = n("175045");
@@ -53,7 +53,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       location: "8009ca_3"
     }), {
       enableTuneInMiniShelfBanner: B
-    } = x.ExperimentTuneInMiniShelfBanner.useExperiment({
+    } = v.ExperimentTuneInMiniShelfBanner.useExperiment({
       location: "ActivitiesMiniShelf"
     }, {
       autoTrackExposure: !0
@@ -79,7 +79,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       q = K === L.AppContext.POPOUT,
       J = (0, c.useAnalyticsContext)(),
       Q = function(e, t) {
-        return (0, v.default)({
+        return (0, x.default)({
           guildId: e,
           channel: t
         }).slice(0, 5)
@@ -107,23 +107,23 @@ let U = "vc-activities-".concat((0, o.v4)()),
       et = G ? (0, a.jsxs)(r.Link, {
         to: L.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
-          alt: j.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
+          alt: O.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
           src: "light" === V ? P : D,
-          className: O.poster
+          className: j.poster
         }), (0, a.jsx)("div", {
-          className: O.posterDivider
+          className: j.posterDivider
         })]
       }) : B ? (0, a.jsxs)(d.Clickable, {
-        className: O.clickableBanner,
+        className: j.clickableBanner,
         onClick: () => {
           k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(R.TUNE_IN_APPLICATION_ID), void 0, void 0, X)
         },
         children: [(0, a.jsx)("img", {
-          alt: j.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TUNE_IN_POSTER_ALT,
+          alt: O.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TUNE_IN_POSTER_ALT,
           src: b,
-          className: O.poster
+          className: j.poster
         }), (0, a.jsx)("div", {
-          className: O.posterDivider
+          className: j.posterDivider
         })]
       }) : null;
     return (0, a.jsx)(p.AnalyticsLocationProvider, {
@@ -138,42 +138,42 @@ let U = "vc-activities-".concat((0, o.v4)()),
             children: (0, a.jsx)(d.HiddenVisually, {
               children: (0, a.jsx)(d.H, {
                 id: U,
-                children: j.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                children: O.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
               })
             })
           }), (0, a.jsxs)("div", {
-            className: O.container,
+            className: j.container,
             onMouseEnter: ee,
             onMouseLeave: w,
             children: [(0, a.jsxs)("div", {
-              className: O.titleContainer,
+              className: j.titleContainer,
               children: [(0, a.jsxs)("div", {
-                className: O.titleLeft,
+                className: j.titleLeft,
                 children: [(0, a.jsx)(_.default, {
-                  className: O.titleLeftIcon,
+                  className: j.titleLeftIcon,
                   color: "var(--interactive-active)"
                 }), (0, a.jsx)(d.Text, {
                   variant: "eyebrow",
-                  children: j.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                  children: O.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                 })]
               }), (0, a.jsxs)(d.Clickable, {
-                className: O.titleRight,
+                className: j.titleRight,
                 onClick: $,
                 children: [(0, a.jsx)(d.Text, {
                   variant: "eyebrow",
-                  children: j.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                  children: O.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                 }), (0, a.jsx)(S.default, {
                   width: 12,
                   height: 12,
                   color: "var(--interactive-active)",
-                  className: O.titleRightIcon
+                  className: j.titleRightIcon
                 })]
               })]
             }), (0, a.jsx)(p.AnalyticsLocationProvider, {
               value: X,
               children: et
             }), (0, a.jsxs)("div", {
-              className: O.activityContainer,
+              className: j.activityContainer,
               children: [Q.map(e => (0, a.jsx)(N.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
@@ -181,15 +181,15 @@ let U = "vc-activities-".concat((0, o.v4)()),
                   o(), k()
                 },
                 aspectRatio: N.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
-                animatedDivClass: O.activitySuggestion
+                animatedDivClass: j.activitySuggestion
               }, e.application.id)), (0, a.jsx)("div", {
-                className: i()(O.wumpusRocketOuterContainer, {
-                  [O.wumpusReducedMotion]: W
+                className: i()(j.wumpusRocketOuterContainer, {
+                  [j.wumpusReducedMotion]: W
                 }),
                 children: (0, a.jsx)("div", {
-                  className: O.wumpusRocketInnerContainer,
+                  className: j.wumpusRocketInnerContainer,
                   children: (0, a.jsx)(M.default, {
-                    className: O.wumpusRocket
+                    className: j.wumpusRocket
                   })
                 })
               })]

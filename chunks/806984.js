@@ -1,30 +1,30 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return o
   }
 });
-var n = r("470079"),
-  s = r("512722"),
-  a = r.n(s),
-  l = r("598"),
-  u = r("390917"),
-  i = r("464797");
+var r = n("470079"),
+  s = n("512722"),
+  u = n.n(s),
+  a = n("598"),
+  l = n("390917"),
+  i = n("464797");
 
-function c(e) {
+function o(e) {
   let {
     handleClose: t
   } = e, {
-    guildProductListing: r,
+    guildProductListing: n,
     guildId: s
   } = (0, i.useGuildProductPurchaseContext)(), {
-    selectedSkuPricePreview: c
-  } = (0, l.usePaymentContext)();
-  return n.useEffect(() => {
-    a()(null != c, "selectedSkuPricePreview cannot be null"), (0, u.openGuildProductPurchaseConfirmationModal)({
+    selectedSkuPricePreview: o
+  } = (0, a.usePaymentContext)();
+  return r.useEffect(() => {
+    u()(null != o, "selectedSkuPricePreview cannot be null"), (0, l.openGuildProductPurchaseConfirmationModal)({
       guildId: s,
-      guildProductListingId: r.id,
-      skuPricePreview: c
+      guildProductListingId: n.id,
+      skuPricePreview: o
     }), t()
   }, []), null
 }

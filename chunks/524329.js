@@ -16,59 +16,59 @@ E.r(t), E.d(t, {
     return u
   },
   welcomeScreenViewed: function() {
-    return T
+    return a
   }
 });
-var s = E("544891"),
-  _ = E("570140"),
-  a = E("981631");
-let T = function(e) {
+var _ = E("544891"),
+  s = E("570140"),
+  T = E("981631");
+let a = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    _.default.dispatch({
+    s.default.dispatch({
       type: "WELCOME_SCREEN_VIEW",
       guildId: e,
       isLurking: t
     })
   },
   A = async e => {
-    _.default.dispatch({
+    s.default.dispatch({
       type: "WELCOME_SCREEN_FETCH_START"
     });
     try {
-      let t = await s.HTTP.get({
-        url: a.Endpoints.GUILD_WELCOME_SCREEN(e),
+      let t = await _.HTTP.get({
+        url: T.Endpoints.GUILD_WELCOME_SCREEN(e),
         oldFormErrors: !0
       });
-      return _.default.dispatch({
+      return s.default.dispatch({
         type: "WELCOME_SCREEN_FETCH_SUCCESS",
         guildId: e,
         welcomeScreen: t.body
       }), t.body
     } catch (e) {
-      _.default.dispatch({
+      s.default.dispatch({
         type: "WELCOME_SCREEN_FETCH_FAIL"
       })
     }
   }, n = () => {
-    _.default.dispatch({
+    s.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_RESET"
     })
   }, I = () => {
-    _.default.dispatch({
+    s.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_CLEAR"
     })
   }, u = e => {
-    _.default.dispatch({
+    s.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_UPDATE",
       settings: e
     })
   }, i = async (e, t) => {
-    _.default.dispatch({
+    s.default.dispatch({
       type: "WELCOME_SCREEN_SUBMIT"
     });
     try {
-      let E = await s.HTTP.patch({
-        url: a.Endpoints.GUILD_WELCOME_SCREEN(e),
+      let E = await _.HTTP.patch({
+        url: T.Endpoints.GUILD_WELCOME_SCREEN(e),
         body: {
           description: t.description,
           welcome_channels: t.channels,
@@ -76,13 +76,13 @@ let T = function(e) {
         },
         oldFormErrors: !0
       });
-      _.default.dispatch({
+      s.default.dispatch({
         type: "WELCOME_SCREEN_SUBMIT_SUCCESS",
         guildId: e,
         welcomeScreen: E.body
       })
     } catch (e) {
-      _.default.dispatch({
+      s.default.dispatch({
         type: "WELCOME_SCREEN_SUBMIT_FAILURE"
       })
     }

@@ -1,5 +1,5 @@
 "use strict";
-r.r(t);
-var n = r("874528"),
-  a = (0, r("245369").default)(n.default);
-t.default = a
+n.r(t);
+var r = n("874528"),
+  i = (0, n("245369").default)(r.default);
+t.default = i

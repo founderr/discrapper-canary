@@ -21,15 +21,15 @@ var a = n("735250"),
   T = n("246946"),
   I = n("979651"),
   A = n("5192"),
-  x = n("51144"),
-  v = n("342656"),
+  v = n("51144"),
+  x = n("342656"),
   N = n("785717"),
   M = n("221292"),
   y = n("318661"),
   R = n("57048"),
   L = n("726059"),
-  j = n("162267"),
-  O = n("502762"),
+  O = n("162267"),
+  j = n("502762"),
   P = n("171368"),
   D = n("944546"),
   b = n("470900"),
@@ -107,13 +107,13 @@ t.default = e => {
         return t === J.ActivityTypes.HANG_STATUS
       }) : null
     }
-  }), eg = null != ef || null != eC || em, eS = null !== (t = A.default.getNickname(null, s.id, n)) && void 0 !== t ? t : x.default.getName(n), e_ = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), {
+  }), eg = null != ef || null != eC || em, eS = null !== (t = A.default.getNickname(null, s.id, n)) && void 0 !== t ? t : v.default.getName(n), e_ = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), {
     mutualFriends: eT,
     isFetching: eI
   } = (0, L.default)(n.id, !n.bot), {
     mutualGuilds: eA,
-    isFetching: ex
-  } = (0, j.default)(n.id, !n.bot), ev = !n.bot && null != eT && eT.length > 0, eN = !n.bot && null != eA && eA.length > 0, eM = (0, z.useShouldShowUserPopoutCollectiblesUpsell)({
+    isFetching: ev
+  } = (0, O.default)(n.id, !n.bot), ex = !n.bot && null != eT && eT.length > 0, eN = !n.bot && null != eA && eA.length > 0, eM = (0, z.useShouldShowUserPopoutCollectiblesUpsell)({
     popoutUser: n,
     source: w.UserPopoutUpsellSource.PROFILE_PANEL
   }), ey = (0, u.default)();
@@ -163,18 +163,18 @@ t.default = e => {
         }
       }, t)
     }),
-    ej = ei.map(e => (0, a.jsx)(K.default, {
+    eO = ei.map(e => (0, a.jsx)(K.default, {
       channel: s,
       integration: e
     }, e.application.id)),
-    eO = l.useCallback(() => et(!0), []),
+    ej = l.useCallback(() => et(!0), []),
     eP = l.useCallback(() => et(!1), []),
     eD = (0, r.useStateFromStores)([C.default], () => C.default.getId()),
     eb = n.id === eD,
     eU = n.bot || eb,
     {
       enabled: eF
-    } = (0, v.useProfileMutualsExperiment)({
+    } = (0, x.useProfileMutualsExperiment)({
       autoTrackExposure: !0,
       location: d.default.PROFILE,
       disable: eU
@@ -187,9 +187,9 @@ t.default = e => {
       channelId: s.id,
       children: (0, a.jsx)("aside", {
         className: $.profilePanel,
-        onMouseEnter: eO,
+        onMouseEnter: ej,
         onMouseLeave: eP,
-        children: (0, a.jsxs)(O.default, {
+        children: (0, a.jsxs)(j.default, {
           user: n,
           displayProfile: es,
           profileType: q.UserProfileTypes.PANEL,
@@ -207,7 +207,7 @@ t.default = e => {
               channel: s,
               animateAssets: ee,
               forceShowPremiumBadge: ee
-            }), (0, a.jsxs)(O.default.Overlay, {
+            }), (0, a.jsxs)(j.default.Overlay, {
               className: $.overlay,
               children: [(0, a.jsx)(Y.default, {
                 user: n,
@@ -233,7 +233,7 @@ t.default = e => {
                 user: n,
                 setNote: !1
               })]
-            }), eg ? (0, a.jsx)(O.default.Overlay, {
+            }), eg ? (0, a.jsx)(j.default.Overlay, {
               className: $.overlay,
               children: (0, a.jsx)(H.default, {
                 activity: null != ef || em ? ef : eC,
@@ -246,14 +246,14 @@ t.default = e => {
                   }
                 }
               })
-            }) : null, (eN || ev) && (0, a.jsxs)(O.default.Overlay, {
+            }) : null, (eN || ex) && (0, a.jsxs)(j.default.Overlay, {
               className: $.profilePanelConnections,
               children: [eN ? (0, a.jsx)(Z.default, {
                 className: $.mutualGuildsList,
                 header: Q.default.Messages.MUTUAL_GUILDS_COUNT.format({
                   count: eA.length
                 }),
-                isLoadingHeader: ex,
+                isLoadingHeader: ev,
                 loadingContentsCount: eA.length,
                 itemType: Z.ListType.MutualGuildList,
                 onExpand: () => {
@@ -267,7 +267,7 @@ t.default = e => {
                   })
                 },
                 children: eR
-              }) : null, ev ? (0, a.jsx)(Z.default, {
+              }) : null, ex ? (0, a.jsx)(Z.default, {
                 className: i()($.mutualFriendsList, {
                   [$.mutualFriendsDivider]: eN
                 }),
@@ -289,16 +289,16 @@ t.default = e => {
                 },
                 children: eL
               }) : null]
-            }), eo && (0, a.jsx)(O.default.Overlay, {
+            }), eo && (0, a.jsx)(j.default.Overlay, {
               className: i()($.profilePanelConnections, $.appListThemedContainer),
               children: (0, a.jsxs)(Z.default, {
-                header: ej.length > 0 ? Q.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                  count: ej.length
+                header: eO.length > 0 ? Q.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                  count: eO.length
                 }) : Q.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
                 isLoadingContents: !er,
                 isLoadingHeader: !1,
                 itemType: Z.ListType.AppsList,
-                children: [ej, eu.length > 0 && (0, a.jsxs)("div", {
+                children: [eO, eu.length > 0 && (0, a.jsxs)("div", {
                   className: $.appButtonContainer,
                   children: [0 === ei.length && (0, a.jsx)(o.Text, {
                     variant: "text-xs/normal",

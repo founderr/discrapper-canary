@@ -31,19 +31,19 @@ t.default = i.memo(function(e) {
     onSignCharter: r,
     animationDelayMs: I = 1e3,
     signHintButtonText: A,
-    signHintHelperText: x,
-    signHintPosition: v = "left",
+    signHintHelperText: v,
+    signHintPosition: x = "left",
     className: N,
     fullHeight: M
-  } = e, y = i.useRef(null), [R, L] = i.useState(!1), j = i.useCallback(e => {
+  } = e, y = i.useRef(null), [R, L] = i.useState(!1), O = i.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null == r || r(), L(!0)
-  }, [r]), [O, P] = i.useState(!1), [D, b] = i.useState(!1), U = i.useRef(null), F = i.useCallback(e => {
+  }, [r]), [j, P] = i.useState(!1), [D, b] = i.useState(!1), U = i.useRef(null), F = i.useCallback(e => {
     e && (U.current = setTimeout(() => {
       b(!0)
     }, I))
   }, [I]), w = (0, h.useIsVisible)(F), k = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion), H = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()), [G, B] = (0, u.useSpring)(() => {
     var e, t;
-    return e = v, t = k, "left" === e ? {
+    return e = x, t = k, "left" === e ? {
       right: t ? 68 : 0,
       config: u.config.stiff
     } : {
@@ -59,7 +59,7 @@ t.default = i.memo(function(e) {
   }));
   i.useEffect(() => {
     if (D) B({
-      ..."left" === v ? {
+      ..."left" === x ? {
         right: 68,
         config: u.config.stiff
       } : {
@@ -74,10 +74,10 @@ t.default = i.memo(function(e) {
       opacity: 0,
       top: 0
     })
-  }, [D, R, v]), i.useEffect(() => () => {
+  }, [D, R, x]), i.useEffect(() => () => {
     null != U.current && clearTimeout(U.current)
   }, []);
-  let Y = o()(T.signHintAnimationContainer, O && T.noDisplay, "left" === v ? T.signTextLeft : T.signTextRight),
+  let Y = o()(T.signHintAnimationContainer, j && T.noDisplay, "left" === x ? T.signTextLeft : T.signTextRight),
     z = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY),
     K = (0, c.useToken)(c.tokens.colors.BG_BRAND),
     Z = null != n ? n : K.hex(),
@@ -118,7 +118,7 @@ t.default = i.memo(function(e) {
           children: (0, s.jsx)("div", {
             ref: J,
             children: (0, s.jsxs)(c.Clickable, {
-              onClick: j,
+              onClick: O,
               className: o()(T.signatureBlock, {
                 [T.clickable]: null != r
               }),
@@ -141,7 +141,7 @@ t.default = i.memo(function(e) {
                         var t;
                         null === (t = y.current) || void 0 === t || t.scrollIntoView({
                           behavior: "smooth"
-                        }), j(e)
+                        }), O(e)
                       },
                       children: [(0, s.jsx)("div", {
                         className: o()(T.signCarot, {
@@ -156,7 +156,7 @@ t.default = i.memo(function(e) {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     className: T.signHintHelperText,
-                    children: null != x ? A : _.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
+                    children: null != v ? A : _.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
                   })]
                 })
               }), (0, s.jsx)(c.Text, {

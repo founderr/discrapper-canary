@@ -1,13 +1,13 @@
 "use strict";
-n.r(e), n.d(e, {
+e.r(n), e.d(n, {
   deleteAllSafetyWarnings: function() {
-    return o
+    return c
   },
   markAsInappropriateConversation: function() {
     return l
   },
   pauseVibingWumpusMusic: function() {
-    return c
+    return o
   },
   playVibingWumpusMusic: function() {
     return u
@@ -16,9 +16,9 @@ n.r(e), n.d(e, {
     return r
   }
 });
-var i = n("544891"),
-  s = n("570140"),
-  a = n("981631");
+var i = e("544891"),
+  s = e("570140"),
+  a = e("981631");
 
 function u() {
   s.default.dispatch({
@@ -32,23 +32,23 @@ function r() {
   })
 }
 
-function c() {
+function o() {
   s.default.dispatch({
     type: "VIBING_WUMPUS_PAUSE_MUSIC"
   })
 }
 
-function o(t) {
+function c(t) {
   return i.HTTP.del({
     url: a.Endpoints.DELETE_SAFETY_WARNINGS(t)
   })
 }
 
-function l(t, e) {
+function l(t, n) {
   return i.HTTP.post({
     url: a.Endpoints.ADD_SAFETY_WARNING(t),
     body: {
-      safety_warning_type: e
+      safety_warning_type: n
     }
   })
 }

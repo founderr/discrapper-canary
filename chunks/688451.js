@@ -19,7 +19,7 @@ function a(e) {
     if (null === t) return !0;
     var n = Object.hasOwnProperty.call(t, "constructor") && t.constructor;
     return n === Object || "function" == typeof n && Function.toString.call(n) === H
-  }(e) || Array.isArray(e) || !!e[j] || !!(null === (t = e.constructor) || void 0 === t ? void 0 : t[j]) || l(e) || d(e))
+  }(e) || Array.isArray(e) || !!e[Y] || !!(null === (t = e.constructor) || void 0 === t ? void 0 : t[Y]) || l(e) || d(e))
 }
 
 function o(e, t, n) {
@@ -141,7 +141,7 @@ function w(e, t) {
   t._ = t.p.length;
   var n = t.p[0],
     i = void 0 !== e && e !== n;
-  return t.h.O || _("ES5").S(t, e, i), i ? (n[z].P && (y(t), r(4)), a(e) && (e = T(t, e), t.l || D(t, e)), t.u && _("Patches").M(n[z].t, e, t.u, t.s)) : e = T(t, n, []), y(t), t.u && t.v(t.u, t.s), e !== Y ? e : void 0
+  return t.h.O || _("ES5").S(t, e, i), i ? (n[z].P && (y(t), r(4)), a(e) && (e = T(t, e), t.l || D(t, e)), t.u && _("Patches").M(n[z].t, e, t.u, t.s)) : e = T(t, n, []), y(t), t.u && t.v(t.u, t.s), e !== j ? e : void 0
 }
 
 function T(e, t, n) {
@@ -232,8 +232,8 @@ var I, L, P = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
   F = "undefined" != typeof Map,
   B = "undefined" != typeof Set,
   U = "undefined" != typeof Proxy && void 0 !== Proxy.revocable && "undefined" != typeof Reflect,
-  Y = P ? Symbol.for("immer-nothing") : ((I = {})["immer-nothing"] = !0, I),
-  j = P ? Symbol.for("immer-draftable") : "__$immer_draftable",
+  j = P ? Symbol.for("immer-nothing") : ((I = {})["immer-nothing"] = !0, I),
+  Y = P ? Symbol.for("immer-draftable") : "__$immer_draftable",
   z = P ? Symbol.for("immer-state") : "__$immer_state",
   H = "" + Object.prototype.constructor,
   G = "undefined" != typeof Reflect && Reflect.ownKeys ? Reflect.ownKeys : void 0 !== Object.getOwnPropertySymbols ? function(e) {
@@ -341,7 +341,7 @@ var q = new(function() {
           }) : (v(u, i), w(o, u))
         }
         if (!e || "object" != typeof e) {
-          if (void 0 === (o = n(e)) && (o = e), o === Y && (o = void 0), t.D && h(o, !0), i) {
+          if (void 0 === (o = n(e)) && (o = e), o === j && (o = void 0), t.D && h(o, !0), i) {
             var d = [],
               f = [];
             _("Patches").M(e, o, d, f), i(d, f)

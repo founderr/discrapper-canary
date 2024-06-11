@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("5192"),
   I = n("44136"),
   A = n("981631"),
-  x = n("65154"),
-  v = n("689938"),
+  v = n("65154"),
+  x = n("689938"),
   N = n("61707");
 let M = o.AvatarSizes.SIZE_80,
   y = o.AvatarSizes.SIZE_40;
@@ -39,8 +39,8 @@ function R(e) {
     width: o,
     paused: R,
     selected: L,
-    fit: j,
-    onVideoResize: O,
+    fit: O,
+    onVideoResize: j,
     blocked: P,
     noVideoRender: D = !1,
     pulseSpeakingIndicator: b = !1
@@ -48,7 +48,7 @@ function R(e) {
     user: w,
     streamId: k,
     speaking: H
-  } = t, G = w.id === F, B = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(v.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = H && (W || V), X = o < 124 ? y : M, {
+  } = t, G = w.id === F, B = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(x.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = H && (W || V), X = o < 124 ? y : M, {
     avatarSrc: q,
     avatarDecorationSrc: J
   } = (0, m.default)({
@@ -59,14 +59,14 @@ function R(e) {
   }), Q = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (l.useEffect(() => {
     n.isGuildStageVoice() && !B && (null == Q ? void 0 : Q.id) === w.id && u.default.selectParticipant(n.id, null)
-  }, [B]), s && !Y && !D && B && !L && null != U && C.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
-    onResize: O,
+  }, [B]), s && !Y && !D && B && !L && null != U && C.default.supports(v.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+    onResize: j,
     wrapperClassName: N.videoWrapper,
     className: N.content,
     mirror: G,
     streamId: k,
     videoComponent: U,
-    fit: j,
+    fit: O,
     paused: R,
     videoSpinnerContext: w.id === F ? d.VideoSpinnerContext.SELF_VIDEO : d.VideoSpinnerContext.REMOTE_VIDEO,
     userId: w.id

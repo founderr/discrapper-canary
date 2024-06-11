@@ -28,8 +28,8 @@ var a = n("735250"),
   T = n("278399"),
   I = n("886217"),
   A = n("555672"),
-  x = n("644548"),
-  v = n("335326"),
+  v = n("644548"),
+  x = n("335326"),
   N = n("268010"),
   M = n("206583");
 let y = 72;
@@ -43,7 +43,7 @@ let L = i().throttle(e => {
     leading: !0,
     trailing: !1
   }),
-  j = e => {
+  O = e => {
     let {
       entry: t,
       ...n
@@ -55,7 +55,7 @@ let L = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(v.default, {
+        return (0, a.jsx)(x.default, {
           ...n,
           entry: t
         });
@@ -78,7 +78,7 @@ let L = i().throttle(e => {
         return null
     }
   },
-  O = e => {
+  j = e => {
     let {
       entry: t,
       ...n
@@ -95,7 +95,7 @@ let L = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.TOP_GAME:
-        return (0, a.jsx)(x.default, {
+        return (0, a.jsx)(v.default, {
           ...n,
           entry: t
         });
@@ -127,7 +127,7 @@ t.default = l.memo(e => {
     openOnHover: _
   } = (0, p.useMemberListHoverInteractions)({
     location: "MemberListContentRow"
-  }), T = l.useRef(!1), [I, A] = l.useState(!1), [x, v] = l.useState(!1), [N, y] = l.useState(!1), R = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
+  }), T = l.useRef(!1), [I, A] = l.useState(!1), [v, x] = l.useState(!1), [N, y] = l.useState(!1), R = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
   l.useEffect(() => {
     I && R && y(!0)
   }, [I, R]);
@@ -162,18 +162,18 @@ t.default = l.memo(e => {
         let {
           closePopout: t
         } = e;
-        return (0, a.jsx)(O, {
+        return (0, a.jsx)(j, {
           closePopout: t,
           updatePopoutPosition: D,
           ...i
         })
       },
       position: "left",
-      shouldShow: _ ? I : x,
+      shouldShow: _ ? I : v,
       positionKey: o,
       onRequestOpen: () => (0, E.trackInteraction)(M.ContentInventoryInteractionTypes.CARD_CLICK, S),
       onRequestClose: () => {
-        N && b(), !_ && (A(!1), v(!1))
+        N && b(), !_ && (A(!1), x(!1))
       },
       spacing: 8,
       children: (e, t) => {
@@ -182,7 +182,7 @@ t.default = l.memo(e => {
         } = t;
         return (0, a.jsx)(d.Clickable, {
           onClick: () => {
-            _ && !I && A(!0), !_ && v(e => !e)
+            _ && !I && A(!0), !_ && x(e => !e)
           },
           children: (0, a.jsx)(d.FocusRing, {
             offset: {
@@ -198,7 +198,7 @@ t.default = l.memo(e => {
                 L(S)
               },
               onContextMenu: P,
-              children: (0, a.jsx)(j, {
+              children: (0, a.jsx)(O, {
                 ...i,
                 selected: n
               })

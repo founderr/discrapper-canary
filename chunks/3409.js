@@ -28,7 +28,7 @@ var n = a("735250"),
   T = a("228666"),
   _ = a("723484"),
   N = a("122192"),
-  y = a("296214"),
+  y = a("581813"),
   C = a("870630"),
   P = a("710845"),
   h = a("598"),
@@ -580,21 +580,21 @@ function eT(e) {
       });
       break;
     case I.Step.PAYPAL_INFORMATION:
-      let e5 = 0 !== eG.length && null != eW;
+      let e8 = 0 !== eG.length && null != eW;
       t = (0, n.jsx)(eu, {}), a = (0, n.jsx)(eA, {
         onBack: () => eg(I.Step.PAYMENT_TYPE),
         primaryCTA: O.default.CTAType.CONTINUE,
-        primaryText: e5 ? V.default.Messages.NEXT : V.default.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL,
-        onPrimary: () => e5 ? eg(I.Step.ADDRESS) : (0, p.reopenPayPalWindow)()
+        primaryText: e8 ? V.default.Messages.NEXT : V.default.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL,
+        onPrimary: () => e8 ? eg(I.Step.ADDRESS) : (0, p.reopenPayPalWindow)()
       });
       break;
     case I.Step.VENMO_INFORMATION:
-      let e8 = 0 !== eH.length && null != eW;
+      let e5 = 0 !== eH.length && null != eW;
       t = (0, n.jsx)(ec, {}), a = (0, n.jsx)(eA, {
         onBack: () => eg(I.Step.PAYMENT_TYPE),
         primaryCTA: O.default.CTAType.CONTINUE,
-        primaryText: e8 ? V.default.Messages.NEXT : V.default.Messages.PAYMENT_SOURCE_CONNECT_TO_VENMO,
-        onPrimary: () => e8 ? eg(I.Step.ADDRESS) : (0, p.reopenVenmoWindow)()
+        primaryText: e5 ? V.default.Messages.NEXT : V.default.Messages.PAYMENT_SOURCE_CONNECT_TO_VENMO,
+        onPrimary: () => e5 ? eg(I.Step.ADDRESS) : (0, p.reopenVenmoWindow)()
       });
       break;
     case I.Step.PAYMENT_REQUEST_INFORMATION:
@@ -612,7 +612,7 @@ function eT(e) {
       });
       break;
     case I.Step.ADDRESS:
-      let e7 = async () => {
+      let e3 = async () => {
         ew(!0);
         let e = eR.methodType;
         switch (e) {
@@ -757,7 +757,7 @@ function eT(e) {
         primaryText: V.default.Messages.NEXT,
         primarySubmitting: eB,
         primaryDisabled: !eU.isValid || eK,
-        onPrimary: e7
+        onPrimary: e3
       });
       break;
     case I.Step.AWAITING_AUTHENTICATION:
@@ -766,7 +766,7 @@ function eT(e) {
     default:
       throw Error("Unexpected step: ".concat(eh))
   }
-  let e3 = (0, n.jsx)(u.Sequencer, {
+  let e7 = (0, n.jsx)(u.Sequencer, {
       className: z.sequencer,
       staticClassName: z.sequencerStatic,
       animatedNodeClassName: z.sequencerAnimatedNode,
@@ -784,7 +784,7 @@ function eT(e) {
       className: K.paymentModalBreadcrumbs,
       isEligibleForTrial: F
     }), (0, n.jsx)(b.PaymentPortalBody, {
-      children: e3
+      children: e7
     }), (0, n.jsx)(b.PaymentPortalFooter, {
       children: e6
     })]
@@ -794,7 +794,7 @@ function eT(e) {
     paymentError: m.paymentError,
     header: Y,
     hideBreadcrumbs: k,
-    body: e3,
+    body: e7,
     footer: e6
   })
 }

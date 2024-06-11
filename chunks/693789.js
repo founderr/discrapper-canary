@@ -102,8 +102,8 @@ function S(e) {
     "aria-label": w,
     submittingStartedLabel: k,
     submittingFinishedLabel: B,
-    ...V
-  } = e, x = h || A, F = x && (null != D || null != M), H = function(e, t) {
+    ...x
+  } = e, V = h || A, F = V && (null != D || null != M), H = function(e, t) {
     var n, i, r, s;
     let a = null == e ? void 0 : e.offset;
     if (t === E.LINK || t === E.BLANK) return a;
@@ -123,12 +123,12 @@ function S(e) {
     ...G,
     offset: H,
     children: (0, i.jsxs)("button", {
-      ...x ? null : V,
+      ...V ? null : x,
       "aria-label": w,
       "aria-busy": !!A || void 0,
       ref: b,
-      onClick: x ? e => e.preventDefault() : R,
-      onDoubleClick: x ? e => e.preventDefault() : g,
+      onClick: V ? e => e.preventDefault() : R,
+      onDoubleClick: V ? e => e.preventDefault() : g,
       onMouseUp: h ? void 0 : v,
       onMouseDown: h ? void 0 : L,
       onMouseEnter: D,

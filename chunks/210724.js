@@ -37,7 +37,7 @@ function v(e) {
     location: S.QuestsExperimentLocations.QUESTS_BAR
   }), R = (0, T.useIsEligibleForQuests)({
     location: S.QuestsExperimentLocations.QUESTS_BAR
-  }), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = (0, o.useStateFromStores)([c.default], () => c.default.hasLayers()), L = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (0, u.default)(L), D = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.completedAt) != null, b = (0, u.default)(D), j = (null === (l = f.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, U = null != f.userStatus && (0, m.isDismissed)(f.userStatus, h.QuestContent.QUEST_BAR), P = (0, _.useIsQuestExpired)(f), {
+  }), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([c.default], () => c.default.hasLayers()), O = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (0, u.default)(O), D = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.completedAt) != null, b = (0, u.default)(D), j = (null === (l = f.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, U = null != f.userStatus && (0, m.isDismissed)(f.userStatus, h.QuestContent.QUEST_BAR), P = (0, _.useIsQuestExpired)(f), {
     hasError: G,
     isLoading: V
   } = (0, p.useQuestsAssetsLoadState)(), B = R && !U && !j && !P && !V, H = n.useRef(B), {
@@ -81,10 +81,10 @@ function v(e) {
   n.useLayoutEffect(() => {
     D && w.shouldExpandOnQuestComplete && en()
   }, [en, D, w.shouldExpandOnQuestComplete]), n.useLayoutEffect(() => {
-    L && !y && Y.current && en()
-  }, [en, L, y]), n.useLayoutEffect(() => {
-    !D && L && !y && !Y.current && Z(!1)
-  }, [L, D, y]), n.useLayoutEffect(() => {
+    O && !y && Y.current && en()
+  }, [en, O, y]), n.useLayoutEffect(() => {
+    !D && O && !y && !Y.current && Z(!1)
+  }, [O, D, y]), n.useLayoutEffect(() => {
     B !== H.current && $(!1), H.current = B
   }, [B]);
   let {
@@ -93,7 +93,7 @@ function v(e) {
     to: {
       expansionSpring: z ? 1 : 0
     },
-    config: L ? {
+    config: O ? {
       tension: 900,
       friction: 45,
       clamp: !0
@@ -136,7 +136,7 @@ function v(e) {
   }, [D, en, w.canCollapseOnBlur, ea, b]), R && (B || !J || V) && !G) ? (0, a.jsx)(A.QuestContentImpressionTrackerWeb, {
     questOrQuests: f,
     questContent: w.trackingCtx.content,
-    overrideVisibility: !O && B,
+    overrideVisibility: !L && B,
     children: () => {
       let e = w.component;
       return (0, a.jsx)(r.animated.div, {
@@ -159,11 +159,11 @@ function v(e) {
           onBlur: eu,
           className: i()(x.contentWrapper, {
             [x.contentWrapperExpanded]: z,
-            [x.contentWrapperAccepted]: L
+            [x.contentWrapperAccepted]: O
           }),
           style: {
             backgroundColor: w.preEnrollmentBackgroundColor,
-            backgroundImage: L ? w.postEnrollmentBackgroundImage : void 0,
+            backgroundImage: O ? w.postEnrollmentBackgroundImage : void 0,
             height: e_.to({
               range: [0, 1],
               output: [w.collapsedHeight, ee]

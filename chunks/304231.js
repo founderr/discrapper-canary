@@ -72,9 +72,9 @@ t.default = s.memo(function(e) {
     setScreen: n
   } = e, u = s.useRef(null), d = s.useRef(null), E = s.useRef(null), C = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [A, N] = s.useState(0), [v, R] = s.useState(0), O = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), L = (0, h.useClanDiscoveryUIStore)(e => e.previousMode, i.default), P = s.useCallback(e => {
     N(e), v < e && R(e)
-  }, [v]), M = s.useCallback(() => {
+  }, [v]), y = s.useCallback(() => {
     0 === A ? (n(h.ClanDiscoveryUserScreens.USER_UPSELL), (0, h.setClanDiscoveryMode)(L)) : P(A - 1)
-  }, [A, L, n, P]), y = s.useCallback(() => {
+  }, [A, L, n, P]), M = s.useCallback(() => {
     2 === A ? (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.DISCOVERY) : P(A + 1)
   }, [A, P]), D = s.useMemo(() => 1 === A && null == O, [O, A]), x = s.useMemo(() => [{
     index: 0,
@@ -157,8 +157,8 @@ t.default = s.memo(function(e) {
         className: m.footerButtons,
         isBackDisabled: !1,
         isNextDisabled: D,
-        onNextClick: y,
-        onBackClick: M
+        onNextClick: M,
+        onBackClick: y
       })]
     })]
   })

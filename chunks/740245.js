@@ -100,12 +100,12 @@ r.inherits(v, _), e.exports = v, v.blockSize = 1024, v.outSize = 512, v.hmacStre
       var a = e & n ^ e & i ^ n & i;
       return a < 0 && (a += 4294967296), a
     }(r, i, u, c, p, h);
-    var Y = d(O, M, A, k = function(e, t, n, r, i, a) {
+    var j = d(O, M, A, k = function(e, t, n, r, i, a) {
         var o = t & r ^ t & a ^ r & a;
         return o < 0 && (o += 4294967296), o
       }(r, i, u, c, p, h)),
-      j = f(O, M, A, k);
-    T = x, C = w, x = E, w = S, E = v, S = y, v = d(_, b, B, U), y = f(b, b, B, U), _ = p, b = h, p = u, h = c, u = r, c = i, r = d(B, U, Y, j), i = f(B, U, Y, j)
+      Y = f(O, M, A, k);
+    T = x, C = w, x = E, w = S, E = v, S = y, v = d(_, b, B, U), y = f(b, b, B, U), _ = p, b = h, p = u, h = c, u = r, c = i, r = d(B, U, j, Y), i = f(B, U, j, Y)
   }
   l(this.h, 0, r, i), l(this.h, 2, u, c), l(this.h, 4, p, h), l(this.h, 6, _, b), l(this.h, 8, v, y), l(this.h, 10, E, S), l(this.h, 12, x, w), l(this.h, 14, T, C)
 }, v.prototype._digest = function(e) {

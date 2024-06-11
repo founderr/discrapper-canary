@@ -1,19 +1,19 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("829307"),
-  l = r("13942"),
-  u = r("464854");
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("844303"),
+  o = n("829307"),
+  s = n("13942"),
+  u = n("464854");
 (0, u.ColorWrap)(function(e) {
   var t = e.onChange,
-    r = e.hex,
-    n = e.rgb,
-    s = e.styles,
-    f = void 0 === s ? {} : s,
-    c = e.className,
-    d = (0, o.default)((0, i.default)({
+    n = e.hex,
+    r = e.rgb,
+    c = e.styles,
+    l = void 0 === c ? {} : c,
+    d = e.className,
+    f = (0, a.default)((0, o.default)({
       default: {
         material: {
           width: "98px",
@@ -31,7 +31,7 @@ var n = r("470079"),
           color: "#333",
           padding: "0px",
           border: "0px",
-          borderBottom: "2px solid " + r,
+          borderBottom: "2px solid " + n,
           outline: "none",
           height: "30px"
         },
@@ -78,67 +78,67 @@ var n = r("470079"),
           paddingRight: "10px"
         }
       }
-    }, f)),
-    p = function(e, r) {
-      e.hex ? l.isValidHex(e.hex) && t({
+    }, l)),
+    p = function(e, n) {
+      e.hex ? s.isValidHex(e.hex) && t({
         hex: e.hex,
         source: "hex"
-      }, r) : (e.r || e.g || e.b) && t({
-        r: e.r || n.r,
-        g: e.g || n.g,
-        b: e.b || n.b,
+      }, n) : (e.r || e.g || e.b) && t({
+        r: e.r || r.r,
+        g: e.g || r.g,
+        b: e.b || r.b,
         source: "rgb"
-      }, r)
+      }, n)
     };
-  return a().createElement(u.Raised, {
-    styles: f
-  }, a().createElement("div", {
-    style: d.material,
-    className: "material-picker " + (void 0 === c ? "" : c)
-  }, a().createElement(u.EditableInput, {
+  return i().createElement(u.Raised, {
+    styles: l
+  }, i().createElement("div", {
+    style: f.material,
+    className: "material-picker " + (void 0 === d ? "" : d)
+  }, i().createElement(u.EditableInput, {
     style: {
-      wrap: d.HEXwrap,
-      input: d.HEXinput,
-      label: d.HEXlabel
+      wrap: f.HEXwrap,
+      input: f.HEXinput,
+      label: f.HEXlabel
     },
     label: "hex",
-    value: r,
+    value: n,
     onChange: p
-  }), a().createElement("div", {
-    style: d.split,
+  }), i().createElement("div", {
+    style: f.split,
     className: "flexbox-fix"
-  }, a().createElement("div", {
-    style: d.third
-  }, a().createElement(u.EditableInput, {
+  }, i().createElement("div", {
+    style: f.third
+  }, i().createElement(u.EditableInput, {
     style: {
-      wrap: d.RGBwrap,
-      input: d.RGBinput,
-      label: d.RGBlabel
+      wrap: f.RGBwrap,
+      input: f.RGBinput,
+      label: f.RGBlabel
     },
     label: "r",
-    value: n.r,
+    value: r.r,
     onChange: p
-  })), a().createElement("div", {
-    style: d.third
-  }, a().createElement(u.EditableInput, {
+  })), i().createElement("div", {
+    style: f.third
+  }, i().createElement(u.EditableInput, {
     style: {
-      wrap: d.RGBwrap,
-      input: d.RGBinput,
-      label: d.RGBlabel
+      wrap: f.RGBwrap,
+      input: f.RGBinput,
+      label: f.RGBlabel
     },
     label: "g",
-    value: n.g,
+    value: r.g,
     onChange: p
-  })), a().createElement("div", {
-    style: d.third
-  }, a().createElement(u.EditableInput, {
+  })), i().createElement("div", {
+    style: f.third
+  }, i().createElement(u.EditableInput, {
     style: {
-      wrap: d.RGBwrap,
-      input: d.RGBinput,
-      label: d.RGBlabel
+      wrap: f.RGBwrap,
+      input: f.RGBinput,
+      label: f.RGBlabel
     },
     label: "b",
-    value: n.b,
+    value: r.b,
     onChange: p
   })))))
 })

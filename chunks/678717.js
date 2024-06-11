@@ -40,8 +40,8 @@ var v = r("392750"),
   L = r("678639"),
   D = r("351930"),
   M = r("771751"),
-  F = r("596768"),
-  B = r("621060"),
+  B = r("596768"),
+  F = r("621060"),
   H = r("689938"),
   U = r("770131"),
   G = r("277513");
@@ -74,7 +74,7 @@ function V() {
       }, {
         id: "triggers",
         name: "Triggers",
-        render: () => (0, a.jsx)(F.default, {})
+        render: () => (0, a.jsx)(B.default, {})
       }, {
         id: "stores",
         name: "Stores",
@@ -154,7 +154,7 @@ function V() {
       TabBar: r,
       renderSelectedTab: n,
       selectedTabId: l
-    } = (0, B.default)({
+    } = (0, F.default)({
       tabs: t,
       initialSelectedTabId: null !== (e = x.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {

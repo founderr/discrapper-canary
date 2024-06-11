@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return v
   }
 }), n("789020"), n("47120");
 var a = n("735250"),
@@ -45,8 +45,8 @@ function I(e) {
     id: o
   } = t, {
     id: u
-  } = n, m = t.getGuildId(), E = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(m), [m]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, I = null != E && E.hasFeature(S.GuildFeatures.NEWS), x = g && I, {
-    editingMessage: v,
+  } = n, m = t.getGuildId(), E = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(m), [m]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, I = null != E && E.hasFeature(S.GuildFeatures.NEWS), v = g && I, {
+    editingMessage: x,
     editingTextValue: N,
     editingRichValue: M
   } = (0, s.useStateFromStoresObject)([c.default], () => ({
@@ -56,11 +56,11 @@ function I(e) {
   }), [o]), y = (0, s.useStateFromStores)([d.default], () => d.default.getId()), R = l.useCallback((e, n, a) => {
     let {
       content: l
-    } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != v && null != v.author ? v.author.id : null;
-    return x && (o === y || s) && null != v && (0, C.hasFlag)(v.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
+    } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != x && null != x.author ? x.author.id : null;
+    return v && (o === y || s) && null != x && (0, C.hasFlag)(x.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
       content: l
     }), Promise.resolve()
-  }, [v, x, y, t]), L = l.useCallback(e => (0, l.createElement)(A, {
+  }, [x, v, y, t]), L = l.useCallback(e => (0, l.createElement)(A, {
     ...e,
     className: _.channelTextArea,
     key: u
@@ -112,7 +112,7 @@ function A(e) {
   }, s.id)
 }
 
-function x(e, t, n) {
+function v(e, t, n) {
   let {
     message: l,
     channel: s

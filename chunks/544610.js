@@ -17,13 +17,13 @@ var l, s, i, r, o = n("392711"),
 let T = !1,
   I = "",
   A = 0,
-  x = [],
-  v = !1,
+  v = [],
+  x = !1,
   N = new Set,
   M = null;
 
 function y() {
-  I = "", A = 0, x = [], N = new Set, T = !1, M = null
+  I = "", A = 0, v = [], N = new Set, T = !1, M = null
 }
 
 function R(e) {
@@ -33,14 +33,14 @@ function R(e) {
 function L() {
   if (!T) return !1;
   let e = E.default.getChannel(M);
-  if (0 === I.trim().length) return null != a && a.clearQuery(), x = function(e) {
+  if (0 === I.trim().length) return null != a && a.clearQuery(), v = function(e) {
     let t = g.default.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
       let n = S.default.getUser(t);
       return null == n ? e : (e.push({
         user: n
       }), e)
-    }, []).sort(O)
+    }, []).sort(j)
   }(e), !0;
   let t = null != e ? e.recipients : [];
   return null != a && a.setQuery(I, {
@@ -64,13 +64,13 @@ function L() {
   }()), !1
 }
 
-function j() {
+function O() {
   if (!T) return !1;
-  let e = v;
-  return (v = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
+  let e = x;
+  return (x = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
 }
 
-function O(e, t) {
+function j(e, t) {
   return (0, m.stripDiacritics)(p.default.getName(e.user).toLocaleLowerCase()).localeCompare((0, m.stripDiacritics)(p.default.getName(t.user).toLocaleLowerCase()))
 }
 
@@ -78,7 +78,7 @@ function P(e) {
   let {
     results: t
   } = e;
-  T && "" !== I && (x = t.map(e => {
+  T && "" !== I && (v = t.map(e => {
     let {
       id: t
     } = e;
@@ -94,7 +94,7 @@ function D() {
 
 function b(e) {
   if (e.key !== _.NEW_GROUP_DM_POPOUT_ID) return !1;
-  T = !0, j(), a = D(), M = null, R("")
+  T = !0, O(), a = D(), M = null, R("")
 }
 
 function U(e) {
@@ -107,13 +107,13 @@ function F() {
 }
 class w extends(l = d.default.Store) {
   initialize() {
-    this.waitFor(S.default, E.default, g.default), this.syncWith([S.default, E.default], L), this.syncWith([g.default], j)
+    this.waitFor(S.default, E.default, g.default), this.syncWith([S.default, E.default], L), this.syncWith([g.default], O)
   }
   getResults() {
-    return x
+    return v
   }
   hasFriends() {
-    return v
+    return x
   }
   getSelectedUsers() {
     return N
@@ -126,8 +126,8 @@ class w extends(l = d.default.Store) {
       query: I,
       selectedRow: A,
       selectedUsers: N,
-      results: x,
-      hasFriends: v
+      results: v,
+      hasFriends: x
     }
   }
 }
@@ -153,7 +153,7 @@ let k = new w(c.default, {
   MODAL_PUSH: b,
   SHOW_ACTION_SHEET: b,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    T = !0, j(), a = D(), M = e.channelId, R("")
+    T = !0, O(), a = D(), M = e.channelId, R("")
   },
   MODAL_POP: U,
   HIDE_ACTION_SHEET: U,

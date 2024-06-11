@@ -75,8 +75,8 @@ t.default = e => {
     loadingGuildId: O,
     theme: L,
     currentCategoryId: P,
-    currentCategoryName: M,
-    onViewGuild: y,
+    currentCategoryName: y,
+    onViewGuild: M,
     onGuildCardSeen: D,
     placeholder: x,
     onTagClick: b
@@ -114,7 +114,7 @@ t.default = e => {
   }) : p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
     query: l,
-    category: M
+    category: y
   });
   return (0, a.jsxs)("div", {
     className: I.container,
@@ -147,7 +147,7 @@ t.default = e => {
       isTagSearch: H
     }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(A, {
       categoryId: P,
-      categoryName: M,
+      categoryName: y,
       onClick: () => {
         d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, g, !0)
       }
@@ -170,7 +170,7 @@ t.default = e => {
               guilds: j,
               loading: G,
               loadingPlaceholderCount: g,
-              onViewGuild: y,
+              onViewGuild: M,
               loadingGuildId: O,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,

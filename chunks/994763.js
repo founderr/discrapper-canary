@@ -31,8 +31,8 @@ var a = s("735250"),
   x = s("688465"),
   L = s("826292"),
   O = s("404228"),
-  A = s("676317"),
-  p = s("874993"),
+  p = s("676317"),
+  A = s("874993"),
   M = s("745752"),
   D = s("45966"),
   v = s("637853"),
@@ -85,8 +85,8 @@ var a = s("735250"),
   ex = s("460461"),
   eL = s("29605"),
   eO = s("365307"),
-  eA = s("497666"),
-  ep = s("324330"),
+  ep = s("497666"),
+  eA = s("324330"),
   eM = s("495300"),
   eD = s("312397"),
   ev = s("651780"),
@@ -289,9 +289,9 @@ function eK(e) {
       children: eY.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE
     }),
     ariaLabel: eY.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
-    element: p.default,
+    element: A.default,
     newIndicatorDismissibleContentTypes: null,
-    predicate: () => !l.hasFeature(eH.GuildFeatures.COMMUNITY) && ((0, A.canCurrentUserManageAutomod)(l.id) || (0, A.canCurrentUserManageMessageFilters)(l.id))
+    predicate: () => !l.hasFeature(eH.GuildFeatures.COMMUNITY) && ((0, p.canCurrentUserManageAutomod)(l.id) || (0, p.canCurrentUserManageMessageFilters)(l.id))
   }, {
     section: eH.GuildSettingsSections.AUDIT_LOG,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG,
@@ -470,16 +470,16 @@ function eK(e) {
   }, {
     section: eH.GuildSettingsSections.MEMBERS,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-    label: (0, a.jsx)(ep.GuildSettingsMembersRow, {}),
+    label: (0, a.jsx)(eA.GuildSettingsMembersRow, {}),
     ariaLabel: eY.default.Messages.MEMBERS,
-    element: ep.default,
+    element: eA.default,
     type: c.ContentTypes.CUSTOM,
     predicate: () => M
   }, {
     section: eH.GuildSettingsSections.INSTANT_INVITES,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_INVITES,
     label: eY.default.Messages.INVITES,
-    element: eA.default,
+    element: ep.default,
     type: c.ContentTypes.CUSTOM,
     predicate: () => i
   }, {
@@ -652,8 +652,8 @@ class eJ extends l.PureComponent {
       showAccessRate: x,
       onboardingStep: L,
       onboardingEnabled: O,
-      welcomeScreenEmpty: A,
-      guildMetadata: p,
+      welcomeScreenEmpty: p,
+      guildMetadata: A,
       canAccessClanSettings: M
     } = this.props;
     if (null == i) return null;
@@ -677,8 +677,8 @@ class eJ extends l.PureComponent {
         showAccessRate: x,
         onboardingStep: L,
         onboardingEnabled: O,
-        welcomeScreenEmpty: A,
-        guildMetadata: p,
+        welcomeScreenEmpty: p,
+        guildMetadata: A,
         section: n,
         canAccessClanSettings: M
       }),
@@ -726,13 +726,13 @@ function eq() {
     null != f && O && ((0, M.fetchOnboardingPrompts)(f), (0, z.fetchWelcomeScreen)(f))
   }, [f, O]);
   let {
-    homeSettingsEnabled: A
+    homeSettingsEnabled: p
   } = (0, G.useOnboardingHomeAdminExperiment)(null != f ? f : eH.EMPTY_STRING_SNOWFLAKE_ID);
   l.useEffect(() => {
-    null != f && A && (0, j.fetchGuildHomeSettings)(f)
-  }, [A, f]);
+    null != f && p && (0, j.fetchGuildHomeSettings)(f)
+  }, [p, f]);
   let {
-    showAccessRate: p
+    showAccessRate: A
   } = (0, ea.useGuildAccessRateInsightExperiment)(null == s ? void 0 : s.id, !x || !h || !g), v = S.isGuildAdmin && (null == s ? void 0 : s.hasFeature(eH.GuildFeatures.CLAN)), U = (0, i.useStateFromStores)([w.default], () => {
     var e;
     return (null == s ? void 0 : s.id) != null && (null === (e = w.default.getForGuild(s.id)) || void 0 === e ? void 0 : e.isDirty) === !0
@@ -759,7 +759,7 @@ function eq() {
       isGuildAuditLogV2Enabled: b,
       ...S,
       canViewGuildAnalytics: h,
-      showAccessRate: p,
+      showAccessRate: A,
       onboardingStep: y,
       onboardingEnabled: B,
       welcomeScreenEmpty: F,

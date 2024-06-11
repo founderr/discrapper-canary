@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return A
   },
   useLightningCheckoutEligibility: function() {
     return b
@@ -19,10 +19,10 @@ var a = s("735250"),
   f = s("906732"),
   C = s("176919"),
   E = s("626135"),
-  p = s("63063"),
-  m = s("937615"),
-  g = s("598"),
-  S = s("409813"),
+  m = s("63063"),
+  p = s("937615"),
+  S = s("598"),
+  g = s("409813"),
   h = s("333867"),
   I = s("74179"),
   _ = s("981631"),
@@ -75,41 +75,41 @@ function b() {
   }
 }
 
-function R(e) {
+function A(e) {
   let {
     onPurchaseComplete: t,
     onError: s,
     onReviewPurchase: n,
     paymentSource: I,
     loadId: b,
-    skuId: R,
+    skuId: A,
     isGift: v = !1,
-    baseAnalyticsData: A
+    baseAnalyticsData: R
   } = e, {
     step: P,
     setStep: O,
-    paymentError: j,
-    paymentAuthenticationState: y,
+    paymentError: y,
+    paymentAuthenticationState: j,
     application: M,
     skuPricePreviewsById: k
-  } = (0, g.usePaymentContext)(), {
+  } = (0, S.usePaymentContext)(), {
     analyticsLocations: B
-  } = (0, f.default)(), [D, F] = l.useState(!1), U = l.useRef(null), H = k[R], w = null != H ? H[I.id] : null, G = null != w ? (0, m.formatPrice)(null == w ? void 0 : w.amount, null == w ? void 0 : w.currency) : null, W = l.useMemo(() => ({
-    ...A,
+  } = (0, f.default)(), [D, F] = l.useState(!1), U = l.useRef(null), H = k[A], w = null != H ? H[I.id] : null, G = null != w ? (0, p.formatPrice)(null == w ? void 0 : w.amount, null == w ? void 0 : w.currency) : null, W = l.useMemo(() => ({
+    ...R,
     load_id: b,
     payment_type: _.PurchaseTypeToAnalyticsPaymentType[_.PurchaseTypes.ONE_TIME],
     price: null == w ? void 0 : w.amount,
     currency: null == w ? void 0 : w.currency
-  }), [A, w, b]);
+  }), [R, w, b]);
   l.useEffect(() => {
-    P !== S.Step.REVIEW && O(S.Step.REVIEW)
+    P !== g.Step.REVIEW && O(g.Step.REVIEW)
   }), l.useEffect(() => {
-    y === C.PaymentAuthenticationState.ERROR && s(j)
-  }, [s, j, y]);
-  let Y = async () => {
+    j === C.PaymentAuthenticationState.ERROR && s(y)
+  }, [s, y, j]);
+  let V = async () => {
     await E.default.track(_.AnalyticEvents.PAYMENT_FLOW_COMPLETED, W), r()(null != w, "skuPricePreview can't be null"), r()(null != M, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(M.id, R, {
+      await (0, o.purchaseSKU)(M.id, A, {
         expectedAmount: w.amount,
         expectedCurrency: w.currency,
         isGift: v,
@@ -120,13 +120,13 @@ function R(e) {
       let e = t instanceof c.BillingError ? t : new c.BillingError(t);
       e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && s(t)
     }
-  }, V = l.useCallback(e => {
+  }, Y = l.useCallback(e => {
     E.default.track(_.AnalyticEvents.PAYMENT_FLOW_STEP, {
       ...W,
       to_step: e
-    }), e === S.Step.CONFIRM && (F(!1), t()), O(e)
+    }), e === g.Step.CONFIRM && (F(!1), t()), O(e)
   }, [W, O, t]);
-  return (0, C.usePaymentStepForAuthentication)(P, y, V), (0, a.jsxs)("div", {
+  return (0, C.usePaymentStepForAuthentication)(P, j, Y), (0, a.jsxs)("div", {
     className: x.reviewContainer,
     children: [(0, a.jsx)(i.FormSection, {
       children: (0, a.jsx)(i.FormItem, {
@@ -143,7 +143,7 @@ function R(e) {
       className: x.legalTerms,
       children: (0, a.jsx)("p", {
         children: T.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
-          paidURL: p.default.getArticleURL(_.HelpdeskArticles.PAID_TERMS)
+          paidURL: m.default.getArticleURL(_.HelpdeskArticles.PAID_TERMS)
         })
       })
     }), (0, a.jsx)(L, {
@@ -151,7 +151,7 @@ function R(e) {
       submitting: D,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
-        F(!0), await Y()
+        F(!0), await V()
       },
       children: null !== G ? T.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: G
@@ -162,7 +162,7 @@ function R(e) {
       className: x.reviewButton,
       onClick: () => {
         n(), (0, h.default)({
-          skuId: R,
+          skuId: A,
           analyticsLocations: B,
           returnRef: U
         })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return S
   }
 });
 var i = s("735250");
@@ -24,15 +24,15 @@ function f(e) {
   } = e, l = (0, r.useGroupListingsForGuild)(s)[0], {
     editStateIds: f
   } = a.useEditStateIds(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : null, s), {
-    activeSubscription: h
+    activeSubscription: S
   } = (0, n.default)(null == l ? void 0 : l.id);
   return (0, i.jsxs)("div", {
     className: _.container,
     children: [null != l ? (0, i.jsx)(d.default, {
       groupListingId: l.id,
-      subscription: h
+      subscription: S
     }) : null, (0, i.jsx)(o.default, {
-      subscription: h
+      subscription: S
     }), (0, i.jsx)(u.default, {
       guildId: s,
       children: f.map(e => {
@@ -48,7 +48,7 @@ function f(e) {
   })
 }
 
-function h(e) {
+function S(e) {
   let {
     guildId: t
   } = e;

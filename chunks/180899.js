@@ -16,7 +16,7 @@ function d(e) {
     defaultStep: n,
     error: l,
     onSave: d
-  } = e, [u, o] = a.useState(n), [c, E] = a.useState(), [_, f] = a.useState(null);
+  } = e, [u, o] = a.useState(n), [c, E] = a.useState(), [_, S] = a.useState(null);
   return a.useEffect(() => {
     null != l && o(i.StartStageSteps.STAGE_CHANNEL_SETTINGS)
   }, [l]), {
@@ -24,7 +24,7 @@ function d(e) {
     setModalStep: o,
     readySlide: _,
     handleSlideReady: function(e) {
-      return f(e)
+      return S(e)
     },
     savedOptions: c,
     handleSettingsSave: function(e) {

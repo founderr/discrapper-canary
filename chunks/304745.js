@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CenterControlTrayActivityButton: function() {
-    return v
+    return x
   }
 }), n("653041");
 var a = n("735250"),
@@ -25,17 +25,17 @@ var a = n("735250"),
   T = n("301076"),
   I = n("981631"),
   A = n("921944"),
-  x = n("979942");
+  v = n("979942");
 
-function v(e) {
+function x(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), v = (0, h.useEmbeddedActivityLaunchability)(t.id), N = (0, h.getEmbeddedActivityLaunchabilityLabel)(v), M = v !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
+  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), x = (0, h.useEmbeddedActivityLaunchability)(t.id), N = (0, h.getEmbeddedActivityLaunchabilityLabel)(x), M = x !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
     isHovered: y,
     setIsHovered: R,
     onMouseEnter: L,
-    onMouseLeave: j
-  } = (0, _.default)(200, 300), O = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
+    onMouseLeave: O
+  } = (0, _.default)(200, 300), j = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
     channelId: t.id
   }), D = !M, b = l.useCallback(e => {
     "focus" !== e.type && L()
@@ -77,7 +77,7 @@ function v(e) {
             channel: t,
             closePopout: n,
             onMouseEnter: L,
-            onMouseLeave: j,
+            onMouseLeave: O,
             isHovered: y,
             onClick: () => l(A.ContentDismissActionType.UNKNOWN)
           }) : (0, a.jsx)(a.Fragment, {})
@@ -88,13 +88,13 @@ function v(e) {
             "aria-label": N,
             label: D ? void 0 : N,
             isActivityActive: P || y,
-            className: x.controlButton,
+            className: v.controlButton,
             onClick: () => {
               k(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(A.ContentDismissActionType.UNKNOWN)
             },
             onMouseEnter: b,
-            onMouseLeave: j
-          }), O ? (0, a.jsx)(E.FreeActivityIndicatorDot, {
+            onMouseLeave: O
+          }), j ? (0, a.jsx)(E.FreeActivityIndicatorDot, {
             top: 4,
             right: 10,
             size: 12,

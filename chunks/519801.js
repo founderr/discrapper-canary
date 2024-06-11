@@ -25,66 +25,66 @@ function C(e) {
   var t, n;
   let C, N, {
       showBenefits: T,
-      handleClose: m,
-      onSubscriptionConfirmation: O
+      handleClose: O,
+      onSubscriptionConfirmation: m
     } = e,
     {
       updatedSubscription: p,
       readySlideId: R,
       selectedSku: L,
-      selectedStoreListing: h,
-      application: M
+      selectedStoreListing: M,
+      application: h
     } = (0, c.usePaymentContext)(),
     g = (0, s.default)(P.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
     {
       createMultipleConfettiAt: y
     } = r.useContext(i.ConfettiCannonContext),
-    b = null !== (t = null == L ? void 0 : L.name) && void 0 !== t ? t : "",
-    U = () => {
-      m(), null == O || O()
+    U = null !== (t = null == L ? void 0 : L.name) && void 0 !== t ? t : "",
+    b = () => {
+      O(), null == m || m()
     },
-    x = R === f.Step.CONFIRM,
-    D = (0, u.isApplicationUserSubscription)(null !== (n = null == L ? void 0 : L.flags) && void 0 !== n ? n : 0),
-    B = null != h && h.benefits.length > 0 ? A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
-      benefitCount: h.benefits.length
+    D = R === f.Step.CONFIRM,
+    x = (0, u.isApplicationUserSubscription)(null !== (n = null == L ? void 0 : L.flags) && void 0 !== n ? n : 0),
+    B = null != M && M.benefits.length > 0 ? A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
+      benefitCount: M.benefits.length
     }) : null;
   return T ? g ? C = (0, a.jsx)(d.BenefitsConfirmationLite, {
     title: A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
-      tierName: b
+      tierName: U
     }),
-    subtitle: null != h && h.benefits.length > 0 ? A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
+    subtitle: null != M && M.benefits.length > 0 ? A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
       benefits: B
     }) : null,
-    onConfirm: U,
+    onConfirm: b,
     confirmCta: A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
-  }) : (C = null != h && null != M ? (0, a.jsx)(o.BenefitsConfirmation, {
-    icon: h.thumbnail,
-    storeListingBenefits: h.benefits,
-    application: M,
+  }) : (C = null != M && null != h ? (0, a.jsx)(o.BenefitsConfirmation, {
+    icon: M.thumbnail,
+    storeListingBenefits: M.benefits,
+    application: h,
     title: A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
-      tier: b
+      tier: U
     }),
     subtitle: A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
-    description: D ? A.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-      applicationName: null == M ? void 0 : M.name
+    description: x ? A.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
+      applicationName: null == h ? void 0 : h.name
     }) : A.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-      tier: b
+      tier: U
     })
   }) : (0, a.jsx)(I.default, {}), N = (0, a.jsx)(_.default, {
-    onPrimary: U,
+    onPrimary: b,
     primaryCTA: _.CTAType.CONTINUE,
     primaryText: A.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
   })) : C = g ? (0, a.jsx)(d.PurchaseConfirmationLite, {
-    tierName: b,
-    onConfirm: U,
+    tierName: U,
+    onConfirm: b,
     subscription: p
   }) : (0, a.jsx)(o.PurchaseConfirmation, {
-    tierName: b,
-    onConfirm: U,
+    tierName: U,
+    onConfirm: b,
     subscription: p
   }), r.useEffect(() => {
-    l.default.useReducedMotion && x && y(window.innerWidth / 2, window.innerHeight / 2)
-  }, [y, x]), (0, a.jsxs)(a.Fragment, {
+    l.default.useReducedMotion && D && y(window.innerWidth / 2, window.innerHeight / 2)
+  }, [y, D]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(E.PaymentPortalBody, {
       children: [(0, a.jsx)(S.default, {}), C]
     }), null != N && (0, a.jsx)(E.PaymentPortalFooter, {

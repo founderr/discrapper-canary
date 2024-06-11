@@ -32,25 +32,25 @@ let M = !1,
   k = Object.freeze([]),
   B = [];
 
-function V(e) {
+function x(e) {
   return (0, N.shouldShareApplicationActivity)(e, R.default)
 }
 
-function x(e) {
+function V(e) {
   switch (e.type) {
     case D.ActivityTypes.LISTENING:
       if ((0, T.default)(e)) return S.default.shouldShowActivity();
-      if (null != e.application_id) return V(e.application_id);
+      if (null != e.application_id) return x(e.application_id);
       return !1;
     case D.ActivityTypes.PLAYING:
-      return null != e.application_id ? V(e.application_id) : function(e) {
+      return null != e.application_id ? x(e.application_id) : function(e) {
         let t = O.default.getGameByName(e);
-        return null != t ? V(t.id) : h.ShowCurrentGame.getSetting()
+        return null != t ? x(t.id) : h.ShowCurrentGame.getSetting()
       }(e.name);
     case D.ActivityTypes.STREAMING:
     case D.ActivityTypes.WATCHING:
     default:
-      return null == e.application_id || V(e.application_id)
+      return null == e.application_id || x(e.application_id)
   }
 }
 
@@ -64,7 +64,7 @@ function F() {
   }
   y === D.StatusTypes.ONLINE && U > 0 && (y = D.StatusTypes.IDLE);
   let t = !1,
-    n = w || y === D.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(x);
+    n = w || y === D.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(V);
   !d()(b, n) && (b = n, t = !0);
   let i = v.default.getRemoteActivities();
   if (k !== i && (k = i, t = !0), t) {

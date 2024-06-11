@@ -89,10 +89,10 @@ i.prototype.parse = function(e, t, n) {
   }
   if (!p[E])
     for (var C = 0, A = u.length; C < A; C++) {
-      var Y = u[C];
-      if (-1 !== b.indexOf(Y)) {
-        var j = encodeURIComponent(Y);
-        j === Y && (j = escape(Y)), b = b.split(Y).join(j)
+      var j = u[C];
+      if (-1 !== b.indexOf(j)) {
+        var Y = encodeURIComponent(j);
+        Y === j && (Y = escape(j)), b = b.split(j).join(Y)
       }
     }
   var z = b.indexOf("#"); - 1 !== z && (this.hash = b.substr(z), b = b.slice(0, z));

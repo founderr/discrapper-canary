@@ -562,22 +562,22 @@ function E(e) {
     P = (0, o.useMemo)(() => new r.DateFormatter(i, L), [i, L]),
     F = (0, o.useMemo)(() => P.resolvedOptions(), [P]),
     B = (0, o.useMemo)(() => P.formatToParts(new Date).filter(e => b[e.type]).reduce((e, t) => (e[t.type] = !0, e), {}), [P]),
-    [U, Y] = (0, o.useState)(() => e.value || e.defaultValue ? {
+    [U, j] = (0, o.useState)(() => e.value || e.defaultValue ? {
       ...B
     } : {}),
-    j = (0, o.useRef)(),
+    Y = (0, o.useRef)(),
     z = (0, o.useRef)(C.identifier);
   (0, o.useEffect)(() => {
     C.identifier !== z.current && (z.current = C.identifier, k(t => Object.keys(U).length > 0 ? (0, r.toCalendar)(t, C) : h(e.placeholderValue, S, C, x)))
-  }, [C, S, U, x, e.placeholderValue]), D && Object.keys(U).length < Object.keys(B).length && Y(U = {
+  }, [C, S, U, x, e.placeholderValue]), D && Object.keys(U).length < Object.keys(B).length && j(U = {
     ...B
-  }), null == D && Object.keys(U).length === Object.keys(B).length && (Y(U = {}), k(h(e.placeholderValue, S, C, x)));
+  }), null == D && Object.keys(U).length === Object.keys(B).length && (j(U = {}), k(h(e.placeholderValue, S, C, x)));
   let H = M && Object.keys(U).length >= Object.keys(B).length ? M : A,
     G = t => {
       if (e.isDisabled || e.isReadOnly) return;
       let n = Object.keys(U),
         i = Object.keys(B);
-      null == t ? (O(null), k(h(e.placeholderValue, S, C, x)), Y({})) : n.length >= i.length || n.length === i.length - 1 && B.dayPeriod && !U.dayPeriod && "dayPeriod" !== j.current ? O(t = (0, r.toCalendar)(t, (null == E ? void 0 : E.calendar) || new r.GregorianCalendar)) : k(t), j.current = null
+      null == t ? (O(null), k(h(e.placeholderValue, S, C, x)), j({})) : n.length >= i.length || n.length === i.length - 1 && B.dayPeriod && !U.dayPeriod && "dayPeriod" !== Y.current ? O(t = (0, r.toCalendar)(t, (null == E ? void 0 : E.calendar) || new r.GregorianCalendar)) : k(t), Y.current = null
     },
     V = (0, o.useMemo)(() => H.toDate(w), [H, w]),
     $ = (0, o.useMemo)(() => P.formatToParts(V).map(e => {
@@ -645,13 +645,13 @@ function E(e) {
         isEditable: o
       }
     }), [V, U, P, F, H, C, i]);
-  B.era && U.year && !U.era ? (U.era = !0, Y({
+  B.era && U.year && !U.era ? (U.era = !0, j({
     ...U
-  })) : !B.era && U.era && (delete U.era, Y({
+  })) : !B.era && U.era && (delete U.era, j({
     ...U
   }));
   let W = e => {
-      U[e] = !0, "year" === e && B.era && (U.era = !0), Y({
+      U[e] = !0, "year" === e && B.era && (U.era = !0), j({
         ...U
       })
     },
@@ -753,12 +753,12 @@ function E(e) {
       if (e.isDisabled || e.isReadOnly) return;
       let t = Object.keys(U),
         n = Object.keys(B);
-      t.length === n.length - 1 && B.dayPeriod && !U.dayPeriod && (Y(U = {
+      t.length === n.length - 1 && B.dayPeriod && !U.dayPeriod && (j(U = {
         ...B
       }), G(H.copy()))
     },
     clearSegment(t) {
-      delete U[t], j.current = t, Y({
+      delete U[t], Y.current = t, j({
         ...U
       });
       let n = h(e.placeholderValue, S, C, x),

@@ -86,7 +86,7 @@ function L(e) {
     className: t,
     children: L
   });
-  let V = e => (0, i.jsx)(p.default, {
+  let x = e => (0, i.jsx)(p.default, {
     className: t,
     onContextMenu: b,
     color: B,
@@ -95,7 +95,7 @@ function L(e) {
   });
   return v ? (0, i.jsx)(c.AnalyticsLocationProvider, {
     value: M,
-    children: V()
+    children: x()
   }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
     value: M,
     children: (0, i.jsx)(u.Popout, {
@@ -111,7 +111,7 @@ function L(e) {
         ...e
       })),
       position: o.isMobile ? "top" : "right",
-      children: e => V(e)
+      children: e => x(e)
     })
   })
 }

@@ -33,72 +33,72 @@
           a: 0,
           format: "name"
         };
-        if (t = Y.rgb.exec(e)) return {
+        if (t = j.rgb.exec(e)) return {
           r: t[1],
           g: t[2],
           b: t[3]
         };
-        if (t = Y.rgba.exec(e)) return {
+        if (t = j.rgba.exec(e)) return {
           r: t[1],
           g: t[2],
           b: t[3],
           a: t[4]
         };
-        if (t = Y.hsl.exec(e)) return {
+        if (t = j.hsl.exec(e)) return {
           h: t[1],
           s: t[2],
           l: t[3]
         };
-        if (t = Y.hsla.exec(e)) return {
+        if (t = j.hsla.exec(e)) return {
           h: t[1],
           s: t[2],
           l: t[3],
           a: t[4]
         };
-        if (t = Y.hsv.exec(e)) return {
+        if (t = j.hsv.exec(e)) return {
           h: t[1],
           s: t[2],
           v: t[3]
         };
-        if (t = Y.hsva.exec(e)) return {
+        if (t = j.hsva.exec(e)) return {
           h: t[1],
           s: t[2],
           v: t[3],
           a: t[4]
         };
-        if (t = Y.hex8.exec(e)) return {
+        if (t = j.hex8.exec(e)) return {
           r: L(t[1]),
           g: L(t[2]),
           b: L(t[3]),
           a: L(t[4]) / 255,
           format: n ? "name" : "hex8"
         };
-        if (t = Y.hex6.exec(e)) return {
+        if (t = j.hex6.exec(e)) return {
           r: L(t[1]),
           g: L(t[2]),
           b: L(t[3]),
           format: n ? "name" : "hex"
         };
-        if (t = Y.hex4.exec(e)) return {
+        if (t = j.hex4.exec(e)) return {
           r: L(t[1] + "" + t[1]),
           g: L(t[2] + "" + t[2]),
           b: L(t[3] + "" + t[3]),
           a: L(t[4] + "" + t[4]) / 255,
           format: n ? "name" : "hex8"
         };
-        return !!(t = Y.hex3.exec(e)) && {
+        return !!(t = j.hex3.exec(e)) && {
           r: L(t[1] + "" + t[1]),
           g: L(t[2] + "" + t[2]),
           b: L(t[3] + "" + t[3]),
           format: n ? "name" : "hex"
         }
-      }(e)), "object" == typeof e && (j(e.r) && j(e.g) && j(e.b) ? (n = function(e, t, n) {
+      }(e)), "object" == typeof e && (Y(e.r) && Y(e.g) && Y(e.b) ? (n = function(e, t, n) {
         return {
           r: 255 * N(e, 255),
           g: 255 * N(t, 255),
           b: 255 * N(n, 255)
         }
-      }(e.r, e.g, e.b), d = !0, f = "%" === String(e.r).substr(-1) ? "prgb" : "rgb") : j(e.h) && j(e.s) && j(e.v) ? (i = F(e.s), s = F(e.v), n = function(e, n, r) {
+      }(e.r, e.g, e.b), d = !0, f = "%" === String(e.r).substr(-1) ? "prgb" : "rgb") : Y(e.h) && Y(e.s) && Y(e.v) ? (i = F(e.s), s = F(e.v), n = function(e, n, r) {
         e = 6 * N(e, 360), n = N(n, 100), r = N(r, 100);
         var i = t.floor(e),
           a = e - i,
@@ -111,7 +111,7 @@
           g: 255 * [u, r, r, s, o, o][c],
           b: 255 * [o, o, u, r, r, s][c]
         }
-      }(e.h, i, s), d = !0, f = "hsv") : j(e.h) && j(e.s) && j(e.l) && (i = F(e.s), u = F(e.l), n = function(e, t, n) {
+      }(e.h, i, s), d = !0, f = "hsv") : Y(e.h) && Y(e.s) && Y(e.l) && (i = F(e.s), u = F(e.l), n = function(e, t, n) {
         var r, i, a;
 
         function o(e, t, n) {
@@ -738,7 +738,7 @@
   function U(e) {
     return L(e) / 255
   }
-  var Y = (r = "[\\s|\\(]+(" + (n = "(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)") + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")\\s*\\)?", i = "[\\s|\\(]+(" + n + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")\\s*\\)?", {
+  var j = (r = "[\\s|\\(]+(" + (n = "(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)") + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")\\s*\\)?", i = "[\\s|\\(]+(" + n + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")[,|\\s]+(" + n + ")\\s*\\)?", {
     CSS_UNIT: new RegExp(n),
     rgb: RegExp("rgb" + r),
     rgba: RegExp("rgba" + i),
@@ -752,8 +752,8 @@
     hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
   });
 
-  function j(e) {
-    return !!Y.CSS_UNIT.exec(e)
+  function Y(e) {
+    return !!j.CSS_UNIT.exec(e)
   }
   e.exports ? e.exports = f : "function" == typeof define && define.amd ? define(function() {
     return f

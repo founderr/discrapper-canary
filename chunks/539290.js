@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return E
   },
   default: function() {
-    return f
+    return _
   }
 });
 var n = s("735250");
@@ -22,21 +22,21 @@ let E = {
   BOTTOM: d.verticalStatusWarningBlock
 };
 
-function f(e) {
+function _(e) {
   let {
     className: t,
     color: s = u.MessageBlockColors.YELLOW,
     buttonPosition: l = E.BOTTOM,
-    notice: f,
-    ctaLabel: _,
-    ctaLoading: I,
-    ctaDisabled: h,
-    ctaClassName: N,
-    onClick: C
+    notice: _,
+    ctaLabel: I,
+    ctaLoading: f,
+    ctaDisabled: N,
+    ctaClassName: C,
+    onClick: h
   } = e, p = (0, r.default)();
   return (0, n.jsx)(c.default, {
     className: a()(d.statusWarningBlock, {
-      [d.statusWarningBlockWithCta]: null != _
+      [d.statusWarningBlockWithCta]: null != I
     }, t),
     color: (0, i.isThemeDark)(p) ? s : u.MessageBlockColors.BROWN,
     children: (0, n.jsxs)("div", {
@@ -44,20 +44,20 @@ function f(e) {
       children: [(0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "interactive-active",
-        children: f
-      }), null != _ && null != C && (0, n.jsx)("div", {
+        children: _
+      }), null != I && null != h && (0, n.jsx)("div", {
         className: d.ctaButtonContainer,
         children: (0, n.jsx)(o.Button, {
-          className: a()(d.ctaButton, (0, i.isThemeDark)(p) ? void 0 : d.ctaBlackButton, N),
+          className: a()(d.ctaButton, (0, i.isThemeDark)(p) ? void 0 : d.ctaBlackButton, C),
           color: (0, i.isThemeDark)(p) ? o.Button.Colors.WHITE : o.Button.Colors.CUSTOM,
           size: o.ButtonSizes.MEDIUM,
-          onClick: C,
-          disabled: h,
-          submitting: I,
+          onClick: h,
+          disabled: N,
+          submitting: f,
           children: (0, n.jsx)(o.Text, {
             className: d.ctaButtonText,
             variant: "text-sm/medium",
-            children: _
+            children: I
           })
         })
       })]

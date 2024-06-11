@@ -32,8 +32,8 @@ let D = new I.default("ChannelRTCStore"),
   w = {},
   k = {},
   B = {},
-  V = {},
   x = {},
+  V = {},
   F = {};
 
 function H(e) {
@@ -171,7 +171,7 @@ function en(e) {
       id: t
     }
   } = e;
-  return delete V[t], delete x[t], X(t)
+  return delete x[t], delete V[t], X(t)
 }
 
 function ei(e) {
@@ -263,14 +263,14 @@ class es extends(i = _.default.Store) {
   }
   getChatOpen(e) {
     var t;
-    return null !== (t = V[e]) && void 0 !== t && t
+    return null !== (t = x[e]) && void 0 !== t && t
   }
   isFullscreenInContext() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.AppContext.APP;
     return Object.values(w).some(t => t[e] === v.ChannelLayouts.FULL_SCREEN)
   }
   getStageStreamSize(e) {
-    return x[e]
+    return V[e]
   }
   getStageVideoLimitBoostUpsellDismissed(e) {
     return F[e]
@@ -291,14 +291,14 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       currentVoiceChannelId: n
     } = e;
-    return null != t ? delete b[t] : null != n && (delete V[n], delete x[n], z(n)), q()
+    return null != t ? delete b[t] : null != n && (delete x[n], delete V[n], z(n)), q()
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t,
       messageId: n
     } = e, i = q(), r = m.default.getChannel(t);
-    return null == t || null == n || (null == r ? void 0 : r.type) !== v.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== v.ChannelTypes.GUILD_STAGE_VOICE || V[t] ? i : (V[t] = !0, !0)
+    return null == t || null == n || (null == r ? void 0 : r.type) !== v.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== v.ChannelTypes.GUILD_STAGE_VOICE || x[t] ? i : (x[t] = !0, !0)
   },
   CHANNEL_RTC_ACTIVE_CHANNELS: q,
   VOICE_STATE_UPDATES: function(e) {
@@ -392,7 +392,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       large: n
     } = e;
-    x[t] = n
+    V[t] = n
   },
   CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function(e) {
     let {
@@ -417,7 +417,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       chatOpen: n
     } = e;
-    V[t] = n
+    x[t] = n
   },
   RTC_CONNECTION_VIDEO: function(e) {
     let {

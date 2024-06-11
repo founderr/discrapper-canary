@@ -356,15 +356,15 @@ let B = (e, t) => {
     }, e.relevance = 0, delete n.beforeMatch
   },
   U = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"],
-  Y = {},
-  j = e => {
+  j = {},
+  Y = e => {
     console.error(e)
   },
   z = (e, ...t) => {
     console.log(`WARN: ${e}`, ...t)
   },
   H = (e, t) => {
-    !Y[`${e}/${t}`] && (console.log(`Deprecated as of ${e}. ${t}`), Y[`${e}/${t}`] = !0)
+    !j[`${e}/${t}`] && (console.log(`Deprecated as of ${e}. ${t}`), j[`${e}/${t}`] = !0)
   },
   G = Error();
 
@@ -387,8 +387,8 @@ function $(e) {
     _wrap: e.endScope
   }), ! function(e) {
     if (Array.isArray(e.begin)) {
-      if (e.skip || e.excludeBegin || e.returnBegin) throw j("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), G;
-      if ("object" != typeof e.beginScope || null === e.beginScope) throw j("beginScope must be object"), G;
+      if (e.skip || e.excludeBegin || e.returnBegin) throw Y("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), G;
+      if ("object" != typeof e.beginScope || null === e.beginScope) throw Y("beginScope must be object"), G;
       V(e, e.begin, {
         key: "beginScope"
       }), e.begin = y(e.begin, {
@@ -397,8 +397,8 @@ function $(e) {
     }
   }(e), ! function(e) {
     if (Array.isArray(e.end)) {
-      if (e.skip || e.excludeEnd || e.returnEnd) throw j("skip, excludeEnd, returnEnd not compatible with endScope: {}"), G;
-      if ("object" != typeof e.endScope || null === e.endScope) throw j("endScope must be object"), G;
+      if (e.skip || e.excludeEnd || e.returnEnd) throw Y("skip, excludeEnd, returnEnd not compatible with endScope: {}"), G;
+      if ("object" != typeof e.endScope || null === e.endScope) throw Y("endScope must be object"), G;
       V(e, e.end, {
         key: "endScope"
       }), e.end = y(e.end, {
@@ -575,11 +575,11 @@ var q = function(e) {
         throw e.mode = C, e
       }
       if ("illegal" === i.type && "" === a) return 1;
-      if (Y > 1e5 && Y > 3 * i.index) throw Error("potential infinite loop, way more iterations than matches");
+      if (j > 1e5 && j > 3 * i.index) throw Error("potential infinite loop, way more iterations than matches");
       return A += a, a.length
     }
     let E = O(e);
-    if (!E) throw j(c.replace("{}", e)), Error('Unknown language: "' + e + '"');
+    if (!E) throw Y(c.replace("{}", e)), Error('Unknown language: "' + e + '"');
     let S = function(e) {
         function t(t, n) {
           return RegExp(f(t), "m" + (e.case_insensitive ? "i" : "") + (e.unicodeRegex ? "u" : "") + (n ? "g" : ""))
@@ -700,11 +700,11 @@ var q = function(e) {
     let A = "",
       k = 0,
       R = 0,
-      Y = 0,
+      j = 0,
       z = !1;
     try {
       for (C.matcher.considerAll();;) {
-        Y++, z ? z = !1 : C.matcher.considerAll(), C.matcher.lastIndex = R;
+        j++, z ? z = !1 : C.matcher.considerAll(), C.matcher.lastIndex = R;
         let e = C.matcher.exec(t);
         if (!e) break;
         let n = t.substring(R, e.index),
@@ -867,7 +867,7 @@ var q = function(e) {
         try {
           i = r(e)
         } catch (e) {
-          if (j("Language definition for '{}' could not be registered.".replace("{}", t)), u) j(e);
+          if (Y("Language definition for '{}' could not be registered.".replace("{}", t)), u) Y(e);
           else throw e;
           i = l
         }!i.name && (i.name = t), n[t] = i, i.rawDefinition = r.bind(null, e), i.aliases && M(i.aliases, {

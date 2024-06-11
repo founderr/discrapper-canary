@@ -1,52 +1,52 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   OneTimePaymentPredicateStep: function() {
-    return m
+    return E
   }
-}), r("47120");
-var n = r("735250"),
-  s = r("470079"),
-  a = r("512722"),
-  l = r.n(a),
-  u = r("89057"),
-  i = r("987209"),
-  c = r("598"),
-  d = r("409813"),
-  o = r("456251"),
-  f = r("981631");
+}), n("47120");
+var r = n("735250"),
+  a = n("470079"),
+  s = n("512722"),
+  u = n.n(s),
+  i = n("89057"),
+  l = n("987209"),
+  c = n("598"),
+  o = n("409813"),
+  d = n("456251"),
+  f = n("981631");
 
-function m(e) {
+function E(e) {
   let {
     handleStepChange: t,
-    handleClose: r
+    handleClose: n
   } = e, {
-    blockedPayments: a,
-    hasFetchedSkus: m,
-    paymentSources: p,
-    hasFetchedPaymentSources: h,
-    application: x,
+    blockedPayments: s,
+    hasFetchedSkus: E,
+    paymentSources: A,
+    hasFetchedPaymentSources: S,
+    application: C,
     skusById: P,
-    selectedSkuId: C
+    selectedSkuId: _
   } = (0, c.usePaymentContext)(), {
-    isGift: j
-  } = (0, i.useGiftContext)(), [g, E] = s.useState(!0);
-  return (s.useEffect(() => {
-    let e = null != x;
-    m && h && e && E(!1)
-  }, [m, h, x]), s.useEffect(() => {
-    if (g || a) return;
-    l()(null != C, "Expected selectedSkuId");
-    let e = P[C];
-    if (j && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
-      t(d.Step.GIFT_CUSTOMIZATION);
+    isGift: m
+  } = (0, l.useGiftContext)(), [p, N] = a.useState(!0);
+  return (a.useEffect(() => {
+    let e = null != C;
+    E && S && e && N(!1)
+  }, [E, S, C]), a.useEffect(() => {
+    if (p || s) return;
+    u()(null != _, "Expected selectedSkuId");
+    let e = P[_];
+    if (m && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
+      t(o.Step.GIFT_CUSTOMIZATION);
       return
     }
-    if (0 === Object.keys(p).length) {
-      t(d.Step.ADD_PAYMENT_STEPS);
+    if (0 === Object.keys(A).length) {
+      t(o.Step.ADD_PAYMENT_STEPS);
       return
     }
-    t(d.Step.REVIEW)
-  }, [g, a, t, p, j, P, C]), g) ? (0, n.jsx)(o.default, {}) : a ? (0, n.jsx)(u.BlockedPaymentsContentModal, {
-    onClose: r
+    t(o.Step.REVIEW)
+  }, [p, s, t, A, m, P, _]), p) ? (0, r.jsx)(d.default, {}) : s ? (0, r.jsx)(i.BlockedPaymentsContentModal, {
+    onClose: n
   }) : null
 }

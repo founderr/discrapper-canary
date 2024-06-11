@@ -4,47 +4,47 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a = n("735250");
+var r = n("735250");
 n("470079");
-var r = n("512722"),
-  s = n.n(r),
-  l = n("481060"),
+var a = n("512722"),
+  s = n.n(a),
+  u = n("481060"),
   i = n("598"),
-  u = n("698708"),
-  o = n("614277"),
-  d = n("689938"),
-  c = n("802302");
+  l = n("698708"),
+  c = n("614277"),
+  o = n("689938"),
+  d = n("802302");
 
 function f(e) {
   let {
     handleClose: t
   } = e, {
     skusById: n,
-    selectedSkuId: r,
+    selectedSkuId: a,
     application: f
   } = (0, i.usePaymentContext)();
-  s()(null != r, "Expected selectedSkuId"), s()(null != f, "Expected application");
-  let _ = n[r];
-  s()(null != _, "Expected sku");
-  let I = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+  s()(null != a, "Expected selectedSkuId"), s()(null != f, "Expected application");
+  let E = n[a];
+  s()(null != E, "Expected sku");
+  let A = o.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
     applicationName: f.name,
-    itemName: _.name
+    itemName: E.name
   });
-  return (0, a.jsxs)(o.PaymentPortalBody, {
-    children: [(0, a.jsx)(u.default, {}), (0, a.jsxs)("div", {
-      className: c.confirmation,
-      children: [(0, a.jsx)(l.Heading, {
+  return (0, r.jsxs)(c.PaymentPortalBody, {
+    children: [(0, r.jsx)(l.default, {}), (0, r.jsxs)("div", {
+      className: d.confirmation,
+      children: [(0, r.jsx)(u.Heading, {
         variant: "heading-xxl/bold",
-        className: c.confirmationHeader,
+        className: d.confirmationHeader,
         children: "Success!"
-      }), (0, a.jsx)(l.Text, {
+      }), (0, r.jsx)(u.Text, {
         variant: "text-md/normal",
-        children: I
-      }), (0, a.jsx)("div", {
-        className: c.divider
-      }), (0, a.jsx)(l.Button, {
+        children: A
+      }), (0, r.jsx)("div", {
+        className: d.divider
+      }), (0, r.jsx)(u.Button, {
         onClick: t,
-        children: d.default.Messages.CLOSE
+        children: o.default.Messages.CLOSE
       })]
     })]
   })

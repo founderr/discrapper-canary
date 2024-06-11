@@ -109,8 +109,8 @@ t.default = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), k = (0, E.useColorValue)(R.Color.BRAND_345), B = null, V = w && null != b && N.default.can(R.Permissions.CONNECT, G);
-  V ? B = (0, i.jsx)(S.default, {
+  }), k = (0, E.useColorValue)(R.Color.BRAND_345), B = null, x = w && null != b && N.default.can(R.Permissions.CONNECT, G);
+  x ? B = (0, i.jsx)(S.default, {
     className: u,
     hangStatusActivity: b
   }) : null != P && null != P.emoji && !h && (B = (0, i.jsx)(v, {
@@ -119,9 +119,9 @@ t.default = e => {
     hideTooltip: I,
     className: u
   }));
-  let x = (0, l.useStateFromStores)([p.default], () => null != M ? p.default.getStatus(M.id) : null),
-    F = null !== x && [R.StatusTypes.OFFLINE, R.StatusTypes.INVISIBLE].includes(x),
-    H = null === (t = (0, c.default)(n, r, void 0, V)) || void 0 === t ? void 0 : t.activityText,
+  let V = (0, l.useStateFromStores)([p.default], () => null != M ? p.default.getStatus(M.id) : null),
+    F = null !== V && [R.StatusTypes.OFFLINE, R.StatusTypes.INVISIBLE].includes(V),
+    H = null === (t = (0, c.default)(n, r, void 0, x)) || void 0 === t ? void 0 : t.activityText,
     Y = null != H && H.length > 0;
   return F || null == B && !Y ? null : (0, i.jsxs)("div", {
     className: s,
@@ -133,7 +133,7 @@ t.default = e => {
       height: L,
       width: L,
       color: k.hex
-    }), null != n && n.some(e => (0, _.default)(e, V)) ? (0, i.jsx)(C.default, {
+    }), null != n && n.some(e => (0, _.default)(e, x)) ? (0, i.jsx)(C.default, {
       width: 16,
       height: 16,
       className: g.icon

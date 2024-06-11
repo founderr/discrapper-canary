@@ -17,8 +17,8 @@ var r = s("120356"),
 t.default = e => {
   let t, s, {
       premiumSubscription: r,
-      className: f,
-      isFullscreen: I = !1,
+      className: I,
+      isFullscreen: f = !1,
       textColor: S
     } = e,
     m = (0, d.useIsInPremiumOfferExperience)();
@@ -27,15 +27,15 @@ t.default = e => {
   if (c.default.isBoostOnlySubscription(r) ? t = R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != p && (t = c.default.getDisplayPremiumType(p.planId)), null == t) return null;
   let A = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
     M = (null != p ? c.default.getSkuIdForPlan(p.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
-  return s = null != S ? S : m || I ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
-    className: i()(T.container, f, {
-      [T.lightTextLink]: I,
+  return s = null != S ? S : m || f ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
+    className: i()(T.container, I, {
+      [T.lightTextLink]: f,
       [T.centerText]: m
     }),
     type: n.Card.Types.CUSTOM,
     children: [(0, a.jsx)(o.default, {
       className: i()(T.icon, {
-        [T.lightThemeColorOnly]: m || I
+        [T.lightThemeColorOnly]: m || f
       })
     }), (0, a.jsx)(n.Text, {
       variant: "text-sm/medium",

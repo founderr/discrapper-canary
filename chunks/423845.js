@@ -46,15 +46,15 @@ e.exports = function e(t, n, M, A, k, R) {
     }
   }
   R || (R = new r);
-  var Y = R.get(t);
-  if (Y) return Y;
+  var j = R.get(t);
+  if (j) return j;
   R.set(t, N), S(t) ? t.forEach(function(r) {
     N.add(e(r, n, M, r, t, R))
   }) : y(t) && t.forEach(function(r, i) {
     N.set(i, e(r, n, M, i, t, R))
   });
-  var j = P ? L ? p : f : L ? w : x,
-    z = F ? void 0 : j(t);
+  var Y = P ? L ? p : f : L ? w : x,
+    z = F ? void 0 : Y(t);
   return i(z || t, function(r, i) {
     z && (r = t[i = r]), a(N, i, e(r, n, M, i, t, R))
   }), N

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   CollectiblesCountdown: function() {
-    return m
+    return p
   }
 }), s("653041");
 var a = s("735250"),
@@ -17,7 +17,7 @@ var a = s("735250"),
   C = s("689938"),
   E = s("549622");
 
-function p(e) {
+function m(e) {
   let {
     endDate: t
   } = e, {
@@ -41,7 +41,7 @@ function p(e) {
     })
   })
 }
-let m = l.memo(function(e) {
+let p = l.memo(function(e) {
   let {
     unpublishedAt: t,
     isVisible: s,
@@ -78,7 +78,7 @@ let m = l.memo(function(e) {
       variant: "heading-md/medium",
       className: E.countdown,
       children: "—"
-    }), (0, a.jsx)(p, {
+    }), (0, a.jsx)(m, {
       endDate: t
     })]
   })

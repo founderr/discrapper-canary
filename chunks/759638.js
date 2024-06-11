@@ -1,8 +1,8 @@
 "use strict";
-r.r(t);
-var n = r("790215");
+n.r(t);
+var r = n("790215");
 t.default = function(e, t) {
-  var r = this.__data__,
-    a = (0, n.default)(r, e);
-  return a < 0 ? (++this.size, r.push([e, t])) : r[a][1] = t, this
+  var n = this.__data__,
+    i = (0, r.default)(n, e);
+  return i < 0 ? (++this.size, n.push([e, t])) : n[i][1] = t, this
 }

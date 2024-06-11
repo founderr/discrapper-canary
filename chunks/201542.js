@@ -50,7 +50,7 @@ t.default = r.memo(function(e) {
       onError: k
     } = e,
     B = r.useRef(null),
-    [V, x] = r.useState(0),
+    [x, V] = r.useState(0),
     [F, H] = r.useState(P),
     [Y, j] = r.useState(!1),
     [W, K] = r.useState(!1),
@@ -94,13 +94,13 @@ t.default = r.memo(function(e) {
       Z(!0)
     }, []),
     e_ = r.useCallback(() => {
-      Z(!1), V === F && es()
-    }, [V, F, es]),
+      Z(!1), x === F && es()
+    }, [x, F, es]),
     ec = r.useCallback(e => {
       let t = B.current;
       if (null == F || null == t) return;
       let n = e * F;
-      x(n), t.currentTime = n, X(!0), clearTimeout(et.current), et.current = void 0
+      V(n), t.currentTime = n, X(!0), clearTimeout(et.current), et.current = void 0
     }, [F]);
   r.useEffect(() => {
     !Q && W && X(!0)
@@ -110,14 +110,14 @@ t.default = r.memo(function(e) {
     if (Q || W) {
       if (W) {
         var e, t;
-        eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
+        eE.current = performance.now(), null == G || G(!1, x, (null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
       } else {
         let e = performance.now(),
           t = eE.current;
-        null == w || w(V, null != t ? (e - t) / 1e3 : 0), eE.current = null
+        null == w || w(x, null != t ? (e - t) / 1e3 : 0), eE.current = null
       }
     }
-  }, [W]), t = B, n = W, s = x, r.useEffect(() => {
+  }, [W]), t = B, n = W, s = V, r.useEffect(() => {
     let e;
     return ! function i() {
       let r = t.current;
@@ -199,7 +199,7 @@ t.default = r.memo(function(e) {
     }), (0, i.jsx)(h.default, {
       className: N.waveform,
       waveform: y,
-      currentTime: V,
+      currentTime: x,
       duration: null != F ? F : 1,
       playing: W,
       played: Q,
@@ -208,7 +208,7 @@ t.default = r.memo(function(e) {
       onDragEnd: e_
     }), (0, i.jsx)(O, {
       played: Q,
-      currentTime: V,
+      currentTime: x,
       duration: F
     }), (0, i.jsx)(c.default, {
       className: N.volumeButton,

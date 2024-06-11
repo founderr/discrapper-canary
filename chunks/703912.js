@@ -36,8 +36,8 @@ async function N(e, t, n) {
     code_challenge_method: O,
     state: L,
     nonce: P,
-    scope: M,
-    permissions: y,
+    scope: y,
+    permissions: M,
     guild_id: D,
     channel_id: x,
     prompt: b,
@@ -51,7 +51,7 @@ async function N(e, t, n) {
     errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
   let G = [];
-  if ("string" == typeof M ? G = M.split(" ").filter(e => e.length > 0) : Array.isArray(M) && (G = M), null == m.default.getCurrentUser()) throw new I.default({
+  if ("string" == typeof y ? G = y.split(" ").filter(e => e.length > 0) : Array.isArray(y) && (G = y), null == m.default.getCurrentUser()) throw new I.default({
     errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
   let w = null !== (l = c.default.getApplication(A)) && void 0 !== l ? l : _.default.createFromServer(await (0, C.fetchApplication)(A)),
@@ -113,7 +113,7 @@ async function N(e, t, n) {
   null == n || n(u.application, x);
   let B = p.NONE;
   try {
-    B = i.deserialize(null != y ? y : 0)
+    B = i.deserialize(null != M ? M : 0)
   } catch (e) {}
   return null != u.integration_type && Object.values(s.ApplicationIntegrationType).includes(u.integration_type) && (r = new Map).set(u.integration_type, u), t({
     clientId: A,

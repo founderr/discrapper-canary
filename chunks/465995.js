@@ -1,15 +1,15 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("329022"),
-  l = r("464854");
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("844303"),
+  o = n("329022"),
+  s = n("464854");
 t.default = function(e) {
   var t = e.colors,
-    r = e.onClick,
-    n = e.onSwatchHover,
-    u = (0, o.default)({
+    n = e.onClick,
+    r = e.onSwatchHover,
+    u = (0, a.default)({
       default: {
         swatches: {
           marginRight: "-10px"
@@ -27,20 +27,20 @@ t.default = function(e) {
         }
       }
     });
-  return a().createElement("div", {
+  return i().createElement("div", {
     style: u.swatches
-  }, (0, i.default)(t, function(e) {
-    return a().createElement(l.Swatch, {
+  }, (0, o.default)(t, function(e) {
+    return i().createElement(s.Swatch, {
       key: e,
       color: e,
       style: u.swatch,
-      onClick: r,
-      onHover: n,
+      onClick: n,
+      onHover: r,
       focusStyle: {
         boxShadow: "0 0 4px " + e
       }
     })
-  }), a().createElement("div", {
+  }), i().createElement("div", {
     style: u.clear
   }))
 }

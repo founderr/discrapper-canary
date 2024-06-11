@@ -27,10 +27,10 @@ function g(e) {
       label: s,
       isSelected: g
     } = e,
-    x = (0, c.usePremiumTrialOffer)(),
-    v = (0, a.usePremiumDiscountOffer)(),
-    T = (0, h.useIsEligibleForBogoPromotion)(),
-    N = (0, r.useStateFromStores)([p.default], () => p.default.isLocalizedPromoEnabled) && null == x && null == n,
+    v = (0, c.usePremiumTrialOffer)(),
+    x = (0, a.usePremiumDiscountOffer)(),
+    N = (0, h.useIsEligibleForBogoPromotion)(),
+    T = (0, r.useStateFromStores)([p.default], () => p.default.isLocalizedPromoEnabled) && null == v && null == n,
     {
       enabled: j
     } = o.ReferralProgramRecipient.useExperiment({
@@ -38,29 +38,29 @@ function g(e) {
     }, {
       autoTrackExposure: !1
     }),
-    C = j && (null == x ? void 0 : x.trial_id) === b.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-  return t = T ? (0, i.jsx)(u.default, {}) : null != v ? (0, i.jsx)(m.PremiumDiscountOfferTabBadge, {
+    C = j && (null == v ? void 0 : v.trial_id) === b.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+  return t = N ? (0, i.jsx)(u.default, {}) : null != x ? (0, i.jsx)(m.PremiumDiscountOfferTabBadge, {
     isTabSelected: g,
-    userDiscount: v,
+    userDiscount: x,
     includesAmountOff: !1
-  }) : null == x || C ? null != n ? n : N ? (0, i.jsx)(d.LocalizedPricingBadgeIcon, {
+  }) : null == v || C ? null != n ? n : T ? (0, i.jsx)(d.LocalizedPricingBadgeIcon, {
     entryPoint: d.BadgeEntryPoint.SettingsMenu
   }) : (0, i.jsx)(f.default, {
     isSelected: g
   }) : (0, i.jsx)(m.PremiumTrialOfferTabBadge, {
     isTabSelected: g,
-    trialOffer: x
+    trialOffer: v
   }), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
       className: l()(S.premiumLabel, {
-        [S.selected]: (g || N) && !T
+        [S.selected]: (g || T) && !N
       }),
       children: [s, t]
     }), (0, i.jsx)("div", {
       className: l()(S.background, {
-        [S.auPromo]: N && !g,
-        [S.auPromoSelected]: N && g,
-        [S.selectedBackground]: !N && !T && g
+        [S.auPromo]: T && !g,
+        [S.auPromoSelected]: T && g,
+        [S.selectedBackground]: !T && !N && g
       })
     })]
   })

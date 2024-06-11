@@ -10,14 +10,14 @@ r.r(t), r.d(t, {
     return i
   }
 });
-var l = r("652874");
-let n = Object.freeze({
+var n = r("652874");
+let l = Object.freeze({
     inspectedStickerPosition: {
       rowIndex: -1,
       columnIndex: -1
     }
   }),
-  s = (0, l.default)(e => n),
+  s = (0, n.default)(e => l),
   i = s,
   a = (e, t, r) => {
     s.setState({

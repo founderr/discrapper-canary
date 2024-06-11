@@ -1,23 +1,23 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("329022"),
-  s = r("829307"),
-  f = r("464854"),
-  c = r("844515"),
-  d = function(e) {
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("476400"),
+  o = n.n(a),
+  s = n("844303"),
+  u = n("329022"),
+  c = n("829307"),
+  l = n("464854"),
+  d = n("844515"),
+  f = function(e) {
     var t = e.width,
-      r = e.colors,
-      n = e.onChange,
-      o = e.onSwatchHover,
-      i = e.triangle,
-      f = e.styles,
-      d = e.className,
-      p = (0, l.default)((0, s.default)({
+      n = e.colors,
+      r = e.onChange,
+      a = e.onSwatchHover,
+      o = e.triangle,
+      l = e.styles,
+      f = e.className,
+      p = (0, s.default)((0, c.default)({
         default: {
           card: {
             width: t,
@@ -93,43 +93,43 @@ var n = r("470079"),
             transform: "rotate(180deg)"
           }
         }
-      }, void 0 === f ? {} : f), {
-        "hide-triangle": "hide" === i,
-        "top-left-triangle": "top-left" === i,
-        "top-right-triangle": "top-right" === i,
-        "bottom-left-triangle": "bottom-left" === i,
-        "bottom-right-triangle": "bottom-right" === i
+      }, void 0 === l ? {} : l), {
+        "hide-triangle": "hide" === o,
+        "top-left-triangle": "top-left" === o,
+        "top-right-triangle": "top-right" === o,
+        "bottom-left-triangle": "bottom-left" === o,
+        "bottom-right-triangle": "bottom-right" === o
       }),
       h = function(e, t) {
-        return n({
+        return r({
           hex: e,
           source: "hex"
         }, t)
       };
-    return a().createElement("div", {
+    return i().createElement("div", {
       style: p.card,
-      className: "github-picker " + (void 0 === d ? "" : d)
-    }, a().createElement("div", {
+      className: "github-picker " + (void 0 === f ? "" : f)
+    }, i().createElement("div", {
       style: p.triangleShadow
-    }), a().createElement("div", {
+    }), i().createElement("div", {
       style: p.triangle
-    }), (0, u.default)(r, function(e) {
-      return a().createElement(c.default, {
+    }), (0, u.default)(n, function(e) {
+      return i().createElement(d.default, {
         color: e,
         key: e,
         onClick: h,
-        onSwatchHover: o
+        onSwatchHover: a
       })
     }))
   };
-d.propTypes = {
-  width: i().oneOfType([i().string, i().number]),
-  colors: i().arrayOf(i().string),
-  triangle: i().oneOf(["hide", "top-left", "top-right", "bottom-left", "bottom-right"]),
-  styles: i().object
-}, d.defaultProps = {
+f.propTypes = {
+  width: o().oneOfType([o().string, o().number]),
+  colors: o().arrayOf(o().string),
+  triangle: o().oneOf(["hide", "top-left", "top-right", "bottom-left", "bottom-right"]),
+  styles: o().object
+}, f.defaultProps = {
   width: 200,
   colors: ["#B80000", "#DB3E00", "#FCCB00", "#008B02", "#006B76", "#1273DE", "#004DCF", "#5300EB", "#EB9694", "#FAD0C3", "#FEF3BD", "#C1E1C5", "#BEDADC", "#C4DEF6", "#BED3F3", "#D4C4FB"],
   triangle: "top-left",
   styles: {}
-}, (0, f.ColorWrap)(d)
+}, (0, l.ColorWrap)(f)

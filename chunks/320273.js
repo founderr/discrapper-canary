@@ -41,9 +41,9 @@ var r = n("147018"),
   },
   B = F("fetch"),
   U = F("Request"),
-  Y = F("Headers"),
-  j = U && U.prototype,
-  z = Y && Y.prototype,
+  j = F("Headers"),
+  Y = U && U.prototype,
+  z = j && j.prototype,
   H = i.RegExp,
   G = i.TypeError,
   V = i.decodeURIComponent,
@@ -238,13 +238,13 @@ if (d(ef, {
     forced: !u
   }, {
     URLSearchParams: ed
-  }), !u && g(Y)) {
+  }), !u && g(j)) {
   var ep = o(z.has),
     eh = o(z.set),
     em = function(e) {
       if (E(e)) {
         var t, n = e.body;
-        if (v(n) === k) return !ep(t = e.headers ? new Y(e.headers) : new Y, "content-type") && eh(t, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"), x(e, {
+        if (v(n) === k) return !ep(t = e.headers ? new j(e.headers) : new j, "content-type") && eh(t, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"), x(e, {
           body: w(0, S(n)),
           headers: w(0, t)
         })
@@ -262,9 +262,9 @@ if (d(ef, {
       }
     }), g(U)) {
     var eg = function(e) {
-      return m(this, j), new U(e, arguments.length > 1 ? em(arguments[1]) : {})
+      return m(this, Y), new U(e, arguments.length > 1 ? em(arguments[1]) : {})
     };
-    j.constructor = eg, eg.prototype = j, r({
+    Y.constructor = eg, eg.prototype = Y, r({
       global: !0,
       constructor: !0,
       dontCallGetSet: !0,

@@ -44,8 +44,8 @@ function w(e) {
     activity: w,
     customStatusActivity: k,
     user: B,
-    displayProfile: V,
-    guild: x,
+    displayProfile: x,
+    guild: V,
     guildMember: F,
     channelId: H,
     onClose: Y,
@@ -92,7 +92,7 @@ function w(e) {
     className: G.usernameSection,
     lastSection: !0
   });
-  let eo = null !== (t = E.default.getNickname(null == x ? void 0 : x.id, H, B)) && void 0 !== t ? t : I.default.getName(B),
+  let eo = null !== (t = E.default.getNickname(null == V ? void 0 : V.id, H, B)) && void 0 !== t ? t : I.default.getName(B),
     el = {
       location: {
         page: b.AnalyticsPages.USER_POPOUT,
@@ -104,8 +104,8 @@ function w(e) {
       className: G.usernameSection,
       user: B,
       nickname: eo,
-      pronouns: null == V ? void 0 : V.pronouns,
-      usernameIcon: B.hasAvatarForGuild(null == x ? void 0 : x.id) && (0, i.jsx)(m.default, {
+      pronouns: null == x ? void 0 : x.pronouns,
+      usernameIcon: B.hasAvatarForGuild(null == V ? void 0 : V.id) && (0, i.jsx)(m.default, {
         user: B,
         nickname: eo
       }),
@@ -124,11 +124,11 @@ function w(e) {
         ref: $,
         children: [(0, i.jsx)(C.default, {
           user: B,
-          guildId: null == x ? void 0 : x.id
+          guildId: null == V ? void 0 : V.id
         }), (0, i.jsx)(O.default, {
-          isUsingGuildBio: null !== (n = null == V ? void 0 : V.isUsingGuildMemberBio()) && void 0 !== n && n,
-          bio: null == V ? void 0 : V.bio,
-          guild: x,
+          isUsingGuildBio: null !== (n = null == x ? void 0 : x.isUsingGuildMemberBio()) && void 0 !== n && n,
+          bio: null == x ? void 0 : x.bio,
+          guild: V,
           hidePersonalInformation: Q
         }), ea && (0, i.jsx)(h.default, {
           className: G.profileMutuals,
@@ -136,11 +136,11 @@ function w(e) {
           onClose: Y
         }), (0, i.jsx)(v.default, {
           userId: B.id,
-          guildId: null == x ? void 0 : x.id
+          guildId: null == V ? void 0 : V.id
         }), (0, i.jsx)(N.default, {
           activity: w,
           user: B,
-          guild: x,
+          guild: V,
           channelId: H,
           onClose: Y,
           analyticsParams: (null == Z ? void 0 : Z.location) != null ? Z : el
@@ -148,20 +148,20 @@ function w(e) {
           applicationId: X.id,
           commandIds: X.popularApplicationCommandIds,
           channel: q,
-          guildId: null == x ? void 0 : x.id,
+          guildId: null == V ? void 0 : V.id,
           onClick: Y
         }) : null, (0, i.jsx)(p.default, {
           user: B,
-          guildId: null == x ? void 0 : x.id
+          guildId: null == V ? void 0 : V.id
         }), (0, i.jsx)(P.default, {
           user: B,
-          guild: x,
+          guild: V,
           guildMember: F,
-          showBorder: null !== (s = null == V ? void 0 : V.canEditThemes) && void 0 !== s && s
+          showBorder: null !== (s = null == x ? void 0 : x.canEditThemes) && void 0 !== s && s
         }), (0, i.jsx)(R.default, {
           userId: B.id,
           channelId: H,
-          guild: x,
+          guild: V,
           onClose: Y,
           theme: J
         }), null != X && void 0 !== H && (0, i.jsx)(y.default, {

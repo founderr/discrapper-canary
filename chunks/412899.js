@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MemberRole: function() {
-    return x
+    return V
   },
   default: function() {
     return W
@@ -44,7 +44,7 @@ var i = n("735250"),
   k = n("743428");
 let B = () => Promise.resolve();
 
-function V(e) {
+function x(e) {
   let {
     userRoles: t,
     position: n,
@@ -81,7 +81,7 @@ function V(e) {
     })]
   })
 }
-let x = r.forwardRef(function(e, t) {
+let V = r.forwardRef(function(e, t) {
   var s, o, l;
   let u;
   let {
@@ -110,8 +110,8 @@ let x = r.forwardRef(function(e, t) {
         label: w.default.Messages.COPY_ID_ROLE
       })
     })
-  }, [A.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = A.colorString) && void 0 !== o ? o : b, B = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, V = E.default.unsafe_rawColors.WHITE_500.css, x = (0, _.hex2int)(G);
-  null != x && .3 > (0, _.getDarkness)(x) && (V = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
+  }, [A.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = A.colorString) && void 0 !== o ? o : b, B = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, x = E.default.unsafe_rawColors.WHITE_500.css, V = (0, _.hex2int)(G);
+  null != V && .3 > (0, _.getDarkness)(V) && (x = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
     className: k.roleFlowerStar,
     iconClassName: f ? k.roleVerifiedIcon : void 0,
     color: G,
@@ -153,7 +153,7 @@ let x = r.forwardRef(function(e, t) {
           roleName: A.name
         }),
         children: [u, f ? (0, i.jsx)(D.default, {
-          color: V,
+          color: x,
           className: k.roleRemoveIcon,
           "aria-hidden": !0
         }) : null]
@@ -185,7 +185,7 @@ function F(e) {
       let {
         position: n
       } = t;
-      return (0, i.jsx)(V, {
+      return (0, i.jsx)(x, {
         ...e,
         position: null != n ? n : "top"
       })
@@ -290,9 +290,9 @@ function Y(e) {
   l()(null != y, "MemberRolesList: currentUser cannot be undefined");
   let P = !T && R.default.can(G.Permissions.MANAGE_ROLES, s),
     b = U.getHighestRole(s, y.id),
-    V = r.useMemo(() => "roles-".concat((0, u.v4)()), []),
+    x = r.useMemo(() => "roles-".concat((0, u.v4)()), []),
     Y = (0, d.default)({
-      id: V,
+      id: x,
       isEnabled: !0,
       scrollToStart: B,
       scrollToEnd: B,
@@ -300,7 +300,7 @@ function Y(e) {
     }),
     j = D.map(e => {
       var t;
-      return (0, i.jsx)(x, {
+      return (0, i.jsx)(V, {
         className: S,
         role: e,
         canRemove: P && U.isRoleHigher(s, y.id, b, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === y.id,

@@ -29,8 +29,8 @@ function T(e) {
     themeable: T
   } = e, I = t.getGuildId(), {
     mute: A,
-    suppress: x
-  } = (0, f.default)(t), v = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), N = A || x || v, M = (0, u.useSoundBoardDismissContentTypes)({
+    suppress: v
+  } = (0, f.default)(t), x = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), N = A || v || x, M = (0, u.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: N
   }), [y, R] = (0, o.useGetDismissibleContent)(M);
 
@@ -45,16 +45,16 @@ function T(e) {
       })
     })
   }
-  let j = l.useRef(null),
-    O = l.useCallback(() => {
+  let O = l.useRef(null),
+    j = l.useCallback(() => {
       var e;
-      null === (e = j.current) || void 0 === e || e.hidePopout()
+      null === (e = O.current) || void 0 === e || e.hidePopout()
     }, []);
   return (0, C.useComponentAction)({
     event: S.ComponentActions.TOGGLE_SOUNDBOARD,
-    handler: O
+    handler: j
   }), (0, a.jsx)(g.default, {
-    ref: j,
+    ref: O,
     renderPopout: e => {
       let {
         closePopout: n
@@ -76,8 +76,8 @@ function T(e) {
       themeable: T,
       label: function() {
         if (A) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (x) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (v) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
+        if (v) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (x) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
       }(),
       iconComponent: E.default,
       disabled: N,

@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("906732"),
   I = n("493324"),
   A = n("611064"),
-  x = n("677432"),
-  v = n("178762"),
+  v = n("677432"),
+  x = n("178762"),
   N = n("868671"),
   M = n("623624"),
   y = n("518738"),
   R = n("280234"),
   L = n("480384"),
-  j = n("155409"),
-  O = n("484459"),
+  O = n("155409"),
+  j = n("484459"),
   P = n("103575"),
   D = n("439170"),
   b = n("430824"),
@@ -96,7 +96,7 @@ class Q extends l.Component {
       ...S
     } = this.props, _ = null != g ? new Date(g) : null;
     return (0, a.jsx)(h.Popout, {
-      preload: () => (0, O.maybeFetchUserProfileForPopout)(s, {
+      preload: () => (0, j.maybeFetchUserProfileForPopout)(s, {
         channelId: c.id,
         guildId: f
       }),
@@ -364,7 +364,7 @@ class en extends l.Component {
       return (0, A.isContentGroup)(i) ? (0, l.createElement)(A.default, {
         ...i,
         key: "section-".concat(t)
-      }) : 0 === t ? (0, a.jsx)(j.default, {
+      }) : 0 === t ? (0, a.jsx)(O.default, {
         tutorialId: "whos-online",
         position: "left",
         inlineSpecs: J,
@@ -431,13 +431,13 @@ class en extends l.Component {
         }
         if (r.type === D.MemberListRowTypes.CONTENT_INVENTORY) {
           let e = "content-inventory-".concat(r.entry.id);
-          return null != r.entry.original_id && (e += "-".concat(r.entry.original_id)), (0, a.jsx)(v.default, {
+          return null != r.entry.original_id && (e += "-".concat(r.entry.original_id)), (0, a.jsx)(x.default, {
             ...r,
             channel: this.props.channel,
             index: l
           }, e)
         }
-        if (r.type === D.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(x.default, {}, "content-inventory-hidden-entry")
+        if (r.type === D.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(v.default, {}, "content-inventory-hidden-entry")
       }
       return (0, a.jsx)(et, {
         index: l
@@ -464,7 +464,7 @@ class en extends l.Component {
         return function(e, a) {
           if (e === N.CONTENT_FEED_SECTION) {
             let e = t[n + 1 + a];
-            return (0, v.getContentRowHeight)(e)
+            return (0, x.getContentRowHeight)(e)
           }
           return q
         }

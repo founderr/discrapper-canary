@@ -21,15 +21,15 @@ var a = n("735250"),
   T = n("536442"),
   I = n("79390"),
   A = n("628566"),
-  x = n("665906"),
-  v = n("695346"),
+  v = n("665906"),
+  x = n("695346"),
   N = n("433355"),
   M = n("819640"),
   y = n("375954"),
   R = n("496675"),
   L = n("885110"),
-  j = n("151785"),
-  O = n("627553"),
+  O = n("151785"),
+  j = n("627553"),
   P = n("38761"),
   D = n("585483"),
   b = n("358085"),
@@ -106,13 +106,13 @@ t.default = l.memo(function(e) {
       D.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
     }
   });
-  let eS = (0, x.useCanStartPublicThread)(K),
-    e_ = (0, x.useCanStartPrivateThread)(K),
-    eT = !v.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
+  let eS = (0, v.useCanStartPublicThread)(K),
+    e_ = (0, v.useCanStartPrivateThread)(K),
+    eT = !x.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
     eI = (0, r.useStateFromStores)([R.default, A.default], () => (0, E.canUseApplicationCommands)(R.default, A.default, J, K)),
     eA = (0, I.useCanPostPollsInChannel)(null != K ? K : void 0),
-    ex = (0, d.useRedesignIconContext)().enabled,
-    ev = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
+    ev = (0, d.useRedesignIconContext)().enabled,
+    ex = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
     eN = null !== (s = null == ea ? void 0 : ea.length) && void 0 !== s ? s : 0,
     eM = (0, k.default)({
       canAttachFiles: em,
@@ -124,13 +124,13 @@ t.default = l.memo(function(e) {
       activities: ee,
       newClipsCount: eN,
       canPostPolls: eA,
-      canLaunchActivities: ev,
+      canLaunchActivities: ex,
       appContext: Q
     });
   if (0 === eM.length) return null;
   let ey = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
     eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || ey;
-  Y = ex ? (0, a.jsx)(u.CirclePlusIcon, {
+  Y = ev ? (0, a.jsx)(u.CirclePlusIcon, {
     className: W.__invalid_attachButtonIcon,
     colorClass: W.attachButtonPlus
   }) : eR ? (0, a.jsx)(P.default, {
@@ -139,13 +139,13 @@ t.default = l.memo(function(e) {
     background: W.attachButtonPlus,
     width: 24,
     height: 24
-  }) : eN > 0 ? (0, a.jsx)(O.default, {
+  }) : eN > 0 ? (0, a.jsx)(j.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonClip,
     background: W.attachButtonPlus,
     width: 24,
     height: 24
-  }) : (0, a.jsx)(j.default, {
+  }) : (0, a.jsx)(O.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonPlus,
     width: 24,

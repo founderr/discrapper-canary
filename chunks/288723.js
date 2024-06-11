@@ -44,15 +44,15 @@ t.default = {
           }),
           U = P ? L ? u.right : u.left : L ? u.bottom : u.top;
         D[F] > O[F] && (U = (0, r.default)(U));
-        var Y = (0, r.default)(U),
-          j = [];
-        if (f && j.push(B[I] <= 0), h && j.push(B[U] <= 0, B[Y] <= 0), j.every(function(e) {
+        var j = (0, r.default)(U),
+          Y = [];
+        if (f && Y.push(B[I] <= 0), h && Y.push(B[U] <= 0, B[j] <= 0), Y.every(function(e) {
             return e
           })) {
           k = N, A = !1;
           break
         }
-        M.set(N, j)
+        M.set(N, Y)
       }
       if (A) {
         for (var z = E ? 3 : 1, H = function(e) {

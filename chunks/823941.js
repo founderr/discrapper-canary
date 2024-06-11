@@ -19,10 +19,10 @@ var a = s("735250"),
   f = s("594174"),
   C = s("68972"),
   E = s("754347"),
-  p = s("74538"),
-  m = s("884697"),
-  g = s("624377"),
-  S = s("141011"),
+  m = s("74538"),
+  p = s("884697"),
+  S = s("624377"),
+  g = s("141011"),
   h = s("813083"),
   I = s("372654"),
   _ = s("994896"),
@@ -30,8 +30,8 @@ var a = s("735250"),
   x = s("474936"),
   L = s("689938"),
   N = s("897246");
-let b = (0, m.getLogoSize)(96),
-  R = {
+let b = (0, p.getLogoSize)(96),
+  A = {
     [i.CollectiblesCategorySkuId.DISXCORE]: {
       left: () => s("136648"),
       right: () => s("850298")
@@ -85,7 +85,7 @@ let b = (0, m.getLogoSize)(96),
     } = e, {
       analyticsLocations: s
     } = (0, c.default)(), n = l.useRef(null), r = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-    return p.default.canUseCollectibles(r) ? (0, a.jsx)(a.Fragment, {
+    return m.default.canUseCollectibles(r) ? (0, a.jsx)(a.Fragment, {
       children: t.summary
     }) : (0, a.jsx)(a.Fragment, {
       children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
@@ -111,17 +111,17 @@ let b = (0, m.getLogoSize)(96),
     })
   };
 
-function A(e) {
+function R(e) {
   var t, s, l, n;
   let {
     category: i,
     index: o
-  } = e, u = R[i.skuId], c = o % 2 == 1, d = null !== (n = c ? null == u ? void 0 : u.left() : null == u ? void 0 : u.right()) && void 0 !== n ? n : (0, m.getCollectiblesAssetURL)(i.banner, {
+  } = e, u = A[i.skuId], c = o % 2 == 1, d = null !== (n = c ? null == u ? void 0 : u.left() : null == u ? void 0 : u.right()) && void 0 !== n ? n : (0, p.getCollectiblesAssetURL)(i.banner, {
     size: I.MAX_CONTENT_WIDTH,
     format: "jpg"
   }), f = c ? null == u ? void 0 : null === (t = u.leftOverflow) || void 0 === t ? void 0 : t.call(u) : null == u ? void 0 : null === (s = u.rightOverflow) || void 0 === s ? void 0 : s.call(u), {
     backgroundColors: C
-  } = (0, g.default)(i.styles), E = {
+  } = (0, S.default)(i.styles), E = {
     objectPosition: c ? "left" : "right",
     background: null != C ? "".concat((0, I.getBackgroundGradient)(C), " border-box border-box") : void 0,
     outlineColor: null != C ? C.border.toHslString() : void 0
@@ -143,7 +143,7 @@ function A(e) {
       className: r()(N.condensedCategoryLogo, {
         [N.condensedCategoryLogoLeft]: !c
       }),
-      src: (0, m.getCollectiblesAssetURL)(i.logo, {
+      src: (0, p.getCollectiblesAssetURL)(i.logo, {
         size: b
       }),
       alt: i.name,
@@ -169,15 +169,15 @@ function P(e) {
     index: c = 0
   } = e, {
     backgroundColors: d
-  } = (0, g.default)(l.styles), f = !!(null === (t = T.categoryBannerOverrides[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
-    condensedBannersEnabled: p
+  } = (0, S.default)(l.styles), f = !!(null === (t = T.categoryBannerOverrides[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+    condensedBannersEnabled: m
   } = (0, _.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
   });
-  return p ? (0, a.jsx)(A, {
+  return m ? (0, a.jsx)(R, {
     category: l,
     index: c
-  }) : (0, a.jsxs)(S.default, {
+  }) : (0, a.jsxs)(g.default, {
     asset: l.banner,
     className: r()(N.shopBanner, n),
     style: null != d ? {
@@ -193,7 +193,7 @@ function P(e) {
       })]
     }), (0, a.jsx)("img", {
       className: N.categoryLogo,
-      src: (0, m.getCollectiblesAssetURL)(l.logo, {
+      src: (0, p.getCollectiblesAssetURL)(l.logo, {
         size: b
       }),
       alt: l.name,

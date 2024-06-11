@@ -54,7 +54,7 @@ t.default = function(e) {
       guild: t,
       perks: (0, S.customRoleIconUpsellPerks)()
     }))
-  }, A = (0, a.jsx)(d.default, {
+  }, p = (0, a.jsx)(d.default, {
     className: m.availabilityIndicator,
     guild: t,
     guildFeature: T.GuildFeatures.ROLE_ICONS,
@@ -71,7 +71,7 @@ t.default = function(e) {
       className: m.formTitle,
       children: [(0, a.jsx)("div", {
         children: f.default.Messages.FORM_LABEL_ROLE_ICON
-      }), A]
+      }), p]
     }), (0, a.jsx)(n.FormText, {
       className: m.description,
       children: f.default.Messages.ROLE_ICON_HELP

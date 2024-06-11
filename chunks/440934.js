@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var l = n("481060"),
-  r = n("474333"),
-  a = n("154921"),
+  a = n("474333"),
+  r = n("154921"),
   o = n("970184"),
   s = n("471073"),
   u = n("293979"),
@@ -29,8 +29,8 @@ function f(e) {
     applicationIconURL: m,
     applicationName: g,
     submissionState: S,
-    error: v,
-    validators: I,
+    error: I,
+    validators: v,
     onSubmit: C
   } = (0, u.useModalState)(e, n);
   return (0, i.jsx)("form", {
@@ -46,21 +46,21 @@ function f(e) {
           size: l.AvatarSizes.SIZE_24,
           "aria-label": g,
           className: p.applicationIcon
-        }), (0, i.jsx)(a.default, {
-          color: a.default.Colors.HEADER_PRIMARY,
-          size: a.default.Sizes.SIZE_24,
+        }), (0, i.jsx)(r.default, {
+          color: r.default.Colors.HEADER_PRIMARY,
+          size: r.default.Sizes.SIZE_24,
           children: t
         }), (0, i.jsx)(l.ModalCloseButton, {
           onClick: n,
           className: p.closeButton
         })]
       }), (0, i.jsxs)(l.ModalContent, {
-        children: [null != v && "" !== v ? (0, i.jsx)(r.default, {
-          messageType: r.HelpMessageTypes.ERROR,
+        children: [null != I && "" !== I ? (0, i.jsx)(a.default, {
+          messageType: a.HelpMessageTypes.ERROR,
           className: p.submissionWarning,
-          children: v
-        }) : null, (0, i.jsx)(r.default, {
-          messageType: r.HelpMessageTypes.WARNING,
+          children: I
+        }) : null, (0, i.jsx)(a.default, {
+          messageType: a.HelpMessageTypes.WARNING,
           className: p.submissionWarning,
           children: c.default.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
             applicationName: g
@@ -68,7 +68,7 @@ function f(e) {
         }), (0, i.jsx)(l.FormSection, {
           children: (0, i.jsx)(o.ComponentStateContextProvider, {
             modal: e,
-            validators: I,
+            validators: v,
             children: (0, d.renderComponents)(h)
           })
         })]

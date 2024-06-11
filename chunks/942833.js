@@ -1,7 +1,7 @@
 "use strict";
 u.r(e), u.d(e, {
   usePrice: function() {
-    return o
+    return d
   },
   useProductType: function() {
     return l
@@ -22,7 +22,7 @@ function l(t) {
   }, [t])
 }
 
-function o(t) {
+function d(t) {
   return r.useMemo(() => {
     if ((null == t ? void 0 : t.price) == null) return;
     let {

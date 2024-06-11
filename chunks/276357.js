@@ -28,23 +28,23 @@ function C(e) {
     closePopout: a,
     setPopoutRef: C
   } = e, _ = (0, d.useVisibleForumTags)(t), {
-    tagFilter: T
-  } = (0, u.useForumChannelStore)(t.id), p = (0, u.useForumChannelStoreApi)(), S = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
+    tagFilter: p
+  } = (0, u.useForumChannelStore)(t.id), S = (0, u.useForumChannelStoreApi)(), T = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
     (0, c.trackForumTagFilterClicked)({
       guildId: t.guild_id,
       channelId: t.id,
       tagId: e,
-      filterTagIds: Array.from(T),
-      added: !T.has(e),
+      filterTagIds: Array.from(p),
+      added: !p.has(e),
       location: {
         page: h.AnalyticsPages.GUILD_CHANNEL,
         section: h.AnalyticsSections.FORUM_CHANNEL_HEADER,
         object: h.AnalyticsObjects.CHANNEL_TAG
       }
-    }), p.getState().toggleTagFilter(t.id, e)
-  }, [t, T, p]), N = n.useCallback(() => {
-    p.getState().setTagFilter(t.id, new Set), !S && a()
-  }, [p, t.id, S, a]), M = (0, l.default)({
+    }), S.getState().toggleTagFilter(t.id, e)
+  }, [t, p, S]), N = n.useCallback(() => {
+    S.getState().setTagFilter(t.id, new Set), !T && a()
+  }, [S, t.id, T, a]), M = (0, l.default)({
     id: "".concat(t.id, "-all-tags-dropdown-navigator"),
     isEnabled: !0,
     wrap: !0,
@@ -77,7 +77,7 @@ function C(e) {
             className: g.countText,
             color: "none",
             variant: "text-xs/medium",
-            children: T.size
+            children: p.size
           })
         })]
       })
@@ -98,7 +98,7 @@ function C(e) {
             children: _.map(e => (0, s.jsx)(m.default, {
               className: g.tag,
               tag: e,
-              selected: T.has(e.id),
+              selected: p.has(e.id),
               onClick: () => E(e.id)
             }, e.id))
           })

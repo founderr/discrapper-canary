@@ -15,11 +15,11 @@ t.default = e => {
     message: a,
     channel: c,
     renderColon: h,
-    hasUnreads: f
+    hasUnreads: m
   } = e, {
-    user: m,
+    user: f,
     author: p
-  } = (0, r.useForumPostAuthor)(c), g = null !== (i = null !== (t = null == p ? void 0 : p.nick) && void 0 !== t ? t : null == m ? void 0 : m.username) && void 0 !== i ? i : "", T = (0, o.useUsernameHook)({
+  } = (0, r.useForumPostAuthor)(c), g = null !== (i = null !== (t = null == p ? void 0 : p.nick) && void 0 !== t ? t : null == f ? void 0 : f.username) && void 0 !== i ? i : "", T = (0, o.useUsernameHook)({
     user: null == a ? void 0 : a.author,
     channelId: c.id,
     guildId: c.guild_id,
@@ -34,7 +34,7 @@ t.default = e => {
   return (0, n.jsxs)(l.Text, {
     tag: "span",
     className: s()(d.author, {
-      [d.hasUnreads]: f
+      [d.hasUnreads]: m
     }),
     variant: "text-sm/semibold",
     children: [T, !0 === h ? ": " : null]

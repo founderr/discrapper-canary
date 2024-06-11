@@ -42,13 +42,13 @@ function R() {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: M
+      rejectAll: y
     } = (0, _.useMessageRequestActions)({
       onError: P
     }),
-    y = s.useCallback(() => {
-      M(t.map(e => e.channel.id))
-    }, [t, M]);
+    M = s.useCallback(() => {
+      y(t.map(e => e.channel.id))
+    }, [t, y]);
   s.useEffect(() => {
     h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
@@ -84,7 +84,7 @@ function R() {
           tag: "span",
           children: "•"
         }), (0, a.jsx)(u.Button, {
-          onClick: y,
+          onClick: M,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -93,7 +93,7 @@ function R() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, R]);
+    }, "message-requests-spam-title"), [n, M, R]);
   return 0 === t.length ? (0, a.jsx)(I.default, {
     section: T.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {

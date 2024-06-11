@@ -235,18 +235,18 @@ function b(e) {
     })
   }
   let {
-    IconComponent: V,
-    backgroundDarkColor: x,
+    IconComponent: x,
+    backgroundDarkColor: V,
     backgroundLightColor: F,
     foregroundDarkColor: H,
     foregroundLightColor: Y,
     premiumBackgroundColor: j,
     premiumForegroundColor: W
   } = y[w];
-  if (null == V) return null;
+  if (null == x) return null;
   G.premium && (t = W, n = j);
   let K = (0, u.isThemeDark)(b) ? H : Y,
-    z = (0, u.isThemeDark)(b) ? x : F;
+    z = (0, u.isThemeDark)(b) ? V : F;
   return t = null != t ? t : K, n = null != n ? n : z, (0, i.jsx)(d.Tooltip, {
     color: l,
     position: A,
@@ -265,7 +265,7 @@ function b(e) {
         color: null != n ? n : R,
         stroke: C,
         size: g,
-        children: (0, i.jsx)(V, {
+        children: (0, i.jsx)(x, {
           className: O,
           color: t
         })

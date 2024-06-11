@@ -15,24 +15,24 @@ var n = i("735250"),
   u = i("62413"),
   h = i("603406"),
   p = i("165209"),
-  f = i("981631"),
-  m = i("691032");
+  m = i("981631"),
+  f = i("691032");
 
 function g() {
   let e = (0, c.useApplicationDirectoryHistory)(e => e.guildId),
     t = (0, l.useStateFromStores)([r.default], () => r.default.getCategories()),
     i = (0, c.getPreviousView)();
   return a.useEffect(() => {
-    s.default.track(f.AnalyticEvents.APP_DIRECTORY_PAGE_VIEWED, {
+    s.default.track(m.AnalyticEvents.APP_DIRECTORY_PAGE_VIEWED, {
       current_page: c.ApplicationDirectoryViews.HOME,
       previous_page: null == i ? void 0 : i.type,
       guild_id: e
     })
   }, [e, i]), (0, n.jsxs)(o.default, {
     children: [(0, n.jsx)(h.default, {}), null != t && t.length > 0 && (0, n.jsx)(d.default, {
-      className: m.categoryList
+      className: f.categoryList
     }), (0, n.jsx)("main", {
-      className: m.collectionsContainer,
+      className: f.collectionsContainer,
       children: (0, n.jsx)(u.default, {})
     }), (0, n.jsx)(p.default, {})]
   })

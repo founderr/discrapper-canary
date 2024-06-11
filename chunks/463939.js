@@ -106,7 +106,7 @@ function O(e) {
   }
   return null
 }
-let A = (0, g.createCurrencyAmountColumn)({
+let p = (0, g.createCurrencyAmountColumn)({
     key: "AMOUNT ",
     cellClassName: x.amountColumn,
     renderHeader() {
@@ -123,7 +123,7 @@ let A = (0, g.createCurrencyAmountColumn)({
     },
     getAmount: e => e.amount
   }),
-  p = (0, h.createExpandableTableColumns)([(0, h.createExpandableColumn)({
+  A = (0, h.createExpandableTableColumns)([(0, h.createExpandableColumn)({
     key: "PERIOD",
     cellClassName: x.periodColumn,
     renderHeader: () => (0, n.jsx)(g.HeaderCell, {
@@ -142,9 +142,9 @@ let A = (0, g.createCurrencyAmountColumn)({
       })
     }
   }), (0, h.createExpandableColumn)({
-    ...A,
-    renderContent: A.render,
-    renderExpandedContent: (e, t) => A.render(e, t)
+    ...p,
+    renderContent: p.render,
+    renderExpandedContent: (e, t) => p.render(e, t)
   }), (0, g.createColumn)({
     key: "STATUS ",
     cellClassName: x.statusColumn,
@@ -191,7 +191,7 @@ function M(e) {
     ...a
   }), [a, t]);
   return (0, n.jsx)(g.default, {
-    columns: p,
+    columns: A,
     data: l,
     cellProps: r
   })

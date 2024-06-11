@@ -84,8 +84,8 @@ function T(e) {
     handleContainerKeyUp: x,
     handleRemoveTag: L,
     handleTagChangeEvent: O,
-    handleSelectTag: A,
-    handleUnselectTag: p,
+    handleSelectTag: p,
+    handleUnselectTag: A,
     handleResetTagSelections: M,
     handleInputBlurEvent: D
   } = (0, c.useChipletStateHandlers)(g, {
@@ -118,15 +118,15 @@ function T(e) {
       if (t) {
         var s;
         let t = G.includes(j[e]);
-        null === (s = f.current) || void 0 === s || s.focus(), t ? p(e) : (A(e), setImmediate(() => {
+        null === (s = f.current) || void 0 === s || s.focus(), t ? A(e) : (p(e), setImmediate(() => {
           var e;
           null === (e = f.current) || void 0 === e || e.blur(), setTimeout(() => {
             var e;
             return null === (e = m.current) || void 0 === e ? void 0 : e.focus()
           }, 16)
         }))
-      } else p(e, !0), b(!0)
-    }, [A, p, G, j]);
+      } else A(e, !0), b(!0)
+    }, [p, A, G, j]);
   return (0, a.jsxs)("div", {
     className: i()(E.mainContainer, T),
     ref: m,

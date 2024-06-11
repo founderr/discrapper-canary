@@ -40,11 +40,11 @@ var i = n("735250"),
   w = n("689938"),
   k = n("152435"),
   B = n("661781");
-let V = {
+let x = {
     width: 232,
     height: 315
   },
-  x = {
+  V = {
     width: 232,
     height: 267
   },
@@ -187,7 +187,7 @@ function j(e) {
         })]
       })]
     }),
-    U = L ? V : x;
+    U = L ? x : V;
   return (0, i.jsx)(E.default, {
     className: k.wrapper,
     selector: ".".concat(k.root),

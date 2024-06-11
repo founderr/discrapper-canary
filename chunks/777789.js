@@ -1,7 +1,7 @@
 "use strict";
 t.r(l), t.d(l, {
   default: function() {
-    return f
+    return I
   }
 });
 var s = t("735250"),
@@ -14,7 +14,7 @@ var s = t("735250"),
   u = t("424625"),
   c = t("267642"),
   C = t("502097");
-class m extends a.PureComponent {
+class S extends a.PureComponent {
   render() {
     let {
       tier: e
@@ -31,7 +31,7 @@ class m extends a.PureComponent {
     })
   }
 }
-let S = e => {
+let m = e => {
   let {
     subscriptionChange: l,
     guild: t
@@ -43,12 +43,12 @@ let S = e => {
   return 0 === r ? null : (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(u.default, {
       className: r > 0 ? C.levelUpIcon : C.levelDownIcon
-    }), (0, s.jsx)(m, {
+    }), (0, s.jsx)(S, {
       tier: n
     })]
   })
 };
-class f extends a.PureComponent {
+class I extends a.PureComponent {
   render() {
     let {
       guild: e,
@@ -67,9 +67,9 @@ class f extends a.PureComponent {
           children: e.name
         }), (0, s.jsxs)("div", {
           className: C.tierInfo,
-          children: [(0, s.jsx)(m, {
+          children: [(0, s.jsx)(S, {
             tier: e.premiumTier
-          }), (0, s.jsx)(S, {
+          }), (0, s.jsx)(m, {
             guild: e,
             subscriptionChange: null != t ? t : 0
           })]

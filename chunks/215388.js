@@ -1,27 +1,27 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
-    return v
+    return I
   }
-}), A("47120");
-var a = A("735250"),
-  l = A("470079"),
-  s = A("120356"),
-  n = A.n(s),
-  r = A("153832"),
-  i = A("481060"),
-  o = A("752305"),
-  d = A("893718"),
-  u = A("131704"),
-  c = A("703558"),
-  f = A("981631"),
-  g = A("689938"),
-  C = A("713695"),
-  h = A("709944");
-let T = (0, r.v4)(),
-  m = (0, u.createChannelRecord)({
+}), t("47120");
+var a = t("735250"),
+  l = t("470079"),
+  s = t("120356"),
+  r = t.n(s),
+  n = t("153832"),
+  i = t("481060"),
+  o = t("752305"),
+  d = t("893718"),
+  u = t("131704"),
+  c = t("703558"),
+  g = t("981631"),
+  f = t("689938"),
+  C = t("713695"),
+  h = t("709944");
+let T = (0, n.v4)(),
+  U = (0, u.createChannelRecord)({
     id: "1",
-    type: f.ChannelTypes.DM
+    type: g.ChannelTypes.DM
   });
 
 function p() {
@@ -33,39 +33,39 @@ function p() {
   })
 }
 
-function U(e) {
-  var t;
+function m(e) {
+  var A;
   let {
-    hasError: A,
+    hasError: t,
     maxLength: l,
     text: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: n()(h.maxLength, {
-      [h.errorOverflow]: A
+    className: r()(h.maxLength, {
+      [h.errorOverflow]: t
     }),
     "aria-hidden": "true",
-    children: [null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, " ", null != l && "/ ".concat(l)]
+    children: [null !== (A = null == s ? void 0 : s.length) && void 0 !== A ? A : 0, " ", null != l && "/ ".concat(l)]
   })
 }
 
-function v(e) {
-  var t;
+function I(e) {
+  var A;
   let {
-    "aria-labelledby": A,
+    "aria-labelledby": t,
     className: s,
-    id: r,
+    id: n,
     autoFocus: u,
-    maxLength: f,
+    maxLength: g,
     onChange: h,
-    onSubmit: v,
-    showCharacterCount: I = !1,
+    onSubmit: I,
+    showCharacterCount: v = !1,
     placeholder: E,
-    required: x,
-    value: N,
-    enableThemedBackground: D = !1,
-    parentModalKey: q
-  } = e, L = (0, i.useFormContext)(), [O, R] = l.useState(() => (0, o.toRichValue)(N)), P = l.useRef(!0 === u), V = null != A ? A : null == L ? void 0 : L.titleId, j = null !== (t = null == L ? void 0 : L.errorId) && void 0 !== t ? t : T, b = l.useMemo(() => ({
+    required: q,
+    value: D,
+    enableThemedBackground: N = !1,
+    parentModalKey: O
+  } = e, L = (0, i.useFormContext)(), [R, x] = l.useState(() => (0, o.toRichValue)(D)), P = l.useRef(!0 === u), V = null != t ? t : null == L ? void 0 : L.titleId, S = null !== (A = null == L ? void 0 : L.errorId) && void 0 !== A ? A : T, j = l.useMemo(() => ({
     analyticsName: "simple",
     autocomplete: {
       alwaysUseLayer: !0,
@@ -87,20 +87,20 @@ function v(e) {
     }
   }), [u]);
   return (0, a.jsxs)(d.default, {
-    "aria-describedby": j,
+    "aria-describedby": S,
     "aria-labelledby": V,
-    innerClassName: n()(s, C.textArea),
-    id: r,
-    maxCharacterCount: f,
-    onChange: function(e, t, A) {
-      h(t), R(A)
+    innerClassName: r()(s, C.textArea),
+    id: n,
+    maxCharacterCount: g,
+    onChange: function(e, A, t) {
+      h(A), x(t)
     },
     placeholder: E,
-    required: x,
-    channel: m,
-    textValue: N,
-    richValue: O,
-    type: b,
+    required: q,
+    channel: U,
+    textValue: D,
+    richValue: R,
+    type: j,
     onBlur: () => {
       P.current = !1
     },
@@ -108,18 +108,18 @@ function v(e) {
       P.current = !0
     },
     focused: P.current,
-    onSubmit: null != v ? v : p,
-    disableThemedBackground: !D,
-    parentModalKey: q,
+    onSubmit: null != I ? I : p,
+    disableThemedBackground: !N,
+    parentModalKey: O,
     emojiPickerCloseOnModalOuterClick: !0,
-    children: [!0 === I && (0, a.jsx)(U, {
-      hasError: null != L.error || null != f && N.length > f,
-      text: N,
-      maxLength: f
-    }), null != f && (0, a.jsx)(i.HiddenVisually, {
+    children: [!0 === v && (0, a.jsx)(m, {
+      hasError: null != L.error || null != g && D.length > g,
+      text: D,
+      maxLength: g
+    }), null != g && (0, a.jsx)(i.HiddenVisually, {
       id: T,
-      children: g.default.Messages.MAXIMUM_LENGTH.format({
-        maxLength: f
+      children: f.default.Messages.MAXIMUM_LENGTH.format({
+        maxLength: g
       })
     })]
   })

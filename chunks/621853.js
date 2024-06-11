@@ -249,7 +249,7 @@ function k(e) {
 function B() {
   I.clear(), f = {}, S = {}
 }
-class V extends _.default {
+class x extends _.default {
   initialize() {
     this.waitFor(c.default), this.syncWith([a.default], B)
   }
@@ -284,7 +284,7 @@ class V extends _.default {
   takeSnapshot() {
     let e = l.default.getId();
     return {
-      version: V.LATEST_SNAPSHOT_VERSION,
+      version: x.LATEST_SNAPSHOT_VERSION,
       data: [{
         userId: e,
         profile: f[e]
@@ -312,7 +312,7 @@ class V extends _.default {
       USER_UPDATE: k,
       LOGOUT: O
     }), E(this, "loadCache", () => {
-      let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION);
+      let e = this.readSnapshot(x.LATEST_SNAPSHOT_VERSION);
       null != e && e.forEach(e => {
         let {
           userId: t,
@@ -323,4 +323,4 @@ class V extends _.default {
     })
   }
 }
-E(V, "displayName", "UserProfileStore"), E(V, "LATEST_SNAPSHOT_VERSION", 1), t.default = new V
+E(x, "displayName", "UserProfileStore"), E(x, "LATEST_SNAPSHOT_VERSION", 1), t.default = new x

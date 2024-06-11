@@ -36,7 +36,7 @@ function v(e) {
     trackUserProfileAction: x
   } = (0, S.useUserProfileAnalyticsContext)();
   if (t || i === I.RelationshipTypes.BLOCKED) return null;
-  let N = () => {
+  let C = () => {
     x({
       action: "SEND_MESSAGE"
     }), d.default.openPrivateChannel(l.id, !1, !1, A), p()
@@ -45,7 +45,7 @@ function v(e) {
     text: m.default.Messages.SEND_DM,
     icon: n.ChatIcon,
     color: a()(u.Button.Colors.PRIMARY, _.color),
-    onClick: N
+    onClick: C
   }) : i === I.RelationshipTypes.PENDING_OUTGOING || i === I.RelationshipTypes.PENDING_INCOMING ? (0, s.jsxs)("div", {
     className: _.multipleButtons,
     children: [(0, s.jsx)(E.default, {
@@ -58,7 +58,7 @@ function v(e) {
       text: m.default.Messages.SEND_DM,
       icon: n.ChatIcon,
       color: a()(u.Button.Colors.PRIMARY, _.color),
-      onClick: N
+      onClick: C
     })]
   }) : (0, s.jsxs)("div", {
     className: _.multipleButtons,
@@ -66,7 +66,7 @@ function v(e) {
       text: m.default.Messages.SEND_DM,
       icon: n.ChatIcon,
       color: a()(u.Button.Colors.PRIMARY, _.color),
-      onClick: N,
+      onClick: C,
       compact: !0
     }), (0, s.jsx)(E.default, {
       text: m.default.Messages.USER_PROFILE_ADD_FRIEND,
@@ -88,11 +88,11 @@ function v(e) {
   if (i === I.RelationshipTypes.FRIEND || l.bot) return T ? (0, s.jsx)(E.default, {
     text: m.default.Messages.SEND_DM,
     color: a()(u.Button.Colors.PRIMARY, _.color),
-    onClick: N
+    onClick: C
   }) : (0, s.jsx)(E.default, {
     text: m.default.Messages.SEND_MESSAGE,
     color: u.Button.Colors.GREEN,
-    onClick: N
+    onClick: C
   });
   if (i === I.RelationshipTypes.PENDING_OUTGOING) return (0, s.jsx)(E.default, {
     text: m.default.Messages.ADD_FRIEND_BUTTON_AFTER,
@@ -102,7 +102,7 @@ function v(e) {
   if (i === I.RelationshipTypes.PENDING_INCOMING) return T ? (0, s.jsx)(E.default, {
     text: m.default.Messages.SEND_DM,
     color: a()(u.Button.Colors.PRIMARY, _.color),
-    onClick: N
+    onClick: C
   }) : (0, s.jsxs)("div", {
     className: _.pendingIncoming,
     children: [(0, s.jsx)(E.default, {

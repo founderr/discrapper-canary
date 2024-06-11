@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useBreadcrumbs: function() {
-    return Y
+    return j
   }
 });
 var r = n("427252"),
@@ -42,7 +42,7 @@ var r = n("427252"),
   B = n("602607"),
   U = {};
 
-function Y(e) {
+function j(e) {
   var t;
   let {
     "aria-label": n,

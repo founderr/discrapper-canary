@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), i("47120");
 var n = i("735250"),
@@ -15,12 +15,12 @@ var n = i("735250"),
   u = i("981631"),
   h = i("689938"),
   p = i("837159"),
-  f = i("943935");
+  m = i("943935");
 
-function m() {
+function f() {
   let e = (0, c.useApplicationDirectoryHistory)(e => e.guildId),
     [t, i] = a.useState(""),
-    m = a.useCallback(() => {
+    f = a.useCallback(() => {
       let i = (0, r.getAllCategory)();
       s.default.track(u.AnalyticEvents.APP_DIRECTORY_SEARCH_STARTED, {
         search_term: t,
@@ -44,11 +44,11 @@ function m() {
         className: p.searchBar,
         query: t,
         onChange: i,
-        onSubmit: m,
+        onSubmit: f,
         canShowCta: !0
       })]
     }), (0, n.jsx)("img", {
-      src: f,
+      src: m,
       alt: "",
       className: p.rightImage
     })]

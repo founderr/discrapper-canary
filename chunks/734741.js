@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return C
   },
   useShouldShowWhatsNewBadge: function() {
-    return g
+    return N
   }
 });
 var a = s("442837"),
@@ -29,29 +29,29 @@ var a = s("442837"),
   E = s("885462"),
   R = s("474936"),
   T = s("921944");
-let f = "getWhatsNewBadgeCount",
-  I = "useShouldShowWhatsNewBadge",
+let I = "getWhatsNewBadgeCount",
+  f = "useShouldShowWhatsNewBadge",
   S = () => {
     let e = (0, a.useStateFromStores)([n.default], () => n.default.getCurrentUser()),
       t = l.default.isPremiumExactly(e, R.PremiumTypes.TIER_2),
       {
         enabled: s
       } = d.ReferralProgramRecipient.useExperiment({
-        location: f
+        location: I
       }, {
         autoTrackExposure: !1
       }),
       {
         enabled: r
       } = u.DiscountModelDataCollection.useExperiment({
-        location: f
+        location: I
       }, {
         autoTrackExposure: !1
       }),
       {
         enabled: i
       } = o.CannibalizationModelDataCollection.useExperiment({
-        location: f
+        location: I
       }, {
         autoTrackExposure: !1
       });
@@ -64,21 +64,21 @@ let f = "getWhatsNewBadgeCount",
       {
         enabled: a
       } = d.ReferralProgramRecipient.getCurrentConfig({
-        location: f
+        location: I
       }, {
         autoTrackExposure: !1
       }),
       {
         enabled: r
       } = u.DiscountModelDataCollection.getCurrentConfig({
-        location: f
+        location: I
       }, {
         autoTrackExposure: !1
       }),
       {
         enabled: i
       } = o.CannibalizationModelDataCollection.getCurrentConfig({
-        location: f
+        location: I
       }, {
         autoTrackExposure: !1
       });
@@ -88,7 +88,7 @@ let f = "getWhatsNewBadgeCount",
     let {
       canFlipCard: e
     } = c.June2024NewAppStylesWhatsNewCardExperiment.getCurrentConfig({
-      location: f
+      location: I
     }, {
       autoTrackExposure: !1
     }), t = (0, i.isDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE);
@@ -98,7 +98,7 @@ let f = "getWhatsNewBadgeCount",
     let {
       canFlipCard: e
     } = _.ReferralProgramWhatsNewCardExperiment.useExperiment({
-      location: f
+      location: I
     }, {
       autoTrackExposure: !1
     }), t = S(), s = (0, i.useIsDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE);
@@ -108,7 +108,7 @@ let f = "getWhatsNewBadgeCount",
     let {
       canFlipCard: e
     } = _.ReferralProgramWhatsNewCardExperiment.getCurrentConfig({
-      location: f
+      location: I
     }, {
       autoTrackExposure: !1
     }), t = m(), s = (0, i.isDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE);
@@ -118,31 +118,31 @@ let f = "getWhatsNewBadgeCount",
     let {
       canFlipCard: e
     } = E.ServerProfilesExperiment.useExperiment({
-      location: f
+      location: I
     }, {
       autoTrackExposure: !1
     }), t = (0, i.useIsDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE);
     return e && !t
   },
-  N = () => {
+  g = () => {
     let {
       canFlipCard: e
     } = E.ServerProfilesExperiment.getCurrentConfig({
-      location: f
+      location: I
     }, {
       autoTrackExposure: !1
     }), t = (0, i.isDismissibleContentDismissed)(r.DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE);
     return e && !t
   },
-  g = () => {
+  N = () => {
     let e = A(),
       t = C();
     return t ? (E.ServerProfilesExperiment.trackExposure({
-      location: I
+      location: f
     }), c.June2024NewAppStylesWhatsNewCardExperiment.trackExposure({
-      location: I
+      location: f
     })) : e && _.ReferralProgramWhatsNewCardExperiment.trackExposure({
-      location: I
+      location: f
     }), e || t
   },
   P = () => {
@@ -157,7 +157,7 @@ let f = "getWhatsNewBadgeCount",
   O = () => {
     let e = p(),
       t = M(),
-      s = N();
+      s = g();
     return e || t || s
   },
   x = () => {

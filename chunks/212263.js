@@ -36,7 +36,7 @@ t.default = e => {
     analyticsLocation: U
   } = e, b = (0, u.default)(), [G, w] = r.useState(!1), k = () => {
     (0, N.trackPremiumSettingsPaneOpened)(M), (0, E.navigateToPremiumMarketingPage)(), v()
-  }, B = (0, o.isThemeLight)(b) ? n("537381") : n("341048"), V = (0, T.usePremiumTrialOffer)(), x = (0, I.usePremiumDiscountOffer)(), F = null != V || null != x, H = (0, c.useExpressionPickerStore)(e => e.searchQuery), {
+  }, B = (0, o.isThemeLight)(b) ? n("537381") : n("341048"), x = (0, T.usePremiumTrialOffer)(), V = (0, I.usePremiumDiscountOffer)(), F = null != x || null != V, H = (0, c.useExpressionPickerStore)(e => e.searchQuery), {
     analyticsLocations: Y
   } = (0, _.default)(d.default.EMOJI_PICKER);
   return r.useEffect(() => {
@@ -66,10 +66,10 @@ t.default = e => {
     }), (0, i.jsxs)(i.Fragment, {
       children: [F ? (0, i.jsx)(f.default, {
         type: R.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-        subscriptionTier: null !== (s = null == V ? void 0 : null === (t = V.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== s ? s : R.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: null !== (s = null == x ? void 0 : null === (t = x.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== s ? s : R.PremiumSubscriptionSKUs.TIER_2,
         onClose: D,
-        trialOffer: V,
-        discountOffer: x,
+        trialOffer: x,
+        discountOffer: V,
         children: g.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
           onClick: k
         })

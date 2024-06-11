@@ -191,20 +191,20 @@ class b extends r.Component {
       "aria-labelledby": k,
       accessibilityLabel: B
     } = this.props, {
-      submitting: V,
-      popup: x
+      submitting: x,
+      popup: V
     } = this.state, F = {
       channel: f,
       className: a()(D, M.textArea, {
         [M.textAreaSlate]: A,
-        [M.textAreaDisabled]: d || V
+        [M.textAreaDisabled]: d || x
       }),
       id: y,
       placeholder: this.getPlaceholder(),
       required: P,
       accessibilityLabel: B,
       disabled: d || !1,
-      submitting: V,
+      submitting: x,
       isEdit: S === p.ChatInputTypes.EDIT,
       onFocus: this.handleFocus,
       onBlur: this.handleBlur,
@@ -229,10 +229,10 @@ class b extends r.Component {
       useNewSlashCommands: C,
       disableAutoFocus: c.isMobile || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
-      "aria-controls": null !== (s = x.id) && void 0 !== s ? s : void 0,
+      "aria-controls": null !== (s = V.id) && void 0 !== s ? s : void 0,
       "aria-haspopup": "listbox",
-      "aria-expanded": null !== x.id || void 0,
-      "aria-activedescendant": null !== (o = x.activeDescendant) && void 0 !== o ? o : void 0,
+      "aria-expanded": null !== V.id || void 0,
+      "aria-activedescendant": null !== (o = V.activeDescendant) && void 0 !== o ? o : void 0,
       "aria-invalid": l.length > b,
       "aria-describedby": w,
       "aria-labelledby": k,

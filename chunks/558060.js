@@ -23,21 +23,21 @@ function E(e) {
     isPremiumUser: s,
     discount: l,
     className: E,
-    nitroUpsell: p = !1
-  } = e, m = (0, o.extractPriceByPurchaseTypes)(t, d.PriceSetAssignmentPurchaseTypes.DEFAULT);
-  if (null == m) return null;
-  if (m.amount <= 0) return (0, a.jsx)("div", {
+    nitroUpsell: m = !1
+  } = e, p = (0, o.extractPriceByPurchaseTypes)(t, d.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  if (null == p) return null;
+  if (p.amount <= 0) return (0, a.jsx)("div", {
     className: n()(C.priceTagsContainer, E),
     children: (0, a.jsx)(u.CollectiblesShopPriceTag, {
-      price: m
+      price: p
     })
   });
-  let g = (0, o.extractPriceByPurchaseTypes)(t, d.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    S = !s && !(0, o.isBundleProduct)(t),
+  let S = (0, o.extractPriceByPurchaseTypes)(t, d.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+    g = !s && !(0, o.isBundleProduct)(t),
     h = (0, o.isBundleProduct)(t) && s ? {
-      ...m,
+      ...p,
       amount: l.original
-    } : m;
+    } : p;
   return (0, a.jsxs)("div", {
     className: n()(C.priceTagsContainer, E),
     children: [(0, a.jsx)(u.CollectiblesShopPriceTag, {
@@ -46,12 +46,12 @@ function E(e) {
       className: n()(C.price, {
         [C.striked]: s,
         [C.dimmed]: s,
-        [C.fullPrice]: S
+        [C.fullPrice]: g
       })
-    }), null != g && (0, a.jsx)(u.CollectiblesShopPriceTag, {
-      price: g,
+    }), null != S && (0, a.jsx)(u.CollectiblesShopPriceTag, {
+      price: S,
       discount: s ? l : o.NoDiscount,
-      renderPrice: p ? e => (0, a.jsx)(r.Text, {
+      renderPrice: m ? e => (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         children: f.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW.format({
           price: e,
@@ -59,12 +59,12 @@ function E(e) {
             text: e
           })
         })
-      }) : S ? e => f.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
+      }) : g ? e => f.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
       className: n()(C.price, {
         [C.dimmed]: !s,
-        [C.fullPrice]: S
+        [C.fullPrice]: g
       }),
       variant: s ? void 0 : "text-xs/semibold",
       icon: (0, a.jsx)(r.Tooltip, {
@@ -77,7 +77,7 @@ function E(e) {
           return (0, a.jsx)(i.default, {
             ...t,
             className: n()(C.premiumIcon, {
-              [C.fullPrice]: S
+              [C.fullPrice]: g
             })
           })
         }

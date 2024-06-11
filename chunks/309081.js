@@ -27,8 +27,8 @@ var l = a("735250"),
   O = a("79390"),
   P = a("885001"),
   I = a("35463"),
-  g = a("489887"),
-  p = a("185923"),
+  p = a("489887"),
+  g = a("185923"),
   x = a("957825"),
   M = a("689938"),
   S = a("983789");
@@ -110,7 +110,7 @@ function b(e) {
     emoji: T,
     isLoadingMedia: h,
     hasUpload: P,
-    mediaUrl: g,
+    mediaUrl: p,
     mediaFilename: v
   } = (0, I.default)({
     channelId: t,
@@ -134,7 +134,7 @@ function b(e) {
       className: S.emojiPicker,
       children: (0, l.jsx)(_.default, {
         channel: R,
-        pickerIntention: p.EmojiIntention.POLLS,
+        pickerIntention: g.EmojiIntention.POLLS,
         closePopout: t,
         onNavigateAway: t,
         onSelectEmoji: (e, a) => {
@@ -156,7 +156,7 @@ function b(e) {
     className: b ? S.spinnerWrapperDefault : S.spinnerWrapperImageOnly
   }) : (0, l.jsx)(j, {
     hasUpload: P,
-    mediaUrl: g,
+    mediaUrl: p,
     mediaFilename: v,
     imageClassName: r()(S.media, b ? S.gifDefault : S.gifJumbo),
     emoji: T,
@@ -217,19 +217,19 @@ function w(e) {
   } = e, s = (() => {
     var e;
     let t = null !== (e = null == a ? void 0 : a.length) && void 0 !== e ? e : 0;
-    return g.MAX_POLL_ANSWER_LENGTH - t
+    return p.MAX_POLL_ANSWER_LENGTH - t
   })();
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: r()(S.characterCount),
       "aria-hidden": "true",
-      children: [null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0, " / ", g.MAX_POLL_ANSWER_LENGTH]
+      children: [null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0, " / ", p.MAX_POLL_ANSWER_LENGTH]
     }), (0, l.jsxs)(u.HiddenVisually, {
       id: n,
       children: [M.default.Messages.CHARACTER_COUNT_A11Y_LABEL.format({
         remainingCharacters: s
       }), " ", M.default.Messages.MAXIMUM_LENGTH.format({
-        maxLength: g.MAX_POLL_ANSWER_LENGTH
+        maxLength: p.MAX_POLL_ANSWER_LENGTH
       })]
     })]
   })
@@ -244,7 +244,7 @@ t.default = n.forwardRef(function(e, t) {
     onAnswerTextChange: C,
     onEmojiSelect: N,
     onEmojiRemove: I,
-    canRemoveAnswer: p,
+    canRemoveAnswer: g,
     onRemoveAnswer: x,
     addAnswer: j,
     submitPoll: D,
@@ -295,7 +295,7 @@ t.default = n.forwardRef(function(e, t) {
   return (0, l.jsx)(l.Fragment, {
     children: A === o.PollLayoutTypes.DEFAULT ? (0, l.jsxs)("div", {
       className: r()(S.answerRow, {
-        [S.hasDeleteButton]: p
+        [S.hasDeleteButton]: g
       }),
       children: [(0, l.jsxs)("div", {
         className: r()(S.defaultTextInputWrapper, {
@@ -316,7 +316,7 @@ t.default = n.forwardRef(function(e, t) {
             localCreationAnswerId: c.localCreationAnswerId
           }),
           onKeyDown: X,
-          maxLength: g.MAX_POLL_ANSWER_LENGTH,
+          maxLength: p.MAX_POLL_ANSWER_LENGTH,
           "aria-invalid": G,
           "aria-describedby": G ? F : H,
           focusProps: v,
@@ -325,7 +325,7 @@ t.default = n.forwardRef(function(e, t) {
           value: c.text,
           id: H
         })]
-      }), p && (0, l.jsx)(u.Clickable, {
+      }), g && (0, l.jsx)(u.Clickable, {
         onClick: () => x(_),
         className: S.removeAnswerButtonDefault,
         "aria-label": M.default.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format({

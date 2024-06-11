@@ -1,8 +1,8 @@
 "use strict";
-r.r(t);
-var n = r("110592");
+n.r(t);
+var r = n("110592");
 t.default = function(e, t) {
-  var r = (0, n.default)(this, e),
-    a = r.size;
-  return r.set(e, t), this.size += r.size == a ? 0 : 1, this
+  var n = (0, r.default)(this, e),
+    i = n.size;
+  return n.set(e, t), this.size += n.size == i ? 0 : 1, this
 }

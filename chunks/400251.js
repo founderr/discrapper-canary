@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("768581"),
   I = n("683818"),
   A = n("16853"),
-  x = n("981631"),
-  v = n("689938"),
+  v = n("981631"),
+  x = n("689938"),
   N = n("604623"),
   M = n("883760");
 let y = e => {
@@ -43,7 +43,7 @@ let y = e => {
       variant: "text-sm/semibold",
       color: "header-primary",
       className: N.addServerText,
-      children: v.default.Messages.HUB_ADD_SERVER_CTA
+      children: x.default.Messages.HUB_ADD_SERVER_CTA
     })]
   })
 };
@@ -60,7 +60,7 @@ function R(e) {
     }),
     children: (0, a.jsxs)(_.default, {
       children: [u ? (0, a.jsx)(o.Tooltip, {
-        text: v.default.Messages.HUB_ENTRY_UPDATE,
+        text: x.default.Messages.HUB_ENTRY_UPDATE,
         hideOnClick: !0,
         children: e => {
           let {
@@ -80,7 +80,7 @@ function R(e) {
                 })
               })
             },
-            "aria-label": v.default.Messages.HUB_ENTRY_UPDATE,
+            "aria-label": x.default.Messages.HUB_ENTRY_UPDATE,
             children: (0, a.jsx)(g.default, {
               className: N.overflowIcon
             })
@@ -97,7 +97,7 @@ function R(e) {
             ...n
           } = e;
           return (0, a.jsx)(o.Tooltip, {
-            text: v.default.Messages.MORE,
+            text: x.default.Messages.MORE,
             hideOnClick: !0,
             children: e => {
               let {
@@ -110,7 +110,7 @@ function R(e) {
                 onClick: e => {
                   null == l || l(), t(e)
                 },
-                "aria-label": v.default.Messages.MORE,
+                "aria-label": x.default.Messages.MORE,
                 children: (0, a.jsx)(C.default, {
                   className: N.overflowIcon
                 })
@@ -130,7 +130,7 @@ t.default = e => {
     C(!0);
     try {
       g ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
-        source: x.JoinGuildSources.DIRECTORY_ENTRY
+        source: v.JoinGuildSources.DIRECTORY_ENTRY
       })
     } finally {
       C(!1)
@@ -143,8 +143,8 @@ t.default = e => {
     id: s.guildId,
     icon: s.icon,
     size: 40
-  })) && void 0 !== t ? t : void 0, M = v.default.Messages.JOIN;
-  return g && (M = v.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, a.jsxs)("div", {
+  })) && void 0 !== t ? t : void 0, M = x.default.Messages.JOIN;
+  return g && (M = x.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, a.jsxs)("div", {
     className: N.card,
     onContextMenu: e => {
       (0, u.openContextMenuLazy)(e, async () => {
@@ -212,7 +212,7 @@ t.default = e => {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
-            children: v.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+            children: x.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
               membersOnline: s.approximatePresenceCount
             })
           })]
@@ -223,7 +223,7 @@ t.default = e => {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
-            children: v.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+            children: x.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
               count: s.approximateMemberCount
             })
           })]

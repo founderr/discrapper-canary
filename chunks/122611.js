@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("760326"),
   L = n("536687"),
   P = n("652785"),
-  M = n("981631"),
-  y = n("921944");
+  y = n("981631"),
+  M = n("921944");
 
 function D(e) {
   e.stopPropagation()
@@ -52,18 +52,18 @@ function x(e) {
       type: t,
       store: a
     } = e;
-    if (t === M.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
+    if (t === y.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
     return null == a ? void 0 : a.channelNoticePredicate(n, f)
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(c.default, {
     contentTypes: I,
-    groupName: y.DismissibleContentGroupName.CHANNEL_NOTICES,
+    groupName: M.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        m(Date.now()), s(y.ContentDismissActionType.UNKNOWN)
+        m(Date.now()), s(M.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
@@ -99,7 +99,7 @@ function x(e) {
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, a.jsx)(d.default, {
               guild: n,
-              markAsDismissed: () => s(y.ContentDismissActionType.UNKNOWN)
+              markAsDismissed: () => s(M.ContentDismissActionType.UNKNOWN)
             });
           case i.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
             return (0, a.jsx)(u.default, {

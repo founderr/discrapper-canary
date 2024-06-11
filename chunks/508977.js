@@ -1,12 +1,12 @@
 "use strict";
-r.r(t);
-var n = r("854441"),
-  a = r("917430");
+n.r(t);
+var r = n("854441"),
+  i = n("917430");
 t.default = function(e) {
-  for (var t = (0, a.default)(e), r = t.length; r--;) {
-    var o = t[r],
-      i = e[o];
-    t[r] = [o, i, (0, n.default)(i)]
+  for (var t = (0, i.default)(e), n = t.length; n--;) {
+    var a = t[n],
+      o = e[a];
+    t[n] = [a, o, (0, r.default)(o)]
   }
   return t
 }

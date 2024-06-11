@@ -1,60 +1,60 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   Banner: function() {
-    return a
+    return r
   }
 });
-var i = n("735250"),
-  l = n("470079"),
-  r = n("777207"),
-  s = n("156440");
+var n = i("735250"),
+  l = i("470079"),
+  s = i("777207"),
+  a = i("156440");
 
-function a(e) {
+function r(e) {
   let {
     title: t,
-    subtitle: n,
-    iconSrc: a,
+    subtitle: i,
+    iconSrc: r,
     backgroundSrc: o,
-    animatedBackgroundSrc: u,
-    prefersReducedMotion: d = !0
+    animatedBackgroundSrc: d,
+    prefersReducedMotion: u = !0
   } = e, c = l.useMemo(() => {
-    let e = null != o ? o : a;
+    let e = null != o ? o : r;
     if (null != e) return {
       "--custom-background-url": "url(".concat(e.toString(), ")")
     }
-  }, [o, a]), f = l.useMemo(() => {
+  }, [o, r]), p = l.useMemo(() => {
     if (null == o) return;
     let e = {
       "--custom-background-static": "url(".concat(o.toString())
     };
-    return !d && null != u && (e["--custom-background-animated"] = "url(".concat(u.toString(), ")")), e
-  }, [u, o, d]);
-  return (0, i.jsxs)("div", {
-    className: s.wrapper,
-    children: [(0, i.jsx)("div", {
-      className: s.background,
+    return !u && null != d && (e["--custom-background-animated"] = "url(".concat(d.toString(), ")")), e
+  }, [d, o, u]);
+  return (0, n.jsxs)("div", {
+    className: a.wrapper,
+    children: [(0, n.jsx)("div", {
+      className: a.background,
       style: c
-    }), (0, i.jsxs)("div", {
-      className: s.content,
-      children: [null != a && (0, i.jsx)("div", {
-        className: s.icon,
-        children: (0, i.jsx)("img", {
-          src: a.toString(),
+    }), (0, n.jsxs)("div", {
+      className: a.content,
+      children: [null != r && (0, n.jsx)("div", {
+        className: a.icon,
+        children: (0, n.jsx)("img", {
+          src: r.toString(),
           alt: ""
         })
-      }), (0, i.jsxs)("div", {
-        children: [(0, i.jsx)(r.Text, {
+      }), (0, n.jsxs)("div", {
+        children: [(0, n.jsx)(s.Text, {
           variant: "heading-xl/bold",
           tag: "div",
           children: t
-        }), null != n && (0, i.jsxs)(r.Text, {
+        }), null != i && (0, n.jsxs)(s.Text, {
           variant: "text-sm/normal",
-          children: ["“", n, "”"]
+          children: ["“", i, "”"]
         })]
       })]
-    }), null != o ? (0, i.jsx)("div", {
-      className: s.image,
-      style: f
+    }), null != o ? (0, n.jsx)("div", {
+      className: a.image,
+      style: p
     }) : null]
   })
 }

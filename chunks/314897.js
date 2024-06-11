@@ -31,8 +31,8 @@ let y = n("952265").hasModalOpen,
   w = null,
   k = null,
   B = null,
-  V = null,
   x = null,
+  V = null,
   F = null,
   H = null,
   Y = D.LoginStates.NONE,
@@ -75,8 +75,8 @@ function eu(e) {
 
 function ed() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  if (x = T.Storage.get(U), null != er) return er;
-  let t = null != x ? x : _.getToken();
+  if (V = T.Storage.get(U), null != er) return er;
+  let t = null != V ? V : _.getToken();
   !(!(0, p.isValidFingerprintRoute)() || !e && null != t || L.default.isHandoffAvailable()) && e_({
     withGuildExperiments: !0
   })
@@ -86,7 +86,7 @@ function e_(e) {
   let {
     withGuildExperiments: t
   } = e, n = {}, i = C.default.getSuperPropertiesBase64();
-  null != i && (n["X-Super-Properties"] = i), null != x && (n["X-Fingerprint"] = x), er = I.HTTP.get({
+  null != i && (n["X-Super-Properties"] = i), null != V && (n["X-Fingerprint"] = V), er = I.HTTP.get({
     url: D.Endpoints.EXPERIMENTS,
     query: {
       with_guild_experiments: t
@@ -120,7 +120,7 @@ function e_(e) {
 }
 
 function ec() {
-  F = x, x = null, T.Storage.remove(U)
+  F = V, V = null, T.Storage.remove(U)
 }
 
 function eE(e, t) {
@@ -178,7 +178,7 @@ class eS extends(s = E.default.Store) {
     return B
   }
   getAuthSessionIdHash() {
-    return V
+    return x
   }
   getToken() {
     return (0, R.getToken)()
@@ -187,7 +187,7 @@ class eS extends(s = E.default.Store) {
     return (0, R.isAuthenticated)()
   }
   getFingerprint() {
-    return x
+    return V
   }
   getAnalyticsToken() {
     return H
@@ -274,7 +274,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eS) ? Object.definePropert
       analyticsToken: s,
       auth: a
     } = e;
-    eu("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, V = r, H = s, w = n.id, k = n.email, void 0 !== a && (K = a.authenticator_types), T.Storage.set(b, n.email), T.Storage.set(G, n.id)
+    eu("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, x = r, H = s, w = n.id, k = n.email, void 0 !== a && (K = a.authenticator_types), T.Storage.set(b, n.email), T.Storage.set(G, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -304,7 +304,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eS) ? Object.definePropert
     let {
       authSessionIdHash: t
     } = e;
-    null != t && (V = t)
+    null != t && (x = t)
   },
   LOGIN: function(e) {
     en = {}, Y = D.LoginStates.LOGGING_IN, J = "", r = null, null != e.login && (es = e.login)
@@ -405,11 +405,11 @@ l = "AuthenticationStore", (o = "displayName") in(a = eS) ? Object.definePropert
   LOGOUT: ef,
   FINGERPRINT: function(e) {
     let t = e.fingerprint;
-    null == x ? null != t ? (C.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+    null == V ? null != t ? (C.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
       old_fingerprint: null != F ? (0, c.extractId)(F) : null,
       new_fingerprint: (0, c.extractId)(t)
-    }), x = t, F = t, T.Storage.set(U, x)) : ed() : null != t && x !== t && C.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
-      fingerprint: (0, c.extractId)(x),
+    }), V = t, F = t, T.Storage.set(U, V)) : ed() : null != t && V !== t && C.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+      fingerprint: (0, c.extractId)(V),
       dropped_fingerprint: (0, c.extractId)(t)
     })
   },

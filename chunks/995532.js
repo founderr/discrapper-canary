@@ -4,13 +4,13 @@ E.r(t), E.d(t, {
     return I
   }
 });
-var s, _, a, T, A = E("442837"),
+var _, s, T, a, A = E("442837"),
   n = E("570140");
 let I = {},
   u = {},
   i = {},
-  l = !1,
   L = !1,
+  l = !1,
   o = !1;
 
 function r(e) {
@@ -27,19 +27,19 @@ function d(e) {
   } = e;
   u[E] = null != t ? t : I
 }
-class N extends(T = A.default.Store) {
+class N extends(a = A.default.Store) {
   get(e) {
     if (null != e) return u[e]
   }
   isFetching() {
-    return L
+    return l
   }
   hasError() {
     return o
   }
   hasSeen(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e && (t ? l : i[e] || !1)
+    return null != e && (t ? L : i[e] || !1)
   }
   isEmpty(e) {
     if (null == e) return !0;
@@ -47,12 +47,12 @@ class N extends(T = A.default.Store) {
     return null == t || 0 === t.welcome_channels.length
   }
 }
-a = "WelcomeScreenStore", (_ = "displayName") in(s = N) ? Object.defineProperty(s, _, {
-  value: a,
+T = "WelcomeScreenStore", (s = "displayName") in(_ = N) ? Object.defineProperty(_, s, {
+  value: T,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[_] = a, t.default = new N(n.default, {
+}) : _[s] = T, t.default = new N(n.default, {
   INVITE_RESOLVE_SUCCESS: r,
   INVITE_ACCEPT_SUCCESS: r,
   WELCOME_SCREEN_SUBMIT_SUCCESS: d,
@@ -62,10 +62,10 @@ a = "WelcomeScreenStore", (_ = "displayName") in(s = N) ? Object.defineProperty(
       guildId: t,
       isLurking: E
     } = e;
-    i[t] = !0, E && (l = !0)
+    i[t] = !0, E && (L = !0)
   },
   GUILD_STOP_LURKING: function() {
-    l = !1
+    L = !1
   },
   GUILD_DELETE: function(e) {
     let {
@@ -76,10 +76,10 @@ a = "WelcomeScreenStore", (_ = "displayName") in(s = N) ? Object.defineProperty(
     i[t] = !1
   },
   WELCOME_SCREEN_FETCH_START: function() {
-    L = !0, o = !1
+    l = !0, o = !1
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-    L = !1, o = !1;
+    l = !1, o = !1;
     let {
       welcomeScreen: t,
       guildId: E
@@ -87,6 +87,6 @@ a = "WelcomeScreenStore", (_ = "displayName") in(s = N) ? Object.defineProperty(
     u[E] = null != t ? t : I
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
-    L = !1, o = !0
+    l = !1, o = !0
   }
 })

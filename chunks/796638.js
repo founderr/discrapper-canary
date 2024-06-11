@@ -87,11 +87,11 @@ function C(e, t) {
         }
       }
       let A = I.filter(u.isNotNullish),
-        x = (0, s.keyBy)((0, s.range)(A.length), e => A[e].id);
-      r.current = x;
-      let v = [..._, ...A];
-      return null != f && v.push(f), {
-        visibleParticipants: v,
+        v = (0, s.keyBy)((0, s.range)(A.length), e => A[e].id);
+      r.current = v;
+      let x = [..._, ...A];
+      return null != f && x.push(f), {
+        visibleParticipants: x,
         participantTileWidth: g
       }
     }, [e, t, n]);

@@ -10,8 +10,8 @@ var n = i("735250"),
   d = i("960020"),
   c = i("347904"),
   h = i("620652"),
-  f = i("815605"),
-  m = i("410594"),
+  m = i("815605"),
+  f = i("410594"),
   p = i("185834");
 t.default = a.memo(function(e) {
   let {
@@ -21,7 +21,7 @@ t.default = a.memo(function(e) {
     useChatFontScaling: T,
     color: S,
     count: v
-  } = e, E = (0, s.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, g)), R = T ? p : m, I = a.useMemo(() => (0, f.buildEffect)(g, S, t, {
+  } = e, E = (0, s.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, g)), R = T ? p : f, I = a.useMemo(() => (0, m.buildEffect)(g, S, t, {
     key: E,
     messageId: i
   }), [S, E, g, t, i]), [N, C] = a.useState(!1), _ = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), x = u.AnimateEmoji.useSetting(), O = a.useCallback(() => {

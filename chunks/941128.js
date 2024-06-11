@@ -57,26 +57,26 @@ function B() {
   }
 }
 
-function V(e, t) {
+function x(e, t) {
   let n = (0, m.getComboId)(e, t);
   return v.findIndex(e => e.comboId === n)
 }
 
-function x(e, t, n, i) {
+function V(e, t, n, i) {
   let r = (0, m.getComboId)(e, t),
     s = {
       comboId: r,
       action: i
     },
     a = D.indexOf(r); - 1 !== a && D.splice(a, 1);
-  let o = V(e, t);
+  let o = x(e, t);
   0 !== o && (n ? -1 === o && (v.push(s), B()) : (o > 0 && v.splice(o, 1), v.unshift(s), B())), !n && M && N.default.resume(), k()
 }
 
 function F(e, t) {
   let n = (0, m.getComboId)(e, t),
     i = D.indexOf(n); - 1 !== i && D.splice(i, 1);
-  let r = V(e, t); - 1 !== r && (v.splice(r, 1), k()), B()
+  let r = x(e, t); - 1 !== r && (v.splice(r, 1), k()), B()
 }
 
 function H(e) {
@@ -134,7 +134,7 @@ class K extends(s = E.default.Store) {
     return M
   }
   getQueuePosition(e, t) {
-    return V(e, t)
+    return x(e, t)
   }
   isCorruptInstallation() {
     return G
@@ -151,7 +151,7 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
       applicationId: t,
       branchId: n
     } = e;
-    b.set((0, m.getComboId)(t, n), "Install"), x(t, n, !1, "Patch")
+    b.set((0, m.getComboId)(t, n), "Install"), V(t, n, !1, "Patch")
   },
   DISPATCH_APPLICATION_UPDATE: function(e) {
     let {
@@ -159,7 +159,7 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
       branchId: n,
       automatic: i
     } = e;
-    x(t, n, i, "Patch")
+    V(t, n, i, "Patch")
   },
   DISPATCH_APPLICATION_UNINSTALL: function(e) {
     H(e), Y(e)
@@ -170,13 +170,13 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
       applicationId: t,
       branchId: n
     } = e;
-    b.set((0, m.getComboId)(t, n), "Repair"), x(t, n, !1, "Repair")
+    b.set((0, m.getComboId)(t, n), "Repair"), V(t, n, !1, "Repair")
   },
   DISPATCH_APPLICATION_MOVE_UP: function(e) {
     let {
       applicationId: t,
       branchId: n
-    } = e, i = V(t, n);
+    } = e, i = x(t, n);
     if (i < 1) return !1;
     v.splice(0, 0, v.splice(i, 1)[0]), B(), M && N.default.resume(), k()
   },

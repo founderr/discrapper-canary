@@ -77,8 +77,8 @@ var i, r, s = n("470079"),
   w = n("594174"),
   k = n("979651"),
   B = n("938475"),
-  V = n("393112"),
-  x = n("626135"),
+  x = n("393112"),
+  V = n("626135"),
   F = n("823379"),
   H = n("5192"),
   Y = n("51144"),
@@ -420,7 +420,7 @@ function er(e, t, n, i) {
   a.card_affinity_users_count = Math.min(l.length, 6), a.card_total_users_count = l.length, a.card_affinity_user_ids = l.slice(0, 6).map(e => e.id), a.card_max_affinity_user_id = l.length > 0 ? l[0].id : "0", a.card_user_affinity_scores = l.slice(0, 6).map(e => {
     var t, n;
     return null !== (n = null === (t = G.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
-  }), x.default.track(K.AnalyticEvents.GUILD_TOOLTIP_CARD_CLICKED, {
+  }), V.default.track(K.AnalyticEvents.GUILD_TOOLTIP_CARD_CLICKED, {
     ...a,
     ...(0, c.collectGuildAnalyticsMetadata)(t)
   })
@@ -527,7 +527,7 @@ function eo(e) {
   if (null != s && a) t = (0, f.getSimpleChannelIconComponent)(s.type), n = s.name;
   else {
     if (null == i) return null;
-    t = V.default, n = i
+    t = x.default, n = i
   }
   return {
     IconComponent: t,

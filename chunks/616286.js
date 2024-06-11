@@ -73,8 +73,8 @@ function I(e) {
     {
       disabled: A
     } = I,
-    x = l.useRef(null),
-    v = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
+    v = l.useRef(null),
+    x = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
     {
       isShowing: N,
       unreadCount: M,
@@ -100,8 +100,8 @@ function I(e) {
       }
     }(n),
     R = l.useCallback(() => {
-      null == c || c(), !v && h && (null == E || E()), u.default.updateChatOpen(n, !v)
-    }, [n, v, c, h, E]),
+      null == c || c(), !x && h && (null == E || E()), u.default.updateChatOpen(n, !x)
+    }, [n, x, c, h, E]),
     L = l.useCallback(e => {
       let {
         className: t
@@ -111,15 +111,15 @@ function I(e) {
         channelId: n
       })
     }, [n]),
-    j = l.useCallback(() => {
+    O = l.useCallback(() => {
       var e;
-      null === (e = x.current) || void 0 === e || e.focus()
+      null === (e = v.current) || void 0 === e || e.focus()
     }, []);
   (0, m.useComponentAction)({
     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
-    handler: A ? null : j
+    handler: A ? null : O
   });
-  let [O, P] = l.useState(!1), D = l.useCallback(() => {
+  let [j, P] = l.useState(!1), D = l.useCallback(() => {
     f && P(!0)
   }, [f]);
   (0, m.useComponentAction)({
@@ -127,17 +127,17 @@ function I(e) {
     handler: D
   }), l.useEffect(() => {
     let e;
-    return O && (e = setTimeout(() => {
+    return j && (e = setTimeout(() => {
       P(!1)
     }, 3e3)), () => {
       clearTimeout(e)
     }
-  }, [O]);
-  let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : v ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
+  }, [j]);
+  let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : x ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
   return y > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: y
   })), M > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
-    buttonRef: x,
+    buttonRef: v,
     onClick: R,
     label: t,
     "aria-label": b.join(", "),
@@ -146,7 +146,7 @@ function I(e) {
     wrapperClassName: i()(s, null != r && {
       [r]: N
     }),
-    forceTooltipOpen: O,
+    forceTooltipOpen: j,
     ...I
   })
 }

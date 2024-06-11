@@ -15,8 +15,8 @@ var n = i("735250"),
   u = i("132871"),
   h = i("147890"),
   p = i("216547"),
-  f = i("57716"),
-  m = i("981631"),
+  m = i("57716"),
+  f = i("981631"),
   g = i("806318");
 
 function C(e) {
@@ -25,9 +25,9 @@ function C(e) {
     collection: {
       id: i,
       title: C,
-      application_directory_collection_items: x
+      application_directory_collection_items: _
     }
-  } = e, [_, I] = a.useState(300), [v, A] = a.useState(4), N = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), E = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, f.default)({
+  } = e, [I, x] = a.useState(300), [v, A] = a.useState(4), E = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), N = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, m.default)({
     collection: t
   });
   a.useEffect(() => {
@@ -35,46 +35,46 @@ function C(e) {
       var e;
       let t = null === (e = T.current) || void 0 === e ? void 0 : e.offsetWidth,
         i = 1;
-      return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1e3 && (i = 4), A(i), (t - (i - 1) * N) / i)
+      return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1e3 && (i = 4), A(i), (t - (i - 1) * E) / i)
     }
     let t = T.current;
     if (null == t) return;
     let i = new ResizeObserver(() => {
-      I(e())
+      x(e())
     });
-    return I(e()), i.observe(t), () => {
+    return x(e()), i.observe(t), () => {
       i.disconnect()
     }
-  }, [N, T]);
+  }, [E, T]);
   let R = (0, r.useUID)();
   return (0, n.jsx)("div", {
     ref: T,
     children: (0, n.jsx)(p.default, {
       header: C,
       headerId: R,
-      tileWidth: _,
-      tileMargin: N,
+      tileWidth: I,
+      tileMargin: E,
       onScroll: e => {
         let {
           tileIndex: t
-        } = e, n = x.slice(t, t + v).reduce((e, t) => {
+        } = e, n = _.slice(t, t + v).reduce((e, t) => {
           let {
             type: i,
             application: n
           } = t;
           return i === l.ApplicationDirectoryCollectionItemType.APPLICATION && null != n && e.push(n.id), e
         }, []);
-        o.default.track(m.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
+        o.default.track(f.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
           collection_id: i,
           offset: t,
           results: n,
-          guild_id: E
+          guild_id: N
         })
       },
       children: (0, n.jsx)("ul", {
         "aria-labelledby": R,
         className: g.itemsContainer,
-        children: x.map(e => {
+        children: _.map(e => {
           let {
             id: t,
             type: a,
@@ -82,22 +82,22 @@ function C(e) {
           } = e;
           if (a === l.ApplicationDirectoryCollectionItemType.APPLICATION && null != s) return (0, n.jsx)("li", {
             style: {
-              width: _
+              width: I
             },
             className: g.itemContainer,
             children: (0, n.jsx)(c.default, {
               className: g.seoAnchor,
-              href: m.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
+              href: f.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
               children: (0, n.jsx)(d.default, {
                 application: s,
                 onClick: e => {
                   let {
                     mutualGuilds: t
                   } = e;
-                  o.default.track(m.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                  o.default.track(f.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: i,
                     application_id: s.id,
-                    guild_id: E,
+                    guild_id: N,
                     shown_mutual_guilds_count: t.length
                   }), (0, h.goToApplication)({
                     applicationId: s.id

@@ -26,9 +26,9 @@ var a = n("735250"),
 function T(e) {
   let {
     channelId: t
-  } = e, T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == T ? void 0 : T.parent_id)), A = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == T ? void 0 : T.getGuildId())), x = (0, o.default)(T), v = l.useRef(!1);
+  } = e, T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == T ? void 0 : T.parent_id)), A = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == T ? void 0 : T.getGuildId())), v = (0, o.default)(T), x = l.useRef(!1);
   if (l.useEffect(() => {
-      null != T && !v.current && (v.current = !0, (0, g.trackForumPostSidebarViewed)(T))
+      null != T && !x.current && (x.current = !0, (0, g.trackForumPostSidebarViewed)(T))
     }, [T]), null == T || null == A) return null;
   let N = (0, a.jsx)(h.default, {
     channel: T
@@ -43,14 +43,14 @@ function T(e) {
       children: (0, c.renderTitle)({
         channel: T,
         parentChannel: I,
-        channelName: x,
+        channelName: v,
         guild: A,
         inSidebar: !0,
         handleContextMenu: function(e) {
           (0, i.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await n.e("40157").then(n.bind(n, "422200"));
+            } = await n.e("78650").then(n.bind(n, "422200"));
             return t => (0, a.jsx)(e, {
               ...t,
               channel: T

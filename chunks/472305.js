@@ -1,15 +1,15 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(s), t.d(s, {
   EXAMPLE_DOMAIN: function() {
     return o
   },
   getDnsName: function() {
-    return n
+    return l
   },
   getHttpName: function() {
-    return l
+    return n
   }
 });
 let o = "example.com",
-  n = e => "_discord.".concat(e),
-  l = e => "https://".concat(e, "/.well-known/discord")
+  l = e => "_discord.".concat(e),
+  n = e => "https://".concat(e, "/.well-known/discord")

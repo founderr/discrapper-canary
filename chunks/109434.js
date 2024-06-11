@@ -25,13 +25,13 @@ function c(e, t, i) {
   }) : e[t] = i, e
 }
 let h = new Set,
-  f = {
+  m = {
     layoutType: l.ForumLayout.LIST,
     sortOrder: o.ThreadSortOrder.CREATION_DATE,
     tagFilter: h,
     scrollPosition: 0
   };
-class m {
+class f {
   constructor(e, t) {
     c(this, "set", void 0), c(this, "get", void 0), c(this, "channelStates", void 0), c(this, "setChannelState", void 0), c(this, "getChannelState", void 0), c(this, "toggleTagFilter", void 0), c(this, "setTagFilter", void 0), c(this, "setSortOrder", void 0), c(this, "setLayoutType", void 0), c(this, "setScrollPosition", void 0), this.set = e, this.get = t, this.channelStates = {}, this.setChannelState = (e, t) => {
       let i = this.get(),
@@ -46,7 +46,7 @@ class m {
         channelStates: a
       })
     }, this.getChannelState = e => {
-      if (null == e) return f;
+      if (null == e) return m;
       let {
         channelStates: t
       } = this.get(), i = t[e];
@@ -83,9 +83,9 @@ class m {
     }
   }
 }
-let p = (0, s.default)((e, t) => new m(e, t)),
+let p = (0, s.default)((e, t) => new f(e, t)),
   g = e => {
     let t = p();
-    return null == (0, r.useStateFromStores)([u.default], () => u.default.getChannel(e)) ? f : t.getChannelState(e)
+    return null == (0, r.useStateFromStores)([u.default], () => u.default.getChannel(e)) ? m : t.getChannelState(e)
   },
   T = () => p

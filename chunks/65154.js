@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return H
   },
   DEFAULT_VOLUME: function() {
-    return x
+    return V
   },
   DESKTOP_BITRATE: function() {
     return et
@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return W
   },
   DesktopSources: function() {
-    return V.DesktopSources
+    return x.DesktopSources
   },
   DeviceTypes: function() {
     return p
@@ -118,9 +118,9 @@ n.r(t), n.d(t, {
     return es
   }
 });
-var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, C, R, g, L, v, D, M, y, P, U, b, G, w, k, B, V = n("268146");
+var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, C, R, g, L, v, D, M, y, P, U, b, G, w, k, B, x = n("268146");
 (i = N || (N = {})).DEFAULT = "default", i.STREAM = "stream", (r = p || (p = {})).AUDIO_INPUT = "audioinput", r.AUDIO_OUTPUT = "audiooutput", r.VIDEO_INPUT = "videoinput", (s = O || (O = {})).PUSH_TO_TALK = "PUSH_TO_TALK", s.VOICE_ACTIVITY = "VOICE_ACTIVITY", (a = C || (C = {})).DISCONNECTED = "DISCONNECTED", a.CONNECTING = "CONNECTING", a.CONNECTED = "CONNECTED", a.NO_ROUTE = "NO_ROUTE", a.ICE_CHECKING = "ICE_CHECKING", a.DTLS_CONNECTING = "DTLS_CONNECTING", (o = R || (R = {}))[o.TRANSPORT = 1] = "TRANSPORT", o[o.OUTBOUND = 2] = "OUTBOUND", o[o.INBOUND = 4] = "INBOUND", o[o.ALL = 7] = "ALL", (l = g || (g = {})).MANUAL_DISABLE = "video_manual_disable", l.MANUAL_ENABLE = "video_manual_enable", l.MANUAL_REENABLE = "video_manual_reenable", l.AUTO_DISABLE = "video_auto_disable", l.AUTO_ENABLE = "video_auto_enable", l.AUTO_DOWNGRADE = "video_auto_downgrade", l.AUTO_UPGRADE = "video_auto_upgrade,", (u = L || (L = {})).NO_OVERRIDE = "no_override", u.HIGH = "high", u.LOW = "low";
-let x = 100,
+let V = 100,
   F = 18,
   H = 64e3,
   Y = 128e3,

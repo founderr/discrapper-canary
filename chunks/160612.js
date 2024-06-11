@@ -470,22 +470,22 @@ r = this, i = function(e, t) {
     B = "undefined" == typeof window,
     U = t.createContext(null);
   U.displayName = "EmbeddedCheckoutProviderContext";
-  var Y = function() {
+  var j = function() {
       var e = t.useContext(U);
       if (!e) throw Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
       return e
     },
-    j = B ? function(e) {
+    Y = B ? function(e) {
       var n = e.id,
         r = e.className;
-      return Y(), t.createElement("div", {
+      return j(), t.createElement("div", {
         id: n,
         className: r
       })
     } : function(e) {
       var n = e.id,
         r = e.className,
-        i = Y().embeddedCheckout,
+        i = j().embeddedCheckout,
         a = t.useRef(!1),
         o = t.useRef(null);
       return t.useLayoutEffect(function() {
@@ -520,7 +520,7 @@ r = this, i = function(e, t) {
     ei = F("paymentMethodMessaging", B),
     ea = F("affirmMessage", B),
     eo = F("afterpayClearpayMessage", B);
-  e.AddressElement = en, e.AffirmMessageElement = ea, e.AfterpayClearpayMessageElement = eo, e.AuBankAccountElement = z, e.CardCvcElement = $, e.CardElement = H, e.CardExpiryElement = V, e.CardNumberElement = G, e.CustomCheckoutProvider = L, e.Elements = D, e.ElementsConsumer = M, e.EmbeddedCheckout = j, e.EmbeddedCheckoutProvider = function(e) {
+  e.AddressElement = en, e.AffirmMessageElement = ea, e.AfterpayClearpayMessageElement = eo, e.AuBankAccountElement = z, e.CardCvcElement = $, e.CardElement = H, e.CardExpiryElement = V, e.CardNumberElement = G, e.CustomCheckoutProvider = L, e.Elements = D, e.ElementsConsumer = M, e.EmbeddedCheckout = Y, e.EmbeddedCheckoutProvider = function(e) {
     var n = e.stripe,
       r = e.options,
       i = e.children,

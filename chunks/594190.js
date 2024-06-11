@@ -119,8 +119,8 @@ let b = new S.default("RunningGameStore"),
   }],
   k = !0,
   B = new Set,
-  V = [],
   x = [],
+  V = [],
   F = [],
   H = null,
   Y = [],
@@ -245,7 +245,7 @@ function el(e) {
 
 function eu() {
   let e = !1;
-  return V = u().values(p.default.libraryApplications).reduce((t, n) => {
+  return x = u().values(p.default.libraryApplications).reduce((t, n) => {
     let i = N.default.getDetectableGame(n.id);
     if (null == i) return t;
     for (let r of O.default.getLaunchOptions(n.id, n.branchId)) {
@@ -269,7 +269,7 @@ function eu() {
 
 function ed() {
   if (!__OVERLAY__ && v.isPlatformEmbedded) {
-    let e = [...V, ...u().values(K.gameOverrides)];
+    let e = [...x, ...u().values(K.gameOverrides)];
     D.default.setGameCandidateOverrides(e)
   }
 }
@@ -426,7 +426,7 @@ class eE extends(r = c.default.Store) {
     return null != q && q === e
   }
   getCandidateGames() {
-    return x.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
+    return V.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
   }
   getGamesSeen(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -478,7 +478,7 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     e_(F)
   },
   CANDIDATE_GAMES_CHANGE: function(e) {
-    x = e.games
+    V = e.games
   },
   PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
     k = !1
@@ -503,7 +503,7 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     let n = e.pid,
       i = F.find(e => e.pid === n);
     if (null == i) {
-      let e = x.find(e => e.pid === n);
+      let e = V.find(e => e.pid === n);
       if (null == e) return;
       (i = {
         ...e

@@ -19,10 +19,10 @@ var a = s("180650"),
   f = s("737140"),
   C = s("194349"),
   E = s("523569"),
-  p = s("55817"),
-  m = s("696228"),
-  g = s("202796"),
-  S = s("570593"),
+  m = s("55817"),
+  p = s("696228"),
+  S = s("202796"),
+  g = s("570593"),
   h = s("199546"),
   I = s("613540"),
   _ = s("769411");
@@ -66,9 +66,9 @@ let T = {
     }
   }, {
     id: "category_disxcore",
-    backgroundStaticSrc: S,
-    overflowSrcStatic: g,
-    logoSrc: m,
+    backgroundStaticSrc: g,
+    overflowSrcStatic: S,
+    logoSrc: p,
     textColor: (0, l.getColor)(n.Color.WHITE_100),
     badge: {
       label: T.NITRO_EXCLUSIVE
@@ -79,7 +79,7 @@ let T = {
     }
   }, {
     id: "category_cyberpunk",
-    backgroundStaticSrc: p,
+    backgroundStaticSrc: m,
     backgroundVideoSrc: C,
     logoSrc: E,
     textColor: (0, l.getColor)(n.Color.WHITE_100),

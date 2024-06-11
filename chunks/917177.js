@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useSearchField: function() {
-    return j
+    return Y
   }
 });
 var r = n("267948"),
@@ -41,11 +41,11 @@ var r = n("267948"),
   F = n("182823"),
   B = n("602607"),
   U = n("640900"),
-  Y = {};
+  j = {};
 
-function j(e, t, n) {
+function Y(e, t, n) {
   var r;
-  let i = (0, B.useLocalizedStringFormatter)((r = Y) && r.__esModule ? r.default : r, "@react-aria/searchfield"),
+  let i = (0, B.useLocalizedStringFormatter)((r = j) && r.__esModule ? r.default : r, "@react-aria/searchfield"),
     {
       isDisabled: a,
       isReadOnly: o,
@@ -93,7 +93,7 @@ function j(e, t, n) {
     ...h
   }
 }
-Y = {
+j = {
   "ar-AE": r.default,
   "bg-BG": i.default,
   "cs-CZ": a.default,

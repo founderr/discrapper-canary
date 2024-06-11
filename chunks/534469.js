@@ -28,15 +28,15 @@ var a = n("735250"),
   T = n("906467"),
   I = n("323873"),
   A = n("998951"),
-  x = n("630388"),
-  v = n("709054"),
+  v = n("630388"),
+  x = n("709054"),
   N = n("534091"),
   M = n("901461"),
   y = n("739566"),
   R = n("233715"),
   L = n("453687"),
-  j = n("348238"),
-  O = n("62072"),
+  O = n("348238"),
+  j = n("62072"),
   P = n("38267"),
   D = n("25015"),
   b = n("689674"),
@@ -120,7 +120,7 @@ function q(e) {
     compact: _ = !1,
     className: T,
     groupId: I,
-    viewingChannelId: v
+    viewingChannelId: x
   } = e, N = r.type === Y.MessageTypes.REPLY ? r.messageReference : void 0, {
     onFocus: R,
     ...b
@@ -128,7 +128,7 @@ function q(e) {
     isFocused: F,
     handleFocus: w,
     handleBlur: G
-  } = (0, j.useFocusInside)(R), {
+  } = (0, O.useFocusInside)(R), {
     popouts: Z,
     selected: X,
     setPopout: q
@@ -136,7 +136,7 @@ function q(e) {
     handleMouseEnter: et,
     handleMouseLeave: en,
     isHovered: ea
-  } = (0, j.useHoveredMessage)(I, r.author.id, X), el = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), es = X || el && F, ei = es || ea, {
+  } = (0, O.useHoveredMessage)(I, r.author.id, X), el = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), es = X || el && F, ei = es || ea, {
     content: er,
     hasSpoilerEmbeds: eo
   } = (0, D.default)(r, {
@@ -147,8 +147,8 @@ function q(e) {
     allowHeading: ee,
     allowLinks: !0,
     previewLinkTarget: !0,
-    viewingChannelId: v
-  }), eu = (0, O.default)(o, h, el), ed = (0, y.default)(r), ec = (0, L.getMessageAriaLabelledBy)(r, I), ef = (0, L.getMessageAriaDescribedBy)(r), eh = (0, H.default)(e, er, !1), em = l.useCallback(() => (0, g.transitionToGuild)(E, h, o), [E, h, o]), ep = (0, m.useRoleIcon)({
+    viewingChannelId: x
+  }), eu = (0, j.default)(o, h, el), ed = (0, y.default)(r), ec = (0, L.getMessageAriaLabelledBy)(r, I), ef = (0, L.getMessageAriaDescribedBy)(r), eh = (0, H.default)(e, er, !1), em = l.useCallback(() => (0, g.transitionToGuild)(E, h, o), [E, h, o]), ep = (0, m.useRoleIcon)({
     guildId: E,
     roleId: ed.iconRoleId
   });
@@ -167,7 +167,7 @@ function q(e) {
         [K.message]: !0,
         [K.cozyMessage]: !_,
         [K.mentioned]: r.mentioned,
-        [K.ephemeral]: (0, x.hasFlag)(r.flags, Y.MessageFlags.EPHEMERAL),
+        [K.ephemeral]: (0, v.hasFlag)(r.flags, Y.MessageFlags.EPHEMERAL),
         [K.systemMessage]: (0, M.default)(r),
         [K.groupStart]: r.id === I || r.type === Y.MessageTypes.REPLY,
         [K.selected]: es
@@ -237,26 +237,26 @@ t.default = l.memo(function(e) {
       selected: eo,
       setPopout: eu
     } = (0, P.default)(g.id, W.DEFAULT_POPOUTS),
-    ed = (0, j.useContextMenuMessage)(g, Z, eu),
-    ec = (0, j.useClickMessage)(g, Z),
+    ed = (0, O.useContextMenuMessage)(g, Z, eu),
+    ec = (0, O.useClickMessage)(g, Z),
     {
       handleMouseEnter: ef,
       handleMouseLeave: eh,
       hasHovered: em,
       isHovered: ep
-    } = (0, j.useHoveredMessage)($, g.author.id, eo),
+    } = (0, O.useHoveredMessage)($, g.author.id, eo),
     {
       isFocused: eE,
       hasFocused: eC,
       handleFocus: eg,
       handleBlur: eS
-    } = (0, j.useFocusInside)(en),
+    } = (0, O.useFocusInside)(en),
     e_ = (0, d.useStateFromStores)([I.default], () => I.default.isEditing(X, N), [X, N]),
     eT = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
     eI = eo || e_ || eT && eE,
     eA = eI || ep,
-    ex = (0, d.useStateFromStores)([_.default], () => g.hasFlag(Y.MessageFlags.HAS_THREAD) && _.default.getChannel(v.default.castMessageIdAsChannelId(g.id))),
-    ev = g.isFirstMessageInForumPost(Z),
+    ev = (0, d.useStateFromStores)([_.default], () => g.hasFlag(Y.MessageFlags.HAS_THREAD) && _.default.getChannel(x.default.castMessageIdAsChannelId(g.id))),
+    ex = g.isFirstMessageInForumPost(Z),
     eN = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = g.editedTimestamp) && void 0 !== n ? n : g.timestamp).valueOf()),
     eM = (0, d.useStateFromStores)([T.default], () => T.default.isDeveloper),
     {
@@ -266,22 +266,22 @@ t.default = l.memo(function(e) {
       hideSimpleEmbedContent: el && es,
       isInteracting: eA,
       formatInline: !1,
-      allowList: ev || eN,
-      allowHeading: ev || eN,
+      allowList: ex || eN,
+      allowHeading: ex || eN,
       allowLinks: !0,
       allowDevLinks: eM,
       previewLinkTarget: !0
     }),
-    eL = (0, O.default)(N, X, eT),
-    ej = (0, y.default)(g),
-    eO = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(X)),
+    eL = (0, j.default)(N, X, eT),
+    eO = (0, y.default)(g),
+    ej = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(X)),
     eP = function(e) {
       let t = l.useRef(e);
       return l.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
     }(Q),
     eD = (0, m.useRoleIcon)({
       guildId: Z.guild_id,
-      roleId: ej.iconRoleId
+      roleId: eO.iconRoleId
     }),
     eb = (0, L.getMessageAriaLabelledBy)(g, $),
     eU = (0, L.getMessageAriaDescribedBy)(g),
@@ -319,12 +319,12 @@ t.default = l.memo(function(e) {
             [K.message]: !0,
             [K.cozyMessage]: !q,
             [K.mentioned]: g.mentioned,
-            [K.ephemeral]: (0, x.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
+            [K.ephemeral]: (0, v.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
             [K.nitroMessage]: g.type === Y.MessageTypes.NITRO_NOTIFICATION,
             [K.systemMessage]: (0, M.default)(g),
             [K.groupStart]: !ee && (eH || g.type === Y.MessageTypes.REPLY),
             [K.selected]: eI,
-            [K.replying]: (null == eO ? void 0 : eO.message.id) === g.id,
+            [K.replying]: (null == ej ? void 0 : ej.message.id) === g.id,
             [K.interactionSending]: g.isCommandType() && g.state === Y.MessageStates.SENDING,
             [K.automodMessage]: ek
           }),
@@ -336,7 +336,7 @@ t.default = l.memo(function(e) {
             setPopout: eu,
             messagePopouts: er,
             replyReference: et,
-            author: ej,
+            author: eO,
             repliedMessage: ei,
             roleIcon: eD
           }),
@@ -357,7 +357,7 @@ t.default = l.memo(function(e) {
           childrenMessageContent: s,
           onMouseMove: ef,
           onMouseLeave: eh,
-          hasThread: !ee && g.hasFlag(Y.MessageFlags.HAS_THREAD) && null != ex,
+          hasThread: !ee && g.hasFlag(Y.MessageFlags.HAS_THREAD) && null != ev,
           isSystemMessage: (0, M.default)(g),
           hasReply: g.type === Y.MessageTypes.REPLY,
           messageRef: ew

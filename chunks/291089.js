@@ -1,6 +1,6 @@
 "use strict";
-r.r(t);
-var n = r("595022");
+n.r(t);
+var r = n("595022");
 t.default = function() {
-  this.__data__ = new n.default, this.size = 0
+  this.__data__ = new r.default, this.size = 0
 }

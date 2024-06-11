@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return O
   }
 }), n("47120"), n("789020");
 var a = n("735250"),
@@ -24,33 +24,33 @@ var a = n("735250"),
   N = n("689938"),
   T = n("470493");
 
-function m(e) {
+function O(e) {
   var t;
   let {
     backButtonEligible: n,
     prevStep: s,
-    showGuildPicker: m,
-    handleStepChange: O,
+    showGuildPicker: O,
+    handleStepChange: m,
     trialFooterMessageOverride: p,
     reviewWarningMessage: R,
     planGroup: L,
-    openInvoiceId: h,
-    analyticsData: M,
+    openInvoiceId: M,
+    analyticsData: h,
     analyticsLocation: g,
     eligibleApplicationSubscriptionGuilds: y,
-    handleClose: b
+    handleClose: U
   } = e, {
-    activeSubscription: U,
-    application: x,
-    setUpdatedSubscription: D,
+    activeSubscription: b,
+    application: D,
+    setUpdatedSubscription: x,
     contextMetadata: B,
     currencies: v,
     paymentSources: k,
     priceOptions: j,
     purchaseError: G,
     purchaseTokenAuthState: H,
-    selectedPlan: F,
-    selectedSku: Y,
+    selectedPlan: Y,
+    selectedSku: F,
     setCurrency: w,
     setPaymentSourceId: W,
     setPurchaseState: V,
@@ -58,21 +58,21 @@ function m(e) {
     purchaseState: Z,
     subscriptionMetadataRequest: z,
     setSubscriptionMetadataRequest: X,
-    setHasAcceptedTerms: J
+    setHasAcceptedTerms: Q
   } = (0, c.usePaymentContext)();
-  l()(null != F, "Expected plan to be selected"), l()(null != x, "Expected application");
-  let Q = r.useRef(null),
+  l()(null != Y, "Expected plan to be selected"), l()(null != D, "Expected application");
+  let J = r.useRef(null),
     [q, $] = (0, u.default)(!1, 500),
     [ee, et] = r.useState(null == z ? void 0 : z.guild_id),
-    en = (0, d.isApplicationUserSubscription)(null !== (t = null == Y ? void 0 : Y.flags) && void 0 !== t ? t : 0);
+    en = (0, d.isApplicationUserSubscription)(null !== (t = null == F ? void 0 : F.flags) && void 0 !== t ? t : 0);
   r.useEffect(() => {
-    null != G && null != Q.current && Q.current.scrollIntoView({
+    null != G && null != J.current && J.current.scrollIntoView({
       behavior: "smooth"
     })
   }, [G]);
   let ea = r.useCallback(e => {
-      D(e), O(f.Step.CONFIRM)
-    }, [O, D]),
+      x(e), m(f.Step.CONFIRM)
+    }, [m, x]),
     er = r.useCallback(e => {
       et(e), X({
         ...z,
@@ -94,10 +94,10 @@ function m(e) {
           variant: "text-xs/medium",
           color: "interactive-normal",
           children: N.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({
-            applicationName: x.name
+            applicationName: D.name
           })
         })]
-      }), m && !en && (0, a.jsxs)("div", {
+      }), O && !en && (0, a.jsxs)("div", {
         className: T.guildPickerContainer,
         children: [(0, a.jsx)(i.FormTitle, {
           tag: i.FormTitleTags.H5,
@@ -112,38 +112,38 @@ function m(e) {
           eligibleApplicationSubscriptionGuilds: y
         })]
       }), (0, a.jsx)(o.default, {
-        selectedPlanId: F.id,
+        selectedPlanId: Y.id,
         paymentSources: k,
         onPaymentSourceChange: e => W(null != e ? e.id : null),
         priceOptions: j,
         currencies: v,
         onCurrencyChange: e => w(e),
-        handlePaymentSourceAdd: () => O(f.Step.ADD_PAYMENT_STEPS),
-        setHasAcceptedTerms: J,
+        handlePaymentSourceAdd: () => m(f.Step.ADD_PAYMENT_STEPS),
+        setHasAcceptedTerms: Q,
         legalTermsNodeRef: es,
         hasLegalTermsFlash: q,
         trialFooterMessageOverride: p,
         reviewWarningMessage: R,
-        metadata: m || en ? void 0 : z,
+        metadata: O || en ? void 0 : z,
         purchaseState: Z,
         hideSubscriptionDetails: !0,
-        handleClose: b
+        handleClose: U
       })]
     }), (0, a.jsx)(P.PaymentPortalFooter, {
       children: (0, a.jsx)(E.default, {
-        premiumSubscription: null != U ? U : null,
+        premiumSubscription: null != b ? b : null,
         setPurchaseState: V,
-        onBack: () => null != s && O(s),
+        onBack: () => null != s && m(s),
         onNext: ea,
         onPurchaseError: e => K(e),
         legalTermsNodeRef: es,
         flashLegalTerms: () => $(!0),
         analyticsLocation: g,
-        baseAnalyticsData: M,
+        baseAnalyticsData: h,
         flowStartTime: B.startTime,
         planGroup: L,
         purchaseTokenAuthState: H,
-        openInvoiceId: h,
+        openInvoiceId: M,
         metadata: en ? void 0 : z,
         backButtonEligible: n,
         invoiceError: null,

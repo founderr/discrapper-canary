@@ -47,7 +47,7 @@ function I(e, t) {
 }
 var L = n("771673"),
   P = L.custom,
-  F = j(P) ? P : null;
+  F = Y(P) ? P : null;
 
 function B(e, t, n) {
   var r = "double" === (n.quoteStyle || t) ? '"' : "'";
@@ -107,7 +107,7 @@ e.exports = function e(t, r, i, s) {
     }
     return e(t, u, i + 1, s)
   }
-  if ("function" == typeof t && !Y(t)) {
+  if ("function" == typeof t && !j(t)) {
     var X = function(e) {
         if (e.name) return e.name;
         var t = _.call(g.call(e), /^function\s*([\w$]+)/);
@@ -116,7 +116,7 @@ e.exports = function e(t, r, i, s) {
       J = Z(t, z);
     return "[Function" + (X ? ": " + X : " (anonymous)") + "]" + (J.length > 0 ? " { " + w.call(J, ", ") + " }" : "")
   }
-  if (j(t)) {
+  if (Y(t)) {
     var ee = A ? v.call(String(t), /^(Symbol\(.*\))_[^)]*$/, "$1") : M.call(t);
     return "object" != typeof t || A ? ee : W(ee)
   }
@@ -238,7 +238,7 @@ e.exports = function e(t, r, i, s) {
   if (t === n.g) return "{ [object globalThis] }";
   if (! function(e) {
       return "[object Date]" === G(e) && (!k || !("object" == typeof e && k in e))
-    }(t) && !Y(t)) {
+    }(t) && !j(t)) {
     var eu = Z(t, z),
       ec = N ? N(t) === Object.prototype : t instanceof Object || t.constructor === Object,
       el = t instanceof Object ? "" : "null prototype",
@@ -253,11 +253,11 @@ function U(e) {
   return "[object Array]" === G(e) && (!k || !("object" == typeof e && k in e))
 }
 
-function Y(e) {
+function j(e) {
   return "[object RegExp]" === G(e) && (!k || !("object" == typeof e && k in e))
 }
 
-function j(e) {
+function Y(e) {
   if (A) return e && "object" == typeof e && e instanceof Symbol;
   if ("symbol" == typeof e) return !0;
   if (!e || "object" != typeof e || !M) return !1;

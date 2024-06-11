@@ -1,7 +1,7 @@
 "use strict";
-var s, _;
+var _, s;
 E.r(t), E.d(t, {
   GuildFeedItemTypes: function() {
-    return s
+    return _
   }
-}), E("47120"), (_ = s || (s = {})).MESSAGE = "message", _.FORUM_POST = "forum_post", _.MESSAGE_BUNDLE = "message_bundle", _.CONVERSATION = "conversation"
+}), E("47120"), (s = _ || (_ = {})).MESSAGE = "message", s.FORUM_POST = "forum_post", s.MESSAGE_BUNDLE = "message_bundle", s.CONVERSATION = "conversation"

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return v
   }
 });
 var a = n("735250");
@@ -49,7 +49,7 @@ function I(e) {
     })
   }
   let A = null !== (l = null !== (t = null == _ ? void 0 : _.nick) && void 0 !== t ? t : C.default.getName(S)) && void 0 !== l ? l : "???",
-    x = null == _ ? void 0 : _.colorString;
+    v = null == _ ? void 0 : _.colorString;
   return null == S ? (0, a.jsx)("span", {
     className: s()(T.threadCreatorName, T.unknownCreatorName),
     children: A
@@ -76,7 +76,7 @@ function I(e) {
         onContextMenu: I,
         children: (0, a.jsx)(r.NameWithRole, {
           name: A,
-          color: null != x ? x : void 0
+          color: null != v ? v : void 0
         })
       })
     })
@@ -114,7 +114,7 @@ function A(e) {
   })
 }
 
-function x(e) {
+function v(e) {
   var t;
   let {
     channel: n

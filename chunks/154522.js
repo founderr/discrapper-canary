@@ -16,8 +16,8 @@ var i = s("735250"),
   C = s("675297"),
   _ = s("891561"),
   f = s("333866"),
-  h = s("689938"),
-  S = s("204982");
+  S = s("689938"),
+  h = s("204982");
 
 function x(e) {
   let {
@@ -27,7 +27,7 @@ function x(e) {
     listingsLoaded: r
   } = (0, c.useFetchGuildProductListingsForGuild)(t), n = (0, c.useGuildProductsForGuild)(t), x = l.useRef(null), {
     sortOption: I
-  } = (0, _.useGuildProductsSortOptionContext)(), L = l.useMemo(() => (function(e, t) {
+  } = (0, _.useGuildProductsSortOptionContext)(), p = l.useMemo(() => (function(e, t) {
     let s, i;
     switch (t) {
       case f.GuildProductSortOptions.NAME:
@@ -48,13 +48,13 @@ function x(e) {
     return d().orderBy(e, [s], [i])
   })(n, I), [n, I]);
   return r ? (0, i.jsx)("ul", {
-    className: S.cardContainer,
-    "aria-label": h.default.Messages.GUILD_SHOP_PRODUCTS_A11Y_LABEL,
-    children: L.map(e => (0, i.jsx)("li", {
-      className: S.card,
+    className: h.cardContainer,
+    "aria-label": S.default.Messages.GUILD_SHOP_PRODUCTS_A11Y_LABEL,
+    children: p.map(e => (0, i.jsx)("li", {
+      className: h.card,
       children: (0, i.jsx)("div", {
-        className: a()(S.cardContent, {
-          [S.selectedCard]: e.id === s
+        className: a()(h.cardContent, {
+          [h.selectedCard]: e.id === s
         }),
         ref: e.id === s ? x : void 0,
         onLoad: () => {
@@ -63,7 +63,7 @@ function x(e) {
             behavior: "smooth",
             block: "center"
           }), setTimeout(() => {
-            t.classList.remove(S.selectedCard)
+            t.classList.remove(h.selectedCard)
           }, 2e3))
         },
         children: (0, i.jsx)(C.GuildProductListingPublicCard, {

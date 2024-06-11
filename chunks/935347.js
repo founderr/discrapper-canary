@@ -28,7 +28,7 @@ var a = n("735250"),
   L = n("689938"),
   P = n("376244");
 
-function M(e, t, n) {
+function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -36,7 +36,7 @@ function M(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class y extends s.PureComponent {
+class M extends s.PureComponent {
   createSound() {
     let {
       soundpack: e
@@ -149,7 +149,7 @@ class y extends s.PureComponent {
     }
   }
   constructor(e) {
-    super(e), M(this, "videoRef", null), M(this, "_noProblemsTimeout", null), M(this, "_problemsTimeout", null), M(this, "_connectedSound", this.createSound()), M(this, "_loadingText", function() {
+    super(e), y(this, "videoRef", null), y(this, "_noProblemsTimeout", null), y(this, "_problemsTimeout", null), y(this, "_connectedSound", this.createSound()), y(this, "_loadingText", function() {
       let e = [L.default.Messages.ACCESSIBILITY_LOADING_TIP_1, L.default.Messages.ACCESSIBILITY_LOADING_TIP_2, L.default.Messages.ACCESSIBILITY_LOADING_TIP_3, L.default.Messages.ACCESSIBILITY_LOADING_TIP_4, L.default.Messages.ACCESSIBILITY_LOADING_TIP_5, L.default.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
         tabHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "tab",
@@ -212,20 +212,20 @@ class y extends s.PureComponent {
         }, t)
       })];
       return S.default.locale.startsWith("en-") && e.push(L.default.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)]
-    }()), M(this, "_eventLoadingText", function() {
+    }()), y(this, "_eventLoadingText", function() {
       let e = _.default.getLoadingTips();
       if (null != e && e.length > 0) return e[o().random(e.length - 1)]
-    }()), M(this, "handleReady", () => {
+    }()), y(this, "handleReady", () => {
       this.setState({
         ready: !0
       }), (0, N.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
-    }), M(this, "setVideoRef", e => {
+    }), y(this, "setVideoRef", e => {
       this.videoRef = e
-    }), M(this, "setProblemsTimeout", () => {
+    }), y(this, "setProblemsTimeout", () => {
       null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({
         problems: !0
       }), 1e4))
-    }), M(this, "clearProblemsTimeout", () => {
+    }), y(this, "clearProblemsTimeout", () => {
       clearTimeout(this._problemsTimeout), this._problemsTimeout = null
     });
     let {
@@ -254,7 +254,7 @@ t.default = d.default.connectStores([C.default, p.default, m.default, h.default]
     soundpack: l,
     reducedMotion: i
   } = e;
-  return t ? (0, a.jsx)(y, {
+  return t ? (0, a.jsx)(M, {
     reducedMotion: i,
     soundpack: l,
     connected: n,

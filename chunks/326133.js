@@ -39,24 +39,24 @@ t.default = r.forwardRef(function(e, t) {
     location: "6e9811_1"
   });
   let {
-    usePopoutAutocomplete: V
+    usePopoutAutocomplete: x
   } = h.default.useExperiment({
     location: "6e9811_2"
   }, {
     autoTrackExposure: !1
-  }), x = (0, m.useChannelAutocompleteLayerPosition)({
+  }), V = (0, m.useChannelAutocompleteLayerPosition)({
     editorHeight: D,
     type: v,
     state: b,
-    isInPopoutExperiment: V
+    isInPopoutExperiment: x
   }), F = (0, l.useStateFromStores)([_.default], () => {
     let e = _.default.getSelfEmbeddedActivityForChannel(L.id),
       t = _.default.getActivityPanelMode();
     return (0, d.isActivityInTextSupportedForChannel)(L) && null != e && e.channelId === L.id && t === p.ActivityPanelModes.PANEL
-  }, [L]), H = r.useMemo(() => null == x ? "" : String(Date.now()), [null == x ? void 0 : x.top, null == x ? void 0 : x.left, null == x ? void 0 : x.bottom, null == x ? void 0 : x.right]);
+  }, [L]), H = r.useMemo(() => null == V ? "" : String(Date.now()), [null == V ? void 0 : V.top, null == V ? void 0 : V.left, null == V ? void 0 : V.bottom, null == V ? void 0 : V.right]);
   if (r.useEffect(() => {
       M(b.isVisible)
-    }, [M, b.isVisible]), !b.isVisible || null == b.query || void 0 === x) return null;
+    }, [M, b.isVisible]), !b.isVisible || null == b.query || void 0 === V) return null;
   let Y = null !== (s = b.query.typeInfo.renderResults({
     results: b.query.results,
     selectedIndex: b.selectedIndex,
@@ -69,13 +69,13 @@ t.default = r.forwardRef(function(e, t) {
   })) && void 0 !== s ? s : null;
   if (null == Y) return null;
   let j = {
-      [O.autocompleteAttached]: null == x,
-      [O.autocompletePopout]: null != x,
-      [O.bottom]: null == x && "bottom" === e.position,
+      [O.autocompleteAttached]: null == V,
+      [O.autocompletePopout]: null != V,
+      [O.bottom]: null == V && "bottom" === e.position,
       [O.autocompleteTop]: F
     },
     W = 490;
-  null != x && (W = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (R = b.query) || void 0 === R ? void 0 : R.type) === A.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), W = Math.min(window.innerHeight - 175, W);
+  null != V && (W = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (R = b.query) || void 0 === R ? void 0 : R.type) === A.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), W = Math.min(window.innerHeight - 175, W);
   let K = (0, i.jsx)(I.default, {
     id: y,
     className: a()(O.autocomplete, j),
@@ -108,10 +108,10 @@ t.default = r.forwardRef(function(e, t) {
       })
     })
   });
-  return null != x ? (0, i.jsx)(k, {
+  return null != V ? (0, i.jsx)(k, {
     children: (0, i.jsx)(u.ReferencePositionLayer, {
       targetRef: e.targetRef,
-      overrideTargetRect: x,
+      overrideTargetRect: V,
       positionKey: H,
       position: null !== (g = e.position) && void 0 !== g ? g : "top",
       align: "left",

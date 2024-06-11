@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return j
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("603368"),
   I = n("353093"),
   A = n("940725"),
-  x = n("114487"),
-  v = n("979264"),
+  v = n("114487"),
+  x = n("979264"),
   N = n("981631"),
   M = n("921944"),
   y = n("689938"),
@@ -42,7 +42,7 @@ function L(e) {
   } = e, [p, E] = l.useState(!1), g = l.useRef(null), _ = (0, S.useClanInfo)(n.id), A = (0, f.default)(), N = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), M = (0, T.useBrandColor)(null == _ ? void 0 : null === (t = _.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), L = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
     theme: A,
     saturation: 1
-  }).hex(), j = (0, T.getClanRadialBackgroundStyle)(M, L, "top left", .3, "30%"), O = (0, c.useStateFromStores)([C.default], () => {
+  }).hex(), O = (0, T.getClanRadialBackgroundStyle)(M, L, "top left", .3, "30%"), j = (0, c.useStateFromStores)([C.default], () => {
     var e;
     return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan
   }, []);
@@ -84,7 +84,7 @@ function L(e) {
       },
       delay: 200
     }),
-    U = (0, I.isGuildAdoptedUserClanIdentityChanged)(n, O),
+    U = (0, I.isGuildAdoptedUserClanIdentityChanged)(n, j),
     F = U ? y.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
       guildName: n.name
     }) : y.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({
@@ -104,7 +104,7 @@ function L(e) {
       className: i()(R.wrapper),
       style: {
         ...e,
-        ...j
+        ...O
       },
       ref: g,
       children: (0, a.jsx)(d.ClickableContainer, {
@@ -114,13 +114,13 @@ function L(e) {
           className: i()(R.toastContainerInner, p ? R.hovered : null),
           children: [(0, a.jsxs)("div", {
             className: R.guildIconContainer,
-            children: [(0, a.jsx)(x.default, {
+            children: [(0, a.jsx)(v.default, {
               guild: n,
               iconSize: 64,
               className: R.icon
             }), (0, a.jsx)("div", {
               className: R.guildTagContainer,
-              children: (0, a.jsx)(v.BaseClanTagChiplet, {
+              children: (0, a.jsx)(x.BaseClanTagChiplet, {
                 guildId: n.id,
                 clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
                 clanBadge: null === (s = n.clan) || void 0 === s ? void 0 : s.badge,
@@ -157,7 +157,7 @@ function L(e) {
   })
 }
 
-function j(e) {
+function O(e) {
   let {} = e, t = (0, c.useStateFromStores)([E.default], () => E.default.getGuildId()), n = (0, A.useShouldShowUserClanTagUpsell)(t, "clan_tag_upsell_toast"), s = (0, c.useStateFromStores)([p.default], () => p.default.getGuild(t), [t]), [i, r] = l.useState(!1), u = l.useRef(null);
   l.useEffect(() => (n && (u.current = window.setTimeout(() => {
     r(!0), g.default.track(N.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {

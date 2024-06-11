@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("378233"),
   k = n("665906"),
   B = n("695346"),
-  V = n("271383"),
-  x = n("496675"),
+  x = n("271383"),
+  V = n("496675"),
   F = n("944486"),
   H = n("398327"),
   Y = n("117530"),
@@ -81,8 +81,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     renderApplicationCommandIcon: ew,
     pendingReply: ek,
     onChange: eB,
-    onResize: eV,
-    onBlur: ex,
+    onResize: ex,
+    onBlur: eV,
     onFocus: eF,
     onKeyDown: eH,
     onSubmit: eY,
@@ -133,15 +133,15 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     } = function(e, t, n, i) {
       let r = e.getGuildId(),
         s = (0, E.useStateFromStores)([y.default], () => null != r && y.default.isLurking(r), [r]),
-        a = (0, E.useStateFromStores)([V.default, j.default], () => {
+        a = (0, E.useStateFromStores)([x.default, j.default], () => {
           var e, t;
           let n = j.default.getCurrentUser();
-          return null !== (t = null != r && null != n ? null === (e = V.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+          return null !== (t = null != r && null != n ? null === (e = x.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
         }),
-        o = (0, E.useStateFromStoresObject)([x.default], () => {
+        o = (0, E.useStateFromStoresObject)([V.default], () => {
           var r, s;
           let o = e.isPrivate(),
-            l = x.default.computePermissions(e),
+            l = V.default.computePermissions(e),
             u = c.has(l, es.Permissions.CREATE_PUBLIC_THREADS) || c.has(l, es.Permissions.CREATE_PRIVATE_THREADS),
             d = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || c.has(l, es.Permissions.SEND_MESSAGES)),
             _ = d && c.has(l, es.Permissions.ATTACH_FILES),
@@ -343,7 +343,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           n(null != t ? t : 0), null == e || e(t)
         }, [e])
       }
-    }(eV),
+    }(ex),
     {
       handleTab: tU,
       handleEnter: tb,
@@ -370,7 +370,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       expressionPickerView: tw,
       shouldHideExpressionPicker: tk,
       handleAutocompleteVisibilityChange: tB,
-      handleOuterClick: tV
+      handleOuterClick: tx
     } = function(e, t, n) {
       let [i, s] = (0, L.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
       r.useEffect(() => () => {
@@ -391,7 +391,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         handleOuterClick: o
       }
     }(eP, th, e9),
-    tx = A.AppLauncherDesktopExperiment.useExperiment({
+    tV = A.AppLauncherDesktopExperiment.useExperiment({
       location: "chat_input"
     }, {
       autoTrackExposure: !0
@@ -402,7 +402,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     tY = to && !((ts || ta) && td) || tm && (null === (l = eP.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
     tj = null,
     tW = null;
-  null != ti ? tj = null == ew ? void 0 : ew(ti, tr, el.attachButton) : (!to || tu) && (tj = null == eb ? void 0 : eb(tH, el.attachButton), tx && (tW = null == eG ? void 0 : eG({
+  null != ti ? tj = null == ew ? void 0 : ew(ti, tr, el.attachButton) : (!to || tu) && (tj = null == eb ? void 0 : eb(tH, el.attachButton), tV && (tW = null == eG ? void 0 : eG({
     ref: tn
   })));
   let tK = tc && null != ep && !to && eP.showCharacterCount && null == ti,
@@ -440,7 +440,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
             [el.highlighted]: eW,
             [el.textAreaMobileThemed]: _.isMobile
           }),
-          onMouseDown: tV,
+          onMouseDown: tx,
           children: [(0, i.jsx)($.default, {
             type: eP,
             channel: ey,
@@ -492,7 +492,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                   "aria-describedby": eJ,
                   onChange: eB,
                   onResize: tP,
-                  onBlur: ex,
+                  onBlur: eV,
                   onFocus: eF,
                   onKeyDown: eH,
                   onSubmit: tN,

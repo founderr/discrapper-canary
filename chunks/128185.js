@@ -16,11 +16,11 @@ var a = s("735250"),
   f = s("626135"),
   C = s("328347"),
   E = s("530915"),
-  p = s("948625"),
-  m = s("981631"),
-  g = s("139557");
+  m = s("948625"),
+  p = s("981631"),
+  S = s("139557");
 
-function S(e) {
+function g(e) {
   var t, s;
   let {
     config: n,
@@ -28,47 +28,47 @@ function S(e) {
     handleCTAClick: o,
     text: u,
     reducedMotion: f = !1
-  } = e, C = l.useMemo(() => (0, p.getOverflowImages)(n, f), [n, f]);
+  } = e, C = l.useMemo(() => (0, m.getOverflowImages)(n, f), [n, f]);
   return (0, a.jsxs)("div", {
-    className: g.headerContainer,
+    className: S.headerContainer,
     children: [(0, a.jsxs)("div", {
-      className: g.headerInnerContainer,
+      className: S.headerInnerContainer,
       children: [null == n.backgroundVideoSrc || f ? (0, a.jsx)("img", {
         src: n.backgroundStaticSrc,
         alt: "",
-        className: g.headerAsset
+        className: S.headerAsset
       }) : (0, a.jsx)(d.default, {
         autoPlay: !0,
         muted: !0,
         loop: !0,
         playsInline: !0,
         responsive: !0,
-        className: g.headerAsset,
+        className: S.headerAsset,
         children: (0, a.jsx)("source", {
           src: n.backgroundVideoSrc,
           type: "video/mp4"
         })
       }), (0, a.jsxs)("div", {
-        className: g.headerContent,
+        className: S.headerContent,
         style: {
-          color: null !== (t = n.textColor) && void 0 !== t ? t : (0, c.getColor)(m.Color.WHITE_100)
+          color: null !== (t = n.textColor) && void 0 !== t ? t : (0, c.getColor)(p.Color.WHITE_100)
         },
         children: [(0, a.jsx)("div", {
-          className: g.badgeContainer,
+          className: S.badgeContainer,
           style: {
             visibility: null != n.badge ? "visible" : "hidden"
           },
           children: null != n.badge && (0, a.jsx)(r.Text, {
             variant: "text-xs/bold",
-            className: g.badge,
+            className: S.badge,
             children: n.badge.label()
           })
         }), (0, a.jsxs)("div", {
-          className: g.logoAndDescriptionContainer,
+          className: S.logoAndDescriptionContainer,
           children: [null != n.logoSrc && (0, a.jsx)("img", {
             src: n.logoSrc,
             alt: "",
-            className: g.logo
+            className: S.logo
           }), (null != n.description || null != u) && (0, a.jsx)(r.Text, {
             variant: "text-md/medium",
             color: "currentColor",
@@ -83,7 +83,7 @@ function S(e) {
       })]
     }), C.map((e, t) => (0, a.jsx)("img", {
       src: e,
-      className: g.overflowImage,
+      className: S.overflowImage,
       alt: ""
     }, t))]
   })
@@ -99,7 +99,7 @@ function h(e) {
     analyticsLocations: c
   } = (0, u.default)([...r, o.default.COLLECTIBLES_SHOP_HEADER_CAROUSEL]), d = l.useCallback((e, t) => {
     let a = e.cta;
-    f.default.track(m.AnalyticEvents.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
+    f.default.track(p.AnalyticEvents.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
       location_stack: c,
       slide_id: e.id,
       slide_index: t,
@@ -113,7 +113,7 @@ function h(e) {
     var s;
     let l = null === (s = e.cta) || void 0 === s ? void 0 : s.categorySkuId,
       n = null != l ? I[l] : void 0;
-    return (0, a.jsx)(S, {
+    return (0, a.jsx)(g, {
       config: e,
       text: n,
       handleCTAClick: d,
@@ -122,18 +122,18 @@ function h(e) {
     })
   }, [I, d, h]), T = l.useCallback(e => {
     var t;
-    return null === (t = p.COLLECTIBLES_HEADERS[e]) || void 0 === t ? void 0 : t.id
+    return null === (t = m.COLLECTIBLES_HEADERS[e]) || void 0 === t ? void 0 : t.id
   }, []);
   return (0, a.jsx)("div", {
-    className: g.carouselContainer,
+    className: S.carouselContainer,
     children: (0, a.jsx)(E.SlideCarousel, {
       carouselId: "collectibles_shop_header_carousel",
-      className: g.carousel,
-      items: p.COLLECTIBLES_HEADERS,
+      className: S.carousel,
+      items: m.COLLECTIBLES_HEADERS,
       renderItem: _,
       getItemId: T,
-      controlsClassName: g.paginationControls,
-      paginationButtonClassName: g.paginationButton,
+      controlsClassName: S.paginationControls,
+      paginationButtonClassName: S.paginationButton,
       delay: 6e3,
       analyticsLocations: c,
       unidirectional: !0

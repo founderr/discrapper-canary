@@ -29,8 +29,8 @@ var a, l, n = s("735250"),
   x = s("153124"),
   L = s("259580"),
   O = s("93879"),
-  A = s("263704"),
-  p = s("486511"),
+  p = s("263704"),
+  A = s("486511"),
   M = s("241820"),
   D = s("176278"),
   v = s("624138"),
@@ -93,7 +93,7 @@ function V(e) {
         })
       }), (0, n.jsx)("div", {
         className: B.checkboxDisplay,
-        children: (0, n.jsx)(A.default, {
+        children: (0, n.jsx)(p.default, {
           className: B.checkboxIcon,
           "aria-hidden": !0
         })
@@ -117,7 +117,7 @@ function Y(e) {
     children: [a.length - l.size > 1 && (0, n.jsx)("div", {
       className: B.list,
       children: (0, n.jsx)(V, {
-        icon: (0, n.jsx)(p.default, {
+        icon: (0, n.jsx)(A.default, {
           className: B.rowIcon
         }),
         checked: o,
@@ -387,7 +387,7 @@ function X(e) {
       children: [E.length > 1 && (0, n.jsx)("div", {
         className: B.list,
         children: (0, n.jsx)(V, {
-          icon: (0, n.jsx)(p.default, {}),
+          icon: (0, n.jsx)(A.default, {}),
           checked: _.size === E.length,
           onChange: function(e) {
             for (let t of E) S(t.id, e)

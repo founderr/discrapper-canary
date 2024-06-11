@@ -39,7 +39,7 @@ function w(e) {
   let {
     channel: s,
     isLoading: v
-  } = e, [w, k] = r.useState(!1), B = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(s.id)), V = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), x = (0, E.useGetOrFetchApplication)(null == B ? void 0 : B.applicationId), F = null == B ? void 0 : B.launchId, H = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === s.id), {
+  } = e, [w, k] = r.useState(!1), B = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(s.id)), x = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), V = (0, E.useGetOrFetchApplication)(null == B ? void 0 : B.applicationId), F = null == B ? void 0 : B.launchId, H = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === s.id), {
     dockedRect: Y,
     isHidden: j
   } = (0, o.useStateFromStoresObject)([A.default], () => {
@@ -56,7 +56,7 @@ function w(e) {
     activityParticipant: null != B ? I.default.getParticipant(s.id, B.applicationId) : null,
     selectedParticipant: I.default.getSelectedParticipant(s.id),
     participantsOpen: I.default.getParticipantsOpen(s.id)
-  })), Q = H || null != W, X = (0, R.default)(s.id), q = X && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !X && V === M.ActivityPanelModes.PIP, $ = (!Q || Q && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
+  })), Q = H || null != W, X = (0, R.default)(s.id), q = X && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !X && x === M.ActivityPanelModes.PIP, $ = (!Q || Q && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
 
   function et() {
     var e;
@@ -78,7 +78,7 @@ function w(e) {
       })
     }
   }, [null == B ? void 0 : B.applicationId, $]);
-  if (null == B || null == F || null == K && (0, R.default)(s.id) || null == x) return null;
+  if (null == B || null == F || null == K && (0, R.default)(s.id) || null == V) return null;
   let ei = Array.from(B.userIds).map(e => N.default.getUser(e)).filter(e => null != e),
     er = {
       instance_id: null !== (n = null !== (t = B.compositeInstanceId) && void 0 !== t ? t : B.launchId) && void 0 !== n ? n : "",
@@ -151,7 +151,7 @@ function w(e) {
             [U.pipModeTall]: $ && w
           })
         }) : (0, i.jsx)(g.EmbedIFrameWithLoadingBackground, {
-          allowPopups: (0, C.allowPopups)(x),
+          allowPopups: (0, C.allowPopups)(V),
           referrerPolicy: D.APPLICATIONS_WITH_NO_REFFERER.has(B.applicationId) ? "no-referrer" : "origin",
           url: B.url,
           queryParams: er,

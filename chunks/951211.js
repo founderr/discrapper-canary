@@ -33,8 +33,8 @@ function I(e) {
     canUseApplicationCommands: l,
     hasClips: I,
     channel: A,
-    activities: x,
-    newClipsCount: v,
+    activities: v,
+    newClipsCount: x,
     canPostPolls: N,
     canLaunchActivities: M,
     appContext: y
@@ -51,7 +51,7 @@ function I(e) {
     type: "CLIPS",
     icon: c.default,
     display: T.default.Messages.CLIPS_SHARE_A_CLIP,
-    badgeVal: v,
+    badgeVal: x,
     badgeColor: r.default.BG_BRAND
   }), n && R.push({
     type: "CREATE_THREAD",
@@ -69,7 +69,7 @@ function I(e) {
     type: "ACTIVITY",
     icon: C.default,
     display: T.default.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
-  }), x.forEach(e => {
+  }), v.forEach(e => {
     !(0, s.default)(e, _.ActivityFlags.EMBEDDED) && (e.type === _.ActivityTypes.PLAYING && (0, s.default)(e, _.ActivityFlags.JOIN) && R.push({
       type: "INVITE_TO_GAME",
       icon: m.default,

@@ -40,8 +40,8 @@ var i = n("525654"),
   w = n("341165"),
   k = n("496675"),
   B = n("594174"),
-  V = n("626135"),
-  x = n("70956"),
+  x = n("626135"),
+  V = n("70956"),
   F = n("573261"),
   H = n("954824"),
   Y = n("749210"),
@@ -212,7 +212,7 @@ t.default = {
     let n = w.default.getInvite(e.id);
     if (null != n && !n.isExpired()) return n.code;
     let i = {
-        max_age: x.default.Seconds.DAY
+        max_age: V.default.Seconds.DAY
       },
       r = await this.createInvite(e.id, i, t).catch(() => d.default.dispatch({
         type: "NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED"
@@ -449,7 +449,7 @@ t.default = {
         attemptId: t,
         event: null == E ? void 0 : E.guildScheduledEventId,
         iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(I)
-      }), V.default.track(W.AnalyticEvents.DEEP_LINK_CLICKED, {
+      }), x.default.track(W.AnalyticEvents.DEEP_LINK_CLICKED, {
         fingerprint: (0, l.maybeExtractId)(n),
         attempt_id: t,
         source: X,

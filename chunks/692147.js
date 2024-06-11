@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return f
+    return m
   }
 });
 var n = i("735250"),
@@ -30,7 +30,7 @@ function h(e) {
   }, [i, h, c, r.confettiCount]), null
 }
 
-function f(e) {
+function m(e) {
   return (0, n.jsx)(r.default, {
     confettiLocation: c.ConfettiLocation.REACTION,
     children: (0, n.jsx)(h, {

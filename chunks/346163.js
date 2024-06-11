@@ -40,9 +40,9 @@ function T(e) {
     } = (0, u.default)(null == e ? void 0 : e.id),
     {
       isApplicationRejected: O,
-      requestCooldownDuration: A
+      requestCooldownDuration: p
     } = (0, c.default)(L),
-    p = (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) === !0,
+    A = (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) === !0,
     {
       isMonetizationReapplicationDisabled: M
     } = (0, n.useIsMonetizationReapplicationDisabled)(null == e ? void 0 : e.id),
@@ -55,8 +55,8 @@ function T(e) {
     communityGuidelineUrl: _.MarketingURLs.GUIDELINES
   }) : I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({
     communityGuidelineUrl: _.MarketingURLs.GUIDELINES
-  }) : O && null != A && (t = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
-    requestCooldownDuration: A,
+  }) : O && null != p && (t = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
+    requestCooldownDuration: p,
     creatorRevenuePolicyUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_POLICY)
   }));
   let G = s && f && !1 === S,
@@ -81,7 +81,7 @@ function T(e) {
     requestRejectedNoticeText: t,
     reapplyNoticeText: b,
     showAcceptTermsFlow: U,
-    wasRejectedInV1: U && (p || O),
+    wasRejectedInV1: U && (A || O),
     requirementsFinePrintText: j,
     acceptTermsCheckboxText: P
   }

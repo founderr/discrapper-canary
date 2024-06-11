@@ -499,12 +499,12 @@ var D = r.forwardRef(function(e, t) {
         clickHandler: u
       })
     }, [B, u]),
-    Y = r.useCallback(function(e) {
+    j = r.useCallback(function(e) {
       return B(e, {
         clickHandler: d
       })
     }, [B, d]),
-    j = r.useCallback(function(e) {
+    Y = r.useCallback(function(e) {
       return B(e, {
         mouseHandler: f
       })
@@ -518,11 +518,11 @@ var D = r.forwardRef(function(e, t) {
     var e = function(e, t, n) {
       null != n && window.addEventListener(e, t)
     };
-    return e("click", U, u), e("mousedown", Y, d), e("mousemove", j, f), e("mouseup", z, p),
+    return e("click", U, u), e("mousedown", j, d), e("mousemove", Y, f), e("mouseup", z, p),
       function() {
-        window.removeEventListener("click", U), window.removeEventListener("mousedown", Y), window.removeEventListener("mousemove", j), window.removeEventListener("mouseup", j)
+        window.removeEventListener("click", U), window.removeEventListener("mousedown", j), window.removeEventListener("mousemove", Y), window.removeEventListener("mouseup", Y)
       }
-  }, [U, Y, j, z, u, d, f, p]), r.useEffect(function() {
+  }, [U, j, Y, z, u, d, f, p]), r.useEffect(function() {
     var e = D.current,
       t = new ResizeObserver(function() {
         ! function(e) {

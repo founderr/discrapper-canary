@@ -57,7 +57,7 @@ let x = e => e < (0, T.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? 
       })
     })
   },
-  A = () => (0, a.jsx)("div", {
+  p = () => (0, a.jsx)("div", {
     className: R.placeholderCard,
     children: (0, a.jsx)("img", {
       className: R.placeholderImg,
@@ -65,7 +65,7 @@ let x = e => e < (0, T.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? 
       src: s("872732")
     })
   }),
-  p = e => {
+  A = e => {
     let {
       guild: t
     } = e, {
@@ -183,7 +183,7 @@ t.default = e => {
         k = j - G.length,
         w = y ? Math.min(5 - (G.length + 0) % 5, k) : 0,
         V = [];
-      for (let e = 0; e < w; e++) V.push((0, a.jsx)(A, {}, "placeholder-".concat(e)));
+      for (let e = 0; e < w; e++) V.push((0, a.jsx)(p, {}, "placeholder-".concat(e)));
       let Y = b === E + 1 && b > M,
         W = y || Y || E > M;
       return Y ? l = (0, a.jsx)(c.default, {
@@ -198,7 +198,7 @@ t.default = e => {
           object: h.AnalyticsObjects.BOOST_UPSELL_NEXT_LEVEL_HEADER,
           objectType: (0, T.boostedGuildTierToAnalyticsObjectType)(d.tier)
         }
-      }) : y && (l = (0, a.jsx)(p, {
+      }) : y && (l = (0, a.jsx)(A, {
         guild: t
       })), (0, a.jsxs)(N.default, {
         subscriptionCount: D,

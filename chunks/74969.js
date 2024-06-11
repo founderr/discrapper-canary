@@ -1,34 +1,34 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("829307"),
-  s = r("13942"),
-  f = r("464854"),
-  c = r("465995"),
-  d = function(e) {
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("476400"),
+  o = n.n(a),
+  s = n("844303"),
+  u = n("829307"),
+  c = n("13942"),
+  l = n("464854"),
+  d = n("465995"),
+  f = function(e) {
     var t = e.onChange,
-      r = e.onSwatchHover,
-      n = e.hex,
-      o = e.colors,
-      i = e.width,
-      d = e.triangle,
+      n = e.onSwatchHover,
+      r = e.hex,
+      a = e.colors,
+      o = e.width,
+      f = e.triangle,
       p = e.styles,
       h = e.className,
-      b = "transparent" === n,
-      v = function(e, r) {
-        s.isValidHex(e) && t({
+      m = "transparent" === r,
+      g = function(e, n) {
+        c.isValidHex(e) && t({
           hex: e,
           source: "hex"
-        }, r)
+        }, n)
       },
-      g = (0, l.default)((0, u.default)({
+      _ = (0, s.default)((0, u.default)({
         default: {
           card: {
-            width: i,
+            width: o,
             background: "#fff",
             boxShadow: "0 1px rgba(0,0,0,.1)",
             borderRadius: "6px",
@@ -36,7 +36,7 @@ var n = r("470079"),
           },
           head: {
             height: "110px",
-            background: n,
+            background: r,
             borderRadius: "6px 6px 0 0",
             display: "flex",
             alignItems: "center",
@@ -48,7 +48,7 @@ var n = r("470079"),
           },
           label: {
             fontSize: "18px",
-            color: s.getContrastingColor(n),
+            color: c.getContrastingColor(r),
             position: "relative"
           },
           triangle: {
@@ -56,7 +56,7 @@ var n = r("470079"),
             height: "0px",
             borderStyle: "solid",
             borderWidth: "0 10px 10px 10px",
-            borderColor: "transparent transparent " + n + " transparent",
+            borderColor: "transparent transparent " + r + " transparent",
             position: "absolute",
             top: "-10px",
             left: "50%",
@@ -81,41 +81,41 @@ var n = r("470079"),
           }
         }
       }, void 0 === p ? {} : p), {
-        "hide-triangle": "hide" === d
+        "hide-triangle": "hide" === f
       });
-    return a().createElement("div", {
-      style: g.card,
+    return i().createElement("div", {
+      style: _.card,
       className: "block-picker " + (void 0 === h ? "" : h)
-    }, a().createElement("div", {
-      style: g.triangle
-    }), a().createElement("div", {
-      style: g.head
-    }, b && a().createElement(f.Checkboard, {
+    }, i().createElement("div", {
+      style: _.triangle
+    }), i().createElement("div", {
+      style: _.head
+    }, m && i().createElement(l.Checkboard, {
       borderRadius: "6px 6px 0 0"
-    }), a().createElement("div", {
-      style: g.label
-    }, n)), a().createElement("div", {
-      style: g.body
-    }, a().createElement(c.default, {
-      colors: o,
-      onClick: v,
-      onSwatchHover: r
-    }), a().createElement(f.EditableInput, {
+    }), i().createElement("div", {
+      style: _.label
+    }, r)), i().createElement("div", {
+      style: _.body
+    }, i().createElement(d.default, {
+      colors: a,
+      onClick: g,
+      onSwatchHover: n
+    }), i().createElement(l.EditableInput, {
       style: {
-        input: g.input
+        input: _.input
       },
-      value: n,
-      onChange: v
+      value: r,
+      onChange: g
     })))
   };
-d.propTypes = {
-  width: i().oneOfType([i().string, i().number]),
-  colors: i().arrayOf(i().string),
-  triangle: i().oneOf(["top", "hide"]),
-  styles: i().object
-}, d.defaultProps = {
+f.propTypes = {
+  width: o().oneOfType([o().string, o().number]),
+  colors: o().arrayOf(o().string),
+  triangle: o().oneOf(["top", "hide"]),
+  styles: o().object
+}, f.defaultProps = {
   width: 170,
   colors: ["#D9E3F0", "#F47373", "#697689", "#37D67A", "#2CCCE4", "#555555", "#dce775", "#ff8a65", "#ba68c8"],
   triangle: "top",
   styles: {}
-}, (0, f.ColorWrap)(d)
+}, (0, l.ColorWrap)(f)

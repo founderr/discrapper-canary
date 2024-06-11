@@ -1,19 +1,19 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("13942"),
-  l = r("464854"),
-  u = r("191731");
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("844303"),
+  o = n("13942"),
+  s = n("464854"),
+  u = n("191731");
 t.default = function(e) {
   var t = e.color,
-    r = e.onClick,
-    n = e.onSwatchHover,
-    s = e.first,
-    f = e.last,
-    c = e.active,
-    d = (0, o.default)({
+    n = e.onClick,
+    r = e.onSwatchHover,
+    c = e.first,
+    l = e.last,
+    d = e.active,
+    f = (0, a.default)({
       default: {
         color: {
           width: "40px",
@@ -23,7 +23,7 @@ t.default = function(e) {
           marginBottom: "1px"
         },
         check: {
-          color: i.getContrastingColor(t),
+          color: o.getContrastingColor(t),
           marginLeft: "8px",
           display: "none"
         }
@@ -59,21 +59,21 @@ t.default = function(e) {
         }
       }
     }, {
-      first: s,
-      last: f,
-      active: c,
+      first: c,
+      last: l,
+      active: d,
       "color-#FFFFFF": "#FFFFFF" === t,
       transparent: "transparent" === t
     });
-  return a().createElement(l.Swatch, {
+  return i().createElement(s.Swatch, {
     color: t,
-    style: d.color,
-    onClick: void 0 === r ? function() {} : r,
-    onHover: n,
+    style: f.color,
+    onClick: void 0 === n ? function() {} : n,
+    onHover: r,
     focusStyle: {
       boxShadow: "0 0 4px " + t
     }
-  }, a().createElement("div", {
-    style: d.check
-  }, a().createElement(u.default, null)))
+  }, i().createElement("div", {
+    style: f.check
+  }, i().createElement(u.default, null)))
 }

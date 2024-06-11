@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("374065"),
   L = n("451576"),
   P = n("938655"),
-  M = n("403404"),
-  y = n("100527"),
+  y = n("403404"),
+  M = n("100527"),
   D = n("906732"),
   x = n("158631"),
   b = n("793865"),
@@ -81,8 +81,8 @@ var a = n("735250"),
   eO = n("333454"),
   eL = n("626135"),
   eP = n("63063"),
-  eM = n("51144"),
-  ey = n("594117"),
+  ey = n("51144"),
+  eM = n("594117"),
   eD = n("226323"),
   ex = n("981631"),
   eb = n("190378"),
@@ -305,7 +305,7 @@ function eV(e) {
       ...p,
       onClick: () => {
         var n;
-        p.onClick(), (0, M.default)({
+        p.onClick(), (0, y.default)({
           channel: t,
           guildId: t.guild_id,
           locationObject: h.location,
@@ -585,7 +585,7 @@ class eW extends s.PureComponent {
           }), (0, a.jsxs)(eT.default, {
             grow: 0,
             shrink: 0,
-            children: [t ? this.renderNoiseCancellation() : null, (0, a.jsx)(ey.default, {
+            children: [t ? this.renderNoiseCancellation() : null, (0, a.jsx)(eM.default, {
               channel: e
             })]
           })]
@@ -706,7 +706,7 @@ t.default = (0, g.default)(function(e) {
       noiseCancellationError: eC.default.isNoiseCancellationError(),
       canGoLive: (0, k.default)(eC.default)
     })),
-    E = (0, d.useStateFromStores)([eC.default, H.default], () => H.default.hasHotspot(eb.HotspotLocations.VOICE_PANEL_INTRODUCTION) && (0, eM.isNewUser)(l) && !eC.default.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
+    E = (0, d.useStateFromStores)([eC.default, H.default], () => H.default.hasHotspot(eb.HotspotLocations.VOICE_PANEL_INTRODUCTION) && (0, ey.isNewUser)(l) && !eC.default.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
     h = (0, d.useStateFromStores)([eI.default], () => null != i && eI.default.hasVideo(i), [i]),
     _ = (0, d.useStateFromStores)([ed.default], () => ed.default.getCurrentUserActiveStream()),
     m = (0, d.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
@@ -735,7 +735,7 @@ t.default = (0, g.default)(function(e) {
   }, [S, p, O]);
   let {
     analyticsLocations: P
-  } = (0, D.default)(y.default.RTC_PANEL), M = (0, v.default)(null != u ? u : ex.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, L.default)(null == o ? void 0 : o.id), U = (0, x.default)();
+  } = (0, D.default)(M.default.RTC_PANEL), y = (0, v.default)(null != u ? u : ex.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, L.default)(null == o ? void 0 : o.id), U = (0, x.default)();
   return (0, a.jsx)(D.AnalyticsLocationProvider, {
     value: P,
     children: (0, a.jsxs)("div", {
@@ -747,7 +747,7 @@ t.default = (0, g.default)(function(e) {
         ...e,
         ...f,
         ...r,
-        enableActivities: M,
+        enableActivities: y,
         remoteVoiceState: t,
         guild: c,
         channel: o,

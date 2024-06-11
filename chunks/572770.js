@@ -1,6 +1,6 @@
 "use strict";
-r.r(t);
+n.r(t);
 t.default = function(e, t) {
-  for (var r = -1, n = t.length, a = e.length; ++r < n;) e[a + r] = t[r];
+  for (var n = -1, r = t.length, i = e.length; ++n < r;) e[i + n] = t[n];
   return e
 }

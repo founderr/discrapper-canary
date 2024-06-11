@@ -1,64 +1,64 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("829307"),
-  s = r("464854"),
-  f = r("353144"),
-  c = Object.assign || function(e) {
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("476400"),
+  o = n.n(a),
+  s = n("844303"),
+  u = n("829307"),
+  c = n("464854"),
+  l = n("353144"),
+  d = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  d = function(e) {
+  f = function(e) {
     var t = e.width,
-      r = e.height,
-      n = e.onChange,
-      o = e.hsl,
-      i = e.direction,
-      f = e.pointer,
-      d = e.styles,
+      n = e.height,
+      r = e.onChange,
+      a = e.hsl,
+      o = e.direction,
+      l = e.pointer,
+      f = e.styles,
       p = e.className,
-      h = (0, l.default)((0, u.default)({
+      h = (0, s.default)((0, u.default)({
         default: {
           picker: {
             position: "relative",
             width: t,
-            height: r
+            height: n
           },
           hue: {
             radius: "2px"
           }
         }
-      }, void 0 === d ? {} : d));
-    return a().createElement("div", {
+      }, void 0 === f ? {} : f));
+    return i().createElement("div", {
       style: h.picker,
       className: "hue-picker " + (void 0 === p ? "" : p)
-    }, a().createElement(s.Hue, c({}, h.hue, {
-      hsl: o,
-      pointer: f,
+    }, i().createElement(c.Hue, d({}, h.hue, {
+      hsl: a,
+      pointer: l,
       onChange: function(e) {
-        return n({
+        return r({
           a: 1,
           h: e.h,
           l: .5,
           s: 1
         })
       },
-      direction: i
+      direction: o
     })))
   };
-d.propTypes = {
-  styles: i().object
-}, d.defaultProps = {
+f.propTypes = {
+  styles: o().object
+}, f.defaultProps = {
   width: "316px",
   height: "16px",
   direction: "horizontal",
-  pointer: f.default,
+  pointer: l.default,
   styles: {}
-}, (0, s.ColorWrap)(d)
+}, (0, c.ColorWrap)(f)

@@ -1,40 +1,40 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("829307"),
-  s = r("464854"),
-  f = r("246072"),
-  c = r("578709"),
-  d = r("847979"),
-  p = r("484837"),
-  h = r("330174"),
-  b = function() {
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("476400"),
+  o = n.n(a),
+  s = n("844303"),
+  u = n("829307"),
+  c = n("464854"),
+  l = n("246072"),
+  d = n("578709"),
+  f = n("847979"),
+  p = n("484837"),
+  h = n("330174"),
+  m = function() {
     function e(e, t) {
-      for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+      for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
       }
     }
-    return function(t, r, n) {
-      return r && e(t.prototype, r), n && e(t, n), t
+    return function(t, n, r) {
+      return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  v = function(e) {
+  g = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
       }(this, t);
-      var r = function(e, t) {
+      var n = function(e, t) {
         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return t && ("object" == typeof t || "function" == typeof t) ? t : e
       }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-      return r.state = {
+      return n.state = {
         currentColor: e.hex
-      }, r
+      }, n
     }
     return ! function(e, t) {
       if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -46,13 +46,13 @@ var n = r("470079"),
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), b(t, [{
+    }(t, e), m(t, [{
       key: "render",
       value: function() {
         var e = this.props,
           t = e.styles,
-          r = e.className,
-          n = (0, l.default)((0, u.default)({
+          n = e.className,
+          r = (0, s.default)((0, u.default)({
             default: {
               picker: {
                 background: "#DCDCDC",
@@ -108,48 +108,48 @@ var n = r("470079"),
               }
             }
           }, void 0 === t ? {} : t));
-        return a().createElement("div", {
-          style: n.picker,
-          className: "photoshop-picker " + (void 0 === r ? "" : r)
-        }, a().createElement("div", {
-          style: n.head
-        }, this.props.header), a().createElement("div", {
-          style: n.body,
+        return i().createElement("div", {
+          style: r.picker,
+          className: "photoshop-picker " + (void 0 === n ? "" : n)
+        }, i().createElement("div", {
+          style: r.head
+        }, this.props.header), i().createElement("div", {
+          style: r.body,
           className: "flexbox-fix"
-        }, a().createElement("div", {
-          style: n.saturation
-        }, a().createElement(s.Saturation, {
+        }, i().createElement("div", {
+          style: r.saturation
+        }, i().createElement(c.Saturation, {
           hsl: this.props.hsl,
           hsv: this.props.hsv,
-          pointer: c.default,
-          onChange: this.props.onChange
-        })), a().createElement("div", {
-          style: n.hue
-        }, a().createElement(s.Hue, {
-          direction: "vertical",
-          hsl: this.props.hsl,
           pointer: d.default,
           onChange: this.props.onChange
-        })), a().createElement("div", {
-          style: n.controls
-        }, a().createElement("div", {
-          style: n.top,
+        })), i().createElement("div", {
+          style: r.hue
+        }, i().createElement(c.Hue, {
+          direction: "vertical",
+          hsl: this.props.hsl,
+          pointer: f.default,
+          onChange: this.props.onChange
+        })), i().createElement("div", {
+          style: r.controls
+        }, i().createElement("div", {
+          style: r.top,
           className: "flexbox-fix"
-        }, a().createElement("div", {
-          style: n.previews
-        }, a().createElement(h.default, {
+        }, i().createElement("div", {
+          style: r.previews
+        }, i().createElement(h.default, {
           rgb: this.props.rgb,
           currentColor: this.state.currentColor
-        })), a().createElement("div", {
-          style: n.actions
-        }, a().createElement(p.default, {
+        })), i().createElement("div", {
+          style: r.actions
+        }, i().createElement(p.default, {
           label: "OK",
           onClick: this.props.onAccept,
           active: !0
-        }), a().createElement(p.default, {
+        }), i().createElement(p.default, {
           label: "Cancel",
           onClick: this.props.onCancel
-        }), a().createElement(f.default, {
+        }), i().createElement(l.default, {
           onChange: this.props.onChange,
           rgb: this.props.rgb,
           hsv: this.props.hsv,
@@ -157,11 +157,11 @@ var n = r("470079"),
         }))))))
       }
     }]), t
-  }(a().Component);
-v.propTypes = {
-  header: i().string,
-  styles: i().object
-}, v.defaultProps = {
+  }(i().Component);
+g.propTypes = {
+  header: o().string,
+  styles: o().object
+}, g.defaultProps = {
   header: "Color Picker",
   styles: {}
-}, (0, s.ColorWrap)(v)
+}, (0, c.ColorWrap)(g)

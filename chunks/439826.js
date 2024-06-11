@@ -30,9 +30,9 @@ function g(e) {
     onCtxMenuClose: l,
     onCtxMenuOpen: g,
     onCtxMenuSelect: T
-  } = e, A = (0, C.getQuestBarHeroAssetUrl)(t), N = (0, d.default)(), v = (0, o.isThemeDark)(N) ? S.ThemeTypes.DARK : S.ThemeTypes.LIGHT, R = v === S.ThemeTypes.DARK, O = s.useMemo(() => (0, C.isAssetAnimated)(t.config.assets.questBarHero), [t]), L = s.useContext(r.AccessibilityPreferencesContext).reducedMotion.enabled, P = (0, C.isTargetedForContent)(t, h.QuestContent.GIFT_INVENTORY_FOR_YOU), M = (0, E.useIsQuestExpired)(t), y = s.useRef(n), D = s.useRef(null);
+  } = e, A = (0, C.getQuestBarHeroAssetUrl)(t), N = (0, d.default)(), v = (0, o.isThemeDark)(N) ? S.ThemeTypes.DARK : S.ThemeTypes.LIGHT, R = v === S.ThemeTypes.DARK, O = s.useMemo(() => (0, C.isAssetAnimated)(t.config.assets.questBarHero), [t]), L = s.useContext(r.AccessibilityPreferencesContext).reducedMotion.enabled, P = (0, C.isTargetedForContent)(t, h.QuestContent.GIFT_INVENTORY_FOR_YOU), y = (0, E.useIsQuestExpired)(t), M = s.useRef(n), D = s.useRef(null);
   return s.useEffect(() => {
-    if (O && null != D.current) return y.current !== n && (n ? D.current.play() : (D.current.pause(), D.current.currentTime = 0)), y.current = n, () => {
+    if (O && null != D.current) return M.current !== n && (n ? D.current.play() : (D.current.pause(), D.current.currentTime = 0)), M.current = n, () => {
       var e;
       null === (e = D.current) || void 0 === e || e.pause()
     }
@@ -75,7 +75,7 @@ function g(e) {
           className: I.contents,
           children: [(0, a.jsxs)("div", {
             className: I.topRow,
-            children: [P && !M && (0, a.jsx)("div", {
+            children: [P && !y && (0, a.jsx)("div", {
               className: I.pill,
               children: (0, a.jsx)(u.Text, {
                 variant: "eyebrow",

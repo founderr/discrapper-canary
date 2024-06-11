@@ -1,27 +1,27 @@
 "use strict";
-n.r(e), n.d(e, {
+i.r(t), i.d(t, {
   default: function() {
-    return a
+    return r
   }
 });
-var i = n("735250");
-n("470079");
-var l = n("120356"),
-  o = n.n(l),
-  u = n("481060"),
-  s = n("102234");
+var u = i("735250");
+i("470079");
+var o = i("120356"),
+  e = i.n(o),
+  l = i("481060"),
+  d = i("102234");
 
-function a(t) {
+function r(n) {
   let {
-    className: e,
-    color: n,
-    ...l
-  } = t;
-  return (0, i.jsx)(u.Text, {
-    className: o()({
-      [s.text]: null == n
-    }, e),
-    color: n,
-    ...l
+    className: t,
+    color: i,
+    ...o
+  } = n;
+  return (0, u.jsx)(l.Text, {
+    className: e()({
+      [d.text]: null == i
+    }, t),
+    color: i,
+    ...o
   })
 }

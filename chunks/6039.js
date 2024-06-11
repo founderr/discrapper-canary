@@ -27,7 +27,7 @@ t.default = e => {
   let {
     guildId: v,
     inviteCode: R
-  } = e, [O, L] = s.useState(g.WaveStates.INITIAL), P = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), M = (0, l.useStateFromStores)([_.default], () => _.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+  } = e, [O, L] = s.useState(g.WaveStates.INITIAL), P = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), y = (0, l.useStateFromStores)([_.default], () => _.default.getRequest(v)), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
     hasFetchedRequestToJoinGuilds: D,
     guildPreviewDisabled: x
   } = (0, l.useStateFromStoresObject)([_.default], () => ({
@@ -35,8 +35,8 @@ t.default = e => {
     guildPreviewDisabled: _.default.getJoinRequestGuild(v)
   }));
   s.useEffect(() => {
-    null != y && (0, r.transitionTo)(I.Routes.CHANNEL(v))
-  }, [y, v]), s.useEffect(() => {
+    null != M && (0, r.transitionTo)(I.Routes.CHANNEL(v))
+  }, [M, v]), s.useEffect(() => {
     !D && f.default.fetchRequestToJoinGuilds()
   }, [D]);
   let b = s.useCallback(e => {
@@ -83,7 +83,7 @@ t.default = e => {
       }), (0, a.jsx)("div", {
         className: A.contentWrapper,
         children: (() => {
-          switch (null == M ? void 0 : M.applicationStatus) {
+          switch (null == y ? void 0 : y.applicationStatus) {
             case C.GuildJoinRequestApplicationStatuses.SUBMITTED:
               return (0, a.jsx)(S.default, {
                 onWithdrawApplication: G,
@@ -95,7 +95,7 @@ t.default = e => {
                 onReapply: j,
                 confirmText: T.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                 onWithdrawApplication: G,
-                rejectionReason: null == M ? void 0 : M.rejectionReason,
+                rejectionReason: null == y ? void 0 : y.rejectionReason,
                 guild: x
               });
             default:

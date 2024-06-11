@@ -29,8 +29,8 @@ var a, s, l = n("735250"),
   O = n("501655"),
   L = n("427679"),
   P = n("448206"),
-  M = n("484459"),
-  y = n("103575"),
+  y = n("484459"),
+  M = n("103575"),
   D = n("496675"),
   x = n("594174"),
   b = n("465670"),
@@ -278,10 +278,10 @@ function Y(e) {
     }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
       className: V.participants,
       children: [el.map(e => (0, l.jsx)(c.Popout, {
-        preload: () => (0, M.maybeFetchUserProfileForPopout)(e, {
+        preload: () => (0, y.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
-        renderPopout: n => (0, l.jsx)(y.default, {
+        renderPopout: n => (0, l.jsx)(M.default, {
           ...n,
           location: "LiveChannelNotice",
           userId: e.id,

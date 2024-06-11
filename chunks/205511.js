@@ -152,9 +152,9 @@ t.default = function(e) {
       isQuestComplete: i
     }
   }, [m, s, h]), {
-    ref: O,
-    height: L = 0
-  } = (0, E.default)(), y = (0, _.default)(L), {
+    ref: L,
+    height: O = 0
+  } = (0, E.default)(), y = (0, _.default)(O), {
     expansionSpring: D
   } = (0, r.useSpring)({
     to: {
@@ -166,7 +166,7 @@ t.default = function(e) {
       clamp: !0
     },
     immediate: !0
-  }), b = L - (null != y ? y : 0);
+  }), b = O - (null != y ? y : 0);
   return n.useLayoutEffect(() => {
     l && 0 !== b && t(b)
   }, [l, b, t]), (0, a.jsxs)("div", {
@@ -174,7 +174,7 @@ t.default = function(e) {
     children: [(0, a.jsxs)(c.Clickable, {
       className: S.headingWrapper,
       onClick: () => {
-        t(l ? -1 * L : L), i(!l)
+        t(l ? -1 * O : O), i(!l)
       },
       children: [(0, a.jsx)(c.Heading, {
         className: S.heading,
@@ -191,11 +191,11 @@ t.default = function(e) {
       style: {
         height: D.to({
           range: [0, 1],
-          output: [0, L]
+          output: [0, O]
         })
       },
       children: (0, a.jsx)("div", {
-        ref: O,
+        ref: L,
         children: (0, a.jsxs)("div", {
           className: S.stepsWrapperStatic,
           children: [(0, a.jsx)("ul", {

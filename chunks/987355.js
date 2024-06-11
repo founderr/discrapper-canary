@@ -1,8 +1,8 @@
 "use strict";
-r.r(t);
-var n = r("208066");
+n.r(t);
+var r = n("208066");
 t.default = function(e) {
   return function(t) {
-    return (0, n.default)(t, e)
+    return (0, r.default)(t, e)
   }
 }

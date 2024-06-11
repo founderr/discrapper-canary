@@ -41,8 +41,8 @@ var r = n("127118"),
   F = n("770003"),
   B = n("470079"),
   U = n("182823"),
-  Y = n("602607"),
-  j = {};
+  j = n("602607"),
+  Y = {};
 
 function z(e) {
   var t;
@@ -62,7 +62,7 @@ function z(e) {
       onDecrementToMin: h,
       onIncrementToMax: m
     } = e;
-  let g = (0, Y.useLocalizedStringFormatter)((t = j) && t.__esModule ? t.default : t, "@react-aria/spinbutton"),
+  let g = (0, j.useLocalizedStringFormatter)((t = Y) && t.__esModule ? t.default : t, "@react-aria/spinbutton"),
     _ = () => clearTimeout(n.current);
   (0, B.useEffect)(() => () => _(), []);
   let b = (0, B.useRef)(!1),
@@ -154,7 +154,7 @@ function z(e) {
     }
   }
 }
-j = {
+Y = {
   "ar-AE": r.default,
   "bg-BG": i.default,
   "cs-CZ": a.default,

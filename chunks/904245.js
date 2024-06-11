@@ -37,8 +37,8 @@ var i = n("278074"),
   k = n("643266"),
   B = n("617136");
 n("807092");
-var V = n("869765"),
-  x = n("926491"),
+var x = n("869765"),
+  V = n("926491"),
   F = n("467798"),
   H = n("346479"),
   Y = n("218543"),
@@ -647,9 +647,9 @@ let eA = {
           allowedMentions: g,
           poll: U
         } = n,
-        V = null !== (s = n.flags) && void 0 !== s ? s : 0,
+        x = null !== (s = n.flags) && void 0 !== s ? s : 0,
         [H, Y] = (0, F.default)(_);
-      H && (_ = Y, V = (0, er.addFlag)(V, ed.MessageFlags.SUPPRESS_NOTIFICATIONS));
+      H && (_ = Y, x = (0, er.addFlag)(x, ed.MessageFlags.SUPPRESS_NOTIFICATIONS));
       let j = (null === (i = n.messageReference) || void 0 === i ? void 0 : i.type) === ed.MessageReferenceTypes.FORWARD;
       if ("" === _ && null == h && null == C && null == U && !j) return Promise.resolve();
       let z = null != R ? ed.MessageTypes.REPLY : ed.MessageTypes.DEFAULT,
@@ -662,11 +662,11 @@ let eA = {
           type: z,
           messageReference: R,
           allowedMentions: g,
-          flags: 0 !== V ? V : void 0,
+          flags: 0 !== x ? x : void 0,
           nonce: Z,
           poll: (0, w.createPollServerDataFromCreateRequest)(U)
         });
-        (0, b.updateComboOnMessageSend)(e, t.id), null != C && (t.sticker_items = C.map(e => x.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
+        (0, b.updateComboOnMessageSend)(e, t.id), null != C && (t.sticker_items = C.map(e => V.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
       }
       if (!ef && null != c && c.length > 0) {
         let t, n;
@@ -685,7 +685,7 @@ let eA = {
           tts: S,
           message_reference: R,
           allowed_mentions: g,
-          flags: V
+          flags: x
         }
       };
       if (null != h) {
@@ -902,8 +902,8 @@ let eA = {
       let r = function(e, t) {
           let n = Z.default.getMessage(e, t);
           if (null == n || n.type !== ed.MessageTypes.REPLY) return;
-          let i = V.default.getMessageByReference(n.messageReference);
-          if (i.state === V.ReferencedMessageState.LOADED) {
+          let i = x.default.getMessageByReference(n.messageReference);
+          if (i.state === x.ReferencedMessageState.LOADED) {
             if (!n.mentions.includes(i.message.author.id)) return {
               parse: Object.values(ed.AllowedMentionTypes),
               replied_user: !1

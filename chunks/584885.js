@@ -48,9 +48,9 @@ t.default = e => {
   if (null == m) return null;
   let {
     guilds: P,
-    loading: M
-  } = m, y = null == P || 0 === P.length;
-  if (!M && y) return null;
+    loading: y
+  } = m, M = null == P || 0 === P.length;
+  if (!y && M) return null;
   let D = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -67,7 +67,7 @@ t.default = e => {
       await I(e, t, S, N)
     }
   };
-  if (M || null == P) {
+  if (y || null == P) {
     let e = [];
     for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e

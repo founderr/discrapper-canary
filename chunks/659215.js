@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return m
+    return f
   },
   openBurstReactionsUpsellModal: function() {
     return p
@@ -18,13 +18,13 @@ var a = i("481060"),
   d = i("981631"),
   c = i("689938"),
   h = i("347114"),
-  f = i("784370");
+  m = i("784370");
 
-function m(e) {
+function f(e) {
   var t, i;
   let {
     onClose: a,
-    analyticsSource: m,
+    analyticsSource: f,
     ...p
   } = e, g = c.default.Messages.SUPER_REACTIONS_UPSELL_UNLIMITED_BODY.format({
     onClick: () => {
@@ -32,7 +32,7 @@ function m(e) {
     }
   }), T = (0, o.usePremiumTrialOffer)(), S = (0, l.usePremiumDiscountOffer)();
   return (0, n.jsx)(r.default, {
-    artURL: f,
+    artURL: m,
     artContainerClassName: h.artContainer,
     modalClassName: h.modalContainer,
     bodyClassName: h.bodyContainer,
@@ -40,7 +40,7 @@ function m(e) {
     title: c.default.Messages.SUPER_REACTIONS_UPSELL_TITLE,
     body: g,
     glowUp: g,
-    analyticsSource: m,
+    analyticsSource: f,
     analyticsLocation: {
       page: d.AnalyticsPages.PREMIUM_UPSELL_BURST_REACTIONS,
       object: d.AnalyticsObjects.BUTTON_CTA

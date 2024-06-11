@@ -78,15 +78,15 @@ var a, s = n("729594"),
   O = n("863141"),
   L = n("186901"),
   P = n("981631");
-let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
-  y = function() {
-    let e = M.split(":")[0];
+let y = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
+  M = function() {
+    let e = y.split(":")[0];
     if (!e.includes(".")) return e;
     let t = e.split("."),
       n = t[t.length - 1];
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
-  D = new RegExp("^".concat(v.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(v.default.escape(y), "|discordapp.com|discord.com)$")),
+  D = new RegExp("^".concat(v.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(v.default.escape(M), "|discordapp.com|discord.com)$")),
   x = 1 * A.default.Millis.MINUTE,
   b = {};
 

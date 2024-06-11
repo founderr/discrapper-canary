@@ -1,16 +1,16 @@
 "use strict";
 u.r(e), u.d(e, {
   deleteGuildProductListing: function() {
-    return a
+    return o
   },
   fetchGuildProduct: function() {
-    return o
+    return d
   },
   fetchGuildProductsForGuild: function() {
     return l
   },
   updateGuildProductListing: function() {
-    return c
+    return a
   }
 });
 var r = u("570140"),
@@ -34,7 +34,7 @@ let l = async t => {
       guildId: t
     })
   }
-}, o = async (t, e) => {
+}, d = async (t, e) => {
   r.default.dispatch({
     type: "GUILD_PRODUCT_FETCH",
     productId: e
@@ -53,14 +53,14 @@ let l = async t => {
     }), t
   }
 };
-async function c(t, e, u) {
+async function a(t, e, u) {
   let n = await i.updateGuildProductListing(t, e, u);
   return r.default.dispatch({
     type: "GUILD_PRODUCT_UPDATE",
     product: n
   }), n
 }
-async function a(t, e) {
+async function o(t, e) {
   return await i.deleteGuildProductListing(t, e), r.default.dispatch({
     type: "GUILD_PRODUCT_DELETE",
     productId: e

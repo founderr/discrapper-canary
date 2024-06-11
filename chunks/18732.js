@@ -4,7 +4,7 @@ i.r(t), i.d(t, {
     return p
   },
   getMinCounterWidth: function() {
-    return m
+    return f
   }
 });
 var n, a, s, l = i("735250"),
@@ -23,7 +23,7 @@ function h(e, t, i) {
   }) : e[t] = i, e
 }
 
-function f(e, t) {
+function m(e, t) {
   return {
     toValue: e,
     duration: null != t ? t : 300,
@@ -31,7 +31,7 @@ function f(e, t) {
   }
 }
 
-function m(e, t, i) {
+function f(e, t, i) {
   if (null != t) {
     let n = Math.ceil(Math.log10(e + 1));
     return null != i && i > 0 ? Math.min(n, i) * t : n * t
@@ -64,7 +64,7 @@ class p extends(s = o.PureComponent) {
       forcePosition: n,
       animationSpeed: a
     } = this.props;
-    this.prevAnimate.setValue(1), null != n ? 0 === n ? (this.currAnimate.setValue(0), i = 2) : 2 === n && (this.currAnimate.setValue(2), i = 0) : e > t ? (this.currAnimate.setValue(0), i = 2) : (this.currAnimate.setValue(2), i = 0), d.default.parallel([d.default.timing(this.prevAnimate, f(i, a)), d.default.timing(this.currAnimate, f(1, a))]).start(this.animateNext)
+    this.prevAnimate.setValue(1), null != n ? 0 === n ? (this.currAnimate.setValue(0), i = 2) : 2 === n && (this.currAnimate.setValue(2), i = 0) : e > t ? (this.currAnimate.setValue(0), i = 2) : (this.currAnimate.setValue(2), i = 0), d.default.parallel([d.default.timing(this.prevAnimate, m(i, a)), d.default.timing(this.currAnimate, m(1, a))]).start(this.animateNext)
   }
   getAnimatedStyle(e) {
     let {
@@ -92,7 +92,7 @@ class p extends(s = o.PureComponent) {
       digitWidth: t,
       padStartLength: i
     } = this.props;
-    return m(e, t, i)
+    return f(e, t, i)
   }
   padValue(e) {
     let {

@@ -121,7 +121,7 @@ function O(e) {
   }) : null
 }
 
-function A(e) {
+function p(e) {
   let {
     rule: t,
     isDefaultRule: s,
@@ -146,8 +146,8 @@ function A(e) {
   };
   if (null == o) return null;
   let {
-    headerText: A,
-    headerSubtext: p,
+    headerText: p,
+    headerSubtext: A,
     descriptionText: M,
     icon: D
   } = o, v = !(0, c.isBackendPersistedRule)(t);
@@ -167,11 +167,11 @@ function A(e) {
         className: g.ruleTextHeaderContainer,
         children: [(0, a.jsxs)("div", {
           className: g.ruleTextHeader,
-          children: [A, O(t.triggerType)]
+          children: [p, O(t.triggerType)]
         }), (0, a.jsx)(i.Text, {
           className: g.ruleSubtextHeader,
           variant: "text-sm/normal",
-          children: p
+          children: A
         })]
       }), v && (0, a.jsx)(i.Text, {
         className: g.ruleTextDescription,
@@ -206,7 +206,7 @@ function A(e) {
   })
 }
 
-function p(e) {
+function A(e) {
   let {
     triggerType: t,
     onSetupRule: s
@@ -272,7 +272,7 @@ function M(e) {
         ...s
       })
     }))
-  }, _ = (0, a.jsx)(p, {
+  }, _ = (0, a.jsx)(A, {
     triggerType: l,
     onSetupRule: u
   });
@@ -280,7 +280,7 @@ function M(e) {
     rule: t,
     onChangeRule: c,
     onContextMenu: E
-  }) : (0, a.jsx)(A, {
+  }) : (0, a.jsx)(p, {
     rule: t,
     isDefaultRule: o,
     onContextMenu: E

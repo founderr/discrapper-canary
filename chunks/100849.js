@@ -27,12 +27,12 @@ function p(e) {
     type: l,
     showActions: a
   } = e, p = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), T = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => T.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [T]), A = i.useMemo(() => p ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, p]), x = i.useMemo(() => g.filter(e => e !== A), [A, g]), {
-    analyticsLocations: N,
-    newestAnalyticsLocation: C
+    analyticsLocations: C,
+    newestAnalyticsLocation: N
   } = (0, d.default)(), {
     trackUserProfileAction: U,
-    ...h
-  } = (0, E.useUserProfileAnalyticsContext)(), P = {
+    ...P
+  } = (0, E.useUserProfileAnalyticsContext)(), h = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
       section: m.AnalyticsSections.PROFILE_MODAL
@@ -44,12 +44,12 @@ function p(e) {
     children: [p ? (0, s.jsx)(u.default, {
       type: l,
       user: t,
-      source: C,
+      source: N,
       className: _.userProfileActivity,
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
       activity: A,
       actionColor: _.actionColor,
-      analyticsParams: P,
+      analyticsParams: h,
       showActions: a,
       onAction: () => {
         U({
@@ -60,8 +60,8 @@ function p(e) {
           activityPlatform: null == A ? void 0 : A.platform,
           activitySessionId: null == A ? void 0 : A.session_id,
           applicationId: null == A ? void 0 : A.application_id,
-          analyticsLocations: N,
-          ...h
+          analyticsLocations: C,
+          ...P
         })
       }
     }) : null, x.map(e => (0, s.jsx)(u.default, {
@@ -69,11 +69,11 @@ function p(e) {
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: C,
+      source: N,
       className: n()(_.userProfileActivity, l === S.Types.SIMPLIFIED_PROFILE && _.simplifiedProfileActivity),
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
       actionColor: _.actionColor,
-      analyticsParams: P,
+      analyticsParams: h,
       showActions: a,
       onAction: () => {
         U({
@@ -84,8 +84,8 @@ function p(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: N,
-          ...h
+          analyticsLocations: C,
+          ...P
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

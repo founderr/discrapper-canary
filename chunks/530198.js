@@ -387,7 +387,7 @@ function O(e) {
   })
 }
 
-function A(e) {
+function p(e) {
   let {
     configMetadataMap: t,
     onConfigurationChange: s,
@@ -439,7 +439,7 @@ function A(e) {
   })
 }
 
-function p(e) {
+function A(e) {
   let {
     configMetadataMap: t,
     onConfigurationChange: s,
@@ -602,12 +602,12 @@ function D(e) {
       });
       break;
     case T.PlatformTypes.EBAY:
-      S = (0, a.jsx)(A, {
+      S = (0, a.jsx)(p, {
         ...I
       });
       break;
     case T.PlatformTypes.TIKTOK:
-      S = (0, a.jsx)(p, {
+      S = (0, a.jsx)(A, {
         ...I
       });
       break;

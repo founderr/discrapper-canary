@@ -25,8 +25,8 @@ var _, c, E, I, T = n("392711"),
 let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "clan"],
   k = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
   B = !1,
-  V = U.FormStates.CLOSED,
-  x = {},
+  x = U.FormStates.CLOSED,
+  V = {},
   F = !1,
   H = null,
   Y = null,
@@ -69,14 +69,14 @@ function ei(e) {
     location: u
   } = e, _ = v.default.getGuild(n);
   if (null == _) return er();
-  a = o = _, V = U.FormStates.OPEN, x = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), W = o.mfaLevel, X = Q, d = null, K = u, es({
+  a = o = _, x = U.FormStates.OPEN, V = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), W = o.mfaLevel, X = Q, d = null, K = u, es({
     section: null !== (t = null != r ? r : i) && void 0 !== t ? t : U.GuildSettingsSections.OVERVIEW,
     subsection: null != s ? s : null
   })
 }
 
 function er() {
-  B = !1, V = U.FormStates.CLOSED, a = o = null, F = !1, H = null, Y = null, j = 0, q = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
+  B = !1, x = U.FormStates.CLOSED, a = o = null, F = !1, H = null, Y = null, j = 0, q = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
 }
 
 function es(e) {
@@ -151,7 +151,7 @@ function ea(e) {
 }
 
 function eo(e) {
-  if (null == o || V !== U.FormStates.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== o.id) return !1;
+  if (null == o || x !== U.FormStates.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== o.id) return !1;
   (0, P.fetchGuildIntegrationsApplications)(o.id)
 }
 class el extends(_ = A.default.Store) {
@@ -186,13 +186,13 @@ class el extends(_ = A.default.Store) {
     return o
   }
   isSubmitting() {
-    return V === U.FormStates.SUBMITTING
+    return x === U.FormStates.SUBMITTING
   }
   isGuildMetadataLoaded() {
     return Z
   }
   getErrors() {
-    return x
+    return V
   }
   getSelectedRoleId() {
     return l
@@ -209,7 +209,7 @@ class el extends(_ = A.default.Store) {
       integrations: et,
       section: i,
       subsection: r,
-      errors: x,
+      errors: V,
       guild: o,
       bans: q,
       bansVersion: J,
@@ -255,7 +255,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
     let {
       guildId: t
     } = e;
-    x = {};
+    V = {};
     let n = v.default.getGuild(t);
     null != n && (a = o = n)
   },
@@ -266,14 +266,14 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
     return u = t, !1
   },
   GUILD_SETTINGS_SUBMIT: function() {
-    V = U.FormStates.SUBMITTING, x = {}
+    x = U.FormStates.SUBMITTING, V = {}
   },
   GUILD_SETTINGS_SUBMIT_SUCCESS: function() {
-    V = U.FormStates.OPEN
+    x = U.FormStates.OPEN
   },
   GUILD_SETTINGS_SUBMIT_FAILURE: function(e) {
     var t;
-    V = U.FormStates.OPEN, i = null != i ? i : U.GuildSettingsSections.OVERVIEW, r = null, x = null !== (t = e.errors) && void 0 !== t ? t : {}
+    x = U.FormStates.OPEN, i = null != i ? i : U.GuildSettingsSections.OVERVIEW, r = null, V = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   GUILD_SETTINGS_SET_SECTION: es,
   GUILD_SETTINGS_SET_SEARCH_QUERY: function(e) {
@@ -407,7 +407,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       reasonsToJoin: null !== (u = E.reasonsToJoin) && void 0 !== u ? u : [],
       socialLinks: null !== (d = E.socialLinks) && void 0 !== d ? d : [],
       about: null !== (_ = E.about) && void 0 !== _ ? _ : ""
-    }, x = {})
+    }, V = {})
   },
   GUILD_DISCOVERY_METADATA_FETCH_FAIL: function() {
     Q = X = z
@@ -444,7 +444,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       guildId: t,
       errors: n
     } = e;
-    null != o && t === o.id && (x = null != n ? n : {})
+    null != o && t === o.id && (V = null != n ? n : {})
   },
   GUILD_UPDATE_DISCOVERY_METADATA: function(e) {
     let {
@@ -473,7 +473,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       guildId: t,
       errors: n
     } = e;
-    null != o && t === o.id && (x = null != n ? n : {})
+    null != o && t === o.id && (V = null != n ? n : {})
   },
   GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: function(e) {
     let {

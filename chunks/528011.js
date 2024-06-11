@@ -18,8 +18,8 @@ var r = n("149765"),
   d = n("709054"),
   f = n("154285"),
   S = n("533244"),
-  p = n("487419"),
-  g = n("676770"),
+  g = n("487419"),
+  p = n("676770"),
   h = n("981631");
 
 function E(e) {
@@ -29,8 +29,8 @@ function E(e) {
     let t = s.default.getGuild(e);
     if (null == t) return !1;
     let n = o.default.getGuildPermissions(t);
-    return null != n && r.hasAny(n, g.IncidentAlertModeratorPermissions)
-  }), l = (0, i.useStateFromStores)([p.default], () => null != e ? p.default.getGuildIncident(e) : null), u = null != l && (0, S.isUnderLockdown)(l);
+    return null != n && r.hasAny(n, p.IncidentAlertModeratorPermissions)
+  }), l = (0, i.useStateFromStores)([g.default], () => null != e ? g.default.getGuildIncident(e) : null), u = null != l && (0, S.isUnderLockdown)(l);
   return {
     shouldShowIncidentActions: n && t,
     incidentData: l,
@@ -42,7 +42,7 @@ function _() {
   var e;
   let t = function(e) {
       let t = a.default.getCurrentUser(),
-        n = p.default.getIncidentsByGuild();
+        n = g.default.getIncidentsByGuild();
       for (let i of d.default.keys(n).map(e => s.default.getGuild(e))) {
         if (null == i) continue;
         let l = n[i.id];
@@ -51,7 +51,7 @@ function _() {
               user: t,
               context: i,
               checkElevated: !1
-            }), g.IncidentAlertModeratorPermissions)) return i.id
+            }), p.IncidentAlertModeratorPermissions)) return i.id
         }
       }
       return null

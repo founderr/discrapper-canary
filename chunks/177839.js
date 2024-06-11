@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("535322"),
   R = s("477734"),
   T = s("86813"),
-  f = s("826026"),
-  I = s("626135"),
+  I = s("826026"),
+  f = s("626135"),
   S = s("881100"),
   m = s("981631"),
   p = s("689938"),
@@ -28,14 +28,14 @@ let M = e => e ? p.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : p
     return (0, a.jsxs)(o.Clickable, {
       onClick: s,
       className: A.customButton,
-      children: [t ? p.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : p.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(f.default, {
+      children: [t ? p.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : p.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(I.default, {
         className: A.arrow
       }) : (0, a.jsx)(T.default, {
         className: A.arrow
       })]
     })
   },
-  N = e => {
+  g = e => {
     let {
       title: t,
       description: s,
@@ -46,10 +46,10 @@ let M = e => e ? p.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : p
       isNew: R = !1,
       isEarlyAccess: T = !1
     } = e, {
-      analyticsLocations: f
+      analyticsLocations: I
     } = (0, d.default)(c.default.PREMIUM_MARKETING_PERK_CARD);
     return (0, a.jsx)(d.AnalyticsLocationProvider, {
-      value: f,
+      value: I,
       children: (0, a.jsxs)("div", {
         className: n()(A.perkCard, r),
         children: [R ? (0, a.jsx)(E.default, {
@@ -70,7 +70,7 @@ let M = e => e ? p.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : p
           }), (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
             className: A.perkCardDescription,
-            children: "function" == typeof s ? s(f) : s
+            children: "function" == typeof s ? s(I) : s
           })]
         })]
       })
@@ -84,7 +84,7 @@ t.default = e => {
     styles: A
   }), E = (0, l.useStateFromStores)([u.default], () => u.default.useReducedMotion), {
     analyticsLocations: T
-  } = (0, d.default)(), f = (0, R.useIsRemixANitroPerk)(), p = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, f ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
+  } = (0, d.default)(), I = (0, R.useIsRemixANitroPerk)(), p = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, I ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
   return (0, a.jsxs)("div", {
     className: n()(A.perksContainer, t, {
       [A.partiallyHidden]: s && !i,
@@ -99,7 +99,7 @@ t.default = e => {
       className: n()(A.perkCardContainer, {
         [A.perkCardContainerExpanded]: i
       }),
-      children: p.map(e => null != e && (0, a.jsx)(N, {
+      children: p.map(e => null != e && (0, a.jsx)(g, {
         ...e
       }, e.title))
     }), s && (0, a.jsxs)(a.Fragment, {
@@ -110,7 +110,7 @@ t.default = e => {
         }),
         children: (0, a.jsx)(C, {
           onClick: () => {
-            I.default.track(m.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+            f.default.track(m.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
               location_stack: T,
               was_expanded: i
             }), c(!i)

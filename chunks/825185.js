@@ -1,41 +1,41 @@
 "use strict";
-a.r(t);
-var l = a("735250");
-a("470079");
-var n = a("960259"),
-  i = a("552075"),
-  s = a("325767");
-t.default = (0, n.replaceIcon)(function(e) {
+r.r(t);
+var a = r("735250");
+r("470079");
+var i = r("960259"),
+  n = r("552075"),
+  l = r("325767");
+t.default = (0, i.replaceIcon)(function(e) {
   let {
     width: t = 18,
-    height: a = 18,
-    color: n = "currentColor",
-    foreground: i,
-    ...d
+    height: r = 18,
+    color: i = "currentColor",
+    foreground: n,
+    ...o
   } = e;
-  return (0, l.jsxs)("svg", {
-    ...(0, s.default)(d),
+  return (0, a.jsxs)("svg", {
+    ...(0, l.default)(o),
     width: t,
-    height: a,
+    height: r,
     viewBox: "0 0 18 18",
-    children: [(0, l.jsx)("path", {
-      fill: n,
-      className: i,
+    children: [(0, a.jsx)("path", {
+      fill: i,
+      className: n,
       d: "M4.5,16.5v-3H3A1.5,1.5,0,0,1,1.5,12V3A1.5,1.5,0,0,1,3,1.5H15A1.5,1.5,0,0,1,16.5,3v9A1.5,1.5,0,0,1,15,13.5H8.5ZM3,3v9H6v1.5L8,12h7V3Z"
-    }), (0, l.jsx)("path", {
-      fill: n,
-      className: i,
+    }), (0, a.jsx)("path", {
+      fill: i,
+      className: n,
       d: "M6.75,4.5H5.25v6h1.5Z"
-    }), (0, l.jsx)("path", {
-      fill: n,
-      className: i,
+    }), (0, a.jsx)("path", {
+      fill: i,
+      className: n,
       d: "M9.75,7.5H8.25v3h1.5Z"
-    }), (0, l.jsx)("path", {
-      fill: n,
-      className: i,
+    }), (0, a.jsx)("path", {
+      fill: i,
+      className: n,
       d: "M12.75,6h-1.5v4.5h1.5Z"
     })]
   })
-}, i.AnalyticsIcon, void 0, {
+}, n.AnalyticsIcon, void 0, {
   size: 18
 })

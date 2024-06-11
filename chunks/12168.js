@@ -28,8 +28,8 @@ var a = n("735250"),
   T = n("354459"),
   I = n("185923"),
   A = n("420212"),
-  x = n("888863");
-let v = I.EmojiIntention.CHAT,
+  v = n("888863");
+let x = I.EmojiIntention.CHAT,
   N = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(_.isNotNullish);
 
 function M(e) {
@@ -65,8 +65,8 @@ function M(e) {
               transform: l.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
             },
             children: (0, a.jsx)(d.default, {
-              className: i()(x.emoji, r, {
-                [x.emojiItemDisabled]: n
+              className: i()(v.emoji, r, {
+                [v.emojiItemDisabled]: n
               }),
               emojiId: t.id,
               emojiName: null == t ? void 0 : t.surrogates,
@@ -88,13 +88,13 @@ function y(e) {
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [t, (0, a.jsx)(u.Clickable, {
-      className: x.dropDownContainer,
+      className: v.dropDownContainer,
       onClick: () => {
         l(!n), s()
       },
       children: (0, a.jsx)(g.default, {
-        className: i()(x.dropDown, {
-          [x.dropDownOpen]: n
+        className: i()(v.dropDown, {
+          [v.dropDownOpen]: n
         })
       })
     })]
@@ -113,14 +113,14 @@ function R(e) {
     emojiSearchProps: E,
     recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, R = (0, C.useUID)(), [L, j] = l.useState(!1), O = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...O, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, R = (0, C.useUID)(), [L, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
-    intention: v
+    intention: x
   })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
   null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
   let D = e => {
-      j(e), null == m || m(e)
+      O(e), null == m || m(e)
     },
     b = (e, t) => {
       if (null == e && t) {
@@ -141,21 +141,21 @@ function R(e) {
         })
       })
     }), (0, a.jsxs)("div", {
-      className: x.container,
+      className: v.container,
       children: [(0, a.jsx)(h.default, {
         analyticsOverride: _,
         channel: t,
-        className: i()(x.animatedPicker, {
-          [x.animatedPickerTall]: L
+        className: i()(v.animatedPicker, {
+          [v.animatedPickerTall]: L
         }),
-        headerClassName: i()(x.emojiPickerHeader, {
-          [x.emojiPickerHeaderExpanded]: L
+        headerClassName: i()(v.emojiPickerHeader, {
+          [v.emojiPickerHeaderExpanded]: L
         }),
         closePopout: s,
         onSelectEmoji: L ? b : () => {},
         shouldHidePickerActions: !L,
         wrapper: "div",
-        pickerIntention: v,
+        pickerIntention: x,
         searchProps: {
           ...E,
           accessory: (0, a.jsx)(y, {
@@ -169,9 +169,9 @@ function R(e) {
           }
         }
       }), (0, a.jsx)("div", {
-        className: x.slotsContainer,
+        className: v.slotsContainer,
         children: (0, a.jsx)("div", {
-          className: i()(x.slots, x.slotsWide),
+          className: i()(v.slots, v.slotsWide),
           children: P.map(e => {
             let n = S.default.isEmojiDisabled({
               emoji: e,
@@ -179,12 +179,12 @@ function R(e) {
               intention: I.EmojiIntention.CHAT
             });
             return (0, a.jsx)("div", {
-              className: x.slot,
+              className: v.slot,
               children: (0, a.jsx)(u.TooltipContainer, {
                 text: e.name,
                 position: "top",
                 "aria-label": e.name,
-                tooltipClassName: x.tooltipContainer,
+                tooltipClassName: v.tooltipContainer,
                 color: u.Tooltip.Colors.BRAND,
                 children: (0, a.jsx)(M, {
                   emoji: e,

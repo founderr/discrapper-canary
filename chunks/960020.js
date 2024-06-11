@@ -9,8 +9,8 @@ var n, a, s, l, o, r, u = i("442837"),
 (s = n || (n = {})).HOVER = "HOVER", s.EXTERNAL = "EXTERNAL", s.RANDOM = "RANDOM";
 let c = {},
   h = {},
-  f = {},
-  m = (e, t) => {
+  m = {},
+  f = (e, t) => {
     let i = null != t.id ? t.id : t.name;
     return "".concat(e, ":").concat(i)
   },
@@ -33,7 +33,7 @@ let c = {},
     }));
     if (Object.keys(a).length >= 5 && "EXTERNAL" === e) {
       for (let e in a)
-        if (null == f[t] || null == f[t][e]) {
+        if (null == m[t] || null == m[t][e]) {
           delete h[t][e], delete a[e];
           break
         }
@@ -46,7 +46,7 @@ class g extends(a = u.default.Store) {
   }
   getEffectForEmojiId(e, t, i) {
     var n;
-    let a = m(t, i);
+    let a = f(t, i);
     return null === (n = h[e]) || void 0 === n ? void 0 : n[a]
   }
 }
@@ -62,7 +62,7 @@ r = "BurstReactionEffectsStore", (o = "displayName") in(l = g) ? Object.definePr
       channelId: i,
       messageId: n,
       emoji: a
-    } = e, s = m(n, a);
+    } = e, s = f(n, a);
     null === (t = h[i]) || void 0 === t || delete t[s]
   },
   BURST_REACTION_EFFECT_PLAY: e => {
@@ -72,13 +72,13 @@ r = "BurstReactionEffectsStore", (o = "displayName") in(l = g) ? Object.definePr
       messageId: s,
       emoji: l,
       key: o
-    } = e, r = m(s, l);
+    } = e, r = f(s, l);
     if (p(o, a) >= 5) return;
     let u = null !== (t = h[a]) && void 0 !== t ? t : {},
-      d = (null !== (i = f[a]) && void 0 !== i ? i : {})[r],
+      d = (null !== (i = m[a]) && void 0 !== i ? i : {})[r],
       c = u[r];
     if ("HOVER" !== o || null == c) {
-      "HOVER" === c && "EXTERNAL" === o && null != d && ("function" == typeof d.destroy && d.destroy(), null === (n = f[a]) || void 0 === n || delete n[r], c = void 0);
+      "HOVER" === c && "EXTERNAL" === o && null != d && ("function" == typeof d.destroy && d.destroy(), null === (n = m[a]) || void 0 === n || delete n[r], c = void 0);
       null == c && (null != h[a] ? h[a][r] = o : h[a] = {
         [r]: o
       })
@@ -90,8 +90,8 @@ r = "BurstReactionEffectsStore", (o = "displayName") in(l = g) ? Object.definePr
       messageId: i,
       emoji: n,
       animation: a
-    } = e, s = m(i, n);
-    null == f[t] && (f[t] = {}), f[t][s] = a
+    } = e, s = f(i, n);
+    null == m[t] && (m[t] = {}), m[t][s] = a
   },
   BURST_REACTION_PICKER_ANIMATION_ADD: e => {
     let {

@@ -62,10 +62,10 @@ t.default = e => {
     onSelectChild: w,
     onModalClose: k,
     onSubmit: B,
-    multiSelect: V,
-    reportId: x,
+    multiSelect: x,
+    reportId: V,
     textInput: F
-  } = e, H = U(t, "checkbox"), Y = U(t, "text_line_resource"), j = b(t, "external_link"), W = b(t, "free_text"), K = b(t, "dropdown"), [z, Z] = r.useState(!1), [Q, X] = r.useState(!1), [q, J] = r.useState(""), [$, ee] = r.useState(() => ({})), [et, en] = r.useState(() => ({})), [ei, er] = r.useState((0, o.areRequiredElementsUnfilled)(W, K, H, F, V)), es = function(e, t) {
+  } = e, H = U(t, "checkbox"), Y = U(t, "text_line_resource"), j = b(t, "external_link"), W = b(t, "free_text"), K = b(t, "dropdown"), [z, Z] = r.useState(!1), [Q, X] = r.useState(!1), [q, J] = r.useState(""), [$, ee] = r.useState(() => ({})), [et, en] = r.useState(() => ({})), [ei, er] = r.useState((0, o.areRequiredElementsUnfilled)(W, K, H, F, x)), es = function(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
       i = {
         ...et
@@ -86,8 +86,8 @@ t.default = e => {
     })
   }, [t, w, H, $, et, W, K]);
   r.useEffect(() => {
-    null != V && ee(V), null != F && en(F)
-  }, [V, F]);
+    null != x && ee(x), null != F && en(F)
+  }, [x, F]);
   let eo = e => {
       if (e === M.AbortCodes.INVALID_FORM_BODY) J(y.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
       else J(y.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
@@ -147,16 +147,16 @@ t.default = e => {
         children: y.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
       }), (null != U(t, "block_users") || null != U(t, "mute_users")) && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, i.jsx)(u.default, {
         userId: "user" === n.name ? n.record.id : n.record.author.id,
-        reportId: x,
+        reportId: V,
         reportName: n.name,
         showBlock: null != U(t, "block_users"),
         showMute: null != U(t, "mute_users")
       }), null != U(t, "delete_message") && "message" === n.name && (0, i.jsx)(c.default, {
         message: n.record,
-        reportId: x
+        reportId: V
       }), null != U(t, "leave_guild") && "guild" === n.name && (0, i.jsx)(p.default, {
         guildId: n.record.id,
-        reportId: x
+        reportId: V
       }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(R.default, {
         stageInstance: n.record
       }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(A.default, {

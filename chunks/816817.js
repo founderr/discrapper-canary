@@ -28,7 +28,7 @@ t.default = function(e) {
     memberCount: x,
     presenceCount: L,
     className: O
-  } = e, A = (0, d.default)(), [p, M] = l.useState(!1);
+  } = e, p = (0, d.default)(), [A, M] = l.useState(!1);
   if (null == n || C) return (0, a.jsx)("div", {
     className: i()(O, S.card, S.cardPlaceholder, {
       [S.cardSmall]: h,
@@ -41,7 +41,7 @@ t.default = function(e) {
     id: n.id,
     splash: n.discoverySplash,
     size: 240 * (0, u.getDevicePixelRatio)()
-  }), j = (0, r.isThemeDark)(A) ? f : m, G = null !== (t = _.default.getGuildIconURL({
+  }), j = (0, r.isThemeDark)(p) ? f : m, G = null !== (t = _.default.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 40
@@ -69,7 +69,7 @@ t.default = function(e) {
     className: i()(O, S.card, {
       [S.cardSmall]: h,
       [S.cardDisabled]: g,
-      [S.splashLoaded]: p
+      [S.splashLoaded]: A
     }),
     children: [(0, a.jsxs)("div", {
       className: S.cardHeader,

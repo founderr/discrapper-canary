@@ -43,13 +43,13 @@ u.prototype._update = function(e) {
       F = t[S - 14],
       B = t[S - 14 + 1],
       U = t[S - 32],
-      Y = t[S - 32 + 1],
-      j = I + B | 0,
-      z = N + F + p(j, I) | 0;
-    z = z + L + p(j = j + P | 0, P) | 0, z = z + U + p(j = j + Y | 0, Y) | 0, t[S] = z, t[S + 1] = j
+      j = t[S - 32 + 1],
+      Y = I + B | 0,
+      z = N + F + p(Y, I) | 0;
+    z = z + L + p(Y = Y + P | 0, P) | 0, z = z + U + p(Y = Y + j | 0, j) | 0, t[S] = z, t[S + 1] = Y
   }
   for (var H = 0; H < 160; H += 2) {
-    z = t[H], j = t[H + 1];
+    z = t[H], Y = t[H + 1];
     var G, V, $, W, K, q, Q, Z, X, J, ee = (G = n) & (V = r) | i & (G | V);
     var et = ($ = h) & (W = m) | g & ($ | W),
       en = d(n, h),
@@ -62,7 +62,7 @@ u.prototype._update = function(e) {
     var ec = (Z = b, X = v, (J = y) ^ Z & (X ^ J)),
       el = E + ea | 0,
       ed = l + ei + p(el, E) | 0;
-    ed = ed + eu + p(el = el + ec | 0, ec) | 0, ed = ed + eo + p(el = el + es | 0, es) | 0, ed = ed + z + p(el = el + j | 0, j) | 0;
+    ed = ed + eu + p(el = el + ec | 0, ec) | 0, ed = ed + eo + p(el = el + es | 0, es) | 0, ed = ed + z + p(el = el + Y | 0, Y) | 0;
     var ef = er + et | 0,
       ep = en + ee + p(ef, er) | 0;
     l = c, E = y, c = u, y = v, u = s, v = b, s = a + ed + p(b = _ + el | 0, _) | 0, a = i, _ = g, i = r, g = m, r = n, m = h, n = ed + ep + p(h = el + ef | 0, el) | 0

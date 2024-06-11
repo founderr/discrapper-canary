@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return c
   },
   PreviewPhoneRequirementFormField: function() {
-    return o
+    return d
   }
 });
 var l = s("735250");
@@ -14,22 +14,22 @@ var n = s("481060"),
   a = s("736921"),
   r = s("489813"),
   u = s("815660"),
-  d = s("689938");
+  o = s("689938");
 
-function o() {
+function d() {
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsx)(r.RequirementWithActionRenderer, {
       icon: a.default,
-      text: d.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL,
-      footnote: d.default.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
+      text: o.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL,
+      footnote: o.default.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
       meetsRequirement: !1,
       children: (0, l.jsx)(n.Tooltip, {
-        text: d.default.Messages.MEMBER_VERIFICATION_VERIFICATION_FIELD_SETTINGS_TOOLTIP,
+        text: o.default.Messages.MEMBER_VERIFICATION_VERIFICATION_FIELD_SETTINGS_TOOLTIP,
         children: e => (0, l.jsx)(n.Button, {
           ...e,
           size: n.Button.Sizes.SMALL,
           disabled: !0,
-          children: d.default.Messages.VERIFY
+          children: o.default.Messages.VERIFY
         })
       })
     })
@@ -39,12 +39,12 @@ function o() {
 function c(e) {
   let {
     isUserVerified: t
-  } = e, o = t ? d.default.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED : d.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL;
+  } = e, d = t ? o.default.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED : o.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL;
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsx)(r.RequirementWithActionRenderer, {
       icon: a.default,
-      text: o,
-      footnote: d.default.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
+      text: d,
+      footnote: o.default.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
       meetsRequirement: t,
       children: (0, l.jsx)(n.Button, {
         size: n.Button.Sizes.SMALL,
@@ -61,7 +61,7 @@ function c(e) {
             modalKey: u.PHONE_VERIFICATION_MODAL_KEY
           })
         },
-        children: d.default.Messages.VERIFY
+        children: o.default.Messages.VERIFY
       })
     })
   })

@@ -1,63 +1,63 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
-    return f
+    return g
   }
-}), A("47120");
-var a = A("735250"),
-  l = A("470079"),
-  s = A("120356"),
-  n = A.n(s),
-  r = A("481060"),
-  i = A("153124"),
-  o = A("127384"),
-  d = A("880008"),
-  u = A("689938"),
-  c = A("28351");
+}), t("47120");
+var a = t("735250"),
+  l = t("470079"),
+  s = t("120356"),
+  r = t.n(s),
+  n = t("481060"),
+  i = t("153124"),
+  o = t("127384"),
+  d = t("880008"),
+  u = t("689938"),
+  c = t("28351");
 
-function f(e) {
+function g(e) {
   let {
-    disabled: t = !1,
-    disabledTooltip: A,
+    disabled: A = !1,
+    disabledTooltip: t,
     published: s,
-    submitting: f = !1,
-    onClick: g
+    submitting: g = !1,
+    onClick: f
   } = e, C = (0, i.useUID)(), [h, T] = l.useState(s);
   return l.useEffect(() => {
     T(e => e || s)
   }, [s]), (0, a.jsxs)("div", {
-    className: n()({
-      [c.publishable]: !t && !s,
+    className: r()({
+      [c.publishable]: !A && !s,
       [c.wasEverPublished]: h
     }, c.container),
     children: [(0, a.jsxs)("div", {
       className: c.explanationColumn,
-      children: [(0, a.jsx)(r.Heading, {
+      children: [(0, a.jsx)(n.Heading, {
         variant: "text-sm/semibold",
         color: "header-primary",
         children: s ? u.default.Messages.GUILD_PRODUCT_UNPUBLISH_TITLE : u.default.Messages.GUILD_PRODUCT_PUBLISH_TITLE
-      }), (0, a.jsx)(r.Text, {
+      }), (0, a.jsx)(n.Text, {
         id: C,
         variant: "text-sm/normal",
         color: "text-normal",
         children: s ? u.default.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION : u.default.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
       })]
-    }), (0, a.jsx)(r.Tooltip, {
-      text: t ? A : void 0,
-      children: e => (0, a.jsxs)(r.Button, {
+    }), (0, a.jsx)(n.Tooltip, {
+      text: A ? t : void 0,
+      children: e => (0, a.jsxs)(n.Button, {
         ...e,
-        className: n()(c.button, {
+        className: r()(c.button, {
           [c.wasEverPublished]: h,
           [c.publishButton]: !s,
-          [c.disabledPublishButton]: t
+          [c.disabledPublishButton]: A
         }),
         innerClassName: c.buttonContents,
-        color: s ? r.Button.Colors.RED : r.Button.Colors.CUSTOM,
+        color: s ? n.Button.Colors.RED : n.Button.Colors.CUSTOM,
         "aria-describedby": C,
-        "aria-disabled": t,
+        "aria-disabled": A,
         grow: !1,
-        onClick: t ? void 0 : g,
-        submitting: f,
+        onClick: A ? void 0 : f,
+        submitting: g,
         children: [s ? u.default.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON : u.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON, s ? (0, a.jsx)(d.default, {
           className: c.buttonIcon,
           color: "currentColor",

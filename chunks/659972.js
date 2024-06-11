@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   default: function() {
-    return T
+    return f
   }
 });
 var a, l, s = n("735250");
@@ -17,46 +17,46 @@ var i = n("120356"),
   c = n("940627"),
   E = n("346656"),
   _ = n("170039"),
-  f = n("38981"),
-  S = n("317112");
+  S = n("38981"),
+  T = n("317112");
 
-function T(e) {
+function f(e) {
   let {
     guild: t,
     stageInstance: n,
     showGuildPopout: a,
     setShowGuildPopout: l,
     handleGuildNameClick: i,
-    source: T,
-    speakers: h,
-    speakerCount: N,
+    source: f,
+    speakers: N,
+    speakerCount: h,
     audienceCount: g,
-    channelName: v
-  } = e, I = t.id;
+    channelName: I
+  } = e, m = t.id;
   return (0, s.jsx)("div", {
-    className: S.contentContainer,
+    className: T.contentContainer,
     children: (0, s.jsxs)("div", {
-      className: S.headerContainer,
+      className: T.headerContainer,
       children: [(0, s.jsxs)("div", {
-        className: S.guildInfoContainer,
+        className: T.guildInfoContainer,
         children: [(0, s.jsx)(u.default, {
-          guildId: I,
+          guildId: m,
           shouldShow: a,
           onRequestClose: () => l(!1),
           children: () => (0, s.jsxs)(d.Clickable, {
-            className: S.flexContainerRow,
+            className: T.flexContainerRow,
             onClick: i,
             children: [(0, s.jsx)(E.default, {
               guild: t,
               size: E.default.Sizes.MINI,
-              className: S.guildIcon
+              className: T.guildIcon
             }), (0, s.jsxs)("div", {
-              className: S.flexContainerRow,
+              className: T.flexContainerRow,
               children: [(0, s.jsx)(d.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: r()(S.guildName, {
-                  [S.disabled]: null == i
+                className: r()(T.guildName, {
+                  [T.disabled]: null == i
                 }),
                 children: t.name
               }), (0, s.jsx)(c.default, {
@@ -65,48 +65,48 @@ function T(e) {
             })]
           })
         }), (0, s.jsxs)("div", {
-          className: S.rightJustifiedContent,
-          children: [6 === T && (0, s.jsx)("div", {
-            className: S.featuredTag,
+          className: T.rightJustifiedContent,
+          children: [6 === f && (0, s.jsx)("div", {
+            className: T.featuredTag,
             children: (0, s.jsx)(d.Text, {
               variant: "text-sm/normal",
-              className: S.featuredTagText,
+              className: T.featuredTagText,
               children: "Featured"
             })
-          }), (0, s.jsx)(f.default, {
+          }), (0, s.jsx)(S.default, {
             count: g,
-            className: S.__invalid_audienceCount
+            className: T.__invalid_audienceCount
           })]
         })]
       }), (0, s.jsx)(d.Text, {
         color: "header-primary",
         variant: "text-lg/semibold",
-        className: S.topicText,
+        className: T.topicText,
         children: n.topic
       }), (0, s.jsx)(d.Text, {
         color: "header-secondary",
-        className: S.description,
+        className: T.description,
         variant: "text-sm/normal",
         children: n.description
       }), (0, s.jsx)(o.default, {
         guild: t,
-        speakers: h,
-        speakerCount: N,
-        className: S.speakers
-      }), null != v && (0, s.jsxs)(s.Fragment, {
+        speakers: N,
+        speakerCount: h,
+        className: T.speakers
+      }), null != I && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)("hr", {
-          className: S.divider
+          className: T.divider
         }), (0, s.jsxs)("div", {
-          className: S.footer,
+          className: T.footer,
           children: [(0, s.jsx)(_.default, {
             width: 20,
             height: 20,
-            className: S.icon
+            className: T.icon
           }), (0, s.jsx)(d.Text, {
             color: "header-secondary",
-            className: S.__invalid_label,
+            className: T.__invalid_label,
             variant: "text-sm/normal",
-            children: v
+            children: I
           })]
         })]
       })]

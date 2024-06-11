@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return x
   },
   getRewardingTenureCtaDescription: function() {
-    return N
+    return g
   },
   getRewardingTenureDescription: function() {
     return C
@@ -16,7 +16,7 @@ s.r(t), s.d(t, {
     return A
   },
   getThemedImage: function() {
-    return g
+    return N
   },
   useIsPremiumSubscriber: function() {
     return h
@@ -38,8 +38,8 @@ var a = s("278074"),
   E = s("915296"),
   R = s("650032"),
   T = s("781922"),
-  f = s("885462"),
-  I = s("391110"),
+  I = s("885462"),
+  f = s("391110"),
   S = s("474936"),
   m = s("735825"),
   p = s("689938");
@@ -80,7 +80,7 @@ let A = e => {
     }
   };
 
-function N(e, t) {
+function g(e, t) {
   switch (e) {
     case m.NitroRewardStatus.PENDING:
       return null != t ? p.default.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
@@ -94,7 +94,7 @@ function N(e, t) {
       return ""
   }
 }
-let g = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
+let N = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
   P = "getWhatsNewRow",
   O = e => {
     let {
@@ -121,8 +121,8 @@ let g = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
     }, {
       autoTrackExposure: !1
     }), {
-      shouldShowCard: I
-    } = f.ServerProfilesExperiment.getCurrentConfig({
+      shouldShowCard: f
+    } = I.ServerProfilesExperiment.getCurrentConfig({
       location: P
     }, {
       autoTrackExposure: !1
@@ -153,11 +153,11 @@ let g = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
     }), M = D();
     return null != s.freeBoost && !0 === r && o({
       card: s.freeBoost
-    }), a && M && E && I ? (0 === t.length && u(), o({
+    }), a && M && E && f ? (0 === t.length && u(), o({
       card: s.newAppStylesUpdateJune2024
     }), o({
       card: s.serverProfiles
-    })) : a && !M && E && I && (S && m && !p && !A ? o({
+    })) : a && !M && E && f && (S && m && !p && !A ? o({
       card: s.referralProgram
     }) : u(), o({
       card: s.newAppStylesUpdateJune2024
@@ -180,7 +180,7 @@ let g = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       isPremiumSubscriber: o
     } = e, u = [];
     switch (s) {
-      case I.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
+      case f.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
         u = (0, a.match)({
           tileOrderVariant: l,
           isPremiumSubscriber: o
@@ -192,7 +192,7 @@ let g = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
           isPremiumSubscriber: !1
         }, () => [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]).otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
         break;
-      case I.PerksDiscoverabilityCardSection.WHATS_NEW:
+      case f.PerksDiscoverabilityCardSection.WHATS_NEW:
         u = O({
           cards: u,
           perksCards: t,
@@ -201,7 +201,7 @@ let g = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
           shopMarketingVariation: r
         });
         break;
-      case I.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW:
+      case f.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW:
         u = (0, a.match)({
           tileOrderVariant: l,
           isPremiumSubscriber: o
@@ -213,7 +213,7 @@ let g = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
           isPremiumSubscriber: !1
         }, () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]).otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
         break;
-      case I.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW:
+      case f.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW:
         u = (0, a.match)({
           tileOrderVariant: l,
           isPremiumSubscriber: o
@@ -225,7 +225,7 @@ let g = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
           isPremiumSubscriber: !1
         }, () => [t.customSoundsEverywhere, t.specialStickerAccess]).otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
         break;
-      case I.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW:
+      case f.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW:
         u = [t.entranceSoundsSeeAllVariation, t.badge]
     }
     return !i && (u = u.filter(e => !e.hideOnNarrowScreen)), u

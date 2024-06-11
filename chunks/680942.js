@@ -12,7 +12,7 @@ var a = s("735250"),
   f = s("231338"),
   C = s("689938"),
   E = s("46309");
-let p = {
+let m = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -62,16 +62,16 @@ t.default = e => {
   let {
     product: t,
     returnRef: s,
-    onSuccess: m,
-    tooltipDelay: g,
-    isGiftEasterEggEnabled: S,
+    onSuccess: p,
+    tooltipDelay: S,
+    isGiftEasterEggEnabled: g,
     disableCustomColor: h = !1
   } = e, {
     analyticsLocations: I
   } = (0, i.default)(), _ = l.useRef(null), T = (0, r.default)(_), x = h ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
   return (0, d.isBundleProduct)(t) ? null : (0, a.jsx)(n.Tooltip, {
     text: C.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: g,
+    delay: S,
     children: e => (0, a.jsx)(n.Button, {
       ...e,
       buttonRef: _,
@@ -87,16 +87,16 @@ t.default = e => {
           isGift: !0,
           analyticsLocations: I,
           returnRef: s,
-          onClose: null != m ? e => {
-            e && m()
+          onClose: null != p ? e => {
+            e && p()
           } : void 0
         })
       },
-      children: S ? (0, a.jsx)(o.SeasonalGiftIcon, {
+      children: g ? (0, a.jsx)(o.SeasonalGiftIcon, {
         hovered: T,
         isContentDismissed: !0,
         themeOverride: x,
-        boxColors: p
+        boxColors: m
       }) : (0, a.jsx)(c.default, {
         width: 24,
         height: 24

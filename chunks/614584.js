@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return v
   }
 });
 var a = n("735250"),
@@ -29,16 +29,16 @@ let A = l.memo(function(e) {
   let {
     baseMessage: n,
     referencedMessage: A,
-    channel: x,
-    compact: v = !1,
+    channel: v,
+    compact: x = !1,
     referencedUsernameProfile: N,
     referencedAvatarProfile: M,
     setPopout: y
-  } = e, R = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, g.useNullableMessageAuthor)(R), j = (0, u.useActiveKeywordFiltersCacheKey)(), O = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
+  } = e, R = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, g.useNullableMessageAuthor)(R), O = (0, u.useActiveKeywordFiltersCacheKey)(), j = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
     if (null == R) return null;
     let e = (0, r.default)(R);
     if (e.type === T.MessageTypes.USER_JOIN) {
-      let t = E.default.getWelcomeMessageKind(x.guild_id);
+      let t = E.default.getWelcomeMessageKind(v.guild_id);
       return (0, i.astToString)(E.default.getSystemMessageUserJoin(e.id, t).astFormat({
         username: null != L ? L.nick : e.author.username,
         usernameHook: e => e
@@ -46,7 +46,7 @@ let A = l.memo(function(e) {
     }
     if (e.type === T.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, o.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
       username: null != L ? L.nick : e.author.username,
-      guildId: null == x ? void 0 : x.guild_id,
+      guildId: null == v ? void 0 : v.guild_id,
       roleSubscriptionData: e.roleSubscriptionData
     }));
     if (e.type === T.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, c.getApplicationSubscriptionSystemMessageASTContent)({
@@ -66,9 +66,9 @@ let A = l.memo(function(e) {
       let t = {
           formatInline: !0,
           allowLinks: !0,
-          shouldFilterKeywords: null != j
+          shouldFilterKeywords: null != O
         },
-        n = e.isFirstMessageInForumPost(x) ? {
+        n = e.isFirstMessageInForumPost(v) ? {
           ...t,
           noStyleAndInteraction: !0,
           allowHeading: !0,
@@ -76,24 +76,24 @@ let A = l.memo(function(e) {
         } : {
           ...t,
           formatInline: !0,
-          allowHeading: O,
-          allowList: O
+          allowHeading: j,
+          allowList: j
         };
       return (0, C.default)(e, n).content
     }
     return null
-  }, [R, L, x, O, j]), D = (0, s.useStateFromStores)([m.default], () => null != R && m.default.isBlocked(R.author.id), [R]), b = (0, _.useContextMenuUser)(null == R ? void 0 : R.author.id, x.id), U = (0, _.useClickReply)(n, R, D), F = (0, _.useClickReferencedMessageAuthorUsername)(R, x, N, y), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, y), k = l.useCallback(() => y({
+  }, [R, L, v, j, O]), D = (0, s.useStateFromStores)([m.default], () => null != R && m.default.isBlocked(R.author.id), [R]), b = (0, _.useContextMenuUser)(null == R ? void 0 : R.author.id, v.id), U = (0, _.useClickReply)(n, R, D), F = (0, _.useClickReferencedMessageAuthorUsername)(R, v, N, y), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, y), k = l.useCallback(() => y({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
   }), [y]), H = (0, g.useNullableMessageAuthor)(n);
   return (0, a.jsx)(p.default, {
     repliedAuthor: L,
     baseMessage: n,
-    channel: x,
+    channel: v,
     baseAuthor: H,
     referencedMessage: A,
     content: P,
-    compact: v,
+    compact: x,
     isReplyAuthorBlocked: D,
     showAvatarPopout: M,
     showUsernamePopout: N,
@@ -106,7 +106,7 @@ let A = l.memo(function(e) {
   })
 });
 
-function x(e, t, n, l, s) {
+function v(e, t, n, l, s) {
   let {
     message: i,
     channel: r,

@@ -31,16 +31,16 @@ function T(e) {
   }, [S]), l.useEffect(() => () => {
     clearTimeout(O.current)
   }, []);
-  let A = f.find(e => e.value === g),
-    p = e => {
+  let p = f.find(e => e.value === g),
+    A = e => {
       !e.disabled && e.value !== g && (L(!0), null == N || N(e), h(e.value), O.current = setTimeout(() => {
         L(!1), R(!1)
       }, 1e3))
     };
   return (0, a.jsx)(c.default, {
-    title: C ? T : null !== (t = null == A ? void 0 : A.title) && void 0 !== t ? t : T,
-    description: C ? "(".concat(null !== (s = null == A ? void 0 : A.title) && void 0 !== s ? s : _.default.Messages.NONE, ")") : null !== (n = null == A ? void 0 : A.description) && void 0 !== n ? n : "",
-    highlightColor: C ? u.HighlightColors.NONE : null == A ? void 0 : A.highlightColor,
+    title: C ? T : null !== (t = null == p ? void 0 : p.title) && void 0 !== t ? t : T,
+    description: C ? "(".concat(null !== (s = null == p ? void 0 : p.title) && void 0 !== s ? s : _.default.Messages.NONE, ")") : null !== (n = null == p ? void 0 : p.description) && void 0 !== n ? n : "",
+    highlightColor: C ? u.HighlightColors.NONE : null == p ? void 0 : p.highlightColor,
     action: (0, a.jsx)(r.Button, {
       look: r.Button.Looks.LINK,
       size: r.Button.Sizes.MIN,
@@ -60,7 +60,7 @@ function T(e) {
       }) : (0, a.jsx)(o.default, {
         className: I.radioItem
       }),
-      onClick: () => p(e),
+      onClick: () => A(e),
       disabled: e.disabled
     }, "".concat(e.title, "-").concat(t)))
   })

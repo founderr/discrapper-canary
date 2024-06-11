@@ -1,27 +1,27 @@
 "use strict";
-n.r(e), n.d(e, {
+e.r(i), e.d(i, {
   updateGuildPreset: function() {
-    return d
+    return r
   }
-}), n("399606");
-var i = n("92114"),
-  l = n("9156"),
-  o = n("621600"),
-  u = n("113449"),
-  s = n("686660"),
-  a = n("981631"),
-  r = n("526761");
+}), e("399606");
+var n = e("92114"),
+  a = e("9156"),
+  u = e("621600"),
+  s = e("113449"),
+  o = e("686660"),
+  l = e("981631"),
+  c = e("526761");
 
-function d(t, e) {
-  let n = l.default.getGuildFlags(t);
-  e === s.Presets.ALL_MESSAGES ? i.default.updateGuildNotificationSettings(t, {
-    message_notifications: a.UserNotificationSettings.ALL_MESSAGES,
-    flags: (0, u.withGuildUnreadFlags)(n, r.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)
-  }, o.NotificationLabels.PresetAll) : e === s.Presets.MENTIONS ? i.default.updateGuildNotificationSettings(t, {
-    message_notifications: a.UserNotificationSettings.ONLY_MENTIONS,
-    flags: (0, u.withGuildUnreadFlags)(n, r.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
-  }, o.NotificationLabels.PresetMentions) : e === s.Presets.NOTHING && i.default.updateGuildNotificationSettings(t, {
-    message_notifications: a.UserNotificationSettings.NO_MESSAGES,
-    flags: (0, u.withGuildUnreadFlags)(n, r.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
-  }, o.NotificationLabels.PresetNothing)
+function r(t, i) {
+  let e = a.default.getGuildFlags(t);
+  i === o.Presets.ALL_MESSAGES ? n.default.updateGuildNotificationSettings(t, {
+    message_notifications: l.UserNotificationSettings.ALL_MESSAGES,
+    flags: (0, s.withGuildUnreadFlags)(e, c.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)
+  }, u.NotificationLabels.PresetAll) : i === o.Presets.MENTIONS ? n.default.updateGuildNotificationSettings(t, {
+    message_notifications: l.UserNotificationSettings.ONLY_MENTIONS,
+    flags: (0, s.withGuildUnreadFlags)(e, c.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+  }, u.NotificationLabels.PresetMentions) : i === o.Presets.NOTHING && n.default.updateGuildNotificationSettings(t, {
+    message_notifications: l.UserNotificationSettings.NO_MESSAGES,
+    flags: (0, s.withGuildUnreadFlags)(e, c.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+  }, u.NotificationLabels.PresetNothing)
 }

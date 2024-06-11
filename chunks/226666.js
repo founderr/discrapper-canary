@@ -1,18 +1,18 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("557011"),
-  l = function() {
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("844303"),
+  o = n("557011"),
+  s = function() {
     function e(e, t) {
-      for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+      for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
       }
     }
-    return function(t, r, n) {
-      return r && e(t.prototype, r), n && e(t, n), t
+    return function(t, n, r) {
+      return n && e(t.prototype, n), r && e(t, r), t
     }
   }();
 
@@ -20,20 +20,20 @@ function u(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
-var s = function(e) {
+var c = function(e) {
   function t() {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, t);
-    for (var e, r, n, a = arguments.length, o = Array(a), l = 0; l < a; l++) o[l] = arguments[l];
-    return r = n = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o))), n.handleChange = function(e) {
-      var t = i.calculateChange(e, n.props.direction, n.props.hsl, n.container);
-      t && "function" == typeof n.props.onChange && n.props.onChange(t, e)
-    }, n.handleMouseDown = function(e) {
-      n.handleChange(e), window.addEventListener("mousemove", n.handleChange), window.addEventListener("mouseup", n.handleMouseUp)
-    }, n.handleMouseUp = function() {
-      n.unbindEventListeners()
-    }, u(n, r)
+    for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
+    return n = r = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a))), r.handleChange = function(e) {
+      var t = o.calculateChange(e, r.props.direction, r.props.hsl, r.container);
+      t && "function" == typeof r.props.onChange && r.props.onChange(t, e)
+    }, r.handleMouseDown = function(e) {
+      r.handleChange(e), window.addEventListener("mousemove", r.handleChange), window.addEventListener("mouseup", r.handleMouseUp)
+    }, r.handleMouseUp = function() {
+      r.unbindEventListeners()
+    }, u(r, n)
   }
   return ! function(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -45,7 +45,7 @@ var s = function(e) {
         configurable: !0
       }
     }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-  }(t, e), l(t, [{
+  }(t, e), s(t, [{
     key: "componentWillUnmount",
     value: function() {
       this.unbindEventListeners()
@@ -60,8 +60,8 @@ var s = function(e) {
     value: function() {
       var e = this,
         t = this.props.direction,
-        r = void 0 === t ? "horizontal" : t,
-        n = (0, o.default)({
+        n = void 0 === t ? "horizontal" : t,
+        r = (0, a.default)({
           default: {
             hue: {
               absolute: "0px 0px 0px 0px",
@@ -95,25 +95,25 @@ var s = function(e) {
             }
           }
         }, {
-          vertical: "vertical" === r
+          vertical: "vertical" === n
         });
-      return a().createElement("div", {
-        style: n.hue
-      }, a().createElement("div", {
-        className: "hue-" + r,
-        style: n.container,
+      return i().createElement("div", {
+        style: r.hue
+      }, i().createElement("div", {
+        className: "hue-" + n,
+        style: r.container,
         ref: function(t) {
           return e.container = t
         },
         onMouseDown: this.handleMouseDown,
         onTouchMove: this.handleChange,
         onTouchStart: this.handleChange
-      }, a().createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), a().createElement("div", {
-        style: n.pointer
-      }, this.props.pointer ? a().createElement(this.props.pointer, this.props) : a().createElement("div", {
-        style: n.slider
+      }, i().createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), i().createElement("div", {
+        style: r.pointer
+      }, this.props.pointer ? i().createElement(this.props.pointer, this.props) : i().createElement("div", {
+        style: r.slider
       }))))
     }
   }]), t
-}(n.PureComponent || n.Component);
-t.default = s
+}(r.PureComponent || r.Component);
+t.default = c

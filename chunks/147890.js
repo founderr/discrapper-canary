@@ -1,116 +1,116 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   goHome: function() {
-    return s
-  },
-  goSearch: function() {
-    return f
-  },
-  goToAppDirectory: function() {
-    return a
-  },
-  goToApplication: function() {
     return u
   },
-  goToApplicationSection: function() {
+  goSearch: function() {
+    return c
+  },
+  goToAppDirectory: function() {
+    return l
+  },
+  goToApplication: function() {
     return d
   },
+  goToApplicationSection: function() {
+    return _
+  },
   goToCategory: function() {
-    return C
+    return E
   },
   replaceAppDirectoryURLWith: function() {
-    return h
+    return I
   }
 }), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
-var r = n("703656"),
-  i = n("626135"),
-  c = n("34674"),
-  o = n("132871"),
-  l = n("981631");
-let a = t => {
+var i = n("703656"),
+  r = n("626135"),
+  s = n("34674"),
+  a = n("132871"),
+  o = n("981631");
+let l = e => {
     let {
-      view: e = o.ApplicationDirectoryViews.HOME,
+      view: t = a.ApplicationDirectoryViews.HOME,
       guildId: n,
-      applicationId: r,
-      applicationSection: c,
-      entrypoint: a
-    } = t, C = {
-      ...a,
+      applicationId: i,
+      applicationSection: s,
+      entrypoint: l
+    } = e, E = {
+      ...l,
       pathname: window.location.pathname
     };
-    switch (i.default.track(l.AnalyticEvents.APP_DIRECTORY_OPENED, {
-        source: null == C ? void 0 : C.name
-      }), (0, o.resetApplicationDirectoryHistory)(), (0, o.setEntrypoint)(C), null != n && (0, o.setGuildId)(n), e === o.ApplicationDirectoryViews.APPLICATION && null == r && (e = o.ApplicationDirectoryViews.HOME), e) {
-      case o.ApplicationDirectoryViews.HOME:
-        s();
+    switch (r.default.track(o.AnalyticEvents.APP_DIRECTORY_OPENED, {
+        source: null == E ? void 0 : E.name
+      }), (0, a.resetApplicationDirectoryHistory)(), (0, a.setEntrypoint)(E), null != n && (0, a.setGuildId)(n), t === a.ApplicationDirectoryViews.APPLICATION && null == i && (t = a.ApplicationDirectoryViews.HOME), t) {
+      case a.ApplicationDirectoryViews.HOME:
+        u();
         break;
-      case o.ApplicationDirectoryViews.SEARCH:
-        f();
+      case a.ApplicationDirectoryViews.SEARCH:
+        c();
         break;
-      case o.ApplicationDirectoryViews.APPLICATION:
-        null != r && (null != c ? d({
-          applicationId: r,
-          section: c
-        }) : u({
-          applicationId: r
+      case a.ApplicationDirectoryViews.APPLICATION:
+        null != i && (null != s ? _({
+          applicationId: i,
+          section: s
+        }) : d({
+          applicationId: i
         }))
     }
   },
-  s = () => {
-    let t = {
-      previousView: (0, o.getCurrentView)()
+  u = () => {
+    let e = {
+      previousView: (0, a.getCurrentView)()
     };
-    (0, r.transitionTo)(l.Routes.APPLICATION_DIRECTORY, {
-      state: t
+    (0, i.transitionTo)(o.Routes.APPLICATION_DIRECTORY, {
+      state: e
     })
   },
-  u = t => {
+  d = e => {
     let {
-      applicationId: e
-    } = t, n = {
-      previousView: (0, o.getCurrentView)()
+      applicationId: t
+    } = e, n = {
+      previousView: (0, a.getCurrentView)()
     };
-    (0, r.transitionTo)(l.Routes.APPLICATION_DIRECTORY_PROFILE(e), {
+    (0, i.transitionTo)(o.Routes.APPLICATION_DIRECTORY_PROFILE(t), {
       state: n
     })
   },
-  d = t => {
+  _ = e => {
     let {
-      applicationId: e,
+      applicationId: t,
       section: n
-    } = t, i = {
-      previousView: (0, o.getCurrentView)()
+    } = e, r = {
+      previousView: (0, a.getCurrentView)()
     };
-    (0, r.transitionTo)(l.Routes.APPLICATION_DIRECTORY_PROFILE_SECTION(e, n), {
-      state: i
+    (0, i.transitionTo)(o.Routes.APPLICATION_DIRECTORY_PROFILE_SECTION(t, n), {
+      state: r
     })
   },
-  f = function() {
+  c = function() {
     let {
-      query: t,
-      categoryId: e,
+      query: e,
+      categoryId: t,
       page: n
-    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, i = new URLSearchParams, c = {
-      previousView: (0, o.getCurrentView)()
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, r = new URLSearchParams, s = {
+      previousView: (0, a.getCurrentView)()
     };
-    null != t && i.set("q", t), null != e && i.set("category_id", e.toString()), null != n && i.set("page", n.toString()), (0, r.transitionTo)(l.Routes.APPLICATION_DIRECTORY_SEARCH, {
-      search: i.toString(),
-      state: c
+    null != e && r.set("q", e), null != t && r.set("category_id", t.toString()), null != n && r.set("page", n.toString()), (0, i.transitionTo)(o.Routes.APPLICATION_DIRECTORY_SEARCH, {
+      search: r.toString(),
+      state: s
     })
   },
-  C = t => {
+  E = e => {
     let {
-      categoryId: e
-    } = t;
-    f({
-      categoryId: null != e ? e : c.ALL_CATEGORY_ID
+      categoryId: t
+    } = e;
+    c({
+      categoryId: null != t ? t : s.ALL_CATEGORY_ID
     })
   },
-  h = t => {
+  I = e => {
     let {
       location: {
-        state: e
+        state: t
       }
-    } = (0, r.getHistory)();
-    (0, r.replaceWith)(t, e)
+    } = (0, i.getHistory)();
+    (0, i.replaceWith)(e, t)
   }

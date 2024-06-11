@@ -1,7 +1,7 @@
 "use strict";
-r.r(t);
-var n = /\s/;
+n.r(t);
+var r = /\s/;
 t.default = function(e) {
-  for (var t = e.length; t-- && n.test(e.charAt(t)););
+  for (var t = e.length; t-- && r.test(e.charAt(t)););
   return t
 }

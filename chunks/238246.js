@@ -20,15 +20,15 @@ var a, l = n("735250"),
   T = n("168551"),
   I = n("597952"),
   A = n("628123"),
-  x = n("151851"),
-  v = n("587061"),
+  v = n("151851"),
+  x = n("587061"),
   N = n("392358"),
   M = n("892254"),
   y = n("706454"),
   R = n("210887"),
   L = n("740492"),
-  j = n("451478"),
-  O = n("153850"),
+  O = n("451478"),
+  j = n("153850"),
   P = n("806519"),
   D = n("358085"),
   b = n("792125"),
@@ -139,7 +139,7 @@ class V extends(a = s.Component) {
       guestWindow: S,
       clientThemesClassName: _,
       contentClassName: T
-    } = this.props, v = (0, D.getPlatform)(), N = r()(p, {
+    } = this.props, x = (0, D.getPlatform)(), N = r()(p, {
       "mouse-mode": o,
       "reduce-motion": c,
       "full-motion": !c,
@@ -163,19 +163,19 @@ class V extends(a = s.Component) {
                     children: [(0, l.jsx)(P.MaskLibrary, {}), (0, l.jsx)(m.AppWindowContextProvider, {
                       appContext: k.AppContext.POPOUT,
                       renderWindow: S,
-                      children: (0, l.jsxs)(O.AppLayerProvider, {
+                      children: (0, l.jsxs)(j.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
                           className: G.popout,
-                          children: [g && null != v ? (0, l.jsx)(x.default, {
+                          children: [g && null != x ? (0, l.jsx)(v.default, {
                             focused: n,
-                            type: v,
+                            type: x,
                             windowKey: i,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
                             className: r()(G.content, T),
                             children: s
                           })]
-                        }), (0, l.jsx)(f.Modals, {}), (0, l.jsx)(h.default, {}), (0, l.jsx)(O.AppLayerContainer, {})]
+                        }), (0, l.jsx)(f.Modals, {}), (0, l.jsx)(h.default, {}), (0, l.jsx)(j.AppLayerContainer, {})]
                       })
                     })]
                   })
@@ -212,7 +212,7 @@ let W = s.forwardRef(function(e, t) {
     focused: w.default.getWindowFocused(e.windowKey)
   }));
   u()(null != n, "Missing guestWindow reference");
-  let s = (0, c.useStateFromStores)([j.default], () => j.default.isFocused()),
+  let s = (0, c.useStateFromStores)([O.default], () => O.default.isFocused()),
     {
       locale: i,
       theme: r
@@ -238,14 +238,14 @@ let W = s.forwardRef(function(e, t) {
       systemForcedColors: p.default.systemForcedColors,
       useForcedColors: p.default.useForcedColors
     })),
-    x = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
-  (0, v.default)(n, !1);
+    v = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
+  (0, x.default)(n, !1);
   let M = (0, N.default)(n, a),
     {
       analyticsLocations: L
     } = (0, _.default)(S.default.POPOUT_WINDOW),
     {
-      clientThemesClassName: O,
+      clientThemesClassName: j,
       clientThemesCSS: P
     } = (0, T.default)();
   return null == n ? null : (0, l.jsx)(f.DnDProvider, {
@@ -266,10 +266,10 @@ let W = s.forwardRef(function(e, t) {
         keyboardModeEnabled: h,
         mouseModeEnabled: M,
         reducedMotionEnabled: m,
-        connectedToEmbeddedActivity: x,
+        connectedToEmbeddedActivity: v,
         fontScaleClass: E,
         saturation: g,
-        clientThemesClassName: O,
+        clientThemesClassName: j,
         clientThemesCSS: P
       })
     })

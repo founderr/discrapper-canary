@@ -1,85 +1,85 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return f
+    return N
   }
 });
-var o = n("735250");
-n("470079");
-var s = n("481060"),
-  i = n("864762"),
-  r = n("779341"),
-  a = n("642566"),
-  l = n("742699"),
-  C = n("686494"),
-  d = n("573703"),
-  u = n("798930"),
-  c = n("981631"),
-  L = n("112109");
+var o = t("735250");
+t("470079");
+var i = t("481060"),
+  s = t("864762"),
+  r = t("779341"),
+  a = t("642566"),
+  l = t("742699"),
+  C = t("686494"),
+  d = t("573703"),
+  u = t("798930"),
+  c = t("981631"),
+  L = t("112109");
 
-function f(e) {
+function N(e) {
   let {
-    transitionState: t,
-    onClose: n,
-    analyticsLocation: f
+    transitionState: n,
+    onClose: t,
+    analyticsLocation: N
   } = e, {
-    slide: N,
-    gotoNext: T,
-    gotoError: R,
+    slide: T,
+    gotoNext: R,
+    gotoError: f,
     handleWaitingForConnection: _,
-    handleAuthToken: h,
+    handleAuthToken: O,
     expectedCallbackState: p,
-    callbackData: O
-  } = (0, i.useTwoWayLinkModalSlideManager)(f, c.PlatformTypes.CRUNCHYROLL);
-  return (0, o.jsx)(s.ModalRoot, {
+    callbackData: E
+  } = (0, s.useTwoWayLinkModalSlideManager)(N, c.PlatformTypes.CRUNCHYROLL);
+  return (0, o.jsx)(i.ModalRoot, {
     className: L.modal,
-    transitionState: t,
+    transitionState: n,
     disableTrack: !0,
-    children: (0, o.jsxs)(s.Slides, {
-      activeSlide: N,
+    children: (0, o.jsxs)(i.Slides, {
+      activeSlide: T,
       width: 408,
-      children: [(0, o.jsx)(s.Slide, {
+      children: [(0, o.jsx)(i.Slide, {
         id: u.TwoWayLinkModalSlideTypes.LANDING,
         children: (0, o.jsx)(l.default, {
-          onContinue: T,
-          onClose: n
+          onContinue: R,
+          onClose: t
         })
-      }), (0, o.jsx)(s.Slide, {
+      }), (0, o.jsx)(i.Slide, {
         id: u.TwoWayLinkModalSlideTypes.PRE_CONNECT,
         children: (0, o.jsx)(C.default, {
           isWaitingForConnection: !1,
           onWaitingForConnection: _,
-          onAuthToken: h,
-          onError: R,
-          onClose: n
+          onAuthToken: O,
+          onError: f,
+          onClose: t
         })
-      }), (0, o.jsx)(s.Slide, {
+      }), (0, o.jsx)(i.Slide, {
         id: u.TwoWayLinkModalSlideTypes.PRE_CONNECT_WAITING,
         children: (0, o.jsx)(C.default, {
           isWaitingForConnection: !0,
           expectedCallbackState: p,
-          onAuthToken: h,
-          onError: R,
-          onClose: n
+          onAuthToken: O,
+          onError: f,
+          onClose: t
         })
-      }), (0, o.jsx)(s.Slide, {
+      }), (0, o.jsx)(i.Slide, {
         id: u.TwoWayLinkModalSlideTypes.DISCORD_CONSENT,
         children: (0, o.jsx)(r.default, {
-          authToken: O,
-          onContinue: T,
-          onError: R,
-          onClose: n
+          authToken: E,
+          onContinue: R,
+          onError: f,
+          onClose: t
         })
-      }), (0, o.jsx)(s.Slide, {
+      }), (0, o.jsx)(i.Slide, {
         id: u.TwoWayLinkModalSlideTypes.ERROR,
         children: (0, o.jsx)(a.default, {
-          onContinue: T,
-          onClose: n
+          onContinue: R,
+          onClose: t
         })
-      }), (0, o.jsx)(s.Slide, {
+      }), (0, o.jsx)(i.Slide, {
         id: u.TwoWayLinkModalSlideTypes.SUCCESS,
         children: (0, o.jsx)(d.default, {
-          onClose: n
+          onClose: t
         })
       })]
     })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return v
   }
 }), n("47120");
 var a = n("735250"),
@@ -26,19 +26,19 @@ var a = n("735250"),
 let I = 16 / 9,
   A = 8 + C.PARTICIPANTS_HEIGHT;
 
-function x(e) {
+function v(e) {
   let t, {
       onSelectParticipant: n,
       onContextMenuParticipant: s,
-      onFullscreenParticipant: x,
-      participants: v,
+      onFullscreenParticipant: v,
+      participants: x,
       filteredParticipants: N,
       popoutWindow: M,
       inCall: y,
       channel: R,
       selectedParticipant: L,
-      showParticipants: j = !0,
-      className: O,
+      showParticipants: O = !0,
+      className: j,
       paused: P,
       width: D,
       height: b,
@@ -55,7 +55,7 @@ function x(e) {
     Z = !K && null != L.streamId,
     X = Z && null != G && G.width > 0 && G.height > 0 ? G.width / G.height : I,
     q = b <= 2 * A + 144,
-    J = j && !q,
+    J = O && !q,
     Q = (0, o.default)(J),
     $ = U === g.ChannelLayouts.MINIMUM || U === g.ChannelLayouts.NORMAL,
     ee = !q && (!$ || K),
@@ -129,13 +129,13 @@ function x(e) {
     ef = l.useCallback(e => {
       B(e), W(!1)
     }, []),
-    eh = J || P ? [] : (0, E.getPipParticipants)(v, L, H),
+    eh = J || P ? [] : (0, E.getPipParticipants)(x, L, H),
     {
       visibleParticipants: em,
       participantTileWidth: ep
     } = (0, C.useVisibleParticipants)(D, N);
   return (0, a.jsxs)("div", {
-    className: i()(T.root, _.flexCenter, O),
+    className: i()(T.root, _.flexCenter, j),
     children: [(0, a.jsxs)("div", {
       className: T.tileWrapper,
       style: {
@@ -173,7 +173,7 @@ function x(e) {
                   width: D,
                   participant: t,
                   onClick: n,
-                  onDoubleClick: x,
+                  onDoubleClick: v,
                   onContextMenu: s,
                   onVideoResize: ef,
                   inCall: y,
@@ -191,7 +191,7 @@ function x(e) {
           },
           children: (0, a.jsx)(u.default, {
             channelId: R.id,
-            isParticipantsOpen: j,
+            isParticipantsOpen: O,
             isVertical: !0
           })
         }) : null]
@@ -206,12 +206,12 @@ function x(e) {
           channel: R,
           onClick: n,
           onContextMenu: s,
-          onDoubleClick: x,
+          onDoubleClick: v,
           participants: em,
           participantTileWidth: ep,
           selectedParticipantId: L.id,
           inCall: y,
-          paused: P || Y || !j,
+          paused: P || Y || !O,
           popoutWindow: M
         })
       })]

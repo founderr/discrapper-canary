@@ -41,8 +41,8 @@ let h = (0, s.default)(f),
       user: g,
       inExperiment: I
     };
-    let x = null != _ && (null === (n = S.assets) || void 0 === n ? void 0 : n.large_image) != null ? (0, o.getAssetImage)(_.id, S.assets.large_image, [c.ImageSizes.LARGE, c.ImageSizes.LARGE]) : void 0,
-      v = null !== (p = null === (s = S.assets) || void 0 === s ? void 0 : s.large_text) && void 0 !== p ? p : void 0,
+    let v = null != _ && (null === (n = S.assets) || void 0 === n ? void 0 : n.large_image) != null ? (0, o.getAssetImage)(_.id, S.assets.large_image, [c.ImageSizes.LARGE, c.ImageSizes.LARGE]) : void 0,
+      x = null !== (p = null === (s = S.assets) || void 0 === s ? void 0 : s.large_text) && void 0 !== p ? p : void 0,
       N = null !== (E = S.name) && void 0 !== E ? E : e.extra.game_name,
       M = S.details,
       y = S.state,
@@ -53,9 +53,9 @@ let h = (0, s.default)(f),
         message: (0, d.formatEntryTimestamp)(e, C)
       });
     return {
-      iconUrl: null != x ? x : A,
-      iconFallbackUrl: null != x ? A : void 0,
-      iconTitle: v,
+      iconUrl: null != v ? v : A,
+      iconFallbackUrl: null != v ? A : void 0,
+      iconTitle: x,
       user: g,
       activity: S,
       state: y,

@@ -1,14 +1,14 @@
 "use strict";
 a.r(t), a.d(t, {
   useInstallApplication: function() {
-    return s
+    return n
   }
 });
 var l = a("470079"),
-  n = a("135431");
+  i = a("135431");
 
-function s(e, t) {
-  let a = l.useMemo(() => null != e && (0, n.canInstallApplication)({
+function n(e, t) {
+  let a = l.useMemo(() => null != e && (0, i.canInstallApplication)({
     customInstallUrl: e.custom_install_url,
     installParams: e.install_params,
     integrationTypesConfig: e.integration_types_config
@@ -16,7 +16,7 @@ function s(e, t) {
   return {
     canInstall: a,
     install: l.useCallback(a => {
-      null != e && (0, n.installApplication)({
+      null != e && (0, i.installApplication)({
         applicationId: e.id,
         customInstallUrl: e.custom_install_url,
         installParams: e.install_params,

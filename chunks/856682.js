@@ -167,7 +167,7 @@ function E(e) {
     },
     config: h,
     delay: 1e3
-  }), x = (0, u.useTheme)(), v = x === d.ThemeTypes.LIGHT ? "#FFFFFF" : "#1C1D23", N = x === d.ThemeTypes.LIGHT ? "#EBEDEF" : "#26272F", M = x === d.ThemeTypes.LIGHT ? "#CCCCCC" : "#1A1A1E";
+  }), v = (0, u.useTheme)(), x = v === d.ThemeTypes.LIGHT ? "#FFFFFF" : "#1C1D23", N = v === d.ThemeTypes.LIGHT ? "#EBEDEF" : "#26272F", M = v === d.ThemeTypes.LIGHT ? "#CCCCCC" : "#1A1A1E";
   return (0, a.jsx)("div", {
     className: c.container,
     ref: _,
@@ -178,7 +178,7 @@ function E(e) {
         overflow: s ? "initial" : "hidden"
       },
       children: [(0, a.jsx)(m, {
-        paperColor: v,
+        paperColor: x,
         paperColorAlt: N,
         axleColor: M
       }), (0, a.jsx)("div", {
@@ -187,7 +187,7 @@ function E(e) {
         children: (0, a.jsx)("div", {
           className: i()(c.innerContent, n && c.fullHeight),
           style: {
-            backgroundColor: v
+            backgroundColor: x
           },
           children: (0, a.jsx)(r.animated.div, {
             className: i()(c.contentAnimContainer, n && c.fullHeight),
@@ -196,7 +196,7 @@ function E(e) {
           })
         })
       }), (0, a.jsx)(p, {
-        paperColor: v,
+        paperColor: x,
         paperColorAlt: N
       })]
     })

@@ -24,8 +24,8 @@ var a = s("735250"),
   x = s("346656"),
   L = s("499150"),
   O = s("93879"),
-  A = s("4912"),
-  p = s("626135"),
+  p = s("4912"),
+  A = s("626135"),
   M = s("700785"),
   D = s("434404"),
   v = s("92160"),
@@ -45,7 +45,7 @@ let b = "WELCOME_CHANNEL",
         index: R
       } = e,
       [x, L] = l.useState(!1),
-      p = l.useRef(null),
+      A = l.useRef(null),
       D = (0, u.useStateFromStores)([C.default], () => C.default.getChannel(o.channel_id)),
       v = (0, u.useStateFromStores)([f.default], () => null != o.emoji_id ? f.default.getUsableCustomEmojiById(o.emoji_id) : null),
       y = null != D && M.canEveryoneRole(j.Permissions.VIEW_CHANNEL, D),
@@ -73,7 +73,7 @@ let b = "WELCOME_CHANNEL",
           N(e.channel, R, !0)
         }
       });
-    return l.useLayoutEffect(() => (k(w(p)), () => {
+    return l.useLayoutEffect(() => (k(w(A)), () => {
       k(null), w(null)
     }), [k, w]), n = y ? null != v || null != o.emoji_name ? (0, a.jsx)(_.default, {
       emojiId: null == v ? void 0 : v.id,
@@ -83,7 +83,7 @@ let b = "WELCOME_CHANNEL",
       width: 24,
       height: 24,
       className: P.channelIcon
-    }) : (0, a.jsx)(A.default, {
+    }) : (0, a.jsx)(p.default, {
       width: 24,
       height: 24,
       className: P.warningIcon
@@ -91,7 +91,7 @@ let b = "WELCOME_CHANNEL",
       className: i()(P.welcomeChannel, {
         [P.dragging]: g
       }),
-      ref: p,
+      ref: A,
       "data-dnd-name": o.description,
       onContextMenu: e => {
         (0, E.openContextMenuLazy)(e, async () => {
@@ -219,7 +219,7 @@ t.default = e => {
         s = !1;
       null == M || M.forEach(a => {
         e.push(a.description), t.push(a.channel_id), null != a.emoji_id && (s = !0)
-      }), p.default.track(j.AnalyticEvents.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
+      }), A.default.track(j.AnalyticEvents.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
         guild_id: null == n ? void 0 : n.id,
         options: e,
         options_channel_ids: t,
@@ -239,7 +239,7 @@ t.default = e => {
       className: P.notice,
       children: (0, a.jsxs)(c.Text, {
         variant: "text-md/normal",
-        children: [(0, a.jsx)(A.default, {
+        children: [(0, a.jsx)(p.default, {
           className: P.noticeIcon
         }), U.default.Messages.WELCOME_SCREEN_DEPRECATED.format({
           onboardingLink: e => (0, a.jsx)(L.default, {

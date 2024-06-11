@@ -203,7 +203,7 @@ function B(e, t) {
   })
 }
 
-function V() {
+function x() {
   let e = N.default.getChannelId(),
     t = p.default.getGuildId();
   if (null == t || null == e) return;
@@ -211,7 +211,7 @@ function V() {
   (null == n ? void 0 : n.type) !== T.SidebarType.VIEW_CHANNEL && B(t, e)
 }
 
-function x(e) {
+function V(e) {
   let {
     guildId: t,
     channelId: n,
@@ -315,7 +315,7 @@ class Z extends _.default {
     o.default.unsubscribe("CONNECTION_OPEN", b)
   }
   constructor(...e) {
-    super(...e), D(this, "fetchMessages", y), D(this, "loadSelectedChannelIfNecessary", G), D(this, "stores", new Map().set(S.default, V)), D(this, "actions", {
+    super(...e), D(this, "fetchMessages", y), D(this, "loadSelectedChannelIfNecessary", G), D(this, "stores", new Map().set(S.default, x)), D(this, "actions", {
       APP_STATE_UPDATE: z,
       OVERLAY_INITIALIZE: b,
       CHANNEL_SELECT: w,
@@ -323,7 +323,7 @@ class Z extends _.default {
       THREAD_CREATE: F,
       THREAD_LIST_SYNC: () => G(),
       CHANNEL_CREATE: F,
-      CHANNEL_PRELOAD: x,
+      CHANNEL_PRELOAD: V,
       THREAD_CREATE_LOCAL: H,
       GUILD_CREATE: () => G(),
       MESSAGE_END_EDIT: Y,

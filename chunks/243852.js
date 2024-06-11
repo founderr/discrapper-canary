@@ -23,14 +23,14 @@ let N = "ActivityTrackingStore",
   L = {},
   P = !1;
 
-function M(e) {
+function y(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  t && y(e, !0);
+  t && M(e, !0);
   let n = L[e.applicationId];
   null != n && (n.stop(), delete L[e.applicationId]), delete O[e.applicationId], u.Storage.set(N, O)
 }
 
-function y(e) {
+function M(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
@@ -52,7 +52,7 @@ function y(e) {
     mediaSessionId: r
   }), e.updatedAt = n;
   let o = L[e.applicationId];
-  null == o && (o = L[e.applicationId] = new d.Interval).start(v, () => y(e)), !t && (O[e.applicationId] = e, u.Storage.set(N, O))
+  null == o && (o = L[e.applicationId] = new d.Interval).start(v, () => M(e)), !t && (O[e.applicationId] = e, u.Storage.set(N, O))
 }
 
 function D() {
@@ -66,18 +66,18 @@ function D() {
     }
     of t) {
     let t = p.default.getGameByName(e);
-    if (null != t) n.add(t.id), !(t.id in O) && y({
+    if (null != t) n.add(t.id), !(t.id in O) && M({
       applicationId: t.id,
       updatedAt: Date.now(),
       distributor: a,
       exePath: (0, E.removeExecutablePathPrefix)(null != s ? s : "")
     })
   }
-  for (let t of Object.keys(O)) !n.has(t) && M(O[t], e)
+  for (let t of Object.keys(O)) !n.has(t) && y(O[t], e)
 }
 
 function x() {
-  for (let e of Object.keys(O)) M(O[e]);
+  for (let e of Object.keys(O)) y(O[e]);
   P = !1
 }
 class b extends(s = o.default.Store) {
@@ -97,7 +97,7 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = b) ? Object.defineProper
   RUNNING_GAMES_CHANGE: () => D(),
   CONNECTION_OPEN: function() {
     if (P) return !1;
-    for (let e of Object.keys(O)) y(O[e]);
+    for (let e of Object.keys(O)) M(O[e]);
     D(!1), P = !0
   },
   CONNECTION_CLOSED: function(e) {

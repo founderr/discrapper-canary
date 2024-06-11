@@ -26,8 +26,8 @@ var i = l("442837"),
   g = l("182294"),
   A = l("602091"),
   x = l("231338"),
-  N = l("566483");
-let C = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+  C = l("566483");
+let N = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function U(e) {
   let {
@@ -36,16 +36,16 @@ function U(e) {
     activity: a,
     customStatusActivity: f,
     guildId: U,
-    channelId: h,
-    transitionState: P,
+    channelId: P,
+    transitionState: h,
     viewProfileItem: R,
     onClose: M
   } = e, {
     theme: j
   } = (0, v.useUserProfileThemeContext)(), y = (0, E.default)(t.id, U), {
     avatarSrc: L,
-    eventHandlers: F,
-    avatarDecorationSrc: O
+    eventHandlers: O,
+    avatarDecorationSrc: F
   } = (0, I.default)({
     user: t,
     guildId: null == l ? void 0 : l.guildId,
@@ -57,7 +57,7 @@ function U(e) {
     location: "SimplifiedUserProfileModalHeader"
   }), B = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), G = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [k, w] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, h) ? [x.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [x.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, P) ? [x.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [x.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
     children: [(0, s.jsx)(m.default, {
@@ -66,14 +66,14 @@ function U(e) {
       profileType: T.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
     }), (0, s.jsx)("div", {
-      className: N.inner,
+      className: C.inner,
       children: (0, s.jsxs)("div", {
-        ...F,
-        children: [(0, s.jsx)(C, {
+        ...O,
+        children: [(0, s.jsx)(N, {
           src: L,
-          avatarDecoration: O,
+          avatarDecoration: F,
           size: g.AvatarSizes.SIZE_120,
-          className: N.avatar,
+          className: C.avatar,
           status: k,
           statusBackdropColor: (0, n.getStatusBackdropColor)(j),
           "aria-label": t.username,
@@ -93,7 +93,7 @@ function U(e) {
         }), (0, s.jsx)(_.UserProfileCustomStatusBubble, {
           statusActivity: f,
           profileType: T.UserProfileTypes.FULL_SIZE,
-          hasEntered: P === A.ModalTransitionState.ENTERED
+          hasEntered: h === A.ModalTransitionState.ENTERED
         })]
       })
     })]

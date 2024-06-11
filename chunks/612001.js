@@ -489,11 +489,11 @@ function U(e) {
   if (L = !0, !((t = e).metaKey || !(0, r.isMac)() && t.altKey || t.ctrlKey || "Control" === t.key || "Shift" === t.key || "Meta" === t.key)) R = "keyboard", B("keyboard", e)
 }
 
-function Y(e) {
+function j(e) {
   R = "pointer", ("mousedown" === e.type || "pointerdown" === e.type) && (L = !0, B("pointer", e))
 }
 
-function j(e) {
+function Y(e) {
   (0, r.isVirtualClick)(e) && (L = !0, R = "virtual")
 }
 
@@ -510,7 +510,7 @@ function G() {
   let e = HTMLElement.prototype.focus;
   HTMLElement.prototype.focus = function() {
     L = !0, e.apply(this, arguments)
-  }, document.addEventListener("keydown", U, !0), document.addEventListener("keyup", U, !0), document.addEventListener("click", j, !0), window.addEventListener("focus", z, !0), window.addEventListener("blur", H, !1), "undefined" != typeof PointerEvent ? (document.addEventListener("pointerdown", Y, !0), document.addEventListener("pointermove", Y, !0), document.addEventListener("pointerup", Y, !0)) : (document.addEventListener("mousedown", Y, !0), document.addEventListener("mousemove", Y, !0), document.addEventListener("mouseup", Y, !0)), I = !0
+  }, document.addEventListener("keydown", U, !0), document.addEventListener("keyup", U, !0), document.addEventListener("click", Y, !0), window.addEventListener("focus", z, !0), window.addEventListener("blur", H, !1), "undefined" != typeof PointerEvent ? (document.addEventListener("pointerdown", j, !0), document.addEventListener("pointermove", j, !0), document.addEventListener("pointerup", j, !0)) : (document.addEventListener("mousedown", j, !0), document.addEventListener("mousemove", j, !0), document.addEventListener("mouseup", j, !0)), I = !0
 }
 
 function V() {

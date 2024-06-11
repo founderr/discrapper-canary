@@ -25,19 +25,19 @@ var a = n("735250"),
   T = n("401062"),
   I = n("696900"),
   A = n("456631"),
-  x = n("963838"),
-  v = n("535879"),
+  v = n("963838"),
+  x = n("535879"),
   N = n("310892"),
   M = n("12168"),
   y = n("353368"),
   R = n("981631"),
   L = n("354459"),
-  j = n("185923"),
-  O = n("474936"),
+  O = n("185923"),
+  j = n("474936"),
   P = n("526761"),
   D = n("689938"),
   b = n("873137");
-let U = j.EmojiIntention.CHAT,
+let U = O.EmojiIntention.CHAT,
   F = {
     section: R.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "voice_channel_effect_emoji_picker"
@@ -50,13 +50,13 @@ function k(e) {
     channel: n,
     closePopout: p,
     onFocus: S
-  } = e, j = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = _.default.canUseFancyVoiceChannelReactions(k), G = (0, i.useStateFromStores)([I.default], () => I.default.getState().animationType), B = l.useRef(!1), V = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...V, ...w], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
+  } = e, O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = _.default.canUseFancyVoiceChannelReactions(k), G = (0, i.useStateFromStores)([I.default], () => I.default.getState().animationType), B = l.useRef(!1), V = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...V, ...w], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U
   })).slice(0, L.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT), Y = (null !== (t = A.default.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !W.slice(0, L.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT - 1).some(t => t.name === e.name));
   Y.length > 0 && W.splice(W.length - 1, 1, Y[0]);
-  let z = (0, x.sampleAnimationId)(G),
+  let z = (0, v.sampleAnimationId)(G),
     K = e => {
       u.default.dispatch({
         type: "VOICE_CHANNEL_EFFECT_RECENT_EMOJI",
@@ -73,7 +73,7 @@ function k(e) {
     Z = () => {
       (0, N.openEffectsUpsellModal)({
         analytics: {
-          type: O.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
+          type: j.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
           object: R.AnalyticsObjects.BUTTON_CTA,
           section: R.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
         }
@@ -95,7 +95,7 @@ function k(e) {
       guild_id: J
     })
   }, [q, J]);
-  let Q = j ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+  let Q = O ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
     $ = G === y.VoiceChannelEffectAnimationType.PREMIUM;
   return (0, a.jsx)(h.default, {
     contentTypes: Q,
@@ -103,7 +103,7 @@ function k(e) {
       let {
         visibleContent: t,
         markAsDismissed: l
-      } = e, s = j && t === r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+      } = e, s = O && t === r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
       return (0, a.jsx)(o.Popout, {
         position: "left",
         "aria-label": D.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
@@ -135,7 +135,7 @@ function k(e) {
           onExpandedToggle: X,
           analyticsOverride: F,
           emojiSearchProps: {
-            accessory: (0, a.jsx)(v.default, {
+            accessory: (0, a.jsx)(x.default, {
               labelText: D.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: $,
               onChange: () => {
@@ -149,7 +149,7 @@ function k(e) {
               },
               onShowUpsell: () => (0, N.openEffectsUpsellModal)({
                 analytics: {
-                  type: B.current ? O.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : O.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
+                  type: B.current ? j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                   object: R.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,
                   section: B.current ? R.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : R.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
                 }

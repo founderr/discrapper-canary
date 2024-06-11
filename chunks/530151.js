@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("366695"),
   L = n("366966"),
   P = n("151011"),
-  M = n("774832"),
-  y = n("465670"),
+  y = n("774832"),
+  M = n("465670"),
   D = n("786048"),
   x = n("897353"),
   b = n("424218"),
@@ -483,7 +483,7 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: M.default,
+      icon: y.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
       onClick: () => C.moveUp(t.applicationId, t.branchId)
     })
@@ -493,7 +493,7 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: y.default,
+      icon: M.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
       onClick: () => C.cancel(t.applicationId, t.branchId)
     })

@@ -9,9 +9,9 @@ var s = a("735250"),
   i = a("120356"),
   l = a.n(i),
   r = a("481060"),
-  u = a("420019");
+  c = a("420019");
 
-function c(e) {
+function u(e) {
   let {
     alt: t,
     ...a
@@ -19,7 +19,7 @@ function c(e) {
   return (0, s.jsxs)(s.Fragment, {
     children: [i && (0, s.jsx)(r.Spinner, {
       type: r.Spinner.Type.LOW_MOTION,
-      className: u.loader
+      className: c.loader
     }), (0, s.jsx)("img", {
       ...a,
       alt: t,
@@ -39,22 +39,22 @@ function o(e) {
     ...d
   } = e;
   return (0, s.jsxs)("div", {
-    className: l()(u.container, r),
+    className: l()(c.container, r),
     children: [(0, s.jsx)("img", {
       src: a,
       alt: n,
-      className: u.backgroundImage
+      className: c.backgroundImage
     }), (0, s.jsx)("div", {
-      className: u.backgroundImageFilter
+      className: c.backgroundImageFilter
     }), (0, s.jsx)("div", {
       style: {
         aspectRatio: i
       },
-      className: u.imageContainer,
-      children: (0, s.jsx)(c, {
+      className: c.imageContainer,
+      children: (0, s.jsx)(u, {
         src: t,
         alt: n,
-        className: l()(u.image, o),
+        className: l()(c.image, o),
         ...d
       })
     })]

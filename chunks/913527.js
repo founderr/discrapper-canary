@@ -184,10 +184,10 @@ e = n.nmd(e), r = this, i = function() {
     for (n in e) c(e, n) && (t = B(n)) && (r[t] = e[n]);
     return r
   }
-  var Y = {};
+  var j = {};
 
-  function j(e, t) {
-    Y[e] = t
+  function Y(e, t) {
+    j[e] = t
   }
 
   function z(e, t, n) {
@@ -289,7 +289,7 @@ e = n.nmd(e), r = this, i = function() {
     return e <= 9999 ? "" + e : "+" + e
   }), W(0, ["YY", 2], 0, function() {
     return this.year() % 100
-  }), W(0, ["YYYY", 4], 0, "year"), W(0, ["YYYYY", 5], 0, "year"), W(0, ["YYYYYY", 6, !0], 0, "year"), F("year", "y"), Y.year = 1, ep("Y", eu), ep("YY", et, Z), ep("YYYY", ea, J), ep("YYYYY", eo, ee), ep("YYYYYY", eo, ee), eg(["YYYYY", "YYYYYY"], 0), eg("YYYY", function(e, n) {
+  }), W(0, ["YYYY", 4], 0, "year"), W(0, ["YYYYY", 5], 0, "year"), W(0, ["YYYYYY", 6, !0], 0, "year"), F("year", "y"), j.year = 1, ep("Y", eu), ep("YY", et, Z), ep("YYYY", ea, J), ep("YYYYY", eo, ee), ep("YYYYYY", eo, ee), eg(["YYYYY", "YYYYYY"], 0), eg("YYYY", function(e, n) {
     n[0] = 2 === e.length ? t.parseTwoDigitYear(e) : D(e)
   }), eg("YY", function(e, n) {
     n[0] = t.parseTwoDigitYear(e)
@@ -330,7 +330,7 @@ e = n.nmd(e), r = this, i = function() {
     return this.localeData().monthsShort(this, e)
   }), W("MMMM", 0, 0, function(e) {
     return this.localeData().months(this, e)
-  }), F("month", "M"), Y.month = 8, ep("M", et), ep("MM", et, Z), ep("MMM", function(e, t) {
+  }), F("month", "M"), j.month = 8, ep("M", et), ep("MM", et, Z), ep("MMM", function(e, t) {
     return t.monthsShortRegex(e)
   }), ep("MMMM", function(e, t) {
     return t.monthsRegex(e)
@@ -416,7 +416,7 @@ e = n.nmd(e), r = this, i = function() {
       i = eN(e + 1, t, n);
     return (eb(e) - r + i) / 7
   }
-  W("w", ["ww", 2], "wo", "week"), W("W", ["WW", 2], "Wo", "isoWeek"), F("week", "w"), F("isoWeek", "W"), Y.week = 5, Y.isoWeek = 5, ep("w", et), ep("ww", et, Z), ep("W", et), ep("WW", et, Z), e_(["w", "ww", "W", "WW"], function(e, t, n, r) {
+  W("w", ["ww", 2], "wo", "week"), W("W", ["WW", 2], "Wo", "isoWeek"), F("week", "w"), F("isoWeek", "W"), j.week = 5, j.isoWeek = 5, ep("w", et), ep("ww", et, Z), ep("W", et), ep("WW", et, Z), e_(["w", "ww", "W", "WW"], function(e, t, n, r) {
     t[r.substr(0, 1)] = D(e)
   });
   W("d", 0, "do", "day"), W("dd", 0, 0, function(e) {
@@ -425,7 +425,7 @@ e = n.nmd(e), r = this, i = function() {
     return this.localeData().weekdaysShort(this, e)
   }), W("dddd", 0, 0, function(e) {
     return this.localeData().weekdays(this, e)
-  }), W("e", 0, 0, "weekday"), W("E", 0, 0, "isoWeekday"), F("day", "d"), F("weekday", "e"), F("isoWeekday", "E"), Y.day = 11, Y.weekday = 11, Y.isoWeekday = 11, ep("d", et), ep("e", et), ep("E", et), ep("dd", function(e, t) {
+  }), W("e", 0, 0, "weekday"), W("E", 0, 0, "isoWeekday"), F("day", "d"), F("weekday", "e"), F("isoWeekday", "E"), j.day = 11, j.weekday = 11, j.isoWeekday = 11, ep("d", et), ep("e", et), ep("E", et), ep("dd", function(e, t) {
     return t.weekdaysMinRegex(e)
   }), ep("ddd", function(e, t) {
     return t.weekdaysShortRegex(e)
@@ -462,11 +462,11 @@ e = n.nmd(e), r = this, i = function() {
     this._weekdaysRegex = RegExp("^(" + c.join("|") + ")", "i"), this._weekdaysShortRegex = this._weekdaysRegex, this._weekdaysMinRegex = this._weekdaysRegex, this._weekdaysStrictRegex = RegExp("^(" + u.join("|") + ")", "i"), this._weekdaysShortStrictRegex = RegExp("^(" + s.join("|") + ")", "i"), this._weekdaysMinStrictRegex = RegExp("^(" + o.join("|") + ")", "i")
   }
 
-  function eY() {
+  function ej() {
     return this.hours() % 12 || 12
   }
 
-  function ej(e, t) {
+  function eY(e, t) {
     W(e, 0, 0, function() {
       return this.localeData().meridiem(this.hours(), this.minutes(), t)
     })
@@ -475,17 +475,17 @@ e = n.nmd(e), r = this, i = function() {
   function ez(e, t) {
     return t._meridiemParse
   }
-  W("H", ["HH", 2], 0, "hour"), W("h", ["hh", 2], 0, eY), W("k", ["kk", 2], 0, function() {
+  W("H", ["HH", 2], 0, "hour"), W("h", ["hh", 2], 0, ej), W("k", ["kk", 2], 0, function() {
     return this.hours() || 24
   }), W("hmm", 0, 0, function() {
-    return "" + eY.apply(this) + z(this.minutes(), 2)
+    return "" + ej.apply(this) + z(this.minutes(), 2)
   }), W("hmmss", 0, 0, function() {
-    return "" + eY.apply(this) + z(this.minutes(), 2) + z(this.seconds(), 2)
+    return "" + ej.apply(this) + z(this.minutes(), 2) + z(this.seconds(), 2)
   }), W("Hmm", 0, 0, function() {
     return "" + this.hours() + z(this.minutes(), 2)
   }), W("Hmmss", 0, 0, function() {
     return "" + this.hours() + z(this.minutes(), 2) + z(this.seconds(), 2)
-  }), ej("a", !0), ej("A", !1), F("hour", "h"), Y.hour = 13, ep("a", ez), ep("A", ez), ep("H", et), ep("h", et), ep("k", et), ep("HH", et, Z), ep("hh", et, Z), ep("kk", et, Z), ep("hmm", en), ep("hmmss", er), ep("Hmm", en), ep("Hmmss", er), eg(["H", "HH"], 3), eg(["k", "kk"], function(e, t, n) {
+  }), eY("a", !0), eY("A", !1), F("hour", "h"), j.hour = 13, ep("a", ez), ep("A", ez), ep("H", et), ep("h", et), ep("k", et), ep("HH", et, Z), ep("hh", et, Z), ep("kk", et, Z), ep("hmm", en), ep("hmmss", er), ep("Hmm", en), ep("Hmmss", er), eg(["H", "HH"], 3), eg(["k", "kk"], function(e, t, n) {
     var r = D(e);
     t[3] = 24 === r ? 0 : r
   }), eg(["a", "A"], function(e, t, n) {
@@ -710,8 +710,8 @@ e = n.nmd(e), r = this, i = function() {
       e._f = i + (a || "") + (o || ""), tt(e)
     } else e._isValid = !1
   }
-  var e9 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
-    e7 = {
+  var e7 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
+    e9 = {
       UT: 0,
       GMT: 0,
       EDT: -240,
@@ -725,7 +725,7 @@ e = n.nmd(e), r = this, i = function() {
     };
 
   function te(e) {
-    var t = e9.exec(e._i.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, ""));
+    var t = e7.exec(e._i.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, ""));
     if (t) {
       var n, r, i, a, o, s, u, c, l, d, p = (n = t[4], r = t[3], i = t[2], a = t[5], o = t[6], s = t[7], u = [function(e) {
         var t = parseInt(e, 10);
@@ -733,7 +733,7 @@ e = n.nmd(e), r = this, i = function() {
       }(n), eC.indexOf(r), parseInt(i, 10), parseInt(a, 10), parseInt(o, 10)], s && u.push(parseInt(s, 10)), u);
       if (c = t[1], l = p, d = e, c && eF.indexOf(c) !== new Date(l[0], l[1], l[2]).getDay() && (f(d).weekdayMismatch = !0, d._isValid = !1, 1)) return;
       e._a = p, e._tzm = function(e, t, n) {
-        if (e) return e7[e];
+        if (e) return e9[e];
         if (t) return 0;
         var r = parseInt(n, 10),
           i = r % 100;
@@ -1001,7 +1001,7 @@ e = n.nmd(e), r = this, i = function() {
     return this.weekYear() % 100
   }), W(0, ["GG", 2], 0, function() {
     return this.isoWeekYear() % 100
-  }), tk("gggg", "weekYear"), tk("ggggg", "weekYear"), tk("GGGG", "isoWeekYear"), tk("GGGGG", "isoWeekYear"), F("weekYear", "gg"), F("isoWeekYear", "GG"), Y.weekYear = 1, Y.isoWeekYear = 1, ep("G", eu), ep("g", eu), ep("GG", et, Z), ep("gg", et, Z), ep("GGGG", ea, J), ep("gggg", ea, J), ep("GGGGG", eo, ee), ep("ggggg", eo, ee), e_(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, r) {
+  }), tk("gggg", "weekYear"), tk("ggggg", "weekYear"), tk("GGGG", "isoWeekYear"), tk("GGGGG", "isoWeekYear"), F("weekYear", "gg"), F("isoWeekYear", "GG"), j.weekYear = 1, j.isoWeekYear = 1, ep("G", eu), ep("g", eu), ep("GG", et, Z), ep("gg", et, Z), ep("GGGG", ea, J), ep("gggg", ea, J), ep("GGGGG", eo, ee), ep("ggggg", eo, ee), e_(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, r) {
     t[r.substr(0, 2)] = D(e)
   }), e_(["gg", "GG"], function(e, n, r, i) {
     n[i] = t.parseTwoDigitYear(e)
@@ -1017,21 +1017,21 @@ e = n.nmd(e), r = this, i = function() {
       o = eR(a.year, 0, a.dayOfYear);
     return this.year(o.getUTCFullYear()), this.month(o.getUTCMonth()), this.date(o.getUTCDate()), this
   }
-  W("Q", 0, "Qo", "quarter"), F("quarter", "Q"), Y.quarter = 7, ep("Q", Q), eg("Q", function(e, t) {
+  W("Q", 0, "Qo", "quarter"), F("quarter", "Q"), j.quarter = 7, ep("Q", Q), eg("Q", function(e, t) {
     t[1] = (D(e) - 1) * 3
   });
-  W("D", ["DD", 2], "Do", "date"), F("date", "D"), Y.date = 9, ep("D", et), ep("DD", et, Z), ep("Do", function(e, t) {
+  W("D", ["DD", 2], "Do", "date"), F("date", "D"), j.date = 9, ep("D", et), ep("DD", et, Z), ep("Do", function(e, t) {
     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
   }), eg(["D", "DD"], 2), eg("Do", function(e, t) {
     t[2] = D(e.match(et)[0])
   });
   var tI = eE("Date", !0);
-  W("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), F("dayOfYear", "DDD"), Y.dayOfYear = 4, ep("DDD", ei), ep("DDDD", X), eg(["DDD", "DDDD"], function(e, t, n) {
+  W("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), F("dayOfYear", "DDD"), j.dayOfYear = 4, ep("DDD", ei), ep("DDDD", X), eg(["DDD", "DDDD"], function(e, t, n) {
     n._dayOfYear = D(e)
   });
-  W("m", ["mm", 2], 0, "minute"), F("minute", "m"), Y.minute = 14, ep("m", et), ep("mm", et, Z), eg(["m", "mm"], 4);
+  W("m", ["mm", 2], 0, "minute"), F("minute", "m"), j.minute = 14, ep("m", et), ep("mm", et, Z), eg(["m", "mm"], 4);
   var tL = eE("Minutes", !1);
-  W("s", ["ss", 2], 0, "second"), F("second", "s"), Y.second = 15, ep("s", et), ep("ss", et, Z), eg(["s", "ss"], 5);
+  W("s", ["ss", 2], 0, "second"), F("second", "s"), j.second = 15, ep("s", et), ep("ss", et, Z), eg(["s", "ss"], 5);
   var tP = eE("Seconds", !1);
   for (W("S", 0, 0, function() {
       return ~~(this.millisecond() / 100)
@@ -1049,7 +1049,7 @@ e = n.nmd(e), r = this, i = function() {
       return 1e5 * this.millisecond()
     }), W(0, ["SSSSSSSSS", 9], 0, function() {
       return 1e6 * this.millisecond()
-    }), F("millisecond", "ms"), Y.millisecond = 16, ep("S", ei, Q), ep("SS", ei, Z), ep("SSS", ei, X), y = "SSSS"; y.length <= 9; y += "S") ep(y, es);
+    }), F("millisecond", "ms"), j.millisecond = 16, ep("S", ei, Q), ep("SS", ei, Z), ep("SSS", ei, X), y = "SSSS"; y.length <= 9; y += "S") ep(y, es);
 
   function tF(e, t) {
     t[6] = D(("0." + e) * 1e3)
@@ -1147,7 +1147,7 @@ e = n.nmd(e), r = this, i = function() {
           var t = [];
           for (var n in e) t.push({
             unit: n,
-            priority: Y[n]
+            priority: j[n]
           });
           return t.sort(function(e, t) {
             return e.priority - t.priority
@@ -1302,10 +1302,10 @@ e = n.nmd(e), r = this, i = function() {
     return this._isDSTShifted
   });
 
-  function tY(e) {
+  function tj(e) {
     return e
   }
-  var tj = L.prototype;
+  var tY = L.prototype;
 
   function tz(e, t, n, r) {
     var i = eZ(),
@@ -1329,34 +1329,34 @@ e = n.nmd(e), r = this, i = function() {
     for (i = 0; i < 7; i++) u[i] = tz(t, (i + s) % 7, r, "day");
     return u
   }
-  tj.calendar = function(e, t, n) {
+  tY.calendar = function(e, t, n) {
     var r = this._calendar[e] || this._calendar.sameElse;
     return N(r) ? r.call(t, n) : r
-  }, tj.longDateFormat = function(e) {
+  }, tY.longDateFormat = function(e) {
     var t = this._longDateFormat[e],
       n = this._longDateFormat[e.toUpperCase()];
     return t || !n ? t : (this._longDateFormat[e] = n.replace(/MMMM|MM|DD|dddd/g, function(e) {
       return e.slice(1)
     }), this._longDateFormat[e])
-  }, tj.invalidDate = function() {
+  }, tY.invalidDate = function() {
     return this._invalidDate
-  }, tj.ordinal = function(e) {
+  }, tY.ordinal = function(e) {
     return this._ordinal.replace("%d", e)
-  }, tj.preparse = tY, tj.postformat = tY, tj.relativeTime = function(e, t, n, r) {
+  }, tY.preparse = tj, tY.postformat = tj, tY.relativeTime = function(e, t, n, r) {
     var i = this._relativeTime[n];
     return N(i) ? i(e, t, n, r) : i.replace(/%d/i, e)
-  }, tj.pastFuture = function(e, t) {
+  }, tY.pastFuture = function(e, t) {
     var n = this._relativeTime[e > 0 ? "future" : "past"];
     return N(n) ? n(t) : n.replace(/%s/i, t)
-  }, tj.set = function(e) {
+  }, tY.set = function(e) {
     var t, n;
     for (n in e) N(t = e[n]) ? this[n] = t : this["_" + n] = t;
     this._config = e, this._dayOfMonthOrdinalParseLenient = RegExp((this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) + "|" + /\d{1,2}/.source)
-  }, tj.months = function(e, t) {
+  }, tY.months = function(e, t) {
     return e ? r(this._months) ? this._months[e.month()] : this._months[(this._months.isFormat || eT).test(t) ? "format" : "standalone"][e.month()] : r(this._months) ? this._months : this._months.standalone
-  }, tj.monthsShort = function(e, t) {
+  }, tY.monthsShort = function(e, t) {
     return e ? r(this._monthsShort) ? this._monthsShort[e.month()] : this._monthsShort[eT.test(t) ? "format" : "standalone"][e.month()] : r(this._monthsShort) ? this._monthsShort : this._monthsShort.standalone
-  }, tj.monthsParse = function(e, t, n) {
+  }, tY.monthsParse = function(e, t, n) {
     var r, i, a;
     if (this._monthsParseExact) return eD.call(this, e, t, n);
     for (!this._monthsParse && (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = []), r = 0; r < 12; r++) {
@@ -1364,23 +1364,23 @@ e = n.nmd(e), r = this, i = function() {
       if (n && "MMM" === t && this._shortMonthsParse[r].test(e)) return r;
       else if (!n && this._monthsParse[r].test(e)) return r
     }
-  }, tj.monthsRegex = function(e) {
+  }, tY.monthsRegex = function(e) {
     return this._monthsParseExact ? (!c(this, "_monthsRegex") && eA.call(this), e) ? this._monthsStrictRegex : this._monthsRegex : (!c(this, "_monthsRegex") && (this._monthsRegex = ed), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
-  }, tj.monthsShortRegex = function(e) {
+  }, tY.monthsShortRegex = function(e) {
     return this._monthsParseExact ? (!c(this, "_monthsRegex") && eA.call(this), e) ? this._monthsShortStrictRegex : this._monthsShortRegex : (!c(this, "_monthsShortRegex") && (this._monthsShortRegex = ed), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
-  }, tj.week = function(e) {
+  }, tY.week = function(e) {
     return eL(e, this._week.dow, this._week.doy).week
-  }, tj.firstDayOfYear = function() {
+  }, tY.firstDayOfYear = function() {
     return this._week.doy
-  }, tj.firstDayOfWeek = function() {
+  }, tY.firstDayOfWeek = function() {
     return this._week.dow
-  }, tj.weekdays = function(e, t) {
+  }, tY.weekdays = function(e, t) {
     return e ? r(this._weekdays) ? this._weekdays[e.day()] : this._weekdays[this._weekdays.isFormat.test(t) ? "format" : "standalone"][e.day()] : r(this._weekdays) ? this._weekdays : this._weekdays.standalone
-  }, tj.weekdaysMin = function(e) {
+  }, tY.weekdaysMin = function(e) {
     return e ? this._weekdaysMin[e.day()] : this._weekdaysMin
-  }, tj.weekdaysShort = function(e) {
+  }, tY.weekdaysShort = function(e) {
     return e ? this._weekdaysShort[e.day()] : this._weekdaysShort
-  }, tj.weekdaysParse = function(e, t, n) {
+  }, tY.weekdaysParse = function(e, t, n) {
     var r, i, a;
     if (this._weekdaysParseExact) return eB.call(this, e, t, n);
     for (!this._weekdaysParse && (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), r = 0; r < 7; r++) {
@@ -1389,15 +1389,15 @@ e = n.nmd(e), r = this, i = function() {
       else if (n && "dd" === t && this._minWeekdaysParse[r].test(e)) return r;
       else if (!n && this._weekdaysParse[r].test(e)) return r
     }
-  }, tj.weekdaysRegex = function(e) {
+  }, tY.weekdaysRegex = function(e) {
     return this._weekdaysParseExact ? (!c(this, "_weekdaysRegex") && eU.call(this), e) ? this._weekdaysStrictRegex : this._weekdaysRegex : (!c(this, "_weekdaysRegex") && (this._weekdaysRegex = ed), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex)
-  }, tj.weekdaysShortRegex = function(e) {
+  }, tY.weekdaysShortRegex = function(e) {
     return this._weekdaysParseExact ? (!c(this, "_weekdaysRegex") && eU.call(this), e) ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex : (!c(this, "_weekdaysShortRegex") && (this._weekdaysShortRegex = ed), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
-  }, tj.weekdaysMinRegex = function(e) {
+  }, tY.weekdaysMinRegex = function(e) {
     return this._weekdaysParseExact ? (!c(this, "_weekdaysRegex") && eU.call(this), e) ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex : (!c(this, "_weekdaysMinRegex") && (this._weekdaysMinRegex = ed), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex)
-  }, tj.isPM = function(e) {
+  }, tY.isPM = function(e) {
     return "p" === (e + "").toLowerCase().charAt(0)
-  }, tj.meridiem = function(e, t, n) {
+  }, tY.meridiem = function(e, t, n) {
     return e > 11 ? n ? "pm" : "PM" : n ? "am" : "AM"
   };
   eq("en", {
@@ -1448,8 +1448,8 @@ e = n.nmd(e), r = this, i = function() {
   }
   var t5 = t6("milliseconds"),
     t8 = t6("seconds"),
-    t9 = t6("minutes"),
-    t7 = t6("hours"),
+    t7 = t6("minutes"),
+    t9 = t6("hours"),
     ne = t6("days"),
     nt = t6("months"),
     nn = t6("years"),
@@ -1531,7 +1531,7 @@ e = n.nmd(e), r = this, i = function() {
     return ty(this)
   }, nc.get = function(e) {
     return e = B(e), this.isValid() ? this[e + "s"]() : NaN
-  }, nc.milliseconds = t5, nc.seconds = t8, nc.minutes = t9, nc.hours = t7, nc.days = ne, nc.weeks = function() {
+  }, nc.milliseconds = t5, nc.seconds = t8, nc.minutes = t7, nc.hours = t9, nc.days = ne, nc.weeks = function() {
     return C(this.days() / 7)
   }, nc.months = nt, nc.years = nn, nc.humanize = function(e) {
     if (!this.isValid()) return this.localeData().invalidDate();

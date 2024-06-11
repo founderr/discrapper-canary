@@ -24,7 +24,7 @@ function f(e) {
   let {
     guildId: t,
     scrollToQuestions: s
-  } = e, f = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), m = (0, l.useStateFromStores)([E.default], () => E.default.editedDefaultChannelIds), [N, g] = (0, o.useChattableDefaultChannels)(t, m), [h, C] = (0, _.useEditedChattableDefaultChannelsWithQuestions)(t, [...m]), R = f ? C.length : g.length, x = f ? h.length : N.length, L = R < I.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING, O = x >= I.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN, A = C.length - g.length, p = (0, a.jsx)(d.default, {
+  } = e, f = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), m = (0, l.useStateFromStores)([E.default], () => E.default.editedDefaultChannelIds), [N, g] = (0, o.useChattableDefaultChannels)(t, m), [h, C] = (0, _.useEditedChattableDefaultChannelsWithQuestions)(t, [...m]), R = f ? C.length : g.length, x = f ? h.length : N.length, L = R < I.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING, O = x >= I.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN, p = C.length - g.length, A = (0, a.jsx)(d.default, {
     color: n.default.unsafe_rawColors.BRAND_500.css,
     backgroundColor: n.default.unsafe_rawColors.WHITE_100.css,
     className: S.icon,
@@ -60,7 +60,7 @@ function f(e) {
       size: i.StackedProgress.Sizes.XSMALL
     }), (0, a.jsxs)("div", {
       className: S.requiredItem,
-      children: [L ? M : p, (0, a.jsx)(i.Text, {
+      children: [L ? M : A, (0, a.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: T.default.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_MIN_CHANNELS.format({
@@ -69,7 +69,7 @@ function f(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: S.requiredItem,
-      children: [O ? p : M, (0, a.jsx)(i.Text, {
+      children: [O ? A : M, (0, a.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: T.default.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_MIN_CHATTABLE_CHANNELS.format({
@@ -102,7 +102,7 @@ function f(e) {
           variant: "text-xs/normal",
           color: "text-muted",
           children: T.default.Messages.DEFAULT_CHANNELS_PREVIEW_ADDITIONAL.format({
-            count: A,
+            count: p,
             prejoinHook: e => (0, a.jsx)(i.Anchor, {
               onClick: s,
               children: (0, a.jsx)(i.Text, {

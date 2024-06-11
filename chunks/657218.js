@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("294218"),
   I = n("913663"),
   A = n("268350"),
-  x = n("695346"),
-  v = n("592125"),
+  v = n("695346"),
+  x = n("592125"),
   N = n("703558"),
   M = n("375954"),
   y = n("496675"),
   R = n("117530"),
   L = n("153124"),
-  j = n("465670"),
-  O = n("663949"),
+  O = n("465670"),
+  j = n("663949"),
   P = n("934458"),
   D = n("502568"),
   b = n("459273"),
@@ -55,7 +55,7 @@ function Z(e) {
     parentChannelId: t,
     parentMessageId: n,
     location: l
-  } = e, s = (0, r.useStateFromStores)([v.default], () => v.default.getChannel(t)), {
+  } = e, s = (0, r.useStateFromStores)([x.default], () => x.default.getChannel(t)), {
     analyticsLocations: i
   } = (0, p.default)(m.default.CREATE_THREAD);
   return null == s ? null : (0, a.jsx)(p.AnalyticsLocationProvider, {
@@ -69,7 +69,7 @@ function Z(e) {
           draftType: N.DraftType.FirstThreadMessage
         }), (0, a.jsxs)(D.default, {
           toolbar: (0, a.jsx)(D.default.Icon, {
-            icon: j.default,
+            icon: O.default,
             tooltip: W.default.Messages.CLOSE,
             onClick: () => (0, G.closeAndClearThreadSidebar)(t)
           }),
@@ -138,8 +138,8 @@ function X(e) {
       setTextAreaState: a
     }
   }(t, p), T = (0, k.usePrivateThreadMode)(t), {
-    nameError: x,
-    messageError: v,
+    nameError: v,
+    messageError: x,
     submit: M
   } = function(e) {
     let {
@@ -207,7 +207,7 @@ function X(e) {
     privateThreadMode: T,
     textAreaState: g,
     location: s
-  }), y = (0, k.getIsPrivate)(m, T) ? O.default : P.default;
+  }), y = (0, k.getIsPrivate)(m, T) ? j.default : P.default;
   return (0, a.jsx)("div", {
     className: Y.chat,
     onMouseDown: f,
@@ -236,7 +236,7 @@ function X(e) {
                 parentMessageId: n,
                 threadSettings: m,
                 updateThreadSettings: E,
-                error: x
+                error: v
               }), t.type === V.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(q, {
                 startedFromMessage: null != n,
                 threadSettings: m,
@@ -255,7 +255,7 @@ function X(e) {
             textAreaState: g,
             setTextAreaState: S,
             submit: M,
-            error: v
+            error: x
           }), (0, a.jsx)(c.default, {
             channel: t,
             isThreadCreation: !0
@@ -406,7 +406,7 @@ function $(e) {
   let {
     parentChannel: t,
     parentMessageId: n
-  } = e, l = (0, r.useStateFromStores)([M.default], () => null == n ? null : M.default.getMessage(t.id, n)), s = x.MessageDisplayCompact.useSetting();
+  } = e, l = (0, r.useStateFromStores)([M.default], () => null == n ? null : M.default.getMessage(t.id, n)), s = v.MessageDisplayCompact.useSetting();
   return null != l ? (0, a.jsx)(T.default, {
     className: Y.messagePreview,
     message: l,

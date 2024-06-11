@@ -1,7 +1,7 @@
 "use strict";
 r.r(t);
-var l = r("735250"),
-  n = r("470079"),
+var n = r("735250"),
+  l = r("470079"),
   s = r("120356"),
   i = r.n(s),
   a = r("481060"),
@@ -13,41 +13,41 @@ let S = e => {
   let {
     stickerPack: t
   } = e;
-  return (0, l.jsx)("div", {
+  return (0, n.jsx)("div", {
     className: d.features,
-    children: (0, c.isStickerPackAnimated)(t) ? (0, l.jsx)(a.Tooltip, {
+    children: (0, c.isStickerPackAnimated)(t) ? (0, n.jsx)(a.Tooltip, {
       tooltipClassName: d.featuresTooltip,
       position: "top",
       text: u.default.Messages.STICKER_PICKER_PACK_DETAILS_ANIMATED,
-      children: e => (0, l.jsx)(o.default, {
+      children: e => (0, n.jsx)(o.default, {
         ...e,
         className: d.featureIcon
       })
     }) : null
   })
 };
-t.default = n.memo(e => {
+t.default = l.memo(e => {
   let {
     className: t,
     stickerPack: r,
-    withDescription: n = !1
+    withDescription: l = !1
   } = e;
-  return (0, l.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: i()(d.header, t),
-    children: [(0, l.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: d.title,
-      children: [(0, l.jsx)(a.Heading, {
+      children: [(0, n.jsx)(a.Heading, {
         className: d.heading,
         variant: "heading-sm/semibold",
         children: r.name
-      }), (0, l.jsx)(S, {
+      }), (0, n.jsx)(S, {
         stickerPack: r
       })]
-    }), n && null != r.description && (0, l.jsx)(a.Text, {
+    }), l && null != r.description && (0, n.jsx)(a.Text, {
       className: d.description,
       variant: "text-sm/normal",
       children: r.description
-    }), (0, l.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: d.count,
       children: u.default.Messages.STICKER_PACK_STICKER_COUNT.format({
         numStickers: r.stickers.length

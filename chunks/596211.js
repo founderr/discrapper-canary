@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
-var s = n("735250");
-n("470079");
-var a = n("481060"),
-  r = n("406877");
+var a = s("735250");
+s("470079");
+var n = s("481060"),
+  r = s("406877");
 
-function i(e) {
+function l(e) {
   let {
     guildId: t,
-    productId: n,
-    attachmentId: i,
-    ...l
+    productId: s,
+    attachmentId: l,
+    ...u
   } = e, {
-    isLoading: u,
+    isLoading: i,
     downloadAttachment: o
-  } = (0, r.default)(t, n);
-  return (0, s.jsx)(a.Button, {
-    ...l,
-    submitting: u,
+  } = (0, r.default)(t, s);
+  return (0, a.jsx)(n.Button, {
+    ...u,
+    submitting: i,
     onClick: function() {
-      o(i)
+      o(l)
     }
   })
 }

@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("611480"),
   k = n("981631"),
   B = n("802011");
-let V = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-  x = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+let x = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+  V = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
   F = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
   H = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
   Y = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
@@ -69,7 +69,7 @@ let V = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         gridWrapperRef: J,
         containerWidth: a,
         showingEmptyState: ea,
-        listPaddingLeft: x,
+        listPaddingLeft: V,
         listScrollbarWidth: 8
       }),
       el = A.StickerPickerCollapsedSections.useSetting(),
@@ -87,7 +87,7 @@ let V = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       eh = r.useCallback(e => {
         "" === en ? (0, R.trackStickerSelect)(e) : (0, R.trackStickerSearchSelect)(e, en, eS), p(e.sticker, v.StickerSelectLocation.STICKER_PICKER)
       }, [p, en, eS]),
-      eA = null != eo && eo > V,
+      eA = null != eo && eo > x,
       {
         rowCount: em,
         rowCountBySection: eN,

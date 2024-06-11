@@ -21,15 +21,15 @@ var a = n("735250"),
   T = n("367907"),
   I = n("555573"),
   A = n("456007"),
-  x = n("10718"),
-  v = n("895924"),
+  v = n("10718"),
+  x = n("895924"),
   N = n("581364"),
   M = n("667204"),
   y = n("541716"),
   R = n("752305"),
   L = n("424595"),
-  j = n("516887"),
-  O = n("974251"),
+  O = n("516887"),
+  j = n("974251"),
   P = n("893718"),
   D = n("436660"),
   b = n("603009"),
@@ -75,8 +75,8 @@ var a = n("735250"),
   eT = n("979956"),
   eI = n("655687"),
   eA = n("25007"),
-  ex = n("199649"),
-  ev = n("1397"),
+  ev = n("199649"),
+  ex = n("1397"),
   eN = n("981631"),
   eM = n("689938"),
   ey = n("19340");
@@ -93,9 +93,9 @@ function eR(e, t, n) {
 function eL(e) {
   e.preventDefault()
 }
-let ej = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
+let eO = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
 
-function eO(e) {
+function ej(e) {
   let {
     isSidebar: t,
     ...n
@@ -146,11 +146,11 @@ class eP extends l.PureComponent {
     } = (0, N.extractInteractionDataProps)(e.interactionData), {
       command: l,
       application: s
-    } = x.getCachedCommand(t, n);
+    } = v.getCachedCommand(t, n);
     if (null != l) {
       var i, r;
       let e = null != s ? {
-        type: v.ApplicationCommandSectionType.APPLICATION,
+        type: x.ApplicationCommandSectionType.APPLICATION,
         id: s.id,
         icon: null !== (r = null == s ? void 0 : null === (i = s.bot) || void 0 === i ? void 0 : i.username) && void 0 !== r ? r : s.icon,
         name: s.name,
@@ -160,7 +160,7 @@ class eP extends l.PureComponent {
         channelId: t.id,
         command: l,
         section: e,
-        location: v.ApplicationCommandTriggerLocations.RECALL,
+        location: x.ApplicationCommandTriggerLocations.RECALL,
         initialValues: (0, A.getInitialValuesFromInteractionOptions)(l, null != a ? a : [])
       })
     }
@@ -305,7 +305,7 @@ class eP extends l.PureComponent {
       } = this.props;
       c.default.changeDraft(l, t, es.DraftType.ChannelMessage);
       let s = "" !== t && n !== this.state.richValue,
-        i = s && !ej.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
+        i = s && !eO.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
       this.isFirstChange = !1, i && this.state.textValue.length < t.length && this.handleIncrementCombo(), i ? h.default.startTyping(l) : "" === t && h.default.stopTyping(l), s && a && (0, S.disableKeyboardMode)(), this.setState({
         textValue: t,
         richValue: n
@@ -330,7 +330,7 @@ class eP extends l.PureComponent {
         chatInputType: d
       } = this.props, c = !1;
       if (null != l) {
-        if (l.inputType === v.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return eE.ComponentDispatch.dispatch(eN.ComponentActions.SHAKE_APP, {
+        if (l.inputType === x.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return eE.ComponentDispatch.dispatch(eN.ComponentActions.SHAKE_APP, {
           duration: 200,
           intensity: 2
         }), Promise.resolve({
@@ -345,7 +345,7 @@ class eP extends l.PureComponent {
             channel: o
           }
         });
-        if (l.inputType !== v.ApplicationCommandInputType.BUILT_IN_TEXT) return Promise.resolve({
+        if (l.inputType !== x.ApplicationCommandInputType.BUILT_IN_TEXT) return Promise.resolve({
           shouldClear: !0,
           shouldRefocus: !0
         });
@@ -416,7 +416,7 @@ class eP extends l.PureComponent {
       var t, n;
       let a = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
       null != a && (D.SlateTransforms.select(a, []), a.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
-    }), eR(this, "renderAttachButton", (e, t) => (0, a.jsx)(O.default, {
+    }), eR(this, "renderAttachButton", (e, t) => (0, a.jsx)(j.default, {
       className: t,
       channel: this.props.channel,
       draftType: es.DraftType.ChannelMessage,
@@ -430,7 +430,7 @@ class eP extends l.PureComponent {
       return (0, a.jsx)(L.default, {
         ref: t
       })
-    }), eR(this, "renderApplicationCommandIcon", (e, t, n) => (0, a.jsx)(j.default, {
+    }), eR(this, "renderApplicationCommandIcon", (e, t, n) => (0, a.jsx)(O.default, {
       className: n,
       command: e,
       section: t,
@@ -481,9 +481,9 @@ class eD extends l.PureComponent {
     } = this.props, {
       textAreaFocused: I,
       textAreaHighlighted: A
-    } = this.state, x = u === y.ChatInputTypes.SIDEBAR;
-    t = x && n.type === eN.ChannelTypes.GUILD_VOICE ? eM.default.Messages.TEXT_IN_VOICE_A11Y_LABEL : x && n.type === eN.ChannelTypes.GUILD_STAGE_VOICE ? eM.default.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.ChannelTypesSets.THREADS.has(n.type) ? eM.default.Messages.THREAD_A11Y_LABEL : eM.default.Messages.CHANNEL_A11Y_LABEL;
-    let v = (0, a.jsx)(en.default, {
+    } = this.state, v = u === y.ChatInputTypes.SIDEBAR;
+    t = v && n.type === eN.ChannelTypes.GUILD_VOICE ? eM.default.Messages.TEXT_IN_VOICE_A11Y_LABEL : v && n.type === eN.ChannelTypes.GUILD_STAGE_VOICE ? eM.default.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.ChannelTypesSets.THREADS.has(n.type) ? eM.default.Messages.THREAD_A11Y_LABEL : eM.default.Messages.CHANNEL_A11Y_LABEL;
+    let x = (0, a.jsx)(en.default, {
       tutorialId: "writing-messages",
       position: "left",
       offsetX: 75,
@@ -519,8 +519,8 @@ class eD extends l.PureComponent {
           }), (0, a.jsx)(ep.ComponentAction, {
             event: eN.ComponentActions.OPEN_EXPRESSION_PICKER,
             handler: this.handleOpenExpressionPicker
-          }), (0, a.jsxs)(eO, {
-            isSidebar: x,
+          }), (0, a.jsxs)(ej, {
+            isSidebar: v,
             className: ey.chatContent,
             "aria-label": t.format({
               channelName: n.name
@@ -531,7 +531,7 @@ class eD extends l.PureComponent {
             children: [(0, a.jsx)(eA.default, {
               channel: n,
               guild: l,
-              narrow: x
+              narrow: v
             }), (0, a.jsxs)(d.HeadingLevel, {
               component: (0, a.jsx)(d.HiddenVisually, {
                 children: (0, a.jsx)(d.H, {
@@ -545,7 +545,7 @@ class eD extends l.PureComponent {
                 forceCozy: _,
                 filterAfterTimestamp: m,
                 showingQuarantineBanner: h
-              }), null == n.guild_id || x ? null : (0, a.jsx)(V.default, {
+              }), null == n.guild_id || v ? null : (0, a.jsx)(V.default, {
                 guildId: n.guild_id,
                 channel: n
               }), _ ? null : null !== (e = this.renderMessageBanner({
@@ -560,16 +560,16 @@ class eD extends l.PureComponent {
                 className: ey.form,
                 children: [S && (0, a.jsx)(q.default, {
                   channelId: n.id
-                }), n.isPrivate() ? (0, a.jsx)(ex.default, {
+                }), n.isPrivate() ? (0, a.jsx)(ev.default, {
                   channel: n,
-                  children: v
-                }) : (0, a.jsx)(ev.default, {
+                  children: x
+                }) : (0, a.jsx)(ex.default, {
                   channel: n,
-                  children: v
+                  children: x
                 }), (0, a.jsx)(E.default, {
                   channel: n,
                   poggermodeEnabled: S
-                }), !x && (0, a.jsx)(b.default, {})]
+                }), !v && (0, a.jsx)(b.default, {})]
               }), (0, a.jsx)(eh.ChatLayerContainer, {})]
             })]
           })]

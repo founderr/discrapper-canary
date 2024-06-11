@@ -201,8 +201,8 @@ n = this, r = function() {
       TABLE_REGEX: /^ *(\|.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)\n*/,
       NPTABLE_REGEX: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/
     }),
-    Y = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
-    j = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
+    j = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
+    Y = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
     z = /mailto:/i,
     H = function(e, t, n) {
       var r = (e[2] || e[1]).replace(/\s+/g, " ").toLowerCase();
@@ -599,7 +599,7 @@ n = this, r = function() {
       link: {
         order: V++,
         requiredFirstCharacters: ["["],
-        match: h(RegExp("^\\[(" + Y + ")\\]\\(" + j + "\\)")),
+        match: h(RegExp("^\\[(" + j + ")\\]\\(" + Y + "\\)")),
         parse: function(e, t, n) {
           return {
             content: t(e[1], n),
@@ -624,7 +624,7 @@ n = this, r = function() {
       },
       image: {
         order: V++,
-        match: h(RegExp("^!\\[(" + Y + ")\\]\\(" + j + "\\)")),
+        match: h(RegExp("^!\\[(" + j + ")\\]\\(" + Y + "\\)")),
         parse: function(e, t, n) {
           return {
             alt: e[1],
@@ -649,7 +649,7 @@ n = this, r = function() {
       },
       reflink: {
         order: V++,
-        match: h(RegExp("^\\[(" + Y + ")\\]\\s*\\[([^\\]]*)\\]")),
+        match: h(RegExp("^\\[(" + j + ")\\]\\s*\\[([^\\]]*)\\]")),
         parse: function(e, t, n) {
           return H(e, n, {
             type: "link",
@@ -661,7 +661,7 @@ n = this, r = function() {
       },
       refimage: {
         order: V++,
-        match: h(RegExp("^!\\[(" + Y + ")\\]\\s*\\[([^\\]]*)\\]")),
+        match: h(RegExp("^!\\[(" + j + ")\\]\\s*\\[([^\\]]*)\\]")),
         parse: function(e, t, n) {
           return H(e, n, {
             type: "image",

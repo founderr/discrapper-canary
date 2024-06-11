@@ -1,56 +1,56 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("464854"),
-  l = r("751392"),
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("844303"),
+  o = n("464854"),
+  s = n("751392"),
   u = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  s = function(e) {
+  c = function(e) {
     var t = e.rgb,
-      r = e.hsl,
-      n = e.width,
-      l = e.height,
-      s = e.onChange,
-      f = e.direction,
-      c = e.style,
-      d = e.renderers,
+      n = e.hsl,
+      r = e.width,
+      s = e.height,
+      c = e.onChange,
+      l = e.direction,
+      d = e.style,
+      f = e.renderers,
       p = e.pointer,
       h = e.className,
-      b = (0, o.default)({
+      m = (0, a.default)({
         default: {
           picker: {
             position: "relative",
-            width: n,
-            height: l
+            width: r,
+            height: s
           },
           alpha: {
             radius: "2px",
-            style: c
+            style: d
           }
         }
       });
-    return a().createElement("div", {
-      style: b.picker,
+    return i().createElement("div", {
+      style: m.picker,
       className: "alpha-picker " + (void 0 === h ? "" : h)
-    }, a().createElement(i.Alpha, u({}, b.alpha, {
+    }, i().createElement(o.Alpha, u({}, m.alpha, {
       rgb: t,
-      hsl: r,
+      hsl: n,
       pointer: p,
-      renderers: d,
-      onChange: s,
-      direction: f
+      renderers: f,
+      onChange: c,
+      direction: l
     })))
   };
-s.defaultProps = {
+c.defaultProps = {
   width: "316px",
   height: "16px",
   direction: "horizontal",
-  pointer: l.default
-}, (0, i.ColorWrap)(s)
+  pointer: s.default
+}, (0, o.ColorWrap)(c)

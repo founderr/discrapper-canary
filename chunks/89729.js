@@ -18,12 +18,12 @@ function h(e, t) {
   var i;
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.ReactionTypes.NORMAL,
     h = arguments.length > 3 ? arguments[3] : void 0,
-    f = o.default.getReactions(e.getChannelId(), e.id, t, 3, n),
-    m = l.default.getChannel(e.getChannelId()),
-    p = null == m || m.isPrivate() ? null : m.getGuildId(),
+    m = o.default.getReactions(e.getChannelId(), e.id, t, 3, n),
+    f = l.default.getChannel(e.getChannelId()),
+    p = null == f || f.isPrivate() ? null : f.getGuildId(),
     g = e.getReaction(t),
     T = n === d.ReactionTypes.BURST,
-    S = a()(f).reject(e => r.default.isBlocked(e.id)).take(3).map(e => u.default.getName(p, null == m ? void 0 : m.id, e)).value();
+    S = a()(m).reject(e => r.default.isBlocked(e.id)).take(3).map(e => u.default.getName(p, null == f ? void 0 : f.id, e)).value();
   if (0 === S.length) return "";
   let v = {
       standard: {

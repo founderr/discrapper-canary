@@ -27,33 +27,33 @@ t.default = (0, r.default)(e => {
     onSelectParticipant: T,
     onContextMenuParticipant: I,
     onFullscreenParticipant: A,
-    channel: x,
-    hasConnectPermission: v,
+    channel: v,
+    hasConnectPermission: x,
     className: N,
     inCall: M,
     showParticipants: y = !0,
     paused: R = !1,
     width: L,
-    height: j,
-    idle: O,
+    height: O,
+    idle: j,
     mode: P,
     popoutWindow: D,
     awaitingRemoteSessionInfo: b
   } = e;
   l.useEffect(() => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
-  }, [L, j]);
+  }, [L, O]);
   let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.some(e => (0, o.isActivityParticipantCurrentUserCurrentSession)(e))), [n, r]);
-  if ((null == b ? void 0 : b.channelId) === x.id) return (0, a.jsx)(h.default, {
-    height: j
+  if ((null == b ? void 0 : b.channelId) === v.id) return (0, a.jsx)(h.default, {
+    height: O
   });
-  if ((null == x ? void 0 : x.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
-    channel: x,
+  if ((null == v ? void 0 : v.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
+    channel: v,
     participants: t,
-    hasConnectPermission: v
+    hasConnectPermission: x
   });
   if (P === C.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
-    guildId: x.guild_id,
+    guildId: v.guild_id,
     width: L,
     className: S.voiceCallWrapper,
     participants: t,
@@ -61,14 +61,14 @@ t.default = (0, r.default)(e => {
   });
   if (n = M ? n : t, null == s) return 0 === n.length ? (0, a.jsx)(E.default, {
     className: i()(S.videoGrid, S.hiddenParticipants),
-    channelId: x.id,
+    channelId: v.id,
     width: L
   }) : (0, a.jsx)(d.default, {
     className: S.videoGridWrapper,
     justify: d.default.Justify.CENTER,
     align: d.default.Align.CENTER,
     children: (0, a.jsx)(m.default, {
-      channel: x,
+      channel: v,
       className: S.videoGrid,
       participants: U,
       totalNumberOfParticipants: t.length,
@@ -88,12 +88,12 @@ t.default = (0, r.default)(e => {
     participants: t,
     popoutWindow: D,
     className: N,
-    idle: O,
-    height: j,
+    idle: j,
+    height: O,
     width: L,
     layout: _,
     inCall: M,
-    channel: x,
+    channel: v,
     showParticipants: y
   })
 })

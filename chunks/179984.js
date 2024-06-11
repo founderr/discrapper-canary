@@ -13,16 +13,16 @@ var a = s("735250"),
   E = s("906732"),
   R = s("15640"),
   T = s("594174"),
-  f = s("78839"),
-  I = s("74538"),
+  I = s("78839"),
+  f = s("74538"),
   S = s("775412"),
   m = s("104494"),
   p = s("639119"),
   A = s("230916"),
   M = s("248042"),
   C = s("823188"),
-  N = s("21023"),
-  g = s("318747"),
+  g = s("21023"),
+  N = s("318747"),
   P = s("409100"),
   O = s("474936"),
   x = s("689938"),
@@ -55,7 +55,7 @@ let U = e => {
       } = e,
       r = (0, d.default)();
     t = s === O.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(r) ? h : D : (0, o.isThemeDark)(r) ? L : v;
-    let i = (0, I.getPremiumTypeDisplayName)(s);
+    let i = (0, f.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
       className: b.logo,
@@ -136,7 +136,7 @@ t.default = e => {
     {
       analyticsLocations: W
     } = (0, E.default)(_.default.PREMIUM_MARKETING_PLAN_COMPARISON),
-    y = (0, l.useStateFromStores)([f.default], () => f.default.hasFetchedSubscriptions()),
+    y = (0, l.useStateFromStores)([I.default], () => I.default.hasFetchedSubscriptions()),
     F = (0, R.useSubscriptionPlansLoaded)(),
     w = "PlanComparisonTable";
   (0, c.useTriggerDebuggingAA)({
@@ -149,17 +149,17 @@ t.default = e => {
   let K = (0, d.default)(),
     V = (0, o.isThemeLight)(K),
     Y = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
-    z = (0, I.isPremiumExactly)(Y, O.PremiumTypes.TIER_2),
+    z = (0, f.isPremiumExactly)(Y, O.PremiumTypes.TIER_2),
     Q = (0, p.usePremiumTrialOffer)(),
     X = null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
     J = (0, S.useCurrentPremiumTrialTier)(),
     Z = (0, m.usePremiumDiscountOffer)(),
     q = null != Z && (0, m.discountOfferHasTier)(Z, O.PremiumSubscriptionSKUs.TIER_2),
     $ = (0, A.useDiscountedPrice)(O.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    ee = "".concat($, "/").concat((0, I.getIntervalStringAsNoun)(O.SubscriptionIntervalTypes.MONTH)),
-    et = (0, I.getDefaultPrice)(O.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-    es = (0, I.getDefaultPrice)(O.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    ea = (0, N.useGetPlanComparisonTableRows)(et, es, q, ee),
+    ee = "".concat($, "/").concat((0, f.getIntervalStringAsNoun)(O.SubscriptionIntervalTypes.MONTH)),
+    et = (0, f.getDefaultPrice)(O.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+    es = (0, f.getDefaultPrice)(O.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    ea = (0, g.useGetPlanComparisonTableRows)(et, es, q, ee),
     er = (0, M.useIsEligibleForBogoPromotion)();
   if (!y || !F) return null;
   let ei = {
@@ -197,7 +197,7 @@ t.default = e => {
         className: b.button,
         subscriptionTier: O.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1
-      }), J === O.PremiumTypes.TIER_2 || null != X ? null : (0, a.jsx)(g.default, {
+      }), J === O.PremiumTypes.TIER_2 || null != X ? null : (0, a.jsx)(N.default, {
         className: b.button,
         subscriptionTier: O.PremiumSubscriptionSKUs.TIER_0
       })]
@@ -215,7 +215,7 @@ t.default = e => {
         subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         isEligibleForBogoPromotion: er
-      }), J === O.PremiumTypes.TIER_0 || null != X ? null : (0, a.jsx)(g.default, {
+      }), J === O.PremiumTypes.TIER_0 || null != X ? null : (0, a.jsx)(N.default, {
         className: b.button,
         subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2
       })]

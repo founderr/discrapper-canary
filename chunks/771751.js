@@ -110,7 +110,7 @@ function _(e) {
       value: t
     } = e;
     return t === P
-  })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", D = null != R, M = null != R && new Date(R).getTime() < Date.now(), F = (null == A ? void 0 : A.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, B = async () => {
+  })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", D = null != R, M = null != R && new Date(R).getTime() < Date.now(), B = (null == A ? void 0 : A.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, F = async () => {
     N(!0), D ? await E(I, "trial") : await (0, d.acknowledgeUserOffer)(c), h(), N(!1)
   };
   i.useEffect(() => {
@@ -133,7 +133,7 @@ function _(e) {
   }, [b, v]);
   let H = "Active";
   return D && (H = "Acknowledged"), M && (H = "Expired"), (0, a.jsxs)("div", {
-    className: l()(S.card, F ? S.gradientWrapperTier0 : S.gradientWrapperTier2),
+    className: l()(S.card, B ? S.gradientWrapperTier0 : S.gradientWrapperTier2),
     children: [(0, a.jsxs)("div", {
       className: l()(S.row, S.nameRow),
       children: [(0, a.jsx)(s.Heading, {
@@ -189,7 +189,7 @@ function _(e) {
     }), (0, a.jsxs)("div", {
       className: S.badgeContainer,
       children: [(0, a.jsx)(s.Clickable, {
-        onClick: B,
+        onClick: F,
         className: l()(S.badge, S.clickable, {
           [S.acked]: D,
           [S.expired]: M

@@ -48,14 +48,14 @@ function B() {
   })
 }
 
-function V(e) {
+function x(e) {
   if (null != e) {
     let t = g.default.getDefaultChannel(e);
     if (null != t) return t.id
   }
 }
 
-function x(e, t) {
+function V(e, t) {
   if (null == e || null == t || G[e] === t) return !1;
   let n = R.default.getChannel(t),
     i = null != n && (0, p.isGuildTextChannelType)(n.type),
@@ -78,7 +78,7 @@ function H() {
     (null == t || !R.default.hasChannel(t) && !w.has(t)) && (delete G[n], e = !0)
   }), T().each(t, e => {
     let t = U[e.id];
-    null == G[e.id] && x(e.id, t)
+    null == G[e.id] && V(e.id, t)
   }), null != l && Date.now() - l >= 3e5 && (o = null, e = !0), e
 }
 
@@ -89,7 +89,7 @@ function Y(e, t) {
   }
   let n = null != L.default.getGuild(t) ? t : null,
     i = !1;
-  o === e && (o = null, i = !0), !(0, A.isInMainTabsExperiment)() && (U[k(n)] === e && (U[k(n)] = V(k(n)), D.default.getGuildId() === n && (0, N.replaceWith)(M.Routes.CHANNEL(t, U[k(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
+  o === e && (o = null, i = !0), !(0, A.isInMainTabsExperiment)() && (U[k(n)] === e && (U[k(n)] = x(k(n)), D.default.getGuildId() === n && (0, N.replaceWith)(M.Routes.CHANNEL(t, U[k(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
 }
 
 function j(e) {
@@ -124,7 +124,7 @@ class W extends(d = f.default.Store) {
     var t, n;
     let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
       r = k(e === M.ME ? null : null !== (t = null != e ? e : D.default.getGuildId()) && void 0 !== t ? t : null);
-    return i ? null !== (n = U[r]) && void 0 !== n ? n : V(r) : U[r]
+    return i ? null !== (n = U[r]) && void 0 !== n ? n : x(r) : U[r]
   }
   getVoiceChannelId() {
     return v.default.isSupported() ? o : null
@@ -156,7 +156,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
     i = e.sessionId, null != o && null == R.default.getChannel(o) && (o = null), H() && B()
   },
   OVERLAY_INITIALIZE: function(e) {
-    i = e.sessionId, o = e.selectedVoiceChannelId, U = {}, b = {}, s = e.selectedChannelId, U[e.selectedGuildId] = e.selectedChannelId, x(e.selectedGuildId, s), H()
+    i = e.sessionId, o = e.selectedVoiceChannelId, U = {}, b = {}, s = e.selectedChannelId, U[e.selectedGuildId] = e.selectedChannelId, V(e.selectedGuildId, s), H()
   },
   CONNECTION_CLOSED: function() {
     i = null
@@ -167,7 +167,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
       channelId: n
     } = e;
     if (void 0 === t) return !1;
-    null == n && (!(0, A.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = V(t)), null != s && n !== s && (r = s), s = n, x(t, n), U[k(t)] !== n && (b[k(t)] = U[k(t)], U[k(t)] = s), B()
+    null == n && (!(0, A.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = x(t)), null != s && n !== s && (r = s), s = n, V(t, n), U[k(t)] !== n && (b[k(t)] = U[k(t)], U[k(t)] = s), B()
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -177,7 +177,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
       case M.ChannelTypes.GUILD_ANNOUNCEMENT:
       case M.ChannelTypes.GUILD_TEXT:
         let n = t.guild_id;
-        if (null != n && null == G[n] && (G[n] = t.id), null != n && null == U[n]) return U[n] = V(n), !0
+        if (null != n && null == G[n] && (G[n] = t.id), null != n && null == U[n]) return U[n] = x(n), !0
     }
     return !1
   },
@@ -194,8 +194,8 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
       guild: t
     } = e;
     if (null == U[t.id]) {
-      let e = V(t.id);
-      U[t.id] = e, x(t.id, e), B()
+      let e = x(t.id);
+      U[t.id] = e, V(t.id, e), B()
     }
   },
   GUILD_DELETE: function(e) {
@@ -215,7 +215,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
     if (null == t) {
       let e = R.default.getChannel(o),
         t = null == e ? void 0 : e.guild_id;
-      null != t && t !== D.default.getGuildId() && U[t] === o && (U[t] = V(t))
+      null != t && t !== D.default.getGuildId() && U[t] === o && (U[t] = x(t))
     }
     o = t, B()
   },

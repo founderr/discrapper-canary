@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("492162"),
   L = n("818634"),
   P = n("596557"),
-  M = n("817520"),
-  y = n("999309"),
+  y = n("817520"),
+  M = n("999309"),
   D = n("408987"),
   x = n("130734"),
   b = n("499137"),
@@ -378,7 +378,7 @@ class ep extends s.PureComponent {
       null != t && (0, E.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("7654"), n.e("33053"), n.e("46136"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("69760"), n.e("33213")]).then(n.bind(n, "545135"));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("7654"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("69760"), n.e("33213")]).then(n.bind(n, "545135"));
         return n => (0, a.jsx)(e, {
           ...n,
           guild: t
@@ -485,13 +485,13 @@ function eI(e) {
   s.useEffect(() => {
     n !== el && es(!z)
   }, [n, el, z]);
-  let [eo, ef] = (0, N.default)(e => [ed.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(ec.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), eE = (0, I.default)(d), eh = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eC = (0, o.useStateFromStores)([Z.default], () => Z.default.hasLayers()), e_ = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(em)), eS = g && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.ProcessArgs.isDisallowPopupsSet(), eI = (0, o.useStateFromStores)([q.default], () => q.default.getMemberCount(n)), eg = g && null != eI && eI >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.ProcessArgs.isDisallowPopupsSet(), eT = R && null != d && (d.hasFeature(eu.GuildFeatures.COMMUNITY) || null != eI && eI > 50), eA = (0, y.default)(n), eN = (0, A.useLowerMemberCountRequirements)(n), ev = (null == d ? void 0 : d.hasFeature(eu.GuildFeatures.HUB)) === !0, eR = g && (null == d ? void 0 : d.hasFeature(eu.GuildFeatures.DISCOVERABLE)) === !0, eO = (0, p.useBlockedPaymentsConfig)(), eL = (g || (null == d ? void 0 : d.premiumTier) === eu.BoostedGuildTiers.NONE) && !en.ProcessArgs.isDisallowPopupsSet() && !eO, eP = (0, o.useStateFromStores)([x.default, Z.default], () => null != d && null != w && g && !Z.default.hasLayers() && x.default.shouldShowGuildTemplateDirtyTooltip(n)), eM = (0, o.useStateFromStores)([Y.default], () => Y.default.getChannel(r)), {
-    isPopoutOpen: ey
+  let [eo, ef] = (0, N.default)(e => [ed.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(ec.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), eE = (0, I.default)(d), eh = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eC = (0, o.useStateFromStores)([Z.default], () => Z.default.hasLayers()), e_ = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(em)), eS = g && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.ProcessArgs.isDisallowPopupsSet(), eI = (0, o.useStateFromStores)([q.default], () => q.default.getMemberCount(n)), eg = g && null != eI && eI >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.ProcessArgs.isDisallowPopupsSet(), eT = R && null != d && (d.hasFeature(eu.GuildFeatures.COMMUNITY) || null != eI && eI > 50), eA = (0, M.default)(n), eN = (0, A.useLowerMemberCountRequirements)(n), ev = (null == d ? void 0 : d.hasFeature(eu.GuildFeatures.HUB)) === !0, eR = g && (null == d ? void 0 : d.hasFeature(eu.GuildFeatures.DISCOVERABLE)) === !0, eO = (0, p.useBlockedPaymentsConfig)(), eL = (g || (null == d ? void 0 : d.premiumTier) === eu.BoostedGuildTiers.NONE) && !en.ProcessArgs.isDisallowPopupsSet() && !eO, eP = (0, o.useStateFromStores)([x.default, Z.default], () => null != d && null != w && g && !Z.default.hasLayers() && x.default.shouldShowGuildTemplateDirtyTooltip(n)), ey = (0, o.useStateFromStores)([Y.default], () => Y.default.getChannel(r)), {
+    isPopoutOpen: eM
   } = (0, L.useGuildHeaderPopoutStore)(), eD = null !== (t = null == d ? void 0 : d.hasFeature(eu.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ex = (0, o.useStateFromStores)([k.default], () => !i().isEmpty(k.default.getThreadsForGuild(n))), eb = et.default.isNewUser(w), eU = ea && !eb, ej = (0, T.default)(w);
   (0, P.default)(d);
   let eG = (0, v.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
     ew = (0, j.default)(n),
-    ek = (0, M.default)(n),
+    ek = (0, y.default)(n),
     eB = (0, o.useStateFromStores)([$.default], () => $.default.getChannelId()),
     eF = (0, o.useStateFromStores)([J.default], () => J.default.desyncedVoiceStatesCount),
     eH = G.CustomNotificationSoundExperiment.useExperiment({
@@ -505,7 +505,7 @@ function eI(e) {
     guild: d,
     scrollToChannel: E,
     selectedChannelId: l ? null : r,
-    selectedChannel: eM,
+    selectedChannel: ey,
     selectedVoiceChannelId: h,
     voiceStates: f,
     rtcConnectedChannelId: eB,
@@ -529,7 +529,7 @@ function eI(e) {
     showGuildSoundboardPermissionUpsell: eT,
     showMediaChannelUpsell: ew,
     showTierTemplatesUpsell: ek,
-    isHeaderPopoutOpen: ey,
+    isHeaderPopoutOpen: eM,
     enableStudyGroup: H,
     isGuildHeaderDismissibleTooltipShown: ef,
     canShowCoachMarkAtBottom: ea,

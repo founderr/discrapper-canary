@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return U
   },
   dismissNewActivityIndicator: function() {
-    return x
+    return V
   },
   fetchDeveloperApplications: function() {
     return b
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return B
   },
   sendEmbeddedActivityInviteUser: function() {
-    return V
+    return x
   },
   startEmbeddedActivity: function() {
     return M
@@ -312,7 +312,7 @@ async function B(e) {
   }, r);
   null != S.default.getChannel(n) && u.default.sendInvite(n, s.code, r, null)
 }
-async function V(e) {
+async function x(e) {
   let {
     channelId: t,
     applicationId: n,
@@ -327,7 +327,7 @@ async function V(e) {
   })
 }
 
-function x() {
+function V() {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR"
   })

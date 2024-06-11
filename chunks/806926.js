@@ -31,11 +31,11 @@ function p(e) {
     initialSection: g,
     autoFocusNote: A,
     friendToken: x,
-    transitionState: N,
-    onClose: C
+    transitionState: C,
+    onClose: N
   } = e, U = (0, i.useStateFromStores)([a.default], () => a.default.getRelationshipType(l.id)), {
-    originalFriendingEnabled: h,
-    improvedFriendingEnabled: P
+    originalFriendingEnabled: P,
+    improvedFriendingEnabled: h
   } = (0, o.useSimplifiedProfileFriendingExperiment)({
     location: "SimplifiedUserProfileModalBody"
   });
@@ -53,9 +53,9 @@ function p(e) {
       tags: (0, s.jsx)(r.default, {
         displayProfile: T,
         profileType: I.UserProfileTypes.FULL_SIZE,
-        onClose: C
+        onClose: N
       })
-    }), (P || h) && U === m.RelationshipTypes.PENDING_INCOMING && (0, s.jsx)(f.default.Overlay, {
+    }), (h || P) && U === m.RelationshipTypes.PENDING_INCOMING && (0, s.jsx)(f.default.Overlay, {
       className: v.banner,
       children: (0, s.jsx)(c.default, {
         user: l,
@@ -65,14 +65,14 @@ function p(e) {
       })
     }), (0, s.jsxs)(f.default.Overlay, {
       className: v.overlay,
-      children: [N === _.ModalTransitionState.ENTERED && (0, s.jsx)(u.default, {
-        onTooltipClose: C
+      children: [C === _.ModalTransitionState.ENTERED && (0, s.jsx)(u.default, {
+        onTooltipClose: N
       }), (0, s.jsx)(E.default, {
         user: l,
         displayProfile: T,
         initialSection: g,
         autoFocusNote: A,
-        onClose: C
+        onClose: N
       })]
     })]
   })

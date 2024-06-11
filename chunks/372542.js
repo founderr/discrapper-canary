@@ -225,11 +225,11 @@ var U = function(e, t) {
       return e.cancelled
     }) ? z(e) : t.every(function(e) {
       return e.noop
-    }) ? Y(e) : j(e, t.every(function(e) {
+    }) ? j(e) : Y(e, t.every(function(e) {
       return e.finished
     }))
   },
-  Y = function(e, t) {
+  j = function(e, t) {
     return void 0 === t && (t = e.get()), {
       value: t,
       noop: !0,
@@ -237,7 +237,7 @@ var U = function(e, t) {
       target: e
     }
   },
-  j = function(e, t, n) {
+  Y = function(e, t, n) {
     return void 0 === n && (n = e.get()), {
       value: n,
       finished: t,
@@ -301,7 +301,7 @@ function V() {
                       }
                     }
                   }, y = function(e) {
-                    var t = s <= (r.cancelId || 0) && z(i) || s !== r.asyncId && j(i, !1);
+                    var t = s <= (r.cancelId || 0) && z(i) || s !== r.asyncId && Y(i, !1);
                     if (t) throw e.result = t, e
                   }, E = v(function(e, t) {
                     var n = new W;
@@ -383,7 +383,7 @@ function V() {
                     }
                   })()(t) : a.is.fun(t) && (x = Promise.resolve(t(E, i.stop.bind(i)))), e.next = 11, Promise.all([x.then(g), b]);
                 case 11:
-                  S = j(i, !0), e.next = 21;
+                  S = Y(i, !0), e.next = 21;
                   break;
                 case 14:
                   if (e.prev = 14, e.t0 = e.catch(7), !(e.t0 instanceof W)) {
@@ -719,7 +719,7 @@ var W = function(e) {
         !a.is.und(s) && (s < .01 && (s = .01), u < 0 && (u = 0), e.tension = Math.pow(2 * Math.PI / s, 2) * i, e.friction = 4 * Math.PI * u * i / s)
       }(O, M(t.config, r), t.config !== s.config ? M(s.config, r) : void 0);
       var I = f.getAnimated(this);
-      if (!I || a.is.und(_)) return n(j(this, !0));
+      if (!I || a.is.und(_)) return n(Y(this, !0));
       var L = a.is.und(t.reset) ? c && !t.default : !a.is.und(v) && A(t.reset, r),
         P = L ? v : this.get(),
         B = F(_),
@@ -756,7 +756,7 @@ var W = function(e) {
       else if (W) L && (this._phase = X), this._reset(), this._start();
       else if (this.is(J) && !x) i.onRest.push(ea(n, this));
       else {
-        let e = Y(this, P),
+        let e = j(this, P),
           t = ei(l("onNoopRest"), r);
         null != t && t(e), n(e)
       }
@@ -832,7 +832,7 @@ var ea = function(e, t) {
     else {
       var i = F(n),
         o = F(t.get());
-      e(j(t, a.isEqual(o, i)))
+      e(Y(t, a.isEqual(o, i)))
     }
   } : a.noop
 };

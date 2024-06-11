@@ -1,30 +1,30 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return c
   }
 });
-var a = l("348327"),
-  n = l.n(a),
-  s = l("392711"),
-  r = l.n(s),
-  i = l("442837"),
-  o = l("566006"),
-  d = l("542578"),
-  u = l("981631");
+var l = a("348327"),
+  s = a.n(l),
+  n = a("392711"),
+  r = a.n(n),
+  o = a("442837"),
+  i = a("566006"),
+  d = a("542578"),
+  u = a("981631");
 
 function c(e) {
-  var t, l;
+  var t, a;
   let {
-    channelId: a,
-    messageId: s,
+    channelId: l,
+    messageId: n,
     reaction: c
-  } = e, m = (0, i.useStateFromStores)([d.default], () => {
-    let e = d.default.getReactions(a, s, c.emoji, u.DEFAULT_NUM_REACTION_USERS, o.ReactionTypes.VOTE);
+  } = e, m = (0, o.useStateFromStores)([d.default], () => {
+    let e = d.default.getReactions(l, n, c.emoji, u.DEFAULT_NUM_REACTION_USERS, i.ReactionTypes.VOTE);
     return r().map(e, e => e)
-  }, [a, s, c.emoji], n());
+  }, [l, n, c.emoji], s());
   return {
     reactors: m,
-    hasMore: (null !== (l = null === (t = c.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== l ? l : 0) > m.length
+    hasMore: (null !== (a = null === (t = c.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== a ? a : 0) > m.length
   }
 }

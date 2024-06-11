@@ -14,12 +14,12 @@ var r = s("120356"),
   E = s("409100"),
   R = s("474936"),
   T = s("981631"),
-  f = s("497915");
+  I = s("497915");
 t.default = function(e) {
   let {
     localizedPricingPromo: t,
     smallGap: s
-  } = e, r = t.countryCode, I = (0, n.useStateFromStores)([o.default], () => o.default.locale);
+  } = e, r = t.countryCode, f = (0, n.useStateFromStores)([o.default], () => o.default.locale);
   (0, d.useTrackLocalizedPricingPromoImpression)(T.AnalyticsSections.SETTINGS_PREMIUM_BANNER, r);
   let S = (0, n.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
     {
@@ -28,38 +28,38 @@ t.default = function(e) {
     } = (0, c.getLocalizedPricingBannerStrings)({
       localizedPricingPromo: t,
       subscription: S,
-      userLocale: I
+      userLocale: f
     }),
     A = r.toLowerCase() + "Banner";
   return (0, a.jsxs)("div", {
-    className: i()(f.bannerContainer, {
-      [f.smallGap]: s,
-      [f.bigGap]: !s
+    className: i()(I.bannerContainer, {
+      [I.smallGap]: s,
+      [I.bigGap]: !s
     }),
     children: [(0, a.jsx)("div", {
-      className: i()(f[A], f.bannerImageContainer)
+      className: i()(I[A], I.bannerImageContainer)
     }), (0, a.jsx)(l.Heading, {
-      className: f.bannerHeading,
+      className: I.bannerHeading,
       variant: "heading-xl/semibold",
       children: m
     }), (0, a.jsx)("div", {
-      className: f.textContainer,
+      className: I.textContainer,
       children: (0, a.jsx)(l.Text, {
         color: "none",
         variant: "text-md/normal",
-        className: f.bannerBody,
+        className: I.bannerBody,
         children: p
       })
     }), (0, a.jsxs)("div", {
-      className: f.ctaButtonContainer,
+      className: I.ctaButtonContainer,
       children: [(0, a.jsx)(E.default, {
         forceInverted: !0,
-        className: f.ctaButton,
+        className: I.ctaButton,
         subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2
       }), (0, a.jsx)(_.default, {
         forceWhite: !0,
         subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
-        className: f.ctaButton
+        className: I.ctaButton
       })]
     })]
   })

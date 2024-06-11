@@ -154,7 +154,7 @@ function y(e) {
   var O = h();
 
   function M(e) {
-    (0, r.default)(j, e), j.length = n.length, O.notifyListeners(j.location, j.action)
+    (0, r.default)(Y, e), Y.length = n.length, O.notifyListeners(Y.location, Y.action)
   }
 
   function A(e) {
@@ -172,7 +172,7 @@ function y(e) {
         action: "POP",
         location: e
       }) : function(e) {
-        var t = j.location,
+        var t = Y.location,
           n = L.indexOf(t.key); - 1 === n && (n = 0);
         var r = L.indexOf(e.key); - 1 === r && (r = 0);
         var i = n - r;
@@ -195,15 +195,15 @@ function y(e) {
   function U(e) {
     1 === (B += e) && 1 === e ? (window.addEventListener(_, A), a && window.addEventListener(b, k)) : 0 === B && (window.removeEventListener(_, A), a && window.removeEventListener(b, k))
   }
-  var Y = !1,
-    j = {
+  var j = !1,
+    Y = {
       length: n.length,
       action: "POP",
       location: I,
       createHref: P,
       push: function(e, t) {
         var r = "PUSH",
-          a = f(e, t, D(), j.location);
+          a = f(e, t, D(), Y.location);
         O.confirmTransitionTo(a, r, S, function(e) {
           if (e) {
             var t = P(a),
@@ -215,7 +215,7 @@ function y(e) {
                   state: s
                 }, null, t), y) window.location.href = t;
               else {
-                var u = L.indexOf(j.location.key),
+                var u = L.indexOf(Y.location.key),
                   c = L.slice(0, u + 1);
                 c.push(a.key), L = c, M({
                   action: r,
@@ -228,7 +228,7 @@ function y(e) {
       },
       replace: function(e, t) {
         var r = "REPLACE",
-          a = f(e, t, D(), j.location);
+          a = f(e, t, D(), Y.location);
         O.confirmTransitionTo(a, r, S, function(e) {
           if (e) {
             var t = P(a),
@@ -240,7 +240,7 @@ function y(e) {
                   state: s
                 }, null, t), y) window.location.replace(t);
               else {
-                var u = L.indexOf(j.location.key); - 1 !== u && (L[u] = a.key), M({
+                var u = L.indexOf(Y.location.key); - 1 !== u && (L[u] = a.key), M({
                   action: r,
                   location: a
                 })
@@ -259,9 +259,9 @@ function y(e) {
       block: function(e) {
         void 0 === e && (e = !1);
         var t = O.setPrompt(e);
-        return !Y && (U(1), Y = !0),
+        return !j && (U(1), j = !0),
           function() {
-            return Y && (Y = !1, U(-1)), t()
+            return j && (j = !1, U(-1)), t()
           }
       },
       listen: function(e) {
@@ -272,7 +272,7 @@ function y(e) {
           }
       }
     };
-  return j
+  return Y
 }
 var E = "hashchange",
   S = {

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   download: function() {
-    return a
+    return n
   }
 });
-var s = n("782568");
+var a = s("782568");
 
-function a(e) {
-  return (0, s.default)(e)
+function n(e) {
+  return (0, a.default)(e)
 }

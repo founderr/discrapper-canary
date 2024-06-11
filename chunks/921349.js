@@ -55,7 +55,7 @@ let U = r.forwardRef(function(e, t) {
     isDisabled: U = !1,
     maxVisibleItems: G = 7,
     look: B = v.SelectLooks.FILLED,
-    autoFocus: V = !1,
+    autoFocus: x = !1,
     popoutPosition: H = "bottom",
     filter: Y = !0,
     debounceTime: j,
@@ -162,14 +162,14 @@ let U = r.forwardRef(function(e, t) {
       ew(!1)
     }
   }));
-  let eV = r.useCallback((e, t) => {
+  let ex = r.useCallback((e, t) => {
       let n = document.querySelector(e),
         i = eC.current;
       eS(t), null != i && null != n && i.scrollIntoViewNode({
         node: n
       })
     }, []),
-    ex = r.useCallback(() => new Promise(e => {
+    eV = r.useCallback(() => new Promise(e => {
       let t = eC.current;
       if (null == t) return e();
       t.scrollToTop({
@@ -186,12 +186,12 @@ let U = r.forwardRef(function(e, t) {
     eH = (0, u.default)({
       id: eb,
       defaultFocused: null != ey ? String(ey.value) : void 0,
-      scrollToStart: ex,
+      scrollToStart: eV,
       scrollToEnd: eF,
       isEnabled: eh,
       wrap: !0,
       useVirtualFocus: !0,
-      setFocus: eV,
+      setFocus: ex,
       disableClickOnSpace: !0
     }),
     eY = (0, p.default)(eH),
@@ -248,11 +248,11 @@ let U = r.forwardRef(function(e, t) {
     eS(null), (!I || T) && ew(!1), eO(!1), ei && eN("")
   }, [n, eg, I, T, ei, l, s, ew]);
   r.useLayoutEffect(() => {
-    if (V) {
+    if (x) {
       var e;
       null === (e = eT.current) || void 0 === e || e.focus()
     }
-  }, [V]);
+  }, [x]);
   let eK = r.useCallback(() => {
       eN(""), eW(null), ew(!0)
     }, [eW, ew]),
@@ -273,7 +273,7 @@ let U = r.forwardRef(function(e, t) {
   }, [em]), r.useEffect(() => {
     !eL && ep && null !== em && requestAnimationFrame(() => eH.focusFirstVisibleItem())
   }, [eL, ep, em]);
-  let eQ = I ? F : x,
+  let eQ = I ? F : V,
     eX = r.useRef(null),
     {
       focusPreviousItem: eq,
@@ -703,14 +703,14 @@ function B(e) {
     }), " ", null != s && (0, i.jsx)("div", {
       className: M.suffix,
       children: s
-    }), " ", (0, i.jsx)(V, {
+    }), " ", (0, i.jsx)(x, {
       isSelected: l,
       multi: c
     })]
   })
 }
 
-function V(e) {
+function x(e) {
   let {
     isSelected: t,
     multi: n
@@ -732,7 +732,7 @@ function V(e) {
   }) : null
 }
 
-function x(e) {
+function V(e) {
   let {
     selectedOptions: t,
     renderOptionPrefix: n,

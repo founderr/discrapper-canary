@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   useCurrentUserVerificationStatus: function() {
-    return d
+    return o
   },
   useIsPhoneVerificationLevel: function() {
     return u
@@ -25,7 +25,7 @@ function u(e) {
   }, [t, i])
 }
 
-function d(e) {
+function o(e) {
   let {
     guildId: t
   } = e, s = (0, l.useStateFromStores)([i.default], () => i.default.getCurrentUser()), n = u({

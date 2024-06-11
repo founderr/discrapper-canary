@@ -50,7 +50,7 @@ function R() {
       verification_types: R
     }
   }, {}, [R.toString()]);
-  let M = () => {
+  let y = () => {
       (0, c.accountDetailsInit)(), (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -63,7 +63,7 @@ function R() {
         Layer: p.default
       })
     },
-    y = () => {
+    M = () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -93,7 +93,7 @@ function R() {
     }, {
       modalKey: v,
       Layer: p.default,
-      onCloseCallback: M
+      onCloseCallback: y
     })
   }, [R, P]), (0, a.jsx)(S.default, {
     types: R,
@@ -111,7 +111,7 @@ function R() {
     },
     theme: t,
     onClick: e => {
-      e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? M() : y()
+      e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? y() : M()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {

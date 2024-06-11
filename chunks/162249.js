@@ -1,49 +1,49 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("230866"),
-  l = r("827622"),
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("844303"),
+  o = n("230866"),
+  s = n("827622"),
   u = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  s = function() {
+  c = function() {
     function e(e, t) {
-      for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+      for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
       }
     }
-    return function(t, r, n) {
-      return r && e(t.prototype, r), n && e(t, n), t
+    return function(t, n, r) {
+      return n && e(t.prototype, n), r && e(t, r), t
     }
   }();
 
-function f(e, t) {
+function l(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
-var c = function(e) {
+var d = function(e) {
   function t() {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, t);
-    for (var e, r, n, a = arguments.length, o = Array(a), l = 0; l < a; l++) o[l] = arguments[l];
-    return r = n = f(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o))), n.handleChange = function(e) {
-      var t = i.calculateChange(e, n.props.hsl, n.props.direction, n.props.a, n.container);
-      t && "function" == typeof n.props.onChange && n.props.onChange(t, e)
-    }, n.handleMouseDown = function(e) {
-      n.handleChange(e), window.addEventListener("mousemove", n.handleChange), window.addEventListener("mouseup", n.handleMouseUp)
-    }, n.handleMouseUp = function() {
-      n.unbindEventListeners()
-    }, n.unbindEventListeners = function() {
-      window.removeEventListener("mousemove", n.handleChange), window.removeEventListener("mouseup", n.handleMouseUp)
-    }, f(n, r)
+    for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
+    return n = r = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a))), r.handleChange = function(e) {
+      var t = o.calculateChange(e, r.props.hsl, r.props.direction, r.props.a, r.container);
+      t && "function" == typeof r.props.onChange && r.props.onChange(t, e)
+    }, r.handleMouseDown = function(e) {
+      r.handleChange(e), window.addEventListener("mousemove", r.handleChange), window.addEventListener("mouseup", r.handleMouseUp)
+    }, r.handleMouseUp = function() {
+      r.unbindEventListeners()
+    }, r.unbindEventListeners = function() {
+      window.removeEventListener("mousemove", r.handleChange), window.removeEventListener("mouseup", r.handleMouseUp)
+    }, l(r, n)
   }
   return ! function(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -55,7 +55,7 @@ var c = function(e) {
         configurable: !0
       }
     }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-  }(t, e), s(t, [{
+  }(t, e), c(t, [{
     key: "componentWillUnmount",
     value: function() {
       this.unbindEventListeners()
@@ -65,7 +65,7 @@ var c = function(e) {
     value: function() {
       var e = this,
         t = this.props.rgb,
-        r = (0, o.default)({
+        n = (0, a.default)({
           default: {
             alpha: {
               absolute: "0px 0px 0px 0px",
@@ -115,28 +115,28 @@ var c = function(e) {
           vertical: "vertical" === this.props.direction,
           overwrite: !0
         });
-      return a().createElement("div", {
-        style: r.alpha
-      }, a().createElement("div", {
-        style: r.checkboard
-      }, a().createElement(l.default, {
+      return i().createElement("div", {
+        style: n.alpha
+      }, i().createElement("div", {
+        style: n.checkboard
+      }, i().createElement(s.default, {
         renderers: this.props.renderers
-      })), a().createElement("div", {
-        style: r.gradient
-      }), a().createElement("div", {
-        style: r.container,
+      })), i().createElement("div", {
+        style: n.gradient
+      }), i().createElement("div", {
+        style: n.container,
         ref: function(t) {
           return e.container = t
         },
         onMouseDown: this.handleMouseDown,
         onTouchMove: this.handleChange,
         onTouchStart: this.handleChange
-      }, a().createElement("div", {
-        style: r.pointer
-      }, this.props.pointer ? a().createElement(this.props.pointer, this.props) : a().createElement("div", {
-        style: r.slider
+      }, i().createElement("div", {
+        style: n.pointer
+      }, this.props.pointer ? i().createElement(this.props.pointer, this.props) : i().createElement("div", {
+        style: n.slider
       }))))
     }
   }]), t
-}(n.PureComponent || n.Component);
-t.default = c
+}(r.PureComponent || r.Component);
+t.default = d

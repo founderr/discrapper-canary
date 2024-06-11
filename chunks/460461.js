@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("434404"),
   L = s("999382"),
   O = s("450474"),
-  A = s("190287"),
-  p = s("981631"),
+  p = s("190287"),
+  A = s("981631"),
   M = s("731455"),
   D = s("689938"),
   v = s("845978");
@@ -79,7 +79,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
     let {
       canManageGuild: U
     } = (0, n.useStateFromStoresObject)([f.default], () => ({
-      canManageGuild: f.default.can(p.Permissions.MANAGE_GUILD, s)
+      canManageGuild: f.default.can(A.Permissions.MANAGE_GUILD, s)
     })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), y = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [B, F] = l.useState([!0]), [H, k] = l.useState(!0), [w, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
       let t = Object.entries(M.ALLOWED_SOCIAL_LINKS_DOMAINS).filter(e => !Y.includes(e[1].presentation)).map(e => ({
         label: e[1].presentation,
@@ -255,7 +255,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     children: [D.default.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({
                       discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT
                     }), " ", D.default.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({
-                      learnMoreURL: R.default.getArticleURL(p.HelpdeskArticles.SERVER_WEB_PAGES)
+                      learnMoreURL: R.default.getArticleURL(A.HelpdeskArticles.SERVER_WEB_PAGES)
                     })]
                   }), (() => {
                     if (!b.isPublished || null == y) return;
@@ -391,7 +391,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         children: D.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_DESCRIPTION
                       }), (0, a.jsx)("div", {
                         className: v.reasonToJoin,
-                        children: (0, a.jsx)(A.default, {
+                        children: (0, a.jsx)(p.default, {
                           reasonMinLength: 10,
                           reasonMaxLength: 128,
                           guildId: s.id,

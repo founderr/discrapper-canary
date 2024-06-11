@@ -17,16 +17,16 @@ var a = s("399606"),
   E = s("101732"),
   R = s("450598"),
   T = s("633030"),
-  f = s("97942"),
-  I = s("269987"),
+  I = s("97942"),
+  f = s("269987"),
   S = s("548629"),
   m = s("507084"),
   p = s("680313"),
   A = s("926433"),
   M = s("302036"),
   C = s("994554"),
-  N = s("1549"),
-  g = s("13327"),
+  g = s("1549"),
+  N = s("13327"),
   P = s("59137"),
   O = s("405991"),
   x = s("24615"),
@@ -93,7 +93,7 @@ let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
             onTryItOutClick: t
           })
         },
-        imageSource: f,
+        imageSource: I,
         imageClassName: t.perGuildProfilesImage
       },
       longerMessages: {
@@ -117,7 +117,7 @@ let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       remix: {
         title: d.default.Messages.REMIXING_PERKS_CARD_TITLE,
         description: d.default.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-        imageSource: k(s, I, S),
+        imageSource: k(s, f, S),
         imageClassName: t.remixingImage,
         isEarlyAccess: !0
       },
@@ -154,7 +154,7 @@ let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       superReactions: {
         title: d.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
         description: d.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-        imageSource: k(s, N, g),
+        imageSource: k(s, g, N),
         imageClassName: t.superReactionsImage
       },
       upload: {

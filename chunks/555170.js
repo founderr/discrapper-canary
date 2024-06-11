@@ -174,7 +174,7 @@ T.prototype._read = function(e) {
   function f(t) {
     i("ondata");
     var a = e.write(t);
-    i("dest.write", a), !1 === a && ((1 === r.pipesCount && r.pipes === e || r.pipesCount > 1 && -1 !== Y(r.pipes, e)) && !d && (i("false write response, pause", r.awaitDrain), r.awaitDrain++), n.pause())
+    i("dest.write", a), !1 === a && ((1 === r.pipesCount && r.pipes === e || r.pipesCount > 1 && -1 !== j(r.pipes, e)) && !d && (i("false write response, pause", r.awaitDrain), r.awaitDrain++), n.pause())
   }
 
   function p(t) {
@@ -222,7 +222,7 @@ T.prototype.unpipe = function(e) {
     });
     return this
   }
-  var o = Y(t.pipes, e);
+  var o = j(t.pipes, e);
   return -1 === o ? this : (t.pipes.splice(o, 1), t.pipesCount -= 1, 1 === t.pipesCount && (t.pipes = t.pipes[0]), e.emit("unpipe", this, n), this)
 }, T.prototype.on = function(e, t) {
   var n = l.prototype.on.call(this, e, t),
@@ -267,7 +267,7 @@ function U(e, t) {
   }
 }
 
-function Y(e, t) {
+function j(e, t) {
   for (var n = 0, r = e.length; n < r; n++)
     if (e[n] === t) return n;
   return -1

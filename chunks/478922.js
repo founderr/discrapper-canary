@@ -49,13 +49,13 @@ function _(e, t, n) {
       style: U,
       maxContentWidth: b,
       ...G
-    } = n, w = s().useRef(null), k = s().useRef(null), [B, V] = s().useState(!1), {
-      scrollerRef: x,
+    } = n, w = s().useRef(null), k = s().useRef(null), [B, x] = s().useState(!1), {
+      scrollerRef: V,
       scrollerState: F,
       getScrollerState: H
     } = (0, u.useCachedScrollerState)();
     (0, u.usePaddingFixes)({
-      scrollerRef: x,
+      scrollerRef: V,
       className: P,
       specs: a,
       orientation: "vertical",
@@ -88,27 +88,27 @@ function _(e, t, n) {
     }), X = (0, r.useCallback)(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
       e > F.current.dirty && (F.current.dirty = e, 2 === e ? Z() : Y(1))
-    }, [Y, F, Z]), q = (0, u.useScrollSpring)(x), J = (0, r.useCallback)(() => Q.itemGrid, [Q]), $ = (0, r.useCallback)(() => Q.coordsMap, [Q]), ee = s().useCallback(() => X(), [X]);
+    }, [Y, F, Z]), q = (0, u.useScrollSpring)(V), J = (0, r.useCallback)(() => Q.itemGrid, [Q]), $ = (0, r.useCallback)(() => Q.coordsMap, [Q]), ee = s().useCallback(() => X(), [X]);
     (0, u.useResizeObserverSubscription)({
-      ref: x,
+      ref: V,
       key: "container",
       onUpdate: ee,
       resizeObserver: c,
       listenerMap: _
     }), (0, r.useImperativeHandle)(E, () => ({
-      getScrollerNode: () => x.current,
+      getScrollerNode: () => V.current,
       getItemGrid: J,
       getCoordsMap: $,
       getScrollerState: H,
-      ...(0, u.getAnimatedScrollHelpers)(x, H, q)
-    }), [x, H, J, q, $]);
+      ...(0, u.getAnimatedScrollHelpers)(V, H, q)
+    }), [V, H, J, q, $]);
     let et = (0, r.useCallback)(e => {
-      X(1), null == w.current ? V(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
-        w.current = null, V(!1)
+      X(1), null == w.current ? x(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
+        w.current = null, x(!1)
       }, 200), null != I && I(e)
     }, [I, X]);
     return (0, i.jsx)("div", {
-      ref: x,
+      ref: V,
       onScroll: et,
       className: o()(P, {
         [e]: !0,

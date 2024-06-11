@@ -37,8 +37,8 @@ function v(e) {
   } = e, {
     mute: L,
     suppress: P
-  } = (0, C.default)(t), M = (0, r.useStateFromStores)([_.default], () => _.default.isDeaf()), y = L || P || M, [D, x] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: y
+  } = (0, C.default)(t), y = (0, r.useStateFromStores)([_.default], () => _.default.isDeaf()), M = L || P || y, [D, x] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: M
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
   } = (0, E.default)(f.default.SOUNDBOARD_BUTTON);
@@ -86,11 +86,11 @@ function v(e) {
         ...t,
         className: i()(v, {
           [N.buttonActive]: D,
-          [N.disabled]: y
+          [N.disabled]: M
         }),
         wrapperClassName: v,
         innerClassName: R,
-        disabled: y,
+        disabled: M,
         onClick: () => {
           var t, n;
           null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), x(!D), F()
@@ -115,8 +115,8 @@ function v(e) {
       })
     })
   }), W = s.useCallback(() => {
-    !y && x(!D)
-  }, [y, D]);
+    !M && x(!D)
+  }, [M, D]);
   return (0, m.useComponentAction)({
     event: g.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
@@ -126,7 +126,7 @@ function v(e) {
       text: function() {
         if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (y) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)

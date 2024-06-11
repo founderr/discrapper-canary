@@ -16,9 +16,9 @@ var s = a("735250"),
   x = a("185403"),
   C = a("456269"),
   _ = a("470623"),
-  T = a("981631"),
-  p = a("689938"),
-  S = a("411900"),
+  p = a("981631"),
+  S = a("689938"),
+  T = a("411900"),
   E = a("946278");
 t.default = n.memo(function(e) {
   let {
@@ -33,11 +33,11 @@ t.default = n.memo(function(e) {
     return {
       guidelinesOpen: t
     }
-  }), A = (0, C.useCanManageChannel)(t), [v, I] = n.useState(!1), j = n.useCallback(e => {
+  }), A = (0, C.useCanManageChannel)(t), [I, v] = n.useState(!1), j = n.useCallback(e => {
     if (null == e) return;
     let t = e.clientHeight >= 220;
-    t !== v && I(t)
-  }, [v]);
+    t !== I && v(t)
+  }, [I]);
   n.useLayoutEffect(() => {
     setTimeout(l, 350)
   }, [M, l]);
@@ -54,31 +54,31 @@ t.default = n.memo(function(e) {
     });
   return null != t.topic && t.topic.length > 0 ? (0, s.jsx)(i.animated.div, {
     style: F,
-    className: R ? S.hiddenVisually : void 0,
+    className: R ? T.hiddenVisually : void 0,
     children: (0, s.jsxs)("div", {
-      className: S.container,
+      className: T.container,
       children: [(0, s.jsxs)("div", {
-        className: S.headerContainer,
+        className: T.headerContainer,
         children: [(0, s.jsxs)(u.Heading, {
           variant: "heading-lg/semibold",
-          className: S.guidelinesHeader,
+          className: T.guidelinesHeader,
           children: [(0, s.jsx)(h.default, {
             width: 20,
             height: 20
-          }), p.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, s.jsx)(u.Clickable, {
+          }), S.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, s.jsx)(u.Clickable, {
             onClick: () => {
-              d.default.open(t.id, void 0, T.ChannelSettingsSubsections.TOPIC)
+              d.default.open(t.id, void 0, p.ChannelSettingsSubsections.TOPIC)
             },
             tag: "span",
-            className: S.clickable,
+            className: T.clickable,
             children: (0, s.jsx)(x.default, {
               width: 16,
               height: 16
             })
           })]
         }), (0, s.jsx)(u.Clickable, {
-          "aria-label": p.default.Messages.CLOSE,
-          className: S.clickable,
+          "aria-label": S.default.Messages.CLOSE,
+          className: T.clickable,
           onClick: () => {
             N.getState().setGuidelinesOpen(!1)
           },
@@ -88,7 +88,7 @@ t.default = n.memo(function(e) {
           })
         })]
       }), (0, s.jsxs)("div", {
-        className: S.descriptionContainer,
+        className: T.descriptionContainer,
         children: [(0, s.jsx)(u.Text, {
           selectable: !0,
           variant: "text-sm/normal",
@@ -96,7 +96,7 @@ t.default = n.memo(function(e) {
           style: {
             maxHeight: 220
           },
-          className: r()(S.guidelines, E.markup),
+          className: r()(T.guidelines, E.markup),
           children: (0, s.jsx)("div", {
             ref: j,
             children: m.default.parseForumPostGuidelines(t.topic, !0, {
@@ -105,14 +105,14 @@ t.default = n.memo(function(e) {
               allowList: !0
             })
           })
-        }), v && (0, s.jsxs)("div", {
-          className: S.showMore,
+        }), I && (0, s.jsxs)("div", {
+          className: T.showMore,
           children: [(0, s.jsx)("div", {
-            className: S.gradient
+            className: T.gradient
           }), (0, s.jsx)("div", {
-            className: S.linkContainer,
+            className: T.linkContainer,
             children: (0, s.jsx)(u.Clickable, {
-              className: S.showMoreLink,
+              className: T.showMoreLink,
               onClick: () => {
                 (0, u.openModalLazy)(async () => {
                   let {
@@ -127,9 +127,9 @@ t.default = n.memo(function(e) {
               children: (0, s.jsxs)(u.Text, {
                 variant: "text-sm/semibold",
                 color: "text-brand",
-                className: S.showMoreText,
-                children: [p.default.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(g.default, {
-                  className: S.showMoreIcon
+                className: T.showMoreText,
+                children: [S.default.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(g.default, {
+                  className: T.showMoreIcon
                 })]
               })
             })

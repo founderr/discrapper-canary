@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivityEntryPointTile: function() {
-    return j
+    return O
   }
 });
 var a = n("735250"),
@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("944581"),
   I = n("36113"),
   A = n("626135"),
-  x = n("792125"),
-  v = n("607187"),
+  v = n("792125"),
+  x = n("607187"),
   N = n("981631"),
   M = n("701488"),
   y = n("689938"),
   R = n("906964"),
   L = n("334732");
 
-function j(e) {
+function O(e) {
   let {
     channel: t,
     guild: n,
@@ -42,7 +42,7 @@ function j(e) {
     handleClose: i,
     userParticipantCount: r
   } = e;
-  return l < 250 ? (0, a.jsx)(O, {
+  return l < 250 ? (0, a.jsx)(j, {
     channel: t,
     guild: n,
     width: l,
@@ -64,7 +64,7 @@ function j(e) {
   })
 }
 
-function O(e) {
+function j(e) {
   let {
     channel: t,
     inPopout: n,
@@ -96,7 +96,7 @@ function O(e) {
             onClick: () => {
               null == t || t(), f()
             },
-            children: (0, a.jsx)(v.default, {
+            children: (0, a.jsx)(x.default, {
               className: R.root,
               children: (0, a.jsx)("div", {
                 className: R.iconContainer,
@@ -110,7 +110,7 @@ function O(e) {
         }
       }), (0, a.jsx)(u.Clickable, {
         onClick: l,
-        className: i()((0, x.getThemeClass)(N.ThemeTypes.DARK), R.shelfButtonCloseButton),
+        className: i()((0, v.getThemeClass)(N.ThemeTypes.DARK), R.shelfButtonCloseButton),
         children: (0, a.jsx)(S.default, {
           width: 24,
           height: 24,
@@ -141,7 +141,7 @@ function P(e) {
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_INVITE);
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: c,
-    children: (0, a.jsxs)(v.default, {
+    children: (0, a.jsxs)(x.default, {
       className: R.root,
       children: [r > 400 ? (0, a.jsx)("img", {
         src: L,
@@ -249,7 +249,7 @@ function b(e) {
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SUGGESTION);
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: h,
-    children: (0, a.jsxs)(v.default, {
+    children: (0, a.jsxs)(x.default, {
       className: R.root,
       children: [o > 480 ? (0, a.jsx)("img", {
         className: R.art,

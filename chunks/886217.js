@@ -40,23 +40,23 @@ t.default = e => {
     parent_title: _,
     provider: T,
     image_url: I
-  } = n.extra.media, A = n.extra.artist.name, x = (0, i.useStateFromStores)([r.default], () => r.default.getUser(n.author_id)), {
-    primaryColor: v,
+  } = n.extra.media, A = n.extra.artist.name, v = (0, i.useStateFromStores)([r.default], () => r.default.getUser(n.author_id)), {
+    primaryColor: x,
     secondaryColor: N
   } = (0, f.default)(I), M = (0, d.getAggregateRange)(n), y = l.useCallback(() => {
-    if (null == x || !(0, o.isIn)(M, h.ALLOWED_RANGES)) return;
-    let e = g(n, t, x, M);
+    if (null == v || !(0, o.isIn)(M, h.ALLOWED_RANGES)) return;
+    let e = g(n, t, v, M);
     return (0, c.generateListenContentImage)({
-      user: x,
+      user: v,
       channel: t,
       mediaImageSrc: I,
       artist: A,
       description: e,
-      colors: [v, N],
+      colors: [x, N],
       badges: (0, c.getTopArtistImageBadges)(n)
     })
-  }, [I, A, t, n, v, M, N, x]);
-  return null != x && (0, o.isIn)(M, h.ALLOWED_RANGES) ? (0, a.jsxs)(p.Popout, {
+  }, [I, A, t, n, x, M, N, v]);
+  return null != v && (0, o.isIn)(M, h.ALLOWED_RANGES) ? (0, a.jsxs)(p.Popout, {
     children: [(0, a.jsx)(p.PopoutContent, {
       thumbnailSrc: I,
       channel: t,
@@ -76,10 +76,10 @@ t.default = e => {
     }), (0, a.jsx)(p.PopoutInteractionsContainer, {
       children: (0, a.jsx)(p.Reactor, {
         closePopout: u,
-        user: x,
+        user: v,
         channel: t,
         generateReactionImage: y,
-        reactionImageAltText: S(n, x),
+        reactionImageAltText: S(n, v),
         entry: n,
         requestId: s
       })

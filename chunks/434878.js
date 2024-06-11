@@ -20,15 +20,15 @@ var s = a("735250"),
   x = a("561472"),
   C = a("393238"),
   _ = a("607070"),
-  T = a("933557"),
-  p = a("243778"),
-  S = a("71619"),
+  p = a("933557"),
+  S = a("243778"),
+  T = a("71619"),
   E = a("898188"),
   N = a("256413"),
   M = a("292853"),
   A = a("359110"),
-  v = a("344185"),
-  I = a("235449"),
+  I = a("344185"),
+  v = a("235449"),
   j = a("665906"),
   O = a("488131"),
   R = a("433355"),
@@ -77,7 +77,7 @@ function eh(e) {
   } = e;
   return (0, s.jsx)($.ForumPostComposerStoreProvider, {
     createStore: () => (0, $.createForumPostComposerStore)(t),
-    children: (0, s.jsx)(eS, {
+    children: (0, s.jsx)(eT, {
       channel: t,
       guild: a,
       sidebarState: n
@@ -135,11 +135,11 @@ function e_(e) {
   }, n) : null
 }
 
-function eT(e, t) {
+function ep(e, t) {
   return "card-".concat(e, "-").concat(t)
 }
 
-function ep(e) {
+function eS(e) {
   if ("string" == typeof e) {
     let t = e.match(/card-{\d+}-({\d+})$/);
     return null == t ? null : t[1]
@@ -147,7 +147,7 @@ function ep(e) {
   return null
 }
 
-function eS(e) {
+function eT(e) {
   let {
     channel: t,
     sidebarState: a
@@ -174,9 +174,9 @@ function eS(e) {
   }, u.default), {
     activeThreadIds: f,
     archivedThreadIds: C,
-    searchResults: T,
-    canLoadMore: p,
-    loadMore: S,
+    searchResults: p,
+    canLoadMore: S,
+    loadMore: T,
     activeThreadsLoading: E,
     archivedThreadsLoading: j,
     loading: L,
@@ -192,12 +192,12 @@ function eS(e) {
       sortOrder: t,
       tagFilter: a,
       shouldAutomaticallyAck: !0
-    }), l = (0, h.useStateFromStores)([v.default], () => !v.default.hasLoaded(e.guild_id)), {
+    }), l = (0, h.useStateFromStores)([I.default], () => !I.default.hasLoaded(e.guild_id)), {
       threadIds: r,
       canLoadMore: i,
       loadMore: o,
       loading: u
-    } = (0, I.useArchivedThreads)(e, t, a), {
+    } = (0, v.useArchivedThreads)(e, t, a), {
       searchResults: d,
       isSearchLoading: c
     } = (0, W.useForumSearchState)({
@@ -270,7 +270,7 @@ function eS(e) {
       guildId: t.guild_id
     }),
     ee = y === m.ForumLayout.GRID,
-    ea = null != T,
+    ea = null != p,
     es = n.useRef(null),
     {
       containerRef: el,
@@ -281,10 +281,10 @@ function eS(e) {
   }, [t.id]);
   let {
     columns: eC
-  } = n.useMemo(() => ee ? ef.getRenderOptions(eh) : en.ForumListLayoutRenderOptions, [ee, eh]), eS = n.useMemo(() => L ? Math.round((window.innerHeight - 200) / 118) : 0, [L]), eA = n.useMemo(() => {
+  } = n.useMemo(() => ee ? ef.getRenderOptions(eh) : en.ForumListLayoutRenderOptions, [ee, eh]), eT = n.useMemo(() => L ? Math.round((window.innerHeight - 200) / 118) : 0, [L]), eA = n.useMemo(() => {
     let e = Math.ceil(window.innerHeight / (0, en.getGridPostHeight)(ef.getWidth(eh))) * eC;
     return E ? e : 0
-  }, [eh, eC, E]), eI = n.useMemo(() => {
+  }, [eh, eC, E]), ev = n.useMemo(() => {
     let e = Math.ceil(window.innerHeight / (0, en.getGridPostHeight)(ef.getWidth(eh))) * eC;
     return j ? e : 0
   }, [eh, eC, j]), ej = n.useMemo(() => {
@@ -294,14 +294,14 @@ function eS(e) {
     if (ee) {
       if (!H && ea) return [1, 0];
       if (!V) return [1, f.length + eA, 0];
-      else if (ea) return [1, T.length + ej, 0];
-      else return [1, f.length + eA, C.length + eI]
+      else if (ea) return [1, p.length + ej, 0];
+      else return [1, f.length + eA, C.length + ev]
     }
     if (!H && ea) return [1, 1];
     if (!V) return [1, f.length, 1];
-    else if (ea) return [1, T.length, 0, eS];
-    else return [1, f.length, C.length, eS]
-  }, [ee, ea, f.length, C.length, H, V, eS, T, eA, eI, ej]), eR = n.useMemo(() => {
+    else if (ea) return [1, p.length, 0, eT];
+    else return [1, f.length, C.length, eT]
+  }, [ee, ea, f.length, C.length, H, V, eT, p, eA, ev, ej]), eR = n.useMemo(() => {
     if (!H && ea) return [
       [],
       []
@@ -310,13 +310,13 @@ function eS(e) {
       [], f, []
     ];
     if (ea) return [
-      [], T, [],
+      [], p, [],
       []
     ];
     else return [
       [], f, C, []
     ]
-  }, [ea, H, V, T, f, C]), eb = n.useCallback((e, a) => {
+  }, [ea, H, V, p, f, C]), eb = n.useCallback((e, a) => {
     (0, X.trackForumPostClicked)({
       guildId: t.guild_id,
       channelId: t.id,
@@ -326,11 +326,11 @@ function eS(e) {
         section: eu.AnalyticsSections.FORUM_CHANNEL_POST
       }
     }), a ? (0, A.transitionToThread)(e, ed.OpenThreadAnalyticsLocations.BROWSER) : (es.current = e.id, (0, O.openThreadSidebarForViewing)(e))
-  }, [t.guild_id, t.id, es]), [eF, eL] = n.useState(l + i - 24), eP = n.useCallback((e, a, n) => 0 === e ? (0, s.jsx)(ev, {
+  }, [t.guild_id, t.id, es]), [eF, eL] = n.useState(l + i - 24), eP = n.useCallback((e, a, n) => 0 === e ? (0, s.jsx)(eI, {
     channel: t,
     isEmpty: !D,
     isSearchLoading: P,
-    numResults: null == T ? void 0 : T.length,
+    numResults: null == p ? void 0 : p.length,
     coords: a,
     onHeightChange: eL,
     children: !L && (0, s.jsx)(q.default, {
@@ -343,7 +343,7 @@ function eS(e) {
   }, "archive-or-search-result") : n() : (0, s.jsx)(eE, {
     channel: t,
     coords: a
-  }, "archived-missing-reading-history-perm"), [ea, V, T, H, t, D, P, L, U]), ey = (0, h.useStateFromStores)([B.default], () => B.default.hasHidden(t.id));
+  }, "archived-missing-reading-history-perm"), [ea, V, p, H, t, D, P, L, U]), ey = (0, h.useStateFromStores)([B.default], () => B.default.hasHidden(t.id));
   n.useEffect(() => {
     var e, t;
     let a = ee ? eB : Z,
@@ -461,26 +461,26 @@ function eS(e) {
             })
           })
         }
-      }), h.current = ep(a)
+      }), h.current = eS(a)
     }, [t, h]), _ = n.useCallback(e => {
-      let t = ep(e);
+      let t = eS(e);
       if (null == t) return;
       let a = b.default.getChannel(t);
       null != a && l(a, !0)
-    }, [l]), T = n.useCallback(function(e) {
+    }, [l]), p = n.useCallback(function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
       if (0 === a[e].length) return "section-".concat(e, "-").concat(t);
       {
         let s = a[e][t];
-        return null == s ? eT(e, t) : eT(e, s)
+        return null == s ? ep(e, t) : ep(e, s)
       }
-    }, [a]), p = n.useCallback((e, t, a) => i(e, t, e_({
+    }, [a]), S = n.useCallback((e, t, a) => i(e, t, e_({
       section: e,
       coords: t,
       key: a,
       isShowingSearchResult: u,
       hasActiveThreads: o
-    })), [i, o, u]), S = n.useCallback(e => 0 === e ? {} : {
+    })), [i, o, u]), T = n.useCallback(e => 0 === e ? {} : {
       role: "grid",
       "aria-labelledby": "#".concat(eg(e))
     }, []), E = n.useCallback((e, t, n, i, o) => {
@@ -509,10 +509,10 @@ function eS(e) {
       focusedThreadId: h,
       handleGridFocus: C,
       handleGridSelect: _,
-      getItemKey: T,
-      renderGridSection: p,
+      getItemKey: p,
+      renderGridSection: S,
       renderGridItem: E,
-      getSectionProps: S,
+      getSectionProps: T,
       getGridSectionHeight: n.useCallback(e => 0 === e ? f - 8 - 24 : 2 === e ? o || !c ? 40 : 0 : 1 === e && u && !d ? 40 : 0, [f, u, d, o, c])
     }
   }({
@@ -550,7 +550,7 @@ function eS(e) {
           let a = l.findIndex(t => t.find(t => t === e)),
             s = t.current.getCoordsMap(),
             n = s["__section__".concat(a)],
-            o = s[eT(a, e)];
+            o = s[ep(a, e)];
           null != n && null != o && t.current.scrollIntoViewRect({
             start: n.top + o.top - 100,
             end: n.top + o.top + o.height + 50
@@ -578,8 +578,8 @@ function eS(e) {
       });
       let n = s.scrollTop + s.offsetHeight,
         l = s.scrollHeight - n;
-      l < (ee ? Math.max(200, (0, en.getGridPostHeight)(eh)) : 200) && S()
-    }, [ea, ee, t.guild_id, t.id, eh, S]),
+      l < (ee ? Math.max(200, (0, en.getGridPostHeight)(eh)) : 200) && T()
+    }, [ea, ee, t.guild_id, t.id, eh, T]),
     eZ = (0, h.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled),
     eQ = (0, ei.default)({
       id: "forum-grid-view",
@@ -639,7 +639,7 @@ function eS(e) {
             renderSection: ez,
             renderItem: eW,
             getSectionProps: eY,
-            onScroll: p ? eq : void 0,
+            onScroll: S ? eq : void 0,
             chunkSize: 350,
             ...e0,
             ...e
@@ -661,7 +661,7 @@ function eS(e) {
                 renderRow: ew,
                 renderSection: eU,
                 chunkSize: 150,
-                onScroll: p ? eq : void 0,
+                onScroll: S ? eq : void 0,
                 paddingBottom: 24,
                 ...n,
                 ...e,
@@ -679,7 +679,7 @@ function eE(e) {
   let {
     channel: t,
     coords: a
-  } = e, n = (0, T.default)(t);
+  } = e, n = (0, p.default)(t);
   return (0, s.jsx)("div", {
     className: r()(em.missingReadHistoryPermission, em.columnsSpan),
     style: a,
@@ -697,7 +697,7 @@ function eN(e) {
   let {
     channel: t,
     coords: a
-  } = e, n = (0, T.default)(t);
+  } = e, n = (0, p.default)(t);
   return (0, s.jsx)("div", {
     className: r()(em.missingReadHistoryPermission, em.columnsSpan),
     style: a,
@@ -734,18 +734,18 @@ function eA() {
   return Promise.resolve()
 }
 
-function ev(e) {
+function eI(e) {
   var t, a, l;
   let {
     channel: i,
     isEmpty: x,
-    isSearchLoading: T,
+    isSearchLoading: p,
     numResults: N,
     children: M,
     coords: A,
-    onHeightChange: v
+    onHeightChange: I
   } = e, {
-    name: I,
+    name: v,
     formOpen: O,
     titleFocused: R,
     hasClickedForm: b,
@@ -774,7 +774,7 @@ function ev(e) {
   }, u.default), {
     tagFilter: K,
     layoutType: Y
-  } = (0, z.useForumChannelStore)(i.id), q = (0, $.useForumPostComposerStoreApi)(), J = (0, z.useForumChannelStoreApi)(), et = (0, h.useStateFromStores)([L.default], () => L.default.canChatInGuild(i.guild_id)), ea = (0, W.useCanManageChannel)(i), en = (0, j.useCanStartThread)(i), [er, ei] = n.useState(en), [, eo] = (0, S.useCurrentUserCommunicationDisabled)(null !== (l = i.getGuildId()) && void 0 !== l ? l : void 0), ed = et && (en || er && eo), eh = i.isMediaChannel();
+  } = (0, z.useForumChannelStore)(i.id), q = (0, $.useForumPostComposerStoreApi)(), J = (0, z.useForumChannelStoreApi)(), et = (0, h.useStateFromStores)([L.default], () => L.default.canChatInGuild(i.guild_id)), ea = (0, W.useCanManageChannel)(i), en = (0, j.useCanStartThread)(i), [er, ei] = n.useState(en), [, eo] = (0, T.useCurrentUserCommunicationDisabled)(null !== (l = i.getGuildId()) && void 0 !== l ? l : void 0), ed = et && (en || er && eo), eh = i.isMediaChannel();
   n.useEffect(() => {
     en && ei(!0)
   }, [en]);
@@ -783,8 +783,8 @@ function ev(e) {
     height: eg
   } = (0, C.default)();
   n.useEffect(() => {
-    null != eg && v(eg)
-  }, [v, eg]);
+    null != eg && I(eg)
+  }, [I, eg]);
   let ex = n.useCallback(() => {
     o()(() => {
       null != ef.current && q.getState().setEditorHeight(ef.current.offsetHeight)
@@ -796,23 +796,23 @@ function ev(e) {
   });
   let eC = (0, h.useStateFromStores)([P.default], () => P.default.getUploads(i.id, F.DraftType.FirstThreadMessage)),
     e_ = (0, W.useChannelTemplate)(i),
-    eT = n.useRef(null),
     ep = n.useRef(null),
-    [eS, eE] = n.useState(0),
+    eS = n.useRef(null),
+    [eT, eE] = n.useState(0),
     {
       width: eN
     } = (0, h.useStateFromStores)([y.default], () => y.default.windowSize()),
-    eM = null === (a = eT.current) || void 0 === a ? void 0 : null === (t = a.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
-    ev = n.useRef(null);
+    eM = null === (a = ep.current) || void 0 === a ? void 0 : null === (t = a.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
+    eI = n.useRef(null);
   n.useLayoutEffect(() => {
     var e;
-    let t = ep.current,
+    let t = eS.current,
       a = null == t ? void 0 : null === (e = t.children) || void 0 === e ? void 0 : e[0];
-    if (null != eT.current && null != a && null != a.children) {
+    if (null != ep.current && null != a && null != a.children) {
       let {
         left: e,
         top: t
-      } = eT.current.getBoundingClientRect(), s = 0;
+      } = ep.current.getBoundingClientRect(), s = 0;
       for (let n of a.children) {
         let {
           right: a,
@@ -825,13 +825,13 @@ function ev(e) {
       eE(s)
     }
   }, [i.availableTags, eN, eM, K]);
-  let ej = I.length > 0 && !O && (T || null != N),
+  let ej = v.length > 0 && !O && (p || null != N),
     eO = !__OVERLAY__ && !b && !O && R && (0 === w.textValue.trim().length || w.textValue.trim() === e_) && 0 === eC.length;
   n.useLayoutEffect(() => {
     let e = ej || eO;
     if (!e) return V(0);
-    null != ev.current && V(e ? ev.current.clientHeight : 0)
-  }, [V, ej, eO, ev]);
+    null != eI.current && V(e ? eI.current.clientHeight : 0)
+  }, [V, ej, eO, eI]);
   let eR = e => {
       (0, X.trackForumTagFilterClicked)({
         guildId: i.guild_id,
@@ -898,23 +898,23 @@ function ev(e) {
         children: (0, s.jsx)(ee.default, {
           parentChannel: i,
           onChange: ex,
-          isSearchLoading: T,
+          isSearchLoading: p,
           canCreatePost: ed,
           inputRef: ey
         })
       }), (ej || eO) && (0, s.jsxs)("div", {
         className: em.matchingPostsRow,
-        ref: ev,
+        ref: eI,
         children: [ej && (0, s.jsxs)("div", {
           className: em.matchingPosts,
           children: [(0, s.jsx)(g.Heading, {
             variant: "text-xs/normal",
             color: "text-normal",
-            children: T ? ec.default.Messages.FORUM_SEARCHING : 0 === N ? ec.default.Messages.FORUM_SEARCH_NO_MATCHING_POSTS : ec.default.Messages.FORUM_SEARCH_MATCHING_POSTS_ALT.format({
+            children: p ? ec.default.Messages.FORUM_SEARCHING : 0 === N ? ec.default.Messages.FORUM_SEARCH_NO_MATCHING_POSTS : ec.default.Messages.FORUM_SEARCH_MATCHING_POSTS_ALT.format({
               numPosts: N,
-              query: I
+              query: v
             })
-          }), !T && (0, s.jsx)(g.Clickable, {
+          }), !p && (0, s.jsx)(g.Clickable, {
             onClick: () => {
               (0, X.trackForumSearchCleared)({
                 guildId: i.guild_id,
@@ -964,15 +964,15 @@ function ev(e) {
         onChange: ex
       }), (0, s.jsxs)("div", {
         className: em.tagsContainer,
-        ref: eT,
-        children: [(0, s.jsx)(eI, {
+        ref: ep,
+        children: [(0, s.jsx)(ev, {
           channel: i
         }), i.availableTags.length > 0 ? (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)("div", {
             className: em.divider
           }), (0, s.jsx)("div", {
             className: em.tagList,
-            ref: ep,
+            ref: eS,
             children: (0, s.jsx)(d.ListNavigatorProvider, {
               navigator: eb,
               children: (0, s.jsx)(d.ListNavigatorContainer, {
@@ -1021,7 +1021,7 @@ function ev(e) {
                   [em.tagsButtonWithCount]: K.size > 0
                 }),
                 style: {
-                  left: eS
+                  left: eT
                 },
                 innerClassName: em.tagsButtonInner,
                 "aria-label": K.size > 0 ? ec.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL : ec.default.Messages.FORUM_TAG_ALL_A11Y_LABEL,
@@ -1059,7 +1059,7 @@ function ev(e) {
             })]
           })]
         }) : null]
-      }), M, ea && !eh && (0, s.jsx)(p.default, {
+      }), M, ea && !eh && (0, s.jsx)(S.default, {
         contentTypes: [f.DismissibleContent.FORUM_CHANNEL_HELPER_CARD],
         children: e => {
           let {
@@ -1075,7 +1075,7 @@ function ev(e) {
   }, "create-form")
 }
 
-function eI(e) {
+function ev(e) {
   let {
     channel: t
   } = e, a = t.isMediaChannel();

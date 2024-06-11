@@ -95,7 +95,7 @@ function v() {
 function R() {
   f.default.addBreadcrumb({
     message: "Initializing SessionHeartbeatScheduler"
-  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", P), s.default.subscribe("APP_STATE_UPDATE", M), s.default.subscribe("LOGIN_SUCCESS", O), v()
+  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", P), s.default.subscribe("APP_STATE_UPDATE", y), s.default.subscribe("LOGIN_SUCCESS", O), v()
 }
 
 function O() {
@@ -114,7 +114,7 @@ function P(e) {
   N = t, v()
 }
 
-function M(e) {
+function y(e) {
   let {
     state: t
   } = e;

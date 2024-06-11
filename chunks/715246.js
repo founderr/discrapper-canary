@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   convertSecondsToClockFormat: function() {
-    return V
+    return x
   }
 }), n("653041"), n("47120"), n("411104");
 var i, r, s = n("735250"),
@@ -57,16 +57,16 @@ let G = "-:--",
     backgroundColor: "black"
   };
 
-function V(e) {
+function x(e) {
   let t = 0 | e,
     n = t % 60;
   return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
 }
-let x = e => {
+let V = e => {
   let {
     current: t,
     duration: n
-  } = e, i = null != t ? V(t) : G, r = null != n ? V(n) : G;
+  } = e, i = null != t ? x(t) : G, r = null != n ? x(n) : G;
   return i = i.padStart(r.length, "0"), (0, s.jsxs)("div", {
     className: P.durationTimeWrapper,
     children: [(0, s.jsx)("span", {
@@ -179,7 +179,7 @@ class F extends(i = a.Component) {
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
-      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(x, {
+      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(V, {
         current: n,
         duration: i
       }) : null, (0, s.jsx)(N.default, {

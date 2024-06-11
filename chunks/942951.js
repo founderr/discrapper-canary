@@ -18,15 +18,15 @@ function h(e) {
   var t, i;
   let {
     user: h,
-    channelId: f,
-    guildId: m,
+    channelId: m,
+    guildId: f,
     messageId: p,
     stopPropagation: g = !1,
     ariaLabel: T
   } = e, {
     analyticsLocations: S
   } = (0, o.default)(l.default.USERNAME);
-  let v = (t = h, i = f, a.useCallback(e => {
+  let v = (t = h, i = m, a.useCallback(e => {
     let n = d.default.getChannel(i);
     null != n && null != t && (0, c.openUserContextMenu)(e, t, n)
   }, [t, i]));
@@ -47,16 +47,16 @@ function h(e) {
       value: S,
       children: null != h ? (0, n.jsx)(s.Popout, {
         position: "right",
-        preload: () => (0, r.maybeFetchUserProfileForPopout)(h.id, h.getAvatarURL(m, 80), {
-          guildId: m,
-          channelId: f
+        preload: () => (0, r.maybeFetchUserProfileForPopout)(h.id, h.getAvatarURL(f, 80), {
+          guildId: f,
+          channelId: m
         }),
         renderPopout: t => (0, n.jsx)(u.default, {
           ...t,
           location: "useUsernameHook",
           userId: h.id,
-          guildId: m,
-          channelId: f,
+          guildId: f,
+          channelId: m,
           messageId: p,
           roleId: null == e ? void 0 : e.colorRoleId
         }),
@@ -72,5 +72,5 @@ function h(e) {
         }
       }, i) : l(void 0, i)
     })
-  }, [S, h, f, m, p, v, g, T])
+  }, [S, h, m, f, p, v, g, T])
 }

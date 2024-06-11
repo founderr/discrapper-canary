@@ -71,16 +71,16 @@ function B(e, t, n, i) {
   throw Error()
 }
 
-function V(e) {
+function x(e) {
   if (e.type === I.ExperimentTypes.USER) return b("".concat(e.bucket, "|").concat(e.revision));
   if (e.type === I.ExperimentTypes.GUILD) return b("".concat(e.bucket, "|").concat(e.revision, "|").concat(e.guildId));
   throw Error()
 }
-let x = Date.now();
+let V = Date.now();
 
 function F(e, t, n, i) {
   let r = O[B(e, t, n, i)];
-  return !(null == r || Date.now() - r.time > 6048e5) && r.hash === V(t)
+  return !(null == r || Date.now() - r.time > 6048e5) && r.hash === x(t)
 }
 
 function H(e) {
@@ -134,7 +134,7 @@ function H(e) {
   }
   O[B(t, n, i, u)] = {
     time: Date.now(),
-    hash: V(n)
+    hash: x(n)
   }, ee(O)
 }
 

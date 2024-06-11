@@ -1,13 +1,13 @@
 "use strict";
 i.r(t), i.d(t, {
   ForumPostComposerStoreProvider: function() {
-    return f
+    return m
   },
   createForumPostComposerStore: function() {
     return g
   },
   useForumPostComposerStore: function() {
-    return m
+    return f
   },
   useForumPostComposerStoreApi: function() {
     return p
@@ -132,18 +132,18 @@ class h {
         formOpen: !0
       }), u.default.clearForumSearch(this.channelId)
     };
-    let f = o.default.getChannel(e);
-    if (null == f) return;
-    let m = null !== (n = r.default.getThreadSettings(f.id)) && void 0 !== n ? n : {},
-      p = null == f.template ? "" : f.template.trim(),
-      g = r.default.getDraft(f.id, r.DraftType.FirstThreadMessage),
+    let m = o.default.getChannel(e);
+    if (null == m) return;
+    let f = null !== (n = r.default.getThreadSettings(m.id)) && void 0 !== n ? n : {},
+      p = null == m.template ? "" : m.template.trim(),
+      g = r.default.getDraft(m.id, r.DraftType.FirstThreadMessage),
       T = (0, l.createState)(null != g && "" !== g.trim() ? g : p);
-    this.name = null !== (a = m.name) && void 0 !== a ? a : "", h = new Set(m.appliedTags), this.appliedTags = void 0 !== h ? h : new Set, this.formOpen = this.name.length > 0, this.textAreaState = T
+    this.name = null !== (a = f.name) && void 0 !== a ? a : "", h = new Set(f.appliedTags), this.appliedTags = void 0 !== h ? h : new Set, this.formOpen = this.name.length > 0, this.textAreaState = T
   }
 }
 let {
-  Provider: f,
-  useStore: m,
+  Provider: m,
+  useStore: f,
   useStoreApi: p
 } = (0, a.default)();
 

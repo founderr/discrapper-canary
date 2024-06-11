@@ -21,14 +21,14 @@ var a = n("735250"),
   T = n("561308"),
   I = n("919394"),
   A = n("438226"),
-  x = n("206295"),
-  v = n("91140"),
+  v = n("206295"),
+  x = n("91140"),
   N = n("297781"),
   M = n("591853"),
   y = n("265048"),
   R = n("981631"),
   L = n("689938");
-let j = {
+let O = {
   [s.PlatformType.DESKTOP]: null,
   [s.PlatformType.XBOX]: C.default,
   [s.PlatformType.PLAYSTATION]: E.default
@@ -41,7 +41,7 @@ t.default = e => {
     closePopout: E
   } = e, {
     iconUrl: C,
-    iconTitle: O,
+    iconTitle: j,
     user: P,
     details: D,
     gameTitle: b,
@@ -49,7 +49,7 @@ t.default = e => {
   } = (0, y.useGamingContentData)(n), {
     primaryColor: F,
     secondaryColor: w
-  } = (0, x.default)(C), k = (0, o.useStateFromStores)([p.default], () => p.default.locale), {
+  } = (0, v.default)(C), k = (0, o.useStateFromStores)([p.default], () => p.default.locale), {
     streamPreviewUrl: H,
     stream: G
   } = (0, _.default)(n), {
@@ -76,16 +76,16 @@ t.default = e => {
     })
   }, [C, t, B, n, k, Y, V, W, F, w, P]);
   if (null == P) return null;
-  let Z = null != n.extra.platform ? j[n.extra.platform] : null,
+  let Z = null != n.extra.platform ? O[n.extra.platform] : null,
     X = (0, a.jsx)(N.BadgesContainer, {
       location: N.BadgeLocation.POPOUT,
-      children: v.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
+      children: x.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
         entry: n
       }, t))
     }),
     q = null == H ? (0, a.jsx)(M.PopoutContent, {
       thumbnailSrc: C,
-      thumbnailTitle: O,
+      thumbnailTitle: j,
       channel: t,
       headerIcons: null != Z ? (0, a.jsx)(Z, {
         color: z.hex(),

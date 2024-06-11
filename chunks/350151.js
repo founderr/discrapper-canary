@@ -1,16 +1,16 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303"),
-  i = r("329022"),
-  l = r("336146");
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("844303"),
+  o = n("329022"),
+  s = n("336146");
 t.default = function(e) {
   var t = e.onClick,
-    r = e.onSwatchHover,
-    n = e.group,
+    n = e.onSwatchHover,
+    r = e.group,
     u = e.active,
-    s = (0, o.default)({
+    c = (0, a.default)({
       default: {
         group: {
           paddingBottom: "10px",
@@ -20,17 +20,17 @@ t.default = function(e) {
         }
       }
     });
-  return a().createElement("div", {
-    style: s.group
-  }, (0, i.default)(n, function(e, o) {
-    return a().createElement(l.default, {
+  return i().createElement("div", {
+    style: c.group
+  }, (0, o.default)(r, function(e, a) {
+    return i().createElement(s.default, {
       key: e,
       color: e,
       active: e.toLowerCase() === u,
-      first: 0 === o,
-      last: o === n.length - 1,
+      first: 0 === a,
+      last: a === r.length - 1,
       onClick: t,
-      onSwatchHover: r
+      onSwatchHover: n
     })
   }))
 }

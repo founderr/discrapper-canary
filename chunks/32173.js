@@ -16,16 +16,16 @@ var n = s("399606"),
   E = s("300284"),
   R = s("703656"),
   T = s("547972"),
-  f = s("131951"),
-  I = s("78839"),
+  I = s("131951"),
+  f = s("78839"),
   S = s("63063"),
   m = s("74538"),
   p = s("528865"),
   A = s("781922"),
   M = s("885462"),
   C = s("494127"),
-  N = s("314684"),
-  g = s("687362"),
+  g = s("314684"),
+  N = s("687362"),
   P = s("119269"),
   O = s("391110"),
   x = s("75077"),
@@ -67,13 +67,13 @@ let eo = "usePerksDiscoverabilityCards";
 t.default = () => {
   let {
     analyticsLocations: e
-  } = (0, d.default)(c.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = v.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([I.default], () => I.default.getPremiumTypeSubscription()), r = null != a ? m.default.getPremiumPlanItem(a) : null, eu = null != r ? m.default.getSkuIdForPlan(r.planId) : null, ec = eu === b.PremiumSubscriptionSKUs.TIER_2, ed = eu === b.PremiumSubscriptionSKUs.TIER_0, {
+  } = (0, d.default)(c.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = v.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), r = null != a ? m.default.getPremiumPlanItem(a) : null, eu = null != r ? m.default.getSkuIdForPlan(r.planId) : null, ec = eu === b.PremiumSubscriptionSKUs.TIER_2, ed = eu === b.PremiumSubscriptionSKUs.TIER_0, {
     flipped: e_
   } = (0, C.useWhatsNewAvatarDecoRollout)(), {
     flipped: eE
-  } = (0, C.useWhatsNewProfileFXRollout)(), eR = (0, N.useFreeBoostDaysPercentage)({
+  } = (0, C.useWhatsNewProfileFXRollout)(), eR = (0, g.useFreeBoostDaysPercentage)({
     showAnimations: !0
-  }), eT = null != eR ? eR.initialPercentage : void 0, ef = null != eR ? eR.percentage : void 0, eI = (0, _.default)(f.default), eS = (0, g.default)(), {
+  }), eT = null != eR ? eR.initialPercentage : void 0, eI = null != eR ? eR.percentage : void 0, ef = (0, _.default)(I.default), eS = (0, N.default)(), {
     canFlipCard: em
   } = A.ReferralProgramWhatsNewCardExperiment.useExperiment({
     location: eo
@@ -99,9 +99,9 @@ t.default = () => {
       openWithoutBackstack: !0,
       analyticsLocations: e
     })
-  }, eN = () => {
-    (0, R.transitionTo)(h.Routes.COLLECTIBLES_SHOP)
   }, eg = () => {
+    (0, R.transitionTo)(h.Routes.COLLECTIBLES_SHOP)
+  }, eN = () => {
     o.default.open(h.UserSettingsSections.APPEARANCE, null, {
       scrollPosition: D.AppearanceScrollPositions.CUSTOM_APP_ICONS
     })
@@ -112,7 +112,7 @@ t.default = () => {
       subtitle: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
       description: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
       descriptionCta: v.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eN,
+      onCtaClick: eg,
       pillText: v.default.Messages.EARLY_ACCESS,
       perkImage: y,
       canReveal: e_,
@@ -146,9 +146,9 @@ t.default = () => {
       title: v.default.Messages.CLIPS,
       subtitle: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
       description: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
-      descriptionCta: eI ? v.default.Messages.TAKE_ME_THERE : v.default.Messages.LEARN_MORE,
+      descriptionCta: ef ? v.default.Messages.TAKE_ME_THERE : v.default.Messages.LEARN_MORE,
       pillText: v.default.Messages.EARLY_ACCESS,
-      onCtaClick: eI ? () => {
+      onCtaClick: ef ? () => {
         (0, T.default)(L.GameSettingsTab.CLIPS, {
           openWithoutBackstack: !0,
           analyticsLocations: e
@@ -229,7 +229,7 @@ t.default = () => {
       subtitle: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
       description: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
       descriptionCta: v.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eN,
+      onCtaClick: eg,
       pillText: v.default.Messages.EARLY_ACCESS,
       perkImage: Z,
       canReveal: eE,
@@ -289,7 +289,7 @@ t.default = () => {
       subtitle: v.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
       description: v.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: v.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eN,
+      onCtaClick: eg,
       perkImage: et
     } : {
       name: "specialMemberPricing",
@@ -305,7 +305,7 @@ t.default = () => {
       subtitle: v.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
       description: v.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: v.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eN,
+      onCtaClick: eg,
       perkImage: es
     } : {
       name: "specialMemberPricingSeeAllVariant",
@@ -321,7 +321,7 @@ t.default = () => {
       subtitle: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
       description: v.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: v.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eN,
+      onCtaClick: eg,
       perkImage: et
     } : {
       name: "specialShopPerks",
@@ -329,7 +329,7 @@ t.default = () => {
       subtitle: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
       description: v.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
       descriptionCta: v.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eN,
+      onCtaClick: eg,
       perkImage: et
     },
     unlimitedSuperReactions: ec ? {
@@ -375,7 +375,7 @@ t.default = () => {
       perkImage: w,
       description: v.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
       descriptionCta: v.default.Messages.TAKE_ME_THERE,
-      onCtaClick: eg
+      onCtaClick: eN
     },
     moreEmojiPower: {
       name: "moreEmojiPower",
@@ -421,7 +421,7 @@ t.default = () => {
       description: v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_DESCRIPTION,
       descriptionCta: ec || ed ? v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_NITRO_NEW_APP_STYLES : v.default.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
       isPremiumGetCta: !(ec || ed),
-      onCtaClick: ec || ed ? eg : void 0,
+      onCtaClick: ec || ed ? eN : void 0,
       perkImage: X,
       canReveal: ep,
       dismissibleContentType: l.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP
@@ -461,7 +461,7 @@ t.default = () => {
       dismissibleContentType: l
     } = eS, u = (0, i.jsx)(P.default, {
       showAnimations: !0,
-      percentage: ef,
+      percentage: eI,
       initialPercentage: eT
     });
     eP.freeBoost = {

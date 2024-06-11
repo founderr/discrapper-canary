@@ -35,8 +35,8 @@ function T(e) {
   } = e, {
     onActivityItemSelected: I,
     imageBackground: A,
-    activityAction: x,
-    labelType: v
+    activityAction: v,
+    labelType: x
   } = (0, f.default)({
     channel: n,
     activityItem: a,
@@ -55,11 +55,11 @@ function T(e) {
       className: g.badgeContainer,
       children: (0, s.jsx)(m.default, {
         name: a.application.name,
-        labelType: v
+        labelType: x
       })
     })
-  }), [a.application.name, v]), j = i.useMemo(() => {
-    switch (x) {
+  }), [a.application.name, x]), O = i.useMemo(() => {
+    switch (v) {
       case f.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
           className: g.activityAction,
@@ -88,7 +88,7 @@ function T(e) {
       default:
         return (0, s.jsx)(s.Fragment, {})
     }
-  }, [x]);
+  }, [v]);
   return (0, s.jsx)(d.Button, {
     onClick: I,
     color: "transparent",
@@ -125,7 +125,7 @@ function T(e) {
               applicationName: a.application.name,
               imageClassName: g.activitySuggestionImage,
               imageNotFoundClassName: g.brokenImageIconWrapper
-            }), L, j]
+            }), L, O]
           })
         })
       }

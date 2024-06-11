@@ -25,11 +25,11 @@ var s = l("735250"),
   g = l("184325"),
   A = l("652853"),
   x = l("225714"),
-  N = l("228168"),
-  C = l("231338"),
+  C = l("228168"),
+  N = l("231338"),
   U = l("689938"),
-  h = l("155614");
-let P = o.AvatarSizes.SIZE_120,
+  P = l("155614");
+let h = o.AvatarSizes.SIZE_120,
   R = I.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
 function M(e) {
@@ -40,8 +40,8 @@ function M(e) {
     channelId: j,
     friendToken: y,
     className: L,
-    isStreaming: F,
-    hasProfileEffect: O,
+    isStreaming: O,
+    hasProfileEffect: F,
     onClose: D
   } = e, b = (0, a.useStateFromStores)([f.default], () => f.default.getRelationshipType(I.id)), B = (0, a.useStateFromStores)([c.default], () => c.default.isMobileOnline(I.id)), G = (0, a.useStateFromStores)([c.default], () => c.default.getStatus(I.id)), k = (0, a.useStateFromStores)([_.default], () => _.default.getUserProfile(I.id)), w = (0, a.useStateFromStores)([d.default], () => d.default.getId() === I.id), {
     theme: Y
@@ -53,7 +53,7 @@ function M(e) {
     avatarDecorationSrc: z
   } = (0, v.default)({
     user: I,
-    size: P
+    size: h
   }), Z = i.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(I, j), [I, j]);
   return (0, s.jsxs)("header", {
     className: L,
@@ -61,45 +61,45 @@ function M(e) {
       displayProfile: t,
       onClose: D,
       user: I,
-      profileType: N.UserProfileTypes.MODAL,
-      hasProfileEffect: O
+      profileType: C.UserProfileTypes.MODAL,
+      hasProfileEffect: F
     }), (0, s.jsxs)("div", {
-      className: h.header,
+      className: P.header,
       children: [(0, s.jsx)("div", {
         ...W,
         children: (0, s.jsx)(R, {
           src: V,
           avatarDecoration: z,
-          size: P,
-          className: h.avatar,
-          status: Z ? C.StatusTypes.UNKNOWN : F ? C.StatusTypes.STREAMING : G,
+          size: h,
+          className: P.avatar,
+          status: Z ? N.StatusTypes.UNKNOWN : O ? N.StatusTypes.STREAMING : G,
           statusBackdropColor: (0, o.getStatusBackdropColor)(Y),
           isMobile: B,
           statusTooltip: !0,
           "aria-label": I.username
         })
       }), (0, s.jsxs)("div", {
-        className: h.headerTop,
+        className: P.headerTop,
         children: [(null == k ? void 0 : k.profileFetchFailed) && !I.isClyde() ? (0, s.jsx)(o.Tooltip, {
           text: U.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           children: e => (0, s.jsx)(E.default, {
             ...e,
-            className: h.warningCircleIcon,
+            className: P.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
         }) : (0, s.jsx)(g.default, {
           user: I,
-          className: h.badgeList,
+          className: P.badgeList,
           guildId: M,
           size: g.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
           shrinkToSize: g.BadgeSizes.SIZE_18,
           onBadgeClick: D
         }), (0, s.jsxs)("div", {
-          className: h.relationshipButtons,
+          className: P.relationshipButtons,
           children: [(null == k ? void 0 : k.application) != null && (0, s.jsx)(T.default, {
-            className: h.applicationInstallButton,
+            className: P.applicationInstallButton,
             application: k.application
           }), (0, s.jsx)(x.default, {
             user: I,
@@ -132,7 +132,7 @@ function M(e) {
               })
             },
             children: (0, s.jsx)(S.default, {
-              className: h.additionalActionsIcon
+              className: P.additionalActionsIcon
             })
           })]
         })]

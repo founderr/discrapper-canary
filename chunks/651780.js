@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return A
   }
 });
 var a = s("735250"),
@@ -68,7 +68,7 @@ function O(e) {
     })]
   })
 }
-let A = e => {
+let p = e => {
   let {
     isAnimatedTo: t,
     onSetRef: s,
@@ -88,7 +88,7 @@ let A = e => {
   }, n.tier)
 };
 
-function p() {
+function A() {
   l.useEffect(() => {
     r.default.wait(() => {
       (0, o.fetchPaymentSources)(), (0, d.fetchPremiumSubscriptionPlans)()
@@ -114,7 +114,7 @@ function p() {
       })]
     }), (0, a.jsx)(I.default, {
       tiers: (0, N.getTiers)(null != e && e.hasFeature(C.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= C.MAX_STAGE_VIDEO_USER_LIMIT_TIER01),
-      renderTier: A
+      renderTier: p
     }), (0, a.jsx)("div", {
       className: x.divider
     }), s ? (0, a.jsx)(_.default, {}) : null, s ? (0, a.jsx)(E.default, {

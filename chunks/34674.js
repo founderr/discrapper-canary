@@ -1,93 +1,93 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   ALL_CATEGORY_ID: function() {
-    return L
+    return S
   },
   getAllCategory: function() {
-    return A
+    return N
   },
   getCategoryIcon: function() {
-    return R
+    return p
   },
   getCollectionItemAssetUrl: function() {
-    return T
+    return O
   },
   isAllCategory: function() {
-    return I
+    return m
   },
   redirectToLogin: function() {
-    return x
+    return C
   }
 }), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("315314");
-var r = n("860911"),
-  i = n("477690"),
-  c = n("134432"),
-  o = n("703656"),
-  l = n("619271"),
-  a = n("634127"),
-  s = n("988951"),
-  u = n("275756"),
-  d = n("752916"),
-  f = n("199202"),
-  C = n("541541"),
-  h = n("768581"),
-  v = n("981631"),
-  p = n("689938");
-let L = 0,
+var i = n("860911"),
+  r = n("477690"),
+  s = n("134432"),
+  a = n("703656"),
+  o = n("619271"),
+  l = n("634127"),
+  u = n("988951"),
+  d = n("275756"),
+  _ = n("752916"),
+  c = n("199202"),
+  E = n("541541"),
+  I = n("768581"),
+  T = n("981631"),
+  f = n("689938");
+let S = 0,
   {
-    API_ENDPOINT: g,
-    CDN_HOST: w
+    API_ENDPOINT: h,
+    CDN_HOST: A
   } = window.GLOBAL_ENV;
 
-function I(t) {
-  return t.id === L
+function m(e) {
+  return e.id === S
 }
 
-function A() {
+function N() {
   return {
-    id: L,
-    name: p.default.Messages.APP_DIRECTORY_ALL_CATEGORY
+    id: S,
+    name: f.default.Messages.APP_DIRECTORY_ALL_CATEGORY
   }
 }
 
-function R(t) {
-  switch (t.id) {
+function p(e) {
+  switch (e.id) {
     case 0:
-      return d.default;
+      return _.default;
     case 4:
-      return f.default;
+      return c.default;
     case 5:
-      return u.default;
+      return d.default;
     case 6:
-      return l.default;
+      return o.default;
     case 8:
       break;
     case 9:
-      return s.default;
+      return u.default;
     case 10:
-      return C.default
+      return E.default
   }
-  return a.default
+  return l.default
 }
 
-function T(t) {
+function O(e) {
   let {
-    itemId: e,
+    itemId: t,
     hash: n
-  } = t, r = (0, c.getBestMediaProxySize)(parseFloat(i.default.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, c.getDevicePixelRatio)()).toString(), o = new URLSearchParams({
-    size: r
-  }).toString(), l = h.SUPPORTS_WEBP ? "webp" : "png";
-  return null != w ? "".concat(location.protocol, "//").concat(w, "/app-assets/application-directory/collection-items/").concat(e, "/").concat(n, ".").concat(l, "?").concat(o) : "".concat(location.protocol).concat(g).concat(v.Endpoints.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(e, n, l), "?").concat(o)
+  } = e, i = (0, s.getBestMediaProxySize)(parseFloat(r.default.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, s.getDevicePixelRatio)()).toString(), a = new URLSearchParams({
+    size: i
+  }).toString(), o = I.SUPPORTS_WEBP ? "webp" : "png";
+  return null != A ? "".concat(location.protocol, "//").concat(A, "/app-assets/application-directory/collection-items/").concat(t, "/").concat(n, ".").concat(o, "?").concat(a) : "".concat(location.protocol).concat(h).concat(T.Endpoints.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, o), "?").concat(a)
 }
 
-function x() {
-  let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-    e = new URL(location.href);
-  for (let n in t) {
-    let r = t[n];
-    e.searchParams.set(n, r)
+function C() {
+  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+    t = new URL(location.href);
+  for (let n in e) {
+    let i = e[n];
+    t.searchParams.set(n, i)
   }
-  let n = e.pathname + e.search,
-    i = (0, r.getLoginPath)(n, !1);
-  (0, o.transitionTo)(i)
+  let n = t.pathname + t.search,
+    r = (0, i.getLoginPath)(n, !1);
+  (0, a.transitionTo)(r)
 }

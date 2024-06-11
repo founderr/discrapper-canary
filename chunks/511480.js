@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("183023"),
   L = s("984933"),
   O = s("496675"),
-  A = s("699516"),
-  p = s("594174"),
+  p = s("699516"),
+  A = s("594174"),
   M = s("987134"),
   D = s("768581"),
   v = s("900849"),
@@ -473,7 +473,7 @@ class Y extends l.PureComponent {
     })
   }
 }
-t.default = i.default.connectStores([G.default, O.default, _.default, L.default, f.default, p.default, A.default], () => {
+t.default = i.default.connectStores([G.default, O.default, _.default, L.default, f.default, A.default, p.default], () => {
   let {
     guild: e,
     errors: t,
@@ -486,7 +486,7 @@ t.default = i.default.connectStores([G.default, O.default, _.default, L.default,
     } = e;
     t.type === B.ChannelTypes.GUILD_TEXT && o.push({
       value: t.id,
-      label: (0, u.computeChannelName)(t, p.default, A.default, !0)
+      label: (0, u.computeChannelName)(t, A.default, p.default, !0)
     })
   });
   let d = f.default.getPrimaryCategories().map(e => {

@@ -79,7 +79,7 @@ let C = a.memo(function(e) {
     w()
   }, [w, D]);
   let B = L.length > 0,
-    V = v.length > 0;
+    x = v.length > 0;
   return (0, s.jsxs)("div", {
     className: l()(O.compactItemContainer, !P && O.hideElement),
     ref: y,
@@ -107,10 +107,10 @@ let C = a.memo(function(e) {
         text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
         children: e
       }) : e
-    })(), B && V && (0, s.jsx)("div", {
+    })(), B && x && (0, s.jsx)("div", {
       "aria-hidden": "true",
       className: O.dotSpacer
-    }), V && (() => {
+    }), x && (() => {
       let e = (0, s.jsxs)(d.Clickable, {
         onClick: k(N.UserProfileSections.MUTUAL_GUILDS),
         className: l()(O.avatarAndTextContainer, O.serverContainer),

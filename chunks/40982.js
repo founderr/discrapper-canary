@@ -1,37 +1,37 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("476400"),
-  i = r.n(o),
-  l = r("844303"),
-  u = r("829307"),
-  s = r("464854"),
-  f = r("996338"),
-  c = r("691507"),
-  d = Object.assign || function(e) {
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("476400"),
+  o = n.n(a),
+  s = n("844303"),
+  u = n("829307"),
+  c = n("464854"),
+  l = n("996338"),
+  d = n("691507"),
+  f = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
   p = function(e) {
     var t = e.width,
-      r = e.rgb,
-      n = e.hex,
-      o = e.hsv,
-      i = e.hsl,
+      n = e.rgb,
+      r = e.hex,
+      a = e.hsv,
+      o = e.hsl,
       p = e.onChange,
       h = e.onSwatchHover,
-      b = e.disableAlpha,
-      v = e.presetColors,
-      g = e.renderers,
-      x = e.styles,
-      y = void 0 === x ? {} : x,
-      m = e.className,
-      w = (0, l.default)((0, u.default)({
-        default: d({
+      m = e.disableAlpha,
+      g = e.presetColors,
+      _ = e.renderers,
+      b = e.styles,
+      v = void 0 === b ? {} : b,
+      y = e.className,
+      E = (0, s.default)((0, u.default)({
+        default: f({
           picker: {
             width: t,
             padding: "10px 10px 0",
@@ -68,7 +68,7 @@ var n = r("470079"),
           activeColor: {
             absolute: "0px 0px 0px 0px",
             borderRadius: "2px",
-            background: "rgba(" + r.r + "," + r.g + "," + r.b + "," + r.a + ")",
+            background: "rgba(" + n.r + "," + n.g + "," + n.b + "," + n.a + ")",
             boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)"
           },
           hue: {
@@ -90,7 +90,7 @@ var n = r("470079"),
             radius: "2px",
             shadow: "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)"
           }
-        }, y),
+        }, v),
         disableAlpha: {
           color: {
             height: "10px"
@@ -102,61 +102,61 @@ var n = r("470079"),
             display: "none"
           }
         }
-      }, y), {
-        disableAlpha: b
+      }, v), {
+        disableAlpha: m
       });
-    return a().createElement("div", {
-      style: w.picker,
-      className: "sketch-picker " + (void 0 === m ? "" : m)
-    }, a().createElement("div", {
-      style: w.saturation
-    }, a().createElement(s.Saturation, {
-      style: w.Saturation,
-      hsl: i,
-      hsv: o,
+    return i().createElement("div", {
+      style: E.picker,
+      className: "sketch-picker " + (void 0 === y ? "" : y)
+    }, i().createElement("div", {
+      style: E.saturation
+    }, i().createElement(c.Saturation, {
+      style: E.Saturation,
+      hsl: o,
+      hsv: a,
       onChange: p
-    })), a().createElement("div", {
-      style: w.controls,
+    })), i().createElement("div", {
+      style: E.controls,
       className: "flexbox-fix"
-    }, a().createElement("div", {
-      style: w.sliders
-    }, a().createElement("div", {
-      style: w.hue
-    }, a().createElement(s.Hue, {
-      style: w.Hue,
-      hsl: i,
+    }, i().createElement("div", {
+      style: E.sliders
+    }, i().createElement("div", {
+      style: E.hue
+    }, i().createElement(c.Hue, {
+      style: E.Hue,
+      hsl: o,
       onChange: p
-    })), a().createElement("div", {
-      style: w.alpha
-    }, a().createElement(s.Alpha, {
-      style: w.Alpha,
-      rgb: r,
-      hsl: i,
-      renderers: g,
+    })), i().createElement("div", {
+      style: E.alpha
+    }, i().createElement(c.Alpha, {
+      style: E.Alpha,
+      rgb: n,
+      hsl: o,
+      renderers: _,
       onChange: p
-    }))), a().createElement("div", {
-      style: w.color
-    }, a().createElement(s.Checkboard, null), a().createElement("div", {
-      style: w.activeColor
-    }))), a().createElement(f.default, {
-      rgb: r,
-      hsl: i,
-      hex: n,
+    }))), i().createElement("div", {
+      style: E.color
+    }, i().createElement(c.Checkboard, null), i().createElement("div", {
+      style: E.activeColor
+    }))), i().createElement(l.default, {
+      rgb: n,
+      hsl: o,
+      hex: r,
       onChange: p,
-      disableAlpha: b
-    }), a().createElement(c.default, {
-      colors: v,
+      disableAlpha: m
+    }), i().createElement(d.default, {
+      colors: g,
       onClick: p,
       onSwatchHover: h
     }))
   };
 p.propTypes = {
-  disableAlpha: i().bool,
-  width: i().oneOfType([i().string, i().number]),
-  styles: i().object
+  disableAlpha: o().bool,
+  width: o().oneOfType([o().string, o().number]),
+  styles: o().object
 }, p.defaultProps = {
   disableAlpha: !1,
   width: 200,
   styles: {},
   presetColors: ["#D0021B", "#F5A623", "#F8E71C", "#8B572A", "#7ED321", "#417505", "#BD10E0", "#9013FE", "#4A90E2", "#50E3C2", "#B8E986", "#000000", "#4A4A4A", "#9B9B9B", "#FFFFFF"]
-}, (0, s.ColorWrap)(p)
+}, (0, c.ColorWrap)(p)

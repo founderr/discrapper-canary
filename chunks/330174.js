@@ -1,12 +1,12 @@
 "use strict";
-r.r(t);
-var n = r("470079"),
-  a = r.n(n),
-  o = r("844303");
+n.r(t);
+var r = n("470079"),
+  i = n.n(r),
+  a = n("844303");
 t.default = function(e) {
   var t = e.rgb,
-    r = e.currentColor,
-    n = (0, o.default)({
+    n = e.currentColor,
+    r = (0, a.default)({
       default: {
         swatches: {
           border: "1px solid #B3B3B3",
@@ -21,7 +21,7 @@ t.default = function(e) {
         },
         current: {
           height: "34px",
-          background: r,
+          background: n,
           boxShadow: "inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 -1px 0 #000"
         },
         label: {
@@ -31,15 +31,15 @@ t.default = function(e) {
         }
       }
     });
-  return a().createElement("div", null, a().createElement("div", {
-    style: n.label
-  }, "new"), a().createElement("div", {
-    style: n.swatches
-  }, a().createElement("div", {
-    style: n.new
-  }), a().createElement("div", {
-    style: n.current
-  })), a().createElement("div", {
-    style: n.label
+  return i().createElement("div", null, i().createElement("div", {
+    style: r.label
+  }, "new"), i().createElement("div", {
+    style: r.swatches
+  }, i().createElement("div", {
+    style: r.new
+  }), i().createElement("div", {
+    style: r.current
+  })), i().createElement("div", {
+    style: r.label
   }, "current"))
 }

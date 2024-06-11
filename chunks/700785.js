@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return U
   },
   can: function() {
-    return V
+    return x
   },
   canEveryone: function() {
     return F
   },
   canEveryoneRole: function() {
-    return x
+    return V
   },
   computePermissions: function() {
     return y
@@ -284,7 +284,7 @@ function B(e) {
   }
 }
 
-function V(e) {
+function x(e) {
   let {
     permission: t,
     user: n,
@@ -303,7 +303,7 @@ function V(e) {
   }), t)
 }
 
-function x(e, t) {
+function V(e, t) {
   let n;
   let i = {};
   if (t instanceof c.ChannelRecordBase) {

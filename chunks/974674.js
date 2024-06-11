@@ -446,8 +446,8 @@ function L(e) {
       isTyping: c
     })
   }), [b, S, g, l, c]), {
-    avatarCutoutX: V,
-    avatarCutoutY: x,
+    avatarCutoutX: x,
+    avatarCutoutY: V,
     avatarCutoutWidth: F,
     avatarCutoutHeight: H,
     avatarCutoutRadius: Y,
@@ -482,8 +482,8 @@ function L(e) {
           fill: "white"
         }), (0, i.jsx)(o.animated.rect, {
           color: "black",
-          x: V,
-          y: x,
+          x: x,
+          y: V,
           width: F,
           height: H,
           rx: Y,

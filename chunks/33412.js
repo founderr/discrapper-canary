@@ -105,8 +105,8 @@ function p(e) {
     !e.isDisabled && !e.isReadOnly && (t = f(t = d(t, _, b), k, y)) && (t = (0, r.toCalendar)(t, (null == x ? void 0 : x.calendar) || new r.GregorianCalendar), x && "hour" in x ? w(x.set(t)) : w(t))
   }
   o(M, _, b) ? A(d(M, _, b)) : 0 > M.compare(k) ? R(c(M, g, p, _, b)) : M.compare(L) > 0 && R(u(M, g, p, _, b));
-  let Y = (0, a.useMemo)(() => !!T && (!!(y && y(T)) || o(T, _, b)), [T, y, _, b]),
-    j = e.isInvalid || "invalid" === e.validationState || Y,
+  let j = (0, a.useMemo)(() => !!T && (!!(y && y(T)) || o(T, _, b)), [T, y, _, b]),
+    Y = e.isInvalid || "invalid" === e.validationState || j,
     z = (0, a.useMemo)(() => "visible" === E ? g : h(g), [E, g]);
   return {
     isDisabled: e.isDisabled,
@@ -121,8 +121,8 @@ function p(e) {
     maxValue: b,
     focusedDate: M,
     timeZone: C,
-    validationState: j ? "invalid" : null,
-    isValueInvalid: j,
+    validationState: Y ? "invalid" : null,
+    isValueInvalid: Y,
     setFocusedDate(e) {
       B(e), I(!0)
     },
@@ -302,10 +302,10 @@ function m(e) {
     },
     [B, U] = (0, a.useState)(!1),
     {
-      isDateUnavailable: Y
+      isDateUnavailable: j
     } = e,
-    j = (0, a.useMemo)(() => !!E && !x && (!!(Y && (Y(E.start) || Y(E.end))) || o(E.start, m, v) || o(E.end, m, v)), [Y, E, x, m, v]),
-    z = e.isInvalid || "invalid" === e.validationState || j;
+    Y = (0, a.useMemo)(() => !!E && !x && (!!(j && (j(E.start) || j(E.end))) || o(E.start, m, v) || o(E.end, m, v)), [j, E, x, m, v]),
+    z = e.isInvalid || "invalid" === e.validationState || Y;
   return {
     ...k,
     value: E,

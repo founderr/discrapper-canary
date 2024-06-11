@@ -40,8 +40,8 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       learnMore: O,
       title: L,
       videoPosterUrl: P,
-      videoUrl: M,
-      ctaOnClick: y
+      videoUrl: y,
+      ctaOnClick: M
     } = function(e) {
       switch (e) {
         case "BOOSTING":
@@ -85,7 +85,7 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
             className: I.content,
             children: [(0, l.jsx)(C.default, {
               className: I.video,
-              src: M,
+              src: y,
               poster: P,
               width: 224,
               height: 126,
@@ -121,7 +121,7 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 children: v
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND_INVERTED,
-                onClick: null != y ? y : () => {
+                onClick: null != M ? M : () => {
                   n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,
                     guildId: b.guild_id,

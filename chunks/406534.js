@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("765104"),
   I = n("122707"),
   A = n("779836"),
-  x = n("23750"),
-  v = n("496675"),
+  v = n("23750"),
+  x = n("496675"),
   N = n("306680"),
   M = n("944486"),
   y = n("594174"),
   R = n("130208"),
   L = n("55935"),
-  j = n("70956"),
-  O = n("709054"),
+  O = n("70956"),
+  j = n("709054"),
   P = n("534091"),
   D = n("900164"),
   b = n("554838"),
@@ -66,7 +66,7 @@ let Q = l.memo(function(e) {
   return (0, a.jsx)(w.default, {
     isGroupStart: s,
     channel: n,
-    message: new x.default({
+    message: new v.default({
       id: t.id,
       key: "pending-upload-".concat(t.id),
       type: Z.MessageTypes.DEFAULT,
@@ -161,8 +161,8 @@ function $(e) {
           collapsedReason: t
         }, e.key)
       }
-      if (null != ei && ei > e.content.timestamp.getTime() * j.default.Millis.SECOND) return;
-      let s = v.default.can(Z.Permissions.CREATE_INSTANT_INVITE, R);
+      if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
+      let s = x.default.can(Z.Permissions.CREATE_INSTANT_INVITE, R);
       if ((0, D.default)(e.content, s)) return;
       e.type === Z.ChannelStreamTypes.MESSAGE && null == eT && (eT = e);
       let i = e.groupId === (null == eT ? void 0 : eT.groupId) ? eT.content.id : e.groupId,
@@ -179,9 +179,9 @@ function $(e) {
       }, e.content.id)
     });
   eI.push(...eA);
-  let ex = en[en.length - 1];
+  let ev = en[en.length - 1];
   if (null != eu && ea.forEach((e, t) => {
-      let n = 0 === t && (0, b.isNewGroupItem)(R, ex, new x.default({
+      let n = 0 === t && (0, b.isNewGroupItem)(R, ev, new v.default({
         type: Z.MessageTypes.DEFAULT,
         author: eu
       }));
@@ -217,7 +217,7 @@ function $(e) {
     })), $ > 0 && ee && ed()) {
     let e, t;
     let n = N.default.getOldestUnreadTimestamp(R.id),
-      s = 0 !== n ? n : O.default.extractTimestamp(R.id),
+      s = 0 !== n ? n : j.default.extractTimestamp(R.id),
       i = (0, L.isSameDay)(new Date, new Date(s));
     if (N.default.isEstimated(R.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(R) && eC.includes(z.ChatOverlays.SUMMARIES)) {
       let n = N.default.ackMessageId(R.id),

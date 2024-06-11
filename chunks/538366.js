@@ -24,7 +24,7 @@ function x(e) {
     guildId: x,
     tagFilter: C,
     channel: _
-  } = e, T = (0, c.useCanManageChannel)(_), p = (0, r.useCanStartThread)(_), S = _.isMediaChannel(), E = n.useCallback(() => {
+  } = e, p = (0, c.useCanManageChannel)(_), S = (0, r.useCanStartThread)(_), T = _.isMediaChannel(), E = n.useCallback(() => {
     (0, m.trackForumUpsellModalViewed)(), (0, l.openModalLazy)(async () => {
       let {
         default: e
@@ -34,7 +34,7 @@ function x(e) {
         guildId: x
       })
     })
-  }, [x]), N = C.size > 0, M = p || T, A = !N && T && !S, v = n.useCallback(() => A ? E() : p ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, A, p]);
+  }, [x]), N = C.size > 0, M = S || p, A = !N && p && !T, I = n.useCallback(() => A ? E() : S ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, A, S]);
   return (0, s.jsxs)("div", {
     className: g.container,
     children: [(0, s.jsxs)("div", {
@@ -66,7 +66,7 @@ function x(e) {
       look: l.Button.Looks.BLANK,
       size: l.Button.Sizes.MIN,
       color: l.Button.Colors.GREEN,
-      onClick: v,
+      onClick: I,
       className: g.cta,
       innerClassName: g.button,
       children: [A ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(u.default, {

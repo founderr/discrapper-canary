@@ -1,6 +1,6 @@
 "use strict";
 var i, s, a, u;
-n.r(e), n.d(e, {
+e.r(n), e.d(n, {
   VibingWumpusAction: function() {
     return i
   },

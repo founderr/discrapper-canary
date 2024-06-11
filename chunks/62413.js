@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return x
+    return _
   }
 }), i("411104");
 var n = i("735250"),
@@ -15,12 +15,12 @@ var n = i("735250"),
   u = i("368862"),
   h = i("927356"),
   p = i("125909"),
-  f = i("185156"),
-  m = i("87528"),
+  m = i("185156"),
+  f = i("87528"),
   g = i("57348"),
   C = i("164217");
 
-function x() {
+function _() {
   let e = (0, o.useStateFromStores)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
     t = (0, o.useStateFromStores)([u.default], () => u.default.getFetchState({
       includesInactive: e
@@ -39,7 +39,7 @@ function x() {
       let l = t > 0 && i[t - 1].type !== r.ApplicationDirectoryCollectionType.GALLERY;
       switch (e.type) {
         case r.ApplicationDirectoryCollectionType.LIST:
-          a = (0, n.jsx)(m.default, {
+          a = (0, n.jsx)(f.default, {
             collection: e
           });
           break;
@@ -49,7 +49,7 @@ function x() {
           });
           break;
         case r.ApplicationDirectoryCollectionType.GALLERY:
-          a = (0, n.jsx)(f.default, {
+          a = (0, n.jsx)(m.default, {
             collection: e
           });
           break;

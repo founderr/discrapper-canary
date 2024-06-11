@@ -58,7 +58,7 @@ n.r(t), n.d(t, {
     return P
   },
   runAfterTransition: function() {
-    return j
+    return Y
   },
   scrollIntoView: function() {
     return ee
@@ -361,7 +361,7 @@ function F(e) {
 let B = new Map,
   U = new Set;
 
-function Y() {
+function j() {
   if ("undefined" == typeof window) return;
   let e = t => {
     let n = B.get(t.target);
@@ -376,7 +376,7 @@ function Y() {
   }), document.body.addEventListener("transitionend", e)
 }
 
-function j(e) {
+function Y(e) {
   requestAnimationFrame(() => {
     0 === B.size ? e() : U.add(e)
   })
@@ -446,7 +446,7 @@ function V(e, t) {
     n.current ? n.current = !1 : (!r.current || t.some((e, t) => !Object.is(e, r[t]))) && e(), r.current = t
   }, t)
 }
-"undefined" != typeof document && ("loading" !== document.readyState ? Y() : document.addEventListener("DOMContentLoaded", Y));
+"undefined" != typeof document && ("loading" !== document.readyState ? j() : document.addEventListener("DOMContentLoaded", j));
 
 function $(e) {
   let {

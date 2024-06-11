@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   computeThreadIdsSnapshot: function() {
-    return V
+    return x
   }
 }), n("47120");
 var r, s, a, o, l = n("392711"),
@@ -55,12 +55,12 @@ function B() {
   var e;
   let t = h.default.getChannelId();
   if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return k(), !1;
-  x({
+  V({
     refreshThreadIds: !0
   })
 }
 
-function V(e) {
+function x(e) {
   let t = f.default.getChannel(e);
   return null == t ? [] : Object.values(E.default.getThreadsForParent(t.guild_id, t.id)).map(e => {
     let {
@@ -70,7 +70,7 @@ function V(e) {
   }).sort(w(g))
 }
 
-function x(e) {
+function V(e) {
   var t;
   let n = f.default.getChannel(C);
   if (null == n) return;
@@ -105,11 +105,11 @@ class F extends(r = _.default.Store) {
     let i = e !== C,
       r = !(0, A.areSetsEqual)(n, R),
       s = t !== g;
-    return C = e, R = n, g = t, i ? x({
+    return C = e, R = n, g = t, i ? V({
       refreshThreadIds: !0
-    }) : s ? x({
+    }) : s ? V({
       sortThreadIds: !0
-    }) : r && x(), v
+    }) : r && V(), v
   }
   getCurrentThreadIds() {
     return v
@@ -145,7 +145,7 @@ o = "ForumActivePostStore", (a = "displayName") in(s = F) ? Object.definePropert
       guildId: n
     } = e;
     if (null == C || n !== (null === (t = f.default.getChannel(C)) || void 0 === t ? void 0 : t.guild_id)) return !1;
-    x({
+    V({
       refreshThreadIds: !0
     })
   },
@@ -164,12 +164,12 @@ o = "ForumActivePostStore", (a = "displayName") in(s = F) ? Object.definePropert
     if (null == t.parent_id || t.parent_id !== C) return !1;
     let n = (0, N.isForumPostPinned)(t.id),
       i = b.has(t.id);
-    if (n && !i) b.add(t.id), x({
+    if (n && !i) b.add(t.id), V({
       sortThreadIds: !0
     });
     else {
       if (n || !i) return !1;
-      b.delete(t.id), x({
+      b.delete(t.id), V({
         sortThreadIds: !0
       })
     }
@@ -179,7 +179,7 @@ o = "ForumActivePostStore", (a = "displayName") in(s = F) ? Object.definePropert
       channel: t
     } = e;
     if (null == t.parent_id || t.parent_id !== C) return !1;
-    U.add(t.id), x({
+    U.add(t.id), V({
       sortThreadIds: !0
     })
   },
@@ -188,7 +188,7 @@ o = "ForumActivePostStore", (a = "displayName") in(s = F) ? Object.definePropert
       channelId: t
     } = e;
     if (null == t || t !== C) return !1;
-    x({
+    V({
       refreshThreadIds: !0
     })
   },

@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("594174"),
   I = n("110456"),
   A = n("602623"),
-  x = n("585483"),
-  v = n("792125"),
+  v = n("585483"),
+  x = n("792125"),
   N = n("51144"),
   M = n("566620"),
   y = n("317381"),
   R = n("619915"),
   L = n("952561"),
-  j = n("563218"),
-  O = n("719296"),
+  O = n("563218"),
+  j = n("719296"),
   P = n("651612"),
   D = n("918559"),
   b = n("981631"),
@@ -136,7 +136,7 @@ function H(e) {
     }, e.id)
   };
   return (0, a.jsxs)("div", {
-    className: i()(F.wrapper, k[X], (0, v.getThemeClass)(b.ThemeTypes.DARK)),
+    className: i()(F.wrapper, k[X], (0, x.getThemeClass)(b.ThemeTypes.DARK)),
     ref: Z,
     style: ec,
     children: [null == G ? void 0 : G(), (0, a.jsxs)("div", {
@@ -160,9 +160,9 @@ function H(e) {
           paddingBottom: es
         },
         ref: ee,
-        children: (0, a.jsx)(j.default, {
+        children: (0, a.jsx)(O.default, {
           className: F.iframe,
-          embedId: (0, O.default)(H, B.id)
+          embedId: (0, j.default)(H, B.id)
         })
       }), null != eo ? (0, a.jsxs)("div", {
         className: F.footer,
@@ -203,12 +203,12 @@ function H(e) {
       maxHeight: s,
       resizableNode: Z,
       onResize: e => {
-        x.ComponentDispatch.dispatch(b.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        v.ComponentDispatch.dispatch(b.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), Q(e)
       },
       onResizeEnd: e => {
-        x.ComponentDispatch.dispatch(b.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        v.ComponentDispatch.dispatch(b.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), $(e)
       }

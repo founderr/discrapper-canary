@@ -25,15 +25,15 @@ var a = n("735250"),
   T = n("928518"),
   I = n("703656"),
   A = n("493754"),
-  x = n("880831"),
-  v = n("73563"),
+  v = n("880831"),
+  x = n("73563"),
   N = n("800965"),
   M = n("107169"),
   y = n("891551"),
   R = n("314897"),
   L = n("979696"),
-  j = n("430824"),
-  O = n("496675"),
+  O = n("430824"),
+  j = n("496675"),
   P = n("944486"),
   D = n("358085"),
   b = n("792125"),
@@ -107,7 +107,7 @@ function el(e) {
 function es(e) {
   let {
     channel: t
-  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([O.default], () => O.default.can(q.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
+  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([j.default], () => j.default.can(q.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
   return null != s && r ? (0, a.jsx)(A.default, {
     channel: t,
     appContext: n,
@@ -128,7 +128,7 @@ function ei(e) {
     } = e,
     p = (0, h.useAppContext)(),
     C = (0, o.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === n.id, [n.id]),
-    S = (0, o.useStateFromStores)([O.default], () => O.default.can(q.Permissions.CONNECT, n)),
+    S = (0, o.useStateFromStores)([j.default], () => j.default.can(q.Permissions.CONNECT, n)),
     _ = (0, w.useStageParticipants)(n.id, k.StageChannelParticipantNamedIndex.SPEAKER),
     T = (0, o.useStateFromStores)([E.default], () => E.default.getSelectedParticipant(n.id)),
     I = f && p !== q.AppContext.POPOUT,
@@ -158,12 +158,12 @@ function ei(e) {
     participants: _,
     channel: n,
     hasConnectPermission: S
-  }), (0, a.jsx)(v.default, {
+  }), (0, a.jsx)(x.default, {
     style: {
       height: "calc(100% - ".concat(R, ")"),
       paddingTop: R
     },
-    disableGradients: 0 === A && v.DisableGradient.TOP,
+    disableGradients: 0 === A && x.DisableGradient.TOP,
     renderBottomLeft: () => (0, a.jsx)(es, {
       channel: n
     }),
@@ -186,7 +186,7 @@ function ei(e) {
       channel: n
     }),
     renderChatToasts: () => !y || m || I ? null : (0, a.jsx)(g.default, {
-      children: (0, a.jsx)(x.default, {
+      children: (0, a.jsx)(v.default, {
         className: i()($.chatToasts, {
           [$.rtsSidebarOpen]: u
         }),
@@ -218,7 +218,7 @@ function er(e) {
     popoutWindowAlwaysOnTop: T.default.getIsAlwaysOnTop(q.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
   })), I = null != C && !C.closed, {
     analyticsLocations: A
-  } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), x = (0, h.useAppContext)(), v = (0, o.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), N = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id), [t.guild_id]);
+  } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), v = (0, h.useAppContext)(), x = (0, o.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), N = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id), [t.guild_id]);
   l.useEffect(() => {
     null == u.Storage.get(ee) && ((0, d.openModalLazy)(async () => {
       let {
@@ -242,7 +242,7 @@ function er(e) {
         children: [(0, a.jsx)("div", {
           className: i()($.callContainer, (0, b.getThemeClass)(q.ThemeTypes.DARK), {
             [$.sidebarVisible]: s,
-            [$.sidebarOrChatVisible]: s || v
+            [$.sidebarOrChatVisible]: s || x
           }),
           children: (0, a.jsx)(ei, {
             channel: t,
@@ -251,15 +251,15 @@ function er(e) {
             popoutWindow: C,
             popoutWindowAlwaysOnTop: _,
             popoutOpen: I,
-            chatOpen: v
+            chatOpen: x
           })
         }), s ? (0, a.jsx)(B.default, {
           channel: t,
           toggleRequestToSpeakSidebar: c,
-          chatOpen: v
+          chatOpen: x
         }) : null, (0, a.jsx)("div", {
           className: $.channelChatWrapper,
-          children: v && (!I || I && x === q.AppContext.POPOUT) && (0, a.jsx)(S.default, {
+          children: x && (!I || I && v === q.AppContext.POPOUT) && (0, a.jsx)(S.default, {
             channel: t,
             guild: N,
             maxWidth: M - 550

@@ -91,17 +91,17 @@ let D = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         w = n[s + 1],
         k = null != w && G.type === p.StickerCategoryTypes.GUILD && w.type !== p.StickerCategoryTypes.GUILD,
         B = G.type === p.StickerCategoryTypes.PACK,
-        V = "",
-        x = null;
+        x = "",
+        V = null;
       if (G.type === p.StickerCategoryTypes.GUILD || G.type === p.StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
         let e = I.default.getGuild(G.id);
-        null != e && (c = e.id, V = e.name, x = (0, i.jsx)(d.default, {
+        null != e && (c = e.id, x = e.name, V = (0, i.jsx)(d.default, {
           guild: e,
           isSelected: b
         }))
       } else if (B) {
         let e = N.default.getStickerPack(G.id);
-        null != e && (V = e.name, x = (0, i.jsx)(C.default, {
+        null != e && (x = e.name, V = (0, i.jsx)(C.default, {
           disableAnimation: !b || S,
           size: M,
           sticker: (0, O.getStickerPackPreviewSticker)(e)
@@ -110,7 +110,7 @@ let D = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
       return (0, i.jsxs)(r.Fragment, {
         children: [(0, i.jsx)(l.Tooltip, {
           position: "right",
-          text: V,
+          text: x,
           tooltipContentClassName: v.__invalid_tooltip,
           children: e => (0, i.jsx)("div", {
             role: "listitem",
@@ -118,7 +118,7 @@ let D = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
             "aria-posinset": s,
             children: (0, i.jsx)(l.Clickable, {
               ...e,
-              "aria-label": V,
+              "aria-label": x,
               className: a()(v.stickerCategory, {
                 [v.firstPartyCategory]: B,
                 [v.firstPartyCategorySelected]: !S && b && B
@@ -131,7 +131,7 @@ let D = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
                   guild_id: c
                 }), o()
               },
-              children: x
+              children: V
             })
           })
         }), k ? (0, i.jsx)("hr", {

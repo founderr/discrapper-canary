@@ -58,7 +58,7 @@ function D(e) {
     channelId: D,
     messageId: M,
     roleId: y
-  }), V = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), x = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), F = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), H = r.useRef(null), Y = (0, f.default)(t.id, n), j = (0, o.default)(H);
+  }), x = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), V = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), F = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), H = r.useRef(null), Y = (0, f.default)(t.id, n), j = (0, o.default)(H);
   r.useEffect(() => {
     null == U || U(null == H ? void 0 : H.current)
   }, [H, U]);
@@ -73,7 +73,7 @@ function D(e) {
       ...e
     })
   };
-  return null == V ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
+  return null == x ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
     value: k,
     children: (0, i.jsx)(T.UserProfileAnalyticsProvider, {
       layout: "BITE_SIZE_POPOUT",
@@ -126,9 +126,9 @@ function D(e) {
             onOpenProfile: b ? void 0 : W
           }), (0, i.jsx)(O.default, {
             user: t,
-            currentUser: V,
+            currentUser: x,
             displayProfile: Y,
-            guild: x,
+            guild: V,
             isHovering: j,
             onOpenProfile: W,
             channelId: D,
