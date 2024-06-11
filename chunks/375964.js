@@ -17173,6 +17173,7 @@ e.exports = Object.freeze({
   QUESTS_CLAIMED: "Claimed Quests",
   QUESTS_PROMOTED_BY_GUILD: "Promoted by $[{guildName}]({guildHook})",
   QUESTS_PROMOTED_BY_BRAND: "Promoted by **{brandName}**",
+  QUESTS_PROMOTED_BY: "Promoted by",
   QUESTS_CONNECT_CONSOLE: "Connect Console",
   QUESTS_REWARD_VERIFICATION_TITLE: "Verify your account to claim rewards!",
   QUESTS_REWARD_VERIFICATION_BODY: "We have sent a verification email to: [{emailAddress}]({emailAddressLink})",

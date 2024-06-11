@@ -128,7 +128,7 @@ class eo extends(l = s.PureComponent) {
         padding: n,
         callback: l
       })
-    }
+    } else null == l || l()
   }
   isUnreadVisible() {
     let {
