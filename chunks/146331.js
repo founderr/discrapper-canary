@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
   default: function() {
     return S
   }
-});
+}), n("653041");
 var i = n("735250");
 n("470079");
 var r = n("442837"),
@@ -57,27 +57,22 @@ function S(e) {
     label: f.default.Messages.COPY_ID_USER
   });
   if (A && n !== T.UserProfileTypes.FULL_SIZE) return null;
-  let g = () => A ? null : (0, i.jsxs)(s.MenuGroup, {
-      children: [O, C]
-    }),
-    L = () => null == R ? null : (0, i.jsx)(s.MenuGroup, {
-      children: R
-    });
-  return (0, i.jsx)(o.AnalyticsLocationProvider, {
+  let g = [];
+  return (null != h && g.push([h]), !A && (null != O || null != C) && g.push([O, C]), null != R && g.push([R]), 0 === g.length) ? null : (0, i.jsx)(o.AnalyticsLocationProvider, {
     value: N,
     children: (0, i.jsx)(s.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
         } = e;
-        return (0, i.jsxs)(s.Menu, {
+        return (0, i.jsx)(s.Menu, {
           navId: "user-profile-overflow-menu",
           onSelect: void 0,
           onClose: t,
           "aria-label": f.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-          children: [(0, i.jsx)(s.MenuGroup, {
-            children: h
-          }), g(), L()]
+          children: g.map((e, t) => (0, i.jsx)(s.MenuGroup, {
+            children: e.map(e => e)
+          }, t))
         })
       },
       children: e => (0, i.jsx)(I.default, {
