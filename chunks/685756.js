@@ -419,7 +419,7 @@ class D extends I.default {
     this.heartbeatIntervalModifier = e
   }
   sendHeartbeatIfOverdue() {
-    null != this.heartbeatInterval && null != this.heartbeater && null != this.lastHeartbeatTime && performance.now() - this.lastHeartbeatTime > this.heartbeatInterval + C && this.sendHeartbeat()
+    null != this.heartbeatInterval && null != this.heartbeater && null != this.lastHeartbeatTime && performance.now() - this.lastHeartbeatTime > this.heartbeatInterval + C && (this.logger.info("Forcing heartbeat"), this.sendHeartbeat())
   }
   constructor(e) {
     super(), m(this, "url", void 0), m(this, "logger", new T.default("RTCControlSocket")), m(this, "backoff", new E.default(1e3, 5e3)), m(this, "webSocket", void 0), m(this, "connectionState", void 0), m(this, "heartbeatInterval", void 0), m(this, "helloTimeout", void 0), m(this, "heartbeater", void 0), m(this, "lastHeartbeatTime", void 0), m(this, "lastHeartbeatAckTime", void 0), m(this, "expeditedHeartbeatTimeout", void 0), m(this, "heartbeatAck", void 0), m(this, "heartbeatIntervalModifier", void 0), m(this, "connectionStartTime", void 0), m(this, "sessionId", void 0), m(this, "serverId", void 0), m(this, "token", void 0), m(this, "resumable", void 0), m(this, "serverVersion", 0), this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
