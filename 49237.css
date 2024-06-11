@@ -20804,6 +20804,14 @@ strong {
     gap: 12px
 }
 
+.inlineForwardOnHover__5cbf1 {
+    visibility: hidden
+}
+
+.mosaicContainer__204db:hover .inlineForwardOnHover__5cbf1 {
+    visibility: visible
+}
+
 .modalCarouselWrapper__1858d {
     align-items: center !important
 }
