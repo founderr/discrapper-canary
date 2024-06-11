@@ -18,13 +18,14 @@ var i = r("120356"),
   p = r("682864"),
   g = r("71585"),
   m = r("146282"),
-  f = r("789086"),
-  y = r("206583"),
-  b = r("475549"),
-  x = r("277513");
-let k = [{
+  f = r("650613"),
+  y = r("789086"),
+  b = r("206583"),
+  x = r("475549"),
+  k = r("277513");
+let v = [{
   key: "type",
-  cellClassName: n()(b.cell, b.cellType),
+  cellClassName: n()(x.cell, x.cellType),
   render(e) {
     let {
       type: t
@@ -36,7 +37,7 @@ let k = [{
   }
 }, {
   key: "count",
-  cellClassName: n()(b.cell, b.cellCount),
+  cellClassName: n()(x.cell, x.cellCount),
   render(e) {
     let {
       entries: t
@@ -50,18 +51,18 @@ let k = [{
   }
 }, {
   key: "only?",
-  cellClassName: b.cell,
+  cellClassName: x.cell,
   render(e) {
     let {
       type: t
     } = e;
-    return (0, a.jsx)(v, {
+    return (0, a.jsx)(S, {
       type: t
     })
   }
 }];
 
-function v(e) {
+function S(e) {
   var t, r;
   let {
     type: i
@@ -84,7 +85,7 @@ function v(e) {
 
 function T() {
   var e;
-  let t = (0, s.useStateFromStores)([m.default], () => m.default.getFeed(y.ContentInventoryFeedKey.GLOBAL_FEED)),
+  let t = (0, s.useStateFromStores)([m.default], () => m.default.getFeed(b.ContentInventoryFeedKey.GLOBAL_FEED)),
     r = (0, s.useStateFromStores)([m.default], () => m.default.getDebugImpressionCappingDisabled()),
     i = (0, s.useStateFromStores)([g.default], () => g.default.getDebugFastImpressionCappingEnabled()),
     l = function(e) {
@@ -100,21 +101,21 @@ function T() {
     }(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
     c = (0, s.useStateFromStores)([m.default], () => {
       var e;
-      return (null === (e = m.default.getFeedState(y.ContentInventoryFeedKey.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0
+      return (null === (e = m.default.getFeedState(b.ContentInventoryFeedKey.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0
     });
   return (0, a.jsx)("div", {
-    className: n()(x.panel),
+    className: n()(k.panel),
     children: (0, a.jsxs)(d.ScrollerThin, {
-      className: b.content,
+      className: x.content,
       children: [(0, a.jsxs)(d.FormSection, {
         children: [(0, a.jsx)(d.FormTitle, {
           children: "Inventory"
         }), l.length > 0 && (0, a.jsx)(h.default, {
-          columns: k,
+          columns: v,
           data: l
         }), (0, a.jsx)(p.default, {
           size: 8
-        }), (0, a.jsx)(f.default, {}), (0, a.jsx)(d.Button, {
+        }), (0, a.jsx)(y.default, {}), (0, a.jsx)(d.Button, {
           fullWidth: !0,
           onClick: function() {
             u.default.dispatch({
@@ -166,7 +167,7 @@ function T() {
           },
           children: i ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping"
         })]
-      }), false]
+      }), false, (0, a.jsx)(f.default, {})]
     })
   })
 }

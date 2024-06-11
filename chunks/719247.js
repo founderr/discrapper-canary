@@ -1,9 +1,13 @@
 "use strict";
-n.r(t), n("47120");
+n.r(t), n.d(t, {
+  entryToKey: function() {
+    return N
+  }
+}), n("47120");
 var i, a = n("392711"),
   s = n.n(a),
-  l = n("661869"),
-  r = n("876215"),
+  r = n("661869"),
+  l = n("876215"),
   u = n("423875"),
   o = n("442837"),
   d = n("570140"),
@@ -22,7 +26,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = new Set([r.ContentInventoryEntryType.LISTENED_SESSION]),
+let C = new Set([l.ContentInventoryEntryType.LISTENED_SESSION]),
   m = new Map;
 
 function N(e) {
@@ -34,14 +38,14 @@ function R(e) {
     n = new Set;
   for (let i of e) {
     let e = function(e) {
-      return (0, _.isEntryExpired)(e) ? null : (0, _.isEntryActive)(e) && e.author_type === l.ContentInventoryAuthorType.USER ? c.default.getActivities(e.author_id).find(t => {
+      return (0, _.isEntryExpired)(e) ? null : (0, _.isEntryActive)(e) && e.author_type === r.ContentInventoryAuthorType.USER ? c.default.getActivities(e.author_id).find(t => {
         if (t.type === T.ActivityTypes.PLAYING && (0, E.isGamingLikeEntry)(e)) return function(e, t) {
           let n = e.extra;
           return null != n && ("application_id" in t && t.application_id === n.application_id || "game_name" in n && t.name === n.game_name)
         }(e, t);
-        if (t.type === T.ActivityTypes.LISTENING && e.content_type === r.ContentInventoryEntryType.LISTENED_SESSION) {
-          var n, i, a, s, l;
-          return n = e, i = t, (null === (s = n.extra.entries[0]) || void 0 === s ? void 0 : null === (a = s.media) || void 0 === a ? void 0 : a.provider) === u.ContentInventoryListenedMediaProvider.SPOTIFY && (0, I.isSpotifyParty)(null === (l = i.party) || void 0 === l ? void 0 : l.id)
+        if (t.type === T.ActivityTypes.LISTENING && e.content_type === l.ContentInventoryEntryType.LISTENED_SESSION) {
+          var n, i, a, s, r;
+          return n = e, i = t, (null === (s = n.extra.entries[0]) || void 0 === s ? void 0 : null === (a = s.media) || void 0 === a ? void 0 : a.provider) === u.ContentInventoryListenedMediaProvider.SPOTIFY && (0, I.isSpotifyParty)(null === (r = i.party) || void 0 === r ? void 0 : r.id)
         }
         return !1
       }) : void 0
