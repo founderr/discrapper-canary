@@ -18,8 +18,9 @@ var a = n("528560"),
 
 function E(e) {
   let {
-    message: t
-  } = e;
+    message: t,
+    channel: n
+  } = e, E = null != n.guild_id ? u.AnalyticsSections.TEXT_IN_VOICE : u.AnalyticsSections.CHANNEL_TEXT_AREA;
   return (0, s.jsx)(o.default, {
     contentClassName: f.messageContentContainer,
     iconContainerClassName: f.iconContainer,
@@ -53,7 +54,7 @@ function E(e) {
           buttonText: c.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
           size: i.Button.Sizes.SMALL,
           premiumModalAnalyticsLocation: {
-            section: u.AnalyticsSections.TEXT_IN_VOICE,
+            section: E,
             object: u.AnalyticsObjects.MESSAGE
           }
         })

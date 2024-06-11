@@ -658,10 +658,12 @@ let ev = Object.freeze({
   [eS.MessageTypes.CHANGELOG]: void 0,
   [eS.MessageTypes.NITRO_NOTIFICATION]: function(e) {
     let {
-      message: t
+      message: t,
+      channel: n
     } = e;
     return (0, s.jsx)(eh.default, {
-      message: t
+      message: t,
+      channel: n
     })
   }
 });

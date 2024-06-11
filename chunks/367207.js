@@ -171,7 +171,7 @@ class G extends u.default {
         });
         o.default.sendNitroSystemMessage(e, n), g.default.track(O.AnalyticEvents.PREMIUM_UPSELL_MESSAGE_SENT, {
           type: y.PremiumUpsellTypes.HD_STREAMING_VIEWER_UPSELL,
-          location_section: O.AnalyticsSections.TEXT_IN_VOICE,
+          location_section: null != t ? O.AnalyticsSections.TEXT_IN_VOICE : O.AnalyticsSections.CHANNEL_TEXT_AREA,
           location_object: O.AnalyticsObjects.MESSAGE,
           guild_id: t
         })
