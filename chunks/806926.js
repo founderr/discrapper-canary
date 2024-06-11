@@ -23,9 +23,9 @@ var i = l("442837"),
   p = l("854898");
 
 function v(e) {
+  var t;
   let {
-    user: t,
-    guildId: l,
+    user: l,
     channelId: v,
     displayProfile: T,
     initialSection: g,
@@ -33,7 +33,7 @@ function v(e) {
     friendToken: A,
     transitionState: C,
     onClose: N
-  } = e, U = (0, i.useStateFromStores)([a.default], () => a.default.getRelationshipType(t.id)), {
+  } = e, U = (0, i.useStateFromStores)([a.default], () => a.default.getRelationshipType(l.id)), {
     originalFriendingEnabled: R,
     improvedFriendingEnabled: h
   } = (0, o.useSimplifiedProfileFriendingExperiment)({
@@ -42,13 +42,13 @@ function v(e) {
   return (0, s.jsxs)("div", {
     className: p.container,
     children: [(0, s.jsx)(S.default, {
-      user: t,
+      user: l,
       profileType: I.UserProfileTypes.FULL_SIZE,
-      nickname: n.default.getName(l, v, t),
+      nickname: n.default.getName(null == T ? void 0 : T.guildId, v, l),
       pronouns: null == T ? void 0 : T.pronouns,
       nicknameVariant: "heading-xl/bold",
       nicknameIcons: (0, s.jsx)(d.default, {
-        userId: t.id
+        userId: l.id
       }),
       tags: (0, s.jsx)(r.default, {
         displayProfile: T,
@@ -58,8 +58,8 @@ function v(e) {
     }), (h || R) && U === m.RelationshipTypes.PENDING_INCOMING && (0, s.jsx)(f.default.Overlay, {
       className: p.banner,
       children: (0, s.jsx)(c.default, {
-        user: t,
-        guildId: l,
+        user: l,
+        guildId: null !== (t = null == T ? void 0 : T.guildId) && void 0 !== t ? t : void 0,
         channelId: v,
         friendToken: A
       })
@@ -68,7 +68,7 @@ function v(e) {
       children: [C === _.ModalTransitionState.ENTERED && (0, s.jsx)(u.default, {
         onTooltipClose: N
       }), (0, s.jsx)(E.default, {
-        user: t,
+        user: l,
         displayProfile: T,
         initialSection: g,
         autoFocusNote: x,

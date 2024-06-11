@@ -24,19 +24,21 @@ let o = r.createContext({}),
       channelId: d,
       messageId: _,
       roleId: c,
-      shouldTrackViewOnMount: E = !0
+      showGuildProfile: E = !0,
+      shouldTrackViewOnMount: I = !0
     } = e, {
-      analyticsLocations: I
-    } = (0, s.default)(), T = r.useMemo(() => ({
+      analyticsLocations: T
+    } = (0, s.default)(), f = r.useMemo(() => ({
       layout: n,
       userId: l,
       guildId: u,
       channelId: d,
       messageId: _,
-      roleId: c
-    }), [n, l, u, d, _, c]);
+      roleId: c,
+      showGuildProfile: E
+    }), [n, l, u, d, _, c, E]);
     return r.useEffect(() => {
-      E && null != n && null != l && (0, a.trackUserProfileAction)({
+      I && null != n && null != l && (0, a.trackUserProfileAction)({
         action: "VIEW",
         layout: n,
         userId: l,
@@ -44,10 +46,11 @@ let o = r.createContext({}),
         channelId: d,
         messageId: _,
         roleId: c,
-        analyticsLocations: I
+        showGuildProfile: E,
+        analyticsLocations: T
       })
-    }, [E]), (0, i.jsx)(o.Provider, {
-      value: T,
+    }, [I]), (0, i.jsx)(o.Provider, {
+      value: f,
       children: t
     })
   },

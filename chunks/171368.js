@@ -26,19 +26,20 @@ function _(e) {
     roleId: I,
     friendToken: T,
     autoFocusNote: f,
-    analyticsLocation: S,
-    sourceAnalyticsLocations: h
-  } = e, A = s.default.getUser(t), m = null != _ && _ !== d.ME ? _ : void 0, N = (0, l.getSimplifiedProfileFriendingExperimentConfig)({
+    showGuildProfile: S,
+    analyticsLocation: h,
+    sourceAnalyticsLocations: A
+  } = e, m = s.default.getUser(t), N = null != _ && _ !== d.ME ? _ : void 0, p = (0, l.getSimplifiedProfileFriendingExperimentConfig)({
     location: "openUserProfileModal",
     autoTrackExposure: !1
-  }), p = (0, a.isInProfileMutualsExperiment)().enabled || (0, o.getSimplifiedProfileExperimentConfig)({
+  }), O = (0, a.isInProfileMutualsExperiment)().enabled || (0, o.getSimplifiedProfileExperimentConfig)({
     location: "openUserProfileModal",
     autoTrackExposure: !1
-  }).basicsEnabled || N.originalFriendingEnabled || N.improvedFriendingEnabled;
-  if (null == A) return (0, r.fetchProfile)(t, {
-    guildId: m,
+  }).basicsEnabled || p.originalFriendingEnabled || p.improvedFriendingEnabled;
+  if (null == m) return (0, r.fetchProfile)(t, {
+    guildId: S ? N : void 0,
     withMutualGuilds: !0,
-    withMutualFriends: p,
+    withMutualFriends: O,
     friendToken: T
   }).then(() => {
     i.default.dispatch({
@@ -51,14 +52,15 @@ function _(e) {
       roleId: null != I ? I : void 0,
       friendToken: T,
       autoFocusNote: f,
-      analyticsLocation: S,
-      sourceAnalyticsLocations: h
+      showGuildProfile: S,
+      analyticsLocation: h,
+      sourceAnalyticsLocations: A
     })
   });
-  (0, u.maybeFetchUserProfileForPopout)(A, {
-    guildId: m,
+  (0, u.maybeFetchUserProfileForPopout)(m, {
+    guildId: S ? N : void 0,
     withMutualGuilds: !0,
-    withMutualFriends: p,
+    withMutualFriends: O,
     friendToken: T
   }), i.default.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
@@ -70,8 +72,9 @@ function _(e) {
     roleId: null != I ? I : void 0,
     friendToken: T,
     autoFocusNote: f,
-    analyticsLocation: S,
-    sourceAnalyticsLocations: h
+    showGuildProfile: S,
+    analyticsLocation: h,
+    sourceAnalyticsLocations: A
   })
 }
 

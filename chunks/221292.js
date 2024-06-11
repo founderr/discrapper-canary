@@ -54,36 +54,38 @@ let f = e => {
     let {
       layout: i,
       userId: a,
-      guildId: o
-    } = e, u = l.default.getUser(a);
-    if (null == u) return {};
-    let d = (0, c.getDisplayProfile)(null == u ? void 0 : u.id, o),
-      _ = null != o ? r.default.getMember(o, null == u ? void 0 : u.id) : null;
+      guildId: o,
+      showGuildProfile: u = !0
+    } = e, d = l.default.getUser(a);
+    if (null == d) return {};
+    let _ = (0, c.getDisplayProfile)(null == d ? void 0 : d.id, u ? o : void 0),
+      E = u && null != o ? r.default.getMember(o, null == d ? void 0 : d.id) : null;
     return {
       profile_layout: i,
       profile_properties: f({
-        user: u,
-        userProfile: null == d ? void 0 : d._userProfile
+        user: d,
+        userProfile: null == _ ? void 0 : _._userProfile
       }),
       guild_profile_properties: f({
-        guildMember: _,
-        guildMemberProfile: null == d ? void 0 : d._guildMemberProfile
+        guildMember: E,
+        guildMemberProfile: null == _ ? void 0 : _._guildMemberProfile
       }),
-      profile_activity_types: s.default.getActivities(u.id).map(e => {
+      profile_activity_types: s.default.getActivities(d.id).map(e => {
         let {
           type: t
         } = e;
         return t
       }).filter(e => void 0 !== e),
-      profile_badges: null == d ? void 0 : null === (t = d.getBadges()) || void 0 === t ? void 0 : t.map(e => {
+      profile_badges: null == _ ? void 0 : null === (t = _.getBadges()) || void 0 === t ? void 0 : t.map(e => {
         let {
           id: t
         } = e;
         return t
       }),
-      avatar_decoration_sku_id: null === (n = u.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
-      profile_effect_sku_id: null == d ? void 0 : d.profileEffectId,
-      user_status: S(u.id)
+      avatar_decoration_sku_id: null === (n = d.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
+      profile_effect_sku_id: null == _ ? void 0 : _.profileEffectId,
+      user_status: S(d.id),
+      is_guild_profile: (null == _ ? void 0 : _.guildId) != null
     }
   },
   m = e => {
@@ -104,23 +106,25 @@ let f = e => {
       channelId: r,
       messageId: s,
       roleId: a,
-      analyticsLocations: o,
-      layout: l,
-      action: d,
-      section: _
+      showGuildProfile: o,
+      analyticsLocations: l,
+      layout: d,
+      action: _,
+      section: c
     } = e;
     u.default.track(I.AnalyticEvents.USER_PROFILE_ACTION, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
       ...A({
-        layout: l,
+        layout: d,
         userId: t,
-        guildId: n
+        guildId: n,
+        showGuildProfile: o
       }),
       ...m(t),
-      location_stack: o,
-      profile_action: d,
-      profile_section: _,
+      location_stack: l,
+      profile_action: _,
+      profile_section: c,
       source_message_id: s,
       source_role_id: a
     })
@@ -130,31 +134,33 @@ let f = e => {
       userId: t,
       guildId: n,
       channelId: r,
-      analyticsLocations: s,
-      layout: a,
-      activityType: o,
-      activityName: l,
-      activityPlatform: d,
-      activitySessionId: _,
-      applicationId: c,
-      voiceChannelId: E
+      showGuildProfile: s,
+      analyticsLocations: a,
+      layout: o,
+      activityType: l,
+      activityName: d,
+      activityPlatform: _,
+      activitySessionId: c,
+      applicationId: E,
+      voiceChannelId: T
     } = e;
     u.default.track(I.AnalyticEvents.USER_PROFILE_ACTIVITY_JOINED, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
       ...A({
-        layout: a,
+        layout: o,
         userId: t,
-        guildId: n
+        guildId: n,
+        showGuildProfile: s
       }),
       ...m(t),
-      location_stack: s,
-      activity_type: null != E ? "VOICE" : h(o),
-      activity_name: l,
-      activity_platform: d,
-      activity_session_id: _,
-      application_id: c,
-      voice_channel_id: E
+      location_stack: a,
+      activity_type: null != T ? "VOICE" : h(l),
+      activity_name: d,
+      activity_platform: _,
+      activity_session_id: c,
+      application_id: E,
+      voice_channel_id: T
     })
   },
   O = e => {
@@ -162,21 +168,23 @@ let f = e => {
       userId: t,
       guildId: n,
       channelId: r,
-      analyticsLocations: s,
-      layout: a,
-      badge: o
+      showGuildProfile: s,
+      analyticsLocations: a,
+      layout: o,
+      badge: l
     } = e;
     u.default.track(I.AnalyticEvents.USER_PROFILE_BADGE_PRESSED, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
       ...A({
-        layout: a,
+        layout: o,
         userId: t,
-        guildId: n
+        guildId: n,
+        showGuildProfile: s
       }),
       ...m(t),
-      location_stack: s,
-      badge: o
+      location_stack: a,
+      badge: l
     })
   },
   C = e => {
@@ -184,20 +192,22 @@ let f = e => {
       userId: t,
       guildId: n,
       channelId: r,
-      analyticsLocations: s,
-      layout: a,
-      badge: o
+      showGuildProfile: s,
+      analyticsLocations: a,
+      layout: o,
+      badge: l
     } = e;
     u.default.track(I.AnalyticEvents.USER_PROFILE_BADGE_HOVERED, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
       ...A({
-        layout: a,
+        layout: o,
         userId: t,
-        guildId: n
+        guildId: n,
+        showGuildProfile: s
       }),
       ...m(t),
-      location_stack: s,
-      badge: o
+      location_stack: a,
+      badge: l
     })
   }
