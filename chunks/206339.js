@@ -179,13 +179,12 @@ t.default = function() {
           } = e;
           return t === G.SubscriptionPlans.PREMIUM_YEAR_TIER_2
         }),
-        c = Y.length + k.length > 0,
-        S = Q ? (0, a.jsxs)("div", {
+        c = Q ? (0, a.jsxs)("div", {
           className: B.promoHeaderContainer,
           children: [(0, a.jsxs)("div", {
             children: [(0, a.jsx)(u.Heading, {
               variant: "heading-md/semibold",
-              children: c ? F.default.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
+              children: K ? F.default.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
             }), (0, a.jsx)(u.Heading, {
               variant: "text-sm/normal",
               className: B.promoDescription,
@@ -203,7 +202,7 @@ t.default = function() {
           })]
         }) : (0, a.jsx)(u.Heading, {
           variant: "heading-md/semibold",
-          children: c ? F.default.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
+          children: K ? F.default.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
         });
       return (0, a.jsx)(p.default, {
         className: B.containerWithMargin,
@@ -214,7 +213,7 @@ t.default = function() {
           className: l()({
             [B.containerWithMargin]: !Q
           }),
-          children: [S, c ? (0, a.jsx)(u.FormDivider, {
+          children: [c, K ? (0, a.jsx)(u.FormDivider, {
             className: B.divider
           }) : null, k.map(e => {
             let {
