@@ -23,15 +23,15 @@ var n = s("990547"),
   g = s("425799"),
   f = s("377171"),
   m = s("621628"),
-  C = s("18438"),
-  A = s("778825"),
+  A = s("18438"),
+  C = s("778825"),
   O = s("351780"),
   h = s("231765"),
-  p = s("837741"),
-  R = s("804545"),
+  R = s("837741"),
+  p = s("804545"),
   M = s("813732"),
-  x = s("398140"),
-  D = s("564344"),
+  D = s("398140"),
+  x = s("564344"),
   L = s("977156"),
   P = s("652380"),
   b = s("171156"),
@@ -49,8 +49,8 @@ var n = s("990547"),
   w = s("604227"),
   W = s("38915"),
   K = s("498639"),
-  z = s("748717"),
-  Q = s("419636"),
+  Q = s("748717"),
+  z = s("419636"),
   X = s("35426"),
   q = s("799071"),
   Z = s("601433"),
@@ -77,15 +77,15 @@ var n = s("990547"),
   eg = s("301121"),
   ef = s("207874"),
   em = s("463153"),
-  eC = s("36192"),
-  eA = s("338345"),
+  eA = s("36192"),
+  eC = s("338345"),
   eO = s("400287"),
   eh = s("554042"),
-  ep = s("200645"),
-  eR = s("287490"),
+  eR = s("200645"),
+  ep = s("287490"),
   eM = s("168308"),
-  ex = s("277329"),
-  eD = s("674116"),
+  eD = s("277329"),
+  ex = s("674116"),
   eL = s("726985"),
   eP = s("981631"),
   eb = s("46140"),
@@ -95,18 +95,18 @@ var n = s("990547"),
 let eG = () => {
     let e = "Settings list view",
       t = [i.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE, i.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE];
-    return p.BrandRefreshPerksExperiment.getCurrentConfig({
+    return R.BrandRefreshPerksExperiment.getCurrentConfig({
       location: e
-    }).enabled && t.push(i.DismissibleContent.BRAND_REFRESH_NEW_BADGE), R.PrideMonthPerksExperiment.getCurrentConfig({
+    }).enabled && t.push(i.DismissibleContent.BRAND_REFRESH_NEW_BADGE), p.PrideMonthPerksExperiment.getCurrentConfig({
       location: e
     }).enabled && t.push(i.DismissibleContent.PRIDE_ICONS_APPEARANCE_BADGE), t
   },
-  eF = ep.default,
+  eF = eR.default,
   eB = e => {
     let {
       unseenGiftCount: t,
-      showPrepaidPaymentPastDueWarning: p,
-      impressionSource: R,
+      showPrepaidPaymentPastDueWarning: R,
+      impressionSource: p,
       numOfPendingFamilyRequests: eB,
       isOverlaySupported: ey,
       isClipsBetaTagShowing: eV = !1,
@@ -116,8 +116,8 @@ let eG = () => {
       isStaff: ew,
       isInappropriateConversationWarningEnabled: eW,
       paymentsBlocked: eK,
-      isEligibleForQuests: ez,
-      showGiftNitro: eQ
+      isEligibleForQuests: eQ,
+      showGiftNitro: ez
     } = e;
     return Object.freeze({
       [eL.WebSetting.SEARCH_BAR]: {
@@ -227,7 +227,7 @@ let eG = () => {
         searchableTitle: eU.default.Messages.GAMES,
         label: eU.default.Messages.GAMES,
         ariaLabel: eU.default.Messages.GAMES,
-        element: ex.default,
+        element: eD.default,
         predicate: () => eH
       },
       [eL.WebSetting.GAMES_MY_GAMES]: {
@@ -256,17 +256,17 @@ let eG = () => {
         searchableTitle: eU.default.Messages.USER_SETTINGS_PROFILES,
         label: eU.default.Messages.USER_SETTINGS_PROFILES,
         ariaLabel: eU.default.Messages.USER_SETTINGS_PROFILES,
-        element: D.default,
+        element: x.default,
         newIndicator: (0, a.jsx)(B.PremiumBadge, {
           text: eU.default.Messages.NEW
         }),
         notice: {
-          stores: [j.default, A.default],
-          element: x.default
+          stores: [j.default, C.default],
+          element: D.default
         },
         onSettingsClose: () => {
           o.default.wait(() => {
-            (0, C.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eP.UserSettingsSections.PROFILE_CUSTOMIZATION)
+            (0, A.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eP.UserSettingsSections.PROFILE_CUSTOMIZATION)
           })
         }
       },
@@ -307,15 +307,60 @@ let eG = () => {
         searchableTitle: eU.default.Messages.SETTINGS_DM_SPAM_FILTER,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS
       },
-      [eL.WebSetting.PRIVACY_SERVER_PRIVACY]: {
+      [eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eU.default.Messages.USER_DM_SETTINGS,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS
+      },
+      [eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.NEW_GUILDS_DM_ALLOWED,
+        parent: eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS
+      },
+      [eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.NSFW_GUILDS_TOGGLE_HEADER,
+        parent: eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS
+      },
+      [eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER,
+        parent: eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS
+      },
+      [eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.NSFW_DM_COMMANDS_HEADER,
+        parent: eL.WebSetting.PRIVACY_SERVER_PRIVACY_DEFAULTS
       },
       [eL.WebSetting.PRIVACY_DATA_PRIVACY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         searchableTitle: eU.default.Messages.SETTINGS_DATA_PRIVACY_CONTROLS,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS
+      },
+      [eL.WebSetting.PRIVACY_DATA_IMPROVE_DISCORD]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE,
+        parent: eL.WebSetting.PRIVACY_DATA_PRIVACY
+      },
+      [eL.WebSetting.PRIVACY_DATA_PERSONALIZE]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE,
+        parent: eL.WebSetting.PRIVACY_DATA_PRIVACY
+      },
+      [eL.WebSetting.PRIVACY_DATA_QUESTS]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT,
+        parent: eL.WebSetting.PRIVACY_DATA_PRIVACY
+      },
+      [eL.WebSetting.PRIVACY_DATA_BASIC_SERVICE]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        parent: eL.WebSetting.PRIVACY_DATA_PRIVACY,
+        searchableTitle: eL.NON_SEARCHABLE_SETTING
+      },
+      [eL.WebSetting.PRIVACY_DATA_REQUEST]: {
+        section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD,
+        parent: eL.WebSetting.PRIVACY_DATA_PRIVACY
       },
       [eL.WebSetting.PRIVACY_STAFF_ONLY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
@@ -349,7 +394,8 @@ let eG = () => {
       },
       [eL.WebSetting.PRIVACY_TERMS_POLICY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
-        parent: eL.WebSetting.PRIVACY_USER_SETTINGS
+        parent: eL.WebSetting.PRIVACY_USER_SETTINGS,
+        searchableTitle: eL.NON_SEARCHABLE_SETTING
       },
       [eL.WebSetting.PRIVACY_SAFETY_ALERTS]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
@@ -386,7 +432,7 @@ let eG = () => {
         searchableTitle: eU.default.Messages.AUTH_SESSIONS,
         label: eU.default.Messages.AUTH_SESSIONS,
         ariaLabel: eU.default.Messages.AUTH_SESSIONS,
-        element: eC.default,
+        element: eA.default,
         newIndicatorDismissibleContentTypes: [i.DismissibleContent.AUTH_SESSIONS_NEW],
         predicate: () => Y.default.getCurrentConfig({
           location: "9f7d84_1"
@@ -402,7 +448,7 @@ let eG = () => {
         element: ei.default,
         impressionName: n.ImpressionNames.USER_SETTINGS_CONNECTIONS,
         impressionProperties: {
-          source: R
+          source: p
         },
         newIndicatorDismissibleContentTypes: [i.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION]
       },
@@ -432,7 +478,7 @@ let eG = () => {
         ariaLabel: eU.default.Messages.PREMIUM,
         searchableTitle: eU.default.Messages.PREMIUM,
         label: eU.default.Messages.PREMIUM,
-        element: z.default,
+        element: Q.default,
         className: ej.premiumTab
       },
       [eL.WebSetting.GUILD_BOOSTING]: {
@@ -447,7 +493,7 @@ let eG = () => {
         searchableTitle: eU.default.Messages.SUBSCRIPTIONS_TITLE,
         label: eU.default.Messages.SUBSCRIPTIONS_TITLE,
         element: M.default,
-        icon: p ? (0, a.jsx)(F.default, {
+        icon: R ? (0, a.jsx)(F.default, {
           width: 16,
           height: 16,
           color: l.default.unsafe_rawColors.YELLOW_300.css
@@ -470,7 +516,7 @@ let eG = () => {
         section: eP.UserSettingsSections.INVENTORY,
         searchableTitle: eU.default.Messages.GIFT_NITRO,
         parent: eL.WebSetting.GIFT_INVENTORY,
-        predicate: () => !eK && eQ
+        predicate: () => !eK && ez
       },
       [eL.WebSetting.GIFT_CODE_REDEMPTION]: {
         section: eP.UserSettingsSections.INVENTORY,
@@ -482,7 +528,7 @@ let eG = () => {
         section: eP.UserSettingsSections.INVENTORY,
         searchableTitle: eU.default.Messages.QUESTS,
         parent: eL.WebSetting.GIFT_INVENTORY,
-        predicate: () => ez
+        predicate: () => eQ
       },
       [eL.WebSetting.GIFT_INVENTORY_LIST]: {
         section: eP.UserSettingsSections.INVENTORY,
@@ -611,7 +657,7 @@ let eG = () => {
         searchableTitle: eU.default.Messages.VOICE_AND_VIDEO,
         label: eU.default.Messages.VOICE_AND_VIDEO,
         ariaLabel: eU.default.Messages.VOICE_AND_VIDEO,
-        element: eD.default,
+        element: ex.default,
         predicate: () => U.default.isSupported()
       },
       [eL.WebSetting.VOICE_AND_VIDEO_DEVICES]: {
@@ -975,7 +1021,7 @@ let eG = () => {
         section: eP.UserSettingsSections.WINDOWS,
         searchableTitle: eU.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
         label: eU.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
-        element: ep.default,
+        element: eR.default,
         predicate: () => H.isPlatformEmbedded && (0, H.isWindows)()
       },
       [eL.WebSetting.LINUX_SETTINGS]: {
@@ -990,7 +1036,7 @@ let eG = () => {
         searchableTitle: eU.default.Messages.STREAMER_MODE,
         label: eU.default.Messages.STREAMER_MODE,
         ariaLabel: eU.default.Messages.STREAMER_MODE,
-        element: eA.default
+        element: eC.default
       },
       [eL.WebSetting.STREAMER_MODE_INTEGRATIONS]: {
         section: eP.UserSettingsSections.STREAMER_MODE,
@@ -1137,7 +1183,7 @@ let eG = () => {
         section: eP.UserSettingsSections.EXPERIMENTS,
         searchableTitle: "Experiments",
         label: "Experiments",
-        element: eR.default,
+        element: ep.default,
         predicate: () => v.default.isDeveloper
       },
       [eL.WebSetting.DEVELOPER_OPTIONS]: {
@@ -1357,7 +1403,7 @@ let eG = () => {
       },
       [eL.WebSetting.SOCIAL_LINKS]: {
         section: S.SectionTypes.CUSTOM,
-        element: Q.default
+        element: z.default
       },
       [eL.WebSetting.CLIENT_DEBUG_INFO]: {
         section: S.SectionTypes.CUSTOM,
