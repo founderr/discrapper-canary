@@ -18,8 +18,8 @@ s.r(t), s.d(t, {
 }), s("639576"), s("536091"), s("47120"), s("653041");
 var a = s("470079"),
   n = s("442837"),
-  l = s("704215"),
-  i = s("493544"),
+  i = s("704215"),
+  l = s("493544"),
   r = s("634894"),
   o = s("211242"),
   d = s("924557"),
@@ -76,11 +76,11 @@ function D() {
   var e, t;
   let s = (0, _.useUnseenOutboundPromotions)().length,
     a = (0, T.useIsPrepaidPaymentPastDue)(),
-    i = (0, n.useStateFromStores)([g.default], () => g.default.getProps().impressionSource),
+    l = (0, n.useStateFromStores)([g.default], () => g.default.getProps().impressionSource),
     h = (0, S.usePendingRequestCount)(),
     p = (0, O.useShouldShowOverlaySettings)(),
     M = (0, d.useEnableClips)(),
-    [x] = (0, u.useGetDismissibleContent)(M ? [l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+    [x] = (0, u.useGetDismissibleContent)(M ? [i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
     D = "useGenerateUserSettingsSections";
   (0, r.useTriggerDebuggingAA)({
     location: D + " auto on",
@@ -111,10 +111,10 @@ function D() {
   return (0, C.getConfig)({
     unseenGiftCount: s,
     showPrepaidPaymentPastDueWarning: a,
-    impressionSource: i,
+    impressionSource: l,
     numOfPendingFamilyRequests: h,
     isOverlaySupported: p,
-    isClipsBetaTagShowing: x === l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
+    isClipsBetaTagShowing: x === i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
     shouldMergeGameSettings: L,
     isUserSettingsSearchEnabled: P,
     isKeywordFilteringEnabled: b,
@@ -138,7 +138,7 @@ function L(e) {
       let [t, s] = e;
       return s.section === a.section
     })),
-    l = Object.fromEntries(Object.entries(n).filter(e => {
+    i = Object.fromEntries(Object.entries(n).filter(e => {
       let [t, {
         parent: s,
         section: n
@@ -150,18 +150,18 @@ function L(e) {
       }] = e;
       return [t, s]
     })),
-    i = new Set,
+    l = new Set,
     r = e => {
-      if (i.has(e)) return;
+      if (l.has(e)) return;
       let t = n[e];
       if (null == t) return;
-      i.add(e);
+      l.add(e);
       let s = t.parent;
       null != s && r(s)
     },
     o = e => {
-      if (!i.has(e))
-        for (let t of (i.add(e), Object.entries(l).filter(t => {
+      if (!l.has(e))
+        for (let t of (l.add(e), Object.entries(i).filter(t => {
             let [s, a] = t;
             return a === e
           }).map(e => {
@@ -171,16 +171,18 @@ function L(e) {
     };
   for (let e of t.filter(e => e in n))
     if (null != n[e].element && null == n[e].parent) {
-      i.clear();
+      l.clear();
       break
-    } else Object.values(l).includes(e) && o(e), r(e);
-  return i
+    } else Object.values(i).includes(e) && o(e), r(e);
+  return l
 }
 
-function P(e, t, s) {
-  let a = [],
-    n = U(t),
-    l = function(e, t) {
+function P(e, t) {
+  let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    a = arguments.length > 3 ? arguments[3] : void 0,
+    n = [],
+    i = U(t),
+    r = function(e, t) {
       let s = new Map;
       return null != t && t.forEach(t => {
         let a = e[t].parent;
@@ -191,24 +193,24 @@ function P(e, t, s) {
           s.set(a, e + 1)
         }
       }), s
-    }(t, new Set(Array.from(null != s ? s : []).filter(e => n.has(e))));
+    }(t, new Set(Array.from(null != a ? a : []).filter(e => i.has(e))));
   return e.forEach(e => {
-    0 !== e.settings.length && (!0 === e.divider && a.push({
-      section: i.SectionTypes.DIVIDER
-    }), null != e.header && a.push({
-      section: i.SectionTypes.HEADER,
+    0 !== e.settings.length && (!0 === e.divider && n.push({
+      section: l.SectionTypes.DIVIDER
+    }), null != e.header && n.push({
+      section: l.SectionTypes.HEADER,
       label: e.header
     }), e.settings.forEach(e => {
-      a.push({
+      n.push({
         ...t[e],
         tabPredicate: () => {
-          var t, a, n;
-          return null == s || (t = e, a = s, n = l, t === p.WebSetting.SEARCH_BAR || t === p.WebSetting.SEARCH_NO_RESULTS && 0 === a.size || n.has(t) || a.has(t))
+          var t, s, n;
+          return null == a || (t = e, s = a, n = r, t === p.WebSetting.SEARCH_BAR || t === p.WebSetting.SEARCH_NO_RESULTS && 0 === s.size || n.has(t) || s.has(t))
         },
-        searchFilterCount: (null == s ? void 0 : s.has(e)) ? void 0 : l.get(e)
+        searchFilterCount: !s || (null == a ? void 0 : a.has(e)) ? void 0 : r.get(e)
       })
     }))
-  }), a
+  }), n
 }
 
 function b() {
@@ -239,14 +241,17 @@ function v(e) {
           return t
         }).flat(1), p.WebSetting.SEARCH_NO_RESULTS]
       }], [t])
-    }();
-  return a.useMemo(() => P(s, t, new Set(e)), [s, t, e])
+    }(),
+    n = (0, A.useIsEligibleForUserSettingsSearchDesktopWithCount)({
+      location: "settings"
+    });
+  return a.useMemo(() => P(s, t, n, new Set(e)), [s, t, n, e])
 }
 
 function U(e) {
   return new Map(Object.entries(e).filter(e => {
     let [t, s] = e;
-    return s.section !== i.SectionTypes.CUSTOM && null != s.searchableTitle && (null == s.predicate || s.predicate())
+    return s.section !== l.SectionTypes.CUSTOM && null != s.searchableTitle && (null == s.predicate || s.predicate())
   }))
 }
 
