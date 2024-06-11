@@ -1,39 +1,38 @@
 "use strict";
 t.r(s), t.d(s, {
   default: function() {
-    return E
+    return T
   }
 }), t("47120");
 var a = t("735250");
 t("470079");
-var l = t("481060"),
-  r = t("935369"),
-  i = t("682864"),
-  d = t("53365"),
+var r = t("481060"),
+  l = t("935369"),
+  i = t("53365"),
   n = t("689938"),
-  o = t("929160"),
-  _ = t("490962"),
-  T = t("221870");
+  c = t("929160"),
+  o = t("490962"),
+  _ = t("221870");
 
-function c(e) {
+function d(e) {
   let {
     header: s,
     body: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: o.bulletItem,
+    className: c.bulletItem,
     children: [(0, a.jsx)("img", {
       alt: "",
-      className: o.bulletImage,
-      src: _
+      className: c.bulletImage,
+      src: o
     }), (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(l.Text, {
+      children: [(0, a.jsx)(r.Text, {
         variant: "text-sm/semibold",
         color: "text-normal",
         children: s
-      }), (0, a.jsx)(i.default, {
+      }), (0, a.jsx)(r.Spacer, {
         size: 4
-      }), (0, a.jsx)(l.Text, {
+      }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         children: t
@@ -42,92 +41,92 @@ function c(e) {
   })
 }
 
-function E(e) {
+function T(e) {
   let {
     guildId: s,
     demonetized: t,
-    transitionState: _,
-    onClose: E
-  } = e, [u, {
-    loading: x,
-    error: C
-  }] = (0, r.default)(t ? d.acceptNewTermsDemonetized : d.acceptNewTerms), N = async () => {
+    transitionState: o,
+    onClose: T
+  } = e, [E, {
+    loading: u,
+    error: x
+  }] = (0, l.default)(t ? i.acceptNewTermsDemonetized : i.acceptNewTerms), C = async () => {
     try {
-      let e = await u(s);
-      null != e && (null == E || E())
+      let e = await E(s);
+      null != e && (null == T || T())
     } catch (e) {}
   };
-  return (0, a.jsxs)(l.ModalRoot, {
-    className: o.__invalid_container,
-    size: l.ModalSize.SMALL,
-    transitionState: _,
+  return (0, a.jsxs)(r.ModalRoot, {
+    className: c.__invalid_container,
+    size: r.ModalSize.SMALL,
+    transitionState: o,
     "aria-label": n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_TITLE,
-    children: [(0, a.jsx)(l.ModalHeader, {
+    children: [(0, a.jsx)(r.ModalHeader, {
       separator: !1,
-      className: o.header,
+      className: c.header,
       children: (0, a.jsx)("div", {
-        className: o.imageContainer,
+        className: c.imageContainer,
         children: (0, a.jsx)("img", {
           alt: "",
-          className: o.__invalid_image,
-          src: T
+          className: c.__invalid_image,
+          src: _
         })
       })
-    }), (0, a.jsx)(l.ModalContent, {
+    }), (0, a.jsx)(r.ModalContent, {
       children: (0, a.jsxs)("div", {
-        className: o.content,
-        children: [(0, a.jsx)(l.Heading, {
+        className: c.content,
+        children: [(0, a.jsx)(r.Heading, {
           variant: "heading-xl/medium",
           color: "header-primary",
           children: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_TITLE
-        }), (0, a.jsx)(i.default, {
+        }), (0, a.jsx)(r.Spacer, {
           size: 12
-        }), (0, a.jsx)(l.Text, {
+        }), (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           children: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY.format({
             termsURL: "https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms"
           })
-        }), (0, a.jsx)(i.default, {
+        }), (0, a.jsx)(r.Spacer, {
           size: 24
-        }), (0, a.jsx)(c, {
+        }), (0, a.jsx)(d, {
           header: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_1_HEADER,
           body: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_1_BODY
-        }), (0, a.jsx)(i.default, {
+        }), (0, a.jsx)(r.Spacer, {
           size: 16
-        }), (0, a.jsx)(c, {
+        }), (0, a.jsx)(d, {
           header: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_2_HEADER,
           body: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_2_BODY
         })]
       })
-    }), (0, a.jsx)(l.ModalFooter, {
+    }), (0, a.jsx)(r.ModalFooter, {
       children: (0, a.jsxs)("div", {
-        className: o.footer,
-        children: [(0, a.jsx)(l.Button, {
+        className: c.footer,
+        children: [(0, a.jsx)(r.Button, {
           fullWidth: !0,
-          onClick: N,
-          submitting: x,
+          onClick: C,
+          submitting: u,
           children: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_CTA
-        }), (0, a.jsx)(i.default, {
+        }), (0, a.jsx)(r.Spacer, {
           size: 4
-        }), (0, a.jsx)(l.Button, {
-          color: l.Button.Colors.CUSTOM,
-          innerClassName: o.remindMeLater,
-          look: l.Button.Looks.LINK,
+        }), (0, a.jsx)(r.Button, {
+          color: r.Button.Colors.CUSTOM,
+          innerClassName: c.remindMeLater,
+          look: r.Button.Looks.LINK,
           fullWidth: !0,
-          onClick: E,
+          onClick: T,
           children: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_REMIND_ME_LATER
-        }), null == C ? null : (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(i.default, {
+        }), null == x ? null : (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(r.Spacer, {
             size: 8
-          }), (0, a.jsxs)(l.Text, {
+          }), (0, a.jsxs)(r.Text, {
             variant: "text-xs/normal",
             color: "status-danger",
-            children: ["Error: ", C.message]
+            children: ["Error: ", x.message]
           })]
-        }), (0, a.jsx)(i.default, {
+        }), (0, a.jsx)(r.Spacer, {
           size: 10
-        }), (0, a.jsx)(l.Text, {
+        }), (0, a.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: n.default.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_DISCLAIMER.format({

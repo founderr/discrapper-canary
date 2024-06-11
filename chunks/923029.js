@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
 var a = n("735250"),
@@ -12,38 +12,37 @@ var a = n("735250"),
   o = n("911560"),
   u = n("210887"),
   d = n("914010"),
-  c = n("186095"),
-  f = n("502568"),
-  h = n("981631"),
-  m = n("689938"),
-  p = n("263734");
+  c = n("502568"),
+  f = n("981631"),
+  h = n("689938"),
+  m = n("263734");
 
-function E(e) {
+function p(e) {
   let t, {
-    channelId: E
+    channelId: p
   } = e;
   l.useEffect(() => {
-    o.default.loadThread(E)
+    o.default.loadThread(p)
   });
-  let C = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()) === h.FAVORITES,
-    g = (0, i.useStateFromStores)([u.default], () => u.default.theme);
-  return t = C ? (0, a.jsx)(c.EmptyStateText, {
-    note: m.default.Messages.FAVORITES_EMPTY_BODY,
-    children: m.default.Messages.FAVORITES_EMPTY_TITLE
-  }) : null != E ? (0, a.jsx)(r.Spinner, {
+  let E = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()) === f.FAVORITES,
+    C = (0, i.useStateFromStores)([u.default], () => u.default.theme);
+  return t = E ? (0, a.jsx)(r.EmptyStateText, {
+    note: h.default.Messages.FAVORITES_EMPTY_BODY,
+    children: h.default.Messages.FAVORITES_EMPTY_TITLE
+  }) : null != p ? (0, a.jsx)(r.Spinner, {
     type: r.Spinner.Type.SPINNING_CIRCLE
-  }) : (0, a.jsx)(c.EmptyStateText, {
-    note: m.default.Messages.CHANNELS_UNAVAILABLE_BODY,
-    children: m.default.Messages.CHANNELS_UNAVAILABLE_TITLE
+  }) : (0, a.jsx)(r.EmptyStateText, {
+    note: h.default.Messages.CHANNELS_UNAVAILABLE_BODY,
+    children: h.default.Messages.CHANNELS_UNAVAILABLE_TITLE
   }), (0, a.jsxs)("div", {
-    className: p.noChannel,
-    children: [s.isMobile && (0, a.jsx)(f.default, {
+    className: m.noChannel,
+    children: [s.isMobile && (0, a.jsx)(c.default, {
       children: (0, a.jsx)(l.Fragment, {})
-    }), (0, a.jsxs)(c.default, {
-      theme: g,
-      children: [(0, a.jsx)(c.EmptyStateImage, {
-        darkSrc: C ? n("691270") : n("625065"),
-        lightSrc: C ? n("704139") : n("875184"),
+    }), (0, a.jsxs)(r.EmptyState, {
+      theme: C,
+      children: [(0, a.jsx)(r.EmptyStateImage, {
+        darkSrc: E ? n("691270") : n("625065"),
+        lightSrc: E ? n("704139") : n("875184"),
         width: 272,
         height: 222
       }), t]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return u
   }
 });
 var i = n("735250");
@@ -9,28 +9,27 @@ n("470079");
 var r = n("120356"),
   s = n.n(r),
   a = n("481060"),
-  o = n("976644"),
-  l = n("549631"),
-  u = n("517039");
+  o = n("549631"),
+  l = n("517039");
 
-function d(e) {
+function u(e) {
   let {
     children: t,
     className: n,
     size: r = a.Button.Sizes.MEDIUM,
-    onlyShineOnHover: d = !1,
-    ..._
+    onlyShineOnHover: u = !1,
+    ...d
   } = e;
-  return (0, i.jsx)(o.default, {
-    ..._,
+  return (0, i.jsx)(a.ShinyButton, {
+    ...d,
     color: a.Button.Colors.CUSTOM,
     size: r,
-    className: s()(u.button, n),
-    onlyShineOnHover: d,
+    className: s()(l.button, n),
+    onlyShineOnHover: u,
     children: (0, i.jsxs)("div", {
-      className: u.buttonContents,
-      children: [(0, i.jsx)(l.default, {
-        className: u.icon
+      className: l.buttonContents,
+      children: [(0, i.jsx)(o.default, {
+        className: l.icon
       }), t]
     })
   })

@@ -2,9 +2,9 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var a = n("230711"),
-  l = n("466111"),
-  i = n("644766"),
+var a = n("481060"),
+  l = n("230711"),
+  i = n("466111"),
   r = n("985754"),
   o = n("91802"),
   u = n("222727"),
@@ -22,16 +22,16 @@ t.default = e => {
   let I = T.countryCode,
     p = T.currency,
     h = T.paymentSourceTypes.length > 0;
-  return (0, s.jsxs)(i.default, {
-    color: m ? i.NoticeColors.BRAND : i.NoticeColors.PREMIUM_TIER_2,
-    children: [(0, s.jsx)(i.NoticeCloseButton, {
+  return (0, s.jsxs)(a.Notice, {
+    color: m ? a.NoticeColors.BRAND : a.NoticeColors.PREMIUM_TIER_2,
+    children: [(0, s.jsx)(a.NoticeCloseButton, {
       onClick: () => _(c.ContentDismissActionType.UNKNOWN),
       noticeType: n
-    }), !m && (0, s.jsx)(l.default, {
+    }), !m && (0, s.jsx)(i.default, {
       className: E.premiumIcon
-    }), (0, r.getLocalizedPricingNotice)(I, p, h, m), (0, s.jsx)(i.PrimaryCTANoticeButton, {
+    }), (0, r.getLocalizedPricingNotice)(I, p, h, m), (0, s.jsx)(a.PrimaryCTANoticeButton, {
       onClick: () => {
-        _(c.ContentDismissActionType.UNKNOWN), a.default.open(d.UserSettingsSections.PREMIUM)
+        _(c.ContentDismissActionType.UNKNOWN), l.default.open(d.UserSettingsSections.PREMIUM)
       },
       noticeType: n,
       children: f.default.Messages.LEARN_MORE

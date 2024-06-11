@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return j
   }
 }), s("47120");
 var i = s("735250"),
@@ -21,109 +21,108 @@ var i = s("735250"),
   m = s("594174"),
   E = s("466111"),
   T = s("759231"),
-  _ = s("26290"),
-  I = s("74538"),
-  x = s("671105"),
-  C = s("552958"),
-  O = s("213931"),
-  p = s("940165"),
-  M = s("820408"),
-  v = s("921944"),
-  L = s("871465"),
-  A = s("689938"),
-  j = s("520112");
+  _ = s("74538"),
+  I = s("671105"),
+  x = s("552958"),
+  C = s("213931"),
+  O = s("940165"),
+  p = s("820408"),
+  M = s("921944"),
+  v = s("871465"),
+  L = s("689938"),
+  A = s("520112");
 
-function R(e) {
+function j(e) {
   let {
     guildId: t,
     onClose: s,
     isRedesign: n = !1
-  } = e, r = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(t)), R = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
-    playSound: b,
-    isPlaying: U,
-    soundpackPlaying: G
-  } = (0, C.default)(), F = (0, x.useGuildCustomNotificationSound)(t), P = I.default.canUseCustomNotificationSounds(R), D = P ? F : L.Soundpacks.CLASSIC, k = a.useRef(0), y = a.useRef(-1), [H, w] = a.useState(!1), B = (0, L.getCustomNotificationSoundpackOptions)(), Y = a.useCallback(() => {
-    clearTimeout(y.current), k.current += 1, k.current > 10 && (w(!0), h.Storage.set(L.CUSTOM_NOTIFICATION_SOUNDS_ASMR_STORAGE_KEY, !0)), y.current = setTimeout(() => {
-      k.current = 0
+  } = e, r = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(t)), j = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
+    playSound: R,
+    isPlaying: b,
+    soundpackPlaying: U
+  } = (0, x.default)(), G = (0, I.useGuildCustomNotificationSound)(t), F = _.default.canUseCustomNotificationSounds(j), P = F ? G : v.Soundpacks.CLASSIC, D = a.useRef(0), k = a.useRef(-1), [y, H] = a.useState(!1), w = (0, v.getCustomNotificationSoundpackOptions)(), B = a.useCallback(() => {
+    clearTimeout(k.current), D.current += 1, D.current > 10 && (H(!0), h.Storage.set(v.CUSTOM_NOTIFICATION_SOUNDS_ASMR_STORAGE_KEY, !0)), k.current = setTimeout(() => {
+      D.current = 0
     }, 1e3)
-  }, []), [V, W] = o().partition(B, e => !e.requirePremium || e.requirePremium && P), z = V.map(e => {
+  }, []), [Y, V] = o().partition(w, e => !e.requirePremium || e.requirePremium && F), W = Y.map(e => {
     var t, s, i, a;
     return {
       name: e.label,
       value: e.value,
       desc: e.description,
-      radioBarClassName: (t = e.value, s = G, i = U, a = n, l()(j.option, {
-        [j.optionRedesign]: a,
-        [j.optionPlaying]: t === s && i
+      radioBarClassName: (t = e.value, s = U, i = b, a = n, l()(A.option, {
+        [A.optionRedesign]: a,
+        [A.optionPlaying]: t === s && i
       }))
     }
-  }), [K, X] = (0, N.useSelectedDismissibleContent)([c.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]), q = K === c.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
+  }), [z, K] = (0, N.useSelectedDismissibleContent)([c.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]), X = z === c.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
   a.useEffect(() => () => {
-    X(v.ContentDismissActionType.AUTO_DISMISS)
-  }, [X]);
-  let J = I.default.canUseCustomNotificationSounds(R),
-    Q = (0, u.useStateFromStores)([f.default], () => f.default.isMuted(t), [t]);
-  return null == R ? null : (0, i.jsxs)("div", {
+    K(M.ContentDismissActionType.AUTO_DISMISS)
+  }, [K]);
+  let q = _.default.canUseCustomNotificationSounds(j),
+    J = (0, u.useStateFromStores)([f.default], () => f.default.isMuted(t), [t]);
+  return null == j ? null : (0, i.jsxs)("div", {
     children: [(0, i.jsxs)("div", {
-      className: j.header,
+      className: A.header,
       children: [(0, i.jsx)(S.Heading, {
         variant: "heading-md/semibold",
-        children: A.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
+        children: L.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
       }), (0, i.jsx)(S.Clickable, {
-        onClick: Y,
-        className: j.nitroWheelContainer,
+        onClick: B,
+        className: A.nitroWheelContainer,
         children: (0, i.jsx)(E.default, {
-          className: j.nitroWheel
+          className: A.nitroWheel
         })
-      }), q && (0, i.jsx)(_.TextBadge, {
-        className: j.newBadge,
-        text: A.default.Messages.NEW
+      }), X && (0, i.jsx)(S.TextBadge, {
+        className: A.newBadge,
+        text: L.default.Messages.NEW
       })]
     }), (0, i.jsx)(S.Text, {
-      className: j.subheader,
+      className: A.subheader,
       variant: "text-sm/normal",
-      children: A.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_DESCRIPTION_V2.format({
+      children: L.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_DESCRIPTION_V2.format({
         guildName: (e, t) => (0, i.jsx)(S.Text, {
           tag: "span",
           variant: "text-sm/medium",
           children: null == r ? void 0 : r.name
         }, t)
       })
-    }), Q && (0, i.jsxs)("div", {
-      className: j.warningContainer,
+    }), J && (0, i.jsxs)("div", {
+      className: A.warningContainer,
       children: [(0, i.jsx)(T.default, {
         color: d.default.STATUS_WARNING
       }), (0, i.jsx)(S.Text, {
-        className: j.warningLabel,
+        className: A.warningLabel,
         variant: "text-sm/medium",
-        children: A.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_WARNING
+        children: L.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_WARNING
       })]
     }), (0, i.jsx)(S.FormItem, {
-      className: j.optionsContainer,
-      title: A.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_LABEL,
+      className: A.optionsContainer,
+      title: L.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_LABEL,
       children: (0, i.jsxs)("div", {
         className: l()({
-          [j.options]: !J
+          [A.options]: !q
         }),
         children: [(0, i.jsx)(S.RadioGroup, {
           className: l()({
-            [j.options]: J
+            [A.options]: q
           }),
-          value: null != D ? D : L.Soundpacks.CLASSIC,
+          value: null != P ? P : v.Soundpacks.CLASSIC,
           onChange: e => {
-            b(e.value), P && (0, O.updateGuildCustomNotificationSound)(t, D, e.value, "notificationSettings")
+            R(e.value), F && (0, C.updateGuildCustomNotificationSound)(t, P, e.value, "notificationSettings")
           },
-          options: z,
-          radioItemClassName: j.option
-        }), W.map((e, t) => (0, i.jsx)(p.default, {
-          className: j.playableOption,
+          options: W,
+          radioItemClassName: A.option
+        }), V.map((e, t) => (0, i.jsx)(O.default, {
+          className: A.playableOption,
           label: e.label,
           description: e.description,
           soundpack: e.value,
           location: "notificationSettings"
         }, "sound_option_".concat(t)))]
       })
-    }), !J && (0, i.jsx)(M.default, {
+    }), !q && (0, i.jsx)(p.default, {
       onClose: s
     })]
   })

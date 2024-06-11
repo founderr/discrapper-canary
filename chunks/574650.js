@@ -18,7 +18,7 @@ var a = n("120356"),
   I = n("176505"),
   p = n("689938"),
   h = n("261701"),
-  N = n("14201");
+  N = n("988920");
 t.default = () => {
   var e, t;
   let a = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),

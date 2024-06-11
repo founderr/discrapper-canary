@@ -14,8 +14,8 @@ var i = n("735250"),
   o = n("392711"),
   l = n.n(o),
   u = n("215569"),
-  d = n("40851"),
-  _ = n("468436"),
+  d = n("481060"),
+  _ = n("40851"),
   c = n("153850"),
   E = n("78415"),
   I = n("585483"),
@@ -87,7 +87,7 @@ class N extends r.PureComponent {
 }
 
 function p() {
-  return (0, T.modalContextFromAppContext)((0, d.useAppContext)())
+  return (0, T.modalContextFromAppContext)((0, _.useAppContext)())
 }
 let O = [];
 
@@ -116,15 +116,15 @@ function C() {
     o = r.useCallback(t => {
       (0, T.closeModal)(t, e)
     }, [e]),
-    d = m.map(e => t.some(t => t.Layer === e || null == t.Layer && e === c.default));
+    _ = m.map(e => t.some(t => t.Layer === e || null == t.Layer && e === c.default));
   return (0, i.jsxs)(u.TransitionGroup, {
     component: r.Fragment,
     children: [m.map((e, n) => {
       var r;
       let s = l().findLast(t, t => t.Layer === e || null == t.Layer && e === c.default);
-      return (0, i.jsx)(_.default, {
-        isVisible: d[n],
-        backdropStyle: null !== (r = null == s ? void 0 : s.backdropStyle) && void 0 !== r ? r : _.BackdropStyles.DARK,
+      return (0, i.jsx)(d.Backdrop, {
+        isVisible: _[n],
+        backdropStyle: null !== (r = null == s ? void 0 : s.backdropStyle) && void 0 !== r ? r : d.BackdropStyles.DARK,
         onClose: a,
         LayerComponent: e,
         backdropInstant: null == s ? void 0 : s.instant

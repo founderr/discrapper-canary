@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return g
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,14 +15,13 @@ var a = n("735250"),
   c = n("819640"),
   f = n("490983"),
   E = n("799777"),
-  h = n("6048"),
-  C = n("5967"),
-  _ = n("346329"),
-  m = n("981631"),
-  S = n("689938"),
-  p = n("803844");
+  h = n("5967"),
+  C = n("346329"),
+  _ = n("981631"),
+  m = n("689938"),
+  S = n("803844");
 
-function I(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +29,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends s.Component {
+class I extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -63,11 +62,11 @@ class g extends s.Component {
     } = this.state;
     return (0, a.jsx)("div", {
       className: i()({
-        [p.libraryFilter]: !0,
-        [p.focused]: t
+        [S.libraryFilter]: !0,
+        [S.focused]: t
       }),
-      children: (0, a.jsx)(h.default, {
-        className: p.searchBar,
+      children: (0, a.jsx)(o.SearchBar, {
+        className: S.searchBar,
         ref: this.setRef,
         onChange: d.updateLibraryFilter,
         onFocus: () => this.setState({
@@ -82,16 +81,16 @@ class g extends s.Component {
         },
         maxLength: 100,
         query: e,
-        placeholder: S.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+        placeholder: m.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
       })
     })
   }
   constructor(...e) {
-    super(...e), I(this, "searchBarRef", null), I(this, "state", {
+    super(...e), p(this, "searchBarRef", null), p(this, "state", {
       focused: !1
-    }), I(this, "setRef", e => {
+    }), p(this, "setRef", e => {
       this.searchBarRef = e
-    }), I(this, "handleKeyDown", e => {
+    }), p(this, "handleKeyDown", e => {
       var t;
       let {
         activeRowKey: n,
@@ -101,32 +100,32 @@ class g extends s.Component {
         searchBarRef: l
       } = this;
       if (a || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-      let i = null === (t = (0, C.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      if (!(i !== l.inputRef.current && (0, C.isInputLikeElement)(i))) switch (e.which) {
-        case m.KeyboardKeys.ESCAPE:
+      let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      if (!(i !== l.inputRef.current && (0, h.isInputLikeElement)(i))) switch (e.which) {
+        case _.KeyboardKeys.ESCAPE:
           e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
           break;
-        case m.KeyboardKeys.ENTER:
+        case _.KeyboardKeys.ENTER:
           if (null != n) {
             e.preventDefault();
             let t = s.find(e => e.key === n);
             if (null == t) return;
             let a = t.libraryApplication;
-            _.performDefaultLibraryApplicationAction(a, {
+            C.performDefaultLibraryApplicationAction(a, {
               analyticsParams: {
-                source: m.AnalyticsLocations.APPLICATION_LIBRARY,
+                source: _.AnalyticsLocations.APPLICATION_LIBRARY,
                 location: {
-                  page: m.AnalyticsPages.LIBRARY,
-                  section: m.AnalyticsSections.LIBRARY_APPLICATION_LIST,
-                  object: m.AnalyticsObjects.BUTTON_CTA
+                  page: _.AnalyticsPages.LIBRARY,
+                  section: _.AnalyticsSections.LIBRARY_APPLICATION_LIST,
+                  object: _.AnalyticsObjects.BUTTON_CTA
                 }
               }
             })
           }
           break;
-        case m.KeyboardKeys.ARROW_DOWN:
-        case m.KeyboardKeys.ARROW_UP:
-          e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === m.KeyboardKeys.ARROW_DOWN ? 1 : -1);
+        case _.KeyboardKeys.ARROW_DOWN:
+        case _.KeyboardKeys.ARROW_UP:
+          e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === _.KeyboardKeys.ARROW_DOWN ? 1 : -1);
           break;
         default:
           null != l.inputRef.current && e.target !== l.inputRef.current && l.focus()
@@ -135,10 +134,10 @@ class g extends s.Component {
   }
 }
 
-function T() {
+function g() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(I, {
     activeRowKey: (0, r.useStateFromStores)([E.default], () => E.default.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.useStateFromStores)([f.default], () => f.default.applicationFilterQuery),

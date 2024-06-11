@@ -1,36 +1,35 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return E
   }
 });
 var a = s("735250");
 s("470079");
 var l = s("481060"),
-  n = s("682864"),
-  i = s("293810"),
-  r = s("689938"),
-  o = s("73033"),
-  d = s("961618"),
-  u = s("217684"),
-  c = s("174618");
+  n = s("293810"),
+  i = s("689938"),
+  r = s("73033"),
+  o = s("961618"),
+  d = s("217684"),
+  u = s("174618");
 
-function E(e) {
+function c(e) {
   let {
     imageSrc: t,
     description: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: o.howItWorksCard,
+    className: r.howItWorksCard,
     children: [(0, a.jsx)("div", {
-      className: o.howItWorksImageContainer,
+      className: r.howItWorksImageContainer,
       children: (0, a.jsx)("img", {
-        className: o.howItWorksImage,
+        className: r.howItWorksImage,
         src: t,
         alt: ""
       })
     }), (0, a.jsx)("div", {
-      className: o.howItWorksDescription,
+      className: r.howItWorksDescription,
       children: (0, a.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-primary",
@@ -40,37 +39,37 @@ function E(e) {
   })
 }
 
-function _() {
+function E() {
   let e = [{
-    imageSrc: c,
-    description: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_1
+    imageSrc: u,
+    description: i.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_1
+  }, {
+    imageSrc: o,
+    description: i.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_2
   }, {
     imageSrc: d,
-    description: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_2
-  }, {
-    imageSrc: u,
-    description: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_3
+    description: i.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_3
   }];
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(l.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_TITLE
-    }), (0, a.jsx)(n.default, {
+      children: i.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_TITLE
+    }), (0, a.jsx)(l.Spacer, {
       size: 24
     }), (0, a.jsx)("div", {
-      className: o.howItWorksContainer,
-      children: e.map(e => (0, a.jsx)(E, {
+      className: r.howItWorksContainer,
+      children: e.map(e => (0, a.jsx)(c, {
         imageSrc: e.imageSrc,
         description: e.description
       }, e.imageSrc))
-    }), (0, a.jsx)(n.default, {
+    }), (0, a.jsx)(l.Spacer, {
       size: 24
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_FOOTER.format({
-        creatorPortalUrl: i.CREATOR_REVENUE_PORTAL_URL
+      children: i.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_FOOTER.format({
+        creatorPortalUrl: n.CREATOR_REVENUE_PORTAL_URL
       })
     })]
   })

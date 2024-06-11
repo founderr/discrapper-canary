@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return f
   }
 }), n("47120");
 var i = n("735250"),
@@ -12,63 +12,62 @@ var i = n("735250"),
   l = n("880308"),
   u = n("10718"),
   d = n("148958"),
-  _ = n("6048"),
-  c = n("237159"),
-  E = n("546600"),
-  I = n("105355"),
-  T = n("689079"),
-  f = n("245199");
+  _ = n("237159"),
+  c = n("546600"),
+  E = n("105355"),
+  I = n("689079"),
+  T = n("245199");
 
-function S(e) {
+function f(e) {
   var t, n;
   let {
-    channel: S
-  } = e, [h, A] = r.useState(""), m = r.useCallback(() => A(""), [A]), {
-    commandsByActiveSection: N,
-    sectionDescriptors: p,
-    filterSection: O
-  } = u.useDiscovery(S, {
+    channel: f
+  } = e, [S, h] = r.useState(""), A = r.useCallback(() => h(""), [h]), {
+    commandsByActiveSection: m,
+    sectionDescriptors: N,
+    filterSection: p
+  } = u.useDiscovery(f, {
     commandType: a.ApplicationCommandType.CHAT
   }, {
     placeholderCount: 0,
-    limit: T.DISCOVERY_COMMANDS_QUERY_LIMIT,
+    limit: I.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   });
   r.useEffect(() => {
-    O(T.BuiltInSectionId.FRECENCY)
-  }, [O]);
-  let C = null !== (n = null === (t = N[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
-    R = p.filter(e => e.id !== T.BuiltInSectionId.FRECENCY && e.id !== T.BuiltInSectionId.BUILT_IN),
-    g = (0, d.useSortApplicationsViaFrecency)(R);
+    p(I.BuiltInSectionId.FRECENCY)
+  }, [p]);
+  let O = null !== (n = null === (t = m[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
+    C = N.filter(e => e.id !== I.BuiltInSectionId.FRECENCY && e.id !== I.BuiltInSectionId.BUILT_IN),
+    R = (0, d.useSortApplicationsViaFrecency)(C);
   (0, l.useFetchDeveloperActivityShelfItems)();
-  let L = (0, o.default)({
-    guildId: S.getGuildId(),
-    channel: S
+  let g = (0, o.default)({
+    guildId: f.getGuildId(),
+    channel: f
   });
   return (0, i.jsxs)("div", {
-    className: f.container,
+    className: T.container,
     children: [(0, i.jsx)("div", {
-      className: f.searchBarContainer,
-      children: (0, i.jsx)(_.default, {
+      className: T.searchBarContainer,
+      children: (0, i.jsx)(s.SearchBar, {
         placeholder: "Search Apps & Commands",
-        onChange: A,
-        query: h,
-        onClear: m,
-        size: _.default.Sizes.MEDIUM
+        onChange: h,
+        query: S,
+        onClear: A,
+        size: s.SearchBar.Sizes.MEDIUM
       })
     }), (0, i.jsxs)(s.Scroller, {
-      className: f.scrollableContent,
+      className: T.scrollableContent,
       fade: !0,
-      children: [(0, i.jsx)(E.default, {
-        channel: S,
-        commands: C,
-        sectionDescriptors: p
-      }), (0, i.jsx)(I.default, {
-        channel: S,
-        applications: g
-      }), (0, i.jsx)(c.default, {
-        channel: S,
-        shelfItems: L
+      children: [(0, i.jsx)(c.default, {
+        channel: f,
+        commands: O,
+        sectionDescriptors: N
+      }), (0, i.jsx)(E.default, {
+        channel: f,
+        applications: R
+      }), (0, i.jsx)(_.default, {
+        channel: f,
+        shelfItems: g
       })]
     })]
   })

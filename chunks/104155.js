@@ -1,10 +1,10 @@
 "use strict";
 l.r(t), l.d(t, {
   ChannelBrowserSidebar: function() {
-    return A
+    return v
   },
   default: function() {
-    return O
+    return A
   }
 }), l("47120");
 var n = l("735250"),
@@ -20,18 +20,17 @@ var n = l("735250"),
   f = l("984933"),
   m = l("430824"),
   C = l("496675"),
-  N = l("6048"),
-  x = l("908773"),
-  g = l("626135"),
-  p = l("216306"),
-  S = l("775028"),
-  E = l("981631"),
-  I = l("176505"),
-  _ = l("689938"),
-  T = l("763280"),
-  v = l("19340");
+  N = l("908773"),
+  x = l("626135"),
+  g = l("216306"),
+  p = l("775028"),
+  S = l("981631"),
+  E = l("176505"),
+  I = l("689938"),
+  _ = l("763280"),
+  T = l("19340");
 
-function A(e) {
+function v(e) {
   let {
     channelId: t
   } = e;
@@ -40,17 +39,17 @@ function A(e) {
     maxWidth: 600,
     children: (0, n.jsx)(u.default, {
       channelId: t,
-      baseChannelId: I.StaticChannelRoute.CHANNEL_BROWSER
+      baseChannelId: E.StaticChannelRoute.CHANNEL_BROWSER
     })
   })
 }
 
-function O(e) {
+function A(e) {
   let {
     guildId: t
-  } = e, [s, o] = a.useState(""), u = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t)), A = (0, r.useStateFromStores)([f.default], () => f.default.getChannels(t)), O = (0, r.useStateFromStores)([h.default], () => h.default.getCategories(t)), R = (0, p.useFilterCategoriesByQuery)(t, O, A, s), j = (0, r.useStateFromStores)([C.default], () => C.default.canWithPartialContext(E.Permissions.MANAGE_CHANNELS, {
+  } = e, [s, o] = a.useState(""), u = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t)), v = (0, r.useStateFromStores)([f.default], () => f.default.getChannels(t)), A = (0, r.useStateFromStores)([h.default], () => h.default.getCategories(t)), O = (0, g.useFilterCategoriesByQuery)(t, A, v, s), R = (0, r.useStateFromStores)([C.default], () => C.default.canWithPartialContext(S.Permissions.MANAGE_CHANNELS, {
     guildId: t
-  })), b = (0, r.useStateFromStores)([c.default], () => null != c.default.getCurrentSidebarChannelId(I.StaticChannelRoute.CHANNEL_BROWSER)), L = a.useCallback(() => o(""), [o]), M = a.useCallback(() => {
+  })), j = (0, r.useStateFromStores)([c.default], () => null != c.default.getCurrentSidebarChannelId(E.StaticChannelRoute.CHANNEL_BROWSER)), b = a.useCallback(() => o(""), [o]), L = a.useCallback(() => {
     (0, d.openModalLazy)(async () => {
       let {
         default: e
@@ -64,36 +63,36 @@ function O(e) {
   }, [t]);
   return null == u ? null : (0, n.jsx)(n.Fragment, {
     children: (0, n.jsx)("div", {
-      className: i()(v.chat, T.container),
+      className: i()(T.chat, _.container),
       children: (0, n.jsxs)("div", {
-        className: i()(T.pageBody),
+        className: i()(_.pageBody),
         children: [(0, n.jsxs)("div", {
-          className: T.header,
-          children: [(0, n.jsx)(N.default, {
-            className: T.search,
-            size: N.default.Sizes.MEDIUM,
+          className: _.header,
+          children: [(0, n.jsx)(d.SearchBar, {
+            className: _.search,
+            size: d.SearchBar.Sizes.MEDIUM,
             query: s,
             onChange: e => {
-              "" === s && "" !== e && g.default.track(E.AnalyticEvents.SEARCH_STARTED, {
+              "" === s && "" !== e && x.default.track(S.AnalyticEvents.SEARCH_STARTED, {
                 search_type: "channel browser"
               }), o(e.toLowerCase())
             },
-            onClear: L,
-            placeholder: _.default.Messages.CHANNEL_BROWSER_SEARCH_PLACEHOLDER
-          }), j ? (0, n.jsxs)(d.Button, {
-            className: T.createButton,
-            innerClassName: T.createButtonInner,
-            onClick: M,
-            children: [(0, n.jsx)(x.default, {
-              className: T.createIcon
-            }), _.default.Messages.CREATE]
+            onClear: b,
+            placeholder: I.default.Messages.CHANNEL_BROWSER_SEARCH_PLACEHOLDER
+          }), R ? (0, n.jsxs)(d.Button, {
+            className: _.createButton,
+            innerClassName: _.createButtonInner,
+            onClick: L,
+            children: [(0, n.jsx)(N.default, {
+              className: _.createIcon
+            }), I.default.Messages.CREATE]
           }) : null]
-        }), (0, n.jsx)(S.default, {
-          className: T.browser,
-          channels: A,
-          categories: R,
+        }), (0, n.jsx)(p.default, {
+          className: _.browser,
+          channels: v,
+          categories: O,
           guild: u,
-          hasSidebar: b
+          hasSidebar: j
         })]
       })
     })

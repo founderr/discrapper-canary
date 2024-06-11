@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return H
+    return F
   }
 }), l("47120"), l("653041"), l("536091");
 var n = l("735250"),
@@ -24,27 +24,26 @@ var n = l("735250"),
   S = l("922482"),
   E = l("601070"),
   I = l("514342"),
-  _ = l("26290"),
-  T = l("216306"),
-  v = l("163"),
-  A = l("753540"),
-  O = l("70297"),
-  R = l("981631"),
-  j = l("176505"),
-  b = l("689938"),
-  L = l("53264");
-let M = new Set([R.ChannelTypes.GUILD_FORUM, R.ChannelTypes.GUILD_MEDIA]),
-  D = new Set([R.ChannelTypes.GUILD_VOICE, R.ChannelTypes.GUILD_STAGE_VOICE]);
+  _ = l("216306"),
+  T = l("163"),
+  v = l("753540"),
+  A = l("70297"),
+  O = l("981631"),
+  R = l("176505"),
+  j = l("689938"),
+  b = l("53264");
+let L = new Set([O.ChannelTypes.GUILD_FORUM, O.ChannelTypes.GUILD_MEDIA]),
+  M = new Set([O.ChannelTypes.GUILD_VOICE, O.ChannelTypes.GUILD_STAGE_VOICE]);
 
-function y(e) {
+function D(e) {
   let {
     guild: t,
     channel: a,
     onCategoryClick: s
-  } = e, r = (0, A.useIsChecked)(t.id, a.id, a.id), d = (0, A.useIsDisabled)(t.id, a.id, a.id);
+  } = e, r = (0, v.useIsChecked)(t.id, a.id, a.id), d = (0, v.useIsDisabled)(t.id, a.id, a.id);
   return (0, n.jsxs)("div", {
-    className: i()(L.categoryRow, {
-      [L.uncategorized]: "null" === a.id
+    className: i()(b.categoryRow, {
+      [b.uncategorized]: "null" === a.id
     }),
     onContextMenu: e => {
       (0, c.openContextMenuLazy)(e, async () => {
@@ -59,18 +58,18 @@ function y(e) {
       })
     },
     children: [(0, n.jsx)(u.Text, {
-      className: L.categoryText,
+      className: b.categoryText,
       color: "text-muted",
       variant: "text-xs/semibold",
       lineClamp: 1,
       children: a.name
     }), "null" !== a.id && !d && (0, n.jsxs)(u.Clickable, {
-      className: L.selectAll,
+      className: b.selectAll,
       onClick: () => {
         !d && s(t.id, a.id, a.id)
       },
       children: [(0, n.jsx)(u.Checkbox, {
-        className: L.selectAllCheckbox,
+        className: b.selectAllCheckbox,
         size: 14,
         shape: u.Checkbox.Shapes.SMALL_BOX,
         value: r,
@@ -79,40 +78,40 @@ function y(e) {
       }), (0, n.jsx)(u.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
-        children: b.default.Messages.CHANNEL_BROWSER_SELECT_ALL
+        children: j.default.Messages.CHANNEL_BROWSER_SELECT_ALL
       })]
     })]
   })
 }
 let B = a.memo(function() {
     return (0, n.jsx)("div", {
-      className: L.separator
+      className: b.separator
     })
   }),
-  w = a.memo(function(e) {
+  y = a.memo(function(e) {
     let {
       index: t
     } = e;
     return (0, n.jsx)(u.Text, {
       variant: "text-xs/normal",
-      className: L.subtitleSeparator,
+      className: b.subtitleSeparator,
       children: "\xb7"
     }, "separator-".concat(t))
   }),
-  F = a.memo(function(e) {
+  w = a.memo(function(e) {
     let {
       channel: t,
       category: a,
       guild: s,
       isFirstChannel: d,
       isLastChannel: h,
-      onChannelClick: v,
-      tooltipDirection: O = "right"
+      onChannelClick: T,
+      tooltipDirection: A = "right"
     } = e, {
-      isSubscriptionGated: y
-    } = (0, f.default)(t.id), F = (0, A.useIsChecked)(s.id, t.id, a.id), H = (0, A.useIsDisabled)(s.id, t.id, a.id), U = (0, A.useDisabledTooltip)(s.id, a.id), k = (0, r.useStateFromStores)([E.default], () => E.default.getActiveThreadCount(s.id, t.id)), P = (0, r.useStateFromStores)([x.default], () => x.default.shouldIndicateNewChannel(s.id, t.id)), G = e => {
-      if (!H) return e.stopPropagation(), v(s.id, t.id, a.id), !0
-    }, W = e => {
+      isSubscriptionGated: D
+    } = (0, f.default)(t.id), w = (0, v.useIsChecked)(s.id, t.id, a.id), F = (0, v.useIsDisabled)(s.id, t.id, a.id), H = (0, v.useDisabledTooltip)(s.id, a.id), U = (0, r.useStateFromStores)([E.default], () => E.default.getActiveThreadCount(s.id, t.id)), k = (0, r.useStateFromStores)([x.default], () => x.default.shouldIndicateNewChannel(s.id, t.id)), P = e => {
+      if (!F) return e.stopPropagation(), T(s.id, t.id, a.id), !0
+    }, G = e => {
       t.isGuildVocal() ? (0, c.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -132,94 +131,94 @@ let B = a.memo(function() {
           guild: s
         })
       })
-    }, z = function(e, t) {
+    }, W = function(e, t) {
       let l = [];
-      return R.ChannelTypesSets.GUILD_THREADS_ONLY.has(e.type) && t >= 1 && l.push((0, n.jsx)(u.Text, {
+      return O.ChannelTypesSets.GUILD_THREADS_ONLY.has(e.type) && t >= 1 && l.push((0, n.jsx)(u.Text, {
         variant: "text-xs/normal",
-        className: L.channelSubtitle,
-        children: b.default.Messages.ACTIVE_FORUM_POST_COUNT.format({
+        className: b.channelSubtitle,
+        children: j.default.Messages.ACTIVE_FORUM_POST_COUNT.format({
           count: t
         })
-      }, "thread-count")), !D.has(e.type) && l.push((0, n.jsx)(u.Text, {
+      }, "thread-count")), !M.has(e.type) && l.push((0, n.jsx)(u.Text, {
         variant: "text-xs/normal",
-        className: L.channelSubtitle,
-        children: (0, T.getActiveAgoTimestamp)(e.id)
+        className: b.channelSubtitle,
+        children: (0, _.getActiveAgoTimestamp)(e.id)
       }, "active")), null != e.topic && e.topic.length > 0 && l.push((0, n.jsx)(I.default, {
         children: (0, n.jsx)(u.Text, {
-          className: L.topic,
+          className: b.topic,
           variant: "text-xs/normal",
           children: N.default.parseTopic(e.topic, !0, {
             channelId: e.id
           })
         })
-      }, "topic")), [l.map((e, t) => [e, (0, n.jsx)(w, {
+      }, "topic")), [l.map((e, t) => [e, (0, n.jsx)(y, {
         index: t
       }, "subtitle-separator-".concat(t))])].flat(2).slice(0, -1)
-    }(t, k), Y = e => (e.stopPropagation(), M.has(t.type) || e.shiftKey) ? ((0, g.transitionToGuild)(s.id, t.id), !0) : t.isGuildStageVoice() || t.isGuildVoice() ? ((0, S.connectAndOpen)(t), !0) : (p.default.openChannelAsSidebar({
+    }(t, U), z = e => (e.stopPropagation(), L.has(t.type) || e.shiftKey) ? ((0, g.transitionToGuild)(s.id, t.id), !0) : t.isGuildStageVoice() || t.isGuildVoice() ? ((0, S.connectAndOpen)(t), !0) : (p.default.openChannelAsSidebar({
       guildId: t.guild_id,
       channelId: t.id,
-      baseChannelId: j.StaticChannelRoute.CHANNEL_BROWSER
-    }), !0), V = b.default.Messages.CHANNEL_BROWSER_VIEW;
-    t.isGuildStageVoice() || t.isGuildVoice() ? V = b.default.Messages.JOIN : t.isForumLikeChannel() && (V = b.default.Messages.OPEN);
-    let Z = H ? "text-muted" : "text-normal",
-      X = (0, u.useToken)(H ? o.default.colors.TEXT_MUTED : o.default.colors.TEXT_NORMAL).hex();
+      baseChannelId: R.StaticChannelRoute.CHANNEL_BROWSER
+    }), !0), Y = j.default.Messages.CHANNEL_BROWSER_VIEW;
+    t.isGuildStageVoice() || t.isGuildVoice() ? Y = j.default.Messages.JOIN : t.isForumLikeChannel() && (Y = j.default.Messages.OPEN);
+    let V = F ? "text-muted" : "text-normal",
+      Z = (0, u.useToken)(F ? o.default.colors.TEXT_MUTED : o.default.colors.TEXT_NORMAL).hex();
     return (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(u.Tooltip, {
-        text: U,
+        text: H,
         delay: 500,
-        position: O,
+        position: A,
         children: e => (0, n.jsxs)(u.Clickable, {
-          className: i()(L.channelRow, {
-            [L.firstChannel]: d,
-            [L.lastChannel]: h,
-            [L.disabled]: H
+          className: i()(b.channelRow, {
+            [b.firstChannel]: d,
+            [b.lastChannel]: h,
+            [b.disabled]: F
           }),
           ...e,
-          onClick: G,
-          onContextMenu: W,
+          onClick: P,
+          onContextMenu: G,
           children: [(0, n.jsxs)("div", {
-            className: L.channelInfo,
+            className: b.channelInfo,
             children: [(0, n.jsxs)("div", {
-              className: L.channelName,
+              className: b.channelName,
               children: [(0, n.jsx)(C.ChannelItemIcon, {
                 channel: t,
                 guild: s
               }), (0, n.jsx)(I.default, {
-                className: L.__invalid_name,
+                className: b.__invalid_name,
                 children: (0, n.jsx)(u.Text, {
-                  className: L.channelText,
+                  className: b.channelText,
                   variant: "text-md/medium",
                   lineClamp: 1,
-                  color: Z,
+                  color: V,
                   children: t.name
                 })
-              }), y ? (0, n.jsx)(m.default, {
-                color: X,
-                className: L.premiumIcon
-              }) : null, P ? (0, n.jsx)(_.TextBadge, {
-                text: b.default.Messages.NEW,
+              }), D ? (0, n.jsx)(m.default, {
+                color: Z,
+                className: b.premiumIcon
+              }) : null, k ? (0, n.jsx)(u.TextBadge, {
+                text: j.default.Messages.NEW,
                 color: o.default.unsafe_rawColors.BRAND_260.css,
-                className: L.titleBadge
+                className: b.titleBadge
               }) : null]
             }), (0, n.jsx)("div", {
-              className: L.channelSubtitles,
-              children: z
+              className: b.channelSubtitles,
+              children: W
             })]
           }), (0, n.jsxs)("div", {
-            className: L.channelActions,
+            className: b.channelActions,
             children: [(0, n.jsx)(u.Button, {
               look: u.ButtonLooks.OUTLINED,
               color: u.ButtonColors.PRIMARY,
               size: u.ButtonSizes.SMALL,
-              className: L.viewChannelButton,
-              onClick: Y,
-              children: V
+              className: b.viewChannelButton,
+              onClick: z,
+              children: Y
             }), (0, n.jsx)(u.Checkbox, {
-              "aria-checked": F,
-              value: F,
+              "aria-checked": w,
+              value: w,
               type: u.Checkbox.Types.INVERTED,
-              disabled: H,
-              innerClassName: L.checkboxInner,
+              disabled: F,
+              innerClassName: b.checkboxInner,
               displayOnly: !0
             })]
           })]
@@ -228,7 +227,7 @@ let B = a.memo(function() {
     })
   });
 
-function H(e) {
+function F(e) {
   let {
     categories: t,
     guild: l,
@@ -237,13 +236,13 @@ function H(e) {
     hasSidebar: o
   } = e, {
     onChannelClick: c
-  } = (0, v.default)(l.id), f = (0, h.useIsDismissibleContentDismissed)(d.DismissibleContent.CHANNEL_BROWSER_NUX) ? 0 : -1, m = a.useCallback(e => {
+  } = (0, T.default)(l.id), f = (0, h.useIsDismissibleContentDismissed)(d.DismissibleContent.CHANNEL_BROWSER_NUX) ? 0 : -1, m = a.useCallback(e => {
     let {
       section: a
     } = e;
     if (0 === a && -1 === f) return null;
     let s = t._categories[a + f];
-    return (0, n.jsx)(y, {
+    return (0, n.jsx)(D, {
       channel: s.channel,
       guild: l,
       onCategoryClick: c
@@ -253,12 +252,12 @@ function H(e) {
       section: a,
       row: s
     } = e;
-    if (0 === a && -1 === f) return (0, n.jsx)(O.default, {
+    if (0 === a && -1 === f) return (0, n.jsx)(A.default, {
       guild: l
     });
     let i = t._categories[a + f],
       r = t[i.channel.id][s];
-    return null == r ? null : (0, n.jsx)(F, {
+    return null == r ? null : (0, n.jsx)(w, {
       category: i.channel,
       channel: r.channel,
       guild: l,
@@ -267,10 +266,10 @@ function H(e) {
       tooltipDirection: o ? "right" : "top",
       onChannelClick: c
     }, r.channel.id)
-  }, [t, l, f, o, c]), N = (0, O.useNuxCardHeight)(l.id), x = (0, T.useChannelBrowserSections)(l.id, t, 64, N);
+  }, [t, l, f, o, c]), N = (0, A.useNuxCardHeight)(l.id), x = (0, _.useChannelBrowserSections)(l.id, t, 64, N);
   return (0, n.jsx)(u.ListAuto, {
     className: s,
-    innerClassName: i()(r, L.scrollerInner),
+    innerClassName: i()(r, b.scrollerInner),
     sectionHeight: 48,
     rowHeight: e => x[e].rowHeight,
     renderSection: m,

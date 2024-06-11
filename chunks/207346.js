@@ -1,74 +1,73 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return m
+    return f
   }
 });
 var a = l("735250");
 l("470079");
 var n = l("481060"),
   s = l("547972"),
-  i = l("6048"),
-  o = l("529653"),
-  r = l("937482"),
-  u = l("703288"),
-  c = l("332325"),
-  d = l("689938"),
-  f = l("904411");
+  i = l("529653"),
+  o = l("937482"),
+  r = l("703288"),
+  u = l("332325"),
+  c = l("689938"),
+  d = l("904411");
 
-function m(e) {
+function f(e) {
   let {
     filterQuery: t,
     setFilterQuery: l,
-    onClose: m,
-    sortOrder: p,
-    setSortOrder: C
+    onClose: f,
+    sortOrder: m,
+    setSortOrder: p
   } = e;
   return (0, a.jsxs)(n.ModalHeader, {
-    className: f.root,
+    className: d.root,
     separator: !1,
-    children: [(0, a.jsx)(o.default, {
-      className: f.icon
+    children: [(0, a.jsx)(i.default, {
+      className: d.icon
     }), (0, a.jsx)(n.Heading, {
-      className: f.title,
+      className: d.title,
       variant: "heading-xxl/bold",
-      children: d.default.Messages.CLIPS
+      children: c.default.Messages.CLIPS
     }), (0, a.jsx)("div", {
-      className: f.betaTag,
-      children: (0, a.jsx)(u.default, {})
-    }), (0, a.jsx)(i.default, {
+      className: d.betaTag,
+      children: (0, a.jsx)(r.default, {})
+    }), (0, a.jsx)(n.SearchBar, {
       autoFocus: !0,
-      size: i.default.Sizes.MEDIUM,
-      placeholder: d.default.Messages.SEARCH,
-      className: f.queryInput,
+      size: n.SearchBar.Sizes.MEDIUM,
+      placeholder: c.default.Messages.SEARCH,
+      className: d.queryInput,
       query: t,
       onChange: l,
       onClear: () => l("")
     }), (0, a.jsx)(n.Select, {
-      placeholder: d.default.Messages.CLIPS_SORT_PLACEHOLDER,
-      className: f.sortInput,
+      placeholder: c.default.Messages.CLIPS_SORT_PLACEHOLDER,
+      className: d.sortInput,
       options: [{
         value: "descending",
-        label: d.default.Messages.CLIPS_SORT_RECENT
+        label: c.default.Messages.CLIPS_SORT_RECENT
       }, {
         value: "ascending",
-        label: d.default.Messages.CLIPS_SORT_OLDEST
+        label: c.default.Messages.CLIPS_SORT_OLDEST
       }],
-      isSelected: e => e === p,
-      select: C,
+      isSelected: e => e === m,
+      select: p,
       serialize: e => e
     }), (0, a.jsx)(n.Button, {
       color: n.ButtonColors.TRANSPARENT,
       size: n.Button.Sizes.NONE,
-      className: f.settingsButton,
+      className: d.settingsButton,
       look: n.Button.Looks.FILLED,
       onClick: () => {
-        (0, s.default)(c.GameSettingsTab.CLIPS), m()
+        (0, s.default)(u.GameSettingsTab.CLIPS), f()
       },
-      children: (0, a.jsx)(r.default, {})
+      children: (0, a.jsx)(o.default, {})
     }), (0, a.jsx)(n.ModalCloseButton, {
-      className: f.button,
-      onClick: m
+      className: d.button,
+      onClick: f
     })]
   })
 }

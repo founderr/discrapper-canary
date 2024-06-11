@@ -2,12 +2,12 @@
 n.r(t), n("411104");
 var s = n("735250");
 n("470079");
-var a = n("774078"),
-  l = n("100527"),
-  i = n("906732"),
-  r = n("963249"),
-  o = n("466111"),
-  u = n("644766"),
+var a = n("481060"),
+  l = n("774078"),
+  i = n("100527"),
+  r = n("906732"),
+  o = n("963249"),
+  u = n("466111"),
   d = n("639119"),
   c = n("474936"),
   f = n("981631"),
@@ -20,30 +20,30 @@ t.default = function(e) {
     subscriptionTier: m
   } = e, {
     analyticsLocations: T
-  } = (0, i.default)(function(e) {
+  } = (0, r.default)(function(e) {
     switch (e) {
       case c.PremiumSubscriptionSKUs.TIER_0:
-        return l.default.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
+        return i.default.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
       case c.PremiumSubscriptionSKUs.TIER_2:
-        return l.default.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
+        return i.default.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
       default:
         throw Error("Unsupported subscription tier: ".concat(e))
     }
-  }(m)), I = (0, d.usePremiumTrialOffer)(), p = (0, a.default)(null != I && null != I.expires_at ? Date.parse(I.expires_at) : 0);
-  return null == I || (null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== m || null == I.expires_at || Object.values(p).every(e => 0 === e) ? null : (0, s.jsxs)(u.default, {
+  }(m)), I = (0, d.usePremiumTrialOffer)(), p = (0, l.default)(null != I && null != I.expires_at ? Date.parse(I.expires_at) : 0);
+  return null == I || (null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== m || null == I.expires_at || Object.values(p).every(e => 0 === e) ? null : (0, s.jsxs)(a.Notice, {
     color: function(e) {
       switch (e) {
         case c.PremiumSubscriptionSKUs.TIER_0:
-          return u.NoticeColors.PREMIUM_TIER_0;
+          return a.NoticeColors.PREMIUM_TIER_0;
         case c.PremiumSubscriptionSKUs.TIER_2:
-          return u.NoticeColors.PREMIUM_TIER_2;
+          return a.NoticeColors.PREMIUM_TIER_2;
         default:
           throw Error("Unsupported subscription tier: ".concat(e))
       }
     }(m),
-    children: [(0, s.jsx)(u.NoticeCloseButton, {
+    children: [(0, s.jsx)(a.NoticeCloseButton, {
       onClick: n
-    }), (0, s.jsx)(o.default, {
+    }), (0, s.jsx)(u.default, {
       className: _.premiumIcon
     }), function(e, t) {
       switch (e) {
@@ -66,9 +66,9 @@ t.default = function(e) {
         default:
           throw Error("Unsupported subscription tier: ".concat(e))
       }
-    }(m, p), (0, s.jsx)(u.NoticeButton, {
+    }(m, p), (0, s.jsx)(a.NoticeButton, {
       onClick: () => {
-        (0, r.default)({
+        (0, o.default)({
           trialId: I.trial_id,
           subscriptionTier: m,
           analyticsLocations: T,

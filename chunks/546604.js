@@ -1,117 +1,116 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return L
+    return p
   }
 });
-var l = a("735250");
+var s = a("735250");
 a("470079");
-var s = a("512722"),
-  n = a.n(s),
+var l = a("512722"),
+  n = a.n(l),
   i = a("990547"),
   r = a("442837"),
   d = a("481060"),
   o = a("100527"),
-  u = a("213609"),
-  c = a("240657"),
+  c = a("213609"),
+  u = a("240657"),
   m = a("809086"),
-  f = a("430824"),
-  x = a("682864"),
-  h = a("240864"),
-  g = a("942833"),
-  j = a("409110"),
-  _ = a("226060"),
-  v = a("689938"),
-  N = a("750227");
+  x = a("430824"),
+  f = a("240864"),
+  h = a("942833"),
+  g = a("409110"),
+  j = a("226060"),
+  _ = a("689938"),
+  v = a("750227");
 
-function L(e) {
+function p(e) {
   var t, a;
   let {
-    transitionState: s,
-    guildProductListingId: L,
-    analyticsLocation: I,
-    guildId: p,
-    onClose: D
-  } = e, T = (0, r.useStateFromStores)([h.default], () => h.default.getGuildProduct(L));
-  n()(null != T, "guildProductListing cannot be null"), (0, u.default)({
+    transitionState: l,
+    guildProductListingId: p,
+    analyticsLocation: N,
+    guildId: L,
+    onClose: I
+  } = e, D = (0, r.useStateFromStores)([f.default], () => f.default.getGuildProduct(p));
+  n()(null != D, "guildProductListing cannot be null"), (0, c.default)({
     type: i.ImpressionTypes.MODAL,
     name: i.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
     properties: {
-      guild_product_listing_id: L,
-      has_entitlement: !0 === T.has_entitlement,
-      location: I
+      guild_product_listing_id: p,
+      has_entitlement: !0 === D.has_entitlement,
+      location: N
     }
   });
-  let C = null !== (t = (0, g.useProductType)(T)) && void 0 !== t ? t : "",
-    M = (0, g.usePrice)(T),
-    O = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(p));
-  return (0, l.jsxs)(d.ModalRoot, {
-    className: N.modal,
+  let T = null !== (t = (0, h.useProductType)(D)) && void 0 !== t ? t : "",
+    C = (0, h.usePrice)(D),
+    M = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(L));
+  return (0, s.jsxs)(d.ModalRoot, {
+    className: v.modal,
     size: d.ModalSize.MEDIUM,
-    transitionState: s,
-    "aria-label": T.name,
-    children: [(0, l.jsxs)(d.ModalHeader, {
+    transitionState: l,
+    "aria-label": D.name,
+    children: [(0, s.jsxs)(d.ModalHeader, {
       separator: !1,
-      children: [(0, l.jsx)(m.MonetizationListingImageAspectStable, {
+      children: [(0, s.jsx)(m.MonetizationListingImageAspectStable, {
         height: 267,
-        listing: T,
-        className: N.headerImage,
+        listing: D,
+        className: v.headerImage,
         alt: ""
-      }), (0, l.jsx)(d.ModalCloseButton, {
-        className: N.closeButton,
-        onClick: D,
+      }), (0, s.jsx)(d.ModalCloseButton, {
+        className: v.closeButton,
+        onClick: I,
         withCircleBackground: !0
       })]
-    }), (0, l.jsx)(d.ModalContent, {
-      children: (0, l.jsxs)("div", {
-        className: N.body,
-        children: [(0, l.jsx)(d.Heading, {
+    }), (0, s.jsx)(d.ModalContent, {
+      children: (0, s.jsxs)("div", {
+        className: v.body,
+        children: [(0, s.jsx)(d.Heading, {
           variant: "heading-xl/medium",
           color: "header-primary",
-          children: T.name
-        }), (0, l.jsx)(x.default, {
+          children: D.name
+        }), (0, s.jsx)(d.Spacer, {
           size: 4
-        }), (0, l.jsx)(d.Text, {
+        }), (0, s.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: v.default.Messages.GUILD_PRODUCT_INFO_MODAL_PRODUCT_OFFER.format({
-            productType: C,
-            personName: null !== (a = null == O ? void 0 : O.name) && void 0 !== a ? a : ""
+          children: _.default.Messages.GUILD_PRODUCT_INFO_MODAL_PRODUCT_OFFER.format({
+            productType: T,
+            personName: null !== (a = null == M ? void 0 : M.name) && void 0 !== a ? a : ""
           })
-        }), (0, l.jsx)(x.default, {
+        }), (0, s.jsx)(d.Spacer, {
           size: 16
-        }), (0, l.jsx)(j.default, {
-          listing: T
-        }), (0, l.jsx)(x.default, {
+        }), (0, s.jsx)(g.default, {
+          listing: D
+        }), (0, s.jsx)(d.Spacer, {
           size: 16
-        }), (0, l.jsx)("div", {
-          className: N.seperator
-        }), (0, l.jsx)(x.default, {
+        }), (0, s.jsx)("div", {
+          className: v.seperator
+        }), (0, s.jsx)(d.Spacer, {
           size: 16
-        }), (0, l.jsx)(d.Heading, {
+        }), (0, s.jsx)(d.Heading, {
           variant: "heading-lg/medium",
           color: "header-primary",
-          children: v.default.Messages.GUILD_PRODUCT_INFO_MODAL_DETAIL_HEADER
-        }), (0, l.jsx)(x.default, {
+          children: _.default.Messages.GUILD_PRODUCT_INFO_MODAL_DETAIL_HEADER
+        }), (0, s.jsx)(d.Spacer, {
           size: 12
-        }), (0, l.jsx)(c.default, {
-          className: N.description,
+        }), (0, s.jsx)(u.default, {
+          className: v.description,
           variant: "text-md/normal",
           color: "text-muted",
-          text: T.description
+          text: D.description
         })]
       })
-    }), (0, l.jsxs)(d.ModalFooter, {
-      className: N.footer,
-      children: [(0, l.jsx)(_.default, {
-        guildId: p,
-        guildProductListingId: L,
+    }), (0, s.jsxs)(d.ModalFooter, {
+      className: v.footer,
+      children: [(0, s.jsx)(j.default, {
+        guildId: L,
+        guildProductListingId: p,
         sourceAnalyticsLocations: o.default.GUILD_PRODUCT_INFO_MODAL
-      }), (0, l.jsx)(d.Text, {
+      }), (0, s.jsx)(d.Text, {
         tag: "div",
         variant: "heading-xl/semibold",
         color: "header-primary",
-        children: M
+        children: C
       })]
     })]
   })

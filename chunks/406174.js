@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return _
   }
 });
 var a = s("735250"),
@@ -11,56 +11,55 @@ var a = s("735250"),
   r = s("442837"),
   o = s("481060"),
   d = s("78839"),
-  u = s("682864"),
-  c = s("981631"),
-  S = s("689938"),
-  E = s("431963"),
-  T = s("822293"),
-  _ = s("834300");
+  u = s("981631"),
+  c = s("689938"),
+  S = s("431963"),
+  E = s("822293"),
+  T = s("834300");
 
-function I(e) {
+function _(e) {
   let {
     onClickManageSubscription: t
-  } = e, s = (0, r.useStateFromStores)([d.default], () => d.default.getSubscriptions()), i = n.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === c.SubscriptionTypes.GUILD).filter(e => e.status !== c.SubscriptionStatusTypes.ENDED), [s]);
+  } = e, s = (0, r.useStateFromStores)([d.default], () => d.default.getSubscriptions()), i = n.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === u.SubscriptionTypes.GUILD).filter(e => e.status !== u.SubscriptionStatusTypes.ENDED), [s]);
   return 0 === i.length ? null : (0, a.jsxs)("div", {
-    className: E.container,
+    className: S.container,
     children: [(0, a.jsx)(o.Heading, {
       variant: "heading-md/semibold",
-      className: E.__invalid_sectionTitle,
-      children: S.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
-    }), (0, a.jsx)(u.default, {
+      className: S.__invalid_sectionTitle,
+      children: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+    }), (0, a.jsx)(o.Spacer, {
       size: 4
     }), (0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
-      className: E.sectionDescription,
-      children: S.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_USER_SUBSCRIPTIONS_DESCRIPTION
-    }), (0, a.jsx)(u.default, {
+      className: S.sectionDescription,
+      children: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_USER_SUBSCRIPTIONS_DESCRIPTION
+    }), (0, a.jsx)(o.Spacer, {
       size: 24
     }), (0, a.jsxs)("div", {
-      className: l()(T.guildBoostingSubscriptionRow, E.card),
+      className: l()(E.guildBoostingSubscriptionRow, S.card),
       children: [(0, a.jsx)("img", {
-        src: _,
+        src: T,
         alt: "",
-        className: E.handImage
+        className: S.handImage
       }), (0, a.jsxs)("div", {
-        className: E.textContainer,
+        className: S.textContainer,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
-          className: E.header,
-          children: S.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+          className: S.header,
+          children: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
         }), (0, a.jsx)(o.Text, {
           variant: "text-md/normal",
-          className: E.description,
-          children: S.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({
+          className: S.description,
+          children: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({
             numSubscriptions: i.length
           })
         })]
       }), (0, a.jsx)(o.Button, {
         color: o.Button.Colors.CUSTOM,
         size: o.Button.Sizes.SMALL,
-        className: E.manageSubscriptionsButton,
+        className: S.manageSubscriptionsButton,
         onClick: t,
-        children: S.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_SUBSCRIPTIONS_BUTTON
+        children: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_SUBSCRIPTIONS_BUTTON
       })]
     })]
   })

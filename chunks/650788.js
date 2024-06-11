@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return H
+    return V
   }
 });
 var i = s("735250"),
@@ -16,30 +16,29 @@ var i = s("735250"),
   C = s("674180"),
   _ = s("38618"),
   f = s("312217"),
-  h = s("623299"),
-  S = s("984370"),
+  S = s("623299"),
+  h = s("984370"),
   x = s("430824"),
-  I = s("682864"),
-  L = s("76535"),
+  I = s("76535"),
   p = s("423000"),
-  E = s("891561"),
-  T = s("847033"),
-  g = s("544978"),
-  P = s("154522"),
-  R = s("935554"),
-  m = s("340529"),
-  O = s("175390"),
-  j = s("64685"),
-  G = s("866104"),
-  v = s("886176"),
-  D = s("333866"),
-  U = s("176505"),
-  N = s("20281"),
-  M = s("689938"),
-  A = s("807923"),
-  w = s("19340");
+  L = s("891561"),
+  E = s("847033"),
+  T = s("544978"),
+  g = s("154522"),
+  P = s("935554"),
+  R = s("340529"),
+  m = s("175390"),
+  O = s("64685"),
+  j = s("866104"),
+  G = s("886176"),
+  v = s("333866"),
+  D = s("176505"),
+  U = s("20281"),
+  N = s("689938"),
+  M = s("807923"),
+  A = s("19340");
 
-function b(e) {
+function w(e) {
   var t;
   let {
     guildId: s,
@@ -47,32 +46,32 @@ function b(e) {
   } = e, {
     loaded: r,
     subscriptionsSettings: a
-  } = (0, L.useMonetizationSettings)(s), n = (0, d.useStateFromStores)([x.default], () => x.default.getGuild(s)), {
+  } = (0, I.useMonetizationSettings)(s), n = (0, d.useStateFromStores)([x.default], () => x.default.getGuild(s)), {
     selectedTab: u,
     isPhantomPreview: c,
     categoryTabs: C
-  } = (0, T.useGuildShopDisplayContext)(), _ = !r || null == a;
-  return null == n || !c && _ ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)(E.default, {
-    defaultSortOption: null !== (t = null == a ? void 0 : a.store_page_guild_products_default_sort) && void 0 !== t ? t : D.GuildProductSortOptions.NAME,
+  } = (0, E.useGuildShopDisplayContext)(), _ = !r || null == a;
+  return null == n || !c && _ ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)(L.default, {
+    defaultSortOption: null !== (t = null == a ? void 0 : a.store_page_guild_products_default_sort) && void 0 !== t ? t : v.GuildProductSortOptions.NAME,
     children: (0, i.jsxs)("div", {
-      className: A.contentContainer,
-      children: [(0, i.jsx)(G.default, {
+      className: M.contentContainer,
+      children: [(0, i.jsx)(j.default, {
         guild: n,
         subscriptionsSettings: a
-      }), (0, i.jsx)(I.default, {
+      }), (0, i.jsx)(o.Spacer, {
         size: 32
-      }), C.length > 0 && (0, i.jsx)(m.GuildShopCategorySelector, {
+      }), C.length > 0 && (0, i.jsx)(R.GuildShopCategorySelector, {
         guild: n
       }), (0, i.jsxs)("div", {
-        className: A.tabContainer,
-        children: [(0, i.jsx)(I.default, {
+        className: M.tabContainer,
+        children: [(0, i.jsx)(o.Spacer, {
           size: 32
-        }), c && (0, i.jsx)(O.default, {
+        }), c && (0, i.jsx)(m.default, {
           guildId: s
-        }), u === g.GuildShopTab.GUILD_PRODUCTS && (0, i.jsx)(P.GuildProductCardGrid, {
+        }), u === T.GuildShopTab.GUILD_PRODUCTS && (0, i.jsx)(g.GuildProductCardGrid, {
           guildId: s,
           productId: l
-        }), u === g.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS && (0, i.jsx)(R.default, {
+        }), u === T.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS && (0, i.jsx)(P.default, {
           guildId: s
         })]
       })]
@@ -80,22 +79,22 @@ function b(e) {
   })
 }
 
-function V(e) {
+function b(e) {
   let {
     guildId: t,
     productId: s
   } = e, r = (0, d.useStateFromStores)([_.default], () => _.default.isConnected()), I = (0, d.useStateFromStores)([x.default], () => x.default.getGuild(t)), {
     shouldHideGuildPurchaseEntryPoints: L,
-    restrictionsLoading: E
+    restrictionsLoading: T
   } = (0, C.useShouldHideGuildPurchaseEntryPoints)(t), {
     selectedTab: g,
     isPhantomPreview: P,
     categoryTabs: R
-  } = (0, T.useGuildShopDisplayContext)(), m = r && (null == I || 0 === R.length && !P || L && !E);
+  } = (0, E.useGuildShopDisplayContext)(), m = r && (null == I || 0 === R.length && !P || L && !T);
   return l.useEffect(() => {
-    m && (0, p.handleInaccessiblePage)(t, U.StaticChannelRoute.GUILD_SHOP)
+    m && (0, p.handleInaccessiblePage)(t, D.StaticChannelRoute.GUILD_SHOP)
   }, [t, m]), (0, u.default)({
-    type: N.ImpressionTypes.PAGE,
+    type: U.ImpressionTypes.PAGE,
     name: n.ImpressionNames.GUILD_SHOP_PAGE,
     properties: {
       product_id: s,
@@ -104,39 +103,39 @@ function V(e) {
   }, {
     disableTrack: m
   }), (0, i.jsxs)("div", {
-    className: a()(w.chat, A.container),
-    children: [(0, i.jsxs)(S.default, {
-      children: [(0, i.jsx)(S.default.Icon, {
-        icon: v.default,
+    className: a()(A.chat, M.container),
+    children: [(0, i.jsxs)(h.default, {
+      children: [(0, i.jsx)(h.default.Icon, {
+        icon: G.default,
         "aria-hidden": !0,
         color: c.default.INTERACTIVE_ACTIVE
-      }), (0, i.jsx)(S.default.Title, {
-        children: M.default.Messages.GUILD_SHOP_CHANNEL_LABEL
-      }), (0, i.jsx)(j.default, {})]
+      }), (0, i.jsx)(h.default.Title, {
+        children: N.default.Messages.GUILD_SHOP_CHANNEL_LABEL
+      }), (0, i.jsx)(O.default, {})]
     }), (0, i.jsx)(o.ScrollerNone, {
-      className: A.content,
-      children: r ? (0, i.jsx)(b, {
+      className: M.content,
+      children: r ? (0, i.jsx)(w, {
         guildId: t,
         productId: s
       }) : (0, i.jsx)(o.Spinner, {})
-    }), (0, i.jsx)(h.default, {
-      className: A.sparkleCloudTop
+    }), (0, i.jsx)(S.default, {
+      className: M.sparkleCloudTop
     }), (0, i.jsx)(f.default, {
-      className: A.sparkleCloudBottom
+      className: M.sparkleCloudBottom
     })]
   })
 }
 
-function H(e) {
+function V(e) {
   let {
     guildId: t,
     productId: s,
     initialTab: l
   } = e;
-  return null == l && null != s && (l = g.GuildShopTab.GUILD_PRODUCTS), (0, i.jsx)(T.default, {
+  return null == l && null != s && (l = T.GuildShopTab.GUILD_PRODUCTS), (0, i.jsx)(E.default, {
     initialTab: l,
     guildId: t,
-    children: (0, i.jsx)(V, {
+    children: (0, i.jsx)(b, {
       initialTab: l,
       productId: s,
       guildId: t

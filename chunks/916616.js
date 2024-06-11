@@ -1,98 +1,222 @@
 "use strict";
 n.r(t), n.d(t, {
-  default: function() {
-    return x
+  Image: function() {
+    return p
   }
-}), n("627341");
-var i = n("735250");
-n("470079");
-var s = n("278074"),
-  l = n("979554"),
-  a = n("481060"),
-  r = n("1585"),
-  u = n("125988"),
-  o = n("583434"),
-  c = n("479446"),
-  d = n("981632"),
-  m = n("731896"),
-  f = n("680295"),
-  p = n("447452"),
-  S = n("998502"),
-  _ = n("987209"),
-  I = n("689938"),
-  P = n("170189"),
-  E = n("241822"),
-  T = n("500215");
-let N = S.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+}), n("47120");
+var i, r = n("735250"),
+  s = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
+  l = n("780384"),
+  u = n("481060"),
+  d = n("410030"),
+  _ = n("446108"),
+  c = n("956664"),
+  E = n("921948"),
+  I = n("823023"),
+  T = n("981631"),
+  f = n("768760"),
+  S = n("689938"),
+  h = n("599908"),
+  A = n("167969"),
+  m = n("557256");
 
-function v(e) {
+function N(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[t] = n, e
+}
+class p extends(i = s.PureComponent) {
+  render() {
+    let e;
+    let {
+      className: t,
+      imageClassName: n,
+      readyState: i,
+      src: s,
+      placeholder: a,
+      placeholderVersion: l,
+      alt: d,
+      width: E,
+      height: A,
+      maxWidth: m = E,
+      maxHeight: N = A,
+      minWidth: p,
+      minHeight: R,
+      mediaLayoutType: g,
+      limitResponsiveWidth: L = !0,
+      accessory: v,
+      zoomable: D,
+      original: M,
+      children: y,
+      renderAccessory: P,
+      onClick: U,
+      tabIndex: b,
+      useFullWidth: G = !1,
+      ...w
+    } = this.props;
+    if (1 === E && 1 === A) return null;
+    let k = (0, c.fit)({
+        width: E,
+        height: A,
+        maxWidth: m,
+        maxHeight: N,
+        minWidth: p,
+        minHeight: R
+      }),
+      B = 0 !== k.width ? k.width / k.height : 1;
+    "" !== s && i !== T.ImageReadyStates.ERROR ? e = y({
+      src: s,
+      size: k,
+      alt: d,
+      className: n,
+      mediaLayoutType: g
+    }) : i !== T.ImageReadyStates.LOADING && (e = (0, r.jsx)(O, {
+      size: k,
+      mediaLayoutType: g,
+      alt: d
+    })), e = (0, r.jsx)(I.ImageLoadingOverlay, {
+      readyState: i,
+      aspectRatio: B,
+      placeholder: a,
+      placeholderVersion: l,
+      placeholderStyle: C(k, g),
+      children: e
+    });
+    let x = null != P ? P() : null;
+    return x = null != x ? x : v, (0, r.jsx)(u.FocusRing, {
+      ringTarget: this._containerRef,
+      focusTarget: this._clickableRef,
+      children: (0, r.jsxs)("div", {
+        className: o()(h.imageWrapper, {
+          [h.imageZoom]: D,
+          [h.imageWrapperBackground]: i !== T.ImageReadyStates.READY,
+          [h.clickable]: null != U
+        }, t),
+        style: function(e, t, n, i) {
+          return i === f.MediaLayoutType.MOSAIC ? {
+            display: "block",
+            maxHeight: "inherit",
+            margin: "auto",
+            width: !n && e.width <= f.MEDIA_MOSAIC_MAX_WIDTH ? e.width : "100%",
+            height: "100%"
+          } : i === f.MediaLayoutType.RESPONSIVE ? {
+            maxWidth: t ? e.width : void 0,
+            width: "100%",
+            aspectRatio: "".concat(e.width, " / ").concat(e.height)
+          } : e
+        }(k, L, G, g),
+        ...w,
+        children: [null != M && (0, r.jsx)("a", {
+          tabIndex: -1,
+          onClick: U,
+          "aria-hidden": !0,
+          className: h.originalLink,
+          href: M,
+          ref: this._containerRef,
+          "data-role": "img",
+          "data-safe-src": s
+        }), null != U ? (0, r.jsx)(u.Clickable, {
+          className: h.clickableWrapper,
+          tabIndex: null != b ? b : 0,
+          onClick: U,
+          "aria-label": null != d ? d : S.default.Messages.IMAGE,
+          "aria-describedby": _.IMAGE_OPEN_DIALOG_DESCRIPTION,
+          innerRef: this._clickableRef,
+          focusProps: {
+            enabled: !1
+          },
+          children: e
+        }) : e, null != x ? (0, r.jsx)("div", {
+          className: h.imageAccessory,
+          children: x
+        }) : null]
+      })
+    })
+  }
+  constructor(...e) {
+    super(...e), N(this, "_containerRef", s.createRef()), N(this, "_clickableRef", s.createRef())
+  }
+}
+
+function O(e) {
   let {
-    avatarDecoration: t
-  } = e, {
-    avatarDecorationSrc: n,
-    eventHandlers: s,
-    avatarPlaceholderSrc: l
-  } = (0, u.default)({
-    avatarDecorationOverride: t,
-    size: (0, r.getDecorationSizeForAvatarSize)(a.AvatarSizes.SIZE_152)
-  });
-  return (0, i.jsx)("div", {
-    className: P.giftMainAnimationWrapper,
-    children: (0, i.jsx)(N, {
-      ...s,
-      avatarDecoration: n,
-      src: l,
-      className: P.avatar,
-      size: a.AvatarSizes.SIZE_152,
-      "aria-label": I.default.Messages.USER_SETTINGS_AVATAR
+    size: t,
+    mediaLayoutType: n,
+    alt: i
+  } = e, s = (0, d.default)();
+  return (0, r.jsx)("div", {
+    className: h.imageErrorWrapper,
+    style: function(e, t) {
+      switch (t) {
+        case f.MediaLayoutType.MOSAIC:
+          return {
+            width: "100%", height: "100%", aspectRatio: "".concat(e.width, " / ").concat(e.height), display: "flex", maxHeight: "inherit"
+          };
+        case f.MediaLayoutType.RESPONSIVE:
+          return {
+            ...R(e), display: "flex"
+          };
+        default:
+          return e
+      }
+    }(t, n),
+    children: (0, r.jsx)("img", {
+      src: (0, l.isThemeLight)(s) ? m : A,
+      className: h.imageError,
+      alt: null != i ? i : S.default.Messages.IMAGE
     })
   })
 }
+N(p, "defaultProps", {
+  readyState: T.ImageReadyStates.READY,
+  zoomable: !0,
+  children: e => {
+    let {
+      src: t,
+      size: n,
+      alt: i,
+      className: s,
+      mediaLayoutType: a
+    } = e;
+    return (0, r.jsx)("img", {
+      className: null != s ? s : void 0,
+      alt: null != i ? i : S.default.Messages.IMAGE,
+      src: t,
+      style: C(n, a)
+    })
+  },
+  minWidth: 0,
+  minHeight: 0
+});
 
-function h(e) {
-  var t;
-  let {
-    id: n
-  } = e, s = null === (t = (0, m.useProfileEffectPreset)(n)) || void 0 === t ? void 0 : t.config, {
-    updatedOnAllSurfaces: l
-  } = (0, p.useSimplifiedProfileExperiment)({
-    location: "ProfileEffectImage"
-  });
-  return (0, i.jsxs)("div", {
-    className: P.profileEffectContainer,
-    children: [(0, i.jsx)("img", {
-      src: l ? T : E,
-      alt: null == s ? void 0 : s.accessibilityLabel,
-      className: P.profileEffectBackground
-    }), (0, i.jsx)(f.default, {
-      profileEffectId: n
-    })]
-  })
+function C(e, t) {
+  switch (t) {
+    case f.MediaLayoutType.MOSAIC:
+      return {
+        display: "block", objectFit: "cover", minWidth: "100%", minHeight: "100%", maxWidth: 1 === (0, E.default)() ? "calc(100% + 1px)" : "100%"
+      };
+    case f.MediaLayoutType.RESPONSIVE:
+      return R(e);
+    default:
+      return e
+  }
 }
 
-function x(e) {
+function R(e) {
   let {
-    sku: t
-  } = e, {
-    selectedGiftStyle: n
-  } = (0, _.useGiftContext)(), {
-    product: a
-  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), r = null == a ? void 0 : a.items[0], u = (0, s.match)(r).with({
-    type: l.CollectiblesItemType.AVATAR_DECORATION
-  }, e => (0, i.jsx)(v, {
-    avatarDecoration: e
-  })).with({
-    type: l.CollectiblesItemType.PROFILE_EFFECT
-  }, e => (0, i.jsx)(h, {
-    id: e.id
-  })).otherwise(() => null);
-  return null != n && null == u ? (0, i.jsx)("div", {
-    className: P.giftMainAnimationWrapper,
-    children: (0, i.jsx)(d.default, {
-      defaultAnimationState: c.AnimationState.LOOP,
-      giftStyle: n,
-      shouldAnimate: !0,
-      className: P.__invalid_giftMainAnimation
-    })
-  }) : u
+    width: t,
+    height: n
+  } = e;
+  return {
+    maxWidth: t,
+    maxHeight: n,
+    width: "100%",
+    display: "block",
+    aspectRatio: "".concat(t, " / ").concat(n)
+  }
 }

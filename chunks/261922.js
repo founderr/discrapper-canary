@@ -12,16 +12,16 @@ var i, r, s, a = n("735250"),
   l = n("392711"),
   u = n("286379"),
   d = n("622535"),
-  _ = n("818083"),
-  c = n("134432"),
-  E = n("797614"),
-  I = n("740492"),
-  T = n("866960"),
-  f = n("626135"),
-  S = n("768581"),
-  h = n("956664"),
-  A = n("311715"),
-  m = n("332475"),
+  _ = n("916616"),
+  c = n("818083"),
+  E = n("134432"),
+  I = n("797614"),
+  T = n("740492"),
+  f = n("866960"),
+  S = n("626135"),
+  h = n("768581"),
+  A = n("956664"),
+  m = n("311715"),
   N = n("768760"),
   p = n("981631");
 
@@ -78,7 +78,7 @@ class g extends(r = o.Component) {
         format: l,
         quality: u
       } = this.getFormatQuality(t);
-    return (0, c.getImageSrc)({
+    return (0, E.getImageSrc)({
       src: n,
       width: i,
       height: r,
@@ -93,7 +93,7 @@ class g extends(r = o.Component) {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
       t = null,
       n = null;
-    return S.SUPPORTS_WEBP && (e || !g.isAnimated(this.props)) ? (t = "webp", g.isSrcPNG(this.props) && (n = "lossless")) : e && (t = "png"), {
+    return h.SUPPORTS_WEBP && (e || !g.isAnimated(this.props)) ? (t = "webp", g.isSrcPNG(this.props) && (n = "lossless")) : e && (t = "png"), {
       format: t,
       quality: n
     }
@@ -107,12 +107,12 @@ class g extends(r = o.Component) {
       mediaLayoutType: r,
       useFullWidth: s
     } = this.props;
-    return r === N.MediaLayoutType.MOSAIC && s ? (0, h.getCoverRatio)({
+    return r === N.MediaLayoutType.MOSAIC && s ? (0, A.getCoverRatio)({
       width: e,
       height: t,
       maxWidth: n,
       maxHeight: i
-    }) : (0, h.getRatio)({
+    }) : (0, A.getRatio)({
       width: e,
       height: t,
       maxWidth: n,
@@ -132,7 +132,7 @@ class g extends(r = o.Component) {
       height: i
     } = this.props;
     if (this.startLoadingTime = Date.now(), 1 === n && 1 === i) return;
-    let r = (0, c.loadImage)(e, (e, n) => {
+    let r = (0, E.loadImage)(e, (e, n) => {
       null != r && this._cancellers.delete(r), null == t || t(e, n)
     });
     null != r && this._cancellers.add(r)
@@ -148,15 +148,15 @@ class g extends(r = o.Component) {
       original: o,
       className: u,
       imageClassName: d,
-      children: _,
-      animated: c,
-      shouldAnimate: E,
-      width: I,
-      height: T,
-      minWidth: f,
-      minHeight: S,
-      maxWidth: h,
-      maxHeight: A,
+      children: c,
+      animated: E,
+      shouldAnimate: I,
+      width: T,
+      height: f,
+      minWidth: S,
+      minHeight: h,
+      maxWidth: A,
+      maxHeight: m,
       onClick: N,
       renderAccessory: O,
       tabIndex: C,
@@ -168,15 +168,15 @@ class g extends(r = o.Component) {
       readyState: M,
       hasMouseOver: y,
       hasFocus: P
-    } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(I * b), null != f ? f : 0, null != h ? h : 1 / 0), w = (0, l.clamp)(Math.round(T * b), null != S ? S : 0, null != A ? A : 1 / 0), k = {
+    } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(T * b), null != S ? S : 0, null != A ? A : 1 / 0), w = (0, l.clamp)(Math.round(f * b), null != h ? h : 0, null != m ? m : 1 / 0), k = {
       alt: e,
       readyState: M,
       onContextMenu: null != r ? r : void 0,
       zoomable: U,
       className: u,
       imageClassName: d,
-      minWidth: f,
-      minHeight: S,
+      minWidth: S,
+      minHeight: h,
       mediaLayoutType: this.getType(),
       limitResponsiveWidth: R,
       useFullWidth: L,
@@ -186,14 +186,14 @@ class g extends(r = o.Component) {
       src: "",
       placeholder: v,
       placeholderVersion: D,
-      children: null != _ ? e => {
+      children: null != c ? e => {
         let {
           src: t,
           size: n,
           alt: i,
           mediaLayoutType: r
         } = e;
-        return _({
+        return c({
           src: t,
           size: n,
           alt: i,
@@ -212,15 +212,15 @@ class g extends(r = o.Component) {
       case p.ImageReadyStates.READY:
         if (g.isAnimated(this.props)) {
           k.onMouseLeave = this.onMouseLeave;
-          let e = (s || y || P) && (null == E || E) && g.visibilityObserver.isVisible(this);
-          e ? (k.src = this.getSrc(b), k.renderAccessory = O) : (k.src = this.getSrc(b, !c || !s), k.renderAccessory = this.renderAccessory), null != _ && (k.children = t => {
+          let e = (s || y || P) && (null == I || I) && g.visibilityObserver.isVisible(this);
+          e ? (k.src = this.getSrc(b), k.renderAccessory = O) : (k.src = this.getSrc(b, !E || !s), k.renderAccessory = this.renderAccessory), null != c && (k.children = t => {
             let {
               src: n,
               size: i,
               alt: r,
               mediaLayoutType: s
             } = t;
-            return _({
+            return c({
               src: n,
               size: i,
               animating: e,
@@ -230,13 +230,13 @@ class g extends(r = o.Component) {
           })
         } else k.src = this.getSrc(b)
     }
-    return (0, a.jsx)(m.default, {
+    return (0, a.jsx)(_.Image, {
       ...k
     })
   }
   async trackLoadingCompleted(e, t, n) {
     var i;
-    if (e && E.default.increment({
+    if (e && I.default.increment({
         name: u.MetricEvents.IMAGE_LOAD_ERROR
       }), !this.imageLoadAnalyticsEnabled) return;
     let r = await fetch(t.url).catch(() => void 0),
@@ -247,7 +247,7 @@ class g extends(r = o.Component) {
         format: l,
         quality: d
       } = this.getFormatQuality();
-    f.default.track(p.AnalyticEvents.IMAGE_LOADING_COMPLETED, {
+    S.default.track(p.AnalyticEvents.IMAGE_LOADING_COMPLETED, {
       duration_ms: o,
       requested_height: t.height,
       requested_width: t.width,
@@ -259,13 +259,13 @@ class g extends(r = o.Component) {
       format: l,
       quality: d,
       state: e ? p.ImageReadyStates.ERROR : this.state.readyState,
-      data_saving_mode: I.default.dataSavingMode,
-      low_quality_image_mode: I.default.dataSavingMode,
+      data_saving_mode: T.default.dataSavingMode,
+      low_quality_image_mode: T.default.dataSavingMode,
       trigger: n,
       size: a,
-      connection_type: T.default.getType(),
-      effective_connection_speed: T.default.getEffectiveConnectionSpeed(),
-      service_provider: T.default.getServiceProvider()
+      connection_type: f.default.getType(),
+      effective_connection_speed: f.default.getEffectiveConnectionSpeed(),
+      service_provider: f.default.getServiceProvider()
     })
   }
   constructor(e) {
@@ -292,7 +292,7 @@ class g extends(r = o.Component) {
         width: r,
         height: s
       } = this.props;
-      (1 !== r || 1 !== s) && this.loadImage(this.getSrc((0, h.getRatio)({
+      (1 !== r || 1 !== s) && this.loadImage(this.getSrc((0, A.getRatio)({
         width: r,
         height: s,
         maxWidth: n,
@@ -338,8 +338,8 @@ class g extends(r = o.Component) {
         hasMouseOver: e,
         hasFocus: t
       } = this.state, n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
-      return this.props.shouldRenderAccessory ? e || t ? n : (0, a.jsx)(A.default, {}) : null
-    }), (0, c.isImageLoaded)(this.getSrc(this.getRatio(), g.isAnimated(this.props))) && (this.state.readyState = p.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = L.getCurrentConfig({
+      return this.props.shouldRenderAccessory ? e || t ? n : (0, a.jsx)(m.default, {}) : null
+    }), (0, E.isImageLoaded)(this.getSrc(this.getRatio(), g.isAnimated(this.props))) && (this.state.readyState = p.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = L.getCurrentConfig({
       location: "lazy_image"
     }).enabled
   }
@@ -354,7 +354,7 @@ O(g, "visibilityObserver", new d.VisibilityObserver({
   minHeight: 0,
   shouldRenderAccessory: !0
 });
-let L = (0, _.createExperiment)({
+let L = (0, c.createExperiment)({
   kind: "user",
   id: "2024-02_image_load_metrics",
   label: "Image load metrics Config User Experiment",

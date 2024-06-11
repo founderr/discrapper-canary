@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return S
   }
 }), s("47120");
 var a = s("735250");
@@ -9,65 +9,64 @@ s("470079");
 var l = s("442837"),
   n = s("481060"),
   i = s("430824"),
-  r = s("682864"),
-  o = s("723047"),
-  d = s("727843"),
-  u = s("290348"),
-  c = s("971792"),
-  E = s("155758"),
-  _ = s("331146"),
-  I = s("798680"),
-  T = s("689938"),
-  S = s("169769");
+  r = s("723047"),
+  o = s("727843"),
+  d = s("290348"),
+  u = s("971792"),
+  c = s("155758"),
+  E = s("331146"),
+  _ = s("798680"),
+  I = s("689938"),
+  T = s("169769");
 
-function f() {
+function S() {
   let {
     editStateId: e,
     guildId: t
-  } = (0, d.useEditStateContext)(), [f, m] = u.useTierEmojiIds(e, t), N = (0, c.default)(t, e), {
-    setCurrentTab: g
-  } = (0, I.useTabBarState)(), h = () => g(I.TabBarSection.EMOJIS), C = (0, l.useStateFromStores)([i.default], () => i.default.getGuild(t)), R = null == C ? void 0 : C.getMaxRoleSubscriptionEmojiSlots();
+  } = (0, o.useEditStateContext)(), [S, f] = d.useTierEmojiIds(e, t), m = (0, u.default)(t, e), {
+    setCurrentTab: N
+  } = (0, _.useTabBarState)(), g = () => N(_.TabBarSection.EMOJIS), h = (0, l.useStateFromStores)([i.default], () => i.default.getGuild(t)), C = null == h ? void 0 : h.getMaxRoleSubscriptionEmojiSlots();
+
+  function R(e) {
+    null == S ? f(new Set(e)) : f(new Set([...S, ...e]))
+  }
 
   function x(e) {
-    null == f ? m(new Set(e)) : m(new Set([...f, ...e]))
+    let t = new Set(S);
+    t.delete(e), f(t)
   }
-
-  function L(e) {
-    let t = new Set(f);
-    t.delete(e), m(t)
-  }
-  let O = (0, o.useRoleSubscriptionSettingsDisabled)();
+  let L = (0, r.useRoleSubscriptionSettingsDisabled)();
   return (0, a.jsxs)(n.FormSection, {
-    title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
-    disabled: O,
+    title: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
+    disabled: L,
     children: [(0, a.jsxs)(n.FormText, {
       type: n.FormText.Types.DESCRIPTION,
-      className: S.formDescription,
-      disabled: O,
-      children: [T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({
-        premiumEmojiMaximum: R
-      }), (0, a.jsx)("br", {}), T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({
-        handleTransitionToManageEmoji: h
+      className: T.formDescription,
+      disabled: L,
+      children: [I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({
+        premiumEmojiMaximum: C
+      }), (0, a.jsx)("br", {}), I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({
+        handleTransitionToManageEmoji: g
       })]
-    }), (0, a.jsx)(_.EmojiList, {
-      tierEmojiIds: f,
+    }), (0, a.jsx)(E.EmojiList, {
+      tierEmojiIds: S,
       guildId: t,
       onRemoveEmoji: function(e) {
-        e.roles.filter(e => e !== (null == N ? void 0 : N.id)).length > 0 ? L(e.id) : (0, n.openModalLazy)(async () => {
+        e.roles.filter(e => e !== (null == m ? void 0 : m.id)).length > 0 ? x(e.id) : (0, n.openModalLazy)(async () => {
           let {
             default: t
           } = await s.e("59128").then(s.bind(s, "28564"));
           return s => (0, a.jsx)(t, {
             ...s,
             onConfirmDelete: () => {
-              L(e.id), s.onClose()
+              x(e.id), s.onClose()
             }
           })
         })
       }
-    }), null != f && f.size > 0 ? (0, a.jsx)(r.default, {
+    }), null != S && S.size > 0 ? (0, a.jsx)(n.Spacer, {
       size: 8
-    }) : null, (0, a.jsx)(E.AddBenefitCard, {
+    }) : null, (0, a.jsx)(c.AddBenefitCard, {
       onClick: function() {
         (0, n.openModalLazy)(async () => {
           let {
@@ -76,16 +75,16 @@ function f() {
           return s => (0, a.jsx)(e, {
             ...s,
             guildId: t,
-            initialTierEmojiIds: f,
-            onSubmit: x,
+            initialTierEmojiIds: S,
+            onSubmit: R,
             transitionToManageEmoji: () => {
-              h(), s.onClose()
+              g(), s.onClose()
             }
           })
         })
       },
-      disabled: O,
-      children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
+      disabled: L,
+      children: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
     })]
   })
 }

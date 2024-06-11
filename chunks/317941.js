@@ -16,18 +16,17 @@ var a = s("735250"),
   I = s("509545"),
   N = s("55563"),
   g = s("15887"),
-  f = s("581874"),
-  m = s("285952"),
-  A = s("366695"),
-  C = s("259580"),
-  O = s("572004"),
-  h = s("669079"),
-  R = s("296848"),
-  p = s("474936"),
-  M = s("689938"),
-  D = s("449256");
+  f = s("285952"),
+  m = s("366695"),
+  A = s("259580"),
+  C = s("572004"),
+  O = s("669079"),
+  h = s("296848"),
+  R = s("474936"),
+  p = s("689938"),
+  M = s("449256");
 
-function x(e, t, s) {
+function D(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -35,18 +34,18 @@ function x(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class L extends n.PureComponent {
+class x extends n.PureComponent {
   componentWillUnmount() {
     this._copyModeTimeout.stop()
   }
   get copyButtonText() {
     switch (this.state.copyMode) {
-      case f.CopyInputModes.SUCCESS:
-        return M.default.Messages.BILLING_GIFT_COPIED;
-      case f.CopyInputModes.ERROR:
-        return M.default.Messages.FAILED;
+      case d.CopyInputModes.SUCCESS:
+        return p.default.Messages.BILLING_GIFT_COPIED;
+      case d.CopyInputModes.ERROR:
+        return p.default.Messages.FAILED;
       default:
-        return M.default.Messages.COPY
+        return p.default.Messages.COPY
     }
   }
   handleRevoke(e) {
@@ -59,60 +58,60 @@ class L extends n.PureComponent {
     } = this.props, {
       copyMode: s
     } = this.state;
-    return (0, a.jsxs)(m.default, {
-      direction: m.default.Direction.VERTICAL,
-      className: D.giftCodeRow,
-      children: [(0, a.jsx)(f.default, {
-        className: D.codeText,
-        value: (0, h.getGiftCodeURL)(t.code),
+    return (0, a.jsxs)(f.default, {
+      direction: f.default.Direction.VERTICAL,
+      className: M.giftCodeRow,
+      children: [(0, a.jsx)(d.CopyInput, {
+        className: M.codeText,
+        value: (0, O.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
         mode: s,
-        supportsCopy: O.SUPPORTS_COPY,
-        hideMessage: e ? M.default.Messages.GIFT_INVENTORY_HIDDEN : null,
+        supportsCopy: C.SUPPORTS_COPY,
+        hideMessage: e ? p.default.Messages.GIFT_INVENTORY_HIDDEN : null,
         onCopy: this.handleCopy,
-        buttonColor: f.default.ButtonColors.BRAND,
-        buttonLook: f.default.ButtonLooks.FILLED
+        buttonColor: d.ButtonColors.BRAND,
+        buttonLook: d.ButtonLooks.FILLED
       }), (0, a.jsxs)("div", {
-        className: D.subTextRow,
+        className: M.subTextRow,
         children: [null != t.expiresAt ? (0, a.jsxs)(n.Fragment, {
-          children: [M.default.Messages.GIFT_INVENTORY_EXPIRES_IN.format({
+          children: [p.default.Messages.GIFT_INVENTORY_EXPIRES_IN.format({
             hours: t.expiresAt.diff(l()(), "h")
           }), " ", "—\xa0"]
         }) : null, (0, a.jsx)(d.Clickable, {
           tag: "a",
           onClick: () => this.handleRevoke(t.code),
-          children: M.default.Messages.REVOKE
+          children: p.default.Messages.REVOKE
         })]
       })]
     })
   }
   constructor(...e) {
-    super(...e), x(this, "_copyModeTimeout", new o.Timeout), x(this, "state", {
-      copyMode: f.CopyInputModes.DEFAULT
-    }), x(this, "handleCopy", e => {
+    super(...e), D(this, "_copyModeTimeout", new o.Timeout), D(this, "state", {
+      copyMode: d.CopyInputModes.DEFAULT
+    }), D(this, "handleCopy", e => {
       let {
         giftCode: t,
         sku: s
       } = this.props;
-      (0, h.trackGiftCodeCopy)(t, s);
+      (0, O.trackGiftCodeCopy)(t, s);
       try {
-        (0, O.copy)(e), this.setState({
-          copyMode: f.CopyInputModes.SUCCESS
+        (0, C.copy)(e), this.setState({
+          copyMode: d.CopyInputModes.SUCCESS
         })
       } catch (e) {
         this.setState({
-          copyMode: f.CopyInputModes.ERROR
+          copyMode: d.CopyInputModes.ERROR
         })
       }
       this._copyModeTimeout.start(1e3, () => {
         this.setState({
-          copyMode: f.CopyInputModes.DEFAULT
+          copyMode: d.CopyInputModes.DEFAULT
         })
       })
     })
   }
 }
-class P extends n.PureComponent {
+class L extends n.PureComponent {
   componentDidMount() {
     this._loadedAt = Date.now()
   }
@@ -123,31 +122,31 @@ class P extends n.PureComponent {
       subscriptionPlan: s,
       giftCodeBatchId: n
     } = this.props;
-    return e = n === p.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID ? M.default.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE : n === p.STICKERS_GIFT_CODE_BATCH_ID && null != s ? (s.interval === p.SubscriptionIntervalTypes.MONTH ? M.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : M.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
+    return e = n === R.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID ? p.default.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE : n === R.STICKERS_GIFT_CODE_BATCH_ID && null != s ? (s.interval === R.SubscriptionIntervalTypes.MONTH ? p.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : p.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
       skuName: t.name,
       intervalCount: s.intervalCount
-    }) : null == s ? t.name : (s.interval === p.SubscriptionIntervalTypes.MONTH ? M.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : M.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
+    }) : null == s ? t.name : (s.interval === R.SubscriptionIntervalTypes.MONTH ? p.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : p.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
       skuName: t.name,
       intervalCount: s.intervalCount
     }), (0, a.jsx)("div", {
-      className: D.gameName,
+      className: M.gameName,
       children: e
     })
   }
   renderGenerateGiftCodeRow() {
-    return (0, a.jsxs)(m.default, {
-      justify: m.default.Justify.BETWEEN,
-      align: m.default.Align.CENTER,
-      className: D.generateCodeRow,
+    return (0, a.jsxs)(f.default, {
+      justify: f.default.Justify.BETWEEN,
+      align: f.default.Align.CENTER,
+      className: M.generateCodeRow,
       children: [(0, a.jsx)("div", {
-        className: D.codeText,
-        children: M.default.Messages.GIFT_INVENTORY_GENERATE_HELP
+        className: M.codeText,
+        children: p.default.Messages.GIFT_INVENTORY_GENERATE_HELP
       }), (0, a.jsx)(d.Button, {
         submitting: this.state.isCreating,
         size: d.Button.Sizes.SMALL,
         color: d.Button.Colors.BRAND,
         onClick: this.handleGenerateGiftCode,
-        children: M.default.Messages.GIFT_INVENTORY_GENERATE_LINK
+        children: p.default.Messages.GIFT_INVENTORY_GENERATE_LINK
       })]
     })
   }
@@ -173,43 +172,43 @@ class P extends n.PureComponent {
       className: i,
       children: [(0, a.jsx)(d.Clickable, {
         onClick: this.handleToggleOpen,
-        className: D.card,
+        className: M.card,
         onMouseEnter: () => this.setIsHovered(!0),
         onMouseLeave: () => this.setIsHovered(!1),
         children: (0, a.jsx)(g.default.Header, {
           splashArtURL: t.getSplashURL(512),
           children: (0, a.jsxs)("div", {
-            className: D.cardHeader,
-            children: [(0, a.jsxs)(m.default, {
-              align: m.default.Align.CENTER,
+            className: M.cardHeader,
+            children: [(0, a.jsxs)(f.default, {
+              align: f.default.Align.CENTER,
               children: [null != u ? (0, a.jsx)(S.default, {
                 giftStyle: u,
-                className: D.seasonalGiftBox,
+                className: M.seasonalGiftBox,
                 shouldAnimate: this.state.isHovered
-              }) : (0, a.jsx)(A.default, {
+              }) : (0, a.jsx)(m.default, {
                 game: t,
-                size: A.default.Sizes.MEDIUM,
+                size: m.default.Sizes.MEDIUM,
                 skuId: l.id
               }), (0, a.jsxs)("div", {
-                className: D.headerText,
+                className: M.headerText,
                 children: [this.renderTitle(), (0, a.jsx)("div", {
-                  className: D.subTextHeader,
-                  children: M.default.Messages.GIFT_INVENTORY_COPIES.format({
+                  className: M.subTextHeader,
+                  children: p.default.Messages.GIFT_INVENTORY_COPIES.format({
                     copies: e.length
                   })
                 })]
               })]
-            }), (0, a.jsx)(C.default, {
-              direction: c ? C.default.Directions.UP : C.default.Directions.DOWN,
-              className: D.expandIcon
+            }), (0, a.jsx)(A.default, {
+              direction: c ? A.default.Directions.UP : A.default.Directions.DOWN,
+              className: M.expandIcon
             })]
           })
         })
       }), c ? (0, a.jsx)(g.default.Body, {
         children: r ? (0, a.jsx)(d.Spinner, {
-          className: D.spinner
+          className: M.spinner
         }) : (0, a.jsxs)(n.Fragment, {
-          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(L, {
+          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(x, {
             giftCode: e,
             sku: l,
             hideCode: o
@@ -219,11 +218,11 @@ class P extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), x(this, "_loadedAt", null), x(this, "state", {
+    super(...e), D(this, "_loadedAt", null), D(this, "state", {
       isOpen: !1,
       isCreating: !1,
       isHovered: !1
-    }), x(this, "handleGenerateGiftCode", async e => {
+    }), D(this, "handleGenerateGiftCode", async e => {
       e.stopPropagation();
       let {
         skuId: t,
@@ -236,7 +235,7 @@ class P extends n.PureComponent {
         isCreating: !1,
         isOpen: !0
       })
-    }), x(this, "handleToggleOpen", () => {
+    }), D(this, "handleToggleOpen", () => {
       let {
         skuId: e,
         subscriptionPlanId: t,
@@ -262,7 +261,7 @@ t.default = r.default.connectStores([N.default, _.default, T.default, c.default,
     isFetching: T.default.getUserGiftCodesFetchingForSKUAndPlan(t, s),
     loadedAt: T.default.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
     application: c.default.getApplication(n.applicationId),
-    subscriptionPlan: null != s ? (0, R.getOrFetchSubscriptionPlan)(s) : null,
+    subscriptionPlan: null != s ? (0, h.getOrFetchSubscriptionPlan)(s) : null,
     giftCodes: i
   }
-})(P)
+})(L)

@@ -1,48 +1,47 @@
 "use strict";
-A.r(t), A.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return d
+    return o
   }
 });
-var a = A("735250");
-A("470079");
-var l = A("866442"),
-  s = A("481060"),
-  n = A("682864"),
-  r = A("630641"),
-  i = A("689938"),
-  o = A("347154");
+var a = s("735250");
+s("470079");
+var n = s("866442"),
+  r = s("481060"),
+  l = s("630641"),
+  u = s("689938"),
+  i = s("347154");
 
-function d(e) {
+function o(e) {
   let {
     locked: t,
-    role: A,
-    textVariant: d = "text-xs/medium"
-  } = e, u = (0, s.useToken)(s.tokens.colors.INTERACTIVE_NORMAL).hex();
+    role: s,
+    textVariant: o = "text-xs/medium"
+  } = e, c = (0, r.useToken)(r.tokens.colors.INTERACTIVE_NORMAL).hex();
   return (0, a.jsx)("div", {
-    className: o.roleTagContainer,
+    className: i.roleTagContainer,
     children: (0, a.jsxs)("div", {
-      className: o.roleTag,
+      className: i.roleTag,
       children: [(0, a.jsx)("div", {
-        className: o.roleColor,
+        className: i.roleColor,
         style: {
-          backgroundColor: (0, l.int2hex)(A.color)
+          backgroundColor: (0, n.int2hex)(s.color)
         }
-      }), (0, a.jsx)(n.default, {
+      }), (0, a.jsx)(r.Spacer, {
         size: 8,
         horizontal: !0
-      }), (0, a.jsxs)(s.Text, {
-        variant: d,
+      }), (0, a.jsxs)(r.Text, {
+        variant: o,
         color: "text-normal",
-        children: [(0, a.jsx)(s.HiddenVisually, {
-          children: i.default.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER
-        }), A.name]
+        children: [(0, a.jsx)(r.HiddenVisually, {
+          children: u.default.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER
+        }), s.name]
       }), !0 === t && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(n.default, {
+        children: [(0, a.jsx)(r.Spacer, {
           size: 8,
           horizontal: !0
-        }), (0, a.jsx)(r.default, {
-          color: u
+        }), (0, a.jsx)(l.default, {
+          color: c
         })]
       })]
     })

@@ -16,21 +16,20 @@ var a, l, n, i, r = s("735250"),
   S = s("402766"),
   f = s("696202"),
   m = s("630641"),
-  N = s("26290"),
-  g = s("267642"),
-  h = s("981631"),
-  C = s("689938"),
-  R = s("961414");
-let x = {
+  N = s("267642"),
+  g = s("981631"),
+  h = s("689938"),
+  C = s("961414");
+let R = {
     tension: 200,
     friction: 20
   },
-  L = {
-    ...x,
+  x = {
+    ...R,
     clamp: !0
   };
 
-function O(e) {
+function L(e) {
   let [t, s] = o.useState(0), {
     numUnlocked: a,
     numRequired: l
@@ -40,7 +39,7 @@ function O(e) {
     s(2)
   }, d = 2 === t, _ = 1 === t;
   if (!(!(a >= l) && a / l >= .8) || d) return null;
-  let I = _ || d ? R.hidden : null,
+  let I = _ || d ? C.hidden : null,
     S = _ ? T.default.Stages.FLYING : T.default.Stages.HOVERING;
   return (0, r.jsx)(c.Spring, {
     from: {
@@ -49,31 +48,31 @@ function O(e) {
     to: {
       opacity: 1
     },
-    config: L,
+    config: x,
     children: e => (0, r.jsxs)(c.animated.div, {
-      className: R.tierClose,
+      className: C.tierClose,
       style: e,
       children: [(0, r.jsx)(T.default, {
-        className: R.tierCloseMechaWumpus,
+        className: C.tierCloseMechaWumpus,
         stage: S,
         onFlyingComplete: i
       }), (0, r.jsx)("div", {
-        className: u()(R.tierCloseHint, I),
-        children: C.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_CLOSE_HINT.format({
+        className: u()(C.tierCloseHint, I),
+        children: h.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_CLOSE_HINT.format({
           numLeft: l - a
         })
       }), (0, r.jsx)(E.Clickable, {
         onClick: n,
-        className: u()(R.tierCloseClose, I),
+        className: u()(C.tierCloseClose, I),
         children: (0, r.jsx)(f.default, {
-          className: R.tierCloseCloseIcon
+          className: C.tierCloseCloseIcon
         })
       })]
     })
   })
 }
 
-function A(e) {
+function O(e) {
   let {
     withCardBody: t,
     isAnimatedTo: s,
@@ -97,32 +96,32 @@ function A(e) {
     to: {
       unlockedTranslateY: 0 === f ? 50 : 0
     },
-    config: x,
+    config: R,
     children: e => (0, r.jsx)("div", {
       className: u()({
-        [R.tierHeaderWithoutCardBody]: !t,
-        [R.tierHeaderUnlocked]: a,
-        [R.tierHeaderLocked]: !a
+        [C.tierHeaderWithoutCardBody]: !t,
+        [C.tierHeaderUnlocked]: a,
+        [C.tierHeaderLocked]: !a
       }, I),
       ref: T,
       children: (0, r.jsxs)("div", {
-        className: R.tierHeaderContent,
+        className: C.tierHeaderContent,
         children: [(0, r.jsx)(S.default, {
           tier: n.tier,
-          className: u()(R.tierIcon, {
-            [R.tierIconLocked]: !a
+          className: u()(C.tierIcon, {
+            [C.tierIconLocked]: !a
           })
         }), (0, r.jsx)("div", {
-          className: u()(R.tierTitle, {
-            [R.tierTitleActive]: a
+          className: u()(C.tierTitle, {
+            [C.tierTitleActive]: a
           }),
           children: n.title
-        }), i ? (0, r.jsx)(M, {
+        }), i ? (0, r.jsx)(A, {
           transform: null == e ? void 0 : e.unlockedTranslateY.to(e => "translate3d(0, ".concat(e, "px, 0)")),
           headerButton: d,
           subscriptionsRequired: E,
           hasAnimatedUnlocked: a
-        }) : null, (0, r.jsx)(O, {
+        }) : null, (0, r.jsx)(L, {
           numUnlocked: _,
           numRequired: E
         })]
@@ -142,82 +141,82 @@ function p(e) {
     headerButton: o = null,
     withCardBody: d = !0,
     guildId: c,
-    showHeaderLockStatus: E = !0
-  } = e, T = (0, g.getAppliedGuildBoostsRequired)(c)[l.tier], S = n && s >= T, f = l.tier !== h.BoostedGuildTiers.NONE && l.tier !== h.BoostedGuildTiers.TIER_1, m = (e, t) => {
+    showHeaderLockStatus: T = !0
+  } = e, S = (0, N.getAppliedGuildBoostsRequired)(c)[l.tier], f = n && s >= S, m = l.tier !== g.BoostedGuildTiers.NONE && l.tier !== g.BoostedGuildTiers.TIER_1, R = (e, t) => {
     let {
       icon: s,
       className: a
     } = (0, _.getPerkIcon)(e.icon, t);
     return (0, r.jsxs)("div", {
-      className: R.perk,
+      className: C.perk,
       children: [(0, r.jsx)(I.default, {
         name: String(e.icon),
         icon: s,
-        className: R.perkIcon,
+        className: C.perkIcon,
         iconClassName: a
       }), (0, r.jsxs)("div", {
-        className: R.perkText,
+        className: C.perkText,
         children: [(0, r.jsxs)("div", {
-          className: R.perkTitle,
-          children: [e.title, e.isNew ? (0, r.jsx)(N.TextBadge, {
-            className: R.newBadge,
-            text: C.default.Messages.NEW
+          className: C.perkTitle,
+          children: [e.title, e.isNew ? (0, r.jsx)(E.TextBadge, {
+            className: C.newBadge,
+            text: h.default.Messages.NEW
           }) : null]
         }), (0, r.jsx)("div", {
-          className: R.perkDescription,
+          className: C.perkDescription,
           children: e.description
         })]
       })]
     }, e.title)
   };
   return (0, r.jsxs)("div", {
-    className: u()(R.tier, {
-      [R.tierBottomMargin]: i
+    className: u()(C.tier, {
+      [C.tierBottomMargin]: i
     }),
-    children: [(0, r.jsx)(A, {
+    children: [(0, r.jsx)(O, {
       subscriptionCount: s,
       tier: l,
       headerButton: o,
-      showHeaderLockStatus: E,
+      showHeaderLockStatus: T,
       onSetRef: e => {
         null != a && a(e, l)
       },
       withCardBody: d,
       guildId: c,
       hasBottomMargin: i,
-      subscriptionsRequired: T,
-      hasAnimatedUnlocked: S,
+      subscriptionsRequired: S,
+      hasAnimatedUnlocked: f,
       isAnimatedTo: n
     }), (0, r.jsx)("div", {
       className: u()({
-        [R.tierBody]: d
+        [C.tierBody]: d
       }),
       children: null != t ? t : (0, r.jsxs)(r.Fragment, {
-        children: [f ? (0, r.jsx)("div", {
-          className: R.previousPerks,
-          children: C.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_PREVIOUS_PERKS
+        children: [m ? (0, r.jsx)("div", {
+          className: C.previousPerks,
+          children: h.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_PREVIOUS_PERKS
         }) : null, null != l.perks && (0, r.jsx)("div", {
-          className: R.perks,
-          children: l.perks.map(e => m(e, S))
+          className: C.perks,
+          children: l.perks.map(e => R(e, f))
         })]
       })
     })]
   }, l.tier)
 }(n = a || (a = {}))[n.OPEN = 0] = "OPEN", n[n.CLOSING = 1] = "CLOSING", n[n.CLOSED = 2] = "CLOSED", (i = l || (l = {}))[i.NONE = 0] = "NONE", i[i.UNLOCKED_SLIDE = 1] = "UNLOCKED_SLIDE";
-let M = e => {
+let A = e => {
     let {
       transform: t,
       hasAnimatedUnlocked: s,
       headerButton: a,
       subscriptionsRequired: l
     } = e;
-    return null !== a ? a : s ? (0, r.jsx)(D, {
+    return null !== a ? a : s ? (0, r.jsx)(M, {
       transform: t
-    }) : (0, r.jsx)(v, {
+    }) : (0, r.jsx)(D, {
       subscriptionsRequired: l
     })
   },
-  D = e => {
+  M = e => {
     let {
       transform: t
     } = e;
@@ -225,22 +224,22 @@ let M = e => {
       style: {
         transform: t
       },
-      className: R.tierUnlocked,
-      children: C.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_UNLOCKED
+      className: C.tierUnlocked,
+      children: h.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_UNLOCKED
     })
   },
-  v = e => {
+  D = e => {
     let {
       subscriptionsRequired: t
     } = e;
     return (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)("div", {
-        className: R.tierRequirement,
-        children: C.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_TIER_REQUIREMENT.format({
+        className: C.tierRequirement,
+        children: h.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_TIER_REQUIREMENT.format({
           required: t
         })
       }), (0, r.jsx)(m.default, {
-        className: R.tierLock
+        className: C.tierLock
       })]
     })
   }

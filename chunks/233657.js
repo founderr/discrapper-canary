@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return g
   }
 });
 var l = n("735250");
@@ -15,24 +15,23 @@ var a = n("442837"),
   d = n("306680"),
   c = n("9156"),
   f = n("305878"),
-  h = n("26290"),
-  m = n("434479"),
-  C = n("490897"),
-  p = n("689938"),
-  g = n("628462");
+  h = n("434479"),
+  m = n("490897"),
+  C = n("689938"),
+  p = n("628462");
 
-function E(e) {
+function g(e) {
   let {
     guild: t,
-    selected: E
+    selected: g
   } = e, {
-    hasUnread: S,
-    mentionCount: _
+    hasUnread: E,
+    mentionCount: S
   } = (0, a.useStateFromStoresObject)([d.default], () => ({
-    hasUnread: d.default.hasUnread(t.id, C.ReadStateTypes.GUILD_EVENT),
-    mentionCount: d.default.getMentionCount(t.id, C.ReadStateTypes.GUILD_EVENT)
-  }), [t.id]), I = (0, a.useStateFromStores)([c.default], () => c.default.isMuteScheduledEventsEnabled(t.id));
-  async function N() {
+    hasUnread: d.default.hasUnread(t.id, m.ReadStateTypes.GUILD_EVENT),
+    mentionCount: d.default.getMentionCount(t.id, m.ReadStateTypes.GUILD_EVENT)
+  }), [t.id]), _ = (0, a.useStateFromStores)([c.default], () => c.default.isMuteScheduledEventsEnabled(t.id));
+  async function I() {
     await (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -43,18 +42,18 @@ function E(e) {
       })
     }), (0, o.markDismissibleContentAsDismissed)(s.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)
   }
-  let T = (0, u.default)(t.id),
-    A = T.length > 0 ? p.default.Messages.GUILD_EVENTS_PLURAL.format({
-      number: T.length
-    }) : p.default.Messages.GUILD_EVENTS;
-  return (0, l.jsx)(m.BasicChannelRow, {
+  let N = (0, u.default)(t.id),
+    T = N.length > 0 ? C.default.Messages.GUILD_EVENTS_PLURAL.format({
+      number: N.length
+    }) : C.default.Messages.GUILD_EVENTS;
+  return (0, l.jsx)(h.BasicChannelRow, {
     id: "upcoming-events-".concat(t.id),
     renderIcon: e => (0, l.jsx)(f.default, {
       className: e
     }),
-    text: A,
-    selected: E,
-    onClick: N,
+    text: T,
+    selected: g,
+    onClick: I,
     onContextMenu: e => {
       (0, r.openContextMenuLazy)(e, async () => {
         let {
@@ -66,11 +65,11 @@ function E(e) {
         })
       })
     },
-    showUnread: S && !I,
-    trailing: !I && _ > 0 ? (0, l.jsx)(h.NumberBadge, {
-      className: g.numberBadge,
+    showUnread: E && !_,
+    trailing: !_ && S > 0 ? (0, l.jsx)(i.NumberBadge, {
+      className: p.numberBadge,
       disableColor: !0,
-      count: _
+      count: S
     }) : null
   })
 }

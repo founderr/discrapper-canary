@@ -26,42 +26,41 @@ var n = l("735250"),
   I = l("944486"),
   _ = l("514342"),
   T = l("648414"),
-  v = l("26290"),
-  A = l("31445"),
-  O = l("59350"),
-  R = l("290511"),
-  j = l("176505"),
-  b = l("921944"),
-  L = l("689938"),
-  M = l("289327"),
-  D = l("19340");
+  v = l("31445"),
+  A = l("59350"),
+  O = l("290511"),
+  R = l("176505"),
+  j = l("921944"),
+  b = l("689938"),
+  L = l("289327"),
+  M = l("19340");
 
-function y(e) {
+function D(e) {
   let {
     guild: t,
     previousChannel: l
-  } = e, s = (0, A.default)(t);
+  } = e, s = (0, v.default)(t);
   a.useEffect(() => {
     (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX, {
-      dismissAction: b.ContentDismissActionType.DISMISS
+      dismissAction: j.ContentDismissActionType.DISMISS
     })
   });
-  let i = s ? L.default.Messages.CHANNELS_AND_ROLES_HTML_TITLE.format({
+  let i = s ? b.default.Messages.CHANNELS_AND_ROLES_HTML_TITLE.format({
       guildName: t.name
-    }) : L.default.Messages.CHANNEL_BROWSER_HTML_TITLE.format({
+    }) : b.default.Messages.CHANNEL_BROWSER_HTML_TITLE.format({
       guildName: t.name
     }),
-    r = s ? L.default.Messages.CHANNELS_AND_ROLES : L.default.Messages.CHANNEL_BROWSER_TITLE;
+    r = s ? b.default.Messages.CHANNELS_AND_ROLES : b.default.Messages.CHANNEL_BROWSER_TITLE;
   return (0, c.usePageTitle)({
     location: i
   }), (0, n.jsxs)(m.default, {
-    className: M.header,
-    innerClassname: M.innerHeader,
+    className: L.header,
+    innerClassname: L.innerHeader,
     hideSearch: !0,
-    channelId: j.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
+    channelId: R.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
     guildId: t.id,
     toolbar: null != l ? (0, n.jsx)(u.Button, {
-      className: M.returnButton,
+      className: L.returnButton,
       size: u.Button.Sizes.SMALL,
       look: u.Button.Looks.OUTLINED,
       color: u.Button.Colors.PRIMARY,
@@ -69,13 +68,13 @@ function y(e) {
         null != l && (0, g.transitionToGuild)(t.id, l.id)
       },
       children: (0, n.jsx)(u.Text, {
-        className: M.returnButtonText,
+        className: L.returnButtonText,
         variant: "text-xs/medium",
         color: "none",
-        children: L.default.Messages.RETURN_TO_CHANNEL.format({
+        children: b.default.Messages.RETURN_TO_CHANNEL.format({
           channelNameHook: () => null == l ? null : (0, n.jsxs)(a.Fragment, {
             children: [(0, n.jsx)(f.ChannelItemIcon, {
-              className: M.returnIcon,
+              className: L.returnIcon,
               guild: t,
               channel: l
             }), (0, n.jsx)(_.default, {
@@ -102,56 +101,56 @@ function B(e) {
   let {
     guildId: t,
     selectedSection: l
-  } = e, s = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(t)), d = (0, A.default)(s), [c, h] = a.useState(null != l ? l : R.GuildOnboardingTab.CUSTOMIZE);
+  } = e, s = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(t)), d = (0, v.default)(s), [c, h] = a.useState(null != l ? l : O.GuildOnboardingTab.CUSTOMIZE);
   a.useEffect(() => {
     null != l && h(l)
   }, [l]);
   let f = (0, r.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)),
-    m = (0, r.useStateFromStores)([p.default], () => p.default.getCurrentSidebarChannelId(j.StaticChannelRoute.CHANNEL_BROWSER)),
-    g = null != m && c === R.GuildOnboardingTab.BROWSE,
+    m = (0, r.useStateFromStores)([p.default], () => p.default.getCurrentSidebarChannelId(R.StaticChannelRoute.CHANNEL_BROWSER)),
+    g = null != m && c === O.GuildOnboardingTab.BROWSE,
     _ = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(f)),
     T = (0, r.useStateFromStores)([x.default], () => x.default.getNewChannelIds(t).size > 0),
-    b = (0, C.useChannelBrowserChannelCount)(t);
+    j = (0, C.useChannelBrowserChannelCount)(t);
   return null == s ? null : (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: i()(D.chat, {
-        [D.threadSidebarOpen]: g
+      className: i()(M.chat, {
+        [M.threadSidebarOpen]: g
       }),
-      children: [(0, n.jsx)(y, {
+      children: [(0, n.jsx)(D, {
         guild: s,
         previousChannel: _
       }), (0, n.jsxs)("div", {
-        className: i()(D.content, M.container),
+        className: i()(M.content, L.container),
         children: [d && (0, n.jsxs)(u.TabBar, {
-          className: M.tabBar,
+          className: L.tabBar,
           type: "top",
           look: "brand",
           selectedItem: c,
           onItemSelect: e => h(e),
           children: [(0, n.jsx)(u.TabBar.Item, {
-            className: M.tabBarItem,
-            id: R.GuildOnboardingTab.CUSTOMIZE,
-            children: L.default.Messages.OPT_IN_GUILD_NOTICE_CTA
-          }, R.GuildOnboardingTab.CUSTOMIZE), (0, n.jsxs)(u.TabBar.Item, {
-            className: M.tabBarItem,
-            id: R.GuildOnboardingTab.BROWSE,
-            "aria-label": L.default.Messages.CHANNEL_BROWSER_TITLE,
-            children: [L.default.Messages.CHANNEL_BROWSER_TITLE, (0, n.jsx)(v.TextBadge, {
-              text: T ? L.default.Messages.CHANNEL_TYPE_NEW : b,
+            className: L.tabBarItem,
+            id: O.GuildOnboardingTab.CUSTOMIZE,
+            children: b.default.Messages.OPT_IN_GUILD_NOTICE_CTA
+          }, O.GuildOnboardingTab.CUSTOMIZE), (0, n.jsxs)(u.TabBar.Item, {
+            className: L.tabBarItem,
+            id: O.GuildOnboardingTab.BROWSE,
+            "aria-label": b.default.Messages.CHANNEL_BROWSER_TITLE,
+            children: [b.default.Messages.CHANNEL_BROWSER_TITLE, (0, n.jsx)(u.TextBadge, {
+              text: T ? b.default.Messages.CHANNEL_TYPE_NEW : j,
               color: T ? o.default.unsafe_rawColors.BRAND_260.css : o.default.colors.BACKGROUND_ACCENT.css,
               className: i()({
-                [M.newBadge]: T
+                [L.newBadge]: T
               })
             })]
-          }, R.GuildOnboardingTab.BROWSE)]
+          }, O.GuildOnboardingTab.BROWSE)]
         }), (() => {
           switch (c) {
-            case R.GuildOnboardingTab.CUSTOMIZE:
-              return (0, n.jsx)(O.default, {
+            case O.GuildOnboardingTab.CUSTOMIZE:
+              return (0, n.jsx)(A.default, {
                 guildId: t,
-                onBrowseChannels: () => h(R.GuildOnboardingTab.BROWSE)
+                onBrowseChannels: () => h(O.GuildOnboardingTab.BROWSE)
               });
-            case R.GuildOnboardingTab.BROWSE:
+            case O.GuildOnboardingTab.BROWSE:
             default:
               return (0, n.jsx)(N.default, {
                 guildId: t

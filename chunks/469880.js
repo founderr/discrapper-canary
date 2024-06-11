@@ -1,56 +1,55 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return f
+    return c
   }
 });
 var n = l("735250"),
   a = l("470079"),
   s = l("481060"),
-  i = l("6048"),
-  r = l("932776"),
-  o = l("680298"),
-  d = l("289465"),
-  u = l("689938"),
-  c = l("869245");
+  i = l("932776"),
+  r = l("680298"),
+  o = l("289465"),
+  d = l("689938"),
+  u = l("869245");
 
-function f(e) {
+function c(e) {
   let {
     applicationIcon: t,
     applicationName: l,
-    canNavigate: f,
-    guildId: I
+    canNavigate: c,
+    guildId: f
   } = e, {
-    results: m,
-    query: T,
-    setQuery: E,
-    unfilteredCount: N
-  } = (0, r.useIntegrationPermissionCommandSearch)();
+    results: I,
+    query: m,
+    setQuery: T,
+    unfilteredCount: E
+  } = (0, i.useIntegrationPermissionCommandSearch)();
   return (0, n.jsx)(a.Fragment, {
-    children: null != m && N > 0 ? (0, n.jsx)(d.default, {
-      bar: (0, n.jsx)(i.default, {
-        query: T,
-        onChange: E,
-        onClear: () => E("")
+    children: null != I && E > 0 ? (0, n.jsx)(o.default, {
+      bar: (0, n.jsx)(s.SearchBar, {
+        query: m,
+        onChange: T,
+        onClear: () => T("")
       }),
       inModal: !1,
-      title: u.default.Messages.COMMANDS,
-      children: m.map((e, i) => (0, n.jsxs)(a.Fragment, {
-        children: [(0, n.jsx)(o.default, {
+      title: d.default.Messages.COMMANDS,
+      children: I.map((e, i) => (0, n.jsxs)(a.Fragment, {
+        children: [(0, n.jsx)(r.default, {
           applicationIcon: t,
           applicationName: l,
-          canNavigate: f,
+          canNavigate: c,
           command: e,
-          guildId: I
-        }), i < m.length - 1 ? (0, n.jsx)(s.FormDivider, {}) : null]
+          guildId: f
+        }), i < I.length - 1 ? (0, n.jsx)(s.FormDivider, {}) : null]
       }, e.id))
     }) : (0, n.jsx)(s.Card, {
-      className: c.emptyCard,
+      className: u.emptyCard,
       editable: !0,
       children: (0, n.jsx)(s.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
-        children: u.default.Messages.INTEGRATIONS_APPLICATION_NO_COMMANDS
+        children: d.default.Messages.INTEGRATIONS_APPLICATION_NO_COMMANDS
       })
     })
   })

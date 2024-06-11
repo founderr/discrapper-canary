@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return F
+    return B
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,32 +19,31 @@ var a = s("735250"),
   T = s("103575"),
   S = s("594174"),
   f = s("474333"),
-  m = s("6048"),
-  N = s("696202"),
-  g = s("158010"),
-  h = s("626135"),
-  C = s("243730"),
-  R = s("434404"),
-  x = s("946724"),
-  L = s("130341"),
-  O = s("95242"),
-  A = s("420966"),
+  m = s("696202"),
+  N = s("158010"),
+  g = s("626135"),
+  h = s("243730"),
+  C = s("434404"),
+  R = s("946724"),
+  x = s("130341"),
+  L = s("95242"),
+  O = s("420966"),
   p = s("566476"),
-  M = s("203377"),
-  D = s("981631"),
-  v = s("689938"),
-  j = s("245660"),
-  G = s("585512");
-async function U(e, t, s) {
+  A = s("203377"),
+  M = s("981631"),
+  D = s("689938"),
+  v = s("245660"),
+  j = s("585512");
+async function G(e, t, s) {
   let l = e.roles.filter(e => e !== s);
   try {
-    await R.default.updateMemberRoles(t, e.id, l, [], [s])
+    await C.default.updateMemberRoles(t, e.id, l, [], [s])
   } catch (t) {
     let e = new u.default(t);
     (0, o.openModal)(t => (0, a.jsx)(o.ConfirmModal, {
       ...t,
-      header: v.default.Messages.ERROR_GENERIC_TITLE,
-      confirmText: v.default.Messages.OKAY,
+      header: D.default.Messages.ERROR_GENERIC_TITLE,
+      confirmText: D.default.Messages.OKAY,
       confirmButtonColor: o.Button.Colors.BRAND,
       children: (0, a.jsx)(o.Text, {
         color: "text-normal",
@@ -55,7 +54,7 @@ async function U(e, t, s) {
   }
 }
 
-function P(e) {
+function U(e) {
   let {
     member: t,
     guildId: n,
@@ -68,28 +67,28 @@ function P(e) {
   function _(e) {
     if (e.stopPropagation(), !u) {
       if (e.shiftKey) {
-        U(t, n, r);
+        G(t, n, r);
         return
       }! function(e, t, s) {
-        let l = x.default.getRole(s);
+        let l = R.default.getRole(s);
         (0, o.openModal)(n => (0, a.jsxs)(o.ConfirmModal, {
           ...n,
-          header: v.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
-          confirmText: v.default.Messages.REMOVE,
-          cancelText: v.default.Messages.CANCEL,
-          onConfirm: () => U(e, t, s),
+          header: D.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
+          confirmText: D.default.Messages.REMOVE,
+          cancelText: D.default.Messages.CANCEL,
+          onConfirm: () => G(e, t, s),
           children: [(0, a.jsx)(o.Text, {
             color: "text-normal",
             variant: "text-md/normal",
-            children: v.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_BODY.format({
+            children: D.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_BODY.format({
               username: e.name,
               roleName: null == l ? void 0 : l.name
             })
           }), (0, a.jsx)(o.Text, {
-            className: j.removeTip,
+            className: v.removeTip,
             color: "text-muted",
             variant: "text-md/normal",
-            children: v.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TIP
+            children: D.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TIP
           })]
         }))
       }(t, n, r)
@@ -111,7 +110,7 @@ function P(e) {
     })
   }
   return (0, c.useSubscribeGuildMembers)(E), (0, a.jsx)("div", {
-    className: G.contentWidth,
+    className: j.contentWidth,
     children: (0, a.jsx)(o.Popout, {
       renderPopout: e => (0, a.jsx)(T.default, {
         location: "GuildSettingsRolesEditMembers",
@@ -126,27 +125,27 @@ function P(e) {
       }),
       children: e => (0, a.jsxs)(o.Clickable, {
         ...e,
-        className: j.memberRow,
+        className: v.memberRow,
         onContextMenu: f,
         children: [(0, a.jsx)(p.default, {
-          className: j.memberDetails,
+          className: v.memberDetails,
           avatarURL: t.avatarURL,
           name: t.name,
           bot: t.bot,
           verifiedBot: t.verifiedBot,
           userTag: t.userTag
         }), (0, a.jsx)("div", {
-          className: j.removeButtonContainer,
+          className: v.removeButtonContainer,
           children: (0, a.jsx)(o.Tooltip, {
-            text: u ? v.default.Messages.ROLE_REMOVE_MEMBER_MANAGED : v.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
+            text: u ? D.default.Messages.ROLE_REMOVE_MEMBER_MANAGED : D.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
             position: "top",
             children: e => (0, a.jsx)(o.Clickable, {
               ...e,
-              className: i()(j.removeButton, {
-                [j.removeButtonDisabled]: u
+              className: i()(v.removeButton, {
+                [v.removeButtonDisabled]: u
               }),
               onClick: _,
-              children: (0, a.jsx)(N.default, {
+              children: (0, a.jsx)(m.default, {
                 width: 16,
                 height: 16
               })
@@ -158,20 +157,20 @@ function P(e) {
   })
 }
 
-function b(e) {
+function P(e) {
   let {
     handleAddClick: t,
     locked: s
   } = e;
   return (0, a.jsx)("div", {
-    className: G.contentWidth,
+    className: j.contentWidth,
     children: (0, a.jsxs)("div", {
-      className: i()(j.memberRow, j.emptyRowContainer),
-      children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(o.Text, {
-        className: j.emptyRowText,
+      className: i()(v.memberRow, v.emptyRowContainer),
+      children: [(0, a.jsx)(N.default, {}), (0, a.jsx)(o.Text, {
+        className: v.emptyRowText,
         variant: "text-sm/semibold",
         color: "text-muted",
-        children: v.default.Messages.ROLE_EDIT_MEMBERS_NO_SEARCH_RESULTS.format({
+        children: D.default.Messages.ROLE_EDIT_MEMBERS_NO_SEARCH_RESULTS.format({
           addMembersHook: function(e, l) {
             return s ? null : (0, a.jsx)(o.Anchor, {
               onClick: t,
@@ -184,7 +183,7 @@ function b(e) {
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     guildId: t,
     roleId: s,
@@ -197,13 +196,13 @@ function y(e) {
   } = e, {
     analyticsLocations: I
   } = (0, _.default)(E.default.MEMBER_LIST), T = l.useMemo(() => n.trim().toLowerCase(), [n]);
-  (0, L.useQueryGuildMembers)(t, T);
-  let S = l.useMemo(() => u.filter(e => (0, L.filterFullMembersByQuery)(T, e)), [u, T]),
+  (0, x.useQueryGuildMembers)(t, T);
+  let S = l.useMemo(() => u.filter(e => (0, x.filterFullMembersByQuery)(T, e)), [u, T]),
     f = l.useMemo(() => S.sort((e, t) => e.name.localeCompare(t.name)), [S]);
   return (0, a.jsx)(_.AnalyticsLocationProvider, {
     value: I,
     children: (0, a.jsx)(o.ListAuto, {
-      className: j.list,
+      className: v.list,
       sections: [Math.max(S.length, 1)],
       sectionHeight: i,
       renderSection: () => (0, a.jsx)("div", {
@@ -219,12 +218,12 @@ function y(e) {
         let {
           row: l
         } = e;
-        if (0 === f.length) return (0, a.jsx)(b, {
+        if (0 === f.length) return (0, a.jsx)(P, {
           handleAddClick: c,
           locked: r
         }, "empty");
         let n = f[l];
-        return (0, a.jsx)(P, {
+        return (0, a.jsx)(U, {
           member: n,
           guildId: t,
           roleId: s,
@@ -236,7 +235,7 @@ function y(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     query: t,
     setQuery: s,
@@ -244,25 +243,25 @@ function B(e) {
     handleAddClick: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: j.searchContainer,
-    children: [(0, a.jsx)(m.default, {
-      size: m.default.Sizes.MEDIUM,
+    className: v.searchContainer,
+    children: [(0, a.jsx)(o.SearchBar, {
+      size: o.SearchBar.Sizes.MEDIUM,
       query: t,
       onChange: s,
       onClear: () => s(""),
-      placeholder: v.default.Messages.SEARCH_MEMBERS,
-      "aria-label": v.default.Messages.SEARCH_MEMBERS
+      placeholder: D.default.Messages.SEARCH_MEMBERS,
+      "aria-label": D.default.Messages.SEARCH_MEMBERS
     }), (0, a.jsx)(o.Button, {
-      className: j.addButton,
+      className: v.addButton,
       size: o.Button.Sizes.SMALL,
       onClick: n,
       disabled: l,
-      children: v.default.Messages.ROLE_ADD_MEMBERS_BUTTON
+      children: D.default.Messages.ROLE_ADD_MEMBERS_BUTTON
     })]
   })
 }
 
-function F(e) {
+function B(e) {
   let {
     guild: t,
     role: n,
@@ -271,14 +270,14 @@ function F(e) {
   } = e, [c, E] = l.useState(""), {
     headerHeight: _,
     headerRef: I
-  } = (0, O.default)(0), {
+  } = (0, L.default)(0), {
     scrolledToTop: T,
     handleScroll: S
-  } = (0, A.useScrolledToTop)(), m = n.managed || d, N = (0, L.useGuildRoleMembers)(t.id, n.id), g = (0, r.useStateFromStores)([C.default], () => {
+  } = (0, O.useScrolledToTop)(), m = n.managed || d, N = (0, x.useGuildRoleMembers)(t.id, n.id), C = (0, r.useStateFromStores)([h.default], () => {
     var e, s;
-    return null !== (s = null === (e = C.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[n.id]) && void 0 !== s ? s : 0
+    return null !== (s = null === (e = h.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[n.id]) && void 0 !== s ? s : 0
   }) > N.length, R = () => {
-    h.default.track(D.AnalyticEvents.OPEN_MODAL, {
+    g.default.track(M.AnalyticEvents.OPEN_MODAL, {
       type: "Add Role Members",
       location_page: "Role Settings",
       location_section: "Members"
@@ -294,34 +293,34 @@ function F(e) {
     })
   };
   return (0, a.jsxs)("div", {
-    className: j.container,
+    className: v.container,
     children: [(0, a.jsx)("div", {
-      className: j.headerContainer,
+      className: v.headerContainer,
       ref: I,
       children: (0, a.jsx)("div", {
-        className: G.contentWidth,
+        className: j.contentWidth,
         children: (0, a.jsxs)("div", {
-          className: i()(G.header, {
-            [G.stickyHeaderElevated]: !T
+          className: i()(j.header, {
+            [j.stickyHeaderElevated]: !T
           }),
-          children: [(0, a.jsx)(A.default, {
+          children: [(0, a.jsx)(O.default, {
             guild: t,
             role: n,
-            selectedSection: M.GuildSettingsRoleEditSections.MEMBERS,
+            selectedSection: A.GuildSettingsRoleEditSections.MEMBERS,
             setSelectedSection: u
-          }), (0, a.jsx)(B, {
+          }), (0, a.jsx)(y, {
             query: c,
             setQuery: E,
             locked: m,
             handleAddClick: R
-          }), g ? (0, a.jsx)(f.default, {
-            className: j.searchWarning,
+          }), C ? (0, a.jsx)(f.default, {
+            className: v.searchWarning,
             messageType: f.HelpMessageTypes.INFO,
-            children: v.default.Messages.ROLE_EDIT_MEMBERS_MISSING
+            children: D.default.Messages.ROLE_EDIT_MEMBERS_MISSING
           }) : null]
         })
       })
-    }), (0, a.jsx)(y, {
+    }), (0, a.jsx)(b, {
       headerHeight: _ + 8,
       query: c,
       guildId: t.id,

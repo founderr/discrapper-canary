@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   ForwardModal: function() {
-    return C
+    return y
   }
 }), l("47120");
 var s = l("735250"),
@@ -13,46 +13,45 @@ var s = l("735250"),
   o = l("72214"),
   d = l("592125"),
   c = l("375954"),
-  f = l("6048"),
-  A = l("934415"),
-  _ = l("572004"),
-  E = l("823379"),
-  p = l("859155"),
-  I = l("822869"),
-  S = l("757853"),
-  h = l("912332"),
-  m = l("819727"),
-  T = l("689938"),
-  g = l("715270"),
-  y = l("621054");
+  f = l("934415"),
+  A = l("572004"),
+  _ = l("823379"),
+  E = l("859155"),
+  p = l("822869"),
+  I = l("757853"),
+  S = l("912332"),
+  h = l("819727"),
+  m = l("689938"),
+  T = l("715270"),
+  g = l("621054");
 
-function C(e) {
+function y(e) {
   let {
     channelId: t,
     messageId: l,
-    initialSelectedDestinations: C,
-    forwardOptions: N,
-    onClose: L,
-    ...R
-  } = e, [b, D] = a.useState(""), M = a.useMemo(() => ({
+    initialSelectedDestinations: y,
+    forwardOptions: C,
+    onClose: N,
+    ...L
+  } = e, [R, b] = a.useState(""), D = a.useMemo(() => ({
     type: "channel",
     id: t
-  }), [t]), [O, v] = a.useState(C), [F, x] = a.useState(!1), k = O.length, P = k >= m.MAX_DESTINATION_COUNT, G = (0, n.useStateFromStores)([c.default], () => c.default.getMessage(t, l), [t, l]), U = (0, n.useStateFromStores)([d.default], () => d.default.getChannel(t), [t]), j = (0, o.useShareSearchResults)({
-    searchText: b,
-    selectedDestinations: O,
-    originDestination: M
-  }), H = a.useCallback(() => {
-    (0, I.trackForwardCancel)(t, l), L()
-  }, [t, l, L]), w = a.useCallback(() => {
+  }), [t]), [M, O] = a.useState(y), [v, F] = a.useState(!1), x = M.length, k = x >= h.MAX_DESTINATION_COUNT, P = (0, n.useStateFromStores)([c.default], () => c.default.getMessage(t, l), [t, l]), G = (0, n.useStateFromStores)([d.default], () => d.default.getChannel(t), [t]), U = (0, o.useShareSearchResults)({
+    searchText: R,
+    selectedDestinations: M,
+    originDestination: D
+  }), j = a.useCallback(() => {
+    (0, p.trackForwardCancel)(t, l), N()
+  }, [t, l, N]), H = a.useCallback(() => {
     var e;
     let s = null === (e = d.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
     if (null == s) return;
-    let a = (0, A.getChannelPermalink)(s, t, l);
-    (0, i.showToast)((0, i.createToast)(T.default.Messages.COPIED_LINK, i.ToastType.LINK)), (0, _.copy)(a)
-  }, [t, l]), z = a.useCallback(() => {
-    D("")
-  }, [D]), W = a.useCallback(e => {
-    v(t => {
+    let a = (0, f.getChannelPermalink)(s, t, l);
+    (0, i.showToast)((0, i.createToast)(m.default.Messages.COPIED_LINK, i.ToastType.LINK)), (0, A.copy)(a)
+  }, [t, l]), w = a.useCallback(() => {
+    b("")
+  }, [b]), z = a.useCallback(e => {
+    O(t => {
       let l = t.findIndex(t => {
         let {
           type: l,
@@ -60,104 +59,104 @@ function C(e) {
         } = t;
         return l === e.type && s === e.id
       });
-      if (-1 === l) return P ? t : (D(""), [e, ...t]);
+      if (-1 === l) return k ? t : (b(""), [e, ...t]);
       let s = [...t];
       return s.splice(l, 1), s
     })
-  }, [P]), Q = a.useCallback(async () => {
+  }, [k]), W = a.useCallback(async () => {
     let e = c.default.getMessage(t, l);
     if (null == e) {
-      (0, i.showToast)((0, i.createToast)(T.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE));
+      (0, i.showToast)((0, i.createToast)(m.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE));
       return
     }
-    x(!0);
-    let s = O.map(r.destinationChannel).filter(E.isNotNullish);
-    (0, h.closeForwardModal)(), 1 === s.length && (0, u.transitionToChannel)(s[0]);
-    let a = await p.default.sendForwards(e, s, N);
+    F(!0);
+    let s = M.map(r.destinationChannel).filter(_.isNotNullish);
+    (0, S.closeForwardModal)(), 1 === s.length && (0, u.transitionToChannel)(s[0]);
+    let a = await E.default.sendForwards(e, s, C);
     if (a.every(e => {
         let {
           status: t
         } = e;
         return "fulfilled" === t
       })) {
-      (0, I.trackForwardSent)(t, l, !1, s.length), (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_FORWARD_SUCCESS, i.ToastType.FORWARD));
+      (0, p.trackForwardSent)(t, l, !1, s.length), (0, i.showToast)((0, i.createToast)(m.default.Messages.MESSAGE_FORWARD_SUCCESS, i.ToastType.FORWARD));
       return
-    }(0, I.trackForwardSent)(t, l, !0, s.length);
-    let n = O.filter((e, t) => "rejected" === a[t].status);
-    (0, h.showForwardFailedAlertModal)({
+    }(0, p.trackForwardSent)(t, l, !0, s.length);
+    let n = M.filter((e, t) => "rejected" === a[t].status);
+    (0, S.showForwardFailedAlertModal)({
       messageId: l,
       channelId: t,
       failedDestinations: n,
-      forwardOptions: N
+      forwardOptions: C
     })
-  }, [t, N, l, O]);
-  if (null == G || null == U) return null;
-  let K = j.length > 0 ? (0, s.jsx)(S.DestinationList, {
+  }, [t, C, l, M]);
+  if (null == P || null == G) return null;
+  let Q = U.length > 0 ? (0, s.jsx)(I.DestinationList, {
       paddingBottom: 16,
       paddingTop: 16,
-      rowData: j,
-      message: G,
-      originChannel: U,
-      handleToggleDestination: W,
-      selectedDestinations: O,
-      disableSelection: P
+      rowData: U,
+      message: P,
+      originChannel: G,
+      handleToggleDestination: z,
+      selectedDestinations: M,
+      disableSelection: k
     }) : (0, s.jsxs)(i.ModalContent, {
-      className: g.noResults,
+      className: T.noResults,
       children: [(0, s.jsx)("img", {
-        className: g.noResultsImg,
-        src: y,
+        className: T.noResultsImg,
+        src: g,
         alt: ""
       }), (0, s.jsx)(i.Text, {
         variant: "text-md/normal",
         color: "text-muted",
-        children: T.default.Messages.SEARCH_NO_RESULTS
+        children: m.default.Messages.SEARCH_NO_RESULTS
       })]
     }),
-    Y = k <= 1 ? T.default.Messages.SEND : T.default.Messages.MESSAGES_SEND_SEPARATELY.format({
-      count: k
+    K = x <= 1 ? m.default.Messages.SEND : m.default.Messages.MESSAGES_SEND_SEPARATELY.format({
+      count: x
     });
   return (0, s.jsxs)(i.ModalRoot, {
-    className: g.modal,
-    "aria-label": T.default.Messages.MESSAGE_ACTION_FORWARD_TO,
-    ...R,
+    className: T.modal,
+    "aria-label": m.default.Messages.MESSAGE_ACTION_FORWARD_TO,
+    ...L,
     children: [(0, s.jsxs)(i.ModalHeader, {
-      className: g.header,
+      className: T.header,
       children: [(0, s.jsxs)("div", {
-        className: g.titleLine,
+        className: T.titleLine,
         children: [(0, s.jsx)(i.Heading, {
           variant: "heading-lg/semibold",
-          children: T.default.Messages.MESSAGE_ACTION_FORWARD_TO
+          children: m.default.Messages.MESSAGE_ACTION_FORWARD_TO
         }), (0, s.jsx)(i.ModalCloseButton, {
-          className: g.closeButton,
-          onClick: H
+          className: T.closeButton,
+          onClick: j
         })]
-      }), (0, s.jsx)(f.default, {
-        size: f.default.Sizes.MEDIUM,
-        query: b,
-        onChange: D,
-        onClear: z,
-        placeholder: T.default.Messages.SEARCH,
-        "aria-label": T.default.Messages.SEARCH,
+      }), (0, s.jsx)(i.SearchBar, {
+        size: i.SearchBar.Sizes.MEDIUM,
+        query: R,
+        onChange: b,
+        onClear: w,
+        placeholder: m.default.Messages.SEARCH,
+        "aria-label": m.default.Messages.SEARCH,
         autoFocus: !0
-      }), P && (0, s.jsx)(i.FormErrorBlock, {
+      }), k && (0, s.jsx)(i.FormErrorBlock, {
         backgroundColor: i.FormErrorBlockColors.BACKGROUND_ACCENT,
-        iconClassName: g.warningIcon,
-        children: T.default.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({
-          count: m.MAX_DESTINATION_COUNT
+        iconClassName: T.warningIcon,
+        children: m.default.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({
+          count: h.MAX_DESTINATION_COUNT
         })
       })]
-    }), K, (0, s.jsxs)(i.ModalFooter, {
-      className: g.footer,
+    }), Q, (0, s.jsxs)(i.ModalFooter, {
+      className: T.footer,
       children: [(0, s.jsx)(i.Button, {
-        submitting: F,
-        disabled: 0 === k,
-        onClick: Q,
-        children: Y
+        submitting: v,
+        disabled: 0 === x,
+        onClick: W,
+        children: K
       }), (0, s.jsx)(i.Button, {
-        onClick: w,
+        onClick: H,
         look: i.Button.Looks.OUTLINED,
         color: i.Button.Colors.WHITE,
-        children: T.default.Messages.COPY_LINK
+        children: m.default.Messages.COPY_LINK
       })]
     })]
   })

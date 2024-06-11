@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return M
   }
 }), a("47120");
 var l = a("735250"),
@@ -13,24 +13,23 @@ var l = a("735250"),
   u = a("481060"),
   d = a("213609"),
   c = a("542383"),
-  E = a("682864"),
-  _ = a("153124"),
-  A = a("729285"),
-  m = a("79390"),
-  f = a("728076"),
-  L = a("2466"),
-  R = a("485168"),
-  C = a("309081"),
-  N = a("185306"),
-  T = a("759970"),
-  h = a("489887"),
-  O = a("20281"),
-  P = a("689938"),
-  I = a("812160");
-let g = (0, _.uid)(),
-  p = (0, _.uid)();
+  E = a("153124"),
+  _ = a("729285"),
+  A = a("79390"),
+  m = a("728076"),
+  f = a("2466"),
+  L = a("485168"),
+  R = a("309081"),
+  C = a("185306"),
+  N = a("759970"),
+  T = a("489887"),
+  h = a("20281"),
+  O = a("689938"),
+  P = a("812160");
+let I = (0, E.uid)(),
+  p = (0, E.uid)();
 
-function x(e) {
+function g(e) {
   let {
     question: t,
     onChange: a,
@@ -41,17 +40,17 @@ function x(e) {
     children: [(0, l.jsx)(u.FormTitle, {
       tag: u.FormTitleTags.LABEL,
       htmlFor: p,
-      children: P.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL
+      children: O.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL
     }), (0, l.jsx)(u.TextArea, {
       inputRef: o,
       id: p,
-      placeholder: P.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
+      placeholder: O.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
       value: t,
-      className: r()(I.questionInput, {
-        [I.hasError]: null != s
+      className: r()(P.questionInput, {
+        [P.hasError]: null != s
       }),
       onChange: a,
-      maxLength: h.MAX_POLL_QUESTION_LENGTH,
+      maxLength: T.MAX_POLL_QUESTION_LENGTH,
       error: s,
       onFocus: () => d(!0),
       onBlur: () => d(!1),
@@ -65,24 +64,24 @@ function x(e) {
   })
 }
 
-function M(e) {
+function x(e) {
   let {
     selectedDuration: t,
     onSelect: a
-  } = e, n = (0, L.default)(), s = n[t];
+  } = e, n = (0, f.default)(), s = n[t];
   return (0, l.jsxs)("div", {
-    className: I.duration,
+    className: P.duration,
     children: [(0, l.jsx)(u.Text, {
       variant: "text-md/medium",
       color: "header-secondary",
       tag: "label",
       "aria-hidden": !0,
-      children: P.default.Messages.CREATE_POLL_DURATION_LABEL
+      children: O.default.Messages.CREATE_POLL_DURATION_LABEL
     }), (0, l.jsx)(u.Select, {
-      "aria-label": P.default.Messages.CREATE_POLL_DURATION_SELECTION_ARIA_LABEL.format({
+      "aria-label": O.default.Messages.CREATE_POLL_DURATION_SELECTION_ARIA_LABEL.format({
         duration: s
       }),
-      className: I.durationSelect,
+      className: P.durationSelect,
       options: Object.entries(n).map(e => {
         let [t, a] = e;
         return {
@@ -102,203 +101,203 @@ function M(e) {
   })
 }
 
-function S(e) {
+function M(e) {
   let {
     channel: t,
     transitionState: a,
     onClose: s
-  } = e, _ = (0, m.useCanPostImagePolls)();
+  } = e, E = (0, A.useCanPostImagePolls)();
   (0, d.default)({
-    type: O.ImpressionTypes.MODAL,
+    type: h.ImpressionTypes.MODAL,
     name: o.ImpressionNames.POLL_EDITOR_VIEWED
   });
-  let L = n.useRef(null),
+  let f = n.useRef(null),
     p = n.useRef([]),
-    v = n.useRef([]),
-    j = n.useRef(null),
-    D = n.useRef([]),
-    b = n.useCallback(e => {
+    S = n.useRef([]),
+    v = n.useRef(null),
+    j = n.useRef([]),
+    D = n.useCallback(e => {
       var t, a, l, n;
       let {
         indexToRemove: s,
         numberOfAnswers: r
       } = e;
-      r === h.MIN_NUMBER_OF_ANSWERS_PER_POLL + 1 ? null === (a = j.current) || void 0 === a || null === (t = a.ref) || void 0 === t || t.focus() : null === (n = D.current[s === r - 1 ? s - 1 : s + 1]) || void 0 === n || null === (l = n.ref) || void 0 === l || l.focus()
+      r === T.MIN_NUMBER_OF_ANSWERS_PER_POLL + 1 ? null === (a = v.current) || void 0 === a || null === (t = a.ref) || void 0 === t || t.focus() : null === (n = j.current[s === r - 1 ? s - 1 : s + 1]) || void 0 === n || null === (l = n.ref) || void 0 === l || l.focus()
     }, []),
     {
-      answers: w,
-      question: U,
-      selectedLayoutType: y,
-      setSelectedLayoutType: k,
-      allowMultiSelect: B,
-      setAllowMultiSelect: F,
-      duration: H,
-      setDuration: G,
-      handleQuestionChange: W,
-      handleAnswerTextChange: K,
-      handleEmojiSelect: Y,
-      canAddMoreAnswers: V,
-      handleRemoveAnswerImage: z,
-      canRemoveMoreAnswers: X,
-      handleAddAnswer: q,
-      handleRemoveAnswer: J,
-      createPollError: Q,
-      handleSubmitPoll: Z,
-      fieldErrors: $,
-      submitting: ee,
-      shouldFocusOnInvalidField: et,
-      setShouldFocusOnInvalidField: ea
-    } = (0, f.default)(t, s, b),
+      answers: b,
+      question: w,
+      selectedLayoutType: U,
+      setSelectedLayoutType: y,
+      allowMultiSelect: k,
+      setAllowMultiSelect: B,
+      duration: F,
+      setDuration: H,
+      handleQuestionChange: G,
+      handleAnswerTextChange: W,
+      handleEmojiSelect: K,
+      canAddMoreAnswers: Y,
+      handleRemoveAnswerImage: V,
+      canRemoveMoreAnswers: z,
+      handleAddAnswer: X,
+      handleRemoveAnswer: q,
+      createPollError: J,
+      handleSubmitPoll: Q,
+      fieldErrors: Z,
+      submitting: $,
+      shouldFocusOnInvalidField: ee,
+      setShouldFocusOnInvalidField: et
+    } = (0, m.default)(t, s, D),
     {
-      trackPollCreationCancelled: el
-    } = (0, R.useTrackPollCreationEvents)(w, B, y),
-    en = n.useRef(w.length),
-    es = y === i.PollLayoutTypes.DEFAULT,
+      trackPollCreationCancelled: ea
+    } = (0, L.useTrackPollCreationEvents)(b, k, U),
+    el = n.useRef(b.length),
+    en = U === i.PollLayoutTypes.DEFAULT,
+    es = n.useCallback(() => {
+      ea(), s()
+    }, [s, ea]),
     er = n.useCallback(() => {
-      el(), s()
-    }, [s, el]),
-    eo = n.useCallback(() => {
-      if ((0, m.isPollCreationEmpty)(U, w, y)) er();
+      if ((0, A.isPollCreationEmpty)(w, b, U)) es();
       else {
-        (0, T.default)({
-          title: P.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
-          body: P.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
-          cta: P.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
-          closeLabel: P.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
+        (0, N.default)({
+          title: O.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
+          body: O.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
+          cta: O.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
+          closeLabel: O.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
           onConfirm: () => {
-            er()
+            es()
           }
         });
         return
       }
-    }, [er, w, U, y]);
+    }, [es, b, w, U]);
   n.useEffect(() => {
-    (0, u.updateModal)(h.POLL_CREATION_MODAL_KEY, e => (0, l.jsx)(S, {
+    (0, u.updateModal)(T.POLL_CREATION_MODAL_KEY, e => (0, l.jsx)(M, {
       ...e,
       channel: t
-    }), eo)
-  }, [eo, t]), n.useEffect(() => {
-    if (w.length > en.current) {
+    }), er)
+  }, [er, t]), n.useEffect(() => {
+    if (b.length > el.current) {
       var e;
-      null === (e = v.current[w.length - 1]) || void 0 === e || e.focus()
+      null === (e = S.current[b.length - 1]) || void 0 === e || e.focus()
     }
-    en.current = w.length
-  }, [w.length]), n.useEffect(() => {
-    if (et) {
+    el.current = b.length
+  }, [b.length]), n.useEffect(() => {
+    if (ee) {
       var e, t;
-      if ((null == $ ? void 0 : $.question) != null) null === (e = L.current) || void 0 === e || e.focus();
+      if ((null == Z ? void 0 : Z.question) != null) null === (e = f.current) || void 0 === e || e.focus();
       else {
-        let e = w.findIndex(e => $["answer-".concat(e.localCreationAnswerId)]); - 1 !== e && (null === (t = v.current[e]) || void 0 === t || t.focus())
+        let e = b.findIndex(e => Z["answer-".concat(e.localCreationAnswerId)]); - 1 !== e && (null === (t = S.current[e]) || void 0 === t || t.focus())
       }
-      ea(!1)
+      et(!1)
     }
-  }, [$, w, et, ea, v, p]);
-  let ei = (0, c.default)({
-    disabled: ee,
-    onSubmit: Z
+  }, [Z, b, ee, et, S, p]);
+  let eo = (0, c.default)({
+    disabled: $,
+    onSubmit: Q
   });
   return (0, l.jsxs)(u.ModalRoot, {
     size: u.ModalSize.MEDIUM,
-    className: I.container,
+    className: P.container,
     transitionState: a,
-    "aria-labelledby": g,
+    "aria-labelledby": I,
     children: [(0, l.jsxs)(u.ModalHeader, {
-      className: I.header,
+      className: P.header,
       separator: !1,
       children: [(0, l.jsx)(u.Heading, {
         color: "interactive-normal",
         variant: "text-lg/semibold",
-        className: I.headerText,
-        id: g,
-        children: P.default.Messages.CREATE_POLL_HEADING
+        className: P.headerText,
+        id: I,
+        children: O.default.Messages.CREATE_POLL_HEADING
       }), (0, l.jsx)(u.ModalCloseButton, {
-        onClick: eo
+        onClick: er
       })]
     }), (0, l.jsxs)(u.ModalContent, {
-      className: I.content,
-      onKeyDown: ei,
-      children: [null != Q && (0, l.jsx)(u.FormErrorBlock, {
-        className: I.apiErrorBlock,
-        children: Q.getAnyErrorMessage()
-      }), (0, l.jsx)(x, {
-        question: U,
-        onChange: W,
-        error: null == $ ? void 0 : $.question,
-        inputRef: L
-      }), _ && (0, l.jsx)(N.default, {
-        selectedLayoutType: y,
-        onSelectedLayoutType: k
-      }), (0, l.jsx)(E.default, {
+      className: P.content,
+      onKeyDown: eo,
+      children: [null != J && (0, l.jsx)(u.FormErrorBlock, {
+        className: P.apiErrorBlock,
+        children: J.getAnyErrorMessage()
+      }), (0, l.jsx)(g, {
+        question: w,
+        onChange: G,
+        error: null == Z ? void 0 : Z.question,
+        inputRef: f
+      }), E && (0, l.jsx)(C.default, {
+        selectedLayoutType: U,
+        onSelectedLayoutType: y
+      }), (0, l.jsx)(u.Spacer, {
         size: 26
       }), (0, l.jsxs)("fieldset", {
-        className: r()(I.answerInputsContainer, es ? I.defaultContainer : I.imageOnlyContainer),
+        className: r()(P.answerInputsContainer, en ? P.defaultContainer : P.imageOnlyContainer),
         children: [(0, l.jsx)(u.FormTitle, {
           tag: u.FormTitleTags.LEGEND,
-          children: P.default.Messages.CREATE_POLL_ANSWERS_FIELDSET_LABEL
-        }), w.map((e, a) => (0, l.jsx)(C.default, {
+          children: O.default.Messages.CREATE_POLL_ANSWERS_FIELDSET_LABEL
+        }), b.map((e, a) => (0, l.jsx)(R.default, {
           answer: e,
           channelId: t.id,
           index: a,
-          isLastAnswer: a === w.length - 1,
-          onEmojiSelect: Y,
-          onEmojiRemove: z,
-          layout: y,
-          onAnswerTextChange: K,
-          onRemoveAnswer: J,
-          addAnswer: q,
-          submitPoll: Z,
-          answerTextInputRefs: v,
-          error: null == $ ? void 0 : $["answer-".concat(e.localCreationAnswerId)],
-          canRemoveAnswer: X,
+          isLastAnswer: a === b.length - 1,
+          onEmojiSelect: K,
+          onEmojiRemove: V,
+          layout: U,
+          onAnswerTextChange: W,
+          onRemoveAnswer: q,
+          addAnswer: X,
+          submitPoll: Q,
+          answerTextInputRefs: S,
+          error: null == Z ? void 0 : Z["answer-".concat(e.localCreationAnswerId)],
+          canRemoveAnswer: z,
           ref: e => p.current[a] = e,
-          inputRef: e => v.current[a] = e,
-          deleteButtonRef: e => D.current[a] = e
-        }, e.localCreationAnswerId)), V && (0, l.jsxs)(u.Clickable, {
-          className: r()(es ? I.addAnswerButtonDefault : I.addAnswerButtonImageOnly, {
-            [I.canRemoveMoreAnswers]: X
+          inputRef: e => S.current[a] = e,
+          deleteButtonRef: e => j.current[a] = e
+        }, e.localCreationAnswerId)), Y && (0, l.jsxs)(u.Clickable, {
+          className: r()(en ? P.addAnswerButtonDefault : P.addAnswerButtonImageOnly, {
+            [P.canRemoveMoreAnswers]: z
           }),
-          onClick: V ? q : void 0,
-          "aria-label": P.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
-          ref: j,
-          children: [(0, l.jsx)(A.default, {
-            className: es ? I.addAnswerIconDefault : I.addAnswerIconImageOnly
-          }), es && (0, l.jsx)(u.Text, {
+          onClick: Y ? X : void 0,
+          "aria-label": O.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
+          ref: v,
+          children: [(0, l.jsx)(_.default, {
+            className: en ? P.addAnswerIconDefault : P.addAnswerIconImageOnly
+          }), en && (0, l.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            className: I.addAnswerButtonLabel,
-            children: P.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
+            className: P.addAnswerButtonLabel,
+            children: O.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
           })]
         })]
-      }), (0, l.jsx)(E.default, {
+      }), (0, l.jsx)(u.Spacer, {
         size: 18
-      }), (0, l.jsx)(M, {
-        selectedDuration: H,
-        onSelect: G
+      }), (0, l.jsx)(x, {
+        selectedDuration: F,
+        onSelect: H
       })]
     }), (0, l.jsxs)(u.ModalFooter, {
-      className: I.footer,
+      className: P.footer,
       children: [(0, l.jsx)(u.Checkbox, {
-        className: I.checkbox,
+        className: P.checkbox,
         type: u.Checkbox.Types.INVERTED,
         size: 24,
-        value: B,
+        value: k,
         checkboxColor: (0, u.useToken)(u.tokens.colors.INTERACTIVE_NORMAL).hex(),
-        onChange: (e, t) => F(t),
+        onChange: (e, t) => B(t),
         children: (0, l.jsx)(u.Text, {
           variant: "text-md/medium",
           color: "interactive-active",
-          children: P.default.Messages.CREATE_POLL_MULTIPLE_ANSWERS
+          children: O.default.Messages.CREATE_POLL_MULTIPLE_ANSWERS
         })
       }), (0, l.jsx)(u.Button, {
         look: u.ButtonLooks.FILLED,
         size: u.Button.Sizes.MEDIUM,
-        className: I.postButton,
-        onClick: Z,
-        submitting: ee,
+        className: P.postButton,
+        onClick: Q,
+        submitting: $,
         children: (0, l.jsx)(u.Text, {
           variant: "text-md/semibold",
-          className: I.postButtonText,
-          children: P.default.Messages.CREATE_POLL_POST
+          className: P.postButtonText,
+          children: O.default.Messages.CREATE_POLL_POST
         })
       })]
     })]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return p
   }
 });
 var i = n("735250");
@@ -16,84 +16,83 @@ var r = n("990547"),
   _ = n("213609"),
   c = n("703656"),
   E = n("430824"),
-  I = n("682864"),
-  T = n("465670"),
-  f = n("687476"),
-  S = n("761966"),
-  h = n("981631"),
-  A = n("176505"),
-  m = n("689938"),
-  N = n("763959");
-let p = () => {
+  I = n("465670"),
+  T = n("687476"),
+  f = n("761966"),
+  S = n("981631"),
+  h = n("176505"),
+  A = n("689938"),
+  m = n("763959");
+let N = () => {
   let e = (0, l.default)();
   return (0, a.isThemeLight)(e) ? n("537381") : n("341048")
 };
 
-function O(e) {
+function p(e) {
   let {
     onClose: t,
     guildId: n,
     emojiId: a
-  } = e, l = p(), {
-    analyticsLocations: O
+  } = e, l = N(), {
+    analyticsLocations: p
   } = (0, d.default)(u.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
   (0, _.default)({
     type: r.ImpressionTypes.MODAL,
     name: r.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
     properties: {
-      location_stack: O,
+      location_stack: p,
       emoji_guild_id: n,
       emoji_id: null != a ? a : null
     }
   });
-  let C = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(n)),
-    R = (0, s.useStateFromStores)([f.default], () => null != n && f.default.getUserSubscriptionRoles(n).size > 0),
-    g = R ? m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
-      serverName: null == C ? void 0 : C.name
+  let O = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(n)),
+    C = (0, s.useStateFromStores)([T.default], () => null != n && T.default.getUserSubscriptionRoles(n).size > 0),
+    R = C ? A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
+      serverName: null == O ? void 0 : O.name
     }),
-    L = R ? m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
+    g = C ? A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
   return (0, i.jsxs)("div", {
-    className: N.container,
+    className: m.container,
     children: [(0, i.jsx)("div", {
-      className: N.background
+      className: m.background
     }), (0, i.jsxs)("div", {
-      className: N.content,
+      className: m.content,
       children: [(0, i.jsx)(o.Button, {
         look: o.Button.Looks.BLANK,
         size: o.Button.Sizes.ICON,
-        className: N.closeButton,
+        className: m.closeButton,
         onClick: t,
-        children: (0, i.jsx)(T.default, {
-          "aria-label": m.default.Messages.CLOSE,
+        children: (0, i.jsx)(I.default, {
+          "aria-label": A.default.Messages.CLOSE,
           width: 16,
           height: 16,
-          className: N.closeButtonIcon
+          className: m.closeButtonIcon
         })
       }), (0, i.jsx)("img", {
         alt: "",
         src: l,
-        className: N.upsellImage
-      }), (0, i.jsx)(I.default, {
+        className: m.upsellImage
+      }), (0, i.jsx)(o.Spacer, {
         size: 22
       }), (0, i.jsx)(o.Heading, {
         color: "header-primary",
         variant: "heading-lg/extrabold",
-        className: N.header,
-        children: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
-      }), (0, i.jsx)(I.default, {
+        className: m.header,
+        children: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
+      }), (0, i.jsx)(o.Spacer, {
         size: 4
       }), (0, i.jsx)(o.Text, {
         color: "header-secondary",
         variant: "text-md/normal",
-        className: N.description,
-        children: g
-      }), (0, i.jsx)(I.default, {
+        className: m.description,
+        children: R
+      }), (0, i.jsx)(o.Spacer, {
         size: 24
-      }), (0, i.jsx)(S.default, {
+      }), (0, i.jsx)(f.default, {
         onClick: () => {
-          (0, c.transitionTo)(h.Routes.CHANNEL(n, A.StaticChannelRoute.ROLE_SUBSCRIPTIONS), void 0, void 0, O)
+          (0, c.transitionTo)(S.Routes.CHANNEL(n, h.StaticChannelRoute.ROLE_SUBSCRIPTIONS), void 0, void 0, p)
         },
-        children: L
+        children: g
       })]
     })]
   })

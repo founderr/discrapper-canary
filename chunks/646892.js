@@ -9,8 +9,8 @@ s("470079");
 var l = s("120356"),
   n = s.n(l),
   i = s("442837"),
-  r = s("607070"),
-  o = s("976644"),
+  r = s("481060"),
+  o = s("607070"),
   d = s("307537"),
   u = s("59072");
 
@@ -19,16 +19,16 @@ function c(e) {
     className: t,
     shouldShine: s = !0,
     size: l = 14
-  } = e, c = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion);
+  } = e, c = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   return (0, a.jsxs)("div", {
     className: n()([u.guildProductRoleIcon, t]),
     children: [(0, a.jsx)(d.default, {
       height: l,
       width: l
-    }), (0, a.jsx)(o.Shine, {
+    }), (0, a.jsx)(r.Shine, {
       className: u.shine,
       shinePaused: c || !s,
-      shineSize: o.default.ShineSizes.SMALL
+      shineSize: r.ShinyButton.ShineSizes.SMALL
     })]
   })
 }

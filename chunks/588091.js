@@ -1,107 +1,106 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return U
+    return A
   }
 }), a("47120");
-var l = a("735250"),
-  s = a("470079"),
-  n = a("120356"),
-  r = a.n(n),
+var s = a("735250"),
+  l = a("470079"),
+  r = a("120356"),
+  n = a.n(r),
   i = a("512722"),
-  d = a.n(i),
-  c = a("442837"),
-  u = a("693789"),
-  o = a("481060"),
+  c = a.n(i),
+  d = a("442837"),
+  o = a("693789"),
+  u = a("481060"),
   x = a("809086"),
   m = a("599456"),
-  f = a("430824"),
-  h = a("682864"),
-  j = a("465670"),
-  v = a("937615"),
-  _ = a("495437"),
-  N = a("240864"),
-  O = a("942833"),
-  I = a("598952"),
-  C = a("392739"),
-  M = a("400916"),
-  T = a("916001"),
-  g = a("689938"),
-  D = a("191881");
+  h = a("430824"),
+  f = a("465670"),
+  j = a("937615"),
+  v = a("495437"),
+  _ = a("240864"),
+  N = a("942833"),
+  O = a("598952"),
+  I = a("392739"),
+  C = a("400916"),
+  M = a("916001"),
+  T = a("689938"),
+  g = a("191881");
 
-function R(e) {
+function p(e) {
   let {
     guildProductListing: t,
     guildId: a,
-    skuPricePreview: s
-  } = e, n = (0, O.useProductType)(t), r = (0, v.formatPrice)(s.amount, s.currency), i = (0, c.useStateFromStores)([f.default], () => f.default.getGuild(a));
-  return d()(null != i, "guild cannot be null"), (0, l.jsxs)("div", {
-    className: D.purchaseSummaryContainer,
-    children: [(0, l.jsx)(x.default, {
+    skuPricePreview: l
+  } = e, r = (0, N.useProductType)(t), n = (0, j.formatPrice)(l.amount, l.currency), i = (0, d.useStateFromStores)([h.default], () => h.default.getGuild(a));
+  return c()(null != i, "guild cannot be null"), (0, s.jsxs)("div", {
+    className: g.purchaseSummaryContainer,
+    children: [(0, s.jsx)(x.default, {
       alt: "",
-      className: D.purchaseSummaryImage,
+      className: g.purchaseSummaryImage,
       listing: t,
       imageSize: 100
-    }), (0, l.jsxs)("div", {
-      className: D.purchaseSummarInfo,
-      children: [(0, l.jsx)(o.Text, {
+    }), (0, s.jsxs)("div", {
+      className: g.purchaseSummarInfo,
+      children: [(0, s.jsx)(u.Text, {
         variant: "text-md/medium",
         color: "header-primary",
         children: t.name
-      }), (0, l.jsx)(h.default, {
+      }), (0, s.jsx)(u.Spacer, {
         size: 4
-      }), (0, l.jsxs)("div", {
-        className: D.productTypeContainer,
-        children: [(0, l.jsx)(o.Text, {
+      }), (0, s.jsxs)("div", {
+        className: g.productTypeContainer,
+        children: [(0, s.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: n
-        }), (0, l.jsx)("div", {
-          className: D.dotSeparator
-        }), (0, l.jsx)(o.Text, {
+          children: r
+        }), (0, s.jsx)("div", {
+          className: g.dotSeparator
+        }), (0, s.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           lineClamp: 2,
           children: i.name
         })]
       })]
-    }), (0, l.jsxs)("div", {
-      className: D.purchaseSummaryPrice,
-      children: [(0, l.jsx)(o.Text, {
+    }), (0, s.jsxs)("div", {
+      className: g.purchaseSummaryPrice,
+      children: [(0, s.jsx)(u.Text, {
         variant: "text-md/medium",
         color: "header-primary",
-        children: r
-      }), (0, l.jsx)(h.default, {
+        children: n
+      }), (0, s.jsx)(u.Spacer, {
         size: 4
-      }), (0, l.jsx)(o.Text, {
+      }), (0, s.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: g.default.Messages.GUILD_PRODUCT_PURCHASE_SUMMARY_TOTAL_PAID
+        children: T.default.Messages.GUILD_PRODUCT_PURCHASE_SUMMARY_TOTAL_PAID
       })]
     })]
   })
 }
 
-function L(e) {
+function D(e) {
   var t;
   let {
     guildProductListing: a,
-    guildId: s
-  } = e, n = null !== (t = a.attachments) && void 0 !== t ? t : [], i = n.length > 1;
-  return 0 === n.length ? null : (0, l.jsx)(C.default, {
-    label: g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_DOWNLOADABLE_UNLOCKED,
-    children: (0, l.jsxs)("div", {
-      className: r()(D.attachmentsContainer, {
-        [D.attachmentsContainerMultiple]: i
+    guildId: l
+  } = e, r = null !== (t = a.attachments) && void 0 !== t ? t : [], i = r.length > 1;
+  return 0 === r.length ? null : (0, s.jsx)(I.default, {
+    label: T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_DOWNLOADABLE_UNLOCKED,
+    children: (0, s.jsxs)("div", {
+      className: n()(g.attachmentsContainer, {
+        [g.attachmentsContainerMultiple]: i
       }),
-      children: [(0, l.jsx)("div", {
-        className: D.attachmentGrid,
-        children: n.map(e => (0, l.jsx)(I.default, {
+      children: [(0, s.jsx)("div", {
+        className: g.attachmentGrid,
+        children: r.map(e => (0, s.jsx)(O.default, {
           attachment: e
         }, e.id))
-      }), (0, l.jsx)("div", {
-        children: (0, l.jsx)(M.default, {
-          guildId: s,
+      }), (0, s.jsx)("div", {
+        children: (0, s.jsx)(C.default, {
+          guildId: l,
           productId: a.id
         })
       })]
@@ -109,20 +108,20 @@ function L(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     role: t
   } = e;
-  return null == t ? null : (0, l.jsx)(C.default, {
-    label: g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED,
-    children: (0, l.jsx)(T.default, {
+  return null == t ? null : (0, s.jsx)(I.default, {
+    label: T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED,
+    children: (0, s.jsx)(M.default, {
       role: t
     })
   })
 }
 
-function A(e) {
-  return (0, l.jsx)(o.Text, {
+function L(e) {
+  return (0, s.jsx)(u.Text, {
     tag: "span",
     variant: "text-md/semibold",
     color: "text-normal",
@@ -130,100 +129,100 @@ function A(e) {
   })
 }
 
-function U(e) {
+function A(e) {
   var t;
   let {
     onClose: a,
-    transitionState: n,
-    guildProductListingId: r,
+    transitionState: r,
+    guildProductListingId: n,
     guildId: i,
     skuPricePreview: x
-  } = e, v = (0, c.useStateFromStores)([N.default], () => N.default.getGuildProduct(r));
-  d()(null != v, "guildProductListing cannot be null");
-  let [O, I] = s.useState(!1);
-  s.useEffect(() => {
+  } = e, j = (0, d.useStateFromStores)([_.default], () => _.default.getGuildProduct(n));
+  c()(null != j, "guildProductListing cannot be null");
+  let [N, O] = l.useState(!1);
+  l.useEffect(() => {
     (async function e() {
       try {
-        I(!0), await (0, _.fetchGuildProduct)(i, r), I(!1)
+        O(!0), await (0, v.fetchGuildProduct)(i, n), O(!1)
       } catch (e) {
         a(), (0, m.default)({
-          body: g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_GENRIC_ERROR_BODY,
-          confirmText: g.default.Messages.GOT_IT,
-          header: g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_GENRIC_ERROR_HEADER,
-          confirmButtonColor: u.Button.Colors.BRAND
+          body: T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_GENRIC_ERROR_BODY,
+          confirmText: T.default.Messages.GOT_IT,
+          header: T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_GENRIC_ERROR_HEADER,
+          confirmButtonColor: o.Button.Colors.BRAND
         })
       }
     })()
-  }, [i, r, a]);
-  let C = (null !== (t = v.attachments) && void 0 !== t ? t : []).length > 0,
-    M = v.role_id,
-    T = (0, c.useStateFromStores)([f.default], () => null != M ? f.default.getRole(i, M) : void 0);
-  return (0, l.jsx)(o.ModalRoot, {
-    className: D.modal,
-    size: o.ModalSize.DYNAMIC,
-    transitionState: n,
-    "aria-label": v.name,
-    children: (0, l.jsx)(o.ModalContent, {
-      children: (0, l.jsx)("div", {
-        className: D.container,
-        children: O ? (0, l.jsx)(o.Spinner, {}) : (0, l.jsxs)(l.Fragment, {
-          children: [(0, l.jsxs)("div", {
-            className: D.header,
-            children: [(0, l.jsx)(o.Heading, {
+  }, [i, n, a]);
+  let I = (null !== (t = j.attachments) && void 0 !== t ? t : []).length > 0,
+    C = j.role_id,
+    M = (0, d.useStateFromStores)([h.default], () => null != C ? h.default.getRole(i, C) : void 0);
+  return (0, s.jsx)(u.ModalRoot, {
+    className: g.modal,
+    size: u.ModalSize.DYNAMIC,
+    transitionState: r,
+    "aria-label": j.name,
+    children: (0, s.jsx)(u.ModalContent, {
+      children: (0, s.jsx)("div", {
+        className: g.container,
+        children: N ? (0, s.jsx)(u.Spinner, {}) : (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsxs)("div", {
+            className: g.header,
+            children: [(0, s.jsx)(u.Heading, {
               variant: "heading-xl/semibold",
               color: "header-primary",
-              children: g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_TITLE
-            }), (0, l.jsx)(o.Clickable, {
+              children: T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_TITLE
+            }), (0, s.jsx)(u.Clickable, {
               onClick: a,
-              children: (0, l.jsx)(j.default, {
+              children: (0, s.jsx)(f.default, {
                 width: 24,
                 height: 24,
-                className: D.close
+                className: g.close
               })
             })]
-          }), (0, l.jsx)(h.default, {
+          }), (0, s.jsx)(u.Spacer, {
             size: 16
-          }), (0, l.jsx)(o.Text, {
+          }), (0, s.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "text-normal",
-            children: g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_INTRO.format({
-              productName: v.name,
-              emphasisHook: A
+            children: T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_INTRO.format({
+              productName: j.name,
+              emphasisHook: L
             })
-          }), (0, l.jsx)(h.default, {
+          }), (0, s.jsx)(u.Spacer, {
             size: 12
-          }), (0, l.jsxs)(o.Text, {
+          }), (0, s.jsxs)(u.Text, {
             variant: "text-md/normal",
             color: "text-normal",
-            children: [C ? g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ATTACHMENT + " " : "", null != T ? g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ROLE.format({
-              roleName: T.name,
-              emphasisHook: A
+            children: [I ? T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ATTACHMENT + " " : "", null != M ? T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ROLE.format({
+              roleName: M.name,
+              emphasisHook: L
             }) : ""]
-          }), (0, l.jsx)(h.default, {
+          }), (0, s.jsx)(u.Spacer, {
             size: 12
-          }), (0, l.jsx)(o.Text, {
+          }), (0, s.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "text-normal",
-            children: g.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_THANK_YOU
-          }), (0, l.jsx)(h.default, {
+            children: T.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_THANK_YOU
+          }), (0, s.jsx)(u.Spacer, {
             size: 24
-          }), (0, l.jsx)(R, {
-            guildProductListing: v,
+          }), (0, s.jsx)(p, {
+            guildProductListing: j,
             guildId: i,
             skuPricePreview: x
-          }), (0, l.jsx)(h.default, {
+          }), (0, s.jsx)(u.Spacer, {
             size: 32
-          }), (0, l.jsx)("div", {
-            className: D.divider
-          }), (0, l.jsx)(h.default, {
+          }), (0, s.jsx)("div", {
+            className: g.divider
+          }), (0, s.jsx)(u.Spacer, {
             size: 32
-          }), (0, l.jsxs)("ul", {
-            className: D.benefitsContainer,
-            children: [(0, l.jsx)(L, {
-              guildProductListing: v,
+          }), (0, s.jsxs)("ul", {
+            className: g.benefitsContainer,
+            children: [(0, s.jsx)(D, {
+              guildProductListing: j,
               guildId: i
-            }), (0, l.jsx)(p, {
-              role: T
+            }), (0, s.jsx)(R, {
+              role: M
             })]
           })]
         })

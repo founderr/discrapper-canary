@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return L
+    return M
   }
 });
 var s = i("735250");
@@ -11,60 +11,59 @@ var a = i("481060"),
   n = i("430824"),
   o = i("496675"),
   d = i("285952"),
-  u = i("976644"),
-  r = i("626135"),
-  _ = i("565799"),
-  c = i("501655"),
-  E = i("146085"),
-  S = i("981631"),
-  T = i("474936"),
-  I = i("689938"),
-  M = i("471152");
+  u = i("626135"),
+  r = i("565799"),
+  _ = i("501655"),
+  c = i("146085"),
+  E = i("981631"),
+  S = i("474936"),
+  T = i("689938"),
+  I = i("471152");
 
-function L(e) {
+function M(e) {
   var t;
   let i, {
-      channel: L,
-      transitionState: A,
-      onClose: g
+      channel: M,
+      transitionState: L,
+      onClose: A
     } = e,
-    p = n.default.getGuild(L.guild_id),
-    O = null !== (t = null == p ? void 0 : p.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-    f = !!(null == p ? void 0 : p.isCommunity()),
-    m = I.default.Messages.STAGE_FULL_TITLE,
-    C = f ? O < S.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == p ? void 0 : p.premiumTier) !== S.BoostedGuildTiers.TIER_3 && O <= S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
-    B = o.default.can(E.MODERATE_STAGE_CHANNEL_PERMISSIONS, L);
-  i = f && (null == p ? void 0 : p.premiumTier) === S.BoostedGuildTiers.TIER_3 ? O <= S.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED ? I.default.Messages.STAGE_FULL_BOOST_MORE_BODY : I.default.Messages.STAGE_FULL_MAX_BODY : C ? I.default.Messages.STAGE_FULL_BODY : I.default.Messages.STAGE_FULL_MAX_BODY;
-  let U = () => {
-      g(), r.default.track(S.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
-        guild_id: L.guild_id,
-        type: T.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
+    g = n.default.getGuild(M.guild_id),
+    p = null !== (t = null == g ? void 0 : g.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
+    O = !!(null == g ? void 0 : g.isCommunity()),
+    m = T.default.Messages.STAGE_FULL_TITLE,
+    f = O ? p < E.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == g ? void 0 : g.premiumTier) !== E.BoostedGuildTiers.TIER_3 && p <= E.MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
+    B = o.default.can(c.MODERATE_STAGE_CHANNEL_PERMISSIONS, M);
+  i = O && (null == g ? void 0 : g.premiumTier) === E.BoostedGuildTiers.TIER_3 ? p <= E.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED ? T.default.Messages.STAGE_FULL_BOOST_MORE_BODY : T.default.Messages.STAGE_FULL_MAX_BODY : f ? T.default.Messages.STAGE_FULL_BODY : T.default.Messages.STAGE_FULL_MAX_BODY;
+  let C = () => {
+      A(), u.default.track(E.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+        guild_id: M.guild_id,
+        type: S.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
         is_moderator: B,
-        action: T.BoostingUpsellAction.DISMISS
+        action: S.BoostingUpsellAction.DISMISS
       })
     },
-    h = _.default.getMutableParticipants(L.id, c.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === c.StageChannelParticipantTypes.VOICE).length,
-    N = _.default.getParticipantCount(L.id, c.StageChannelParticipantNamedIndex.AUDIENCE);
-  return r.default.track(S.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
-    guild_id: L.guild_id,
-    type: T.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
+    U = r.default.getMutableParticipants(M.id, _.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === _.StageChannelParticipantTypes.VOICE).length,
+    h = r.default.getParticipantCount(M.id, _.StageChannelParticipantNamedIndex.AUDIENCE);
+  return u.default.track(E.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
+    guild_id: M.guild_id,
+    type: S.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
     is_moderator: B,
-    listener_count: h + N
+    listener_count: U + h
   }), (0, s.jsxs)(a.ModalRoot, {
     size: a.ModalSize.SMALL,
-    transitionState: A,
+    transitionState: L,
     "aria-label": m,
     children: [(0, s.jsxs)(a.ModalHeader, {
       justify: d.default.Justify.END,
       separator: !1,
-      className: M.header,
+      className: I.header,
       children: [(0, s.jsx)("div", {
-        className: M.fullArt
+        className: I.fullArt
       }), (0, s.jsx)(a.ModalCloseButton, {
-        onClick: g
+        onClick: A
       })]
     }), (0, s.jsxs)(a.ModalContent, {
-      className: M.content,
+      className: I.content,
       children: [(0, s.jsx)(a.Heading, {
         variant: "heading-xl/bold",
         children: m
@@ -73,39 +72,39 @@ function L(e) {
         children: i
       })]
     }), (0, s.jsx)(a.ModalFooter, {
-      className: M.footer,
-      children: C ? (0, s.jsxs)(s.Fragment, {
+      className: I.footer,
+      children: f ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(a.Button, {
           look: a.ButtonLooks.LINK,
-          className: M.noThanksButton,
+          className: I.noThanksButton,
           color: a.ButtonColors.CUSTOM,
           size: a.ButtonSizes.SMALL,
-          onClick: U,
-          children: I.default.Messages.NO_THANKS
-        }), (0, s.jsx)(u.default, {
+          onClick: C,
+          children: T.default.Messages.NO_THANKS
+        }), (0, s.jsx)(a.ShinyButton, {
           onClick: () => {
-            g(), (0, l.openGuildBoostingMarketingModal)({
-              guildId: L.guild_id,
+            A(), (0, l.openGuildBoostingMarketingModal)({
+              guildId: M.guild_id,
               location: {
-                section: S.AnalyticsSections.STAGE_VIDEO_LIMIT
+                section: E.AnalyticsSections.STAGE_VIDEO_LIMIT
               }
-            }), r.default.track(S.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
-              guild_id: L.guild_id,
-              type: T.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
+            }), u.default.track(E.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+              guild_id: M.guild_id,
+              type: S.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
               is_moderator: B,
-              action: T.BoostingUpsellAction.BOOST
+              action: S.BoostingUpsellAction.BOOST
             })
           },
           size: a.ButtonSizes.SMALL,
-          className: M.boostButton,
-          children: I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
+          className: I.boostButton,
+          children: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
         })]
       }) : (0, s.jsx)(a.Button, {
-        onClick: U,
+        onClick: C,
         size: a.ButtonSizes.SMALL,
         color: a.ButtonColors.CUSTOM,
-        className: M.boostButton,
-        children: I.default.Messages.GOT_IT
+        className: I.boostButton,
+        children: T.default.Messages.GOT_IT
       })
     })]
   })

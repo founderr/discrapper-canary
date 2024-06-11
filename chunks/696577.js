@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
 var a = n("735250"),
   s = n("470079"),
   l = n("692547"),
-  i = n("194359"),
-  r = n("906732"),
-  o = n("171368"),
-  u = n("594174"),
-  d = n("263704"),
-  c = n("465670"),
-  f = n("26290"),
+  i = n("481060"),
+  r = n("194359"),
+  o = n("906732"),
+  u = n("171368"),
+  d = n("594174"),
+  c = n("263704"),
+  f = n("465670"),
   E = n("626135"),
   h = n("321488"),
   C = n("417183"),
@@ -30,12 +30,12 @@ function I(e) {
     isFocused: g
   } = e, T = s.useContext(E.AnalyticsContext), {
     analyticsLocations: A
-  } = (0, r.default)(), N = e => {
-    e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
+  } = (0, o.default)(), N = e => {
+    e.stopPropagation(), r.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
   }, v = e => {
-    e.stopPropagation(), i.default.addRelationship({
+    e.stopPropagation(), r.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
@@ -45,35 +45,35 @@ function I(e) {
   return (0, a.jsx)(C.default, {
     isFocused: g,
     user: t,
-    onClick: () => (0, o.openUserProfileModal)({
+    onClick: () => (0, u.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: A,
       analyticsLocation: T.location
     }),
     children: e => {
       var s;
-      let i = n === m.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
-        children: [(null === (s = u.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, a.jsx)("div", {
+      let r = n === m.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
+        children: [(null === (s = d.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, a.jsx)("div", {
           className: p.staffIndicator,
-          children: (0, a.jsx)(f.TextBadge, {
+          children: (0, a.jsx)(i.TextBadge, {
             color: l.default.unsafe_rawColors.BRAND_500.css,
             text: S.default.Messages.STAFF_BADGE_TOOLTIP
           })
         }), (0, a.jsx)(h.default, {
-          icon: d.default,
+          icon: c.default,
           actionType: h.default.ActionTypes.ACCEPT,
           tooltip: S.default.Messages.FRIEND_REQUEST_ACCEPT,
           onClick: v,
           shouldHighlight: e
         }), (0, a.jsx)(h.default, {
-          icon: c.default,
+          icon: f.default,
           actionType: h.default.ActionTypes.DENY,
           tooltip: S.default.Messages.FRIEND_REQUEST_IGNORE,
           onClick: N,
           shouldHighlight: e
         })]
       }) : (0, a.jsx)(h.default, {
-        icon: c.default,
+        icon: f.default,
         actionType: h.default.ActionTypes.DENY,
         tooltip: S.default.Messages.FRIEND_REQUEST_CANCEL,
         onClick: N,
@@ -90,7 +90,7 @@ function I(e) {
           className: p.userInfo
         }), (0, a.jsx)("div", {
           className: p.actions,
-          children: i
+          children: r
         })]
       })
     }

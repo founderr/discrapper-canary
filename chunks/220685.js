@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return b
+    return U
   }
 }), s("47120");
 var a = s("735250"),
@@ -22,195 +22,193 @@ var a = s("735250"),
   m = s("367907"),
   N = s("674180"),
   g = s("999382"),
-  h = s("703685"),
-  C = s("864293"),
-  R = s("441674"),
-  x = s("964309"),
-  L = s("626135"),
-  O = s("730647"),
-  A = s("584825"),
-  p = s("981631"),
-  M = s("689938"),
-  D = s("117770");
-let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401e3, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
-  j = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
-  G = v[4],
-  U = e => {
+  h = s("441674"),
+  C = s("964309"),
+  R = s("626135"),
+  x = s("730647"),
+  L = s("584825"),
+  O = s("981631"),
+  p = s("689938"),
+  A = s("117770");
+let M = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401e3, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
+  D = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
+  v = M[4],
+  j = e => {
     var t, s;
     let {
       guild: n,
       canEnable: r
-    } = e, d = (0, A.useSubscriptionsSettings)(n.id), {
+    } = e, d = (0, L.useSubscriptionsSettings)(n.id), {
       loading: c,
       updateSubscriptionsSettings: g
-    } = (0, A.useUpdateSubscriptionsSettings)(), [O, U] = l.useState(n.hasFeature(p.GuildFeatures.CREATOR_STORE_PAGE)), [P, b] = l.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : G), [y, B] = l.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == y || null != y.match(j), [H, k] = l.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), w = l.useRef(null == d ? void 0 : d.store_page_slug).current, V = O !== n.hasFeature(p.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && P !== G || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color) || y !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
+    } = (0, L.useUpdateSubscriptionsSettings)(), [x, j] = l.useState(n.hasFeature(O.GuildFeatures.CREATOR_STORE_PAGE)), [G, U] = l.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : v), [P, b] = l.useState(null == d ? void 0 : d.store_page_trailer_url), y = null == P || null != P.match(D), [B, F] = l.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), H = l.useRef(null == d ? void 0 : d.store_page_slug).current, k = x !== n.hasFeature(O.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && G !== v || (null == d ? void 0 : d.store_page_primary_color) != null && G !== (null == d ? void 0 : d.store_page_primary_color) || P !== (null == d ? void 0 : d.store_page_trailer_url) || null != B && B !== (null == d ? void 0 : d.store_page_show_subscriber_count), w = async () => {
       o()(null != d, "Settings must be defined");
       let e = {};
-      O !== n.hasFeature(p.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = O), ((null == d ? void 0 : d.store_page_primary_color) == null && P !== G || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = P), y !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = y), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u().isEmpty(e) && (await g(n.id, e), "store_page_enabled" in e && L.default.track(p.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
-        enabled: O,
+      x !== n.hasFeature(O.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = x), ((null == d ? void 0 : d.store_page_primary_color) == null && G !== v || (null == d ? void 0 : d.store_page_primary_color) != null && G !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = G), P !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = P), B !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = B), !u().isEmpty(e) && (await g(n.id, e), "store_page_enabled" in e && R.default.track(O.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
+        enabled: x,
         ...(0, m.collectGuildAnalyticsMetadata)(n.id)
       }))
-    }, W = p.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(w), z = null != y && y === (null == d ? void 0 : d.store_page_trailer_url), {
-      shouldRestrictUpdatingCreatorMonetizationSettings: K
-    } = (0, N.useShouldRestrictUpdatingCreatorMonetizationSettings)(n.id), Z = K || !F;
+    }, V = O.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(H), Y = null != P && P === (null == d ? void 0 : d.store_page_trailer_url), {
+      shouldRestrictUpdatingCreatorMonetizationSettings: W
+    } = (0, N.useShouldRestrictUpdatingCreatorMonetizationSettings)(n.id), z = W || !y;
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)(I.FormTitle, {
         tag: "h1",
-        children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TITLE
+        children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TITLE
       }), (0, a.jsx)(I.FormText, {
         type: I.FormText.Types.DESCRIPTION,
-        children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DESCRIPTION
+        children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DESCRIPTION
       }), (0, a.jsx)(I.FormSwitch, {
-        className: D.enableSwitch,
-        value: O,
-        disabled: K || !O && !r,
-        tooltipNote: O || r ? void 0 : M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PRIMARY_TOGGLE_DISABLED_TOOLTIP,
+        className: A.enableSwitch,
+        value: x,
+        disabled: W || !x && !r,
+        tooltipNote: x || r ? void 0 : p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PRIMARY_TOGGLE_DISABLED_TOOLTIP,
         hideBorder: !0,
-        onChange: e => U(e),
+        onChange: e => j(e),
         children: (0, a.jsx)(I.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
-          children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_ENABLE
+          children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_ENABLE
         })
       }), (0, a.jsxs)(I.FormItem, {
-        title: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PROMO_URL,
-        disabled: K,
+        title: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PROMO_URL,
+        disabled: W,
         children: [(0, a.jsx)(T.default, {
-          value: W,
+          value: V,
           className: i()({
-            [D.disabled]: K
+            [A.disabled]: W
           })
         }), (0, a.jsx)(I.Button, {
-          onClick: () => (0, f.default)(W),
-          className: D.openPageButton,
-          disabled: K,
-          children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_GO_TO_PAGE
+          onClick: () => (0, f.default)(V),
+          className: A.openPageButton,
+          disabled: W,
+          children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_GO_TO_PAGE
         })]
       }), (0, a.jsx)(I.FormDivider, {
-        className: D.divider
+        className: A.divider
       }), (0, a.jsxs)(I.FormItem, {
-        title: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_ACCENT_COLOR_TITLE,
-        disabled: K,
+        title: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_ACCENT_COLOR_TITLE,
+        disabled: W,
         children: [(0, a.jsx)(I.FormText, {
-          disabled: K,
-          children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_ACCENT_COLOR_DESCRIPTION
+          disabled: W,
+          children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_ACCENT_COLOR_DESCRIPTION
         }), (0, a.jsxs)("div", {
-          className: D.accentColorContainer,
+          className: A.accentColorContainer,
           children: [(0, a.jsx)(I.Button, {
             onClick: () => null,
             color: I.Button.Colors.CUSTOM,
             style: {
-              backgroundColor: "#".concat(P.toString(16).padStart(6, "0"))
+              backgroundColor: "#".concat(G.toString(16).padStart(6, "0"))
             },
-            className: D.buttonPreview,
-            disabled: K,
-            children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_ACCENT_COLOR_BUTTON_PREVIEW
-          }), (0, a.jsx)(h.default, {
-            colors: v,
+            className: A.buttonPreview,
+            disabled: W,
+            children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_ACCENT_COLOR_BUTTON_PREVIEW
+          }), (0, a.jsx)(I.ColorPicker, {
+            colors: M,
             customColor: null,
-            defaultColor: G,
-            value: P,
-            onChange: e => b(e),
+            defaultColor: v,
+            value: G,
+            onChange: e => U(e),
             renderDefaultButton: () => null,
             renderCustomButton: () => null,
-            colorContainerClassName: D.hideColorButtons,
-            disabled: K
+            colorContainerClassName: A.hideColorButtons,
+            disabled: W
           })]
         })]
       }), (0, a.jsx)(I.FormDivider, {
-        className: D.divider
+        className: A.divider
       }), (0, a.jsxs)(I.FormItem, {
-        title: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_TITLE,
-        disabled: K,
+        title: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_TITLE,
+        disabled: W,
         children: [(0, a.jsx)(I.FormText, {
-          disabled: K,
-          children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_DESCRIPTION
+          disabled: W,
+          children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_DESCRIPTION
         }), (0, a.jsx)(I.TextInput, {
-          value: null != y ? y : void 0,
-          onChange: e => B("" === e ? null : e),
-          error: F ? null : M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_BAD_LINK,
-          placeholder: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_PLACEHOLDER,
-          className: D.trailerInputWrapper,
-          inputClassName: i()(D.trailerInput, {
-            [D.error]: !F,
-            [D.trailerInputWithCheckmark]: z || !F
+          value: null != P ? P : void 0,
+          onChange: e => b("" === e ? null : e),
+          error: y ? null : p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_BAD_LINK,
+          placeholder: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_TRAILER_PLACEHOLDER,
+          className: A.trailerInputWrapper,
+          inputClassName: i()(A.trailerInput, {
+            [A.error]: !y,
+            [A.trailerInputWithCheckmark]: Y || !y
           }),
-          prefixElement: F && z && (0, a.jsx)(R.default, {
+          prefixElement: y && Y && (0, a.jsx)(h.default, {
             color: E.default.unsafe_rawColors.BRAND_500.css,
             backgroundColor: E.default.unsafe_rawColors.WHITE_500.css,
-            className: D.inputCheckmark
+            className: A.inputCheckmark
           }),
-          disabled: K
+          disabled: W
         })]
       }), (0, a.jsx)(I.FormDivider, {
-        className: D.divider
+        className: A.divider
       }), (0, a.jsxs)(I.FormItem, {
-        title: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_TITLE,
-        disabled: K,
+        title: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_TITLE,
+        disabled: W,
         children: [(0, a.jsx)(I.FormText, {
-          disabled: K,
-          children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_DESCRIPTION
+          disabled: W,
+          children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_DESCRIPTION
         }), (0, a.jsx)(I.FormSwitch, {
-          className: D.premiumMemberCountSwitchContainer,
-          value: H,
+          className: A.premiumMemberCountSwitchContainer,
+          value: B,
           hideBorder: !0,
-          onChange: e => k(e),
-          disabled: K,
+          onChange: e => F(e),
+          disabled: W,
           children: (0, a.jsxs)("div", {
-            className: D.iconSwitchLabel,
+            className: A.iconSwitchLabel,
             children: [(0, a.jsx)("div", {
-              className: D.iconContainer,
-              children: (0, a.jsx)(x.default, {
+              className: A.iconContainer,
+              children: (0, a.jsx)(C.default, {
                 width: 28,
                 height: 28,
-                className: D.premiumMemberCountIcon
+                className: A.premiumMemberCountIcon
               })
             }), (0, a.jsxs)("div", {
               children: [(0, a.jsx)(I.Text, {
                 variant: "text-md/medium",
                 color: "header-primary",
-                children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT
+                children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT
               }), (0, a.jsx)(I.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT_DESCRIPTION
+                children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT_DESCRIPTION
               })]
             })]
           })
         })]
       }), (0, a.jsx)(_.TransitionGroup, {
         component: "div",
-        className: D.contentRegion,
-        children: V && (0, a.jsx)(C.default, {
+        className: A.contentRegion,
+        children: k && (0, a.jsx)(I.SlideIn, {
           children: (0, a.jsx)(S.default, {
             submitting: c,
             onReset: () => {
               var e, t;
-              U(n.hasFeature(p.GuildFeatures.CREATOR_STORE_PAGE)), b(null !== (e = null == d ? void 0 : d.store_page_primary_color) && void 0 !== e ? e : G), B(null == d ? void 0 : d.store_page_trailer_url), k(null !== (t = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== t && t)
+              j(n.hasFeature(O.GuildFeatures.CREATOR_STORE_PAGE)), U(null !== (e = null == d ? void 0 : d.store_page_primary_color) && void 0 !== e ? e : v), b(null == d ? void 0 : d.store_page_trailer_url), F(null !== (t = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== t && t)
             },
-            onSave: Y,
-            disabled: Z
+            onSave: w,
+            disabled: z
           })
         })
       })]
     })
   };
 
-function P() {
+function G() {
   let e = (0, c.useStateFromStores)([g.default], () => g.default.getGuild()),
-    t = (0, O.useGroupListingsFetchContext)(),
-    s = (0, A.useSubscriptionListingsForGuild)(null == e ? void 0 : e.id).some(e => e.published);
-  return null != e && t ? (0, a.jsx)(U, {
+    t = (0, x.useGroupListingsFetchContext)(),
+    s = (0, L.useSubscriptionListingsForGuild)(null == e ? void 0 : e.id).some(e => e.published);
+  return null != e && t ? (0, a.jsx)(j, {
     guild: e,
     canEnable: s
   }) : (0, a.jsx)(I.Spinner, {})
 }
 
-function b() {
+function U() {
   let e = (0, c.useStateFromStores)([g.default], () => g.default.getGuild());
-  return (0, a.jsxs)(O.GroupListingsFetchContextProvider, {
+  return (0, a.jsxs)(x.GroupListingsFetchContextProvider, {
     guildId: null == e ? void 0 : e.id,
     refetchOnMount: !0,
-    children: [(0, a.jsx)(P, {}), ";"]
+    children: [(0, a.jsx)(G, {}), ";"]
   })
 }

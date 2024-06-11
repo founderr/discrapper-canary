@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return C
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,31 +15,30 @@ var a = n("735250"),
   c = n("410030"),
   f = n("607070"),
   h = n("466794"),
-  m = n("976644"),
-  p = n("487032"),
-  E = n("546240"),
-  C = n("952009");
+  m = n("487032"),
+  p = n("546240"),
+  E = n("952009");
 
-function g(e) {
+function C(e) {
   let {
     checked: t,
     labelText: n,
     tooltipText: s,
-    canToggle: g,
-    iconAltText: S,
-    onChange: _,
-    tooltipColor: T,
-    className: I,
-    id: A = "fancybutton-toggle",
-    collapseWhenChecked: x = !0,
+    canToggle: C,
+    iconAltText: g,
+    onChange: S,
+    tooltipColor: _,
+    className: T,
+    id: I = "fancybutton-toggle",
+    collapseWhenChecked: A = !0,
     onClick: v,
-    disabled: N
-  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [y, R] = l.useState(!1), L = (0, c.default)(), j = (0, o.isThemeDark)(L) || t ? C : E, {
+    disabled: x
+  } = e, N = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [M, y] = l.useState(!1), R = (0, c.default)(), L = (0, o.isThemeDark)(R) || t ? E : p, {
     width: O = 0,
-    ref: P
+    ref: j
   } = (0, d.default)(), {
-    width: D = 0,
-    ref: b
+    width: P = 0,
+    ref: D
   } = (0, d.default)();
   return (0, a.jsxs)(u.TooltipContainer, {
     text: (0, a.jsx)(h.NitroTooltipLabel, {
@@ -47,46 +46,46 @@ function g(e) {
       tooltipText: s
     }),
     position: "top",
-    color: null != T ? T : N ? u.Tooltip.Colors.BLACK : u.Tooltip.Colors.BRAND,
+    color: null != _ ? _ : x ? u.Tooltip.Colors.BLACK : u.Tooltip.Colors.BRAND,
     "aria-label": s,
-    tooltipClassName: p.tooltip,
-    className: p.tooltipContainer,
+    tooltipClassName: m.tooltip,
+    className: m.tooltipContainer,
     children: [(0, a.jsx)("input", {
-      className: p.visuallyHidden,
+      className: m.visuallyHidden,
       checked: t,
       onChange: function() {
-        if (g) {
+        if (C) {
           let e = !t;
-          R(!0), null == _ || _(e)
+          y(!0), null == S || S(e)
         }
         "function" == typeof v && v()
       },
-      id: A,
+      id: I,
       type: "checkbox",
-      disabled: N
+      disabled: x
     }), (0, a.jsxs)("label", {
-      htmlFor: A,
-      className: i()(p.label, I, {
-        [p.transition]: y,
-        [p.labelChecked]: t,
-        [p.labelUnchecked]: !t && !g
+      htmlFor: I,
+      className: i()(m.label, T, {
+        [m.transition]: M,
+        [m.labelChecked]: t,
+        [m.labelUnchecked]: !t && !C
       }),
-      style: x ? {
-        width: t ? O : O + D
+      style: A ? {
+        width: t ? O : O + P
       } : void 0,
-      children: [t ? (0, a.jsx)(m.Shine, {
-        className: p.shine,
-        shinePaused: M
+      children: [t ? (0, a.jsx)(u.Shine, {
+        className: m.shine,
+        shinePaused: N
       }) : null, (0, a.jsx)("img", {
-        ref: P,
-        src: j,
-        alt: S
+        ref: j,
+        src: L,
+        alt: g
       }), (0, a.jsx)("span", {
-        ref: b,
+        ref: D,
         children: (0, a.jsx)(u.Text, {
-          className: i()(p.burstText, {
-            [p.visuallyHidden]: t && x,
-            [p.burstTextChecked]: t
+          className: i()(m.burstText, {
+            [m.visuallyHidden]: t && A,
+            [m.burstTextChecked]: t
           }),
           variant: "text-sm/semibold",
           children: n

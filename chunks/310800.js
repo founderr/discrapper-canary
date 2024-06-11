@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return N
   }
 });
 var a = s("735250");
@@ -10,28 +10,27 @@ var l = s("852229"),
   n = s("481060"),
   i = s("724598"),
   r = s("674180"),
-  o = s("682864"),
-  d = s("729285"),
-  u = s("495437"),
-  c = s("267101"),
-  E = s("863663"),
-  _ = s("676651"),
-  I = s("613810"),
-  T = s("391181"),
-  S = s("689938"),
-  f = s("460316");
-let m = "guild-product-listings-header";
+  o = s("729285"),
+  d = s("495437"),
+  u = s("267101"),
+  c = s("863663"),
+  E = s("676651"),
+  _ = s("613810"),
+  I = s("391181"),
+  T = s("689938"),
+  S = s("460316");
+let f = "guild-product-listings-header";
 
-function N(e) {
+function m(e) {
   let {
     guildId: t,
     handleCreateOrEditProduct: o
-  } = e, d = (0, c.useGuildProductsForGuild)(t, {
+  } = e, E = (0, u.useGuildProductsForGuild)(t, {
     publishedOnly: !1
   }), {
-    shouldRestrictUpdatingCreatorMonetizationSettings: _
+    shouldRestrictUpdatingCreatorMonetizationSettings: m
   } = (0, r.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), N = e => {
-    (0, u.updateGuildProductListing)(t, e, {
+    (0, d.updateGuildProductListing)(t, e, {
       published: !1
     })
   }, g = (e, l) => {
@@ -47,30 +46,30 @@ function N(e) {
       })
     })
   }, h = (e, t) => {
-    (0, l.copy)((0, E.getGuildProductListingUrl)(e, t))
-  }, C = d.length > 0;
+    (0, l.copy)((0, c.getGuildProductListingUrl)(e, t))
+  }, C = E.length > 0;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(n.FormTitle, {
-      className: f.productListingsHeader,
-      id: m,
-      children: C ? S.default.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : S.default.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
+      className: S.productListingsHeader,
+      id: f,
+      children: C ? T.default.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : T.default.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
     }), C ? (0, a.jsx)("ul", {
-      className: f.productListings,
-      "aria-labelledby": m,
-      children: d.map(e => (0, a.jsx)("li", {
-        children: (0, a.jsx)(T.default, {
+      className: S.productListings,
+      "aria-labelledby": f,
+      children: E.map(e => (0, a.jsx)("li", {
+        children: (0, a.jsx)(I.default, {
           guildId: t,
           product: e,
           onEditProduct: () => o(e.id),
           onUnpublishProduct: () => N(e.id),
           onDeleteProduct: () => g(e.id, e.name),
           onCopyProductLink: () => h(t, e.id),
-          onTestDownload: () => I.default.open({
+          onTestDownload: () => _.default.open({
             guildId: t,
             productId: e.id
           }),
           onReportProduct: () => {},
-          disabled: _
+          disabled: m
         })
       }, e.id))
     }) : (0, a.jsx)(i.default, {
@@ -81,31 +80,31 @@ function N(e) {
   })
 }
 
-function g(e) {
+function N(e) {
   let {
     guildId: t
   } = e, {
     shouldRestrictUpdatingCreatorMonetizationSettings: s
   } = (0, r.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), l = e => {
-    _.openModal(t, e)
+    E.openModal(t, e)
   };
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(n.Button, {
-      className: f.addButton,
-      innerClassName: f.addButtonInner,
+      className: S.addButton,
+      innerClassName: S.addButtonInner,
       onClick: () => l(null),
       disabled: s,
-      children: [(0, a.jsx)(d.default, {
+      children: [(0, a.jsx)(o.default, {
         width: 20,
         height: 20,
         "aria-hidden": !0
-      }), (0, a.jsx)(o.default, {
+      }), (0, a.jsx)(n.Spacer, {
         size: 6,
         horizontal: !0
-      }), S.default.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON]
-    }), (0, a.jsx)(o.default, {
+      }), T.default.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON]
+    }), (0, a.jsx)(n.Spacer, {
       size: 24
-    }), (0, a.jsx)(N, {
+    }), (0, a.jsx)(m, {
       guildId: t,
       handleCreateOrEditProduct: l
     })]

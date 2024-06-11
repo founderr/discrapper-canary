@@ -8,11 +8,10 @@ var a = n("735250"),
   o = n("665906"),
   u = n("314897"),
   d = n("496675"),
-  c = n("301822"),
-  f = n("981631"),
-  h = n("689938"),
-  m = n("852427");
-let p = () => n.e("26176").then(n.t.bind(n, "737848", 19)).then(e => {
+  c = n("981631"),
+  f = n("689938"),
+  h = n("852427");
+let m = () => n.e("26176").then(n.t.bind(n, "737848", 19)).then(e => {
   let {
     default: t
   } = e;
@@ -22,25 +21,25 @@ t.default = l.memo(function(e) {
   let {
     channel: t,
     isLastItem: n
-  } = e, l = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), E = (0, s.useStateFromStores)([d.default], () => d.default.can(f.Permissions.SEND_MESSAGES_IN_THREADS, t)), C = (0, o.useIsNonModInLockedThread)(t), g = (0, s.useStateFromStores)([u.default], () => u.default.getId());
-  return n ? E && !C && t.ownerId !== g ? (0, a.jsxs)("div", {
-    className: m.box,
-    children: [(0, a.jsx)(c.default, {
-      importData: p,
+  } = e, l = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, s.useStateFromStores)([d.default], () => d.default.can(c.Permissions.SEND_MESSAGES_IN_THREADS, t)), E = (0, o.useIsNonModInLockedThread)(t), C = (0, s.useStateFromStores)([u.default], () => u.default.getId());
+  return n ? p && !E && t.ownerId !== C ? (0, a.jsxs)("div", {
+    className: h.box,
+    children: [(0, a.jsx)(i.LottieAnimation, {
+      importData: m,
       shouldAnimate: !l,
-      className: m.animation
+      className: h.animation
     }), (0, a.jsxs)("div", {
-      className: m.textContainer,
+      className: h.textContainer,
       children: [(0, a.jsx)(i.Heading, {
         variant: "heading-md/semibold",
-        children: h.default.Messages.FORUM_START_THE_CONVERSATION_HEADER
+        children: f.default.Messages.FORUM_START_THE_CONVERSATION_HEADER
       }), (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: h.default.Messages.FORUM_START_THE_CONVERSATION_DESCRIPTION
+        children: f.default.Messages.FORUM_START_THE_CONVERSATION_DESCRIPTION
       })]
     })]
   }) : null : (0, a.jsx)("div", {
-    className: m.divider
+    className: h.divider
   })
 })

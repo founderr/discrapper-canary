@@ -1,40 +1,39 @@
 "use strict";
 s.r(t), s.d(t, {
   OneWayToTwoWayLinkUpsell: function() {
-    return S
+    return c
   }
 });
 var a = s("735250"),
   n = s("470079"),
   i = s("481060"),
   l = s("243778"),
-  r = s("26290"),
-  o = s("921944"),
-  d = s("689938"),
-  u = s("832444");
-let c = e => {
+  r = s("921944"),
+  o = s("689938"),
+  d = s("832444");
+let u = e => {
     let {
       markAsDismissed: t
     } = e;
-    return n.useEffect(() => t(o.ContentDismissActionType.UNKNOWN), [t]), (0, a.jsx)(r.TextBadge, {
-      className: u.newBadge,
-      text: d.default.Messages.NEW
+    return n.useEffect(() => t(r.ContentDismissActionType.UNKNOWN), [t]), (0, a.jsx)(i.TextBadge, {
+      className: d.newBadge,
+      text: o.default.Messages.NEW
     })
   },
-  S = e => {
+  c = e => {
     let {
       title: t,
       body: s,
       img: n,
       newIndicatorDismissibleContent: r,
-      onClick: o
+      onClick: c
     } = e;
     return (0, a.jsxs)("div", {
-      className: u.container,
+      className: d.container,
       children: [n, (0, a.jsxs)("div", {
-        className: u.textContainer,
+        className: d.textContainer,
         children: [(0, a.jsxs)("div", {
-          className: u.headerText,
+          className: d.headerText,
           children: [(0, a.jsx)(l.default, {
             contentTypes: [r],
             children: e => {
@@ -42,7 +41,7 @@ let c = e => {
                 visibleContent: t,
                 markAsDismissed: s
               } = e;
-              return t === r ? (0, a.jsx)(c, {
+              return t === r ? (0, a.jsx)(u, {
                 markAsDismissed: s
               }) : null
             }
@@ -56,9 +55,9 @@ let c = e => {
         })]
       }), (0, a.jsx)(i.Button, {
         size: i.ButtonSizes.MEDIUM,
-        onClick: o,
-        className: u.reconnectButton,
-        children: d.default.Messages.RECONNECT
+        onClick: c,
+        className: d.reconnectButton,
+        children: o.default.Messages.RECONNECT
       })]
     })
   }

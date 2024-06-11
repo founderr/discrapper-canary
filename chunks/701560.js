@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return A
   }
 }), n("47120"), n("411104");
 var s, a = n("735250"),
@@ -16,15 +16,14 @@ var s, a = n("735250"),
   E = n("592745"),
   _ = n("757266"),
   m = n("417363"),
-  T = n("976644"),
-  I = n("86813"),
-  p = n("358085"),
-  h = n("346329"),
-  N = n("981631"),
-  S = n("689938"),
-  C = n("2050");
+  T = n("86813"),
+  I = n("358085"),
+  p = n("346329"),
+  h = n("981631"),
+  N = n("689938"),
+  S = n("2050");
 
-function g(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -32,11 +31,11 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class A extends(s = l.PureComponent) {
+class g extends(s = l.PureComponent) {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
-      object: N.AnalyticsObjects.BUTTON_CTA
+      object: h.AnalyticsObjects.BUTTON_CTA
     }
   }
   renderDropdown() {
@@ -44,13 +43,13 @@ class A extends(s = l.PureComponent) {
       dispatchState: e
     } = this.props;
     return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1 ? (0, a.jsxs)(u.Clickable, {
-      "aria-label": S.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-      className: C.dropdownArrowHitbox,
+      "aria-label": N.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
+      className: S.dropdownArrowHitbox,
       onClick: this.handleDropdownClick,
       children: [(0, a.jsx)("div", {
-        className: C.arrowSeparator
-      }), (0, a.jsx)(I.default, {
-        className: C.dropdownArrow
+        className: S.arrowSeparator
+      }), (0, a.jsx)(T.default, {
+        className: S.dropdownArrow
       })]
     }) : null
   }
@@ -63,19 +62,19 @@ class A extends(s = l.PureComponent) {
       tooltipPosition: r
     } = this.props;
     return (0, a.jsxs)("div", {
-      className: C.disabledButtonWrapper,
+      className: S.disabledButtonWrapper,
       children: [(0, a.jsx)(u.Button, {
         className: n,
         fullWidth: s,
         size: l,
-        color: null != i ? i : C.disabledButtonColor,
+        color: null != i ? i : S.disabledButtonColor,
         disabled: !0,
         children: e
       }), (0, a.jsx)(u.Tooltip, {
         text: t,
         position: r,
         children: e => (0, a.jsx)("div", {
-          className: C.disabledButtonOverlay,
+          className: S.disabledButtonOverlay,
           ...e
         })
       })]
@@ -93,25 +92,25 @@ class A extends(s = l.PureComponent) {
       isShiny: d,
       hideNotLaunchable: c
     } = this.props;
-    if (!l) return c ? null : this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_PLAY, p.isPlatformEmbedded ? S.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : S.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
-    if (o) return this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
-    let f = d ? T.default : u.Button;
+    if (!l) return c ? null : this.renderDisabledButton(N.default.Messages.GAME_ACTION_BUTTON_PLAY, I.isPlatformEmbedded ? N.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : N.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+    if (o) return this.renderDisabledButton(N.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
+    let f = d ? u.ShinyButton : u.Button;
     return (0, a.jsxs)(f, {
-      className: r()(C.playButton, e),
-      innerClassName: C.playButtonContents,
+      className: r()(S.playButton, e),
+      innerClassName: S.playButtonContents,
       fullWidth: t,
       size: n,
       color: null != s ? s : u.Button.Colors.GREEN,
       submitting: i,
       onClick: this.handleClick,
       children: [(0, a.jsx)("div", {
-        className: C.buttonText,
-        children: S.default.Messages.GAME_ACTION_BUTTON_PLAY
+        className: S.buttonText,
+        children: N.default.Messages.GAME_ACTION_BUTTON_PLAY
       }), this.renderDropdown()]
     })
   }
   constructor(...e) {
-    super(...e), g(this, "handleDropdownClick", e => {
+    super(...e), C(this, "handleDropdownClick", e => {
       e.stopPropagation();
       let {
         libraryApplication: t,
@@ -131,14 +130,14 @@ class A extends(s = l.PureComponent) {
       }, {
         onClose: l
       })
-    }), g(this, "handleClick", () => {
+    }), C(this, "handleClick", () => {
       let {
         applicationId: e,
         libraryApplication: t,
         analyticsListSort: n,
         analyticsListIndex: s
       } = this.props;
-      h.playApplication(e, t, {
+      p.playApplication(e, t, {
         analyticsParams: {
           location: this.analyticsLocation,
           list_sort: n,
@@ -149,12 +148,12 @@ class A extends(s = l.PureComponent) {
   }
 }
 
-function M(e) {
+function A(e) {
   let {
     applicationId: t,
     libraryApplication: n
   } = e, s = (0, c.useAnalyticsContext)(), [l, i] = (0, o.useStateFromStoresArray)([_.default, E.default, m.default], () => [_.default.isConnected(t) || E.default.isLaunchable(t) || null != n && m.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), r = (0, o.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, o.useStateFromStores)([m.default], () => null != n ? m.default.getState(n.id, n.branchId) : null, [n]);
-  return (0, a.jsx)(A, {
+  return (0, a.jsx)(g, {
     ...e,
     analyticsContext: s,
     isLaunchable: l,
@@ -163,7 +162,7 @@ function M(e) {
     dispatchState: u
   })
 }
-g(A, "defaultProps", {
+C(g, "defaultProps", {
   fullWidth: !1,
   size: u.Button.Sizes.LARGE,
   tooltipPosition: "top",

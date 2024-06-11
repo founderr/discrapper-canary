@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return E
   }
 });
 var a = s("735250");
@@ -10,29 +10,28 @@ var l = s("442837"),
   n = s("481060"),
   i = s("471613"),
   r = s("29605"),
-  o = s("682864"),
-  d = s("540086"),
-  u = s("723047"),
-  c = s("796814"),
-  E = s("689938");
+  o = s("540086"),
+  d = s("723047"),
+  u = s("796814"),
+  c = s("689938");
 
-function _(e) {
+function E(e) {
   let {
     guild: t
-  } = e, _ = (0, l.useStateFromStores)([i.default], () => i.default.isUploadingEmoji()), I = (0, c.default)(t.id), T = t.getMaxRoleSubscriptionEmojiSlots() - I.length, S = (0, u.useRoleSubscriptionSettingsDisabled)();
+  } = e, E = (0, l.useStateFromStores)([i.default], () => i.default.isUploadingEmoji()), _ = (0, u.default)(t.id), I = t.getMaxRoleSubscriptionEmojiSlots() - _.length, T = (0, d.useRoleSubscriptionSettingsDisabled)();
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)(n.FormSection, {
-      title: E.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_TITLE,
-      disabled: S,
+      title: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_TITLE,
+      disabled: T,
       children: [(0, a.jsx)(n.FormText, {
         type: n.FormText.Types.DESCRIPTION,
-        disabled: S,
-        children: E.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_DESCRIPTION.format({
+        disabled: T,
+        children: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_DESCRIPTION.format({
           maxSlots: t.getMaxRoleSubscriptionEmojiSlots()
         })
-      }), (0, a.jsx)(o.default, {
+      }), (0, a.jsx)(n.Spacer, {
         size: 16
-      }), (0, a.jsx)(d.default, {
+      }), (0, a.jsx)(o.default, {
         onChange: (e, l) => {
           null != e && null != l && (0, n.openModalLazy)(async () => {
             let {
@@ -46,18 +45,18 @@ function _(e) {
             })
           })
         },
-        buttonCTA: E.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_CTA,
-        submitting: _,
-        disabled: S || _ || 0 === T
-      }), (0, a.jsx)(o.default, {
+        buttonCTA: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_CTA,
+        submitting: E,
+        disabled: T || E || 0 === I
+      }), (0, a.jsx)(n.Spacer, {
         size: 24
       }), (0, a.jsx)(r.EmojiTableTitle, {
-        title: E.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_EMOJI_SECTION_TITLE,
+        title: c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_EMOJI_SECTION_TITLE,
         maxSlots: t.getMaxRoleSubscriptionEmojiSlots(),
-        emojiCount: I.length
+        emojiCount: _.length
       }), (0, a.jsx)(r.EmojiTable, {
         guild: t,
-        emojis: I,
+        emojis: _,
         onEdit: (e, t) => {
           (0, n.openModalLazy)(async () => {
             let {
@@ -70,7 +69,7 @@ function _(e) {
             })
           })
         },
-        editingDisabled: S
+        editingDisabled: T
       })]
     })
   })

@@ -8,18 +8,17 @@ var l = i("735250"),
   s = i("470079"),
   u = i("512722"),
   a = i.n(u),
-  d = i("481060"),
-  n = i("560067"),
+  n = i("481060"),
+  d = i("560067"),
   r = i("434404"),
   o = i("430824"),
-  c = i("682864"),
-  S = i("153124"),
-  I = i("313741"),
-  E = i("526079"),
-  f = i("689938"),
+  c = i("153124"),
+  S = i("313741"),
+  I = i("526079"),
+  E = i("689938"),
   G = i("328746");
 
-function T(e) {
+function f(e) {
   let {
     className: t,
     guildId: i,
@@ -27,15 +26,15 @@ function T(e) {
     isGuildIncluded: u
   } = e, {
     options: a
-  } = (0, E.default)({
+  } = (0, I.default)({
     isGuildIncluded: u
   });
-  return (0, l.jsx)(d.SearchableSelect, {
+  return (0, l.jsx)(n.SearchableSelect, {
     className: t,
     onChange: s,
     value: i,
     options: a,
-    placeholder: f.default.Messages.GUILD_SELECT
+    placeholder: E.default.Messages.GUILD_SELECT
   })
 }
 
@@ -44,21 +43,21 @@ function p(e) {
     transitionState: t,
     onClose: i,
     feature: u,
-    section: E,
-    subsection: f
-  } = e, p = (0, S.useUID)(), {
-    canCreateGuild: C,
-    createGuildCta: g,
-    createGuildDescription: _,
-    selectGuildCta: R,
-    title: m,
-    description: L,
-    isGuildSupported: N
-  } = (0, I.useGuildSettingsPickerFeature)(u), [b, M] = s.useState(), [O, h] = s.useState(!1), v = async () => {
+    section: I,
+    subsection: E
+  } = e, p = (0, c.useUID)(), {
+    canCreateGuild: T,
+    createGuildCta: C,
+    createGuildDescription: g,
+    selectGuildCta: _,
+    title: R,
+    description: m,
+    isGuildSupported: L
+  } = (0, S.useGuildSettingsPickerFeature)(u), [N, b] = s.useState(), [M, O] = s.useState(!1), h = async () => {
     var e;
-    h(!0);
+    O(!0);
     let t = await new Promise(e => {
-      n.default.openCreateGuildModal({
+      d.default.openCreateGuildModal({
         onSuccess: e
       })
     });
@@ -66,56 +65,56 @@ function p(e) {
       o.default.addChangeListener(function i() {
         null != o.default.getGuild(e) && (o.default.removeChangeListener(i), t())
       })
-    })), r.default.open(t, E, void 0, f), null == i || i()
+    })), r.default.open(t, I, void 0, E), null == i || i()
   };
-  return (0, l.jsxs)(d.ModalRoot, {
+  return (0, l.jsxs)(n.ModalRoot, {
     transitionState: t,
     "aria-labelledby": p,
-    children: [(0, l.jsxs)(d.ModalHeader, {
+    children: [(0, l.jsxs)(n.ModalHeader, {
       className: G.modalHeader,
       separator: !1,
-      children: [(0, l.jsx)(d.Heading, {
+      children: [(0, l.jsx)(n.Heading, {
         id: p,
         variant: "heading-lg/medium",
-        children: m
-      }), (0, l.jsx)(d.ModalCloseButton, {
+        children: R
+      }), (0, l.jsx)(n.ModalCloseButton, {
         onClick: i
       })]
-    }), (0, l.jsxs)(d.ModalContent, {
+    }), (0, l.jsxs)(n.ModalContent, {
       className: G.modalContent,
-      children: [(0, l.jsx)(d.Text, {
+      children: [(0, l.jsx)(n.Text, {
         variant: "text-md/medium",
-        children: L
-      }), (0, l.jsx)(c.default, {
+        children: m
+      }), (0, l.jsx)(n.Spacer, {
         size: 16
       }), (0, l.jsxs)("div", {
         className: G.guildSelection,
         children: [(0, l.jsx)("div", {
           className: G.guildSelectorContainer,
-          children: (0, l.jsx)(T, {
-            guildId: b,
-            onChange: M,
-            isGuildIncluded: N
+          children: (0, l.jsx)(f, {
+            guildId: N,
+            onChange: b,
+            isGuildIncluded: L
           })
-        }), (0, l.jsx)(d.Button, {
+        }), (0, l.jsx)(n.Button, {
           onClick: () => {
-            a()(null != b, "Guild ID must not be null on click"), r.default.open(b, E, void 0, f), null == i || i()
+            a()(null != N, "Guild ID must not be null on click"), r.default.open(N, I, void 0, E), null == i || i()
           },
-          disabled: null == b,
-          children: R
-        })]
-      }), C && (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(c.default, {
-          size: 32
-        }), (0, l.jsx)(d.Text, {
-          variant: "text-md/medium",
+          disabled: null == N,
           children: _
-        }), (0, l.jsx)(c.default, {
-          size: 8
-        }), (0, l.jsx)(d.Button, {
-          onClick: v,
-          submitting: O,
+        })]
+      }), T && (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(n.Spacer, {
+          size: 32
+        }), (0, l.jsx)(n.Text, {
+          variant: "text-md/medium",
           children: g
+        }), (0, l.jsx)(n.Spacer, {
+          size: 8
+        }), (0, l.jsx)(n.Button, {
+          onClick: h,
+          submitting: M,
+          children: C
         })]
       })]
     })]

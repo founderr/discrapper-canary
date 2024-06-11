@@ -4,7 +4,7 @@ var s = n("735250");
 n("470079");
 var a = n("913527"),
   l = n.n(a),
-  i = n("644766"),
+  i = n("481060"),
   r = n("730417"),
   o = n("921944"),
   u = n("689938"),
@@ -28,7 +28,7 @@ t.default = e => {
     bodyText: f,
     articleUrl: E
   } = c(l.drop, l.config.streamLengthRequirement);
-  return (0, s.jsxs)(i.default, {
+  return (0, s.jsxs)(i.Notice, {
     className: d.colorGuildBlue,
     children: [f, (0, s.jsx)(i.NoticeButtonAnchor, {
       href: E,

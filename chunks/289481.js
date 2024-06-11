@@ -13,18 +13,17 @@ var s = n("735250"),
   E = n("717680"),
   _ = n("703656"),
   m = n("592125"),
-  T = n("836946"),
-  I = n("259580"),
-  p = n("263704"),
-  h = n("568570"),
-  N = n("617379"),
-  S = n("324081"),
-  C = n("305248"),
-  g = n("520116"),
-  A = n("981631"),
-  M = n("689938"),
-  R = n("623122");
-let v = a.memo(function(e) {
+  T = n("259580"),
+  I = n("263704"),
+  p = n("568570"),
+  h = n("617379"),
+  N = n("324081"),
+  S = n("305248"),
+  C = n("520116"),
+  g = n("981631"),
+  A = n("689938"),
+  M = n("623122");
+let R = a.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
@@ -61,13 +60,13 @@ let v = a.memo(function(e) {
   return (0, s.jsx)(r.animated.div, {
     ref: l,
     style: E,
-    children: (0, s.jsx)(O, {
+    children: (0, s.jsx)(v, {
       ...e
     })
   })
 });
-t.default = v;
-let O = a.memo(function(e) {
+t.default = R;
+let v = a.memo(function(e) {
   let {
     channel: t,
     onJump: n,
@@ -80,35 +79,35 @@ let O = a.memo(function(e) {
       })
     }), null == r || !t.hasLoadedAnything) return null;
   let E = (e, s) => {
-    (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
+    (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
       channel_id: t.channelId,
       guild_id: t.guildId
     });
     let a = null != s ? s : t.oldestUnreadMessageId;
-    (0, _.transitionTo)(A.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+    (0, _.transitionTo)(g.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
   };
   return (0, s.jsx)("div", {
-    className: R.channel,
+    className: M.channel,
     children: (0, s.jsx)(u.HeadingLevel, {
-      component: (0, s.jsxs)(S.default, {
+      component: (0, s.jsxs)(N.default, {
         channel: r,
         gotoChannel: E,
         mentionCount: t.mentionCount,
         toggleCollapsed: i,
         channelState: t,
-        children: [(0, s.jsx)(N.default, {
+        children: [(0, s.jsx)(h.default, {
           channel: r
-        }), (0, s.jsx)(x, {
+        }), (0, s.jsx)(O, {
           ...e
-        }), "nsfw" === t.type ? null : (0, s.jsx)(L, {
+        }), "nsfw" === t.type ? null : (0, s.jsx)(x, {
           ...e
         })]
       }),
-      children: t.collapsed ? null : "messages" === t.type ? (0, s.jsx)(g.default, {
+      children: t.collapsed ? null : "messages" === t.type ? (0, s.jsx)(C.default, {
         channel: t,
         channelRecord: r,
         gotoChannel: E
-      }) : "forum" === t.type ? (0, s.jsx)(C.default, {
+      }) : "forum" === t.type ? (0, s.jsx)(S.default, {
         channel: t,
         channelRecord: r,
         deleteChannel: l
@@ -117,26 +116,26 @@ let O = a.memo(function(e) {
   })
 });
 
-function x(e) {
+function O(e) {
   let {
     channel: t,
     markChannelRead: n,
     markGuildRead: a,
     getNumUnreadChannels: l
   } = e, i = (0, E.default)() && null != t.guildId;
-  return (0, s.jsx)(T.default, {
-    className: R.markReadButton,
-    tooltip: i ? M.default.Messages.MARK_GUILD_AS_READ : M.default.Messages.MARK_AS_READ,
-    color: T.CircleIconButtonColors.TERTIARY,
-    icon: i ? (0, s.jsx)(h.default, {
+  return (0, s.jsx)(u.CircleIconButton, {
+    className: M.markReadButton,
+    tooltip: i ? A.default.Messages.MARK_GUILD_AS_READ : A.default.Messages.MARK_AS_READ,
+    color: u.CircleIconButtonColors.TERTIARY,
+    icon: i ? (0, s.jsx)(p.default, {
       width: 16,
       height: 16
-    }) : (0, s.jsx)(p.default, {
+    }) : (0, s.jsx)(I.default, {
       width: 16,
       height: 16
     }),
     onClick: function() {
-      i && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_ACKED, {
+      i && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_ACKED, {
         channel_id: t.channelId,
         guild_id: t.guildId,
         marked_all_channels_as_read: !1,
@@ -146,7 +145,7 @@ function x(e) {
   })
 }
 
-function L(e) {
+function x(e) {
   let {
     channel: t,
     toggle: n,
@@ -154,7 +153,7 @@ function L(e) {
   } = e;
 
   function l() {
-    n(t), (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
+    n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
       channel_id: t.channelId,
       guild_id: t.guildId,
       num_unread_channels_remaining: a(),
@@ -162,14 +161,14 @@ function L(e) {
     })
   }
   return (0, s.jsx)(u.Tooltip, {
-    text: M.default.Messages.COLLAPSE,
+    text: A.default.Messages.COLLAPSE,
     children: e => (0, s.jsx)(u.Clickable, {
       ...e,
-      className: i()(R.collapseButton, {
-        [R.collapsed]: t.collapsed
+      className: i()(M.collapseButton, {
+        [M.collapsed]: t.collapsed
       }),
       onClick: l,
-      children: (0, s.jsx)(I.default, {
+      children: (0, s.jsx)(T.default, {
         width: 16,
         height: 16
       })

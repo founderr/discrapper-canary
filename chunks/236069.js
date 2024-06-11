@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var s = n("735250");
 n("470079");
-var a = n("644766"),
+var a = n("481060"),
   l = n("295474"),
   i = n("689938"),
   r = n("229647");
@@ -22,7 +22,7 @@ function o(e) {
     analyticsLocation: o,
     openWithoutBackstack: !0
   }), c = d ? i.default.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE : i.default.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_NO_PERMS, f = d ? i.default.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_USER_PROFILE_CTA : i.default.Messages.GUILD_AUTOMOD_NAGBAR_QUARANTINED_ACCOUNT_USERNAME_CTA;
-  return (0, s.jsxs)(a.default, {
+  return (0, s.jsxs)(a.Notice, {
     color: a.NoticeColors.CUSTOM,
     className: r.quarantineNotice,
     children: [c, (0, s.jsx)(a.NoticeButton, {

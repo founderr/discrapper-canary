@@ -1,119 +1,118 @@
 "use strict";
 s.r(a), s.d(a, {
   EmojiAddModal: function() {
-    return h
+    return u
   }
 }), s("47120");
 var t = s("735250"),
-  l = s("470079"),
-  i = s("481060"),
-  o = s("682864"),
-  n = s("153124"),
-  d = s("768581"),
-  r = s("570533"),
-  c = s("689938"),
-  u = s("347195");
+  i = s("470079"),
+  o = s("481060"),
+  l = s("153124"),
+  n = s("768581"),
+  d = s("570533"),
+  r = s("689938"),
+  c = s("347195");
 
 function m(e) {
   let {
     emoji: a,
     onChange: s,
-    value: l
-  } = e, o = d.default.getEmojiURL({
+    value: i
+  } = e, l = n.default.getEmojiURL({
     id: a.id,
     animated: a.animated,
     size: 24
   });
-  return (0, t.jsx)(i.Checkbox, {
+  return (0, t.jsx)(o.Checkbox, {
     size: 20,
-    className: u.emojiRow,
+    className: c.emojiRow,
     onChange: s,
-    type: i.Checkbox.Types.INVERTED,
-    value: l,
+    type: o.Checkbox.Types.INVERTED,
+    value: i,
     reverse: !0,
     children: (0, t.jsxs)("div", {
-      className: u.emojiLabel,
+      className: c.emojiLabel,
       children: [(0, t.jsx)("img", {
-        className: u.emojiImage,
-        src: o,
+        className: c.emojiImage,
+        src: l,
         width: 24,
         height: 24,
         alt: ""
-      }), (0, t.jsx)(i.Text, {
+      }), (0, t.jsx)(o.Text, {
         color: "header-primary",
         variant: "text-md/medium",
-        className: u.emojiAlias,
+        className: c.emojiAlias,
         children: a.name
       })]
     })
   })
 }
 
-function h(e) {
+function u(e) {
   let {
     guildId: a,
     initialTierEmojiIds: s,
-    onSubmit: d,
-    transitionToManageEmoji: h,
-    transitionState: j,
-    onClose: x
-  } = e, _ = (0, r.default)(a), [C, I] = l.useState(new Set), f = C.size > 0, D = (0, n.useUID)();
+    onSubmit: n,
+    transitionToManageEmoji: u,
+    transitionState: h,
+    onClose: j
+  } = e, x = (0, d.default)(a), [_, C] = i.useState(new Set), I = _.size > 0, D = (0, l.useUID)();
   return (0, t.jsx)("form", {
     onSubmit: function(e) {
-      e.preventDefault(), d(C), x()
+      e.preventDefault(), n(_), j()
     },
-    children: (0, t.jsxs)(i.ModalRoot, {
-      transitionState: j,
+    children: (0, t.jsxs)(o.ModalRoot, {
+      transitionState: h,
       "aria-labelledby": D,
-      children: [(0, t.jsxs)(i.ModalHeader, {
-        children: [(0, t.jsx)(i.Heading, {
+      children: [(0, t.jsxs)(o.ModalHeader, {
+        children: [(0, t.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           id: D,
-          children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_ADD_MODAL_HEADER
-        }), (0, t.jsx)(i.ModalCloseButton, {
-          className: u.closeButton,
-          onClick: x
+          children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_ADD_MODAL_HEADER
+        }), (0, t.jsx)(o.ModalCloseButton, {
+          className: c.closeButton,
+          onClick: j
         })]
-      }), (0, t.jsxs)(i.ModalContent, {
-        className: u.modalContent,
-        children: [(0, t.jsx)(i.Text, {
+      }), (0, t.jsxs)(o.ModalContent, {
+        className: c.modalContent,
+        children: [(0, t.jsx)(o.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_ADD_MODAL_DESCRIPTION.format({
-            transitionToManageEmoji: h
+          children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_ADD_MODAL_DESCRIPTION.format({
+            transitionToManageEmoji: u
           })
-        }), (0, t.jsx)(o.default, {
+        }), (0, t.jsx)(o.Spacer, {
           size: 16
-        }), null != _ && _.length > 0 && (0, t.jsx)("div", {
-          className: u.emojiContainer,
-          children: _.map(e => null != s && s.has(e.id) ? null : (0, t.jsx)(m, {
+        }), null != x && x.length > 0 && (0, t.jsx)("div", {
+          className: c.emojiContainer,
+          children: x.map(e => null != s && s.has(e.id) ? null : (0, t.jsx)(m, {
             emoji: e,
             onChange: () => {
               var a;
-              return a = e.id, void I(e => {
+              return a = e.id, void C(e => {
                 let s = new Set(e);
-                return C.has(a) ? s.delete(a) : s.add(a), s
+                return _.has(a) ? s.delete(a) : s.add(a), s
               })
             },
-            value: C.has(e.id)
+            value: _.has(e.id)
           }, e.id))
-        }), (0, t.jsx)(o.default, {
+        }), (0, t.jsx)(o.Spacer, {
           size: 8
         })]
-      }), (0, t.jsxs)(i.ModalFooter, {
-        className: u.modalFooter,
-        children: [(0, t.jsx)(i.Button, {
+      }), (0, t.jsxs)(o.ModalFooter, {
+        className: c.modalFooter,
+        children: [(0, t.jsx)(o.Button, {
           type: "submit",
-          disabled: !f,
-          children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_ADD_MODAL_SAVE_BUTTON.format({
-            totalEmoji: C.size
+          disabled: !I,
+          children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_ADD_MODAL_SAVE_BUTTON.format({
+            totalEmoji: _.size
           })
-        }), (0, t.jsx)(i.Button, {
-          look: i.Button.Looks.LINK,
-          color: i.Button.Colors.PRIMARY,
-          className: u.cancelButton,
-          onClick: x,
-          children: c.default.Messages.CANCEL
+        }), (0, t.jsx)(o.Button, {
+          look: o.Button.Looks.LINK,
+          color: o.Button.Colors.PRIMARY,
+          className: c.cancelButton,
+          onClick: j,
+          children: r.default.Messages.CANCEL
         })]
       })]
     })

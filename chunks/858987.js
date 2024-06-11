@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return P
+    return p
   },
   getReviewConfirmButtonLabel: function() {
-    return f
+    return T
   }
 });
 var n = a("735250");
@@ -13,15 +13,14 @@ var r = a("512722"),
   s = a.n(r),
   i = a("481060"),
   l = a("598"),
-  o = a("976644"),
-  u = a("74538"),
-  c = a("296848"),
-  d = a("231338"),
-  I = a("689938"),
-  _ = a("66471"),
-  T = a("74316");
+  o = a("74538"),
+  u = a("296848"),
+  c = a("231338"),
+  d = a("689938"),
+  I = a("66471"),
+  _ = a("74316");
 
-function f(e) {
+function T(e) {
   let {
     purchaseType: t,
     plan: a,
@@ -30,93 +29,93 @@ function f(e) {
     planGroup: i,
     isPrepaidPaymentSource: l
   } = e;
-  if (t === d.PurchaseTypes.ONE_TIME) return r ? I.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : I.default.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
-  if (s()(null != a, "Subscription plan must be selected to render SubscriptionReviewButton"), r) return I.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
-  if ((0, u.isPremiumSubscriptionPlan)(a.id)) {
-    if (l) return I.default.Messages.BILLING_SELECT_PLAN;
-    if (null != n) return n.isPaused ? I.default.Messages.RESUME : (0, c.subscriptionCanSwitchImmediately)(n, a.id, i) ? I.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : I.default.Messages.BILLING_SWITCH_PLAN_CHANGE;
-    return (0, u.getBillingReviewSubheader)(null, a)
+  if (t === c.PurchaseTypes.ONE_TIME) return r ? d.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : d.default.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
+  if (s()(null != a, "Subscription plan must be selected to render SubscriptionReviewButton"), r) return d.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
+  if ((0, o.isPremiumSubscriptionPlan)(a.id)) {
+    if (l) return d.default.Messages.BILLING_SELECT_PLAN;
+    if (null != n) return n.isPaused ? d.default.Messages.RESUME : (0, u.subscriptionCanSwitchImmediately)(n, a.id, i) ? d.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : d.default.Messages.BILLING_SWITCH_PLAN_CHANGE;
+    return (0, o.getBillingReviewSubheader)(null, a)
   }
-  return I.default.Messages.BILLING_SUBSCRIBE_TO_PLAN
+  return d.default.Messages.BILLING_SUBSCRIBE_TO_PLAN
 }
 
-function p(e, t) {
+function f(e, t) {
   null != e.current && (e.current.scrollIntoView({
     behavior: "smooth"
   }), t())
 }
 
-function P(e) {
+function p(e) {
   let {
     legalTermsNodeRef: t,
     invoiceError: a,
     planError: r,
     disablePurchase: s,
-    flashLegalTerms: u,
-    isSubmitting: c,
-    premiumSubscription: d,
-    isGift: P,
-    planGroup: m,
-    isPrepaid: E,
-    isTrial: A,
-    makePurchase: S,
-    needsPaymentSource: N
+    flashLegalTerms: o,
+    isSubmitting: u,
+    premiumSubscription: c,
+    isGift: p,
+    planGroup: P,
+    isPrepaid: m,
+    isTrial: E,
+    makePurchase: A,
+    needsPaymentSource: S
   } = e, {
-    selectedPlan: R,
-    hasAcceptedTerms: M,
-    purchaseType: b
-  } = (0, l.usePaymentContext)(), v = f({
-    purchaseType: b,
-    plan: R,
-    premiumSubscription: d,
-    isGift: P,
-    planGroup: m,
-    isPrepaidPaymentSource: E
+    selectedPlan: N,
+    hasAcceptedTerms: R,
+    purchaseType: M
+  } = (0, l.usePaymentContext)(), b = T({
+    purchaseType: M,
+    plan: N,
+    premiumSubscription: c,
+    isGift: p,
+    planGroup: P,
+    isPrepaidPaymentSource: m
   });
   if (null != a || null != r || s) return (0, n.jsx)(i.Button, {
     color: i.Button.Colors.GREEN,
     disabled: !0,
-    children: v
+    children: b
   });
-  if (N) return (0, n.jsx)(i.Tooltip, {
-    text: I.default.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
+  if (S) return (0, n.jsx)(i.Tooltip, {
+    text: d.default.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
     children: e => (0, n.jsx)(i.Button, {
       ...e,
       color: i.Button.Colors.GREEN,
       type: "submit",
       "data-testid": "submitButton",
       disabled: !0,
-      children: v
+      children: b
     })
   });
-  if (A) return (0, n.jsxs)(o.default, {
-    innerClassName: _.innerButton,
-    "data-testid": M ? "purchase" : "submitButton",
-    onClick: M ? S : () => p(t, u),
+  if (E) return (0, n.jsxs)(i.ShinyButton, {
+    innerClassName: I.innerButton,
+    "data-testid": R ? "purchase" : "submitButton",
+    onClick: R ? A : () => f(t, o),
     color: i.Button.Colors.GREEN,
-    submitting: c,
+    submitting: u,
     children: [(0, n.jsx)("img", {
       alt: "",
-      className: _.nitroIcon,
-      src: T
-    }), v]
+      className: I.nitroIcon,
+      src: _
+    }), b]
   });
-  else if (!M) return (0, n.jsx)(i.Tooltip, {
-    text: I.default.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
+  else if (!R) return (0, n.jsx)(i.Tooltip, {
+    text: d.default.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
     children: e => (0, n.jsx)(i.Button, {
       ...e,
       color: i.Button.Colors.GREEN,
       type: "submit",
-      onClick: () => p(t, u),
+      onClick: () => f(t, o),
       "data-testid": "submitButton",
-      children: v
+      children: b
     })
   });
   else return (0, n.jsx)(i.Button, {
     "data-testid": "purchase",
-    onClick: S,
+    onClick: A,
     color: i.Button.Colors.GREEN,
-    submitting: c,
-    children: v
+    submitting: u,
+    children: b
   })
 }

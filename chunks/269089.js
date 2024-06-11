@@ -19,7 +19,7 @@ let u = (0, i.makeLazy)({
     name: "PopoutWindowStageChannelCall"
   }),
   c = (0, i.makeLazy)({
-    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("33053"), n.e("92006")]).then(n.bind(n, "945778")),
+    createPromise: () => Promise.all([n.e("99387"), n.e("33053"), n.e("92006")]).then(n.bind(n, "945778")),
     webpackId: "945778",
     name: "PopoutWindowRTCDebug"
   });

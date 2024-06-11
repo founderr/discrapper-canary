@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var i = n("735250"),
@@ -9,50 +9,49 @@ var i = n("735250"),
   s = n("993365"),
   a = n("481060"),
   o = n("240991"),
-  l = n("682864"),
-  u = n("810090"),
-  d = n("783097"),
-  _ = n("47713"),
-  c = n("689938"),
-  E = n("113046"),
-  I = n("946278");
+  l = n("810090"),
+  u = n("783097"),
+  d = n("47713"),
+  _ = n("689938"),
+  c = n("113046"),
+  E = n("946278");
 
-function T(e) {
+function I(e) {
   var t;
   let {
     channel: n,
     application: r,
-    videoUrl: a,
-    imageCoverUrl: o
-  } = e, d = null != a || null != o, _ = (null !== (t = r.description) && void 0 !== t ? t : "").length > 0;
+    videoUrl: o,
+    imageCoverUrl: u
+  } = e, d = null != o || null != u, E = (null !== (t = r.description) && void 0 !== t ? t : "").length > 0;
   return (0, i.jsxs)("div", {
-    className: E.container,
-    children: [(0, i.jsx)(f, {
+    className: c.container,
+    children: [(0, i.jsx)(T, {
       channel: n,
       application: r
-    }), (0, i.jsx)(l.default, {
+    }), (0, i.jsx)(a.Spacer, {
       size: 16
     }), (0, i.jsxs)("div", {
-      className: E.profileAndVideoContainer,
+      className: c.profileAndVideoContainer,
       children: [d ? (0, i.jsx)("div", {
-        className: E.videoContainer,
-        children: (0, i.jsx)(u.default, {
+        className: c.videoContainer,
+        children: (0, i.jsx)(l.default, {
           loop: !0,
           autoPlay: !0,
           muted: !0,
-          className: E.video,
-          src: a,
-          poster: o
+          className: c.video,
+          src: o,
+          poster: u
         })
       }) : null, (0, i.jsxs)("div", {
-        className: d ? E.overviewContainerWithVideo : E.overviewContainerNoVideo,
+        className: d ? c.overviewContainerWithVideo : c.overviewContainerNoVideo,
         children: [(0, i.jsx)(s.Text, {
           variant: "text-sm/semibold",
-          children: c.default.Messages.OVERVIEW
-        }), _ ? (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(l.default, {
+          children: _.default.Messages.OVERVIEW
+        }), E ? (0, i.jsxs)(i.Fragment, {
+          children: [(0, i.jsx)(a.Spacer, {
             size: 8
-          }), (0, i.jsx)(S, {
+          }), (0, i.jsx)(f, {
             application: r
           })]
         }) : null]
@@ -61,22 +60,22 @@ function T(e) {
   })
 }
 
-function f(e) {
+function T(e) {
   let {
     channel: t,
     application: n,
     sectionName: r
-  } = e, s = (0, d.isEmbeddedApp)({
+  } = e, s = (0, u.isEmbeddedApp)({
     application: n
   }), o = t.isThread();
   return (0, i.jsx)("div", {
-    className: E.titleContainer,
+    className: c.titleContainer,
     children: (0, i.jsxs)("div", {
-      className: E.titleInnerContainer,
+      className: c.titleInnerContainer,
       children: [(0, i.jsx)(a.Heading, {
         variant: "heading-xl/extrabold",
         children: n.name
-      }), s ? (0, i.jsx)(_.default, {
+      }), s ? (0, i.jsx)(d.default, {
         channel: t,
         application: n,
         disabled: o,
@@ -86,7 +85,7 @@ function f(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   let {
     application: t
   } = e, n = r.useMemo(() => {
@@ -94,7 +93,7 @@ function S(e) {
     return (0, o.parseBioReact)(null !== (e = t.description) && void 0 !== e ? e : "")
   }, [t]);
   return (0, i.jsx)(s.Text, {
-    className: I.markup,
+    className: E.markup,
     variant: "text-sm/medium",
     lineClamp: 3,
     children: n

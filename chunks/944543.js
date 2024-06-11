@@ -5,10 +5,10 @@ var a = n("735250"),
   s = n("120356"),
   i = n.n(s),
   r = n("442837"),
-  o = n("771340"),
-  u = n("903223"),
-  d = n("285952"),
-  c = n("70072"),
+  o = n("481060"),
+  u = n("771340"),
+  d = n("903223"),
+  c = n("285952"),
   f = n("689938"),
   h = n("360957");
 
@@ -40,8 +40,8 @@ class C extends l.PureComponent {
       region: e,
       selected: t
     } = this.props;
-    return (0, a.jsxs)(d.default, {
-      align: d.default.Align.CENTER,
+    return (0, a.jsxs)(c.default, {
+      align: c.default.Align.CENTER,
       className: i()({
         selected: t
       }),
@@ -56,7 +56,7 @@ class C extends l.PureComponent {
 }
 class g extends l.PureComponent {
   componentDidMount() {
-    null == this.props.regions && o.default.fetchRegions(null)
+    null == this.props.regions && u.default.fetchRegions(null)
   }
   render() {
     let {
@@ -73,7 +73,7 @@ class g extends l.PureComponent {
         value: e,
         key: e.id
       }));
-    return (0, a.jsx)(c.default, {
+    return (0, a.jsx)(o.QuickSelect, {
       label: f.default.Messages.REGION,
       options: l,
       value: n,
@@ -114,10 +114,10 @@ class g extends l.PureComponent {
       } = e, {
         channelId: n
       } = this.props.call;
-      o.default.changeCallRegion(n, t.id)
+      u.default.changeCallRegion(n, t.id)
     })
   }
 }
-t.default = r.default.connectStores([u.default], () => ({
-  regions: u.default.getRegions(null)
+t.default = r.default.connectStores([d.default], () => ({
+  regions: d.default.getRegions(null)
 }))(g)

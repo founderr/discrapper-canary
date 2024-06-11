@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return P
+    return L
   }
 }), s("47120");
 var a, i, l = s("735250"),
@@ -11,16 +11,15 @@ var a, i, l = s("735250"),
   I = s("100527"),
   N = s("906732"),
   o = s("740492"),
-  A = s("682864"),
-  d = s("153124"),
-  r = s("626135"),
-  c = s("171246"),
-  S = s("225715"),
-  E = s("635840"),
-  O = s("981631"),
-  u = s("689938"),
-  T = s("850335");
-let L = e => {
+  A = s("153124"),
+  d = s("626135"),
+  r = s("171246"),
+  c = s("225715"),
+  S = s("635840"),
+  E = s("981631"),
+  O = s("689938"),
+  u = s("850335");
+let T = e => {
   let [t, s] = n.useState(!1), [a, i] = n.useState(null);
   return {
     cancelSubscription: async t => {
@@ -37,92 +36,92 @@ let L = e => {
   }
 };
 
-function P(e) {
+function L(e) {
   let {
     transitionState: t,
     application: s,
     listing: a,
     subscription: i,
     guild: _,
-    onClose: P
-  } = e, R = (0, d.useUID)(), {
-    analyticsLocations: U
+    onClose: L
+  } = e, P = (0, A.useUID)(), {
+    analyticsLocations: R
   } = (0, N.default)(I.default.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL), {
-    cancelSubscription: f,
-    error: p,
-    submitting: B
-  } = L(U), [m, h] = n.useState(0), x = async () => {
-    await f(i.id) && (o.default.disableApplicationSubscriptionCancellationSurvey ? P() : h(1))
+    cancelSubscription: p,
+    error: U,
+    submitting: f
+  } = T(R), [B, m] = n.useState(0), h = async () => {
+    await p(i.id) && (o.default.disableApplicationSubscriptionCancellationSurvey ? L() : m(1))
   };
   n.useEffect(() => {
-    r.default.track(O.AnalyticEvents.CANCELLATION_FLOW_STARTED, {
-      location_stack: U
+    d.default.track(E.AnalyticEvents.CANCELLATION_FLOW_STARTED, {
+      location_stack: R
     })
-  }, [U]);
-  let M = (0, c.isApplicationUserSubscription)(a.sku_flags);
+  }, [R]);
+  let x = (0, r.isApplicationUserSubscription)(a.sku_flags);
   return (0, l.jsx)(C.ModalRoot, {
     transitionState: t,
-    className: T.modal,
-    "aria-labelledby": R,
+    className: u.modal,
+    "aria-labelledby": P,
     children: (0, l.jsxs)(C.Slides, {
-      activeSlide: m,
+      activeSlide: B,
       width: 440,
       children: [(0, l.jsx)(C.Slide, {
         id: 0,
         children: (0, l.jsxs)("div", {
-          className: T.slideContainer,
-          children: [null != p ? (0, l.jsx)(C.FormErrorBlock, {
-            children: p.message
+          className: u.slideContainer,
+          children: [null != U ? (0, l.jsx)(C.FormErrorBlock, {
+            children: U.message
           }) : null, (0, l.jsxs)(C.ModalContent, {
-            className: T.content,
-            children: [(0, l.jsx)(A.default, {
+            className: u.content,
+            children: [(0, l.jsx)(C.Spacer, {
               size: 16
-            }), (0, l.jsxs)(S.ApplicationBenefitsModalContent, {
-              children: [(0, l.jsx)(S.ApplicationBenefitsModalIcon, {
+            }), (0, l.jsxs)(c.ApplicationBenefitsModalContent, {
+              children: [(0, l.jsx)(c.ApplicationBenefitsModalIcon, {
                 application: s
-              }), (0, l.jsx)(S.ApplicationBenefitsModalHeading, {
-                id: R,
-                children: u.default.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_TITLE_V2.format({
+              }), (0, l.jsx)(c.ApplicationBenefitsModalHeading, {
+                id: P,
+                children: O.default.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_TITLE_V2.format({
                   tier: a.name
                 })
-              }), (0, l.jsx)(S.ApplicationBenefitsModalDivider, {}), (0, l.jsx)(S.ApplicationBenefitsModalDescription, {
-                title: u.default.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_HEADER,
-                description: M ? u.default.Messages.APPLICATION_CANCEL_USER_SUBSCRIPTION_MODAL_DESCRIPTION.format({
+              }), (0, l.jsx)(c.ApplicationBenefitsModalDivider, {}), (0, l.jsx)(c.ApplicationBenefitsModalDescription, {
+                title: O.default.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_HEADER,
+                description: x ? O.default.Messages.APPLICATION_CANCEL_USER_SUBSCRIPTION_MODAL_DESCRIPTION.format({
                   timestamp: i.currentPeriodEnd.getTime()
-                }) : u.default.Messages.APPLICATION_CANCEL_GUILD_SUBSCRIPTION_MODAL_DESCRIPTION.format({
+                }) : O.default.Messages.APPLICATION_CANCEL_GUILD_SUBSCRIPTION_MODAL_DESCRIPTION.format({
                   timestamp: i.currentPeriodEnd.getTime(),
                   guildName: null == _ ? void 0 : _.name
                 })
-              }), (0, l.jsx)(S.ApplicationBenefitsModalBenefits, {
+              }), (0, l.jsx)(c.ApplicationBenefitsModalBenefits, {
                 applicationId: a.application_id,
                 storeListingBenefits: a.store_listing_benefits,
                 skuBenefits: a.sku_benefits.benefits
               })]
             })]
           }), (0, l.jsxs)(C.ModalFooter, {
-            className: T.footer,
+            className: u.footer,
             children: [(0, l.jsx)(C.Button, {
               color: C.Button.Colors.RED,
-              onClick: x,
-              submitting: B,
-              children: u.default.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
+              onClick: h,
+              submitting: f,
+              children: O.default.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
             }), (0, l.jsx)(C.Button, {
               look: C.Button.Looks.LINK,
               color: C.Button.Colors.PRIMARY,
-              className: T.goBackButton,
-              onClick: P,
-              children: u.default.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
+              className: u.goBackButton,
+              onClick: L,
+              children: O.default.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
             })]
           })]
         })
       }), (0, l.jsx)(C.Slide, {
         id: 1,
         children: (0, l.jsx)("div", {
-          className: T.slideContainer,
-          children: (0, l.jsx)(E.default, {
+          className: u.slideContainer,
+          children: (0, l.jsx)(S.default, {
             application: s,
             subscriptionId: i.id,
-            onClose: P
+            onClose: L
           })
         })
       })]

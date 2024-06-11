@@ -16,7 +16,7 @@ var s = n("735250"),
   T = n("981631"),
   I = n("689938"),
   p = n("254405"),
-  h = n("14201");
+  h = n("988920");
 t.default = () => {
   let e = (0, r.useStateFromStores)([f.default], () => f.default.getGuildId(), []),
     t = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(e), [e]),

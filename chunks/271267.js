@@ -1,37 +1,36 @@
 "use strict";
 s.r(t), s.d(t, {
   ELIGIBILITY_MODAL_KEY: function() {
-    return I
+    return _
   },
   default: function() {
-    return m
+    return f
   }
 }), s("47120");
 var a = s("735250"),
   l = s("470079"),
   n = s("481060"),
   i = s("957011"),
-  r = s("682864"),
-  o = s("759231"),
-  d = s("587431"),
-  u = s("756066"),
-  c = s("689938"),
-  E = s("843804"),
-  _ = s("270395");
-let I = "role_subscriptions_eligibility_modal";
+  r = s("759231"),
+  o = s("587431"),
+  d = s("756066"),
+  u = s("689938"),
+  c = s("843804"),
+  E = s("270395");
+let _ = "role_subscriptions_eligibility_modal";
 
-function T(e) {
+function I(e) {
   let {
     guild: t,
     eligibility: l,
     eligibilityLoading: i,
-    eligibilityError: r,
+    eligibilityError: o,
     refreshEligibility: d
   } = e;
   return (0, a.jsxs)(n.Button, {
     color: n.ButtonColors.CUSTOM,
-    className: E.ineligibleButton,
-    innerClassName: E.ineligibleButtonContent,
+    className: c.ineligibleButton,
+    innerClassName: c.ineligibleButtonContent,
     grow: !0,
     onClick: function() {
       (0, n.openModalLazy)(async () => {
@@ -42,66 +41,66 @@ function T(e) {
           ...s,
           eligibility: l,
           eligibilityLoading: i,
-          eligibilityError: r,
+          eligibilityError: o,
           refreshEligibility: d,
           guildId: t.id
         })
       }, {
-        modalKey: I
+        modalKey: _
       })
     },
     size: n.Button.Sizes.LARGE,
-    children: [(0, a.jsx)(o.default, {
+    children: [(0, a.jsx)(r.default, {
       height: 16,
       width: 16
-    }), c.default.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA]
+    }), u.default.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA]
   })
 }
 
-function S(e) {
+function T(e) {
   let {
     guild: t,
     checkboxText: s
   } = e, {
-    canSubmitAcceptance: o,
-    error: u,
-    loading: _,
-    submitAcceptTermsRequest: I
-  } = (0, i.default)(t.id), [T, S] = l.useState(!1);
+    canSubmitAcceptance: r,
+    error: d,
+    loading: E,
+    submitAcceptTermsRequest: _
+  } = (0, i.default)(t.id), [I, T] = l.useState(!1);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(n.Checkbox, {
       onChange: function() {
-        S(e => !e)
+        T(e => !e)
       },
       size: 20,
       type: n.Checkbox.Types.INVERTED,
-      value: T,
+      value: I,
       children: (0, a.jsx)(n.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: s
       })
-    }), (0, a.jsx)(r.default, {
+    }), (0, a.jsx)(n.Spacer, {
       size: 24
     }), (0, a.jsx)(n.Button, {
-      className: E.ctaButton,
-      disabled: !T || !o,
+      className: c.ctaButton,
+      disabled: !I || !r,
       grow: !0,
-      onClick: I,
+      onClick: _,
       size: n.Button.Sizes.LARGE,
-      submitting: _,
-      children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
-    }), null != u && (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(r.default, {
+      submitting: E,
+      children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
+    }), null != d && (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(n.Spacer, {
         size: 24
-      }), (0, a.jsx)(d.default, {
-        children: u.getAnyErrorMessage()
+      }), (0, a.jsx)(o.default, {
+        children: d.getAnyErrorMessage()
       })]
     })]
   })
 }
 
-function f(e) {
+function S(e) {
   let {
     guild: t,
     monetizationEligibility: s
@@ -111,15 +110,15 @@ function f(e) {
     refreshEligibility: i,
     eligibility: r,
     eligibleForMonetization: o,
-    acceptTermsCheckboxText: d,
+    acceptTermsCheckboxText: u,
     wasRejectedInV1: c
   } = s;
-  return o ? c ? (0, a.jsx)(u.default, {
+  return o ? c ? (0, a.jsx)(d.default, {
     ...s
-  }) : (0, a.jsx)(S, {
-    guild: t,
-    checkboxText: d
   }) : (0, a.jsx)(T, {
+    guild: t,
+    checkboxText: u
+  }) : (0, a.jsx)(I, {
     guild: t,
     eligibility: r,
     eligibilityLoading: l,
@@ -128,32 +127,32 @@ function f(e) {
   })
 }
 
-function m(e) {
+function f(e) {
   let {
     guild: t,
     monetizationEligibility: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: E.ctaContainer,
+    className: c.ctaContainer,
     children: [(0, a.jsx)("img", {
-      className: E.heroBanner,
-      src: _,
-      alt: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
+      className: c.heroBanner,
+      src: E,
+      alt: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
     }), (0, a.jsxs)("div", {
-      className: E.ctaContent,
+      className: c.ctaContent,
       children: [(0, a.jsx)(n.Heading, {
         variant: "heading-xl/semibold",
         color: "header-primary",
-        children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
-      }), (0, a.jsx)(r.default, {
+        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
+      }), (0, a.jsx)(n.Spacer, {
         size: 12
       }), (0, a.jsx)(n.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
-      }), (0, a.jsx)(r.default, {
+        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
+      }), (0, a.jsx)(n.Spacer, {
         size: 24
-      }), (0, a.jsx)(f, {
+      }), (0, a.jsx)(S, {
         guild: t,
         monetizationEligibility: s
       })]

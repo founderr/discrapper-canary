@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return L
   }
 }), s("47120"), s("536091");
 var a = s("735250"),
@@ -12,141 +12,140 @@ var a = s("735250"),
   o = s("999382"),
   d = s("279542"),
   u = s("725808"),
-  c = s("26290"),
-  E = s("823379"),
-  _ = s("63063"),
-  I = s("426563"),
-  T = s("727072"),
-  S = s("85960"),
-  f = s("577330"),
-  m = s("65912"),
-  N = s("51248"),
-  g = s("546513"),
-  h = s("572456"),
-  C = s("273504"),
-  R = s("981631"),
-  x = s("689938"),
-  L = s("812364");
+  c = s("823379"),
+  E = s("63063"),
+  _ = s("426563"),
+  I = s("727072"),
+  T = s("85960"),
+  S = s("577330"),
+  f = s("65912"),
+  m = s("51248"),
+  N = s("546513"),
+  g = s("572456"),
+  h = s("273504"),
+  C = s("981631"),
+  R = s("689938"),
+  x = s("812364");
 
-function O(e) {
+function L(e) {
   var t, s;
   let {
-    guildId: O,
-    setPreventNavigation: A = () => {}
+    guildId: L,
+    setPreventNavigation: O = () => {}
   } = e, {
     editingRule: p,
-    setEditingRule: M
-  } = (0, m.useAutomodEditingRuleState)(), {
-    guild: D,
-    subsection: v
-  } = (0, n.useStateFromStoresObject)([o.default], () => o.default.getProps()), j = null !== (s = null !== (t = null == D ? void 0 : D.id) && void 0 !== t ? t : O) && void 0 !== s ? s : R.EMPTY_STRING_SNOWFLAKE_ID, G = null != p, [U] = (0, T.useSyncAutomodRulesEffect)(j), {
-    rulesByTriggerType: P
-  } = (0, T.useAutomodRulesList)(j), b = {
-    [S.AutomodTriggerCategory.MEMBERS]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
-    [S.AutomodTriggerCategory.CONTENT]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
-  }, y = l.useMemo(() => Object.values(null != P ? P : {}).flat().filter(E.isNotNullish), [P]);
+    setEditingRule: A
+  } = (0, f.useAutomodEditingRuleState)(), {
+    guild: M,
+    subsection: D
+  } = (0, n.useStateFromStoresObject)([o.default], () => o.default.getProps()), v = null !== (s = null !== (t = null == M ? void 0 : M.id) && void 0 !== t ? t : L) && void 0 !== s ? s : C.EMPTY_STRING_SNOWFLAKE_ID, j = null != p, [G] = (0, I.useSyncAutomodRulesEffect)(v), {
+    rulesByTriggerType: U
+  } = (0, I.useAutomodRulesList)(v), P = {
+    [T.AutomodTriggerCategory.MEMBERS]: R.default.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
+    [T.AutomodTriggerCategory.CONTENT]: R.default.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
+  }, b = l.useMemo(() => Object.values(null != U ? U : {}).flat().filter(c.isNotNullish), [U]);
   l.useEffect(() => {
-    G && M(null)
-  }, [j]);
-  let B = l.useCallback((e, t) => {
+    j && A(null)
+  }, [v]);
+  let y = l.useCallback((e, t) => {
       if (null != e) {
         var s, a;
-        return null !== (a = null === (s = y.find(t => {
+        return null !== (a = null === (s = b.find(t => {
           let {
             id: s
           } = t;
           return s === e
         })) || void 0 === s ? void 0 : s.name) && void 0 !== a ? a : null
       }
-      return null != t ? (0, S.triggerConfigs)[t].getDefaultRuleName() : null
-    }, [y]),
-    F = l.useMemo(() => {
+      return null != t ? (0, T.triggerConfigs)[t].getDefaultRuleName() : null
+    }, [b]),
+    B = l.useMemo(() => {
       var e, t;
-      return B(null !== (e = null == p ? void 0 : p.id) && void 0 !== e ? e : null, null !== (t = null == p ? void 0 : p.triggerType) && void 0 !== t ? t : null)
-    }, [B, p]);
+      return y(null !== (e = null == p ? void 0 : p.id) && void 0 !== e ? e : null, null !== (t = null == p ? void 0 : p.triggerType) && void 0 !== t ? t : null)
+    }, [y, p]);
   l.useEffect(() => {
-    A(G, (0, h.createOnPreventNavigation)(F))
-  }, [A, G, F]);
-  let H = (0, S.useAvailableTriggerTypes)(j),
-    k = e => (0, a.jsx)(a.Fragment, {
+    O(j, (0, g.createOnPreventNavigation)(B))
+  }, [O, j, B]);
+  let F = (0, T.useAvailableTriggerTypes)(v),
+    H = e => (0, a.jsx)(a.Fragment, {
       children: e.map(e => {
         var t;
-        return (0, a.jsx)(g.default, {
-          guildId: j,
+        return (0, a.jsx)(N.default, {
+          guildId: v,
           triggerType: e,
-          rules: null !== (t = P[e]) && void 0 !== t ? t : [],
-          initWithEdit: v === R.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM && e === C.AutomodTriggerType.MENTION_SPAM
+          rules: null !== (t = U[e]) && void 0 !== t ? t : [],
+          initWithEdit: D === C.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM && e === h.AutomodTriggerType.MENTION_SPAM
         }, e)
       })
     });
   return (0, a.jsxs)(r.FormSection, {
-    title: x.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
+    title: R.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
     tag: "h1",
     children: [(0, a.jsxs)("div", {
-      className: L.descriptionContainer,
+      className: x.descriptionContainer,
       children: [(0, a.jsxs)(r.FormSection, {
         tag: "h3",
-        className: L.description,
-        titleClassName: L.descriptionHeader,
+        className: x.description,
+        titleClassName: x.descriptionHeader,
         children: [(0, a.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "header-secondary",
-          children: x.default.Messages.GUILD_SETTINGS_AUTOMOD_MESSAGE_FILTER_DESCRIPTION
+          children: R.default.Messages.GUILD_SETTINGS_AUTOMOD_MESSAGE_FILTER_DESCRIPTION
         }), (0, a.jsx)(r.Text, {
           variant: "text-sm/medium",
-          className: L.helpUrl,
-          children: x.default.Messages.GUILD_AUTOMOD_LEARN_MORE_LINK.format({
-            helpUrl: _.default.getArticleURL(R.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
+          className: x.helpUrl,
+          children: R.default.Messages.GUILD_AUTOMOD_LEARN_MORE_LINK.format({
+            helpUrl: E.default.getArticleURL(C.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
           })
         })]
       }), (0, a.jsxs)("div", {
-        className: L.descriptionAvatarContainer,
+        className: x.descriptionAvatarContainer,
         children: [(0, a.jsx)(r.Avatar, {
-          src: (0, I.getAutomodAvatarURL)(),
+          src: (0, _.getAutomodAvatarURL)(),
           size: r.AvatarSizes.SIZE_80,
-          "aria-label": x.default.Messages.GUILD_AUTOMOD_USERNAME
-        }), (0, a.jsx)(c.TextBadge, {
+          "aria-label": R.default.Messages.GUILD_AUTOMOD_USERNAME
+        }), (0, a.jsx)(r.TextBadge, {
           text: (0, a.jsxs)("div", {
-            className: L.automodBadgeText,
+            className: x.automodBadgeText,
             children: [(0, a.jsx)(u.default, {
               width: 12,
               height: 12,
-              className: L.checkmarkIcon
+              className: x.checkmarkIcon
             }), (0, a.jsx)(r.Text, {
               variant: "text-xs/bold",
-              className: L.automodText,
-              children: x.default.Messages.GUILD_AUTOMOD_USERNAME
+              className: x.automodText,
+              children: R.default.Messages.GUILD_AUTOMOD_USERNAME
             })]
           }),
           color: i.default.unsafe_rawColors.BRAND_500.css,
-          className: L.textBadge
+          className: x.textBadge
         })]
       })]
-    }), U ? (0, a.jsx)(f.default, {}) : Object.entries(H).map(e => {
+    }), G ? (0, a.jsx)(S.default, {}) : Object.entries(F).map(e => {
       let [t, s] = e;
       if (0 === s.length) return (0, a.jsx)(l.Fragment, {}, t);
-      let n = null != b[t] ? (0, a.jsx)(r.FormSection, {
+      let n = null != P[t] ? (0, a.jsx)(r.FormSection, {
         tag: "h3",
-        className: L.categoryHeader,
+        className: x.categoryHeader,
         children: (0, a.jsx)(r.Text, {
           variant: "text-lg/normal",
           color: "header-primary",
-          children: b[t]
+          children: P[t]
         })
       }) : null;
       return (0, a.jsxs)("div", {
-        className: L.categoryContainer,
-        children: [n, k(s)]
+        className: x.categoryContainer,
+        children: [n, H(s)]
       }, t)
-    }), null != D && (0, a.jsx)(d.GuildExplicitContentFilter, {
-      guild: D,
+    }), null != M && (0, a.jsx)(d.GuildExplicitContentFilter, {
+      guild: M,
       withDivider: !1,
-      className: L.explicitContentFilterSection
-    }), (0, a.jsx)(N.default, {
-      guildId: j,
-      existingRules: y
-    }), G && (0, a.jsx)("div", {
-      className: L.endSpacer
+      className: x.explicitContentFilterSection
+    }), (0, a.jsx)(m.default, {
+      guildId: v,
+      existingRules: b
+    }), j && (0, a.jsx)("div", {
+      className: x.endSpacer
     })]
   })
 }

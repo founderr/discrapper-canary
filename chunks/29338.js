@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return T
+    return S
   }
 }), r("47120");
 var a = r("735250");
@@ -15,17 +15,16 @@ var i = r("120356"),
   d = r("481060"),
   u = r("570140"),
   h = r("681619"),
-  p = r("682864"),
-  g = r("71585"),
-  m = r("146282"),
-  f = r("650613"),
-  y = r("789086"),
-  b = r("206583"),
-  x = r("475549"),
-  k = r("277513");
-let v = [{
+  p = r("71585"),
+  g = r("146282"),
+  m = r("650613"),
+  f = r("789086"),
+  y = r("206583"),
+  b = r("475549"),
+  x = r("277513");
+let k = [{
   key: "type",
-  cellClassName: n()(x.cell, x.cellType),
+  cellClassName: n()(b.cell, b.cellType),
   render(e) {
     let {
       type: t
@@ -37,7 +36,7 @@ let v = [{
   }
 }, {
   key: "count",
-  cellClassName: n()(x.cell, x.cellCount),
+  cellClassName: n()(b.cell, b.cellCount),
   render(e) {
     let {
       entries: t
@@ -51,22 +50,22 @@ let v = [{
   }
 }, {
   key: "only?",
-  cellClassName: x.cell,
+  cellClassName: b.cell,
   render(e) {
     let {
       type: t
     } = e;
-    return (0, a.jsx)(S, {
+    return (0, a.jsx)(v, {
       type: t
     })
   }
 }];
 
-function S(e) {
+function v(e) {
   var t, r;
   let {
     type: i
-  } = e, n = (0, s.useStateFromStores)([m.default], () => m.default.getFilters()), l = null !== (r = null == n ? void 0 : null === (t = n.types) || void 0 === t ? void 0 : t.has(i)) && void 0 !== r && r;
+  } = e, n = (0, s.useStateFromStores)([g.default], () => g.default.getFilters()), l = null !== (r = null == n ? void 0 : null === (t = n.types) || void 0 === t ? void 0 : t.has(i)) && void 0 !== r && r;
   return (0, a.jsx)(d.Checkbox, {
     value: l,
     onClick: function() {
@@ -83,11 +82,11 @@ function S(e) {
   })
 }
 
-function T() {
+function S() {
   var e;
-  let t = (0, s.useStateFromStores)([m.default], () => m.default.getFeed(b.ContentInventoryFeedKey.GLOBAL_FEED)),
-    r = (0, s.useStateFromStores)([m.default], () => m.default.getDebugImpressionCappingDisabled()),
-    i = (0, s.useStateFromStores)([g.default], () => g.default.getDebugFastImpressionCappingEnabled()),
+  let t = (0, s.useStateFromStores)([g.default], () => g.default.getFeed(y.ContentInventoryFeedKey.GLOBAL_FEED)),
+    r = (0, s.useStateFromStores)([g.default], () => g.default.getDebugImpressionCappingDisabled()),
+    i = (0, s.useStateFromStores)([p.default], () => p.default.getDebugFastImpressionCappingEnabled()),
     l = function(e) {
       let t = o().groupBy(e, e => e.content_type);
       return Object.keys(t).map(e => {
@@ -99,23 +98,23 @@ function T() {
         }
       })
     }(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
-    c = (0, s.useStateFromStores)([m.default], () => {
+    c = (0, s.useStateFromStores)([g.default], () => {
       var e;
-      return (null === (e = m.default.getFeedState(b.ContentInventoryFeedKey.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0
+      return (null === (e = g.default.getFeedState(y.ContentInventoryFeedKey.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0
     });
   return (0, a.jsx)("div", {
-    className: n()(k.panel),
+    className: n()(x.panel),
     children: (0, a.jsxs)(d.ScrollerThin, {
-      className: x.content,
+      className: b.content,
       children: [(0, a.jsxs)(d.FormSection, {
         children: [(0, a.jsx)(d.FormTitle, {
           children: "Inventory"
         }), l.length > 0 && (0, a.jsx)(h.default, {
-          columns: v,
+          columns: k,
           data: l
-        }), (0, a.jsx)(p.default, {
+        }), (0, a.jsx)(d.Spacer, {
           size: 8
-        }), (0, a.jsx)(y.default, {}), (0, a.jsx)(d.Button, {
+        }), (0, a.jsx)(f.default, {}), (0, a.jsx)(d.Button, {
           fullWidth: !0,
           onClick: function() {
             u.default.dispatch({
@@ -136,7 +135,7 @@ function T() {
             })
           },
           children: "Clear Impressions"
-        }), (0, a.jsx)(p.default, {
+        }), (0, a.jsx)(d.Spacer, {
           size: 8
         }), (0, a.jsx)(d.Button, {
           fullWidth: !0,
@@ -146,7 +145,7 @@ function T() {
             })
           },
           children: "Log Impressions"
-        }), (0, a.jsx)(p.default, {
+        }), (0, a.jsx)(d.Spacer, {
           size: 8
         }), (0, a.jsx)(d.Button, {
           fullWidth: !0,
@@ -156,7 +155,7 @@ function T() {
             })
           },
           children: r ? "Enable Impression Capping" : "Disable Impression Capping"
-        }), (0, a.jsx)(p.default, {
+        }), (0, a.jsx)(d.Spacer, {
           size: 8
         }), (0, a.jsx)(d.Button, {
           fullWidth: !0,
@@ -167,7 +166,7 @@ function T() {
           },
           children: i ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping"
         })]
-      }), false, (0, a.jsx)(f.default, {})]
+      }), false, (0, a.jsx)(m.default, {})]
     })
   })
 }

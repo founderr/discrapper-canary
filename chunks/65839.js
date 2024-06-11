@@ -9,17 +9,16 @@ var a = n("735250"),
   u = n("112724"),
   d = n("430824"),
   c = n("496675"),
-  f = n("408814"),
-  h = n("768581"),
-  m = n("400251"),
-  p = n("486527"),
-  E = n("981631"),
-  C = n("689938"),
-  g = n("479133"),
-  S = n("849529"),
-  _ = n("584354"),
-  T = n("725060");
-let I = (0, u.default)(e => {
+  f = n("768581"),
+  h = n("400251"),
+  m = n("486527"),
+  p = n("981631"),
+  E = n("689938"),
+  C = n("479133"),
+  g = n("849529"),
+  S = n("584354"),
+  _ = n("725060");
+let T = (0, u.default)(e => {
   let {
     searchQuery: t,
     setSearchQuery: n,
@@ -28,92 +27,92 @@ let I = (0, u.default)(e => {
     width: r
   } = e, u = null != r && r <= 800;
   return (0, a.jsxs)("div", {
-    className: S.header,
+    className: g.header,
     children: [(0, a.jsx)("img", {
       alt: "",
-      className: S.headerImage,
-      src: u ? T : _
+      className: g.headerImage,
+      src: u ? _ : S
     }), (0, a.jsx)("div", {
-      className: S.headerContentWrapper,
+      className: g.headerContentWrapper,
       children: (0, a.jsxs)("div", {
-        className: i()(S.headerContent, {
-          [S.headerContentSmall]: u
+        className: i()(g.headerContent, {
+          [g.headerContentSmall]: u
         }),
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
-          className: S.searchTitle,
-          children: C.default.Messages.HUB_DIRECTORY_SEARCH_TITLE
+          className: g.searchTitle,
+          children: E.default.Messages.HUB_DIRECTORY_SEARCH_TITLE
         }), (0, a.jsx)(o.Text, {
           variant: "text-md/normal",
-          className: S.searchSubtitle,
-          children: C.default.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
-        }), (0, a.jsx)(f.default, {
+          className: g.searchSubtitle,
+          children: E.default.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
+        }), (0, a.jsx)(o.SearchBox, {
           searchTerm: t,
-          className: S.searchBox,
-          inputClassName: S.searchBoxInput,
-          closeIconClassName: S.closeIcon,
-          searchIconClassName: S.searchIcon,
-          label: C.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
-          placeholder: C.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+          className: g.searchBox,
+          inputClassName: g.searchBoxInput,
+          closeIconClassName: g.closeIcon,
+          searchIconClassName: g.searchIcon,
+          label: E.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+          placeholder: E.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
           onChange: n,
           onClear: l,
           onKeyPress: s,
-          cta: null != t && t.length > 0 ? C.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+          cta: null != t && t.length > 0 ? E.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
         })]
       })
     })]
   })
 });
 
-function A(e) {
+function I(e) {
   let {
     guild: t,
     directoryEntries: n,
     handleCreateOrAddGuild: l,
     isLoading: s
-  } = e, u = (0, r.useStateFromStores)([c.default], () => c.default.can(E.Permissions.ADMINISTRATOR, t)), d = [];
+  } = e, u = (0, r.useStateFromStores)([c.default], () => c.default.can(p.Permissions.ADMINISTRATOR, t)), d = [];
   null != n && n.forEach(e => {
     d = d.concat(e.entries)
   }), d.sort((e, t) => {
     var n, a;
     return (null !== (n = t.approximateMemberCount) && void 0 !== n ? n : 0) - (null !== (a = e.approximateMemberCount) && void 0 !== a ? a : 0)
   });
-  let f = h.default.getGuildSplashURL({
+  let m = f.default.getGuildSplashURL({
     id: t.id,
     splash: t.splash
   });
   return (0, a.jsx)("div", {
-    className: g.pageContainer,
+    className: C.pageContainer,
     children: (0, a.jsxs)(o.AdvancedScrollerAuto, {
-      className: g.scroller,
+      className: C.scroller,
       children: [(0, a.jsxs)("div", {
-        className: S.header,
-        children: [null != f ? (0, a.jsx)("img", {
+        className: g.header,
+        children: [null != m ? (0, a.jsx)("img", {
           alt: "",
-          className: i()(S.headerImage, S.headerImageSimple),
-          src: f
+          className: i()(g.headerImage, g.headerImageSimple),
+          src: m
         }) : null, (0, a.jsx)("div", {
-          className: S.headerImageBG
+          className: g.headerImageBG
         }), (0, a.jsx)("div", {
-          className: S.headerContentWrapper,
+          className: g.headerContentWrapper,
           children: (0, a.jsx)("div", {
-            className: i()(S.headerContent, S.headerContentSmall),
+            className: i()(g.headerContent, g.headerContentSmall),
             children: (0, a.jsx)(o.Heading, {
               variant: "heading-xl/semibold",
               color: "always-white",
-              children: C.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
+              children: E.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
                 categoryName: "Midjourney"
               })
             })
           })
         })]
       }), s && null == n ? (0, a.jsx)(o.Spinner, {
-        className: g.spinner
+        className: C.spinner
       }) : (0, a.jsxs)("div", {
-        className: g.cardsContainer,
-        children: [d.map(e => (0, a.jsx)(m.default, {
+        className: C.cardsContainer,
+        children: [d.map(e => (0, a.jsx)(h.default, {
           entry: e
-        }, e.guildId)), u && null != l ? (0, a.jsx)(m.AddEntryCard, {
+        }, e.guildId)), u && null != l ? (0, a.jsx)(h.AddEntryCard, {
           onClick: l
         }) : null]
       })]
@@ -129,22 +128,22 @@ t.default = e => {
     setSearchQuery: u,
     handleClearSearch: c,
     handleSearchKeyPress: f,
-    currentCategoryId: h,
+    currentCategoryId: S,
     handleSelectCategory: _,
-    categoryCounts: T,
-    allEntriesCount: x,
-    isLoading: v
+    categoryCounts: A,
+    allEntriesCount: v,
+    isLoading: x
   } = e, N = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(t.getGuildId()));
-  return null != N && N.hasFeature(E.GuildFeatures.SHARD) ? (0, a.jsx)(A, {
+  return null != N && N.hasFeature(p.GuildFeatures.SHARD) ? (0, a.jsx)(I, {
     guild: N,
     directoryEntries: n,
     handleCreateOrAddGuild: s,
-    isLoading: v
+    isLoading: x
   }) : (0, a.jsx)("div", {
-    className: g.pageContainer,
+    className: C.pageContainer,
     children: (0, a.jsxs)(o.AdvancedScrollerAuto, {
-      className: g.scroller,
-      children: [(0, a.jsx)(I, {
+      className: C.scroller,
+      children: [(0, a.jsx)(T, {
         searchQuery: i,
         setSearchQuery: u,
         handleClearSearch: c,
@@ -152,41 +151,41 @@ t.default = e => {
       }), (0, a.jsx)(o.AdvancedScrollerThin, {
         orientation: "horizontal",
         children: (0, a.jsxs)(o.TabBar, {
-          className: S.tabBar,
+          className: g.tabBar,
           type: "top",
           look: "brand",
-          selectedItem: h,
+          selectedItem: S,
           onItemSelect: e => {
             _(e)
           },
           children: [(0, a.jsx)(o.TabBar.Item, {
-            className: S.tabBarItem,
-            id: p.DirectoryEntryCategories.ALL,
-            children: "".concat(C.default.Messages.DIRECTORY_CATEGORY_ALL, " (").concat(x, ")")
-          }, p.DirectoryEntryCategories.ALL), (0, p.getHubCategories)(t.id).map(e => {
+            className: g.tabBarItem,
+            id: m.DirectoryEntryCategories.ALL,
+            children: "".concat(E.default.Messages.DIRECTORY_CATEGORY_ALL, " (").concat(v, ")")
+          }, m.DirectoryEntryCategories.ALL), (0, m.getHubCategories)(t.id).map(e => {
             let {
               value: t,
               label: n
             } = e;
             return (0, a.jsx)(o.TabBar.Item, {
-              className: S.tabBarItem,
+              className: g.tabBarItem,
               id: t,
-              children: "".concat(n, " ").concat(null != T[t] ? "(".concat(T[t], ")") : "")
+              children: "".concat(n, " ").concat(null != A[t] ? "(".concat(A[t], ")") : "")
             }, t)
           })]
         })
-      }), v && null == n ? (0, a.jsx)(o.Spinner, {
-        className: g.spinner
+      }), x && null == n ? (0, a.jsx)(o.Spinner, {
+        className: C.spinner
       }) : null == n ? void 0 : n.map((e, t) => (0, a.jsxs)(l.Fragment, {
         children: [void 0 !== e.header ? (0, a.jsx)(o.Text, {
           variant: "text-md/semibold",
-          className: S.sectionHeader,
+          className: g.sectionHeader,
           children: e.header
         }) : null, (0, a.jsxs)("div", {
-          className: g.cardsContainer,
-          children: [e.entries.map(e => (0, a.jsx)(m.default, {
+          className: C.cardsContainer,
+          children: [e.entries.map(e => (0, a.jsx)(h.default, {
             entry: e
-          }, e.guildId)), e.appendEndCard && null != s ? (0, a.jsx)(m.AddEntryCard, {
+          }, e.guildId)), e.appendEndCard && null != s ? (0, a.jsx)(h.AddEntryCard, {
             onClick: s
           }) : null]
         })]

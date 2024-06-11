@@ -24,134 +24,132 @@ var a = s("735250"),
   h = s("713938"),
   R = s("881998"),
   p = s("246946"),
-  M = s("186095"),
-  D = s("285952"),
-  x = s("6048"),
-  L = s("950463"),
-  P = s("507893"),
-  b = s("768581"),
-  v = s("49012"),
-  U = s("210887"),
-  j = s("436267"),
-  G = s("494620"),
-  F = s("981631"),
-  B = s("689938"),
-  y = s("338009"),
-  V = s("611273");
-let H = u.default.connectStores([U.default], () => ({
-  theme: U.default.theme
-}))(M.default);
+  M = s("285952"),
+  D = s("950463"),
+  x = s("507893"),
+  L = s("768581"),
+  P = s("49012"),
+  b = s("210887"),
+  v = s("436267"),
+  U = s("494620"),
+  j = s("981631"),
+  G = s("689938"),
+  F = s("338009"),
+  B = s("611273");
+let y = u.default.connectStores([b.default], () => ({
+  theme: b.default.theme
+}))(I.EmptyState);
 
-function Y(e) {
+function V(e) {
   let {
     application: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: y.twoWayWarning,
-    children: [(0, a.jsx)(P.default, {
-      className: y.twoWayWarningIcon
+    className: F.twoWayWarning,
+    children: [(0, a.jsx)(x.default, {
+      className: F.twoWayWarningIcon
     }), (0, a.jsx)(I.Text, {
       color: "text-normal",
       variant: "text-sm/medium",
-      children: B.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
+      children: G.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
         applicationName: t.name,
-        onConnectionPress: () => g.default.setSection(F.AnalyticsSections.SETTINGS_CONNECTIONS)
+        onConnectionPress: () => g.default.setSection(j.AnalyticsSections.SETTINGS_CONNECTIONS)
       })
     })]
   })
 }
-let k = e => {
+let H = e => {
     let {
       disclosure: t
     } = e;
     return n.useMemo(() => {
       switch (t) {
         case c.ApplicationDisclosureType.IP_LOCATION:
-          return (0, a.jsx)(L.default, {
-            className: y.disclosureIcon
+          return (0, a.jsx)(D.default, {
+            className: F.disclosureIcon
           });
         case c.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS:
           return (0, a.jsx)(T.EmbedIcon, {
-            className: y.disclosureIcon
+            className: F.disclosureIcon
           });
         default:
           return (0, a.jsx)(E.CircleInformationIcon, {
-            className: y.disclosureIcon
+            className: F.disclosureIcon
           })
       }
     }, [t])
   },
-  w = e => {
+  Y = e => {
     let {
       scopes: t,
       application: s,
       onDelete: n,
       disclosures: i
     } = e, r = () => {
-      let e = B.default.Messages.DELETE_APP_CONFIRM_MSG;
-      return (0, j.default)(s.id) && (e = (0, a.jsxs)(a.Fragment, {
-        children: [e, (0, a.jsx)(G.default, {
-          className: y.infoBox,
-          children: B.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
+      let e = G.default.Messages.DELETE_APP_CONFIRM_MSG;
+      return (0, v.default)(s.id) && (e = (0, a.jsxs)(a.Fragment, {
+        children: [e, (0, a.jsx)(U.default, {
+          className: F.infoBox,
+          children: G.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
             applicationName: s.name
           })
         })]
       })), (0, I.openModal)(t => (0, a.jsx)(m.default, {
-        title: B.default.Messages.DEAUTHORIZE_APP,
+        title: G.default.Messages.DEAUTHORIZE_APP,
         body: e,
-        confirmText: B.default.Messages.DEAUTHORIZE,
-        cancelText: B.default.Messages.CANCEL,
+        confirmText: G.default.Messages.DEAUTHORIZE,
+        cancelText: G.default.Messages.CANCEL,
         onConfirm: n,
         ...t
       }))
     }, o = () => {
-      null != s.terms_of_service_url && (0, v.handleClick)({
+      null != s.terms_of_service_url && (0, P.handleClick)({
         href: s.terms_of_service_url,
         shouldConfirm: !0
       })
     }, u = () => {
-      null != s.privacy_policy_url && (0, v.handleClick)({
+      null != s.privacy_policy_url && (0, P.handleClick)({
         href: s.privacy_policy_url,
         shouldConfirm: !0
       })
-    }, c = (0, j.useShouldWarnAuthorizedAppTwoWay)(s.id);
+    }, c = (0, v.useShouldWarnAuthorizedAppTwoWay)(s.id);
     return (0, a.jsx)(I.Card, {
-      className: l()(y.authedApp, V.marginBottom8),
+      className: l()(F.authedApp, B.marginBottom8),
       outline: !0,
       children: (0, a.jsxs)(I.HeadingLevel, {
         component: (() => {
-          let e = b.default.getApplicationIconURL({
+          let e = L.default.getApplicationIconURL({
               id: s.id,
               icon: s.icon
             }),
-            t = null != e ? (0, a.jsx)(D.default.Child, {
-              className: y.appAvatar,
+            t = null != e ? (0, a.jsx)(M.default.Child, {
+              className: F.appAvatar,
               grow: 0,
               children: (0, a.jsx)("img", {
                 src: e,
                 alt: ""
               })
             }) : null;
-          return (0, a.jsxs)(D.default, {
-            className: l()(y.__invalid_header, V.marginBottom20),
-            children: [(0, a.jsxs)(D.default, {
-              className: y.headerInfo,
-              children: [t, (0, a.jsx)(D.default.Child, {
+          return (0, a.jsxs)(M.default, {
+            className: l()(F.__invalid_header, B.marginBottom20),
+            children: [(0, a.jsxs)(M.default, {
+              className: F.headerInfo,
+              children: [t, (0, a.jsx)(M.default.Child, {
                 children: (0, a.jsx)(I.Heading, {
                   variant: "text-sm/semibold",
                   children: s.name
                 })
               })]
-            }), (0, a.jsx)(D.default.Child, {
+            }), (0, a.jsx)(M.default.Child, {
               wrap: !0,
               grow: 0,
               children: (0, a.jsx)(I.Button, {
-                className: y.deleteApp,
+                className: F.deleteApp,
                 color: I.ButtonColors.RED,
                 look: I.ButtonLooks.OUTLINED,
                 size: I.ButtonSizes.SMALL,
                 onClick: r,
-                children: B.default.Messages.DEAUTHORIZE
+                children: G.default.Messages.DEAUTHORIZE
               })
             })]
           })
@@ -159,38 +157,38 @@ let k = e => {
         children: [(() => {
           if (null != s.description && "" !== s.description) return (0, a.jsx)(I.FormItem, {
             faded: !0,
-            title: B.default.Messages.ABOUT_THIS_APP,
+            title: G.default.Messages.ABOUT_THIS_APP,
             children: (0, a.jsx)(I.FormText, {
               children: s.description
             })
           })
         })(), (() => {
           if (null != s.terms_of_service_url || null != s.privacy_policy_url) return (0, a.jsxs)("div", {
-            className: y.tosPrivacy,
+            className: F.tosPrivacy,
             children: [null != s.terms_of_service_url ? (0, a.jsxs)(S.Clickable, {
               tag: "a",
               onClick: o,
-              className: y.tos,
+              className: F.tos,
               children: [(0, a.jsx)(I.FormText, {
-                className: y.link,
-                children: B.default.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
+                className: F.link,
+                children: G.default.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
               }), (0, a.jsx)(_.LinkExternalSmallIcon, {
-                className: y.externalLinkIcon,
+                className: F.externalLinkIcon,
                 color: "var(--text-link)"
               })]
             }) : null, null != s.privacy_policy_url ? (0, a.jsxs)("div", {
-              className: y.privacy,
+              className: F.privacy,
               children: [null != s.terms_of_service_url ? (0, a.jsx)("div", {
-                className: y.divider
+                className: F.divider
               }) : null, (0, a.jsxs)(S.Clickable, {
                 tag: "a",
                 onClick: u,
-                className: y.privacy,
+                className: F.privacy,
                 children: [(0, a.jsx)(I.FormText, {
-                  className: y.link,
-                  children: B.default.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
+                  className: F.link,
+                  children: G.default.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
                 }), (0, a.jsx)(_.LinkExternalSmallIcon, {
-                  className: y.externalLinkIcon,
+                  className: F.externalLinkIcon,
                   color: "var(--text-link)"
                 })]
               })]
@@ -198,24 +196,24 @@ let k = e => {
           })
         })(), (() => {
           let e = [];
-          for (let s of t) e.push((0, h.getScopeName)(s, t)), s === d.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(B.default.Messages.SCOPE_DM_YOU);
+          for (let s of t) e.push((0, h.getScopeName)(s, t)), s === d.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(G.default.Messages.SCOPE_DM_YOU);
           if (e.length > 0 || null != i && i.length > 0) return (0, a.jsx)(I.FormItem, {
             faded: !0,
-            title: B.default.Messages.PERMISSIONS,
-            className: V.marginTop20,
+            title: G.default.Messages.PERMISSIONS,
+            className: B.marginTop20,
             children: (0, a.jsxs)("ul", {
               children: [e.map((e, t) => (0, a.jsxs)("li", {
-                className: l()(y.permission, V.marginTop8),
+                className: l()(F.permission, B.marginTop8),
                 children: [(0, a.jsx)("i", {
-                  className: y.permissionCheckmark
+                  className: F.permissionCheckmark
                 }), (0, a.jsx)(I.FormText, {
                   children: e
                 })]
               }, t)), null == i ? void 0 : i.map((t, s) => {
                 let n = (0, O.getTextForDisclosure)(t);
                 return null != n ? (0, a.jsxs)("li", {
-                  className: l()(y.permission, V.marginTop8),
-                  children: [(0, a.jsx)(k, {
+                  className: l()(F.permission, B.marginTop8),
+                  children: [(0, a.jsx)(H, {
                     disclosure: t
                   }), (0, a.jsx)(I.FormText, {
                     children: n
@@ -224,7 +222,7 @@ let k = e => {
               })]
             })
           })
-        })(), c && (0, a.jsx)(Y, {
+        })(), c && (0, a.jsx)(V, {
           application: s
         })]
       })
@@ -257,24 +255,24 @@ t.default = () => {
       d("")
     },
     E = () => (0, a.jsx)("div", {
-      className: y.searchContainer,
-      children: (0, a.jsx)(x.default, {
-        size: x.default.Sizes.MEDIUM,
+      className: F.searchContainer,
+      children: (0, a.jsx)(I.SearchBar, {
+        size: I.SearchBar.Sizes.MEDIUM,
         query: r,
         onChange: c,
         onClear: S,
-        placeholder: B.default.Messages.INTEGRATIONS_SEARCH,
-        "aria-label": B.default.Messages.INTEGRATIONS_SEARCH
+        placeholder: G.default.Messages.INTEGRATIONS_SEARCH,
+        "aria-label": G.default.Messages.INTEGRATIONS_SEARCH
       })
     }),
-    T = (e, t) => (0, a.jsxs)(H, {
-      className: y.__invalid_marginTop20,
-      children: [(0, a.jsx)(M.EmptyStateImage, {
+    T = (e, t) => (0, a.jsxs)(y, {
+      className: F.__invalid_marginTop20,
+      children: [(0, a.jsx)(I.EmptyStateImage, {
         darkSrc: s("701972"),
         lightSrc: s("818658"),
         width: 380,
         height: 282
-      }), (0, a.jsx)(M.EmptyStateText, {
+      }), (0, a.jsx)(I.EmptyStateText, {
         note: e,
         children: t
       })]
@@ -285,21 +283,21 @@ t.default = () => {
     }, [t, r]);
   return e ? (0, a.jsx)(f.default, {}) : (0, a.jsx)(I.FormSection, {
     tag: I.FormTitleTags.H1,
-    title: B.default.Messages.AUTHORIZED_APPS,
+    title: G.default.Messages.AUTHORIZED_APPS,
     children: (0, a.jsx)(I.HeadingLevel, {
       component: (0, a.jsx)(I.FormNotice, {
-        className: V.marginBottom40,
+        className: B.marginBottom40,
         type: I.CardTypes.PRIMARY,
-        title: B.default.Messages.APPLICATIONS_AND_CONNECTIONS,
-        body: B.default.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
+        title: G.default.Messages.APPLICATIONS_AND_CONNECTIONS,
+        body: G.default.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
       }),
       children: null == t || null == _ ? (0, a.jsx)(I.Spinner, {
-        className: V.marginTop20,
+        className: B.marginTop20,
         type: I.Spinner.Type.SPINNING_CIRCLE
-      }) : 0 === t.length ? T(B.default.Messages.NO_AUTHORIZED_APPS_NOTE, B.default.Messages.NO_AUTHORIZED_APPS) : 0 === _.length ? (0, a.jsxs)(a.Fragment, {
-        children: [E(), T(null, B.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+      }) : 0 === t.length ? T(G.default.Messages.NO_AUTHORIZED_APPS_NOTE, G.default.Messages.NO_AUTHORIZED_APPS) : 0 === _.length ? (0, a.jsxs)(a.Fragment, {
+        children: [E(), T(null, G.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, a.jsxs)(a.Fragment, {
-        children: [E(), _.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(w, {
+        children: [E(), _.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(Y, {
           onDelete: () => l(e),
           ...e
         }, e.id))]

@@ -28,21 +28,20 @@ var a = s("735250"),
   D = s("558724"),
   x = s("594174"),
   L = s("808506"),
-  P = s("186095"),
-  b = s("285952"),
-  v = s("154921"),
-  U = s("998502"),
-  j = s("210887"),
-  G = s("601948"),
-  F = s("726985"),
-  B = s("981631"),
-  y = s("908442"),
-  V = s("724510"),
-  H = s("164149"),
-  Y = s("611273"),
-  k = s("842648");
+  P = s("285952"),
+  b = s("154921"),
+  v = s("998502"),
+  U = s("210887"),
+  j = s("601948"),
+  G = s("726985"),
+  F = s("981631"),
+  B = s("908442"),
+  y = s("724510"),
+  V = s("164149"),
+  H = s("611273"),
+  Y = s("842648");
 
-function w(e, t, s) {
+function k(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -50,8 +49,8 @@ function w(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let W = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
-  K = [{
+let w = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
+  W = [{
     value: "branch",
     label: "Branch Name"
   }, {
@@ -59,10 +58,10 @@ let W = ["discord_web", "discord_marketing", "discord_developers", "discord_ios"
     label: "Build ID"
   }];
 
-function Q(e) {
+function K(e) {
   return "discord_ios" in e || "discord_android" in e
 }
-class z extends n.Component {
+class Q extends n.Component {
   render() {
     let {
       project: e,
@@ -71,33 +70,33 @@ class z extends n.Component {
       disabled: n,
       error: i
     } = this.props;
-    return (0, a.jsxs)(b.default, {
-      direction: b.default.Direction.VERTICAL,
-      className: l()(V.buildOverrideGroup, Y.marginBottom20, H.card, V.row),
+    return (0, a.jsxs)(P.default, {
+      direction: P.default.Direction.VERTICAL,
+      className: l()(y.buildOverrideGroup, H.marginBottom20, V.card, y.row),
       children: [(0, a.jsx)(N.default, {
-        className: l()(V.removeBuildOverride, {
-          [V.removeBuildOverrideDisabled]: n
+        className: l()(y.removeBuildOverride, {
+          [y.removeBuildOverrideDisabled]: n
         }),
         onClick: n ? void 0 : this.handleRemoveBuildOverride
-      }), (0, a.jsxs)(b.default, {
-        className: Y.marginBottom8,
-        children: [(0, a.jsx)(b.default.Child, {
+      }), (0, a.jsxs)(P.default, {
+        className: H.marginBottom8,
+        children: [(0, a.jsx)(P.default.Child, {
           basis: "50%",
           children: (0, a.jsx)(S.FormItem, {
             title: "Override Type",
-            className: V.item,
+            className: y.item,
             children: (0, a.jsx)(S.SingleSelect, {
-              options: K,
+              options: W,
               onChange: this.handleOverrideTypeChanged,
               value: t,
               isDisabled: n
             })
           })
-        }), (0, a.jsx)(b.default.Child, {
+        }), (0, a.jsx)(P.default.Child, {
           basis: "50%",
           children: (0, a.jsx)(S.FormItem, {
             title: "branch" === t ? "Branch Name" : "Build ID",
-            className: V.item,
+            className: y.item,
             children: (0, a.jsx)(S.TextInput, {
               value: s,
               onChange: this.handleOverrideIdChanged,
@@ -105,16 +104,16 @@ class z extends n.Component {
             })
           })
         })]
-      }), (0, a.jsxs)(b.default.Child, {
+      }), (0, a.jsxs)(P.default.Child, {
         children: [null != i && "" !== i && (0, a.jsx)(S.FormText, {
-          className: V.item,
+          className: y.item,
           style: {
             color: c.default.unsafe_rawColors.RED_400.css
           },
           type: S.FormText.Types.DESCRIPTION,
           children: i
         }), (0, a.jsxs)(S.FormText, {
-          className: V.item,
+          className: y.item,
           type: S.FormText.Types.DESCRIPTION,
           children: ["This controls the build that will be served for the ", (0, a.jsx)("code", {
             children: e
@@ -124,13 +123,13 @@ class z extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), w(this, "handleRemoveBuildOverride", () => {
+    super(...e), k(this, "handleRemoveBuildOverride", () => {
       this.props.onBuildOverrideRemoved(this.props.project)
-    }), w(this, "handleOverrideIdChanged", e => {
+    }), k(this, "handleOverrideIdChanged", e => {
       this.props.onBuildOverrideUpdated(this.props.project, {
         id: e
       })
-    }), w(this, "handleOverrideTypeChanged", e => {
+    }), k(this, "handleOverrideTypeChanged", e => {
       this.props.onBuildOverrideUpdated(this.props.project, {
         type: e,
         id: ""
@@ -138,7 +137,7 @@ class z extends n.Component {
     })
   }
 }
-class X extends n.Component {
+class z extends n.Component {
   async refreshBuildOverrides() {
     this.setState({
       loading: !0
@@ -167,18 +166,18 @@ class X extends n.Component {
     } = this.state;
     if (null == e) return [];
     let t = Object.keys(e);
-    return o().without(W, ...t)
+    return o().without(w, ...t)
   }
   renderEmpty() {
-    return (0, a.jsxs)(P.default, {
-      theme: j.default.theme,
-      className: l()(Y.marginTop40, Y.marginBottom20),
-      children: [(0, a.jsx)(P.EmptyStateImage, {
+    return (0, a.jsxs)(S.EmptyState, {
+      theme: U.default.theme,
+      className: l()(H.marginTop40, H.marginBottom20),
+      children: [(0, a.jsx)(S.EmptyStateImage, {
         darkSrc: s("770227"),
         lightSrc: s("398684"),
         width: 294,
         height: 192
-      }), (0, a.jsx)(P.EmptyStateText, {
+      }), (0, a.jsx)(S.EmptyStateText, {
         children: "You have no build overrides configured."
       })]
     })
@@ -189,7 +188,7 @@ class X extends n.Component {
       saving: t,
       errors: s
     } = this.state;
-    return null == e ? null : o().map(e, (e, n) => (0, a.jsx)(z, {
+    return null == e ? null : o().map(e, (e, n) => (0, a.jsx)(Q, {
       project: n,
       overrideType: e.type,
       overrideId: e.id,
@@ -200,10 +199,10 @@ class X extends n.Component {
     }, n))
   }
   renderRefreshButton() {
-    return !this.state.didSave || this.isDirty() ? null : (0, a.jsx)(b.default, {
+    return !this.state.didSave || this.isDirty() ? null : (0, a.jsx)(P.default, {
       grow: 0,
-      direction: b.default.Direction.HORIZONTAL_REVERSE,
-      children: (0, a.jsx)(b.default.Child, {
+      direction: P.default.Direction.HORIZONTAL_REVERSE,
+      children: (0, a.jsx)(P.default.Child, {
         grow: 0,
         children: (0, a.jsx)(S.Button, {
           onClick: () => location.reload(),
@@ -217,10 +216,10 @@ class X extends n.Component {
     let {
       buildOverrides: e
     } = this.state;
-    return null == e || 0 === Object.keys(e).length ? null : (0, a.jsx)(b.default, {
+    return null == e || 0 === Object.keys(e).length ? null : (0, a.jsx)(P.default, {
       grow: 0,
-      direction: b.default.Direction.HORIZONTAL_REVERSE,
-      children: (0, a.jsx)(b.default.Child, {
+      direction: P.default.Direction.HORIZONTAL_REVERSE,
+      children: (0, a.jsx)(P.default.Child, {
         grow: 0,
         children: (0, a.jsx)(S.Button, {
           onClick: this.handleLinkGeneration,
@@ -236,19 +235,19 @@ class X extends n.Component {
       saving: e,
       buildOverrides: t
     } = this.state;
-    return (0, a.jsxs)(b.default, {
+    return (0, a.jsxs)(P.default, {
       grow: 0,
-      direction: b.default.Direction.HORIZONTAL_REVERSE,
-      children: [(0, a.jsx)(b.default.Child, {
+      direction: P.default.Direction.HORIZONTAL_REVERSE,
+      children: [(0, a.jsx)(P.default.Child, {
         grow: 0,
         children: (0, a.jsx)(S.Button, {
-          disabled: Q(null != t ? t : {}),
+          disabled: K(null != t ? t : {}),
           onClick: this.handleSaveChanges,
           submitting: e,
           color: S.Button.Colors.GREEN,
           children: "Save Build Overrides"
         })
-      }), (0, a.jsx)(b.default.Child, {
+      }), (0, a.jsx)(P.default.Child, {
         grow: 0,
         children: (0, a.jsx)(S.Button, {
           onClick: this.handleDiscardChanges,
@@ -267,26 +266,26 @@ class X extends n.Component {
       buildOverrides: n
     } = this.state;
     e = t ? (0, a.jsx)(S.Spinner, {
-      className: Y.marginTop20
+      className: H.marginTop20
     }) : null != n && 0 === Object.keys(n).length ? this.renderEmpty() : this.renderItems();
     let i = !s && !t && this.getAvailableProjects().length > 0,
-      l = Q(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
+      l = K(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
         color: "text-danger",
         variant: "text-md/normal",
         children: "Mobile build overrides must be generated using the desktop/web stable client for now!"
       }) : null;
     return (0, a.jsx)(R.Subsetting, {
-      setting: F.WebSetting.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
+      setting: G.WebSetting.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
       children: (0, a.jsxs)(S.FormSection, {
-        className: Y.marginTop60,
-        children: [(0, a.jsxs)(b.default, {
-          className: Y.marginBottom20,
-          children: [(0, a.jsx)(b.default.Child, {
+        className: H.marginTop60,
+        children: [(0, a.jsxs)(P.default, {
+          className: H.marginBottom20,
+          children: [(0, a.jsx)(P.default.Child, {
             children: (0, a.jsx)(S.FormTitle, {
               tag: S.FormTitleTags.H1,
               children: "Build Overrides"
             })
-          }), (0, a.jsx)(b.default.Child, {
+          }), (0, a.jsx)(P.default.Child, {
             grow: 0,
             children: (0, a.jsx)(S.Button, {
               size: S.ButtonSizes.SMALL,
@@ -295,11 +294,11 @@ class X extends n.Component {
               children: "Add Build Override"
             })
           })]
-        }), (0, a.jsx)(S.FormDivider, {}), (0, a.jsxs)(b.default, {
-          direction: b.default.Direction.VERTICAL,
-          children: [l, e, (0, a.jsxs)(b.default, {
+        }), (0, a.jsx)(S.FormDivider, {}), (0, a.jsxs)(P.default, {
+          direction: P.default.Direction.VERTICAL,
+          children: [l, e, (0, a.jsxs)(P.default, {
             grow: 0,
-            direction: b.default.Direction.HORIZONTAL_REVERSE,
+            direction: P.default.Direction.HORIZONTAL_REVERSE,
             children: [this.renderRefreshButton(), this.renderSaveButton(), this.renderLinkButton()]
           })]
         })]
@@ -307,14 +306,14 @@ class X extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), w(this, "state", {
+    super(...e), k(this, "state", {
       loading: !0,
       buildOverrides: {},
       loadedBuildOverrides: {},
       errors: {},
       saving: !1,
       didSave: !1
-    }), w(this, "handleAddBuildOverride", async () => {
+    }), k(this, "handleAddBuildOverride", async () => {
       var e;
       let t = await (e = this.getAvailableProjects(), new Promise(t => {
         (0, S.openModal)(s => {
@@ -332,7 +331,7 @@ class X extends n.Component {
               })
             }), (0, a.jsx)(S.ModalContent, {
               children: (0, a.jsx)("div", {
-                className: V.buildOverrideList,
+                className: y.buildOverrideList,
                 children: e.map(e => (0, a.jsx)(S.Button, {
                   value: e,
                   color: S.Button.Colors.GREEN,
@@ -362,7 +361,7 @@ class X extends n.Component {
       this.setState({
         buildOverrides: s
       })
-    }), w(this, "handleBuildOverrideUpdated", (e, t) => {
+    }), k(this, "handleBuildOverrideUpdated", (e, t) => {
       let {
         buildOverrides: s
       } = this.state, a = {
@@ -375,20 +374,20 @@ class X extends n.Component {
       this.setState({
         buildOverrides: n
       })
-    }), w(this, "handleBuildOverrideRemoved", e => {
+    }), k(this, "handleBuildOverrideRemoved", e => {
       let t = {
         ...this.state.buildOverrides
       };
       delete t[e], this.setState({
         buildOverrides: t
       })
-    }), w(this, "handleDiscardChanges", () => {
+    }), k(this, "handleDiscardChanges", () => {
       this.setState({
         buildOverrides: o().cloneDeep(this.state.loadedBuildOverrides),
         errors: {},
         didSave: !1
       })
-    }), w(this, "handleSaveChanges", async () => {
+    }), k(this, "handleSaveChanges", async () => {
       let {
         buildOverrides: e
       } = this.state;
@@ -417,21 +416,21 @@ class X extends n.Component {
         saving: !1,
         didSave: !1
       })
-    }), w(this, "handleLinkGeneration", () => {
+    }), k(this, "handleLinkGeneration", () => {
       let {
         buildOverrides: e
       } = this.state;
-      (0, S.openModal)(t => (0, a.jsx)(q, {
+      (0, S.openModal)(t => (0, a.jsx)(X, {
         ...t,
         buildOverrides: e
       }))
     })
   }
 }
-class q extends n.Component {
+class X extends n.Component {
   isMobile() {
     var e;
-    return Q(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
+    return K(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
   }
   renderSettingsForm() {
     let {
@@ -445,35 +444,35 @@ class q extends n.Component {
       allowLoggedOut: o,
       experiments: d,
       experimentsError: u
-    } = this.state, c = y.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = i.map(e => ({
+    } = this.state, c = B.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = i.map(e => ({
       label: e,
       value: e
     }));
-    return (0, a.jsxs)(b.default.Child, {
+    return (0, a.jsxs)(P.default.Child, {
       basis: "70%",
       children: [(0, a.jsx)(S.FormItem, {
         title: "Expire After",
-        className: Y.marginBottom20,
+        className: H.marginBottom20,
         children: (0, a.jsx)(S.SingleSelect, {
           value: null != c ? c.value : null,
-          options: y.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
+          options: B.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
           onChange: this.handleExpirationChange
         })
       }), this.isMobile() ? null : (0, a.jsx)(S.FormItem, {
         title: "Release Channel",
-        className: Y.marginBottom20,
+        className: H.marginBottom20,
         children: (0, a.jsx)(S.SingleSelect, {
           value: t,
-          options: y.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
+          options: B.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
           onChange: this.handleReleaseChannelChange
         })
       }), this.isMobile() ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(S.FormItem, {
           title: "Add allowed app version (required)",
-          className: Y.marginBottom20,
-          children: (0, a.jsxs)(b.default, {
-            direction: b.default.Direction.HORIZONTAL,
-            children: [(0, a.jsx)(b.default.Child, {
+          className: H.marginBottom20,
+          children: (0, a.jsxs)(P.default, {
+            direction: P.default.Direction.HORIZONTAL,
+            children: [(0, a.jsx)(P.default.Child, {
               wrap: !0,
               basis: "90%",
               children: (0, a.jsx)(S.TextInput, {
@@ -491,7 +490,7 @@ class q extends n.Component {
           })
         }), (0, a.jsx)(S.FormItem, {
           title: "Remove allowed app version",
-          className: Y.marginBottom20,
+          className: H.marginBottom20,
           children: (0, a.jsx)(S.SingleSelect, {
             value: null,
             options: E,
@@ -502,10 +501,10 @@ class q extends n.Component {
       }) : null, this.isMobile() ? null : (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)(S.FormItem, {
           title: "Limit to User IDs (optional)",
-          className: Y.marginBottom20,
-          children: [(0, a.jsx)(b.default, {
-            direction: b.default.Direction.HORIZONTAL,
-            children: (0, a.jsx)(b.default.Child, {
+          className: H.marginBottom20,
+          children: [(0, a.jsx)(P.default, {
+            direction: P.default.Direction.HORIZONTAL,
+            children: (0, a.jsx)(P.default.Child, {
               wrap: !0,
               basis: "90%",
               children: (0, a.jsx)(S.TextArea, {
@@ -518,16 +517,16 @@ class q extends n.Component {
           }), (0, a.jsx)(S.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            className: Y.marginTop8,
+            className: H.marginTop8,
             children: "User IDs can be separated by whitespace or commas."
           })]
         })
       }), (0, a.jsxs)(S.FormItem, {
         title: "Client Experiment Override",
-        className: Y.marginBottom20,
-        children: [(0, a.jsx)(b.default, {
-          direction: b.default.Direction.HORIZONTAL,
-          children: (0, a.jsx)(b.default.Child, {
+        className: H.marginBottom20,
+        children: [(0, a.jsx)(P.default, {
+          direction: P.default.Direction.HORIZONTAL,
+          children: (0, a.jsx)(P.default.Child, {
             wrap: !0,
             basis: "90%",
             children: (0, a.jsx)(S.TextArea, {
@@ -540,7 +539,7 @@ class q extends n.Component {
         }), (0, a.jsx)(S.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: Y.marginTop8,
+          className: H.marginTop8,
           children: "Locally override the given experiments to the given bucket. This ONLY applies locally and WILL NOT affect the server. When the user clears build override, the experiment override is removed as well."
         })]
       }), (0, a.jsx)(S.FormSwitch, {
@@ -560,14 +559,14 @@ class q extends n.Component {
         render: s => {
           let n = s.highlight("json", e, !0);
           return null == n ? t() : (0, a.jsx)("code", {
-            className: "hljs scroller ".concat(n.language, " ").concat(k.scrollbarGhost, " ").concat(V.codebox),
+            className: "hljs scroller ".concat(n.language, " ").concat(Y.scrollbarGhost, " ").concat(y.codebox),
             dangerouslySetInnerHTML: {
               __html: n.value
             }
           })
         }
       });
-    return (0, a.jsx)(b.default.Child, {
+    return (0, a.jsx)(P.default.Child, {
       children: (0, a.jsx)(S.Card, {
         children: (0, a.jsx)("pre", {
           children: n
@@ -584,8 +583,8 @@ class q extends n.Component {
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)(S.FormItem, {
         title: "Signed Link",
-        children: (0, a.jsxs)(b.default, {
-          children: [(0, a.jsx)(b.default.Child, {
+        children: (0, a.jsxs)(P.default, {
+          children: [(0, a.jsx)(P.default.Child, {
             wrap: !0,
             basis: "75%",
             children: (0, a.jsx)(g.default, {
@@ -596,9 +595,9 @@ class q extends n.Component {
             children: "Generate Link"
           })]
         })
-      }), (0, a.jsx)(v.default, {
+      }), (0, a.jsx)(b.default, {
         color: e,
-        className: "".concat(Y.marginBottom8, " ").concat(Y.marginTop8),
+        className: "".concat(H.marginBottom8, " ").concat(H.marginTop8),
         children: t
       })]
     })
@@ -613,7 +612,7 @@ class q extends n.Component {
       transitionState: t,
       "aria-label": "Generate Public Build Override Link",
       children: [(0, a.jsxs)(S.ModalHeader, {
-        justify: b.default.Justify.BETWEEN,
+        justify: P.default.Justify.BETWEEN,
         separator: !1,
         children: [(0, a.jsx)(S.Heading, {
           variant: "heading-lg/semibold",
@@ -622,14 +621,14 @@ class q extends n.Component {
           onClick: e
         })]
       }), (0, a.jsxs)(S.ModalContent, {
-        children: [(0, a.jsxs)(b.default, {
+        children: [(0, a.jsxs)(P.default, {
           children: [this.renderSettingsForm(), this.renderPayloadBlock()]
         }), this.renderLinkForm()]
       })]
     })
   }
   constructor(...e) {
-    super(...e), w(this, "state", {
+    super(...e), k(this, "state", {
       ttlSeconds: 3600,
       releaseChannel: "all",
       userIds: new Set,
@@ -640,35 +639,35 @@ class q extends n.Component {
       allowedVersionEntryError: null,
       publicLink: " ",
       statusText: null,
-      statusTextColor: v.default.Colors.STATUS_RED,
+      statusTextColor: b.default.Colors.STATUS_RED,
       allowLoggedOut: !1
-    }), w(this, "setUserEntryError", e => {
+    }), k(this, "setUserEntryError", e => {
       this.setState({
         userIdEntryError: e
       })
-    }), w(this, "setStatusMessage", (e, t) => {
+    }), k(this, "setStatusMessage", (e, t) => {
       this.setState({
         statusText: e,
-        statusTextColor: null != t ? t : v.default.Colors.STATUS_RED
+        statusTextColor: null != t ? t : b.default.Colors.STATUS_RED
       })
-    }), w(this, "handleUserIDEntry", e => {
+    }), k(this, "handleUserIDEntry", e => {
       if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError("User IDs are numbers!");
       let t = new Set(e.split(/[,\s]+/).filter(Boolean));
       this.setState({
         userIdEntry: e,
         userIds: t
       })
-    }), w(this, "setAllowedVersionError", e => {
+    }), k(this, "setAllowedVersionError", e => {
       this.setState({
         allowedVersionEntryError: e
       })
-    }), w(this, "handleAllowedVersionEntry", e => {
+    }), k(this, "handleAllowedVersionEntry", e => {
       this.setState({
         allowedVersionEntry: e
       })
-    }), w(this, "handleAllowedVersionEnter", e => {
-      e.charCode === B.KeyboardKeys.ENTER && this.handleAddAllowedVersion()
-    }), w(this, "handleAddAllowedVersion", () => {
+    }), k(this, "handleAllowedVersionEnter", e => {
+      e.charCode === F.KeyboardKeys.ENTER && this.handleAddAllowedVersion()
+    }), k(this, "handleAddAllowedVersion", () => {
       let {
         allowedVersions: e,
         allowedVersionEntry: t
@@ -678,26 +677,26 @@ class q extends n.Component {
         allowedVersionEntry: "",
         allowedVersionEntryError: ""
       })
-    }), w(this, "handleRemoveAllowedVersion", e => {
+    }), k(this, "handleRemoveAllowedVersion", e => {
       let {
         allowedVersions: t
       } = this.state;
       t = t.filter(t => t !== e), this.setState({
         allowedVersions: t
       })
-    }), w(this, "handleAllowLoggedOut", e => {
+    }), k(this, "handleAllowLoggedOut", e => {
       this.setState({
         allowLoggedOut: e
       })
-    }), w(this, "handleExpirationChange", e => {
+    }), k(this, "handleExpirationChange", e => {
       this.setState({
         ttlSeconds: e
       })
-    }), w(this, "handleReleaseChannelChange", e => {
+    }), k(this, "handleReleaseChannelChange", e => {
       this.setState({
         releaseChannel: e
       })
-    }), w(this, "handleExperiments", e => {
+    }), k(this, "handleExperiments", e => {
       if (0 === e.trim().length) {
         this.setState({
           experimentsError: void 0
@@ -730,7 +729,7 @@ class q extends n.Component {
         experiments: e,
         experimentsError: void 0
       })
-    }), w(this, "generatePayload", () => ({
+    }), k(this, "generatePayload", () => ({
       overrides: this.props.buildOverrides,
       meta: {
         release_channel: "all" === this.state.releaseChannel ? null : this.state.releaseChannel,
@@ -740,7 +739,7 @@ class q extends n.Component {
         allow_logged_out: this.state.allowLoggedOut,
         experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments)
       }
-    })), w(this, "handleGenerateLink", async () => {
+    })), k(this, "handleGenerateLink", async () => {
       if (this.isMobile() && 0 === this.state.allowedVersions.length) {
         this.setAllowedVersionError("You must add at least one allowed version for iOS");
         return
@@ -748,18 +747,18 @@ class q extends n.Component {
       this.setStatusMessage(null);
       let e = this.generatePayload(),
         t = await (0, f.getPublicBuildOverrideLink)(e);
-      !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), v.default.Colors.STATUS_RED) : (this.setState({
+      !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), b.default.Colors.STATUS_RED) : (this.setState({
         publicLink: t.url.toString()
-      }), 0 === e.meta.user_ids.length && this.setStatusMessage("Warning! No users added to the whitelist! This link could be used by anyone to override their build.", v.default.Colors.STATUS_YELLOW))
+      }), 0 === e.meta.user_ids.length && this.setStatusMessage("Warning! No users added to the whitelist! This link could be used by anyone to override their build.", b.default.Colors.STATUS_YELLOW))
     })
   }
 }
 
-function Z() {
+function q() {
   throw Error("Send help")
 }
 
-function J() {
+function Z() {
   let [e, t] = n.useState(!1), [s, i] = n.useState("");
   return (n.useEffect(() => {
     (async () => {
@@ -767,16 +766,16 @@ function J() {
     })()
   }, []), e) ? {} : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: [V.buttonsContainer, Y.marginBottom20].join(" "),
+      className: [y.buttonsContainer, H.marginBottom20].join(" "),
       children: [(0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
         children: (0, a.jsx)(S.Button, {
           onClick: () => window.open(s, "_blank"),
           disabled: "" === s,
           children: "Open Overlay"
         })
       }), (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_RESET_SOCKET,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_RESET_SOCKET,
         children: (0, a.jsx)(S.Button, {
           onClick: () => {
             h.default.getSocket().close(), h.default.getSocket().connect()
@@ -784,7 +783,7 @@ function J() {
           children: "Reset Socket"
         })
       }), A.ENABLE_CACHE_STORE && (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_CLEAR_CACHES,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_CLEAR_CACHES,
         children: (0, a.jsx)(S.Button, {
           onClick: () => {
             E.default.dispatch({
@@ -798,12 +797,12 @@ function J() {
         })
       })]
     }), (0, a.jsx)(R.Subsetting, {
-      setting: F.WebSetting.DEVELOPER_OPTIONS_CRASHES,
+      setting: G.WebSetting.DEVELOPER_OPTIONS_CRASHES,
       children: (0, a.jsx)(S.FormSection, {
         title: "Crashes",
         tag: S.FormTitleTags.H1,
         children: (0, a.jsxs)("div", {
-          className: V.buttonsContainer,
+          className: y.buttonsContainer,
           children: [(0, a.jsx)(S.SingleSelect, {
             value: void 0,
             options: [{
@@ -825,7 +824,7 @@ function J() {
               value: 4,
               label: "Out of Memory"
             }],
-            onChange: e => null != e && U.default.crash(e)
+            onChange: e => null != e && v.default.crash(e)
           }), (0, a.jsx)(S.SingleSelect, {
             value: void 0,
             options: [{
@@ -843,13 +842,13 @@ function J() {
             }],
             onChange: e => {
               var t;
-              return null != e ? (t = e, void U.default.triggerJSException(t)) : void 0
+              return null != e ? (t = e, void v.default.triggerJSException(t)) : void 0
             }
           }), (0, a.jsx)(S.Button, {
             onClick: () => t(!0),
             children: "React Crash"
           }), (0, a.jsx)(S.Button, {
-            onClick: Z,
+            onClick: q,
             children: "onClick Throw"
           })]
         })
@@ -857,7 +856,7 @@ function J() {
     })]
   })
 }
-let $ = u.default.connectStores([M.default], () => ({
+let J = u.default.connectStores([M.default], () => ({
   isTracingRequests: M.default.isTracingRequests,
   isForcedCanary: M.default.isForcedCanary,
   isLoggingGatewayEvents: M.default.isLoggingGatewayEvents,
@@ -882,12 +881,12 @@ let $ = u.default.connectStores([M.default], () => ({
     appDirectoryIncludesInactiveCollections: E
   } = e, T = (0, u.useStateFromStores)([x.default], () => x.default.getCurrentUser());
   return (0, a.jsx)(R.Subsetting, {
-    setting: F.WebSetting.DEVELOPER_OPTIONS_FLAGS,
+    setting: G.WebSetting.DEVELOPER_OPTIONS_FLAGS,
     children: (0, a.jsxs)(S.FormSection, {
       title: "Developer Flags",
       tag: S.FormTitleTags.H1,
       children: [(0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_TRACING_REQUESTS,
         children: (0, a.jsx)(S.FormSwitch, {
           value: t,
           note: "Force trace all client requests with APM",
@@ -897,7 +896,7 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Enable Tracing Requests"
         })
       }), (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_FORCED_CANARY,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_FORCED_CANARY,
         children: (0, a.jsx)(S.FormSwitch, {
           value: s,
           note: "Force all API requests to canary instances",
@@ -907,7 +906,7 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Enable Forced Canary"
         })
       }), (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
         children: (0, a.jsx)(S.FormSwitch, {
           value: n,
           note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
@@ -917,7 +916,7 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Enable Logging of Gateway Events to Console"
         })
       }), (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
         children: (0, a.jsx)(S.FormSwitch, {
           value: i,
           note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
@@ -927,7 +926,7 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Enable Logging of Overlay RPC Events & Commands"
         })
       }), (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
         children: (0, a.jsx)(S.FormSwitch, {
           value: l,
           note: "Logs all analytics events to the developer console",
@@ -937,7 +936,7 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Enable Logging of Analytics Events"
         })
       }), (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_SOURCE_MAPS,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_SOURCE_MAPS,
         children: (0, a.jsx)(S.FormSwitch, {
           value: o,
           note: "Only enable on devices you trust.",
@@ -947,7 +946,7 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Enable source maps to be loaded on this client"
         })
       }), (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
         children: (0, a.jsx)(S.FormSwitch, {
           value: d,
           note: "Displays a floating debugger with viewed impressions",
@@ -957,7 +956,7 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Enable standard analytics debugger view"
         })
       }), (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
         children: (0, a.jsx)(S.FormSwitch, {
           value: c,
           note: "Displays a floating idle status indicator",
@@ -967,7 +966,7 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Enable idle status indicator"
         })
       }) : null, null, (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
         children: (0, a.jsx)(S.FormSwitch, {
           value: E,
           note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
@@ -977,36 +976,36 @@ let $ = u.default.connectStores([M.default], () => ({
           children: "Preview Unpublished Collections on App Directory Homepage"
         })
       }) : null, p.default.isDeveloper ? (0, a.jsxs)(R.Subsetting, {
-        setting: F.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        setting: G.WebSetting.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
         children: [(0, a.jsx)("div", {
-          className: [V.buttonsContainer, Y.marginBottom20].join(" "),
-          children: (0, a.jsx)(G.OverridePremiumTypeDropDown, {})
+          className: [y.buttonsContainer, H.marginBottom20].join(" "),
+          children: (0, a.jsx)(j.OverridePremiumTypeDropDown, {})
         }), (0, a.jsx)(S.FormDivider, {
-          className: V.divider
+          className: y.divider
         })]
       }) : null]
     })
   })
 });
 
-function ee() {
+function $() {
   let e = (0, u.useStateFromStores)([D.default], () => D.default.getSurveyOverride()),
     [t, s] = n.useState(null != e ? e : "");
   return (0, a.jsx)(R.Subsetting, {
-    setting: F.WebSetting.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
+    setting: G.WebSetting.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
     children: (0, a.jsxs)(S.FormSection, {
       tag: S.FormTitleTags.H1,
       title: "Survey Override",
-      className: Y.marginTop60,
+      className: H.marginTop60,
       children: [(0, a.jsx)(S.FormTitle, {
         children: "Copy the ID of the Survey you want to test:"
       }), (0, a.jsxs)("form", {
-        className: V.surveyOverride,
+        className: y.surveyOverride,
         onSubmit: e => {
           e.preventDefault(), t.length > 0 ? I.overrideSurvey(t) : I.overrideSurvey(null)
         },
         children: [(0, a.jsx)(S.TextInput, {
-          className: V.surveyOverrideInput,
+          className: y.surveyOverrideInput,
           value: t,
           onChange: s
         }), (0, a.jsx)(S.Button, {
@@ -1018,22 +1017,22 @@ function ee() {
   })
 }
 
-function et() {
+function ee() {
   var e;
   let t = (0, u.useStateFromStores)([C.default], () => C.default.overrideId()),
     [s, i] = n.useState(null !== (e = C.default.overrideId()) && void 0 !== e ? e : "");
   return (0, a.jsx)(R.Subsetting, {
-    setting: F.WebSetting.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
+    setting: G.WebSetting.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
     children: (0, a.jsxs)(S.FormSection, {
       tag: S.FormTitleTags.H1,
       title: "Changelog Override",
-      className: Y.marginTop60,
+      className: H.marginTop60,
       children: [(0, a.jsx)(S.FormTitle, {
         children: "Enter the ID of the changelog you want to test"
       }), (0, a.jsxs)("div", {
-        className: V.surveyOverride,
+        className: y.surveyOverride,
         children: [(0, a.jsx)(S.TextInput, {
-          className: V.surveyOverrideInput,
+          className: y.surveyOverrideInput,
           value: s,
           onChange: i
         }), (0, a.jsx)(S.Button, {
@@ -1047,11 +1046,11 @@ function et() {
     })
   })
 }
-class es extends n.PureComponent {
+class et extends n.PureComponent {
   render() {
     return (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)($, {}), (0, a.jsx)(J, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(X, {})]
+      children: [(0, a.jsx)(J, {}), (0, a.jsx)(Z, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(z, {})]
     })
   }
 }
-t.default = es
+t.default = et

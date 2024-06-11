@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   trackClientThemeUpdated: function() {
-    return j
+    return Y
   }
 }), n("627341"), n("47120");
 var i, r, s = n("735250"),
@@ -29,41 +29,40 @@ var i, r, s = n("735250"),
   C = n("781391"),
   R = n("210887"),
   g = n("740492"),
-  L = n("301822"),
-  v = n("153124"),
-  D = n("626135"),
-  M = n("238302"),
-  y = n("514361"),
-  P = n("110577"),
-  U = n("469115"),
-  b = n("981631"),
-  G = n("921944"),
-  w = n("474936"),
-  k = n("874893"),
-  B = n("526761"),
-  V = n("231338"),
+  L = n("153124"),
+  v = n("626135"),
+  D = n("238302"),
+  M = n("514361"),
+  y = n("110577"),
+  P = n("469115"),
+  U = n("981631"),
+  b = n("921944"),
+  G = n("474936"),
+  w = n("874893"),
+  k = n("526761"),
+  B = n("231338"),
   x = n("689938"),
-  F = n("737679");
+  V = n("737679");
 (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
-let H = Object.freeze({
-    EDITOR: B.UserSettingsDelay.SLOW_USER_ACTION,
-    SETTINGS: B.UserSettingsDelay.INFREQUENT_USER_ACTION
+let F = Object.freeze({
+    EDITOR: k.UserSettingsDelay.SLOW_USER_ACTION,
+    SETTINGS: k.UserSettingsDelay.INFREQUENT_USER_ACTION
   }),
-  Y = a.createContext({}),
-  j = e => {
+  H = a.createContext({}),
+  Y = e => {
     let {
       isPersisted: t,
       themeName: n,
       analyticsLocations: i
     } = e;
-    D.default.track(b.AnalyticEvents.CLIENT_THEME_UPDATED, {
-      feature_name: w.AnalyticsPremiumFeatureNames.CLIENT_THEME,
+    v.default.track(U.AnalyticEvents.CLIENT_THEME_UPDATED, {
+      feature_name: G.AnalyticsPremiumFeatureNames.CLIENT_THEME,
       theme_name: n,
       is_persisted: t,
       location_stack: i
     })
   },
-  W = e => {
+  j = e => {
     let {
       type: t,
       isPreview: n,
@@ -81,24 +80,24 @@ let H = Object.freeze({
       isCoachmark: !0
     }, () => x.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => x.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
     return (0, s.jsxs)("div", {
-      className: F.title,
+      className: V.title,
       children: [(0, s.jsx)(c.Heading, {
         "aria-label": r,
         variant: "text-md/medium",
         children: r
       }), (0, s.jsx)(O.default, {
-        className: F.premiumIcon
+        className: V.premiumIcon
       })]
     })
   },
-  K = e => {
+  W = e => {
     var t, n;
     let {
       type: i,
       isPreview: r,
       isCoachmark: a
     } = e;
-    if ((null === (n = (0, N.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.PremiumSubscriptionSKUs.TIER_2 && r) return null;
+    if ((null === (n = (0, N.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === G.PremiumSubscriptionSKUs.TIER_2 && r) return null;
     let o = (0, u.match)({
       type: i,
       isPreview: r,
@@ -124,35 +123,35 @@ let H = Object.freeze({
       children: o
     })
   },
-  z = e => {
+  K = e => {
     let {
       type: t,
       children: n
-    } = e, i = (0, v.useUID)(), r = (0, c.useRadioGroup)({
+    } = e, i = (0, L.useUID)(), r = (0, c.useRadioGroup)({
       orientation: "horizontal",
       labelledBy: i
     }), o = a.useMemo(() => ({
       type: t,
-      delay: H[t]
+      delay: F[t]
     }), [t]);
-    return (0, s.jsx)(Y.Provider, {
+    return (0, s.jsx)(H.Provider, {
       value: o,
       children: (0, s.jsx)("div", {
         ...r,
-        className: F.__invalid_container,
+        className: V.__invalid_container,
         children: n
       })
     })
   };
-z.Basic = e => {
+K.Basic = e => {
   let {
     className: t
   } = e, {
     delay: n
-  } = a.useContext(Y), {
+  } = a.useContext(H), {
     analyticsLocations: i
-  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([R.default, g.default, y.default], () => [R.default.theme, null == y.default.gradientPreset, g.default.useSystemTheme === k.SystemThemeState.ON]), _ = e => {
-    (0, M.resetBackgroundGradientPreset)(), j({
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([R.default, g.default, M.default], () => [R.default.theme, null == M.default.gradientPreset, g.default.useSystemTheme === w.SystemThemeState.ON]), _ = e => {
+    (0, D.resetBackgroundGradientPreset)(), Y({
       isPersisted: !0,
       analyticsLocations: i,
       themeName: "default ".concat(e)
@@ -161,32 +160,32 @@ z.Basic = e => {
     }, n)
   }, c = (0, S.useIsDesktopVisualRefreshEnabled)("appearance_settings");
   return (0, s.jsxs)("section", {
-    className: l()(F.presets, t),
-    children: [(0, s.jsx)(P.DefaultThemeSelection, {
-      theme: V.ThemeTypes.LIGHT,
-      isSelected: o && !u && r === V.ThemeTypes.LIGHT,
-      onSelect: () => _(V.ThemeTypes.LIGHT)
-    }), (0, s.jsx)(P.DefaultThemeSelection, {
-      theme: V.ThemeTypes.DARK,
-      isSelected: o && !u && r === V.ThemeTypes.DARK,
-      onSelect: () => _(V.ThemeTypes.DARK)
+    className: l()(V.presets, t),
+    children: [(0, s.jsx)(y.DefaultThemeSelection, {
+      theme: B.ThemeTypes.LIGHT,
+      isSelected: o && !u && r === B.ThemeTypes.LIGHT,
+      onSelect: () => _(B.ThemeTypes.LIGHT)
+    }), (0, s.jsx)(y.DefaultThemeSelection, {
+      theme: B.ThemeTypes.DARK,
+      isSelected: o && !u && r === B.ThemeTypes.DARK,
+      onSelect: () => _(B.ThemeTypes.DARK)
     }), c && (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(P.DefaultThemeSelection, {
-        theme: V.ThemeTypes.DARKER,
-        isSelected: o && !u && r === V.ThemeTypes.DARKER,
-        onSelect: () => _(V.ThemeTypes.DARKER)
-      }), (0, s.jsx)(P.DefaultThemeSelection, {
-        theme: V.ThemeTypes.MIDNIGHT,
-        isSelected: o && !u && r === V.ThemeTypes.MIDNIGHT,
-        onSelect: () => _(V.ThemeTypes.MIDNIGHT)
+      children: [(0, s.jsx)(y.DefaultThemeSelection, {
+        theme: B.ThemeTypes.DARKER,
+        isSelected: o && !u && r === B.ThemeTypes.DARKER,
+        onSelect: () => _(B.ThemeTypes.DARKER)
+      }), (0, s.jsx)(y.DefaultThemeSelection, {
+        theme: B.ThemeTypes.MIDNIGHT,
+        isSelected: o && !u && r === B.ThemeTypes.MIDNIGHT,
+        onSelect: () => _(B.ThemeTypes.MIDNIGHT)
       })]
-    }), (0, s.jsx)(P.DefaultThemeSelection, {
+    }), (0, s.jsx)(y.DefaultThemeSelection, {
       theme: "system",
       isSelected: o && u,
       onSelect: () => _("system")
     })]
   })
-}, z.Gradient = e => {
+}, K.Gradient = e => {
   var t, i;
   let {
     className: r,
@@ -194,44 +193,44 @@ z.Basic = e => {
     disabled: l = !1
   } = e, {
     type: u,
-    delay: c
-  } = a.useContext(Y), {
-    analyticsLocations: S
-  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [O, R, g] = (0, d.useStateFromStoresArray)([y.default], () => {
+    delay: S
+  } = a.useContext(H), {
+    analyticsLocations: O
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [R, g, L] = (0, d.useStateFromStoresArray)([M.default], () => {
     var e;
-    return [y.default.isPreview, y.default.isCoachmark, null === (e = y.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [v, D] = a.useState(!1), [b, B] = a.useState(-1), V = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion), {
-    enabled: H
+    return [M.default.isPreview, M.default.isCoachmark, null === (e = M.default.gradientPreset) || void 0 === e ? void 0 : e.id]
+  }), [v, U] = a.useState(!1), [k, B] = a.useState(-1), F = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion), {
+    enabled: K
   } = (0, A.useBrandRefreshPerksExperiment)({
     location: "GradientSelectors"
-  }), z = (null === (i = (0, N.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.PremiumSubscriptionSKUs.TIER_2, Z = a.useMemo(() => e => {
-    let t = U.CLIENT_THEME_DC_MAP.get(e.id),
+  }), z = (null === (i = (0, N.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === G.PremiumSubscriptionSKUs.TIER_2, Z = a.useMemo(() => e => {
+    let t = P.CLIENT_THEME_DC_MAP.get(e.id),
       n = null != t && !(0, h.isDismissibleContentDismissed)(t);
     return l && n && setTimeout(() => (0, h.markDismissibleContentAsDismissed)(t, {
-      dismissAction: G.ContentDismissActionType.AUTO_DISMISS
+      dismissAction: b.ContentDismissActionType.AUTO_DISMISS
     }), 5e3), n
   }, [l]);
   a.useEffect(() => {
-    (b === U.BACKGROUND_GRADIENT_PRESETS.length - (H ? 2 : 3) && "EDITOR" === u || g === _.BackgroundGradientPresetId.EASTER_EGG) && D(!0)
-  }, [b, u, g, H]);
+    (k === P.BACKGROUND_GRADIENT_PRESETS.length - (K ? 2 : 3) && "EDITOR" === u || L === _.BackgroundGradientPresetId.EASTER_EGG) && U(!0)
+  }, [k, u, L, K]);
   let Q = (e, t) => {
-    (0, M.updateBackgroundGradientPreset)(e.id), j({
-      isPersisted: !O,
-      analyticsLocations: S,
+    (0, D.updateBackgroundGradientPreset)(e.id), Y({
+      isPersisted: !R,
+      analyticsLocations: O,
       themeName: _.BackgroundGradientPresetId[e.id]
     });
-    let n = U.CLIENT_THEME_DC_MAP.get(e.id);
+    let n = P.CLIENT_THEME_DC_MAP.get(e.id);
     if (null != n && !(0, h.isDismissibleContentDismissed)(n) && (0, h.markDismissibleContentAsDismissed)(n, {
-        dismissAction: G.ContentDismissActionType.TAKE_ACTION
-      }), O) {
-      (0, C.setUseSystemTheme)(k.SystemThemeState.OFF);
+        dismissAction: b.ContentDismissActionType.TAKE_ACTION
+      }), R) {
+      (0, C.setUseSystemTheme)(w.SystemThemeState.OFF);
       return
     }
     if ((0, E.saveClientTheme)({
         backgroundGradientPresetId: e.id,
         theme: e.theme
-      }, c), null != t) {
-      if (v && D(!1), t <= b || 0 === t) {
+      }, S), null != t) {
+      if (v && U(!1), t <= k || 0 === t) {
         B(0);
         return
       }
@@ -240,43 +239,43 @@ z.Basic = e => {
   };
   return (0, s.jsxs)("section", {
     className: r,
-    children: ["EDITOR" === u && O && z ? (0, s.jsx)(p.default, {
-      type: w.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-      subscriptionTier: w.PremiumSubscriptionSKUs.TIER_2,
+    children: ["EDITOR" === u && R && z ? (0, s.jsx)(p.default, {
+      type: G.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+      subscriptionTier: G.PremiumSubscriptionSKUs.TIER_2,
       children: x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
         onPremiumClick: m.navigateToPremiumMarketingPage
       })
     }) : (0, s.jsxs)("div", {
-      className: F.header,
+      className: V.header,
       children: [(0, s.jsxs)("div", {
-        className: F.headings,
-        children: [(0, s.jsx)(W, {
+        className: V.headings,
+        children: [(0, s.jsx)(j, {
           type: u,
-          isPreview: O,
-          isCoachmark: R
-        }), (0, s.jsx)(K, {
+          isPreview: R,
+          isCoachmark: g
+        }), (0, s.jsx)(W, {
           type: u,
-          isPreview: O,
-          isCoachmark: R
+          isPreview: R,
+          isCoachmark: g
         })]
       }), null == o ? void 0 : o()]
     }), (0, s.jsxs)("div", {
-      className: F.presets,
-      children: [U.BACKGROUND_GRADIENT_PRESETS.filter(e => {
+      className: V.presets,
+      children: [P.BACKGROUND_GRADIENT_PRESETS.filter(e => {
         let {
           id: t
         } = e;
-        return t !== _.BackgroundGradientPresetId.EASTER_EGG && (t !== _.BackgroundGradientPresetId.BLURPLE_TWILIGHT || H)
-      }).map((e, t) => (0, s.jsx)(P.GradientThemeSelection, {
+        return t !== _.BackgroundGradientPresetId.EASTER_EGG && (t !== _.BackgroundGradientPresetId.BLURPLE_TWILIGHT || K)
+      }).map((e, t) => (0, s.jsx)(y.GradientThemeSelection, {
         preset: e,
-        isSelected: g === e.id,
+        isSelected: L === e.id,
         onSelect: () => Q(e, t),
         disabled: l,
         tabIndex: 0 !== t || l ? void 0 : 0,
         showBadge: Z(e)
       }, e.id)), (() => {
         if (!v) return null;
-        let e = U.BACKGROUND_GRADIENT_PRESETS_MAP[_.BackgroundGradientPresetId.EASTER_EGG];
+        let e = P.BACKGROUND_GRADIENT_PRESETS_MAP[_.BackgroundGradientPresetId.EASTER_EGG];
         if (null == e) return null;
         async function t() {
           let {
@@ -285,18 +284,18 @@ z.Basic = e => {
           return e
         }
         return (0, s.jsxs)("div", {
-          className: F.easterEggSelection,
-          children: [(0, s.jsx)(P.GradientThemeSelection, {
+          className: V.easterEggSelection,
+          children: [(0, s.jsx)(y.GradientThemeSelection, {
             preset: e,
-            isSelected: g === _.BackgroundGradientPresetId.EASTER_EGG,
+            isSelected: L === _.BackgroundGradientPresetId.EASTER_EGG,
             onSelect: () => Q(e)
-          }), (0, s.jsx)(L.default, {
+          }), (0, s.jsx)(c.LottieAnimation, {
             importData: t,
-            shouldAnimate: !V,
-            className: F.sparkles
+            shouldAnimate: !F,
+            className: V.sparkles
           })]
         })
       })()]
     })]
   })
-}, t.default = z
+}, t.default = K

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("47120");
 var a = s("735250"),
@@ -14,37 +14,36 @@ var a = s("735250"),
   u = s("481060"),
   c = s("699682"),
   S = s("44315"),
-  E = s("703685"),
-  T = s("586791"),
-  _ = s("654904"),
-  I = s("981631"),
-  N = s("689938"),
-  g = s("395495");
+  E = s("586791"),
+  T = s("654904"),
+  _ = s("981631"),
+  I = s("689938"),
+  N = s("395495");
 
-function f(e) {
+function g(e) {
   let {
     onChange: t,
     onClose: s,
     color: i,
-    suggestedColors: f,
-    disabled: m,
-    label: A,
-    colorPickerMiddle: C,
-    colorPickerFooter: O,
-    showEyeDropper: h
-  } = e, R = n.useRef(null), p = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), M = d.default.colors.BACKGROUND_ACCENT.css, D = (0, _.isColorDark)(i), x = (0, o.int2hex)(i), L = x === p ? M : x, P = (0, S.getColor)(D ? I.Color.WHITE_500 : I.Color.PRIMARY_530), b = (0, c.default)(C), v = (0, c.default)(O), [U, j] = n.useState((0, r.v4)());
+    suggestedColors: g,
+    disabled: f,
+    label: m,
+    colorPickerMiddle: A,
+    colorPickerFooter: C,
+    showEyeDropper: O
+  } = e, h = n.useRef(null), R = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), p = d.default.colors.BACKGROUND_ACCENT.css, M = (0, T.isColorDark)(i), D = (0, o.int2hex)(i), x = D === R ? p : D, L = (0, S.getColor)(M ? _.Color.WHITE_500 : _.Color.PRIMARY_530), P = (0, c.default)(A), b = (0, c.default)(C), [v, U] = n.useState((0, r.v4)());
   return n.useEffect(() => {
-    (b !== C || v !== O) && j((0, r.v4)())
-  }, [O, C, v, b]), (0, a.jsx)(u.Popout, {
-    positionKey: U,
-    renderPopout: e => (0, a.jsx)(E.CustomColorPicker, {
+    (P !== A || b !== C) && U((0, r.v4)())
+  }, [C, A, b, P]), (0, a.jsx)(u.Popout, {
+    positionKey: v,
+    renderPopout: e => (0, a.jsx)(u.CustomColorPicker, {
       ...e,
       value: i,
       onChange: t,
-      suggestedColors: f,
-      middle: C,
-      footer: O,
-      showEyeDropper: h
+      suggestedColors: g,
+      middle: A,
+      footer: C,
+      showEyeDropper: O
     }),
     onRequestClose: s,
     children: e => {
@@ -53,30 +52,30 @@ function f(e) {
         ...s
       } = e;
       return (0, a.jsxs)("div", {
-        ref: R,
-        className: l()(g.colorSwatch, {
-          [g.disabled]: m
+        ref: h,
+        className: l()(N.colorSwatch, {
+          [N.disabled]: f
         }),
         children: [(0, a.jsx)(u.Clickable, {
           ...s,
-          tabIndex: m ? -1 : 0,
-          onClick: m ? I.NOOP : t,
+          tabIndex: f ? -1 : 0,
+          onClick: f ? _.NOOP : t,
           style: {
-            backgroundColor: x,
-            borderColor: L
+            backgroundColor: D,
+            borderColor: x
           },
-          className: g.swatch,
-          "aria-label": N.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
+          className: N.swatch,
+          "aria-label": I.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
           focusProps: {
-            ringTarget: R
+            ringTarget: h
           },
-          children: (0, a.jsx)(T.default, {
-            className: g.editPencilIcon,
+          children: (0, a.jsx)(E.default, {
+            className: N.editPencilIcon,
             width: 14,
             height: 14,
-            color: P
+            color: L
           })
-        }), A]
+        }), m]
       })
     }
   })

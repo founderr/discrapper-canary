@@ -10,8 +10,8 @@ var i, r, s = n("735250"),
   l = n.n(o),
   u = n("507274"),
   d = n("770102"),
-  _ = n("6048"),
-  c = n("679342"),
+  _ = n("326452"),
+  c = n("874967"),
   E = n("688572");
 
 function I(e, t, n) {
@@ -28,7 +28,7 @@ class T extends(i = a.PureComponent) {
       className: e,
       ...t
     } = this.props;
-    return (0, s.jsx)(_.default, {
+    return (0, s.jsx)(_.SearchBar, {
       ...t,
       className: l()(E.popoutListInput, e)
     })

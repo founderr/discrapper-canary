@@ -1,27 +1,26 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
-var l = a("735250");
+var s = a("735250");
 a("470079");
-var s = a("481060"),
-  n = a("682864"),
-  i = a("967154");
+var l = a("481060"),
+  n = a("967154");
 
-function r(e) {
+function i(e) {
   let {
     children: t,
     label: a
   } = e;
-  return (0, l.jsxs)("li", {
-    children: [(0, l.jsx)(s.Text, {
+  return (0, s.jsxs)("li", {
+    children: [(0, s.jsx)(l.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
-      className: i.benefitLabel,
+      className: n.benefitLabel,
       children: a
-    }), (0, l.jsx)(n.default, {
+    }), (0, s.jsx)(l.Spacer, {
       size: 12
     }), t]
   })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return p
   }
 }), n("47120");
 var i = n("735250"),
@@ -16,30 +16,29 @@ var i = n("735250"),
   c = n("607070"),
   E = n("243778"),
   I = n("594174"),
-  T = n("976644"),
-  f = n("466111"),
-  S = n("74538"),
-  h = n("921944"),
-  A = n("689938"),
-  m = n("170799");
-let N = {
+  T = n("466111"),
+  f = n("74538"),
+  S = n("921944"),
+  h = n("689938"),
+  A = n("170799");
+let m = {
   tension: 750,
   mass: 2.5,
   friction: 70
 };
 
-function p(e) {
+function N(e) {
   let {
     tooltipText: t,
     headingText: n,
     textColor: r
   } = e, s = null != n;
   return (0, i.jsxs)("span", {
-    className: s ? void 0 : m.tooltipContainer,
+    className: s ? void 0 : A.tooltipContainer,
     children: [(0, i.jsxs)("span", {
-      className: m.tooltipContainer,
-      children: [(0, i.jsx)(f.default, {
-        className: m.nitroWheel
+      className: A.tooltipContainer,
+      children: [(0, i.jsx)(T.default, {
+        className: A.nitroWheel
       }), s ? (0, i.jsx)(_.Heading, {
         color: null != r ? r : "text-normal",
         variant: "heading-sm/semibold",
@@ -53,64 +52,64 @@ function p(e) {
   })
 }
 
-function O(e) {
+function p(e) {
   let {
     checked: t,
     onClick: n,
     id: s = "burst-reaction-toggle-button"
-  } = e, f = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = I.default.getCurrentUser(), C = null == O || (0, S.isPremium)(O) ? [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [R, g] = (0, E.useSelectedDismissibleContent)(C), [L, v] = r.useState(!1), [D, M] = (0, o.useSpring)(() => ({})), y = (0, o.animated)(d.SuperReactionIcon);
+  } = e, T = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), p = I.default.getCurrentUser(), O = null == p || (0, f.isPremium)(p) ? [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [C, R] = (0, E.useSelectedDismissibleContent)(O), [g, L] = r.useState(!1), [v, D] = (0, o.useSpring)(() => ({})), M = (0, o.animated)(d.SuperReactionIcon);
   r.useEffect(() => {
-    let e = R === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-    e && (g(h.ContentDismissActionType.DISMISS), setTimeout(() => v(e), 200))
-  }, [R, g]);
-  let P = L ? A.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? A.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : A.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-    U = L ? A.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+    let e = C === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+    e && (R(S.ContentDismissActionType.DISMISS), setTimeout(() => L(e), 200))
+  }, [C, R]);
+  let y = g ? h.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? h.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : h.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+    P = g ? h.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
   return (0, i.jsxs)(_.TooltipContainer, {
     position: "top",
-    text: (0, i.jsx)(p, {
+    text: (0, i.jsx)(N, {
       textColor: "always-white",
-      tooltipText: P,
-      headingText: U
+      tooltipText: y,
+      headingText: P
     }),
     color: _.Tooltip.Colors.BRAND,
-    forceOpen: L,
-    "aria-label": P,
-    tooltipClassName: m.tooltip,
+    forceOpen: g,
+    "aria-label": y,
+    tooltipClassName: A.tooltip,
     children: [(0, i.jsx)("input", {
-      className: m.visuallyHidden,
+      className: A.visuallyHidden,
       checked: t,
       onChange: function() {
-        M({
+        D({
           from: {
             rotate: t ? "360deg" : "0deg"
           },
           to: {
             rotate: t ? "0deg" : "360deg"
           },
-          config: N
-        }), null == n || n(), v(!1)
+          config: m
+        }), null == n || n(), L(!1)
       },
       id: s,
       type: "checkbox"
     }), (0, i.jsxs)("label", {
       htmlFor: s,
-      className: a()(m.label, {
-        [m.labelChecked]: t
+      className: a()(A.label, {
+        [A.labelChecked]: t
       }),
-      children: [t ? (0, i.jsx)(T.Shine, {
-        className: m.shine,
-        shinePaused: f
-      }) : null, (0, i.jsx)(y, {
-        style: f ? void 0 : D,
+      children: [t ? (0, i.jsx)(_.Shine, {
+        className: A.shine,
+        shinePaused: T
+      }) : null, (0, i.jsx)(M, {
+        style: T ? void 0 : v,
         width: 20,
         height: 20,
         color: t ? "white" : void 0,
-        className: m.icon
+        className: A.icon
       }), (0, i.jsx)("span", {
         children: (0, i.jsx)(_.Text, {
-          className: m.visuallyHidden,
+          className: A.visuallyHidden,
           variant: "text-sm/semibold",
-          children: A.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
+          children: h.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
         })
       })]
     })]

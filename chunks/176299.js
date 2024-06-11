@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("668940"),
   L = n("372900"),
   P = n("6039"),
-  M = n("637853"),
-  y = n("326145"),
+  y = n("637853"),
+  M = n("326145"),
   D = n("269675"),
   x = n("242601"),
   b = n("416568"),
@@ -95,7 +95,7 @@ let em = () => (0, a.jsx)("div", {
     renderLoader: em
   }),
   eg = (0, d.makeLazy)({
-    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("85552"), n.e("186")]).then(n.bind(n, "545918")),
+    createPromise: () => Promise.all([n.e("99387"), n.e("85552"), n.e("44400")]).then(n.bind(n, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
     renderLoader: em
@@ -177,7 +177,7 @@ let em = () => (0, a.jsx)("div", {
       default:
         (0, en.assertNever)(l)
     }
-    if ((0, M.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(y.default, {
+    if ((0, y.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(M.default, {
       guildId: s,
       channelId: l
     });
@@ -233,7 +233,7 @@ let eO = e => (0, a.jsx)(eN, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  eM = e => {
+  ey = e => {
     let {
       match: t
     } = e;
@@ -242,7 +242,7 @@ let eO = e => (0, a.jsx)(eN, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  ey = () => (0, a.jsx)(ed.default, {}),
+  eM = () => (0, a.jsx)(ed.default, {}),
   eD = () => (0, a.jsx)(ec.default, {}),
   ex = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -417,7 +417,7 @@ function eF() {
                   impressionName: u.ImpressionNames.ACTIVITIES
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.APPLICATION_LIBRARY,
-                  render: ey,
+                  render: eM,
                   impressionName: u.ImpressionNames.APPLICATION_LIBRARY,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
@@ -473,7 +473,7 @@ function eF() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
-                  render: eM,
+                  render: ey,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
                   impressionProperties: e => {
                     let {

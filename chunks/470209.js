@@ -1,77 +1,75 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
-    return h
+    return f
   }
 });
-var a = A("735250");
-A("470079");
-var l = A("512722"),
-  s = A.n(l),
-  n = A("866442"),
-  r = A("481060"),
-  i = A("703685"),
-  o = A("682864"),
-  d = A("153124"),
-  u = A("214623"),
-  c = A("981631"),
-  f = A("689938"),
-  g = A("355876");
-let C = (0, d.uid)();
+var a = t("735250");
+t("470079");
+var l = t("512722"),
+  s = t.n(l),
+  r = t("866442"),
+  n = t("481060"),
+  i = t("153124"),
+  o = t("214623"),
+  d = t("981631"),
+  u = t("689938"),
+  c = t("355876");
+let g = (0, i.uid)();
 
-function h(e) {
+function f(e) {
   let {
-    newRoleParams: t,
-    setNewRoleParams: A
+    newRoleParams: A,
+    setNewRoleParams: t
   } = e, {
     name: l,
-    color: d
-  } = t, h = e => A(t => (s()(null != t, "newRoleParams should be defined"), {
-    ...t,
+    color: i
+  } = A, f = e => t(A => (s()(null != A, "newRoleParams should be defined"), {
+    ...A,
     color: e
   }));
   return (0, a.jsxs)("div", {
-    className: g.roleInputContainer,
-    children: [(0, a.jsx)(r.TextInput, {
+    className: c.roleInputContainer,
+    children: [(0, a.jsx)(n.TextInput, {
       autoFocus: !0,
       value: l,
-      onChange: e => A(t => (s()(null != t, "newRoleParams should be defined"), {
-        ...t,
+      onChange: e => t(A => (s()(null != A, "newRoleParams should be defined"), {
+        ...A,
         name: e
       })),
-      id: C,
-      placeholder: f.default.Messages.GUILD_PRODUCT_SETTINGS_CREATE_ROLE_NAME_PLACEHOLDER,
-      maxLength: c.ROLE_NAME_MAX_LENGTH,
-      inputClassName: g.input
+      id: g,
+      placeholder: u.default.Messages.GUILD_PRODUCT_SETTINGS_CREATE_ROLE_NAME_PLACEHOLDER,
+      maxLength: d.ROLE_NAME_MAX_LENGTH,
+      inputClassName: c.input
     }), (0, a.jsxs)("div", {
-      className: g.roleColorContainer,
-      children: [(0, a.jsx)(r.HiddenVisually, {
-        children: f.default.Messages.GUILD_PRODUCT_SETTINGS_SELECT_ROLE_COLOR_ARIA.format({
-          color: (0, n.int2hex)(d)
+      className: c.roleColorContainer,
+      children: [(0, a.jsx)(n.HiddenVisually, {
+        children: u.default.Messages.GUILD_PRODUCT_SETTINGS_SELECT_ROLE_COLOR_ARIA.format({
+          color: (0, r.int2hex)(i)
         })
       }), (0, a.jsx)("div", {
-        className: g.roleColorPreview,
+        className: c.roleColorPreview,
         style: {
-          backgroundColor: (0, n.int2hex)(d)
+          backgroundColor: (0, r.int2hex)(i)
         }
-      }), (0, a.jsx)(o.default, {
+      }), (0, a.jsx)(n.Spacer, {
         size: 8,
         horizontal: !0
-      }), (0, a.jsx)(r.Popout, {
-        renderPopout: e => (0, a.jsx)(i.CustomColorPicker, {
+      }), (0, a.jsx)(n.Popout, {
+        renderPopout: e => (0, a.jsx)(n.CustomColorPicker, {
           ...e,
-          value: d,
-          onChange: h
+          value: i,
+          onChange: f
         }),
-        children: e => (0, a.jsx)(r.Clickable, {
+        children: e => (0, a.jsx)(n.Clickable, {
           ...e,
           tag: "span",
-          "aria-label": f.default.Messages.GUILD_PRODUCT_SETTINGS_CREATE_ROLE_SELECT_COLOR_ARIA,
-          className: g.dropperIconContainer,
-          children: (0, a.jsx)(u.default, {
+          "aria-label": u.default.Messages.GUILD_PRODUCT_SETTINGS_CREATE_ROLE_SELECT_COLOR_ARIA,
+          className: c.dropperIconContainer,
+          children: (0, a.jsx)(o.default, {
             width: 16,
             height: 16,
-            className: g.dropperIcon
+            className: c.dropperIcon
           })
         })
       })]

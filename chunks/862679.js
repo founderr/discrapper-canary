@@ -7,46 +7,45 @@ var a = n("735250"),
   r = n("481060"),
   o = n("433355"),
   u = n("373791"),
-  d = n("301822"),
-  c = n("705130");
+  d = n("705130");
 t.default = l.memo(function(e) {
   let {
     message: t,
     subtitle: n,
-    countdown: f,
-    buttonText: h,
-    buttonColor: m,
-    buttonSubmitting: p,
-    onButtonClick: E,
-    imageSrc: C,
-    animationSrc: g,
-    secondaryButtonText: S,
-    onSecondaryButtonClick: _,
-    children: T,
-    useReducedMotion: I = !1
-  } = e, A = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
-  if (s.isMobile && A) return null;
+    countdown: c,
+    buttonText: f,
+    buttonColor: h,
+    buttonSubmitting: m,
+    onButtonClick: p,
+    imageSrc: E,
+    animationSrc: C,
+    secondaryButtonText: g,
+    onSecondaryButtonClick: S,
+    children: _,
+    useReducedMotion: T = !1
+  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
+  if (s.isMobile && I) return null;
   if (null == t) return (0, a.jsx)(a.Fragment, {
-    children: l.Children.only(T)
+    children: l.Children.only(_)
   });
-  let x = null;
-  return null != C ? x = (0, a.jsx)("img", {
+  let A = null;
+  return null != E ? A = (0, a.jsx)("img", {
     alt: "",
-    src: C,
-    className: c.image
-  }) : null != g && (x = (0, a.jsx)(d.default, {
-    importData: g,
-    shouldAnimate: !I,
-    className: c.animation
+    src: E,
+    className: d.image
+  }) : null != C && (A = (0, a.jsx)(r.LottieAnimation, {
+    importData: C,
+    shouldAnimate: !T,
+    className: d.animation
   })), (0, a.jsxs)("div", {
-    className: c.wrapper,
+    className: d.wrapper,
     children: [(0, a.jsxs)("div", {
-      className: c.content,
-      children: [x, (0, a.jsxs)("div", {
-        className: c.text,
+      className: d.content,
+      children: [A, (0, a.jsxs)("div", {
+        className: d.text,
         children: [(0, a.jsx)(r.Heading, {
           variant: "heading-md/semibold",
-          className: c.title,
+          className: d.title,
           children: t
         }), null != n && (0, a.jsx)(r.Text, {
           color: "text-muted",
@@ -55,27 +54,27 @@ t.default = l.memo(function(e) {
         })]
       })]
     }), (0, a.jsxs)("div", {
-      className: c.buttonContainer,
-      children: [null != S && (0, a.jsx)(r.Button, {
-        className: c.button,
+      className: d.buttonContainer,
+      children: [null != g && (0, a.jsx)(r.Button, {
+        className: d.button,
         size: r.Button.Sizes.SMALL,
-        onClick: _,
+        onClick: S,
         look: r.Button.Looks.LINK,
         color: r.Button.Colors.PRIMARY,
-        submitting: p,
-        children: S
-      }), null != h && (0, a.jsx)(r.Button, {
-        className: c.button,
-        innerClassName: c.innerButton,
+        submitting: m,
+        children: g
+      }), null != f && (0, a.jsx)(r.Button, {
+        className: d.button,
+        innerClassName: d.innerButton,
         size: r.Button.Sizes.SMALL,
-        onClick: E,
-        submitting: p,
-        color: null != m ? m : r.Button.Colors.PRIMARY,
-        children: h
+        onClick: p,
+        submitting: m,
+        color: null != h ? h : r.Button.Colors.PRIMARY,
+        children: f
       })]
-    }), null != f && (0, a.jsx)(u.default, {
-      className: c.countdown,
-      deadline: f
+    }), null != c && (0, a.jsx)(u.default, {
+      className: d.countdown,
+      deadline: c
     })]
   })
 })

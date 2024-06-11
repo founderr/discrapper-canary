@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useSignUpButton: function() {
-    return I
+    return S
   }
 });
 var l = n("735250"),
@@ -15,17 +15,15 @@ var l = n("735250"),
   c = n("377171"),
   f = n("682662"),
   h = n("662146"),
-  m = n("26290"),
-  C = n("15434"),
-  p = n("678513"),
-  g = n("981631"),
-  E = n("689938"),
-  S = n("211005");
+  m = n("678513"),
+  C = n("981631"),
+  p = n("689938"),
+  g = n("211005");
 
-function _(e) {
+function E(e) {
   let {
     target: t
-  } = e, o = (0, s.useTreeItem)("fakedoor"), p = a.useCallback(() => {
+  } = e, o = (0, s.useTreeItem)("fakedoor"), m = a.useCallback(() => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -35,7 +33,7 @@ function _(e) {
         target: t
       })
     })
-  }, [t]), _ = a.useCallback(e => {
+  }, [t]), E = a.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -45,39 +43,39 @@ function _(e) {
         signupTarget: t
       })
     })
-  }, [t]), I = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
-    className: S.tooltipContainer,
+  }, [t]), S = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), _ = (0, l.jsxs)("div", {
+    className: g.tooltipContainer,
     children: [(0, l.jsx)("div", {
-      className: S.tooltipBackground,
+      className: g.tooltipBackground,
       style: {
-        background: I
+        background: S
       }
     }), (0, l.jsx)(r.Heading, {
       variant: "heading-sm/medium",
       children: t.tooltipHeader
     }), (0, l.jsx)(r.Text, {
       variant: "text-xs/normal",
-      children: E.default.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
+      children: p.default.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
     })]
-  }), T = (0, d.useTheme)();
+  }), I = (0, d.useTheme)();
   return (0, l.jsxs)(f.ListItem, {
     children: [(0, l.jsx)(r.ThemeContextProvider, {
-      theme: g.ThemeTypes.DARK,
+      theme: C.ThemeTypes.DARK,
       children: (0, l.jsx)(h.default, {
-        text: N,
-        tooltipClass: S.tooltip,
-        tooltipContentClass: S.tooltipContent,
+        text: _,
+        tooltipClass: g.tooltip,
+        tooltipContentClass: g.tooltipContent,
         children: (0, l.jsx)(r.ThemeContextProvider, {
-          theme: T,
+          theme: I,
           children: (0, l.jsx)(r.BlobMask, {
-            lowerBadge: (0, l.jsx)(m.NumberBadge, {
+            lowerBadge: (0, l.jsx)(r.NumberBadge, {
               count: 1,
               color: c.default.BG_BRAND
             }),
-            children: (0, l.jsx)(C.default, {
+            children: (0, l.jsx)(r.NavItem, {
               ...o,
-              onClick: p,
-              onContextMenu: _,
+              onClick: m,
+              onContextMenu: E,
               children: (0, l.jsx)(i.BellIcon, {
                 color: c.default.TEXT_NORMAL
               })
@@ -87,7 +85,7 @@ function _(e) {
       })
     }), (0, l.jsx)("div", {
       style: {
-        background: I,
+        background: S,
         width: 0,
         height: 0
       }
@@ -95,9 +93,9 @@ function _(e) {
   })
 }
 
-function I() {
-  let e = (0, o.useStateFromStores)([p.default], () => p.default.getActiveUserSignUp());
-  return null == e ? null : (0, l.jsx)(_, {
+function S() {
+  let e = (0, o.useStateFromStores)([m.default], () => m.default.getActiveUserSignUp());
+  return null == e ? null : (0, l.jsx)(E, {
     target: e
   })
 }

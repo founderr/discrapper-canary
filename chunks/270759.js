@@ -21,20 +21,19 @@ var a = n("735250"),
   g = n("974042"),
   T = n("153124"),
   A = n("988951"),
-  N = n("26290"),
-  v = n("792125"),
-  R = n("666286"),
-  O = n("596957"),
-  L = n("981631"),
-  P = n("723359"),
-  M = n("689938"),
+  N = n("792125"),
+  v = n("666286"),
+  R = n("596957"),
+  O = n("981631"),
+  L = n("723359"),
+  P = n("689938"),
   y = n("915128");
 
-function D() {
+function M() {
   return (0, a.jsxs)("div", {
     className: y.inviteToolbar,
     children: [(0, a.jsx)(m.default, {
-      tooltip: M.default.Messages.NEW_GROUP_DM
+      tooltip: P.default.Messages.NEW_GROUP_DM
     }), (0, a.jsx)(_.default.Divider, {})]
   })
 }
@@ -45,100 +44,100 @@ t.default = function(e) {
   s.useEffect(() => {
     "true" === new URLSearchParams(n.search).get("confirm-age") && c.default.dispatch({
       type: "AGE_GATE_MODAL_OPEN",
-      source: P.AgeGateSource.DEEP_LINK_PROMPT
+      source: L.AgeGateSource.DEEP_LINK_PROMPT
     }).then(() => {
-      l.replace(L.Routes.ME)
+      l.replace(O.Routes.ME)
     })
   }, [l, n]), s.useEffect(() => {
-    f.setHomeLink(L.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
+    f.setHomeLink(O.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
   let m = (0, u.useStateFromStores)([I.default], () => I.default.theme),
     {
-      section: x,
-      pendingCount: b
+      section: D,
+      pendingCount: x
     } = (0, u.useStateFromStoresObject)([g.default], () => g.default.getState()),
-    U = (0, u.useStateFromStoresObject)([C.default], () => C.default.getSuggestionCount()),
-    j = (0, T.useUID)(),
-    G = (0, T.useUID)();
+    b = (0, u.useStateFromStoresObject)([C.default], () => C.default.getSuggestionCount()),
+    U = (0, T.useUID)(),
+    j = (0, T.useUID)();
   return (0, a.jsxs)("main", {
     className: y.container,
-    "aria-label": M.default.Messages.FRIENDS,
+    "aria-label": P.default.Messages.FRIENDS,
     children: [(0, a.jsx)(h.AppPageTitle, {
-      location: M.default.Messages.FRIENDS
+      location: P.default.Messages.FRIENDS
     }), (0, a.jsxs)(_.default, {
-      className: (0, v.getThemeClass)(m),
-      toolbar: (0, a.jsx)(D, {}),
+      className: (0, N.getThemeClass)(m),
+      toolbar: (0, a.jsx)(M, {}),
       scrollable: o.isMobile,
       role: "navigation",
-      "aria-labelledby": j,
+      "aria-labelledby": U,
       children: [(0, a.jsx)(_.default.Icon, {
         icon: A.default,
         "aria-hidden": !0
       }), (0, a.jsx)(_.default.Title, {
-        id: j,
-        children: M.default.Messages.FRIENDS
+        id: U,
+        children: P.default.Messages.FRIENDS
       }), (0, a.jsx)(_.default.Divider, {}), (0, a.jsxs)(d.TabBar, {
-        "aria-label": M.default.Messages.FRIENDS,
-        selectedItem: x,
+        "aria-label": P.default.Messages.FRIENDS,
+        selectedItem: D,
         type: "top-pill",
         onItemSelect: e => {
           E.default.setSection(e)
         },
         className: y.tabBar,
         children: [(0, a.jsx)(d.TabBar.Item, {
-          id: L.FriendsSections.ONLINE,
+          id: O.FriendsSections.ONLINE,
           className: y.item,
-          children: M.default.Messages.FRIENDS_SECTION_ONLINE
+          children: P.default.Messages.FRIENDS_SECTION_ONLINE
         }), (0, a.jsx)(d.TabBar.Item, {
-          id: L.FriendsSections.ALL,
+          id: O.FriendsSections.ALL,
           className: y.item,
-          children: M.default.Messages.FRIENDS_SECTION_ALL
+          children: P.default.Messages.FRIENDS_SECTION_ALL
         }), (0, a.jsxs)(d.TabBar.Item, {
-          id: L.FriendsSections.PENDING,
+          id: O.FriendsSections.PENDING,
           className: y.item,
-          "aria-label": M.default.Messages.FRIENDS_SECTION_PENDING,
-          children: [M.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
-            count: b,
+          "aria-label": P.default.Messages.FRIENDS_SECTION_PENDING,
+          children: [P.default.Messages.FRIENDS_SECTION_PENDING, x > 0 ? (0, a.jsx)(d.NumberBadge, {
+            count: x,
             className: y.badge,
             style: {
               paddingRight: 0
             }
           }) : null]
-        }), U > 0 ? (0, a.jsxs)(d.TabBar.Item, {
-          id: L.FriendsSections.SUGGESTIONS,
+        }), b > 0 ? (0, a.jsxs)(d.TabBar.Item, {
+          id: O.FriendsSections.SUGGESTIONS,
           className: y.item,
-          "aria-label": M.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
-          children: [M.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
-            count: U,
+          "aria-label": P.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
+          children: [P.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(d.NumberBadge, {
+            count: b,
             className: y.badge,
             style: {
               paddingRight: 0
             }
           })]
         }) : null, (0, a.jsx)(d.TabBar.Item, {
-          id: L.FriendsSections.BLOCKED,
+          id: O.FriendsSections.BLOCKED,
           className: y.item,
-          children: M.default.Messages.BLOCKED
+          children: P.default.Messages.BLOCKED
         }), (0, a.jsx)(d.TabBar.Item, {
-          "aria-label": M.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
+          "aria-label": P.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
           className: i()(y.item, y.addFriend),
-          id: L.FriendsSections.ADD_FRIEND,
+          id: O.FriendsSections.ADD_FRIEND,
           children: (0, a.jsx)("span", {
-            children: M.default.Messages.FRIENDS_SECTION_ADD_FRIEND
+            children: P.default.Messages.FRIENDS_SECTION_ADD_FRIEND
           })
         })]
       })]
     }), (0, a.jsxs)("div", {
       className: y.tabBody,
       children: [(0, a.jsx)(d.TabBar.Panel, {
-        id: x,
+        id: D,
         className: y.peopleColumn,
-        "aria-labelledby": G,
-        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(O.default, {
-          titleId: G,
-          sectionFilter: x
+        "aria-labelledby": j,
+        children: D === O.FriendsSections.ADD_FRIEND ? (0, a.jsx)(v.default, {}) : (0, a.jsx)(R.default, {
+          titleId: j,
+          sectionFilter: D
         })
       }), (0, a.jsx)("div", {
         className: y.nowPlayingColumn,

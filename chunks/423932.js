@@ -1,15 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var i = n("735250");
 n("470079");
-var o = n("481060"),
-  l = n("468436");
+var o = n("481060");
 
-function a(e) {
+function l(e) {
   (0, o.openModalLazy)(async () => {
     let {
       default: e
@@ -19,6 +18,6 @@ function a(e) {
     })
   }, {
     onCloseCallback: e,
-    backdropStyle: l.BackdropStyles.BLUR
+    backdropStyle: o.BackdropStyles.BLUR
   })
 }

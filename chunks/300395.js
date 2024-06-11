@@ -13,16 +13,16 @@ n.r(t), n.d(t, {
     return V
   }
 }), n("47120");
-var a, r, s, i, o, l, u, d, c, E, m, S, p = n("735250"),
+var a, r, i, s, o, l, u, d, c, E, m, S, p = n("735250"),
   I = n("470079"),
   D = n("120356"),
   _ = n.n(D),
   h = n("920906"),
-  N = n("748780"),
-  A = n("903958"),
+  A = n("748780"),
+  N = n("481060"),
   T = n("89501");
 
-function f(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ function f(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(c = a || (a = {})).NORMAL = "normal", c.SPEED_START = "speed_start", c.SPEED_LOOP = "speed_loop", c.FINISH = "finish", c.IDLE = "idle";
-let O = {
+let f = {
   normal: {
     BEG: 0,
     END: 600,
@@ -79,21 +79,21 @@ class L extends(r = I.PureComponent) {
       onScenePlay: n,
       onSceneComplete: a,
       pause: r,
-      pauseWhileUnfocused: s
+      pauseWhileUnfocused: i
     } = this.props;
-    return (0, p.jsx)(A.default, {
+    return (0, p.jsx)(N.SequencedLottieAnimation, {
       className: _()(T.sequencedAnimation, e),
       importData: this.importDefault,
       nextScene: r ? "idle" : t,
-      sceneSegments: O,
+      sceneSegments: f,
       onScenePlay: n,
       onSceneComplete: a,
-      pauseWhileUnfocused: s,
+      pauseWhileUnfocused: i,
       pause: r
     })
   }
 }
-f(L, "Scenes", a), (E = s || (s = {})).NORMAL = "normal", E.SPEED_START = "speed_start", E.SPEED_LOOP = "speed_loop", E.FINISH = "finish", E.IDLE = "idle";
+O(L, "Scenes", a), (E = i || (i = {})).NORMAL = "normal", E.SPEED_START = "speed_start", E.SPEED_LOOP = "speed_loop", E.FINISH = "finish", E.IDLE = "idle";
 let g = {
   normal: {
     BEG: 0,
@@ -117,7 +117,7 @@ let g = {
     END: 878
   }
 };
-class R extends(i = I.PureComponent) {
+class R extends(s = I.PureComponent) {
   static getNextScene(e) {
     switch (e) {
       case R.Scenes.SPEED_START:
@@ -143,21 +143,21 @@ class R extends(i = I.PureComponent) {
       onScenePlay: n,
       onSceneComplete: a,
       pause: r,
-      pauseWhileUnfocused: s
+      pauseWhileUnfocused: i
     } = this.props;
-    return (0, p.jsx)(A.default, {
+    return (0, p.jsx)(N.SequencedLottieAnimation, {
       className: _()(T.sequencedAnimation, e),
       importData: this.importDefault,
       nextScene: r ? "idle" : t,
       sceneSegments: g,
       onScenePlay: n,
       onSceneComplete: a,
-      pauseWhileUnfocused: s,
+      pauseWhileUnfocused: i,
       pause: r
     })
   }
 }
-f(R, "Scenes", s), (m = o || (o = {})).IDLE_ENTRY = "idle_entry", m.IDLE_LOOP = "idle_loop", m.BOOST_START = "boost_start", m.BOOST_LOOP = "boost_loop", m.BOOST_END = "boost_end", m.VICTORY = "victory", m.ERROR = "error";
+O(R, "Scenes", i), (m = o || (o = {})).IDLE_ENTRY = "idle_entry", m.IDLE_LOOP = "idle_loop", m.BOOST_START = "boost_start", m.BOOST_LOOP = "boost_loop", m.BOOST_END = "boost_end", m.VICTORY = "victory", m.ERROR = "error";
 let y = {
   idle_entry: {
     BEG: 0,
@@ -214,10 +214,10 @@ class P extends I.PureComponent {
     } = this.props;
     return (0, p.jsxs)("div", {
       className: T.panningAnimation,
-      children: [(0, p.jsx)(N.default.div, {
+      children: [(0, p.jsx)(A.default.div, {
         className: e,
         style: this.getStyle(!1)
-      }), (0, p.jsx)(N.default.div, {
+      }), (0, p.jsx)(A.default.div, {
         className: e,
         style: this.getStyle(!0)
       })]
@@ -232,7 +232,7 @@ let x = Object.freeze({
   IDLE_LOOP: {
     toValue: 1,
     duration: 6e3,
-    easing: N.default.Easing.linear
+    easing: A.default.Easing.linear
   },
   BOOST_START: {
     toValue: 0,
@@ -274,11 +274,11 @@ class B extends(l = I.PureComponent) {
     })
   }
   animateEntry(e) {
-    N.default.parallel([N.default.timing(this.foregroundAnimation.y, {
+    A.default.parallel([A.default.timing(this.foregroundAnimation.y, {
       toValue: e.toValue,
       duration: e.duration,
       delay: e.delay || 0
-    }), N.default.timing(this.backgroundAnimation.y, {
+    }), A.default.timing(this.backgroundAnimation.y, {
       toValue: e.toValue,
       duration: 1.2 * e.duration,
       delay: e.delay || 0
@@ -294,11 +294,11 @@ class B extends(l = I.PureComponent) {
     this.animateIdleLoopBackground(), this.animateIdleLoopForeground()
   }
   animateBoostStart() {
-    N.default.parallel([N.default.timing(this.foregroundAnimation.y, {
+    A.default.parallel([A.default.timing(this.foregroundAnimation.y, {
       toValue: x.BOOST_START.toValue,
       duration: x.BOOST_START.duration,
       delay: x.BOOST_START.delay
-    }), N.default.timing(this.backgroundAnimation.y, {
+    }), A.default.timing(this.backgroundAnimation.y, {
       toValue: x.BOOST_START.toValue,
       duration: 1.2 * x.BOOST_START.duration,
       delay: x.BOOST_START.delay
@@ -330,7 +330,7 @@ class B extends(l = I.PureComponent) {
           className: T.tier2Foreground,
           animation: this.foregroundAnimation
         })]
-      }), (0, p.jsx)(A.default, {
+      }), (0, p.jsx)(N.SequencedLottieAnimation, {
         className: T.sequencedAnimation,
         importData: this.importData,
         nextScene: n ? "idle_loop" : t,
@@ -343,25 +343,25 @@ class B extends(l = I.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "backgroundAnimation", new N.default.ValueXY({
+    super(...e), O(this, "backgroundAnimation", new A.default.ValueXY({
       x: 0,
       y: 0
-    })), f(this, "foregroundAnimation", new N.default.ValueXY({
+    })), O(this, "foregroundAnimation", new A.default.ValueXY({
       x: 0,
       y: 0
-    })), f(this, "didUnmount", !1), f(this, "animateIdleLoopBackground", () => {
-      !this.didUnmount && (this.backgroundAnimation.x.setValue(0), N.default.timing(this.backgroundAnimation.x, {
+    })), O(this, "didUnmount", !1), O(this, "animateIdleLoopBackground", () => {
+      !this.didUnmount && (this.backgroundAnimation.x.setValue(0), A.default.timing(this.backgroundAnimation.x, {
         toValue: x.IDLE_LOOP.toValue,
         duration: 1.2 * x.IDLE_LOOP.duration,
-        easing: N.default.Easing.linear
+        easing: A.default.Easing.linear
       }).start(this.animateIdleLoopBackground))
-    }), f(this, "animateIdleLoopForeground", () => {
-      !this.didUnmount && (this.foregroundAnimation.x.setValue(0), N.default.timing(this.foregroundAnimation.x, {
+    }), O(this, "animateIdleLoopForeground", () => {
+      !this.didUnmount && (this.foregroundAnimation.x.setValue(0), A.default.timing(this.foregroundAnimation.x, {
         toValue: x.IDLE_LOOP.toValue,
         duration: x.IDLE_LOOP.duration,
         easing: x.IDLE_LOOP.easing
       }).start(this.animateIdleLoopForeground))
-    }), f(this, "handleScenePlay", e => {
+    }), O(this, "handleScenePlay", e => {
       switch (e) {
         case "idle_entry":
           this.animateIdleEntry(), this.animateIdleLoop();
@@ -379,7 +379,7 @@ class B extends(l = I.PureComponent) {
     })
   }
 }
-f(B, "Scenes", o), (S = u || (u = {})).ENTRY = "entry", S.IDLE = "idle", S.STARS = "stars", S.ERROR = "error", S.SUCCESS = "success";
+O(B, "Scenes", o), (S = u || (u = {})).ENTRY = "entry", S.IDLE = "idle", S.STARS = "stars", S.ERROR = "error", S.SUCCESS = "success";
 let b = {
     entry: {
       BEG: 0,
@@ -447,30 +447,30 @@ let b = {
     DURATION_END: 250,
     SIZE_MIN: 7,
     SIZE_MAX: 15,
-    EASING_MIDDLE: N.default.Easing.bezier(.3, .01, 0, .99),
-    EASING_END: N.default.Easing.bezier(0, -.01, .99, 0)
+    EASING_MIDDLE: A.default.Easing.bezier(.3, .01, 0, .99),
+    EASING_END: A.default.Easing.bezier(0, -.01, .99, 0)
   });
 
 function M(e) {
   let {
     animate: t
   } = e, [n, a] = I.useState(0), r = (0, h.useSprings)(j.length, j.map((e, r) => {
-    let s = r > 0 ? C.DELAY_STAGGER * r + Math.random() * (C.DELAY_MAX - C.DELAY_MIN) + C.DELAY_MIN : 0,
-      i = Math.random() * (C.SIZE_MAX - C.SIZE_MIN) + C.SIZE_MIN;
+    let i = r > 0 ? C.DELAY_STAGGER * r + Math.random() * (C.DELAY_MAX - C.DELAY_MIN) + C.DELAY_MIN : 0,
+      s = Math.random() * (C.SIZE_MAX - C.SIZE_MIN) + C.SIZE_MIN;
     return {
       from: {
         scale: C.SCALE_INITIAL,
         rotate: C.ROTATE_INITIAL,
         top: e.top,
         left: e.left,
-        width: i,
-        height: i
+        width: s,
+        height: s
       },
       to: async e => {
         t ? (await e({
           scale: C.SCALE_MIDDLE,
           rotate: C.ROTATE_MIDDLE,
-          delay: s,
+          delay: i,
           config: {
             duration: C.DURATION_MIDDLE,
             easing: C.EASING_MIDDLE
@@ -535,18 +535,18 @@ class V extends(d = I.PureComponent) {
       pause: n,
       onScenePlay: a,
       onSceneComplete: r,
-      pauseWhileUnfocused: s
+      pauseWhileUnfocused: i
     } = this.props;
     return (0, p.jsxs)("div", {
       className: _()(T.guildWrapper, e),
-      children: [(0, p.jsx)(A.default, {
+      children: [(0, p.jsx)(N.SequencedLottieAnimation, {
         className: T.guildBackground,
         importData: this.importData,
         nextScene: n ? "idle" : t,
         sceneSegments: b,
         onScenePlay: a,
         onSceneComplete: r,
-        pauseWhileUnfocused: s,
+        pauseWhileUnfocused: i,
         pause: n
       }), (0, p.jsx)(M, {
         animate: !n && "stars" === t
@@ -554,4 +554,4 @@ class V extends(d = I.PureComponent) {
     })
   }
 }
-f(V, "Scenes", u)
+O(V, "Scenes", u)

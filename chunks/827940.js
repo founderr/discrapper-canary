@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return O
+    return k
   }
 }), a("47120"), a("653041");
 var i = a("735250"),
@@ -18,30 +18,29 @@ var i = a("735250"),
   p = a("43267"),
   I = a("933557"),
   g = a("430824"),
-  T = a("751771"),
-  h = a("699516"),
-  N = a("594174"),
-  S = a("408814"),
-  y = a("441674"),
-  v = a("757698"),
-  C = a("626135"),
-  A = a("768581"),
-  E = a("572004"),
-  x = a("971130"),
-  _ = a("624138"),
-  w = a("51144"),
-  R = a("778569"),
-  D = a("981631"),
-  j = a("245335"),
-  M = a("689938"),
-  k = a("926681");
+  h = a("751771"),
+  T = a("699516"),
+  S = a("594174"),
+  N = a("441674"),
+  y = a("757698"),
+  v = a("626135"),
+  C = a("768581"),
+  A = a("572004"),
+  E = a("971130"),
+  x = a("624138"),
+  _ = a("51144"),
+  w = a("778569"),
+  R = a("981631"),
+  D = a("245335"),
+  j = a("689938"),
+  M = a("926681");
 
-function O(e) {
+function k(e) {
   let {
     activityItem: t,
     analyticsLocations: a,
     ...p
-  } = e, I = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), {
+  } = e, I = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser()), {
     analyticsLocations: g
   } = (0, f.default)(a);
   (0, m.default)({
@@ -52,155 +51,155 @@ function O(e) {
       location_stack: g
     }
   });
-  let [h, y] = s.useState(""), [v, A] = s.useState([]), E = (0, R.default)({
+  let [T, N] = s.useState(""), [y, C] = s.useState([]), A = (0, w.default)({
     applicationId: t.application.id,
     size: 256
-  }), _ = "".concat(window.location.origin).concat(D.Routes.ACTIVITY_DETAILS(t.application.id)), w = (0, l.useStateFromStoresArray)([T.default], () => T.default.getInviteSuggestionRows());
+  }), x = "".concat(window.location.origin).concat(R.Routes.ACTIVITY_DETAILS(t.application.id)), _ = (0, l.useStateFromStoresArray)([h.default], () => h.default.getInviteSuggestionRows());
   s.useEffect(() => {
     (0, d.loadInviteSuggestions)({
       omitUserIds: new Set,
       applicationId: t.application.id,
-      inviteTargetType: j.InviteTargetTypes.EMBEDDED_APPLICATION
+      inviteTargetType: D.InviteTargetTypes.EMBEDDED_APPLICATION
     })
-  }, [t.application.id]), s.useEffect(() => (0, d.searchInviteSuggestions)(h), [h]);
-  let O = s.useCallback(async () => {
+  }, [t.application.id]), s.useEffect(() => (0, d.searchInviteSuggestions)(T), [T]);
+  let k = s.useCallback(async () => {
     let e = 0,
       a = 0,
       i = 0,
-      s = T.default.getInviteSuggestionRows().filter(e => v.includes(e.item.id)).map(t => (function(t, s) {
+      s = h.default.getInviteSuggestionRows().filter(e => y.includes(e.item.id)).map(t => (function(t, s) {
         switch (t.type) {
-          case x.RowTypes.DM:
-          case x.RowTypes.FRIEND:
+          case E.RowTypes.DM:
+          case E.RowTypes.FRIEND:
             e++;
             break;
-          case x.RowTypes.GROUP_DM:
+          case E.RowTypes.GROUP_DM:
             a++;
             break;
-          case x.RowTypes.CHANNEL:
+          case E.RowTypes.CHANNEL:
             i++
         }
-        return t.type === x.RowTypes.GROUP_DM || t.type === x.RowTypes.CHANNEL ? c.default.sendActivityBookmark(t.item.id, s, u.default.ACTIVITY_DETAIL_PAGE, null) : t.type === x.RowTypes.DM || t.type === x.RowTypes.FRIEND ? r.default.ensurePrivateChannel(t.item.id).then(e => c.default.sendActivityBookmark(e, _, u.default.ACTIVITY_DETAIL_PAGE, null)) : Promise.resolve()
-      })(t, _));
-    await s, C.default.track(D.AnalyticEvents.ACTIVITY_BOOKMARK_SHARED, {
+        return t.type === E.RowTypes.GROUP_DM || t.type === E.RowTypes.CHANNEL ? c.default.sendActivityBookmark(t.item.id, s, u.default.ACTIVITY_DETAIL_PAGE, null) : t.type === E.RowTypes.DM || t.type === E.RowTypes.FRIEND ? r.default.ensurePrivateChannel(t.item.id).then(e => c.default.sendActivityBookmark(e, x, u.default.ACTIVITY_DETAIL_PAGE, null)) : Promise.resolve()
+      })(t, x));
+    await s, v.default.track(R.AnalyticEvents.ACTIVITY_BOOKMARK_SHARED, {
       user_id: null == I ? void 0 : I.id,
       application_id: t.application.id,
       n_users: e,
       n_gdms: a,
       n_channels: i
     }), p.onClose()
-  }, [t, v, p, _, I]);
+  }, [t, y, p, x, I]);
   return (0, i.jsxs)(o.ModalRoot, {
     ...p,
-    className: k.modalRoot,
+    className: M.modalRoot,
     children: [(0, i.jsxs)(o.ModalHeader, {
-      className: k.header,
+      className: M.header,
       children: [(0, i.jsx)(o.Heading, {
         variant: "heading-md/semibold",
-        children: M.default.Messages.EMBEDDED_ACTIVITIES_SHARE_ACTIVITY_WITH.format({
+        children: j.default.Messages.EMBEDDED_ACTIVITIES_SHARE_ACTIVITY_WITH.format({
           activityName: t.application.name
         })
       }), (0, i.jsx)(o.ModalCloseButton, {
         onClick: p.onClose
       })]
     }), (0, i.jsxs)(o.ModalContent, {
-      className: k.modalContent,
-      children: [(0, i.jsx)(S.default, {
-        className: k.searchBar,
-        placeholder: M.default.Messages.SEARCH,
-        label: M.default.Messages.SEARCH,
-        searchTerm: h,
-        onChange: e => y(e),
-        onClear: () => y("")
-      }), w.map((e, t) => (0, i.jsxs)(s.Fragment, {
+      className: M.modalContent,
+      children: [(0, i.jsx)(o.SearchBox, {
+        className: M.searchBar,
+        placeholder: j.default.Messages.SEARCH,
+        label: j.default.Messages.SEARCH,
+        searchTerm: T,
+        onChange: e => N(e),
+        onClear: () => N("")
+      }), _.map((e, t) => (0, i.jsxs)(s.Fragment, {
         children: [0 === t ? null : (0, i.jsx)("div", {
-          className: k.rowDivider
-        }), (0, i.jsx)(L, {
+          className: M.rowDivider
+        }), (0, i.jsx)(O, {
           row: e,
           onClick: () => {
-            let t = [...v];
-            t.includes(e.item.id) ? t = t.filter(t => t !== e.item.id) : t.push(e.item.id), A(t)
+            let t = [...y];
+            t.includes(e.item.id) ? t = t.filter(t => t !== e.item.id) : t.push(e.item.id), C(t)
           },
-          checked: v.includes(e.item.id)
+          checked: y.includes(e.item.id)
         })]
       }, e.item.id))]
     }), (0, i.jsxs)(o.ModalFooter, {
-      className: k.footer,
+      className: M.footer,
       children: [(0, i.jsx)("div", {
-        className: k.activityInfoOuterContainer,
+        className: M.activityInfoOuterContainer,
         children: (0, i.jsxs)("div", {
-          className: k.activityInfoInnerContainer,
+          className: M.activityInfoInnerContainer,
           children: [(0, i.jsx)("img", {
-            src: E.url,
-            className: k.activityInfoImage,
+            src: A.url,
+            className: M.activityInfoImage,
             alt: t.application.name
           }), (0, i.jsxs)("div", {
-            className: k.activityInfoText,
+            className: M.activityInfoText,
             children: [(0, i.jsx)(o.Text, {
               variant: "text-md/semibold",
-              className: k.ellipsis,
+              className: M.ellipsis,
               children: t.application.name
             }), (0, i.jsx)(o.Text, {
               variant: "text-sm/medium",
-              className: k.ellipsis,
+              className: M.ellipsis,
               children: t.application.description
             }), (0, i.jsx)(o.Text, {
               variant: "text-xs/medium",
-              className: k.ellipsis,
+              className: M.ellipsis,
               children: (0, i.jsx)(o.Anchor, {
-                href: _,
-                children: _
+                href: x,
+                children: x
               })
             })]
           })]
         })
       }), (0, i.jsx)("div", {
-        className: k.footerDivider
+        className: M.footerDivider
       }), (0, i.jsxs)("div", {
-        className: k.copySendBar,
-        children: [(0, i.jsx)(U, {
-          link: _,
+        className: M.copySendBar,
+        children: [(0, i.jsx)(L, {
+          link: x,
           applicationId: t.application.id
         }), (0, i.jsx)(o.Button, {
-          onClick: O,
-          disabled: v.length <= 0,
-          children: M.default.Messages.SEND
+          onClick: k,
+          disabled: y.length <= 0,
+          children: j.default.Messages.SEND
         })]
       })]
     })]
   })
 }
 
-function L(e) {
+function O(e) {
   let {
     row: t,
     onClick: a,
     checked: s
   } = e, n = null, l = null, r = null;
   switch (t.type) {
-    case x.RowTypes.DM:
-    case x.RowTypes.FRIEND:
+    case E.RowTypes.DM:
+    case E.RowTypes.FRIEND:
       n = (0, i.jsx)(o.Avatar, {
         size: o.AvatarSizes.SIZE_40,
         src: t.item.getAvatarURL(null, 128, !1),
         "aria-label": t.item.username
-      }), l = w.default.getName(t.item), r = w.default.getUserTag(t.item);
+      }), l = _.default.getName(t.item), r = _.default.getUserTag(t.item);
       break;
-    case x.RowTypes.GROUP_DM: {
+    case E.RowTypes.GROUP_DM: {
       let e = (0, p.getChannelIconURL)(t.item),
-        a = (0, I.computeChannelName)(t.item, N.default, h.default);
+        a = (0, I.computeChannelName)(t.item, S.default, T.default);
       n = (0, i.jsx)(o.Avatar, {
         src: e,
         "aria-label": a,
         size: o.AvatarSizes.SIZE_40
-      }), l = (0, I.computeChannelName)(t.item, N.default, h.default);
+      }), l = (0, I.computeChannelName)(t.item, S.default, T.default);
       break
     }
-    case x.RowTypes.CHANNEL: {
+    case E.RowTypes.CHANNEL: {
       let e = t.item,
         a = g.default.getGuild(e.guild_id);
       if (null == a) return null;
-      if (l = "#".concat((0, I.computeChannelName)(e, N.default, h.default)), r = a.name, null != a.icon) {
-        let t = A.default.getGuildIconURL({
+      if (l = "#".concat((0, I.computeChannelName)(e, S.default, T.default)), r = a.name, null != a.icon) {
+        let t = C.default.getGuildIconURL({
           id: e.guild_id,
           icon: a.icon,
           size: 40
@@ -211,9 +210,9 @@ function L(e) {
           size: o.AvatarSizes.SIZE_40
         })
       } else {
-        let e = (0, _.getAcronym)(a.name);
+        let e = (0, x.getAcronym)(a.name);
         n = (0, i.jsx)("div", {
-          className: k.acronym,
+          className: M.acronym,
           "aria-hidden": !0,
           children: e
         })
@@ -222,21 +221,21 @@ function L(e) {
   }
   return (0, i.jsxs)(o.Clickable, {
     onClick: a,
-    className: k.rowContainer,
+    className: M.rowContainer,
     children: [(0, i.jsxs)("div", {
-      className: k.rowLeft,
+      className: M.rowLeft,
       children: [(0, i.jsx)("div", {
-        className: k.rowAvatar,
+        className: M.rowAvatar,
         children: n
       }), (0, i.jsxs)("div", {
-        className: k.rowNameContainer,
+        className: M.rowNameContainer,
         children: [(0, i.jsx)(o.Text, {
           variant: "text-md/semibold",
-          className: k.rowName,
+          className: M.rowName,
           children: l
         }), (0, i.jsx)(o.Text, {
           variant: "text-xs/medium",
-          className: k.rowSubName,
+          className: M.rowSubName,
           children: r
         })]
       })]
@@ -244,16 +243,16 @@ function L(e) {
       value: s,
       type: o.Checkbox.Types.INVERTED,
       displayOnly: !0,
-      className: k.rowRight
+      className: M.rowRight
     })]
   })
 }
 
-function U(e) {
+function L(e) {
   let {
     applicationId: t,
     link: a
-  } = e, n = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), [r, d] = s.useState(!1);
+  } = e, n = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser()), [r, d] = s.useState(!1);
   return s.useEffect(() => {
     let e;
     return r && (e = setTimeout(() => {
@@ -265,12 +264,12 @@ function U(e) {
     look: o.Button.Looks.LINK,
     color: o.Button.Colors.LINK,
     onClick: function() {
-      C.default.track(D.AnalyticEvents.ACTIVITY_BOOKMARK_COPY_URL, {
+      v.default.track(R.AnalyticEvents.ACTIVITY_BOOKMARK_COPY_URL, {
         user_id: null == n ? void 0 : n.id,
         application_id: t
-      }), (0, E.copy)(a), d(!0)
+      }), (0, A.copy)(a), d(!0)
     },
-    innerClassName: k.copyButton,
-    children: [r ? (0, i.jsx)(y.default, {}) : (0, i.jsx)(v.default, {}), r ? M.default.Messages.COPIED : M.default.Messages.COPY_LINK]
+    innerClassName: M.copyButton,
+    children: [r ? (0, i.jsx)(N.default, {}) : (0, i.jsx)(y.default, {}), r ? j.default.Messages.COPIED : j.default.Messages.COPY_LINK]
   })
 }

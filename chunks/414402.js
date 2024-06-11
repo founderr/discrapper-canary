@@ -1,236 +1,234 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(s), t.d(s, {
   default: function() {
-    return R
+    return M
   }
-}), s("47120"), s("773603");
-var o, n, l = s("735250"),
-  a = s("470079"),
-  i = s("544891"),
-  r = s("481060"),
-  d = s("581874"),
-  u = s("285952"),
-  c = s("474333"),
-  N = s("572004"),
-  I = s("472305"),
-  h = s("981631"),
-  C = s("689938"),
-  x = s("214834");
+}), t("47120"), t("773603");
+var o, l, n = t("735250"),
+  a = t("470079"),
+  d = t("544891"),
+  i = t("481060"),
+  r = t("285952"),
+  c = t("474333"),
+  u = t("572004"),
+  N = t("472305"),
+  I = t("981631"),
+  O = t("689938"),
+  x = t("214834");
 
-function O(e) {
+function _(e) {
   let {
-    name: t,
-    value: s
-  } = e, [o, n] = a.useState(d.CopyInputModes.DEFAULT);
-  return (0, l.jsxs)("div", {
+    name: s,
+    value: t
+  } = e, [o, l] = a.useState(i.CopyInputModes.DEFAULT);
+  return (0, n.jsxs)("div", {
     className: x.infoRow,
-    children: [(0, l.jsx)(r.FormTitle, {
-      className: x.__invalid_infoTitle,
-      children: t
-    }), (0, l.jsx)(d.default, {
-      value: s,
+    children: [(0, n.jsx)(i.FormTitle, {
+      children: s
+    }), (0, n.jsx)(i.CopyInput, {
+      value: t,
       mode: o,
-      supportsCopy: N.SUPPORTS_COPY,
+      supportsCopy: u.SUPPORTS_COPY,
       onCopy: () => {
-        (0, N.copy)(s), n(d.CopyInputModes.SUCCESS)
+        (0, u.copy)(t), l(i.CopyInputModes.SUCCESS)
       }
     })]
   })
 }
 
-function R(e) {
+function M(e) {
   let {
-    onClose: t,
-    transitionState: s
-  } = e, [o, n] = a.useState(""), [d, N] = a.useState(""), [R, m] = a.useState(null), [p, f] = a.useState(!1), [M, _] = a.useState("DOMAIN"), T = () => {
-    f(!0), m(null), i.HTTP.post({
-      url: h.Endpoints.CONNECTION(h.PlatformTypes.DOMAIN, o),
+    onClose: s,
+    transitionState: t
+  } = e, [o, l] = a.useState(""), [u, M] = a.useState(""), [m, C] = a.useState(null), [T, R] = a.useState(!1), [h, A] = a.useState("DOMAIN"), j = () => {
+    R(!0), C(null), d.HTTP.post({
+      url: I.Endpoints.CONNECTION(I.PlatformTypes.DOMAIN, o),
       body: {}
     }).then(() => {
-      t()
+      s()
     }).catch(e => {
-      var t, s, o, n, l, a, i;
-      (null === (t = e.body) || void 0 === t ? void 0 : t.proof) && "DOMAIN" === M ? (N(e.body.proof), _("PROOF_DNS")) : m((null === (a = e.body) || void 0 === a ? void 0 : null === (l = a.errors) || void 0 === l ? void 0 : null === (n = l.domain) || void 0 === n ? void 0 : null === (o = n._errors) || void 0 === o ? void 0 : null === (s = o[0]) || void 0 === s ? void 0 : s.message) || (null === (i = e.body) || void 0 === i ? void 0 : i.message) || e.message)
+      var s, t, o, l, n, a, d;
+      (null === (s = e.body) || void 0 === s ? void 0 : s.proof) && "DOMAIN" === h ? (M(e.body.proof), A("PROOF_DNS")) : C((null === (a = e.body) || void 0 === a ? void 0 : null === (n = a.errors) || void 0 === n ? void 0 : null === (l = n.domain) || void 0 === l ? void 0 : null === (o = l._errors) || void 0 === o ? void 0 : null === (t = o[0]) || void 0 === t ? void 0 : t.message) || (null === (d = e.body) || void 0 === d ? void 0 : d.message) || e.message)
     }).finally(() => {
-      f(!1)
+      R(!1)
     })
   };
-  return (0, l.jsxs)(r.ModalRoot, {
-    transitionState: s,
+  return (0, n.jsxs)(i.ModalRoot, {
+    transitionState: t,
     className: x.__invalid_modal,
-    children: [(0, l.jsxs)(r.ModalHeader, {
-      direction: u.default.Direction.VERTICAL,
+    children: [(0, n.jsxs)(i.ModalHeader, {
+      direction: r.default.Direction.VERTICAL,
       className: x.header,
       separator: !1,
-      children: [(0, l.jsx)(r.Heading, {
+      children: [(0, n.jsx)(i.Heading, {
         variant: "heading-xl/semibold",
-        children: C.default.Messages.DOMAIN_VERIFICATION_HEADER
-      }), (0, l.jsx)(r.ModalCloseButton, {
+        children: O.default.Messages.DOMAIN_VERIFICATION_HEADER
+      }), (0, n.jsx)(i.ModalCloseButton, {
         className: x.closeButton,
-        onClick: t
+        onClick: s
       })]
-    }), (0, l.jsxs)(r.Slides, {
-      activeSlide: M,
+    }), (0, n.jsxs)(i.Slides, {
+      activeSlide: h,
       width: 440,
-      children: [(0, l.jsx)(r.Slide, {
+      children: [(0, n.jsx)(i.Slide, {
         id: "DOMAIN",
-        children: (0, l.jsxs)("form", {
+        children: (0, n.jsxs)("form", {
           onSubmit: e => {
-            e.preventDefault(), T()
+            e.preventDefault(), j()
           },
-          children: [(0, l.jsxs)(r.ModalContent, {
+          children: [(0, n.jsxs)(i.ModalContent, {
             className: x.content,
-            children: [(0, l.jsx)(r.Text, {
+            children: [(0, n.jsx)(i.Text, {
               variant: "text-md/normal",
               color: "header-secondary",
               className: x.description,
-              children: C.default.Messages.DOMAIN_VERIFICATION_DESCRIPTION
-            }), (0, l.jsx)(r.FormItem, {
-              title: C.default.Messages.DOMAIN_VERIFICATION_LABEL,
-              error: R,
-              children: (0, l.jsx)(r.TextInput, {
-                onChange: n,
-                placeholder: I.EXAMPLE_DOMAIN,
+              children: O.default.Messages.DOMAIN_VERIFICATION_DESCRIPTION
+            }), (0, n.jsx)(i.FormItem, {
+              title: O.default.Messages.DOMAIN_VERIFICATION_LABEL,
+              error: m,
+              children: (0, n.jsx)(i.TextInput, {
+                onChange: l,
+                placeholder: N.EXAMPLE_DOMAIN,
                 maxLength: 253,
                 value: o,
-                disabled: p,
+                disabled: T,
                 autoFocus: !0
               })
             })]
-          }), (0, l.jsxs)(r.ModalFooter, {
+          }), (0, n.jsxs)(i.ModalFooter, {
             className: x.footer,
-            children: [(0, l.jsx)(r.Button, {
+            children: [(0, n.jsx)(i.Button, {
               type: "submit",
-              submitting: p,
+              submitting: T,
               disabled: "" === o,
-              children: C.default.Messages.NEXT
-            }), (0, l.jsx)(r.Button, {
-              look: r.Button.Looks.LINK,
-              color: r.Button.Colors.PRIMARY,
-              onClick: t,
-              children: C.default.Messages.CANCEL
+              children: O.default.Messages.NEXT
+            }), (0, n.jsx)(i.Button, {
+              look: i.Button.Looks.LINK,
+              color: i.Button.Colors.PRIMARY,
+              onClick: s,
+              children: O.default.Messages.CANCEL
             })]
           })]
         })
-      }), (0, l.jsxs)(r.Slide, {
+      }), (0, n.jsxs)(i.Slide, {
         id: "PROOF_DNS",
-        children: [(0, l.jsxs)(r.ModalContent, {
+        children: [(0, n.jsxs)(i.ModalContent, {
           className: x.content,
-          children: [(0, l.jsxs)("ol", {
+          children: [(0, n.jsxs)("ol", {
             className: x.list,
-            children: [(0, l.jsx)("li", {
-              children: (0, l.jsx)(r.Text, {
+            children: [(0, n.jsx)("li", {
+              children: (0, n.jsx)(i.Text, {
                 tag: "span",
                 variant: "text-md/normal",
-                children: C.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1
+                children: O.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1
               })
-            }), (0, l.jsxs)("li", {
-              children: [(0, l.jsx)(r.Text, {
+            }), (0, n.jsxs)("li", {
+              children: [(0, n.jsx)(i.Text, {
                 tag: "span",
                 variant: "text-md/normal",
-                children: C.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2
-              }), (0, l.jsxs)("div", {
+                children: O.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2
+              }), (0, n.jsxs)("div", {
                 className: x.dnsRecordContainer,
-                children: [(0, l.jsx)(O, {
-                  name: C.default.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
-                  value: (0, I.getDnsName)(o)
-                }), (0, l.jsx)(O, {
-                  name: C.default.Messages.DOMAIN_VERIFICATION_RECORD_TYPE,
+                children: [(0, n.jsx)(_, {
+                  name: O.default.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
+                  value: (0, N.getDnsName)(o)
+                }), (0, n.jsx)(_, {
+                  name: O.default.Messages.DOMAIN_VERIFICATION_RECORD_TYPE,
                   value: "TXT"
-                }), (0, l.jsx)(O, {
-                  name: C.default.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
-                  value: d
+                }), (0, n.jsx)(_, {
+                  name: O.default.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
+                  value: u
                 })]
               })]
             })]
-          }), (0, l.jsx)(c.default, {
+          }), (0, n.jsx)(c.default, {
             messageType: c.HelpMessageTypes.INFO,
             className: x.text,
-            children: C.default.Messages.DOMAIN_VERIFICATION_DNS_WARNING
-          }), null != R && (0, l.jsx)(r.Text, {
+            children: O.default.Messages.DOMAIN_VERIFICATION_DNS_WARNING
+          }), null != m && (0, n.jsx)(i.Text, {
             variant: "text-sm/normal",
             color: "text-danger",
             className: x.text,
-            children: R
+            children: m
           })]
-        }), (0, l.jsxs)(r.ModalFooter, {
+        }), (0, n.jsxs)(i.ModalFooter, {
           className: x.footer,
-          direction: u.default.Direction.HORIZONTAL,
-          children: [(0, l.jsx)(r.Button, {
-            look: r.Button.Looks.LINK,
-            color: r.Button.Colors.PRIMARY,
+          direction: r.default.Direction.HORIZONTAL,
+          children: [(0, n.jsx)(i.Button, {
+            look: i.Button.Looks.LINK,
+            color: i.Button.Colors.PRIMARY,
             onClick: () => {
-              _("DOMAIN"), m(null)
+              A("DOMAIN"), C(null)
             },
-            children: C.default.Messages.BACK
-          }), (0, l.jsxs)("div", {
+            children: O.default.Messages.BACK
+          }), (0, n.jsxs)("div", {
             className: x.footerInner,
-            children: [(0, l.jsx)(r.Button, {
-              look: r.Button.Looks.LINK,
-              color: r.Button.Colors.PRIMARY,
+            children: [(0, n.jsx)(i.Button, {
+              look: i.Button.Looks.LINK,
+              color: i.Button.Colors.PRIMARY,
               onClick: () => {
-                _("PROOF_HTTP"), m(null)
+                A("PROOF_HTTP"), C(null)
               },
               className: x.__invalid_switchButton,
-              children: C.default.Messages.DOMAIN_VERIFICATION_USE_HTTP
-            }), (0, l.jsx)(r.Button, {
-              submitting: p,
-              onClick: T,
-              children: C.default.Messages.VERIFY
+              children: O.default.Messages.DOMAIN_VERIFICATION_USE_HTTP
+            }), (0, n.jsx)(i.Button, {
+              submitting: T,
+              onClick: j,
+              children: O.default.Messages.VERIFY
             })]
           })]
         })]
-      }), (0, l.jsxs)(r.Slide, {
+      }), (0, n.jsxs)(i.Slide, {
         id: "PROOF_HTTP",
-        children: [(0, l.jsxs)(r.ModalContent, {
+        children: [(0, n.jsxs)(i.ModalContent, {
           className: x.content,
-          children: [(0, l.jsx)(r.Text, {
+          children: [(0, n.jsx)(i.Text, {
             tag: "span",
             variant: "text-md/normal",
-            children: C.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP
-          }), (0, l.jsxs)("div", {
+            children: O.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP
+          }), (0, n.jsxs)("div", {
             className: x.httpFileContainer,
-            children: [(0, l.jsx)(O, {
-              name: C.default.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
-              value: (0, I.getHttpName)(o)
-            }), (0, l.jsx)(O, {
-              name: C.default.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
-              value: d
+            children: [(0, n.jsx)(_, {
+              name: O.default.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
+              value: (0, N.getHttpName)(o)
+            }), (0, n.jsx)(_, {
+              name: O.default.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
+              value: u
             })]
-          }), null != R && (0, l.jsx)(r.Text, {
+          }), null != m && (0, n.jsx)(i.Text, {
             variant: "text-sm/normal",
             color: "text-danger",
             className: x.text,
-            children: R
+            children: m
           })]
-        }), (0, l.jsxs)(r.ModalFooter, {
+        }), (0, n.jsxs)(i.ModalFooter, {
           className: x.footer,
-          direction: u.default.Direction.HORIZONTAL,
-          children: [(0, l.jsx)(r.Button, {
-            look: r.Button.Looks.LINK,
-            color: r.Button.Colors.PRIMARY,
+          direction: r.default.Direction.HORIZONTAL,
+          children: [(0, n.jsx)(i.Button, {
+            look: i.Button.Looks.LINK,
+            color: i.Button.Colors.PRIMARY,
             onClick: () => {
-              _("DOMAIN"), m(null)
+              A("DOMAIN"), C(null)
             },
-            children: C.default.Messages.BACK
-          }), (0, l.jsxs)("div", {
+            children: O.default.Messages.BACK
+          }), (0, n.jsxs)("div", {
             className: x.footerInner,
-            children: [(0, l.jsx)(r.Button, {
-              look: r.Button.Looks.LINK,
-              color: r.Button.Colors.PRIMARY,
+            children: [(0, n.jsx)(i.Button, {
+              look: i.Button.Looks.LINK,
+              color: i.Button.Colors.PRIMARY,
               onClick: () => {
-                _("PROOF_DNS"), m(null)
+                A("PROOF_DNS"), C(null)
               },
               className: x.__invalid_switchButton,
-              children: C.default.Messages.DOMAIN_VERIFICATION_USE_DNS
-            }), (0, l.jsx)(r.Button, {
-              submitting: p,
-              onClick: T,
-              children: C.default.Messages.VERIFY
+              children: O.default.Messages.DOMAIN_VERIFICATION_USE_DNS
+            }), (0, n.jsx)(i.Button, {
+              submitting: T,
+              onClick: j,
+              children: O.default.Messages.VERIFY
             })]
           })]
         })]
       })]
     })]
   })
-}(n = o || (o = {})).DOMAIN = "DOMAIN", n.PROOF_DNS = "PROOF_DNS", n.PROOF_HTTP = "PROOF_HTTP"
+}(l = o || (o = {})).DOMAIN = "DOMAIN", l.PROOF_DNS = "PROOF_DNS", l.PROOF_HTTP = "PROOF_HTTP"

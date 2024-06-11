@@ -1,68 +1,67 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   AttachmentsUploadComponent: function() {
-    return N
+    return q
   }
-}), A("47120");
-var a = A("735250"),
-  l = A("470079"),
-  s = A("120356"),
-  n = A.n(s),
-  r = A("481060"),
-  i = A("205822"),
-  o = A("476326"),
-  d = A("377171"),
-  u = A("682864"),
-  c = A("153124"),
-  f = A("350722"),
-  g = A("465670"),
-  C = A("210712"),
-  h = A("43632"),
-  T = A("587123"),
-  m = A("863663"),
-  p = A("731994"),
-  U = A("629481"),
-  v = A("689938"),
-  I = A("209021");
-let E = (0, c.uid)();
+}), t("47120");
+var a = t("735250"),
+  l = t("470079"),
+  s = t("120356"),
+  r = t.n(s),
+  n = t("481060"),
+  i = t("205822"),
+  o = t("476326"),
+  d = t("377171"),
+  u = t("153124"),
+  c = t("350722"),
+  g = t("465670"),
+  f = t("210712"),
+  C = t("43632"),
+  h = t("587123"),
+  T = t("863663"),
+  U = t("731994"),
+  p = t("629481"),
+  m = t("689938"),
+  I = t("209021");
+let v = (0, u.uid)();
 
-function x(e) {
-  var t;
+function E(e) {
+  var A;
   let {
-    upload: A,
+    upload: t,
     progress: s = 0,
     onDeleteAttachment: i
   } = e, o = l.useCallback(() => {
-    null == i || i(A.id)
-  }, [i, A.id]), c = s >= 1, f = s < 0, h = c || f, T = null !== (t = A.filename) && void 0 !== t ? t : A.id, p = (0, m.describeUploadProgressError)(s);
-  return (0, a.jsx)(r.TooltipContainer, {
-    text: p,
+    null == i || i(t.id)
+  }, [i, t.id]), u = s >= 1, c = s < 0, C = u || c, h = null !== (A = t.filename) && void 0 !== A ? A : t.id, U = (0, T.describeUploadProgressError)(s);
+  return (0, a.jsx)(n.TooltipContainer, {
+    text: U,
     children: (0, a.jsxs)("div", {
-      className: n()(I.attachedFileCard, {
-        [I.attachedFileCardError]: f,
-        [I.attachedFileCardUploading]: !h
+      className: r()(I.attachedFileCard, {
+        [I.attachedFileCardError]: c,
+        [I.attachedFileCardUploading]: !C
       }),
-      children: [(0, a.jsx)(C.default, {
+      children: [(0, a.jsx)(f.default, {
         width: 16,
         height: 16,
         color: d.default.INTERACTIVE_MUTED
-      }), (0, a.jsx)(u.default, {
+      }), (0, a.jsx)(n.Spacer, {
         size: 10,
         horizontal: !0
-      }), (0, a.jsx)(r.Text, {
+      }), (0, a.jsx)(n.Text, {
         variant: "text-sm/normal",
-        children: T
-      }), !h && (0, a.jsx)(r.Spinner, {
+        children: h
+      }), !C && (0, a.jsx)(n.Spinner, {
         className: I.attachedFileCardSpinner,
-        type: r.Spinner.Type.SPINNING_CIRCLE
-      }), h && null != i && (0, a.jsx)(r.Button, {
-        "aria-label": v.default.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
-          attachment: T
+        type: n.Spinner.Type.SPINNING_CIRCLE
+      }), C && null != i && (0, a.jsx)(n.Button, {
+        "aria-label": m.default.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
+          attachment: h
         }),
         className: I.deleteButton,
         innerClassName: I.deleteButtonInner,
-        look: r.Button.Looks.BLANK,
-        size: r.Button.Sizes.NONE,
+        look: n.Button.Looks.BLANK,
+        size: n.Button.Sizes.NONE,
         onClick: o,
         children: (0, a.jsx)(g.default, {
           width: 12,
@@ -74,80 +73,80 @@ function x(e) {
   })
 }
 
-function N(e) {
+function q(e) {
   let {
-    onFileAdded: t
+    onFileAdded: A
   } = e, {
-    uploads: A,
+    uploads: t,
     canAttachFiles: s,
-    canAttachArchives: n,
+    canAttachArchives: r,
     addAttachment: d,
-    deleteAttachment: c,
+    deleteAttachment: u,
     fileUploadProgresses: g
-  } = (0, T.useGuildProductAttachmentManagerContext)(), C = l.useRef(!1);
+  } = (0, h.useGuildProductAttachmentManagerContext)(), f = l.useRef(!1);
 
-  function m(e) {
+  function T(e) {
     try {
-      for (let t of e) d({
+      for (let A of e) d({
         platform: o.UploadPlatform.WEB,
-        file: t
+        file: A
       });
-      C.current = !0
+      f.current = !0
     } catch {}
   }
   return l.useEffect(() => {
-    C.current && (t(), C.current = !1)
-  }, [t]), (0, a.jsxs)("div", {
+    f.current && (A(), f.current = !1)
+  }, [A]), (0, a.jsxs)("div", {
     className: I.container,
     children: [(0, a.jsx)(i.default, {
       className: I.uploadArea,
-      title: v.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
-      description: v.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
-      icons: p.DEFAULT_FILE_UPLOAD_ICONS,
-      onDrop: m
-    }), (0, a.jsxs)(f.default, {
+      title: m.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
+      description: m.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
+      icons: U.DEFAULT_FILE_UPLOAD_ICONS,
+      onDrop: T
+    }), (0, a.jsxs)(c.default, {
       className: I.addFileButtonLook,
       innerClassName: I.addFileButton,
-      color: r.Button.Colors.CUSTOM,
+      color: n.Button.Colors.CUSTOM,
       disabled: !s,
-      "aria-label": v.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
-      "aria-describedby": E,
+      "aria-label": m.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
+      "aria-describedby": v,
       multiple: !0,
       onChange: function(e) {
-        null != e.currentTarget.files && m(e.currentTarget.files)
+        null != e.currentTarget.files && T(e.currentTarget.files)
       },
-      children: [(0, a.jsx)(h.default, {
+      children: [(0, a.jsx)(C.default, {
         color: "currentColor",
         width: 16,
         height: 16,
         className: I.addFileButtonIcon,
         "aria-hidden": !0
-      }), (0, a.jsx)(r.Text, {
+      }), (0, a.jsx)(n.Text, {
         variant: "text-sm/medium",
         color: "always-white",
-        children: v.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
+        children: m.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
       })]
-    }), (0, a.jsx)(u.default, {
+    }), (0, a.jsx)(n.Spacer, {
       size: 12
-    }), (0, a.jsx)(r.Text, {
-      id: E,
+    }), (0, a.jsx)(n.Text, {
+      id: v,
       color: "text-muted",
       variant: "text-xs/normal",
-      children: n ? v.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({
-        fileUploadLimit: U.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
-      }) : v.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({
-        fileUploadLimit: U.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
+      children: r ? m.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({
+        fileUploadLimit: p.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
+      }) : m.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({
+        fileUploadLimit: p.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
       })
-    }), A.length > 0 && (0, a.jsxs)(a.Fragment, {
+    }), t.length > 0 && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: I.separator
       }), (0, a.jsx)("ul", {
         className: I.attachedFilesContainer,
-        "aria-label": v.default.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
-        children: A.map(e => (0, a.jsx)("li", {
-          children: (0, a.jsx)(x, {
+        "aria-label": m.default.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
+        children: t.map(e => (0, a.jsx)("li", {
+          children: (0, a.jsx)(E, {
             upload: e,
-            onDeleteAttachment: c,
+            onDeleteAttachment: u,
             progress: g[e.id]
           })
         }, e.id))

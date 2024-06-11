@@ -1,79 +1,78 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   },
   getSeasonalGiftingBody: function() {
-    return E
+    return c
   }
 });
 var i = n("735250"),
   r = n("470079"),
   s = n("873546"),
   a = n("481060"),
-  o = n("326413"),
-  l = n("626135"),
-  u = n("981631"),
-  d = n("921944"),
-  _ = n("689938"),
-  c = n("628842");
+  o = n("626135"),
+  l = n("981631"),
+  u = n("921944"),
+  d = n("689938"),
+  _ = n("628842");
 
-function E(e) {
-  return e || !(s.isMobile || s.isTablet) ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : _.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP
+function c(e) {
+  return e || !(s.isMobile || s.isTablet) ? d.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : d.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP
 }
 
-function I(e) {
+function E(e) {
   let {
     onComplete: t,
-    onDMCheckItOutClick: d,
-    isDM: I
+    onDMCheckItOutClick: u,
+    isDM: E
   } = e;
   r.useEffect(() => {
-    l.default.track(u.AnalyticEvents.PREMIUM_GIFT_UPSELL_VIEWED, {
+    o.default.track(l.AnalyticEvents.PREMIUM_GIFT_UPSELL_VIEWED, {
       type: "holiday_gifting_tip"
     })
   }, []);
-  let T = r.useMemo(() => [() => n.e("36278").then(n.t.bind(n, "268147", 19)), () => n.e("66902").then(n.t.bind(n, "7171", 19)), () => n.e("99694").then(n.t.bind(n, "55562", 19))], []),
-    f = I || !(s.isMobile || s.isTablet),
-    S = f ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : _.default.Messages.SEASONAL_GIFTING_POPUP_HEADER,
-    h = f ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : _.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+  let I = r.useMemo(() => [() => n.e("36278").then(n.t.bind(n, "268147", 19)), () => n.e("66902").then(n.t.bind(n, "7171", 19)), () => n.e("99694").then(n.t.bind(n, "55562", 19))], []),
+    T = E || !(s.isMobile || s.isTablet),
+    f = T ? d.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : d.default.Messages.SEASONAL_GIFTING_POPUP_HEADER,
+    S = T ? d.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : d.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
   return (0, i.jsxs)("div", {
-    className: c.container,
-    children: [(0, i.jsx)(o.default, {
-      className: c.image,
-      animationData: T
+    className: _.container,
+    children: [(0, i.jsx)(a.ChainedLottieAnimation, {
+      className: _.image,
+      animationData: I
     }), (0, i.jsxs)("div", {
-      className: c.body,
+      className: _.body,
       children: [(0, i.jsx)(a.Heading, {
-        className: c.text,
+        className: _.text,
         variant: "heading-sm/semibold",
-        children: S
+        children: f
       }), (0, i.jsx)(a.Text, {
-        className: c.text,
+        className: _.text,
         variant: "text-sm/normal",
-        children: E(I)
+        children: c(E)
       })]
     }), (0, i.jsxs)("div", {
-      className: c.dmButtonContainer,
+      className: _.dmButtonContainer,
       children: [(0, i.jsx)(a.Button, {
-        className: c.dmButton,
+        className: _.dmButton,
         look: a.Button.Looks.FILLED,
         color: a.Button.Colors.BRAND,
         onClick: () => t(),
-        children: _.default.Messages.GOT_IT
+        children: d.default.Messages.GOT_IT
       }), (0, i.jsx)(a.Button, {
-        className: c.dmButton,
+        className: _.dmButton,
         color: a.Button.Colors.BRAND_INVERTED,
-        onClick: () => d(),
-        children: h
+        onClick: () => u(),
+        children: S
       })]
     }), (0, i.jsx)("div", {
-      className: c.pointer
+      className: _.pointer
     })]
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     onComplete: t,
     onDMCheckItOutClick: n,
@@ -85,13 +84,13 @@ function T(e) {
     shouldShow: !0,
     position: "top",
     align: "center",
-    renderPopout: e => (0, i.jsx)(I, {
+    renderPopout: e => (0, i.jsx)(E, {
       ...e,
       onComplete: () => {
-        t(), r(d.ContentDismissActionType.USER_DISMISS)
+        t(), r(u.ContentDismissActionType.USER_DISMISS)
       },
       onDMCheckItOutClick: () => {
-        n(), t(), r(d.ContentDismissActionType.TAKE_ACTION)
+        n(), t(), r(u.ContentDismissActionType.TAKE_ACTION)
       },
       isDM: s
     }),
@@ -99,7 +98,7 @@ function T(e) {
     closeOnScroll: !1,
     ignoreModalClicks: !0,
     children: () => (0, i.jsx)("div", {
-      className: c.popoutTarget
+      className: _.popoutTarget
     })
   })
 }

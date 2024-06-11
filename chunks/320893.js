@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return L
   }
 });
 var a = s("735250");
@@ -9,53 +9,52 @@ s("470079");
 var l = s("780384"),
   n = s("481060"),
   i = s("410030"),
-  r = s("682864"),
-  o = s("293810"),
-  d = s("689938"),
-  u = s("954594"),
-  c = s("934961"),
-  E = s("568294"),
-  _ = s("867861"),
-  I = s("860790"),
-  T = s("268953"),
-  S = s("487703"),
-  f = s("458050"),
-  m = s("334364"),
-  N = s("431712");
+  r = s("293810"),
+  o = s("689938"),
+  d = s("954594"),
+  u = s("934961"),
+  c = s("568294"),
+  E = s("867861"),
+  _ = s("860790"),
+  I = s("268953"),
+  T = s("487703"),
+  S = s("458050"),
+  f = s("334364"),
+  m = s("431712");
 
-function g(e) {
-  return (0, l.isThemeDark)(e) ? u.revenueSharePercentageDark : u.revenueSharePercentageLight
+function N(e) {
+  return (0, l.isThemeDark)(e) ? d.revenueSharePercentageDark : d.revenueSharePercentageLight
 }
 
-function h() {
+function g() {
   let e = (0, i.default)(),
     t = {
       backgroundColor: (0, l.isThemeDark)(e) ? "#2e3638" : "var(--background-primary)"
     };
   return (0, a.jsxs)("div", {
-    className: u.earningsPreviewContainer,
+    className: d.earningsPreviewContainer,
     style: t,
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)(n.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_NEW_SUBS
-      }), (0, a.jsx)(r.default, {
+        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_NEW_SUBS
+      }), (0, a.jsx)(n.Spacer, {
         size: 8
       }), (0, a.jsx)(n.Heading, {
         variant: "heading-md/bold",
-        className: g(e),
-        children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_REVENUE_INCREASE
+        className: N(e),
+        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_REVENUE_INCREASE
       })]
     }), (0, a.jsx)("img", {
-      className: u.roundAvatar,
-      src: S,
-      alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_PREVIEW_IMG_ALT
+      className: d.roundAvatar,
+      src: T,
+      alt: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_PREVIEW_IMG_ALT
     })]
   })
 }
 
-function C() {
+function h() {
   let e = (0, i.default)();
 
   function t(e) {
@@ -64,7 +63,7 @@ function C() {
       horizontal: s
     } = e;
     return (0, a.jsx)("div", {
-      className: s ? u.horizontalConnector : u.verticalConnector,
+      className: s ? d.horizontalConnector : d.verticalConnector,
       style: {
         ...s ? {
           width: t
@@ -76,126 +75,126 @@ function C() {
     })
   }
   return (0, a.jsxs)("div", {
-    className: u.avatarGridContainer,
-    "aria-label": d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_GRID_ARIA_LABEL,
+    className: d.avatarGridContainer,
+    "aria-label": o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_GRID_ARIA_LABEL,
     children: [(0, a.jsxs)("div", {
-      className: u.avatarCard,
+      className: d.avatarCard,
       children: [(0, a.jsx)(t, {
         length: 24
       }), (0, a.jsx)("img", {
-        className: u.roundAvatar,
-        src: (0, l.isThemeDark)(e) ? c : E,
+        className: d.roundAvatar,
+        src: (0, l.isThemeDark)(e) ? u : c,
         alt: ""
       }), (0, a.jsx)(t, {
         horizontal: !0,
         length: 12
       })]
     }), (0, a.jsxs)("div", {
-      className: u.avatarCard,
+      className: d.avatarCard,
       children: [(0, a.jsx)(t, {
         length: 24
       }), (0, a.jsx)("img", {
-        className: u.roundAvatar,
+        className: d.roundAvatar,
+        src: E,
+        alt: ""
+      })]
+    }), (0, a.jsxs)("div", {
+      className: d.avatarCard,
+      children: [(0, a.jsx)(t, {
+        length: 12
+      }), (0, a.jsx)("img", {
+        className: d.roundAvatar,
         src: _,
         alt: ""
-      })]
-    }), (0, a.jsxs)("div", {
-      className: u.avatarCard,
-      children: [(0, a.jsx)(t, {
-        length: 12
-      }), (0, a.jsx)("img", {
-        className: u.roundAvatar,
-        src: I,
-        alt: ""
       }), (0, a.jsx)(t, {
         horizontal: !0,
         length: 12
       })]
     }), (0, a.jsxs)("div", {
-      className: u.avatarCard,
+      className: d.avatarCard,
       children: [(0, a.jsx)(t, {
         length: 12
       }), (0, a.jsx)("img", {
-        className: u.roundAvatar,
-        src: T,
+        className: d.roundAvatar,
+        src: I,
         alt: ""
       })]
     })]
+  })
+}
+
+function C() {
+  return (0, a.jsxs)("div", {
+    className: d.earningBenefitCard,
+    children: [(0, a.jsx)(n.Text, {
+      variant: "text-md/normal",
+      color: "header-secondary",
+      children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1
+    }), (0, a.jsx)(n.Spacer, {
+      size: 32
+    }), (0, a.jsx)(g, {}), (0, a.jsx)(n.Spacer, {
+      size: 24
+    }), (0, a.jsx)(h, {})]
   })
 }
 
 function R() {
   return (0, a.jsxs)("div", {
-    className: u.earningBenefitCard,
+    className: d.followerBenefitCard,
     children: [(0, a.jsx)(n.Text, {
+      className: d.followerBenefitText,
       variant: "text-md/normal",
       color: "header-secondary",
-      children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1
-    }), (0, a.jsx)(r.default, {
-      size: 32
-    }), (0, a.jsx)(h, {}), (0, a.jsx)(r.default, {
-      size: 24
-    }), (0, a.jsx)(C, {})]
-  })
-}
-
-function x() {
-  return (0, a.jsxs)("div", {
-    className: u.followerBenefitCard,
-    children: [(0, a.jsx)(n.Text, {
-      className: u.followerBenefitText,
-      variant: "text-md/normal",
-      color: "header-secondary",
-      children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2
+      children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2
     }), (0, a.jsx)("img", {
-      className: u.roleSubscriptionSocial,
-      src: N,
-      alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_1_ALT
-    }), (0, a.jsx)("img", {
-      className: u.roleSubscriptionLanyardIllo,
+      className: d.roleSubscriptionSocial,
       src: m,
-      alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_2_ALT
+      alt: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_1_ALT
+    }), (0, a.jsx)("img", {
+      className: d.roleSubscriptionLanyardIllo,
+      src: f,
+      alt: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_2_ALT
     })]
   })
 }
 
-function L() {
+function x() {
   let e = (0, i.default)();
   return (0, a.jsxs)("div", {
-    className: u.revenueShareBenefitCard,
+    className: d.revenueShareBenefitCard,
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsxs)(n.Heading, {
-        className: g(e),
+        className: N(e),
         style: {
           fontSize: "50px",
           lineHeight: "52px"
         },
         variant: "heading-xxl/extrabold",
-        children: [o.CREATOR_REVENUE_SHARE_PERCENTAGE, "%"]
+        children: [r.CREATOR_REVENUE_SHARE_PERCENTAGE, "%"]
       }), (0, a.jsx)(n.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3
+        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3
       })]
     }), (0, a.jsx)("img", {
-      className: u.roleSubscriptionEarningIllo,
-      src: f,
-      alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3_IMG_ALT
+      className: d.roleSubscriptionEarningIllo,
+      src: S,
+      alt: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3_IMG_ALT
     })]
   })
 }
 
-function O() {
+function L() {
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(n.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFITS_FOR_CREATORS_TITLE
-    }), (0, a.jsx)(r.default, {
+      children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFITS_FOR_CREATORS_TITLE
+    }), (0, a.jsx)(n.Spacer, {
       size: 24
     }), (0, a.jsxs)("div", {
-      className: u.creatorBenefitsContainer,
-      children: [(0, a.jsx)(R, {}), (0, a.jsx)(x, {}), (0, a.jsx)(L, {})]
+      className: d.creatorBenefitsContainer,
+      children: [(0, a.jsx)(C, {}), (0, a.jsx)(R, {}), (0, a.jsx)(x, {})]
     })]
   })
 }

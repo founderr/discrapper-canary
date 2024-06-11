@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return N
   }
 });
 var s = n("735250");
@@ -19,109 +19,108 @@ var a = n("120356"),
   _ = n("329461"),
   m = n("360629"),
   T = n("837062"),
-  I = n("26290"),
-  p = n("818186"),
-  h = n("689938"),
-  N = n("659047");
+  I = n("818186"),
+  p = n("689938"),
+  h = n("659047");
 
-function S(e) {
-  return (0, m.useInDesktopNotificationCenterExperiment)() ? (0, s.jsx)(C, {
+function N(e) {
+  return (0, m.useInDesktopNotificationCenterExperiment)() ? (0, s.jsx)(S, {
     ...e
-  }) : (0, s.jsx)(g, {
+  }) : (0, s.jsx)(C, {
     ...e
   })
 }
 
-function C(e) {
+function S(e) {
   let {
     tab: t,
     setTab: n,
     children: a,
     badgeState: m,
-    closePopout: S
+    closePopout: N
   } = e, {
-    showReminders: C
+    showReminders: S
   } = E.default.useExperiment({
     location: "RecentsHeader"
   }, {
     autoTrackExposure: !1
   }), {
-    enabled: g
+    enabled: C
   } = f.default.useExperiment({
     location: "RecentsHeader"
-  }), A = (0, i.useStateFromStores)([c.default], () => c.default.getUnseenInviteCount()), M = (0, i.useStateFromStores)([_.default], () => _.default.getMessageReminders()).length;
+  }), g = (0, i.useStateFromStores)([c.default], () => c.default.getUnseenInviteCount()), A = (0, i.useStateFromStores)([_.default], () => _.default.getMessageReminders()).length;
   return (0, s.jsxs)(u.Header, {
-    className: l()(N.header, N.expanded),
+    className: l()(h.header, h.expanded),
     children: [(0, s.jsxs)("div", {
-      className: l()(N.expandedInboxHeader),
+      className: l()(h.expandedInboxHeader),
       children: [(0, s.jsx)(T.default, {
-        className: N.inboxIcon
+        className: h.inboxIcon
       }), (0, s.jsx)(o.Text, {
-        className: N.inboxTitle,
+        className: h.inboxTitle,
         variant: "text-lg/semibold",
-        children: h.default.Messages.INBOX
-      }), (0, s.jsx)(p.default, {
-        closePopout: S
+        children: p.default.Messages.INBOX
+      }), (0, s.jsx)(I.default, {
+        closePopout: N
       })]
     }), (0, s.jsxs)("div", {
-      className: l()(N.expandedTabSection),
+      className: l()(h.expandedTabSection),
       children: [(0, s.jsxs)(o.TabBar, {
         selectedItem: t,
         type: "top-pill",
         onItemSelect: n,
         children: [(0, s.jsxs)(o.TabBar.Item, {
           id: r.InboxTab.FOR_YOU,
-          "aria-label": h.default.Messages.FOR_YOU,
-          className: l()(N.tab, N.expanded, {
-            [N.active]: t === r.InboxTab.FOR_YOU
+          "aria-label": p.default.Messages.FOR_YOU,
+          className: l()(h.tab, h.expanded, {
+            [h.active]: t === r.InboxTab.FOR_YOU
           }),
-          children: [h.default.Messages.FOR_YOU, (null == m ? void 0 : m.badgeForYou) ? (0, s.jsx)(I.CircleBadge, {
+          children: [p.default.Messages.FOR_YOU, (null == m ? void 0 : m.badgeForYou) ? (0, s.jsx)(o.CircleBadge, {
             color: d.default.STATUS_DANGER,
-            className: l()(N.iconBadge)
+            className: l()(h.iconBadge)
           }) : null]
         }), (0, s.jsx)(o.TabBar.Item, {
           id: r.InboxTab.UNREADS,
-          className: l()(N.tab, N.expanded, {
-            [N.active]: t === r.InboxTab.UNREADS
+          className: l()(h.tab, h.expanded, {
+            [h.active]: t === r.InboxTab.UNREADS
           }),
-          children: h.default.Messages.UNREADS_TAB_LABEL
+          children: p.default.Messages.UNREADS_TAB_LABEL
         }), (0, s.jsx)(o.TabBar.Item, {
-          "aria-label": h.default.Messages.MENTIONS,
+          "aria-label": p.default.Messages.MENTIONS,
           id: r.InboxTab.MENTIONS,
-          className: l()(N.tab, N.expanded, {
-            [N.active]: t === r.InboxTab.MENTIONS
+          className: l()(h.tab, h.expanded, {
+            [h.active]: t === r.InboxTab.MENTIONS
           }),
-          children: h.default.Messages.MENTIONS
-        }), g ? (0, s.jsxs)(o.TabBar.Item, {
+          children: p.default.Messages.MENTIONS
+        }), C ? (0, s.jsxs)(o.TabBar.Item, {
           "aria-label": "game_invites",
           id: r.InboxTab.GAME_INVITES,
-          className: l()(N.tab, N.expanded, {
-            [N.active]: t === r.InboxTab.GAME_INVITES
+          className: l()(h.tab, h.expanded, {
+            [h.active]: t === r.InboxTab.GAME_INVITES
           }),
-          children: [h.default.Messages.GAME_INVITES, A > 0 ? (0, s.jsx)(I.CircleBadge, {
+          children: [p.default.Messages.GAME_INVITES, g > 0 ? (0, s.jsx)(o.CircleBadge, {
             color: d.default.STATUS_DANGER,
-            className: l()(N.iconBadge)
+            className: l()(h.iconBadge)
           }) : null]
-        }) : null, C ? (0, s.jsxs)(o.TabBar.Item, {
+        }) : null, S ? (0, s.jsxs)(o.TabBar.Item, {
           "aria-label": "todos",
           id: r.InboxTab.TODOS,
-          className: l()(N.tab, N.expanded, {
-            [N.active]: t === r.InboxTab.TODOS
+          className: l()(h.tab, h.expanded, {
+            [h.active]: t === r.InboxTab.TODOS
           }),
-          children: [h.default.Messages.MESSAGE_REMINDERS_HEADER, M > 0 ? (0, s.jsx)(I.CircleBadge, {
+          children: [p.default.Messages.MESSAGE_REMINDERS_HEADER, A > 0 ? (0, s.jsx)(o.CircleBadge, {
             color: d.default.STATUS_DANGER,
-            className: l()(N.iconBadge)
+            className: l()(h.iconBadge)
           }) : null]
         }) : null]
       }), (0, s.jsx)("div", {
-        className: N.controls,
+        className: h.controls,
         children: a
       })]
     })]
   })
 }
 
-function g(e) {
+function C(e) {
   let {
     tab: t,
     setTab: n,
@@ -138,45 +137,45 @@ function g(e) {
     location: "RecentsHeader"
   });
   return (0, s.jsxs)(u.Header, {
-    className: N.header,
+    className: h.header,
     children: [(0, s.jsxs)(o.TabBar, {
       selectedItem: t,
       type: "top-pill",
       onItemSelect: n,
-      className: N.tabBar,
+      className: h.tabBar,
       children: [d ? (0, s.jsx)(o.TabBar.Item, {
         id: r.InboxTab.FOR_YOU,
-        className: l()(N.tab, {
-          [N.active]: t === r.InboxTab.FOR_YOU
+        className: l()(h.tab, {
+          [h.active]: t === r.InboxTab.FOR_YOU
         }),
-        children: h.default.Messages.FOR_YOU
+        children: p.default.Messages.FOR_YOU
       }) : null, (0, s.jsx)(o.TabBar.Item, {
         id: r.InboxTab.MENTIONS,
-        className: l()(N.tab, {
-          [N.active]: t === r.InboxTab.MENTIONS
+        className: l()(h.tab, {
+          [h.active]: t === r.InboxTab.MENTIONS
         }),
-        children: h.default.Messages.MENTIONS
+        children: p.default.Messages.MENTIONS
       }), (0, s.jsx)(o.TabBar.Item, {
         id: r.InboxTab.UNREADS,
-        className: l()(N.tab, {
-          [N.active]: t === r.InboxTab.UNREADS
+        className: l()(h.tab, {
+          [h.active]: t === r.InboxTab.UNREADS
         }),
-        children: h.default.Messages.UNREADS_TAB_LABEL
+        children: p.default.Messages.UNREADS_TAB_LABEL
       }), c ? (0, s.jsx)(o.TabBar.Item, {
         id: r.InboxTab.GAME_INVITES,
-        className: l()(N.tab, {
-          [N.active]: t === r.InboxTab.GAME_INVITES
+        className: l()(h.tab, {
+          [h.active]: t === r.InboxTab.GAME_INVITES
         }),
-        children: h.default.Messages.GAME_INVITES
+        children: p.default.Messages.GAME_INVITES
       }) : null, i ? (0, s.jsx)(o.TabBar.Item, {
         id: r.InboxTab.TODOS,
-        className: l()(N.tab, {
-          [N.active]: t === r.InboxTab.TODOS
+        className: l()(h.tab, {
+          [h.active]: t === r.InboxTab.TODOS
         }),
-        children: h.default.Messages.MESSAGE_REMINDERS_HEADER
+        children: p.default.Messages.MESSAGE_REMINDERS_HEADER
       }) : null]
     }), (0, s.jsx)("div", {
-      className: N.controls,
+      className: h.controls,
       children: a
     })]
   })

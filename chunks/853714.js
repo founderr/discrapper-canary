@@ -13,31 +13,29 @@ var a = s("735250"),
   _ = s("480137"),
   I = s("239091"),
   T = s("497321"),
-  S = s("459801"),
-  f = s("724757"),
-  m = s("210887"),
-  N = s("387667"),
-  g = s("598077"),
-  h = s("592125"),
-  C = s("430824"),
-  R = s("246946"),
-  x = s("594174"),
-  L = s("186095"),
-  O = s("158010"),
-  A = s("274730"),
-  p = s("823379"),
-  M = s("51144"),
-  D = s("987707"),
-  v = s("999382"),
-  j = s("501801"),
-  G = s("603784"),
-  U = s("981631"),
-  P = s("689938"),
-  b = s("949157"),
-  y = s("84885"),
-  B = s("661781");
+  S = s("724757"),
+  f = s("210887"),
+  m = s("387667"),
+  N = s("598077"),
+  g = s("592125"),
+  h = s("430824"),
+  C = s("246946"),
+  R = s("594174"),
+  x = s("158010"),
+  L = s("274730"),
+  O = s("823379"),
+  p = s("51144"),
+  A = s("987707"),
+  M = s("999382"),
+  D = s("501801"),
+  v = s("603784"),
+  j = s("981631"),
+  G = s("689938"),
+  U = s("949157"),
+  P = s("84885"),
+  b = s("661781");
 
-function F(e, t, s) {
+function y(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -45,7 +43,7 @@ function F(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class H extends l.PureComponent {
+class B extends l.PureComponent {
   render() {
     let {
       onHeaderClick: e,
@@ -53,7 +51,7 @@ class H extends l.PureComponent {
       guild: s,
       ...l
     } = this.props;
-    return null == t ? null : (0, a.jsx)(G.default, {
+    return null == t ? null : (0, a.jsx)(v.default, {
       ...l,
       guildId: t,
       guild: s,
@@ -64,13 +62,13 @@ class H extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), F(this, "handleHeaderClick", () => {
+    super(...e), y(this, "handleHeaderClick", () => {
       let {
         onHeaderClick: e,
         log: t
       } = this.props;
       null == e || e(t)
-    }), F(this, "handleUserContextMenu", e => {
+    }), y(this, "handleUserContextMenu", e => {
       let {
         log: t,
         guildId: l
@@ -87,11 +85,11 @@ class H extends l.PureComponent {
           user: n
         })
       })
-    }), F(this, "handleChannelContextMenu", e => {
+    }), y(this, "handleChannelContextMenu", e => {
       let {
         log: t,
         guildId: l
-      } = this.props, n = C.default.getGuild(l);
+      } = this.props, n = h.default.getGuild(l);
       null != t.options.channel && null != n && (0, I.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -101,16 +99,16 @@ class H extends l.PureComponent {
           channel: t.options.channel
         })
       })
-    }), F(this, "handleTargetContextMenu", e => {
+    }), y(this, "handleTargetContextMenu", e => {
       let {
         log: t,
         guildId: l
       } = this.props;
       switch (t.targetType) {
-        case U.AuditLogTargetTypes.CHANNEL:
-        case U.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-          let n = h.default.getChannel(t.targetId),
-            i = C.default.getGuild(l);
+        case j.AuditLogTargetTypes.CHANNEL:
+        case j.AuditLogTargetTypes.CHANNEL_OVERWRITE:
+          let n = g.default.getChannel(t.targetId),
+            i = h.default.getGuild(l);
           if (null != n && null != i) return (0, I.openContextMenuLazy)(e, async () => {
             let {
               default: e
@@ -127,11 +125,11 @@ class H extends l.PureComponent {
             return s => (0, a.jsx)(e, {
               ...s,
               id: t.targetId,
-              label: P.default.Messages.COPY_ID_UNKNOWN
+              label: G.default.Messages.COPY_ID_UNKNOWN
             })
           });
-        case U.AuditLogTargetTypes.USER:
-          let r = x.default.getUser(t.targetId);
+        case j.AuditLogTargetTypes.USER:
+          let r = R.default.getUser(t.targetId);
           if (null != r && null != l) return (0, I.openContextMenuLazy)(e, async () => {
             let {
               default: e
@@ -148,7 +146,7 @@ class H extends l.PureComponent {
   }
 }
 
-function k(e) {
+function F(e) {
   let {
     logs: t,
     guildId: s,
@@ -164,7 +162,7 @@ function k(e) {
   l.useEffect(() => {
     I.current = o
   }, [o]);
-  let T = (0, f.default)("audit-log", I);
+  let T = (0, S.default)("audit-log", I);
   return (0, a.jsx)(d.ListNavigatorProvider, {
     navigator: T,
     children: (0, a.jsx)(d.ListNavigatorContainer, {
@@ -179,11 +177,11 @@ function k(e) {
           children: t.map(e => {
             let t = i === e.id,
               l = r === e.id;
-            return (0, a.jsx)(H, {
+            return (0, a.jsx)(B, {
               guildId: s,
               guild: n,
               ref: t ? u : l ? c : null,
-              className: b.row,
+              className: U.row,
               onHeaderClick: E,
               onContentClick: _,
               log: e,
@@ -195,7 +193,7 @@ function k(e) {
     })
   })
 }
-class w extends l.PureComponent {
+class H extends l.PureComponent {
   componentDidMount() {
     (0, _.fetchLogs)(this.props.guildId), document.addEventListener("click", this.handleOutsideClick)
   }
@@ -247,14 +245,14 @@ class w extends l.PureComponent {
   renderHeader() {
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
-        className: b.customHeader,
+        className: U.customHeader,
         children: [(0, a.jsx)(E.FormTitle, {
           tag: E.FormTitleTags.H1,
-          className: b.formTitle,
-          children: P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
+          className: U.formTitle,
+          children: G.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
         }), this.renderHeaderDropdowns()]
       }), (0, a.jsx)(E.FormDivider, {
-        className: b.divider
+        className: U.divider
       })]
     })
   }
@@ -280,17 +278,17 @@ class w extends l.PureComponent {
     if (i) return (0, a.jsx)(T.default, {});
     if (o || r) return this.renderSpinner();
     if (0 === l.length) {
-      let e = d ? P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
-        t = d ? P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
-      return (0, a.jsxs)(L.default, {
+      let e = d ? G.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : G.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
+        t = d ? G.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : G.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+      return (0, a.jsxs)(E.EmptyState, {
         theme: n,
-        className: b.empty,
-        children: [(0, a.jsx)(L.EmptyStateImage, {
+        className: U.empty,
+        children: [(0, a.jsx)(E.EmptyStateImage, {
           darkSrc: s("28269"),
           lightSrc: s("357115"),
           width: 272,
           height: 130
-        }), (0, a.jsx)(L.EmptyStateText, {
+        }), (0, a.jsx)(E.EmptyStateText, {
           note: e,
           style: {
             maxWidth: 300
@@ -299,7 +297,7 @@ class w extends l.PureComponent {
         })]
       })
     }
-    return (0, a.jsx)(k, {
+    return (0, a.jsx)(F, {
       logs: l,
       guildId: u,
       guild: c,
@@ -319,15 +317,15 @@ class w extends l.PureComponent {
       isLoading: s
     } = this.props;
     return (0, a.jsx)("div", {
-      className: y.customColumn,
+      className: P.customColumn,
       children: (0, a.jsx)("div", {
-        className: y.customContainer,
+        className: P.customContainer,
         children: (0, a.jsx)(E.AdvancedScrollerAuto, {
-          className: i()(y.customScroller, b.scroller),
+          className: i()(P.customScroller, U.scroller),
           onScroll: this.handleOnScroll,
           ref: this.handleSetScrollerRef,
           children: (0, a.jsx)("div", {
-            className: b.content,
+            className: U.content,
             ref: this._contentRef,
             children: (0, a.jsxs)(E.FocusRingScope, {
               containerRef: this._contentRef,
@@ -339,21 +337,21 @@ class w extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), F(this, "_clickedInside", !1), F(this, "_scrollerRef", null), F(this, "_expandedRef", void 0), F(this, "_lastExpandedRef", void 0), F(this, "_prevRects", this.getRects()), F(this, "_contentRef", l.createRef()), F(this, "state", {
+    super(...e), y(this, "_clickedInside", !1), y(this, "_scrollerRef", null), y(this, "_expandedRef", void 0), y(this, "_lastExpandedRef", void 0), y(this, "_prevRects", this.getRects()), y(this, "_contentRef", l.createRef()), y(this, "state", {
       expandedId: null,
       lastExpandedId: null,
       actionFilterQuery: ""
-    }), F(this, "renderActionQuickSelectItem", (e, t) => {
+    }), y(this, "renderActionQuickSelectItem", (e, t) => {
       var s;
       let {
         actionFilter: l
-      } = this.props, n = (0, N.getActionType)(e.value), i = (0, N.getTargetType)(e.value), r = e.value === l;
+      } = this.props, n = (0, m.getActionType)(e.value), i = (0, m.getTargetType)(e.value), r = e.value === l;
       return (0, a.jsxs)(E.ComboboxItem, {
         value: e.value,
         selectedColor: E.ComboboxItem.Colors.BRAND,
         children: [(0, a.jsx)(E.ComboboxItem.Icon, {
-          children: (0, a.jsx)(j.AuditLogIcon, {
-            themeOverride: r ? U.ThemeTypes.DARK : null,
+          children: (0, a.jsx)(D.AuditLogIcon, {
+            themeOverride: r ? j.ThemeTypes.DARK : null,
             actionType: n,
             targetType: i,
             action: e.value
@@ -362,9 +360,9 @@ class w extends l.PureComponent {
           children: e.label
         }), (0, a.jsx)(E.ComboboxItem.Checkmark, {})]
       }, null !== (s = e.key) && void 0 !== s ? s : t)
-    }), F(this, "renderUserQuickSelectItem", (e, t) => {
+    }), y(this, "renderUserQuickSelectItem", (e, t) => {
       var s;
-      if (e.user instanceof g.default) {
+      if (e.user instanceof N.default) {
         let t = e.user;
         return (0, a.jsxs)(E.ComboboxItem, {
           value: t.id,
@@ -374,17 +372,17 @@ class w extends l.PureComponent {
               size: E.AvatarSizes.SIZE_32,
               src: t.getAvatarURL(this.props.guildId, 32),
               "aria-label": t.username,
-              className: b.avatar
+              className: U.avatar
             })
           }), (0, a.jsxs)(E.ComboboxItem.Label, {
             children: [(0, a.jsx)(E.Text, {
               variant: "text-sm/normal",
-              children: M.default.getUserTag(t, {
+              children: p.default.getUserTag(t, {
                 mode: "username"
               })
             }), !t.isPomelo() && (0, a.jsxs)(E.Text, {
               variant: "text-xs/normal",
-              className: b.discriminator,
+              className: U.discriminator,
               children: ["#", t.discriminator]
             })]
           }), (0, a.jsx)(E.ComboboxItem.Checkmark, {})]
@@ -394,7 +392,7 @@ class w extends l.PureComponent {
         value: e.value,
         selectedColor: E.ComboboxItem.Colors.BRAND,
         children: [(0, a.jsx)(E.ComboboxItem.Icon, {
-          children: (0, a.jsx)(O.default, {
+          children: (0, a.jsx)(x.default, {
             width: 30,
             height: 30
           })
@@ -402,7 +400,7 @@ class w extends l.PureComponent {
           children: e.label
         }), (0, a.jsx)(E.ComboboxItem.Checkmark, {})]
       }, null !== (s = e.key) && void 0 !== s ? s : t)
-    }), F(this, "renderHeaderDropdowns", () => {
+    }), y(this, "renderHeaderDropdowns", () => {
       var e, t;
       let {
         actionFilter: s,
@@ -411,7 +409,7 @@ class w extends l.PureComponent {
         moderators: r
       } = this.props;
       if (l) return null;
-      let o = A.ACTION_FILTER_ITEMS(),
+      let o = L.ACTION_FILTER_ITEMS(),
         d = null !== (e = o.find(e => {
           let {
             value: t
@@ -419,44 +417,44 @@ class w extends l.PureComponent {
           return s === t
         })) && void 0 !== e ? e : o[0],
         u = {
-          label: P.default.Messages.GUILD_SETTINGS_FILTER_ALL_USERS,
-          valueLabel: P.default.Messages.GUILD_SETTINGS_FILTER_ALL,
+          label: G.default.Messages.GUILD_SETTINGS_FILTER_ALL_USERS,
+          valueLabel: G.default.Messages.GUILD_SETTINGS_FILTER_ALL,
           value: null
         },
         c = [u, ...r].map(e => {
           var t;
-          if (!(e instanceof g.default)) return e;
+          if (!(e instanceof N.default)) return e;
           return {
             label: (t = e).username,
             value: t.id,
             user: t
           }
         }),
-        E = null !== (t = c.find(e => {
+        _ = null !== (t = c.find(e => {
           let {
             value: t
           } = e;
           return t === n
         })) && void 0 !== t ? t : u;
       return (0, a.jsxs)("div", {
-        className: b.quickSelect,
-        children: [(0, a.jsx)(S.default, {
-          popoutClassName: i()(b.selectFilterPopout, B.elevationBorderHigh),
+        className: U.quickSelect,
+        children: [(0, a.jsx)(E.SearchableQuickSelect, {
+          popoutClassName: i()(U.selectFilterPopout, b.elevationBorderHigh),
           items: c,
           renderItem: this.renderUserQuickSelectItem,
           renderValue: this.renderUserQuickSelectValue,
-          value: E,
+          value: _,
           onChange: this.handleFilterUserChange,
-          label: P.default.Messages.GUILD_SETTINGS_FILTER_USER,
-          placeholder: P.default.Messages.SEARCH_MEMBERS,
+          label: G.default.Messages.GUILD_SETTINGS_FILTER_USER,
+          placeholder: G.default.Messages.SEARCH_MEMBERS,
           popoutProps: {
             autoInvert: !1,
             position: "bottom"
           }
-        }), (0, a.jsx)(S.default, {
-          placeholder: P.default.Messages.SEARCH_ACTIONS,
-          label: P.default.Messages.GUILD_SETTINGS_FILTER_ACTION,
-          popoutClassName: i()(b.selectFilterPopout, B.elevationBorderLow),
+        }), (0, a.jsx)(E.SearchableQuickSelect, {
+          placeholder: G.default.Messages.SEARCH_ACTIONS,
+          label: G.default.Messages.GUILD_SETTINGS_FILTER_ACTION,
+          popoutClassName: i()(U.selectFilterPopout, b.elevationBorderLow),
           items: o,
           renderItem: this.renderActionQuickSelectItem,
           renderValue: this.renderActionQuickSelectValue,
@@ -468,7 +466,7 @@ class w extends l.PureComponent {
           }
         })]
       })
-    }), F(this, "renderLoadMore", () => {
+    }), y(this, "renderLoadMore", () => {
       let {
         showLoadMore: e,
         hasOlderLogs: t,
@@ -476,15 +474,15 @@ class w extends l.PureComponent {
       } = this.props;
       if (e && t && !s) return (0, a.jsx)(E.Button, {
         color: E.Button.Colors.PRIMARY,
-        className: b.loadMore,
+        className: U.loadMore,
         onClick: this.handleFetchNextPage,
-        children: P.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
+        children: G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
       })
-    }), F(this, "handleFilterActionChange", e => {
+    }), y(this, "handleFilterActionChange", e => {
       (0, _.filterByAction)(e, this.props.guildId)
-    }), F(this, "handleFilterUserChange", e => {
+    }), y(this, "handleFilterUserChange", e => {
       (0, _.filterByUserId)(e, this.props.guildId)
-    }), F(this, "handleHeaderClick", e => {
+    }), y(this, "handleHeaderClick", e => {
       let {
         expandedId: t
       } = this.state;
@@ -495,52 +493,52 @@ class w extends l.PureComponent {
         expandedId: null,
         lastExpandedId: null
       }))
-    }), F(this, "handleOutsideClick", () => {
+    }), y(this, "handleOutsideClick", () => {
       null == this.state.expandedId || this._clickedInside ? null != this.state.expandedId && (this._clickedInside = !1) : (this._expandedRef = null, this._lastExpandedRef = null, this.setState({
         expandedId: null,
         lastExpandedId: null
       }), this._prevRects = this.getRects())
-    }), F(this, "handleContentClick", e => {
+    }), y(this, "handleContentClick", e => {
       this._clickedInside = !0, e.stopPropagation()
-    }), F(this, "handleSetScrollerRef", e => {
+    }), y(this, "handleSetScrollerRef", e => {
       this._scrollerRef = e
-    }), F(this, "handleOnScroll", () => {
+    }), y(this, "handleOnScroll", () => {
       this.isScrollerAtBottom() && this.handleFetchNextPage()
-    }), F(this, "handleFetchNextPage", () => {
+    }), y(this, "handleFetchNextPage", () => {
       (0, _.fetchNextLogPage)(this.props.guildId)
-    }), F(this, "handleActionFilterQueryChange", e => {
+    }), y(this, "handleActionFilterQueryChange", e => {
       this.setState({
         actionFilterQuery: e
       })
-    }), F(this, "handleActionFilterQueryClear", () => {
+    }), y(this, "handleActionFilterQueryClear", () => {
       this.setState({
         actionFilterQuery: ""
       })
-    }), F(this, "handleSetExpandedRef", e => {
+    }), y(this, "handleSetExpandedRef", e => {
       this._expandedRef = e
-    }), F(this, "handleSetLastExpandedRef", e => {
+    }), y(this, "handleSetLastExpandedRef", e => {
       this._lastExpandedRef = e
     })
   }
 }
-t.default = c.default.connectStores([D.default, v.default, C.default, m.default, R.default, x.default], () => {
-  let e = v.default.getGuildId(),
-    t = C.default.getGuild(e),
-    s = D.default.logs;
+t.default = c.default.connectStores([A.default, M.default, h.default, f.default, C.default, R.default], () => {
+  let e = M.default.getGuildId(),
+    t = h.default.getGuild(e),
+    s = A.default.logs;
   return {
     guildId: e,
     guild: t,
-    moderators: D.default.userIds.map(e => x.default.getUser(e)).filter(p.isNotNullish),
-    isInitialLoading: D.default.isInitialLoading,
-    isLoading: D.default.isLoading,
-    isLoadingNextPage: D.default.isLoadingNextPage,
-    showLoadMore: D.default.groupedFetchCount > 2,
-    hasError: D.default.hasError,
-    hasOlderLogs: D.default.hasOlderLogs,
-    logs: null != s && null != t ? A.transformLogs(s, t) : [],
-    actionFilter: D.default.actionFilter,
-    userIdFilter: D.default.userIdFilter,
-    theme: m.default.theme,
-    hide: R.default.enabled
+    moderators: A.default.userIds.map(e => R.default.getUser(e)).filter(O.isNotNullish),
+    isInitialLoading: A.default.isInitialLoading,
+    isLoading: A.default.isLoading,
+    isLoadingNextPage: A.default.isLoadingNextPage,
+    showLoadMore: A.default.groupedFetchCount > 2,
+    hasError: A.default.hasError,
+    hasOlderLogs: A.default.hasOlderLogs,
+    logs: null != s && null != t ? L.transformLogs(s, t) : [],
+    actionFilter: A.default.actionFilter,
+    userIdFilter: A.default.userIdFilter,
+    theme: f.default.theme,
+    hide: C.default.enabled
   }
-})(w)
+})(H)

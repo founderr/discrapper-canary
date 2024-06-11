@@ -1,128 +1,127 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return S
   }
 }), s("47120");
 var a = s("735250"),
   l = s("470079"),
   n = s("481060"),
-  i = s("298193"),
-  r = s("36082"),
-  o = s("614149"),
-  d = s("467319"),
-  u = s("456677"),
-  c = s("55889"),
-  E = s("300453"),
-  _ = s("620436"),
-  I = s("273504"),
-  T = s("689938"),
-  S = s("477620");
+  i = s("36082"),
+  r = s("614149"),
+  o = s("467319"),
+  d = s("456677"),
+  u = s("55889"),
+  c = s("300453"),
+  E = s("620436"),
+  _ = s("273504"),
+  I = s("689938"),
+  T = s("477620");
 
-function f(e) {
+function S(e) {
   var t, s;
   let {
-    rule: f,
-    onChangeRule: m
-  } = e, [N, g] = l.useState(null === (t = f.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit), h = (0, d.useIsMentionRaidExperimentEnabled)(f.guildId, !1);
+    rule: S,
+    onChangeRule: f
+  } = e, [m, N] = l.useState(null === (t = S.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit), g = (0, o.useIsMentionRaidExperimentEnabled)(S.guildId, !1);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
-      className: S.cardContentsContainer,
-      children: [(0, a.jsxs)(E.default, {
+      className: T.cardContentsContainer,
+      children: [(0, a.jsxs)(c.default, {
         step: 1,
-        header: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_HEADER,
+        header: I.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_HEADER,
         children: [(0, a.jsxs)("div", {
-          className: S.mentionLimitContainer,
+          className: T.mentionLimitContainer,
           children: [(0, a.jsx)("div", {
-            className: S.mentionLimitIconContainer,
-            children: (0, a.jsx)(r.default, {
+            className: T.mentionLimitIconContainer,
+            children: (0, a.jsx)(i.default, {
               width: 24,
               height: 24,
-              className: S.mentionLimitIcon
+              className: T.mentionLimitIcon
             })
           }), (0, a.jsxs)("div", {
-            className: S.mentionLimitTextContainer,
+            className: T.mentionLimitTextContainer,
             children: [(0, a.jsx)(n.Heading, {
               variant: "heading-sm/semibold",
-              children: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION
+              children: I.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION
             }), (0, a.jsx)(n.Text, {
               color: "interactive-normal",
               variant: "text-xs/medium",
-              className: S.descriptionHint,
-              children: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION_HINT
+              className: T.descriptionHint,
+              children: I.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION_HINT
             })]
           }), (0, a.jsx)("div", {
-            className: S.stepperContainer,
-            children: (0, a.jsx)(i.default, {
-              value: N,
+            className: T.stepperContainer,
+            children: (0, a.jsx)(n.NumberInputStepper, {
+              value: m,
               onChange: e => {
-                g(e), m({
-                  ...f,
+                N(e), f({
+                  ...S,
                   triggerMetadata: {
-                    ...f.triggerMetadata,
+                    ...S.triggerMetadata,
                     mentionTotalLimit: e
                   }
                 })
               },
-              minValue: I.MIN_MENTION_SPAM_LIMIT,
-              maxValue: I.MAX_MENTION_SPAM_LIMIT,
-              className: S.stepper
+              minValue: _.MIN_MENTION_SPAM_LIMIT,
+              maxValue: _.MAX_MENTION_SPAM_LIMIT,
+              className: T.stepper
             })
           })]
-        }), h ? (0, a.jsxs)("div", {
-          className: S.mentionLimitContainer,
+        }), g ? (0, a.jsxs)("div", {
+          className: T.mentionLimitContainer,
           children: [(0, a.jsx)("div", {
-            className: S.mentionLimitIconContainer,
-            children: (0, a.jsx)(o.default, {
+            className: T.mentionLimitIconContainer,
+            children: (0, a.jsx)(r.default, {
               width: 24,
               height: 24,
-              className: S.mentionLimitIcon
+              className: T.mentionLimitIcon
             })
           }), (0, a.jsxs)("div", {
-            className: S.mentionLimitTextContainer,
+            className: T.mentionLimitTextContainer,
             children: [(0, a.jsx)(n.Heading, {
               variant: "heading-sm/semibold",
-              children: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION
+              children: I.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION
             }), (0, a.jsx)(n.Text, {
               color: "interactive-normal",
               variant: "text-xs/medium",
-              className: S.descriptionHint,
-              children: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION_HINT
+              className: T.descriptionHint,
+              children: I.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION_HINT
             })]
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(n.Checkbox, {
               type: n.Checkbox.Types.INVERTED,
-              value: null === (s = f.triggerMetadata) || void 0 === s ? void 0 : s.mentionRaidProtectionEnabled,
+              value: null === (s = S.triggerMetadata) || void 0 === s ? void 0 : s.mentionRaidProtectionEnabled,
               onChange: (e, t) => {
-                m({
-                  ...f,
+                f({
+                  ...S,
                   triggerMetadata: {
-                    ...f.triggerMetadata,
+                    ...S.triggerMetadata,
                     mentionRaidProtectionEnabled: t
                   }
                 })
               },
-              className: S.__invalid_actionCheckbox
+              className: T.__invalid_actionCheckbox
             })
           })]
         }) : null]
-      }), (0, a.jsx)(_.default, {
-        type: _.default.Type.ARROW_DOWN
       }), (0, a.jsx)(E.default, {
+        type: E.default.Type.ARROW_DOWN
+      }), (0, a.jsx)(c.default, {
         step: 2,
-        header: T.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
-        children: (0, a.jsx)(u.default, {
-          rule: f,
-          onChangeRule: m
+        header: I.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
+        children: (0, a.jsx)(d.default, {
+          rule: S,
+          onChangeRule: f
         })
-      }), (0, a.jsx)(_.default, {
-        type: _.default.Type.CROSS
       }), (0, a.jsx)(E.default, {
+        type: E.default.Type.CROSS
+      }), (0, a.jsx)(c.default, {
         step: 3,
-        header: T.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
-        children: (0, a.jsx)(c.default, {
-          rule: f,
-          onChangeRule: m
+        header: I.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
+        children: (0, a.jsx)(u.default, {
+          rule: S,
+          onChangeRule: f
         })
       })]
     })

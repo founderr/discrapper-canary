@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return I
+    return _
   }
 }), r("47120");
 var a = r("735250"),
@@ -15,23 +15,22 @@ var a = r("735250"),
   u = r("442837"),
   h = r("481060"),
   p = r("570140"),
-  g = r("6048"),
-  m = r("825185"),
-  f = r("740727"),
-  y = r("502568"),
-  b = r("55935"),
-  x = r("120816"),
-  k = r("31336"),
-  v = r("257785"),
-  S = r("484036"),
-  T = r("681619"),
-  j = r("621060"),
-  w = r("689938"),
-  E = r("457501"),
-  N = r("277513");
-let C = [{
+  g = r("825185"),
+  m = r("740727"),
+  f = r("502568"),
+  y = r("55935"),
+  b = r("120816"),
+  x = r("31336"),
+  k = r("257785"),
+  v = r("484036"),
+  S = r("681619"),
+  T = r("621060"),
+  j = r("689938"),
+  w = r("457501"),
+  E = r("277513");
+let N = [{
     key: "id",
-    cellClassName: E.eventColumn,
+    cellClassName: w.eventColumn,
     render(e) {
       let {
         experimentId: t
@@ -40,7 +39,7 @@ let C = [{
     }
   }, {
     key: "bucket",
-    cellClassName: E.locationColumn,
+    cellClassName: w.locationColumn,
     render(e) {
       let {
         descriptor: t
@@ -49,7 +48,7 @@ let C = [{
     }
   }, {
     key: "timestamp",
-    cellClassName: E.locationColumn,
+    cellClassName: w.locationColumn,
     render(e) {
       let {
         timestamp: t
@@ -57,7 +56,7 @@ let C = [{
       return t.toLocaleString()
     }
   }],
-  _ = [{
+  C = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -73,59 +72,59 @@ let C = [{
         }
       } = e, u = d()(o);
       return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsxs)(y.default, {
-          className: l()(N.headerBar, E.subPanelHeaderBar),
-          children: [(0, a.jsx)(y.default.Icon, {
-            icon: m.default,
+        children: [(0, a.jsxs)(f.default, {
+          className: l()(E.headerBar, w.subPanelHeaderBar),
+          children: [(0, a.jsx)(f.default.Icon, {
+            icon: g.default,
             tooltip: t
-          }), (0, a.jsx)(y.default.Title, {
+          }), (0, a.jsx)(f.default.Title, {
             children: t
           })]
-        }), (0, a.jsxs)(v.Properties, {
-          className: E.commonProperties,
-          children: [(0, a.jsx)(v.Property, {
+        }), (0, a.jsxs)(k.Properties, {
+          className: w.commonProperties,
+          children: [(0, a.jsx)(k.Property, {
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
               dateTime: o.toISOString(),
-              title: (0, b.dateFormat)(u, "LLLL"),
-              children: (0, b.calendarFormat)(u)
+              title: (0, y.dateFormat)(u, "LLLL"),
+              children: (0, y.calendarFormat)(u)
             })
-          }), "guild" === r.type && (0, a.jsx)(v.Property, {
+          }), "guild" === r.type && (0, a.jsx)(k.Property, {
             name: "Guild ID",
             children: (0, a.jsx)("code", {
               children: r.guildId
             })
-          }), (0, a.jsx)(v.Property, {
+          }), (0, a.jsx)(k.Property, {
             name: "Bucket",
             children: (0, a.jsx)("code", {
               children: r.bucket
             })
-          }), (0, a.jsx)(v.Property, {
+          }), (0, a.jsx)(k.Property, {
             name: "Revision",
             children: (0, a.jsx)("code", {
               children: r.revision
             })
-          }), (0, a.jsx)(v.Property, {
+          }), (0, a.jsx)(k.Property, {
             name: "Override",
-            children: (0, a.jsx)(v.BooleanPropertyValue, {
+            children: (0, a.jsx)(k.BooleanPropertyValue, {
               value: r.override
             })
-          }), (0, a.jsx)(v.Property, {
+          }), (0, a.jsx)(k.Property, {
             name: "Exposure type",
             children: (0, a.jsx)("code", {
               children: i
             })
-          }), (0, a.jsx)(v.Property, {
+          }), (0, a.jsx)(k.Property, {
             name: "Excluded",
-            children: (0, a.jsx)(v.BooleanPropertyValue, {
+            children: (0, a.jsx)(k.BooleanPropertyValue, {
               value: n
             })
-          }), (0, a.jsx)(v.Property, {
+          }), (0, a.jsx)(k.Property, {
             name: "Previously tracked",
-            children: (0, a.jsx)(v.BooleanPropertyValue, {
+            children: (0, a.jsx)(k.BooleanPropertyValue, {
               value: s
             })
-          }), (0, a.jsx)(v.Property, {
+          }), (0, a.jsx)(k.Property, {
             name: "Location",
             children: (0, a.jsx)("code", {
               children: c
@@ -136,13 +135,13 @@ let C = [{
     }
   }];
 
-function I() {
-  let [e, t] = i.useState(""), r = i.useRef(null), n = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = i.useMemo(() => n.filter(t => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [n, e]), [s, d] = i.useState(void 0), m = o.find(e => e.key === s), {
-    TabBar: y,
-    renderSelectedTab: b
-  } = (0, j.default)({
-    tabs: _
-  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), I = i.useCallback(e => {
+function _() {
+  let [e, t] = i.useState(""), r = i.useRef(null), n = (0, u.useStateFromStoresArray)([b.default], () => b.default.loggedTriggers), o = i.useMemo(() => n.filter(t => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [n, e]), [s, d] = i.useState(void 0), g = o.find(e => e.key === s), {
+    TabBar: f,
+    renderSelectedTab: y
+  } = (0, T.default)({
+    tabs: C
+  }, []), k = (0, u.useStateFromStores)([b.default], () => b.default.trackTriggers), _ = i.useCallback(e => {
     p.default.dispatch({
       type: "SET_TRACK_TRIGGERS",
       enabled: e
@@ -150,49 +149,49 @@ function I() {
   }, []);
   return (0, a.jsxs)("div", {
     ref: r,
-    className: l()(N.panel, E.panel),
+    className: l()(E.panel, w.panel),
     children: [(0, a.jsxs)("div", {
-      className: E.toolbar,
+      className: w.toolbar,
       children: [(0, a.jsx)("div", {
         title: "Enables tracking of all triggers",
-        className: E.triggersEnable,
+        className: w.triggersEnable,
         children: (0, a.jsx)(h.Switch, {
-          checked: v,
-          onChange: I,
-          className: E.__invalid_toolbarSwitch
+          checked: k,
+          onChange: _,
+          className: w.__invalid_toolbarSwitch
         })
       }), (0, a.jsx)(h.Button, {
-        className: E.toolbarButton,
+        className: w.toolbarButton,
         look: h.Button.Looks.BLANK,
         size: h.Button.Sizes.ICON,
-        onClick: k.clearAnalyticsLog,
+        onClick: x.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
-          title: w.default.Messages.CLEAR,
-          children: (0, a.jsx)(f.default, {
-            "aria-label": w.default.Messages.CLEAR
+          title: j.default.Messages.CLEAR,
+          children: (0, a.jsx)(m.default, {
+            "aria-label": j.default.Messages.CLEAR
           })
         })
-      }), (0, a.jsx)(g.default, {
-        className: E.searchBar,
+      }), (0, a.jsx)(h.SearchBar, {
+        className: w.searchBar,
         query: e,
         onChange: t,
         onClear: () => t(""),
         placeholder: "Search by experiment id"
       })]
     }), (0, a.jsx)(h.ScrollerThin, {
-      className: E.tableContainer,
-      children: (0, a.jsx)(T.default, {
-        columns: C,
+      className: w.tableContainer,
+      children: (0, a.jsx)(S.default, {
+        columns: N,
         data: o,
         selectedRowKey: s,
         onClickRow: d
       })
-    }), null != m && (0, a.jsxs)(S.default, {
-      className: E.subPanel,
+    }), null != g && (0, a.jsxs)(v.default, {
+      className: w.subPanel,
       minHeight: 100,
       initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,
-      children: [(0, a.jsx)(y, {}), b({
-        loggedTrigger: m
+      children: [(0, a.jsx)(f, {}), y({
+        loggedTrigger: g
       })]
     })]
   })

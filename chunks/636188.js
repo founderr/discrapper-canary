@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return H
+    return z
   }
 }), a("47120");
 var s = a("735250"),
@@ -21,22 +21,21 @@ var s = a("735250"),
   g = a("466111"),
   f = a("783014"),
   m = a("897353"),
-  M = a("26290"),
-  I = a("810090"),
-  v = a("626135"),
-  h = a("768581"),
-  x = a("709054"),
-  C = a("647177"),
-  N = a("63985"),
-  R = a("678916"),
-  T = a("981631"),
-  k = a("190378"),
-  D = a("486324"),
-  B = a("474936"),
-  U = a("689938"),
-  j = a("169880");
+  M = a("810090"),
+  I = a("626135"),
+  v = a("768581"),
+  h = a("709054"),
+  x = a("647177"),
+  C = a("63985"),
+  N = a("678916"),
+  R = a("981631"),
+  T = a("190378"),
+  k = a("486324"),
+  D = a("474936"),
+  B = a("689938"),
+  U = a("169880");
 
-function V(e) {
+function j(e) {
   let {
     icon: t,
     onClick: a,
@@ -49,25 +48,25 @@ function V(e) {
     onBlur: _
   } = e;
   return (0, s.jsxs)(c.Clickable, {
-    className: o()(i, j.backgroundOption, {
-      [j.backgroundOptionSelected]: r,
-      [j.backgroundOptionDisabled]: d
+    className: o()(i, U.backgroundOption, {
+      [U.backgroundOptionSelected]: r,
+      [U.backgroundOptionDisabled]: d
     }),
     onMouseLeave: u,
     onBlur: _,
     onClick: d ? void 0 : a,
     children: [r ? (0, s.jsx)("div", {
-      className: j.backgroundOptionRing
+      className: U.backgroundOptionRing
     }) : null, (0, s.jsxs)("div", {
-      className: j.backgroundOptionInner,
+      className: U.backgroundOptionInner,
       children: [l, (0, s.jsxs)("div", {
-        className: j.backgroundOptionContent,
+        className: U.backgroundOptionContent,
         children: [(0, s.jsx)(t, {
-          className: o()(j.backgroundIconOptionIcon),
+          className: o()(U.backgroundIconOptionIcon),
           width: 18,
           height: 18
         }), (0, s.jsx)(c.Text, {
-          className: j.backgroundOptionText,
+          className: U.backgroundOptionText,
           color: "none",
           variant: "text-sm/normal",
           children: n
@@ -77,7 +76,7 @@ function V(e) {
   })
 }
 
-function P(e) {
+function V(e) {
   let {
     option: t,
     source: a,
@@ -86,12 +85,12 @@ function P(e) {
   if (n.useEffect(() => {
       new Image().src = a
     }, [a]), !l || null == t) return (0, s.jsx)("div", {
-    className: j.backgroundImageOption,
+    className: U.backgroundImageOption,
     style: {
       backgroundImage: "url(".concat(a, ")")
     }
   });
-  let c = (0, h.getVideoFilterAssetURL)({
+  let c = (0, v.getVideoFilterAssetURL)({
     userId: t.user_id,
     assetId: t.id,
     assetHash: t.asset,
@@ -101,13 +100,13 @@ function P(e) {
   return (0, s.jsx)("img", {
     onMouseMove: () => i(!0),
     onMouseLeave: () => i(!1),
-    className: j.backgroundImageOption,
+    className: U.backgroundImageOption,
     src: o ? a : c,
     alt: t.id
   })
 }
 
-function S(e) {
+function P(e) {
   let {
     option: t,
     source: n,
@@ -116,32 +115,32 @@ function S(e) {
     isAnimatedImage: A,
     isVideo: g,
     hotspotLocation: f,
-    ...h
-  } = e, x = (0, d.useAnalyticsContext)(), {
-    analyticsLocations: N
-  } = (0, _.default)(u.default.VIDEO_BACKGROUND_IMAGE_OPTION), R = (0, i.useStateFromStores)([E.default], () => null != f && E.default.hasHotspot(f)), k = g ? (0, s.jsx)(I.default, {
-    className: j.backgroundImageOption,
+    ...v
+  } = e, h = (0, d.useAnalyticsContext)(), {
+    analyticsLocations: C
+  } = (0, _.default)(u.default.VIDEO_BACKGROUND_IMAGE_OPTION), N = (0, i.useStateFromStores)([E.default], () => null != f && E.default.hasHotspot(f)), T = g ? (0, s.jsx)(M.default, {
+    className: U.backgroundImageOption,
     src: n,
     loop: !0,
     playOnHover: !0,
     muted: !0
-  }) : (0, s.jsx)(P, {
+  }) : (0, s.jsx)(V, {
     isAnimated: A,
-    option: (0, C.isCustomBackgroundOption)(t) ? t : void 0,
+    option: (0, x.isCustomBackgroundOption)(t) ? t : void 0,
     source: n
   });
 
-  function D() {
-    null != f && R && (O.hideHotspot(f), v.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: B.PremiumUpsellTypes.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
-      location: x.location,
-      location_stack: N
+  function k() {
+    null != f && N && (O.hideHotspot(f), I.default.track(R.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: D.PremiumUpsellTypes.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
+      location: h.location,
+      location_stack: C
     }))
   }
   return (0, s.jsxs)(c.Clickable, {
-    ...h,
-    className: o()(j.backgroundOption, {
-      [j.backgroundOptionSelected]: l
+    ...v,
+    className: o()(U.backgroundOption, {
+      [U.backgroundOptionSelected]: l
     }),
     onClick: () => p(t),
     onContextMenu: e => (0, r.openContextMenuLazy)(e, async () => {
@@ -155,108 +154,108 @@ function S(e) {
       })
     }),
     children: [l ? (0, s.jsx)("div", {
-      className: j.backgroundOptionRing
+      className: U.backgroundOptionRing
     }) : null, (0, s.jsx)("div", {
-      onFocus: D,
-      onMouseEnter: D,
-      className: j.backgroundOptionInner,
-      children: k
+      onFocus: k,
+      onMouseEnter: k,
+      className: U.backgroundOptionInner,
+      children: T
     }), g || A ? (0, s.jsx)("div", {
-      className: j.playIcon,
+      className: U.playIcon,
       children: (0, s.jsx)(m.default, {
         width: 12,
         height: 12
       })
-    }) : null, R && (0, s.jsx)(M.TextBadge, {
-      text: U.default.Messages.NEW,
-      className: j.newTextBadge
+    }) : null, N && (0, s.jsx)(c.TextBadge, {
+      text: B.default.Messages.NEW,
+      className: U.newTextBadge
     })]
   })
 }
 
-function L() {
+function S() {
   return (0, s.jsxs)("div", {
-    className: j.customBackgroundTooltip,
+    className: U.customBackgroundTooltip,
     children: [(0, s.jsx)(g.default, {
-      className: j.customBackgroundTooltipIcon
+      className: U.customBackgroundTooltipIcon
     }), (0, s.jsx)(c.Text, {
       variant: "text-sm/normal",
-      children: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CUSTOM_TOOLTIP
+      children: B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CUSTOM_TOOLTIP
     })]
   })
 }
 
-function b(e) {
+function L(e) {
   let {
     onClick: t,
     tooltipText: a,
     disabled: n = !1
-  } = e, l = (0, i.useStateFromStores)([E.default], () => E.default.hasHotspot(k.HotspotLocations.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+  } = e, l = (0, i.useStateFromStores)([E.default], () => E.default.hasHotspot(T.HotspotLocations.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
 
   function o() {
-    O.hideHotspot(k.HotspotLocations.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW)
+    O.hideHotspot(T.HotspotLocations.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW)
   }
-  let r = l ? U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_NEW_ANIMATED_TOOLTIP : a;
+  let r = l ? B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_NEW_ANIMATED_TOOLTIP : a;
   return (0, s.jsxs)(c.TooltipContainer, {
     text: r,
-    className: j.newBackgroundTooltipContainer,
-    children: [(0, s.jsxs)(V, {
-      className: j.__invalid_backgroundOptionBlurred,
+    className: U.newBackgroundTooltipContainer,
+    children: [(0, s.jsxs)(j, {
+      className: U.__invalid_backgroundOptionBlurred,
       disabled: n,
       icon: A.default,
       onClick: t,
       onMouseLeave: o,
       onBlur: o,
       text: (0, s.jsxs)("div", {
-        className: j.backgroundCustomInlineUpsell,
+        className: U.backgroundCustomInlineUpsell,
         children: [(0, s.jsx)(g.default, {
-          className: j.backgroundCustomInlineUpsellIcon
+          className: U.backgroundCustomInlineUpsellIcon
         }), (0, s.jsx)("div", {
-          className: j.overflowEllipsis,
-          children: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CUSTOM
+          className: U.overflowEllipsis,
+          children: B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CUSTOM
         })]
       }),
       children: [(0, s.jsx)("div", {
-        className: j.backgroundCustomInlineUpsellBackground
+        className: U.backgroundCustomInlineUpsellBackground
       }), (0, s.jsx)("div", {
-        className: j.backgroundCustomInlineUpsellBackgroundDarkener
+        className: U.backgroundCustomInlineUpsellBackgroundDarkener
       })]
-    }), l && (0, s.jsx)(M.TextBadge, {
-      text: U.default.Messages.NEW,
-      className: j.newTextBadge
+    }), l && (0, s.jsx)(c.TextBadge, {
+      text: B.default.Messages.NEW,
+      className: U.newTextBadge
     })]
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     onClick: t
   } = e, a = (0, d.useAnalyticsContext)(), {
     analyticsLocations: l
   } = (0, _.default)(u.default.VIDEO_BACKGROUND_CUSTOM_UPSELL);
   return n.useEffect(() => {
-    v.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: B.PremiumUpsellTypes.VIDEO_BACKGROUNDS_INLINE,
+    I.default.track(R.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: D.PremiumUpsellTypes.VIDEO_BACKGROUNDS_INLINE,
       location: a.location,
       location_stack: l
     })
-  }, []), (0, s.jsx)(b, {
+  }, []), (0, s.jsx)(L, {
     onClick: t,
-    tooltipText: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPSELL_TOOLTIP
+    tooltipText: B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPSELL_TOOLTIP
   })
 }
 
-function z(e) {
+function y(e) {
   let {
     onAddBackgroundImage: t,
     disabled: n
-  } = e, l = (0, c.useModalContext)(), o = n ? U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_TOOLTIP_MAX_REACHED.format({
+  } = e, l = (0, c.useModalContext)(), o = n ? B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_TOOLTIP_MAX_REACHED.format({
     maxCustomBackgrounds: 25
-  }) : U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_TOOLTIP_PREMIUM, i = [{
-    name: U.default.Messages.IMAGES,
+  }) : B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_TOOLTIP_PREMIUM, i = [{
+    name: B.default.Messages.IMAGES,
     extensions: ["jpg", "jpeg", "png", "gif", "mp4"]
   }];
-  return (0, s.jsx)(b, {
+  return (0, s.jsx)(L, {
     disabled: n,
     onClick: function() {
       (0, c.openModalLazy)(async () => {
@@ -264,13 +263,13 @@ function z(e) {
           default: e
         } = await Promise.all([a.e("99387"), a.e("20653")]).then(a.bind(a, "28130"));
         return a => (0, s.jsx)(e, {
-          maxFileSizeBytes: R.MAX_BACKGROUND_IMAGE_UPLOAD_FILESIZE_BYTES,
+          maxFileSizeBytes: N.MAX_BACKGROUND_IMAGE_UPLOAD_FILESIZE_BYTES,
           onComplete: t,
-          uploadType: D.UploadTypes.VIDEO_BACKGROUND,
+          uploadType: k.UploadTypes.VIDEO_BACKGROUND,
           filters: i,
-          modalTitle: U.default.Messages.UPLOAD_BACKGROUND,
-          imageSpecifications: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_SUBTITLE,
-          uploadOptionTitle: U.default.Messages.SELECT_IMAGE_MODAL_UPLOAD_IMAGE_OR_VIDEO,
+          modalTitle: B.default.Messages.UPLOAD_BACKGROUND,
+          imageSpecifications: B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_SUBTITLE,
+          uploadOptionTitle: B.default.Messages.SELECT_IMAGE_MODAL_UPLOAD_IMAGE_OR_VIDEO,
           showUpsellHeader: !0,
           ...a
         })
@@ -282,7 +281,7 @@ function z(e) {
   })
 }
 
-function H(e) {
+function z(e) {
   let {
     canUseCustomBackgrounds: t,
     customBackgroundOptions: a,
@@ -291,51 +290,51 @@ function H(e) {
     onUpsellClick: i,
     onAddBackgroundImage: r,
     smallerOptions: d
-  } = e, O = n.useMemo(() => a.sort((e, t) => null == e.last_used || null == t.last_used ? x.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime()), [a]), E = O.length >= 25, {
+  } = e, O = n.useMemo(() => a.sort((e, t) => null == e.last_used || null == t.last_used ? h.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime()), [a]), E = O.length >= 25, {
     analyticsLocations: A
-  } = (0, _.default)(u.default.VIDEO_BACKGROUND_OPTIONS), g = Object.values((0, N.default)()).sort((e, t) => R.DEFAULT_VIDEO_BACKGROUND_SORT[e.id] - R.DEFAULT_VIDEO_BACKGROUND_SORT[t.id]);
+  } = (0, _.default)(u.default.VIDEO_BACKGROUND_OPTIONS), g = Object.values((0, C.default)()).sort((e, t) => N.DEFAULT_VIDEO_BACKGROUND_SORT[e.id] - N.DEFAULT_VIDEO_BACKGROUND_SORT[t.id]);
   return (0, s.jsx)(_.AnalyticsLocationProvider, {
     value: A,
     children: (0, s.jsxs)("div", {
-      className: d ? j.backgroundOptionsSmall : j.backgroundOptionsLarge,
-      children: [(0, s.jsx)(V, {
+      className: d ? U.backgroundOptionsSmall : U.backgroundOptionsLarge,
+      children: [(0, s.jsx)(j, {
         selected: null == l,
         icon: f.default,
         onClick: () => o(null),
-        text: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_NONE
-      }), (0, s.jsx)(V, {
-        className: j.__invalid_backgroundOptionBlurred,
-        selected: l === R.BLUR_BACKGROUND_OPTION,
+        text: B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_NONE
+      }), (0, s.jsx)(j, {
+        className: U.__invalid_backgroundOptionBlurred,
+        selected: l === N.BLUR_BACKGROUND_OPTION,
         icon: p.default,
-        onClick: () => o(R.BLUR_BACKGROUND_OPTION),
-        text: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_BLUR,
+        onClick: () => o(N.BLUR_BACKGROUND_OPTION),
+        text: B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_BLUR,
         children: (0, s.jsx)("div", {
-          className: j.backgroundOptionBlurBackground
+          className: U.backgroundOptionBlurBackground
         })
-      }), t ? (0, s.jsx)(z, {
+      }), t ? (0, s.jsx)(y, {
         onAddBackgroundImage: r,
         disabled: E
-      }) : (0, s.jsx)(y, {
+      }) : (0, s.jsx)(b, {
         onClick: i
       }), O.map(e => (0, s.jsx)(c.Tooltip, {
-        text: (0, s.jsx)(L, {}),
-        "aria-label": U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CUSTOM_TOOLTIP,
+        text: (0, s.jsx)(S, {}),
+        "aria-label": B.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CUSTOM_TOOLTIP,
         children: t => {
-          let a = (0, h.getVideoFilterAssetURL)({
+          let a = (0, v.getVideoFilterAssetURL)({
             userId: e.user_id,
             assetId: e.id,
             assetHash: e.asset,
             size: 720
           });
-          return null == a ? null : (0, n.createElement)(S, {
+          return null == a ? null : (0, n.createElement)(P, {
             ...t,
             key: e.id,
             option: e,
             source: a,
-            selected: (0, C.isCustomBackgroundOption)(l) && l.id === e.id,
+            selected: (0, x.isCustomBackgroundOption)(l) && l.id === e.id,
             onSelectOption: o,
-            isVideo: (0, h.isVideoAssetHash)(e.asset),
-            isAnimatedImage: (0, h.isAnimatedIconHash)(e.asset)
+            isVideo: (0, v.isVideoAssetHash)(e.asset),
+            isAnimatedImage: (0, v.isAnimatedIconHash)(e.asset)
           })
         }
       }, e.id)), g.map(e => {
@@ -343,7 +342,7 @@ function H(e) {
         return (0, s.jsx)(c.Tooltip, {
           text: e.name,
           "aria-label": e.name,
-          children: a => (0, n.createElement)(S, {
+          children: a => (0, n.createElement)(P, {
             ...a,
             key: e.id,
             option: e.id,

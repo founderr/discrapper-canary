@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return S
+    return T
   }
 });
 var a = s("735250");
@@ -10,15 +10,14 @@ var l = s("990547"),
   n = s("481060"),
   i = s("213609"),
   r = s("787051"),
-  o = s("682864"),
-  d = s("696936"),
-  u = s("539290"),
-  c = s("975464"),
-  E = s("689938"),
-  _ = s("856788"),
-  I = s("270395");
+  o = s("696936"),
+  d = s("539290"),
+  u = s("975464"),
+  c = s("689938"),
+  E = s("856788"),
+  _ = s("270395");
 
-function T(e) {
+function I(e) {
   let {
     config: t
   } = e, {
@@ -28,47 +27,47 @@ function T(e) {
     onCtaClicked: r
   } = t;
   return (0, a.jsxs)("div", {
-    className: _.__invalid_ctaContainer,
+    className: E.__invalid_ctaContainer,
     children: [(0, a.jsx)("img", {
-      className: _.__invalid_heroBanner,
-      src: I,
-      alt: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
+      className: E.__invalid_heroBanner,
+      src: _,
+      alt: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
     }), (0, a.jsxs)("div", {
-      className: _.__invalid_ctaContent,
+      className: E.__invalid_ctaContent,
       children: [(0, a.jsx)(n.Heading, {
         variant: "heading-xl/semibold",
         color: "header-primary",
-        children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
-      }), (0, a.jsx)(o.default, {
+        children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
+      }), (0, a.jsx)(n.Spacer, {
         size: 12
       }), (0, a.jsx)(n.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
-      }), (0, a.jsx)(o.default, {
+        children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
+      }), (0, a.jsx)(n.Spacer, {
         size: 24
-      }), (0, a.jsx)(u.default, {
-        className: _.waitlist,
-        color: d.MessageBlockColors.BROWN,
-        buttonPosition: u.WarningBlockButtonPosition.RIGHT,
+      }), (0, a.jsx)(d.default, {
+        className: E.waitlist,
+        color: o.MessageBlockColors.BROWN,
+        buttonPosition: d.WarningBlockButtonPosition.RIGHT,
         notice: s,
         ctaLabel: l,
         ctaDisabled: !i,
-        ctaClassName: _.waitlistCtaButton,
+        ctaClassName: E.waitlistCtaButton,
         onClick: r
       })]
     })]
   })
 }
 
-function S(e) {
+function T(e) {
   let {
     guild: t,
     config: s
   } = e, {
     isLoading: o,
     error: d,
-    creatorMonetizationOnboardingMarketing: u
+    creatorMonetizationOnboardingMarketing: c
   } = (0, r.default)(t.id);
   return ((0, i.default)({
     type: l.ImpressionTypes.PANE,
@@ -77,11 +76,11 @@ function S(e) {
       guild_id: t.id
     }
   }), o) ? (0, a.jsx)(n.Spinner, {}) : (0, a.jsxs)("div", {
-    className: _.__invalid_container,
-    children: [(0, a.jsx)(T, {
+    className: E.__invalid_container,
+    children: [(0, a.jsx)(I, {
       config: s
-    }), (0, a.jsx)(c.MarketingSections, {
-      onboardingMarketing: u,
+    }), (0, a.jsx)(u.MarketingSections, {
+      onboardingMarketing: c,
       onboardingMarketingError: d
     })]
   })

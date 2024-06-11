@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return N
+    return g
   }
 });
 var n = a("735250"),
@@ -9,43 +9,42 @@ var n = a("735250"),
   s = a("286379"),
   l = a("481060"),
   u = a("797614"),
-  r = a("644766"),
-  o = a("626135"),
-  c = a("103879"),
-  d = a("451284"),
-  _ = a("802429"),
-  S = a("846488"),
-  E = a("181211"),
-  T = a("811085"),
-  f = a("967254"),
-  A = a("981631"),
-  I = a("689938"),
-  g = a("915307");
+  r = a("626135"),
+  o = a("103879"),
+  c = a("451284"),
+  d = a("802429"),
+  _ = a("846488"),
+  S = a("181211"),
+  E = a("811085"),
+  T = a("967254"),
+  f = a("981631"),
+  A = a("689938"),
+  I = a("915307");
 
-function N() {
-  let e = (0, E.default)(),
-    t = (0, S.useSafetyHubInitialized)(),
-    a = (0, d.useSafetyHubAccountStanding)(),
-    N = (0, _.useSafetyHubFetchError)();
+function g() {
+  let e = (0, S.default)(),
+    t = (0, _.useSafetyHubInitialized)(),
+    a = (0, c.useSafetyHubAccountStanding)(),
+    g = (0, d.useSafetyHubFetchError)();
   return (i.useEffect(() => {
-    c.getSafetyHubData()
+    o.getSafetyHubData()
   }, []), i.useEffect(() => {
-    t && (o.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
+    t && (r.default.track(f.AnalyticEvents.SAFETY_HUB_VIEWED, {
       account_standing: a.state
     }), u.default.increment({
       name: s.MetricEvents.SAFETY_HUB_VIEW
     }))
   }, [t]), e) ? (0, n.jsx)("div", {
     children: (0, n.jsx)(l.Spinner, {})
-  }) : null != N ? (0, n.jsxs)(r.default, {
-    color: r.NoticeColors.DANGER,
-    className: g.nagbar,
-    children: [I.default.Messages.SAFETY_HUB_ERROR_MESSAGE, (0, n.jsx)(r.NoticeButton, {
-      onClick: () => c.getSafetyHubData(),
-      children: I.default.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
+  }) : null != g ? (0, n.jsxs)(l.Notice, {
+    color: l.NoticeColors.DANGER,
+    className: I.nagbar,
+    children: [A.default.Messages.SAFETY_HUB_ERROR_MESSAGE, (0, n.jsx)(l.NoticeButton, {
+      onClick: () => o.getSafetyHubData(),
+      children: A.default.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
     })]
   }) : (0, n.jsxs)("div", {
-    className: g.container,
-    children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(f.ConnectedSafetyHubViolationsContainer, {})]
+    className: I.container,
+    children: [(0, n.jsx)(E.default, {}), (0, n.jsx)(T.ConnectedSafetyHubViolationsContainer, {})]
   })
 }

@@ -1,60 +1,59 @@
 "use strict";
 s.r(t), s.d(t, {
   openActionCompleteSuccessModal: function() {
-    return d
+    return c
   }
 });
 var n = s("735250");
 s("470079");
 var l = s("481060"),
-  a = s("682864"),
-  i = s("22238"),
-  o = s("153124"),
-  r = s("689938"),
-  u = s("866673");
+  a = s("22238"),
+  i = s("153124"),
+  o = s("689938"),
+  r = s("866673");
 
-function c(e) {
+function u(e) {
   let {
     transitionState: t,
     Icon: s,
-    title: c,
-    body: d,
-    onClose: E
-  } = e, f = (0, o.useUID)();
+    title: u,
+    body: c,
+    onClose: d
+  } = e, E = (0, i.useUID)();
   return (0, n.jsxs)(l.ModalRoot, {
-    className: u.container,
+    className: r.container,
     transitionState: t,
-    "aria-labelledby": f,
+    "aria-labelledby": E,
     children: [(0, n.jsxs)(l.ModalContent, {
-      children: [(0, n.jsx)(i.default, {
+      children: [(0, n.jsx)(a.default, {
         Icon: s
-      }), (0, n.jsx)(a.default, {
+      }), (0, n.jsx)(l.Spacer, {
         size: 24
       }), (0, n.jsx)(l.Heading, {
-        id: f,
-        className: u.__invalid_title,
+        id: E,
+        className: r.__invalid_title,
         variant: "heading-xl/semibold",
-        children: c
-      }), (0, n.jsx)(a.default, {
+        children: u
+      }), (0, n.jsx)(l.Spacer, {
         size: 8
       }), (0, n.jsx)(l.Text, {
-        className: u.body,
+        className: r.body,
         variant: "text-sm/normal",
-        children: d
+        children: c
       })]
-    }), (0, n.jsx)(a.default, {
+    }), (0, n.jsx)(l.Spacer, {
       size: 24
     }), (0, n.jsx)(l.Button, {
       size: l.Button.Sizes.MEDIUM,
       grow: !1,
-      onClick: E,
-      children: r.default.Messages.GOT_IT
+      onClick: d,
+      children: o.default.Messages.GOT_IT
     })]
   })
 }
 
-function d(e) {
-  (0, l.openModal)(t => (0, n.jsx)(c, {
+function c(e) {
+  (0, l.openModal)(t => (0, n.jsx)(u, {
     ...t,
     ...e
   }))

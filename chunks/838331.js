@@ -22,8 +22,8 @@ var i = n("735250"),
   u = n("1561"),
   d = n("260034"),
   _ = n("742746"),
-  c = n("993365"),
-  E = n("6048"),
+  c = n("326452"),
+  E = n("993365"),
   I = n("441674"),
   T = n("689938"),
   f = n("665553");
@@ -108,7 +108,7 @@ function O(e) {
         node: n
       })
     }, []),
-    V = (0, o.default)({
+    x = (0, o.default)({
       id: G,
       isEnabled: !0,
       useVirtualFocus: !0,
@@ -116,9 +116,9 @@ function O(e) {
       scrollToEnd: k,
       setFocus: B
     }),
-    x = R ? _.ListThin : _.ListNone;
+    V = R ? _.ListThin : _.ListNone;
   return (0, i.jsx)(o.ListNavigatorProvider, {
-    navigator: V,
+    navigator: x,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
       children: e => {
         let {
@@ -135,9 +135,9 @@ function O(e) {
           "aria-owns": y,
           "aria-haspopup": "listbox",
           className: a()(f.combobox, u),
-          children: [(0, i.jsx)(E.default, {
+          children: [(0, i.jsx)(c.SearchBar, {
             autoFocus: m,
-            size: E.default.Sizes.MEDIUM,
+            size: c.SearchBar.Sizes.MEDIUM,
             placeholder: t,
             query: g,
             onChange: L,
@@ -157,7 +157,7 @@ function O(e) {
               children: [(0, i.jsx)(d.Heading, {
                 variant: "heading-md/semibold",
                 children: T.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
-              }), (0, i.jsx)(c.Text, {
+              }), (0, i.jsx)(E.Text, {
                 color: "text-muted",
                 variant: "text-md/normal",
                 children: T.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
@@ -169,7 +169,7 @@ function O(e) {
                 setSelected: l,
                 itemToString: C
               },
-              children: (0, i.jsx)(x, {
+              children: (0, i.jsx)(V, {
                 ...o,
                 style: {
                   maxHeight: 46 * O

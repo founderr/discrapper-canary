@@ -11,8 +11,8 @@ var a = s("735250"),
   r = s("392711"),
   o = s.n(r),
   u = s("442837"),
-  d = s("451478"),
-  c = s("301822"),
+  d = s("481060"),
+  c = s("451478"),
   E = s("302221"),
   _ = s("517740");
 let f = [0, .5, 1],
@@ -42,7 +42,7 @@ function C(e) {
     className: l,
     quest: r,
     useReducedMotion: o
-  } = e, h = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), C = n.useRef(null), [T, g] = n.useState(!1), A = n.useMemo(() => {
+  } = e, h = (0, u.useStateFromStores)([c.default], () => c.default.isFocused()), C = n.useRef(null), [T, g] = n.useState(!1), A = n.useMemo(() => {
     if (null == r) return null;
     let e = (0, E.hexToRgb)(r.config.colors.primary),
       t = {
@@ -67,7 +67,7 @@ function C(e) {
     }
   }) : (0, a.jsx)("div", {
     className: i()(_.lottieAnimationBackgroundWrapper, l),
-    children: (0, a.jsx)(c.default, {
+    children: (0, a.jsx)(d.LottieAnimation, {
       ref: C,
       onComplete: S,
       importData: () => A,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return x
   }
 });
 var i = s("735250");
@@ -12,15 +12,14 @@ var l = s("120356"),
   n = s("367907"),
   d = s("357352"),
   o = s("434404"),
-  u = s("976644"),
-  c = s("877453"),
-  C = s("626135"),
-  _ = s("629481"),
-  f = s("981631"),
-  h = s("689938"),
+  u = s("877453"),
+  c = s("626135"),
+  C = s("629481"),
+  _ = s("981631"),
+  f = s("689938"),
   S = s("505679");
 
-function x(e) {
+function h(e) {
   let {
     pills: t
   } = e;
@@ -36,16 +35,16 @@ function x(e) {
   })
 }
 
-function I(e) {
+function x(e) {
   let {
     guildId: t,
     showCTA: s,
     responsive: l = !0
-  } = e, I = [
-    [h.default.Messages.GUILD_STORE_PREVIEW_CHIP_ROLE_ACCESS, h.default.Messages.GUILD_STORE_PREVIEW_CHIP_GAME_TUTORIALS],
-    [h.default.Messages.GUILD_STORE_PREVIEW_CHIP_DOPE_WALLPAPERS, h.default.Messages.GUILD_STORE_PREVIEW_CHIP_PFP_ART],
-    [h.default.Messages.GUILD_STORE_PREVIEW_CHIP_FILTER_PRESETS, h.default.Messages.GUILD_STORE_PREVIEW_CHIP_SONG_DROPS],
-    [h.default.Messages.GUILD_STORE_PREVIEW_CHIP_COSPLAY_PICS, h.default.Messages.GUILD_STORE_PREVIEW_CHIP_3D_MODELS]
+  } = e, x = [
+    [f.default.Messages.GUILD_STORE_PREVIEW_CHIP_ROLE_ACCESS, f.default.Messages.GUILD_STORE_PREVIEW_CHIP_GAME_TUTORIALS],
+    [f.default.Messages.GUILD_STORE_PREVIEW_CHIP_DOPE_WALLPAPERS, f.default.Messages.GUILD_STORE_PREVIEW_CHIP_PFP_ART],
+    [f.default.Messages.GUILD_STORE_PREVIEW_CHIP_FILTER_PRESETS, f.default.Messages.GUILD_STORE_PREVIEW_CHIP_SONG_DROPS],
+    [f.default.Messages.GUILD_STORE_PREVIEW_CHIP_COSPLAY_PICS, f.default.Messages.GUILD_STORE_PREVIEW_CHIP_3D_MODELS]
   ];
   return (0, i.jsx)("div", {
     className: r()({
@@ -57,7 +56,7 @@ function I(e) {
         className: S.content,
         children: [(0, i.jsx)("div", {
           className: S.pillContainer,
-          children: I.map((e, t) => (0, i.jsx)(x, {
+          children: x.map((e, t) => (0, i.jsx)(h, {
             pills: e
           }, "pill-row-".concat(t)))
         }), (0, i.jsxs)("div", {
@@ -65,19 +64,19 @@ function I(e) {
           children: [(0, i.jsx)(a.Text, {
             variant: "text-lg/medium",
             color: "header-primary",
-            children: h.default.Messages.GUILD_STORE_PREVIEW_MURAL_TITLE
-          }), s && (0, i.jsxs)(u.default, {
+            children: f.default.Messages.GUILD_STORE_PREVIEW_MURAL_TITLE
+          }), s && (0, i.jsxs)(a.ShinyButton, {
             size: a.Button.Sizes.MEDIUM,
             className: S.getStartedButton,
             innerClassName: S.getStartedButtonContents,
-            shineSize: u.default.ShineSizes.SMALL,
+            shineSize: a.ShinyButton.ShineSizes.SMALL,
             onClick: () => {
-              C.default.track(f.AnalyticEvents.GUILD_SHOP_PREVIEW_CLICK, {
+              c.default.track(_.AnalyticEvents.GUILD_SHOP_PREVIEW_CLICK, {
                 ...(0, n.collectGuildAnalyticsMetadata)(t),
-                action_taken: _.GuildShopPreviewClickActions.GET_STARTED_CLICK
-              }), o.default.open(t, f.GuildSettingsSections.GUILD_PRODUCTS)
+                action_taken: C.GuildShopPreviewClickActions.GET_STARTED_CLICK
+              }), o.default.open(t, _.GuildSettingsSections.GUILD_PRODUCTS)
             },
-            children: [h.default.Messages.GUILD_SHOP_PREVIEW_CTA_BUTTON, (0, i.jsx)(c.default, {
+            children: [f.default.Messages.GUILD_SHOP_PREVIEW_CTA_BUTTON, (0, i.jsx)(u.default, {
               className: S.getStartedArrow
             })]
           })]

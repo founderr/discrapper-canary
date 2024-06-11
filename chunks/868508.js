@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return y
+    return x
   }
 });
 var s = a("735250");
@@ -11,102 +11,101 @@ var n = a("442837"),
   l = a("481060"),
   o = a("2052"),
   d = a("100527"),
-  c = a("906732"),
-  i = a("963249"),
+  i = a("906732"),
+  c = a("963249"),
   u = a("706454"),
   _ = a("594174"),
-  m = a("976644"),
-  E = a("626135"),
-  N = a("63063"),
-  f = a("74538"),
-  g = a("290347"),
-  h = a("474936"),
-  A = a("981631"),
-  O = a("689938"),
-  C = a("841959"),
-  p = a("913907"),
-  M = a("82341"),
-  D = a("309539"),
-  T = a("74316");
-let b = "2023_summer_bogo",
-  x = "DnkvLW5052Y";
+  m = a("626135"),
+  E = a("63063"),
+  N = a("74538"),
+  h = a("290347"),
+  g = a("474936"),
+  f = a("981631"),
+  A = a("689938"),
+  O = a("841959"),
+  C = a("913907"),
+  p = a("82341"),
+  M = a("309539"),
+  D = a("74316");
+let T = "2023_summer_bogo",
+  b = "DnkvLW5052Y";
 
-function y(e) {
+function x(e) {
   let {
     renderModalProps: t
   } = e, {
     onClose: a
-  } = t, y = (0, n.useStateFromStores)([u.default], () => u.default.locale), R = y.split("-")[0], S = {
-    url: "".concat((0, A.YOUTUBE_EMBED_URL)(x), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat("en" === R ? "0" : "1", "&cc_lang_pref=").concat("zh-CN" === y ? "zh-Hans" : "zh-TW" === y ? "zh-Hant" : R),
+  } = t, x = (0, n.useStateFromStores)([u.default], () => u.default.locale), y = x.split("-")[0], R = {
+    url: "".concat((0, f.YOUTUBE_EMBED_URL)(b), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat("en" === y ? "0" : "1", "&cc_lang_pref=").concat("zh-CN" === x ? "zh-Hans" : "zh-TW" === x ? "zh-Hant" : y),
     width: 498,
     height: 280
   }, {
-    location: v
+    location: S
   } = (0, o.useAnalyticsContext)(), {
-    analyticsLocations: L
-  } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), j = (0, f.isPremiumExactly)(G, h.PremiumTypes.TIER_2), B = (0, f.isPremium)(G) && !j;
-  return (0, s.jsx)(g.default, {
+    analyticsLocations: v
+  } = (0, i.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), L = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), G = (0, N.isPremiumExactly)(L, g.PremiumTypes.TIER_2), B = (0, N.isPremium)(L) && !G;
+  return (0, s.jsx)(h.default, {
     renderModalProps: t,
     heroArt: {
       type: "embed",
-      embed: S,
+      embed: R,
       thumbnail: {
-        url: "https://i.ytimg.com/vi/".concat(x, "/maxresdefault.jpg"),
+        url: "https://i.ytimg.com/vi/".concat(b, "/maxresdefault.jpg"),
         width: 498,
         height: 280
       },
-      href: "https://youtu.be/".concat(x)
+      href: "https://youtu.be/".concat(b)
     },
     modalDismissibleContent: r.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
-    header: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
-    subHeader: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
+    header: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
+    subHeader: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
     subHeaderExtra: () => (0, s.jsx)(l.Anchor, {
-      className: C.termsApplyAnchor,
-      href: N.default.getArticleURL(A.HelpdeskArticles.SUMMER_2023_BOGO),
+      className: O.termsApplyAnchor,
+      href: E.default.getArticleURL(f.HelpdeskArticles.SUMMER_2023_BOGO),
       children: (0, s.jsx)(l.Heading, {
         variant: "heading-md/normal",
-        className: C.termsApplyBodyText,
-        children: O.default.Messages.BOGO_TERMS_APPLY
+        className: O.termsApplyBodyText,
+        children: A.default.Messages.BOGO_TERMS_APPLY
       })
     }),
     featureCards: [{
-      header: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
-      subHeader: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
-        helpCenterLink: N.default.getArticleURL(A.HelpdeskArticles.REMIXING)
+      header: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
+      subHeader: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
+        helpCenterLink: E.default.getArticleURL(f.HelpdeskArticles.REMIXING)
       }),
-      imageSrc: p,
-      tagText: O.default.Messages.EARLY_ACCESS
+      imageSrc: C,
+      tagText: A.default.Messages.EARLY_ACCESS
     }, {
-      header: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_HEADER,
-      subHeader: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_BODY,
-      imageSrc: D
-    }, {
-      header: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_HEADER,
-      subHeader: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_BODY_FORMATTED,
+      header: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_HEADER,
+      subHeader: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_BODY,
       imageSrc: M
+    }, {
+      header: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_HEADER,
+      subHeader: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_BODY_FORMATTED,
+      imageSrc: p
     }],
-    changeLogId: b,
+    changeLogId: T,
     button: () => {
       let e = B ? "upgrade_plan_button" : "get_nitro_button",
         t = Date.now();
-      return (0, s.jsxs)(m.default, {
-        className: C.buttonWide,
-        innerClassName: C.innerButton,
+      return (0, s.jsxs)(l.ShinyButton, {
+        className: O.buttonWide,
+        innerClassName: O.innerButton,
         color: l.Button.Colors.GREEN,
         size: l.Button.Sizes.SMALL,
         onClick: () => {
-          E.default.track(A.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-            change_log_id: b,
+          m.default.track(f.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+            change_log_id: T,
             cta_type: e,
             seconds_open: Math.round((Date.now() - t) / 1e3),
             target: "bogo_payment_model"
-          }), (0, i.default)({
-            subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
-            analyticsLocations: L,
+          }), (0, c.default)({
+            subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+            analyticsLocations: v,
             analyticsObject: {
-              ...v,
-              object: A.AnalyticsObjects.BUTTON_CTA,
-              objectType: A.AnalyticsObjectTypes.TIER_2
+              ...S,
+              object: f.AnalyticsObjects.BUTTON_CTA,
+              objectType: f.AnalyticsObjectTypes.TIER_2
             },
             onClose: e => {
               e && a()
@@ -115,9 +114,9 @@ function y(e) {
         },
         children: [(0, s.jsx)("img", {
           alt: "",
-          className: C.nitroIconSubHeader,
-          src: T
-        }), O.default.Messages.BOGO_CLAIM_OFFER]
+          className: O.nitroIconSubHeader,
+          src: D
+        }), A.default.Messages.BOGO_CLAIM_OFFER]
       })
     }
   })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return j
+    return v
   }
 }), s("47120");
 var a = s("735250"),
@@ -23,17 +23,16 @@ var a = s("735250"),
   N = s("210887"),
   g = s("430824"),
   h = s("246946"),
-  C = s("186095"),
-  R = s("884737"),
-  x = s("770436"),
-  L = s("65226"),
-  O = s("689938"),
-  A = s("233324"),
+  C = s("884737"),
+  R = s("770436"),
+  x = s("65226"),
+  L = s("689938"),
+  O = s("233324"),
   p = s("84885");
-let M = s("74773"),
-  D = s("210657");
+let A = s("74773"),
+  M = s("210657");
 
-function v(e) {
+function D(e) {
   let {
     logs: t,
     guildId: s,
@@ -60,14 +59,14 @@ function v(e) {
         return (0, a.jsx)("div", {
           ref: l,
           ...r,
-          className: A.listContainer,
+          className: O.listContainer,
           children: null == t ? void 0 : t.map(e => {
             let t = n === e.id,
               l = i === e.id;
-            return (0, a.jsx)(x.default, {
+            return (0, a.jsx)(R.default, {
               guildId: s,
               ref: t ? o : l ? u : null,
-              className: A.row,
+              className: O.row,
               onHeaderClick: c,
               onContentClick: E,
               log: e,
@@ -80,7 +79,7 @@ function v(e) {
   })
 }
 
-function j() {
+function v() {
   let e, t;
   let {
     guildId: s,
@@ -88,12 +87,12 @@ function j() {
     isInitialLoading: r,
     isLoading: d,
     isLoadingNextPage: S,
-    showLoadMore: x,
-    hasError: j,
-    hasOlderLogs: G,
-    rawLogs: U,
-    theme: P,
-    hide: b
+    showLoadMore: R,
+    hasError: v,
+    hasOlderLogs: j,
+    rawLogs: G,
+    theme: U,
+    hide: P
   } = (0, c.useStateFromStoresObject)([m.default, g.default, f.default, h.default, N.default], () => {
     let e = m.default.getGuildId(),
       t = g.default.getGuild(e),
@@ -111,16 +110,16 @@ function j() {
       theme: N.default.theme,
       hide: h.default.enabled
     }
-  }), [y, B] = l.useState({
+  }), [b, y] = l.useState({
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(y), V = (0, T.default)(F), Y = () => {
+  }), B = C.transformLogs(G, n), F = !1, H = l.useRef(null), k = (0, T.default)(b), w = (0, T.default)(B), V = () => {
     var e;
-    return (null === (e = k.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
+    return (null === (e = H.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
   };
-  x || (null == F ? void 0 : F.length) === (null == V ? void 0 : V.length) || null == k || Y();
-  let W = () => {
+  R || (null == B ? void 0 : B.length) === (null == w ? void 0 : w.length) || null == H || V();
+  let Y = () => {
       let s = {
         expanded: null,
         lastExpanded: null
@@ -135,25 +134,25 @@ function j() {
       }
       return s
     },
-    z = W(),
-    K = (0, I.default)(null, () => {
+    W = Y(),
+    z = (0, I.default)(null, () => {
       let {
         expandedId: s
-      } = y;
-      null == s || H ? null != s && (H = !1) : (e = null, t = null, B(e => ({
+      } = b;
+      null == s || F ? null != s && (F = !1) : (e = null, t = null, y(e => ({
         ...e,
         expandedId: null,
         lastExpandedId: null
-      })), z = W())
+      })), W = Y())
     });
   l.useEffect(() => {
-    y.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
+    b.expandedId !== (null == k ? void 0 : k.expandedId) && K()
   }, []);
-  let Z = () => {
-      let e = k.current;
+  let K = () => {
+      let e = H.current;
       if (null == e) return;
-      let t = W(),
-        s = z;
+      let t = Y(),
+        s = W;
       if (null == t.expanded || null == t.lastExpanded || null == s.expanded || t.expanded.top < t.lastExpanded.top) return;
       let a = s.expanded.height - t.lastExpanded.height,
         l = e.getScrollerState().scrollTop - a;
@@ -161,75 +160,75 @@ function j() {
         to: l
       })
     },
-    X = s => {
+    Z = s => {
       let {
         expandedId: a
-      } = y;
-      a !== s.id ? (H = !0, B(e => ({
+      } = b;
+      a !== s.id ? (F = !0, y(e => ({
         ...e,
         expandedId: null == s ? void 0 : s.id,
         lastExpandedId: a
-      })), z = W()) : (e = null, t = null, null != a && (z = W()), B(e => ({
+      })), W = Y()) : (e = null, t = null, null != a && (W = Y()), y(e => ({
         ...e,
         expandedId: null,
         lastExpandedId: null
       })))
     },
-    Q = e => {
-      H = !0, e.stopPropagation()
+    X = e => {
+      F = !0, e.stopPropagation()
     },
-    J = () => {},
-    q = t => {
+    Q = () => {},
+    J = t => {
       e = t
     },
-    $ = e => {
+    q = e => {
       t = e
     },
-    ee = () => (0, a.jsx)(E.Spinner, {
+    $ = () => (0, a.jsx)(E.Spinner, {
       type: E.Spinner.Type.SPINNING_CIRCLE,
-      className: A.spinner
+      className: O.spinner
     });
   return (0, a.jsx)("div", {
-    ref: K,
+    ref: z,
     className: p.customColumn,
     children: (0, a.jsx)("div", {
       className: p.customContainer,
       children: (0, a.jsx)(E.AdvancedScrollerAuto, {
-        className: i()(p.customScroller, A.scroller),
+        className: i()(p.customScroller, O.scroller),
         onScroll: () => {
-          Y() && J()
+          V() && Q()
         },
-        ref: k,
+        ref: H,
         children: (0, a.jsxs)("div", {
-          className: A.content,
+          className: O.content,
           children: [(0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)("div", {
-              className: A.customHeader,
+              className: O.customHeader,
               children: (0, a.jsx)(E.FormTitle, {
                 tag: E.FormTitleTags.H1,
-                className: A.formTitle,
-                children: O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
+                className: O.formTitle,
+                children: L.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
               })
             }), (0, a.jsx)(E.FormDivider, {
-              className: A.divider
+              className: O.divider
             })]
-          }), (0, a.jsx)(L.GuildAuditLogSearch, {
-            className: A.__invalid_search
+          }), (0, a.jsx)(x.GuildAuditLogSearch, {
+            className: O.__invalid_search
           }), (() => {
-            if (b) return (0, a.jsx)(_.default, {});
-            if (d || r) return ee();
-            if ((null == F ? void 0 : F.length) === 0) {
-              let e = j ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
-                t = j ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
-              return (0, a.jsxs)(C.default, {
-                theme: P,
-                className: A.__invalid_empty,
-                children: [(0, a.jsx)(C.EmptyStateImage, {
-                  darkSrc: M,
-                  lightSrc: D,
+            if (P) return (0, a.jsx)(_.default, {});
+            if (d || r) return $();
+            if ((null == B ? void 0 : B.length) === 0) {
+              let e = v ? L.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : L.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
+                t = v ? L.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : L.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+              return (0, a.jsxs)(E.EmptyState, {
+                theme: U,
+                className: O.__invalid_empty,
+                children: [(0, a.jsx)(E.EmptyStateImage, {
+                  darkSrc: A,
+                  lightSrc: M,
                   width: 272,
                   height: 130
-                }), (0, a.jsx)(C.EmptyStateText, {
+                }), (0, a.jsx)(E.EmptyStateText, {
                   note: e,
                   style: {
                     maxWidth: 300
@@ -241,26 +240,26 @@ function j() {
             let {
               expandedId: e,
               lastExpandedId: t
-            } = y;
-            return (0, a.jsx)(v, {
-              logs: F,
+            } = b;
+            return (0, a.jsx)(D, {
+              logs: B,
               guildId: s,
               expandedId: e,
               lastExpandedId: t,
-              setExpandedRef: q,
-              setLastExpandedRef: $,
-              onHeaderClick: X,
-              onContentClick: Q,
-              scroller: k.current
+              setExpandedRef: J,
+              setLastExpandedRef: q,
+              onHeaderClick: Z,
+              onContentClick: X,
+              scroller: H.current
             })
           })(), (() => {
-            if (x && G && !b) return (0, a.jsx)(E.Button, {
+            if (R && j && !P) return (0, a.jsx)(E.Button, {
               color: E.Button.Colors.PRIMARY,
-              className: A.__invalid_loadMore,
-              onClick: J,
-              children: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
+              className: O.__invalid_loadMore,
+              onClick: Q,
+              children: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
             })
-          })(), !S || b || d ? null : ee()]
+          })(), !S || P || d ? null : $()]
         })
       })
     })

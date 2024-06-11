@@ -12,7 +12,7 @@ var i = n("735250"),
   l = n("761224"),
   u = n("898560"),
   d = n("743236"),
-  _ = n("468210"),
+  _ = n("481060"),
   c = n("692437"),
   E = n("939350"),
   I = n("768160");
@@ -91,7 +91,7 @@ function T(e) {
       className: I.iconContainer,
       children: [(0, i.jsx)(c.default, {
         className: a()(I.caret, v)
-      }), P && (0, i.jsx)(_.default, {
+      }), P && (0, i.jsx)(_.LottieSparkle, {
         className: I.sparkles
       })]
     })]

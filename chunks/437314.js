@@ -10,12 +10,11 @@ var a, s = n("735250"),
   r = n("442837"),
   o = n("481060"),
   u = n("210887"),
-  d = n("186095"),
-  c = n("981631"),
-  f = n("689938"),
-  E = n("22988");
+  d = n("981631"),
+  c = n("689938"),
+  f = n("22988");
 
-function h(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,19 +22,19 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a || (a = {})).SECTION_NO_RESULTS = "SECTION_NO_RESULTS";
-let C = Object.freeze({
+let h = Object.freeze({
     SECTION_ALL: {
       lightSrc: n("900933"),
       darkSrc: n("67764"),
       width: 376,
       height: 162,
       renderContent: e => (0, s.jsxs)(l.Fragment, {
-        children: [(0, s.jsx)(d.default.Text, {
-          note: f.default.Messages.FRIENDS_EMPTY_STATE_ALL
+        children: [(0, s.jsx)(o.EmptyStateText, {
+          note: c.default.Messages.FRIENDS_EMPTY_STATE_ALL
         }), (0, s.jsx)(o.Button, {
-          className: E.button,
+          className: f.button,
           onClick: e,
-          children: f.default.Messages.ADD_FRIEND
+          children: c.default.Messages.ADD_FRIEND
         })]
       })
     },
@@ -44,8 +43,8 @@ let C = Object.freeze({
       darkSrc: n("917847"),
       width: 421,
       height: 218,
-      renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: f.default.Messages.FRIENDS_EMPTY_STATE_ONLINE
+      renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+        note: c.default.Messages.FRIENDS_EMPTY_STATE_ONLINE
       })
     },
     SECTION_BLOCKED: {
@@ -53,8 +52,8 @@ let C = Object.freeze({
       darkSrc: n("356634"),
       width: 433,
       height: 232,
-      renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: f.default.Messages.FRIENDS_EMPTY_STATE_BLOCKED
+      renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+        note: c.default.Messages.FRIENDS_EMPTY_STATE_BLOCKED
       })
     },
     SECTION_PENDING: {
@@ -62,8 +61,8 @@ let C = Object.freeze({
       darkSrc: n("138715"),
       width: 415,
       height: 200,
-      renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: f.default.Messages.FRIENDS_EMPTY_STATE_PENDING
+      renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+        note: c.default.Messages.FRIENDS_EMPTY_STATE_PENDING
       })
     },
     SECTION_SUGGESTIONS: {
@@ -71,8 +70,8 @@ let C = Object.freeze({
       darkSrc: n("138715"),
       width: 415,
       height: 200,
-      renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: f.default.Messages.FRIENDS_EMPTY_STATE_SUGGESTIONS
+      renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+        note: c.default.Messages.FRIENDS_EMPTY_STATE_SUGGESTIONS
       })
     },
     SECTION_NO_RESULTS: {
@@ -80,30 +79,30 @@ let C = Object.freeze({
       darkSrc: n("917847"),
       width: 421,
       height: 218,
-      renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: f.default.Messages.FRIEND_REQUEST_NO_RESULTS_FOUND
+      renderContent: () => (0, s.jsx)(o.EmptyStateText, {
+        note: c.default.Messages.FRIEND_REQUEST_NO_RESULTS_FOUND
       })
     }
   }),
-  _ = e => {
+  C = e => {
     let {
       theme: t
-    } = e, n = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = C.SECTION_ALL;
+    } = e, n = c.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = h.SECTION_ALL;
     return (0, s.jsx)(l.Fragment, {
-      children: (0, s.jsxs)(d.default, {
+      children: (0, s.jsxs)(o.EmptyState, {
         theme: t,
-        children: [(0, s.jsx)(d.default.Image, {
+        children: [(0, s.jsx)(o.EmptyStateImage, {
           width: a.width,
           height: a.height,
           lightSrc: a.lightSrc,
           darkSrc: a.darkSrc
-        }), (0, s.jsx)(d.default.Text, {
+        }), (0, s.jsx)(o.EmptyStateText, {
           note: n
         })]
       })
     })
   };
-class m extends l.PureComponent {
+class _ extends l.PureComponent {
   render() {
     let {
       type: e,
@@ -113,35 +112,35 @@ class m extends l.PureComponent {
       opacity: this.state.opacity
     }, l = function(e) {
       switch (e) {
-        case c.FriendsSections.ADD_FRIEND:
-        case c.FriendsSections.ALL:
-          return C.SECTION_ALL;
-        case c.FriendsSections.ONLINE:
-          return C.SECTION_ONLINE;
-        case c.FriendsSections.PENDING:
-          return C.SECTION_PENDING;
-        case c.FriendsSections.SUGGESTIONS:
-          return C.SECTION_SUGGESTIONS;
-        case c.FriendsSections.BLOCKED:
-          return C.SECTION_BLOCKED;
+        case d.FriendsSections.ADD_FRIEND:
+        case d.FriendsSections.ALL:
+          return h.SECTION_ALL;
+        case d.FriendsSections.ONLINE:
+          return h.SECTION_ONLINE;
+        case d.FriendsSections.PENDING:
+          return h.SECTION_PENDING;
+        case d.FriendsSections.SUGGESTIONS:
+          return h.SECTION_SUGGESTIONS;
+        case d.FriendsSections.BLOCKED:
+          return h.SECTION_BLOCKED;
         case "SECTION_NO_RESULTS":
-          return C.SECTION_NO_RESULTS;
+          return h.SECTION_NO_RESULTS;
         default:
           throw Error("FriendsEmptyState: Invalid empty state")
       }
     }(e);
-    return e === c.FriendsSections.ADD_FRIEND ? (0, s.jsx)(i.default.div, {
-      className: E.friendsEmpty,
+    return e === d.FriendsSections.ADD_FRIEND ? (0, s.jsx)(i.default.div, {
+      className: f.friendsEmpty,
       style: a,
-      children: (0, s.jsx)(_, {
+      children: (0, s.jsx)(C, {
         theme: n
       })
     }) : (0, s.jsx)(i.default.div, {
-      className: E.friendsEmpty,
+      className: f.friendsEmpty,
       style: a,
-      children: (0, s.jsxs)(d.default, {
+      children: (0, s.jsxs)(o.EmptyState, {
         theme: n,
-        children: [(0, s.jsx)(d.default.Image, {
+        children: [(0, s.jsx)(o.EmptyStateImage, {
           width: l.width,
           height: l.height,
           lightSrc: l.lightSrc,
@@ -151,14 +150,14 @@ class m extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), h(this, "state", {
+    super(...e), E(this, "state", {
       opacity: new i.default.Value(1)
-    }), h(this, "componentWillEnter", e => {
+    }), E(this, "componentWillEnter", e => {
       this.state.opacity.setValue(0), i.default.timing(this.state.opacity, {
         toValue: 1,
         duration: 250
       }).start(e)
-    }), h(this, "componentWillLeave", e => {
+    }), E(this, "componentWillLeave", e => {
       i.default.timing(this.state.opacity, {
         toValue: 0,
         duration: 250
@@ -170,4 +169,4 @@ t.default = r.default.connectStores([u.default], () => ({
   theme: u.default.theme
 }), {
   forwardRef: !0
-})(m)
+})(_)

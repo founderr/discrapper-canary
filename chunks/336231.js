@@ -1,74 +1,73 @@
 "use strict";
-l.r(t), l.d(t, {
+o.r(t), o.d(t, {
   default: function() {
-    return a
+    return r
   }
-}), l("47120");
-var n = l("735250"),
-  r = l("470079"),
-  o = l("481060"),
-  s = l("703685"),
-  i = l("689938");
+}), o("47120");
+var l = o("735250"),
+  s = o("470079"),
+  u = o("481060"),
+  n = o("689938");
 
-function a(e) {
+function r(e) {
   let {
     defaultColor: t,
-    colors: l,
-    value: a,
-    onChange: c,
-    disabled: u = !1,
-    customPickerPosition: d = "bottom"
-  } = e, [h, f] = r.useState(() => 0 === a || a === t || l.some(e => e === a) ? null : a);
-  r.useEffect(() => {
-    f(0 === a || a === t || l.some(e => e === a) ? null : a)
-  }, [a, l, t]);
-  let C = r.useCallback(e => {
-      null == c || c(e), f(null)
-    }, [c, f]),
-    p = r.useCallback(e => {
-      null == c || c(e), f(e)
-    }, [c, f]),
-    x = r.useCallback(() => (0, n.jsx)(s.CustomColorPicker, {
-      onChange: p,
-      value: h
-    }), [p, h]),
-    m = r.useCallback(e => {
-      let t = (0, n.jsx)(s.CustomColorButton, {
+    colors: o,
+    value: r,
+    onChange: a,
+    disabled: i = !1,
+    customPickerPosition: c = "bottom"
+  } = e, [C, d] = s.useState(() => 0 === r || r === t || o.some(e => e === r) ? null : r);
+  s.useEffect(() => {
+    d(0 === r || r === t || o.some(e => e === r) ? null : r)
+  }, [r, o, t]);
+  let p = s.useCallback(e => {
+      null == a || a(e), d(null)
+    }, [a, d]),
+    k = s.useCallback(e => {
+      null == a || a(e), d(e)
+    }, [a, d]),
+    h = s.useCallback(() => (0, l.jsx)(u.CustomColorPicker, {
+      onChange: k,
+      value: C
+    }), [k, C]),
+    b = s.useCallback(e => {
+      let t = (0, l.jsx)(u.ColorPickerCustomButton, {
         ...e,
-        "aria-label": i.default.Messages.CUSTOM_COLOR
+        "aria-label": n.default.Messages.CUSTOM_COLOR
       });
-      return u ? t : (0, n.jsx)(o.Popout, {
-        renderPopout: x,
-        position: d,
-        children: e => (0, n.jsx)(o.Tooltip, {
-          text: i.default.Messages.CUSTOM_COLOR,
+      return i ? t : (0, l.jsx)(u.Popout, {
+        renderPopout: h,
+        position: c,
+        children: e => (0, l.jsx)(u.Tooltip, {
+          text: n.default.Messages.CUSTOM_COLOR,
           position: "bottom",
-          children: l => (0, n.jsx)("div", {
-            ...l,
+          children: o => (0, l.jsx)("div", {
+            ...o,
             ...e,
             children: t
           })
         })
       })
-    }, [d, u, x]),
-    g = r.useCallback(e => {
-      let t = (0, n.jsx)(s.DefaultColorButton, {
+    }, [c, i, h]),
+    f = s.useCallback(e => {
+      let t = (0, l.jsx)(u.ColorPickerDefaultButton, {
         ...e
       });
-      return u ? t : (0, n.jsx)(o.Tooltip, {
-        text: i.default.Messages.DEFAULT,
+      return i ? t : (0, l.jsx)(u.Tooltip, {
+        text: n.default.Messages.DEFAULT,
         position: "bottom",
-        children: e => (0, n.jsx)("div", {
+        children: e => (0, l.jsx)("div", {
           ...e,
           children: t
         })
       })
-    }, [u]);
-  return (0, n.jsx)(s.default, {
+    }, [i]);
+  return (0, l.jsx)(u.ColorPicker, {
     ...e,
-    renderDefaultButton: g,
-    renderCustomButton: m,
-    customColor: h,
-    onChange: C
+    renderDefaultButton: f,
+    renderCustomButton: b,
+    customColor: C,
+    onChange: p
   })
 }

@@ -19,15 +19,13 @@ var l, a = n("735250"),
   _ = n("594174"),
   I = n("451478"),
   N = n("880080"),
-  T = n("26290"),
-  A = n("15434"),
-  L = n("682662"),
-  v = n("662146"),
-  x = n("674552"),
-  R = n("981631"),
-  M = n("134751");
+  T = n("682662"),
+  A = n("662146"),
+  L = n("674552"),
+  v = n("981631"),
+  x = n("134751");
 
-function y(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,27 +33,27 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let O = {
+let M = {
   friction: 28,
   tension: 600
 };
 
-function b(e) {
+function y(e) {
   switch (e) {
     case "height":
     case "opacity":
       return {
-        duration: 150, ...O
+        duration: 150, ...M
       };
     case "scale":
       return {
-        ...O
+        ...M
       };
     default:
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
   }
 }
-class D extends(l = s.PureComponent) {
+class O extends(l = s.PureComponent) {
   componentWillEnter(e) {
     let {
       controller: t
@@ -65,7 +63,7 @@ class D extends(l = s.PureComponent) {
       height: 1,
       opacity: 1,
       scale: 1,
-      config: b
+      config: y
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -79,7 +77,7 @@ class D extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: b
+      config: y
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -93,7 +91,7 @@ class D extends(l = s.PureComponent) {
       height: 0,
       opacity: 0,
       scale: 0,
-      config: b
+      config: y
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -116,7 +114,7 @@ class D extends(l = s.PureComponent) {
   getChannelIcon() {
     let {
       channel: e
-    } = this.props, t = e.type === R.ChannelTypes.DM ? _.default.getUser(e.getRecipientId()) : null;
+    } = this.props, t = e.type === v.ChannelTypes.DM ? _.default.getUser(e.getRecipientId()) : null;
     return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, f.getChannelIconURL)(e)
   }
   render() {
@@ -137,29 +135,29 @@ class D extends(l = s.PureComponent) {
     } = this.state, g = e.isMultiUserDM() && null == e.icon && h;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
-      children: (0, a.jsxs)(L.ListItem, {
+      children: (0, a.jsxs)(T.ListItem, {
         children: [(0, a.jsx)(N.default, {
           hovered: !p && m,
           selected: !p && n,
           unread: !p && f,
-          className: M.pill
-        }), (0, a.jsx)(v.default, {
+          className: x.pill
+        }), (0, a.jsx)(A.default, {
           text: null != t ? t : "",
           selected: n,
           children: (0, a.jsx)(u.BlobMask, {
             selected: n || m,
-            lowerBadge: l > 0 ? (0, x.renderMentionBadge)(l) : null,
-            upperBadge: (0, x.renderMediaBadge)({
+            lowerBadge: l > 0 ? (0, L.renderMentionBadge)(l) : null,
+            upperBadge: (0, L.renderMediaBadge)({
               audio: s,
               video: o,
               screenshare: d,
               isCurrentUserConnected: c
             }),
-            lowerBadgeWidth: (0, T.getBadgeWidthForValue)(l),
+            lowerBadgeWidth: (0, u.getBadgeWidthForValue)(l),
             children: (0, a.jsx)(r.ListNavigatorItem, {
               id: e.id,
-              children: l => (0, a.jsx)(A.default, {
-                to: R.Routes.CHANNEL(R.ME, e.id),
+              children: l => (0, a.jsx)(u.NavItem, {
+                to: v.Routes.CHANNEL(v.ME, e.id),
                 onMouseEnter: () => this.setState({
                   hovered: !0
                 }),
@@ -187,19 +185,19 @@ class D extends(l = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), y(this, "state", {
+    super(...e), R(this, "state", {
       hovered: !1,
       animating: !0,
       controller: new i.Controller({
         scale: 0,
         height: 0,
         opacity: 0,
-        config: b
+        config: y
       })
-    }), y(this, "handleContextMenu", e => {
+    }), R(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, l = t.type === R.ChannelTypes.DM ? _.default.getUser(t.getRecipientId()) : null;
+      } = this.props, l = t.type === v.ChannelTypes.DM ? _.default.getUser(t.getRecipientId()) : null;
       null != l ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -222,7 +220,7 @@ class D extends(l = s.PureComponent) {
     })
   }
 }
-y(D, "defaultProps", {
+R(O, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -231,7 +229,7 @@ y(D, "defaultProps", {
   let n = e.channel.id,
     l = (0, h.default)(e.channel),
     s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
-    i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
+    i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : v.ChannelModes.VOICE, [s]),
     r = (0, o.useStateFromStores)([p.default], () => p.default.getAllApplicationStreamsForChannel(n).length > 0),
     u = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
@@ -245,7 +243,7 @@ y(D, "defaultProps", {
     C = s === n,
     _ = !1,
     I = !1;
-  return C && (_ = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(D, {
+  return C && (_ = i === v.ChannelModes.VOICE, I = i === v.ChannelModes.VIDEO), (0, a.jsx)(O, {
     ...e,
     ref: t,
     channelName: l,

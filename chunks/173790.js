@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("411104");
 var i = n("735250");
@@ -10,49 +10,48 @@ var r = n("481060"),
   s = n("127255"),
   a = n("361213"),
   o = n("778569"),
-  l = n("682864"),
-  u = n("783097"),
-  d = n("377658"),
-  _ = n("387658"),
-  c = n("536650"),
-  E = n("675993"),
-  I = n("564446");
+  l = n("783097"),
+  u = n("377658"),
+  d = n("387658"),
+  _ = n("536650"),
+  c = n("675993"),
+  E = n("564446");
 
-function T(e) {
+function I(e) {
   let {
     channel: t,
     application: n,
     sectionName: s
-  } = e, a = (0, u.isEmbeddedApp)({
+  } = e, a = (0, l.isEmbeddedApp)({
     application: n
   });
-  if (!(0, u.isRealApplication)(n)) throw Error("AppLauncherApplicationViewScreen was passed the Built-in App, which is not supported.");
+  if (!(0, l.isRealApplication)(n)) throw Error("AppLauncherApplicationViewScreen was passed the Built-in App, which is not supported.");
   return (0, i.jsxs)(r.ScrollerNone, {
-    className: I.container,
+    className: E.container,
     fade: !0,
-    children: [(0, i.jsx)(a ? h : A, {
+    children: [(0, i.jsx)(a ? S : h, {
       application: n
     }), (0, i.jsx)("div", {
-      children: (0, i.jsx)(d.default, {
+      children: (0, i.jsx)(u.default, {
         application: n,
-        className: I.activityIcon,
+        className: E.activityIcon,
         width: 80,
         height: 80
       })
-    }), (0, i.jsx)(l.default, {
+    }), (0, i.jsx)(r.Spacer, {
       size: 54
-    }), (0, i.jsx)(a ? f : S, {
+    }), (0, i.jsx)(a ? T : f, {
       channel: t,
       application: n,
       sectionName: s
-    }), (0, i.jsx)(_.default, {
+    }), (0, i.jsx)(d.default, {
       channel: t,
       application: n
     })]
   })
 }
 
-function f(e) {
+function T(e) {
   let {
     channel: t,
     application: n,
@@ -65,7 +64,7 @@ function f(e) {
     size: 2048,
     names: ["embedded_cover"]
   }), d = null != l && null != l.activity.activity_preview_video_asset_id ? (0, a.default)(n.id, l.activity.activity_preview_video_asset_id) : null;
-  return (0, i.jsx)(E.default, {
+  return (0, i.jsx)(c.default, {
     channel: t,
     application: n,
     imageCoverUrl: u.url,
@@ -74,20 +73,20 @@ function f(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   let {
     channel: t,
     application: n,
     sectionName: r
   } = e;
-  return (0, i.jsx)(E.default, {
+  return (0, i.jsx)(c.default, {
     channel: t,
     application: n,
     sectionName: r
   })
 }
 
-function h(e) {
+function S(e) {
   let {
     application: t
   } = e, n = (0, o.default)({
@@ -95,17 +94,17 @@ function h(e) {
     size: 2048,
     names: ["embedded_background"]
   });
-  return (0, i.jsx)(c.default, {
+  return (0, i.jsx)(_.default, {
     application: t,
     imageUrl: n.url
   })
 }
 
-function A(e) {
+function h(e) {
   let {
     application: t
   } = e;
-  return (0, i.jsx)(c.default, {
+  return (0, i.jsx)(_.default, {
     application: t
   })
 }

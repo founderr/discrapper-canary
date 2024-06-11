@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return I
   }
 });
 var a = s("735250"),
@@ -12,54 +12,53 @@ var a = s("735250"),
   o = s("481060"),
   d = s("987997"),
   u = s("78839"),
-  c = s("682864"),
-  S = s("981631"),
-  E = s("689938"),
-  T = s("535273"),
-  _ = s("822293"),
-  I = s("845904");
+  c = s("981631"),
+  S = s("689938"),
+  E = s("535273"),
+  T = s("822293"),
+  _ = s("845904");
 
-function N(e) {
+function I(e) {
   let {
     onClickManageSubscription: t
-  } = e, s = (0, r.useStateFromStores)([u.default], () => u.default.getSubscriptions()), i = n.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === S.SubscriptionTypes.APPLICATION && e.status !== S.SubscriptionStatusTypes.ENDED), [s]);
+  } = e, s = (0, r.useStateFromStores)([u.default], () => u.default.getSubscriptions()), i = n.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === c.SubscriptionTypes.APPLICATION && e.status !== c.SubscriptionStatusTypes.ENDED), [s]);
   return 0 === i.length ? null : (0, a.jsxs)("div", {
-    className: T.container,
+    className: E.container,
     children: [(0, a.jsx)(o.Heading, {
       variant: "heading-md/semibold",
-      className: T.__invalid_sectionTitle,
-      children: E.default.Messages.APPLICATION_USER_SUBSCRIPTIONS_TITLE
-    }), (0, a.jsx)(c.default, {
+      className: E.__invalid_sectionTitle,
+      children: S.default.Messages.APPLICATION_USER_SUBSCRIPTIONS_TITLE
+    }), (0, a.jsx)(o.Spacer, {
       size: 4
     }), (0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
-      className: T.sectionDescription,
-      children: E.default.Messages.APPLICATION_USER_SUBSCRIPTIONS_DESCRIPTION
-    }), (0, a.jsx)(c.default, {
+      className: E.sectionDescription,
+      children: S.default.Messages.APPLICATION_USER_SUBSCRIPTIONS_DESCRIPTION
+    }), (0, a.jsx)(o.Spacer, {
       size: 24
     }), (0, a.jsxs)("div", {
-      className: l()(_.guildBoostingSubscriptionRow, T.card),
+      className: l()(T.guildBoostingSubscriptionRow, E.card),
       children: [(0, a.jsx)("img", {
-        src: I,
+        src: _,
         alt: "",
-        className: T.bannerImage
+        className: E.bannerImage
       }), (0, a.jsxs)("div", {
-        className: T.textContainer,
+        className: E.textContainer,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
-          className: T.header,
-          children: E.default.Messages.APPLICATION_USER_SUBSCRIPTIONS_TITLE
+          className: E.header,
+          children: S.default.Messages.APPLICATION_USER_SUBSCRIPTIONS_TITLE
         }), (0, a.jsx)(o.Text, {
           variant: "text-md/normal",
-          className: T.description,
-          children: E.default.Messages.APPLICATION_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({
+          className: E.description,
+          children: S.default.Messages.APPLICATION_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({
             numSubscriptions: i.length
           })
         })]
       }), (0, a.jsx)(d.default, {
         color: o.Button.Colors.BRAND,
         onClick: t,
-        children: E.default.Messages.APPLICATION_MANAGE_SUBSCRIPTIONS_BUTTON
+        children: S.default.Messages.APPLICATION_MANAGE_SUBSCRIPTIONS_BUTTON
       })]
     })]
   })

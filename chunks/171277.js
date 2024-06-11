@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return f
   }
 });
 var a = n("735250");
@@ -12,17 +12,16 @@ var l = n("120356"),
   r = n("481060"),
   o = n("607070"),
   u = n("254238"),
-  d = n("301822"),
-  c = n("689938"),
-  f = n("582575");
+  d = n("689938"),
+  c = n("582575");
 
-function h(e) {
+function f(e) {
   let {
     height: t
   } = e, l = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   return (0, a.jsxs)("div", {
-    className: f.root,
-    children: [(0, a.jsx)(d.default, {
+    className: c.root,
+    children: [(0, a.jsx)(r.LottieAnimation, {
       importData: () => n.e("70036").then(n.t.bind(n, "141923", 19)).then(e => {
         let {
           default: t
@@ -30,17 +29,17 @@ function h(e) {
         return t
       }),
       shouldAnimate: !l,
-      className: s()(f.art, {
-        [f.hidden]: t <= 280
+      className: s()(c.art, {
+        [c.hidden]: t <= 280
       })
     }), (0, a.jsx)(r.Heading, {
-      className: f.header,
+      className: c.header,
       variant: "heading-md/bold",
-      children: c.default.Messages.PLAYSTATION_TRANSFERRING
+      children: d.default.Messages.PLAYSTATION_TRANSFERRING
     }), (0, a.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: c.default.Messages.CONSOLE_TRANSFERRING_SUBTITLE.format({
+      children: d.default.Messages.CONSOLE_TRANSFERRING_SUBTITLE.format({
         onCancel: u.disconnectRemote
       })
     })]

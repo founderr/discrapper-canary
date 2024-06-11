@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CollectiblesShopButton: function() {
-    return b
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -22,25 +22,24 @@ var a = n("735250"),
   S = n("377171"),
   p = n("633302"),
   I = n("126900"),
-  g = n("26290"),
-  T = n("153066"),
-  A = n("335131"),
-  N = n("141594"),
-  v = n("302800"),
-  R = n("981631"),
-  O = n("689938"),
-  L = n("858666");
-let P = e => {
+  g = n("153066"),
+  T = n("335131"),
+  A = n("141594"),
+  N = n("302800"),
+  v = n("981631"),
+  R = n("689938"),
+  O = n("858666");
+let L = e => {
     let {
       color: t
     } = e;
-    return (0, a.jsx)(g.TextBadge, {
-      className: L.newBadge,
+    return (0, a.jsx)(d.TextBadge, {
+      className: O.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
-      text: O.default.Messages.NEW
+      text: R.default.Messages.NEW
     })
   },
-  M = e => {
+  P = e => {
     let {
       selected: t,
       locationState: n,
@@ -50,16 +49,16 @@ let P = e => {
       ...u
     } = e, d = (0, r.useListItem)("shop"), c = C.default.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: E
-    } = (0, _.default)(c), h = s.useCallback(() => (0, A.openCollectiblesShop)({
+    } = (0, _.default)(c), h = s.useCallback(() => (0, T.openCollectiblesShop)({
       openInLayer: !1,
       analyticsSource: c,
       analyticsLocations: E
     }), [c, E]);
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
-      route: R.Routes.COLLECTIBLES_SHOP,
+      route: v.Routes.COLLECTIBLES_SHOP,
       icon: I.default,
-      text: O.default.Messages.COLLECTIBLES_SHOP,
+      text: R.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,
       ...u,
@@ -75,30 +74,30 @@ let P = e => {
       assetId: n
     } = e, s = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), l = null != n ? (0, m.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
     return (0, a.jsxs)("div", {
-      className: L.shopMarketingTooltipContent,
+      className: O.shopMarketingTooltipContent,
       children: [(0, a.jsx)("div", {
-        className: L.avatarContainer,
+        className: O.avatarContainer,
         children: (0, a.jsx)(d.Avatar, {
-          className: L.avatar,
+          className: O.avatar,
           src: t.imageSrc,
           avatarDecoration: l,
           size: d.AvatarSizes.SIZE_80,
           "aria-hidden": !0
         })
       }), (0, a.jsxs)("div", {
-        className: L.shopMarketingTooltipText,
+        className: O.shopMarketingTooltipText,
         children: [(0, a.jsx)(d.Heading, {
           variant: "heading-sm/bold",
           children: t.title()
         }), null != t.body && (0, a.jsx)(d.Text, {
           variant: "text-xs/normal",
-          className: L.marketingBadgeTooltipContent,
+          className: O.marketingBadgeTooltipContent,
           children: t.body()
         })]
       })]
     })
   }),
-  D = e => {
+  M = e => {
     let {
       selected: t,
       locationState: n,
@@ -113,14 +112,14 @@ let P = e => {
         displayOptions: l,
         assetId: l.assetIds[r]
       }),
-      tooltipClassName: L.marketingBadgeTooltip,
+      tooltipClassName: O.marketingBadgeTooltip,
       position: "right",
       delay: 100,
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsxs)(M, {
-        className: null != l.entryPointClassName ? (0, T.getClass)(L, l.entryPointClassName) : void 0,
+      children: e => (0, a.jsxs)(P, {
+        className: null != l.entryPointClassName ? (0, g.getClass)(O, l.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
         ...e,
@@ -128,18 +127,18 @@ let P = e => {
         onMouseLeave: () => m(e.onMouseLeave),
         children: [null != C && (0, a.jsx)("img", {
           src: (0, u.isThemeDark)(h) ? C.srcDark : C.srcLight,
-          className: i()(L.marketingButtonImage, {
-            [L.marketingButtonImageHovered]: c
+          className: i()(O.marketingButtonImage, {
+            [O.marketingButtonImageHovered]: c
           }),
           alt: "",
           "aria-hidden": !0
-        }), (0, a.jsx)(P, {
+        }), (0, a.jsx)(L, {
           color: l.badgeColor
         })]
       })
     })
   },
-  x = e => {
+  D = e => {
     let {
       selected: t,
       locationState: n,
@@ -149,7 +148,7 @@ let P = e => {
       let t = null != l.emojiName ? null === (e = p.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, a.jsxs)(d.Text, {
         variant: "text-sm/medium",
-        className: L.marketingBadgeTooltipContent,
+        className: O.marketingBadgeTooltipContent,
         children: [null != t && (0, a.jsx)(c.default, {
           emojiName: t
         }), l.title()]
@@ -157,43 +156,43 @@ let P = e => {
     }, [l]);
     return (0, a.jsx)(d.Tooltip, {
       text: i,
-      tooltipClassName: L.marketingBadgeTooltip,
+      tooltipClassName: O.marketingBadgeTooltip,
       position: "right",
       delay: 100,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsx)(M, {
+      children: e => (0, a.jsx)(P, {
         selected: t,
         locationState: n,
         ...e,
-        children: (0, a.jsx)(P, {
+        children: (0, a.jsx)(L, {
           color: l.badgeColor
         })
       })
     })
   },
-  b = e => {
+  x = e => {
     let {
       selected: t,
       locationState: n
     } = e, {
       collectiblesShopTabNewBadgeDisplayOptions: s
-    } = (0, N.default)();
+    } = (0, A.default)();
     if (null != s) switch (s.type) {
-      case v.CollectiblesMarketingVariant.TOOLTIP:
-        return (0, a.jsx)(x, {
+      case N.CollectiblesMarketingVariant.TOOLTIP:
+        return (0, a.jsx)(D, {
           selected: t,
           locationState: n,
           displayOptions: s
         });
-      case v.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(D, {
+      case N.CollectiblesMarketingVariant.COACHTIP:
+        return (0, a.jsx)(M, {
           selected: t,
           locationState: n,
           displayOptions: s
         })
     }
-    return (0, a.jsx)(M, {
+    return (0, a.jsx)(P, {
       selected: t,
       locationState: n
     })

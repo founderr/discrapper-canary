@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   useCustomNotificationNewBadge: function() {
-    return R
-  },
-  useCustomNotificationSoundDMContextMenuItem: function() {
     return U
   },
-  useCustomNotificationSoundGuildContextMenuItem: function() {
+  useCustomNotificationSoundDMContextMenuItem: function() {
     return x
+  },
+  useCustomNotificationSoundGuildContextMenuItem: function() {
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -21,88 +21,87 @@ var a = n("735250"),
   c = n("594174"),
   f = n("672752"),
   S = n("466111"),
-  _ = n("26290"),
-  M = n("74538"),
-  E = n("759198"),
-  I = n("11352"),
-  m = n("213931"),
-  T = n("767157"),
-  C = n("112440"),
-  g = n("671105"),
-  N = n("552958"),
-  A = n("981631"),
-  p = n("921944"),
-  v = n("871465"),
-  h = n("689938"),
-  O = n("621917");
+  _ = n("74538"),
+  M = n("759198"),
+  E = n("11352"),
+  I = n("213931"),
+  m = n("767157"),
+  T = n("112440"),
+  C = n("671105"),
+  g = n("552958"),
+  N = n("981631"),
+  A = n("921944"),
+  p = n("871465"),
+  v = n("689938"),
+  h = n("621917");
 
-function x(e, t) {
-  let n = I.CustomNotificationSoundExperiment.useExperiment({
+function O(e, t) {
+  let n = E.CustomNotificationSoundExperiment.useExperiment({
       location: "guild_context_menu"
     }, {
       autoTrackExposure: !0
     }),
-    u = F(e, void 0, s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, n.nestedEntry ? "trailing" : "top"),
+    u = R(e, void 0, s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, n.nestedEntry ? "trailing" : "top"),
     l = n.nestedEntry && t || !n.nestedEntry && !t;
   return (0, a.jsx)(a.Fragment, {
     children: l && u
   })
 }
 
-function U(e, t, n) {
-  return F(e, t, s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE, n)
+function x(e, t, n) {
+  return R(e, t, s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE, n)
 }
 
-function R() {
-  let e = I.CustomNotificationSoundExperiment.useExperiment({
+function U() {
+  let e = E.CustomNotificationSoundExperiment.useExperiment({
       location: "guild_context_menu"
     }, {
       autoTrackExposure: !0
     }),
     [t] = (0, d.useGetDismissibleContent)([s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]);
   return (0, a.jsx)(a.Fragment, {
-    children: e.enabled && e.nestedEntry && t === s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE && (0, a.jsx)(_.TextBadge, {
-      className: O.newBadge,
-      text: h.default.Messages.NEW
+    children: e.enabled && e.nestedEntry && t === s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE && (0, a.jsx)(r.TextBadge, {
+      className: h.newBadge,
+      text: v.default.Messages.NEW
     })
   })
 }
 
-function F(e, t, s, x) {
-  var U, R;
-  let F = (0, g.useGuildCustomNotificationSound)(e),
-    D = (0, g.useChannelCustomNotificationSound)(e, t),
-    b = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
-    G = (0, i.useStateFromStores)([o.default], () => o.default.isMuted(e), [e]),
-    j = M.default.canUseCustomNotificationSounds(b),
-    y = j ? null != D ? D : F : v.Soundpacks.CLASSIC,
-    L = I.CustomNotificationSoundExperiment.useExperiment({
+function R(e, t, s, O) {
+  var x, U;
+  let R = (0, C.useGuildCustomNotificationSound)(e),
+    F = (0, C.useChannelCustomNotificationSound)(e, t),
+    D = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
+    b = (0, i.useStateFromStores)([o.default], () => o.default.isMuted(e), [e]),
+    G = _.default.canUseCustomNotificationSounds(D),
+    j = G ? null != F ? F : R : p.Soundpacks.CLASSIC,
+    y = E.CustomNotificationSoundExperiment.useExperiment({
       location: "guild_context_menu"
     }, {
       autoTrackExposure: !0
     }).enabled,
-    [P, V] = u.useState(!1),
+    [L, P] = u.useState(!1),
     {
-      playSound: k
-    } = (0, N.default)(),
-    [B, W] = (0, d.useGetDismissibleContent)([s]),
-    w = B === s;
+      playSound: V
+    } = (0, g.default)(),
+    [k, B] = (0, d.useGetDismissibleContent)([s]),
+    W = k === s;
   if (u.useEffect(() => () => {
-      P && W(p.ContentDismissActionType.TAKE_ACTION)
-    }, [P, W]), !L) return null;
-  let Y = n => {
-      if (k(n), W(p.ContentDismissActionType.TAKE_ACTION), !j && n !== v.Soundpacks.CLASSIC) {
-        (0, T.default)(n, "contextMenu"), (0, C.default)();
+      L && B(A.ContentDismissActionType.TAKE_ACTION)
+    }, [L, B]), !y) return null;
+  let w = n => {
+      if (V(n), B(A.ContentDismissActionType.TAKE_ACTION), !G && n !== p.Soundpacks.CLASSIC) {
+        (0, m.default)(n, "contextMenu"), (0, T.default)();
         return
       }
-      null != t ? (0, m.updateChannelCustomNotificationSound)(e, t, y, n, "contextMenu") : (0, m.updateGuildCustomNotificationSound)(e, y, n, "contextMenu")
+      null != t ? (0, I.updateChannelCustomNotificationSound)(e, t, j, n, "contextMenu") : (0, I.updateGuildCustomNotificationSound)(e, j, n, "contextMenu")
     },
-    K = j ? r.Text : E.default,
-    q = (0, v.getCustomNotificationSoundpackOptions)(),
-    H = null !== (R = null === (U = q.find(e => e.value === y)) || void 0 === U ? void 0 : U.label) && void 0 !== R ? R : h.default.Messages.SOUNDPACK_DEFAULT_LABEL,
-    z = (0, a.jsx)(_.TextBadge, {
-      className: O.newBadge,
-      text: h.default.Messages.NEW
+    Y = G ? r.Text : M.default,
+    K = (0, p.getCustomNotificationSoundpackOptions)(),
+    q = null !== (U = null === (x = K.find(e => e.value === j)) || void 0 === x ? void 0 : x.label) && void 0 !== U ? U : v.default.Messages.SOUNDPACK_DEFAULT_LABEL,
+    H = (0, a.jsx)(r.TextBadge, {
+      className: h.newBadge,
+      text: v.default.Messages.NEW
     });
   return (0, a.jsx)(r.MenuItem, {
     id: "notification-sounds",
@@ -110,35 +109,35 @@ function F(e, t, s, x) {
       let {
         isFocused: t
       } = e;
-      return t && V(t), (0, a.jsxs)("div", {
-        className: O.rootContainer,
+      return t && P(t), (0, a.jsxs)("div", {
+        className: h.rootContainer,
         children: [(0, a.jsxs)("div", {
-          children: [w && "top" === x && z, (0, a.jsxs)("div", {
-            className: O.headerContainer,
-            children: [(0, a.jsx)(K, {
-              className: O.text,
+          children: [W && "top" === O && H, (0, a.jsxs)("div", {
+            className: h.headerContainer,
+            children: [(0, a.jsx)(Y, {
+              className: h.text,
               color: t ? "always-white" : void 0,
               variant: "text-sm/medium",
-              children: h.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
+              children: v.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
             }), (0, a.jsx)(S.default, {
-              className: O.nitroWheel,
-              color: t ? "white" : j ? void 0 : f.GradientCssUrls.PREMIUM_TIER_2,
+              className: h.nitroWheel,
+              color: t ? "white" : G ? void 0 : f.GradientCssUrls.PREMIUM_TIER_2,
               width: 16,
               height: 16
             })]
-          }), null != H && (0, a.jsx)(K, {
-            className: O.text,
+          }), null != q && (0, a.jsx)(Y, {
+            className: h.text,
             color: t ? "always-white" : void 0,
             variant: "text-xs/normal",
-            children: H
+            children: q
           })]
-        }), w && "trailing" === x && z]
+        }), W && "trailing" === O && H]
       })
     },
-    action: e !== A.ZERO_STRING_GUILD_ID ? () => (0, r.openModalLazy)(async () => {
+    action: e !== N.ZERO_STRING_GUILD_ID ? () => (0, r.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("86977"), n.e("5863"), n.e("86426")]).then(n.bind(n, "751212"));
+      } = await Promise.all([n.e("99387"), n.e("86977"), n.e("5863"), n.e("49956")]).then(n.bind(n, "751212"));
       return n => (0, a.jsx)(t, {
         ...n,
         guildId: e
@@ -146,13 +145,13 @@ function F(e, t, s, x) {
     }) : void 0,
     hasSubmenu: !0,
     children: (0, a.jsxs)(r.MenuGroup, {
-      children: [q.map((e, t) => (0, a.jsxs)(u.Fragment, {
-        children: [j || e.value === v.Soundpacks.CLASSIC ? (0, a.jsx)(r.MenuRadioItem, {
+      children: [K.map((e, t) => (0, a.jsxs)(u.Fragment, {
+        children: [G || e.value === p.Soundpacks.CLASSIC ? (0, a.jsx)(r.MenuRadioItem, {
           id: e.label,
           group: "notification-preset",
-          checked: (null != y ? y : v.Soundpacks.CLASSIC) === e.value,
+          checked: (null != j ? j : p.Soundpacks.CLASSIC) === e.value,
           label: e.label,
-          action: () => Y(e.value)
+          action: () => w(e.value)
         }) : (0, a.jsx)(r.MenuItem, {
           id: e.label,
           label: t => {
@@ -160,26 +159,26 @@ function F(e, t, s, x) {
               isFocused: n
             } = t;
             return (0, a.jsxs)("div", {
-              className: O.labelContainer,
-              children: [(0, a.jsx)(E.default, {
+              className: h.labelContainer,
+              children: [(0, a.jsx)(M.default, {
                 color: n ? "always-white" : void 0,
                 variant: "text-sm/medium",
                 children: e.label
               }), (0, a.jsx)(l.CirclePlayIcon, {
-                className: O.playButton,
+                className: h.playButton,
                 color: n ? r.tokens.colors.INTERACTIVE_ACTIVE : r.tokens.colors.INTERACTIVE_NORMAL
               })]
             })
           },
-          action: () => Y(e.value)
-        }), e.value === v.Soundpacks.CLASSIC ? (0, a.jsx)(r.MenuSeparator, {}) : null]
-      }, t)), G && (0, a.jsxs)(a.Fragment, {
+          action: () => w(e.value)
+        }), e.value === p.Soundpacks.CLASSIC ? (0, a.jsx)(r.MenuSeparator, {}) : null]
+      }, t)), b && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(r.MenuSeparator, {}), (0, a.jsx)(r.MenuItem, {
           id: "label",
           label: (0, a.jsx)(r.Text, {
-            className: O.mutedLabel,
+            className: h.mutedLabel,
             variant: "text-sm/medium",
-            children: h.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_WARNING
+            children: v.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_WARNING
           })
         })]
       })]
