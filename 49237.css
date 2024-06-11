@@ -20801,7 +20801,8 @@ strong {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px
+    gap: 12px;
+    max-width: 100%
 }
 
 .inlineForwardOnHover__5cbf1 {
