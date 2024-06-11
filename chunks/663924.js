@@ -94,7 +94,8 @@ t.default = r.memo(function(e) {
     case f.HistoryItemType.APPLICATION:
       t = (0, i.jsx)(S.default, {
         channel: s,
-        application: G.application
+        application: G.application,
+        sectionName: G.sectionName
       });
       break;
     default:

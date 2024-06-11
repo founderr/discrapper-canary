@@ -28,7 +28,7 @@ function _(e) {
       type: u.HistoryItemType.APPLICATION,
       application: _.application
     })
-  }, [_, c]);
+  }, [_.application, c]);
   return (0, i.jsxs)("li", {
     className: d.application,
     onClick: T,
