@@ -78,26 +78,27 @@ function E(e, t, n) {
 function I(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return function(e, t, n) {
+    var s;
     let {
-      toAST: s = !1,
-      hideSimpleEmbedContent: a = !0,
-      formatInline: l = !1,
-      postProcessor: c,
-      shouldFilterKeywords: E,
-      contentMessage: I
-    } = n, T = !1, h = (null != I ? I : t).content, A = e(E ? (0, r.getKeywordSubstitutedContent)(h, {
+      toAST: a = !1,
+      hideSimpleEmbedContent: l = !0,
+      formatInline: c = !1,
+      postProcessor: E,
+      shouldFilterKeywords: I,
+      contentMessage: T
+    } = n, h = !1, A = (null != T ? T : t).content, m = e(I ? (0, r.getKeywordSubstitutedContent)(A, {
       escapeReplacement: !0,
       messageId: t.id,
       channelId: t.channel_id,
-      authorId: t.author.id
-    }) : h, !0, _(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), a && (e = function(e, t) {
+      authorId: null === (s = t.author) || void 0 === s ? void 0 : s.id
+    }) : A, !0, _(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), l && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         i = t[0];
       return ("link" === n.type || "attachmentLink" === n.type) && u.has(i.type) && (0, o.isEmbedInline)(i) ? [] : e
-    }(e, (null != I ? I : t).embeds)), !l && (e = function(e, t) {
+    }(e, (null != T ? T : t).embeds)), !c && (e = function(e, t) {
       return t ? f(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = f(e[0].content)), e)
-    }(e, n)), T = function(e, t) {
+    }(e, n)), h = function(e, t) {
       return t ? S(e) : "paragraph" === e[0].type && e[0].content instanceof Array && S(e[0].content)
     }(e = function(e) {
       let t = e.some(e => "link" !== e.type || !1);
@@ -106,14 +107,14 @@ function I(e) {
           r = (0, i.parseQuestsEmbedCode)(e.target);
         return !(n && null != r && !t)
       })
-    }(e), n), l && (e = function e(t) {
+    }(e), n), c && (e = function e(t) {
       return t.forEach(t => {
         d.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
       }), t
-    }(e)), null != c && (e = c(e, n)), e));
+    }(e)), null != E && (e = E(e, n)), e));
     return {
-      hasSpoilerEmbeds: T,
-      content: A
+      hasSpoilerEmbeds: h,
+      content: m
     }
   }(t.formatInline ? s.default.parseInlineReply : s.default.parse, e, t)
 }
