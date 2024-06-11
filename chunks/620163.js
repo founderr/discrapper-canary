@@ -862,7 +862,8 @@ let eG = () => {
       [eL.WebSetting.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING]: {
         section: eP.UserSettingsSections.NOTIFICATIONS,
         searchableTitle: eU.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL,
-        parent: eL.WebSetting.NOTIFICATIONS
+        parent: eL.WebSetting.NOTIFICATIONS,
+        predicate: () => H.isPlatformEmbedded && (0, H.isWindows)()
       },
       [eL.WebSetting.NOTIFICATIONS_UNREAD_SETTINGS]: {
         section: eP.UserSettingsSections.NOTIFICATIONS,
